@@ -1,0 +1,14 @@
+The C-70 job files are written, committed and pushed to C:\CE_PLAN (`main` in sync with origin, nothing ahead). I started no chain and ran no build, install or AutoCAD. I did not edit DESK_LOG.md or BUG_CARPARK.md.
+
+Branch `claude/rel-20261026u` (it did not exist at 14:00), with Civil 3.0.80 / Manager 1.1.80 and candidate c1066.
+
+Files, all in `C:\CE_PLAN\desk_jobs` unless noted:
+- `areas\TRAIN_C70_PR_LIST_2026-10-26.md`
+- `train_c70_assembler_job.txt`
+- `train_c70_finalizer_job.txt`
+- `payload105_c70_job.txt`
+- `chain_c70.ps1`
+- `chain_install_c70.ps1`
+- `scripts\desk_install_c70.ps1`
+
+The PR list holds only #1798. Beyond what you asked for, the chain waits for C-69 to finish, and for C-69 to install before payload 105. The files have no control characters and the three scripts parse clean.

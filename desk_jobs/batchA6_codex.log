@@ -1,0 +1,21 @@
+Sun 22:11:35 batch A2 waiting for 05:25
+Mon 00:19:46 batch A2 waiting for 05:25
+Mon 01:22:15 batch A2 waiting for 05:25
+Mon 02:19:39 batch A2 waiting for 05:25
+Mon 05:28:13 backed up CD_RecentValues.json sha 42E3E861D470
+Mon 05:28:13 backed up CD_Settings.json sha ACD64E79A33B
+Mon 05:28:13 backed up CS_Settings.json sha D604CE689671
+Mon 05:28:13 backed up settings.json sha EFE307C4FC74
+Mon 05:28:13 Codex usage before: 30 percent
+Mon 05:28:13 STOP_CODEX.flag lifted (STOP_SUPERVISOR.flag stays up)
+Mon 05:28:19 starting verifyA2_c88
+Mon 05:40:29 verifyA2_c88 launcher finished
+Mon 05:40:29 Codex usage after: 30 percent
+Mon 05:41:09 unchanged settings.json sha EFE307C4FC74
+Mon 05:41:09 unchanged CD_Settings.json sha ACD64E79A33B
+Mon 05:41:09 unchanged CS_Settings.json sha D604CE689671
+Mon 05:41:09 RESTORED CD_RecentValues.json: was 0C2ED384622F, back to 42E3E861D470
+Mon 05:41:09 HOLD_ROBOT.flag removed.
+Mon 05:41:09 restarting chain4 on spec_passi.txt (build 3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527; finished packs are skipped)
+Mon 05:41:09 Batch A6 ends.
+Mon 05:41:09 CODEX_NEXT.txt rewritten to A3

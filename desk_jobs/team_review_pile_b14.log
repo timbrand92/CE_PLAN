@@ -1,0 +1,18 @@
+**FOR TIM**
+
+I've reviewed the 12 PRs and the report is on GitHub (commit 3d022495): `C:\CE_PLAN\areas\REVIEW_PILE_B14_24OCT.md`.
+
+1. **Verdicts:** 6 can merge, 5 can merge after small fixes, 1 is on hold, none rejected.
+   - **Merge:** #1042, #1046, #1047, #1048, #1052, #1056.
+   - **Merge after fixes:** #1045, #1049, #1053, #1054, #1055.
+   - **Hold:** #1057.
+2. **Safe to merge today (C-64, the Civil fix train after C-63):**
+   - **#1047:** stops a plastic pit's "PP" line being saved as text you typed. Today the label can print PP twice, and the Pit Schedule can show a "PP" note nobody typed. It needs a bug number in the carpark first.
+   - **#1056:** adds checks only, so nothing changes on the drawing.
+3. **Worst problems found:**
+   - **#1054 (rainwater tank check):** it can compare a STORM report row with the wrong tank. A row called "Roof A" would be checked against the tank for "Roof B".
+   - **#1055 (footing schedule):** if its switch were turned on, footings with their own concrete strength would jump to the end of the footing schedule. The "40 MPa CONCRETE" heading isn't drawn yet, so nothing would say why.
+   - **#1057 (clarification list PDF):** it would print "?" in place of Ø, ° and ². A line in capitals can also run off the page. It needs rebuilding on the PDF tool Structural already uses.
+4. **The other nine are not for the 9 Nov pilot.** They are new features, and five of them are Structural.
+5. **Checked:** I read the code and checked that each PR merges cleanly onto the C-63 and S-43 train branches (only the change log clashes).
+6. **Not checked:** nothing was built or run, nothing was opened in AutoCAD, and nobody has looked at the #1057 PDF.

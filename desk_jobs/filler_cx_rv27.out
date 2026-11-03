@@ -1,0 +1,7 @@
+== cx_rv27 (usage 47.0% -> 50.0%): 1. **DONE — #1791: MERGE-WITH-FIXES.** Infinite distances bypass the fallback. Exact correction and regression test are documented. Opus: **0 agree, 1 disagree**.
+2. **Train:** all 55 pairs checked; no unlisted conflicts. No decision needed from Tim.
+
+---
+
+1. **Saved and pushed:** [Review](C:/CE_PLAN/areas/CODEX_PR_REVIEW_cx_rv27.md), commit `5e94ba75`. Leak scan clean; no commits ahead.
+2. **Limits:** read-only review. No builds, tests, AutoCAD, installation or code changes.

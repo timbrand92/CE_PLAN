@@ -1,0 +1,550 @@
+{
+  "header": {
+    "run_id": "RUN-20261030-2313-C3.0.87-bP2",
+    "started": "2026-10-30 23:13:18",
+    "finished": "2026-10-30 23:20:06",
+    "build": {
+      "civil": {
+        "product_version": "3.0.87+f5dd72a0652c7f749ab52228cea0f9675047b9cb",
+        "file_version": "3.0.87.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.87+f5dd72a0652c7f749ab52228cea0f9675047b9cb",
+        "file_version": "1.1.87.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.87+f5dd72a0 / struc 1.0.125+204dfad2 / mgr 1.1.87+f5dd72a0",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "B2690482B84019A7AADB3A3439881A839A251740C3A4BFCA16CB43AC15B0E76A",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.87+f5dd72a0652c7f749ab52228cea0f9675047b9cb; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.87+f5dd72a0652c7f749ab52228cea0f9675047b9cb",
+      "Driver files (SHA-256, first 12): v2 F4D8F40C3675 (expected F4D8F40C3675), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 482EB7B20C6C, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 B439CADC8A7A, case_runner_lib.ps1 ED6244C9719E, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 0 shared setup(s); pack SHA-256 B2690482B84019A7AADB3A3439881A839A251740C3A4BFCA16CB43AC15B0E76A; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json D604CE689671 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Fri 30 Oct 2026 23:13 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 1,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 1,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261030-2313-C3.0.87-bP2-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-30 23:13:21",
+      "finished": "2026-10-30 23:20:06",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV32313241_B1.dwg",
+      "cases": [
+        "N05"
+      ],
+      "calibration": {
+        "ok": true,
+        "max_raw_px": 1.912,
+        "max_corrected_px": 0.5,
+        "why": "",
+        "canvas": {
+          "left": 1951,
+          "top": 421,
+          "width": 1858,
+          "height": 569,
+          "how": "exact (tol 0)",
+          "scale_vs_screensize": 1.0,
+          "dpi": 96
+        }
+      },
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : D604CE689671 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "N05",
+      "proves_bugs": "",
+      "title": "A placed pit gets one PIT LABEL reading P8 on layer STORMWATER PIT LABEL and one cover text reading CL 19.000, and one U removes all three",
+      "kind": "deterministic",
+      "order": 50,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "UX-CPLAN-21 (daily card D09)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "PIT at 150000,-80000 with cover level 19.000, the label point clicked at 150000,-78500 and the cover text point clicked at 151500,-81500: exactly one new pit block on STORMWATER PIT, one new PIT LABEL block on STORMWATER PIT LABEL whose PIT_LABEL attribute reads P8, and one new text reading exactly CL 19.000 (no IL line); the command line says 'Pit placed successfully.' and offers the next pit; one U echoes PIT and leaves no new object behind.",
+      "why_not_unit": "The label block, its attribute and the cover MText are created by the live PIT prompts in the real drawing.",
+      "not_automated": [
+        "The label position is not asserted to the millimetre (card asks within 1 unit of the typed point): a mouse click lands near, not exactly on, the point (R01 note). The distance is recorded.",
+        "The cover text's corner (BR) and its look are a picture item."
+      ],
+      "file_sha256": "4C28CE66C02FB7C77F35F91A95DAE34D2B188CC3025134F293DB92C2938EC7D0",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-30 23:18:28",
+      "seconds": 80.5,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM _C 150000,-80000 8000\"",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "typed '_.ZOOM _C 150000,-80000 8000': Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _C | Specify center point: 150000,-80000 | Enter magnif..."
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 view-read",
+          "ok": true,
+          "seconds": 0.5,
+          "evidence": "v3 view-read : view stored: centre 150,000.000,-80,000.000 height 8,000.000 screen 1858x569"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $n0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"PIT{NL}150000,-80000\" -Force -ExpectWindow \"New Pit\" -TimeoutSec 120 -> $pit_t1",
+          "ok": true,
+          "seconds": 13.4,
+          "evidence": "typed 'PIT 150000,-80000': Command: | Command: PIT | Specify pit insertion point: 150000,-80000"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.CoverLevel\" \"19.000\"",
+          "ok": true,
+          "seconds": 8.6,
+          "evidence": "ui set 'New Pit' C2.CoverLevel = 19.000: "
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pit\" \"New pit, Continue placement\" -> $pit_t2",
+          "ok": true,
+          "seconds": 32.0,
+          "evidence": "pressed 'New pit, Continue placement' in /New Pit/: window closed = True"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pit\" -Secs 120",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "the window /^New Pit/ closed after 0 s"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 pt-click \"150000,-78500\" -Blind -> $click_label",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "v3 pt-click 150000,-78500: pt-click: world 150,000.000,-78,500.000 -> pixel 2880,599 (exact 2,879.50,599.31); cursor read-back 2880,599; view stored (55 s old)"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.1,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 pt-click \"151500,-81500\" -Blind -> $click_cover",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "v3 pt-click 151500,-81500: pt-click: world 151,500.000,-81,500.000 -> pixel 2986,813 (exact 2,986.06,812.69); cursor read-back 2986,813; view stored (60 s old)"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 esc-key",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "v3 esc-key : one Esc key sent to AutoCAD"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $n0 -> $new",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "3 object(s) after index 1034 (model space now 1037); by type: AcDbBlockReference 2; AcDbMText 1; first: 11C5B0 AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C654 AcDbBlockReference STORMWATER PIT LABEL PIT LABEL 2 ; 11C65B AcDbMText 25TEXT CL 19.000"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new object=AcDbBlockReference \"layer=STORMWATER PIT\" -> $pits",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 3: 11C5B0 PIT BLOCK 3 STORMWATER PIT"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"name~^PIT LABEL\" -> $labels",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 3: 11C654 PIT LABEL 2 STORMWATER PIT LABEL"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $labels handle -> $lh",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C654"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $labels layer -> $ll",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'layer' = STORMWATER PIT LABEL"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$lh} -> $le",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "ent-read 11C654: {\"handle\":\"11C654\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"effective_name\":\"PIT LABEL 2\",\"insertion\":[150007.03799277358,-78495.6061596281,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"PIT..."
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "dist",
+          "text": "dist $labels \"150000,-78500\" -> $ld",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "distance from object 11C654 to 150000,-78500 = 8.3"
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"text~^CL \" -> $covers",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 3: 11C65B CL 19.000 25TEXT"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $covers text -> $ct",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = CL 19.000"
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $covers layer -> $cl",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'layer' = 25TEXT"
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV32313241_B1.dwg]"
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -> $u1",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "typed 'U': Command: | Command: U | PIT"
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 29,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $n0 -> $after_u",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "0 object(s) after index 1034 (model space now 1034); by type: ; first: "
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"Pit placed successfully.\"",
+          "ok": true,
+          "expected": "command line has 'Pit placed successfully.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Pit placed successfully.'"
+        },
+        {
+          "n": 2,
+          "text": "history has \"[CE] Pit placed. Pick the next pit, or press Esc to stop.\"",
+          "ok": true,
+          "expected": "command line has '[CE] Pit placed. Pick the next pit, or press Esc to stop.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CE] Pit placed. Pick the next pit, or press Esc to stop.'"
+        },
+        {
+          "n": 3,
+          "text": "count $pits = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $pits = 1 (expected = 1)"
+        },
+        {
+          "n": 4,
+          "text": "count $labels = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $labels = 1 (expected = 1)"
+        },
+        {
+          "n": 5,
+          "text": "equals $ll \"STORMWATER PIT LABEL\"",
+          "ok": true,
+          "expected": "STORMWATER PIT LABEL",
+          "actual": "STORMWATER PIT LABEL",
+          "evidence": "value 'STORMWATER PIT LABEL' (expected 'STORMWATER PIT LABEL')"
+        },
+        {
+          "n": 6,
+          "text": "matches $le \"text.:.P8.,.insertion\"",
+          "ok": true,
+          "expected": "matches /text.:.P8.,.insertion/",
+          "actual": "{\"handle\":\"11C654\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"effective_name\":\"PIT LABEL 2\",\"insertion\":[150007.03799277358,-78495.6061596281,0.0],\"rotation\":0....",
+          "evidence": "matched 'text\":\"P8\",\"insertion'"
+        },
+        {
+          "n": 7,
+          "text": "count $covers = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $covers = 1 (expected = 1)"
+        },
+        {
+          "n": 8,
+          "text": "equals $ct \"CL 19.000\"",
+          "ok": true,
+          "expected": "CL 19.000",
+          "actual": "CL 19.000",
+          "evidence": "value 'CL 19.000' (expected 'CL 19.000')"
+        },
+        {
+          "n": 9,
+          "text": "not-contains $win_end \"New Pit\"",
+          "ok": true,
+          "expected": "does not contain 'New Pit'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV32313241_B1.dwg]",
+          "evidence": "'New Pit' is absent from: Autodesk AutoCAD 2027 - [CLDV32313241_B1.dwg]"
+        },
+        {
+          "n": 10,
+          "text": "contains $u1 \"PIT\"",
+          "ok": true,
+          "expected": "contains 'PIT'",
+          "actual": "Command: | Command: U | PIT",
+          "evidence": "found 'PIT' in: Command: | Command: U | PIT"
+        },
+        {
+          "n": 11,
+          "text": "count $after_u = 0",
+          "ok": true,
+          "expected": "count = 0",
+          "actual": "0",
+          "evidence": "count of $after_u = 0 (expected = 0)"
+        },
+        {
+          "n": 12,
+          "text": "record $ld \"distance of the label insertion point from the clicked point (mm)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "8.3",
+          "evidence": "RECORDED, not judged: distance of the label insertion point from the clicked point (mm) = 8.3"
+        },
+        {
+          "n": 13,
+          "text": "record $cl \"layer of the cover text\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "25TEXT",
+          "evidence": "RECORDED, not judged: layer of the cover text = 25TEXT"
+        },
+        {
+          "n": 14,
+          "text": "record $le \"FULL the new PIT LABEL\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C654\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"effective_name\":\"PIT LABEL 2\",\"insertion\":[150007.03799277358,-78495.6061596281,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"PIT_LABEL\",\"text\":\"P8\",\"insertion\":[149761.84699686634,-78670.6061596281,0.0],\"rotation\":0.0,\"height\":350.0,\"alignment\":10,\"align_point\":[150007.03799277358,-78495.6061596281,0.0],\"bbox\":[149761.84699686634,-78676.57478172907,150252.2289886808,-78319.17369032388]}],\"bbox\":[149607.03799277358,-78895.6061596281,150407.03799277358,-78095.6061596281],\"block_parts\":[{\"index\":0,\"object\":\"AcDbWipeout\",\"layer\":\"50CONT\",\"color\":256},{\"index\":1,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"35TEXT\",\"color\":256,\"tag\":\"PIT_LABEL\",\"world_insertion\":[149761.84699686634,-78670.6061596281]}]}",
+          "evidence": "RECORDED, not judged: FULL the new PIT LABEL = {\"handle\":\"11C654\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"effective_name\":\"PIT LABEL 2\",\"insertion\":[150007.03799277358,-78495.6061596281,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"PIT_LABEL\",\"text\":\"P8\",\"insertion\":[149761.84699686634,-78670.6061596281,0.0],\"rotation\":0.0,\"height\":350.0,\"alignment\":10,\"align_point\":[150007.03799277358,-78495.6061596281,0.0],\"bbox\":[149761.84699686634,-78676.57478172907,150252.2289886808,-78319.17369032388]}],\"bbox\":[149607.03799277358,-78895.6061596281,150407.03799277358,-78095.6061596281],\"block_parts\":[{\"index\":0,\"object\":\"AcDbWipeout\",\"layer\":\"50CONT\",\"color\":256},{\"index\":1,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"35TEXT\",\"color\":256,\"tag\":\"PIT_LABEL\",\"world_insertion\":[149761.84699686634,-78670.6061596281]}]}"
+        },
+        {
+          "n": 15,
+          "text": "record $click_label \"what the label click reported\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"ok\":true,\"verb\":\"pt-click\",\"started\":\"2026-10-30 23:19:27\",\"elapsed_ms\":1673,\"error\":null,\"refused\":false,\"output\":[\"pt-click: world 150,000.000,-78,500.000 -> pixel 2880,599 (exact 2,879.50,599.31); cursor read-back 2...",
+          "evidence": "RECORDED, not judged: what the label click reported = {\"ok\":true,\"verb\":\"pt-click\",\"started\":\"2026-10-30 23:19:27\",\"elapsed_ms\":1673,\"error\":null,\"refused\":false,\"output\":[\"pt-click: world 150,000.000,-78,500.000 -> pixel 2880,599 (exact 2,879.50,599.31); cursor read-back 2..."
+        },
+        {
+          "n": 16,
+          "text": "record $click_cover \"what the cover click reported\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"ok\":true,\"verb\":\"pt-click\",\"started\":\"2026-10-30 23:19:32\",\"elapsed_ms\":1650,\"error\":null,\"refused\":false,\"output\":[\"pt-click: world 151,500.000,-81,500.000 -> pixel 2986,813 (exact 2,986.06,812.69); cursor read-back 2...",
+          "evidence": "RECORDED, not judged: what the cover click reported = {\"ok\":true,\"verb\":\"pt-click\",\"started\":\"2026-10-30 23:19:32\",\"elapsed_ms\":1650,\"error\":null,\"refused\":false,\"output\":[\"pt-click: world 151,500.000,-81,500.000 -> pixel 2986,813 (exact 2,986.06,812.69); cursor read-back 2..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 80 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: PIT completed 63205 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-30 23:19:48",
+      "session_id": "RUN-20261030-2313-C3.0.87-bP2-s1",
+      "acceptance": {
+        "state": "ACCEPTED-READY",
+        "reasons": [],
+        "passing_sessions_on_this_build": 2,
+        "red_before": true
+      }
+    }
+  ]
+}

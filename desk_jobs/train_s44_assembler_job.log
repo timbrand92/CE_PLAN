@@ -1,0 +1,17 @@
+Train S-44 is assembled and pushed as `claude/rel-20261025s` at `da852df3`, on base `4af3f37d`. It is built and unit-tested only. Nobody has opened it in AutoCAD.
+
+1. **Merges:** 32 PRs merged. 22 come from the brief, and I added 10 more (#1574, #1575, #1577, #1581, #1582, #1585, #1589, #1603, #1604, #1605). Those 10 had plain MERGE verdicts for S-44 in Opus review batches B8, B9 and B10 at unchanged heads. Drop them if you don't want them. #1737 stayed out because its head is still `4ae66b1b`.
+2. **Re-pins:** two fingerprints, each its own commit with a log entry. One is the Plugin.cs pin after #1566. The other is the central register's fingerprint of the command list, after #1742 reworded Help text.
+3. **Build:** whole solution 0 errors, 927 warnings.
+4. **Tests:**
+   - **Structural net10:** 5,918 passed, 1 failed.
+   - **The red:** a guard on #1460's new `SettingsRoutineMerge.cs`, which calls a Newtonsoft method AutoCAD's own copy can lack. It is a real defect, a one-line fix, and I did not change the code.
+   - **Structural net48:** 54 failed against S-43's 39. I could not build the base, because C: fell below 12 GB, so I could not confirm the extra 15 by name.
+   - **Other lanes:** DesignCore (five known reds per lane), CommandTruth (22 of 23) and ReleaseTests (10 of 10 on all three targets) match S-43. The guards you named, including the 150 per cent Settings fit, all pass.
+5. **Needs the finalizer:**
+   - **Newtonsoft red:** #1460's guard red above.
+   - **Failure count:** the net48 count (54 against 39).
+   - **Civil test file:** #1766 changes a Civil test file.
+   - **Review status:** none of the 32 has had an Opus finalizer yet.
+
+The report is pushed at `C:\CE_PLAN\areas\release-v3-colleagues-TRAIN_S44_ASSEMBLY_REPORT_2026-10-25.md`. My worktree and scratch folders are removed.

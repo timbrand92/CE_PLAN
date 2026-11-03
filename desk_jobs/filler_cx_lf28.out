@@ -1,0 +1,9 @@
+== cx_lf28 (usage 35.0% -> 35.0%): 1. **DONE — all five skipped as already covered:** BUG-1008 #1569; BUG-1009 #1614; BUG-1010 #1580; BUG-1011 #1612; BUG-1012 #1578. All remain draft PRs.
+
+2. **Saved and pushed:** [Batch 28 report](C:/CE_PLAN/areas/CODEX_LEDGER_FIX_BATCH28_23OCT.md), including branch heads, reported totals, gaps and exact AutoCAD checks.
+
+3. **Testing:** 0 tests added or run here. No installation or AutoCAD launch. Existing fixes remain unaccepted.
+
+---
+
+1. **Report tip:** CE_PLAN `main` at `beafd3b5`; leak-scan passed.

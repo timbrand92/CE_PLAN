@@ -1,0 +1,3 @@
+`C:\CE_PLAN\areas\CARD_DRAFT_BUG396_DOUBLECLICK_03NOV.md` is written, as a draft card with five questions for Tim. Nothing was built or tested, and the double-click is still unbuilt on installed 3.0.89 (61fd6fbc), b1 and b2.
+
+I read the output path `C:\CE_PLANreas\...` as `C:\CE_PLAN\areas\` (a lost backslash), which is the same reading the other CARD_DRAFT files made.

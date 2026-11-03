@@ -1,0 +1,7 @@
+== verifyW6_c60 (usage 6.0% -> 6.0%): 1. **W6 complete:** 2 PASS, 1 FAIL, 1 DIFFERENT; 0 BLOCKED or NOT TESTED. SURE 4, UNSURE 0.
+
+2. **Findings:** W6-04 failed because U echoed CEMANAGER. W6-03 About still clips the AutoCAD row and hides lower lines. Tabs and four-page fit passed.
+
+3. **Clean end:** AutoCAD exited; lock released. All four settings files unchanged; autosave restored. FIXTURES WANTED: none.
+
+4. **Report:** [W6 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_W6_20261023_1028.md>).

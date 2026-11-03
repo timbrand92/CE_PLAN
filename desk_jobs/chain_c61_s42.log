@@ -1,0 +1,16 @@
+Fri 07:37 chain start: C-61 first, then S-42; nothing is installed by this chain.
+Fri 07:37 C:\CE_PLAN\desk_jobs\train_c61_assembler_job.txt started pid 91156 (sonnet)
+Fri 08:17 finished train_c61_assembler_job.txt
+Fri 08:17 C:\CE_PLAN\desk_jobs\train_c61_finalizer_job.txt started pid 103120 (opus)
+Fri 08:54 finished train_c61_finalizer_job.txt
+Fri 08:54 C-61 finalizer verdict GO: building payload 93 (candidate c1057). Nothing is installed by this chain.
+Fri 08:54 C:\CE_PLAN\desk_jobs\payload93_c61_job.txt started pid 108960 (sonnet)
+Fri 09:31 finished payload93_c61_job.txt
+Fri 09:31 C:\CE_PLAN\desk_jobs\train_s42_assembler_job.txt started pid 76540 (sonnet)
+Fri 09:52 finished train_s42_assembler_job.txt
+Fri 09:52 C:\CE_PLAN\desk_jobs\train_s42_finalizer_job.txt started pid 952 (opus)
+Fri 10:13 finished train_s42_finalizer_job.txt
+Fri 10:13 S-42 finalizer verdict GO: building payload 94 (candidate s1040). Nothing is installed by this chain.
+Fri 10:13 C:\CE_PLAN\desk_jobs\payload94_s42_job.txt started pid 105992 (sonnet)
+Fri 10:43 finished payload94_s42_job.txt
+Fri 10:43 chain complete

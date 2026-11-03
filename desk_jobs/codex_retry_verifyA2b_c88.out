@@ -1,0 +1,6 @@
+== verifyA2b_c88 (usage 30.0% -> 31.0%): AUTOCAD CLOSED
+
+1. **A2-03: PASS SURE.** Whole label readable; leader touches pipe and clears both levels.
+2. **W1-385: DIFFERENT SURE.** All five P3 rows remain, but cover stays 18.98 instead of returning to 18.88.
+3. **Closed safely:** Nothing saved; four settings hashes unchanged; lock released. Remembered values changedÔÇörecorded for desk restoration.
+4. **Report:** [A2b results](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_A2b_20261102_0606.md>). Includes skipped looks and excluded wrong-monitor captures.

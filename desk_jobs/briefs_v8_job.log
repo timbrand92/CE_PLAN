@@ -1,0 +1,7 @@
+All five briefs are written and nothing was run. The robot brief is pushed to CE_PLAN (f011f47c); the Codex briefs and queue file are in `_CODEX_RUNNER`, which isn't a git repo. The files are clean of control characters and the word "follow".
+
+1. **Files:** `tester_run46.txt`; `verifyV8_c59` and `verifyV9_s41`, each with a `_full` brief; queue section 12 holds both lines.
+2. **Handle conflict:** 109D56 is "pit P3" in the robot reports but a pipe label in the older V2 brief. V8-02 checks it before any change and stops BLOCKED if it isn't the pit.
+3. **Not testable here:** V8-03 reports NOT TESTED for the exact 1920x1080 at 150% case, since this PC's screen is a different size.
+4. **Derived numbers:** the V9 hatch scales (LBUH 20/50/100, LBH 50/125/250) are my arithmetic from the finalizer report, not read from a settings file.
+5. **Head check:** the S-41 finalizer reports head 871ad971; the remote branch reads 2c9a9694. I used 2c9a9694 and did not check which is later.

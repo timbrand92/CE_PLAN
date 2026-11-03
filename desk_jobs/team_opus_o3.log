@@ -1,0 +1,32 @@
+## FOR TIM
+
+1. **Answer:** I read nine draft fixes. One should be fixed before it goes into an update, seven can go in with a note, and one is fine as it is. The full review is in `C:\CE_PLAN\areas\OPUS_PREREVIEW_C_29OCT.md`.
+2. **Fix first, #1851, the new "minimum pit depth" check:**
+   - **No off switch:** every CDRULES run gets a new pit-depth row for every pit, and nobody can turn it off.
+   - **A wrong pass:** when CE doesn't know a pipe's wall thickness, the check can show a pass. Example: a UPVC 450 into a pit 760 mm deep passes, but with the 31 mm wall it needs 781 mm and should warn.
+3. **#1848, cover measured to the outside of the pipe:** the sums are right. With lid 10.000 and invert 9.200, a UPVC 225 goes from 575 to 555 mm of cover, and a concrete 375 from 425 to 380 mm.
+   - **Unknown wall shows green:** only those two pipe sizes have a wall figure. Any other pipe whose wall CE doesn't know can still show a green pass when it should say "Unknown".
+   - **Two numbers for one pipe:** CD's own screens still use the old measure, so a concrete 375 could read 320 mm in CD and 275 mm (below 300) in CDRULES.
+4. **#1852, council minimum runoff figure:** correct. On a 600 m² site, CDDESIGN storage goes from 2.84 to 3.75 m³.
+   - **Wrong expected number in the robot test:** with the fix switched off, the test expects Boyd's to read 0.70. With today's settings it reads 0.767, so the robot would report a fail that isn't real.
+5. **#1854, council data:**
+   - **No typos:** I found no mistyped number.
+   - **Port Phillip now gets a tank:** jobs there now get a tank of about 2.4 m³ on a 600 m² site, where before CDDESIGN showed none. The change note needs to say that.
+6. **#1844, a new colleague's starting settings:** an existing settings file is never touched, even a damaged one.
+   - **Tank plans:** it also copies your remembered water-tank plan picks. A colleague choosing a 3000 L above-ground tank would get the underground plan picked for them. I recommend leaving those picks out (part of your question 40).
+7. **#1845, raingarden RG labels:**
+   - **Safe:** it never unlocks a layer and never writes into an Xref.
+   - **Not attached:** the RG text isn't tied to the raingarden, so moving or erasing the outline leaves "RG2" behind.
+8. **#1853 (units note), #1855 (soakage engine), #1840 (wording):** all fine to carry.
+   - **One wording choice for you:** the import note says "This drawing has no units set". "The source drawing…" would be clearer.
+9. **Not proven:** none of this was built, run or opened in AutoCAD. The 20 mm and 45 mm wall figures are still your "about" figures, not checked against a pipe maker's table.
+
+---
+
+**Technical detail**
+
+1. **Method and own mistakes:** six Opus readers did the code reads; I reviewed #1840 myself. I re-checked the main claims in the code: #1851 at `RulebookEngine.cs:145` and `:797`, #1848 at `RulebookEngine.cs:514`, and `boydsUsesHardGroundC` defaulting to false at `UserSettings.cs:2593`. GitHub gave 502 errors at the start; I used the REST interface instead, at a cost of a few minutes and no effect on the review.
+2. **Coverage gaps:** #1850, which sits under #1851, was outside the scope and not reviewed. No draft PRs for BUG-1088, 903, 1192, 905, 1097, 1099, 866 or 902 were open at 21:46.
+3. **Report:** pushed to CE_PLAN main as commit 3ddd64c8, one file only. The leak scan was clean and the repo shows nothing waiting to push.
+
+**Summary:** This was a read-only review of PRs #1840, #1844, #1845, #1848, #1851, #1852, #1853, #1854 and #1855, with no build and no switch changes. #1851 is FIX-FIRST because rule R-34 has no switch of its own and treats an unknown wall as 0 mm. #1840 is KEEP. The other seven are KEEP-WITH-NOTE, the main notes being the unknown-wall Pass in #1848 and the wrong Boyd's expected numbers for #1852. The only file written is `C:\CE_PLAN\areas\OPUS_PREREVIEW_C_29OCT.md`.

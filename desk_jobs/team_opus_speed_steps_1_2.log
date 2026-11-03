@@ -1,0 +1,41 @@
+I've built both speed steps, but only as copies in `C:\ce-fx\speed\staged\`. Nothing live has changed, and your AutoCAD was not touched.
+
+## FOR TIM
+
+1. **Step 1, the shorter wait.**
+   - **Now:** after every test session the robot sits for 3 minutes with AutoCAD closed.
+   - **After:** it waits 30 seconds, but only if three checks over those 30 seconds all come back clear. It checks that no AutoCAD is open, that the robot's "AutoCAD in use" sign is down, that your settings files are exactly as they were, that the last session closed itself properly, and that no install of a new CE build is running or waiting.
+   - **If anything is not clear:** it waits the full 3 minutes, as it does today.
+
+2. **Proof so far.** A practice test with pretend files and a pretend process list passed all 25 checks, twice. Every unsafe situation kept the 3 minutes, and the all-clear gave 30 seconds. I also tried a deliberately broken copy of the new wait, and the test caught the fault, so the test does catch real faults.
+
+3. **Step 2, grouping.** Tests that need the same settings and the same kind of drawing now share one AutoCAD start.
+   - **Tonight's list:** the 12 leftover checks, the 14 edited checks and the 8 new batch-4 draft checks.
+   - **What it saves:** 7 AutoCAD starts (44 down to 37).
+   - **The 4-minute mouse line-up** can't be cut on this list. The 8 line-ups left are the fewest the robot allows for these checks.
+   - **Next full re-test:** the four mouse checks for pit labels, the pipe label on a leader and the pit drawn until Esc can share one start. That saves about 24 minutes per full re-test.
+
+4. **Time saved (estimates).**
+   - **Tonight's list:** about 6 h 25 min today, about 4 h 25 min with both steps.
+   - **A normal night:** up to about 3 h 45 min of waiting comes back. Nights with an install waiting save less, on purpose.
+
+5. **What could go wrong, and what stops it.**
+   - **An install slips in while the robot starts AutoCAD:** any install waiting or running keeps the full 3 minutes. The install also checks twice, 60 seconds apart, that no AutoCAD is open.
+   - **AutoCAD hasn't finished closing:** the robot checks "no AutoCAD" three times. It also compares your settings files against how they were before the last session.
+
+6. **Undo, in one line:** copy the two `.pre` backup files back and delete the one new file.
+
+7. **Before it goes live:** two runs on a test drawing after 5:30 pm, with your AutoCAD closed. One should show the 30-second wait. The other, with a pretend install hold set, should show the full 3 minutes. The 14 edited checks also need copying live first, which is already planned.
+
+8. **What you need to do today:** nothing.
+
+---
+
+**Not tested:**
+- Nothing has run in real AutoCAD yet.
+- When AutoCAD opens, an Autodesk licensing program starts with it. Nobody knows whether it keeps working after AutoCAD closes, so the 30-second wait writes down whether it's still running each time. The two test runs will answer it.
+- One of the settings fingerprints the robot expects is out of date: your structural settings file never matches it. My check compares against the start of the last session instead. I didn't fix the out-of-date value; that's for whoever looks after the test runner.
+
+The report is in `C:\CE_PLAN\areas\TESTING_SPEED_STEPS_1_2_STAGED_29OCT.md`, pushed, and the repo shows nothing waiting to push.
+
+**Summary:** Steps 1 and 2 are staged, not live. The 30-second wait only happens when every check is clear; otherwise it waits the full 3 minutes. Its practice test passed 25 of 25, twice. Grouping cuts tonight's list from 44 to 37 AutoCAD starts, and its 8 mouse line-ups are already the fewest possible. Together: about 6 h 25 min down to 4 h 25 min (estimate). It goes live only after two test-drawing runs after 5:30 pm with your AutoCAD closed.

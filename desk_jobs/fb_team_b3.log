@@ -1,0 +1,5 @@
+Four of the five briefs are fixed as draft PRs: FB-16 (#1707), FB-17 (#1708), FB-19 (#1710) and FB-20 (#1709). FB-18 is skipped for Tim's design word. Nothing has been opened in AutoCAD.
+
+- **Tests:** Civil net10 full runs show 19,558 to 19,563 tests with 0 failed. The net48 compile is clean on all four branches.
+- **FB-18 (BUG-648):** the brief's premise is wrong, because an ordinary AG drain draws no tag at all. The existing link would rewrite a grade label to "AGI3" on renumber or copy. The report has three options, my recommendation and the questions for Tim.
+- **Report:** `C:\CE_PLAN\areas\release-v3-colleagues-FB_TEAM_BATCH3_REPORT.md` is pushed and `git status -sb` shows no "ahead". It has the real-AutoCAD checks.

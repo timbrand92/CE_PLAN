@@ -1,0 +1,10 @@
+Batch 9 is finished. BUG-1055 is fixed in draft PR #1759; BUG-1056 to BUG-1059 are skipped because each needs Tim's word.
+
+The fix is built and unit-tested only. Nobody has run it in AutoCAD, and no bug is marked FIXED.
+
+- **BUG-1055:** a 10 m pipe in a metre drawing now reads "10.0 m", not "0.0 m". Head `8044f6ae`, five new tests, and about 20,000 Drainage net10 tests passed with none failed. The Drainage net48 build had 0 errors.
+- **BUG-1056 to BUG-1059:** options for Tim are in the report. Codex FA03 skipped the same four for the same reason.
+
+Not tested: AutoCAD itself, the net8.0-windows lane and the council figures.
+
+The report is pushed to `main`, but `git status -sb` shows two modified files from other jobs (`runner-reports/ledger.json`, `desk_jobs/.last_tick`), which I left alone. The report is `C:\CE_PLAN\areas\release-v3-colleagues-FB_TEAM_BATCH9_REPORT.md`.

@@ -1,0 +1,15 @@
+**Draft PR #1867 is open, but the code has not been compiled or tested.** Other jobs held both build slots from Thursday 22:52 until Friday ~09:10. The one slot that opened (02:08) was lost to a launcher bug of mine.
+
+Files:
+- `Rules/CopiedPitEndOwnerGuard.cs` (new, headless)
+- `LinkService.Geometry.cs`, `.RepairAudit.Relink.cs`, `.PitRelinks.cs`, `.Utilities.cs`, `.State.cs`, `.Cache.cs`
+- `ScopePitClaimEvidence.cs`
+- `UserSettings.cs`
+- `REGRESSION_LOG.md`
+- `Bug1227PitCopyKeepsPipeEndsTests.cs`
+
+Switch: `linking.pitCopyKeepsOriginalPipeEnds` (ON). It stops a pit copy taking pipe ends already joined to a pit that still touches them.
+
+The plan said only the new copy should hold back. I made every pit not already joined to the end hold back, because the earlier copy P11 would otherwise take P3's pipes on the second command.
+
+Report pushed: `C:\CE_PLAN\areas\release-v3-colleagues-BUG1227_FIX_REPORT.md`. It names robot case N36_rotcopy_on_pit with control C36, and CE 02 needs to renumber it.

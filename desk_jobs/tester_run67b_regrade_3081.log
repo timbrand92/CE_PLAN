@@ -1,0 +1,13 @@
+The regrade is finished and pushed (the push passed the leak scan and the repo shows no "ahead"). I found no regressions.
+
+The build changed twice during the job, so the numbers are per build. The report is `C:\CE_PLAN\areas\release-v3-colleagues-RUNNER_REGRADE_3_0_81_REPORT.md`.
+
+1. **Everyday cases:** All 20 passed in two separate AutoCAD sessions on Civil 3.0.82 and again on 3.0.83, the build installed now. On 3.0.81, 14 of them got one pass each. The desk installed 3.0.82 at 15:43, before a second 3.0.81 pass was possible. No run straddled an install.
+2. **Codex-ask cases:** R04, R11, R13, R19, R14 with its three raised-setting cases, R21 and R26 passed twice on 3.0.83. Their deliberately broken twins failed every time, as they should. These are ready for the independent reviewer.
+3. **Real faults still present:** R09 (BUG-859) and R22 (BUG-372) fail as expected, twice each on 3.0.83. R08 (BUG-861) failed in all four sessions and I did not count it.
+4. **Not run:** R24, because no drawing really saved in metres exists on this PC. I opened no drawings, and the report lists the candidates.
+5. **State left behind:** No AutoCAD is running and no lock file remains. Tim's four settings files match their expected hashes.
+
+I did not look at anything on screen. Every case checks command-line text, drawing values, log lines or hashes.
+
+Summary: Civil moved through 3.0.81, 3.0.82 and 3.0.83, so I regraded on each. All 20 everyday accepted cases passed twice on 3.0.82 and 3.0.83, and every case file still matches its reviewed hash. The Codex-ask cases passed twice on 3.0.83 with failing twins. R09, R22 and R08 still fail. R24 was not run.

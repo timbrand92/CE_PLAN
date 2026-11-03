@@ -1,0 +1,4 @@
+== cx_cr20 (usage 13.0% -> 17.0%): 1. **DONE:** [cx_cr20 report](C:/CE_PLAN/areas/CODEX_CASE_REVIEW_cx_cr20.md) pushed in commit `f0f03c3f`. Branch is synchronised.
+2. **Tally:** 0 accepted on installed Civil 3.0.79; 5 historically. The plan names 38 checks, not 40.
+3. **Catch-all:** three PARTIAL cases; no new review certificates. Eight changed assigned cases flagged for review again.
+4. **Limits:** no AutoCAD, tests, builds, settings changes or bug edits performed.

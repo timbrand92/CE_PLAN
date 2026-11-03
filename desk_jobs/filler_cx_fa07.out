@@ -1,0 +1,10 @@
+== cx_fa07 (usage 63.0% -> 15.0%): 1. **DONE — [Draft PR #1721](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1721).** Three Civil fixes prepared; two Structural findings held.
+
+2. **Checks:** 16 new tests pass on net10/net48. Three builds: 0 errors. Full suite: 19,542 passed, 0 failed, 50 not executed. Private-log cleanup warning remains. AutoCAD not run; nothing installed.
+
+3. **[Report saved and pushed](C:/CE_PLAN/areas/CODEX_FIXAUDIT_FA07_23OCT.md).** Own worktree removed.
+
+---
+
+1. **Branch:** `cx4/fa07-native-protection`
+2. **Tip:** `fd669805a9937025829d0ccc6f8df1e96676ed06`

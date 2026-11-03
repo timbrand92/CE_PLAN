@@ -1,0 +1,13 @@
+I've written the BUG-857 fix and opened it as draft PR #1858, but it is not built or tested. No build slot freed in 3 hours, because other jobs held both slots. The new tests have never been run, and nothing has been checked in AutoCAD.
+
+With the switch `grade.mismatchBoxCloseCancels` (ON), the New Pipe Grade mismatch box gets a Cancel button, and Esc or the X place no pipe. Switch OFF gives the old box exactly.
+
+Files changed:
+- `CdCommand.cs`
+- `GradeMismatchDialog.xaml` and `GradeMismatchDialog.xaml.cs`
+- `GradeMismatchChoiceRule.cs` (new)
+- `UserSettings.cs`
+- `Bug857GradeMismatchBoxTests.cs` (new)
+- `REGRESSION_LOG.md`
+
+The report is `C:\CE_PLAN\areas\release-v3-colleagues-BUG857_FIX_REPORT.md`, pushed. It names the proposed robot case N33_grade_mismatch_x and its switch-off control, and what the Codex look needs.

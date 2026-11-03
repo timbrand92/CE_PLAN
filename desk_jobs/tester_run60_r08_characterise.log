@@ -1,0 +1,10 @@
+R08 round 1 loses REDO because it is the first click in a freshly opened drawing while a U is waiting. The answer is (a), and it only happens while the CE Inspector palette is showing. I have not run this by hand.
+
+- **Not the pit:** a plain AutoCAD line fails the same way, and the CE log is identical from click to REDO.
+- **Not timing or round number:** waiting 60 s, or three working warm-up rounds first, did not help.
+- **Palette closed:** passed 2 of 2. The control (palette open, same steps) failed 2 of 2.
+- **Pit click before any U:** everything passed.
+- **Fail count:** 6 of 6 on 3.0.75, counting the earlier 4.
+- **Void run:** a Structural 1.0.124 install by someone else landed mid-job and rewrote Structural's settings file. One run is void and was re-run. I did not restore the file.
+
+Report: `C:\CE_PLAN\areas\release-v3-colleagues-RUNNER_R08_CHARACTERISE_REPORT.md`. It is pushed with the 16 probe run reports, and `git status -sb` shows no "ahead".

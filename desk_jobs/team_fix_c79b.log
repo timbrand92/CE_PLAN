@@ -1,0 +1,19 @@
+Draft PR #1865 is open, and the report is pushed to `C:\CE_PLAN` (main matches origin). Nothing is tested in AutoCAD, so BUG-1031 stays open.
+
+- **What a drafter sees:** the Pit Schedule cell right-click menu now lists "Delete cell", between Restore Cell and Restore Row.
+- **Cause:** `OnDeleteCellClicked` and `DeleteCellCommand` already existed, but no menu item called them.
+- **Files:**
+  - `PitScheduleDialog.xaml`
+  - `PitScheduleViewModel.cs`
+  - `UserSettings.cs`
+  - new `Rules/PitScheduleDeleteCellMenuRule.cs`
+  - new `Bug1031DeleteCellMenuTests.cs`
+  - `REGRESSION_LOG.md`
+- **Switch:** `linking.pitScheduleDeleteCellMenu`, ON.
+- **Tests:**
+  - 19 focused tests passed.
+  - The full suite on net10 (Debug build) had 3 failures.
+  - The PDF test passed when re-run alone.
+  - The two IL-shape tests need a Release build, and I did not re-run them.
+  - The net48 build had 0 errors.
+- **Not proven:** a right-click on a cell you haven't left-clicked first may blank the previously selected cell. A Codex look needs to check this, with case `N33_ps_delete_cell`.

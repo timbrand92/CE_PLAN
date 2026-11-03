@@ -1,0 +1,30 @@
+**FOR TIM**
+
+The hunt is done. It found 27 problems in WSUD, long sections and crossings, plus 2 just outside that area, none of them already on the bug list. All of it is from reading the code. Nothing was run, and nothing was opened in AutoCAD.
+
+**The four worst, all on the long section:**
+
+1. **Pipes drawn one size too big.** In a run that goes 225 then 375, the 225 pipe is drawn as a 375, so its top line sits 150 mm too high. This happens to every pipe just before a size step.
+2. **A trench grate drawn at RL 0.00.** If an older trench grate was placed with Enter at the cover prompt, its stored cover "0.000" is read as a real level. The ground line drops to RL 0, through the table.
+3. **A second long-section button with no checks.** CDCALC still shows the "Older longitudinal" tab with "Export to Drawing". It draws blank levels as RL 0.00, can run a section up one branch and down another, and uses 1:50 vertical where CDPROFILE uses 1:10.
+4. **Datum above the pipes accepted.** Type a datum of 20.00 when the lowest pipe is at 18.50: the pipes are drawn through the table text, and CE still says Ready.
+
+**Next worst:**
+
+1. **A level pipe blocks the whole section.** A flat pipe with no grade label (detention storage pipes are often laid flat) means the section can never be drawn.
+2. **An uphill pipe looks normal.** It still shows "1 in 100" and a speed.
+3. **An invert above the cover is hidden.** It shows as depth 0.00 in the review, but -0.20 on the drawing.
+4. **CDRG probably loses the whole outline on Enter.** Pressing Enter to finish a raingarden outline appears to cancel the command.
+
+**Overland flow (area J)** has no code yet, so there was nothing to check there.
+
+**What was not tested:** everything. This was a read-only audit. Four findings need AutoCAD (or the 2024 lane) to prove: the CDRG Enter problem, a rare CDRG refusal on the 2024 lane, Xref text being read as ground level, and the boundary marks on bent pipes. No bug numbers were filed; the controller does that.
+
+The report is in `C:\CE_PLAN\areas\release-v3-colleagues-HUNT_CIVIL_IJK_2026-10-12.md`.
+
+---
+
+1. **Code read:** `origin/claude/rel-20261018d` @ `70a4e24f`, which is Civil 3.0.55, the newest Civil release head. It was read in a detached worktree at `C:\ce-hunt\ijk`, which has now been removed. The main checkout is the same as at the start.
+2. **Two helpers:** two helpers did part of the reading. I checked their main claims myself before including them (spoon drain, the crossing clearance rule, the split message, WSUD, the trench-grate cover and the review grid). The CDTWL default finding was also checked in the code.
+3. **Left out as already known:** the CDPROFILE metre-drawing chainage is BUG-331 item 4. CDSPOONDRAIN's metre problem is included at MEDIUM, because it is the same family as BUG-331/338 but not on either list.
+4. **Commit:** `CE_PLAN` main at `e8f9aed9`, merged with origin/main first and pushed. Only the report file was added. The leak scan was clean.

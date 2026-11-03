@@ -1,0 +1,16 @@
+Sun 00:05 no C-79a finalizer report: assembler not started
+Sun 00:05 chain start: waiting for the C-79a finalizer GO and the pre-reviews of #1969, #1970, #1972
+Sun 00:05 waiting: no C-79a finalizer report; no Opus pre-review for #1969; no Opus pre-review for #1970; no Opus pre-review for #1972
+Sun 00:35 waiting: no C-79a finalizer report
+Sun 01:05 waiting: no C-79a finalizer report
+Sun 01:15 C: has 22.2 GB free, under the 27 GB floor: waiting
+Sun 01:25 C: has 22 GB free, under the 27 GB floor: waiting
+Sun 01:35 C: has 22 GB free, under the 27 GB floor: waiting
+Sun 01:45 C: has 22.4 GB free, under the 27 GB floor: waiting
+Sun 01:55 C: has 22.4 GB free, under the 27 GB floor: waiting
+Sun 02:05 C: has 22.4 GB free, under the 27 GB floor: waiting
+Sun 02:15 C: has 22.4 GB free, under the 27 GB floor: waiting
+Sun 02:25 C: has 22.4 GB free, under the 27 GB floor: waiting
+Sun 02:35 starting train_c79b1_assembler_job.txt (sonnet), C: 58.3 GB free
+Sun 03:21 finished train_c79b1_assembler_job.txt
+Sun 03:21 lane finished

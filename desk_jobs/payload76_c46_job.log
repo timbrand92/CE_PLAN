@@ -1,0 +1,9 @@
+Candidate C-46 is built at `C:\ce_rc_scratch\c1043` (CE_CVL_SUITE.bundle, CE_SUITE_MANAGER.bundle). Nothing is installed and nobody has opened it in AutoCAD.
+
+- **Verified:** civil `verified 828, bad 0, extra 0`; manager `verified 78, bad 0, extra 0`. Files added or removed against installed: 0.
+- **Branch head:** `0bbf4882`. The version commit was exactly 4 files, 4 insertions, 4 deletions.
+- **Tests:** Civil pin tests 39/39, Manager 51/51.
+- **Settings and installed DLLs:** identical before and after.
+- **Odd:** the Installer fixes (#1442–#1444) are in the installer exe, not these bundles.
+
+The full report is `C:\Lisp Files\_TEST_COPIES_20260923\PAYLOAD_C1043_REPORT.md`.

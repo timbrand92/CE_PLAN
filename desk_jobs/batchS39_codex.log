@@ -1,0 +1,52 @@
+Mon 07:32:57 batch S39 waiting for batchS12 to end
+Mon 07:58:19 batchS12 ended; taking over
+Mon 07:58:25 stopped idle chain4 pid 57360
+Mon 07:58:26 backed up CD_RecentValues.json sha 8C021849BD8F
+Mon 07:58:26 backed up CD_Settings.json sha ACD64E79A33B
+Mon 07:58:26 backed up CS_Settings.json sha D604CE689671
+Mon 07:58:26 backed up settings.json sha EFE307C4FC74
+Mon 07:58:26 STOP_CODEX.flag lifted (STOP_SUPERVISOR.flag stays up)
+Mon 07:58:31 Codex usage before S3 : 34 percent
+Mon 07:58:31 starting verifyS3_c88
+Mon 08:21:43 verifyS3_c88 launcher finished; Codex usage after: 35 percent
+Mon 08:21:43 after S3 : CD_Settings.json sha ACD64E79A33B (original ACD64E79A33B)
+Mon 08:21:43 after S3 : CS_Settings.json sha D604CE689671 (original D604CE689671)
+Mon 08:21:43 after S3 : settings.json sha EFE307C4FC74 (original EFE307C4FC74)
+Mon 08:21:43 Codex usage before S5 : 35 percent
+Mon 08:21:43 starting verifyS5_c88
+Mon 08:47:15 verifyS5_c88 launcher finished; Codex usage after: 36 percent
+Mon 08:47:15 after S5 : CD_Settings.json sha ACD64E79A33B (original ACD64E79A33B)
+Mon 08:47:15 after S5 : CS_Settings.json sha D604CE689671 (original D604CE689671)
+Mon 08:47:15 after S5 : settings.json sha EFE307C4FC74 (original EFE307C4FC74)
+Mon 08:47:15 Codex usage before AUD : 36 percent
+Mon 08:47:15 starting verifyAUD_c88
+Mon 09:27:06 verifyAUD_c88 launcher finished; Codex usage after: 38 percent
+Mon 09:27:06 after AUD : CD_Settings.json sha ACD64E79A33B (original ACD64E79A33B)
+Mon 09:27:06 after AUD : CS_Settings.json sha D604CE689671 (original D604CE689671)
+Mon 09:27:06 after AUD : settings.json sha EFE307C4FC74 (original EFE307C4FC74)
+Mon 09:27:06 Codex usage before S6 : 38 percent
+Mon 09:27:06 starting verifyS6_c88
+Mon 09:48:10 verifyS6_c88 launcher finished; Codex usage after: 39 percent
+Mon 09:48:10 after S6 : CD_Settings.json sha ACD64E79A33B (original ACD64E79A33B)
+Mon 09:48:10 after S6 : CS_Settings.json sha D604CE689671 (original D604CE689671)
+Mon 09:48:10 after S6 : settings.json sha EFE307C4FC74 (original EFE307C4FC74)
+Mon 09:48:10 Codex usage before S8 : 39 percent
+Mon 09:48:10 starting verifyS8_c88
+Mon 10:01:59 verifyS8_c88 launcher finished; Codex usage after: 40 percent
+Mon 10:01:59 after S8 : CD_Settings.json sha ACD64E79A33B (original ACD64E79A33B)
+Mon 10:01:59 after S8 : CS_Settings.json sha D604CE689671 (original D604CE689671)
+Mon 10:01:59 after S8 : settings.json sha EFE307C4FC74 (original EFE307C4FC74)
+Mon 10:01:59 Codex usage before S9 : 40 percent
+Mon 10:01:59 starting verifyS9_c88
+Mon 10:12:23 verifyS9_c88 launcher finished; Codex usage after: 40 percent
+Mon 10:12:23 after S9 : CD_Settings.json sha ACD64E79A33B (original ACD64E79A33B)
+Mon 10:12:23 after S9 : CS_Settings.json sha D604CE689671 (original D604CE689671)
+Mon 10:12:23 after S9 : settings.json sha EFE307C4FC74 (original EFE307C4FC74)
+Mon 10:12:23 unchanged CD_Settings.json sha ACD64E79A33B
+Mon 10:12:23 unchanged CS_Settings.json sha D604CE689671
+Mon 10:12:23 RESTORED CD_RecentValues.json: was AE355289D9DC, back to 8C021849BD8F
+Mon 10:12:23 unchanged settings.json sha EFE307C4FC74
+Mon 10:12:23 HOLD_ROBOT.flag removed.
+Mon 10:12:24 restarting chain4 on spec_passi.txt (build 3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527; finished packs are skipped)
+Mon 10:12:24 CODEX_NEXT.txt rewritten to batch B
+Mon 10:12:24 Batch S39 ends.

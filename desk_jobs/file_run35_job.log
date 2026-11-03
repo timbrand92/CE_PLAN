@@ -1,0 +1,11 @@
+Run 35 is filed and pushed to C:\CE_PLAN (a20ab785); the leak-scan came back clean and nothing is marked FIXED.
+
+- **Bugs noted:** BUG-141, 815, 820, 854, 813, 742, 797, 782, 698 and 822.
+- **BUG-141:** PASS for the pit-body half (#1482, switch ON). STILL FAILS for the Drawing Border half.
+- **New bug:** BUG-855 (Pit Schedule header 95 to 96 data issues after CDSYNC, LOW). The next ID is BUG-856.
+- **Fix queue (triage section 16):**
+  - Lane 03: 1 line (BUG-855).
+  - Lane 04: 2 lines. The BUG-141 Drawing Border failure is first, with a read-only extents check proposed. BUG-822 is second.
+- **Robot gaps:** run 35 section added, 3 items.
+- **QUESTIONS_FOR_MONDAY.md:** nothing added.
+- **Run notes block:** BUG_CARPARK.md has no separate run-notes section, so I put the RUN 35 block in the header area.

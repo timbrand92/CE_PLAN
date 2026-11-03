@@ -1,0 +1,8 @@
+B-021 BUG-1192: draft PR #1864 is open and the report is pushed. It is built and unit-tested only. Nobody has opened it in AutoCAD, and BUG-1192 is not marked fixed.
+
+- **What changes:** CDPROFILE prints one command-line warning per stretch when it throws away survey levels more than 1.20 m off the pit covers. The drawing is unchanged.
+- **Files:** `LongSectionSurveyIgnoredRule.cs` (new), `UserSettings.cs`, `LongitudinalSectionViewModel.cs`, a new 16-test file, `REGRESSION_LOG.md`.
+- **Switch:** `longSection.warnWhenSurveyLevelsIgnored`, ON. The three tolerances are now Settings values with today's figures.
+- **Test results:** the Civil net10 full suite ended with 2 failures. Both are `SourceAtomicCoordinatorDependencyTests` and also fail in another job's run; I didn't touch their code. The net48 compile has 0 errors.
+
+The report is `release-v3-colleagues-BUG1192_FIX_REPORT.md` in `C:\CE_PLAN\areas`.

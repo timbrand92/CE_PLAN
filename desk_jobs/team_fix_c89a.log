@@ -1,0 +1,7 @@
+Draft PR #1870 is open against `claude/rel-20261030a`, and the report is pushed to `C:\CE_PLAN`. The CDRG plan label now reads plain "RG", and the tag and record still read RG1. Nobody has tried it in AutoCAD.
+
+The new switch is `linking.raingardenLabelWithoutNumber` (ON). OFF returns RG1 on the plan.
+
+Files: `RaingardenLabelRule.cs`, `SourcePlacementService.cs`, `UserSettings.cs`, `RaingardenLabelTests.cs`, `REGRESSION_LOG.md`.
+
+The full Civil suite on net10 ran 21,516 tests with 0 failed and 32 skipped, and net48 compiles with 0 errors. Robot case C31 proves it, with C31_off as the switch-off control.

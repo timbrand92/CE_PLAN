@@ -1,0 +1,5 @@
+== verifyF9_cur (usage 88.0% -> 88.0%): AUTOCAD STILL RUNNING
+
+1. **F9 BLOCKED:** DP-READ returned `nil`; N17 required stopping. Double-click not reached. BLOCKED 1, all other result counts 0; SURE 1, UNSURE 0.
+2. **Clean end:** F9ÔÇÖs AutoCAD closed without saving; settings unchanged; F9 lock released. Another AutoCAD session subsequently started under ClaudeÔÇÖs lock and was left untouched.
+3. **Report:** [CODEX_VERIFY_F9_20261027_0426.md](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_F9_20261027_0426.md>). No FAIL observed; no fixtures missing.

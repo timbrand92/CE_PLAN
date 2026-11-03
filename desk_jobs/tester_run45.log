@@ -1,0 +1,26 @@
+Run 45 is done. Of 12 counted checks, 9 passed, none failed, and 3 are unproven. The robot could not get any of the C-58 items to a result on screen. The report is committed and pushed at `C:\CE_PLAN\areas\release-v3-colleagues-CLAUDE_DRIVER_RUN45_V2_2026-10-21.md` (commit 93419665).
+
+- **DP1 Edit window (#1499): UNPROVEN.** The driver has no double-click verb, and the "Edit source DP1" window isn't on its allow-list. Typing CDTAG only gives the old command-line questions. A Codex look is needed.
+- **Wrong-layer rows (#1511/#1512): UNPROVEN.**
+  - CDCHECKS is switched off by default, and the wrong-layer rows need two settings on: `checks.checksCommandEnabled` and `layerChecks.wrongLayerRows`. The brief assumed CDCHECKS gives rows by default; it doesn't, so there was no baseline to match.
+  - With both on, CDCHECKS gave "42 to look at · 234 OK · 342 not known". The command line shows only 20 of 618 rows, none of them wrong-layer. The driver cannot read the Checks window, so I can't say whether this drawing has any.
+- **CDCHECKCURRENT progress line (#1514):**
+  - With defaults it is quiet: 27 items and no progress line (PASS).
+  - With its switch on it is UNPROVEN. With the new Checks list on, CDCHECKCURRENT folds into that list, so the two can't be tested in one session.
+- **Regressions all PASS on Civil 3.0.68, identical to run 44:**
+  - BUG-856 preview names the pipe (275 mm).
+  - Recover Inverts totals.
+  - CDTWL freeboard 150.
+  - Edit Pipe cascade (Yes, Apply, U, REDO).
+  - CDSYNC (the Pit Schedule differs only in the data-issues count, 95 vs 96).
+  - Quick edits open no CE window, with a note that I had opened the "What CE Found" palette myself.
+  - CE_VERSION opens "About CE Suite" (window unread).
+  - CSREOBAR, U, REDO.
+- **Safety:** all four settings hashes (ACD64E79A33B, 622A246F7D3B, F68EEB5E343C, EFE307C4FC74) match the start, and the guard restored the one file I changed by hash. Driver hashes 120EE24D15B2 and 5B542F2145F4 were unchanged. Installed versions read Civil 3.0.68, Manager 1.1.68, Structural 1.0.119. I made no deletions.
+- **My slip:** one shell command included a stray empty bare `python3` call, which the brief forbids. It did nothing, and I stopped it.
+- **Quit:** session 1's first quit worked; session 2's first quit failed at 242 s and the second worked in 4.4 s. Start Pipe hit the 30 s HARD TIMEOUT again, as in runs 43 and 44.
+
+Copies to delete in `C:\ce_rc_drv`: CLD451_B1.dwg, CLD451_B1_PRE_C7_20261021_185016.dwg, CLD451_S1.dwg, CLD452_B1.dwg, CLD452_B1_PRE_C7_20261021_190216.dwg.
+
+AUTOCAD CLOSED
+SETTINGS RESTORED

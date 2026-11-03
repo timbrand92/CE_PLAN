@@ -1,0 +1,15 @@
+PR #1867 (draft, branch `fb/bug1227-pit-copy-keeps-pipe-ends`) now compiles and its unit tests pass. Nothing has been tried in AutoCAD.
+
+**FOR TIM**
+1. **What it did:** Civil net10 and Drainage net48 both compile with 0 errors. The 14 BUG-1227 tests pass, and the full Civil suite ran once in Release (20,935 tests).
+2. **Mistakes of mine:**
+   - One of my tests had the wrong expected answer, so I fixed the test and left the behaviour alone.
+   - My extra relink argument broke an old BUG-288 source-text guard, so I updated its text match.
+   - I blanked the PR description by accident and restored it from my saved copy. It is still a draft.
+3. **Not proven:** anything in AutoCAD. The robot case `N36_rotcopy_on_pit` with control `C36` is the proof. I did not re-run the whole 43-minute suite after the BUG-288 fix; that test class re-ran green.
+
+**Technical**
+- Pushed commits `9c466530` and `a6969702` (normal push).
+- Files changed: `Bug1227PitCopyKeepsPipeEndsTests.cs`, `Bug285To298C5Tests.cs` and `REGRESSION_LOG.md`.
+- The switch `linking.pitCopyKeepsOriginalPipeEnds` is unchanged (ON).
+- The BUILD AND TEST section is appended to `C:\CE_PLAN\areas\release-v3-colleagues-BUG1227_FIX_REPORT.md`, and the report is pushed.

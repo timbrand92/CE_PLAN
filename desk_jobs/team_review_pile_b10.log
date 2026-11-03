@@ -1,0 +1,20 @@
+**FOR TIM**
+
+1. **Done:** the batch 10 review is pushed to `C:\CE_PLAN\areas\REVIEW_PILE_B10_24OCT.md`.
+2. **Counts:** 12 PRs were in range. Six already had reviews from batches 1 to 3, so I skipped them. Of the six I reviewed, 3 can merge as they are, 3 need small fixes first, and none is held or rejected.
+3. **Safe to merge today:**
+   1. **Civil:** #1618. The AI question and your access key no longer get forwarded to an address CE never checked.
+   2. **Structural:** #1605. The checklist should survive N/A then U.
+   3. **Structural, after small fixes:** #1606, #1608 and #1615 must go in after #1605, in that order.
+4. **Top faults:**
+   1. **#1606:** the N/A reason is saved, but nothing on screen shows it yet.
+   2. **#1608:** R2LTXT gives a count, not a picture, and the text still jumps when converted.
+   3. **#1615:** this fixes 25L only. EBT still asks for rotation after the click.
+5. **One question for you (work hours):** CE sends a small "this PC is alive" note each time AutoCAD opens. On a PC with no approved-address record, should it still go to any secure (https) address? **My recommendation:** yes for the 9 Nov pilot, then make the record compulsory. #1620 can merge once you answer.
+6. **Not checked:** nothing was opened in AutoCAD. I ran only the AI sender tests (15 of 15 passed). The Structural and heartbeat tests come from the PR authors.
+
+---
+
+My temporary copy of the repo is removed and `CE_PLAN` shows nothing waiting to push. There is an untracked `.codex/` folder in the main plugin checkout. It isn't mine, so I left it alone.
+
+**Summary:** I reviewed six PRs and skipped six already reviewed. Three can merge now (#1618, #1605, and #1620 after your answer) and three need small fixes. I tested no change in AutoCAD.

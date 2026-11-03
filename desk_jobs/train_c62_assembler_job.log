@@ -1,0 +1,15 @@
+Train C-62 is on `claude/rel-20261023m` at `dd13cf58`, pushed. All 23 PRs merged at their expected heads. This is built and unit-tested only; nobody has opened it in AutoCAD.
+
+- **Clash:** the only code clash was `UserSettings.cs` at #1562, resolved by keeping both switch blocks.
+- **Scope:** Shared and Installer are unchanged. Manager changes come from #1613, #1632, #1594 and #1595, with one new source file.
+- **Settings:** four new switches (#1567, #1562, #1570, #1558), all ON, none with a Settings row.
+- **Build:** the solution builds with 0 errors on net48 and net10.
+- **Tests:**
+  - Civil net10: 19,545 total, 0 failed.
+  - Manager net10: 932 total, 0 failed.
+  - Civil net48 focused: 17 reds, all the reference-only AutoCAD fault, not compared against the base.
+  - REDO baseline: 25 of 25.
+- **Settings files:** hashes unchanged. AutoCAD was open during every run.
+- **For the finalizer:** #1645 was never reviewed; it needs a full review.
+
+The report is at `C:\CE_PLAN\areas\release-v3-colleagues-TRAIN_C62_ASSEMBLY_REPORT_2026-10-23.md`, pushed. My worktree and temp folders are removed.

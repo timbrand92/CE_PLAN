@@ -1,0 +1,6 @@
+# MODEL: sonnet
+CARPARK AUDIT MERGE (Sonnet, Team, read-only). Written by CE 05 Mon 2 Nov 2026. You change NOTHING except the output file(s) named below. Edit no other file, run no git write command (read-only git fetch, git log, git show, gh pr list and gh pr view are allowed), do not push (CE 05 pushes), build nothing, run no test, open no AutoCAD, do not run the robot, do not read or write Tim's real settings files, spawn no agents, never touch C:\CE_DrawingIntelligence, never put a key or secret in a file. Read C:\TimOS\RULES.md first (plain English for Tim at the top, numbered lists with bold labels, NO TABLES, Australian spelling, metric, Melbourne time, no jargon, say plainly what is read, built, tested and NOT proven). Latest Civil/Manager line: origin/claude/rel-20261102a (git fetch first). Latest Structural line: origin/claude/rel-20261026s.
+
+Output file: C:\CE_PLAN\areas\AUDIT_CLASS_ALL_02NOV.md .
+
+TASK: read every C:\CE_PLAN\areas\AUDIT\AUDIT_CLASS_CHUNK*_02NOV.md that exists, and produce: FOR TIM (counts per class, the 25 most pilot-critical FIXABLE-NOW with one line each in the order a builder should take them, the top NEEDS-TIM questions grouped for CE 04, the DUPLICATES and ALREADY-FIXED lists to close), then the merged one-line-per-entry list. Report any chunk file that is missing. Final message: one line, file path and the class counts.

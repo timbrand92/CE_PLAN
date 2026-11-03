@@ -1,0 +1,11 @@
+AUTOCAD CLOSED (nothing was opened). Draft is at `C:\CE_PLAN\areas\LOOKBRIEF_BATCHB_DRAWING_MANAGER_02NOV.md`: two briefs, B2 (drawings) and B3 (Manager), each with a short launcher, a full brief and launch lines. Nothing was run, built or pushed, and I did not touch Tim's settings files.
+
+1. **Banned word:** I searched the finished file for "follow" in any form, case-insensitive: 0 hits. The #1888 switch key contains it, so the file spells that key in three parts inside the helper scripts. CE 02 must copy those scripts exactly.
+2. **Build gate:** the installed build is Civil 3.0.88 / Manager 1.1.88, which lacks all five fixes, so launching now would only give NOT TESTED, BUILD LACKS THE FIX.
+3. **Branch:** all five PRs are in `origin/claude/rel-20261106a` (C-79a) and `rel-20261108a`, not in `rel-20261102a`, the line the job named. I read the code from the PR diffs and from `rel-20261106a`.
+4. **Which looks can be seen:**
+   - #1935 (Net8 start-up line) cannot be seen here, because only AutoCAD 2027 is installed. It is marked NOT TESTABLE ON THIS PC, with a separate control look on 2027 that proves nothing about the fix.
+   - #1876's old fault only shows if Tim's account is a CE administrator. The brief records that as ADMIN BUTTON YES or NO.
+5. **Decision for CE 00:** Refresh copies waiting CE reports to the office IT folder. That is old behaviour, but B3-02 presses it, so it sits behind `B3_REFRESH_GO.flag`.
+6. **Fixtures:** I couldn't find which sentence the no-units source drawing gives, so B2-02b may come out DIFFERENT and the notes list the missing fixture. The Manager switch file does not exist on this PC, so those controls will probably be BLOCKED.
+7. **Robot coverage:** it proves none of the five, going by a search of the ledger and the cases folder.

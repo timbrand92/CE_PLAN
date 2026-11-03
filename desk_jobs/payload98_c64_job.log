@@ -1,0 +1,10 @@
+Waiting on the Civil build, which is queued behind AutoCAD (the runner waits up to 30 minutes for it to close). Progress so far:
+
+- **Train head:** `f73755ee` matches the finalizer's "GO at" line.
+- **Installed bundles:** they read Civil 3.0.73 and Manager 1.1.73 in all six DLLs.
+- **Version commit:** `a15b414c` is pushed to `claude/rel-20261024n` (4 files, 4 insertions, 4 deletions).
+- **Candidate number:** `c1060` is free.
+- **Worktree:** it is at `C:\ce_rc_scratch\wt98`, with `R:` mapped to it.
+- **Scripts and string rows:** the string-proof rows are written. I probed all of them against the installed DLLs and none came back unexpected.
+
+When the build finishes I'll continue with the Manager build, the copy and verification steps, the pin tests, the string proof and the report.

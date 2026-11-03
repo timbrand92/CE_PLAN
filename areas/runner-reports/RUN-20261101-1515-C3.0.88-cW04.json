@@ -1,0 +1,1766 @@
+{
+  "header": {
+    "run_id": "RUN-20261101-1515-C3.0.88-cW04",
+    "started": "2026-11-01 15:15:35",
+    "finished": "2026-11-01 15:26:16",
+    "build": {
+      "civil": {
+        "product_version": "3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+        "file_version": "3.0.88.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+        "file_version": "1.1.88.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.88+3fbb9da5 / struc 1.0.125+204dfad2 / mgr 1.1.88+3fbb9da5",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "9F90B89A2EE75DED7611FAB7A4EA9C14B11D079E6CBA883307E93B0C3555F8AE",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+      "Driver files (SHA-256, first 12): v2 F4D8F40C3675 (expected F4D8F40C3675), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4B0175FFAB00, v3 session F061E3240C47, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 BBF42DBA8958, case_runner_lib.ps1 89AD455619F8, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 2 case file(s) plus 0 shared setup(s); pack SHA-256 9F90B89A2EE75DED7611FAB7A4EA9C14B11D079E6CBA883307E93B0C3555F8AE; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json D604CE689671 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sun 01 Nov 2026 15:15 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 2,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 2
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261101-1515-C3.0.88-cW04-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-11-01 15:15:37",
+      "finished": "2026-11-01 15:17:56",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31515401_B1.dwg",
+      "cases": [
+        "W713"
+      ],
+      "whatsnew_dismissed_at_start": "no, window was not there",
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : D604CE689671 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    },
+    {
+      "session_id": "RUN-20261101-1515-C3.0.88-cW04-s2",
+      "phase": "main",
+      "session_no": 2,
+      "started": "2026-11-01 15:17:56",
+      "finished": "2026-11-01 15:26:16",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31518022_B1.dwg",
+      "cases": [
+        "W654"
+      ],
+      "whatsnew_dismissed_at_start": "no, window was not there",
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : D604CE689671 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "W713",
+      "proves_bugs": "BUG-713 (the finder ranks only spots that read as a level: a blank spot nearer the pick point no longer hides a valid one; CDFALLSUGGEST route only, the pit design-level offer is not driven)",
+      "title": "CDFALLSUGGEST reads the P19.020 spot 40 mm away although a blank spot sits 20 mm away, suggests FALL toward the new pit at 1:100, and Skip places nothing",
+      "kind": "deterministic",
+      "order": 902,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "Bug-proof plan wave 1 (BUG_PROOF_PLAN_31OCT.md), group T: spot-level finder CDFALLSUGGEST",
+      "bug": "BUG-713",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed",
+      "variant_of": "",
+      "expected": "A grated pit typed at 156000,-61500 with cover 19.000. A blank spot level (CDSL, Enter) at 156020,-63500 and a spot level P19.020 at 156040,-63500. CDFALLSUGGEST picked at 156000,-63500 never asks 'No spot level here'; it says '[CE] Suggested: FALL toward P<n>, 1:100.'; Skip; Esc gives 'CDFALLSUGGEST finished. 0 placed, 1 skipped.' No FALL block is added, no CE window is left open and the drawing file is unchanged.",
+      "why_not_unit": "The two real SPOT LEVEL blocks, their LEVEL attributes as CDSL wrote them and the live CDFALLSUGGEST read only meet in a real drawing.",
+      "not_automated": [
+        "The pit design-level offer (Services/DesignLevelService.cs line 222, the same reader with designOnly) is not driven: it needs the New Pit window's offer to be read, which no case has done yet.",
+        "An UNREADABLE (not blank) nearer spot cannot be made by CDSL any more (BUG-711 refuses text that is not a level), so only the blank half of the bug is driven; the unreadable half is the same ranking code (SpotLevelText.cs lines 77-78)."
+      ],
+      "file_sha256": "561EF4BCED058BEEE8485796A8A2658BB6CAB209849F2ADB9A993ED1AA3D69F7",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-11-01 15:16:18",
+      "seconds": 79.6,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "copy CLDV31515401_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"PIT{NL}156000,-61500\" -Force -ExpectWindow \"New Pit\" -> $pit_t1",
+          "ok": true,
+          "seconds": 9.2,
+          "evidence": "typed 'PIT 156000,-61500': Command: | Command: PIT | Specify pit insertion point: 156000,-61500"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.CoverLevel\" \"19.000\"",
+          "ok": true,
+          "seconds": 6.3,
+          "evidence": "ui set 'New Pit' C2.CoverLevel = 19.000: "
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pit\" \"New pit, Continue placement\" -> $pit_t2",
+          "ok": true,
+          "seconds": 25.8,
+          "evidence": "pressed 'New pit, Continue placement' in /New Pit/: window closed = True"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pit\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /^New Pit/ closed after 0 s"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e1",
+          "ok": true,
+          "seconds": 6.9,
+          "evidence": "esc-prompt: Command: | Command: PIT | Specify pit insertion point: 156000,-61500 | Specify pit label insertion point: *Cancel*"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e2",
+          "ok": true,
+          "seconds": 6.8,
+          "evidence": "esc-prompt: Command: PIT | Specify pit insertion point: 156000,-61500 | Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit..."
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e3",
+          "ok": true,
+          "seconds": 2.8,
+          "evidence": "esc-prompt: Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit, or press Esc to stop. | Specify pit insertion point: *Canc..."
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDSL{NL}156020,-63500{NL}\" -Force -> $sl_blank",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "typed 'CDSL 156020,-63500': Command: | Command: CDSL | Specify spot level insertion point: 156020,-63500 | Enter proposed spot level (m): | Spot level placed. Level: (blank)"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDSL{NL}156040,-63500{NL}19.020\" -Force -> $sl_good",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "typed 'CDSL 156040,-63500 19.020': Command: | Command: CDSL | Specify spot level insertion point: 156040,-63500 | Enter proposed spot level (m): 19.020 | Spot level placed. Level: P19.020"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.2,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1037 objects"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDFALLSUGGEST{NL}156000,-63500{NL}Skip\" -Force -TimeoutSec 90 -> $fs",
+          "ok": true,
+          "seconds": 6.3,
+          "evidence": "typed 'CDFALLSUGGEST 156000,-63500 Skip': Command: | Command: CDFALLSUGGEST | Pick a level to suggest a FALL arrow toward the nearest downhill grated pit, or Enter to finish: 156000,-63500 | [CE] Suggested: FALL toward P8, 1:100. | Accept, Move or Skip this fall..."
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $fs_e1",
+          "ok": true,
+          "seconds": 2.6,
+          "evidence": "esc-prompt: Command: CDFALLSUGGEST | Pick a level to suggest a FALL arrow toward the nearest downhill grated pit, or Enter to finish: 156000,-63500 | [CE] Suggested: FALL toward P8, 1:100. | Accept, Move or Skip this fall? [Accept/M..."
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $fs_e2",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "esc-prompt: Pick a level to suggest a FALL arrow toward the nearest downhill grated pit, or Enter to finish: 156000,-63500 | [CE] Suggested: FALL toward P8, 1:100. | Accept, Move or Skip this fall? [Accept/Move/Skip] <Accept>: Skip ..."
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $new",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "3 object(s) after index 1034 (model space now 1037); by type: AcDbBlockReference 3; first: 11C5AD AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C651 AcDbBlockReference 25DIMS SPOT LEVEL ; 11C654 AcDbBlockReference 25DIMS SPOT LEVEL"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c1 -> $new_fall",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "0 object(s) after index 1037 (model space now 1037); by type: ; first: "
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"name~^SPOT LEVEL$\" \"x~^156020$\" -> $sp_blank",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 3: 11C651 SPOT LEVEL 25DIMS"
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"name~^SPOT LEVEL$\" \"x~^156040$\" -> $sp_good",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 3: 11C654 SPOT LEVEL 25DIMS"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $sp_blank handle -> $hb",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C651"
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $sp_good handle -> $hg",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C654"
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$hb} -> $eb",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "ent-read 11C651: {\"handle\":\"11C651\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[156020.0,-63500.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"LEVEL\",\"text\":\"P__.__\",\"insertion\":[15..."
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$hg} -> $eg",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "ent-read 11C654: {\"handle\":\"11C654\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[156040.0,-63500.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"LEVEL\",\"text\":\"P19.020\",\"insertion\":[1..."
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"near=156000,-61500,5\" \"object=AcDbBlockReference\" \"layer~PIT\" -> $pit",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 3: 11C5AD PIT BLOCK 3 STORMWATER PIT"
+        },
+        {
+          "n": 29,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_fall \"name~FALL\" -> $falls",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 0: "
+        },
+        {
+          "n": 30,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $w_end",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31515401_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "contains $sl_blank \"Spot level placed. Level: (blank)\"",
+          "ok": true,
+          "expected": "contains 'Spot level placed. Level: (blank)'",
+          "actual": "Command: | Command: CDSL | Specify spot level insertion point: 156020,-63500 | Enter proposed spot level (m): | Spot level placed. Level: (blank)",
+          "evidence": "found 'Spot level placed. Level: (blank)' in: Command: | Command: CDSL | Specify spot level insertion point: 156020,-63500 | Enter proposed spot level (m): | Spot level placed. Level: (blank)"
+        },
+        {
+          "n": 2,
+          "text": "contains $sl_good \"Spot level placed. Level: P19.020\"",
+          "ok": true,
+          "expected": "contains 'Spot level placed. Level: P19.020'",
+          "actual": "Command: | Command: CDSL | Specify spot level insertion point: 156040,-63500 | Enter proposed spot level (m): 19.020 | Spot level placed. Level: P19.020",
+          "evidence": "found 'Spot level placed. Level: P19.020' in: Command: | Command: CDSL | Specify spot level insertion point: 156040,-63500 | Enter proposed spot level (m): 19.020 | Spot level placed. Level: P19.020"
+        },
+        {
+          "n": 3,
+          "text": "count $sp_blank = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $sp_blank = 1 (expected = 1)"
+        },
+        {
+          "n": 4,
+          "text": "count $sp_good = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $sp_good = 1 (expected = 1)"
+        },
+        {
+          "n": 5,
+          "text": "matches $eb \"LEVEL.,.text.:.P__.__.,.insertion\"",
+          "ok": true,
+          "expected": "matches /LEVEL.,.text.:.P__.__.,.insertion/",
+          "actual": "{\"handle\":\"11C651\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[156020.0,-63500.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\"...",
+          "evidence": "matched 'LEVEL\",\"text\":\"P__.__\",\"insertion'"
+        },
+        {
+          "n": 6,
+          "text": "matches $eg \"text.:.P19.020.,.insertion\"",
+          "ok": true,
+          "expected": "matches /text.:.P19.020.,.insertion/",
+          "actual": "{\"handle\":\"11C654\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[156040.0,-63500.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\"...",
+          "evidence": "matched 'text\":\"P19.020\",\"insertion'"
+        },
+        {
+          "n": 7,
+          "text": "count $pit = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $pit = 1 (expected = 1)"
+        },
+        {
+          "n": 8,
+          "text": "contains $fs \"Pick a level to suggest a FALL arrow toward the nearest downhill grated pit\"",
+          "ok": true,
+          "expected": "contains 'Pick a level to suggest a FALL arrow toward the nearest downhill grated pit'",
+          "actual": "Command: | Command: CDFALLSUGGEST | Pick a level to suggest a FALL arrow toward the nearest downhill grated pit, or Enter to finish: 156000,-63500 | [CE] Suggested: FALL toward P8, 1:100. | Accept, Mo...",
+          "evidence": "found 'Pick a level to suggest a FALL arrow toward the nearest downhill grated pit' in: Command: | Command: CDFALLSUGGEST | Pick a level to suggest a FALL arrow toward the nearest downhill grated pit, or Enter to finish: 156000,-63500 | [CE] Sugges..."
+        },
+        {
+          "n": 9,
+          "text": "not-contains $fs \"No spot level here\"",
+          "ok": true,
+          "expected": "does not contain 'No spot level here'",
+          "actual": "Command: | Command: CDFALLSUGGEST | Pick a level to suggest a FALL arrow toward the nearest downhill grated pit, or Enter to finish: 156000,-63500 | [CE] Suggested: FALL toward P8, 1:100. | Accept, Mo...",
+          "evidence": "'No spot level here' is absent from: Command: | Command: CDFALLSUGGEST | Pick a level to suggest a FALL arrow toward the nearest downhill grated pit, or Enter to finish: 156000,-63500 | [CE] Sugges..."
+        },
+        {
+          "n": 10,
+          "text": "history absent \"No spot level here\"",
+          "ok": true,
+          "expected": "command line lacks 'No spot level here'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'No spot level here' (26 lines read)"
+        },
+        {
+          "n": 11,
+          "text": "history absent \"No level at this point\"",
+          "ok": true,
+          "expected": "command line lacks 'No level at this point'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'No level at this point' (26 lines read)"
+        },
+        {
+          "n": 12,
+          "text": "contains $fs \"[CE] Suggested: FALL toward P\"",
+          "ok": true,
+          "expected": "contains '[CE] Suggested: FALL toward P'",
+          "actual": "Command: | Command: CDFALLSUGGEST | Pick a level to suggest a FALL arrow toward the nearest downhill grated pit, or Enter to finish: 156000,-63500 | [CE] Suggested: FALL toward P8, 1:100. | Accept, Mo...",
+          "evidence": "found '[CE] Suggested: FALL toward P' in: Command: | Command: CDFALLSUGGEST | Pick a level to suggest a FALL arrow toward the nearest downhill grated pit, or Enter to finish: 156000,-63500 | [CE] Sugges..."
+        },
+        {
+          "n": 13,
+          "text": "contains $fs \", 1:100.\"",
+          "ok": true,
+          "expected": "contains ', 1:100.'",
+          "actual": "Command: | Command: CDFALLSUGGEST | Pick a level to suggest a FALL arrow toward the nearest downhill grated pit, or Enter to finish: 156000,-63500 | [CE] Suggested: FALL toward P8, 1:100. | Accept, Mo...",
+          "evidence": "found ', 1:100.' in: Command: | Command: CDFALLSUGGEST | Pick a level to suggest a FALL arrow toward the nearest downhill grated pit, or Enter to finish: 156000,-63500 | [CE] Sugges..."
+        },
+        {
+          "n": 14,
+          "text": "history has \"CDFALLSUGGEST finished. 0 placed, 1 skipped.\"",
+          "ok": true,
+          "expected": "command line has 'CDFALLSUGGEST finished. 0 placed, 1 skipped.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'CDFALLSUGGEST finished. 0 placed, 1 skipped.'"
+        },
+        {
+          "n": 15,
+          "text": "history absent \"no grated pit was found\"",
+          "ok": true,
+          "expected": "command line lacks 'no grated pit was found'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'no grated pit was found' (26 lines read)"
+        },
+        {
+          "n": 16,
+          "text": "count $falls = 0",
+          "ok": true,
+          "expected": "count = 0",
+          "actual": "0",
+          "evidence": "count of $falls = 0 (expected = 0)"
+        },
+        {
+          "n": 17,
+          "text": "not-contains $w_end \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31515401_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV31515401_B1.dwg]"
+        },
+        {
+          "n": 18,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 19,
+          "text": "record $pit_t1 \"FULL what PIT showed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: PIT | Specify pit insertion point: 156000,-61500",
+          "evidence": "RECORDED, not judged: FULL what PIT showed = Command: | Command: PIT | Specify pit insertion point: 156000,-61500"
+        },
+        {
+          "n": 20,
+          "text": "record $sl_blank \"FULL CDSL blank\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDSL | Specify spot level insertion point: 156020,-63500 | Enter proposed spot level (m): | Spot level placed. Level: (blank)",
+          "evidence": "RECORDED, not judged: FULL CDSL blank = Command: | Command: CDSL | Specify spot level insertion point: 156020,-63500 | Enter proposed spot level (m): | Spot level placed. Level: (blank)"
+        },
+        {
+          "n": 21,
+          "text": "record $sl_good \"FULL CDSL P19.020\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDSL | Specify spot level insertion point: 156040,-63500 | Enter proposed spot level (m): 19.020 | Spot level placed. Level: P19.020",
+          "evidence": "RECORDED, not judged: FULL CDSL P19.020 = Command: | Command: CDSL | Specify spot level insertion point: 156040,-63500 | Enter proposed spot level (m): 19.020 | Spot level placed. Level: P19.020"
+        },
+        {
+          "n": 22,
+          "text": "record $eb \"FULL the blank spot (LEVEL attribute must be empty)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C651\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[156020.0,-63500.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"LEVEL\",\"text\":\"P__.__\",\"insertion\":[156120.0,-63741.42135623731,0.0],\"rotation\":5.497787143782214,\"height\":200.0,\"alignment\":9,\"align_point\":[156190.71067811866,-63670.71067811865,0.0],\"bbox\":[156095.30431978393,-64280.481750953564,156775.78607073758,-63599.99999999999]}],\"bbox\":[155849.28932188134,-64280.481750953564,156775.78607073758,-63329.28932188135],\"block_parts\":[{\"index\":0,\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"color\":256},{\"index\":1,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"20TEXT\",\"color\":256,\"tag\":\"LEVEL\",\"world_insertion\":[156120.0,-63741.42135623731]},{\"index\":2,\"object\":\"AcDbPolyline\",\"layer\":\"GUIDELINES\",\"color\":256},{\"index\":3,\"object\":\"AcDbPolyline\",\"layer\":\"GUIDELINES\",\"color\":256}]}",
+          "evidence": "RECORDED, not judged: FULL the blank spot (LEVEL attribute must be empty) = {\"handle\":\"11C651\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[156020.0,-63500.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"LEVEL\",\"text\":\"P__.__\",\"insertion\":[156120.0,-63741.42135623731,0.0],\"rotation\":5.497787143782214,\"height\":200.0,\"alignment\":9,\"align_point\":[156190.71067811866,-63670.71067811865,0.0],\"bbox\":[156095.30431978393,-64280.481750953564,156775.78607073758,-63599.99999999999]}],\"bbox\":[155849.28932188134,-64280.481750953564,156775.78607073758,-63329.28932188135],\"block_parts\":[{\"index\":0,\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"color\":256},{\"index\":1,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"20TEXT\",\"color\":256,\"tag\":\"LEVEL\",\"world_insertion\":[156120.0,-63741.42135623731]},{\"index\":2,\"object\":\"AcDbPolyline\",\"layer\":\"GUIDELINES\",\"color\":256},{\"index\":3,\"object\":\"AcDbPolyline\",\"layer\":\"GUIDELINES\",\"color\":256}]}"
+        },
+        {
+          "n": 23,
+          "text": "record $eg \"FULL the P19.020 spot\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C654\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[156040.0,-63500.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"LEVEL\",\"text\":\"P19.020\",\"insertion\":[156140.0,-63741.42135623731,0.0],\"rotation\":5.497787143782214,\"height\":200.0,\"alignment\":9,\"align_point\":[156210.71067811866,-63670.71067811865,0.0],\"bbox\":[156137.5883124789,-64347.430196539295,156885.59731402335,-63599.421194994924]}],\"bbox\":[155869.28932188134,-64347.430196539295,156885.59731402335,-63329.28932188135],\"block_parts\":[{\"index\":0,\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"color\":256},{\"index\":1,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"20TEXT\",\"color\":256,\"tag\":\"LEVEL\",\"world_insertion\":[156140.0,-63741.42135623731]},{\"index\":2,\"object\":\"AcDbPolyline\",\"layer\":\"GUIDELINES\",\"color\":256},{\"index\":3,\"object\":\"AcDbPolyline\",\"layer\":\"GUIDELINES\",\"color\":256}]}",
+          "evidence": "RECORDED, not judged: FULL the P19.020 spot = {\"handle\":\"11C654\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[156040.0,-63500.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"LEVEL\",\"text\":\"P19.020\",\"insertion\":[156140.0,-63741.42135623731,0.0],\"rotation\":5.497787143782214,\"height\":200.0,\"alignment\":9,\"align_point\":[156210.71067811866,-63670.71067811865,0.0],\"bbox\":[156137.5883124789,-64347.430196539295,156885.59731402335,-63599.421194994924]}],\"bbox\":[155869.28932188134,-64347.430196539295,156885.59731402335,-63329.28932188135],\"block_parts\":[{\"index\":0,\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"color\":256},{\"index\":1,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"20TEXT\",\"color\":256,\"tag\":\"LEVEL\",\"world_insertion\":[156140.0,-63741.42135623731]},{\"index\":2,\"object\":\"AcDbPolyline\",\"layer\":\"GUIDELINES\",\"color\":256},{\"index\":3,\"object\":\"AcDbPolyline\",\"layer\":\"GUIDELINES\",\"color\":256}]}"
+        },
+        {
+          "n": 24,
+          "text": "record $fs \"FULL what CDFALLSUGGEST showed up to Skip\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDFALLSUGGEST | Pick a level to suggest a FALL arrow toward the nearest downhill grated pit, or Enter to finish: 156000,-63500 | [CE] Suggested: FALL toward P8, 1:100. | Accept, Move or Skip this fall? [Accept/Move/Skip] <Accept>: Skip",
+          "evidence": "RECORDED, not judged: FULL what CDFALLSUGGEST showed up to Skip = Command: | Command: CDFALLSUGGEST | Pick a level to suggest a FALL arrow toward the nearest downhill grated pit, or Enter to finish: 156000,-63500 | [CE] Suggested: FALL toward P8, 1:100. | Accept, Move or Skip this fall? [Accept/Move/Skip] <Accept>: Skip"
+        },
+        {
+          "n": 25,
+          "text": "record $fs_e1 \"FULL the first Esc\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: CDFALLSUGGEST | Pick a level to suggest a FALL arrow toward the nearest downhill grated pit, or Enter to finish: 156000,-63500 | [CE] Suggested: FALL toward P8, 1:100. | Accept, Move or Skip this fall? [Accept/Move/Skip] <Accept>: Skip | Next level (0 placed, 1 skipped), or Enter to finish: *Cancel* | CDFALLSUGGEST finished. 0 placed, 1 skipped.",
+          "evidence": "RECORDED, not judged: FULL the first Esc = Command: CDFALLSUGGEST | Pick a level to suggest a FALL arrow toward the nearest downhill grated pit, or Enter to finish: 156000,-63500 | [CE] Suggested: FALL toward P8, 1:100. | Accept, Move or Skip this fall? [Accept/Move/Skip] <Accept>: Skip | Next level (0 placed, 1 skipped), or Enter to finish: *Cancel* | CDFALLSUGGEST finished. 0 placed, 1 skipped."
+        },
+        {
+          "n": 26,
+          "text": "record $fs_e2 \"FULL the second Esc (expected: nothing to cancel)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Pick a level to suggest a FALL arrow toward the nearest downhill grated pit, or Enter to finish: 156000,-63500 | [CE] Suggested: FALL toward P8, 1:100. | Accept, Move or Skip this fall? [Accept/Move/Skip] <Accept>: Skip | Next level (0 placed, 1 skipped), or Enter to finish: *Cancel* | CDFALLSUGGEST finished. 0 placed, 1 skipped.",
+          "evidence": "RECORDED, not judged: FULL the second Esc (expected: nothing to cancel) = Pick a level to suggest a FALL arrow toward the nearest downhill grated pit, or Enter to finish: 156000,-63500 | [CE] Suggested: FALL toward P8, 1:100. | Accept, Move or Skip this fall? [Accept/Move/Skip] <Accept>: Skip | Next level (0 placed, 1 skipped), or Enter to finish: *Cancel* | CDFALLSUGGEST finished. 0 placed, 1 skipped."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 140 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: PIT completed 56021 ms ; Command outcome: CDSL completed 74 ms ; Command outcome: CDSL completed 48 ms ; Command outcome: CDFALLSUGGEST cancelled 7013 ms"
+      ],
+      "error": null,
+      "finished": "2026-11-01 15:17:38",
+      "session_id": "RUN-20261101-1515-C3.0.88-cW04-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "no independent review: no W713_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": true
+      }
+    },
+    {
+      "id": "W654",
+      "proves_bugs": "BUG-654 (Edit Pipe route, Keep by default: the written levels are checked and the back-fall is named; the CDPROPAGATE Enter = Keep route is not driven)",
+      "title": "Edit Pipe lowers the pipe into P82 by 200 mm; Recalculate downstream keeps the hand-typed 18.06 at the far end of the next pipe and now says that pipe will run backwards",
+      "kind": "deterministic",
+      "order": 6540,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "Bug-proof plan wave 1 (BUG_PROOF_PLAN_31OCT.md), group E: Edit Pipe 'Recalculate downstream', a hand-typed level kept",
+      "bug": "BUG-654",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed",
+      "variant_of": "",
+      "expected": "Three pits P81, P82, P83 and pipes P81->P82 (18.300 / 18.200) and P82->P83 (18.150 / 18.050), no Grade mismatch window. Edit Pipe on P82->P83 with the second level 18.06, Save, Recalculate No: 'Downstream cascade skipped.'. Edit Pipe on P81->P82 with 18.10 / 18.00, Save, Recalculate Yes, Cascade Preview Apply: the command line says 'Updated 1 pipes and 1 pits from P82 (IL 18.00)', '1 level(s) you set by hand were kept as they were, on P82 -> P83' and 'Warning: P82 -> P83 will be flat or running backwards (a level typed by hand was kept, or the grade cannot fall).' The texts of P82->P83 read IL 17.95 and IL 18.06; no text reads IL 17.86. No CE window is left open; the drawing file on disk is unchanged.",
+      "why_not_unit": "PropagationCascadeHuntTests prove the check on a made-up plan; only the live drawing shows that a level typed in the real Edit Pipe window is marked typed by hand, that the real cascade keeps it, and that the warning reaches the command line.",
+      "not_automated": [
+        "CDPROPAGATE (the upstream walk that asks Keep / Overwrite, Enter = Keep) is not driven: it needs a pick of the anchor pit, an unproven typed route. The rule is the same code (ApplyPropagationPlan, lines 801-816) for both routes. Codex look.",
+        "The preview window's own wording of the warning is not judged (dumped and recorded only). The record's typed-by-hand mark is not read; it is shown only by the kept line and the kept text.",
+        "DERIVED, not yet seen on a run: every line and level above; that New Pipe writes the typed 3-decimal texts (seen on SETUP-R47v); that pits typed with C2.PitNumber keep P81 to P83 (N40 / W234)."
+      ],
+      "file_sha256": "0E8B74A7CA916D311BA8A02367DAC6EAEC48B80CE3491F0C7C578C62C340E039",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-11-01 15:18:39",
+      "seconds": 442.7,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV31518022_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM _W 146000,-78000 174000,-56000\" -Force",
+          "ok": true,
+          "seconds": 2.7,
+          "evidence": "typed '_.ZOOM _W 146000,-78000 174000,-56000': Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _W | Specify first corner: 146000,-78000 Specify opposi..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"PIT{NL}150000,-64000\" -Force -ExpectWindow \"New Pit\" -TimeoutSec 120 -> $a_t1",
+          "ok": true,
+          "seconds": 6.3,
+          "evidence": "typed 'PIT 150000,-64000': Command: | Command: PIT | Specify pit insertion point: 150000,-64000 | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.PitNumber\" \"P81\"",
+          "ok": true,
+          "seconds": 3.2,
+          "evidence": "ui set 'New Pit' C2.PitNumber = P81: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.CoverLevel\" \"19.000\"",
+          "ok": true,
+          "seconds": 3.1,
+          "evidence": "ui set 'New Pit' C2.CoverLevel = 19.000: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pit\" \"New pit, Continue placement\" -> $a_t2",
+          "ok": true,
+          "seconds": 30.5,
+          "evidence": "pressed 'New pit, Continue placement' in /New Pit/: window closed = True"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pit\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /^New Pit/ closed after 0 s"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $a_e1",
+          "ok": true,
+          "seconds": 7.4,
+          "evidence": "esc-prompt: Command: | Command: PIT | Specify pit insertion point: 150000,-64000 | Specify pit label insertion point: *Cancel* | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or qu..."
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $a_e2",
+          "ok": true,
+          "seconds": 6.6,
+          "evidence": "esc-prompt: Command: PIT | Specify pit insertion point: 150000,-64000 | Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit..."
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $a_e3",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "esc-prompt: Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit, or press Esc to stop. | Specify pit insertion point: *Canc..."
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"PIT{NL}160450,-64000\" -Force -ExpectWindow \"New Pit\" -TimeoutSec 120 -> $b_t1",
+          "ok": true,
+          "seconds": 6.5,
+          "evidence": "typed 'PIT 160450,-64000': Command: | Command: PIT | Specify pit insertion point: 160450,-64000 | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C..."
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.PitNumber\" \"P82\"",
+          "ok": true,
+          "seconds": 3.9,
+          "evidence": "ui set 'New Pit' C2.PitNumber = P82: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.CoverLevel\" \"19.000\"",
+          "ok": true,
+          "seconds": 3.5,
+          "evidence": "ui set 'New Pit' C2.CoverLevel = 19.000: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pit\" \"New pit, Continue placement\" -> $b_t2",
+          "ok": true,
+          "seconds": 53.4,
+          "evidence": "pressed 'New pit, Continue placement' in /New Pit/: window closed = True"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pit\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /^New Pit/ closed after 0 s"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $b_e1",
+          "ok": true,
+          "seconds": 6.8,
+          "evidence": "esc-prompt: Command: | Command: PIT | Specify pit insertion point: 160450,-64000 | Specify pit label insertion point: *Cancel* | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or qu..."
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $b_e2",
+          "ok": true,
+          "seconds": 6.6,
+          "evidence": "esc-prompt: Command: PIT | Specify pit insertion point: 160450,-64000 | Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit..."
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $b_e3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "esc-prompt: Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit, or press Esc to stop. | Specify pit insertion point: *Canc..."
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"PIT{NL}170900,-64000\" -Force -ExpectWindow \"New Pit\" -TimeoutSec 120 -> $c_t1",
+          "ok": true,
+          "seconds": 6.7,
+          "evidence": "typed 'PIT 170900,-64000': Command: | Command: PIT | Specify pit insertion point: 170900,-64000 | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C..."
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.PitNumber\" \"P83\"",
+          "ok": true,
+          "seconds": 3.3,
+          "evidence": "ui set 'New Pit' C2.PitNumber = P83: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.CoverLevel\" \"19.000\"",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "ui set 'New Pit' C2.CoverLevel = 19.000: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pit\" \"New pit, Continue placement\" -> $c_t2",
+          "ok": true,
+          "seconds": 25.1,
+          "evidence": "pressed 'New pit, Continue placement' in /New Pit/: window closed = True"
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pit\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /^New Pit/ closed after 0 s"
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $c_e1",
+          "ok": true,
+          "seconds": 7.1,
+          "evidence": "esc-prompt: Command: | Command: PIT | Specify pit insertion point: 170900,-64000 | Specify pit label insertion point: *Cancel* | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or qu..."
+        },
+        {
+          "n": 29,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $c_e2",
+          "ok": true,
+          "seconds": 6.7,
+          "evidence": "esc-prompt: Command: PIT | Specify pit insertion point: 170900,-64000 | Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit..."
+        },
+        {
+          "n": 30,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $c_e3",
+          "ok": true,
+          "seconds": 2.7,
+          "evidence": "esc-prompt: Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit, or press Esc to stop. | Specify pit insertion point: *Canc..."
+        },
+        {
+          "n": 31,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 32,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $cAB",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1037 objects"
+        },
+        {
+          "n": 33,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-64000{NL}160450,-64000{NL}\" -Force -ExpectWindow \"New Pipe\" -TimeoutSec 150 -> $cd1",
+          "ok": true,
+          "seconds": 7.0,
+          "evidence": "typed 'CD 150000,-64000 160450,-64000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-64000 | Specify second point: 160450,-64000 | Se..."
+        },
+        {
+          "n": 34,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.Diameter\" \"100\"",
+          "ok": true,
+          "seconds": 3.7,
+          "evidence": "ui set 'New Pipe' C2.Diameter = 100: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 35,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.CreatePipeText\" \"off\"",
+          "ok": true,
+          "seconds": 4.0,
+          "evidence": "ui set 'New Pipe' C2.CreatePipeText = off: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 36,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.AutoCalcSecondInvert\" \"off\"",
+          "ok": true,
+          "seconds": 3.4,
+          "evidence": "ui set 'New Pipe' C2.AutoCalcSecondInvert = off: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 37,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.IsGradeDefault\" \"on\"",
+          "ok": true,
+          "seconds": 3.4,
+          "evidence": "ui set 'New Pipe' C2.IsGradeDefault = on: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 38,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.300\"",
+          "ok": true,
+          "seconds": 3.6,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.300: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 39,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"18.200\"",
+          "ok": true,
+          "seconds": 3.5,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 18.200: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 40,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"^New Pipe\" -TimeoutSec 60 -> $np1",
+          "ok": true,
+          "seconds": 3.5,
+          "evidence": "ui-dump 'New Pipe': 152 controls, tabs: "
+        },
+        {
+          "n": 41,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $st1",
+          "ok": true,
+          "seconds": 34.7,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 42,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 43,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $cd1_e",
+          "ok": true,
+          "seconds": 3.1,
+          "evidence": "esc-prompt: [CE] Pipe end moved to the inside wall of P81 (was 225 mm inside the pit). | [CE] Pipe end moved to the inside wall of P82 (was 225 mm inside the pit). | Inserted flow arrow. Flow: P81 -> P82 | [CE] Pipe placed. Pick the..."
+        },
+        {
+          "n": 44,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 45,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $cAB -> $newAB",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "4 object(s) after index 1037 (model space now 1041); by type: AcDbBlockReference 1; AcDbMText 2; CeCvlPipeObject 1; first: 11C83B CeCvlPipeObject STORMWATER PIPE ; 11C841 AcDbMText 20TEXT IL 18.300 ; 11C846 AcDbMText 20TEXT IL 18.200 ; 11C868 AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 46,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $newAB \"object~^CeCvlPipeObject$\" -> $pAB",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 4: 11C83B STORMWATER PIPE"
+        },
+        {
+          "n": 47,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $pAB handle -> $hAB",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C83B"
+        },
+        {
+          "n": 48,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $cBC",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1041 objects"
+        },
+        {
+          "n": 49,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}160450,-64000{NL}170900,-64000{NL}\" -Force -ExpectWindow \"New Pipe\" -TimeoutSec 150 -> $cd2",
+          "ok": true,
+          "seconds": 7.0,
+          "evidence": "typed 'CD 160450,-64000 170900,-64000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 160450,-64000 | Specify second point: 170900,-64000 | Se..."
+        },
+        {
+          "n": 50,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.Diameter\" \"100\"",
+          "ok": true,
+          "seconds": 3.6,
+          "evidence": "ui set 'New Pipe' C2.Diameter = 100: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 51,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.CreatePipeText\" \"off\"",
+          "ok": true,
+          "seconds": 3.7,
+          "evidence": "ui set 'New Pipe' C2.CreatePipeText = off: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 52,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.AutoCalcSecondInvert\" \"off\"",
+          "ok": true,
+          "seconds": 3.5,
+          "evidence": "ui set 'New Pipe' C2.AutoCalcSecondInvert = off: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 53,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.IsGradeDefault\" \"on\"",
+          "ok": true,
+          "seconds": 3.8,
+          "evidence": "ui set 'New Pipe' C2.IsGradeDefault = on: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 54,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.150\"",
+          "ok": true,
+          "seconds": 3.8,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.150: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 55,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"18.050\"",
+          "ok": true,
+          "seconds": 3.5,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 18.050: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 56,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"^New Pipe\" -TimeoutSec 60 -> $np2",
+          "ok": true,
+          "seconds": 3.4,
+          "evidence": "ui-dump 'New Pipe': 152 controls, tabs: "
+        },
+        {
+          "n": 57,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $st2",
+          "ok": true,
+          "seconds": 33.0,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 58,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 59,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $cd2_e",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "esc-prompt: [CE] Pipe end moved to the inside wall of P82 (was 225 mm inside the pit). | [CE] Pipe end moved to the inside wall of P83 (was 225 mm inside the pit). | Inserted flow arrow. Flow: P82 -> P83 | [CE] Pipe placed. Pick the..."
+        },
+        {
+          "n": 60,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 61,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_built",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31518022_B1.dwg]"
+        },
+        {
+          "n": 62,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $cBC -> $newBC",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "4 object(s) after index 1041 (model space now 1045); by type: AcDbBlockReference 1; AcDbMText 2; CeCvlPipeObject 1; first: 11C86D CeCvlPipeObject STORMWATER PIPE ; 11C873 AcDbMText 20TEXT IL 18.150 ; 11C878 AcDbMText 20TEXT IL 18.050 ; 11C89A AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 63,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $newBC \"object~^CeCvlPipeObject$\" -> $pBC",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 4: 11C86D STORMWATER PIPE"
+        },
+        {
+          "n": 64,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $pBC handle -> $hBC",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C86D"
+        },
+        {
+          "n": 65,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $built",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "11 object(s) after index 1034 (model space now 1045); by type: AcDbBlockReference 5; AcDbMText 4; CeCvlPipeObject 2; first: 11C5AD AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C6A3 AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C798 AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C83B CeCvlPipeObject STORMWATER PIPE ; 11C841 AcDbMText 20TEXT IL 18.300 ; 11C846 AcDbMText 20TEXT IL 18.200 ; 11C868 AcDbBlockReference ARROW TIM_CVL_ARROW ; 11C86D CeCvlPipeObject STORMWATER PIPE ; 11C873 AcDbMText 20TEXT IL 18.150 ; 11C878 AcDbMText ..."
+        },
+        {
+          "n": 66,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $built \"text~^IL \" -> $ils0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 4 of 11: 11C841 IL 18.300 20TEXT ; 11C846 IL 18.200 20TEXT ; 11C873 IL 18.150 20TEXT ; 11C878 IL 18.050 20TEXT"
+        },
+        {
+          "n": 67,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $ils0 text -All -> $ilt0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = IL 18.300 | IL 18.200 | IL 18.150 | IL 18.050"
+        },
+        {
+          "n": 68,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"{$hBC}\"",
+          "ok": true,
+          "seconds": 2.2,
+          "evidence": "pick-first 11C86D: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"11C86D\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 69,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDEDIT\" -Force -ExpectWindow \"Edit Pipe\" -TimeoutSec 120 -> $ed1",
+          "ok": true,
+          "seconds": 6.9,
+          "evidence": "typed 'CDEDIT': Command: | Command: CDEDIT | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 70,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"Edit Pipe\" \"C2.SecondInvert\" \"18.06\"",
+          "ok": true,
+          "seconds": 3.5,
+          "evidence": "ui set 'Edit Pipe' C2.SecondInvert = 18.06: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 71,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Edit Pipe\" -TimeoutSec 60 -> $ep1",
+          "ok": true,
+          "seconds": 3.4,
+          "evidence": "ui-dump 'Creative Engineering | Edit Pipe': 153 controls, tabs: "
+        },
+        {
+          "n": 72,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Edit Pipe\" \"Edit pipe, Save\" -> $save1",
+          "ok": true,
+          "seconds": 6.6,
+          "evidence": "pressed 'Edit pipe, Save' in /Edit Pipe/: window closed = True"
+        },
+        {
+          "n": 73,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 4",
+          "ok": true,
+          "seconds": 4.0,
+          "evidence": "slept 4 s"
+        },
+        {
+          "n": 74,
+          "phase": "case",
+          "verb": "msgbox-answer",
+          "text": "msgbox-answer \"*Recalculate*\" No",
+          "ok": true,
+          "seconds": 7.6,
+          "evidence": "msgbox-answer '*Recalculate*' No: answered 'No' to \"CE - Recalculate downstream inverts?\" by BM_CLICK; the box closed | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Original... [tries: 1]"
+        },
+        {
+          "n": 75,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 76,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 2",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "slept 2 s"
+        },
+        {
+          "n": 77,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"{$hAB}\"",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "pick-first 11C83B: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"11C83B\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 78,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDEDIT\" -Force -ExpectWindow \"Edit Pipe\" -TimeoutSec 120 -> $ed2",
+          "ok": true,
+          "seconds": 6.9,
+          "evidence": "typed 'CDEDIT': Command: | Command: CDEDIT | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 79,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"Edit Pipe\" \"C2.FirstInvert\" \"18.10\"",
+          "ok": true,
+          "seconds": 3.5,
+          "evidence": "ui set 'Edit Pipe' C2.FirstInvert = 18.10: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 80,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"Edit Pipe\" \"C2.SecondInvert\" \"18.00\"",
+          "ok": true,
+          "seconds": 3.6,
+          "evidence": "ui set 'Edit Pipe' C2.SecondInvert = 18.00: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 81,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Edit Pipe\" -TimeoutSec 60 -> $ep2",
+          "ok": true,
+          "seconds": 3.3,
+          "evidence": "ui-dump 'Creative Engineering | Edit Pipe': 153 controls, tabs: "
+        },
+        {
+          "n": 82,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Edit Pipe\" \"Edit pipe, Save\" -> $save2",
+          "ok": true,
+          "seconds": 6.6,
+          "evidence": "pressed 'Edit pipe, Save' in /Edit Pipe/: window closed = True"
+        },
+        {
+          "n": 83,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 4",
+          "ok": true,
+          "seconds": 4.0,
+          "evidence": "slept 4 s"
+        },
+        {
+          "n": 84,
+          "phase": "case",
+          "verb": "msgbox-answer",
+          "text": "msgbox-answer \"*Recalculate*\" Yes",
+          "ok": true,
+          "seconds": 5.5,
+          "evidence": "msgbox-answer '*Recalculate*' Yes: answered 'Yes' to \"CE - Recalculate downstream inverts?\" by BM_CLICK; the box closed | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Origina... [tries: 1]"
+        },
+        {
+          "n": 85,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 86,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Cascade Preview\" -TimeoutSec 60 -Optional -> $cp",
+          "ok": true,
+          "seconds": 3.2,
+          "evidence": "ui-dump 'Creative Engineering | Cascade Preview': 121 controls, tabs: "
+        },
+        {
+          "n": 87,
+          "phase": "case",
+          "verb": "ui2-press",
+          "text": "ui2-press \"Cascade Preview\" \"Apply\" -Secs 120",
+          "ok": true,
+          "seconds": 8.6,
+          "evidence": "ui press 'Cascade Preview' 'Apply': SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 88,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 89,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 90,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $after",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "11 object(s) after index 1034 (model space now 1045); by type: AcDbBlockReference 5; AcDbMText 4; CeCvlPipeObject 2; first: 11C5AD AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C6A3 AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C798 AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C83B CeCvlPipeObject STORMWATER PIPE ; 11C841 AcDbMText 20TEXT IL 18.10 ; 11C846 AcDbMText 20TEXT IL 18.00 ; 11C868 AcDbBlockReference ARROW TIM_CVL_ARROW ; 11C86D CeCvlPipeObject STORMWATER PIPE ; 11C873 AcDbMText 20TEXT IL 17.95 ; 11C878 AcDbMText 20T..."
+        },
+        {
+          "n": 91,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after \"text~^IL \" -> $ils1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 4 of 11: 11C841 IL 18.10 20TEXT ; 11C846 IL 18.00 20TEXT ; 11C873 IL 17.95 20TEXT ; 11C878 IL 18.06 20TEXT"
+        },
+        {
+          "n": 92,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $ils1 text -All -> $ilt1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = IL 18.10 | IL 18.00 | IL 17.95 | IL 18.06"
+        },
+        {
+          "n": 93,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after \"text~^IL 17\\.95$\" -> $t1795",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 11: 11C873 IL 17.95 20TEXT"
+        },
+        {
+          "n": 94,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after \"text~^IL 18\\.06$\" -> $t1806",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 11: 11C878 IL 18.06 20TEXT"
+        },
+        {
+          "n": 95,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after \"text~^IL 17\\.86$\" -> $t1786",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 11: "
+        },
+        {
+          "n": 96,
+          "phase": "case",
+          "verb": "log-read",
+          "text": "log-read civil -> $civlog",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "314 new line(s) in the civil CE log since the case began "
+        },
+        {
+          "n": 97,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31518022_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "count $pAB = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $pAB = 1 (expected = 1)"
+        },
+        {
+          "n": 2,
+          "text": "count $pBC = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $pBC = 1 (expected = 1)"
+        },
+        {
+          "n": 3,
+          "text": "not-contains $win_built \"Grade mismatch\"",
+          "ok": true,
+          "expected": "does not contain 'Grade mismatch'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31518022_B1.dwg]",
+          "evidence": "'Grade mismatch' is absent from: Autodesk AutoCAD 2027 - [CLDV31518022_B1.dwg]"
+        },
+        {
+          "n": 4,
+          "text": "history has \"[CDEDIT-CASCADE] Downstream cascade skipped.\"",
+          "ok": true,
+          "expected": "command line has '[CDEDIT-CASCADE] Downstream cascade skipped.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CDEDIT-CASCADE] Downstream cascade skipped.'"
+        },
+        {
+          "n": 5,
+          "text": "history has \"[CDEDIT-CASCADE] Warning: P82 -> P83 will be flat or running backwards (a level typed by hand was kept, or the grade cannot fall).\"",
+          "ok": true,
+          "expected": "command line has '[CDEDIT-CASCADE] Warning: P82 -> P83 will be flat or running backwards (a level typed by hand was kept, or the grade cannot fall).'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CDEDIT-CASCADE] Warning: P82 -> P83 will be flat or running backwards (a level typed by hand was kept, or the grade cannot fall). Its levels are kept as they are and the rest of the cascade goes ahea...'"
+        },
+        {
+          "n": 6,
+          "text": "history has \"[CDEDIT-CASCADE] 1 level(s) you set by hand were kept as they were, on P82 -> P83. The cascade went around them.\"",
+          "ok": true,
+          "expected": "command line has '[CDEDIT-CASCADE] 1 level(s) you set by hand were kept as they were, on P82 -> P83. The cascade went around them.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CDEDIT-CASCADE] 1 level(s) you set by hand were kept as they were, on P82 -> P83. The cascade went around them.'"
+        },
+        {
+          "n": 7,
+          "text": "history has \"[CDEDIT-CASCADE] Updated 1 pipes and 1 pits from P82 (IL 18.00)\"",
+          "ok": true,
+          "expected": "command line has '[CDEDIT-CASCADE] Updated 1 pipes and 1 pits from P82 (IL 18.00)'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CDEDIT-CASCADE] Updated 1 pipes and 1 pits from P82 (IL 18.00). Min grade: N/A.'"
+        },
+        {
+          "n": 8,
+          "text": "log civil has \"CDEDIT-CASCADE: anchor=P82 IL=18.00 pipes=1 pits=1\"",
+          "ok": true,
+          "expected": "civil log has 'CDEDIT-CASCADE: anchor=P82 IL=18.00 pipes=1 pits=1'",
+          "actual": "1",
+          "evidence": "log: '2026-11-01 15:25:51.942 [INFO] CDEDIT-CASCADE: anchor=P82 IL=18.00 pipes=1 pits=1'"
+        },
+        {
+          "n": 9,
+          "text": "count $t1795 = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $t1795 = 1 (expected = 1)"
+        },
+        {
+          "n": 10,
+          "text": "count $t1806 = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $t1806 = 1 (expected = 1)"
+        },
+        {
+          "n": 11,
+          "text": "count $t1786 = 0",
+          "ok": true,
+          "expected": "count = 0",
+          "actual": "0",
+          "evidence": "count of $t1786 = 0 (expected = 0)"
+        },
+        {
+          "n": 12,
+          "text": "not-contains $win_end \"Cascade\"",
+          "ok": true,
+          "expected": "does not contain 'Cascade'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31518022_B1.dwg]",
+          "evidence": "'Cascade' is absent from: Autodesk AutoCAD 2027 - [CLDV31518022_B1.dwg]"
+        },
+        {
+          "n": 13,
+          "text": "not-contains $win_end \"Edit Pipe\"",
+          "ok": true,
+          "expected": "does not contain 'Edit Pipe'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31518022_B1.dwg]",
+          "evidence": "'Edit Pipe' is absent from: Autodesk AutoCAD 2027 - [CLDV31518022_B1.dwg]"
+        },
+        {
+          "n": 14,
+          "text": "not-contains $win_end \"Design Warnings\"",
+          "ok": true,
+          "expected": "does not contain 'Design Warnings'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31518022_B1.dwg]",
+          "evidence": "'Design Warnings' is absent from: Autodesk AutoCAD 2027 - [CLDV31518022_B1.dwg]"
+        },
+        {
+          "n": 15,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 16,
+          "text": "record $ilt0 \"FULL IL texts after the two pipes were drawn\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "IL 18.300 | IL 18.200 | IL 18.150 | IL 18.050",
+          "evidence": "RECORDED, not judged: FULL IL texts after the two pipes were drawn = IL 18.300 | IL 18.200 | IL 18.150 | IL 18.050"
+        },
+        {
+          "n": 17,
+          "text": "record $ilt1 \"FULL IL texts after the cascade\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "IL 18.10 | IL 18.00 | IL 17.95 | IL 18.06",
+          "evidence": "RECORDED, not judged: FULL IL texts after the cascade = IL 18.10 | IL 18.00 | IL 17.95 | IL 18.06"
+        },
+        {
+          "n": 18,
+          "text": "record $ep1 \"FULL Edit Pipe window before Save (P82 -> P83, second level 18.06)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"title\":\"Creative Engineering | Edit Pipe\",\"handle\":5312656,\"class\":\"Window\",\"source\":\"win32\",\"bounds\":[2016,50,1728,972],\"control_count\":153,\"truncated\":false,\"tabs\":[],\"controls\":[{\"type\":\"TitleBar\",\"name\":\"Creative Engineering | Edit Pipe\",\"id\":\"TitleBar\",\"class\":\"\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2024,58,1712,23]},{\"type\":\"MenuBar\",\"name\":\"System Menu Bar\",\"id\":\"SystemMenuBar\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2024,58,22,22]},{\"type\":\"MenuItem\",\"name\":\"System\",\"id\":\"Item 1\",\"class\":\"\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2024,58,22,22]},{\"type\":\"Button\",\"name\":\"Close\",\"id\":\"Close\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3703,51,34,30]},{\"type\":\"Image\",\"name\":\"\",\"id\":\"\",\"class\":\"Image\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2055,94,28,28]},{\"type\":\"Text\",\"name\":\"Edit Pipe\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2095,97,68,22]},{\"type\":\"Text\",\"name\":\"Flow: P82 → P83\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2175,98,111,20]},{\"type\":\"Text\",\"name\":\"Stormwater pipe · 100 mm · UPVC\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2298,101,164,14]},{\"type\":\"Custom\",\"name\":\"\",\"id\":\"\",\"class\":\"StatusChip\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[3525,91,180,34]},{\"type\":\"Text\",\"name\":\"Ready to save the pipe.\",\"id\":\"LabelText\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3554,98,140,15]},{\"type\":\"Button\",\"name\":\"Inspect drawing and retain pending edits\",\"id\":\"C2.InspectDrawingCommand\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2040,974,119,36]},{\"type\":\"Text\",\"name\":\"Inspect Drawing\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2057,984,85,16]},{\"type\":\"Button\",\"name\":\"Edit pipe, More\",\"id\":\"PipeEditWorkshopDialog.More\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2167,974,80,36]},{\"type\":\"Text\",\"name\":\"More…\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2189,984,37,16]},{\"type\":\"Button\",\"name\":\"Edit pipe, Review changes\",\"id\":\"PipeEditWorkshopDialog.Review.changes\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2255,974,116,36]},{\"type\":\"Text\",\"name\":\"Review changes\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2271,984,84,16]},{\"type\":\"ComboBox\",\"name\":\"Edit pipe, Plan label to edit\",\"id\":\"PipeEditWorkshopDialog.SelectedKey\",\"class\":\"ComboBox\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2383,974,170,36]},{\"type\":\"Button\",\"name\":\"Cancel without saving\",\"id\":\"C2.CancelCommand\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[3494,974,86,36]},{\"type\":\"Text\",\"name\":\"Cancel\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3519,984,36,16]},{\"type\":\"Button\",\"name\":\"Edit pipe, Save\",\"id\":\"C2.OkCommand\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[3590,974,130,36]},{\"type\":\"Text\",\"name\":\"Save\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3643,984,24,16]},{\"type\":\"Text\",\"name\":\"Preview — changes not saved · End 2 IL\",\"id\":\"UnsavedBannerText\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2051,142,818,30]},{\"type\":\"Text\",\"name\":\"ENGINEERING\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2040,183,828,20]},{\"type\":\"Button\",\"name\":\"Stormwater\",\"id\":\"C2.IsStormwaterPipe\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2040,203,78,28],\"toggle\":\"On\"},{\"type\":\"Text\",\"name\":\"Stormwater\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2051,209,56,15]},{\"type\":\"Button\",\"name\":\"Suspended\",\"id\":\"C2.IsSuspendedPipe\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\"...",
+          "evidence": "RECORDED, not judged: FULL Edit Pipe window before Save (P82 -> P83, second level 18.06) = {\"title\":\"Creative Engineering | Edit Pipe\",\"handle\":5312656,\"class\":\"Window\",\"source\":\"win32\",\"bounds\":[2016,50,1728,972],\"control_count\":153,\"truncated\":false,\"tabs\":[],\"controls\":[{\"type\":\"TitleBar\",\"name\":\"Creative Engineering | Edit Pipe\",\"id\":\"TitleBar\",\"class\":\"\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2024,58,1712,23]},{\"type\":\"MenuBar\",\"name\":\"System Menu Bar\",\"id\":\"SystemMenuBar\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2024,58,22,22]},{\"type\":\"MenuItem\",\"name\":\"System\",\"id\":\"Item 1\",\"class\":\"\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2024,58,22,22]},{\"type\":\"Button\",\"name\":\"Close\",\"id\":\"Close\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3703,51,34,30]},{\"type\":\"Image\",\"name\":\"\",\"id\":\"\",\"class\":\"Image\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2055,94,28,28]},{\"type\":\"Text\",\"name\":\"Edit Pipe\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2095,97,68,22]},{\"type\":\"Text\",\"name\":\"Flow: P82 → P83\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2175,98,111,20]},{\"type\":\"Text\",\"name\":\"Stormwater pipe · 100 mm · UPVC\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2298,101,164,14]},{\"type\":\"Custom\",\"name\":\"\",\"id\":\"\",\"class\":\"StatusChip\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[3525,91,180,34]},{\"type\":\"Text\",\"name\":\"Ready to save the pipe.\",\"id\":\"LabelText\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3554,98,140,15]},{\"type\":\"Button\",\"name\":\"Inspect drawing and retain pending edits\",\"id\":\"C2.InspectDrawingCommand\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2040,974,119,36]},{\"type\":\"Text\",\"name\":\"Inspect Drawing\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2057,984,85,16]},{\"type\":\"Button\",\"name\":\"Edit pipe, More\",\"id\":\"PipeEditWorkshopDialog.More\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2167,974,80,36]},{\"type\":\"Text\",\"name\":\"More…\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2189,984,37,16]},{\"type\":\"Button\",\"name\":\"Edit pipe, Review changes\",\"id\":\"PipeEditWorkshopDialog.Review.changes\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2255,974,116,36]},{\"type\":\"Text\",\"name\":\"Review changes\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2271,984,84,16]},{\"type\":\"ComboBox\",\"name\":\"Edit pipe, Plan label to edit\",\"id\":\"PipeEditWorkshopDialog.SelectedKey\",\"class\":\"ComboBox\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2383,974,170,36]},{\"type\":\"Button\",\"name\":\"Cancel without saving\",\"id\":\"C2.CancelCommand\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[3494,974,86,36]},{\"type\":\"Text\",\"name\":\"Cancel\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3519,984,36,16]},{\"type\":\"Button\",\"name\":\"Edit pipe, Save\",\"id\":\"C2.OkCommand\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[3590,974,130,36]},{\"type\":\"Text\",\"name\":\"Save\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3643,984,24,16]},{\"type\":\"Text\",\"name\":\"Preview — changes not saved · End 2 IL\",\"id\":\"UnsavedBannerText\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2051,142,818,30]},{\"type\":\"Text\",\"name\":\"ENGINEERING\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2040,183,828,20]},{\"type\":\"Button\",\"name\":\"Stormwater\",\"id\":\"C2.IsStormwaterPipe\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2040,203,78,28],\"toggle\":\"On\"},{\"type\":\"Text\",\"name\":\"Stormwater\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2051,209,56,15]},{\"type\":\"Button\",\"name\":\"Suspended\",\"id\":\"C2.IsSuspendedPipe\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\"..."
+        },
+        {
+          "n": 19,
+          "text": "record $ep2 \"FULL Edit Pipe window before Save (P81 -> P82, 18.10 / 18.00)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"title\":\"Creative Engineering | Edit Pipe\",\"handle\":78583844,\"class\":\"Window\",\"source\":\"win32\",\"bounds\":[2016,50,1728,972],\"control_count\":153,\"truncated\":false,\"tabs\":[],\"controls\":[{\"type\":\"TitleBar\",\"name\":\"Creative Engineering | Edit Pipe\",\"id\":\"TitleBar\",\"class\":\"\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2024,58,1712,23]},{\"type\":\"MenuBar\",\"name\":\"System Menu Bar\",\"id\":\"SystemMenuBar\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2024,58,22,22]},{\"type\":\"MenuItem\",\"name\":\"System\",\"id\":\"Item 1\",\"class\":\"\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2024,58,22,22]},{\"type\":\"Button\",\"name\":\"Close\",\"id\":\"Close\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3703,51,34,30]},{\"type\":\"Image\",\"name\":\"\",\"id\":\"\",\"class\":\"Image\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2055,94,28,28]},{\"type\":\"Text\",\"name\":\"Edit Pipe\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2095,97,68,22]},{\"type\":\"Text\",\"name\":\"Flow: P81 → P82\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2175,98,109,20]},{\"type\":\"Text\",\"name\":\"Stormwater pipe · 100 mm · UPVC\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2296,101,164,14]},{\"type\":\"Custom\",\"name\":\"\",\"id\":\"\",\"class\":\"StatusChip\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[3525,91,180,34]},{\"type\":\"Text\",\"name\":\"Ready to save the pipe.\",\"id\":\"LabelText\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3554,98,140,15]},{\"type\":\"Button\",\"name\":\"Inspect drawing and retain pending edits\",\"id\":\"C2.InspectDrawingCommand\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2040,974,119,36]},{\"type\":\"Text\",\"name\":\"Inspect Drawing\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2057,984,85,16]},{\"type\":\"Button\",\"name\":\"Edit pipe, More\",\"id\":\"PipeEditWorkshopDialog.More\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2167,974,80,36]},{\"type\":\"Text\",\"name\":\"More…\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2189,984,37,16]},{\"type\":\"Button\",\"name\":\"Edit pipe, Review changes\",\"id\":\"PipeEditWorkshopDialog.Review.changes\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2255,974,116,36]},{\"type\":\"Text\",\"name\":\"Review changes\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2271,984,84,16]},{\"type\":\"ComboBox\",\"name\":\"Edit pipe, Plan label to edit\",\"id\":\"PipeEditWorkshopDialog.SelectedKey\",\"class\":\"ComboBox\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2383,974,170,36]},{\"type\":\"Button\",\"name\":\"Cancel without saving\",\"id\":\"C2.CancelCommand\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[3494,974,86,36]},{\"type\":\"Text\",\"name\":\"Cancel\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3519,984,36,16]},{\"type\":\"Button\",\"name\":\"Edit pipe, Save\",\"id\":\"C2.OkCommand\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[3590,974,130,36]},{\"type\":\"Text\",\"name\":\"Save\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3643,984,24,16]},{\"type\":\"Text\",\"name\":\"Preview — changes not saved · End 1 IL · End 2 IL · Known IL\",\"id\":\"UnsavedBannerText\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2051,142,818,30]},{\"type\":\"Text\",\"name\":\"ENGINEERING\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2040,183,828,20]},{\"type\":\"Button\",\"name\":\"Stormwater\",\"id\":\"C2.IsStormwaterPipe\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2040,203,78,28],\"toggle\":\"On\"},{\"type\":\"Text\",\"name\":\"Stormwater\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2051,209,56,15]},{\"type\":\"Button\",\"name\":\"Suspended\",\"id\":\"C2.IsSuspendedPipe\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"of...",
+          "evidence": "RECORDED, not judged: FULL Edit Pipe window before Save (P81 -> P82, 18.10 / 18.00) = {\"title\":\"Creative Engineering | Edit Pipe\",\"handle\":78583844,\"class\":\"Window\",\"source\":\"win32\",\"bounds\":[2016,50,1728,972],\"control_count\":153,\"truncated\":false,\"tabs\":[],\"controls\":[{\"type\":\"TitleBar\",\"name\":\"Creative Engineering | Edit Pipe\",\"id\":\"TitleBar\",\"class\":\"\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2024,58,1712,23]},{\"type\":\"MenuBar\",\"name\":\"System Menu Bar\",\"id\":\"SystemMenuBar\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2024,58,22,22]},{\"type\":\"MenuItem\",\"name\":\"System\",\"id\":\"Item 1\",\"class\":\"\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2024,58,22,22]},{\"type\":\"Button\",\"name\":\"Close\",\"id\":\"Close\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3703,51,34,30]},{\"type\":\"Image\",\"name\":\"\",\"id\":\"\",\"class\":\"Image\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2055,94,28,28]},{\"type\":\"Text\",\"name\":\"Edit Pipe\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2095,97,68,22]},{\"type\":\"Text\",\"name\":\"Flow: P81 → P82\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2175,98,109,20]},{\"type\":\"Text\",\"name\":\"Stormwater pipe · 100 mm · UPVC\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2296,101,164,14]},{\"type\":\"Custom\",\"name\":\"\",\"id\":\"\",\"class\":\"StatusChip\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[3525,91,180,34]},{\"type\":\"Text\",\"name\":\"Ready to save the pipe.\",\"id\":\"LabelText\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3554,98,140,15]},{\"type\":\"Button\",\"name\":\"Inspect drawing and retain pending edits\",\"id\":\"C2.InspectDrawingCommand\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2040,974,119,36]},{\"type\":\"Text\",\"name\":\"Inspect Drawing\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2057,984,85,16]},{\"type\":\"Button\",\"name\":\"Edit pipe, More\",\"id\":\"PipeEditWorkshopDialog.More\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2167,974,80,36]},{\"type\":\"Text\",\"name\":\"More…\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2189,984,37,16]},{\"type\":\"Button\",\"name\":\"Edit pipe, Review changes\",\"id\":\"PipeEditWorkshopDialog.Review.changes\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2255,974,116,36]},{\"type\":\"Text\",\"name\":\"Review changes\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2271,984,84,16]},{\"type\":\"ComboBox\",\"name\":\"Edit pipe, Plan label to edit\",\"id\":\"PipeEditWorkshopDialog.SelectedKey\",\"class\":\"ComboBox\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2383,974,170,36]},{\"type\":\"Button\",\"name\":\"Cancel without saving\",\"id\":\"C2.CancelCommand\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[3494,974,86,36]},{\"type\":\"Text\",\"name\":\"Cancel\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3519,984,36,16]},{\"type\":\"Button\",\"name\":\"Edit pipe, Save\",\"id\":\"C2.OkCommand\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[3590,974,130,36]},{\"type\":\"Text\",\"name\":\"Save\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3643,984,24,16]},{\"type\":\"Text\",\"name\":\"Preview — changes not saved · End 1 IL · End 2 IL · Known IL\",\"id\":\"UnsavedBannerText\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2051,142,818,30]},{\"type\":\"Text\",\"name\":\"ENGINEERING\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2040,183,828,20]},{\"type\":\"Button\",\"name\":\"Stormwater\",\"id\":\"C2.IsStormwaterPipe\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2040,203,78,28],\"toggle\":\"On\"},{\"type\":\"Text\",\"name\":\"Stormwater\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2051,209,56,15]},{\"type\":\"Button\",\"name\":\"Suspended\",\"id\":\"C2.IsSuspendedPipe\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"of..."
+        },
+        {
+          "n": 20,
+          "text": "record $cp \"FULL Cascade Preview before Apply\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"title\":\"Creative Engineering | Cascade Preview\",\"handle\":78714916,\"class\":\"Window\",\"source\":\"win32\",\"bounds\":[2390,216,980,640],\"control_count\":121,\"truncated\":false,\"tabs\":[],\"controls\":[{\"type\":\"TitleBar\",\"name\":\"Creative Engineering | Cascade Preview\",\"id\":\"TitleBar\",\"class\":\"\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2398,224,964,23]},{\"type\":\"MenuBar\",\"name\":\"System Menu Bar\",\"id\":\"SystemMenuBar\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2398,224,22,22]},{\"type\":\"MenuItem\",\"name\":\"System\",\"id\":\"Item 1\",\"class\":\"\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2398,224,22,22]},{\"type\":\"Button\",\"name\":\"Minimize\",\"id\":\"Minimize\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3223,217,47,30]},{\"type\":\"Button\",\"name\":\"Maximize\",\"id\":\"Maximize\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3270,217,46,30]},{\"type\":\"Button\",\"name\":\"Close\",\"id\":\"Close\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3316,217,47,30]},{\"type\":\"Text\",\"name\":\"Cascade Preview — Downstream from edited pipe\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2429,274,902,21]},{\"type\":\"Text\",\"name\":\"Anchor: P82\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2429,299,64,16]},{\"type\":\"Text\",\"name\":\"IL 18.00\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2505,299,40,16]},{\"type\":\"Text\",\"name\":\"1 pipes, 2 pits — ready to apply\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2414,336,932,16]},{\"type\":\"DataGrid\",\"name\":\"\",\"id\":\"\",\"class\":\"DataGrid\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2414,360,932,315]},{\"type\":\"Header\",\"name\":\"\",\"id\":\"PART_ColumnHeadersPresenter\",\"class\":\"DataGridColumnHeadersPresenter\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2415,361,930,28]},{\"type\":\"HeaderItem\",\"name\":\" \",\"id\":\"\",\"class\":\"DataGridColumnHeader\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2415,361,30,28]},{\"type\":\"Text\",\"name\":\" \",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":4,\"enabled\":true,\"offscreen\":false,\"bounds\":[2423,367,3,15]},{\"type\":\"Thumb\",\"name\":\"\",\"id\":\"PART_RightHeaderGripper\",\"class\":\"Thumb\",\"depth\":4,\"enabled\":true,\"offscreen\":false,\"bounds\":[2437,361,8,28]},{\"type\":\"HeaderItem\",\"name\":\"Pipe\",\"id\":\"\",\"class\":\"DataGridColumnHeader\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2445,361,160,28]},{\"type\":\"Text\",\"name\":\"Pipe\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":4,\"enabled\":true,\"offscreen\":false,\"bounds\":[2453,367,21,15]},{\"type\":\"Thumb\",\"name\":\"\",\"id\":\"PART_LeftHeaderGripper\",\"class\":\"Thumb\",\"depth\":4,\"enabled\":true,\"offscreen\":false,\"bounds\":[2445,361,8,28]},{\"type\":\"Thumb\",\"name\":\"\",\"id\":\"PART_RightHeaderGripper\",\"class\":\"Thumb\",\"depth\":4,\"enabled\":true,\"offscreen\":false,\"bounds\":[2597,361,8,28]},{\"type\":\"HeaderItem\",\"name\":\"Old IL (U/D)\",\"id\":\"\",\"class\":\"DataGridColumnHeader\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2605,361,120,28]},{\"type\":\"Text\",\"name\":\"Old IL (U/D)\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":4,\"enabled\":true,\"offscreen\":false,\"bounds\":[2613,367,58,15]},{\"type\":\"Thumb\",\"name\":\"\",\"id\":\"PART_LeftHeaderGripper\",\"class\":\"Thumb\",\"depth\":4,\"enabled\":true,\"offscreen\":false,\"bounds\":[2605,361,8,28]},{\"type\":\"Thumb\",\"name\":\"\",\"id\":\"PART_RightHeaderGripper\",\"class\":\"Thumb\",\"depth\":4,\"enabled\":true,\"offscreen\":false,\"bounds\":[2717,361,8,28]},{\"type\":\"HeaderItem\",\"name\":\" \",\"id\":\"\",\"class\":\"DataGridColumnHeader\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2725,361,60,28]},{\"type\":\"Text\",\"name\":\" \",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":4,\"enabled\":true,\"offscreen\":false,\"bounds\":[2733,367,3,15]},{\"type\":\"Thumb\",\"name\":\"\",\"id\":\"PART_LeftHeaderGripper\",\"class\":\"Thumb\",\"depth\":4,\"enabled\":true,\"offscreen\":false,\"bounds\":[2725,361,8,28]},{\"type\":\"Thumb\",\"name\":\"\",\"id\":\"PART_RightHeaderGripper\",\"class\":\"Thumb\",\"depth\":4,\"enabled\":true,\"offscreen\":false,\"bounds\":[2777,361,8,28]},{\"type\":\"...",
+          "evidence": "RECORDED, not judged: FULL Cascade Preview before Apply = {\"title\":\"Creative Engineering | Cascade Preview\",\"handle\":78714916,\"class\":\"Window\",\"source\":\"win32\",\"bounds\":[2390,216,980,640],\"control_count\":121,\"truncated\":false,\"tabs\":[],\"controls\":[{\"type\":\"TitleBar\",\"name\":\"Creative Engineering | Cascade Preview\",\"id\":\"TitleBar\",\"class\":\"\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2398,224,964,23]},{\"type\":\"MenuBar\",\"name\":\"System Menu Bar\",\"id\":\"SystemMenuBar\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2398,224,22,22]},{\"type\":\"MenuItem\",\"name\":\"System\",\"id\":\"Item 1\",\"class\":\"\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2398,224,22,22]},{\"type\":\"Button\",\"name\":\"Minimize\",\"id\":\"Minimize\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3223,217,47,30]},{\"type\":\"Button\",\"name\":\"Maximize\",\"id\":\"Maximize\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3270,217,46,30]},{\"type\":\"Button\",\"name\":\"Close\",\"id\":\"Close\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3316,217,47,30]},{\"type\":\"Text\",\"name\":\"Cascade Preview — Downstream from edited pipe\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2429,274,902,21]},{\"type\":\"Text\",\"name\":\"Anchor: P82\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2429,299,64,16]},{\"type\":\"Text\",\"name\":\"IL 18.00\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2505,299,40,16]},{\"type\":\"Text\",\"name\":\"1 pipes, 2 pits — ready to apply\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2414,336,932,16]},{\"type\":\"DataGrid\",\"name\":\"\",\"id\":\"\",\"class\":\"DataGrid\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2414,360,932,315]},{\"type\":\"Header\",\"name\":\"\",\"id\":\"PART_ColumnHeadersPresenter\",\"class\":\"DataGridColumnHeadersPresenter\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2415,361,930,28]},{\"type\":\"HeaderItem\",\"name\":\" \",\"id\":\"\",\"class\":\"DataGridColumnHeader\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2415,361,30,28]},{\"type\":\"Text\",\"name\":\" \",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":4,\"enabled\":true,\"offscreen\":false,\"bounds\":[2423,367,3,15]},{\"type\":\"Thumb\",\"name\":\"\",\"id\":\"PART_RightHeaderGripper\",\"class\":\"Thumb\",\"depth\":4,\"enabled\":true,\"offscreen\":false,\"bounds\":[2437,361,8,28]},{\"type\":\"HeaderItem\",\"name\":\"Pipe\",\"id\":\"\",\"class\":\"DataGridColumnHeader\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2445,361,160,28]},{\"type\":\"Text\",\"name\":\"Pipe\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":4,\"enabled\":true,\"offscreen\":false,\"bounds\":[2453,367,21,15]},{\"type\":\"Thumb\",\"name\":\"\",\"id\":\"PART_LeftHeaderGripper\",\"class\":\"Thumb\",\"depth\":4,\"enabled\":true,\"offscreen\":false,\"bounds\":[2445,361,8,28]},{\"type\":\"Thumb\",\"name\":\"\",\"id\":\"PART_RightHeaderGripper\",\"class\":\"Thumb\",\"depth\":4,\"enabled\":true,\"offscreen\":false,\"bounds\":[2597,361,8,28]},{\"type\":\"HeaderItem\",\"name\":\"Old IL (U/D)\",\"id\":\"\",\"class\":\"DataGridColumnHeader\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2605,361,120,28]},{\"type\":\"Text\",\"name\":\"Old IL (U/D)\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":4,\"enabled\":true,\"offscreen\":false,\"bounds\":[2613,367,58,15]},{\"type\":\"Thumb\",\"name\":\"\",\"id\":\"PART_LeftHeaderGripper\",\"class\":\"Thumb\",\"depth\":4,\"enabled\":true,\"offscreen\":false,\"bounds\":[2605,361,8,28]},{\"type\":\"Thumb\",\"name\":\"\",\"id\":\"PART_RightHeaderGripper\",\"class\":\"Thumb\",\"depth\":4,\"enabled\":true,\"offscreen\":false,\"bounds\":[2717,361,8,28]},{\"type\":\"HeaderItem\",\"name\":\" \",\"id\":\"\",\"class\":\"DataGridColumnHeader\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2725,361,60,28]},{\"type\":\"Text\",\"name\":\" \",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":4,\"enabled\":true,\"offscreen\":false,\"bounds\":[2733,367,3,15]},{\"type\":\"Thumb\",\"name\":\"\",\"id\":\"PART_LeftHeaderGripper\",\"class\":\"Thumb\",\"depth\":4,\"enabled\":true,\"offscreen\":false,\"bounds\":[2725,361,8,28]},{\"type\":\"Thumb\",\"name\":\"\",\"id\":\"PART_RightHeaderGripper\",\"class\":\"Thumb\",\"depth\":4,\"enabled\":true,\"offscreen\":false,\"bounds\":[2777,361,8,28]},{\"type\":\"..."
+        },
+        {
+          "n": 21,
+          "text": "record $civlog \"FULL new Civil CE log lines\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "2026-11-01 15:18:44.820 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-11-01 15:18:44.820 [INFO] Project data loaded from DWG: 11 pits, 49 pipes, manual rows=0 | 2026-11-01 15:18:44.854 [INFO] [PERF] ProjectDataService.SaveToDrawing: 31.9 ms jsonLen=243925 | 2026-11-01 15:18:44.854 [INFO] Project data saved to DWG successfully | 2026-11-01 15:18:44.854 [INFO] Project data switched to: C:\\Users\\TimothyBrand\\AppData\\Roaming\\TIM_CE_CADTOOLS\\projects\\CD_ProjectData_CLDV31518022_B1_69ad83f1.json | 2026-11-01 15:18:44.856 [INFO] [PERF] ProjectDataService.EnsureDrawingDataCurrent.ReconcileOrphanedHandlesByPosition: 0.7 ms | 2026-11-01 15:18:44.857 [INFO] [PERF] ProjectDataService.EnsureDrawingDataCurrent.Snapshot: 1.5 ms | 2026-11-01 15:18:44.858 [INFO] [PERF] ProjectDataService.EnsureDrawingDataCurrent.SyncWithDrawingCore: 1.1 ms | 2026-11-01 15:18:44.895 [INFO] [PERF] ProjectDataService.EnsureDrawingDataCurrent.MergeMissingEntitiesFromDrawing: 36.8 ms | 2026-11-01 15:18:44.897 [INFO] [PitRestore] Restored user-set pit data from pre-sync snapshot (11 pits) | 2026-11-01 15:18:44.898 [INFO] [PipeRestore] Restored user-set pipe data from pre-sync snapshot (49 pipes) | 2026-11-01 15:18:44.898 [INFO] [PERF] ProjectDataService.EnsureDrawingDataCurrent.RestoreSnapshots: 2.9 ms | 2026-11-01 15:18:44.901 [INFO] [PERF] ProjectDataService.EnsureDrawingDataCurrent.RefreshPitMetadataFromDrawing: 3.2 ms | 2026-11-01 15:18:44.906 [INFO] [PERF] ProjectDataService.EnsureDrawingDataCurrent.RefreshPipeMetadataFromDrawing: 4.2 ms | 2026-11-01 15:18:44.906 [INFO] [PERF] ProjectDataService.EnsureDrawingDataCurrent.SlabService.LoadSlabs: 0.6 ms | 2026-11-01 15:18:44.906 [INFO] [PERF] ProjectDataService.EnsureDrawingDataCurrent: 52.1 ms ran fully | 2026-11-01 15:18:45.301 [WARN] SECURITY: Block file resolved from an untrusted (potentially world-writable) location: 'C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Blocks\\PIT BLOCK 3.dwg'. Install blocks under ProgramFiles or the plugin bundle to suppress this warning. | 2026-11-01 15:18:53.114 [WARN] SECURITY: Block file resolved from an untrusted (potentially world-writable) location: 'C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Blocks\\PIT BLOCK 3.dwg'. Install blocks under ProgramFiles or the plugin bundle to suppress this warning. | 2026-11-01 15:18:59.830 [INFO] Diagnostics logging DISABLED | 2026-11-01 15:18:59.874 [WARN] SECURITY: Block file resolved from an untrusted (potentially world-writable) location: 'C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Blocks\\PIT BLOCK 3.dwg'. Install blocks under ProgramFiles or the plugin bundle to suppress this warning. | 2026-11-01 15:18:59.874 [INFO] Reloading block 'PIT BLOCK' from preferred file: C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Blocks\\PIT BLOCK 3.dwg | 2026-11-01 15:18:59.884 [INFO] Loaded block 'PIT BLOCK 3' from: C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Blocks\\PIT BLOCK 3.dwg | 2026-11-01 15:18:59.915 [INFO] [PERF] ProjectDataService.SaveToDrawing: 3.1 ms jsonLen=244687 | 2026-11-01 15:18:59.915 [INFO] Project data saved to DWG successfully | 2026-11-01 15:18:59.915 [INFO] Pit added: P81 | 2026-11-01 15:18:59.916 [INFO] [Spine] new pit 11C5AD: given its identity CE-CIV-PIT-F3ED7651-DADE-4305-849F-48C0F58112A7 | 2026-11-01 15:18:59.919 [INFO] [PERF] ProjectDataService.SaveToDrawing: 2.7 ms jsonLen=244748 | 2026-11-01 15:18:59.919 [INFO] Project data saved to DWG successfully | 2026-11-01 15:18:59.921 [WARN] SECURITY: Block file resolved from an untrusted (potentially world-writable) location: 'C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Blocks\\PIT LABEL 2.dwg'. Install blocks under ProgramFiles or the plugin ...",
+          "evidence": "RECORDED, not judged: FULL new Civil CE log lines = 2026-11-01 15:18:44.820 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-11-01 15:18:44.820 [INFO] Project data loaded from DWG: 11 pits, 49 pipes, manual rows=0 | 2026-11-01 15:18:44.854 [INFO] [PERF] ProjectDataService.SaveToDrawing: 31.9 ms jsonLen=243925 | 2026-11-01 15:18:44.854 [INFO] Project data saved to DWG successfully | 2026-11-01 15:18:44.854 [INFO] Project data switched to: C:\\Users\\TimothyBrand\\AppData\\Roaming\\TIM_CE_CADTOOLS\\projects\\CD_ProjectData_CLDV31518022_B1_69ad83f1.json | 2026-11-01 15:18:44.856 [INFO] [PERF] ProjectDataService.EnsureDrawingDataCurrent.ReconcileOrphanedHandlesByPosition: 0.7 ms | 2026-11-01 15:18:44.857 [INFO] [PERF] ProjectDataService.EnsureDrawingDataCurrent.Snapshot: 1.5 ms | 2026-11-01 15:18:44.858 [INFO] [PERF] ProjectDataService.EnsureDrawingDataCurrent.SyncWithDrawingCore: 1.1 ms | 2026-11-01 15:18:44.895 [INFO] [PERF] ProjectDataService.EnsureDrawingDataCurrent.MergeMissingEntitiesFromDrawing: 36.8 ms | 2026-11-01 15:18:44.897 [INFO] [PitRestore] Restored user-set pit data from pre-sync snapshot (11 pits) | 2026-11-01 15:18:44.898 [INFO] [PipeRestore] Restored user-set pipe data from pre-sync snapshot (49 pipes) | 2026-11-01 15:18:44.898 [INFO] [PERF] ProjectDataService.EnsureDrawingDataCurrent.RestoreSnapshots: 2.9 ms | 2026-11-01 15:18:44.901 [INFO] [PERF] ProjectDataService.EnsureDrawingDataCurrent.RefreshPitMetadataFromDrawing: 3.2 ms | 2026-11-01 15:18:44.906 [INFO] [PERF] ProjectDataService.EnsureDrawingDataCurrent.RefreshPipeMetadataFromDrawing: 4.2 ms | 2026-11-01 15:18:44.906 [INFO] [PERF] ProjectDataService.EnsureDrawingDataCurrent.SlabService.LoadSlabs: 0.6 ms | 2026-11-01 15:18:44.906 [INFO] [PERF] ProjectDataService.EnsureDrawingDataCurrent: 52.1 ms ran fully | 2026-11-01 15:18:45.301 [WARN] SECURITY: Block file resolved from an untrusted (potentially world-writable) location: 'C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Blocks\\PIT BLOCK 3.dwg'. Install blocks under ProgramFiles or the plugin bundle to suppress this warning. | 2026-11-01 15:18:53.114 [WARN] SECURITY: Block file resolved from an untrusted (potentially world-writable) location: 'C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Blocks\\PIT BLOCK 3.dwg'. Install blocks under ProgramFiles or the plugin bundle to suppress this warning. | 2026-11-01 15:18:59.830 [INFO] Diagnostics logging DISABLED | 2026-11-01 15:18:59.874 [WARN] SECURITY: Block file resolved from an untrusted (potentially world-writable) location: 'C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Blocks\\PIT BLOCK 3.dwg'. Install blocks under ProgramFiles or the plugin bundle to suppress this warning. | 2026-11-01 15:18:59.874 [INFO] Reloading block 'PIT BLOCK' from preferred file: C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Blocks\\PIT BLOCK 3.dwg | 2026-11-01 15:18:59.884 [INFO] Loaded block 'PIT BLOCK 3' from: C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Blocks\\PIT BLOCK 3.dwg | 2026-11-01 15:18:59.915 [INFO] [PERF] ProjectDataService.SaveToDrawing: 3.1 ms jsonLen=244687 | 2026-11-01 15:18:59.915 [INFO] Project data saved to DWG successfully | 2026-11-01 15:18:59.915 [INFO] Pit added: P81 | 2026-11-01 15:18:59.916 [INFO] [Spine] new pit 11C5AD: given its identity CE-CIV-PIT-F3ED7651-DADE-4305-849F-48C0F58112A7 | 2026-11-01 15:18:59.919 [INFO] [PERF] ProjectDataService.SaveToDrawing: 2.7 ms jsonLen=244748 | 2026-11-01 15:18:59.919 [INFO] Project data saved to DWG successfully | 2026-11-01 15:18:59.921 [WARN] SECURITY: Block file resolved from an untrusted (potentially world-writable) location: 'C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Blocks\\PIT LABEL 2.dwg'. Install blocks under ProgramFiles or the plugin ..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 314 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: PIT completed 58194 ms ; Command outcome: PIT completed 81714 ms ; Command outcome: PIT completed 52810 ms ; Command outcome: CD completed 68008 ms ; Command outcome: CD completed 66250 ms ; Command outcome: CDEDIT completed 26323 ms ; Command outcome: CDEDIT completed 42961 ms"
+      ],
+      "error": null,
+      "finished": "2026-11-01 15:26:02",
+      "session_id": "RUN-20261101-1515-C3.0.88-cW04-s2",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "no independent review: no W654_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 2,
+        "red_before": true
+      }
+    }
+  ]
+}

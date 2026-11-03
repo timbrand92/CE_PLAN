@@ -1,0 +1,30 @@
+**For Tim**
+
+The hunt is finished and the report is filed in CE_PLAN. It found 52 problems that aren't in the bug list yet, about ten of them serious. Every one was found by reading the code only: nothing was built, run or opened in AutoCAD.
+
+**The 10 worst, in drawing terms:**
+1. **Moving the Pit Schedule changes real pit data.** Type a cover of 21.50 in the Pit Schedule window (the real cover is 21.00), then MOVE the table. P3's actual cover becomes 21.50 and its plan label changes, with no message. Diameters and inverts behave the same way.
+2. **Wrong pipe on an inlet row.** When two downpipes at the same level merge into one "DPs" row, every inlet row below it shows the previous row's pipe. The real pipe disappears from the table, and editing that row edits the wrong pipe.
+3. **The X-Civil PDF import can shift values onto the next pit.** If the pit-number column reads blank and one row gets thrown out, P5 receives P6's cover level and size.
+4. **A level you typed by hand gets overwritten.** This happens when you recalculate levels on a pipe drawn from its low end, because CE protects the wrong end. The summary still says your level was kept.
+5. **"Delete cell" comes back as the word "DELETE".** The cell is blank when you place the schedule. After the next PITEDIT the cover cell reads "DELETE", and CDDESIGN's redesign then refuses to apply.
+6. **The FROM column cuts off pit numbers.** Pit C1 shows as "C", and two of them at the same level merge into "Cs".
+7. **Depth changes after an unrelated edit.** For example, a pump station placed at 3.20 deep flips to 0.70 on the next refresh.
+8. **Adding a pipe splits a pit's rows.** The new row drops to the bottom of the schedule with no pit number, so it reads as belonging to the last pit.
+9. **Two Xrefs where one was SAVEAS'd from the other merge into one source.** Stage 2's pits silently go missing from the schedule. This one is likely but not proven.
+10. **The Recover Inverts button reports success but draws no level text.**
+
+**Two first claims I corrected after checking them myself:**
+1. **CDCHECKDWG:** it does not say "no issues" when inverts are blank. That claim was wrong.
+2. **Old pit blocks switching on open:** you asked for this in June, so the automatic switch is by design. What's still a problem is that it would also swap a consultant's own block that happens to be called "PIT BLOCK".
+
+**What happens next:** the person running the desk turns these into numbered bugs; I didn't number them. Sixteen of them can be proven with an automatic test before anyone fixes them. Nothing here needs you in AutoCAD yet.
+
+---
+
+1. **Code audited:** `origin/claude/rel-20261018d` @ `70a4e24f` (Civil 3.0.55 / Manager 1.1.55). It was read in a temporary private copy at `C:\ce-hunt\civil-lm`, which has now been removed. Master was not read.
+2. **Report:** `C:\CE_PLAN\areas\release-v3-colleagues-HUNT_CIVIL_LM_2026-10-12.md`. Findings are numbered HUNT-LM-01 to LM-52, with the top 10 in plain English at the top. It was committed as `af8d4638` and pushed to origin/main after `git fetch` and `merge --no-edit`, with no rebase and the file added by name.
+3. **How the work was split:** five parallel readers covered schedule build and text, schedule update and Xref, Checks and QA, CDREPAIR, and legacy migration with details and X-Civil import. I re-read the code myself for LM-01, 02, 03, 04, 06, 09, 20 and 43.
+4. **Duplicates:** two readers found the inlet-merge fault and the depth-refresh fault independently, so each is filed once. LM-17 is noted as the part of the R00 step-iron fix that never reached the refresh path, so it should be logged against that bug rather than as a new problem.
+
+In summary: a read-only audit of the installed Civil 3.0.55 found 52 new problems across schedules, checks, repair and legacy import, about ten of them serious. The Pit Schedule is the weakest area, because it can silently change or misprint real design data. Nothing has been fixed or tested in AutoCAD, and no bug numbers have been assigned.

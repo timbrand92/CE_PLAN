@@ -1,0 +1,19 @@
+**For Tim**
+
+I've reviewed 17 drafts: 11 can merge now and 6 need small fixes first. Two of the fixes come from faults my own test runs found. Nothing is installed and nobody has opened any of it in AutoCAD.
+
+1. **Merge now:** #1511, #1512, #1514, #1499, #1496, #1497, #1498, #1504, #1505, #1506, #1510.
+2. **Needs small fixes first:**
+   - **#1507:** the new command-log tick box makes the CDS Advanced tab too tall at 150% on a 1080p screen. The earlier fix job said this wasn't its fault; it was wrong.
+   - **#1508:** it fails one Manager file-safety test. The fix is one line.
+   - **#1513:** it measures in millimetres, so in a metre drawing a label could jump up to 1.5 km.
+   - **#1516:** only CDCHECK leaves out removed pits; the other checks still flag them.
+   - **#1509:** an edit record could be saved in a way it can never read back.
+3. **Next merge order:**
+   - **Civil + Manager (C-58):** #1511, #1512, #1514, #1499, then the fixed ones (#1508 before #1515).
+   - **Structural (S-40):** #1510, #1500, #1501, #1504, #1505, #1506, #1497, #1498, #1496.
+4. **Tests:** Civil 428/429, Manager 852/853, Structural 463/463, DesignCore 647/648 (the one fail is a known setup gap), Structural net48 compiles. Your settings files are unchanged.
+
+---
+
+The full record is entries 1540 to 1560 in the review log, pushed to CE_PLAN. That commit went out without the Claude co-author line at the end of its message. Fixing that would mean overwriting the pushed history, so I left it.

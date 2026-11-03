@@ -1,0 +1,21 @@
+Mon 17:52:03 batch N3 waiting for batchN2 to finish B2b
+Mon 18:07:04 stopped batchN pid 81824 and its helper after S3b
+Mon 18:07:04 batchN stopped after B2b; N2 takes over for the rest of the evening
+Mon 18:07:11 backed up CD_RecentValues.json sha D509F40A4860
+Mon 18:07:11 backed up CD_Settings.json sha ACD64E79A33B
+Mon 18:07:11 backed up CS_Settings.json sha D604CE689671
+Mon 18:07:11 backed up settings.json sha EFE307C4FC74
+Mon 18:07:16 Codex usage before B1c : 50 percent
+Mon 18:07:16 starting verifyB1c_c88
+Mon 18:47:41 verifyB1c_c88 launcher finished; Codex usage after: 51 percent
+Mon 18:47:41 after B1c : settings.json sha EFE307C4FC74 (original EFE307C4FC74)
+Mon 18:47:42 after B1c : CS_Settings.json sha D604CE689671 (original D604CE689671)
+Mon 18:47:42 after B1c : CD_Settings.json sha ACD64E79A33B (original ACD64E79A33B)
+Mon 18:47:42 Codex usage before S3c : 51 percent
+Mon 18:47:42 starting verifyS3c_c88
+Mon 18:58:14 verifyS3c_c88 launcher finished; Codex usage after: 51 percent
+Mon 18:58:14 after S3c : settings.json sha EFE307C4FC74 (original EFE307C4FC74)
+Mon 18:58:14 after S3c : CS_Settings.json sha D604CE689671 (original D604CE689671)
+Mon 18:58:14 after S3c : CD_Settings.json sha ACD64E79A33B (original ACD64E79A33B)
+Mon 18:58:14 Codex usage before S5 : 51 percent
+Mon 18:58:14 starting verifyS5_c88

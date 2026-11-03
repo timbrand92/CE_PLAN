@@ -1,0 +1,32 @@
+**FOR TIM**
+
+1. **What I did:** I checked 25 of the 39 open changes that nobody had independently reviewed. I did not close, merge or comment on anything.
+2. **Ready for the next Civil update (after C-66):**
+   1. **#1753:** slab fall in metre drawings. Right now a flat slab can pass.
+   2. **#1734:** CDPROPAGATE and the Edit Pipe cascade keep going when you keep a hand-typed level.
+   3. **#1735:** New Pipe and Edit Pipe accept a blank end level.
+   4. **#1743:** the CDEDIT batch skips a blank ticked box.
+   5. **#1738:** CE Blocks places on a frozen layer and warns you.
+   6. **#1759:** CDPIPEOBJ shows the right length.
+   - The first five each need a small fix first, written into the report.
+3. **Ready for the next Structural update:** ten changes can go as they are. These include the RCBEAM window warnings, CEHATCHCHANGE and CE_INSPECT. A sheet-title change (#1737) needs two fixes first.
+4. **Not going in:** three duplicate a fix you already have. Two are CEMEMBER editing, which waits on you.
+5. **Your one question: should a drawn CEMEMBER beam be edited through SBEAMEDIT?** **I recommend yes.**
+   - **On a job:** pick a 200UB, change it to 250UB, and it redraws in the same place.
+   - **A copied beam:** CE refuses to edit the copy and says to draw it again.
+6. **Not tested:** nothing was opened in AutoCAD.
+
+---
+
+1. **Report:** `C:\CE_PLAN\areas\REVIEW_OPEN_PRS_25OCT.md`, pushed to CE_PLAN. Nothing is left unpushed, and the leak scan was clean.
+2. **Verdicts:** 13 MERGE, 7 MERGE-WITH-FIXES, 2 HOLD, 3 REJECT.
+3. **Scope:** 300 PRs listed. 174 are already inside a base, 87 were already named in a review or train list, and 39 had no review.
+4. **Still to review:** 15. All are Codex audits that only change documents, no code.
+5. **Focused tests on the combined trees:**
+   - **Civil:** 340 of 342 passed. The 2 failures are two #1723 test cases whose expected text is out of date; that fix is in the report.
+   - **Manager:** 90 of 90 passed.
+   - **Structural:** 159 of 159 passed.
+6. **My mistake:** my first two Manager runs failed because my scratch log folder was outside Windows TEMP. That cost about 2 minutes.
+7. **Disk:** C: is now at 11.9 GB free, under the 12 GB line. The drop came while other jobs were running, and my scratch folder is deleted.
+
+**Summary:** I reviewed 25 of the 39 open PRs that had no review: 13 can merge as they are and 7 after small fixes. Three duplicate fixes already installed, and two CEMEMBER editing changes wait on Tim's answer. Focused tests passed except two #1723 cases with out-of-date expected text. Nothing was opened in AutoCAD. The report is pushed to `C:\CE_PLAN\areas\REVIEW_OPEN_PRS_25OCT.md`. C: is at 11.9 GB free.

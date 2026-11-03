@@ -1,0 +1,381 @@
+{
+  "header": {
+    "run_id": "RUN-20261031-0627-C3.0.87-aS4c",
+    "started": "2026-10-31 06:27:43",
+    "finished": "2026-10-31 06:28:50",
+    "build": {
+      "civil": {
+        "product_version": "3.0.87+f5dd72a0652c7f749ab52228cea0f9675047b9cb",
+        "file_version": "3.0.87.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.87+f5dd72a0652c7f749ab52228cea0f9675047b9cb",
+        "file_version": "1.1.87.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.87+f5dd72a0 / struc 1.0.125+204dfad2 / mgr 1.1.87+f5dd72a0",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "0FB64B9A053D9CA4E94C0203955C8463FCAABF07AD28E486A48FA4FCC81C0916",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.87+f5dd72a0652c7f749ab52228cea0f9675047b9cb; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.87+f5dd72a0652c7f749ab52228cea0f9675047b9cb",
+      "Driver files (SHA-256, first 12): v2 F4D8F40C3675 (expected F4D8F40C3675), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 482EB7B20C6C, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 B439CADC8A7A, case_runner_lib.ps1 ED6244C9719E, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 0 shared setup(s); pack SHA-256 0FB64B9A053D9CA4E94C0203955C8463FCAABF07AD28E486A48FA4FCC81C0916; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV2_S1 950AFDF6E523",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json D604CE689671 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sat 31 Oct 2026 06:27 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 0,
+    "FAIL": 1,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261031-0627-C3.0.87-aS4c-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-31 06:27:44",
+      "finished": "2026-10-31 06:28:50",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV2_S1",
+      "fixture_sha256": "950AFDF6E523",
+      "copy": "C:\\ce_rc_drv\\CLDV30627471_B1.dwg",
+      "cases": [
+        "S467d3"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : D604CE689671 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "S467d3",
+      "proves_bugs": "BUG-467 (FPFC typed centre and Enter rotation only; a typed rotation and FSF are not covered)",
+      "title": "PROOF OF INSTALLED FIX BUG-467: with the UCS turned 30 degrees, FPFC PF7 600 x 600 at a typed centre draws the pad at the World place of the centre, turned 30 degrees",
+      "kind": "deterministic",
+      "order": 40,
+      "slot": "fresh",
+      "fixture": "DRV2_S1",
+      "plan_item": "BUG-467 (HUNT-S-02, PR",
+      "bug": "BUG-467",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed. Written 30 Oct 2026 from the code at 204dfad2 and the p15 report; not compared with a run.",
+      "variant_of": "",
+      "expected": "After _.UCS _Z 30, FPFC answered PF7, 600, 600, 0, centre 19700,-3300, Enter at the rotation: exactly one new closed polyline on layer STRIP FOOTINGS whose first corner is within 5 mm of World 18600.893,6582.309 (centre World 18710.700,6992.116, turned 30 degrees); none at the old place 19400,-3600. A PF7 label is recorded. The drawing file on disk is unchanged.",
+      "why_not_unit": "The unit tests only pin the source; only AutoCAD's live UCS turns a typed point, and only the real FPFC draws the pad line.",
+      "not_automated": [
+        "A typed (non-zero) rotation at \"Additional rotation around center\" and the FSF two-point and bored pier routes are not driven.",
+        "Where the PF7 label sits and the footing schedule row are recorded, not judged."
+      ],
+      "file_sha256": "0C30014113282B32552460354BCEB96D2FDD95170E6E4D00465D713145FF7827",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "count of $pad = 0 (expected = 1)",
+      "started": "2026-10-31 06:28:17",
+      "seconds": 17.8,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "settings-arm",
+          "text": "settings-arm",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "settings guard armed: ok"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV30627471_B1.dwg: 85871 bytes, SHA-256 950AFDF6E523, last written 01:39:47; folder holds 255 files"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "getvar",
+          "text": "getvar OSMODE -> $osm0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "OSMODE = 5375"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 setvar OSMODE 0 -> $osm_set",
+          "ok": true,
+          "seconds": 0.5,
+          "evidence": "v3 setvar OSMODE 0: OSMODE (profile): 5375 -> 0"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM{NL}_W{NL}12000,3000{NL}24000,12000\" -Force",
+          "ok": true,
+          "seconds": 2.8,
+          "evidence": "typed '_.ZOOM _W 12000,3000 24000,12000': Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _W | Specify first corner: 12000,3000 | Specify opposit..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.UCS{NL}_Z{NL}30\" -Force -> $ucs",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "typed '_.UCS _Z 30': Command: | Command: _.UCS | Current ucs name: *WORLD* | Specify origin of UCS or [Face/NAmed/OBject/Previous/View/World/X/Y/Z/ZAxis] <World>: _Z | Specify rotation angle about Z axis <90>: 30 | SETTINGS GUARD ACTIVE: 4 s..."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "getvar",
+          "text": "getvar UCSXDIR -> $xdir",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "UCSXDIR = 0.8660254037844387 | 0.49999999999999994 | 0.0"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 15 objects"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"FPFC{NL}PF7{NL}600{NL}600{NL}0{NL}19700,-3300{NL}\" -Force -> $pf",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "typed 'FPFC PF7 600 600 0 19700,-3300': Command: | Command: FPFC | Enter text <PF1>: PF7 | Enter X size for PF 7 <600>: 600 | Enter Y size <same as X>: 600 | Enter depth <0 to skip>: 0 | Specify insertion point (center): 19700,-3300 | Additional rotation aroun..."
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $new",
+          "ok": true,
+          "seconds": 0.5,
+          "evidence": "3 object(s) after index 15 (model space now 18); by type: AcDbRegion 3; first: 568 AcDbRegion STRIP FOOTINGS ; 56C AcDbRegion STRIP FOOTINGS ; 570 AcDbRegion STRIP FOOTINGS"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"object~Polyline\" \"layer=STRIP FOOTINGS\" -> $drivers",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 3: "
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $drivers \"object~Polyline\" \"near=18600.893,6582.309,5\" -> $pad",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 0: "
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $drivers \"object~Polyline\" \"near=19400,-3600,5\" -> $pad_old",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 0: "
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"text~^PF7$\" -> $lbl",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 3: "
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.UCS{NL}_W\" -Force -> $ucsw",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "typed '_.UCS _W': Command: | Command: _.UCS | Current ucs name: *NO NAME* | Specify origin of UCS or [Face/NAmed/OBject/Previous/View/World/X/Y/Z/ZAxis] <World>: _W | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be chan..."
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "matches $xdir \"0\\.86\\d\"",
+          "ok": true,
+          "expected": "matches /0\\.86\\d/",
+          "actual": "0.8660254037844387 | 0.49999999999999994 | 0.0",
+          "evidence": "matched '0.866'"
+        },
+        {
+          "n": 2,
+          "text": "count $pad = 1",
+          "ok": false,
+          "expected": "count = 1",
+          "actual": "0",
+          "evidence": "count of $pad = 0 (expected = 1)"
+        },
+        {
+          "n": 3,
+          "text": "count $pad_old = 0",
+          "ok": true,
+          "expected": "count = 0",
+          "actual": "0",
+          "evidence": "count of $pad_old = 0 (expected = 0)"
+        },
+        {
+          "n": 4,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 950AFDF6E523 vs 950AFDF6E523; last written 01:39:47 same"
+        },
+        {
+          "n": 5,
+          "text": "record $pf \"FULL FPFC under the 30 degree UCS (each question)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: FPFC | Enter text <PF1>: PF7 | Enter X size for PF 7 <600>: 600 | Enter Y size <same as X>: 600 | Enter depth <0 to skip>: 0 | Specify insertion point (center): 19700,-3300 | Additional rotation around center <0>: | [FOUNDATION] Redrew footing system 'Footing Network': 5 footings. Nothing needs attention. | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL FPFC under the 30 degree UCS (each question) = Command: | Command: FPFC | Enter text <PF1>: PF7 | Enter X size for PF 7 <600>: 600 | Enter Y size <same as X>: 600 | Enter depth <0 to skip>: 0 | Specify insertion point (center): 19700,-3300 | Additional rotation around center <0>: | [FOUNDATION] Redrew footing system 'Footing Network': 5 footings. Nothing needs attention. | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 6,
+          "text": "record $drivers \"every new polyline on STRIP FOOTINGS (first corner as x,y)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: every new polyline on STRIP FOOTINGS (first corner as x,y) = "
+        },
+        {
+          "n": 7,
+          "text": "record $new \"EVERY new object after FPFC (object, layer, handle)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"index\":15,\"handle\":\"568\",\"object\":\"AcDbRegion\",\"layer\":\"STRIP FOOTINGS\",\"name\":\"\",\"text\":\"\",\"x\":null,\"y\":null} | {\"index\":16,\"handle\":\"56C\",\"object\":\"AcDbRegion\",\"layer\":\"STRIP FOOTINGS\",\"name\":\"\",\"text\":\"\",\"x\":null,\"y...",
+          "evidence": "RECORDED, not judged: EVERY new object after FPFC (object, layer, handle) = {\"index\":15,\"handle\":\"568\",\"object\":\"AcDbRegion\",\"layer\":\"STRIP FOOTINGS\",\"name\":\"\",\"text\":\"\",\"x\":null,\"y\":null} | {\"index\":16,\"handle\":\"56C\",\"object\":\"AcDbRegion\",\"layer\":\"STRIP FOOTINGS\",\"name\":\"\",\"text\":\"\",\"x\":null,\"y..."
+        },
+        {
+          "n": 8,
+          "text": "record $lbl \"the new PF7 label(s) (insertion as x,y)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: the new PF7 label(s) (insertion as x,y) = "
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 14 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-10-31 06:28:35",
+      "session_id": "RUN-20261031-0627-C3.0.87-aS4c-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}

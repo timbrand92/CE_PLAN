@@ -1,0 +1,6 @@
+Draft PR #1902 is open against `claude/rel-20261026s` for BUG-1126 and BUG-1131 together; BUG-611 needed no PR. Nothing is tested in AutoCAD and no bug is marked FIXED. Report: `C:\CE_PLAN\areas\BUGFIX_s6_REPORT_31OCT.md` (pushed).
+
+- **BUG-611:** already fixed on this line by commit `0bae4ef8` (the status check at `SteelSectionPickerDialog.xaml.cs:451`).
+- **Files in #1902:** the dialog `SteelSectionPickerDialog.xaml.cs`, new `SbeamPickerDisplay.cs` and `SbeamPickerDisplaySettings.cs`, `UserSettings.cs`, `SettingsService.LoadRecovery.cs`, `REGRESSION_LOG.md`, and new tests in `S6PickerSwitchDefaultsTests.cs`.
+- **Switches (all on):** `Options.SbeamPickerThreeSignificantFigures`, `Options.SbeamLengthOverThresholdIsMillimetres` and `Options.SbeamLengthMillimetreThreshold` (100).
+- **My mistakes:** the two bugs share one PR, and the PR title says "no B number yet".

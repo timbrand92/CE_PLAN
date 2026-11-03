@@ -1,0 +1,8 @@
+Draft PR #1911 is open for BUG-536 (part), titled B-090 (register item 148). BUG-470 needs no PR. The report is pushed and not ahead of origin.
+
+- **BUG-470:** already fixed by commit 987ca9dd (`FoundationService.cs:3912`, `FoundationService.Identity.cs:94`). No PR.
+- **BUG-536:** four parts were still open. I built one: `LoadPath.PadRoundUpMm` (50) and `LoadPath.UnsizedPierDiameterMm` (450) now drive CSLOADPATH. The switch `LoadPath.ReadsPadRoundUpAndUnsizedPierFromSettings` is on by default, and off returns the old 50 and 450.
+- **Skipped:** the schedule sizes, column widths and label height need Tim's decision on the office block. The BP block is one block with three diameters, so it isn't a Settings gap.
+- **Tests:** 32 DesignCore and 14 Structural focused tests passed. net48 compiled with 0 errors. Nothing was run in AutoCAD.
+- **Files:** `LoadPathEngine.cs`, `UserSettings.cs`, `FoundationService.LoadPath.cs`.
+- **Real-files compare:** the before and after listings differ only in live log and state files. No settings file changed. I didn't see which process wrote them.

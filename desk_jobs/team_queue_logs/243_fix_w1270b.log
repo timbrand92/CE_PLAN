@@ -1,0 +1,8 @@
+**w1270b: no PR opened.** The P8 depth step from 1.00 to 1.10 looks intended, not a defect. This is from reading the code only. I built nothing, ran no tests and did not open AutoCAD.
+
+- **Cause:** P8 had no pit floor recorded, so depth was cover minus the outlet only (1.00). After CDSYNC re-linked the pipes, `ProjectDataService.cs:512-570` (called at :692) filled the blank floor from the lowest pipe end, about 17.90. Depth then read 1.10, which matches your 20 Oct rule.
+- **Not proven:** the exact trigger. P8's cover and levels are inferred from other Codex lines, and I couldn't find the S2-04 notes.
+- **Question for Tim:** keep filling a blank floor on sync, or have the schedule measure to the lowest pipe straight away?
+- **Left alone:** #1990 and the carpark.
+
+Report: `C:\CE_PLAN\areas\BUGFIX_w1270b_REPORT_03NOV.md`, pushed to CE_PLAN main.

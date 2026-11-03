@@ -1,0 +1,6 @@
+== verifyB1c_c88 (usage 50.0% -> 51.0%): AUTOCAD CLOSED
+
+1. **Inspector ÔÇö BLOCKED, SURE:** tab click opened the selected pipeÔÇÖs Inspector, but the required Grade line was absent.
+2. **Uphill ÔÇö DIFFERENT, SURE:** correctly reported 4 mm uphill; warning appeared white with amber/gold marking, not red.
+3. **Clean end:** settings unchanged, drawing unsaved, lock released. No other looks run.
+4. **Report:** [CODEX_VERIFY_B1c_20261102_1824.md](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_B1c_20261102_1824.md>). Counts: 0 PASS, 0 FAIL, 1 DIFFERENT, 1 BLOCKED; 2 SURE, 0 UNSURE.

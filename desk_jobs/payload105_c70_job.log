@@ -1,0 +1,9 @@
+The C-70 candidate is built and proved, and the report is written. Nothing is installed and nothing was opened in AutoCAD.
+
+- **Candidate:** `C:\ce_rc_scratch\c1066` (the expected number). Civil verified 828, bad 0, extra 0. Manager verified 75, bad 0, extra 0.
+- **Branch head:** `claude/rel-20261026u` @ `270215aa`, after the version commit (4 files, 4 insertions, 4 deletions).
+- **Installed line found:** C-69 (Civil 3.0.79 and Manager 1.1.79, both `+d3f9c5df`).
+- **Tests:** pin and switch-default tests all passed (Civil 41, Manager 89, switch defaults 43, Bug861 plus settings guard 77 with 3 skips). String proof: 879 rows, 0 unexpected. Manager 1.1.80 is a pure re-stamp (134 differing bytes per DLL lane).
+- **Odd:** Below Normal priority hung `vswhere`, `dotnet` and hashing on this loaded PC, so I ran at Normal priority.
+
+Report: `C:\Lisp Files\_TEST_COPIES_20260923\PAYLOAD_C1066_REPORT.md`.

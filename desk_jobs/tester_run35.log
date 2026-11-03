@@ -1,0 +1,18 @@
+Run 35 is done: 15 checks PASS, 1 STILL FAILS (the "Drawing Border" half of BUG-141, which C-49 didn't target), 0 blocked, 0 unproven. The report is pushed as commit 2265260b in `C:\CE_PLAN`.
+
+- **BUG-141 (headline):** the "No clear spot (on pit P8)" line is gone with the new switch ON. Placing the 20 m pipe prints no such line, and Tidy labels says "Will move 0 · No clear spot found 1" (only the P3→P2 label). The start text "IL 18.000" doesn't move because it's now clear of the pit; the shot shows it about 30 pixels clear.
+- **Switch OFF:** with `linking.tidyPitByBodyOutline` OFF, the old "(on pit P8)" line and "No clear spot found 2" come back. The original was restored and proven by hash.
+- **Label on a pit body:** a label I moved onto P8's body was still moved off by Tidy labels. I also applied it, then U and REDO worked ("Everything has been redone"). Apply, U and REDO had never been reachable before.
+- **BUG-820:** CDRECOVERINVERTS now reads "20 already had invert text, 24 skipped" (25 pipes with texts less the 5 one-text pipes), with the space after the comma.
+- **BUG-854:** all 30 R-06 "not known" rows end "Enter the detention length, or untick Detention (CDEDIT)".
+- **Regressions:** the old false R-06 rows are still gone (0 of 14). The Edit Pipe cascade with U and REDO passed, and Edit Pipe on downpipe 1093C7 is unchanged. CDSYNC and quick edits left the Pit Schedule rows identical. Tag refusals and CDFIXTAGS are unchanged from run 34.
+- **To look at:**
+  - **Border half of BUG-141:** after a typed MOVE it still prints "(on the block Drawing Border)" and "(on SC)".
+  - **CDSYNC:** after the first CDSYNC the Pit Schedule header read "96 data issues" instead of 95. The rows were identical and a second CDSYNC changed nothing. Run 34 saw no change, but P8 wasn't drawn yet then.
+
+Installed versions read first were 3.0.59 / 1.1.59 (+d25cefa8). Driver hashes (120EE24D15B2 and 5B542F2145F4) were unchanged at the start and end. All four of Tim's settings files hashed the same at the start and end of both sessions, and both `quit` calls printed the restore-verified line.
+
+Copies for the desk to delete in `C:\ce_rc_drv`: CLD351_B1.dwg, CLD351_B1_PRE_C7_20261020_100820.dwg, CLD352_B1.dwg, CLD352_B1_PRE_C7_20261020_102521.dwg.
+
+AUTOCAD CLOSED
+SETTINGS RESTORED

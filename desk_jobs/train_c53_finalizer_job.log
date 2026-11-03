@@ -1,0 +1,6 @@
+**GO.** Train C-53 is final at `7375e3875605ef9be8f18b7b0b8f06fe1c761462`.
+
+1. **What I changed:** one small edit to the change log only (a stray tab character in a folder path). No program code changed and nothing was held back.
+2. **Manager must ship:** yes, two Manager PRs are on the train. Civil ships too. No shared or installer file changed, so the signed-update check can't be affected.
+3. **Tests:** the whole solution builds with 0 errors. Civil net10: 18,918 of 18,938 pass, 19 skipped, 1 failed. That failure is the Glen Eira test, which already failed on the last train. Manager: 823 of 823. Civil net48 focused: 190 of 190. Your four settings files are unchanged.
+4. **Do not mark fixed:** BUG-516, 505, 476, 557, 556 and the command-name guard. Nobody has opened them in AutoCAD yet.

@@ -1,0 +1,9 @@
+I've written the report and pushed it. `git status -sb` shows `main...origin/main` with no ahead count, and the leak-scan came back clean. The file is `C:\CE_PLAN\areas\EVERYDAY_TOOLS_STATUS_29OCT.md`.
+
+- **Count:** 19 tools are accepted. The plan names 38 tools, not 40, so the report has 38 lines.
+- **Fri 30 Oct:** 30 of 40 is not reachable. My estimate is 20 to 22 by Fri 30 Oct and 26 to 30 by Sat 7 Nov.
+- **Quickest 11:** CDTWL, PIT, CD, D24, D21, quick MOVE, D06, D23, D13, D28 and D10.
+- **Needs a build:** D05, D07 and D25.
+- **Needs Tim's word:** D13 and D29.
+
+I changed nothing in AutoCAD and ran no cases.

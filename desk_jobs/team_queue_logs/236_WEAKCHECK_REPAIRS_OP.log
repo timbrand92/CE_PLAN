@@ -1,0 +1,5 @@
+`C:\CE_PLAN\areas\WEAKCHECK_REPAIRS_OPEN_02NOV.md` — 7 robot cases (W1963, W1966, W1890, W1947, W1967, W1880, W1949) still had a weak check and no repair file. I drafted a paste-in replacement for each; nothing was built or run, and none of it is proven.
+
+The order's path had a typo (`C:\CE_PLANreas\`), so I wrote it to `C:\CE_PLAN\areas\`.
+
+I couldn't run the PR-head ancestor test because `gh` isn't on this shell's path. I searched each fix's switch name in the source instead, so that shows what is in each branch's source, not what is installed.

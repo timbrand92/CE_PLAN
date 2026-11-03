@@ -1,0 +1,135 @@
+{
+  "header": {
+    "run_id": "RUN-20261101-0011-C3.0.88-aQ1",
+    "started": "2026-11-01 00:11:57",
+    "finished": "2026-11-01 00:12:09",
+    "build": {
+      "civil": {
+        "product_version": "3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+        "file_version": "3.0.88.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+        "file_version": "1.1.88.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.88+3fbb9da5 / struc 1.0.125+204dfad2 / mgr 1.1.88+3fbb9da5",
+    "acad_version": "",
+    "pack_sha256": "A4B8229DE7089564237C4D6ED290B23E10841CE3D7744CD3DCF57ED5624137E4",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+      "Driver files (SHA-256, first 12): v2 F4D8F40C3675 (expected F4D8F40C3675), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 482EB7B20C6C, v3 session 4D3524AAA60B, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 BBF42DBA8958, case_runner_lib.ps1 01751833A6EA, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 0 shared setup(s); pack SHA-256 A4B8229DE7089564237C4D6ED290B23E10841CE3D7744CD3DCF57ED5624137E4; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json D604CE689671 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sun 01 Nov 2026 00:11 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 0,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 1,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261101-0011-C3.0.88-aQ1-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-11-01 00:11:58",
+      "finished": "2026-11-01 00:12:09",
+      "result": "BLOCKED",
+      "blocked": null,
+      "error": "You cannot call a method on a null-valued expression.",
+      "fixture": "DRV1_B1",
+      "fixture_sha256": null,
+      "copy": null,
+      "cases": [
+        "N70"
+      ],
+      "whatsnew_dismissed_at_start": null,
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : D604CE689671 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "",
+      "quit_attempts": null
+    }
+  ],
+  "cases": [
+    {
+      "id": "N70",
+      "proves_bugs": "",
+      "title": "With the new switch ON, a ROTATE Copy and then a SCALE Copy of pit P3 landing on P3 leave every one of P3's pipes joined to P3, and CE says so once per copy",
+      "kind": "deterministic",
+      "order": 700,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "bug": "BUG-1227",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "With linking.pitCopyKeepsOriginalPipeEnds true when AutoCAD starts: a plain COPY of P3 by 0,-5000 makes P8 (R34's control). Then ROTATE Copy of P3 by 90 degrees about 53777.7,-25569.9 makes P11 on top of P3, and the command line says '[CE] P11 sits on pipe ends already joined to P3; they stay joined to P3.' once. Then SCALE Copy by 1.5 about the same point makes P12, and the command line says 'P12 sits on pipe ends already joined to P3; they stay joined to P3.' once. No 'Pit schedule cell for P3' line prints. The CE log has none of the five stolen pipe-end lines of the 3.0.86 run (10A901 from=WT9 to=P11, 10A98D from=P4 to=P11, 110136 from=WT4 to=P11, 109E23 from=P12 to=P2, 110179 from=WT3 to=P12). The copies' labels read P11 and P12 and P3's own label still reads P3. The drawing file on disk is unchanged.",
+      "why_not_unit": "The pipe-end owner is chosen by the live copy relink when AutoCAD ends the native ROTATE or SCALE command; the unit tests rebuild the owner walk but cannot read the real pit records (pre-review E item 3.3.3), and the switch is read from the real settings file at start.",
+      "not_automated": [
+        "DERIVED: P11 and P12 are the first free numbers on DRV1_B1 after the COPY takes P8 (as R34 and R34s); the five pipe ids and their From pits come from the 3.0.86 log, not from a fresh read of this copy.",
+        "P3 keeping all five pipes is proven by the ABSENCE of the five stolen-end lines plus the keep-back line, not by reading P3's pipe list (the robot read of a pipe shows only handle, object and layer: R19 run B5). The Inspector on each of P3's pipes is a Codex or Tim look.",
+        "U twice is driven and recorded, NOT judged: a red here must be a BUG-1227 red, not a U question. Pre-review E check 5 (U twice puts the drawing back) is therefore recorded only.",
+        "Not driven: an EXACT snap to P3 (true tie), copy-then-erase-the-original (pre-review E item 3.2.3), drawings already damaged on 3.0.84 to 3.0.86 (the fix does not repair them)."
+      ],
+      "file_sha256": "0E64448C7E09E6E6477E8FB73049D3874E78F4BC0F5D7EA88F5B1437196FD3A9",
+      "plan_item": "BUG-1227 Part A (B-049a, PR",
+      "result": "BLOCKED",
+      "blocked": "session BLOCKED: You cannot call a method on a null-valued expression.",
+      "first_failure": null,
+      "steps": [],
+      "assertions": [],
+      "pictures": [],
+      "observations": [],
+      "seconds": 0,
+      "setup": "",
+      "setup_note": null,
+      "session_id": "RUN-20261101-0011-C3.0.88-aQ1-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}

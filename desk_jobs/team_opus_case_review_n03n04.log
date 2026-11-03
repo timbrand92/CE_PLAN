@@ -1,0 +1,24 @@
+Tim, N03 is now ready to count for the whole of its card. N04 is ready for part of its card. The report and both review files are pushed to CE_PLAN, the leak scan passed, and nothing is left unpushed.
+
+1. **My mistakes:** none that cost anything. I first wrote the wrong time into the two review files and fixed it before copying them.
+2. **N03, overflow (OF) and front overflow (FO), card D08: ready, whole card.**
+   1. The case file matches the version that passed, and it passed in two separate AutoCAD starts on Civil 3.0.83. No install happened between the runs.
+   2. Its deliberately wrong copy failed for the right reason: the FO line was missing while OF placed normally.
+   3. Both use the same symbol, the tags are OF1 and FO1, and the plan labels read OF and FO. The plugin's own code guarantees those numbers and labels on this test drawing, so they are not an accident of the drawing.
+   4. All four extra checks my earlier review asked for are now in the case.
+3. **N04, downpipe (DP) and raingarden (CDRG), card D07: ready for part only.**
+   1. **Covered:** both place on empty ground with no pipe nearby, nothing is refused, the area reads 12.0 m², and one U takes back only the raingarden. It passed four times, each as the first test after AutoCAD started, and its wrong copy failed for the right reason.
+   2. **Missing:**
+      - The card asks for an RG1 label, and CE draws no raingarden label at all. Someone needs to decide whether the card or the plugin is wrong.
+      - The case does not check that the outline is closed.
+      - The case checks only that the tag starts with "DP", not that it is DP1.
+      - It does not use a drawing with no pipes at all.
+4. **The reopen fault (BUG-1225):** it does not change what N03 and N04 prove, because every counted run was the first drawing after AutoCAD started. It does limit them. Both prove "works in the first drawing", not "works after closing and reopening a drawing in the same AutoCAD". BUG-1225 stays open.
+5. **What you can now write "FIXED (Claude-accepted, Civil 3.0.83, 28 Oct 2026)":**
+   1. **D08 (OF and FO):** the whole card, with a note pointing to BUG-1225 for the reopen case.
+   2. **D07 (downpipe and raingarden):** only the covered part in item 3.
+   3. **The other named tools** are unchanged from the earlier review this morning (the N27 review). D16, D18 with R04, and D27 with R13 count whole. D09, D19, D20, D21, D15, D24 and the Edit Pipe cascade count for part only.
+6. **Files:** two review files now sit beside the cases, with copies in the CE_PLAN reviews folder. A copy of the robot's acceptance check passes for both. The full report is `C:\CE_PLAN\areas\release-v3-colleagues-OPUS_CASE_REVIEW_N03N04_28OCT.md`.
+7. **For you:** nothing to decide or test now.
+
+**Summary:** N03 and N04 each passed twice in separate AutoCAD starts on Civil 3.0.83, and each wrong copy failed for the right reason. N03 is ready for all of D08: same symbol, tags OF1 and FO1, labels OF and FO. N04 is ready for part of D07: no pipe nearby, 12.0 m², and U removes only the raingarden. CE draws no RG1 label, so D07 cannot count whole yet. BUG-1225 limits both to the first drawing after AutoCAD starts.

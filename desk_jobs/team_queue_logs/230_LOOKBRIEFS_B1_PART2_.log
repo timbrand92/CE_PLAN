@@ -1,0 +1,1 @@
+`C:\CE_PLAN\areas\LOOKBRIEFS_B1_PART2_02NOV.md` is written: briefs for PRs 7 to 12 (#1945, #1950, #1952, #1880, #1951, #1953). #1951 gets no look of its own, and #1950 and #1953 are conditional and may end NOT TESTED. Nothing was built or tested, and I wrote the file in `areas` because `C:\CE_PLANreas\` looked like a typo.

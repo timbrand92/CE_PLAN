@@ -1,0 +1,7 @@
+Both briefs and the queue entry are written and nothing has been run. The robot brief is pushed to CE_PLAN (`9ab7367c`, leak scan clean).
+
+1. **Robot (`C:\CE_PLAN\desk_jobs\tester_run47.txt`):** two sessions. It covers the typed REDO runs for BUG-861, CDCHECKIGNORE OFF and ON, three Civil outcome lines, the run-46 regressions and one Structural sample. DP1 is left to Codex.
+2. **Codex (`C:\Lisp Files\_CODEX_RUNNER\verifyV10_c60.txt` and `_full.txt`):** three sessions covering V10-01 to V10-05. Queue section 13 is added to `QUEUE_20OCT_PLAN.md`, which sits in `_CODEX_RUNNER`, not CE_PLAN.
+3. **Gaps:** V10-01d(2) and the title-block half of V10-02 write NOT TESTED if DRV1_B1 has no non-CE attributed block. V10-05 allows one mouse pick and one right-click.
+
+The files have no control characters and no "follow".

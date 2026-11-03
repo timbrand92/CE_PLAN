@@ -1,0 +1,5 @@
+== verifyE9_cur (usage 45.0% -> 49.0%): AUTOCAD STILL RUNNING
+
+1. **BLOCKED:** Two screenshot timeouts during setup. All four feature looks NOT TESTED; no passes or failures claimed. SURE 4, UNSURE 0.
+2. **Safety:** QUIT and No completed, but acad.exe PID 11072 remains without a window. Lock retained. All four settings files unchanged.
+3. **Report:** [E9 verification](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_E9_20261026_2225.md>). Installed versions recorded; weekly usage ended at 48%.

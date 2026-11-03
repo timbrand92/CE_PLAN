@@ -1,0 +1,21 @@
+Thu 23:04 lane 1 started: cx_audit_civil|C:/Lisp Files/_CODEX_RUNNER|gpt-6-astra|high|98|6 ; cx_build_ignore_undo|C:/Lisp Files/_CODEX_RUNNER|gpt-6.1-sol|high|98|6
+Thu 23:04 lane 2 started: cx_audit_struct|C:/Lisp Files/_CODEX_RUNNER|gpt-6-astra|high|98|6 ; cx_cases_draft|C:/Lisp Files/_CODEX_RUNNER|gpt-6.1-sol|high|98|6
+Thu 23:04 lane 3 started: cx_audit_gate|C:/Lisp Files/_CODEX_RUNNER|gpt-6-astra|high|98|6 ; cx_build_settings_rows|C:/Lisp Files/_CODEX_RUNNER|gpt-6.1-sol|high|98|6
+Thu 23:05 lane 1 (re)started from codex_lane1.sh
+Thu 23:06 lane 2 (re)started from codex_lane2.sh
+Thu 23:06 lane 3 (re)started from codex_lane3.sh
+Thu 23:39 lane 4 started from codex_lane4.sh
+Thu 23:39 lane 5 started from codex_lane5.sh
+Thu 23:40 lane 6 started from codex_lane6.sh
+Thu 23:40 lane 7 started from codex_lane7.sh
+Thu 23:40 lane 8 started from codex_lane8.sh
+Thu 23:46 lane 9 started from codex_lane9.sh
+Thu 23:56 lane 10 started from codex_lane10.sh
+Fri 00:01 lane 11 started (cx_b12_wording)
+Fri 00:46 lane 14 started from codex_lane14.sh
+Fri 00:58 lane 17 started (code sweeps)
+Fri 00:58 lane 18 started (code sweeps)
+Fri 00:59 lane 19 started (code sweeps)
+Fri 00:59 lane 20 started (code sweeps)
+Fri 01:01 lane 15 started from codex_lane15.sh
+Fri 01:16 lane 16 started from codex_lane16.sh

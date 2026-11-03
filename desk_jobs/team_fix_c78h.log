@@ -1,0 +1,9 @@
+B-018 BUG-1099 is built and open as draft PR #1872 (`fb/bug1099-council-tc` into `claude/rel-20261026z`). It is unit-tested only and has not been opened in AutoCAD. BUG-1099 stays open.
+
+- **What changes:** CDDESIGN works the permitted discharge and tank at the council's own detention time. Maroondah reads its lot-size table, Boroondara uses 15 min and Maribyrnong 10 min. The pipe flows stay at 5 min.
+- **Tests:** 69 focused tests passed. The full suite had 20,798 pass and 1 PDF-renderer failure, which passed when re-run alone. The net48 compile had 0 errors.
+- **Switch:** `detention.councilTcForStorage`, default ON.
+- **Files:** `CouncilRuleValues.cs`, `DetentionSizingService.cs`, `AutoDesignService.cs`, `CouncilProfileModels.cs`, `UserSettings.cs`, `CouncilSourceViewModel.cs`, `council-profiles.json`, `REGRESSION_LOG.md`, and tests.
+- **Not built:** the before-development C half. A bare 600 m² Maroondah lot now gives 4.29 L/s, not the council's 3.68.
+
+The report is pushed to `C:\CE_PLAN\areas\release-v3-colleagues-BUG1099_FIX_REPORT.md`, with robot case `N99_dp_tc`.

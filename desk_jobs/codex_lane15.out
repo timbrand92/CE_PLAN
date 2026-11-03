@@ -1,0 +1,18 @@
+== cx_fb02 (usage 53.0% -> 53.0%): 1. **BLOCKED.** BUG-690 remains present. Your brief prohibits editing the required `LinkService` file, so the fix is documented for routing.
+2. **Draft PR:** [#1541](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1541), branch `cx/fb02-c60`, tip `96ca953ab45b`. Documentation only.
+3. **Tests:** 0 added, 0 run; no builds or AutoCAD checks performed.
+4. **Report:** [CODEX_BUILD_FB02_23OCT.md](C:/CE_PLAN/areas/CODEX_BUILD_FB02_23OCT.md) includes the verified cause and exact FX-02 check. Saved and pushed; both leak scans passed.
+== cx_fb05 (usage 53.0% -> 54.0%): 1. **BLOCKED:** BUG-817 remains on the shipping base. Fixing both forced saves requires protected `LinkService*` changes, routed through draft [PR #1544](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1544). No product fix implemented.
+
+2. **Saved and pushed:** `cx/fb05-c60` at `b2f24d0c`. [Report](C:/CE_PLAN/areas/CODEX_BUILD_FB05_23OCT.md) includes the cause and exact AutoCAD check.
+
+3. **Validation:** 0 tests added; 0 completed runs; suite totals unmeasured. Builds remain outstanding. Nothing deployed; AutoCAD never started.
+== cx_fb08 (usage 54.0% -> 55.0%): 1. **DONE — BUG-572:** Inspector now reads the new pipe’s recorded type. Draft [PR #1546](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1546) targets the correct release base.
+
+2. **Verified:** Three builds, 0 errors. Civil: **19,168 total; 19,148 passed, 19 skipped, 1 known failure**. Net48 focused: **39/39 passed**. Fourteen new tests passed on both frameworks.
+
+3. **Report pushed:** [CODEX_BUILD_FB08_23OCT.md](/C:/CE_PLAN/areas/CODEX_BUILD_FB08_23OCT.md), including exact AutoCAD checks. Nothing installed; AutoCAD checks remain pending.
+
+---
+
+1. **Handoff:** `cx/fb08-c60` at `6f0423d7349e46b8751fc8d8d37cf24ae6cb318a`.

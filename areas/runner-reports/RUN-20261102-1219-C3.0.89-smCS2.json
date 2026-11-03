@@ -1,0 +1,657 @@
+{
+  "header": {
+    "run_id": "RUN-20261102-1219-C3.0.89-smCS2",
+    "started": "2026-11-02 12:19:26",
+    "finished": "2026-11-02 12:28:29",
+    "build": {
+      "civil": {
+        "product_version": "3.0.89+61fd6fbc72710872048a69ef5b46d0e5b55087fa",
+        "file_version": "3.0.89.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.89+61fd6fbc72710872048a69ef5b46d0e5b55087fa",
+        "file_version": "1.1.89.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.89+61fd6fbc / struc 1.0.125+204dfad2 / mgr 1.1.89+61fd6fbc",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "8F12FD0C0A60E3F0534C963CC369F1009E59718075C27AFBE4FAAE3BA54F21EF",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.89+61fd6fbc72710872048a69ef5b46d0e5b55087fa; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.89+61fd6fbc72710872048a69ef5b46d0e5b55087fa",
+      "Driver files (SHA-256, first 12): v2 F4D8F40C3675 (expected F4D8F40C3675), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4B0175FFAB00, v3 session F061E3240C47, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 BBF42DBA8958, case_runner_lib.ps1 89AD455619F8, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 1 shared setup(s); pack SHA-256 8F12FD0C0A60E3F0534C963CC369F1009E59718075C27AFBE4FAAE3BA54F21EF; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json D604CE689671 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Mon 02 Nov 2026 12:19 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 0,
+    "FAIL": 1,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261102-1219-C3.0.89-smCS2-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-11-02 12:19:26",
+      "finished": "2026-11-02 12:28:29",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31219321_B1.dwg",
+      "cases": [
+        "PROBE-CDSYNC-BA2"
+      ],
+      "whatsnew_dismissed_at_start": "no, window was not there",
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : D604CE689671 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "PROBE-CDSYNC-BA2",
+      "proves_bugs": "",
+      "title": "PROBE 2: P8 depth, Pit Schedule cells and IL texts before and after CDSYNC alone, on a drawing built like Codex S2-04",
+      "kind": "deterministic",
+      "order": 346,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "BUG-1270 (CE 05), card C42 rerun",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "probe, nothing proved",
+      "variant_of": "",
+      "expected": "The records show what CDSYNC changes, if anything.",
+      "why_not_unit": "Reads the live schedule and drawing.",
+      "not_automated": [
+        "This probe judges nothing; it records."
+      ],
+      "file_sha256": "671CFCD8DBAE3DE615C7A612A0B2E1AC1F03D6D915A6FFFCBB46F4F5AF53AE0E",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "no match for /(?s)Pit P8=(?:(?!Pit P).){0,700}?1\\.00=1\\.00/ in: Pit P1= | P1=P1 | 900 x 900=900 x 900 | DET X (Grated): blank= | P2=P2 | 450=450 | 16.98=16.98 | 450=450 | 16.93=16.93 | 18.81=18.81 | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: bla...",
+      "started": "2026-11-02 12:20:36",
+      "seconds": 453.7,
+      "setup": "SETUP-P8v",
+      "setup_note": "shared setup SETUP-P8v run here for the first time at 12:24:36",
+      "steps": [
+        {
+          "n": 1,
+          "phase": "setup",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "copy CLDV31219321_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "setup",
+          "verb": "ms-count",
+          "text": "ms-count -> $n0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"PIT{NL}150000,-80000\" -Force -ExpectWindow \"New Pit\" -> $pit_t1",
+          "ok": true,
+          "seconds": 15.1,
+          "evidence": "typed 'PIT 150000,-80000': Command: | Command: PIT | Specify pit insertion point: 150000,-80000"
+        },
+        {
+          "n": 4,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.CoverLevel\" \"19.000\"",
+          "ok": true,
+          "seconds": 15.1,
+          "evidence": "ui set 'New Pit' C2.CoverLevel = 19.000: "
+        },
+        {
+          "n": 5,
+          "phase": "setup",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pit\" \"New pit, Continue placement\" -> $pit_t2",
+          "ok": true,
+          "seconds": 70.0,
+          "evidence": "pressed 'New pit, Continue placement' in /New Pit/: window closed = True"
+        },
+        {
+          "n": 6,
+          "phase": "setup",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pit\" -Secs 120",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "the window /^New Pit/ closed after 0 s"
+        },
+        {
+          "n": 7,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e1",
+          "ok": true,
+          "seconds": 8.1,
+          "evidence": "esc-prompt: Command: | Command: PIT | Specify pit insertion point: 150000,-80000 | Specify pit label insertion point: *Cancel*"
+        },
+        {
+          "n": 8,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e2",
+          "ok": true,
+          "seconds": 9.1,
+          "evidence": "esc-prompt: Command: | Command: PIT | Specify pit insertion point: 150000,-80000 | Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel*"
+        },
+        {
+          "n": 9,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e3",
+          "ok": true,
+          "seconds": 3.8,
+          "evidence": "esc-prompt: Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit, or press Esc to stop. | Specify pit insertion point: *Canc..."
+        },
+        {
+          "n": 10,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-80000{NL}170000,-80000{NL}\" -Force -ExpectWindow \"New Pipe\" -> $pipe_t1",
+          "ok": true,
+          "seconds": 15.7,
+          "evidence": "typed 'CD 150000,-80000 170000,-80000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-80000 | Specify second point: 170000,-80000 | Se..."
+        },
+        {
+          "n": 11,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 15.2,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: "
+        },
+        {
+          "n": 12,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.800\"",
+          "ok": true,
+          "seconds": 14.7,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.800: "
+        },
+        {
+          "n": 13,
+          "phase": "setup",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $pipe_t2",
+          "ok": true,
+          "seconds": 65.5,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 14,
+          "phase": "setup",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 15,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pipe_e1",
+          "ok": true,
+          "seconds": 4.2,
+          "evidence": "esc-prompt: [CE] Pipe kept. One or more ends have no proven connection. The route stays drawn; confirm the intended connection later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: P8 -> Open en..."
+        },
+        {
+          "n": 16,
+          "phase": "setup",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 17,
+          "phase": "setup",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_after_setup",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31219321_B1.dwg]"
+        },
+        {
+          "n": 18,
+          "phase": "setup",
+          "verb": "ms-new",
+          "text": "ms-new $n0 -> $new_all",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "6 object(s) after index 1034 (model space now 1040); by type: AcDbBlockReference 2; AcDbMText 3; CeCvlPipeObject 1; first: 11C5AD AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C651 CeCvlPipeObject STORMWATER PIPE ; 11C657 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 100 ; 11C65C AcDbMText 20TEXT IL 18.000 ; 11C661 AcDbMText 20TEXT IL 17.800 ; 11C683 AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $n0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1040 objects"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}130000,-80000{NL}150000,-80000{NL}\" -Force -ExpectWindow \"New Pipe\" -TimeoutSec 120 -> $b_t1",
+          "ok": true,
+          "seconds": 16.3,
+          "evidence": "typed 'CD 130000,-80000 150000,-80000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 130000,-80000 | Specify second point: 150000,-80000 | Se..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.100\"",
+          "ok": true,
+          "seconds": 12.2,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.100: "
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.900\"",
+          "ok": true,
+          "seconds": 12.5,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.900: "
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $b_t2",
+          "ok": true,
+          "seconds": 40.0,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $b_e1",
+          "ok": true,
+          "seconds": 3.3,
+          "evidence": "esc-prompt: [CE] Pipe kept. One or more ends have no proven connection. The route stays drawn; confirm the intended connection later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: Open end -> P..."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $n0 -> $new0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "5 object(s) after index 1040 (model space now 1045); by type: AcDbBlockReference 1; AcDbMText 3; CeCvlPipeObject 1; first: 11C688 CeCvlPipeObject STORMWATER PIPE ; 11C68E AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 100 ; 11C693 AcDbMText 20TEXT IL 18.100 ; 11C698 AcDbMText 20TEXT IL 17.900 ; 11C6BA AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new0 \"text~^IL \" -> $il0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 2 of 5: 11C693 IL 18.100 20TEXT ; 11C698 IL 17.900 20TEXT"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il0 text -All -> $il0_text",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = IL 18.100 | IL 17.900"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"PITSCHEDULE\" -Force -ExpectWindow \"Pit Schedule\" -TimeoutSec 120 -> $ps0",
+          "ok": true,
+          "seconds": 15.5,
+          "evidence": "typed 'PITSCHEDULE': Command: | Command: PITSCHEDULE"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Pit Schedule\" -> $sch0",
+          "ok": true,
+          "seconds": 9.5,
+          "evidence": "ui-dump 'Creative Engineering | Pit Schedule (PITSCHEDULE)': 682 controls, tabs: Source | Rows | Changes | Placement"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "ui-cells",
+          "text": "ui-cells $sch0 -> $rows0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "ui-cells: 308 grid row/cell entries, 4966 characters"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "close-windows",
+          "text": "close-windows",
+          "ok": true,
+          "seconds": 28.2,
+          "evidence": "closed open CE windows: round 1: 'Creative Engineering | Pit Schedule (PITSCHEDULE)' <- Cancel without saving : ok=False no button 'Cancel without saving' that is on the v3 press list was found in a window matching /Creative\\ Engineering\\ \\|\\ Pit\\ Schedule\\ \\(PITSCHEDULE\\)/ (windows:..."
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDSYNC\" -Force -> $sync",
+          "ok": true,
+          "seconds": 13.1,
+          "evidence": "typed 'CDSYNC': Command: | Command: CDSYNC | [CE] CDSYNC will re-link every pit and pipe in this drawing to CE's records, from what is currently drawn. One U undoes it. | CDSYNC complete. Pits relinked: 12, Pipes relinked: 51"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $n0 -> $new1",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "5 object(s) after index 1040 (model space now 1045); by type: AcDbBlockReference 1; AcDbMText 3; CeCvlPipeObject 1; first: 11C688 CeCvlPipeObject STORMWATER PIPE ; 11C68E AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 99 ; 11C693 AcDbMText 20TEXT IL 18.100 ; 11C698 AcDbMText 20TEXT IL 17.90 ; 11C6BA AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new1 \"text~^IL \" -> $il1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 2 of 5: 11C693 IL 18.100 20TEXT ; 11C698 IL 17.90 20TEXT"
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il1 text -All -> $il1_text",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = IL 18.100 | IL 17.90"
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"PITSCHEDULE\" -Force -ExpectWindow \"Pit Schedule\" -TimeoutSec 120 -> $ps1",
+          "ok": true,
+          "seconds": 13.8,
+          "evidence": "typed 'PITSCHEDULE': Command: | Command: PITSCHEDULE"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Pit Schedule\" -> $sch1",
+          "ok": true,
+          "seconds": 8.9,
+          "evidence": "ui-dump 'Creative Engineering | Pit Schedule (PITSCHEDULE)': 682 controls, tabs: Source | Rows | Changes | Placement"
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "ui-cells",
+          "text": "ui-cells $sch1 -> $rows1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "ui-cells: 308 grid row/cell entries, 4964 characters"
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "close-windows",
+          "text": "close-windows",
+          "ok": true,
+          "seconds": 29.1,
+          "evidence": "closed open CE windows: round 1: 'Creative Engineering | Pit Schedule (PITSCHEDULE)' <- Cancel without saving : ok=False no button 'Cancel without saving' that is on the v3 press list was found in a window matching /Creative\\ Engineering\\ \\|\\ Pit\\ Schedule\\ \\(PITSCHEDULE\\)/ (windows:..."
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "log-read",
+          "text": "log-read civil -> $civlog",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "378 new line(s) in the civil CE log since the case began "
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "matches $rows0 \"(?s)Pit P8=(?:(?!Pit P).){0,700}?1\\.00=1\\.00\"",
+          "ok": false,
+          "expected": "matches /(?s)Pit P8=(?:(?!Pit P).){0,700}?1\\.00=1\\.00/",
+          "actual": "Pit P1= | P1=P1 | 900 x 900=900 x 900 | DET X (Grated): blank= | P2=P2 | 450=450 | 16.98=16.98 | 450=450 | 16.93=16.93 | 18.81=18.81 | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: bla...",
+          "evidence": "no match for /(?s)Pit P8=(?:(?!Pit P).){0,700}?1\\.00=1\\.00/ in: Pit P1= | P1=P1 | 900 x 900=900 x 900 | DET X (Grated): blank= | P2=P2 | 450=450 | 16.98=16.98 | 450=450 | 16.93=16.93 | 18.81=18.81 | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: bla..."
+        },
+        {
+          "n": 2,
+          "text": "matches $rows0 \"(?s)Pit P8=(?:(?!Pit P).){0,700}?1\\.10=1\\.10\"",
+          "ok": false,
+          "expected": "matches /(?s)Pit P8=(?:(?!Pit P).){0,700}?1\\.10=1\\.10/",
+          "actual": "Pit P1= | P1=P1 | 900 x 900=900 x 900 | DET X (Grated): blank= | P2=P2 | 450=450 | 16.98=16.98 | 450=450 | 16.93=16.93 | 18.81=18.81 | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: bla...",
+          "evidence": "no match for /(?s)Pit P8=(?:(?!Pit P).){0,700}?1\\.10=1\\.10/ in: Pit P1= | P1=P1 | 900 x 900=900 x 900 | DET X (Grated): blank= | P2=P2 | 450=450 | 16.98=16.98 | 450=450 | 16.93=16.93 | 18.81=18.81 | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: bla..."
+        },
+        {
+          "n": 3,
+          "text": "matches $rows1 \"(?s)Pit P8=(?:(?!Pit P).){0,700}?1\\.00=1\\.00\"",
+          "ok": false,
+          "expected": "matches /(?s)Pit P8=(?:(?!Pit P).){0,700}?1\\.00=1\\.00/",
+          "actual": "Pit P1= | P1=P1 | 900 x 900=900 x 900 | DET X (Grated): blank= | P2=P2 | 450=450 | 16.98=16.98 | 450=450 | 16.93=16.93 | 18.81=18.81 | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: bla...",
+          "evidence": "no match for /(?s)Pit P8=(?:(?!Pit P).){0,700}?1\\.00=1\\.00/ in: Pit P1= | P1=P1 | 900 x 900=900 x 900 | DET X (Grated): blank= | P2=P2 | 450=450 | 16.98=16.98 | 450=450 | 16.93=16.93 | 18.81=18.81 | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: bla..."
+        },
+        {
+          "n": 4,
+          "text": "matches $rows1 \"(?s)Pit P8=(?:(?!Pit P).){0,700}?1\\.10=1\\.10\"",
+          "ok": false,
+          "expected": "matches /(?s)Pit P8=(?:(?!Pit P).){0,700}?1\\.10=1\\.10/",
+          "actual": "Pit P1= | P1=P1 | 900 x 900=900 x 900 | DET X (Grated): blank= | P2=P2 | 450=450 | 16.98=16.98 | 450=450 | 16.93=16.93 | 18.81=18.81 | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: bla...",
+          "evidence": "no match for /(?s)Pit P8=(?:(?!Pit P).){0,700}?1\\.10=1\\.10/ in: Pit P1= | P1=P1 | 900 x 900=900 x 900 | DET X (Grated): blank= | P2=P2 | 450=450 | 16.98=16.98 | 450=450 | 16.93=16.93 | 18.81=18.81 | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: bla..."
+        },
+        {
+          "n": 5,
+          "text": "matches $il0_text \"IL 17\\.900\"",
+          "ok": true,
+          "expected": "matches /IL 17\\.900/",
+          "actual": "IL 18.100 | IL 17.900",
+          "evidence": "matched 'IL 17.900'"
+        },
+        {
+          "n": 6,
+          "text": "matches $il1_text \"IL 17\\.900\"",
+          "ok": false,
+          "expected": "matches /IL 17\\.900/",
+          "actual": "IL 18.100 | IL 17.90",
+          "evidence": "no match for /IL 17\\.900/ in: IL 18.100 | IL 17.90"
+        },
+        {
+          "n": 7,
+          "text": "record $sync \"FULL what CDSYNC printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDSYNC | [CE] CDSYNC will re-link every pit and pipe in this drawing to CE's records, from what is currently drawn. One U undoes it. | CDSYNC complete. Pits relinked: 12, Pipes relinked: 51",
+          "evidence": "RECORDED, not judged: FULL what CDSYNC printed = Command: | Command: CDSYNC | [CE] CDSYNC will re-link every pit and pipe in this drawing to CE's records, from what is currently drawn. One U undoes it. | CDSYNC complete. Pits relinked: 12, Pipes relinked: 51"
+        },
+        {
+          "n": 8,
+          "text": "record $il0_text \"ALL IL texts of the new pipe BEFORE CDSYNC\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "IL 18.100 | IL 17.900",
+          "evidence": "RECORDED, not judged: ALL IL texts of the new pipe BEFORE CDSYNC = IL 18.100 | IL 17.900"
+        },
+        {
+          "n": 9,
+          "text": "record $il1_text \"ALL IL texts of the new pipe AFTER CDSYNC\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "IL 18.100 | IL 17.90",
+          "evidence": "RECORDED, not judged: ALL IL texts of the new pipe AFTER CDSYNC = IL 18.100 | IL 17.90"
+        },
+        {
+          "n": 10,
+          "text": "record $rows0 \"FULL Pit Schedule cells BEFORE CDSYNC\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Pit P1= | P1=P1 | 900 x 900=900 x 900 | DET X (Grated): blank= | P2=P2 | 450=450 | 16.98=16.98 | 450=450 | 16.93=16.93 | 18.81=18.81 | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | AGI=AGI | 100=100 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | AGI=AGI | 100=100 | 18.50=18.50 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2= | P2=P2 | 900 x 900=900 x 900 | DET X (Grated): blank= | P3=P3 | 450=450 | 17.13=17.13 | 450=450 | 17.08=17.08 | 18.91=18.91 | Depth= | Pit P2, pipe from WT11= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT11=WT11 | 150=150 | 18.14=18.14 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT12= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT12=WT12 | 150=150 | 18.19=18.19 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT2= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT2=WT2 | 150=150 | 18.28=18.28 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT1= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT1=WT1 | 150=150 | 18.34=18.34 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3= | P3=P3 | 900 x 900=900 x 900 | DET X (Grated): blank= | P4=P4 | 450=450 | 17.30=17.30 | 450=450 | 17.25=17.25 | 18.88=18.88 | Depth= | Pit P3, pipe from WT10= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT10=WT10 | 150=150 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT9= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT9=WT9 | 150=150 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT4= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT4=WT4 | 150=150 | 18.24=18.24 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT3= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT3=WT3 | 150=150 | 18.24=18.24 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P4= | P4=P4 | 900 x 900=900 x 900 | DET X (Grated): blank= | P5=P5 | 450=450 | 17.45=17.45 | 450=450 | 17.40=17.40 | 18.86=18.86 | Depth= | Pit P5= | P5=P5 | 900 x 900=900 x 900 | DET X (Grated): blank= | P7=P7 | 375=375 | 17.58=17.58 | 450=450 | 17.53=17.53 | 18.85=18.85 | Depth= | Pit P5, pipe from P6= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | P6=P6 | 375=375 | 17.58=17.58 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P6= | P6=P6 | 900 x 900=900 x 900 | DET X (Grated): blank= | WT5=WT5 | 150=150 | 18.00=18.00 | 375=375 | 17.67=17.67 | 19.01=19.01 | Depth= | Pit P6, pipe from WT6= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT6=WT6 | 150=150 | 18.00=18.00 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P7= | P7=P7 | 900 x 900=900 x 900 | DET X (Grated): blank= | WT8=WT8 | 150=150 | 18.15=18.15 | 375=375 | 17.65=17.65 | 18.81=18.81 | Depth= | Pit P7, pipe from WT7= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT7=WT7 | 150=150 | 18.15=18.15 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P8= | P8=P8 | 450 x 450=450 x 450 | DET X (Grated): blank= | Unknown=Unknown | 225=225 | 17.900=17.900 | 225=225 | 18.000=18.000 | 19.000=19.000 | Depth= | Pit P9= | P9=P9 | 450 x 450=450 x 450 | DET X (Grated): blank= | FROM: blank= | DIA (Inlet): blank= | IL (Inlet): blank= | DIA (Outlet): blank= | IL (Outlet): blank= | 19.45=19.45 | Depth= | Pit P10= | P10=P10 | 450 x 450=450 x 450 | DET X (Grated): blank= | FROM: blank= | DIA (Inlet): blank= | IL (Inlet): blank= | DIA (Outlet): blank= |...",
+          "evidence": "RECORDED, not judged: FULL Pit Schedule cells BEFORE CDSYNC = Pit P1= | P1=P1 | 900 x 900=900 x 900 | DET X (Grated): blank= | P2=P2 | 450=450 | 16.98=16.98 | 450=450 | 16.93=16.93 | 18.81=18.81 | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | AGI=AGI | 100=100 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | AGI=AGI | 100=100 | 18.50=18.50 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2= | P2=P2 | 900 x 900=900 x 900 | DET X (Grated): blank= | P3=P3 | 450=450 | 17.13=17.13 | 450=450 | 17.08=17.08 | 18.91=18.91 | Depth= | Pit P2, pipe from WT11= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT11=WT11 | 150=150 | 18.14=18.14 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT12= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT12=WT12 | 150=150 | 18.19=18.19 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT2= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT2=WT2 | 150=150 | 18.28=18.28 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT1= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT1=WT1 | 150=150 | 18.34=18.34 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3= | P3=P3 | 900 x 900=900 x 900 | DET X (Grated): blank= | P4=P4 | 450=450 | 17.30=17.30 | 450=450 | 17.25=17.25 | 18.88=18.88 | Depth= | Pit P3, pipe from WT10= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT10=WT10 | 150=150 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT9= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT9=WT9 | 150=150 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT4= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT4=WT4 | 150=150 | 18.24=18.24 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT3= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT3=WT3 | 150=150 | 18.24=18.24 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P4= | P4=P4 | 900 x 900=900 x 900 | DET X (Grated): blank= | P5=P5 | 450=450 | 17.45=17.45 | 450=450 | 17.40=17.40 | 18.86=18.86 | Depth= | Pit P5= | P5=P5 | 900 x 900=900 x 900 | DET X (Grated): blank= | P7=P7 | 375=375 | 17.58=17.58 | 450=450 | 17.53=17.53 | 18.85=18.85 | Depth= | Pit P5, pipe from P6= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | P6=P6 | 375=375 | 17.58=17.58 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P6= | P6=P6 | 900 x 900=900 x 900 | DET X (Grated): blank= | WT5=WT5 | 150=150 | 18.00=18.00 | 375=375 | 17.67=17.67 | 19.01=19.01 | Depth= | Pit P6, pipe from WT6= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT6=WT6 | 150=150 | 18.00=18.00 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P7= | P7=P7 | 900 x 900=900 x 900 | DET X (Grated): blank= | WT8=WT8 | 150=150 | 18.15=18.15 | 375=375 | 17.65=17.65 | 18.81=18.81 | Depth= | Pit P7, pipe from WT7= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT7=WT7 | 150=150 | 18.15=18.15 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P8= | P8=P8 | 450 x 450=450 x 450 | DET X (Grated): blank= | Unknown=Unknown | 225=225 | 17.900=17.900 | 225=225 | 18.000=18.000 | 19.000=19.000 | Depth= | Pit P9= | P9=P9 | 450 x 450=450 x 450 | DET X (Grated): blank= | FROM: blank= | DIA (Inlet): blank= | IL (Inlet): blank= | DIA (Outlet): blank= | IL (Outlet): blank= | 19.45=19.45 | Depth= | Pit P10= | P10=P10 | 450 x 450=450 x 450 | DET X (Grated): blank= | FROM: blank= | DIA (Inlet): blank= | IL (Inlet): blank= | DIA (Outlet): blank= |..."
+        },
+        {
+          "n": 11,
+          "text": "record $rows1 \"FULL Pit Schedule cells AFTER CDSYNC\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Pit P1= | P1=P1 | 900 x 900=900 x 900 | DET X (Grated): blank= | P2=P2 | 450=450 | 16.98=16.98 | 450=450 | 16.93=16.93 | 18.81=18.81 | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | AGI=AGI | 100=100 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | AGI=AGI | 100=100 | 18.50=18.50 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2= | P2=P2 | 900 x 900=900 x 900 | DET X (Grated): blank= | P3=P3 | 450=450 | 17.13=17.13 | 450=450 | 17.08=17.08 | 18.91=18.91 | Depth= | Pit P2, pipe from WT11= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT11=WT11 | 150=150 | 18.14=18.14 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT12= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT12=WT12 | 150=150 | 18.19=18.19 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT2= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT2=WT2 | 150=150 | 18.28=18.28 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT1= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT1=WT1 | 150=150 | 18.34=18.34 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3= | P3=P3 | 900 x 900=900 x 900 | DET X (Grated): blank= | P4=P4 | 450=450 | 17.30=17.30 | 450=450 | 17.25=17.25 | 18.88=18.88 | Depth= | Pit P3, pipe from WT10= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT10=WT10 | 150=150 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT9= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT9=WT9 | 150=150 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT4= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT4=WT4 | 150=150 | 18.24=18.24 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT3= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT3=WT3 | 150=150 | 18.24=18.24 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P4= | P4=P4 | 900 x 900=900 x 900 | DET X (Grated): blank= | P5=P5 | 450=450 | 17.45=17.45 | 450=450 | 17.40=17.40 | 18.86=18.86 | Depth= | Pit P5= | P5=P5 | 900 x 900=900 x 900 | DET X (Grated): blank= | P7=P7 | 375=375 | 17.58=17.58 | 450=450 | 17.53=17.53 | 18.85=18.85 | Depth= | Pit P5, pipe from P6= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | P6=P6 | 375=375 | 17.58=17.58 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P6= | P6=P6 | 900 x 900=900 x 900 | DET X (Grated): blank= | WT5=WT5 | 150=150 | 18.00=18.00 | 375=375 | 17.67=17.67 | 19.01=19.01 | Depth= | Pit P6, pipe from WT6= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT6=WT6 | 150=150 | 18.00=18.00 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P7= | P7=P7 | 900 x 900=900 x 900 | DET X (Grated): blank= | WT8=WT8 | 150=150 | 18.15=18.15 | 375=375 | 17.65=17.65 | 18.81=18.81 | Depth= | Pit P7, pipe from WT7= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT7=WT7 | 150=150 | 18.15=18.15 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P8= | P8=P8 | 450 x 450=450 x 450 | DET X (Grated): blank= | Unknown=Unknown | 225=225 | 17.90=17.90 | 225=225 | 18.000=18.000 | 19.000=19.000 | Depth= | Pit P9= | P9=P9 | 450 x 450=450 x 450 | DET X (Grated): blank= | FROM: blank= | DIA (Inlet): blank= | IL (Inlet): blank= | DIA (Outlet): blank= | IL (Outlet): blank= | 19.45=19.45 | Depth= | Pit P10= | P10=P10 | 450 x 450=450 x 450 | DET X (Grated): blank= | FROM: blank= | DIA (Inlet): blank= | IL (Inlet): blank= | DIA (Outlet): blank= | I...",
+          "evidence": "RECORDED, not judged: FULL Pit Schedule cells AFTER CDSYNC = Pit P1= | P1=P1 | 900 x 900=900 x 900 | DET X (Grated): blank= | P2=P2 | 450=450 | 16.98=16.98 | 450=450 | 16.93=16.93 | 18.81=18.81 | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | AGI=AGI | 100=100 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | AGI=AGI | 100=100 | 18.50=18.50 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2= | P2=P2 | 900 x 900=900 x 900 | DET X (Grated): blank= | P3=P3 | 450=450 | 17.13=17.13 | 450=450 | 17.08=17.08 | 18.91=18.91 | Depth= | Pit P2, pipe from WT11= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT11=WT11 | 150=150 | 18.14=18.14 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT12= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT12=WT12 | 150=150 | 18.19=18.19 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT2= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT2=WT2 | 150=150 | 18.28=18.28 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT1= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT1=WT1 | 150=150 | 18.34=18.34 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3= | P3=P3 | 900 x 900=900 x 900 | DET X (Grated): blank= | P4=P4 | 450=450 | 17.30=17.30 | 450=450 | 17.25=17.25 | 18.88=18.88 | Depth= | Pit P3, pipe from WT10= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT10=WT10 | 150=150 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT9= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT9=WT9 | 150=150 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT4= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT4=WT4 | 150=150 | 18.24=18.24 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT3= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT3=WT3 | 150=150 | 18.24=18.24 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P4= | P4=P4 | 900 x 900=900 x 900 | DET X (Grated): blank= | P5=P5 | 450=450 | 17.45=17.45 | 450=450 | 17.40=17.40 | 18.86=18.86 | Depth= | Pit P5= | P5=P5 | 900 x 900=900 x 900 | DET X (Grated): blank= | P7=P7 | 375=375 | 17.58=17.58 | 450=450 | 17.53=17.53 | 18.85=18.85 | Depth= | Pit P5, pipe from P6= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | P6=P6 | 375=375 | 17.58=17.58 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P6= | P6=P6 | 900 x 900=900 x 900 | DET X (Grated): blank= | WT5=WT5 | 150=150 | 18.00=18.00 | 375=375 | 17.67=17.67 | 19.01=19.01 | Depth= | Pit P6, pipe from WT6= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT6=WT6 | 150=150 | 18.00=18.00 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P7= | P7=P7 | 900 x 900=900 x 900 | DET X (Grated): blank= | WT8=WT8 | 150=150 | 18.15=18.15 | 375=375 | 17.65=17.65 | 18.81=18.81 | Depth= | Pit P7, pipe from WT7= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT7=WT7 | 150=150 | 18.15=18.15 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P8= | P8=P8 | 450 x 450=450 x 450 | DET X (Grated): blank= | Unknown=Unknown | 225=225 | 17.90=17.90 | 225=225 | 18.000=18.000 | 19.000=19.000 | Depth= | Pit P9= | P9=P9 | 450 x 450=450 x 450 | DET X (Grated): blank= | FROM: blank= | DIA (Inlet): blank= | IL (Inlet): blank= | DIA (Outlet): blank= | IL (Outlet): blank= | 19.45=19.45 | Depth= | Pit P10= | P10=P10 | 450 x 450=450 x 450 | DET X (Grated): blank= | FROM: blank= | DIA (Inlet): blank= | IL (Inlet): blank= | DIA (Outlet): blank= | I..."
+        },
+        {
+          "n": 12,
+          "text": "record $civlog \"FULL Civil log lines of this case\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "2026-11-02 12:20:38.510 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-11-02 12:20:38.511 [INFO] Project data loaded from DWG: 11 pits, 49 pipes, manual rows=0 | 2026-11-02 12:20:38.548 [INFO] [PERF] ProjectDataService.SaveToDrawing: 35.5 ms jsonLen=243925 | 2026-11-02 12:20:38.548 [INFO] Project data saved to DWG successfully | 2026-11-02 12:20:38.548 [INFO] Project data switched to: C:\\Users\\TimothyBrand\\AppData\\Roaming\\TIM_CE_CADTOOLS\\projects\\CD_ProjectData_CLDV31219321_B1_9cdab547.json | 2026-11-02 12:20:38.551 [INFO] [PERF] ProjectDataService.EnsureDrawingDataCurrent.ReconcileOrphanedHandlesByPosition: 1.0 ms | 2026-11-02 12:20:38.553 [INFO] [PERF] ProjectDataService.EnsureDrawingDataCurrent.Snapshot: 1.7 ms | 2026-11-02 12:20:38.554 [INFO] [PERF] ProjectDataService.EnsureDrawingDataCurrent.SyncWithDrawingCore: 1.4 ms | 2026-11-02 12:20:38.618 [INFO] [PERF] ProjectDataService.EnsureDrawingDataCurrent.MergeMissingEntitiesFromDrawing: 63.8 ms | 2026-11-02 12:20:38.621 [INFO] [PitRestore] Restored user-set pit data from pre-sync snapshot (11 pits) | 2026-11-02 12:20:38.622 [INFO] [PipeRestore] Restored user-set pipe data from pre-sync snapshot (49 pipes) | 2026-11-02 12:20:38.623 [INFO] [PERF] ProjectDataService.EnsureDrawingDataCurrent.RestoreSnapshots: 5.0 ms | 2026-11-02 12:20:38.628 [INFO] [PERF] ProjectDataService.EnsureDrawingDataCurrent.RefreshPitMetadataFromDrawing: 4.6 ms | 2026-11-02 12:20:38.635 [INFO] [PERF] ProjectDataService.EnsureDrawingDataCurrent.RefreshPipeMetadataFromDrawing: 7.7 ms | 2026-11-02 12:20:38.637 [INFO] [PERF] ProjectDataService.EnsureDrawingDataCurrent.SlabService.LoadSlabs: 1.0 ms | 2026-11-02 12:20:38.637 [INFO] [PERF] ProjectDataService.EnsureDrawingDataCurrent: 88.2 ms ran fully | 2026-11-02 12:20:39.174 [WARN] SECURITY: Block file resolved from an untrusted (potentially world-writable) location: 'C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Blocks\\PIT BLOCK 3.dwg'. Install blocks under ProgramFiles or the plugin bundle to suppress this warning. | 2026-11-02 12:21:06.926 [WARN] SECURITY: Block file resolved from an untrusted (potentially world-writable) location: 'C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Blocks\\PIT BLOCK 3.dwg'. Install blocks under ProgramFiles or the plugin bundle to suppress this warning. | 2026-11-02 12:21:17.251 [INFO] Diagnostics logging DISABLED | 2026-11-02 12:21:17.327 [WARN] SECURITY: Block file resolved from an untrusted (potentially world-writable) location: 'C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Blocks\\PIT BLOCK 3.dwg'. Install blocks under ProgramFiles or the plugin bundle to suppress this warning. | 2026-11-02 12:21:17.328 [INFO] Reloading block 'PIT BLOCK' from preferred file: C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Blocks\\PIT BLOCK 3.dwg | 2026-11-02 12:21:17.342 [INFO] Loaded block 'PIT BLOCK 3' from: C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Blocks\\PIT BLOCK 3.dwg | 2026-11-02 12:21:17.381 [INFO] [PERF] ProjectDataService.SaveToDrawing: 4.7 ms jsonLen=244686 | 2026-11-02 12:21:17.381 [INFO] Project data saved to DWG successfully | 2026-11-02 12:21:17.381 [INFO] Pit added: P8 | 2026-11-02 12:21:17.383 [INFO] [Spine] new pit 11C5AD: given its identity CE-CIV-PIT-40B10EAA-92A8-4292-B81F-2274C9FC7688 | 2026-11-02 12:21:17.389 [INFO] [PERF] ProjectDataService.SaveToDrawing: 5.3 ms jsonLen=244747 | 2026-11-02 12:21:17.389 [INFO] Project data saved to DWG successfully | 2026-11-02 12:21:17.391 [WARN] SECURITY: Block file resolved from an untrusted (potentially world-writable) location: 'C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Blocks\\PIT LABEL 2.dwg'. Install blocks under ProgramFiles or the plugin b...",
+          "evidence": "RECORDED, not judged: FULL Civil log lines of this case = 2026-11-02 12:20:38.510 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-11-02 12:20:38.511 [INFO] Project data loaded from DWG: 11 pits, 49 pipes, manual rows=0 | 2026-11-02 12:20:38.548 [INFO] [PERF] ProjectDataService.SaveToDrawing: 35.5 ms jsonLen=243925 | 2026-11-02 12:20:38.548 [INFO] Project data saved to DWG successfully | 2026-11-02 12:20:38.548 [INFO] Project data switched to: C:\\Users\\TimothyBrand\\AppData\\Roaming\\TIM_CE_CADTOOLS\\projects\\CD_ProjectData_CLDV31219321_B1_9cdab547.json | 2026-11-02 12:20:38.551 [INFO] [PERF] ProjectDataService.EnsureDrawingDataCurrent.ReconcileOrphanedHandlesByPosition: 1.0 ms | 2026-11-02 12:20:38.553 [INFO] [PERF] ProjectDataService.EnsureDrawingDataCurrent.Snapshot: 1.7 ms | 2026-11-02 12:20:38.554 [INFO] [PERF] ProjectDataService.EnsureDrawingDataCurrent.SyncWithDrawingCore: 1.4 ms | 2026-11-02 12:20:38.618 [INFO] [PERF] ProjectDataService.EnsureDrawingDataCurrent.MergeMissingEntitiesFromDrawing: 63.8 ms | 2026-11-02 12:20:38.621 [INFO] [PitRestore] Restored user-set pit data from pre-sync snapshot (11 pits) | 2026-11-02 12:20:38.622 [INFO] [PipeRestore] Restored user-set pipe data from pre-sync snapshot (49 pipes) | 2026-11-02 12:20:38.623 [INFO] [PERF] ProjectDataService.EnsureDrawingDataCurrent.RestoreSnapshots: 5.0 ms | 2026-11-02 12:20:38.628 [INFO] [PERF] ProjectDataService.EnsureDrawingDataCurrent.RefreshPitMetadataFromDrawing: 4.6 ms | 2026-11-02 12:20:38.635 [INFO] [PERF] ProjectDataService.EnsureDrawingDataCurrent.RefreshPipeMetadataFromDrawing: 7.7 ms | 2026-11-02 12:20:38.637 [INFO] [PERF] ProjectDataService.EnsureDrawingDataCurrent.SlabService.LoadSlabs: 1.0 ms | 2026-11-02 12:20:38.637 [INFO] [PERF] ProjectDataService.EnsureDrawingDataCurrent: 88.2 ms ran fully | 2026-11-02 12:20:39.174 [WARN] SECURITY: Block file resolved from an untrusted (potentially world-writable) location: 'C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Blocks\\PIT BLOCK 3.dwg'. Install blocks under ProgramFiles or the plugin bundle to suppress this warning. | 2026-11-02 12:21:06.926 [WARN] SECURITY: Block file resolved from an untrusted (potentially world-writable) location: 'C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Blocks\\PIT BLOCK 3.dwg'. Install blocks under ProgramFiles or the plugin bundle to suppress this warning. | 2026-11-02 12:21:17.251 [INFO] Diagnostics logging DISABLED | 2026-11-02 12:21:17.327 [WARN] SECURITY: Block file resolved from an untrusted (potentially world-writable) location: 'C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Blocks\\PIT BLOCK 3.dwg'. Install blocks under ProgramFiles or the plugin bundle to suppress this warning. | 2026-11-02 12:21:17.328 [INFO] Reloading block 'PIT BLOCK' from preferred file: C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Blocks\\PIT BLOCK 3.dwg | 2026-11-02 12:21:17.342 [INFO] Loaded block 'PIT BLOCK 3' from: C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Blocks\\PIT BLOCK 3.dwg | 2026-11-02 12:21:17.381 [INFO] [PERF] ProjectDataService.SaveToDrawing: 4.7 ms jsonLen=244686 | 2026-11-02 12:21:17.381 [INFO] Project data saved to DWG successfully | 2026-11-02 12:21:17.381 [INFO] Pit added: P8 | 2026-11-02 12:21:17.383 [INFO] [Spine] new pit 11C5AD: given its identity CE-CIV-PIT-40B10EAA-92A8-4292-B81F-2274C9FC7688 | 2026-11-02 12:21:17.389 [INFO] [PERF] ProjectDataService.SaveToDrawing: 5.3 ms jsonLen=244747 | 2026-11-02 12:21:17.389 [INFO] Project data saved to DWG successfully | 2026-11-02 12:21:17.391 [WARN] SECURITY: Block file resolved from an untrusted (potentially world-writable) location: 'C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Blocks\\PIT LABEL 2.dwg'. Install blocks under ProgramFiles or the plugin b..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 378 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: PIT completed 118848 ms ; Command outcome: CD completed 113003 ms ; Command outcome: CD completed 81890 ms ; Command outcome: PITSCHEDULE completed 40933 ms ; Command outcome: CDSYNC completed 6882 ms ; Command outcome: PITSCHEDULE completed 40085 ms"
+      ],
+      "error": null,
+      "finished": "2026-11-02 12:28:10",
+      "session_id": "RUN-20261102-1219-C3.0.89-smCS2-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}

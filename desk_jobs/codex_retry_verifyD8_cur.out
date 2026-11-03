@@ -1,0 +1,5 @@
+== verifyD8_cur (usage 7.0% -> 8.0%): AUTOCAD STILL RUNNING
+
+1. **D8 complete:** 1 PASS, 2 FAIL, 2 DIFFERENT; all 5 results SURE. About clips its lower rows; Esc returns to Plug-ins. Undo passed.
+2. **Restored:** Settings hashes match; D8 closed without saving and released its lock. Claude subsequently opened another sessionÔÇöleft untouched.
+3. **Report:** [D8 verification](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_D8_20261026_0623.md>). Feedback sending remains untested.

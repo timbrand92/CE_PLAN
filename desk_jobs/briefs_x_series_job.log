@@ -1,0 +1,7 @@
+I wrote X1 to X10 (a launcher plus a `_full.txt` each) in `C:\Lisp Files\_CODEX_RUNNER`. Each is under 25 KB, with no "follow" and no control characters. I queued all ten last-line-first in `CONVEYOR_QUEUE.txt` and pushed each pair. `git status -sb` shows no "ahead".
+
+- **X1 to X5:** re-runs of the W1 to W5, W7 and W8 looks whose cause was the brief or the fixture.
+- **X6:** a repeat of W6-03 and W6-04, which were product results, not brief faults.
+- **X7 to X10:** the new looks.
+- **Cut down:** W3-02 became a sample only.
+- **Not re-run:** W2-03 (BUG-1031) is covered by X8.

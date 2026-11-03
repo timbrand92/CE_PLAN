@@ -1,0 +1,7 @@
+All three parts are filed and pushed to C:\CE_PLAN (last commit 98a42591). The leak scan came back clean.
+
+- **Bugs filed:** BUG-823 to BUG-853, the 31 Manager hunt findings. HUNT-MI-n is BUG-(822+n). The Next BUG ID header now reads 854.
+- **Existing bugs noted:** BUG-750, 751, 752, 753, 755, 749, 580, 221, 430, 396 and 623. Every L3/L4 finding matched one of these, so none got a new ID. The two double-click DIFFERENTs (BUG-430, BUG-396) are bugs, not differing expectations.
+- **Questions queued:** section I, items 1 to 7. Item 1 is the theme-pictures question. Item 2 points to the downpipe double-click question already in section G item 1.
+- **Queues (triage sections 12 and 13):** lane 03 has 27 lines, lane 04 has 4, lane 02 has 6.
+- **Robot gaps:** I appended the heading "Codex L4 blocked looks (19 Oct)", covering 10 looks in 3 groups.

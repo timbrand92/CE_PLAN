@@ -1,0 +1,6 @@
+The C-68 job files are written and pushed to `C:\CE_PLAN`, and `git status -sb` shows no "ahead". Nothing was run, built or installed. I checked the files for control characters, tables and PowerShell parse errors, and re-read the PR number, versions and paths.
+
+- **PR list:** #1779 (BUG-861) is the only PR in the train. #1771, #1756 and #1767 stay off. I wrote the list to `TRAIN_C68_PR_LIST_2026-10-25.md`, not `TRAIN_C66_PR_LIST...` as briefed, because that file already holds the C-66 list.
+- **Installed line:** C-67 is installed (Civil 3.0.77, Manager 1.1.77, read from the DLLs), so the jobs expect that. Manager gets a version re-stamp only.
+- **Candidate:** `c1064`.
+- **Files:** `train_c68_assembler_job.txt`, `train_c68_finalizer_job.txt`, `payload103_c68_job.txt`, `chain_c68.ps1`, `chain_install_c68.ps1`, `scripts\desk_install_c68.ps1`.

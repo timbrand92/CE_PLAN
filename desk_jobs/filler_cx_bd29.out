@@ -1,0 +1,7 @@
+== cx_bd29 (usage 65.0% -> 86.0%): 1. **BUG-1098 — DONE:** [Draft PR #1817](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1817). [Report](C:/CE_PLAN/areas/CODEX_BUILD_BD29_26OCT.md). Correct but latent until BUG-1096; AutoCAD not run.
+
+---
+
+2. **Head:** `9688b6b9`. All three builds: 0 errors. Pushed; worktree removed.
+3. **Red → green:** 6,000 L credit: 1.50 → 1.00 m³. Red: 3 failed/3 passed. Final focused: 154 passed.
+4. **Full suite:** Before: 20,539 total, 20,506 passed, 1 failed, 32 skipped. After: 20,568 total, 20,535 passed, 1 failed, 32 skipped. Same baseline failure; no new failures.

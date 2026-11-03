@@ -1,0 +1,14 @@
+1. **Counts (19 files):** 16 READY TO RUN, 3 FIX FIRST, 0 NOT RUNNABLE, 0 NEEDS A CODEX LOOK.
+2. **FIX FIRST, one fault shared by three files:** W652, W652_BROKEN and W653_BROKEN. The Edit Pipe step sets pipe A to B to 18.500 / 18.200. That is 1 in 32 on a 225 pipe leaving a pit: 2.60 m/s against the 2.0 m/s pit-outlet limit. After Apply, the "Design Warnings" window opens and nothing closes it, so the case stalls instead of failing on a check.
+3. **The fix:** type 18.300 instead of 18.500 in that step (W652 line 111; both twins line 104). That gives 1 in 95.5, shown as 1.50 m/s, which does not open the window. Every expected level stays the same.
+4. **Riskiest 1, W652:** the stall above. Even after the fix it rests on two things never seen in AutoCAD: an empty value clearing the downstream box (line 98), and a speed that sits exactly on the 1.50 m/s line.
+5. **Riskiest 2, W278:** it is the only case where one check tells the fixed build from the old one. That check is P8's Pit Schedule row showing the pipe as an INLET (line 70), and that row has never been seen. If the cell names differ, the case fails on wording, not on the fix.
+6. **Riskiest 3, W656:** the main case would probably also pass on a build without the fix, because exactly one endpoint line was already seen on 3.0.88. Only the twin going red proves anything, and the twin's extra log lines are derived, never seen.
+7. **Offline checks:** validate gave "57 file(s) checked, 0 invalid". check_ids gave "every control id is known" (58 files). All 19 of my files are clean.
+8. **No window is left open by any READY case.** Every press is on a known button: Save, Cancel without saving, Start Pipe, Continue placement, Close, Apply. The Recalculate box is answered Yes, or No in W654; No is on the allow-list but has not been used in a case before.
+9. **Every level was re-worked** for its own pipe length. Pits are 450 x 450, so ends sit 225 mm inside each wall: 10.450 m centres give 10.000 m of pipe (E3), and 10.000 m centres give 9.550 m (E2). Open-end pipes are 20.000 m (E1, W324).
+10. **Bugs with no case (writers' calls, which I agree with):** BUG-292 (needs an old-style pipe); BUG-339, 688 and 689 (batch Apply is on no press list); BUG-687 (the Q box id is unknown); BUG-682 (the Uphill box is not on the message-box list). These go to a Codex look or a driver allow-list change, not to the robot.
+11. **A writer claim corrected:** E3 said W652's three New Pipe pipes sit "right on the 1.5 line". They do: 1.502 m/s, shown as 1.50. CE compares the shown value, so the window does not open. Only the Edit Pipe step is over the limit.
+12. **Next:** apply the one-line fix to the three W652 files, then all 19 can go to CE 02's robot run. Allow about 3 hours for all 19, mostly the four-pit cases.
+
+The full report is `C:\CE_PLAN\areas\WAVE1_REVIEW_RE_REPORT.md`.

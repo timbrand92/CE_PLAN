@@ -1,0 +1,26 @@
+**For Tim**
+
+1. **What went wrong (my own mistakes first):** none that cost anything. One thing to know: I ran the full Civil test suite at about 08:45, during your drafting hours. It took about 5 minutes at low priority.
+2. **Why DP and OF were refused:** CE keeps one copy of the job's pits and pipes in memory. It only checked the drawing's file name. So after you closed a drawing without saving and opened the same file again, CE kept the old drawing's copy. The pipe ID tags CE fills in when you click never got saved into the reopened drawing. CE's final check then saw them change while it was reading the drawing, and refused.
+3. **Why a placement had to come first:** the first DP is what ties CE's copy to the file name. With nothing placed first, the reopened drawing's own copy is read normally. That matches the robot's 8 of 8 refused and 2 of 2 fine.
+4. **The fix is in draft PR #1830:** when a drawing closes, CE now notes in memory that its copy belonged to a drawing that is gone. The next CE command reads the reopened drawing's own copy. Nothing is written to the closing drawing, and REDO is not affected.
+5. **What a drafter will see:** DP and OF place normally after a close and reopen. It is on by default. The setting `reopenedDrawingLoadsItsOwnRecord` turns it off if ever needed.
+6. **How it gets proved:** once a build with #1830 is installed, the robot runs N13 (downpipe) and N14 (overflow), each straight after its first-drawing case. Right looks like "Downpipe placed" and "Overflow placed" both times.
+7. **Nothing for you to do now.** It is built and unit-tested only. Nobody has opened it in AutoCAD, and the bug stays open until the robot proof passes.
+
+---
+
+**Detail**
+
+1. **Cause:** `ProjectDataService.Mutations.cs:163` at 96455f13. `SetDrawingPath` returned early whenever the drawing path matched. The CE log proves it: the reopened drawing has no "Project data switched to" line. The refusal comes from `LinkService.SourceChanges.cs:771` (row observed), `:696` (ID filled in afterwards) and `:39` (refused).
+2. **Second suspect, not changed:** the check itself records a pipe row and then may change it. It would refuse again if that first save were ever skipped for another reason.
+3. **Results:**
+   - The 17 new tests pass. With the setting off they reproduce the exact refusal text.
+   - Civil net10 full suite: 20,677 passed, 0 failed, 32 skipped.
+   - net48 compile: 0 errors.
+4. **Housekeeping:**
+   - Report pushed to `C:\CE_PLAN\areas\release-v3-colleagues-BUG1225_READER_FIX_REPORT.md`.
+   - My worktree and scratch folder are removed. The branch is kept.
+   - There is an untracked `.codex/` folder in the main checkout, dated 3 Oct. It isn't mine and I left it alone.
+
+**Summary:** The cause of BUG-1225 is found with confidence. After the same file was closed and reopened, CE kept the closed drawing's copy of the pits and pipes because the file name matched, so its final check refused DP and OF. Draft PR #1830 makes the next command read the reopened drawing's own copy; it is on by default. 17 new tests pass, the full suite has 0 failures and net48 compiles. Not yet run in AutoCAD; robot cases N13 and N14 will prove it once installed.

@@ -1,0 +1,25 @@
+All 7 robot checks are sound tests. 3 now prove a whole everyday tool and 4 prove part of one. None failed and none had a mistake in it.
+
+**My own mistakes first:** two of my scratch look-ups used a file filter Windows ignores and returned nothing. I noticed both and redid them (about two minutes, no harm).
+
+1. **Whole tools.** These may now be written "FIXED (Claude-accepted, Civil 3.0.85, 29 Oct 2026)":
+   1. **D02 pit catch (N23):** a pipe ending 90 mm outside the pit joins it and is pulled onto the inside wall. One ending 110 mm outside stays a free end.
+   2. **D09 pit label (N25):** the P8 label lands 0.1 mm from where the robot clicked. Its wrong twin, clicked 5 mm away, landed 4.9 mm off. That shows the label really follows the click. The one fix to N25 (the cover-text click moved from 30 mm to 10 mm) weakened nothing.
+   3. **"CDSYNC keeps the schedule" (N26):** after an Edit Pipe cascade with U and REDO, the whole Pit Schedule is identical before and after CDSYNC. The "11 pits, 49 pipes" figure is a fixed count of the test drawing's objects, not proof of anything by itself.
+2. **Part of a tool only:**
+   1. **D20 CDRENUMBER (N24):** Yes renames the right two labels on the same blocks and leaves the others alone. Missing: proof that every label is back after No and after U, and that X1 is untouched. Three lines to add are in the report, then two new runs.
+   2. **D13 hand-placed label (N27):** proven only with its switch on. Your own settings file has it off, so Max and the team don't get this today. The 500 mm pit move in the card's step 3 isn't tested.
+   3. **D24 office layers (N28):** your current layer stays the same after all five ways of ending PIT and CD.
+   4. **D21 Pit Schedule order (N29):** a new pit slots in at its number. The LPD, OG and CP groups aren't in the test drawing, so they're not tested.
+3. **Runs:** every counted pass is on the final case text, two separate AutoCAD starts each, all on Civil 3.0.85. Each wrong twin failed for the right reason.
+4. **Bugs:** none of these checks proves a bug, and no bug gains evidence of being real.
+5. **Count:** up to three more whole items on 3.0.85. I did not recount the 16; the desk does.
+6. **Something to know:** another robot job started using your settings file at 02:36 while I worked. It wasn't mine and I touched nothing.
+7. **Not checked:** nothing was run in AutoCAD and no picture was looked at. The three N24 lines were tested only on the recorded text, not through the robot.
+8. **You need to do:** nothing.
+
+---
+
+I wrote seven review files next to the cases and copied them into CE_PLAN. A copy of the robot's own gate accepts all seven and none applies to a twin. The report is at `C:\CE_PLAN\areas\release-v3-colleagues-OPUS_CASE_REVIEW_B7_29OCT.md`, pushed as commit d13fecea. The leak scan was clean and the copy is level with GitHub, nothing waiting to push.
+
+**Summary:** all 7 batch-3 cases passed twice on Civil 3.0.85, on their final text, with every twin failing correctly. N23 (D02), N25 (D09) and N26 (CDSYNC keeps the schedule) are ready as whole tools. N24 (D20, three lines short of whole), N27 (D13, switch on only), N28 (D24) and N29 (D21) are ready for part. No bug evidence changed. Seven review files are written and pushed.

@@ -1,0 +1,12 @@
+The permanent guards are in as draft PR #1828 against `claude/rel-20261026u`, tests only; nothing was opened in AutoCAD.
+
+- **Guarded (red if broken):** CE_SHARED, Manager, Civil and Structural each use none of the code they must not. Each rule was green on today's code.
+- **Report only:** network and layer-lock reads, and the three rules that raised false alarms in the trial. They say ArchUnitNET can't see async code.
+- **Passes:** 14/14 and 4/4 on net10.0-windows and net48, about 25 seconds per project.
+- **Red proof:** a throwaway Manager type that used a Civil type turned ARCH-02 red.
+- **Not run:** Structural on its newer S-45 branch, `claude/rel-20261026s`; I measured it on S-44 as instructed.
+- **Next train:** include #1828; tests only.
+
+The projects are not in the slnx.
+
+The report is `C:\CE_PLAN\areas\release-v3-colleagues-TOOL_ARCH_01_ADOPT_REPORT.md`, pushed to CE_PLAN.

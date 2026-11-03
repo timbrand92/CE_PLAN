@@ -1,0 +1,31 @@
+**FOR TIM**
+
+**GO for train C-66.** The final version is `777e001321668a6fb1aa1ffb564c5b5cacd20257` on `claude/rel-20261025p`. It has been built and unit-tested only. It is not installed, and nobody has opened it in AutoCAD.
+
+1. **My mistakes:** two slips in my own test setup cost about 10 minutes. The first gave five false failures in the Manager tests. The second stopped the first Civil bundle build near its end. I fixed both and re-ran everything, and the re-runs were clean.
+2. **What I changed:** I added one test file. It checks that the six new bug-fix switches load ON from an old settings file, and that every earlier default is unchanged. I changed no product code.
+3. **The ten fixes:** I read all ten in full and kept them all. No review request was left open.
+   - I found one new minor edge on AutoCAD 2022 to 2024. A copied downpipe that CE leaves as AutoCAD copied it can still be linked to a nearby open pipe end, while its own record still points at the original pit.
+   - I've listed it for the next round. It is not a blocker.
+4. **Settings switches:** all six new switches stay ON, because in each case the old behaviour was the bug. None of them has a Settings page row yet.
+5. **Left out:** #1771 (the computations sheet sentence), #1756 (detached survey XREF) and #1767 (BIND versus detach). There is no recorded answer from you on any of them. #1706 was not taken.
+6. **Manager:** this is a real Manager release.
+   - A damaged office approval file now says CE could not check the approval, instead of "CE is current."
+   - Drawing Repair's note now reads "Inspect only looks. Fix it changes the drawing."
+   - The official Manager release check passed at exactly 75 files.
+7. **Tests:**
+   - The whole solution builds with 0 errors.
+   - Civil: 20,303 tests, 0 failed.
+   - Manager: 1,002 tests, 0 failed.
+   - On the older .NET 4.8 build, the same 51 known failures as last train and nothing new. They are expected failures from the AutoCAD stand-in library used for testing.
+   - The redo-safety check passes 25 of 25, and the Settings window still fits (tallest tab 670 px).
+8. **Nothing touched outside the train:** Shared, the installer and the signed-update check are untouched. Your settings files and the installed plugins are unchanged.
+9. **Your questions:** the report has eight questions waiting in your format (section 7). The two that matter most are whether every council computations sheet should carry the hydraulic grade line sentence, and which head the 300 mm minimum means.
+
+Do not mark any of these fixed yet: BUG-1137, 1188, 1101, 1179, 1097, 1168, 1202, 1151, 1180 and 1215. BUG-1137 and BUG-1151 can only be proven on AutoCAD 2022 to 2024.
+
+Report: `C:\CE_PLAN\areas\release-v3-colleagues-TRAIN_C66_FINALIZER_REPORT_2026-10-25.md`
+
+---
+
+Summary: GO at `777e001321668a6fb1aa1ffb564c5b5cacd20257`. My one change is a test file that pins the six new switches ON. Civil net10 ran 20,303 tests with 0 failed, Manager net10 1,002 with 0 failed, and the net48 run had the same 51 known failures. The Manager release check passed at 75 files. Held back: #1771, #1756, #1767 and #1706. The review-lane log has entries 1635 to 1640 and the sign-off line.

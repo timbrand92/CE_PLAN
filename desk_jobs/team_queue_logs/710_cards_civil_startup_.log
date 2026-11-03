@@ -1,0 +1,4 @@
+`C:\CE_PLAN\areas\CARD_DRAFTS_CIVIL_STARTUP_HELP_02NOV.md` is written with 5 draft cards. All five PRs are only on rel-20261106a and later, none on rel-20261102a, and nothing was run in AutoCAD. I couldn't read the GitHub PR text (`gh` is not installed), so draft #599's clash with #1957 rests on CE 05's note, not a check of my own.
+
+- **WSUD export:** it is in CDCALC, not CDDESIGN. Its tab boxes are read-only, so the export may print "not entered" for everyone, which needs Tim's confirmation.
+- **Xrefs:** no path in the Pit Schedule's Xref reader writes to an Xref.

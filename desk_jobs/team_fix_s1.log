@@ -1,0 +1,11 @@
+No PR was opened, because all three Batch S-1 entries are already fixed in the code on `origin/claude/rel-20261026s` (head 204dfad2, Structural 1.0.125). I built and ran nothing, and I did not edit the carpark, so the entries still read OPEN. Nothing has been seen in AutoCAD.
+
+- **BUG-529 (footing size, stirrup cover, spacing):** each of the three now warns and carries on. The switches are `FootingWidth.WarnInsteadOfRefusingOverLimit`, `Rebar.WarnInsteadOfChangeStirrupCover` and `WarnInsteadOfRefuseSpacing`, all ON by default.
+- **BUG-474 (FEDIT rename to an existing mark):** FEDIT now asks Change / Leave / Another before it changes that mark's saved size. The switch is `FootingWidth.AskBeforeRenameChangesSavedSize`, ON by default.
+- **BUG-300 (ERASE then OOPS):** the next footing command lifts the "set aside" mark and redraws the outline. The outline is not redrawn at the instant of OOPS, and I could not tell without AutoCAD whether a drafter would see that gap.
+
+The report lists five proposed robot cases, each with a switch-off control. It is pushed to `C:\CE_PLAN\areas\BUGFIX_s1_REPORT_31OCT.md`.
+
+The settings-file listings are in the report. All four settings files are unchanged. Two small json files in the CE folders were rewritten between my two listings while I was only reading; another running session wrote them. The full listings stay in `C:\ce-scratch\s1` because they contain job drawing names.
+
+The worktree `C:\ce-fx\s1` and branch `fb/s1-footing-warn-carry-on` exist with no commits. Nothing was deleted.

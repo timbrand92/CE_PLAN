@@ -1,0 +1,6 @@
+Two draft PRs are open for batch 10, built and unit-tested only. Nobody has opened either in AutoCAD, and no bug is marked fixed.
+
+- **PR #1975** (BUG-1253 and BUG-1034): a label's own pipe strip is now keep-clear. Switch: `linking.tidyKeepsLabelsOffOwnPipeStrip`, ON. Files: `OwnPipeStripClearRule.cs` (new), `LabelPlacementRule.cs`, `TextClashTidyUpRule.cs`, `LinkService.TextClashTidyUp.cs`, `UserSettings.cs`.
+- **PR #1976** (BUG-1161), stacked on #1975: moved or flipped labels keep "APPROX.". Switch: `linking.movedLabelKeepsKeptWording`, ON. Files: `MovedLabelKeptWordingRule.cs` (new), `LinkService.SegmentAnalysis.cs`, `UserSettings.cs`.
+
+155 focused Civil net10 tests passed, with 0 failed; the net48 compile has 0 errors. Report: `C:\CE_PLAN\areas\BUGFIX_n10_REPORT_31OCT.md`. The scratch folder `C:\CE_WORK\scratch\n10` is only partly removed, because this session still holds it open.

@@ -1,0 +1,8 @@
+B-034 BUG-1097 is built as draft PR #1859 (branch `fb/bug1097-head-after-losses`, base `claude/rel-20261026z`). It is not tested in AutoCAD.
+
+- **What changes:** the Charged System tab now compares the 300 mm with the typed head minus the pipe losses. With the tab's starting figures the losses are 216.5 mm, so a typed 0.50 m now warns, naming 283.5 mm left.
+- **Unknown losses:** it says Unknown and compares the typed head instead.
+- **Switch:** `detention.chargedMinHeadUsesHeadAfterLosses`, ON by default. Warning only.
+- **Files:** `ChargedSystemCalcViewModel.cs`, `UserSettings.cs`, `Bug1097ChargedMinimumHeadTests.cs`, `REGRESSION_LOG.md`.
+- **Tests:** full Civil net10 suite 0 failed, net48 builds with 0 errors.
+- **Report:** `release-v3-colleagues-BUG1097_FIX_REPORT.md`, pushed.

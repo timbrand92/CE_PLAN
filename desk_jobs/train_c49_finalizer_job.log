@@ -1,0 +1,13 @@
+**FOR TIM**
+
+1. **Verdict: GO.** Final head is `58a832107f7b033a47be1beccf2e4601a7bdf709`, the same as the assembly report.
+2. **Changes made:** none. I made no commit to the plugin. The one new switch ("Tidy labels measures a pit by its body") stays ON, because the old behaviour is the bug itself.
+3. **Tests:**
+   1. **Whole build:** 0 errors.
+   2. **Civil:** 18,858 of 18,878 passed. The only failure is Glen Eira, the known one.
+   3. **Manager:** 824 of 824 passed.
+   4. **Civil older-AutoCAD check:** 229 of 237 passed. The one failure is in the test setup and also fails on the previous train.
+4. **Held:** BUG-141 and BUG-820 must not be marked fixed. Nobody has tried them in AutoCAD yet.
+5. **Not in this train:** Manager doesn't need to ship, and the installer is untouched.
+
+Report and sign-off pushed to `C:\CE_PLAN`. Your settings files are unchanged and the 1.8 GB test copy is removed.

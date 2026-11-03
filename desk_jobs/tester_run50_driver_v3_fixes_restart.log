@@ -1,0 +1,15 @@
+All four items from the Opus review are fixed and passed in real AutoCAD on the final code, with 118 checks and 0 failures. Each item passed once on the final code. It was not run twice in a row, and it has not been re-reviewed by Opus.
+
+1. **Safety:** a decoy AutoCAD that the runner did not start was left alone on every clean-up path. 14 of 14 checks passed.
+2. **Watchdog:** a killed runner and a hung runner were each cleaned up, with settings restored by hash and the lock released. 26 of 26 passed.
+3. **Calibration gate:** every deliberate miss is blocked, and the worst pixel error is 0.7 px, or 1.7 px before the half-pixel correction. 21 of 21 passed.
+4. **DP1 data:** all four double-clicks hit what was aimed at, and all four open AutoCAD's own Enhanced Attribute Editor, none CE's "Edit source". The angled DP text was re-run on a proven hit. 19 of 19 passed.
+5. **Other review items:** the Settings title match, the clean flag, the line-break token in case files, the 60-second busy retry, the screen-locked refusal and the lock re-take between sessions all passed. 38 offline checks passed.
+
+Not proven:
+- The 5120x1440 screen and two DPI scalings don't exist on this PC, so that path is tested only with made-up window sizes.
+- A really locked screen was tested only with a faked one.
+
+The live tests found and fixed three of my own bugs in the pointer code (listed in the report). The report also lists the review findings I left for phase 2.
+
+The report is `C:\CE_PLAN\areas\release-v3-colleagues-DRIVER_V3_PHASE1B_REPORT.md`, pushed as commit f260113d. `README_V3.md` is updated. At 07:19 no AutoCAD was running, the lock was free, and the four settings fingerprints were unchanged.

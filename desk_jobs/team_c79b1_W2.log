@@ -1,0 +1,14 @@
+Report is at `C:\CE_PLAN\areas\C79B1_WRITING_W2_REPORT.md`. The first 12 lines of its answer-first section:
+
+1. **Two of my six PRs have a robot case plus a broken twin: #1892 and #1952.** Four files are written. All four are HELD, not runnable: they use F1's damage setups, which type Lisp, and the robot refuses typed Lisp today.
+2. **Where:** `C:\Lisp Files\_ACAD_DRIVER\cases\drafts_c79b1_01nov\held_dmg_lisp_blocked\` (next to F1's probes), so the main folder still validates clean. The cases are W1892, W1892_BROKEN, W1952 and W1952_BROKEN.
+3. **#1940 and #1943 have no case.** CE shows their warnings only in the Civil Hub redesign Apply result. No case has ever driven CDHUB, and none of its control ids is known. They need a Codex look, or a Civil Hub control probe first.
+4. **#1958 has no case.** The fix only acts when CE has NO pit list in memory, which means a drawing OPENED with the damage already in it. A live damage setup cannot give that, and the runner cannot reopen inside a case. It needs a Codex look, or a damaged drawing file saved as a fixture.
+5. **#1950 has no case (Codex look).** No robot fixture in `C:\ce_rc_drv` is recorded as holding an older twin detention pipe. The drainage corpus is real job drawings, so the robot may not use it. The fix also needs a PC where the pipe-object upgrade is refused, and I found no setting that forces that.
+6. **Offline checks:** the main folder validates with 4 files and 0 invalid (another writer's W1246 and W658). The held folder has 8 of 8 invalid, and every error is the same one: "typed text may not contain '('". The control-id check says every control id is known in both folders. No file contains the word print, a 17.x level or a street name.
+7. **Nothing was run.** No AutoCAD, no build and no test. Nothing was committed or pushed.
+8. **Robot accepts alone (both families):** command-line lines and their counts, Civil log lines, and the damaged record's text read back.
+9. **Codex must see (#1892):** after the MOVE of pit P2, its pipe end follows the pit.
+10. **Headless:** W1892 maybe (the drag is the Codex part). W1952 maybe: typed commands only, but U and REDO must behave as they do in the full AutoCAD.
+11. **Logic evidence for the four no-case PRs:** Bug1144DamagedOutletRolesTests (#1940), Bug1153UnreadableLpdTests (#1943), Bug1266InspectorUnreadableRecordOnceTests (#1958), Bug1152TwinUpgradeRestoreTests (#1950).
+12. **One unblock serves both families:** the record-write route F1 asked for (a v3 record verb, or the runner passing -AllowLisp on). That needs CE 00 or Tim.

@@ -1,0 +1,9 @@
+== verifyE3_cur (usage 23.0% -> 24.0%):  **BLOCKED** by anonymous pit name `*U187`. E3-02 **DIFFERENT**: Tidy left the hand-placed label alone and offered no Move question. Both **SURE**. PASS 0, FAIL 0, DIFFERENT 1, BLOCKED 1, NOT TESTED 0.
+
+2. **Cleanup:** Settings restored; all four hashes match START. Guard empty, lock released. No drawings saved. Usage **24%**. No missing fixtures.
+
+3. **Restoration hashes:**  
+   A = `ACD64E79A33BE9C152149FF2145A3CD2C29CABE11245F211183FD5C7DE783140`  
+   C = `ACD64E79A33BE9C152149FF2145A3CD2C29CABE11245F211183FD5C7DE783140`
+
+4. **[Full report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_E3_20261026_0828.md>):** Exact stopping points and untested steps recorded. Neither check accepted.

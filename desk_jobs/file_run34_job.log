@@ -1,0 +1,8 @@
+Run 34 is recorded and pushed to `C:\CE_PLAN`, and the leak-scan was clean. The report had 12 checks, not 19, so I worked from those.
+
+- **Bugs updated:** 815 (PASS on the downpipe fixture), 814, 813 (diagnostic works, rename still fails), 698, 742, 797, 782, 141 (both halves still seen). Nothing is marked FIXED.
+- **New bug filed:** BUG-854, a wording mismatch on the R-06 "not known" rows. The Next BUG ID header now reads 855.
+- **Fix queue (triage section 15):** lane 03 has 2 lines and lane 04 has 3. Lane 04 starts with the BUG-141 border block.
+- **Question for Tim:** item 8 in section I of QUESTIONS_FOR_MONDAY.md (main pipes now read "not judged").
+- **Robot gaps:** 1 new, and 1 earlier gap closed.
+- **Logs:** TEAMLANE3_LOG.md and TEAMLANE4_LOG.md each have the new line.

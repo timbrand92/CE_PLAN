@@ -1,0 +1,10 @@
+Draft PR #1987 is open for BUG-805, and the report is pushed (`git status -sb` shows no ahead). All three parts were still real on `claude/rel-20261102a`.
+
+- **Files:** `Rules/XcivilScheduleMetresRule.cs` (new), `XcivilVisionScheduleParser.cs`, `XcivilScheduleService.cs`, `XcivilImportService.cs`, `UserSettings.cs`, 26 new tests, and `REGRESSION_LOG.md`.
+- **Switch:** `xcivilImport.scheduleReadsMetresAndDepthColumn`, ON by default. Both start-up reads are pinned in tests, and OFF restores the old reading.
+- **Tests:** 26/26 new and 667/667 related pass on net10. The net48 compile has 0 errors.
+- **Not proven:** nothing was run in AutoCAD.
+- **Real AppData changed:** real AppData files changed during my window. The timestamps match the robot's AutoCAD session, not my test runs; details are in the report.
+- **Scratch folder:** `C:\CE_WORK\scratch\t1` could not be removed fully (still present).
+
+Report: `C:\CE_PLAN\areas\BUGFIX_t1_REPORT_01NOV.md`.

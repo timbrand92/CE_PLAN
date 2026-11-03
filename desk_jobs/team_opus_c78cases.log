@@ -1,0 +1,48 @@
+I wrote 21 new robot cases and they all pass the offline format check. Nobody has run them. The Excel checks can't be robot cases, so they are a Codex look brief instead.
+
+1. **Grade mismatch window (B-057, #1873):** 8 cases, N33a to N33h, each with a twin that must fail, plus the switch-off control N33s. Example: two pits 4.1 m apart, Set my own 1 in 100, type 19.45 upstream, CE fills 19.40, Draw, and no window opens. N33e and N33f are written to fail on the first version of the fix and pass on the C-78 one.
+2. **Cancelling that window (#1858):** the robot *can* press its Cancel button (only "Use" and "Keep" are blocked). So N33_grade_mismatch_x presses Cancel and checks that nothing is drawn and the "cancelled" line prints. Its switch-off control checks the old two-button window comes back.
+3. **Excel export (#1871):** the robot may not press any "Export" button and cannot fill in a Save box. Robot cases N41x_excel_on/off would only ever stop at the first step, so I wrote Codex look K1 in their place. K1 also opens the saved file in Excel.
+4. **Pit copied onto a pit (#1867):** unchanged, so run the existing cases. The "N36/C36" names in the brief were working titles for N70/C70. The case actually called N36 is a different bug.
+5. **Start-up smoke (N91):** checks Civil, Structural and Manager all load at the installed version and CDCHECK runs. It can't read the ribbon tabs or the "Started" log line.
+6. **On screen versus log or file:** every case header and the K1 brief say which is which, and so does the report.
+   - **On screen (needs a Codex look):** the Grade mismatch window, the About window, the ribbon, the Pit Schedule status line, the save boxes and the workbook in Excel.
+   - **Log or file only:** IL levels, object counts, command-line and log lines, and the saved file's sheet names.
+7. **A possible real nuisance, from reading the code only:** if New Pipe opens with the last pipe's levels in it and you choose Set my own, typing a new upstream level carries the old fall across. Example: last levels 19.00 / 18.50, you type 19.45, CE fills 18.95 rather than 19.40. The cases clear the upstream box first to get around it. I didn't add it to the bug carpark because my limits allowed only these files, so the desk should decide.
+
+None of the cases use mouse clicks.
+
+**Validate result:** `24 file(s) checked, 0 invalid` (my 21 plus the 3 existing N90 files).
+
+---
+
+**Files written**
+1. **Cases, in `C:\Lisp Files\_ACAD_DRIVER\cases\drafts_c78_30oct\`:**
+   - N33a_one_end_on_no_box (+ _BROKEN)
+   - N33b_ce_level_no_box (+ _BROKEN)
+   - N33c_typed_steeper_asks (+ _BROKEN)
+   - N33d_typed_flatter_asks (+ _BROKEN)
+   - N33e_grade_changed_asks (+ _BROKEN)
+   - N33f_held_fall_asks (+ _BROKEN)
+   - N33g_retyped_upstream_no_box (+ _BROKEN)
+   - N33h_one_end_on_200_no_box (+ _BROKEN)
+   - N33s_switch_off_box_returns
+   - N33_grade_mismatch_x
+   - N33_grade_mismatch_x_off
+   - N91_startup_smoke (+ _BROKEN)
+2. **Codex look:** `C:\Lisp Files\_CODEX_RUNNER\verifyK1_c88_full.txt` and the launcher `verifyK1_c88.txt`.
+3. **Report:** `C:\CE_PLAN\areas\CASE_WRITING_C78_REPORT_30OCT.md`
+
+**Not written, and why**
+1. **N41x_excel_on / N41x_excel_off:** covered by K1 instead (reason in item 3 above).
+2. **STRUCEXPORTCSV:** needs a Structural drawing and has the same Save-box block.
+3. **N36c78 / C36c78:** the expected result hasn't changed.
+4. **Driving Esc on the switch-off window:** sending a real Esc to that window through the driver has never been tried.
+5. **Asserting the "Started" log line:** CE writes it at load, before the case starts reading the log.
+
+**Not proven**
+1. That the driver can type an empty value into a box. The cases use it to clear the upstream box, and no case has done that before.
+2. That CE measures 4.1 m from pit centre to pit centre.
+3. That the driver can read or press buttons in the Grade mismatch window. No case has done either before.
+
+The cases whose window stays open can't put New Pipe's remembered values back afterwards. Run a no-window N33 case in a later session to reset them.

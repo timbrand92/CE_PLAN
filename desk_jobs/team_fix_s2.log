@@ -1,0 +1,21 @@
+Draft PR **#1898** (B-077) is open against `claude/rel-20261026s`, covering BUG-1146, BUG-1147 and BUG-1159. All three faults were still on the 1.0.125 line. It is built and unit-tested only, not run in AutoCAD, and no bug is marked FIXED. I made one PR for all three, not one each as the brief said; they share files and one B number.
+
+**Files changed:**
+- `Modules/Structural/Models/UserSettings.cs`
+- `Modules/Structural/Models/FoundationModels.cs`
+- `Modules/Structural/Models/BeamLinkData.cs`
+- `Modules/Structural/Services/CeTextService.cs`
+- `Modules/Structural/Services/FoundationRegistryService.cs`
+- `Modules/Structural/Services/FstMemoryService.cs`
+- `Modules/Structural/Services/BeamLinkPersistenceCodec.cs`
+- `Modules/Structural/Services/BeamLinkService.Persistence.cs`
+- new: `FstMemoryCacheKey.cs`, `FoundationUnknownFields.cs`, `S2FootingMemoryTests.cs`
+- `REGRESSION_LOG.md`
+
+**Switches (Settings, footing width group, all ON):** `FootingSizeMemoryKeyedByDrawing`, `FootingDataKeepsNewerVersions`, `FootingSizeListKeepsUnreadableEntries`.
+
+**Tests:** 239 of 239 pass on net10 across 11 test classes, and the net48 compile has 0 errors.
+
+**Real-files compare:** no settings file changed. 22 log, usage and menu files did change; I believe a robot AutoCAD session wrote them, but I can't prove it from timestamps alone.
+
+The report is pushed at `C:\CE_PLAN\areas\BUGFIX_s2_REPORT_31OCT.md`.

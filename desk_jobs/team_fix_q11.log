@@ -1,0 +1,7 @@
+Draft PR **#1983** is open against `claude/rel-20261102a`, and the report is pushed. BUG-1268 is not fixed, and nobody has opened this in AutoCAD. Why Windows returned "not saved" after the Save click is still unproven.
+
+- **What changed:** CDCALC Export to XLSX now logs cancelled, saved (file name and bytes) and failed. With switch `excel.confirmCalcXlsxSaved` ON (default) it also adds the "Nothing was saved" box, the "XLSX saved" status line and Pit Schedule's starting folder.
+- **Tests:** the focused set passes 116 of 116 on net10 and net48.
+- **Flagged first in the report:** the fail-first test could not compile on the base, so I showed it failing with the new check disabled. Real AppData files changed during the run. I think a live AutoCAD session wrote them, but I can't prove it.
+
+Files: `CalculationsV2ViewModel.cs`, `CalcXlsxExportRule.cs`, `ExportFolderHelper.cs`, `DialogService.cs`, `UserSettings.cs`, `REGRESSION_LOG.md`, tests. The report is `C:\CE_PLAN\areas\BUGFIX_q11_REPORT_01NOV.md`.

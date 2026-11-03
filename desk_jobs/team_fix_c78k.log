@@ -1,0 +1,52 @@
+## FOR TIM
+
+1. **How many of your settings differ from what Max would get:** only **6 behaviour choices**, plus **1 extra pipe** (DN100 UPVC) in your parts list.
+   - CE's Civil settings file has 500 settings. Your file holds 222 of them.
+   - For the other 278, your PC already uses the same built-in value Max would get.
+   - The rest of what differs is personal (your folder paths, window sizes, recent diameters, the start-up tour already opened). That must not go to Max.
+
+2. **The three that matter most to Max:**
+   1. **One-piece pipe object.** Your Windows login turns it on. Max's login would leave his pipes as ordinary polylines.
+      - Copying your file doesn't fix it, because your file says "Automatic". On Max's login, Automatic means off.
+      - His starting settings must say **On**. This is your call (question 40). On 26 Sep you held it for colleagues until it was proven on AutoCAD 2022–2024, and Max is now on 2027 only.
+   2. **Snaps during CD.**
+      - While picking the route, your CD leaves the Extension snap off. A fresh PC turns it on.
+      - While placing pipe text, your CD turns all snaps off. A fresh PC turns 11 on, so Max's text could snap to a nearby pit corner.
+   3. **Starting answers:**
+      - Rising main goes to WT on your PC; blank on a fresh PC.
+      - Pit lid is "Class A Grate" on yours; "Class C Grated Lid" on a fresh PC.
+      - Your three tank-to-plan picks for CDWT are remembered on your PC; a fresh PC asks again.
+      - You also have dark windows; a fresh PC uses "auto".
+
+3. **Recommendation:**
+   - Max's starting file carries only those few choices and your pipe-object answer. Everything else stays at CE's built-in value, so later switches (like Tidy labels, which you said yes to today) reach him too.
+   - CE would read this file only the first time it starts on a PC that has no settings yet. It never overwrites an existing profile.
+
+4. **Queued for CE 04 to ask you (not decided):**
+   1. A 5 mm pit drop in your file that nothing reads (the drawing rule uses 20 mm).
+   2. "No snaps when placing text": your choice or a test leftover?
+   3. The extra DN100 UPVC pipe.
+   4. Your pit schedule column order.
+   5. Pipe object On for Max.
+
+5. **Not known:**
+   - Nobody has started CE on a clean login to see what it really uses.
+   - The pipe object has never been tested on an ordinary login; every robot test so far ran on yours.
+   - Your Structural settings were not compared.
+   - Good news: no diagnostic switch is left on in your file.
+
+My mistake first: my first pass misread four settings groups, because a code comment contained the word "class". I caught it and re-ran, and also corrected two counts before pushing. Everything here was read from the code and your files; nothing was run.
+
+---
+
+**Technical summary**
+
+- **Pull request:** none, as the task asked.
+- **Report:** `C:\CE_PLAN\areas\release-v3-colleagues-F023_COMPARISON_REPORT.md`, pushed as f73f14f2; CE_PLAN shows nothing ahead.
+- **Settings file:** `%APPDATA%\TIM_CE_CADTOOLS\CD_Settings.json` (`SettingsService.cs:51-82`). A missing file gives the built-in values at `:306-310`.
+- **Last-used values:** `CD_RecentValues.json` overlays them. That cancels the stale 600×900 pit and "custom 100" grade still sitting in Tim's file.
+- **Manager switch file:** `%APPDATA%\CE_SUITE\manager-switches.json`. Tim has none, so everything is off on both PCs.
+- **Pipe object:** the only login-based switch is `PipeObjectUpgradeGate.Resolve`. On means on, Off means off, anything else is on only for Tim's login. Max's starting file must hold `options.pipeObjectUpgrade: "On"`.
+- **Recommended design:** a small starting file shipped in the bundle, read only when no `CD_Settings.json` exists, behind a new switch `options.officeStartingSettingsOnFreshProfile` (default ON).
+- **Robot case:** F23_fresh_profile (control F23s), run on the test PC's ordinary login. The report says what it types and checks.
+- **Code finding:** the built-in Computations folder is itself a folder on Tim's PC (`C:\Lisp Files\Computations`). It needs its own code fix.

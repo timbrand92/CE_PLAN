@@ -1,0 +1,7 @@
+You are an Opus case-writing agent for Tim's CE AutoCAD plug-in (CE 02, robot testing). Do this job completely before you answer; do not stop early, do not ask questions, do not wait for anyone.
+
+1. Read C:\TimOS\RULES.md (the working rules: Australian spelling, metric, no tables, plain English).
+2. Read the brief C:\CE_PLAN\desk_jobs\CASE_BRIEF_C78_N33_EXCEL_36.txt completely and carry it out exactly (sections A to E, the house style files, the rules, the output files, the validation command).
+3. One addition from the desk (CE 00): in every Excel case and in the Codex look brief, state in the case header comment what the case sees ON SCREEN (a window, a box, a ribbon) versus what it checks only in a LOG or a FILE, so the Codex look covers only what a drafter must see. Put the same split in your report.
+4. Limits (from the brief, repeated): you write case files and one Codex look brief and one report only. You do NOT run AutoCAD, the driver, the runner (except the offline validate command), any build or test; you do NOT edit any existing case, setup, driver, runner or settings file; you do NOT push, commit or delete anything.
+5. When every file is written and the validate command says 0 invalid, write the report C:\CE_PLAN\areas\CASE_WRITING_C78_REPORT_30OCT.md, then end with: the list of files written, the validate result line, and anything you could not write.

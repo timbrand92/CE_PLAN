@@ -1,0 +1,2684 @@
+{
+  "header": {
+    "run_id": "RUN-20261029-2259-C3.0.86-a80F5",
+    "started": "2026-10-29 22:59:28",
+    "finished": "2026-10-29 23:21:43",
+    "build": {
+      "civil": {
+        "product_version": "3.0.86+5888ee757244aac89283aaaf2ba68e51470ecbb3",
+        "file_version": "3.0.86.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.86+5888ee757244aac89283aaaf2ba68e51470ecbb3",
+        "file_version": "1.1.86.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.86+5888ee75 / struc 1.0.125+204dfad2 / mgr 1.1.86+5888ee75",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "AAD605F62FD659E426E68F8C938EC13FFFC33E8A74BCB93BA99720BA7CC45DF0",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.86+5888ee757244aac89283aaaf2ba68e51470ecbb3; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.86+5888ee757244aac89283aaaf2ba68e51470ecbb3",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4CD773B85EC5, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 13955AAA60D1, case_runner_lib.ps1 8F9B8DCBB473, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 5 case file(s) plus 1 shared setup(s); pack SHA-256 AAD605F62FD659E426E68F8C938EC13FFFC33E8A74BCB93BA99720BA7CC45DF0; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json B3B5A004B929 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Thu 29 Oct 2026 22:59 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 4,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 1,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 4
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261029-2259-C3.0.86-a80F5-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-29 22:59:30",
+      "finished": "2026-10-29 23:16:32",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV32259351_B1.dwg",
+      "cases": [
+        "R32",
+        "R32b",
+        "R23",
+        "R20"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : B3B5A004B929 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    },
+    {
+      "session_id": "RUN-20261029-2259-C3.0.86-a80F5-s2",
+      "phase": "main",
+      "session_no": 2,
+      "started": "2026-10-29 23:16:32",
+      "finished": "2026-10-29 23:21:43",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV32316402_B1.dwg",
+      "cases": [
+        "N27"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : B3B5A004B929 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "R32",
+      "proves_bugs": "BUG-223 CDEDIT branch only; BUG-686 Edit Pipe zero-level branch only; BUG-1222 later plain Save regression. The CD branches are not covered. Detail: BUG-223 (CDEDIT on a pipe between two open ends, levels typed the other way round: the flow arrow follows the levels, the pipe is not left uphill without a plain warning); BUG-686 (the same with a level of exactly 0.00: the arrow follows the levels). BUG-261, BUG-292 and the size-only save are in R32b, not here.",
+      "title": "Edit Pipe on a pipe with two free ends: levels typed the other way round turn the flow arrow, also with a level of exactly 0.00, and the IL texts follow the typed levels",
+      "kind": "deterministic",
+      "order": 25,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "Edit Pipe single save (triage group K3; daily card D17 neighbour); BUG-223, BUG-686",
+      "bug": "",
+      "known_fail": "BUG-1222",
+      "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 25 Oct 2026 with BUG-223 (steps: draw a pipe between two open ends, CDEDIT it, type the levels the other way round: not uphill without a plain warning) and BUG-686 (CD or Edit Pipe flow arrow, a level of exactly 0.00: the arrow follows the levels) as written in BUG_CARPARK.md.",
+      "variant_of": "",
+      "expected": "A new 20 m pipe with free ends and levels 18.000 / 17.900 has its flow arrow pointing from the first end to the second (arrow block rotation 0). CDEDIT with the levels typed 17.900 / 18.000 and Save prints \"Pipe updated.\" and turns the arrow round (rotation about 3.1416: the pipe now falls from its second end), or says in plain words that the pipe flows uphill; it never ends uphill with no word. The same for a second pipe drawn 0.50 / 0.00 and edited to 0.00 / 0.50. The IL texts read the typed levels at the ends (IL 17.900 left and IL 18.000 right; IL 0.00 left and IL 0.50 right). No CE window is left open and the drawing file on disk is unchanged. Second, independent check (batch 3 review, 25 Oct): the left IL text (17.900 and 0.00) sits west of the pipe's middle (x below 160000) and the right one (18.000 and 0.50) east of it, and after a SECOND plain Edit Pipe save (nothing typed) the arrow is still turned round (rotation about 3.1416), so the first turn was a real change of direction, not only a redraw. On Civil 3.0.75 that last check is expected to FAIL: BUG-1222 (a later save turns the flipped arrow back).",
+      "why_not_unit": "The levels, the arrow block and the IL texts are rewritten by the live Edit Pipe save into the real drawing.",
+      "not_automated": [
+        "Which way the arrow points is read from the arrow block rotation (0 = along the drawn direction, about 3.1416 = turned round); that the picture looks right is a Codex look. The size-only save is in R32b. BUG-261 and BUG-292 (a CD direction question, a plain save reversing a downstream-first pipe) are not claimed here. Pipes on pits (levels from the pits) are not driven."
+      ],
+      "file_sha256": "B441549C8A69813287C2DE4082B5648FF1D1FB3B59DB36B11C65897CF62BCA02",
+      "result": "BLOCKED",
+      "blocked": "v2 HARD TIMEOUT: AutoCAD did not answer in time (a tool or load problem, not a result)",
+      "first_failure": null,
+      "started": "2026-10-29 23:00:16",
+      "seconds": 336.9,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.4,
+          "evidence": "copy CLDV32259351_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-90000{NL}170000,-90000{NL}\" -Force -ExpectWindow \"New Pipe\" -TimeoutSec 120 -> $t1",
+          "ok": true,
+          "seconds": 11.2,
+          "evidence": "typed 'CD 150000,-90000 170000,-90000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-90000 | Specify second point: 170000,-90000 | Se..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 7.3,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: "
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.900\"",
+          "ok": true,
+          "seconds": 13.7,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.900: "
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $t2",
+          "ok": true,
+          "seconds": 47.1,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $e1",
+          "ok": true,
+          "seconds": 4.3,
+          "evidence": "esc-prompt: [CE] End is free: open end flagged, connect it later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: Open end -> Open end | [CE] Pipe placed. Pick the next pipe's first point, or pre..."
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $newA",
+          "ok": true,
+          "seconds": 0.9,
+          "evidence": "5 object(s) after index 1034 (model space now 1039); by type: AcDbBlockReference 1; AcDbMText 3; CeCvlPipeObject 1; first: 11C55B CeCvlPipeObject STORMWATER PIPE ; 11C561 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 200 ; 11C566 AcDbMText 20TEXT IL 18.000 ; 11C56B AcDbMText 20TEXT IL 17.900 ; 11C58D AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $newA \"object~^CeCvlPipeObject$\" -> $npA",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "selected 1 of 5: 11C55B STORMWATER PIPE"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $npA handle -> $hpA",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "field 'handle' = 11C55B"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $newA \"name~ARROW\" -> $arA",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 5: 11C58D TIM_CVL_ARROW ARROW"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $arA handle -> $haA",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C58D"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$haA} -> $arrowA0",
+          "ok": true,
+          "seconds": 0.4,
+          "evidence": "ent-read 11C58D: {\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90237.5,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-90237.5,160375.0,-902..."
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"{$hpA}\"",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "pick-first 11C55B: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"11C55B\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDEDIT\" -Force -ExpectWindow \"Edit Pipe\" -TimeoutSec 120 -> $edA",
+          "ok": true,
+          "seconds": 10.8,
+          "evidence": "typed 'CDEDIT': Command: | Command: CDEDIT"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"Edit Pipe\" \"C2.FirstInvert\" \"17.900\"",
+          "ok": true,
+          "seconds": 4.3,
+          "evidence": "ui set 'Edit Pipe' C2.FirstInvert = 17.900: "
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"Edit Pipe\" \"C2.SecondInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 4.4,
+          "evidence": "ui set 'Edit Pipe' C2.SecondInvert = 18.000: "
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Edit Pipe\" \"Edit pipe, Save\" -> $svA",
+          "ok": true,
+          "seconds": 16.9,
+          "evidence": "pressed 'Edit pipe, Save' in /Edit Pipe/: window closed = True"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 6",
+          "ok": true,
+          "seconds": 6.2,
+          "evidence": "slept 6 s"
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $hA",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "esc-prompt: Command: | Command: CDEDIT | Pipe updated."
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$haA} -> $arrowA1",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "ent-read 11C58D: {\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90237.5,0.0],\"rotation\":3.141592653589793,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-90237.5..."
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $afterA",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "5 object(s) after index 1034 (model space now 1039); by type: AcDbBlockReference 1; AcDbMText 3; CeCvlPipeObject 1; first: 11C55B CeCvlPipeObject STORMWATER PIPE ; 11C561 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 200 ; 11C566 AcDbMText 20TEXT IL 17.900 ; 11C56B AcDbMText 20TEXT IL 18.000 ; 11C58D AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $afterA \"text~^IL \" -> $ilA",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "selected 2 of 5: 11C566 IL 17.900 20TEXT ; 11C56B IL 18.000 20TEXT"
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $ilA text -All -> $ilA_text",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "field 'text' = IL 17.900 | IL 18.000"
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $ilA x -All -> $ilA_x",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "field 'x' = 150200 | 169800"
+        },
+        {
+          "n": 29,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $afterA \"text~^IL 17\\.900$\" -> $il17",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 5: 11C566 IL 17.900 20TEXT"
+        },
+        {
+          "n": 30,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il17 x -> $x17",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "field 'x' = 150200"
+        },
+        {
+          "n": 31,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $afterA \"text~^IL 18\\.000$\" -> $il18",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "selected 1 of 5: 11C56B IL 18.000 20TEXT"
+        },
+        {
+          "n": 32,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il18 x -> $x18",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "field 'x' = 169800"
+        },
+        {
+          "n": 33,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"{$hpA}\"",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "pick-first 11C55B: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"11C55B\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 34,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDEDIT\" -Force -ExpectWindow \"Edit Pipe\" -TimeoutSec 120 -> $edA2",
+          "ok": true,
+          "seconds": 28.5,
+          "evidence": "typed 'CDEDIT': Command: | Command: CDEDIT"
+        },
+        {
+          "n": 35,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Edit Pipe\" \"Edit pipe, Save\" -> $svA2",
+          "ok": true,
+          "seconds": 18.0,
+          "evidence": "pressed 'Edit pipe, Save' in /Edit Pipe/: window closed = True"
+        },
+        {
+          "n": 36,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 6",
+          "ok": true,
+          "seconds": 6.0,
+          "evidence": "slept 6 s"
+        },
+        {
+          "n": 37,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $hA2",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "esc-prompt: Command: | Command: CDEDIT | Pipe updated."
+        },
+        {
+          "n": 38,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 39,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$haA} -> $arrowA2",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "ent-read 11C58D: {\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90237.5,0.0],\"rotation\":3.141592653589793,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-90237.5..."
+        },
+        {
+          "n": 40,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $afterA2",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "5 object(s) after index 1034 (model space now 1039); by type: AcDbBlockReference 1; AcDbMText 3; CeCvlPipeObject 1; first: 11C55B CeCvlPipeObject STORMWATER PIPE ; 11C561 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 200 ; 11C566 AcDbMText 20TEXT IL 17.900 ; 11C56B AcDbMText 20TEXT IL 18.000 ; 11C58D AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 41,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $afterA2 \"text~^IL 17\\.900$\" -> $il17a2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 5: 11C566 IL 17.900 20TEXT"
+        },
+        {
+          "n": 42,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il17a2 x -> $x17a2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 150200"
+        },
+        {
+          "n": 43,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $afterA2 \"text~^IL 18\\.000$\" -> $il18a2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 5: 11C56B IL 18.000 20TEXT"
+        },
+        {
+          "n": 44,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il18a2 x -> $x18a2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 169800"
+        },
+        {
+          "n": 45,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-92000{NL}170000,-92000{NL}\" -Force -ExpectWindow \"New Pipe\" -TimeoutSec 120 -> $t3",
+          "ok": true,
+          "seconds": 11.4,
+          "evidence": "typed 'CD 150000,-92000 170000,-92000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-92000 | Specify second point: 170000,-92000 | Se..."
+        },
+        {
+          "n": 46,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"0.50\"",
+          "ok": false,
+          "seconds": 34.7,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 0.50: HARD TIMEOUT: AutoCAD did not answer. A dialog may be open or a command may be waiting at a prompt. Press Esc in AutoCAD; nothing further was sent. If the settings guard held backu..."
+        }
+      ],
+      "assertions": [],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 153 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CD completed 80505 ms ; Command outcome: CDEDIT completed 24427 ms ; Command outcome: CDEDIT completed 35044 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-29 23:05:53",
+      "session_id": "RUN-20261029-2259-C3.0.86-a80F5-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [
+          "known failure (BUG-1222): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": true
+      }
+    },
+    {
+      "id": "R32b",
+      "proves_bugs": "BUG-1222 size-only Save branch; the later plain Save branch is R32. BUG-260, BUG-261 and BUG-292 are related, not proved.",
+      "title": "A diameter-only save in Edit Pipe keeps the flow arrow where it was, also on a pipe whose levels were typed the other way round",
+      "kind": "deterministic",
+      "order": 26,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "Edit Pipe size-only Save after reversing two free-end levels; BUG-1222",
+      "bug": "",
+      "known_fail": "BUG-1222",
+      "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 25 Oct 2026 with BUG-292 (a downstream-first pipe could be reversed by a plain Save), BUG-261 (size-only save of a two-free-end pipe whose arrow follows the levels) and BUG-260 (arrow, labels and header disagree) as written in BUG_CARPARK.md. The reversed state is reached through Edit Pipe, not through the CD direction question as in BUG-261, the owner is BUG-1222 (filed 25 Oct 2026); BUG-260, BUG-261 and BUG-292 are related, not proved (BUG-261 starts through the CD direction question, BUG-292 concerns absent stored drawn-end levels, BUG-260 includes pits and the schedule).",
+      "variant_of": "",
+      "expected": "Pipe A (two free ends, 18.000 / 17.900) is edited to 17.900 / 18.000 (arrow turns round, rotation about 3.1416). A second CDEDIT of pipe A that changes only the diameter to 150 and saves prints \"Pipe updated.\", leaves the arrow turned round (rotation about 3.1416), both IL texts as they were (IL 17.900 left, IL 18.000 right) and the label reading \"150 DIA.\". Control: pipe B (never reversed) keeps its arrow at rotation 0 on the same diameter-only save. The drawing file on disk is unchanged. The left IL text of pipe A (17.900) sits west of the middle (x below 160000) and the right one (18.000) east of it. BUG-1222 (filed 25 Oct 2026, OPEN): on Civil 3.0.75 the arrow goes back to rotation 0 after the diameter-only save, so this case is expected to FAIL on the arrow checks.",
+      "why_not_unit": "The arrow block, the IL texts and the label are rewritten by the live Edit Pipe save into the real drawing.",
+      "not_automated": [
+        "That the picture of the arrow looks right is a Codex look. Pipes on pits (levels from the pits) are not driven."
+      ],
+      "file_sha256": "047DC293DAD53A42A7FCE452FADE11CF513E298BDCE4BD4C7088B7B77BF4C186",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-29 23:05:53",
+      "seconds": 355.9,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV32259351_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-90000{NL}170000,-90000{NL}\" -Force -ExpectWindow \"New Pipe\" -TimeoutSec 120 -> $t1",
+          "ok": true,
+          "seconds": 10.2,
+          "evidence": "typed 'CD 150000,-90000 170000,-90000': Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-90000 | Specify second point: 170000,-90000 | Select point ..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 3.7,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: "
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.900\"",
+          "ok": true,
+          "seconds": 4.4,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.900: "
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $t2",
+          "ok": true,
+          "seconds": 33.4,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $e1",
+          "ok": true,
+          "seconds": 4.0,
+          "evidence": "esc-prompt: [CE] End is free: open end flagged, connect it later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: Open end -> Open end | [CE] Pipe placed. Pick the next pipe's first point, or pre..."
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $newA",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "5 object(s) after index 1034 (model space now 1039); by type: AcDbBlockReference 1; AcDbMText 3; CeCvlPipeObject 1; first: 11C55B CeCvlPipeObject STORMWATER PIPE ; 11C561 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 200 ; 11C566 AcDbMText 20TEXT IL 18.000 ; 11C56B AcDbMText 20TEXT IL 17.900 ; 11C58D AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $newA \"object~^CeCvlPipeObject$\" -> $npA",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 5: 11C55B STORMWATER PIPE"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $npA handle -> $hpA",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C55B"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $newA \"name~ARROW\" -> $arA",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 5: 11C58D TIM_CVL_ARROW ARROW"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $arA handle -> $haA",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C58D"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-92000{NL}170000,-92000{NL}\" -Force -ExpectWindow \"New Pipe\" -TimeoutSec 120 -> $t3",
+          "ok": true,
+          "seconds": 18.0,
+          "evidence": "typed 'CD 150000,-92000 170000,-92000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-92000 | Specify second point: 170000,-92000 | Se..."
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 14.1,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: "
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.900\"",
+          "ok": true,
+          "seconds": 11.1,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.900: "
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $t4",
+          "ok": true,
+          "seconds": 41.4,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $e2",
+          "ok": true,
+          "seconds": 3.7,
+          "evidence": "esc-prompt: [CE] End is free: open end flagged, connect it later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: Open end -> Open end | [CE] Pipe placed. Pick the next pipe's first point, or pre..."
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $newB",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "10 object(s) after index 1034 (model space now 1044); by type: AcDbBlockReference 2; AcDbMText 6; CeCvlPipeObject 2; first: 11C55B CeCvlPipeObject STORMWATER PIPE ; 11C561 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 200 ; 11C566 AcDbMText 20TEXT IL 18.000 ; 11C56B AcDbMText 20TEXT IL 17.900 ; 11C58D AcDbBlockReference ARROW TIM_CVL_ARROW ; 11C592 CeCvlPipeObject STORMWATER PIPE ; 11C598 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 200 ; 11C59D AcDbMText 20TEXT IL 18.000 ; 11C5A2 AcDbMText 20TEXT IL 17.900 ; 11C5C4 AcDbBlockReference ARROW ..."
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $newB \"object~^CeCvlPipeObject$\" \"handle~^(?!{$hpA}$)\" -> $npB",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 10: 11C592 STORMWATER PIPE"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $npB handle -> $hpB",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C592"
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $newB \"name~ARROW\" \"handle~^(?!{$haA}$)\" -> $arB",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 10: 11C5C4 TIM_CVL_ARROW ARROW"
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $arB handle -> $haB",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C5C4"
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"{$hpA}\"",
+          "ok": true,
+          "seconds": 2.6,
+          "evidence": "pick-first 11C55B: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"11C55B\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDEDIT\" -Force -ExpectWindow \"Edit Pipe\" -TimeoutSec 120 -> $edA",
+          "ok": true,
+          "seconds": 21.1,
+          "evidence": "typed 'CDEDIT': Command: | Command: CDEDIT"
+        },
+        {
+          "n": 29,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"Edit Pipe\" \"C2.FirstInvert\" \"17.900\"",
+          "ok": true,
+          "seconds": 12.4,
+          "evidence": "ui set 'Edit Pipe' C2.FirstInvert = 17.900: "
+        },
+        {
+          "n": 30,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"Edit Pipe\" \"C2.SecondInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 24.6,
+          "evidence": "ui set 'Edit Pipe' C2.SecondInvert = 18.000: "
+        },
+        {
+          "n": 31,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Edit Pipe\" \"Edit pipe, Save\" -> $svA",
+          "ok": true,
+          "seconds": 16.8,
+          "evidence": "pressed 'Edit pipe, Save' in /Edit Pipe/: window closed = True"
+        },
+        {
+          "n": 32,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 6",
+          "ok": true,
+          "seconds": 6.0,
+          "evidence": "slept 6 s"
+        },
+        {
+          "n": 33,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $hA",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "esc-prompt: Command: | Command: CDEDIT | Pipe updated."
+        },
+        {
+          "n": 34,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 35,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$haA} -> $arrowA1",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "ent-read 11C58D: {\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90237.5,0.0],\"rotation\":3.141592653589793,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-90237.5..."
+        },
+        {
+          "n": 36,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"{$hpA}\"",
+          "ok": true,
+          "seconds": 2.3,
+          "evidence": "pick-first 11C55B: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"11C55B\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 37,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDEDIT\" -Force -ExpectWindow \"Edit Pipe\" -TimeoutSec 120 -> $edC",
+          "ok": true,
+          "seconds": 11.9,
+          "evidence": "typed 'CDEDIT': Command: | Command: CDEDIT"
+        },
+        {
+          "n": 38,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Edit Pipe\" -> $edC_dump",
+          "ok": true,
+          "seconds": 9.6,
+          "evidence": "ui-dump 'Creative Engineering | Edit Pipe': 103 controls, tabs: "
+        },
+        {
+          "n": 39,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"Edit Pipe\" \"C2.Diameter\" \"150\"",
+          "ok": true,
+          "seconds": 9.7,
+          "evidence": "ui set 'Edit Pipe' C2.Diameter = 150: "
+        },
+        {
+          "n": 40,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Edit Pipe\" \"Edit pipe, Save\" -> $svC",
+          "ok": true,
+          "seconds": 21.4,
+          "evidence": "pressed 'Edit pipe, Save' in /Edit Pipe/: window closed = True"
+        },
+        {
+          "n": 41,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 6",
+          "ok": true,
+          "seconds": 6.1,
+          "evidence": "slept 6 s"
+        },
+        {
+          "n": 42,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $hC",
+          "ok": true,
+          "seconds": 2.2,
+          "evidence": "esc-prompt: Command: | Command: CDEDIT | Pipe updated."
+        },
+        {
+          "n": 43,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 44,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$haA} -> $arrowA2",
+          "ok": true,
+          "seconds": 0.4,
+          "evidence": "ent-read 11C58D: {\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90200.0,0.0],\"rotation\":3.141592653589793,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-90200.0..."
+        },
+        {
+          "n": 45,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"{$hpB}\"",
+          "ok": true,
+          "seconds": 2.5,
+          "evidence": "pick-first 11C592: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"11C592\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 46,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDEDIT\" -Force -ExpectWindow \"Edit Pipe\" -TimeoutSec 120 -> $edD",
+          "ok": true,
+          "seconds": 10.6,
+          "evidence": "typed 'CDEDIT': Command: | Command: CDEDIT"
+        },
+        {
+          "n": 47,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"Edit Pipe\" \"C2.Diameter\" \"150\"",
+          "ok": true,
+          "seconds": 3.9,
+          "evidence": "ui set 'Edit Pipe' C2.Diameter = 150: "
+        },
+        {
+          "n": 48,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Edit Pipe\" \"Edit pipe, Save\" -> $svD",
+          "ok": true,
+          "seconds": 17.1,
+          "evidence": "pressed 'Edit pipe, Save' in /Edit Pipe/: window closed = True"
+        },
+        {
+          "n": 49,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 6",
+          "ok": true,
+          "seconds": 6.0,
+          "evidence": "slept 6 s"
+        },
+        {
+          "n": 50,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $hD",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "esc-prompt: Command: | Command: CDEDIT | Pipe updated."
+        },
+        {
+          "n": 51,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 52,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$haB} -> $arrowB2",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "ent-read 11C5C4: {\"handle\":\"11C5C4\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-92200.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-92200.0,160375.0,-922..."
+        },
+        {
+          "n": 53,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $after",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "10 object(s) after index 1034 (model space now 1044); by type: AcDbBlockReference 2; AcDbMText 6; CeCvlPipeObject 2; first: 11C55B CeCvlPipeObject STORMWATER PIPE ; 11C561 AcDbMText 25TEXT 150 DIA. UPVC PIPE AT 1 IN 200 ; 11C566 AcDbMText 20TEXT IL 17.900 ; 11C56B AcDbMText 20TEXT IL 18.000 ; 11C58D AcDbBlockReference ARROW TIM_CVL_ARROW ; 11C592 CeCvlPipeObject STORMWATER PIPE ; 11C598 AcDbMText 25TEXT 150 DIA. UPVC PIPE AT 1 IN 200 ; 11C59D AcDbMText 20TEXT IL 18.000 ; 11C5A2 AcDbMText 20TEXT IL 17.900 ; 11C5C4 AcDbBlockReference ARROW ..."
+        },
+        {
+          "n": 54,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after \"text~^IL 1[78]\\.\" -> $ilx",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 4 of 10: 11C566 IL 17.900 20TEXT ; 11C56B IL 18.000 20TEXT ; 11C59D IL 18.000 20TEXT ; 11C5A2 IL 17.900 20TEXT"
+        },
+        {
+          "n": 55,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $ilx text -All -> $il_text",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = IL 17.900 | IL 18.000 | IL 18.000 | IL 17.900"
+        },
+        {
+          "n": 56,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after \"text~^IL 17\\.900$\" \"y~^-(89|90)[0-9]{3}\" -> $a17",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 10: 11C566 IL 17.900 20TEXT"
+        },
+        {
+          "n": 57,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $a17 x -> $xa17",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 150200"
+        },
+        {
+          "n": 58,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after \"text~^IL 18\\.000$\" \"y~^-(89|90)[0-9]{3}\" -> $a18",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 10: 11C56B IL 18.000 20TEXT"
+        },
+        {
+          "n": 59,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $a18 x -> $xa18",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 169800"
+        },
+        {
+          "n": 60,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after \"text~DIA\\. \" -> $lab",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 2 of 10: 11C561 150 DIA. UPVC PIPE AT 1 IN 200 25TEXT ; 11C598 150 DIA. UPVC PIPE AT 1 IN 200 25TEXT"
+        },
+        {
+          "n": 61,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $lab text -All -> $lab_text",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = 150 DIA. UPVC PIPE AT 1 IN 200 | 150 DIA. UPVC PIPE AT 1 IN 200"
+        },
+        {
+          "n": 62,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV32259351_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "matches $arrowA1 \"rotation.:3\\.14\"",
+          "ok": true,
+          "expected": "matches /rotation.:3\\.14/",
+          "actual": "{\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90237.5,0.0],\"rotation\":3.141592653589793,\"xscale\":1.0,\"...",
+          "evidence": "matched 'rotation\":3.14'"
+        },
+        {
+          "n": 2,
+          "text": "contains $hC \"Pipe updated.\"",
+          "ok": true,
+          "expected": "contains 'Pipe updated.'",
+          "actual": "Command: | Command: CDEDIT | Pipe updated.",
+          "evidence": "found 'Pipe updated.' in: Command: | Command: CDEDIT | Pipe updated."
+        },
+        {
+          "n": 3,
+          "text": "not-contains $hC \"uphill\"",
+          "ok": true,
+          "expected": "does not contain 'uphill'",
+          "actual": "Command: | Command: CDEDIT | Pipe updated.",
+          "evidence": "'uphill' is absent from: Command: | Command: CDEDIT | Pipe updated."
+        },
+        {
+          "n": 4,
+          "text": "not-contains $hC \"Warning\"",
+          "ok": true,
+          "expected": "does not contain 'Warning'",
+          "actual": "Command: | Command: CDEDIT | Pipe updated.",
+          "evidence": "'Warning' is absent from: Command: | Command: CDEDIT | Pipe updated."
+        },
+        {
+          "n": 5,
+          "text": "matches $arrowB2 \"rotation.:0\\.0,\"",
+          "ok": true,
+          "expected": "matches /rotation.:0\\.0,/",
+          "actual": "{\"handle\":\"11C5C4\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-92200.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[]...",
+          "evidence": "matched 'rotation\":0.0,'"
+        },
+        {
+          "n": 6,
+          "text": "contains $hD \"Pipe updated.\"",
+          "ok": true,
+          "expected": "contains 'Pipe updated.'",
+          "actual": "Command: | Command: CDEDIT | Pipe updated.",
+          "evidence": "found 'Pipe updated.' in: Command: | Command: CDEDIT | Pipe updated."
+        },
+        {
+          "n": 7,
+          "text": "contains $lab_text \"150 DIA.\"",
+          "ok": true,
+          "expected": "contains '150 DIA.'",
+          "actual": "150 DIA. UPVC PIPE AT 1 IN 200 | 150 DIA. UPVC PIPE AT 1 IN 200",
+          "evidence": "found '150 DIA.' in: 150 DIA. UPVC PIPE AT 1 IN 200 | 150 DIA. UPVC PIPE AT 1 IN 200"
+        },
+        {
+          "n": 8,
+          "text": "count $lab = 2",
+          "ok": true,
+          "expected": "count = 2",
+          "actual": "2",
+          "evidence": "count of $lab = 2 (expected = 2)"
+        },
+        {
+          "n": 9,
+          "text": "matches $lab_text \"^150 DIA\\. UPVC PIPE AT 1 IN 200 \\| 150 DIA\\. UPVC PIPE AT 1 IN 200$\"",
+          "ok": true,
+          "expected": "matches /^150 DIA\\. UPVC PIPE AT 1 IN 200 \\| 150 DIA\\. UPVC PIPE AT 1 IN 200$/",
+          "actual": "150 DIA. UPVC PIPE AT 1 IN 200 | 150 DIA. UPVC PIPE AT 1 IN 200",
+          "evidence": "matched '150 DIA. UPVC PIPE AT 1 IN 200 | 150 DIA. UPVC PIPE AT 1 IN 200'"
+        },
+        {
+          "n": 10,
+          "text": "matches $arrowA2 \"rotation.:3\\.14\"",
+          "ok": true,
+          "expected": "matches /rotation.:3\\.14/",
+          "actual": "{\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90200.0,0.0],\"rotation\":3.141592653589793,\"xscale\":1.0,\"...",
+          "evidence": "matched 'rotation\":3.14'"
+        },
+        {
+          "n": 11,
+          "text": "count $a17 = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $a17 = 1 (expected = 1)"
+        },
+        {
+          "n": 12,
+          "text": "count $a18 = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $a18 = 1 (expected = 1)"
+        },
+        {
+          "n": 13,
+          "text": "number $xa17 < 160000",
+          "ok": true,
+          "expected": "< 160000",
+          "actual": "150200",
+          "evidence": "$xa17 = 150200 (expected < 160000)"
+        },
+        {
+          "n": 14,
+          "text": "number $xa18 > 160000",
+          "ok": true,
+          "expected": "> 160000",
+          "actual": "169800",
+          "evidence": "$xa18 = 169800 (expected > 160000)"
+        },
+        {
+          "n": 15,
+          "text": "not-contains $win_end \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV32259351_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV32259351_B1.dwg]"
+        },
+        {
+          "n": 16,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 17,
+          "text": "record $edC_dump \"FULL Edit Pipe on the second open (boxes and the Flow header)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"title\":\"Creative Engineering | Edit Pipe\",\"handle\":11212654,\"class\":\"Window\",\"source\":\"win32\",\"bounds\":[2016,50,1728,972],\"control_count\":103,\"truncated\":false,\"tabs\":[],\"controls\":[{\"type\":\"TitleBar\",\"name\":\"Creative Engineering | Edit Pipe\",\"id\":\"TitleBar\",\"class\":\"\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2024,58,1712,23]},{\"type\":\"MenuBar\",\"name\":\"System Menu Bar\",\"id\":\"SystemMenuBar\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2024,58,22,22]},{\"type\":\"MenuItem\",\"name\":\"System\",\"id\":\"Item 1\",\"class\":\"\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2024,58,22,22]},{\"type\":\"Button\",\"name\":\"Close\",\"id\":\"Close\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3703,51,34,30]},{\"type\":\"Image\",\"name\":\"\",\"id\":\"\",\"class\":\"Image\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2055,101,28,28]},{\"type\":\"Text\",\"name\":\"Edit Pipe\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2095,104,68,22]},{\"type\":\"Text\",\"name\":\"Flow: Open end → Open end\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2175,105,195,20]},{\"type\":\"Text\",\"name\":\"Stormwater pipe · 225 mm · UPVC\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2382,108,163,14]},{\"type\":\"Custom\",\"name\":\"\",\"id\":\"\",\"class\":\"StatusChip\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[3393,91,312,48]},{\"type\":\"Text\",\"name\":\"The levels fall from point 2 to point 1; CE records that as the flow direction.\",\"id\":\"LabelText\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3422,98,272,29]},{\"type\":\"Button\",\"name\":\"Inspect drawing and retain pending edits\",\"id\":\"C2.InspectDrawingCommand\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2040,974,119,36]},{\"type\":\"Text\",\"name\":\"Inspect Drawing\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2057,984,85,16]},{\"type\":\"Button\",\"name\":\"Edit pipe, More\",\"id\":\"PipeEditWorkshopDialog.More\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2167,974,80,36]},{\"type\":\"Text\",\"name\":\"More…\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2189,984,37,16]},{\"type\":\"Button\",\"name\":\"Edit pipe, Review changes\",\"id\":\"PipeEditWorkshopDialog.Review.changes\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2255,974,116,36]},{\"type\":\"Text\",\"name\":\"Review changes\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2271,984,84,16]},{\"type\":\"ComboBox\",\"name\":\"Edit pipe, Plan label to edit\",\"id\":\"PipeEditWorkshopDialog.SelectedKey\",\"class\":\"ComboBox\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2383,974,170,36]},{\"type\":\"Button\",\"name\":\"Cancel without saving\",\"id\":\"C2.CancelCommand\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[3494,974,86,36]},{\"type\":\"Text\",\"name\":\"Cancel\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3519,984,36,16]},{\"type\":\"Button\",\"name\":\"Edit pipe, Save\",\"id\":\"C2.OkCommand\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[3590,974,130,36]},{\"type\":\"Text\",\"name\":\"Save\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3643,984,24,16]},{\"type\":\"Text\",\"name\":\"ENGINEERING\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2040,197,828,20]},{\"type\":\"Button\",\"name\":\"Stormwater\",\"id\":\"C2.IsStormwaterPipe\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2040,217,78,28],\"toggle\":\"On\"},{\"type\":\"Text\",\"name\":\"Stormwater\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2051,224,56,15]},{\"type\":\"Button\",\"name\":\"Suspended\",\"id\":\"C2.IsSuspendedPipe\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2124,217,76,28],\"toggle\":\"Off\"},{\"type\":\"Text\",\"name\":\"Suspended\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"en...",
+          "evidence": "RECORDED, not judged: FULL Edit Pipe on the second open (boxes and the Flow header) = {\"title\":\"Creative Engineering | Edit Pipe\",\"handle\":11212654,\"class\":\"Window\",\"source\":\"win32\",\"bounds\":[2016,50,1728,972],\"control_count\":103,\"truncated\":false,\"tabs\":[],\"controls\":[{\"type\":\"TitleBar\",\"name\":\"Creative Engineering | Edit Pipe\",\"id\":\"TitleBar\",\"class\":\"\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2024,58,1712,23]},{\"type\":\"MenuBar\",\"name\":\"System Menu Bar\",\"id\":\"SystemMenuBar\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2024,58,22,22]},{\"type\":\"MenuItem\",\"name\":\"System\",\"id\":\"Item 1\",\"class\":\"\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2024,58,22,22]},{\"type\":\"Button\",\"name\":\"Close\",\"id\":\"Close\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3703,51,34,30]},{\"type\":\"Image\",\"name\":\"\",\"id\":\"\",\"class\":\"Image\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2055,101,28,28]},{\"type\":\"Text\",\"name\":\"Edit Pipe\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2095,104,68,22]},{\"type\":\"Text\",\"name\":\"Flow: Open end → Open end\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2175,105,195,20]},{\"type\":\"Text\",\"name\":\"Stormwater pipe · 225 mm · UPVC\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2382,108,163,14]},{\"type\":\"Custom\",\"name\":\"\",\"id\":\"\",\"class\":\"StatusChip\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[3393,91,312,48]},{\"type\":\"Text\",\"name\":\"The levels fall from point 2 to point 1; CE records that as the flow direction.\",\"id\":\"LabelText\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3422,98,272,29]},{\"type\":\"Button\",\"name\":\"Inspect drawing and retain pending edits\",\"id\":\"C2.InspectDrawingCommand\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2040,974,119,36]},{\"type\":\"Text\",\"name\":\"Inspect Drawing\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2057,984,85,16]},{\"type\":\"Button\",\"name\":\"Edit pipe, More\",\"id\":\"PipeEditWorkshopDialog.More\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2167,974,80,36]},{\"type\":\"Text\",\"name\":\"More…\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2189,984,37,16]},{\"type\":\"Button\",\"name\":\"Edit pipe, Review changes\",\"id\":\"PipeEditWorkshopDialog.Review.changes\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2255,974,116,36]},{\"type\":\"Text\",\"name\":\"Review changes\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2271,984,84,16]},{\"type\":\"ComboBox\",\"name\":\"Edit pipe, Plan label to edit\",\"id\":\"PipeEditWorkshopDialog.SelectedKey\",\"class\":\"ComboBox\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2383,974,170,36]},{\"type\":\"Button\",\"name\":\"Cancel without saving\",\"id\":\"C2.CancelCommand\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[3494,974,86,36]},{\"type\":\"Text\",\"name\":\"Cancel\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3519,984,36,16]},{\"type\":\"Button\",\"name\":\"Edit pipe, Save\",\"id\":\"C2.OkCommand\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[3590,974,130,36]},{\"type\":\"Text\",\"name\":\"Save\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3643,984,24,16]},{\"type\":\"Text\",\"name\":\"ENGINEERING\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2040,197,828,20]},{\"type\":\"Button\",\"name\":\"Stormwater\",\"id\":\"C2.IsStormwaterPipe\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2040,217,78,28],\"toggle\":\"On\"},{\"type\":\"Text\",\"name\":\"Stormwater\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2051,224,56,15]},{\"type\":\"Button\",\"name\":\"Suspended\",\"id\":\"C2.IsSuspendedPipe\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2124,217,76,28],\"toggle\":\"Off\"},{\"type\":\"Text\",\"name\":\"Suspended\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"en..."
+        },
+        {
+          "n": 18,
+          "text": "record $arrowA1 \"FULL arrow A after the reversing save\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90237.5,0.0],\"rotation\":3.141592653589793,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-90237.5,160375.0,-90237.5],\"block_parts\":[{\"index\":0,\"object\":\"AcDbLeader\",\"layer\":\"25DIMS\",\"color\":256}]}",
+          "evidence": "RECORDED, not judged: FULL arrow A after the reversing save = {\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90237.5,0.0],\"rotation\":3.141592653589793,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-90237.5,160375.0,-90237.5],\"block_parts\":[{\"index\":0,\"object\":\"AcDbLeader\",\"layer\":\"25DIMS\",\"color\":256}]}"
+        },
+        {
+          "n": 19,
+          "text": "record $hC \"FULL what CE said after the diameter-only save of pipe A\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDEDIT | Pipe updated.",
+          "evidence": "RECORDED, not judged: FULL what CE said after the diameter-only save of pipe A = Command: | Command: CDEDIT | Pipe updated."
+        },
+        {
+          "n": 20,
+          "text": "record $arrowA2 \"FULL arrow A after the diameter-only save\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90200.0,0.0],\"rotation\":3.141592653589793,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-90200.0,160375.0,-90200.0],\"block_parts\":[{\"index\":0,\"object\":\"AcDbLeader\",\"layer\":\"25DIMS\",\"color\":256}]}",
+          "evidence": "RECORDED, not judged: FULL arrow A after the diameter-only save = {\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90200.0,0.0],\"rotation\":3.141592653589793,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-90200.0,160375.0,-90200.0],\"block_parts\":[{\"index\":0,\"object\":\"AcDbLeader\",\"layer\":\"25DIMS\",\"color\":256}]}"
+        },
+        {
+          "n": 21,
+          "text": "record $hD \"FULL what CE said after the diameter-only save of pipe B (control)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDEDIT | Pipe updated.",
+          "evidence": "RECORDED, not judged: FULL what CE said after the diameter-only save of pipe B (control) = Command: | Command: CDEDIT | Pipe updated."
+        },
+        {
+          "n": 22,
+          "text": "record $arrowB2 \"FULL arrow B after the diameter-only save (control)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C5C4\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-92200.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-92200.0,160375.0,-92200.0],\"block_parts\":[{\"index\":0,\"object\":\"AcDbLeader\",\"layer\":\"25DIMS\",\"color\":256}]}",
+          "evidence": "RECORDED, not judged: FULL arrow B after the diameter-only save (control) = {\"handle\":\"11C5C4\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-92200.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-92200.0,160375.0,-92200.0],\"block_parts\":[{\"index\":0,\"object\":\"AcDbLeader\",\"layer\":\"25DIMS\",\"color\":256}]}"
+        },
+        {
+          "n": 23,
+          "text": "record $il_text \"IL texts at the end\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "IL 17.900 | IL 18.000 | IL 18.000 | IL 17.900",
+          "evidence": "RECORDED, not judged: IL texts at the end = IL 17.900 | IL 18.000 | IL 18.000 | IL 17.900"
+        },
+        {
+          "n": 24,
+          "text": "record $lab_text \"labels at the end\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "150 DIA. UPVC PIPE AT 1 IN 200 | 150 DIA. UPVC PIPE AT 1 IN 200",
+          "evidence": "RECORDED, not judged: labels at the end = 150 DIA. UPVC PIPE AT 1 IN 200 | 150 DIA. UPVC PIPE AT 1 IN 200"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV32259351_B1_13e4e8177.log)",
+        "Civil CE log: 230 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CD completed 52973 ms ; Command outcome: CD completed 85980 ms ; Command outcome: CDEDIT completed 63346 ms ; Command outcome: CDEDIT completed 39484 ms ; Command outcome: CDEDIT completed 20461 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-29 23:11:49",
+      "session_id": "RUN-20261029-2259-C3.0.86-a80F5-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": true
+      }
+    },
+    {
+      "id": "R23",
+      "proves_bugs": "BUG-384",
+      "title": "With the pipe layer locked, CDEDIT refuses one pipe and two pipes, names the layer, opens no editor and changes no level text",
+      "kind": "deterministic",
+      "order": 30,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "Native protection rule: locked pipe layer (triage group L2); BUG-384 batch wording; BUG-797 level cascade on a locked pipe layer",
+      "bug": "BUG-384",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 24 Oct 2026 with BUG-384 (expected: a plain line saying the pipe layer is locked and nothing was changed, CE will not unlock it), BUG-797 and BUG-254 as written in BUG_CARPARK.md, and the native protection rule in AGENTS.md. BUG-797 and BUG-254 are not claimed.",
+      "variant_of": "",
+      "expected": "Lock the layer STORMWATER PIPE (AutoCAD's own -LAYER Lock). CDEDIT with pipe P3 (10A98D) picked first prints the refusal sentence naming the layer and says CE will not unlock it and nothing was changed; no Edit Pipe window opens. The same with two pipes picked: a plain locked-layer sentence, no 'Edit 2 Pipes' window. Every 'IL ' text of the drawing reads as before.",
+      "why_not_unit": "It needs AutoCAD's real layer lock and the real CDEDIT selection route.",
+      "not_automated": [
+        "BUG-797 (level cascade on a locked pipe layer) is NOT claimed: CDEDIT refuses before any cascade can start, and CDPROPAGATE is not driven.",
+        "That the layer is STILL locked afterwards is shown only by the second refusal (CE would not have refused if it had unlocked the layer); the layer's lock flag itself is not read.",
+        "Pits on a locked layer, locked text layers and Xrefs are not covered (triage groups L1 and others)."
+      ],
+      "file_sha256": "47044D1E70E6536E8BC049CEC49362BD62D2A1C5A4EF0C4C6A614EC780AAD1A3",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-29 23:11:49",
+      "seconds": 101.5,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 0 -> $m0",
+          "ok": true,
+          "seconds": 17.6,
+          "evidence": "500 object(s) after index 0 (model space now 1034); by type: AcDbBlockReference 157; AcDbCircle 32; AcDbHatch 7; AcDbLine 58; AcDbMline 1; AcDbMText 30; AcDbPolyline 38; AcDbRotatedDimension 1; AcDbText 134; CeCvlPipeObject 42; first: 1003FA AcDbBlockReference XREF XW2614-Arch Survey ; 10040D AcDbBlockReference XREF XW2614-Arch Ground ; 10041A AcDbBlockReference XREF XW2614-Arch Site ; 10127D AcDbHatch HATCH 51 ; 10127E AcDbPolyline HATCHOUTLINE ; 10127F AcDbBlockReference BLOCKS A$C32C15792 ; 10128C AcDbMText 25TEXT THIS DRAWING IS TO BE READ IN CONJUNCTION WITH ARCHITECTURAL DOCUMENTATION. ; 10128E AcDbHatch HATCH 51 ; 10128F AcDbPolyline HATCHO..."
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m0 \"object~^CeCvlPipeObject$\" \"handle~^(?!10A98D$)\" -> $others",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "selected 41 of 500: 1091A0 STORMWATER PIPE ; 1091E0 STORMWATER PIPE ; 109359 EX DRAIN HATCH ; 109390 EX DRAIN HATCH ; 1093C7 STORMWATER PIPE ; 109430 STORMWATER PIPE ; 1094BE STORMWATER PIPE ; 109500 EX DRAIN HATCH"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $others handle -> $hp2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 1091A0"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 500 -> $m500",
+          "ok": true,
+          "seconds": 23.8,
+          "evidence": "500 object(s) after index 500 (model space now 1034); by type: AcDbBlockReference 226; AcDbHatch 20; AcDbLeader 1; AcDbLine 24; AcDbMLeader 6; AcDbMline 1; AcDbMText 118; AcDbPolyline 22; AcDbText 75; CeCvlPipeObject 7; first: 10EC12 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC15 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC18 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC1B AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC1E AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC21 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC24 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC27 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC2A AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC2D..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 1000 -> $m1000",
+          "ok": true,
+          "seconds": 2.6,
+          "evidence": "34 object(s) after index 1000 (model space now 1034); by type: AcDbBlockReference 14; AcDbLeader 4; AcDbLine 1; AcDbMLeader 2; AcDbMText 8; AcDbRotatedDimension 1; AcDbText 4; first: 116BB6 AcDbText 20TEXT IL 18.24 ; 116BD7 AcDbBlockReference ARROW TIM_CVL_ARROW ; 116BDC AcDbMText 25TEXT 150 DIA. UPVC SEWER CLASS PIPE AT 1 IN 97 ; 116BE0 AcDbText 20TEXT IL 18.60 ; 116BE4 AcDbText 20TEXT IL 18.24 ; 116C05 AcDbBlockReference ARROW TIM_CVL_ARROW ; 116FC6 AcDbBlockReference BLOCKS A$Cfdd7d71d ; 11978C AcDbMLeader 25DIMS ; 11978E AcDbLine SLAB SC ; 11978F AcDbMLeader 25DIMS ; 1197BB AcDbBlockReference..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m500 \"text~^IL \" -> $il_a0",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "selected 42 of 500: 10FEC2 IL 17.67 20TEXT ; 10FEC6 IL 17.58 20TEXT ; 10FFA1 IL 17.53 20TEXT ; 10FFA5 IL 17.45 20TEXT ; 1101B8 IL 17.25 20TEXT ; 1101BC IL 17.13 20TEXT ; 110361 IL 18.20 20TEXT ; 110393 IL 18.00 20TEXT"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m1000 \"text~^IL \" -> $il_b0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 3 of 34: 116BB6 IL 18.24 20TEXT ; 116BE0 IL 18.60 20TEXT ; 116BE4 IL 18.24 20TEXT"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il_a0 text -All -> $ilt_a0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.25 | IL 17.13 | IL 18.20 | IL 18.00 | IL 17.08 | IL 16.98 | IL 18.50 | IL 18.10 | IL 16.93 | IL 16.87 | IL 17.40 | IL 17.30 | IL 16.82 | IL 16.61 | IL..."
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il_b0 text -All -> $ilt_b0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = IL 18.24 | IL 18.60 | IL 18.24"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "set",
+          "text": "set $all0 \"{$ilt_a0} || {$ilt_b0}\"",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "set $all0"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.-LAYER{NL}_LOCK{NL}STORMWATER PIPE{NL}{NL}\" -Force -> $lock",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "typed '_.-LAYER _LOCK STORMWATER PIPE': Command: _.-LAYER | Current layer: \"BLOCKS\" | Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _LOCK | Enter name lis..."
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"10A98D\"",
+          "ok": true,
+          "seconds": 2.8,
+          "evidence": "pick-first 10A98D: Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"10A98D\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2PICKFIRST \"..."
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDEDIT\" -Force -> $ed1",
+          "ok": true,
+          "seconds": 2.6,
+          "evidence": "typed 'CDEDIT': Command: | Command: CDEDIT | [CE] Pipe not opened for editing: layer STORMWATER PIPE is locked, and CE will not unlock it. Nothing was changed. Unlock layer STORMWATER PIPE, or leave that pipe out, then edit again."
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win1",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV32259351_B1.dwg]"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"10A98D,{$hp2}\"",
+          "ok": true,
+          "seconds": 2.8,
+          "evidence": "pick-first 10A98D,1091A0: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"10A98D\" \"1091A0\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (str..."
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDEDIT\" -Force -> $ed2",
+          "ok": true,
+          "seconds": 2.7,
+          "evidence": "typed 'CDEDIT': Command: | Command: CDEDIT | [CE] 2 pipes selected - opening the batch editor. | [CE] The batch editor was not opened and nothing was changed: layer STORMWATER PIPE is locked (pipe P4 -> P3; pipe AGI -> C1). CE will not ..."
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win2",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV32259351_B1.dwg]"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 500 -> $m500_1",
+          "ok": true,
+          "seconds": 10.4,
+          "evidence": "500 object(s) after index 500 (model space now 1034); by type: AcDbBlockReference 226; AcDbHatch 20; AcDbLeader 1; AcDbLine 24; AcDbMLeader 6; AcDbMline 1; AcDbMText 118; AcDbPolyline 22; AcDbText 75; CeCvlPipeObject 7; first: 10EC12 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC15 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC18 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC1B AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC1E AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC21 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC24 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC27 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC2A AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC2D..."
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 1000 -> $m1000_1",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "34 object(s) after index 1000 (model space now 1034); by type: AcDbBlockReference 14; AcDbLeader 4; AcDbLine 1; AcDbMLeader 2; AcDbMText 8; AcDbRotatedDimension 1; AcDbText 4; first: 116BB6 AcDbText 20TEXT IL 18.24 ; 116BD7 AcDbBlockReference ARROW TIM_CVL_ARROW ; 116BDC AcDbMText 25TEXT 150 DIA. UPVC SEWER CLASS PIPE AT 1 IN 97 ; 116BE0 AcDbText 20TEXT IL 18.60 ; 116BE4 AcDbText 20TEXT IL 18.24 ; 116C05 AcDbBlockReference ARROW TIM_CVL_ARROW ; 116FC6 AcDbBlockReference BLOCKS A$Cfdd7d71d ; 11978C AcDbMLeader 25DIMS ; 11978E AcDbLine SLAB SC ; 11978F AcDbMLeader 25DIMS ; 1197BB AcDbBlockReference..."
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m500_1 \"text~^IL \" -> $il_a1",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "selected 42 of 500: 10FEC2 IL 17.67 20TEXT ; 10FEC6 IL 17.58 20TEXT ; 10FFA1 IL 17.53 20TEXT ; 10FFA5 IL 17.45 20TEXT ; 1101B8 IL 17.25 20TEXT ; 1101BC IL 17.13 20TEXT ; 110361 IL 18.20 20TEXT ; 110393 IL 18.00 20TEXT"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m1000_1 \"text~^IL \" -> $il_b1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 3 of 34: 116BB6 IL 18.24 20TEXT ; 116BE0 IL 18.60 20TEXT ; 116BE4 IL 18.24 20TEXT"
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il_a1 text -All -> $ilt_a1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.25 | IL 17.13 | IL 18.20 | IL 18.00 | IL 17.08 | IL 16.98 | IL 18.50 | IL 18.10 | IL 16.93 | IL 16.87 | IL 17.40 | IL 17.30 | IL 16.82 | IL 16.61 | IL..."
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il_b1 text -All -> $ilt_b1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = IL 18.24 | IL 18.60 | IL 18.24"
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "set",
+          "text": "set $all1 \"{$ilt_a1} || {$ilt_b1}\"",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "set $all1"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "contains $ed1 \"[CE] Pipe not opened for editing: layer STORMWATER PIPE is locked, and CE will not unlock it. Nothing was changed.\"",
+          "ok": true,
+          "expected": "contains '[CE] Pipe not opened for editing: layer STORMWATER PIPE is locked, and CE will not unlock it. Nothing was changed.'",
+          "actual": "Command: | Command: CDEDIT | [CE] Pipe not opened for editing: layer STORMWATER PIPE is locked, and CE will not unlock it. Nothing was changed. Unlock layer STORMWATER PIPE, or leave that pipe out, th...",
+          "evidence": "found '[CE] Pipe not opened for editing: layer STORMWATER PIPE is locked, and CE will not unlock it. Nothing was changed.' in: Command: | Command: CDEDIT | [CE] Pipe not opened for editing: layer STORMWATER PIPE is locked, and CE will not unlock it. Nothing was changed. Unlock layer STO..."
+        },
+        {
+          "n": 2,
+          "text": "not-contains $win1 \"Edit Pipe\"",
+          "ok": true,
+          "expected": "does not contain 'Edit Pipe'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV32259351_B1.dwg]",
+          "evidence": "'Edit Pipe' is absent from: Autodesk AutoCAD 2027 - [CLDV32259351_B1.dwg]"
+        },
+        {
+          "n": 3,
+          "text": "contains $ed2 \"[CE] The batch editor was not opened and nothing was changed: layer STORMWATER PIPE is locked (pipe P4 -> P3; pipe AGI -> C1). CE will not unlock it: unlock it, or choose other pipes, t...",
+          "ok": true,
+          "expected": "contains '[CE] The batch editor was not opened and nothing was changed: layer STORMWATER PIPE is locked (pipe P4 -> P3; pipe AGI -> C1). CE will not unlock it: unlock it, or choose other pipes, then edit again.'",
+          "actual": "Command: | Command: CDEDIT | [CE] 2 pipes selected - opening the batch editor. | [CE] The batch editor was not opened and nothing was changed: layer STORMWATER PIPE is locked (pipe P4 -> P3; pipe AGI ...",
+          "evidence": "found '[CE] The batch editor was not opened and nothing was changed: layer STORMWATER PIPE is locked (pipe P4 -> P3; pipe AGI -> C1). CE will not unlock it: unlock it, or choose other pipes, then edit again.' in: Command: | Command: CDEDIT | [CE] 2 pipes selected - opening the batch editor. | [CE] The batch editor was not opened and nothing was changed: layer STORMWATER ..."
+        },
+        {
+          "n": 4,
+          "text": "not-contains $ed2 \"label records do not match\"",
+          "ok": true,
+          "expected": "does not contain 'label records do not match'",
+          "actual": "Command: | Command: CDEDIT | [CE] 2 pipes selected - opening the batch editor. | [CE] The batch editor was not opened and nothing was changed: layer STORMWATER PIPE is locked (pipe P4 -> P3; pipe AGI ...",
+          "evidence": "'label records do not match' is absent from: Command: | Command: CDEDIT | [CE] 2 pipes selected - opening the batch editor. | [CE] The batch editor was not opened and nothing was changed: layer STORMWATER ..."
+        },
+        {
+          "n": 5,
+          "text": "not-contains $win2 \"Edit\"",
+          "ok": true,
+          "expected": "does not contain 'Edit'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV32259351_B1.dwg]",
+          "evidence": "'Edit' is absent from: Autodesk AutoCAD 2027 - [CLDV32259351_B1.dwg]"
+        },
+        {
+          "n": 6,
+          "text": "not-contains $win2 \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV32259351_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV32259351_B1.dwg]"
+        },
+        {
+          "n": 7,
+          "text": "equals $all1 $all0",
+          "ok": true,
+          "expected": "IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.25 | IL 17.13 | IL 18.20 | IL 18.00 | IL 17.08 | IL 16.98 | IL 18.50 | IL 18.10 | IL 16.93 | IL 16.87 | IL 17.40 | IL 17.30 | IL 16.82 | IL 16.61 | IL 17.65 | IL 17.58 | IL 17.98 | IL 18.60 | IL 18.00 | IL 18.60 | IL 18.00 | IL 18.40 | IL 18.15 | IL 18.40 | IL 18.15 | IL 18.40 | IL 18.10 | IL 18.40 | IL 18.10 | IL 18.40 | IL 18.19 | IL 18.40 | IL 18.14 | IL 18.60 | IL 18.34 | IL 18.60 | IL 18.28 | IL 18.60 || IL 18.24 | IL 18.60 | IL 18.24",
+          "actual": "IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.25 | IL 17.13 | IL 18.20 | IL 18.00 | IL 17.08 | IL 16.98 | IL 18.50 | IL 18.10 | IL 16.93 | IL 16.87 | IL 17.40 | IL 17.30 | IL 16.82 | IL 16.61 | IL 17.65 | IL 17.58 | IL 17.98 | IL 18.60 | IL 18.00 | IL 18.60 | IL 18.00 | IL 18.40 | IL 18.15 | IL 18.40 | IL 18.15 | IL 18.40 | IL 18.10 | IL 18.40 | IL 18.10 | IL 18.40 | IL 18.19 | IL 18.40 | IL 18.14 | IL 18.60 | IL 18.34 | IL 18.60 | IL 18.28 | IL 18.60 || IL 18.24 | IL 18.60 | IL 18.24",
+          "evidence": "value 'IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.25 | IL 17.13 | IL 18.20 | IL 18.00 | IL 17.08 | IL 16.98 | IL 18.50 |...' (expected 'IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.25 | IL 17.13 | IL 18.20 | IL 18.00 | IL 17.08 | IL 16.98 | IL 18.50 |...')"
+        },
+        {
+          "n": 8,
+          "text": "record $ed1 \"FULL CDEDIT with one pipe on a locked layer\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDEDIT | [CE] Pipe not opened for editing: layer STORMWATER PIPE is locked, and CE will not unlock it. Nothing was changed. Unlock layer STORMWATER PIPE, or leave that pipe out, then edit again.",
+          "evidence": "RECORDED, not judged: FULL CDEDIT with one pipe on a locked layer = Command: | Command: CDEDIT | [CE] Pipe not opened for editing: layer STORMWATER PIPE is locked, and CE will not unlock it. Nothing was changed. Unlock layer STORMWATER PIPE, or leave that pipe out, then edit again."
+        },
+        {
+          "n": 9,
+          "text": "record $ed2 \"FULL CDEDIT with two pipes on a locked layer\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDEDIT | [CE] 2 pipes selected - opening the batch editor. | [CE] The batch editor was not opened and nothing was changed: layer STORMWATER PIPE is locked (pipe P4 -> P3; pipe AGI -> C1). CE will not unlock it: unlock it, or choose other pipes, then edit again.",
+          "evidence": "RECORDED, not judged: FULL CDEDIT with two pipes on a locked layer = Command: | Command: CDEDIT | [CE] 2 pipes selected - opening the batch editor. | [CE] The batch editor was not opened and nothing was changed: layer STORMWATER PIPE is locked (pipe P4 -> P3; pipe AGI -> C1). CE will not unlock it: unlock it, or choose other pipes, then edit again."
+        },
+        {
+          "n": 10,
+          "text": "record $win2 \"windows after CDEDIT with two pipes\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV32259351_B1.dwg]",
+          "evidence": "RECORDED, not judged: windows after CDEDIT with two pipes = Autodesk AutoCAD 2027 - [CLDV32259351_B1.dwg]"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV32259351_B1_1cb67cbb8.log)",
+        "Civil CE log: 40 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDEDIT completed 102 ms ; Command outcome: CDEDIT completed 120 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-29 23:13:30",
+      "session_id": "RUN-20261029-2259-C3.0.86-a80F5-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": true
+      }
+    },
+    {
+      "id": "R20",
+      "proves_bugs": "",
+      "title": "After CDEDIT the pipes you had selected are still selected",
+      "kind": "deterministic",
+      "order": 35,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "UX-STD-06 (daily case D17)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 24 Oct 2026 with daily card D17 (DAILY_TOOLS_TEST_CASES_2026-10-23.md): one pipe selected stays selected after Edit Pipe Save; two pipes stay selected after the Edit 2 Pipes editor is closed. The second pipe is the first other pipe in the drawing, not a pipe named by the card.",
+      "variant_of": "",
+      "expected": "Pick pipe P3 (10A98D) first, run CDEDIT, answer Y, press Save in Edit Pipe with nothing changed: the selection is still exactly 10A98D. Then pick P3 and the new pipe together, run CDEDIT, close the editor that opens by its Cancel: the selection is still exactly those two. No CE window is left open at the end.",
+      "why_not_unit": "Selection restore runs against AutoCAD's live implied selection after a real modal window.",
+      "not_automated": [
+        "The batch editor for two pipes is titled \"Edit 2 Pipes\" on 3.0.72 (read on 24 Oct 2026). If no editor closes by Cancel the step is BLOCKED.",
+        "Whether the first Save changed the drawing is not checked (the drawing's change counter is not read)."
+      ],
+      "file_sha256": "4CEA23828CEF576507C0B33CC7349C0AC4B277A4465A4EF04F98CDB1DF376CDE",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-29 23:13:30",
+      "seconds": 139.7,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 0 -> $m0",
+          "ok": true,
+          "seconds": 14.7,
+          "evidence": "500 object(s) after index 0 (model space now 1034); by type: AcDbBlockReference 157; AcDbCircle 32; AcDbHatch 7; AcDbLine 58; AcDbMline 1; AcDbMText 30; AcDbPolyline 38; AcDbRotatedDimension 1; AcDbText 134; CeCvlPipeObject 42; first: 1003FA AcDbBlockReference XREF XW2614-Arch Survey ; 10040D AcDbBlockReference XREF XW2614-Arch Ground ; 10041A AcDbBlockReference XREF XW2614-Arch Site ; 10127D AcDbHatch HATCH 51 ; 10127E AcDbPolyline HATCHOUTLINE ; 10127F AcDbBlockReference BLOCKS A$C32C15792 ; 10128C AcDbMText 25TEXT THIS DRAWING IS TO BE READ IN CONJUNCTION WITH ARCHITECTURAL DOCUMENTATION. ; 10128E AcDbHatch HATCH 51 ; 10128F AcDbPolyline HATCHO..."
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m0 \"object~^CeCvlPipeObject$\" \"handle~^(?!10A98D$)\" -> $others",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 41 of 500: 1091A0 STORMWATER PIPE ; 1091E0 STORMWATER PIPE ; 109359 EX DRAIN HATCH ; 109390 EX DRAIN HATCH ; 1093C7 STORMWATER PIPE ; 109430 STORMWATER PIPE ; 1094BE STORMWATER PIPE ; 109500 EX DRAIN HATCH"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $others handle -> $hp8",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 1091A0"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"10A98D\"",
+          "ok": true,
+          "seconds": 2.6,
+          "evidence": "pick-first 10A98D: Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"10A98D\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2PICKFIRST \"..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDEDIT{NL}Y\" -Force -ExpectWindow \"Edit Pipe\" -TimeoutSec 120 -> $edit1",
+          "ok": true,
+          "seconds": 16.5,
+          "evidence": "typed 'CDEDIT Y': Command: | Command: CDEDIT | This pipe was drawn with an older version of CE. Is the highlighted text \"450 DIA. STORMPRO PIPE AT 1 IN 193 19.30m DET...\" this pipe's label? [Yes/No] <Yes>: Y"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Edit Pipe\" \"Edit pipe, Save\" -> $save_press",
+          "ok": true,
+          "seconds": 26.2,
+          "evidence": "pressed 'Edit pipe, Save' in /Edit Pipe/: window closed = True"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 2",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "slept 2 s"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 pick-read -> $sel1",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "v3 pick-read : pick-first set: 1 object(s) 10A98D"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win1",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV32259351_B1.dwg]"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"10A98D,{$hp8}\"",
+          "ok": true,
+          "seconds": 2.3,
+          "evidence": "pick-first 10A98D,1091A0: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"10A98D\" \"1091A0\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (str..."
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDEDIT\" -Force -ExpectWindow \"Edit 2 Pipes\" -TimeoutSec 120 -> $edit2",
+          "ok": true,
+          "seconds": 20.6,
+          "evidence": "typed 'CDEDIT': Command: | Command: CDEDIT"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 4",
+          "ok": true,
+          "seconds": 4.0,
+          "evidence": "slept 4 s"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win2",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV32259351_B1.dwg] ; Creative Engineering | Edit 2 Pipes"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "close-windows",
+          "text": "close-windows -> $closed2",
+          "ok": true,
+          "seconds": 30.4,
+          "evidence": "closed open CE windows: round 1: 'Creative Engineering | Edit 2 Pipes' <- Cancel without saving : ok=False no button 'Cancel without saving' that is on the v3 press list was found in a window matching /Creative\\ Engineering\\ \\|\\ Edit\\ 2\\ Pipes/ (windows: Creative Engineering | Edit 2..."
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 2",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "slept 2 s"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 pick-read -> $sel2",
+          "ok": true,
+          "seconds": 0.8,
+          "evidence": "v3 pick-read : pick-first set: 2 object(s) 10A98D,1091A0"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win3",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV32259351_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "contains $sel1 \"pick-first set: 1 object(s) 10A98D\"",
+          "ok": true,
+          "expected": "contains 'pick-first set: 1 object(s) 10A98D'",
+          "actual": "{\"ok\":true,\"verb\":\"pick-read\",\"started\":\"2026-10-29 23:14:45\",\"elapsed_ms\":1468,\"error\":null,\"refused\":false,\"output\":[\"pick-first set: 1 object(s) 10A98D\"],\"data\":{\"pickfirst\":{\"count\":1,\"handles\":[\"...",
+          "evidence": "found 'pick-first set: 1 object(s) 10A98D' in: {\"ok\":true,\"verb\":\"pick-read\",\"started\":\"2026-10-29 23:14:45\",\"elapsed_ms\":1468,\"error\":null,\"refused\":false,\"output\":[\"pick-first set: 1 object(s) 10A98D\"],\"da..."
+        },
+        {
+          "n": 2,
+          "text": "matches $sel2 \"pick-first set: 2 object\"",
+          "ok": true,
+          "expected": "matches /pick-first set: 2 object/",
+          "actual": "{\"ok\":true,\"verb\":\"pick-read\",\"started\":\"2026-10-29 23:15:48\",\"elapsed_ms\":788,\"error\":null,\"refused\":false,\"output\":[\"pick-first set: 2 object(s) 10A98D,1091A0\"],\"data\":{\"pickfirst\":{\"count\":2,\"handl...",
+          "evidence": "matched 'pick-first set: 2 object'"
+        },
+        {
+          "n": 3,
+          "text": "contains $sel2 \"10A98D\"",
+          "ok": true,
+          "expected": "contains '10A98D'",
+          "actual": "{\"ok\":true,\"verb\":\"pick-read\",\"started\":\"2026-10-29 23:15:48\",\"elapsed_ms\":788,\"error\":null,\"refused\":false,\"output\":[\"pick-first set: 2 object(s) 10A98D,1091A0\"],\"data\":{\"pickfirst\":{\"count\":2,\"handl...",
+          "evidence": "found '10A98D' in: {\"ok\":true,\"verb\":\"pick-read\",\"started\":\"2026-10-29 23:15:48\",\"elapsed_ms\":788,\"error\":null,\"refused\":false,\"output\":[\"pick-first set: 2 object(s) 10A98D,1091A0..."
+        },
+        {
+          "n": 4,
+          "text": "contains $sel2 \"{$hp8}\"",
+          "ok": true,
+          "expected": "contains '1091A0'",
+          "actual": "{\"ok\":true,\"verb\":\"pick-read\",\"started\":\"2026-10-29 23:15:48\",\"elapsed_ms\":788,\"error\":null,\"refused\":false,\"output\":[\"pick-first set: 2 object(s) 10A98D,1091A0\"],\"data\":{\"pickfirst\":{\"count\":2,\"handl...",
+          "evidence": "found '1091A0' in: {\"ok\":true,\"verb\":\"pick-read\",\"started\":\"2026-10-29 23:15:48\",\"elapsed_ms\":788,\"error\":null,\"refused\":false,\"output\":[\"pick-first set: 2 object(s) 10A98D,1091A0..."
+        },
+        {
+          "n": 5,
+          "text": "not-contains $win1 \"Edit Pipe\"",
+          "ok": true,
+          "expected": "does not contain 'Edit Pipe'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV32259351_B1.dwg]",
+          "evidence": "'Edit Pipe' is absent from: Autodesk AutoCAD 2027 - [CLDV32259351_B1.dwg]"
+        },
+        {
+          "n": 6,
+          "text": "contains $win2 \"Edit 2 Pipes\"",
+          "ok": true,
+          "expected": "contains 'Edit 2 Pipes'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV32259351_B1.dwg] | Creative Engineering | Edit 2 Pipes",
+          "evidence": "found 'Edit 2 Pipes' in: Autodesk AutoCAD 2027 - [CLDV32259351_B1.dwg] | Creative Engineering | Edit 2 Pipes"
+        },
+        {
+          "n": 7,
+          "text": "not-contains $win3 \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV32259351_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV32259351_B1.dwg]"
+        },
+        {
+          "n": 8,
+          "text": "record $edit2 \"FULL what CDEDIT printed for the two pipes\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDEDIT",
+          "evidence": "RECORDED, not judged: FULL what CDEDIT printed for the two pipes = Command: | Command: CDEDIT"
+        },
+        {
+          "n": 9,
+          "text": "record $win2 \"windows open while CDEDIT held the two pipes\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV32259351_B1.dwg] | Creative Engineering | Edit 2 Pipes",
+          "evidence": "RECORDED, not judged: windows open while CDEDIT held the two pipes = Autodesk AutoCAD 2027 - [CLDV32259351_B1.dwg] | Creative Engineering | Edit 2 Pipes"
+        },
+        {
+          "n": 10,
+          "text": "record $closed2 \"what close-windows closed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "round 1: 'Creative Engineering | Edit 2 Pipes' <- Cancel without saving : ok=False no button 'Cancel without saving' that is on the v3 press list was found in a window matching /Creative\\ Engineering\\ \\|\\ Edit\\ 2\\ Pipes/...",
+          "evidence": "RECORDED, not judged: what close-windows closed = round 1: 'Creative Engineering | Edit 2 Pipes' <- Cancel without saving : ok=False no button 'Cancel without saving' that is on the v3 press list was found in a window matching /Creative\\ Engineering\\ \\|\\ Edit\\ 2\\ Pipes/..."
+        },
+        {
+          "n": 11,
+          "text": "record $sel1 \"selection after the first edit\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"ok\":true,\"verb\":\"pick-read\",\"started\":\"2026-10-29 23:14:45\",\"elapsed_ms\":1468,\"error\":null,\"refused\":false,\"output\":[\"pick-first set: 1 object(s) 10A98D\"],\"data\":{\"pickfirst\":{\"count\":1,\"handles\":[\"10A98D\"]}}}",
+          "evidence": "RECORDED, not judged: selection after the first edit = {\"ok\":true,\"verb\":\"pick-read\",\"started\":\"2026-10-29 23:14:45\",\"elapsed_ms\":1468,\"error\":null,\"refused\":false,\"output\":[\"pick-first set: 1 object(s) 10A98D\"],\"data\":{\"pickfirst\":{\"count\":1,\"handles\":[\"10A98D\"]}}}"
+        },
+        {
+          "n": 12,
+          "text": "record $sel2 \"selection after the second edit\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"ok\":true,\"verb\":\"pick-read\",\"started\":\"2026-10-29 23:15:48\",\"elapsed_ms\":788,\"error\":null,\"refused\":false,\"output\":[\"pick-first set: 2 object(s) 10A98D,1091A0\"],\"data\":{\"pickfirst\":{\"count\":2,\"handles\":[\"10A98D\",\"1091A...",
+          "evidence": "RECORDED, not judged: selection after the second edit = {\"ok\":true,\"verb\":\"pick-read\",\"started\":\"2026-10-29 23:15:48\",\"elapsed_ms\":788,\"error\":null,\"refused\":false,\"output\":[\"pick-first set: 2 object(s) 10A98D,1091A0\"],\"data\":{\"pickfirst\":{\"count\":2,\"handles\":[\"10A98D\",\"1091A..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV32259351_B1_1f7108275.log)",
+        "Civil CE log: 74 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDEDIT completed 28332 ms ; Command outcome: CDEDIT completed 42835 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-29 23:15:50",
+      "session_id": "RUN-20261029-2259-C3.0.86-a80F5-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": true
+      }
+    },
+    {
+      "id": "N27",
+      "proves_bugs": "",
+      "title": "With the hand-placed switch on, a pipe text moved by hand onto a clash is left where it was put by Tidy labels (counted 'Placed by hand (left alone) 1') even when Tidy labels is told Yes",
+      "kind": "deterministic",
+      "order": 270,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "UX-LBL-01 hand-placed label stays, the Tidy labels half (daily card D13 profile B, switch ON)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "With both switches on: the new pipe's start invert text IL 18.000 at P8 is moved by hand 5 mm down (it moves 5 mm); the SPOT LEVEL block 10EC5D is moved onto it as in R16; CDTIDYLABELS All then counts 'Placed by hand (left alone) 1', lists no 'start invert text would move' line, and after the Yes answer that text is still exactly where the hand put it (0 mm, within 0.5); the drawing holds the same number of objects.",
+      "why_not_unit": "The hand-placed mark is written by a real AutoCAD MOVE and read by a later live tidy in the real drawing.",
+      "not_automated": [
+        "Card D13 step 3 (move pit P8 500 mm, the label must stay) is NOT driven: in the installed source only the Tidy labels pass reads the hand-placed mark (HandPlacedLabelRule is used only in LinkService.TextClashTidyUp.cs), so whether a pit move keeps a hand-placed label is a question for the desk and the card, not a check to guess.",
+        "The card names 'the pipe label'; this case moves the start invert text because it is the text with a proven clash (R16). The rule marks any pipe text moved on its own.",
+        "Profile A (switch off) is the twin N27_BROKEN."
+      ],
+      "file_sha256": "D86FA0A8F9391D875130AFD06D3D31F751F8DBEFBF9FB39F5DACD8638829EE2E",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-29 23:17:46",
+      "seconds": 189.7,
+      "setup": "SETUP-R47",
+      "setup_note": "shared setup SETUP-R47 run here for the first time at 23:20:28",
+      "steps": [
+        {
+          "n": 1,
+          "phase": "setup",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV32316402_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "setup",
+          "verb": "pick-first",
+          "text": "pick-first \"109D56\"",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "pick-first 109D56: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"109D56\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 3,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"_.MOVE{NL}0,0{NL}0,2000\" -Force -> $setup_move",
+          "ok": true,
+          "seconds": 6.4,
+          "evidence": "typed '_.MOVE 0,0 0,2000': Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,2000 | [CE Civil] pipe P3 -> P2 label: no clear spot among it..."
+        },
+        {
+          "n": 4,
+          "phase": "setup",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "setup",
+          "verb": "ms-count",
+          "text": "ms-count -> $n0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 6,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"PIT{NL}150000,-80000\" -Force -ExpectWindow \"New Pit\" -> $pit_t1",
+          "ok": true,
+          "seconds": 12.5,
+          "evidence": "typed 'PIT 150000,-80000': Command: | Command: PIT | Specify pit insertion point: 150000,-80000 | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C..."
+        },
+        {
+          "n": 7,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.CoverLevel\" \"19.000\"",
+          "ok": true,
+          "seconds": 6.2,
+          "evidence": "ui set 'New Pit' C2.CoverLevel = 19.000: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 8,
+          "phase": "setup",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pit\" \"New pit, Continue placement\" -> $pit_t2",
+          "ok": true,
+          "seconds": 46.7,
+          "evidence": "pressed 'New pit, Continue placement' in /New Pit/: window closed = True"
+        },
+        {
+          "n": 9,
+          "phase": "setup",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pit\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /^New Pit/ closed after 0 s"
+        },
+        {
+          "n": 10,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e1",
+          "ok": true,
+          "seconds": 7.9,
+          "evidence": "esc-prompt: Command: | Command: PIT | Specify pit insertion point: 150000,-80000 | Specify pit label insertion point: *Cancel* | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or qu..."
+        },
+        {
+          "n": 11,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e2",
+          "ok": true,
+          "seconds": 7.3,
+          "evidence": "esc-prompt: Command: PIT | Specify pit insertion point: 150000,-80000 | Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit..."
+        },
+        {
+          "n": 12,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e3",
+          "ok": true,
+          "seconds": 2.8,
+          "evidence": "esc-prompt: Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit, or press Esc to stop. | Specify pit insertion point: *Canc..."
+        },
+        {
+          "n": 13,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-80000{NL}170000,-80000{NL}\" -Force -ExpectWindow \"New Pipe\" -> $pipe_t1",
+          "ok": true,
+          "seconds": 9.3,
+          "evidence": "typed 'CD 150000,-80000 170000,-80000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-80000 | Specify second point: 170000,-80000 | Se..."
+        },
+        {
+          "n": 14,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 4.8,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 15,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.900\"",
+          "ok": true,
+          "seconds": 4.5,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.900: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 16,
+          "phase": "setup",
+          "verb": "ui-dump",
+          "text": "ui-dump \"New Pipe\" -> $np_win",
+          "ok": true,
+          "seconds": 7.0,
+          "evidence": "ui-dump 'New Pipe': 103 controls, tabs: "
+        },
+        {
+          "n": 17,
+          "phase": "setup",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $pipe_t2",
+          "ok": true,
+          "seconds": 36.8,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 18,
+          "phase": "setup",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 19,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pipe_e1",
+          "ok": true,
+          "seconds": 3.9,
+          "evidence": "esc-prompt: [CE] Pipe kept. One or more ends have no proven connection. The route stays drawn; confirm the intended connection later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: P8 -> Open en..."
+        },
+        {
+          "n": 20,
+          "phase": "setup",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 21,
+          "phase": "setup",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_after_setup",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV32316402_B1.dwg]"
+        },
+        {
+          "n": 22,
+          "phase": "setup",
+          "verb": "ms-new",
+          "text": "ms-new $n0 -> $new_all",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "6 object(s) after index 1034 (model space now 1040); by type: AcDbBlockReference 2; AcDbMText 3; CeCvlPipeObject 1; first: 11C5AD AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C651 CeCvlPipeObject STORMWATER PIPE ; 11C657 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 200 ; 11C65C AcDbMText 20TEXT IL 18.000 ; 11C661 AcDbMText 20TEXT IL 17.900 ; 11C683 AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_all \"text~^IL 18\\.000$\" \"near=150000,-80000,1500\" -> $il0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 6: 11C65C IL 18.000 20TEXT"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il0 handle -> $ilh",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C65C"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il0 x -> $il_x0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 150425"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il0 y -> $il_y0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'y' = -79817.5"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first $ilh",
+          "ok": true,
+          "seconds": 2.3,
+          "evidence": "pick-first 11C65C: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"11C65C\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.MOVE{NL}0,0{NL}0,-5\" -Force -> $il_move",
+          "ok": true,
+          "seconds": 2.4,
+          "evidence": "typed '_.MOVE 0,0 0,-5': Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,-5 | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up ..."
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $n0 -> $after_hand",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "6 object(s) after index 1034 (model space now 1040); by type: AcDbBlockReference 2; AcDbMText 3; CeCvlPipeObject 1; first: 11C5AD AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C651 CeCvlPipeObject STORMWATER PIPE ; 11C657 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 200 ; 11C65C AcDbMText 20TEXT IL 18.000 ; 11C661 AcDbMText 20TEXT IL 17.900 ; 11C683 AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after_hand \"handle={$ilh}\" -> $il1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 6: 11C65C IL 18.000 20TEXT"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "dist",
+          "text": "dist $il1 \"{$il_x0},{$il_y0}\" -> $hand_moved",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "distance from object 11C65C to 150425,-79817.5 = 5"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il1 x -> $il_x1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 150425"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il1 y -> $il_y1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'y' = -79822.5"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read 10EC5D -> $spot0",
+          "ok": true,
+          "seconds": 0.4,
+          "evidence": "ent-read 10EC5D: {\"handle\":\"10EC5D\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"*U177\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[68823.77597149507,-26019.48738538451,18884.357734427194],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"LEVEL\",\"t..."
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"10EC5D\"",
+          "ok": true,
+          "seconds": 2.2,
+          "evidence": "pick-first 10EC5D: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"10EC5D\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.MOVE{NL}0,0{NL}81839,-53713\" -Force -> $spot_move",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "typed '_.MOVE 0,0 81839,-53713': Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 81839,-53713 | SETTINGS GUARD ACTIVE: 1 settings file(s) are ba..."
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM{NL}_W{NL}148500,-81500{NL}152500,-78500\" -Force",
+          "ok": true,
+          "seconds": 2.7,
+          "evidence": "typed '_.ZOOM _W 148500,-81500 152500,-78500': Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _W | Specify first corner: 148500,-81500 | Specify oppo..."
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $cnt0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1040 objects"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDTIDYLABELS{NL}All{NL}Yes\" -Force -> $tidy",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "typed 'CDTIDYLABELS All Yes': Command: | Command: CDTIDYLABELS | Tidy labels on [All pipes/Select pipes] <All> [All/Select] <All>: All | [CE] Will move 0 · Placed by hand (left alone) 1 · No clear spot found 1 | [CE] No clear spot found: pipe P3 -> P..."
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 2",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "slept 2 s"
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $tidy_esc",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "esc-prompt: [CE] Will move 0 · Placed by hand (left alone) 1 · No clear spot found 1 | [CE] No clear spot found: pipe P3 -> P2 label. Move it by hand. | [CE] No CE label needs to move. | Command: Yes | Unknown command \"YES\". Press F..."
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $cnt1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1040 objects"
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $n0 -> $after_tidy",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "6 object(s) after index 1034 (model space now 1040); by type: AcDbBlockReference 2; AcDbMText 3; CeCvlPipeObject 1; first: 11C5AD AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C651 CeCvlPipeObject STORMWATER PIPE ; 11C657 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 200 ; 11C65C AcDbMText 20TEXT IL 18.000 ; 11C661 AcDbMText 20TEXT IL 17.900 ; 11C683 AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after_tidy \"handle={$ilh}\" -> $il2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 6: 11C65C IL 18.000 20TEXT"
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "dist",
+          "text": "dist $il2 \"{$il_x1},{$il_y1}\" -> $tidy_moved",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "distance from object 11C65C to 150425,-79822.5 = 0"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "count $il0 = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $il0 = 1 (expected = 1)"
+        },
+        {
+          "n": 2,
+          "text": "number $hand_moved = 5 +- 0.5",
+          "ok": true,
+          "expected": "= 5",
+          "actual": "5",
+          "evidence": "$hand_moved = 5 (expected = 5 +- 0.5)"
+        },
+        {
+          "n": 3,
+          "text": "contains $spot0 \"SPOT LEVEL\"",
+          "ok": true,
+          "expected": "contains 'SPOT LEVEL'",
+          "actual": "{\"handle\":\"10EC5D\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"*U177\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[68823.77597149507,-26019.48738538451,18884.357734427194],\"rotation\":0.0,\"xsc...",
+          "evidence": "found 'SPOT LEVEL' in: {\"handle\":\"10EC5D\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"*U177\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[68823.77597149507,-26019.48738538451..."
+        },
+        {
+          "n": 4,
+          "text": "history has \"Placed by hand (left alone) 1\"",
+          "ok": true,
+          "expected": "command line has 'Placed by hand (left alone) 1'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CE] Will move 0 · Placed by hand (left alone) 1 · No clear spot found 1'"
+        },
+        {
+          "n": 5,
+          "text": "history absent \"start invert text would move\"",
+          "ok": true,
+          "expected": "command line lacks 'start invert text would move'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'start invert text would move' (62 lines read)"
+        },
+        {
+          "n": 6,
+          "text": "number $tidy_moved = 0 +- 0.5",
+          "ok": true,
+          "expected": "= 0",
+          "actual": "0",
+          "evidence": "$tidy_moved = 0 (expected = 0 +- 0.5)"
+        },
+        {
+          "n": 7,
+          "text": "equals $cnt1 $cnt0",
+          "ok": true,
+          "expected": "1040",
+          "actual": "1040",
+          "evidence": "value '1040' (expected '1040')"
+        },
+        {
+          "n": 8,
+          "text": "record $il_move \"FULL what the hand MOVE of the invert text printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,-5 | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL what the hand MOVE of the invert text printed = Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,-5 | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 9,
+          "text": "record $tidy \"FULL what CDTIDYLABELS printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDTIDYLABELS | Tidy labels on [All pipes/Select pipes] <All> [All/Select] <All>: All | [CE] Will move 0 · Placed by hand (left alone) 1 · No clear spot found 1 | [CE] No clear spot found: pipe P3 -> P2 label. Move it by hand. | [CE] No CE label needs to move. | Command: Yes | Unknown command \"YES\". Press F1 for help. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL what CDTIDYLABELS printed = Command: | Command: CDTIDYLABELS | Tidy labels on [All pipes/Select pipes] <All> [All/Select] <All>: All | [CE] Will move 0 · Placed by hand (left alone) 1 · No clear spot found 1 | [CE] No clear spot found: pipe P3 -> P2 label. Move it by hand. | [CE] No CE label needs to move. | Command: Yes | Unknown command \"YES\". Press F1 for help. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 10,
+          "text": "record $tidy_esc \"what the closing Esc printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "[CE] Will move 0 · Placed by hand (left alone) 1 · No clear spot found 1 | [CE] No clear spot found: pipe P3 -> P2 label. Move it by hand. | [CE] No CE label needs to move. | Command: Yes | Unknown command \"YES\". Press F...",
+          "evidence": "RECORDED, not judged: what the closing Esc printed = [CE] Will move 0 · Placed by hand (left alone) 1 · No clear spot found 1 | [CE] No clear spot found: pipe P3 -> P2 label. Move it by hand. | [CE] No CE label needs to move. | Command: Yes | Unknown command \"YES\". Press F..."
+        },
+        {
+          "n": 11,
+          "text": "record $tidy_moved \"how far the hand-placed text moved during Tidy labels (mm)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "0",
+          "evidence": "RECORDED, not judged: how far the hand-placed text moved during Tidy labels (mm) = 0"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 217 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: PIT completed 81041 ms ; Command outcome: CD completed 63835 ms ; Command outcome: CDTIDYLABELS completed 43 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-29 23:20:55",
+      "session_id": "RUN-20261029-2259-C3.0.86-a80F5-s2",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": true
+      }
+    }
+  ]
+}

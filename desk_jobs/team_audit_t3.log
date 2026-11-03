@@ -1,0 +1,24 @@
+**FOR TIM**
+
+The steel section sizes are mostly right. I checked 26 sections by hand, and every UB and UC size I know by heart has the right depth, width and thicknesses. The wrong figures are the ones already listed in BUG-818. I found 14 new problems: 0 HIGH, 4 MEDIUM, 10 LOW. These come from reading the code and doing hand calculations; nothing was run in AutoCAD.
+
+**Top 3:**
+1. **CEMEMBER can pick a thicker tube without saying so.** Type `114.3x6` meaning the 6.0 mm wall and it draws 114.3x6.4 CHS. `60.3x4` becomes 60.3x4.5.
+2. **The office's own short spellings are not found.** `410UB59` and `250UB25` find nothing in SBEAM's search or in CEMEMBER, because the section list calls them `410UB60` and `250UB26`.
+3. **The office spelling list may have stopped fixing UB and UC names.** Since 1.0.122, XCLMTXT skips any UB or UC row in the office MEMBERS.csv without a word. I couldn't open that file, so I don't know if it has such rows.
+
+**Schedule quantities:** the bar schedule adds up. The one mismatch is the bar weight command (BARWEIGHT), which uses a second, rounded mass table: 100 N20 bars at 6 m come out 1482.0 kg there and 1479.6 kg on the bar schedule. No steel member schedule adds up lengths or masses, so there was nothing else to check.
+
+**Good news:** the XCLMTXT fix that keeps `250UB25.7` and writes a 150x90x10 angle as UA is in the 1.0.122 build. The bug list still says "draft". It's built and unit-tested, but nobody has run it in AutoCAD.
+
+The report is pushed as `C:\CE_PLAN\areas\TEAM_AUDIT_T3_24OCT.md`.
+
+---
+
+**Report details**
+
+1. **Report contents:** an answer-first block, the 14 numbered findings with file, line and the smallest fix, the 26 hand checks, the list of already-known bugs, and what I did not check.
+2. **Not checked:** no build or test was run. No Standard or supplier catalogue was open, so supplier figures are from memory and marked UNVERIFIED where unsure. Timber sections, the lintel table, and Civil and Manager were out of scope.
+3. **Housekeeping:** I removed my own worktrees (`t3s`, `t3m`) and my scratch folder. The other folders under `C:\ce-ta` belong to other jobs and were left alone. `git status` shows nothing ahead. `ledger.json` shows as modified, but that isn't mine and I didn't touch it.
+
+**Summary (under 100 words):** Structural 1.0.122 steel audit: 0 HIGH, 4 MEDIUM, 10 LOW new findings. Hand checks of 26 sections show UB and UC dimensions are right; the wrong figures are already in BUG-818. Top three: CEMEMBER silently picks 114.3x6.4 CHS when 114.3x6 is typed; the office short spellings (`410UB59`) are not found; office MEMBERS.csv UB/UC rows may be skipped since 1.0.122. Bar schedule totals add up; BARWEIGHT uses a second mass table. Read-only, nothing run in AutoCAD. Report pushed to `C:\CE_PLAN\areas\TEAM_AUDIT_T3_24OCT.md`.

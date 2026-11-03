@@ -1,0 +1,8 @@
+== cx_rd18 (usage 70.0% -> 83.0%): 1. **DONE — 3 new findings:** HIGH 1, MEDIUM 2, LOW 0. Most serious: Structural can save undone footing sizes back into the drawing.
+
+2. **[Findings report](C:/CE_PLAN/areas/CODEX_AUDIT2_RD18_24OCT.md)** includes exact reproduction tests and smallest fixes. Verified by reading; AutoCAD tests were not run.
+
+---
+
+1. **Saved and pushed:** report commit `756c75e6`. Final status showed no ahead commits.
+2. **Read-only scope completed:** no code changes, builds or tests. Temporary worktree removed.

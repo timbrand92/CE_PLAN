@@ -1,0 +1,17 @@
+Run 42 is done: 14 checks passed, none failed, none blocked, and one is unproven. The report is committed and pushed (`828a91f7`) at `C:\CE_PLAN\areas\release-v3-colleagues-CLAUDE_DRIVER_RUN42_V2_2026-10-20.md`.
+
+- **Versions:** the installed builds read Civil 3.0.66 and Manager 1.1.66. Driver hashes were 120EE24D15B2 and 5B542F2145F4 at the start and the end. I ran two sessions on fresh copies CLD421_B1 and CLD422_B1.
+- **Start-up (BUG-825):** AutoCAD started twice and the CE log shows no "CE moved the step-iron depth from 1000 mm to 900 mm" line. The settings file holds 900 and CDRULES Values shows "deeper than 900 mm". The 1000-stays-1000 case is unproven, because it needs the Settings window.
+- **Regressions:** all pass and match run 41.
+  - **Tidy labels:** the preview now reads "pipe P8 -> open end start invert text would move 275 mm (further out)", with counts 1 · 0 · 1, and P8 is never reported as "No clear spot".
+  - **Drawing Border:** it is treated as the sheet frame with debug ON. With `tidyIgnoresSheetFrame` set false before launch, the old "(on "the block Drawing Border")" line is back, so run 41's unproven item is now a pass.
+  - **Other checks:** Recover Inverts gave 50 / 26 / 21 / 24 (one more pipe than before because I added one). The R-06 fix line appears on all 30 rows, and freeboard is 150 in both CDTWL and CDRULES.
+  - **Cascade, CDSYNC, quick edits:** the Edit Pipe cascade passed Yes, Apply, U, REDO twice. CDSYNC left the Pit Schedule rows identical (the header went from 95 to 96 data issues). Quick edits opened no CE window.
+- **Third U/REDO:** it printed "Nothing to redo" because AutoCAD autosaved in between, so I count it as autosave interference, not a failure.
+- **New tooling finding:** the first `quit` failed after about 242 s in both sessions ("AutoCAD did not close gracefully"), and a second `quit` closed it in about 5 s. Run 41's quits were clean. I did not use `-Kill`.
+- **Settings restore:** I read all four real settings files myself after the last quit, and the hashes equal the expected ones: ACD64E79A33B, 622A246F7D3B, F68EEB5E343C, EFE307C4FC74. Both lock releases printed the pass-end hash line.
+- **Not tested:** the Fixes tab and the new Settings boxes (Settings window, so Codex), the installer refusal, an open-start pipe, and Tidy Apply.
+- **Copies for the desk to delete in `C:\ce_rc_drv`:** `CLD421_B1.dwg`, `CLD422_B1.dwg`, `CLD422_B1_PRE_C7_20261020_221307.dwg`, and run 41's leftover `CLD421_B1_PRE_C7_20261020_202235.dwg`.
+
+AUTOCAD CLOSED
+SETTINGS RESTORED

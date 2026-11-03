@@ -1,0 +1,10 @@
+**FOR TIM**
+
+1. **Done.** I wrote the testing plan and saved it to the plan folder: `C:\CE_PLAN\areas\TESTING_REBUILD_SPEC_2026-10-22.md` (pushed). Nothing was built and AutoCAD was not opened.
+2. **The idea.** The AI writes each test as a short text file. A plain runner plays 40 of them overnight in about 40 minutes. Codex only judges the pictures the runner takes.
+3. **One decision for you, for work hours.** Can a result in the drawing or a log line be accepted when it passes in two separate AutoCAD sessions? Windows would still need Codex's eyes as well. I recommend yes.
+4. **Not tested:** nothing in the plan has run yet.
+
+---
+
+The "Unable to find type" fault is now explained. The file-dialog step uses Windows' screen-reading part before the code that loads that part has run. Step 1 of the build fixes it in the new driver files. I also corrected one step in the queued step 1 job: it said to click the centre of a circle to select it, but that selects nothing, so it must click on the circle's line.

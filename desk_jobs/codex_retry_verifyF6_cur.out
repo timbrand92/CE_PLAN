@@ -1,0 +1,6 @@
+== verifyF6_cur (usage 86.0% -> 86.0%): AUTOCAD STILL RUNNING
+
+1. **Blocked:** Screenshot capture timed out twice; recovery also failed. Both drain checks remain **NOT TESTED**. PASS 0 / FAIL 0 / DIFFERENT 0 / BLOCKED 0 / NOT TESTED 2; SURE 2, UNSURE 0.
+2. **Unchanged:** All four settings hashes match START; installed builds remained unchanged. No FAIL findings.
+3. **Hand-off:** AutoCAD PID 110544 needs closing without saving. **Codex-F6 lock remains held** until closure.
+4. **Report:** [F6 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_F6_20261027_0344.md>). Fixtures wanted: none.

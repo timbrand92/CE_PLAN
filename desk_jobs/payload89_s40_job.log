@@ -1,0 +1,13 @@
+Candidate s1038 is built and verified, but it holds six of the nine PRs the brief expected. Nothing is installed and nobody has opened it in AutoCAD.
+
+- **Missing PRs:** #1510, #1496 and #1498 are not in the signed train, so the Z purlin, tag height and hatch density fixes won't arrive with this install.
+- **Candidate:** `C:\ce_rc_scratch\s1038\CE_STRUC_SUITE.bundle`.
+- **Manifest:** `verified 2007, bad 0, extra 0`. File list versus installed: added 0, removed 0.
+- **Branch head:** `329691b7`. The push was a fast-forward and the leak scan was clean.
+- **Tests:** 56 of 56 pin tests passed.
+- **String proof:** 96 of 96 rows as expected, CEMEMBER registered.
+- **Natives:** the C++ sources are unchanged, so I used the installed native bytes.
+- **Settings:** Tim's four settings files and the installed DLLs are identical before and after.
+- **Odd:** this shell's PATH is over cmd's length limit, so the first two build attempts failed; a short explicit PATH fixed it.
+
+Report: `C:\Lisp Files\_TEST_COPIES_20260923\PAYLOAD_S1038_REPORT.md`

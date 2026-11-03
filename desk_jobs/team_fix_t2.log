@@ -1,0 +1,6 @@
+BUG-872 is already fixed on `claude/rel-20261102a`, so I opened no PR and changed no files in the plugin repo.
+
+- **Why:** commit 23d6f3da (23 Oct, #1549) already pins the sheet's C 0.35 and 5.87 L/s on the test and keeps the 30 per cent limit. The test is now named `BackTest_GlenEira24115_IssuedDischarge_WithinTolerance`.
+- **Re-run:** the whole `AutoDesignBackTestTests` family passes, 12 of 12. Glen Eira 24-115 reads 2.12 against 2.58 m3, 17.7 per cent low. The "known failure" line in `REGRESSION_LOG.md` is a stale copy.
+- **AppData:** `CD_Settings.json` and other CE_Admin and log files under `TIM_CE_CADTOOLS` changed during my run. I believe another job's AutoCAD session wrote them. Please find the writer.
+- **Report:** `C:\CE_PLAN\areas\BUGFIX_t2_REPORT_01NOV.md`, pushed. There is no switch and no robot case, since nothing changes in AutoCAD. The carpark entries for BUG-872, BUG-307 and BUG-095 still read OPEN; I was told not to edit that file, so CE 05 should relabel them.

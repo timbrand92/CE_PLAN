@@ -1,0 +1,13 @@
+== verifyG4_c84 (usage 15.0% -> 16.0%): AUTOCAD CLOSED
+
+1. **NOT TESTED: EVIDENCE ÔÇö both looks.** My screenshot saver repeated the first image, so neither window check can be accepted.
+2. **Installed:** Civil 3.0.86 / Manager 1.1.86 / Structural 1.0.125.
+3. **Cleanup verified:** Settings unchanged, drawing unsaved, lock released. No fixtures missing.
+4. **Counts:** PASS 0, FAIL 0, DIFFERENT 0, BLOCKED 0, NOT TESTED 2. SURE 2 / UNSURE 0.
+5. **[Report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_G4_20261030_0702.md>):** Records live observations, execution faults and the required repeat.
+== verifyG4_c84 (usage 16.0% -> 17.0%): AUTOCAD CLOSED
+
+1. **Results:** About **PASS**. CDCHECKDWG **FAIL**: next-row text clipped at the listÔÇÖs bottom edge.
+2. **Counts:** 1 PASS, 1 FAIL; 0 DIFFERENT/BLOCKED/NOT TESTED. Both SURE.
+3. **Clean end:** Four settings hashes unchanged; lock released. Versions unchanged: Civil 3.0.86, Manager 1.1.86, Structural 1.0.125. No fixtures wanted.
+4. **Report:** [G4 verification report](<C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_G4_20261030_0727.md>) includes screenshots and measurement/procedure limits.

@@ -1,0 +1,8 @@
+The four R36e cases and the C36e control are rewritten in `C:\ce-fx\c75fixups_staged\` to expect CE's refusal. Nothing is accepted yet.
+
+- **Cases:** each R36e case now checks for "IOn is already at this point, and a new source cannot sit on top of it." (IO1 to IO4), with zero FLOOR WASTE blocks and zero FW texts. The three not-contains checks are kept, and the cases are tagged `BUG BUG-1223` with no EXPECT-FAIL.
+- **Opening numbers:** I confirmed IO1 to IO4 against the recorded 3.0.85 runs.
+- **Control:** C36e already had `VARIANT_OF R36e`. I also mirrored the new checks into it, which goes beyond what the review asked. It still fails check 2.
+- **Validation:** the offline validate passes all five files, and the live files are untouched.
+- **Report:** the new section is in `ROBOT_FIXUPS_STAGED_29OCT.md`, committed and pushed (c761f858, now on `origin/main` after one rejected push).
+- **Still needed:** two fresh AutoCAD starts each on Civil 3.0.85, the twin red, and a fresh independent review.

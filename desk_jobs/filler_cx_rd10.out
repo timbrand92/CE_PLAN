@@ -1,0 +1,9 @@
+== cx_rd10 (usage 46.0% -> 51.0%): 1. **DONE — 0 HIGH, 2 MEDIUM, 0 LOW.** Undo can leave record saving disabled after restoring readable data. Ignore can falsely report that a skipped choice was saved.
+
+2. **[Findings and deterministic tests](C:/CE_PLAN/areas/CODEX_AUDIT2_RD10_23OCT.md).** Both verified by reading; neither tested in AutoCAD.
+
+---
+
+1. **Saved and pushed:** `4c0c9c7d`. Leak scan passed; no commits ahead. Temporary worktree removed.
+
+2. **Scope:** report only. No code changes, builds, tests, AutoCAD or PR actions.

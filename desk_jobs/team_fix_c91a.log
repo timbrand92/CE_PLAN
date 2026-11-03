@@ -1,0 +1,9 @@
+Draft PR #1873 is open, and the Grade mismatch window no longer fires on the window's own suggested level. It is built and unit-tested only; nobody has opened it in AutoCAD.
+
+- **Cause:** #1838 rounds the suggested downstream level down. On short pipes that makes the pipe more than 10 percent steeper than typed, and `TryDetectCustomGradeMismatch` (`CdCommand.Grade.cs` line 233) treats that as a mismatch.
+- **Fix:** the new switch `pipe.mismatchBoxSkipsOwnSuggestion` (ON) skips the window when the second level is still the window's own suggestion and the pipe is as steep or steeper than typed. A level the drafter typed or edited keeps the 10 percent test, and switch OFF gives today's windows.
+- **Files:** `CdCommand.Grade.cs`, `CdCommand.cs`, `CdViewModel.Inverts.cs`, `UserSettings.cs`, new `MismatchBoxOwnSuggestionRule.cs`, new `B057MismatchBoxOwnSuggestionTests.cs`, and a `REGRESSION_LOG.md` entry.
+- **Tests:** full Civil net10 suite 21,485 passed, 0 failed. net48 compile has 0 errors.
+- **Open question for CE 04:** when the window is skipped, the label shows the typed grade (1 IN 100), not the real one (1 in 82). I kept the existing label rule.
+
+The report is `release-v3-colleagues-B057_MISMATCH_BOX_REPORT.md` and is pushed to CE_PLAN. Its robot case is N33 with a switch-off twin. After the push, `git status -sb` in CE_PLAN shows no ahead. It shows ` M areas/runner-reports/ledger.json`, a file I didn't touch.

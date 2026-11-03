@@ -1,0 +1,8 @@
+== cx_rv25 (usage 45.0% -> %): 1. **DONE — both MERGE-WITH-FIXES.** #1787 needs coefficient-switch testing and corrected rounding wording. #1786 needs a fallback that prevents invalid settings removing the minimum slab fall.
+2. **Opus comparison:** 2 agree, 0 disagree on verdicts. No decision needed from Tim now.
+3. **Report:** [CODEX_PR_REVIEW_cx_rv25.md](C:/CE_PLAN/areas/CODEX_PR_REVIEW_cx_rv25.md).
+
+---
+
+1. **Saved and pushed:** `2186c54d`. Leak scan passed; no commits ahead.
+2. **Read-only review:** no code changes, builds, tests, AutoCAD or PR actions.

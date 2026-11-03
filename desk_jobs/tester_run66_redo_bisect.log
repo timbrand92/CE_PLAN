@@ -1,0 +1,10 @@
+**None of the 14 diagnostic switches is the culprit: the cause of the lost REDO is outside CE's selection work.** With all 14 switched off, the first click after U still gave "Nothing to redo". That happened in 4 of 4 fresh AutoCAD sessions on a pit click and 2 of 2 on a plain line click. CE's log confirms every piece was skipped in those sessions. I did not run the 14 keys one at a time, since switching all of them off changes nothing.
+
+- **Build changed mid-job:** I ran two baseline sessions on Civil 3.0.80. The desk then installed 3.0.81 at 11:18:57, so every switch run is on 3.0.81. That build moves the diagnostic checks back after the 150 ms echo test, which is Codex's finding F1.
+- **F1 doesn't explain it:** on 3.0.80 the baseline with all switches off failed 2 of 2, the same as 3.0.78 and 3.0.79. On 3.0.81, 4 of 5 valid baseline sessions still lost REDO. One baseline run passed, so the loss is likely but not certain.
+- **Gaps:** I did not run the plain line case (R08x_5) on 3.0.80. One session started about 1 minute after the previous one instead of 3. One all-keys session ran two cases together by mistake, and I excluded its second result.
+- **Next step:** rerun with the Structural and Manager add-ins off, then with all of CE off. If REDO survives with them off, the culprit is in Structural or Manager. If it is still lost with CE off, it is AutoCAD itself. I didn't run it because it needs the add-in bundle moved aside.
+
+I added 30 variant cases (`R08x_diag_<key>` and `R08x_L_<key>`, 15 keys) in `C:\Lisp Files\_ACAD_DRIVER\cases\controls\`, and only the two all-keys ones were run. Settings files are back to their expected hashes, and no AutoCAD or lock file is left. The report is pushed to `C:\CE_PLAN`, and `git status -sb` shows no ahead.
+
+Report: `C:\CE_PLAN\areas\release-v3-colleagues-RUNNER_BUG861_BISECT_REPORT.md`

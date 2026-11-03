@@ -1,0 +1,40 @@
+Mon 10:59:24 batch PM waiting for the area-plus-smoke chain on 3.0.89 to end
+Mon 12:29:28 batch PM waiting for the area-plus-smoke chain on 3.0.89 to end
+Mon 14:27:26 robot chain ended; taking over for the Codex looks
+Mon 14:27:33 backed up CD_RecentValues.json sha 20DC84B4D735
+Mon 14:27:33 backed up CD_Settings.json sha ACD64E79A33B
+Mon 14:27:33 backed up CS_Settings.json sha D604CE689671
+Mon 14:27:33 backed up settings.json sha EFE307C4FC74
+Mon 14:27:33 STOP_CODEX.flag lifted (STOP_SUPERVISOR.flag stays up)
+Mon 14:27:39 Codex usage before S3 : 0 percent
+Mon 14:27:39 starting verifyS3_c88
+Mon 15:23:20 verifyS3_c88 launcher finished; Codex usage after: 43 percent
+Mon 15:23:20 after S3 : settings.json sha EFE307C4FC74 (original EFE307C4FC74)
+Mon 15:23:20 after S3 : CS_Settings.json sha D604CE689671 (original D604CE689671)
+Mon 15:23:20 after S3 : CD_Settings.json sha ACD64E79A33B (original ACD64E79A33B)
+Mon 15:23:20 Codex usage before AUD2 : 43 percent
+Mon 15:23:20 starting verifyAUD2_c88
+Mon 15:33:21 verifyAUD2_c88 launcher finished; Codex usage after: 44 percent
+Mon 15:33:22 after AUD2 : settings.json sha EFE307C4FC74 (original EFE307C4FC74)
+Mon 15:33:22 after AUD2 : CS_Settings.json sha D604CE689671 (original D604CE689671)
+Mon 15:33:22 after AUD2 : CD_Settings.json sha ACD64E79A33B (original ACD64E79A33B)
+Mon 15:33:22 Codex usage before S8 : 44 percent
+Mon 15:33:22 starting verifyS8_c88
+Mon 15:49:52 verifyS8_c88 launcher finished; Codex usage after: 44 percent
+Mon 15:49:52 after S8 : settings.json sha EFE307C4FC74 (original EFE307C4FC74)
+Mon 15:49:52 after S8 : CS_Settings.json sha D604CE689671 (original D604CE689671)
+Mon 15:49:52 after S8 : CD_Settings.json sha ACD64E79A33B (original ACD64E79A33B)
+Mon 15:49:52 Codex usage before S5 : 44 percent
+Mon 15:49:52 starting verifyS5_c88
+Mon 16:26:28 verifyS5_c88 launcher finished; Codex usage after: 46 percent
+Mon 16:26:28 after S5 : settings.json sha EFE307C4FC74 (original EFE307C4FC74)
+Mon 16:26:28 after S5 : CS_Settings.json sha D604CE689671 (original D604CE689671)
+Mon 16:26:28 after S5 : CD_Settings.json sha ACD64E79A33B (original ACD64E79A33B)
+Mon 16:26:28 RESTORED CD_RecentValues.json: was E88AEB897A48, back to 20DC84B4D735
+Mon 16:26:28 unchanged settings.json sha EFE307C4FC74
+Mon 16:26:28 unchanged CS_Settings.json sha D604CE689671
+Mon 16:26:28 unchanged CD_Settings.json sha ACD64E79A33B
+Mon 16:26:28 HOLD_ROBOT.flag removed.
+Mon 16:26:29 restarting chain4 on spec_passk.txt (build 3.0.89+61fd6fbc72710872048a69ef5b46d0e5b55087fa; finished packs are skipped)
+Mon 16:26:29 CODEX_NEXT.txt rewritten to batch B
+Mon 16:26:29 Batch PM ends.

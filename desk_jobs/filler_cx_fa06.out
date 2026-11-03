@@ -1,0 +1,8 @@
+== cx_fa06 (usage 60.0% -> 3.0%): 1. **FOR TIM — BLOCKED:** Two wording patches delivered in draft [PR #1718](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1718). Six protected Structural findings skipped. Civil’s PDF failure and log-cleanup error prevent clean full-suite sign-off. [Report](C:/CE_PLAN/areas/CODEX_FIXAUDIT_FA06_23OCT.md) saved and pushed. Nothing installed; AutoCAD not run.
+
+---
+
+2. **Checks:** All 25 added cases pass; six builds, 0 errors. Civil: 19,530 passed, 1 failed, 50 not executed in TRX. Manager: 951 passed, 1 skipped. Twelve pictures inspected; worktree removed.
+
+3. **Branch:** `cx4/fa06-plain-words`  
+   **Tip:** `625d7a44cf9e87410ea09428c658a8376fd5afc3`

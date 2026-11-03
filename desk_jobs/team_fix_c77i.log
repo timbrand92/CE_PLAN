@@ -1,0 +1,7 @@
+B-014 BUG-860 is built as draft PR **#1862**, stacked on #1834 (BUG-859). The full test suite and the net48 compile did not run, and nothing was tried in AutoCAD.
+
+- **What a drafter sees:** a double-click on the green DP label opens the Edit source window, but only when that downpipe's own record names the text. Other text, locked layers, Xrefs and REFEDIT keep AutoCAD's own edit.
+- **Files:** `Rules/DoubleClickSourceLabelRule.cs` (new), `Services/CompoundEditModeService.cs`, `Models/DoubleClickSettings.cs`, the new `Bug860SourceLabelDoubleClickTests.cs`, and `REGRESSION_LOG.md`.
+- **Switch:** `doubleClick.sourceLabelOpensEditSource`, shipped ON.
+- **Tests:** the 261 focused tests passed. The full suite and net48 compile never got a build slot (other jobs held it from 20:05 to 07:36).
+- **Report:** `release-v3-colleagues-BUG860_FIX_REPORT.md`, pushed. It names the robot case `R09L_dp1_label_double_click` with its switch-off control.

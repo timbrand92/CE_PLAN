@@ -1,0 +1,18 @@
+== verifyW3_c60 (usage 4.0% -> 4.0%): the test drawing row after the permitted attempts. AutoCAD never started; all five looks are **NOT TESTED**.
+
+2. **Report:** [W3 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_W3_20261023_0723.md>). PASS 0 ┬À FAIL 0 ┬À DIFFERENT 0 ┬À BLOCKED 0 looks ┬À NOT TESTED 5. SURE 0 ┬À UNSURE 5. No product failures established.
+
+3. **Cleanup complete:** The one changed settings file was restored byte for byte. Original and restored SHA-256 both:
+   `ACD64E79A33BE9C152149FF2145A3CD2C29CABE11245F211183FD5C7DE783140`
+   
+   All four settings hashes match their start values. AutoCAD is absent, guard empty, lock released. No private Explorer screenshot saved. Fixtures wanted: none.
+== verifyW3_c60 (usage 6.0% -> 6.0%): 1. **Report:** [W3 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_W3_20261023_0911.md>).
+
+2. **Results:** PASS 1 ┬À FAIL 2 ┬À DIFFERENT 1 ┬À BLOCKED 1 ┬À NOT TESTED 0 result lines. SURE 4 ┬À UNSURE 1. W3-02ÔÇÖs continuous scan remains incomplete.
+
+3. **Findings:** Show where reached WT4, but DBMOD rose from 1 to 17, failing W3-03 and W3-05. The palette has Check again instead of Fix. CDCHECKCURRENT passed.
+
+4. **Restored:** AutoCAD is gone; lock released; all four settings hashes match START. CD_Settings HASH A = HASH C:
+   `ACD64E79A33BE9C152149FF2145A3CD2C29CABE11245F211183FD5C7DE783140`
+
+5. **Fixtures wanted:** None.

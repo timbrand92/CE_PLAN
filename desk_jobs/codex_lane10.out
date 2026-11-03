@@ -1,0 +1,25 @@
+== cx_b09_pit_floor_depth (usage 27.0% -> 33.0%): 1. **DONE:** [Draft PR #1531](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1531). Audit depth is **0.95 m**, with step irons. Existing drawn schedules adopt it after re-sync.
+
+2. **Checked:** 33 added cases pass. Full suite: **19,187 total; 19,167 passed; 19 skipped; one failure reproduced on the base**. Three Release builds: zero errors.
+
+3. **Report:** [Saved and pushed](C:/CE_PLAN/areas/CODEX_BUILD_ENG_PIT_FLOOR_22OCT.md), including the exact AutoCAD check. Nothing installed; AutoCAD not opened.
+
+---
+
+4. **Handoff:** `cx/eng-pit-floor-c60`, tip `4a438d26`.
+== cx_b11_twl_units (usage 33.0% -> 46.0%): 1. **DONE — draft [PR #1538](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1538).** Branch `cx/eng-twl-units-c60`, tip `9821c80c`. Correction OFF by default; when ON, the audit pipe gives 1,414 L in either drawing unit.
+
+2. **Validated:** three builds, 0 errors; 17 new tests passed. Focused runs: 69/69 each. Full suite: 19,151 passed, 19 skipped, 1 recorded Glen Eira failure.
+
+3. **Delivered:** [report](C:/CE_PLAN/areas/CODEX_BUILD_ENG_TWL_UNITS_22OCT.md) pushed. Finding 9 unchanged. No installation or AutoCAD run.
+
+4. **Limit:** live Civil settings hash changed during concurrent work; cause unproved and documented.
+== cx_b06_eng_small (usage 51.0% -> 56.0%): 1. **BLOCKED on Casey evidence.** Three fixes delivered. GE 24-115 now reads **17.73% low**, within the unchanged 30% band.
+
+2. **Draft PR:** [#1549](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1549), `cx/eng-small-c60`, tip `23d6f3da`.
+
+3. **Verified:** 19,162 total: 19,143 passed, 19 skipped, zero failed. Eight new cases; all three build lanes have zero errors. Ten pictures inspected.
+
+4. **Observation:** Live Civil settings hash changed during concurrent work; writer unproven.
+
+5. **Saved and pushed:** [Report](C:/CE_PLAN/areas/CODEX_BUILD_ENG_SMALL_22OCT.md). Nothing installed or AutoCAD-tested.

@@ -1,0 +1,8 @@
+The trial is finished. My recommendation is to adopt ArchUnitNET for some rules, not as a blanket guard.
+
+- **Where it works:** the "who may use whom" rules are cheap and reliable. They show CE_SHARED, Manager, Civil and Structural keeping apart. It runs on both net48 and net10, takes about 12 s and 400 MB per run, and needs about 0.8 MB of packages.
+- **Where it fails:** it misses code inside async methods, so it missed 2 of the 4 Civil types that make network calls. It also can't see which file is written or whether a layer is being locked or unlocked.
+- **One unconfirmed concern:** Structural's `LayerService` sets layer lock state, which the native protection rule forbids doing silently. I haven't checked who calls it.
+- **Left red on purpose:** the view-model and services layering rules and the settings-file rule. There is no written convention behind the layering rules, and the settings rule raised only false alarms.
+- **Where things are:** draft PR #1780 (do not merge) and the report at `C:\CE_PLAN\areas\release-v3-colleagues-TOOL_ARCH_01_REPORT.md`.
+- **What I left out:** I added no REGRESSION_LOG entry, and nothing was tested in AutoCAD.

@@ -1,0 +1,9 @@
+Mon 16:54 chain start: C-70 (Civil + Manager, diagnostic train); nothing is installed by this chain.
+Mon 16:54 starting train_c70_assembler_job.txt (sonnet)
+Mon 17:38 finished train_c70_assembler_job.txt
+Mon 17:38 starting train_c70_finalizer_job.txt (opus)
+Mon 18:38 finished train_c70_finalizer_job.txt
+Mon 18:38 C-70 finalizer verdict GO and C-69 installed: building payload 105 (candidate c1066). Nothing is installed by this chain.
+Mon 18:38 starting payload105_c70_job.txt (sonnet)
+Mon 23:23 finished payload105_c70_job.txt
+Mon 23:23 chain complete

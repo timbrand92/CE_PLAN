@@ -1,0 +1,8 @@
+== cx_rd12 (usage 48.0% -> 52.0%): 1. **DONE — 2 HIGH, 3 MEDIUM, 0 LOW.** Four verified by reading; one suspected REFEDIT fault. Biggest risk: Refresh Blocks can change symbols on locked layers.
+
+2. **Report:** [CODEX_AUDIT2_RD12_23OCT.md](/C:/CE_PLAN/areas/CODEX_AUDIT2_RD12_23OCT.md). Includes reproduction steps and smallest fixes.
+
+---
+
+1. **Saved and pushed:** `8f47e648`. Leak scan passed; no commits ahead.
+2. **Read-only limits honoured:** No code changes, builds, tests or AutoCAD. Audit worktree removed.

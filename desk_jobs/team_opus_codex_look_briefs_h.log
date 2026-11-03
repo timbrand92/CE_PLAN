@@ -1,0 +1,35 @@
+## For Tim
+
+1. **What's done.** I wrote a Codex "look" for each of the 6 pilot-critical bugs that need someone to see a CE window. Each look opens AutoCAD on a test copy and takes screenshots. All six are on hold in the queue. Nothing has run yet.
+2. **One change from your instruction.** You said to put the rest on Friday, but four looks plus the two G looks already held there would go over Friday's Codex limit. So 2 run Thursday evening, 3 run Friday evening and 1 runs Saturday evening.
+3. **The six looks, in the order they run:**
+   1. **H1, Thursday: CDCALC.** On a new job, the Catchments tab should open empty with a 5-minute storm, not a made-up 500 m2 catchment. If it does, BUG-1101 closes.
+      - **Still yours:** it also types heads of 0.25, 0.40, 0.30 and 0.84 m into the Charged System tab and copies the warning word for word. It judges nothing.
+      - **Why 0.40 m matters:** with about 0.22 m of pipe losses, 0.40 m is over 300 mm if the rule means the head you type, and under 300 mm if it means the head left after losses. BUG-1097 still needs your word on which one you mean.
+   2. **H2, Thursday: Help.** The Feedback help page should say "Send report", not describe a "Save report" step that doesn't exist. If it does, BUG-1215 closes.
+   3. **H3, Friday: Pit Schedule export.** Press Export, then Cancel. CE should write nothing into the drawing. If it doesn't, BUG-1198 closes.
+   4. **H4, Friday: Manager Drawing Repair.** On a test copy, Codex breaks one pipe label's link to its pipe, then presses Fix it. The page must not say "Nothing has been changed" afterwards. If so, BUG-1180 closes.
+   5. **H5, Friday: CDDESIGN.** Codex makes a fake STORM report for Glen Eira. The design must then use Glen Eira's rules, not say the council is missing. If so, BUG-1106 closes.
+   6. **H6, Saturday: the CE Tools ribbon tab.** There should be one CE Tools tab as soon as AutoCAD starts. This covers only half of BUG-1206.
+      - **Why only half:** the other half needs the Manager to load before Civil. Forcing that would mean changing your live install, so it needs a spare Windows login instead.
+4. **Best case:** 5 of the 60 bugs close, plus half of BUG-1206.
+   - **The catch:** H4 and H5 build their own test material, worked out from the program code and never tried in AutoCAD. If it doesn't work, the look reports BLOCKED. It never guesses.
+5. **Cost, as a share of Codex's weekly limit:** about 3 percent per look.
+   - **Thursday:** about 28 of the day's 30.
+   - **Friday:** about 43 of 44.
+   - **Saturday:** about 46 of 58.
+6. **What you need to do: nothing.** The desk releases each day's looks after 17:53.
+
+---
+
+## For the desk
+
+1. **Files:** 12 new files in `C:\Lisp Files\_CODEX_RUNNER\`: `verifyH1_c85.txt` / `verifyH1_c85_full.txt` through H6.
+   - **Rules block:** copied by script from G4, with only the build line and the date changed. I diffed it against G4 to confirm.
+   - **Checks:** the files are plain text with no special characters. A script confirmed the brackets balance in every typed line.
+2. **Queue:** I appended 10 lines to `CONVEYOR_QUEUE.txt` (6 held look lines and 4 comments saying when to release each).
+3. **Pushed:** the report `C:\CE_PLAN\areas\CODEX_LOOK_BRIEFS_H_29OCT.md` and the queue file. The leak scan was clean and the repo is level with GitHub, nothing waiting to push.
+
+## Summary (under 100 words)
+
+I wrote six Codex looks for the pilot-critical window bugs: CDCALC (BUG-1101; BUG-1097 reported both ways for Tim), Help (BUG-1215), Pit Schedule export cancel (BUG-1198), Drawing Repair (BUG-1180), CDDESIGN with Glen Eira (BUG-1106) and the CE Tools ribbon (half of BUG-1206). All six are held in the queue: two Thursday, three Friday, one Saturday, each inside that day's Codex limit. Nothing has run. The H4 and H5 test material is worked out from the program code and has never been tried in AutoCAD.

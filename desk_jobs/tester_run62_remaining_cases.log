@@ -1,0 +1,17 @@
+Four of the eight tasks are fully done. R09 has no valid run on its final text, R04 has one pass instead of two on 3.0.78, and R08x_1_exact was not run. The report is pushed and `git status -sb` shows nothing ahead.
+
+- **Build change:** Civil 3.0.78 was installed at 05:41:30, after my 3.0.77 runs, and no run straddles it. I redid the proving on 3.0.78.
+- **Done (two 3.0.78 passes each, with red twins):**
+  - R33: claim line corrected.
+  - R12: all four IL texts checked after the U, plus a new `R12_WIN_BROKEN` red for the no-window check.
+  - R36 and R36e: R36e tagged BUG-1223, and R36's false BUG-147 claim removed.
+  - R37b, R34s, R34so and R34sn: unchanged, re-run. BUG-665 still reproduces, so EXPECT-FAIL is kept.
+- **R04 and R06:**
+  - R04's top comment is fixed and its failing twin fails as intended.
+  - R04 has only one pass on 3.0.78, because Codex's lock and then Tim's hours blocked the second.
+  - R06 has two 3.0.78 passes.
+  - R06 and R40 look notes are written, Codex not run.
+- **R09 not finished:** the review's CE-log check could never pass, because the runner reads `CE_CVL_SUITE.log` and CE writes the double-click lines only to the structured log. I added a runner key `civilx` (`case_runner_lib.ps1`, hash A229DC0BAFA1 to 9CA386C76FB7). It passes `validate` but has not been run in AutoCAD.
+- **R08x_1_exact not run:** Codex held the lock at 08:15 and Tim's hours begin at 8:30. It needs about 10 minutes in the 2:00–3:00 pm window or after 5:30 pm.
+
+The report is `C:\CE_PLAN\areas\release-v3-colleagues-RUNNER_B4_FIXES_REPORT.md`.

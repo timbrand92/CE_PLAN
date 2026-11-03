@@ -1,0 +1,12 @@
+I've written and pushed the tested / not tested list. The leak-scan was clean and `git status -sb` shows no ahead.
+
+The file is `C:\CE_PLAN\areas\TESTED_NOT_TESTED_LIST_29OCT.md`, pushed as commit d3b86076.
+
+- **Everyday tools (A):** 38 lines, 21 tested, 12 in part, 5 not tested.
+- **Pilot-critical bugs (B):** 0 of 60 tested. The two draft cases (BUG-1194 and BUG-1140) have never run.
+- **Gate items and hand checks (C):** 58 entries. 26 tested, 1 tested and failed (the About CE Suite window), 16 in part, 15 not tested. The gate list alone has 1 in part and 10 not tested.
+
+Not verified:
+- Nothing was run in AutoCAD, and the installed build is the ledger's word, not a DLL read.
+- The tallies are hand counts, so CE 07 should recount at the first refresh.
+- I don't know whether tonight's robot re-runs on 3.0.85 have happened yet.

@@ -1,0 +1,9 @@
+== cx_rv16 (usage 12.0% -> 15.0%): 1. **DONE — saved and pushed the [findings report](C:/CE_PLAN/areas/CODEX_PR_REVIEW_GROUP16_24OCT.md).** Verdicts: **6 MERGE, 8 MERGE-WITH-FIXES, 1 HOLD**.
+
+2. **Main concern:** an unselected schedule floor can still supply C2’s size. CEMEMBER’s new stop in metre drawings also breaches R-27.
+
+3. **Outstanding priorities:** 2 HIGH, 5 MEDIUM, 2 LOW, with retained findings distinguished from changed verdicts.
+
+---
+
+1. **Saved:** CE_PLAN commit `8b421181`; leak scan passed. Only the findings file changed. No builds, tests or AutoCAD sessions.

@@ -1,0 +1,5 @@
+Only BUG-1069 is fixed (draft PR #1766); BUG-1067 and BUG-1068 are already covered by Codex PR #1719, and BUG-1065 and BUG-1066 were skipped as protected Installer code (PR #1714 holds the routing). Nothing was opened in AutoCAD, and no bug is marked FIXED.
+
+1. **BUG-1069:** two drawing-close checks now read the real Structural source and fail if it is missing. They sit on base `rel-20261023s`, head `d5f3c84d`. Structural net10 (Sbeam classes excluded): 5,444 passed, 0 failed. Removing the lock in a disposable copy made one new check fail.
+2. **Not tested:** AutoCAD, net48/net8, a full Civil suite.
+3. **Report:** `C:\CE_PLAN\areas\release-v3-colleagues-FB_TEAM_BATCH11_REPORT.md`, pushed.

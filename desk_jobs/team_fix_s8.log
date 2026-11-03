@@ -1,0 +1,19 @@
+Draft PR #1906 is open against `claude/rel-20261026s` (B-084), covering BUG-1185 and BUG-1200. BUG-1193 is skipped because it is a Civil fault (CDPROFILE) and not on the Structural line. Nothing has been run in AutoCAD, and no bug is marked FIXED.
+
+**FOR TIM**
+1. **CSTAGBEARERS (BUG-1185):** tagging a hand-drawn bearer now adds only one label. There is no second line under it and no straight line across a bend. A bearer picked twice is tagged once. The switch is `TimberSubfloor.TagBearersLabelOnly`, ON by default.
+2. **THCL family (BUG-1200):** Esc at the centre or the text position now leaves no saved size and no 900 x 900 outline. This covers THCL, THCR, BTHCL, BTHCR, PFCL, PFCR, BPFCL and BPFCR. The switch is `FootingWidth.RectTextCommitsOnceAccepted`, ON by default.
+3. **What changes on screen for BUG-1200:** while you pick the text position you now see a temporary outline, not the real drawn one. The real outline appears after the pick.
+4. **My mistakes:**
+   - I put both bugs in one PR; the brief said one PR each.
+   - A source-pinning test (`FootingDrawUnitsG4Tests`) failed on the first run because it pins the exact call text I changed. I updated the pin and re-ran it green.
+5. **Not proven:** the Esc behaviour, the temporary outline and the label position on a curved bearer. The robot case names are in the report.
+
+The tests were run per brief (focused classes only, never the full Structural suite, no Manager or Civil tests):
+- **Settings files:** all unchanged before and after.
+- **Other changes in the real folders:** four lines differ, in two files: a CE_CVL_SUITE log and a Manager session file. A running AutoCAD session writes those, not my tests.
+- **Tests:** the 11 new tests and the related source-pin classes pass on net10. The net48 compile has 0 errors.
+
+The report is `C:\CE_PLAN\areas\BUGFIX_s8_REPORT_31OCT.md`, pushed by name. After my push `git status -sb` shows `main...origin/main` with nothing ahead. It also lists `areas/BUG_REGISTER_TRIAGE_2026-10-24.md` as modified, but I did not touch that file.
+
+**Summary:** PR #1906, branch `claude/s8-bug1185-1200`. Files: `Services/TimberSubfloorService.cs`, `Services/CeTextService.cs`, `Models/UserSettings.cs`, `Core/Subfloor/SubfloorBearerTagRule.cs`, two new test files and `REGRESSION_LOG.md`. Switches: `TagBearersLabelOnly` and `RectTextCommitsOnceAccepted`, both ON.

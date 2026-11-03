@@ -1,0 +1,9 @@
+Tue 05:58 payload report clean; Codex lane held (STOP_CODEX.flag); waiting for AutoCAD and the lock to be free
+Tue 06:02 AutoCAD free and lock claimed: installing S-45
+Tue 06:02 2026-10-27 06:02:12 ABORT: AutoCAD 0 / Codex 2 running
+Tue 06:02 S-45 install not verified: stop for the desk (Codex hold lifted below)
+Tue 06:02 lock released; Codex hold lifted; the supervisor restarts the conveyor
+Tue 06:11 payload report clean; Codex lane held (STOP_CODEX.flag); waiting for AutoCAD and the lock to be free
+Tue 06:22 AutoCAD free and lock claimed: installing S-45
+Tue 06:23 2026-10-27 06:23:39 INSTALL VERIFIED: Structural 1.0.125 installed, every file matches the candidate, settings unchanged
+Tue 06:23 lock released; Codex hold lifted; the supervisor restarts the conveyor

@@ -1,0 +1,13 @@
+**FOR TIM**
+
+1. **Result:** I reviewed 3 fixes. 1 can go straight in and 2 need small fixes first. None is held or rejected, and I have no questions for you.
+2. **#1481, MERGE:** in CDRULES, a downpipe marked Detention with no length now says "Enter the detention length, or untick Detention". Before, it asked for a diameter the row already showed.
+3. **#1482, small fix first:** Tidy labels stops saying "No clear spot (on pit P8)" when the label is clearly beside the pit. As written, though, it would also let a label sit on a detention tank's outer wall without moving it. That needs fixing first.
+4. **#1441, one-character fix first:** the CDRECOVERINVERTS totals line has lost the space before "skipped". Once that's back, it can merge.
+5. **Don't mark these fixed yet:** BUG-854, BUG-141 and BUG-820. They are built and unit-tested only. Nobody has opened them in AutoCAD.
+
+---
+
+1. **Tests:** with the fixes taken out, the 3 new tests failed as they should. With the fixes in, 201 of 201 focused tests passed. Civil net48 built with 0 errors, and the whole solution built in Release with 0 errors.
+2. **My mistake:** my first net48 build pointed at the wrong reference folder and failed after 3 seconds. I stopped it, released the lock and reran it clean.
+3. **Housekeeping:** log entries 1369–1376 are pushed to C:\CE_PLAN and the leak scan was clean. The worktree is removed. Nothing was deployed, and nothing was pushed to the plugin repo.

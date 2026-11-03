@@ -1,0 +1,14 @@
+The C-61 candidate is built and proven. It is not installed. Nothing has been opened in AutoCAD.
+
+- **Candidate:** `C:\ce_rc_scratch\c1057` holds both bundles.
+- **Verification:** Civil reads verified 828, bad 0, extra 0. Manager reads verified 75, bad 0, extra 0. Both were re-checked after cleanup.
+- **Version commit:** `88bd62f7` on `claude/rel-20261023l`, on top of the signed head `033f7f03`. The diff was exactly 4 files, 4 insertions, 4 deletions.
+- **Tests:** pin tests passed, 41 of 41 Civil and 61 of 61 Manager.
+- **Strings:** 204 of 204 expected rows, covering every merged PR except #1536 (tests only) and #1525 (no code of its own).
+- **Odd:**
+  - The build lock is a file held by another job, so I built with my own TEMP.
+  - AutoCAD ran twice during the job, so I waited for it to close both times.
+  - Tim's `CD_Settings.json` was briefly rewritten by something else at 09:12:33 and was back to the original hash by 09:30.
+  - The installer left a 0.38 GB archive in `C:\Lisp Files\SUPERSEDED\CE_CVL_SUITE`.
+
+The full report is `C:\Lisp Files\_TEST_COPIES_20260923\PAYLOAD_C1057_REPORT.md`.

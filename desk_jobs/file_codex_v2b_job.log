@@ -1,0 +1,11 @@
+BUG-516 (freeboard) and BUG-141 (both halves) are now written FIXED (Codex-accepted, Civil 3.0.65, 20 Oct 2026), and the CE_PLAN changes are pushed. The leak-scan hook came back clean. The queue plan is outside the repo and was not committed.
+
+- **Pending:** BUG-856 is robot PASS, Codex acceptance pending, because Codex never reached a "would move" line.
+- **Still open:**
+  - BUG-416 is still seen on 3.0.65.
+  - BUG-505 is blocked by the untagged-drawing question.
+  - BUG-797 and BUG-782 are not tested, because P1, C1 and STUB were out of view.
+- **Coordinates:** I couldn't derive real coordinates for the P1, C1 and STUB zoom window, so I wrote "coordinates wanted: robot to read them" in `ROBOT_GAPS_2026-10-19.md`.
+- **Queue plan:** I added the section 7 result and a new section 8, "NEXT CODEX JOBS", to `QUEUE_20OCT_PLAN.md`.
+- **DP1:** noted as ROBOT_GAPS item 5, an open design item.
+- **Not done:** the fix queue triage file got no section 22, because no new product problem turned up.

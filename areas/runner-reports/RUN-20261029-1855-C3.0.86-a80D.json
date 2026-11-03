@@ -1,0 +1,796 @@
+{
+  "header": {
+    "run_id": "RUN-20261029-1855-C3.0.86-a80D",
+    "started": "2026-10-29 18:55:35",
+    "finished": "2026-10-29 19:03:54",
+    "build": {
+      "civil": {
+        "product_version": "3.0.86+5888ee757244aac89283aaaf2ba68e51470ecbb3",
+        "file_version": "3.0.86.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.86+5888ee757244aac89283aaaf2ba68e51470ecbb3",
+        "file_version": "1.1.86.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.86+5888ee75 / struc 1.0.125+204dfad2 / mgr 1.1.86+5888ee75",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "50AE5EA071E7A6E8EA43FA57E2C88A98BDBD373A4E9EE8105848F152B447645D",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.86+5888ee757244aac89283aaaf2ba68e51470ecbb3; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.86+5888ee757244aac89283aaaf2ba68e51470ecbb3",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4CD773B85EC5, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 13955AAA60D1, case_runner_lib.ps1 8F9B8DCBB473, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 3 case file(s) plus 0 shared setup(s); pack SHA-256 50AE5EA071E7A6E8EA43FA57E2C88A98BDBD373A4E9EE8105848F152B447645D; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json B3B5A004B929 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Thu 29 Oct 2026 18:55 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 0,
+    "FAIL": 1,
+    "FAIL_known": 2,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261029-1855-C3.0.86-a80D-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-29 18:55:35",
+      "finished": "2026-10-29 18:56:42",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31855391_B1.dwg",
+      "cases": [
+        "R22_OFF_BROKEN"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : B3B5A004B929 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    },
+    {
+      "session_id": "RUN-20261029-1855-C3.0.86-a80D-s2",
+      "phase": "main",
+      "session_no": 2,
+      "started": "2026-10-29 18:56:42",
+      "finished": "2026-10-29 18:59:42",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31856462_B1.dwg",
+      "cases": [
+        "N36"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": "Claude-driverv3",
+      "lock_after": "stale",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : B3B5A004B929 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": false,
+        "ended_by": null,
+        "error": "AutoCAD did not close gracefully and was NOT killed. If it is stuck, run quit again with -Kill."
+      }
+    },
+    {
+      "session_id": "RUN-20261029-1855-C3.0.86-a80D-s3",
+      "phase": "main",
+      "session_no": 3,
+      "started": "2026-10-29 18:59:42",
+      "finished": "2026-10-29 19:03:54",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31859483_B1.dwg",
+      "cases": [
+        "N36_BROKEN"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": "Claude-driverv3",
+      "lock_after": "stale",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : B3B5A004B929 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": false,
+        "ended_by": null,
+        "error": "AutoCAD did not close gracefully and was NOT killed. If it is stuck, run quit again with -Kill."
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "R22_OFF_BROKEN",
+      "proves_bugs": "",
+      "title": "BROKEN VARIANT of R22: CDCHECK's words switch OFF, so the handle and the CE-CIV-PIPE id come back on the command line (must FAIL)",
+      "kind": "deterministic",
+      "order": 9120,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "red-before-green proof for R22 (BUG-372, a real switch)",
+      "bug": "",
+      "known_fail": "BROKEN-VARIANT",
+      "reviewed_against": "",
+      "variant_of": "R22",
+      "expected": "After CDCHECK (All) the command line holds no 'handle ' text, no 'CE-CIV-PIPE-' or 'CE-CIV-PIT-' id and no '\\U+' escape code. With the switch ON (Civil 3.0.86 default) an unnamed pipe reads 'An unnamed pipe flows to WT4: Unresolved (not confirmed from the other side)' and the FALL arrow line reads 'FALL arrow points away from the nearest grated pit P4 (off by 168°)'.",
+      "why_not_unit": "The words are built from the real drawing's pipes and are only seen on the live command line.",
+      "not_automated": [
+        "Only the CDCHECK command line is swept here. The Checks palette rows (BUG-753, BUG-814 item 3) and the Pit Schedule footer (BUG-360) are not read."
+      ],
+      "file_sha256": "BACB1EB2E4016435F23FC5D1266D684793E7A5628A00638718AF990CB5202161",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "found: '[CE] Fall 1. FALL arrow, handle 1197BB, points away from the nearest grated pit P4 (off by 168°). Check the fall direction or move the arrow.'",
+      "started": "2026-10-29 18:56:08",
+      "seconds": 15.5,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDCHECK{NL}\" -Force -> $all1",
+          "ok": true,
+          "seconds": 7.6,
+          "evidence": "typed 'CDCHECK': Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: | [CE] CDCHECK: 212 objects, 184 connections: 179 Connected, 1 Possible, 4 Unresolved, 0 Not Connected..."
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $all_e",
+          "ok": true,
+          "seconds": 2.8,
+          "evidence": "esc-prompt: [CE] Pipe end 19. Pipe 150 (handle 10A86B): one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 20. Pipe 150 (handle 10A899): one end is not connected (the start). Connect it, or leave it ..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "history-tail",
+          "text": "history-tail -Index 150 -> $h_all",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "history: [ AutoCAD - Thu Oct 29 18:55:58 2026 ]---------------------------------------- | Menu item failed to load: CE_CVL_SUITE_MENU:CE CVL | Menu item failed to load: CE_SUITE_MANAGER_MENU:CE Manager | Loading AEC Base... | Loading AEC Base Extend..."
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"[CE] CDCHECK:\"",
+          "ok": true,
+          "expected": "command line has '[CE] CDCHECK:'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CE] CDCHECK: 212 objects, 184 connections: 179 Connected, 1 Possible, 4 Unresolved, 0 Not Connected, 0 Unknown.'"
+        },
+        {
+          "n": 2,
+          "text": "history absent \"handle \"",
+          "ok": false,
+          "expected": "command line lacks 'handle '",
+          "actual": "27 matching line(s)",
+          "evidence": "found: '[CE] Fall 1. FALL arrow, handle 1197BB, points away from the nearest grated pit P4 (off by 168°). Check the fall direction or move the arrow.'"
+        },
+        {
+          "n": 3,
+          "text": "history absent \"CE-CIV-PIPE-\"",
+          "ok": false,
+          "expected": "command line lacks 'CE-CIV-PIPE-'",
+          "actual": "17 matching line(s)",
+          "evidence": "found: '1. CE-CIV-PIPE-6A33BA73-044F-4489-AC73-78E75527B461 flows to WT4: Unresolved (not confirmed from the other side)'"
+        },
+        {
+          "n": 4,
+          "text": "history absent \"CE-CIV-PIT-\"",
+          "ok": true,
+          "expected": "command line lacks 'CE-CIV-PIT-'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'CE-CIV-PIT-' (98 lines read)"
+        },
+        {
+          "n": 5,
+          "text": "history absent \"U+2192\"",
+          "ok": true,
+          "expected": "command line lacks 'U+2192'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'U+2192' (98 lines read)"
+        },
+        {
+          "n": 6,
+          "text": "history absent \"\\U+\"",
+          "ok": true,
+          "expected": "command line lacks '\\U+'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains '\\U+' (98 lines read)"
+        },
+        {
+          "n": 7,
+          "text": "record $h_all \"FULL the last 150 command-line lines\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "[ AutoCAD - Thu Oct 29 18:55:58 2026 ]---------------------------------------- | Menu item failed to load: CE_CVL_SUITE_MENU:CE CVL | Menu item failed to load: CE_SUITE_MANAGER_MENU:CE Manager | Loading AEC Base... | Loading AEC Base Extended... | Loading AEC Core... | Loading AEC Project Base... | Loading AEC Architectural Base... | Loading AEC Schedule... | Opening an AutoCAD 2018 format file. | Substituting [simplex.shx] for [rpnf.shx]. | Substituting [simplex.shx] for [ASFONTS.shx]. | Substituting [simplex.shx] for [ASFONTS.shx]. | Substituting [simplex.shx] for [ASFONTS.shx]. | Substituting [simplex.shx] for [ASFONTS.shx]. | Substituting [simplex.shx] for [ASFONTS.shx]. | Substituting [simplex.shx] for [ASFONTS.shx]. | Resolve Xref \"XW2626-Title Block\": .\\Xref\\XW2626-Title Block.dwg | \"XW2626-Title Block.dwg\" cannot be found. | Resolve Xref \"XW2614-Arch Survey\": .\\Xref\\XW2626-Arch Survey.dwg | \"XW2626-Arch Survey.dwg\" cannot be found. | Resolve Xref \"XW2614-Arch Ground\": .\\Xref\\XW2626-Arch Ground.dwg | \"XW2626-Arch Ground.dwg\" cannot be found. | Resolve Xref \"XW2614-Arch Site\": .\\Xref\\XW2626-Site.dwg | \"XW2626-Site.dwg\" cannot be found. | Xref \"22547_XCivil\": .\\Engineering\\Markups\\2026-04-07_Revised Design from Mike\\22547_XCivil.dwg | \"22547_XCivil\" is unloaded. | Regenerating model. | *Cancel* | [CE] Background not found: XW2626-Title Block. Type CDXREFREPAIR to look for it and fix the path. | [CE] Background not found: XW2614-Arch Survey. Type CDXREFREPAIR to look for it and fix the path. | [CE] Background not found: XW2614-Arch Ground. Type CDXREFREPAIR to look for it and fix the path. | [CE] Background not found: XW2614-Arch Site. Type CDXREFREPAIR to look for it and fix the path. | ; error: syntax error | AutoCAD menu utilities loaded.*Cancel* | Command: | Autodesk DWG. This file is a TrustedDWG last saved by an Autodesk application or Autodesk licensed application. | Command: | [CE] 49 pipe(s) upgraded to CE pipe objects, 49 given their CE identity. Backup: C:\\ce_rc_drv\\CLDV31855391_B1_PRE_C7_20261029_185602.dwg | CE CVL loaded: CE_CVL_SUITE v3.0.86.0 [Modern] | Start with CD, PIT, PITSCHEDULE, or CDEDIT. | Use CDHELP for workflow guidance and CDREPAIR for recovery. | Regenerating model. | Command: | Command: | Command: | Command: _.ID Specify point: 68166.1,0 | X = 68166.100 Y = 0.000 Z = 0.000 | Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: | [CE] CDCHECK: 212 objects, 184 connections: 179 Connected, 1 Possible, 4 Unresolved, 0 Not Connected, 0 Unknown. | [CE] This drawing holds a saved check record of 223 objects; 212 are in the drawing now (0 added since, 11 no longer there). | 1. CE-CIV-PIPE-6A33BA73-044F-4489-AC73-78E75527B461 flows to WT4: Unresolved (not confirmed from the other side) | 2. CE-CIV-PIPE-7ED70B2C-90D3-4950-96EA-282201BBF4AB flows to WT10: Unresolved (not confirmed from the other side) | 3. CE-CIV-PIPE-B5E70382-0641-4744-9443-6AB98FE1E0A2 flows to WT7: Unresolved (not confirmed from the other side) | 4. CE-CIV-PIPE-D6873A07-FD37-4D3D-8455-504DD1AE059A flows to WT6: Unresolved (not confirmed from the other side) | 5. CE-CIV-PIPE-144E3025-C150-486F-99B4-0DAD9248514A connected to CE-CIV-PIPE-4CF8731A-B921-4211-8ACF-44282C047D48: Possible | 6. AGI->C1 flows from AGI: Connected | 7. AGI->C1 flows from AGI: Connected | 8. AGI->C1 flows to C1: Connected | 9. AGI->C1 flows to C1: Connected | 10. AGI->P1 flows from AGI: Connected | 11. AGI->P1 flows from AGI: Connected | 12. AGI->P1 flows to P1: Connected | 13. AGI->P1 flows to P1: Connected | 14. C1->STUB flows from C1: Connected | 15. C1->STUB flows to STUB: Connected | 16. CE-CIV-PIPE-03E86726-EB79-40BA-960A-B91414DCF977 flows from X1: Connected | 17. CE-CIV-PIPE-0766B123-0820-46F0-994F-003666042E6A flows to WT11: Connected | 18. CE-CIV-PIPE-6E8324A1-A89B-453C-9AC8-971444C5F367 flows to WT9: Connected | 19. CE-CIV-PIPE-73B797A9-8E64-4517-A874-E5F12E7F6635 flows to WT8: Connected |...",
+          "evidence": "RECORDED, not judged: FULL the last 150 command-line lines = [ AutoCAD - Thu Oct 29 18:55:58 2026 ]---------------------------------------- | Menu item failed to load: CE_CVL_SUITE_MENU:CE CVL | Menu item failed to load: CE_SUITE_MANAGER_MENU:CE Manager | Loading AEC Base... | Loading AEC Base Extended... | Loading AEC Core... | Loading AEC Project Base... | Loading AEC Architectural Base... | Loading AEC Schedule... | Opening an AutoCAD 2018 format file. | Substituting [simplex.shx] for [rpnf.shx]. | Substituting [simplex.shx] for [ASFONTS.shx]. | Substituting [simplex.shx] for [ASFONTS.shx]. | Substituting [simplex.shx] for [ASFONTS.shx]. | Substituting [simplex.shx] for [ASFONTS.shx]. | Substituting [simplex.shx] for [ASFONTS.shx]. | Substituting [simplex.shx] for [ASFONTS.shx]. | Resolve Xref \"XW2626-Title Block\": .\\Xref\\XW2626-Title Block.dwg | \"XW2626-Title Block.dwg\" cannot be found. | Resolve Xref \"XW2614-Arch Survey\": .\\Xref\\XW2626-Arch Survey.dwg | \"XW2626-Arch Survey.dwg\" cannot be found. | Resolve Xref \"XW2614-Arch Ground\": .\\Xref\\XW2626-Arch Ground.dwg | \"XW2626-Arch Ground.dwg\" cannot be found. | Resolve Xref \"XW2614-Arch Site\": .\\Xref\\XW2626-Site.dwg | \"XW2626-Site.dwg\" cannot be found. | Xref \"22547_XCivil\": .\\Engineering\\Markups\\2026-04-07_Revised Design from Mike\\22547_XCivil.dwg | \"22547_XCivil\" is unloaded. | Regenerating model. | *Cancel* | [CE] Background not found: XW2626-Title Block. Type CDXREFREPAIR to look for it and fix the path. | [CE] Background not found: XW2614-Arch Survey. Type CDXREFREPAIR to look for it and fix the path. | [CE] Background not found: XW2614-Arch Ground. Type CDXREFREPAIR to look for it and fix the path. | [CE] Background not found: XW2614-Arch Site. Type CDXREFREPAIR to look for it and fix the path. | ; error: syntax error | AutoCAD menu utilities loaded.*Cancel* | Command: | Autodesk DWG. This file is a TrustedDWG last saved by an Autodesk application or Autodesk licensed application. | Command: | [CE] 49 pipe(s) upgraded to CE pipe objects, 49 given their CE identity. Backup: C:\\ce_rc_drv\\CLDV31855391_B1_PRE_C7_20261029_185602.dwg | CE CVL loaded: CE_CVL_SUITE v3.0.86.0 [Modern] | Start with CD, PIT, PITSCHEDULE, or CDEDIT. | Use CDHELP for workflow guidance and CDREPAIR for recovery. | Regenerating model. | Command: | Command: | Command: | Command: _.ID Specify point: 68166.1,0 | X = 68166.100 Y = 0.000 Z = 0.000 | Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: | [CE] CDCHECK: 212 objects, 184 connections: 179 Connected, 1 Possible, 4 Unresolved, 0 Not Connected, 0 Unknown. | [CE] This drawing holds a saved check record of 223 objects; 212 are in the drawing now (0 added since, 11 no longer there). | 1. CE-CIV-PIPE-6A33BA73-044F-4489-AC73-78E75527B461 flows to WT4: Unresolved (not confirmed from the other side) | 2. CE-CIV-PIPE-7ED70B2C-90D3-4950-96EA-282201BBF4AB flows to WT10: Unresolved (not confirmed from the other side) | 3. CE-CIV-PIPE-B5E70382-0641-4744-9443-6AB98FE1E0A2 flows to WT7: Unresolved (not confirmed from the other side) | 4. CE-CIV-PIPE-D6873A07-FD37-4D3D-8455-504DD1AE059A flows to WT6: Unresolved (not confirmed from the other side) | 5. CE-CIV-PIPE-144E3025-C150-486F-99B4-0DAD9248514A connected to CE-CIV-PIPE-4CF8731A-B921-4211-8ACF-44282C047D48: Possible | 6. AGI->C1 flows from AGI: Connected | 7. AGI->C1 flows from AGI: Connected | 8. AGI->C1 flows to C1: Connected | 9. AGI->C1 flows to C1: Connected | 10. AGI->P1 flows from AGI: Connected | 11. AGI->P1 flows from AGI: Connected | 12. AGI->P1 flows to P1: Connected | 13. AGI->P1 flows to P1: Connected | 14. C1->STUB flows from C1: Connected | 15. C1->STUB flows to STUB: Connected | 16. CE-CIV-PIPE-03E86726-EB79-40BA-960A-B91414DCF977 flows from X1: Connected | 17. CE-CIV-PIPE-0766B123-0820-46F0-994F-003666042E6A flows to WT11: Connected | 18. CE-CIV-PIPE-6E8324A1-A89B-453C-9AC8-971444C5F367 flows to WT9: Connected | 19. CE-CIV-PIPE-73B797A9-8E64-4517-A874-E5F12E7F6635 flows to WT8: Connected |..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 2 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDCHECK cancelled 8285 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-29 18:56:23",
+      "session_id": "RUN-20261029-1855-C3.0.86-a80D-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [
+          "known failure (BROKEN-VARIANT): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "N36",
+      "proves_bugs": "BUG-1228",
+      "title": "A downpipe places in a few seconds: every source landing read is under 1.5 s and DP completes under 10 s (BUG-1228)",
+      "kind": "deterministic",
+      "order": 136,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "BUG-1228 (B-004, train C-76 PR 1837); DP, OF and CDFW speed",
+      "bug": "BUG-1228",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "With the timing log ON, DP at 150000,-80000 prints 'Downpipe placed. Tag: DP<n>.' and offers the next DP; Esc stops it; one new DOWNPIPE DYNAMIC WITH MASK insert exists; no 'could not be refreshed'. The CE log gains at least one '[BUG-1228] Source landing index read in N ms' line and one '[BUG-1228] Source change read in N ms' line, every one with N under 1,500 and 'reads each object once: on', none 'off'; and 'Command outcome: DP completed N ms' with N under 10,000. On Civil 3.0.85 the same DP took 27,600 to 32,400 ms (four reads of about 5 s each).",
+      "why_not_unit": "The time is spent reading the real drawing's 1,083 objects and 49 pipes; the unit tests prove the same answers on made-up objects, never the time on a real drawing.",
+      "not_automated": [
+        "OF, CDFW and a DP dropped on a pipe end use the same reads but are not timed here (the report's later twins N31b and N31c, to be renumbered).",
+        "The 10,000 ms budget includes the runner's own wait at the next DP prompt; a slow PC or a busy disk can add seconds. A FAIL on that check alone with every read line under 1,500 ms is worth one re-run in a new start before it is called a fault.",
+        "If the timing switch is not picked up from the SETTING line, no [BUG-1228] line is written and the 'has' checks fail: that is a setup fault, not a product fault (the record of the CE log tells which)."
+      ],
+      "file_sha256": "98209E977450D411BDE1101DCE9C4089B67D68DAD973FCF0F4EF349748641935",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "no match for /(?s)^(?!.*(?:Source landing index|Source change) read in (?:1[5-9][0-9]{2}|[2-9][0-9]{3}|[1-9][0-9]{4,}) ms)/ in: 2026-10-29 18:57:27.289 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-10-29 18:57:27.290 [INFO] Project data loaded from DWG: 11 pits, 49 pipes, manual row...",
+      "started": "2026-10-29 18:57:24",
+      "seconds": 27.5,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"DP{NL}150000,-80000\" -Force -ExpectPrompt \"Pick the next DP\" -TimeoutSec 90 -> $dp",
+          "ok": true,
+          "seconds": 10.7,
+          "evidence": "typed 'DP 150000,-80000': Command: | Command: DP | Specify downpipe insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $dp_esc",
+          "ok": true,
+          "seconds": 4.7,
+          "evidence": "esc-prompt: Specify downpipe insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. Nothing nearby. The so..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $new",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "2 object(s) after index 1034 (model space now 1036); by type: AcDbBlockReference 1; AcDbText 1; first: 11C55B AcDbBlockReference DOWNPIPES DOWNPIPE DYNAMIC WITH MASK ; 11C563 AcDbText GUIDELINES DP"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"name=DOWNPIPE DYNAMIC WITH MASK\" -> $dps",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "selected 1 of 2: 11C55B DOWNPIPE DYNAMIC WITH MASK DOWNPIPES"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 5",
+          "ok": true,
+          "seconds": 5.1,
+          "evidence": "slept 5 s"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "log-read",
+          "text": "log-read civil -> $civ",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "99 new line(s) in the civil CE log since the case began "
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "history-tail",
+          "text": "history-tail -> $tail",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "history: \"22547_XCivil\" is unloaded. | Regenerating model. | *Cancel* | [CE] Background not found: XW2626-Title Block. Type CDXREFREPAIR to look for it and fix the path. | [CE] Background not found: XW2614-Arch Survey. Type CDXREFREPAIR to look for ..."
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"Downpipe placed. Tag: DP\"",
+          "ok": true,
+          "expected": "command line has 'Downpipe placed. Tag: DP'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Downpipe placed. Tag: DP1. Nothing nearby. The source connects when a pipe is drawn to it.'"
+        },
+        {
+          "n": 2,
+          "text": "history absent \"could not be refreshed\"",
+          "ok": true,
+          "expected": "command line lacks 'could not be refreshed'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'could not be refreshed' (8 lines read)"
+        },
+        {
+          "n": 3,
+          "text": "history absent \"Nothing will be placed here\"",
+          "ok": true,
+          "expected": "command line lacks 'Nothing will be placed here'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'Nothing will be placed here' (8 lines read)"
+        },
+        {
+          "n": 4,
+          "text": "count $dps = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $dps = 1 (expected = 1)"
+        },
+        {
+          "n": 5,
+          "text": "log civil has \"[BUG-1228] Source landing index read in\"",
+          "ok": true,
+          "expected": "civil log has '[BUG-1228] Source landing index read in'",
+          "actual": "4",
+          "evidence": "log: '2026-10-29 18:57:29.093 [INFO] [BUG-1228] Source landing index read in 1617 ms: 49 pipe(s); objects read in full 2068, passed over 188139, reused 4185; reads each object once: on.'"
+        },
+        {
+          "n": 6,
+          "text": "log civil has \"[BUG-1228] Source change read in\"",
+          "ok": true,
+          "expected": "civil log has '[BUG-1228] Source change read in'",
+          "actual": "1",
+          "evidence": "log: '2026-10-29 18:57:32.226 [INFO] [BUG-1228] Source change read in 490 ms: 49 pipe(s); objects read in full 2072, passed over 188418, reused 4278; reads each object once: on.'"
+        },
+        {
+          "n": 7,
+          "text": "log civil has \"reads each object once: on\"",
+          "ok": true,
+          "expected": "civil log has 'reads each object once: on'",
+          "actual": "5",
+          "evidence": "log: '2026-10-29 18:57:29.093 [INFO] [BUG-1228] Source landing index read in 1617 ms: 49 pipe(s); objects read in full 2068, passed over 188139, reused 4185; reads each object once: on.'"
+        },
+        {
+          "n": 8,
+          "text": "log civil absent \"reads each object once: off\"",
+          "ok": true,
+          "expected": "civil log lacks 'reads each object once: off'",
+          "actual": "0",
+          "evidence": "no new civil log line contains 'reads each object once: off' (99 new lines read)"
+        },
+        {
+          "n": 9,
+          "text": "matches $civ \"(?s)^(?!.*(?:Source landing index|Source change) read in (?:1[5-9][0-9]{2}|[2-9][0-9]{3}|[1-9][0-9]{4,}) ms)\"",
+          "ok": false,
+          "expected": "matches /(?s)^(?!.*(?:Source landing index|Source change) read in (?:1[5-9][0-9]{2}|[2-9][0-9]{3}|[1-9][0-9]{4,}) ms)/",
+          "actual": "2026-10-29 18:57:27.289 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-10-29 18:57:27.290 [INFO] Project data loaded from DWG: 11 pits, 49 pipes, manual row...",
+          "evidence": "no match for /(?s)^(?!.*(?:Source landing index|Source change) read in (?:1[5-9][0-9]{2}|[2-9][0-9]{3}|[1-9][0-9]{4,}) ms)/ in: 2026-10-29 18:57:27.289 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-10-29 18:57:27.290 [INFO] Project data loaded from DWG: 11 pits, 49 pipes, manual row..."
+        },
+        {
+          "n": 10,
+          "text": "matches $civ \"Command outcome: DP completed [0-9]{1,4} ms\"",
+          "ok": false,
+          "expected": "matches /Command outcome: DP completed [0-9]{1,4} ms/",
+          "actual": "2026-10-29 18:57:27.289 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-10-29 18:57:27.290 [INFO] Project data loaded from DWG: 11 pits, 49 pipes, manual row...",
+          "evidence": "no match for /Command outcome: DP completed [0-9]{1,4} ms/ in: 2026-10-29 18:57:27.289 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-10-29 18:57:27.290 [INFO] Project data loaded from DWG: 11 pits, 49 pipes, manual row..."
+        },
+        {
+          "n": 11,
+          "text": "record $civ \"FULL the new CE log lines (every [BUG-1228] timing line and the DP outcome line)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "2026-10-29 18:57:27.289 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-10-29 18:57:27.290 [INFO] Project data loaded from DWG: 11 pits, 49 pipes, manual rows=0 | 2026-10-29 18:57:27.341 [INFO] [PERF] ProjectDataService.SaveToDrawing: 48.6 ms jsonLen=243925 | 2026-10-29 18:57:27.341 [INFO] Project data saved to DWG successfully | 2026-10-29 18:57:27.341 [INFO] Project data switched to: C:\\Users\\TimothyBrand\\AppData\\Roaming\\TIM_CE_CADTOOLS\\projects\\CD_ProjectData_CLDV31856462_B1_f4f73f4e.json | 2026-10-29 18:57:27.436 [INFO] [PERF] ProjectDataService.SaveToDrawing: 7.5 ms jsonLen=246963 | 2026-10-29 18:57:27.436 [INFO] Project data saved to DWG successfully | 2026-10-29 18:57:27.437 [INFO] [Spine] 49 row(s) took the identity already on their drawing object: 1091A0, 1091E0, 109359, 109390, 1093C7, 109430, 1094BE, 109500, 109835, 109874, 1098B6, 1098E8, 10993C, 10996E, 109A30, 109B80, 109BBC, 109C15, 109C55, 109CCF, 109E23, 109E6D, 109ED4, 109F81, 10A1D4, 10A243, 10A27D, 10A348, 10A3B0, 10A3E0, 10A430, 10A86B, 10A899, 10A8C7, 10A901, 10A942, 10A98D, 10A9C9, 10AA03, 10AAB6, 10B03B, 10B083, 110136, 110179, 11035C, 1135E9, 11362F, 113659, 1136A4 | 2026-10-29 18:57:27.939 [INFO] CDRG index filled pipe 1091A0 From end key 'CE-CIV-SRC-5BA71A30-C5AB-49CA-94B2-09738FB7D277' from physical start. | 2026-10-29 18:57:27.949 [INFO] CDRG index filled pipe 1091E0 From end key 'CE-CIV-SRC-F55F0E0A-EA92-4D33-B761-DE091382DC74' from physical start. | 2026-10-29 18:57:28.016 [INFO] CDRG index filled pipe 1094BE To end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical end. | 2026-10-29 18:57:28.030 [INFO] CDRG index filled pipe 109500 From end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical start. | 2026-10-29 18:57:28.049 [INFO] CDRG index filled pipe 109874 From end key 'CE-CIV-SRC-3126A41E-740A-4F2F-9C85-E87C720320B8' from physical start. | 2026-10-29 18:57:28.074 [INFO] CDRG index filled pipe 109A30 From end key 'CE-CIV-SRC-7969B9A3-974F-4050-91FD-F43CDD4D3D78' from physical start. | 2026-10-29 18:57:28.089 [INFO] CDRG index filled pipe 109B80 To end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical end. | 2026-10-29 18:57:28.097 [INFO] CDRG index filled pipe 109BBC From end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical start. | 2026-10-29 18:57:28.102 [INFO] CDRG index filled pipe 109C15 To end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical end. | 2026-10-29 18:57:28.111 [INFO] CDRG index filled pipe 109C55 From end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical start. | 2026-10-29 18:57:28.129 [INFO] CDRG index filled pipe 109E6D From end key 'CE-CIV-SRC-6CFC2891-A39C-48D2-9B37-AF2450FECD10' from physical start. | 2026-10-29 18:57:28.129 [INFO] CDRG index filled pipe 109E6D To end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical end. | 2026-10-29 18:57:28.140 [INFO] CDRG index filled pipe 109ED4 From end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical start. | 2026-10-29 18:57:28.151 [INFO] CDRG index filled pipe 10A1D4 To end key 'CE-CIV-SRC-FED21B8E-5720-4680-92A6-8953BCF84699' from physical end. | 2026-10-29 18:57:28.159 [INFO] CDRG index filled pipe 10A243 From end key 'CE-CIV-SRC-FED21B8E-5720-4680-92A6-8953BCF84699' from physical start. | 2026-10-29 18:57:28.193 [INFO] CDRG index filled pipe 10A86B To end key 'CE-CIV-SRC-E374079F-E3C7-45A9-B3FE-FA254A38BC98' from physical end. | 2026-10-29 18:57:28.198 [INFO] CDRG index filled pipe 10A899 To end key 'CE-CIV-SRC-F776FA64-4382-4BCF-ABFB-01DF7E89B3EA' from physical end. | 2026-10-29 18:57:28.205 [INFO] CDRG index filled pipe 10A8C7 From end key 'CE-CIV-SRC-F776FA64-4382-4BCF-ABFB-01DF7E89B3EA' from physical start. | 2026-10-29 18:57:28.212 [INFO] CDRG index filled pipe 10A901 From end key 'CE-CIV-SRC-E374079F-E3C7-45A9-B3FE-FA254A38BC98' from physical start. | 2026-10-29 18:57:28.220 [INFO] C...",
+          "evidence": "RECORDED, not judged: FULL the new CE log lines (every [BUG-1228] timing line and the DP outcome line) = 2026-10-29 18:57:27.289 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-10-29 18:57:27.290 [INFO] Project data loaded from DWG: 11 pits, 49 pipes, manual rows=0 | 2026-10-29 18:57:27.341 [INFO] [PERF] ProjectDataService.SaveToDrawing: 48.6 ms jsonLen=243925 | 2026-10-29 18:57:27.341 [INFO] Project data saved to DWG successfully | 2026-10-29 18:57:27.341 [INFO] Project data switched to: C:\\Users\\TimothyBrand\\AppData\\Roaming\\TIM_CE_CADTOOLS\\projects\\CD_ProjectData_CLDV31856462_B1_f4f73f4e.json | 2026-10-29 18:57:27.436 [INFO] [PERF] ProjectDataService.SaveToDrawing: 7.5 ms jsonLen=246963 | 2026-10-29 18:57:27.436 [INFO] Project data saved to DWG successfully | 2026-10-29 18:57:27.437 [INFO] [Spine] 49 row(s) took the identity already on their drawing object: 1091A0, 1091E0, 109359, 109390, 1093C7, 109430, 1094BE, 109500, 109835, 109874, 1098B6, 1098E8, 10993C, 10996E, 109A30, 109B80, 109BBC, 109C15, 109C55, 109CCF, 109E23, 109E6D, 109ED4, 109F81, 10A1D4, 10A243, 10A27D, 10A348, 10A3B0, 10A3E0, 10A430, 10A86B, 10A899, 10A8C7, 10A901, 10A942, 10A98D, 10A9C9, 10AA03, 10AAB6, 10B03B, 10B083, 110136, 110179, 11035C, 1135E9, 11362F, 113659, 1136A4 | 2026-10-29 18:57:27.939 [INFO] CDRG index filled pipe 1091A0 From end key 'CE-CIV-SRC-5BA71A30-C5AB-49CA-94B2-09738FB7D277' from physical start. | 2026-10-29 18:57:27.949 [INFO] CDRG index filled pipe 1091E0 From end key 'CE-CIV-SRC-F55F0E0A-EA92-4D33-B761-DE091382DC74' from physical start. | 2026-10-29 18:57:28.016 [INFO] CDRG index filled pipe 1094BE To end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical end. | 2026-10-29 18:57:28.030 [INFO] CDRG index filled pipe 109500 From end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical start. | 2026-10-29 18:57:28.049 [INFO] CDRG index filled pipe 109874 From end key 'CE-CIV-SRC-3126A41E-740A-4F2F-9C85-E87C720320B8' from physical start. | 2026-10-29 18:57:28.074 [INFO] CDRG index filled pipe 109A30 From end key 'CE-CIV-SRC-7969B9A3-974F-4050-91FD-F43CDD4D3D78' from physical start. | 2026-10-29 18:57:28.089 [INFO] CDRG index filled pipe 109B80 To end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical end. | 2026-10-29 18:57:28.097 [INFO] CDRG index filled pipe 109BBC From end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical start. | 2026-10-29 18:57:28.102 [INFO] CDRG index filled pipe 109C15 To end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical end. | 2026-10-29 18:57:28.111 [INFO] CDRG index filled pipe 109C55 From end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical start. | 2026-10-29 18:57:28.129 [INFO] CDRG index filled pipe 109E6D From end key 'CE-CIV-SRC-6CFC2891-A39C-48D2-9B37-AF2450FECD10' from physical start. | 2026-10-29 18:57:28.129 [INFO] CDRG index filled pipe 109E6D To end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical end. | 2026-10-29 18:57:28.140 [INFO] CDRG index filled pipe 109ED4 From end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical start. | 2026-10-29 18:57:28.151 [INFO] CDRG index filled pipe 10A1D4 To end key 'CE-CIV-SRC-FED21B8E-5720-4680-92A6-8953BCF84699' from physical end. | 2026-10-29 18:57:28.159 [INFO] CDRG index filled pipe 10A243 From end key 'CE-CIV-SRC-FED21B8E-5720-4680-92A6-8953BCF84699' from physical start. | 2026-10-29 18:57:28.193 [INFO] CDRG index filled pipe 10A86B To end key 'CE-CIV-SRC-E374079F-E3C7-45A9-B3FE-FA254A38BC98' from physical end. | 2026-10-29 18:57:28.198 [INFO] CDRG index filled pipe 10A899 To end key 'CE-CIV-SRC-F776FA64-4382-4BCF-ABFB-01DF7E89B3EA' from physical end. | 2026-10-29 18:57:28.205 [INFO] CDRG index filled pipe 10A8C7 From end key 'CE-CIV-SRC-F776FA64-4382-4BCF-ABFB-01DF7E89B3EA' from physical start. | 2026-10-29 18:57:28.212 [INFO] CDRG index filled pipe 10A901 From end key 'CE-CIV-SRC-E374079F-E3C7-45A9-B3FE-FA254A38BC98' from physical start. | 2026-10-29 18:57:28.220 [INFO] C..."
+        },
+        {
+          "n": 12,
+          "text": "record $dp \"FULL what DP printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: DP | Specify downpipe insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. Nothing nearby. The source connects when a pipe is drawn to it. | [CE] Pick the next DP, or press Esc to stop. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL what DP printed = Command: | Command: DP | Specify downpipe insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. Nothing nearby. The source connects when a pipe is drawn to it. | [CE] Pick the next DP, or press Esc to stop. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 13,
+          "text": "record $tail \"last command-line lines\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "\"22547_XCivil\" is unloaded. | Regenerating model. | *Cancel* | [CE] Background not found: XW2626-Title Block. Type CDXREFREPAIR to look for it and fix the path. | [CE] Background not found: XW2614-Arch Survey. Type CDXRE...",
+          "evidence": "RECORDED, not judged: last command-line lines = \"22547_XCivil\" is unloaded. | Regenerating model. | *Cancel* | [CE] Background not found: XW2626-Title Block. Type CDXREFREPAIR to look for it and fix the path. | [CE] Background not found: XW2614-Arch Survey. Type CDXRE..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 99 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: DP completed 11303 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-29 18:57:52",
+      "session_id": "RUN-20261029-1855-C3.0.86-a80D-s2",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": true
+      }
+    },
+    {
+      "id": "N36_BROKEN",
+      "proves_bugs": "",
+      "title": "BROKEN VARIANT of N36: each object is re-read for every pipe end (switch OFF), so the reads take seconds and DP about 30 s (must FAIL)",
+      "kind": "deterministic",
+      "order": 9136,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "red-before-green proof for N36 (BUG-1228, a real switch)",
+      "bug": "",
+      "known_fail": "BROKEN-VARIANT",
+      "reviewed_against": "",
+      "variant_of": "N36",
+      "expected": "With the timing log ON, DP at 150000,-80000 prints 'Downpipe placed. Tag: DP<n>.' and offers the next DP; Esc stops it; one new DOWNPIPE DYNAMIC WITH MASK insert exists; no 'could not be refreshed'. The CE log gains at least one '[BUG-1228] Source landing index read in N ms' line and one '[BUG-1228] Source change read in N ms' line, every one with N under 1,500 and 'reads each object once: on', none 'off'; and 'Command outcome: DP completed N ms' with N under 10,000.",
+      "why_not_unit": "The time is spent reading the real drawing's 1,083 objects and 49 pipes; the unit tests prove the same answers on made-up objects, never the time on a real drawing.",
+      "not_automated": [
+        "The exact old figures (about 4,000 to 6,000 ms per read, about 29,000 ms for DP) are recorded, not asserted; the red only needs one read at 1,500 ms or more and the 'off' wording."
+      ],
+      "file_sha256": "27C84F954BD36F5A7578527E295353A08B7AA1357BBFFCFB9E78F2A85E5447A3",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "no new civil log line contains 'reads each object once: on' (97 new lines read) ",
+      "started": "2026-10-29 19:01:20",
+      "seconds": 40.2,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"DP{NL}150000,-80000\" -Force -ExpectPrompt \"Pick the next DP\" -TimeoutSec 90 -> $dp",
+          "ok": true,
+          "seconds": 28.1,
+          "evidence": "typed 'DP 150000,-80000': Command: | Command: DP | Specify downpipe insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $dp_esc",
+          "ok": true,
+          "seconds": 2.7,
+          "evidence": "esc-prompt: Specify downpipe insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. Nothing nearby. The so..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $new",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "2 object(s) after index 1034 (model space now 1036); by type: AcDbBlockReference 1; AcDbText 1; first: 11C55B AcDbBlockReference DOWNPIPES DOWNPIPE DYNAMIC WITH MASK ; 11C563 AcDbText GUIDELINES DP"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"name=DOWNPIPE DYNAMIC WITH MASK\" -> $dps",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C55B DOWNPIPE DYNAMIC WITH MASK DOWNPIPES"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 5",
+          "ok": true,
+          "seconds": 5.0,
+          "evidence": "slept 5 s"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "log-read",
+          "text": "log-read civil -> $civ",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "97 new line(s) in the civil CE log since the case began "
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "history-tail",
+          "text": "history-tail -> $tail",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "history: \"22547_XCivil\" is unloaded. | Regenerating model. | *Cancel* | [CE] Background not found: XW2626-Title Block. Type CDXREFREPAIR to look for it and fix the path. | [CE] Background not found: XW2614-Arch Survey. Type CDXREFREPAIR to look for ..."
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"Downpipe placed. Tag: DP\"",
+          "ok": true,
+          "expected": "command line has 'Downpipe placed. Tag: DP'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Downpipe placed. Tag: DP1. Nothing nearby. The source connects when a pipe is drawn to it.'"
+        },
+        {
+          "n": 2,
+          "text": "history absent \"could not be refreshed\"",
+          "ok": true,
+          "expected": "command line lacks 'could not be refreshed'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'could not be refreshed' (8 lines read)"
+        },
+        {
+          "n": 3,
+          "text": "history absent \"Nothing will be placed here\"",
+          "ok": true,
+          "expected": "command line lacks 'Nothing will be placed here'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'Nothing will be placed here' (8 lines read)"
+        },
+        {
+          "n": 4,
+          "text": "count $dps = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $dps = 1 (expected = 1)"
+        },
+        {
+          "n": 5,
+          "text": "log civil has \"[BUG-1228] Source landing index read in\"",
+          "ok": true,
+          "expected": "civil log has '[BUG-1228] Source landing index read in'",
+          "actual": "4",
+          "evidence": "log: '2026-10-29 19:01:27.748 [INFO] [BUG-1228] Source landing index read in 5509 ms: 49 pipe(s); objects read in full 194392, passed over 0, reused 0; reads each object once: off.'"
+        },
+        {
+          "n": 6,
+          "text": "log civil has \"[BUG-1228] Source change read in\"",
+          "ok": true,
+          "expected": "civil log has '[BUG-1228] Source change read in'",
+          "actual": "1",
+          "evidence": "log: '2026-10-29 19:01:43.304 [INFO] [BUG-1228] Source change read in 5210 ms: 49 pipe(s); objects read in full 194768, passed over 0, reused 0; reads each object once: off.'"
+        },
+        {
+          "n": 7,
+          "text": "log civil has \"reads each object once: on\"",
+          "ok": false,
+          "expected": "civil log has 'reads each object once: on'",
+          "actual": "0",
+          "evidence": "no new civil log line contains 'reads each object once: on' (97 new lines read) "
+        },
+        {
+          "n": 8,
+          "text": "log civil absent \"reads each object once: off\"",
+          "ok": false,
+          "expected": "civil log lacks 'reads each object once: off'",
+          "actual": "5",
+          "evidence": "found: '2026-10-29 19:01:27.748 [INFO] [BUG-1228] Source landing index read in 5509 ms: 49 pipe(s); objects read in full 194392, passed over 0, reused 0; reads each object once: off.'"
+        },
+        {
+          "n": 9,
+          "text": "matches $civ \"(?s)^(?!.*(?:Source landing index|Source change) read in (?:1[5-9][0-9]{2}|[2-9][0-9]{3}|[1-9][0-9]{4,}) ms)\"",
+          "ok": false,
+          "expected": "matches /(?s)^(?!.*(?:Source landing index|Source change) read in (?:1[5-9][0-9]{2}|[2-9][0-9]{3}|[1-9][0-9]{4,}) ms)/",
+          "actual": "2026-10-29 19:01:22.167 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-10-29 19:01:22.167 [INFO] Project data loaded from DWG: 11 pits, 49 pipes, manual row...",
+          "evidence": "no match for /(?s)^(?!.*(?:Source landing index|Source change) read in (?:1[5-9][0-9]{2}|[2-9][0-9]{3}|[1-9][0-9]{4,}) ms)/ in: 2026-10-29 19:01:22.167 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-10-29 19:01:22.167 [INFO] Project data loaded from DWG: 11 pits, 49 pipes, manual row..."
+        },
+        {
+          "n": 10,
+          "text": "matches $civ \"Command outcome: DP completed [0-9]{1,4} ms\"",
+          "ok": false,
+          "expected": "matches /Command outcome: DP completed [0-9]{1,4} ms/",
+          "actual": "2026-10-29 19:01:22.167 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-10-29 19:01:22.167 [INFO] Project data loaded from DWG: 11 pits, 49 pipes, manual row...",
+          "evidence": "no match for /Command outcome: DP completed [0-9]{1,4} ms/ in: 2026-10-29 19:01:22.167 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-10-29 19:01:22.167 [INFO] Project data loaded from DWG: 11 pits, 49 pipes, manual row..."
+        },
+        {
+          "n": 11,
+          "text": "record $civ \"FULL the new CE log lines (every [BUG-1228] timing line and the DP outcome line)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "2026-10-29 19:01:22.167 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-10-29 19:01:22.167 [INFO] Project data loaded from DWG: 11 pits, 49 pipes, manual rows=0 | 2026-10-29 19:01:22.201 [INFO] [PERF] ProjectDataService.SaveToDrawing: 32.3 ms jsonLen=243925 | 2026-10-29 19:01:22.201 [INFO] Project data saved to DWG successfully | 2026-10-29 19:01:22.201 [INFO] Project data switched to: C:\\Users\\TimothyBrand\\AppData\\Roaming\\TIM_CE_CADTOOLS\\projects\\CD_ProjectData_CLDV31859483_B1_7b58a388.json | 2026-10-29 19:01:22.231 [INFO] [PERF] ProjectDataService.SaveToDrawing: 5.3 ms jsonLen=246963 | 2026-10-29 19:01:22.231 [INFO] Project data saved to DWG successfully | 2026-10-29 19:01:22.231 [INFO] [Spine] 49 row(s) took the identity already on their drawing object: 1091A0, 1091E0, 109359, 109390, 1093C7, 109430, 1094BE, 109500, 109835, 109874, 1098B6, 1098E8, 10993C, 10996E, 109A30, 109B80, 109BBC, 109C15, 109C55, 109CCF, 109E23, 109E6D, 109ED4, 109F81, 10A1D4, 10A243, 10A27D, 10A348, 10A3B0, 10A3E0, 10A430, 10A86B, 10A899, 10A8C7, 10A901, 10A942, 10A98D, 10A9C9, 10AA03, 10AAB6, 10B03B, 10B083, 110136, 110179, 11035C, 1135E9, 11362F, 113659, 1136A4 | 2026-10-29 19:01:22.558 [INFO] CDRG index filled pipe 1091A0 From end key 'CE-CIV-SRC-5BA71A30-C5AB-49CA-94B2-09738FB7D277' from physical start. | 2026-10-29 19:01:22.701 [INFO] CDRG index filled pipe 1091E0 From end key 'CE-CIV-SRC-F55F0E0A-EA92-4D33-B761-DE091382DC74' from physical start. | 2026-10-29 19:01:23.398 [INFO] CDRG index filled pipe 1094BE To end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical end. | 2026-10-29 19:01:23.534 [INFO] CDRG index filled pipe 109500 From end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical start. | 2026-10-29 19:01:23.815 [INFO] CDRG index filled pipe 109874 From end key 'CE-CIV-SRC-3126A41E-740A-4F2F-9C85-E87C720320B8' from physical start. | 2026-10-29 19:01:24.325 [INFO] CDRG index filled pipe 109A30 From end key 'CE-CIV-SRC-7969B9A3-974F-4050-91FD-F43CDD4D3D78' from physical start. | 2026-10-29 19:01:24.416 [INFO] CDRG index filled pipe 109B80 To end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical end. | 2026-10-29 19:01:24.509 [INFO] CDRG index filled pipe 109BBC From end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical start. | 2026-10-29 19:01:24.602 [INFO] CDRG index filled pipe 109C15 To end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical end. | 2026-10-29 19:01:24.696 [INFO] CDRG index filled pipe 109C55 From end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical start. | 2026-10-29 19:01:24.926 [INFO] CDRG index filled pipe 109E6D From end key 'CE-CIV-SRC-6CFC2891-A39C-48D2-9B37-AF2450FECD10' from physical start. | 2026-10-29 19:01:24.926 [INFO] CDRG index filled pipe 109E6D To end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical end. | 2026-10-29 19:01:24.972 [INFO] CDRG index filled pipe 109ED4 From end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical start. | 2026-10-29 19:01:25.167 [INFO] CDRG index filled pipe 10A1D4 To end key 'CE-CIV-SRC-FED21B8E-5720-4680-92A6-8953BCF84699' from physical end. | 2026-10-29 19:01:25.262 [INFO] CDRG index filled pipe 10A243 From end key 'CE-CIV-SRC-FED21B8E-5720-4680-92A6-8953BCF84699' from physical start. | 2026-10-29 19:01:25.803 [INFO] CDRG index filled pipe 10A86B To end key 'CE-CIV-SRC-E374079F-E3C7-45A9-B3FE-FA254A38BC98' from physical end. | 2026-10-29 19:01:25.891 [INFO] CDRG index filled pipe 10A899 To end key 'CE-CIV-SRC-F776FA64-4382-4BCF-ABFB-01DF7E89B3EA' from physical end. | 2026-10-29 19:01:25.983 [INFO] CDRG index filled pipe 10A8C7 From end key 'CE-CIV-SRC-F776FA64-4382-4BCF-ABFB-01DF7E89B3EA' from physical start. | 2026-10-29 19:01:26.074 [INFO] CDRG index filled pipe 10A901 From end key 'CE-CIV-SRC-E374079F-E3C7-45A9-B3FE-FA254A38BC98' from physical start. | 2026-10-29 19:01:26.165 [INFO] C...",
+          "evidence": "RECORDED, not judged: FULL the new CE log lines (every [BUG-1228] timing line and the DP outcome line) = 2026-10-29 19:01:22.167 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-10-29 19:01:22.167 [INFO] Project data loaded from DWG: 11 pits, 49 pipes, manual rows=0 | 2026-10-29 19:01:22.201 [INFO] [PERF] ProjectDataService.SaveToDrawing: 32.3 ms jsonLen=243925 | 2026-10-29 19:01:22.201 [INFO] Project data saved to DWG successfully | 2026-10-29 19:01:22.201 [INFO] Project data switched to: C:\\Users\\TimothyBrand\\AppData\\Roaming\\TIM_CE_CADTOOLS\\projects\\CD_ProjectData_CLDV31859483_B1_7b58a388.json | 2026-10-29 19:01:22.231 [INFO] [PERF] ProjectDataService.SaveToDrawing: 5.3 ms jsonLen=246963 | 2026-10-29 19:01:22.231 [INFO] Project data saved to DWG successfully | 2026-10-29 19:01:22.231 [INFO] [Spine] 49 row(s) took the identity already on their drawing object: 1091A0, 1091E0, 109359, 109390, 1093C7, 109430, 1094BE, 109500, 109835, 109874, 1098B6, 1098E8, 10993C, 10996E, 109A30, 109B80, 109BBC, 109C15, 109C55, 109CCF, 109E23, 109E6D, 109ED4, 109F81, 10A1D4, 10A243, 10A27D, 10A348, 10A3B0, 10A3E0, 10A430, 10A86B, 10A899, 10A8C7, 10A901, 10A942, 10A98D, 10A9C9, 10AA03, 10AAB6, 10B03B, 10B083, 110136, 110179, 11035C, 1135E9, 11362F, 113659, 1136A4 | 2026-10-29 19:01:22.558 [INFO] CDRG index filled pipe 1091A0 From end key 'CE-CIV-SRC-5BA71A30-C5AB-49CA-94B2-09738FB7D277' from physical start. | 2026-10-29 19:01:22.701 [INFO] CDRG index filled pipe 1091E0 From end key 'CE-CIV-SRC-F55F0E0A-EA92-4D33-B761-DE091382DC74' from physical start. | 2026-10-29 19:01:23.398 [INFO] CDRG index filled pipe 1094BE To end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical end. | 2026-10-29 19:01:23.534 [INFO] CDRG index filled pipe 109500 From end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical start. | 2026-10-29 19:01:23.815 [INFO] CDRG index filled pipe 109874 From end key 'CE-CIV-SRC-3126A41E-740A-4F2F-9C85-E87C720320B8' from physical start. | 2026-10-29 19:01:24.325 [INFO] CDRG index filled pipe 109A30 From end key 'CE-CIV-SRC-7969B9A3-974F-4050-91FD-F43CDD4D3D78' from physical start. | 2026-10-29 19:01:24.416 [INFO] CDRG index filled pipe 109B80 To end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical end. | 2026-10-29 19:01:24.509 [INFO] CDRG index filled pipe 109BBC From end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical start. | 2026-10-29 19:01:24.602 [INFO] CDRG index filled pipe 109C15 To end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical end. | 2026-10-29 19:01:24.696 [INFO] CDRG index filled pipe 109C55 From end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical start. | 2026-10-29 19:01:24.926 [INFO] CDRG index filled pipe 109E6D From end key 'CE-CIV-SRC-6CFC2891-A39C-48D2-9B37-AF2450FECD10' from physical start. | 2026-10-29 19:01:24.926 [INFO] CDRG index filled pipe 109E6D To end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical end. | 2026-10-29 19:01:24.972 [INFO] CDRG index filled pipe 109ED4 From end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical start. | 2026-10-29 19:01:25.167 [INFO] CDRG index filled pipe 10A1D4 To end key 'CE-CIV-SRC-FED21B8E-5720-4680-92A6-8953BCF84699' from physical end. | 2026-10-29 19:01:25.262 [INFO] CDRG index filled pipe 10A243 From end key 'CE-CIV-SRC-FED21B8E-5720-4680-92A6-8953BCF84699' from physical start. | 2026-10-29 19:01:25.803 [INFO] CDRG index filled pipe 10A86B To end key 'CE-CIV-SRC-E374079F-E3C7-45A9-B3FE-FA254A38BC98' from physical end. | 2026-10-29 19:01:25.891 [INFO] CDRG index filled pipe 10A899 To end key 'CE-CIV-SRC-F776FA64-4382-4BCF-ABFB-01DF7E89B3EA' from physical end. | 2026-10-29 19:01:25.983 [INFO] CDRG index filled pipe 10A8C7 From end key 'CE-CIV-SRC-F776FA64-4382-4BCF-ABFB-01DF7E89B3EA' from physical start. | 2026-10-29 19:01:26.074 [INFO] CDRG index filled pipe 10A901 From end key 'CE-CIV-SRC-E374079F-E3C7-45A9-B3FE-FA254A38BC98' from physical start. | 2026-10-29 19:01:26.165 [INFO] C..."
+        },
+        {
+          "n": 12,
+          "text": "record $dp \"FULL what DP printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: DP | Specify downpipe insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. Nothing nearby. The source connects when a pipe is drawn to it. | [CE] Pick the next DP, or press Esc to stop. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL what DP printed = Command: | Command: DP | Specify downpipe insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. Nothing nearby. The source connects when a pipe is drawn to it. | [CE] Pick the next DP, or press Esc to stop. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 13,
+          "text": "record $tail \"last command-line lines\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "\"22547_XCivil\" is unloaded. | Regenerating model. | *Cancel* | [CE] Background not found: XW2626-Title Block. Type CDXREFREPAIR to look for it and fix the path. | [CE] Background not found: XW2614-Arch Survey. Type CDXRE...",
+          "evidence": "RECORDED, not judged: last command-line lines = \"22547_XCivil\" is unloaded. | Regenerating model. | *Cancel* | [CE] Background not found: XW2626-Title Block. Type CDXREFREPAIR to look for it and fix the path. | [CE] Background not found: XW2614-Arch Survey. Type CDXRE..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 97 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: DP completed 28902 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-29 19:02:01",
+      "session_id": "RUN-20261029-1855-C3.0.86-a80D-s3",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [
+          "known failure (BROKEN-VARIANT): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}

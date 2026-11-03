@@ -1,0 +1,9 @@
+== cx_rd14 (usage 64.0% -> 68.0%): 1. **DONE — five new findings: 2 HIGH, 3 MEDIUM, 0 LOW.** Biggest risk: rearranged schedule rows can resize the wrong piers.
+
+2. **Report:** [CODEX_AUDIT2_RD14_24OCT.md](C:/CE_PLAN/areas/CODEX_AUDIT2_RD14_24OCT.md). Includes exact scenarios, deterministic tests and smallest fixes.
+
+3. **Limits:** Verified by reading only. No code changes, builds, tests or AutoCAD. Temporary worktree removed.
+
+---
+
+1. **Saved and pushed:** Report commit `133343f1`; remote tip `30f13fd2`. No ahead status. Privacy scan clean.

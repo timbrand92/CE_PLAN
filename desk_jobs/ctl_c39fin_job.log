@@ -1,0 +1,31 @@
+**FOR TIM**
+
+1. **Verdict: GO.** Train C-39 can become the next Civil payload (Civil 3.0.50 / Manager 1.1.50). It is built and unit-tested only. Nobody has opened it in AutoCAD and it is not installed.
+2. **Nothing changes on install.** The six PRs it adds bring five new settings switches, and every one is OFF. OFF works exactly as 3.0.49 does today. For example, the Detention Design tab still opens at a pre-development C of 0.30.
+3. **Two fixes do show without a switch:**
+   - **CD on a second drawing:** CD now finds the pits in the second drawing you open. It no longer says "Neither end is on a pit".
+   - **Manager crash log:** your Windows login and PC name are now hidden in it.
+4. **Your settings files were never touched.** I checked them before and after every test run.
+5. **Nothing for you to do.** Codex's AutoCAD checks are listed in the report.
+
+---
+
+1. **Six skipped PRs: all stay out, and I made no commits.**
+   - **Already in the base:** #1221 (done by #970), #1230 (HUNT2-C-10), #1240 (HUNT2-C-14), #1235 (HUNT-M-14) and #1236 (HUNT-M-12) each make the same change again. The lane should close all five.
+   - **#1229:** it adds one thing the base lacks, reading each LandXML invert once instead of twice. That changes how a LandXML file is read, so I left it out as the brief says. The Civil import lane should restack only that change; #1241 then needs restacking too.
+2. **Findings: no HIGH, no MEDIUM, three LOWs. None blocks.**
+   - **Cover switch ON only:** with two drawings for different councils open, the Inspector's shallow count can use the other drawing's council cover (`MinimumCoverForChecks.cs:30-38`).
+   - **Level switch ON only:** a "0.00" label is now imported as RL 0.00; today it is dropped.
+   - **Assembler's report:** it says the regression log gained +75 lines; the real figure is +64. It also implies the five superseded PRs need hand merges, which they don't.
+3. **Tests, all equal to the assembler's:**
+   - **Civil net10:** 17,258 run, 17,238 pass, 19 skipped, 1 failed (Glen Eira, the known one).
+   - **Manager:** 751/751.
+   - **net48 focused run:** 184 run, 156 pass, 28 skipped (the new tests, which only run with AutoCAD loaded), 0 failed. The Manager test project has no net48 target at all, which explains the assembler's missing net48 Manager number.
+4. **Integrity:** unchanged against C-38:
+   - Shared/, the command registry, the council profiles, the version files and the redo baseline.
+   - The BUG-565 refusal and the C-38 survey defaults.
+   - No new redo-killer calls.
+   - The CDRULES "stale" check is unaffected.
+5. **Head:** 4005e321. Local equals origin, so there was nothing to push. C:\CE_PLAN was read only. The report is at `C:\Lisp Files\_TEST_COPIES_20260923\TRAIN_C39_FINALIZER_REPORT.md`.
+
+OPUS SIGN-OFF train claude/rel-20261010e GO (4005e3217c43429d620c92cc92c12c50020994c2)

@@ -1,0 +1,18 @@
+**GO.** Train C-55 (`claude/rel-20261020i`) is final at **`8e76e1d9f0d07be4ba4b716fee79b3d4335b0d26`**. I changed nothing on it.
+
+1. **Review of #1486 (BUG-856): passed, nothing to fix.** On the Tidy labels preview, a pipe with one pit and an open end now has a name: "pipe P8 -> open end start invert text would move 235 mm". Only the words change. Nothing moves differently.
+2. **Small wording quirks (low risk):**
+   - A pipe joined to a pit that has no name yet also says "open end".
+   - The two halves of a rising main may read "P8 -> open end" and "open end -> P11".
+3. **Settings and installer:** the train adds no switch and changes no default. Nothing in the installer or shared files changed, so the signed-update check can't be affected.
+4. **Manager must ship:** no. No Manager file changed.
+5. **Tests:**
+   - **Whole solution:** 0 errors.
+   - **Civil:** 18,937 of 18,957 pass, 19 skipped, 1 fail (the known Glen Eira one).
+   - **Manager:** 832 of 832.
+   - **Civil on the older .NET Framework (net48), targeted run:** 284 of 286. The same 2 also fail on the base.
+6. **My two setup slips:** the first solution build had 1 error and the first Manager run had 8 failures. Both came from my own setup, not the code. After I fixed it, both re-ran clean.
+7. **Not run:** installer tests (compiled only), Structural, AutoCAD. BUG-856 is not FIXED; nobody has opened it in AutoCAD.
+8. **Structural settings file:** it had already changed during the previous step (the build that put this release together) and stayed the same during my run. The cause is still unknown, so someone should look at it. Tim's other three settings files are unchanged.
+
+The report and review-log entries 1494–1497, ending with the sign-off line, are pushed to CE_PLAN. The worktree and temp folders are removed.

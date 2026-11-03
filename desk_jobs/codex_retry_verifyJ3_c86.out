@@ -1,0 +1,6 @@
+== verifyJ3_c86 (usage 22.0% -> 23.0%): AUTOCAD STILL RUNNING ÔÇö another session started after J3 closed; left untouched.
+
+1. **BLOCKED:** Prescribed zoom returned ÔÇ£Value must be positive and nonzero.ÔÇØ Highlight and glow remain untested.
+2. **Results:** 0 PASS, 0 FAIL, 1 BLOCKED, 2 NOT TESTED including glow. SURE 3; UNSURE 0.
+3. **Cleanup:** J3 lock released; all four settings hashes unchanged.
+4. **Report:** [J3 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_J3_20261030_1347.md>).

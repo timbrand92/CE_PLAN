@@ -1,0 +1,1356 @@
+Fri 17:38 started: usage 11 mode SPEND
+Fri 17:40 filler started: cx_rv01 (usage 11, C: 23.9 GB)
+Fri 17:42 filler started: cx_rv02 (usage 11, C: 23.8 GB)
+Fri 17:44 filler started: cx_rv03 (usage 13, C: 23.8 GB)
+Fri 17:48 heartbeat: mode SPEND usage 15 C: 23.8 GB; fillers 3; conveyor 1; acad 1
+Fri 17:51 filler started: cx_rv04 (usage 16, C: 24.1 GB)
+Fri 17:55 filler started: cx_rv05 (usage 17, C: 24.1 GB)
+Fri 17:59 heartbeat: mode SPEND usage 19 C: 24.1 GB; fillers 3; conveyor 1; acad 1
+Fri 18:10 started: usage 19 mode SPEND
+Fri 18:12 filler started: cx_rv06 (usage 19, C: 24.1 GB)
+Fri 18:14 filler started: cx_lf01 (usage 20, C: 24.1 GB)
+Fri 18:16 filler started: cx_lf02 (usage 21, C: 24 GB)
+Fri 18:20 heartbeat: mode SPEND usage 22 C: 23.6 GB; fillers 3; conveyor 0; acad 1
+Fri 18:22 filler started: cx_lf03 (usage 22, C: 23.6 GB)
+Fri 18:28 filler started: cx_lf04 (usage 24, C: 23.2 GB)
+Fri 18:31 heartbeat: mode SPEND usage 24 C: 22.9 GB; fillers 3; conveyor 1; acad 0
+Fri 18:41 heartbeat: mode SPEND usage 25 C: 22.6 GB; fillers 3; conveyor 1; acad 0
+Fri 18:46 filler started: cx_lf05 (usage 25, C: 22.2 GB)
+Fri 18:52 heartbeat: mode SPEND usage 25 C: 22 GB; fillers 3; conveyor 1; acad 1
+Fri 18:54 filler started: cx_lf06 (usage 25, C: 21.8 GB)
+Fri 19:03 heartbeat: mode SPEND usage 26 C: 21.2 GB; fillers 3; conveyor 1; acad 1
+Fri 19:12 filler started: cx_lf07 (usage 26, C: 20.8 GB)
+Fri 19:14 heartbeat: mode SPEND usage 26 C: 20.5 GB; fillers 3; conveyor 1; acad 0
+Fri 19:24 heartbeat: mode SPEND usage 27 C: 20.1 GB; fillers 3; conveyor 1; acad 1
+Fri 19:34 started: usage 28 mode SPEND
+Fri 19:36 filler started: cx_lf08 (usage 28, C: 19.3 GB)
+Fri 19:38 filler started: cx_lf09 (usage 28, C: 18.7 GB)
+Fri 19:43 filler started: cx_lf10 (usage 28, C: 18.2 GB)
+Fri 19:45 heartbeat: mode SPEND usage 29 C: 18.2 GB; fillers 5; conveyor 1; acad 1
+Fri 19:56 heartbeat: mode SPEND usage 29 C: 19.2 GB; fillers 5; conveyor 1; acad 1
+Fri 20:07 heartbeat: mode SPEND usage 30 C: 18.2 GB; fillers 5; conveyor 1; acad 1
+Fri 20:10 killed idle launcher pid 92796 (101 min)
+Fri 20:17 filler started: cx_lf11 (usage 30, C: 17.7 GB)
+Fri 20:19 heartbeat: mode SPEND usage 31 C: 17.5 GB; fillers 5; conveyor 1; acad 1
+Fri 20:23 killed filler job older than 120 min (pid 108312)
+Fri 20:26 conveyor was missing: started
+Fri 20:26 filler started: cx_lf12 (usage 31, C: 18 GB)
+Fri 20:31 heartbeat: mode SPEND usage 32 C: 17.7 GB; fillers 5; conveyor 1; acad 1
+Fri 20:34 filler started: cx_lf13 (usage 32, C: 17.6 GB)
+Fri 20:41 filler started: cx_lf14 (usage 32, C: 18.4 GB)
+Fri 20:43 heartbeat: mode SPEND usage 32 C: 17.9 GB; fillers 5; conveyor 1; acad 1
+Fri 20:49 filler started: cx_lf15 (usage 33, C: 17.3 GB)
+Fri 20:52 filler started: cx_lf16 (usage 33, C: 17.1 GB)
+Fri 20:54 heartbeat: mode SPEND usage 33 C: 17.8 GB; fillers 5; conveyor 1; acad 0
+Fri 20:56 killed filler job older than 120 min (pid 94472)
+Fri 20:58 filler started: cx_lf17 (usage 33, C: 17 GB)
+Fri 21:01 filler started: cx_lf18 (usage 33, C: 17.2 GB)
+Fri 21:03 filler started: cx_lf19 (usage 33, C: 17.1 GB)
+Fri 21:05 filler started: cx_lf20 (usage 34, C: 16.6 GB)
+Fri 21:05 heartbeat: mode SPEND usage 34 C: 16.6 GB; fillers 4; conveyor 1; acad 0
+Fri 21:07 filler started: cx_lf21 (usage 34, C: 15.9 GB)
+Fri 21:10 filler started: cx_lf22 (usage 34, C: 15.7 GB)
+Fri 21:12 killed filler job older than 120 min (pid 109808)
+Fri 21:14 filler started: cx_lf23 (usage 34, C: 17.5 GB)
+Fri 21:16 filler started: cx_lf24 (usage 34, C: 17.6 GB)
+Fri 21:16 heartbeat: mode SPEND usage 34 C: 17.6 GB; fillers 2; conveyor 1; acad 0
+Fri 21:19 filler started: cx_lf25 (usage 34, C: 17 GB)
+Fri 21:21 filler started: cx_lf26 (usage 35, C: 17 GB)
+Fri 21:24 filler started: cx_lf27 (usage 35, C: 16.9 GB)
+Fri 21:26 conveyor was missing: started
+Fri 21:26 filler started: cx_lf28 (usage 35, C: 16.3 GB)
+Fri 21:28 filler started: cx_lf29 (usage 35, C: 16.2 GB)
+Fri 21:28 heartbeat: mode SPEND usage 35 C: 16.2 GB; fillers 4; conveyor 1; acad 1
+Fri 21:31 filler started: cx_lf30 (usage 35, C: 16.5 GB)
+Fri 21:33 filler started: cx_lf31 (usage 35, C: 16.7 GB)
+Fri 21:35 filler started: cx_lf32 (usage 35, C: 16.5 GB)
+Fri 21:40 heartbeat: mode SPEND usage 36 C: 16.1 GB; fillers 2; conveyor 1; acad 0
+Fri 21:44 conveyor was missing: started
+Fri 21:51 heartbeat: mode SPEND usage 36 C: 13 GB; fillers 1; conveyor 1; acad 1
+Fri 22:02 heartbeat: mode SPEND usage 36 C: 14.5 GB; fillers 1; conveyor 1; acad 1
+Fri 22:13 heartbeat: mode SPEND usage 37 C: 13.9 GB; fillers 0; conveyor 1; acad 0
+Fri 22:23 heartbeat: mode SPEND usage 37 C: 14.8 GB; fillers 0; conveyor 1; acad 1
+Fri 22:27 filler started: cx_rd01 (usage 37, C: 14.4 GB)
+Fri 22:30 filler started: cx_rd02 (usage 37, C: 14.6 GB)
+Fri 22:32 filler started: cx_rd03 (usage 38, C: 14.5 GB)
+Fri 22:34 filler started: cx_rd04 (usage 39, C: 14.2 GB)
+Fri 22:34 heartbeat: mode SPEND usage 39 C: 14.2 GB; fillers 0; conveyor 1; acad 1
+Fri 22:36 filler started: cx_rd05 (usage 40, C: 14.2 GB)
+Fri 22:38 filler started: cx_rd06 (usage 41, C: 13.7 GB)
+Fri 22:40 filler started: cx_rd07 (usage 43, C: 13.6 GB)
+Fri 22:45 filler started: cx_rd08 (usage 44, C: 13.7 GB)
+Fri 22:45 heartbeat: mode SPEND usage 44 C: 13.7 GB; fillers 0; conveyor 1; acad 1
+Fri 22:47 filler started: cx_rd09 (usage 46, C: 14.4 GB)
+Fri 22:49 filler started: cx_rd10 (usage 46, C: 14.1 GB)
+Fri 22:51 filler started: cx_rd11 (usage 47, C: 14.1 GB)
+Fri 22:53 filler started: cx_rd12 (usage 48, C: 13.7 GB)
+Fri 22:55 filler started: cx_bd01 (usage 49, C: 13.6 GB)
+Fri 22:55 heartbeat: mode SPEND usage 49 C: 13.6 GB; fillers 0; conveyor 1; acad 1
+Fri 23:00 filler started: cx_bd02 (usage 52, C: 13.8 GB)
+Fri 23:02 filler started: cx_bd03 (usage 52, C: 13.6 GB)
+Fri 23:04 filler started: cx_bd04 (usage 52, C: 13.6 GB)
+Fri 23:06 heartbeat: mode SPEND usage 53 C: 13.3 GB; fillers 0; conveyor 1; acad 1
+Fri 23:18 heartbeat: mode SPEND usage 54 C: 13.1 GB; fillers 0; conveyor 1; acad 1
+Fri 23:29 heartbeat: mode SPEND usage 54 C: 13 GB; fillers 0; conveyor 1; acad 1
+Fri 23:40 heartbeat: mode SPEND usage 55 C: 12.4 GB; fillers 0; conveyor 1; acad 0
+Fri 23:51 heartbeat: mode SPEND usage 56 C: 12.3 GB; fillers 0; conveyor 1; acad 1
+Sat 00:02 heartbeat: mode SPEND usage 56 C: 12.4 GB; fillers 0; conveyor 1; acad 1
+Sat 00:13 heartbeat: mode SPEND usage 56 C: 13 GB; fillers 0; conveyor 1; acad 1
+Sat 00:23 heartbeat: mode SPEND usage 57 C: 12.7 GB; fillers 0; conveyor 1; acad 1
+Sat 00:29 started: usage 57 mode SPEND
+Sat 00:40 heartbeat: mode SPEND usage 57 C: 14.5 GB; fillers 0; conveyor 1; acad 0
+Sat 00:51 heartbeat: mode SPEND usage 57 C: 22.9 GB; fillers 0; conveyor 1; acad 1
+Sat 01:01 heartbeat: mode SPEND usage 57 C: 23.1 GB; fillers 0; conveyor 1; acad 1
+Sat 01:12 heartbeat: mode SPEND usage 58 C: 23.5 GB; fillers 0; conveyor 1; acad 0
+Sat 01:22 heartbeat: mode SPEND usage 58 C: 23 GB; fillers 0; conveyor 1; acad 0
+Sat 01:33 heartbeat: mode SPEND usage 58 C: 22.5 GB; fillers 0; conveyor 1; acad 1
+Sat 01:43 heartbeat: mode SPEND usage 58 C: 22.7 GB; fillers 0; conveyor 1; acad 1
+Sat 01:54 heartbeat: mode SPEND usage 58 C: 22.3 GB; fillers 0; conveyor 1; acad 0
+Sat 02:03 filler started: cx_fa01 (usage 58, C: 26.4 GB)
+Sat 02:05 filler started: cx_fa02 (usage 58, C: 26.2 GB)
+Sat 02:05 heartbeat: mode SPEND usage 58 C: 26.2 GB; fillers 0; conveyor 1; acad 1
+Sat 02:07 filler started: cx_fa03 (usage 59, C: 25.8 GB)
+Sat 02:09 filler started: cx_fa04 (usage 59, C: 25.6 GB)
+Sat 02:11 filler started: cx_fa05 (usage 59, C: 25.5 GB)
+Sat 02:16 heartbeat: mode SPEND usage 60 C: 24.9 GB; fillers 0; conveyor 1; acad 1
+Sat 02:18 filler started: cx_fa06 (usage 60, C: 24.8 GB)
+Sat 02:27 heartbeat: mode SPEND usage 61 C: 24 GB; fillers 0; conveyor 1; acad 0
+Sat 02:39 heartbeat: mode SPEND usage 62 C: 24 GB; fillers 0; conveyor 1; acad 0
+Sat 02:50 heartbeat: mode SPEND usage 62 C: 23.3 GB; fillers 0; conveyor 1; acad 0
+Sat 02:55 started: usage 63 mode SPEND
+Sat 02:57 filler started: cx_fa07 (usage 63, C: 23.8 GB)
+Sat 03:00 filler started: cx_rd13 (usage 63, C: 23.7 GB)
+Sat 03:02 filler started: cx_rd14 (usage 63, C: 23.2 GB)
+Sat 03:04 filler started: cx_rd15 (usage 64, C: 22.9 GB)
+Sat 03:07 heartbeat: mode SPEND usage 66 C: 22.7 GB; fillers 0; conveyor 1; acad 1
+Sat 03:17 filler started: cx_rd16 (usage 69, C: 23 GB)
+Sat 03:17 heartbeat: mode SPEND usage 69 C: 23 GB; fillers 0; conveyor 1; acad 1
+Sat 03:19 filler started: cx_rd17 (usage 69, C: 23 GB)
+Sat 03:21 filler started: cx_rd18 (usage 70, C: 23.2 GB)
+Sat 03:24 filler started: cx_rd19 (usage 71, C: 23 GB)
+Sat 03:26 filler started: cx_rv07 (usage 72, C: 22.8 GB)
+Sat 03:28 heartbeat: mode SPEND usage 73 C: 23.1 GB; fillers 1; conveyor 1; acad 1
+Sat 03:33 filler started: cx_rv08 (usage 75, C: 23.3 GB)
+Sat 03:36 filler started: cx_rv09 (usage 77, C: 23 GB)
+Sat 03:38 heartbeat: mode SPEND usage 78 C: 22.7 GB; fillers 3; conveyor 1; acad 1
+Sat 03:41 filler started: cx_bd05 (usage 79, C: 22.2 GB)
+Sat 03:48 heartbeat: mode SPEND usage 82 C: 22.1 GB; fillers 3; conveyor 1; acad 1
+Sat 03:56 filler started: cx_bd06 (usage 84, C: 21.8 GB)
+Sat 03:59 heartbeat: mode SPEND usage 84 C: 21.7 GB; fillers 3; conveyor 1; acad 1
+Sat 04:01 filler started: cx_bd07 (usage 85, C: 21.5 GB)
+Sat 04:03 filler started: cx_bd08 (usage 85, C: 20.8 GB)
+Sat 04:11 heartbeat: mode SPEND usage 86 C: 20.4 GB; fillers 1; conveyor 1; acad 1
+Sat 04:16 filler started: cx_rd20 (usage 87, C: 20.3 GB)
+Sat 04:22 heartbeat: mode SPEND usage 88 C: 20.3 GB; fillers 0; conveyor 1; acad 0
+Sat 04:35 filler started: cx_rd21 (usage 90, C: 19.6 GB)
+Sat 04:35 heartbeat: mode SPEND usage 90 C: 19.6 GB; fillers 0; conveyor 1; acad 1
+Sat 04:41 filler started: cx_rd22 (usage 92, C: 19.2 GB)
+Sat 04:43 WEEKLY RESET DETECTED (92 -> 1): mode HOLD. No new Codex job will start; running jobs finish; the new week is left alone.
+Sat 04:46 heartbeat: mode HOLD usage 2 C: 18.3 GB; fillers 0; conveyor 1; acad 0
+Sat 04:58 heartbeat: mode HOLD usage 3 C: 18.9 GB; fillers 0; conveyor 0; acad 1
+Sat 05:09 heartbeat: mode HOLD usage 3 C: 17.7 GB; fillers 0; conveyor 0; acad 1
+Sat 05:21 heartbeat: mode HOLD usage 3 C: 20.5 GB; fillers 0; conveyor 0; acad 1
+Sat 05:32 started: usage 3 mode PACE
+Sat 05:34 duplicate conveyor killed 101772
+Sat 05:36 conveyor was missing: started
+Sat 05:42 heartbeat: mode PACE usage 3 C: 21 GB; fillers 0; conveyor 1; acad 1
+Sat 05:53 heartbeat: mode PACE usage 3 C: 20.6 GB; fillers 0; conveyor 1; acad 1
+Sat 05:55 conveyor was missing: started
+Sat 06:03 heartbeat: mode PACE usage 3 C: 20.7 GB; fillers 0; conveyor 1; acad 1
+Sat 06:15 heartbeat: mode PACE usage 12 C: 20 GB; fillers 0; conveyor 1; acad 1
+Sat 06:18 filler started: cx_rv10 (usage 12, C: 19.9 GB)
+Sat 06:27 heartbeat: mode PACE usage 14 C: 19.4 GB; fillers 1; conveyor 1; acad 1
+Sat 06:39 heartbeat: mode PACE usage 15 C: 19.5 GB; fillers 0; conveyor 1; acad 1
+Sat 06:50 heartbeat: mode PACE usage 16 C: 19.2 GB; fillers 0; conveyor 1; acad 0
+Sat 07:01 heartbeat: mode PACE usage 16 C: 17.4 GB; fillers 0; conveyor 1; acad 1
+Sat 07:12 heartbeat: mode PACE usage 16 C: 19.2 GB; fillers 0; conveyor 1; acad 0
+Sat 07:23 heartbeat: mode PACE usage 16 C: 19 GB; fillers 0; conveyor 1; acad 1
+Sat 07:34 heartbeat: mode PACE usage 16 C: 18.1 GB; fillers 0; conveyor 1; acad 1
+Sat 07:45 heartbeat: mode PACE usage 16 C: 19.8 GB; fillers 0; conveyor 1; acad 1
+Sat 07:56 heartbeat: mode PACE usage 16 C: 18.1 GB; fillers 0; conveyor 1; acad 1
+Sat 08:07 heartbeat: mode PACE usage 16 C: 17.3 GB; fillers 0; conveyor 1; acad 1
+Sat 08:18 heartbeat: mode PACE usage 16 C: 17.9 GB; fillers 0; conveyor 1; acad 1
+Sat 08:29 heartbeat: mode PACE usage 16 C: 18.1 GB; fillers 0; conveyor 1; acad 1
+Sat 08:40 heartbeat: mode PACE usage 16 C: 18.8 GB; fillers 0; conveyor 1; acad 1
+Sat 08:51 disk guard restarted
+Sat 08:51 heartbeat: mode PACE usage 16 C: 20.8 GB; fillers 0; conveyor 1; acad 1
+Sat 09:02 heartbeat: mode PACE usage 16 C: 20 GB; fillers 0; conveyor 1; acad 0
+Sat 09:13 heartbeat: mode PACE usage 16 C: 20.3 GB; fillers 0; conveyor 1; acad 1
+Sat 09:23 heartbeat: mode PACE usage 16 C: 19 GB; fillers 0; conveyor 1; acad 0
+Sat 09:31 started: usage 16 mode PACE
+Sat 09:42 heartbeat: mode PACE usage 16 C: 18.5 GB; fillers 0; conveyor 1; acad 1
+Sat 09:52 heartbeat: mode PACE usage 16 C: 18.1 GB; fillers 0; conveyor 1; acad 1
+Sat 10:03 heartbeat: mode PACE usage 16 C: 19.2 GB; fillers 0; conveyor 1; acad 1
+Sat 10:14 heartbeat: mode PACE usage 16 C: 20.9 GB; fillers 0; conveyor 1; acad 1
+Sat 10:24 heartbeat: mode PACE usage 16 C: 20.5 GB; fillers 0; conveyor 1; acad 1
+Sat 10:35 heartbeat: mode PACE usage 16 C: 19.9 GB; fillers 0; conveyor 1; acad 1
+Sat 10:46 heartbeat: mode PACE usage 16 C: 19.3 GB; fillers 0; conveyor 1; acad 0
+Sat 10:58 heartbeat: mode PACE usage 16 C: 18.2 GB; fillers 0; conveyor 1; acad 1
+Sat 11:09 heartbeat: mode PACE usage 16 C: 18 GB; fillers 0; conveyor 1; acad 1
+Sat 11:19 heartbeat: mode PACE usage 16 C: 17.8 GB; fillers 0; conveyor 1; acad 1
+Sat 11:30 heartbeat: mode PACE usage 16 C: 19.4 GB; fillers 0; conveyor 1; acad 1
+Sat 11:36 conveyor was missing: started
+Sat 11:41 heartbeat: mode PACE usage 16 C: 19.1 GB; fillers 0; conveyor 1; acad 0
+Sat 11:51 heartbeat: mode PACE usage 16 C: 20.7 GB; fillers 0; conveyor 1; acad 0
+Sat 12:02 heartbeat: mode PACE usage 16 C: 19.7 GB; fillers 0; conveyor 1; acad 1
+Sat 12:13 heartbeat: mode PACE usage 16 C: 19.3 GB; fillers 0; conveyor 1; acad 1
+Sat 12:24 heartbeat: mode PACE usage 16 C: 18.3 GB; fillers 0; conveyor 1; acad 1
+Sat 12:35 heartbeat: mode PACE usage 16 C: 19.3 GB; fillers 0; conveyor 1; acad 1
+Sat 12:44 conveyor was missing: started
+Sat 12:46 heartbeat: mode PACE usage 16 C: 19.8 GB; fillers 0; conveyor 1; acad 1
+Sat 12:57 heartbeat: mode PACE usage 16 C: 19.6 GB; fillers 0; conveyor 1; acad 1
+Sat 13:08 heartbeat: mode PACE usage 16 C: 19.4 GB; fillers 0; conveyor 1; acad 1
+Sat 13:19 heartbeat: mode PACE usage 16 C: 19.6 GB; fillers 0; conveyor 1; acad 1
+Sat 13:30 heartbeat: mode PACE usage 16 C: 20.2 GB; fillers 0; conveyor 1; acad 0
+Sat 13:41 heartbeat: mode PACE usage 16 C: 18.7 GB; fillers 0; conveyor 1; acad 0
+Sat 13:52 heartbeat: mode PACE usage 16 C: 18.1 GB; fillers 0; conveyor 1; acad 1
+Sat 14:02 heartbeat: mode PACE usage 16 C: 17.7 GB; fillers 0; conveyor 1; acad 1
+Sat 14:14 heartbeat: mode PACE usage 16 C: 17.8 GB; fillers 0; conveyor 1; acad 1
+Sat 14:25 heartbeat: mode PACE usage 16 C: 19 GB; fillers 0; conveyor 1; acad 1
+Sat 14:36 heartbeat: mode PACE usage 16 C: 18.1 GB; fillers 0; conveyor 1; acad 1
+Sat 14:47 heartbeat: mode PACE usage 16 C: 17.8 GB; fillers 0; conveyor 1; acad 1
+Sat 14:58 heartbeat: mode PACE usage 16 C: 17.1 GB; fillers 0; conveyor 1; acad 1
+Sat 15:09 heartbeat: mode PACE usage 16 C: 15.2 GB; fillers 0; conveyor 1; acad 1
+Sat 15:20 heartbeat: mode PACE usage 16 C: 15.5 GB; fillers 0; conveyor 1; acad 1
+Sat 15:31 heartbeat: mode PACE usage 16 C: 16.2 GB; fillers 0; conveyor 1; acad 1
+Sat 15:42 heartbeat: mode PACE usage 16 C: 16.9 GB; fillers 0; conveyor 1; acad 0
+Sat 15:53 heartbeat: mode PACE usage 16 C: 17 GB; fillers 0; conveyor 1; acad 1
+Sat 16:03 heartbeat: mode PACE usage 16 C: 18.1 GB; fillers 0; conveyor 1; acad 1
+Sat 16:14 heartbeat: mode PACE usage 16 C: 16.9 GB; fillers 0; conveyor 1; acad 1
+Sat 16:25 heartbeat: mode PACE usage 16 C: 19.2 GB; fillers 0; conveyor 1; acad 1
+Sat 16:35 heartbeat: mode PACE usage 16 C: 19.6 GB; fillers 0; conveyor 1; acad 1
+Sat 16:46 heartbeat: mode PACE usage 16 C: 19.6 GB; fillers 0; conveyor 1; acad 0
+Sat 16:56 heartbeat: mode PACE usage 16 C: 19.7 GB; fillers 0; conveyor 1; acad 1
+Sat 17:07 heartbeat: mode PACE usage 16 C: 18 GB; fillers 0; conveyor 1; acad 1
+Sat 17:18 heartbeat: mode PACE usage 16 C: 19.2 GB; fillers 0; conveyor 0; acad 1
+Sat 17:22 conveyor was missing: started
+Sat 17:28 heartbeat: mode PACE usage 16 C: 19.1 GB; fillers 0; conveyor 1; acad 1
+Sat 17:39 heartbeat: mode PACE usage 16 C: 19.1 GB; fillers 0; conveyor 1; acad 1
+Sat 17:49 heartbeat: mode PACE usage 16 C: 19.7 GB; fillers 0; conveyor 1; acad 1
+Sat 17:59 heartbeat: mode PACE usage 16 C: 19.7 GB; fillers 0; conveyor 1; acad 0
+Sat 18:10 heartbeat: mode PACE usage 16 C: 15.9 GB; fillers 0; conveyor 1; acad 1
+Sat 18:20 heartbeat: mode PACE usage 16 C: 15.9 GB; fillers 0; conveyor 1; acad 1
+Sat 18:31 heartbeat: mode PACE usage 16 C: 19.7 GB; fillers 0; conveyor 1; acad 1
+Sat 18:41 heartbeat: mode PACE usage 16 C: 15.7 GB; fillers 0; conveyor 1; acad 1
+Sat 18:52 heartbeat: mode PACE usage 16 C: 19.6 GB; fillers 0; conveyor 1; acad 1
+Sat 19:03 heartbeat: mode PACE usage 16 C: 19.5 GB; fillers 0; conveyor 1; acad 1
+Sat 19:13 heartbeat: mode PACE usage 16 C: 19.6 GB; fillers 0; conveyor 1; acad 1
+Sat 19:24 heartbeat: mode PACE usage 16 C: 19.6 GB; fillers 0; conveyor 1; acad 1
+Sat 19:34 heartbeat: mode PACE usage 16 C: 19.6 GB; fillers 0; conveyor 1; acad 1
+Sat 19:45 heartbeat: mode PACE usage 16 C: 19.5 GB; fillers 0; conveyor 1; acad 1
+Sat 19:55 heartbeat: mode PACE usage 16 C: 19.5 GB; fillers 0; conveyor 1; acad 1
+Sat 20:06 heartbeat: mode PACE usage 16 C: 19.5 GB; fillers 0; conveyor 1; acad 1
+Sat 20:17 heartbeat: mode PACE usage 16 C: 19.5 GB; fillers 0; conveyor 1; acad 1
+Sat 20:27 heartbeat: mode PACE usage 16 C: 19.5 GB; fillers 0; conveyor 1; acad 1
+Sat 20:38 heartbeat: mode PACE usage 16 C: 19.5 GB; fillers 0; conveyor 1; acad 1
+Sat 20:48 heartbeat: mode PACE usage 16 C: 19.5 GB; fillers 0; conveyor 1; acad 1
+Sat 20:59 heartbeat: mode PACE usage 16 C: 19.5 GB; fillers 0; conveyor 1; acad 1
+Sat 21:09 heartbeat: mode PACE usage 16 C: 19.5 GB; fillers 0; conveyor 1; acad 1
+Sat 21:20 heartbeat: mode PACE usage 16 C: 18.8 GB; fillers 0; conveyor 1; acad 0
+Sat 21:30 heartbeat: mode PACE usage 16 C: 15.6 GB; fillers 0; conveyor 1; acad 0
+Sat 21:41 heartbeat: mode PACE usage 16 C: 14.2 GB; fillers 0; conveyor 1; acad 1
+Sat 21:51 heartbeat: mode PACE usage 16 C: 19.5 GB; fillers 0; conveyor 1; acad 1
+Sat 22:02 heartbeat: mode PACE usage 16 C: 20.9 GB; fillers 0; conveyor 1; acad 1
+Sat 22:13 heartbeat: mode PACE usage 16 C: 19.8 GB; fillers 0; conveyor 1; acad 1
+Sat 22:23 heartbeat: mode PACE usage 16 C: 20.9 GB; fillers 0; conveyor 1; acad 0
+Sat 22:34 heartbeat: mode PACE usage 16 C: 21.1 GB; fillers 0; conveyor 1; acad 1
+Sat 22:44 heartbeat: mode PACE usage 16 C: 21.1 GB; fillers 0; conveyor 1; acad 1
+Sat 22:55 heartbeat: mode PACE usage 16 C: 21 GB; fillers 0; conveyor 1; acad 1
+Sat 23:05 heartbeat: mode PACE usage 16 C: 21 GB; fillers 0; conveyor 1; acad 1
+Sat 23:16 heartbeat: mode PACE usage 16 C: 21 GB; fillers 0; conveyor 1; acad 1
+Sat 23:27 heartbeat: mode PACE usage 16 C: 21 GB; fillers 0; conveyor 1; acad 1
+Sat 23:37 heartbeat: mode PACE usage 16 C: 20.6 GB; fillers 0; conveyor 1; acad 1
+Sat 23:48 heartbeat: mode PACE usage 16 C: 20.6 GB; fillers 0; conveyor 1; acad 1
+Sat 23:58 heartbeat: mode PACE usage 16 C: 20.6 GB; fillers 0; conveyor 1; acad 1
+Sun 00:09 heartbeat: mode PACE usage 16 C: 20.6 GB; fillers 0; conveyor 1; acad 1
+Sun 00:20 heartbeat: mode PACE usage 16 C: 20.5 GB; fillers 0; conveyor 1; acad 1
+Sun 00:31 heartbeat: mode PACE usage 16 C: 20.3 GB; fillers 0; conveyor 1; acad 1
+Sun 00:41 heartbeat: mode PACE usage 16 C: 19.3 GB; fillers 0; conveyor 1; acad 1
+Sun 00:52 heartbeat: mode PACE usage 16 C: 18.1 GB; fillers 0; conveyor 1; acad 1
+Sun 01:03 heartbeat: mode PACE usage 16 C: 17.1 GB; fillers 0; conveyor 1; acad 1
+Sun 01:13 heartbeat: mode PACE usage 16 C: 15.7 GB; fillers 0; conveyor 1; acad 0
+Sun 01:24 heartbeat: mode PACE usage 16 C: 18.3 GB; fillers 0; conveyor 1; acad 1
+Sun 01:35 heartbeat: mode PACE usage 16 C: 17 GB; fillers 0; conveyor 1; acad 1
+Sun 01:46 heartbeat: mode PACE usage 16 C: 18.6 GB; fillers 0; conveyor 1; acad 1
+Sun 01:56 heartbeat: mode PACE usage 16 C: 19.7 GB; fillers 0; conveyor 1; acad 1
+Sun 02:07 heartbeat: mode PACE usage 16 C: 19.1 GB; fillers 0; conveyor 1; acad 1
+Sun 02:18 heartbeat: mode PACE usage 16 C: 19 GB; fillers 0; conveyor 1; acad 1
+Sun 02:28 heartbeat: mode PACE usage 16 C: 18.9 GB; fillers 0; conveyor 1; acad 0
+Sun 02:39 heartbeat: mode PACE usage 16 C: 18.8 GB; fillers 0; conveyor 1; acad 1
+Sun 02:50 heartbeat: mode PACE usage 16 C: 20.3 GB; fillers 0; conveyor 1; acad 1
+Sun 03:00 heartbeat: mode PACE usage 16 C: 20.2 GB; fillers 0; conveyor 1; acad 1
+Sun 03:11 heartbeat: mode PACE usage 16 C: 19.9 GB; fillers 0; conveyor 1; acad 1
+Sun 03:21 heartbeat: mode PACE usage 16 C: 18.8 GB; fillers 0; conveyor 1; acad 0
+Sun 03:32 heartbeat: mode PACE usage 16 C: 13.8 GB; fillers 0; conveyor 1; acad 0
+Sun 03:34 conveyor was missing: started
+Sun 03:43 heartbeat: mode PACE usage 16 C: 13.6 GB; fillers 0; conveyor 1; acad 1
+Sun 03:53 heartbeat: mode PACE usage 16 C: 17.4 GB; fillers 0; conveyor 1; acad 1
+Sun 04:04 heartbeat: mode PACE usage 16 C: 17.4 GB; fillers 0; conveyor 1; acad 0
+Sun 04:14 heartbeat: mode PACE usage 16 C: 17.4 GB; fillers 0; conveyor 1; acad 1
+Sun 04:25 heartbeat: mode PACE usage 16 C: 17.4 GB; fillers 0; conveyor 1; acad 1
+Sun 04:35 heartbeat: mode PACE usage 16 C: 17.4 GB; fillers 0; conveyor 1; acad 1
+Sun 04:46 heartbeat: mode PACE usage 16 C: 17.4 GB; fillers 0; conveyor 1; acad 0
+Sun 04:56 heartbeat: mode PACE usage 29 C: 17.3 GB; fillers 0; conveyor 1; acad 0
+Sun 05:07 heartbeat: mode PACE usage 30 C: 17.1 GB; fillers 0; conveyor 1; acad 1
+Sun 05:17 heartbeat: mode PACE usage 30 C: 17 GB; fillers 0; conveyor 1; acad 1
+Sun 05:28 heartbeat: mode PACE usage 30 C: 17 GB; fillers 0; conveyor 1; acad 1
+Sun 05:39 heartbeat: mode PACE usage 30 C: 17 GB; fillers 0; conveyor 1; acad 1
+Sun 05:49 heartbeat: mode PACE usage 30 C: 16.6 GB; fillers 0; conveyor 1; acad 1
+Sun 06:00 heartbeat: mode PACE usage 30 C: 16.8 GB; fillers 0; conveyor 1; acad 1
+Sun 06:10 heartbeat: mode PACE usage 30 C: 16.6 GB; fillers 0; conveyor 1; acad 1
+Sun 06:21 heartbeat: mode PACE usage 30 C: 16.5 GB; fillers 0; conveyor 1; acad 1
+Sun 06:32 heartbeat: mode PACE usage 30 C: 16.1 GB; fillers 0; conveyor 1; acad 1
+Sun 06:42 heartbeat: mode PACE usage 30 C: 12.4 GB; fillers 0; conveyor 1; acad 1
+Sun 06:53 heartbeat: mode PACE usage 30 C: 16.5 GB; fillers 0; conveyor 1; acad 1
+Sun 07:04 heartbeat: mode PACE usage 30 C: 16.2 GB; fillers 0; conveyor 1; acad 1
+Sun 07:14 heartbeat: mode PACE usage 30 C: 16.4 GB; fillers 0; conveyor 1; acad 1
+Sun 07:25 heartbeat: mode PACE usage 30 C: 16.1 GB; fillers 0; conveyor 1; acad 1
+Sun 07:36 heartbeat: mode PACE usage 30 C: 16 GB; fillers 0; conveyor 1; acad 1
+Sun 07:46 heartbeat: mode PACE usage 30 C: 15.7 GB; fillers 0; conveyor 1; acad 0
+Sun 07:57 heartbeat: mode PACE usage 30 C: 11.4 GB; fillers 0; conveyor 1; acad 0
+Sun 08:08 heartbeat: mode PACE usage 30 C: 10.8 GB; fillers 0; conveyor 1; acad 1
+Sun 08:19 heartbeat: mode PACE usage 30 C: 14.5 GB; fillers 0; conveyor 1; acad 1
+Sun 08:29 heartbeat: mode PACE usage 30 C: 14.1 GB; fillers 0; conveyor 1; acad 1
+Sun 08:40 heartbeat: mode PACE usage 30 C: 13.8 GB; fillers 0; conveyor 1; acad 1
+Sun 08:50 heartbeat: mode PACE usage 30 C: 16.4 GB; fillers 0; conveyor 1; acad 0
+Sun 09:01 heartbeat: mode PACE usage 30 C: 16.2 GB; fillers 0; conveyor 1; acad 1
+Sun 09:12 heartbeat: mode PACE usage 30 C: 16.3 GB; fillers 0; conveyor 1; acad 1
+Sun 09:22 heartbeat: mode PACE usage 30 C: 15.7 GB; fillers 0; conveyor 1; acad 0
+Sun 09:33 heartbeat: mode PACE usage 30 C: 11.9 GB; fillers 0; conveyor 1; acad 1
+Sun 09:44 heartbeat: mode PACE usage 30 C: 10.8 GB; fillers 0; conveyor 1; acad 1
+Sun 09:54 heartbeat: mode PACE usage 30 C: 14 GB; fillers 0; conveyor 1; acad 1
+Sun 10:05 heartbeat: mode PACE usage 30 C: 13.7 GB; fillers 0; conveyor 1; acad 1
+Sun 10:16 heartbeat: mode PACE usage 30 C: 15.4 GB; fillers 0; conveyor 1; acad 1
+Sun 10:26 heartbeat: mode PACE usage 30 C: 14.5 GB; fillers 0; conveyor 1; acad 1
+Sun 10:37 heartbeat: mode PACE usage 30 C: 13.7 GB; fillers 0; conveyor 1; acad 1
+Sun 10:48 heartbeat: mode PACE usage 30 C: 13.7 GB; fillers 0; conveyor 1; acad 1
+Sun 10:59 heartbeat: mode PACE usage 30 C: 13.3 GB; fillers 0; conveyor 1; acad 1
+Sun 11:09 heartbeat: mode PACE usage 30 C: 15.2 GB; fillers 0; conveyor 1; acad 1
+Sun 11:20 heartbeat: mode PACE usage 30 C: 15 GB; fillers 0; conveyor 1; acad 1
+Sun 11:30 heartbeat: mode PACE usage 30 C: 13.8 GB; fillers 0; conveyor 1; acad 1
+Sun 11:41 heartbeat: mode PACE usage 30 C: 13.7 GB; fillers 0; conveyor 1; acad 1
+Sun 11:52 heartbeat: mode PACE usage 30 C: 13.6 GB; fillers 0; conveyor 1; acad 1
+Sun 12:02 heartbeat: mode PACE usage 30 C: 13.6 GB; fillers 0; conveyor 1; acad 1
+Sun 12:13 heartbeat: mode PACE usage 30 C: 13.1 GB; fillers 0; conveyor 1; acad 1
+Sun 12:23 heartbeat: mode PACE usage 30 C: 14.4 GB; fillers 0; conveyor 1; acad 1
+Sun 12:34 heartbeat: mode PACE usage 30 C: 13.9 GB; fillers 0; conveyor 1; acad 1
+Sun 12:45 heartbeat: mode PACE usage 30 C: 13.6 GB; fillers 0; conveyor 1; acad 1
+Sun 12:56 heartbeat: mode PACE usage 30 C: 12.7 GB; fillers 0; conveyor 1; acad 1
+Sun 13:06 heartbeat: mode PACE usage 30 C: 13.4 GB; fillers 0; conveyor 1; acad 1
+Sun 13:17 heartbeat: mode PACE usage 30 C: 13.6 GB; fillers 0; conveyor 1; acad 1
+Sun 13:28 heartbeat: mode PACE usage 30 C: 13.6 GB; fillers 0; conveyor 1; acad 1
+Sun 13:38 heartbeat: mode PACE usage 30 C: 13.2 GB; fillers 0; conveyor 1; acad 1
+Sun 13:49 heartbeat: mode PACE usage 30 C: 13.1 GB; fillers 0; conveyor 1; acad 1
+Sun 14:00 heartbeat: mode PACE usage 30 C: 13.6 GB; fillers 0; conveyor 1; acad 1
+Sun 14:10 heartbeat: mode PACE usage 30 C: 13.5 GB; fillers 0; conveyor 1; acad 1
+Sun 14:21 heartbeat: mode PACE usage 30 C: 12.6 GB; fillers 0; conveyor 1; acad 1
+Sun 14:32 heartbeat: mode PACE usage 30 C: 11.8 GB; fillers 0; conveyor 1; acad 1
+Sun 14:42 heartbeat: mode PACE usage 30 C: 11.8 GB; fillers 0; conveyor 1; acad 1
+Sun 14:53 heartbeat: mode PACE usage 30 C: 11.6 GB; fillers 0; conveyor 1; acad 0
+Sun 15:04 heartbeat: mode PACE usage 30 C: 7.7 GB; fillers 0; conveyor 1; acad 1
+Sun 15:12 conveyor was missing: started
+Sun 15:14 heartbeat: mode PACE usage 30 C: 12.6 GB; fillers 0; conveyor 1; acad 1
+Sun 15:25 heartbeat: mode PACE usage 30 C: 12.4 GB; fillers 0; conveyor 1; acad 1
+Sun 15:36 heartbeat: mode PACE usage 30 C: 11.9 GB; fillers 0; conveyor 1; acad 1
+Sun 15:46 heartbeat: mode PACE usage 30 C: 11.9 GB; fillers 0; conveyor 1; acad 1
+Sun 15:57 heartbeat: mode PACE usage 30 C: 11.9 GB; fillers 0; conveyor 1; acad 1
+Sun 16:07 heartbeat: mode PACE usage 30 C: 12.5 GB; fillers 0; conveyor 1; acad 1
+Sun 16:18 heartbeat: mode PACE usage 30 C: 12.5 GB; fillers 0; conveyor 1; acad 1
+Sun 16:28 heartbeat: mode PACE usage 30 C: 12.2 GB; fillers 0; conveyor 1; acad 0
+Sun 16:39 heartbeat: mode PACE usage 30 C: 12 GB; fillers 0; conveyor 1; acad 0
+Sun 16:49 heartbeat: mode PACE usage 30 C: 12.2 GB; fillers 0; conveyor 1; acad 0
+Sun 17:00 heartbeat: mode PACE usage 30 C: 11.4 GB; fillers 0; conveyor 1; acad 1
+Sun 17:10 heartbeat: mode PACE usage 30 C: 11.4 GB; fillers 0; conveyor 1; acad 1
+Sun 17:21 heartbeat: mode PACE usage 30 C: 11.4 GB; fillers 0; conveyor 1; acad 1
+Sun 17:31 heartbeat: mode PACE usage 30 C: 11.6 GB; fillers 0; conveyor 1; acad 1
+Sun 17:42 conveyor was missing: started
+Sun 17:42 heartbeat: mode PACE usage 30 C: 11.5 GB; fillers 0; conveyor 1; acad 1
+Sun 17:52 heartbeat: mode PACE usage 30 C: 11.3 GB; fillers 0; conveyor 1; acad 1
+Sun 18:03 heartbeat: mode PACE usage 30 C: 11.3 GB; fillers 0; conveyor 1; acad 1
+Sun 18:14 heartbeat: mode PACE usage 30 C: 10.9 GB; fillers 0; conveyor 1; acad 1
+Sun 18:24 heartbeat: mode PACE usage 30 C: 11 GB; fillers 0; conveyor 1; acad 1
+Sun 18:35 heartbeat: mode PACE usage 30 C: 10.9 GB; fillers 0; conveyor 1; acad 1
+Sun 18:45 heartbeat: mode PACE usage 30 C: 9.4 GB; fillers 0; conveyor 1; acad 1
+Sun 18:56 heartbeat: mode PACE usage 30 C: 9.3 GB; fillers 0; conveyor 0; acad 1
+Sun 19:07 heartbeat: mode PACE usage 30 C: 9.3 GB; fillers 0; conveyor 0; acad 1
+Sun 19:17 heartbeat: mode PACE usage 30 C: 10.6 GB; fillers 0; conveyor 0; acad 1
+Sun 19:28 heartbeat: mode PACE usage 30 C: 9.2 GB; fillers 0; conveyor 0; acad 1
+Sun 19:38 heartbeat: mode PACE usage 30 C: 9 GB; fillers 0; conveyor 0; acad 0
+Sun 19:49 heartbeat: mode PACE usage 30 C: 10.8 GB; fillers 0; conveyor 0; acad 0
+Sun 19:59 heartbeat: mode PACE usage 30 C: 10.9 GB; fillers 0; conveyor 0; acad 0
+Sun 20:10 heartbeat: mode PACE usage 30 C: 10.5 GB; fillers 0; conveyor 0; acad 0
+Sun 20:20 heartbeat: mode PACE usage 30 C: 9.6 GB; fillers 0; conveyor 0; acad 0
+Sun 20:31 heartbeat: mode PACE usage 30 C: 8.9 GB; fillers 0; conveyor 0; acad 0
+Sun 20:41 heartbeat: mode PACE usage 30 C: 9.7 GB; fillers 0; conveyor 0; acad 0
+Sun 20:43 conveyor was missing: started
+Sun 20:52 heartbeat: mode PACE usage 30 C: 9.3 GB; fillers 0; conveyor 1; acad 1
+Sun 21:02 heartbeat: mode PACE usage 30 C: 9.9 GB; fillers 0; conveyor 0; acad 1
+Sun 21:13 heartbeat: mode PACE usage 30 C: 9.9 GB; fillers 0; conveyor 0; acad 0
+Sun 21:24 heartbeat: mode PACE usage 30 C: 9.9 GB; fillers 0; conveyor 0; acad 1
+Sun 21:34 heartbeat: mode PACE usage 30 C: 9.9 GB; fillers 0; conveyor 0; acad 1
+Sun 21:45 heartbeat: mode PACE usage 30 C: 9.9 GB; fillers 0; conveyor 0; acad 1
+Sun 21:55 heartbeat: mode PACE usage 30 C: 9.8 GB; fillers 0; conveyor 0; acad 1
+Sun 22:06 heartbeat: mode PACE usage 30 C: 9.8 GB; fillers 0; conveyor 0; acad 1
+Sun 22:16 heartbeat: mode PACE usage 30 C: 9.8 GB; fillers 0; conveyor 0; acad 1
+Sun 22:27 heartbeat: mode PACE usage 30 C: 9.8 GB; fillers 0; conveyor 0; acad 1
+Sun 22:37 heartbeat: mode PACE usage 30 C: 9.8 GB; fillers 0; conveyor 0; acad 1
+Sun 22:48 heartbeat: mode PACE usage 30 C: 9.8 GB; fillers 0; conveyor 0; acad 1
+Sun 22:59 heartbeat: mode PACE usage 30 C: 9.8 GB; fillers 0; conveyor 0; acad 1
+Sun 23:10 heartbeat: mode PACE usage 30 C: 9.5 GB; fillers 0; conveyor 0; acad 1
+Sun 23:20 heartbeat: mode PACE usage 30 C: 9.2 GB; fillers 0; conveyor 0; acad 1
+Sun 23:31 heartbeat: mode PACE usage 30 C: 9.8 GB; fillers 0; conveyor 0; acad 0
+Sun 23:41 heartbeat: mode PACE usage 30 C: 9.8 GB; fillers 0; conveyor 0; acad 0
+Sun 23:52 heartbeat: mode PACE usage 30 C: 9.6 GB; fillers 0; conveyor 0; acad 0
+Mon 00:02 heartbeat: mode PACE usage 30 C: 9 GB; fillers 0; conveyor 0; acad 0
+Mon 00:11 conveyor was missing: started
+Mon 00:13 heartbeat: mode PACE usage 30 C: 7.7 GB; fillers 0; conveyor 1; acad 0
+Mon 00:23 heartbeat: mode PACE usage 30 C: 7.7 GB; fillers 0; conveyor 1; acad 0
+Mon 00:34 heartbeat: mode PACE usage 30 C: 7.6 GB; fillers 0; conveyor 1; acad 0
+Mon 00:44 heartbeat: mode PACE usage 30 C: 7.4 GB; fillers 0; conveyor 1; acad 0
+Mon 00:55 heartbeat: mode PACE usage 30 C: 6.8 GB; fillers 0; conveyor 0; acad 0
+Mon 01:06 heartbeat: mode PACE usage 30 C: 6.6 GB; fillers 0; conveyor 0; acad 0
+Mon 01:16 heartbeat: mode PACE usage 30 C: 6.3 GB; fillers 0; conveyor 0; acad 0
+Mon 01:26 heartbeat: mode PACE usage 30 C: 8 GB; fillers 0; conveyor 0; acad 0
+Mon 01:37 heartbeat: mode PACE usage 30 C: 7.1 GB; fillers 0; conveyor 0; acad 0
+Mon 01:48 heartbeat: mode PACE usage 30 C: 8.7 GB; fillers 0; conveyor 0; acad 0
+Mon 01:58 heartbeat: mode PACE usage 30 C: 8.1 GB; fillers 0; conveyor 0; acad 0
+Mon 02:09 heartbeat: mode PACE usage 30 C: 6.4 GB; fillers 0; conveyor 0; acad 0
+Mon 02:19 heartbeat: mode PACE usage 30 C: 6.4 GB; fillers 0; conveyor 0; acad 0
+Mon 02:29 heartbeat: mode PACE usage 30 C: 6.4 GB; fillers 0; conveyor 0; acad 0
+Mon 02:40 heartbeat: mode PACE usage 30 C: 6.4 GB; fillers 0; conveyor 0; acad 0
+Mon 02:51 heartbeat: mode PACE usage 30 C: 6.4 GB; fillers 0; conveyor 0; acad 0
+Mon 03:01 heartbeat: mode PACE usage 30 C: 6.4 GB; fillers 0; conveyor 0; acad 0
+Mon 03:11 heartbeat: mode PACE usage 30 C: 6.3 GB; fillers 0; conveyor 0; acad 0
+Mon 03:22 heartbeat: mode PACE usage 30 C: 6.3 GB; fillers 0; conveyor 0; acad 0
+Mon 03:32 heartbeat: mode PACE usage 30 C: 6.3 GB; fillers 0; conveyor 0; acad 0
+Mon 03:41 conveyor was missing: started
+Mon 03:42 started: usage 4 mode PACE
+Mon 03:52 heartbeat: mode PACE usage 4 C: 61.5 GB; fillers 0; conveyor 1; acad 1
+Mon 04:03 heartbeat: mode PACE usage 5 C: 61.2 GB; fillers 0; conveyor 1; acad 1
+Mon 04:14 heartbeat: mode PACE usage 5 C: 62.3 GB; fillers 0; conveyor 1; acad 1
+Mon 04:25 heartbeat: mode PACE usage 5 C: 62 GB; fillers 0; conveyor 1; acad 0
+Mon 04:36 heartbeat: mode PACE usage 6 C: 60.7 GB; fillers 0; conveyor 1; acad 1
+Mon 04:47 heartbeat: mode PACE usage 6 C: 60.6 GB; fillers 0; conveyor 1; acad 1
+Mon 04:58 heartbeat: mode PACE usage 6 C: 60.5 GB; fillers 0; conveyor 1; acad 1
+Mon 05:08 heartbeat: mode PACE usage 6 C: 60.2 GB; fillers 0; conveyor 1; acad 1
+Mon 05:19 heartbeat: mode PACE usage 6 C: 59.8 GB; fillers 0; conveyor 1; acad 1
+Mon 05:30 heartbeat: mode PACE usage 7 C: 59.7 GB; fillers 0; conveyor 1; acad 1
+Mon 05:41 heartbeat: mode PACE usage 7 C: 60.9 GB; fillers 0; conveyor 0; acad 0
+Mon 05:43 conveyor was missing: started
+Mon 05:52 heartbeat: mode PACE usage 7 C: 60.8 GB; fillers 0; conveyor 1; acad 0
+Mon 06:02 heartbeat: mode PACE usage 7 C: 60.5 GB; fillers 0; conveyor 1; acad 1
+Mon 06:13 heartbeat: mode PACE usage 7 C: 60.3 GB; fillers 0; conveyor 1; acad 0
+Mon 06:24 heartbeat: mode PACE usage 7 C: 60.1 GB; fillers 0; conveyor 1; acad 1
+Mon 06:35 heartbeat: mode PACE usage 8 C: 59.4 GB; fillers 0; conveyor 1; acad 1
+Mon 06:44 filler started: cx_rv11 (usage 8, C: 59.9 GB)
+Mon 06:46 filler started: cx_rv12 (usage 8, C: 59.8 GB)
+Mon 06:46 heartbeat: mode PACE usage 8 C: 59.8 GB; fillers 1; conveyor 1; acad 1
+Mon 06:48 filler started: cx_rv13 (usage 9, C: 59.8 GB)
+Mon 06:50 filler started: cx_rv14 (usage 10, C: 59.6 GB)
+Mon 06:53 filler started: cx_rv15 (usage 11, C: 59.5 GB)
+Mon 06:55 filler started: cx_rv16 (usage 12, C: 59.5 GB)
+Mon 06:57 filler started: cx_rv17 (usage 13, C: 59.4 GB)
+Mon 06:57 heartbeat: mode PACE usage 13 C: 59.4 GB; fillers 2; conveyor 1; acad 1
+Mon 07:04 filler started: cx_rv18 (usage 15, C: 59.1 GB)
+Mon 07:08 heartbeat: mode PACE usage 16 C: 59 GB; fillers 1; conveyor 1; acad 1
+Mon 07:19 heartbeat: mode PACE usage 16 C: 58.9 GB; fillers 0; conveyor 1; acad 1
+Mon 07:31 heartbeat: mode PACE usage 17 C: 59.2 GB; fillers 0; conveyor 1; acad 1
+Mon 07:42 heartbeat: mode PACE usage 17 C: 57.6 GB; fillers 0; conveyor 1; acad 1
+Mon 07:51 started: usage 17 mode PACE
+Mon 07:54 filler started: cx_cr01 (usage 17, C: 57.7 GB)
+Mon 07:56 filler started: cx_cr02 (usage 18, C: 57.1 GB)
+Mon 07:58 filler started: cx_cr03 (usage 19, C: 56.8 GB)
+Mon 08:00 filler started: cx_cr04 (usage 20, C: 56.8 GB)
+Mon 08:02 filler started: cx_cr05 (usage 21, C: 56.7 GB)
+Mon 08:02 heartbeat: mode PACE usage 21 C: 56.7 GB; fillers 0; conveyor 1; acad 1
+Mon 08:05 filler started: cx_cr06 (usage 22, C: 56.6 GB)
+Mon 08:14 heartbeat: mode PACE usage 23 C: 56.7 GB; fillers 0; conveyor 1; acad 1
+Mon 08:25 heartbeat: mode PACE usage 23 C: 56.9 GB; fillers 0; conveyor 1; acad 0
+Mon 08:36 heartbeat: mode PACE usage 24 C: 56.4 GB; fillers 0; conveyor 1; acad 1
+Mon 08:47 heartbeat: mode PACE usage 24 C: 56 GB; fillers 0; conveyor 1; acad 0
+Mon 08:58 heartbeat: mode PACE usage 24 C: 56.2 GB; fillers 0; conveyor 1; acad 0
+Mon 09:10 heartbeat: mode PACE usage 24 C: 56.1 GB; fillers 0; conveyor 1; acad 0
+Mon 09:21 heartbeat: mode PACE usage 25 C: 51.6 GB; fillers 0; conveyor 1; acad 1
+Mon 09:31 heartbeat: mode PACE usage 25 C: 49.3 GB; fillers 0; conveyor 1; acad 0
+Mon 09:42 heartbeat: mode PACE usage 25 C: 48.8 GB; fillers 0; conveyor 1; acad 0
+Mon 09:53 heartbeat: mode PACE usage 25 C: 49.2 GB; fillers 0; conveyor 1; acad 1
+Mon 10:04 heartbeat: mode PACE usage 25 C: 49.1 GB; fillers 0; conveyor 1; acad 1
+Mon 10:15 heartbeat: mode PACE usage 25 C: 49.1 GB; fillers 0; conveyor 1; acad 1
+Mon 10:26 heartbeat: mode PACE usage 25 C: 50.1 GB; fillers 0; conveyor 1; acad 1
+Mon 10:37 heartbeat: mode PACE usage 25 C: 50.1 GB; fillers 0; conveyor 1; acad 1
+Mon 10:48 heartbeat: mode PACE usage 25 C: 50.4 GB; fillers 0; conveyor 1; acad 1
+Mon 11:00 heartbeat: mode PACE usage 25 C: 50.9 GB; fillers 0; conveyor 1; acad 1
+Mon 11:10 heartbeat: mode PACE usage 25 C: 50.9 GB; fillers 0; conveyor 1; acad 1
+Mon 11:21 heartbeat: mode PACE usage 25 C: 50.8 GB; fillers 0; conveyor 1; acad 1
+Mon 11:32 heartbeat: mode PACE usage 25 C: 50.3 GB; fillers 0; conveyor 1; acad 1
+Mon 11:42 heartbeat: mode PACE usage 26 C: 49.4 GB; fillers 0; conveyor 1; acad 1
+Mon 11:53 heartbeat: mode PACE usage 26 C: 48.7 GB; fillers 0; conveyor 1; acad 1
+Mon 12:04 heartbeat: mode PACE usage 26 C: 48.7 GB; fillers 0; conveyor 1; acad 1
+Mon 12:15 heartbeat: mode PACE usage 26 C: 48.5 GB; fillers 0; conveyor 1; acad 1
+Mon 12:26 heartbeat: mode PACE usage 26 C: 50.3 GB; fillers 0; conveyor 1; acad 1
+Mon 12:36 heartbeat: mode PACE usage 26 C: 50 GB; fillers 0; conveyor 1; acad 1
+Mon 12:47 heartbeat: mode PACE usage 26 C: 48.8 GB; fillers 0; conveyor 1; acad 0
+Mon 12:57 heartbeat: mode PACE usage 26 C: 48.7 GB; fillers 0; conveyor 1; acad 0
+Mon 13:08 heartbeat: mode PACE usage 26 C: 48.2 GB; fillers 0; conveyor 1; acad 0
+Mon 13:19 heartbeat: mode PACE usage 26 C: 48.2 GB; fillers 0; conveyor 1; acad 1
+Mon 13:30 heartbeat: mode PACE usage 27 C: 48.1 GB; fillers 0; conveyor 1; acad 0
+Mon 13:41 heartbeat: mode PACE usage 27 C: 47.9 GB; fillers 0; conveyor 1; acad 1
+Mon 13:52 heartbeat: mode PACE usage 27 C: 48.3 GB; fillers 0; conveyor 1; acad 1
+Mon 14:03 heartbeat: mode PACE usage 28 C: 50 GB; fillers 0; conveyor 1; acad 1
+Mon 14:13 heartbeat: mode PACE usage 28 C: 49.9 GB; fillers 0; conveyor 1; acad 1
+Mon 14:24 heartbeat: mode PACE usage 28 C: 49.6 GB; fillers 0; conveyor 1; acad 1
+Mon 14:35 heartbeat: mode PACE usage 28 C: 48.7 GB; fillers 0; conveyor 1; acad 1
+Mon 14:46 heartbeat: mode PACE usage 28 C: 48.7 GB; fillers 0; conveyor 1; acad 1
+Mon 14:56 heartbeat: mode PACE usage 28 C: 48.7 GB; fillers 0; conveyor 1; acad 1
+Mon 15:07 heartbeat: mode PACE usage 28 C: 48.5 GB; fillers 0; conveyor 1; acad 1
+Mon 15:18 heartbeat: mode PACE usage 28 C: 48.4 GB; fillers 0; conveyor 1; acad 1
+Mon 15:29 heartbeat: mode PACE usage 28 C: 48.1 GB; fillers 0; conveyor 1; acad 1
+Mon 15:39 heartbeat: mode PACE usage 28 C: 48.1 GB; fillers 0; conveyor 1; acad 1
+Mon 15:50 heartbeat: mode PACE usage 28 C: 48.1 GB; fillers 0; conveyor 1; acad 1
+Mon 16:01 heartbeat: mode PACE usage 28 C: 48.1 GB; fillers 0; conveyor 1; acad 1
+Mon 16:12 heartbeat: mode PACE usage 28 C: 48.1 GB; fillers 0; conveyor 1; acad 1
+Mon 16:23 heartbeat: mode PACE usage 28 C: 48.1 GB; fillers 0; conveyor 1; acad 1
+Mon 16:33 heartbeat: mode PACE usage 28 C: 48.1 GB; fillers 0; conveyor 1; acad 1
+Mon 16:44 heartbeat: mode PACE usage 28 C: 48.1 GB; fillers 0; conveyor 1; acad 0
+Mon 16:55 heartbeat: mode PACE usage 29 C: 49.2 GB; fillers 0; conveyor 1; acad 0
+Mon 16:59 conveyor was missing: started
+Mon 17:06 heartbeat: mode PACE usage 29 C: 48.2 GB; fillers 0; conveyor 1; acad 0
+Mon 17:16 heartbeat: mode PACE usage 29 C: 47.1 GB; fillers 0; conveyor 1; acad 1
+Mon 17:27 WEEKLY RESET DETECTED (29 -> 0): mode PACE (Tim 24 Oct 05:30: after a reset Codex goes back to normal managed weekly use: AutoCAD looks and reviews run constantly inside today's daily cap).
+Mon 17:27 filler started: cx_cr07 (usage 0, C: 47.1 GB)
+Mon 17:27 heartbeat: mode PACE usage 0 C: 47.1 GB; fillers 0; conveyor 1; acad 1
+Mon 17:30 filler started: cx_cr08 (usage 1, C: 47.1 GB)
+Mon 17:32 filler started: cx_cr09 (usage 1, C: 47.1 GB)
+Mon 17:34 filler started: cx_cr10 (usage 2, C: 47.1 GB)
+Mon 17:36 filler started: cx_cr11 (usage 3, C: 46.9 GB)
+Mon 17:38 filler started: cx_cr12 (usage 4, C: 48.8 GB)
+Mon 17:38 heartbeat: mode PACE usage 4 C: 48.8 GB; fillers 0; conveyor 1; acad 1
+Mon 17:41 filler started: cx_cr13 (usage 6, C: 48.7 GB)
+Mon 17:43 filler started: cx_cr14 (usage 6, C: 48.7 GB)
+Mon 17:45 filler started: cx_cr15 (usage 7, C: 48.6 GB)
+Mon 17:47 filler started: cx_cr16 (usage 8, C: 48.5 GB)
+Mon 17:49 filler started: cx_cr17 (usage 10, C: 48.4 GB)
+Mon 17:49 heartbeat: mode PACE usage 10 C: 48.4 GB; fillers 0; conveyor 1; acad 1
+Mon 17:51 filler started: cx_cr18 (usage 11, C: 48.3 GB)
+Mon 17:56 filler started: cx_cr19 (usage 12, C: 47.4 GB)
+Mon 17:58 filler started: cx_cr20 (usage 13, C: 47.1 GB)
+Mon 18:00 filler started: cx_cr21 (usage 14, C: 47.1 GB)
+Mon 18:00 heartbeat: mode PACE usage 14 C: 47.1 GB; fillers 0; conveyor 1; acad 1
+Mon 18:02 filler started: cx_cr22 (usage 15, C: 47.1 GB)
+Mon 18:11 heartbeat: mode PACE usage 17 C: 46.9 GB; fillers 0; conveyor 1; acad 1
+Mon 18:21 heartbeat: mode PACE usage 18 C: 46.6 GB; fillers 0; conveyor 1; acad 1
+Mon 18:32 heartbeat: mode PACE usage 18 C: 48.3 GB; fillers 0; conveyor 1; acad 1
+Mon 18:43 heartbeat: mode PACE usage 18 C: 48.1 GB; fillers 0; conveyor 1; acad 1
+Mon 18:51 filler started: cx_rd23 (usage 18, C: 48.1 GB)
+Mon 18:53 filler started: cx_rd24 (usage 19, C: 48 GB)
+Mon 18:53 heartbeat: mode SPEND usage 19 C: 48 GB; fillers 0; conveyor 1; acad 1
+Mon 18:55 filler started: cx_rd25 (usage 20, C: 47.9 GB)
+Mon 18:58 filler started: cx_bd09 (usage 21, C: 47.7 GB)
+Mon 19:00 filler started: cx_bd10 (usage 21, C: 47.6 GB)
+Mon 19:02 filler started: cx_bd11 (usage 22, C: 47.6 GB)
+Mon 19:04 filler started: cx_bd12 (usage 23, C: 47.3 GB)
+Mon 19:04 heartbeat: mode SPEND usage 23 C: 47.3 GB; fillers 0; conveyor 1; acad 1
+Mon 19:07 filler started: cx_bd13 (usage 23, C: 47.2 GB)
+Mon 19:09 filler started: cx_bd14 (usage 23, C: 46.9 GB)
+Mon 19:11 killed idle launcher pid 96028 (100 min)
+Mon 19:16 heartbeat: mode SPEND usage 24 C: 46.1 GB; fillers 0; conveyor 1; acad 1
+Mon 19:27 heartbeat: mode SPEND usage 25 C: 45.9 GB; fillers 0; conveyor 1; acad 1
+Mon 19:37 filler started: cx_bd15 (usage 26, C: 45.6 GB)
+Mon 19:40 filler started: cx_bd16 (usage 26, C: 45.5 GB)
+Mon 19:40 heartbeat: mode SPEND usage 26 C: 45.5 GB; fillers 0; conveyor 1; acad 1
+Mon 19:42 filler started: cx_bd17 (usage 26, C: 45.2 GB)
+Mon 19:50 heartbeat: mode SPEND usage 27 C: 45 GB; fillers 0; conveyor 1; acad 0
+Mon 20:01 heartbeat: mode SPEND usage 28 C: 44.9 GB; fillers 0; conveyor 1; acad 1
+Mon 20:13 heartbeat: mode SPEND usage 29 C: 44.2 GB; fillers 0; conveyor 1; acad 1
+Mon 20:23 heartbeat: mode SPEND usage 29 C: 43.9 GB; fillers 0; conveyor 1; acad 1
+Mon 20:34 heartbeat: mode SPEND usage 30 C: 43.8 GB; fillers 0; conveyor 1; acad 1
+Mon 20:39 filler started: cx_bd18 (usage 30, C: 43.7 GB)
+Mon 20:44 heartbeat: mode SPEND usage 32 C: 43.4 GB; fillers 0; conveyor 1; acad 0
+Mon 20:56 killed idle launcher pid 95764 (103 min)
+Mon 20:57 heartbeat: mode SPEND usage 33 C: 43.1 GB; fillers 0; conveyor 1; acad 1
+Mon 21:07 heartbeat: mode SPEND usage 33 C: 42.6 GB; fillers 0; conveyor 1; acad 1
+Mon 21:14 filler started: cx_bd19 (usage 33, C: 42.1 GB)
+Mon 21:19 heartbeat: mode SPEND usage 35 C: 41.9 GB; fillers 0; conveyor 1; acad 0
+Mon 21:30 heartbeat: mode SPEND usage 36 C: 41.8 GB; fillers 0; conveyor 1; acad 1
+Mon 21:41 heartbeat: mode SPEND usage 37 C: 41.6 GB; fillers 0; conveyor 1; acad 1
+Mon 21:45 filler started: cx_bd20 (usage 37, C: 41.6 GB)
+Mon 21:51 heartbeat: mode SPEND usage 38 C: 41.3 GB; fillers 0; conveyor 1; acad 0
+Mon 22:01 filler started: cx_rv19 (usage 39, C: 41.7 GB)
+Mon 22:02 heartbeat: mode SPEND usage 39 C: 41.7 GB; fillers 0; conveyor 1; acad 1
+Mon 22:04 filler started: cx_rv20 (usage 40, C: 42.2 GB)
+Mon 22:09 filler started: cx_rv21 (usage 41, C: 41.9 GB)
+Mon 22:13 filler started: cx_rv22 (usage 42, C: 41.8 GB)
+Mon 22:13 heartbeat: mode SPEND usage 42 C: 41.8 GB; fillers 1; conveyor 1; acad 0
+Mon 22:18 filler started: cx_rv23 (usage 43, C: 42.3 GB)
+Mon 22:20 filler started: cx_rv24 (usage 43, C: 42.2 GB)
+Mon 22:22 filler started: cx_rv25 (usage 44, C: 42.1 GB)
+Mon 22:25 heartbeat: mode SPEND usage 45 C: 42 GB; fillers 3; conveyor 1; acad 0
+Mon 22:29 filler started: cx_rv26 (usage 46, C: 41.6 GB)
+Mon 22:32 filler started: cx_rv27 (usage 47, C: 41.5 GB)
+Mon 22:34 filler started: cx_rv28 (usage 48, C: 41.4 GB)
+Mon 22:37 heartbeat: mode SPEND usage 49 C: 41.3 GB; fillers 3; conveyor 1; acad 0
+Mon 22:42 filler started: cx_bd21 (usage 50, C: 41.2 GB)
+Mon 22:44 filler started: cx_bd22 (usage 51, C: 41.5 GB)
+Mon 22:46 filler started: cx_bd23 (usage 51, C: 41.8 GB)
+Mon 22:49 filler started: cx_bd24 (usage 52, C: 41.6 GB)
+Mon 22:49 heartbeat: mode SPEND usage 52 C: 41.6 GB; fillers 0; conveyor 1; acad 1
+Mon 22:51 filler started: cx_bd25 (usage 52, C: 41.5 GB)
+Mon 22:59 heartbeat: mode SPEND usage 53 C: 41.2 GB; fillers 0; conveyor 1; acad 1
+Mon 23:02 filler started: cx_bd26 (usage 53, C: 41.5 GB)
+Mon 23:04 filler started: cx_bd27 (usage 54, C: 41.3 GB)
+Mon 23:09 heartbeat: mode SPEND usage 55 C: 41 GB; fillers 0; conveyor 1; acad 1
+Mon 23:20 heartbeat: mode SPEND usage 56 C: 40.3 GB; fillers 0; conveyor 1; acad 1
+Mon 23:32 heartbeat: mode SPEND usage 57 C: 40.8 GB; fillers 0; conveyor 1; acad 1
+Mon 23:39 conveyor was missing: started
+Mon 23:45 heartbeat: mode SPEND usage 57 C: 40.4 GB; fillers 0; conveyor 1; acad 1
+Mon 23:57 heartbeat: mode SPEND usage 60 C: 40.1 GB; fillers 0; conveyor 1; acad 1
+Tue 00:06 filler started: cx_bd28 (usage 60, C: 40.5 GB)
+Tue 00:09 heartbeat: mode SPEND usage 63 C: 40.5 GB; fillers 0; conveyor 1; acad 1
+Tue 00:19 heartbeat: mode SPEND usage 64 C: 40.2 GB; fillers 0; conveyor 1; acad 1
+Tue 00:29 filler started: cx_bd29 (usage 65, C: 41 GB)
+Tue 00:31 filler started: cx_bd30 (usage 65, C: 40.9 GB)
+Tue 00:31 heartbeat: mode SPEND usage 65 C: 40.9 GB; fillers 0; conveyor 1; acad 0
+Tue 00:43 heartbeat: mode SPEND usage 66 C: 40.3 GB; fillers 0; conveyor 1; acad 1
+Tue 00:53 heartbeat: mode SPEND usage 68 C: 39.4 GB; fillers 0; conveyor 1; acad 1
+Tue 01:03 heartbeat: mode SPEND usage 68 C: 39.2 GB; fillers 0; conveyor 1; acad 1
+Tue 01:15 heartbeat: mode SPEND usage 71 C: 38.7 GB; fillers 0; conveyor 1; acad 1
+Tue 01:25 killed idle launcher pid 94928 (155 min)
+Tue 01:25 heartbeat: mode SPEND usage 71 C: 38.1 GB; fillers 0; conveyor 1; acad 1
+Tue 01:38 heartbeat: mode SPEND usage 74 C: 38.5 GB; fillers 0; conveyor 1; acad 1
+Tue 01:48 heartbeat: mode SPEND usage 75 C: 38 GB; fillers 0; conveyor 1; acad 0
+Tue 01:59 heartbeat: mode SPEND usage 76 C: 37.9 GB; fillers 0; conveyor 1; acad 1
+Tue 02:09 heartbeat: mode SPEND usage 76 C: 37.9 GB; fillers 0; conveyor 1; acad 1
+Tue 02:21 heartbeat: mode SPEND usage 78 C: 37.9 GB; fillers 0; conveyor 1; acad 1
+Tue 02:33 heartbeat: mode SPEND usage 80 C: 37.3 GB; fillers 0; conveyor 1; acad 1
+Tue 02:45 heartbeat: mode SPEND usage 81 C: 37.7 GB; fillers 0; conveyor 1; acad 0
+Tue 02:57 heartbeat: mode SPEND usage 82 C: 37.9 GB; fillers 0; conveyor 1; acad 0
+Tue 03:10 heartbeat: mode SPEND usage 83 C: 37.4 GB; fillers 0; conveyor 1; acad 0
+Tue 03:22 heartbeat: mode SPEND usage 84 C: 37.2 GB; fillers 0; conveyor 1; acad 1
+Tue 03:33 heartbeat: mode SPEND usage 85 C: 36.9 GB; fillers 0; conveyor 1; acad 1
+Tue 03:44 heartbeat: mode SPEND usage 86 C: 37.8 GB; fillers 0; conveyor 1; acad 0
+Tue 03:55 heartbeat: mode SPEND usage 87 C: 39 GB; fillers 0; conveyor 1; acad 1
+Tue 04:06 heartbeat: mode SPEND usage 87 C: 38.7 GB; fillers 0; conveyor 1; acad 0
+Tue 04:17 heartbeat: mode SPEND usage 88 C: 38.5 GB; fillers 0; conveyor 1; acad 1
+Tue 04:28 heartbeat: mode SPEND usage 88 C: 37.7 GB; fillers 0; conveyor 1; acad 1
+Tue 04:39 heartbeat: mode SPEND usage 88 C: 37 GB; fillers 0; conveyor 1; acad 1
+Tue 04:49 heartbeat: mode SPEND usage 88 C: 37 GB; fillers 0; conveyor 1; acad 1
+Tue 05:00 heartbeat: mode SPEND usage 88 C: 37 GB; fillers 0; conveyor 1; acad 0
+Tue 05:10 heartbeat: mode SPEND usage 88 C: 38.9 GB; fillers 0; conveyor 1; acad 1
+Tue 05:21 heartbeat: mode SPEND usage 88 C: 38.7 GB; fillers 0; conveyor 1; acad 0
+Tue 05:31 heartbeat: mode SPEND usage 88 C: 38.6 GB; fillers 0; conveyor 1; acad 1
+Tue 05:42 heartbeat: mode SPEND usage 89 C: 38.3 GB; fillers 0; conveyor 1; acad 1
+Tue 05:53 heartbeat: mode SPEND usage 89 C: 37.9 GB; fillers 0; conveyor 1; acad 1
+Tue 06:03 conveyor was missing: started
+Tue 06:03 heartbeat: mode SPEND usage 89 C: 37.8 GB; fillers 0; conveyor 1; acad 1
+Tue 06:14 heartbeat: mode SPEND usage 90 C: 36.6 GB; fillers 0; conveyor 1; acad 1
+Tue 06:25 conveyor was missing: started
+Tue 06:25 heartbeat: mode SPEND usage 90 C: 35.9 GB; fillers 0; conveyor 1; acad 0
+Tue 06:36 heartbeat: mode SPEND usage 90 C: 35.1 GB; fillers 0; conveyor 1; acad 1
+Tue 06:47 heartbeat: mode SPEND usage 91 C: 34.2 GB; fillers 0; conveyor 1; acad 1
+Tue 06:58 heartbeat: mode SPEND usage 91 C: 33.2 GB; fillers 0; conveyor 1; acad 0
+Tue 07:09 heartbeat: mode SPEND usage 91 C: 32.8 GB; fillers 0; conveyor 1; acad 1
+Tue 07:19 heartbeat: mode SPEND usage 91 C: 32.5 GB; fillers 0; conveyor 1; acad 0
+Tue 07:30 heartbeat: mode SPEND usage 91 C: 32.3 GB; fillers 0; conveyor 1; acad 1
+Tue 07:41 heartbeat: mode SPEND usage 91 C: 32 GB; fillers 0; conveyor 1; acad 1
+Tue 07:52 heartbeat: mode SPEND usage 91 C: 35.9 GB; fillers 0; conveyor 1; acad 1
+Tue 08:03 heartbeat: mode SPEND usage 92 C: 35.9 GB; fillers 0; conveyor 1; acad 0
+Tue 08:13 heartbeat: mode SPEND usage 92 C: 35.2 GB; fillers 0; conveyor 1; acad 0
+Tue 08:24 heartbeat: mode SPEND usage 92 C: 34.5 GB; fillers 0; conveyor 1; acad 0
+Tue 08:35 heartbeat: mode SPEND usage 92 C: 33.9 GB; fillers 0; conveyor 1; acad 1
+Tue 08:45 heartbeat: mode SPEND usage 92 C: 33.6 GB; fillers 0; conveyor 1; acad 1
+Tue 08:56 heartbeat: mode SPEND usage 93 C: 33.5 GB; fillers 0; conveyor 1; acad 1
+Tue 09:07 heartbeat: mode SPEND usage 95 C: 34.9 GB; fillers 0; conveyor 1; acad 1
+Tue 09:18 heartbeat: mode SPEND usage 96 C: 34.8 GB; fillers 0; conveyor 1; acad 1
+Tue 09:28 heartbeat: mode SPEND usage 97 C: 34.5 GB; fillers 0; conveyor 1; acad 1
+Tue 09:30 conveyor was missing: started
+Tue 09:33 conveyor was missing: started
+Tue 09:35 conveyor was missing: started
+Tue 09:37 conveyor was missing: started
+Tue 09:39 conveyor was missing: started
+Tue 09:39 heartbeat: mode SPEND usage 97 C: 33.8 GB; fillers 0; conveyor 1; acad 0
+Tue 09:41 conveyor was missing: started
+Tue 09:43 conveyor was missing: started
+Tue 09:45 conveyor was missing: started
+Tue 09:48 conveyor was missing: started
+Tue 09:50 conveyor was missing: started
+Tue 09:50 heartbeat: mode SPEND usage 97 C: 33.2 GB; fillers 0; conveyor 1; acad 1
+Tue 09:52 conveyor was missing: started
+Tue 09:54 conveyor was missing: started
+Tue 09:56 conveyor was missing: started
+Tue 09:58 conveyor was missing: started
+Tue 10:00 conveyor was missing: started
+Tue 10:01 heartbeat: mode SPEND usage 97 C: 33.1 GB; fillers 0; conveyor 1; acad 1
+Tue 10:03 conveyor was missing: started
+Tue 10:05 conveyor was missing: started
+Tue 10:07 conveyor was missing: started
+Tue 10:09 conveyor was missing: started
+Tue 10:11 conveyor was missing: started
+Tue 10:11 heartbeat: mode SPEND usage 97 C: 33 GB; fillers 0; conveyor 1; acad 0
+Tue 10:13 conveyor was missing: started
+Tue 10:15 conveyor was missing: started
+Tue 10:17 conveyor was missing: started
+Tue 10:20 conveyor was missing: started
+Tue 10:22 conveyor was missing: started
+Tue 10:22 heartbeat: mode SPEND usage 97 C: 32.7 GB; fillers 0; conveyor 1; acad 0
+Tue 10:24 conveyor was missing: started
+Tue 10:26 conveyor was missing: started
+Tue 10:28 conveyor was missing: started
+Tue 10:30 conveyor was missing: started
+Tue 10:32 conveyor was missing: started
+Tue 10:32 heartbeat: mode SPEND usage 97 C: 34.4 GB; fillers 0; conveyor 1; acad 1
+Tue 10:34 conveyor was missing: started
+Tue 10:36 conveyor was missing: started
+Tue 10:39 conveyor was missing: started
+Tue 10:41 conveyor was missing: started
+Tue 10:43 conveyor was missing: started
+Tue 10:43 heartbeat: mode SPEND usage 97 C: 34.3 GB; fillers 0; conveyor 1; acad 1
+Tue 10:45 conveyor was missing: started
+Tue 10:47 conveyor was missing: started
+Tue 10:49 conveyor was missing: started
+Tue 10:51 conveyor was missing: started
+Tue 10:53 conveyor was missing: started
+Tue 10:53 heartbeat: mode SPEND usage 97 C: 34 GB; fillers 0; conveyor 1; acad 0
+Tue 10:56 conveyor was missing: started
+Tue 10:58 conveyor was missing: started
+Tue 11:00 conveyor was missing: started
+Tue 11:02 conveyor was missing: started
+Tue 11:04 conveyor was missing: started
+Tue 11:04 heartbeat: mode SPEND usage 97 C: 32.6 GB; fillers 0; conveyor 1; acad 1
+Tue 11:06 conveyor was missing: started
+Tue 11:08 conveyor was missing: started
+Tue 11:10 conveyor was missing: started
+Tue 11:13 conveyor was missing: started
+Tue 11:15 heartbeat: mode SPEND usage 97 C: 33.3 GB; fillers 0; conveyor 0; acad 1
+Tue 11:19 conveyor was missing: started
+Tue 11:21 conveyor was missing: started
+Tue 11:23 conveyor was missing: started
+Tue 11:25 conveyor was missing: started
+Tue 11:25 heartbeat: mode SPEND usage 97 C: 31.3 GB; fillers 0; conveyor 1; acad 0
+Tue 11:27 conveyor was missing: started
+Tue 11:29 conveyor was missing: started
+Tue 11:32 conveyor was missing: started
+Tue 11:34 conveyor was missing: started
+Tue 11:36 conveyor was missing: started
+Tue 11:36 heartbeat: mode SPEND usage 97 C: 32.9 GB; fillers 0; conveyor 1; acad 1
+Tue 11:38 conveyor was missing: started
+Tue 11:40 conveyor was missing: started
+Tue 11:42 conveyor was missing: started
+Tue 11:44 conveyor was missing: started
+Tue 11:46 conveyor was missing: started
+Tue 11:46 heartbeat: mode SPEND usage 97 C: 32.2 GB; fillers 0; conveyor 1; acad 1
+Tue 11:48 conveyor was missing: started
+Tue 11:51 conveyor was missing: started
+Tue 11:53 conveyor was missing: started
+Tue 11:55 conveyor was missing: started
+Tue 11:57 conveyor was missing: started
+Tue 11:57 heartbeat: mode SPEND usage 97 C: 31.5 GB; fillers 0; conveyor 1; acad 1
+Tue 11:59 conveyor was missing: started
+Tue 12:01 conveyor was missing: started
+Tue 12:04 conveyor was missing: started
+Tue 12:06 conveyor was missing: started
+Tue 12:08 conveyor was missing: started
+Tue 12:08 heartbeat: mode SPEND usage 97 C: 31.5 GB; fillers 0; conveyor 1; acad 1
+Tue 12:10 conveyor was missing: started
+Tue 12:12 conveyor was missing: started
+Tue 12:14 conveyor was missing: started
+Tue 12:16 conveyor was missing: started
+Tue 12:18 conveyor was missing: started
+Tue 12:19 heartbeat: mode SPEND usage 97 C: 31.4 GB; fillers 0; conveyor 1; acad 1
+Tue 12:21 conveyor was missing: started
+Tue 12:23 conveyor was missing: started
+Tue 12:25 conveyor was missing: started
+Tue 12:27 conveyor was missing: started
+Tue 12:29 conveyor was missing: started
+Tue 12:29 heartbeat: mode SPEND usage 97 C: 31.2 GB; fillers 0; conveyor 1; acad 1
+Tue 12:31 conveyor was missing: started
+Tue 12:34 conveyor was missing: started
+Tue 12:36 conveyor was missing: started
+Tue 12:38 conveyor was missing: started
+Tue 12:40 conveyor was missing: started
+Tue 12:40 heartbeat: mode SPEND usage 97 C: 33.2 GB; fillers 0; conveyor 1; acad 1
+Tue 12:42 conveyor was missing: started
+Tue 12:44 conveyor was missing: started
+Tue 12:46 conveyor was missing: started
+Tue 12:49 conveyor was missing: started
+Tue 12:51 conveyor was missing: started
+Tue 12:51 heartbeat: mode SPEND usage 97 C: 32.9 GB; fillers 0; conveyor 1; acad 1
+Tue 12:53 conveyor was missing: started
+Tue 12:55 conveyor was missing: started
+Tue 12:57 conveyor was missing: started
+Tue 12:59 conveyor was missing: started
+Tue 13:01 conveyor was missing: started
+Tue 13:01 heartbeat: mode SPEND usage 97 C: 32.7 GB; fillers 0; conveyor 1; acad 1
+Tue 13:04 conveyor was missing: started
+Tue 13:06 conveyor was missing: started
+Tue 13:08 conveyor was missing: started
+Tue 13:10 conveyor was missing: started
+Tue 13:12 conveyor was missing: started
+Tue 13:12 heartbeat: mode SPEND usage 97 C: 32 GB; fillers 0; conveyor 1; acad 1
+Tue 13:15 conveyor was missing: started
+Tue 13:17 conveyor was missing: started
+Tue 13:19 conveyor was missing: started
+Tue 13:21 conveyor was missing: started
+Tue 13:23 conveyor was missing: started
+Tue 13:23 heartbeat: mode SPEND usage 97 C: 31.5 GB; fillers 0; conveyor 1; acad 0
+Tue 13:25 conveyor was missing: started
+Tue 13:27 conveyor was missing: started
+Tue 13:30 conveyor was missing: started
+Tue 13:32 conveyor was missing: started
+Tue 13:34 conveyor was missing: started
+Tue 13:34 heartbeat: mode SPEND usage 98 C: 31.5 GB; fillers 0; conveyor 1; acad 0
+Tue 13:36 conveyor was missing: started
+Tue 13:38 conveyor was missing: started
+Tue 13:40 conveyor was missing: started
+Tue 13:42 conveyor was missing: started
+Tue 13:44 conveyor was missing: started
+Tue 13:44 heartbeat: mode SPEND usage 98 C: 31.4 GB; fillers 0; conveyor 1; acad 0
+Tue 13:46 conveyor was missing: started
+Tue 13:49 conveyor was missing: started
+Tue 13:51 conveyor was missing: started
+Tue 13:53 conveyor was missing: started
+Tue 13:55 heartbeat: mode SPEND usage -1 C: 31.2 GB; fillers 0; conveyor 1; acad 0
+Tue 14:06 heartbeat: mode SPEND usage -1 C: 31 GB; fillers 0; conveyor 1; acad 0
+Tue 14:16 heartbeat: mode SPEND usage -1 C: 30.6 GB; fillers 0; conveyor 1; acad 0
+Tue 14:26 heartbeat: mode SPEND usage -1 C: 30.2 GB; fillers 0; conveyor 1; acad 0
+Tue 14:37 heartbeat: mode SPEND usage -1 C: 30 GB; fillers 0; conveyor 1; acad 1
+Tue 14:48 heartbeat: mode SPEND usage -1 C: 32 GB; fillers 0; conveyor 1; acad 1
+Tue 14:58 heartbeat: mode SPEND usage -1 C: 32.3 GB; fillers 0; conveyor 1; acad 1
+Tue 15:09 heartbeat: mode SPEND usage -1 C: 32 GB; fillers 0; conveyor 1; acad 1
+Tue 15:20 heartbeat: mode SPEND usage -1 C: 30.8 GB; fillers 0; conveyor 1; acad 1
+Tue 15:30 heartbeat: mode SPEND usage -1 C: 30.6 GB; fillers 0; conveyor 1; acad 1
+Tue 15:41 heartbeat: mode SPEND usage -1 C: 31.9 GB; fillers 0; conveyor 1; acad 1
+Tue 15:45 conveyor was missing: started
+Tue 15:52 heartbeat: mode SPEND usage -1 C: 31.3 GB; fillers 0; conveyor 1; acad 0
+Tue 16:02 heartbeat: mode SPEND usage -1 C: 31.1 GB; fillers 0; conveyor 1; acad 1
+Tue 16:13 heartbeat: mode SPEND usage -1 C: 30.4 GB; fillers 0; conveyor 1; acad 0
+Tue 16:23 heartbeat: mode SPEND usage -1 C: 28.3 GB; fillers 0; conveyor 1; acad 1
+Tue 16:34 heartbeat: mode SPEND usage -1 C: 28.2 GB; fillers 0; conveyor 1; acad 0
+Tue 16:44 heartbeat: mode SPEND usage -1 C: 28.2 GB; fillers 0; conveyor 1; acad 0
+Tue 16:55 heartbeat: mode SPEND usage -1 C: 29.1 GB; fillers 0; conveyor 1; acad 1
+Tue 17:05 heartbeat: mode SPEND usage -1 C: 29.7 GB; fillers 0; conveyor 1; acad 1
+Tue 17:16 heartbeat: mode SPEND usage -1 C: 29.6 GB; fillers 0; conveyor 1; acad 1
+Tue 17:26 heartbeat: mode SPEND usage -1 C: 28.8 GB; fillers 0; conveyor 1; acad 1
+Tue 17:37 heartbeat: mode SPEND usage -1 C: 28.2 GB; fillers 0; conveyor 1; acad 1
+Tue 17:48 heartbeat: mode SPEND usage -1 C: 28.2 GB; fillers 0; conveyor 1; acad 0
+Tue 17:59 heartbeat: mode SPEND usage -1 C: 28.1 GB; fillers 0; conveyor 1; acad 1
+Tue 18:09 heartbeat: mode SPEND usage -1 C: 27.9 GB; fillers 0; conveyor 1; acad 0
+Tue 18:20 heartbeat: mode SPEND usage -1 C: 27.7 GB; fillers 0; conveyor 1; acad 1
+Tue 18:30 heartbeat: mode SPEND usage -1 C: 29.5 GB; fillers 0; conveyor 1; acad 0
+Tue 18:41 heartbeat: mode SPEND usage -1 C: 29.5 GB; fillers 0; conveyor 1; acad 0
+Tue 18:51 heartbeat: mode SPEND usage -1 C: 29.3 GB; fillers 0; conveyor 1; acad 1
+Tue 19:02 heartbeat: mode SPEND usage -1 C: 28.1 GB; fillers 0; conveyor 1; acad 1
+Tue 19:13 heartbeat: mode SPEND usage -1 C: 28.1 GB; fillers 0; conveyor 1; acad 0
+Tue 19:23 heartbeat: mode SPEND usage -1 C: 27.8 GB; fillers 0; conveyor 1; acad 1
+Tue 19:34 heartbeat: mode SPEND usage -1 C: 28.9 GB; fillers 0; conveyor 1; acad 1
+Tue 19:42 conveyor was missing: started
+Tue 19:44 heartbeat: mode SPEND usage -1 C: 28.7 GB; fillers 0; conveyor 1; acad 0
+Tue 19:55 heartbeat: mode SPEND usage -1 C: 28.8 GB; fillers 0; conveyor 1; acad 0
+Tue 20:05 heartbeat: mode SPEND usage -1 C: 28.7 GB; fillers 0; conveyor 1; acad 1
+Tue 20:16 heartbeat: mode SPEND usage -1 C: 28.7 GB; fillers 0; conveyor 1; acad 0
+Tue 20:27 heartbeat: mode SPEND usage -1 C: 28.7 GB; fillers 0; conveyor 1; acad 1
+Tue 20:37 heartbeat: mode SPEND usage -1 C: 28.7 GB; fillers 0; conveyor 1; acad 1
+Tue 20:48 heartbeat: mode SPEND usage -1 C: 28.7 GB; fillers 0; conveyor 1; acad 1
+Tue 20:58 heartbeat: mode SPEND usage -1 C: 28.6 GB; fillers 0; conveyor 1; acad 0
+Tue 21:09 heartbeat: mode SPEND usage -1 C: 28.6 GB; fillers 0; conveyor 1; acad 1
+Tue 21:19 heartbeat: mode SPEND usage -1 C: 28.6 GB; fillers 0; conveyor 1; acad 1
+Tue 21:30 heartbeat: mode SPEND usage -1 C: 28.6 GB; fillers 0; conveyor 1; acad 1
+Tue 21:40 heartbeat: mode SPEND usage -1 C: 28.6 GB; fillers 0; conveyor 1; acad 0
+Tue 21:51 heartbeat: mode SPEND usage -1 C: 28.6 GB; fillers 0; conveyor 1; acad 1
+Tue 22:01 heartbeat: mode SPEND usage -1 C: 28.6 GB; fillers 0; conveyor 1; acad 1
+Tue 22:12 heartbeat: mode SPEND usage -1 C: 28.6 GB; fillers 0; conveyor 1; acad 1
+Tue 22:22 heartbeat: mode SPEND usage -1 C: 28.5 GB; fillers 0; conveyor 1; acad 1
+Tue 22:33 heartbeat: mode SPEND usage -1 C: 28.6 GB; fillers 0; conveyor 1; acad 0
+Tue 22:43 heartbeat: mode SPEND usage -1 C: 28.5 GB; fillers 0; conveyor 1; acad 1
+Tue 22:54 heartbeat: mode SPEND usage -1 C: 28.5 GB; fillers 0; conveyor 1; acad 1
+Tue 23:04 heartbeat: mode SPEND usage -1 C: 28.5 GB; fillers 0; conveyor 1; acad 0
+Tue 23:15 heartbeat: mode SPEND usage -1 C: 28.5 GB; fillers 0; conveyor 1; acad 1
+Tue 23:26 heartbeat: mode SPEND usage -1 C: 28.5 GB; fillers 0; conveyor 1; acad 0
+Tue 23:36 heartbeat: mode SPEND usage -1 C: 28.5 GB; fillers 0; conveyor 1; acad 1
+Tue 23:47 heartbeat: mode SPEND usage -1 C: 28.5 GB; fillers 0; conveyor 1; acad 0
+Tue 23:57 heartbeat: mode SPEND usage -1 C: 28.5 GB; fillers 0; conveyor 1; acad 0
+Wed 00:08 heartbeat: mode SPEND usage -1 C: 28.4 GB; fillers 0; conveyor 1; acad 0
+Wed 00:18 heartbeat: mode SPEND usage -1 C: 28.5 GB; fillers 0; conveyor 1; acad 1
+Wed 00:29 heartbeat: mode SPEND usage -1 C: 28.4 GB; fillers 0; conveyor 1; acad 1
+Wed 00:39 heartbeat: mode SPEND usage -1 C: 28.4 GB; fillers 0; conveyor 1; acad 1
+Wed 00:50 heartbeat: mode SPEND usage -1 C: 28.4 GB; fillers 0; conveyor 1; acad 1
+Wed 01:00 heartbeat: mode SPEND usage -1 C: 28.4 GB; fillers 0; conveyor 1; acad 1
+Wed 01:11 heartbeat: mode SPEND usage -1 C: 28.2 GB; fillers 0; conveyor 1; acad 1
+Wed 01:22 heartbeat: mode SPEND usage -1 C: 28.2 GB; fillers 0; conveyor 1; acad 1
+Wed 01:32 heartbeat: mode SPEND usage -1 C: 28.2 GB; fillers 0; conveyor 1; acad 0
+Wed 01:43 heartbeat: mode SPEND usage -1 C: 28.2 GB; fillers 0; conveyor 1; acad 1
+Wed 01:53 conveyor was missing: started
+Wed 01:53 heartbeat: mode SPEND usage -1 C: 28.2 GB; fillers 0; conveyor 1; acad 1
+Wed 02:04 heartbeat: mode SPEND usage -1 C: 28.2 GB; fillers 0; conveyor 1; acad 1
+Wed 02:14 heartbeat: mode SPEND usage -1 C: 28.2 GB; fillers 0; conveyor 1; acad 0
+Wed 02:25 heartbeat: mode SPEND usage -1 C: 28.2 GB; fillers 0; conveyor 1; acad 1
+Wed 02:36 heartbeat: mode SPEND usage -1 C: 28.2 GB; fillers 0; conveyor 1; acad 0
+Wed 02:46 heartbeat: mode SPEND usage -1 C: 28.2 GB; fillers 0; conveyor 1; acad 1
+Wed 02:56 heartbeat: mode SPEND usage -1 C: 28.2 GB; fillers 0; conveyor 1; acad 1
+Wed 03:07 heartbeat: mode SPEND usage -1 C: 28.2 GB; fillers 0; conveyor 1; acad 1
+Wed 03:18 heartbeat: mode SPEND usage -1 C: 28.2 GB; fillers 0; conveyor 1; acad 0
+Wed 03:28 heartbeat: mode SPEND usage -1 C: 28 GB; fillers 0; conveyor 1; acad 0
+Wed 03:39 heartbeat: mode SPEND usage -1 C: 28 GB; fillers 0; conveyor 1; acad 0
+Wed 03:49 heartbeat: mode SPEND usage -1 C: 28 GB; fillers 0; conveyor 1; acad 0
+Wed 04:00 heartbeat: mode SPEND usage -1 C: 27.9 GB; fillers 0; conveyor 1; acad 1
+Wed 04:11 heartbeat: mode SPEND usage -1 C: 28 GB; fillers 0; conveyor 1; acad 1
+Wed 04:21 heartbeat: mode SPEND usage -1 C: 28 GB; fillers 0; conveyor 1; acad 0
+Wed 04:32 heartbeat: mode SPEND usage -1 C: 27.9 GB; fillers 0; conveyor 1; acad 0
+Wed 04:42 heartbeat: mode SPEND usage -1 C: 27.9 GB; fillers 0; conveyor 1; acad 1
+Wed 04:53 heartbeat: mode SPEND usage -1 C: 27.8 GB; fillers 0; conveyor 1; acad 1
+Wed 05:03 heartbeat: mode SPEND usage -1 C: 27.9 GB; fillers 0; conveyor 1; acad 1
+Wed 05:14 heartbeat: mode SPEND usage -1 C: 27.9 GB; fillers 0; conveyor 1; acad 1
+Wed 05:24 heartbeat: mode SPEND usage -1 C: 27.9 GB; fillers 0; conveyor 1; acad 1
+Wed 05:35 heartbeat: mode SPEND usage -1 C: 27.9 GB; fillers 0; conveyor 1; acad 0
+Wed 05:45 heartbeat: mode SPEND usage -1 C: 27.9 GB; fillers 0; conveyor 1; acad 0
+Wed 05:56 heartbeat: mode SPEND usage -1 C: 27.9 GB; fillers 0; conveyor 1; acad 0
+Wed 06:07 heartbeat: mode SPEND usage -1 C: 27.9 GB; fillers 0; conveyor 1; acad 0
+Wed 06:17 heartbeat: mode SPEND usage -1 C: 27.9 GB; fillers 0; conveyor 1; acad 1
+Wed 06:28 heartbeat: mode SPEND usage -1 C: 27.9 GB; fillers 0; conveyor 1; acad 1
+Wed 06:38 heartbeat: mode SPEND usage -1 C: 27.9 GB; fillers 0; conveyor 1; acad 1
+Wed 06:49 heartbeat: mode SPEND usage -1 C: 27.9 GB; fillers 0; conveyor 1; acad 1
+Wed 06:59 heartbeat: mode SPEND usage -1 C: 27.8 GB; fillers 0; conveyor 1; acad 1
+Wed 07:10 heartbeat: mode SPEND usage -1 C: 27.6 GB; fillers 0; conveyor 1; acad 1
+Wed 07:20 heartbeat: mode SPEND usage -1 C: 27.6 GB; fillers 0; conveyor 1; acad 1
+Wed 07:31 heartbeat: mode SPEND usage -1 C: 27.6 GB; fillers 0; conveyor 1; acad 0
+Wed 07:41 heartbeat: mode SPEND usage -1 C: 27.6 GB; fillers 0; conveyor 1; acad 0
+Wed 07:52 heartbeat: mode SPEND usage -1 C: 27.6 GB; fillers 0; conveyor 1; acad 0
+Wed 08:02 conveyor was missing: started
+Wed 08:02 heartbeat: mode SPEND usage -1 C: 27.6 GB; fillers 0; conveyor 1; acad 0
+Wed 08:13 heartbeat: mode SPEND usage -1 C: 27.6 GB; fillers 0; conveyor 1; acad 0
+Wed 08:23 heartbeat: mode SPEND usage -1 C: 27.6 GB; fillers 0; conveyor 1; acad 0
+Wed 08:34 heartbeat: mode SPEND usage -1 C: 27.5 GB; fillers 0; conveyor 1; acad 0
+Wed 08:44 heartbeat: mode SPEND usage -1 C: 27.1 GB; fillers 0; conveyor 1; acad 0
+Wed 08:55 heartbeat: mode SPEND usage -1 C: 27.6 GB; fillers 0; conveyor 1; acad 0
+Wed 09:05 heartbeat: mode SPEND usage -1 C: 27.1 GB; fillers 0; conveyor 1; acad 1
+Wed 09:16 heartbeat: mode SPEND usage -1 C: 26.5 GB; fillers 0; conveyor 1; acad 0
+Wed 09:27 heartbeat: mode SPEND usage -1 C: 26.5 GB; fillers 0; conveyor 1; acad 1
+Wed 09:37 heartbeat: mode SPEND usage -1 C: 26.3 GB; fillers 0; conveyor 1; acad 1
+Wed 09:48 heartbeat: mode SPEND usage -1 C: 26.1 GB; fillers 0; conveyor 1; acad 0
+Wed 09:58 heartbeat: mode SPEND usage -1 C: 25.5 GB; fillers 0; conveyor 1; acad 0
+Wed 10:09 heartbeat: mode SPEND usage -1 C: 25.4 GB; fillers 0; conveyor 1; acad 0
+Wed 10:19 heartbeat: mode SPEND usage -1 C: 25.4 GB; fillers 0; conveyor 1; acad 1
+Wed 10:30 heartbeat: mode SPEND usage -1 C: 25.3 GB; fillers 0; conveyor 1; acad 1
+Wed 10:41 heartbeat: mode SPEND usage -1 C: 27 GB; fillers 0; conveyor 1; acad 1
+Wed 10:51 heartbeat: mode SPEND usage -1 C: 26.8 GB; fillers 0; conveyor 1; acad 0
+Wed 11:02 heartbeat: mode SPEND usage -1 C: 25.2 GB; fillers 0; conveyor 1; acad 1
+Wed 11:12 heartbeat: mode SPEND usage -1 C: 24.9 GB; fillers 0; conveyor 1; acad 1
+Wed 11:23 heartbeat: mode SPEND usage -1 C: 24.2 GB; fillers 0; conveyor 1; acad 1
+Wed 11:34 heartbeat: mode SPEND usage -1 C: 23.7 GB; fillers 0; conveyor 1; acad 1
+Wed 11:44 heartbeat: mode SPEND usage -1 C: 23.6 GB; fillers 0; conveyor 1; acad 0
+Wed 11:55 heartbeat: mode SPEND usage -1 C: 23.5 GB; fillers 0; conveyor 1; acad 0
+Wed 12:05 heartbeat: mode SPEND usage -1 C: 23.3 GB; fillers 0; conveyor 1; acad 0
+Wed 12:16 heartbeat: mode SPEND usage -1 C: 25.9 GB; fillers 0; conveyor 1; acad 0
+Wed 12:26 heartbeat: mode SPEND usage -1 C: 24.3 GB; fillers 0; conveyor 1; acad 1
+Wed 12:37 heartbeat: mode SPEND usage -1 C: 26.5 GB; fillers 0; conveyor 1; acad 1
+Wed 12:47 heartbeat: mode SPEND usage -1 C: 27.6 GB; fillers 0; conveyor 0; acad 1
+Wed 12:58 heartbeat: mode SPEND usage -1 C: 27.5 GB; fillers 0; conveyor 0; acad 0
+Wed 13:00 conveyor was missing: started
+Wed 13:09 heartbeat: mode SPEND usage -1 C: 27.4 GB; fillers 0; conveyor 1; acad 0
+Wed 13:19 heartbeat: mode SPEND usage -1 C: 24.7 GB; fillers 0; conveyor 1; acad 1
+Wed 13:30 heartbeat: mode SPEND usage -1 C: 24.6 GB; fillers 0; conveyor 1; acad 1
+Wed 13:40 heartbeat: mode SPEND usage -1 C: 24.6 GB; fillers 0; conveyor 1; acad 1
+Wed 13:51 heartbeat: mode SPEND usage -1 C: 24.2 GB; fillers 0; conveyor 1; acad 0
+Wed 14:01 heartbeat: mode SPEND usage -1 C: 24.2 GB; fillers 0; conveyor 1; acad 1
+Wed 14:12 heartbeat: mode SPEND usage -1 C: 24.2 GB; fillers 0; conveyor 1; acad 0
+Wed 14:22 heartbeat: mode SPEND usage -1 C: 24 GB; fillers 0; conveyor 1; acad 1
+Wed 14:33 heartbeat: mode SPEND usage -1 C: 23.6 GB; fillers 0; conveyor 1; acad 1
+Wed 14:44 heartbeat: mode SPEND usage -1 C: 23.4 GB; fillers 0; conveyor 1; acad 0
+Wed 14:54 heartbeat: mode SPEND usage -1 C: 23.4 GB; fillers 0; conveyor 1; acad 1
+Wed 15:04 heartbeat: mode SPEND usage -1 C: 23.3 GB; fillers 0; conveyor 1; acad 1
+Wed 15:15 heartbeat: mode SPEND usage -1 C: 23.3 GB; fillers 0; conveyor 1; acad 1
+Wed 15:25 heartbeat: mode SPEND usage -1 C: 23.3 GB; fillers 0; conveyor 1; acad 0
+Wed 15:36 heartbeat: mode SPEND usage -1 C: 23.4 GB; fillers 0; conveyor 1; acad 1
+Wed 15:46 heartbeat: mode SPEND usage -1 C: 23.3 GB; fillers 0; conveyor 1; acad 1
+Wed 15:57 heartbeat: mode SPEND usage -1 C: 23.3 GB; fillers 0; conveyor 1; acad 1
+Wed 16:07 heartbeat: mode SPEND usage -1 C: 23.3 GB; fillers 0; conveyor 1; acad 1
+Wed 16:18 heartbeat: mode SPEND usage -1 C: 22.7 GB; fillers 0; conveyor 1; acad 0
+Wed 16:29 heartbeat: mode SPEND usage -1 C: 22.5 GB; fillers 0; conveyor 1; acad 1
+Wed 16:39 heartbeat: mode SPEND usage -1 C: 22.2 GB; fillers 0; conveyor 1; acad 1
+Wed 16:50 heartbeat: mode SPEND usage -1 C: 22.2 GB; fillers 0; conveyor 1; acad 1
+Wed 17:00 heartbeat: mode SPEND usage -1 C: 21.7 GB; fillers 0; conveyor 1; acad 1
+Wed 17:11 heartbeat: mode SPEND usage -1 C: 22 GB; fillers 0; conveyor 1; acad 1
+Wed 17:22 heartbeat: mode SPEND usage -1 C: 22 GB; fillers 0; conveyor 1; acad 1
+Wed 17:32 heartbeat: mode SPEND usage -1 C: 22 GB; fillers 0; conveyor 1; acad 0
+Wed 17:43 heartbeat: mode SPEND usage -1 C: 22 GB; fillers 0; conveyor 1; acad 1
+Wed 17:53 WEEKLY RESET DETECTED (98 -> 0): mode PACE (Tim 24 Oct 05:30: after a reset Codex goes back to normal managed weekly use: AutoCAD looks and reviews run constantly inside today's daily cap).
+Wed 17:53 heartbeat: mode PACE usage 0 C: 22 GB; fillers 0; conveyor 1; acad 0
+Wed 18:04 heartbeat: mode PACE usage 0 C: 21.8 GB; fillers 0; conveyor 1; acad 1
+Wed 18:15 heartbeat: mode PACE usage 0 C: 25.2 GB; fillers 0; conveyor 1; acad 1
+Wed 18:26 heartbeat: mode PACE usage 0 C: 24.9 GB; fillers 0; conveyor 1; acad 1
+Wed 18:37 heartbeat: mode PACE usage 0 C: 24.6 GB; fillers 0; conveyor 1; acad 1
+Wed 18:48 heartbeat: mode PACE usage 0 C: 25 GB; fillers 0; conveyor 1; acad 1
+Wed 18:59 heartbeat: mode PACE usage 0 C: 24.5 GB; fillers 0; conveyor 1; acad 1
+Wed 19:09 heartbeat: mode PACE usage 0 C: 24.8 GB; fillers 0; conveyor 1; acad 1
+Wed 19:21 heartbeat: mode PACE usage 0 C: 24.5 GB; fillers 0; conveyor 1; acad 1
+Wed 19:31 heartbeat: mode PACE usage 1 C: 24.2 GB; fillers 0; conveyor 1; acad 0
+Wed 19:42 heartbeat: mode PACE usage 1 C: 24.3 GB; fillers 0; conveyor 1; acad 1
+Wed 19:53 heartbeat: mode PACE usage 1 C: 24 GB; fillers 0; conveyor 1; acad 1
+Wed 20:04 heartbeat: mode PACE usage 1 C: 23.5 GB; fillers 0; conveyor 1; acad 1
+Wed 20:15 heartbeat: mode PACE usage 2 C: 23.1 GB; fillers 0; conveyor 1; acad 1
+Wed 20:26 heartbeat: mode PACE usage 2 C: 22.2 GB; fillers 0; conveyor 1; acad 1
+Wed 20:36 heartbeat: mode PACE usage 2 C: 21.5 GB; fillers 0; conveyor 1; acad 1
+Wed 20:47 heartbeat: mode PACE usage 2 C: 21.4 GB; fillers 0; conveyor 1; acad 1
+Wed 20:58 heartbeat: mode PACE usage 3 C: 21 GB; fillers 0; conveyor 1; acad 1
+Wed 21:09 heartbeat: mode PACE usage 3 C: 20.3 GB; fillers 0; conveyor 1; acad 0
+Wed 21:20 heartbeat: mode PACE usage 3 C: 22.4 GB; fillers 0; conveyor 1; acad 1
+Wed 21:31 heartbeat: mode PACE usage 3 C: 22.3 GB; fillers 0; conveyor 1; acad 1
+Wed 21:42 heartbeat: mode PACE usage 3 C: 22.1 GB; fillers 0; conveyor 1; acad 1
+Wed 21:53 heartbeat: mode PACE usage 3 C: 21.4 GB; fillers 0; conveyor 1; acad 0
+Wed 22:04 heartbeat: mode PACE usage 3 C: 20.7 GB; fillers 0; conveyor 1; acad 0
+Wed 22:15 heartbeat: mode PACE usage 3 C: 20.6 GB; fillers 0; conveyor 1; acad 0
+Wed 22:25 heartbeat: mode PACE usage 3 C: 20.5 GB; fillers 0; conveyor 1; acad 1
+Wed 22:36 heartbeat: mode PACE usage 3 C: 20.5 GB; fillers 0; conveyor 1; acad 1
+Wed 22:47 heartbeat: mode PACE usage 3 C: 20.4 GB; fillers 0; conveyor 1; acad 1
+Wed 22:58 heartbeat: mode PACE usage 3 C: 20.3 GB; fillers 0; conveyor 1; acad 0
+Wed 23:09 heartbeat: mode PACE usage 3 C: 20.1 GB; fillers 0; conveyor 1; acad 0
+Wed 23:20 heartbeat: mode PACE usage 3 C: 18.5 GB; fillers 0; conveyor 1; acad 1
+Wed 23:30 heartbeat: mode PACE usage 4 C: 18 GB; fillers 0; conveyor 1; acad 0
+Wed 23:41 heartbeat: mode PACE usage -1 C: 35.3 GB; fillers 0; conveyor 1; acad 0
+Wed 23:52 heartbeat: mode PACE usage 4 C: 34.1 GB; fillers 0; conveyor 1; acad 0
+Thu 00:03 heartbeat: mode PACE usage 4 C: 33.5 GB; fillers 0; conveyor 1; acad 0
+Thu 00:14 heartbeat: mode PACE usage 4 C: 34.7 GB; fillers 0; conveyor 1; acad 1
+Thu 00:23 conveyor was missing: started
+Thu 00:25 heartbeat: mode PACE usage 4 C: 34.2 GB; fillers 0; conveyor 1; acad 1
+Thu 00:36 heartbeat: mode PACE usage 4 C: 30.6 GB; fillers 0; conveyor 1; acad 0
+Thu 00:47 heartbeat: mode PACE usage 4 C: 30.6 GB; fillers 0; conveyor 1; acad 0
+Thu 00:58 heartbeat: mode PACE usage 4 C: 30.6 GB; fillers 0; conveyor 1; acad 1
+Thu 01:08 heartbeat: mode PACE usage 4 C: 30.6 GB; fillers 0; conveyor 1; acad 1
+Thu 01:19 heartbeat: mode PACE usage 4 C: 30.6 GB; fillers 0; conveyor 1; acad 1
+Thu 01:30 heartbeat: mode PACE usage 4 C: 31.2 GB; fillers 0; conveyor 1; acad 0
+Thu 01:41 heartbeat: mode PACE usage 4 C: 31.2 GB; fillers 0; conveyor 1; acad 0
+Thu 01:52 heartbeat: mode PACE usage 4 C: 31.2 GB; fillers 0; conveyor 1; acad 0
+Thu 02:02 heartbeat: mode PACE usage 4 C: 31.2 GB; fillers 0; conveyor 1; acad 0
+Thu 02:13 heartbeat: mode PACE usage 4 C: 31.2 GB; fillers 0; conveyor 1; acad 1
+Thu 02:24 heartbeat: mode PACE usage 4 C: 31.2 GB; fillers 0; conveyor 1; acad 0
+Thu 02:34 heartbeat: mode PACE usage 4 C: 30.4 GB; fillers 0; conveyor 1; acad 1
+Thu 02:45 heartbeat: mode PACE usage 4 C: 29.7 GB; fillers 0; conveyor 1; acad 1
+Thu 02:56 heartbeat: mode PACE usage 4 C: 29.5 GB; fillers 0; conveyor 1; acad 0
+Thu 03:07 heartbeat: mode PACE usage 4 C: 29.5 GB; fillers 0; conveyor 1; acad 1
+Thu 03:17 heartbeat: mode PACE usage 4 C: 29.5 GB; fillers 0; conveyor 1; acad 0
+Thu 03:28 heartbeat: mode PACE usage 5 C: 29.5 GB; fillers 0; conveyor 1; acad 1
+Thu 03:39 heartbeat: mode PACE usage 5 C: 29.2 GB; fillers 0; conveyor 1; acad 0
+Thu 03:50 heartbeat: mode PACE usage 5 C: 29.2 GB; fillers 0; conveyor 1; acad 0
+Thu 04:01 heartbeat: mode PACE usage 5 C: 29.2 GB; fillers 0; conveyor 1; acad 0
+Thu 04:12 heartbeat: mode PACE usage 5 C: 29.3 GB; fillers 0; conveyor 1; acad 0
+Thu 04:23 heartbeat: mode PACE usage 5 C: 29.2 GB; fillers 0; conveyor 1; acad 0
+Thu 04:33 heartbeat: mode PACE usage 5 C: 29.2 GB; fillers 0; conveyor 1; acad 1
+Thu 04:44 heartbeat: mode PACE usage 5 C: 29.2 GB; fillers 0; conveyor 1; acad 1
+Thu 04:55 heartbeat: mode PACE usage 5 C: 29.2 GB; fillers 0; conveyor 1; acad 0
+Thu 05:06 heartbeat: mode PACE usage 5 C: 29.2 GB; fillers 0; conveyor 1; acad 0
+Thu 05:16 heartbeat: mode PACE usage 5 C: 29.2 GB; fillers 0; conveyor 1; acad 0
+Thu 05:27 heartbeat: mode PACE usage 5 C: 29.2 GB; fillers 0; conveyor 1; acad 0
+Thu 05:38 heartbeat: mode PACE usage 5 C: 29 GB; fillers 0; conveyor 1; acad 1
+Thu 05:48 heartbeat: mode PACE usage 5 C: 29 GB; fillers 0; conveyor 1; acad 1
+Thu 05:59 heartbeat: mode PACE usage 5 C: 28.9 GB; fillers 0; conveyor 1; acad 1
+Thu 06:10 heartbeat: mode PACE usage 5 C: 29 GB; fillers 0; conveyor 1; acad 1
+Thu 06:21 heartbeat: mode PACE usage 5 C: 28.9 GB; fillers 0; conveyor 1; acad 0
+Thu 06:32 heartbeat: mode PACE usage 5 C: 28.9 GB; fillers 0; conveyor 1; acad 1
+Thu 06:38 conveyor was missing: started
+Thu 06:43 heartbeat: mode PACE usage 5 C: 29 GB; fillers 0; conveyor 1; acad 1
+Thu 06:54 heartbeat: mode PACE usage 5 C: 28.9 GB; fillers 0; conveyor 1; acad 1
+Thu 07:04 heartbeat: mode PACE usage 5 C: 28.9 GB; fillers 0; conveyor 1; acad 1
+Thu 07:15 heartbeat: mode PACE usage 5 C: 28.9 GB; fillers 0; conveyor 1; acad 0
+Thu 07:26 heartbeat: mode PACE usage 5 C: 28.9 GB; fillers 0; conveyor 1; acad 0
+Thu 07:37 heartbeat: mode PACE usage 5 C: 28.9 GB; fillers 0; conveyor 1; acad 1
+Thu 07:48 heartbeat: mode PACE usage 5 C: 28.9 GB; fillers 0; conveyor 1; acad 0
+Thu 07:59 heartbeat: mode PACE usage 5 C: 28.9 GB; fillers 0; conveyor 1; acad 1
+Thu 08:09 heartbeat: mode PACE usage 5 C: 28.9 GB; fillers 0; conveyor 1; acad 1
+Thu 08:20 heartbeat: mode PACE usage 6 C: 28.9 GB; fillers 0; conveyor 1; acad 0
+Thu 08:31 heartbeat: mode PACE usage 6 C: 28.9 GB; fillers 0; conveyor 1; acad 0
+Thu 08:41 heartbeat: mode PACE usage 6 C: 28.9 GB; fillers 0; conveyor 1; acad 0
+Thu 14:47 started: usage 14 mode PACE
+Fri 06:15 started: usage 14 mode PACE
+Fri 06:17 janitor restarted
+Fri 06:17 conveyor was missing: started
+Fri 06:26 heartbeat: mode PACE usage 14 C: 67.6 GB; fillers 0; conveyor 1; acad 1
+Fri 06:37 heartbeat: mode PACE usage 15 C: 67.5 GB; fillers 0; conveyor 1; acad 1
+Fri 06:48 heartbeat: mode PACE usage 15 C: 66.9 GB; fillers 0; conveyor 1; acad 1
+Fri 06:59 heartbeat: mode PACE usage 15 C: 66.6 GB; fillers 0; conveyor 1; acad 0
+Fri 07:10 heartbeat: mode PACE usage 16 C: 66.1 GB; fillers 0; conveyor 1; acad 0
+Fri 07:20 heartbeat: mode PACE usage 16 C: 65.8 GB; fillers 0; conveyor 1; acad 1
+Fri 07:31 heartbeat: mode PACE usage 16 C: 65.3 GB; fillers 0; conveyor 1; acad 1
+Fri 07:42 heartbeat: mode PACE usage 17 C: 64.9 GB; fillers 0; conveyor 1; acad 1
+Fri 07:53 heartbeat: mode PACE usage 17 C: 64.6 GB; fillers 0; conveyor 1; acad 1
+Fri 08:03 heartbeat: mode PACE usage 18 C: 64.1 GB; fillers 0; conveyor 1; acad 1
+Fri 08:14 heartbeat: mode PACE usage 18 C: 63.5 GB; fillers 0; conveyor 1; acad 1
+Fri 08:25 heartbeat: mode PACE usage 18 C: 59.8 GB; fillers 0; conveyor 1; acad 1
+Fri 08:36 heartbeat: mode PACE usage -1 C: 60.3 GB; fillers 0; conveyor 1; acad 0
+Fri 08:46 heartbeat: mode PACE usage 19 C: 59.3 GB; fillers 0; conveyor 1; acad 1
+Fri 08:57 heartbeat: mode PACE usage 20 C: 58.9 GB; fillers 0; conveyor 1; acad 1
+Fri 09:08 heartbeat: mode PACE usage 20 C: 59.1 GB; fillers 0; conveyor 1; acad 1
+Fri 09:18 heartbeat: mode PACE usage 20 C: 59 GB; fillers 0; conveyor 1; acad 1
+Fri 09:29 heartbeat: mode PACE usage 21 C: 58.7 GB; fillers 0; conveyor 1; acad 0
+Fri 09:40 heartbeat: mode PACE usage 21 C: 58.2 GB; fillers 0; conveyor 1; acad 1
+Fri 09:50 heartbeat: mode PACE usage 21 C: 58.1 GB; fillers 0; conveyor 1; acad 1
+Fri 10:01 heartbeat: mode PACE usage 21 C: 58 GB; fillers 0; conveyor 1; acad 0
+Fri 10:13 heartbeat: mode PACE usage 21 C: 57.8 GB; fillers 0; conveyor 1; acad 1
+Fri 10:23 heartbeat: mode PACE usage 21 C: 58.1 GB; fillers 0; conveyor 1; acad 0
+Fri 10:34 heartbeat: mode PACE usage 21 C: 58.1 GB; fillers 0; conveyor 1; acad 1
+Fri 10:44 heartbeat: mode PACE usage 21 C: 58.4 GB; fillers 0; conveyor 1; acad 1
+Fri 10:55 heartbeat: mode PACE usage 21 C: 58.3 GB; fillers 0; conveyor 1; acad 1
+Fri 11:05 heartbeat: mode PACE usage 21 C: 58.2 GB; fillers 0; conveyor 1; acad 1
+Fri 11:16 heartbeat: mode PACE usage 21 C: 58.2 GB; fillers 0; conveyor 1; acad 0
+Fri 11:27 heartbeat: mode PACE usage 21 C: 57.8 GB; fillers 0; conveyor 1; acad 1
+Fri 11:38 heartbeat: mode PACE usage 21 C: 58.3 GB; fillers 0; conveyor 1; acad 1
+Fri 11:48 heartbeat: mode PACE usage 21 C: 58 GB; fillers 0; conveyor 1; acad 1
+Fri 14:32 started: usage 23 mode PACE
+Fri 14:34 conveyor was missing: started
+Fri 14:43 heartbeat: mode PACE usage 23 C: 56.4 GB; fillers 0; conveyor 0; acad 1
+Fri 14:53 heartbeat: mode PACE usage 23 C: 56.4 GB; fillers 0; conveyor 0; acad 1
+Fri 15:04 heartbeat: mode PACE usage 23 C: 56.5 GB; fillers 0; conveyor 0; acad 1
+Fri 15:15 heartbeat: mode PACE usage 23 C: 56.3 GB; fillers 0; conveyor 0; acad 1
+Fri 15:26 heartbeat: mode PACE usage 23 C: 56.1 GB; fillers 0; conveyor 0; acad 1
+Fri 15:37 heartbeat: mode PACE usage 23 C: 55.7 GB; fillers 0; conveyor 0; acad 1
+Fri 15:48 heartbeat: mode PACE usage 23 C: 55.1 GB; fillers 0; conveyor 0; acad 1
+Fri 15:58 heartbeat: mode PACE usage 23 C: 54.8 GB; fillers 0; conveyor 0; acad 1
+Fri 16:10 heartbeat: mode PACE usage 23 C: 53.8 GB; fillers 0; conveyor 0; acad 1
+Fri 16:20 heartbeat: mode PACE usage 23 C: 53.2 GB; fillers 0; conveyor 0; acad 1
+Fri 16:31 heartbeat: mode PACE usage 23 C: 53 GB; fillers 0; conveyor 0; acad 0
+Fri 16:42 heartbeat: mode PACE usage 23 C: 55.1 GB; fillers 0; conveyor 0; acad 0
+Fri 16:53 heartbeat: mode PACE usage 23 C: 54.4 GB; fillers 0; conveyor 0; acad 1
+Fri 17:04 heartbeat: mode PACE usage 23 C: 54.5 GB; fillers 0; conveyor 0; acad 1
+Fri 18:30 started: usage 23 mode PACE
+Fri 18:32 conveyor was missing: started
+Fri 18:42 heartbeat: mode PACE usage 23 C: 52.4 GB; fillers 0; conveyor 1; acad 0
+Fri 18:52 heartbeat: mode PACE usage 24 C: 52.3 GB; fillers 0; conveyor 1; acad 1
+Fri 19:03 heartbeat: mode PACE usage 24 C: 52.4 GB; fillers 0; conveyor 1; acad 1
+Fri 19:14 heartbeat: mode PACE usage 24 C: 51.6 GB; fillers 0; conveyor 1; acad 1
+Fri 19:25 heartbeat: mode PACE usage 24 C: 50.9 GB; fillers 0; conveyor 1; acad 1
+Fri 19:36 heartbeat: mode PACE usage 25 C: 50.5 GB; fillers 0; conveyor 1; acad 1
+Fri 19:47 heartbeat: mode PACE usage 25 C: 49.9 GB; fillers 0; conveyor 1; acad 1
+Fri 19:58 heartbeat: mode PACE usage 25 C: 49.6 GB; fillers 0; conveyor 1; acad 1
+Fri 20:09 heartbeat: mode PACE usage 25 C: 48.8 GB; fillers 0; conveyor 1; acad 1
+Fri 20:20 heartbeat: mode PACE usage 25 C: 48 GB; fillers 0; conveyor 1; acad 0
+Fri 20:32 heartbeat: mode PACE usage 26 C: 46.3 GB; fillers 0; conveyor 0; acad 0
+Fri 20:43 heartbeat: mode PACE usage 26 C: 45.9 GB; fillers 0; conveyor 0; acad 1
+Fri 20:54 heartbeat: mode PACE usage 26 C: 46.1 GB; fillers 0; conveyor 0; acad 1
+Fri 21:05 heartbeat: mode PACE usage 26 C: 45.1 GB; fillers 0; conveyor 0; acad 1
+Fri 21:16 heartbeat: mode PACE usage 26 C: 44.3 GB; fillers 0; conveyor 0; acad 1
+Fri 21:28 heartbeat: mode PACE usage 26 C: 44.2 GB; fillers 0; conveyor 0; acad 0
+Fri 21:39 heartbeat: mode PACE usage 26 C: 41.6 GB; fillers 0; conveyor 0; acad 0
+Fri 21:50 heartbeat: mode PACE usage 26 C: 41.1 GB; fillers 0; conveyor 0; acad 1
+Fri 22:02 heartbeat: mode PACE usage 26 C: 50.5 GB; fillers 0; conveyor 0; acad 1
+Fri 22:13 heartbeat: mode PACE usage 26 C: 52.7 GB; fillers 0; conveyor 0; acad 1
+Fri 22:24 heartbeat: mode PACE usage 26 C: 54.1 GB; fillers 0; conveyor 0; acad 1
+Fri 22:35 heartbeat: mode PACE usage 26 C: 54.1 GB; fillers 0; conveyor 0; acad 1
+Fri 22:47 heartbeat: mode PACE usage 26 C: 53.4 GB; fillers 0; conveyor 0; acad 1
+Fri 22:58 heartbeat: mode PACE usage 26 C: 53.1 GB; fillers 0; conveyor 0; acad 1
+Fri 23:09 heartbeat: mode PACE usage 26 C: 53.5 GB; fillers 0; conveyor 0; acad 1
+Fri 23:20 heartbeat: mode PACE usage 26 C: 53.1 GB; fillers 0; conveyor 0; acad 0
+Fri 23:30 heartbeat: mode PACE usage 26 C: 52.5 GB; fillers 0; conveyor 0; acad 1
+Fri 23:41 heartbeat: mode PACE usage 26 C: 53.4 GB; fillers 0; conveyor 0; acad 1
+Fri 23:52 heartbeat: mode PACE usage 26 C: 55.3 GB; fillers 0; conveyor 0; acad 0
+Sat 00:03 heartbeat: mode PACE usage 26 C: 55.2 GB; fillers 0; conveyor 0; acad 0
+Sat 00:14 heartbeat: mode PACE usage 26 C: 55.2 GB; fillers 0; conveyor 0; acad 1
+Sat 00:24 heartbeat: mode PACE usage 26 C: 55.1 GB; fillers 0; conveyor 0; acad 1
+Sat 00:35 heartbeat: mode PACE usage 26 C: 55.1 GB; fillers 0; conveyor 0; acad 1
+Sat 00:37 conveyor was missing: started
+Sat 00:46 heartbeat: mode PACE usage 26 C: 54.4 GB; fillers 0; conveyor 1; acad 0
+Sat 00:56 heartbeat: mode PACE usage 26 C: 54.1 GB; fillers 0; conveyor 1; acad 0
+Sat 01:07 heartbeat: mode PACE usage 26 C: 53.8 GB; fillers 0; conveyor 1; acad 1
+Sat 01:18 heartbeat: mode PACE usage 27 C: 53.8 GB; fillers 0; conveyor 0; acad 1
+Sat 01:29 heartbeat: mode PACE usage 27 C: 53.4 GB; fillers 0; conveyor 0; acad 1
+Sat 01:40 heartbeat: mode PACE usage 27 C: 53.2 GB; fillers 0; conveyor 0; acad 0
+Sat 01:51 heartbeat: mode PACE usage 27 C: 52.9 GB; fillers 0; conveyor 0; acad 1
+Sat 02:02 heartbeat: mode PACE usage 27 C: 52.8 GB; fillers 0; conveyor 0; acad 1
+Sat 02:12 heartbeat: mode PACE usage 27 C: 52.8 GB; fillers 0; conveyor 0; acad 1
+Sat 02:23 heartbeat: mode PACE usage 27 C: 52.6 GB; fillers 0; conveyor 0; acad 1
+Sat 02:34 heartbeat: mode PACE usage 27 C: 52.6 GB; fillers 0; conveyor 0; acad 1
+Sat 02:44 heartbeat: mode PACE usage 27 C: 52.6 GB; fillers 0; conveyor 0; acad 1
+Sat 02:55 heartbeat: mode PACE usage 27 C: 52.6 GB; fillers 0; conveyor 0; acad 0
+Sat 03:06 heartbeat: mode PACE usage 27 C: 52.4 GB; fillers 0; conveyor 0; acad 1
+Sat 03:16 heartbeat: mode PACE usage 27 C: 52.3 GB; fillers 0; conveyor 0; acad 0
+Sat 03:27 heartbeat: mode PACE usage 27 C: 51.8 GB; fillers 0; conveyor 0; acad 1
+Sat 03:38 heartbeat: mode PACE usage 27 C: 51.9 GB; fillers 0; conveyor 0; acad 0
+Sat 03:49 heartbeat: mode PACE usage 27 C: 51.8 GB; fillers 0; conveyor 0; acad 1
+Sat 03:59 heartbeat: mode PACE usage 27 C: 50.6 GB; fillers 0; conveyor 0; acad 1
+Sat 04:10 heartbeat: mode PACE usage 27 C: 49.9 GB; fillers 0; conveyor 0; acad 1
+Sat 04:21 heartbeat: mode PACE usage 27 C: 49.9 GB; fillers 0; conveyor 0; acad 0
+Sat 04:31 heartbeat: mode PACE usage 27 C: 49.7 GB; fillers 0; conveyor 0; acad 0
+Sat 04:43 heartbeat: mode PACE usage 27 C: 49.3 GB; fillers 0; conveyor 0; acad 1
+Sat 04:53 heartbeat: mode PACE usage 27 C: 49.2 GB; fillers 0; conveyor 0; acad 0
+Sat 05:04 heartbeat: mode PACE usage 27 C: 49.3 GB; fillers 0; conveyor 0; acad 0
+Sat 05:15 heartbeat: mode PACE usage 27 C: 49.1 GB; fillers 0; conveyor 0; acad 0
+Sat 05:27 heartbeat: mode PACE usage 27 C: 48.9 GB; fillers 0; conveyor 0; acad 0
+Sat 05:29 conveyor was missing: started
+Sat 05:31 conveyor was missing: started
+Sat 05:37 heartbeat: mode PACE usage 27 C: 50.4 GB; fillers 0; conveyor 0; acad 1
+Sat 05:48 heartbeat: mode PACE usage 27 C: 50.4 GB; fillers 0; conveyor 0; acad 1
+Sat 05:58 heartbeat: mode PACE usage 27 C: 50.4 GB; fillers 0; conveyor 0; acad 0
+Sat 06:09 heartbeat: mode PACE usage 27 C: 50.2 GB; fillers 0; conveyor 0; acad 0
+Sat 06:21 heartbeat: mode PACE usage 27 C: 50.1 GB; fillers 0; conveyor 0; acad 1
+Sat 06:32 heartbeat: mode PACE usage 27 C: 50.1 GB; fillers 0; conveyor 0; acad 1
+Sat 06:42 heartbeat: mode PACE usage 27 C: 49.8 GB; fillers 0; conveyor 0; acad 1
+Sat 06:53 heartbeat: mode PACE usage 27 C: 48.5 GB; fillers 0; conveyor 0; acad 1
+Sat 07:04 heartbeat: mode PACE usage 27 C: 50.1 GB; fillers 0; conveyor 0; acad 0
+Sat 07:06 conveyor was missing: started
+Sat 07:14 heartbeat: mode PACE usage 27 C: 49.7 GB; fillers 0; conveyor 0; acad 0
+Sat 07:25 heartbeat: mode PACE usage 27 C: 49.7 GB; fillers 0; conveyor 0; acad 1
+Sat 07:36 heartbeat: mode PACE usage 27 C: 49.7 GB; fillers 0; conveyor 0; acad 1
+Sat 07:46 heartbeat: mode PACE usage 27 C: 49.6 GB; fillers 0; conveyor 0; acad 1
+Sat 07:57 heartbeat: mode PACE usage 27 C: 49.6 GB; fillers 0; conveyor 0; acad 1
+Sat 08:08 heartbeat: mode PACE usage 27 C: 49.4 GB; fillers 0; conveyor 0; acad 1
+Sat 08:18 heartbeat: mode PACE usage 27 C: 49.4 GB; fillers 0; conveyor 0; acad 1
+Sat 08:29 heartbeat: mode PACE usage 27 C: 49.4 GB; fillers 0; conveyor 0; acad 0
+Sat 08:39 heartbeat: mode PACE usage 27 C: 49.4 GB; fillers 0; conveyor 0; acad 1
+Sat 08:50 heartbeat: mode PACE usage 27 C: 49.4 GB; fillers 0; conveyor 0; acad 1
+Sat 09:00 heartbeat: mode PACE usage 27 C: 49.4 GB; fillers 0; conveyor 0; acad 0
+Sat 09:11 heartbeat: mode PACE usage 27 C: 49.3 GB; fillers 0; conveyor 0; acad 1
+Sat 09:22 heartbeat: mode PACE usage 27 C: 49.3 GB; fillers 0; conveyor 0; acad 1
+Sat 09:33 heartbeat: mode PACE usage 27 C: 49.3 GB; fillers 0; conveyor 0; acad 1
+Sat 09:43 heartbeat: mode PACE usage 27 C: 49.3 GB; fillers 0; conveyor 0; acad 1
+Sat 09:54 heartbeat: mode PACE usage 27 C: 49.3 GB; fillers 0; conveyor 0; acad 1
+Sat 10:05 heartbeat: mode PACE usage 27 C: 49.3 GB; fillers 0; conveyor 0; acad 1
+Sat 10:15 heartbeat: mode PACE usage 27 C: 49.3 GB; fillers 0; conveyor 0; acad 1
+Sat 10:26 heartbeat: mode PACE usage 27 C: 49.3 GB; fillers 0; conveyor 0; acad 1
+Sat 10:36 heartbeat: mode PACE usage 27 C: 49.3 GB; fillers 0; conveyor 0; acad 1
+Sat 10:47 heartbeat: mode PACE usage 27 C: 49.3 GB; fillers 0; conveyor 0; acad 1
+Sat 10:58 heartbeat: mode PACE usage 27 C: 49.2 GB; fillers 0; conveyor 0; acad 1
+Sat 11:09 heartbeat: mode PACE usage 27 C: 49.2 GB; fillers 0; conveyor 0; acad 1
+Sat 11:19 heartbeat: mode PACE usage 27 C: 49.2 GB; fillers 0; conveyor 0; acad 1
+Sat 11:30 heartbeat: mode PACE usage 27 C: 49.2 GB; fillers 0; conveyor 0; acad 1
+Sat 11:41 heartbeat: mode PACE usage 27 C: 49.2 GB; fillers 0; conveyor 0; acad 1
+Sat 11:51 heartbeat: mode PACE usage 27 C: 49.2 GB; fillers 0; conveyor 0; acad 1
+Sat 12:02 heartbeat: mode PACE usage 27 C: 48.6 GB; fillers 0; conveyor 0; acad 1
+Sat 12:12 heartbeat: mode PACE usage 27 C: 48.6 GB; fillers 0; conveyor 0; acad 1
+Sat 12:23 heartbeat: mode PACE usage 27 C: 48.6 GB; fillers 0; conveyor 0; acad 1
+Sat 12:34 heartbeat: mode PACE usage 27 C: 48.6 GB; fillers 0; conveyor 0; acad 1
+Sat 12:45 heartbeat: mode PACE usage 27 C: 48.6 GB; fillers 0; conveyor 0; acad 1
+Sat 12:55 heartbeat: mode PACE usage 27 C: 48.7 GB; fillers 0; conveyor 0; acad 0
+Sat 13:06 heartbeat: mode PACE usage 27 C: 48.8 GB; fillers 0; conveyor 0; acad 1
+Sat 13:16 heartbeat: mode PACE usage 27 C: 48.8 GB; fillers 0; conveyor 0; acad 1
+Sat 13:27 heartbeat: mode PACE usage 27 C: 48.8 GB; fillers 0; conveyor 0; acad 1
+Sat 13:38 heartbeat: mode PACE usage 27 C: 48.8 GB; fillers 0; conveyor 0; acad 1
+Sat 13:48 heartbeat: mode PACE usage 27 C: 48.7 GB; fillers 0; conveyor 0; acad 1
+Sat 13:59 heartbeat: mode PACE usage 27 C: 48.7 GB; fillers 0; conveyor 0; acad 1
+Sat 14:10 heartbeat: mode PACE usage 27 C: 48.4 GB; fillers 0; conveyor 0; acad 1
+Sat 14:21 heartbeat: mode PACE usage 27 C: 34.4 GB; fillers 0; conveyor 0; acad 1
+Sat 14:32 heartbeat: mode PACE usage 27 C: 34.8 GB; fillers 0; conveyor 0; acad 1
+Sat 14:43 heartbeat: mode PACE usage 27 C: 34.9 GB; fillers 0; conveyor 0; acad 1
+Sat 14:54 heartbeat: mode PACE usage 27 C: 34.6 GB; fillers 0; conveyor 0; acad 0
+Sat 15:05 heartbeat: mode PACE usage 27 C: 35.1 GB; fillers 0; conveyor 0; acad 0
+Sat 15:16 heartbeat: mode PACE usage 27 C: 48.2 GB; fillers 0; conveyor 0; acad 1
+Sat 15:27 heartbeat: mode PACE usage 27 C: 48.2 GB; fillers 0; conveyor 0; acad 1
+Sat 15:38 heartbeat: mode PACE usage 27 C: 48.6 GB; fillers 0; conveyor 0; acad 1
+Sat 15:48 heartbeat: mode PACE usage 27 C: 48.6 GB; fillers 0; conveyor 0; acad 1
+Sat 15:59 heartbeat: mode PACE usage 27 C: 48.4 GB; fillers 0; conveyor 0; acad 1
+Sat 16:10 heartbeat: mode PACE usage 27 C: 48.3 GB; fillers 0; conveyor 0; acad 1
+Sat 16:21 heartbeat: mode PACE usage 27 C: 48.3 GB; fillers 0; conveyor 0; acad 1
+Sat 16:31 heartbeat: mode PACE usage 27 C: 48.2 GB; fillers 0; conveyor 0; acad 1
+Sat 16:42 heartbeat: mode PACE usage 27 C: 47.2 GB; fillers 0; conveyor 0; acad 1
+Sat 16:53 heartbeat: mode PACE usage 27 C: 46 GB; fillers 0; conveyor 0; acad 1
+Sat 17:04 heartbeat: mode PACE usage 27 C: 44.5 GB; fillers 0; conveyor 0; acad 1
+Sat 17:15 heartbeat: mode PACE usage 27 C: 44.1 GB; fillers 0; conveyor 0; acad 1
+Sat 17:26 heartbeat: mode PACE usage 27 C: 42.9 GB; fillers 0; conveyor 0; acad 0
+Sat 17:37 heartbeat: mode PACE usage 27 C: 43.1 GB; fillers 0; conveyor 0; acad 1
+Sat 17:48 heartbeat: mode PACE usage 27 C: 42.9 GB; fillers 0; conveyor 0; acad 0
+Sat 17:59 heartbeat: mode PACE usage 27 C: 43.1 GB; fillers 0; conveyor 0; acad 1
+Sat 18:10 heartbeat: mode PACE usage 27 C: 42.9 GB; fillers 0; conveyor 0; acad 1
+Sat 18:21 heartbeat: mode PACE usage 27 C: 42.6 GB; fillers 0; conveyor 0; acad 1
+Sat 18:33 heartbeat: mode PACE usage 27 C: 42.2 GB; fillers 0; conveyor 0; acad 1
+Sat 18:44 heartbeat: mode PACE usage 27 C: 41.6 GB; fillers 0; conveyor 0; acad 1
+Sat 18:55 heartbeat: mode PACE usage 27 C: 41.5 GB; fillers 0; conveyor 0; acad 1
+Sat 19:07 heartbeat: mode PACE usage 27 C: 30.8 GB; fillers 0; conveyor 0; acad 1
+Sat 19:18 heartbeat: mode PACE usage 27 C: 31.1 GB; fillers 0; conveyor 0; acad 1
+Sat 19:22 conveyor was missing: started
+Sat 19:29 heartbeat: mode PACE usage 27 C: 31.3 GB; fillers 0; conveyor 0; acad 1
+Sat 19:40 heartbeat: mode PACE usage 27 C: 30.3 GB; fillers 0; conveyor 0; acad 1
+Sat 19:51 heartbeat: mode PACE usage 27 C: 29.8 GB; fillers 0; conveyor 0; acad 1
+Sat 20:02 heartbeat: mode PACE usage 27 C: 30.3 GB; fillers 0; conveyor 0; acad 1
+Sat 20:14 heartbeat: mode PACE usage 27 C: 30.2 GB; fillers 0; conveyor 0; acad 1
+Sat 20:25 heartbeat: mode PACE usage 27 C: 29.2 GB; fillers 0; conveyor 0; acad 1
+Sat 20:36 heartbeat: mode PACE usage 27 C: 29.4 GB; fillers 0; conveyor 0; acad 1
+Sat 20:48 heartbeat: mode PACE usage 27 C: 29.6 GB; fillers 0; conveyor 0; acad 0
+Sat 20:59 heartbeat: mode PACE usage 27 C: 29.7 GB; fillers 0; conveyor 0; acad 1
+Sat 21:10 heartbeat: mode PACE usage 27 C: 29.3 GB; fillers 0; conveyor 0; acad 1
+Sat 21:21 heartbeat: mode PACE usage 27 C: 29.3 GB; fillers 0; conveyor 0; acad 1
+Sat 21:32 heartbeat: mode PACE usage 27 C: 29.1 GB; fillers 0; conveyor 0; acad 1
+Sat 21:44 heartbeat: mode PACE usage 27 C: 28.9 GB; fillers 0; conveyor 0; acad 1
+Sat 21:55 heartbeat: mode PACE usage 27 C: 28.7 GB; fillers 0; conveyor 0; acad 1
+Sat 22:06 heartbeat: mode PACE usage 27 C: 28.9 GB; fillers 0; conveyor 0; acad 1
+Sat 22:17 heartbeat: mode PACE usage 27 C: 29.2 GB; fillers 0; conveyor 0; acad 1
+Sat 22:28 heartbeat: mode PACE usage 27 C: 28.9 GB; fillers 0; conveyor 0; acad 1
+Sat 22:39 heartbeat: mode PACE usage 27 C: 26.5 GB; fillers 0; conveyor 0; acad 1
+Sat 22:50 heartbeat: mode PACE usage 27 C: 27 GB; fillers 0; conveyor 0; acad 1
+Sat 23:01 heartbeat: mode PACE usage 27 C: 26.9 GB; fillers 0; conveyor 0; acad 1
+Sat 23:12 heartbeat: mode PACE usage 27 C: 26.6 GB; fillers 0; conveyor 0; acad 1
+Sat 23:23 heartbeat: mode PACE usage 27 C: 26.1 GB; fillers 0; conveyor 0; acad 1
+Sat 23:34 heartbeat: mode PACE usage 27 C: 30.1 GB; fillers 0; conveyor 0; acad 1
+Sat 23:45 heartbeat: mode PACE usage 27 C: 46.8 GB; fillers 0; conveyor 0; acad 1
+Sat 23:56 heartbeat: mode PACE usage 27 C: 46.6 GB; fillers 0; conveyor 0; acad 1
+Sun 00:07 heartbeat: mode PACE usage 27 C: 46.8 GB; fillers 0; conveyor 0; acad 1
+Sun 00:18 heartbeat: mode PACE usage 27 C: 44.4 GB; fillers 0; conveyor 0; acad 1
+Sun 00:30 heartbeat: mode PACE usage 27 C: 28.1 GB; fillers 0; conveyor 0; acad 1
+Sun 00:41 heartbeat: mode PACE usage 27 C: 24.4 GB; fillers 0; conveyor 0; acad 1
+Sun 00:52 heartbeat: mode PACE usage 27 C: 23.2 GB; fillers 0; conveyor 0; acad 1
+Sun 01:04 heartbeat: mode PACE usage 27 C: 22.5 GB; fillers 0; conveyor 0; acad 1
+Sun 01:15 heartbeat: mode PACE usage 27 C: 22.2 GB; fillers 0; conveyor 0; acad 1
+Sun 01:26 heartbeat: mode PACE usage 27 C: 22 GB; fillers 0; conveyor 0; acad 1
+Sun 01:37 heartbeat: mode PACE usage 27 C: 22 GB; fillers 0; conveyor 0; acad 1
+Sun 01:48 heartbeat: mode PACE usage 27 C: 22.4 GB; fillers 0; conveyor 0; acad 1
+Sun 01:59 heartbeat: mode PACE usage 27 C: 22.4 GB; fillers 0; conveyor 0; acad 0
+Sun 02:10 heartbeat: mode PACE usage 27 C: 22.4 GB; fillers 0; conveyor 0; acad 1
+Sun 02:21 heartbeat: mode PACE usage 27 C: 22.4 GB; fillers 0; conveyor 0; acad 1
+Sun 02:32 heartbeat: mode PACE usage 27 C: 22.4 GB; fillers 0; conveyor 0; acad 0
+Sun 02:43 heartbeat: mode PACE usage 27 C: 58.3 GB; fillers 0; conveyor 0; acad 1
+Sun 02:54 heartbeat: mode PACE usage 27 C: 58.1 GB; fillers 0; conveyor 0; acad 1
+Sun 03:06 heartbeat: mode PACE usage 27 C: 57.8 GB; fillers 0; conveyor 0; acad 1
+Sun 03:17 heartbeat: mode PACE usage 27 C: 58.3 GB; fillers 0; conveyor 0; acad 1
+Sun 03:28 heartbeat: mode PACE usage 27 C: 59.4 GB; fillers 0; conveyor 0; acad 1
+Sun 03:39 heartbeat: mode PACE usage 27 C: 59.4 GB; fillers 0; conveyor 0; acad 0
+Sun 03:50 heartbeat: mode PACE usage 27 C: 59.4 GB; fillers 0; conveyor 0; acad 1
+Sun 04:00 heartbeat: mode PACE usage 27 C: 59.2 GB; fillers 0; conveyor 0; acad 1
+Sun 04:11 heartbeat: mode PACE usage 27 C: 59.2 GB; fillers 0; conveyor 0; acad 1
+Sun 04:22 heartbeat: mode PACE usage 27 C: 59.1 GB; fillers 0; conveyor 0; acad 1
+Sun 04:33 heartbeat: mode PACE usage 27 C: 55.4 GB; fillers 0; conveyor 0; acad 1
+Sun 04:44 heartbeat: mode PACE usage 27 C: 54.6 GB; fillers 0; conveyor 0; acad 1
+Sun 04:55 heartbeat: mode PACE usage 27 C: 53.9 GB; fillers 0; conveyor 0; acad 1
+Sun 05:01 conveyor was missing: started
+Sun 05:06 heartbeat: mode PACE usage 27 C: 54.9 GB; fillers 0; conveyor 1; acad 1
+Sun 05:16 heartbeat: mode PACE usage 27 C: 53.8 GB; fillers 0; conveyor 0; acad 1
+Sun 05:27 heartbeat: mode PACE usage 27 C: 55.6 GB; fillers 0; conveyor 0; acad 1
+Sun 05:38 heartbeat: mode PACE usage 27 C: 55 GB; fillers 0; conveyor 0; acad 1
+Sun 05:49 heartbeat: mode PACE usage 27 C: 54 GB; fillers 0; conveyor 0; acad 0
+Sun 06:00 heartbeat: mode PACE usage 27 C: 54 GB; fillers 0; conveyor 0; acad 1
+Sun 06:10 heartbeat: mode PACE usage 27 C: 54 GB; fillers 0; conveyor 0; acad 1
+Sun 06:21 heartbeat: mode PACE usage 27 C: 54 GB; fillers 0; conveyor 0; acad 1
+Sun 06:32 heartbeat: mode PACE usage 27 C: 54 GB; fillers 0; conveyor 0; acad 1
+Sun 06:43 heartbeat: mode PACE usage 27 C: 53.9 GB; fillers 0; conveyor 0; acad 1
+Sun 06:53 heartbeat: mode PACE usage 27 C: 53.9 GB; fillers 0; conveyor 0; acad 1
+Sun 07:04 heartbeat: mode PACE usage 27 C: 53.8 GB; fillers 0; conveyor 0; acad 1
+Sun 07:15 heartbeat: mode PACE usage 27 C: 53.6 GB; fillers 0; conveyor 0; acad 1
+Sun 07:26 heartbeat: mode PACE usage 27 C: 53.6 GB; fillers 0; conveyor 0; acad 0
+Sun 07:36 heartbeat: mode PACE usage 27 C: 53.6 GB; fillers 0; conveyor 0; acad 1
+Sun 07:47 heartbeat: mode PACE usage 27 C: 53.6 GB; fillers 0; conveyor 0; acad 1
+Sun 07:58 heartbeat: mode PACE usage 27 C: 53.6 GB; fillers 0; conveyor 0; acad 1
+Sun 08:08 heartbeat: mode PACE usage 27 C: 53.6 GB; fillers 0; conveyor 0; acad 1
+Sun 08:19 heartbeat: mode PACE usage 27 C: 53.5 GB; fillers 0; conveyor 0; acad 1
+Sun 08:30 heartbeat: mode PACE usage 27 C: 53.5 GB; fillers 0; conveyor 0; acad 1
+Sun 08:40 heartbeat: mode PACE usage 27 C: 53.5 GB; fillers 0; conveyor 0; acad 1
+Sun 08:51 heartbeat: mode PACE usage 27 C: 53.5 GB; fillers 0; conveyor 0; acad 1
+Sun 09:02 heartbeat: mode PACE usage 27 C: 52.6 GB; fillers 0; conveyor 0; acad 1
+Sun 09:13 heartbeat: mode PACE usage 27 C: 51.5 GB; fillers 0; conveyor 0; acad 1
+Sun 09:24 heartbeat: mode PACE usage 27 C: 51.3 GB; fillers 0; conveyor 0; acad 1
+Sun 09:34 heartbeat: mode PACE usage 27 C: 51.3 GB; fillers 0; conveyor 0; acad 1
+Sun 09:45 heartbeat: mode PACE usage 27 C: 51.2 GB; fillers 0; conveyor 0; acad 1
+Sun 09:56 heartbeat: mode PACE usage 27 C: 51.2 GB; fillers 0; conveyor 0; acad 1
+Sun 10:06 heartbeat: mode PACE usage 27 C: 51.2 GB; fillers 0; conveyor 0; acad 1
+Sun 10:17 heartbeat: mode PACE usage 27 C: 51.2 GB; fillers 0; conveyor 0; acad 1
+Sun 10:28 heartbeat: mode PACE usage 27 C: 51.2 GB; fillers 0; conveyor 0; acad 1
+Sun 10:38 heartbeat: mode PACE usage 27 C: 51.2 GB; fillers 0; conveyor 0; acad 1
+Sun 10:49 heartbeat: mode PACE usage 27 C: 51 GB; fillers 0; conveyor 0; acad 1
+Sun 11:00 heartbeat: mode PACE usage 27 C: 49.4 GB; fillers 0; conveyor 0; acad 0
+Sun 11:11 heartbeat: mode PACE usage 27 C: 49.3 GB; fillers 0; conveyor 0; acad 1
+Sun 11:21 heartbeat: mode PACE usage 27 C: 49.3 GB; fillers 0; conveyor 0; acad 0
+Sun 11:32 heartbeat: mode PACE usage 27 C: 49.2 GB; fillers 0; conveyor 0; acad 1
+Sun 11:43 heartbeat: mode PACE usage 27 C: 49 GB; fillers 0; conveyor 0; acad 1
+Sun 11:54 heartbeat: mode PACE usage 27 C: 47.4 GB; fillers 0; conveyor 0; acad 1
+Sun 12:05 heartbeat: mode PACE usage 27 C: 47.8 GB; fillers 0; conveyor 0; acad 1
+Sun 12:15 heartbeat: mode PACE usage 27 C: 47.8 GB; fillers 0; conveyor 0; acad 1
+Sun 12:26 heartbeat: mode PACE usage 27 C: 47.8 GB; fillers 0; conveyor 0; acad 1
+Sun 12:37 heartbeat: mode PACE usage 27 C: 47.6 GB; fillers 0; conveyor 0; acad 1
+Sun 12:47 heartbeat: mode PACE usage 27 C: 47.6 GB; fillers 0; conveyor 0; acad 1
+Sun 12:58 heartbeat: mode PACE usage 27 C: 47.5 GB; fillers 0; conveyor 0; acad 1
+Sun 13:04 conveyor was missing: started
+Sun 13:09 heartbeat: mode PACE usage 27 C: 47.5 GB; fillers 0; conveyor 1; acad 0
+Sun 13:19 heartbeat: mode PACE usage 27 C: 47.1 GB; fillers 0; conveyor 1; acad 0

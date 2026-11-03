@@ -1,0 +1,11 @@
+I've corrected the CEMEMBER picture and plan to Tim's beam-size rule and pushed both files to `C:\CE_PLAN` (commit `a307d6d3`). I checked the picture in an Edge screenshot at 1920x1032 and it fits with no scrolling. No AutoCAD was run.
+
+- **Picture:** the lower panel is now "How big the beam draws (decided)". It shows 310UB32.0 at 1:20 (real size, 298 mm), 1:50 (2.5 times, 745 mm) and 1:100 (5 times, 1490 mm), each 14.9 mm on A1. The A1 strip shows the same printed depth at all three scales, with the amber warning sample and the grey note about the two readings.
+- **Plan:**
+  - The beam-size question is marked ANSWERED and the Option A/B text is replaced by the rule.
+  - The reference scale is `structural.cememberReferenceDimscale`, default 20, and SBEAM is unchanged.
+  - The FOR TIM block is rewritten.
+  - CE 09 acceptance points are added: preview beam up to about 85 percent of the preview width, and properties labels at least 11 to 12 px.
+  - The plan states that a window is accepted only by a Codex look in real AutoCAD (RULES 5.7) and that Tim may still change the button words.
+- **Beyond the brief:** I added a second default-ON switch, `structural.cememberSizeFollowsDimscale`, so the real-size behaviour can be restored. The window's status line in the picture is now amber, because 1:100 always triggers the warning.
+- **Not fixed:** the live preview in the picture still draws the beam thin rather than 5 times deeper.

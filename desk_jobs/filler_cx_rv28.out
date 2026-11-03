@@ -1,0 +1,8 @@
+== cx_rv28 (usage 48.0% -> 51.0%): 1. **DONE — #1788: HOLD.** Private text can escape, damaged records can upload, and unsent records are deleted. Keep sharing OFF; enabling it requires Tim’s privacy decision. **0 agreements, 1 disagreement with Opus.**
+
+2. **Report:** [CODEX_PR_REVIEW_cx_rv28.md](C:/CE_PLAN/areas/CODEX_PR_REVIEW_cx_rv28.md), including exact fixes and five scrub examples.
+
+---
+
+1. **Saved and pushed:** `2e7d688e`; leak scan clean; final status shows no ahead.
+2. **Read-only:** No builds, tests, AutoCAD or PR changes. Early exposure to Opus’s summary is disclosed in the report.

@@ -1,0 +1,209 @@
+{
+  "header": {
+    "run_id": "RUN-20261103-0055-C3.0.89-pld",
+    "started": "2026-11-03 00:55:01",
+    "finished": "2026-11-03 00:58:55",
+    "build": {
+      "civil": {
+        "product_version": "3.0.89+61fd6fbc72710872048a69ef5b46d0e5b55087fa",
+        "file_version": "3.0.89.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.89+61fd6fbc72710872048a69ef5b46d0e5b55087fa",
+        "file_version": "1.1.89.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.89+61fd6fbc / struc 1.0.125+204dfad2 / mgr 1.1.89+61fd6fbc",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "DA1A519A048580868BC1C5D2390B22632928709EEE1863716F3D3EBEF5A7E2A8",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.89+61fd6fbc72710872048a69ef5b46d0e5b55087fa; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.89+61fd6fbc72710872048a69ef5b46d0e5b55087fa",
+      "Driver files (SHA-256, first 12): v2 F4D8F40C3675 (expected F4D8F40C3675), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4B0175FFAB00, v3 session F061E3240C47, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 BBF42DBA8958, case_runner_lib.ps1 89AD455619F8, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 0 shared setup(s); pack SHA-256 DA1A519A048580868BC1C5D2390B22632928709EEE1863716F3D3EBEF5A7E2A8; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json D604CE689671 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Tue 03 Nov 2026 00:55 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 1,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 1
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261103-0055-C3.0.89-pld-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-11-03 00:55:04",
+      "finished": "2026-11-03 00:58:55",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV30055101_B1.dwg",
+      "cases": [
+        "PROBE-PS-DUMP"
+      ],
+      "whatsnew_dismissed_at_start": "no, window was not there",
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : D604CE689671 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "PROBE-PS-DUMP",
+      "proves_bugs": "",
+      "title": "PROBE: full dump of the Pit Schedule window on DRV1_B1 (what enables Continue to Place / update)",
+      "kind": "deterministic",
+      "order": 341,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "Wave 1 look steps for W1-246, 573, 779, 783, 785, 786 (route to a drawn Pit Schedule), CE 00 request 1 Nov 22:15",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "probe, nothing proved",
+      "variant_of": "",
+      "expected": "The full control list of the Pit Schedule window is on record.",
+      "why_not_unit": "Reads the live window.",
+      "not_automated": [
+        "This probe judges nothing; it records."
+      ],
+      "file_sha256": "932BA5E369138CB27D688428418CBAAEF0CA1295FC5EA24018D35AA257423C27",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-11-03 00:56:58",
+      "seconds": 96.2,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"PITSCHEDULE\" -Force -ExpectWindow \"Pit Schedule\" -TimeoutSec 120 -> $ps1",
+          "ok": true,
+          "seconds": 23.5,
+          "evidence": "typed 'PITSCHEDULE': Command: | Command: PITSCHEDULE"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Pit Schedule\" -> $psd1",
+          "ok": true,
+          "seconds": 13.1,
+          "evidence": "ui-dump 'Creative Engineering | Pit Schedule (PITSCHEDULE)': 660 controls, tabs: Source | Rows | Changes | Placement"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 ui-windows -> $uw1",
+          "ok": true,
+          "seconds": 14.4,
+          "evidence": "v3 ui-windows : Autodesk AutoCAD 2027 - [CLDV30055101_B1.dwg] [uia] not on list 1920,-4,1920,1080 | Creative Engineering | Pit Schedule (PITSCHEDULE) [win32] READ-LIST 2160,136,1440,800"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $snap1",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30055101_B1.dwg] ; Creative Engineering | Pit Schedule (PITSCHEDULE)"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "record $psd1 \"FULL Pit Schedule window dump (every control, tab, state)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"title\":\"Creative Engineering | Pit Schedule (PITSCHEDULE)\",\"handle\":9964104,\"class\":\"Window\",\"source\":\"win32\",\"bounds\":[2160,136,1440,800],\"control_count\":660,\"truncated\":false,\"tabs\":[{\"name\":\"Source\",\"selected\":false},{\"name\":\"Rows\",\"selected\":true},{\"name\":\"Changes\",\"selected\":false},{\"name\":\"Placement\",\"selected\":false}],\"controls\":[{\"type\":\"TitleBar\",\"name\":\"Creative Engineering | Pit Schedule (PITSCHEDULE)\",\"id\":\"TitleBar\",\"class\":\"\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2168,144,1424,23]},{\"type\":\"MenuBar\",\"name\":\"System Menu Bar\",\"id\":\"SystemMenuBar\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2168,144,22,22]},{\"type\":\"MenuItem\",\"name\":\"System\",\"id\":\"Item 1\",\"class\":\"\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2168,144,22,22]},{\"type\":\"Button\",\"name\":\"Close\",\"id\":\"Close\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3559,137,34,30]},{\"type\":\"Image\",\"name\":\"\",\"id\":\"\",\"class\":\"Image\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2203,197,34,34]},{\"type\":\"Text\",\"name\":\"Pit Schedule\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2251,194,95,23]},{\"type\":\"Text\",\"name\":\"Will be placed: 27 rows · All sets · All systems\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2360,197,264,17]},{\"type\":\"Text\",\"name\":\"Drawing check: 95 data issues may affect this schedule\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2251,220,1092,14]},{\"type\":\"Button\",\"name\":\"Refresh\",\"id\":\"\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[3343,198,65,32]},{\"type\":\"Text\",\"name\":\"Refresh\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3356,206,39,16]},{\"type\":\"Button\",\"name\":\"Relink and recalculate\",\"id\":\"\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[3416,198,141,32]},{\"type\":\"Text\",\"name\":\"Relink and recalculate\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3429,206,115,16]},{\"type\":\"Tab\",\"name\":\"\",\"id\":\"ScheduleTabs\",\"class\":\"TabControl\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2186,257,1388,605]},{\"type\":\"TabItem\",\"name\":\"Source\",\"id\":\"\",\"class\":\"TabItem\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2188,259,73,32],\"selected\":false},{\"type\":\"Text\",\"name\":\"Source\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2205,266,39,18]},{\"type\":\"TabItem\",\"name\":\"Rows\",\"id\":\"\",\"class\":\"TabItem\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2261,259,64,32],\"selected\":true},{\"type\":\"Text\",\"name\":\"Rows\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2278,266,30,18]},{\"type\":\"Text\",\"name\":\"Type\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2188,315,23,15]},{\"type\":\"ComboBox\",\"name\":\"Show only pit type\",\"id\":\"\",\"class\":\"ComboBox\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2219,306,160,32]},{\"type\":\"Text\",\"name\":\"Group\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2393,315,30,15]},{\"type\":\"ComboBox\",\"name\":\"Show only one group of pit numbers\",\"id\":\"\",\"class\":\"ComboBox\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2431,306,140,32]},{\"type\":\"Text\",\"name\":\"Search\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2585,315,33,15]},{\"type\":\"Edit\",\"name\":\"Search the schedule\",\"id\":\"\",\"class\":\"TextBox\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2626,310,682,25],\"value\":\"\",\"readonly\":false},{\"type\":\"Text\",\"name\":\"Every output row is listed. Filters only change what you see here, never what is placed.\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2190,360,1118,16]},{\"type\":\"Text\",\"name\":\"Columns\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2188,407,43,14]},{\"type\":\"RadioButton\",\"name\":\"Pit and ...",
+          "evidence": "RECORDED, not judged: FULL Pit Schedule window dump (every control, tab, state) = {\"title\":\"Creative Engineering | Pit Schedule (PITSCHEDULE)\",\"handle\":9964104,\"class\":\"Window\",\"source\":\"win32\",\"bounds\":[2160,136,1440,800],\"control_count\":660,\"truncated\":false,\"tabs\":[{\"name\":\"Source\",\"selected\":false},{\"name\":\"Rows\",\"selected\":true},{\"name\":\"Changes\",\"selected\":false},{\"name\":\"Placement\",\"selected\":false}],\"controls\":[{\"type\":\"TitleBar\",\"name\":\"Creative Engineering | Pit Schedule (PITSCHEDULE)\",\"id\":\"TitleBar\",\"class\":\"\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2168,144,1424,23]},{\"type\":\"MenuBar\",\"name\":\"System Menu Bar\",\"id\":\"SystemMenuBar\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2168,144,22,22]},{\"type\":\"MenuItem\",\"name\":\"System\",\"id\":\"Item 1\",\"class\":\"\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2168,144,22,22]},{\"type\":\"Button\",\"name\":\"Close\",\"id\":\"Close\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3559,137,34,30]},{\"type\":\"Image\",\"name\":\"\",\"id\":\"\",\"class\":\"Image\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2203,197,34,34]},{\"type\":\"Text\",\"name\":\"Pit Schedule\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2251,194,95,23]},{\"type\":\"Text\",\"name\":\"Will be placed: 27 rows · All sets · All systems\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2360,197,264,17]},{\"type\":\"Text\",\"name\":\"Drawing check: 95 data issues may affect this schedule\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2251,220,1092,14]},{\"type\":\"Button\",\"name\":\"Refresh\",\"id\":\"\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[3343,198,65,32]},{\"type\":\"Text\",\"name\":\"Refresh\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3356,206,39,16]},{\"type\":\"Button\",\"name\":\"Relink and recalculate\",\"id\":\"\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[3416,198,141,32]},{\"type\":\"Text\",\"name\":\"Relink and recalculate\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3429,206,115,16]},{\"type\":\"Tab\",\"name\":\"\",\"id\":\"ScheduleTabs\",\"class\":\"TabControl\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2186,257,1388,605]},{\"type\":\"TabItem\",\"name\":\"Source\",\"id\":\"\",\"class\":\"TabItem\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2188,259,73,32],\"selected\":false},{\"type\":\"Text\",\"name\":\"Source\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2205,266,39,18]},{\"type\":\"TabItem\",\"name\":\"Rows\",\"id\":\"\",\"class\":\"TabItem\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2261,259,64,32],\"selected\":true},{\"type\":\"Text\",\"name\":\"Rows\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2278,266,30,18]},{\"type\":\"Text\",\"name\":\"Type\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2188,315,23,15]},{\"type\":\"ComboBox\",\"name\":\"Show only pit type\",\"id\":\"\",\"class\":\"ComboBox\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2219,306,160,32]},{\"type\":\"Text\",\"name\":\"Group\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2393,315,30,15]},{\"type\":\"ComboBox\",\"name\":\"Show only one group of pit numbers\",\"id\":\"\",\"class\":\"ComboBox\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2431,306,140,32]},{\"type\":\"Text\",\"name\":\"Search\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2585,315,33,15]},{\"type\":\"Edit\",\"name\":\"Search the schedule\",\"id\":\"\",\"class\":\"TextBox\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2626,310,682,25],\"value\":\"\",\"readonly\":false},{\"type\":\"Text\",\"name\":\"Every output row is listed. Filters only change what you see here, never what is placed.\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2190,360,1118,16]},{\"type\":\"Text\",\"name\":\"Columns\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2188,407,43,14]},{\"type\":\"RadioButton\",\"name\":\"Pit and ..."
+        },
+        {
+          "n": 2,
+          "text": "record $uw1 \"v3 ui-windows: every window with title, visible, enabled\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"ok\":true,\"verb\":\"ui-windows\",\"started\":\"2026-11-03 00:57:35\",\"elapsed_ms\":14339,\"error\":null,\"refused\":false,\"output\":[\"Autodesk AutoCAD 2027 - [CLDV30055101_B1.dwg] [uia] not on list 1920,-4,1920,1080\",\"Creative Engin...",
+          "evidence": "RECORDED, not judged: v3 ui-windows: every window with title, visible, enabled = {\"ok\":true,\"verb\":\"ui-windows\",\"started\":\"2026-11-03 00:57:35\",\"elapsed_ms\":14339,\"error\":null,\"refused\":false,\"output\":[\"Autodesk AutoCAD 2027 - [CLDV30055101_B1.dwg] [uia] not on list 1920,-4,1920,1080\",\"Creative Engin..."
+        },
+        {
+          "n": 3,
+          "text": "record $snap1 \"windows now\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30055101_B1.dwg] | Creative Engineering | Pit Schedule (PITSCHEDULE)",
+          "evidence": "RECORDED, not judged: windows now = Autodesk AutoCAD 2027 - [CLDV30055101_B1.dwg] | Creative Engineering | Pit Schedule (PITSCHEDULE)"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 4 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-11-03 00:58:34",
+      "session_id": "RUN-20261103-0055-C3.0.89-pld-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "no independent review: no PROBE-PS-DUMP_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": false
+      }
+    }
+  ]
+}

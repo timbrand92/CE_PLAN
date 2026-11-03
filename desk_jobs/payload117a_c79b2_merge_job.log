@@ -1,0 +1,8 @@
+**STAGE A RESULT: MERGE CLEAN.** Nothing pushed or installed.
+
+1. **Merge:** local commit `02c1a090` on `p117-b2`, no conflict. It brought in exactly one commit, `cf059dcf`.
+2. **Diff against `d4ce878e`:** `Installer/PackageContents.xml` and `Modules/Drainage/CE_CVL_SUITE.csproj`, 2 insertions and 2 deletions (3.0.89 to 3.0.90).
+3. **Traps:** `UserSettings.cs` still starts EF BB BF. No `3.0.89` remains. `1.1.89` is unchanged.
+4. **Tests:** all 12 classes passed with 0 failed (C60AuditSourcePinGuardTests skipped 3). The Version/Pin/Stamp run gave 185 passed and 3 skipped of 188.
+
+The worktree `wt117` and `R:` are left in place for stages B and C. The note is `C:\CE_PLAN\desk_jobs\PAYLOAD117A_MERGE_NOTE.md`.

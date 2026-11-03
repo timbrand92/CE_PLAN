@@ -1,0 +1,9 @@
+Wed 19:59 chain start: C-75 (Civil + Manager, three bug-fix PRs #1831 BUG-665/672, #1832 BUG-1222, #1833 BUG-1223); nothing is installed by this chain.
+Wed 19:59 starting train_c75_assembler_job.txt (sonnet)
+Wed 21:10 finished train_c75_assembler_job.txt
+Wed 21:10 starting train_c75_finalizer_job.txt (opus)
+Wed 23:32 finished train_c75_finalizer_job.txt
+Wed 23:32 C-75 finalizer verdict GO and C-74 installed: building payload 111 (candidate c1071). Nothing is installed by this chain.
+Wed 23:32 starting payload111_c75_job.txt (sonnet)
+Thu 00:12 finished payload111_c75_job.txt
+Thu 00:12 chain complete

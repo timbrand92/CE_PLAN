@@ -1,0 +1,7 @@
+== verifyL3a_c88 (usage 55.0% -> 55.0%): AUTOCAD CLOSED
+
+1. **Results:** 1 PASS, 2 BLOCKED; 0 FAIL, DIFFERENT or NOT TESTED. SURE 3, UNSURE 0.
+2. **Manager passed:** all nine tab names readable in Dark.
+3. **Pit checks blocked:** Edit Pit says ÔÇ£SaveÔÇØ, not the briefÔÇÖs ÔÇ£Save pit and closeÔÇØ; Properties exposed no Position X box. Stretching and both moves remain untested.
+4. **Clean end:** builds unchanged; all four settings hashes unchanged; nothing saved or sent; lock released.
+5. **Report:** [L3a verification](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_L3a_20261102_2032.md>). Parked looks recorded; F-LS1 still wanted.

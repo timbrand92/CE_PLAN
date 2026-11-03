@@ -1,0 +1,170 @@
+{
+  "header": {
+    "run_id": "RUN-20261027-0023-C3.0.80-g80a5",
+    "started": "2026-10-27 00:23:15",
+    "finished": "2026-10-27 00:30:03",
+    "build": {
+      "civil": {
+        "product_version": "3.0.80+270215aa2ba9540d5b75233acb1d0a0a2a5fc1a1",
+        "file_version": "3.0.80.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.124+3a3caac5db7687f1b5d1a6e09571976c52b2b05a",
+        "file_version": "1.0.124.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.80+270215aa2ba9540d5b75233acb1d0a0a2a5fc1a1",
+        "file_version": "1.1.80.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.80+270215aa / struc 1.0.124+3a3caac5 / mgr 1.1.80+270215aa",
+    "acad_version": "",
+    "pack_sha256": "CDB192366B5B1C18339A9FE5845E1CF192945991F1BCC5BEE55E6CF5CD351B3F",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.80+270215aa2ba9540d5b75233acb1d0a0a2a5fc1a1; Structural 1.0.124+3a3caac5db7687f1b5d1a6e09571976c52b2b05a; Manager 1.1.80+270215aa2ba9540d5b75233acb1d0a0a2a5fc1a1",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4CD773B85EC5, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 13955AAA60D1, case_runner_lib.ps1 8F9B8DCBB473, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 2 case file(s) plus 0 shared setup(s); pack SHA-256 CDB192366B5B1C18339A9FE5845E1CF192945991F1BCC5BEE55E6CF5CD351B3F; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json 0791B07EBCD9 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Tue 27 Oct 2026 00:23 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 0,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 2,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261027-0023-C3.0.80-g80a5-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-27 00:29:36",
+      "finished": "2026-10-27 00:30:03",
+      "result": "BLOCKED",
+      "blocked": null,
+      "error": "the watchdog did not start within 20 s",
+      "fixture": "DRV1_B1",
+      "fixture_sha256": null,
+      "copy": null,
+      "cases": [
+        "R39",
+        "R39b"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "0791B07EBCD9"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "0791B07EBCD9"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : 0791B07EBCD9 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "",
+      "quit_attempts": null
+    }
+  ],
+  "cases": [
+    {
+      "id": "R39",
+      "proves_bugs": "BUG-697 (CD, E, pick a plain polyline you drew: the New Pipe window opens and a CE pipe is made; CE does not say \"That line is already a CE pipe\" and does not cancel)",
+      "title": "CD with E (Existing line) on a plain polyline you drew opens New Pipe (it does not say the line is already a CE pipe), and Start Pipe makes one CE pipe along it",
+      "kind": "deterministic",
+      "order": 39,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 25 Oct 2026 with BUG-697 in BUG_CARPARK.md (steps: CD, answer E, pick a plain polyline you drew on layer BLOCKS; actual: \"[CE] That line is already a CE pipe. Double-click it to change it. Nothing was changed.\" and \"CD command cancelled\"; the pipe window never opens). BUG-684 (arcs and closed polylines) is in R39b, BUG-187 and BUG-874 are not driven.",
+      "variant_of": "",
+      "expected": "After typing a 3-point open polyline on layer BLOCKS at 150000,-96000 / 155000,-96000 / 160000,-95000 and zooming to it, CD with the answer E and a point on the line opens the New Pipe window (and the command line does not say \"already a CE pipe\"); with the levels 18.000 and 17.900 and Start Pipe, CE places a pipe object (CeCvlPipeObject) whose label reads about \"1 IN 101\" (10.1 m long, 0.1 m fall) and the drawing holds IL texts 18.000 and 17.900. The drawing file on disk is unchanged.",
+      "why_not_unit": "The pick of the drawn line, the New Pipe window and the new pipe object only meet in a live CD run.",
+      "not_automated": [
+        "What becomes of the source polyline after Start Pipe (kept or replaced) is recorded, not judged: the card does not say.",
+        "Arc and closed polylines (BUG-684) are in R39b. That the pipe follows the drawn line exactly (the same vertices) is not compared."
+      ],
+      "file_sha256": "0FBBAD9920F082D026A825999C2F6412FE2CA8401BEB06045AD9EFB223A20945",
+      "plan_item": "CD Existing line (triage group N4; daily card D04 neighbour); BUG-697",
+      "result": "BLOCKED",
+      "blocked": "session BLOCKED: the watchdog did not start within 20 s",
+      "first_failure": null,
+      "steps": [],
+      "assertions": [],
+      "pictures": [],
+      "observations": [],
+      "seconds": 0,
+      "setup": "",
+      "setup_note": null,
+      "session_id": "RUN-20261027-0023-C3.0.80-g80a5-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": true
+      }
+    },
+    {
+      "id": "R39b",
+      "proves_bugs": "BUG-684 (CD Existing line on a polyline with an arc, and on a closed polyline: CE warns that the pipe is straight between the corners (curved sides) or without the closing side, and the drawn source line is kept; it is no longer erased)",
+      "title": "CD with E on a polyline with an arc, and on a closed polyline, warns in plain words that the pipe runs straight between the corners, makes the pipe and keeps your drawn line",
+      "kind": "deterministic",
+      "order": 39,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 25 Oct 2026 with BUG-684 in BUG_CARPARK.md (expected: arcs and closed polylines are refused or warned about and the source line is kept). The pipe's length and grade label are not compared with the arc length (a pipe on a curve is not drawn by CD); BUG-697 is R39.",
+      "variant_of": "",
+      "expected": "A polyline drawn straight 150000,-99000 to 155000,-99000 then an arc to 160000,-97000, picked with CD, E, makes the New Pipe window open; after levels 18.000 / 17.900 and Start Pipe, CE has said \"That line has curved sides\" and a CE pipe object exists, and the drawn polyline is STILL in the drawing. The same for a closed 4-corner polyline (150000,-93000 / 154000,-93000 / 154000,-90000 / 150000,-90000, closed): CE says \"That line is closed ...\" and the drawn polyline is still in the drawing. The drawing file on disk is unchanged.",
+      "why_not_unit": "The pick of the drawn line, the warning and the erase or keep of the source line happen in a live CD run in the real drawing.",
+      "not_automated": [
+        "That the pipe is straight between the corner points is not measured. BUG-697 (a plain line) is R39; BUG-187 and BUG-874 are not driven."
+      ],
+      "file_sha256": "CD1A7B6CAE9AC3A4BE04E3E6DB9D4EE73E804F1E77F76107CC0A20635E04473A",
+      "plan_item": "CD Existing line (triage group N4; daily card D04 neighbour); BUG-684",
+      "result": "BLOCKED",
+      "blocked": "session BLOCKED: the watchdog did not start within 20 s",
+      "first_failure": null,
+      "steps": [],
+      "assertions": [],
+      "pictures": [],
+      "observations": [],
+      "seconds": 0,
+      "setup": "",
+      "setup_note": null,
+      "session_id": "RUN-20261027-0023-C3.0.80-g80a5-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": true
+      }
+    }
+  ]
+}

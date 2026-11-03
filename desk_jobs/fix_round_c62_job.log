@@ -1,0 +1,10 @@
+Done. 16 draft PRs now sit on C-61 (88bd62f7) with comments posted: 8 fixed, 7 merged only, and #1645 is new.
+
+- **Fixes:** #1553 contradicting note, #1556 row-number for plain marks, #1558/#1562/#1567/#1570 "Default: on." (stay ON), #1612 status line and waiting row, #1617 plain "could not solve" wording.
+- **Merge only:** #1552, #1557, #1586, #1591, #1594, #1595, #1611.
+- **Tests:** Civil 19,452–19,462 with 0 failures; Manager 918 with 0 failures.
+- **Dry merge:** 22 PRs clash only in `REGRESSION_LOG.md`. #1562 also clashes in `UserSettings.cs`.
+- **CDRG:** confirmed from the code. Fixed in draft #1645 (`fw2/cdrg-rollback`), not seen in AutoCAD.
+- **Not done:** no net48 build; no AutoCAD run.
+
+Report is in `C:\CE_PLAN\areas\release-v3-colleagues-FIX_ROUND_C62_REPORT.md`, pushed.

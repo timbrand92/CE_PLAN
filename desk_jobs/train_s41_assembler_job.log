@@ -1,0 +1,13 @@
+Train S-41 is assembled and pushed as `claude/rel-20261022s2`, head `7fcbdd4b`, on top of S-40's `329691b7`. The report is pushed to `C:\CE_PLAN` as `areas/release-v3-colleagues-TRAIN_S41_ASSEMBLY_REPORT_2026-10-22.md`.
+
+- **Merged:** all five PRs (#1510, #1498, #1496, #1509, #1518), each at its named head.
+- **Conflicts:** `REGRESSION_LOG.md` conflicted in four of the five merges; #1496 also clashed with #1498 in the settings files. I kept both sides everywhere.
+- **Shared/Civil/Manager:** none touched. The merged PRs change only `Modules/Structural*` and `REGRESSION_LOG.md`.
+- **Build:** 0 errors.
+- **Tests:**
+  - Structural net10: 5211 passed.
+  - Structural net48: 39 failed, 37 of them also on the base. The two new reds are #1510 tests that hit the net48 stub (not a code fault).
+  - DesignCore, CommandTruth and ReleaseTests: unchanged from S-40.
+- **Re-pins:** none needed.
+- **Settings files:** unchanged during the job.
+- **Cleanup:** both worktrees removed.

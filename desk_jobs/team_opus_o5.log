@@ -1,0 +1,29 @@
+## FOR TIM
+
+1. **The copy is taking P3's pipes. The lines aren't just noise.** When a ROTATE Copy or SCALE Copy lands on top of P3, CE reconnects the pipes there and hands some of P3's pipes to the new copy. The "P3 schedule cell not updated" lines are CE noticing that P3's schedule row now lists pipes that no longer join P3.
+2. **What tonight's robot run did.** The ROTATE Copy (P11) took three of P3's five incoming pipes: the ones from WT9, P4 and WT4. The SCALE Copy (P12) then took P3's outgoing pipe to P2 and the incoming pipe from WT3. That left P3 with one pipe.
+3. **Why it happens.** The copy sits about 0.1 mm off P3, so both pits touch the same pipe ends. CE gives each end to whichever pit is a hair closer and doesn't tell you. With the copy 5 m away, no pipe end touches it, so nothing changes.
+4. **Why the C1 lines followed every EXPLODE, ERASE and COPY (BUG-1231).** After any command that reconnects a pit, CE re-checks every schedule cell in the drawing. It prints one line per out-of-date cell, every time. C1's seven cells were already out of date before your first check at 10:22.
+5. **What I couldn't find.** Why C1's cells were out of date in the first place. Nothing in the log touched C1's pipe that morning.
+6. **The fix I recommend. Nothing is built yet.**
+   - **Part A, the real fault:** a copied pit never takes pipe ends that are already joined to a pit that still touches them. CE prints one line instead, for example "P11 sits on pipe ends already joined to P3; they stay joined to P3." This would be a new switch, `linking.pitCopyKeepsOriginalsPipes`, ON.
+   - **Part B, the noise:** one line per pit instead of one per cell. A pit the command didn't touch is mentioned only once per drawing per AutoCAD session. Another new switch, `linking.scheduleStaleCellLinesOncePerPit`, ON.
+7. **Not proven.** Nobody has seen this by hand; it is one robot run tonight plus earlier robot runs in the log. If you snap exactly to P3's insertion point, the older pit should win, so you might see nothing.
+8. **One question, queued for CE 04, not urgent.** If you copy a pit onto P3 on purpose and then erase P3, should the copy pick up P3's pipes? I haven't checked what ERASE does there today.
+
+---
+
+**Technical detail**
+
+1. **Where the lines come from:** the reason text and per-cell line are built in `ScheduleCellRefreshGate.cs:123-124` and `:153-159`. They are printed by `ScheduleLinkService.cs:1002-1029`. A cell is marked out of date when its row's pipe no longer meets the pit (`CellRowPipeTurnedAway`, `ScheduleLinkService.cs:831-843` and `:3138`).
+2. **Cause:**
+   - The copy is queued for a pipe relink (`LinkService.Utilities.cs:457`).
+   - The relink picks up every pipe with an end inside the copy's outline (`LinkService.RepairAudit.Relink.cs:794`).
+   - `FindBestPitOwnerAtPoint` (`LinkService.Geometry.cs:1265-1311`) uses `NearestPitPicker` (`Rules/PitOutline.cs:714`), where the strictly nearest pit wins.
+   - When two pits touch, the "ambiguous" flag only stops the end's identity key being confirmed. The new owner is still written, and the pit the end was already joined to gets no preference.
+3. **Proof in the CE log at 21:00:09:** `10A901 from=WT9 to=P11`, `10A98D from=P4 to=P11`, `110136 from=WT4 to=P11`. All three read `to=P3` at 10:05.
+4. **PR #1831 is not the cause.** It only copies the label and cover text. The Opus reviewer saw the same lines on 3.0.84, before #1831 was merged.
+5. **Second suspect, for the repeats:** a pending pit relink forces a full schedule refresh (`LinkService.Reactors.cs:1922`). Out-of-date cells have no "say it once" rule, unlike copied schedules.
+6. **Report:** `C:\CE_PLAN\areas\release-v3-colleagues-BUG1227_DIAGNOSIS_29OCT.md`, pushed to main, nothing left unpushed. It includes robot cases N36_rotcopy_on_pit (control C36) and N37_stale_once (control C37).
+
+**Summary:** No PR; diagnosis only (B-049, BUG-1227 and BUG-1231). Cause: a pit copy relink lets the copy take the original's pipe ends on a near tie (`NearestPitPicker`, `Rules/PitOutline.cs:714`, via `LinkService.RepairAudit.Relink.cs:794`). The CE log shows P3's pipes moved to P11 and P12. The repeated lines come from every full schedule refresh (`LinkService.Reactors.cs:1922`). The draft plan adds two new switches, both ON: `linking.pitCopyKeepsOriginalsPipes` and `linking.scheduleStaleCellLinesOncePerPit`.

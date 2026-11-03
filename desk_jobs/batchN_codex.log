@@ -1,0 +1,25 @@
+Mon 15:12:08 batch N waiting for batchB_codex.ps1 to end
+Mon 15:50:11 batch N waiting for batchB_codex.ps1 to end
+Mon 15:50:51 batch N waiting for batchB_codex.ps1 to end
+Mon 16:59:27 batch N waiting for batchB_codex.ps1 to end
+Mon 17:08:47 batchB ended; taking over for the evening looks
+Mon 17:08:53 stopped idle chain4 pid 17736
+Mon 17:08:54 backed up CD_RecentValues.json sha 20DC84B4D735
+Mon 17:08:54 backed up CD_Settings.json sha ACD64E79A33B
+Mon 17:08:54 backed up CS_Settings.json sha D604CE689671
+Mon 17:08:54 backed up settings.json sha EFE307C4FC74
+Mon 17:08:54 STOP_CODEX.flag lifted (STOP_SUPERVISOR.flag stays up)
+Mon 17:08:59 Codex usage before AUD2 : 48 percent
+Mon 17:08:59 starting verifyAUD2_c88
+Mon 17:15:29 verifyAUD2_c88 launcher finished; Codex usage after: 48 percent
+Mon 17:15:29 after AUD2 : settings.json sha EFE307C4FC74 (original EFE307C4FC74)
+Mon 17:15:29 after AUD2 : CS_Settings.json sha D604CE689671 (original D604CE689671)
+Mon 17:15:29 after AUD2 : CD_Settings.json sha ACD64E79A33B (original ACD64E79A33B)
+Mon 17:15:29 Codex usage before S3b : 48 percent
+Mon 17:15:29 starting verifyS3b_c88
+Mon 17:28:05 verifyS3b_c88 launcher finished; Codex usage after: 49 percent
+Mon 17:28:05 after S3b : settings.json sha EFE307C4FC74 (original EFE307C4FC74)
+Mon 17:28:05 after S3b : CS_Settings.json sha D604CE689671 (original D604CE689671)
+Mon 17:28:05 after S3b : CD_Settings.json sha ACD64E79A33B (original ACD64E79A33B)
+Mon 17:28:05 Codex usage before B1b : 49 percent
+Mon 17:28:05 starting verifyB1b_c88

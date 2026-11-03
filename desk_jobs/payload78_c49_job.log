@@ -1,0 +1,10 @@
+The C-49 candidate is built and checked at `C:\ce_rc_scratch\c1045` (`CE_CVL_SUITE.bundle` and `CE_SUITE_MANAGER.bundle`). Nothing is installed and nobody has opened it in AutoCAD.
+
+- **Manifests:** civil 828 files, verified 828, bad 0, extra 0; manager 78 files, verified 78, bad 0, extra 0. Re-checked after cleanup.
+- **Version commit:** `d25cefa8` on `claude/rel-20261020c` (on top of `58a83210`). `git diff --stat` read 4 files, 4 insertions, 4 deletions before the push.
+- **Tests:** Civil pin tests 39 of 39, Manager pin tests 51 of 51.
+- **Stale-build proof:** all 51 string rows came out as expected.
+- **Settings and installed DLLs:** hashes unchanged.
+- **Odd:** Manager 1.1.59 is a re-stamp with no code change. My first Civil build attempt ran before `R:` was mapped and did nothing; the reported build is the re-run.
+
+The report is at `C:\Lisp Files\_TEST_COPIES_20260923\PAYLOAD_C1045_REPORT.md`.

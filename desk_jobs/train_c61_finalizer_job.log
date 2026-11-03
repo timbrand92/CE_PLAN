@@ -1,0 +1,23 @@
+**FOR TIM**
+
+1. **GO at `033f7f03fd55a3d78cdf3846b198565e49b21a6b`** on `claude/rel-20261023l` (Civil + Manager).
+2. **I fixed one thing.** One of CDCHECKIGNORE's "Nothing was changed" endings was being logged as "completed". It now logs "refused", like the other nine. Nothing you see in the drawing changes, and I added a test for it.
+3. **All three new switches stay ON, because each one fixes a bug:**
+   - **CDTWL:** reads metre drawings correctly (about 1,414 L instead of 1.4 L).
+   - **Pit block on open:** an untouched drawing no longer asks "Save changes?". Your own BEDIT change to PIT BLOCK 3 now survives opening.
+   - **Pit Schedule depth:** measured to the pit floor, as you ruled on 20 Oct.
+4. **This is a real Manager release.** The official Manager build passed its check at exactly 75 files.
+5. **What was left out:** Manager's new log isn't in the CESUPPORT zip yet. A colleague's support zip won't include Manager's command lines. It doesn't block the release.
+6. **Tests:**
+   - Civil: 19,451 tests. One PDF test timed out under load and passed when run alone.
+   - Manager: 916 tests, 0 failed.
+   - The whole solution builds with 0 errors.
+7. **Nothing is installed and nobody has opened it in AutoCAD.** No bug is marked fixed; each still needs a Codex pass in AutoCAD.
+
+AutoCAD was open on your PC throughout. Your settings files are unchanged.
+
+---
+
+Full report: `C:\CE_PLAN\areas\release-v3-colleagues-TRAIN_C61_FINALIZER_REPORT_2026-10-23.md`. Review log entries 1598–1602 and the sign-off line are pushed to CE_PLAN (`96fc51a3`).
+
+Summary: GO at `033f7f03fd55a3d78cdf3846b198565e49b21a6b`. I made one commit: the CDCHECKIGNORE "refused" fix with its test, a test that old settings files load the three new switches ON, and six missing blank lines put back in REGRESSION_LOG. Tests: solution 0 errors; Civil 19,451 tests, only the PDF timeout (passes alone); Manager 916, 0 failed; Manager release check passed at 75 files. Shared and Installer are untouched. Held back: the Manager log in the support zip, Settings rows for two switches, and every bug's Codex pass.

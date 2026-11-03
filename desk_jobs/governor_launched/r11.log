@@ -1,0 +1,27 @@
+**FOR TIM**
+
+This was a code-reading pass only. Nothing was built, tested, installed or opened in AutoCAD, and no PR was merged or closed.
+
+1. **What was done:** I reviewed 49 PRs and posted a verdict on each one. That is 48 of the oldest unreviewed drafts (#1312 down to #1165) plus the new BUG-141 border fix, #1484.
+   - **Merge:** 15
+   - **Merge after small fixes:** 27
+   - **Reject:** 7
+2. **Two serious faults:**
+   - **#1165:** a start-up check that, on AutoCAD 2022 to 2024, would stop the Manager starting up at all.
+   - **#1246:** a Settings page that would not build, because the current train already has one of its boxes.
+3. **REDO:** #1170, the fix for "Select this run / whole network loses REDO", still loses REDO in one case. Straight after U, the same click can save the project record into the drawing.
+4. **Already done another way:** five PRs are superseded by work already in Civil 3.0.60 (#1242, #1234, #1233, #1232, #1192). Two more would add a second copy of something that already exists (#1190, #1251).
+5. **Ready for the next Civil train:** #1484 first, then #1239, #1228, #1226, #1191, #1183, #1180, #1171, #1169, #1166.
+6. **Ready for the next Structural train:** #1312, #1247, #1193. Then #1214 and #1250 once the PRs they are built on are in.
+7. **Questions for you, for work hours (none of them holds up a merge):**
+   - **SPS pump pits:** Civil 3.0.60 re-uses a gap. With SPS1 and SPS3 drawn, the next pit is SPS2. Should it never re-use a number and give SPS4 instead? My recommendation is never re-use, because an erased SPS2 can leave a stray label or schedule row behind.
+   - **Toolbar:** should CDBREAK, CDRULES, CDRULEBOOK, CDSYSTEM and CDREVERSEFLOW still show on the toolbar?
+   - **Council folder:** when an issue is incomplete, should CE refuse to make the council submission folder, or make it with a warning?
+   - **Background layers:** which grey should be used, and should locked layers be left alone?
+   - **Outfalls:** two separate outfalls both start at CP1. Is that what you want?
+   - **Pool zone of influence:** is the formula right? It goes to you with question 10.
+   - **CDHELP:** which web address should it open?
+
+---
+
+**Summary:** FABLE REVIEWER round 11 (Opus 5.5, headless, read only) found 1,072 open PRs, all drafts. 245 had no verdict on their current head: no PR comment naming it, not inside a release train, and not judged in `C:\CE_PLAN`. The burn-down PRs #1404 to #1483 were already judged in the log, and #1484 is the only new burn-down PR. Eight parallel Opus reviewers took the newest 48 and I reviewed #1484 myself. Each PR was checked against C-50 (`claude/rel-20261020d` @ 9c97d36f) and S-38 (`claude/rel-20261017s` @ 9a8e5d4e), with a grep for anything already shipped and a `git merge-tree` check that it still merges. Afterwards I confirmed that all 49 have exactly one round 11 comment naming the live head. The results are log entries 1420 to 1474 in `C:\CE_PLAN\areas\release-v3-colleagues-REVIEWLANE_LOG.md`, pushed as b1705453 with fetch-and-merge and no rebase. They hold the per-PR verdicts, the corrected C-51 and S-39 merge lists, the PRs waiting for fixes, the out list, and the stack parents that still need their own review (#1063, #1069, #1057, #1142, #1208, #1213). 197 older drafts (#1164 and below) are still unreviewed. No bug is marked FIXED, and the plugin checkout is as I found it; I removed the PR refs I had fetched.

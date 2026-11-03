@@ -1,0 +1,28 @@
+The fix works on Civil 3.0.86. The "AutoCAD busy" blocks came from a fault in the robot itself, not from the fix. The robot's next R09s run (20:00–20:15) passed all 11 checks. AutoCAD's attribute editor was stopped and CE's Edit source window opened with DP1 in its tag box.
+
+**FOR TIM**
+
+1. **The answer is (c), something else.** Before every mouse test the robot runs a quick aim check: it types ID and clicks nine spots. In all four blocked runs, Windows would not let AutoCAD come to the front. The robot had already typed ID, so AutoCAD sat at "Specify point" and refused every robot request after that. The robot then reported "AutoCAD busy".
+2. **The double-click never happened in those four runs.** CE's log has no double-click lines in them, and the downpipe was never placed. The same fault also blocked an unrelated plain-line test on 24 Oct.
+3. **It is not CE's Edit source window, and not the new switches.** The window is modal (it holds AutoCAD until closed), but the robot reads it without needing AutoCAD to answer. The passing run used exactly the R09s settings.
+4. **The fix result, at 20:14:** CE stopped AutoCAD's attribute editor and opened Edit source. AutoCAD's editor never appeared, not even 10 seconds later. The title-bar Close shut the window and the command line said "Nothing was changed." That is one clean pass. The rule needs a second pass in a fresh AutoCAD start before it counts as ready.
+5. **One small side effect, not tested by R09s:** after the double-click, the command line showed one stray line: `Unknown command "904072,2998.945877,-5729.000000"`. Nothing in the drawing changes; it is just noise. I haven't added it to the bug carpark. The desk should decide whether to log it.
+6. **The R09s test needs no change.** All the control names it had guessed (tag box, Cancel, OK, Close) were read correctly.
+
+---
+
+**Robot change (copies only, nothing live):** `C:\ce-fx\bug859\runner_change.diff` makes two changes to the robot's session file:
+- **Before typing ID:** it brings AutoCAD to the front first, with three tries. If AutoCAD still won't come forward, it names the window in front and leaves AutoCAD idle.
+- **At session start:** if the aim check failed for that reason, it waits 20 seconds and tries once more.
+
+It parses without errors but has not been run.
+
+**What I did not verify:**
+- **Which window took the front** in the four blocked runs. It wasn't recorded; the robot change and a one-line check in the report will record it next time.
+- **The passing run's JSON and pictures.** I read only its report, CE's log and AutoCAD's command-line log.
+- **The new-switch-off control test.** It was blocked tonight and still needs a re-run.
+- **The stray command-line line** in other situations: with the switch off, or on other blocks.
+
+The report is at `C:\CE_PLAN\areas\BUG859_BLOCKED_ANALYSIS_29OCT.md` and is pushed (65b8b878, leak-scan clean).
+
+**Summary:** The four "AutoCAD busy" blocks were a robot fault: AutoCAD couldn't come to the front, so the robot's ID command sat waiting and AutoCAD refused everything after it. No double-click ever ran. The next R09s run on 3.0.86 passed all 11 checks, so the fix works in one session; a second session is still needed. One stray command-line line was seen. A two-line robot change is on copies only.

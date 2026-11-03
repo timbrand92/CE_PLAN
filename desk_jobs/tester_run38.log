@@ -1,0 +1,32 @@
+Run 38 is done and pushed: 10 checks, PASS 10, FAIL 0, BLOCKED 0, UNPROVEN 0. BUG-141 is still not fixed, because this build only added a log line.
+
+The installed builds read 3.0.62 / 1.1.62 (+7a4dd8de), and the driver hashes were 120EE24D15B2 and 5B542F2145F4 at start and end.
+
+1. **Text obstacle lines:** With debug logging on, the CE log printed one line per text the P3 → P2 label's search window bumps into. Four are "SC" texts on layer SLAB SC: 10B6FA, 10B729, 10B72B and 10B734. The window was (52658.32,-27344.04)-(78899.44,-21795.72). The report prints all 17 text lines in full.
+2. **Which SC overlaps the label:** Only 10B734 does. The label is the "450 DIA. STORMPRO PIPE…" note (handle 1101B4), measured at (60059.7,-24407.5)-(67983.4,-23465.8). 10B734 sits directly under the note, which the zoomed shot confirms. 10B6FA stops 41 units short of the label, and the other two are outside its x range. The overlap uses the bounding box from a read-only LISP line; I did not confirm CE uses the same box.
+3. **What "(on "SC")" means:** It names the first thing the label's current spot overlaps, not why every alternative spot failed. I got this from reading the source (`TextClashTidyUpRule.cs`), not from a test. Why no alternative spot is free is not in the log.
+4. **Decision unchanged:** Tidy labels says "Will move 0 · Placed by hand (left alone) 0 · No clear spot found 1", the same as run 37. The Drawing Border is still treated as the sheet frame.
+5. **Regressions:** All held.
+   - The P8 "No clear spot" line stays gone.
+   - Recover Inverts totals read "20 already had invert text, 24 skipped".
+   - The R-06 fix line is on 30 of 30 rows.
+   - The Edit Pipe cascade passed Yes, Apply, U, REDO.
+   - CDSYNC leaves the Pit Schedule rows identical; the header goes from 95 to 96 again, as in runs 35 and 37.
+   - Quick edits open no CE window.
+   - Downpipe 1093C7 was not touched.
+6. **Settings and calls:** The four real settings hashes at the start and end, matching the expected values:
+   - CD_Settings.json: ACD64E79A33B
+   - CS_Settings.json (TIM_CE_CADTOOLS): 622A246F7D3B
+   - CS_Settings.json (CE_STRUC_SUITE): 24D8E5F7D87B
+   - CE_CVL_SUITE settings.json: EFE307C4FC74
+
+   I used 58 driver calls (48 counted) in about 14 minutes, in one session.
+
+The report is `C:\CE_PLAN\areas\release-v3-colleagues-CLAUDE_DRIVER_RUN38_V2_2026-10-20.md`.
+
+**Desk to delete in `C:\ce_rc_drv`:** CLD381_B1.dwg and CLD381_B1_PRE_C7_20261020_144018.dwg.
+
+**Not mine:** A `build.lock` appeared in `C:\CE_PLAN\desk_jobs` at 14:50. I left it alone.
+
+AUTOCAD CLOSED
+SETTINGS RESTORED

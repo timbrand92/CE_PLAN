@@ -1,0 +1,36 @@
+Mon 11:11:43 batch B waiting for batchPM_codex.ps1 to end
+Mon 12:29:31 batch B waiting for batchPM_codex.ps1 to end
+Mon 14:54:33 batch B waiting for batchPM_codex.ps1 to end
+Mon 16:26:44 batchPM ended; taking over for batch B
+Mon 16:26:50 stopped idle chain4 pid 2500
+Mon 16:26:51 backed up CD_RecentValues.json sha 20DC84B4D735
+Mon 16:26:51 backed up CD_Settings.json sha ACD64E79A33B
+Mon 16:26:51 backed up CS_Settings.json sha D604CE689671
+Mon 16:26:51 backed up settings.json sha EFE307C4FC74
+Mon 16:26:51 STOP_CODEX.flag lifted (STOP_SUPERVISOR.flag stays up)
+Mon 16:26:56 Codex usage before B1 : 46 percent
+Mon 16:26:56 starting verifyB1_c88
+Mon 16:45:14 verifyB1_c88 launcher finished; Codex usage after: 47 percent
+Mon 16:45:14 after B1 : settings.json sha EFE307C4FC74 (original EFE307C4FC74)
+Mon 16:45:14 after B1 : CD_Settings.json sha ACD64E79A33B (original ACD64E79A33B)
+Mon 16:45:14 after B1 : CS_Settings.json sha D604CE689671 (original D604CE689671)
+Mon 16:45:14 Codex usage before B2 : 47 percent
+Mon 16:45:14 starting verifyB2_c88
+Mon 17:01:02 verifyB2_c88 launcher finished; Codex usage after: 48 percent
+Mon 17:01:02 after B2 : settings.json sha EFE307C4FC74 (original EFE307C4FC74)
+Mon 17:01:02 after B2 : CD_Settings.json sha ACD64E79A33B (original ACD64E79A33B)
+Mon 17:01:02 after B2 : CS_Settings.json sha D604CE689671 (original D604CE689671)
+Mon 17:01:02 Codex usage before B3 : 48 percent
+Mon 17:01:02 starting verifyB3_c88
+Mon 17:08:42 verifyB3_c88 launcher finished; Codex usage after: 48 percent
+Mon 17:08:42 after B3 : settings.json sha EFE307C4FC74 (original EFE307C4FC74)
+Mon 17:08:42 after B3 : CD_Settings.json sha ACD64E79A33B (original ACD64E79A33B)
+Mon 17:08:42 after B3 : CS_Settings.json sha D604CE689671 (original D604CE689671)
+Mon 17:08:42 unchanged settings.json sha EFE307C4FC74
+Mon 17:08:42 RESTORED CD_RecentValues.json: was 23CE24DB97EB, back to 20DC84B4D735
+Mon 17:08:42 unchanged CD_Settings.json sha ACD64E79A33B
+Mon 17:08:42 unchanged CS_Settings.json sha D604CE689671
+Mon 17:08:42 HOLD_ROBOT.flag removed.
+Mon 17:08:43 restarting chain4 on spec_passk.txt (build 3.0.89+61fd6fbc72710872048a69ef5b46d0e5b55087fa; finished packs are skipped)
+Mon 17:08:43 CODEX_NEXT.txt rewritten to batch B
+Mon 17:08:43 Batch B ends.

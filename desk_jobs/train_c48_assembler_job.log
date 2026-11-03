@@ -1,0 +1,11 @@
+Train C-48 is assembled and pushed as `claude/rel-20261020b`, head `69fdb56d`. It holds one merged PR, #1481 (BUG-854 wording fix). It touches nothing in Shared/, Manager or the Installer.
+
+- **Left out:** #1482 and #1441. Both are still MERGE-WITH-FIXES at the same heads Opus reviewed, because no fix round has been pushed. #1445, #1451, #1465, #1467, #1468, #1471 and #1472 are superseded. #1382, #1384, #1419, #1423 and the Structural PRs are on your exclusion list.
+- **Build:** whole solution Release, 0 errors.
+- **Tests:**
+  - Civil net10: 18,865 run, 2 failed. One is the known Glen Eira red. The other is the known intermittent blank-PDF test, which passed when re-run alone.
+  - Manager net10: 824/824.
+  - Civil net48 focused: 152/152.
+- **Settings files:** unchanged.
+- **Cleanup:** the worktree and temp folders are removed.
+- **Report:** `C:\CE_PLAN\areas\release-v3-colleagues-TRAIN_C48_ASSEMBLY_REPORT_2026-10-20.md`, pushed.

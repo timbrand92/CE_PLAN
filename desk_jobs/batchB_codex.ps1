@@ -4,7 +4,7 @@ function L($t) { Add-Content $log ("{0} {1}" -f (Get-Date -Format 'ddd HH:mm:ss'
 function Usage { $q = Get-Content (Join-Path $runner 'queue.log') -Tail 80 -ErrorAction SilentlyContinue | Where-Object { $_ -match 'usage .*-> *([0-9.]+)%' } | Select-Object -Last 1; if ($q -match '-> *([0-9.]+)%') { [double]$Matches[1] } else { -1 } }
 function Sha($p) { if (Test-Path -LiteralPath $p) { (Get-FileHash -LiteralPath $p -Algorithm SHA256).Hash.Substring(0, 12) } else { 'missing' } }
 function Procs($pat) { @(Get-CimInstance Win32_Process | Where-Object { $_.Name -match 'pwsh' -and $_.CommandLine -match $pat }) }
-$end = [datetime]'2026-11-02 17:00'
+$end = [datetime]'2026-11-02 22:30'
 L 'batch B waiting for batchPM_codex.ps1 to end'
 while ((Procs 'batchPM_codex').Count -gt 0) { if ((Get-Date) -ge $end) { L 'window closed before batchPM ended'; exit }; Start-Sleep 20 }
 L 'batchPM ended; taking over for batch B'
@@ -47,7 +47,7 @@ $dll = "$env:APPDATA\Autodesk\ApplicationPlugins\CE_CVL_SUITE.bundle\Contents\Wi
 $env:CE_RUNNER_TIM_AWAY = '1'
 $pr = 'C:\ce-fx\c75regrade3'; $spec = $null
 foreach ($sp in 'spec_passk', 'spec_passk') { $pf = Join-Path $pr "progress_$sp.txt"; $done = (Test-Path $pf) -and (@(Get-Content $pf -Tail 3) -match 'ALL DONE').Count -gt 0; if (-not $done) { $spec = $sp; break } }
-if ($spec -and ((Procs 'chain4').Count -eq 0) -and (Get-Date) -lt [datetime]'2026-11-02 16:30') {
+if ($spec -and ((Procs 'chain4').Count -eq 0) -and (Get-Date) -lt [datetime]'2026-11-02 22:00') {
   L "restarting chain4 on $spec.txt (build $ver; finished packs are skipped)"
   Start-Process pwsh -WindowStyle Hidden -ArgumentList '-NoProfile', '-File', 'C:\ce-fx\c75regrade3\chain4.ps1', '-SpecFile', "C:\ce-fx\retest\$spec.txt", '-ExpectBuild', $ver, '-StopFirst', '"2026-11-03 07:50"', '-StopAll', '"2026-11-03 08:10"'
 } else { L "no pass restart (spec=$spec, late or all done)" }

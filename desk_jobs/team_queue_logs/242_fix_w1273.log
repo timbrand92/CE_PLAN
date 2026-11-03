@@ -1,0 +1,11 @@
+BUG-1273 is built and unit-tested in draft PR **#1994** (B-168, base `claude/rel-20261102a`, one commit). It is not installed, not Codex-accepted, and nobody has opened it in AutoCAD.
+
+The Cascade Preview now says "4 pipes, 3 pits will change". That is the count Apply reports afterwards, so it leaves out the anchor pit and any pit with no CE record. The pit rows listed in the window do not change, so no brief was needed.
+
+- **Switch:** `linking.cascadePreviewCountsChangedPits`, on by default. Off returns the old "N pits" count of every row.
+- **Files:** `PropagationPitCount.cs` (new), `PropagationPreviewViewModel.cs`, `UserSettings.cs`, `Bug1273PreviewPitCountTests.cs`, `REGRESSION_LOG.md`.
+- **Tests:** 47 of 47 passed on net48 and net10. I pinned the switch through both start-up reads in my own test file, not the train `NewSwitchDefaults` tests; the finalizer should add it to the next train's list.
+- **Real-folder check:** 12 existing files and 11 new usage files changed under the real `%APPDATA%` folders. All last-write times are 23:50 to 23:59:53 on 2 Nov, which looks like a live AutoCAD session closing. I can't prove my build wasn't running then, so CE 01 should check.
+- **Overlap:** open draft #1989 touches the same files in different places; expect a trivial merge.
+
+The report is `C:\CE_PLAN\areas\BUGFIX_w1273_REPORT_03NOV.md` and is pushed. The full before/after listings are in `C:\CE_WORK\keep_w1273`, because the leak scan refused them (client project names). The worktree and scratch folder are removed.

@@ -1,0 +1,20 @@
+Four draft PRs are open against `claude/rel-20261102a`: #1967 (BUG-1235), #1969 (BUG-1164), #1970 (BUG-1157) and #1972 (BUG-658). Each is built, unit-tested (net10 focused) and compiled on net48, but nobody has opened any of them in AutoCAD.
+
+Real-files check: `CD_Settings.json` changed at 21:57, one minute after my last test. A live AutoCAD was already running, so I think it wasn't mine, but I can't prove it. The details are in the report's section 4. A small leftover `tmp` folder remains in `C:\CE_WORK\scratch\n5` because my own shell is using it.
+
+**Switches (all ON):**
+- `pipe.gradeWarningFiguresNeverMatch` (#1967)
+- `pipe.editPipeStoresLevelsWithDecimalPoint` (#1969)
+- `pipe.editPipeLevelWriteSaysWhenNotSaved` (#1970)
+- `pipe.cascadeQuestionAfterEditCommits` (#1972)
+
+**Files:**
+- `PipeEditCommand.Update.cs`
+- `LinkService.Persistence.cs`
+- `DesignValidationService.cs`
+- `UserSettings.cs`
+- `REGRESSION_LOG.md`
+- four new rule files
+- four new test files
+
+The report is `C:\CE_PLAN\areas\BUGFIX_n5_REPORT_31OCT.md`.

@@ -1,0 +1,18 @@
+**FOR TIM**
+
+1. **The combined train is good to go.** The two already-approved batches (C-32 and C-36) have been joined into one line and I checked the join itself. Nothing was lost, nothing doubled up, and the one spot that had to be resolved by hand came out exactly as the controller approved: if the CE Manager menu ever fails to load at start-up you get one plain line ("The CE Manager menu was not added this time. CE still works.") and it does not keep retrying on every drawing switch.
+2. **Built and unit-tested only.** Nobody has opened this in AutoCAD. It is not installed; your PC still holds Civil 3.0.46 / Manager 1.1.46. The controller's next step is the version bump to 3.0.47 / 1.1.47.
+3. **BUG-565 (PIT and Edit Pit not checking a locked 35TEXT layer) is still open.** This line does not touch it, on purpose.
+4. **Your settings files were not touched.** Same size and fingerprint before, around every test run, and after.
+
+---
+
+**Technical summary**
+
+1. **Final head:** `1cde2fec` on `claude/rel-20261009x`, pushed, origin equal, worktree c37asm clean. One commit of mine, log only: the merged line had no REGRESSION_LOG entry for the C-37 merge, so I added one (12 lines, LF, leak-scan clean). No code change, so all results stand for the final head.
+2. **Merge check:** `git merge-tree` of the two parents differs from the committed merge only in the approved hunk of `CeSuiteManagerMenuService.cs`. C-32 never touched any of the seven C-36 redo-fix files, so those are byte-identical to C-36. C-32 adds 0 StartTransaction, SetCurrentView or SetSystemVariable lines; every hook-reachable site the assembler listed is classified in the report (none runs between U and REDO).
+3. **Builds:** Manager net48/net8/net10 0 errors 0 warnings; Drainage tests net10 and net48 0 errors. **Tests:** Civil net10 16,854 run / 16,834 pass / 19 skipped / 1 failed (Glen Eira, known); Manager 738/738; redo classes 78/78 on net10 and net48; the hook guard passed; baseline untouched. All identical to the assembler.
+4. **Findings:** no HIGH; no new MEDIUM (the two carried from the halves were already ruled harmless to ship); LOW 1 fixed by my commit; two LOWs are pre-existing (four old control characters in the log, a line-number drift in the assembler's report).
+5. **Report:** `C:\Lisp Files\_TEST_COPIES_20260923\TRAIN_C37_FINALIZER_REPORT.md`.
+
+OPUS SIGN-OFF train claude/rel-20261009x GO (1cde2fec9b4eed502445212a3b3c316dbeb51496)

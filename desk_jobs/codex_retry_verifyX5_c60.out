@@ -1,0 +1,21 @@
+== verifyX5_c60 (usage 36.0% -> 36.0%): 1. **NOT STARTED:** gate found a held lock and another run without a matching END. All five looks **NOT TESTED**; SURE 5, UNSURE 0.
+
+2. **Installed:** Civil 3.0.72, Manager 1.1.72, Structural 1.0.122. AutoCAD closed; settings untouched; pre-existing lock left untouched.
+
+3. **Report:** [X5 stopped-run report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_X5_20261023_2140.md>). Explorer capture was readable and was not saved because its sidebar showed private locations.
+== verifyX5_c60 (usage 36.0% -> 36.0%): 1. **NOT STARTED ÔÇö AutoCAD still running:** PID 68540; lock held by Claude-driverv3. Left untouched. I prematurely released our launcher lock while checking the screen tool; this is recorded.
+
+2. **Results:** 0 tested, 5 NOT TESTED; PASS/FAIL/DIFFERENT/BLOCKED 0. SURE 0, UNSURE 5. No settings changed. Explorer capture was readable and was not saved.
+
+3. **Report:** [X5 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_X5_20261023_2149.md>). Installed: Civil 3.0.72, Manager 1.1.72, Structural 1.0.122.
+== verifyX5_c60 (usage 36.0% -> 36.0%): 1. **NOT STARTED:** Native screen/mouse control is disabled. All **5 looks NOT TESTED**; PASS/FAIL/DIFFERENT/BLOCKED **0**. SURE **0**, UNSURE **5**. No failures observed.
+
+2. **Installed:** Civil **3.0.72**, Manager **1.1.72**, Structural **1.0.122**; hashes recorded. No settings changed. AutoCAD closed; lock released. No fixtures requested.
+
+3. **Report:** [CODEX_VERIFY_X5_20261023_2201.md](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_X5_20261023_2201.md>)
+== verifyX5_c60 (usage 36.0% -> 47.0%): AUTOCAD STILL RUNNING ÔÇö a new Claude-owned session started after X5 closed and released its lock. Left untouched.
+
+1. **Results** ÔÇö 3 PASS, 1 SEEN, 1 NOT TESTED. Zero FAIL, DIFFERENT or BLOCKED. SURE 3; UNSURE 2.
+2. **Unaccepted** ÔÇö Side-end jog unreadable; Beyond lower flange obscured. No failures or missing fixtures.
+3. **Settings** ÔÇö All four hashes unchanged. X5 AutoCAD closed; its lock released.
+4. **Report** ÔÇö [X5 verification report](<C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_X5_20261023_2213.md>).

@@ -1,0 +1,18 @@
+The install candidate is built and checked, but nobody has opened it in AutoCAD and nothing is installed.
+
+- **Head:** `2388c3296dbbac74aec21189932722948146b9f4` on `origin/claude/rel-20261009w`, one version-only commit on the signed-off `1f7495c9`. Local equals origin and status is clean.
+- **Verify line:** `civil: manifest 822 files, verified 822, bad 0, extra 0` and `manager: manifest 78 files, verified 78, bad 0, extra 0`.
+- **Versions:** Civil `3.0.46+2388c329` and Manager `1.1.46+2388c329`, read from the DLLs in all three lanes; `PackageContents.xml` says 3.0.46 and 1.1.46.
+- **Tests:** Civil 37 of 37 (`RedoSafeCallGraphTests` 21 of 21), Manager 51 of 51, all green on net10.
+- **CE_SHARED:**
+  - **Identical:** yes, byte-identical between the Civil and Manager bundles in all three lanes.
+  - **Versus installed 3.0.45:** it differs by the build stamp only (110 to 111 bytes per lane).
+- **Registry:** `command-registry.json` and `council-profiles.json` match the installed copies, with no difference.
+- **Natives:** the native C++ sources are unchanged since `660487d1`, so the three native files are the installed bytes.
+- **Stale-build strings:** present in the candidate and absent from installed 3.0.45 for #1002, #994, #1007, #997, #1003 and the three new Settings keys.
+- **Tim's files:** `CD_Settings.json` is unchanged at `ACD64E79…3140`, and the six installed DLL hashes are unchanged.
+- **Odd:**
+  - **#1007 log line:** the "how to get the menu back" log line is not provable as a string, because the only added text in that code is a Debug-only message that Release strips. I searched the member names instead.
+  - **Structural settings:** Structural `CS_Settings.json` is now `5A8C447A…` (33,198 bytes), not the brief's `D3890D56…`, and it did not move during my run.
+
+The candidate is in `C:\ce_rc_scratch\c1032`. The report is `C:\Lisp Files\_TEST_COPIES_20260923\PAYLOAD_C1032_REPORT.md`.

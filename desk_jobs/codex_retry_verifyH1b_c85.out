@@ -1,0 +1,5 @@
+== verifyH1b_c85 (usage 24.0% -> 25.0%): AUTOCAD CLOSED
+
+1. **PASS ÔÇö SURE:** H1b-01 showed no catchment rows, **Q total = Unknown**, **5 min**, **5 yr ARI** on Civil **3.0.87**. Counts: 1 PASS; all others 0.
+2. **Clean end:** All four settings hashes unchanged; drawing discarded; lock released. No fixtures wanted.
+3. **Report:** [H1b verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_H1b_20261030_1932.md>). Evidence and procedural limitations recorded.

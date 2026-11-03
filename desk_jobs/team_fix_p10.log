@@ -1,0 +1,21 @@
+**FOR TIM**
+
+1. **Draft PR #1892 is open for BUG-1141.** If one pit or pipe has a damaged CE record, CE now prints one plain line naming it and loads the rest. Moving a good pit drags its pipes again. The damaged record is only read, never changed or unlocked.
+2. **You'll see this line on the command line:** "[CE] The CE link record on one pit (drawing handle 2A4, at x, y) could not be read, so CE skipped it and loaded the rest…". It names the pit by handle and position, not pit number, because the project record may not be the drawing's own yet when a drawing opens.
+3. **Switch:** `linking.unreadableLinkRecordSkippedOnOpen`, on by default. Off gives the old behaviour exactly.
+4. **Not tested in AutoCAD.** Not marked FIXED. The robot case `N41_pit_record_skip` (with an off twin) is described in the report. Moving the damaged pit itself still won't drag its pipes; that is unchanged.
+5. **My mistakes:**
+   - I lost about 25 minutes waiting on a test run that never started.
+   - I missed one of the five record reads until my own test caught it.
+   - I updated two existing source-checking tests to follow the renamed read.
+6. **PR title:** it has no B number because BUILD_REGISTER had none for BUG-1141. CE 01 needs to rename it.
+
+**Technical detail**
+
+- **Files:** `LinkService.Cache.cs`, `LinkService.Persistence.cs`, new `Rules/UnreadableLinkRecordRule.cs`, `UserSettings.cs`, new `Bug1141UnreadableLinkRecordTests.cs`, the two updated tests, and `REGRESSION_LOG.md`.
+- **Tests:** the full Civil net10 suite ran 21,575 tests with 3 failures. One was my own source-pinning test, now fixed. The other two read Release code and passed in a Release re-run. That Release re-run was 75 of 75, and the net48 build had 0 errors.
+- **Not re-run:** I did not re-run the full suite after the one-line test fix.
+- **Settings files:** the before and after listings were identical, including `TIM_CE_CADTOOLS\CD_Settings.json`. `CS_Settings.json` under `CE_STRUC_SUITE` changed at 19:54, before this job started.
+- **Clashes:** BUG-1142's reader was already in the base, so I reused it and did not repeat it. B-055 (#1866) also touches `UserSettings.cs` and `REGRESSION_LOG.md`, so a conflict there is possible; keep both sides. I couldn't see p2's file list.
+
+Report: `C:\CE_PLAN\areas\BUGFIX_p10_REPORT_30OCT.md` (pushed, not ahead). Branch: `fb/bug-1141-unreadable-pit-record-link-cache`.

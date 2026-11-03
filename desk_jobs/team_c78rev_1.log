@@ -1,0 +1,16 @@
+I reviewed all 14 cases and wrote a slip for each. N24's old slip was copied to `.review.txt.old` before it was replaced. First 12 lines of `C:\CE_PLAN\areas\C78_REVIEW_A_REPORT.md`:
+
+```
+# C-78 batch case review A (Opus-Team-C78rev-A, Sun 1 Nov 2026)
+
+1. **Answer:** 14 cases reviewed: 1 ACCEPT FULL (N23v87), 13 ACCEPT PART, 0 NOT YET, 0 ALREADY. 14 slips written.
+2. **Hashes:** all 14 case files match the sha256 in c78rev_list_1.txt. N24's old slip (sha 323E733A..., 3.0.85) was copied to N24_...review.txt.old, then replaced.
+3. **Weakest three:** (a) N33_grade_mismatch_x_off: a control that passes on 3.0.87 too; it proves the switch, not the fix. (b) N33c: also a control (passes before and after the fix); its twin only claims the opposite. (c) N06v87: IL text, label and pipe layers are only recorded, and its red is the case changing CLAYER itself.
+4. **UNSOURCED items:** none. Every asserted word traces to source at 3fbb9da5 or was seen on a run (listed per case).
+5. **Too weak to fail:** N17 'history absent Undid:' (only CD's [Undo] prints it; this case never uses it).
+6. **Mirror twins, not broken inputs:** N33a, N33b and N33c twins only claim the opposite; N06 and N28 twins change CLAYER themselves. All five fail on a CHECK, not a stall. The true switch-off red for N33a/b is N33s (not in this list).
+7. **No twin on this build:** N24 (last red N24_BROKEN on 3.0.85, n3c4); N33_x (red partner is N33_x_off); N33_x_off (control).
+8. **Codex must SEE:** N20 leader arrow on the pipe and its clearance; N33_x box look at 100/125/150 per cent; N33_x_off Esc/X placing the pipe; N33c window look.
+9. **Time:** 08:10:30 to 08:15:08 Melbourne by the date command (about 5 minutes on the clock).
+10. **Wrote:** 14 .review.txt slips and this report; nothing else changed.
+```

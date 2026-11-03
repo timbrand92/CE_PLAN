@@ -1,0 +1,1197 @@
+{
+  "header": {
+    "run_id": "RUN-20261027-0346-C3.0.80-g80b5",
+    "started": "2026-10-27 03:46:17",
+    "finished": "2026-10-27 04:06:36",
+    "build": {
+      "civil": {
+        "product_version": "3.0.80+270215aa2ba9540d5b75233acb1d0a0a2a5fc1a1",
+        "file_version": "3.0.80.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.124+3a3caac5db7687f1b5d1a6e09571976c52b2b05a",
+        "file_version": "1.0.124.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.80+270215aa2ba9540d5b75233acb1d0a0a2a5fc1a1",
+        "file_version": "1.1.80.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.80+270215aa / struc 1.0.124+3a3caac5 / mgr 1.1.80+270215aa",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "CDB192366B5B1C18339A9FE5845E1CF192945991F1BCC5BEE55E6CF5CD351B3F",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.80+270215aa2ba9540d5b75233acb1d0a0a2a5fc1a1; Structural 1.0.124+3a3caac5db7687f1b5d1a6e09571976c52b2b05a; Manager 1.1.80+270215aa2ba9540d5b75233acb1d0a0a2a5fc1a1",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4CD773B85EC5, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 13955AAA60D1, case_runner_lib.ps1 8F9B8DCBB473, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 2 case file(s) plus 0 shared setup(s); pack SHA-256 CDB192366B5B1C18339A9FE5845E1CF192945991F1BCC5BEE55E6CF5CD351B3F; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json 0791B07EBCD9 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Tue 27 Oct 2026 03:46 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 2,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 2,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261027-0346-C3.0.80-g80b5-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-27 04:01:20",
+      "finished": "2026-10-27 04:06:36",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV30401241_B1.dwg",
+      "cases": [
+        "R39",
+        "R39b"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "0791B07EBCD9"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "0791B07EBCD9"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : 0791B07EBCD9 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "Alt+F4 (close posted to the AutoCAD window)",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "R39",
+      "proves_bugs": "BUG-697 (CD, E, pick a plain polyline you drew: the New Pipe window opens and a CE pipe is made; CE does not say \"That line is already a CE pipe\" and does not cancel)",
+      "title": "CD with E (Existing line) on a plain polyline you drew opens New Pipe (it does not say the line is already a CE pipe), and Start Pipe makes one CE pipe along it",
+      "kind": "deterministic",
+      "order": 39,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "CD Existing line (triage group N4; daily card D04 neighbour); BUG-697",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 25 Oct 2026 with BUG-697 in BUG_CARPARK.md (steps: CD, answer E, pick a plain polyline you drew on layer BLOCKS; actual: \"[CE] That line is already a CE pipe. Double-click it to change it. Nothing was changed.\" and \"CD command cancelled\"; the pipe window never opens). BUG-684 (arcs and closed polylines) is in R39b, BUG-187 and BUG-874 are not driven.",
+      "variant_of": "",
+      "expected": "After typing a 3-point open polyline on layer BLOCKS at 150000,-96000 / 155000,-96000 / 160000,-95000 and zooming to it, CD with the answer E and a point on the line opens the New Pipe window (and the command line does not say \"already a CE pipe\"); with the levels 18.000 and 17.900 and Start Pipe, CE places a pipe object (CeCvlPipeObject) whose label reads about \"1 IN 101\" (10.1 m long, 0.1 m fall) and the drawing holds IL texts 18.000 and 17.900. The drawing file on disk is unchanged.",
+      "why_not_unit": "The pick of the drawn line, the New Pipe window and the new pipe object only meet in a live CD run.",
+      "not_automated": [
+        "What becomes of the source polyline after Start Pipe (kept or replaced) is recorded, not judged: the card does not say.",
+        "Arc and closed polylines (BUG-684) are in R39b. That the pipe follows the drawn line exactly (the same vertices) is not compared."
+      ],
+      "file_sha256": "0FBBAD9920F082D026A825999C2F6412FE2CA8401BEB06045AD9EFB223A20945",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-27 04:01:56",
+      "seconds": 96.5,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV30401241_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.PLINE{NL}150000,-96000{NL}155000,-96000{NL}160000,-95000{NL}\" -Force -> $pl",
+          "ok": true,
+          "seconds": 2.6,
+          "evidence": "typed '_.PLINE 150000,-96000 155000,-96000 160000,-95000': Command: | Command: _.PLINE | Specify start point: 150000,-96000 | Current line-width is 0.000 | Specify next point or [Arc/Halfwidth/Length/Undo/Width]: 155000,-96000 | Specify next point or [Arc/Close/Halfwidth/Length/..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM{NL}_W{NL}148000,-98000{NL}162000,-93000\" -Force",
+          "ok": true,
+          "seconds": 3.4,
+          "evidence": "typed '_.ZOOM _W 148000,-98000 162000,-93000': Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _W | Specify first corner: 148000,-98000 | Specify oppo..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $plnew",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "1 object(s) after index 1034 (model space now 1035); by type: AcDbPolyline 1; first: 11C559 AcDbPolyline BLOCKS"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $plnew \"object~^AcDbPolyline$\" -> $src",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 1: 11C559 BLOCKS"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $src handle -> $hsrc",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C559"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}E{NL}155000,-96000\" -Force -ExpectWindow \"New Pipe\" -TimeoutSec 120 -> $cd",
+          "ok": true,
+          "seconds": 8.1,
+          "evidence": "typed 'CD E 155000,-96000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: E | Pick the drawn polyline to use as the pipe route: 15..."
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_np",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30401241_B1.dwg] ; New Pipe"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 6.3,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: "
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.900\"",
+          "ok": true,
+          "seconds": 5.8,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.900: "
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $t2",
+          "ok": true,
+          "seconds": 44.3,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $e1",
+          "ok": true,
+          "seconds": 7.9,
+          "evidence": "esc-prompt: [CE] End is free: open end flagged, connect it later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: Open end -> Open end | [CE] Pipe has 2 segment(s). | Pick a point to move arrow A..."
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $e1b",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "esc-prompt: Inserted flow arrow. Flow: Open end -> Open end | [CE] Pipe has 2 segment(s). | Pick a point to move arrow AND text to that segment, or press Enter to accept: *Cancel* | [CE] Pipe placed. Pick the next pipe's first point..."
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $e1c",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "esc-prompt: [CE] Pipe has 2 segment(s). | Pick a point to move arrow AND text to that segment, or press Enter to accept: *Cancel* | [CE] Pipe placed. Pick the next pipe's first point, or press Esc to stop. | Specify first point or [..."
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $after",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "5 object(s) after index 1034 (model space now 1039); by type: AcDbBlockReference 1; AcDbMText 3; CeCvlPipeObject 1; first: 11C55A CeCvlPipeObject STORMWATER PIPE ; 11C560 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 101 ; 11C565 AcDbMText 20TEXT IL 18.000 ; 11C56A AcDbMText 20TEXT IL 17.900 ; 11C58C AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after \"object~^CeCvlPipeObject$\" -> $pipe",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 5: 11C55A STORMWATER PIPE"
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after \"text~DIA\\. \" -> $lab",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 5: 11C560 225 DIA. UPVC PIPE AT 1 IN 101 25TEXT"
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $lab text -All -> $lab_text",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = 225 DIA. UPVC PIPE AT 1 IN 101"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after \"text~^IL \" -> $ils",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 2 of 5: 11C565 IL 18.000 20TEXT ; 11C56A IL 17.900 20TEXT"
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $ils text -All -> $il_text",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = IL 18.000 | IL 17.900"
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after \"handle~^{$hsrc}$\" -> $src_after",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 5: "
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}E{NL}152500,-96000\" -Force -TimeoutSec 60 -> $cd2",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "typed 'CD E 152500,-96000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: E | Pick the drawn polyline to use as the pipe route: 15..."
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_cd2",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30401241_B1.dwg]"
+        },
+        {
+          "n": 29,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $cd2e",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "esc-prompt: Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: E | Pick the drawn polyline to use as the pipe route: 152500,-96000 | [CE] That l..."
+        },
+        {
+          "n": 30,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 31,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $after2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "5 object(s) after index 1034 (model space now 1039); by type: AcDbBlockReference 1; AcDbMText 3; CeCvlPipeObject 1; first: 11C55A CeCvlPipeObject STORMWATER PIPE ; 11C560 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 101 ; 11C565 AcDbMText 20TEXT IL 18.000 ; 11C56A AcDbMText 20TEXT IL 17.900 ; 11C58C AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 32,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after2 \"object~^CeCvlPipeObject$\" -> $pipe2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 5: 11C55A STORMWATER PIPE"
+        },
+        {
+          "n": 33,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30401241_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "contains $win_np \"New Pipe\"",
+          "ok": true,
+          "expected": "contains 'New Pipe'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30401241_B1.dwg] | New Pipe",
+          "evidence": "found 'New Pipe' in: Autodesk AutoCAD 2027 - [CLDV30401241_B1.dwg] | New Pipe"
+        },
+        {
+          "n": 2,
+          "text": "not-contains $cd \"already a CE pipe\"",
+          "ok": true,
+          "expected": "does not contain 'already a CE pipe'",
+          "actual": "Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: E | Pick the drawn polyline to use a...",
+          "evidence": "'already a CE pipe' is absent from: Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existin..."
+        },
+        {
+          "n": 3,
+          "text": "not-contains $cd \"Nothing Selected\"",
+          "ok": true,
+          "expected": "does not contain 'Nothing Selected'",
+          "actual": "Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: E | Pick the drawn polyline to use a...",
+          "evidence": "'Nothing Selected' is absent from: Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existin..."
+        },
+        {
+          "n": 4,
+          "text": "history has \"[CE] Using the drawn line (3 points) as the pipe route.\"",
+          "ok": true,
+          "expected": "command line has '[CE] Using the drawn line (3 points) as the pipe route.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CE] Using the drawn line (3 points) as the pipe route.'"
+        },
+        {
+          "n": 5,
+          "text": "count $pipe = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $pipe = 1 (expected = 1)"
+        },
+        {
+          "n": 6,
+          "text": "matches $lab_text \"AT 1 IN 10[01]$\"",
+          "ok": true,
+          "expected": "matches /AT 1 IN 10[01]$/",
+          "actual": "225 DIA. UPVC PIPE AT 1 IN 101",
+          "evidence": "matched 'AT 1 IN 101'"
+        },
+        {
+          "n": 7,
+          "text": "contains $cd2 \"already a CE pipe\"",
+          "ok": true,
+          "expected": "contains 'already a CE pipe'",
+          "actual": "Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: E | Pick the drawn polyline to use a...",
+          "evidence": "found 'already a CE pipe' in: Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existin..."
+        },
+        {
+          "n": 8,
+          "text": "not-contains $win_cd2 \"New Pipe\"",
+          "ok": true,
+          "expected": "does not contain 'New Pipe'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30401241_B1.dwg]",
+          "evidence": "'New Pipe' is absent from: Autodesk AutoCAD 2027 - [CLDV30401241_B1.dwg]"
+        },
+        {
+          "n": 9,
+          "text": "history count \"already a CE pipe\" = 1",
+          "ok": true,
+          "expected": "1 line(s) with 'already a CE pipe'",
+          "actual": "1",
+          "evidence": "command line holds 1 line(s) containing 'already a CE pipe' (expected 1)"
+        },
+        {
+          "n": 10,
+          "text": "count $pipe2 = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $pipe2 = 1 (expected = 1)"
+        },
+        {
+          "n": 11,
+          "text": "matches $il_text \"IL 18\\.000\"",
+          "ok": true,
+          "expected": "matches /IL 18\\.000/",
+          "actual": "IL 18.000 | IL 17.900",
+          "evidence": "matched 'IL 18.000'"
+        },
+        {
+          "n": 12,
+          "text": "matches $il_text \"IL 17\\.900\"",
+          "ok": true,
+          "expected": "matches /IL 17\\.900/",
+          "actual": "IL 18.000 | IL 17.900",
+          "evidence": "matched 'IL 17.900'"
+        },
+        {
+          "n": 13,
+          "text": "not-contains $win_end \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30401241_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV30401241_B1.dwg]"
+        },
+        {
+          "n": 14,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 15,
+          "text": "record $cd \"FULL CD E and the point\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: E | Pick the drawn polyline to use as the pipe route: 155000,-96000",
+          "evidence": "RECORDED, not judged: FULL CD E and the point = Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: E | Pick the drawn polyline to use as the pipe route: 155000,-96000"
+        },
+        {
+          "n": 16,
+          "text": "record $e1 \"FULL after Start Pipe\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "[CE] End is free: open end flagged, connect it later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: Open end -> Open end | [CE] Pipe has 2 segment(s). | Pick a point to move arrow AND text to that segment, or press Enter to accept: *Cancel* | [CE] Pipe placed. Pick the next pipe's first point, or press Esc to stop.",
+          "evidence": "RECORDED, not judged: FULL after Start Pipe = [CE] End is free: open end flagged, connect it later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: Open end -> Open end | [CE] Pipe has 2 segment(s). | Pick a point to move arrow AND text to that segment, or press Enter to accept: *Cancel* | [CE] Pipe placed. Pick the next pipe's first point, or press Esc to stop."
+        },
+        {
+          "n": 17,
+          "text": "record $e1b \"FULL after the second Esc\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Inserted flow arrow. Flow: Open end -> Open end | [CE] Pipe has 2 segment(s). | Pick a point to move arrow AND text to that segment, or press Enter to accept: *Cancel* | [CE] Pipe placed. Pick the next pipe's first point, or press Esc to stop. | Specify first point or [Existing line] [Existing]: *Cancel* | [CE] Stopped. Everything placed stays; U takes back the last one.",
+          "evidence": "RECORDED, not judged: FULL after the second Esc = Inserted flow arrow. Flow: Open end -> Open end | [CE] Pipe has 2 segment(s). | Pick a point to move arrow AND text to that segment, or press Enter to accept: *Cancel* | [CE] Pipe placed. Pick the next pipe's first point, or press Esc to stop. | Specify first point or [Existing line] [Existing]: *Cancel* | [CE] Stopped. Everything placed stays; U takes back the last one."
+        },
+        {
+          "n": 18,
+          "text": "record $e1c \"FULL after the third Esc\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "[CE] Pipe has 2 segment(s). | Pick a point to move arrow AND text to that segment, or press Enter to accept: *Cancel* | [CE] Pipe placed. Pick the next pipe's first point, or press Esc to stop. | Specify first point or [Existing line] [Existing]: *Cancel* | [CE] Stopped. Everything placed stays; U takes back the last one.",
+          "evidence": "RECORDED, not judged: FULL after the third Esc = [CE] Pipe has 2 segment(s). | Pick a point to move arrow AND text to that segment, or press Enter to accept: *Cancel* | [CE] Pipe placed. Pick the next pipe's first point, or press Esc to stop. | Specify first point or [Existing line] [Existing]: *Cancel* | [CE] Stopped. Everything placed stays; U takes back the last one."
+        },
+        {
+          "n": 19,
+          "text": "record $lab_text \"label after Start Pipe\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "225 DIA. UPVC PIPE AT 1 IN 101",
+          "evidence": "RECORDED, not judged: label after Start Pipe = 225 DIA. UPVC PIPE AT 1 IN 101"
+        },
+        {
+          "n": 20,
+          "text": "record $il_text \"IL texts after Start Pipe\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "IL 18.000 | IL 17.900",
+          "evidence": "RECORDED, not judged: IL texts after Start Pipe = IL 18.000 | IL 17.900"
+        },
+        {
+          "n": 21,
+          "text": "record $src_after \"FULL the source polyline after Start Pipe (kept = one row, replaced = none)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: FULL the source polyline after Start Pipe (kept = one row, replaced = none) = "
+        },
+        {
+          "n": 22,
+          "text": "record $after \"FULL objects after Start Pipe\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"index\":1034,\"handle\":\"11C55A\",\"object\":\"CeCvlPipeObject\",\"layer\":\"STORMWATER PIPE\",\"name\":\"\",\"text\":\"\",\"x\":150000.0,\"y\":-96112.5,\"note\":\"CE pipe object: x,y is the lower-left corner of its bounding box (150000, -96112.5, 160022.063065203, -94889.6846739848)\"} | {\"index\":1035,\"handle\":\"11C560\",\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"name\":\"\",\"text\":\"225 DIA. UPVC PIPE AT 1 IN 101\",\"x\":157453.4224179047,\"y\":-95267.1120895234} | {\"index\":1036,\"handle\":\"11C565\",\"object\":\"AcDbMText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 18.000\",\"x\":150200.0,\"y\":-95817.5} | {\"index\":1037,\"handle\":\"11C56A\",\"object\":\"AcDbMText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 17.900\",\"x\":159768.0926701991,\"y\":-94860.26725371405} | {\"index\":1038,\"handle\":\"11C58C\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"text\":\"\",\"x\":157301.4324131726,\"y\":-95781.91694426115}",
+          "evidence": "RECORDED, not judged: FULL objects after Start Pipe = {\"index\":1034,\"handle\":\"11C55A\",\"object\":\"CeCvlPipeObject\",\"layer\":\"STORMWATER PIPE\",\"name\":\"\",\"text\":\"\",\"x\":150000.0,\"y\":-96112.5,\"note\":\"CE pipe object: x,y is the lower-left corner of its bounding box (150000, -96112.5, 160022.063065203, -94889.6846739848)\"} | {\"index\":1035,\"handle\":\"11C560\",\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"name\":\"\",\"text\":\"225 DIA. UPVC PIPE AT 1 IN 101\",\"x\":157453.4224179047,\"y\":-95267.1120895234} | {\"index\":1036,\"handle\":\"11C565\",\"object\":\"AcDbMText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 18.000\",\"x\":150200.0,\"y\":-95817.5} | {\"index\":1037,\"handle\":\"11C56A\",\"object\":\"AcDbMText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 17.900\",\"x\":159768.0926701991,\"y\":-94860.26725371405} | {\"index\":1038,\"handle\":\"11C58C\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"text\":\"\",\"x\":157301.4324131726,\"y\":-95781.91694426115}"
+        },
+        {
+          "n": 23,
+          "text": "record $cd2 \"FULL second CD E on the CE pipe\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: E | Pick the drawn polyline to use as the pipe route: 152500,-96000 | [CE] That line is already a CE pipe. Double-click it to change it. Nothing was changed. | [CE] CD command cancelled.",
+          "evidence": "RECORDED, not judged: FULL second CD E on the CE pipe = Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: E | Pick the drawn polyline to use as the pipe route: 152500,-96000 | [CE] That line is already a CE pipe. Double-click it to change it. Nothing was changed. | [CE] CD command cancelled."
+        },
+        {
+          "n": 24,
+          "text": "record $cd2e \"FULL after the second CD E\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: E | Pick the drawn polyline to use as the pipe route: 152500,-96000 | [CE] That line is already a CE pipe. Double-click it to change it. Nothing was changed. | [CE] CD command cancelled.",
+          "evidence": "RECORDED, not judged: FULL after the second CD E = Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: E | Pick the drawn polyline to use as the pipe route: 152500,-96000 | [CE] That line is already a CE pipe. Double-click it to change it. Nothing was changed. | [CE] CD command cancelled."
+        },
+        {
+          "n": 25,
+          "text": "record $win_cd2 \"windows after the second CD E\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30401241_B1.dwg]",
+          "evidence": "RECORDED, not judged: windows after the second CD E = Autodesk AutoCAD 2027 - [CLDV30401241_B1.dwg]"
+        },
+        {
+          "n": 26,
+          "text": "record $after2 \"FULL objects after the second CD E\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"index\":1034,\"handle\":\"11C55A\",\"object\":\"CeCvlPipeObject\",\"layer\":\"STORMWATER PIPE\",\"name\":\"\",\"text\":\"\",\"x\":150000.0,\"y\":-96112.5,\"note\":\"CE pipe object: x,y is the lower-left corner of its bounding box (150000, -96112.5, 160022.063065203, -94889.6846739848)\"} | {\"index\":1035,\"handle\":\"11C560\",\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"name\":\"\",\"text\":\"225 DIA. UPVC PIPE AT 1 IN 101\",\"x\":157453.4224179047,\"y\":-95267.1120895234} | {\"index\":1036,\"handle\":\"11C565\",\"object\":\"AcDbMText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 18.000\",\"x\":150200.0,\"y\":-95817.5} | {\"index\":1037,\"handle\":\"11C56A\",\"object\":\"AcDbMText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 17.900\",\"x\":159768.0926701991,\"y\":-94860.26725371405} | {\"index\":1038,\"handle\":\"11C58C\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"text\":\"\",\"x\":157301.4324131726,\"y\":-95781.91694426115}",
+          "evidence": "RECORDED, not judged: FULL objects after the second CD E = {\"index\":1034,\"handle\":\"11C55A\",\"object\":\"CeCvlPipeObject\",\"layer\":\"STORMWATER PIPE\",\"name\":\"\",\"text\":\"\",\"x\":150000.0,\"y\":-96112.5,\"note\":\"CE pipe object: x,y is the lower-left corner of its bounding box (150000, -96112.5, 160022.063065203, -94889.6846739848)\"} | {\"index\":1035,\"handle\":\"11C560\",\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"name\":\"\",\"text\":\"225 DIA. UPVC PIPE AT 1 IN 101\",\"x\":157453.4224179047,\"y\":-95267.1120895234} | {\"index\":1036,\"handle\":\"11C565\",\"object\":\"AcDbMText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 18.000\",\"x\":150200.0,\"y\":-95817.5} | {\"index\":1037,\"handle\":\"11C56A\",\"object\":\"AcDbMText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 17.900\",\"x\":159768.0926701991,\"y\":-94860.26725371405} | {\"index\":1038,\"handle\":\"11C58C\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"text\":\"\",\"x\":157301.4324131726,\"y\":-95781.91694426115}"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 80 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CD completed 73803 ms ; Command outcome: CD completed 21 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-27 04:03:33",
+      "session_id": "RUN-20261027-0346-C3.0.80-g80b5-s1",
+      "acceptance": {
+        "state": "ACCEPTED-READY",
+        "reasons": [],
+        "passing_sessions_on_this_build": 2,
+        "red_before": true
+      }
+    },
+    {
+      "id": "R39b",
+      "proves_bugs": "BUG-684 (CD Existing line on a polyline with an arc, and on a closed polyline: CE warns that the pipe is straight between the corners (curved sides) or without the closing side, and the drawn source line is kept; it is no longer erased)",
+      "title": "CD with E on a polyline with an arc, and on a closed polyline, warns in plain words that the pipe runs straight between the corners, makes the pipe and keeps your drawn line",
+      "kind": "deterministic",
+      "order": 39,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "CD Existing line (triage group N4; daily card D04 neighbour); BUG-684",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 25 Oct 2026 with BUG-684 in BUG_CARPARK.md (expected: arcs and closed polylines are refused or warned about and the source line is kept). The pipe's length and grade label are not compared with the arc length (a pipe on a curve is not drawn by CD); BUG-697 is R39.",
+      "variant_of": "",
+      "expected": "A polyline drawn straight 150000,-99000 to 155000,-99000 then an arc to 160000,-97000, picked with CD, E, makes the New Pipe window open; after levels 18.000 / 17.900 and Start Pipe, CE has said \"That line has curved sides\" and a CE pipe object exists, and the drawn polyline is STILL in the drawing. The same for a closed 4-corner polyline (150000,-93000 / 154000,-93000 / 154000,-90000 / 150000,-90000, closed): CE says \"That line is closed ...\" and the drawn polyline is still in the drawing. The drawing file on disk is unchanged.",
+      "why_not_unit": "The pick of the drawn line, the warning and the erase or keep of the source line happen in a live CD run in the real drawing.",
+      "not_automated": [
+        "That the pipe is straight between the corner points is not measured. BUG-697 (a plain line) is R39; BUG-187 and BUG-874 are not driven."
+      ],
+      "file_sha256": "CD1A7B6CAE9AC3A4BE04E3E6DB9D4EE73E804F1E77F76107CC0A20635E04473A",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-27 04:03:33",
+      "seconds": 116.1,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV30401241_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.PLINE{NL}150000,-99000{NL}155000,-99000{NL}A{NL}160000,-97000{NL}\" -Force -> $pl",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "typed '_.PLINE 150000,-99000 155000,-99000 A 160000,-97000': Command: _.PLINE | Specify start point: 150000,-99000 | Current line-width is 0.000 | Specify next point or [Arc/Halfwidth/Length/Undo/Width]: 155000,-99000 | Specify next point or [Arc/Close/Halfwidth/Length/Undo/Width]..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM{NL}_W{NL}148000,-100000{NL}162000,-95000\" -Force",
+          "ok": true,
+          "seconds": 2.8,
+          "evidence": "typed '_.ZOOM _W 148000,-100000 162000,-95000': Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _W | Specify first corner: 148000,-100000 | Specify opp..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $arcnew",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "1 object(s) after index 1034 (model space now 1035); by type: AcDbPolyline 1; first: 11C559 AcDbPolyline BLOCKS"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $arcnew \"object~^AcDbPolyline$\" -> $arc_src",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 1: 11C559 BLOCKS"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $arc_src handle -> $harc",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C559"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}E{NL}152000,-99000\" -Force -ExpectWindow \"New Pipe\" -TimeoutSec 120 -> $cd1",
+          "ok": true,
+          "seconds": 6.7,
+          "evidence": "typed 'CD E 152000,-99000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: E | Pick the drawn polyline to use as the pipe route: 15..."
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 3.8,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: "
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.900\"",
+          "ok": true,
+          "seconds": 3.6,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.900: "
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $t1",
+          "ok": true,
+          "seconds": 18.8,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $e1",
+          "ok": true,
+          "seconds": 7.8,
+          "evidence": "esc-prompt: [CE] End is free: open end flagged, connect it later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: Open end -> Open end | [CE] Pipe has 2 segment(s). | Pick a point to move arrow A..."
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $e1b",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "esc-prompt: Inserted flow arrow. Flow: Open end -> Open end | [CE] Pipe has 2 segment(s). | Pick a point to move arrow AND text to that segment, or press Enter to accept: *Cancel* | [CE] Pipe placed. Pick the next pipe's first point..."
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $e1c",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "esc-prompt: [CE] Pipe has 2 segment(s). | Pick a point to move arrow AND text to that segment, or press Enter to accept: *Cancel* | [CE] Pipe placed. Pick the next pipe's first point, or press Esc to stop. | Specify first point or [..."
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $after1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "6 object(s) after index 1034 (model space now 1040); by type: AcDbBlockReference 1; AcDbMText 3; AcDbPolyline 1; CeCvlPipeObject 1; first: 11C559 AcDbPolyline BLOCKS ; 11C55A CeCvlPipeObject STORMWATER PIPE ; 11C560 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 104 ; 11C565 AcDbMText 20TEXT IL 18.000 ; 11C56A AcDbMText 20TEXT IL 17.900 ; 11C58C AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after1 \"handle~^{$harc}$\" -> $arc_after",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 6: 11C559 BLOCKS"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after1 \"object~^CeCvlPipeObject$\" -> $pipe1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 6: 11C55A STORMWATER PIPE"
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1040 objects"
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.PLINE{NL}150000,-93000{NL}154000,-93000{NL}154000,-90000{NL}150000,-90000{NL}C\" -Force -> $pl2",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "typed '_.PLINE 150000,-93000 154000,-93000 154000,-90000 150000,-90000 C': Command: | Command: _.PLINE | Specify start point: 150000,-93000 | Current line-width is 0.000 | Specify next point or [Arc/Halfwidth/Length/Undo/Width]: 154000,-93000 | Specify next point or [Arc/Close/Halfwidth/Length/..."
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM{NL}_W{NL}148000,-95000{NL}162000,-88000\" -Force",
+          "ok": true,
+          "seconds": 2.7,
+          "evidence": "typed '_.ZOOM _W 148000,-95000 162000,-88000': Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _W | Specify first corner: 148000,-95000 | Specify oppo..."
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c1 -> $clnew",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "1 object(s) after index 1040 (model space now 1041); by type: AcDbPolyline 1; first: 11C591 AcDbPolyline BLOCKS"
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $clnew \"object~^AcDbPolyline$\" -> $cl_src",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 1: 11C591 BLOCKS"
+        },
+        {
+          "n": 29,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $cl_src handle -> $hcl",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C591"
+        },
+        {
+          "n": 30,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}E{NL}152000,-93000\" -Force -ExpectWindow \"New Pipe\" -TimeoutSec 120 -> $cd2",
+          "ok": true,
+          "seconds": 6.6,
+          "evidence": "typed 'CD E 152000,-93000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: E | Pick the drawn polyline to use as the pipe route: 15..."
+        },
+        {
+          "n": 31,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 3.7,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: "
+        },
+        {
+          "n": 32,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.900\"",
+          "ok": true,
+          "seconds": 4.0,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.900: "
+        },
+        {
+          "n": 33,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $t2",
+          "ok": true,
+          "seconds": 17.2,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 34,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 35,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $e2",
+          "ok": true,
+          "seconds": 7.1,
+          "evidence": "esc-prompt: [CE] End is free: open end flagged, connect it later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: Open end -> Open end | [CE] Pipe has 3 segment(s). | Pick a point to move arrow A..."
+        },
+        {
+          "n": 36,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $e2b",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "esc-prompt: Inserted flow arrow. Flow: Open end -> Open end | [CE] Pipe has 3 segment(s). | Pick a point to move arrow AND text to that segment, or press Enter to accept: *Cancel* | [CE] Pipe placed. Pick the next pipe's first point..."
+        },
+        {
+          "n": 37,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $e2c",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "esc-prompt: [CE] Pipe has 3 segment(s). | Pick a point to move arrow AND text to that segment, or press Enter to accept: *Cancel* | [CE] Pipe placed. Pick the next pipe's first point, or press Esc to stop. | Specify first point or [..."
+        },
+        {
+          "n": 38,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 39,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $after2",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "12 object(s) after index 1034 (model space now 1046); by type: AcDbBlockReference 2; AcDbMText 6; AcDbPolyline 2; CeCvlPipeObject 2; first: 11C559 AcDbPolyline BLOCKS ; 11C55A CeCvlPipeObject STORMWATER PIPE ; 11C560 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 104 ; 11C565 AcDbMText 20TEXT IL 18.000 ; 11C56A AcDbMText 20TEXT IL 17.900 ; 11C58C AcDbBlockReference ARROW TIM_CVL_ARROW ; 11C591 AcDbPolyline BLOCKS ; 11C592 CeCvlPipeObject STORMWATER PIPE ; 11C598 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 110 ; 11C59D AcDbMText 20TEXT IL 18.000 ; 11C5A2 AcD..."
+        },
+        {
+          "n": 40,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after2 \"handle~^{$hcl}$\" -> $cl_after",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 12: 11C591 BLOCKS"
+        },
+        {
+          "n": 41,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after2 \"object~^CeCvlPipeObject$\" -> $pipes2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 2 of 12: 11C55A STORMWATER PIPE ; 11C592 STORMWATER PIPE"
+        },
+        {
+          "n": 42,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30401241_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"[CE] That line has curved sides. The pipe runs straight between its corner points, so the drawn line has been kept for you to compare.\"",
+          "ok": true,
+          "expected": "command line has '[CE] That line has curved sides. The pipe runs straight between its corner points, so the drawn line has been kept for you to compare.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CE] That line has curved sides. The pipe runs straight between its corner points, so the drawn line has been kept for you to compare.'"
+        },
+        {
+          "n": 2,
+          "text": "count $arc_after = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $arc_after = 1 (expected = 1)"
+        },
+        {
+          "n": 3,
+          "text": "count $pipe1 = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $pipe1 = 1 (expected = 1)"
+        },
+        {
+          "n": 4,
+          "text": "history has \"[CE] That line is closed, so the pipe runs from its first corner to its last without the closing side, and the drawn line has been kept.\"",
+          "ok": true,
+          "expected": "command line has '[CE] That line is closed, so the pipe runs from its first corner to its last without the closing side, and the drawn line has been kept.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CE] That line is closed, so the pipe runs from its first corner to its last without the closing side, and the drawn line has been kept.'"
+        },
+        {
+          "n": 5,
+          "text": "count $cl_after = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $cl_after = 1 (expected = 1)"
+        },
+        {
+          "n": 6,
+          "text": "count $pipes2 = 2",
+          "ok": true,
+          "expected": "count = 2",
+          "actual": "2",
+          "evidence": "count of $pipes2 = 2 (expected = 2)"
+        },
+        {
+          "n": 7,
+          "text": "not-contains $win_end \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30401241_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV30401241_B1.dwg]"
+        },
+        {
+          "n": 8,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 9,
+          "text": "record $cd1 \"FULL CD E on the arc line\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: E | Pick the drawn polyline to use as the pipe route: 152000,-99000 | [CE] Using the drawn line (3 points) as the pipe route.",
+          "evidence": "RECORDED, not judged: FULL CD E on the arc line = Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: E | Pick the drawn polyline to use as the pipe route: 152000,-99000 | [CE] Using the drawn line (3 points) as the pipe route."
+        },
+        {
+          "n": 10,
+          "text": "record $e1b \"FULL after the second Esc (arc)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Inserted flow arrow. Flow: Open end -> Open end | [CE] Pipe has 2 segment(s). | Pick a point to move arrow AND text to that segment, or press Enter to accept: *Cancel* | [CE] Pipe placed. Pick the next pipe's first point, or press Esc to stop. | Specify first point or [Existing line] [Existing]: *Cancel* | [CE] Stopped. Everything placed stays; U takes back the last one.",
+          "evidence": "RECORDED, not judged: FULL after the second Esc (arc) = Inserted flow arrow. Flow: Open end -> Open end | [CE] Pipe has 2 segment(s). | Pick a point to move arrow AND text to that segment, or press Enter to accept: *Cancel* | [CE] Pipe placed. Pick the next pipe's first point, or press Esc to stop. | Specify first point or [Existing line] [Existing]: *Cancel* | [CE] Stopped. Everything placed stays; U takes back the last one."
+        },
+        {
+          "n": 11,
+          "text": "record $arc_after \"FULL the arc polyline after Start Pipe\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"index\":1034,\"handle\":\"11C559\",\"object\":\"AcDbPolyline\",\"layer\":\"BLOCKS\",\"name\":\"\",\"text\":\"\",\"x\":150000.0,\"y\":-99000.0}",
+          "evidence": "RECORDED, not judged: FULL the arc polyline after Start Pipe = {\"index\":1034,\"handle\":\"11C559\",\"object\":\"AcDbPolyline\",\"layer\":\"BLOCKS\",\"name\":\"\",\"text\":\"\",\"x\":150000.0,\"y\":-99000.0}"
+        },
+        {
+          "n": 12,
+          "text": "record $cd2 \"FULL CD E on the closed line\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: E | Pick the drawn polyline to use as the pipe route: 152000,-93000 | [CE] Using the drawn line (4 points) as the pipe route.",
+          "evidence": "RECORDED, not judged: FULL CD E on the closed line = Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: E | Pick the drawn polyline to use as the pipe route: 152000,-93000 | [CE] Using the drawn line (4 points) as the pipe route."
+        },
+        {
+          "n": 13,
+          "text": "record $e2b \"FULL after the second Esc (closed)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Inserted flow arrow. Flow: Open end -> Open end | [CE] Pipe has 3 segment(s). | Pick a point to move arrow AND text to that segment, or press Enter to accept: *Cancel* | [CE] Pipe placed. Pick the next pipe's first point, or press Esc to stop. | Specify first point or [Existing line] [Existing]: *Cancel* | [CE] Stopped. Everything placed stays; U takes back the last one.",
+          "evidence": "RECORDED, not judged: FULL after the second Esc (closed) = Inserted flow arrow. Flow: Open end -> Open end | [CE] Pipe has 3 segment(s). | Pick a point to move arrow AND text to that segment, or press Enter to accept: *Cancel* | [CE] Pipe placed. Pick the next pipe's first point, or press Esc to stop. | Specify first point or [Existing line] [Existing]: *Cancel* | [CE] Stopped. Everything placed stays; U takes back the last one."
+        },
+        {
+          "n": 14,
+          "text": "record $cl_after \"FULL the closed polyline after Start Pipe\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"index\":1040,\"handle\":\"11C591\",\"object\":\"AcDbPolyline\",\"layer\":\"BLOCKS\",\"name\":\"\",\"text\":\"\",\"x\":150000.0,\"y\":-93000.0}",
+          "evidence": "RECORDED, not judged: FULL the closed polyline after Start Pipe = {\"index\":1040,\"handle\":\"11C591\",\"object\":\"AcDbPolyline\",\"layer\":\"BLOCKS\",\"name\":\"\",\"text\":\"\",\"x\":150000.0,\"y\":-93000.0}"
+        },
+        {
+          "n": 15,
+          "text": "record $pipes2 \"FULL the two pipes\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"index\":1035,\"handle\":\"11C55A\",\"object\":\"CeCvlPipeObject\",\"layer\":\"STORMWATER PIPE\",\"name\":\"\",\"text\":\"\",\"x\":150000.0,\"y\":-99112.5,\"note\":\"CE pipe object: x,y is the lower-left corner of its bounding box (150000, -99112.5, 160041.78145109, -96895.5463722754)\"} | {\"index\":1041,\"handle\":\"11C592\",\"object\":\"CeCvlPipeObject\",\"layer\":\"STORMWATER PIPE\",\"name\":\"\",\"text\":\"\",\"x\":150000.0,\"y\":-93112.5,\"note\":\"CE pipe object: x,y is the lower-left corner of its bounding box (150000, -93112.5, 154112.5, -89887.5)\"}",
+          "evidence": "RECORDED, not judged: FULL the two pipes = {\"index\":1035,\"handle\":\"11C55A\",\"object\":\"CeCvlPipeObject\",\"layer\":\"STORMWATER PIPE\",\"name\":\"\",\"text\":\"\",\"x\":150000.0,\"y\":-99112.5,\"note\":\"CE pipe object: x,y is the lower-left corner of its bounding box (150000, -99112.5, 160041.78145109, -96895.5463722754)\"} | {\"index\":1041,\"handle\":\"11C592\",\"object\":\"CeCvlPipeObject\",\"layer\":\"STORMWATER PIPE\",\"name\":\"\",\"text\":\"\",\"x\":150000.0,\"y\":-93112.5,\"note\":\"CE pipe object: x,y is the lower-left corner of its bounding box (150000, -93112.5, 154112.5, -89887.5)\"}"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV30401241_B1_1939598ed.log)",
+        "Civil CE log: 134 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CD completed 41772 ms ; Command outcome: CD completed 39632 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-27 04:05:29",
+      "session_id": "RUN-20261027-0346-C3.0.80-g80b5-s1",
+      "acceptance": {
+        "state": "ACCEPTED-READY",
+        "reasons": [],
+        "passing_sessions_on_this_build": 2,
+        "red_before": true
+      }
+    }
+  ]
+}

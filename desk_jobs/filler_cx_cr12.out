@@ -1,0 +1,4 @@
+== cx_cr12 (usage 4.0% -> 8.0%): 1. **DONE:** [Review report](C:/CE_PLAN/areas/CODEX_CASE_REVIEW_cx_cr12.md) saved and pushed as `097ce7ac`. Leak scan passed; no commits ahead.
+2. **Verdicts:** R01 and R02 need stronger assertions; R02b is partial. No new acceptance files or bug fixes authorised.
+3. **Installed build:** Civil 3.0.79. Each case needs two sessions on that build after corrections.
+4. **Read-only limits kept:** no AutoCAD, runner, builds or tests run; existing review files untouched.

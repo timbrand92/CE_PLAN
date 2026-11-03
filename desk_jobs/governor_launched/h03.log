@@ -1,0 +1,33 @@
+**FOR TIM**
+
+The hunt is finished and pushed. I found **47 new defects** across catchments, CDCALC, detention, water tanks and pump stations. None of them are already in the carpark or the earlier hunts.
+
+1. **How serious:** 11 HIGH, 21 MEDIUM, 15 LOW. 41 were confirmed by reading the code all the way through; 6 are likely but not certain.
+2. **What it is and isn't:** I only read the code. Nothing was built or run, and nobody has opened it in AutoCAD.
+3. **The worst problem breaks your tank rule (T-02).** Take a 5000 L tank with 2000 L of detention, placed through the CDWT window:
+   - CDTWL counts it as **0 L**, because the window forgets which tank you picked.
+   - CDTWL also counts a **fake 450 x 450 pit** where the tank sits.
+   - CDCALC's "Add" button invents a **1000 L** tank row.
+   - The plan, CDTWL and the OSD block end up with three different tank figures.
+4. **Wrong numbers on the issued computations sheet:**
+   - **Orifice head:** the sheet prints the plate height as the "head". A council checker working from 0.500 m gets 5.14 L/s against a 5.00 L/s PSD.
+   - **Pipe storage:** detention pipes always count as full. A 375 pipe 20 m long with the TWL 200 mm above its invert shows 2.21 m³ when the real figure is about 1.56 m³.
+   - **Blank pipe level:** it is read as RL 0.000, so a 600 x 600 pit shows 3.68 m³ instead of 0.08 m³.
+5. **CDDESIGN can't size detention for the eight councils that give you the PSD** (Kingston, Monash and others). It asks for the council's figure, but there is no box to type it in.
+6. **CDEDIT on a rising main wipes where it discharges to.** One OK with no changes is enough. CDRULES then reports it as a gravity pipe running uphill.
+7. **My recommendation:** fix the three tank findings together first, because one fix makes the plan, CDTWL and CDCALC agree. Then fix the three sheet-number findings. All six can be shown failing in an automatic test before anyone touches AutoCAD.
+
+No questions for you. The controller assigns the bug numbers.
+
+---
+
+**Technical detail**
+
+1. **Code audited:** `origin/claude/rel-20261018c` @ `def8e56f`, which is Civil 3.0.54 / Manager 1.1.54. I read it in a private worktree, which I have since removed. I did not use master.
+2. **Report:** `C:\CE_PLAN\areas\release-v3-colleagues-HUNT_CIVIL_DFGH_2026-10-12.md`, committed in CE_PLAN as `53d972fa` and pushed. I merged origin/main first (it was already up to date) and added the file by name. The leak scan was clean.
+3. **How I checked:** four read-only auditors each took one area in parallel. I then re-read the worst findings myself against the source: DFGH-01, 02, 03, 05, 06, 07, 08, 11 and 37.
+4. **Skipped:**
+   - **Unreachable code:** the old orifice and detention pages, the tank detail drafter and the SPS detail generator have no live caller. Their faults are recorded as LOW or latent.
+   - **BUG-331 fix:** it only reached the old Detention window. The live Detention tab still divides the drawn pipe length by 1000. I noted this beside BUG-330.
+
+**Summary:** The hunt of installed Civil 3.0.54 found 47 new defects (11 HIGH). The worst group breaks T-02: a tank placed through the CDWT window is not counted by CDTWL, CDTWL also counts it as a phantom pit, and CDCALC never reads tank litres, so the tank volume differs on the plan, in CDTWL and on the OSD block. The second group puts wrong figures on the issued computations sheet and OSD block: the printed orifice head is really the plate height, detention pipes count as full whatever the top water level, and a blank pipe level reads as RL 0.000. CDDESIGN also cannot size detention for councils that provide the PSD, and CDEDIT wipes a rising main's destination so the checks call it an uphill gravity pipe. Most HIGH findings can be shown failing in a unit test before they are fixed.

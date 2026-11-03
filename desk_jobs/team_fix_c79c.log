@@ -1,0 +1,16 @@
+Draft PR #1875 is open for BUG-816, but the full test run still has 3 failures. I haven't proven those 3 were already failing before my change.
+
+The switch is `linking.tidyTextAfterMove`, on by default. The new tick box is in Settings, Drafting tab, "After a MOVE". Ticked, the MOVE tidy behaves as today. Unticked, no label moves and no "no clear spot" line prints. The Tidy labels command is unaffected.
+
+**Tests**
+- **Focused run:** 245 passed.
+- **Full run:** 20787 passed, 3 failed. One of the three (`Diagnostic_MessagesReachTheLogFile`) passes when run alone. The other two are tests in `SourceAtomicCoordinatorDependencyTests`, a file this PR doesn't touch, and they also failed on an earlier run of this branch.
+- **net48:** 0 errors.
+
+**Not proven**
+- Nothing has been opened in AutoCAD.
+- The new row needs a Codex look at 100% and 150%.
+
+**BUG-1232:** this change doesn't cover it. BUG-141's frame switch should already ignore the border, so the report lists ranked suspects for why it still shows.
+
+Files are in `C:\ce-fx\c79c`. The report is `C:\CE_PLAN\areas\release-v3-colleagues-BUG816_FIX_REPORT.md`, pushed. It names the robot case N33_tidy_after_move_off, with C33_on as the switch-on twin.

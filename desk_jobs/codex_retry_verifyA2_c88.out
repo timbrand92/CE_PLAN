@@ -1,0 +1,7 @@
+== verifyA2_c88 (usage 30.0% -> 30.0%): AUTOCAD STILL RUNNING ÔÇö my session closed; another Claude session took over.
+
+1. **Results:** BUG-385 blocked by input trouble. BUG-791 showed the correct 1200 ├ù 1200 mm size after Edit Pit; recorded DIFFERENT for window wording. Nine looks remain NOT TESTED.
+
+2. **Cleanup:** No drawing saved. The foreign session changed CD_Settings.json and owns the lock; release was refused. Clean acceptance is withheld.
+
+3. **Report:** [Full results and evidence](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_A2_20261102_0529.md>). PASS 0, FAIL 0, DIFFERENT 1, BLOCKED 1, NOT TESTED 9; SURE 11.

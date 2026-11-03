@@ -1,0 +1,3 @@
+== cx_bd24 (usage 52.0% -> 53.0%): 1. **BUG-1104 — BLOCKED.** CDWT has no tank orifice diameter to check. Adding its source exceeds this warning-only brief. No code changed; PR: none.
+2. **Saved and pushed.** [Report](C:/CE_PLAN/areas/CODEX_BUILD_BD24_26OCT.md). Branch `cx6/bug-1104-bd24`, head `270215aa`. Worktree removed.
+3. **Checks.** Red/green: not run. Full-suite totals: unavailable; baseline cancelled before test execution. AutoCAD not run.

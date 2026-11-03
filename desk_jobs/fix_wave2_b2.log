@@ -1,0 +1,11 @@
+All five fixes (ledger items 6–10) are done: each is a draft PR against `claude/rel-20261022m`, and none was skipped. They are built and unit-tested, but nobody has opened them in AutoCAD, and no bug is marked FIXED.
+
+1. **BUG-877:** PR #1558. Choosing another file on the import review page no longer draws the first file.
+2. **BUG-874:** PR #1562. Esc after a placed CD callout now keeps the link. It changes 3 old guard tests and adds 10 baseline lines, so it needs Opus review.
+3. **BUG-963:** PR #1567. CDPROPAGATE writes the right end's level into a pipe's only remaining IL text.
+4. **BUG-965:** PR #1570. Refresh keeps "2/375" and the trench grate length.
+5. **BUG-971:** PR #1576. An unreadable drawing record is never saved over. It touches the save path, so it needs Opus review.
+
+Each full Civil net10 run had one failure, the known Glen Eira back-test. The totals were 19,160 to 19,165 tests. Switches ship ON. BUG-982 and BUG-988 were left for their own changes.
+
+The report is pushed to `C:\CE_PLAN\areas\release-v3-colleagues-FIX_WAVE2_BATCH2_REPORT.md`.

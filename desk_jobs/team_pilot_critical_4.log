@@ -1,0 +1,7 @@
+Batch 4 produced five draft PRs and skipped eight bugs. Nothing was opened in AutoCAD, and none of it is accepted. The report is pushed to `C:\CE_PLAN\areas`.
+
+1. **Complete:** BUG-1215 (#1768) and BUG-1179 (#1769).
+2. **Partial:** BUG-1101 (#1770), BUG-1090 (#1771) and BUG-1097 (#1772).
+3. **Skipped, need Tim or a protected file:** BUG-901, 902, 903, 905, 907, 866, 1096 and 1171. Each has options in the report.
+4. **BUG-1173:** a document fix to the colleague pack, no PR.
+5. **Tests:** Civil suite 20,248 to 20,253 total, 0 failed. Manager suite 1,001, 0 failed.

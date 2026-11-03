@@ -1,0 +1,48 @@
+**FOR TIM**
+
+1. **Done.** The four Codex checks CE 07 asked for are written and waiting in the queue. Each one is held: it starts only after tonight's install (Civil 3.0.86 / Manager 1.1.86) has been checked and the robot has finished its run. Nothing for you to do.
+2. **My mistakes first. They took about 5 minutes and cost nothing you use.**
+   1. My first copy of the shared rules started one rule late and picked up a line from another check. My own check caught it before anything was queued, and I rebuilt all eight files.
+   2. I wrote 16:55 on the queue note when the clock said 16:44. Corrected.
+3. **A1, the About window (CE_VERSION).** Codex checks that all five rows show in full: Civil, Structural, Manager, AutoCAD and Runtime, plus the hint line and Close. Today the AutoCAD row is half cut off and Runtime can't be read.
+4. **A1 can't check 150 percent display scaling on your PC.** Your screen runs at 100 percent, and changing it would change your Windows setting. So that half will report "blocked". A colleague's laptop at 150 percent is the real risk; the spare login can check it later.
+5. **C1, no blue.** Codex checks:
+   1. the ribbon pictures;
+   2. the New Pit, New Pipe and Edit Pipe windows (no record names Max's "three windows", so I picked these from his five-step walk);
+   3. the Calculations window and CE Manager;
+   4. the printed computations sheet, saved as a PDF.
+
+   On a job: the council copy of the sheet must print black, not blue.
+6. **C1 can only see the dark look on your PC.** Your CE setting is dark, and the old blue only appears in the light look, so seeing it would mean changing a setting. The check says so in one line. The long-section water line is photographed but not judged. The pit snap glow isn't in this check, because seeing it needs the mouse to hover in the drawing.
+7. **C3, nothing leaves the PC.** Codex checks that the AI chat (CDASK) and "Analyse markups" on a sheet layout both say "AI features are switched off on this PC. Nothing was sent." It also checks that reading a consultant drawing never offers AI. On a job: a client's title block never leaves the office.
+8. **C6, three everyday faults Codex has seen before.**
+   1. The CDCHECKDWG summary line and results list.
+   2. The Pipe or Pit ribbon tab jumping forward when you click one.
+   3. Where the pit number, cover level and invert texts land after a pit move.
+9. **C6 also gives you pictures for your question 19.** It doesn't decide the question. Codex shifts one invert text 600 mm by hand, then moves the pit 500 mm. It reports whether the text travelled with the pipe, stayed where it was put, or snapped back to CE's own spot.
+10. **Cost.** About 3 percent of Codex's week each, 12 percent for all four. They run in the order A1, C6, C3, C1.
+
+---
+
+**For the desk**
+
+1. **Files.** In `C:\Lisp Files\_CODEX_RUNNER\`: `verifyA1_c86`, `verifyC1_c86`, `verifyC3_c86` and `verifyC6_c86`, each as a `.txt` launcher plus a `_full.txt` brief.
+   1. None of these names existed before, so nothing was overwritten.
+   2. A diff against H1 shows the rules block is word for word except two lines: N6 (hash time 16:32, same four hashes) and N14 (build line).
+2. **Queue.** `CONVEYOR_QUEUE.txt` was re-read at 16:44, then one comment and four `#HOLD` lines were appended, in the order A1, C6, C3, C1.
+3. **Overlap.** A1 repeats G4-02, and C6 repeats G4-01 and G5-01, on the newer build. I recommend dropping G4 and G5 once A1 and C6 have run. I didn't touch their lines.
+4. **Pushed.** Commit `f67ff36d` on CE_PLAN holds only the report and the queue file. `git status -sb` shows nothing ahead of the remote.
+5. **Report:** `C:\CE_PLAN\areas\CODEX_LOOK_BRIEFS_A1_C_29OCT.md`.
+
+**What I did NOT verify**
+
+1. None of the four checks has been run. The window wording comes from the source and from older Codex reports; whatever is really on screen wins.
+2. The installed build is still Civil 3.0.85 / Manager 1.1.85 (read at 16:35). The C-76 install hasn't happened yet.
+3. Unknowns:
+   1. whether the Manager window follows CE's dark setting;
+   2. whether the test drawing produces a full computations sheet;
+   3. whether "Microsoft Print to PDF" is installed;
+   4. which pipe a single mouse click picks first.
+4. Not covered: the light-look blues, the Help pages, the pit snap glow, Structural markup, the X-Civil PDF route (only a drawing is read), and 150 percent scaling.
+
+**Summary:** I wrote four held Codex checks for CE 07's release items. A1 checks the About window rows, C1 checks for blue including the printed PDF, C3 checks that nothing leaves the PC, and C6 covers CDCHECKDWG, the ribbon tab jump and labels after a pit move, with pictures for question 19. They copy the H1 rules word for word apart from the build and hash-time lines. They are queued as held lines, A1 first, at about 3 percent each, and the report is pushed. Nothing has run.

@@ -1,0 +1,11 @@
+Train S-40 is built and pushed as `claude/rel-20261022s` at head `1fd5b535`, and the report is pushed to C:\CE_PLAN. Nobody has opened it in AutoCAD.
+
+- **Merged (6):** #1500, #1501, #1504, #1505, #1506 and #1497.
+- **Held back (3):** #1510, #1498 and #1496, because their live heads moved since the brief. They need a new review.
+- **Shared/Civil/Manager:** the merged PRs touch no Shared, Civil or Manager files.
+- **Build:** the whole solution builds with 0 errors.
+- **New reds:**
+  - **CEMEMBER keyword guard:** failed on net10 and net48. The View prompt has Side and Section both starting with S.
+  - **Net48-only writer test:** a new CEMEMBER writer test fails on net48 only, a known reference-stub problem.
+- **Re-pins (mine, own commits):** the Plugin.cs fingerprint and the central register's Structural row. Both changed because #1504 registers CEMEMBER.
+- **Tim's settings files:** unchanged.

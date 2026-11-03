@@ -1,0 +1,25 @@
+== cx_b07_real_length (usage 25.0% -> 33.0%): E — [draft PR #1530](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1530).** Built the real-length grade/speed correction. Nothing installed; AutoCAD not run.
+
+2. **[Report](C:/CE_PLAN/areas/CODEX_BUILD_ENG_REAL_LENGTH_22OCT.md)** pushed through [plan draft #2](https://github.com/timbrand92/CE_PLAN/pull/2); another commit blocked the shared-main leak scan.
+
+3. **Settings:** final hashes matched; a temporary swap’s writer remains unidentified and documented.
+
+---
+
+4. **Branch:** `cx/eng-real-length-c60` at `afc45df8`.
+
+5. **Validation:** 26 new tests; 93/93 focused. Full Civil: **19,180 total, 19,160 passed, 19 skipped, one audited rainfall failure**. All three builds: **zero errors**.
+== cx_b08_pipe_material (usage 33.0% -> 47.0%): 1. **BLOCKED.** Draft [PR #1537](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1537) is pushed. Correction defaults OFF. The shared build lock prevented final validation.
+
+2. **Tests:** initial 20/20 passed; latest 23-case set, full suite and three required builds remain unverified. Nothing installed; AutoCAD not opened.
+
+3. **Settings:** live Civil settings hash changed during the wait; cause unknown. File untouched here. [Report saved and pushed](C:/CE_PLAN/areas/CODEX_BUILD_ENG_PIPE_MATERIAL_22OCT.md).
+
+---
+
+4. **Handoff:** `cx/eng-pipe-material-c60` at `c23b59c9`.
+== cx_b10_move_pit_grade (usage 49.0% -> 0.0%): 1. **FOR TIM — BLOCKED:** Draft [PR #1551](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1551) contains the tested calculation. Live pit moving remains unchanged: protected-file wiring and a default-OFF Settings switch are still required. Not installed or AutoCAD-tested. [Report](C:/CE_PLAN/areas/CODEX_BUILD_ENG_MOVE_PIT_22OCT.md) saved and pushed.
+
+---
+
+2. **FOR CLAUDE:** `cx/eng-move-pit-grade-c60` at `356ca792`. Three builds: zero errors. New tests: 18/18 on net10 and net48. Full Civil: 19,172 total—19,152 passed, 19 skipped, one unchanged Glen Eira failure.

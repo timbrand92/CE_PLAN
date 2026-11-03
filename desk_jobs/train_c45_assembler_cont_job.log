@@ -1,0 +1,8 @@
+Branch `claude/rel-20261019a`, head `0c9b0f21` (pushed), has 50 PRs merged: #1387 to #1438, except #1419 and #1423, the two Opus HOLDs.
+
+- **Left out:** #1419, #1423 and the Structural PRs #1382 to #1386. None is in the branch, so no revert was needed.
+- **Build:** whole solution Release, 0 errors.
+- **Tests:** Civil net10 ran 18,799 with 1 red, the known Glen Eira. Manager passed 757 of 757. Civil net48 focused had 18 reds, all `InvalidProgramException` from the reference-stub trap.
+- **For the finalizer:** #1436, #1437 and #1438 were not reviewed by Opus.
+
+The report is pushed to `C:\CE_PLAN`, the worktree is removed, and Tim's settings files are unchanged.

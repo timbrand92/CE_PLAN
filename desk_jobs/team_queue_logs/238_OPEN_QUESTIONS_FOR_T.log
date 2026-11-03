@@ -1,0 +1,1 @@
+`C:\CE_PLAN\areas\OPEN_QUESTIONS_FOR_TIM_BATCH_02NOV.md` is written: 15 questions, each with a default, and it is ready to send to CE 04. I read the bug list and decision files only, built and tested nothing, and did not read the code behind any question. The job brief's path `C:\CE_PLANreas\` had lost a backslash, so I saved it under `C:\CE_PLAN\areas\`.

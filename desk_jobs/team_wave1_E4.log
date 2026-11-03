@@ -1,0 +1,12 @@
+I wrote no cases: none of my four bugs can be proved by the robot today. The report is at `C:\CE_PLAN\areas\WAVE1_WRITING_E4_REPORT.md`. Its answer-first section is under 12 lines, so here it is in full:
+
+## Answer first
+
+1. **Cases written: 0 of 4.** None of my four bugs can be proved by the robot today, so I wrote no case and no twin.
+2. **BUG-687 (Edit Pipe, change only Q, Save): blocked by one unknown box name.** The Q (design flow) box has never been seen by the robot, so its name "C2.FlowLps" fails the known-id check. One probe run fixes it, then the case is ready to write (sketch in item 1 below).
+3. **BUG-688 and BUG-689 (batch Design grade): blocked by the driver.** The batch window "Creative Engineering | Edit 2 Pipes" and its "Apply to Selected" button are on no robot press list (v2 has only "\*Edit Pipe\*"; v3 refuses the word Apply). There is no typed route. Codex look, or a driver allow-list change by its owner.
+4. **BUG-682 (CD, Cancel in the Uphill box): blocked by the driver, and only reachable with a setting off.** The box "Uphill Pipe Warning" is not on the v2 message-box list (the only entry is "Recalculate downstream inverts"), and it only opens when Settings "draw the route first" (CdDrawFirst) is off. Codex look, or a driver allow-list change.
+5. **Folder checks are clean:** validate 32 files, 0 invalid; check_ids "every control id is known". None of the 32 are mine.
+6. **Two things Tim or Codex should know before calling these FIXED.** BUG-682's fix does NOT put back an enlarged or moved pit: it removes the schedule row, brings the drafter's line back and tells the drafter to press U once. BUG-689's warning names the re-graded pipe leaving the pit, not P1->P2 as the bug entry expected, and it only appears when a pit drop is set.
+7. **Next step I recommend:** one probe run (ui-dump of Edit Pipe on DRV1_B1 pipe 10A98D) to learn the Q box name, then I or the next writer writes W687 and W687_BROKEN in about 20 minutes.
+8. **What is NOT tested:** everything in this report is read from code. Nothing here was seen in AutoCAD.

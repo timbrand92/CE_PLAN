@@ -1,0 +1,12 @@
+`C:\CE_PLAN\areas\ROBOT_CASE_DRAFTS_SET23_STRUC_FFL_SM_STARTUP_02NOV.md`: 4 robot cases with twins drafted (#1933, #1934, #1981 twice), and #1915 marked BLOCKED-FOR-ROBOT with a Codex look. Nothing was run, built or validated.
+
+The check you asked for is done: no case or draft exists for any of the four PRs.
+
+- **Cases:** W1933 and W1934 cover FFL, W1981 and W1981b cover SM. All are part claims and use fixture DRV2_S1, with order numbers 920 to 927.
+- **Twins:** No switch-off twin is possible. The runner can't set a Structural setting, so each twin claims the old behaviour instead and must fail on a build with the fix.
+- **#1915:** The robot would need the tick box off before AutoCAD starts, which it can't do. The PR also adds no log line to read.
+- **Codex looks:** K23_01 to K23_04 cover the FFL preview, the FFL group with MOVE, ERASE and Undo, the SM preview and bubbles, and the start-up scan.
+- **Opus review:** None of the robot cases needs one. K23_02 (Undo) and K23_03 (locked layer, Undo) should have one before Codex runs them.
+- **Clash with earlier drafts:** Once #1933 is merged, the FFL chains in the W1879 and W1885 drafts go out of step. I did not edit them.
+- **Not proven:** The Structural module being loaded in the robot AutoCAD, and the fixes being in the installed build (they are open PRs). Also unproven are the `-GROUP ?` description listing, the SECT MARK block being on the robot PC, and every prompt line (all marked DERIVED from the PR diffs).
+- **Scratch folder:** I saved the PR diffs to a scratch folder (`C:\CE_WORK\scratch\s23`) while reading. I deleted it at the end, so the output file is the only change left.

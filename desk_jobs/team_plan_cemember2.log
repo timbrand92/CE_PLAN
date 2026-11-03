@@ -1,0 +1,6 @@
+All 12 points are applied, and both files are pushed to `C:\CE_PLAN` main. I rendered the HTML at 1920 x 1032 in Edge headless and it fits with no scrolling.
+
+- **Must-fix 1 to 4:** The window is 1280 x 680 (left 330, preview about 550, right 400) and plan section 2.1 now matches. Both option pictures draw the same inner lines. The A1 strip shows 378 px by 11 px (A) against 56 px (B), labelled approximate. The notes now sit outside the frame as N1 to N8.
+- **Should-fix 5 to 12:** all applied.
+- **Plan:** the two warning explanations moved into section 6, and the FOR TIM block is updated.
+- **Not done:** none.

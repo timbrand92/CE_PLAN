@@ -1,0 +1,9 @@
+== cx_rv19 (usage 39.0% -> 41.0%): 1. **DONE — both MERGE.** #1792 and #1793 satisfy the earlier Opus conditions: 2 agree, 0 disagree. No separate replacement-head Opus approval was found.
+
+2. **Main finding.** The unknown pad still draws at the placeholder size; #1793 adds a warning. REFEDIT protection remains unproven. No Tim decision is needed for these merges.
+
+3. **Report.** [Read the review](C:/CE_PLAN/areas/CODEX_PR_REVIEW_cx_rv19.md).
+
+---
+
+1. **Saved and pushed:** `98567df0`. Leak scan passed; no commits ahead. Only the report was committed. No builds, tests or AutoCAD sessions ran.

@@ -1,0 +1,272 @@
+{
+  "header": {
+    "run_id": "RUN-20261031-0624-C3.0.87-aS6",
+    "started": "2026-10-31 06:24:40",
+    "finished": "2026-10-31 06:27:16",
+    "build": {
+      "civil": {
+        "product_version": "3.0.87+f5dd72a0652c7f749ab52228cea0f9675047b9cb",
+        "file_version": "3.0.87.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.87+f5dd72a0652c7f749ab52228cea0f9675047b9cb",
+        "file_version": "1.1.87.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.87+f5dd72a0 / struc 1.0.125+204dfad2 / mgr 1.1.87+f5dd72a0",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "B7FEB92E712F91F16A40361947D79A7F2FC0EB3903BD9D03E66D78A3E7772A8A",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.87+f5dd72a0652c7f749ab52228cea0f9675047b9cb; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.87+f5dd72a0652c7f749ab52228cea0f9675047b9cb",
+      "Driver files (SHA-256, first 12): v2 F4D8F40C3675 (expected F4D8F40C3675), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 482EB7B20C6C, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 B439CADC8A7A, case_runner_lib.ps1 ED6244C9719E, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 0 shared setup(s); pack SHA-256 B7FEB92E712F91F16A40361947D79A7F2FC0EB3903BD9D03E66D78A3E7772A8A; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV2_S1 950AFDF6E523",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json D604CE689671 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sat 31 Oct 2026 06:24 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 0,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 1,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261031-0624-C3.0.87-aS6-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-31 06:24:40",
+      "finished": "2026-10-31 06:27:16",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV2_S1",
+      "fixture_sha256": "950AFDF6E523",
+      "copy": "C:\\ce_rc_drv\\CLDV30624431_B1.dwg",
+      "cases": [
+        "S472b_refedit_stops_proof"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : D604CE689671 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "S472b_refedit_stops_proof",
+      "proves_bugs": "BUG-472 (REFEDIT part, for BT1, C1 and BTX only; Xref in-place editing is not covered)",
+      "title": "PROOF OF INSTALLED FIX BUG-472: inside REFEDIT of a plain block, BT1, C1 and BTX each stop with one plain REFEDIT line and Model space gains nothing",
+      "kind": "deterministic",
+      "order": 60,
+      "slot": "fresh",
+      "fixture": "DRV2_S1",
+      "plan_item": "BUG-472 (HUNT-S-07, PR",
+      "bug": "BUG-472",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed. Written 30 Oct 2026 from the code at 204dfad2 and the p17 report; the AutoCAD set-up route is untried.",
+      "variant_of": "",
+      "expected": "After the typed set-up REFEDITNAME reads S472BLK. BT1 prints \"A block or Xref is open for in-place editing (REFEDIT), so CE drew no bracing truss.\", C1 prints \"... so CE placed no support.\", BTX prints \"... so CE changed no text.\"; the history holds exactly three such lines; the Model space object count is the same before and after the three commands; the drawing file on disk is unchanged.",
+      "why_not_unit": "ModelSpaceWriteGuardTests.cs proves the decision with a name string; only AutoCAD's live REFEDITNAME inside a real in-place edit shows the stop.",
+      "not_automated": [
+        "In-place editing of an Xref (the other half of the REFEDIT rule) is not set up: DRV2_S1 has no Xref the robot can rely on.",
+        "R1, AB, BB, TS1, FSF and FPFC inside REFEDIT are not typed."
+      ],
+      "file_sha256": "06AF3AF40EC2B325431FFCB316DE5B68A192DCD197A316EC10DF3D355D5A2351",
+      "result": "BLOCKED",
+      "blocked": "AutoCAD busy",
+      "first_failure": null,
+      "started": "2026-10-31 06:25:39",
+      "seconds": 81.3,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "settings-arm",
+          "text": "settings-arm",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "settings guard armed: ok"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV30624431_B1.dwg: 85871 bytes, SHA-256 950AFDF6E523, last written 01:39:47; folder holds 255 files"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "getvar",
+          "text": "getvar OSMODE -> $osm0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "OSMODE = 5375"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 setvar OSMODE 0 -> $osm_set",
+          "ok": true,
+          "seconds": 0.6,
+          "evidence": "v3 setvar OSMODE 0: OSMODE (profile): 5375 -> 0"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM{NL}_W{NL}14000,3000{NL}24000,9000\" -Force",
+          "ok": true,
+          "seconds": 3.2,
+          "evidence": "typed '_.ZOOM _W 14000,3000 24000,9000': Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _W | Specify first corner: 14000,3000 | Specify opposit..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.LINE{NL}18000,5000{NL}20000,5000{NL}\" -Force -> $ln",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "typed '_.LINE 18000,5000 20000,5000': Command: | Command: _.LINE | Specify first point: 18000,5000 | Specify next point or [Undo]: 20000,5000 | Specify next point or [Undo]: | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be changed. Run se..."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.-BLOCK{NL}S472BLK{NL}18000,5000{NL}_L{NL}\" -Force -> $blk",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "typed '_.-BLOCK S472BLK 18000,5000 _L': Command: | Command: _.-BLOCK | Current settings: Object conversion=Convert | Enter block name or [?]: S472BLK | Specify insertion base point or [Annotative/mOde]: 18000,5000 | Select objects: _L | 1 found | Select object..."
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.-INSERT{NL}S472BLK{NL}18000,5000{NL}1{NL}1{NL}0\" -Force -> $ins",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "typed '_.-INSERT S472BLK 18000,5000 1 1 0': Command: | Command: _.-INSERT | Enter block name or [?] <S472BLK>: S472BLK | Units: Millimeters Conversion: 1.0000 | Specify insertion point or [Basepoint/Scale/X/Y/Z/Rotate/Explode/REpeat]: 18000,5000 | Enter X scale fa..."
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.-REFEDIT{NL}19000,5000{NL}_OK{NL}_All\" -Force -> $re",
+          "ok": true,
+          "seconds": 6.4,
+          "evidence": "typed '_.-REFEDIT 19000,5000 _OK _All': Command: | Command: _.-REFEDIT | Select reference: 19000,5000 | Select nesting level [Ok/Next] <Next>: _OK | Enter object selection method [All/Nested] <All>: _All | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed u..."
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": false,
+          "seconds": 32.2,
+          "evidence": "wait for idle: AutoCAD still busy after 30 s. "
+        }
+      ],
+      "assertions": [],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 2 new line(s) while the case ran, 0 with [ERR]",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=True)"
+      ],
+      "error": null,
+      "finished": "2026-10-31 06:27:00",
+      "session_id": "RUN-20261031-0624-C3.0.87-aS6-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+**FOR TIM**
+
+1. **Verdict on #1520: merge after one small fix.** With the fix, double-clicking a downpipe's circle, centre or DP text opens CE's Edit window. Pits, pit labels and other blocks keep AutoCAD's own editor.
+2. **The one problem:** in a drawing that has downpipes but no pits or pipes yet, the double-click still opens AutoCAD's editor. The fix is one line.
+3. **Order for the next Civil release:** #1520, then #1517. Neither clashes with today's 3.0.69.
+4. **Status:** built and tested by machine. Not installed, and nobody has opened it in AutoCAD.
+
+---
+
+Review entry 1588 is pushed to the CE_PLAN review log. Both versions passed their tests except one known failure (the Glen Eira back-test). The fix version ran 19,092 tests and the base ran 19,074, so no new failures. The report said 11 tests fail, but 10 of those came from its own test setup, not the code. I couldn't find the two Codex evidence files on disk, so I used the bug-list summary of them.

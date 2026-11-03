@@ -1,0 +1,20 @@
+**FOR TIM**
+
+All three bugs have fixes waiting as draft pull requests. Nothing has been opened in AutoCAD and nothing was installed.
+
+1. **BUG-1085 (CEMANAGER) and BUG-1086 (CE_VERSION), pull request #1730:** if you open Manager or About CE Suite and close it, the next U now undoes your last real edit, for example the circle you drew. Before, that U was spent on CEMANAGER or CE_VERSION. 935 Manager tests and 19,526 Civil tests passed, with none failing.
+2. **BUG-1087, pull request #1733:** the "CE SUITE" heading in the About window is now dark grey instead of faint white. 934 Manager tests passed. In the full Civil run, 19,525 passed and 1 failed. That one checks the log is written within 5 seconds, and it ran while other sessions were loading the PC. Run again on its own, it passed.
+3. **Checks still needed in AutoCAD:**
+   - Draw a CIRCLE, type CEMANAGER, close it with X, then type U. The U should say CIRCLE and the circle should go.
+   - Do the same again with CE_VERSION, pressing Close instead of X.
+   - Type CE_VERSION and look at the heading. It should read easily at a glance.
+4. **Not tested:** REDO straight after closing one of these windows has not been checked. CESURVEYREVIEW, CEMANAGERUPDATES, CEMANAGERADMIN and CEBLOCKS probably have the same undo problem. Nobody has reported or checked those yet, so I left them alone.
+
+---
+
+1. **Branches and heads:** `fb/b15-bug1085-bug1086-no-undo-step` @ `c9b41484` and `fb/b15-bug1087-about-heading` @ `02508426`. Both are drafts against `claude/rel-20261023m` @ `f7f7d551`.
+2. **Report:** `C:\CE_PLAN\areas\release-v3-colleagues-FB_TEAM_BATCH15_REPORT.md`, pushed. `git status -sb` shows nothing ahead.
+3. **Shared build lock:** another process had `build.lock` open all night, so I couldn't take it. My builds ran at low priority without it.
+4. **Review:** #1730 changes how undo works, so it needs an Opus review.
+
+Summary: I fixed BUG-1085 and BUG-1086 together in draft PR #1730, so closing CEMANAGER or CE_VERSION no longer leaves its own undo step. I fixed BUG-1087 in draft PR #1733, so the About heading now uses the theme's dark text colour. Each new test failed on the old code and passes with the fix. The Civil totals are in the thousands, and the one failure was a timing test that passed when run alone. No existing fixes were duplicated. Nothing was opened in AutoCAD.

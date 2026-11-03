@@ -1,0 +1,9 @@
+**FOR TIM:** draft PR #1995 (B-172, BUG-1053) is open against `claude/rel-20261102a`. A millimetre LandXML now imports as cover 100.20 and keeps its 100000 invert as IL 100. An unrecognised unit gives Unknown levels and a report line.
+
+- **Switch:** `xcivilImport.landXmlLevelsConvertedToMetres`, ON by default, pinned through both start-up reads. OFF restores the old reading.
+- **Tests:** 155 passed, 0 failed. The net48 compile has 0 errors. Nobody has opened it in AutoCAD.
+- **Files:** `LandXmlParser.cs`, `UserSettings.cs`, `REGRESSION_LOG.md`, one new test file. CE_SHARED is untouched.
+- **Needs a look:** my after-run check found changed files in your real settings folders, including `CD_Settings.json`. They were most likely written by another job's AutoCAD, which started at 05:06. I can't prove that for the 04:59–05:03 outbox files.
+- **Question:** a file with no Units element is still read as metres. Should it be Unknown instead?
+
+Report: `C:\CE_PLAN\areas\BUGFIX_w1053_REPORT_03NOV.md`, pushed. The worktree and scratch folder are removed, which freed about 0.5 GB on C:.

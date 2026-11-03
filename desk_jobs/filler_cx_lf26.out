@@ -1,0 +1,7 @@
+== cx_lf26 (usage 35.0% -> 35.0%): 1. **DONE:** All five bugs skipped because existing draft fixes cover them. BUG-999’s flow decision remains unresolved.
+
+2. **Draft PR:** [#1680](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1680), branch `cx2/bug-998-batch26-audit`, tip `99cae993c2e77a2aeb355d308676747cbf828f26`.
+
+3. **Checks:** Documentation only; 0 tests added/run, 0 builds. Log preserved; both pushes passed leak scanning. Nothing deployed; AutoCAD untouched.
+
+4. **Saved and pushed:** [Report with existing test totals and exact AutoCAD checks](C:/CE_PLAN/areas/CODEX_LEDGER_FIX_BATCH26_23OCT.md).

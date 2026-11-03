@@ -1,0 +1,13 @@
+All 40 PRs are merged on `claude/rel-20261024n`, head `cb105ba8`, pushed. Every live PR head matched the list. The report is pushed to C:\CE_PLAN as `e11e30c7`.
+
+- **One commit of mine:** `cb105ba8` adds a "Default: on." documentation line to the #1419 switch. A required test was red without it, and `git revert cb105ba8` takes it out.
+- **Mistake:** my first merge run left four log headings without a blank line before them. I reset my own unpushed branch and re-ran all 40 merges. The log now matches the base.
+- **Scope:** Shared and Installer are untouched. Manager has two small edits and no new file. The Manager bundle's 75-file count was not re-run.
+- **Settings:** ten bug-fix switches, all on, none with a Settings row. One value, `shallowPitDepthMm` (default 300), has a Settings row.
+- **Tests:**
+  - **Build:** 0 errors on net48, net8 and net10.
+  - **Civil net10:** 20,027 total, 0 failed. The PDF render test flaked in the first full run and when run alone, then passed in the final full run.
+  - **Manager net10:** 955 of 956 pass, 1 skipped.
+  - **Civil net48 focused:** the 17 known reds plus 6 new ones with the same cause, from the new tests of #1601, #1607 and #1616.
+
+Nothing was tested in AutoCAD, and the Installer tests were compiled only.

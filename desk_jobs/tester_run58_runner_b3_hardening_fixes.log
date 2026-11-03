@@ -1,0 +1,11 @@
+All the review fixes are done and pushed. Each case passed, or failed for a real CE fault, in two separate AutoCAD sessions on Civil 3.0.75, and each has a failing broken twin. The report is `C:\CE_PLAN\areas\release-v3-colleagues-RUNNER_B3_FIXES_REPORT.md`.
+
+- **Real faults found:**
+  - A second plain Edit Pipe save turns a flipped flow arrow back (BUG-1222).
+  - ROTATE Copy of a pit gets no label or cover text even with the Settings tick ON (BUG-665). COPY and SCALE Copy are right when it is ON.
+  - The DP1 double-click still opens AutoCAD's own editor (BUG-859).
+  - A floor waste typed at an inspection opening is refused, with no bug entry found.
+- **R01 "1 IN 54":** not a CE fault. CE zooms in after the first pipe, so the second pipe really is 5.4 m long.
+- **R07 red:** a Save press is refused by the v2 allow-list, so the true red uses a new variants-only `settings-set` step instead.
+- **Runner change:** two variants-only steps, `save-copy` and `settings-set`, added to `case_runner_lib.ps1`.
+- **State at the end:** Tim's four settings files were restored by hash, no AutoCAD is left and the lock is free.

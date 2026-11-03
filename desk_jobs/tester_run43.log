@@ -1,0 +1,23 @@
+**FOR TIM:** Run 43 passed 15 checks, failed none, and left one unproven. Nothing needs doing in AutoCAD for this pass.
+
+1. **Structural 1.0.119 starts cleanly.** The status bar reads CE STRUC SUITE v1.0.119, and the Structural log has 0 errors and 0 warnings at start-up. I couldn't prove the Structural ribbon tabs: I saw the toolbars and a "CE Tools" tab, but I didn't open that tab.
+2. **CE_VERSION and CEMEMBER are both gone.** Each one printed `Unknown command` when typed. That's expected until the Manager half is installed.
+3. **Six Structural commands behave as before.** CEHEALTH, CSREOBAR, FEDIT, C1, TS1 and 25C all gave their usual prompts and results. Undo and redo worked on CSREOBAR and 25C.
+4. **Civil regressions identical to run 42.** The Tidy labels preview names the pipe ("pipe P8 -> open end start invert text would move 275 mm"), Recover Inverts gives the same totals, and CDTWL warns at 150 mm. The Edit Pipe cascade with undo and redo worked, and CDSYNC left the Pit Schedule identical except the header count, 95 to 96 issues, as in earlier runs.
+5. **The robot caught a real problem on the PC.** CEHEALTH warns that Manager is installed twice. An old Manager 1.0.0 from 8 July sits in ProgramData next to the real 1.1.66. It should be removed before the Manager half of BUG-852 goes in. I did not remove it.
+6. **The first `quit` failed in both sessions.** It took about 242 s and said AutoCAD did not close gracefully. A second `quit` closed it in about 4 s both times. That makes four sessions out of four since run 42.
+7. **One thing was not clean in my test.** Between Apply and undo in the cascade walk I ran a read-only count and took a screenshot. Undo and redo still passed. I didn't count the old levels after undo, so that part rests on the command echo only.
+8. **Settings restored and AutoCAD closed.** All four settings files hash the same as at the start. The only change was one setting through the guard in session 2, put back and proven by hash. Driver hashes are unchanged, and no AutoCAD is running.
+9. **Report:** `C:\CE_PLAN\areas\release-v3-colleagues-CLAUDE_DRIVER_RUN43_V2_2026-10-21.md`, committed and pushed (b770b482).
+10. **Copies for the desk to delete in `C:\ce_rc_drv`:** `CLD431_B1.dwg`, `CLD431_B1_PRE_C7_20261021_041708.dwg` and `CLD431_S1.dwg`.
+
+**Not tested:**
+- The Manager half of CE_VERSION, which isn't installed yet.
+- The Settings window and About button.
+- The CXREF wording.
+- The footing-width labels.
+
+None of these could be driven under the rules.
+
+AUTOCAD CLOSED
+SETTINGS RESTORED

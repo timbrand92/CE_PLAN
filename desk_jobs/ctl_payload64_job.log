@@ -1,0 +1,24 @@
+The C-37 install candidate is built and checked. It is not installed, and nobody has opened it in AutoCAD.
+
+1. **Branch head:** `74248c1d284e5f1ac7570bc6ac02803692433e8c` on `origin/claude/rel-20261009x`. It is one version-only commit on top of the finalizer's `1cde2fec`, which is the head named in its sign-off. The finalizer added one log-only commit to the assembler's `929c59fd`, so the base is not `929c59fd`. The worktree is clean and local HEAD equals origin.
+2. **Candidate:** `C:\ce_rc_scratch\c1033\`.
+   - Civil bundle: 822 files.
+   - Manager bundle: 78 files.
+3. **Verify line:** `civil: manifest 822 files, verified 822, bad 0, extra 0` and `manager: manifest 78 files, verified 78, bad 0, extra 0`.
+4. **Versions:** all three lanes read Civil 3.0.47+74248c1d and Manager 1.1.47+74248c1d, and `PackageContents` shows 3.0.47 and 1.1.47. Installed now is 3.0.46 / 1.1.46.
+5. **Tests (net10, all green):**
+   - Civil: 37 of 37, including `RedoSafeCallGraphTests` 21 of 21.
+   - Manager: 51 of 51.
+6. **Builds:** the Civil installer build and the Manager 78-file release gate both passed with 0 errors. Neither retired stub is in either bundle.
+7. **CE_SHARED identical, Civil vs Manager:** yes, in all three lanes. It differs from the installed 3.0.46 one by the build stamp only.
+8. **Registry and council profiles:** `command-registry.json` and `council-profiles.json` are the same as the installed ones.
+9. **Natives:** the three native files are the installed bytes, because there are no C++ changes since `660487d1`.
+10. **Tim's files:** `CD_Settings.json` is `ACD64E79…3140` before and after, and the other two settings files did not move. The installed DLLs are unchanged.
+11. **Strings:** the candidate contains the new C-32 names and the C-36 fixes. The C-36 names are also in the installed 3.0.46, as expected.
+
+Three things in the report you should know:
+- **Wrong "new" strings:** my first five were wrong (three already existed in 3.0.46, and one was reworded). I replaced them with type and key names that are truly new, and the corrected check passes. The candidate itself was never at fault.
+- **Settings key names:** the brief's dotted names, such as `options.pipeTextHeight`, are not strings in the DLL. I searched the short names the code actually stores.
+- **Quiet checks:** before the tests, dotnet was quiet on 5 of 6 checks. One check saw a leftover process, and there was no collision.
+
+Report: `C:\Lisp Files\_TEST_COPIES_20260923\PAYLOAD_C1033_REPORT.md`.

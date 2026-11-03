@@ -1,0 +1,17 @@
+The C-75 job files are written and pushed to `C:\CE_PLAN` (`main` is not ahead of `origin/main`). Nothing was started, built, installed or run. The leak scan came back clean.
+
+**Files** (in `desk_jobs`, except the list):
+- `areas\TRAIN_C75_PR_LIST_2026-10-28.md` (three PRs: #1831 BUG-665/672, #1832 BUG-1222, #1833 BUG-1223)
+- `train_c75_assembler_job.txt`, `train_c75_finalizer_job.txt`, `payload111_c75_job.txt`
+- `chain_c75.ps1`, `chain_install_c75.ps1`, `scripts\desk_install_c75.ps1`
+
+**Facts read live:**
+- The base is `claude/rel-20261026y` at `94f521cc`, and the new branch letter `z` was free.
+- The three PR heads are `6f7736c5`, `76171d1e` and `7e93456c`, and all three are clean drafts.
+- The payload report number is `PAYLOAD_C1071_REPORT.md`.
+
+**For the finalizer:**
+- The jobs expect REGRESSION_LOG.md and `UserSettings.cs` to clash and say to keep both sides.
+- #1833 notes that Tim has not ruled on a floor waste at an opening.
+
+I parse-checked the three scripts and checked all seven files for control characters. I did not dry-run any job. I did not check whether `BUG_CARPARK.md` already holds the floor-waste question.

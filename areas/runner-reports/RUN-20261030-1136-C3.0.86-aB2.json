@@ -1,0 +1,2310 @@
+{
+  "header": {
+    "run_id": "RUN-20261030-1136-C3.0.86-aB2",
+    "started": "2026-10-30 11:36:53",
+    "finished": "2026-10-30 11:44:35",
+    "build": {
+      "civil": {
+        "product_version": "3.0.86+5888ee757244aac89283aaaf2ba68e51470ecbb3",
+        "file_version": "3.0.86.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.86+5888ee757244aac89283aaaf2ba68e51470ecbb3",
+        "file_version": "1.1.86.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.86+5888ee75 / struc 1.0.125+204dfad2 / mgr 1.1.86+5888ee75",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "BDDB3F84636E2B52FEEEA43942A370856CA057B9467D497B1CB07EB11451F65A",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.86+5888ee757244aac89283aaaf2ba68e51470ecbb3; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.86+5888ee757244aac89283aaaf2ba68e51470ecbb3",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4CD773B85EC5, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 13955AAA60D1, case_runner_lib.ps1 8F9B8DCBB473, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 7 case file(s) plus 0 shared setup(s); pack SHA-256 BDDB3F84636E2B52FEEEA43942A370856CA057B9467D497B1CB07EB11451F65A; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json B3B5A004B929 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Fri 30 Oct 2026 11:36 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 4,
+    "FAIL": 0,
+    "FAIL_known": 3,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 4
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261030-1136-C3.0.86-aB2-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-30 11:36:55",
+      "finished": "2026-10-30 11:44:35",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31136581_B1.dwg",
+      "cases": [
+        "R32_BROKEN",
+        "R33m",
+        "R32b_BROKEN",
+        "R36e_p2",
+        "R36e_p3",
+        "R36e_p4",
+        "N24_BROKEN"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : B3B5A004B929 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "R32_BROKEN",
+      "proves_bugs": "",
+      "title": "BROKEN VARIANT of R32: the levels are not reversed, so the arrow does not turn (must FAIL)",
+      "kind": "deterministic",
+      "order": 27,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "red-before-green proof for R32",
+      "bug": "",
+      "known_fail": "BROKEN-VARIANT",
+      "reviewed_against": "",
+      "variant_of": "R32",
+      "expected": "This variant is wrong on purpose: with no reversal the arrow keeps rotation 0 and the left IL text stays IL 18.000.",
+      "why_not_unit": "It exists only to prove R32's arrow and IL checks can go red.",
+      "not_automated": [],
+      "file_sha256": "9B522F1E929EB485F8790F05A36A279FF056F2B4F6275E5905D1D6F38B87DE99",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "no match for /rotation.:3\\.14/ in: {\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90237.5,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[]...",
+      "started": "2026-10-30 11:37:30",
+      "seconds": 66.5,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-90000{NL}170000,-90000{NL}\" -Force -ExpectWindow \"New Pipe\" -TimeoutSec 120 -> $t1",
+          "ok": true,
+          "seconds": 13.9,
+          "evidence": "typed 'CD 150000,-90000 170000,-90000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-90000 | Specify second point: 170000,-90000 | Se..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 9.1,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: "
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.900\"",
+          "ok": true,
+          "seconds": 9.2,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.900: "
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $t2",
+          "ok": true,
+          "seconds": 26.9,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $e1",
+          "ok": true,
+          "seconds": 2.7,
+          "evidence": "esc-prompt: [CE] End is free: open end flagged, connect it later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: Open end -> Open end | [CE] Pipe placed. Pick the next pipe's first point, or pre..."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $newA",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "5 object(s) after index 1034 (model space now 1039); by type: AcDbBlockReference 1; AcDbMText 3; CeCvlPipeObject 1; first: 11C55B CeCvlPipeObject STORMWATER PIPE ; 11C561 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 200 ; 11C566 AcDbMText 20TEXT IL 18.000 ; 11C56B AcDbMText 20TEXT IL 17.900 ; 11C58D AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $newA \"name~ARROW\" -> $arA",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 5: 11C58D TIM_CVL_ARROW ARROW"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $arA handle -> $haA",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C58D"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$haA} -> $arrowA1",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "ent-read 11C58D: {\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90237.5,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-90237.5,160375.0,-902..."
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $newA \"text~^IL \" -> $ilA",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 2 of 5: 11C566 IL 18.000 20TEXT ; 11C56B IL 17.900 20TEXT"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $ilA text -All -> $ilA_text",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = IL 18.000 | IL 17.900"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "matches $arrowA1 \"rotation.:3\\.14\"",
+          "ok": false,
+          "expected": "matches /rotation.:3\\.14/",
+          "actual": "{\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90237.5,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[]...",
+          "evidence": "no match for /rotation.:3\\.14/ in: {\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90237.5,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[]..."
+        },
+        {
+          "n": 2,
+          "text": "matches $ilA_text \"^IL 17\\.900 \\| IL 18\\.000$\"",
+          "ok": false,
+          "expected": "matches /^IL 17\\.900 \\| IL 18\\.000$/",
+          "actual": "IL 18.000 | IL 17.900",
+          "evidence": "no match for /^IL 17\\.900 \\| IL 18\\.000$/ in: IL 18.000 | IL 17.900"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 65 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CD completed 59827 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-30 11:38:36",
+      "session_id": "RUN-20261030-1136-C3.0.86-aB2-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [
+          "known failure (BROKEN-VARIANT): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R33m",
+      "proves_bugs": "BUG-672 message half only (the sentence about the skipped cover text); the copy behaviour half is R33",
+      "title": "COPY of a pit with 25TEXT locked: the reply names layer 25TEXT and says what to do, and does not claim the copy has no label",
+      "kind": "deterministic",
+      "order": 32,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "Native protection rule: locked pit text layers (triage group L1); BUG-672 message half",
+      "bug": "BUG-672",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "With 25TEXT locked, COPY of pit P3 by 0,-5000 prints \"1 pit copied and numbered as new.\", adds one pit block and one PIT LABEL block reading a number that is not P3 and no \"CL\" text, and the CE line about the skipped text names layer 25TEXT and says \"Undo (U), unlock layer 25TEXT, then copy again.\" It must NOT say \"no label\", because a label was drawn. One U takes the copy back. The drawing file on disk is unchanged.",
+      "why_not_unit": "It needs AutoCAD's real layer lock and the real COPY clean-up.",
+      "not_automated": [
+        "The wording the desk wants instead of \"no label or cover text\" is not recorded; the case only rejects the false claim and pins the layer name and the recovery sentence. The label appearance is a Codex look."
+      ],
+      "file_sha256": "EC896953A560D8BA6F6DACA42152827C8369A69D988F6C4A3450AB034FD6C663",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-30 11:38:36",
+      "seconds": 31.8,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV31136581_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.-LAYER{NL}_LOCK{NL}25TEXT{NL}{NL}\" -Force -> $lk2",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "typed '_.-LAYER _LOCK 25TEXT': Command: _.-LAYER | Current layer: \"BLOCKS\" | Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _LOCK | Enter name lis..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"109D56\"",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "pick-first 109D56: Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"109D56\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2PICKFIRST \"..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.COPY{NL}0,0{NL}0,-5000{NL}{NL}\" -Force -> $cp1",
+          "ok": true,
+          "seconds": 2.4,
+          "evidence": "typed '_.COPY 0,0 0,-5000': Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as displacement>: 0,-5000 |..."
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $cp1e",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "esc-prompt: [CE] Pit schedule cell for P5 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P6 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P7 (lid..."
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1036 objects"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $newcp",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "2 object(s) after index 1034 (model space now 1036); by type: AcDbBlockReference 2; first: 11C55B AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C575 AcDbBlockReference STORMWATER PIT LABEL PIT LABEL"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $newcp \"name~^PIT BLOCK\" -> $cp_pit",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C55B PIT BLOCK 3 STORMWATER PIT"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $newcp \"name~^PIT LABEL\" -> $cp_label",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C575 PIT LABEL STORMWATER PIT LABEL"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $cp_label handle -> $hcpl",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C575"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$hcpl} -> $cpl",
+          "ok": true,
+          "seconds": 0.4,
+          "evidence": "ent-read 11C575: {\"handle\":\"11C575\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.88923993723,-31238.287379591762,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"PIT_LA..."
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $newcp \"text~^CL \" -> $cp_cover",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 2: "
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -Force -> $u1",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "typed 'U': Command: U | COPY"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c3",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.-LAYER{NL}_UNLOCK{NL}25TEXT{NL}{NL}\" -Force -> $ul2",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "typed '_.-LAYER _UNLOCK 25TEXT': Command: | Command: _.-LAYER | Current layer: \"BLOCKS\" | Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _UNLOCK | E..."
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31136581_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "contains $cp1 \"1 pit copied and numbered as new.\"",
+          "ok": true,
+          "expected": "contains '1 pit copied and numbered as new.'",
+          "actual": "Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as disp...",
+          "evidence": "found '1 pit copied and numbered as new.' in: Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second p..."
+        },
+        {
+          "n": 2,
+          "text": "contains $cp1 \"layer 25TEXT is locked\"",
+          "ok": true,
+          "expected": "contains 'layer 25TEXT is locked'",
+          "actual": "Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as disp...",
+          "evidence": "found 'layer 25TEXT is locked' in: Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second p..."
+        },
+        {
+          "n": 3,
+          "text": "contains $cp1 \"Undo (U), unlock layer 25TEXT, then copy again.\"",
+          "ok": true,
+          "expected": "contains 'Undo (U), unlock layer 25TEXT, then copy again.'",
+          "actual": "Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as disp...",
+          "evidence": "found 'Undo (U), unlock layer 25TEXT, then copy again.' in: Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second p..."
+        },
+        {
+          "n": 4,
+          "text": "count $cp_pit = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $cp_pit = 1 (expected = 1)"
+        },
+        {
+          "n": 5,
+          "text": "count $cp_label = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $cp_label = 1 (expected = 1)"
+        },
+        {
+          "n": 6,
+          "text": "count $cp_cover = 0",
+          "ok": true,
+          "expected": "count = 0",
+          "actual": "0",
+          "evidence": "count of $cp_cover = 0 (expected = 0)"
+        },
+        {
+          "n": 7,
+          "text": "matches $cpl \"text.:.P(?!3.,)[0-9]+.,.insertion\"",
+          "ok": true,
+          "expected": "matches /text.:.P(?!3.,)[0-9]+.,.insertion/",
+          "actual": "{\"handle\":\"11C575\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.88923993723,-31238.287379591762,0.0],\"rotation\":0.0,\"...",
+          "evidence": "matched 'text\":\"P8\",\"insertion'"
+        },
+        {
+          "n": 8,
+          "text": "equals $c3 $c0",
+          "ok": true,
+          "expected": "1034",
+          "actual": "1034",
+          "evidence": "value '1034' (expected '1034')"
+        },
+        {
+          "n": 9,
+          "text": "not-contains $win_end \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31136581_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV31136581_B1.dwg]"
+        },
+        {
+          "n": 10,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 11,
+          "text": "not-contains $cp1 \"no label\"",
+          "ok": true,
+          "expected": "does not contain 'no label'",
+          "actual": "Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as disp...",
+          "evidence": "'no label' is absent from: Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second p..."
+        },
+        {
+          "n": 12,
+          "text": "contains $cp1 \"got their own number but no cover text\"",
+          "ok": true,
+          "expected": "contains 'got their own number but no cover text'",
+          "actual": "Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as disp...",
+          "evidence": "found 'got their own number but no cover text' in: Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second p..."
+        },
+        {
+          "n": 13,
+          "text": "record $cp1 \"FULL COPY with 25TEXT locked\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as displacement>: 0,-5000 | Specify second point or [Array/Exit/Undo] <Exit>: | 1 pit copied and numbered as new. Check levels: they came across from the originals (the Inspector shows which ones to confirm). | [CE] 1 copied pit(s) got their own number but no cover text: layer 25TEXT is locked, and CE does not draw on it. Undo (U), unlock layer 25TEXT, then copy again. | [CE] Pit schedule cell for C1 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for C1 (inlet from) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for C1 (inlet from) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P1 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P1 (inlet from) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P1 (inlet from) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P2 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P3 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P4 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P5 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P6 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P7 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] The drawn pit schedule still shows the old values. Unlock the layer or finish the reference edit, then run PITEDIT on the pit or Update existing schedule in PITSCHEDULE. | Command:",
+          "evidence": "RECORDED, not judged: FULL COPY with 25TEXT locked = Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as displacement>: 0,-5000 | Specify second point or [Array/Exit/Undo] <Exit>: | 1 pit copied and numbered as new. Check levels: they came across from the originals (the Inspector shows which ones to confirm). | [CE] 1 copied pit(s) got their own number but no cover text: layer 25TEXT is locked, and CE does not draw on it. Undo (U), unlock layer 25TEXT, then copy again. | [CE] Pit schedule cell for C1 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for C1 (inlet from) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for C1 (inlet from) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P1 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P1 (inlet from) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P1 (inlet from) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P2 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P3 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P4 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P5 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P6 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P7 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] The drawn pit schedule still shows the old values. Unlock the layer or finish the reference edit, then run PITEDIT on the pit or Update existing schedule in PITSCHEDULE. | Command:"
+        },
+        {
+          "n": 14,
+          "text": "record $cpl \"FULL the copied pit's label\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C575\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.88923993723,-31238.287379591762,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"PIT_LABEL\",\"text\":\"P8\",\"insertion\":[52325.69824403,-31413.287379591762,0.0],\"rotation\":0.0,\"height\":350.0,\"alignment\":10,\"align_point\":[52570.88923993723,-31238.287379591762,0.0],\"bbox\":[52325.69824403,-31419.256001692716,52816.080235844456,-31061.854910287533]}],\"bbox\":[52170.88923993723,-31638.287379591762,52970.88923993723,-30838.287379591762],\"block_parts\":[{\"index\":0,\"object\":\"AcDbWipeout\",\"layer\":\"50CONT\",\"color\":256},{\"index\":1,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"35TEXT\",\"color\":256,\"tag\":\"PIT_LABEL\",\"world_insertion\":[52325.69824403,-31413.287379591762]}]}",
+          "evidence": "RECORDED, not judged: FULL the copied pit's label = {\"handle\":\"11C575\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.88923993723,-31238.287379591762,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"PIT_LABEL\",\"text\":\"P8\",\"insertion\":[52325.69824403,-31413.287379591762,0.0],\"rotation\":0.0,\"height\":350.0,\"alignment\":10,\"align_point\":[52570.88923993723,-31238.287379591762,0.0],\"bbox\":[52325.69824403,-31419.256001692716,52816.080235844456,-31061.854910287533]}],\"bbox\":[52170.88923993723,-31638.287379591762,52970.88923993723,-30838.287379591762],\"block_parts\":[{\"index\":0,\"object\":\"AcDbWipeout\",\"layer\":\"50CONT\",\"color\":256},{\"index\":1,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"35TEXT\",\"color\":256,\"tag\":\"PIT_LABEL\",\"world_insertion\":[52325.69824403,-31413.287379591762]}]}"
+        },
+        {
+          "n": 15,
+          "text": "record $u1 \"FULL what U echoed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: U | COPY",
+          "evidence": "RECORDED, not judged: FULL what U echoed = Command: U | COPY"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV31136581_B1_11870efa4.log)",
+        "Civil CE log: 46 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-10-30 11:39:08",
+      "session_id": "RUN-20261030-1136-C3.0.86-aB2-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "no independent review: the independent review (R33m_copy_message_does_not_claim_no_label.review.txt) was written for a different text of the case (SHA-256 differs): it must be reviewed again (a REVIEWED_AGAINST line written by the builder does not count)",
+          "bug case (BUG-672) has no recorded FAIL on an earlier build or on a deliberately broken variant"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R32b_BROKEN",
+      "proves_bugs": "",
+      "title": "BROKEN VARIANT of R32b: the control pipe B is not edited, so it keeps 225 DIA. and the two-label check must FAIL",
+      "kind": "deterministic",
+      "order": 94,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "red-before-green proof for R32b (the two-label check)",
+      "bug": "",
+      "known_fail": "BROKEN-VARIANT",
+      "reviewed_against": "",
+      "variant_of": "R32b",
+      "expected": "This variant is wrong on purpose: pipe B is not given 150 DIA., so its label still reads 225 DIA. and the combined label text does not match.",
+      "why_not_unit": "It exists only to prove the two-label check of R32b can go red.",
+      "not_automated": [
+        "That the picture of the arrow looks right is a Codex look. Pipes on pits (levels from the pits) are not driven."
+      ],
+      "file_sha256": "518A2AEA722EA344254230269EBA8C34875F4365A0534BA099B11DC130FE94E1",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "no match for /^150 DIA\\. UPVC PIPE AT 1 IN 200 \\| 150 DIA\\. UPVC PIPE AT 1 IN 200$/ in: 150 DIA. UPVC PIPE AT 1 IN 200 | 225 DIA. UPVC PIPE AT 1 IN 200",
+      "started": "2026-10-30 11:39:08",
+      "seconds": 198.2,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV31136581_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-90000{NL}170000,-90000{NL}\" -Force -ExpectWindow \"New Pipe\" -TimeoutSec 120 -> $t1",
+          "ok": true,
+          "seconds": 15.9,
+          "evidence": "typed 'CD 150000,-90000 170000,-90000': Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-90000 | Specify second point: 170000,-90000 | Select point ..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 4.4,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: "
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.900\"",
+          "ok": true,
+          "seconds": 6.3,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.900: "
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $t2",
+          "ok": true,
+          "seconds": 26.9,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $e1",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "esc-prompt: [CE] End is free: open end flagged, connect it later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: Open end -> Open end | [CE] Pipe placed. Pick the next pipe's first point, or pre..."
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $newA",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "5 object(s) after index 1034 (model space now 1039); by type: AcDbBlockReference 1; AcDbMText 3; CeCvlPipeObject 1; first: 11C55B CeCvlPipeObject STORMWATER PIPE ; 11C561 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 200 ; 11C566 AcDbMText 20TEXT IL 18.000 ; 11C56B AcDbMText 20TEXT IL 17.900 ; 11C58D AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $newA \"object~^CeCvlPipeObject$\" -> $npA",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 5: 11C55B STORMWATER PIPE"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $npA handle -> $hpA",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C55B"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $newA \"name~ARROW\" -> $arA",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 5: 11C58D TIM_CVL_ARROW ARROW"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $arA handle -> $haA",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C58D"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-92000{NL}170000,-92000{NL}\" -Force -ExpectWindow \"New Pipe\" -TimeoutSec 120 -> $t3",
+          "ok": true,
+          "seconds": 8.5,
+          "evidence": "typed 'CD 150000,-92000 170000,-92000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-92000 | Specify second point: 170000,-92000 | Se..."
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 3.5,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: "
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.900\"",
+          "ok": true,
+          "seconds": 3.6,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.900: "
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $t4",
+          "ok": true,
+          "seconds": 25.9,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $e2",
+          "ok": true,
+          "seconds": 2.7,
+          "evidence": "esc-prompt: [CE] End is free: open end flagged, connect it later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: Open end -> Open end | [CE] Pipe placed. Pick the next pipe's first point, or pre..."
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $newB",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "10 object(s) after index 1034 (model space now 1044); by type: AcDbBlockReference 2; AcDbMText 6; CeCvlPipeObject 2; first: 11C55B CeCvlPipeObject STORMWATER PIPE ; 11C561 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 200 ; 11C566 AcDbMText 20TEXT IL 18.000 ; 11C56B AcDbMText 20TEXT IL 17.900 ; 11C58D AcDbBlockReference ARROW TIM_CVL_ARROW ; 11C592 CeCvlPipeObject STORMWATER PIPE ; 11C598 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 200 ; 11C59D AcDbMText 20TEXT IL 18.000 ; 11C5A2 AcDbMText 20TEXT IL 17.900 ; 11C5C4 AcDbBlockReference ARROW ..."
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $newB \"object~^CeCvlPipeObject$\" \"handle~^(?!{$hpA}$)\" -> $npB",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 10: 11C592 STORMWATER PIPE"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $npB handle -> $hpB",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C592"
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $newB \"name~ARROW\" \"handle~^(?!{$haA}$)\" -> $arB",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 10: 11C5C4 TIM_CVL_ARROW ARROW"
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $arB handle -> $haB",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C5C4"
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"{$hpA}\"",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "pick-first 11C55B: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"11C55B\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDEDIT\" -Force -ExpectWindow \"Edit Pipe\" -TimeoutSec 120 -> $edA",
+          "ok": true,
+          "seconds": 8.5,
+          "evidence": "typed 'CDEDIT': Command: | Command: CDEDIT"
+        },
+        {
+          "n": 29,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"Edit Pipe\" \"C2.FirstInvert\" \"17.900\"",
+          "ok": true,
+          "seconds": 3.6,
+          "evidence": "ui set 'Edit Pipe' C2.FirstInvert = 17.900: "
+        },
+        {
+          "n": 30,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"Edit Pipe\" \"C2.SecondInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 3.7,
+          "evidence": "ui set 'Edit Pipe' C2.SecondInvert = 18.000: "
+        },
+        {
+          "n": 31,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Edit Pipe\" \"Edit pipe, Save\" -> $svA",
+          "ok": true,
+          "seconds": 14.4,
+          "evidence": "pressed 'Edit pipe, Save' in /Edit Pipe/: window closed = True"
+        },
+        {
+          "n": 32,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 6",
+          "ok": true,
+          "seconds": 6.0,
+          "evidence": "slept 6 s"
+        },
+        {
+          "n": 33,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $hA",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "esc-prompt: Command: | Command: CDEDIT | Pipe updated."
+        },
+        {
+          "n": 34,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 35,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$haA} -> $arrowA1",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "ent-read 11C58D: {\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90237.5,0.0],\"rotation\":3.141592653589793,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-90237.5..."
+        },
+        {
+          "n": 36,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"{$hpA}\"",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "pick-first 11C55B: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"11C55B\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 37,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDEDIT\" -Force -ExpectWindow \"Edit Pipe\" -TimeoutSec 120 -> $edC",
+          "ok": true,
+          "seconds": 7.6,
+          "evidence": "typed 'CDEDIT': Command: | Command: CDEDIT"
+        },
+        {
+          "n": 38,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Edit Pipe\" -> $edC_dump",
+          "ok": true,
+          "seconds": 5.8,
+          "evidence": "ui-dump 'Creative Engineering | Edit Pipe': 103 controls, tabs: "
+        },
+        {
+          "n": 39,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"Edit Pipe\" \"C2.Diameter\" \"150\"",
+          "ok": true,
+          "seconds": 4.2,
+          "evidence": "ui set 'Edit Pipe' C2.Diameter = 150: "
+        },
+        {
+          "n": 40,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Edit Pipe\" \"Edit pipe, Save\" -> $svC",
+          "ok": true,
+          "seconds": 14.9,
+          "evidence": "pressed 'Edit pipe, Save' in /Edit Pipe/: window closed = True"
+        },
+        {
+          "n": 41,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 6",
+          "ok": true,
+          "seconds": 6.0,
+          "evidence": "slept 6 s"
+        },
+        {
+          "n": 42,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $hC",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "esc-prompt: Command: | Command: CDEDIT | Pipe updated."
+        },
+        {
+          "n": 43,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 44,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$haA} -> $arrowA2",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "ent-read 11C58D: {\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90200.0,0.0],\"rotation\":3.141592653589793,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-90200.0..."
+        },
+        {
+          "n": 45,
+          "phase": "case",
+          "verb": "set",
+          "text": "set $hD \"Pipe updated. (pipe B was not edited on purpose)\"",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "set $hD"
+        },
+        {
+          "n": 46,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$haB} -> $arrowB2",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "ent-read 11C5C4: {\"handle\":\"11C5C4\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-92237.5,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-92237.5,160375.0,-922..."
+        },
+        {
+          "n": 47,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $after",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "10 object(s) after index 1034 (model space now 1044); by type: AcDbBlockReference 2; AcDbMText 6; CeCvlPipeObject 2; first: 11C55B CeCvlPipeObject STORMWATER PIPE ; 11C561 AcDbMText 25TEXT 150 DIA. UPVC PIPE AT 1 IN 200 ; 11C566 AcDbMText 20TEXT IL 17.900 ; 11C56B AcDbMText 20TEXT IL 18.000 ; 11C58D AcDbBlockReference ARROW TIM_CVL_ARROW ; 11C592 CeCvlPipeObject STORMWATER PIPE ; 11C598 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 200 ; 11C59D AcDbMText 20TEXT IL 18.000 ; 11C5A2 AcDbMText 20TEXT IL 17.900 ; 11C5C4 AcDbBlockReference ARROW ..."
+        },
+        {
+          "n": 48,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after \"text~^IL 1[78]\\.\" -> $ilx",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 4 of 10: 11C566 IL 17.900 20TEXT ; 11C56B IL 18.000 20TEXT ; 11C59D IL 18.000 20TEXT ; 11C5A2 IL 17.900 20TEXT"
+        },
+        {
+          "n": 49,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $ilx text -All -> $il_text",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = IL 17.900 | IL 18.000 | IL 18.000 | IL 17.900"
+        },
+        {
+          "n": 50,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after \"text~^IL 17\\.900$\" \"y~^-(89|90)[0-9]{3}\" -> $a17",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 10: 11C566 IL 17.900 20TEXT"
+        },
+        {
+          "n": 51,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $a17 x -> $xa17",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 150200"
+        },
+        {
+          "n": 52,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after \"text~^IL 18\\.000$\" \"y~^-(89|90)[0-9]{3}\" -> $a18",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 10: 11C56B IL 18.000 20TEXT"
+        },
+        {
+          "n": 53,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $a18 x -> $xa18",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 169800"
+        },
+        {
+          "n": 54,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after \"text~DIA\\. \" -> $lab",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 2 of 10: 11C561 150 DIA. UPVC PIPE AT 1 IN 200 25TEXT ; 11C598 225 DIA. UPVC PIPE AT 1 IN 200 25TEXT"
+        },
+        {
+          "n": 55,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $lab text -All -> $lab_text",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = 150 DIA. UPVC PIPE AT 1 IN 200 | 225 DIA. UPVC PIPE AT 1 IN 200"
+        },
+        {
+          "n": 56,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31136581_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "matches $arrowA1 \"rotation.:3\\.14\"",
+          "ok": true,
+          "expected": "matches /rotation.:3\\.14/",
+          "actual": "{\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90237.5,0.0],\"rotation\":3.141592653589793,\"xscale\":1.0,\"...",
+          "evidence": "matched 'rotation\":3.14'"
+        },
+        {
+          "n": 2,
+          "text": "contains $hC \"Pipe updated.\"",
+          "ok": true,
+          "expected": "contains 'Pipe updated.'",
+          "actual": "Command: | Command: CDEDIT | Pipe updated.",
+          "evidence": "found 'Pipe updated.' in: Command: | Command: CDEDIT | Pipe updated."
+        },
+        {
+          "n": 3,
+          "text": "not-contains $hC \"uphill\"",
+          "ok": true,
+          "expected": "does not contain 'uphill'",
+          "actual": "Command: | Command: CDEDIT | Pipe updated.",
+          "evidence": "'uphill' is absent from: Command: | Command: CDEDIT | Pipe updated."
+        },
+        {
+          "n": 4,
+          "text": "not-contains $hC \"Warning\"",
+          "ok": true,
+          "expected": "does not contain 'Warning'",
+          "actual": "Command: | Command: CDEDIT | Pipe updated.",
+          "evidence": "'Warning' is absent from: Command: | Command: CDEDIT | Pipe updated."
+        },
+        {
+          "n": 5,
+          "text": "matches $arrowB2 \"rotation.:0\\.0,\"",
+          "ok": true,
+          "expected": "matches /rotation.:0\\.0,/",
+          "actual": "{\"handle\":\"11C5C4\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-92237.5,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[]...",
+          "evidence": "matched 'rotation\":0.0,'"
+        },
+        {
+          "n": 6,
+          "text": "contains $hD \"Pipe updated.\"",
+          "ok": true,
+          "expected": "contains 'Pipe updated.'",
+          "actual": "Pipe updated. (pipe B was not edited on purpose)",
+          "evidence": "found 'Pipe updated.' in: Pipe updated. (pipe B was not edited on purpose)"
+        },
+        {
+          "n": 7,
+          "text": "contains $lab_text \"150 DIA.\"",
+          "ok": true,
+          "expected": "contains '150 DIA.'",
+          "actual": "150 DIA. UPVC PIPE AT 1 IN 200 | 225 DIA. UPVC PIPE AT 1 IN 200",
+          "evidence": "found '150 DIA.' in: 150 DIA. UPVC PIPE AT 1 IN 200 | 225 DIA. UPVC PIPE AT 1 IN 200"
+        },
+        {
+          "n": 8,
+          "text": "count $lab = 2",
+          "ok": true,
+          "expected": "count = 2",
+          "actual": "2",
+          "evidence": "count of $lab = 2 (expected = 2)"
+        },
+        {
+          "n": 9,
+          "text": "matches $lab_text \"^150 DIA\\. UPVC PIPE AT 1 IN 200 \\| 150 DIA\\. UPVC PIPE AT 1 IN 200$\"",
+          "ok": false,
+          "expected": "matches /^150 DIA\\. UPVC PIPE AT 1 IN 200 \\| 150 DIA\\. UPVC PIPE AT 1 IN 200$/",
+          "actual": "150 DIA. UPVC PIPE AT 1 IN 200 | 225 DIA. UPVC PIPE AT 1 IN 200",
+          "evidence": "no match for /^150 DIA\\. UPVC PIPE AT 1 IN 200 \\| 150 DIA\\. UPVC PIPE AT 1 IN 200$/ in: 150 DIA. UPVC PIPE AT 1 IN 200 | 225 DIA. UPVC PIPE AT 1 IN 200"
+        },
+        {
+          "n": 10,
+          "text": "matches $arrowA2 \"rotation.:3\\.14\"",
+          "ok": true,
+          "expected": "matches /rotation.:3\\.14/",
+          "actual": "{\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90200.0,0.0],\"rotation\":3.141592653589793,\"xscale\":1.0,\"...",
+          "evidence": "matched 'rotation\":3.14'"
+        },
+        {
+          "n": 11,
+          "text": "count $a17 = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $a17 = 1 (expected = 1)"
+        },
+        {
+          "n": 12,
+          "text": "count $a18 = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $a18 = 1 (expected = 1)"
+        },
+        {
+          "n": 13,
+          "text": "number $xa17 < 160000",
+          "ok": true,
+          "expected": "< 160000",
+          "actual": "150200",
+          "evidence": "$xa17 = 150200 (expected < 160000)"
+        },
+        {
+          "n": 14,
+          "text": "number $xa18 > 160000",
+          "ok": true,
+          "expected": "> 160000",
+          "actual": "169800",
+          "evidence": "$xa18 = 169800 (expected > 160000)"
+        },
+        {
+          "n": 15,
+          "text": "not-contains $win_end \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31136581_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV31136581_B1.dwg]"
+        },
+        {
+          "n": 16,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 17,
+          "text": "record $edC_dump \"FULL Edit Pipe on the second open (boxes and the Flow header)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"title\":\"Creative Engineering | Edit Pipe\",\"handle\":7411092,\"class\":\"Window\",\"source\":\"win32\",\"bounds\":[2016,50,1728,972],\"control_count\":103,\"truncated\":false,\"tabs\":[],\"controls\":[{\"type\":\"TitleBar\",\"name\":\"Creative Engineering | Edit Pipe\",\"id\":\"TitleBar\",\"class\":\"\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2024,58,1712,23]},{\"type\":\"MenuBar\",\"name\":\"System Menu Bar\",\"id\":\"SystemMenuBar\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2024,58,22,22]},{\"type\":\"MenuItem\",\"name\":\"System\",\"id\":\"Item 1\",\"class\":\"\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2024,58,22,22]},{\"type\":\"Button\",\"name\":\"Close\",\"id\":\"Close\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3703,51,34,30]},{\"type\":\"Image\",\"name\":\"\",\"id\":\"\",\"class\":\"Image\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2055,101,28,28]},{\"type\":\"Text\",\"name\":\"Edit Pipe\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2095,104,68,22]},{\"type\":\"Text\",\"name\":\"Flow: Open end → Open end\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2175,105,195,20]},{\"type\":\"Text\",\"name\":\"Stormwater pipe · 225 mm · UPVC\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2382,108,163,14]},{\"type\":\"Custom\",\"name\":\"\",\"id\":\"\",\"class\":\"StatusChip\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[3393,91,312,48]},{\"type\":\"Text\",\"name\":\"The levels fall from point 2 to point 1; CE records that as the flow direction.\",\"id\":\"LabelText\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3422,98,272,29]},{\"type\":\"Button\",\"name\":\"Inspect drawing and retain pending edits\",\"id\":\"C2.InspectDrawingCommand\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2040,974,119,36]},{\"type\":\"Text\",\"name\":\"Inspect Drawing\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2057,984,85,16]},{\"type\":\"Button\",\"name\":\"Edit pipe, More\",\"id\":\"PipeEditWorkshopDialog.More\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2167,974,80,36]},{\"type\":\"Text\",\"name\":\"More…\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2189,984,37,16]},{\"type\":\"Button\",\"name\":\"Edit pipe, Review changes\",\"id\":\"PipeEditWorkshopDialog.Review.changes\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2255,974,116,36]},{\"type\":\"Text\",\"name\":\"Review changes\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2271,984,84,16]},{\"type\":\"ComboBox\",\"name\":\"Edit pipe, Plan label to edit\",\"id\":\"PipeEditWorkshopDialog.SelectedKey\",\"class\":\"ComboBox\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2383,974,170,36]},{\"type\":\"Button\",\"name\":\"Cancel without saving\",\"id\":\"C2.CancelCommand\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[3494,974,86,36]},{\"type\":\"Text\",\"name\":\"Cancel\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3519,984,36,16]},{\"type\":\"Button\",\"name\":\"Edit pipe, Save\",\"id\":\"C2.OkCommand\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[3590,974,130,36]},{\"type\":\"Text\",\"name\":\"Save\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3643,984,24,16]},{\"type\":\"Text\",\"name\":\"ENGINEERING\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2040,197,828,20]},{\"type\":\"Button\",\"name\":\"Stormwater\",\"id\":\"C2.IsStormwaterPipe\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2040,217,78,28],\"toggle\":\"On\"},{\"type\":\"Text\",\"name\":\"Stormwater\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2051,224,56,15]},{\"type\":\"Button\",\"name\":\"Suspended\",\"id\":\"C2.IsSuspendedPipe\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2124,217,76,28],\"toggle\":\"Off\"},{\"type\":\"Text\",\"name\":\"Suspended\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"ena...",
+          "evidence": "RECORDED, not judged: FULL Edit Pipe on the second open (boxes and the Flow header) = {\"title\":\"Creative Engineering | Edit Pipe\",\"handle\":7411092,\"class\":\"Window\",\"source\":\"win32\",\"bounds\":[2016,50,1728,972],\"control_count\":103,\"truncated\":false,\"tabs\":[],\"controls\":[{\"type\":\"TitleBar\",\"name\":\"Creative Engineering | Edit Pipe\",\"id\":\"TitleBar\",\"class\":\"\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2024,58,1712,23]},{\"type\":\"MenuBar\",\"name\":\"System Menu Bar\",\"id\":\"SystemMenuBar\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2024,58,22,22]},{\"type\":\"MenuItem\",\"name\":\"System\",\"id\":\"Item 1\",\"class\":\"\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2024,58,22,22]},{\"type\":\"Button\",\"name\":\"Close\",\"id\":\"Close\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3703,51,34,30]},{\"type\":\"Image\",\"name\":\"\",\"id\":\"\",\"class\":\"Image\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2055,101,28,28]},{\"type\":\"Text\",\"name\":\"Edit Pipe\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2095,104,68,22]},{\"type\":\"Text\",\"name\":\"Flow: Open end → Open end\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2175,105,195,20]},{\"type\":\"Text\",\"name\":\"Stormwater pipe · 225 mm · UPVC\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2382,108,163,14]},{\"type\":\"Custom\",\"name\":\"\",\"id\":\"\",\"class\":\"StatusChip\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[3393,91,312,48]},{\"type\":\"Text\",\"name\":\"The levels fall from point 2 to point 1; CE records that as the flow direction.\",\"id\":\"LabelText\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3422,98,272,29]},{\"type\":\"Button\",\"name\":\"Inspect drawing and retain pending edits\",\"id\":\"C2.InspectDrawingCommand\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2040,974,119,36]},{\"type\":\"Text\",\"name\":\"Inspect Drawing\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2057,984,85,16]},{\"type\":\"Button\",\"name\":\"Edit pipe, More\",\"id\":\"PipeEditWorkshopDialog.More\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2167,974,80,36]},{\"type\":\"Text\",\"name\":\"More…\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2189,984,37,16]},{\"type\":\"Button\",\"name\":\"Edit pipe, Review changes\",\"id\":\"PipeEditWorkshopDialog.Review.changes\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2255,974,116,36]},{\"type\":\"Text\",\"name\":\"Review changes\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2271,984,84,16]},{\"type\":\"ComboBox\",\"name\":\"Edit pipe, Plan label to edit\",\"id\":\"PipeEditWorkshopDialog.SelectedKey\",\"class\":\"ComboBox\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2383,974,170,36]},{\"type\":\"Button\",\"name\":\"Cancel without saving\",\"id\":\"C2.CancelCommand\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[3494,974,86,36]},{\"type\":\"Text\",\"name\":\"Cancel\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3519,984,36,16]},{\"type\":\"Button\",\"name\":\"Edit pipe, Save\",\"id\":\"C2.OkCommand\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[3590,974,130,36]},{\"type\":\"Text\",\"name\":\"Save\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3643,984,24,16]},{\"type\":\"Text\",\"name\":\"ENGINEERING\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2040,197,828,20]},{\"type\":\"Button\",\"name\":\"Stormwater\",\"id\":\"C2.IsStormwaterPipe\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2040,217,78,28],\"toggle\":\"On\"},{\"type\":\"Text\",\"name\":\"Stormwater\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2051,224,56,15]},{\"type\":\"Button\",\"name\":\"Suspended\",\"id\":\"C2.IsSuspendedPipe\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2124,217,76,28],\"toggle\":\"Off\"},{\"type\":\"Text\",\"name\":\"Suspended\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"ena..."
+        },
+        {
+          "n": 18,
+          "text": "record $arrowA1 \"FULL arrow A after the reversing save\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90237.5,0.0],\"rotation\":3.141592653589793,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-90237.5,160375.0,-90237.5],\"block_parts\":[{\"index\":0,\"object\":\"AcDbLeader\",\"layer\":\"25DIMS\",\"color\":256}]}",
+          "evidence": "RECORDED, not judged: FULL arrow A after the reversing save = {\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90237.5,0.0],\"rotation\":3.141592653589793,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-90237.5,160375.0,-90237.5],\"block_parts\":[{\"index\":0,\"object\":\"AcDbLeader\",\"layer\":\"25DIMS\",\"color\":256}]}"
+        },
+        {
+          "n": 19,
+          "text": "record $hC \"FULL what CE said after the diameter-only save of pipe A\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDEDIT | Pipe updated.",
+          "evidence": "RECORDED, not judged: FULL what CE said after the diameter-only save of pipe A = Command: | Command: CDEDIT | Pipe updated."
+        },
+        {
+          "n": 20,
+          "text": "record $arrowA2 \"FULL arrow A after the diameter-only save\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90200.0,0.0],\"rotation\":3.141592653589793,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-90200.0,160375.0,-90200.0],\"block_parts\":[{\"index\":0,\"object\":\"AcDbLeader\",\"layer\":\"25DIMS\",\"color\":256}]}",
+          "evidence": "RECORDED, not judged: FULL arrow A after the diameter-only save = {\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90200.0,0.0],\"rotation\":3.141592653589793,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-90200.0,160375.0,-90200.0],\"block_parts\":[{\"index\":0,\"object\":\"AcDbLeader\",\"layer\":\"25DIMS\",\"color\":256}]}"
+        },
+        {
+          "n": 21,
+          "text": "record $hD \"FULL what CE said after the diameter-only save of pipe B (control)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Pipe updated. (pipe B was not edited on purpose)",
+          "evidence": "RECORDED, not judged: FULL what CE said after the diameter-only save of pipe B (control) = Pipe updated. (pipe B was not edited on purpose)"
+        },
+        {
+          "n": 22,
+          "text": "record $arrowB2 \"FULL arrow B after the diameter-only save (control)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C5C4\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-92237.5,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-92237.5,160375.0,-92237.5],\"block_parts\":[{\"index\":0,\"object\":\"AcDbLeader\",\"layer\":\"25DIMS\",\"color\":256}]}",
+          "evidence": "RECORDED, not judged: FULL arrow B after the diameter-only save (control) = {\"handle\":\"11C5C4\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-92237.5,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-92237.5,160375.0,-92237.5],\"block_parts\":[{\"index\":0,\"object\":\"AcDbLeader\",\"layer\":\"25DIMS\",\"color\":256}]}"
+        },
+        {
+          "n": 23,
+          "text": "record $il_text \"IL texts at the end\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "IL 17.900 | IL 18.000 | IL 18.000 | IL 17.900",
+          "evidence": "RECORDED, not judged: IL texts at the end = IL 17.900 | IL 18.000 | IL 18.000 | IL 17.900"
+        },
+        {
+          "n": 24,
+          "text": "record $lab_text \"labels at the end\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "150 DIA. UPVC PIPE AT 1 IN 200 | 225 DIA. UPVC PIPE AT 1 IN 200",
+          "evidence": "RECORDED, not judged: labels at the end = 150 DIA. UPVC PIPE AT 1 IN 200 | 225 DIA. UPVC PIPE AT 1 IN 200"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV31136581_B1_1ae870f1f.log)",
+        "Civil CE log: 190 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CD completed 54488 ms ; Command outcome: CD completed 42414 ms ; Command outcome: CDEDIT completed 20076 ms ; Command outcome: CDEDIT completed 22008 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-30 11:42:26",
+      "session_id": "RUN-20261030-1136-C3.0.86-aB2-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [
+          "known failure (BROKEN-VARIANT): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R36e_p2",
+      "proves_bugs": "",
+      "title": "CDFW typed at another inspection opening (51777.389,-30233.425) is refused with CE's plain 'IO2 is already at this point' sentence and places nothing (no 'Civil record changed while you picked' refusal, no rollback)",
+      "kind": "deterministic",
+      "order": 98,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "CDFW floor waste, endpoint-claim route (triage group R3; daily card D07 neighbour); BUG-1223 (the false refusal fixed in C-75; Tim's 29 Oct 2026 ruling: no floor waste on an inspection opening, the plain refusal stays); BUG-147 is related, not the same",
+      "bug": "BUG-1223",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: BUG-1223 in BUG_CARPARK.md; Tim's ruling of 29 Oct 2026 (item 4 of 2026-10-29_TIM_ANSWERS.md) and the C-75 fix report item 4 of Part 1; rewritten 29 Oct 2026 after that ruling, so a fresh independent review of this revised hash is required; BUG-147 is related only.",
+      "variant_of": "",
+      "expected": "CDFW with the point 51777.389,-30233.425 (an inspection opening on pipe ends) is refused with \"IO2 is already at this point, and a new source cannot sit on top of it.\" and adds no FLOOR WASTE block and no text FW; it does not print \"A nearby pipe's Civil record changed\", \"rolled back\" or \"more than one source\". The drawing file on disk is unchanged.",
+      "why_not_unit": "The claim of a pipe end by a block runs against the real pits, pipes and tagged blocks of the live drawing.",
+      "not_automated": [
+        "Batch 6 (28 Oct 2026, Codex cx_cr11 and cx_cr21): the old assertion log civil has \"Landing index changed between preview and pick\" is REMOVED (it required the symptom to stay and would have rejected a correct fix); the whole Civil log of the run is now only RECORDED. There is no U step: nothing is placed, because CE refuses.",
+        "BUG-1223 placement or justified-refusal intent, joined placement, repeat pick and the other three opening points must be proved before whole-bug acceptance (Tim ruled on 29 Oct 2026 that a floor waste is NOT allowed on an inspection opening and CE keeps its plain refusal, so this case asserts the refusal; the point-to-opening numbering (IO1 to IO4 in the order R36e, p2, p3, p4) is read from the c1a and c1b runs of 29 Oct on 3.0.85; the free-pipe-end placement half of BUG-1223 is covered by no case; no pipe-connection reader exists). The three other openings are R36e_p2, R36e_p3 and R36e_p4. CDSOURCE (named in BUG-147 and BUG-132) is not run. Which blocks carry the AGI tag is not read. The typed point is not a mouse pick: whether a real mouse pick at the same place behaves the same is not driven."
+      ],
+      "file_sha256": "323BEA524023620A3B3348273F2CA8C055B60071FAEA15B981B8FFB71A33824E",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-30 11:42:26",
+      "seconds": 21.1,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV31136581_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDFW{NL}51777.389,-30233.425\" -Force -TimeoutSec 90 -> $fw",
+          "ok": true,
+          "seconds": 6.8,
+          "evidence": "typed 'CDFW 51777.389,-30233.425': Command: CDFW | Specify floor waste insertion point: 51777.389,-30233.425 | [CE] IO2 is already at this point, and a new source cannot sit on top of it. Move clear of IO2 and pick again, or press Esc."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $fwe",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "esc-prompt: Command: CDFW | Specify floor waste insertion point: 51777.389,-30233.425 | [CE] IO2 is already at this point, and a new source cannot sit on top of it. Move clear of IO2 and pick again, or press Esc. | Specify floor was..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $fwf",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "esc-prompt: Command: CDFW | Specify floor waste insertion point: 51777.389,-30233.425 | [CE] IO2 is already at this point, and a new source cannot sit on top of it. Move clear of IO2 and pick again, or press Esc. | Specify floor was..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $new",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "0 object(s) after index 1034 (model space now 1034); by type: ; first: "
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"name~^FLOOR WASTE\" -> $fwb",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 0: "
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"text~^FW\" -> $fwt",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 0: "
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31136581_B1.dwg]"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "log-read",
+          "text": "log-read civil -> $fwlog",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "88 new line(s) in the civil CE log since the case began "
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "contains $fw \"IO2 is already at this point, and a new source cannot sit on top of it.\"",
+          "ok": true,
+          "expected": "contains 'IO2 is already at this point, and a new source cannot sit on top of it.'",
+          "actual": "Command: CDFW | Specify floor waste insertion point: 51777.389,-30233.425 | [CE] IO2 is already at this point, and a new source cannot sit on top of it. Move clear of IO2 and pick again, or press Esc.",
+          "evidence": "found 'IO2 is already at this point, and a new source cannot sit on top of it.' in: Command: CDFW | Specify floor waste insertion point: 51777.389,-30233.425 | [CE] IO2 is already at this point, and a new source cannot sit on top of it. Move cl..."
+        },
+        {
+          "n": 2,
+          "text": "not-contains $fw \"Civil record changed\"",
+          "ok": true,
+          "expected": "does not contain 'Civil record changed'",
+          "actual": "Command: CDFW | Specify floor waste insertion point: 51777.389,-30233.425 | [CE] IO2 is already at this point, and a new source cannot sit on top of it. Move clear of IO2 and pick again, or press Esc.",
+          "evidence": "'Civil record changed' is absent from: Command: CDFW | Specify floor waste insertion point: 51777.389,-30233.425 | [CE] IO2 is already at this point, and a new source cannot sit on top of it. Move cl..."
+        },
+        {
+          "n": 3,
+          "text": "not-contains $fw \"rolled back\"",
+          "ok": true,
+          "expected": "does not contain 'rolled back'",
+          "actual": "Command: CDFW | Specify floor waste insertion point: 51777.389,-30233.425 | [CE] IO2 is already at this point, and a new source cannot sit on top of it. Move clear of IO2 and pick again, or press Esc.",
+          "evidence": "'rolled back' is absent from: Command: CDFW | Specify floor waste insertion point: 51777.389,-30233.425 | [CE] IO2 is already at this point, and a new source cannot sit on top of it. Move cl..."
+        },
+        {
+          "n": 4,
+          "text": "not-contains $fw \"more than one source\"",
+          "ok": true,
+          "expected": "does not contain 'more than one source'",
+          "actual": "Command: CDFW | Specify floor waste insertion point: 51777.389,-30233.425 | [CE] IO2 is already at this point, and a new source cannot sit on top of it. Move clear of IO2 and pick again, or press Esc.",
+          "evidence": "'more than one source' is absent from: Command: CDFW | Specify floor waste insertion point: 51777.389,-30233.425 | [CE] IO2 is already at this point, and a new source cannot sit on top of it. Move cl..."
+        },
+        {
+          "n": 5,
+          "text": "count $fwb = 0",
+          "ok": true,
+          "expected": "count = 0",
+          "actual": "0",
+          "evidence": "count of $fwb = 0 (expected = 0)"
+        },
+        {
+          "n": 6,
+          "text": "count $fwt = 0",
+          "ok": true,
+          "expected": "count = 0",
+          "actual": "0",
+          "evidence": "count of $fwt = 0 (expected = 0)"
+        },
+        {
+          "n": 7,
+          "text": "not-contains $win_end \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31136581_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV31136581_B1.dwg]"
+        },
+        {
+          "n": 8,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 9,
+          "text": "record $fw \"FULL CDFW at the inspection opening\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: CDFW | Specify floor waste insertion point: 51777.389,-30233.425 | [CE] IO2 is already at this point, and a new source cannot sit on top of it. Move clear of IO2 and pick again, or press Esc.",
+          "evidence": "RECORDED, not judged: FULL CDFW at the inspection opening = Command: CDFW | Specify floor waste insertion point: 51777.389,-30233.425 | [CE] IO2 is already at this point, and a new source cannot sit on top of it. Move clear of IO2 and pick again, or press Esc."
+        },
+        {
+          "n": 10,
+          "text": "record $fwe \"FULL after the first Esc\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: CDFW | Specify floor waste insertion point: 51777.389,-30233.425 | [CE] IO2 is already at this point, and a new source cannot sit on top of it. Move clear of IO2 and pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW cancelled - nothing was placed.",
+          "evidence": "RECORDED, not judged: FULL after the first Esc = Command: CDFW | Specify floor waste insertion point: 51777.389,-30233.425 | [CE] IO2 is already at this point, and a new source cannot sit on top of it. Move clear of IO2 and pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW cancelled - nothing was placed."
+        },
+        {
+          "n": 11,
+          "text": "record $fwf \"FULL after the second Esc\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: CDFW | Specify floor waste insertion point: 51777.389,-30233.425 | [CE] IO2 is already at this point, and a new source cannot sit on top of it. Move clear of IO2 and pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW cancelled - nothing was placed.",
+          "evidence": "RECORDED, not judged: FULL after the second Esc = Command: CDFW | Specify floor waste insertion point: 51777.389,-30233.425 | [CE] IO2 is already at this point, and a new source cannot sit on top of it. Move clear of IO2 and pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW cancelled - nothing was placed."
+        },
+        {
+          "n": 12,
+          "text": "record $new \"FULL objects added\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: FULL objects added = "
+        },
+        {
+          "n": 13,
+          "text": "record $fwlog \"FULL CDFW diagnostic log (recorded only: the cause CE names while the fault exists)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "2026-10-30 11:42:35.995 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-10-30 11:42:35.995 [INFO] Project data loaded from DWG: 11 pits, 49 pipes, manual rows=0 | 2026-10-30 11:42:35.995 [INFO] [BUG-385] Project data bound (nothing written) to: C:\\Users\\TimothyBrand\\AppData\\Roaming\\TIM_CE_CADTOOLS\\projects\\CD_ProjectData_CLDV31136581_B1_1828369a.json | 2026-10-30 11:42:35.998 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-10-30 11:42:36.016 [INFO] Project data saved to DWG successfully | 2026-10-30 11:42:36.016 [INFO] [Spine] 49 row(s) took the identity already on their drawing object: 1091A0, 1091E0, 109359, 109390, 1093C7, 109430, 1094BE, 109500, 109835, 109874, 1098B6, 1098E8, 10993C, 10996E, 109A30, 109B80, 109BBC, 109C15, 109C55, 109CCF, 109E23, 109E6D, 109ED4, 109F81, 10A1D4, 10A243, 10A27D, 10A348, 10A3B0, 10A3E0, 10A430, 10A86B, 10A899, 10A8C7, 10A901, 10A942, 10A98D, 10A9C9, 10AA03, 10AAB6, 10B03B, 10B083, 110136, 110179, 11035C, 1135E9, 11362F, 113659, 1136A4 | 2026-10-30 11:42:36.184 [INFO] CDRG index filled pipe 1091A0 From end key 'CE-CIV-SRC-5BA71A30-C5AB-49CA-94B2-09738FB7D277' from physical start. | 2026-10-30 11:42:36.190 [INFO] CDRG index filled pipe 1091E0 From end key 'CE-CIV-SRC-F55F0E0A-EA92-4D33-B761-DE091382DC74' from physical start. | 2026-10-30 11:42:36.203 [INFO] CDRG index filled pipe 1094BE To end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical end. | 2026-10-30 11:42:36.216 [INFO] CDRG index filled pipe 109500 From end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical start. | 2026-10-30 11:42:36.224 [INFO] CDRG index filled pipe 109874 From end key 'CE-CIV-SRC-3126A41E-740A-4F2F-9C85-E87C720320B8' from physical start. | 2026-10-30 11:42:36.234 [INFO] CDRG index filled pipe 109A30 From end key 'CE-CIV-SRC-7969B9A3-974F-4050-91FD-F43CDD4D3D78' from physical start. | 2026-10-30 11:42:36.239 [INFO] CDRG index filled pipe 109B80 To end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical end. | 2026-10-30 11:42:36.243 [INFO] CDRG index filled pipe 109BBC From end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical start. | 2026-10-30 11:42:36.245 [INFO] CDRG index filled pipe 109C15 To end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical end. | 2026-10-30 11:42:36.249 [INFO] CDRG index filled pipe 109C55 From end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical start. | 2026-10-30 11:42:36.258 [INFO] CDRG index filled pipe 109E6D From end key 'CE-CIV-SRC-6CFC2891-A39C-48D2-9B37-AF2450FECD10' from physical start. | 2026-10-30 11:42:36.258 [INFO] CDRG index filled pipe 109E6D To end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical end. | 2026-10-30 11:42:36.264 [INFO] CDRG index filled pipe 109ED4 From end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical start. | 2026-10-30 11:42:36.269 [INFO] CDRG index filled pipe 10A1D4 To end key 'CE-CIV-SRC-FED21B8E-5720-4680-92A6-8953BCF84699' from physical end. | 2026-10-30 11:42:36.272 [INFO] CDRG index filled pipe 10A243 From end key 'CE-CIV-SRC-FED21B8E-5720-4680-92A6-8953BCF84699' from physical start. | 2026-10-30 11:42:36.291 [INFO] CDRG index filled pipe 10A86B To end key 'CE-CIV-SRC-E374079F-E3C7-45A9-B3FE-FA254A38BC98' from physical end. | 2026-10-30 11:42:36.292 [INFO] CDRG index filled pipe 10A899 To end key 'CE-CIV-SRC-F776FA64-4382-4BCF-ABFB-01DF7E89B3EA' from physical end. | 2026-10-30 11:42:36.296 [INFO] CDRG index filled pipe 10A8C7 From end key 'CE-CIV-SRC-F776FA64-4382-4BCF-ABFB-01DF7E89B3EA' from physical start. | 2026-10-30 11:42:36.299 [INFO] CDRG index filled pipe 10A901 From end key 'CE-CIV-SRC-E374079F-E3C7-45A9-B3FE-FA254A38BC98' from physical start. | 2026-10-30 11:42:36.301 [INFO] CDRG index filled pipe 10A942 From end key 'CE-CIV-SRC-EF106E38-4881-4230-9354-33DA62BA073A' from physical start. | 2026-10-30 11:4...",
+          "evidence": "RECORDED, not judged: FULL CDFW diagnostic log (recorded only: the cause CE names while the fault exists) = 2026-10-30 11:42:35.995 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-10-30 11:42:35.995 [INFO] Project data loaded from DWG: 11 pits, 49 pipes, manual rows=0 | 2026-10-30 11:42:35.995 [INFO] [BUG-385] Project data bound (nothing written) to: C:\\Users\\TimothyBrand\\AppData\\Roaming\\TIM_CE_CADTOOLS\\projects\\CD_ProjectData_CLDV31136581_B1_1828369a.json | 2026-10-30 11:42:35.998 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-10-30 11:42:36.016 [INFO] Project data saved to DWG successfully | 2026-10-30 11:42:36.016 [INFO] [Spine] 49 row(s) took the identity already on their drawing object: 1091A0, 1091E0, 109359, 109390, 1093C7, 109430, 1094BE, 109500, 109835, 109874, 1098B6, 1098E8, 10993C, 10996E, 109A30, 109B80, 109BBC, 109C15, 109C55, 109CCF, 109E23, 109E6D, 109ED4, 109F81, 10A1D4, 10A243, 10A27D, 10A348, 10A3B0, 10A3E0, 10A430, 10A86B, 10A899, 10A8C7, 10A901, 10A942, 10A98D, 10A9C9, 10AA03, 10AAB6, 10B03B, 10B083, 110136, 110179, 11035C, 1135E9, 11362F, 113659, 1136A4 | 2026-10-30 11:42:36.184 [INFO] CDRG index filled pipe 1091A0 From end key 'CE-CIV-SRC-5BA71A30-C5AB-49CA-94B2-09738FB7D277' from physical start. | 2026-10-30 11:42:36.190 [INFO] CDRG index filled pipe 1091E0 From end key 'CE-CIV-SRC-F55F0E0A-EA92-4D33-B761-DE091382DC74' from physical start. | 2026-10-30 11:42:36.203 [INFO] CDRG index filled pipe 1094BE To end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical end. | 2026-10-30 11:42:36.216 [INFO] CDRG index filled pipe 109500 From end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical start. | 2026-10-30 11:42:36.224 [INFO] CDRG index filled pipe 109874 From end key 'CE-CIV-SRC-3126A41E-740A-4F2F-9C85-E87C720320B8' from physical start. | 2026-10-30 11:42:36.234 [INFO] CDRG index filled pipe 109A30 From end key 'CE-CIV-SRC-7969B9A3-974F-4050-91FD-F43CDD4D3D78' from physical start. | 2026-10-30 11:42:36.239 [INFO] CDRG index filled pipe 109B80 To end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical end. | 2026-10-30 11:42:36.243 [INFO] CDRG index filled pipe 109BBC From end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical start. | 2026-10-30 11:42:36.245 [INFO] CDRG index filled pipe 109C15 To end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical end. | 2026-10-30 11:42:36.249 [INFO] CDRG index filled pipe 109C55 From end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical start. | 2026-10-30 11:42:36.258 [INFO] CDRG index filled pipe 109E6D From end key 'CE-CIV-SRC-6CFC2891-A39C-48D2-9B37-AF2450FECD10' from physical start. | 2026-10-30 11:42:36.258 [INFO] CDRG index filled pipe 109E6D To end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical end. | 2026-10-30 11:42:36.264 [INFO] CDRG index filled pipe 109ED4 From end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical start. | 2026-10-30 11:42:36.269 [INFO] CDRG index filled pipe 10A1D4 To end key 'CE-CIV-SRC-FED21B8E-5720-4680-92A6-8953BCF84699' from physical end. | 2026-10-30 11:42:36.272 [INFO] CDRG index filled pipe 10A243 From end key 'CE-CIV-SRC-FED21B8E-5720-4680-92A6-8953BCF84699' from physical start. | 2026-10-30 11:42:36.291 [INFO] CDRG index filled pipe 10A86B To end key 'CE-CIV-SRC-E374079F-E3C7-45A9-B3FE-FA254A38BC98' from physical end. | 2026-10-30 11:42:36.292 [INFO] CDRG index filled pipe 10A899 To end key 'CE-CIV-SRC-F776FA64-4382-4BCF-ABFB-01DF7E89B3EA' from physical end. | 2026-10-30 11:42:36.296 [INFO] CDRG index filled pipe 10A8C7 From end key 'CE-CIV-SRC-F776FA64-4382-4BCF-ABFB-01DF7E89B3EA' from physical start. | 2026-10-30 11:42:36.299 [INFO] CDRG index filled pipe 10A901 From end key 'CE-CIV-SRC-E374079F-E3C7-45A9-B3FE-FA254A38BC98' from physical start. | 2026-10-30 11:42:36.301 [INFO] CDRG index filled pipe 10A942 From end key 'CE-CIV-SRC-EF106E38-4881-4230-9354-33DA62BA073A' from physical start. | 2026-10-30 11:4..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV31136581_B1_1d653172c.log)",
+        "Civil CE log: 88 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDFW cancelled 7776 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-30 11:42:47",
+      "session_id": "RUN-20261030-1136-C3.0.86-aB2-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "no independent review: no R36e_p2_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)",
+          "bug case (BUG-1223) has no recorded FAIL on an earlier build or on a deliberately broken variant"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R36e_p3",
+      "proves_bugs": "",
+      "title": "CDFW typed at another inspection opening (55879.087,-30233.481) is refused with CE's plain 'IO3 is already at this point' sentence and places nothing (no 'Civil record changed while you picked' refusal, no rollback)",
+      "kind": "deterministic",
+      "order": 98,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "CDFW floor waste, endpoint-claim route (triage group R3; daily card D07 neighbour); BUG-1223 (the false refusal fixed in C-75; Tim's 29 Oct 2026 ruling: no floor waste on an inspection opening, the plain refusal stays); BUG-147 is related, not the same",
+      "bug": "BUG-1223",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: BUG-1223 in BUG_CARPARK.md; Tim's ruling of 29 Oct 2026 (item 4 of 2026-10-29_TIM_ANSWERS.md) and the C-75 fix report item 4 of Part 1; rewritten 29 Oct 2026 after that ruling, so a fresh independent review of this revised hash is required; BUG-147 is related only.",
+      "variant_of": "",
+      "expected": "CDFW with the point 55879.087,-30233.481 (an inspection opening on pipe ends) is refused with \"IO3 is already at this point, and a new source cannot sit on top of it.\" and adds no FLOOR WASTE block and no text FW; it does not print \"A nearby pipe's Civil record changed\", \"rolled back\" or \"more than one source\". The drawing file on disk is unchanged.",
+      "why_not_unit": "The claim of a pipe end by a block runs against the real pits, pipes and tagged blocks of the live drawing.",
+      "not_automated": [
+        "Batch 6 (28 Oct 2026, Codex cx_cr11 and cx_cr21): the old assertion log civil has \"Landing index changed between preview and pick\" is REMOVED (it required the symptom to stay and would have rejected a correct fix); the whole Civil log of the run is now only RECORDED. There is no U step: nothing is placed, because CE refuses.",
+        "BUG-1223 placement or justified-refusal intent, joined placement, repeat pick and the other three opening points must be proved before whole-bug acceptance (Tim ruled on 29 Oct 2026 that a floor waste is NOT allowed on an inspection opening and CE keeps its plain refusal, so this case asserts the refusal; the point-to-opening numbering (IO1 to IO4 in the order R36e, p2, p3, p4) is read from the c1a and c1b runs of 29 Oct on 3.0.85; the free-pipe-end placement half of BUG-1223 is covered by no case; no pipe-connection reader exists). The three other openings are R36e_p2, R36e_p3 and R36e_p4. CDSOURCE (named in BUG-147 and BUG-132) is not run. Which blocks carry the AGI tag is not read. The typed point is not a mouse pick: whether a real mouse pick at the same place behaves the same is not driven."
+      ],
+      "file_sha256": "730C33D23AA9A18FA3AE6764338CD6062AAD223D5298148D4D3B230B0D8C32EC",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-30 11:42:47",
+      "seconds": 20.7,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV31136581_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDFW{NL}55879.087,-30233.481\" -Force -TimeoutSec 90 -> $fw",
+          "ok": true,
+          "seconds": 6.6,
+          "evidence": "typed 'CDFW 55879.087,-30233.481': Command: CDFW | Specify floor waste insertion point: 55879.087,-30233.481 | [CE] IO3 is already at this point, and a new source cannot sit on top of it. Move clear of IO3 and pick again, or press Esc."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $fwe",
+          "ok": true,
+          "seconds": 3.2,
+          "evidence": "esc-prompt: Command: CDFW | Specify floor waste insertion point: 55879.087,-30233.481 | [CE] IO3 is already at this point, and a new source cannot sit on top of it. Move clear of IO3 and pick again, or press Esc. | Specify floor was..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $fwf",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "esc-prompt: Command: CDFW | Specify floor waste insertion point: 55879.087,-30233.481 | [CE] IO3 is already at this point, and a new source cannot sit on top of it. Move clear of IO3 and pick again, or press Esc. | Specify floor was..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $new",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "0 object(s) after index 1034 (model space now 1034); by type: ; first: "
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"name~^FLOOR WASTE\" -> $fwb",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 0: "
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"text~^FW\" -> $fwt",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 0: "
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31136581_B1.dwg]"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "log-read",
+          "text": "log-read civil -> $fwlog",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "88 new line(s) in the civil CE log since the case began "
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "contains $fw \"IO3 is already at this point, and a new source cannot sit on top of it.\"",
+          "ok": true,
+          "expected": "contains 'IO3 is already at this point, and a new source cannot sit on top of it.'",
+          "actual": "Command: CDFW | Specify floor waste insertion point: 55879.087,-30233.481 | [CE] IO3 is already at this point, and a new source cannot sit on top of it. Move clear of IO3 and pick again, or press Esc.",
+          "evidence": "found 'IO3 is already at this point, and a new source cannot sit on top of it.' in: Command: CDFW | Specify floor waste insertion point: 55879.087,-30233.481 | [CE] IO3 is already at this point, and a new source cannot sit on top of it. Move cl..."
+        },
+        {
+          "n": 2,
+          "text": "not-contains $fw \"Civil record changed\"",
+          "ok": true,
+          "expected": "does not contain 'Civil record changed'",
+          "actual": "Command: CDFW | Specify floor waste insertion point: 55879.087,-30233.481 | [CE] IO3 is already at this point, and a new source cannot sit on top of it. Move clear of IO3 and pick again, or press Esc.",
+          "evidence": "'Civil record changed' is absent from: Command: CDFW | Specify floor waste insertion point: 55879.087,-30233.481 | [CE] IO3 is already at this point, and a new source cannot sit on top of it. Move cl..."
+        },
+        {
+          "n": 3,
+          "text": "not-contains $fw \"rolled back\"",
+          "ok": true,
+          "expected": "does not contain 'rolled back'",
+          "actual": "Command: CDFW | Specify floor waste insertion point: 55879.087,-30233.481 | [CE] IO3 is already at this point, and a new source cannot sit on top of it. Move clear of IO3 and pick again, or press Esc.",
+          "evidence": "'rolled back' is absent from: Command: CDFW | Specify floor waste insertion point: 55879.087,-30233.481 | [CE] IO3 is already at this point, and a new source cannot sit on top of it. Move cl..."
+        },
+        {
+          "n": 4,
+          "text": "not-contains $fw \"more than one source\"",
+          "ok": true,
+          "expected": "does not contain 'more than one source'",
+          "actual": "Command: CDFW | Specify floor waste insertion point: 55879.087,-30233.481 | [CE] IO3 is already at this point, and a new source cannot sit on top of it. Move clear of IO3 and pick again, or press Esc.",
+          "evidence": "'more than one source' is absent from: Command: CDFW | Specify floor waste insertion point: 55879.087,-30233.481 | [CE] IO3 is already at this point, and a new source cannot sit on top of it. Move cl..."
+        },
+        {
+          "n": 5,
+          "text": "count $fwb = 0",
+          "ok": true,
+          "expected": "count = 0",
+          "actual": "0",
+          "evidence": "count of $fwb = 0 (expected = 0)"
+        },
+        {
+          "n": 6,
+          "text": "count $fwt = 0",
+          "ok": true,
+          "expected": "count = 0",
+          "actual": "0",
+          "evidence": "count of $fwt = 0 (expected = 0)"
+        },
+        {
+          "n": 7,
+          "text": "not-contains $win_end \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31136581_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV31136581_B1.dwg]"
+        },
+        {
+          "n": 8,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 9,
+          "text": "record $fw \"FULL CDFW at the inspection opening\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: CDFW | Specify floor waste insertion point: 55879.087,-30233.481 | [CE] IO3 is already at this point, and a new source cannot sit on top of it. Move clear of IO3 and pick again, or press Esc.",
+          "evidence": "RECORDED, not judged: FULL CDFW at the inspection opening = Command: CDFW | Specify floor waste insertion point: 55879.087,-30233.481 | [CE] IO3 is already at this point, and a new source cannot sit on top of it. Move clear of IO3 and pick again, or press Esc."
+        },
+        {
+          "n": 10,
+          "text": "record $fwe \"FULL after the first Esc\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: CDFW | Specify floor waste insertion point: 55879.087,-30233.481 | [CE] IO3 is already at this point, and a new source cannot sit on top of it. Move clear of IO3 and pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW cancelled - nothing was placed.",
+          "evidence": "RECORDED, not judged: FULL after the first Esc = Command: CDFW | Specify floor waste insertion point: 55879.087,-30233.481 | [CE] IO3 is already at this point, and a new source cannot sit on top of it. Move clear of IO3 and pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW cancelled - nothing was placed."
+        },
+        {
+          "n": 11,
+          "text": "record $fwf \"FULL after the second Esc\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: CDFW | Specify floor waste insertion point: 55879.087,-30233.481 | [CE] IO3 is already at this point, and a new source cannot sit on top of it. Move clear of IO3 and pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW cancelled - nothing was placed.",
+          "evidence": "RECORDED, not judged: FULL after the second Esc = Command: CDFW | Specify floor waste insertion point: 55879.087,-30233.481 | [CE] IO3 is already at this point, and a new source cannot sit on top of it. Move clear of IO3 and pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW cancelled - nothing was placed."
+        },
+        {
+          "n": 12,
+          "text": "record $new \"FULL objects added\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: FULL objects added = "
+        },
+        {
+          "n": 13,
+          "text": "record $fwlog \"FULL CDFW diagnostic log (recorded only: the cause CE names while the fault exists)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "2026-10-30 11:42:56.954 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-10-30 11:42:56.954 [INFO] Project data loaded from DWG: 11 pits, 49 pipes, manual rows=0 | 2026-10-30 11:42:56.954 [INFO] [BUG-385] Project data bound (nothing written) to: C:\\Users\\TimothyBrand\\AppData\\Roaming\\TIM_CE_CADTOOLS\\projects\\CD_ProjectData_CLDV31136581_B1_1828369a.json | 2026-10-30 11:42:56.956 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-10-30 11:42:56.967 [INFO] Project data saved to DWG successfully | 2026-10-30 11:42:56.967 [INFO] [Spine] 49 row(s) took the identity already on their drawing object: 1091A0, 1091E0, 109359, 109390, 1093C7, 109430, 1094BE, 109500, 109835, 109874, 1098B6, 1098E8, 10993C, 10996E, 109A30, 109B80, 109BBC, 109C15, 109C55, 109CCF, 109E23, 109E6D, 109ED4, 109F81, 10A1D4, 10A243, 10A27D, 10A348, 10A3B0, 10A3E0, 10A430, 10A86B, 10A899, 10A8C7, 10A901, 10A942, 10A98D, 10A9C9, 10AA03, 10AAB6, 10B03B, 10B083, 110136, 110179, 11035C, 1135E9, 11362F, 113659, 1136A4 | 2026-10-30 11:42:57.086 [INFO] CDRG index filled pipe 1091A0 From end key 'CE-CIV-SRC-5BA71A30-C5AB-49CA-94B2-09738FB7D277' from physical start. | 2026-10-30 11:42:57.088 [INFO] CDRG index filled pipe 1091E0 From end key 'CE-CIV-SRC-F55F0E0A-EA92-4D33-B761-DE091382DC74' from physical start. | 2026-10-30 11:42:57.106 [INFO] CDRG index filled pipe 1094BE To end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical end. | 2026-10-30 11:42:57.108 [INFO] CDRG index filled pipe 109500 From end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical start. | 2026-10-30 11:42:57.115 [INFO] CDRG index filled pipe 109874 From end key 'CE-CIV-SRC-3126A41E-740A-4F2F-9C85-E87C720320B8' from physical start. | 2026-10-30 11:42:57.130 [INFO] CDRG index filled pipe 109A30 From end key 'CE-CIV-SRC-7969B9A3-974F-4050-91FD-F43CDD4D3D78' from physical start. | 2026-10-30 11:42:57.133 [INFO] CDRG index filled pipe 109B80 To end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical end. | 2026-10-30 11:42:57.136 [INFO] CDRG index filled pipe 109BBC From end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical start. | 2026-10-30 11:42:57.138 [INFO] CDRG index filled pipe 109C15 To end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical end. | 2026-10-30 11:42:57.150 [INFO] CDRG index filled pipe 109C55 From end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical start. | 2026-10-30 11:42:57.170 [INFO] CDRG index filled pipe 109E6D From end key 'CE-CIV-SRC-6CFC2891-A39C-48D2-9B37-AF2450FECD10' from physical start. | 2026-10-30 11:42:57.170 [INFO] CDRG index filled pipe 109E6D To end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical end. | 2026-10-30 11:42:57.191 [INFO] CDRG index filled pipe 109ED4 From end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical start. | 2026-10-30 11:42:57.211 [INFO] CDRG index filled pipe 10A1D4 To end key 'CE-CIV-SRC-FED21B8E-5720-4680-92A6-8953BCF84699' from physical end. | 2026-10-30 11:42:57.225 [INFO] CDRG index filled pipe 10A243 From end key 'CE-CIV-SRC-FED21B8E-5720-4680-92A6-8953BCF84699' from physical start. | 2026-10-30 11:42:57.240 [INFO] CDRG index filled pipe 10A86B To end key 'CE-CIV-SRC-E374079F-E3C7-45A9-B3FE-FA254A38BC98' from physical end. | 2026-10-30 11:42:57.241 [INFO] CDRG index filled pipe 10A899 To end key 'CE-CIV-SRC-F776FA64-4382-4BCF-ABFB-01DF7E89B3EA' from physical end. | 2026-10-30 11:42:57.247 [INFO] CDRG index filled pipe 10A8C7 From end key 'CE-CIV-SRC-F776FA64-4382-4BCF-ABFB-01DF7E89B3EA' from physical start. | 2026-10-30 11:42:57.250 [INFO] CDRG index filled pipe 10A901 From end key 'CE-CIV-SRC-E374079F-E3C7-45A9-B3FE-FA254A38BC98' from physical start. | 2026-10-30 11:42:57.253 [INFO] CDRG index filled pipe 10A942 From end key 'CE-CIV-SRC-EF106E38-4881-4230-9354-33DA62BA073A' from physical start. | 2026-10-30 11:4...",
+          "evidence": "RECORDED, not judged: FULL CDFW diagnostic log (recorded only: the cause CE names while the fault exists) = 2026-10-30 11:42:56.954 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-10-30 11:42:56.954 [INFO] Project data loaded from DWG: 11 pits, 49 pipes, manual rows=0 | 2026-10-30 11:42:56.954 [INFO] [BUG-385] Project data bound (nothing written) to: C:\\Users\\TimothyBrand\\AppData\\Roaming\\TIM_CE_CADTOOLS\\projects\\CD_ProjectData_CLDV31136581_B1_1828369a.json | 2026-10-30 11:42:56.956 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-10-30 11:42:56.967 [INFO] Project data saved to DWG successfully | 2026-10-30 11:42:56.967 [INFO] [Spine] 49 row(s) took the identity already on their drawing object: 1091A0, 1091E0, 109359, 109390, 1093C7, 109430, 1094BE, 109500, 109835, 109874, 1098B6, 1098E8, 10993C, 10996E, 109A30, 109B80, 109BBC, 109C15, 109C55, 109CCF, 109E23, 109E6D, 109ED4, 109F81, 10A1D4, 10A243, 10A27D, 10A348, 10A3B0, 10A3E0, 10A430, 10A86B, 10A899, 10A8C7, 10A901, 10A942, 10A98D, 10A9C9, 10AA03, 10AAB6, 10B03B, 10B083, 110136, 110179, 11035C, 1135E9, 11362F, 113659, 1136A4 | 2026-10-30 11:42:57.086 [INFO] CDRG index filled pipe 1091A0 From end key 'CE-CIV-SRC-5BA71A30-C5AB-49CA-94B2-09738FB7D277' from physical start. | 2026-10-30 11:42:57.088 [INFO] CDRG index filled pipe 1091E0 From end key 'CE-CIV-SRC-F55F0E0A-EA92-4D33-B761-DE091382DC74' from physical start. | 2026-10-30 11:42:57.106 [INFO] CDRG index filled pipe 1094BE To end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical end. | 2026-10-30 11:42:57.108 [INFO] CDRG index filled pipe 109500 From end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical start. | 2026-10-30 11:42:57.115 [INFO] CDRG index filled pipe 109874 From end key 'CE-CIV-SRC-3126A41E-740A-4F2F-9C85-E87C720320B8' from physical start. | 2026-10-30 11:42:57.130 [INFO] CDRG index filled pipe 109A30 From end key 'CE-CIV-SRC-7969B9A3-974F-4050-91FD-F43CDD4D3D78' from physical start. | 2026-10-30 11:42:57.133 [INFO] CDRG index filled pipe 109B80 To end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical end. | 2026-10-30 11:42:57.136 [INFO] CDRG index filled pipe 109BBC From end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical start. | 2026-10-30 11:42:57.138 [INFO] CDRG index filled pipe 109C15 To end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical end. | 2026-10-30 11:42:57.150 [INFO] CDRG index filled pipe 109C55 From end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical start. | 2026-10-30 11:42:57.170 [INFO] CDRG index filled pipe 109E6D From end key 'CE-CIV-SRC-6CFC2891-A39C-48D2-9B37-AF2450FECD10' from physical start. | 2026-10-30 11:42:57.170 [INFO] CDRG index filled pipe 109E6D To end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical end. | 2026-10-30 11:42:57.191 [INFO] CDRG index filled pipe 109ED4 From end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical start. | 2026-10-30 11:42:57.211 [INFO] CDRG index filled pipe 10A1D4 To end key 'CE-CIV-SRC-FED21B8E-5720-4680-92A6-8953BCF84699' from physical end. | 2026-10-30 11:42:57.225 [INFO] CDRG index filled pipe 10A243 From end key 'CE-CIV-SRC-FED21B8E-5720-4680-92A6-8953BCF84699' from physical start. | 2026-10-30 11:42:57.240 [INFO] CDRG index filled pipe 10A86B To end key 'CE-CIV-SRC-E374079F-E3C7-45A9-B3FE-FA254A38BC98' from physical end. | 2026-10-30 11:42:57.241 [INFO] CDRG index filled pipe 10A899 To end key 'CE-CIV-SRC-F776FA64-4382-4BCF-ABFB-01DF7E89B3EA' from physical end. | 2026-10-30 11:42:57.247 [INFO] CDRG index filled pipe 10A8C7 From end key 'CE-CIV-SRC-F776FA64-4382-4BCF-ABFB-01DF7E89B3EA' from physical start. | 2026-10-30 11:42:57.250 [INFO] CDRG index filled pipe 10A901 From end key 'CE-CIV-SRC-E374079F-E3C7-45A9-B3FE-FA254A38BC98' from physical start. | 2026-10-30 11:42:57.253 [INFO] CDRG index filled pipe 10A942 From end key 'CE-CIV-SRC-EF106E38-4881-4230-9354-33DA62BA073A' from physical start. | 2026-10-30 11:4..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV31136581_B1_19ed2fcac.log)",
+        "Civil CE log: 88 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDFW cancelled 7652 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-30 11:43:08",
+      "session_id": "RUN-20261030-1136-C3.0.86-aB2-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "no independent review: no R36e_p3_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)",
+          "bug case (BUG-1223) has no recorded FAIL on an earlier build or on a deliberately broken variant"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R36e_p4",
+      "proves_bugs": "",
+      "title": "CDFW typed at another inspection opening (80936.111,-30304.267) is refused with CE's plain 'IO4 is already at this point' sentence and places nothing (no 'Civil record changed while you picked' refusal, no rollback)",
+      "kind": "deterministic",
+      "order": 98,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "CDFW floor waste, endpoint-claim route (triage group R3; daily card D07 neighbour); BUG-1223 (the false refusal fixed in C-75; Tim's 29 Oct 2026 ruling: no floor waste on an inspection opening, the plain refusal stays); BUG-147 is related, not the same",
+      "bug": "BUG-1223",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: BUG-1223 in BUG_CARPARK.md; Tim's ruling of 29 Oct 2026 (item 4 of 2026-10-29_TIM_ANSWERS.md) and the C-75 fix report item 4 of Part 1; rewritten 29 Oct 2026 after that ruling, so a fresh independent review of this revised hash is required; BUG-147 is related only.",
+      "variant_of": "",
+      "expected": "CDFW with the point 80936.111,-30304.267 (an inspection opening on pipe ends) is refused with \"IO4 is already at this point, and a new source cannot sit on top of it.\" and adds no FLOOR WASTE block and no text FW; it does not print \"A nearby pipe's Civil record changed\", \"rolled back\" or \"more than one source\". The drawing file on disk is unchanged.",
+      "why_not_unit": "The claim of a pipe end by a block runs against the real pits, pipes and tagged blocks of the live drawing.",
+      "not_automated": [
+        "Batch 6 (28 Oct 2026, Codex cx_cr11 and cx_cr21): the old assertion log civil has \"Landing index changed between preview and pick\" is REMOVED (it required the symptom to stay and would have rejected a correct fix); the whole Civil log of the run is now only RECORDED. There is no U step: nothing is placed, because CE refuses.",
+        "BUG-1223 placement or justified-refusal intent, joined placement, repeat pick and the other three opening points must be proved before whole-bug acceptance (Tim ruled on 29 Oct 2026 that a floor waste is NOT allowed on an inspection opening and CE keeps its plain refusal, so this case asserts the refusal; the point-to-opening numbering (IO1 to IO4 in the order R36e, p2, p3, p4) is read from the c1a and c1b runs of 29 Oct on 3.0.85; the free-pipe-end placement half of BUG-1223 is covered by no case; no pipe-connection reader exists). The three other openings are R36e_p2, R36e_p3 and R36e_p4. CDSOURCE (named in BUG-147 and BUG-132) is not run. Which blocks carry the AGI tag is not read. The typed point is not a mouse pick: whether a real mouse pick at the same place behaves the same is not driven."
+      ],
+      "file_sha256": "04C4E78F8A3472257DFFFFF68765E091BB842C399CEAFBFD30A72469C266E371",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-30 11:43:08",
+      "seconds": 20.2,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV31136581_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDFW{NL}80936.111,-30304.267\" -Force -TimeoutSec 90 -> $fw",
+          "ok": true,
+          "seconds": 6.6,
+          "evidence": "typed 'CDFW 80936.111,-30304.267': Command: CDFW | Specify floor waste insertion point: 80936.111,-30304.267 | [CE] IO4 is already at this point, and a new source cannot sit on top of it. Move clear of IO4 and pick again, or press Esc."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $fwe",
+          "ok": true,
+          "seconds": 2.8,
+          "evidence": "esc-prompt: Command: CDFW | Specify floor waste insertion point: 80936.111,-30304.267 | [CE] IO4 is already at this point, and a new source cannot sit on top of it. Move clear of IO4 and pick again, or press Esc. | Specify floor was..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $fwf",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "esc-prompt: Command: CDFW | Specify floor waste insertion point: 80936.111,-30304.267 | [CE] IO4 is already at this point, and a new source cannot sit on top of it. Move clear of IO4 and pick again, or press Esc. | Specify floor was..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $new",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "0 object(s) after index 1034 (model space now 1034); by type: ; first: "
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"name~^FLOOR WASTE\" -> $fwb",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 0: "
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"text~^FW\" -> $fwt",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 0: "
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31136581_B1.dwg]"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "log-read",
+          "text": "log-read civil -> $fwlog",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "89 new line(s) in the civil CE log since the case began "
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "contains $fw \"IO4 is already at this point, and a new source cannot sit on top of it.\"",
+          "ok": true,
+          "expected": "contains 'IO4 is already at this point, and a new source cannot sit on top of it.'",
+          "actual": "Command: CDFW | Specify floor waste insertion point: 80936.111,-30304.267 | [CE] IO4 is already at this point, and a new source cannot sit on top of it. Move clear of IO4 and pick again, or press Esc.",
+          "evidence": "found 'IO4 is already at this point, and a new source cannot sit on top of it.' in: Command: CDFW | Specify floor waste insertion point: 80936.111,-30304.267 | [CE] IO4 is already at this point, and a new source cannot sit on top of it. Move cl..."
+        },
+        {
+          "n": 2,
+          "text": "not-contains $fw \"Civil record changed\"",
+          "ok": true,
+          "expected": "does not contain 'Civil record changed'",
+          "actual": "Command: CDFW | Specify floor waste insertion point: 80936.111,-30304.267 | [CE] IO4 is already at this point, and a new source cannot sit on top of it. Move clear of IO4 and pick again, or press Esc.",
+          "evidence": "'Civil record changed' is absent from: Command: CDFW | Specify floor waste insertion point: 80936.111,-30304.267 | [CE] IO4 is already at this point, and a new source cannot sit on top of it. Move cl..."
+        },
+        {
+          "n": 3,
+          "text": "not-contains $fw \"rolled back\"",
+          "ok": true,
+          "expected": "does not contain 'rolled back'",
+          "actual": "Command: CDFW | Specify floor waste insertion point: 80936.111,-30304.267 | [CE] IO4 is already at this point, and a new source cannot sit on top of it. Move clear of IO4 and pick again, or press Esc.",
+          "evidence": "'rolled back' is absent from: Command: CDFW | Specify floor waste insertion point: 80936.111,-30304.267 | [CE] IO4 is already at this point, and a new source cannot sit on top of it. Move cl..."
+        },
+        {
+          "n": 4,
+          "text": "not-contains $fw \"more than one source\"",
+          "ok": true,
+          "expected": "does not contain 'more than one source'",
+          "actual": "Command: CDFW | Specify floor waste insertion point: 80936.111,-30304.267 | [CE] IO4 is already at this point, and a new source cannot sit on top of it. Move clear of IO4 and pick again, or press Esc.",
+          "evidence": "'more than one source' is absent from: Command: CDFW | Specify floor waste insertion point: 80936.111,-30304.267 | [CE] IO4 is already at this point, and a new source cannot sit on top of it. Move cl..."
+        },
+        {
+          "n": 5,
+          "text": "count $fwb = 0",
+          "ok": true,
+          "expected": "count = 0",
+          "actual": "0",
+          "evidence": "count of $fwb = 0 (expected = 0)"
+        },
+        {
+          "n": 6,
+          "text": "count $fwt = 0",
+          "ok": true,
+          "expected": "count = 0",
+          "actual": "0",
+          "evidence": "count of $fwt = 0 (expected = 0)"
+        },
+        {
+          "n": 7,
+          "text": "not-contains $win_end \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31136581_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV31136581_B1.dwg]"
+        },
+        {
+          "n": 8,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 9,
+          "text": "record $fw \"FULL CDFW at the inspection opening\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: CDFW | Specify floor waste insertion point: 80936.111,-30304.267 | [CE] IO4 is already at this point, and a new source cannot sit on top of it. Move clear of IO4 and pick again, or press Esc.",
+          "evidence": "RECORDED, not judged: FULL CDFW at the inspection opening = Command: CDFW | Specify floor waste insertion point: 80936.111,-30304.267 | [CE] IO4 is already at this point, and a new source cannot sit on top of it. Move clear of IO4 and pick again, or press Esc."
+        },
+        {
+          "n": 10,
+          "text": "record $fwe \"FULL after the first Esc\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: CDFW | Specify floor waste insertion point: 80936.111,-30304.267 | [CE] IO4 is already at this point, and a new source cannot sit on top of it. Move clear of IO4 and pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW cancelled - nothing was placed.",
+          "evidence": "RECORDED, not judged: FULL after the first Esc = Command: CDFW | Specify floor waste insertion point: 80936.111,-30304.267 | [CE] IO4 is already at this point, and a new source cannot sit on top of it. Move clear of IO4 and pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW cancelled - nothing was placed."
+        },
+        {
+          "n": 11,
+          "text": "record $fwf \"FULL after the second Esc\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: CDFW | Specify floor waste insertion point: 80936.111,-30304.267 | [CE] IO4 is already at this point, and a new source cannot sit on top of it. Move clear of IO4 and pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW cancelled - nothing was placed.",
+          "evidence": "RECORDED, not judged: FULL after the second Esc = Command: CDFW | Specify floor waste insertion point: 80936.111,-30304.267 | [CE] IO4 is already at this point, and a new source cannot sit on top of it. Move clear of IO4 and pick again, or press Esc. | Specify floor waste insertion point: *Cancel* | CDFW cancelled - nothing was placed."
+        },
+        {
+          "n": 12,
+          "text": "record $new \"FULL objects added\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: FULL objects added = "
+        },
+        {
+          "n": 13,
+          "text": "record $fwlog \"FULL CDFW diagnostic log (recorded only: the cause CE names while the fault exists)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "2026-10-30 11:43:17.542 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-10-30 11:43:17.542 [INFO] Project data loaded from DWG: 11 pits, 49 pipes, manual rows=0 | 2026-10-30 11:43:17.542 [INFO] [BUG-385] Project data bound (nothing written) to: C:\\Users\\TimothyBrand\\AppData\\Roaming\\TIM_CE_CADTOOLS\\projects\\CD_ProjectData_CLDV31136581_B1_1828369a.json | 2026-10-30 11:43:17.544 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-10-30 11:43:17.559 [INFO] [PERF-SUMMARY] ProjectDataService.SaveToDrawing: 3 call(s), 12.2 ms in last ~71s (lifetime 19 call(s), 85.5 ms) | 2026-10-30 11:43:17.559 [INFO] Project data saved to DWG successfully | 2026-10-30 11:43:17.559 [INFO] [Spine] 49 row(s) took the identity already on their drawing object: 1091A0, 1091E0, 109359, 109390, 1093C7, 109430, 1094BE, 109500, 109835, 109874, 1098B6, 1098E8, 10993C, 10996E, 109A30, 109B80, 109BBC, 109C15, 109C55, 109CCF, 109E23, 109E6D, 109ED4, 109F81, 10A1D4, 10A243, 10A27D, 10A348, 10A3B0, 10A3E0, 10A430, 10A86B, 10A899, 10A8C7, 10A901, 10A942, 10A98D, 10A9C9, 10AA03, 10AAB6, 10B03B, 10B083, 110136, 110179, 11035C, 1135E9, 11362F, 113659, 1136A4 | 2026-10-30 11:43:17.669 [INFO] CDRG index filled pipe 1091A0 From end key 'CE-CIV-SRC-5BA71A30-C5AB-49CA-94B2-09738FB7D277' from physical start. | 2026-10-30 11:43:17.672 [INFO] CDRG index filled pipe 1091E0 From end key 'CE-CIV-SRC-F55F0E0A-EA92-4D33-B761-DE091382DC74' from physical start. | 2026-10-30 11:43:17.690 [INFO] CDRG index filled pipe 1094BE To end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical end. | 2026-10-30 11:43:17.692 [INFO] CDRG index filled pipe 109500 From end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical start. | 2026-10-30 11:43:17.701 [INFO] CDRG index filled pipe 109874 From end key 'CE-CIV-SRC-3126A41E-740A-4F2F-9C85-E87C720320B8' from physical start. | 2026-10-30 11:43:17.709 [INFO] CDRG index filled pipe 109A30 From end key 'CE-CIV-SRC-7969B9A3-974F-4050-91FD-F43CDD4D3D78' from physical start. | 2026-10-30 11:43:17.711 [INFO] CDRG index filled pipe 109B80 To end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical end. | 2026-10-30 11:43:17.714 [INFO] CDRG index filled pipe 109BBC From end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical start. | 2026-10-30 11:43:17.716 [INFO] CDRG index filled pipe 109C15 To end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical end. | 2026-10-30 11:43:17.723 [INFO] CDRG index filled pipe 109C55 From end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical start. | 2026-10-30 11:43:17.730 [INFO] CDRG index filled pipe 109E6D From end key 'CE-CIV-SRC-6CFC2891-A39C-48D2-9B37-AF2450FECD10' from physical start. | 2026-10-30 11:43:17.730 [INFO] CDRG index filled pipe 109E6D To end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical end. | 2026-10-30 11:43:17.732 [INFO] CDRG index filled pipe 109ED4 From end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical start. | 2026-10-30 11:43:17.739 [INFO] CDRG index filled pipe 10A1D4 To end key 'CE-CIV-SRC-FED21B8E-5720-4680-92A6-8953BCF84699' from physical end. | 2026-10-30 11:43:17.741 [INFO] CDRG index filled pipe 10A243 From end key 'CE-CIV-SRC-FED21B8E-5720-4680-92A6-8953BCF84699' from physical start. | 2026-10-30 11:43:17.753 [INFO] CDRG index filled pipe 10A86B To end key 'CE-CIV-SRC-E374079F-E3C7-45A9-B3FE-FA254A38BC98' from physical end. | 2026-10-30 11:43:17.755 [INFO] CDRG index filled pipe 10A899 To end key 'CE-CIV-SRC-F776FA64-4382-4BCF-ABFB-01DF7E89B3EA' from physical end. | 2026-10-30 11:43:17.760 [INFO] CDRG index filled pipe 10A8C7 From end key 'CE-CIV-SRC-F776FA64-4382-4BCF-ABFB-01DF7E89B3EA' from physical start. | 2026-10-30 11:43:17.762 [INFO] CDRG index filled pipe 10A901 From end key 'CE-CIV-SRC-E374079F-E3C7-45A9-B3FE-FA254A38BC98' from physical start. | 2026-10-30 11:43:...",
+          "evidence": "RECORDED, not judged: FULL CDFW diagnostic log (recorded only: the cause CE names while the fault exists) = 2026-10-30 11:43:17.542 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-10-30 11:43:17.542 [INFO] Project data loaded from DWG: 11 pits, 49 pipes, manual rows=0 | 2026-10-30 11:43:17.542 [INFO] [BUG-385] Project data bound (nothing written) to: C:\\Users\\TimothyBrand\\AppData\\Roaming\\TIM_CE_CADTOOLS\\projects\\CD_ProjectData_CLDV31136581_B1_1828369a.json | 2026-10-30 11:43:17.544 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-10-30 11:43:17.559 [INFO] [PERF-SUMMARY] ProjectDataService.SaveToDrawing: 3 call(s), 12.2 ms in last ~71s (lifetime 19 call(s), 85.5 ms) | 2026-10-30 11:43:17.559 [INFO] Project data saved to DWG successfully | 2026-10-30 11:43:17.559 [INFO] [Spine] 49 row(s) took the identity already on their drawing object: 1091A0, 1091E0, 109359, 109390, 1093C7, 109430, 1094BE, 109500, 109835, 109874, 1098B6, 1098E8, 10993C, 10996E, 109A30, 109B80, 109BBC, 109C15, 109C55, 109CCF, 109E23, 109E6D, 109ED4, 109F81, 10A1D4, 10A243, 10A27D, 10A348, 10A3B0, 10A3E0, 10A430, 10A86B, 10A899, 10A8C7, 10A901, 10A942, 10A98D, 10A9C9, 10AA03, 10AAB6, 10B03B, 10B083, 110136, 110179, 11035C, 1135E9, 11362F, 113659, 1136A4 | 2026-10-30 11:43:17.669 [INFO] CDRG index filled pipe 1091A0 From end key 'CE-CIV-SRC-5BA71A30-C5AB-49CA-94B2-09738FB7D277' from physical start. | 2026-10-30 11:43:17.672 [INFO] CDRG index filled pipe 1091E0 From end key 'CE-CIV-SRC-F55F0E0A-EA92-4D33-B761-DE091382DC74' from physical start. | 2026-10-30 11:43:17.690 [INFO] CDRG index filled pipe 1094BE To end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical end. | 2026-10-30 11:43:17.692 [INFO] CDRG index filled pipe 109500 From end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical start. | 2026-10-30 11:43:17.701 [INFO] CDRG index filled pipe 109874 From end key 'CE-CIV-SRC-3126A41E-740A-4F2F-9C85-E87C720320B8' from physical start. | 2026-10-30 11:43:17.709 [INFO] CDRG index filled pipe 109A30 From end key 'CE-CIV-SRC-7969B9A3-974F-4050-91FD-F43CDD4D3D78' from physical start. | 2026-10-30 11:43:17.711 [INFO] CDRG index filled pipe 109B80 To end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical end. | 2026-10-30 11:43:17.714 [INFO] CDRG index filled pipe 109BBC From end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical start. | 2026-10-30 11:43:17.716 [INFO] CDRG index filled pipe 109C15 To end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical end. | 2026-10-30 11:43:17.723 [INFO] CDRG index filled pipe 109C55 From end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical start. | 2026-10-30 11:43:17.730 [INFO] CDRG index filled pipe 109E6D From end key 'CE-CIV-SRC-6CFC2891-A39C-48D2-9B37-AF2450FECD10' from physical start. | 2026-10-30 11:43:17.730 [INFO] CDRG index filled pipe 109E6D To end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical end. | 2026-10-30 11:43:17.732 [INFO] CDRG index filled pipe 109ED4 From end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical start. | 2026-10-30 11:43:17.739 [INFO] CDRG index filled pipe 10A1D4 To end key 'CE-CIV-SRC-FED21B8E-5720-4680-92A6-8953BCF84699' from physical end. | 2026-10-30 11:43:17.741 [INFO] CDRG index filled pipe 10A243 From end key 'CE-CIV-SRC-FED21B8E-5720-4680-92A6-8953BCF84699' from physical start. | 2026-10-30 11:43:17.753 [INFO] CDRG index filled pipe 10A86B To end key 'CE-CIV-SRC-E374079F-E3C7-45A9-B3FE-FA254A38BC98' from physical end. | 2026-10-30 11:43:17.755 [INFO] CDRG index filled pipe 10A899 To end key 'CE-CIV-SRC-F776FA64-4382-4BCF-ABFB-01DF7E89B3EA' from physical end. | 2026-10-30 11:43:17.760 [INFO] CDRG index filled pipe 10A8C7 From end key 'CE-CIV-SRC-F776FA64-4382-4BCF-ABFB-01DF7E89B3EA' from physical start. | 2026-10-30 11:43:17.762 [INFO] CDRG index filled pipe 10A901 From end key 'CE-CIV-SRC-E374079F-E3C7-45A9-B3FE-FA254A38BC98' from physical start. | 2026-10-30 11:43:..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV31136581_B1_1a55bfd0f.log)",
+        "Civil CE log: 89 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDFW cancelled 7341 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-30 11:43:28",
+      "session_id": "RUN-20261030-1136-C3.0.86-aB2-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "no independent review: no R36e_p4_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)",
+          "bug case (BUG-1223) has no recorded FAIL on an earlier build or on a deliberately broken variant"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": false
+      }
+    },
+    {
+      "id": "N24_BROKEN",
+      "proves_bugs": "",
+      "title": "BROKEN VARIANT of N24: CDRENUMBER Yes with no U, so the P9 label block still reads P8 at the end (must FAIL)",
+      "kind": "deterministic",
+      "order": 241,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "red-before-green proof for N24 (UX-CPLAN-18/19, daily card D20)",
+      "bug": "",
+      "known_fail": "BROKEN-VARIANT",
+      "reviewed_against": "",
+      "variant_of": "N24",
+      "expected": "This variant is wrong on purpose: nothing is undone, so the label block that read P9 still reads P8 and the check 'same block reads P9 again' fails. The Yes check (P9 block now reads P8) passes.",
+      "why_not_unit": "It exists only to prove N24's label-restore check can go red.",
+      "not_automated": [],
+      "file_sha256": "F4B89D4BCC015DAE7B9B08E79A0ACF0BC9EBDD88FA6BF2B026BF226EE3C9A332",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "no match for /handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P9\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P9\\W/ in: {\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-10-30 11:43:36\",\"elapsed_ms\":8955,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORM...",
+      "started": "2026-10-30 11:43:28",
+      "seconds": 40.4,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 ent-find AcDbBlockReference -Part \"STORMWATER PIT LABEL\" -> $lab0",
+          "ok": true,
+          "seconds": 9.0,
+          "evidence": "v3 ent-find AcDbBlockReference: scanned 1034 of 1034 objects; 11 match | {\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]}"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDRENUMBER{NL}C1{NL}Yes\" -Force -> $rn_yes",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "typed 'CDRENUMBER C1 Yes': Command: CDRENUMBER | More than one pit discharges outside the network - its main outlet is not obvious: | C1 | X1 | Which pit is the main outlet? Type its mark or pick it on screen [C1/X1] <C1> [C1/X1] <C1>: C1 | Renumb..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 2",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "slept 2 s"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 ent-find AcDbBlockReference -Part \"STORMWATER PIT LABEL\" -> $lab1",
+          "ok": true,
+          "seconds": 8.1,
+          "evidence": "v3 ent-find AcDbBlockReference: scanned 1034 of 1034 objects; 11 match | {\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]}"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 ent-find AcDbBlockReference -Part \"STORMWATER PIT LABEL\" -> $lab2",
+          "ok": true,
+          "seconds": 8.5,
+          "evidence": "v3 ent-find AcDbBlockReference: scanned 1034 of 1034 objects; 11 match | {\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]}"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "set",
+          "text": "set $jy \"{$lab0} @@AFTER@@ {$lab1}\"",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "set $jy"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "set",
+          "text": "set $ju \"{$lab0} @@AFTER@@ {$lab2}\"",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "set $ju"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "matches $jy \"handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P9\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P8\\W\"",
+          "ok": true,
+          "expected": "matches /handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P9\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P8\\W/",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-10-30 11:43:36\",\"elapsed_ms\":8955,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORM...",
+          "evidence": "matched 'handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P10\"]},{\"handle\":\"11A09A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"]}]}} @@AFTER@@ {\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-10-30 11:43:50\",\"elapsed_ms\":8105,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=C1\\\"]}\",\"{\\\"handle\\\":\\\"10933E\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=X1\\\"]}\",\"{\\\"handle\\\":\\\"1096B3\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P1\\\"]}\",\"{\\\"handle\\\":\\\"10981A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P2\\\"]}\",\"{\\\"handle\\\":\\\"109E08\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P3\\\"]}\",\"{\\\"handle\\\":\\\"10A18D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P6\\\"]}\",\"{\\\"handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P8\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"]},{\"handle\":\"11A09A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P8\"'"
+        },
+        {
+          "n": 2,
+          "text": "matches $ju \"handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P9\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P9\\W\"",
+          "ok": false,
+          "expected": "matches /handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P9\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P9\\W/",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-10-30 11:43:36\",\"elapsed_ms\":8955,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORM...",
+          "evidence": "no match for /handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P9\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P9\\W/ in: {\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-10-30 11:43:36\",\"elapsed_ms\":8955,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORM..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV31136581_B1_1c396d6b3.log)",
+        "Civil CE log: 23 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDRENUMBER completed 94 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-30 11:44:09",
+      "session_id": "RUN-20261030-1136-C3.0.86-aB2-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [
+          "known failure (BROKEN-VARIANT): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+**FOR TIM**
+
+1. **What's in the train now.** C-78 (the next Civil update, 3.0.88) now carries five fixes, not three. The two new ones:
+   - **The "Grade mismatch" box:** it no longer pops up on a short pipe when CE worked out the second level itself. Example: a 4.1 m pipe at 1 in 100 from 19.45 gets 19.40, and no box.
+   - **Excel export on AutoCAD 2027:** Pit Schedule "Export Excel" and CDCALC "Export XLSX" should now save. If Excel export still can't start, CE says so in one plain line.
+2. **Bigger re-test.** The Excel fix runs every time CE starts. So after install the robot re-tests everything, plus a start check: AutoCAD opens, the CE ribbon loads, and one Civil command runs.
+3. **Nothing installed, nothing opened in AutoCAD.** It's built and unit-tested only. Your Structural settings file wasn't touched.
+
+---
+
+- **New head:** `7c6af57bd7a715477ece9993d603997272999abe`. The GO line and "CLASS FULL" are moved and pushed. The payload flag is not written.
+- **Heads merged:** #1873 at `ba299320`, which is one commit after the re-checked `2b0953fc` and adds only tests and a comment. #1871 at `0b8698eb`, taken whole. Neither touches CE_SHARED, the Settings loader or Manager.
+- **Tests (none ran zero):**
+  - Solution build: 0 errors on the second try. The first try failed only because my runner couldn't find git.
+  - Civil, all tests: 21,623 total, 21,591 passed, 32 skipped, 0 failed.
+  - Civil, the new and switch tests: 186 of 186 passed (net10 and net48).
+  - Manager: 1,085 total, 1,084 passed, 1 skipped, 0 failed.
+  - Structural: the same 7 old failures before and after the merge, compared by name; no new failure.
+- **Tim's files:** CS_Settings.json 35,613 bytes, last written 19:54:14, the same before and after. CE_Admin gained 28 files, all written by the installed 3.0.87 plug-ins inside a running AutoCAD, not by my tests.
+- **Not tested:** anything in AutoCAD, the Installer suite, the full Civil net48 suite, Structural net48 and net8 test runs, and the bundle.

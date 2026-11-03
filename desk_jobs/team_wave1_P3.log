@@ -1,0 +1,18 @@
+Done: 3 of my 4 bugs now have robot cases (BUG-665, BUG-671, BUG-672). BUG-666 has none, because the robot can't yet build the pipe it needs. Nothing has been run yet.
+
+The first 12 lines of the report's answer-first section:
+
+1. **Answer:** 3 of my 4 bugs have robot cases: BUG-665, BUG-671 and BUG-672. That is 4 cases plus 4 "must fail" twins, all in `drafts_wave1_31oct`. BUG-666 has no case.
+2. **Why BUG-666 has no case:** the robot cannot build a same-plan-break pipe or a split rising main. That needs a tick in the New Pipe window whose control name the robot has never seen. A grip copy needs a mouse drag. It goes to a probe or a Codex look (item 6 below).
+3. **BUG-665, pits (W665):** ROTATE Copy and SCALE Copy of pit P3, each landing 5 m from any pit. Each copy must get its own number (the first reads P8), its own label and cover text. P3 must still read P3.
+4. **BUG-665, pipes (W665p):** ROTATE Copy of a new 20 m pipe. CE must say "1 pipe copied and numbered as new." and draw the copy's own label, IL 18.000, IL 17.800 and flow arrow.
+5. **BUG-671 (W671):** COPY a pipe with only its size label. CE must draw the copy's two IL texts and its arrow, and not a second label.
+6. **BUG-672 (W672):** COPY P3 twice: once with the cover-text layer locked, once with the label layer locked. Each time the piece on the open layer must come across, and CE must name only the missing piece. One U takes each copy back.
+7. **Twins:** W665p, W671 and W672 each turn their fix's switch OFF. W665's twin instead expects the copy to read P3. A switch-off twin there would stop at a step, not fail a check (item 3 of Detail).
+8. **Checks:** validate printed "0 invalid" (11 files, mine plus other writers'). The id check printed "every control id is known". No "print", no street names, and every level matches the 18.000 / 17.800 pipe.
+9. **Settings:** every case pins its switches with SETTING lines, so Tim's real settings file is put back by the guard.
+10. **Already proven elsewhere (not repeated):** R33 (COPY with 25TEXT locked) and R33m (its wording) PASS on 3.0.88. R34sn PASSES on 3.0.88 with the older tick ON.
+11. **Not proven by any case here:** grip Ctrl-drag copies, PITDELETE on a copy, the copy's schedule row, and how the copies look.
+12. **Nobody has run these yet.** Each needs an Opus paper review, then a robot pair, then Codex.
+
+The full report is at `C:\CE_PLAN\areas\WAVE1_WRITING_P3_REPORT.md`.

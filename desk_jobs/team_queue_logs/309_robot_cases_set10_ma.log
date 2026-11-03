@@ -1,0 +1,7 @@
+`C:\CE_PLAN\areas\ROBOT_CASE_DRAFTS_SET10_MANAGER_02NOV.md` — verdict: 2 cases with wrong-on-purpose twins drafted (W1936 for #1936 and W1876 for #1876), 4 fixes Codex-only. Nothing was run, built or tested, so none of it is proven.
+
+- **#1935 (Net8 label):** the robot's AutoCAD is 2027, which reads "Modern" with or without the fix, so only an AutoCAD 2025/2026 PC can show it.
+- **#1877, #1878, #1896:** an Export, a zip check, and Help-page text. The robot can't drive any of them.
+- **Twins:** neither twin uses a switch-off, because the Manager switch file isn't on the robot's settings guard list.
+- **Before running W1936:** it needs an Opus review first, since Refresh sends any waiting reports to the office folder.
+- **W1876:** it may pass on the old build too if the robot's account isn't a CE administrator.

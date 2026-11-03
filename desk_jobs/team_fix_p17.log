@@ -1,0 +1,7 @@
+No PR was opened: I skipped all three bugs and changed no code. Nothing was built or tested, so no settings listings were taken. The report is pushed and not ahead of origin. `C:\CE_PLAN\areas\BUG_REGISTER_TRIAGE_2026-10-24.md` shows as modified in that checkout, but I didn't edit it.
+
+1. **BUG-472:** Already fixed on `rel-20261026s` via PR #887. R1, BT1, C1, TS1, BTX, FSF and FPFC now stop with a plain line on a layout tab or in REFEDIT.
+2. **BUG-480:** A Manager bug, and already fixed on the Civil/Manager line (the HUNT-M-05 comment in `CeReleaseStatusService.cs`). It needs a PC without the office folder to see, so it is a test set-up item.
+3. **BUG-451:** Test observations, not a fault. The two unexplained points (no FSF start-point prompt, where the pad footing label sits) need an AutoCAD re-run.
+
+The switch is none. The report is `C:\CE_PLAN\areas\BUGFIX_p17_REPORT_30OCT.md`.

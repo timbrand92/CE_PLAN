@@ -1,0 +1,7 @@
+== cx_rd02 (usage 37.0% -> 41.0%): 1. **DONE — 0 HIGH, 2 MEDIUM, 1 LOW.** Most important: column details draw N12 bars as 40 mm circles at 1:20, despite the preview showing 12 mm.
+2. **Report:** [CODEX_AUDIT2_RD02_23OCT.md](/C:/CE_PLAN/areas/CODEX_AUDIT2_RD02_23OCT.md). Includes exact reproduction steps and smallest fixes.
+
+---
+
+1. **Saved and pushed:** `9d73ca48`. Leak scan passed; no commits ahead.
+2. **Limits:** Source reading only. No builds, tests or AutoCAD. No code changed; temporary worktree removed.

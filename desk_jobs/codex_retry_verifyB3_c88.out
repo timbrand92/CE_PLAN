@@ -1,0 +1,5 @@
+== verifyB3_c88 (usage 48.0% -> 48.0%): AUTOCAD CLOSED
+
+1. **Results:** Updates & Rollback **PASS**. The 2027 lane wording was **SEEN**, not passed. Refresh a/b **NOT TESTED ÔÇö NO GO FLAG**. The Net8 fix is **NOT TESTABLE ON THIS PC**.
+2. **Safe finish:** Four settings hashes unchanged; no drawing saved; lock released. No failures. Runnable results: SURE 4, UNSURE 0. Fixtures wanted: none.
+3. **Report:** [B3 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_B3_20261102_1702.md>). Includes the duplicate-capture protocol deviation.

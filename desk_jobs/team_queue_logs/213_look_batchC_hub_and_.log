@@ -1,0 +1,13 @@
+`C:\CE_PLAN\areas\LOOKBRIEF_BATCHC_HUB_EDITS_02NOV.md` is written: draft only, and neither brief can run in full yet. Brief 1 needs two made-up drawings that don't exist, and #1950 is PARKED, NO FIXTURE. I ran nothing. The banned-word search found no match.
+
+- **Look ids and file names:** the runner folder already holds `verifyC4A` to `verifyC4E` and Windows ignores case, so I used HUBC (Hub) and EDTC (edits) instead of C4a and C4b. Launch lines use `verifyHUBC_c79b1` and `verifyEDTC_c79b1`.
+- **Brief 1 (#1940, #1945):** both looks need drawings that aren't on the disk and that the robot can't make. The file also records the GO flags and that the stop switch (`redesignApplyStopsOnDamagedOutletRoles`) is never turned on.
+- **Brief 2:**
+  - **#1972, #1892, #1923:** all written. #1923 ships OFF, so its main look needs both switches ON, which is a GO-flag session.
+  - **#1892:** the real check needs a pit with a damaged record. That drawing doesn't exist, so without it only a baseline MOVE runs.
+  - **#1950:** the file says exactly what is missing: an older twin detention drawing and a way to make the upgrade refuse.
+- **Not verified:**
+  - The C-79b1 Civil version number: the source still reads 3.0.89, so the gate checks switch names in the DLL.
+  - The Hub's Apply button and approval box captions.
+  - Whether handle 109768 is pit P2.
+  - The two helper scripts.

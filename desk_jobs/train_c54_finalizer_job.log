@@ -1,0 +1,11 @@
+**FOR TIM**
+
+1. **GO.** Train C-54 (`claude/rel-20261020h`) is signed off at `a85ea975ab37d0ba7b53884a3d2f0a60a2375ebe`. I made no changes to it.
+2. **Manager must ship: yes.**
+3. **Tests:** whole solution 0 errors. Civil 18,929 pass, 1 known red (Glen Eira). Manager 832 of 832. Civil older-AutoCAD set 265 of 265. Official Manager release build: "Complete 75-file", 0 errors.
+4. **Do not mark fixed:** BUG-416 (REDO after U and right-click) and BUG-522 (start-up check). Nobody has tried either in AutoCAD.
+5. **Held:** none. Nothing installed. The builds ran in your 3–5:30 pm window at low priority, with AutoCAD closed. Your settings files are unchanged.
+
+---
+
+Report and review-log entries 1490–1493 are pushed to CE_PLAN.

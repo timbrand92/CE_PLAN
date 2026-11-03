@@ -1,0 +1,15 @@
+Everything is written. The launcher is committed and pushed to C:\CE_PLAN (4108b7da, leak scan clean) and has not been started. Nothing was run or built, and AutoCAD was not opened.
+
+**Run order:**
+1. **V1, 5 points:** checks the robot can't do. BUG-416 (right-click, then REDO), BUG-505 (file dialog), what DP1 double-click does today, and the BUG-476 administrator wording, read only.
+2. **V2, 5 points:** a second pair of eyes on seven fixes the robot saw PASS.
+3. **bj33, 5 points:** 18 Settings rows.
+4. **bj34, 5 points:** 18 rows and one detention freeboard box.
+
+That is 20 points, about 10 of them by end of Wed. The two WAIT jobs (C1, C2) add 10 and re-looks 10, so 40 in all. PR #1370 is already in the installed 3.0.64.
+
+**Desk decides:**
+1. **V2:** accept that it changes three settings, not one.
+2. **BUG-476:** look at it read-only, even though it is parked?
+3. **BUG-531:** which lane owns it?
+4. **BUG-834:** it can't be a Codex look, because Codex never installs.

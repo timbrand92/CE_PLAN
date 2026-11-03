@@ -1,0 +1,39 @@
+## FOR TIM
+
+**All four bugs still fail in the build you have installed (Civil 3.0.88).** None was quietly fixed later. Nothing was built, run or tested; this comes from reading the code. The report is at `C:\CE_PLAN\areas\BUGFIX_z3_REPORT_31OCT.md`.
+
+Ordered by how often a drafter hits them:
+
+1. **Double-click on a pit label opens AutoCAD's attribute editor, not Edit Pit (BUG-430). Daily.**
+   1. **Why:** out of the box it stays OFF until Codex has looked, as you ruled on 22 Oct.
+   2. **With it ON it still fails:** AutoCAD's editor opens before CE can stop it. On 29 Oct the downpipe got a fix for that, but the pit label was left out.
+   3. **Also:** an Xref plan or sheet border round the pit makes CE back off.
+   4. **Fix:** give the pit label the downpipe's treatment.
+
+2. **The CDCATCHMENT label sits on the pipe wording (BUG-642). Every catchment check.**
+   1. **Why:** the fix always moves the label 300 mm up and to the right, without looking at what is already there. The label is about 8 m long, so 300 mm cannot clear a pipe note.
+   2. **Fix:** try a few spots round the pit and use the first one that is clear.
+
+3. **The X-Civil "CHECK THE SCALE" warning is hidden (BUG-505). Once per job.**
+   1. **Why:** the warning, and your "no units set" note, only go to the command line. The import window covers the command line, and the page where you press Import shows neither.
+   2. **Fix:** show that sentence on the import window's page.
+
+4. **Two Xrefs made with Save As show as one schedule source (BUG-788). Rare.**
+   1. **Why:** when CE reads the second Xref, it hands back the first one's pit data, so the two always look the same.
+   2. **Fix:** read each Xref drawing's own pit data.
+
+**One question for you (work hours):** an X-Civil source drawing has UNITS set to Millimetres, but CE's size guess says metres. Which should win?
+- **Today:** CE multiplies everything by 1000 and only warns. Miss the warning and the whole job lands 1000 times too big.
+- **My recommendation:** use the drawing's UNITS when it is set, and only guess when it is not. This keeps your 29 Oct ruling for drawings with no units.
+
+**Not proven:**
+1. For the pit label, the "AutoCAD's editor opens first" part is my inference from the downpipe robot runs. Nobody has run it on a pit label.
+2. I could not find the four Codex evidence files on disk. I worked from the bug list's quotes of them.
+
+---
+
+**Technical summary.** The report covers each bug's cause, file and line, the fix, its switch, the before and after tests, and a proposed robot case (N95_pitlabel_dblclick to N98_xref_saveas_twins), each with a switch-off control.
+
+1. **Switches proposed:** `doubleClick.pitLabelStopsAttributeEditorFirst`, `surface.catchmentOverlayLabelAvoidsText` with a new `catchmentOverlayLabelHeightMm`, and `xcivilImport.scaleNoteOnReviewPage`, all ON. BUG-788 reuses the existing `linking.pitScheduleXrefSeparatesSaveAsCopies`.
+2. **Settings files:** Tim's real Civil and Structural settings files were unchanged across the job. The only difference between the two listings was the Suite Manager's own session file.
+3. **Push and clean-up:** the report is pushed as commit 5cc0ca26 and the branch is not ahead. No worktree was made, and my scratch files are deleted.

@@ -1,0 +1,9 @@
+I opened draft PR #1981 against `claude/rel-20261026s` for BUG-630, one commit, and pushed the report. Nobody has opened it in AutoCAD.
+
+- **Tests:** 42 focused tests passed, 9 of them new. The net48 compile has 0 errors.
+- **Files:** `SectionMarkCommands.cs`, new `SectionMarkFlow.cs` and `SectionMarkBlockService.cs`, `UserSettings.cs`, `SettingsService.LoadRecovery.cs`, `REGRESSION_LOG.md`.
+- **Switch:** `Annotation.SectionMarkPreviewThenPlace`, Default: on.
+- **Block gap:** I never opened the SECT MARK block, so the view direction is previewed but not yet applied to it.
+- **Skipped:** BUG-632 (covered by PR #1298) and BUG-631.
+- **Your CE data folders:** the logs and usage files changed during my run. `acad.exe` started at 6:38 am while I worked, and my scratch folders stayed empty, so I believe it wasn't me. I can't prove that for `CD_RecentValues.json`.
+- **Report:** `C:\CE_PLAN\areas\BUGFIX_q3_REPORT_01NOV.md`.

@@ -1,0 +1,9 @@
+I've written all eight Codex briefs (seven corrected b briefs plus one new one) and pushed the report. None has been run in AutoCAD yet.
+
+1. **The fix:** the robot's own driver now types every command and reading for Codex. Codex only looks, clicks inside CE windows and takes screenshots. Each look fits a 15 to 20 minute session.
+2. **New brief:** verifyH9_c86 is the computations-sheet PDF half of C1, split out so C1b fits.
+3. **H2:** nothing to run. The installed Help text already describes "Send report"; "Save report" appears nowhere.
+4. **Note:** at 12:15 another robot run had one of your Civil settings changed; I touched nothing.
+5. **Run A1b first:** it is the quickest proof the new route works. If the driver refuses calls there, hold the rest.
+
+Report: `C:\CE_PLAN\areas\CODEX_BRIEFS_FIXED_30OCT.md`

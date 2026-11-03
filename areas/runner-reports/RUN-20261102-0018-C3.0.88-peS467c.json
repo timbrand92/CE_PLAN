@@ -1,0 +1,609 @@
+{
+  "header": {
+    "run_id": "RUN-20261102-0018-C3.0.88-peS467c",
+    "started": "2026-11-02 00:18:51",
+    "finished": "2026-11-02 00:21:11",
+    "build": {
+      "civil": {
+        "product_version": "3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+        "file_version": "3.0.88.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+        "file_version": "1.1.88.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.88+3fbb9da5 / struc 1.0.125+204dfad2 / mgr 1.1.88+3fbb9da5",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "0FB64B9A053D9CA4E94C0203955C8463FCAABF07AD28E486A48FA4FCC81C0916",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+      "Driver files (SHA-256, first 12): v2 F4D8F40C3675 (expected F4D8F40C3675), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4B0175FFAB00, v3 session F061E3240C47, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 BBF42DBA8958, case_runner_lib.ps1 89AD455619F8, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 2 case file(s) plus 0 shared setup(s); pack SHA-256 0FB64B9A053D9CA4E94C0203955C8463FCAABF07AD28E486A48FA4FCC81C0916; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV2_S1 950AFDF6E523",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json D604CE689671 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Mon 02 Nov 2026 00:18 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 1,
+    "FAIL": 0,
+    "FAIL_known": 1,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 1
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261102-0018-C3.0.88-peS467c-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-11-02 00:18:52",
+      "finished": "2026-11-02 00:21:11",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV2_S1",
+      "fixture_sha256": "950AFDF6E523",
+      "copy": "C:\\ce_rc_drv\\CLDV30018551_B1.dwg",
+      "cases": [
+        "S467c_BROKEN",
+        "S467c_r1_point_ucs30_proof"
+      ],
+      "whatsnew_dismissed_at_start": "no, window was not there",
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : D604CE689671 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "S467c_BROKEN",
+      "proves_bugs": "",
+      "title": "BROKEN TWIN of the BUG-467 R1 proof: claims the R1 tag lands round the raw UCS numbers 19700,-3300, so it must FAIL on Structural 1.0.125",
+      "kind": "deterministic",
+      "order": 30,
+      "slot": "fresh",
+      "fixture": "DRV2_S1",
+      "plan_item": "BUG-467 (HUNT-S-02, PR",
+      "bug": "BUG-467",
+      "known_fail": "BROKEN-VARIANT",
+      "reviewed_against": "builder-filled: Opus review still needed. Written 30 Oct 2026 from the code at 204dfad2; not compared with a run.",
+      "variant_of": "S467c_r1_point_ucs30_proof",
+      "expected": "The twin claims the RT1 tag is within 2600 mm of 19700,-3300 (the old fault). On 1.0.125 it sits about 10.3 m away round World 18710.700,6992.116, so the check fails.",
+      "why_not_unit": "The unit tests only pin the source; only AutoCAD's live UCS turns a typed point.",
+      "not_automated": [
+        "As S467c."
+      ],
+      "file_sha256": "788D0284EDBDF66EC5F1DE6CBE5F4AF3F8055A55D1709E0C4DA14227815A5292",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "$d_old = 9886.8 (expected <= 2600)",
+      "started": "2026-11-02 00:19:52",
+      "seconds": 24.8,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "settings-arm",
+          "text": "settings-arm",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "settings guard armed: ok"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV30018551_B1.dwg: 85871 bytes, SHA-256 950AFDF6E523, last written 01:39:47; folder holds 255 files"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "getvar",
+          "text": "getvar OSMODE -> $osm0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "OSMODE = 5375"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 setvar OSMODE 0 -> $osm_set",
+          "ok": true,
+          "seconds": 0.6,
+          "evidence": "v3 setvar OSMODE 0: OSMODE (profile): 5375 -> 0"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM{NL}_W{NL}12000,3000{NL}24000,12000\" -Force",
+          "ok": true,
+          "seconds": 3.4,
+          "evidence": "typed '_.ZOOM _W 12000,3000 24000,12000': Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _W | Specify first corner: 12000,3000 | Specify opposit..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.UCS{NL}_Z{NL}30\" -Force -> $ucs",
+          "ok": true,
+          "seconds": 2.5,
+          "evidence": "typed '_.UCS _Z 30': Command: | Command: _.UCS | Current ucs name: *WORLD* | Specify origin of UCS or [Face/NAmed/OBject/Previous/View/World/X/Y/Z/ZAxis] <World>: _Z | Specify rotation angle about Z axis <90>: 30 | SETTINGS GUARD ACTIVE: 4 s..."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 15 objects"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"R1{NL}P{NL}17700,-3300{NL}P{NL}21700,-3300{NL}P{NL}19700,-1800{NL}P{NL}19700,-4800{NL}RT1\" -Force -> $r1",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "typed 'R1 P 17700,-3300 P 21700,-3300 P 19700,-1800 P 19700,-4800 RT1': Command: | Command: R1 | Pick LEFT beam or wall [Object/Point] <Object>: P | Pick point: 17700,-3300 | Pick RIGHT beam or wall [Object/Point] <Object>: P | Pick point: 21700,-3300 | Pick TOP/near side [Object/Point] <Obj..."
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $new",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "1 object(s) after index 15 (model space now 16); by type: AcDbBlockReference 1; first: 59E AcDbBlockReference RAFTERS RAFTER-JOISTV2"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"name=RAFTER-JOISTV2\" \"layer=RAFTERS\" -> $tag",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 1: 59E RAFTER-JOISTV2 RAFTERS"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "dist",
+          "text": "dist $tag \"19700,-3300\" -> $d_old",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "distance from object 59E to 19700,-3300 = 9886.8"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.UCS{NL}_W\" -Force -> $ucsw",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "typed '_.UCS _W': Command: | Command: _.UCS | Current ucs name: *NO NAME* | Specify origin of UCS or [Face/NAmed/OBject/Previous/View/World/X/Y/Z/ZAxis] <World>: _W | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be chan..."
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "wait for idle: idle"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "count $tag = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $tag = 1 (expected = 1)"
+        },
+        {
+          "n": 2,
+          "text": "number $d_old <= 2600",
+          "ok": false,
+          "expected": "<= 2600",
+          "actual": "9886.8",
+          "evidence": "$d_old = 9886.8 (expected <= 2600)"
+        },
+        {
+          "n": 3,
+          "text": "record $r1 \"FULL R1 under the 30 degree UCS\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: R1 | Pick LEFT beam or wall [Object/Point] <Object>: P | Pick point: 17700,-3300 | Pick RIGHT beam or wall [Object/Point] <Object>: P | Pick point: 21700,-3300 | Pick TOP/near side [Object/Point] <Object>: P | Pick point: 19700,-1800 | Pick BOTTOM/far side [Object/Point] <Object>: P | Pick point: 19700,-4800 | Enter the tag text <RT1>: RT1 | Duplicate definition of block _Dot ignored. | [R1] Placed RT1 on layer RAFTERS. | The block did not take the size you picked: span width 4000 became 2400, outer width 4200 became 2600. Check the size in Properties (Ctrl+1) before you rely on this span. CE changed nothing else. | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL R1 under the 30 degree UCS = Command: | Command: R1 | Pick LEFT beam or wall [Object/Point] <Object>: P | Pick point: 17700,-3300 | Pick RIGHT beam or wall [Object/Point] <Object>: P | Pick point: 21700,-3300 | Pick TOP/near side [Object/Point] <Object>: P | Pick point: 19700,-1800 | Pick BOTTOM/far side [Object/Point] <Object>: P | Pick point: 19700,-4800 | Enter the tag text <RT1>: RT1 | Duplicate definition of block _Dot ignored. | [R1] Placed RT1 on layer RAFTERS. | The block did not take the size you picked: span width 4000 became 2400, outer width 4200 became 2600. Check the size in Properties (Ctrl+1) before you rely on this span. CE changed nothing else. | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 4,
+          "text": "record $d_old \"tag distance from the raw numbers 19700,-3300 (mm)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "9886.8",
+          "evidence": "RECORDED, not judged: tag distance from the raw numbers 19700,-3300 (mm) = 9886.8"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 9 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-11-02 00:20:16",
+      "session_id": "RUN-20261102-0018-C3.0.88-peS467c-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [
+          "known failure (BROKEN-VARIANT): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "S467c_r1_point_ucs30_proof",
+      "proves_bugs": "BUG-467 (R1 Point option only; the Object option and the rubber-band look are not covered)",
+      "title": "PROOF OF INSTALLED FIX BUG-467: with the UCS turned 30 degrees, R1 with four typed Point picks places the RT1 tag inside the bay at its World place, not at the raw UCS numbers",
+      "kind": "deterministic",
+      "order": 30,
+      "slot": "fresh",
+      "fixture": "DRV2_S1",
+      "plan_item": "BUG-467 (HUNT-S-02, PR",
+      "bug": "BUG-467",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed. Written 30 Oct 2026 from the code at 204dfad2 and the p15 report; not compared with a run.",
+      "variant_of": "",
+      "expected": "After _.UCS _Z 30, R1 answered P and 17700,-3300 / P and 21700,-3300 / P and 19700,-1800 / P and 19700,-4800, tag RT1: the command line says \"[R1] Placed RT1 on layer RAFTERS.\", exactly one new RAFTER-JOISTV2 block on layer RAFTERS, inserted within 2600 mm of World 18710.700,6992.116 (inside the bay). The drawing file on disk is unchanged.",
+      "why_not_unit": "The unit tests only pin the source; only AutoCAD's live UCS turns a typed point, and only the real R1 frame and auto-placement show where the tag lands.",
+      "not_automated": [
+        "The tag's direction (dynamic grip rotation) and the exact slide chosen by auto-placement are recorded, not asserted.",
+        "The Object option (picking real beam or wall lines) and the rubber band from the first pick are not driven (Codex look for the rubber band)."
+      ],
+      "file_sha256": "5A8CD31A47A7374969B8B3D4D07D9C48E28476623D965C14B1913D9ED60E89F5",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-11-02 00:20:17",
+      "seconds": 34.7,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "settings-arm",
+          "text": "settings-arm",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "settings guard armed: ok"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV30018551_B1.dwg: 85871 bytes, SHA-256 950AFDF6E523, last written 01:39:47; folder holds 255 files"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "getvar",
+          "text": "getvar OSMODE -> $osm0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "OSMODE = 0"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 setvar OSMODE 0 -> $osm_set",
+          "ok": true,
+          "seconds": 0.6,
+          "evidence": "v3 setvar OSMODE 0: OSMODE (profile): already 0, nothing written"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM{NL}_W{NL}12000,3000{NL}24000,12000\" -Force",
+          "ok": true,
+          "seconds": 3.9,
+          "evidence": "typed '_.ZOOM _W 12000,3000 24000,12000': Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _W | Specify first corner: 12000,3000 | Specify opposite corner: 2..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.UCS{NL}_Z{NL}30\" -Force -> $ucs",
+          "ok": true,
+          "seconds": 2.7,
+          "evidence": "typed '_.UCS _Z 30': Command: | Command: _.UCS | Current ucs name: *WORLD* | Specify origin of UCS or [Face/NAmed/OBject/Previous/View/World/X/Y/Z/ZAxis] <World>: _Z | Specify rotation angle about Z axis <90>: 30 | SETTINGS GUARD ACTIVE: 4 s..."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "getvar",
+          "text": "getvar UCSXDIR -> $xdir",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "UCSXDIR = 0.8660254037844387 | 0.49999999999999994 | 0.0"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 15 objects"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"R1{NL}P{NL}17700,-3300{NL}P{NL}21700,-3300{NL}P{NL}19700,-1800{NL}P{NL}19700,-4800{NL}RT1\" -Force -> $r1",
+          "ok": true,
+          "seconds": 3.1,
+          "evidence": "typed 'R1 P 17700,-3300 P 21700,-3300 P 19700,-1800 P 19700,-4800 RT1': Command: | Command: R1 | Pick LEFT beam or wall [Object/Point] <Object>: P | Pick point: 17700,-3300 | Pick RIGHT beam or wall [Object/Point] <Object>: P | Pick point: 21700,-3300 | Pick TOP/near side [Object/Point] <Obj..."
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $new",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "1 object(s) after index 15 (model space now 16); by type: AcDbBlockReference 1; first: 59E AcDbBlockReference RAFTERS RAFTER-JOISTV2"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"name=RAFTER-JOISTV2\" \"layer=RAFTERS\" -> $tag",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 1: 59E RAFTER-JOISTV2 RAFTERS"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "dist",
+          "text": "dist $tag \"18710.700,6992.116\" -> $d",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "distance from object 59E to 18710.700,6992.116 = 500"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $tag handle -> $ht",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 59E"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read \"{$ht}\" -> $et",
+          "ok": true,
+          "seconds": 0.4,
+          "evidence": "ent-read 59E: {\"handle\":\"59E\",\"object\":\"AcDbBlockReference\",\"layer\":\"RAFTERS\",\"name\":\"*U8\",\"effective_name\":\"RAFTER-JOISTV2\",\"insertion\":[18960.700454553444,6559.10346561913,0.0],\"rotation\":0.5235987755982979,\"xscale\":1.0,\"attributes\":[{\"tag\":\"NAME\",\"tex..."
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.UCS{NL}_W\" -Force -> $ucsw",
+          "ok": true,
+          "seconds": 2.8,
+          "evidence": "typed '_.UCS _W': Command: | Command: _.UCS | Current ucs name: *NO NAME* | Specify origin of UCS or [Face/NAmed/OBject/Previous/View/World/X/Y/Z/ZAxis] <World>: _W | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be chan..."
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "wait for idle: idle"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "matches $xdir \"0\\.86\\d\"",
+          "ok": true,
+          "expected": "matches /0\\.86\\d/",
+          "actual": "0.8660254037844387 | 0.49999999999999994 | 0.0",
+          "evidence": "matched '0.866'"
+        },
+        {
+          "n": 2,
+          "text": "history has \"Placed RT1 on layer RAFTERS\"",
+          "ok": true,
+          "expected": "command line has 'Placed RT1 on layer RAFTERS'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[R1] Placed RT1 on layer RAFTERS.'"
+        },
+        {
+          "n": 3,
+          "text": "count $tag = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $tag = 1 (expected = 1)"
+        },
+        {
+          "n": 4,
+          "text": "number $d <= 2600",
+          "ok": true,
+          "expected": "<= 2600",
+          "actual": "500",
+          "evidence": "$d = 500 (expected <= 2600)"
+        },
+        {
+          "n": 5,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 950AFDF6E523 vs 950AFDF6E523; last written 01:39:47 same"
+        },
+        {
+          "n": 6,
+          "text": "record $r1 \"FULL R1 under the 30 degree UCS (each pick question and the tag)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: R1 | Pick LEFT beam or wall [Object/Point] <Object>: P | Pick point: 17700,-3300 | Pick RIGHT beam or wall [Object/Point] <Object>: P | Pick point: 21700,-3300 | Pick TOP/near side [Object/Point] <Object>: P | Pick point: 19700,-1800 | Pick BOTTOM/far side [Object/Point] <Object>: P | Pick point: 19700,-4800 | Enter the tag text <RT1>: RT1 | Duplicate definition of block _Dot ignored. | [R1] Placed RT1 on layer RAFTERS. | The block did not take the size you picked: span width 4000 became 2400, outer width 4200 became 2600. Check the size in Properties (Ctrl+1) before you rely on this span. CE changed nothing else. | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL R1 under the 30 degree UCS (each pick question and the tag) = Command: | Command: R1 | Pick LEFT beam or wall [Object/Point] <Object>: P | Pick point: 17700,-3300 | Pick RIGHT beam or wall [Object/Point] <Object>: P | Pick point: 21700,-3300 | Pick TOP/near side [Object/Point] <Object>: P | Pick point: 19700,-1800 | Pick BOTTOM/far side [Object/Point] <Object>: P | Pick point: 19700,-4800 | Enter the tag text <RT1>: RT1 | Duplicate definition of block _Dot ignored. | [R1] Placed RT1 on layer RAFTERS. | The block did not take the size you picked: span width 4000 became 2400, outer width 4200 became 2600. Check the size in Properties (Ctrl+1) before you rely on this span. CE changed nothing else. | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 7,
+          "text": "record $et \"FULL R1 tag as read (insertion, rotation, attributes, bounding box)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"59E\",\"object\":\"AcDbBlockReference\",\"layer\":\"RAFTERS\",\"name\":\"*U8\",\"effective_name\":\"RAFTER-JOISTV2\",\"insertion\":[18960.700454553444,6559.10346561913,0.0],\"rotation\":0.5235987755982979,\"xscale\":1.0,\"attributes\":[{\"tag\":\"NAME\",\"text\":\"RT1\",\"insertion\":[18836.92276029344,7091.1270815631915,0.0],\"rotation\":0.0,\"height\":250.0,\"alignment\":12,\"align_point\":[18836.92276029344,7017.11616751135,0.0],\"bbox\":[18836.92276029344,7091.1270815631915,19496.711300539006,7342.150273923356]}],\"bbox\":[16728.649646984566,3827.052658050015,20307.110616067424,7625.128869403453],\"block_parts\":[{\"index\":0,\"object\":\"AcDbMline\",\"layer\":\"0\",\"color\":256},{\"index\":1,\"object\":\"AcDbPolyline\",\"layer\":\"25DIMS\",\"color\":256},{\"index\":2,\"object\":\"AcDbRotatedDimension\",\"layer\":\"25DIMS\",\"color\":256},{\"index\":3,\"object\":\"AcDbLine\",\"layer\":\"25DIMS\",\"color\":256,\"world_start\":[18917.39918436422,6534.10346561913],\"world_end\":[19004.001724742666,6584.10346561913],\"world_mid\":[18960.700454553444,6559.10346561913]},{\"index\":4,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"25TEXT\",\"color\":256,\"tag\":\"NAME\",\"world_insertion\":[19020.506720822606,6707.960585309941]}]}",
+          "evidence": "RECORDED, not judged: FULL R1 tag as read (insertion, rotation, attributes, bounding box) = {\"handle\":\"59E\",\"object\":\"AcDbBlockReference\",\"layer\":\"RAFTERS\",\"name\":\"*U8\",\"effective_name\":\"RAFTER-JOISTV2\",\"insertion\":[18960.700454553444,6559.10346561913,0.0],\"rotation\":0.5235987755982979,\"xscale\":1.0,\"attributes\":[{\"tag\":\"NAME\",\"text\":\"RT1\",\"insertion\":[18836.92276029344,7091.1270815631915,0.0],\"rotation\":0.0,\"height\":250.0,\"alignment\":12,\"align_point\":[18836.92276029344,7017.11616751135,0.0],\"bbox\":[18836.92276029344,7091.1270815631915,19496.711300539006,7342.150273923356]}],\"bbox\":[16728.649646984566,3827.052658050015,20307.110616067424,7625.128869403453],\"block_parts\":[{\"index\":0,\"object\":\"AcDbMline\",\"layer\":\"0\",\"color\":256},{\"index\":1,\"object\":\"AcDbPolyline\",\"layer\":\"25DIMS\",\"color\":256},{\"index\":2,\"object\":\"AcDbRotatedDimension\",\"layer\":\"25DIMS\",\"color\":256},{\"index\":3,\"object\":\"AcDbLine\",\"layer\":\"25DIMS\",\"color\":256,\"world_start\":[18917.39918436422,6534.10346561913],\"world_end\":[19004.001724742666,6584.10346561913],\"world_mid\":[18960.700454553444,6559.10346561913]},{\"index\":4,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"25TEXT\",\"color\":256,\"tag\":\"NAME\",\"world_insertion\":[19020.506720822606,6707.960585309941]}]}"
+        },
+        {
+          "n": 8,
+          "text": "record $d \"tag distance from the World bay centre 18710.700,6992.116 (mm)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "500",
+          "evidence": "RECORDED, not judged: tag distance from the World bay centre 18710.700,6992.116 (mm) = 500"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 950AFDF6E523); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV30018551_B1_1674c0514.log)",
+        "Civil CE log: 12 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-11-02 00:20:51",
+      "session_id": "RUN-20261102-0018-C3.0.88-peS467c-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "no independent review: no S467c_r1_point_ucs30_proof_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": true
+      }
+    }
+  ]
+}

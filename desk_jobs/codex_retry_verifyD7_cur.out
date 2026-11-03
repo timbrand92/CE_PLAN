@@ -1,0 +1,7 @@
+== verifyD7_cur (usage 7.0% -> 7.0%): AUTOCAD CLOSED
+
+1. **Results:** PASS 1, DIFFERENT 2, BLOCKED 1, FAIL 0. SURE 4; UNSURE 0. Overflow pair passed; raingarden label and existing-pipe appearance differed; office-layer check blocked at ÔÇ£Snap callout arrow to pipe:ÔÇØ.
+
+2. **Safe finish:** Settings hashes unchanged, test drawing unsaved, acad.exe gone, lock released. No old-fault FAILs observed.
+
+3. **Report:** [D7 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_D7_20261026_0553.md>). Includes evidence, incomplete checks and procedure deviations.

@@ -1,0 +1,8 @@
+**#1483 is now at `f40de93d`.** All four fixes are in, and the 101 focused Civil tests on net10 Release all pass. Nothing was tested in AutoCAD.
+
+- **Merge:** the branch lacked C-49, so I made a plain merge commit. It keeps `TryGetPitFootprint`, `WhyNotSheetFrame` and both REGRESSION_LOG sections.
+- **Fixes 1–4:** done as written.
+- **Build:** the net48 compile has 0 errors.
+- **PR:** the body is updated and the "needs Opus re-review" comment is posted.
+- **Log:** entry 1410 is pushed to C:\CE_PLAN.
+- **Slip:** I didn't hash Tim's settings files before starting. After the job they match entry 1407's recorded values.

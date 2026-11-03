@@ -1,0 +1,18 @@
+All eight Codex briefs, `verifyW1_c60` to `verifyW8_c60`, are written and pushed to `CE_PLAN`. None has been run; this job only writes briefs, so nothing has been tested in AutoCAD or by Codex.
+
+- **W1** Civil daily work: Edit Pipe cascade, pit MOVE, CDSYNC, CDTWL, tag refusals. No settings pass.
+- **W2** Pit Schedule window. No settings pass.
+- **W3** Checks palette. One settings pass.
+- **W4** Tidy labels, Apply/U/REDO. One settings pass.
+- **W5** CDCALC window and What CE Found panel. No settings pass.
+- **W6** Manager windows, no administrator items. No settings pass.
+- **W7** Structural CEMEMBER. No settings pass.
+- **W8** Structural AD/LD/Q at 1:20, 1:50 and 1:100. No settings pass.
+
+- **Codex V10 problem:** the 22 Oct 20:51 V10 report was NOT TESTED on every look, "screen and mouse unavailable". Check Codex's screen tool before the conveyor starts these.
+- **Not briefed:** BUG-772 is BLOCKED-by-design because the WSUD tab is read-only. Items 19–25 in the backlog (BUG-416, drawn Pit Schedule table, CDPROFILE and others) have no proven route. The backlog file gives the reason for each.
+- **Queue and plan:** the eight queue lines are in `CONVEYOR_QUEUE.txt`. I wrote the section 15 plan lines to `QUEUE_20OCT_PLAN.md` in `_CODEX_RUNNER`, which isn't in the repo, so they aren't pushed.
+- **Checks:** all eight briefs have no control characters, no "follow" and only ASCII.
+- **W8 re-save:** W8 was queued once before its "follow" fix, then re-saved with the file corrected.
+
+Files are in `C:\Lisp Files\_CODEX_RUNNER` (`verifyWn_c60.txt` and `verifyWn_c60_full.txt`). The ranked list is `C:\CE_PLAN\areas\CODEX_ACCEPTANCE_BACKLOG_22OCT.md`.

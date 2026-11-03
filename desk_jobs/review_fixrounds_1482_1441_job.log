@@ -1,0 +1,14 @@
+**FOR TIM**
+
+Both fixes are good and both pull requests can go into the next train. Nothing is waiting on you.
+
+1. **#1482 (Tidy labels and pits): MERGE.** Tidy labels stops saying "No clear spot … (on pit P8)" when a label sits clearly beside the pit. A label on a pit, or on a detention tank's end wall, still gets moved off. Where pipe ends snap is unchanged. The new test failed without the fix and passes with it. Your checklist no longer tells you to edit a settings file.
+2. **#1441 (Recover Inverts totals line): MERGE.** The fix is just the missing space after the comma, plus a log line. Nothing else changed.
+3. **Tests run:** 146 of 146 and 49 of 49 passed, and the older AutoCAD 2024 build had 0 errors. None of this has been installed or opened in AutoCAD, so BUG-141 and BUG-820 stay open.
+
+---
+
+1. **Live heads:** a4c53b9f (#1482) and 0fdf8176 (#1441), the same as the fixer's entries.
+2. **One correction to the brief:** #1482 also conflicts in `REGRESSION_LOG.md` on the C-49 base, because #1481's entry is now at the top. Keep all entries. There are no code conflicts. Merge #1482, then #1441.
+3. **Still open, not blocking:** nobody has checked whether the tank block draws walls along its long sides.
+4. **Recorded:** entries 1388 to 1394 are in REVIEWLANE_LOG.md (CE_PLAN commit 72ccebd8, pushed). Your settings files are unchanged and the worktree is removed.

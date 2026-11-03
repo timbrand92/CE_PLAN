@@ -1,0 +1,26 @@
+**FOR TIM**
+
+The hunt of the installed Civil 3.0.51 found 46 problems with pits, pipes and network editing, and about 20 of them put wrong output on the drawing. None of them has been tried in AutoCAD yet. The report is in `C:\CE_PLAN\areas\release-v3-colleagues-HUNT_CIVIL_E_2026-10-12.md` and is pushed.
+
+**The worst five:**
+
+1. **Pit drops disappear:** when Edit Pipe asks "Recalculate downstream levels?" and you say Yes, every pit drop down the line disappears. Lower a pipe arriving at P2 to 9.80, and the pipe leaving P2 starts at 9.80 instead of 9.75.
+2. **Blank level read as zero:** if a pipe in that walk has a blank level, CE treats it as RL 0.00. One case writes a level of −0.15; another lifts the network about 17 m.
+3. **Pipes silently reversed:** a pipe you drew from its low end can get flipped to run uphill in the Pit Schedule. This happens during a background relink that ordinary commands like PITEDIT start without telling you.
+4. **Copies that act as the original:** a pit copied by grip-Ctrl or ROTATE → Copy still thinks it is the original. Two pits show the same number, and deleting the copy deletes the original's label.
+5. **Pipe ends left behind:** resizing several pits at once in CDEDIT leaves the pipe ends 225 mm inside the new pit walls.
+
+**Detention tank rotation (BUG-561):** the hunt also found a likely cause. A fix exists, but it is not in the version colleagues have.
+
+**One decision for you:** CD rounds a typed level of 10.125 to 10.13. One of your rulings says a typed level is never moved; another locks levels to 2 decimals. Which rule wins there?
+
+**What I recommend first:** fix the "recalculate downstream" routine. Four of the worst problems sit in that one place, and each can be shown failing in a test without opening AutoCAD.
+
+---
+
+**Technical notes**
+
+1. **Code audited:** `origin/claude/rel-20261017c` @ `4e2bdfeb` (Civil 3.0.51), not master. The read-only worktree at `C:\ce-hunt\civil-e` has been removed.
+2. **Method:** six read-only auditors, one per slice. I re-read the code behind the top findings myself; the report marks those "re-read". I merged findings that two auditors reported separately, and checked each one against BUG_CARPARK and the earlier HUNT, R00 and AUDIT files.
+3. **Commit:** CE_PLAN `3ff78170`, merged with origin/main first (no rebase), file added by name. Confirmed on origin/main.
+4. **Not done:** no BUG numbers filed (the controller does that), and nothing built, run or installed. The report also lists the tests that can go red today without AutoCAD.

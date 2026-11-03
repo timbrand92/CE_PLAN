@@ -1,0 +1,21 @@
+Run 40 on Civil 3.0.64 / Manager 1.1.64 gave 9 PASS, 0 FAIL, 0 BLOCKED and 2 UNPROVEN across 11 checks. The report is committed and pushed to `C:\CE_PLAN` as `ae0f2487`.
+
+**Headline results:**
+1. **BUG-416 (REDO safety): UNPROVEN.** "CE: Select this run" and "CE: Select whole network" exist only as right-click menu items, with no typed command anywhere in the repo. The driver can't right-click. Tim or a Codex mouse look needs to do it: U, right-click a pit, "CE: Select this run", REDO.
+2. **BUG-522 (start-up check): PASS for matched copies.** The CE log has 0 "different releases" lines, and the status bar shows CE MANAGER v1.1.64 and CE CVL SUITE v3.0.64. The mismatch case is UNPROVEN, because I don't alter installed files.
+3. **All the regressions hold:**
+   - Tidy labels with P8 added: P8 "No clear spot" stays gone.
+   - Freeboard is 150 in both CDRULES and CDTWL.
+   - Recover Inverts still says "20 already had invert text, 24 skipped".
+   - R-06: all 30 "unknown" rows carry "Enter the detention length, or untick Detention".
+   - Edit Pipe cascade: Yes, Apply, U, REDO.
+   - CDSYNC leaves the Pit Schedule rows identical.
+   - Quick edits open no CE window.
+4. **Settings restored and proven by hash.** The four real files read ACD64E79A33B, 622A246F7D3B, 24D8E5F7D87B and EFE307C4FC74 at both start and end. Driver hashes were unchanged (120EE24D15B2 / 5B542F2145F4).
+5. **`launch` returned ok:false after 240 s.** AutoCAD and Civil had started, but the drawing never opened. The driver's own `open` fixed it in 4 s. I don't know the cause.
+6. **Copies to delete in `C:\ce_rc_drv`:** `CLD401_B1.dwg` and `CLD401_B1_PRE_C7_20261020_173941.dwg`.
+
+Not tested: BUG-416 itself, the BUG-522 mismatch line, and Structural. Manager was not opened as a window and nothing was saved. Debug logging stayed off, so no `[TidyUp]` border or text-obstacle log lines were read.
+
+AUTOCAD CLOSED
+SETTINGS RESTORED

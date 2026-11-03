@@ -1,0 +1,7 @@
+== cx_rv26 (usage 46.0% -> 49.0%): 1. **DONE:** #1790 and #1789 are both **MERGE-WITH-FIXES**. Opus comparison: **2 agree, 0 disagree**.
+2. **Main finding:** #1789 changes saved figures before calculation, including replacing zero loss with 2.95. Exact corrections are in the [review](C:/CE_PLAN/areas/CODEX_PR_REVIEW_cx_rv26.md). No Tim decision is needed.
+
+---
+
+1. **Saved and pushed:** `cccd985d`; leak scan clean; no commits ahead.
+2. **Read-only:** No code changes, builds, tests, AutoCAD use or PR changes.

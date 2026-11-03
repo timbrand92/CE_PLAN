@@ -1,0 +1,5 @@
+== verifyE5_cur (usage 24.0% -> 24.0%): AUTOCAD CLOSED
+
+1. **Result:** Both looks NOT TESTED. Saved screenshots repeated; neither visual check reached acceptance. The prescribed zooms also triggered N17ÔÇÖs `nil` stop rule.
+2. **Safe end:** Four settings files unchanged; drawing not saved; lock released. No product PASS or FAIL.
+3. **Report:** [E5 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_E5_20261026_0902.md>). SURE 2, UNSURE 0.

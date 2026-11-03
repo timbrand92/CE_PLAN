@@ -1,0 +1,6 @@
+Train C-61 is assembled on `claude/rel-20261023l` (head `d17d47c3`, pushed). The report is pushed in `C:\CE_PLAN\areas` as `release-v3-colleagues-TRAIN_C61_ASSEMBLY_REPORT_2026-10-23.md`.
+
+1. **Merge:** all 17 PRs merged with no head changed. Nothing in Shared/ or Installer/. Manager changes come from #1548 and #1535 only, including six new .cs files.
+2. **Build and tests:** solution builds with 0 errors. Civil net10 ran 19,447 tests, 0 failed. Manager ran 916, 0 failed. Civil net48 focused ran 418 with 1 red, which is an AutoCAD reference-only fault, not a regression.
+3. **Clash for the finalizer:** #1525 contradicts #1524's guard tests. I kept #1524's form and re-pinned #1525's two guards in a separate commit.
+4. **Not covered:** nothing opened in AutoCAD.

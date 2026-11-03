@@ -1,0 +1,1 @@
+`C:\CE_PLAN\areas\PREREVIEW_PR1995_1999_03NOV.md` (the order said `C:\CE_PLANreas\…`, which doesn't exist, so I took it as `areas`): #1995 FIX FIRST (it strips the first-line byte-order mark from `UserSettings.cs`, one line to restore); #1996, #1997, #1998 and #1999 GO; nothing built, tested or opened in AutoCAD, and none of the five is in 3.0.89, 3.0.90 or rel-20261110a.

@@ -1,0 +1,7 @@
+PR #1868 is open as a draft, but I never built or tested it. Both build slots were held by other jobs' full test runs for about 10 hours, so my runs never started.
+
+- **Change:** with the large-pipe minimum fall set, Civil Design, auto-design and the network redesign now hold DN450 and larger to it, matching Edit Pipe and CDRULES. A blank row is unchanged.
+- **Files:** `SettingsSizingStandards.cs`, `UserSettings.cs`, `Bug1091RedesignReadsMinFallTests.cs` and `REGRESSION_LOG.md`.
+- **Switch:** `pipe.largePipeRedesignReadsMinFall`, default ON.
+- **Not proven:** the code compile and the focused tests, the full suite and the net48 compile have not run. The report names robot case C78_redesign_min_fall and asks for a Codex look H8.
+- **Report:** `release-v3-colleagues-BUG1091_FIX_REPORT.md` is pushed to `C:\CE_PLAN`.

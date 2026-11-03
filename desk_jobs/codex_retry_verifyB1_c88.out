@@ -1,0 +1,9 @@
+== verifyB1_c88 (usage 46.0% -> 47.0%): AUTOCAD CLOSED
+
+1. **Results:** 3 PASS, 2 BLOCKED; no primary FAIL or DIFFERENT. All 5 SURE. Six parked looks NOT RUN.
+
+2. **Fault seen:** B1-06c separately FAILS: the real 4 mm downhill fall was called ÔÇ£essentially flatÔÇØ. Inspector colour and uphill warning remain unverified.
+
+3. **Clean end:** Nothing saved or sent. Four settings files unchanged. Lock released. Usage 47%.
+
+4. **Report:** [B1 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_B1_20261102_1628.md>). Fixture requests and exact blockers are recorded there.

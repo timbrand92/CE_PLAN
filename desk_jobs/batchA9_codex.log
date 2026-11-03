@@ -1,0 +1,20 @@
+Mon 06:41:04 batch A3 (Codex day) waiting for a free robot
+Mon 06:41:04 civil bundle ProductVersion: 3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527
+Mon 06:41:05 no install in progress; A3 may start (the build is read again below)
+Mon 06:47:48 backed up CD_RecentValues.json sha 8C021849BD8F
+Mon 06:47:48 backed up CD_Settings.json sha ACD64E79A33B
+Mon 06:47:48 backed up CS_Settings.json sha D604CE689671
+Mon 06:47:48 backed up settings.json sha EFE307C4FC74
+Mon 06:47:48 Codex usage before: 31 percent
+Mon 06:47:48 STOP_CODEX.flag lifted (STOP_SUPERVISOR.flag stays up)
+Mon 06:47:53 starting verifyA3_c88
+Mon 06:55:54 verifyA3_c88 launcher finished
+Mon 06:55:54 Codex usage after: 31 percent
+Mon 06:55:54 unchanged CD_Settings.json sha ACD64E79A33B
+Mon 06:55:54 unchanged CD_RecentValues.json sha 8C021849BD8F
+Mon 06:55:54 unchanged CS_Settings.json sha D604CE689671
+Mon 06:55:54 unchanged settings.json sha EFE307C4FC74
+Mon 06:55:54 HOLD_ROBOT.flag removed.
+Mon 06:55:55 restarting chain4 on spec_passi.txt (build 3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527; finished packs are skipped)
+Mon 06:55:55 Batch A9 ends.
+Mon 06:55:55 CODEX_NEXT.txt rewritten to B

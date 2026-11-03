@@ -1,0 +1,299 @@
+{
+  "header": {
+    "run_id": "RUN-20261102-2238-C3.0.89-pkERASE",
+    "started": "2026-11-02 22:38:00",
+    "finished": "2026-11-02 22:40:54",
+    "build": {
+      "civil": {
+        "product_version": "3.0.89+61fd6fbc72710872048a69ef5b46d0e5b55087fa",
+        "file_version": "3.0.89.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.89+61fd6fbc72710872048a69ef5b46d0e5b55087fa",
+        "file_version": "1.1.89.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.89+61fd6fbc / struc 1.0.125+204dfad2 / mgr 1.1.89+61fd6fbc",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "DA1A519A048580868BC1C5D2390B22632928709EEE1863716F3D3EBEF5A7E2A8",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.89+61fd6fbc72710872048a69ef5b46d0e5b55087fa; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.89+61fd6fbc72710872048a69ef5b46d0e5b55087fa",
+      "Driver files (SHA-256, first 12): v2 F4D8F40C3675 (expected F4D8F40C3675), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4B0175FFAB00, v3 session F061E3240C47, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 BBF42DBA8958, case_runner_lib.ps1 89AD455619F8, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 0 shared setup(s); pack SHA-256 DA1A519A048580868BC1C5D2390B22632928709EEE1863716F3D3EBEF5A7E2A8; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json D604CE689671 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Mon 02 Nov 2026 22:38 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 0,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 1,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261102-2238-C3.0.89-pkERASE-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-11-02 22:38:01",
+      "finished": "2026-11-02 22:40:54",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV32238061_B1.dwg",
+      "cases": [
+        "PROBE-PS-ERASE"
+      ],
+      "whatsnew_dismissed_at_start": "no, window was not there",
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : D604CE689671 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "PROBE-PS-ERASE",
+      "proves_bugs": "",
+      "title": "PROBE: does Continue to Place / update enable after the older drawn schedule is erased on the test copy",
+      "kind": "deterministic",
+      "order": 345,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "Wave 1 look steps (route to a drawn Pit Schedule)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "probe, nothing proved",
+      "variant_of": "",
+      "expected": "Either the button enables (a robot route exists) or it stays disabled (the record says what the window then says).",
+      "why_not_unit": "Reads the live window and drawing.",
+      "not_automated": [
+        "This probe judges nothing; it records."
+      ],
+      "file_sha256": "4021D70C8A9A2A5F264D03220B96AD0A5796F980877480E12AF9001A04029CBB",
+      "result": "BLOCKED",
+      "blocked": "refused by a driver guard",
+      "first_failure": null,
+      "started": "2026-11-02 22:39:06",
+      "seconds": 78.4,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $n",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 0 -> $a",
+          "ok": true,
+          "seconds": 10.5,
+          "evidence": "500 object(s) after index 0 (model space now 1034); by type: AcDbBlockReference 157; AcDbCircle 32; AcDbHatch 7; AcDbLine 58; AcDbMline 1; AcDbMText 30; AcDbPolyline 38; AcDbRotatedDimension 1; AcDbText 134; CeCvlPipeObject 42; first: 1003FA AcDbBlockReference XREF XW2614-Arch Survey ; 10040D AcDbBlockReference XREF XW2614-Arch Ground ; 10041A AcDbBlockReference XREF XW2614-Arch Site ; 10127D AcDbHatch HATCH 51 ; 10127E AcDbPolyline HATCHOUTLINE ; 10127F AcDbBlockReference BLOCKS A$C32C15792 ; 10128C AcDbMText 25TEXT THIS DRAWING IS TO BE READ IN CONJUNCTION WITH ARCHITECTURAL DOCUMENTATION. ; 10128E AcDbHatch HATCH 51 ; 10128F AcDbPolyline HATCHO..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 500 -> $b",
+          "ok": true,
+          "seconds": 8.0,
+          "evidence": "500 object(s) after index 500 (model space now 1034); by type: AcDbBlockReference 226; AcDbHatch 20; AcDbLeader 1; AcDbLine 24; AcDbMLeader 6; AcDbMline 1; AcDbMText 118; AcDbPolyline 22; AcDbText 75; CeCvlPipeObject 7; first: 10EC12 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC15 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC18 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC1B AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC1E AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC21 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC24 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC27 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC2A AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC2D..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 1000 -> $c",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "34 object(s) after index 1000 (model space now 1034); by type: AcDbBlockReference 14; AcDbLeader 4; AcDbLine 1; AcDbMLeader 2; AcDbMText 8; AcDbRotatedDimension 1; AcDbText 4; first: 116BB6 AcDbText 20TEXT IL 18.24 ; 116BD7 AcDbBlockReference ARROW TIM_CVL_ARROW ; 116BDC AcDbMText 25TEXT 150 DIA. UPVC SEWER CLASS PIPE AT 1 IN 97 ; 116BE0 AcDbText 20TEXT IL 18.60 ; 116BE4 AcDbText 20TEXT IL 18.24 ; 116C05 AcDbBlockReference ARROW TIM_CVL_ARROW ; 116FC6 AcDbBlockReference BLOCKS A$Cfdd7d71d ; 11978C AcDbMLeader 25DIMS ; 11978E AcDbLine SLAB SC ; 11978F AcDbMLeader 25DIMS ; 1197BB AcDbBlockReference..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $a \"layer~(?i)SCHEDULE\" -> $sa",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "selected 0 of 500: "
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $b \"layer~(?i)SCHEDULE\" -> $sb",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "selected 1 of 500: 115263 Pit Schedule SCHEDULE"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $c \"layer~(?i)SCHEDULE\" -> $sc",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 34: "
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $sa handle -> $h1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' of an empty list: empty"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $sb handle -> $h2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 115263"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $sc handle -> $h3",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' of an empty list: empty"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $sa handle -All -> $hall_a",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' of an empty list: empty"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $sb handle -All -> $hall_b",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 115263"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $sc handle -All -> $hall_c",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' of an empty list: empty"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"PITSCHEDULE\" -Force -ExpectWindow \"Pit Schedule\" -TimeoutSec 120 -> $ps0",
+          "ok": true,
+          "seconds": 14.1,
+          "evidence": "typed 'PITSCHEDULE': Command: | Command: PITSCHEDULE"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Pit Schedule\" -> $psd0",
+          "ok": true,
+          "seconds": 9.9,
+          "evidence": "ui-dump 'Creative Engineering | Pit Schedule (PITSCHEDULE)': 660 controls, tabs: Source | Rows | Changes | Placement"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "close-windows",
+          "text": "close-windows",
+          "ok": true,
+          "seconds": 30.1,
+          "evidence": "closed open CE windows: round 1: 'Creative Engineering | Pit Schedule (PITSCHEDULE)' <- Cancel without saving : ok=False no button 'Cancel without saving' that is on the v3 press list was found in a window matching /Creative\\ Engineering\\ \\|\\ Pit\\ Schedule\\ \\(PITSCHEDULE\\)/ (windows:..."
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"{$h1}\"",
+          "ok": false,
+          "seconds": 2.1,
+          "evidence": "pick-first : REFUSED: pick-first needs one or more handles: pick-first \"109D56,109E23\" (hex digits only)"
+        }
+      ],
+      "assertions": [],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 8 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: PITSCHEDULE completed 39392 ms"
+      ],
+      "error": null,
+      "finished": "2026-11-02 22:40:25",
+      "session_id": "RUN-20261102-2238-C3.0.89-pkERASE-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}

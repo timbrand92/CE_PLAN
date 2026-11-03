@@ -1,0 +1,11 @@
+I checked all 12 pull requests against the code that is actually installed. Only one is safe to merge today. The report is at `C:\CE_PLAN\areas\REVIEW_PILE_B5_24OCT.md` and is pushed.
+
+1. **Counts:** 1 merge, 1 merge after a small fix, 2 hold, 8 reject.
+2. **Merge today:** #1243. It adds one line to the Civil Help guide: AutoCAD forgets Redo for a drawing if you change the view in another drawing and come back. Its only clash is in the change log.
+3. **Reject (8):** #1232, #1233, #1234, #1235, #1236, #1238, #1242 and #1256 fix bugs that the installed Civil 3.0.72 and Manager 1.1.72 already fix another way. They can be closed; that's your call, and I closed nothing.
+4. **Fix first:** #1245 stops Structural forcing the menu bar back on at every AutoCAD start. As written, the fix starts switched off, so nothing changes for anyone. It needs to start on, which matches how Manager already behaves.
+5. **Hold:**
+   - **#1246 (Civil Settings boxes for 37 values):** it would not build on the installed code, so it needs rebuilding on today's Settings window.
+   - **#1260 (Structural checklist test):** this test is meant to fail until the bug is fixed, so it has to wait for that repair.
+6. **Found along the way:** the installed fix for the long update-folder names (BUG-486) has its switch off. A colleague with a long Windows login name could still fail to get an update ready on AutoCAD 2022 to 2024. Turning it on changes a file in the signed-update system, so it needs your yes first.
+7. **Not checked:** nothing was built or run, and nothing was opened in AutoCAD.

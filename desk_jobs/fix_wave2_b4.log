@@ -1,0 +1,9 @@
+Items 16 to 20 are fixed in five draft PRs, each with a test that fails before and passes after. All five faults were real on the base. Nothing is marked FIXED, and none of it has been run in AutoCAD.
+
+1. **BUG-1017 (PR #1613):** Manager buttons and CE Blocks tiles cancel a running command first. Manager tests 861/861.
+2. **BUG-892 (PR #1609):** a zero-count Inspector click no longer takes a lock or transaction. Civil tests 19156 total; the two reds are the known BackTest and a PDF-render flake.
+3. **BUG-957 (PR #1610):** Enter in Settings search no longer saves and closes. Civil tests 19158 total, one red (the known BackTest).
+4. **BUG-987 (PR #1611):** CDSYNC settles each pit's own record before using position. Civil tests 19156 total, one red (the known BackTest). The 200-unit nearness distance still needs Tim's word (the report gives the options).
+5. **BUG-1011 (PR #1612):** a typed Depth now reaches the pit. Civil tests 19157 total; I corrected one of my own test assertions and re-ran only the narrow tests green.
+
+None was skipped. The report is pushed to C:\CE_PLAN as `areas/release-v3-colleagues-FIX_WAVE2_BATCH4_REPORT.md`.

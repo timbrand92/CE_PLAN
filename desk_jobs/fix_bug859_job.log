@@ -1,0 +1,7 @@
+**Cause proven from code only; no live log was read. It is a switch gate.** Draft PR #1520 holds the fix. It is built and unit-tested, not installed, and not tried in AutoCAD.
+
+- **Cause:** the downpipe block has an attribute, so a double-click starts AutoCAD's attribute editor (EATTEDIT). CE watches that command only behind `doubleClick.opensEditWindow`, which is OFF by default. #1499's own switch, `sourceEditWindow` (ON), is read later inside CDTAG, too late.
+- **Fix:** head `3563aa9d`. The attribute editor is now also watched when the source switch is ON, and with the other switch OFF it redirects only tagged sources. Civil net10: 19,062 of 19,092 passed. The 11 failures also fail on the untouched base.
+- **Green label (TEXTEDIT):** separate cause, not fixed.
+- **Older pit-label finding (L4):** same gate, not fixed.
+- **Report:** `C:\CE_PLAN\areas\release-v3-colleagues-BUG859_DIAGNOSIS_REPORT.md`, with a Codex probe.

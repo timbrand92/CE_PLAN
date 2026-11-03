@@ -1,0 +1,7 @@
+== cx_cr17 (usage 10.0% -> 12.0%): 1. **DONE.** [Review report](C:/CE_PLAN/areas/CODEX_CASE_REVIEW_cx_cr17.md) pushed as `bfcbc5b3`; branch has no ahead commits. Leak scan passed.
+
+2. **R28: NEEDS RUNS.** Narrow check ready on older 3.0.78; needs two sessions on installed **3.0.79**. Review note updated.
+
+3. **R31: PARTIAL.** Wording and Esc only; chosen direction and resulting arrow remain unproved. Needs two current-build sessions too.
+
+4. **Summary.** No whole daily-tool item or bug gains acceptance. No AutoCAD, builds or tests run.

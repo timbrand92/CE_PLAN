@@ -1,0 +1,31 @@
+**FOR TIM**
+
+**GO for Structural train S-44 at `007a211d9db4bdbd259a7ed821a21711c3b1e92f`.** All 32 fixes stay in and none were dropped. It's built and unit-tested only: not installed, and nobody has opened it in AutoCAD.
+
+1. **What I fixed:**
+   - **Settings save crash:** one fix would have made every routine settings save stop with an error in AutoCAD 2027. I fixed that line.
+   - **PDF export Help:** the new Help mentioned a Cancel button that does nothing when pressed. I removed that phrase.
+   - **New test:** I added a test that the five new settings switches start ON.
+2. **The five new switches stay ON.** Each one turns on a fix where the old behaviour was the bug: column bar size, hatch change, CE_INSPECT on read-only drawings, timber quantity, and bracing types.
+3. **What I could not run:** the C: drive dropped below the 12 GB stop line because of other jobs. So I did not re-run:
+   - the whole-solution build
+   - three smaller test groups
+   - the official release build that checks the bundle still has its 2007 files.
+
+   The payload builder must run that release build before making 1.0.124.
+4. **Do not mark anything fixed:** 34 bugs each still need a Codex check in AutoCAD. The steps are in the report.
+5. **Worth a look:** in the RCBEAM Type 7 preview, the stirrup now starts 75 mm down and leaves an empty band at the top. That matches the placed section, but it may look like a fault.
+
+Report: `C:\CE_PLAN\areas\release-v3-colleagues-TRAIN_S44_FINALIZER_REPORT_2026-10-25.md`
+
+---
+
+1. **Tests:**
+   - **Structural net10:** 5,923 passed, 0 failed.
+   - **Structural net48:** 5,160 passed, 53 failed. These are the same 39 failures as on the installed version, plus 14 new tests that fail only because of the reference-only AutoCAD files on net48. All 14 pass on net10.
+   - **Focused tests:** 121 of 121 passed, including the 150% Settings-fit test.
+2. **Commits:** `bc71667d`, `6e7fc15b` and `007a211d`, pushed as a fast-forward. The leak scan was clean.
+3. **My mistake:** one early build ran without the safety flag. I checked that it changed nothing in your installed bundle, then deleted that output.
+4. **Your files:** your four settings files did not change while I worked.
+5. **Clean-up:** I removed my worktrees and scratch folders.
+6. **Logs:** I added entries 1641 to 1646 to the review-lane log, with the sign-off line.

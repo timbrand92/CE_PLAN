@@ -1,0 +1,12 @@
+1. **Answer:** 3 of my 4 bugs now have a robot case (BUG-324, BUG-652, BUG-653). BUG-339 has none: it needs the Apply button in the multi-pipe Edit window, which the robot is not allowed to press. It goes to a Codex look.
+2. **BUG-324 (case W324):** pick the old P4 -> P3 pipe plus a fresh pipe, type CDEDIT. CE must leave the old pipe out by name and open the editor for the other one, not refuse both.
+3. **BUG-652 and BUG-653 (one case, W652):** four new pits A-B-C-D in empty ground. Lower the pipe into pit B from 18.40 to 18.20 and answer Yes to "Recalculate downstream".
+4. **What must be true:** the pipe leaving B starts at 18.15, not 18.20 (B's 50 mm drop kept). The next pipe, with its far level left blank, is skipped and named, not given a level of -0.10.
+5. **Twins (must fail):** W324_BROKEN, W652_BROKEN (pit-drop switch off), W653_BROKEN. Each one fails on a check, not on a stuck step.
+6. **Not proven by these cases:** the Apply button of the multi-pipe Edit window (BUG-324's write and all of BUG-339), and CDPROPAGATE (BUG-653's other route).
+7. **Fault found in older drafts:** N65 and N66 expect "Edit 2 Pipes" for the old P4 -> P3 pipe plus one other. On a fresh test drawing CE leaves that pipe out, so both will fail at their first step.
+8. **Checks:** `validate` 35 files, 0 invalid. `check_ids`: every control id is known. No "print", no street name, no level that disagrees with the arithmetic.
+9. **Nobody has run them.** Every number is worked out from the installed code (3fbb9da5, Civil 3.0.88), except the old-pipe fact, which was seen on today's 13:22 run.
+10. **Your action:** none. The desk gives them to the Opus review, then the robot.
+11. **Robot time:** W652 is long, about 15 to 20 minutes per pass (4 pits and 3 pipes), so allow about 2 hours for W652 with its two twins over two passes. W324 is about 5 minutes per pass.
+12. **Files:** `C:\Lisp Files\_ACAD_DRIVER\cases\drafts_wave1_31oct\` W324_batch_leaves_out_older_pipe, W324_BROKEN, W652_recalc_keeps_pit_drop_skips_blank_end, W652_BROKEN, W653_BROKEN.

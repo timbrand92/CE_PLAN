@@ -1,0 +1,17 @@
+I've reviewed all five cases: four are ready, one needs fixing first. The report is pushed and the leak scan was clean. Nothing here needs you in AutoCAD.
+
+1. **R22, CDCHECK wording (BUG-372): ready, for one part.** On the test drawing, every CDCHECK line now names pipes in words, for example "An unnamed pipe flows to WT4". No line shows a code like "handle 10A86B".
+   - Your original BUG-372 was about the lines after STRETCH and MOVE. Those are not tested.
+2. **N33, Pit Schedule order (card D21): ready, whole claim.** Pits typed LPD, OG, CP10 and CP2 are listed in this order: LPD, OG, P1 to P10, CP2, CP10, then C1.
+3. **R09s, double-click on a downpipe (BUG-859): ready, for one part.** Double-clicking the outer circle of DP1 opens CE's Edit source window with DP1 in the tag box. AutoCAD's attribute editor never appears.
+   - Not tested: the red centre, the DP text, the green label, and saving a changed tag with OK.
+4. **N32, office layers (card D24): ready, for one part.** For one pit and one pipe, all 8 new objects land on their own layers and nothing goes on layer 0. The current layer stays BLOCKS.
+5. **N36, downpipe speed (BUG-1228): needs fixing first. I wrote no review file for it.**
+   - **The speed fix works:** a downpipe now places in about 8 seconds instead of about 29.
+   - **The test's time limits are too tight:** its first run failed with nothing wrong. One drawing read took 1.6 s against a 1.5 s limit, and the whole downpipe took 11.3 s against a 10 s limit.
+   - **Why the first run failed:** every read did exactly the same work as in the passing runs, just evenly slower. The PC was most likely busy at that moment; that last part is my best guess, not proven.
+   - **The cure:** raise the limits to 3 s and 20 s, and add one count check that can't fail by chance. The test with the speed fix switched off still fails by a wide margin (4.8 s reads, 28.9 s per downpipe). Then N36 needs two fresh runs.
+
+**For the desk:** the N32, N33 and R09s review files sit beside their cases in the drafts folders, as you asked. The robot's acceptance check only looks in the main cases folder, so it won't see them until each case and its review file move there together.
+
+The full reasons, with the exact lines to change, are in `C:\CE_PLAN\areas\OPUS_CASE_REVIEW_C76_PROOFS_30OCT.md`.

@@ -1,0 +1,9 @@
+== cx_lf23 (usage 34.0% -> %): 1. **DONE:** BUG-983–BUG-987 skipped because existing PRs already cover them. No product changes.
+
+2. **Draft PR:** [#1677](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1677), branch `cx2/bug-983-batch23-audit`, tip `3d2e54d6`.
+
+3. **Report pushed:** [Batch 23 report](C:/CE_PLAN/areas/CODEX_LEDGER_FIX_BATCH23_23OCT.md), including per-bug evidence and exact AutoCAD checks.
+
+---
+
+1. **Verification:** 0 tests added/run; 0 builds. Documentation checks and both leak scans passed. Nothing deployed; AutoCAD not opened. Existing fixes still need independent native checks.

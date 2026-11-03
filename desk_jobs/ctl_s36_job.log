@@ -1,0 +1,22 @@
+**S-36 assembled and pushed, but only 7 of the 8 PRs are in.** I skipped #956 because it clashes with code already on the branch. The branch is `claude/rel-20261009y` and the final head is `62a25553a51933512569b9173a3e40a09981ce44`; the local head equals the origin head.
+
+1. **Merged (plain `--no-ff`, each PR's change matched its own diff apart from REGRESSION_LOG):** #955, #957, #964, #966, #973, #993, #995, at the heads in entry 970 (the newest word in the log). The branch is S-34 (1.0.115, which includes the S-33 branch `f01bba0f`) plus these seven.
+2. **Skipped, #956 @ fb13cef9:** it conflicts in `Modules/Structural/Commands/BracingCommands.cs` (AB and BB, two spots). The base has the locked-layer check from #863/#879 and #956 adds the units check on the same lines. Both look keep-both, but the brief says stop on any code clash, so I aborted the merge. It needs a decision (the S-37 train or a hand resolution). Nothing is stacked on it.
+3. **Review note:** #956 @ fb13cef9, #993 and #995 have a Fable review (MERGE at the exact head) as their newest review, not an Opus one. I counted it as MERGE.
+4. **REGRESSION_LOG:** the clash was resolved by union each time (stored LF, nothing lost, no control characters in added lines).
+5. **Builds:** 9 of 9 with 0 errors (Structural, Structural.Tests and DesignCore.Tests on net48, net8 and net10). The first Tests build failed on a missing restore file; restoring Structural with `EnableUnifiedHostAdapters=true` fixed it with no file change.
+6. **Tests:**
+   1. **Structural net10:** 4889 of 4889 passed (S-34 final was 4844).
+   2. **Structural net48:** 4153 passed, 36 failed, 697 not executed. The 36 are the same nine old classes as S-34.
+   3. **DesignCore:** 2045 per lane (net48, net8, net10), with the same 6 old failures per lane.
+   4. **Guards:** all three guards, `NoStructuralQuestionShowsItsListOrDefaultTwice`, the Plugin.cs pin test and the #949 zero-call tests passed. No assembly fix commit was needed.
+7. **Registry:** 1 entry added, `CEMARKUPCHECK` (#957, hidden); the total goes from 374 to 375.
+8. **New Settings properties:**
+   1. **`IssueStampsOnlyIncludedSheets`:** default **true** (#966, Tim's ruling; a protection that is ON, not OFF).
+   2. **`C1Size`, `DoubleStudSize`, `TripleStudSize`, `C2Sizes`:** default to today's values (#964).
+9. **Hygiene:** Tim's settings files are identical before and after (Structural CS_Settings 5A8C447A, 33,198 bytes), the installed DLLs are still 1.0.115+4e17dd50, and the live-file manifest is unchanged. The 90 test-rewritten pictures were restored, and `git status` is clean after `git clean -fdXq`.
+10. **Redo-killer scan:** no new `StartTransaction`, `SetCurrentView` or `SetSystemVariable` in production code. The only hits are existing Sheets-scanner baseline lines that #973 re-adds in a test.
+11. **My mistake:** while fixing a build script I ran `taskkill /F /IM dotnet.exe` once, which could have ended another session's dotnet process. None was running just before or after, but I can't rule out that one was cut short.
+12. **Not done:** net8 Structural tests (built only), Drainage, Manager, Installer, ReleaseTests and the SBEAM evidence-reader class were not run, and nothing was opened in AutoCAD.
+
+The full report is `C:\Lisp Files\_TEST_COPIES_20260923\TRAIN_S36_ASSEMBLY_REPORT.md`.

@@ -1,0 +1,193 @@
+{
+  "header": {
+    "run_id": "RUN-20261029-1948-C3.0.86-b80R09",
+    "started": "2026-10-29 19:48:49",
+    "finished": "2026-10-29 19:57:47",
+    "build": {
+      "civil": {
+        "product_version": "3.0.86+5888ee757244aac89283aaaf2ba68e51470ecbb3",
+        "file_version": "3.0.86.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.86+5888ee757244aac89283aaaf2ba68e51470ecbb3",
+        "file_version": "1.1.86.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.86+5888ee75 / struc 1.0.125+204dfad2 / mgr 1.1.86+5888ee75",
+    "acad_version": "",
+    "pack_sha256": "AAD605F62FD659E426E68F8C938EC13FFFC33E8A74BCB93BA99720BA7CC45DF0",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.86+5888ee757244aac89283aaaf2ba68e51470ecbb3; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.86+5888ee757244aac89283aaaf2ba68e51470ecbb3",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4CD773B85EC5, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 13955AAA60D1, case_runner_lib.ps1 8F9B8DCBB473, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 0 shared setup(s); pack SHA-256 AAD605F62FD659E426E68F8C938EC13FFFC33E8A74BCB93BA99720BA7CC45DF0; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json B3B5A004B929 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Thu 29 Oct 2026 19:48 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 0,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 1,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261029-1948-C3.0.86-b80R09-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-29 19:48:51",
+      "finished": "2026-10-29 19:57:47",
+      "result": "FAIL",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31948561_B1.dwg",
+      "cases": [
+        "R09"
+      ],
+      "calibration": {
+        "ok": false,
+        "max_raw_px": null,
+        "max_corrected_px": null,
+        "why": "centre : the click failed: AutoCAD would not come to the front (not_foreground). Nothing was clicked.",
+        "canvas": {
+          "left": 1951,
+          "top": 421,
+          "width": 1858,
+          "height": 569,
+          "how": "exact (tol 0)",
+          "scale_vs_screensize": 1.0,
+          "dpi": 96
+        }
+      },
+      "clean": false,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : B3B5A004B929 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "",
+      "quit_attempts": [
+        {
+          "attempt": 1,
+          "how": "v2 quit",
+          "ok": false,
+          "ended_by": null,
+          "error": "AutoCAD did not close gracefully and was NOT killed. If it is stuck, run quit again with -Kill."
+        },
+        {
+          "attempt": 2,
+          "how": "v2 quit",
+          "ok": false,
+          "ended_by": null,
+          "error": "REFUSED: AutoCAD is busy (a command is active) and the last known drawing cannot be trusted: no drawing has been seen yet by this driver. Nothing was closed."
+        },
+        {
+          "attempt": 3,
+          "how": "v2 quit -Kill",
+          "ok": true,
+          "killed": true,
+          "error": ""
+        }
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "id": "R09",
+      "proves_bugs": "",
+      "title": "Double-click on the DP1 downpipe circle opens the CE Edit source window",
+      "kind": "deterministic",
+      "order": 10,
+      "slot": "launch",
+      "fixture": "DRV1_B1",
+      "plan_item": "BUG-859,",
+      "bug": "BUG-859",
+      "known_fail": "BUG-859",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "A double-click on the outer circle of a freshly placed downpipe (tag DP1) opens CE's 'Edit source' window with DP1 in its Tag box, and not AutoCAD's Enhanced Attribute Editor. Cancel closes it.",
+      "why_not_unit": "Unit tests passed while the real AutoCAD double-click still reached EATTEDIT with nothing picked (BUG-859 round 1); only a real mouse double-click on a real block shows which window opens.",
+      "not_automated": [
+        "The name of the Tag box in the Edit source window is not proven (the window has never opened); the check 'control Tag value DP1' uses the name 'Tag' and may need that one word corrected once the fix is installed.",
+        "Batch 3 fixes of 25 Oct 2026: run unchanged first on Civil 3.0.75 it FAILED for the real reason (the double-click opened AutoCAD's Enhanced Attribute Editor, run b3r09a), so the Tag box name is still unknown. Cancel is now pressed with ui-press (Edit source, Cancel) and its closing is asserted; close-windows stays behind it only to put AutoCAD right if the wrong window opened. The true red after this edit is the variant R09_OFF_BROKEN (the switch doubleClick.sourceEditWindow set false: AutoCAD's editor must open).",
+        "Batch 4 (26 Oct 2026, Civil 3.0.77): evidence for BUG-859 from CE own log at every double-click of runs on 3.0.75 (b3r09a, b3w1, b3z4): \"double-click hit-test: 1 block(s) under the pointer; source tag = DP1\", \"pick set emptied so EATTEDIT stops at its prompt\", \"CANCELCMD posted=true for EATTEDIT\", \"CDEDIT scheduled at Idle\", then \"starting CDEDIT in command context\" only 21 to 37 s later, after the robot had closed AutoCAD Enhanced Attribute Editor. So CE catches the double-click but AutoCAD editor still opens first. The check log civilx has CDEDIT scheduled at Idle (civilx = the structured CE log ce_cvl_structured_<date>.log, a runner key added 26 Oct 2026 because the first try with log civil could not pass on any build: those lines are written only to the structured log, not to CE_CVL_SUITE.log; runs b4c1 b4c2) passes when the switch is ON and must FAIL in R09_OFF_BROKEN, where CE logs EATTEDIT left to AutoCAD: the double-click switch reads OFF (that is its true red). R09 itself stays a real fault (EXPECT-FAIL BUG-859) because AutoCAD editor opens first.",
+        "The red centre, the angled DP text and the green label (BUG-860) are not clicked here; only the outer circle named in the bug.",
+        "Run B5 evidence (26 Oct 2026, Civil 3.0.78+d8840a09, run RUN-20261026-1312-C3.0.78-b5a1, the first run in which the log check read the right log): in CE structured log at 13:18:20 \"TryRedirectToCdEdit: target registered; CDEDIT scheduled at Idle\" was present (check 2 PASSED); the robot window list after the double-click read only \"Enhanced Attribute Editor\" (checks 3 to 6 FAILED, real fault BUG-859 on 3.0.78); with doubleClick.sourceEditWindow OFF the variant FAILED check 2 (96 new log lines, no scheduled-CDEDIT line). Scope (cx_cr02): outer-circle opening and Cancel only; the red centre, the angled DP text and OK saving a changed tag are not proved; whole BUG-859 not proved."
+      ],
+      "file_sha256": "8763A665A9C3EEFB8E04AFFED95632E407945453E05158982DB28F41872C9B74",
+      "result": "BLOCKED",
+      "blocked": "AutoCAD busy",
+      "first_failure": null,
+      "started": "2026-10-29 19:52:55",
+      "seconds": 167.6,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 setvar PICKFIRST 1",
+          "ok": false,
+          "seconds": 61.6,
+          "evidence": "v3 setvar PICKFIRST 1: BUSY: AutoCAD did not accept a COM call for 61 s (it kept answering 'call rejected': it is busy). Exception calling \"Get\" with \"2\" argument(s): \"Call was rejected by callee. (0x80010001 (RPC_E_CALL_REJECTED))\""
+        }
+      ],
+      "assertions": [],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 0 new line(s) while the case ran, 0 with [ERR]",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)"
+      ],
+      "error": null,
+      "finished": "2026-10-29 19:55:42",
+      "session_id": "RUN-20261029-1948-C3.0.86-b80R09-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [
+          "known failure (BUG-859): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": true
+      }
+    }
+  ]
+}

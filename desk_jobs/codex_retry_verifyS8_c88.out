@@ -1,0 +1,12 @@
+== verifyS8_c88 (usage 39.0% -> 40.0%): AUTOCAD CLOSED
+
+1. **Results:** 2 DIFFERENT, 0 FAIL, 2 NOT TESTED as instructed. SURE 4 / UNSURE 0.
+2. **Behaviour:** Enter finished correctly; CD named both levels; pipe reversal persisted. Visual differences: history obscures FALL details, and one pending-edit caption clips.
+3. **Clean end:** Nothing saved. Four settings unchanged. Lock released. Usage 40%.
+4. **Report:** [S8 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_S8_20261102_0949.md>).
+== verifyS8_c88 (usage 44.0% -> 44.0%): AUTOCAD CLOSED
+
+1. **Results:** 1 PASS, 1 DIFFERENT, 2 NOT TESTED. No FAIL or BLOCKED. Both tested results SURE.
+2. **Finding:** Edit Pipe clips ÔÇ£DownstreamÔÇØ to ÔÇ£DownstreÔÇØ during reversal. Arrow reversal and reopened levels worked.
+3. **Clean end:** Four settings hashes unchanged; drawing discarded; lock released.
+4. **Report:** [S8 verification](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_S8_20261102_1535.md>).

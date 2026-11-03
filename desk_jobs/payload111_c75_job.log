@@ -1,0 +1,6 @@
+**Candidate: `C:\ce_rc_scratch\c1071`. Verified 828, bad 0, extra 0 (Civil); verified 75, bad 0, extra 0 (Manager).** The report `PAYLOAD_C1071_REPORT.md` is written last.
+
+- **Branch:** `claude/rel-20261026z`, version commit `09126560` (4 files, 4+/4−), pushed. Stamps are Civil 3.0.85 and Manager 1.1.85.
+- **Installed line found:** C-74, `3.0.84+94f521cc`, in all six DLLs.
+- **Tests:** pin tests all green, with the expected 34, 14, 15 and 17 for the PR classes. String proof: 1,374 rows, 0 unexpected.
+- **Odd:** the robot rewrote `CD_Settings.json` at 00:08 and put it back byte-identical by 00:11. I did not touch it; the other three settings files never changed.

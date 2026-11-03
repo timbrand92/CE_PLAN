@@ -1,0 +1,8 @@
+I opened no PR for BUG-882, and I haven't fixed it. I stopped because it needs your call.
+
+- **Fault confirmed:** `Installer/app.manifest` line 7 still says `requireAdministrator` on `origin/claude/rel-20261102a`. It isn't already fixed.
+- **Why no switch:** Windows reads that line before any CE code runs, so a Settings switch can't turn it on or off.
+- **Question for you:** may the installer run without an admin prompt? Skipping the old machine-wide clean-up could leave duplicate commands on a PC that has an old ProgramData copy.
+- **Related:** BUG-883 also blocks self-install, so 882 alone won't unblock it.
+
+I ran no build or tests and changed no code. CE_SHARED is untouched. The report is `C:\CE_PLAN\areas\BUGFIX_w882_REPORT_03NOV.md`, pushed to `main`. `git status -sb` shows no ahead, but it also lists modified files in `C:\CE_PLAN` that I didn't touch.

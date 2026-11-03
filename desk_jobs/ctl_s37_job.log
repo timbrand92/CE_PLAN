@@ -1,0 +1,45 @@
+**Head `3768f5d64edce493e724754ed00d0854c125f585`, pushed to `claude/rel-20261010d`; local and origin agree.**
+
+Built and unit-tested only. Nobody has opened it in AutoCAD.
+
+**Merged (8 of 9):** #999, #1001, #1006, #981, #1209, #1206, #1203, #1227. Every merge's numstat matched the PR's own against its base. The REGRESSION_LOG clashes were kept as union (stored LF, no control characters, 0 lines removed).
+
+**Skipped:** #990. It clashes in `RedoSafeCallGraphTests.cs`, where the base and #990 each add a test block at the same spot. It looks like a keep-both fix, but the brief says to stop, so I aborted that merge. #984 is stacked on #990, so it waits too.
+
+**Review note:** #999, #1001, #1006, #981 and #990 have a Fable MERGE as their newest review, not an Opus one. I treated Fable MERGE at the exact head as valid, as S-36 did.
+
+**Assembly fix (`3768f5d6`, test pins only):** `Stage3B6_RoutesCommandsOneTwoFourAndFiveOnly` went red because #1209 edits two beam files on purpose. I re-pinned the `BeamPlacementCommands.cs` hash and the frozen `BeamExtendCommands.cs` hash in `Stage3ConnectedDesignBoundaryTests.cs`. #1209 should carry those pins itself. I added no REGRESSION_LOG entry for this commit.
+
+**Registry:** none added.
+
+**New Settings properties (11, in `UserSettings.cs`):**
+- **ON by design:** `WarnInsteadOfChangeStirrupCover` and `WarnInsteadOfRefuseSpacing` default true (#981, Tim's R-27 "no hard blocks" ruling).
+- **Default OFF:** `DistanceChoicesFromSettings`, `ScheduleShowsDescription` and `PostsFromSupportBlocks` default false.
+- **Today's values:**
+  - `BeamLayerName` "BEAM"
+  - `LowerBeamLayerName` "BEAM LOWER"
+  - `Fj1LayerName` "JOISTS"
+  - `DistanceChoicesMm` {45, 100}
+- **Engine only:** `WallLineDistanceMm` defaults to 300 and nothing reads it yet.
+
+**Builds:** 9 of 9, 0 errors (Structural, Structural.Tests and DesignCore.Tests on net48, net8 and net10), rebuilt at the final head.
+
+**Tests:**
+- **Structural net10:** 4945 of 4945 passed (S-36: 4906).
+- **Structural net48:** 4208 passed, 36 failed, 698 not run. The failures are the same nine old classes as S-36.
+- **DesignCore:** 2050 per lane with the same 6 old failures per lane (S-36: 2045).
+- **Guards:** all three guards, `NoStructuralQuestionShowsItsListOrDefaultTwice`, the Plugin.cs pin test and the three #949 tests passed on net10 and net48.
+
+**Redo-killer scan:** one added `StartTransaction`, at `FoundationService.LoadPath.cs:272` (#1203). It only runs inside the CSLOADPATH load-path scan, behind an OFF setting, so I rated it not HIGH.
+
+**Gaps:**
+- The brief lists net10 as the lane to run in chunks, but the chunks cover 4945 of the 5459 tests the runner lists, so some are never run. I did not chase the gap.
+- net8 Structural tests were built but not run.
+
+**Hygiene:**
+- **Unchanged:** Tim's three settings files and the installed 1.0.116+f180b349 DLLs, before and after.
+- **Not isolated:** the live-file manifest grew by 904 files while acad.exe was running. I did not isolate the cause.
+- **Gate slip:** I ran one `--list-tests` discovery about two minutes after Codex W64 started.
+- **My mistake:** to stop my own test runner I ran `Stop-Process` on all dotnet processes once. Only my runner showed in `ps`, but I can't rule out cutting another session short.
+
+Report: `C:\Lisp Files\_TEST_COPIES_20260923\TRAIN_S37_ASSEMBLY_REPORT.md`

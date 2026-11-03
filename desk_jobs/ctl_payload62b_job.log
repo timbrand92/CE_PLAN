@@ -1,0 +1,18 @@
+The S-34 install candidate is built and checked; nothing is installed and I did not start AutoCAD, Codex or accoreconsole. The branch head is `claude/rel-20261009v` = `4e17dd5086be6fa5587b6708fa81fb8c25530a56`, and local and origin match.
+
+- **Candidate:** `C:\ce_rc_scratch\s1033\CE_STRUC_SUITE.bundle`, status Validated.
+- **Verify line:** `struc: manifest 2007 files, verified 2007, bad 0, extra 0`.
+- **Versions:** all three `CE_STRUC_SUITE.dll` read `1.0.115+4e17dd50…`, DesignCore reads `1.0.0+4e17dd50…`, there are zero CE_SHARED files, and `AppVersion="1.0.115"`.
+- **Tests:** `RuntimeLaneContractTests` passed 13 of 13. The first run failed one test because the Standalone alias hadn't been built for this head. I built it with no code change and re-ran.
+- **Command registry vs installed 1.0.114:** 371 to 374 entries. Added `CSWALLMARK`, `CSWALLSCHEDULE` and `CSLINTELTABLE`; nothing removed and no existing entry changed.
+- **File list:** 12 files changed (PackageContents, the DLLs, deps.json, the registry), none added or removed. This is the same against installed 1.0.114, s1029, s1030 and s1032.
+- **Stale-build strings:** 30 of 30 OK, none flagged. Each string is in the candidate and absent from the installed 1.0.114, s1029, s1030, s1031 and s1032. The log labels still say "installed1.0.110"; the bundle it actually read was 1.0.114.
+- **Settings:** all three of Tim's settings files and the live app-data manifest are unchanged before and after. The installed bundle was only read.
+- **Cleanup:** after `git clean -fdXq` the `s34asm` worktree is clean, and the scratch log folder is deleted.
+
+Unexpected things:
+
+1. The 1.0.115 version commit was already on origin when I started, from an earlier run of this job. I checked it (3 files, 3 lines) and reused that run's build and verify results after re-reading the logs and git state.
+2. Tim's Structural `CS_Settings.json` is 33,198 bytes with hash `5A8C447A…`, not the `D3890D56…` / 28,872 bytes the brief gave. It was already that way before my work started.
+
+The report is at `C:\Lisp Files\_TEST_COPIES_20260923\PAYLOAD_S1033_REPORT.md`.

@@ -1,0 +1,8 @@
+== cx_rd15 (usage 64.0% -> 69.0%): 1. **DONE — 4 new findings:** 3 HIGH, 1 MEDIUM. Most important: a missing LandXML grade can print as **1 in 100**.
+
+2. **Report:** [CODEX_AUDIT2_RD15_24OCT.md](C:/CE_PLAN/areas/CODEX_AUDIT2_RD15_24OCT.md). Includes evidence, deterministic checks and smallest fixes.
+
+---
+
+1. **Published:** findings commit `68b3e7f0`; leak scan clean; status shows no ahead. Temporary worktree removed.
+2. **Not run:** builds, tests or AutoCAD. No source changes.

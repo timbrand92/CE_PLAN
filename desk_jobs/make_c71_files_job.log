@@ -1,0 +1,14 @@
+I wrote the C-71 train files and pushed them by name to C:\CE_PLAN. `git status -sb` shows no ahead. Nothing was started, built or installed.
+
+Files:
+- `areas\TRAIN_C71_PR_LIST_2026-10-27.md`: six PRs (#1818, #1819, #1820, #1821, #1823, #1824), full live heads, base `270215aa`.
+- `desk_jobs\train_c71_assembler_job.txt`
+- `desk_jobs\train_c71_finalizer_job.txt`
+- `desk_jobs\payload107_c71_job.txt`
+- `desk_jobs\chain_c71.ps1`
+- `desk_jobs\chain_install_c71.ps1`
+- `desk_jobs\scripts\desk_install_c71.ps1`
+
+The payload job says #1818, #1819 and #1824 have no discriminating string, so it proves them by tests and by the Civil DLL differing from installed. No ArchUnitNET adoption PR exists yet.
+
+I checked the files for control characters and PowerShell parse errors, and the heads against gh.

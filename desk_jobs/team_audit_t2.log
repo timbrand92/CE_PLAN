@@ -1,0 +1,16 @@
+The audit report is written and pushed to `C:\CE_PLAN\areas\TEAM_AUDIT_T2_24OCT.md`. It covers the water-sensitive design and council rules in the installed Civil 3.0.72, plus Structural 1.0.122, which has none of this code.
+
+It was done by reading the code only, with hand calculations. Nothing was built, tested or opened in AutoCAD, and I did not re-read the council PDFs themselves.
+
+**Result:** 26 new findings (5 high, 10 medium, 11 low).
+
+**Top 3:**
+1. **Council minimum after-development runoff figure is never used.** Darebin's 0.8, Maribyrnong's 0.75 and Boroondara's 0.65 are stored, but CDDESIGN ignores them. A 600 m² Darebin lot is worked at 0.70 instead of 0.80, so the tank comes out too small.
+2. **The rainwater-tank reuse credit never runs.** CDDESIGN never passes a tank into the credit sum, so no job ever shows a credit. The Kingston sum it would use also gives a 6,000 L tank 1.5 m³ instead of the council's 1.0 m³.
+3. **The 300 mm minimum head on a charged downpipe system is never checked.** A 250 mm head passes with no warning, although the rules list prints the 300 mm as if it were enforced.
+
+**Settings page:** still none of the runoff numbers has a box (already BUG-546), and no council value can be edited anywhere.
+
+**Matches hand calculations:** rainfall intensity, the flow sum, orifice sizing, Boyd's storage and the Blue Factor garden/lawn fix.
+
+**Needs Tim's word before fixing:** finding 5, the Maroondah method. Using the council's own runoff figure and storm length gives a permitted discharge of 3.68 L/s instead of CE's 5.18 L/s on a bare 600 m² lot. The same storm length also sizes the outlet pipe, so the change is Tim's call.

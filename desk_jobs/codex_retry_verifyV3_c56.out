@@ -1,0 +1,17 @@
+== verifyV3_c56 (usage 4.0% -> 4.0%): 1. **NOT STARTED:** The queue has a 02:52 START without an END; I could not establish ownership. All five looks remain untested.
+
+2. **Installed:** Civil **3.0.66**, Manager **1.1.66**, Structural **1.0.118**. Explorer screenshot was readable; not saved because private locations were visible.
+
+3. **Unchanged:** No settings changed, no lock acquired, AutoCAD closed. PASS 0; FAIL 0; NOT TESTED 5.
+
+4. **Report:** [CODEX_VERIFY_V3_20261021_0253.md](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_V3_20261021_0253.md>)
+== verifyV3_c56 (usage 4.0% -> 5.0%): iles/_TEST_COPIES_20260923/CODEX_VERIFY_V3_20261021_0259.md>).
+
+2. **Results:** PASS 2, FAIL 1, DIFFERENT 0, BLOCKED 1, NOT TESTED 3, SEEN 1. SURE 8; UNSURE 0. V3-01 counts differed; V3-02 retained 1000 mm across both starts. Three Settings tooltips remain untested.
+
+3. **Import mistake:** I clicked ÔÇ£Import to drawingÔÇØ expecting confirmation; it imported directly. V3-04 is blocked. The test copy was discarded, and its original disk hash verified.
+
+4. **Settings restored exactly:** A1 = C1 = A2 = C2:
+   `ACD64E79A33BE9C152149FF2145A3CD2C29CABE11245F211183FD5C7DE783140`
+
+5. **Clean end:** AutoCAD gone, guard empty, lock released. All four test DWGs unchanged on disk. FIXTURES WANTED: none.

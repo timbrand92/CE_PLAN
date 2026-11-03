@@ -1,0 +1,47 @@
+Sun 14:50:12 batch A3 started; waits for batchA3_codex.ps1 to end
+Sun 14:50:13 batchA3 ended
+Sun 14:50:13 backed up CD_RecentValues.json sha 7B17038F6896
+Sun 14:50:13 backed up CD_Settings.json sha ACD64E79A33B
+Sun 14:50:13 backed up CS_Settings.json sha D604CE689671
+Sun 14:50:13 backed up settings.json sha EFE307C4FC74
+Sun 14:50:13 ABORT: CD_RecentValues.json reads 7B17038F6896, not the known original 2772272A952C (a robot settings pack may be mid-run): nothing started, nothing restored
+Sun 14:50:34 batch A3 started; waits for batchA3_codex.ps1 to end
+Sun 14:50:35 batchA3 ended
+Sun 14:50:35 backed up CD_RecentValues.json sha 7B17038F6896
+Sun 14:50:35 backed up CD_Settings.json sha ACD64E79A33B
+Sun 14:50:35 backed up CS_Settings.json sha D604CE689671
+Sun 14:50:35 backed up settings.json sha EFE307C4FC74
+Sun 14:50:35 Codex usage before: 29 percent
+Sun 14:50:40 starting verifyA78b_c88
+Sun 14:50:41 verifyA78b_c88 launcher finished
+Sun 14:50:41 Codex usage after: 29 percent
+Sun 14:50:41 unchanged CS_Settings.json sha D604CE689671
+Sun 14:50:41 unchanged CD_Settings.json sha ACD64E79A33B
+Sun 14:50:41 unchanged CD_RecentValues.json sha 7B17038F6896
+Sun 14:50:41 unchanged settings.json sha EFE307C4FC74
+Sun 14:50:41 HOLD_ROBOT.flag removed. Batch A3 ends.
+Sun 14:50:57 batch A3 started; waits for batchA3_codex.ps1 to end
+Sun 14:50:58 batchA3 ended
+Sun 14:58:39 backed up CD_RecentValues.json sha 9CDAF6ABB4A4
+Sun 14:58:39 backed up CD_Settings.json sha 0BF1B94AD224
+Sun 14:58:39 backed up CS_Settings.json sha D604CE689671
+Sun 14:58:39 backed up settings.json sha EFE307C4FC74
+Sun 14:58:39 ABORT: CD_Settings.json reads 0BF1B94AD224, not the known original ACD64E79A33B (a robot settings pack may be mid-run): nothing started, nothing restored
+Sun 15:19:30 batch A3 started; waits for batchA3_codex.ps1 to end
+Sun 15:19:31 batchA3 ended
+Sun 15:19:39 batch A3 started; waits for batchA3_codex.ps1 to end
+Sun 15:19:40 batchA3 ended
+Sun 15:26:21 backed up CD_RecentValues.json sha 98B53838F393
+Sun 15:26:21 backed up CD_Settings.json sha ACD64E79A33B
+Sun 15:26:21 backed up CS_Settings.json sha D604CE689671
+Sun 15:26:21 backed up settings.json sha EFE307C4FC74
+Sun 15:26:21 Codex usage before: 29 percent
+Sun 15:26:21 STOP_CODEX.flag lifted (STOP_SUPERVISOR.flag stays up)
+Sun 15:26:26 starting verifyA78b_c88
+Sun 15:38:12 verifyA78b_c88 launcher finished
+Sun 15:38:12 Codex usage after: 29 percent
+Sun 15:38:12 unchanged CS_Settings.json sha D604CE689671
+Sun 15:38:12 unchanged CD_Settings.json sha ACD64E79A33B
+Sun 15:38:12 RESTORED CD_RecentValues.json: was 88351A1F258D, back to 98B53838F393
+Sun 15:38:12 unchanged settings.json sha EFE307C4FC74
+Sun 15:38:12 HOLD_ROBOT.flag removed. Batch A3 ends.

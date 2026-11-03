@@ -1,0 +1,12 @@
+Train C-71 is assembled and the report is pushed. All six PRs merged cleanly, and nothing has been tried in AutoCAD.
+
+- **Branch:** `claude/rel-20261026v` at `3e3478ac`, based on the C-70 version commit `270215aa`.
+- **Merges:** #1818, #1819, #1820, #1821, #1823 and #1824, in list order. No PR head had moved. Only `REGRESSION_LOG.md` clashed, and every entry is kept.
+- **Scope:** no Settings key, Shared, Installer or Manager change. The four version places still read 3.0.80 / 1.1.80.
+- **Build:** the whole solution builds with 0 errors.
+- **Tests:** Civil net10 passed 20,583 with 0 failed. Manager net10 passed 1,040 of 1,041, with 1 skipped as in C-70. The Civil net48 reds are the same 55 names as C-70.
+- **Flags:**
+  - `CD_Settings.json` changed at 08:57 while AutoCAD was open; I did not write it.
+  - Civil net10 printed one fixture tear-down warning about a locked log file.
+  - The #1821 wrong-kind database objects are untested.
+- **Report:** `C:\CE_PLAN\areas\release-v3-colleagues-TRAIN_C71_ASSEMBLY_REPORT_2026-10-27.md`

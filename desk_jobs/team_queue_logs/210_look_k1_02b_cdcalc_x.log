@@ -1,0 +1,12 @@
+The draft brief is written and the check for the banned word "follow" came back clean (0 hits). Nothing was built, run, installed or pushed.
+
+**Verdict:** ready for CE 02 to copy into `C:\Lisp Files\_CODEX_RUNNER`, with the points below.
+
+File: `C:\CE_PLAN\areas\LOOKBRIEF_K1_02B_02NOV.md`
+
+- **Diff vs root-cause note:** PR #1983's diff (head 4fcf82b4) wins in two places. The "not created" box is a plain message box titled "CDCALC Export", not an error box. Its log line is "CDCALC: XLSX write returned but no file was found: <file>".
+- **Bad-folder look may stop at Windows:** Windows' own Save box may refuse a missing folder or a read-only file before CE sees it. The brief records that as DIFFERENT, not FAIL. The "Nothing was saved" box is proven by unit test only, and the brief says so.
+- **Report location:** the launcher only watches `_TEST_COPIES_20260923`. The brief writes the full report in `C:\CE_WORK\codex\...` and a short pointer file there.
+- **Helper scripts:** the old `K1-SHEETS.ps1` printed no sheet names on 1 Nov. I used Codex's corrected `K1-SHEETS-XML.ps1`, which is not in the K1 brief. The build-gate and recent-files scripts are new and untested.
+- **Launch name:** `verifyK1b_c89` is free in the runner folder. The launch line and `-ReportGlob "CODEX_VERIFY_K1B_*"` are in the file.
+- **Not yet installable:** nothing can run until a Civil build holding #1983 is installed. If the installed build lacks it, the build gate marks every look NOT TESTED, BUILD LACKS THE FIX.

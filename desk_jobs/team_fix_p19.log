@@ -1,0 +1,37 @@
+I found the cause of BUG-467 and confirmed it is still there on the installed Structural 1.0.125 (204dfad2). This was a code read only: no code change, no build, no test, no PR, and AutoCAD was not started. The report is in `C:\CE_PLAN\areas\BUGFIX_p19_REPORT_31OCT.md` and is pushed.
+
+## FOR TIM
+
+1. **The cause:** when you give BT1, AB or BB its second point, AutoCAD already hands that point to CE in World. CE then turns it by your UCS a second time. That is why a 2400 mm brace came out 10.6 m long at 112.63 degrees. Turning the correct point a second time gives exactly the 10579.52 mm and 112.63 degrees the robot recorded.
+2. **Our own earlier fix caused it:** the 9 Oct UCS fix (HUNT-S-02) added the extra turn. Its test checks that the wrong line is present, which is why it stayed green.
+3. **Clicked points:** from the code, a clicked or snapped second point is turned twice too, not just a typed one. The further the job is from the drawing's 0,0, the further off the brace lands. Nothing is wrong in World UCS.
+4. **Drag preview:** the line you see while dragging is wrong the same way in a turned UCS.
+5. **Already right, no change needed:** Enter (the 2700 default), Zero and R1 Point. R1 asks for its point a different way, which is why the robot passed it.
+6. **The fix:** remove the extra turn in two places, the brace's second point and the preview line. It has no Settings switch, as you decided (decision 169). PR #1883 makes the same mistake and would not fix this.
+7. **What you'd see after the fix:** with the UCS at 30 degrees, BT1 on two points 2400 mm apart prints "Preview length: 2400 rotation: 30". The brace sits between the points you picked.
+8. **Not proven yet:**
+   - Clicked points and the drag preview need a Codex look in AutoCAD.
+   - It is also not settled whether the drag line starts from the right place in a turned UCS. That changes only the drawn line, not where the brace goes.
+   - FPFC was outside what I was asked to check.
+
+---
+
+**Technical detail:**
+
+1. **Wrong statement:** `Modules/Structural/Commands/BracingCommands.cs:769`, `secondPoint = jig.CurrentPoint.TransformBy(ucs);`. The jig's `AcquirePoint` (`BracingService.cs:1447`) returns World coordinates, not UCS ones.
+2. **When it came in:** commit 2a395832 (PR #879).
+3. **Preview:** `WorldDraw` (`BracingService.cs:1477`) also turns the dragged end. It should turn the end only for Enter or Zero.
+4. **Fix touches:**
+   - `BracingCommands.cs` and `BracingService.cs`.
+   - The source checks in `HuntS02UcsTests.cs` at lines 54 and 57, which currently check for the wrong text.
+   - A new test with the UCS at 30 degrees that expects 2400 at 30. It fails today with 10579.52 at 112.63.
+   - A `REGRESSION_LOG.md` entry.
+5. **Robot cases:**
+   - S467a and S467b should pass unchanged after the fix.
+   - New control S467e_bt1_ucs30_enter: UCS at 30, BT1, type `17700,-3300` then press Enter. It checks for "Preview length: 2700 rotation: 30" and should pass both today and after the fix.
+6. **Housekeeping:**
+   - No worktree was made.
+   - My copied source files are deleted from `C:\CE_WORK\scratch\p19`. I left the folder because it is this running session's TEMP folder.
+   - No test code ran, so the before-and-after settings-file listings were not needed.
+
+**Summary:** No PR (read-only step). BUG-467 cause: `BracingCommands.cs:769` turns the jig's World answer by the UCS again, and the preview end in `BracingService.cs` `WorldDraw` does the same. It came from commit 2a395832. The fix needs no Settings switch, per Tim's decision 169. Report: `C:\CE_PLAN\areas\BUGFIX_p19_REPORT_31OCT.md`, pushed.

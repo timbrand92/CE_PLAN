@@ -1,0 +1,6 @@
+== verifyG5_c84 (usage 17.0% -> 17.0%): AUTOCAD CLOSED
+
+1. **G5 FAIL ÔÇö SURE.** After the 2 m MOVE, the upper-left invert text newly overlaps a blue pipe strip. Complete upper-label checks were limited by clipping.
+2. **Counts.** PASS 0, FAIL 1, DIFFERENT 0, BLOCKED 0, NOT TESTED 0. SURE 1, UNSURE 0.
+3. **Clean end.** No drawing saved. All four settings files unchanged. Lock released. Fixtures wanted: none.
+4. **Report.** [G5 verification and evidence](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_G5_20261030_0739.md>).

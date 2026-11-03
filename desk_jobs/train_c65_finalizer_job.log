@@ -1,0 +1,12 @@
+**GO at `89d02b3e51a2d2e52c9c072201cdaf6c96cfb8bc`** on branch `claude/rel-20261025o`. The report and sign-off are pushed to CE_PLAN.
+
+1. **My three changes:**
+   - **#1718's build break:** the one test project it broke builds again.
+   - **#1748 hole:** CDUPGRADE now stops like CDSYNC. Otherwise, on a PC without the CE pipe add-on, it would have emptied every pit's pipe list.
+   - **Tests:** pinned the new switch defaults and updated the old LandXML test that #1010 made out of date.
+2. **Tests:**
+   - **Civil:** 20,245 tests, 0 failed.
+   - **Manager:** 994 tests, 0 failed.
+   - **Older AutoCAD version (net48):** 51 failures, all the same known reference-only fault the assembler saw.
+   - **Manager release build:** passed its 75-file check.
+3. **Held:** #1756 and #1767 stay out until you answer. #1706 also stays out. Nothing has been opened in AutoCAD.

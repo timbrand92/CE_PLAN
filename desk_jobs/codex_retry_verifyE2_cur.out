@@ -1,0 +1,6 @@
+== verifyE2_cur (usage 23.0% -> 23.0%): AUTOCAD CLOSED
+
+1. **BLOCKED:** Both prescribed zooms displayed correctly but returned `nil`, triggering N17. Neither feature was tested.
+2. **Counts:** PASS 0 ┬À FAIL 0 ┬À DIFFERENT 0 ┬À BLOCKED 2 ┬À NOT TESTED 0. SURE 2, UNSURE 0.
+3. **Clean end:** Four settings hashes unchanged; copy unsaved; lock released. No fixtures missing.
+4. **Report:** [E2 verification report](<C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_E2_20261026_0817.md>). N17 needs clarification before rerunning.

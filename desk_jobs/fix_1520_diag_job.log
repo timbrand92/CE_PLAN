@@ -1,0 +1,8 @@
+Part 1 is fixed and pushed; Part 2 found no cause that justified a code change.
+
+1. **#1520 MEDIUM:** fixed at head `9daa061d` on `b04/bug-859-dp1-doubleclick`. A drawing with only downpipes now reaches the Edit source window. The full Civil net10 run had 19,093 tests with only the known BackTest failing. Dry merge onto `claude/rel-20261022l` is clean.
+2. **BUG-505:** INSUNITS 0 with a millimetre guess is silent by design. That is a decision for Tim; I recommend a soft one-line note.
+3. **Progress line:** not a defect. The 0.01 is clamped up to 1 second, and a 27-item drawing walks too fast.
+4. **REDO:** cause not found by reading, so no fix. The report has a capture plan.
+
+The report is `C:\CE_PLAN\areas\release-v3-colleagues-DIAG_22OCT_REPORT.md`, pushed to CE_PLAN main. Worktrees are removed.

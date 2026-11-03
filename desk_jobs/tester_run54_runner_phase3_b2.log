@@ -1,0 +1,11 @@
+Both runner fixes are in and proved, R11 to R20 are re-done, and the ten new cases R21 to R30 are written and run twice. The report is pushed to `main` and `git status -sb` shows nothing ahead.
+
+- **Runner fixes:** the runner now needs the independent reviewer's file for ACCEPTED-READY. Every case after the first in a session starts on a fresh copy of the drawing. A leftovers probe PASSED on the old behaviour and FAILED on the new.
+- **R11 to R20:** strengthened or extended as the review asked, re-run twice. R15 is untouched and is the only ACCEPTED-READY. Everything else is PASS-UNREVIEWED.
+- **R21 to R30:**
+  - **Pass twice:** R21, R23, R25, R26, R27, R28, R29, R30. R23 proves BUG-384, pending review.
+  - **R22 fails (real fault):** CDCHECK still prints raw handles and `CE-CIV-PIPE-` ids.
+  - **R24 fails (no metre drawing exists):** stopped after three failures.
+- **Build moved:** the installed build went from 3.0.73 to 3.0.74 mid-job, so passes are listed per build.
+
+Report: `C:\CE_PLAN\areas\release-v3-colleagues-RUNNER_PHASE3_BATCH2_REPORT.md`.

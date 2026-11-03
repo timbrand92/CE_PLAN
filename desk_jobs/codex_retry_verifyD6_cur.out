@@ -1,0 +1,6 @@
+== verifyD6_cur (usage 6.0% -> 7.0%): AUTOCAD CLOSED
+
+1. **D6 blocked:** All four checks hit prescribed-route blockers. PASS 0, FAIL 0, DIFFERENT 0, BLOCKED 4. SURE 4, UNSURE 0.
+2. **Blockers:** Pit selection returned nil; invert selection errored; schedule placement stayed disabled; zoom awaited an unlisted answer. Full behaviour remains untested.
+3. **Restored:** Settings A=C: `ACD64E79A33BE9C152149FF2145A3CD2C29CABE11245F211183FD5C7DE783140`. Other three hashes unchanged. Lock released; copy unsaved.
+4. **Report:** [D6 report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_D6_20261026_0510.md>). Includes 34 distinct screenshots and routes needing revision. No missing fixtures.

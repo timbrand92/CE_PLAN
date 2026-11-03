@@ -1,0 +1,11 @@
+Candidate `C:\ce_rc_scratch\c1059` is built and proved. It is not installed, and nobody has opened it in AutoCAD.
+
+- **Verified:** Civil verified 828, bad 0, extra 0. Manager verified 75, bad 0, extra 0. Neither bundle has files added or removed against installed.
+- **Branch head:** version commit `5467f705` on `claude/rel-20261024m`, on the signed head `31689290`. The commit is exactly 4 files, 4 insertions, 4 deletions.
+- **Tests:** Civil pin tests 41 of 41, Manager 61 of 61, `C63NewSwitchDefaultsTests` 3 of 3. The string proof passed 351 of 351 rows.
+- **Odd:**
+  - The installer EXE changes (#1648). It must be rebuilt and re-signed, and the Installer suite is still owed.
+  - #1669, #1663, #1689 and #1654 leave no new string. I proved them by method size instead.
+  - Settings files are unchanged (hashes identical).
+
+The full report is `C:\Lisp Files\_TEST_COPIES_20260923\PAYLOAD_C1059_REPORT.md`.

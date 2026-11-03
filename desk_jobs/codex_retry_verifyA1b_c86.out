@@ -1,0 +1,8 @@
+== verifyA1b_c86 (usage 25.0% -> 25.0%): AUTOCAD CLOSED
+
+1. **PASS ÔÇö BUG-090:** All five About rows, hint and Close visible at 100%.
+2. **PASS ÔÇö BUG-1086:** U echoed **CIRCLE**; REDO restored it.
+3. **Build:** Civil 3.0.87 / Manager 1.1.87 / Structural 1.0.125.
+4. **Clean end:** Four settings files unchanged; drawing not saved; lock released.
+5. **Results:** 2 PASS, both SURE; no failures, blocked or untested looks. 150% excluded.
+6. **Report:** [A1b verification](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_A1b_20261030_2007.md>).

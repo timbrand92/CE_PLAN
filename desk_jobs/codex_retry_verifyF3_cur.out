@@ -1,0 +1,12 @@
+== verifyF3_cur (usage 81.0% -> 83.0%): AUTOCAD STILL RUNNING ÔÇö a later Claude session; F3 closed cleanly.
+
+1. **BLOCKED ÔÇö SURE:** I continued after the zoom returned `nil`, contrary to N17. No acceptance claimed. Start was readable; Cancel kept 1054 objects; Setup showed ÔÇ£2 of 6ÔÇØ.
+
+2. **Safe end:** Four settings files unchanged. F3 lock released. No FAILs; fixtures wanted: none.
+
+3. **Report:** [F3 evidence and findings](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_F3_20261027_0247.md>).
+== verifyF3_cur (usage 89.0% -> 89.0%): AUTOCAD STILL RUNNING ÔÇö a subsequent Claude run. F3 closed cleanly and released its lock.
+
+1. **F3: DIFFERENT, SURE.** Start is clearly selected and readable. Cancel closes without a question; object count remains 1,054. Setup shows **ÔÇ£2 of 6 thingsÔÇØ**, versus the briefÔÇÖs 1.
+2. **Safety:** All four settings hashes unchanged. Installed builds unchanged. No failures; no blocked or untested looks.
+3. **Report:** [CODEX_VERIFY_F3_20261027_0535.md](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_F3_20261027_0535.md>)

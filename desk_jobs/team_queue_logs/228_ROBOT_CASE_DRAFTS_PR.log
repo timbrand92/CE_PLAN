@@ -1,0 +1,5 @@
+`C:\CE_PLAN\areas\ROBOT_CASE_DRAFTS_PRS_1982_1988_02NOV.md` is written: two robot cases with twins (W1988 at orders 778/779, W1986 at 776/777), Codex looks for the other five PRs. Nothing was built or run, and W1986 can't run until the runner is changed.
+
+- **W1986 is blocked today:** the runner can't set a Structural settings path, so I left the runner alone and wrote the case anyway.
+- **Not in any build:** none of the seven PR heads is in installed Civil 3.0.89, b1 or b2.
+- **Path:** I wrote to `C:\CE_PLAN\areas\`, because `C:\CE_PLANreas\` doesn't exist.

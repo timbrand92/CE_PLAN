@@ -1,0 +1,21 @@
+The triage report is written and pushed. `git status -sb` shows no "ahead", and the leak-scan passed.
+
+The file is `C:\CE_PLAN\areas\PR_PILE_TRIAGE_2026-10-24.md`. It covers **1,310 open PRs** (not about 1,300), classified like this:
+
+- **A (already installed):** 787.
+- **B (in C-63/S-43):** 34.
+- **C (reviewed MERGE):** 9.
+- **D (reviewed HOLD/REJECT):** 14.
+- **E (open bug, not reviewed):** 134.
+- **F (plan work):** 164.
+- **G (duplicate/superseded):** 21.
+- **H (stale/FIXED):** 147.
+
+The report also has the per-prefix counts, the 30 best class E PRs, the 20 best class F PRs, and the full list by class.
+
+- **C-63 branch:** `claude/rel-20261024m` already holds 28 of the 29 listed PRs. Only #1706 is missing.
+- **GitHub list:** GraphQL gave HTTP 502, so I used the REST list. PRs opened after about 03:17 (#1722 and up) are not counted.
+- **Not run:** no builds or merge dry runs, so merge conflicts are unknown.
+- **Class G:** matched on bug number and similar title only, so check before closing any.
+
+My working copy is at `C:\ce-tr`.

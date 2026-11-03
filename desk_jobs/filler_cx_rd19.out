@@ -1,0 +1,9 @@
+== cx_rd19 (usage 71.0% -> 79.0%): 1. **DONE — 3 new MEDIUM findings; no HIGH or LOW.** Biggest: Civil’s weekly time export runs during startup and can hold up AutoCAD.
+
+2. **Report saved and pushed:** [CODEX_AUDIT2_RD19_24OCT.md](C:/CE_PLAN/areas/CODEX_AUDIT2_RD19_24OCT.md). Includes all three findings, exact tests and audit limits.
+
+---
+
+1. **Verification:** Source reading only. No builds, tests, AutoCAD or code changes. Temporary worktree removed.
+
+2. **Git:** `d8ac14c5`; leak scan clean; `main` matches `origin/main`, with no ahead commits.

@@ -1,0 +1,5 @@
+== cx_bd05 (usage 80.0% -> 92.0%): 1. **BLOCKED.** Ten regression cases written; **0 tests ran**. The shared validation lock remained occupied for over 40 minutes. [Draft PR #1723](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1723) and the [report](C:/CE_PLAN/areas/CODEX_TESTS_BD05_24OCT.md) are pushed. No product changes or deployment.
+
+---
+
+2. **Handoff.** Branch `cx3/tests-bd05`, tip `55f65b330d3ed841a85497be4681746896517e7e`. Builds, full-suite totals, historical failure proof and pictures remain unrun. Exact resume and AutoCAD checks are recorded in the report.

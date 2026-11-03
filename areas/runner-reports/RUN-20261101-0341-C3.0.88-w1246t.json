@@ -1,0 +1,627 @@
+{
+  "header": {
+    "run_id": "RUN-20261101-0341-C3.0.88-w1246t",
+    "started": "2026-11-01 03:41:28",
+    "finished": "2026-11-01 03:43:24",
+    "build": {
+      "civil": {
+        "product_version": "3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+        "file_version": "3.0.88.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+        "file_version": "1.1.88.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.88+3fbb9da5 / struc 1.0.125+204dfad2 / mgr 1.1.88+3fbb9da5",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "D861CF31EB000AF265C7E6F8A0DAAC8B41CD16613096C6469B7273AADC223004",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+      "Driver files (SHA-256, first 12): v2 F4D8F40C3675 (expected F4D8F40C3675), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4B0175FFAB00, v3 session F061E3240C47, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 BBF42DBA8958, case_runner_lib.ps1 89AD455619F8, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 0 shared setup(s); pack SHA-256 D861CF31EB000AF265C7E6F8A0DAAC8B41CD16613096C6469B7273AADC223004; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json D604CE689671 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sun 01 Nov 2026 03:41 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 0,
+    "FAIL": 0,
+    "FAIL_known": 1,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261101-0341-C3.0.88-w1246t-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-11-01 03:41:29",
+      "finished": "2026-11-01 03:43:24",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV30341341_B1.dwg",
+      "cases": [
+        "W1246_BROKEN"
+      ],
+      "whatsnew_dismissed_at_start": "no, window was not there",
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : D604CE689671 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "W1246_BROKEN",
+      "proves_bugs": "",
+      "title": "BROKEN VARIANT of W1246: the own-tag switch is off, so the copied downpipe keeps the original's tag (must FAIL)",
+      "kind": "deterministic",
+      "order": 21,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "red-before-green proof for W1246 (#1891, BUG-1246)",
+      "bug": "",
+      "known_fail": "BROKEN-VARIANT",
+      "reviewed_against": "builder-filled: Opus review still needed",
+      "variant_of": "W1246",
+      "expected": "This variant is wrong on purpose: with linking.copiedDownpipeGetsOwnTag off, each CR copy is left as AutoCAD copied it and CE shows '[CE] A downpipe copied with the pits could not be given its own link on this AutoCAD, so it was left as AutoCAD copied it. ...' (CloneSourceCopyRule.LeftAsCopiedLine). So 'history has ... given its own tag DP2 ...' fails, as do the DP3 lines, '$labB = 1' and 'history absent \"could not be given its own link\"'.",
+      "why_not_unit": "It exists only to prove W1246's checks go red when the fix is switched off.",
+      "not_automated": [
+        "As W1246."
+      ],
+      "file_sha256": "0380BC1B32E6B322BB0E626F89F62D5222492AA52527BB3FAF2D83DA083702F2",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "no command-line line contains '[CE] The copied downpipe was given its own tag DP2 (the original stays DP1). Check where it connects.' (40 lines read: Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or; log file CLDV30341341_B1_1689758a1.log, from byte 2350)",
+      "started": "2026-11-01 03:42:14",
+      "seconds": 51.7,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "copy CLDV30341341_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM{NL}_W{NL}146000,-86000{NL}164000,-72000\" -Force",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "typed '_.ZOOM _W 146000,-86000 164000,-72000': Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _W | Specify first corner: 146000,-86000 | Specify oppo..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"DP{NL}150000,-80000\" -Force -> $dp",
+          "ok": true,
+          "seconds": 8.4,
+          "evidence": "typed 'DP 150000,-80000': Command: | Command: DP | Specify downpipe insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $dpe",
+          "ok": true,
+          "seconds": 2.8,
+          "evidence": "esc-prompt: Specify downpipe insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. Nothing nearby. The so..."
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $n1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "2 object(s) after index 1034 (model space now 1036); by type: AcDbBlockReference 1; AcDbText 1; first: 11C55B AcDbBlockReference DOWNPIPES DOWNPIPE DYNAMIC WITH MASK ; 11C563 AcDbText GUIDELINES DP"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $n1 \"name=DOWNPIPE DYNAMIC WITH MASK\" -> $dpA",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C55B DOWNPIPE DYNAMIC WITH MASK DOWNPIPES"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $dpA handle -> $hA",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C55B"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $n1 \"object~^AcDbText$\" \"layer~^GUIDELINES$\" -> $labA",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C563 DP GUIDELINES"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $labA text -> $labA_text",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = DP"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1036 objects"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"{$hA}\"",
+          "ok": true,
+          "seconds": 2.2,
+          "evidence": "pick-first 11C55B: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"11C55B\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CR{NL}150000,-80000{NL}156000,-80000{NL}90\" -Force -> $cr1",
+          "ok": true,
+          "seconds": 2.3,
+          "evidence": "typed 'CR 150000,-80000 156000,-80000 90': Command: | Command: CR | Specify base point: 150000,-80000 | Specify destination point: 156000,-80000 | Specify rotation angle <0>: 90 | Copy Rotate complete. | [CE] A downpipe copied with the pits could not be given its..."
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 5",
+          "ok": true,
+          "seconds": 5.0,
+          "evidence": "slept 5 s"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $cr1e",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "esc-prompt: Specify base point: 150000,-80000 | Specify destination point: 156000,-80000 | Specify rotation angle <0>: 90 | Copy Rotate complete. | [CE] A downpipe copied with the pits could not be given its own link on this AutoCAD..."
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c1 -> $n2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "1 object(s) after index 1036 (model space now 1037); by type: AcDbBlockReference 1; first: 11C56C AcDbBlockReference DOWNPIPES DOWNPIPE DYNAMIC WITH MASK"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $n2 \"name=DOWNPIPE DYNAMIC WITH MASK\" -> $dpB",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 1: 11C56C DOWNPIPE DYNAMIC WITH MASK DOWNPIPES"
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $n2 \"object~^AcDbText$\" \"layer~^GUIDELINES$\" -> $labB",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 1: "
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $n2 handle -All -> $n2_handles",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C56C"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.-LAYER{NL}_LOCK{NL}GUIDELINES{NL}\" -Force -> $lock",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "typed '_.-LAYER _LOCK GUIDELINES': Command: | Command: _.-LAYER | Current layer: \"BLOCKS\" | Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _LOCK | Ent..."
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1037 objects"
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"{$hA}\"",
+          "ok": true,
+          "seconds": 2.3,
+          "evidence": "pick-first 11C55B: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"11C55B\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CR{NL}150000,-80000{NL}150000,-75000{NL}90\" -Force -> $cr2",
+          "ok": true,
+          "seconds": 2.3,
+          "evidence": "typed 'CR 150000,-80000 150000,-75000 90': Command: | Command: CR | Specify base point: 150000,-80000 | Specify destination point: 150000,-75000 | Specify rotation angle <0>: 90 | Copy Rotate complete. | [CE] A downpipe copied with the pits could not be given its..."
+        },
+        {
+          "n": 29,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 30,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 5",
+          "ok": true,
+          "seconds": 5.0,
+          "evidence": "slept 5 s"
+        },
+        {
+          "n": 31,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $cr2e",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "esc-prompt: Specify base point: 150000,-80000 | Specify destination point: 150000,-75000 | Specify rotation angle <0>: 90 | Copy Rotate complete. | [CE] A downpipe copied with the pits could not be given its own link on this AutoCAD..."
+        },
+        {
+          "n": 32,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 33,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c2 -> $n3",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "1 object(s) after index 1037 (model space now 1038); by type: AcDbBlockReference 1; first: 11C577 AcDbBlockReference DOWNPIPES DOWNPIPE DYNAMIC WITH MASK"
+        },
+        {
+          "n": 34,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $n3 \"name=DOWNPIPE DYNAMIC WITH MASK\" -> $dpC",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 1: 11C577 DOWNPIPE DYNAMIC WITH MASK DOWNPIPES"
+        },
+        {
+          "n": 35,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $n3 \"object~^AcDbText$\" \"layer~^GUIDELINES$\" -> $labC",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 1: "
+        },
+        {
+          "n": 36,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $n3 handle -All -> $n3_handles",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C577"
+        },
+        {
+          "n": 37,
+          "phase": "case",
+          "verb": "history-tail",
+          "text": "history-tail -> $h_end",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "history: Downpipe placed. Tag: DP1. Nothing nearby. The source connects when a pipe is drawn to it. | [CE] Pick the next DP, or press Esc to stop. | Specify downpipe insertion point: *Cancel* | [CE] Stopped. Everything placed stays; U takes back the..."
+        },
+        {
+          "n": 38,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30341341_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"Downpipe placed. Tag: DP\"",
+          "ok": true,
+          "expected": "command line has 'Downpipe placed. Tag: DP'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Downpipe placed. Tag: DP1. Nothing nearby. The source connects when a pipe is drawn to it.'"
+        },
+        {
+          "n": 2,
+          "text": "count $dpA = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $dpA = 1 (expected = 1)"
+        },
+        {
+          "n": 3,
+          "text": "count $labA = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $labA = 1 (expected = 1)"
+        },
+        {
+          "n": 4,
+          "text": "history has \"[CE] The copied downpipe was given its own tag DP2 (the original stays DP1). Check where it connects.\"",
+          "ok": false,
+          "expected": "command line has '[CE] The copied downpipe was given its own tag DP2 (the original stays DP1). Check where it connects.'",
+          "actual": "0 matching line(s)",
+          "evidence": "no command-line line contains '[CE] The copied downpipe was given its own tag DP2 (the original stays DP1). Check where it connects.' (40 lines read: Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or; log file CLDV30341341_B1_1689758a1.log, from byte 2350)"
+        },
+        {
+          "n": 5,
+          "text": "count $dpB = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $dpB = 1 (expected = 1)"
+        },
+        {
+          "n": 6,
+          "text": "count $labB = 1",
+          "ok": false,
+          "expected": "count = 1",
+          "actual": "0",
+          "evidence": "count of $labB = 0 (expected = 1)"
+        },
+        {
+          "n": 7,
+          "text": "history has \"[CE] The copied downpipe was given its own tag DP3 (the original stays DP1). Check where it connects.\"",
+          "ok": false,
+          "expected": "command line has '[CE] The copied downpipe was given its own tag DP3 (the original stays DP1). Check where it connects.'",
+          "actual": "0 matching line(s)",
+          "evidence": "no command-line line contains '[CE] The copied downpipe was given its own tag DP3 (the original stays DP1). Check where it connects.' (40 lines read: Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or; log file CLDV30341341_B1_1689758a1.log, from byte 2350)"
+        },
+        {
+          "n": 8,
+          "text": "history has \"[CE] The label for DP3 was not drawn because layer GUIDELINES is locked. CE has not changed the layer; unlock it and the label can be added.\"",
+          "ok": false,
+          "expected": "command line has '[CE] The label for DP3 was not drawn because layer GUIDELINES is locked. CE has not changed the layer; unlock it and the label can be added.'",
+          "actual": "0 matching line(s)",
+          "evidence": "no command-line line contains '[CE] The label for DP3 was not drawn because layer GUIDELINES is locked. CE has not changed the layer; unlock it and the label can be added.' (40 lines read: Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or; log file CLDV30341341_B1_1689758a1.log, from byte 2350)"
+        },
+        {
+          "n": 9,
+          "text": "count $dpC = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $dpC = 1 (expected = 1)"
+        },
+        {
+          "n": 10,
+          "text": "count $labC = 0",
+          "ok": true,
+          "expected": "count = 0",
+          "actual": "0",
+          "evidence": "count of $labC = 0 (expected = 0)"
+        },
+        {
+          "n": 11,
+          "text": "history count \"was given its own tag\" = 2",
+          "ok": false,
+          "expected": "2 line(s) with 'was given its own tag'",
+          "actual": "0",
+          "evidence": "command line holds 0 line(s) containing 'was given its own tag' (expected 2)"
+        },
+        {
+          "n": 12,
+          "text": "history absent \"could not be given its own link\"",
+          "ok": false,
+          "expected": "command line lacks 'could not be given its own link'",
+          "actual": "2 matching line(s)",
+          "evidence": "found: '[CE] A downpipe copied with the pits could not be given its own link on this AutoCAD, so it was left as AutoCAD copied it. The copied pits and pipes were handled as usual. Check the copied downpipe on...'"
+        },
+        {
+          "n": 13,
+          "text": "not-contains $win_end \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30341341_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV30341341_B1.dwg]"
+        },
+        {
+          "n": 14,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 15,
+          "text": "record $cr1 \"FULL first CR\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CR | Specify base point: 150000,-80000 | Specify destination point: 156000,-80000 | Specify rotation angle <0>: 90 | Copy Rotate complete. | [CE] A downpipe copied with the pits could not be given its own link on this AutoCAD, so it was left as AutoCAD copied it. The copied pits and pipes were handled as usual. Check the copied downpipe on the drawing. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL first CR = Command: | Command: CR | Specify base point: 150000,-80000 | Specify destination point: 156000,-80000 | Specify rotation angle <0>: 90 | Copy Rotate complete. | [CE] A downpipe copied with the pits could not be given its own link on this AutoCAD, so it was left as AutoCAD copied it. The copied pits and pipes were handled as usual. Check the copied downpipe on the drawing. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 16,
+          "text": "record $cr2 \"FULL second CR (layer locked)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CR | Specify base point: 150000,-80000 | Specify destination point: 150000,-75000 | Specify rotation angle <0>: 90 | Copy Rotate complete. | [CE] A downpipe copied with the pits could not be given its own link on this AutoCAD, so it was left as AutoCAD copied it. The copied pits and pipes were handled as usual. Check the copied downpipe on the drawing. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL second CR (layer locked) = Command: | Command: CR | Specify base point: 150000,-80000 | Specify destination point: 150000,-75000 | Specify rotation angle <0>: 90 | Copy Rotate complete. | [CE] A downpipe copied with the pits could not be given its own link on this AutoCAD, so it was left as AutoCAD copied it. The copied pits and pipes were handled as usual. Check the copied downpipe on the drawing. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 17,
+          "text": "record $h_end \"FULL command line at the end\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Downpipe placed. Tag: DP1. Nothing nearby. The source connects when a pipe is drawn to it. | [CE] Pick the next DP, or press Esc to stop. | Specify downpipe insertion point: *Cancel* | [CE] Stopped. Everything placed stays; U takes back the last one. | Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"11C55B\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2PICKFIRST \" (itoa v2n) \" of 1\")) (princ)) | V2PICKFIRST 1 of 1 | Command: | Command: CR | Specify base point: 150000,-80000 | Specify destination point: 156000,-80000 | Specify rotation angle <0>: 90 | Copy Rotate complete. | [CE] A downpipe copied with the pits could not be given its own link on this AutoCAD, so it was left as AutoCAD copied it. The copied pits and pipes were handled as usual. Check the copied downpipe on the drawing. | Command: | Command: _.-LAYER | Current layer: \"BLOCKS\" | Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _LOCK | Enter name list of layer(s) to lock or <select objects>: GUIDELINES | Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: | Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"11C55B\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2PICKFIRST \" (itoa v2n) \" of 1\")) (princ)) | V2PICKFIRST 1 of 1 | Command: | Command: CR | Specify base point: 150000,-80000 | Specify destination point: 150000,-75000 | Specify rotation angle <0>: 90 | Copy Rotate complete. | [CE] A downpipe copied with the pits could not be given its own link on this AutoCAD, so it was left as AutoCAD copied it. The copied pits and pipes were handled as usual. Check the copied downpipe on the drawing. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL command line at the end = Downpipe placed. Tag: DP1. Nothing nearby. The source connects when a pipe is drawn to it. | [CE] Pick the next DP, or press Esc to stop. | Specify downpipe insertion point: *Cancel* | [CE] Stopped. Everything placed stays; U takes back the last one. | Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"11C55B\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2PICKFIRST \" (itoa v2n) \" of 1\")) (princ)) | V2PICKFIRST 1 of 1 | Command: | Command: CR | Specify base point: 150000,-80000 | Specify destination point: 156000,-80000 | Specify rotation angle <0>: 90 | Copy Rotate complete. | [CE] A downpipe copied with the pits could not be given its own link on this AutoCAD, so it was left as AutoCAD copied it. The copied pits and pipes were handled as usual. Check the copied downpipe on the drawing. | Command: | Command: _.-LAYER | Current layer: \"BLOCKS\" | Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _LOCK | Enter name list of layer(s) to lock or <select objects>: GUIDELINES | Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: | Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"11C55B\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2PICKFIRST \" (itoa v2n) \" of 1\")) (princ)) | V2PICKFIRST 1 of 1 | Command: | Command: CR | Specify base point: 150000,-80000 | Specify destination point: 150000,-75000 | Specify rotation angle <0>: 90 | Copy Rotate complete. | [CE] A downpipe copied with the pits could not be given its own link on this AutoCAD, so it was left as AutoCAD copied it. The copied pits and pipes were handled as usual. Check the copied downpipe on the drawing. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 117 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: DP completed 9117 ms ; Command outcome: CR completed 83 ms ; Command outcome: CR completed 74 ms"
+      ],
+      "error": null,
+      "finished": "2026-11-01 03:43:06",
+      "session_id": "RUN-20261101-0341-C3.0.88-w1246t-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [
+          "known failure (BROKEN-VARIANT): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}

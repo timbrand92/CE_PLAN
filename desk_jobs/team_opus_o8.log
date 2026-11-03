@@ -1,0 +1,29 @@
+## FOR TIM
+
+1. **#1854 and #1855 are not in C-77.** This morning's C-77 build took 23 of 25 changes. These two were left out because they edit the same council files as the 1 in 200 detention-grade change. Nothing is wrong with them.
+2. **What #1854 gives a drafter:**
+   - Glen Eira loses the "50 per cent underground" rule.
+   - Port Phillip now gets a tank sized by Boyd's method (a 600 m² site with 400 m² hard area gives a 2.4 m³ tank and 5.18 L/s).
+   - Six more councils can be picked by name: Cardinia, Brimbank, Greater Dandenong, Hobsons Bay, Nillumbik and Merri-bek.
+3. **What #1855 gives a drafter:** nothing visible yet. It is the calculation behind the Guidebook soakage sheet, and no window uses it.
+4. **The merge is easy.** I tried both on a throwaway copy. Every clash was two additions in the same spot, so both are kept, and each merge then matched its own change line for line.
+5. **Nothing was built or tested.** That is the next step for a builder.
+6. **Nothing for you to decide now.**
+
+---
+
+**Plan:** `C:\CE_PLAN\areas\C77B_COUNCIL_MERGE_PLAN_30OCT.md`, pushed as `6152889a` (leak scan clean, not ahead of origin). This is a plan only, so there is no PR.
+
+1. **Start point:** the train has moved on to `c87249c6` (it now includes #1866 and the finalizer's fix). The builder makes a new branch, `claude/rel-20261030b`, from there. The plan says not to push to `rel-20261030a`, because the finalizer and payload still work from it.
+2. **Order:** #1854 (head `07fdd419`), then #1855 (head `8d40c424`).
+3. **Conflicts:** #1854 has 3 hunks. #1855 on top of it has 6, including one in `RulebookValues.cs` that the assembler's report missed. Both PRs add names to the same "kept out of the fingerprint" line, so that clash only appears once #1854 is in. The final text of every hunk is in the plan.
+4. **Check that nothing was lost:** the trial trees were `e8487aa2` after #1854 and `ef821f23` after #1855. A builder who resolves the hunks as written should get the same two hashes.
+5. **Logic checks (read, not compiled):** no property or settings-group name clashes. The council counts (28), the Assumed count (384), the 27 council checksums and the settings "Default:" guard should all still pass.
+6. **Risk to watch:** a #1854 test pins Port Phillip at 2.4 m³. I found no C-76 or C-77 change to that calculation, but it has not been run.
+7. **Also in the plan:** the full step list for the builder, the `REGRESSION_LOG.md` entry text, and two robot cases. Port Phillip in CDDESIGN is `N53_council_portphillip_design`, with Glen Eira as control `C53` (there is no switch). The new councils in the picker are `N54_council_cardinia_pick`. I have not checked CDDESIGN's exact prompts, so whoever writes the case must read them first.
+
+**My mistakes, all in the throwaway copy:** twice the merged log had a heading with no blank line above it. My first fix wrote a stray `r` line. I caught it and redid it with the Edit tool, which cost about five minutes.
+
+**Clean-up:** the trial copy, its scratch files and refs are removed. There is an untracked `.codex/` folder in the main checkout. I did not create it, and I left it alone.
+
+**Summary:** No PR (planning only). The plan at `C:\CE_PLAN\areas\C77B_COUNCIL_MERGE_PLAN_30OCT.md` merges #1854 then #1855 onto `c87249c6` as branch `claude/rel-20261030b`. Every hunk keeps both sides: `CouncilProfileModels.cs`, `CouncilSweepParityTests.cs`, `UserSettings.cs`, `RulebookValues.cs` and `REGRESSION_LOG.md`. There is no Settings switch, because the PRs add none. Whether #1854's Port Phillip change needs one is flagged for the finalizer.

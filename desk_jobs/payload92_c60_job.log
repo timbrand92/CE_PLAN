@@ -1,0 +1,10 @@
+The C-60 candidate is built at `C:\ce_rc_scratch\c1056` (CE_CVL_SUITE.bundle and CE_SUITE_MANAGER.bundle). Nothing is installed.
+
+1. **Manifests:** Civil "verified 828, bad 0, extra 0"; Manager "verified 75, bad 0, extra 0". Both have 0 files added or removed against installed.
+2. **Version commit:** `40ee0a36` on `claude/rel-20261022m`, on the signed head `4095a678`. The diff was 4 files, 4 insertions, 4 deletions.
+3. **Tests:** pin tests pass, Civil 41 of 41 and Manager 61 of 61.
+4. **Strings:** 108 of 108 rows as expected.
+5. **Settings files:** Tim's four settings files and the six installed DLLs are identical before and after.
+6. **Odd:** Structural `CS_Settings.json` changed (35,180 to 35,259 bytes) between the earlier job and this one, not during it.
+
+The report is `C:\Lisp Files\_TEST_COPIES_20260923\PAYLOAD_C1056_REPORT.md`.

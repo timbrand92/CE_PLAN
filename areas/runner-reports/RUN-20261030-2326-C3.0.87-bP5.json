@@ -1,0 +1,189 @@
+{
+  "header": {
+    "run_id": "RUN-20261030-2326-C3.0.87-bP5",
+    "started": "2026-10-30 23:26:38",
+    "finished": "2026-10-30 23:35:26",
+    "build": {
+      "civil": {
+        "product_version": "3.0.87+f5dd72a0652c7f749ab52228cea0f9675047b9cb",
+        "file_version": "3.0.87.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.87+f5dd72a0652c7f749ab52228cea0f9675047b9cb",
+        "file_version": "1.1.87.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.87+f5dd72a0 / struc 1.0.125+204dfad2 / mgr 1.1.87+f5dd72a0",
+    "acad_version": "",
+    "pack_sha256": "B2690482B84019A7AADB3A3439881A839A251740C3A4BFCA16CB43AC15B0E76A",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.87+f5dd72a0652c7f749ab52228cea0f9675047b9cb; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.87+f5dd72a0652c7f749ab52228cea0f9675047b9cb",
+      "Driver files (SHA-256, first 12): v2 F4D8F40C3675 (expected F4D8F40C3675), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 482EB7B20C6C, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 B439CADC8A7A, case_runner_lib.ps1 ED6244C9719E, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 0 shared setup(s); pack SHA-256 B2690482B84019A7AADB3A3439881A839A251740C3A4BFCA16CB43AC15B0E76A; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json D604CE689671 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Fri 30 Oct 2026 23:26 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 0,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 1,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261030-2326-C3.0.87-bP5-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-30 23:26:41",
+      "finished": "2026-10-30 23:35:26",
+      "result": "FAIL",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV32326451_B1.dwg",
+      "cases": [
+        "R08"
+      ],
+      "calibration": {
+        "ok": false,
+        "max_raw_px": null,
+        "max_corrected_px": null,
+        "why": "centre : the click failed: AutoCAD would not come to the front (not_foreground). Nothing was clicked.",
+        "canvas": {
+          "left": 1951,
+          "top": 421,
+          "width": 1858,
+          "height": 569,
+          "how": "exact (tol 0)",
+          "scale_vs_screensize": 1.0,
+          "dpi": 96
+        }
+      },
+      "clean": false,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : D604CE689671 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "",
+      "quit_attempts": [
+        {
+          "attempt": 1,
+          "how": "v2 quit",
+          "ok": false,
+          "ended_by": null,
+          "error": "AutoCAD did not close gracefully and was NOT killed. If it is stuck, run quit again with -Kill."
+        },
+        {
+          "attempt": 2,
+          "how": "v2 quit",
+          "ok": false,
+          "ended_by": null,
+          "error": "REFUSED: AutoCAD is busy (a command is active) and the last known drawing cannot be trusted: no drawing has been seen yet by this driver. Nothing was closed."
+        },
+        {
+          "attempt": 3,
+          "how": "v2 quit -Kill",
+          "ok": true,
+          "killed": true,
+          "error": ""
+        }
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "id": "R08",
+      "proves_bugs": "BUG-861 (the one-drawing, real-mouse pick half only: REDO survives U and a real pit pick, five times in a fresh AutoCAD; the right-click CE menu half is not covered)",
+      "title": "REDO still works after U and a real-mouse pick of a pit, five times in a row (no runner read between U and REDO)",
+      "kind": "deterministic",
+      "order": 60,
+      "slot": "launch",
+      "fixture": "DRV1_B1",
+      "plan_item": "BUG-861 (spec C32, real-mouse pick)",
+      "bug": "BUG-861",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "First a control round with no pick (draw a line, U, REDO: 'Everything has been redone'). Then five rounds: draw a line, U, click the pit P3 with the real mouse, wait 12 seconds, REDO: the command line says 'Everything has been redone' every time, never 'Nothing to redo'. After the rounds, one more click on the same point selects pit 109D56 (proof the click picks the pit). Between U and REDO the runner reads nothing from AutoCAD.",
+      "why_not_unit": "Whether REDO survives depends on what CE does in the seconds after a pick (the Inspector refresh) inside a real AutoCAD undo stack.",
+      "not_automated": [
+        "The right-click CE menu half of BUG-861 and BUG-416 (the right-click menu is not read yet), and a second open drawing.",
+        "The click between U and REDO is a blind click (stored view, no hit proof, by design: any read of AutoCAD between U and REDO loses REDO by itself). That the click selected the pit is proved once, after the five rounds, by a second click at the same pixel and a pick-first read.",
+        "A pick made by the driver's typed LISP (v2 pick-first) or with the runner's usual proof reads is NOT used: those routes lose REDO even for a plain line."
+      ],
+      "file_sha256": "4A42C588E54945E41A22158134AD3FB04AFCBF78E336B3364F2ACAE62EC0201B",
+      "result": "BLOCKED",
+      "blocked": "AutoCAD busy",
+      "first_failure": null,
+      "started": "2026-10-30 23:30:54",
+      "seconds": 159.5,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 setvar PICKFIRST 1",
+          "ok": false,
+          "seconds": 61.7,
+          "evidence": "v3 setvar PICKFIRST 1: BUSY: AutoCAD did not accept a COM call for 61 s (it kept answering 'call rejected': it is busy). Exception calling \"Get\" with \"2\" argument(s): \"Call was rejected by callee. (0x80010001 (RPC_E_CALL_REJECTED))\""
+        }
+      ],
+      "assertions": [],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 0 new line(s) while the case ran, 0 with [ERR]",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)"
+      ],
+      "error": null,
+      "finished": "2026-10-30 23:33:33",
+      "session_id": "RUN-20261030-2326-C3.0.87-bP5-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 1,
+        "red_before": true
+      }
+    }
+  ]
+}

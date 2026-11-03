@@ -1,0 +1,10 @@
+Candidate `C:\ce_rc_scratch\s1037\CE_STRUC_SUITE.bundle` (Structural 1.0.119) is built and checked. It is not installed, and nobody has opened it in AutoCAD. The final manifest check read "verified 2007, bad 0, extra 0".
+
+- **Branch head:** version commit `063a6351` (3 files, 3 insertions, 3 deletions) pushed to `claude/rel-20261020s`.
+- **Tests:** 56 of 56 passed (48 Structural pin tests, 3 release-manifest tests, 5 central register tests).
+- **Against installed:** files added 0, removed 0; natives are the installed bytes.
+- **String proof:** 63 of 63 rows as expected. "an unexpected problem" already exists in 1.0.118, so it proves nothing about the CXREF change.
+- **Odd:** AutoCAD, not started by me, ran at times and I waited for it. The wrapper script needs the 24.1.51 net48 references, not CERef 24.3.0.
+- **Settings and cleanup:** Tim's settings files are identical before and after. `subst R:` is removed and the worktree is gone.
+
+Report: `C:\Lisp Files\_TEST_COPIES_20260923\PAYLOAD_S1037_REPORT.md`

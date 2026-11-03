@@ -1,0 +1,11 @@
+**BUG-1272: fix built and tested, but no draft PR is open.**
+
+The Material conflict sentence showed twice in the one-page Edit Pipe window. The readiness chip at the top and the amber banner carried the same text. The fix hides the banner while the chip already says the same thing.
+
+Why I stopped: the before and after listings of Tim's real data folders differ by 17 changed files and 42 new ones. Some are not mine, such as Structural logs and the Manager menu file. Others could be mine: the Drainage log, recent values and usage outbox.
+
+- **Files:** the fix is one commit, `640b2578`, kept local only on `claude/w1272-editpipe-banner`. It touches `PipeOnePageLayout.cs`, `CdViewModel*.cs` and `UserSettings.cs`, and adds tests.
+- **Switch:** `pipe.editPipeWarningShownOnce`, on by default.
+- **Tests:** 697 of 697 pass on net10, and the net48 build is clean.
+- **Report:** `C:\CE_PLAN\areas\BUGFIX_w1272_REPORT_02NOV.md` is pushed.
+- **Next step:** I need a go from CE 01 or Tim to push the PR.

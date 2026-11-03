@@ -1,0 +1,145 @@
+{
+  "header": {
+    "run_id": "RUN-20261027-1127-C3.0.81-b15a",
+    "started": "2026-10-27 11:27:29",
+    "finished": "2026-10-27 11:29:30",
+    "build": {
+      "civil": {
+        "product_version": "3.0.81+a2408a962f4022d1cbe0b5c465e9572c11f5ac71",
+        "file_version": "3.0.81.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.81+a2408a962f4022d1cbe0b5c465e9572c11f5ac71",
+        "file_version": "1.1.81.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.81+a2408a96 / struc 1.0.125+204dfad2 / mgr 1.1.81+a2408a96",
+    "acad_version": "",
+    "pack_sha256": "684F6B4FA8F6A9C88A11119CE83A36BE46CFD5E4ACB2FAE16FC85E492C25DEC3",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.81+a2408a962f4022d1cbe0b5c465e9572c11f5ac71; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.81+a2408a962f4022d1cbe0b5c465e9572c11f5ac71",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4CD773B85EC5, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 13955AAA60D1, case_runner_lib.ps1 8F9B8DCBB473, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 0 shared setup(s); pack SHA-256 684F6B4FA8F6A9C88A11119CE83A36BE46CFD5E4ACB2FAE16FC85E492C25DEC3; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json B3B5A004B929 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Tue 27 Oct 2026 11:27 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 0,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 1,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261027-1127-C3.0.81-b15a-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-27 11:27:30",
+      "finished": "2026-10-27 11:29:30",
+      "result": "FAIL",
+      "blocked": null,
+      "error": "Exception setting \"CalibRetry\": \"The property 'CalibRetry' cannot be found on this object. Verify that the property exists and can be set.\"",
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31127331_B1.dwg",
+      "cases": [
+        "R08x_5_plain_line_first"
+      ],
+      "calibration": {
+        "ok": false,
+        "max_raw_px": null,
+        "max_corrected_px": null,
+        "why": "west edge : the click failed: the shared lock is not held (state: stale). Take it first: session-run does, or v2 'lock acquire'.",
+        "canvas": {
+          "left": 1926,
+          "top": 421,
+          "width": 1604,
+          "height": 569,
+          "how": "exact (tol 0)",
+          "scale_vs_screensize": 1.0,
+          "dpi": 96
+        }
+      },
+      "clean": false,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : B3B5A004B929 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "",
+      "quit_attempts": null
+    }
+  ],
+  "cases": [
+    {
+      "id": "R08x_5_plain_line_first",
+      "proves_bugs": "",
+      "title": "R08 probe 5: round 1 click is on a plain AutoCAD line, rounds 2 and 3 as well, round 4 is the pit",
+      "kind": "deterministic",
+      "order": 60,
+      "slot": "launch",
+      "fixture": "DRV1_B1",
+      "bug": "BUG-861",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "The probe records what REDO says after a first-ever click on a plain line, and then after a click on the pit; it does not judge CE.",
+      "why_not_unit": "Whether REDO survives depends on what happens in a real AutoCAD undo stack in the seconds after a pick.",
+      "not_automated": [
+        "This is a probe for the R08 question only; it is not a feature test and is never accepted."
+      ],
+      "file_sha256": "0000A655E1ADE2EE10B09E2C1E21DEC08A61F44395B9290E35622198018841F5",
+      "plan_item": "BUG-861 characterisation (R08 round 1 fails on Civil 3.0.75)",
+      "result": "BLOCKED",
+      "blocked": "session BLOCKED: Exception setting \"CalibRetry\": \"The property 'CalibRetry' cannot be found on this object. Verify that the property exists and can be set.\"",
+      "first_failure": null,
+      "steps": [],
+      "assertions": [],
+      "pictures": [],
+      "observations": [],
+      "seconds": 0,
+      "setup": "",
+      "setup_note": null,
+      "session_id": "RUN-20261027-1127-C3.0.81-b15a-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}

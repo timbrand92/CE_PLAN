@@ -1,0 +1,9 @@
+== bj32_cesettings_switch_rows_civil (usage 1.0% -> 4.0%): 1. **DONE ÔÇö draft [PR #1370](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1370):** 23 rows added on **Newer tools** in CDS and mirrored in Manager Civil. Two keys without readers and the safeguards were left out.
+
+2. **Validation:** four builds, 0 errors. Focused tests: **189 passed**. Full suite: **18,171 passed, 1 known Glen Eira failure, 19 skipped**. All four live settings hashes unchanged.
+
+3. **Pending:** Opus review and L3 visual checks. Nobody opened the window in AutoCAD; nothing installed or merged.
+
+---
+
+4. **Saved and pushed:** `codex/cesettings-tools-civil`, tip `9ef6b96c`. Lane log pushed; worktree clean; ignored build outputs removed.

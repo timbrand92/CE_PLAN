@@ -1,0 +1,12 @@
+BUG-900 now has a draft PR, **#1999** (B-177, base `claude/rel-20261102a`). It is built and unit-tested only. Nobody has run it on a multi-page PDF or in AutoCAD, so the bug is not fixed yet.
+
+- **Settings-folder change (rule 1):** your CE settings folders in AppData changed during my run, and I can't prove it wasn't mine. Files changed between 06:19 and 06:22 am (CD_RecentValues, the suggestions ledger, session and machine files, logs). No AutoCAD was running. I had already finished my tests when I found it, so I stopped there. Please check whether another job was running at 06:22.
+- **Fault confirmed:** the pit schedule kept one page and the pipe schedule kept only the last page.
+- **Fix:** switch `xcivilImport.pdfScheduleReadsAllPages`, on by default. On, every page titled PIT SCHEDULE or PIPE SCHEDULE is read. A titled page with no table is a warning in the import report and the import carries on. Off, the old one-page reading is unchanged.
+- **Files:** `Extract-XcivilPdfSchedule.ps1`, `XcivilPdfSchedulePagesRule.cs` (new), `XcivilScheduleService.cs`, `UserSettings.cs`, the new `B177XcivilPdfAllPagesTests.cs` and `REGRESSION_LOG.md`. `CE_SHARED` is untouched.
+- **Tests:** 8 new tests pass, plus 89 related ones. The net48 compile has 0 errors. The page reading itself has no unit test because it needs Windows OCR and a real PDF.
+- **Not proven:** a continuation sheet that doesn't read as "PIT SCHEDULE" at the top is not detected and gets no warning.
+- **Robot case:** the report proposes `N40_xcivil_pdf_pages`. It needs a two-sheet pit schedule PDF and its DWG, and no such sample exists in the repo.
+- **Cleanup:** the worktree and scratch folder are removed. C: free space went from 28.1 GB to 28.6 GB.
+
+The report is `C:\CE_PLAN\areas\BUGFIX_w900_REPORT_03NOV.md`, pushed to `CE_PLAN`.

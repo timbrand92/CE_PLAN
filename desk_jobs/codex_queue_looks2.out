@@ -1,0 +1,40 @@
+== lookL1_civil_sheets (usage 9.0% -> 11.0%): 1. **BLOCKED ÔÇö L1:** [Report saved](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_LOOK_L1_20261018_1027.md>). PASS 0 / FAIL 0 / DIFFERENT 0 / BLOCKED 8 / NOT TESTED 1. SURE 8 / UNSURE 1. No sheet accepted.
+2. **Main blockers:** Schedule update disabled; profile and catchment pit selections rejected; PDF capture and Excel launch blocked inspection. Both exports saved.
+3. **Clean end:** All four settings hashes unchanged. SAVETIME restored to 5. AutoCAD gone; lock released. No confirmed FAILs.
+== lookL3_windows_pictures (usage 11.0% -> 14.0%): 1. **DONE:** [L3 report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_LOOK_L3_20261018_1052.md>). PASS 15 / FAIL 6 / DIFFERENT 0 / BLOCKED 0 / NOT TESTED 0. SURE 21 / UNSURE 0.
+2. **Top failures:** Missing hatch previews; overlapping Manager version text; solid inner flange lines in SBEAM.
+3. **Safe end:** All four settings files unchanged. SAVETIME restored to 5. AutoCAD closed; shared lock released.
+4. **Limits:** Screen-resolution mismatch and repeated-open layout stability remain unverified. FIXTURES WANTED: none.
+== lookL4_mouse (usage 14.0% -> 15.0%): lassified FAILs. P8 opened AutoCADÔÇÖs attribute editor; DP1 showed Set/Remove; editing schedule text did not rename the plan label. Seven mouse tests lacked required tool actions.
+
+3. **Clean end.** AutoCAD gone; lock released; no drawings saved. All four settings files match original contents. FIXTURES WANTED: none.
+
+4. **Settings restored exactly.** Five keys temporarily changed in one file. Full hashes:
+
+   A: `ACD64E79A33BE9C152149FF2145A3CD2C29CABE11245F211183FD5C7DE783140`
+
+   B: `845D98242D0F9E8D09437AB6579668D557F886E3894475F3E94B2556FB5FD384`
+
+   C: `ACD64E79A33BE9C152149FF2145A3CD2C29CABE11245F211183FD5C7DE783140`
+
+   **A = C.** Guard changed the file timestamp; report records it.
+== lookL3_windows_pictures (usage 43.0% -> 44.0%): 1. **L3 complete:** [Report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_LOOK_L3_20261019_1427.md>). PASS 17 / FAIL 3 / DIFFERENT 1 / BLOCKED 0 / NOT TESTED 0. SURE 21 / UNSURE 0.
+
+2. **Three defects:** blank Hatch/Waffle previews, solid SBEAM inner flange lines, clipped Structural settings paths.
+
+3. **Limits:** active screen was 1920 ├ù 1080; 5120-wide layout and repeated-open stability remain unverified. Capture deviations are documented.
+
+4. **Clean end:** all four settings hashes unchanged, SAVETIME restored, AutoCAD gone, lock released. Weekly usage 44%. **FIXTURES WANTED: none.**
+== lookL4_mouse (usage 44.0% -> 44.0%): d looks remain unverified. No confirmed FAILs.
+
+2. **Findings:** P8 opened AutoCADÔÇÖs attribute editor; DP1 opened a command prompt; changing the schedule cell to C2 left the plan label P2. Grip/live-movement tests were blocked by mouse-tool limitations.
+
+3. **Settings restored:** Five keys temporarily changed; original bytes restored exactly.
+   
+   A: `ACD64E79A33BE9C152149FF2145A3CD2C29CABE11245F211183FD5C7DE783140`
+   
+   B: `845D98242D0F9E8D09437AB6579668D557F886E3894475F3E94B2556FB5FD384`
+   
+   C: `ACD64E79A33BE9C152149FF2145A3CD2C29CABE11245F211183FD5C7DE783140`
+
+4. **Clean end:** AutoCAD gone; guard empty; lock released. Other three settings hashes unchanged. FIXTURES WANTED: none.

@@ -1,0 +1,26 @@
+**FOR TIM**
+
+I reviewed all nine new draft changes. Eight are ready to go in. One, the CE_VERSION move (#1493), must not go on the next Civil + Manager update, C-56. As written, the installer would refuse to install the new Manager on every PC that has Structural, including yours.
+
+1. **#1491, step irons (go):** a 1000 mm step-iron depth you type in CDS now stays 1000 after a restart. Its new tests fail on the old code and pass with the fix.
+2. **#1492, old installer packages (go):** the installer now refuses a build older than the one the office approved. It only warns when it can't read that approval. The signed-update check is untouched. The installer tests could only be compiled on this PC, not run.
+3. **#1493, CE_VERSION into Manager (fix first):** it has to be split in two. The Structural half goes out first, and the Manager half follows once that is installed. It also leaves one command-list test failing, which is a small fix.
+4. **#1494 and #1495, Settings "Fixes" boxes (go):** every box is tied to an existing setting and no default changes. Codex still has to look at the real window in AutoCAD.
+5. **#1487 to #1490, CEMEMBER (go):** these are the drawing rules only, with no command yet. One point for your checklist: on a C purlin with flanges up, the top view draws lines the lips would really hide.
+
+Order for C-56: #1491, #1492, #1494, #1495. The next Structural update takes #1487 to #1490 plus the Structural half of #1493.
+
+Nothing has been opened in AutoCAD and nothing is marked FIXED.
+
+---
+
+1. **Tests:** run on the installed line with the PRs merged in.
+   - Civil focused: 162 of 162 pass.
+   - Manager: 837 of 837 pass.
+   - Command-list check: 63 of 64, the failure from #1493.
+   - CEMEMBER: 58 of 58 on all three .NET versions.
+   - Installer tests: compiled only, not run.
+   - Your settings files were unchanged by the run.
+2. **#1492 deploy:** it changes the standalone installer, so it is only live once the installer is rebuilt and published.
+3. **#1491:** if your own settings file already holds 1000 mm, CDS will show 1000 after install, not 900. Worth a glance.
+4. **Log:** entries 1498 to 1510 are in REVIEWLANE_LOG.md and pushed. No PR was merged or closed.

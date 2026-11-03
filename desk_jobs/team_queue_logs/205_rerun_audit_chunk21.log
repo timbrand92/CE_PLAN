@@ -1,0 +1,1 @@
+I classified all 17 entries (BUG-1252 to BUG-1268) and wrote `C:\CE_PLAN\areas\AUDIT\AUDIT_CLASS_CHUNK21_02NOV.md`: FIXABLE-NOW 9, NEEDS-TIM 1, HAS-DRAFT 4, INSTALLED-WAITING-PROOF 1, UNCLEAR 2. The file replaces an earlier garbled copy of itself. I could not check GitHub (`gh` is not available in this shell), so the draft PR numbers come from the carpark notes.

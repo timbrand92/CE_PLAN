@@ -1,0 +1,8 @@
+**Draft PR #1502, head 222c35b4, base `claude/rel-20261020i`. I found one write, but I can't show it caused V1-01.**
+
+- **The write:** binding CE's record in the click first saved a record owed to a *previous* drawing, in a normal transaction. It needs a second open drawing with a save waiting. The click otherwise only reads.
+- **Fix:** the three right-click items now keep that record for the previous drawing instead of writing it.
+- **Not proven:** if V1-01 had only one drawing open, the cause is elsewhere. The retry capture list is in review log entry 1511.
+- **Tests:** the call-graph guard failed first and now passes. 613 focused tests pass on net10, and net48 compiles with 0 errors.
+
+I also added a BUG-416 note and review log entry 1511. Nothing is marked FIXED.

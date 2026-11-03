@@ -1,0 +1,25 @@
+Draft PR #1866 is open for B-055 / BUG-1251; I built and unit-tested it only. Nothing was run in AutoCAD, and BUG-1251 is not marked fixed.
+
+**Change:** CDCHECK now reads the pit and pipe list saved in the drawing when CE holds none for it, so a reopened drawing should give the same totals as the first open. The file edits are:
+- New `Rules/CdCheckProjectSourceRule.cs`.
+- `Checks/ChecksResultReader.cs`.
+- `ProjectDataService.cs` and `UserSettings.cs`.
+- A new test class `B055CdcheckReadsThisDrawingsRecordTests`, plus pins updated in three older tests (`SpineCommandContractTests`, `CheckIgnoreUndoTests`, `Bug589CdCheckReadsSavedRecordTests`).
+- A `REGRESSION_LOG.md` entry.
+
+**Switch:** `checks.cdcheckReadsThisDrawingsRecord` (ON; OFF = old path).
+
+**Tests:**
+- Focused net10: 130 of 130 pass.
+- Full Civil net10: 20,901 of 20,935 pass, with 2 failures in a source-landing coordinator test and a native-callback test. I did not compare them with the base.
+- net48 compile: 0 errors.
+
+**Missed the cut:** the PR opened about 07:10, after the 06:00 C-77 cut. Both build slots were taken until about 06:50.
+
+**Robot proof:** N38_cdcheck_reopen, with switch-off control C38.
+
+**Secondary risk:** `TryPeekCurrent` ignoring the closed flag is left as is. It is not a one-line safe guard.
+
+**Mistake:** my first commit said BUG-1229; the real number is BUG-1251. I amended it before pushing.
+
+The report is pushed to `C:\CE_PLAN\areas\release-v3-colleagues-CDCHECK_REOPEN_FIX_REPORT.md`.

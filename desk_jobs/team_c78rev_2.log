@@ -1,0 +1,18 @@
+All 14 cases passed review. N38 covers its whole plan item; the other 13 cover part of theirs, and each slip says which part. Here are the first 12 lines of the report:
+
+```
+# C-78 batch case review B (Opus-Team-C78rev-B, Sun 1 Nov 2026)
+
+1. **Answer:** 14 cases reviewed. ACCEPT FULL 1 (N38), ACCEPT PART 13, NOT YET 0, ALREADY 0. Each of the 14 has a new slip; none had a slip before.
+2. **Three weakest:** N61 (its twin only flips the claim; "stays hidden" is never checked; check "1. " cannot fail), N41v87 (the original BUG-372 bare-handle tidy line would pass; "is not connected" is met by the fixture's own open ends), N38A (a baseline that passed on 3.0.87 too; it proves nothing about B-055 on its own).
+3. **Build:** every passing run read Civil 3.0.88+3fbb9da5 / Manager 1.1.88 / Structural 1.0.125. Source was checked with git show and git grep at 3fbb9da5.
+4. **Case text:** all 14 case files match the sha256 in c78rev_list_2.txt, read live at the start.
+5. **UNSOURCED:** none. Every word, number and level asserted is either in source at 3fbb9da5 or was seen on both passing runs.
+6. **Codex must SEE:** the Grade mismatch window's look (N33d, e, f, s), that the DP1 insertion point is the red centre (N42), where the tidied text lands (N67).
+7. **Time:** the PC clock read 08:11 at start and 08:16 at end (5 minutes by the clock). That seems short for the work done, so treat it with care.
+8. **Nothing else changed:** no case, setup, settings, driver or repo file was edited. Nothing was run, built, committed or pushed.
+
+---
+```
+
+Full report: `C:\CE_PLAN\areas\C78_REVIEW_B_REPORT.md`. Each slip sits beside its case file with `.review.txt` in place of `.case.txt`.

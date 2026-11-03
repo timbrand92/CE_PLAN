@@ -1,0 +1,2508 @@
+{
+  "header": {
+    "run_id": "RUN-20261031-1703-C3.0.88-tW5",
+    "started": "2026-10-31 17:03:31",
+    "finished": "2026-10-31 17:26:25",
+    "build": {
+      "civil": {
+        "product_version": "3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+        "file_version": "3.0.88.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+        "file_version": "1.1.88.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.88+3fbb9da5 / struc 1.0.125+204dfad2 / mgr 1.1.88+3fbb9da5",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "13EFCFC4B9BE47E4260295EF9046EAE1E797846F0B4E02A2F3A5A92E58949D0A",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+      "Driver files (SHA-256, first 12): v2 F4D8F40C3675 (expected F4D8F40C3675), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 482EB7B20C6C, v3 session 4D3524AAA60B, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 BBF42DBA8958, case_runner_lib.ps1 01751833A6EA, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 6 case file(s) plus 1 shared setup(s); pack SHA-256 13EFCFC4B9BE47E4260295EF9046EAE1E797846F0B4E02A2F3A5A92E58949D0A; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json D604CE689671 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sat 31 Oct 2026 17:03 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 0,
+    "FAIL": 0,
+    "FAIL_known": 6,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261031-1703-C3.0.88-tW5-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-31 17:03:34",
+      "finished": "2026-10-31 17:26:25",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31703391_B1.dwg",
+      "cases": [
+        "R17_BROKENv87",
+        "R32_BROKENv87",
+        "R39_BROKENv87",
+        "R19_BROKENv87",
+        "R19_NOU_BROKENv87",
+        "R32b_BROKENv87"
+      ],
+      "whatsnew_dismissed_at_start": "no, window was not there",
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : D604CE689671 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "R17_BROKENv87",
+      "proves_bugs": "",
+      "title": "BROKEN VARIANT of R17: expects a New Pipe window after Esc at the third point (must FAIL)",
+      "kind": "deterministic",
+      "order": 21,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "red-before-green proof for R17",
+      "bug": "",
+      "known_fail": "BROKEN-VARIANT",
+      "reviewed_against": "",
+      "variant_of": "R17v87",
+      "expected": "This variant is wrong on purpose: after Esc at the third point CE cancels and no New Pipe window opens; the variant expects one, so the check fails.",
+      "why_not_unit": "It exists only to prove the runner reports a wrong expectation as FAIL.",
+      "not_automated": [],
+      "file_sha256": "383B4220D824812363BDB11DE4775440C956E4D09DBFB298629DED6C967CB617",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "'New Pipe' is NOT in: Autodesk AutoCAD 2027 - [CLDV31703391_B1.dwg]",
+      "started": "2026-10-31 17:04:38",
+      "seconds": 19.2,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-86000{NL}170000,-86000\" -Force",
+          "ok": true,
+          "seconds": 8.6,
+          "evidence": "typed 'CD 150000,-86000 170000,-86000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-86000 | Specify second point: 170000,-86000"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt",
+          "ok": true,
+          "seconds": 5.7,
+          "evidence": "esc-prompt: Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-86000 | Specify second point: 170000,-86000 | Select point ..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_a",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31703391_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "contains $win_a \"New Pipe\"",
+          "ok": false,
+          "expected": "contains 'New Pipe'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31703391_B1.dwg]",
+          "evidence": "'New Pipe' is NOT in: Autodesk AutoCAD 2027 - [CLDV31703391_B1.dwg]"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 8 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CD cancelled 10483 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-31 17:04:57",
+      "session_id": "RUN-20261031-1703-C3.0.88-tW5-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [
+          "known failure (BROKEN-VARIANT): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R32_BROKENv87",
+      "proves_bugs": "",
+      "title": "BROKEN VARIANT of R32: the levels are not reversed, so the arrow does not turn (must FAIL)",
+      "kind": "deterministic",
+      "order": 27,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "red-before-green proof for R32",
+      "bug": "",
+      "known_fail": "BROKEN-VARIANT",
+      "reviewed_against": "",
+      "variant_of": "R32v87",
+      "expected": "This variant is wrong on purpose: with no reversal the arrow keeps rotation 0 and the left IL text stays IL 18.000.",
+      "why_not_unit": "It exists only to prove R32's arrow and IL checks can go red.",
+      "not_automated": [],
+      "file_sha256": "7096665F5CB9A5977644F25DED4E43F13D6E80B45BBEA4148EEE9DA33AE44AFC",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "no match for /rotation.:3\\.14/ in: {\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90237.5,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[]...",
+      "started": "2026-10-31 17:04:57",
+      "seconds": 146.9,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-90000{NL}170000,-90000{NL}\" -Force -ExpectWindow \"New Pipe\" -TimeoutSec 120 -> $t1",
+          "ok": true,
+          "seconds": 19.0,
+          "evidence": "typed 'CD 150000,-90000 170000,-90000': Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-90000 | Specify second point: 170000,-90000 | Select point ..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 14.1,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: "
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.800\"",
+          "ok": true,
+          "seconds": 14.1,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.800: "
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $t2",
+          "ok": true,
+          "seconds": 76.9,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $e1",
+          "ok": true,
+          "seconds": 5.2,
+          "evidence": "esc-prompt: [CE] End is free: open end flagged, connect it later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: Open end -> Open end | [CE] Pipe placed. Pick the next pipe's first point, or pre..."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $newA",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "5 object(s) after index 1034 (model space now 1039); by type: AcDbBlockReference 1; AcDbMText 3; CeCvlPipeObject 1; first: 11C55B CeCvlPipeObject STORMWATER PIPE ; 11C561 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 100 ; 11C566 AcDbMText 20TEXT IL 18.000 ; 11C56B AcDbMText 20TEXT IL 17.800 ; 11C58D AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $newA \"name~ARROW\" -> $arA",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "selected 1 of 5: 11C58D TIM_CVL_ARROW ARROW"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $arA handle -> $haA",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C58D"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$haA} -> $arrowA1",
+          "ok": true,
+          "seconds": 0.4,
+          "evidence": "ent-read 11C58D: {\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90237.5,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-90237.5,160375.0,-902..."
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $newA \"text~^IL \" -> $ilA",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 2 of 5: 11C566 IL 18.000 20TEXT ; 11C56B IL 17.800 20TEXT"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $ilA text -All -> $ilA_text",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = IL 18.000 | IL 17.800"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "matches $arrowA1 \"rotation.:3\\.14\"",
+          "ok": false,
+          "expected": "matches /rotation.:3\\.14/",
+          "actual": "{\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90237.5,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[]...",
+          "evidence": "no match for /rotation.:3\\.14/ in: {\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90237.5,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[]..."
+        },
+        {
+          "n": 2,
+          "text": "matches $ilA_text \"^IL 17\\.800 \\| IL 18\\.000$\"",
+          "ok": false,
+          "expected": "matches /^IL 17\\.800 \\| IL 18\\.000$/",
+          "actual": "IL 18.000 | IL 17.800",
+          "evidence": "no match for /^IL 17\\.800 \\| IL 18\\.000$/ in: IL 18.000 | IL 17.800"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV31703391_B1_14248de27.log)",
+        "Civil CE log: 69 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CD completed 126158 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-31 17:07:24",
+      "session_id": "RUN-20261031-1703-C3.0.88-tW5-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [
+          "known failure (BROKEN-VARIANT): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R39_BROKENv87",
+      "proves_bugs": "",
+      "title": "BROKEN VARIANT of R39: the point is not on the polyline, so nothing is picked and no window opens (must FAIL)",
+      "kind": "deterministic",
+      "order": 40,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "red-before-green proof for R39 (a real switch: the picked point)",
+      "bug": "",
+      "known_fail": "BROKEN-VARIANT",
+      "reviewed_against": "",
+      "variant_of": "R39v87",
+      "expected": "This variant is wrong on purpose: a point away from the line selects nothing (\"Nothing Selected.\"), so no New Pipe window opens.",
+      "why_not_unit": "It exists only to prove R39's window check can go red.",
+      "not_automated": [],
+      "file_sha256": "BC01B256C02D86E8C6FA5B6C64C689BDD17C10654E182E02D90EA858865C26D2",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "'New Pipe' is NOT in: Autodesk AutoCAD 2027 - [CLDV31703391_B1.dwg]",
+      "started": "2026-10-31 17:07:24",
+      "seconds": 40.7,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.PLINE{NL}150000,-96000{NL}155000,-96000{NL}160000,-95000{NL}\" -Force -> $pl",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "typed '_.PLINE 150000,-96000 155000,-96000 160000,-95000': Command: _.PLINE | Specify start point: 150000,-96000 | Current line-width is 0.000 | Specify next point or [Arc/Halfwidth/Length/Undo/Width]: 155000,-96000 | Specify next point or [Arc/Close/Halfwidth/Length/Undo/Width]..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM{NL}_W{NL}148000,-98000{NL}162000,-93000\" -Force",
+          "ok": true,
+          "seconds": 3.8,
+          "evidence": "typed '_.ZOOM _W 148000,-98000 162000,-93000': Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _W | Specify first corner: 148000,-98000 | Specify oppo..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}E{NL}155000,-93500\" -Force -TimeoutSec 30 -> $cd",
+          "ok": true,
+          "seconds": 7.5,
+          "evidence": "typed 'CD E 155000,-93500': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: E | Pick the drawn polyline to use as the pipe route: 15..."
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_np",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31703391_B1.dwg]"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $e1",
+          "ok": true,
+          "seconds": 6.2,
+          "evidence": "esc-prompt: Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: E | Pick the drawn polyline to use as the pipe route: 155000,-93500 | Nothing Sel..."
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.2,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1035 objects"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "contains $win_np \"New Pipe\"",
+          "ok": false,
+          "expected": "contains 'New Pipe'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31703391_B1.dwg]",
+          "evidence": "'New Pipe' is NOT in: Autodesk AutoCAD 2027 - [CLDV31703391_B1.dwg]"
+        },
+        {
+          "n": 2,
+          "text": "not-contains $cd \"Nothing Selected\"",
+          "ok": false,
+          "expected": "does not contain 'Nothing Selected'",
+          "actual": "Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: E | Pick the drawn polyline to use a...",
+          "evidence": "'Nothing Selected' WAS found in: Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: E | Pick the drawn polyline to use a..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV31703391_B1_15eb9d31e.log)",
+        "Civil CE log: 11 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CD cancelled 8932 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-31 17:08:05",
+      "session_id": "RUN-20261031-1703-C3.0.88-tW5-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [
+          "known failure (BROKEN-VARIANT): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R19_BROKENv87",
+      "proves_bugs": "",
+      "title": "BROKEN VARIANT of R19: expects \"2 pipes now have ends\" after erasing the one-pipe pit P8 (must FAIL)",
+      "kind": "deterministic",
+      "order": 46,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "red-before-green proof for R19",
+      "bug": "",
+      "known_fail": "BROKEN-VARIANT",
+      "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 24 Oct 2026 with daily card D14 (DAILY_TOOLS_TEST_CASES_2026-10-23.md), done on the new pit P8 with one pipe instead of the old pit P3 counted through the Pit Schedule (unreadable on 3.0.72).",
+      "variant_of": "R19v87",
+      "expected": "Select the new pit P8 and type ERASE: the pit goes (the object count falls), the pipe that started at it is still there (it can still be read), the command line says '1 pipe now has an end that is Not connected yet', and one U (echo word ERASE) brings the pit back and the object count returns to its value before the erase.",
+      "why_not_unit": "The message comes from CE watching a real native ERASE and its links in the drawing.",
+      "not_automated": [
+        "The full card sentence is asserted for the ONE-pipe branch only (run B5, cx_cr05: PLAN_ITEM narrowed, exactly one pipe asserted).",
+        "The plural-pipe route and the schedule-derived pipe count belong to R19b. Run B5: the pipe read (ent-read) shows only handle, object and layer, so it cannot show the pit link; the link is read instead through the CDCHECK Problems totals before the erase and after U, whose totals line must read the same (218 objects, 189 connections, 184 Connected, 0 Not Connected): twin R19_NOU_BROKEN skips the U and reads 217 and 183. The totals count the whole drawing, not only pit P8."
+      ],
+      "file_sha256": "E7B84AE8F49F9F3FCBC14AD0FF5A8A6D5ACE1F9A97DD190D806659C49B052AE4",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "no command-line line contains '2 pipes now have ends that are Not connected yet' (126 lines read: Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"109D56\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2PICKFIRST \"...; log file CLDV31703391_B1_18aea1ac9.log, from byte 2000)",
+      "started": "2026-10-31 17:08:05",
+      "seconds": 425.7,
+      "setup": "SETUP-R47v",
+      "setup_note": "shared setup SETUP-R47v run here for the first time at 17:14:16",
+      "steps": [
+        {
+          "n": 1,
+          "phase": "setup",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "copy CLDV31703391_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "setup",
+          "verb": "pick-first",
+          "text": "pick-first \"109D56\"",
+          "ok": true,
+          "seconds": 4.1,
+          "evidence": "pick-first 109D56: Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"109D56\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2PICKFIRST \"..."
+        },
+        {
+          "n": 3,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"_.MOVE{NL}0,0{NL}0,2000\" -Force -> $setup_move",
+          "ok": true,
+          "seconds": 5.1,
+          "evidence": "typed '_.MOVE 0,0 0,2000': Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,2000 | [CE Civil] pipe P3 -> P2 label: no clear spot among it..."
+        },
+        {
+          "n": 4,
+          "phase": "setup",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "setup",
+          "verb": "ms-count",
+          "text": "ms-count -> $n0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 6,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"PIT{NL}150000,-80000\" -Force -ExpectWindow \"New Pit\" -> $pit_t1",
+          "ok": true,
+          "seconds": 24.0,
+          "evidence": "typed 'PIT 150000,-80000': Command: | Command: PIT | Specify pit insertion point: 150000,-80000"
+        },
+        {
+          "n": 7,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.CoverLevel\" \"19.000\"",
+          "ok": true,
+          "seconds": 15.7,
+          "evidence": "ui set 'New Pit' C2.CoverLevel = 19.000: "
+        },
+        {
+          "n": 8,
+          "phase": "setup",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pit\" \"New pit, Continue placement\" -> $pit_t2",
+          "ok": true,
+          "seconds": 100.6,
+          "evidence": "pressed 'New pit, Continue placement' in /New Pit/: window closed = True"
+        },
+        {
+          "n": 9,
+          "phase": "setup",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pit\" -Secs 120",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "the window /^New Pit/ closed after 0 s"
+        },
+        {
+          "n": 10,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e1",
+          "ok": true,
+          "seconds": 9.4,
+          "evidence": "esc-prompt: Command: | Command: PIT | Specify pit insertion point: 150000,-80000 | Specify pit label insertion point: *Cancel*"
+        },
+        {
+          "n": 11,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e2",
+          "ok": true,
+          "seconds": 11.3,
+          "evidence": "esc-prompt: Command: PIT | Specify pit insertion point: 150000,-80000 | Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit..."
+        },
+        {
+          "n": 12,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e3",
+          "ok": true,
+          "seconds": 5.3,
+          "evidence": "esc-prompt: Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit, or press Esc to stop. | Specify pit insertion point: *Canc..."
+        },
+        {
+          "n": 13,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-80000{NL}170000,-80000{NL}\" -Force -ExpectWindow \"New Pipe\" -> $pipe_t1",
+          "ok": true,
+          "seconds": 22.7,
+          "evidence": "typed 'CD 150000,-80000 170000,-80000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-80000 | Specify second point: 170000,-80000 | Se..."
+        },
+        {
+          "n": 14,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 19.8,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: "
+        },
+        {
+          "n": 15,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.800\"",
+          "ok": true,
+          "seconds": 15.7,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.800: "
+        },
+        {
+          "n": 16,
+          "phase": "setup",
+          "verb": "ui-dump",
+          "text": "ui-dump \"New Pipe\" -> $np_win",
+          "ok": true,
+          "seconds": 10.6,
+          "evidence": "ui-dump 'New Pipe': 152 controls, tabs: "
+        },
+        {
+          "n": 17,
+          "phase": "setup",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $pipe_t2",
+          "ok": true,
+          "seconds": 104.6,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 18,
+          "phase": "setup",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 19,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pipe_e1",
+          "ok": true,
+          "seconds": 5.5,
+          "evidence": "esc-prompt: [CE] Pipe kept. One or more ends have no proven connection. The route stays drawn; confirm the intended connection later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: P8 -> Open en..."
+        },
+        {
+          "n": 20,
+          "phase": "setup",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 21,
+          "phase": "setup",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_after_setup",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31703391_B1.dwg]"
+        },
+        {
+          "n": 22,
+          "phase": "setup",
+          "verb": "ms-new",
+          "text": "ms-new $n0 -> $new_all",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "6 object(s) after index 1034 (model space now 1040); by type: AcDbBlockReference 2; AcDbMText 3; CeCvlPipeObject 1; first: 11C5AD AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C651 CeCvlPipeObject STORMWATER PIPE ; 11C657 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 100 ; 11C65C AcDbMText 20TEXT IL 18.000 ; 11C661 AcDbMText 20TEXT IL 17.800 ; 11C683 AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_all object=AcDbBlockReference \"near=150000,-80000,700\" -> $pit8",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 6: 11C5AD PIT BLOCK 3 STORMWATER PIT"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $pit8 handle -> $h8",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C5AD"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_all \"object~^CeCvlPipeObject$\" -> $pipes8",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 6: 11C651 STORMWATER PIPE"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $pipes8 handle -> $hp8",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C651"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $e0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1040 objects"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read $hp8 -> $pipe_before",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "ent-read 11C651: {\"handle\":\"11C651\",\"object\":\"CeCvlPipeObject\",\"layer\":\"STORMWATER PIPE\"}"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDCHECK{NL}Problems\" -Force -> $chk0",
+          "ok": true,
+          "seconds": 8.4,
+          "evidence": "typed 'CDCHECK Problems': Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: Problems | [CE] CDCHECK: 218 objects, 189 connections: 184 Connected, 1 Possible, 4 Unresolved, 0 Not ..."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt",
+          "ok": true,
+          "seconds": 4.9,
+          "evidence": "esc-prompt: [CE] Pipe end 20. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 21. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 22. Pipe 100: both ..."
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.2,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first $h8",
+          "ok": true,
+          "seconds": 3.9,
+          "evidence": "pick-first 11C5AD: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"11C5AD\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ERASE\" -Force -> $er",
+          "ok": true,
+          "seconds": 3.6,
+          "evidence": "typed '_.ERASE': Command: | Command: _.ERASE | 1 found | [CE Civil] The pit was erased and the schedule is updated. 1 pipe now has an end that is Not connected yet. U restores everything."
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 2",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "slept 2 s"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $e1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1039 objects"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read $hp8 -> $pipe_after_erase",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "ent-read 11C651: {\"handle\":\"11C651\",\"object\":\"CeCvlPipeObject\",\"layer\":\"STORMWATER PIPE\"}"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -> $u1",
+          "ok": true,
+          "seconds": 3.9,
+          "evidence": "typed 'U': Command: | Command: U | ERASE"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $e2",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "model space holds 1040 objects"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read $h8 -> $pit_after_u",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "ent-read 11C5AD: {\"handle\":\"11C5AD\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U187\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[150000.0,-80000.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[149050.0,-80950.0,150950.0,-7905..."
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read $hp8 -> $pipe_after_u",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "ent-read 11C651: {\"handle\":\"11C651\",\"object\":\"CeCvlPipeObject\",\"layer\":\"STORMWATER PIPE\"}"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDCHECK{NL}Problems\" -Force -> $chk1",
+          "ok": true,
+          "seconds": 8.0,
+          "evidence": "typed 'CDCHECK Problems': Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: Problems | [CE] CDCHECK: 218 objects, 189 connections: 184 Connected, 1 Possible, 4 Unresolved, 0 Not ..."
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt",
+          "ok": true,
+          "seconds": 6.1,
+          "evidence": "esc-prompt: [CE] Pipe end 20. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 21. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 22. Pipe 100: both ..."
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.5,
+          "evidence": "wait for idle: idle"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "count $pit8 = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $pit8 = 1 (expected = 1)"
+        },
+        {
+          "n": 2,
+          "text": "count $pipes8 = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $pipes8 = 1 (expected = 1)"
+        },
+        {
+          "n": 3,
+          "text": "history has \"The pit was erased\"",
+          "ok": true,
+          "expected": "command line has 'The pit was erased'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CE Civil] The pit was erased and the schedule is updated. 1 pipe now has an end that is Not connected yet. U restores everything.'"
+        },
+        {
+          "n": 4,
+          "text": "history has \"2 pipes now have ends that are Not connected yet\"",
+          "ok": false,
+          "expected": "command line has '2 pipes now have ends that are Not connected yet'",
+          "actual": "0 matching line(s)",
+          "evidence": "no command-line line contains '2 pipes now have ends that are Not connected yet' (126 lines read: Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"109D56\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2PICKFIRST \"...; log file CLDV31703391_B1_18aea1ac9.log, from byte 2000)"
+        },
+        {
+          "n": 5,
+          "text": "number $e1 = 1039",
+          "ok": true,
+          "expected": "= 1039",
+          "actual": "1039",
+          "evidence": "$e1 = 1039 (expected = 1039)"
+        },
+        {
+          "n": 6,
+          "text": "contains $pipe_before \"CeCvlPipeObject\"",
+          "ok": true,
+          "expected": "contains 'CeCvlPipeObject'",
+          "actual": "{\"handle\":\"11C651\",\"object\":\"CeCvlPipeObject\",\"layer\":\"STORMWATER PIPE\"}",
+          "evidence": "found 'CeCvlPipeObject' in: {\"handle\":\"11C651\",\"object\":\"CeCvlPipeObject\",\"layer\":\"STORMWATER PIPE\"}"
+        },
+        {
+          "n": 7,
+          "text": "contains $pipe_after_erase \"CeCvlPipeObject\"",
+          "ok": true,
+          "expected": "contains 'CeCvlPipeObject'",
+          "actual": "{\"handle\":\"11C651\",\"object\":\"CeCvlPipeObject\",\"layer\":\"STORMWATER PIPE\"}",
+          "evidence": "found 'CeCvlPipeObject' in: {\"handle\":\"11C651\",\"object\":\"CeCvlPipeObject\",\"layer\":\"STORMWATER PIPE\"}"
+        },
+        {
+          "n": 8,
+          "text": "contains $pipe_after_u \"CeCvlPipeObject\"",
+          "ok": true,
+          "expected": "contains 'CeCvlPipeObject'",
+          "actual": "{\"handle\":\"11C651\",\"object\":\"CeCvlPipeObject\",\"layer\":\"STORMWATER PIPE\"}",
+          "evidence": "found 'CeCvlPipeObject' in: {\"handle\":\"11C651\",\"object\":\"CeCvlPipeObject\",\"layer\":\"STORMWATER PIPE\"}"
+        },
+        {
+          "n": 9,
+          "text": "contains $u1 \"ERASE\"",
+          "ok": true,
+          "expected": "contains 'ERASE'",
+          "actual": "Command: | Command: U | ERASE",
+          "evidence": "found 'ERASE' in: Command: | Command: U | ERASE"
+        },
+        {
+          "n": 10,
+          "text": "matches $chk0 \"[0-9]+ Not Connected\"",
+          "ok": true,
+          "expected": "matches /[0-9]+ Not Connected/",
+          "actual": "Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: Problems | [CE] CDCHECK: 218 objects, 189 connections: 184 Connected, 1 Possible, ...",
+          "evidence": "matched '0 Not Connected'"
+        },
+        {
+          "n": 11,
+          "text": "contains $chk0 \"[CE] CDCHECK: 218 objects, 189 connections: 184 Connected, 1 Possible, 4 Unresolved, 0 Not Connected, 0 Unknown.\"",
+          "ok": true,
+          "expected": "contains '[CE] CDCHECK: 218 objects, 189 connections: 184 Connected, 1 Possible, 4 Unresolved, 0 Not Connected, 0 Unknown.'",
+          "actual": "Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: Problems | [CE] CDCHECK: 218 objects, 189 connections: 184 Connected, 1 Possible, ...",
+          "evidence": "found '[CE] CDCHECK: 218 objects, 189 connections: 184 Connected, 1 Possible, 4 Unresolved, 0 Not Connected, 0 Unknown.' in: Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: Problems | [CE] CDCHECK: 218 objects, 189 ..."
+        },
+        {
+          "n": 12,
+          "text": "contains $chk1 \"[CE] CDCHECK: 218 objects, 189 connections: 184 Connected, 1 Possible, 4 Unresolved, 0 Not Connected, 0 Unknown.\"",
+          "ok": true,
+          "expected": "contains '[CE] CDCHECK: 218 objects, 189 connections: 184 Connected, 1 Possible, 4 Unresolved, 0 Not Connected, 0 Unknown.'",
+          "actual": "Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: Problems | [CE] CDCHECK: 218 objects, 189 connections: 184 Connected, 1 Possible, ...",
+          "evidence": "found '[CE] CDCHECK: 218 objects, 189 connections: 184 Connected, 1 Possible, 4 Unresolved, 0 Not Connected, 0 Unknown.' in: Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: Problems | [CE] CDCHECK: 218 objects, 189 ..."
+        },
+        {
+          "n": 13,
+          "text": "equals $e2 $e0",
+          "ok": true,
+          "expected": "1040",
+          "actual": "1040",
+          "evidence": "value '1040' (expected '1040')"
+        },
+        {
+          "n": 14,
+          "text": "contains $pit_after_u \"STORMWATER PIT\"",
+          "ok": true,
+          "expected": "contains 'STORMWATER PIT'",
+          "actual": "{\"handle\":\"11C5AD\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U187\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[150000.0,-80000.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],...",
+          "evidence": "found 'STORMWATER PIT' in: {\"handle\":\"11C5AD\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U187\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[150000.0,-80000.0,0.0],\"rot..."
+        },
+        {
+          "n": 15,
+          "text": "record $er \"FULL what ERASE printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: _.ERASE | 1 found | [CE Civil] The pit was erased and the schedule is updated. 1 pipe now has an end that is Not connected yet. U restores everything.",
+          "evidence": "RECORDED, not judged: FULL what ERASE printed = Command: | Command: _.ERASE | 1 found | [CE Civil] The pit was erased and the schedule is updated. 1 pipe now has an end that is Not connected yet. U restores everything."
+        },
+        {
+          "n": 16,
+          "text": "record $chk0 \"FULL CDCHECK Problems reply before the erase (totals line)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: Problems | [CE] CDCHECK: 218 objects, 189 connections: 184 Connected, 1 Possible, 4 Unresolved, 0 Not Connected, 0 Unknown. | [CE] This drawing holds a saved check record of 223 objects; 218 are in the drawing now (6 added since, 11 no longer there). | [CE] Problems only: 4 of 189 connections. | 1. An unnamed pipe flows to WT4: Unresolved (not confirmed from the other side) | 2. An unnamed pipe flows to WT10: Unresolved (not confirmed from the other side) | 3. An unnamed pipe flows to WT7: Unresolved (not confirmed from the other side) | 4. An unnamed pipe flows to WT6: Unresolved (not confirmed from the other side) | [CE] Pipe-to-pit fit: not checked for 36 pipe ends (older drawing - no pit and pipe fit sizes recorded yet) | [CE] FALL arrow direction: 5 arrow(s) point away from their nearest grated pit. | [CE] Fall 1. FALL arrow points away from the nearest grated pit P4 (off by 168°). Check the fall direction or move the arrow. | [CE] Fall 2. FALL arrow points away from the nearest grated pit P3 (off by 157°). Check the fall direction or move the arrow. | [CE] Fall 3. FALL arrow points away from the nearest grated pit P2 (off by 173°). Check the fall direction or move the arrow. | [CE] Fall 4. FALL arrow points away from the nearest grated pit P2 (off by 172°). Check the fall direction or move the arrow. | [CE] Fall 5. FALL arrow points away from the nearest grated pit P1 (off by 172°). Check the fall direction or move the arrow. | [CE] Pipe ends: 23 with an open end, 0 branch(es) above their main. | [CE] Pipe end 1. Pipe 450: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 2. Pipe 450: one end is not connected (the end). Connect it, or leave it open. | [CE] Pipe end 3. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 4. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 5. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 6. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 7. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 8. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 9. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 10. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 11. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 12. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 13. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 14. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 15. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 16. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 17. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 18. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 19. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 20. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 21. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 22. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 23. Pipe 225: one end is not connected (the end). Connect it, or leave it open. | [CE] Full list saved: C:\\Users\\TimothyBrand\\AppData\\Roaming\\CE_CVL_SUITE\\logs\\cdcheck-CLDV31703391_B1-20261031-061419.txt. Nothing in the drawing has been changed so far.",
+          "evidence": "RECORDED, not judged: FULL CDCHECK Problems reply before the erase (totals line) = Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: Problems | [CE] CDCHECK: 218 objects, 189 connections: 184 Connected, 1 Possible, 4 Unresolved, 0 Not Connected, 0 Unknown. | [CE] This drawing holds a saved check record of 223 objects; 218 are in the drawing now (6 added since, 11 no longer there). | [CE] Problems only: 4 of 189 connections. | 1. An unnamed pipe flows to WT4: Unresolved (not confirmed from the other side) | 2. An unnamed pipe flows to WT10: Unresolved (not confirmed from the other side) | 3. An unnamed pipe flows to WT7: Unresolved (not confirmed from the other side) | 4. An unnamed pipe flows to WT6: Unresolved (not confirmed from the other side) | [CE] Pipe-to-pit fit: not checked for 36 pipe ends (older drawing - no pit and pipe fit sizes recorded yet) | [CE] FALL arrow direction: 5 arrow(s) point away from their nearest grated pit. | [CE] Fall 1. FALL arrow points away from the nearest grated pit P4 (off by 168°). Check the fall direction or move the arrow. | [CE] Fall 2. FALL arrow points away from the nearest grated pit P3 (off by 157°). Check the fall direction or move the arrow. | [CE] Fall 3. FALL arrow points away from the nearest grated pit P2 (off by 173°). Check the fall direction or move the arrow. | [CE] Fall 4. FALL arrow points away from the nearest grated pit P2 (off by 172°). Check the fall direction or move the arrow. | [CE] Fall 5. FALL arrow points away from the nearest grated pit P1 (off by 172°). Check the fall direction or move the arrow. | [CE] Pipe ends: 23 with an open end, 0 branch(es) above their main. | [CE] Pipe end 1. Pipe 450: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 2. Pipe 450: one end is not connected (the end). Connect it, or leave it open. | [CE] Pipe end 3. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 4. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 5. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 6. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 7. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 8. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 9. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 10. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 11. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 12. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 13. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 14. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 15. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 16. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 17. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 18. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 19. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 20. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 21. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 22. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 23. Pipe 225: one end is not connected (the end). Connect it, or leave it open. | [CE] Full list saved: C:\\Users\\TimothyBrand\\AppData\\Roaming\\CE_CVL_SUITE\\logs\\cdcheck-CLDV31703391_B1-20261031-061419.txt. Nothing in the drawing has been changed so far."
+        },
+        {
+          "n": 17,
+          "text": "record $chk1 \"FULL CDCHECK Problems reply after U (totals line): totals line must read the same as before\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: Problems | [CE] CDCHECK: 218 objects, 189 connections: 184 Connected, 1 Possible, 4 Unresolved, 0 Not Connected, 0 Unknown. | [CE] This drawing holds a saved check record of 223 objects; 218 are in the drawing now (6 added since, 11 no longer there). | [CE] Problems only: 4 of 189 connections. | 1. An unnamed pipe flows to WT4: Unresolved (not confirmed from the other side) | 2. An unnamed pipe flows to WT10: Unresolved (not confirmed from the other side) | 3. An unnamed pipe flows to WT7: Unresolved (not confirmed from the other side) | 4. An unnamed pipe flows to WT6: Unresolved (not confirmed from the other side) | [CE] Pipe-to-pit fit: not checked for 36 pipe ends (older drawing - no pit and pipe fit sizes recorded yet) | [CE] FALL arrow direction: 5 arrow(s) point away from their nearest grated pit. | [CE] Fall 1. FALL arrow points away from the nearest grated pit P4 (off by 168°). Check the fall direction or move the arrow. | [CE] Fall 2. FALL arrow points away from the nearest grated pit P3 (off by 157°). Check the fall direction or move the arrow. | [CE] Fall 3. FALL arrow points away from the nearest grated pit P2 (off by 173°). Check the fall direction or move the arrow. | [CE] Fall 4. FALL arrow points away from the nearest grated pit P2 (off by 172°). Check the fall direction or move the arrow. | [CE] Fall 5. FALL arrow points away from the nearest grated pit P1 (off by 172°). Check the fall direction or move the arrow. | [CE] Pipe ends: 23 with an open end, 0 branch(es) above their main. | [CE] Pipe end 1. Pipe 450: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 2. Pipe 450: one end is not connected (the end). Connect it, or leave it open. | [CE] Pipe end 3. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 4. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 5. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 6. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 7. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 8. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 9. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 10. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 11. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 12. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 13. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 14. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 15. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 16. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 17. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 18. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 19. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 20. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 21. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 22. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 23. Pipe 225: one end is not connected (the end). Connect it, or leave it open. | [CE] Full list saved: C:\\Users\\TimothyBrand\\AppData\\Roaming\\CE_CVL_SUITE\\logs\\cdcheck-CLDV31703391_B1-20261031-061454.txt. Nothing in the drawing has been changed so far.",
+          "evidence": "RECORDED, not judged: FULL CDCHECK Problems reply after U (totals line): totals line must read the same as before = Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: Problems | [CE] CDCHECK: 218 objects, 189 connections: 184 Connected, 1 Possible, 4 Unresolved, 0 Not Connected, 0 Unknown. | [CE] This drawing holds a saved check record of 223 objects; 218 are in the drawing now (6 added since, 11 no longer there). | [CE] Problems only: 4 of 189 connections. | 1. An unnamed pipe flows to WT4: Unresolved (not confirmed from the other side) | 2. An unnamed pipe flows to WT10: Unresolved (not confirmed from the other side) | 3. An unnamed pipe flows to WT7: Unresolved (not confirmed from the other side) | 4. An unnamed pipe flows to WT6: Unresolved (not confirmed from the other side) | [CE] Pipe-to-pit fit: not checked for 36 pipe ends (older drawing - no pit and pipe fit sizes recorded yet) | [CE] FALL arrow direction: 5 arrow(s) point away from their nearest grated pit. | [CE] Fall 1. FALL arrow points away from the nearest grated pit P4 (off by 168°). Check the fall direction or move the arrow. | [CE] Fall 2. FALL arrow points away from the nearest grated pit P3 (off by 157°). Check the fall direction or move the arrow. | [CE] Fall 3. FALL arrow points away from the nearest grated pit P2 (off by 173°). Check the fall direction or move the arrow. | [CE] Fall 4. FALL arrow points away from the nearest grated pit P2 (off by 172°). Check the fall direction or move the arrow. | [CE] Fall 5. FALL arrow points away from the nearest grated pit P1 (off by 172°). Check the fall direction or move the arrow. | [CE] Pipe ends: 23 with an open end, 0 branch(es) above their main. | [CE] Pipe end 1. Pipe 450: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 2. Pipe 450: one end is not connected (the end). Connect it, or leave it open. | [CE] Pipe end 3. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 4. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 5. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 6. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 7. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 8. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 9. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 10. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 11. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 12. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 13. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 14. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 15. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 16. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 17. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 18. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 19. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 20. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 21. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 22. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 23. Pipe 225: one end is not connected (the end). Connect it, or leave it open. | [CE] Full list saved: C:\\Users\\TimothyBrand\\AppData\\Roaming\\CE_CVL_SUITE\\logs\\cdcheck-CLDV31703391_B1-20261031-061454.txt. Nothing in the drawing has been changed so far."
+        },
+        {
+          "n": 18,
+          "text": "record $pipe_before \"FULL the pipe as read before the erase\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C651\",\"object\":\"CeCvlPipeObject\",\"layer\":\"STORMWATER PIPE\"}",
+          "evidence": "RECORDED, not judged: FULL the pipe as read before the erase = {\"handle\":\"11C651\",\"object\":\"CeCvlPipeObject\",\"layer\":\"STORMWATER PIPE\"}"
+        },
+        {
+          "n": 19,
+          "text": "record $pipe_after_erase \"FULL the pipe as read after the erase\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C651\",\"object\":\"CeCvlPipeObject\",\"layer\":\"STORMWATER PIPE\"}",
+          "evidence": "RECORDED, not judged: FULL the pipe as read after the erase = {\"handle\":\"11C651\",\"object\":\"CeCvlPipeObject\",\"layer\":\"STORMWATER PIPE\"}"
+        },
+        {
+          "n": 20,
+          "text": "record $pipe_after_u \"FULL the pipe as read after U\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C651\",\"object\":\"CeCvlPipeObject\",\"layer\":\"STORMWATER PIPE\"}",
+          "evidence": "RECORDED, not judged: FULL the pipe as read after U = {\"handle\":\"11C651\",\"object\":\"CeCvlPipeObject\",\"layer\":\"STORMWATER PIPE\"}"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV31703391_B1_18aea1ac9.log)",
+        "Civil CE log: 243 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: PIT completed 163017 ms ; Command outcome: CD completed 174827 ms ; Command outcome: CDCHECK cancelled 10235 ms ; Command outcome: CDCHECK cancelled 9898 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-31 17:15:11",
+      "session_id": "RUN-20261031-1703-C3.0.88-tW5-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [
+          "known failure (BROKEN-VARIANT): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R19_NOU_BROKENv87",
+      "proves_bugs": "",
+      "title": "BROKEN VARIANT of R19: no U after the erase, so the pit stays erased (must FAIL)",
+      "kind": "deterministic",
+      "order": 47,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "red-before-green proof for the R19 restore reads",
+      "bug": "",
+      "known_fail": "BROKEN-VARIANT",
+      "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 24 Oct 2026 with daily card D14 (DAILY_TOOLS_TEST_CASES_2026-10-23.md), done on the new pit P8 with one pipe instead of the old pit P3 counted through the Pit Schedule (unreadable on 3.0.72).",
+      "variant_of": "R19v87",
+      "expected": "Select the new pit P8 and type ERASE: the pit goes (the object count falls), the pipe that started at it is still there (it can still be read), the command line says '1 pipe now has an end that is Not connected yet', and one U (echo word ERASE) brings the pit back and the object count returns to its value before the erase.",
+      "why_not_unit": "The message comes from CE watching a real native ERASE and its links in the drawing.",
+      "not_automated": [
+        "The full card sentence is asserted for the ONE-pipe branch only (run B5, cx_cr05: PLAN_ITEM narrowed, exactly one pipe asserted).",
+        "The plural-pipe route and the schedule-derived pipe count belong to R19b. Run B5: the pipe read (ent-read) shows only handle, object and layer, so it cannot show the pit link; the link is read instead through the CDCHECK Problems totals before the erase and after U, whose totals line must read the same (218 objects, 189 connections, 184 Connected, 0 Not Connected): twin R19_NOU_BROKEN skips the U and reads 217 and 183. The totals count the whole drawing, not only pit P8."
+      ],
+      "file_sha256": "0EDAE7CE3CD0399840F8DD24D79BAF4BE41193799F13A6913FD354A07F203A51",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "'ERASE' is NOT in: no U typed in this variant",
+      "started": "2026-10-31 17:15:11",
+      "seconds": 297.6,
+      "setup": "SETUP-R47v",
+      "setup_note": "shared setup SETUP-R47v run here for the first time at 17:19:23",
+      "steps": [
+        {
+          "n": 1,
+          "phase": "setup",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV31703391_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "setup",
+          "verb": "pick-first",
+          "text": "pick-first \"109D56\"",
+          "ok": true,
+          "seconds": 4.9,
+          "evidence": "pick-first 109D56: Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"109D56\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2PICKFIRST \"..."
+        },
+        {
+          "n": 3,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"_.MOVE{NL}0,0{NL}0,2000\" -Force -> $setup_move",
+          "ok": true,
+          "seconds": 5.0,
+          "evidence": "typed '_.MOVE 0,0 0,2000': Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,2000 | [CE Civil] pipe P3 -> P2 label: no clear spot among it..."
+        },
+        {
+          "n": 4,
+          "phase": "setup",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "setup",
+          "verb": "ms-count",
+          "text": "ms-count -> $n0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 6,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"PIT{NL}150000,-80000\" -Force -ExpectWindow \"New Pit\" -> $pit_t1",
+          "ok": true,
+          "seconds": 9.9,
+          "evidence": "typed 'PIT 150000,-80000': Command: | Command: PIT | Specify pit insertion point: 150000,-80000"
+        },
+        {
+          "n": 7,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.CoverLevel\" \"19.000\"",
+          "ok": true,
+          "seconds": 7.8,
+          "evidence": "ui set 'New Pit' C2.CoverLevel = 19.000: "
+        },
+        {
+          "n": 8,
+          "phase": "setup",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pit\" \"New pit, Continue placement\" -> $pit_t2",
+          "ok": true,
+          "seconds": 79.8,
+          "evidence": "pressed 'New pit, Continue placement' in /New Pit/: window closed = True"
+        },
+        {
+          "n": 9,
+          "phase": "setup",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pit\" -Secs 120",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "the window /^New Pit/ closed after 0 s"
+        },
+        {
+          "n": 10,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e1",
+          "ok": true,
+          "seconds": 8.7,
+          "evidence": "esc-prompt: Command: | Command: PIT | Specify pit insertion point: 150000,-80000 | Specify pit label insertion point: *Cancel*"
+        },
+        {
+          "n": 11,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e2",
+          "ok": true,
+          "seconds": 8.1,
+          "evidence": "esc-prompt: Command: | Command: PIT | Specify pit insertion point: 150000,-80000 | Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel*"
+        },
+        {
+          "n": 12,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e3",
+          "ok": true,
+          "seconds": 4.6,
+          "evidence": "esc-prompt: Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit, or press Esc to stop. | Specify pit insertion point: *Canc..."
+        },
+        {
+          "n": 13,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-80000{NL}170000,-80000{NL}\" -Force -ExpectWindow \"New Pipe\" -> $pipe_t1",
+          "ok": true,
+          "seconds": 9.5,
+          "evidence": "typed 'CD 150000,-80000 170000,-80000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-80000 | Specify second point: 170000,-80000 | Se..."
+        },
+        {
+          "n": 14,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 6.7,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: "
+        },
+        {
+          "n": 15,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.800\"",
+          "ok": true,
+          "seconds": 6.8,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.800: "
+        },
+        {
+          "n": 16,
+          "phase": "setup",
+          "verb": "ui-dump",
+          "text": "ui-dump \"New Pipe\" -> $np_win",
+          "ok": true,
+          "seconds": 8.4,
+          "evidence": "ui-dump 'New Pipe': 152 controls, tabs: "
+        },
+        {
+          "n": 17,
+          "phase": "setup",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $pipe_t2",
+          "ok": true,
+          "seconds": 69.1,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 18,
+          "phase": "setup",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 19,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pipe_e1",
+          "ok": true,
+          "seconds": 5.0,
+          "evidence": "esc-prompt: [CE] Pipe kept. One or more ends have no proven connection. The route stays drawn; confirm the intended connection later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: P8 -> Open en..."
+        },
+        {
+          "n": 20,
+          "phase": "setup",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 21,
+          "phase": "setup",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_after_setup",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31703391_B1.dwg]"
+        },
+        {
+          "n": 22,
+          "phase": "setup",
+          "verb": "ms-new",
+          "text": "ms-new $n0 -> $new_all",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "6 object(s) after index 1034 (model space now 1040); by type: AcDbBlockReference 2; AcDbMText 3; CeCvlPipeObject 1; first: 11C5AD AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C651 CeCvlPipeObject STORMWATER PIPE ; 11C657 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 100 ; 11C65C AcDbMText 20TEXT IL 18.000 ; 11C661 AcDbMText 20TEXT IL 17.800 ; 11C683 AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_all object=AcDbBlockReference \"near=150000,-80000,700\" -> $pit8",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 6: 11C5AD PIT BLOCK 3 STORMWATER PIT"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $pit8 handle -> $h8",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C5AD"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_all \"object~^CeCvlPipeObject$\" -> $pipes8",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 6: 11C651 STORMWATER PIPE"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $pipes8 handle -> $hp8",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C651"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $e0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1040 objects"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read $hp8 -> $pipe_before",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "ent-read 11C651: {\"handle\":\"11C651\",\"object\":\"CeCvlPipeObject\",\"layer\":\"STORMWATER PIPE\"}"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDCHECK{NL}Problems\" -Force -> $chk0",
+          "ok": true,
+          "seconds": 7.4,
+          "evidence": "typed 'CDCHECK Problems': Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: Problems | [CE] CDCHECK: 218 objects, 189 connections: 184 Connected, 1 Possible, 4 Unresolved, 0 Not ..."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt",
+          "ok": true,
+          "seconds": 5.1,
+          "evidence": "esc-prompt: [CE] Pipe end 20. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 21. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 22. Pipe 100: both ..."
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first $h8",
+          "ok": true,
+          "seconds": 2.8,
+          "evidence": "pick-first 11C5AD: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"11C5AD\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ERASE\" -Force -> $er",
+          "ok": true,
+          "seconds": 3.1,
+          "evidence": "typed '_.ERASE': Command: | Command: _.ERASE | 1 found | [CE Civil] The pit was erased and the schedule is updated. 1 pipe now has an end that is Not connected yet. U restores everything."
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 2",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "slept 2 s"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $e1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1039 objects"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read $hp8 -> $pipe_after_erase",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "ent-read 11C651: {\"handle\":\"11C651\",\"object\":\"CeCvlPipeObject\",\"layer\":\"STORMWATER PIPE\"}"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "set",
+          "text": "set $u1 \"no U typed in this variant\"",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "set $u1"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $e2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1039 objects"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "set",
+          "text": "set $pit_after_u \"pit not read: it is erased in this variant\"",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "set $pit_after_u"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read $hp8 -> $pipe_after_u",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "ent-read 11C651: {\"handle\":\"11C651\",\"object\":\"CeCvlPipeObject\",\"layer\":\"STORMWATER PIPE\"}"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDCHECK{NL}Problems\" -Force -> $chk1",
+          "ok": true,
+          "seconds": 8.3,
+          "evidence": "typed 'CDCHECK Problems': Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: Problems | [CE] CDCHECK: 217 objects, 188 connections: 183 Connected, 1 Possible, 4 Unresolved, 0 Not ..."
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt",
+          "ok": true,
+          "seconds": 5.0,
+          "evidence": "esc-prompt: [CE] Pipe end 20. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 21. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 22. Pipe 100: both ..."
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.2,
+          "evidence": "wait for idle: idle"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "count $pit8 = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $pit8 = 1 (expected = 1)"
+        },
+        {
+          "n": 2,
+          "text": "count $pipes8 = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $pipes8 = 1 (expected = 1)"
+        },
+        {
+          "n": 3,
+          "text": "history has \"The pit was erased\"",
+          "ok": true,
+          "expected": "command line has 'The pit was erased'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CE Civil] The pit was erased and the schedule is updated. 1 pipe now has an end that is Not connected yet. U restores everything.'"
+        },
+        {
+          "n": 4,
+          "text": "history has \"[CE Civil] The pit was erased and the schedule is updated. 1 pipe now has an end that is Not connected yet. U restores everything.\"",
+          "ok": true,
+          "expected": "command line has '[CE Civil] The pit was erased and the schedule is updated. 1 pipe now has an end that is Not connected yet. U restores everything.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CE Civil] The pit was erased and the schedule is updated. 1 pipe now has an end that is Not connected yet. U restores everything.'"
+        },
+        {
+          "n": 5,
+          "text": "number $e1 = 1039",
+          "ok": true,
+          "expected": "= 1039",
+          "actual": "1039",
+          "evidence": "$e1 = 1039 (expected = 1039)"
+        },
+        {
+          "n": 6,
+          "text": "contains $pipe_before \"CeCvlPipeObject\"",
+          "ok": true,
+          "expected": "contains 'CeCvlPipeObject'",
+          "actual": "{\"handle\":\"11C651\",\"object\":\"CeCvlPipeObject\",\"layer\":\"STORMWATER PIPE\"}",
+          "evidence": "found 'CeCvlPipeObject' in: {\"handle\":\"11C651\",\"object\":\"CeCvlPipeObject\",\"layer\":\"STORMWATER PIPE\"}"
+        },
+        {
+          "n": 7,
+          "text": "contains $pipe_after_erase \"CeCvlPipeObject\"",
+          "ok": true,
+          "expected": "contains 'CeCvlPipeObject'",
+          "actual": "{\"handle\":\"11C651\",\"object\":\"CeCvlPipeObject\",\"layer\":\"STORMWATER PIPE\"}",
+          "evidence": "found 'CeCvlPipeObject' in: {\"handle\":\"11C651\",\"object\":\"CeCvlPipeObject\",\"layer\":\"STORMWATER PIPE\"}"
+        },
+        {
+          "n": 8,
+          "text": "contains $pipe_after_u \"CeCvlPipeObject\"",
+          "ok": true,
+          "expected": "contains 'CeCvlPipeObject'",
+          "actual": "{\"handle\":\"11C651\",\"object\":\"CeCvlPipeObject\",\"layer\":\"STORMWATER PIPE\"}",
+          "evidence": "found 'CeCvlPipeObject' in: {\"handle\":\"11C651\",\"object\":\"CeCvlPipeObject\",\"layer\":\"STORMWATER PIPE\"}"
+        },
+        {
+          "n": 9,
+          "text": "contains $u1 \"ERASE\"",
+          "ok": false,
+          "expected": "contains 'ERASE'",
+          "actual": "no U typed in this variant",
+          "evidence": "'ERASE' is NOT in: no U typed in this variant"
+        },
+        {
+          "n": 10,
+          "text": "matches $chk0 \"[0-9]+ Not Connected\"",
+          "ok": true,
+          "expected": "matches /[0-9]+ Not Connected/",
+          "actual": "Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: Problems | [CE] CDCHECK: 218 objects, 189 connections: 184 Connected, 1 Possible, ...",
+          "evidence": "matched '0 Not Connected'"
+        },
+        {
+          "n": 11,
+          "text": "contains $chk0 \"[CE] CDCHECK: 218 objects, 189 connections: 184 Connected, 1 Possible, 4 Unresolved, 0 Not Connected, 0 Unknown.\"",
+          "ok": true,
+          "expected": "contains '[CE] CDCHECK: 218 objects, 189 connections: 184 Connected, 1 Possible, 4 Unresolved, 0 Not Connected, 0 Unknown.'",
+          "actual": "Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: Problems | [CE] CDCHECK: 218 objects, 189 connections: 184 Connected, 1 Possible, ...",
+          "evidence": "found '[CE] CDCHECK: 218 objects, 189 connections: 184 Connected, 1 Possible, 4 Unresolved, 0 Not Connected, 0 Unknown.' in: Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: Problems | [CE] CDCHECK: 218 objects, 189 ..."
+        },
+        {
+          "n": 12,
+          "text": "contains $chk1 \"[CE] CDCHECK: 218 objects, 189 connections: 184 Connected, 1 Possible, 4 Unresolved, 0 Not Connected, 0 Unknown.\"",
+          "ok": false,
+          "expected": "contains '[CE] CDCHECK: 218 objects, 189 connections: 184 Connected, 1 Possible, 4 Unresolved, 0 Not Connected, 0 Unknown.'",
+          "actual": "Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: Problems | [CE] CDCHECK: 217 objects, 188 connections: 183 Connected, 1 Possible, ...",
+          "evidence": "'[CE] CDCHECK: 218 objects, 189 connections: 184 Connected, 1 Possible, 4 Unresolved, 0 Not Connected, 0 Unknown.' is NOT in: Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: Problems | [CE] CDCHECK: 217 objects, 188 connections: 183 Connected, 1 Possible, ..."
+        },
+        {
+          "n": 13,
+          "text": "equals $e2 $e0",
+          "ok": false,
+          "expected": "1040",
+          "actual": "1039",
+          "evidence": "value '1039' (expected '1040')"
+        },
+        {
+          "n": 14,
+          "text": "contains $pit_after_u \"STORMWATER PIT\"",
+          "ok": false,
+          "expected": "contains 'STORMWATER PIT'",
+          "actual": "pit not read: it is erased in this variant",
+          "evidence": "'STORMWATER PIT' is NOT in: pit not read: it is erased in this variant"
+        },
+        {
+          "n": 15,
+          "text": "record $er \"FULL what ERASE printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: _.ERASE | 1 found | [CE Civil] The pit was erased and the schedule is updated. 1 pipe now has an end that is Not connected yet. U restores everything.",
+          "evidence": "RECORDED, not judged: FULL what ERASE printed = Command: | Command: _.ERASE | 1 found | [CE Civil] The pit was erased and the schedule is updated. 1 pipe now has an end that is Not connected yet. U restores everything."
+        },
+        {
+          "n": 16,
+          "text": "record $chk0 \"FULL CDCHECK Problems reply before the erase (totals line)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: Problems | [CE] CDCHECK: 218 objects, 189 connections: 184 Connected, 1 Possible, 4 Unresolved, 0 Not Connected, 0 Unknown. | [CE] This drawing holds a saved check record of 223 objects; 218 are in the drawing now (6 added since, 11 no longer there). | [CE] Problems only: 4 of 189 connections. | 1. An unnamed pipe flows to WT4: Unresolved (not confirmed from the other side) | 2. An unnamed pipe flows to WT10: Unresolved (not confirmed from the other side) | 3. An unnamed pipe flows to WT7: Unresolved (not confirmed from the other side) | 4. An unnamed pipe flows to WT6: Unresolved (not confirmed from the other side) | [CE] Pipe-to-pit fit: not checked for 36 pipe ends (older drawing - no pit and pipe fit sizes recorded yet) | [CE] FALL arrow direction: 5 arrow(s) point away from their nearest grated pit. | [CE] Fall 1. FALL arrow points away from the nearest grated pit P4 (off by 168°). Check the fall direction or move the arrow. | [CE] Fall 2. FALL arrow points away from the nearest grated pit P3 (off by 157°). Check the fall direction or move the arrow. | [CE] Fall 3. FALL arrow points away from the nearest grated pit P2 (off by 173°). Check the fall direction or move the arrow. | [CE] Fall 4. FALL arrow points away from the nearest grated pit P2 (off by 172°). Check the fall direction or move the arrow. | [CE] Fall 5. FALL arrow points away from the nearest grated pit P1 (off by 172°). Check the fall direction or move the arrow. | [CE] Pipe ends: 23 with an open end, 0 branch(es) above their main. | [CE] Pipe end 1. Pipe 450: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 2. Pipe 450: one end is not connected (the end). Connect it, or leave it open. | [CE] Pipe end 3. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 4. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 5. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 6. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 7. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 8. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 9. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 10. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 11. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 12. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 13. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 14. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 15. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 16. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 17. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 18. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 19. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 20. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 21. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 22. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 23. Pipe 225: one end is not connected (the end). Connect it, or leave it open. | [CE] Full list saved: C:\\Users\\TimothyBrand\\AppData\\Roaming\\CE_CVL_SUITE\\logs\\cdcheck-CLDV31703391_B1-20261031-061926.txt. Nothing in the drawing has been changed so far.",
+          "evidence": "RECORDED, not judged: FULL CDCHECK Problems reply before the erase (totals line) = Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: Problems | [CE] CDCHECK: 218 objects, 189 connections: 184 Connected, 1 Possible, 4 Unresolved, 0 Not Connected, 0 Unknown. | [CE] This drawing holds a saved check record of 223 objects; 218 are in the drawing now (6 added since, 11 no longer there). | [CE] Problems only: 4 of 189 connections. | 1. An unnamed pipe flows to WT4: Unresolved (not confirmed from the other side) | 2. An unnamed pipe flows to WT10: Unresolved (not confirmed from the other side) | 3. An unnamed pipe flows to WT7: Unresolved (not confirmed from the other side) | 4. An unnamed pipe flows to WT6: Unresolved (not confirmed from the other side) | [CE] Pipe-to-pit fit: not checked for 36 pipe ends (older drawing - no pit and pipe fit sizes recorded yet) | [CE] FALL arrow direction: 5 arrow(s) point away from their nearest grated pit. | [CE] Fall 1. FALL arrow points away from the nearest grated pit P4 (off by 168°). Check the fall direction or move the arrow. | [CE] Fall 2. FALL arrow points away from the nearest grated pit P3 (off by 157°). Check the fall direction or move the arrow. | [CE] Fall 3. FALL arrow points away from the nearest grated pit P2 (off by 173°). Check the fall direction or move the arrow. | [CE] Fall 4. FALL arrow points away from the nearest grated pit P2 (off by 172°). Check the fall direction or move the arrow. | [CE] Fall 5. FALL arrow points away from the nearest grated pit P1 (off by 172°). Check the fall direction or move the arrow. | [CE] Pipe ends: 23 with an open end, 0 branch(es) above their main. | [CE] Pipe end 1. Pipe 450: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 2. Pipe 450: one end is not connected (the end). Connect it, or leave it open. | [CE] Pipe end 3. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 4. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 5. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 6. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 7. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 8. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 9. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 10. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 11. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 12. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 13. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 14. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 15. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 16. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 17. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 18. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 19. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 20. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 21. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 22. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 23. Pipe 225: one end is not connected (the end). Connect it, or leave it open. | [CE] Full list saved: C:\\Users\\TimothyBrand\\AppData\\Roaming\\CE_CVL_SUITE\\logs\\cdcheck-CLDV31703391_B1-20261031-061926.txt. Nothing in the drawing has been changed so far."
+        },
+        {
+          "n": 17,
+          "text": "record $chk1 \"FULL CDCHECK Problems reply after U (totals line): totals line must read the same as before\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: Problems | [CE] CDCHECK: 217 objects, 188 connections: 183 Connected, 1 Possible, 4 Unresolved, 0 Not Connected, 0 Unknown. | [CE] This drawing holds a saved check record of 223 objects; 217 are in the drawing now (5 added since, 11 no longer there). | [CE] Problems only: 4 of 188 connections. | 1. An unnamed pipe flows to WT4: Unresolved (not confirmed from the other side) | 2. An unnamed pipe flows to WT10: Unresolved (not confirmed from the other side) | 3. An unnamed pipe flows to WT7: Unresolved (not confirmed from the other side) | 4. An unnamed pipe flows to WT6: Unresolved (not confirmed from the other side) | [CE] Pipe-to-pit fit: not checked for 35 pipe ends (older drawing - no pit and pipe fit sizes recorded yet) | [CE] FALL arrow direction: 5 arrow(s) point away from their nearest grated pit. | [CE] Fall 1. FALL arrow points away from the nearest grated pit P4 (off by 168°). Check the fall direction or move the arrow. | [CE] Fall 2. FALL arrow points away from the nearest grated pit P3 (off by 157°). Check the fall direction or move the arrow. | [CE] Fall 3. FALL arrow points away from the nearest grated pit P2 (off by 173°). Check the fall direction or move the arrow. | [CE] Fall 4. FALL arrow points away from the nearest grated pit P2 (off by 172°). Check the fall direction or move the arrow. | [CE] Fall 5. FALL arrow points away from the nearest grated pit P1 (off by 172°). Check the fall direction or move the arrow. | [CE] Pipe ends: 23 with an open end, 0 branch(es) above their main. | [CE] Pipe end 1. Pipe 450: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 2. Pipe 450: one end is not connected (the end). Connect it, or leave it open. | [CE] Pipe end 3. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 4. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 5. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 6. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 7. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 8. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 9. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 10. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 11. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 12. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 13. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 14. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 15. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 16. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 17. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 18. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 19. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 20. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 21. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 22. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 23. Pipe 225: both ends are not connected. Connect it, or leave it open. | [CE] Full list saved: C:\\Users\\TimothyBrand\\AppData\\Roaming\\CE_CVL_SUITE\\logs\\cdcheck-CLDV31703391_B1-20261031-061952.txt. Nothing in the drawing has been changed so far.",
+          "evidence": "RECORDED, not judged: FULL CDCHECK Problems reply after U (totals line): totals line must read the same as before = Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: Problems | [CE] CDCHECK: 217 objects, 188 connections: 183 Connected, 1 Possible, 4 Unresolved, 0 Not Connected, 0 Unknown. | [CE] This drawing holds a saved check record of 223 objects; 217 are in the drawing now (5 added since, 11 no longer there). | [CE] Problems only: 4 of 188 connections. | 1. An unnamed pipe flows to WT4: Unresolved (not confirmed from the other side) | 2. An unnamed pipe flows to WT10: Unresolved (not confirmed from the other side) | 3. An unnamed pipe flows to WT7: Unresolved (not confirmed from the other side) | 4. An unnamed pipe flows to WT6: Unresolved (not confirmed from the other side) | [CE] Pipe-to-pit fit: not checked for 35 pipe ends (older drawing - no pit and pipe fit sizes recorded yet) | [CE] FALL arrow direction: 5 arrow(s) point away from their nearest grated pit. | [CE] Fall 1. FALL arrow points away from the nearest grated pit P4 (off by 168°). Check the fall direction or move the arrow. | [CE] Fall 2. FALL arrow points away from the nearest grated pit P3 (off by 157°). Check the fall direction or move the arrow. | [CE] Fall 3. FALL arrow points away from the nearest grated pit P2 (off by 173°). Check the fall direction or move the arrow. | [CE] Fall 4. FALL arrow points away from the nearest grated pit P2 (off by 172°). Check the fall direction or move the arrow. | [CE] Fall 5. FALL arrow points away from the nearest grated pit P1 (off by 172°). Check the fall direction or move the arrow. | [CE] Pipe ends: 23 with an open end, 0 branch(es) above their main. | [CE] Pipe end 1. Pipe 450: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 2. Pipe 450: one end is not connected (the end). Connect it, or leave it open. | [CE] Pipe end 3. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 4. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 5. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 6. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 7. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 8. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 9. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 10. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 11. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 12. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 13. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 14. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 15. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 16. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 17. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 18. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 19. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 20. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 21. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 22. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 23. Pipe 225: both ends are not connected. Connect it, or leave it open. | [CE] Full list saved: C:\\Users\\TimothyBrand\\AppData\\Roaming\\CE_CVL_SUITE\\logs\\cdcheck-CLDV31703391_B1-20261031-061952.txt. Nothing in the drawing has been changed so far."
+        },
+        {
+          "n": 18,
+          "text": "record $pipe_before \"FULL the pipe as read before the erase\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C651\",\"object\":\"CeCvlPipeObject\",\"layer\":\"STORMWATER PIPE\"}",
+          "evidence": "RECORDED, not judged: FULL the pipe as read before the erase = {\"handle\":\"11C651\",\"object\":\"CeCvlPipeObject\",\"layer\":\"STORMWATER PIPE\"}"
+        },
+        {
+          "n": 19,
+          "text": "record $pipe_after_erase \"FULL the pipe as read after the erase\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C651\",\"object\":\"CeCvlPipeObject\",\"layer\":\"STORMWATER PIPE\"}",
+          "evidence": "RECORDED, not judged: FULL the pipe as read after the erase = {\"handle\":\"11C651\",\"object\":\"CeCvlPipeObject\",\"layer\":\"STORMWATER PIPE\"}"
+        },
+        {
+          "n": 20,
+          "text": "record $pipe_after_u \"FULL the pipe as read after U\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C651\",\"object\":\"CeCvlPipeObject\",\"layer\":\"STORMWATER PIPE\"}",
+          "evidence": "RECORDED, not judged: FULL the pipe as read after U = {\"handle\":\"11C651\",\"object\":\"CeCvlPipeObject\",\"layer\":\"STORMWATER PIPE\"}"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV31703391_B1_1ea186617.log)",
+        "Civil CE log: 200 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: PIT completed 115765 ms ; Command outcome: CD completed 102584 ms ; Command outcome: CDCHECK cancelled 9219 ms ; Command outcome: CDCHECK cancelled 9459 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-31 17:20:08",
+      "session_id": "RUN-20261031-1703-C3.0.88-tW5-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [
+          "known failure (BROKEN-VARIANT): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R32b_BROKENv87",
+      "proves_bugs": "",
+      "title": "BROKEN VARIANT of R32b: the control pipe B is not edited, so it keeps 225 DIA. and the two-label check must FAIL",
+      "kind": "deterministic",
+      "order": 94,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "red-before-green proof for R32b (the two-label check)",
+      "bug": "",
+      "known_fail": "BROKEN-VARIANT",
+      "reviewed_against": "",
+      "variant_of": "R32bv87",
+      "expected": "This variant is wrong on purpose: pipe B is not given 150 DIA., so its label still reads 225 DIA. and the combined label text does not match.",
+      "why_not_unit": "It exists only to prove the two-label check of R32b can go red.",
+      "not_automated": [
+        "That the picture of the arrow looks right is a Codex look. Pipes on pits (levels from the pits) are not driven."
+      ],
+      "file_sha256": "B9C75A6F813D37E2F0BBAF9F172B3D1A6EBC2A3C9F330062BAE12EC0BF9FAF5F",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "no match for /^150 DIA\\. UPVC PIPE AT 1 IN 100 \\| 150 DIA\\. UPVC PIPE AT 1 IN 100$/ in: 150 DIA. UPVC PIPE AT 1 IN 100 | 225 DIA. UPVC PIPE AT 1 IN 100",
+      "started": "2026-10-31 17:20:08",
+      "seconds": 359.0,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV31703391_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-90000{NL}170000,-90000{NL}\" -Force -ExpectWindow \"New Pipe\" -TimeoutSec 120 -> $t1",
+          "ok": true,
+          "seconds": 23.1,
+          "evidence": "typed 'CD 150000,-90000 170000,-90000': Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-90000 | Specify second point: 170000,-90000 | Select point ..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 7.2,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: "
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.800\"",
+          "ok": true,
+          "seconds": 7.9,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.800: "
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $t2",
+          "ok": true,
+          "seconds": 70.3,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $e1",
+          "ok": true,
+          "seconds": 4.9,
+          "evidence": "esc-prompt: [CE] End is free: open end flagged, connect it later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: Open end -> Open end | [CE] Pipe placed. Pick the next pipe's first point, or pre..."
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $newA",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "5 object(s) after index 1034 (model space now 1039); by type: AcDbBlockReference 1; AcDbMText 3; CeCvlPipeObject 1; first: 11C55B CeCvlPipeObject STORMWATER PIPE ; 11C561 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 100 ; 11C566 AcDbMText 20TEXT IL 18.000 ; 11C56B AcDbMText 20TEXT IL 17.800 ; 11C58D AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $newA \"object~^CeCvlPipeObject$\" -> $npA",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 5: 11C55B STORMWATER PIPE"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $npA handle -> $hpA",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C55B"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $newA \"name~ARROW\" -> $arA",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 5: 11C58D TIM_CVL_ARROW ARROW"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $arA handle -> $haA",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C58D"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-92000{NL}170000,-92000{NL}\" -Force -ExpectWindow \"New Pipe\" -TimeoutSec 120 -> $t3",
+          "ok": true,
+          "seconds": 11.5,
+          "evidence": "typed 'CD 150000,-92000 170000,-92000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-92000 | Specify second point: 170000,-92000 | Se..."
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 7.5,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: "
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.800\"",
+          "ok": true,
+          "seconds": 6.8,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.800: "
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $t4",
+          "ok": true,
+          "seconds": 79.7,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $e2",
+          "ok": true,
+          "seconds": 5.8,
+          "evidence": "esc-prompt: [CE] End is free: open end flagged, connect it later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: Open end -> Open end | [CE] Pipe placed. Pick the next pipe's first point, or pre..."
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $newB",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "10 object(s) after index 1034 (model space now 1044); by type: AcDbBlockReference 2; AcDbMText 6; CeCvlPipeObject 2; first: 11C55B CeCvlPipeObject STORMWATER PIPE ; 11C561 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 100 ; 11C566 AcDbMText 20TEXT IL 18.000 ; 11C56B AcDbMText 20TEXT IL 17.800 ; 11C58D AcDbBlockReference ARROW TIM_CVL_ARROW ; 11C592 CeCvlPipeObject STORMWATER PIPE ; 11C598 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 100 ; 11C59D AcDbMText 20TEXT IL 18.000 ; 11C5A2 AcDbMText 20TEXT IL 17.800 ; 11C5C4 AcDbBlockReference ARROW ..."
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $newB \"object~^CeCvlPipeObject$\" \"handle~^(?!{$hpA}$)\" -> $npB",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 10: 11C592 STORMWATER PIPE"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $npB handle -> $hpB",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C592"
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $newB \"name~ARROW\" \"handle~^(?!{$haA}$)\" -> $arB",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 10: 11C5C4 TIM_CVL_ARROW ARROW"
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $arB handle -> $haB",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C5C4"
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"{$hpA}\"",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "pick-first 11C55B: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"11C55B\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDEDIT\" -Force -ExpectWindow \"Edit Pipe\" -TimeoutSec 120 -> $edA",
+          "ok": true,
+          "seconds": 9.2,
+          "evidence": "typed 'CDEDIT': Command: | Command: CDEDIT"
+        },
+        {
+          "n": 29,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"Edit Pipe\" \"C2.FirstInvert\" \"17.800\"",
+          "ok": true,
+          "seconds": 4.8,
+          "evidence": "ui set 'Edit Pipe' C2.FirstInvert = 17.800: "
+        },
+        {
+          "n": 30,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"Edit Pipe\" \"C2.SecondInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 5.8,
+          "evidence": "ui set 'Edit Pipe' C2.SecondInvert = 18.000: "
+        },
+        {
+          "n": 31,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Edit Pipe\" \"Edit pipe, Save\" -> $svA",
+          "ok": true,
+          "seconds": 24.6,
+          "evidence": "pressed 'Edit pipe, Save' in /Edit Pipe/: window closed = True"
+        },
+        {
+          "n": 32,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 6",
+          "ok": true,
+          "seconds": 6.0,
+          "evidence": "slept 6 s"
+        },
+        {
+          "n": 33,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $hA",
+          "ok": true,
+          "seconds": 3.4,
+          "evidence": "esc-prompt: Command: | Command: CDEDIT | Pipe updated."
+        },
+        {
+          "n": 34,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 35,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$haA} -> $arrowA1",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "ent-read 11C58D: {\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90237.5,0.0],\"rotation\":3.141592653589793,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-90237.5..."
+        },
+        {
+          "n": 36,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"{$hpA}\"",
+          "ok": true,
+          "seconds": 4.2,
+          "evidence": "pick-first 11C55B: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"11C55B\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 37,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDEDIT\" -Force -ExpectWindow \"Edit Pipe\" -TimeoutSec 120 -> $edC",
+          "ok": true,
+          "seconds": 9.7,
+          "evidence": "typed 'CDEDIT': Command: | Command: CDEDIT"
+        },
+        {
+          "n": 38,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Edit Pipe\" -> $edC_dump",
+          "ok": true,
+          "seconds": 7.2,
+          "evidence": "ui-dump 'Creative Engineering | Edit Pipe': 150 controls, tabs: "
+        },
+        {
+          "n": 39,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"Edit Pipe\" \"C2.Diameter\" \"150\"",
+          "ok": true,
+          "seconds": 5.4,
+          "evidence": "ui set 'Edit Pipe' C2.Diameter = 150: "
+        },
+        {
+          "n": 40,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Edit Pipe\" \"Edit pipe, Save\" -> $svC",
+          "ok": true,
+          "seconds": 20.2,
+          "evidence": "pressed 'Edit pipe, Save' in /Edit Pipe/: window closed = True"
+        },
+        {
+          "n": 41,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 6",
+          "ok": true,
+          "seconds": 6.0,
+          "evidence": "slept 6 s"
+        },
+        {
+          "n": 42,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $hC",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "esc-prompt: Command: | Command: CDEDIT | Pipe updated."
+        },
+        {
+          "n": 43,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 44,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$haA} -> $arrowA2",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "ent-read 11C58D: {\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90200.0,0.0],\"rotation\":3.141592653589793,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-90200.0..."
+        },
+        {
+          "n": 45,
+          "phase": "case",
+          "verb": "set",
+          "text": "set $hD \"Pipe updated. (pipe B was not edited on purpose)\"",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "set $hD"
+        },
+        {
+          "n": 46,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$haB} -> $arrowB2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "ent-read 11C5C4: {\"handle\":\"11C5C4\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-92237.5,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-92237.5,160375.0,-922..."
+        },
+        {
+          "n": 47,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $after",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "10 object(s) after index 1034 (model space now 1044); by type: AcDbBlockReference 2; AcDbMText 6; CeCvlPipeObject 2; first: 11C55B CeCvlPipeObject STORMWATER PIPE ; 11C561 AcDbMText 25TEXT 150 DIA. UPVC PIPE AT 1 IN 100 ; 11C566 AcDbMText 20TEXT IL 17.800 ; 11C56B AcDbMText 20TEXT IL 18.000 ; 11C58D AcDbBlockReference ARROW TIM_CVL_ARROW ; 11C592 CeCvlPipeObject STORMWATER PIPE ; 11C598 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 100 ; 11C59D AcDbMText 20TEXT IL 18.000 ; 11C5A2 AcDbMText 20TEXT IL 17.800 ; 11C5C4 AcDbBlockReference ARROW ..."
+        },
+        {
+          "n": 48,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after \"text~^IL 1[78]\\.\" -> $ilx",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 4 of 10: 11C566 IL 17.800 20TEXT ; 11C56B IL 18.000 20TEXT ; 11C59D IL 18.000 20TEXT ; 11C5A2 IL 17.800 20TEXT"
+        },
+        {
+          "n": 49,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $ilx text -All -> $il_text",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = IL 17.800 | IL 18.000 | IL 18.000 | IL 17.800"
+        },
+        {
+          "n": 50,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after \"text~^IL 17\\.800$\" \"y~^-(89|90)[0-9]{3}\" -> $a17",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 10: 11C566 IL 17.800 20TEXT"
+        },
+        {
+          "n": 51,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $a17 x -> $xa17",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 150200"
+        },
+        {
+          "n": 52,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after \"text~^IL 18\\.000$\" \"y~^-(89|90)[0-9]{3}\" -> $a18",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 10: 11C56B IL 18.000 20TEXT"
+        },
+        {
+          "n": 53,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $a18 x -> $xa18",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 169800"
+        },
+        {
+          "n": 54,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after \"text~DIA\\. \" -> $lab",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 2 of 10: 11C561 150 DIA. UPVC PIPE AT 1 IN 100 25TEXT ; 11C598 225 DIA. UPVC PIPE AT 1 IN 100 25TEXT"
+        },
+        {
+          "n": 55,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $lab text -All -> $lab_text",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = 150 DIA. UPVC PIPE AT 1 IN 100 | 225 DIA. UPVC PIPE AT 1 IN 100"
+        },
+        {
+          "n": 56,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31703391_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "matches $arrowA1 \"rotation.:3\\.14\"",
+          "ok": true,
+          "expected": "matches /rotation.:3\\.14/",
+          "actual": "{\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90237.5,0.0],\"rotation\":3.141592653589793,\"xscale\":1.0,\"...",
+          "evidence": "matched 'rotation\":3.14'"
+        },
+        {
+          "n": 2,
+          "text": "contains $hC \"Pipe updated.\"",
+          "ok": true,
+          "expected": "contains 'Pipe updated.'",
+          "actual": "Command: | Command: CDEDIT | Pipe updated.",
+          "evidence": "found 'Pipe updated.' in: Command: | Command: CDEDIT | Pipe updated."
+        },
+        {
+          "n": 3,
+          "text": "not-contains $hC \"uphill\"",
+          "ok": true,
+          "expected": "does not contain 'uphill'",
+          "actual": "Command: | Command: CDEDIT | Pipe updated.",
+          "evidence": "'uphill' is absent from: Command: | Command: CDEDIT | Pipe updated."
+        },
+        {
+          "n": 4,
+          "text": "not-contains $hC \"Warning\"",
+          "ok": true,
+          "expected": "does not contain 'Warning'",
+          "actual": "Command: | Command: CDEDIT | Pipe updated.",
+          "evidence": "'Warning' is absent from: Command: | Command: CDEDIT | Pipe updated."
+        },
+        {
+          "n": 5,
+          "text": "matches $arrowB2 \"rotation.:0\\.0,\"",
+          "ok": true,
+          "expected": "matches /rotation.:0\\.0,/",
+          "actual": "{\"handle\":\"11C5C4\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-92237.5,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[]...",
+          "evidence": "matched 'rotation\":0.0,'"
+        },
+        {
+          "n": 6,
+          "text": "contains $hD \"Pipe updated.\"",
+          "ok": true,
+          "expected": "contains 'Pipe updated.'",
+          "actual": "Pipe updated. (pipe B was not edited on purpose)",
+          "evidence": "found 'Pipe updated.' in: Pipe updated. (pipe B was not edited on purpose)"
+        },
+        {
+          "n": 7,
+          "text": "contains $lab_text \"150 DIA.\"",
+          "ok": true,
+          "expected": "contains '150 DIA.'",
+          "actual": "150 DIA. UPVC PIPE AT 1 IN 100 | 225 DIA. UPVC PIPE AT 1 IN 100",
+          "evidence": "found '150 DIA.' in: 150 DIA. UPVC PIPE AT 1 IN 100 | 225 DIA. UPVC PIPE AT 1 IN 100"
+        },
+        {
+          "n": 8,
+          "text": "count $lab = 2",
+          "ok": true,
+          "expected": "count = 2",
+          "actual": "2",
+          "evidence": "count of $lab = 2 (expected = 2)"
+        },
+        {
+          "n": 9,
+          "text": "matches $lab_text \"^150 DIA\\. UPVC PIPE AT 1 IN 100 \\| 150 DIA\\. UPVC PIPE AT 1 IN 100$\"",
+          "ok": false,
+          "expected": "matches /^150 DIA\\. UPVC PIPE AT 1 IN 100 \\| 150 DIA\\. UPVC PIPE AT 1 IN 100$/",
+          "actual": "150 DIA. UPVC PIPE AT 1 IN 100 | 225 DIA. UPVC PIPE AT 1 IN 100",
+          "evidence": "no match for /^150 DIA\\. UPVC PIPE AT 1 IN 100 \\| 150 DIA\\. UPVC PIPE AT 1 IN 100$/ in: 150 DIA. UPVC PIPE AT 1 IN 100 | 225 DIA. UPVC PIPE AT 1 IN 100"
+        },
+        {
+          "n": 10,
+          "text": "matches $arrowA2 \"rotation.:3\\.14\"",
+          "ok": true,
+          "expected": "matches /rotation.:3\\.14/",
+          "actual": "{\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90200.0,0.0],\"rotation\":3.141592653589793,\"xscale\":1.0,\"...",
+          "evidence": "matched 'rotation\":3.14'"
+        },
+        {
+          "n": 11,
+          "text": "count $a17 = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $a17 = 1 (expected = 1)"
+        },
+        {
+          "n": 12,
+          "text": "count $a18 = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $a18 = 1 (expected = 1)"
+        },
+        {
+          "n": 13,
+          "text": "number $xa17 < 160000",
+          "ok": true,
+          "expected": "< 160000",
+          "actual": "150200",
+          "evidence": "$xa17 = 150200 (expected < 160000)"
+        },
+        {
+          "n": 14,
+          "text": "number $xa18 > 160000",
+          "ok": true,
+          "expected": "> 160000",
+          "actual": "169800",
+          "evidence": "$xa18 = 169800 (expected > 160000)"
+        },
+        {
+          "n": 15,
+          "text": "not-contains $win_end \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31703391_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV31703391_B1.dwg]"
+        },
+        {
+          "n": 16,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 17,
+          "text": "record $edC_dump \"FULL Edit Pipe on the second open (boxes and the Flow header)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"title\":\"Creative Engineering | Edit Pipe\",\"handle\":19072882,\"class\":\"Window\",\"source\":\"win32\",\"bounds\":[2016,50,1728,972],\"control_count\":150,\"truncated\":false,\"tabs\":[],\"controls\":[{\"type\":\"TitleBar\",\"name\":\"Creative Engineering | Edit Pipe\",\"id\":\"TitleBar\",\"class\":\"\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2024,58,1712,23]},{\"type\":\"MenuBar\",\"name\":\"System Menu Bar\",\"id\":\"SystemMenuBar\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2024,58,22,22]},{\"type\":\"MenuItem\",\"name\":\"System\",\"id\":\"Item 1\",\"class\":\"\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2024,58,22,22]},{\"type\":\"Button\",\"name\":\"Close\",\"id\":\"Close\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3703,51,34,30]},{\"type\":\"Image\",\"name\":\"\",\"id\":\"\",\"class\":\"Image\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2055,101,28,28]},{\"type\":\"Text\",\"name\":\"Edit Pipe\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2095,104,68,22]},{\"type\":\"Text\",\"name\":\"Flow: Open end → Open end\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2175,105,195,20]},{\"type\":\"Text\",\"name\":\"Stormwater pipe · 225 mm · UPVC\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2382,108,163,14]},{\"type\":\"Custom\",\"name\":\"\",\"id\":\"\",\"class\":\"StatusChip\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[3393,91,312,48]},{\"type\":\"Text\",\"name\":\"The levels fall from point 2 to point 1; CE records that as the flow direction.\",\"id\":\"LabelText\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3422,98,272,29]},{\"type\":\"Button\",\"name\":\"Inspect drawing and retain pending edits\",\"id\":\"C2.InspectDrawingCommand\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2040,974,119,36]},{\"type\":\"Text\",\"name\":\"Inspect Drawing\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2057,984,85,16]},{\"type\":\"Button\",\"name\":\"Edit pipe, More\",\"id\":\"PipeEditWorkshopDialog.More\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2167,974,80,36]},{\"type\":\"Text\",\"name\":\"More…\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2189,984,37,16]},{\"type\":\"Button\",\"name\":\"Edit pipe, Review changes\",\"id\":\"PipeEditWorkshopDialog.Review.changes\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2255,974,116,36]},{\"type\":\"Text\",\"name\":\"Review changes\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2271,984,84,16]},{\"type\":\"ComboBox\",\"name\":\"Edit pipe, Plan label to edit\",\"id\":\"PipeEditWorkshopDialog.SelectedKey\",\"class\":\"ComboBox\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2383,974,170,36]},{\"type\":\"Button\",\"name\":\"Cancel without saving\",\"id\":\"C2.CancelCommand\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[3494,974,86,36]},{\"type\":\"Text\",\"name\":\"Cancel\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3519,984,36,16]},{\"type\":\"Button\",\"name\":\"Edit pipe, Save\",\"id\":\"C2.OkCommand\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[3590,974,130,36]},{\"type\":\"Text\",\"name\":\"Save\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3643,984,24,16]},{\"type\":\"Text\",\"name\":\"ENGINEERING\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2040,197,828,20]},{\"type\":\"Button\",\"name\":\"Stormwater\",\"id\":\"C2.IsStormwaterPipe\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2040,217,78,28],\"toggle\":\"On\"},{\"type\":\"Text\",\"name\":\"Stormwater\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2051,224,56,15]},{\"type\":\"Button\",\"name\":\"Suspended\",\"id\":\"C2.IsSuspendedPipe\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2124,217,76,28],\"toggle\":\"Off\"},{\"type\":\"Text\",\"name\":\"Suspended\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"en...",
+          "evidence": "RECORDED, not judged: FULL Edit Pipe on the second open (boxes and the Flow header) = {\"title\":\"Creative Engineering | Edit Pipe\",\"handle\":19072882,\"class\":\"Window\",\"source\":\"win32\",\"bounds\":[2016,50,1728,972],\"control_count\":150,\"truncated\":false,\"tabs\":[],\"controls\":[{\"type\":\"TitleBar\",\"name\":\"Creative Engineering | Edit Pipe\",\"id\":\"TitleBar\",\"class\":\"\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2024,58,1712,23]},{\"type\":\"MenuBar\",\"name\":\"System Menu Bar\",\"id\":\"SystemMenuBar\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2024,58,22,22]},{\"type\":\"MenuItem\",\"name\":\"System\",\"id\":\"Item 1\",\"class\":\"\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2024,58,22,22]},{\"type\":\"Button\",\"name\":\"Close\",\"id\":\"Close\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3703,51,34,30]},{\"type\":\"Image\",\"name\":\"\",\"id\":\"\",\"class\":\"Image\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2055,101,28,28]},{\"type\":\"Text\",\"name\":\"Edit Pipe\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2095,104,68,22]},{\"type\":\"Text\",\"name\":\"Flow: Open end → Open end\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2175,105,195,20]},{\"type\":\"Text\",\"name\":\"Stormwater pipe · 225 mm · UPVC\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2382,108,163,14]},{\"type\":\"Custom\",\"name\":\"\",\"id\":\"\",\"class\":\"StatusChip\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[3393,91,312,48]},{\"type\":\"Text\",\"name\":\"The levels fall from point 2 to point 1; CE records that as the flow direction.\",\"id\":\"LabelText\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3422,98,272,29]},{\"type\":\"Button\",\"name\":\"Inspect drawing and retain pending edits\",\"id\":\"C2.InspectDrawingCommand\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2040,974,119,36]},{\"type\":\"Text\",\"name\":\"Inspect Drawing\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2057,984,85,16]},{\"type\":\"Button\",\"name\":\"Edit pipe, More\",\"id\":\"PipeEditWorkshopDialog.More\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2167,974,80,36]},{\"type\":\"Text\",\"name\":\"More…\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2189,984,37,16]},{\"type\":\"Button\",\"name\":\"Edit pipe, Review changes\",\"id\":\"PipeEditWorkshopDialog.Review.changes\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2255,974,116,36]},{\"type\":\"Text\",\"name\":\"Review changes\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2271,984,84,16]},{\"type\":\"ComboBox\",\"name\":\"Edit pipe, Plan label to edit\",\"id\":\"PipeEditWorkshopDialog.SelectedKey\",\"class\":\"ComboBox\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2383,974,170,36]},{\"type\":\"Button\",\"name\":\"Cancel without saving\",\"id\":\"C2.CancelCommand\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[3494,974,86,36]},{\"type\":\"Text\",\"name\":\"Cancel\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3519,984,36,16]},{\"type\":\"Button\",\"name\":\"Edit pipe, Save\",\"id\":\"C2.OkCommand\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[3590,974,130,36]},{\"type\":\"Text\",\"name\":\"Save\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3643,984,24,16]},{\"type\":\"Text\",\"name\":\"ENGINEERING\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2040,197,828,20]},{\"type\":\"Button\",\"name\":\"Stormwater\",\"id\":\"C2.IsStormwaterPipe\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2040,217,78,28],\"toggle\":\"On\"},{\"type\":\"Text\",\"name\":\"Stormwater\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2051,224,56,15]},{\"type\":\"Button\",\"name\":\"Suspended\",\"id\":\"C2.IsSuspendedPipe\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2124,217,76,28],\"toggle\":\"Off\"},{\"type\":\"Text\",\"name\":\"Suspended\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"en..."
+        },
+        {
+          "n": 18,
+          "text": "record $arrowA1 \"FULL arrow A after the reversing save\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90237.5,0.0],\"rotation\":3.141592653589793,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-90237.5,160375.0,-90237.5],\"block_parts\":[{\"index\":0,\"object\":\"AcDbLeader\",\"layer\":\"25DIMS\",\"color\":256}]}",
+          "evidence": "RECORDED, not judged: FULL arrow A after the reversing save = {\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90237.5,0.0],\"rotation\":3.141592653589793,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-90237.5,160375.0,-90237.5],\"block_parts\":[{\"index\":0,\"object\":\"AcDbLeader\",\"layer\":\"25DIMS\",\"color\":256}]}"
+        },
+        {
+          "n": 19,
+          "text": "record $hC \"FULL what CE said after the diameter-only save of pipe A\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDEDIT | Pipe updated.",
+          "evidence": "RECORDED, not judged: FULL what CE said after the diameter-only save of pipe A = Command: | Command: CDEDIT | Pipe updated."
+        },
+        {
+          "n": 20,
+          "text": "record $arrowA2 \"FULL arrow A after the diameter-only save\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90200.0,0.0],\"rotation\":3.141592653589793,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-90200.0,160375.0,-90200.0],\"block_parts\":[{\"index\":0,\"object\":\"AcDbLeader\",\"layer\":\"25DIMS\",\"color\":256}]}",
+          "evidence": "RECORDED, not judged: FULL arrow A after the diameter-only save = {\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90200.0,0.0],\"rotation\":3.141592653589793,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-90200.0,160375.0,-90200.0],\"block_parts\":[{\"index\":0,\"object\":\"AcDbLeader\",\"layer\":\"25DIMS\",\"color\":256}]}"
+        },
+        {
+          "n": 21,
+          "text": "record $hD \"FULL what CE said after the diameter-only save of pipe B (control)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Pipe updated. (pipe B was not edited on purpose)",
+          "evidence": "RECORDED, not judged: FULL what CE said after the diameter-only save of pipe B (control) = Pipe updated. (pipe B was not edited on purpose)"
+        },
+        {
+          "n": 22,
+          "text": "record $arrowB2 \"FULL arrow B after the diameter-only save (control)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C5C4\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-92237.5,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-92237.5,160375.0,-92237.5],\"block_parts\":[{\"index\":0,\"object\":\"AcDbLeader\",\"layer\":\"25DIMS\",\"color\":256}]}",
+          "evidence": "RECORDED, not judged: FULL arrow B after the diameter-only save (control) = {\"handle\":\"11C5C4\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-92237.5,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-92237.5,160375.0,-92237.5],\"block_parts\":[{\"index\":0,\"object\":\"AcDbLeader\",\"layer\":\"25DIMS\",\"color\":256}]}"
+        },
+        {
+          "n": 23,
+          "text": "record $il_text \"IL texts at the end\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "IL 17.800 | IL 18.000 | IL 18.000 | IL 17.800",
+          "evidence": "RECORDED, not judged: IL texts at the end = IL 17.800 | IL 18.000 | IL 18.000 | IL 17.800"
+        },
+        {
+          "n": 24,
+          "text": "record $lab_text \"labels at the end\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "150 DIA. UPVC PIPE AT 1 IN 100 | 225 DIA. UPVC PIPE AT 1 IN 100",
+          "evidence": "RECORDED, not judged: labels at the end = 150 DIA. UPVC PIPE AT 1 IN 100 | 225 DIA. UPVC PIPE AT 1 IN 100"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV31703391_B1_1d8992872.log)",
+        "Civil CE log: 211 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CD completed 110540 ms ; Command outcome: CD completed 108421 ms ; Command outcome: CDEDIT completed 27432 ms ; Command outcome: CDEDIT completed 28553 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-31 17:26:07",
+      "session_id": "RUN-20261031-1703-C3.0.88-tW5-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [
+          "known failure (BROKEN-VARIANT): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}

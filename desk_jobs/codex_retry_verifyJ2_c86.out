@@ -1,0 +1,7 @@
+== verifyJ2_c86 (usage 22.0% -> 22.0%): AUTOCAD STILL RUNNING
+
+1. **J2 complete:** 2 PASS, both SURE; no failures or untested looks. Pipe and Pit came forward; Esc restored Plug-ins. Headers appeared blue/cyan.
+
+2. **Clean finish:** J2ÔÇÖs AutoCAD closed without saving. Four settings hashes unchanged; lock released. Another runner then opened a new AutoCAD session, left untouched.
+
+3. **Report:** [J2 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_J2_20261030_1322.md>). Installed: Civil 3.0.86 / Manager 1.1.86 / Structural 1.0.125. Shutdown deviation recorded.

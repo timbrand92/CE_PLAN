@@ -1,0 +1,9 @@
+**B-033 BUG-905: draft PR #1856 is open and the report is pushed.**
+
+The Boyd's tab now counts roof and paved area at 0.9 instead of 1.0. The 0.9 still comes from Settings (`detention.hardGroundRunoffC`). The site 746 m² example drops from 513.6 m² to 472.2 m². An older Settings file reads ON; a file that stores false stays false.
+
+- **Switch:** `detention.boydsUsesHardGroundC`, now ON by default.
+- **Files:** `UserSettings.cs`, `BoydsCalcViewModel.cs`, five test files, `REGRESSION_LOG.md`, and the report `release-v3-colleagues-BUG905_ON_REPORT.md`.
+- **Tests:** the full run was 20,775 passed, 5 failed, 32 skipped. I fixed two failures of my own and re-ran those fixtures. I did not re-run the full suite after that. Two IL-shape tests still fail on code I didn't touch, and I didn't build the base to prove them pre-existing. The net48 compile has 0 errors.
+- **Not proven:** AutoCAD behaviour, and the guidebook's 0.9 figure (its notes don't state it; the rulebook lists 0.90).
+- **Robot case:** the report names `C32_boyds_hardc` with an OFF control.

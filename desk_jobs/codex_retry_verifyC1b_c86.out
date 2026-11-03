@@ -1,0 +1,6 @@
+== verifyC1b_c86 (usage 26.0% -> 27.0%): AUTOCAD CLOSED
+
+1. **Result:** 4 PASS, 1 FAIL, 1 BLOCKED, 1 NOT TESTED; all SURE. Installed: Civil **3.0.87**, Manager **1.1.87**, Structural **1.0.125**.
+2. **Blue found:** New PipeÔÇÖs selected diameter **100** has a blue background. Dark ribbon pictures and New Pit passed.
+3. **Incomplete:** Edit Pipe stopped at an older-pipe label question. The driver alarm ended testing before CE Manager. Light theme remains untested.
+4. **Safe end:** Four settings hashes unchanged, drawing unsaved, lock released. [Full report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_C1b_20261031_0103.md>).

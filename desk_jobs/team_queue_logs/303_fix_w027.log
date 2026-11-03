@@ -1,0 +1,9 @@
+**Draft PR #1997 is open, but I'm flagging a stop: real AppData files changed during my test run.** BUG-027 stays open; the fix is built and unit-tested only, never opened in AutoCAD.
+
+- **Fix:** New Pipe on Standard grade with only the first level typed now reads "AT 1 IN 100", per Tim's UX-CPLAN-05 ruling. It no longer adds "MIN.".
+- **Switch:** `pipe.gradeLabelNeverMin`, ON by default. OFF restores the old label exactly.
+- **Files:** `CdCommand.Grade.cs`, new `Rules/GradeLabelMinRule.cs`, `UserSettings.cs`, two test files, `REGRESSION_LOG.md`. `CE_SHARED` is untouched.
+- **Tests:** 30 passed on net48 and net10.
+- **Robot case:** K02 proves it, with the switch set false before launch as the control.
+- **Flag:** 19 real files changed between my before and after listings, including `CD_Settings.json`. The writes overlap my 18:38 to 18:50 UTC run, but logs were being written throughout. I can't prove they were mine, and I haven't touched them.
+- **Report:** `BUGFIX_w027_REPORT_03NOV.md`, pushed. Worktree removed and the build output cleaned. C: free space went from 28.7 to about 29 GB.

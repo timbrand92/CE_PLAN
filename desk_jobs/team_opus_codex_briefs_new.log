@@ -1,0 +1,33 @@
+I've written seven new Codex look briefs, J1 to J7, and put them in the runner folder; none has been run yet. Each fits one session of 20 minutes or less, works only on copies of saved job drawings, and nothing was overwritten. The report is pushed to `C:\CE_PLAN\areas\CODEX_BRIEFS_NEW_30OCT.md`.
+
+**FOR TIM**
+
+1. **J1, Pit Schedule export to Excel (15 min).** On today's build this will fail: AutoCAD 2027's own Excel part blocks CE's (BUG-1255), so no save box appears. The look copies the error message and the log line word for word, and passes only when a workbook with its Checking sheet opens.
+2. **J2, click a pipe or pit (15 min).** Its green Pipe or Pit tab must come to the front, and Esc must give back the tab you had before. The old D8-04 "fail" came from mistakes in that brief, not from CE.
+3. **J3, CDCHECK Show where (15–20 min).** Expect the view to zoom to the problem and mark it, but no glow: the glow isn't built yet.
+4. **J4, pit label at the office spot (15–20 min).** Expect no label unless you click: nothing in today's build learns where the office puts labels.
+5. **J5, one green "Network OK" line (15 min).** The Checks window it needs is switched off by default. The look only runs if CE 02 allows a temporary setting change that is put back exactly afterwards; otherwise it stops in 2 minutes without opening AutoCAD.
+6. **J6, override reasons (15 min).** In the Pit Schedule, check for four one-click reasons (Survey, Council requirement, Engineer's judgement, Other) or your own words.
+7. **J7, you as the only administrator (10–15 min).** It only reads. The list holds one name, yours (I checked at 12:16). CE 02 should confirm this is OK to queue, because you parked the Manager admin items on 20 Oct.
+
+---
+
+**Queue lines, in run order:**
+```
+verifyJ2_c86|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+verifyJ6_c86|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+verifyJ1_c86|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+verifyJ3_c86|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+verifyJ4_c86|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+verifyJ7_c86|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+verifyJ5_c86|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+```
+
+**What I did NOT verify:**
+- Nobody has yet run these exact driver calls under a lock held by a Codex look name.
+- The three-line CDCHECK chain J3 uses and the PIT chain J4 uses to place its pit have never been run as Codex calls.
+- I don't know whether the small J5 test drawing has any check findings, which would stop the green line showing.
+- I didn't check that Excel is installed at the usual path.
+- Today's settings file differs from the checksum the briefs expect; each brief treats that as a note, not a stop.
+
+**Summary:** Seven briefs (short and full) are in the runner folder, all using the newest rule block word for word, with every reading sent through the AutoCAD driver. J1 expects a fail, J3 and J4 will likely show part-built features, J5 needs CE 02's go-ahead for the setting change, and J7 waits on the parking check. Nothing was run; the report is pushed and the plan repository is not ahead of GitHub.

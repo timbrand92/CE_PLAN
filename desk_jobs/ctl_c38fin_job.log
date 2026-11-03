@@ -1,0 +1,25 @@
+**FOR THE CONTROLLER**
+
+1. **GO.** Train C-38 can become the Civil 3.0.49 / Manager 1.1.49 payload at `4acdc13e`. It is pushed by fast-forward, and local equals origin. Nothing HIGH is left; the one MEDIUM is fixed.
+2. **Commit 1, `c670625e`: two survey defaults put back to today's behaviour.** Tim never ruled on these, so they now ship off:
+   - **A survey with a wrong-looking spot level:** it is refused again, as now. #958 had it load with that level skipped.
+   - **The nearest survey spot level:** it is offered at any distance again, and the window still shows how far away it is. #959 had set a 3 m limit.
+   - **Why I'm sure Tim didn't rule:** Batch 6 questions 1 and 5 were still listed as open on 10 Oct. The Batch 6 card itself says the skip switch defaults OFF. INT-073 lets builders build on a recommended answer, but that is not Tim's answer. The assembler's report says they were his answers; that is wrong.
+   - When either is switched on, the drafter still gets the plain-English line.
+3. **Commit 2, `3b12f25e`: #962 merged.** Pressing Esc at "Press Enter to reopen PIT" now ends PIT or Edit Pit. Fixing the clash took one hand edit that keeps both sides. The BUG-565 refusal is untouched.
+4. **Commit 3, `4acdc13e`: #976 merged.** The pump station rising-main sizes are now Settings values, equal to today's numbers. Two spots needed a hand edit, both keeping both sides.
+5. **#972 and #996 are left out.** #972 adds a new command (CDASSUMEDLEVELS), changes `command-registry.json` (which must stay unchanged in this train) and adds a new drawing data key. That is not a small fix, and #996 is stacked on it.
+6. **Tests on the final head:**
+   - **Civil, net10 (whole suite):** 17,217 run, 17,197 passed, 19 skipped, 1 failed. The failure is the known Glen Eira test.
+   - **The difference from the assembler:** 18 more tests, from #962 (5) and #976 (13), all passing.
+   - **Manager:** 749/749.
+   - **Undo/redo protection tests, net48:** 128/128.
+   - **BUG-565 tests:** 14/14.
+7. **The three net48 NaN/infinity failures** come from the empty AutoCAD reference files used on net48. The real error is `InvalidProgramException` inside `Matrix3d.Identity`. I ran the same tests at the base 92ec2c00: the same 25 tests fail in that test class, with identical messages, so this train added none.
+8. **Tim's settings files never changed** (CD_Settings.json stayed 15,270 bytes, ACD64E79…). The CE log folders grew a little, but that came from AutoCAD running Codex W63 (CDEDIT usage records on `FIX_MODERN_PIPE_W1.dwg`), not from my test runs.
+9. **Six LOW findings, none blocking.** The main one: Edit Pit's level suggestion, the AI pit tool and the CD grade suggestion drop the "too far" reason with no message. That only matters once someone sets a distance limit. The full list is in the report.
+10. **Not tested:** nothing has been opened in AutoCAD, and the new switches have not been tried switched on in a real drawing.
+
+I made my edits in `c38asm` because it didn't refuse them, so there is nothing for you to merge. The report has the full findings and the Codex AutoCAD steps: `C:\Lisp Files\_TEST_COPIES_20260923\TRAIN_C38_FINALIZER_REPORT.md`
+
+OPUS SIGN-OFF train claude/rel-20261010b GO (4acdc13e82f03f3f4f129798c19fc88fcbf5fe24)

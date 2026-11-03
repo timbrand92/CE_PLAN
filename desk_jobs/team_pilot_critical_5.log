@@ -1,0 +1,16 @@
+Six of the 13 bugs are built as draft PRs, two already have a fix on another PR, and five are skipped. All six PRs are on base `2c805a39`. The report is pushed and `git status -sb` shows no "ahead".
+
+Built and unit-tested only. Nothing was opened in AutoCAD.
+
+- **BUG-1137 (#1778):** one downpipe in a COPY no longer stops the copied pits and pipes getting their own numbers.
+- **BUG-1188 (#1773):** a LandXML pipe with no grade no longer prints "AT 1 IN 100".
+- **BUG-1202 (#1776):** the weekly time export no longer runs on the AutoCAD start-up thread.
+- **BUG-1168 (#1775):** the job-time folder is detected again at each start.
+- **BUG-1151 (#1777):** moving a pit names CE pipe objects that stayed behind.
+- **BUG-1180 (#1774):** Drawing Repair's banner no longer says nothing changed.
+- **Already fixed elsewhere:** BUG-1052 and BUG-1053 are covered by #1727 and #1716; I commented on #1727.
+- **Skipped:** BUG-1209, BUG-1210, BUG-1170, BUG-648 and BUG-525 need Tim's word, touch Shared, or are release checks. The options are in the report.
+
+Civil tests: 20,250 to 20,257 total, 0 failed; Manager: 995 total, 0 failed.
+
+Report: `C:\CE_PLAN\areas\release-v3-colleagues-PILOT_CRITICAL_BATCH5_REPORT.md`.

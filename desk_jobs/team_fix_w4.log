@@ -1,0 +1,9 @@
+Draft PR #1920 (B-096) is open, based on the #1897 branch. It is built and unit-tested only. Nobody has opened it in AutoCAD, and BUG-903 stays open.
+
+The Inspector pit row, Civil Hub, Inspector summary and repair check (Pass D) now measure cover to the outside top of the pipe, using the routine CDRULES uses. The 400/650 Road example now warns on all of them. The switch is `checks.screensMeasureCoverToPipeTop` (ON). Turning it off returns the old figures.
+
+- **Tests:** the full Civil suite had 2 failures, both Debug-only checks of compiled code that pass in a Release run. The net48 compile had 0 errors.
+- **Real-files check:** no settings file changed. Logs, usage and failure notes did change; that is in the report, which also gives the robot case name `N96_cover_pipe_top`.
+- **Cleanup:** the worktree is removed. The scratch folder is not fully removed.
+
+Files are in `Modules/Drainage`: `UserSettings.cs`, `Rules/PitCoverToPipeTopRule.cs`, `MinimumCoverForChecks.cs`, `CivilNetworkHealthService.cs`, `CivilHubService.cs`, `InspectorPaletteService.cs`, `LinkService.RepairAudit.*`. The report is `C:\CE_PLAN\areas\BUGFIX_w4_REPORT_31OCT.md`.

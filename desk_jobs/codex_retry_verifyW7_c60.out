@@ -1,0 +1,5 @@
+== verifyW7_c60 (usage 6.0% -> 7.0%): 1. **W7 complete:** [Report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_W7_20261023_1046.md>). Installed: Civil 3.0.70, Manager 1.1.70, Structural 1.0.121.
+
+2. **Results:** PASS 3, FAIL 0, DIFFERENT 1, BLOCKED 0, NOT TESTED 2. SURE 4; UNSURE 2. End breaks unreadable; S3 picture unverified. Undo sequence affected by prescribed zoom. No confirmed FAILs.
+
+3. **Cleanup:** Four settings hashes unchanged. Drawings unsaved. AutoCAD exited; lock released. Weekly usage 7%. Fixtures wanted: none.

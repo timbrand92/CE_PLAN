@@ -1,0 +1,9 @@
+All 8 batch-2 cases (N15 to N22) pass twice on Civil 3.0.83, and each deliberately wrong twin fails for its intended reason. They are PASS-UNREVIEWED, so nothing is accepted yet. All 8 are in `cases\` with their twins in `variants\`, ready for the independent reviewer.
+
+- **Fixes:** the Undo-echo checks needed trailing-space tolerance in N15, N16, N17, N18 and N22. N19's near pipe now starts at 160225 so it is exactly 10 m after the catch. N20's clicks moved 700 mm along the pipe.
+- **DERIVED values:** the N19 and N22 values were all confirmed.
+- **Findings:** a caught pipe end can open the Grade mismatch question, which the robot cannot answer. The driver refused an N20 click at one spot on the screen (the middle of the drawing area, twice). Neither has a bug number.
+- **Gap slip:** one run started under a minute after the previous session closed. I re-ran N15 cleanly and it passed.
+- **Recent values:** `CD_RecentValues.json` was rewritten and not restored.
+
+The report is pushed. Report: `C:\CE_PLAN\areas\release-v3-colleagues-ROBOT_B2_CASES_VALIDATION_28OCT.md`

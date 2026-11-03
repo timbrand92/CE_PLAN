@@ -1,0 +1,10 @@
+**GO-WITH-CONDITIONS** for pass 10 on test copies. All three hashes match. Within one call, the three MEDIUM findings are closed.
+
+1. **MEDIUM:** the driver doesn't stop a second answer to the same box. If an answer fails after it was sent, the next call must be `quit`.
+2. **LOW:** two button refusals should stop instead of trying the second route.
+3. **LOW:** every pass ends with `quit` and a check of the four settings hashes.
+4. **LOW:** keep `-TimeoutSec` at 120 or less.
+
+LOW 4 and 5: accept for pass 10 and fix later.
+
+`C:\CE_PLAN\areas\release-v3-colleagues-DRIVER_V2_FIXES2_REVIEW_2026-10-18.md`

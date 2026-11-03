@@ -1,0 +1,8 @@
+B-011: both extras are written, but nothing has been compiled or tested. No build slot was free for three hours (20:12–23:14). I opened draft PR #1857, titled "NOT YET COMPILED".
+
+- **Comma figure:** 630,5 in a New Pipe or Edit Pipe box now holds Start Pipe or Save. The line reads "Diameter box: 630,5 has a comma: type 630.5". Switch: `pipe.boxRefusesCommaFigure`.
+- **Unset material speed:** CDRULES now judges a material with no speed set against the office figure, silently. Switch: `pipeSpeedChecks.unsetMaterialUsesOfficeFigure`.
+- **Files:** new `TypedFigureCommaRule.cs`; changes to `PipeStartReadiness.cs`, `CdViewModel.cs`, `RulebookValues.cs`, `RulebookEngine.cs`, `UserSettings.cs`, `PipeSpeedChecksSettings.cs`; two new test files; `REGRESSION_LOG.md`.
+- **Report:** `release-v3-colleagues-1788_EXTRAS_REPORT.md` is pushed.
+
+Both switches ship ON.

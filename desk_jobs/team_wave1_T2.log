@@ -1,0 +1,12 @@
+1. **Count:** 2 of my 4 bugs have a case and a twin: BUG-743 (W743) and BUG-713 (W713). 2 have no case: BUG-744 and BUG-746.
+2. **BUG-743 is only part-proved:** the case shows "Blank" means no cover level even right after a typed 45.2, and Enter with nothing typed means no level. The real fault (job B picking up job A's level) needs a second drawing in one AutoCAD, which the robot cannot open. That half is a Codex look.
+3. **BUG-713, fully on the fall arrow route:** a blank spot level 20 mm from the pick no longer hides a P19.020 spot 40 mm away. CDFALLSUGGEST must suggest a fall toward the new pit at 1:100 and never ask "No spot level here".
+4. **BUG-744, no case:** it needs CDFIXTAGS to actually rename an ordinary source block. On the test drawing every rename is refused (BUG-813: the doubled blocks are pit blocks). A copied downpipe gets a fresh number, so no typed route makes two ordinary blocks share a name.
+5. **BUG-746, no case:** the fault is a hidden record left in the file after a tag is removed. The robot cannot read hidden records (no typed LISP is allowed, and ent-read reads drawing objects only). Removing a tag on a pit block would also hit the same refusal.
+6. **Twins:** W743_BROKEN answers Enter instead of Blank on grate C, so it must carry PCL 45.200 and fail. W713_BROKEN puts the good spot 60 mm away (outside the 50 mm reach), so CE must ask "No spot level here" and fail.
+7. **Checks done:** validate 61 files, 0 invalid. check_ids: every control id is known. No "print", no 17.9 or 17.8, no street name in my four files.
+8. **Biggest risks:** CDTG and CDFALLSUGGEST have never been driven by the robot. The callout position (650 mm above each grate) and the blank spot's empty LEVEL value are worked out from the code, not seen.
+9. **Run order:** each main case before its twin in one drawing (ORDER 900/901 and 902/903). If W743_BROKEN shares W743's drawing, its grate A also shows 45.200. That is still a failed check, but it muddies the reason.
+10. **Teammate overlap:** job T1 wrote W740, W741 and W742 (CDFIXTAGS, CDTAG) in the same folder. Their W741 also says a rename after Yes is BUG-813 and cannot be proved. That matches my BUG-744 finding.
+11. **Codex looks needed:** BUG-743 other-drawing Enter, BUG-744 rename keeps labels, BUG-746 record erased. Recipes are in sections 2, 3 and 4.
+12. **Not claimed:** nothing here is tested. Every expected word and number comes from the code at 3fbb9da5 (installed Civil 3.0.88).

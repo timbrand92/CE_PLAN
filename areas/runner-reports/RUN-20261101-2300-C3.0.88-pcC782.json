@@ -1,0 +1,384 @@
+{
+  "header": {
+    "run_id": "RUN-20261101-2300-C3.0.88-pcC782",
+    "started": "2026-11-01 23:00:14",
+    "finished": "2026-11-01 23:04:03",
+    "build": {
+      "civil": {
+        "product_version": "3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+        "file_version": "3.0.88.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+        "file_version": "1.1.88.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.88+3fbb9da5 / struc 1.0.125+204dfad2 / mgr 1.1.88+3fbb9da5",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "CBFCC23908EA614E260BBFCEABE7391F2D255D09E820B3960DBD9DD3C2C4B917",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+      "Driver files (SHA-256, first 12): v2 F4D8F40C3675 (expected F4D8F40C3675), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4B0175FFAB00, v3 session F061E3240C47, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 BBF42DBA8958, case_runner_lib.ps1 89AD455619F8, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 0 shared setup(s); pack SHA-256 CBFCC23908EA614E260BBFCEABE7391F2D255D09E820B3960DBD9DD3C2C4B917; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json D604CE689671 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sun 01 Nov 2026 23:00 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 1,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 1
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261101-2300-C3.0.88-pcC782-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-11-01 23:00:15",
+      "finished": "2026-11-01 23:04:03",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV32300201_B1.dwg",
+      "cases": [
+        "N33_grade_mismatch_x_off"
+      ],
+      "whatsnew_dismissed_at_start": "no, window was not there",
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : D604CE689671 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "N33_grade_mismatch_x_off",
+      "proves_bugs": "",
+      "title": "With grade.mismatchBoxCloseCancels OFF the Grade mismatch box is the old two-button box: Use 1 IN 200 and Keep 1 IN 100, no Cancel, no \"places no pipe\" line",
+      "kind": "deterministic",
+      "order": 99,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "",
+      "bug": "BUG-857",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed. Written 30 Oct 2026 from the BUG-857 fix report, the C-78 finalizer report and GradeMismatchDialog.xaml / .xaml.cs at 7c6af57b; not compared with a run.",
+      "variant_of": "",
+      "expected": "With the switch typed false before AutoCAD starts: the same CD and levels; Start Pipe: the window \"Creative Engineering | Grade mismatch\" is open; its text holds \"Use 1 IN 200\" and \"Keep 1 IN 100\" and does NOT hold \"places no pipe\" or \"Cancel\". The drawing file on disk is unchanged. (This also passes on 3.0.87.)",
+      "why_not_unit": "The switch is read by the live CD command when the box opens; only a run with the settings file changed before launch shows the old box comes back.",
+      "not_automated": [
+        "The fix report's control check \"a pipe with grade 1 IN 100 is placed\" after Esc is NOT driven: no button of the OFF box is on the press list and one real Esc to a modal CE box through v3 esc-key is unproven. The pipe placed after Esc or the X with the switch OFF is a Codex look item (finalizer item (a), last part)."
+      ],
+      "file_sha256": "EA3F78B95AC9E5C3399F03E6D0DF3D511B53D792B610CBF6A22FAE34269DF65B",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-11-01 23:01:07",
+      "seconds": 156.4,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "copy CLDV32300201_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "getvar",
+          "text": "getvar OSMODE -> $osm0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "OSMODE = 5375"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 setvar OSMODE 0 -> $osm_set",
+          "ok": true,
+          "seconds": 0.7,
+          "evidence": "v3 setvar OSMODE 0: OSMODE (profile): 5375 -> 0"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM _W 146000,-76000 174000,-58000\" -Force",
+          "ok": true,
+          "seconds": 3.7,
+          "evidence": "typed '_.ZOOM _W 146000,-76000 174000,-58000': Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _W | Specify first corner: 146000,-76000 Specify opposi..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-66000{NL}170000,-66000{NL}\" -Force -ExpectWindow \"New Pipe\" -TimeoutSec 150 -> $cd",
+          "ok": true,
+          "seconds": 11.9,
+          "evidence": "typed 'CD 150000,-66000 170000,-66000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-66000 | Specify second point: 170000,-66000 | Se..."
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.AutoCalcSecondInvert\" \"off\"",
+          "ok": true,
+          "seconds": 8.0,
+          "evidence": "ui set 'New Pipe' C2.AutoCalcSecondInvert = off: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.IsGradeCustom\" \"on\"",
+          "ok": true,
+          "seconds": 8.4,
+          "evidence": "ui set 'New Pipe' C2.IsGradeCustom = on: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.CustomGrade\" \"100\"",
+          "ok": true,
+          "seconds": 9.6,
+          "evidence": "ui set 'New Pipe' C2.CustomGrade = 100: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 8.4,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.900\"",
+          "ok": true,
+          "seconds": 9.4,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.900: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 2",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "slept 2 s"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"^New Pipe\" -TimeoutSec 60 -> $np1",
+          "ok": true,
+          "seconds": 5.7,
+          "evidence": "ui-dump 'New Pipe': 151 controls, tabs: "
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $start",
+          "ok": true,
+          "seconds": 11.6,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 4",
+          "ok": true,
+          "seconds": 4.0,
+          "evidence": "slept 4 s"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $w1",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV32300201_B1.dwg] ; Creative Engineering | Grade mismatch"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Grade mismatch\" -Optional -TimeoutSec 30 -> $gm",
+          "ok": true,
+          "seconds": 3.5,
+          "evidence": "ui-dump 'Creative Engineering | Grade mismatch': 11 controls, tabs: "
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "contains $w1 \"Grade mismatch\"",
+          "ok": true,
+          "expected": "contains 'Grade mismatch'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV32300201_B1.dwg] | Creative Engineering | Grade mismatch",
+          "evidence": "found 'Grade mismatch' in: Autodesk AutoCAD 2027 - [CLDV32300201_B1.dwg] | Creative Engineering | Grade mismatch"
+        },
+        {
+          "n": 2,
+          "text": "control-text $gm has \"Use 1 IN 200\"",
+          "ok": true,
+          "expected": "window shows 'Use 1 IN 200'",
+          "actual": "2",
+          "evidence": "window 'Creative Engineering | Grade mismatch' shows 'Use 1 IN 200'"
+        },
+        {
+          "n": 3,
+          "text": "control-text $gm has \"Keep 1 IN 100\"",
+          "ok": true,
+          "expected": "window shows 'Keep 1 IN 100'",
+          "actual": "2",
+          "evidence": "window 'Creative Engineering | Grade mismatch' shows 'Keep 1 IN 100'"
+        },
+        {
+          "n": 4,
+          "text": "control-text $gm absent \"places no pipe\"",
+          "ok": true,
+          "expected": "window lacks 'places no pipe'",
+          "actual": "0",
+          "evidence": "no control of 'Creative Engineering | Grade mismatch' shows 'places no pipe'"
+        },
+        {
+          "n": 5,
+          "text": "control-text $gm absent \"Cancel\"",
+          "ok": true,
+          "expected": "window lacks 'Cancel'",
+          "actual": "0",
+          "evidence": "no control of 'Creative Engineering | Grade mismatch' shows 'Cancel'"
+        },
+        {
+          "n": 6,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 7,
+          "text": "record $np1 \"FULL New Pipe window before Start Pipe\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"title\":\"New Pipe\",\"handle\":2558522,\"class\":\"Window\",\"source\":\"win32\",\"bounds\":[2016,50,1728,972],\"control_count\":151,\"truncated\":false,\"tabs\":[],\"controls\":[{\"type\":\"TitleBar\",\"name\":\"New Pipe\",\"id\":\"TitleBar\",\"class\":\"\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2024,58,1712,23]},{\"type\":\"MenuBar\",\"name\":\"System Menu Bar\",\"id\":\"SystemMenuBar\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2024,58,22,22]},{\"type\":\"MenuItem\",\"name\":\"System\",\"id\":\"Item 1\",\"class\":\"\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2024,58,22,22]},{\"type\":\"Button\",\"name\":\"Close\",\"id\":\"Close\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3703,51,34,30]},{\"type\":\"Image\",\"name\":\"\",\"id\":\"\",\"class\":\"Image\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2055,101,28,28]},{\"type\":\"Text\",\"name\":\"New Pipe\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2095,97,73,22]},{\"type\":\"Text\",\"name\":\"\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":null},{\"type\":\"Text\",\"name\":\"Stormwater pipe · 225 mm · UPVC\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2192,101,164,14]},{\"type\":\"Text\",\"name\":\"Route collected by CD · review the current values\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2095,119,1301,15]},{\"type\":\"Custom\",\"name\":\"\",\"id\":\"\",\"class\":\"StatusChip\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[3408,91,297,48]},{\"type\":\"Text\",\"name\":\"Both ends are free: open ends flagged, connect them later.\",\"id\":\"LabelText\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3437,98,257,29]},{\"type\":\"Button\",\"name\":\"Inspect drawing and retain pending edits\",\"id\":\"C2.InspectDrawingCommand\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2040,974,119,36]},{\"type\":\"Text\",\"name\":\"Inspect Drawing\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2057,984,85,16]},{\"type\":\"Button\",\"name\":\"New pipe, More\",\"id\":\"PipeEditWorkshopDialog.More\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2167,974,80,36]},{\"type\":\"Text\",\"name\":\"More…\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2189,984,37,16]},{\"type\":\"Button\",\"name\":\"New pipe, Review changes\",\"id\":\"PipeEditWorkshopDialog.Review.changes\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2255,974,116,36]},{\"type\":\"Text\",\"name\":\"Review changes\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2271,984,84,16]},{\"type\":\"ComboBox\",\"name\":\"New pipe, Plan label to edit\",\"id\":\"PipeEditWorkshopDialog.SelectedKey\",\"class\":\"ComboBox\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2383,974,170,36]},{\"type\":\"Button\",\"name\":\"Cancel without saving\",\"id\":\"C2.CancelCommand\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[3494,974,86,36]},{\"type\":\"Text\",\"name\":\"Cancel\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3519,984,36,16]},{\"type\":\"Button\",\"name\":\"New pipe, Start Pipe\",\"id\":\"C2.OkCommand\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[3590,974,130,36]},{\"type\":\"Text\",\"name\":\"Start Pipe\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3630,984,50,16]},{\"type\":\"Text\",\"name\":\"Preview — changes not saved · Grade method · End 1 IL · End 2 IL · +2 more\",\"id\":\"UnsavedBannerText\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2051,156,818,30]},{\"type\":\"Text\",\"name\":\"ENGINEERING\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2040,197,828,20]},{\"type\":\"Button\",\"name\":\"Stormwater\",\"id\":\"C2.IsStormwaterPipe\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2040,217,78,28],\"toggle\":\"On\"},{\"type\":\"Text\",\"name\":\"Stormwater\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":tr...",
+          "evidence": "RECORDED, not judged: FULL New Pipe window before Start Pipe = {\"title\":\"New Pipe\",\"handle\":2558522,\"class\":\"Window\",\"source\":\"win32\",\"bounds\":[2016,50,1728,972],\"control_count\":151,\"truncated\":false,\"tabs\":[],\"controls\":[{\"type\":\"TitleBar\",\"name\":\"New Pipe\",\"id\":\"TitleBar\",\"class\":\"\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2024,58,1712,23]},{\"type\":\"MenuBar\",\"name\":\"System Menu Bar\",\"id\":\"SystemMenuBar\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2024,58,22,22]},{\"type\":\"MenuItem\",\"name\":\"System\",\"id\":\"Item 1\",\"class\":\"\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2024,58,22,22]},{\"type\":\"Button\",\"name\":\"Close\",\"id\":\"Close\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3703,51,34,30]},{\"type\":\"Image\",\"name\":\"\",\"id\":\"\",\"class\":\"Image\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2055,101,28,28]},{\"type\":\"Text\",\"name\":\"New Pipe\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2095,97,73,22]},{\"type\":\"Text\",\"name\":\"\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":null},{\"type\":\"Text\",\"name\":\"Stormwater pipe · 225 mm · UPVC\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2192,101,164,14]},{\"type\":\"Text\",\"name\":\"Route collected by CD · review the current values\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2095,119,1301,15]},{\"type\":\"Custom\",\"name\":\"\",\"id\":\"\",\"class\":\"StatusChip\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[3408,91,297,48]},{\"type\":\"Text\",\"name\":\"Both ends are free: open ends flagged, connect them later.\",\"id\":\"LabelText\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3437,98,257,29]},{\"type\":\"Button\",\"name\":\"Inspect drawing and retain pending edits\",\"id\":\"C2.InspectDrawingCommand\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2040,974,119,36]},{\"type\":\"Text\",\"name\":\"Inspect Drawing\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2057,984,85,16]},{\"type\":\"Button\",\"name\":\"New pipe, More\",\"id\":\"PipeEditWorkshopDialog.More\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2167,974,80,36]},{\"type\":\"Text\",\"name\":\"More…\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2189,984,37,16]},{\"type\":\"Button\",\"name\":\"New pipe, Review changes\",\"id\":\"PipeEditWorkshopDialog.Review.changes\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2255,974,116,36]},{\"type\":\"Text\",\"name\":\"Review changes\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2271,984,84,16]},{\"type\":\"ComboBox\",\"name\":\"New pipe, Plan label to edit\",\"id\":\"PipeEditWorkshopDialog.SelectedKey\",\"class\":\"ComboBox\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2383,974,170,36]},{\"type\":\"Button\",\"name\":\"Cancel without saving\",\"id\":\"C2.CancelCommand\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[3494,974,86,36]},{\"type\":\"Text\",\"name\":\"Cancel\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3519,984,36,16]},{\"type\":\"Button\",\"name\":\"New pipe, Start Pipe\",\"id\":\"C2.OkCommand\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[3590,974,130,36]},{\"type\":\"Text\",\"name\":\"Start Pipe\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3630,984,50,16]},{\"type\":\"Text\",\"name\":\"Preview — changes not saved · Grade method · End 1 IL · End 2 IL · +2 more\",\"id\":\"UnsavedBannerText\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2051,156,818,30]},{\"type\":\"Text\",\"name\":\"ENGINEERING\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2040,197,828,20]},{\"type\":\"Button\",\"name\":\"Stormwater\",\"id\":\"C2.IsStormwaterPipe\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2040,217,78,28],\"toggle\":\"On\"},{\"type\":\"Text\",\"name\":\"Stormwater\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":tr..."
+        },
+        {
+          "n": 8,
+          "text": "record $w1 \"FULL windows open after Start Pipe\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV32300201_B1.dwg] | Creative Engineering | Grade mismatch",
+          "evidence": "RECORDED, not judged: FULL windows open after Start Pipe = Autodesk AutoCAD 2027 - [CLDV32300201_B1.dwg] | Creative Engineering | Grade mismatch"
+        },
+        {
+          "n": 9,
+          "text": "record $gm \"FULL the Grade mismatch window as text (two buttons expected)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"title\":\"Creative Engineering | Grade mismatch\",\"handle\":16916176,\"class\":\"Window\",\"source\":\"win32\",\"bounds\":[2600,425,560,222],\"control_count\":11,\"truncated\":false,\"tabs\":[],\"controls\":[{\"type\":\"TitleBar\",\"name\":\"Creative Engineering | Grade mismatch\",\"id\":\"TitleBar\",\"class\":\"\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2608,433,544,23]},{\"type\":\"MenuBar\",\"name\":\"System Menu Bar\",\"id\":\"SystemMenuBar\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2608,433,22,22]},{\"type\":\"MenuItem\",\"name\":\"System\",\"id\":\"Item 1\",\"class\":\"\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2608,433,22,22]},{\"type\":\"Button\",\"name\":\"Close\",\"id\":\"Close\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3119,426,34,30]},{\"type\":\"Text\",\"name\":\"!\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2628,476,7,27]},{\"type\":\"Text\",\"name\":\"Grade mismatch detected\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2645,480,163,19]},{\"type\":\"Text\",\"name\":\"You typed Custom 1 IN 100, but the inverts produce an actual grade of about 1 IN 200.\\n\\nWhich value should the pipe label show?\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2628,511,504,51]},{\"type\":\"Button\",\"name\":\"Use 1 IN 200\",\"id\":\"\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2816,586,160,32]},{\"type\":\"Text\",\"name\":\"Use 1 IN 200\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2862,594,68,16]},{\"type\":\"Button\",\"name\":\"Keep 1 IN 100\",\"id\":\"\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2984,586,140,32]},{\"type\":\"Text\",\"name\":\"Keep 1 IN 100\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3017,594,74,16]}],\"json_file\":\"C:\\\\Lisp Files\\\\_TEST_COPIES_20260923\\\\pack_runs\\\\ui_dumps\\\\Creative_Engineering_Grade_mismatch_230236.json\"}",
+          "evidence": "RECORDED, not judged: FULL the Grade mismatch window as text (two buttons expected) = {\"title\":\"Creative Engineering | Grade mismatch\",\"handle\":16916176,\"class\":\"Window\",\"source\":\"win32\",\"bounds\":[2600,425,560,222],\"control_count\":11,\"truncated\":false,\"tabs\":[],\"controls\":[{\"type\":\"TitleBar\",\"name\":\"Creative Engineering | Grade mismatch\",\"id\":\"TitleBar\",\"class\":\"\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2608,433,544,23]},{\"type\":\"MenuBar\",\"name\":\"System Menu Bar\",\"id\":\"SystemMenuBar\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2608,433,22,22]},{\"type\":\"MenuItem\",\"name\":\"System\",\"id\":\"Item 1\",\"class\":\"\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[2608,433,22,22]},{\"type\":\"Button\",\"name\":\"Close\",\"id\":\"Close\",\"class\":\"\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3119,426,34,30]},{\"type\":\"Text\",\"name\":\"!\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2628,476,7,27]},{\"type\":\"Text\",\"name\":\"Grade mismatch detected\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2645,480,163,19]},{\"type\":\"Text\",\"name\":\"You typed Custom 1 IN 100, but the inverts produce an actual grade of about 1 IN 200.\\n\\nWhich value should the pipe label show?\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2628,511,504,51]},{\"type\":\"Button\",\"name\":\"Use 1 IN 200\",\"id\":\"\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2816,586,160,32]},{\"type\":\"Text\",\"name\":\"Use 1 IN 200\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[2862,594,68,16]},{\"type\":\"Button\",\"name\":\"Keep 1 IN 100\",\"id\":\"\",\"class\":\"Button\",\"depth\":1,\"enabled\":true,\"offscreen\":false,\"bounds\":[2984,586,140,32]},{\"type\":\"Text\",\"name\":\"Keep 1 IN 100\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":2,\"enabled\":true,\"offscreen\":false,\"bounds\":[3017,594,74,16]}],\"json_file\":\"C:\\\\Lisp Files\\\\_TEST_COPIES_20260923\\\\pack_runs\\\\ui_dumps\\\\Creative_Engineering_Grade_mismatch_230236.json\"}"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 7 new line(s) while the case ran, 0 with [ERR]",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=True)"
+      ],
+      "error": null,
+      "finished": "2026-11-01 23:03:44",
+      "session_id": "RUN-20261101-2300-C3.0.88-pcC782-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "no independent review: no N33_grade_mismatch_x_off_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)",
+          "bug case (BUG-857) has no recorded FAIL on an earlier build or on a deliberately broken variant"
+        ],
+        "passing_sessions_on_this_build": 7,
+        "red_before": false
+      }
+    }
+  ]
+}

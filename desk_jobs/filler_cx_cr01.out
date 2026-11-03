@@ -1,0 +1,5 @@
+== cx_cr01 (usage 17.0% -> 18.0%): 1. **DONE — saved and pushed.** [Review report](C:/CE_PLAN/areas/CODEX_CASE_REVIEW_cx_cr01.md), commit `1c72abe6`. Leak scan passed; main is not ahead.
+
+2. **R04: PARTIAL.** CDREBUILD remains missing. **R06: NEEDS CODEX LOOK**, with a weak AutoCAD-row check.
+
+3. **Summary:** Neither case is ready; each has only one passing session on Civil 3.0.78. No bug may be newly marked fixed. No review files changed. No AutoCAD, cases, builds or tests run.

@@ -1,0 +1,1 @@
+C:\CE_PLAN\areas\CARD_DRAFTS_B2_COMMANDS_02NOV.md — one new card needed (#1944, BUG-296, pit data rescue in metre drawings), 15 of the 16 b2 PRs already carded; b2's installer line reads 3.0.89, not 3.0.90, so it has no version bump of its own yet; nothing built, tested or opened in AutoCAD.

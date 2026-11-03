@@ -1,0 +1,39 @@
+## FOR TIM
+
+1. **Answer:** two of the four pipe-window and settings changes need a small fix before they go into Friday's update: the **grade fix (#1838)** and **Tidy labels ON (#1847)**. **Recent level buttons (#1839)** and **one-piece pipe for everyone (#1846)** can go in as they are, with notes. Nobody had opened the later items (B-009 to B-014) as changes yet, so there were only four to review.
+
+2. **Grade fix (#1838), serious.** Your example works: 19.45 on a 9.2 m pipe gives 19.35, and the grade box keeps 100. But its tests don't start the New Pipe window the way it really opens.
+   - **What a drafter would hit:** they choose "I know both ends", type 19.45, change the grade to 1 in 60, then type 19.40. The window shows 19.30 and the grade box still says 60.
+   - **The result:** the pipe is drawn at 1 in 92, which is flatter than the 1 in 60 in the box.
+   - **The fix:** two lines.
+
+3. **Tidy labels ON (#1847).** Anyone who has drawn a pipe since 17 Oct already has "Tidy labels off" saved in their settings file, so they stay OFF after the update. Your file has no Tidy labels line, so on your PC it will look as if it worked.
+   - **The fix:** a one-line rename of the setting, so everyone starts ON and nobody's file is edited.
+
+4. **Recent level buttons (#1839).** The test steps say a button fills "the box you are in". It actually always fills the upstream box, which is how the old tab behaved too. The wording and the robot check need correcting. The buttons may also look plain grey; a Codex look will show it.
+
+5. **One-piece pipe for everyone (#1846).** The change does what you ruled. One thing to record before install: does anyone still use AutoCAD 2024? If they do, jobs saved on 2027 will have pipes CE can't edit on their PC.
+
+6. **My mistakes:** none that cost anything. At first I rated the grade problem lower, as the earlier Sonnet review did. Reading how the window opens showed it is the normal case, so I raised it.
+
+7. **Not proven:** I built and ran nothing, and nothing was seen in AutoCAD. Everything here comes from reading the code.
+
+---
+
+**Technical detail** (full report: `C:\CE_PLAN\areas\OPUS_PREREVIEW_A_29OCT.md`, pushed to CE_PLAN main as commit `bc7f2109`, confirmed on origin)
+
+1. **#1838 HIGH:** `CdViewModel` runs `LoadSettings`, which writes `SecondInvert = settings.Inverts.SecondValue` (default "1.20"). That sets `_secondInvertUserSet = true` (`CdViewModel.Inverts.cs:730`), and nothing ever resets it. The PR's tests clear the flag by reflection, so they test a window state that never happens.
+   - In the real window `ResolveHasEstablishedFall` returns true at `:863`, before the new check at `:869` runs.
+   - `keepsChosenGrade` then stops the held grade from being written back.
+   - **Fix:** (a) move the `DownstreamBoxStillHoldsSuggestedLevel` test above the `_secondInvertUserSet` test; (b) set `keepsChosenGrade` only when `!hasEstablishedFall`. Add a window test that builds the window the way CD does, without reflection.
+   - **Robot case:** N32b_cd_grade_changed_then_upstream (expects 19.24), control N32b_off (expects 19.30 and a grade box of 92).
+2. **#1847 MEDIUM:** `SettingsService.cs:720` saves every setting, including defaults, and the key has existed since `f577f42d` (17 Oct). So "Tidy labels off" is already saved in most colleague files.
+   - **Fix:** rename the `JsonProperty`. Also change `TidyLabelsGateRule` so a missing setting reads `?? true`.
+   - **Robot case:** N32d_tidy_old_false_file.
+3. **#1839 MEDIUM:** the log is wrong about which box a Recent button fills (`ExecuteUseRecentInvert`, `CdViewModel.Commands.cs:171`).
+   - **LOW:** the style lookup at `PipeOnePageLayout.cs:367` runs after the row has been detached from the window, so the lookup probably fails.
+4. **#1846:** the switch-OFF behaviour is exact, the ON default is pinned through both start-up reads, and the locked-layer guard is unchanged. The only open item is the mixed-version question in point 5 above.
+
+**Summary:** the report is `C:\CE_PLAN\areas\OPUS_PREREVIEW_A_29OCT.md` (no new PR; review only).
+- **FIX-FIRST:** #1838 (`CdViewModel.Inverts.cs`, switch `pipe.suggestedLevelNeverFlatterThanGrade`); #1847 (`UserSettings.cs`, `linking.tidyLabelsEnabled`).
+- **KEEP-WITH-NOTE:** #1839 (`PipeOnePageLayout.cs`, `pipe.recentInvertButtonsOnMainPage`); #1846 (`PipeObjectUpgradeGate.cs`, `options.pipeObjectAutomaticIsOnForEveryone`).

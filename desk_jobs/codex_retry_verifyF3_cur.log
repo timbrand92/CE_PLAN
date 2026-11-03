@@ -1,0 +1,8 @@
+Tue 02:44 claimed the lock as Codex-F3
+Tue 02:45 try 1 starting verifyF3_cur
+Tue 03:01 try 1 finished; report: CODEX_VERIFY_F3_20261027_0247.md; first line: AUTOCAD STILL RUNNING — a different, later Claude-driverv3 session; F3's session closed cleanly before lock release.
+Tue 03:01 done
+Tue 05:34 claimed the lock as Codex-F3
+Tue 05:34 try 1 starting verifyF3_cur
+Tue 05:46 try 1 finished; report: CODEX_VERIFY_F3_20261027_0535.md; first line: AUTOCAD STILL RUNNING — a later Claude runner session; F3's own session closed cleanly before lock release.
+Tue 05:46 done

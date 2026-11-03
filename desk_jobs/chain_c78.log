@@ -1,0 +1,25 @@
+Fri 12:23 chain start: C-78 (Civil + Manager, the PRs the C-78 PR list promotes; NOTHING TO ASSEMBLE stops the chain before the finalizer); nothing is installed by this chain.
+Fri 12:24 another dotnet-running train or payload chain is still running: waiting for it to finish
+Fri 14:27 starting train_c78_assembler_job.txt (sonnet)
+Fri 15:34 chain start: C-78 (Civil + Manager, the PRs the C-78 PR list promotes; NOTHING TO ASSEMBLE stops the chain before the finalizer); nothing is installed by this chain.
+Fri 15:34 chain RESUMED (second C-78 chain): waiting for the assembler job (cmd pid 4344) to end
+Fri 15:35 flag watcher started: C78_PAYLOAD_GO.flag is written at 22:15 on 30 Oct or when FULL_SET_DONE.txt appears
+Fri 15:48 finished train_c78_assembler_job.txt (seen by the second chain)
+Fri 15:48 no C-78 assembly report: chain stops before the finalizer
+Fri 15:57 chain start: C-78 (Civil + Manager, the PRs the C-78 PR list promotes; NOTHING TO ASSEMBLE stops the chain before the finalizer); nothing is installed by this chain.
+Fri 15:57 chain RESTARTED (third C-78 chain): the first assembler died at 15:47 on the Team session limit; waiting for the 16:01 reset, then the assembler runs again
+Fri 16:01 starting train_c78_assembler_job.txt (sonnet)
+Fri 16:37 finished train_c78_assembler_job.txt
+Fri 16:37 starting train_c78_finalizer_job.txt (opus)
+Fri 16:39 chain start: C-78 (Civil + Manager, the PRs the C-78 PR list promotes; NOTHING TO ASSEMBLE stops the chain before the finalizer); nothing is installed by this chain.
+Fri 16:39 chain RESTARTED (fourth C-78 chain, 16:45): the assembler finished 16:37 (branch claude/rel-20261102a); the finalizer is run again with #1870 in its brief
+Fri 16:39 starting train_c78_finalizer_job.txt (opus)
+Fri 16:40 flag watcher started: C78_PAYLOAD_GO.flag is written at 03:30 on 31 Oct or when FULL_SET_DONE.txt appears
+Fri 16:40 flag watcher started: C78_PAYLOAD_GO.flag is written at 03:30 on 31 Oct; CE 01 writes it earlier by hand when the addendum pass is merged and tested
+Sat 03:30 flag watcher: C78_PAYLOAD_GO.flag written
+Sat 03:43 chain c78e start: payload 114 only (replaces the stuck chain_c78d pid 31336); finalizer GO at 7c6af57b
+Sat 03:43 C78_PAYLOAD_GO.flag found: payload 114 may start
+Sat 03:43 C-78 finalizer verdict GO and C-77 installed: building payload 114 (candidate c1074). Nothing is installed by this chain.
+Sat 03:43 starting payload114_c78_job.txt (sonnet)
+Sat 05:33 finished payload114_c78_job.txt
+Sat 05:33 chain complete

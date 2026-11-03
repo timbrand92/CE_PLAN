@@ -1,0 +1,7 @@
+Tue 10:41 C:\CE_PLAN\desk_jobs\fix_1483_job.txt started pid 85564 (sonnet)
+Tue 10:46 finished fix_1483_job.txt
+Tue 10:46 C:\CE_PLAN\desk_jobs\train_c50_assembler_job.txt started pid 81760 (sonnet)
+Tue 11:13 finished train_c50_assembler_job.txt
+Tue 11:13 C:\CE_PLAN\desk_jobs\train_c50_finalizer_job.txt started pid 77164 (opus)
+Tue 11:41 finished train_c50_finalizer_job.txt
+Tue 11:41 chain complete

@@ -1,0 +1,7 @@
+== verifyS1_c88 (usage 31.0% -> 32.0%): AUTOCAD CLOSED
+
+1. **Results:** 4 PASS, 2 DIFFERENT; no FAIL, BLOCKED or NOT TESTED. Five SURE, one UNSURE.
+2. **Confirmed:** Use writes 1 IN 200; Keep writes 1 IN 100. Steeper-level and changed-grade questions passed.
+3. **Unproved:** Carried fall behaved differently; Esc lost focus. The second Esc image duplicated the first.
+4. **Clean end:** Four settings hashes unchanged, drawing unsaved, lock released. No fixtures needed.
+5. **Report:** [S1 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_S1_20261102_0711.md>).

@@ -1,0 +1,24 @@
+I reviewed all 28 fix drafts: 21 can merge as they are, 7 need a small fix first, and none are held or rejected. Nothing has been opened in AutoCAD, so no bug in this set can be marked fixed.
+
+**Needing a small fix (each a short job for the fixer):**
+1. **#1383:** the CEHATCH card pictures should be on by default, because the old "No preview" words are the bug.
+2. **#1395:** a rising pipe needs a plain line saying it rises, not just a blank grade.
+3. **#1396:** the grade should read "1 in 200", not "1 in 200.0".
+4. **#1401:** the X-Civil import report could say both "matched" and "not matched" when the AI read is used.
+5. **#1402:** a pump station with two inlets can still flip depth, because three places pick a different inlet.
+6. **#1406:** Recover Inverts may draw a second set of IL texts on older drawings, so it needs a Settings switch.
+7. **#1408:** as written it hides CDCALC's Older longitudinal tab on your PC, the only way to do your CD-BRANCH-01 branch tick check. The fix keeps it visible until you decide.
+
+**Questions for you (work hours):**
+1. **SBEAM side elevation:** keep the two lines just inside the flanges, and the dashed lines in the front elevation?
+2. **CDCALC Older longitudinal tab:** hide it now, or after CDPROFILE can draw branch ticks?
+3. **LBUH dots:** what spacing do you want at 1:50 and 1:100? This is already on the Monday list.
+
+**Tests:** 801 Civil tests passed (3 skipped), plus Manager 757 of 757 and Structural 305 of 305, all on trial merges. The whole solution built with 0 errors. #1388 and #1389 change Manager, so Manager must ship with the next train (C-45).
+
+---
+
+- The review is entries 1191–1226 in `C:\CE_PLAN\areas\release-v3-colleagues-REVIEWLANE_LOG.md`, pushed in five commits with the leak scan clean each time. Entries 1221 and 1222 give the merge order for C-45 and the next Structural train.
+- Merge clash: #1391, #1393, #1394 and #1396 add tests at the same spot. Git's "keep both" breaks that test file; adding each PR's tests in turn keeps it whole.
+- Not run: the full Civil suite, net48 tests, the fix rounds, or a before-the-fix (RED) run of each new test. I checked those by reading the code only.
+- Your three settings files are unchanged, AutoCAD was not running, and the build lock is released. The review worktree and my temporary PR references are removed.

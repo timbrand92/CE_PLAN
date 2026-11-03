@@ -1,0 +1,2782 @@
+{
+  "header": {
+    "run_id": "RUN-20261030-0107-C3.0.86-b80F1",
+    "started": "2026-10-30 01:07:34",
+    "finished": "2026-10-30 01:26:28",
+    "build": {
+      "civil": {
+        "product_version": "3.0.86+5888ee757244aac89283aaaf2ba68e51470ecbb3",
+        "file_version": "3.0.86.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.86+5888ee757244aac89283aaaf2ba68e51470ecbb3",
+        "file_version": "1.1.86.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.86+5888ee75 / struc 1.0.125+204dfad2 / mgr 1.1.86+5888ee75",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "AAD605F62FD659E426E68F8C938EC13FFFC33E8A74BCB93BA99720BA7CC45DF0",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.86+5888ee757244aac89283aaaf2ba68e51470ecbb3; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.86+5888ee757244aac89283aaaf2ba68e51470ecbb3",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4CD773B85EC5, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 13955AAA60D1, case_runner_lib.ps1 8F9B8DCBB473, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 7 case file(s) plus 2 shared setup(s); pack SHA-256 AAD605F62FD659E426E68F8C938EC13FFFC33E8A74BCB93BA99720BA7CC45DF0; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json B3B5A004B929 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Fri 30 Oct 2026 01:07 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 7,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 7,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261030-0107-C3.0.86-b80F1-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-30 01:07:36",
+      "finished": "2026-10-30 01:22:32",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV30107401_B1.dwg",
+      "cases": [
+        "N03",
+        "N04",
+        "N06",
+        "N08",
+        "N09",
+        "N11"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : B3B5A004B929 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "Alt+F4 (close posted to the AutoCAD window)",
+        "error": ""
+      }
+    },
+    {
+      "session_id": "RUN-20261030-0107-C3.0.86-b80F1-s2",
+      "phase": "main",
+      "session_no": 2,
+      "started": "2026-10-30 01:22:32",
+      "finished": "2026-10-30 01:26:28",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV30122382_B1.dwg",
+      "cases": [
+        "R14h_dstd_200"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : B3B5A004B929 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "N03",
+      "proves_bugs": "",
+      "title": "OF and FO each place one OVERFLOW symbol, say Overflow placed with an OF tag and Front overflow placed with an FO tag, and offer the next one until Esc",
+      "kind": "deterministic",
+      "order": 30,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "UX-SRC-01 (daily card D08)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "OF at 150000,-80000 prints 'Overflow placed. Tag: OF<n>.' and '[CE] Pick the next OF, or press Esc to stop.'; one Esc stops it; FO at 152000,-80000 prints 'Front overflow placed. Tag: FO<n>.' and '[CE] Pick the next FO, or press Esc to stop.'; exactly two new OVERFLOW block inserts exist, one at each point, so both use the same symbol.",
+      "why_not_unit": "The real block insert, the tag counter and the label are written in the live drawing by the live command.",
+      "not_automated": [
+        "The plan labels OF and FO (card D08 assertion 3, the Number sources setting) are RECORDED only: the object that carries the plan label has not been read by any run yet.",
+        "Tag numbers counting from 1 need a blank drawing; on DRV1_B1 the number is recorded, not asserted.",
+        "That the two symbols look identical on the plan is a picture item (Codex D7-02 PASS on 3.0.78)."
+      ],
+      "file_sha256": "AADE74748DAFB64BCF3848B7EF2160AD765B0B2EA5E535BDCF99BFAB917935EC",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-30 01:08:16",
+      "seconds": 33.9,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"OF{NL}150000,-80000\" -Force -> $of",
+          "ok": true,
+          "seconds": 9.3,
+          "evidence": "typed 'OF 150000,-80000': Command: | Command: OF | Specify overflow insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Overflow placed. Tag: OF..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $of_esc",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "esc-prompt: Specify overflow insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Overflow placed. Tag: OF1. Nothing nearby. The so..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"FO{NL}152000,-80000\" -Force -> $fo",
+          "ok": true,
+          "seconds": 8.1,
+          "evidence": "typed 'FO 152000,-80000': Command: | Command: FO | Specify front overflow insertion point: 152000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Front overflow pla..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $fo_esc",
+          "ok": true,
+          "seconds": 5.5,
+          "evidence": "esc-prompt: Specify front overflow insertion point: 152000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Front overflow placed. Tag: FO1. Nothing ne..."
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c1",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "model space holds 1038 objects"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $new",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "4 object(s) after index 1034 (model space now 1038); by type: AcDbBlockReference 2; AcDbText 2; first: 11C55B AcDbBlockReference DOWNPIPES OVERFLOW ; 11C561 AcDbText GUIDELINES OF ; 11C56A AcDbBlockReference DOWNPIPES OVERFLOW ; 11C570 AcDbText GUIDELINES FO"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"name=OVERFLOW\" -> $ovs",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 2 of 4: 11C55B OVERFLOW DOWNPIPES ; 11C56A OVERFLOW DOWNPIPES"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $ovs \"near=150000,-80000,50\" -> $ov_of",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "selected 1 of 2: 11C55B OVERFLOW DOWNPIPES"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $ovs \"near=152000,-80000,50\" -> $ov_fo",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C56A OVERFLOW DOWNPIPES"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $ov_of handle -> $h_of",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C55B"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $ov_fo handle -> $h_fo",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C56A"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$h_of} -> $e_of",
+          "ok": true,
+          "seconds": 0.5,
+          "evidence": "ent-read 11C55B: {\"handle\":\"11C55B\",\"object\":\"AcDbBlockReference\",\"layer\":\"DOWNPIPES\",\"name\":\"OVERFLOW\",\"effective_name\":\"OVERFLOW\",\"insertion\":[150000.0,-80000.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[149423.02372896555,-80175.0,150175.0,..."
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$h_fo} -> $e_fo",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "ent-read 11C56A: {\"handle\":\"11C56A\",\"object\":\"AcDbBlockReference\",\"layer\":\"DOWNPIPES\",\"name\":\"OVERFLOW\",\"effective_name\":\"OVERFLOW\",\"insertion\":[152000.0,-80000.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[151423.02372896555,-80175.0,152175.0,..."
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $new name -All -> $new_names",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'name' = OVERFLOW | | OVERFLOW |"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $new text -All -> $new_texts",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = | OF | | FO"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"Overflow placed. Tag: OF1.\"",
+          "ok": true,
+          "expected": "command line has 'Overflow placed. Tag: OF1.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Overflow placed. Tag: OF1. Nothing nearby. The source connects when a pipe is drawn to it.'"
+        },
+        {
+          "n": 2,
+          "text": "history has \"Front overflow placed. Tag: FO1.\"",
+          "ok": true,
+          "expected": "command line has 'Front overflow placed. Tag: FO1.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Front overflow placed. Tag: FO1. Nothing nearby. The source connects when a pipe is drawn to it.'"
+        },
+        {
+          "n": 3,
+          "text": "matches $new_texts \"(^|\\| )OF( \\||$)\"",
+          "ok": true,
+          "expected": "matches /(^|\\| )OF( \\||$)/",
+          "actual": "| OF | | FO",
+          "evidence": "matched '| OF |'"
+        },
+        {
+          "n": 4,
+          "text": "matches $new_texts \"(^|\\| )FO( \\||$)\"",
+          "ok": true,
+          "expected": "matches /(^|\\| )FO( \\||$)/",
+          "actual": "| OF | | FO",
+          "evidence": "matched '| FO'"
+        },
+        {
+          "n": 5,
+          "text": "history has \"[CE] Pick the next OF, or press Esc to stop.\"",
+          "ok": true,
+          "expected": "command line has '[CE] Pick the next OF, or press Esc to stop.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CE] Pick the next OF, or press Esc to stop.'"
+        },
+        {
+          "n": 6,
+          "text": "history has \"[CE] Pick the next FO, or press Esc to stop.\"",
+          "ok": true,
+          "expected": "command line has '[CE] Pick the next FO, or press Esc to stop.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CE] Pick the next FO, or press Esc to stop.'"
+        },
+        {
+          "n": 7,
+          "text": "history count \"[CE] Stopped. Everything placed stays; U takes back the last one.\" = 2",
+          "ok": true,
+          "expected": "2 line(s) with '[CE] Stopped. Everything placed stays; U takes back the last one.'",
+          "actual": "2",
+          "evidence": "command line holds 2 line(s) containing '[CE] Stopped. Everything placed stays; U takes back the last one.' (expected 2)"
+        },
+        {
+          "n": 8,
+          "text": "count $ovs = 2",
+          "ok": true,
+          "expected": "count = 2",
+          "actual": "2",
+          "evidence": "count of $ovs = 2 (expected = 2)"
+        },
+        {
+          "n": 9,
+          "text": "count $ov_of = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $ov_of = 1 (expected = 1)"
+        },
+        {
+          "n": 10,
+          "text": "count $ov_fo = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $ov_fo = 1 (expected = 1)"
+        },
+        {
+          "n": 11,
+          "text": "record $of \"FULL what OF printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: OF | Specify overflow insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Overflow placed. Tag: OF1. Nothing nearby. The source connects when a pipe is drawn to it. | [CE] Pick the next OF, or press Esc to stop.",
+          "evidence": "RECORDED, not judged: FULL what OF printed = Command: | Command: OF | Specify overflow insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Overflow placed. Tag: OF1. Nothing nearby. The source connects when a pipe is drawn to it. | [CE] Pick the next OF, or press Esc to stop."
+        },
+        {
+          "n": 12,
+          "text": "record $fo \"FULL what FO printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: FO | Specify front overflow insertion point: 152000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Front overflow placed. Tag: FO1. Nothing nearby. The source connects when a pipe is drawn to it. | [CE] Pick the next FO, or press Esc to stop.",
+          "evidence": "RECORDED, not judged: FULL what FO printed = Command: | Command: FO | Specify front overflow insertion point: 152000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Front overflow placed. Tag: FO1. Nothing nearby. The source connects when a pipe is drawn to it. | [CE] Pick the next FO, or press Esc to stop."
+        },
+        {
+          "n": 13,
+          "text": "record $e_of \"FULL the OF insert (attributes, layer)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C55B\",\"object\":\"AcDbBlockReference\",\"layer\":\"DOWNPIPES\",\"name\":\"OVERFLOW\",\"effective_name\":\"OVERFLOW\",\"insertion\":[150000.0,-80000.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[149423.02372896555,-80175.0,150175.0,-79370.45799612555],\"block_parts\":[{\"index\":0,\"object\":\"AcDbHatch\",\"layer\":\"DOWNPIPES HATCH\",\"color\":256,\"hatch\":true},{\"index\":1,\"object\":\"AcDbCircle\",\"layer\":\"DOWNPIPES\",\"color\":256,\"world_center\":[150000.0,-80000.0],\"world_radius\":75.0,\"world_on_line\":[150075.0,-80000.0]},{\"index\":2,\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"color\":256},{\"index\":3,\"object\":\"AcDbCircle\",\"layer\":\"DEFPOINTS\",\"color\":256,\"world_center\":[150000.0,-80000.0],\"world_radius\":175.0,\"world_on_line\":[150175.0,-80000.0]}]}",
+          "evidence": "RECORDED, not judged: FULL the OF insert (attributes, layer) = {\"handle\":\"11C55B\",\"object\":\"AcDbBlockReference\",\"layer\":\"DOWNPIPES\",\"name\":\"OVERFLOW\",\"effective_name\":\"OVERFLOW\",\"insertion\":[150000.0,-80000.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[149423.02372896555,-80175.0,150175.0,-79370.45799612555],\"block_parts\":[{\"index\":0,\"object\":\"AcDbHatch\",\"layer\":\"DOWNPIPES HATCH\",\"color\":256,\"hatch\":true},{\"index\":1,\"object\":\"AcDbCircle\",\"layer\":\"DOWNPIPES\",\"color\":256,\"world_center\":[150000.0,-80000.0],\"world_radius\":75.0,\"world_on_line\":[150075.0,-80000.0]},{\"index\":2,\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"color\":256},{\"index\":3,\"object\":\"AcDbCircle\",\"layer\":\"DEFPOINTS\",\"color\":256,\"world_center\":[150000.0,-80000.0],\"world_radius\":175.0,\"world_on_line\":[150175.0,-80000.0]}]}"
+        },
+        {
+          "n": 14,
+          "text": "record $e_fo \"FULL the FO insert (attributes, layer)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C56A\",\"object\":\"AcDbBlockReference\",\"layer\":\"DOWNPIPES\",\"name\":\"OVERFLOW\",\"effective_name\":\"OVERFLOW\",\"insertion\":[152000.0,-80000.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[151423.02372896555,-80175.0,152175.0,-79370.45799612555],\"block_parts\":[{\"index\":0,\"object\":\"AcDbHatch\",\"layer\":\"DOWNPIPES HATCH\",\"color\":256,\"hatch\":true},{\"index\":1,\"object\":\"AcDbCircle\",\"layer\":\"DOWNPIPES\",\"color\":256,\"world_center\":[152000.0,-80000.0],\"world_radius\":75.0,\"world_on_line\":[152075.0,-80000.0]},{\"index\":2,\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"color\":256},{\"index\":3,\"object\":\"AcDbCircle\",\"layer\":\"DEFPOINTS\",\"color\":256,\"world_center\":[152000.0,-80000.0],\"world_radius\":175.0,\"world_on_line\":[152175.0,-80000.0]}]}",
+          "evidence": "RECORDED, not judged: FULL the FO insert (attributes, layer) = {\"handle\":\"11C56A\",\"object\":\"AcDbBlockReference\",\"layer\":\"DOWNPIPES\",\"name\":\"OVERFLOW\",\"effective_name\":\"OVERFLOW\",\"insertion\":[152000.0,-80000.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[151423.02372896555,-80175.0,152175.0,-79370.45799612555],\"block_parts\":[{\"index\":0,\"object\":\"AcDbHatch\",\"layer\":\"DOWNPIPES HATCH\",\"color\":256,\"hatch\":true},{\"index\":1,\"object\":\"AcDbCircle\",\"layer\":\"DOWNPIPES\",\"color\":256,\"world_center\":[152000.0,-80000.0],\"world_radius\":75.0,\"world_on_line\":[152075.0,-80000.0]},{\"index\":2,\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"color\":256},{\"index\":3,\"object\":\"AcDbCircle\",\"layer\":\"DEFPOINTS\",\"color\":256,\"world_center\":[152000.0,-80000.0],\"world_radius\":175.0,\"world_on_line\":[152175.0,-80000.0]}]}"
+        },
+        {
+          "n": 15,
+          "text": "record $new_names \"block names of every new object\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "OVERFLOW | | OVERFLOW |",
+          "evidence": "RECORDED, not judged: block names of every new object = OVERFLOW | | OVERFLOW |"
+        },
+        {
+          "n": 16,
+          "text": "record $new_texts \"text of every new text object (plan labels, if they are text)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "| OF | | FO",
+          "evidence": "RECORDED, not judged: text of every new text object (plan labels, if they are text) = | OF | | FO"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 98 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: OF completed 10151 ms ; Command outcome: FO completed 10005 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-30 01:08:50",
+      "session_id": "RUN-20261030-0107-C3.0.86-b80F1-s1",
+      "acceptance": {
+        "state": "ACCEPTED-READY",
+        "reasons": [],
+        "passing_sessions_on_this_build": 2,
+        "red_before": true
+      }
+    },
+    {
+      "id": "N04",
+      "proves_bugs": "",
+      "title": "A downpipe and a raingarden place on empty ground with no pipe to join, nothing is refused, and one U takes back only the raingarden",
+      "kind": "deterministic",
+      "order": 40,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "UX-SRC-05 (daily card D07); BUG-176 (CDRG no longer needs a pipe)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "DP at 150000,-80000 prints 'Downpipe placed. Tag: DP<n>. Nothing nearby. The source connects when a pipe is drawn to it.' and offers the next DP; Esc stops it; one new DOWNPIPE DYNAMIC WITH MASK insert exists. CDRG with the four corners 160000,-80000 / 164000,-80000 / 164000,-77000 / 160000,-77000, C (Close) and Skip at the GIO question prints 'Raingarden RG<n> placed. 4 vertices, 12.0 m2' (square metres), with no 'CDRG command cancelled.' and no error; the object count rises; one U echoes CDRG and the object count returns to the count after the downpipe (the downpipe stays).",
+      "why_not_unit": "The placement route depends on the live drawing having no pipe near the point to split or join, and the outline is collected by a live drag prompt.",
+      "not_automated": [
+        "A drawing with NO pipe at all (the card's blank fixture F-BLANK) is not used: the runner has no blank DRV master. Codex D7-01 covered the blank drawing on 3.0.78 (DIFFERENT only on the unitless-area wording).",
+        "The RG plan label and the raingarden's look are not judged (Codex D7-01 could not read the RG1 label; a picture item)."
+      ],
+      "file_sha256": "74CA6C503ADD33264B0BC67424D39168E7F03E12249632C2B74C6383AE072E27",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-30 01:08:50",
+      "seconds": 52.5,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"DP{NL}150000,-80000\" -Force -> $dp",
+          "ok": true,
+          "seconds": 8.3,
+          "evidence": "typed 'DP 150000,-80000': Command: DP | Specify downpipe insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. Nothing ..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $dp_esc",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "esc-prompt: Specify downpipe insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. Nothing nearby. The so..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1036 objects"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $new_dp",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "2 object(s) after index 1034 (model space now 1036); by type: AcDbBlockReference 1; AcDbText 1; first: 11C55B AcDbBlockReference DOWNPIPES DOWNPIPE DYNAMIC WITH MASK ; 11C563 AcDbText GUIDELINES DP"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_dp \"name=DOWNPIPE DYNAMIC WITH MASK\" -> $dps",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C55B DOWNPIPE DYNAMIC WITH MASK DOWNPIPES"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDRG{NL}160000,-80000{NL}164000,-80000{NL}164000,-77000{NL}160000,-77000{NL}C{NL}Skip\" -Force -> $rg",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "typed 'CDRG 160000,-80000 164000,-80000 164000,-77000 160000,-77000 C Skip': Command: | Command: CDRG | Specify first raingarden point: 160000,-80000 | Next point [Undo] [Undo]: 164000,-80000 | Next point [Undo] [Undo]: 164000,-77000 | Next point (3 pts) [Close/Undo] [Close/Undo]: 160000,-77000 |..."
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 2",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "slept 2 s"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1038 objects"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c1 -> $new_rg",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "2 object(s) after index 1036 (model space now 1038); by type: AcDbHatch 1; AcDbPolyline 1; first: 11C56D AcDbPolyline 50CONT ; 11C56E AcDbHatch HATCH113"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $new_rg object -All -> $rg_objects",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'object' = AcDbPolyline | AcDbHatch"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -> $u1",
+          "ok": true,
+          "seconds": 2.3,
+          "evidence": "typed 'U': Command: | Command: U | CDRG"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c3",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1036 objects"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"Downpipe placed. Tag: DP\"",
+          "ok": true,
+          "expected": "command line has 'Downpipe placed. Tag: DP'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Downpipe placed. Tag: DP1. Nothing nearby. The source connects when a pipe is drawn to it.'"
+        },
+        {
+          "n": 2,
+          "text": "history has \"The source connects when a pipe is drawn to it.\"",
+          "ok": true,
+          "expected": "command line has 'The source connects when a pipe is drawn to it.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Downpipe placed. Tag: DP1. Nothing nearby. The source connects when a pipe is drawn to it.'"
+        },
+        {
+          "n": 3,
+          "text": "history has \"[CE] Pick the next DP, or press Esc to stop.\"",
+          "ok": true,
+          "expected": "command line has '[CE] Pick the next DP, or press Esc to stop.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CE] Pick the next DP, or press Esc to stop.'"
+        },
+        {
+          "n": 4,
+          "text": "count $dps = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $dps = 1 (expected = 1)"
+        },
+        {
+          "n": 5,
+          "text": "history has \"Add a GIO source to this raingarden?\"",
+          "ok": true,
+          "expected": "command line has 'Add a GIO source to this raingarden?'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Add a GIO source to this raingarden? [Place/Skip] <Skip> [Place/Skip] <Skip>: Skip'"
+        },
+        {
+          "n": 6,
+          "text": "history has \"Raingarden RG\"",
+          "ok": true,
+          "expected": "command line has 'Raingarden RG'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Raingarden RG2 placed. 4 vertices, 12.0 m².'"
+        },
+        {
+          "n": 7,
+          "text": "history has \"placed. 4 vertices, 12.0 m\"",
+          "ok": true,
+          "expected": "command line has 'placed. 4 vertices, 12.0 m'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Raingarden RG2 placed. 4 vertices, 12.0 m².'"
+        },
+        {
+          "n": 8,
+          "text": "history absent \"CDRG command cancelled.\"",
+          "ok": true,
+          "expected": "command line lacks 'CDRG command cancelled.'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'CDRG command cancelled.' (19 lines read)"
+        },
+        {
+          "n": 9,
+          "text": "history absent \"Error during CDRG\"",
+          "ok": true,
+          "expected": "command line lacks 'Error during CDRG'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'Error during CDRG' (19 lines read)"
+        },
+        {
+          "n": 10,
+          "text": "history absent \"was not placed\"",
+          "ok": true,
+          "expected": "command line lacks 'was not placed'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'was not placed' (19 lines read)"
+        },
+        {
+          "n": 11,
+          "text": "number $c2 > $c1",
+          "ok": true,
+          "expected": "> 1036",
+          "actual": "1038",
+          "evidence": "$c2 = 1038 (expected > 1036)"
+        },
+        {
+          "n": 12,
+          "text": "contains $u1 \"CDRG\"",
+          "ok": true,
+          "expected": "contains 'CDRG'",
+          "actual": "Command: | Command: U | CDRG",
+          "evidence": "found 'CDRG' in: Command: | Command: U | CDRG"
+        },
+        {
+          "n": 13,
+          "text": "equals $c3 $c1",
+          "ok": true,
+          "expected": "1036",
+          "actual": "1036",
+          "evidence": "value '1036' (expected '1036')"
+        },
+        {
+          "n": 14,
+          "text": "record $dp \"FULL what DP printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: DP | Specify downpipe insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. Nothing nearby. The source connects when a pipe is drawn to it. | [CE] Pick the next DP, or press Esc to stop.",
+          "evidence": "RECORDED, not judged: FULL what DP printed = Command: DP | Specify downpipe insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. Nothing nearby. The source connects when a pipe is drawn to it. | [CE] Pick the next DP, or press Esc to stop."
+        },
+        {
+          "n": 15,
+          "text": "record $rg \"FULL what CDRG printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDRG | Specify first raingarden point: 160000,-80000 | Next point [Undo] [Undo]: 164000,-80000 | Next point [Undo] [Undo]: 164000,-77000 | Next point (3 pts) [Close/Undo] [Close/Undo]: 160000,-77000 | Next point (4 pts) [Close/Undo] [Close/Undo]: C | Add a GIO source to this raingarden? [Place/Skip] <Skip> [Place/Skip] <Skip>: Skip | Raingarden RG2 placed. 4 vertices, 12.0 m².",
+          "evidence": "RECORDED, not judged: FULL what CDRG printed = Command: | Command: CDRG | Specify first raingarden point: 160000,-80000 | Next point [Undo] [Undo]: 164000,-80000 | Next point [Undo] [Undo]: 164000,-77000 | Next point (3 pts) [Close/Undo] [Close/Undo]: 160000,-77000 | Next point (4 pts) [Close/Undo] [Close/Undo]: C | Add a GIO source to this raingarden? [Place/Skip] <Skip> [Place/Skip] <Skip>: Skip | Raingarden RG2 placed. 4 vertices, 12.0 m²."
+        },
+        {
+          "n": 16,
+          "text": "record $rg_objects \"object types CDRG added\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "AcDbPolyline | AcDbHatch",
+          "evidence": "RECORDED, not judged: object types CDRG added = AcDbPolyline | AcDbHatch"
+        },
+        {
+          "n": 17,
+          "text": "record $u1 \"FULL what U printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: U | CDRG",
+          "evidence": "RECORDED, not judged: FULL what U printed = Command: | Command: U | CDRG"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV30107401_B1_105abd2e1.log)",
+        "Civil CE log: 105 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: DP completed 9119 ms ; Command outcome: CDRG completed 90 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-30 01:09:43",
+      "session_id": "RUN-20261030-0107-C3.0.86-b80F1-s1",
+      "acceptance": {
+        "state": "ACCEPTED-READY",
+        "reasons": [],
+        "passing_sessions_on_this_build": 2,
+        "red_before": true
+      }
+    },
+    {
+      "id": "N06",
+      "proves_bugs": "",
+      "title": "After PIT and CD the current layer is still BLOCKS, nothing new is on layer 0 or on BLOCKS, the pit is on STORMWATER PIT and the flow arrow on ARROW",
+      "kind": "deterministic",
+      "order": 60,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "UX-LYR-01 installed part (daily card D24); the never-recolour half is not built",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "After SETUP-P8 (PIT at 150000,-80000 and a CD pipe to 170000,-80000) the current layer CLAYER still reads BLOCKS (its value when the drawing opened); none of the new objects is on layer 0 or on BLOCKS; the one new pit block is on STORMWATER PIT; the one new flow arrow (TIM_CVL_ARROW) is on ARROW. The layers of the IL texts, the pipe label and the pipe object are recorded.",
+      "why_not_unit": "Layer choice and the current-layer restore happen in the live drawing's layer table during real PIT and CD runs.",
+      "not_automated": [
+        "'An existing layer is never recoloured' is NOT BUILT; the layer table colours are not read.",
+        "The pit label layer is covered by N05 (this setup escapes the label prompt, so no label exists here)."
+      ],
+      "file_sha256": "4A402A8FB2CF87861EEAEA07BCA0011EDF2900FC62417FF887B253B737E8CD24",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-30 01:09:43",
+      "seconds": 174.6,
+      "setup": "SETUP-P8",
+      "setup_note": "shared setup SETUP-P8 run here for the first time at 01:12:35",
+      "steps": [
+        {
+          "n": 1,
+          "phase": "setup",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV30107401_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "setup",
+          "verb": "ms-count",
+          "text": "ms-count -> $n0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"PIT{NL}150000,-80000\" -Force -ExpectWindow \"New Pit\" -> $pit_t1",
+          "ok": true,
+          "seconds": 9.3,
+          "evidence": "typed 'PIT 150000,-80000': Command: PIT | Specify pit insertion point: 150000,-80000"
+        },
+        {
+          "n": 4,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.CoverLevel\" \"19.000\"",
+          "ok": true,
+          "seconds": 4.5,
+          "evidence": "ui set 'New Pit' C2.CoverLevel = 19.000: "
+        },
+        {
+          "n": 5,
+          "phase": "setup",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pit\" \"New pit, Continue placement\" -> $pit_t2",
+          "ok": true,
+          "seconds": 37.3,
+          "evidence": "pressed 'New pit, Continue placement' in /New Pit/: window closed = True"
+        },
+        {
+          "n": 6,
+          "phase": "setup",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pit\" -Secs 120",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "the window /^New Pit/ closed after 0 s"
+        },
+        {
+          "n": 7,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e1",
+          "ok": true,
+          "seconds": 8.6,
+          "evidence": "esc-prompt: Command: PIT | Specify pit insertion point: 150000,-80000 | Specify pit label insertion point: *Cancel*"
+        },
+        {
+          "n": 8,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e2",
+          "ok": true,
+          "seconds": 7.4,
+          "evidence": "esc-prompt: Command: PIT | Specify pit insertion point: 150000,-80000 | Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit..."
+        },
+        {
+          "n": 9,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e3",
+          "ok": true,
+          "seconds": 3.7,
+          "evidence": "esc-prompt: Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit, or press Esc to stop. | Specify pit insertion point: *Canc..."
+        },
+        {
+          "n": 10,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-80000{NL}170000,-80000{NL}\" -Force -ExpectWindow \"New Pipe\" -> $pipe_t1",
+          "ok": true,
+          "seconds": 14.0,
+          "evidence": "typed 'CD 150000,-80000 170000,-80000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-80000 | Specify second point: 170000,-80000 | Se..."
+        },
+        {
+          "n": 11,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 10.0,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: "
+        },
+        {
+          "n": 12,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.900\"",
+          "ok": true,
+          "seconds": 10.5,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.900: "
+        },
+        {
+          "n": 13,
+          "phase": "setup",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $pipe_t2",
+          "ok": true,
+          "seconds": 51.9,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 14,
+          "phase": "setup",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 15,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pipe_e1",
+          "ok": true,
+          "seconds": 4.0,
+          "evidence": "esc-prompt: [CE] Pipe kept. One or more ends have no proven connection. The route stays drawn; confirm the intended connection later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: P8 -> Open en..."
+        },
+        {
+          "n": 16,
+          "phase": "setup",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 17,
+          "phase": "setup",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_after_setup",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30107401_B1.dwg]"
+        },
+        {
+          "n": 18,
+          "phase": "setup",
+          "verb": "ms-new",
+          "text": "ms-new $n0 -> $new_all",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "6 object(s) after index 1034 (model space now 1040); by type: AcDbBlockReference 2; AcDbMText 3; CeCvlPipeObject 1; first: 11C5AD AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C651 CeCvlPipeObject STORMWATER PIPE ; 11C657 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 200 ; 11C65C AcDbMText 20TEXT IL 18.000 ; 11C661 AcDbMText 20TEXT IL 17.900 ; 11C683 AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "getvar",
+          "text": "getvar CLAYER -> $cl",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "CLAYER = BLOCKS"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_all \"layer=0\" -> $on0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 6: "
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_all \"layer=BLOCKS\" -> $onb",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 6: "
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_all object=AcDbBlockReference \"layer=STORMWATER PIT\" -> $pits",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 6: 11C5AD PIT BLOCK 3 STORMWATER PIT"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_all name=TIM_CVL_ARROW -> $arrows",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 6: 11C683 TIM_CVL_ARROW ARROW"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $arrows layer -All -> $arrl",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'layer' = ARROW"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_all object=CeCvlPipeObject -> $pipes",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 6: 11C651 STORMWATER PIPE"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $pipes layer -All -> $pipel",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'layer' = STORMWATER PIPE"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_all \"text~^IL \" -> $ils",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 2 of 6: 11C65C IL 18.000 20TEXT ; 11C661 IL 17.900 20TEXT"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $ils layer -All -> $ill",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'layer' = 20TEXT | 20TEXT"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_all \"text~ DIA\\. \" -> $lab",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 6: 11C657 225 DIA. UPVC PIPE AT 1 IN 200 25TEXT"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $lab layer -All -> $labl",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'layer' = 25TEXT"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $new_all layer -All -> $all_layers",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'layer' = STORMWATER PIT | STORMWATER PIPE | 25TEXT | 20TEXT | 20TEXT | ARROW"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "equals $cl \"BLOCKS\"",
+          "ok": true,
+          "expected": "BLOCKS",
+          "actual": "BLOCKS",
+          "evidence": "value 'BLOCKS' (expected 'BLOCKS')"
+        },
+        {
+          "n": 2,
+          "text": "count $on0 = 0",
+          "ok": true,
+          "expected": "count = 0",
+          "actual": "0",
+          "evidence": "count of $on0 = 0 (expected = 0)"
+        },
+        {
+          "n": 3,
+          "text": "count $onb = 0",
+          "ok": true,
+          "expected": "count = 0",
+          "actual": "0",
+          "evidence": "count of $onb = 0 (expected = 0)"
+        },
+        {
+          "n": 4,
+          "text": "count $pits = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $pits = 1 (expected = 1)"
+        },
+        {
+          "n": 5,
+          "text": "count $arrows = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $arrows = 1 (expected = 1)"
+        },
+        {
+          "n": 6,
+          "text": "equals $arrl \"ARROW\"",
+          "ok": true,
+          "expected": "ARROW",
+          "actual": "ARROW",
+          "evidence": "value 'ARROW' (expected 'ARROW')"
+        },
+        {
+          "n": 7,
+          "text": "record $pipel \"layer of the new pipe object\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "STORMWATER PIPE",
+          "evidence": "RECORDED, not judged: layer of the new pipe object = STORMWATER PIPE"
+        },
+        {
+          "n": 8,
+          "text": "record $ill \"layers of the two new IL texts\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "20TEXT | 20TEXT",
+          "evidence": "RECORDED, not judged: layers of the two new IL texts = 20TEXT | 20TEXT"
+        },
+        {
+          "n": 9,
+          "text": "record $labl \"layer of the new pipe label\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "25TEXT",
+          "evidence": "RECORDED, not judged: layer of the new pipe label = 25TEXT"
+        },
+        {
+          "n": 10,
+          "text": "record $all_layers \"FULL layer of every new object\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "STORMWATER PIT | STORMWATER PIPE | 25TEXT | 20TEXT | 20TEXT | ARROW",
+          "evidence": "RECORDED, not judged: FULL layer of every new object = STORMWATER PIT | STORMWATER PIPE | 25TEXT | 20TEXT | 20TEXT | ARROW"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV30107401_B1_12297e95a.log)",
+        "Civil CE log: 133 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: PIT completed 68031 ms ; Command outcome: CD completed 88111 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-30 01:12:37",
+      "session_id": "RUN-20261030-0107-C3.0.86-b80F1-s1",
+      "acceptance": {
+        "state": "ACCEPTED-READY",
+        "reasons": [],
+        "passing_sessions_on_this_build": 2,
+        "red_before": true
+      }
+    },
+    {
+      "id": "N08",
+      "proves_bugs": "",
+      "title": "CDRENUMBER lists P9 -> P8 and P10 -> P9, No changes nothing, Yes renumbers the two pits, the Pit Schedule follows, and U brings the old numbers back",
+      "kind": "deterministic",
+      "order": 80,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "UX-CPLAN-18/19 CDRENUMBER (daily card D20)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "On the untouched copy CDRENUMBER says the main outlet is not obvious and asks 'Which pit is the main outlet? ... [C1/X1] <C1>:' (answered C1), lists 'Renumber downhill to uphill:', 'P9 -> P8' and 'P10 -> P9', and asks '2 pit(s) will be renumbered. Apply? [Yes/No] <No>:'. No prints 'Renumber cancelled - nothing changed.'. Run again and Yes prints 'Renumbered 2 pit(s) downhill to uphill. One Undo restores the old numbers.'; the Pit Schedule then lists Pit P8 and no Pit P10; two U (the first echoes PITSCHEDULE, the second CDRENUMBER) and the schedule lists Pit P10 again and no Pit P8.",
+      "why_not_unit": "The network walk runs on the real drawing's pits and pipes and writes every label in one live command; the schedule is read from the live drawing.",
+      "not_automated": [
+        "The PIT LABEL blocks on the plan are not read one by one (their handles are not known); the Pit Schedule rows are read instead. The non-P marks (C1, AGI, TG, WT) are checked only by recording the schedule before and after.",
+        "Whether the network order chosen is the right engineering order is not judged (the preview is taken as CE's rule; Tim's word for the rule itself)."
+      ],
+      "file_sha256": "35C4E2C9193115E573FB9BD7E7F35F744BBEE54845EF3F577BE3EF0FCF3E0E88",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-30 01:12:37",
+      "seconds": 180.3,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"PITSCHEDULE\" -Force -ExpectWindow \"Pit Schedule\" -TimeoutSec 120 -> $ps0",
+          "ok": true,
+          "seconds": 17.2,
+          "evidence": "typed 'PITSCHEDULE': Command: PITSCHEDULE"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 5",
+          "ok": true,
+          "seconds": 5.0,
+          "evidence": "slept 5 s"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Pit Schedule\" -> $sd0",
+          "ok": true,
+          "seconds": 10.9,
+          "evidence": "ui-dump 'Creative Engineering | Pit Schedule (PITSCHEDULE)': 660 controls, tabs: Source | Rows | Changes | Placement"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ui-cells",
+          "text": "ui-cells $sd0 -> $rows0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "ui-cells: 297 grid row/cell entries, 4806 characters"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Pit Schedule\" \"Close\" -> $close0",
+          "ok": true,
+          "seconds": 18.1,
+          "evidence": "pressed 'Close' in /Pit Schedule/: window closed = True"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"Pit Schedule\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /Pit Schedule/ closed after 0 s"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 3.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDRENUMBER{NL}C1{NL}No\" -Force -> $rn_no",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "typed 'CDRENUMBER C1 No': Command: | Command: CDRENUMBER | More than one pit discharges outside the network - its main outlet is not obvious: | C1 | X1 | Which pit is the main outlet? Type its mark or pick it on screen [C1/X1] <C1> [C1/X1] <C1>: ..."
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDRENUMBER{NL}C1{NL}Yes\" -Force -> $rn_yes",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "typed 'CDRENUMBER C1 Yes': Command: | Command: CDRENUMBER | More than one pit discharges outside the network - its main outlet is not obvious: | C1 | X1 | Which pit is the main outlet? Type its mark or pick it on screen [C1/X1] <C1> [C1/X1] <C1>: ..."
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 2",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "slept 2 s"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"PITSCHEDULE\" -Force -ExpectWindow \"Pit Schedule\" -TimeoutSec 120 -> $ps1",
+          "ok": true,
+          "seconds": 17.8,
+          "evidence": "typed 'PITSCHEDULE': Command: | Command: PITSCHEDULE"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 5",
+          "ok": true,
+          "seconds": 5.0,
+          "evidence": "slept 5 s"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Pit Schedule\" -> $sd1",
+          "ok": true,
+          "seconds": 10.2,
+          "evidence": "ui-dump 'Creative Engineering | Pit Schedule (PITSCHEDULE)': 660 controls, tabs: Source | Rows | Changes | Placement"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "ui-cells",
+          "text": "ui-cells $sd1 -> $rows1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "ui-cells: 297 grid row/cell entries, 4803 characters"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Pit Schedule\" \"Close\" -> $close1",
+          "ok": true,
+          "seconds": 16.2,
+          "evidence": "pressed 'Close' in /Pit Schedule/: window closed = True"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"Pit Schedule\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /Pit Schedule/ closed after 0 s"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -> $u1",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "typed 'U': Command: | Command: U | PITSCHEDULE"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -> $u2",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "typed 'U': Command: | Command: U | CDRENUMBER"
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "set",
+          "text": "set $u12 \"{$u1} | {$u2}\"",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "set $u12"
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"PITSCHEDULE\" -Force -ExpectWindow \"Pit Schedule\" -TimeoutSec 120 -> $ps2",
+          "ok": true,
+          "seconds": 15.6,
+          "evidence": "typed 'PITSCHEDULE': Command: | Command: PITSCHEDULE"
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 5",
+          "ok": true,
+          "seconds": 5.0,
+          "evidence": "slept 5 s"
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Pit Schedule\" -> $sd2",
+          "ok": true,
+          "seconds": 9.3,
+          "evidence": "ui-dump 'Creative Engineering | Pit Schedule (PITSCHEDULE)': 660 controls, tabs: Source | Rows | Changes | Placement"
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "ui-cells",
+          "text": "ui-cells $sd2 -> $rows2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "ui-cells: 297 grid row/cell entries, 4806 characters"
+        },
+        {
+          "n": 29,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Pit Schedule\" \"Close\" -> $close2",
+          "ok": true,
+          "seconds": 15.9,
+          "evidence": "pressed 'Close' in /Pit Schedule/: window closed = True"
+        },
+        {
+          "n": 30,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"Pit Schedule\" -Secs 120",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "the window /Pit Schedule/ closed after 0 s"
+        },
+        {
+          "n": 31,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"Which pit is the main outlet?\"",
+          "ok": true,
+          "expected": "command line has 'Which pit is the main outlet?'",
+          "actual": "2 matching line(s)",
+          "evidence": "command line: 'Which pit is the main outlet? Type its mark or pick it on screen [C1/X1] <C1> [C1/X1] <C1>: C1'"
+        },
+        {
+          "n": 2,
+          "text": "history has \"Renumber downhill to uphill:\"",
+          "ok": true,
+          "expected": "command line has 'Renumber downhill to uphill:'",
+          "actual": "2 matching line(s)",
+          "evidence": "command line: 'Renumber downhill to uphill:'"
+        },
+        {
+          "n": 3,
+          "text": "history has \"P9 -> P8\"",
+          "ok": true,
+          "expected": "command line has 'P9 -> P8'",
+          "actual": "2 matching line(s)",
+          "evidence": "command line: 'P9 -> P8'"
+        },
+        {
+          "n": 4,
+          "text": "history has \"P10 -> P9\"",
+          "ok": true,
+          "expected": "command line has 'P10 -> P9'",
+          "actual": "2 matching line(s)",
+          "evidence": "command line: 'P10 -> P9'"
+        },
+        {
+          "n": 5,
+          "text": "history count \"2 pit(s) will be renumbered. Apply? [Yes/No]\" = 2",
+          "ok": true,
+          "expected": "2 line(s) with '2 pit(s) will be renumbered. Apply? [Yes/No]'",
+          "actual": "2",
+          "evidence": "command line holds 2 line(s) containing '2 pit(s) will be renumbered. Apply? [Yes/No]' (expected 2)"
+        },
+        {
+          "n": 6,
+          "text": "history has \"Renumber cancelled - nothing changed.\"",
+          "ok": true,
+          "expected": "command line has 'Renumber cancelled - nothing changed.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Renumber cancelled - nothing changed.'"
+        },
+        {
+          "n": 7,
+          "text": "history has \"Renumbered 2 pit(s) downhill to uphill. One Undo restores the old numbers.\"",
+          "ok": true,
+          "expected": "command line has 'Renumbered 2 pit(s) downhill to uphill. One Undo restores the old numbers.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Renumbered 2 pit(s) downhill to uphill. One Undo restores the old numbers.'"
+        },
+        {
+          "n": 8,
+          "text": "matches $rows0 \"Pit P10=\"",
+          "ok": true,
+          "expected": "matches /Pit P10=/",
+          "actual": "Pit P1= | P1=P1 | 900 x 900=900 x 900 | DET X (Grated): blank= | P2=P2 | 450=450 | 16.98=16.98 | 450=450 | 16.93=16.93 | 18.81=18.81 | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: bla...",
+          "evidence": "matched 'Pit P10='"
+        },
+        {
+          "n": 9,
+          "text": "not-contains $rows0 \"Pit P8=\"",
+          "ok": true,
+          "expected": "does not contain 'Pit P8='",
+          "actual": "Pit P1= | P1=P1 | 900 x 900=900 x 900 | DET X (Grated): blank= | P2=P2 | 450=450 | 16.98=16.98 | 450=450 | 16.93=16.93 | 18.81=18.81 | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: bla...",
+          "evidence": "'Pit P8=' is absent from: Pit P1= | P1=P1 | 900 x 900=900 x 900 | DET X (Grated): blank= | P2=P2 | 450=450 | 16.98=16.98 | 450=450 | 16.93=16.93 | 18.81=18.81 | Depth= | Pit P1, pipe fro..."
+        },
+        {
+          "n": 10,
+          "text": "matches $rows1 \"Pit P8=\"",
+          "ok": true,
+          "expected": "matches /Pit P8=/",
+          "actual": "Pit P1= | P1=P1 | 900 x 900=900 x 900 | DET X (Grated): blank= | P2=P2 | 450=450 | 16.98=16.98 | 450=450 | 16.93=16.93 | 18.81=18.81 | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: bla...",
+          "evidence": "matched 'Pit P8='"
+        },
+        {
+          "n": 11,
+          "text": "not-contains $rows1 \"Pit P10=\"",
+          "ok": true,
+          "expected": "does not contain 'Pit P10='",
+          "actual": "Pit P1= | P1=P1 | 900 x 900=900 x 900 | DET X (Grated): blank= | P2=P2 | 450=450 | 16.98=16.98 | 450=450 | 16.93=16.93 | 18.81=18.81 | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: bla...",
+          "evidence": "'Pit P10=' is absent from: Pit P1= | P1=P1 | 900 x 900=900 x 900 | DET X (Grated): blank= | P2=P2 | 450=450 | 16.98=16.98 | 450=450 | 16.93=16.93 | 18.81=18.81 | Depth= | Pit P1, pipe fro..."
+        },
+        {
+          "n": 12,
+          "text": "contains $u12 \"CDRENUMBER\"",
+          "ok": true,
+          "expected": "contains 'CDRENUMBER'",
+          "actual": "Command: | Command: U | PITSCHEDULE | Command: | Command: U | CDRENUMBER",
+          "evidence": "found 'CDRENUMBER' in: Command: | Command: U | PITSCHEDULE | Command: | Command: U | CDRENUMBER"
+        },
+        {
+          "n": 13,
+          "text": "matches $rows2 \"Pit P10=\"",
+          "ok": true,
+          "expected": "matches /Pit P10=/",
+          "actual": "Pit P1= | P1=P1 | 900 x 900=900 x 900 | DET X (Grated): blank= | P2=P2 | 450=450 | 16.98=16.98 | 450=450 | 16.93=16.93 | 18.81=18.81 | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: bla...",
+          "evidence": "matched 'Pit P10='"
+        },
+        {
+          "n": 14,
+          "text": "not-contains $rows2 \"Pit P8=\"",
+          "ok": true,
+          "expected": "does not contain 'Pit P8='",
+          "actual": "Pit P1= | P1=P1 | 900 x 900=900 x 900 | DET X (Grated): blank= | P2=P2 | 450=450 | 16.98=16.98 | 450=450 | 16.93=16.93 | 18.81=18.81 | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: bla...",
+          "evidence": "'Pit P8=' is absent from: Pit P1= | P1=P1 | 900 x 900=900 x 900 | DET X (Grated): blank= | P2=P2 | 450=450 | 16.98=16.98 | 450=450 | 16.93=16.93 | 18.81=18.81 | Depth= | Pit P1, pipe fro..."
+        },
+        {
+          "n": 15,
+          "text": "window-closed $close0",
+          "ok": true,
+          "expected": "the window closed",
+          "actual": "closed=True",
+          "evidence": "ui-press reported window_closed = True"
+        },
+        {
+          "n": 16,
+          "text": "window-closed $close1",
+          "ok": true,
+          "expected": "the window closed",
+          "actual": "closed=True",
+          "evidence": "ui-press reported window_closed = True"
+        },
+        {
+          "n": 17,
+          "text": "window-closed $close2",
+          "ok": true,
+          "expected": "the window closed",
+          "actual": "closed=True",
+          "evidence": "ui-press reported window_closed = True"
+        },
+        {
+          "n": 18,
+          "text": "record $rn_no \"FULL what CDRENUMBER printed for No\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDRENUMBER | More than one pit discharges outside the network - its main outlet is not obvious: | C1 | X1 | Which pit is the main outlet? Type its mark or pick it on screen [C1/X1] <C1> [C1/X1] <C1>: C1 | Renumber downhill to uphill: | P9 -> P8 | P10 -> P9 | 2 pit(s) will be renumbered. Apply? [Yes/No] [Yes/No] <No>: No | Renumber cancelled - nothing changed.",
+          "evidence": "RECORDED, not judged: FULL what CDRENUMBER printed for No = Command: | Command: CDRENUMBER | More than one pit discharges outside the network - its main outlet is not obvious: | C1 | X1 | Which pit is the main outlet? Type its mark or pick it on screen [C1/X1] <C1> [C1/X1] <C1>: C1 | Renumber downhill to uphill: | P9 -> P8 | P10 -> P9 | 2 pit(s) will be renumbered. Apply? [Yes/No] [Yes/No] <No>: No | Renumber cancelled - nothing changed."
+        },
+        {
+          "n": 19,
+          "text": "record $rn_yes \"FULL what CDRENUMBER printed for Yes\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDRENUMBER | More than one pit discharges outside the network - its main outlet is not obvious: | C1 | X1 | Which pit is the main outlet? Type its mark or pick it on screen [C1/X1] <C1> [C1/X1] <C1>: C1 | Renumber downhill to uphill: | P9 -> P8 | P10 -> P9 | 2 pit(s) will be renumbered. Apply? [Yes/No] [Yes/No] <No>: Yes | Renumbered 2 pit(s) downhill to uphill. One Undo restores the old numbers.",
+          "evidence": "RECORDED, not judged: FULL what CDRENUMBER printed for Yes = Command: | Command: CDRENUMBER | More than one pit discharges outside the network - its main outlet is not obvious: | C1 | X1 | Which pit is the main outlet? Type its mark or pick it on screen [C1/X1] <C1> [C1/X1] <C1>: C1 | Renumber downhill to uphill: | P9 -> P8 | P10 -> P9 | 2 pit(s) will be renumbered. Apply? [Yes/No] [Yes/No] <No>: Yes | Renumbered 2 pit(s) downhill to uphill. One Undo restores the old numbers."
+        },
+        {
+          "n": 20,
+          "text": "record $u12 \"FULL what the two U printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: U | PITSCHEDULE | Command: | Command: U | CDRENUMBER",
+          "evidence": "RECORDED, not judged: FULL what the two U printed = Command: | Command: U | PITSCHEDULE | Command: | Command: U | CDRENUMBER"
+        },
+        {
+          "n": 21,
+          "text": "record $rows0 \"FULL schedule rows before\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Pit P1= | P1=P1 | 900 x 900=900 x 900 | DET X (Grated): blank= | P2=P2 | 450=450 | 16.98=16.98 | 450=450 | 16.93=16.93 | 18.81=18.81 | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | AGI=AGI | 100=100 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | AGI=AGI | 100=100 | 18.50=18.50 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2= | P2=P2 | 900 x 900=900 x 900 | DET X (Grated): blank= | P3=P3 | 450=450 | 17.13=17.13 | 450=450 | 17.08=17.08 | 18.91=18.91 | Depth= | Pit P2, pipe from WT11= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT11=WT11 | 150=150 | 18.14=18.14 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT12= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT12=WT12 | 150=150 | 18.19=18.19 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT2= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT2=WT2 | 150=150 | 18.28=18.28 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT1= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT1=WT1 | 150=150 | 18.34=18.34 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3= | P3=P3 | 900 x 900=900 x 900 | DET X (Grated): blank= | P4=P4 | 450=450 | 17.30=17.30 | 450=450 | 17.25=17.25 | 18.88=18.88 | Depth= | Pit P3, pipe from WT10= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT10=WT10 | 150=150 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT9= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT9=WT9 | 150=150 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT4= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT4=WT4 | 150=150 | 18.24=18.24 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT3= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT3=WT3 | 150=150 | 18.24=18.24 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P4= | P4=P4 | 900 x 900=900 x 900 | DET X (Grated): blank= | P5=P5 | 450=450 | 17.45=17.45 | 450=450 | 17.40=17.40 | 18.86=18.86 | Depth= | Pit P5= | P5=P5 | 900 x 900=900 x 900 | DET X (Grated): blank= | P7=P7 | 375=375 | 17.58=17.58 | 450=450 | 17.53=17.53 | 18.85=18.85 | Depth= | Pit P5, pipe from P6= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | P6=P6 | 375=375 | 17.58=17.58 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P6= | P6=P6 | 900 x 900=900 x 900 | DET X (Grated): blank= | WT5=WT5 | 150=150 | 18.00=18.00 | 375=375 | 17.67=17.67 | 19.01=19.01 | Depth= | Pit P6, pipe from WT6= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT6=WT6 | 150=150 | 18.00=18.00 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P7= | P7=P7 | 900 x 900=900 x 900 | DET X (Grated): blank= | WT8=WT8 | 150=150 | 18.15=18.15 | 375=375 | 17.65=17.65 | 18.81=18.81 | Depth= | Pit P7, pipe from WT7= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT7=WT7 | 150=150 | 18.15=18.15 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P9= | P9=P9 | 450 x 450=450 x 450 | DET X (Grated): blank= | FROM: blank= | DIA (Inlet): blank= | IL (Inlet): blank= | DIA (Outlet): blank= | IL (Outlet): blank= | 19.45=19.45 | Depth= | Pit P10= | P10=P10 | 450 x 450=450 x 450 | DET X (Grated): blank= | FROM: blank= | DIA (Inlet): blank= | IL (Inlet): blank= | DIA (Outlet): blank= | IL (Outlet): blank= | 19.45=19.45 | Depth= | Pit C1= | C1=C1 | 1 / 900 x 900; 1 / 900 x 900=1 / 900 x 900; 1 / 900 x 900 | DET X (Grated): blank= | P1=P1 | 450...",
+          "evidence": "RECORDED, not judged: FULL schedule rows before = Pit P1= | P1=P1 | 900 x 900=900 x 900 | DET X (Grated): blank= | P2=P2 | 450=450 | 16.98=16.98 | 450=450 | 16.93=16.93 | 18.81=18.81 | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | AGI=AGI | 100=100 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | AGI=AGI | 100=100 | 18.50=18.50 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2= | P2=P2 | 900 x 900=900 x 900 | DET X (Grated): blank= | P3=P3 | 450=450 | 17.13=17.13 | 450=450 | 17.08=17.08 | 18.91=18.91 | Depth= | Pit P2, pipe from WT11= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT11=WT11 | 150=150 | 18.14=18.14 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT12= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT12=WT12 | 150=150 | 18.19=18.19 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT2= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT2=WT2 | 150=150 | 18.28=18.28 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT1= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT1=WT1 | 150=150 | 18.34=18.34 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3= | P3=P3 | 900 x 900=900 x 900 | DET X (Grated): blank= | P4=P4 | 450=450 | 17.30=17.30 | 450=450 | 17.25=17.25 | 18.88=18.88 | Depth= | Pit P3, pipe from WT10= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT10=WT10 | 150=150 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT9= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT9=WT9 | 150=150 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT4= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT4=WT4 | 150=150 | 18.24=18.24 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT3= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT3=WT3 | 150=150 | 18.24=18.24 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P4= | P4=P4 | 900 x 900=900 x 900 | DET X (Grated): blank= | P5=P5 | 450=450 | 17.45=17.45 | 450=450 | 17.40=17.40 | 18.86=18.86 | Depth= | Pit P5= | P5=P5 | 900 x 900=900 x 900 | DET X (Grated): blank= | P7=P7 | 375=375 | 17.58=17.58 | 450=450 | 17.53=17.53 | 18.85=18.85 | Depth= | Pit P5, pipe from P6= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | P6=P6 | 375=375 | 17.58=17.58 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P6= | P6=P6 | 900 x 900=900 x 900 | DET X (Grated): blank= | WT5=WT5 | 150=150 | 18.00=18.00 | 375=375 | 17.67=17.67 | 19.01=19.01 | Depth= | Pit P6, pipe from WT6= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT6=WT6 | 150=150 | 18.00=18.00 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P7= | P7=P7 | 900 x 900=900 x 900 | DET X (Grated): blank= | WT8=WT8 | 150=150 | 18.15=18.15 | 375=375 | 17.65=17.65 | 18.81=18.81 | Depth= | Pit P7, pipe from WT7= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT7=WT7 | 150=150 | 18.15=18.15 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P9= | P9=P9 | 450 x 450=450 x 450 | DET X (Grated): blank= | FROM: blank= | DIA (Inlet): blank= | IL (Inlet): blank= | DIA (Outlet): blank= | IL (Outlet): blank= | 19.45=19.45 | Depth= | Pit P10= | P10=P10 | 450 x 450=450 x 450 | DET X (Grated): blank= | FROM: blank= | DIA (Inlet): blank= | IL (Inlet): blank= | DIA (Outlet): blank= | IL (Outlet): blank= | 19.45=19.45 | Depth= | Pit C1= | C1=C1 | 1 / 900 x 900; 1 / 900 x 900=1 / 900 x 900; 1 / 900 x 900 | DET X (Grated): blank= | P1=P1 | 450..."
+        },
+        {
+          "n": 22,
+          "text": "record $rows1 \"FULL schedule rows after Yes (C1, AGI, TG, WT rows must read as before)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Pit P1= | P1=P1 | 900 x 900=900 x 900 | DET X (Grated): blank= | P2=P2 | 450=450 | 16.98=16.98 | 450=450 | 16.93=16.93 | 18.81=18.81 | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | AGI=AGI | 100=100 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | AGI=AGI | 100=100 | 18.50=18.50 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2= | P2=P2 | 900 x 900=900 x 900 | DET X (Grated): blank= | P3=P3 | 450=450 | 17.13=17.13 | 450=450 | 17.08=17.08 | 18.91=18.91 | Depth= | Pit P2, pipe from WT11= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT11=WT11 | 150=150 | 18.14=18.14 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT12= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT12=WT12 | 150=150 | 18.19=18.19 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT2= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT2=WT2 | 150=150 | 18.28=18.28 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT1= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT1=WT1 | 150=150 | 18.34=18.34 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3= | P3=P3 | 900 x 900=900 x 900 | DET X (Grated): blank= | P4=P4 | 450=450 | 17.30=17.30 | 450=450 | 17.25=17.25 | 18.88=18.88 | Depth= | Pit P3, pipe from WT10= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT10=WT10 | 150=150 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT9= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT9=WT9 | 150=150 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT4= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT4=WT4 | 150=150 | 18.24=18.24 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT3= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT3=WT3 | 150=150 | 18.24=18.24 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P4= | P4=P4 | 900 x 900=900 x 900 | DET X (Grated): blank= | P5=P5 | 450=450 | 17.45=17.45 | 450=450 | 17.40=17.40 | 18.86=18.86 | Depth= | Pit P5= | P5=P5 | 900 x 900=900 x 900 | DET X (Grated): blank= | P7=P7 | 375=375 | 17.58=17.58 | 450=450 | 17.53=17.53 | 18.85=18.85 | Depth= | Pit P5, pipe from P6= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | P6=P6 | 375=375 | 17.58=17.58 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P6= | P6=P6 | 900 x 900=900 x 900 | DET X (Grated): blank= | WT5=WT5 | 150=150 | 18.00=18.00 | 375=375 | 17.67=17.67 | 19.01=19.01 | Depth= | Pit P6, pipe from WT6= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT6=WT6 | 150=150 | 18.00=18.00 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P7= | P7=P7 | 900 x 900=900 x 900 | DET X (Grated): blank= | WT8=WT8 | 150=150 | 18.15=18.15 | 375=375 | 17.65=17.65 | 18.81=18.81 | Depth= | Pit P7, pipe from WT7= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT7=WT7 | 150=150 | 18.15=18.15 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P8= | P8=P8 | 450 x 450=450 x 450 | DET X (Grated): blank= | FROM: blank= | DIA (Inlet): blank= | IL (Inlet): blank= | DIA (Outlet): blank= | IL (Outlet): blank= | 19.45=19.45 | Depth= | Pit P9= | P9=P9 | 450 x 450=450 x 450 | DET X (Grated): blank= | FROM: blank= | DIA (Inlet): blank= | IL (Inlet): blank= | DIA (Outlet): blank= | IL (Outlet): blank= | 19.45=19.45 | Depth= | Pit C1= | C1=C1 | 1 / 900 x 900; 1 / 900 x 900=1 / 900 x 900; 1 / 900 x 900 | DET X (Grated): blank= | P1=P1 | 450=45...",
+          "evidence": "RECORDED, not judged: FULL schedule rows after Yes (C1, AGI, TG, WT rows must read as before) = Pit P1= | P1=P1 | 900 x 900=900 x 900 | DET X (Grated): blank= | P2=P2 | 450=450 | 16.98=16.98 | 450=450 | 16.93=16.93 | 18.81=18.81 | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | AGI=AGI | 100=100 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | AGI=AGI | 100=100 | 18.50=18.50 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2= | P2=P2 | 900 x 900=900 x 900 | DET X (Grated): blank= | P3=P3 | 450=450 | 17.13=17.13 | 450=450 | 17.08=17.08 | 18.91=18.91 | Depth= | Pit P2, pipe from WT11= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT11=WT11 | 150=150 | 18.14=18.14 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT12= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT12=WT12 | 150=150 | 18.19=18.19 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT2= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT2=WT2 | 150=150 | 18.28=18.28 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT1= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT1=WT1 | 150=150 | 18.34=18.34 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3= | P3=P3 | 900 x 900=900 x 900 | DET X (Grated): blank= | P4=P4 | 450=450 | 17.30=17.30 | 450=450 | 17.25=17.25 | 18.88=18.88 | Depth= | Pit P3, pipe from WT10= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT10=WT10 | 150=150 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT9= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT9=WT9 | 150=150 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT4= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT4=WT4 | 150=150 | 18.24=18.24 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT3= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT3=WT3 | 150=150 | 18.24=18.24 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P4= | P4=P4 | 900 x 900=900 x 900 | DET X (Grated): blank= | P5=P5 | 450=450 | 17.45=17.45 | 450=450 | 17.40=17.40 | 18.86=18.86 | Depth= | Pit P5= | P5=P5 | 900 x 900=900 x 900 | DET X (Grated): blank= | P7=P7 | 375=375 | 17.58=17.58 | 450=450 | 17.53=17.53 | 18.85=18.85 | Depth= | Pit P5, pipe from P6= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | P6=P6 | 375=375 | 17.58=17.58 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P6= | P6=P6 | 900 x 900=900 x 900 | DET X (Grated): blank= | WT5=WT5 | 150=150 | 18.00=18.00 | 375=375 | 17.67=17.67 | 19.01=19.01 | Depth= | Pit P6, pipe from WT6= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT6=WT6 | 150=150 | 18.00=18.00 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P7= | P7=P7 | 900 x 900=900 x 900 | DET X (Grated): blank= | WT8=WT8 | 150=150 | 18.15=18.15 | 375=375 | 17.65=17.65 | 18.81=18.81 | Depth= | Pit P7, pipe from WT7= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT7=WT7 | 150=150 | 18.15=18.15 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P8= | P8=P8 | 450 x 450=450 x 450 | DET X (Grated): blank= | FROM: blank= | DIA (Inlet): blank= | IL (Inlet): blank= | DIA (Outlet): blank= | IL (Outlet): blank= | 19.45=19.45 | Depth= | Pit P9= | P9=P9 | 450 x 450=450 x 450 | DET X (Grated): blank= | FROM: blank= | DIA (Inlet): blank= | IL (Inlet): blank= | DIA (Outlet): blank= | IL (Outlet): blank= | 19.45=19.45 | Depth= | Pit C1= | C1=C1 | 1 / 900 x 900; 1 / 900 x 900=1 / 900 x 900; 1 / 900 x 900 | DET X (Grated): blank= | P1=P1 | 450=45..."
+        },
+        {
+          "n": 23,
+          "text": "record $rows2 \"FULL schedule rows after the two U\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Pit P1= | P1=P1 | 900 x 900=900 x 900 | DET X (Grated): blank= | P2=P2 | 450=450 | 16.98=16.98 | 450=450 | 16.93=16.93 | 18.81=18.81 | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | AGI=AGI | 100=100 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | AGI=AGI | 100=100 | 18.50=18.50 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2= | P2=P2 | 900 x 900=900 x 900 | DET X (Grated): blank= | P3=P3 | 450=450 | 17.13=17.13 | 450=450 | 17.08=17.08 | 18.91=18.91 | Depth= | Pit P2, pipe from WT11= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT11=WT11 | 150=150 | 18.14=18.14 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT12= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT12=WT12 | 150=150 | 18.19=18.19 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT2= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT2=WT2 | 150=150 | 18.28=18.28 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT1= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT1=WT1 | 150=150 | 18.34=18.34 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3= | P3=P3 | 900 x 900=900 x 900 | DET X (Grated): blank= | P4=P4 | 450=450 | 17.30=17.30 | 450=450 | 17.25=17.25 | 18.88=18.88 | Depth= | Pit P3, pipe from WT10= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT10=WT10 | 150=150 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT9= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT9=WT9 | 150=150 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT4= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT4=WT4 | 150=150 | 18.24=18.24 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT3= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT3=WT3 | 150=150 | 18.24=18.24 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P4= | P4=P4 | 900 x 900=900 x 900 | DET X (Grated): blank= | P5=P5 | 450=450 | 17.45=17.45 | 450=450 | 17.40=17.40 | 18.86=18.86 | Depth= | Pit P5= | P5=P5 | 900 x 900=900 x 900 | DET X (Grated): blank= | P7=P7 | 375=375 | 17.58=17.58 | 450=450 | 17.53=17.53 | 18.85=18.85 | Depth= | Pit P5, pipe from P6= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | P6=P6 | 375=375 | 17.58=17.58 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P6= | P6=P6 | 900 x 900=900 x 900 | DET X (Grated): blank= | WT5=WT5 | 150=150 | 18.00=18.00 | 375=375 | 17.67=17.67 | 19.01=19.01 | Depth= | Pit P6, pipe from WT6= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT6=WT6 | 150=150 | 18.00=18.00 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P7= | P7=P7 | 900 x 900=900 x 900 | DET X (Grated): blank= | WT8=WT8 | 150=150 | 18.15=18.15 | 375=375 | 17.65=17.65 | 18.81=18.81 | Depth= | Pit P7, pipe from WT7= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT7=WT7 | 150=150 | 18.15=18.15 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P9= | P9=P9 | 450 x 450=450 x 450 | DET X (Grated): blank= | FROM: blank= | DIA (Inlet): blank= | IL (Inlet): blank= | DIA (Outlet): blank= | IL (Outlet): blank= | 19.45=19.45 | Depth= | Pit P10= | P10=P10 | 450 x 450=450 x 450 | DET X (Grated): blank= | FROM: blank= | DIA (Inlet): blank= | IL (Inlet): blank= | DIA (Outlet): blank= | IL (Outlet): blank= | 19.45=19.45 | Depth= | Pit C1= | C1=C1 | 1 / 900 x 900; 1 / 900 x 900=1 / 900 x 900; 1 / 900 x 900 | DET X (Grated): blank= | P1=P1 | 450...",
+          "evidence": "RECORDED, not judged: FULL schedule rows after the two U = Pit P1= | P1=P1 | 900 x 900=900 x 900 | DET X (Grated): blank= | P2=P2 | 450=450 | 16.98=16.98 | 450=450 | 16.93=16.93 | 18.81=18.81 | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | AGI=AGI | 100=100 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | AGI=AGI | 100=100 | 18.50=18.50 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2= | P2=P2 | 900 x 900=900 x 900 | DET X (Grated): blank= | P3=P3 | 450=450 | 17.13=17.13 | 450=450 | 17.08=17.08 | 18.91=18.91 | Depth= | Pit P2, pipe from WT11= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT11=WT11 | 150=150 | 18.14=18.14 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT12= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT12=WT12 | 150=150 | 18.19=18.19 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT2= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT2=WT2 | 150=150 | 18.28=18.28 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT1= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT1=WT1 | 150=150 | 18.34=18.34 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3= | P3=P3 | 900 x 900=900 x 900 | DET X (Grated): blank= | P4=P4 | 450=450 | 17.30=17.30 | 450=450 | 17.25=17.25 | 18.88=18.88 | Depth= | Pit P3, pipe from WT10= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT10=WT10 | 150=150 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT9= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT9=WT9 | 150=150 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT4= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT4=WT4 | 150=150 | 18.24=18.24 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT3= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT3=WT3 | 150=150 | 18.24=18.24 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P4= | P4=P4 | 900 x 900=900 x 900 | DET X (Grated): blank= | P5=P5 | 450=450 | 17.45=17.45 | 450=450 | 17.40=17.40 | 18.86=18.86 | Depth= | Pit P5= | P5=P5 | 900 x 900=900 x 900 | DET X (Grated): blank= | P7=P7 | 375=375 | 17.58=17.58 | 450=450 | 17.53=17.53 | 18.85=18.85 | Depth= | Pit P5, pipe from P6= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | P6=P6 | 375=375 | 17.58=17.58 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P6= | P6=P6 | 900 x 900=900 x 900 | DET X (Grated): blank= | WT5=WT5 | 150=150 | 18.00=18.00 | 375=375 | 17.67=17.67 | 19.01=19.01 | Depth= | Pit P6, pipe from WT6= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT6=WT6 | 150=150 | 18.00=18.00 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P7= | P7=P7 | 900 x 900=900 x 900 | DET X (Grated): blank= | WT8=WT8 | 150=150 | 18.15=18.15 | 375=375 | 17.65=17.65 | 18.81=18.81 | Depth= | Pit P7, pipe from WT7= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT7=WT7 | 150=150 | 18.15=18.15 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P9= | P9=P9 | 450 x 450=450 x 450 | DET X (Grated): blank= | FROM: blank= | DIA (Inlet): blank= | IL (Inlet): blank= | DIA (Outlet): blank= | IL (Outlet): blank= | 19.45=19.45 | Depth= | Pit P10= | P10=P10 | 450 x 450=450 x 450 | DET X (Grated): blank= | FROM: blank= | DIA (Inlet): blank= | IL (Inlet): blank= | DIA (Outlet): blank= | IL (Outlet): blank= | 19.45=19.45 | Depth= | Pit C1= | C1=C1 | 1 / 900 x 900; 1 / 900 x 900=1 / 900 x 900; 1 / 900 x 900 | DET X (Grated): blank= | P1=P1 | 450..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV30107401_B1_11675fd0c.log)",
+        "Civil CE log: 61 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: PITSCHEDULE completed 38393 ms ; Command outcome: CDRENUMBER completed 31 ms ; Command outcome: CDRENUMBER completed 103 ms ; Command outcome: PITSCHEDULE completed 36882 ms ; Command outcome: PITSCHEDULE completed 34939 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-30 01:15:37",
+      "session_id": "RUN-20261030-0107-C3.0.86-b80F1-s1",
+      "acceptance": {
+        "state": "ACCEPTED-READY",
+        "reasons": [],
+        "passing_sessions_on_this_build": 2,
+        "red_before": true
+      }
+    },
+    {
+      "id": "N09",
+      "proves_bugs": "",
+      "title": "The Pit Schedule lists P1, P2 ... P7, P9, P10 in number order and never puts P10 before P1 or P2",
+      "kind": "deterministic",
+      "order": 90,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "UX-SCHED-06 basic natural order (daily card D21)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "PITSCHEDULE on the untouched copy lists the pit rows Pit P1, Pit P2, Pit P3, Pit P4, Pit P5, Pit P6, Pit P7, Pit P9 and Pit P10 in that order from top to bottom; no Pit P10 row comes before the Pit P1 or Pit P2 row; the Close button closes the window.",
+      "why_not_unit": "The order shown depends on the live window reading the real pits of the drawing.",
+      "not_automated": [
+        "The refinement P1A straight after P1 and SPS2 before SPS10 is behind linking.pitScheduleNaturalOrder (OFF) and needs a fixture with such names: not tested.",
+        "The group order LPD, OG, P, CP, then the rest is RECORDED (the full row list), not asserted.",
+        "Pits placed new in the session (card steps 1 to 3) are not used; the fixture's own P9 and P10 prove the same sorting rule."
+      ],
+      "file_sha256": "6597D8D540B38D5E9F68644211D491E3E394938730ED269751B2428CF551D5BD",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-30 01:15:37",
+      "seconds": 60.1,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV30107401_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"PITSCHEDULE\" -Force -ExpectWindow \"Pit Schedule\" -TimeoutSec 120 -> $ps",
+          "ok": true,
+          "seconds": 16.5,
+          "evidence": "typed 'PITSCHEDULE': Command: PITSCHEDULE"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 5",
+          "ok": true,
+          "seconds": 5.0,
+          "evidence": "slept 5 s"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Pit Schedule\" -> $sd",
+          "ok": true,
+          "seconds": 9.9,
+          "evidence": "ui-dump 'Creative Engineering | Pit Schedule (PITSCHEDULE)': 660 controls, tabs: Source | Rows | Changes | Placement"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "ui-cells",
+          "text": "ui-cells $sd -> $rows",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "ui-cells: 297 grid row/cell entries, 4806 characters"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Pit Schedule\" \"Close\" -> $close",
+          "ok": true,
+          "seconds": 17.1,
+          "evidence": "pressed 'Close' in /Pit Schedule/: window closed = True"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"Pit Schedule\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /Pit Schedule/ closed after 0 s"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "matches $rows \"Pit P1=.*Pit P2=.*Pit P3=.*Pit P4=.*Pit P5=.*Pit P6=.*Pit P7=.*Pit P9=.*Pit P10=\"",
+          "ok": true,
+          "expected": "matches /Pit P1=.*Pit P2=.*Pit P3=.*Pit P4=.*Pit P5=.*Pit P6=.*Pit P7=.*Pit P9=.*Pit P10=/",
+          "actual": "Pit P1= | P1=P1 | 900 x 900=900 x 900 | DET X (Grated): blank= | P2=P2 | 450=450 | 16.98=16.98 | 450=450 | 16.93=16.93 | 18.81=18.81 | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: bla...",
+          "evidence": "matched 'Pit P1= | P1=P1 | 900 x 900=900 x 900 | DET X (Grated): blank= | P2=P2 | 450=450 | 16.98=16.98 | 450=450 | 16.93=16.93 | 18.81=18.81 | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | AGI=AGI | 100=100 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | AGI=AGI | 100=100 | 18.50=18.50 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2= | P2=P2 | 900 x 900=900 x 900 | DET X (Grated): blank= | P3=P3 | 450=450 | 17.13=17.13 | 450=450 | 17.08=17.08 | 18.91=18.91 | Depth= | Pit P2, pipe from WT11= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT11=WT11 | 150=150 | 18.14=18.14 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT12= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT12=WT12 | 150=150 | 18.19=18.19 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT2= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT2=WT2 | 150=150 | 18.28=18.28 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT1= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT1=WT1 | 150=150 | 18.34=18.34 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3= | P3=P3 | 900 x 900=900 x 900 | DET X (Grated): blank= | P4=P4 | 450=450 | 17.30=17.30 | 450=450 | 17.25=17.25 | 18.88=18.88 | Depth= | Pit P3, pipe from WT10= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT10=WT10 | 150=150 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT9= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT9=WT9 | 150=150 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT4= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT4=WT4 | 150=150 | 18.24=18.24 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT3= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT3=WT3 | 150=150 | 18.24=18.24 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P4= | P4=P4 | 900 x 900=900 x 900 | DET X (Grated): blank= | P5=P5 | 450=450 | 17.45=17.45 | 450=450 | 17.40=17.40 | 18.86=18.86 | Depth= | Pit P5= | P5=P5 | 900 x 900=900 x 900 | DET X (Grated): blank= | P7=P7 | 375=375 | 17.58=17.58 | 450=450 | 17.53=17.53 | 18.85=18.85 | Depth= | Pit P5, pipe from P6= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | P6=P6 | 375=375 | 17.58=17.58 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P6= | P6=P6 | 900 x 900=900 x 900 | DET X (Grated): blank= | WT5=WT5 | 150=150 | 18.00=18.00 | 375=375 | 17.67=17.67 | 19.01=19.01 | Depth= | Pit P6, pipe from WT6= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT6=WT6 | 150=150 | 18.00=18.00 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P7= | P7=P7 | 900 x 900=900 x 900 | DET X (Grated): blank= | WT8=WT8 | 150=150 | 18.15=18.15 | 375=375 | 17.65=17.65 | 18.81=18.81 | Depth= | Pit P7, pipe from WT7= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT7=WT7 | 150=150 | 18.15=18.15 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P9= | P9=P9 | 450 x 450=450 x 450 | DET X (Grated): blank= | FROM: blank= | DIA (Inlet): blank= | IL (Inlet): blank= | DIA (Outlet): blank= | IL (Outlet): blank= | 19.45=19.45 | Depth= | Pit P10='"
+        },
+        {
+          "n": 2,
+          "text": "matches $rows \"^(?!.*Pit P10=.*Pit P2=)\"",
+          "ok": true,
+          "expected": "matches /^(?!.*Pit P10=.*Pit P2=)/",
+          "actual": "Pit P1= | P1=P1 | 900 x 900=900 x 900 | DET X (Grated): blank= | P2=P2 | 450=450 | 16.98=16.98 | 450=450 | 16.93=16.93 | 18.81=18.81 | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: bla...",
+          "evidence": "matched ''"
+        },
+        {
+          "n": 3,
+          "text": "matches $rows \"^(?!.*Pit P10=.*Pit P1=)\"",
+          "ok": true,
+          "expected": "matches /^(?!.*Pit P10=.*Pit P1=)/",
+          "actual": "Pit P1= | P1=P1 | 900 x 900=900 x 900 | DET X (Grated): blank= | P2=P2 | 450=450 | 16.98=16.98 | 450=450 | 16.93=16.93 | 18.81=18.81 | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: bla...",
+          "evidence": "matched ''"
+        },
+        {
+          "n": 4,
+          "text": "window-closed $close",
+          "ok": true,
+          "expected": "the window closed",
+          "actual": "closed=True",
+          "evidence": "ui-press reported window_closed = True"
+        },
+        {
+          "n": 5,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 6,
+          "text": "record $rows \"FULL every Pit Schedule row and cell, top to bottom\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Pit P1= | P1=P1 | 900 x 900=900 x 900 | DET X (Grated): blank= | P2=P2 | 450=450 | 16.98=16.98 | 450=450 | 16.93=16.93 | 18.81=18.81 | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | AGI=AGI | 100=100 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | AGI=AGI | 100=100 | 18.50=18.50 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2= | P2=P2 | 900 x 900=900 x 900 | DET X (Grated): blank= | P3=P3 | 450=450 | 17.13=17.13 | 450=450 | 17.08=17.08 | 18.91=18.91 | Depth= | Pit P2, pipe from WT11= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT11=WT11 | 150=150 | 18.14=18.14 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT12= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT12=WT12 | 150=150 | 18.19=18.19 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT2= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT2=WT2 | 150=150 | 18.28=18.28 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT1= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT1=WT1 | 150=150 | 18.34=18.34 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3= | P3=P3 | 900 x 900=900 x 900 | DET X (Grated): blank= | P4=P4 | 450=450 | 17.30=17.30 | 450=450 | 17.25=17.25 | 18.88=18.88 | Depth= | Pit P3, pipe from WT10= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT10=WT10 | 150=150 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT9= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT9=WT9 | 150=150 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT4= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT4=WT4 | 150=150 | 18.24=18.24 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT3= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT3=WT3 | 150=150 | 18.24=18.24 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P4= | P4=P4 | 900 x 900=900 x 900 | DET X (Grated): blank= | P5=P5 | 450=450 | 17.45=17.45 | 450=450 | 17.40=17.40 | 18.86=18.86 | Depth= | Pit P5= | P5=P5 | 900 x 900=900 x 900 | DET X (Grated): blank= | P7=P7 | 375=375 | 17.58=17.58 | 450=450 | 17.53=17.53 | 18.85=18.85 | Depth= | Pit P5, pipe from P6= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | P6=P6 | 375=375 | 17.58=17.58 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P6= | P6=P6 | 900 x 900=900 x 900 | DET X (Grated): blank= | WT5=WT5 | 150=150 | 18.00=18.00 | 375=375 | 17.67=17.67 | 19.01=19.01 | Depth= | Pit P6, pipe from WT6= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT6=WT6 | 150=150 | 18.00=18.00 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P7= | P7=P7 | 900 x 900=900 x 900 | DET X (Grated): blank= | WT8=WT8 | 150=150 | 18.15=18.15 | 375=375 | 17.65=17.65 | 18.81=18.81 | Depth= | Pit P7, pipe from WT7= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT7=WT7 | 150=150 | 18.15=18.15 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P9= | P9=P9 | 450 x 450=450 x 450 | DET X (Grated): blank= | FROM: blank= | DIA (Inlet): blank= | IL (Inlet): blank= | DIA (Outlet): blank= | IL (Outlet): blank= | 19.45=19.45 | Depth= | Pit P10= | P10=P10 | 450 x 450=450 x 450 | DET X (Grated): blank= | FROM: blank= | DIA (Inlet): blank= | IL (Inlet): blank= | DIA (Outlet): blank= | IL (Outlet): blank= | 19.45=19.45 | Depth= | Pit C1= | C1=C1 | 1 / 900 x 900; 1 / 900 x 900=1 / 900 x 900; 1 / 900 x 900 | DET X (Grated): blank= | P1=P1 | 450...",
+          "evidence": "RECORDED, not judged: FULL every Pit Schedule row and cell, top to bottom = Pit P1= | P1=P1 | 900 x 900=900 x 900 | DET X (Grated): blank= | P2=P2 | 450=450 | 16.98=16.98 | 450=450 | 16.93=16.93 | 18.81=18.81 | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | AGI=AGI | 100=100 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | AGI=AGI | 100=100 | 18.50=18.50 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2= | P2=P2 | 900 x 900=900 x 900 | DET X (Grated): blank= | P3=P3 | 450=450 | 17.13=17.13 | 450=450 | 17.08=17.08 | 18.91=18.91 | Depth= | Pit P2, pipe from WT11= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT11=WT11 | 150=150 | 18.14=18.14 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT12= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT12=WT12 | 150=150 | 18.19=18.19 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT2= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT2=WT2 | 150=150 | 18.28=18.28 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT1= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT1=WT1 | 150=150 | 18.34=18.34 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3= | P3=P3 | 900 x 900=900 x 900 | DET X (Grated): blank= | P4=P4 | 450=450 | 17.30=17.30 | 450=450 | 17.25=17.25 | 18.88=18.88 | Depth= | Pit P3, pipe from WT10= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT10=WT10 | 150=150 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT9= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT9=WT9 | 150=150 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT4= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT4=WT4 | 150=150 | 18.24=18.24 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT3= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT3=WT3 | 150=150 | 18.24=18.24 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P4= | P4=P4 | 900 x 900=900 x 900 | DET X (Grated): blank= | P5=P5 | 450=450 | 17.45=17.45 | 450=450 | 17.40=17.40 | 18.86=18.86 | Depth= | Pit P5= | P5=P5 | 900 x 900=900 x 900 | DET X (Grated): blank= | P7=P7 | 375=375 | 17.58=17.58 | 450=450 | 17.53=17.53 | 18.85=18.85 | Depth= | Pit P5, pipe from P6= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | P6=P6 | 375=375 | 17.58=17.58 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P6= | P6=P6 | 900 x 900=900 x 900 | DET X (Grated): blank= | WT5=WT5 | 150=150 | 18.00=18.00 | 375=375 | 17.67=17.67 | 19.01=19.01 | Depth= | Pit P6, pipe from WT6= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT6=WT6 | 150=150 | 18.00=18.00 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P7= | P7=P7 | 900 x 900=900 x 900 | DET X (Grated): blank= | WT8=WT8 | 150=150 | 18.15=18.15 | 375=375 | 17.65=17.65 | 18.81=18.81 | Depth= | Pit P7, pipe from WT7= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT7=WT7 | 150=150 | 18.15=18.15 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P9= | P9=P9 | 450 x 450=450 x 450 | DET X (Grated): blank= | FROM: blank= | DIA (Inlet): blank= | IL (Inlet): blank= | DIA (Outlet): blank= | IL (Outlet): blank= | 19.45=19.45 | Depth= | Pit P10= | P10=P10 | 450 x 450=450 x 450 | DET X (Grated): blank= | FROM: blank= | DIA (Inlet): blank= | IL (Inlet): blank= | DIA (Outlet): blank= | IL (Outlet): blank= | 19.45=19.45 | Depth= | Pit C1= | C1=C1 | 1 / 900 x 900; 1 / 900 x 900=1 / 900 x 900; 1 / 900 x 900 | DET X (Grated): blank= | P1=P1 | 450..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV30107401_B1_1787517ee.log)",
+        "Civil CE log: 11 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: PITSCHEDULE completed 36615 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-30 01:16:38",
+      "session_id": "RUN-20261030-0107-C3.0.86-b80F1-s1",
+      "acceptance": {
+        "state": "ACCEPTED-READY",
+        "reasons": [],
+        "passing_sessions_on_this_build": 2,
+        "red_before": true
+      }
+    },
+    {
+      "id": "N11",
+      "proves_bugs": "",
+      "title": "After an Edit Pipe cascade from P3, U and REDO, the Pit Schedule rows of P3 and P2 carry the new levels, and after two more U every schedule row reads exactly as before the edit",
+      "kind": "deterministic",
+      "order": 110,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "Edit Pipe cascade with U and REDO, the stored-level half (gap plan section 3 item 7; card C40; R11 covers the IL texts)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "Before the edit the P3 row reads FROM P4, 450, 17.30, 450, 17.25, cover 18.88. Edit Pipe on 10A98D with 17.60 / 17.50, Recalculate Yes and Apply say 'Updated 4 pipes and 3 pits from P3 (IL 17.50)'; one U echoes CDEDIT; after 12 s REDO says 'Everything has been redone'; the Pit Schedule then shows the P3 row with inlet 17.50 and outlet 17.45 and the P2 row with inlet 17.33 and outlet 17.28; two U (PITSCHEDULE, then CDEDIT) and the schedule rows read exactly as before the edit.",
+      "why_not_unit": "The real Edit Pipe window, the downstream recalculation, CE's stored records, the schedule and AutoCAD's undo stack all take part; only a live drawing shows that U and REDO carry the stored levels too.",
+      "not_automated": [
+        "The Recalculate box body and the STUB to X1 warning are not proved (as R11).",
+        "Pipe-by-pipe stored grades are not read (the schedule shows pit levels, not grades)."
+      ],
+      "file_sha256": "C13A2B8D31203C2DB6263B4B5BAD0791713C59594D9D7D334E153F9CB59C78AC",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-30 01:16:38",
+      "seconds": 294.6,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"PITSCHEDULE\" -Force -ExpectWindow \"Pit Schedule\" -TimeoutSec 120 -> $ps0",
+          "ok": true,
+          "seconds": 16.9,
+          "evidence": "typed 'PITSCHEDULE': Command: PITSCHEDULE"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 5",
+          "ok": true,
+          "seconds": 5.0,
+          "evidence": "slept 5 s"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Pit Schedule\" -> $sd0",
+          "ok": true,
+          "seconds": 10.6,
+          "evidence": "ui-dump 'Creative Engineering | Pit Schedule (PITSCHEDULE)': 660 controls, tabs: Source | Rows | Changes | Placement"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ui-cells",
+          "text": "ui-cells $sd0 -> $rows0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "ui-cells: 297 grid row/cell entries, 4806 characters"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Pit Schedule\" \"Close\" -> $close0",
+          "ok": true,
+          "seconds": 15.7,
+          "evidence": "pressed 'Close' in /Pit Schedule/: window closed = True"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"Pit Schedule\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /Pit Schedule/ closed after 0 s"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM{NL}_W{NL}50000,-30000{NL}80000,-20000\" -Force",
+          "ok": true,
+          "seconds": 2.7,
+          "evidence": "typed '_.ZOOM _W 50000,-30000 80000,-20000': Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _W | Specify first corner: 50000,-30000 | Specify oppos..."
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"10A98D\"",
+          "ok": true,
+          "seconds": 2.3,
+          "evidence": "pick-first 10A98D: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"10A98D\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDEDIT{NL}Y\" -Force -ExpectWindow \"Edit Pipe\" -TimeoutSec 120 -> $edit_t1",
+          "ok": true,
+          "seconds": 15.5,
+          "evidence": "typed 'CDEDIT Y': Command: | Command: CDEDIT | This pipe was drawn with an older version of CE. Is the highlighted text \"450 DIA. STORMPRO PIPE AT 1 IN 193 19.30m DET...\" this pipe's label? [Yes/No] <Yes>: Y"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"Edit Pipe\" \"C2.FirstInvert\" \"17.60\"",
+          "ok": true,
+          "seconds": 9.8,
+          "evidence": "ui set 'Edit Pipe' C2.FirstInvert = 17.60: "
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"Edit Pipe\" \"C2.SecondInvert\" \"17.50\"",
+          "ok": true,
+          "seconds": 4.2,
+          "evidence": "ui set 'Edit Pipe' C2.SecondInvert = 17.50: "
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Edit Pipe\" \"Edit pipe, Save\" -> $save_press",
+          "ok": true,
+          "seconds": 11.8,
+          "evidence": "pressed 'Edit pipe, Save' in /Edit Pipe/: window closed = True"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 4",
+          "ok": true,
+          "seconds": 4.0,
+          "evidence": "slept 4 s"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "msgbox-answer",
+          "text": "msgbox-answer \"*Recalculate*\" Yes",
+          "ok": true,
+          "seconds": 21.5,
+          "evidence": "msgbox-answer '*Recalculate*' Yes: answered 'Yes' to \"CE - Recalculate downstream inverts?\" by BM_CLICK; the box closed [tries: 1]"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "ui2-press",
+          "text": "ui2-press \"Cascade Preview\" \"Apply\" -Secs 120",
+          "ok": true,
+          "seconds": 33.5,
+          "evidence": "ui press 'Cascade Preview' 'Apply': "
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -> $u1",
+          "ok": true,
+          "seconds": 2.4,
+          "evidence": "typed 'U': Command: | Command: U | CDEDIT"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 12",
+          "ok": true,
+          "seconds": 12.0,
+          "evidence": "slept 12 s"
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"REDO\" -> $redo1",
+          "ok": true,
+          "seconds": 2.3,
+          "evidence": "typed 'REDO': Command: | Command: REDO | CDEDIT | Everything has been redone"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"PITSCHEDULE\" -Force -ExpectWindow \"Pit Schedule\" -TimeoutSec 120 -> $ps1",
+          "ok": true,
+          "seconds": 17.6,
+          "evidence": "typed 'PITSCHEDULE': Command: | Command: PITSCHEDULE"
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 5",
+          "ok": true,
+          "seconds": 5.0,
+          "evidence": "slept 5 s"
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Pit Schedule\" -> $sd1",
+          "ok": true,
+          "seconds": 10.2,
+          "evidence": "ui-dump 'Creative Engineering | Pit Schedule (PITSCHEDULE)': 660 controls, tabs: Source | Rows | Changes | Placement"
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "ui-cells",
+          "text": "ui-cells $sd1 -> $rows1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "ui-cells: 297 grid row/cell entries, 4806 characters"
+        },
+        {
+          "n": 29,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Pit Schedule\" \"Close\" -> $close1",
+          "ok": true,
+          "seconds": 16.3,
+          "evidence": "pressed 'Close' in /Pit Schedule/: window closed = True"
+        },
+        {
+          "n": 30,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"Pit Schedule\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /Pit Schedule/ closed after 0 s"
+        },
+        {
+          "n": 31,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 32,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -> $u2",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "typed 'U': Command: | Command: U | PITSCHEDULE"
+        },
+        {
+          "n": 33,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 34,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -> $u3",
+          "ok": true,
+          "seconds": 2.3,
+          "evidence": "typed 'U': Command: | Command: U | CDEDIT"
+        },
+        {
+          "n": 35,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 36,
+          "phase": "case",
+          "verb": "set",
+          "text": "set $u23 \"{$u2} | {$u3}\"",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "set $u23"
+        },
+        {
+          "n": 37,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"PITSCHEDULE\" -Force -ExpectWindow \"Pit Schedule\" -TimeoutSec 120 -> $ps2",
+          "ok": true,
+          "seconds": 12.6,
+          "evidence": "typed 'PITSCHEDULE': Command: | Command: PITSCHEDULE"
+        },
+        {
+          "n": 38,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 5",
+          "ok": true,
+          "seconds": 5.0,
+          "evidence": "slept 5 s"
+        },
+        {
+          "n": 39,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Pit Schedule\" -> $sd2",
+          "ok": true,
+          "seconds": 10.4,
+          "evidence": "ui-dump 'Creative Engineering | Pit Schedule (PITSCHEDULE)': 660 controls, tabs: Source | Rows | Changes | Placement"
+        },
+        {
+          "n": 40,
+          "phase": "case",
+          "verb": "ui-cells",
+          "text": "ui-cells $sd2 -> $rows2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "ui-cells: 297 grid row/cell entries, 4806 characters"
+        },
+        {
+          "n": 41,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Pit Schedule\" \"Close\" -> $close2",
+          "ok": true,
+          "seconds": 16.4,
+          "evidence": "pressed 'Close' in /Pit Schedule/: window closed = True"
+        },
+        {
+          "n": 42,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"Pit Schedule\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /Pit Schedule/ closed after 0 s"
+        },
+        {
+          "n": 43,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "wait for idle: idle"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"Updated 4 pipes and 3 pits from P3 (IL 17.50)\"",
+          "ok": true,
+          "expected": "command line has 'Updated 4 pipes and 3 pits from P3 (IL 17.50)'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CDEDIT-CASCADE] Updated 4 pipes and 3 pits from P3 (IL 17.50). Min grade: 1:16.'"
+        },
+        {
+          "n": 2,
+          "text": "contains $u1 \"CDEDIT\"",
+          "ok": true,
+          "expected": "contains 'CDEDIT'",
+          "actual": "Command: | Command: U | CDEDIT",
+          "evidence": "found 'CDEDIT' in: Command: | Command: U | CDEDIT"
+        },
+        {
+          "n": 3,
+          "text": "history has \"Everything has been redone\"",
+          "ok": true,
+          "expected": "command line has 'Everything has been redone'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Everything has been redone'"
+        },
+        {
+          "n": 4,
+          "text": "matches $rows0 \"Pit P3= \\| P3=P3 \\| [^|]* \\| [^|]* \\| P4=P4 \\| 450=450 \\| 17\\.30=17\\.30 \\| 450=450 \\| 17\\.25=17\\.25 \\| 18\\.88=18\\.88\"",
+          "ok": true,
+          "expected": "matches /Pit P3= \\| P3=P3 \\| [^|]* \\| [^|]* \\| P4=P4 \\| 450=450 \\| 17\\.30=17\\.30 \\| 450=450 \\| 17\\.25=17\\.25 \\| 18\\.88=18\\.88/",
+          "actual": "Pit P1= | P1=P1 | 900 x 900=900 x 900 | DET X (Grated): blank= | P2=P2 | 450=450 | 16.98=16.98 | 450=450 | 16.93=16.93 | 18.81=18.81 | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: bla...",
+          "evidence": "matched 'Pit P3= | P3=P3 | 900 x 900=900 x 900 | DET X (Grated): blank= | P4=P4 | 450=450 | 17.30=17.30 | 450=450 | 17.25=17.25 | 18.88=18.88'"
+        },
+        {
+          "n": 5,
+          "text": "matches $rows1 \"Pit P3= \\| P3=P3 \\| [^|]* \\| [^|]* \\| P4=P4 \\| 450=450 \\| 17\\.50*=17\\.50* \\| 450=450 \\| 17\\.450*=17\\.450* \\| 18\\.88=18\\.88\"",
+          "ok": true,
+          "expected": "matches /Pit P3= \\| P3=P3 \\| [^|]* \\| [^|]* \\| P4=P4 \\| 450=450 \\| 17\\.50*=17\\.50* \\| 450=450 \\| 17\\.450*=17\\.450* \\| 18\\.88=18\\.88/",
+          "actual": "Pit P1= | P1=P1 | 900 x 900=900 x 900 | DET X (Grated): blank= | P2=P2 | 450=450 | 17.18=17.18 | 450=450 | 17.13=17.13 | 18.81=18.81 | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: bla...",
+          "evidence": "matched 'Pit P3= | P3=P3 | 900 x 900=900 x 900 | DET X (Grated): blank= | P4=P4 | 450=450 | 17.50=17.50 | 450=450 | 17.45=17.45 | 18.88=18.88'"
+        },
+        {
+          "n": 6,
+          "text": "matches $rows1 \"Pit P2= \\| P2=P2 \\| [^|]* \\| [^|]* \\| P3=P3 \\| 450=450 \\| 17\\.330*=17\\.330* \\| 450=450 \\| 17\\.280*=17\\.280* \\|\"",
+          "ok": true,
+          "expected": "matches /Pit P2= \\| P2=P2 \\| [^|]* \\| [^|]* \\| P3=P3 \\| 450=450 \\| 17\\.330*=17\\.330* \\| 450=450 \\| 17\\.280*=17\\.280* \\|/",
+          "actual": "Pit P1= | P1=P1 | 900 x 900=900 x 900 | DET X (Grated): blank= | P2=P2 | 450=450 | 17.18=17.18 | 450=450 | 17.13=17.13 | 18.81=18.81 | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: bla...",
+          "evidence": "matched 'Pit P2= | P2=P2 | 900 x 900=900 x 900 | DET X (Grated): blank= | P3=P3 | 450=450 | 17.33=17.33 | 450=450 | 17.28=17.28 |'"
+        },
+        {
+          "n": 7,
+          "text": "contains $u23 \"CDEDIT\"",
+          "ok": true,
+          "expected": "contains 'CDEDIT'",
+          "actual": "Command: | Command: U | PITSCHEDULE | Command: | Command: U | CDEDIT",
+          "evidence": "found 'CDEDIT' in: Command: | Command: U | PITSCHEDULE | Command: | Command: U | CDEDIT"
+        },
+        {
+          "n": 8,
+          "text": "equals $rows2 $rows0",
+          "ok": true,
+          "expected": "Pit P1= | P1=P1 | 900 x 900=900 x 900 | DET X (Grated): blank= | P2=P2 | 450=450 | 16.98=16.98 | 450=450 | 16.93=16.93 | 18.81=18.81 | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | AGI=AGI | 100=100 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | AGI=AGI | 100=100 | 18.50=18.50 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2= | P2=P2 | 900 x 900=900 x 900 | DET X (Grated): blank= | P3=P3 | 450=450 | 17.13=17.13 | 450=450 | 17.08=17.08 | 18.91=18.91 | Depth= | Pit P2, pipe from WT11= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT11=WT11 | 150=150 | 18.14=18.14 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT12= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT12=WT12 | 150=150 | 18.19=18.19 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT2= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT2=WT2 | 150=150 | 18.28=18.28 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT1= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT1=WT1 | 150=150 | 18.34=18.34 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3= | P3=P3 | 900 x 900=900 x 900 | DET X (Grated): blank= | P4=P4 | 450=450 | 17.30=17.30 | 450=450 | 17.25=17.25 | 18.88=18.88 | Depth= | Pit P3, pipe from WT10= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT10=WT10 | 150=150 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT9= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT9=WT9 | 150=150 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT4= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT4=WT4 | 150=150 | 18.24=18.24 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT3= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT3=WT3 | 150=150 | 18.24=18.24 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P4= | P4=P4 | 900 x 900=900 x 900 | DET X (Grated): blank= | P5=P5 | 450=450 | 17.45=17.45 | 450=450 | 17.40=17.40 | 18.86=18.86 | Depth= | Pit P5= | P5=P5 | 900 x 900=900 x 900 | DET X (Grated): blank= | P7=P7 | 375=375 | 17.58=17.58 | 450=450 | 17.53=17.53 | 18.85=18.85 | Depth= | Pit P5, pipe from P6= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | P6=P6 | 375=375 | 17.58=17.58 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P6= | P6=P6 | 900 x 900=900 x 900 | DET X (Grated): blank= | WT5=WT5 | 150=150 | 18.00=18.00 | 375=375 | 17.67=17.67 | 19.01=19.01 | Depth= | Pit P6, pipe from WT6= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT6=WT6 | 150=150 | 18.00=18.00 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P7= | P7=P7 | 900 x 900=900 x 900 | DET X (Grated): blank= | WT8=WT8 | 150=150 | 18.15=18.15 | 375=375 | 17.65=17.65 | 18.81=18.81 | Depth= | Pit P7, pipe from WT7= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT7=WT7 | 150=150 | 18.15=18.15 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P9= | P9=P9 | 450 x 450=450 x 450 | DET X (Grated): blank= | FROM: blank= | DIA (Inlet): blank= | IL (Inlet): blank= | DIA (Outlet): blank= | IL (Outlet): blank= | 19.45=19.45 | Depth= | Pit P10= | P10=P10 | 450 x 450=450 x 450 | DET X (Grated): blank= | FROM: blank= | DIA (Inlet): blank= | IL (Inlet): blank= | DIA (Outlet): blank= | IL (Outlet): blank= | 19.45=19.45 | Depth= | Pit C1= | C1=C1 | 1 / 900 x 900; 1 / 900 x 900=1 / 900 x 900; 1 / 900 x 900 | DET X (Grated): blank= | P1=P1 | 450=450 | 16.87=16.87 | 375=375 | 16.82=16.82 | 18.74=18.74 | Depth= | Pit C1, pipe from TG= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | TG=TG | 225=225 | 17.98=17.98 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit C1, pipe from AGI= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | AGI=AGI | 100=100 | 18.00=18.00 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit C1, pipe from AGI= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | AGI=AGI | 100=100 | 18.20=18.20 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit X1= | X1=X1 | 900 x 900=900 x 900 | DET X (Grated): blank= | Unknowns=Unknowns | 450=450 | IL (Inlet): blank= | 375=375 | IL (Outlet): blank= | 18.42=18.42 | Depth=",
+          "actual": "Pit P1= | P1=P1 | 900 x 900=900 x 900 | DET X (Grated): blank= | P2=P2 | 450=450 | 16.98=16.98 | 450=450 | 16.93=16.93 | 18.81=18.81 | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | AGI=AGI | 100=100 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | AGI=AGI | 100=100 | 18.50=18.50 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2= | P2=P2 | 900 x 900=900 x 900 | DET X (Grated): blank= | P3=P3 | 450=450 | 17.13=17.13 | 450=450 | 17.08=17.08 | 18.91=18.91 | Depth= | Pit P2, pipe from WT11= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT11=WT11 | 150=150 | 18.14=18.14 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT12= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT12=WT12 | 150=150 | 18.19=18.19 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT2= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT2=WT2 | 150=150 | 18.28=18.28 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT1= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT1=WT1 | 150=150 | 18.34=18.34 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3= | P3=P3 | 900 x 900=900 x 900 | DET X (Grated): blank= | P4=P4 | 450=450 | 17.30=17.30 | 450=450 | 17.25=17.25 | 18.88=18.88 | Depth= | Pit P3, pipe from WT10= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT10=WT10 | 150=150 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT9= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT9=WT9 | 150=150 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT4= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT4=WT4 | 150=150 | 18.24=18.24 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT3= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT3=WT3 | 150=150 | 18.24=18.24 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P4= | P4=P4 | 900 x 900=900 x 900 | DET X (Grated): blank= | P5=P5 | 450=450 | 17.45=17.45 | 450=450 | 17.40=17.40 | 18.86=18.86 | Depth= | Pit P5= | P5=P5 | 900 x 900=900 x 900 | DET X (Grated): blank= | P7=P7 | 375=375 | 17.58=17.58 | 450=450 | 17.53=17.53 | 18.85=18.85 | Depth= | Pit P5, pipe from P6= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | P6=P6 | 375=375 | 17.58=17.58 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P6= | P6=P6 | 900 x 900=900 x 900 | DET X (Grated): blank= | WT5=WT5 | 150=150 | 18.00=18.00 | 375=375 | 17.67=17.67 | 19.01=19.01 | Depth= | Pit P6, pipe from WT6= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT6=WT6 | 150=150 | 18.00=18.00 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P7= | P7=P7 | 900 x 900=900 x 900 | DET X (Grated): blank= | WT8=WT8 | 150=150 | 18.15=18.15 | 375=375 | 17.65=17.65 | 18.81=18.81 | Depth= | Pit P7, pipe from WT7= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT7=WT7 | 150=150 | 18.15=18.15 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P9= | P9=P9 | 450 x 450=450 x 450 | DET X (Grated): blank= | FROM: blank= | DIA (Inlet): blank= | IL (Inlet): blank= | DIA (Outlet): blank= | IL (Outlet): blank= | 19.45=19.45 | Depth= | Pit P10= | P10=P10 | 450 x 450=450 x 450 | DET X (Grated): blank= | FROM: blank= | DIA (Inlet): blank= | IL (Inlet): blank= | DIA (Outlet): blank= | IL (Outlet): blank= | 19.45=19.45 | Depth= | Pit C1= | C1=C1 | 1 / 900 x 900; 1 / 900 x 900=1 / 900 x 900; 1 / 900 x 900 | DET X (Grated): blank= | P1=P1 | 450=450 | 16.87=16.87 | 375=375 | 16.82=16.82 | 18.74=18.74 | Depth= | Pit C1, pipe from TG= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | TG=TG | 225=225 | 17.98=17.98 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit C1, pipe from AGI= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | AGI=AGI | 100=100 | 18.00=18.00 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit C1, pipe from AGI= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | AGI=AGI | 100=100 | 18.20=18.20 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit X1= | X1=X1 | 900 x 900=900 x 900 | DET X (Grated): blank= | Unknowns=Unknowns | 450=450 | IL (Inlet): blank= | 375=375 | IL (Outlet): blank= | 18.42=18.42 | Depth=",
+          "evidence": "value 'Pit P1= | P1=P1 | 900 x 900=900 x 900 | DET X (Grated): blank= | P2=P2 | 450=450 | 16.98=16.98 | 450=450 | 16.93=16.93 |...' (expected 'Pit P1= | P1=P1 | 900 x 900=900 x 900 | DET X (Grated): blank= | P2=P2 | 450=450 | 16.98=16.98 | 450=450 | 16.93=16.93 |...')"
+        },
+        {
+          "n": 9,
+          "text": "window-closed $close0",
+          "ok": true,
+          "expected": "the window closed",
+          "actual": "closed=True",
+          "evidence": "ui-press reported window_closed = True"
+        },
+        {
+          "n": 10,
+          "text": "window-closed $close1",
+          "ok": true,
+          "expected": "the window closed",
+          "actual": "closed=True",
+          "evidence": "ui-press reported window_closed = True"
+        },
+        {
+          "n": 11,
+          "text": "window-closed $close2",
+          "ok": true,
+          "expected": "the window closed",
+          "actual": "closed=True",
+          "evidence": "ui-press reported window_closed = True"
+        },
+        {
+          "n": 12,
+          "text": "record $redo1 \"FULL what REDO printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: REDO | CDEDIT | Everything has been redone",
+          "evidence": "RECORDED, not judged: FULL what REDO printed = Command: | Command: REDO | CDEDIT | Everything has been redone"
+        },
+        {
+          "n": 13,
+          "text": "record $u23 \"FULL what the last two U printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: U | PITSCHEDULE | Command: | Command: U | CDEDIT",
+          "evidence": "RECORDED, not judged: FULL what the last two U printed = Command: | Command: U | PITSCHEDULE | Command: | Command: U | CDEDIT"
+        },
+        {
+          "n": 14,
+          "text": "record $rows1 \"FULL schedule rows after the cascade, U and REDO\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Pit P1= | P1=P1 | 900 x 900=900 x 900 | DET X (Grated): blank= | P2=P2 | 450=450 | 17.18=17.18 | 450=450 | 17.13=17.13 | 18.81=18.81 | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | AGI=AGI | 100=100 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | AGI=AGI | 100=100 | 18.50=18.50 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2= | P2=P2 | 900 x 900=900 x 900 | DET X (Grated): blank= | P3=P3 | 450=450 | 17.33=17.33 | 450=450 | 17.28=17.28 | 18.91=18.91 | Depth= | Pit P2, pipe from WT11= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT11=WT11 | 150=150 | 18.14=18.14 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT12= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT12=WT12 | 150=150 | 18.19=18.19 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT2= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT2=WT2 | 150=150 | 18.28=18.28 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT1= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT1=WT1 | 150=150 | 18.34=18.34 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3= | P3=P3 | 900 x 900=900 x 900 | DET X (Grated): blank= | P4=P4 | 450=450 | 17.50=17.50 | 450=450 | 17.45=17.45 | 18.88=18.88 | Depth= | Pit P3, pipe from WT10= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT10=WT10 | 150=150 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT9= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT9=WT9 | 150=150 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT4= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT4=WT4 | 150=150 | 18.24=18.24 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT3= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT3=WT3 | 150=150 | 18.24=18.24 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P4= | P4=P4 | 900 x 900=900 x 900 | DET X (Grated): blank= | P5=P5 | 450=450 | 17.45=17.45 | 450=450 | 17.60=17.60 | 18.86=18.86 | Depth= | Pit P5= | P5=P5 | 900 x 900=900 x 900 | DET X (Grated): blank= | P7=P7 | 375=375 | 17.58=17.58 | 450=450 | 17.53=17.53 | 18.85=18.85 | Depth= | Pit P5, pipe from P6= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | P6=P6 | 375=375 | 17.58=17.58 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P6= | P6=P6 | 900 x 900=900 x 900 | DET X (Grated): blank= | WT5=WT5 | 150=150 | 18.00=18.00 | 375=375 | 17.67=17.67 | 19.01=19.01 | Depth= | Pit P6, pipe from WT6= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT6=WT6 | 150=150 | 18.00=18.00 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P7= | P7=P7 | 900 x 900=900 x 900 | DET X (Grated): blank= | WT8=WT8 | 150=150 | 18.15=18.15 | 375=375 | 17.65=17.65 | 18.81=18.81 | Depth= | Pit P7, pipe from WT7= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT7=WT7 | 150=150 | 18.15=18.15 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P9= | P9=P9 | 450 x 450=450 x 450 | DET X (Grated): blank= | FROM: blank= | DIA (Inlet): blank= | IL (Inlet): blank= | DIA (Outlet): blank= | IL (Outlet): blank= | 19.45=19.45 | Depth= | Pit P10= | P10=P10 | 450 x 450=450 x 450 | DET X (Grated): blank= | FROM: blank= | DIA (Inlet): blank= | IL (Inlet): blank= | DIA (Outlet): blank= | IL (Outlet): blank= | 19.45=19.45 | Depth= | Pit C1= | C1=C1 | 1 / 900 x 900; 1 / 900 x 900=1 / 900 x 900; 1 / 900 x 900 | DET X (Grated): blank= | P1=P1 | 450...",
+          "evidence": "RECORDED, not judged: FULL schedule rows after the cascade, U and REDO = Pit P1= | P1=P1 | 900 x 900=900 x 900 | DET X (Grated): blank= | P2=P2 | 450=450 | 17.18=17.18 | 450=450 | 17.13=17.13 | 18.81=18.81 | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | AGI=AGI | 100=100 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P1, pipe from AGI= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | AGI=AGI | 100=100 | 18.50=18.50 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2= | P2=P2 | 900 x 900=900 x 900 | DET X (Grated): blank= | P3=P3 | 450=450 | 17.33=17.33 | 450=450 | 17.28=17.28 | 18.91=18.91 | Depth= | Pit P2, pipe from WT11= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT11=WT11 | 150=150 | 18.14=18.14 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT12= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT12=WT12 | 150=150 | 18.19=18.19 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT2= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT2=WT2 | 150=150 | 18.28=18.28 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P2, pipe from WT1= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT1=WT1 | 150=150 | 18.34=18.34 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3= | P3=P3 | 900 x 900=900 x 900 | DET X (Grated): blank= | P4=P4 | 450=450 | 17.50=17.50 | 450=450 | 17.45=17.45 | 18.88=18.88 | Depth= | Pit P3, pipe from WT10= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT10=WT10 | 150=150 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT9= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT9=WT9 | 150=150 | 18.10=18.10 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT4= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT4=WT4 | 150=150 | 18.24=18.24 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P3, pipe from WT3= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT3=WT3 | 150=150 | 18.24=18.24 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P4= | P4=P4 | 900 x 900=900 x 900 | DET X (Grated): blank= | P5=P5 | 450=450 | 17.45=17.45 | 450=450 | 17.60=17.60 | 18.86=18.86 | Depth= | Pit P5= | P5=P5 | 900 x 900=900 x 900 | DET X (Grated): blank= | P7=P7 | 375=375 | 17.58=17.58 | 450=450 | 17.53=17.53 | 18.85=18.85 | Depth= | Pit P5, pipe from P6= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | P6=P6 | 375=375 | 17.58=17.58 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P6= | P6=P6 | 900 x 900=900 x 900 | DET X (Grated): blank= | WT5=WT5 | 150=150 | 18.00=18.00 | 375=375 | 17.67=17.67 | 19.01=19.01 | Depth= | Pit P6, pipe from WT6= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT6=WT6 | 150=150 | 18.00=18.00 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P7= | P7=P7 | 900 x 900=900 x 900 | DET X (Grated): blank= | WT8=WT8 | 150=150 | 18.15=18.15 | 375=375 | 17.65=17.65 | 18.81=18.81 | Depth= | Pit P7, pipe from WT7= | PIT No.: blank= | PIT SIZE: blank= | DET X (Grated): blank= | WT7=WT7 | 150=150 | 18.15=18.15 | DIA (Outlet): blank= | IL (Outlet): blank= | COVER: blank= | Depth= | Pit P9= | P9=P9 | 450 x 450=450 x 450 | DET X (Grated): blank= | FROM: blank= | DIA (Inlet): blank= | IL (Inlet): blank= | DIA (Outlet): blank= | IL (Outlet): blank= | 19.45=19.45 | Depth= | Pit P10= | P10=P10 | 450 x 450=450 x 450 | DET X (Grated): blank= | FROM: blank= | DIA (Inlet): blank= | IL (Inlet): blank= | DIA (Outlet): blank= | IL (Outlet): blank= | 19.45=19.45 | Depth= | Pit C1= | C1=C1 | 1 / 900 x 900; 1 / 900 x 900=1 / 900 x 900; 1 / 900 x 900 | DET X (Grated): blank= | P1=P1 | 450..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV30107401_B1_14945b022.log)",
+        "Civil CE log: 166 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: PITSCHEDULE completed 37376 ms ; Command outcome: CDEDIT completed 85305 ms ; Command outcome: PITSCHEDULE completed 37851 ms ; Command outcome: PITSCHEDULE completed 33114 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-30 01:21:32",
+      "session_id": "RUN-20261030-0107-C3.0.86-b80F1-s1",
+      "acceptance": {
+        "state": "ACCEPTED-READY",
+        "reasons": [],
+        "passing_sessions_on_this_build": 2,
+        "red_before": true
+      }
+    },
+    {
+      "id": "R14h_dstd_200",
+      "proves_bugs": "",
+      "title": "CDTWL wording follows designStandards.detentionFreeboardMm raised to 200 mm (the other key stays 150)",
+      "kind": "deterministic",
+      "order": 33,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "CDTWL freeboard follows a RAISED setting (C39 higher-setting coverage)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed. Built on 26 Oct 2026 exactly as cx_cr04 (Codex independent review) asks: same setup and answers as R14, freeboard raised to 200 mm through the settings guard.",
+      "variant_of": "",
+      "expected": "After CDTWL with the answers 10 and 18.70 the command line says 'Only 40 mm between the water and the lid of pit C1 (200 mm is wanted).' and 'Only 110 mm' for pits P1 and P7 with '(200 mm is wanted)'; CDTWL ends idle and the Civil log holds one CDTWL completed line.",
+      "why_not_unit": "Which Settings key the real CDTWL reads, and whether a raised value reaches the wording, is only seen on the live command line.",
+      "not_automated": [
+        "200 mm is a diagnostic value, not an engineering approval; the other freeboard key stays at the 150 baseline unless named in the SETTING lines. How the two keys are combined is read from the result, not assumed."
+      ],
+      "file_sha256": "75A91D22C7542579B661A60D938481BD0E141D2837D276427CC8FCA759528A14",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-30 01:23:08",
+      "seconds": 158.0,
+      "setup": "SETUP-R47",
+      "setup_note": "shared setup SETUP-R47 run here for the first time at 01:25:39",
+      "steps": [
+        {
+          "n": 1,
+          "phase": "setup",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV30122382_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "setup",
+          "verb": "pick-first",
+          "text": "pick-first \"109D56\"",
+          "ok": true,
+          "seconds": 2.4,
+          "evidence": "pick-first 109D56: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"109D56\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 3,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"_.MOVE{NL}0,0{NL}0,2000\" -Force -> $setup_move",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "typed '_.MOVE 0,0 0,2000': Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,2000 | [CE Civil] pipe P3 -> P2 label: no clear spot among it..."
+        },
+        {
+          "n": 4,
+          "phase": "setup",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "setup",
+          "verb": "ms-count",
+          "text": "ms-count -> $n0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 6,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"PIT{NL}150000,-80000\" -Force -ExpectWindow \"New Pit\" -> $pit_t1",
+          "ok": true,
+          "seconds": 14.1,
+          "evidence": "typed 'PIT 150000,-80000': Command: | Command: PIT | Specify pit insertion point: 150000,-80000 | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C..."
+        },
+        {
+          "n": 7,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.CoverLevel\" \"19.000\"",
+          "ok": true,
+          "seconds": 9.7,
+          "evidence": "ui set 'New Pit' C2.CoverLevel = 19.000: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 8,
+          "phase": "setup",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pit\" \"New pit, Continue placement\" -> $pit_t2",
+          "ok": true,
+          "seconds": 30.7,
+          "evidence": "pressed 'New pit, Continue placement' in /New Pit/: window closed = True"
+        },
+        {
+          "n": 9,
+          "phase": "setup",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pit\" -Secs 120",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "the window /^New Pit/ closed after 0 s"
+        },
+        {
+          "n": 10,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e1",
+          "ok": true,
+          "seconds": 7.7,
+          "evidence": "esc-prompt: Command: | Command: PIT | Specify pit insertion point: 150000,-80000 | Specify pit label insertion point: *Cancel* | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or qu..."
+        },
+        {
+          "n": 11,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e2",
+          "ok": true,
+          "seconds": 7.2,
+          "evidence": "esc-prompt: Command: PIT | Specify pit insertion point: 150000,-80000 | Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit..."
+        },
+        {
+          "n": 12,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e3",
+          "ok": true,
+          "seconds": 2.8,
+          "evidence": "esc-prompt: Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit, or press Esc to stop. | Specify pit insertion point: *Canc..."
+        },
+        {
+          "n": 13,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-80000{NL}170000,-80000{NL}\" -Force -ExpectWindow \"New Pipe\" -> $pipe_t1",
+          "ok": true,
+          "seconds": 8.3,
+          "evidence": "typed 'CD 150000,-80000 170000,-80000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-80000 | Specify second point: 170000,-80000 | Se..."
+        },
+        {
+          "n": 14,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 3.9,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 15,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.900\"",
+          "ok": true,
+          "seconds": 3.9,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.900: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 16,
+          "phase": "setup",
+          "verb": "ui-dump",
+          "text": "ui-dump \"New Pipe\" -> $np_win",
+          "ok": true,
+          "seconds": 6.2,
+          "evidence": "ui-dump 'New Pipe': 103 controls, tabs: "
+        },
+        {
+          "n": 17,
+          "phase": "setup",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $pipe_t2",
+          "ok": true,
+          "seconds": 35.3,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 18,
+          "phase": "setup",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 19,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pipe_e1",
+          "ok": true,
+          "seconds": 3.3,
+          "evidence": "esc-prompt: [CE] Pipe kept. One or more ends have no proven connection. The route stays drawn; confirm the intended connection later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: P8 -> Open en..."
+        },
+        {
+          "n": 20,
+          "phase": "setup",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 10.1,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 21,
+          "phase": "setup",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_after_setup",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30122382_B1.dwg]"
+        },
+        {
+          "n": 22,
+          "phase": "setup",
+          "verb": "ms-new",
+          "text": "ms-new $n0 -> $new_all",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "6 object(s) after index 1034 (model space now 1040); by type: AcDbBlockReference 2; AcDbMText 3; CeCvlPipeObject 1; first: 11C5AD AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C651 CeCvlPipeObject STORMWATER PIPE ; 11C657 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 200 ; 11C65C AcDbMText 20TEXT IL 18.000 ; 11C661 AcDbMText 20TEXT IL 17.900 ; 11C683 AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDTWL{NL}10{NL}18.70\" -Force -> $twl",
+          "ok": true,
+          "seconds": 2.2,
+          "evidence": "typed 'CDTWL 10 18.70': Command: | Command: CDTWL | [CE] Working upstream from detention pit C1. | [CE] CDCALC has no volume recorded for this system ? it shows \"0.0\", which is not a storage requirement. Type the figure from the STORM report, i..."
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 2",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "slept 2 s"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30122382_B1.dwg]"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "getvar",
+          "text": "getvar CMDACTIVE -> $ca",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "CMDACTIVE = 0"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"Only 40 mm between the water and the lid of pit C1 (200 mm is wanted).\"",
+          "ok": true,
+          "expected": "command line has 'Only 40 mm between the water and the lid of pit C1 (200 mm is wanted).'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CE] Only 40 mm between the water and the lid of pit C1 (200 mm is wanted).'"
+        },
+        {
+          "n": 2,
+          "text": "history has \"[CE] Only 110 mm between the water and the lid of pit P1 (200 mm is wanted).\"",
+          "ok": true,
+          "expected": "command line has '[CE] Only 110 mm between the water and the lid of pit P1 (200 mm is wanted).'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CE] Only 110 mm between the water and the lid of pit P1 (200 mm is wanted).'"
+        },
+        {
+          "n": 3,
+          "text": "history has \"[CE] Only 110 mm between the water and the lid of pit P7 (200 mm is wanted).\"",
+          "ok": true,
+          "expected": "command line has '[CE] Only 110 mm between the water and the lid of pit P7 (200 mm is wanted).'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CE] Only 110 mm between the water and the lid of pit P7 (200 mm is wanted).'"
+        },
+        {
+          "n": 4,
+          "text": "equals $ca 0",
+          "ok": true,
+          "expected": "0",
+          "actual": "0",
+          "evidence": "value '0' (expected '0')"
+        },
+        {
+          "n": 5,
+          "text": "log civil count \"Command outcome: CDTWL completed\" = 1",
+          "ok": true,
+          "expected": "1 line(s) with 'Command outcome: CDTWL completed'",
+          "actual": "1",
+          "evidence": "civil log holds 1 new line(s) containing 'Command outcome: CDTWL completed' (expected 1): 2026-10-30 01:25:40.802 [INFO] Command outcome: CDTWL completed 114 ms"
+        },
+        {
+          "n": 6,
+          "text": "record $twl \"FULL what CDTWL printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDTWL | [CE] Working upstream from detention pit C1. | [CE] CDCALC has no volume recorded for this system ? it shows \"0.0\", which is not a storage requirement. Type the figure from the STORM report, in cubic metres. | Detention volume required, in cubic metres (from the STORM report): 10 | [CE] The top water level is the crest of the baffle wall, and its height above the orifice is what sizes the orifice. These are the levels this system could be held to: | [CE] 1) 19.55 the top water level typed into CDCALC (typed by hand) - 810 mm ABOVE the lowest lid (water would come out), holds 28134 L | [CE] 2) 19.01 the lid or grate of pit P6 - the highest in this system (measured from the drawing) - 270 mm ABOVE the lowest lid (water would come out), holds 28134 L | [CE] 3) 18.74 the lid of pit C1 - the first thing water would come out of (measured from the drawing) - 0 mm below the lowest lid, holds 27365 L | [CE] 4) 18.05 the top of the highest detention pipe P6 -> P5 (CE design rule) - 695 mm below the lowest lid, holds 22861 L [CE's usual rule] | [CE] 5) 17.49 the level the required volume on its own would reach (worked out from the volume) - 1249 mm below the lowest lid, holds 10000 L [comparison only] | Which level is the top water level? Type its number, or type a level in metres (e.g. 18.54): 18.70 | [CE] Using 18.70 - your own level, not one CE measured off the drawing. Everything below is worked out from it. | [CE] Detention system above C1 holds water in 8 pits, 7 pipes. | [CE] Top water level 18.70 - the top water level this job is designed to (typed by the engineer). | [CE] CE's usual rule would have given 18.05 (the top of the highest detention pipe). You chose a different level, so that is what is used. | [CE] Holds at that level: pits 9129 L + pipes 17977 L = 27105 L. 10000 L is required. | [CE] That is enough. | [CE] Only 40 mm between the water and the lid of pit C1 (200 mm is wanted). | [CE] Only 110 mm between the water and the lid of pit P1 (200 mm is wanted). | [CE] Only 180 mm between the water and the lid of pit P3 (200 mm is wanted). | [CE] Only 160 mm between the water and the lid of pit P4 (200 mm is wanted). | [CE] Only 150 mm between the water and the lid of pit P5 (200 mm is wanted). | [CE] Only 110 mm between the water and the lid of pit P7 (200 mm is wanted). | [CE] For comparison, the level the required volume on its own would reach: | [CE] Top water level 17.491 (holds 10000 L of the 27365 L this system can hold). | [CE] Running full at that level (these are the ones doing the detaining): pipe P1 -> C1. | [CE] Left out: pipe AGI -> C1 was left out: one or both of its invert levels are not set. | [CE] Left out: pipe TG1 -> C1 was left out: one or both of its invert levels are not set. | [CE] Left out: pipe WT12 -> P2 was left out: its length cannot be worked out from where its pits sit. | [CE] Left out: pipe WT1 -> P2 was left out: its length cannot be worked out from where its pits sit. | [CE] Left out: pipe WT2 -> P2 was left out: its length cannot be worked out from where its pits sit. | [CE] Left out: pipe WT11 -> P2 was left out: its length cannot be worked out from where its pits sit. | [CE] Left out: pipe WT10 -> IO8 was left out: one or both of its invert levels are not set. | [CE] Left out: pipe IO8 -> P3 was left out: its length cannot be worked out from where its pits sit. | [CE] Left out: pipe WT5 -> P6 was left out: its length cannot be worked out from where its pits sit. | [CE] Left out: pipe WT8 -> P7 was left out: its length cannot be worked out from where its pits sit. | [CE] Left out: pipe WT9 -> P3 was left out: its length cannot be worked out from where its pits sit. | [CE] Left out: pipe WT7 -> P7 was left out: its length cannot be worked out from where its pits sit. | [CE] Left out: pipe WT6 -> P6 was left out: its length cannot be worked out from where its pits sit. | [CE] Left out: pipe WT4 -> P3 was left out: its length cannot be worked out from where its pit...",
+          "evidence": "RECORDED, not judged: FULL what CDTWL printed = Command: | Command: CDTWL | [CE] Working upstream from detention pit C1. | [CE] CDCALC has no volume recorded for this system ? it shows \"0.0\", which is not a storage requirement. Type the figure from the STORM report, in cubic metres. | Detention volume required, in cubic metres (from the STORM report): 10 | [CE] The top water level is the crest of the baffle wall, and its height above the orifice is what sizes the orifice. These are the levels this system could be held to: | [CE] 1) 19.55 the top water level typed into CDCALC (typed by hand) - 810 mm ABOVE the lowest lid (water would come out), holds 28134 L | [CE] 2) 19.01 the lid or grate of pit P6 - the highest in this system (measured from the drawing) - 270 mm ABOVE the lowest lid (water would come out), holds 28134 L | [CE] 3) 18.74 the lid of pit C1 - the first thing water would come out of (measured from the drawing) - 0 mm below the lowest lid, holds 27365 L | [CE] 4) 18.05 the top of the highest detention pipe P6 -> P5 (CE design rule) - 695 mm below the lowest lid, holds 22861 L [CE's usual rule] | [CE] 5) 17.49 the level the required volume on its own would reach (worked out from the volume) - 1249 mm below the lowest lid, holds 10000 L [comparison only] | Which level is the top water level? Type its number, or type a level in metres (e.g. 18.54): 18.70 | [CE] Using 18.70 - your own level, not one CE measured off the drawing. Everything below is worked out from it. | [CE] Detention system above C1 holds water in 8 pits, 7 pipes. | [CE] Top water level 18.70 - the top water level this job is designed to (typed by the engineer). | [CE] CE's usual rule would have given 18.05 (the top of the highest detention pipe). You chose a different level, so that is what is used. | [CE] Holds at that level: pits 9129 L + pipes 17977 L = 27105 L. 10000 L is required. | [CE] That is enough. | [CE] Only 40 mm between the water and the lid of pit C1 (200 mm is wanted). | [CE] Only 110 mm between the water and the lid of pit P1 (200 mm is wanted). | [CE] Only 180 mm between the water and the lid of pit P3 (200 mm is wanted). | [CE] Only 160 mm between the water and the lid of pit P4 (200 mm is wanted). | [CE] Only 150 mm between the water and the lid of pit P5 (200 mm is wanted). | [CE] Only 110 mm between the water and the lid of pit P7 (200 mm is wanted). | [CE] For comparison, the level the required volume on its own would reach: | [CE] Top water level 17.491 (holds 10000 L of the 27365 L this system can hold). | [CE] Running full at that level (these are the ones doing the detaining): pipe P1 -> C1. | [CE] Left out: pipe AGI -> C1 was left out: one or both of its invert levels are not set. | [CE] Left out: pipe TG1 -> C1 was left out: one or both of its invert levels are not set. | [CE] Left out: pipe WT12 -> P2 was left out: its length cannot be worked out from where its pits sit. | [CE] Left out: pipe WT1 -> P2 was left out: its length cannot be worked out from where its pits sit. | [CE] Left out: pipe WT2 -> P2 was left out: its length cannot be worked out from where its pits sit. | [CE] Left out: pipe WT11 -> P2 was left out: its length cannot be worked out from where its pits sit. | [CE] Left out: pipe WT10 -> IO8 was left out: one or both of its invert levels are not set. | [CE] Left out: pipe IO8 -> P3 was left out: its length cannot be worked out from where its pits sit. | [CE] Left out: pipe WT5 -> P6 was left out: its length cannot be worked out from where its pits sit. | [CE] Left out: pipe WT8 -> P7 was left out: its length cannot be worked out from where its pits sit. | [CE] Left out: pipe WT9 -> P3 was left out: its length cannot be worked out from where its pits sit. | [CE] Left out: pipe WT7 -> P7 was left out: its length cannot be worked out from where its pits sit. | [CE] Left out: pipe WT6 -> P6 was left out: its length cannot be worked out from where its pits sit. | [CE] Left out: pipe WT4 -> P3 was left out: its length cannot be worked out from where its pit..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 186 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: PIT completed 70383 ms ; Command outcome: CD completed 58846 ms ; Command outcome: CDTWL completed 114 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-30 01:25:46",
+      "session_id": "RUN-20261030-0107-C3.0.86-b80F1-s2",
+      "acceptance": {
+        "state": "ACCEPTED-READY",
+        "reasons": [],
+        "passing_sessions_on_this_build": 2,
+        "red_before": false
+      }
+    }
+  ]
+}

@@ -68,3 +68,14 @@ verifyH3_c85
 verifyJ2_c86
 verifyJ3_c86
 verifyJ1_c86
+verifyJ7_c86
+verifyJ5_c86
+verifyJ4_c86
+verifyH1b_c85
+verifyH5b_c85
+verifyH6b_c85
+verifyA1b_c86
+verifyG6b_c84
+verifyJ6_c86
+verifyH4b_c85
+verifyC1b_c86

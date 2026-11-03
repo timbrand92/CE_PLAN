@@ -1,0 +1,9 @@
+PR #1858 (BUG-857) now builds and its new tests pass, but one test in the full suite failed and I haven't shown whether that failure is old. Nothing has been seen in AutoCAD.
+
+- **Build:** net10 and net48 both compiled with 0 errors.
+- **New tests:** all 9 `Bug857` tests passed.
+- **Full suite (net10):** 20,815 tests, 20,782 passed, 32 skipped, 1 failed. The failure is `WorkQueue_DrainGivesUpAtTheTimeout`, a timing test in the message bell code. My change doesn't touch that code, and I didn't build the base to see if it fails there too.
+- **Code:** I changed nothing, so there are no new commits. The `grade.mismatchBoxCloseCancels` switch is still ON by default.
+- **PR:** title edited only, and it is still a draft.
+- **Report:** BUILD AND TEST section appended to `release-v3-colleagues-BUG857_FIX_REPORT.md` and pushed to CE_PLAN.
+- **Still needed:** a Codex look in AutoCAD and the robot case N33_grade_mismatch_x.

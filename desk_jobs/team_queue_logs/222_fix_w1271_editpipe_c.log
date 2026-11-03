@@ -1,0 +1,8 @@
+BUG-1271 is built as draft PR #1991 (B-163, base `claude/rel-20261102a`), but nobody has opened it in AutoCAD. The 18 tests (5 new, 13 existing) pass on net10, and net48 compiles with 0 errors.
+
+- **Cause:** the clipped word is the caption beside the first level tick ("Downstream" / "Upstream"), in `PipeOnePageLayout.cs`. Its width followed its text and was cut at the shorter word "Upstream". I did not reproduce the first-open clip.
+- **Fix:** one `MinWidth` of 68 behind `pipe.editCaptionsKeepFullWidth`, on by default. The brief's name was `edit.captionsKeepFullWidth`, but there is no `edit` settings group, so I used the `pipe` group.
+- **New Pipe:** it uses the same window class, so it gets the same width. "Staff ente..." is a different text, so I left it alone.
+- **Real-folder check:** a live AutoCAD (process 16584, started 16:47) wrote to your real CE logs while I worked. I can't clear `CE_CVL_SUITE\ledger\suggestions.jsonl` (written 16:40:57, between my two runs).
+
+The report, a copy of the listing differences, and the robot case N32_ep_caption_width are in `C:\CE_PLAN\areas`. The worktree and scratch folder are removed.

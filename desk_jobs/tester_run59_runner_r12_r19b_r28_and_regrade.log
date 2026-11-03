@@ -1,0 +1,7 @@
+R12, R19b and R28 now carry the stronger checks and pass twice on Civil 3.0.75. R01, R03 and R05 passed twice, but R08 failed. The report is pushed and `git status -sb` shows no "ahead".
+
+- **R12, R19b, R28:** each passed in two separate sessions, and every broken variant went red. They need fresh independent reviews. One of the R19b reds (`R19b_PIPE_BROKEN`) fails on an AutoCAD error rather than a check line.
+- **R01, R03, R05:** unchanged files, review hashes still match, and the runner printed ACCEPTED-READY.
+- **R08:** failed in four fresh AutoCAD sessions, always in round 1, where REDO says "Nothing to redo" after the first pit click. The click did hit the pit. It passed on 3.0.74, and the symptom matches BUG-861. I stopped there, and R08 is not accepted on this build.
+
+Report: `C:\CE_PLAN\areas\release-v3-colleagues-RUNNER_B3B_REPORT.md`

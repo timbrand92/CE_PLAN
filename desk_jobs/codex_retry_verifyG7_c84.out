@@ -1,0 +1,7 @@
+== verifyG7_c84 (usage 14.0% -> 15.0%): AUTOCAD CLOSED
+
+1. **G7 FAIL ÔÇö SURE:** Moving the pit **500 mm** shifted the hand-placed label **250 mm**. Tidy labels counted **0 placed by hand**.
+2. **Build:** Civil 3.0.86 / Manager 1.1.86 / Structural 1.0.125.
+3. **Cleanup:** Settings restored byte-for-byte; A=C=`ACD64E79A33BE9C152149FF2145A3CD2C29CABE11245F211183FD5C7DE783140`. Guard empty; lock released.
+4. **Results:** 2 PASS, 1 FAIL; SURE 3, UNSURE 0. Repeated screenshot captures excluded. No fixtures wanted.
+5. **Report:** [G7 verification](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_G7_20261030_0627.md>).

@@ -1,0 +1,258 @@
+{
+  "header": {
+    "run_id": "RUN-20261101-0330-C3.0.88-rspit",
+    "started": "2026-11-01 03:30:00",
+    "finished": "2026-11-01 03:31:07",
+    "build": {
+      "civil": {
+        "product_version": "3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+        "file_version": "3.0.88.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+        "file_version": "1.1.88.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.88+3fbb9da5 / struc 1.0.125+204dfad2 / mgr 1.1.88+3fbb9da5",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "4612A9C9EE7D04D6F14680821F93A9601FA5B4903B51C781346EE2B83D42633F",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+      "Driver files (SHA-256, first 12): v2 F4D8F40C3675 (expected F4D8F40C3675), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4CEE54D651AB, v3 session F061E3240C47, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 BBF42DBA8958, case_runner_lib.ps1 89AD455619F8, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 0 shared setup(s); pack SHA-256 4612A9C9EE7D04D6F14680821F93A9601FA5B4903B51C781346EE2B83D42633F; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json D604CE689671 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sun 01 Nov 2026 03:30 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 1,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 1
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261101-0330-C3.0.88-rspit-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-11-01 03:30:00",
+      "finished": "2026-11-01 03:31:07",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV30330041_B1.dwg",
+      "cases": [
+        "PROBE-RS-PIT"
+      ],
+      "whatsnew_dismissed_at_start": "no, window was not there",
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : D604CE689671 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "PROBE-RS-PIT",
+      "proves_bugs": "",
+      "title": "PROBE: record-set on CE_CVL_SUITE_LINKS/PIT_LINK (ent 109D56)",
+      "kind": "deterministic",
+      "order": 99,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "none (probe of the driver verb record-set)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "probe",
+      "variant_of": "",
+      "expected": "READ, WRITE, READ, RESTORE, READ all succeed and the last two READs equal the first.",
+      "why_not_unit": "It drives the live COM record.",
+      "not_automated": [
+        "Everything about CE behaviour; this only proves the driver verb."
+      ],
+      "file_sha256": "7BF2F426E96BA37881C855BF3FC086D1D1F6DEBC71E5926E5C6B9FEFCDE4E61F",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-11-01 03:30:42",
+      "seconds": 5.0,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 record-set ent 109D56 -Part CE_CVL_SUITE_LINKS/PIT_LINK -To READ -> $r0",
+          "ok": true,
+          "seconds": 0.8,
+          "evidence": "v3 record-set ent 109D56: record-set READ ent|109D56|CE_CVL_SUITE_LINKS/PIT_LINK|C:\\ce_rc_drv\\CLDV30330041_B1.dwg : 2 group(s), 288 characters, starts: {\"PitHandle\":\"109D56\",\"Pipes\":[{\"PipeHandle\":\"109E23\",\"EndIndex\":0},{\"PipeHandle\":\"109ED4\",\"En..."
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 record-set ent 109D56 -Part CE_CVL_SUITE_LINKS/PIT_LINK -To DMGPROBE -> $r1",
+          "ok": true,
+          "seconds": 0.5,
+          "evidence": "v3 record-set ent 109D56: record-set WRITE ent|109D56|CE_CVL_SUITE_LINKS/PIT_LINK|C:\\ce_rc_drv\\CLDV30330041_B1.dwg : was 288 characters, now 8, read back equal; nothing saved (the test copy is not written to disk)"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 record-set ent 109D56 -Part CE_CVL_SUITE_LINKS/PIT_LINK -To READ -> $r2",
+          "ok": true,
+          "seconds": 0.6,
+          "evidence": "v3 record-set ent 109D56: record-set READ ent|109D56|CE_CVL_SUITE_LINKS/PIT_LINK|C:\\ce_rc_drv\\CLDV30330041_B1.dwg : 1 group(s), 8 characters, starts: DMGPROBE"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 record-set ent 109D56 -Part CE_CVL_SUITE_LINKS/PIT_LINK -To RESTORE -> $r3",
+          "ok": true,
+          "seconds": 0.6,
+          "evidence": "v3 record-set ent 109D56: record-set RESTORE ent|109D56|CE_CVL_SUITE_LINKS/PIT_LINK|C:\\ce_rc_drv\\CLDV30330041_B1.dwg : was 8 characters, now 288, read back equal; nothing saved (the test copy is not written to disk)"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 record-set ent 109D56 -Part CE_CVL_SUITE_LINKS/PIT_LINK -To READ -> $r4",
+          "ok": true,
+          "seconds": 0.6,
+          "evidence": "v3 record-set ent 109D56: record-set READ ent|109D56|CE_CVL_SUITE_LINKS/PIT_LINK|C:\\ce_rc_drv\\CLDV30330041_B1.dwg : 1 group(s), 288 characters, starts: {\"PitHandle\":\"109D56\",\"Pipes\":[{\"PipeHandle\":\"109E23\",\"EndIndex\":0},{\"PipeHandle\":\"109ED4\",\"En..."
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "contains $r0 \"record-set READ\"",
+          "ok": true,
+          "expected": "contains 'record-set READ'",
+          "actual": "{\"ok\":true,\"verb\":\"record-set\",\"started\":\"2026-11-01 03:30:43\",\"elapsed_ms\":577,\"error\":null,\"refused\":false,\"output\":[\"record-set READ ent|109D56|CE_CVL_SUITE_LINKS/PIT_LINK|C:\\\\ce_rc_drv\\\\CLDV303300...",
+          "evidence": "found 'record-set READ' in: {\"ok\":true,\"verb\":\"record-set\",\"started\":\"2026-11-01 03:30:43\",\"elapsed_ms\":577,\"error\":null,\"refused\":false,\"output\":[\"record-set READ ent|109D56|CE_CVL_SUITE_..."
+        },
+        {
+          "n": 2,
+          "text": "contains $r1 \"WRITE\"",
+          "ok": true,
+          "expected": "contains 'WRITE'",
+          "actual": "{\"ok\":true,\"verb\":\"record-set\",\"started\":\"2026-11-01 03:30:43\",\"elapsed_ms\":516,\"error\":null,\"refused\":false,\"output\":[\"record-set WRITE ent|109D56|CE_CVL_SUITE_LINKS/PIT_LINK|C:\\\\ce_rc_drv\\\\CLDV30330...",
+          "evidence": "found 'WRITE' in: {\"ok\":true,\"verb\":\"record-set\",\"started\":\"2026-11-01 03:30:43\",\"elapsed_ms\":516,\"error\":null,\"refused\":false,\"output\":[\"record-set WRITE ent|109D56|CE_CVL_SUITE..."
+        },
+        {
+          "n": 3,
+          "text": "contains $r2 \"DMGPROBE\"",
+          "ok": true,
+          "expected": "contains 'DMGPROBE'",
+          "actual": "{\"ok\":true,\"verb\":\"record-set\",\"started\":\"2026-11-01 03:30:44\",\"elapsed_ms\":631,\"error\":null,\"refused\":false,\"output\":[\"record-set READ ent|109D56|CE_CVL_SUITE_LINKS/PIT_LINK|C:\\\\ce_rc_drv\\\\CLDV303300...",
+          "evidence": "found 'DMGPROBE' in: {\"ok\":true,\"verb\":\"record-set\",\"started\":\"2026-11-01 03:30:44\",\"elapsed_ms\":631,\"error\":null,\"refused\":false,\"output\":[\"record-set READ ent|109D56|CE_CVL_SUITE_..."
+        },
+        {
+          "n": 4,
+          "text": "contains $r3 \"RESTORE\"",
+          "ok": true,
+          "expected": "contains 'RESTORE'",
+          "actual": "{\"ok\":true,\"verb\":\"record-set\",\"started\":\"2026-11-01 03:30:44\",\"elapsed_ms\":588,\"error\":null,\"refused\":false,\"output\":[\"record-set RESTORE ent|109D56|CE_CVL_SUITE_LINKS/PIT_LINK|C:\\\\ce_rc_drv\\\\CLDV303...",
+          "evidence": "found 'RESTORE' in: {\"ok\":true,\"verb\":\"record-set\",\"started\":\"2026-11-01 03:30:44\",\"elapsed_ms\":588,\"error\":null,\"refused\":false,\"output\":[\"record-set RESTORE ent|109D56|CE_CVL_SUI..."
+        },
+        {
+          "n": 5,
+          "text": "contains $r4 \"record-set READ\"",
+          "ok": true,
+          "expected": "contains 'record-set READ'",
+          "actual": "{\"ok\":true,\"verb\":\"record-set\",\"started\":\"2026-11-01 03:30:45\",\"elapsed_ms\":549,\"error\":null,\"refused\":false,\"output\":[\"record-set READ ent|109D56|CE_CVL_SUITE_LINKS/PIT_LINK|C:\\\\ce_rc_drv\\\\CLDV303300...",
+          "evidence": "found 'record-set READ' in: {\"ok\":true,\"verb\":\"record-set\",\"started\":\"2026-11-01 03:30:45\",\"elapsed_ms\":549,\"error\":null,\"refused\":false,\"output\":[\"record-set READ ent|109D56|CE_CVL_SUITE_..."
+        },
+        {
+          "n": 6,
+          "text": "record $r0 \"before\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"ok\":true,\"verb\":\"record-set\",\"started\":\"2026-11-01 03:30:43\",\"elapsed_ms\":577,\"error\":null,\"refused\":false,\"output\":[\"record-set READ ent|109D56|CE_CVL_SUITE_LINKS/PIT_LINK|C:\\\\ce_rc_drv\\\\CLDV30330041_B1.dwg : 2 group(...",
+          "evidence": "RECORDED, not judged: before = {\"ok\":true,\"verb\":\"record-set\",\"started\":\"2026-11-01 03:30:43\",\"elapsed_ms\":577,\"error\":null,\"refused\":false,\"output\":[\"record-set READ ent|109D56|CE_CVL_SUITE_LINKS/PIT_LINK|C:\\\\ce_rc_drv\\\\CLDV30330041_B1.dwg : 2 group(..."
+        },
+        {
+          "n": 7,
+          "text": "record $r2 \"while damaged\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"ok\":true,\"verb\":\"record-set\",\"started\":\"2026-11-01 03:30:44\",\"elapsed_ms\":631,\"error\":null,\"refused\":false,\"output\":[\"record-set READ ent|109D56|CE_CVL_SUITE_LINKS/PIT_LINK|C:\\\\ce_rc_drv\\\\CLDV30330041_B1.dwg : 1 group(...",
+          "evidence": "RECORDED, not judged: while damaged = {\"ok\":true,\"verb\":\"record-set\",\"started\":\"2026-11-01 03:30:44\",\"elapsed_ms\":631,\"error\":null,\"refused\":false,\"output\":[\"record-set READ ent|109D56|CE_CVL_SUITE_LINKS/PIT_LINK|C:\\\\ce_rc_drv\\\\CLDV30330041_B1.dwg : 1 group(..."
+        },
+        {
+          "n": 8,
+          "text": "record $r4 \"after restore\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"ok\":true,\"verb\":\"record-set\",\"started\":\"2026-11-01 03:30:45\",\"elapsed_ms\":549,\"error\":null,\"refused\":false,\"output\":[\"record-set READ ent|109D56|CE_CVL_SUITE_LINKS/PIT_LINK|C:\\\\ce_rc_drv\\\\CLDV30330041_B1.dwg : 1 group(...",
+          "evidence": "RECORDED, not judged: after restore = {\"ok\":true,\"verb\":\"record-set\",\"started\":\"2026-11-01 03:30:45\",\"elapsed_ms\":549,\"error\":null,\"refused\":false,\"output\":[\"record-set READ ent|109D56|CE_CVL_SUITE_LINKS/PIT_LINK|C:\\\\ce_rc_drv\\\\CLDV30330041_B1.dwg : 1 group(..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 0 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-11-01 03:30:48",
+      "session_id": "RUN-20261101-0330-C3.0.88-rspit-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "no independent review: no PROBE-RS-PIT_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": false
+      }
+    }
+  ]
+}

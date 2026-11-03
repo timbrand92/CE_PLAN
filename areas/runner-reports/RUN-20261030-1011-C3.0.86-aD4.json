@@ -1,0 +1,488 @@
+{
+  "header": {
+    "run_id": "RUN-20261030-1011-C3.0.86-aD4",
+    "started": "2026-10-30 10:11:18",
+    "finished": "2026-10-30 10:21:16",
+    "build": {
+      "civil": {
+        "product_version": "3.0.86+5888ee757244aac89283aaaf2ba68e51470ecbb3",
+        "file_version": "3.0.86.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.86+5888ee757244aac89283aaaf2ba68e51470ecbb3",
+        "file_version": "1.1.86.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.86+5888ee75 / struc 1.0.125+204dfad2 / mgr 1.1.86+5888ee75",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "3A576708678D24BB15FCF804D89B723493C3B94BC0009AA5E51C084FBBC849D5",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.86+5888ee757244aac89283aaaf2ba68e51470ecbb3; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.86+5888ee757244aac89283aaaf2ba68e51470ecbb3",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4CD773B85EC5, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 13955AAA60D1, case_runner_lib.ps1 8F9B8DCBB473, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 2 case file(s) plus 0 shared setup(s); pack SHA-256 3A576708678D24BB15FCF804D89B723493C3B94BC0009AA5E51C084FBBC849D5; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json B3B5A004B929 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Fri 30 Oct 2026 10:11 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 0,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 2,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261030-1011-C3.0.86-aD4-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-30 10:13:20",
+      "finished": "2026-10-30 10:21:16",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31013231_B1.dwg",
+      "cases": [
+        "K07",
+        "K08"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": "Claude-driverv3",
+      "lock_after": "stale",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : B3B5A004B929 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": false,
+        "ended_by": null,
+        "error": "AutoCAD did not close gracefully and was NOT killed. If it is stuck, run quit again with -Kill."
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "K07",
+      "proves_bugs": "",
+      "title": "A new pipe started on a pit shows its Proposed strip with levels to two decimals (US 18.50 / DS 18.40 style, never 18.500)",
+      "kind": "deterministic",
+      "order": 70,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "BUG-070 carpark retest (CARPARK_RETEST_TRIAGE_29OCT.md)",
+      "bug": "BUG-070",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "PIT at 150000,-80000 with cover 19.000 (as SETUP-P8), then CD from 150000,-80000 to 170000,-80000: the New Pipe window shows a strip reading 'Proposed: ... US <level> / DS <level>' with exactly two decimals in both levels. Cancel closes New Pipe; no new pipe is drawn. The drawing file on disk is unchanged.",
+      "why_not_unit": "The unit tests check the number format on its own; only the live window, fed by a real pit in the drawing, shows the strip the drafter reads.",
+      "not_automated": [
+        "The New Pit / Edit Pit cover strip (PitSuggestionViewModel, the other half of BUG-070) is not read. E11 also saw a separate change line 'Cover level: Was Unknown -> Now 19.000 m AHD' with three decimals; that line is recorded here, not judged (it is not the BUG-070 strip).",
+        "The strip's colour and fit are a Codex look."
+      ],
+      "file_sha256": "9E11748DDE3EC19F02F74B3C740E2402172E16E946E4153CD2B4B07C93A1A05C",
+      "result": "BLOCKED",
+      "blocked": "AutoCAD busy",
+      "first_failure": null,
+      "started": "2026-10-30 10:14:56",
+      "seconds": 145.8,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "copy CLDV31013231_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "getvar",
+          "text": "getvar OSMODE -> $osm0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "OSMODE = 5375"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 setvar OSMODE 0 -> $osm_set",
+          "ok": true,
+          "seconds": 0.5,
+          "evidence": "v3 setvar OSMODE 0: OSMODE (profile): 5375 -> 0"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM _W 148000,-84000 172000,-76000\" -Force",
+          "ok": true,
+          "seconds": 2.8,
+          "evidence": "typed '_.ZOOM _W 148000,-84000 172000,-76000': Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _W | Specify first corner: 148000,-84000 Specify opposi..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"PIT{NL}150000,-80000\" -Force -ExpectWindow \"New Pit\" -TimeoutSec 120 -> $pit_t1",
+          "ok": true,
+          "seconds": 14.9,
+          "evidence": "typed 'PIT 150000,-80000': Command: | Command: PIT | Specify pit insertion point: 150000,-80000"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.CoverLevel\" \"19.000\"",
+          "ok": true,
+          "seconds": 10.1,
+          "evidence": "ui set 'New Pit' C2.CoverLevel = 19.000: "
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pit\" \"New pit, Continue placement\" -> $pit_t2",
+          "ok": true,
+          "seconds": 40.7,
+          "evidence": "pressed 'New pit, Continue placement' in /New Pit/: window closed = True"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pit\" -Secs 120",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "the window /^New Pit/ closed after 0 s"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e1",
+          "ok": true,
+          "seconds": 7.7,
+          "evidence": "esc-prompt: Command: | Command: PIT | Specify pit insertion point: 150000,-80000 | Specify pit label insertion point: *Cancel*"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e2",
+          "ok": true,
+          "seconds": 7.6,
+          "evidence": "esc-prompt: Command: PIT | Specify pit insertion point: 150000,-80000 | Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit..."
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": false,
+          "seconds": 32.8,
+          "evidence": "wait for idle: AutoCAD still busy after 30 s. "
+        }
+      ],
+      "assertions": [],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 67 new line(s) while the case ran, 0 with [ERR]",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=True)"
+      ],
+      "error": null,
+      "finished": "2026-10-30 10:17:21",
+      "session_id": "RUN-20261030-1011-C3.0.86-aD4-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "K08",
+      "proves_bugs": "",
+      "title": "In New Pipe, Set my own 1 in 100 is still chosen after switching Detention, Existing and back to Stormwater",
+      "kind": "deterministic",
+      "order": 80,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "BUG-187 carpark retest (CARPARK_RETEST_TRIAGE_29OCT.md); BUG-186's grade-memory half",
+      "bug": "BUG-187",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "CD from 150000,-96000 to 170000,-96000 opens New Pipe. With Set my own on and 100 typed, then Detention, then Existing, then Stormwater pressed in turn, the window still shows Set my own On, Standard Off, and the custom grade box still holds 100. Cancel closes New Pipe and no pipe is drawn. The drawing file on disk is unchanged.",
+      "why_not_unit": "CdViewModelTests covers the view model on its own; only the live window shows the toggles the drafter sees after the presses.",
+      "not_automated": [
+        "The preview picture (proposed pipe and its 'AT 1 IN 100' label) is a Codex look. The Existing pipe 'Include known grade' toggle is not pressed."
+      ],
+      "file_sha256": "410E373FC82414105A2BE2257771878EC730BED0A8B878EC10313057CC0973F1",
+      "result": "BLOCKED",
+      "blocked": "refused by a driver guard",
+      "first_failure": null,
+      "started": "2026-10-30 10:17:21",
+      "seconds": 130.3,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "copy CLDV31013231_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "getvar",
+          "text": "getvar OSMODE -> $osm0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "OSMODE = 0"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 setvar OSMODE 0 -> $osm_set",
+          "ok": true,
+          "seconds": 0.4,
+          "evidence": "v3 setvar OSMODE 0: OSMODE (profile): already 0, nothing written"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM _W 148000,-98000 172000,-94000\" -Force",
+          "ok": true,
+          "seconds": 2.7,
+          "evidence": "typed '_.ZOOM _W 148000,-98000 172000,-94000': Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _W | Specify first corner: 148000,-98000 Specify opposite corner: ..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-96000{NL}170000,-96000{NL}\" -Force -ExpectWindow \"New Pipe\" -TimeoutSec 150 -> $cd",
+          "ok": true,
+          "seconds": 14.4,
+          "evidence": "typed 'CD 150000,-96000 170000,-96000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-96000 | Specify second point: 170000,-96000 | Se..."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.AutoCalcSecondInvert\" \"off\"",
+          "ok": true,
+          "seconds": 9.3,
+          "evidence": "ui set 'New Pipe' C2.AutoCalcSecondInvert = off: "
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.IsStormwaterPipe\" \"on\"",
+          "ok": true,
+          "seconds": 8.6,
+          "evidence": "ui set 'New Pipe' C2.IsStormwaterPipe = on: "
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.IsGradeCustom\" \"on\"",
+          "ok": true,
+          "seconds": 9.8,
+          "evidence": "ui set 'New Pipe' C2.IsGradeCustom = on: "
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.CustomGrade\" \"100\"",
+          "ok": true,
+          "seconds": 8.9,
+          "evidence": "ui set 'New Pipe' C2.CustomGrade = 100: "
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"^New Pipe\" -TimeoutSec 60 -> $np0",
+          "ok": true,
+          "seconds": 5.9,
+          "evidence": "ui-dump 'New Pipe': 102 controls, tabs: "
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.IsDetentionPipe\" \"on\"",
+          "ok": true,
+          "seconds": 10.1,
+          "evidence": "ui set 'New Pipe' C2.IsDetentionPipe = on: "
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 1",
+          "ok": true,
+          "seconds": 1.0,
+          "evidence": "slept 1 s"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.IsExistingPipe\" \"on\"",
+          "ok": true,
+          "seconds": 9.5,
+          "evidence": "ui set 'New Pipe' C2.IsExistingPipe = on: "
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 1",
+          "ok": true,
+          "seconds": 1.0,
+          "evidence": "slept 1 s"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.IsStormwaterPipe\" \"on\"",
+          "ok": true,
+          "seconds": 9.7,
+          "evidence": "ui set 'New Pipe' C2.IsStormwaterPipe = on: "
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 1",
+          "ok": true,
+          "seconds": 1.0,
+          "evidence": "slept 1 s"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"^New Pipe\" -TimeoutSec 60 -> $np1",
+          "ok": true,
+          "seconds": 5.9,
+          "evidence": "ui-dump 'New Pipe': 109 controls, tabs: "
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"Cancel\" -> $cancel",
+          "ok": false,
+          "seconds": 5.8,
+          "evidence": "ui-press 'Cancel' in /New Pipe/ failed: no button 'Cancel' that is on the v3 press list was found in a window matching /New Pipe/ (windows: New Pipe)."
+        }
+      ],
+      "assertions": [],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV31013231_B1_1959f4141.log)",
+        "Civil CE log: 5 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-10-30 10:19:32",
+      "session_id": "RUN-20261030-1011-C3.0.86-aD4-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}

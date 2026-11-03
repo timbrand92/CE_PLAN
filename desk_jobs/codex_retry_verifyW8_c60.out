@@ -1,0 +1,5 @@
+== verifyW8_c60 (usage 7.0% -> 8.0%): 1. **W8 complete:** 4 PASS, 1 DIFFERENT; 0 FAIL, BLOCKED or NOT TESTED. SURE 4, UNSURE 1. QDÔÇÖs dot appears smaller; its paper-size comparison remains uncertain.
+
+2. **Safe finish:** AutoCAD closed, lock released, all four settings files unchanged. No fixtures needed.
+
+3. **Report:** [W8 verification report](<C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_W8_20261023_1130.md>).

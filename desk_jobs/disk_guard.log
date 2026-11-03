@@ -1,0 +1,307 @@
+Fri 01:27 started: C: free 24.1 GB
+Fri 02:58 C: was 17 GB: removed idle bin/obj 9.1 GB; now 26.2 GB
+Fri 05:39 C: was 17.7 GB: removed idle bin/obj 5.8 GB; now 23.6 GB
+Fri 07:59 C: was 17.3 GB: removed idle bin/obj 1.4 GB; now 18.7 GB
+Fri 08:39 C: was 17.1 GB: removed idle bin/obj 0.0 GB; now 17.1 GB
+Fri 08:49 C: was 16.1 GB: removed idle bin/obj 0.0 GB; now 16.1 GB
+Fri 08:59 C: was 17.7 GB: removed idle bin/obj 0.3 GB; now 18 GB
+Fri 09:10 C: was 15.8 GB: removed idle bin/obj 0.3 GB; now 16.1 GB
+Fri 09:20 C: was 13.2 GB: removed idle bin/obj 0.0 GB; now 13.2 GB
+Fri 09:20 C: under 14 GB: STOP_CODEX.flag written
+Fri 09:30 C: was 12.9 GB: removed idle bin/obj 0.0 GB; now 16.8 GB
+Fri 09:40 C: was 12.9 GB: removed idle bin/obj 0.0 GB; now 12.9 GB
+Fri 09:40 C: under 14 GB: STOP_CODEX.flag written
+Fri 09:50 C: was 11.3 GB: removed idle bin/obj 0.0 GB; now 15.1 GB
+Fri 10:00 C: was 14.7 GB: removed idle bin/obj 0.3 GB; now 15 GB
+Fri 10:10 C: was 14.5 GB: removed idle bin/obj 0.3 GB; now 14.8 GB
+Fri 10:21 C: was 17.2 GB: removed idle bin/obj 0.0 GB; now 17.2 GB
+Fri 10:23 started: C: free 17.1 GB
+Fri 10:23 C: was 17.1 GB: removed idle bin/obj 0.0 GB; now 17 GB
+Fri 10:34 C: was 16.6 GB: removed idle bin/obj 0.0 GB; now 16.6 GB
+Fri 10:44 C: was 17 GB: removed idle bin/obj 0.0 GB; now 17 GB
+Fri 10:54 C: was 16.8 GB: removed idle bin/obj 0.1 GB; now 17 GB
+Fri 11:04 C: was 16.7 GB: removed idle bin/obj 0.0 GB; now 16.8 GB
+Fri 11:14 C: was 16.6 GB: removed idle bin/obj 0.0 GB; now 16.6 GB
+Fri 11:24 C: was 16.4 GB: removed idle bin/obj 0.0 GB; now 16.4 GB
+Fri 11:34 C: was 16.3 GB: removed idle bin/obj 0.0 GB; now 16.3 GB
+Fri 11:44 C: was 16 GB: removed idle bin/obj 0.0 GB; now 16.1 GB
+Fri 11:54 C: was 15.7 GB: removed idle bin/obj 0.3 GB; now 15.9 GB
+Fri 12:05 C: was 15.7 GB: removed idle bin/obj 0.0 GB; now 15.7 GB
+Fri 12:15 C: was 15.7 GB: removed idle bin/obj 0.0 GB; now 15.7 GB
+Fri 12:25 C: was 15.7 GB: removed idle bin/obj 0.0 GB; now 15.7 GB
+Fri 12:35 C: was 15.2 GB: removed idle bin/obj 0.3 GB; now 15.4 GB
+Fri 12:45 C: was 14.8 GB: removed idle bin/obj 0.0 GB; now 14.6 GB
+Fri 12:55 C: was 14.9 GB: removed idle bin/obj 0.0 GB; now 14.8 GB
+Fri 13:05 C: was 14.7 GB: removed idle bin/obj 0.0 GB; now 14.7 GB
+Fri 13:15 C: was 14.7 GB: removed idle bin/obj 0.0 GB; now 14.7 GB
+Fri 13:26 C: was 14.6 GB: removed idle bin/obj 0.0 GB; now 14.6 GB
+Fri 13:36 C: was 14.5 GB: removed idle bin/obj 0.0 GB; now 14.5 GB
+Fri 13:46 C: was 14.6 GB: removed idle bin/obj 0.0 GB; now 14.6 GB
+Fri 13:56 C: was 14.5 GB: removed idle bin/obj 0.0 GB; now 14.5 GB
+Fri 14:06 C: was 14.5 GB: removed idle bin/obj 0.0 GB; now 14.5 GB
+Fri 14:16 C: was 14.4 GB: removed idle bin/obj 0.0 GB; now 14.4 GB
+Fri 14:26 C: was 14.6 GB: removed idle bin/obj 0.0 GB; now 14.5 GB
+Fri 14:36 C: was 14.2 GB: removed idle bin/obj 0.0 GB; now 14.2 GB
+Fri 14:46 C: was 14.5 GB: removed idle bin/obj 0.0 GB; now 14.5 GB
+Fri 14:56 C: was 14 GB: removed idle bin/obj 0.0 GB; now 14 GB
+Fri 15:07 C: was 12.7 GB: removed idle bin/obj 0.0 GB; now 12.7 GB
+Fri 15:17 C: was 12.6 GB: removed idle bin/obj 0.0 GB; now 12.6 GB
+Fri 15:27 C: was 12.7 GB: removed idle bin/obj 0.0 GB; now 12.7 GB
+Fri 15:37 C: was 12.7 GB: removed idle bin/obj 0.0 GB; now 12.7 GB
+Fri 15:47 C: was 12.1 GB: removed idle bin/obj 0.0 GB; now 12.1 GB
+Fri 15:57 C: was 12.9 GB: removed idle bin/obj 0.0 GB; now 12.9 GB
+Fri 16:07 C: was 15.4 GB: removed idle bin/obj 0.0 GB; now 15.4 GB
+Fri 16:17 C: was 15.4 GB: removed idle bin/obj 0.0 GB; now 15.4 GB
+Fri 16:27 C: was 14.9 GB: removed idle bin/obj 0.0 GB; now 14.9 GB
+Fri 16:37 C: was 13.8 GB: removed idle bin/obj 0.0 GB; now 13.8 GB
+Fri 16:47 C: was 13.4 GB: removed idle bin/obj 0.0 GB; now 13.4 GB
+Fri 16:58 C: was 14.2 GB: removed idle bin/obj 0.0 GB; now 14.2 GB
+Fri 17:08 C: was 14.1 GB: removed idle bin/obj 0.0 GB; now 14.1 GB
+Fri 17:18 C: was 14.1 GB: removed idle bin/obj 0.0 GB; now 14.1 GB
+Fri 17:28 C: was 14 GB: removed idle bin/obj 0.0 GB; now 14 GB
+Fri 17:38 C: was 13.9 GB: removed idle bin/obj 0.0 GB; now 17.3 GB
+Fri 18:11 started: C: free 24.1 GB
+Fri 19:51 C: was 17.7 GB: removed idle bin/obj 1.5 GB; now 19.3 GB
+Fri 20:21 C: was 17.5 GB: removed idle bin/obj 0.9 GB; now 18.4 GB
+Fri 20:32 C: was 17.7 GB: removed idle bin/obj 0.0 GB; now 17.7 GB
+Fri 20:52 C: was 17.1 GB: removed idle bin/obj 0.3 GB; now 17.4 GB
+Fri 21:02 C: was 17.1 GB: removed idle bin/obj 0.1 GB; now 17.3 GB
+Fri 21:12 C: was 15.2 GB: removed idle bin/obj 0.3 GB; now 15.6 GB
+Fri 21:22 C: was 17 GB: removed idle bin/obj 0.1 GB; now 17.1 GB
+Fri 21:32 C: was 16.5 GB: removed idle bin/obj 0.3 GB; now 16.8 GB
+Fri 21:43 C: was 16 GB: removed idle bin/obj 0.1 GB; now 16.2 GB
+Fri 21:53 C: was 12.9 GB: removed idle bin/obj 1.0 GB; now 13.9 GB
+Fri 22:03 C: was 14.2 GB: removed idle bin/obj 0.0 GB; now 14.2 GB
+Fri 22:13 C: was 13.8 GB: removed idle bin/obj 0.0 GB; now 13.9 GB
+Fri 22:23 C: was 14.8 GB: removed idle bin/obj 0.0 GB; now 14.9 GB
+Fri 22:33 C: was 14.2 GB: removed idle bin/obj 0.0 GB; now 14.2 GB
+Fri 22:43 C: was 13.5 GB: removed idle bin/obj 0.1 GB; now 13.6 GB
+Fri 22:54 C: was 13.7 GB: removed idle bin/obj 0.0 GB; now 13.7 GB
+Fri 23:04 C: was 13.6 GB: removed idle bin/obj 0.0 GB; now 13.6 GB
+Fri 23:14 C: was 13 GB: removed idle bin/obj 0.3 GB; now 13.2 GB
+Fri 23:24 C: was 13.2 GB: removed idle bin/obj 0.0 GB; now 13.2 GB
+Fri 23:34 C: was 13.1 GB: removed idle bin/obj 0.0 GB; now 13.1 GB
+Fri 23:44 C: was 12.1 GB: removed idle bin/obj 0.3 GB; now 12.4 GB
+Fri 23:55 C: was 11.9 GB: removed idle bin/obj 0.5 GB; now 12.4 GB
+Sat 00:05 C: was 12.4 GB: removed idle bin/obj 0.4 GB; now 12.8 GB
+Sat 00:15 C: was 13 GB: removed idle bin/obj 0.0 GB; now 13 GB
+Sat 00:25 C: was 12.7 GB: removed idle bin/obj 0.1 GB; now 12.8 GB
+Sat 00:31 started: C: free 15 GB
+Sat 00:32 C: was 15 GB: removed idle bin/obj 0.0 GB; now 14.8 GB
+Sat 00:42 C: was 14.7 GB: removed idle bin/obj 0.0 GB; now 14.7 GB
+Sat 05:25 C: was 17.3 GB: removed idle bin/obj 2.7 GB; now 21.2 GB
+Sat 07:07 C: was 16.9 GB: removed idle bin/obj 2.5 GB; now 19.7 GB
+Sat 07:40 C: was 17.7 GB: removed idle bin/obj 1.9 GB; now 19.5 GB
+Sat 08:01 C: was 17.7 GB: removed idle bin/obj 0.4 GB; now 18.2 GB
+Sat 08:22 C: was 17.6 GB: removed idle bin/obj 0.5 GB; now 18.5 GB
+Sat 08:33 C: was 17.9 GB: removed idle bin/obj 0.5 GB; now 18.4 GB
+Sat 08:51 started: C: free 20.7 GB
+Sat 11:12 C: was 17.8 GB: removed idle bin/obj 0.0 GB; now 17.8 GB
+Sat 11:23 C: was 17.7 GB: removed idle bin/obj 0.0 GB; now 17.7 GB
+Sat 14:03 C: was 17.7 GB: removed idle bin/obj 0.0 GB; now 17.6 GB
+Sat 14:15 C: was 17.8 GB: removed idle bin/obj 0.0 GB; now 17.7 GB
+Sat 14:46 C: was 17.9 GB: removed idle bin/obj 0.0 GB; now 17.9 GB
+Sat 14:56 C: was 17.5 GB: removed idle bin/obj 0.0 GB; now 17.4 GB
+Sat 15:07 C: was 15.4 GB: removed idle bin/obj 0.0 GB; now 15.3 GB
+Sat 15:18 C: was 15.7 GB: removed idle bin/obj 0.0 GB; now 15.6 GB
+Sat 15:28 C: was 16.2 GB: removed idle bin/obj 0.0 GB; now 16.2 GB
+Sat 15:39 C: was 16.9 GB: removed idle bin/obj 0.0 GB; now 16.9 GB
+Sat 15:59 C: was 16.5 GB: removed idle bin/obj 0.0 GB; now 16.5 GB
+Sat 18:10 C: was 15.9 GB: removed idle bin/obj 0.0 GB; now 15.9 GB
+Sat 18:20 C: was 15.9 GB: removed idle bin/obj 0.0 GB; now 19.7 GB
+Sat 18:41 C: was 15.7 GB: removed idle bin/obj 0.0 GB; now 15.7 GB
+Sat 21:32 C: was 15.4 GB: removed idle bin/obj 0.0 GB; now 15.4 GB
+Sat 21:42 C: was 14.1 GB: removed idle bin/obj 0.0 GB; now 14.1 GB
+Sun 01:03 C: was 17.1 GB: removed idle bin/obj 0.0 GB; now 17.1 GB
+Sun 01:14 C: was 15.7 GB: removed idle bin/obj 0.0 GB; now 15.7 GB
+Sun 01:35 C: was 17 GB: removed idle bin/obj 0.0 GB; now 17 GB
+Sun 02:45 C: was 17.7 GB: removed idle bin/obj 0.0 GB; now 17.7 GB
+Sun 03:36 C: was 13.6 GB: removed idle bin/obj 0.0 GB; now 13.6 GB
+Sun 03:46 C: was 13.6 GB: removed idle bin/obj 0.0 GB; now 17.5 GB
+Sun 03:57 C: was 17.5 GB: removed idle bin/obj 0.0 GB; now 17.5 GB
+Sun 04:07 C: was 17.4 GB: removed idle bin/obj 0.0 GB; now 17.4 GB
+Sun 04:18 C: was 17.5 GB: removed idle bin/obj 0.0 GB; now 17.4 GB
+Sun 04:28 C: was 17.4 GB: removed idle bin/obj 0.0 GB; now 17.4 GB
+Sun 04:38 C: was 17.4 GB: removed idle bin/obj 0.0 GB; now 17.4 GB
+Sun 04:49 C: was 17.4 GB: removed idle bin/obj 0.0 GB; now 17.4 GB
+Sun 04:59 C: was 17.2 GB: removed idle bin/obj 0.0 GB; now 17.2 GB
+Sun 05:10 C: was 17.1 GB: removed idle bin/obj 0.0 GB; now 17 GB
+Sun 05:20 C: was 17 GB: removed idle bin/obj 0.0 GB; now 17 GB
+Sun 05:31 C: was 17 GB: removed idle bin/obj 0.0 GB; now 17 GB
+Sun 05:41 C: was 17 GB: removed idle bin/obj 0.0 GB; now 16.9 GB
+Sun 05:52 C: was 16.6 GB: removed idle bin/obj 0.0 GB; now 16.6 GB
+Sun 06:03 C: was 16.8 GB: removed idle bin/obj 0.0 GB; now 16.8 GB
+Sun 06:14 C: was 16.5 GB: removed idle bin/obj 0.0 GB; now 16.5 GB
+Sun 06:24 C: was 16.4 GB: removed idle bin/obj 0.0 GB; now 16.4 GB
+Sun 06:35 C: was 14.7 GB: removed idle bin/obj 0.0 GB; now 14.2 GB
+Sun 06:45 C: was 12.4 GB: removed idle bin/obj 0.0 GB; now 12.4 GB
+Sun 06:56 C: was 16.5 GB: removed idle bin/obj 0.0 GB; now 16.3 GB
+Sun 07:07 C: was 16.2 GB: removed idle bin/obj 0.0 GB; now 16.1 GB
+Sun 07:19 C: was 16.4 GB: removed idle bin/obj 0.0 GB; now 16.3 GB
+Sun 07:29 C: was 16 GB: removed idle bin/obj 0.0 GB; now 16 GB
+Sun 07:40 C: was 16 GB: removed idle bin/obj 0.0 GB; now 16 GB
+Sun 07:50 C: was 14.5 GB: removed idle bin/obj 0.0 GB; now 13.5 GB
+Sun 08:01 C: was 11.2 GB: removed idle bin/obj 0.0 GB; now 11.2 GB
+Sun 08:11 C: was 14.7 GB: removed idle bin/obj 0.0 GB; now 14.7 GB
+Sun 08:22 C: was 14.2 GB: removed idle bin/obj 0.0 GB; now 14.2 GB
+Sun 08:32 C: was 14.1 GB: removed idle bin/obj 0.0 GB; now 14.1 GB
+Sun 08:43 C: was 13.8 GB: removed idle bin/obj 0.0 GB; now 13.8 GB
+Sun 08:53 C: was 16.3 GB: removed idle bin/obj 0.0 GB; now 16.3 GB
+Sun 09:04 C: was 15.9 GB: removed idle bin/obj 0.0 GB; now 15.9 GB
+Sun 09:14 C: was 16.3 GB: removed idle bin/obj 0.0 GB; now 16.3 GB
+Sun 09:25 C: was 15.4 GB: removed idle bin/obj 0.0 GB; now 15.2 GB
+Sun 09:36 C: was 11.8 GB: removed idle bin/obj 0.0 GB; now 11.8 GB
+Sun 09:46 C: was 10.3 GB: removed idle bin/obj 0.0 GB; now 14 GB
+Sun 09:57 C: was 13.9 GB: removed idle bin/obj 0.0 GB; now 13.7 GB
+Sun 10:07 C: was 13.7 GB: removed idle bin/obj 0.0 GB; now 13.6 GB
+Sun 10:18 C: was 15.4 GB: removed idle bin/obj 0.0 GB; now 15.4 GB
+Sun 10:28 C: was 14.4 GB: removed idle bin/obj 0.0 GB; now 14.4 GB
+Sun 10:39 C: was 13.7 GB: removed idle bin/obj 0.0 GB; now 13.7 GB
+Sun 10:49 C: was 13.7 GB: removed idle bin/obj 0.0 GB; now 13.6 GB
+Sun 11:00 C: was 13.1 GB: removed idle bin/obj 0.0 GB; now 12.5 GB
+Sun 11:10 C: was 15.2 GB: removed idle bin/obj 0.0 GB; now 15.2 GB
+Sun 11:21 C: was 15 GB: removed idle bin/obj 0.0 GB; now 15 GB
+Sun 11:31 C: was 13.8 GB: removed idle bin/obj 0.0 GB; now 13.8 GB
+Sun 11:42 C: was 13.7 GB: removed idle bin/obj 0.0 GB; now 13.7 GB
+Sun 11:52 C: was 13.6 GB: removed idle bin/obj 0.0 GB; now 13.6 GB
+Sun 12:03 C: was 13.7 GB: removed idle bin/obj 0.0 GB; now 13.4 GB
+Sun 12:13 C: was 13.1 GB: removed idle bin/obj 0.0 GB; now 13.1 GB
+Sun 12:24 C: was 14.4 GB: removed idle bin/obj 0.0 GB; now 14.4 GB
+Sun 12:34 C: was 13.9 GB: removed idle bin/obj 0.0 GB; now 13.9 GB
+Sun 12:46 C: was 13.6 GB: removed idle bin/obj 0.0 GB; now 13.4 GB
+Sun 12:57 C: was 12.7 GB: removed idle bin/obj 0.0 GB; now 12.7 GB
+Sun 13:07 C: was 13.4 GB: removed idle bin/obj 0.0 GB; now 13.4 GB
+Sun 13:18 C: was 13.6 GB: removed idle bin/obj 0.0 GB; now 13.6 GB
+Sun 13:29 C: was 13.6 GB: removed idle bin/obj 0.0 GB; now 13.5 GB
+Sun 13:40 C: was 13.2 GB: removed idle bin/obj 0.0 GB; now 13.2 GB
+Sun 13:50 C: was 13.1 GB: removed idle bin/obj 0.0 GB; now 13.1 GB
+Sun 14:01 C: was 13.5 GB: removed idle bin/obj 0.0 GB; now 13.5 GB
+Sun 14:11 C: was 13.4 GB: removed idle bin/obj 0.0 GB; now 13.4 GB
+Sun 14:22 C: was 12.6 GB: removed idle bin/obj 0.0 GB; now 12.6 GB
+Sun 14:32 C: was 11.8 GB: removed idle bin/obj 0.0 GB; now 11.8 GB
+Sun 14:43 C: was 11.8 GB: removed idle bin/obj 0.0 GB; now 11.8 GB
+Sun 14:53 C: was 11.6 GB: removed idle bin/obj 0.0 GB; now 11.6 GB
+Sun 15:04 C: was 7.7 GB: removed idle bin/obj 0.0 GB; now 7.7 GB
+Sun 15:04 C: under 10 GB: STOP_CODEX.flag written
+Sun 15:14 C: was 12.6 GB: removed idle bin/obj 0.0 GB; now 12.6 GB
+Sun 15:25 C: was 12.4 GB: removed idle bin/obj 0.0 GB; now 12.4 GB
+Sun 15:36 C: was 11.9 GB: removed idle bin/obj 0.0 GB; now 11.9 GB
+Sun 15:46 C: was 11.9 GB: removed idle bin/obj 0.0 GB; now 11.9 GB
+Sun 15:57 C: was 11.9 GB: removed idle bin/obj 0.0 GB; now 12.4 GB
+Sun 16:07 C: was 12.5 GB: removed idle bin/obj 0.0 GB; now 12.5 GB
+Sun 16:18 C: was 12.5 GB: removed idle bin/obj 0.0 GB; now 12.5 GB
+Sun 16:28 C: was 12.5 GB: removed idle bin/obj 0.0 GB; now 12.2 GB
+Sun 16:39 C: was 12 GB: removed idle bin/obj 0.0 GB; now 12 GB
+Sun 16:49 C: was 12.2 GB: removed idle bin/obj 0.0 GB; now 12.2 GB
+Sun 16:59 C: was 11.4 GB: removed idle bin/obj 0.0 GB; now 11.4 GB
+Sun 17:10 C: was 11.4 GB: removed idle bin/obj 0.0 GB; now 11.4 GB
+Sun 17:20 C: was 11.4 GB: removed idle bin/obj 0.0 GB; now 11.4 GB
+Sun 17:31 C: was 11.6 GB: removed idle bin/obj 0.0 GB; now 11.6 GB
+Sun 17:41 C: was 11.5 GB: removed idle bin/obj 0.0 GB; now 11.5 GB
+Sun 17:52 C: was 11.5 GB: removed idle bin/obj 0.0 GB; now 11.5 GB
+Sun 18:02 C: was 11.3 GB: removed idle bin/obj 0.0 GB; now 11.3 GB
+Sun 18:13 C: was 11.1 GB: removed idle bin/obj 0.0 GB; now 11.1 GB
+Sun 18:23 C: was 11 GB: removed idle bin/obj 0.0 GB; now 11 GB
+Sun 18:33 C: was 10.9 GB: removed idle bin/obj 0.0 GB; now 10.9 GB
+Sun 18:44 C: was 9.7 GB: removed idle bin/obj 0.0 GB; now 9.4 GB
+Sun 18:44 C: under 10 GB: STOP_CODEX.flag written
+Sun 18:55 C: was 9.3 GB: removed idle bin/obj 0.0 GB; now 9.3 GB
+Sun 18:55 C: under 10 GB: STOP_CODEX.flag written
+Sun 19:05 C: was 9.2 GB: removed idle bin/obj 0.0 GB; now 9.3 GB
+Sun 19:05 C: under 10 GB: STOP_CODEX.flag written
+Sun 19:16 C: was 10.6 GB: removed idle bin/obj 0.0 GB; now 10.6 GB
+Sun 19:26 C: was 9.2 GB: removed idle bin/obj 0.0 GB; now 9.2 GB
+Sun 19:26 C: under 10 GB: STOP_CODEX.flag written
+Sun 19:36 C: was 9.1 GB: removed idle bin/obj 0.0 GB; now 9.1 GB
+Sun 19:36 C: under 10 GB: STOP_CODEX.flag written
+Sun 19:47 C: was 10.8 GB: removed idle bin/obj 0.0 GB; now 10.8 GB
+Sun 19:57 C: was 10.9 GB: removed idle bin/obj 0.0 GB; now 10.9 GB
+Sun 20:08 C: was 10.7 GB: removed idle bin/obj 0.0 GB; now 10.5 GB
+Sun 20:18 C: was 9.6 GB: removed idle bin/obj 0.0 GB; now 9.5 GB
+Sun 20:18 C: under 10 GB: STOP_CODEX.flag written
+Sun 20:28 C: was 9.2 GB: removed idle bin/obj 0.0 GB; now 9.2 GB
+Sun 20:28 C: under 10 GB: STOP_CODEX.flag written
+Sun 20:39 C: was 9.9 GB: removed idle bin/obj 0.0 GB; now 9.9 GB
+Sun 20:39 C: under 10 GB: STOP_CODEX.flag written
+Sun 20:49 C: was 9.4 GB: removed idle bin/obj 0.0 GB; now 9.4 GB
+Sun 20:49 C: under 10 GB: STOP_CODEX.flag written
+Sun 21:00 C: was 9.9 GB: removed idle bin/obj 0.0 GB; now 9.9 GB
+Sun 21:00 C: under 10 GB: STOP_CODEX.flag written
+Sun 21:10 C: was 9.9 GB: removed idle bin/obj 0.0 GB; now 9.9 GB
+Sun 21:10 C: under 10 GB: STOP_CODEX.flag written
+Sun 21:21 C: was 9.9 GB: removed idle bin/obj 0.0 GB; now 9.9 GB
+Sun 21:21 C: under 10 GB: STOP_CODEX.flag written
+Sun 21:31 C: was 9.9 GB: removed idle bin/obj 0.0 GB; now 9.9 GB
+Sun 21:31 C: under 10 GB: STOP_CODEX.flag written
+Sun 21:42 C: was 9.8 GB: removed idle bin/obj 0.0 GB; now 9.8 GB
+Sun 21:42 C: under 10 GB: STOP_CODEX.flag written
+Sun 21:52 C: was 9.9 GB: removed idle bin/obj 0.0 GB; now 9.9 GB
+Sun 21:52 C: under 10 GB: STOP_CODEX.flag written
+Sun 22:03 C: was 9.8 GB: removed idle bin/obj 0.0 GB; now 9.8 GB
+Sun 22:03 C: under 10 GB: STOP_CODEX.flag written
+Sun 22:13 C: was 9.8 GB: removed idle bin/obj 0.0 GB; now 9.8 GB
+Sun 22:13 C: under 10 GB: STOP_CODEX.flag written
+Sun 22:24 C: was 9.8 GB: removed idle bin/obj 0.0 GB; now 9.8 GB
+Sun 22:24 C: under 10 GB: STOP_CODEX.flag written
+Sun 22:34 C: was 9.8 GB: removed idle bin/obj 0.0 GB; now 9.8 GB
+Sun 22:34 C: under 10 GB: STOP_CODEX.flag written
+Sun 22:44 C: was 9.8 GB: removed idle bin/obj 0.0 GB; now 9.8 GB
+Sun 22:44 C: under 10 GB: STOP_CODEX.flag written
+Sun 22:55 C: was 9.8 GB: removed idle bin/obj 0.0 GB; now 9.8 GB
+Sun 22:55 C: under 10 GB: STOP_CODEX.flag written
+Sun 23:06 C: was 9.6 GB: removed idle bin/obj 0.0 GB; now 9.6 GB
+Sun 23:06 C: under 10 GB: STOP_CODEX.flag written
+Sun 23:16 C: was 9.2 GB: removed idle bin/obj 0.0 GB; now 9.2 GB
+Sun 23:16 C: under 10 GB: STOP_CODEX.flag written
+Sun 23:27 C: was 9.7 GB: removed idle bin/obj 0.0 GB; now 9.8 GB
+Sun 23:27 C: under 10 GB: STOP_CODEX.flag written
+Sun 23:37 C: was 9.8 GB: removed idle bin/obj 0.0 GB; now 9.8 GB
+Sun 23:37 C: under 10 GB: STOP_CODEX.flag written
+Sun 23:47 C: was 9.8 GB: removed idle bin/obj 0.0 GB; now 9.8 GB
+Sun 23:47 C: under 10 GB: STOP_CODEX.flag written
+Sun 23:58 C: was 9.1 GB: removed idle bin/obj 0.0 GB; now 9.1 GB
+Sun 23:58 C: under 10 GB: STOP_CODEX.flag written
+Mon 00:08 C: was 8.3 GB: removed idle bin/obj 0.0 GB; now 8.3 GB
+Mon 00:08 C: under 10 GB: STOP_CODEX.flag written
+Mon 00:10 started: C: free 7.9 GB
+Mon 00:11 C: was 7.9 GB: removed idle bin/obj 0.0 GB; now 7.8 GB
+Mon 00:21 C: was 7.7 GB: removed idle bin/obj 0.0 GB; now 7.6 GB
+Mon 00:32 C: was 7.7 GB: removed idle bin/obj 0.0 GB; now 7.6 GB
+Mon 00:42 C: was 7.6 GB: removed idle bin/obj 0.0 GB; now 7.6 GB
+Mon 00:52 C: was 6.8 GB: removed idle bin/obj 0.0 GB; now 6.8 GB
+Mon 00:52 C: under 7 GB: STOP_CODEX.flag written
+Mon 01:03 C: was 6.5 GB: removed idle bin/obj 0.0 GB; now 6.5 GB
+Mon 01:03 C: under 7 GB: STOP_CODEX.flag written
+Mon 01:13 C: was 6.3 GB: removed idle bin/obj 0.0 GB; now 6.3 GB
+Mon 01:13 C: under 7 GB: STOP_CODEX.flag written
+Mon 01:23 C: was 6.1 GB: removed idle bin/obj 0.0 GB; now 6.1 GB
+Mon 01:23 C: under 7 GB: STOP_CODEX.flag written
+Mon 01:34 C: was 7.3 GB: removed idle bin/obj 0.0 GB; now 7.1 GB
+Mon 01:44 C: was 6.8 GB: removed idle bin/obj 0.0 GB; now 6.8 GB
+Mon 01:44 C: under 7 GB: STOP_CODEX.flag written
+Mon 01:55 C: was 8.4 GB: removed idle bin/obj 0.0 GB; now 8.4 GB
+Mon 02:05 C: was 7.2 GB: removed idle bin/obj 0.0 GB; now 7.2 GB
+Mon 02:15 C: was 6.4 GB: removed idle bin/obj 0.0 GB; now 6.4 GB
+Mon 02:15 C: under 7 GB: STOP_CODEX.flag written
+Mon 02:26 C: was 6.4 GB: removed idle bin/obj 0.0 GB; now 6.4 GB
+Mon 02:26 C: under 7 GB: STOP_CODEX.flag written
+Mon 02:36 C: was 6.4 GB: removed idle bin/obj 0.0 GB; now 6.4 GB
+Mon 02:36 C: under 7 GB: STOP_CODEX.flag written
+Mon 02:46 C: was 6.4 GB: removed idle bin/obj 0.0 GB; now 6.4 GB
+Mon 02:46 C: under 7 GB: STOP_CODEX.flag written
+Mon 02:57 C: was 6.3 GB: removed idle bin/obj 0.0 GB; now 6.4 GB
+Mon 02:57 C: under 7 GB: STOP_CODEX.flag written
+Mon 03:07 C: was 6.4 GB: removed idle bin/obj 0.0 GB; now 6.4 GB
+Mon 03:07 C: under 7 GB: STOP_CODEX.flag written
+Mon 03:17 C: was 6.3 GB: removed idle bin/obj 0.0 GB; now 6.3 GB
+Mon 03:17 C: under 7 GB: STOP_CODEX.flag written
+Mon 03:28 C: was 6.3 GB: removed idle bin/obj 0.0 GB; now 6.3 GB
+Mon 03:28 C: under 7 GB: STOP_CODEX.flag written
+Mon 03:38 C: was 6.3 GB: removed idle bin/obj 0.0 GB; now 6.3 GB
+Mon 03:38 C: under 7 GB: STOP_CODEX.flag written
+Wed 23:40 C: was 17.9 GB: removed idle bin/obj 0.3 GB; now 35.3 GB
+Thu 09:10 started: C: free 55 GB
+Thu 10:10 started: C: free 50.2 GB
+Thu 16:52 started: C: free 81.7 GB
+Fri 12:01 started: C: free 60.3 GB
+Fri 17:19 started: C: free 54.6 GB

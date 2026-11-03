@@ -1,0 +1,9 @@
+Draft PR **#1871** is open, but it is built and unit-tested only. Nobody has opened it in AutoCAD, and BUG-1255 stays open.
+
+- **Files:** `Shared/ExcelBinding/ExcelLibraryBinding.cs` (new, linked into Civil and Structural), `ExcelPartRule.cs`, the Pit Schedule, CDCALC and Structural `ExportService` files, two `Bug1255ExcelPartTests.cs`, `REGRESSION_LOG.md`.
+- **Switch:** `excel.useAutoCadLoadedClosedXml`, ON by default.
+- **Probe:** a real AutoCAD 2027 console session showed CE's Excel copy is refused whichever copy loads first. With the fix, both orders pass.
+- **Robot case:** `N41_excel_export`, with switch-off control `N41c_excel_export_off`.
+- **Tests:** Civil's full suite had 3 failures: one was mine and is fixed, and the other two pass in Release. The Structural full suite was not run.
+- **Mistake:** my reset wiped an earlier attempt's unsaved edits, which I rebuilt.
+- **Report:** pushed to `C:\CE_PLAN\areas\release-v3-colleagues-BUG1255_FIX_REPORT.md`.

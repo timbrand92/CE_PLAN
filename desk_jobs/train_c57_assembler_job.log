@@ -1,0 +1,9 @@
+Train C-57 is assembled and pushed as `claude/rel-20261020k`, head `081a5a83`. It has 2 new reds, both from #1493.
+
+- **Merged:** #1502 and #1493 at the named heads, with only the `REGRESSION_LOG.md` conflicts, kept from both sides. `Shared/` is untouched. Manager must ship.
+- **Build:** 0 errors.
+- **Tests:** Manager 837/837 and net48 focused 192/192. Civil net10 has 3 failures: the known Glen Eira red plus 2 `CrossModuleGuardTests`. They are the CE_VERSION duplicate with Structural and the Manager command count (12, expected 11). I did not re-run the base or fix them.
+- **Tim's settings:** `CD_Settings.json` changed (cause not proven); the other three are unchanged.
+- **For the finalizer:** #1502 still needs a full review.
+
+Report is in `C:\CE_PLAN\areas`. The worktree is removed.

@@ -1,0 +1,4 @@
+== cx_cr18 (usage 11.0% -> 13.0%): 1. **DONE — [report saved and pushed](C:/CE_PLAN/areas/CODEX_CASE_REVIEW_cx_cr18.md).** Commit `d30a6f32`; main has no unpushed commits.
+2. **R35: NEEDS STRONGER ASSERTION.** Its saved-level check permits a comma instead of a decimal point.
+3. **R37: PARTIAL.** PD1 exists in the records; visibility still needs a Codex look.
+4. **Neither has passes on installed Civil 3.0.79.** No bug marked fixed, no review files changed, nothing run.

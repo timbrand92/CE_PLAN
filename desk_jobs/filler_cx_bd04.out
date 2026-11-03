@@ -1,0 +1,7 @@
+== cx_bd04 (usage 52.0% -> 56.0%): 1. **FOR TIM — BLOCKED on remaining checks.** All 10 new regression cases passed; net10 build: **0 errors**. Stopped when C: reached **11.91 GB**. Other build lanes and thousand-test suites remain unrun. Product code is unchanged; nothing deployed or opened in AutoCAD.
+
+2. **Saved and pushed.** [Draft PR #1705](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1705) · [Report](C:/CE_PLAN/areas/CODEX_TESTS_BD04_23OCT.md).
+
+---
+
+3. **For Claude.** `cx3/tests-bd04` at `c181b138`. BUG-303: 6 tests; BUG-315: 2; BUG-858: 2. **10 passed, 0 failed, 0 skipped.**

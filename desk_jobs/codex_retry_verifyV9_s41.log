@@ -1,0 +1,8 @@
+Thu 16:25 try 1 starting verifyV9_s41
+Thu 16:27 try 1 finished; report: CODEX_VERIFY_V9_20261022_1626.md; first line: NOT STARTED: Native desktop screen and mouse control is disabled in this session. Required fresh Explorer screenshot could not be taken.
+Thu 16:30 try 2 starting verifyV9_s41
+Thu 16:32 try 2 finished; report: CODEX_VERIFY_V9_20261022_1631.md; first line: NOT STARTED: computer tool exposes no native windows; required fresh Explorer screenshot and screen-and-mouse AutoCAD control unavailable.
+Thu 16:33 gave up after retries
+Thu 18:26 try 1 starting verifyV9_s41
+Thu 18:59 try 1 finished; report: CODEX_VERIFY_V9_20261022_1828.md; first line: AUTOCAD STILL RUNNING; SETTINGS RESTORED WHILE RUNNING; the desk must run settings-restore again after it closes
+Thu 18:59 done

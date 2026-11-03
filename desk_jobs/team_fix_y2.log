@@ -1,0 +1,13 @@
+**PR #1922 (draft, base `claude/rel-20261102a`) is open.** Report: `C:\CE_PLAN\areas\BUGFIX_y2_REPORT_31OCT.md`, pushed. With AutoCAD closed, 41 Structural tests passed and the real CE folders showed 0 differences across 33,287 files.
+
+**Files:**
+- **Redirect:** the four Structural log writers named in the task use a new `LogFolderRedirect.cs`. I also redirected `StructuralCommandLogger`, `ExcelMTextService`, `HealthCheckService` and `SupportBundleService`, which had the same gap.
+- **Test set-up:** `TestLogFolderModuleInit.cs` and `TestLogFolderGuardTests.cs`.
+- **Guard:** `Modules/TestSupport/RealFolderWatch.cs`, linked into the Drainage, Manager and Structural test projects.
+
+**Switch:** none. With `CE_LOG_DIR_OVERRIDE` unset, AutoCAD uses exactly the folders it used before.
+
+- **Exit code:** a failed guard is printed with the file name, but `dotnet test` still exits 0.
+- **Not run:** Manager tests were compiled but not run, per the standing rule.
+- **CE_SHARED:** unchanged.
+- **Cleanup:** worktree and scratch folder removed.

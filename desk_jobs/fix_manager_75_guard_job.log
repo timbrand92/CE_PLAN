@@ -1,0 +1,7 @@
+The Manager release build now passes on the C-53 branch, with the file-count guard changed from 78 to 75.
+
+- **New head:** `0d3b1f49`, a plain push on top of `ac5750ec`.
+- **Proof build:** the same command as the payload build gave "Complete 75-file, three-lane release candidate verified", 0 errors. The file list is identical to `c1049`. Only the stamped-commit DLLs and pdbs differ (9 files, including `CE.Diagnostics.dll`); everything else is byte-identical.
+- **Pins:** I changed the csproj guard and its two messages, the stale "72" in `Modules/Manager/CLAUDE.md`, and added the `REGRESSION_LOG.md` line. Nothing else pinned the count.
+- **Tests:** 55 of 55 Manager tests pass on net10. Installer.Tests compile only, not run. Tim's settings files are unchanged.
+- **Log:** entry 1487 is in `C:\CE_PLAN`.

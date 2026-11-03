@@ -1,0 +1,20 @@
+**FOR TIM**
+
+I've finished reviewing the 15 draft fixes, #1463 to #1477. Ten of them repeat bugs that were already reviewed, because two builders worked the same list. Nothing has been installed or tested in AutoCAD.
+
+1. **Use as they are (5):** #1463, #1466, #1470, #1473, #1476.
+2. **Use after a small fix (5):**
+   - **#1464:** the error message names the box by its program name, not the label you see on screen.
+   - **#1469, #1474, #1475:** each repeats part of an earlier fix. Remove the repeated part and keep the new part.
+   - **#1477:** add log lines where the double-click is dropped earlier.
+3. **Not used (5):** #1465, #1467, #1468, #1471 and #1472 repeat fixes that already passed review. I also swapped out two from the last set: #1474 replaces #1451 and #1470 replaces #1445. All of these stay open; nothing was closed.
+4. **Nothing held back or rejected,** and there are no new questions for you.
+5. **Tests run:** the whole plugin built with 0 errors. Manager tests passed 793 of 793, the chosen Civil tests 268 of 268, and the Structural tests 114 of 114. Your settings files are unchanged and AutoCAD was never started.
+
+---
+
+1. **Log:** I added entries 1312–1334 to `C:\CE_PLAN\areas\release-v3-colleagues-REVIEWLANE_LOG.md` and pushed them in three commits. Entry 1329 adds these PRs to the C-46 merge order and entry 1333 is the "do not mark fixed" list.
+2. **Shared library:** after the fixes, none of the PRs picked from this set changes the shared library (CE_SHARED).
+3. **Structural test run:** my first run used too wide a test filter and was still going after 31 minutes, with no dialog open, so I stopped it and took no result from it. The 114 figure comes from a narrower rerun that covers the Settings window. The full Structural suite was not run.
+4. **Not checked:** I did not re-run the "fails before the fix" tests myself, so those claims are the builders' or my reading of the code. The Installer was only compiled, as the rules require.
+5. **Cleanup:** I removed both trial worktrees and released the build lock.

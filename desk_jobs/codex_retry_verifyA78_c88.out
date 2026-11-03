@@ -1,0 +1,12 @@
+== verifyA78_c88 (usage 27.0% -> 27.0%): AUTOCAD STILL RUNNING
+
+1. **NOT STARTED:** Explorer capture failed on both minimised windows. All five visual checks remain **NOT TESTED**.
+2. **Installed:** Civil 3.0.88 / Manager 1.1.88 / Structural 1.0.125.
+3. **Left safe:** No settings changed; launcher lock released. AutoCAD appeared after release; this run never launched it and left it untouched.
+4. **Report:** [A78 results](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_A78_20261101_1309.md>).
+== verifyA78_c88 (usage 27.0% -> 28.0%): AUTOCAD STILL RUNNING ÔÇö another holderÔÇÖs session. A78ÔÇÖs session closed without saving.
+
+1. **Results:** 1 PASS (plain RG), 2 BLOCKED, 2 NOT TESTED. No FAILs or DIFFERENT results. SURE 5; UNSURE 0.
+2. **Blocker:** New Pipe lacked the briefÔÇÖs ÔÇ£Label layoutÔÇØ control. Grade Cancel/Esc/X and the short-pipe leader remain unproven.
+3. **Safety:** All four settings hashes unchanged. Lock release refused because Claude-driverv3 had taken over; no force used. No fixtures missing.
+4. **Report:** [A78 verification](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_A78_20261101_1324.md>).

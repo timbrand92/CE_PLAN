@@ -1,0 +1,16 @@
+`C:\CE_PLAN\areas\LOOKBRIEF_LANEB_PART3_02NOV.md` is written: 7 of the 9 bugs get a look (LB3-01 to LB3-07), BUG-642 goes back to a builder, and BUG-767 can't be looked at yet. I ran nothing and opened no AutoCAD or drawing, so no step has been tried. The word "follow" appears nowhere in the file; I searched it in every form.
+
+- **Needs a look:** BUG-576, 669, 678, 748, 754, 850, 858. None is already seen as a pass, and none is overtaken.
+- **BUG-576 conflict:** the carpark is right and the 24 Oct triage was only true on 24 Oct. The fix, commit b2e56d16, is in the Structural line that is installed now (1.0.125).
+- **BUG-642:** the fix installed in October was already in when the 18 Oct look failed. The new fix, draft PR #1924, is not installed.
+- **BUG-767:** no drawing has an existing pipe leaving the end of a route, and no Codex look has ever got into the Profiles window. The brief asks for a fixture "F-LS1" and carries a draft look, LB3-08, marked "not run".
+- **GO flags:** BUG-850 needs `LB3E_GO.flag` (it changes "Show the old CE tabs" and restores it byte for byte). `LB3_THEMES_GO.flag` is optional, for staging other Manager themes.
+- **Sessions:** three, about 25, 12 and 22 minutes, with launch lines for `verifyLB3_c88`, `verifyLB3e_c88` and `verifyLB3s_c88`. Each uses a separate lock and report glob, so they don't clash.
+- **Urgent:** the live `C:\CE_PLAN\BUG_CARPARK.md` is only 1,045 bytes. Commits 20e999d3 and 5cd059e9 replaced the whole 2.1 MB register with a note. I read every bug entry from the last whole copy, commit b498a968, and changed nothing. Someone needs to restore the file.
+- **Not verified:**
+  - Whether the Structural test drawing holds the column block that C2 needs.
+  - Whether the Z purlin entry is in SBEAM's list.
+  - Whether the steps I made up work: the ROTATE line, the Properties palette steps, and the empty line that ends the LBUH selection.
+  - The Manager's current theme, which I may not read.
+
+Verdict: DRAFT READY FOR CE 02, with the carpark restore needed first.

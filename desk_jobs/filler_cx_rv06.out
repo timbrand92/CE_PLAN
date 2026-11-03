@@ -1,0 +1,5 @@
+== cx_rv06 (usage 19.0% -> 23.0%): 1. **DONE — 9 PRs reviewed; 2 HIGH, 2 MEDIUM, 0 LOW new findings.** Most important: updating one schedule can relabel an archived schedule while leaving its old depth values unchanged.
+
+2. **Report:** [CODEX_PR_REVIEW_GROUP06_23OCT.md](C:/CE_PLAN/areas/CODEX_PR_REVIEW_GROUP06_23OCT.md). Includes individual verdicts, source references and deterministic tests.
+
+3. **Saved and pushed:** report-only commit `21589bfa` on CE_PLAN `main`; leak scan passed. No code changes, builds, tests or AutoCAD runs. Findings are verified by reading; native verification remains pending.

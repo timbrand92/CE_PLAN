@@ -1,0 +1,10 @@
+The options paper is written and pushed. Option (a) is already built on `claude/rel-20261102a`, so there is no new code, branch or PR from me. I only read code and ran no builds or tests, so nothing here is proven in AutoCAD.
+
+1. **Where the box opens:** `CdCommand.cs` around line 585-600. The label text is in `GradeMismatchDialog.xaml.cs`.
+2. **Option (a), X counts as Cancel:** already in the Civil release branch (commit c92db9ad, PR #1858). The switch is `grade.mismatchBoxCloseCancels` and ships ON.
+3. **Option (b), box text says what X does:** not built. It would be about 3 lines, but the pipe would still be placed when the X is pressed.
+4. **Recommendation:** keep (a) as the default.
+5. **Esc still fails:** Codex saw Esc not close the box on 3.0.88. The X was not re-tried on 3.0.88. I did not find the cause by reading the code. The brief suggests a likely fix, but it needs a Codex window brief.
+6. **Left unfinished:** I left the brief committed with the other modified files in `C:\CE_PLAN` untouched. I did not write the Codex window brief for the Esc fault.
+
+The brief is `C:\CE_PLAN\areas\BRIEF_W857_GRADE_MISMATCH_X_02NOV.md`.

@@ -1,0 +1,9 @@
+Draft PR **#1992** (B-164, base `claude/rel-20261102a`) is open. Only the unit tests have run, not AutoCAD, so BUG-1092 stays open.
+
+- **Change:** a 4 mm fall over 2 m now reads "Very shallow fall: 4 mm over 2.0 m, 1 in 500". Level pipes keep the old "essentially flat" words.
+- **Files:** `DesignValidationService.cs`, `UserSettings.cs`, a new test file, `REGRESSION_LOG.md`.
+- **Switch:** `validation.shallowFallStatesFigure`, on by default.
+- **Tests:** 356 passed, 0 failed. net48 compile has 0 errors.
+- **Report:** `C:\CE_PLAN\areas\BUGFIX_w1092d_REPORT_02NOV.md`, pushed.
+- **Real AppData files changed:** AutoCAD started at 5:02:52 pm during my run, and none of my code touches those files. The report says so.
+- **Cleanup:** the worktree and scratch folder are removed. C: free space did not move (46 GB).

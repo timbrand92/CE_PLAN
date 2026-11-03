@@ -1,0 +1,6 @@
+I reviewed 15 PRs: 9 MERGE, 4 MERGE-WITH-FIXES, 2 REJECT, no HOLD. The report is pushed to `C:\CE_PLAN\areas\REVIEW_PILE_B2_24OCT.md`. I read every PR's code; I built and ran nothing.
+
+1. **Safe for C-64 today:** #1628, #1629, #1631, #1573, #1599, #1561, #1641, #1314. #1588 and #1614 can follow once their fixes are pushed.
+2. **Biggest fault:** #1614's double-click on an Xref row can still select an unrelated object in your own drawing.
+3. **Rejects:** #1644 repeats the CDRUNSOLVE fix already installed (#1617). #1190 is a second copy of the existing CDRULES Explain.
+4. **Rules checks:** no Shared, installer or signed-update files, new hard blocks or hard-coded values. All four new bug-fix switches start ON.

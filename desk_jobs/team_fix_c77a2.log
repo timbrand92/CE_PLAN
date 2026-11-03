@@ -1,0 +1,16 @@
+**FOR TIM**
+
+PR #1839 (BUG-1226) is now built and unit-tested, but nobody has opened it in AutoCAD.
+
+1. **My first version was wrong.** The Recent row pushed the one-page window past its fixed height at 150% display scaling. I made the buttons slimmer, and now it fits. The window height is unchanged.
+2. **What you'll see.** The "Recent:" row sits under the two level boxes, newest first, with slightly smaller buttons than the old tab had.
+3. **Not proven.** How it looks. The row has no gap above it and may look cramped, so it needs a Codex look.
+
+**Technical detail**
+
+- **Switch:** `pipe.recentInvertButtonsOnMainPage`, ON by default.
+- **Files:** `PipeOnePageLayout.cs`, `Bug1226RecentButtonsTests.cs`, `C75NewSwitchDefaultsTests.cs`, `REGRESSION_LOG.md`.
+- **Commit:** 5092bbf9, pushed normally to `fb/bug1226-recent-buttons`.
+- **Tests:** the focused set passed 331 of 331. The full Civil net10 suite passed 20,784 with 0 failed and 32 skipped. The net48 build had 0 errors.
+- **N30 wording to fix** (I did not edit the case): lines 4 and 21 still say the buttons are on the Levels & Flow tab. Line 2 is a long line I didn't read, so check it too.
+- **Report:** the VERIFIED section is appended to `release-v3-colleagues-BUG1226_FIX_REPORT.md` and pushed.

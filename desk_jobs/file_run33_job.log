@@ -1,0 +1,8 @@
+Pushed to `C:\CE_PLAN` (91264f83, 23:35 Melbourne).
+
+- **Bugs updated (13):** run 33 notes went on BUG-815 (still seen, with the Detention-with-empty-length evidence), BUG-814, 813, 820, 825, 816, 835, 822, 372 and 141. PASS notes went on BUG-698, 782 and 797. Nothing is marked FIXED.
+- **Not noted:** BUG-742 and the BUG-814 part 2 wording, because the report didn't re-run them. The report has 11 checks, not 19.
+- **New bugs filed:** none.
+- **Fix queue (triage section 14):** lane 03 has 3 lines and lane 04 has 2.
+- **Robot gaps:** 6 new ones in the ROBOT_GAPS file, under a run 33 heading.
+- **Logs:** both lane logs have the "desk: Run 33 fixes queued in triage section 14" line.

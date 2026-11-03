@@ -1,0 +1,11 @@
+Three of the five bugs are fixed in draft PRs, one already has a fix, and one needs Tim's wording decision. Nothing was run in AutoCAD, nothing was installed, and no bug is marked FIXED. The report is pushed to `C:\CE_PLAN\areas\release-v3-colleagues-FB_TEAM_BATCH6_REPORT.md`, and `git status -sb` shows no "ahead".
+
+- **BUG-1040:** draft PR #1734, a flat or backward pipe is now a warning. Civil tests: 19,557 total, 3 failed (timing tests that pass alone).
+- **BUG-1041:** draft PR #1737, only the stale drawing is left out. Structural tests (Sbeam classes excluded): 5,516 total, 1 failed (build-id test that passes after a rebuild).
+- **BUG-1042:** skipped, Codex's PR #1720 already fixes it. I commented there.
+- **BUG-1043:** draft PR #1735, a blank invert level is now a warning. Civil tests: 19,557 total, 2 failed (1 fixed, 1 timing test).
+- **BUG-1044:** skipped, the options for the printed schedule wording are in the report.
+
+The three new switches ship ON (settings file only, no Settings row), and the report has the plain AutoCAD checks for each.
+
+I overwrote someone's scratch `C:\ce-fx\run.sh` by mistake; my copy is `run_b6.sh`.

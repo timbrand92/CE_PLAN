@@ -1,0 +1,9 @@
+== cx_rv14 (usage 10.0% -> 13.0%): 1. **DONE — saved and pushed.** [Findings file](C:/CE_PLAN/areas/CODEX_PR_REVIEW_GROUP14_24OCT.md).
+
+2. **Results:** 10 MERGE, 3 MERGE-WITH-FIXES, 2 HOLD. One new MEDIUM fault: #1564 can change Model-space labels when switching a layout support.
+
+3. **Verification:** code reading only. No builds, tests or AutoCAD runs.
+
+---
+
+1. **Commit:** `89c13c47`. Only the findings file committed. Leak scan passed.

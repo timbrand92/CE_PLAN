@@ -1,0 +1,7 @@
+**GO** at `adcd57e4049ca7c3338d6aabd7975ffb0964d96c` on `claude/rel-20261029a`. The report is pushed to `C:\CE_PLAN\areas\release-v3-colleagues-TRAIN_C76_FINALIZER_REPORT_2026-10-29.md`.
+
+1. **Mistake:** none that cost a build or a test run.
+2. **Fix I made:** a downpipe double-click ignored the "compound behaviour" setting. It now leaves AutoCAD's editor alone when that is off, as 3.0.85 did.
+3. **Verdicts:** #1835 keep. #1834, #1836, #1837 keep with notes.
+4. **Tests:** Civil 20,921, Manager 1,067, 0 failed. Net48 had 106 failures, all already failing before this train. Manager release check passed at 75 files.
+5. **Still to prove:** nothing has been opened in AutoCAD, and nothing is marked FIXED.

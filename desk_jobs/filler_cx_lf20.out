@@ -1,0 +1,9 @@
+== cx_lf20 (usage 34.0% -> %): 1. **DONE — audit:** BUG-968 to BUG-972 all skipped because existing draft fixes cover them. No production changes or installation. AutoCAD checks remain outstanding.
+
+2. **Report pushed:** [Batch 20 report](C:/CE_PLAN/areas/CODEX_LEDGER_FIX_BATCH20_23OCT.md) includes existing PR heads, reported totals and exact AutoCAD checks.
+
+---
+
+1. **Draft:** [#1674](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1674), branch `cx2/bug-968-batch20-audit`, tip `4b6ecec4`, against `claude/rel-20261023l`.
+
+2. **This batch:** 5 checked, 5 skipped; 0 tests added/run; 0 builds. Leak scan passed.

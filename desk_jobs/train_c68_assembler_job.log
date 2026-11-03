@@ -1,0 +1,9 @@
+Train C-68 is assembled: #1779 (BUG-861) is merged onto C-67 as `claude/rel-20261025r`, head `0aa24804`. The report is pushed to `C:\CE_PLAN`. Nothing has been run in AutoCAD.
+
+- **Merge:** #1779's live head did not move from the reference (`a8f64f6b`). The merge conflicted only in `REGRESSION_LOG.md`, which I resolved keeping every entry. I made no commit of my own.
+- **Scope:** Shared, Installer and Manager are untouched.
+- **Settings:** one new switch, `linking.inspectorPickWaitsAfterUndo`, default on. It has no Settings page row.
+- **Build and tests:** the whole solution builds with 0 errors. Civil net10 ran 20,377 tests with 0 failed. Manager net10 ran 1,013 with 0 failed. Civil net48 shows the same 51 reference-only reds as C-67, nothing new.
+- **Setbacks:** I paused about 55 minutes for disk space (it fell to 6.3 GB, under the 8 GB floor) and deleted nothing.
+- **Open points:** the fix commit `a8f64f6b` has had no second independent read. The cause of the lost REDO is still unknown.
+- **Tidy-up:** both worktrees and the temp folders are removed. Tim's settings files are unchanged.

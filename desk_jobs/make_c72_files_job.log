@@ -1,0 +1,14 @@
+All seven C-72 files are written and pushed (`e2deb853`), and no chain was started. They are not run or tested beyond a clean check: no control characters, no tables, and the three `.ps1` files parse with no errors. `git status -sb` shows no ahead.
+
+The assembler waits for C-71's version commit, then builds `claude/rel-20261026w`.
+
+I did not edit `DESK_LOG.md` or `BUG_CARPARK.md`.
+
+Files:
+- `areas\TRAIN_C72_PR_LIST_2026-10-27.md` (#1822, #1825, #1826, #1827, #1828 with live heads and file counts)
+- `train_c72_assembler_job.txt`
+- `train_c72_finalizer_job.txt`
+- `payload108_c72_job.txt` (candidate c1068)
+- `scripts\desk_install_c72.ps1`
+- `chain_c72.ps1`
+- `chain_install_c72.ps1`

@@ -1,0 +1,7 @@
+== cx_cr14 (usage 7.0% -> 10.0%): 1. **DONE:** [Review report](C:/CE_PLAN/areas/CODEX_CASE_REVIEW_cx_cr14.md) saved and pushed as `cd81aeee`. Leak scan passed; no commits ahead.
+
+2. **R07 — PARTIAL:** missing C14’s immediate file check after Cancel; uses a different trial field. Existing certificate untouched.
+
+3. **R10 — NEEDS RUNS:** text accepted on older 3.0.78; needs two sessions on installed 3.0.79. Certificate updated with that limit.
+
+4. **Summary:** zero cases accepted on the installed build. No bug status changed. No AutoCAD, builds or tests run.

@@ -1,0 +1,12 @@
+== verifyS2_c88 (usage 32.0% -> 34.0%): AUTOCAD CLOSED
+
+1. **No passes awarded.** My screenshot saver retained stale pictures, invalidating all four attempted looks. S2-05/06 were not run. Counts: PASS 0, FAIL 0, DIFFERENT 0, BLOCKED 0, NOT TESTED 6; SURE 2, UNSURE 4.
+2. **Needs fresh proof:** P8ÔÇÖs depth appeared to change from 1.00 m to 1.10 m after CDSYNC; saved baseline evidence is invalid.
+3. **Clean end:** Drawing discarded, settings unchanged, lock released. Installed versions: Civil 3.0.88 / Manager 1.1.88 / Structural 1.0.125.
+4. **Report:** [S2 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_S2_20261102_0728.md>). No fixtures missing.
+== verifyS2_c88 (usage 40.0% -> 42.0%): AUTOCAD CLOSED
+
+1. **Results:** PASS 3, FAIL 1, DIFFERENT 0, BLOCKED 0, NOT TESTED 2. Four executed looks SURE; S2-05/06 excluded.
+2. **Failure:** After CDSYNC, P8ÔÇÖs depth changed **1.00 ÔåÆ 1.10 m**. P8/P11 inlet formatting also changed; row counts remained 32/32.
+3. **Clean end:** Settings unchanged, drawing unsaved, acad.exe gone, lock released. Recent values left for desk restoration. No fixtures needed.
+4. **Report:** [CODEX_LOOK_S2_20261102_1014.md](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_LOOK_S2_20261102_1014.md>)

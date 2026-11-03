@@ -1,0 +1,37 @@
+## FOR TIM
+
+**Batch 14 is done. I fixed one bug, three were already being fixed by Codex, and one is waiting for a look in AutoCAD.**
+
+1. **BUG-1082 is fixed in draft PR #1736.** These are the level marks (FFL, RL, SSL, NGL, LM).
+   - **Before:** with 25DIMS or 25TEXT locked, CE still drew the mark onto the locked layer.
+   - **Now:** nothing is drawn, and the command line says "[CE] Layer 25DIMS is locked, so CE drew no level mark. Unlock it and try again."
+   - **During REFEDIT:** the level mark commands now stop straight away with a plain message.
+   - **Status:** built and unit-tested only. Nobody has opened it in AutoCAD.
+2. **BUG-1080, BUG-1081 and BUG-1083 are skipped.** Codex's draft PR #1721 already fixes them: Refresh Blocks changing locked symbols, Water Tank lettering on a locked layer, and Water Tank accepting an Xref. I left a note on that PR.
+3. **BUG-1084 is skipped.** This is Hatch Change while a block is open in REFEDIT. Its bug entry says Codex must first check in AutoCAD whether it can happen at all. That check hasn't been done.
+4. **Not tested:** anything in AutoCAD. I also didn't run every automated test project (the list is in the report).
+
+**AutoCAD check for BUG-1082:**
+1. Start a blank mm drawing with DIMSCALE 100. Create layers 25DIMS and 25TEXT, lock both, and keep layer 0 current.
+2. Type FFL, pick 0,0, choose Right, type 10.000. Right looks like: nothing is drawn and the message names 25DIMS.
+3. Unlock 25DIMS only and repeat. The message should name 25TEXT.
+4. Unlock both and repeat. You should get the normal triangle, tail and 10.000 text.
+5. Open any block with REFEDIT and type LM. Right looks like: CE refuses before asking the type. Then REFCLOSE and Discard.
+
+---
+
+**Technical notes**
+
+1. **Bases:** Civil `rel-20261023m` at f7f7d551; Structural `rel-20261023s` at e6d597c0. PR #1736 head is f25ddba1.
+2. **Tests:**
+   - The 4 new tests don't compile against the old command file (that is the "fails before the fix" proof). With the fix they pass 4/4.
+   - Structural automated tests (net10): 5,684 passed, 0 failed. The class that is known to hang was left out.
+   - Structural net48 build: 0 errors.
+3. **Refuse rather than warn:** I used the same lock check the rebar commands already use (BUG-367). R-27 ("warn, never block") covers engineering values, not locked layers.
+4. **Two problems during the test runs:**
+   - One large test run hung. I stopped only my own processes. Every class then passed when run in smaller chunks, so the hang didn't come back.
+   - My test build folder was deleted partway through, most likely by another job's cleanup. I rebuilt and re-ran the missing chunks.
+5. **Main checkout:** two untracked items appeared there during the session (`.codex/` and `BracingLengthSettingsTests.cs`). They are not mine and I left them alone.
+6. **Clean-up:** my worktree and scratch folder are removed. The report is pushed to CE_PLAN: `C:\CE_PLAN\areas\release-v3-colleagues-FB_TEAM_BATCH14_REPORT.md`.
+
+**Summary:** BUG-1082 is fixed in draft PR #1736: level marks no longer draw on locked 25DIMS/25TEXT and stop during REFEDIT. Structural net10 tests: 5,684 passed, 0 failed; net48 build: 0 errors. Nothing was checked in AutoCAD. Codex's PR #1721 already fixes BUG-1080, BUG-1081 and BUG-1083, so I skipped them and left a note there. BUG-1084 waits for Codex's AutoCAD check, as its entry requires. Nothing is marked fixed, installed or deployed.

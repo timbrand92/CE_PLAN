@@ -1,0 +1,9 @@
+== verifyX7_c60 (usage 56.0% -> 57.0%): 1. **DONE ÔÇö X7:** **4 FAIL, all SURE**. PASS 0; DIFFERENT 0; BLOCKED 0; NOT TESTED 0; UNSURE 0.
+
+2. **Faults confirmed:** CDCALC consumes U, including after tabs (**BUG-1030**); Pump System lacks its read-only banner (**BUG-1033**); PITSCHEDULE consumes U (**BUG-817**).
+
+3. **Build:** Civil **3.0.72**, Manager **1.1.72**, Structural **1.0.122**.
+
+4. **Clean end:** AutoCAD closed; lock released; all four settings hashes unchanged. Test copy discarded without saving. Fixtures wanted: none.
+
+5. **[Report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_X7_20261024_0011.md>):** Exact echoes, evidence paths and capture limitations recorded.

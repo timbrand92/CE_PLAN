@@ -1,0 +1,8 @@
+**FOR TIM:** the C-55 candidate is built and checked. Nothing is installed, and nobody has opened it in AutoCAD.
+
+1. **Candidate:** `C:\ce_rc_scratch\c1051`, holding the Civil 3.0.65 and Manager 1.1.65 bundles.
+2. **Verified:** both bundles read "verified N, bad 0, extra 0", Civil 828 files and Manager 75. This was re-checked after cleanup. Added 0 and removed 0 against installed for both.
+3. **Branch head:** `6c2bc2c7` (version-only commit, 4 files, 4 insertions, 4 deletions), pushed normally.
+4. **Tests:** Civil pin tests 41/41, Manager pin tests 51/51.
+5. **Checks:** natives are the installed bytes, the 78 string checks all came out as expected, and Tim's settings and the six installed DLLs are identical before and after.
+6. **Odd:** the diff adds only two new text literals ("open end" wording), so the string proof is those two plus the version stamps. The Structural `CS_Settings.json` was already changed before this run (the finalizer flagged it), and it did not change during this job. The report is `C:\Lisp Files\_TEST_COPIES_20260923\PAYLOAD_C1051_REPORT.md`.

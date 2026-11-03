@@ -1,0 +1,24 @@
+**FOR TIM**
+
+1. **A second PC with AutoCAD 2027 is the easy route.** The robot was built for 2027, so it needs about half a day of small, reviewed changes on your PC before it can run there.
+2. **Its passes count the same as passes on your PC.** Each result also records which PC it came from.
+3. **It takes about 3 working days and about 45 minutes of your time.** If you name the PC by Fri 30 Oct, it can join the full re-test on Sat 7 and Sun 8 Nov.
+4. **First, the office admin gives the test PC its own spare 2027 licence.** Open AutoCAD there and check the name at the top right is the test login's, not yours. With a licence of its own, the robot can never sign you out mid-drawing.
+5. **CE turns pipes into one-piece CE pipes only on your own Windows login.** On the test PC we switch that on, so its results match yours. For one full pass we switch it back off, which is exactly what Max will get.
+6. **I need two decisions from you, asked through the questions chat (CE 04):**
+   - The 8:30 to 5:30 "you're drafting" stop should apply to your PC only.
+   - A Codex check on the test PC should count as "Codex-accepted", with the PC's name beside it.
+
+I didn't run anything on any PC or in AutoCAD; all of this comes from reading the robot's files. The report is `C:\CE_PLAN\areas\TEST_PC_2027_ROUTE_29OCT.md`, pushed to the plan, and the push is confirmed complete.
+
+---
+
+1. **Changes to the robot, about 30 lines in one diff:** an hours switch that works only on the PC whose name it holds, the machine name in each run header and ledger row, a separate report folder and queue for that PC, two fixed paths, and that PC's own settings fingerprints. The AutoCAD year check doesn't change.
+2. **Getting files across:** the robot folder and the Codex runner folder are not git repositories, so they go by USB with a SHA-256 list. Only the two test drawings go across, by USB only, and are wiped off the stick afterwards. `DRV1_B1` contains a reference drawing named like a real job number.
+3. **The 2017 start prompt is out of date for this route:** it installs build tools, but the test PC never builds.
+4. **Not checked:**
+   - whether the spare licences cover 2027
+   - the PC's graphics card and screen
+   - whether any accepted check depends on the two extra add-ins on your PC
+
+Summary: The report is pushed. A 2027 test PC needs about 30 lines of reviewed robot change and no change to the year check. Its results count as normal passes. About 3 days and 45 minutes of Tim's time; it can join the 7–8 Nov re-test.

@@ -1,0 +1,17 @@
+Both holes in draft PR #1873 are closed on the same branch (commit `2b0953fc`, pushed normally). Built and unit-tested only. Nobody has opened it in AutoCAD.
+
+**FOR TIM**
+1. **What changed:** the "Grade mismatch" window is skipped only when the second level is exactly what CE's rule gives from the current upstream level, pipe length and current grade. It is worked out again at Draw. It is also skipped when "I know one end" is ON.
+2. **Hole 1:** upstream 19.45 on 4.1 m, then change the grade box to 200. The window opens again.
+3. **Hole 2:** 19.45, your own 19.30 downstream, then retype the upstream as 19.50. The window opens again.
+4. **Side effect:** a level you type that equals CE's own level (19.87 for 10 m at 1 in 80) no longer asks, even with a lowered mismatch percentage in Settings.
+5. **Mistake:** my first run failed because the placeholder AutoCAD file was missing, which cost about 10 minutes.
+6. **Not proven:** nothing was run in AutoCAD. I did not build the old commit `75e3baab`, so "N33e and N33f fail before the fix" comes from reading the code.
+
+**Technical**
+- **Files:** `MismatchBoxOwnSuggestionRule.cs`, `CdCommand.Grade.cs`, `CdCommand.cs`, two test files, `REGRESSION_LOG.md`. Switch `pipe.mismatchBoxSkipsOwnSuggestion` is unchanged (ON). Switch OFF gives today's windows exactly.
+- **One old test changed:** `GradeMismatchToleranceTests` now has the switch OFF in its setup. That is the one failure from the full run, and it fails because 19.87 is now treated as CE's own level.
+- **Tests:** full Civil suite on net10 Release once: 21,532 total, 1 failed (the test above). After the fix I re-ran only the focused set: 112 passed, 0 failed. net48 compile: 0 errors.
+- **Report:** follow-up appended to `release-v3-colleagues-B057_MISMATCH_BOX_REPORT.md` and pushed. It names robot cases N33a to N33f plus the switch-off twin N33s; N33e and N33f are the ones that should fail on the old commit.
+
+**Summary:** PR #1873 (B-057b), files above, switch `pipe.mismatchBoxSkipsOwnSuggestion` (ON). Both holes close, and the old test above needed its switch turned OFF in setup. Report pushed.

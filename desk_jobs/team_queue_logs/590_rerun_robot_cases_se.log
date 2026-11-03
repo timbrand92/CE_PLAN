@@ -1,0 +1,9 @@
+C:\CE_PLAN\areas\ROBOT_CASE_DRAFTS_SET01_PIPE_LEVELS_02NOV.md already holds a finished draft from an earlier pass at this brief (412 lines), so I left it alone and wrote nothing.
+
+The draft has 2 cases with twins, W1947 and W1967 (4 case texts). Codex-only looks cover #1887, #1969, #1970 and #1927. Nothing in it touches Undo, REDO, a locked layer or an Xref.
+
+I re-checked for existing cases. There is no case or draft for any of the six fixes, so the replacement pair #1919 and #1858 was not needed.
+
+Nothing was read from Tim's settings, built, tested or run in AutoCAD, and the case texts have not been through `case_runner.ps1 validate`. The draft's printed wording is taken from the PR text, not seen on a run. Both cases need a build containing #1947 and #1967 installed first, and an Opus review before any run.
+
+Verdict: file already complete, no change made. Path above.

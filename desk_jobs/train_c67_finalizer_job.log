@@ -1,0 +1,26 @@
+**FOR TIM**
+
+1. **Verdict: GO.** Train C-67 is ready at `b839d0842a75e60767d0ffeba6c730f087f0ca8b` on `claude/rel-20261025q`. It is built and unit-tested only. Nobody has opened it in AutoCAD.
+2. **One check was skipped: the Manager packaging check.** It confirms the Manager install has exactly 75 files. I didn't run it because drive C: had only 9 to 11 GB free, and the job says to stop that step under 12 GB. No packaging file changed in this train, so the count should still be 75. The next step (the payload builder) runs the same check before anything ships. **C: is nearly full:** that step stops itself below 8 GB.
+3. **What you'll see once it's installed:**
+   - **Slabs:** in a drawing set in metres, a flat slab now fails the minimum-fall check instead of passing.
+   - **CDPROPAGATE and the Edit Pipe cascade:** a hand-typed level you keep that leaves a pipe flat now gives a warning instead of stopping the whole cascade.
+   - **New Pipe and Edit Pipe:** a blank invert level no longer stops you. That end is saved blank, never 0.00.
+   - **CDEDIT on several items:** a ticked field left blank is skipped, and the filled fields still apply.
+   - **CE Blocks:** a block can go on a frozen layer, with a warning that it will be hidden. A locked layer still refuses.
+4. **Your PC is still on C-65.** C-66 was never installed, so installing C-67 brings both sets of fixes at once.
+5. **Waiting on your answer, left out:** the new line on every computations sheet (#1771), and the two survey and stage-drawing XREF questions (#1756, #1767). The questions are written out in the report.
+
+---
+
+1. **What I changed:** one tests-only commit. It checks that the four new Civil switches load ON from older settings files. No product code changed and nothing was reverted.
+2. **Tests:**
+   - **Solution build:** 0 errors.
+   - **Civil, newer-AutoCAD build:** 20,373 tests, 0 failed.
+   - **Manager, newer-AutoCAD build:** 1,013 tests, 0 failed.
+   - **Civil, AutoCAD 2024 build (selected tests):** the same 51 known failures as last train, nothing new.
+   - **Undo/Redo safety check:** 25 of 25 passed.
+   - **Settings window:** still fits at 670 px.
+   - **Your four settings files:** not changed by my run.
+3. **One new low-risk item for next round:** CDRUNSOLVE and the CDRULES fix "Apply" use the same writer as CDPROPAGATE. They will now write a proposal that leaves a pipe flat, with the warning, instead of refusing it.
+4. **Report:** `C:\CE_PLAN\areas\release-v3-colleagues-TRAIN_C67_FINALIZER_REPORT_2026-10-25.md`. It is pushed, along with the review-lane log entries and the sign-off line.

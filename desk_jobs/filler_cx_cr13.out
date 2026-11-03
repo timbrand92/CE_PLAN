@@ -1,0 +1,5 @@
+== cx_cr13 (usage 6.0% -> 9.0%): 1. **DONE — [review report](C:/CE_PLAN/areas/CODEX_CASE_REVIEW_cx_cr13.md) saved and pushed**, commit `50e43119`. Branch has no unpushed commits.
+
+2. **Zero accepted on installed Civil 3.0.79.** R03 needs two current-build passes; D12 is accepted historically on 3.0.78. R05 is PARTIAL. R08 reproduced first-round REDO loss twice on 3.0.78; its 3.0.79 behaviour is unknown.
+
+3. **No bug may be marked fixed.** Only the report and R03’s historical-build review file changed. No AutoCAD, runner, build or test was run.

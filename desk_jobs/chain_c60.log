@@ -1,0 +1,9 @@
+Thu 16:40 chain start: C-60 (Civil only). Nothing is installed by this chain.
+Thu 16:40 C:\CE_PLAN\desk_jobs\train_c60_assembler_job.txt started pid 93704 (sonnet)
+Thu 17:05 finished train_c60_assembler_job.txt
+Thu 17:05 C:\CE_PLAN\desk_jobs\train_c60_finalizer_job.txt started pid 81856 (opus)
+Thu 18:04 finished train_c60_finalizer_job.txt
+Thu 18:04 C-60 finalizer verdict GO: building payload 92 (candidate c1056). Nothing is installed by this chain.
+Thu 18:04 C:\CE_PLAN\desk_jobs\payload92_c60_job.txt started pid 76948 (sonnet)
+Thu 18:23 finished payload92_c60_job.txt
+Thu 18:23 chain complete

@@ -1,0 +1,7 @@
+Five draft PRs are open for BUG-690, BUG-373, BUG-817, BUG-664, BUG-692 and BUG-693: #1659, #1663, #1671, #1682 and #1688. Each has a test, a `REGRESSION_LOG.md` entry and the AutoCAD check steps. The Civil net10 full runs (19,552 to 19,560 tests) failed only on timeouts from a busy PC, and those tests pass alone. The net48 Civil build had 0 errors. Nothing was run in AutoCAD.
+
+- **FB-02:** the Settings row was left out because the window is at its height limit.
+- **FB-04:** the cause is read from the code only.
+- **Opus review:** needed on FB-02, FB-04 and FB-05.
+
+The report is `C:\CE_PLAN\areas\release-v3-colleagues-FB_TEAM_BATCH1_REPORT.md`, pushed with no 'ahead'.

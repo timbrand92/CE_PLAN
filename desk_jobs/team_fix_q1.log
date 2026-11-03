@@ -1,0 +1,57 @@
+I appended the section "## Refresh Fri 30 Oct 2026 (CE 01 job q1)" to the end of `C:\CE_PLAN\areas\BUG_REGISTER_TRIAGE_2026-10-24.md`. The original 47,084 bytes above it are unchanged (the hash matches). Nothing was built, run, committed or pushed, and I did not touch `BUG_CARPARK.md`.
+
+**FOR TIM**
+
+1. **The 60 pilot-critical bugs from 24 Oct are almost all in hand.**
+   1. 41 have a draft fix.
+   2. 3 have a draft under another name: BUG-1052, 1053 and 540. The BUG-540 draft was rejected in review.
+   3. 6 have a build number but no draft yet.
+   4. 1 (BUG-865) has a Status line saying a fix exists, which I did not verify.
+   5. 8 are waiting on you or on a fact.
+   6. Only BUG-1173 (the colleague pack backup step) has nothing at all.
+2. **The 35 newest bugs (BUG-1222 to BUG-1256):**
+   1. 2 are finished: BUG-1222 and BUG-1225.
+   2. 13 already have a build number or a draft.
+   3. 20 are new to the queue.
+   4. 9 of the 35 are pilot-critical: BUG-1227, 1228, 1229, 1233, 1240, 1246, 1247, 1251 and 1255.
+   5. BUG-1240, 1246 and 1247 have no draft yet.
+3. **Four questions for you.** CE 04 should batch them.
+   1. BUG-1236: should the front overflow block say FO, or keep the card's shared OF symbol?
+   2. BUG-1243: what did CE Blocks do wrong? Nothing is recorded, so no builder can start.
+   3. BUG-1245: should Move + Rotate and Copy + Rotate work on a raingarden?
+   4. BUG-1224: should "Apply CE Standard Layers" leave locked and frozen layers alone? I recommend yes.
+4. **My mistakes:** I ran one `git fetch` in the code repository, which only refreshes remote branch heads. I also could not read which build is installed today, because the rules say not to touch your bundles. The newest I can prove is Civil 3.0.85.
+5. **You need to do nothing.**
+
+**Counts (Task 2)**
+
+1. **By Status line:**
+   1. Closed: 47 (24 Oct: 43).
+   2. Tim-confirmed: 3.
+   3. In progress: 46.
+   4. Status says a fix is installed: 345.
+   5. Status says built or drafted: 72.
+   6. Status says nothing about a fix: 692, of which 53 have no Status line at all.
+2. **By bug number in commits, open PRs and the register** (the 24 Oct method, applied to the 1,155 entries that are not closed or Tim-confirmed):
+   1. 532 are in the installed line (`rel-20261026z`).
+   2. 13 are only on the C-77 line.
+   3. 279 are only on other branches.
+   4. 4 are only in an open PR title or branch.
+   5. 19 are only in the build register.
+   6. 308 appear nowhere.
+3. **How it differs from 24 Oct:** the two methods are not like for like, and the Status lines lag. 345 say installed against about 545 by commits. I could verify the carpark text, the live PR list (1,464 open), the register and the commit messages. I could not verify any draft's correctness or which build is installed now.
+
+**Queue (Task 3): 246 entries**
+
+- **Ready to build: 134.** That is 131 BUILD-NOW and 3 BUILD-ON-RECOMMENDED (BUG-1124, 1125, 1224). 61 are Civil or Manager and 73 are Structural. Tier 1 pilot-critical has 4 items, tier 2 wrong-answer risk has 16, tier 3 has 114.
+- **Not ready: 112.** 50 need your word, 30 need a fact first, 4 may touch protected shared files, and 28 are not real faults or duplicates.
+- **Layout.** The first 40 are in full, with the files each entry names. Items 41 to 134 are BUG-number lists by group. I also listed the file sets where only one builder should work at a time, and the open PRs they must wait for.
+
+**What I did NOT check**
+
+1. No code was read. Groups and file names come from the carpark entries' own words.
+2. The classes for older entries are my keyword reading plus the 24 Oct groups, not a full re-read. Only 3 entries came out BUILD-ON-RECOMMENDED, which is probably too few.
+3. PRs that name only an audit code could not be matched, so a few queue entries may already have a draft.
+4. 33 queue entries are named only in a PR body, and I did not count that as cover. I flagged those entries "check cover" where I noticed them.
+5. I did not give sizes (S, M, L) for queue items, and I assigned acceptance routes only for the 35 new entries.
+6. For CE 05: BUG-861 evidence blocks sit inside the BUG-1224 and BUG-1225 entries. The heading `BUG-CDCHECKIGNORE-UNDO-C60` has no number, and BUG-1221 is unused.

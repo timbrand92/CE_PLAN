@@ -1,0 +1,10 @@
+Train C-67 is assembled and the report is pushed (`efad10b2` in `C:\CE_PLAN`). All nine PRs are merged on `claude/rel-20261025q`, head `14ba8300`, with no commit of my own. Every PR head matched the list, so none had moved. The installed line is still C-65 (Civil 3.0.75 / Manager 1.1.75), so installing C-67 also delivers C-66.
+
+- **Build:** the whole solution builds with 0 errors.
+- **Civil net10:** 20,370 tests, 0 failed.
+- **Manager net10:** 1,013 tests, 0 failed.
+- **Civil net48:** the same 51 reference-only reds as C-66, nothing new.
+- **Switches:** five bug-fix switches, all on, none with a Settings row.
+- **Scope:** `Shared/` and the installer are untouched. Manager has one PR, #1738.
+
+I lost about 20 minutes on a broken priority wrapper, and the report lists the other slips. Nothing was tested in AutoCAD, and the 75-file Manager bundle guard was not run. The worktrees are removed.

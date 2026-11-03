@@ -1,0 +1,9 @@
+**PR #1984** is open as a draft against `claude/rel-20261102a`. The tests I ran pass; nothing has been opened in AutoCAD.
+
+- **Change:** the CDDESIGN note for area marked "None" now says it has no water-quality treatment, instead of "goes straight out". The areas and the split are unchanged.
+- **Switch:** `detention.stormNoneNoteWording`, ON by default. OFF gives the old sentence back.
+- **Files:** `StormReportOffer.cs`, `CivilDesignCommand.cs`, `UserSettings.cs`, a new test class, `REGRESSION_LOG.md`.
+- **Tests:** 101 passed on net48 and net10.
+- **Report:** `BUGFIX_q8_REPORT_01NOV.md`, pushed.
+- **Flag:** real CE settings files changed during my run. A robot AutoCAD session was running, and my tests wrote nothing to the redirected log folder. I can't prove that to the file.
+- **Open:** BUG-1120 parts (b) and (c) still need Tim.

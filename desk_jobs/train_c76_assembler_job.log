@@ -1,0 +1,9 @@
+Train C-76 is assembled and pushed as `claude/rel-20261029a` at `dced33cf`, and I'd hand it to the finalizer. Nobody has run any of the four PRs in AutoCAD.
+
+1. **Merges:** #1834 (BUG-859), #1835 (BUG-372), #1836 (BUG-090) and #1837 (BUG-1228) are merged on the C-75 tip `09126560`. The PR list promoted BUG-1228, so this is four PRs, not three. BUG-1229 was not promoted and is skipped. Three merges clashed in `REGRESSION_LOG.md` only, and I kept every entry from both sides.
+2. **Build:** the whole solution builds with 0 errors.
+3. **Civil net10 tests:** 20,888 tests, 0 failed (32 skipped). That is exactly the 20,806 floor plus the new tests.
+4. **Manager net10 tests:** 1,056 tests, 0 failed (1 skipped).
+5. **Civil net48 tests:** 106 reds, all `InvalidProgramException` from the reference-only AutoCAD DLL. I built the C-75 base and confirmed each also fails there. The one open point is AutoCAD itself: whether it honours #1834's veto, and the time DP takes after #1837, are unmeasured. The About window (#1836) needs a Codex look.
+
+The report is at `C:\CE_PLAN\areas\release-v3-colleagues-TRAIN_C76_ASSEMBLY_REPORT_2026-10-29.md`, pushed to CE_PLAN main (`8dc6b915`).

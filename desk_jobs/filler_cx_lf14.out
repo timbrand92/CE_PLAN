@@ -1,0 +1,9 @@
+== cx_lf14 (usage 32.0% -> 33.0%): 1. **DONE — review complete.** BUG-938–941 skipped: covered by #1534. BUG-942 skipped: partial #1665 exists; completing it requires protected Edit Pit files.
+
+2. **Saved and pushed:** [per-bug report](C:/CE_PLAN/areas/CODEX_LEDGER_FIX_BATCH14_23OCT.md), including exact future AutoCAD checks. Nothing installed or opened in AutoCAD.
+
+---
+
+1. **Draft:** [#1667](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1667), documentation only. Branch `cx2/bug-938-942-coverage`, tip `f3af7d9e`.
+
+2. **Tests:** 0 added, 0 application tests run. Source checks and both leak scans passed.

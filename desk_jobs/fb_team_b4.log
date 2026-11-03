@@ -1,0 +1,11 @@
+Four fixes are built and opened as draft PRs, and one is skipped for Tim's word. All are built and unit-tested only. Nothing was opened in AutoCAD, no bug is marked FIXED, and nothing was deployed.
+
+1. **FB-22, BUG-766:** PR 1711. CDPROFILE sections now draw the branch tick. Civil net10 suite 19,552 total, 0 failed.
+2. **FB-23, BUG-811 cascade half:** PR 1712. A rejoining pit follows the lowest arriving pipe. Suite 19,552 total; one PDF test failed once under load and passed when re-run alone. It still needs the Opus review.
+3. **FB-24, BUG-810:** PR 1713. Only three of four parts are done. The CDLEGACYAUDIT folder-scan and APPLOAD wording are in CE_SHARED, which I didn't touch. Suite 19,556 total, 0 failed.
+4. **FB-25, BUG-812:** PR 1717. New pits take their place in mark order. This follows the existing natural-order setting, which is still OFF; that's a question for Tim. Suite 19,559 total, 0 failed.
+5. **FB-21, BUG-765:** skipped. CDSURVEY has no survey-layer list to reuse, so Tim needs to choose between options A, B and C in the report.
+
+I overwrote `run.sh` and `prepend.sh` in `C:\ce-fx` without checking whether another batch used those names.
+
+The report is pushed to CE_PLAN main with no "ahead".

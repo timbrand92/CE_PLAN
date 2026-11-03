@@ -1,0 +1,7 @@
+== cx_rd16 (usage 69.0% -> 75.0%): 1. **DONE — 1 HIGH, 3 MEDIUM, 0 LOW.** Biggest fault: rejected survey levels can hide a depression and make an exposed pipe look buried.
+2. **Report:** [RD16 findings and deterministic checks](C:/CE_PLAN/areas/CODEX_AUDIT2_RD16_24OCT.md). All four verified by reading; no AutoCAD checks run.
+
+---
+
+1. **Saved and pushed:** `f82087fc`. Leak scan clean; no commits ahead.
+2. **Read-only scope honoured:** no code changes, builds or tests. Temporary worktree removed. No PR.

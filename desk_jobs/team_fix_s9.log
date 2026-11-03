@@ -1,0 +1,14 @@
+**FOR TIM**
+
+1. **No PR opened for S-9.** Both bugs are still real on Structural 1.0.125, but neither is a small safe fix. Each needs a decision from you first.
+2. **BUG-626 (FFL has no source or Manual choice and no preview):** FFL still asks point, side, value, then draws at once. The approved flow needs a "trusted level source" that doesn't exist in CE yet. I recommend shipping Manual and Unknown only, with a preview, F flip and click to place, and adding real sources later.
+3. **BUG-627 (MOVE on the triangle leaves the tail and value behind):** FFL still draws three loose objects that nothing ties together. I recommend a normal AutoCAD group behind a Settings switch that is on by default. The alternative, a hidden tag plus a watcher, is riskier for REDO.
+4. **Mistakes of my own:** none. I ran no build or test, so your settings files can't have been touched.
+5. **Not proven:** I confirmed both faults by reading the code, not in AutoCAD. I also couldn't check for open draft PRs on `LevelMarkCommands.cs`, because `gh` isn't on this tool's PATH.
+
+**Technical:**
+- **Code:** both faults are in `Modules/Structural/Commands/LevelMarkCommands.cs`, in `RunDirect` (lines 151–263).
+- **Report:** `C:\CE_PLAN\areas\BUGFIX_s9_REPORT_31OCT.md`. It is pushed, and it holds the questions for CE 04 and the proposed robot case `S9_ffl_move`.
+- **Switch:** none shipped. If you approve BUG-627, it would be `annotation.levelMarkGroupsComponents`, on by default.
+- **Worktree:** `C:\ce-fx\s9w` is removed, and the branch `claude/s9-ffl` has no commits.
+- **CE_PLAN:** after the push, `git status` shows `main` level with `origin/main`. `areas/BUG_REGISTER_TRIAGE_2026-10-24.md` shows as modified; I didn't touch it.

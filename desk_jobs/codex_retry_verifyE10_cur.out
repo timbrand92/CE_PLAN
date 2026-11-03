@@ -1,0 +1,5 @@
+== verifyE10_cur (usage 49.0% -> 52.0%): AUTOCAD STILL RUNNING
+
+1. **E10 BLOCKED:** START readings failed; unrelated command text appeared. Four looks blocked, no passes. Manager pages and administrator items remained unopened.
+2. **Cleanup:** E10ÔÇÖs AutoCAD closed without saving; its lock released. All four settings hashes unchanged at END. Another Claude run subsequently opened AutoCAD; left untouched.
+3. **Report:** [E10 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_E10_20261026_2242.md>). Four SURE results, zero UNSURE; no visual faults judged.

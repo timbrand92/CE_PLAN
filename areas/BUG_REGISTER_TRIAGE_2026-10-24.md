@@ -345,3 +345,220 @@ Nothing here is closed (D6). "Close candidate" means you may close it on one loo
 2. **Routes A1 to A4 and the case groups are my reading** of each entry's heading, area line, status and (for about 250) the full text. They are a sort, not a proof: a case writer may move a bug between cases or routes. Window-driven checks whose result is a value the runner reads by control text (the Inspector type, a schedule cell) I put in A1; anything about how it looks, in A2.
 3. **Section C is my judgement of severity times use.** The carpark severity words were used as written; where none was given I judged from the symptom. Draft-PR search: bug number in PR titles and bodies, bug number in branch names, and the audit code (RD, T, F- and FB codes) in PR titles and bodies.
 4. **Not checked:** I did not open any code to confirm a fix, run AutoCAD or the runner, or read every PR body in full. "Installed" stays an upper limit. I did not verify FIX_BRIEFS' 35 hunt-label matches one by one (ten spot checks only). The 22 non-briefed pilot bugs in FIX_BRIEFS are not listed there by number, so I could not reconcile them one for one. Unknown: the colleague's AutoCAD year, and whether #1286 covers BUG-587.
+
+---
+
+## Refresh Fri 30 Oct 2026 (CE 01 job q1)
+
+Written by a read-only headless job for CE 01 (Fri 30 Oct 2026, Melbourne). Nothing was built, run, installed, committed or pushed. `BUG_CARPARK.md` was only read (file time 12:13 on 30 Oct, 1,205 numbered entries). This section is the only thing written; everything above it is unchanged. Tim's scope ruling of 30 Oct: every entry in the carpark, not only the 24 Oct 1,170.
+
+### FOR TIM (reads on its own)
+
+1. **The answer:** the 60 "pilot-critical, no fix" bugs of 24 Oct are almost all in hand now. Only 1 of the 60 (BUG-1173, the colleague pack backup step) has no draft and no build number. The rest of the carpark still has 134 bugs a builder can start today without waiting for you (61 Civil or Manager, 73 Structural).
+2. **The 60 pilot-critical bugs, where they stand today:**
+   1. **41** have a draft fix (a draft PR found by bug number).
+   2. **3** have a draft under another name: BUG-1052 and BUG-1053 (#1716, #1727, on HOLD) and BUG-540 (#1192, which review rejected, so it needs rework).
+   3. **6** have a build number but no draft yet: BUG-587, 648, 525, 866, 903, 907.
+   4. **1** (BUG-865) has a Status line that says a fix exists; I did not verify it.
+   5. **8** are held for a ruling or a fact, not code: BUG-685 and BUG-1148 need your word; BUG-855, 1166, 1169, 1170, 1209, 1210 need a fact (Max's AutoCAD year, his folders, a robot run).
+   6. **1** has nothing: BUG-1173.
+3. **The 35 newest bugs (BUG-1222 to BUG-1256):**
+   1. **2** are finished (BUG-1222 and BUG-1225, you confirmed both on 3.0.85).
+   2. **13** already have a build number or draft fix.
+   3. **20** are new to the queue. **9 of the 35 are pilot-critical:** BUG-1227 (a copy landing on a pit steals its pipes), 1228 (DP takes 30 seconds), 1229 (grade shown flatter than you chose), 1233 (the window changes your grade choice without telling you), 1240 (Inspector says Unknown until you run CDSYNC), 1246 (a copied downpipe keeps the same tag), 1247 (Updates and Rollback opens the company-wide dashboard), 1251 (CDCHECK counts false unresolved joins), 1255 (Excel export fails on AutoCAD 2027).
+4. **Four new questions only you can answer** (I have not asked you; CE 04 should batch them):
+   1. **BUG-1236:** should the front overflow block say FO (your view) or keep the card's shared OF symbol?
+   2. **BUG-1243:** what exactly did CE Blocks do wrong? Nothing is recorded, so no builder can start.
+   3. **BUG-1245:** should Move + Rotate and Copy + Rotate work on a raingarden? Today they refuse it with a code word.
+   4. **BUG-1224 (Structural):** should "Apply CE Standard Layers" leave locked and frozen layers alone and name them? I recommend yes.
+   BUG-1252 (hand-placed labels) is already your Monday question 19.
+5. **The build queue for the always-on builder:** 246 entries, ordered pilot-critical first, then wrong-answer risk, then the rest. 134 are ready to build (61 Civil or Manager, 73 Structural), 80 wait for a word or a fact, 28 are not real faults or duplicates, 4 may touch protected shared files. The first 40 are listed in full below.
+6. **Your own mistakes to know about (mine, not yours):** one `git fetch` ran in the code repository (it only refreshes the list of remote branches, no files change). I could not read which build is installed right now, because the rules say not to touch your bundles; the newest I can prove installed is Civil 3.0.85.
+7. **What you need to do:** nothing.
+
+---
+
+### How I did it, and the words used
+
+1. **Sources read:** `C:\TimOS\RULES.md`, `areas\CE_SESSIONS_MAP_29OCT.md` (standing rules), the whole of this file, `areas\release-v3-colleagues-PILOT_NOFIX_TRIAGE_29OCT.md`, `areas\CARPARK_RETEST_TRIAGE_29OCT.md` (first 80 lines), `areas\release-v3-colleagues-BUILD_REGISTER.md` (all 159 lines), every heading and Status line of `BUG_CARPARK.md`, and the full text of BUG-1222 to BUG-1256.
+2. **Open PRs read:** `gh pr list --state open --limit 3000` (1,464 open, 1,453 of them drafts; 1,327 on 24 Oct). I searched title, branch name and body for each BUG number. The task's own command used `--limit 500`, which only returns the newest 500, so I used 3,000 to be complete.
+3. **Classes (as in the 24 Oct file):** BUILD-NOW = a safe fix needs no word from Tim; BUILD-ON-RECOMMENDED = build a draft on the recommended answer, Tim's word replaces it before it ships; NEEDS-TIM; FACTS = a fact or a look first, not code; PROTECTED = needs a shared or protected file; NOT-REAL or DUPLICATE.
+4. **Acceptance routes (as on 24 Oct):** A1 the runner reads a value, a command-line line, a CE log line, a count or a file; A2 Codex must look (window, label position, picture); A3 Tim's word; A4 real job data or another PC.
+5. **Pilot-critical** = a wrong answer on a council drawing, data loss, or a day-one colleague problem.
+
+### TASK 1. The 35 entries newer than the 24 Oct file (BUG-1222 to BUG-1256)
+
+BUG-1221 does not exist in the carpark (the number was never used). Each entry below was read in full. "Cover" says what already exists.
+
+1. **BUG-1222** (CDEDIT size-only Save sends the flow arrow back uphill). **Class:** DONE. **Route:** A1, passed. **Pilot-critical:** yes (wrong answer), now fixed. **Cover:** PR #1832, installed in C-75; Tim confirmed it by hand on 3.0.85; Claude-accepted.
+2. **BUG-1223** (CDFW on an inspection opening says "record changed while you picked", places nothing). **Class:** NEEDS-TIM (place it or refuse it, your call). **Route:** A1 (case R36e) after A3. **Pilot-critical:** no. **Cover:** PR #1833 installed in C-75; Status still OPEN.
+3. **BUG-1224** (Structural, Apply CE Standard Layers silently unlocks and thaws CE layers; breaks the native protection rule). **Class:** BUILD-ON-RECOMMENDED (the entry gives a default that Tim's answer replaces). **Route:** A1 (layer state read from the drawing), A2 for the status line. **Pilot-critical:** no (Structural stays on Tim's PC), but it breaks "never silently unlock". **Cover:** none. Files named: `Modules/Structural/Services/LayerService.cs`, `UI/LayerManagerWindow.xaml.cs`.
+4. **BUG-1225** (DP or OF refused after a drawing was closed unsaved and another opened). **Class:** DONE. **Route:** A1, passed 6 of 6; Tim confirmed. **Pilot-critical:** yes (reopening a drawing), now fixed. **Cover:** PR #1830, installed in C-74. The leftover wish (DP is slow) is BUG-1228.
+5. **BUG-1226** (New Pipe window has no "Recent levels" row). **Class:** built. **Route:** A2. **Pilot-critical:** no. **Cover:** B-006, draft PR #1839 (Tim: "yep bring back").
+6. **BUG-1227** (ROTATE or SCALE Copy landing on the original pit steals its pipes; the original kept 1 of 5). **Class:** built as a draft. **Route:** A1. **Pilot-critical:** yes (links and pipe ends). **Cover:** B-049a, draft PR #1867, written but at the last register not built or tested.
+7. **BUG-1228** (DP takes about 30 seconds; PIT also slow). **Class:** built (DP half). **Route:** A1 timing. **Pilot-critical:** yes (daily tool, day one). **Cover:** B-004, PR #1837, in C-76. The PIT half is B-031, not started.
+8. **BUG-1229** (New Pipe shows 1 in 102 where you chose 1 in 100). **Class:** built. **Route:** A1. **Pilot-critical:** yes (wrong answer). **Cover:** B-005, PR #1838, for C-77.
+9. **BUG-1230** (plan preview does not show what the pipe will become). **Class:** NEEDS-TIM (Tim put it ON HOLD for the whole-functionality review). **Route:** A2. **Pilot-critical:** no. **Cover:** slice B-043e of the New Pipe declutter (no PR yet).
+10. **BUG-1231** (EXPLODE, ERASE or COPY of a pit prints eight repeated "Pit schedule cell for C1 not updated" lines). **Class:** built plan. **Route:** A1 (count the lines). **Pilot-critical:** no (noise). **Cover:** B-049b, queued after B-049a.
+11. **BUG-1232** (label tidy after MOVE treats the Drawing Border block as a clash; suspected). **Class:** FACTS (confirm by robot or hand first). **Route:** A1 (CE log line). **Pilot-critical:** no. **Cover:** B-032, not started.
+12. **BUG-1233** (New Pipe or Edit Pipe silently switches Standard to Set my own). **Class:** BUILD-NOW. **Route:** A1 (grade box read by control text). **Pilot-critical:** yes (the window changes your choice; deceiving, Tim's word). **Cover:** B-041, no PR yet; same file as #1838.
+13. **BUG-1234** (two new pipes ending at a pit: IL texts sit on the pit symbol, flow arrow runs through the label). **Class:** FACTS (Tim suspects the after-MOVE tidy-up; place the same two pipes with it switched off and compare). **Route:** A2. **Pilot-critical:** no (a wrong look, not a wrong value). **Cover:** none; same files as BUG-1253 and BUG-1034.
+14. **BUG-1235** (silting warning prints "Grade 1:200 is shallower than minimum 1:200"). **Class:** BUILD-NOW (show a decimal when the two figures would print the same). **Route:** A1 (command line). **Pilot-critical:** no. **Cover:** none.
+15. **BUG-1236** (FO places a block whose symbol text says OF). **Class:** NEEDS-TIM (the daily card D08 says the same symbol on purpose). **Route:** A3, then A2. **Pilot-critical:** no. **Cover:** none.
+16. **BUG-1237** (CDRENUMBER stops with "No pit discharges outside the network" and no hint). **Class:** BUILD-NOW for the wording; the "pick the outlet pit" question is a bigger item. **Route:** A1. **Pilot-critical:** no. **Cover:** none. File named: `Rules/PitRenumberNetworkBuilder.cs` lines 124 to 133.
+17. **BUG-1238** (recent sizes, materials and inverts are not one-click buttons). **Class:** built. **Route:** A2. **Pilot-critical:** no. **Cover:** B-040 = B-043a, draft PR #1861.
+18. **BUG-1239** (pipe text sits about 450 units off the pipe; Tim: "450 is wrong"). **Class:** NEEDS-TIM (the right small gap is a Settings value to agree). **Route:** A1 (measure the distance), then A3. **Pilot-critical:** no. **Cover:** slice B-043e (no PR yet).
+19. **BUG-1240** (Inspector says "Unknown" on a pit after Save As; Tim says he must run CDSYNC after every reopen). **Class:** BUILD-NOW. **Route:** A1 (Inspector value read by control text). **Pilot-critical:** yes (day one, every reopen). **Cover:** none. Same family as BUG-1225 (fixed) and BUG-1251.
+20. **BUG-1241** (CDCHECKDWG says P2 has no invert though two pipes with levels meet there). **Class:** FACTS (Tim's later screenshot shows 17.780 after a sync; same cause as BUG-1240 is likely, not proven). **Route:** A1. **Pilot-critical:** no. **Cover:** none.
+21. **BUG-1242** (source tags on the plan show OF, FO, DP with no number; RG shows nothing). **Class:** BUILD-NOW (default the plan tag to show the number). **Route:** A1 (plan text read from the drawing). **Pilot-critical:** no. **Cover:** none; the same area as B-007, PR #1845 (RG label), so build after it.
+22. **BUG-1243** (CE Blocks does not work the way Tim wanted). **Class:** NEEDS-TIM (what he wanted is not recorded anywhere; RULES 12.1). **Route:** A3. **Pilot-critical:** no. **Cover:** none.
+23. **BUG-1244** (CE Manager Refresh prints only its own name). **Class:** BUILD-NOW (one plain result line). **Route:** A1 (command line). **Pilot-critical:** no. **Cover:** none; Manager files.
+24. **BUG-1245** (Move + Rotate and Copy + Rotate refuse a raingarden with a code word). **Class:** NEEDS-TIM (should they work on a raingarden?) and PROTECTED (the native transform component `Shared.Transform.Native2027`). **Route:** A1 (command line). **Pilot-critical:** no. **Cover:** none.
+25. **BUG-1246** (Copy + Rotate of a downpipe: the copy keeps the original's tag, two DP2). **Class:** BUILD-NOW (Tim ruled copied CE objects get new tags, questions chat item 80). **Route:** A1 (tag read in the Inspector). **Pilot-critical:** yes (duplicate tags on a schedule). **Cover:** none; same copy code as B-049a and B-009.
+26. **BUG-1247** (Updates and Rollback opens the company-wide Administrator Dashboard for a drafter; Tim: failed). **Class:** BUILD-NOW (open the user's own update and rollback screen). **Route:** A2 (window). **Pilot-critical:** yes (day-one colleague, Promote to All within reach). **Cover:** none; Manager files shared with B-047 and B-050.
+27. **BUG-1248** (Survey Intake review is written in survey-software words). **Class:** BUILD-NOW (plain-words wording, details behind a fold). **Route:** A2. **Pilot-critical:** no. **Cover:** none.
+28. **BUG-1249** (Inspector On plan tab says the pit label is "bottom right" when it is above). **Class:** BUILD-NOW; ask Tim which row he meant first (the Label position row is the wrong one on the screenshots). **Route:** A1 (control text). **Pilot-critical:** no (the Inspector already says recorded values may differ). **Cover:** none.
+29. **BUG-1250** (double-click on a downpipe leaves one stray "Unknown command" line). **Class:** BUILD-NOW. **Route:** A1 (add "not contains Unknown command" to case R09s). **Pilot-critical:** no. **Cover:** none; same double-click redirect as B-001 (#1834) and B-014 (#1862).
+30. **BUG-1251** (CDCHECK first on a reopened drawing shows 44 false Unresolved joins instead of 4). **Class:** built. **Route:** A1 (R21 is the expect-fail proof; N38 and C38 ready). **Pilot-critical:** yes (wrong answer from a QA check). **Cover:** B-055, draft PR #1866.
+31. **BUG-1252** (a hand-placed pipe label shifts half the pit's move). **Class:** NEEDS-TIM (Monday question 19, keep or change the label rule). **Route:** A1, then A3. **Pilot-critical:** no. **Cover:** none; ON HOLD.
+32. **BUG-1253** (after a 2 m pit move the upper-left IL text sits on the blue pipe strip). **Class:** BUILD-NOW (same root as BUG-1034, fix together). **Route:** A2 (Codex look G5). **Pilot-critical:** no. **Cover:** none; file `LinkService.TextClashTidyUp.cs`, same as #1875.
+33. **BUG-1254** (CDCHECKDWG list shows a cut-off row at the bottom). **Class:** FACTS (CE 00's analysis says probably no fault; only Tim or a clean re-look closes it). **Route:** A2. **Pilot-critical:** no. **Cover:** none.
+34. **BUG-1255** (Pit Schedule Export Excel fails on AutoCAD 2027: AutoCAD's own older ClosedXML wins). **Class:** built. **Route:** A1 for the file made, A2 for the window. **Pilot-critical:** yes (PILOT-BLOCKER). **Cover:** B-056, draft PR #1871, plus B-056b fixes.
+35. **BUG-1256** (consultant drawing reader says "Import aborted at pre-flight gate"). **Class:** BUILD-NOW (plain cancelled sentence). **Route:** A1 (command line). **Pilot-critical:** no. **Cover:** none.
+
+**Task 1 totals:**
+
+1. **Cover:** 2 DONE (1222, 1225); 13 already have a B number or a draft (1223, 1226, 1227, 1228, 1229, 1230, 1231, 1232, 1233, 1238, 1239, 1251, 1255); 20 are new to the queue (1224, 1234, 1235, 1236, 1237, 1240, 1241, 1242, 1243, 1244, 1245, 1246, 1247, 1248, 1249, 1250, 1252, 1253, 1254, 1256).
+2. **Class of the 20 new:** BUILD-NOW 12 (1235, 1237, 1240, 1242, 1244, 1246, 1247, 1248, 1249, 1250, 1253, 1256), BUILD-ON-RECOMMENDED 1 (1224), NEEDS-TIM 4 (1236, 1243, 1245 also PROTECTED, 1252), FACTS 3 (1234, 1241, 1254). None is NOT-REAL or a duplicate; BUG-1241 and BUG-1251 are relatives of BUG-1240, not copies.
+3. **Route (primary, all 35):** A1 25, A2 8 (1226, 1230, 1234, 1238, 1247, 1248, 1253, 1254), A3 2 (1236, 1243), A4 0. A3 is also needed for 1223, 1224, 1239, 1245 and 1252.
+4. **Pilot-critical (9 open):** 1227, 1228, 1229, 1233, 1240, 1246, 1247, 1251, 1255. Only BUG-1240, 1246 and 1247 have no draft; they are items 2, 1 and 4 of the queue below.
+
+### TASK 2. Recount of the whole file by Status line (re-read 30 Oct 2026, file time 12:13)
+
+**Entries:** 1,205 numbered (BUG-001 to BUG-1256 with gaps; the 24 Oct file had 1,170, so 35 are new). One more heading has no number (`BUG-CDCHECKIGNORE-UNDO-C60`, the renumbered second BUG-866); I did not count it.
+
+1. **By what each Status line says (my rules; every entry counted once; the six figures add to 1,205):**
+   1. **Closed: 47.** Status begins FIXED (not "FIXED IN SOURCE" or "FIXED IN CODE"), RETIRED, WON'T FIX, NOT REPRODUCED or CLOSED. On 24 Oct this was 43, so **+4**. Of the 47, 25 say Claude-accepted or Codex-accepted.
+   2. **Tim-confirmed: 3** (BUG-665, 1222, 1225). Counted apart from closed because their Status line starts TIM-CONFIRMED and keeps an OPEN note.
+   3. **In progress: 46.** CE 02's 29 Oct list of these says 47; I could not account for the one-entry difference.
+   4. **Status says a fix is installed: 345.**
+   5. **Status says built, drafted, coded or fixed in source: 72.**
+   6. **Status says nothing about a fix: 692.** 53 of them have no Status line at all (BUG-176, 177, 376 to 378, 381 to 384, 386 to 389, 393, 394, 397 to 403, 405 to 424, 454, 459, 460, 466, 469, 560, 562, 565, 566, 588, 589).
+2. **By bug number in commits, open PRs and the register (the 24 Oct method; applied to the 1,155 entries that are not closed or Tim-confirmed):**
+   1. **In the installed line:** 532 numbers appear in commits reachable from `origin/claude/rel-20261026z` (Civil 3.0.85, the newest build I can prove is installed: C-75, 29 Oct 00:21 per CE_SESSIONS_MAP).
+   2. **Only on the newer C-77 line** (`origin/claude/rel-20261030a`): 13. Whether C-77 is installed is Unknown (I did not read the bundle).
+   3. **Only on other branches:** 279. **Only in an open PR title or branch:** 4. **Only in the build register:** 19.
+   4. **Nowhere:** 308. This includes about 49 fixes installed under a hunt or audit label (found by FIX_BRIEFS on 23 Oct), so the real no-fix count is lower.
+3. **How it differs from the 24 Oct counts (43 closed, 552 installed, 242 built not installed, 333 no fix):**
+   1. **Closed 43 to 47.** Real movement: the Claude-accepted and Codex-accepted bugs.
+   2. **Installed 552:** my 532 plus 13 is about 545, close to 552, but the two methods are not like for like. More trains have been installed since 24 Oct, which should push the figure up; my method cannot see the 49 label-named fixes, which pulls it down.
+   3. **Built not installed 242:** my 315 (279 + 13 + 4 + 19) is an upper limit. A number named in a commit may be a test, a "related" mention or half a fix.
+   4. **No fix 333:** 308 by number. A cleaner view is the queue below: of the 373 older entries in the 24 Oct no-fix lists, **153 now have a draft PR, a B number, a fixed or built Status or a commit** (90 by PR title or branch, 19 in the register, 29 by Status, 29 closed, in progress or Tim-confirmed by Status, 1 by a commit since 24 Oct), leaving 220. Add the 20 new bugs that need a queue place and the 9 register-only held items (below) and the queue is 246 entries after removing 3 whose drafts sit under audit-code names.
+   5. **Open PRs:** 1,464 open (1,453 drafts), up from 1,327. Bug numbers appear in 726 PR titles or branches and in 89 more PR bodies only.
+4. **Could verify:** the carpark text and Status lines, the live open PR list, the build register, the commit messages in the local clone.
+5. **Could not verify:** which build is installed today; that any draft actually fixes its bug; the 49 label-named fixes one by one; PRs that name only an audit code (for example #1720); Status lines, which lag (345 say installed against about 545 by commits).
+
+### TASK 3. The ordered build queue for an always-on builder
+
+**What is in it:** every carpark entry with no draft PR, no B number and no installed or built fix that I could find. **246 entries:** 134 ready to build (BUILD-NOW 131, BUILD-ON-RECOMMENDED 3: BUG-1124, 1125, 1224), 30 FACTS, 50 NEEDS-TIM, 4 PROTECTED?, 28 NOT-REAL or DUPLICATE. Of the 134 ready, **61 are Civil or Manager and 73 are Structural.** Structural stays on Tim's PC for the pilot, so within each tier its groups come after the Civil and Manager groups.
+
+**Order:** tier 1 pilot-critical (4), tier 2 wrong-answer or data-loss risk (16: 8 Civil or Manager, 8 Structural), tier 3 the rest (114). Inside a tier the entries are grouped by tool or area so two builders never edit the same file. The groups are my keyword reading of each entry; the exact file is Unknown until a builder reads the code, except where the entry itself names a file (shown).
+
+**Groups:**
+
+1. **C1** Pit Schedule (window and drawn schedule).
+2. **C2** New Pipe and Edit Pipe windows and their save path.
+3. **C3** Sources and drains: DP, OF, FO, RG, floor waste, AG and perimeter drains.
+4. **C4** Labels, tidy-up, MOVE, COPY, link repair, Undo, check commands.
+5. **C5** Design numbers: CDDESIGN, CDCALC, CDRULES, councils, cover, grades.
+6. **C6** Survey, long section, imports, Xrefs, export.
+7. **C7** Project record on open (Inspector, Save As, reopen).
+8. **M1** Manager, install, update, colleague pack. **H1** Help pages and message wording.
+9. **S1** Structural footings, members, tagging. **S2** Structural schedules, dimensions, text, sections, levels. **S3** Structural settings, layers, sheets.
+
+**One builder at a time on each of these file sets** (conflicts with drafts that already exist; the builder waits for or stacks on the named PR):
+
+1. **Tidy-up files** (`LinkService.TextClashTidyUp.cs`, `TidyLabelsCommand.cs`, `SegmentAnalysis.cs`): BUG-873, 890, 891, 1034, 1161, 1253 (and held 1252). Existing: B-025 (#1875) and B-025b, B-032. Build after B-025b.
+2. **Edit Pipe save path** (`Update.cs`, `Persistence.cs`, `PipeEditCommand.cs`): BUG-658, 1157, 1164, and BUG-1235 (grade wording). Existing: B-005 (#1838), B-041, B-043. After #1838.
+3. **Project record on open** (BUG-1240, 1249, 1141): one builder, after B-055 (#1866); BUG-1141 is a sibling of BUG-1142 (PR #1752), check that PR first.
+4. **Design and sizing code** (`AutoDesignService.cs`, `MaterialVelocityLimits.cs`, cover and grade checks): BUG-080, 1092, 1093, 1144, 1152, 1153, 1156, 1158. Existing: B-017 (#1852), B-018 (#1872), B-019, B-020 (#1863), B-022, B-026, B-029 (#1874). After those merge on the C-78 line.
+5. **Sources and copy code:** BUG-1246 after B-049a (#1867) and B-009; BUG-1242 after B-007 (#1845); BUG-1250 after B-001 (#1834) and B-014 (#1862).
+6. **AG and perimeter drains** (`AgiCommand.cs`): BUG-1054 after the drafts #1716 and #1727 (BUG-1052).
+7. **Manager files:** BUG-1173, 1247, 1244, 581, 1070, 1172, 1176, 1211, 1214, 775, 958, 959. Existing: B-003 (#1836), B-047, B-050 (#1860). One Manager builder, after B-047.
+8. **Structural:** one builder per group S1, S2, S3, on the Structural S-trains.
+
+#### The first 40 in full
+
+1. **BUG-1246 (C3, tier 1, BUILD-NOW).** Copy + Rotate of a downpipe leaves the copy with the original's tag (two DP2). Area: copy clean-up for downpipes; file Unknown. After #1867 and B-009. Tim ruled copied CE objects get new tags.
+2. **BUG-1240 (C7, tier 1, BUILD-NOW).** Inspector says "Unknown" on a pit until CDSYNC or the Pit Schedule has been run; Tim runs CDSYNC after every reopen. Area: attaching the drawing's record on open and after Save As. Same family as BUG-1225 and BUG-1251.
+3. **BUG-1173 (M1, tier 1, BUILD-NOW).** The colleague pack's backup step saves only 2 of the CE settings folders. Files named: `CeAdminStorageService.cs`, `CeSuiteManagerMenuService.cs`. Whether this is code or pack wording: Unknown. The only one of the 24 Oct pilot-critical 60 with nothing at all.
+4. **BUG-1247 (M1, tier 1, BUILD-NOW).** "Updates and Rollback" opens the company-wide Administrator Dashboard (Approve, Canary, Promote to All) for a drafter. It should open the drafter's own update and rollback screen. Manager window; needs a Codex look.
+5. **BUG-873 (C4, tier 2, BUILD-NOW).** Tidy labels: answering No or pressing Esc can still leave the drawing changed. Files named: `TidyLabelsCommand.cs`, `CeCommandBase.cs`. A PR body names it (#1650): check cover.
+6. **BUG-1253 (C4, tier 2, BUILD-NOW).** After moving a pit 2 m, its upper-left invert text sits on the blue pipe strip. File: `LinkService.TextClashTidyUp.cs`. Fix together with BUG-1034. Needs a Codex look.
+7. **BUG-1141 (C4, tier 2, BUILD-NOW).** One unreadable pit record stops CE remembering any pit's links after open or Undo. Files named: `Persistence.cs`, `Cache.cs`. Data-loss family of BUG-1142.
+8. **BUG-1112 (C5, tier 2, BUILD-NOW).** The WSUD export writes a sample site (1,000 m2 site, 200 and 700 m2 impervious, 630 mm rain) into the computations package as if it were the job's figures. Unknown stays Unknown: print nothing or say "not entered".
+9. **BUG-1093 (C5, tier 2, BUILD-NOW).** The cover check is skipped when a pit lid is exactly RL 0.000 (a low coastal job gets no cover check). Same "zero means unknown" family as BUG-1019.
+10. **BUG-1092 (C5, tier 2, BUILD-NOW).** A pipe up to 5 mm uphill is reported "essentially flat", not "flows uphill".
+11. **BUG-1156 (C5, tier 2, BUILD-NOW).** An older CE wipes newer agreed-design answers from the Design draft. After B-029 (#1874), which edits the same window.
+12. **BUG-1249 (C7, tier 2, BUILD-NOW).** Inspector On plan tab says the pit label is "bottom right" when it is drawn above. Ask Tim which row he meant first; the Label position row is the wrong one on his screenshots.
+13. **BUG-467 (S1, tier 2, BUILD-NOW).** Structural: BT1, R1 (Point option) and FPFC put things in the wrong place in a rotated UCS. Files: `BracingCommands.cs`, `BracingService.cs`.
+14. **BUG-1199 (S1, tier 2, BUILD-NOW).** Structural keeps and later re-saves footing sizes that Undo removed. Files: `CeTextService.cs`, `FstMemoryService.cs`.
+15. **BUG-625 (S2, tier 2, BUILD-NOW).** Structural: Level Update overwrites ordinary notes without recognising a CE level mark. File: `LevelMarkCommands.cs`.
+16. **BUG-1136 (S1, tier 2, BUILD-NOW).** Structural: a damaged footing register is read as empty, then saved over by the next footing command (data loss). Files: `FoundationRegistryService.cs`, `FoundationService.cs`.
+17. **BUG-1183 (S2, tier 2, BUILD-NOW).** Structural: rearranging pier schedule rows can resize the wrong piers. Files: `ScheduleRowLink.cs`, `ScheduleService.cs`.
+18. **BUG-1184 (S1, tier 2, BUILD-NOW).** Structural: separate bearer tagging runs give different sizes the same BR1 or SPR1 mark. Files: `TimberSubfloorService.cs`, `MemberMarkEngine.cs`.
+19. **BUG-495 (S3, tier 2, BUILD-NOW).** Structural: Publish Issue (CESHEETS) fault rated HIGH, a colleague release gate candidate. Files: `CeSheetsWindow.xaml`, `CeSheetsIssueService.cs`.
+20. **BUG-529 (S1, tier 2, BUILD-NOW).** Structural: three hard blocks that break Tim's R-27 (warn and carry on). Files: `FoundationService.cs`, `RebarCommands.cs`.
+21. **BUG-1197 (C1, tier 3, BUILD-NOW).** Updating one pit schedule can change another schedule's depth heading through a shared block definition (an older copy gets "PIT DEPTH (m)" over its old figures). Files: `Schedule.cs`, `ScheduleLinkService.cs`.
+22. **BUG-658 (C2, tier 3, BUILD-NOW).** Edit Pipe's cascade prints "Updated N pipes" even if the save is then refused (for example a locked label layer). File: `Update.cs`. Low.
+23. **BUG-1157 (C2, tier 3, BUILD-NOW).** Edit Pipe stores the level in a separate write that fails silently: the schedule shows the new IL but the pipe keeps the old level. Files: `Update.cs`, `Persistence.cs`.
+24. **BUG-1164 (C2, tier 3, BUILD-NOW).** On a PC set to comma decimals, Edit Pipe stores levels as typed ("18,14") and later readers see 1814. Files: `PipeEditCommand.cs`, `Update.cs`.
+25. **BUG-1235 (C2, tier 3, BUILD-NOW).** Silting warning prints "Grade 1:200 is shallower than minimum 1:200"; show a decimal when the figures would print the same. After #1838.
+26. **BUG-1054 (C3, tier 3, BUILD-NOW).** An open AG or perimeter drain can lose its last point and close itself in a metre drawing. Files: `Plan.cs`, `AgiCommand.cs`. After #1716 and #1727.
+27. **BUG-1242 (C3, tier 3, BUILD-NOW).** The tag beside DP, OF, FO and RG on the plan shows letters only; the number shows only in the Inspector. After #1845.
+28. **BUG-1250 (C3, tier 3, BUILD-NOW).** Double-click on a downpipe leaves one stray "Unknown command" line with the click coordinates. After #1834 and #1862.
+29. **BUG-890 (C4, tier 3, BUILD-NOW).** Tidy labels leader-out planning can move a callout onto a plain label while CE reports a clear spot (switch OFF). File: `TextClashTidyUp.cs`. A PR body names it (#1653): check cover.
+30. **BUG-891 (C4, tier 3, BUILD-NOW).** Tidy labels checks a layout pipe's labels against model-space text, and its search margin does not grow with the leader-out distance. Files: `TidyLabelsCommand.cs`, `TextClashTidyUp.cs`. PR body #1653.
+31. **BUG-1034 (C4, tier 3, BUILD-NOW).** Tidy labels Apply moves the IL text "in from the pipe end" onto its own pipe line. Same root as BUG-1253.
+32. **BUG-1046 (C4, tier 3, BUILD-NOW).** CDPARTS and CDLABELSTYLE refuse to open on a layout sheet or during REFEDIT. Files: `DrawingSafetyService.cs`, `PartsCatalogueCommands.cs`. Native protection rule: change the message or the layout case, never the REFEDIT refusal, without Tim's look.
+33. **BUG-1050 (C4, tier 3, BUILD-NOW).** The last custom label style cannot be deleted. Files: `LabelStyleDialogViewModel.cs`, `LabelStyleDialog.xaml`. Window: Codex look.
+34. **BUG-1161 (C4, tier 3, BUILD-NOW).** Moving or flipping a pipe label forgets its kept wording (for example "APPROX."). Files: `SegmentAnalysis.cs`, `Split.cs`.
+35. **BUG-1195 (C4, tier 3, BUILD-NOW).** CDTEXTSEG writes a UCS angle into a World-plane text. Files: `Arrows.cs`, `DrawingService.cs`.
+36. **BUG-1237 (C4, tier 3, BUILD-NOW).** CDRENUMBER stops with "No pit discharges outside the network" and does not say what to draw. File: `PitRenumberNetworkBuilder.cs` lines 124 to 133.
+37. **BUG-080 (C5, tier 3, BUILD-NOW).** A UPVC pipe sized in CDEDIT is held to a 3.0 m/s scour ceiling while auto-design sizes the same pipe to another ceiling. Files: `AutoDesignService.cs`, `MaterialVelocityLimits.cs`. After #1863 (B-020) and #1852 (B-017).
+38. **BUG-806 (C5, tier 3, BUILD-NOW).** Orifice detail mapper takes baffle head from the outlet invert and rounds the orifice up. Latent: no live caller yet. File: `OrificeDetailFieldMap.cs`. Low value.
+39. **BUG-1033 (C5, tier 3, BUILD-NOW).** CDCALC Pump System tab is read-only but shows no read-only banner. File: `CalculationsV2Dialog.xaml`. Window: Codex look.
+40. **BUG-1071 (C5, tier 3, BUILD-NOW).** CDCHECKIGNORE and CDRULEBOOK say "Ignored" or "set" when the save was skipped, so nothing was stored.
+
+#### Items 41 to 134 (ready to build), as BUG numbers by group, all tier 3
+
+1. **C5 design numbers (7):** 1144, 1152, 1153, 1158, 1212, 1213, 1217. BUG-1212 and BUG-1213 are AutoCAD 2022 to 2024 only.
+2. **C6 survey, long section, imports, export (9):** 1248, 804, 898, 900, 962, 1155, 1163, 1175, 1256. BUG-962 has a PR body that names it (#1690, #1691): check cover. So do BUG-1155 (#1816).
+3. **H1 Help pages and wording (3):** 822, 1218, 1220.
+4. **M1 Manager and install (10):** 581, 775, 958, 959, 1070, 1172, 1176, 1211, 1214, 1244. BUG-958 and 959 have a PR body that names them (#1690, #1691). BUG-1214 is AutoCAD 2022 to 2024 only.
+5. **S1 Structural footings and members (14):** 202, 300, 469, 474, 578, 613, 616, 1123, 1139, 1146, 1147, 1159, 1162, 1204.
+6. **S2 Structural schedules, dimensions, text, sections, levels (33):** 304, 451, 472, 480, 579, 611, 615, 623, 626, 627, 630, 631, 634, 640, 749, 819, 1084, 1121, 1122, 1124, 1125, 1126, 1127, 1128, 1129, 1130, 1131, 1132, 1133, 1154, 1185, 1193, 1200. BUG-1124 and 1125 are BUILD-ON-RECOMMENDED. BUG-611, 819 and 1084 have a PR body that names them: check cover.
+7. **S3 Structural settings, layers, sheets (18):** 383, 399, 409, 411, 470, 473, 493, 526, 533, 535, 536, 537, 1134, 1186, 1187, 1203, 1219, 1224. BUG-1224 is BUILD-ON-RECOMMENDED. BUG-533, 535 and 536 have a PR body that names them (#1063, #1154): check cover.
+
+**Check the Structural lists before building:** the 24 Oct file called the old Structural entries (BUG-202 to BUG-1219) the "park list" because Structural stays on Tim's PC for the pilot and S-44 was already 37 bugs deep. Tim's 29 Oct rule says any builder can build any item, so I queued them, last in each tier. The Structural file groups are keyword guesses, not file lists.
+
+#### Not ready to build (never marked BUILD-NOW or BUILD-ON-RECOMMENDED)
+
+1. **NEEDS-TIM (50):** 3, 54, 56, 95, 213, 222, 245, 249, 311, 338, 397, 419, 431, 466, 475, 483, 492, 538, 539, 553, 554, 641, 685, 765, 883, 888, 908, 909, 910, 1056, 1057, 1058, 1059, 1060, 1094, 1100, 1104, 1105, 1109, 1114, 1116, 1117, 1119, 1120, 1148, 1160, 1236, 1243, 1245, 1252. BUG-685 and BUG-1148 are pilot-critical (QUESTIONS item 21 h and i).
+2. **FACTS (30):** 16, 17, 22, 23, 24, 49, 206, 229, 235, 310, 319, 320, 340, 343, 410, 415, 436, 595, 855, 865, 1118, 1166, 1169, 1170, 1207, 1209, 1210, 1234, 1241, 1254. BUG-855, 865, 1166, 1169, 1170, 1209 and 1210 are the pilot-critical facts (a robot run, or Max's folders, Structural, Manager version and AutoCAD year). BUG-16, 24, 49, 229, 310, 319, 340, 343, 415 and 436 are old (May to early October) and need a re-test on a current build before any brief.
+3. **PROTECTED? (4):** 494, 528, 1205, 1208. The entry text names CE_SHARED; I did not check that the fix really needs it.
+4. **NOT-REAL or DUPLICATE (28):** test tools, test PC or evidence records (the 24 Oct "close candidate" group): 7, 240, 295, 307, 326, 345, 354, 361, 371, 374, 390, 391, 392, 395, 402, 404, 412, 421, 444, 455, 562, 567, 568, 569, 639. Plus **BUG-564** (same Esc fault family as BUG-469), **BUG-821** (works as designed, FIX_BRIEFS 23 Oct) and **BUG-1177** (the same weekly time export as BUG-1202, which has PR #1776). Nothing here is closed; that is Tim's call (D6).
+5. **Draft exists but needs rework (not queued, because a draft PR exists):** BUG-540 (#1192, rejected in review B3), BUG-1052 and BUG-1053 (#1716 on HOLD and #1727).
+6. **Fix installed but still failing on record (not queued, because an installed fix exists; a builder is needed):** BUG-027 (the label still says MIN), 073 (New Pipe preview blank), 173 (New Pit window has large empty areas), 396, 430, 642, 788, 861 (REDO lost after a pick; cause not in CE's own code on the evidence so far).
+
+#### What I did not check
+
+1. **No code was read, nothing built, run or opened.** File names are the ones the carpark entries themselves name; most are from entries filed against older builds, so a builder confirms each on the newest line first.
+2. **Which build is installed now.** I did not read the bundle, so "installed" means reachable from `rel-20261026z` (Civil 3.0.85). C-76 and C-77 are Unknown.
+3. **Classes of the older entries are my reading, not a full re-read.** For the 35 new entries I read every line. For the older queue entries I used the 24 Oct file's own groups (park list items 2, 3, 4 and 9), the entry's own words ("Tim's call", "needs your word", "recommended", "unproven") and the first 900 characters of each entry. Some BUILD-NOW marks may really need Tim's word, and some NEEDS-TIM marks may be ready to build on a recommendation (only 3 entries were marked BUILD-ON-RECOMMENDED, which is low).
+4. **PRs that name only an audit code** (not a BUG number) could not be matched, so a few queue entries may already have a draft (for example under #1534, #1720 or #1810). BUG-1102 and BUG-1110 were excluded because #1810 and #1811 name them.
+5. **PR bodies that mention a number** were not treated as cover (89 numbers); 33 queue entries are named in a PR body only and are flagged "check cover" in the lists above where I noticed them (BUG-16, 213, 245, 307, 320, 345, 483, 528, 533, 535, 536, 567 to 569, 611, 616, 641, 819, 873, 888, 890, 891, 958, 959, 962, 1056 to 1060, 1084, 1100, 1155).
+6. **Sizes (S, M, L) are not given** for the queue items; the 24 Oct and 29 Oct files give them only for the pilot-critical set.
+7. **Acceptance routes** are assigned for the 35 new entries only, not for the 246 queue entries.
+8. **Carpark hygiene for CE 05** (I did not touch the file): a block of BUG-861 evidence (27 Oct) sits inside BUG-1224's text and another inside BUG-1225's; the heading `BUG-CDCHECKIGNORE-UNDO-C60` has no number; BUG-1221 is unused; 53 entries have no Status line.
+9. **One `git fetch`** was run in `C:\Lisp Files\CE_ACAD_PLUGIN` to read current branch heads; no file in any working copy changed.

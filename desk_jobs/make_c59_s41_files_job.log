@@ -1,0 +1,7 @@
+I wrote all nine files in `C:\CE_PLAN\desk_jobs`, pushed them to `C:\CE_PLAN` main (`9b885389`), and did not start any chain. The three PowerShell files parse with 0 errors. None of the nine has control characters.
+
+- **C-59 (Civil + Manager):** `train_c59_assembler_job.txt`, `train_c59_finalizer_job.txt`, `payload90_c59_job.txt` (candidate c1055), `scripts\desk_install_c59.ps1`.
+- **S-41 (Structural):** `train_s41_assembler_job.txt`, `train_s41_finalizer_job.txt`, `payload91_s41_job.txt` (candidate s1039), `scripts\desk_install_s41.ps1`.
+- **Chain:** `chain_c59_s41.ps1`. It runs one job after another and installs nothing.
+
+I did not re-check the live tips of #1516, #1513, #1507, #1508 and #1515 with gh. The assembler jobs do that before each merge.

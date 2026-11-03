@@ -1,0 +1,13 @@
+BUG-1247 has draft PR #1876. BUG-1173 has no PR, because the backup step isn't in the code, only in the colleague pack. Nothing has been opened in AutoCAD, and nothing is marked FIXED.
+
+- **BUG-1247:** Updates & Rollback now opens the Manager window's own Updates tab for everyone, including a CE administrator. The Admin button still opens the dashboard. The old behaviour came back with the switch `updatesButtonOpensOwnScreen` set to `false`. It needs a Codex look. Manager net10 tests: 1,097 passed, 0 failed. Manager net48 build: 0 errors.
+- **BUG-1173:** pack page 02 already lists five folders, and I confirmed each against the code. The settings folder `%APPDATA%\CE_SUITE` (it holds `manager-switches.json`) is missing from the list. The pack also doesn't say what to do if a `_PRE_V3` copy already exists. I didn't edit the pack. Proposed wording is in the report for CE 05 or the pack owner.
+- **No B number:** there is none in the build register for either bug, so CE 01 needs to rename the PR title.
+- **Unchanged:** CE_SHARED and Civil.
+
+Files:
+- `Modules/Manager/Commands/PluginManagerCommands.cs`
+- `Modules/Manager/Services/CeOneGlanceStatus.cs`
+- `Modules/Manager.Tests/Services/Bug1247UpdatesButtonOwnScreenTests.cs`
+- `REGRESSION_LOG.md`
+- `C:\CE_PLAN\areas\BUGFIX_p1_REPORT_30OCT.md` (report, pushed)

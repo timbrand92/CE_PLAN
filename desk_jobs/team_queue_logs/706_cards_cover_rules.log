@@ -1,0 +1,5 @@
+`C:\CE_PLAN\areas\CARD_DRAFTS_COVER_RULES_02NOV.md` is written: five draft cards, nothing run or opened in AutoCAD, and all four proof facts (built, tested, installed, Tim-accepted) stated per card, with no PR on the C-78 line and none opened in AutoCAD. The file has a FOR TIM block of eight lines first, then the cards.
+
+I could not pin down three things: the Inspector's ribbon panel, the Settings page box for the speed table and the 450 mm and larger fall figure (marked GUESS), and whether the CDCHECK main-outlet save has its own carpark entry.
+
+Project Review "Pipe sizes" is not changed by #1897 or #1920. It still uses one office minimum cover, which I flagged as a question for Tim. I did not re-read the register's mention of #1857 sitting in C-79b1: git shows it on `rel-20261106a`.

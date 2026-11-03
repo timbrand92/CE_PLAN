@@ -1,0 +1,25 @@
+**FOR TIM**
+
+1. **Verdict: go ahead and apply it, after 5:30 pm.** With this change the robot can click More... on New Pipe, open the Drawing tab, flip "Show grade in pipe text" and click Back.
+   I tried about 60 names that are close to these, like "Backup", "Go back", "More options" and "Include known grade". The robot refused every one.
+2. **What it still cannot press in that window.** Any "Use recent ..." button, the "Save as ..." buttons, Preferences, Send report, Export, Delete or Save.
+   It also cannot open the other three tabs.
+3. **One loose end, low risk.** While More options is open, the robot might be able to tick other boxes in it by naming the New Pipe window instead.
+   It still can't press anything that saves, sends or deletes. A small follow-up fix is in the report.
+4. **Watch for this on your PC.** If a test stops between its two pipes, your next CD pipe will be drawn without "AT 1 IN".
+   The desk checks for this after every run.
+5. **Nothing for you to do today.**
+
+---
+
+1. **Live files are unchanged.** All seven still match the copies the change was built on. The new copies contain exactly the 22 lines of the change and nothing else.
+2. **Existing cases aren't affected.** The format check gives 184 cases, 0 invalid, with the live runner and with the patched copy, and the two outputs are identical.
+3. **The draft robot checks:**
+   1. **N35 (the main check): sound.** It turns the toggle back on at the end. It notes in its header (a comment, because the runner has no field for it) that it rewrites `CD_RecentValues.json`. Two small fixes: match the card's label pattern, and check the toggle reads On when the window first opens.
+   2. **N35_BROKEN (the must-fail twin): needs a small fix.** It does fail on a check, but it never proves the label exists, so a missing label could also turn it red. Add a label count of 1 and a must-pass "AT 1 IN 200" check.
+4. **Conditions for applying.** Use a free window. Check the live hashes first. Back up all three files, copy them in together, then read the hashes back. The exact apply and undo commands are in the report.
+5. **Not checked:** nothing was run in AutoCAD. The new "open a tab" step has never run against a real window. The driver self-tests weren't run because your AutoCAD was in use.
+
+Report: `C:\CE_PLAN\areas\OPUS_REVIEW_MORE_BUTTON_29OCT.md`, pushed; CE_PLAN is not ahead of GitHub.
+
+**Summary:** GO TO APPLY in a free window. Back up first and check the live hashes before and after. The robot can press only More..., Back, the Drawing tab and the one toggle. Follow-up: New Pipe's "set anything" rule may reach into More options. Fix both drafts before the first run. Never seen in AutoCAD.

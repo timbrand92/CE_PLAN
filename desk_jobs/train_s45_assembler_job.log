@@ -1,0 +1,19 @@
+Train S-45 is assembled and pushed as `claude/rel-20261026s` at `90f2688e`, on base `3a3caac5` (installed 1.0.124).
+
+1. **Merged:** all six PRs (#1792 to #1797) at their briefed live heads. No other open PR has that base.
+2. **My one commit:** I re-set the `Plugin.cs` fingerprint in `Stage3ConnectedDesignBoundaryTests`, because #1795 changed the start-up message. No product change.
+3. **Scope:** nothing under Shared, Installer, CE.Host, Civil or Manager, and no register file changed.
+4. **Settings:**
+   - `AdoptAsksUnlabelledBeamKind` defaults ON and `UnknownPadSizeIsNotInvented` defaults ON.
+   - `ShowFullStartupList` defaults OFF.
+   - Share learning data now defaults OFF for new files only. Tim's own files hold `true`, which stays.
+5. **Build and tests:** whole solution 0 errors.
+   - net10: 5,985 passed, 0 failed.
+   - net48: 5,222 passed, the same 53 failed as S-44, though I did not compare those names against the base.
+   - DesignCore, CommandTruth and ReleaseTests match S-44.
+   - The Sbeam evidence class was not run.
+6. **Redo-killer scan:** nothing found. #1792 adds one new question, whose Escape path is covered in the report.
+7. **Tim's four settings files:** hashes unchanged from start to end. No AutoCAD was running.
+8. **Priority deviation:** I started jobs at Normal priority instead of Below Normal, because Below Normal hung on this PC. Detail is in the report.
+
+The report is `C:\CE_PLAN\areas\release-v3-colleagues-TRAIN_S45_ASSEMBLY_REPORT_2026-10-26.md`, pushed. My worktree and scratch folders are deleted. Built and tested only; not installed.

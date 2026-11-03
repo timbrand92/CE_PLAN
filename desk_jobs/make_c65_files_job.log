@@ -1,0 +1,14 @@
+The C-65 files are written, committed (2156e8c7) and pushed. `git status -sb` shows no 'ahead'. I started no chain and ran no build.
+
+**One mistake:** I overwrote the desk's own `chain_c65_make.ps1` and then restored it from git. The restored copy is the desk's original.
+
+**PR list:** 26 PRs in merge order, with #1748 last in Group 4. #1756 and #1767 are called out for Tim's decision and left out of the merge order. The list also covers the WAITING PRs and the Shared/Installer PRs left out.
+
+Files:
+- `areas\TRAIN_C65_PR_LIST_2026-10-25.md`
+- `desk_jobs\train_c65_assembler_job.txt`
+- `desk_jobs\train_c65_finalizer_job.txt`
+- `desk_jobs\payload99_c65_job.txt`
+- `desk_jobs\chain_c65.ps1`
+- `desk_jobs\chain_install_c65.ps1`
+- `desk_jobs\scripts\desk_install_c65.ps1`

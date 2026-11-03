@@ -1,0 +1,5 @@
+C:\CE_PLAN\areas\ROBOT_CASE_DRAFTS_SET06_DESIGN_DRAFTS_AND_REUSE_02NOV.md — verdict: one case with its twin drafted (W1945 and W1945_BROKEN), and the other three fixes are BLOCKED-FOR-ROBOT, each with a numbered Codex look. Nothing was built, run or opened in AutoCAD, so every printed line is DERIVED from the PR text and none was seen on a run.
+
+- **W1945 (#1945):** it can't run yet. It needs a new test drawing, DRV1_LPD_B1, which a person must make first (steps in the file). It also needs #1945 installed and an Opus review. The twin sets the PR's own switch OFF before launch.
+- **#1954 (reuse minimum), #1956 (Save Draft) and #1961 (reuse credit on its council profile):** no robot case. Save Draft is a refused button, CDDESIGN has no box for detention litres, and #1961 changes nothing on screen.
+- **Stacking:** #1954 and #1956 are stacked on #1874, which is not in `origin/claude/rel-20261102a`, so nothing for them can run on that build until #1874 merges.

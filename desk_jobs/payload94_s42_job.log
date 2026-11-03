@@ -1,0 +1,12 @@
+Candidate s1040 is built and verified. Nothing is installed, and nobody has opened it in AutoCAD.
+
+- **Candidate:** `C:\ce_rc_scratch\s1040\CE_STRUC_SUITE.bundle`.
+- **Manifest:** verified 2007, bad 0, extra 0, re-checked after cleanup.
+- **Train head:** the finalizer's GO at `c490b307` was confirmed against `git ls-remote`. The version commit is `e6d597c0` on `claude/rel-20261023s`, a normal fast-forward push that touched 3 files, 3 insertions and 3 deletions.
+- **Files:** none added or removed against installed. Natives are the installed bytes, because the C++ diff is empty.
+- **Tests:** 48/48 pin tests, 3/3 manifest tests on each of net48, net8 and net10, and 5/5 central register test.
+- **Strings:** every merged PR has discriminating strings, true in the candidate and false in installed 1.0.121. The log text "Command outcome: " is absent from installed, so it is a real discriminator. One control I guessed (`CD_Settings.json`) turned out to be new, so I reclassified it.
+- **Settings:** no default changed, and Tim's four settings files and the installed DLLs are identical before and after.
+- **Odd:** another job's build lock and a non-mine AutoCAD session made me wait. I never touched either.
+
+The report is at `C:\Lisp Files\_TEST_COPIES_20260923\PAYLOAD_S1040_REPORT.md`.

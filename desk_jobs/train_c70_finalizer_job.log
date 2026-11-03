@@ -1,0 +1,8 @@
+**GO at `39bc2108b093bde93de58721f7320f65ab1c692b`** on `claude/rel-20261026u`.
+
+1. **Change I made:** one tests-only commit, `C70NewSwitchDefaultsTests` (25 tests). It checks all fifteen diagnostic switches load OFF, and that their log lines read nothing from the drawing.
+2. **#1798 kept:** with every switch off, nothing differs from 3.0.79.
+3. **Tests:** Civil net10 20,539 total, 0 failed. Manager 1,041, 0 failed. Net48 has the same 55 old failures as C-69. REDO safety 25 of 25. Manager bundle passed its 75-file check.
+4. **Held:** BUG-861 is still open, and nothing was tried in AutoCAD.
+
+Report and log entries are pushed to `C:\CE_PLAN`.

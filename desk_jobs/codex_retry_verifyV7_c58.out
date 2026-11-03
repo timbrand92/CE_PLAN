@@ -1,0 +1,31 @@
+== verifyV7_c58 (usage 17.0% -> 17.0%): cks: text entry produced `PASTECLIP ÔÇö Specify insertion point`, including the permitted retry. Neither look was tested.
+
+2. **Report:** [V7 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_V7_20261022_1047.md>). PASS 0, FAIL 0, DIFFERENT 0, BLOCKED 2. SURE 2, UNSURE 0 for the blockage. No established failures; no fixtures wanted.
+
+3. **Clean end:** AutoCAD is gone, lock released, guard empty. All four settings hashes match their originals.
+
+4. **Settings hashes:** A1 = C1:
+   `ACD64E79A33BE9C152149FF2145A3CD2C29CABE11245F211183FD5C7DE783140`
+
+   B1:
+   `4D32B55B90F64B4BCC9E6647CDBF78CE781B2BA5523AAF30161FCAFC8A2BA846`
+
+   A2/B2/C2: not taken; session 2 never started.
+== verifyV7_c58 (usage 18.0% -> 18.0%): rogress line at 0.01 seconds; check completed with 27 items.
+
+2. **Report:** [V7 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_V7_20261022_1317.md>). No FAIL findings. Fixtures wanted: none.
+
+3. **Clean finish:** AutoCAD is gone. Lock released. All four settings files match their starting hashes.
+
+---
+
+4. **Settings hashes:** CD_Settings.json was temporarily changed in both sessions and restored exactly.
+
+   **A1 = C1 = A2 = C2:**  
+   `ACD64E79A33BE9C152149FF2145A3CD2C29CABE11245F211183FD5C7DE783140`
+
+   **B1:**  
+   `4D32B55B90F64B4BCC9E6647CDBF78CE781B2BA5523AAF30161FCAFC8A2BA846`
+
+   **B2:**  
+   `165FDAA0CD77258FB5375CC30F886253C6C907D5D191A335E16F08226ACBD64D`

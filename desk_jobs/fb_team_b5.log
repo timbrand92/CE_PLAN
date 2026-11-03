@@ -1,0 +1,11 @@
+All five bugs are fixed on their own branches, with a draft PR for each. Nothing has been run in AutoCAD, and no bug is marked FIXED.
+
+The report is pushed to `C:\CE_PLAN`, and `git status -sb` shows no "ahead".
+
+1. **BUG-1035:** PR #1722. The Pit Schedule "Shallow" depth is now the Settings value `shallowPitDepthMm` (300 mm unless changed), with no Settings page box yet. That box needs Tim's layout word.
+2. **BUG-1036:** PR #1728. The Pipe Flows note no longer quotes fixed 0.013 / 0.010 roughness numbers.
+3. **BUG-1037:** PR #1729. Column bar circles are now drawn at the bar's real diameter. The new switch ships ON.
+4. **BUG-1038:** PR #1731. Bar counts can be typed. The new switch ships ON. I added no warnings for unusual column bar arrangements.
+5. **BUG-1039:** PR #1732. Timber quantity accepts 10 or more. The new switch ships ON.
+
+Tests: the Civil full runs had 2 failures (BUG-1035) and 3 failures (BUG-1036). One BUG-1035 failure was my own doc line, now fixed; the other four are load-timing tests that pass when run alone. The Structural runs excluded the slow Sbeam, R16 and CompiledProductionRoute classes. Each was ended by my hang timer on one test I did not identify, with 0 failures reported. The Civil suite was not re-run after the BUG-1035 doc fix.

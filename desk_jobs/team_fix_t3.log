@@ -1,0 +1,11 @@
+Draft PR #1988 (B-160, BUG-300) is open on `claude/rel-20261026s`. It is built and unit-tested only; nobody has opened it in AutoCAD.
+
+- **Switch:** `FootingWidth.OopsRestoresOutlineAtOnce`, on by default. OFF gives today's behaviour.
+- **What changes:** after ERASE then OOPS, CE puts the footing record and outline back as OOPS ends, inside OOPS's own undo step. Locked layer, REFEDIT or a layout tab: nothing changes and one line says why.
+- **Files:** `OopsRestorePolicy.cs` (new), `FoundationMonitor.cs`, `FoundationService.cs`, `UserSettings.cs`, two new test files, `REGRESSION_LOG.md`.
+- **Differs from the brief:** OOPS only, not U. A write at the end of U would throw REDO away.
+- **Tests:** 37 focused and 308 neighbouring tests pass, and the net48 compile is clean.
+- **Gate:** the robot gate result wasn't attached, so I confirmed the gap by reading the code, not the drawing.
+- **AppData listings:** 11 Civil and Manager files changed while another lane's AutoCAD was running. I believe my tests didn't write them, but file times can't prove it.
+- **Mistake:** I deleted both AppData listing files during clean-up. The report's item 5.1 is the only record.
+- **Report:** `C:\CE_PLAN\areas\BUGFIX_t3_REPORT_01NOV.md`, pushed.

@@ -1,0 +1,4 @@
+Sun 17:32 payload report clean; Codex lane held (STOP_CODEX.flag); waiting for AutoCAD and the lock to be free
+Sun 17:40 AutoCAD free and lock claimed: installing S-44
+Sun 17:41 2026-10-25 17:41:28 INSTALL VERIFIED: Structural 1.0.124 installed, every file matches the candidate, settings unchanged
+Sun 17:41 lock released; Codex hold lifted; the supervisor restarts the conveyor

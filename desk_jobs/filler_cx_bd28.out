@@ -1,0 +1,7 @@
+== cx_bd28 (usage 60.0% -> 87.0%): 1. **BUG-1216 — BLOCKED.** [Draft PR #1812](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1812) and [report](C:/CE_PLAN/areas/CODEX_BUILD_BD28_26OCT.md) pushed. The full-suite failure changed from logging to PDF. AutoCAD and deployment were not run; owned worktree removed.
+
+---
+
+2. **Head:** `be185f45df6c432f0f8bc80b63d707dcca44f6ac`. Three builds: zero errors. **Red:** expected `cdrainfall`, got `cds`; expected null, got `CDS`. **Green:** 27/27.
+
+3. **Full-suite totals:** before 20,539: 20,506 passed, 1 failed, 32 skipped. After 20,566: 20,533 passed, 1 failed, 32 skipped. Differing failing names prevent approval.

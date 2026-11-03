@@ -1,0 +1,7 @@
+**BUG-1171 (B-050): draft PR #1860 is open.** It changes Manager only; CE_SHARED and Civil are untouched.
+
+The new switch is `pluginOutboxFullRecords`, and the short list is on by default. Sending (`drainPluginOutbox`) stays OFF. When it is turned on, only job number, failed command, PC code and day leave the PC. Old files are moved to `kept-not-sent`, never deleted.
+
+The 18 new tests pass. The full Manager suite ran 1,085 tests with 1,084 passed, 1 skipped and 0 failed. The net48 build is clean. Nothing was run in AutoCAD or on a real Manager start.
+
+Files: `CeAdminStorageService.cs`, `CeOneGlanceStatus.cs`, `B050PluginOutboxShortListTests.cs`, `REGRESSION_LOG.md`. The report is `release-v3-colleagues-BUG1171_FIX_REPORT.md`, pushed to C:\CE_PLAN.

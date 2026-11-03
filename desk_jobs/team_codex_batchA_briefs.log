@@ -1,0 +1,27 @@
+I wrote the four brief files and the report; nothing was run. These are the first 10 lines of `C:\CE_PLAN\areas\CODEX_BATCH_A_BRIEFS_REPORT_01NOV.md`:
+
+```
+# Codex batch A briefs: written, not run (CE 02, Sun 1 Nov 2026 04:31)
+
+## ANSWER FIRST
+
+1. **Files written (four, all new, nothing overwritten):** `C:\Lisp Files\_CODEX_RUNNER\verifyA78_c88.txt` + `verifyA78_c88_full.txt`, and `verifyS467_c88.txt` + `verifyS467_c88_full.txt`. K1 untouched.
+2. **A78 proves what a drafter must SEE of three C-78 fixes:** the Grade mismatch box (words, three buttons, Cancel / Esc / X draw nothing), plain RG on raingardens, and the short-pipe label on its leader.
+3. **S467 proves BUG-467 and BUG-472 by screen and mouse:** braces with CLICKED points in a turned UCS (the open question), FPFC and R1 in a turned UCS, BTX on sheet text, C1 inside a viewport, REFEDIT.
+4. **Launch lines:** `verifyA78_c88|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|low|90|6` with `-ReportGlob "CODEX_VERIFY_A78_*"`; `verifyS467_c88|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|low|90|6` with `-ReportGlob "CODEX_VERIFY_S467_*"`.
+5. **Nothing was run:** no AutoCAD, no build, no Codex. An acad.exe was running at 04:20 (Tim's or the robot's); I touched nothing.
+```
+
+---
+
+1. **A mistake I caught and fixed:** my first copy of the rules block was off by two lines. It dropped rule N1 and change (a). I rebuilt both full briefs from the right lines. A byte-for-byte compare then showed N1 to N17 and D1 to D12 match C1b exactly, apart from the look id.
+2. **What I changed from C1b:**
+   1. **Session time:** 20 to 25 minutes instead of 15 to 20, as the job asked.
+   2. **Driver cap:** raised from 40 to 70 calls. The start and end readings alone take about 25.
+   3. **Grade mismatch box (A78):** it is closed with Cancel, Esc or its X instead of the usual Keep. Enter is never pressed while it shows, because Enter keeps the grade and draws the pipe.
+3. **Two settings files the desk must put back after the runs:**
+   1. **A78:** placing the 2 m pipe rewrites `CD_RecentValues.json`. Codex records its hash before and after but does not restore it.
+   2. **S467:** R1 rewrites the Structural `CS_Settings.json` with its last tag. Codex copies both `CS_Settings.json` files aside before AutoCAD starts so the desk can restore them.
+4. **Not confirmed on paper:** the full list is in section 4 of the report. The two riskiest points are:
+   1. **FPFC:** if the drawing remembers a size for PF7, the typed chain goes out of step. The brief marks that look BLOCKED rather than guessing.
+   2. **REFEDIT set-up:** the order of AutoCAD 2027's questions is guessed, as it was in the robot's blocked case.

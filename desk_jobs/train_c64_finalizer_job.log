@@ -1,0 +1,33 @@
+**GO for C-64 at `f73755eec6439ebb9b18667b1c4364890a7f36c4`** on `claude/rel-20261024n`. It is built and unit-tested only: not installed, and nobody has opened it in AutoCAD.
+
+**Mistakes first (nothing lost):**
+1. **No base build for six new net48 failures.** Their tests don't exist on the base, so a base build can't run them. Instead I showed they fail for the same reason as the 17 known ones (the reference-only AutoCAD DLL used for net48 tests), and all six pass on net10.
+2. **Two long runs went in the background, not the foreground.** The solution build and the Civil full run can take longer than the tool's 10-minute limit. I checked on them myself and never ended my turn while they ran.
+3. **Correction to the assembler:** its net48 filter missed two test classes the train changes. I added them and they pass.
+
+**Verdicts:**
+- **All 40 merged PRs reviewed.** The six Group 4 PRs whose fixes were never re-reviewed (#1626, #1597, #1419, #1614, #1722, #1717) are all kept. Nothing was dropped.
+- **#1706 is not in the train** and I did not take it in.
+- **My one change** is a test that confirms the ten new switches start ON and the shallow-pit depth starts at 300 mm, plus its log entry. No product code changed.
+- **Settings:** all ten new switches stay ON, because each one fixes a bug. The Settings window still fits, but its tallest tab is now exactly at the 670 px limit.
+- **Manager:** CEMANAGER and About CE Suite no longer use up the next U, and the CE Tools tab appears even when Manager loads before Civil. The official release build passed with exactly 75 files.
+- **Installer, CE_SHARED and signed-update code are untouched.** No command was added or removed.
+
+**Tests:**
+- **Solution build:** 0 errors on net48, net8 and net10.
+- **Civil net10:** 20,030 tests, 0 failed.
+- **Manager net10:** 956 tests, 0 failed.
+- **Civil net48 (focused):** 23 failures, all from the reference-only DLL: the 17 known names plus the 6 new ones above.
+- **Not run:** the Installer suite (compiled only). Nothing was tested in AutoCAD.
+
+**Things to know:**
+- **Every office PC must get 3.0.74 together.** A PC still on 3.0.73 will warn "saved by a newer version" on every drawing saved by 3.0.74. Its Pit Schedule will also refuse those drawings as Xrefs.
+- **One new small fault, found by reading the code.** On a detention pit's first row, a typed remark shows as CE's rebuilt detention wording in the Pit Schedule window, while the placed table shows the typed text. The code dates from July; #1569 just made the cell typeable. It needs a bug carpark entry.
+- **#1638 (privacy fix) has no bug number.** I proposed BUG-1221.
+
+**Questions queued for Tim:**
+- **0.013 roughness:** the value for a pipe with no material is unchanged and still built, not accepted.
+- **Finer storm sweep:** CDDESIGN can read a little short when the worst storm falls between two tested lengths. A 25 m³ tank could really need about 25.6 m³. I recommend building the finer sweep.
+- **#1620 heartbeat:** where it may send on a PC with no approved-address record. That PR is still waiting.
+
+Tim's settings files are unchanged. My worktree and scratch folders are removed. The full report is `C:\CE_PLAN\areas\release-v3-colleagues-TRAIN_C64_FINALIZER_REPORT_2026-10-24.md`, with log entries 1623–1628 and the sign-off line, pushed as `f8ea1cc5`.

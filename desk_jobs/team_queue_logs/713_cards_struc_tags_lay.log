@@ -1,0 +1,5 @@
+`C:\CE_PLAN\areas\CARD_DRAFTS_STRUC_TAGS_LAYOUTS_02NOV.md` — 5 draft cards written, covering all 7 PRs. Nothing was run, built or opened in AutoCAD, and none of it is accepted by Tim. #1596 and #1457 are marked CHANGE-NEEDED, and Tim has 7 open questions across cards 1, 3, 4 and 5.
+
+A caveat: the `gh` tool isn't available in this shell, so I couldn't check live PR state. The cards rely on the 1 Nov Opus reviews.
+
+I briefly saved a scratch copy of the toolbar file to `C:\ce-fx\_x_tb.json` and deleted it straight away; nothing else outside the output file was touched.

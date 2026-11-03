@@ -1,0 +1,18 @@
+**FOR TIM**
+
+I reviewed 49 draft PRs (#1196 to #1244) and posted a verdict on each one. The results are also in the review log, with new merge lists for the next Civil train (C-38) and the next Structural train (S-38). All of this is from reading the code only: nothing was built, tested, installed or opened in AutoCAD.
+
+1. **Results:** 20 can go in as they are, 28 can go in once small fixes are made (each fix is written on the PR), and 1 is rejected.
+2. **One serious problem (#1225, fault reports):** this was meant to keep drawing names and folders out of fault reports. It still records the drawing name every time you switch drawings, and it misses folder paths. It must not ship as a privacy fix until that is fixed.
+3. **A problem found outside the PRs:** after every update, Structural turns AutoCAD's top menu bar on when it loads, without checking first. That breaks the new "leave my menu bar alone" switch in #1231, and it breaks the rule that nothing changes AutoCAD settings by itself in the background (the rule that protects Undo and Redo). It needs its own fix.
+4. **Two PRs fixed the same thing:** both #1242 and #1219 stop a new pump pit (SPS) getting a number that's already in the drawing.
+   - **My ruling:** keep #1242, reject #1219. Before, with SPS1 and SPS3 in the drawing, the next pit was called SPS3 again.
+   - **With the fix:** the next pit will be SPS4. It will not re-use SPS2, because an erased SPS2 might still have a label or schedule row left behind.
+   - **If you would rather it filled the gap and gave SPS2,** tell me.
+5. **Still to review:** 291 older drafts (#1195 and below) have no verdict on their latest version yet.
+
+---
+
+All 49 heads were re-checked just before posting. The log is `C:\CE_PLAN\areas\release-v3-colleagues-REVIEWLANE_LOG.md`, entries 972 to 979, committed and pushed as `3cf7327a`.
+
+**Summary:** Round 10 reviewed and commented on 49 draft PRs (#1196 to #1244) by reading the code only: 20 MERGE, 28 MERGE-WITH-FIXES, 1 REJECT (#1219, replaced by #1242). There is one HIGH: #1225 still writes the drawing name and folder paths into fault reports. It also found a guardrail 8 breach outside any PR: Structural's start-up sets MENUBAR without checking (`CuiMenuGeneratorService.cs`, about line 1421). No PR in this round adds a transaction, view change, system-variable write or command to an automatic path, and no blue was found. The lists are C-38 (12 plain MERGE plus a waiting-for-fixes order) and S-38 (8 plain MERGE, four of them after the PRs they are stacked on, and 6 waiting for fixes). They have not been trial-merged against the earlier train lists.

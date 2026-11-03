@@ -1,0 +1,10 @@
+Two draft PRs are open against `origin/claude/rel-20261102a`, which contains Structural. Both are unit-tested only, and nothing has been run in AutoCAD.
+
+- **BUG-1136, PR #1893:** a footing register that can't be read is now kept as stored. CE copies its text to the Structural settings folder under `Recovery`, prints one plain line, and refuses to save footing changes over it. The switch is `Options.KeepDamagedFootingRegister`, ON by default. Files: `FoundationRegistryService.cs` and `UserSettings.cs`, plus a new test file and a `REGRESSION_LOG.md` entry. The 12 focused net10 tests pass.
+- **BUG-1199, PR #1894:** THCL now reads the size library from the drawing at every lookup, so a size removed by Undo stays gone. The switch is `Options.FootingSizesReadFromDrawing`, ON by default. Files: `CeTextService.cs` and `UserSettings.cs`, plus a new test file and a `REGRESSION_LOG.md` entry. The 4 focused net10 tests pass.
+
+The net48 compile has 0 errors on both branches. The full Structural suite was not run, by the test-isolation rule. Tim's real settings files were identical before and after.
+
+There was no B number in the build register, so both titles start "BUG-nnnn" for CE 01 to rename. Neither switch is on the Settings window. Neither bug is marked FIXED.
+
+The report is pushed as `C:\CE_PLAN\areas\BUGFIX_p3_REPORT_30OCT.md`. It names two robot cases with switch-off controls, `S31_foot_register_damaged` and `S32_thcl_undo_size`.

@@ -1,0 +1,16 @@
+C-73 is assembled and the report is pushed to `C:\CE_PLAN`. #1829 merged cleanly onto the C-72 tip as one merge, `0fb89f796026ff730c5f02d93901a874473c0366` on `claude/rel-20261026x`. Nobody has run it in AutoCAD, and the finalizer still has to judge its REDO safety.
+
+- **Merge:** 12 files, 692 added, 6 removed, matching the PR list. The PR moved no further since the reference head. Shared, Installer and Manager are untouched. Four new diagnostic switches were added, all off, and `UserSettings.cs` is unchanged.
+- **Build:** the whole solution built with 0 errors (net48, net8.0-windows and net10.0-windows).
+- **Tests:**
+  - Civil net10: 20,681 total, 0 failed.
+  - Manager net10: 1,041 total, 0 failed.
+  - Civil net48: 55 failures, the same names as C-72.
+  - The 25 new `Bug861Diag2SwitchesTests` pass on both net10 and net48.
+  - The Civil half of the Arch guards passed 14 of 14.
+  - Tim's four settings files are unchanged by hash.
+- **AutoCAD was open** during the Civil net10, Manager net10 and Arch runs; I never touched it.
+- **Installed versions:** all six DLLs read 3.0.82 / 1.1.82, so C-72 is already installed.
+- **Leftover:** the empty `C:\asm73` folder remains, because the harness blocked deleting it.
+
+The report is `C:\CE_PLAN\areas\release-v3-colleagues-TRAIN_C73_ASSEMBLY_REPORT_2026-10-27.md`.

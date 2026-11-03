@@ -1,0 +1,5 @@
+I opened no PR for BUG-1094 (B-166). The code isn't faulty. The red Grade line and the "To fix" line are only on the **Checks** tab of CE Inspector. Codex only looked at Summary, which shows plain "Grade 1 in 235".
+
+Showing the colour on Summary would be a window change. So I wrote a Codex window brief, `areas\BRIEF_W1094_INSPECTOR_HEALTH_02NOV.md`, and the report, `areas\BUGFIX_w1094_REPORT_02NOV.md`. Both are pushed to CE_PLAN.
+
+Not proven: nobody has seen the Checks tab on that pipe. I ran no tests and started no AutoCAD. The brief opens with a 5-minute Codex look at Checks to settle it. No switch was added. Free space on C: stayed about 37 GB.

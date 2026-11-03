@@ -1,0 +1,7 @@
+Two draft PRs are open: #1882 for BUG-1093 and #1887 for BUG-1092, both under B-069 against `claude/rel-20261102a`. Both are built and unit-tested only; nobody has opened either in AutoCAD, and neither bug is marked fixed.
+
+- **BUG-1093 (#1882):** a pit lid at exactly RL 0.000 now gets the cover check in network design and redesign. Files: `NetworkDesignService.cs`, `NetworkRedesignSolverService.OutputValidation.cs`, new `CoverLevelKnownRule.cs`. Switch: `cover.zeroCoverLevelIsReal`, on.
+- **BUG-1092 (#1887):** any real uphill pipe now reports "flows uphill", and the 5 mm Settings tolerance only decides the "flat" wording. File: `DesignValidationService.cs`. Switch: `grade.anyUphillFallIsError`, on.
+- **Tests:** the full Civil net10 suite has 2 failures on each branch, the same two `SourceAtomicCoordinatorDependencyTests` that fail in other jobs' runs; I did not run them on the untouched base. The net48 compile is clean.
+- **Settings listing:** the last-write time of `TIM_CE_CADTOOLS\CD_Settings.json` went from 2026-10-04 to 2026-03-11 between my before and after listings. Its size is unchanged, my runs wrote nothing there, and I did not read its contents.
+- **Report:** `C:\CE_PLAN\areas\BUGFIX_p9_REPORT_30OCT.md` is pushed, with the robot case names (C93, C94) and the clashes seen with the other open drafts.

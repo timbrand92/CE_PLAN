@@ -1,0 +1,11 @@
+**Batch 9: one draft PR open (#1974, BUG-1175). BUG-1242 and BUG-1250 were not built.** The report is pushed at `C:\CE_PLAN\areas\BUGFIX_n9_REPORT_31OCT.md`.
+
+- **BUG-1175:** CDSL and CDTRENCHGRATEAUDIT no longer name `C:\Lisp Files`. CDTRENCHGRATEAUDIT now finds its drawing in the bundle's Blocks folder and says so if it is missing. It is wording and a read-only lookup, so there is no Settings switch.
+- **Changed files:** new `Rules/BundleFolderWording.cs`, plus `SpotLevelCommand.cs`, `LinkCommands.cs` and `REGRESSION_LOG.md`.
+- **Tests:** 4 new unit tests pass on net10, and the net48 compile has 0 errors. I ran no full suite, and nobody has opened this in AutoCAD.
+- **BUG-1242:** skipped. Tim's ruling of 29 Oct (decisions item 77) says the plan label carries no number, so letters only is intended. The report has a one-line question for CE 04 about re-filing it as "by design".
+- **BUG-1250:** skipped. It can only be seen in AutoCAD and the cause is unproven. The report names a robot check to run first.
+- **CDHELP line:** `Dialogs/CdHelpDialog.xaml.cs:41` still shows `C:\Lisp Files\SUPERSEDED`. It is a window, so the report holds a Codex brief for it.
+- **Real settings folders changed during my run:** the before and after listings differ. I think none of it is mine: an AutoCAD 2027 session started at 22:35 and was running the installed 3.0.88 plugin. I did not start AutoCAD. I can't rule out that the two 22:25 outbox notes came from my test run. The report asks someone to check them.
+
+The worktree and scratch are cleaned. C: free space is 26.9 GB, down from 28.7 GB at the start.

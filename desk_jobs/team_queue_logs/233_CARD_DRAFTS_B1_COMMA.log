@@ -1,0 +1,1 @@
+C:\CE_PLAN\areas\CARD_DRAFTS_B1_COMMANDS_02NOV.md: no new cards needed. 17 of the 18 b1 PRs already have cards, and #1922 changes no command. The path in the brief had a lost backslash, so I wrote it to `C:\CE_PLAN\areas\`. Nothing was built, tested or opened in AutoCAD.

@@ -1,0 +1,5 @@
+== cx_bd13 (usage 23.0% -> 51.0%): 1. **BUG-1103 — DONE.** Draft [PR #1806](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1806). Head: `c68c5db4328a4104808546f6b8519fb27af22413`.
+
+2. **Evidence:** `ChargedSystem_Bug1103_PipeDiameter150_WarnsItTakesMetres`: red “No diameter warning for 150” → green PASS. Focused checks: 79/79 and 26/26. All three builds: 0 errors. Full suite: before **20,380 — 20,345 passed, 3 failed, 32 skipped**; after **20,405 — 20,371 passed, 2 failed, 32 skipped**. No new failures.
+
+3. **[Report saved and pushed](C:/CE_PLAN/areas/CODEX_BUILD_BD13_26OCT.md).** Worktree removed. AutoCAD not opened; nothing deployed.

@@ -1,0 +1,11 @@
+**Payload 77 is built but not installed, and nobody has opened it in AutoCAD.**
+
+- **Candidate:** `C:\ce_rc_scratch\c1044` holds `CE_CVL_SUITE.bundle` (828 files) and `CE_SUITE_MANAGER.bundle` (78 files).
+- **Manifests:** both read verified with 0 bad and 0 extra, rechecked after cleanup. Compared with installed, no files were added or removed.
+- **Branch head:** the version commit is `5e0dae9c` on `claude/rel-20261020a` (exactly 4 files, 4 insertions, 4 deletions).
+- **Tests:** Civil pin tests 39 of 39, Manager 51 of 51.
+- **Strings:** all 60 new-string rows read True in the candidate and False in installed. All 12 control rows read True in both.
+- **Settings:** Tim's settings files are unchanged. The installed DLLs are untouched.
+- **Odd:** the installer fix (#1475) isn't in these bundles. The installer exe must be rebuilt from `5e0dae9c`.
+
+The full report is `C:\Lisp Files\_TEST_COPIES_20260923\PAYLOAD_C1044_REPORT.md`.

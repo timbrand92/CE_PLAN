@@ -1,0 +1,30 @@
+**FOR TIM**
+
+1. **Answer: C-72 is GO** at `c4c1e15d`, on branch `claude/rel-20261026w`. It has been built and passed its automatic tests. It is not installed, and nobody has opened it in AutoCAD.
+2. **What you'll notice:** almost nothing.
+   - Pipe-speed warnings stay exactly as in 3.0.81 while the "speed limit by material" setting is off, which is how it ships.
+   - If a connection-pipe length in the settings file is typed with a comma ("10,5"), CE now refuses it, uses 10 m and tells you which setting it skipped. Before, it read it as 105 m.
+   - The WSUD and Charged system tabs now keep a figure like 0.8549 exactly, and they keep a loss coefficient of 0.
+3. **One thing that is red:** one of the new automatic checks, the Structural rule, fails on this branch. That's because this branch carries an older copy of Structural that is meant to use the shared CE code. Nothing in this update changes Structural, so I still signed GO. I recommend running that rule only on the current Structural line (S-45). The desk can overrule this.
+4. **Two questions for you, carried over (nothing waits on them):**
+   - Keep refusing comma figures? I recommend yes.
+   - When a pipe material has no speed figure in Settings, CE uses the office figure without saying so. Should it add a note? I recommend leaving it silent for now.
+5. **Nothing is marked FIXED.** BUG-527, BUG-543 and BUG-547 stay open.
+
+---
+
+1. **Mistakes first:**
+   - The PDF-page test failed twice inside the big test runs, then passed when run on its own. It needs AutoCAD's own page renderer and sometimes fails when the machine is busy; none of the five PRs touches that code.
+   - Rebuilding the test project for my one new test file added about 17 minutes.
+   - From 14:23 another job (the BUG-861 lane) held the desk build lock. I ran the Civil bundle and Manager build in my own copy without it, and left their lock alone.
+2. **What I changed:** one commit adding 7 tests (`C72NewSwitchDefaultsTests`). They pass on net10 and net48. Nothing was reverted.
+3. **Builds:** the whole solution built with 0 errors.
+4. **Civil tests on net10:** 20,656 tests, 0 real failures (the one red was the PDF test above).
+5. **Civil tests on net48:** the same 55 failures as C-71, name for name. They are reference-only failures, none of them new.
+6. **Manager tests:** 1,041 tests, 0 failed. The Manager release build's file-count check passed: 75 files.
+7. **ArchUnitNET checks:** the Civil, Manager and CE_SHARED half passed 14 of 14 on both runtimes. The Structural half passed 3 of 4 on both, for the reason in point 3 above.
+8. **Settings:** your CD_Settings.json was changed by something else during my job, not by me. It went back to an earlier copy, the same thing C-71 saw. Your other three settings files didn't change.
+
+The report and review-log entries are pushed to CE_PLAN.
+
+**Summary:** GO at `c4c1e15dd9165551d4015eb5905b68fdde24d802`. I added one tests-only commit (7 tests). Solution built with 0 errors; Civil net10 had 20,656 tests with 0 real failures; Civil net48 had the same 55 known failures; Manager passed 1,041 tests and its 75-file check. The ArchUnitNET Civil half passed 14 of 14; the Structural half passed 3 of 4 because of the older Structural copy on this branch. Not reverted, not tested in AutoCAD. Nothing is marked FIXED.

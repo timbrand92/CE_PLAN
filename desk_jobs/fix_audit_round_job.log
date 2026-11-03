@@ -1,0 +1,14 @@
+Four draft PRs are open, each with tests and a REGRESSION_LOG entry. None has been run in AutoCAD, so all four need Opus review.
+
+- **#1523 (HIGH):** An Esc-ended PIT, CD or DP run that placed something now logs "completed". CDCHECKIGNORE refusals log "refused". `log_outcomes.ps1` reads it as REFUSED (dry-run tested).
+- **#1525:** CDCHECKIGNORE reads its switch before any save.
+- **#1529:** CEMEMBER and SBEAM no longer change an existing 18HIDDEN or 9HIDDEN2 layer.
+- **#1532:** debug-only probe lines for BUG-861. This adds instrumentation only, with no fix.
+
+Civil net10: about 19,160 run, with the known BackTest red (plus a PDF load test that timed out once under load and passed alone). Structural net10: 4,687 pass. Net48 builds clean. Report: `C:\CE_PLAN\areas\release-v3-colleagues-FIX_AUDIT_ROUND_REPORT.md`.
+
+Two things I did wrong:
+- I briefly reset `C:\CE_PLAN`'s local git state, then restored it.
+- I couldn't take `build.lock`, which another job held, so I built in my own worktrees.
+
+The CE_PLAN push needed an isolated route because an unrelated commit tripped the leak scan.

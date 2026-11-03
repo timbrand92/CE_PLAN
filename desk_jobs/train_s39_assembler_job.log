@@ -1,0 +1,16 @@
+Train S-39 is assembled: `claude/rel-20261020s` is pushed at head `3de4e748`, and the report is pushed to C:\CE_PLAN. It is built and unit-tested only; nobody has opened it in AutoCAD.
+
+- **Merged:** #1487, #1488, #1489, #1490, #1503 and #1312. Every live head matched the head named in the brief.
+- **Shared/Civil/Manager:** none of the merged PRs touch `Shared/` or the Civil/Manager files.
+- **Build:** 0 errors across the solution and every Structural project on net48, net8 and net10.
+- **Tests:**
+  - Structural net10: 5164 of 5164 passed.
+  - Structural net48: 36 failed, the same ones as S-38.
+  - DesignCore: 5 failed per lane, the same ones as S-38.
+  - ReleaseTests: 10 of 10 on all three targets.
+- **Commit I added (`3de4e748`):** #1503's one-line `Plugin.cs` change turned a fingerprint guard red, so I re-pinned it.
+- **CommandTruth:** one red, also red on the base.
+- **For the finalizer:** a DesignCore release-gate test still expects CE_VERSION in Structural, so it will fail at release.
+- **Settings files:** `CD_Settings.json` changed on the PC during the run, not by me; the other three are unchanged.
+
+Worktrees and temp folders are removed.

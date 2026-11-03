@@ -1,0 +1,12 @@
+**S-4 summary:** I opened draft PR **#1901** (B-080 / BUG-616) against `claude/rel-20261026s` and pushed the report. It is built and unit-tested only. 20 net10 tests passed, and the net48 compile check ended on a build-script error rather than a C# error.
+
+**Files:**
+- `NativeXrefLayerService.cs`
+- `UserSettings.cs`
+- `SettingsService.LoadRecovery.cs`
+- `XrlConfirmBeforeMoveTests.cs`
+- `REGRESSION_LOG.md`
+
+**Switch:** `XrefLayer.ConfirmBeforeMove`, ON by default. XRL now highlights the Xrefs and asks Apply or Cancel before moving them.
+
+**Skipped:** BUG-613 and BUG-578 each need a decision from Tim. Both questions are in `C:\CE_PLAN\areas\BUGFIX_s4_REPORT_31OCT.md`.

@@ -1,0 +1,16 @@
+Thu 10:28 chain start: C-59 first, then S-41; nothing is installed by this chain.
+Thu 10:28 C:\CE_PLAN\desk_jobs\train_c59_assembler_job.txt started pid 92192 (sonnet)
+Thu 10:57 finished train_c59_assembler_job.txt
+Thu 10:57 C:\CE_PLAN\desk_jobs\train_c59_finalizer_job.txt started pid 89216 (opus)
+Thu 11:58 finished train_c59_finalizer_job.txt
+Thu 11:58 C-59 finalizer verdict GO: building payload 90 (candidate c1055). Nothing is installed by this chain.
+Thu 11:58 C:\CE_PLAN\desk_jobs\payload90_c59_job.txt started pid 96108 (sonnet)
+Thu 12:21 finished payload90_c59_job.txt
+Thu 12:21 C:\CE_PLAN\desk_jobs\train_s41_assembler_job.txt started pid 95716 (sonnet)
+Thu 12:58 finished train_s41_assembler_job.txt
+Thu 12:58 C:\CE_PLAN\desk_jobs\train_s41_finalizer_job.txt started pid 97772 (opus)
+Thu 13:18 finished train_s41_finalizer_job.txt
+Thu 13:18 S-41 finalizer verdict GO: building payload 91 (candidate s1039). Nothing is installed by this chain.
+Thu 13:18 C:\CE_PLAN\desk_jobs\payload91_s41_job.txt started pid 99676 (sonnet)
+Thu 13:36 finished payload91_s41_job.txt
+Thu 13:36 chain complete

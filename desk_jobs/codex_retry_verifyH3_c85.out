@@ -1,0 +1,11 @@
+== verifyH3_c85 (usage 18.0% -> 18.0%): AUTOCAD CLOSED
+
+1. **H3 BLOCKED ÔÇö SURE:** CSV Cancel added zero drawing-write lines. Export Excel produced a rendering error before its save box opened, so H3 cannot pass.
+2. **Clean end:** Nothing exported or saved. All four settings hashes unchanged. Lock released; AutoCAD eventually exited.
+3. **Report:** [H3 verification report](<C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_H3_20261030_0807.md>). Counts: 1 BLOCKED, 0 PASS, 0 FAIL.
+== verifyH3_c85 (usage 21.0% -> 22.0%): AUTOCAD STILL RUNNING
+
+1. **H3: DIFFERENT ÔÇö SURE.** CSV Cancel added zero drawing writes. Excel showed a rendering error before reaching its save box, so full acceptance remains unproven.
+2. **Safe end:** H3ÔÇÖs AutoCAD closed; lock released; settings unchanged; nothing exported or saved. A separate AutoCAD session started afterwards and was left untouched.
+3. **Counts:** 0 PASS, 0 FAIL, 1 DIFFERENT, 0 BLOCKED, 0 NOT TESTED; SURE 1, UNSURE 0.
+4. **Report:** [CODEX_VERIFY_H3_20261030_1233.md](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_H3_20261030_1233.md>)

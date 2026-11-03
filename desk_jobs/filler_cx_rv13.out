@@ -1,0 +1,10 @@
+== cx_rv13 (usage 9.0% -> 12.0%): 1. **DONE — saved and pushed.** [Group 13 findings](C:/CE_PLAN/areas/CODEX_PR_REVIEW_GROUP13_24OCT.md).
+
+2. **One new MEDIUM finding:** #1419 clears a pipe’s break-symbol link during repair. Verified by reading; AutoCAD confirmation remains outstanding.
+
+3. **15 verdicts:** 4 MERGE, 2 MERGE-WITH-FIXES, 4 HOLD, 5 REJECT.
+
+---
+
+1. **Published:** CE_PLAN commit `f9504311`. Only the findings file changed; leak scan passed.
+2. **Execution:** 0 builds, 0 tests, 0 AutoCAD runs. No PR changed.

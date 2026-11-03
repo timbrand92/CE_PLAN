@@ -1,0 +1,7 @@
+== verifyH6_c85 (usage 19.0% -> 19.0%): AUTOCAD CLOSED
+
+1. **H6: NOT TESTED ÔÇö evidence.** No ribbon appeared within 90 seconds; saved screenshots repeated identical hashes. No acceptance claimed.
+2. **Installed:** Civil 3.0.86 / Manager 1.1.86 / Structural 1.0.125.
+3. **Cleanup:** All four settings unchanged. AutoCAD processes gone; lock free.
+4. **Counts:** PASS 0, FAIL 0, DIFFERENT 0, BLOCKED 0, NOT TESTED 1. SURE 0 / UNSURE 1. No fixtures missing.
+5. **Report:** [H6 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_H6_20261030_0836.md>).

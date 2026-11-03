@@ -1,0 +1,5 @@
+B-178 (BUG-396): the double-click on a placed Pit Schedule is still unbuilt, so I opened no PR. The route needs a command card first, and the Pit Schedule window has no way to open at a chosen pit, which is Codex's to change. I read the code only: no build, no tests, no worktree.
+
+- **Evidence:** on `origin/claude/rel-20261102a`, `DoubleClickEditTable.cs` (about line 124) lists `pit-schedule` as having no window yet.
+- **Files:** `areas\BRIEF_W396_DOUBLECLICK_02NOV.md` (two questions for Tim, proposed switch `doubleClick.pitScheduleOpensWindow`, robot case) and `areas\BUGFIX_w396_REPORT_03NOV.md`, pushed to `C:\CE_PLAN`.
+- **Not done:** the before/after APPDATA listings, since nothing ran. The `gh` open-PR check was skipped (`gh` isn't on this PATH).

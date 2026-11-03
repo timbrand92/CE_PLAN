@@ -1,0 +1,32 @@
+# FOR TIM
+
+1. **The robot can't prove any of the five fixes yet.** Every answer they change appears only on a CDCALC or CDDESIGN window tab the robot can't switch to. Nothing reaches the command line, the CE log or a saved file. So I wrote no robot tests; the plan explains why for each bug.
+2. **Quickest proof: three Codex looks, about 1 day after CE 01 installs the fixes.**
+   1. **BUG-1097:** look H1 is updated and ready.
+   2. **BUG-905 plus the Boyd's half of BUG-1095:** one new Boyd's look, about 1 hour.
+   3. **BUG-1088, BUG-1091 and the CDDESIGN half of BUG-1095:** one CDDESIGN look on a Darebin test job, which has to be made first.
+   4. **The "broken" comparison is free:** today's 3.0.85 still has every fault, so a look run now gives the failing reading.
+3. **What right looks like on a job:**
+   1. **BUG-905:** Boyd's gives 2.08 m³ instead of 2.56 m³ on a 746 m² lot.
+   2. **BUG-1097:** a 0.40 m head leaves about 0.18 m after pipe losses, so the 300 mm warning appears.
+   3. **BUG-1095:** a Darebin lot shows C 0.80 instead of 0.70.
+   4. **BUG-1091:** an existing DN450 is redesigned at 1 in 200 instead of 1 in 1,509.
+   5. **BUG-1088:** a 40 L/s pipe comes out DN225 at 1 in 200 instead of DN100 at 1 in 3.
+4. **One thing is still your call:** the BUG-1088 sizing rule (question 21a). "Build all three" said build it, not which rule. CE 01 is building the recommended one: each size at its flattest allowed grade, and go up a size before going steeper.
+5. **I found and fixed a fault in H1.** The Charged System tab shows only one warning line, and the "Qmax is less than design flow" line was hiding the head warning. H1 now types a 150 mm downpipe first, which keeps that capacity line out of the way.
+6. **H1 waits for the fix.** It reports NOT TESTED until the desk records the first build that carries the head-after-losses change.
+
+---
+
+**Files:**
+1. **The plan:** `C:\CE_PLAN\areas\ENGINEERING_FIX_PROOF_PLAN_29OCT.md`, pushed. It has every expected value with the arithmetic shown, and H1's before and after text.
+2. **H1:** `C:\Lisp Files\_CODEX_RUNNER\verifyH1_c85_full.txt` and `verifyH1_c85.txt`. To undo, copy the two `.BEFORE.txt` files from `C:\Users\TimothyBrand\AppData\Local\Temp\ce_plan19\` back over them.
+
+**Summary (under 100 words):** The robot can't drive any of the five fixes, so I planned three Codex looks and wrote no robot tests. I updated H1 to judge the head left after losses, fixed its hidden-warning fault, and pushed the plan. Not verified:
+1. Any figure on screen.
+2. The installed DLL version.
+3. How the BUG-1095 fix branch behaves, beyond a helper's source reading.
+4. How the Boyd's tab learns the job's council.
+5. How CDDESIGN works out its connection-pipe flow.
+6. That H1 reads cleanly to Codex.
+7. PR #1772's live state on GitHub (GitHub's command-line tool isn't installed on this PC).

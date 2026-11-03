@@ -1,0 +1,16 @@
+Train C-69 is assembled and pushed: branch `claude/rel-20261026t`, head `cb194030`. All eleven PRs merged, none moved from the reference heads, and I made no commit of my own. The installed line read Civil 3.0.78 and Manager 1.1.78 (C-68), and the base tip was `d8840a09`, as required.
+
+- **Build:** the whole solution builds with 0 errors on net48, net8.0-windows and net10.0-windows. `CE.TestHarness.Tests` still compiles, and the Installer projects compiled but were not run.
+- **Civil net10:** 20,474 total, 0 failed, exactly the predicted count.
+- **Manager net10:** 1,032 total, 0 failed.
+- **Civil net48 (focused):** 55 failed. 51 are the known reference-only names. The other 4 are `C5MixedUnitsTests` cases, a class not in the earlier filter. They fail the same way on the base `d8840a09`, so they are not new.
+- **Scope:** only #1788 touches Manager (two files plus its test), so the Manager DLL is a real change. `Shared/` and `Installer/` are untouched. The four version places still read 3.0.78 and 1.1.78, and I edited none.
+- **Settings:** every new key carries a "Default:" line, and the Settings-fit test still reads 670 px. No key has a Settings page row.
+- **Not tested:** nothing was run in AutoCAD, no PDF page was looked at, and no real paste was made.
+- **For the finalizer:** `acad.exe` was open during the test runs and I did not touch it. Nobody independent has read the fix commits. In the C60 audit-guard run, 3 tests showed NotExecuted and I did not check why.
+
+The report is pushed to `C:\CE_PLAN` at `areas\release-v3-colleagues-TRAIN_C69_ASSEMBLY_REPORT_2026-10-26.md`. My worktrees are removed.
+
+## Summary
+
+Branch `claude/rel-20261026t`, head `cb194030`: all eleven PRs merged, none moved. The solution builds with 0 errors. Civil net10 ran 20,474 tests and Manager 1,032, with none failed. Net48 shows the 51 known reds plus 4 that fail on the base too. Only #1788 touches Manager, and versions are untouched. Nothing has been run in AutoCAD. The report is pushed.

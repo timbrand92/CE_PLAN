@@ -1,0 +1,27 @@
+PR #1972 now has one new normal commit, **32fc1a44**, on its own branch. Nothing was force-pushed, closed or merged. It is built and unit-tested only, and nobody has seen it in AutoCAD.
+
+**FOR TIM**
+
+1. **What you will see differently.** This is the rare case where the pipe saves but CE says the drawing needs reopening. The "Recalculate downstream pipe inverts?" box is still skipped. The command line now also says the downstream levels were not recalculated, and to run CDPROPAGATE from the downstream pit. It only prints when the downstream level really changed.
+2. **Switch.** `pipe.cascadeQuestionAfterEditCommits` is unchanged. With it OFF, nothing is held back, so the new line can never print and the old behaviour returns exactly.
+3. **Protected file.** My commit does not touch `LinkService.Persistence.cs`. The job brief said #1972 touches it. The Opus review says that file belongs to #1970. CE_SHARED is not touched.
+4. **Tests.**
+   1. The new source-guard test failed with Update.cs put back to the old head.
+   2. It passes with my change.
+   3. Civil net10 focused runs passed 23 of 23 and 98 of 98.
+   4. The net48 compile has 0 errors.
+5. **Real settings files changed during my window, and I have not proven why.**
+   1. Between my two listings (about 00:28 and 01:40), `CD_Settings.json` changed from 15,357 to 15,314 bytes. It was last written at 01:37:28.
+   2. `CD_RecentValues.json` also changed time.
+   3. The other changes are AutoCAD session files.
+   4. My last test ended at 01:26, and an `acad.exe` started at 01:37:36. I think the robot lane did it, but I only compared names, sizes and times.
+   5. Someone should check the `CD_Settings.json` change against whichever robot job ran then. The listings and report are the evidence.
+6. **My mistakes.** Two test runs failed on a command-line quoting error. Each cost a long wait for a free build slot.
+7. **Not proven.** Nobody has seen the new line in AutoCAD, because the case needs CE to fail to publish its link changes after a good save. Accept it on the code reading plus the unit tests. BUG-658 stays OPEN.
+8. **Cleanup.** The worktree is cleaned and removed. `C:\CE_WORK\scratch\fx72` could not be fully removed, probably because this session's own temp folder sits inside it, so remove it later. The report is pushed with nothing ahead.
+
+---
+
+The report is `C:\CE_PLAN\areas\BUGFIX_fx72_REPORT_01NOV.md`. It names the robot case `N5_658_reopen_notice` with its switch-off control `N5_658_reopen_notice_off`.
+
+**Summary:** PR #1972 gets commit 32fc1a44. Changes are in `PipeEditCommand.Update.cs`, `Rules/CascadeAfterCommitRule.cs` (new `SkippedNotice`), `Bug658CascadeAfterCommitTests.cs` and `REGRESSION_LOG.md`. The switch is `pipe.cascadeQuestionAfterEditCommits`, behaviour unchanged. One unexplained real-file change (`CD_Settings.json`) is flagged in the report.

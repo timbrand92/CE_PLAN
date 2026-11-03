@@ -1,0 +1,8 @@
+Thu 06:30 C:\CE_PLAN\desk_jobs\train_s40_assembler_job.txt started pid 71972 (sonnet)
+Thu 07:15 finished train_s40_assembler_job.txt
+Thu 07:15 C:\CE_PLAN\desk_jobs\train_s40_finalizer_job.txt started pid 83848 (opus)
+Thu 07:47 finished train_s40_finalizer_job.txt
+Thu 07:47 finalizer verdict GO: building payload 89 (candidate s1038). Nothing is installed by this chain.
+Thu 07:47 C:\CE_PLAN\desk_jobs\payload89_s40_job.txt started pid 3500 (sonnet)
+Thu 08:00 finished payload89_s40_job.txt
+Thu 08:00 chain complete

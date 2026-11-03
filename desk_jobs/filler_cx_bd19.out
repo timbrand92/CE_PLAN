@@ -1,0 +1,7 @@
+== cx_bd19 (usage 33.0% -> 37.0%): 1. **BUG-1178 — DONE:** Built and unit-tested. Draft [PR #1802](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1802). AutoCAD and the on-screen Manager window were not run.
+
+---
+
+2. **Evidence:** Head `d2ca1677b8f64fec2566b4b5e6178ea57e279a77`. Red: expected “ask your CE administrator.”; got “run the CE installer again.” Green: 3/3 passed. Full suites: before 1,040 passed, 1 skipped; after 1,065 passed, 1 skipped; zero failures both. All three builds: zero errors.
+
+3. **Saved and pushed:** [Report](C:/CE_PLAN/areas/CODEX_BUILD_BD19_26OCT.md). Working copy removed.

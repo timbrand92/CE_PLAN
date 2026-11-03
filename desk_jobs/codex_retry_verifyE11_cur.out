@@ -1,0 +1,7 @@
+== verifyE11_cur (usage 65.0% -> 71.0%): AUTOCAD STILL RUNNING
+
+1. **Session:** E11 closed without saving and released its lock. Another run subsequently opened AutoCAD; left untouched.
+2. **Report:** [E11 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_E11_20261027_0032.md>).
+3. **Bug results:** PASS 1 ┬À FAIL 2 ┬À DIFFERENT 2 ┬À BLOCKED 6 ┬À NOT TESTED 2. Classifications: SURE 13, UNSURE 0.
+4. **Failures:** blank New Pipe preview; large empty New Pit preview areas. Capture timeouts blocked six checks.
+5. **Settings:** all four files unchanged. Source drawings unchanged; no drawings saved.

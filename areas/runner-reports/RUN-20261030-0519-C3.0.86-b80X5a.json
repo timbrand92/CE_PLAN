@@ -1,0 +1,1273 @@
+{
+  "header": {
+    "run_id": "RUN-20261030-0519-C3.0.86-b80X5a",
+    "started": "2026-10-30 05:19:57",
+    "finished": "2026-10-30 05:43:19",
+    "build": {
+      "civil": {
+        "product_version": "3.0.86+5888ee757244aac89283aaaf2ba68e51470ecbb3",
+        "file_version": "3.0.86.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.86+5888ee757244aac89283aaaf2ba68e51470ecbb3",
+        "file_version": "1.1.86.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.86+5888ee75 / struc 1.0.125+204dfad2 / mgr 1.1.86+5888ee75",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "50AE5EA071E7A6E8EA43FA57E2C88A98BDBD373A4E9EE8105848F152B447645D",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.86+5888ee757244aac89283aaaf2ba68e51470ecbb3; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.86+5888ee757244aac89283aaaf2ba68e51470ecbb3",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4CD773B85EC5, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 13955AAA60D1, case_runner_lib.ps1 8F9B8DCBB473, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 3 case file(s) plus 0 shared setup(s); pack SHA-256 50AE5EA071E7A6E8EA43FA57E2C88A98BDBD373A4E9EE8105848F152B447645D; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json B3B5A004B929 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Fri 30 Oct 2026 05:19 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 2,
+    "FAIL": 0,
+    "FAIL_known": 1,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 2
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261030-0519-C3.0.86-b80X5a-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-30 05:19:58",
+      "finished": "2026-10-30 05:27:48",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV30520041_B1.dwg",
+      "cases": [
+        "R09s"
+      ],
+      "calibration": {
+        "ok": true,
+        "max_raw_px": 1.912,
+        "max_corrected_px": 0.5,
+        "why": "",
+        "canvas": {
+          "left": 1951,
+          "top": 421,
+          "width": 1858,
+          "height": 569,
+          "how": "exact (tol 0)",
+          "scale_vs_screensize": 1.0,
+          "dpi": 96
+        }
+      },
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : B3B5A004B929 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "Alt+F4 (close posted to the AutoCAD window)",
+        "error": ""
+      }
+    },
+    {
+      "session_id": "RUN-20261030-0519-C3.0.86-b80X5a-s2",
+      "phase": "main",
+      "session_no": 2,
+      "started": "2026-10-30 05:27:48",
+      "finished": "2026-10-30 05:38:33",
+      "result": "FAIL",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV30527542_B1.dwg",
+      "cases": [
+        "R09S_NEW_SWITCH_OFF_BROKEN"
+      ],
+      "calibration": {
+        "ok": true,
+        "max_raw_px": 1.912,
+        "max_corrected_px": 0.5,
+        "why": "",
+        "canvas": {
+          "left": 1951,
+          "top": 421,
+          "width": 1858,
+          "height": 569,
+          "how": "exact (tol 0)",
+          "scale_vs_screensize": 1.0,
+          "dpi": 96
+        }
+      },
+      "clean": false,
+      "acad_left": 0,
+      "lock_holder_after": "Claude-driverv3",
+      "lock_after": "stale",
+      "guard_clear": false,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : B3B5A004B929 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": false,
+        "ended_by": null,
+        "error": "v2 'quit' did not finish in 150 s and was stopped. AutoCAD did not close gracefully and was NOT killed. If it is stuck, run quit again with -Kill."
+      }
+    },
+    {
+      "session_id": "RUN-20261030-0519-C3.0.86-b80X5a-s3",
+      "phase": "main",
+      "session_no": 3,
+      "started": "2026-10-30 05:40:13",
+      "finished": "2026-10-30 05:43:19",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV30540403_B1.dwg",
+      "cases": [
+        "N36"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": "Claude-driverv3",
+      "lock_after": "stale",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : B3B5A004B929 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": false,
+        "ended_by": null,
+        "error": "AutoCAD did not close gracefully and was NOT killed. If it is stuck, run quit again with -Kill."
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "R09s",
+      "proves_bugs": "BUG-859",
+      "title": "Double-click on the DP1 downpipe circle: AutoCAD's attribute editor is stopped first and CE's Edit source window opens (BUG-859, new switch ON)",
+      "kind": "deterministic",
+      "order": 10,
+      "slot": "launch",
+      "fixture": "DRV1_B1",
+      "plan_item": "BUG-859 (B-001, PR 1834, switch doubleClick.sourceStopsAttributeEditorFirst); spec C04",
+      "bug": "BUG-859",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "A double-click on the outer circle of a freshly placed downpipe (tag DP1) opens CE's 'Edit source' window with DP1 in its tag box, and AutoCAD's Enhanced Attribute Editor does not open at all; CE's structured log says 'EATTEDIT stopped before AutoCAD's attribute editor opened ... source DP1' and 'CDEDIT scheduled at Idle'. The window has its Cancel and OK buttons; the title-bar Close closes it.",
+      "why_not_unit": "Unit tests pin CE's refusal of the lock request, but only real AutoCAD shows whether AutoCAD honours that refusal for an attribute editor started by a double-click, and which window the drafter sees.",
+      "not_automated": [
+        "The red centre, the angled DP text and the green label (BUG-860) are not clicked here; only the outer circle named in the bug.",
+        "OK saving a changed tag is not driven (the press list has no OK for this window). Whether AutoCAD records an Undo step or ends the REDO window for the refused EATTEDIT is not read.",
+        "DERIVED, not yet seen on a run: the AutomationIds SourceEdit.Tag, SourceEdit.Cancel and SourceEdit.OK (from the XAML), the tag box value reading exactly DP1, and that the title-bar Close is pressable. If only these fail while checks 1 to 5 pass, the fix works and the case text needs one correction."
+      ],
+      "file_sha256": "22A1F00846EA4BFBA30452D44CC7D7273A7AA86CD563A33537A9D19B8910D339",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-30 05:25:30",
+      "seconds": 90.2,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 setvar PICKFIRST 1",
+          "ok": true,
+          "seconds": 0.7,
+          "evidence": "v3 setvar PICKFIRST 1: PICKFIRST (profile): already 1, nothing written"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 setvar DBLCLKEDIT 1",
+          "ok": true,
+          "seconds": 0.6,
+          "evidence": "v3 setvar DBLCLKEDIT 1: DBLCLKEDIT (profile): already 1, nothing written"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $n0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM _C 3000,3000 3000\"",
+          "ok": true,
+          "seconds": 3.3,
+          "evidence": "typed '_.ZOOM _C 3000,3000 3000': Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _C | Specify center point: 3000,3000 | Enter magnificat..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"DP{NL}3000,3000\" -Force -ExpectPrompt \"Pick the next DP\" -TimeoutSec 60 -> $placed",
+          "ok": true,
+          "seconds": 10.2,
+          "evidence": "typed 'DP 3000,3000': Command: | Command: DP | Specify downpipe insertion point: 3000,3000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. N..."
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt",
+          "ok": true,
+          "seconds": 3.5,
+          "evidence": "esc-prompt: Specify downpipe insertion point: 3000,3000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. Nothing nearby. The source..."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "history-tail",
+          "text": "history-tail -Index 12 -> $tail",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "history: Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _C | Specify center point: 3000,3000 | Enter magnification or height <23920.948>: 3000 | Command: | Comm..."
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $n0 -> $new",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "2 object(s) after index 1034 (model space now 1036); by type: AcDbBlockReference 1; AcDbText 1; first: 11C55E AcDbBlockReference DOWNPIPES DOWNPIPE DYNAMIC WITH MASK ; 11C566 AcDbText GUIDELINES DP"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new object=AcDbBlockReference \"name~^DOWNPIPE\" -> $dp_blocks",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C55E DOWNPIPE DYNAMIC WITH MASK DOWNPIPES"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $dp_blocks handle -> $dp",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C55E"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "ent-part",
+          "text": "ent-part $dp outer-circle -> $part",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "outer circle of 11C55E is part block:1 (world radius 75)"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM _C 3000,3000 1200\"",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "typed '_.ZOOM _C 3000,3000 1200': Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _C | Specify center point: 3000,3000 | Enter magnificat..."
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 view-read",
+          "ok": true,
+          "seconds": 0.5,
+          "evidence": "v3 view-read : view stored: centre 3,000.000,3,000.000 height 1,200.000 screen 1858x569"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 deselect",
+          "ok": true,
+          "seconds": 18.2,
+          "evidence": "v3 deselect : one Esc key sent to AutoCAD"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $w0",
+          "ok": true,
+          "seconds": 0.4,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30520041_B1.dwg]"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 pt-dblclick \"ent {$dp}\" -Part \"{$part}\" -> $dc",
+          "ok": true,
+          "seconds": 6.0,
+          "evidence": "v3 pt-dblclick ent 11C55E: pt-dblclick: world 3,075.000,3,000.000 -> pixel 2915,706 (exact 2,915.02,706.00); cursor read-back 2915,706; view live (aim check: AutoCAD reports 1 object(s) picked: 11C55E (expected 11C55E); after Esc 0 selected)"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Edit source\" -Optional -TimeoutSec 10 -> $es",
+          "ok": true,
+          "seconds": 5.7,
+          "evidence": "ui-dump 'Creative Engineering | Edit source': 15 controls, tabs: "
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "windows-new",
+          "text": "windows-new $w0 -> $opened",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "new window(s): Creative Engineering | Edit source"
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Edit source\" \"Close\" -Optional -> $esc",
+          "ok": true,
+          "seconds": 15.8,
+          "evidence": "pressed 'Close' in /Edit source/: window closed = True"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "close-windows",
+          "text": "close-windows",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "closed open CE windows: "
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 10",
+          "ok": true,
+          "seconds": 10.0,
+          "evidence": "slept 10 s"
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $w_after",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30520041_B1.dwg]"
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "close-windows",
+          "text": "close-windows",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "closed open CE windows: "
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"Tag: DP1\"",
+          "ok": true,
+          "expected": "command line has 'Tag: DP1'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Downpipe placed. Tag: DP1. Nothing nearby. The source connects when a pipe is drawn to it.'"
+        },
+        {
+          "n": 2,
+          "text": "log civilx has \"EATTEDIT stopped before AutoCAD\"",
+          "ok": true,
+          "expected": "civilx log has 'EATTEDIT stopped before AutoCAD'",
+          "actual": "1",
+          "evidence": "log: '2026-10-30 05:26:22.369 [INF] TryRedirectToCdEdit: EATTEDIT stopped before AutoCAD's attribute editor opened (BUG-859, doubleClick.sourceStopsAttributeEditorFirst); source DP1'"
+        },
+        {
+          "n": 3,
+          "text": "log civilx has \"TryRedirectToCdEdit: target registered; CDEDIT scheduled at Idle\"",
+          "ok": true,
+          "expected": "civilx log has 'TryRedirectToCdEdit: target registered; CDEDIT scheduled at Idle'",
+          "actual": "1",
+          "evidence": "log: '2026-10-30 05:26:22.369 [INF] TryRedirectToCdEdit: target registered; CDEDIT scheduled at Idle'"
+        },
+        {
+          "n": 4,
+          "text": "contains $opened \"Edit source\"",
+          "ok": true,
+          "expected": "contains 'Edit source'",
+          "actual": "Creative Engineering | Edit source",
+          "evidence": "found 'Edit source' in: Creative Engineering | Edit source"
+        },
+        {
+          "n": 5,
+          "text": "not-contains $opened \"Enhanced Attribute Editor\"",
+          "ok": true,
+          "expected": "does not contain 'Enhanced Attribute Editor'",
+          "actual": "Creative Engineering | Edit source",
+          "evidence": "'Enhanced Attribute Editor' is absent from: Creative Engineering | Edit source"
+        },
+        {
+          "n": 6,
+          "text": "not-contains $w_after \"Enhanced Attribute Editor\"",
+          "ok": true,
+          "expected": "does not contain 'Enhanced Attribute Editor'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30520041_B1.dwg]",
+          "evidence": "'Enhanced Attribute Editor' is absent from: Autodesk AutoCAD 2027 - [CLDV30520041_B1.dwg]"
+        },
+        {
+          "n": 7,
+          "text": "control $es \"SourceEdit.Tag\" value \"DP1\"",
+          "ok": true,
+          "expected": "DP1",
+          "actual": "DP1",
+          "evidence": "control 'SourceEdit.Tag' value 'DP1' (expected 'DP1')"
+        },
+        {
+          "n": 8,
+          "text": "control $es \"SourceEdit.Cancel\" exists",
+          "ok": true,
+          "expected": "control 'SourceEdit.Cancel' exists",
+          "actual": "1",
+          "evidence": "'SourceEdit.Cancel' found in 'Creative Engineering | Edit source' (1 control(s))"
+        },
+        {
+          "n": 9,
+          "text": "control $es \"SourceEdit.OK\" exists",
+          "ok": true,
+          "expected": "control 'SourceEdit.OK' exists",
+          "actual": "1",
+          "evidence": "'SourceEdit.OK' found in 'Creative Engineering | Edit source' (1 control(s))"
+        },
+        {
+          "n": 10,
+          "text": "window-closed $esc",
+          "ok": true,
+          "expected": "the window closed",
+          "actual": "closed=True",
+          "evidence": "ui-press reported window_closed = True"
+        },
+        {
+          "n": 11,
+          "text": "record $opened \"the window(s) the double-click opened\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Creative Engineering | Edit source",
+          "evidence": "RECORDED, not judged: the window(s) the double-click opened = Creative Engineering | Edit source"
+        },
+        {
+          "n": 12,
+          "text": "record $w_after \"windows open 10 s later (AutoCAD's editor must never appear, even late)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30520041_B1.dwg]",
+          "evidence": "RECORDED, not judged: windows open 10 s later (AutoCAD's editor must never appear, even late) = Autodesk AutoCAD 2027 - [CLDV30520041_B1.dwg]"
+        },
+        {
+          "n": 13,
+          "text": "record $es \"the Edit source dump (control names and the tag value)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"title\":\"Creative Engineering | Edit source\",\"handle\":15733044,\"class\":\"Window\",\"source\":\"win32\",\"bounds\":[2670,420,420,233],\"control_count\":15,\"truncated\":false,\"tabs\":[],\"controls\":[{\"type\":\"TitleBar\",\"name\":\"Creative...",
+          "evidence": "RECORDED, not judged: the Edit source dump (control names and the tag value) = {\"title\":\"Creative Engineering | Edit source\",\"handle\":15733044,\"class\":\"Window\",\"source\":\"win32\",\"bounds\":[2670,420,420,233],\"control_count\":15,\"truncated\":false,\"tabs\":[],\"controls\":[{\"type\":\"TitleBar\",\"name\":\"Creative..."
+        },
+        {
+          "n": 14,
+          "text": "record $placed \"what the DP command printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: DP | Specify downpipe insertion point: 3000,3000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. N...",
+          "evidence": "RECORDED, not judged: what the DP command printed = Command: | Command: DP | Specify downpipe insertion point: 3000,3000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. N..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 113 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: DP completed 10349 ms ; Command outcome: CDEDIT completed 14986 ms",
+        "deselect: SendCommand of the two Esc said 'Invalid input' on this AutoCAD, so one real Esc key was sent instead (esc-key ok=True)"
+      ],
+      "error": null,
+      "finished": "2026-10-30 05:27:00",
+      "session_id": "RUN-20261030-0519-C3.0.86-b80X5a-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "no independent review: no R09s_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 2,
+        "red_before": true
+      }
+    },
+    {
+      "id": "R09S_NEW_SWITCH_OFF_BROKEN",
+      "proves_bugs": "",
+      "title": "BROKEN VARIANT of R09s: the new switch sourceStopsAttributeEditorFirst OFF, so AutoCAD's attribute editor opens first as on 3.0.85 (must FAIL)",
+      "kind": "deterministic",
+      "order": 9010,
+      "slot": "launch",
+      "fixture": "DRV1_B1",
+      "plan_item": "red-before-green proof for R09s (BUG-859, the new switch)",
+      "bug": "",
+      "known_fail": "BROKEN-VARIANT",
+      "reviewed_against": "",
+      "variant_of": "R09s",
+      "expected": "A double-click on the outer circle of a freshly placed downpipe (tag DP1) opens CE's 'Edit source' window with DP1 in its tag box, and AutoCAD's Enhanced Attribute Editor does not open at all; CE's structured log says 'EATTEDIT stopped before AutoCAD's attribute editor opened ... source DP1' and 'CDEDIT scheduled at Idle'. The window has its Cancel and OK buttons; the title-bar Close closes it.",
+      "why_not_unit": "Unit tests pin CE's refusal of the lock request, but only real AutoCAD shows whether AutoCAD honours that refusal for an attribute editor started by a double-click, and which window the drafter sees.",
+      "not_automated": [
+        "The 'EATTEDIT left to start: doubleClick.sourceStopsAttributeEditorFirst reads OFF' log line is recorded through the CE log record, not asserted."
+      ],
+      "file_sha256": "0DBDCD01C45FF2AF9A6E2549DFD3B327EFEC5E19939E078B6F4E16E43FF133C1",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "no new civilx log line contains 'EATTEDIT stopped before AutoCAD' (125 new lines read) ",
+      "started": "2026-10-30 05:33:51",
+      "seconds": 119.8,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 setvar PICKFIRST 1",
+          "ok": true,
+          "seconds": 0.6,
+          "evidence": "v3 setvar PICKFIRST 1: PICKFIRST (profile): already 1, nothing written"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 setvar DBLCLKEDIT 1",
+          "ok": true,
+          "seconds": 0.6,
+          "evidence": "v3 setvar DBLCLKEDIT 1: DBLCLKEDIT (profile): already 1, nothing written"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $n0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM _C 3000,3000 3000\"",
+          "ok": true,
+          "seconds": 2.7,
+          "evidence": "typed '_.ZOOM _C 3000,3000 3000': Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _C | Specify center point: 3000,3000 | Enter magnificat..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"DP{NL}3000,3000\" -Force -ExpectPrompt \"Pick the next DP\" -TimeoutSec 60 -> $placed",
+          "ok": true,
+          "seconds": 7.4,
+          "evidence": "typed 'DP 3000,3000': Command: | Command: DP | Specify downpipe insertion point: 3000,3000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. N..."
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt",
+          "ok": true,
+          "seconds": 2.8,
+          "evidence": "esc-prompt: Specify downpipe insertion point: 3000,3000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. Nothing nearby. The source..."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "history-tail",
+          "text": "history-tail -Index 12 -> $tail",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "history: Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _C | Specify center point: 3000,3000 | Enter magnification or height <23920.948>: 3000 | Command: | Comm..."
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $n0 -> $new",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "2 object(s) after index 1034 (model space now 1036); by type: AcDbBlockReference 1; AcDbText 1; first: 11C55E AcDbBlockReference DOWNPIPES DOWNPIPE DYNAMIC WITH MASK ; 11C566 AcDbText GUIDELINES DP"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new object=AcDbBlockReference \"name~^DOWNPIPE\" -> $dp_blocks",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C55E DOWNPIPE DYNAMIC WITH MASK DOWNPIPES"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $dp_blocks handle -> $dp",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C55E"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "ent-part",
+          "text": "ent-part $dp outer-circle -> $part",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "outer circle of 11C55E is part block:1 (world radius 75)"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM _C 3000,3000 1200\"",
+          "ok": true,
+          "seconds": 2.7,
+          "evidence": "typed '_.ZOOM _C 3000,3000 1200': Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _C | Specify center point: 3000,3000 | Enter magnificat..."
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 view-read",
+          "ok": true,
+          "seconds": 0.6,
+          "evidence": "v3 view-read : view stored: centre 3,000.000,3,000.000 height 1,200.000 screen 1858x569"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 deselect",
+          "ok": true,
+          "seconds": 17.7,
+          "evidence": "v3 deselect : one Esc key sent to AutoCAD"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $w0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30527542_B1.dwg]"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 pt-dblclick \"ent {$dp}\" -Part \"{$part}\" -> $dc",
+          "ok": true,
+          "seconds": 6.1,
+          "evidence": "v3 pt-dblclick ent 11C55E: pt-dblclick: world 3,075.000,3,000.000 -> pixel 2915,706 (exact 2,915.02,706.00); cursor read-back 2915,706; view live (aim check: AutoCAD reports 1 object(s) picked: 11C55E (expected 11C55E); after Esc 0 selected)"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Edit source\" -Optional -TimeoutSec 10 -> $es",
+          "ok": true,
+          "seconds": 11.8,
+          "evidence": "no window matching /Edit source/ is open (optional): no visible window of AutoCAD matches /Edit source/ and is on the v3 read list. Windows seen: Autodesk AutoCAD 2027 - [CLDV30527542_B1.dwg] ; Enhanced Attribute Editor ; Workspace ; AdImpApplicationFrame ; Ribbon ; CE CVL..."
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "windows-new",
+          "text": "windows-new $w0 -> $opened",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "new window(s): Enhanced Attribute Editor"
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Edit source\" \"Close\" -Optional -> $esc",
+          "ok": true,
+          "seconds": 5.9,
+          "evidence": "ui-press 'Close' (optional) not done: no visible allowed window matches /Edit source/"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "close-windows",
+          "text": "close-windows",
+          "ok": true,
+          "seconds": 39.7,
+          "evidence": "closed open CE windows: round 1: 'Enhanced Attribute Editor' <- Cancel : ok=True ; round 2: 'Creative Engineering | Edit source' <- Cancel without saving : ok=False no button 'Cancel without saving' that is on the v3 press list was found in a window matching /Creative\\ Engineering\\ \\..."
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 10",
+          "ok": true,
+          "seconds": 10.0,
+          "evidence": "slept 10 s"
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $w_after",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30527542_B1.dwg]"
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "close-windows",
+          "text": "close-windows",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "closed open CE windows: "
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "log-read",
+          "text": "log-read civilx -> $cx",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "125 new line(s) in the civilx CE log since the case began "
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"Tag: DP1\"",
+          "ok": true,
+          "expected": "command line has 'Tag: DP1'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Downpipe placed. Tag: DP1. Nothing nearby. The source connects when a pipe is drawn to it.'"
+        },
+        {
+          "n": 2,
+          "text": "log civilx has \"EATTEDIT stopped before AutoCAD\"",
+          "ok": false,
+          "expected": "civilx log has 'EATTEDIT stopped before AutoCAD'",
+          "actual": "0",
+          "evidence": "no new civilx log line contains 'EATTEDIT stopped before AutoCAD' (125 new lines read) "
+        },
+        {
+          "n": 3,
+          "text": "log civilx has \"TryRedirectToCdEdit: target registered; CDEDIT scheduled at Idle\"",
+          "ok": true,
+          "expected": "civilx log has 'TryRedirectToCdEdit: target registered; CDEDIT scheduled at Idle'",
+          "actual": "1",
+          "evidence": "log: '2026-10-30 05:34:37.686 [INF] TryRedirectToCdEdit: target registered; CDEDIT scheduled at Idle'"
+        },
+        {
+          "n": 4,
+          "text": "contains $opened \"Edit source\"",
+          "ok": false,
+          "expected": "contains 'Edit source'",
+          "actual": "Enhanced Attribute Editor",
+          "evidence": "'Edit source' is NOT in: Enhanced Attribute Editor"
+        },
+        {
+          "n": 5,
+          "text": "not-contains $opened \"Enhanced Attribute Editor\"",
+          "ok": false,
+          "expected": "does not contain 'Enhanced Attribute Editor'",
+          "actual": "Enhanced Attribute Editor",
+          "evidence": "'Enhanced Attribute Editor' WAS found in: Enhanced Attribute Editor"
+        },
+        {
+          "n": 6,
+          "text": "not-contains $w_after \"Enhanced Attribute Editor\"",
+          "ok": true,
+          "expected": "does not contain 'Enhanced Attribute Editor'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30527542_B1.dwg]",
+          "evidence": "'Enhanced Attribute Editor' is absent from: Autodesk AutoCAD 2027 - [CLDV30527542_B1.dwg]"
+        },
+        {
+          "n": 7,
+          "text": "control $es \"SourceEdit.Tag\" value \"DP1\"",
+          "ok": false,
+          "expected": "control 'SourceEdit.Tag' value",
+          "actual": "window not open",
+          "evidence": "the window was not open, so control 'SourceEdit.Tag' could not be read"
+        },
+        {
+          "n": 8,
+          "text": "control $es \"SourceEdit.Cancel\" exists",
+          "ok": false,
+          "expected": "control 'SourceEdit.Cancel' exists",
+          "actual": "window not open",
+          "evidence": "the window was not open, so control 'SourceEdit.Cancel' could not be read"
+        },
+        {
+          "n": 9,
+          "text": "control $es \"SourceEdit.OK\" exists",
+          "ok": false,
+          "expected": "control 'SourceEdit.OK' exists",
+          "actual": "window not open",
+          "evidence": "the window was not open, so control 'SourceEdit.OK' could not be read"
+        },
+        {
+          "n": 10,
+          "text": "window-closed $esc",
+          "ok": false,
+          "expected": "the window closed",
+          "actual": "closed=",
+          "evidence": "ui-press reported window_closed = "
+        },
+        {
+          "n": 11,
+          "text": "record $opened \"the window(s) the double-click opened\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Enhanced Attribute Editor",
+          "evidence": "RECORDED, not judged: the window(s) the double-click opened = Enhanced Attribute Editor"
+        },
+        {
+          "n": 12,
+          "text": "record $w_after \"windows open 10 s later\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30527542_B1.dwg]",
+          "evidence": "RECORDED, not judged: windows open 10 s later = Autodesk AutoCAD 2027 - [CLDV30527542_B1.dwg]"
+        },
+        {
+          "n": 13,
+          "text": "record $cx \"FULL the new structured CE log lines (look for EATTEDIT left to start)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "2026-10-30 05:33:57.581 [INF] 2026-10-30 05:33:57.581 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-10-30 05:33:57.581 [INF] 2026-10-30 05:33:57.581 [INFO] Project data loaded from DWG: 11 pits, 49 pipes, manual rows=0 | 2026-10-30 05:33:57.619 [INF] 2026-10-30 05:33:57.619 [INFO] [PERF] ProjectDataService.SaveToDrawing: 36.0 ms jsonLen=243925 | 2026-10-30 05:33:57.619 [INF] 2026-10-30 05:33:57.619 [INFO] Project data saved to DWG successfully | 2026-10-30 05:33:57.619 [INF] 2026-10-30 05:33:57.619 [INFO] Project data switched to: C:\\Users\\TimothyBrand\\AppData\\Roaming\\TIM_CE_CADTOOLS\\projects\\CD_ProjectData_CLDV30527542_B1_1fbbf233.json | 2026-10-30 05:33:57.658 [INF] 2026-10-30 05:33:57.658 [INFO] [PERF] ProjectDataService.SaveToDrawing: 9.1 ms jsonLen=246963 | 2026-10-30 05:33:57.661 [INF] 2026-10-30 05:33:57.658 [INFO] Project data saved to DWG successfully | 2026-10-30 05:33:57.661 [INF] 2026-10-30 05:33:57.658 [INFO] [Spine] 49 row(s) took the identity already on their drawing object: 1091A0, 1091E0, 109359, 109390, 1093C7, 109430, 1094BE, 109500, 109835, 109874, 1098B6, 1098E8, 10993C, 10996E, 109A30, 109B80, 109BBC, 109C15, 109C55, 109CCF, 109E23, 109E6D, 109ED4, 109F81, 10A1D4, 10A243, 10A27D, 10A348, 10A3B0, 10A3E0, 10A430, 10A86B, 10A899, 10A8C7, 10A901, 10A942, 10A98D, 10A9C9, 10AA03, 10AAB6, 10B03B, 10B083, 110136, 110179, 11035C, 1135E9, 11362F, 113659, 1136A4 | 2026-10-30 05:33:57.932 [INF] 2026-10-30 05:33:57.932 [INFO] CDRG index filled pipe 1091A0 From end key 'CE-CIV-SRC-5BA71A30-C5AB-49CA-94B2-09738FB7D277' from physical start. | 2026-10-30 05:33:57.938 [INF] 2026-10-30 05:33:57.938 [INFO] CDRG index filled pipe 1091E0 From end key 'CE-CIV-SRC-F55F0E0A-EA92-4D33-B761-DE091382DC74' from physical start. | 2026-10-30 05:33:57.993 [INF] 2026-10-30 05:33:57.993 [INFO] CDRG index filled pipe 1094BE To end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical end. | 2026-10-30 05:33:57.997 [INF] 2026-10-30 05:33:57.997 [INFO] CDRG index filled pipe 109500 From end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical start. | 2026-10-30 05:33:58.007 [INF] 2026-10-30 05:33:58.007 [INFO] CDRG index filled pipe 109874 From end key 'CE-CIV-SRC-3126A41E-740A-4F2F-9C85-E87C720320B8' from physical start. | 2026-10-30 05:33:58.024 [INF] 2026-10-30 05:33:58.024 [INFO] CDRG index filled pipe 109A30 From end key 'CE-CIV-SRC-7969B9A3-974F-4050-91FD-F43CDD4D3D78' from physical start. | 2026-10-30 05:33:58.028 [INF] 2026-10-30 05:33:58.028 [INFO] CDRG index filled pipe 109B80 To end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical end. | 2026-10-30 05:33:58.033 [INF] 2026-10-30 05:33:58.033 [INFO] CDRG index filled pipe 109BBC From end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical start. | 2026-10-30 05:33:58.036 [INF] 2026-10-30 05:33:58.036 [INFO] CDRG index filled pipe 109C15 To end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical end. | 2026-10-30 05:33:58.044 [INF] 2026-10-30 05:33:58.044 [INFO] CDRG index filled pipe 109C55 From end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical start. | 2026-10-30 05:33:58.054 [INF] 2026-10-30 05:33:58.054 [INFO] CDRG index filled pipe 109E6D From end key 'CE-CIV-SRC-6CFC2891-A39C-48D2-9B37-AF2450FECD10' from physical start. | 2026-10-30 05:33:58.054 [INF] 2026-10-30 05:33:58.054 [INFO] CDRG index filled pipe 109E6D To end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical end. | 2026-10-30 05:33:58.059 [INF] 2026-10-30 05:33:58.059 [INFO] CDRG index filled pipe 109ED4 From end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical start. | 2026-10-30 05:33:58.066 [INF] 2026-10-30 05:33:58.066 [INFO] CDRG index filled pipe 10A1D4 To end key 'CE-CIV-SRC-FED21B8E-5720-4680-92A6-8953BCF84699' from physical end. | 2026-10-30 05:33:58.070 [INF] 2026-10-30 05:33:58.070 [INFO] CDRG index filled pipe 10A243 From end...",
+          "evidence": "RECORDED, not judged: FULL the new structured CE log lines (look for EATTEDIT left to start) = 2026-10-30 05:33:57.581 [INF] 2026-10-30 05:33:57.581 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-10-30 05:33:57.581 [INF] 2026-10-30 05:33:57.581 [INFO] Project data loaded from DWG: 11 pits, 49 pipes, manual rows=0 | 2026-10-30 05:33:57.619 [INF] 2026-10-30 05:33:57.619 [INFO] [PERF] ProjectDataService.SaveToDrawing: 36.0 ms jsonLen=243925 | 2026-10-30 05:33:57.619 [INF] 2026-10-30 05:33:57.619 [INFO] Project data saved to DWG successfully | 2026-10-30 05:33:57.619 [INF] 2026-10-30 05:33:57.619 [INFO] Project data switched to: C:\\Users\\TimothyBrand\\AppData\\Roaming\\TIM_CE_CADTOOLS\\projects\\CD_ProjectData_CLDV30527542_B1_1fbbf233.json | 2026-10-30 05:33:57.658 [INF] 2026-10-30 05:33:57.658 [INFO] [PERF] ProjectDataService.SaveToDrawing: 9.1 ms jsonLen=246963 | 2026-10-30 05:33:57.661 [INF] 2026-10-30 05:33:57.658 [INFO] Project data saved to DWG successfully | 2026-10-30 05:33:57.661 [INF] 2026-10-30 05:33:57.658 [INFO] [Spine] 49 row(s) took the identity already on their drawing object: 1091A0, 1091E0, 109359, 109390, 1093C7, 109430, 1094BE, 109500, 109835, 109874, 1098B6, 1098E8, 10993C, 10996E, 109A30, 109B80, 109BBC, 109C15, 109C55, 109CCF, 109E23, 109E6D, 109ED4, 109F81, 10A1D4, 10A243, 10A27D, 10A348, 10A3B0, 10A3E0, 10A430, 10A86B, 10A899, 10A8C7, 10A901, 10A942, 10A98D, 10A9C9, 10AA03, 10AAB6, 10B03B, 10B083, 110136, 110179, 11035C, 1135E9, 11362F, 113659, 1136A4 | 2026-10-30 05:33:57.932 [INF] 2026-10-30 05:33:57.932 [INFO] CDRG index filled pipe 1091A0 From end key 'CE-CIV-SRC-5BA71A30-C5AB-49CA-94B2-09738FB7D277' from physical start. | 2026-10-30 05:33:57.938 [INF] 2026-10-30 05:33:57.938 [INFO] CDRG index filled pipe 1091E0 From end key 'CE-CIV-SRC-F55F0E0A-EA92-4D33-B761-DE091382DC74' from physical start. | 2026-10-30 05:33:57.993 [INF] 2026-10-30 05:33:57.993 [INFO] CDRG index filled pipe 1094BE To end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical end. | 2026-10-30 05:33:57.997 [INF] 2026-10-30 05:33:57.997 [INFO] CDRG index filled pipe 109500 From end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical start. | 2026-10-30 05:33:58.007 [INF] 2026-10-30 05:33:58.007 [INFO] CDRG index filled pipe 109874 From end key 'CE-CIV-SRC-3126A41E-740A-4F2F-9C85-E87C720320B8' from physical start. | 2026-10-30 05:33:58.024 [INF] 2026-10-30 05:33:58.024 [INFO] CDRG index filled pipe 109A30 From end key 'CE-CIV-SRC-7969B9A3-974F-4050-91FD-F43CDD4D3D78' from physical start. | 2026-10-30 05:33:58.028 [INF] 2026-10-30 05:33:58.028 [INFO] CDRG index filled pipe 109B80 To end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical end. | 2026-10-30 05:33:58.033 [INF] 2026-10-30 05:33:58.033 [INFO] CDRG index filled pipe 109BBC From end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical start. | 2026-10-30 05:33:58.036 [INF] 2026-10-30 05:33:58.036 [INFO] CDRG index filled pipe 109C15 To end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical end. | 2026-10-30 05:33:58.044 [INF] 2026-10-30 05:33:58.044 [INFO] CDRG index filled pipe 109C55 From end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical start. | 2026-10-30 05:33:58.054 [INF] 2026-10-30 05:33:58.054 [INFO] CDRG index filled pipe 109E6D From end key 'CE-CIV-SRC-6CFC2891-A39C-48D2-9B37-AF2450FECD10' from physical start. | 2026-10-30 05:33:58.054 [INF] 2026-10-30 05:33:58.054 [INFO] CDRG index filled pipe 109E6D To end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical end. | 2026-10-30 05:33:58.059 [INF] 2026-10-30 05:33:58.059 [INFO] CDRG index filled pipe 109ED4 From end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical start. | 2026-10-30 05:33:58.066 [INF] 2026-10-30 05:33:58.066 [INFO] CDRG index filled pipe 10A1D4 To end key 'CE-CIV-SRC-FED21B8E-5720-4680-92A6-8953BCF84699' from physical end. | 2026-10-30 05:33:58.070 [INF] 2026-10-30 05:33:58.070 [INFO] CDRG index filled pipe 10A243 From end..."
+        },
+        {
+          "n": 14,
+          "text": "record $placed \"what the DP command printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: DP | Specify downpipe insertion point: 3000,3000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. N...",
+          "evidence": "RECORDED, not judged: what the DP command printed = Command: | Command: DP | Specify downpipe insertion point: 3000,3000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. N..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 116 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: DP completed 8292 ms ; Command outcome: CDEDIT completed 22732 ms",
+        "deselect: SendCommand of the two Esc said 'Invalid input' on this AutoCAD, so one real Esc key was sent instead (esc-key ok=True)"
+      ],
+      "error": null,
+      "finished": "2026-10-30 05:35:50",
+      "session_id": "RUN-20261030-0519-C3.0.86-b80X5a-s2",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [
+          "known failure (BROKEN-VARIANT): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "N36",
+      "proves_bugs": "BUG-1228",
+      "title": "A downpipe places in a few seconds: every source landing read is under 1.5 s and DP completes under 10 s (BUG-1228)",
+      "kind": "deterministic",
+      "order": 136,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "BUG-1228 (B-004, train C-76 PR 1837); DP, OF and CDFW speed",
+      "bug": "BUG-1228",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "With the timing log ON, DP at 150000,-80000 prints 'Downpipe placed. Tag: DP<n>.' and offers the next DP; Esc stops it; one new DOWNPIPE DYNAMIC WITH MASK insert exists; no 'could not be refreshed'. The CE log gains at least one '[BUG-1228] Source landing index read in N ms' line and one '[BUG-1228] Source change read in N ms' line, every one with N under 1,500 and 'reads each object once: on', none 'off'; and 'Command outcome: DP completed N ms' with N under 10,000. On Civil 3.0.85 the same DP took 27,600 to 32,400 ms (four reads of about 5 s each).",
+      "why_not_unit": "The time is spent reading the real drawing's 1,083 objects and 49 pipes; the unit tests prove the same answers on made-up objects, never the time on a real drawing.",
+      "not_automated": [
+        "OF, CDFW and a DP dropped on a pipe end use the same reads but are not timed here (the report's later twins N31b and N31c, to be renumbered).",
+        "The 10,000 ms budget includes the runner's own wait at the next DP prompt; a slow PC or a busy disk can add seconds. A FAIL on that check alone with every read line under 1,500 ms is worth one re-run in a new start before it is called a fault.",
+        "If the timing switch is not picked up from the SETTING line, no [BUG-1228] line is written and the 'has' checks fail: that is a setup fault, not a product fault (the record of the CE log tells which)."
+      ],
+      "file_sha256": "98209E977450D411BDE1101DCE9C4089B67D68DAD973FCF0F4EF349748641935",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-30 05:41:18",
+      "seconds": 20.1,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"DP{NL}150000,-80000\" -Force -ExpectPrompt \"Pick the next DP\" -TimeoutSec 90 -> $dp",
+          "ok": true,
+          "seconds": 7.5,
+          "evidence": "typed 'DP 150000,-80000': Command: | Command: DP | Specify downpipe insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $dp_esc",
+          "ok": true,
+          "seconds": 2.7,
+          "evidence": "esc-prompt: Specify downpipe insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. Nothing nearby. The so..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $new",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "2 object(s) after index 1034 (model space now 1036); by type: AcDbBlockReference 1; AcDbText 1; first: 11C55B AcDbBlockReference DOWNPIPES DOWNPIPE DYNAMIC WITH MASK ; 11C563 AcDbText GUIDELINES DP"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"name=DOWNPIPE DYNAMIC WITH MASK\" -> $dps",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C55B DOWNPIPE DYNAMIC WITH MASK DOWNPIPES"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 5",
+          "ok": true,
+          "seconds": 5.1,
+          "evidence": "slept 5 s"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "log-read",
+          "text": "log-read civil -> $civ",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "98 new line(s) in the civil CE log since the case began "
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "history-tail",
+          "text": "history-tail -> $tail",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "history: \"22547_XCivil\" is unloaded. | Regenerating model. | *Cancel* | [CE] Background not found: XW2626-Title Block. Type CDXREFREPAIR to look for it and fix the path. | [CE] Background not found: XW2614-Arch Survey. Type CDXREFREPAIR to look for ..."
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"Downpipe placed. Tag: DP\"",
+          "ok": true,
+          "expected": "command line has 'Downpipe placed. Tag: DP'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Downpipe placed. Tag: DP1. Nothing nearby. The source connects when a pipe is drawn to it.'"
+        },
+        {
+          "n": 2,
+          "text": "history absent \"could not be refreshed\"",
+          "ok": true,
+          "expected": "command line lacks 'could not be refreshed'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'could not be refreshed' (8 lines read)"
+        },
+        {
+          "n": 3,
+          "text": "history absent \"Nothing will be placed here\"",
+          "ok": true,
+          "expected": "command line lacks 'Nothing will be placed here'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'Nothing will be placed here' (8 lines read)"
+        },
+        {
+          "n": 4,
+          "text": "count $dps = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $dps = 1 (expected = 1)"
+        },
+        {
+          "n": 5,
+          "text": "log civil has \"[BUG-1228] Source landing index read in\"",
+          "ok": true,
+          "expected": "civil log has '[BUG-1228] Source landing index read in'",
+          "actual": "4",
+          "evidence": "log: '2026-10-30 05:41:21.062 [INFO] [BUG-1228] Source landing index read in 1172 ms: 49 pipe(s); objects read in full 2068, passed over 188139, reused 4185; reads each object once: on.'"
+        },
+        {
+          "n": 6,
+          "text": "log civil has \"[BUG-1228] Source change read in\"",
+          "ok": true,
+          "expected": "civil log has '[BUG-1228] Source change read in'",
+          "actual": "1",
+          "evidence": "log: '2026-10-30 05:41:23.320 [INFO] [BUG-1228] Source change read in 396 ms: 49 pipe(s); objects read in full 2072, passed over 188418, reused 4278; reads each object once: on.'"
+        },
+        {
+          "n": 7,
+          "text": "log civil has \"reads each object once: on\"",
+          "ok": true,
+          "expected": "civil log has 'reads each object once: on'",
+          "actual": "5",
+          "evidence": "log: '2026-10-30 05:41:21.062 [INFO] [BUG-1228] Source landing index read in 1172 ms: 49 pipe(s); objects read in full 2068, passed over 188139, reused 4185; reads each object once: on.'"
+        },
+        {
+          "n": 8,
+          "text": "log civil absent \"reads each object once: off\"",
+          "ok": true,
+          "expected": "civil log lacks 'reads each object once: off'",
+          "actual": "0",
+          "evidence": "no new civil log line contains 'reads each object once: off' (98 new lines read)"
+        },
+        {
+          "n": 9,
+          "text": "matches $civ \"(?s)^(?!.*(?:Source landing index|Source change) read in (?:1[5-9][0-9]{2}|[2-9][0-9]{3}|[1-9][0-9]{4,}) ms)\"",
+          "ok": true,
+          "expected": "matches /(?s)^(?!.*(?:Source landing index|Source change) read in (?:1[5-9][0-9]{2}|[2-9][0-9]{3}|[1-9][0-9]{4,}) ms)/",
+          "actual": "2026-10-30 05:41:19.803 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-10-30 05:41:19.803 [INFO] Project data loaded from DWG: 11 pits, 49 pipes, manual row...",
+          "evidence": "matched ''"
+        },
+        {
+          "n": 10,
+          "text": "matches $civ \"Command outcome: DP completed [0-9]{1,4} ms\"",
+          "ok": true,
+          "expected": "matches /Command outcome: DP completed [0-9]{1,4} ms/",
+          "actual": "2026-10-30 05:41:19.803 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-10-30 05:41:19.803 [INFO] Project data loaded from DWG: 11 pits, 49 pipes, manual row...",
+          "evidence": "matched 'Command outcome: DP completed 8182 ms'"
+        },
+        {
+          "n": 11,
+          "text": "record $civ \"FULL the new CE log lines (every [BUG-1228] timing line and the DP outcome line)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "2026-10-30 05:41:19.803 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-10-30 05:41:19.803 [INFO] Project data loaded from DWG: 11 pits, 49 pipes, manual rows=0 | 2026-10-30 05:41:19.833 [INFO] [PERF] ProjectDataService.SaveToDrawing: 28.2 ms jsonLen=243925 | 2026-10-30 05:41:19.833 [INFO] Project data saved to DWG successfully | 2026-10-30 05:41:19.833 [INFO] Project data switched to: C:\\Users\\TimothyBrand\\AppData\\Roaming\\TIM_CE_CADTOOLS\\projects\\CD_ProjectData_CLDV30540403_B1_19b5d107.json | 2026-10-30 05:41:19.877 [INFO] [PERF] ProjectDataService.SaveToDrawing: 3.3 ms jsonLen=246963 | 2026-10-30 05:41:19.877 [INFO] Project data saved to DWG successfully | 2026-10-30 05:41:19.877 [INFO] [Spine] 49 row(s) took the identity already on their drawing object: 1091A0, 1091E0, 109359, 109390, 1093C7, 109430, 1094BE, 109500, 109835, 109874, 1098B6, 1098E8, 10993C, 10996E, 109A30, 109B80, 109BBC, 109C15, 109C55, 109CCF, 109E23, 109E6D, 109ED4, 109F81, 10A1D4, 10A243, 10A27D, 10A348, 10A3B0, 10A3E0, 10A430, 10A86B, 10A899, 10A8C7, 10A901, 10A942, 10A98D, 10A9C9, 10AA03, 10AAB6, 10B03B, 10B083, 110136, 110179, 11035C, 1135E9, 11362F, 113659, 1136A4 | 2026-10-30 05:41:20.163 [INFO] CDRG index filled pipe 1091A0 From end key 'CE-CIV-SRC-5BA71A30-C5AB-49CA-94B2-09738FB7D277' from physical start. | 2026-10-30 05:41:20.170 [INFO] CDRG index filled pipe 1091E0 From end key 'CE-CIV-SRC-F55F0E0A-EA92-4D33-B761-DE091382DC74' from physical start. | 2026-10-30 05:41:20.237 [INFO] CDRG index filled pipe 1094BE To end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical end. | 2026-10-30 05:41:20.241 [INFO] CDRG index filled pipe 109500 From end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical start. | 2026-10-30 05:41:20.254 [INFO] CDRG index filled pipe 109874 From end key 'CE-CIV-SRC-3126A41E-740A-4F2F-9C85-E87C720320B8' from physical start. | 2026-10-30 05:41:20.272 [INFO] CDRG index filled pipe 109A30 From end key 'CE-CIV-SRC-7969B9A3-974F-4050-91FD-F43CDD4D3D78' from physical start. | 2026-10-30 05:41:20.277 [INFO] CDRG index filled pipe 109B80 To end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical end. | 2026-10-30 05:41:20.283 [INFO] CDRG index filled pipe 109BBC From end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical start. | 2026-10-30 05:41:20.287 [INFO] CDRG index filled pipe 109C15 To end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical end. | 2026-10-30 05:41:20.293 [INFO] CDRG index filled pipe 109C55 From end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical start. | 2026-10-30 05:41:20.309 [INFO] CDRG index filled pipe 109E6D From end key 'CE-CIV-SRC-6CFC2891-A39C-48D2-9B37-AF2450FECD10' from physical start. | 2026-10-30 05:41:20.309 [INFO] CDRG index filled pipe 109E6D To end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical end. | 2026-10-30 05:41:20.314 [INFO] CDRG index filled pipe 109ED4 From end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical start. | 2026-10-30 05:41:20.323 [INFO] CDRG index filled pipe 10A1D4 To end key 'CE-CIV-SRC-FED21B8E-5720-4680-92A6-8953BCF84699' from physical end. | 2026-10-30 05:41:20.329 [INFO] CDRG index filled pipe 10A243 From end key 'CE-CIV-SRC-FED21B8E-5720-4680-92A6-8953BCF84699' from physical start. | 2026-10-30 05:41:20.354 [INFO] CDRG index filled pipe 10A86B To end key 'CE-CIV-SRC-E374079F-E3C7-45A9-B3FE-FA254A38BC98' from physical end. | 2026-10-30 05:41:20.357 [INFO] CDRG index filled pipe 10A899 To end key 'CE-CIV-SRC-F776FA64-4382-4BCF-ABFB-01DF7E89B3EA' from physical end. | 2026-10-30 05:41:20.363 [INFO] CDRG index filled pipe 10A8C7 From end key 'CE-CIV-SRC-F776FA64-4382-4BCF-ABFB-01DF7E89B3EA' from physical start. | 2026-10-30 05:41:20.368 [INFO] CDRG index filled pipe 10A901 From end key 'CE-CIV-SRC-E374079F-E3C7-45A9-B3FE-FA254A38BC98' from physical start. | 2026-10-30 05:41:20.379 [INFO] C...",
+          "evidence": "RECORDED, not judged: FULL the new CE log lines (every [BUG-1228] timing line and the DP outcome line) = 2026-10-30 05:41:19.803 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-10-30 05:41:19.803 [INFO] Project data loaded from DWG: 11 pits, 49 pipes, manual rows=0 | 2026-10-30 05:41:19.833 [INFO] [PERF] ProjectDataService.SaveToDrawing: 28.2 ms jsonLen=243925 | 2026-10-30 05:41:19.833 [INFO] Project data saved to DWG successfully | 2026-10-30 05:41:19.833 [INFO] Project data switched to: C:\\Users\\TimothyBrand\\AppData\\Roaming\\TIM_CE_CADTOOLS\\projects\\CD_ProjectData_CLDV30540403_B1_19b5d107.json | 2026-10-30 05:41:19.877 [INFO] [PERF] ProjectDataService.SaveToDrawing: 3.3 ms jsonLen=246963 | 2026-10-30 05:41:19.877 [INFO] Project data saved to DWG successfully | 2026-10-30 05:41:19.877 [INFO] [Spine] 49 row(s) took the identity already on their drawing object: 1091A0, 1091E0, 109359, 109390, 1093C7, 109430, 1094BE, 109500, 109835, 109874, 1098B6, 1098E8, 10993C, 10996E, 109A30, 109B80, 109BBC, 109C15, 109C55, 109CCF, 109E23, 109E6D, 109ED4, 109F81, 10A1D4, 10A243, 10A27D, 10A348, 10A3B0, 10A3E0, 10A430, 10A86B, 10A899, 10A8C7, 10A901, 10A942, 10A98D, 10A9C9, 10AA03, 10AAB6, 10B03B, 10B083, 110136, 110179, 11035C, 1135E9, 11362F, 113659, 1136A4 | 2026-10-30 05:41:20.163 [INFO] CDRG index filled pipe 1091A0 From end key 'CE-CIV-SRC-5BA71A30-C5AB-49CA-94B2-09738FB7D277' from physical start. | 2026-10-30 05:41:20.170 [INFO] CDRG index filled pipe 1091E0 From end key 'CE-CIV-SRC-F55F0E0A-EA92-4D33-B761-DE091382DC74' from physical start. | 2026-10-30 05:41:20.237 [INFO] CDRG index filled pipe 1094BE To end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical end. | 2026-10-30 05:41:20.241 [INFO] CDRG index filled pipe 109500 From end key 'CE-CIV-SRC-82D6D759-885B-4AC0-B318-566B515E31D8' from physical start. | 2026-10-30 05:41:20.254 [INFO] CDRG index filled pipe 109874 From end key 'CE-CIV-SRC-3126A41E-740A-4F2F-9C85-E87C720320B8' from physical start. | 2026-10-30 05:41:20.272 [INFO] CDRG index filled pipe 109A30 From end key 'CE-CIV-SRC-7969B9A3-974F-4050-91FD-F43CDD4D3D78' from physical start. | 2026-10-30 05:41:20.277 [INFO] CDRG index filled pipe 109B80 To end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical end. | 2026-10-30 05:41:20.283 [INFO] CDRG index filled pipe 109BBC From end key 'CE-CIV-SRC-A065CA82-443E-49A4-A659-D573B74DBA2F' from physical start. | 2026-10-30 05:41:20.287 [INFO] CDRG index filled pipe 109C15 To end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical end. | 2026-10-30 05:41:20.293 [INFO] CDRG index filled pipe 109C55 From end key 'CE-CIV-SRC-9865BD26-B695-472B-A70A-8ABFCC09121E' from physical start. | 2026-10-30 05:41:20.309 [INFO] CDRG index filled pipe 109E6D From end key 'CE-CIV-SRC-6CFC2891-A39C-48D2-9B37-AF2450FECD10' from physical start. | 2026-10-30 05:41:20.309 [INFO] CDRG index filled pipe 109E6D To end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical end. | 2026-10-30 05:41:20.314 [INFO] CDRG index filled pipe 109ED4 From end key 'CE-CIV-SRC-BE75E193-1E1A-40CA-8CB3-B0DD430AFE6E' from physical start. | 2026-10-30 05:41:20.323 [INFO] CDRG index filled pipe 10A1D4 To end key 'CE-CIV-SRC-FED21B8E-5720-4680-92A6-8953BCF84699' from physical end. | 2026-10-30 05:41:20.329 [INFO] CDRG index filled pipe 10A243 From end key 'CE-CIV-SRC-FED21B8E-5720-4680-92A6-8953BCF84699' from physical start. | 2026-10-30 05:41:20.354 [INFO] CDRG index filled pipe 10A86B To end key 'CE-CIV-SRC-E374079F-E3C7-45A9-B3FE-FA254A38BC98' from physical end. | 2026-10-30 05:41:20.357 [INFO] CDRG index filled pipe 10A899 To end key 'CE-CIV-SRC-F776FA64-4382-4BCF-ABFB-01DF7E89B3EA' from physical end. | 2026-10-30 05:41:20.363 [INFO] CDRG index filled pipe 10A8C7 From end key 'CE-CIV-SRC-F776FA64-4382-4BCF-ABFB-01DF7E89B3EA' from physical start. | 2026-10-30 05:41:20.368 [INFO] CDRG index filled pipe 10A901 From end key 'CE-CIV-SRC-E374079F-E3C7-45A9-B3FE-FA254A38BC98' from physical start. | 2026-10-30 05:41:20.379 [INFO] C..."
+        },
+        {
+          "n": 12,
+          "text": "record $dp \"FULL what DP printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: DP | Specify downpipe insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. Nothing nearby. The source connects when a pipe is drawn to it. | [CE] Pick the next DP, or press Esc to stop. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL what DP printed = Command: | Command: DP | Specify downpipe insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. Nothing nearby. The source connects when a pipe is drawn to it. | [CE] Pick the next DP, or press Esc to stop. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 13,
+          "text": "record $tail \"last command-line lines\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "\"22547_XCivil\" is unloaded. | Regenerating model. | *Cancel* | [CE] Background not found: XW2626-Title Block. Type CDXREFREPAIR to look for it and fix the path. | [CE] Background not found: XW2614-Arch Survey. Type CDXRE...",
+          "evidence": "RECORDED, not judged: last command-line lines = \"22547_XCivil\" is unloaded. | Regenerating model. | *Cancel* | [CE] Background not found: XW2626-Title Block. Type CDXREFREPAIR to look for it and fix the path. | [CE] Background not found: XW2614-Arch Survey. Type CDXRE..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 98 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: DP completed 8182 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-30 05:41:38",
+      "session_id": "RUN-20261030-0519-C3.0.86-b80X5a-s3",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "a FAIL or FLAKY is on record for this case on this build (1 time(s))",
+          "no independent review: no N36_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 2,
+        "red_before": true
+      }
+    }
+  ]
+}

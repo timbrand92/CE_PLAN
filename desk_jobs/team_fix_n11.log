@@ -1,0 +1,12 @@
+Four draft PRs are open for batch 11, one per bug. They are built and unit-tested only, with nothing opened in AutoCAD and no bug marked fixed. Tests were focused classes only, passing on net48 and net10, and I did not run the full suite.
+
+- **#1977, BUG-873:** `TidyLabelsCommand.cs`, `TidyLabelsStartUpRule.cs`, switch `linking.tidyLabelsWritesNothingUntilYes`.
+- **#1978, BUG-890:** `TidyLeaderOutRule.cs`, switch `linking.tidyLeaderOutKeepsPlainLabelsPut`.
+- **#1979, BUG-891:** `TidyScanReachRule.cs`, switch `linking.tidyScanCoversOwnSpaceAndFullReach`.
+- **#1980, BUG-962:** `TidyWindowIndex.cs`, switch `linking.tidyScanUsesWindowIndex`.
+
+All four are stacked on #1975. Shared files touched: `UserSettings.cs`, `REGRESSION_LOG.md`, `LinkService.TextClashTidyUp.cs`.
+
+Real settings folders: `CD_Settings.json` and other real files changed during the job. I think another lane's AutoCAD wrote them, but I can't prove it. Full detail is in `C:\CE_PLAN\areas\BUGFIX_n11_REPORT_31OCT.md`, pushed.
+
+The scratch folder `C:\CE_WORK\scratch\n11` has 6 items left that the harness holds open; the worktree is removed.

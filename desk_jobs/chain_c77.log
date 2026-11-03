@@ -1,0 +1,13 @@
+Fri 05:48 chain start: C-77 (Civil + Manager, 25 PROMOTED PRs: the twelve backlog PRs plus the late additions named in section 0 of the PR list); nothing is installed by this chain.
+Fri 05:48 starting train_c77_assembler_job.txt (sonnet)
+Fri 11:49 finished train_c77_assembler_job.txt
+Fri 11:49 starting train_c77_finalizer_job.txt (opus)
+Fri 12:03 chain RESUMED (second chain): the first chain died about 11:50; waiting for the finalizer job (cmd pid 71892) to end
+Fri 12:10 chain RESTARTED (third chain, 12:14): the finalizer is run again with the FIX-FIRST items of the Max Opus pre-review in its brief
+Fri 12:10 starting train_c77_finalizer_job.txt (opus)
+Fri 13:47 finished train_c77_finalizer_job.txt
+Fri 13:47 finished train_c77_finalizer_job.txt (seen by the second chain)
+Fri 13:47 C-77 finalizer verdict GO and C-76 installed: building payload 113 (candidate c1073). Nothing is installed by this chain.
+Fri 13:47 starting payload113_c77_job.txt (sonnet)
+Fri 14:26 finished payload113_c77_job.txt
+Fri 14:26 chain complete

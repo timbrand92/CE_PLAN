@@ -1,0 +1,7 @@
+`C:\CE_PLAN\areas\LOOKBRIEFS_W1052_W900_02NOV.md` is written: GO for five look briefs (#1995 to #1999), none runnable as an "after" look yet because no build holds any of the fixes. The path in the order lost a backslash, so I wrote it to `C:\CE_PLAN\areas\`.
+
+1. **Briefs:** one look each for #1997 (BUG-027), #1996 (BUG-1042), #1995 (BUG-1053), #1999 (BUG-900) and #1998 (BUG-1166). Each has the route, right and wrong readings, and the pictures to take.
+2. **Builds:** after a fresh fetch, none of the five heads is in 3.0.89 (61fd6fbc), 3.0.90 (b1) or b2. So the looks run as "before" looks only.
+3. **Skipped:** BUG-1052 and BUG-396 opened no PR. I did not read `BUGFIX_w1173_REPORT_03NOV.md`, because the earlier jobs did not match it to jobs 300 to 307.
+4. **Likely not testable:** BUG-900 needs a two-sheet PDF that doesn't exist yet. BUG-1166 needs a PC whose office folders arrive as a OneDrive shortcut.
+5. **Not proven:** I built, tested and ran nothing, and I didn't open AutoCAD. The window words are derived from code and earlier drafts, not seen. The gate script and launcher have never been run.

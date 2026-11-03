@@ -1,0 +1,26 @@
+**FOR TIM**
+
+1. **Verdict: GO at `c490b3077da5c9a8044253778fa4f54674172912`.** The Structural train (S-42) is ready to package. I changed nothing in it. It is built and unit-tested only: not installed, and nobody has opened it in AutoCAD yet.
+2. **What you'll see after install:**
+   1. **XCLMTXT schedules keep the supplier's numbers.** "250UB25.7" stays "250 UB 25.7". Before, it was rounded to "250 UB 26", which is not a real section.
+   2. **Angles get the right label.** A 150x90x10 angle now reads "UA" (unequal). Before, every angle except 150x100x10 came out as "EA" (equal).
+   3. **The CE log gets one line per Structural command,** for example "SBEAM completed 812 ms". The drawing, the prompts and Undo are unchanged.
+3. **Defaults:** nothing new. The log line uses Civil's existing tick, which is ON. That is fine because it only writes to the log.
+4. **Still owed before anything is marked fixed:** a robot PASS and a Codex PASS in AutoCAD on copies, for both changes.
+
+---
+
+1. **Tests:**
+   1. **Whole solution:** 0 errors.
+   2. **Structural net10:** 5,704 of 5,704 passed.
+   3. **Structural net48:** 4,961 passed and 39 failed. I ran the installed S-41 base too: the same 39 tests fail there, name for name, so none are new.
+   4. **DesignCore:** 2,190 of 2,195 passed on each of the three targets. The 5 failures are the known ones.
+   5. **CommandTruth:** 22 of 23 passed. The 1 failure is the known command-count drift.
+   6. **ReleaseTests:** 10 of 10 on net48, net8 and net10.
+2. **Hygiene:**
+   1. **Build lock:** other jobs held it for every one of my commands. I never took it or deleted it, and built in my own worktree with my own TEMP.
+   2. **Your settings files:** all four unchanged.
+   3. **Cleanup:** my worktrees and temporary folders are removed.
+3. **Records:** the report and review-log entries 1603–1607, ending with the sign-off line, are pushed to CE_PLAN.
+
+**Summary:** GO at `c490b3077da5c9a8044253778fa4f54674172912`, no changes made. Tests: solution 0 errors; Structural net10 5,704/5,704; net48 4,961 passed with the same 39 failures as the base; DesignCore 2,190/2,195 on each target; CommandTruth 22/23; ReleaseTests 10/10 on all three. Held: both fixes wait for a robot PASS and a Codex PASS in AutoCAD.

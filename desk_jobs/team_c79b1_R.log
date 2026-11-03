@@ -1,0 +1,16 @@
+I've written the review to `C:\CE_PLAN\areas\C79B1_REVIEW_REPORT.md`. These are the first 12 lines of its answer-first section:
+
+1. **Only 1 of the 4 case families can prove its bug on the robot today: bug1246 (#1891).** W1246 and its twin are READY TO RUN.
+2. **W658 (#1972) does NOT fail on a build without the fix.** It is R11v87's route, which PASSED on 3.0.88 before #1972 existed. It is a good no-regression guard, but it cannot accept BUG-658. FIX FIRST: line 21 `PROVES_BUGS BUG-658` becomes `PROVES_BUGS` (empty). BUG-658 needs a Codex look.
+3. **W1892 (#1892) and W1952 (#1952) are NOT RUNNABLE.** Their damage setups type Lisp, and the robot refuses typed Lisp. On paper both would go red without the fix and green with it.
+4. **The 4 damage setups make the right "unreadable" record**, as far as paper can show. LINKS uses #1892's own test bytes exactly. PITLIST makes the shape #1952's hold reads as unreadable (I checked the reader). OUTLETROLES and LPD rely on F1's trace, which I did not re-check line by line.
+5. **Counts by file:** READY TO RUN 3 (W1246, W1246_BROKEN, W658_BROKEN). FIX FIRST 1 (W658). NOT RUNNABLE 12 (W1892, W1892_BROKEN, W1952, W1952_BROKEN, 4 probes, 4 setups). NEEDS A CODEX LOOK as a verdict: 0 (the parts Codex must see are listed per family).
+6. **Every window and prompt is closed** in the 4 runnable files. One cheap safety line is suggested for W1246 (item 2.1.4).
+7. **Riskiest cases:** W1952 (it depends on which step each U takes back). W1246 (CR's prompt order is inside a compiled AutoCAD add-on, not readable in the C# code). W1892 (it depends on fixture handles nobody has read from DRV1_B1).
+8. **Logic evidence:** ACCEPT for 4 PRs (#1868, #1943, #1958, #1970). NO for 6 (#1972, #1945, #1892, #1952, #1940, #1950). Reasons in section 4.
+9. **Headless (needs no window):** W1892 and W1952 truly need none. W1246 needs no CE window but leans on a pre-selection, so maybe. W658 needs windows.
+10. **One unblock serves 2 families and 4 setups:** a sanctioned way to write a damaged record (F1's v3 record verb, or `-AllowLisp` through the runner). That is a CE 00 or Tim decision.
+11. **Validate:** main folder 4 files, 0 invalid. Held folder 8 files, 8 invalid, all for the same reason ("typed text may not contain '('"). Control ids: all known.
+12. **Nothing is FIXED.** These are unrun drafts.
+
+One file outside my report: I saved the PR diffs to a scratch folder, `C:\ce-fx\c79b1_R\`, while reviewing, and deleted it at the end. I edited no case, setup or driver file and committed nothing.

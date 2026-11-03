@@ -1,0 +1,22 @@
+I've reviewed seven of the twelve PRs in this slot. All seven are Structural: 3 are safe to merge, 4 need a small fix first, and none should be held or rejected. Nothing was built, tested or opened in AutoCAD.
+
+**Skipped:** #1588, #1593, #1597, #1599 and #1601 already had Opus reviews, so I left them out.
+
+**Safe to merge now, into S-44 (after S-43):**
+1. **#1589:** XCLMTXT rows you untick are no longer saved, so C2 asks for its size.
+2. **#1604:** CEMEMBER stops with one plain line in a metre drawing, the same as AB and BB do.
+3. **#1603:** the bracing panel no longer shows green when brace types are mixed. BUG-950 must stay open, because the real fix (a kN rating per brace type) still needs your word.
+
+**Need a small fix first:**
+1. **#1598 (the most serious):** with DIMSCALE 0 and AutoCAD's default 1:1 annotation scale, EBT and 25C tags would come out 100 times too small. Because of #1596, the other tags would shrink too.
+2. **#1596:** the "C1(O)" text beside a column tag stays 180 high at every scale. At 1:20 it plots 9 mm beside 2.5 mm notes.
+3. **#1592:** the hatch now draws with a warning, but the CEHATCH picker preview still says the drawing scale is not valid.
+4. **#1590:** the CEMEMBER warning doesn't say the 1:50 came from the office default on the Settings page.
+
+None of the seven touches CE_SHARED, the installer or signed-update files. Each new fix switch starts ON. The only code clash is #1592 against #1596/#1598, and keeping both lines resolves it.
+
+The report is in `C:\CE_PLAN\areas\REVIEW_PILE_B9_24OCT.md` and has been pushed.
+
+---
+
+One unrelated thing: the main plugin checkout now shows an untracked `.codex/` folder. It wasn't there when this job started, and I didn't create it.

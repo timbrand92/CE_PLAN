@@ -1,0 +1,28 @@
+Fri 06:45:53 DRY WOULD wrote HANDBACK.txt and ROBOT_STOP_AT.txt
+Fri 06:45:53 DRY WOULD placed STOP_CODEX.flag (no new Codex look: it could not end before the deadline)
+Fri 06:45:53 DRY DEADLINE STEP
+Fri 06:45:54 DRY Codex look running (pwsh.exe 77768, node.exe 12432, codex.exe 44092), open START: verifyG3_c84
+Fri 06:45:54 DRY WOULD stopped the Codex look by its own pids, wrote the marked END, put the look back on the queue
+Fri 06:45:54 DRY no robot pack running
+Fri 06:45:54 DRY AutoCAD pid 68852 title 'Autodesk AutoCAD 2027' lock holder 'Codex-G3' ours=True
+Fri 06:45:54 DRY WOULD closed our AutoCAD pid 68852 (CloseMainWindow, then its pid)
+Fri 06:45:54 DRY WOULD flags: removed TIM_AWAY and CODEX_AUTOSTART, set HOLD_ROBOT and TIM_AT_PC
+Fri 06:45:54 DRY WOULD wrote HANDBACK_DONE.txt
+Fri 06:45:54 DRY Hand-back finished Fri 06:45. AutoCAD/accoreconsole still running: acad 68852. Settings guard present: False. Flags: TIM_AWAY gone, HOLD_ROBOT and TIM_AT_PC set. Idle-window and queue state kept; handback_go.ps1 resumes.
+Fri 06:46:09 DRY WOULD wrote HANDBACK.txt and ROBOT_STOP_AT.txt
+Fri 06:46:09 DRY WOULD placed STOP_CODEX.flag (no new Codex look: it could not end before the deadline)
+Fri 06:46:09 DRY DEADLINE STEP
+Fri 06:46:10 DRY Codex look running (pwsh.exe 77768, node.exe 12432, codex.exe 44092), open START: verifyG3_c84
+Fri 06:46:10 DRY WOULD stopped the Codex look by its own pids, wrote the marked END, put the look back on the queue
+Fri 06:46:11 DRY no robot pack running
+Fri 06:46:11 DRY AutoCAD pid 68852 title 'Autodesk AutoCAD 2027' lock holder 'Codex-G3' ours=True
+Fri 06:46:11 DRY WOULD closed our AutoCAD pid 68852 (CloseMainWindow, then its pid)
+Fri 06:46:11 DRY WOULD flags: removed TIM_AWAY and CODEX_AUTOSTART, set HOLD_ROBOT and TIM_AT_PC
+Fri 06:46:11 DRY WOULD wrote HANDBACK_DONE.txt
+Fri 06:46:11 DRY Hand-back finished Fri 06:46. AutoCAD/accoreconsole still running: acad 68852. Settings guard present: False. Flags: TIM_AWAY gone, HOLD_ROBOT and TIM_AT_PC set. Idle-window and queue state kept; handback_go.ps1 resumes.
+Fri 06:46:55 DRY GO received: Tim has left again
+Fri 06:46:55 DRY WOULD removed TIM_AT_PC, HANDBACK*, ROBOT_STOP_AT files
+Fri 06:46:55 DRY WOULD restored TIM_AWAY.flag and CODEX_AUTOSTART.flag
+Fri 06:46:56 DRY installed build '3.0.86+5888ee757244aac89283aaaf2ba68e51470ecbb3'; C-77 chain progress: none; waiter running: True; chain incomplete: False
+Fri 06:46:56 DRY WOULD ran start_lanes.ps1 (Codex lane and watchdog)
+Fri 06:46:56 DRY GO done: Rule 15 resumes

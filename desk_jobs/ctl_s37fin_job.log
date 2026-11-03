@@ -1,0 +1,39 @@
+**FOR TIM**
+
+S-37 can ship as the next Structural update (1.0.117). I found nothing serious enough to block it. It has been built and unit-tested only; nobody has opened it in AutoCAD.
+
+1. **One thing that won't show up on your PC:** this update makes CE warn instead of refusing when you type a stirrup cover under 10 mm or an unusual reo spacing. Your Settings file already has both switches saved as off, and CE never overwrites a saved setting. So on your PC:
+   - STR with a 5 mm cover still quietly draws 10 mm.
+   - RBL still refuses a 20 mm spacing.
+   - Only a PC setting up CE fresh gets the warning lines.
+   - How to fix it on existing PCs (a one-time switch-on, or a tick box in Settings) is a call for you or the desk.
+2. **#990 is now in.** It's a test-only change (no difference in AutoCAD). It makes CE's automatic checks also catch anything that would stop REDO working.
+3. **Everything else is unchanged by default:** beam shorten/extend still offers 45/100, FJ1 still uses layer JOISTS, and the tie-down schedule still has two columns.
+
+The full report and the Codex AutoCAD checklist are in `C:\Lisp Files\_TEST_COPIES_20260923\TRAIN_S37_FINALIZER_REPORT.md`.
+
+---
+
+**Details for the controller**
+
+1. **Commits on top of `3768f5d6`:**
+   - `86dd30db` merges #990. Both test blocks in `RedoSafeCallGraphTests.cs` are kept, and it adds only #990's 25 test lines and 10 log lines.
+   - `d33a85be` adds a single REGRESSION_LOG entry for the pin commit and restores a blank line the merge dropped.
+   - Pushed as a fast-forward; local equals origin. The worktree is clean, so the controller has nothing to fast-forward.
+2. **The pin commit is correct:** #1209 changes both beam files on purpose. The pin test passes on net10 and net48, and no other pin moved.
+3. **Tests at `d33a85be`:**
+   - **Structural net10:** 4946 of 4946 passed. That is the assembler's 4945 plus #990's one new test.
+   - **Structural net48:** 4209 passed, 36 failed, 698 not run. The 36 failure names are identical to the assembler's.
+   - **DesignCore:** 2050 per lane on net48, net8 and net10, with the same 6 old failures.
+   - **Builds:** 9 of 9 at 0 errors.
+   - **Guards:** 8 of 8 pass on both lanes.
+4. **Integrity:** Tim's settings files, the CE folders under `%APPDATA%` and the installed 1.0.116 DLLs did not change. The registry still has 375 entries and REGGRESSION_LOG lines were only added.
+5. **MEDIUM 1:** the stirrup-cover and spacing warnings described above. I left it unfixed because flipping a saved value is a policy decision. It is harmless to ship.
+6. **LOWs, none blocking:**
+   - The warning lines are not written to the CE log.
+   - Renaming the beam layer in Settings is not seen by the rafter/joist code, which still looks for BEAM and BEAM LOWER.
+   - #1209 does not carry its own re-pins, so another train that merges it will hit the same failing pin test.
+   - The new settings have no rows in the Settings window.
+7. **Process:** another session's test run in `worktrees\cs-iss` kept the machine busy for over an hour. After waiting about 60 minutes, I stopped only my own waiting scripts and ran the last two DesignCore lanes (about 2 minutes) beside it at Below Normal.
+
+OPUS SIGN-OFF train claude/rel-20261010d GO (d33a85be40c943cce93717f9353ab0a7499ea44d)

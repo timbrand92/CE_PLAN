@@ -1,0 +1,7 @@
+== cx_lf02 (usage 21.0% -> 22.0%): 1. **DONE — triage only.** BUG-878, BUG-880 and BUG-881 already have draft fixes. BUG-879 needs protected files; BUG-882 needs the installer decision. All five remain OPEN.
+
+2. **Saved and pushed:** documentation-only draft [#1646](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1646), branch `cx2/bug-878-ledger-batch02`, tip `34e6ad879e59d8ad206b5454df013900bdce7583`.
+
+3. **Checks:** documentation checks passed; tests added/run: **0/0**. No builds, installation or AutoCAD testing.
+
+4. **Report:** [per-bug evidence and future checks](C:/CE_PLAN/areas/CODEX_LEDGER_FIX_BATCH02_23OCT.md). Pushed from CE_PLAN.

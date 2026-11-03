@@ -1,0 +1,15 @@
+C-62 is **GO at `ea752acf63877f6ea83083de835bc29a0f6b814f`** on `claude/rel-20261023m`. It is built and unit-tested only: not installed, and nobody has opened it in AutoCAD.
+
+1. **Review:** all 23 PRs merged at their fixed heads. I read six of them in full: #1562, #1645, #1612, #1617, #1613 and #1632. All six are sound.
+   - CDRG (#1645) now keeps the raingarden instead of undoing it every time.
+   - After Esc in CD (#1562), a pipe's callout stays linked to it. U and REDO are protected.
+2. **My change:** one test-only commit. It checks that an older settings file turns on all four new switches and keeps a switch you set OFF. All four stay ON, because the old behaviour is the logged bug each time. None of the four has a row on the Settings page yet.
+3. **Tests:**
+   - The whole solution builds with 0 errors on both net48 and net10.
+   - Civil net10: 19,548 tests, 0 failed.
+   - Manager net10: 932 tests, 0 failed.
+   - Civil net48: the same 17 failures also happen on the C-61 base, caused by the AutoCAD reference files on this PC.
+   - The Manager release build's file-count guard passed at exactly 75 files.
+4. **Held:** do not mark any of the 22 bugs, or the CDRG fault, FIXED. Each still needs a robot PASS plus a Codex PASS in AutoCAD. The CDRG fault still needs a BUG number from the desk. 16 small LOW items go to the next round. None blocks the release.
+
+The full report is `C:\CE_PLAN\areas\release-v3-colleagues-TRAIN_C62_FINALIZER_REPORT_2026-10-23.md`.

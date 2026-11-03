@@ -1,0 +1,9 @@
+== cx_rv20 (usage 40.0% -> 42.0%): 1. **#1794: HOLD.** The open markup window bypasses the switch; markup undo can target unrelated drawing work.
+2. **#1795: MERGE.** Start-up text and defaults match the brief.
+3. **Opus comparison:** one agreement, one disagreement against its conditional predecessor recommendations. No Tim decision needed.
+
+---
+
+1. **DONE:** [Review report](C:/CE_PLAN/areas/CODEX_PR_REVIEW_cx_rv20.md) committed and pushed. Only this file changed.
+2. **Saved:** `db8e832d`; leak scan clean; `main...origin/main` shows no ahead.
+3. **Validation:** read-only review. No builds, tests or AutoCAD runs.

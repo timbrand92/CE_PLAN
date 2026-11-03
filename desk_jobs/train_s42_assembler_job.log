@@ -1,0 +1,10 @@
+Train S-42 is assembled: branch `claude/rel-20261023s`, head `c490b307`, pushed. Nothing has been tested in AutoCAD or installed.
+
+- **Merged:** #1547 at `61ce20de` and #1533 at `40c9a977`, both at the live heads the fix round recorded. The only conflict was `REGRESSION_LOG.md` at #1533, and I kept every entry.
+- **Plugin.cs:** it changed by two lines, the outcome-log subscribe and unsubscribe from #1547. Your brief expected no change there.
+- **Settings:** no new values. Civil's outcome-line switch is reused, default ON.
+- **Build:** 0 errors.
+- **Tests:** Structural net10 5,704 passed, 0 failed. Net48 had 39 failures, the same count as S-41. DesignCore and CommandTruth match S-41's known failures.
+- **Limit:** I did not run the base build to compare the 39 net48 failures by name.
+
+Report: `C:\CE_PLAN\areas\release-v3-colleagues-TRAIN_S42_ASSEMBLY_REPORT_2026-10-23.md`, pushed.

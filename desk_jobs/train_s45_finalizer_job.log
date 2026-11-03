@@ -1,0 +1,22 @@
+**FOR TIM**
+
+1. **GO at `b721a445b0b8c5f930868212e1a32face2eaa969`** on `claude/rel-20261026s`. It is built and tested only: not installed, and nobody has opened it in AutoCAD.
+2. **Held:** #1794 (the MarkupAI switch) is out of this update. If a markup window is already open when you untick "Enable MarkupAI", it keeps drawing markup anyway. Its undo also doesn't check that the last change was a markup change, so it could take back other work. I agree with Codex's HOLD. The PR stays open for the next Structural update.
+3. **Kept, five PRs:**
+   - **FADOPT Raft:** asks once whether unlabelled beam lines are External or Internal, and now sees EB labels.
+   - **Old pads with no size:** still drawn at 600, with a warning in FST.
+   - **AutoCAD start:** one line instead of about 44.
+   - **Plainer messages:** CSSOILREPORT, CSWINDCLASS, STRSCHEDREFRESH and the five commands that are still switched off.
+4. **Nothing to do yet:** no bug is marked fixed. Codex checks the five in AutoCAD after install (steps are in the report, section 5).
+
+---
+
+**Summary:** GO at `b721a445`. I made two commits: a visible revert dropping #1794, and a test pinning the three new switch defaults. Tests:
+- **Structural net10:** 5,981 passed, 0 failed.
+- **Structural net48:** the same 53 failures as the bare S-44 base, name for name.
+- **Other lanes:** DesignCore, CommandTruth (drift 395) and ReleaseTests unchanged from S-44.
+- **Release build:** 2007 files, none added or removed.
+
+One test class hangs, at `SbeamEditAutoCadEvidenceReaderTests…("Bne_Un")`, and it hangs on the base too, so this update didn't cause it.
+
+Report: `C:\CE_PLAN\areas\release-v3-colleagues-TRAIN_S45_FINALIZER_REPORT_2026-10-26.md`.

@@ -1,0 +1,11 @@
+**FOR TIM**
+
+1. **Done:** I reviewed the 21 older open fixes that cover bugs which are built but not installed. 1 is ready as it stands, 17 are ready after small fixes, 1 is on hold and 2 are rejected.
+2. **Top picks:** for Civil, the metre-drawing pipe lengths (#742), the paste warning (#710) and a computations sheet with no blue (#1029). For Structural, the raft beam question (#1157).
+3. **One question for you, not urgent:** in a metre drawing, should C1, C2, DS1 and TS1 draw the column at real size, with its label converted too?
+
+---
+
+- **Report:** `C:\CE_PLAN\areas\REVIEW_OPEN_PRS_R2_26OCT.md`, pushed.
+- **Tests:** Civil 531 of 536 passed. Both failures come from the PRs themselves, and the report gives the fix for each. Manager 28 of 28 and Structural 131 of 131 passed.
+- **Not done:** nothing was opened in AutoCAD.

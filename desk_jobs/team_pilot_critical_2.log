@@ -1,0 +1,13 @@
+Six of the 13 bugs now have a draft fix waiting for review. None has been opened in AutoCAD and none is marked fixed.
+
+1. **Draft fixes:**
+   - **#1760, BUG-1196:** the Pit Schedule depth no longer changes when a pit has a lower second outgoing pipe.
+   - **#1758, BUG-1150:** a pasted network keeps its links after the drawing is reopened.
+   - **#1764, BUG-1198:** cancelling an export no longer changes the drawing.
+   - **#1763, BUG-1140:** a pasted downpipe no longer takes the original's label.
+   - **#1765, BUG-1145:** the schedule no longer says out of date when nothing on it changed.
+   - **#1767, BUG-1149:** a bound Xref gives a warning, not a permanent QA fail.
+2. **Test runs:** each fix passed about 19,800 Civil tests with none failing, except #1763, which had one unrelated failure (a PDF test).
+3. **Skipped:** BUG-540 is already fixed and BUG-1049 already has PR #1743. BUG-1148, BUG-857, BUG-685 and BUG-587 need Tim's word, and BUG-855's cause is unclear.
+
+The report is pushed to `C:\CE_PLAN\areas\release-v3-colleagues-PILOT_CRITICAL_BATCH2_REPORT.md`.

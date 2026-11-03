@@ -1,0 +1,8 @@
+BUG-235 (w235, B-181) is already fixed on the release branch, so I opened no PR.
+
+- **Fix:** BUG-1227 Part A (commit 28d8b972) is in the base, `claude/rel-20261102a` at 3fbb9da5. A pit already joined to a pipe end keeps it. A copy, including one on top of the original, is not offered it and CE prints one plain line.
+- **Code:** `CopiedPitEndOwnerGuard.cs`, wired through `LinkService.PitRelinks.cs:57` and `LinkService.RepairAudit.Relink.cs:691`/`:852`.
+- **Switch:** `linking.pitCopyKeepsOriginalPipeEnds` (`UserSettings.cs:971`), default on and pinned in tests.
+- **Not proven:** the one-Undo part of the entry, and a copy placed slightly nearer than the original, which no test or AutoCAD run has seen. The report gives a robot case for both.
+- **Tests and cleanup:** nothing was built or tested, so I took no before/after folder listings. The worktree is removed.
+- **Report:** `C:\CE_PLAN\areas\BUGFIX_w235_REPORT_03NOV.md`, pushed. `git status -sb` shows no ahead. One file I didn't touch, `AUDIT_CLASS_CHUNK21_02NOV.md`, is modified in that repo.

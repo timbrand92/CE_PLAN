@@ -1,0 +1,1 @@
+`C:\CE_PLAN\areas\ROBOT_CASE_DRAFTS_FIXES_1989_1993_02NOV.md`: 7 robot cases drafted (3 twins that must fail, 1 guard with no twin), none run or validated. #1991 and #1993 are Codex-only (K3_01 and K3_02), and #1992 and #1993 clash on a shared `validation` Settings group.

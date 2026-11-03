@@ -1,0 +1,8 @@
+Candidate is `C:\ce_rc_scratch\c1069`, and the report `PAYLOAD_C1069_REPORT.md` is written (c1069 was free, so the chain's expected number holds).
+
+- **Verified:** Civil verified 828, bad 0, extra 0. Manager verified 75, bad 0, extra 0.
+- **Branch:** `claude/rel-20261026x` is at `96455f13` after the version commit. Four files changed, and the push was a normal fast-forward.
+- **Tests:** all pin tests passed on net10, none failed.
+- **Strings:** the string proof had 0 rows not as expected.
+- **Installed line:** C-72 (3.0.82+e30556ca).
+- **Odd:** AutoCAD kept opening, so builds waited for gaps. A bad edit to two copied scripts was caught and rewritten before they ran.

@@ -1,0 +1,7 @@
+== verifyE1_cur (usage % -> 21.0%): AUTOCAD STILL RUNNING
+
+1. **BLOCKED:** Both looks stopped under N17 because their prescribed zoom lines returned `nil`. Neither feature verified. PASS 0, FAIL 0, DIFFERENT 0, BLOCKED 2; SURE 2, UNSURE 0.
+
+2. **Safe end:** My AutoCAD session closed without saving. Drawing hashes matched; all four settings files unchanged; lock released. A new AutoCAD process appeared afterwards and was left untouched.
+
+3. **Report:** [CODEX_VERIFY_E1_20261026_0755.md](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_E1_20261026_0755.md>). No fixtures missing.

@@ -1,0 +1,9 @@
+I wrote and proved the ten new cases (R11 to R20), and no CE fault turned up. Each one passed in four separate AutoCAD sessions on 3.0.72, and the report is pushed with nothing ahead.
+
+- **Cases:** Edit Pipe cascade with U and REDO, quick MOVE, CDSYNC, CDTWL, Recover Inverts, Tidy labels, Esc at the third point, pipe label, erase pit, and CDEDIT keeping the selection.
+- **Acceptance:** The runner shows all ten ACCEPTED-READY, but the review line is builder-filled and Opus review is still needed.
+- **Missing:** CDSYNC keeping the Pit Schedule is not proved, because the driver can't read that window. No window-look cases were done.
+- **Tool changes:** I made four small additive changes, listed in the report. One incident left my own AutoCAD running; I ended it and settings are restored by hash.
+
+Files are in `C:\CE_PLAN\areas`:
+- release-v3-colleagues-RUNNER_PHASE3_BATCH1_REPORT.md

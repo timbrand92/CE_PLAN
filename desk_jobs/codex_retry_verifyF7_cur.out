@@ -1,0 +1,12 @@
+== verifyF7_cur (usage 86.0% -> 87.0%): AUTOCAD STILL RUNNING
+
+1. **F7 blocked:** The prescribed zooms printed `nil`, triggering N17. Labels, pipe joins, overlaps and Undo remain untested. BLOCKED 3; PASS/FAIL/DIFFERENT 0; SURE 3, UNSURE 0.
+2. **Clean end:** F7ÔÇÖs AutoCAD closed, settings hashes matched and its lock was released. Claude subsequently started another AutoCAD session; left untouched.
+3. **Report:** [F7 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_F7_20261027_0352.md>). No fixtures missing.
+== verifyF7_cur (usage 90.0% -> 91.0%): AUTOCAD CLOSED
+
+1. **Results:** 0 PASS, 1 FAIL, 2 DIFFERENT; 0 BLOCKED, 0 NOT TESTED overall. All 3 SURE. Pit numbers were missing; pipe wording differed. Undo removed exactly the last pipe and its annotations. Close-up limitations are recorded.
+
+2. **Clean end:** No drawings saved. All four settings hashes unchanged, installed versions unchanged, lock released.
+
+3. **Report:** [F7 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_F7_20261027_0635.md>).

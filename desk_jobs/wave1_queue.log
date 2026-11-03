@@ -1,0 +1,12 @@
+Sat 14:08:04 queue started; order E1 E2 E3 E4 S1 S2 S3 T1 T2
+Sat 14:18:26 launched E1 pid 41876 rc 0 (running before: 2)
+Sat 14:20:15 launched E2 pid 44360 rc 0 (running before: 2)
+Sat 14:26:42 launched E3 pid 3276 rc 0 (running before: 2)
+Sat 14:31:04 launched E4 pid 36384 rc 0 (running before: 2)
+Sat 14:35:25 launched S1 pid 55616 rc 0 (running before: 2)
+Sat 14:36:00 queue started; order S2 S3 T1 T2
+Sat 14:36:33 launched S2 pid 49744 rc 0 (running before: 2)
+Sat 14:41:26 launched S3 pid 3544 rc 0 (running before: 2)
+Sat 14:46:49 launched T1 pid 5144 rc 0 (running before: 2)
+Sat 14:50:09 launched T2 pid 41616 rc 0 (running before: 2)
+Sat 14:50:54 all jobs launched; queue ends

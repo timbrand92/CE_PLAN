@@ -1,0 +1,19 @@
+Draft PR #1891 is open (title "B-071 BUG-1246: a copied downpipe is given its own next tag") against `claude/rel-20261102a`. Nobody has opened it in AutoCAD. The report is pushed to `C:\CE_PLAN\areas\BUGFIX_p11_REPORT_30OCT.md`.
+
+**Settings files changed.** `CD_Settings.json` changed at 22:48:26 and `CD_RecentValues.json` at 21:53:36, both in `%APPDATA%\TIM_CE_CADTOOLS`. AutoCAD started at 22:48:30, so the first looks like the robot lane writing a setting before launch. I was only waiting for a build slot at 21:53, so the second is not from my runs either. I can't prove none of my test runs touched them. The Structural `CS_Settings.json` and the Civil `settings.json` did not change.
+
+- **What changes in AutoCAD:** Copy + Rotate of DP2 now gives the copy the next free number, DP3, with its own label, and a command-line line saying so. The change sits behind `linking.copiedDownpipeGetsOwnTag`, on by default; off gives the old behaviour.
+- **Cause:** the copy clean-up left a downpipe it couldn't finish exactly as AutoCAD copied it, original tag included.
+- **Stacking:** #1867 was already inside the C-78 line, so I branched from `claude/rel-20261102a` rather than from #1867's branch.
+- **Tests:**
+  - Focused net10 run: 265 passed.
+  - Full Civil net10: 21,538 passed. The PDF-page and real-window render tests failed in the full run and passed 3 of 3 re-run alone.
+  - Drainage net48 compile: 0 errors.
+- **Robot case:** `N38_dp_copy_tag` with switch-off control `C38`.
+- **Not proven:**
+  - Everything in AutoCAD.
+  - The copy is deliberately left unjoined to any pit or pipe.
+  - The label isn't rotated with the copy.
+  - A rotated copy with a complete copy record may still be refused by the full path.
+
+Files are in `Modules/Drainage` (`UserSettings.cs`, `LinkService.Utilities.cs`, new `LinkService.CopiedSourceOwnTag.cs` and `CopiedSourceOwnTagRule.cs`), plus `Bug1246CopiedDownpipeOwnTagTests.cs`, `RedoSafeReviewedHooks.baseline.txt` and `REGRESSION_LOG.md`.

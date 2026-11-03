@@ -1,0 +1,9 @@
+== cx_rv23 (usage 43.0% -> 46.0%): 1. **Verdicts:** #1781 MERGE-WITH-FIXES—lost invert precision. #1782 MERGE-WITH-FIXES—damaged records can appear empty. #1783 MERGE. Two agree with Opus; one advances after fixes.
+
+2. **Report:** [Saved and pushed](C:/CE_PLAN/areas/CODEX_PR_REVIEW_cx_rv23.md). No Tim decision needed. No builds, tests or AutoCAD.
+
+3. **Limitations:** I saw Opus’s summary early. The push also included an existing unrelated one-line plan commit. Both deviations are recorded.
+
+---
+
+1. **Publication:** `f6552e17`; leak scan passed; `main...origin/main` shows no ahead count.

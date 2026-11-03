@@ -1,0 +1,12 @@
+**C-37 is stopped at the merge, as the brief says to when both sides change the same lines of a redo-critical file. There is no C-37 branch on origin yet.**
+
+1. **Head:** the local branch `claude/rel-20261009x` sits at 954553a5, the C-32 head, in worktree `c37asm`. It is not pushed. Both base heads were as expected: C-32 at 954553a5 and C-36 at 2388c329.
+2. **The conflict:** one file, one hunk, in `Modules/Manager/Services/CeSuiteManagerMenuService.cs`, at the end of the menu-install routine. `REGRESSION_LOG.md`, `UserSettings.cs` and `Plugin.cs` merged cleanly.
+   - **C-32 side:** swaps the two start-up messages for the plain-words versions and keeps the Idle retry.
+   - **C-36 side:** marks the install as failed for the session and removes the Idle retry, because a retry could land between a U and a REDO and throw REDO away.
+3. **My suggested resolution, not applied:** take C-32's plain messages, take C-36's "failed this session" flag, and keep the retry removed. The brief forbids guessing here, so I aborted the merge and left the tree clean.
+4. **Not done:** no build, no tests, no redo scan, no Shared/ diff, no check of the registry or Settings keys, and no push. Nothing was run that could touch Tim's settings files.
+
+**Decision for the controller:** approve that resolution and I re-run the job from the merge, or resolve the hunk in `c37asm` yourself and I continue from the build.
+
+The report is at `C:\Lisp Files\_TEST_COPIES_20260923\TRAIN_C37_ASSEMBLY_REPORT.md`.

@@ -1,0 +1,10 @@
+B-150 is done. PR #1982 is open as a draft against `claude/rel-20261102a`, and the report is pushed with the correction in `origin/main`. Nothing has been opened in AutoCAD.
+
+- **Change:** `xcivilImport.levelRangeFollowsSettings` now ships ON, in `Models/UserSettings.cs`. A new `Bug908LevelRangeDefaultOnTests` pins it through both start-up reads, plus an OFF twin. I changed no Settings values.
+- **Tests:** 626 and 301 passed in the two focused runs, and the net48 compile has 0 errors.
+- **Not as briefed:** the Settings range is -50 to 1000 m, so the default import range does widen.
+- **Isolation flag:** real `%APPDATA%` files changed during my run. I believe they came from an `acad.exe` I didn't start, but I can't prove it.
+- **Still needed:** an Opus review and the N91 start-up smoke.
+
+Files are in `C:\CE_PLAN\areas`:
+- BUGFIX_q7_REPORT_01NOV.md

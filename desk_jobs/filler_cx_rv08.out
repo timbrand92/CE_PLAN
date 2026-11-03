@@ -1,0 +1,10 @@
+== cx_rv08 (usage 76.0% -> 86.0%): 1. **DONE — saved and pushed:** [31-PR review](C:/CE_PLAN/areas/CODEX_PR_REVIEW_GROUP08_24OCT.md).
+
+2. **Five new faults:** HIGH 1 · MEDIUM 4 · LOW 0. Most serious: #1712 can leave a 450 mm rise through a rejoining pit when a manually set level is kept.
+
+3. **Verdicts:** 23 MERGE · 7 MERGE-WITH-FIXES · 1 HOLD.
+
+---
+
+1. **Evidence:** Verified by reading; no builds, tests or AutoCAD runs.
+2. **Commit:** `6af3b4cc` on CE_PLAN/main. Only the findings file committed; leak scan passed.

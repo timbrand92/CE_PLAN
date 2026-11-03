@@ -1,0 +1,8 @@
+BUG-1046 is built and unit-tested, with draft PR #2005 open against `claude/rel-20261102a`. Nobody has opened it in AutoCAD, so BUG-1046 stays open.
+
+- **What changes:** CDPARTS, CDLABELSTYLE, CDDIAG and CDDASHBOARD open in Paper Space. CDPARTS and CDLABELSTYLE also open during REFEDIT. CD, PIT and the quick pit inserts (CDPIT600 etc.) keep both refusals.
+- **Switch:** `options.officeEditorsOpenAnywhere`, ON by default. Set false, the old refusals return.
+- **Files:** `DrawingSafetyService.cs`, `UserSettings.cs`, `REGRESSION_LOG.md` and `Bug1046OfficeEditorsOpenAnywhereTests.cs`. CE_SHARED is untouched.
+- **Checks:** 18 of 18 focused tests pass and the net48 compile has 0 errors. The settings-folder listings are identical before and after.
+- **Report:** `C:\CE_PLAN\areas\BUGFIX_w1046_REPORT_03NOV.md`, pushed. It names the robot case `B186_office_editors_paper`.
+- **Cleanup:** worktree and scratch removed.

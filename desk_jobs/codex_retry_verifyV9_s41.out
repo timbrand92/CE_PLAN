@@ -1,0 +1,23 @@
+== verifyV9_s41 (usage 19.0% -> 20.0%): 1. **NOT STARTED:** Native desktop control is disabled, so the required Explorer screenshot and AutoCAD screen-and-mouse checks were unavailable.
+
+2. **Installed:** Civil **3.0.69**, Manager **1.1.69**, Structural **1.0.121**. All five looks remain **NOT TESTED**.
+
+3. **Safe state:** AutoCAD was closed, lock free, settings guard clear. No settings changed; neither settings pass ran.
+
+4. **Report:** [CODEX_VERIFY_V9_20261022_1626.md](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_V9_20261022_1626.md>).
+== verifyV9_s41 (usage 20.0% -> 20.0%): 1. **NOT STARTED:** native screen control is unavailable. The required Explorer screenshot and AutoCAD mouse verification could not begin.
+2. **Installed:** Civil 3.0.69, Manager 1.1.69, Structural 1.0.121.
+3. **Results:** 0 tested; all 5 NOT TESTED. No settings changed, no lock acquired, AutoCAD closed. All six settings hashes are not applicable because neither pass began.
+4. **Report:** [CODEX_VERIFY_V9_20261022_1631.md](/C:/Lisp%20Files/_TEST_COPIES_20260923/CODEX_VERIFY_V9_20261022_1631.md).
+== verifyV9_s41 (usage 20.0% -> 20.0%): AUTOCAD STILL RUNNING; SETTINGS RESTORED WHILE RUNNING; the desk must run settings-restore again after it closes.
+
+1. **BLOCKED:** 0 PASS, 0 FAIL, 0 DIFFERENT, 3 BLOCKED, 2 NOT TESTED. SURE 4; UNSURE 1. Lock retained. No complete look accepted.
+
+2. **Report:** [V9 results](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_V9_20261022_1828.md>). Z preview clean; hatch readback, 25C and CEMEMBER routes blocked. Session 2 not started.
+
+3. **Settings hashes ÔÇö original restored exactly:**
+   A1 = C1: `2972CE70C51474BDF6E549EB585E4AE745E8194E9E620859A360398835E308A8`
+   
+   B1: `1B407E5890EB932D256E591F4E005E1E1469E8B8336BDA205F806736786C7FB5`
+   
+   A2/B2/C2: not taken.

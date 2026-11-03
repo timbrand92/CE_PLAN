@@ -1,0 +1,6 @@
+**GO** for train S-40 at `d051a2a9be06a2475459d020aa5a422b4b94ffce`, pushed as a normal fast-forward.
+
+1. **Held:** only 6 of the 9 PRs are in the train. The Z purlin fix (#1510), the LBUH dots fix (#1498) and the EBT tag height fix (#1496) are not, because their heads moved after review. Those three things look the same as now in AutoCAD.
+2. **My fix:** typing S at CEMEMBER's first question meant both Side and Section. It now reads `[SIde/Top/SEction/Reset]`, and the shortcut check now covers it.
+3. **Tests:** whole solution 0 errors. Structural 5191 of 5191 on net10. On net48 there are 37 reds: the S-39 base's 36 by name, plus one new test that only fails there.
+4. **Not done:** built and unit-tested only. Not installed, not opened in AutoCAD, nothing marked fixed.

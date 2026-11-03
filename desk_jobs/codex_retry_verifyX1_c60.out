@@ -1,0 +1,5 @@
+== verifyX1_c60 (usage 8.0% -> 8.0%): 1. **BLOCKED at setup.** The unlisted ÔÇ£WhatÔÇÖs NewÔÇØ window triggered X1ÔÇÖs stop rule. All four looks are **NOT TESTED**: 0 PASS, 0 FAIL; 4 SURE, 0 UNSURE.
+
+2. **Safe end.** AutoCAD is closed, the lock is released and all four settings files match their original hashes. No drawings were saved.
+
+3. **Report.** [X1 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_X1_20261023_1238.md>) includes evidence, installed versions and full restoration hashes.

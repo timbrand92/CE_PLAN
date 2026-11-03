@@ -1,0 +1,7 @@
+== cx_rd09 (usage 46.0% -> 51.0%): 1. **DONE — 2 HIGH, 1 MEDIUM.** Biggest finding: eight pipe-label tests announce success without checking a pipe. The report also identifies ineffective ownership tests and two safety checks aimed at a retired folder.
+
+2. **[Findings report](C:/CE_PLAN/areas/CODEX_AUDIT2_RD09_23OCT.md).** Includes skipped-test inventories, weak-test evidence and deterministic checks. No builds, tests or AutoCAD runs. Review worktree removed.
+
+---
+
+1. **Saved and pushed.** Report commit `0be15c96`; current tip `25860faf`. Leak scan passed; no commits ahead of origin. Only the findings file was committed by this audit.

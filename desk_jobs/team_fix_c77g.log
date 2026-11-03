@@ -1,0 +1,52 @@
+## FOR TIM
+
+1. **Built, not installed.** CDRULES now measures cover to the outside top of the pipe, as you asked. It is draft PR **#1848**. Nobody has opened it in AutoCAD, and BUG-901 stays open.
+
+2. **What a drafter will see.** The minimum cover row now names the pipe wall it took off. For example: "cover 275 mm to the outside top at P2 (pipe wall 45 mm, Settings RCP 375, Assumed) is below 300 mm".
+
+3. **Before and after on one example.** The pit lid is at RL 45.300 and the minimum cover is 300 mm.
+   1. **UPVC 225 at invert 44.770:** it was 305 mm and passed. It is now 285 mm and warns.
+   2. **Concrete 375 at invert 44.605:** it was 320 mm and passed. It is now 275 mm and warns. This is your own example.
+
+4. **Where the wall figures come from.** CE had no wall table, so I added one in Settings. It holds only your two figures (20 mm for UPVC 225, 45 mm for concrete 375), both marked "Assumed". I did not check either figure against a standard.
+
+5. **Other sizes, such as UPVC 100 and 150, have no wall figure yet.** For those, the row keeps the old measurement and adds "Pipe wall Unknown (no wall in Settings for UPVC 150)…". It never quietly uses zero and never blocks.
+
+6. **The switch is "Measure cover to the pipe outside", on by default.** Turning it off brings back exactly the old wording and results.
+
+7. **My mistakes, first.**
+   1. One of my check runs started while another job's build was running. They overlapped for about a minute. I stopped only my own run.
+   2. Whether that other job's step finished cleanly has not been checked.
+
+8. **Not done.**
+   1. CD itself still places new pipes at minimum cover to the inside top. So a pipe CD puts exactly at the minimum will now get a CDRULES warning. Making CD place pipes deeper needs your word.
+   2. The wall table is not on the Settings page yet.
+
+---
+
+**Technical detail**
+
+1. **Cause:** `Modules/Drainage/Rules/RulebookEngine.cs`, `CoverRules`, computed `(cover − invert) × 1000 − diameter`. `Rules/RuleFixPlanner.cs` `PlanCover` used the same sum.
+
+2. **Change:**
+   1. New pure rule `Rules/PipeCoverToOutsideRule.cs`.
+   2. The switch and table are read in `RulebookValues.Resolve`.
+   3. The new Settings group is `cover` (`measuredToPipeOutside` ON, `pipeWallThicknessMm`, `pipeWallThicknessConfirmed` OFF).
+
+3. **Saved CDRULES runs:** the new group is kept out of the CDRULES fingerprint. A first version put it in, and ten existing "saved runs never go stale" tests caught it.
+
+4. **Tests:**
+   1. New `Bug901CoverToPipeOutsideTests` reads the switch through both start-up reads and pins switch-off to the old answers over a grid.
+   2. Civil net10 full suite: 20,806 passed, 0 failed, 32 skipped.
+   3. net48 compile: 0 errors.
+   4. Every build used `-p:SkipDevBundle=true`. Nothing was deployed.
+
+5. **Robot case:** suggested name N36_cdrules_cover_outside, with switch-off twin N36o_cover_outside_off. It types CDRULES All and reads the saved findings file.
+   1. Switch on: expects the 285 mm and 275 mm "outside top" lines.
+   2. Switch off: expects "cover 305 mm to obvert" and "cover 320 mm to obvert".
+
+6. **Waiting for the build slot:** I waited the full 2 hours for the C-76 chain. After that I counted only real dotnet or MSBuild processes as busy, not the chain's idle controller window.
+
+7. **Housekeeping:** the report is pushed to `C:\CE_PLAN\areas\release-v3-colleagues-COVER_OUTSIDE_REPORT.md`. Build output in `C:\ce-fx\bcover` is cleaned, and the run logs are in `C:\ce-fx\bcover_job\logs`.
+
+**Summary:** Draft PR #1848 changes how CDRULES measures cover. Cover is now measured to the outside top of the pipe, behind the switch `cover.measuredToPipeOutside` (ON). The wall comes from a new Settings table holding Tim's two figures, marked Assumed; other sizes report Unknown and keep the old measurement. Files: new `Rules/PipeCoverToOutsideRule.cs`, plus `RulebookEngine.cs`, `RuleFixPlanner.cs`, `RulebookValues.cs`, `UserSettings.cs`, new tests and a REGRESSION_LOG entry. Civil net10 tests: 0 failed; net48 compiles. Not tested in AutoCAD.

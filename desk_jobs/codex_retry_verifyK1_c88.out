@@ -1,0 +1,11 @@
+== verifyK1_c88 (usage 27.0% -> 27.0%): AUTOCAD CLOSED
+
+1. **NOT STARTED:** Both Explorer windows were minimised; the screen tool refused the required first screenshot. All four looks remain **NOT TESTED**.
+2. **Installed:** Civil 3.0.88, Manager 1.1.88, Structural 1.0.125.
+3. **Safe end:** Lock released. No settings changed, drawings saved or exports created.
+4. **Report:** [K1 verification report](/C:/Lisp%20Files/_TEST_COPIES_20260923/CODEX_VERIFY_K1_20261101_1304.md).
+== verifyK1_c88 (usage 28.0% -> 29.0%): AUTOCAD CLOSED
+
+1. **Results:** 2 PASS, 1 FAIL, 1 NOT TESTED; all SURE. Pit Schedule export and Excel opening passed. CDCALCÔÇÖs requested XLSX was missing after Save. OFF control skipped: no GO flag.
+2. **Clean end:** Excel closed; lock released; all four settings hashes unchanged. No drawing saved. FIXTURES WANTED: none.
+3. **Report:** [K1 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_K1_20261101_1400.md>).

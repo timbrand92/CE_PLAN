@@ -1,3 +1,3 @@
-# CE 02 Fri 30 Oct 2026: AutoCAD filler 2 (Rule 15): the gap-closing cases N40 to N44b. Runs spec_gap_cases_ordered.txt through chain4 (30 s all-clear wait, honours ROBOT_STOP_AT.txt). Started by acad_watchdog.ps1 from FILL_SCRIPTS.txt. No model tokens.
+# CE 02 Fri 30 Oct 2026: AutoCAD filler 2 (Rule 15): the gap-closing cases N40 to N44b. Runs spec_gap_typed.txt through chain4 (30 s all-clear wait, honours ROBOT_STOP_AT.txt). Started by acad_watchdog.ps1 from FILL_SCRIPTS.txt. No model tokens.
 $env:CE_RUNNER_TIM_AWAY = '1'
-& pwsh -NoProfile -File 'C:\ce-fx\c75regrade3\chain4.ps1' -SpecFile 'C:\ce-fx\retest\spec_gap_cases_ordered.txt' -StopFirst '2026-10-31 05:00' -StopAll '2026-10-31 05:30' -Fresh
+& pwsh -NoProfile -File 'C:\ce-fx\c75regrade3\chain4.ps1' -SpecFile 'C:\ce-fx\retest\spec_gap_typed.txt' -StopFirst '2026-10-31 05:00' -StopAll '2026-10-31 05:30' -Fresh

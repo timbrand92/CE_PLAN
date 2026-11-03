@@ -1,0 +1,7 @@
+== cx_lf09 (usage 28.0% -> 30.0%): 1. **FOR TIM — BLOCKED:** BUG-917 implemented in draft [PR #1657](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1657). Five source checks pass; 14 added tests remain unrun because the shared build lock stayed occupied. Builds and pictures remain unverified.
+2. **Skipped:** BUG-913–916 have existing draft coverage; BUG-915’s remaining gap is documented.
+3. **Report:** [Saved and pushed](C:/CE_PLAN/areas/CODEX_LEDGER_FIX_BATCH09_23OCT.md). Nothing installed; AutoCAD not started.
+
+---
+
+1. **Handoff:** `cx2/bug-917-update-stages` at `ae113f75`. Compiled tests: **0**; full totals pending.

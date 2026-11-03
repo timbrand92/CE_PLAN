@@ -1,0 +1,15 @@
+== cx_audit_gate (usage 22.0% -> 24.0%): 1. **BLOCKERS: YES.** Four confirmed delivery gaps: administrator-only installer, no normal first-install route, approvals tied to Tim’s folder paths, and packaging that rebuilds accepted files.
+
+2. **Audit complete.** [Findings report](C:/CE_PLAN/areas/CODEX_AUDIT_GATE_22OCT.md) contains 14 findings and a 22-step clean-PC checklist. The new update planners have no production callers and cannot launch an install.
+
+---
+
+1. **Saved and pushed.** Only the findings file committed: `5966e4e9`. Leak scan passed.
+2. **Read-only limits honoured.** Plugin repository unchanged. No builds, tests, AutoCAD, installs or sub-agents.
+== cx_build_settings_rows (usage 24.0% -> 31.0%): 1. **DONE — [draft PR #1526](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1526).** Rows added; defaults unchanged. Three builds passed. The 150% fit test passed; all 16 pictures inspected. Nothing installed or tested in AutoCAD.
+
+2. **Saved:** [Report](C:/CE_PLAN/areas/CODEX_BUILD_SETTINGS_ROWS_22OCT.md) pushed. Layer colour findings remain unavailable—an existing limitation documented in the row.
+
+---
+
+1. **Claude handoff:** `cx/settings-rows-c60` @ `f1ab1589`. **34 tests added.** Full net10: **19,188 total; 19,168 passed, 19 skipped, 1 known failure; zero new failures.** Focused Settings: **109/109 on both net10 and net48**.

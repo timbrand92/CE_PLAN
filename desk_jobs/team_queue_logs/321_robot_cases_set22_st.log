@@ -1,0 +1,6 @@
+`C:\CE_PLAN\areas\ROBOT_CASE_DRAFTS_SET22_STRUC_MARKS_PUBLISH_02NOV.md` — verdict: partial. Two robot cases with failing twins are drafted (W1885 and W1908), and four fixes are blocked for the robot and have Codex look notes. None of it was run or validated.
+
+- **Blocked for the robot:** #1899, #1901, #1929 and #1931.
+- **Opus review first:** #1901 (Xrefs) and #1931 (Undo).
+- **Twins:** they claim the old behaviour, not a switch-off. The runner's `CS_Settings.json` setting line writes to `TIM_CE_CADTOOLS`, but Structural 1.0.125 reads `CE_STRUC_SUITE` first.
+- **Overlap:** set 09 already has W1879 for the same BUG-625 fix on #1879. It is named in the file.

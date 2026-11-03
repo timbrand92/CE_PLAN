@@ -1,0 +1,9 @@
+BUG-1042 now has a draft PR, **#1996** (B-173), against `claude/rel-20261102a`. It is built and unit-tested only, and nobody has opened it in AutoCAD. The bug stays open.
+
+- **Change:** PIT and PITEDIT now place or save with a blank cover level. A warning line says the cover is saved blank (Unknown), and it is never written as 0.000. Other missing inputs still block.
+- **Files:** `PitStartReadiness.cs`, `PitViewModel.cs`, `UserSettings.cs`, `REGRESSION_LOG.md` and the tests. `CE_SHARED` and the window files are untouched.
+- **Switch:** `pit.blankCoverIsWarningNotBlock`, on by default. Off brings back the old "Enter the cover level." block exactly.
+- **Tests:** 161 focused tests pass and the net48 compile has 0 errors.
+- **Flag:** three real files in `%APPDATA%\TIM_CE_CADTOOLS` changed during my test window. They are `CD_Settings.json`, which now carries an old date (4 Oct), `CD_RecentValues.json` and a Structural log. My run's redirect folder never created a settings folder, so I believe another job or a robot-driven AutoCAD wrote them, but I can't prove that.
+
+The report is `C:\CE_PLAN\areas\BUGFIX_w1042_REPORT_03NOV.md`, pushed. The worktree and scratch folder are removed.

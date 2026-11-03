@@ -1,0 +1,15 @@
+Fri 20:49 claimed the lock as Codex-X5
+Fri 20:49 try 1 starting verifyX5_c60
+Fri 21:38 claimed the lock as Codex-X5
+Fri 21:38 try 1 starting verifyX5_c60
+Fri 21:41 try 1 finished; report: CODEX_VERIFY_X5_20261023_2140.md; first line: NOT STARTED: gate 2.2 lock not free (pre-existing Codex-X5 launcher claim); gate 2.4 another run cx_lf32 has START without matching END. AUTOCAD CLOSED (Get-Process acad,accoreconsole returned nothing).
+Fri 21:46 claimed the lock as Codex-X5
+Fri 21:46 try 1 starting verifyX5_c60
+Fri 21:49 try 1 finished; report: CODEX_VERIFY_X5_20261023_2149.md; first line: NOT STARTED: AutoCAD already running (acad PID 68540); shared lock held by Claude-driverv3. AUTOCAD STILL RUNNING (foreign session; untouched).
+Fri 21:58 claimed the lock as Codex-X5
+Fri 21:59 try 2 starting verifyX5_c60
+Fri 22:02 try 2 finished; report: CODEX_VERIFY_X5_20261023_2201.md; first line: NOT STARTED: native computer control disabled; required fresh Explorer screenshot unavailable. AUTOCAD CLOSED
+Fri 22:11 claimed the lock as Codex-X5
+Fri 22:11 try 3 starting verifyX5_c60
+Fri 22:52 try 3 finished; report: CODEX_VERIFY_X5_20261023_2213.md; first line: AUTOCAD STILL RUNNING — a different session started after X5 closed and released its lock; X5 process 102796 is gone.
+Fri 22:52 done

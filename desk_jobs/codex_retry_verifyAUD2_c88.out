@@ -1,0 +1,13 @@
+== verifyAUD2_c88 (usage 43.0% -> 44.0%): AUTOCAD CLOSED
+
+1. **Unverified:** Three looks ran, but their key lines were missing from saved pictures: **NOT TESTED: EVIDENCE**. No PASS claimed. Nine others were not run under the AUD2 list.
+
+2. **Safe end:** Settings unchanged, nothing saved, lock released. Installed: Civil 3.0.89, Manager 1.1.89, Structural 1.0.125.
+
+3. **Report:** [AUD2 report](<C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_AUD2_20261102_1524.md>). PASS/FAIL/DIFFERENT/BLOCKED: 0; NOT TESTED: 12. SURE: 9; UNSURE: 3.
+== verifyAUD2_c88 (usage 48.0% -> 48.0%): AUTOCAD CLOSED
+
+1. **BLOCKED.** The briefÔÇÖs F2 instruction ran CLEAN instead of opening history. I stopped and discarded changes. No audit PASS claimed.
+2. **Results.** 10 BLOCKED, 2 NOT TESTED, including parked AUD-12. Eight requested looks lack detailed steps in the supplied file.
+3. **Safe end.** Settings unchanged, drawing unsaved, lock released. Installed: Civil 3.0.89 / Manager 1.1.89 / Structural 1.0.125.
+4. **Report.** [Full audit record](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_AUD2_20261102_1710.md>).

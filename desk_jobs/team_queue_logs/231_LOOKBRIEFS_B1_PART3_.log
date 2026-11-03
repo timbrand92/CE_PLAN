@@ -1,0 +1,9 @@
+`C:\CE_PLAN\areas\LOOKBRIEFS_B1_PART3_02NOV.md` is written: briefs for PRs 13 to 18, covering #1955, #1958, #1969, #1970, #1972 and #1923. The order gave `C:\CE_PLANreas\`, which looks like a typo, so the file is in `areas\`. All six PRs are in cf059dcf (3.0.90) and none is in the installed 3.0.89. Nothing was built, tested or run, and none is proven in AutoCAD.
+
+**Verdict:**
+- **Robot first, then a look:** #1972.
+- **Looks:** #1955 and #1923. #1923 ships OFF, so it changes nothing on the installed settings.
+- **Not testable on this PC:** #1969, which needs a comma-region PC.
+- **No look possible:** #1958 and #1970.
+
+I could not read the PR descriptions (no `gh` on the tool path), so I used the merge diffs, REGRESSION_LOG and the robot reports.

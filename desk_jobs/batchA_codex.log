@@ -1,0 +1,22 @@
+Sun 04:39:48 batch A script started; waits for 13:00
+Sun 13:00:27 it is 13:00 or later
+Sun 13:00:28 HOLD_ROBOT.flag set; waiting for the robot AutoCAD to end
+Sun 13:02:48 backed up CD_RecentValues.json sha 2772272A952C
+Sun 13:02:48 backed up CD_Settings.json sha ACD64E79A33B
+Sun 13:02:48 backed up CS_Settings.json sha D604CE689671
+Sun 13:02:48 backed up settings.json sha EFE307C4FC74
+Sun 13:02:48 Codex usage before: 27 percent (queue.log last usage line)
+Sun 13:02:48 STOP_CODEX.flag lifted
+Sun 13:02:48 starting verifyK1_c88
+Sun 13:04:17 verifyK1_c88 launcher finished
+Sun 13:04:17 starting verifyA78_c88
+Sun 13:09:21 verifyA78_c88 launcher finished
+Sun 13:09:21 starting verifyS467_c88
+Sun 13:14:49 verifyS467_c88 launcher finished
+Sun 13:14:49 Codex usage after: 27 percent
+Sun 13:14:49 STOP_CODEX.flag put back
+Sun 13:14:49 unchanged CD_Settings.json sha ACD64E79A33B
+Sun 13:14:49 unchanged CS_Settings.json sha D604CE689671
+Sun 13:14:49 RESTORED CD_RecentValues.json: was sha 848EB3D6CC7C, back to 2772272A952C and the original date
+Sun 13:14:49 unchanged settings.json sha EFE307C4FC74
+Sun 13:14:49 HOLD_ROBOT.flag removed; the robot takes AutoCAD back. Batch A ends.

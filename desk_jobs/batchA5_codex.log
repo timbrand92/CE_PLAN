@@ -1,0 +1,16 @@
+Sun 21:56:55 backed up CD_RecentValues.json sha F00D4D956FDC
+Sun 21:56:55 backed up CD_Settings.json sha ACD64E79A33B
+Sun 21:56:55 backed up CS_Settings.json sha D604CE689671
+Sun 21:56:55 backed up settings.json sha EFE307C4FC74
+Sun 21:56:55 Codex usage before: 29 percent
+Sun 21:56:55 STOP_CODEX.flag lifted (STOP_SUPERVISOR.flag stays up)
+Sun 21:57:03 starting verifyA78c_c88
+Sun 22:07:57 verifyA78c_c88 launcher finished
+Sun 22:07:57 Codex usage after: 30 percent
+Sun 22:07:57 unchanged settings.json sha EFE307C4FC74
+Sun 22:07:57 unchanged CD_Settings.json sha ACD64E79A33B
+Sun 22:07:57 unchanged CS_Settings.json sha D604CE689671
+Sun 22:07:57 RESTORED CD_RecentValues.json: was 2F6F98C708A5, back to F00D4D956FDC
+Sun 22:07:57 HOLD_ROBOT.flag removed.
+Sun 22:07:57 restarting chain4 on spec_passc.txt (build 3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527; finished packs are skipped)
+Sun 22:07:57 Batch A5 ends.

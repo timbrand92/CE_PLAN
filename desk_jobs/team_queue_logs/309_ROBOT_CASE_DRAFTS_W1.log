@@ -1,0 +1,3 @@
+`C:\CE_PLAN\areas\ROBOT_CASE_DRAFTS_W1052_W900_02NOV.md` is written, with two robot cases and their broken twins (W1027, W1042, orders 800 to 803) and four BLOCKED-FOR-ROBOT items with Codex steps. Nothing was built, run or checked with the runner's `validate`, and none of the five fixes is in Civil 3.0.89 or in candidates b1 and b2, so the cases are expected to fail until a build holds the fixes.
+
+The order's path `C:\CE_PLANreas` looked like a lost backslash, so I wrote to `C:\CE_PLAN\areas\`. BUG-1052 and BUG-396 were skipped because neither opened a PR.

@@ -1,0 +1,1521 @@
+{
+  "header": {
+    "run_id": "RUN-20261030-1347-C3.0.86-aC1",
+    "started": "2026-10-30 13:47:44",
+    "finished": "2026-10-30 14:09:27",
+    "build": {
+      "civil": {
+        "product_version": "3.0.86+5888ee757244aac89283aaaf2ba68e51470ecbb3",
+        "file_version": "3.0.86.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.86+5888ee757244aac89283aaaf2ba68e51470ecbb3",
+        "file_version": "1.1.86.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.86+5888ee75 / struc 1.0.125+204dfad2 / mgr 1.1.86+5888ee75",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "8A5BB62A0833C2B1E2B4AE62D964F0E134D2BD3AA3A45E0C431F6BFD22A94A40",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.86+5888ee757244aac89283aaaf2ba68e51470ecbb3; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.86+5888ee757244aac89283aaaf2ba68e51470ecbb3",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4CD773B85EC5, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 13955AAA60D1, case_runner_lib.ps1 8F9B8DCBB473, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 2 case file(s) plus 1 shared setup(s); pack SHA-256 8A5BB62A0833C2B1E2B4AE62D964F0E134D2BD3AA3A45E0C431F6BFD22A94A40; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json B3B5A004B929 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Fri 30 Oct 2026 13:47 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 1,
+    "FAIL": 0,
+    "FAIL_known": 1,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 1
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261030-1347-C3.0.86-aC1-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-30 13:52:46",
+      "finished": "2026-10-30 13:58:20",
+      "result": "FAIL",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31353061_B1.dwg",
+      "cases": [
+        "N31_BROKEN"
+      ],
+      "calibration": null,
+      "clean": false,
+      "acad_left": 0,
+      "lock_holder_after": "Codex-J1",
+      "lock_after": "held",
+      "guard_clear": false,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : B3B5A004B929 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "Alt+F4 (close posted to the AutoCAD window)",
+        "error": ""
+      }
+    },
+    {
+      "session_id": "RUN-20261030-1347-C3.0.86-aC1-s2",
+      "phase": "main",
+      "session_no": 2,
+      "started": "2026-10-30 14:04:43",
+      "finished": "2026-10-30 14:09:27",
+      "result": "FAIL",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31404492_B1.dwg",
+      "cases": [
+        "N31"
+      ],
+      "calibration": null,
+      "clean": false,
+      "acad_left": 0,
+      "lock_holder_after": "Codex-J4",
+      "lock_after": "held",
+      "guard_clear": false,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : B3B5A004B929 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "N31_BROKEN",
+      "proves_bugs": "",
+      "title": "BROKEN VARIANT of N31: the hand-placed switch is off, so the pit move's tidy and Tidy labels treat the hand-placed text as CE's own (must FAIL)",
+      "kind": "deterministic",
+      "order": 311,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "red-before-green proof for N31 (UX-LBL-01, daily card D13 pit-move half; a contrast with hand-placed protection off, not the card's literal profile A)",
+      "bug": "",
+      "known_fail": "BROKEN-VARIANT",
+      "reviewed_against": "",
+      "variant_of": "N31",
+      "expected": "This variant is wrong on purpose: with the switch off the text moved by hand is not marked, so the pit move's clash tidy moves it clear (more than 20 mm) and Tidy labels counts 'Placed by hand (left alone) 0': '$pm_moved <= 20' and 'history has Placed by hand (left alone) 1' fail. The 5 mm hand move, the 10 mm pit move and the 'moved more than 1 mm' check pass.",
+      "why_not_unit": "It exists only to prove N31's checks go red when the switch is off.",
+      "not_automated": [],
+      "file_sha256": "A10D737F3C5DDCD6252F469105846338BE7C6684C49CF95BFB12C26C6DF91CDD",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "$pm_moved = 284.9 (expected <= 20)",
+      "started": "2026-10-30 13:53:49",
+      "seconds": 210.4,
+      "setup": "SETUP-R47",
+      "setup_note": "shared setup SETUP-R47 run here for the first time at 13:56:10",
+      "steps": [
+        {
+          "n": 1,
+          "phase": "setup",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "copy CLDV31353061_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "setup",
+          "verb": "pick-first",
+          "text": "pick-first \"109D56\"",
+          "ok": true,
+          "seconds": 2.5,
+          "evidence": "pick-first 109D56: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"109D56\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 3,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"_.MOVE{NL}0,0{NL}0,2000\" -Force -> $setup_move",
+          "ok": true,
+          "seconds": 4.1,
+          "evidence": "typed '_.MOVE 0,0 0,2000': Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,2000 | [CE Civil] pipe P3 -> P2 label: no clear spot among it..."
+        },
+        {
+          "n": 4,
+          "phase": "setup",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "setup",
+          "verb": "ms-count",
+          "text": "ms-count -> $n0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 6,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"PIT{NL}150000,-80000\" -Force -ExpectWindow \"New Pit\" -> $pit_t1",
+          "ok": true,
+          "seconds": 9.7,
+          "evidence": "typed 'PIT 150000,-80000': Command: | Command: PIT | Specify pit insertion point: 150000,-80000 | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C..."
+        },
+        {
+          "n": 7,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.CoverLevel\" \"19.000\"",
+          "ok": true,
+          "seconds": 7.3,
+          "evidence": "ui set 'New Pit' C2.CoverLevel = 19.000: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 8,
+          "phase": "setup",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pit\" \"New pit, Continue placement\" -> $pit_t2",
+          "ok": true,
+          "seconds": 37.4,
+          "evidence": "pressed 'New pit, Continue placement' in /New Pit/: window closed = True"
+        },
+        {
+          "n": 9,
+          "phase": "setup",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pit\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /^New Pit/ closed after 0 s"
+        },
+        {
+          "n": 10,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e1",
+          "ok": true,
+          "seconds": 8.4,
+          "evidence": "esc-prompt: Command: | Command: PIT | Specify pit insertion point: 150000,-80000 | Specify pit label insertion point: *Cancel* | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or qu..."
+        },
+        {
+          "n": 11,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e2",
+          "ok": true,
+          "seconds": 7.9,
+          "evidence": "esc-prompt: Command: PIT | Specify pit insertion point: 150000,-80000 | Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit..."
+        },
+        {
+          "n": 12,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e3",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "esc-prompt: Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit, or press Esc to stop. | Specify pit insertion point: *Canc..."
+        },
+        {
+          "n": 13,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-80000{NL}170000,-80000{NL}\" -Force -ExpectWindow \"New Pipe\" -> $pipe_t1",
+          "ok": true,
+          "seconds": 9.3,
+          "evidence": "typed 'CD 150000,-80000 170000,-80000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-80000 | Specify second point: 170000,-80000 | Se..."
+        },
+        {
+          "n": 14,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 5.2,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 15,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.900\"",
+          "ok": true,
+          "seconds": 5.3,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.900: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 16,
+          "phase": "setup",
+          "verb": "ui-dump",
+          "text": "ui-dump \"New Pipe\" -> $np_win",
+          "ok": true,
+          "seconds": 4.1,
+          "evidence": "ui-dump 'New Pipe': 103 controls, tabs: "
+        },
+        {
+          "n": 17,
+          "phase": "setup",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $pipe_t2",
+          "ok": true,
+          "seconds": 28.7,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 18,
+          "phase": "setup",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 19,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pipe_e1",
+          "ok": true,
+          "seconds": 2.8,
+          "evidence": "esc-prompt: [CE] Pipe kept. One or more ends have no proven connection. The route stays drawn; confirm the intended connection later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: P8 -> Open en..."
+        },
+        {
+          "n": 20,
+          "phase": "setup",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 21,
+          "phase": "setup",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_after_setup",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31353061_B1.dwg]"
+        },
+        {
+          "n": 22,
+          "phase": "setup",
+          "verb": "ms-new",
+          "text": "ms-new $n0 -> $new_all",
+          "ok": true,
+          "seconds": 0.8,
+          "evidence": "6 object(s) after index 1034 (model space now 1040); by type: AcDbBlockReference 2; AcDbMText 3; CeCvlPipeObject 1; first: 11C5AD AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C651 CeCvlPipeObject STORMWATER PIPE ; 11C657 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 200 ; 11C65C AcDbMText 20TEXT IL 18.000 ; 11C661 AcDbMText 20TEXT IL 17.900 ; 11C683 AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_all \"text~^IL 18\\.000$\" \"near=150000,-80000,1500\" -> $il0",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "selected 1 of 6: 11C65C IL 18.000 20TEXT"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il0 handle -> $ilh",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C65C"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il0 x -> $il_x0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 150425"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il0 y -> $il_y0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'y' = -79817.5"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_all object=AcDbBlockReference \"layer=STORMWATER PIT\" -> $p8",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "selected 1 of 6: 11C5AD PIT BLOCK 3 STORMWATER PIT"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $p8 handle -> $p8h",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C5AD"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $p8 x -> $p8_x0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 150000"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $p8 y -> $p8_y0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'y' = -80000"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first $ilh",
+          "ok": true,
+          "seconds": 26.1,
+          "evidence": "pick-first 11C65C: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"11C65C\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.MOVE{NL}0,0{NL}0,-5\" -Force -> $il_move",
+          "ok": true,
+          "seconds": 2.5,
+          "evidence": "typed '_.MOVE 0,0 0,-5': Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,-5 | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up ..."
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $n0 -> $after_hand",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "6 object(s) after index 1034 (model space now 1040); by type: AcDbBlockReference 2; AcDbMText 3; CeCvlPipeObject 1; first: 11C5AD AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C651 CeCvlPipeObject STORMWATER PIPE ; 11C657 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 200 ; 11C65C AcDbMText 20TEXT IL 18.000 ; 11C661 AcDbMText 20TEXT IL 17.900 ; 11C683 AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after_hand \"handle={$ilh}\" -> $il1",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "selected 1 of 6: 11C65C IL 18.000 20TEXT"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "dist",
+          "text": "dist $il1 \"{$il_x0},{$il_y0}\" -> $hand_moved",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "distance from object 11C65C to 150425,-79817.5 = 5"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il1 x -> $il_x1",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "field 'x' = 150425"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il1 y -> $il_y1",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "field 'y' = -79822.5"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"10EC5D\"",
+          "ok": true,
+          "seconds": 3.3,
+          "evidence": "pick-first 10EC5D: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"10EC5D\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.MOVE{NL}0,0{NL}81839,-53713\" -Force -> $spot_move",
+          "ok": true,
+          "seconds": 12.0,
+          "evidence": "typed '_.MOVE 0,0 81839,-53713': Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 81839,-53713 | SETTINGS GUARD ACTIVE: 1 settings file(s) are ba..."
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first $p8h",
+          "ok": true,
+          "seconds": 2.3,
+          "evidence": "pick-first 11C5AD: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"11C5AD\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.MOVE{NL}0,0{NL}0,10\" -Force -> $pit_move",
+          "ok": true,
+          "seconds": 2.4,
+          "evidence": "typed '_.MOVE 0,0 0,10': Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,10 | [CE Civil] Tidy-up after the move: pipe P8 -> open end s..."
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 2",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "slept 2 s"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $n0 -> $after_pit",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "6 object(s) after index 1034 (model space now 1040); by type: AcDbBlockReference 2; AcDbMText 3; CeCvlPipeObject 1; first: 11C5AD AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C651 CeCvlPipeObject STORMWATER PIPE ; 11C657 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 198 ; 11C65C AcDbMText 20TEXT IL 18.000 ; 11C661 AcDbMText 20TEXT IL 17.90 ; 11C683 AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after_pit \"handle={$p8h}\" -> $p8b",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 6: 11C5AD PIT BLOCK 3 STORMWATER PIT"
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "dist",
+          "text": "dist $p8b \"{$p8_x0},{$p8_y0}\" -> $pit_moved",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "distance from object 11C5AD to 150000,-80000 = 10"
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after_pit \"handle={$ilh}\" -> $il2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 6: 11C65C IL 18.000 20TEXT"
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "dist",
+          "text": "dist $il2 \"{$il_x1},{$il_y1}\" -> $pm_moved",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "distance from object 11C65C to 150425,-79822.5 = 284.9"
+        },
+        {
+          "n": 29,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM{NL}_W{NL}148500,-81500{NL}152500,-78500\" -Force",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "typed '_.ZOOM _W 148500,-81500 152500,-78500': Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _W | Specify first corner: 148500,-81500 | Specify oppo..."
+        },
+        {
+          "n": 30,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 31,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDTIDYLABELS{NL}All\" -Force -> $tidy",
+          "ok": true,
+          "seconds": 2.4,
+          "evidence": "typed 'CDTIDYLABELS All': Command: | Command: CDTIDYLABELS | Tidy labels on [All pipes/Select pipes] <All> [All/Select] <All>: All | [CE] Will move 0 � Placed by hand (left alone) 0 � No clear spot found 1 | [CE] No clear spot found: pipe P3 -> P..."
+        },
+        {
+          "n": 32,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $tidy_esc",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "esc-prompt: Command: CDTIDYLABELS | Tidy labels on [All pipes/Select pipes] <All> [All/Select] <All>: All | [CE] Will move 0 � Placed by hand (left alone) 0 � No clear spot found 1 | [CE] No clear spot found: pipe P3 -> P2 label. Mo..."
+        },
+        {
+          "n": 33,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "wait for idle: idle"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "number $hand_moved = 5 +- 0.5",
+          "ok": true,
+          "expected": "= 5",
+          "actual": "5",
+          "evidence": "$hand_moved = 5 (expected = 5 +- 0.5)"
+        },
+        {
+          "n": 2,
+          "text": "number $pit_moved = 10 +- 0.5",
+          "ok": true,
+          "expected": "= 10",
+          "actual": "10",
+          "evidence": "$pit_moved = 10 (expected = 10 +- 0.5)"
+        },
+        {
+          "n": 3,
+          "text": "number $pm_moved > 1",
+          "ok": true,
+          "expected": "> 1",
+          "actual": "284.9",
+          "evidence": "$pm_moved = 284.9 (expected > 1)"
+        },
+        {
+          "n": 4,
+          "text": "number $pm_moved <= 20",
+          "ok": false,
+          "expected": "<= 20",
+          "actual": "284.9",
+          "evidence": "$pm_moved = 284.9 (expected <= 20)"
+        },
+        {
+          "n": 5,
+          "text": "history has \"Placed by hand (left alone) 1\"",
+          "ok": false,
+          "expected": "command line has 'Placed by hand (left alone) 1'",
+          "actual": "0 matching line(s)",
+          "evidence": "no command-line line contains 'Placed by hand (left alone) 1' (69 lines read: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"109D56\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2...; log file CLDV31353061_B1_1cd102a69.log, from byte 2350)"
+        },
+        {
+          "n": 6,
+          "text": "record $pm_moved \"how far the unmarked text moved when its pit moved 10 mm (mm)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "284.9",
+          "evidence": "RECORDED, not judged: how far the unmarked text moved when its pit moved 10 mm (mm) = 284.9"
+        },
+        {
+          "n": 7,
+          "text": "record $tidy \"FULL what CDTIDYLABELS printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDTIDYLABELS | Tidy labels on [All pipes/Select pipes] <All> [All/Select] <All>: All | [CE] Will move 0 � Placed by hand (left alone) 0 � No clear spot found 1 | [CE] No clear spot found: pipe P3 -> P2 label. Move it by hand. | [CE] No CE label needs to move. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL what CDTIDYLABELS printed = Command: | Command: CDTIDYLABELS | Tidy labels on [All pipes/Select pipes] <All> [All/Select] <All>: All | [CE] Will move 0 � Placed by hand (left alone) 0 � No clear spot found 1 | [CE] No clear spot found: pipe P3 -> P2 label. Move it by hand. | [CE] No CE label needs to move. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 247 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: PIT completed 71399 ms ; Command outcome: CD completed 53421 ms ; Command outcome: CDTIDYLABELS completed 49 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-30 13:57:19",
+      "session_id": "RUN-20261030-1347-C3.0.86-aC1-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [
+          "known failure (BROKEN-VARIANT): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "N31",
+      "proves_bugs": "",
+      "title": "With the hand-placed switch on, a pipe text moved by hand onto a clash is not shoved clear when its pit is moved (it moves more than 1 mm and no more than 20 mm, carried with its pipe end), and a Tidy labels preview, cancelled with Esc, still counts it as hand-placed and shows no move for it",
+      "kind": "deterministic",
+      "order": 310,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "UX-LBL-01 hand-placed label stays, the pit-move half (daily card D13 profile B step 3, switch ON; read as 'no CE tidy moves it', see the header)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "With both switches on: the new pipe's start invert text IL 18.000 at P8 is moved by hand 5 mm down; the SPOT LEVEL block 10EC5D is moved onto it as in R16; pit P8 is then moved 10 mm north with MOVE: the pit moves 10 mm and the hand-placed text moves more than 1 mm and no more than 20 mm (carried with its pipe end, never shoved 275 mm clear); CDTIDYLABELS All is then only a PREVIEW closed with Esc (nothing is applied): it counts 'Placed by hand (left alone) 1', lists no 'start invert text would move' line, and the text does not move (0 mm, within 0.5); the drawing holds the same number of objects before and after the preview.",
+      "why_not_unit": "The hand-placed mark is written by a real AutoCAD MOVE of the text, read by the clash tidy that a real MOVE of the pit sets off, and read again by a live Tidy labels preview in the real drawing (cancelled with Esc, so nothing is applied).",
+      "not_automated": [
+        "The card's literal 'move P8 500 mm and the label is exactly where it was' is not checked: the source carries every pipe text with its pipe end, so it would fail by design (a card wording question for Tim, finding in the batch 4 spec).",
+        "The card names 'the pipe label'; this case moves the start invert text because it is the text with a proven clash (R16, N27). The rule marks any pipe text moved on its own.",
+        "Tim's own file has both switches OFF; this proves the switch-ON setting only. The twin N31_BROKEN is a contrast with tidy ON and hand-placed protection OFF, not D13's literal profile A (which changes neither switch).",
+        "The later CDTIDYLABELS operation is a preview followed by Esc; it does not exercise an applied tidy."
+      ],
+      "file_sha256": "E6CB28593940A0E711E938A24A337436B9C9CF572E98A6CB24A3502331868413",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-30 14:06:09",
+      "seconds": 173.1,
+      "setup": "SETUP-R47",
+      "setup_note": "shared setup SETUP-R47 run here for the first time at 14:08:31",
+      "steps": [
+        {
+          "n": 1,
+          "phase": "setup",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV31404492_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "setup",
+          "verb": "pick-first",
+          "text": "pick-first \"109D56\"",
+          "ok": true,
+          "seconds": 2.4,
+          "evidence": "pick-first 109D56: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"109D56\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 3,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"_.MOVE{NL}0,0{NL}0,2000\" -Force -> $setup_move",
+          "ok": true,
+          "seconds": 3.1,
+          "evidence": "typed '_.MOVE 0,0 0,2000': Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,2000 | [CE Civil] pipe P3 -> P2 label: no clear spot among it..."
+        },
+        {
+          "n": 4,
+          "phase": "setup",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "setup",
+          "verb": "ms-count",
+          "text": "ms-count -> $n0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 6,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"PIT{NL}150000,-80000\" -Force -ExpectWindow \"New Pit\" -> $pit_t1",
+          "ok": true,
+          "seconds": 11.1,
+          "evidence": "typed 'PIT 150000,-80000': Command: | Command: PIT | Specify pit insertion point: 150000,-80000 | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C..."
+        },
+        {
+          "n": 7,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.CoverLevel\" \"19.000\"",
+          "ok": true,
+          "seconds": 8.2,
+          "evidence": "ui set 'New Pit' C2.CoverLevel = 19.000: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 8,
+          "phase": "setup",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pit\" \"New pit, Continue placement\" -> $pit_t2",
+          "ok": true,
+          "seconds": 34.1,
+          "evidence": "pressed 'New pit, Continue placement' in /New Pit/: window closed = True"
+        },
+        {
+          "n": 9,
+          "phase": "setup",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pit\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /^New Pit/ closed after 0 s"
+        },
+        {
+          "n": 10,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e1",
+          "ok": true,
+          "seconds": 7.3,
+          "evidence": "esc-prompt: Command: | Command: PIT | Specify pit insertion point: 150000,-80000 | Specify pit label insertion point: *Cancel* | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or qu..."
+        },
+        {
+          "n": 11,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e2",
+          "ok": true,
+          "seconds": 7.3,
+          "evidence": "esc-prompt: Command: PIT | Specify pit insertion point: 150000,-80000 | Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit..."
+        },
+        {
+          "n": 12,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e3",
+          "ok": true,
+          "seconds": 3.4,
+          "evidence": "esc-prompt: Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit, or press Esc to stop. | Specify pit insertion point: *Canc..."
+        },
+        {
+          "n": 13,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-80000{NL}170000,-80000{NL}\" -Force -ExpectWindow \"New Pipe\" -> $pipe_t1",
+          "ok": true,
+          "seconds": 11.8,
+          "evidence": "typed 'CD 150000,-80000 170000,-80000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-80000 | Specify second point: 170000,-80000 | Se..."
+        },
+        {
+          "n": 14,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 8.4,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 15,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.900\"",
+          "ok": true,
+          "seconds": 8.2,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.900: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 16,
+          "phase": "setup",
+          "verb": "ui-dump",
+          "text": "ui-dump \"New Pipe\" -> $np_win",
+          "ok": true,
+          "seconds": 3.9,
+          "evidence": "ui-dump 'New Pipe': 103 controls, tabs: "
+        },
+        {
+          "n": 17,
+          "phase": "setup",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $pipe_t2",
+          "ok": true,
+          "seconds": 26.1,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 18,
+          "phase": "setup",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 19,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pipe_e1",
+          "ok": true,
+          "seconds": 3.3,
+          "evidence": "esc-prompt: [CE] Pipe kept. One or more ends have no proven connection. The route stays drawn; confirm the intended connection later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: P8 -> Open en..."
+        },
+        {
+          "n": 20,
+          "phase": "setup",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 21,
+          "phase": "setup",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_after_setup",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31404492_B1.dwg]"
+        },
+        {
+          "n": 22,
+          "phase": "setup",
+          "verb": "ms-new",
+          "text": "ms-new $n0 -> $new_all",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "6 object(s) after index 1034 (model space now 1040); by type: AcDbBlockReference 2; AcDbMText 3; CeCvlPipeObject 1; first: 11C5AD AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C651 CeCvlPipeObject STORMWATER PIPE ; 11C657 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 200 ; 11C65C AcDbMText 20TEXT IL 18.000 ; 11C661 AcDbMText 20TEXT IL 17.900 ; 11C683 AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_all \"text~^IL 18\\.000$\" \"near=150000,-80000,1500\" -> $il0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 6: 11C65C IL 18.000 20TEXT"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il0 handle -> $ilh",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C65C"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il0 x -> $il_x0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 150425"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il0 y -> $il_y0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'y' = -79817.5"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_all object=AcDbBlockReference \"layer=STORMWATER PIT\" -> $p8",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 6: 11C5AD PIT BLOCK 3 STORMWATER PIT"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $p8 handle -> $p8h",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C5AD"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $p8 x -> $p8_x0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 150000"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $p8 y -> $p8_y0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'y' = -80000"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first $ilh",
+          "ok": true,
+          "seconds": 2.2,
+          "evidence": "pick-first 11C65C: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"11C65C\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.MOVE{NL}0,0{NL}0,-5\" -Force -> $il_move",
+          "ok": true,
+          "seconds": 2.2,
+          "evidence": "typed '_.MOVE 0,0 0,-5': Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,-5 | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up ..."
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $n0 -> $after_hand",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "6 object(s) after index 1034 (model space now 1040); by type: AcDbBlockReference 2; AcDbMText 3; CeCvlPipeObject 1; first: 11C5AD AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C651 CeCvlPipeObject STORMWATER PIPE ; 11C657 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 200 ; 11C65C AcDbMText 20TEXT IL 18.000 ; 11C661 AcDbMText 20TEXT IL 17.900 ; 11C683 AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after_hand \"handle={$ilh}\" -> $il1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 6: 11C65C IL 18.000 20TEXT"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "dist",
+          "text": "dist $il1 \"{$il_x0},{$il_y0}\" -> $hand_moved",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "distance from object 11C65C to 150425,-79817.5 = 5"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il1 x -> $il_x1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 150425"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il1 y -> $il_y1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'y' = -79822.5"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read 10EC5D -> $spot0",
+          "ok": true,
+          "seconds": 0.4,
+          "evidence": "ent-read 10EC5D: {\"handle\":\"10EC5D\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"*U177\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[68823.77597149507,-26019.48738538451,18884.357734427194],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"LEVEL\",\"t..."
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"10EC5D\"",
+          "ok": true,
+          "seconds": 2.2,
+          "evidence": "pick-first 10EC5D: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"10EC5D\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.MOVE{NL}0,0{NL}81839,-53713\" -Force -> $spot_move",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "typed '_.MOVE 0,0 81839,-53713': Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 81839,-53713 | SETTINGS GUARD ACTIVE: 1 settings file(s) are ba..."
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first $p8h",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "pick-first 11C5AD: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"11C5AD\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.MOVE{NL}0,0{NL}0,10\" -Force -> $pit_move",
+          "ok": true,
+          "seconds": 2.3,
+          "evidence": "typed '_.MOVE 0,0 0,10': Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,10 | [CE Civil] pipe P8 -> open end start invert text: sits o..."
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 2",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "slept 2 s"
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_pm",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31404492_B1.dwg]"
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $n0 -> $after_pit",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "6 object(s) after index 1034 (model space now 1040); by type: AcDbBlockReference 2; AcDbMText 3; CeCvlPipeObject 1; first: 11C5AD AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C651 CeCvlPipeObject STORMWATER PIPE ; 11C657 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 198 ; 11C65C AcDbMText 20TEXT IL 18.000 ; 11C661 AcDbMText 20TEXT IL 17.90 ; 11C683 AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after_pit \"handle={$p8h}\" -> $p8b",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 6: 11C5AD PIT BLOCK 3 STORMWATER PIT"
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "dist",
+          "text": "dist $p8b \"{$p8_x0},{$p8_y0}\" -> $pit_moved",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "distance from object 11C5AD to 150000,-80000 = 10"
+        },
+        {
+          "n": 29,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after_pit \"handle={$ilh}\" -> $il2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 6: 11C65C IL 18.000 20TEXT"
+        },
+        {
+          "n": 30,
+          "phase": "case",
+          "verb": "dist",
+          "text": "dist $il2 \"{$il_x1},{$il_y1}\" -> $pm_moved",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "distance from object 11C65C to 150425,-79822.5 = 9.9"
+        },
+        {
+          "n": 31,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il2 x -> $il_x2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 150425.089759786"
+        },
+        {
+          "n": 32,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il2 y -> $il_y2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'y' = -79812.6011604955"
+        },
+        {
+          "n": 33,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM{NL}_W{NL}148500,-81500{NL}152500,-78500\" -Force",
+          "ok": true,
+          "seconds": 2.8,
+          "evidence": "typed '_.ZOOM _W 148500,-81500 152500,-78500': Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _W | Specify first corner: 148500,-81500 | Specify oppo..."
+        },
+        {
+          "n": 34,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 35,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $cnt0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1040 objects"
+        },
+        {
+          "n": 36,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDTIDYLABELS{NL}All\" -Force -> $tidy",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "typed 'CDTIDYLABELS All': Command: | Command: CDTIDYLABELS | Tidy labels on [All pipes/Select pipes] <All> [All/Select] <All>: All | [CE] Will move 0 � Placed by hand (left alone) 1 � No clear spot found 1 | [CE] No clear spot found: pipe P3 -> P..."
+        },
+        {
+          "n": 37,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $tidy_esc",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "esc-prompt: Command: CDTIDYLABELS | Tidy labels on [All pipes/Select pipes] <All> [All/Select] <All>: All | [CE] Will move 0 � Placed by hand (left alone) 1 � No clear spot found 1 | [CE] No clear spot found: pipe P3 -> P2 label. Mo..."
+        },
+        {
+          "n": 38,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 39,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $cnt1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1040 objects"
+        },
+        {
+          "n": 40,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $n0 -> $after_tidy",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "6 object(s) after index 1034 (model space now 1040); by type: AcDbBlockReference 2; AcDbMText 3; CeCvlPipeObject 1; first: 11C5AD AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C651 CeCvlPipeObject STORMWATER PIPE ; 11C657 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 198 ; 11C65C AcDbMText 20TEXT IL 18.000 ; 11C661 AcDbMText 20TEXT IL 17.90 ; 11C683 AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 41,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after_tidy \"handle={$ilh}\" -> $il3",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 6: 11C65C IL 18.000 20TEXT"
+        },
+        {
+          "n": 42,
+          "phase": "case",
+          "verb": "dist",
+          "text": "dist $il3 \"{$il_x2},{$il_y2}\" -> $tidy_moved",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "distance from object 11C65C to 150425.089759786,-79812.6011604955 = 0"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "count $il0 = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $il0 = 1 (expected = 1)"
+        },
+        {
+          "n": 2,
+          "text": "count $p8 = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $p8 = 1 (expected = 1)"
+        },
+        {
+          "n": 3,
+          "text": "number $hand_moved = 5 +- 0.5",
+          "ok": true,
+          "expected": "= 5",
+          "actual": "5",
+          "evidence": "$hand_moved = 5 (expected = 5 +- 0.5)"
+        },
+        {
+          "n": 4,
+          "text": "contains $spot0 \"SPOT LEVEL\"",
+          "ok": true,
+          "expected": "contains 'SPOT LEVEL'",
+          "actual": "{\"handle\":\"10EC5D\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"*U177\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[68823.77597149507,-26019.48738538451,18884.357734427194],\"rotation\":0.0,\"xsc...",
+          "evidence": "found 'SPOT LEVEL' in: {\"handle\":\"10EC5D\",\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"name\":\"*U177\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[68823.77597149507,-26019.48738538451..."
+        },
+        {
+          "n": 5,
+          "text": "contains $pit_move \"1 found\"",
+          "ok": true,
+          "expected": "contains '1 found'",
+          "actual": "Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,10 | [CE Civil] pipe P8 -> open end start...",
+          "evidence": "found '1 found' in: Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,1..."
+        },
+        {
+          "n": 6,
+          "text": "number $pit_moved = 10 +- 0.5",
+          "ok": true,
+          "expected": "= 10",
+          "actual": "10",
+          "evidence": "$pit_moved = 10 (expected = 10 +- 0.5)"
+        },
+        {
+          "n": 7,
+          "text": "not-contains $win_pm \"Edit Pit\"",
+          "ok": true,
+          "expected": "does not contain 'Edit Pit'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31404492_B1.dwg]",
+          "evidence": "'Edit Pit' is absent from: Autodesk AutoCAD 2027 - [CLDV31404492_B1.dwg]"
+        },
+        {
+          "n": 8,
+          "text": "number $pm_moved <= 20",
+          "ok": true,
+          "expected": "<= 20",
+          "actual": "9.9",
+          "evidence": "$pm_moved = 9.9 (expected <= 20)"
+        },
+        {
+          "n": 9,
+          "text": "number $pm_moved > 1",
+          "ok": true,
+          "expected": "> 1",
+          "actual": "9.9",
+          "evidence": "$pm_moved = 9.9 (expected > 1)"
+        },
+        {
+          "n": 10,
+          "text": "history has \"Placed by hand (left alone) 1\"",
+          "ok": true,
+          "expected": "command line has 'Placed by hand (left alone) 1'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CE] Will move 0 · Placed by hand (left alone) 1 · No clear spot found 1'"
+        },
+        {
+          "n": 11,
+          "text": "history absent \"start invert text would move\"",
+          "ok": true,
+          "expected": "command line lacks 'start invert text would move'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'start invert text would move' (69 lines read)"
+        },
+        {
+          "n": 12,
+          "text": "number $tidy_moved = 0 +- 0.5",
+          "ok": true,
+          "expected": "= 0",
+          "actual": "0",
+          "evidence": "$tidy_moved = 0 (expected = 0 +- 0.5)"
+        },
+        {
+          "n": 13,
+          "text": "equals $cnt1 $cnt0",
+          "ok": true,
+          "expected": "1040",
+          "actual": "1040",
+          "evidence": "value '1040' (expected '1040')"
+        },
+        {
+          "n": 14,
+          "text": "record $pm_moved \"how far the hand-placed text moved when its pit moved 10 mm (mm; expected about 10, carried with the pipe end)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "9.9",
+          "evidence": "RECORDED, not judged: how far the hand-placed text moved when its pit moved 10 mm (mm; expected about 10, carried with the pipe end) = 9.9"
+        },
+        {
+          "n": 15,
+          "text": "record $pit_move \"FULL what the pit MOVE printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,10 | [CE Civil] pipe P8 -> open end start invert text: sits on \"the block SPOT LEVEL\" but was placed by hand, so it stays. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL what the pit MOVE printed = Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,10 | [CE Civil] pipe P8 -> open end start invert text: sits on \"the block SPOT LEVEL\" but was placed by hand, so it stays. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 16,
+          "text": "record $il_move \"FULL what the hand MOVE of the invert text printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,-5 | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL what the hand MOVE of the invert text printed = Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,-5 | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 17,
+          "text": "record $tidy \"FULL what CDTIDYLABELS printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDTIDYLABELS | Tidy labels on [All pipes/Select pipes] <All> [All/Select] <All>: All | [CE] Will move 0 � Placed by hand (left alone) 1 � No clear spot found 1 | [CE] No clear spot found: pipe P3 -> P2 label. Move it by hand. | [CE] No CE label needs to move. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL what CDTIDYLABELS printed = Command: | Command: CDTIDYLABELS | Tidy labels on [All pipes/Select pipes] <All> [All/Select] <All>: All | [CE] Will move 0 � Placed by hand (left alone) 1 � No clear spot found 1 | [CE] No clear spot found: pipe P3 -> P2 label. Move it by hand. | [CE] No CE label needs to move. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 18,
+          "text": "record $tidy_esc \"what the closing Esc printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: CDTIDYLABELS | Tidy labels on [All pipes/Select pipes] <All> [All/Select] <All>: All | [CE] Will move 0 � Placed by hand (left alone) 1 � No clear spot found 1 | [CE] No clear spot found: pipe P3 -> P2 label. Mo...",
+          "evidence": "RECORDED, not judged: what the closing Esc printed = Command: CDTIDYLABELS | Tidy labels on [All pipes/Select pipes] <All> [All/Select] <All>: All | [CE] Will move 0 � Placed by hand (left alone) 1 � No clear spot found 1 | [CE] No clear spot found: pipe P3 -> P2 label. Mo..."
+        },
+        {
+          "n": 19,
+          "text": "record $tidy_moved \"how far the hand-placed text moved during the Tidy labels PREVIEW (mm; a preview writes nothing, so 0 is expected whatever the switch)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "0",
+          "evidence": "RECORDED, not judged: how far the hand-placed text moved during the Tidy labels PREVIEW (mm; a preview writes nothing, so 0 is expected whatever the switch) = 0"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 241 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: PIT completed 69045 ms ; Command outcome: CD completed 59530 ms ; Command outcome: CDTIDYLABELS completed 37 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-30 14:09:02",
+      "session_id": "RUN-20261030-1347-C3.0.86-aC1-s2",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "no independent review: no N31_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 3,
+        "red_before": true
+      }
+    }
+  ]
+}

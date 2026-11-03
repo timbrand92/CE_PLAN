@@ -1,0 +1,18 @@
+I've signed off train S-43 (Structural) as a **GO at `69fc3269f21bb501a61b0272eb6aa7b7cdafa6e1`**. I fixed one problem in the screen-fit change (#1696) and kept all five changes. It is built and unit-tested only: it is not installed and nobody has opened it in AutoCAD.
+
+1. **What I fixed:** on a 1080p screen at 150 per cent the big windows get a scroll bar. The way #1696 did that, the SBEAM section list would have grown to every section in one long column. That pushed the Place button far down the window. Now the window keeps its designed layout, the list scrolls by itself, and the window's scroll bar reaches the buttons.
+2. **What I added:** a test that puts the real Structural Settings window on a 1080p screen at 150 per cent and checks Save, Cancel and Reset Defaults can all be reached. No such test existed before.
+3. **Verdicts:** the five changes are #1695 to #1699. Four passed as they were and #1696 needed the fix above. Nothing was dropped.
+4. **Settings:** no settings or switches were added or changed.
+5. **Tests:** Structural 5,725 passed on the newer .NET (net10), none failed. On the older .NET (net48) 4,976 passed and 39 failed. All 39 fail on the S-42 base too.
+
+   The other test sets match S-42. The official release build has the same 2,007 files as the installed bundle, none added or removed. The command lists are identical, so the installer and update checks are not affected.
+6. **One limit to know:** CEMEMBER now finds 310UB32.0, but 250UB25.7 still gives "no section called". Type 250UB26 for now. That stays until the section list carries the supplier names (BUG-818).
+
+**Don't mark fixed yet** — each needs a robot PASS and a Codex PASS in AutoCAD, on copies of drawings:
+1. **XCLMTXT (BUG-1014):** set the UCS to 90°, then 45°, and run XCLMTXT. The schedule box and the white boxes behind the marks should line up with the text. One U should remove the whole schedule.
+2. **Windows (BUG-955, BUG-956):** set the screen to 1920 × 1080 at 150 per cent. Run SBEAM, RCBEAM, CESHEETS and CESETTINGS, and scroll to every button. Nobody has looked at any of these windows yet.
+3. **CEMEMBER section name:** typing 310UB32.0 should find 310UB32.
+4. **CEMEMBER layers:** lock 25CONT: CEMEMBER explains and draws nothing. Freeze it instead: the member is drawn and a warning names the layer.
+
+Tim's four settings files were unchanged. My worktrees and scratch folders are removed. The report is `C:\CE_PLAN\areas\release-v3-colleagues-TRAIN_S43_FINALIZER_REPORT_2026-10-24.md`, with the sign-off added to the review-lane log.

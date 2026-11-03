@@ -1,0 +1,8 @@
+I've written both Codex looks and parked them in the queue, but neither can pass yet. None of the fixes is in the installed build (Civil 3.0.85), so a run today would only record today's wrong numbers as "before" evidence.
+
+1. **H7 (Boyd's tab, about 1 hour):** the 746 m² lot should show 2.08 m³ of storage, not 2.56 (BUG-905). A Darebin 600 m² lot should show C 0.80 and 3.86 m³ (BUG-1095).
+2. **H8 (CDDESIGN, about 1.5 hours):** it makes its own Darebin test job. Expected: Weighted C 0.80, a 40 L/s pipe as DN225 at 1 in 200 (BUG-1088), and DN450 held at 1 in 200 (BUG-1091).
+3. **Still yours:** the BUG-1088 sizing rule (question 21a). Not covered: redesigning an existing DN450 at 30 L/s.
+4. **Cost and timing:** about 3% of the Codex week each. They run after the fixes install (target 5 Nov) and the desk enters the fixed version numbers.
+
+Nothing has been run. Report: `C:\CE_PLAN\areas\CODEX_LOOK_BRIEFS_H7_H8_29OCT.md`, pushed.

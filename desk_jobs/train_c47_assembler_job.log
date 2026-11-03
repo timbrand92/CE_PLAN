@@ -1,0 +1,8 @@
+Train C-47 is assembled and pushed as `claude/rel-20261020a` at `ad43f0cd`, built and unit-tested only. Nothing has been opened in AutoCAD.
+
+- **Merged (6):** #1475, #1474, #1477, #1478, #1480, #1479. No Shared/ files changed.
+- **Left out:** #1441 has a newer commit with no Opus review, so a finalizer should look at it. The seven superseded PRs, the Structural PRs and #1382, #1384, #1419 and #1423 stay out as you listed.
+- **Build:** the whole-solution Release build has 0 errors, after I re-created the missing 0-byte transform placeholder and re-ran.
+- **Tests:** Civil net10 18,863 run, 1 failed (the known Glen Eira). Manager net10 824 of 824. Civil net48 focused 185 of 185.
+- **Settings files:** unchanged.
+- **Report:** `areas/release-v3-colleagues-TRAIN_C47_ASSEMBLY_REPORT_2026-10-20.md`, pushed. The worktree and scratch folders are removed.

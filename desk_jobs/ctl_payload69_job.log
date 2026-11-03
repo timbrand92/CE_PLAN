@@ -1,0 +1,16 @@
+The Structural 1.0.117 install candidate is built and verified. I did not install it or open it in AutoCAD.
+
+1. **Head:** `claude/rel-20261010d` is at `0dfbd1d697d48079010f79e14b1caa3bb1d3ebbe`. That is Opus GO `d33a85be` plus one version-only commit, pushed by fast-forward. It changes 3 files, 3 lines, and the worktree is clean.
+2. **Candidate:** `C:\ce_rc_scratch\s1035\CE_STRUC_SUITE.bundle`.
+3. **Verify line:** `struc: manifest 2007 files, verified 2007, bad 0, extra 0`.
+4. **Versions:** all three lanes read `1.0.117+0dfbd1d6…`, and DesignCore reads `1.0.0+0dfbd1d6…`. There are zero CE_SHARED files and PackageContents says `AppVersion="1.0.117"`.
+5. **Build:** 0 errors, 6 warnings. The native ARX was put back to the installed bytes (`6DE0A45B…`).
+6. **File list vs installed 1.0.116:** 0 added, 0 removed, 9 changed (PackageContents, the three main DLLs, the three DesignCore DLLs, and two deps.json files).
+7. **Command registry:** no difference from installed. It is byte-identical, with 375 entries in all three lanes.
+8. **Tests:** `RuntimeLaneContractTests` finished 13 of 13 on net10. The first run failed one test because the built net10 alias was older than the source (same as earlier payloads). I rebuilt the alias and re-ran.
+9. **Stale-build proof:** 39 of 39 checks OK. These are 13 new strings across #1209, #1206, #1203, #1227, #999, #1006 and #1001, in all three lanes, absent from installed 1.0.116 and the three older candidates.
+10. **#981:** the brief expected its two property names to be new, but they are not. They already exist in 1.0.116 with default `false`, and this train only flips the default. Both now read `true` in the source (`UserSettings.cs:858` and `:867`). A string probe cannot show a changed default, so they are not in the probe list.
+11. **Tim's settings:** the three settings files are byte-identical before and after. Structural is 34,196 bytes `B339F3E9…`, CD 15,270 bytes `ACD64E79…`, and the TIM_CE_CADTOOLS CS file 351,713 bytes `622A246F…`. The installed bundle is unchanged, and the live app-data manifest is also identical (24,396 files).
+12. **Delay:** the build launcher waited about 45 minutes because a Codex job (`bj27_cesettings_issue_struc`, started 22:10) held a dotnet/testhost for about 2.5 hours. I did not touch it.
+
+The full report is at `C:\Lisp Files\_TEST_COPIES_20260923\PAYLOAD_S1035_REPORT.md`.

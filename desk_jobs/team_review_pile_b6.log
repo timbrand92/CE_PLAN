@@ -1,0 +1,20 @@
+**FOR TIM**
+
+Batch 6 is reviewed and the report is pushed: `C:\CE_PLAN\areas\REVIEW_PILE_B6_24OCT.md`. I reviewed 11 PRs and skipped #1423, because batch 3 already reviewed it.
+
+1. **Counts:** 6 can merge, 2 need small fixes, 2 are on hold and 1 should be rejected.
+2. **Safe to merge today:**
+   1. **Civil (next Civil release):** #1341, the fall-arrow grade on metre drawings.
+   2. **Structural (next Structural release):** #1385, #1529, #1460, #1464.
+   3. **Structural, needs a Codex look:** #1386 changes a window, so Codex must look at it in AutoCAD before it counts as accepted.
+3. **Worst fault:** #1457's Reset Defaults button would still wipe settings the window never shows, such as the wind-region rules and the lintel table.
+4. **On hold:**
+   1. **#1383 (hatch card pictures):** needs rebuilding on today's code.
+   2. **#1521 (green DP label double-click):** the code is fine, but its bug entry needs your approved command card first, and there isn't one.
+5. **Reject:** #1384 (the SBEAM flange-line switch). Your 18 Oct design keeps those lines.
+
+---
+
+Not checked: I built and ran nothing, and saw nothing in AutoCAD. Every "the test would fail without this fix" comes from reading the code. Nothing was merged, closed or commented on.
+
+**Summary:** 11 PRs reviewed (#1423 skipped as already reviewed): 6 MERGE, 2 MERGE-WITH-FIXES (#1419, #1457), 2 HOLD (#1383, #1521), 1 REJECT (#1384). None touches Shared, installer or signed-update files, and none adds a hard block. Report pushed to CE_PLAN main with nothing left ahead. My scratch repo was removed and the local clone was not touched.

@@ -1,0 +1,7 @@
+== cx_lf15 (usage 33.0% -> 33.0%): 1. **DONE — all five skipped.** BUG-943–BUG-947 already have fix PRs. BUG-947 has competing drafts flagged for review.
+
+2. **Saved and pushed.** Documentation-only draft [PR #1668](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1668), branch `cx2/bug-943-batch15-audit`, tip `18582aa0`.
+
+3. **Checks:** 0 tests added/run; 0 builds. Leak scans passed. No product changes, installation or AutoCAD testing.
+
+4. **Report:** [CODEX_LEDGER_FIX_BATCH15_23OCT.md](/C:/CE_PLAN/areas/CODEX_LEDGER_FIX_BATCH15_23OCT.md) records existing PR heads, reported test totals and exact AutoCAD checks still owed.

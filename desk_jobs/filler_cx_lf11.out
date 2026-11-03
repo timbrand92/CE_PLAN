@@ -1,0 +1,7 @@
+== cx_lf11 (usage 31.0% -> 33.0%): 1. **BLOCKED.** BUG-925’s display fix is pushed in [draft PR #1661](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1661). The shared build lock prevented verification. Four bugs were skipped as already covered; BUG-926’s partial coverage is documented.
+
+2. **Saved and pushed:** [Batch 11 report](C:/CE_PLAN/areas/CODEX_LEDGER_FIX_BATCH11_23OCT.md), including exact AutoCAD checks. Nothing installed; AutoCAD stayed closed.
+
+---
+
+1. **Handoff:** `cx2/bug-925-source-values`, tip `caf3244aa368c761d4d09b2f309acf578f971ff7`. Fifteen tests added; zero executed. Zero builds or pictures. Full-suite totals remain unestablished.

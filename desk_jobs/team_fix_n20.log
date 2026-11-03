@@ -1,0 +1,46 @@
+## FOR TIM
+
+I've written five draft cards, and each needs your yes. There's no PR and nothing is built, tested or installed. Start with the list: `C:\CE_PLAN\areas\cards\INDEX_DRAFT_CARDS_BATCH6_31OCT.md`.
+
+1. **Mistakes of my own:** none that cost anything. I didn't start AutoCAD or run any build or test.
+2. **CEMEMBER, four cards (your "yes to all four").** All four faults are still in Structural 1.0.125. I found them by reading the program; nobody has seen them in AutoCAD yet.
+   1. **UCS:** a section always sits square to World, and every line drops to height 0.
+   2. **Layouts:** at DIMSCALE 50 on a layout, the break kink comes out 100 mm on the sheet instead of 2 mm.
+   3. **Unequal angle:** a 150x90 UA always stands on the 150 leg. CE will ask "Upright leg [Long/Short] <Long>".
+   4. **RHS laid flat:** CE will ask "RHS sits [Standing/Flat] <Standing>". The card marks one guess: that you're happy to drop your earlier "one orientation" rule for RHS.
+3. **Downloads: two things were not as the bug entries said.**
+   1. **WebView2:** the installer hasn't downloaded WebView2 since 22 Jul. That part is switched off and never built in. The 9 Oct check read the switched-off part by mistake. So I recommend no download at all: check whether WebView2 is there, and if it isn't, warn, record it and carry on.
+   2. **CEMARKUPRUN:** its automatic download has been off for new PCs since 9 Oct, and that is already installed. Two gaps are left:
+      - a PC that saved it as "on" before 9 Oct keeps downloading;
+      - when it's on, the download happens without any message.
+   3. **After the pilot:** the installer's first-install route and the repair of an interrupted install wait until then, as you ruled. The pilot is a hand install.
+4. **The three answers that matter most** (about 19 short questions in total, each with my recommendation):
+   1. Drop "one orientation" for RHS? I recommend yes.
+   2. For WebView2, check and warn only, or bundle Microsoft's signed installer? I recommend check and warn only.
+   3. Is Structural in Max's pilot? If not, the CEMARKUPRUN part also waits until after the pilot.
+5. **Not proven:** none of this has been looked at in AutoCAD. One point is my reading only: in a UCS turned 90 degrees, a member's top edge may end up on the bottom side on screen.
+
+---
+
+**Technical summary**
+
+- **Files** (in `C:\CE_PLAN\areas\cards\`):
+  - `CARD_CEMEMBER_UCS_BUG909_DRAFT_31OCT.md`
+  - `CARD_CEMEMBER_LAYOUT_BREAKS_BUG910_DRAFT_31OCT.md`
+  - `CARD_CEMEMBER_UA_LEG_BUG1124_DRAFT_31OCT.md`
+  - `CARD_CEMEMBER_RHS_FLAT_BUG1125_DRAFT_31OCT.md`
+  - `CARD_INSTALLER_DOWNLOADS_BUG553_554_DRAFT_31OCT.md`
+  - `INDEX_DRAFT_CARDS_BATCH6_31OCT.md`
+- **Report:** `C:\CE_PLAN\areas\BUGFIX_n20_REPORT_31OCT.md`.
+- **Pushed by name:** commits 9b93400a and f7aa64d9. The leak scan was clean and the branch is not ahead of origin.
+- **BUG-554:** `Installer/Program.cs` lines 21–619 sit inside `#if false`, added by 3089c3bb on 22 Jul. That block was already there at e636e17d, the commit the audit read.
+- **BUG-553:** b5dafba6 made the download default OFF (`MarkupAIModels.cs:238`).
+- **Real settings files:** I listed them before and after. No settings file changed. Another AutoCAD session (started 23:41, not mine) rewrote only the CE_Admin session files and one runtime snapshot.
+- **Scratch folder:** `C:\CE_WORK\scratch\n20` stays. It still holds the launcher's logs, struc and tmp redirect folders.
+
+**Summary:** No PR (planning job). There are five DRAFT FOR TIM cards plus an index, covering BUG-909, BUG-910, BUG-1124, BUG-1125 and BUG-553/554. The proposed Settings switches all ship ON:
+- "CEMEMBER draws in the current UCS"
+- "break lines at paper size on layouts"
+- "asks which UA leg stands upright"
+- "asks how an RHS sits"
+- "say and record before downloading Python helpers"

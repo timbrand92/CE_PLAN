@@ -1,0 +1,14 @@
+Draft PR #1918 is open against `claude/rel-20261026s`, and the report is pushed to `C:\CE_PLAN\areas\BUGFIX_x1_REPORT_31OCT.md`.
+
+"Apply CE Standard Layers" now resets colour, linetype, lineweight and plot only. Locked, frozen and off layers stay as set, and the status line names them, for example "Left 2 locked layers as you set them: BEAM, 25TEXT."
+
+- **Files:**
+  - `LayerService.cs` and `LayerManagerWindow.xaml.cs`
+  - `UserSettings.cs` and `SettingsService.LoadRecovery.cs`
+  - `REGRESSION_LOG.md`
+  - the new `Bug1224ApplyStandardsKeepsStateTests.cs`, plus a comment change in `Bug367LayerKeepTests.cs`
+- **Switch:** `Options.ApplyStandardsKeepsLockFreezeOnOff` ships ON. OFF restores the old behaviour exactly.
+- **Tests:** 37 focused net10 tests passed. The net48 compile has 0 errors.
+- **Not proven:** the real layer write in AutoCAD. The robot case is `S49_apply_layers_keep`, with `S49c_apply_layers_switch_off` as the switch-off control.
+- **Real files changed:** the real-files compare found logs, telemetry and session files written at 14:14 to 14:17. No settings file changed. I believe another AutoCAD session wrote them; the report lists the files.
+- **Scratch folder:** `C:\CE_WORK\scratch\x1` could not be fully deleted because this session still holds one file open in it. It is safe to delete once the session ends.

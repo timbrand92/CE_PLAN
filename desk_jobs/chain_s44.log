@@ -1,0 +1,11 @@
+Sun 13:59 chain start: S-44 (Structural only); nothing is installed by this chain.
+Sun 13:59 starting train_s44_assembler_job.txt (sonnet)
+Sun 15:07 finished train_s44_assembler_job.txt
+Sun 15:07 C: only 8.9 GB: chain stops
+Sun 15:11 chain resumed after the disk stop (assembler already done): S-44 (Structural only); nothing is installed by this chain.
+Sun 15:11 starting train_s44_finalizer_job.txt (opus)
+Sun 16:51 chain resumed (assembler and finalizer done, GO read): S-44 (Structural only); nothing is installed by this chain.
+Sun 16:51 S-44 finalizer verdict GO: building payload 101 (candidate s1042). Nothing is installed by this chain.
+Sun 16:51 starting payload101_s44_job.txt (sonnet)
+Sun 17:31 finished payload101_s44_job.txt
+Sun 17:31 chain complete

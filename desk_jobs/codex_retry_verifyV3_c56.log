@@ -1,0 +1,5 @@
+Wed 02:52 try 1 starting verifyV3_c56
+Wed 02:54 try 1 finished; report: CODEX_VERIFY_V3_20261021_0253.md; first line: NOT STARTED: queue.log has an unmatched START at 02:52 for verifyV3_c56; ownership could not be established as this session.
+Wed 02:57 try 2 starting verifyV3_c56
+Wed 03:57 try 2 finished; report: CODEX_VERIFY_V3_20261021_0259.md; first line: # CODEX VERIFY V3 — Civil 3.0.66, real AutoCAD 2027
+Wed 03:57 done

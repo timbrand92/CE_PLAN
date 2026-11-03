@@ -1,0 +1,13 @@
+Draft PR #1839 is open, but the code is not built and not tested. The PC was busy with another job (chain_c76) for over two hours, and the rules allow one build at a time. I stopped waiting at 12:23.
+
+**Cause:** the one-page window drops the old tabs. The "Recent levels" row was never copied across, so Edit Pipe lost the buttons too.
+
+**Files:**
+- `PipeOnePageLayout.cs`
+- `UserSettings.cs`
+- `Bug1226RecentButtonsTests.cs`
+- `REGRESSION_LOG.md`
+
+**Switch:** `pipe.recentInvertButtonsOnMainPage`, default ON.
+
+**Robot case:** N30 is the guard and needs no change. The report is in `C:\CE_PLAN\areas` and is pushed. It names the build and test steps still owed.

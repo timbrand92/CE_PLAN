@@ -1,0 +1,17 @@
+== verifyF1_cur (usage 76.0% -> 76.0%): AUTOCAD CLOSED
+
+1. **NOT STARTED:** Native screen control is disabled. Explorer could not be captured; F1-01 remains NOT TESTED.
+2. **Safe end:** No settings changed. Launcher lock released. PASS 0, FAIL 0, DIFFERENT 0, BLOCKED 0, NOT TESTED 1; SURE 0, UNSURE 1.
+3. **Installed:** Civil 3.0.80; Manager 1.1.80; Structural 1.0.124.
+4. **Report:** [F1 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_F1_20261027_0156.md>).
+== verifyF1_cur (usage 91.0% -> 91.0%): AUTOCAD CLOSED
+
+1. **BLOCKED:** The prescribed zoom returned `nil`; rule N17 required stopping. Pipe-label appearance remains untested.
+2. **Counts:** 0 PASS, 0 FAIL, 0 DIFFERENT, 1 BLOCKED; SURE 1, UNSURE 0. No faults observed; no fixtures missing.
+3. **Clean end:** Drawing discarded, all four settings hashes unchanged, lock released.
+4. **Report:** [F1 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_F1_20261027_0739.md>).
+== verifyF1_cur (usage 92.0% -> 93.0%): AUTOCAD STILL RUNNING
+
+1. **F1: DIFFERENT ÔÇö SURE.** One readable label sits above the pipe without overlap. It matches the headerÔÇÖs 100 mm UPVC, but reads **1 IN 100**, not 1 IN 200. PASS 0, FAIL 0, DIFFERENT 1, BLOCKED 0, NOT TESTED 0.
+2. **Clean end:** F1 closed without saving; four settings hashes matched and its lock was released. Claude then started a separate AutoCAD session, left untouched.
+3. **Report:** [F1 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_F1_20261027_0843.md>). No missing fixtures.

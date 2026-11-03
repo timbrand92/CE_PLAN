@@ -1,0 +1,7 @@
+I wrote the two V4 brief files and added section 10 to `QUEUE_20OCT_PLAN.md`. Nothing was run, and I didn't touch Codex, `DESK_LOG.md` or `launch_codex_retry.ps1`.
+
+- **Files:** `verifyV4_c58.txt` and `verifyV4_c58_full.txt` are in `_CODEX_RUNNER`. They cover V4-01 to V4-05 with the old fault and expected wording for each. Both are free of control characters and the word "follow".
+- **Queue line:** `verifyV4_c58|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|low|90|6` is in section 10.
+- **V4-05 split:** I used two settings passes, not one. The progress line only runs while the Checks list is off, so one pass can't test both.
+- **F2:** V4-04 opens the text window with `TEXTSCR`, because the shared rules say F2 runs the CE command CLEAN.
+- **CE_PLAN:** I changed no files there, so I committed nothing.

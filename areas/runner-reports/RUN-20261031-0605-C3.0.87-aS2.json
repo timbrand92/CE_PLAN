@@ -1,0 +1,485 @@
+{
+  "header": {
+    "run_id": "RUN-20261031-0605-C3.0.87-aS2",
+    "started": "2026-10-31 06:05:36",
+    "finished": "2026-10-31 06:06:51",
+    "build": {
+      "civil": {
+        "product_version": "3.0.87+f5dd72a0652c7f749ab52228cea0f9675047b9cb",
+        "file_version": "3.0.87.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.87+f5dd72a0652c7f749ab52228cea0f9675047b9cb",
+        "file_version": "1.1.87.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.87+f5dd72a0 / struc 1.0.125+204dfad2 / mgr 1.1.87+f5dd72a0",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "36778661E2E5F7B9A513CC3ED196AB8246AFF7BF80797FCCDAF91C9D3D76FCE4",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.87+f5dd72a0652c7f749ab52228cea0f9675047b9cb; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.87+f5dd72a0652c7f749ab52228cea0f9675047b9cb",
+      "Driver files (SHA-256, first 12): v2 F4D8F40C3675 (expected F4D8F40C3675), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 482EB7B20C6C, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 B439CADC8A7A, case_runner_lib.ps1 ED6244C9719E, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 0 shared setup(s); pack SHA-256 36778661E2E5F7B9A513CC3ED196AB8246AFF7BF80797FCCDAF91C9D3D76FCE4; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV2_S1 950AFDF6E523",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json D604CE689671 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sat 31 Oct 2026 06:05 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 0,
+    "FAIL": 1,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261031-0605-C3.0.87-aS2-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-31 06:05:37",
+      "finished": "2026-10-31 06:06:51",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV2_S1",
+      "fixture_sha256": "950AFDF6E523",
+      "copy": "C:\\ce_rc_drv\\CLDV30605391_B1.dwg",
+      "cases": [
+        "S467b_ab_bb_ucs30_proof"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : D604CE689671 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "S467b_ab_bb_ucs30_proof",
+      "proves_bugs": "BUG-467 (AB and BB two-point route only; the Wall option route and the drag preview are not covered)",
+      "title": "PROOF OF INSTALLED FIX BUG-467: with the UCS turned 30 degrees, AB and BB on typed points put each brace at the World place of its first point with a 30 degree run",
+      "kind": "deterministic",
+      "order": 20,
+      "slot": "fresh",
+      "fixture": "DRV2_S1",
+      "plan_item": "BUG-467 (HUNT-S-02, PR",
+      "bug": "BUG-467",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed. Written 30 Oct 2026 from the code at 204dfad2 and the p15 report; not compared with a run.",
+      "variant_of": "",
+      "expected": "After _.UCS _Z 30: AB typed 17700,-300 then 20100,-300, flip No, prints \"Preview length: 2400  rotation: 30\" and leaves exactly one new BRACING block on layer WALL BRACING TYPE A within 1 mm of World 15478.650,8590.192; BB typed 17700,2700 then 20100,2700, flip No, prints the same line and leaves exactly one new BRACING block on layer WALL BRACING TYPE B within 1 mm of World 13978.650,11188.269. The drawing file on disk is unchanged.",
+      "why_not_unit": "The unit tests only pin the source; only AutoCAD's live UCS turns a typed point, and only the real AB and BB show where the brace lands.",
+      "not_automated": [
+        "The angle is read from the command-line Preview line; the brace's own rotation is a dynamic grip value ent-read does not return.",
+        "The Wall option route (Settings Bracing Wall option ON) and the drag preview are not driven (Codex look for the preview)."
+      ],
+      "file_sha256": "41CEBD8E6E747A7C8BB7CC8CC0E1A06247450FAEF58432D74DF00E9F6C008D21",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "no match for /Preview length: 2400\\s+rotation: 30(?![\\d.])/ in: Command: | Command: AB | === A - BRACING (Universal BRACING block) === | The BRACING block is loaded into this drawing. | Specify first point of bracing: 17700,-300 | Specify second point of bracing (...",
+      "started": "2026-10-31 06:06:10",
+      "seconds": 21.1,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "settings-arm",
+          "text": "settings-arm",
+          "ok": true,
+          "seconds": 1.2,
+          "evidence": "settings guard armed: ok"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV30605391_B1.dwg: 85871 bytes, SHA-256 950AFDF6E523, last written 01:39:47; folder holds 255 files"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "getvar",
+          "text": "getvar OSMODE -> $osm0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "OSMODE = 5375"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 setvar OSMODE 0 -> $osm_set",
+          "ok": true,
+          "seconds": 0.5,
+          "evidence": "v3 setvar OSMODE 0: OSMODE (profile): 5375 -> 0"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM{NL}_W{NL}10000,3000{NL}24000,15000\" -Force",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "typed '_.ZOOM _W 10000,3000 24000,15000': Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _W | Specify first corner: 10000,3000 | Specify opposit..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.UCS{NL}_Z{NL}30\" -Force -> $ucs",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "typed '_.UCS _Z 30': Command: | Command: _.UCS | Current ucs name: *WORLD* | Specify origin of UCS or [Face/NAmed/OBject/Previous/View/World/X/Y/Z/ZAxis] <World>: _Z | Specify rotation angle about Z axis <90>: 30 | SETTINGS GUARD ACTIVE: 4 s..."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "getvar",
+          "text": "getvar UCSXDIR -> $xdir",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "UCSXDIR = 0.8660254037844387 | 0.49999999999999994 | 0.0"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 15 objects"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"AB{NL}17700,-300{NL}20100,-300{NL}No\" -Force -> $ab",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "typed 'AB 17700,-300 20100,-300 No': Command: | Command: AB | === A - BRACING (Universal BRACING block) === | The BRACING block is loaded into this drawing. | Specify first point of bracing: 17700,-300 | Specify second point of bracing (drag preview, ENTER ..."
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $new_a",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "1 object(s) after index 15 (model space now 16); by type: AcDbBlockReference 1; first: 577 AcDbBlockReference WALL BRACING TYPE A BRACING"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_a \"name=BRACING\" \"layer=WALL BRACING TYPE A\" -> $bra",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 1: 577 BRACING WALL BRACING TYPE A"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "dist",
+          "text": "dist $bra \"15478.650,8590.192\" -> $da",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "distance from object 577 to 15478.650,8590.192 = 0"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $bra handle -> $ha",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 577"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read \"{$ha}\" -> $ea",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "ent-read 577: {\"handle\":\"577\",\"object\":\"AcDbBlockReference\",\"layer\":\"WALL BRACING TYPE A\",\"name\":\"*U7\",\"effective_name\":\"BRACING\",\"insertion\":[15478.649646984564,8590.192378864667,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"A\",\"text\":\"A\",\"inse..."
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 16 objects"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"BB{NL}17700,2700{NL}20100,2700{NL}No\" -Force -> $bb",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "typed 'BB 17700,2700 20100,2700 No': Command: | Command: BB | === B - BRACING (Universal BRACING block) === | Specify first point of bracing: 17700,2700 | Specify second point of bracing (drag preview, ENTER for 0°/2700) [Zero]: 20100,2700 | This brace is 9..."
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c1 -> $new_b",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "1 object(s) after index 16 (model space now 17); by type: AcDbBlockReference 1; first: 5E3 AcDbBlockReference WALL BRACING TYPE B BRACING"
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_b \"name=BRACING\" \"layer=WALL BRACING TYPE B\" -> $brb",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 1: 5E3 BRACING WALL BRACING TYPE B"
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "dist",
+          "text": "dist $brb \"13978.650,11188.269\" -> $db",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "distance from object 5E3 to 13978.650,11188.269 = 0"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $brb handle -> $hb",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 5E3"
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read \"{$hb}\" -> $eb",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "ent-read 5E3: {\"handle\":\"5E3\",\"object\":\"AcDbBlockReference\",\"layer\":\"WALL BRACING TYPE B\",\"name\":\"*U8\",\"effective_name\":\"BRACING\",\"insertion\":[13978.649646984564,11188.268590217984,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"A\",\"text\":\"B\",\"ins..."
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.UCS{NL}_W\" -Force -> $ucsw",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "typed '_.UCS _W': Command: | Command: _.UCS | Current ucs name: *NO NAME* | Specify origin of UCS or [Face/NAmed/OBject/Previous/View/World/X/Y/Z/ZAxis] <World>: _W | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be chan..."
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.2,
+          "evidence": "wait for idle: idle"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "matches $xdir \"0\\.86\\d\"",
+          "ok": true,
+          "expected": "matches /0\\.86\\d/",
+          "actual": "0.8660254037844387 | 0.49999999999999994 | 0.0",
+          "evidence": "matched '0.866'"
+        },
+        {
+          "n": 2,
+          "text": "matches $ab \"Preview length: 2400\\s+rotation: 30(?![\\d.])\"",
+          "ok": false,
+          "expected": "matches /Preview length: 2400\\s+rotation: 30(?![\\d.])/",
+          "actual": "Command: | Command: AB | === A - BRACING (Universal BRACING block) === | The BRACING block is loaded into this drawing. | Specify first point of bracing: 17700,-300 | Specify second point of bracing (...",
+          "evidence": "no match for /Preview length: 2400\\s+rotation: 30(?![\\d.])/ in: Command: | Command: AB | === A - BRACING (Universal BRACING block) === | The BRACING block is loaded into this drawing. | Specify first point of bracing: 17700,-300 | Specify second point of bracing (..."
+        },
+        {
+          "n": 3,
+          "text": "count $bra = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $bra = 1 (expected = 1)"
+        },
+        {
+          "n": 4,
+          "text": "number $da <= 1",
+          "ok": true,
+          "expected": "<= 1",
+          "actual": "0",
+          "evidence": "$da = 0 (expected <= 1)"
+        },
+        {
+          "n": 5,
+          "text": "matches $bb \"Preview length: 2400\\s+rotation: 30(?![\\d.])\"",
+          "ok": false,
+          "expected": "matches /Preview length: 2400\\s+rotation: 30(?![\\d.])/",
+          "actual": "Command: | Command: BB | === B - BRACING (Universal BRACING block) === | Specify first point of bracing: 17700,2700 | Specify second point of bracing (drag preview, ENTER for 0°/2700) [Zero]: 20100,27...",
+          "evidence": "no match for /Preview length: 2400\\s+rotation: 30(?![\\d.])/ in: Command: | Command: BB | === B - BRACING (Universal BRACING block) === | Specify first point of bracing: 17700,2700 | Specify second point of bracing (drag preview, ENTER for 0°/2700) [Zero]: 20100,27..."
+        },
+        {
+          "n": 6,
+          "text": "count $brb = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $brb = 1 (expected = 1)"
+        },
+        {
+          "n": 7,
+          "text": "number $db <= 1",
+          "ok": true,
+          "expected": "<= 1",
+          "actual": "0",
+          "evidence": "$db = 0 (expected <= 1)"
+        },
+        {
+          "n": 8,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 950AFDF6E523 vs 950AFDF6E523; last written 01:39:47 same"
+        },
+        {
+          "n": 9,
+          "text": "record $ab \"FULL AB under the 30 degree UCS\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: AB | === A - BRACING (Universal BRACING block) === | The BRACING block is loaded into this drawing. | Specify first point of bracing: 17700,-300 | Specify second point of bracing (drag preview, ENTER for 0°/2700) [Zero]: 20100,-300 | This brace is 10091.2 mm, longer than the office limit of 2700 mm in CE Settings. CE kept the length you drew; check it. | Preview length: 10091.2 rotation: 120.81° | CE could not tell from the Xref walls which side the brace should go. Flip it by hand if it is on the wrong side. | Toggle flip? [Yes/No]: No | Flip unchanged. | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL AB under the 30 degree UCS = Command: | Command: AB | === A - BRACING (Universal BRACING block) === | The BRACING block is loaded into this drawing. | Specify first point of bracing: 17700,-300 | Specify second point of bracing (drag preview, ENTER for 0°/2700) [Zero]: 20100,-300 | This brace is 10091.2 mm, longer than the office limit of 2700 mm in CE Settings. CE kept the length you drew; check it. | Preview length: 10091.2 rotation: 120.81° | CE could not tell from the Xref walls which side the brace should go. Flip it by hand if it is on the wrong side. | Toggle flip? [Yes/No]: No | Flip unchanged. | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 10,
+          "text": "record $bb \"FULL BB under the 30 degree UCS\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: BB | === B - BRACING (Universal BRACING block) === | Specify first point of bracing: 17700,2700 | Specify second point of bracing (drag preview, ENTER for 0°/2700) [Zero]: 20100,2700 | This brace is 9826.58 mm, longer than the office limit of 2700 mm in CE Settings. CE kept the length you drew; check it. | Preview length: 9826.58 rotation: 129.62° | CE could not tell from the Xref walls which side the brace should go. Flip it by hand if it is on the wrong side. | Toggle flip? [Yes/No]: No | Flip unchanged. | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL BB under the 30 degree UCS = Command: | Command: BB | === B - BRACING (Universal BRACING block) === | Specify first point of bracing: 17700,2700 | Specify second point of bracing (drag preview, ENTER for 0°/2700) [Zero]: 20100,2700 | This brace is 9826.58 mm, longer than the office limit of 2700 mm in CE Settings. CE kept the length you drew; check it. | Preview length: 9826.58 rotation: 129.62° | CE could not tell from the Xref walls which side the brace should go. Flip it by hand if it is on the wrong side. | Toggle flip? [Yes/No]: No | Flip unchanged. | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 11,
+          "text": "record $ea \"FULL A brace as read\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"577\",\"object\":\"AcDbBlockReference\",\"layer\":\"WALL BRACING TYPE A\",\"name\":\"*U7\",\"effective_name\":\"BRACING\",\"insertion\":[15478.649646984564,8590.192378864667,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"A\",\"text\":\"A\",\"insertion\":[12696.230172464126,12669.953524643794,0.0],\"rotation\":2.108555370905541,\"height\":250.00000000000006,\"alignment\":10,\"align_point\":[12529.213693859512,12705.96113610188,0.0],\"bbox\":[12361.935169237688,12541.460982078414,12696.492218481337,12870.461290125346]}],\"bbox\":[10270.020888200641,8590.192378864667,15478.649646984564,17257.110616067213],\"block_parts\":[{\"index\":0,\"object\":\"AcDbPolyline\",\"layer\":\"0\",\"color\":256},{\"index\":1,\"object\":\"AcDbCircle\",\"layer\":\"WALL BRACING TYPE A\",\"color\":7,\"world_center\":[12529.213693859932,12705.961136101963],\"world_radius\":225.00000000000006,\"world_on_line\":[12754.213693859932,12705.961136101963]},{\"index\":2,\"object\":\"AcDbLine\",\"layer\":\"Defpoints\",\"color\":256,\"world_start\":[10309.807621135333,17257.110616067213],\"world_end\":[10309.807621135333,17257.110616067213],\"world_mid\":[10309.807621135333,17257.110616067213]},{\"index\":3,\"object\":\"AcDbPoint\",\"layer\":\"Defpoints\",\"color\":256},{\"index\":4,\"object\":\"AcDbLine\",\"layer\":\"Defpoints\",\"color\":256,\"world_start\":[10309.807621135333,17257.110616067213],\"world_end\":[10309.807621135333,17257.110616067213],\"world_mid\":[10309.807621135333,17257.110616067213]},{\"index\":5,\"object\":\"AcDbPoint\",\"layer\":\"Defpoints\",\"color\":256},{\"index\":6,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"0\",\"color\":256,\"tag\":\"A\",\"world_insertion\":[12696.230172464464,12669.953524643488]}]}",
+          "evidence": "RECORDED, not judged: FULL A brace as read = {\"handle\":\"577\",\"object\":\"AcDbBlockReference\",\"layer\":\"WALL BRACING TYPE A\",\"name\":\"*U7\",\"effective_name\":\"BRACING\",\"insertion\":[15478.649646984564,8590.192378864667,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"A\",\"text\":\"A\",\"insertion\":[12696.230172464126,12669.953524643794,0.0],\"rotation\":2.108555370905541,\"height\":250.00000000000006,\"alignment\":10,\"align_point\":[12529.213693859512,12705.96113610188,0.0],\"bbox\":[12361.935169237688,12541.460982078414,12696.492218481337,12870.461290125346]}],\"bbox\":[10270.020888200641,8590.192378864667,15478.649646984564,17257.110616067213],\"block_parts\":[{\"index\":0,\"object\":\"AcDbPolyline\",\"layer\":\"0\",\"color\":256},{\"index\":1,\"object\":\"AcDbCircle\",\"layer\":\"WALL BRACING TYPE A\",\"color\":7,\"world_center\":[12529.213693859932,12705.961136101963],\"world_radius\":225.00000000000006,\"world_on_line\":[12754.213693859932,12705.961136101963]},{\"index\":2,\"object\":\"AcDbLine\",\"layer\":\"Defpoints\",\"color\":256,\"world_start\":[10309.807621135333,17257.110616067213],\"world_end\":[10309.807621135333,17257.110616067213],\"world_mid\":[10309.807621135333,17257.110616067213]},{\"index\":3,\"object\":\"AcDbPoint\",\"layer\":\"Defpoints\",\"color\":256},{\"index\":4,\"object\":\"AcDbLine\",\"layer\":\"Defpoints\",\"color\":256,\"world_start\":[10309.807621135333,17257.110616067213],\"world_end\":[10309.807621135333,17257.110616067213],\"world_mid\":[10309.807621135333,17257.110616067213]},{\"index\":5,\"object\":\"AcDbPoint\",\"layer\":\"Defpoints\",\"color\":256},{\"index\":6,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"0\",\"color\":256,\"tag\":\"A\",\"world_insertion\":[12696.230172464464,12669.953524643488]}]}"
+        },
+        {
+          "n": 12,
+          "text": "record $eb \"FULL B brace as read\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"5E3\",\"object\":\"AcDbBlockReference\",\"layer\":\"WALL BRACING TYPE B\",\"name\":\"*U8\",\"effective_name\":\"BRACING\",\"insertion\":[13978.649646984564,11188.268590217984,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"A\",\"text\":\"B\",\"insertion\":[10688.39908348603,14691.651358386762,0.0],\"rotation\":2.2623722922506495,\"height\":250.00000000000003,\"alignment\":10,\"align_point\":[10517.837722139298,14701.64506760561,0.0],\"bbox\":[10347.276360792564,14532.21339630594,10688.39908348603,14871.07673890528]}],\"bbox\":[7692.104886426595,11188.268590217984,13978.649646984564,18757.110616067217],\"block_parts\":[{\"index\":0,\"object\":\"AcDbPolyline\",\"layer\":\"0\",\"color\":256},{\"index\":1,\"object\":\"AcDbCircle\",\"layer\":\"WALL BRACING TYPE A\",\"color\":7,\"world_center\":[10517.8377221396,14701.645067605761],\"world_radius\":225.00000000000003,\"world_on_line\":[10742.8377221396,14701.645067605761]},{\"index\":2,\"object\":\"AcDbLine\",\"layer\":\"Defpoints\",\"color\":256,\"world_start\":[7711.7314097820135,18757.110616067217],\"world_end\":[7711.7314097820135,18757.110616067217],\"world_mid\":[7711.7314097820135,18757.110616067217]},{\"index\":3,\"object\":\"AcDbPoint\",\"layer\":\"Defpoints\",\"color\":256},{\"index\":4,\"object\":\"AcDbLine\",\"layer\":\"Defpoints\",\"color\":256,\"world_start\":[7711.7314097820135,18757.110616067217],\"world_end\":[7711.7314097820135,18757.110616067217],\"world_mid\":[7711.7314097820135,18757.110616067217]},{\"index\":5,\"object\":\"AcDbPoint\",\"layer\":\"Defpoints\",\"color\":256},{\"index\":6,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"0\",\"color\":256,\"tag\":\"A\",\"world_insertion\":[10688.399083486316,14691.651358386622]}]}",
+          "evidence": "RECORDED, not judged: FULL B brace as read = {\"handle\":\"5E3\",\"object\":\"AcDbBlockReference\",\"layer\":\"WALL BRACING TYPE B\",\"name\":\"*U8\",\"effective_name\":\"BRACING\",\"insertion\":[13978.649646984564,11188.268590217984,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"A\",\"text\":\"B\",\"insertion\":[10688.39908348603,14691.651358386762,0.0],\"rotation\":2.2623722922506495,\"height\":250.00000000000003,\"alignment\":10,\"align_point\":[10517.837722139298,14701.64506760561,0.0],\"bbox\":[10347.276360792564,14532.21339630594,10688.39908348603,14871.07673890528]}],\"bbox\":[7692.104886426595,11188.268590217984,13978.649646984564,18757.110616067217],\"block_parts\":[{\"index\":0,\"object\":\"AcDbPolyline\",\"layer\":\"0\",\"color\":256},{\"index\":1,\"object\":\"AcDbCircle\",\"layer\":\"WALL BRACING TYPE A\",\"color\":7,\"world_center\":[10517.8377221396,14701.645067605761],\"world_radius\":225.00000000000003,\"world_on_line\":[10742.8377221396,14701.645067605761]},{\"index\":2,\"object\":\"AcDbLine\",\"layer\":\"Defpoints\",\"color\":256,\"world_start\":[7711.7314097820135,18757.110616067217],\"world_end\":[7711.7314097820135,18757.110616067217],\"world_mid\":[7711.7314097820135,18757.110616067217]},{\"index\":3,\"object\":\"AcDbPoint\",\"layer\":\"Defpoints\",\"color\":256},{\"index\":4,\"object\":\"AcDbLine\",\"layer\":\"Defpoints\",\"color\":256,\"world_start\":[7711.7314097820135,18757.110616067217],\"world_end\":[7711.7314097820135,18757.110616067217],\"world_mid\":[7711.7314097820135,18757.110616067217]},{\"index\":5,\"object\":\"AcDbPoint\",\"layer\":\"Defpoints\",\"color\":256},{\"index\":6,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"0\",\"color\":256,\"tag\":\"A\",\"world_insertion\":[10688.399083486316,14691.651358386622]}]}"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 14 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-10-31 06:06:31",
+      "session_id": "RUN-20261031-0605-C3.0.87-aS2-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+All five S-44 files are written and pushed. Nothing has been run or started, and `git status -sb` shows no "ahead".
+
+**Files in `C:\CE_PLAN\desk_jobs`:**
+- `train_s44_assembler_job.txt`
+- `train_s44_finalizer_job.txt`
+- `payload101_s44_job.txt`
+- `scripts\desk_install_s44.ps1`
+- `chain_s44.ps1`
+
+**Names and checks:**
+- **Branch and version:** The branch is `claude/rel-20261025s`, cut from tip `4af3f37d` (the S-43 tip, checked with `git ls-remote`). The new version is Structural 1.0.124, and the payload candidate is s1042.
+- **Install script:** I used wanted version 1.0.124 and prior commit `4af3f37d`, not the 1.0.123 and `e6d597c0` you quoted. I read those as the S-43 model's values. I also added a check that aborts if the live bundle is not 1.0.123.
+- **PRs:** The merge list is your 10 reviewed Structural PRs plus 12 older plain-MERGE ones. #1737 goes in only if its fixes are visible. #1731 is left out because its head changed after review.
+- **Validation:** Control-character and parse checks are clean. I re-read every PR number and head against `gh`.

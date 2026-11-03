@@ -1,0 +1,25 @@
+== cx_fb01 (usage 33.0% -> 50.0%): 1. **BLOCKED:** Draft [PR #1539](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1539), `cx/fb01-c60` at `23db8940`. The protected `LinkService` changes need their owner; BUG-668 remains open.
+
+2. **Checks:** 17 new tests pass. Full suite: 19,171 total; 19,151 passed, 1 failed, 19 skipped. Three Civil builds: 0 errors. Solution build failed Git lookup. AutoCAD not run.
+
+3. **Warning:** Civil settings hash changed during parallel runs; writer unproven.
+
+4. **Saved and pushed:** [Report with exact AutoCAD check](C:/CE_PLAN/areas/CODEX_BUILD_FB01_23OCT.md).
+== cx_fb04 (usage 53.0% -> 53.0%): 1. **BLOCKED.** BUG-373 remains on the release base. The fix requires protected `PipeEditCommand*` files; FB-04 provides no exception.
+2. **Draft PR.** [#1542](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1542) documents the cause and required owner change. Branch `cx/fb04-c60`, tip `0c5a40b6`.
+3. **Tests.** Added 0; run 0. Builds and AutoCAD checks not run. Nothing deployed.
+4. **Saved and pushed.** [Report](C:/CE_PLAN/areas/CODEX_BUILD_FB04_23OCT.md) includes the exact FX-04 check. Leak scans passed.
+== cx_fb07 (usage 53.0% -> 54.0%): 1. **BLOCKED.** BUG-692 and BUG-693 remain on the fetched base. Their fix requires protected `LinkService.Split.cs`; FB-07 provides no exception. No behaviour changed.
+
+2. **Draft PR:** [#1543](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1543), routing the required edits. Branch `cx/fb07-c60`, tip `1bbf01f6`.
+
+3. **Validation:** 0 tests added or run; builds and AutoCAD checks not run. Nothing installed.
+
+4. **Saved and pushed:** [Report with exact deterministic checks](C:/CE_PLAN/areas/CODEX_BUILD_FB07_23OCT.md). Both pushes passed leak scanning.
+== cx_fb10 (usage 54.0% -> 56.0%): 1. **DONE — [Draft PR #1545](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1545).** FB-10 implemented against the requested release base.
+2. **Tests:** three builds, 0 errors; 14 new cases pass. Full Civil: 19,148 passed, 19 skipped, 1 confirmed baseline failure. Focused net48: 76/77, with its failure also reproduced on the base.
+3. **[Report saved and pushed](C:/CE_PLAN/areas/CODEX_BUILD_FB10_23OCT.md).** Includes four inspected pictures and exact FX-10 steps. Nothing installed or AutoCAD-tested.
+
+---
+
+4. **Handoff:** `cx/fb10-c60` at `fba3f674`.

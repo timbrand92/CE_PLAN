@@ -1,0 +1,7 @@
+== verifyX6_c60 (usage 55.0% -> 56.0%): 1. **X6 complete:** 0 PASS, 4 FAIL, 0 DIFFERENT/BLOCKED/NOT TESTED. SURE 4; UNSURE 0.
+
+2. **Main faults:** About still clips rows; Manager leaves an undo step with or without tab visits; CE_VERSION also leaves an undo step.
+
+3. **Cleanup:** AutoCAD closed, lock released, all four settings hashes unchanged. No fixtures wanted. Procedure deviations recorded.
+
+4. **Report:** [CODEX_VERIFY_X6_20261023_2346.md](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_X6_20261023_2346.md>).

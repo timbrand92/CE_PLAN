@@ -1,0 +1,15 @@
+**FOR TIM**
+
+1. **Done:** the data-integrity audit is saved and pushed to `C:\CE_PLAN\areas\TEAM_AUDIT_T4_24OCT.md`. I found 30 new ways a drafter could lose or corrupt CE data without being told: HIGH 3, MEDIUM 18, LOW 9. Known bugs found again are listed by number only.
+
+2. **Most serious:** a colleague whose CE is a few weeks old edits one pit in your drawing and saves. Your ignored check findings, review approvals and held-back labels are wiped, with no message. CE's "saved by a newer CE" warning can never appear, because the version number hasn't changed since 25 August.
+
+3. **Second:** if a Structural footing register can't be read, the next PFC or THC saves an empty one over it. The earlier footings stay on screen but stop updating, and they drop out of the footing schedule.
+
+4. **Third:** on AutoCAD 2022–2024, copying pits and pipes together with a downpipe skips the copy clean-up for everything in that copy. Each copied pit keeps its original's number and gets no schedule row.
+
+5. **Not checked:** nothing was opened in AutoCAD, built or tested. The things that depend on how AutoCAD itself behaves (EXPLODE, BIND, DXF round trips, MIRROR) are marked UNSURE in the report. Nothing for you to do; this goes to the build lane.
+
+---
+
+**Summary (under 100 words):** read-only audit of Civil 3.0.72 and Structural 1.0.122 records, using six parallel readers; I re-read the code behind every HIGH and most MEDIUM findings myself. 30 new findings: 19 fully proven by reading, 6 proven in CE's code with one untested AutoCAD step, 5 unproven. No code changed, no build, no AutoCAD. Pushed to CE_PLAN with a clean leak scan and nothing left unpushed. My worktrees `C:\ce-ta\t4m` and `t4s` are removed. BUG-665's fix depends on a setting that is off by default, so its owner should recheck it.

@@ -39,7 +39,8 @@ $idleSince = $null; $lastBusyLog = Get-Date; $idleLogged = $false; $busyMin = 0;
 Log 'watchdog started'
 while ($true) {
   CloseStaleCodexStarts
-  $busy = @(Get-Process acad, accoreconsole -ErrorAction SilentlyContinue).Count -gt 0
+  # CE 02 18:58 (CE 00): only acad.exe counts as AutoCAD in use. A headless accoreconsole evidence scan (C:\ce_evidence_local\job*\scan.scr, started every minute by another session) is not a test running.
+$busy = @(Get-Process acad -ErrorAction SilentlyContinue).Count -gt 0
   if ($busy) {
     if ($idleSince) { $mins = [math]::Round(((Get-Date) - $idleSince).TotalMinutes, 1); Log ("IDLE ENDED after $mins min (started " + $idleSince.ToString('HH:mm') + ")"); $idleSince = $null; $idleLogged = $false; Remove-Item "$d\AUTOCAD_IDLE.txt" -Force -ErrorAction SilentlyContinue }
     $busyMin += 0.5

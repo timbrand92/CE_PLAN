@@ -1,0 +1,10 @@
+Train C-56 is assembled and pushed as `claude/rel-20261020j` at `8d0eb8f2`. The report is pushed to C:\CE_PLAN, and my worktree and temp folders are removed.
+
+- **Merged:** #1491, #1492, #1494 and #1495 at the named heads. REGRESSION_LOG.md conflicted on #1494, and every entry was kept.
+- **Installer:** #1492 changes the Installer program, so the finalizer must review it. No merged PR touches Shared or Manager.
+- **Build and tests:**
+  - Release solution build: 0 errors.
+  - Civil net10: 19,015 of 19,035 pass, 19 skipped, and the known Glen Eira test is the only fail.
+  - Manager: 832 of 832.
+  - Civil net48 focused: 288 of 288.
+- **Warning:** `CD_Settings.json` changed during my run (acd64e79 to 9d27b04c) and AutoCAD was running. I ran neither.

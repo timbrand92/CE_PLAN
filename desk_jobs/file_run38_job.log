@@ -1,0 +1,8 @@
+Run 38 is filed and pushed to C:\CE_PLAN (commit 45fd6175). The leak-scan came back clean.
+
+1. **BUG_CARPARK.md:** I added the run 38 note under BUG-141. The remaining "No clear spot" is a genuine overlap with SC 10B734. BUG-141 stays open and is proposed for closure by Tim. Nothing is marked FIXED. BUG-856 got no addition.
+2. **Fix queue (the triage file):** section 18 says the BUG-141 chain is complete with no new fix line. It adds one optional, unqueued idea: a log line listing the alternative spots tried.
+3. **QUESTIONS_FOR_MONDAY.md:** item 9 now carries the run 38 finding, and the recommendation is unchanged: leave the label.
+4. **Robot gaps file:** not edited, because the report lists no new tooling gap.
+
+I did not touch DESK_LOG.md, the plugin repo or AutoCAD.

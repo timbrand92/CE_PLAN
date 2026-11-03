@@ -1,0 +1,6 @@
+Sun 17:52:50 queue started; starts at once
+Sun 17:52:52 launched review 1 pid 60956 rc 0
+Sun 17:53:38 launched review 2 pid 13824 rc 0
+Sun 18:01:32 review 1 ended
+Sun 18:01:33 review 2 ended
+Sun 18:01:33 all four reviews ended; queue ends

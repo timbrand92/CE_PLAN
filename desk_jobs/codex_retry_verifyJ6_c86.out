@@ -1,0 +1,7 @@
+== verifyJ6_c86 (usage 26.0% -> 26.0%): AUTOCAD CLOSED
+
+1. **J6-01 BLOCKED:** Remarks did not enter confirmed editing. Four quick reasons and own words remain unverified.
+2. **J6-02 SEEN:** CDCHECKIGNORE reported switched off; nothing changed.
+3. **Safe end:** Nothing saved or placed. All four settings hashes unchanged. Lock released. Installed versions: Civil 3.0.87 / Manager 1.1.87 / Structural 1.0.125.
+4. **Counts:** 0 PASS, 0 FAIL, 1 BLOCKED, 1 SEEN; 2 SURE. No fixtures needed.
+5. **Report:** [J6 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_J6_20261031_0040.md>).

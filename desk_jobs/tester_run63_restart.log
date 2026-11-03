@@ -1,0 +1,6 @@
+**The REDO fix does not work on Civil 3.0.78.** After a line, U and a first click in a fresh drawing, REDO still says "Nothing to redo".
+
+- **REDO check:** `R08x_1` (pit click) failed in 3 of 3 sessions. `R08x_5` (plain line) failed in 3 of 3 valid sessions. R08 failed in both of its sessions. The new "Inspector pick … waits" log line printed in every session, so the fix runs but doesn't stop the loss. BUG-861 stays open.
+- **Regrade:** all 20 counted cases passed in two separate sessions, so there is no regression. All 21 review hashes still match their case files.
+- **Away-switch:** the runner's no-run-in-Tim's-hours guard blocked the job. I added an off-by-default environment switch to two driver files, then restored both to their original hashes.
+- **Report name:** it is `release-v3-colleagues-RUNNER_REGRADE_3_0_78_REPORT.md`, because the 3.0.77 file already exists. It is pushed and `git status -sb` shows no "ahead".

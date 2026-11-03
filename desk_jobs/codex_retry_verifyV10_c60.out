@@ -1,0 +1,12 @@
+== verifyV10_c60 (usage 21.0% -> 21.0%): 1. **NOT STARTED:** Native screen and mouse access is disabled. The mandatory Explorer screenshot could not be obtained.
+
+2. **Installed:** Civil 3.0.70, Manager 1.1.70, Structural 1.0.121.
+
+3. **Results:** 0 tested; all 5 NOT TESTED, UNSURE. No settings or drawings changed. AutoCAD is closed; lock is free.
+
+4. **Report:** [CODEX_VERIFY_V10_20261022_2051.md](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_V10_20261022_2051.md>). The run needs native desktop access enabled before retrying.
+== verifyV10_c60 (usage 21.0% -> 22.0%): AUTOCAD STILL RUNNING
+
+1. **BLOCKED:** [V10 report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_V10_20261022_2056.md>). Civil 3.0.70 verified. Downpipe clicks opened AutoCAD editors; CDCHECKIGNORE OFF passed. REDO survived A/B.
+2. **Incomplete:** Sessions 2/3 blocked by closing AutoCAD; REDO C/D not tested.
+3. **State:** Settings unchanged, SAVETIME restored, lock released. Counts: DIFFERENT 1, BLOCKED 3, SEEN 1 partial; SURE 5, UNSURE 0.

@@ -1,0 +1,36 @@
+## For Tim
+
+The hunt is finished: 31 new problems in Manager, the installer, admin, the update route and settings. Five are serious. The report is in `C:\CE_PLAN` and pushed. Nothing was built, installed or opened in AutoCAD, and no BUG numbers were filed; the controller does that.
+
+**The five serious ones:**
+
+1. **Manager updates can never finish.** Manager leaves a fourth file (its own receipt) in the update folder. The installer insists on exactly three files, so it refuses every update Manager gets ready.
+2. **The installer also refuses Civil 3.0.56 itself.** It does not recognise the new 2027 pipe-object file. It refuses Manager too on any PC that has Civil 3.0.56. Together with item 1, colleagues must keep being installed by the deploy chat's route for now.
+3. **Civil changes your maximum pipe velocity without asking.** Set it to 3.0 m/s and save. At the next AutoCAD start it reads 6.0, so a 4 m/s pipe gets no warning. Joint label heights under 200 mm also jump to 250 at every start.
+4. **Structural Settings "Reset Defaults" wipes everything in one click.** It sits beside Cancel and asks nothing. It also wipes lists with no page, such as SBEAM favourites and wall types.
+5. **Civil can write standard values over your settings.** This happens if the settings file was locked when AutoCAD started (for example a second AutoCAD open) and you then draw one pipe. Nothing warns you.
+
+**Also worth knowing:**
+
+1. **Ribbon clicks during another command.** At TEXT's "Enter text:" prompt, clicking a CE ribbon button puts the command's name ("CD") on the drawing as text. AutoCAD's own buttons cancel the running command first; CE's do not.
+2. **Admin takeover.** A colleague can still take the administrator role from you in one rare case: your first set-up was saved on your PC only.
+3. **Reset Civil.** In CEMANAGER > Settings, Reset Civil also resets things that page doesn't show, including your own LPD note.
+
+**What's clean:** every ribbon and registry command exists, with no duplicates. Roll Back and the menu-bar switch are now off by default, as asked.
+
+**What's missing:** there are no licence or seat checks anywhere. "Move My Settings" is not in the installed version.
+
+---
+
+**Technical detail**
+
+1. **Lines read:**
+   - **Civil/Manager:** `rel-20261019a` at `21462f9c` (3.0.56 / 1.1.56).
+   - **Structural:** `rel-20261017s` at `9a8e5d4e` (1.0.118).
+   - Both were read in worktrees under `C:\ce-hunt`, now removed. The main checkout is unchanged.
+2. **Report:** `C:\CE_PLAN\areas\release-v3-colleagues-HUNT_MANAGER_INSTALL_2026-10-12.md`, commit `934c6b7d` on main. Pushed after `git merge origin/main`; the leak scan was clean.
+3. **Checked by hand:** I re-read the code behind HUNT-MI-01 to 07, 09 and the Reset Defaults finding myself.
+   - **HUNT-MI-01:** `OfficialReleaseGate.cs:1943-1957` demands exactly three files, and `CeUpdateStagingService.cs:399` saves the receipt beside them.
+   - **HUNT-MI-02:** `SafeBundleInstaller.cs:509-543` rejects the `.dbx` named at `PackageContents.xml:208`.
+4. **Test that should already fail:** `Installer.Tests/InstallerApplicationTests.cs:49` builds the same four-file layout and expects Installed. I did not run it because it is Tim's work hours. Run it after 5:30 pm; it may tie into BUG-247.
+5. **How it was done:** four Opus readers covered separate areas in parallel, each given the known-bug list (BUG-425, BUG-476 to 494, 522, 552 to 556) so nothing known is repeated.

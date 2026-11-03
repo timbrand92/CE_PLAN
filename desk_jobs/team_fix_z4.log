@@ -1,0 +1,10 @@
+The four draft cards, an index and the report are written and pushed to `C:\CE_PLAN`. No PR was opened, and nothing was built, tested or run in AutoCAD. No dotnet test ran, so the real-settings folder listings don't apply.
+
+- **CH hatch (BUG-615):** it hatches the instant you press Enter. The card adds a preview with Scale, Angle and Origin, then Apply. It needs your approval before any build.
+- **CESETTINGS (BUG-526):** 28 saved groups have no row in the window, and a 29th has one switch. I named five as printing on drawings: FoundingNote, FoundationPlan, Slabs, Layouts and PlanLevel. That choice is my reading and is marked UNCONFIRMED.
+- **SM:** your SECT MARK block is a dynamic block in `CE_TYPICAL BLOCKS-LAYERS-SCHEDULES-NOTES.dwg`, with two fill-in fields. The card is approved. Still open is BUG-631, the link between cut line, bubbles and labels. I recommend one AutoCAD group.
+- **DSET (BUG-634):** today's DSET and DSET1 only change the measurement factor. The style tidy-up is new behaviour, so the card stays a draft until you approve it.
+
+Files are in `C:\CE_PLAN\areas`:
+- `cards\` (the four cards and `INDEX_DRAFT_CARDS_31OCT.md`)
+- `BUGFIX_z4_REPORT_31OCT.md`

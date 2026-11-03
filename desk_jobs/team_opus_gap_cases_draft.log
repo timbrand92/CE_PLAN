@@ -1,0 +1,12 @@
+I've drafted eight new robot cases, each with a twin, to cover the four gaps. None has been run in AutoCAD yet. All 16 files pass the robot's offline format check. The report is pushed to `C:\CE_PLAN\areas\GAP_CASES_DRAFT_30OCT.md`.
+
+1. **Pit Schedule order (N40, robot can run it):** six typed pits (P1A, P1B, P9A, P10A, SPS2, SPS10) placed in a scrambled order. Every schedule row must sit in its exact place, so a plain alphabetical sort fails.
+2. **CDCHECK after STRETCH and MOVE (N41, robot can run it):** pit P3 is moved, a new pipe's open end is stretched 2 m east, then CDCHECK. No line may show a handle or an internal id.
+3. **Downpipe double-click (N42, N42g, N42s):**
+   - N42 double-clicks the red centre and the DP text; the robot can run it.
+   - N42g (the green label) will fail today because BUG-860 has no fix yet.
+   - N42s (OK saves a changed tag) needs two small robot permissions, which need a Codex look first.
+4. **Office layers (N43, N44, N44b):**
+   - N43 will fail today. CE resets a recoloured ARROW or 20TEXT layer to its office colour; I read this in the source.
+   - N44 checks the Charged pipe, Suspended pipe and Rising main layers.
+   - N44b only partly covers objects inside blocks; the rest needs one new robot read step and a Codex look.

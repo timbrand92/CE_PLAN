@@ -1,0 +1,6 @@
+I've reviewed batch 13 (twelve Civil plan-work PRs) and pushed the report to `C:\CE_PLAN\areas\REVIEW_PILE_B13_24OCT.md`. Nothing was built, tested or opened in AutoCAD.
+
+1. **Verdicts:** 3 merge (#1021, #1025, #1037), 5 merge after small fixes (#1028, #1033, #1036, #1039, #1040), 2 hold (#1030, #1035), 2 reject (#1023, #1031).
+2. **Not for the 9 Nov pilot:** none of the twelve; all go on a later plan train.
+3. **Top fault:** #1030 would set an old SPS pit's wall from whatever radius the drafter last typed in the PIT window, so two PCs could put the same pipe end in different places.
+4. **Two switches start OFF that you already answered:** minimum cover (300 mm) and the "Name (COMMAND)" ribbon labels.

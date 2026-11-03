@@ -1,0 +1,7 @@
+I opened two draft PRs against `claude/rel-20261026s`, #1912 for BUG-1186 and #1913 for BUG-1187. BUG-473 is already fixed on that line, so I opened no PR for it. Both PRs are titled B-091, and their switches are ON by default.
+
+- **#1912 (BUG-1186):** a locked layer now stops CSTAGBEARERS and CSSUBFLOORGRID with one plain line, and nothing is drawn. The files are `TimberSubfloorService.cs` and a new `SubfloorLockedLayerRule.cs`. The switch is `TimberSubfloor.LockedLayerRefusesTagging`.
+- **#1913 (BUG-1187):** a mistyped lineweight now leaves the layer unchanged and says why. The files are `LayerService.cs` and `LayerManagerWindow.xaml.cs`. The switch is `Options.LayerLineweightTypoKeepsOriginal`.
+- **BUG-473:** fixed by commit 06af5e65, with tests in `HuntS08LockedLayerTests.cs`.
+
+Focused tests pass (up to 48 per run) and the net48 compile has 0 errors. Nothing was opened in AutoCAD. The real-files comparison showed 32 changes, all at 04:44–04:45, which look like a robot AutoCAD session; the report says I couldn't prove who started it. The report is pushed at `C:\CE_PLAN\areas\BUGFIX_s15_REPORT_31OCT.md`.

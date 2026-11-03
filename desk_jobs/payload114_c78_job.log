@@ -1,0 +1,15 @@
+The C-78 candidate is built and verified, and the report is written. Nothing is installed and nobody has opened it in AutoCAD.
+
+- **Candidate:** `C:\ce_rc_scratch\c1074` (the number was free). Civil is verified 832, bad 0, extra 0. Manager is verified 75, bad 0, extra 0.
+- **Branch head after the version commit:** `3fbb9da5` on `claude/rel-20261102a`.
+- **Class:** FULL.
+- **Installed line found:** C-77, Civil 3.0.87 and Manager 1.1.87 stamped `f5dd72a0`.
+- **Tests:** pin classes all green. The string proof had 2,031 rows and 0 not as expected.
+- **Manager:** a pure re-stamp (127, 125 and 127 bytes differ per lane).
+- **Odd:**
+  - The train is five PRs, not three.
+  - `Shared/` and `CE_CVL_SUITE.csproj` are not empty (one linked Excel source file). The CE_SHARED assembly itself is unchanged.
+  - The first string run started with AutoCAD open, so I re-ran it clean.
+  - The machine clock read 31 Oct 03:43 when I started, not Thu 29 Oct.
+
+Report: `C:\Lisp Files\_TEST_COPIES_20260923\PAYLOAD_C1074_REPORT.md` (evidence in the `PAYLOAD_C1074_evidence` folder beside it).

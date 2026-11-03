@@ -1,0 +1,23 @@
+Draft PR #1899 is open against `claude/rel-20261026s`, and my report is pushed to `C:\CE_PLAN\areas\BUGFIX_s3_REPORT_31OCT.md`. Nothing has been opened in AutoCAD.
+
+**FOR TIM**
+1. **Copied beam (BUG-1139):** a COPY of a beam now starts with no links of its own, so it can't take over the original's label and column.
+2. **Old drawing closed unsaved (BUG-1204):** reopening the drawing converts the links again, so the label moves with its line.
+3. **CSPOINTLOAD (BUG-1162):** it now refuses and leaves the earlier loads alone when any saved load is damaged.
+4. **Mistake of mine:** I made one PR for all three bugs, not three. I can split it if you want.
+5. **Needs your eye:** CE log and telemetry files under `%APPDATA%\TIM_CE_CADTOOLS` changed while my tests ran. No settings file changed. Another job was writing there at the same time, but I can't prove none of it was mine.
+
+**Technical**
+- **Switches:** `Beams.CopiedBeamStartsWithEmptyLinks`, `Beams.LinkMigrationRetriedAfterDiscardedOpen` and `RoofPointLoads.RefuseWhenAGroupIsDamaged`. All three ship ON; with one off, the old behaviour returns exactly.
+- **Changed files:**
+  - `Models/UserSettings.cs`
+  - `Services/BeamLinkService.cs`
+  - `Services/LinkMigrationService.cs`
+  - `Services/PointLoadMarkerService.cs`
+  - `Core/Roofs/RoofPointLoadMarkers.cs`
+  - `REGRESSION_LOG.md`
+  - New tests in `S3LinksAndLoadsTests`
+- **Fingerprint re-pin:** I re-pinned the `BeamLinkService.cs` fingerprint in `Stage3ConnectedDesignBoundaryTests`, with a dated comment. `CE_SHARED` is untouched.
+- **Tests:** the focused Structural tests on net10 ran 270 of 270 passed. The net48 compile has 0 errors.
+- **Not proven:** BUG-1204 depends on AutoCAD's close event giving the same file name AutoCAD uses for the drawing at open; only a robot run can prove that. The report names robot cases S31, S32 and S33, each with a switch-off control.
+- **Merge clashes:** #1898, #1895, #1886 and #1885 also edit `UserSettings.cs`. I expect only a simple textual merge.

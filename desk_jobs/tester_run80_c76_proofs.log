@@ -1,0 +1,3 @@
+The chain is still running (pid 73524, AutoCAD open on the first proof line). I haven't written the report yet. The earlier "chain gone" alerts were a faulty check in my monitor, not the chain stopping.
+
+I've set a background wait that wakes me at the next progress line, at ALL DONE, or after 50 minutes. Once it says ALL DONE I'll tally the results, re-run any failure once, and write and push the report.

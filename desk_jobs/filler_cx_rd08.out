@@ -1,0 +1,8 @@
+== cx_rd08 (usage 44.0% -> 47.0%): 1. **DONE — 1 HIGH, 2 MEDIUM, 0 LOW.** Most serious: overlapping installers can undo an update that already reported success.
+
+2. **Report:** [CODEX_AUDIT2_RD08_23OCT.md](/C:/CE_PLAN/areas/CODEX_AUDIT2_RD08_23OCT.md). All findings verified by reading; deterministic tests supplied but not run.
+
+---
+
+1. **Saved and pushed:** `eb04ee38`; leak-scan passed; `main...origin/main` shows no ahead commits. Only the named report committed.
+2. **Read-only limits honoured:** no builds, tests, AutoCAD, installs, keys or sub-agents. Audit worktree removed.

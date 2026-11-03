@@ -1,0 +1,7 @@
+== cx_lf17 (usage 33.0% -> 34.0%): 1. **DONE — audit complete.** Draft [PR #1673](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1673), branch `cx2/bug-953-batch17-audit`, tip `1370b76e`.
+
+2. **All five skipped:** BUG-953/#1592 and BUG-957/#1610 already covered; BUG-954 needs Tim’s ruling; BUG-955/956 require protected Structural files.
+
+3. **Saved and pushed:** [Batch 17 report](/C:/CE_PLAN/areas/CODEX_LEDGER_FIX_BATCH17_23OCT.md), including exact AutoCAD checks.
+
+4. **Validation:** zero new tests, tests run or builds. Documentation checks and leak scans passed. AutoCAD remained unopened; nothing deployed.

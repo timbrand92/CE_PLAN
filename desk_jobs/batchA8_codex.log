@@ -1,0 +1,20 @@
+Mon 05:52:36 batch A2b waiting for 18:55
+Mon 05:52:37 civil bundle ProductVersion: 3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527
+Mon 05:52:37 no install in progress; A3 may start (the build is read again below)
+Mon 06:04:41 backed up CD_RecentValues.json sha B9FC87A8E79C
+Mon 06:04:41 backed up CD_Settings.json sha ACD64E79A33B
+Mon 06:04:41 backed up CS_Settings.json sha D604CE689671
+Mon 06:04:41 backed up settings.json sha EFE307C4FC74
+Mon 06:04:41 Codex usage before: 30 percent
+Mon 06:04:41 STOP_CODEX.flag lifted (STOP_SUPERVISOR.flag stays up)
+Mon 06:04:46 starting verifyA2b_c88
+Mon 06:19:54 verifyA2b_c88 launcher finished
+Mon 06:19:54 Codex usage after: 31 percent
+Mon 06:19:54 unchanged CD_Settings.json sha ACD64E79A33B
+Mon 06:19:54 unchanged settings.json sha EFE307C4FC74
+Mon 06:19:54 unchanged CS_Settings.json sha D604CE689671
+Mon 06:19:54 RESTORED CD_RecentValues.json: was 561E2E04E23C, back to B9FC87A8E79C
+Mon 06:19:55 HOLD_ROBOT.flag removed.
+Mon 06:19:55 restarting chain4 on spec_passi.txt (build 3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527; finished packs are skipped)
+Mon 06:19:55 Batch A8 ends.
+Mon 06:19:55 CODEX_NEXT.txt rewritten to A3

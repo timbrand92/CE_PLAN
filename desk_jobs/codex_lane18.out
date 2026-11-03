@@ -1,0 +1,22 @@
+== cx_s05 (usage 34.0% -> 39.0%): 1. **DONE — 2 HIGH findings.** Xrefs can silently share the wrong pit data; schedule refresh can remove twin-pipe quantities and replace trench-grate lengths.
+
+2. **Report:** [CODEX_SWEEP_S05_23OCT.md](/C:/CE_PLAN/areas/CODEX_SWEEP_S05_23OCT.md). All 112 files read. Findings verified by reading; deterministic tests documented, not run.
+
+3. **Pushed:** `65d80bfd` to `CE_PLAN/main`. Only the findings file committed; leak scan passed. No builds, tests or AutoCAD opened.
+== cx_s06 (usage 39.0% -> 44.0%): 1. **DONE — 1 HIGH, 3 MEDIUM, 0 LOW.** All 111 files read. Main finding: `CDSPOON` rejects its own colours and rolls placement back.
+
+2. **Report:** [CODEX_SWEEP_S06_23OCT.md](/C:/CE_PLAN/areas/CODEX_SWEEP_S06_23OCT.md). Includes code evidence and deterministic reproduction steps.
+
+3. **Pushed:** `89c8dc95` to `CE_PLAN/main`; leak scan passed. Only the findings file committed. No builds, tests or AutoCAD runs.
+== cx_s07 (usage 44.0% -> 48.0%): 1. **DONE — 1 HIGH, 2 MEDIUM, 0 LOW.** Most important: garden and lawn areas incorrectly inflate “Roof and paved area”.
+
+2. **Report:** [CODEX_SWEEP_S07_23OCT.md](C:/CE_PLAN/areas/CODEX_SWEEP_S07_23OCT.md). All 113 files reviewed; three findings verified by reading, with deterministic reproduction steps. No builds, tests or AutoCAD runs.
+
+---
+
+3. **Publication verified:** Present on `origin/main` at `42455844`. A concurrent process included the findings in its shared commit. I changed only the findings file.
+== cx_s08 (usage 48.0% -> 51.0%): 1. **DONE — 2 HIGH, 2 MEDIUM, 0 LOW.** Read all 113 files. Most important: a bent pipe can falsely pass the minimum-grade check.
+
+2. **Findings:** [CODEX_SWEEP_S08_23OCT.md](/C:/CE_PLAN/areas/CODEX_SWEEP_S08_23OCT.md). Includes code evidence and deterministic AutoCAD checks. Verified by reading; no tests or AutoCAD run.
+
+3. **Pushed:** Only the findings file committed to `CE_PLAN/main`, commit `d5e2ce65`. Leak scan passed.

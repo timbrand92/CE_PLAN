@@ -1,0 +1,23 @@
+All three parts are filed and pushed to `C:\CE_PLAN`. Nothing was built or run, and I did not touch the plugin repo or AutoCAD. The last push was commit 18d49d36.
+
+1. **Part 1 (Hunt Civil I/J/K):** BUG-756 to 778, 23 entries. IJK-24 (spoon drain reads metre drawings as millimetres) is a note on BUG-338. IJK-18 (WSUD series credit) is Q1 in section H of `QUESTIONS_FOR_MONDAY.md`. Triage section 8.
+2. **Part 2 (Hunt Civil L/M):** BUG-779 to 812, 34 entries covering all 52 findings. LM-17 is also noted on BUG-540. One question went to Tim: section I of `QUESTIONS_FOR_MONDAY.md`. Triage section 9.
+3. **Part 3 (run 31):** BUG-813 to 817, plus notes on BUG-141 (tidy labels, still seen), 372, 698 (PASS), 740 (numbering PASS) and 746. Triage section 10.
+
+BUG-742 was not tested in run 31, so it has no PASS line. BUG-746's wording was not ambiguous, so it has a note and no question.
+
+**Five worst:**
+1. BUG-779: moving the drawn Pit Schedule rewrites real pit and pipe data.
+2. BUG-756: the long section draws each pipe at the next pipe's size.
+3. BUG-757/758: a trench grate cover of "0.000" is drawn at RL 0, and the older CDCALC long-section tab has no safety checks.
+4. BUG-782: the level cascade protects the wrong end of a hand-typed level.
+5. BUG-781: the X-Civil import pairs unnumbered schedule rows to pits by position.
+
+**Queue lengths:** build/03 has 14 lines (Part 1: 11, Part 2: 14, Part 3: 3, so 28 in total). build/04 has 11 (Part 2) plus 6 (Part 1) plus 2 (Part 3), so 19 in total. Correction: the first figure should be build/03 = 11 + 14 + 3 = 28 and build/04 = 6 + 11 + 2 = 19.
+
+**Tooling problems (not filed as bugs):**
+- Start Pipe and Checks Close need adding to `slow_press`.
+- Pit Schedule needs a deeper `ui tree` and a higher node cap.
+- A typed point cannot pick an already-tagged block.
+- The driver prints a false "ALARM" after some commands.
+- Fixtures are missing for a doubled source block and a multi-word tag.

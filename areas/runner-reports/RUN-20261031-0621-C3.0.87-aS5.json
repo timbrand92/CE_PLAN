@@ -1,0 +1,453 @@
+{
+  "header": {
+    "run_id": "RUN-20261031-0621-C3.0.87-aS5",
+    "started": "2026-10-31 06:21:14",
+    "finished": "2026-10-31 06:22:53",
+    "build": {
+      "civil": {
+        "product_version": "3.0.87+f5dd72a0652c7f749ab52228cea0f9675047b9cb",
+        "file_version": "3.0.87.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.87+f5dd72a0652c7f749ab52228cea0f9675047b9cb",
+        "file_version": "1.1.87.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.87+f5dd72a0 / struc 1.0.125+204dfad2 / mgr 1.1.87+f5dd72a0",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "36778661E2E5F7B9A513CC3ED196AB8246AFF7BF80797FCCDAF91C9D3D76FCE4",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.87+f5dd72a0652c7f749ab52228cea0f9675047b9cb; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.87+f5dd72a0652c7f749ab52228cea0f9675047b9cb",
+      "Driver files (SHA-256, first 12): v2 F4D8F40C3675 (expected F4D8F40C3675), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 482EB7B20C6C, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 B439CADC8A7A, case_runner_lib.ps1 ED6244C9719E, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 0 shared setup(s); pack SHA-256 36778661E2E5F7B9A513CC3ED196AB8246AFF7BF80797FCCDAF91C9D3D76FCE4; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV2_S1 950AFDF6E523",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json D604CE689671 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sat 31 Oct 2026 06:21 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 1,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 1
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261031-0621-C3.0.87-aS5-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-31 06:21:14",
+      "finished": "2026-10-31 06:22:53",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV2_S1",
+      "fixture_sha256": "950AFDF6E523",
+      "copy": "C:\\ce_rc_drv\\CLDV30621261_B1.dwg",
+      "cases": [
+        "S472a_layout_tab_stops_proof"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : D604CE689671 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "S472a_layout_tab_stops_proof",
+      "proves_bugs": "BUG-472 (layout tab part, for BT1, C1 and BTX only; R1, AB, BB, TS1, FSF and FPFC share the same guard but are not typed here; REFEDIT is S472b)",
+      "title": "PROOF OF INSTALLED FIX BUG-472: on a layout tab in paper space, BT1, C1 and BTX each stop with one plain line and Model space gains nothing",
+      "kind": "deterministic",
+      "order": 50,
+      "slot": "fresh",
+      "fixture": "DRV2_S1",
+      "plan_item": "BUG-472 (HUNT-S-07, PR",
+      "bug": "BUG-472",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed. Written 30 Oct 2026 from the code at 204dfad2 and the p17 report; not compared with a run.",
+      "variant_of": "",
+      "expected": "After TILEMODE 0 and _.PSPACE (CTAB is a layout name, CVPORT 1): BT1 prints \"You are on a layout tab (paper space), so CE drew no bracing truss.\", C1 prints \"... so CE placed no support.\", BTX prints \"... so CE changed no text.\"; the history holds exactly three \"You are on a layout tab (paper space)\" lines; the Model space object count is the same before and after; the drawing file on disk is unchanged.",
+      "why_not_unit": "ModelSpaceWriteGuardTests.cs proves the decision with numbers; only AutoCAD's live CVPORT on a real layout tab, and the real commands, show that the stop happens before anything is written.",
+      "not_automated": [
+        "Paper space is not counted (the robot reads Model space only); the code writes these commands only into Model space, so a wrong build would show up there.",
+        "BTX on a text that sits ON the layout (the worst case in the carpark entry: the text erased from the sheet) needs a pick on the layout: Codex look. Here BTX stops before it asks for text.",
+        "R1, AB, BB, TS1, FSF and FPFC on a layout tab are not typed."
+      ],
+      "file_sha256": "36CEB06234CE7BA9B8535F10A5555EE87F83B7117AA96F8050C4B3A89670389C",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-31 06:22:00",
+      "seconds": 32.5,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "settings-arm",
+          "text": "settings-arm",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "settings guard armed: ok"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV30621261_B1.dwg: 85871 bytes, SHA-256 950AFDF6E523, last written 01:39:47; folder holds 255 files"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 15 objects"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"TILEMODE{NL}0\" -Force -> $tab",
+          "ok": true,
+          "seconds": 2.8,
+          "evidence": "typed 'TILEMODE 0': Command: | Command: TILEMODE | Enter new value for TILEMODE <1>: 0 | Regenerating layout. | Regenerating layout. | Regenerating model. | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be changed. Run set..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.PSPACE\" -Force -> $ps",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "typed '_.PSPACE': Command: | Command: _.PSPACE | Already in paper space. | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratc..."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "getvar",
+          "text": "getvar CTAB -> $ctab",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "CTAB = Layout1"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "getvar",
+          "text": "getvar CVPORT -> $cvp",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "CVPORT = 1"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"BT1\" -Force -> $bt",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "typed 'BT1': Command: | Command: BT1 | You are on a layout tab (paper space), so CE drew no bracing truss. Go to the Model tab, or double-click into a viewport, and try again. | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up..."
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $e1",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "esc-prompt: Command: | Command: BT1 | You are on a layout tab (paper space), so CE drew no bracing truss. Go to the Model tab, or double-click into a viewport, and try again. | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up..."
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"C1\" -Force -> $c1t",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "typed 'C1': Command: | Command: C1 | You are on a layout tab (paper space), so CE placed no support. Go to the Model tab, or double-click into a viewport, and try again. | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and ..."
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $e2",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "esc-prompt: Command: | Command: C1 | You are on a layout tab (paper space), so CE placed no support. Go to the Model tab, or double-click into a viewport, and try again. | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and ..."
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"BTX\" -Force -> $btx",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "typed 'BTX': Command: | Command: BTX | You are on a layout tab (paper space), so CE changed no text. Go to the Model tab, or double-click into a viewport, and try again. | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and m..."
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $e3",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "esc-prompt: Command: | Command: BTX | You are on a layout tab (paper space), so CE changed no text. Go to the Model tab, or double-click into a viewport, and try again. | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and m..."
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 15 objects"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"TILEMODE{NL}1\" -Force -> $back",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "typed 'TILEMODE 1': Command: | Command: TILEMODE | Enter new value for TILEMODE <0>: 1 | Regenerating model. | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Ori..."
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "matches $ctab \"^(?!Model$).\"",
+          "ok": true,
+          "expected": "matches /^(?!Model$)./",
+          "actual": "Layout1",
+          "evidence": "matched 'L'"
+        },
+        {
+          "n": 2,
+          "text": "equals $cvp \"1\"",
+          "ok": true,
+          "expected": "1",
+          "actual": "1",
+          "evidence": "value '1' (expected '1')"
+        },
+        {
+          "n": 3,
+          "text": "contains $bt \"You are on a layout tab (paper space), so CE drew no bracing truss.\"",
+          "ok": true,
+          "expected": "contains 'You are on a layout tab (paper space), so CE drew no bracing truss.'",
+          "actual": "Command: | Command: BT1 | You are on a layout tab (paper space), so CE drew no bracing truss. Go to the Model tab, or double-click into a viewport, and try again. | SETTINGS GUARD ACTIVE: 4 settings f...",
+          "evidence": "found 'You are on a layout tab (paper space), so CE drew no bracing truss.' in: Command: | Command: BT1 | You are on a layout tab (paper space), so CE drew no bracing truss. Go to the Model tab, or double-click into a viewport, and try agai..."
+        },
+        {
+          "n": 4,
+          "text": "contains $c1t \"You are on a layout tab (paper space), so CE placed no support.\"",
+          "ok": true,
+          "expected": "contains 'You are on a layout tab (paper space), so CE placed no support.'",
+          "actual": "Command: | Command: C1 | You are on a layout tab (paper space), so CE placed no support. Go to the Model tab, or double-click into a viewport, and try again. | SETTINGS GUARD ACTIVE: 4 settings file(s...",
+          "evidence": "found 'You are on a layout tab (paper space), so CE placed no support.' in: Command: | Command: C1 | You are on a layout tab (paper space), so CE placed no support. Go to the Model tab, or double-click into a viewport, and try again. | ..."
+        },
+        {
+          "n": 5,
+          "text": "contains $btx \"You are on a layout tab (paper space), so CE changed no text.\"",
+          "ok": true,
+          "expected": "contains 'You are on a layout tab (paper space), so CE changed no text.'",
+          "actual": "Command: | Command: BTX | You are on a layout tab (paper space), so CE changed no text. Go to the Model tab, or double-click into a viewport, and try again. | SETTINGS GUARD ACTIVE: 4 settings file(s)...",
+          "evidence": "found 'You are on a layout tab (paper space), so CE changed no text.' in: Command: | Command: BTX | You are on a layout tab (paper space), so CE changed no text. Go to the Model tab, or double-click into a viewport, and try again. | S..."
+        },
+        {
+          "n": 6,
+          "text": "history count \"You are on a layout tab (paper space)\" = 3",
+          "ok": true,
+          "expected": "3 line(s) with 'You are on a layout tab (paper space)'",
+          "actual": "3",
+          "evidence": "command line holds 3 line(s) containing 'You are on a layout tab (paper space)' (expected 3)"
+        },
+        {
+          "n": 7,
+          "text": "number $c1 = $c0",
+          "ok": true,
+          "expected": "= 15",
+          "actual": "15",
+          "evidence": "$c1 = 15 (expected = 15)"
+        },
+        {
+          "n": 8,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 950AFDF6E523 vs 950AFDF6E523; last written 01:39:47 same"
+        },
+        {
+          "n": 9,
+          "text": "record $ctab \"layout tab name\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Layout1",
+          "evidence": "RECORDED, not judged: layout tab name = Layout1"
+        },
+        {
+          "n": 10,
+          "text": "record $tab \"FULL TILEMODE 0 reply\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: TILEMODE | Enter new value for TILEMODE <1>: 0 | Regenerating layout. | Regenerating layout. | Regenerating model. | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL TILEMODE 0 reply = Command: | Command: TILEMODE | Enter new value for TILEMODE <1>: 0 | Regenerating layout. | Regenerating layout. | Regenerating model. | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 11,
+          "text": "record $bt \"FULL BT1 on the layout tab\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: BT1 | You are on a layout tab (paper space), so CE drew no bracing truss. Go to the Model tab, or double-click into a viewport, and try again. | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL BT1 on the layout tab = Command: | Command: BT1 | You are on a layout tab (paper space), so CE drew no bracing truss. Go to the Model tab, or double-click into a viewport, and try again. | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 12,
+          "text": "record $c1t \"FULL C1 on the layout tab\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: C1 | You are on a layout tab (paper space), so CE placed no support. Go to the Model tab, or double-click into a viewport, and try again. | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL C1 on the layout tab = Command: | Command: C1 | You are on a layout tab (paper space), so CE placed no support. Go to the Model tab, or double-click into a viewport, and try again. | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 13,
+          "text": "record $btx \"FULL BTX on the layout tab\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: BTX | You are on a layout tab (paper space), so CE changed no text. Go to the Model tab, or double-click into a viewport, and try again. | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL BTX on the layout tab = Command: | Command: BTX | You are on a layout tab (paper space), so CE changed no text. Go to the Model tab, or double-click into a viewport, and try again. | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 14 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-10-31 06:22:33",
+      "session_id": "RUN-20261031-0621-C3.0.87-aS5-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "no independent review: no S472a_layout_tab_stops_proof_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)",
+          "bug case (BUG-472) has no recorded FAIL on an earlier build or on a deliberately broken variant"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": false
+      }
+    }
+  ]
+}

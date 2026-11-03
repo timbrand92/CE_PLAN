@@ -1,0 +1,7 @@
+== cx_lf22 (usage 34.0% -> 34.0%): 1. **DONE — all five skipped as already covered.** BUG-978 → #1566; BUG-979 → #1559; BUG-980 → #1561; BUG-981 → #1631; BUG-982 → #1643. All remain draft PRs; no duplicates created.
+
+2. **Saved and pushed:** [Batch 22 report](C:/CE_PLAN/areas/CODEX_LEDGER_FIX_BATCH22_23OCT.md), commit `8ff69f23`. Includes full heads, reported test totals and exact outstanding AutoCAD checks. Leak scan passed.
+
+---
+
+3. **Verification:** 0 new tests, builds or AutoCAD runs. Nothing deployed or accepted. CE_PLAN `main` tip: `c738bb2a`.

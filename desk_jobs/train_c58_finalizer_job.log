@@ -1,0 +1,7 @@
+**FOR TIM**
+
+1. **Verdict: GO.** The train `claude/rel-20261020l` is now at `95fa0153`.
+2. **Bug I found and fixed:** the new window that opens when you double-click DP1 had a broken tag box. It opened empty, and if you typed DP2 and pressed OK, the downpipe stayed DP1. I fixed it and added a test that catches it.
+3. **Also added:** #1514, the progress line for slow checks. It is switched OFF.
+4. **Tests:** Civil 19,054 of 19,074 passed, with 19 skipped and only the known Glen Eira failure. Manager 837 of 837 and the older-AutoCAD check 219 of 219 passed. Your settings files are unchanged.
+5. **Manager does not need to ship.** Nothing is installed, and Codex still needs to look at the DP1 window in AutoCAD.

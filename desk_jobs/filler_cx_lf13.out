@@ -1,0 +1,5 @@
+== cx_lf13 (usage 32.0% -> 32.0%): 1. **DONE — all five skipped.** BUG-933 already has its four controls at the base. BUG-934–937 have existing draft coverage; naming/protected-window issues remain.
+
+2. **Saved and pushed:** draft [PR #1666](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1666), branch `cx2/bug-933-batch13-triage`, tip `fea5d9e6`. Tests added/run: **0/0**; documentation only. No builds, deployment or AutoCAD testing.
+
+3. **Report:** [Batch 13](C:/CE_PLAN/areas/CODEX_LEDGER_FIX_BATCH13_23OCT.md) contains per-bug evidence and exact future AutoCAD checks. Existing HOLDs remain.

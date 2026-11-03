@@ -1,0 +1,16 @@
+== cx_b01_automation_ids (usage 24.0% -> 55.0%): 1. **DONE — FOR TIM:** [Draft PR #1527](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1527). Invisible IDs and English names added; appearance and actions unchanged. [Report](C:/CE_PLAN/areas/CODEX_BUILD_AUTOMATION_IDS_22OCT.md) saved and pushed.
+
+2. **Evidence:** 70 inspected pictures. Nothing installed; AutoCAD not started. About’s existing render limitation is recorded.
+
+---
+
+3. **Handoff:** `cx/automation-ids-c60` at `235e0c33acaa8685bc48c6b2893713c593b715bf`. Three build lanes: 0 errors. New checks: 26/26. Civil: 19,180 total, 19,160 passed, 19 skipped, one confirmed base failure. Manager: 853/853.
+== cx_b03_outcome_struct_mgr (usage 55.0% -> 1.0%): it-tested.** Draft Structural [#1547](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1547): `cx/outcome-struct` @ `7406cfb4`; 5,249 passed, known hanging fixture excluded.
+
+2. **Manager:** Draft [#1548](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1548): `cx/outcome-mgr` @ `41b326cf`; 901 passed.
+
+3. **Checks:** 94 new tests. Nine builds, zero errors. Civil: 19,134 passed, one known failure, 19 skipped. Nothing deployed; AutoCAD untested.
+
+4. **Behaviour:** One outcome line using Civil’s existing switch/default; placement followed by Esc counts as completed.
+
+5. **Report:** [Saved and pushed, including exact AutoCAD checks](C:/CE_PLAN/areas/CODEX_BUILD_OUTCOME_STRUCT_MGR_22OCT.md).

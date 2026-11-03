@@ -1,0 +1,19 @@
+**FOR TIM**
+
+1. **Done:** the batch 7 review is pushed to `C:\CE_PLAN\areas\REVIEW_PILE_B7_24OCT.md`. Five of the twelve PRs already had an Opus review, so I skipped them (#1554, #1561, #1565, #1569 and #1573). I reviewed the other seven.
+
+2. **Verdicts:** 5 can be merged as they are and 2 need small fixes first. None is held or rejected.
+   1. **Merge as they are:** #1559 (CDJOINT keeps the old joints when you press Esc), going into the next Civil release. #1568 (swapping sheet numbers), #1564 (support labels), #1563 (SBEAM with the UCS moved) and #1566 (Structural loads in a second AutoCAD), going into the next Structural release.
+   2. **Small fix first:** #1560 (Notes). It now stops one unreadable notes file wiping your earlier notes, but it says nothing on screen, so a new note just disappears. #1572 (Sheets preview). The palette's preview window may open behind AutoCAD.
+
+3. **Found while reviewing:**
+   1. **A new bug with no number yet:** the shared project tags file can be wiped the same way the notes file was. It needs its own entry in the bug list. I'm not allowed to edit that list, so it's only in the report for now.
+   2. **#1566 needs a check:** now that a second AutoCAD loads Structural, two job timers may count the same hour twice. Nobody has tested this yet.
+
+4. **Not done:** nothing was built or opened in AutoCAD. I read the code and test files only; I did not re-run any tests.
+
+---
+
+My scratch copy of the repo in `C:\ce-tr` has been deleted. The CE_PLAN copy shows no unpushed commits; the two other changed files there were not mine.
+
+**Summary:** I reviewed batch 7, class E items 67 to 78. Five already had an Opus review and were skipped. Of the seven reviewed, five can merge now (#1559 for Civil; #1568, #1564, #1563, #1566 for Structural). Two need small fixes first: #1560 must tell the drafter when a note can't be saved, and #1572's palette preview must open in front of AutoCAD. The project tags file has the same wipe risk as the notes file and needs a bug number. Each PR clashes only in the change log. Nothing was built, tested or opened in AutoCAD.

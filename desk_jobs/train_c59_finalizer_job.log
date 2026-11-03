@@ -1,0 +1,24 @@
+**FOR TIM**
+
+1. **GO at `31d6c697ba2ef4a6fbc9f579bfc1346ceef3a214`.** Train C-59 (Civil and Manager) is ready for the payload builder.
+2. **I made one fix, to the window only.** The new "Log one line for each CE command that ends" tick made CDS > Advanced too tall for a 1920×1080 screen at 150%, so some text would have been cut off. To make room, the two hint lines under OFFICE SHORT NAMES are now one line. No setting changed.
+3. **My mistake:** my first attempt shortened the "Quiet start" hint, but an existing test protects that wording. The full test run caught it, so I put it back word for word and shortened the other hint instead. It cost one extra 5-minute test run.
+4. **Manager must ship: YES.** The Manager release build has 0 errors and exactly 75 files, the same file list as your installed Manager.
+5. **What you'll see:**
+   - **Removed pits:** with the switch on, a pit marked To be removed stops raising fit and FALL arrow checks. The switch is off by default.
+   - **Crowded pipe callouts:** with the switch on, a callout with no clear spot moves out with its leader. This works in millimetre and metre drawings. The switch is off by default.
+   - **CE's log:** one line per CE command, for example `Command outcome: CDSYNC completed 250 ms`. This switch is on by default and I kept it on. It writes only to the log file, never to your drawing.
+6. **Don't mark these FIXED yet:** removed pits, leader-out, the log lines and the CDS > Advanced change. Codex still needs to look at CDS > Advanced at 150%.
+
+---
+
+- **Tests at the final version:**
+  - Whole build: 0 errors.
+  - Civil: 19,089 of 19,109 pass, 19 skipped, 1 fail. The fail is the known Glen Eira one.
+  - Manager: 853 of 853.
+  - Older AutoCAD versions (net48), selected tests: 360 of 360.
+- **Signed-update safety:** nothing in the installer or shared code changed, so the signed-update check cannot be affected.
+- **Housekeeping:** your four settings files are unchanged. Nothing was installed, nothing was opened in AutoCAD, and my temporary worktree and folders are removed.
+- **Unauthorised connectors:** several claude.ai connectors (Asana, Slack, Notion and others) are not authorised. None was needed for this job.
+
+Summary: GO at `31d6c697`. One fix: CDS > Advanced fits 1920×1080 at 150% again, from a shorter OFFICE SHORT NAMES hint. Manager must ship; its release build gives exactly 75 files. Tests pass apart from the known Glen Eira fail (Civil 19,089 pass, Manager 853/853, older-version selection 360/360). The command outcome log switch stays on. Codex still needs to check CDS > Advanced, and nothing is marked FIXED.

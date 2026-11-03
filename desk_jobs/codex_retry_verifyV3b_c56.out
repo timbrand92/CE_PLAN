@@ -1,0 +1,41 @@
+== verifyV3b_c56 (usage 6.0% -> 7.0%): 1. **Completed:** [V3b report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_V3_20261021_0826.md>) with 57 captures. Installed Civil 3.0.67 / Manager 1.1.67.
+
+2. **Results:** 6 PASS, 1 FAIL, 1 SEEN; 7 SURE, 1 UNSURE. No BLOCKED, DIFFERENT or NOT TESTED result IDs. Failure: V3-04 printed no ÔÇ£CHECK THE SCALEÔÇØ warning for INSUNITS 0. Procedural deviations and DP1 identity uncertainty are documented.
+
+3. **Settings restored:** A1 = C1 = A2 = C2:
+   `ACD64E79A33BE9C152149FF2145A3CD2C29CABE11245F211183FD5C7DE783140`
+
+4. **Clean finish:** all four watched files match their originals, AutoCAD is gone, lock released. Usage 7%. Fixtures wanted: none.
+== verifyV3b_c56 (usage 7.0% -> 8.0%): 1. **DONE:** [V3b report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_V3_20261021_0911.md>). Tested installed Civil 3.0.67 / Manager 1.1.67.
+
+2. **Results:** 6 PASS result lines, 1 FAIL, 1 SEEN; 0 DIFFERENT, BLOCKED or NOT TESTED looks. SURE 7 / UNSURE 1.
+
+3. **Failure:** BUG-505 printed no ÔÇ£CHECK THE SCALEÔÇØ warning for source units 0. DP1 identity remains unconfirmed; observed double-click behaviour is recorded.
+
+4. **Restored:** Both settings passes restored exactly. A1 = C1 = A2 = C2:
+   `ACD64E79A33BE9C152149FF2145A3CD2C29CABE11245F211183FD5C7DE783140`
+
+5. **Safe end:** AutoCAD gone, guard empty, lock released. Fixture wanted: visually identifiable DP1.
+== verifyV3b_c56 (usage 8.0% -> 9.0%): anager **1.1.67**.
+
+2. **Results:** 5 PASS, 1 FAIL, 1 DIFFERENT, 3 SEEN; 0 BLOCKED. Confidence: 9 SURE, 1 UNSURE. Failure: missing **CHECK THE SCALE** warning. DP1 identity remains uncertain; three tooltips untested.
+
+3. **Cleanup:** AutoCAD gone, lock released, both settings passes restored exactly. Other watched files unchanged. Fixtures wanted: none.
+
+4. **Full restoration hashes:**
+   
+   A1: `ACD64E79A33BE9C152149FF2145A3CD2C29CABE11245F211183FD5C7DE783140`
+   
+   C1: `ACD64E79A33BE9C152149FF2145A3CD2C29CABE11245F211183FD5C7DE783140`
+   
+   A2: `ACD64E79A33BE9C152149FF2145A3CD2C29CABE11245F211183FD5C7DE783140`
+   
+   C2: `ACD64E79A33BE9C152149FF2145A3CD2C29CABE11245F211183FD5C7DE783140`
+== verifyV3b_c56 (usage 9.0% -> 10.0%): 1. **Report:** [V3b verification](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_V3_20261021_1040.md>). Installed Civil **3.0.67**, Manager **1.1.67**.
+
+2. **Results:** 5 PASS, 2 BLOCKED, 3 SEEN; no FAIL or DIFFERENT. Tidy Labels passed. Import warning and complete startup-history proof remain blocked. Step-iron stayed **1000 mm** through restart. SURE 8; UNSURE 2.
+
+3. **Cleanup:** AutoCAD closed, lock released, both settings passes restored exactly. A1 = C1 = A2 = C2:
+   `ACD64E79A33BE9C152149FF2145A3CD2C29CABE11245F211183FD5C7DE783140`
+
+4. **Outstanding:** Grade-mismatch X still placed the pipe. Three tooltips untested; exact DP1 identity unconfirmed. Fixtures wanted: none.

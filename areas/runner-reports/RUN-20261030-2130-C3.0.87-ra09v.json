@@ -1,0 +1,260 @@
+{
+  "header": {
+    "run_id": "RUN-20261030-2130-C3.0.87-ra09v",
+    "started": "2026-10-30 21:30:38",
+    "finished": "2026-10-30 21:39:12",
+    "build": {
+      "civil": {
+        "product_version": "3.0.87+f5dd72a0652c7f749ab52228cea0f9675047b9cb",
+        "file_version": "3.0.87.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.87+f5dd72a0652c7f749ab52228cea0f9675047b9cb",
+        "file_version": "1.1.87.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.87+f5dd72a0 / struc 1.0.125+204dfad2 / mgr 1.1.87+f5dd72a0",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "0658F8E05D1580734E2345BFA514FD86302F0793F4515691B0E1E2AE567F9773",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.87+f5dd72a0652c7f749ab52228cea0f9675047b9cb; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.87+f5dd72a0652c7f749ab52228cea0f9675047b9cb",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4CD773B85EC5, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 13955AAA60D1, case_runner_lib.ps1 8F9B8DCBB473, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 0 shared setup(s); pack SHA-256 0658F8E05D1580734E2345BFA514FD86302F0793F4515691B0E1E2AE567F9773; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json D604CE689671 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Fri 30 Oct 2026 21:30 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 0,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 1,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261030-2130-C3.0.87-ra09v-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-30 21:30:48",
+      "finished": "2026-10-30 21:39:12",
+      "result": "FAIL",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV32131051_B1.dwg",
+      "cases": [
+        "N20v87"
+      ],
+      "calibration": {
+        "ok": false,
+        "max_raw_px": null,
+        "max_corrected_px": null,
+        "why": "south-east : the click failed: the stored view reading is 32 s old (limit 30): read the view again just before the command that waits for the point. Nothing was clicked.",
+        "canvas": {
+          "left": 2225,
+          "top": 421,
+          "width": 1584,
+          "height": 569,
+          "how": "exact (tol 0)",
+          "scale_vs_screensize": 1.0,
+          "dpi": 96
+        }
+      },
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : D604CE689671 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "N20v87",
+      "proves_bugs": "",
+      "title": "A 2 m pipe gets its label on a leader: CE asks to snap the callout arrow to the pipe, places exactly one multileader, and draws no plain label along the pipe",
+      "kind": "deterministic",
+      "order": 200,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "UX-CPLAN-24 short-pipe label on a leader (daily card D11)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "CD from 150000,-80000 to 152000,-80000 with inverts 18.000 / 17.980 and Start Pipe: CE asks 'Snap callout arrow to pipe:'; a click on the pipe at 151000,-80000 and a click for the text at 151000,-78500 place the label; the CD run then offers the next pipe and Esc ends it. The drawing gains exactly one pipe, exactly one multileader, and no plain text containing ' DIA. '; 'Pipe text callout cancelled.' is never printed.",
+      "why_not_unit": "The fit test uses the real text width and the drawn length, and the leader is placed by live prompts in the drawing.",
+      "not_automated": [
+        "The leader's arrow point lying on the pipe (card assertion 2) and the leader's look are a Codex look; the arrow point is not readable by the robot.",
+        "The leader's own wording (size, material, grade) is RECORDED only: the robot has never read a multileader's text."
+      ],
+      "file_sha256": "E565BB361CD42844F4C4403D75E8C3C5A33F05C4CABF4812E6DD0A79F8EDD1AD",
+      "result": "BLOCKED",
+      "blocked": "not calibrated",
+      "first_failure": null,
+      "started": "2026-10-30 21:35:34",
+      "seconds": 195.3,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM _C 151000,-79500 6000\"",
+          "ok": true,
+          "seconds": 6.9,
+          "evidence": "typed '_.ZOOM _C 151000,-79500 6000': Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _C | Specify center point: 151000,-79500 | Enter magnif..."
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 10.1,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 view-read",
+          "ok": true,
+          "seconds": 0.9,
+          "evidence": "v3 view-read : view stored: centre 151,000.000,-79,500.000 height 6,000.000 screen 1584x569"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-80000{NL}152000,-80000{NL}\" -Force -ExpectWindow \"New Pipe\" -TimeoutSec 120 -> $t1",
+          "ok": true,
+          "seconds": 13.7,
+          "evidence": "typed 'CD 150000,-80000 152000,-80000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-80000 | Specify second point: 152000,-80000 | Se..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 11.6,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: "
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.980\"",
+          "ok": true,
+          "seconds": 15.3,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.980: "
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $t2",
+          "ok": true,
+          "seconds": 70.3,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 pt-click \"150300,-80000\" -Blind -> $click_anchor",
+          "ok": false,
+          "seconds": 0.9,
+          "evidence": "v3 pt-click 150300,-80000: BLOCKED 'not calibrated': this session's calibration has not passed (south-east : the click failed: the stored view reading is 32 s old (limit 30): read the view again just before the command that waits for the point. No..."
+        }
+      ],
+      "assertions": [],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 9 new line(s) while the case ran, 0 with [ERR]",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=True)",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=True)"
+      ],
+      "error": null,
+      "finished": "2026-10-30 21:38:49",
+      "session_id": "RUN-20261030-2130-C3.0.87-ra09v-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}

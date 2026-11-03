@@ -1,0 +1,22 @@
+Mon 10:13:21 batch S39 waiting for batchS12 to end
+Mon 10:13:21 taking over from the restarted robot chain
+Mon 10:13:28 stopped idle chain4 pid 26696
+Mon 10:13:29 backed up CD_RecentValues.json sha 8C021849BD8F
+Mon 10:13:29 backed up CD_Settings.json sha ACD64E79A33B
+Mon 10:13:29 backed up CS_Settings.json sha D604CE689671
+Mon 10:13:29 backed up settings.json sha EFE307C4FC74
+Mon 10:13:29 STOP_CODEX.flag lifted (STOP_SUPERVISOR.flag stays up)
+Mon 10:13:34 Codex usage before S2 : 40 percent
+Mon 10:13:34 starting verifyS2_c88
+Mon 10:52:16 verifyS2_c88 launcher finished; Codex usage after: 42 percent
+Mon 10:52:47 after S2 : CS_Settings.json sha D604CE689671 (original D604CE689671)
+Mon 10:52:47 after S2 : settings.json sha EFE307C4FC74 (original EFE307C4FC74)
+Mon 10:52:47 after S2 : CD_Settings.json sha ACD64E79A33B (original ACD64E79A33B)
+Mon 10:52:47 unchanged CS_Settings.json sha D604CE689671
+Mon 10:52:47 RESTORED CD_RecentValues.json: was D0EDE6893632, back to 8C021849BD8F
+Mon 10:52:47 unchanged settings.json sha EFE307C4FC74
+Mon 10:52:47 unchanged CD_Settings.json sha ACD64E79A33B
+Mon 10:52:47 install gate is active: HOLD_ROBOT.flag and ROBOT_STOP_AT.txt left in place
+Mon 10:52:47 no robot restart: the install gate (10:45) and the C-79a install (10:55) follow
+Mon 10:52:47 CODEX_NEXT.txt rewritten to batch B
+Mon 10:52:47 Batch S2r ends.

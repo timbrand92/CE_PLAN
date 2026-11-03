@@ -1,0 +1,28 @@
+Both files are pushed. Afterwards `git status` shows "ahead 2", but those two commits came from other chats (H20 and CE 07) after mine, so I left them for those chats to push.
+
+**For Tim**
+
+1. **The robot job is written, not queued:** `C:\CE_PLAN\desk_jobs\tester_run80_c76_proofs.txt`. The desk adds it to the queue. It won't run unless Civil 3.0.86 is installed.
+2. **What the robot checks after tonight's install:**
+   1. **Double-click a downpipe:** CE's small "Edit source" window should open on DP1, and AutoCAD's "Enhanced Attribute Editor" should never open.
+   2. **CDCHECK:** no line should show "handle 1197BB" or "CE-CIV-PIPE-…". A pipe with no name should read "An unnamed pipe flows to WT4".
+   3. **DP speed:** one downpipe at 150000,-80000 should go in under 10 seconds instead of about 30.
+   4. **Each check runs twice,** in separate AutoCAD starts. Each also runs once with its fix switched off, and that run must show the old fault.
+3. **R09 can't pass even if the fix works.** The case looks for buttons called "Cancel" and "OK" and a box called "Tag". The real window calls them "Cancel source changes", "Accept source changes" and "Source tag". I left R09 alone and wrote a copy with the right names, called R09s. The report gives the case owner the exact lines to change.
+4. **The robot re-runs all 66 accepted checks tonight:**
+   1. **Why:** the fixes touch parts of CE that other tools share. The double-click change is in the code that handles a double-click on any pit, pipe or source. The DP speed change is in the code that works out which pit a pipe end belongs to, which CD and PIT also use. The About window fix is in the Manager.
+   2. **What it means:** under your re-test rule, a change to a shared part means checking everything. So no check gets "carried from 3.0.85".
+5. **Time:** about 49 AutoCAD starts and about 8¼ hours. If it starts around 17:45 it should finish between 2 and 3 am. It stops by itself before 08:30.
+6. **The About window needs a Codex look:** a machine can't accept a window. Codex should open CE_VERSION at 100% and 150% display scaling.
+7. **You don't need to do anything.**
+
+---
+
+1. **Case number:** the DP-time case is **N36**, not "N31_dp_time" as CE 01 asked, because N31 is already used by a batch-4 draft. Its switch-off twin is **N36_BROKEN**. Please pass this on to CE 01.
+2. **New files:** six draft cases are in `cases\drafts_c76_29oct\`: N36, N36_BROKEN, R22_off_broken, R09s and two controls for R09s (new switch off, compound behaviour off). All six passed the offline format check, with AutoCAD not started. The spec is `C:\ce-fx\c75regrade3\spec_c76.txt`. The full plan is `C:\CE_PLAN\areas\C76_PROOF_PLAN_29OCT.md`.
+3. **What nobody has seen yet:**
+   1. **AutoCAD's response:** whether it actually stops its attribute editor when CE refuses it.
+   2. **Untested lines in R09s:** its four window checks (control names and the Close button) come from the window's source file.
+   3. **The new CDCHECK wording:** "An unnamed pipe flows to WT4" has not appeared in any run.
+
+**Summary:** Job run80 runs the three bug proofs and then all 66 accepted checks (FULL), about 8¼ hours. R09 can't pass as written, so the job relies on the corrected copy R09s. The DP-time case is N36 because N31 is taken. Nothing has run in AutoCAD.

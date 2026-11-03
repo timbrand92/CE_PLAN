@@ -1,0 +1,17 @@
+== verifyF4_cur (usage 83.0% -> 85.0%): AUTOCAD CLOSED
+
+1. **BLOCKED:** The prescribed zoom printed `Command: nil`, triggering F4 rule N17. LandXML was not opened.
+2. **Counts:** PASS 0, FAIL 0, DIFFERENT 0, BLOCKED 1, NOT TESTED 0. SURE 1, UNSURE 0. No failures established.
+3. **Clean end:** Settings unchanged; drawing not saved; lock released. No fixtures needed.
+4. **Report:** [CODEX_VERIFY_F4_20261027_0307.md](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_F4_20261027_0307.md>)
+== verifyF4_cur (usage 89.0% -> 89.0%): AUTOCAD CLOSED
+
+1. **F4: PASS ÔÇö SURE.** LandXML file choice and Close button readable; closed without a file. Object count unchanged: 1054.
+2. **Counts:** PASS 1; all other results 0. SURE 1, UNSURE 0. No failures.
+3. **Clean end:** Four settings hashes unchanged; lock released. Import and preview outside scope.
+4. **Report:** [F4 verification](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_F4_20261027_0557.md>).
+== verifyF4_cur (usage 89.0% -> 90.0%): AUTOCAD CLOSED
+
+1. **F4 PASS ÔÇö SURE.** LandXML controls were readable and complete. Close cancelled cleanly; object count stayed 1054. No import tested.
+2. **Clean end.** All four settings hashes unchanged; installed versions unchanged; lock released. No failures or blocked looks.
+3. **Report:** [F4 verification](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_F4_20261027_0607.md>). PASS 1; all other counts 0. SURE 1, UNSURE 0. Fixtures wanted: none.

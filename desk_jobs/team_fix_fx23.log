@@ -1,0 +1,9 @@
+PR #1923 now ships `doubleClick.pitLabelStopsAttributeEditorFirst` OFF by default, in one normal commit (`454e3eab`) with no force-push. The PR is still a draft and I updated its title and body to say OFF. The report is pushed as `C:\CE_PLAN\areas\BUGFIX_fx23_REPORT_01NOV.md`.
+
+**Tests:** 254 focused net10 tests passed, 0 failed, and net48 compiles with 0 errors. The new "ships OFF" test was not run against the old head; by reading, it would fail there. Nobody has opened this in AutoCAD, and BUG-430 is not marked fixed.
+
+**Files:** `DoubleClickSettings.cs`, `DoubleClickAttributeEditorStopRule.cs`, `Bug430PitLabelStopsAttributeEditorTests.cs` and `REGRESSION_LOG.md`.
+
+**Audit:** I checked about 75 switches across PRs #1898 to #1974. Only #1923 contradicted a Tim ruling, and that is now fixed.
+
+**Flag:** Tim's real settings and log folders changed during my run (80 differing lines). I believe another session's AutoCAD (started 1:08am) wrote them, but I can't prove it. The detail is in the report.

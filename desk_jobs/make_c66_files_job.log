@@ -1,0 +1,10 @@
+C-66 job files are written and pushed to C:\CE_PLAN (`git status -sb` shows no "ahead"). Nothing was run or started.
+
+**Files:**
+- `areas\TRAIN_C66_PR_LIST_2026-10-25.md`: ten PRs (#1778 #1773 #1770 #1769 #1772 #1775 #1776 #1777 #1774 #1768).
+- #1771, #1756 and #1767 are left off for Tim.
+- 233 PRs are listed as already in the base.
+- `train_c66_assembler_job.txt`, `train_c66_finalizer_job.txt`, `payload100_c66_job.txt`
+- `scripts\desk_install_c66.ps1`, `chain_c66.ps1`, `chain_install_c66.ps1`
+
+**Fix:** `chain_c66_make.ps1` checked for `payload99_c66_job.txt`, so I changed it to `payload100_c66_job.txt`. The copy already running still has the old check. Start `chain_c66.ps1` by hand.

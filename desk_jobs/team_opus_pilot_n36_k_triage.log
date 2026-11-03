@@ -1,0 +1,12 @@
+The report is pushed to CE_PLAN and the branch is not ahead of GitHub.
+
+1. **N36, downpipe speed: ready for the DP part, and I wrote its review slip.** DP now takes 8 to 9 s on the test drawing, against 31 s with the fix switched off. The broken twin failed on exactly the five checks predicted.
+2. **P01, label to the clicked leg: not ready.** It passed in three AutoCAD starts, but its twin has never run.
+3. **P02, pasted downpipe: needs fix.** Its twin has never run either. It also needs one added check that the pasted copy actually moved.
+4. **K01 to K08: all eight reds are case faults, not product faults.**
+   - Five use an old name for the "second end level" tick box.
+   - K01 draws a 1 m pipe, which makes CE ask its Grade mismatch question.
+   - K07 is missing a third Esc after placing the pit.
+   - K08 should press "Cancel without saving", not "Cancel".
+
+None of the K cases has tested the product yet.

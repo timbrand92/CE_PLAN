@@ -1,0 +1,9 @@
+== verifyA3_c88 (usage 31.0% -> 31.0%): AUTOCAD CLOSED
+
+1. **Blocked:** A3-00 could not enable placement. The schedule remained unlinked. Seven dependent looks were not tested; W1-385 and W1-791 were excluded.
+
+2. **Results:** 0 PASS, 0 FAIL, 0 DIFFERENT, 1 BLOCKED, 7 NOT TESTED. All outcomes SURE; no bug acceptance claimed.
+
+3. **Clean end:** Nothing saved, settings hashes unchanged, no layer locked, lock released. Usage 31%.
+
+4. **Report:** [A3 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_A3_20261102_0652.md>). Needed: a working linked-schedule placement route or fixture.

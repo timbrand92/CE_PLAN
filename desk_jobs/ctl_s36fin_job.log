@@ -1,0 +1,24 @@
+**FOR THE CONTROLLER**
+
+1. **Verdict: GO.** Release train S-36 can become the next Structural payload. Nothing serious (HIGH or MEDIUM) is left open, and the six LOW findings do not block. The final head is pushed and the local branch equals origin.
+2. **#956 is now in the train.** AB and BB keep both checks:
+   - First the drawing-units check from #956.
+   - Then the locked-layer refusal.
+   - Both only read the drawing and print one line. Nothing is drawn or unlocked before either one.
+3. **An earlier finalizer run made that #956 merge at 00:29 (`c8e07e80`) and stopped without pushing it or writing a report.** I checked that it was no longer running, then checked the merge line by line: it carries exactly the PR's changes. I kept it.
+4. **My one commit, `b90c5d6e`, changes text only.** CEMARKUPCHECK's help text in the command list still said the drawing comparison "is not built yet". #993, in this same train, built it, so the text now describes what the command does.
+5. **Tests:**
+   - **Structural net10:** 4906 of 4906 passed.
+   - **Structural net48:** 4169 passed, 36 failed, 698 not run. The failures are in the same nine old classes as before.
+   - **DesignCore:** 2045 per lane on all three lanes, with the same 6 old failures.
+   - **Builds:** 9 of 9 at 0 errors.
+   - **Against the assembler:** I have 17 more tests. S-34's 4844, plus the 62 test cases this train adds, gives exactly my 4906. The assembler's 4889 is 13 short, and 13 is the size of one new test class, so it probably missed that class. I have not proven that.
+6. **Tim's Structural settings file is not the size the brief names.** It is 33,817 bytes, not 33,198. It was written at 00:27:34, which matches an AutoCAD start during Codex run W53. This train and these tests did not do it. The file stayed identical before and after every one of my test runs.
+7. **The worktree was usable, so I worked in it directly.** No fast-forward is needed.
+8. **`SETTINGS_LOOK_2026-10-09.md` does not exist** in the places I searched. That means I could not compare Tim's stored values with the stock ones.
+9. **The assembler's Codex check "(d) Settings window shows the new rows" will find no rows.** None of the new settings has a row in the Settings window yet; they can only be changed in the settings file.
+10. **Built and unit-tested only. Nobody has opened this train in AutoCAD.**
+
+The report, including the six-step "What Codex should check in AutoCAD" list, is at `C:\Lisp Files\_TEST_COPIES_20260923\TRAIN_S36_FINALIZER_REPORT.md`.
+
+OPUS SIGN-OFF train claude/rel-20261009y GO (b90c5d6e663a923d2354d3a7d5a4039e2963697d)

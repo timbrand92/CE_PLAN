@@ -1,0 +1,34 @@
+## FOR TIM
+
+1. **Answer:** GO. Train C-79b2 (Civil only, 16 PRs) is ready for the payload builder at `d4ce878ebfff53ec58e4a330fd0079ee4b999c67`. Class is **AREA**: re-test only what changed, plus the start-up check and a few named checks.
+2. **Mistakes first:**
+   - The assembler missed one comment line that a merge dropped in the settings file. It changes nothing on screen. I put it back and added a test that catches it next time.
+   - The assembler said the net48 tests don't load. They do: I ran 6,053 of them.
+3. **What you will notice once it's installed:**
+   - **Pipe speed:** uPVC pipes are now held to 3.0 m/s in the Edit Pipe grade strip and connection-pipe sizing. Before, every material got 6.0. Concrete stays at 6.0.
+   - **Cover:** the Inspector, Civil Hub and repair check now measure cover to the outside top of the pipe, the way CDRULES does. Expect more cover warnings.
+   - **New Pipe:** the "Grade mismatch" window becomes one warning line, and your typed levels are kept.
+4. **One thing to decide (it doesn't hold up the train):** CDDESIGN's new rainwater-reuse box works out Kingston's credit with the two-step rule. A 3,000 L tank gets 1,000 L. Your open question 115.1 recommends keeping your stricter 10 June reading, which gives 500 L. My recommendation is to keep 500 L until the Kingston document is re-read.
+5. **Nothing was opened in AutoCAD. Every bug stays open.**
+
+---
+
+**Technical summary**
+
+1. **Verdicts:** all 16 PRs kept (7 KEEP, 9 KEEP-WITH-NOTE). All 16 PR heads on GitHub are still the ones that were merged.
+2. **REDO-safety:** the baseline file is unchanged and the REDO-safety tests pass, 25 of 25.
+3. **#1944 (record recovery):** it can only narrow the position match, never widen it. When two saved pits are both within reach, each goes to its own nearest rebuilt pit.
+4. **My commits:**
+   - `773d45db`: the comment line put back.
+   - `d4ce878e`: `C79b2FinalizerGuardsTests` (24 tests) and my change-log entry.
+5. **Test results:**
+   - **Civil net10 full:** 22,517 tests, 0 failed, with the real-settings guard included.
+   - **Civil net10 focused:** 2,909 tests, 0 failed.
+   - **Civil net48 focused:** the 120 known failures plus 9 more. All 9 are the same "AutoCAD type outside AutoCAD" kind, all in this train's own new tests, and they pass on net10.
+   - **Manager net10:** 1,150 tests, 0 failed. Its real-settings guard ran on its own later: 1 passed, 1 not run.
+6. **Files:**
+   - Report: `C:\CE_PLAN\areas\release-v3-colleagues-TRAIN_C79B2_FINALIZER_REPORT_2026-11-01.md`
+   - Sign-off: the review-lane log, entries 1745 to 1751.
+   - My worktree `C:\CE_WORK\build\c79b2f` and scratch `C:\CE_WORK\scratch\c79b2f` are left in place, because C: still has 52 GB free.
+
+**Summary:** GO at `d4ce878ebfff53ec58e4a330fd0079ee4b999c67`, CLASS AREA. All 16 PRs kept. Two commits: one comment line restored, plus 24 guard tests. Civil net10 22,517 tests and 0 failed. Net48 shows only the known kind of failure. Manager 1,150 tests and 0 failed. Nothing is held. The Kingston credit question is flagged for Tim.

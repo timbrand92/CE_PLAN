@@ -1,0 +1,7 @@
+== verifyG6_c84 (usage 16.0% -> 16.0%): AUTOCAD CLOSED
+
+1. **G6 BLOCKED ÔÇö SURE.** P8, the grate and ÔÇ£Check levelsÔÇØ warning appeared; one undo removed the copy. C2 partly obscured the number circle and clipped the cover text. Inspector contents were not visible.
+2. **Builds recorded.** Civil 3.0.86 / Manager 1.1.86 / Structural 1.0.125.
+3. **Clean end.** All four settings hashes unchanged. Drawing unsaved. Lock released. No failures established; no fixtures missing.
+4. **Counts.** PASS 0, FAIL 0, DIFFERENT 0, BLOCKED 1, NOT TESTED 0. SURE 1, UNSURE 0.
+5. **[Report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_G6_20261030_0714.md>).** Evidence and remaining visibility limits recorded.

@@ -1,0 +1,5 @@
+`C:\CE_PLAN\areas\ROBOT_CASE_DRAFTS_SET13_CHECKS_OLDER_02NOV.md` — verdict: 3 cases with twins drafted (W1771, W1841, W1848), 3 fixes Codex-only (#1850, #1851, #1856), nothing run.
+
+**Brief correction:** #1771 is not merged into any train, so W1771 can't run until it is built into one.
+
+**W1848 risk:** the CDRULES cover row may fall past the 80-row command-line limit. If it does, the case proves nothing and Codex look K13_04 applies.

@@ -1,0 +1,10 @@
+**Candidate:** `C:\ce_rc_scratch\c1042`, with both bundles built and nothing installed.
+
+- **Verified:** Civil 828 files and Manager 78 files, both "verified N, bad 0, extra 0". Files added or removed against the installed bundles: 0.
+- **Branch head:** `21462f9c`. That is two commits on `a72ab578`, because my first version commit carried the wrong line endings and I can't force-push. The net change is 4 lines.
+- **Tests:** Civil 39 of 39, Manager 51 of 51.
+- **Strings:** all 19 new-in-C-45 strings are present in the candidate and absent from installed.
+- **Switches:** 32 new switches, 30 ON and 2 OFF. None has a Settings page row.
+- **Tim's settings:** identical before and after.
+
+The report is at `C:\Lisp Files\_TEST_COPIES_20260923\PAYLOAD_C1042_REPORT.md`.

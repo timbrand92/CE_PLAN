@@ -1,0 +1,1 @@
+`C:\CE_PLAN\areas\OPUS_PREREVIEW_1989_1993_02NOV.md`: #1989, #1990 and #1991 are GO. #1992 and #1993 are CHANGE-NEEDED: each adds its own Settings group called "validation", so they need one shared group before they can share a build. I built and tested nothing, and none of the five is in 3.0.89, 3.0.90 or b2.

@@ -1,0 +1,13 @@
+C:\CE_PLAN\areas\LOOKBRIEF_LANEB_PART2_02NOV.md — verdict: 7 of the 9 bugs need a look and 2 (BUG-243, BUG-322) can't be looked at until a metre drawing with pits exists. The brief is four short Codex sessions, and I searched the file for the banned BUG-421 word and found none.
+
+- **Still to look:** BUG-233, 239, 263, 264, 518, 524 and 571. BUG-571 and BUG-524 are partly seen already: K1 (1 Nov) saw the Pit Schedule export headings and the Pit Schedule and Calculations window titles.
+- **Cannot be looked at yet:** BUG-243 and BUG-322. The fixture robot needs to make `C:\ce_rc_vc7\METRE-M_VC7.dwg`; the recipe is in `FIXTURES_TODO_ROBOT.md` and has never been run.
+- **BUG-322 mostly unfixed:** the pipe-label offset (item 1) has no fix in git. `QuickModeService.cs` has only its two first-import commits, so the carpark "fix installed" line covers one of its four items.
+- **Carpark damaged:** `C:\CE_PLAN\BUG_CARPARK.md` is about 1 KB. Commits 20e999d3 and 5cd059e9 (2 Nov) replaced the 2.1 MB register with a note. I read all nine entries from the last whole copy, commit b498a968, and changed nothing. Someone needs to restore it.
+- **GO flags needed:** two. `LB2_SETTINGSWINDOW_GO.flag` is for the Settings-window half of BUG-518. `LB2O_GO.flag` is for the session that switches `rightClick.showCommandNames` off and puts it back.
+- **Not proven (nothing built, run or opened in AutoCAD):**
+  - The typed council route (`CDRULEBOOK`, Council, then the name) was drafted from code and has never been run.
+  - I don't know whether the Calculations preview shows an orifice line on `DRV1_B1`.
+  - I couldn't find how CDAUTO shows its report, so it gets one short route-finding look.
+  - Manager project QA is left out because Tim parked the Manager admin items.
+  - The BUG-264 flyout look can't prove the 1080-pixel screen case, because this PC is 1440 pixels high.

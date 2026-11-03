@@ -1,0 +1,7 @@
+The helper now closes AutoCAD at 5:30 pm as well as 2:00 pm, and only once the PC has had no mouse or keyboard use for 5 minutes. It passes 76 of 76 offline checks against a pretend AutoCAD. Nothing is switched on, and your AutoCAD was not touched.
+
+1. **Times:** 2:00 pm close and 3:00 pm reopen. 5:30 pm close and 8:30 am reopen the next working day, so a Friday close reopens on Monday.
+2. **Idle check:** if you're working it rechecks every minute. It gives up and leaves AutoCAD open at 2:55 pm, or 8:00 pm for the evening.
+3. **Please confirm:** 8:30 am for the reopen is my guess, since you didn't name a time.
+4. **Holidays:** Cup Day isn't detected. The new pause switch, a file the desk creates, covers it.
+5. **Pushed:** the report and script are in the plan folder, which is now level with GitHub. The push also sent an earlier unpushed commit that held this job's brief.

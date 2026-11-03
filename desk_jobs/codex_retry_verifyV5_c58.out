@@ -1,0 +1,9 @@
+== verifyV5_c58 (usage 16.0% -> 16.0%): BLOCKED clean end: AutoCAD is still running; Codex-V5 lock remains held.** The test drawing was discarded.
+
+2. **Results:** DIFFERENT 2, PASS 0, FAIL 0, BLOCKED 0, NOT TESTED 0; SURE 2.
+   - Downpipe: three parts open Enhanced Attribute Editor; green label opens TEXTEDIT.
+   - About: AutoCAD row clipped; Runtime and hover-help lines hidden.
+
+3. **Settings:** StructuralÔÇÖs settings file changed during startup without my editing it. Three other files match. Autosave restored to 5. This is recorded as a **run failure**.
+
+4. **Report:** [V5 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_V5_20261022_0835.md>). Thirty distinct evidence images saved. Fixtures wanted: none.

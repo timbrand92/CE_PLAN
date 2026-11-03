@@ -1,0 +1,9 @@
+== cx_rv17 (usage 13.0% -> 15.0%): 1. **DONE — 15 PRs reviewed:** 11 MERGE, 4 MERGE-WITH-FIXES.
+
+2. **One new MEDIUM finding:** #1637 reports copied pipes when two saved records may point to just one drawing pipe.
+
+3. **[Findings saved and pushed](C:/CE_PLAN/areas/CODEX_PR_REVIEW_GROUP17_24OCT.md).** Includes exact fixes and deterministic tests. No builds, tests or AutoCAD sessions ran.
+
+---
+
+1. **Commit:** `720d5e89`, confirmed on `origin/main`. Only the findings file committed; leak scan passed.

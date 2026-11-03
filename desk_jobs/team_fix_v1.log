@@ -1,0 +1,14 @@
+Of the 40 Structural bugs in batches S-2 to S-16, only 3 are already fixed on the 1.0.125 line. That is unlike batch S-1, so don't drop whole batches from the queue.
+
+**FOR TIM**
+1. **Already fixed (3):**
+   1. **BUG-470:** FSF now refuses an existing footing's outline as a new centre line.
+   2. **BUG-473:** BT1, C1, TS1, AB, BB and BTX stop with one plain line when their layer is locked.
+   3. **BUG-611:** SBEAM Timber no longer says "No local steel sections match that search". It needs a Codex look at the window before it counts as accepted.
+2. **Still real (36):** BUG-536 is part fixed. SCREWPILE, REBAR and beam shorten now read Settings. The bored pier default diameter is read, but the block is still fixed at 450. Four parts still use built-in numbers.
+3. **Cannot tell (1):** BUG-579, the FPFC depth lost after Undo and Redo. It needs an AutoCAD run.
+4. **My own mistakes:**
+   1. My first history search matched nothing, so I read the code for every bug instead.
+   2. No settings-file listings were taken, because I ran no tests and the task forbids touching your real folders.
+
+The report is pushed to C:\CE_PLAN (`main`) and the leak scan was clean. The worktree is at `C:\ce-fx\v1`. The report is `areas\STRUCTURAL_ALREADY_FIXED_CHECK_31OCT.md`. It has the evidence for each bug with file and line on the ref, the fixing commit or PR where there is one, and the cheapest real fixes.

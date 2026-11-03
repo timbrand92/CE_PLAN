@@ -1,0 +1,11 @@
+`C:\CE_PLAN\areas\CARD_DRAFTS_CDDESIGN_02NOV.md` is written with 5 draft cards. It is not fully pinned down: the Redesign Apply button name and the CDCALC ribbon label are guesses, and the BUG-511, BUG-509 and #1803 checks were not done. Nothing was run or pushed.
+
+- **Not on `rel-20261102a`:** none of the PRs is on it.
+  - #1940, #1943 and #1945 first appear on `rel-20261108a`.
+  - #1874, #1954, #1956 and #1965 first appear on `rel-20261110a`.
+  - #1803 and #1984 are on no train.
+- **Cards that don't fit "all in the CDDESIGN window":**
+  - #1940 and #1943 are in the Redesign Apply message, and I found no ribbon button for it.
+  - #1965 is CDCALC's Pump system and Rational tabs.
+  - #1984 is a command-line line.
+- **Not re-verified:** the 9 Oct commits Opus says already cover BUG-511 and BUG-509, and whether #1803's small fix has been added.

@@ -1,0 +1,9 @@
+Tue 11:15 chain start: C-72 (Civil + Manager, four follow-up fixes and the ArchUnitNET guards); nothing is installed by this chain.
+Tue 11:15 starting train_c72_assembler_job.txt (sonnet)
+Tue 12:37 finished train_c72_assembler_job.txt
+Tue 12:37 starting train_c72_finalizer_job.txt (opus)
+Tue 14:55 finished train_c72_finalizer_job.txt
+Tue 14:55 C-72 finalizer verdict GO and C-71 installed: building payload 108 (candidate c1068). Nothing is installed by this chain.
+Tue 14:55 starting payload108_c72_job.txt (sonnet)
+Tue 15:41 finished payload108_c72_job.txt
+Tue 15:41 chain complete

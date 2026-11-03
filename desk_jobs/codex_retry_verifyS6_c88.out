@@ -1,0 +1,9 @@
+== verifyS6_c88 (usage 38.0% -> 39.0%): AUTOCAD CLOSED
+
+1. **PASS ÔÇö both looks:** S6-02 and S6-03 placed pipes without a Grade mismatch window. Both labels read **ÔÇ£100 DIA. UPVC PIPEÔÇØ / ÔÇ£AT 1 IN 100ÔÇØ**; their levels make **1 in 82**, reported for TimÔÇÖs decision.
+
+2. **Counts:** PASS 2; FAIL / DIFFERENT / BLOCKED 0; NOT TESTED 2 as instructed. Tested confidence: SURE 2, UNSURE 0.
+
+3. **Clean end:** Nothing saved. All four settings hashes unchanged; installed versions unchanged; lock released.
+
+4. **Report:** [S6 verification report](<C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_S6_20261102_0928.md>). Includes evidence and two corrected input-delivery faults.

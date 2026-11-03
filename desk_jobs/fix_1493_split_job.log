@@ -1,0 +1,17 @@
+I split BUG-852 into two draft PRs. Both are built and unit-tested only, not installed, not run in AutoCAD, and not marked FIXED. Both PRs carry "needs Opus re-review" comments, and the log entry is 1516.
+
+1. **Structural half: PR #1503 at `05dd3a88`.** It is based on `claude/rel-20261017s` and must be installed first.
+   - Structural no longer has `CE_VERSION`.
+   - `CE.CommandTruth.Tests` 22 of 23 (base 21 of 23). The remaining red is stale on the untouched base too.
+   - `Structural.ReleaseTests` 10 of 10 on net48, net8 and net10.
+   - Structural focused tests 109 of 109.
+   - Three new Structural tests failed on the old code first and now pass.
+2. **Manager half: #1493 at `4746cfa9`.** I pushed a plain commit, with no retarget and no force-push, and it must be installed second.
+   - `Manager.Tests` 837 of 837.
+   - The Manager release build printed "Complete 75-file".
+   - The Manager net48 build has 0 errors.
+   - `CE.CommandTruth.Tests` is 63 of 64 on this branch alone. It reaches 64 of 64 once #1503's changes are applied.
+
+Two things differ from the review's numbers. On the Structural line the central register now records 374 rows, because the old pin there was already stale; the review's 250 is the Civil-line count. Between the two installs `CE_VERSION` is an unknown command, and both `REGRESSION_LOG.md` entries say so.
+
+I read Tim's settings-file hashes only after the work, with no "before" taken. All four match the C-55 report's "after" values. The worktrees are removed and the build lock is free.

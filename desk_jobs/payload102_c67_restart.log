@@ -1,0 +1,7 @@
+**Candidate is built and proved at `C:\ce_rc_scratch\c1063`, and the report `PAYLOAD_C1063_REPORT.md` is written. Nothing is installed.**
+
+- **Counts:** Civil verified 828, bad 0, extra 0. Manager verified 75, bad 0, extra 0.
+- **Branch:** `claude/rel-20261025q` is now at `0d885094` (the version commit on top of `b839d084`).
+- **Installed line:** case A (C-65: Civil 3.0.75 / Manager 1.1.75).
+- **Tests:** 41/41, 61/61 and 12/12 passed. The Manager 75-file guard passed. 660 string rows plus 3 count rows, 0 unexpected.
+- **Odd:** none. The candidate number c1063 was free. The settings files and the six installed DLLs are unchanged.

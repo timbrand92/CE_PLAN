@@ -1,0 +1,6 @@
+Both PRs are fixed and pushed. Neither has been tested in AutoCAD, and nothing is marked FIXED. Both PRs are merged with `rel-20261020g` and need Opus re-review.
+
+1. **#1170 → `5d1d89e1`:** the old AppData file copy is now only marked pending, so REDO survives. The new unfiltered test failed first and now passes. The 574 focused tests pass on net10.
+2. **#1165 → `d3c9c142`:** the check now lives in Civil and Manager separately, with nothing in Shared (Shared is unchanged from the train). Tests pass: Civil 59/59, Manager 832/832, and both build on net48 with 0 errors. The Manager release-candidate build gave "Complete 75-file…".
+
+Review-log entries 1488 and 1489 are pushed.

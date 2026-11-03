@@ -1,0 +1,10 @@
+BUG-1018 is fixed in code as draft PR #2004 (B-185, base `claude/rel-20261102a`). It is built and unit-tested, but nobody has opened it in AutoCAD, and the bug stays OPEN.
+
+- **Fault:** it was not already fixed on `rel-20261102a`. `CeCvlObjectsBridge.IsAvailable` kept its first "not loaded" answer for the whole session.
+- **Fix:** Civil now looks again on a later command, at most once a second. The old API-version check is kept.
+- **Switch:** `options.pipeObjectEnablerRetryWhenNotLoaded`, Default: on. Off returns the old behaviour exactly.
+- **Files:** `CeCvlObjectsBridge.cs`, `UserSettings.cs`, new `Bug1018EnablerRetryTests` (8 cases), `REGRESSION_LOG.md`. CE_SHARED is untouched.
+- **Tests:** 19 passed (with `NativePipeObjectTests`) and net48 compiles with 0 errors. The AppData listings before and after were identical.
+- **Not proven:** the real load order in AutoCAD 2027. Robot case `B185_enabler_late_load` is named in the report.
+
+The worktree is removed and the scratch folder is gone. The report is pushed at `C:\CE_PLAN\areas\BUGFIX_w1018_REPORT_03NOV.md`.

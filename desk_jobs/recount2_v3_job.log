@@ -1,0 +1,8 @@
+**FOR TIM**
+
+The second recount is pushed as `areas/release-v3-colleagues-V3_RECOUNT_2026-10-20.md` (commit 9658c93a). The plan figures haven't moved since 18 Oct, because the ten updates installed since then were all bug fixes.
+
+1. **Denominator:** 548 plan items, the same list as 18 Oct. Bugs are counted separately: 807 entries.
+2. **Whole plan:** built 412 (75%), reachable 262 (48%), installed 300 (55%), on by default 179 (33%), tested 5 (1%; 10 since 18 Oct), accepted 0 (0%).
+3. **9 Nov scope (390 items):** built 290 (74%), reachable 161 (41%), installed 184 (47%), on by default 123 (32%), tested 5 (1%; 10 since 18 Oct), accepted 0 (0%).
+4. **Tested dropped from 9 to 5:** nothing broke. The installed version moved on, and the latest robot pass re-ran only five of the nine.

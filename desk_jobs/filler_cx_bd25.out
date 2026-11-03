@@ -1,0 +1,7 @@
+== cx_bd25 (usage 52.0% -> 86.0%): 1. **BUG-1201 — BLOCKED:** [Draft PR #1813](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1813). Full-suite failures remain in logging and relink timing. [Report](C:/CE_PLAN/areas/CODEX_BUILD_BD25_26OCT.md) pushed. Worktree removed; AutoCAD not run.
+
+---
+
+1. **Branch head:** `50145a60df841dbcaecd374e0bf61e698190b37a`.
+2. **Red → green:** `Failed SpotLevel_Bug1201_EscapeAtFirstPrompt_LeavesNoBlockDefinition` → `Passed SpotLevel_Bug1201_EscapeAtFirstPrompt_LeavesNoBlockDefinition`. All 22 focused checks passed.
+3. **Full totals — total/passed/skipped/failed:** before **20,539/20,507/32/0**; after **20,565/20,531/32/2**. Three builds: zero errors.

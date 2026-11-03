@@ -1,0 +1,4 @@
+== verifyX4_c60 (usage 10.0% -> 13.0%): 1. **DONE:** X4-01 and X4-03 PASS. X4-02 DIFFERENT: ÔÇ£No clear spot found 0ÔÇØ versus expected 1. Label clears the pit but crosses the pipe edge.
+2. **Counts:** PASS 2, DIFFERENT 1; FAIL/BLOCKED/NOT TESTED 0. SURE 3, UNSURE 0.
+3. **Restored:** Settings A=C: `ACD64E79A33BE9C152149FF2145A3CD2C29CABE11245F211183FD5C7DE783140`. AutoCAD closed; lock released; no fixtures wanted.
+4. **Report:** [X4 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_X4_20261023_1722.md>).

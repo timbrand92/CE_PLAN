@@ -1,0 +1,57 @@
+21 briefs are written, 160 checks, about 40 points; I did not run any of them. The scans found no control characters, no "follow", every `{CAP}` present, every launcher names its `_full` file by the full path, and each full brief is at most 27.9 KB against the 32.4 KB limit. `chain_tick_v1.sh` passes `bash -n`.
+
+**Briefs** (`verifyW60` to `verifyW80`, each with a launcher and a `_full` file):
+1. **Civil HIGH, W60 to W71:**
+   - **W60:** BUG-214, 170+356, 172, 174, 226, 227, 228, 231.
+   - **W61:** BUG-173, 360, 187, 427, 166, 171, 175, 447.
+   - **W62:** BUG-223, 244, 260, 261, 278, 160, 255, 252.
+   - **W63:** BUG-422, 234, 093, 186, 324, 339, 350, 351.
+   - **W64:** BUG-353, 346, 210, 267, 285, 268, 342, 305.
+   - **W65:** BUG-312, 257, 192, 317, 098, 426, 420, 176.
+   - **W66:** BUG-212, 232, 246, 262, 396, 376, 385, 387.
+   - **W67:** BUG-408, 158, 233, 239, 432, 309, 322, 242.
+   - **W68:** BUG-209, 216, 217, 236, 012, 230, 243.
+   - **W69:** BUG-551, 058, 059, 060, 283, 417, 329.
+   - **W70:** BUG-284, 313, 384, 363, 372, 377, 389, 378.
+   - **W71:** BUG-328, 331, 323, 330, 393, 270, 271, 281.
+2. **Structural and Manager HIGH, W72 to W78:**
+   - **W72:** BUG-220, 265, 204, 429, 272, 273, 433, 443.
+   - **W73:** BUG-424, 211, 237, 437, 450, 434, 185, 250.
+   - **W74:** BUG-218, 428, 169, 215, 264, 277, 263, 195.
+   - **W75:** BUG-368, 369, 405, 333, 334, 335, 336, 398.
+   - **W76:** BUG-341, 381, 382, 344, 348, 362, 276, 352.
+   - **W77:** BUG-418, 413, 315, 303, 314.
+   - **W78:** BUG-165, 188, 259, 435, 357.
+3. **LOW, "Robot already saw PASS":**
+   - **W79:** BUG-180, 205, 442, 208, 446, 289, 224, 164.
+   - **W80:** BUG-256, 325, 258, 207, 254, 364, 440, 394.
+
+**Cost:** HIGH about 36 points and LOW about 4, so about 40 in total.
+
+**Left out:**
+- **Needs Tim:** BUG-189, 203, 365, 251, 306, 266 and 269.
+- **BUG-558:** no check written. BUG-314 and 256 are written without the REDO-after-switch part, and the REDO in BUG-257 is report only.
+- **Over budget:** the 10 LOW items not written are BUG-438, 366, 367, 370, 388, 423, 355, 358, 454 and 380.
+
+**Fixtures wanted** (they do not exist in `C:\ce_rc_vc7` yet):
+- **Metre drawings:** METRE-M_VC7, METRE-OLD_VC7 and METRE-RG_VC7.
+- **Civil import and job files:** the X-Civil package 26612, a consultant job with a short pipe, W26-26, and a detention job with an orifice and council rules.
+- **Structural drawings:** STRUC-METRE_VC7, STRIP_VC7, S1_LEVEL_VC7 and RAFT_VC7.
+- **Other:** XCLMTXT CSVs, a CE Sheets set with unchanged sheets, and a block with attribute tags in CEBLOCKS.
+- **Settings Codex must not change:** a 900 mm office minimum cover and the command 8 beam switch.
+
+**Doubts:**
+1. **Unrun steps:** every typed LISP line and command prompt came from the tick-list and the W58 model, so a wrong one shows up as BLOCKED or DIFFERENT, not PASS.
+2. **Approximations marked in the briefs:** BUG-317, 333, 344, 348 and 362.
+3. **Briefs mostly BLOCKED until fixtures exist:** W69 (6 of 7 checks) and W71 (all 8).
+4. **Moved last:** BUG-231 in W60 and BUG-164 in W79 close AutoCAD, so they run last. Checks with missing fixtures also sit last in their brief.
+5. **Files saved on purpose:** BUG-231 saves one new file, `W60_savetest.dwg`. BUG-224 saves `W79_saveas.dwg` in the evidence folder.
+6. **Settings window opened read only:** W72 opens CESETTINGS for BUG-204 and 429, and never presses Save or Apply.
+
+Everything is in `C:\Lisp Files\_CODEX_RUNNER`:
+- `verifyW60.txt` to `verifyW80.txt`
+- `verifyW60_full.txt` to `verifyW80_full.txt`
+- `chain_tick_v1.sh`
+- `TICK_BRIEFS_INDEX.md`
+
+TICK BRIEFS DONE: 21 briefs, 160 checks, about 40 points

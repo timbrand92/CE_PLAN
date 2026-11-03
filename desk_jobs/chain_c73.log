@@ -1,0 +1,9 @@
+Tue 15:42 chain start: C-73 (Civil + Manager, one diagnostic PR #1829, BUG-861 U-end switches and gap watch); nothing is installed by this chain.
+Tue 15:42 starting train_c73_assembler_job.txt (sonnet)
+Tue 16:51 finished train_c73_assembler_job.txt
+Tue 16:51 starting train_c73_finalizer_job.txt (opus)
+Tue 18:40 finished train_c73_finalizer_job.txt
+Tue 18:40 C-73 finalizer verdict GO and C-72 installed: building payload 109 (candidate c1069). Nothing is installed by this chain.
+Tue 18:40 starting payload109_c73_job.txt (sonnet)
+Tue 19:35 finished payload109_c73_job.txt
+Tue 19:35 chain complete

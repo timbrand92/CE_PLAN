@@ -1,0 +1,18 @@
+I reviewed all 14 cases and wrote a review slip beside each one. Here are the first 12 lines of `C:\CE_PLAN\areas\C78_REVIEW_D_REPORT.md`:
+
+```
+# C-78 batch case review, job D (Opus-Team-C78rev-D, Sun 1 Nov 2026)
+
+1. **Answer:** 14 cases reviewed: 6 ACCEPT FULL, 8 ACCEPT PART, 0 NOT YET, 0 ALREADY. 14 slips written (none existed before; every case hash matched the list).
+2. **ACCEPT FULL:** R14v87, R15v87, R16v87, R32bv87, R39bv87, R39v87.
+3. **ACCEPT PART:** R13v87, R14h_both_200v87, R14h_dstd_200v87, R14h_pipekey_200v87, R17v87, R19v87, R32v87, R33m.
+4. **Weakest 1, R14h_both_200v87:** both keys are 200, so it cannot show which key wins; it asserts only the wording, not the three pits a raised freeboard newly names (P3 180, P4 160, P5 150 mm, printed in both passing runs).
+5. **Weakest 2, R17v87:** its only twin flips the expectation (no real change), and the contrast pipe's two vertices (card D04 assertion 3) are not read.
+6. **Weakest 3, R15v87:** covers card C38 in full, but its only twin is a flipped number (27 for 26), not a real drawing change.
+7. **Suggested case edit (not made: read-only job):** add to each R14h case `history has "[CE] Only 180 mm between the water and the lid of pit P3 (200 mm is wanted)."` and the P4 160 and P5 150 lines, so the cases prove the wider pit list and not only the wording.
+8. **Codex must SEE:** the arrow direction in R32 and R32b, that no label moved in R16, the copied label in R33m, the pipe running straight between corners in R39b, the Pit Schedule header and layout in R13.
+9. **Build:** Civil 3.0.88+3fbb9da5; all sources read with git at 3fbb9da5.
+10. **Time:** started 08:17, finished 08:22 by the PC clock (about 5 minutes as read; the clock may lag the real work time).
+```
+
+Line 10 shows a start and finish only five minutes apart, which is too short for the work done. I recorded the times exactly as the clock showed them.

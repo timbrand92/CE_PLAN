@@ -83,15 +83,16 @@ verifyC1_c86|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
 verifyJ1_c86|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
 verifyJ2_c86|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
 verifyJ3_c86|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
-verifyJ4_c86|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
 verifyJ5_c86|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
-verifyJ6_c86|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+# J4: driver limit, moved to the robot (30 Oct 19:40, CE 02 / CE 00): witness v2 Esc needs a visible [CE] prompt line in the log; during a point or drag prompt COM is busy and no line shows. Robot cases N80/N81 (+ twins) cover it. Do not re-queue.
+verifyJ4_c86|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
 verifyJ7_c86|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
 verifyH1b_c85|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
-verifyH4b_c85|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
 verifyH5b_c85|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
 verifyH6b_c85|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
-verifyC1b_c86|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
 verifyA1b_c86|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
 verifyG6b_c84|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+verifyJ6_c86|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+verifyH4b_c85|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
+verifyC1b_c86|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3
 #HOLD verifyJ8_c87|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|medium|97|3

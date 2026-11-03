@@ -1,0 +1,8 @@
+**Payload 112 (C-76) is finished.** The candidate is `C:\ce_rc_scratch\c1072`, and the report is `C:\Lisp Files\_TEST_COPIES_20260923\PAYLOAD_C1072_REPORT.md`.
+
+- **Manifests:** Civil verified 828, bad 0, extra 0; Manager verified 75, bad 0, extra 0. Both match the installed file lists exactly.
+- **Version commit:** `5888ee75` on `claude/rel-20261029a`, pushed by the earlier run of this job. The signed head is `adcd57e4`.
+- **Train:** four PRs, not three. #1837 (BUG-1228, DP speed) was a late addition.
+- **Tests:** all pin-test classes green. The 1,575 string rows all came out as expected.
+- **Installed line:** C-75 (`3.0.85+09126560`). Tim's settings files are identical before and after.
+- **Not tested:** nobody has opened it in AutoCAD, and it is not installed.

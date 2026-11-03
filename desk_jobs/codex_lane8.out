@@ -1,0 +1,29 @@
+== cx_b02_test_state (usage 24.0% -> 33.0%): 1. **BLOCKED — [draft PR #1528](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1528).** Undo safety requires changes to protected handlers. Keep the switch OFF.
+
+2. **Checks:** 30 test cases added; **none run**. Builds and pictures remain unverified because the shared build slot stayed occupied. No AutoCAD or deployment.
+
+3. **Settings:** one live Settings hash changed during the wait; cause unknown. I left it untouched.
+
+4. **[Report](C:/CE_PLAN/areas/CODEX_BUILD_TEST_STATE_22OCT.md):** pushed on `cx/test-state-c60-report`.
+
+---
+
+1. **Head:** `cx/test-state-c60` — `5b2de089e7ac7cbef57ef6d4c56423e858fbf33d`.
+== cx_b04_guard_tests (usage 33.0% -> 51.0%): 1. **BLOCKED on settings preservation:** the live Civil settings hash changed; the writer is unknown. Nothing was restored.
+
+2. **Validation:** all three builds have zero errors. New guards: 38 passed, four bug skips. Full Civil: 19,196 total — 19,172 passed, one known failure, 23 skipped.
+
+3. **Delivered:** [Draft PR #1536](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1536) and [report](C:/CE_PLAN/areas/CODEX_BUILD_GUARD_TESTS_22OCT.md).
+
+---
+
+4. **Handoff:** `cx/guard-tests-c60` at `719aadac`. Tests only. AutoCAD not run; nothing deployed.
+== cx_b05_sandbox_install (usage 54.0% -> 54.0%): 1. **DONE.** Script, Sandbox configuration and 18-step checklist saved and pushed. [Read the report](C:/CE_PLAN/areas/CODEX_BUILD_SANDBOX_INSTALL_22OCT.md).
+
+2. **Verified.** 28/28 script tests passed; 903 candidate files checked. Nothing installed or enabled; AutoCAD stayed closed.
+
+3. **Rehearsal blocked.** Sandbox state needs an administrator’s read-only check. Installer packaging, signatures, defaults and uninstall gaps are documented.
+
+---
+
+4. **Handoff.** Branch `codex/clean-pc-dryrun-22oct`, tip `764c1e86`. PR: none, as requested. Actual Sandbox installation remains untested.

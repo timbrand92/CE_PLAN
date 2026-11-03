@@ -1,0 +1,16 @@
+I reviewed all 12 PRs. None is safe to merge as it stands, and 8 should be closed because the installed version already fixes the same bugs another way.
+
+1. **The verdicts:**
+   1. **Merge after small fixes:** #1167 (CDHELP no longer opens a web page by itself, and the log stops recording attribute text), #1225 (office fault reports name no client drawing), and #1212 (Structural notes can name the edition of the Australian Standard; it has to go in after #1142).
+   2. **Hold:** #1207. Its new setting makes CE read the lintel values from inside the drawing, but nothing ever writes them there. If someone turns it on, the job's own lintel values quietly disappear.
+   3. **Close:** #1215, #1216, #1217, #1219, #1221, #1229, #1230 and #1231. #1221 would also stop the Civil plugin from building, because it adds the two pump-pit label-height settings a second time.
+
+2. **#1225 still leaks part of some drawing names.** I ran its own matching rules on sample sentences. "Smith House Stage 2.dwg could not be opened" reaches the office report as "Smith House Stage [drawing name removed] could not be opened". The report gives the fix.
+
+3. **The triage report was wrong about these 12.** It called them "not reviewed", but all 12 already had earlier Opus verdicts in the review-lane log. My report gives a verdict on each PR's current version and says where I disagree with the earlier ones.
+
+4. **Not checked:** I didn't build or run tests, and nothing was opened in AutoCAD. Merges were dry runs only.
+
+The report is pushed to `C:\CE_PLAN\areas\REVIEW_PILE_B4_24OCT.md`, and my temporary repo copy is deleted.
+
+**Summary:** 12 reviewed: 3 merge after fixes, 1 hold, 8 to close because installed code already fixes them. Nothing is merge-ready today; #1167 is closest. #1221 would break the Civil build. #1207's setting would quietly drop lintel values. #1225 still leaks part of some drawing names. The triage wrongly called all 12 unreviewed. Not built, not tested, not opened in AutoCAD.

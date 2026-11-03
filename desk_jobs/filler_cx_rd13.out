@@ -1,0 +1,8 @@
+== cx_rd13 (usage 63.0% -> %): 1. **DONE — four new findings:** 0 HIGH, 2 MEDIUM, 2 LOW. [Read the report](C:/CE_PLAN/areas/CODEX_AUDIT2_RD13_24OCT.md).
+2. **Main concern:** an unreadable office approval can still produce “CE is current.”
+3. **Evidence:** all four verified by reading, with deterministic tests specified. No builds, tests or AutoCAD run.
+
+---
+
+1. **Pushed:** `87341ac8`; leak scan passed; `main` has no unpushed commits.
+2. **Clean-up:** temporary worktree removed. Only the findings file changed by this audit.

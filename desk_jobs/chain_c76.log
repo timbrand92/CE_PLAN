@@ -1,0 +1,12 @@
+Thu 10:27 chain start: C-76 (Civil + Manager, three bug-fix PRs #1834 BUG-859, #1835 BUG-372, #1836 BUG-090, plus any late additions in the PR list); nothing is installed by this chain.
+Thu 10:27 starting train_c76_assembler_job.txt (sonnet)
+Thu 11:36 finished train_c76_assembler_job.txt
+Thu 11:36 starting train_c76_finalizer_job.txt (opus)
+Thu 12:49 finished train_c76_finalizer_job.txt
+Thu 12:49 C-76 finalizer verdict GO and C-75 installed: building payload 112 (candidate c1072). Nothing is installed by this chain.
+Thu 12:49 starting payload112_c76_job.txt (sonnet)
+Thu 15:02 finished payload112_c76_job.txt
+Thu 15:02 chain complete
+Thu 15:03 payload112 relaunched by CE 01 after a 2 h stall (WMI, Team config); the chain's own wait for the old job ended
+Thu 16:09 payload112 relaunched again by CE 01 with the AutoCAD rule split (Control Room yes 16:12); old step list kept as payload112_c76_job.txt.bak_waitacad_1612
+Thu 16:41 payload112 job found DEAD (killed from outside ~16:40; its build scripts still ran); third start by CE 01 with a note to wait for them

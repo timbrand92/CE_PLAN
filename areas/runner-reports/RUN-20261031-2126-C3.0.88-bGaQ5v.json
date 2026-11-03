@@ -1,0 +1,590 @@
+{
+  "header": {
+    "run_id": "RUN-20261031-2126-C3.0.88-bGaQ5v",
+    "started": "2026-10-31 21:26:02",
+    "finished": "2026-10-31 21:41:26",
+    "build": {
+      "civil": {
+        "product_version": "3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+        "file_version": "3.0.88.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+        "file_version": "1.1.88.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.88+3fbb9da5 / struc 1.0.125+204dfad2 / mgr 1.1.88+3fbb9da5",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "C922622470BAE77D3358DB5C2E17B8AF1639C5F35771639DC39AF373E0AB9CB5",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+      "Driver files (SHA-256, first 12): v2 F4D8F40C3675 (expected F4D8F40C3675), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 482EB7B20C6C, v3 session 4D3524AAA60B, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 BBF42DBA8958, case_runner_lib.ps1 01751833A6EA, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 0 shared setup(s); pack SHA-256 C922622470BAE77D3358DB5C2E17B8AF1639C5F35771639DC39AF373E0AB9CB5; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json D604CE689671 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sat 31 Oct 2026 21:26 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 0,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 1,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261031-2126-C3.0.88-bGaQ5v-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-31 21:26:04",
+      "finished": "2026-10-31 21:41:26",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV32126101_B1.dwg",
+      "cases": [
+        "N44v87"
+      ],
+      "whatsnew_dismissed_at_start": "no, window was not there",
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : D604CE689671 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": [
+        {
+          "attempt": 1,
+          "how": "v2 quit",
+          "ok": false,
+          "ended_by": null,
+          "error": "AutoCAD did not close gracefully and was NOT killed. If it is stuck, run quit again with -Kill."
+        },
+        {
+          "attempt": 2,
+          "how": "v2 quit",
+          "ok": false,
+          "ended_by": null,
+          "error": "REFUSED: AutoCAD is busy (a command is active) and the last known drawing cannot be trusted: no drawing has been seen yet by this driver. Nothing was closed."
+        },
+        {
+          "attempt": 3,
+          "how": "v2 quit -Kill",
+          "ok": true,
+          "killed": true,
+          "error": ""
+        }
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "id": "N44v87",
+      "proves_bugs": "",
+      "title": "A Charged pipe, a Suspended pipe and a Rising main each land on their own office pipe layer, their IL texts on 20TEXT, nothing on layer 0 or BLOCKS, and the current layer stays BLOCKS",
+      "kind": "deterministic",
+      "order": 440,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "UX-LYR-01 office layers for the other pipe types (daily card D24 assertion 2, 'the pipe polyline is on its pipe-type layer')",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "Four CD pipes, each 20 m east in empty space with inverts 18.000 and 17.800 (the Charged pipe takes no levels: its invert boxes are disabled) and one Esc: a Charged pipe at y -90000 lands on STORMWATER UPVC CHARGED PIPE, a Suspended pipe at y -92000 on STORMWATER SUSPENDED PIPE, a Rising main at y -96000 on STORMWATER RISING MAIN, and a Stormwater Pipe at y -85000 on STORMWATER PIPE. Each pipe's two IL texts are on 20TEXT. No new object is on layer 0 or BLOCKS, and CLAYER reads BLOCKS before and after.",
+      "why_not_unit": "Layer choice happens in the live drawing as the real CD command writes each pipe of each type.",
+      "not_automated": [
+        "Existing Pipe (EX DRAIN HATCH / EX STORMWATER) is card D25. Detention Pipe shares STORMWATER PIPE and is not drawn. The multiline outline layers (DRAINAGE, DRAINAGE HIDDEN) are recorded in the full layer list, not judged.",
+        "Layer colours and block contents are N43 and N44b. Labels and arrows of the new types are recorded, not judged (their counts per type are not known from source alone)."
+      ],
+      "file_sha256": "9E97841BFDDCEFFC9657A4C185DD25300D5450F28BEC2B967BD820DC086D5F15",
+      "result": "BLOCKED",
+      "blocked": "refused by a driver guard",
+      "first_failure": null,
+      "started": "2026-10-31 21:27:25",
+      "seconds": 721.1,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "getvar",
+          "text": "getvar CLAYER -> $cl0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "CLAYER = BLOCKS"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $n1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-90000{NL}170000,-90000{NL}\" -Force -ExpectWindow \"New Pipe\" -TimeoutSec 150 -> $c_t1",
+          "ok": true,
+          "seconds": 21.5,
+          "evidence": "typed 'CD 150000,-90000 170000,-90000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-90000 | Specify second point: 170000,-90000 | Se..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.IsChargedPipe\" \"on\"",
+          "ok": true,
+          "seconds": 23.4,
+          "evidence": "ui set 'New Pipe' C2.IsChargedPipe = on: "
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $c_t2",
+          "ok": true,
+          "seconds": 92.2,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.5,
+          "evidence": "the window /^New Pipe/ closed after 1 s"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $c_e1",
+          "ok": true,
+          "seconds": 6.9,
+          "evidence": "esc-prompt: [CE] End is free: open end flagged, connect it later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Direction: nominated drawing order (levels Unknown). | [CE] Pipe placed. Pick the next ..."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.8,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $n1 -> $new_c",
+          "ok": true,
+          "seconds": 0.7,
+          "evidence": "3 object(s) after index 1034 (model space now 1037); by type: AcDbBlockReference 1; AcDbMText 1; CeCvlPipeObject 1; first: 11C55B CeCvlPipeObject STORMWATER UPVC CHARGED PIPE ; 11C561 AcDbMText 25TEXT 225 DIA. UPVC CHARGED TO WT ; 11C583 AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_c object=CeCvlPipeObject -> $pipe_c",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 3: 11C55B STORMWATER UPVC CHARGED PIPE"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $pipe_c layer -> $lay_c",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'layer' = STORMWATER UPVC CHARGED PIPE"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $n2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1037 objects"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-92000{NL}170000,-92000{NL}\" -Force -ExpectWindow \"New Pipe\" -TimeoutSec 150 -> $s_t1",
+          "ok": true,
+          "seconds": 21.8,
+          "evidence": "typed 'CD 150000,-92000 170000,-92000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-92000 | Specify second point: 170000,-92000 | Se..."
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.IsSuspendedPipe\" \"on\"",
+          "ok": true,
+          "seconds": 15.8,
+          "evidence": "ui set 'New Pipe' C2.IsSuspendedPipe = on: "
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 19.1,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: "
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.800\"",
+          "ok": true,
+          "seconds": 12.7,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.800: "
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $s_t2",
+          "ok": true,
+          "seconds": 103.1,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.5,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $s_e1",
+          "ok": true,
+          "seconds": 5.7,
+          "evidence": "esc-prompt: [CE] End is free: open end flagged, connect it later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: Open end -> Open end | [CE] Pipe placed. Pick the next pipe's first point, or pre..."
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 3.8,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $n2 -> $new_s",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "5 object(s) after index 1037 (model space now 1042); by type: AcDbBlockReference 1; AcDbMText 3; CeCvlPipeObject 1; first: 11C588 CeCvlPipeObject STORMWATER SUSPENDED PIPE ; 11C58E AcDbMText 25TEXT 225 DIA. UPVC SUSPENDED PIPE AT 1 IN 100 ; 11C593 AcDbMText 20TEXT IL 18.000 ; 11C598 AcDbMText 20TEXT IL 17.800 ; 11C5BA AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_s object=CeCvlPipeObject -> $pipe_s",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 5: 11C588 STORMWATER SUSPENDED PIPE"
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $pipe_s layer -> $lay_s",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'layer' = STORMWATER SUSPENDED PIPE"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_s \"text~^IL \" -> $il_s",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 2 of 5: 11C593 IL 18.000 20TEXT ; 11C598 IL 17.800 20TEXT"
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il_s layer -All -> $ill_s",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'layer' = 20TEXT | 20TEXT"
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $n3",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1042 objects"
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-96000{NL}170000,-96000{NL}\" -Force -ExpectWindow \"New Pipe\" -TimeoutSec 150 -> $r_t1",
+          "ok": true,
+          "seconds": 10.7,
+          "evidence": "typed 'CD 150000,-96000 170000,-96000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-96000 | Specify second point: 170000,-96000 | Se..."
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.IsRisingMain\" \"on\"",
+          "ok": true,
+          "seconds": 7.4,
+          "evidence": "ui set 'New Pipe' C2.IsRisingMain = on: "
+        },
+        {
+          "n": 29,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 9.0,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: "
+        },
+        {
+          "n": 30,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.800\"",
+          "ok": true,
+          "seconds": 8.5,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.800: "
+        },
+        {
+          "n": 31,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $r_t2",
+          "ok": true,
+          "seconds": 76.2,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 32,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.7,
+          "evidence": "the window /^New Pipe/ closed after 1 s"
+        },
+        {
+          "n": 33,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $r_e1",
+          "ok": true,
+          "seconds": 5.5,
+          "evidence": "esc-prompt: [CE] End is free: open end flagged, connect it later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: Open end -> Open end | [CE] Pipe placed. Pick the next pipe's first point, or pre..."
+        },
+        {
+          "n": 34,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 35,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $n3 -> $new_r",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "5 object(s) after index 1042 (model space now 1047); by type: AcDbBlockReference 1; AcDbMText 3; CeCvlPipeObject 1; first: 11C5C0 CeCvlPipeObject STORMWATER RISING MAIN ; 11C5C6 AcDbMText 25TEXT 225 DIA. UPVC RISING MAIN ; 11C5CB AcDbMText 20TEXT IL 18.000 ; 11C5D0 AcDbMText 20TEXT IL 17.800 ; 11C5F2 AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 36,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_r object=CeCvlPipeObject -> $pipe_r",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 5: 11C5C0 STORMWATER RISING MAIN"
+        },
+        {
+          "n": 37,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $pipe_r layer -> $lay_r",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'layer' = STORMWATER RISING MAIN"
+        },
+        {
+          "n": 38,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_r \"text~^IL \" -> $il_r",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 2 of 5: 11C5CB IL 18.000 20TEXT ; 11C5D0 IL 17.800 20TEXT"
+        },
+        {
+          "n": 39,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il_r layer -All -> $ill_r",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'layer' = 20TEXT | 20TEXT"
+        },
+        {
+          "n": 40,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $n4",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1047 objects"
+        },
+        {
+          "n": 41,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-85000{NL}170000,-85000{NL}\" -Force -ExpectWindow \"New Pipe\" -TimeoutSec 150 -> $w_t1",
+          "ok": true,
+          "seconds": 14.9,
+          "evidence": "typed 'CD 150000,-85000 170000,-85000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-85000 | Specify second point: 170000,-85000 | Se..."
+        },
+        {
+          "n": 42,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.IsStormwaterPipe\" \"on\"",
+          "ok": true,
+          "seconds": 14.0,
+          "evidence": "ui set 'New Pipe' C2.IsStormwaterPipe = on: "
+        },
+        {
+          "n": 43,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 11.8,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: "
+        },
+        {
+          "n": 44,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.800\"",
+          "ok": true,
+          "seconds": 11.1,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.800: "
+        },
+        {
+          "n": 45,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $w_t2",
+          "ok": true,
+          "seconds": 102.0,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 46,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 47,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $w_e1",
+          "ok": false,
+          "seconds": 4.5,
+          "evidence": "esc-prompt: REFUSED: no key was sent (not_foreground): the AutoCAD main window would not take the keyboard."
+        }
+      ],
+      "assertions": [],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 262 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CD completed 139724 ms ; Command outcome: CD completed 174666 ms ; Command outcome: CD completed 114736 ms",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)"
+      ],
+      "error": null,
+      "finished": "2026-10-31 21:39:26",
+      "session_id": "RUN-20261031-2126-C3.0.88-bGaQ5v-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 1,
+        "red_before": false
+      }
+    }
+  ]
+}

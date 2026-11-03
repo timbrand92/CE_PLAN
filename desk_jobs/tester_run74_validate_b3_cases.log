@@ -1,0 +1,14 @@
+Seven of the eight batch-3 cases (N23 to N29) passed twice on Civil 3.0.85, and each one's deliberately wrong twin failed for its intended reason. N30 (recent invert buttons) failed twice. Nothing is accepted yet, because no independent review has happened.
+
+1. **Build:** the job started on Civil 3.0.84, then the C-75 install put in 3.0.85 at about 00:20. None of my 3.0.84 runs straddled it, but I re-ran everything on 3.0.85, so both counted passes for each case are on 3.0.85.
+2. **One text fix:** N25's second mouse click was refused by the driver's safety check. I moved it from 30 mm to 10 mm below the first click, in both N25 and its twin. No check was changed.
+3. **Planner values confirmed:** N23's sentence and both positions, N26's 11 pits and 49 pipes, N27's count line, and N29's order. N25's label landed 0.1 mm from the clicked point. N24's route (`ent-find`) ran inside a case as planned.
+4. **N30 finding:** the New Pipe window CD opens is one page with no "Recent levels" row, so there are no "Use recent invert" buttons to read. No bug number exists. Its twin fails for the same reason, so it is not a valid twin. N30 stays in the drafts folder.
+5. **N27 note:** the typed "Yes" is never asked in the main case, because nothing needed to move. The count line and the unmoved text carry the proof.
+6. **Moved:** N23 to N29 into `cases\`, twins into `cases\variants\`. Hashes were checked before and after.
+7. **Remembered values:** `CD_RecentValues.json` was rewritten and not restored. The start and end hashes are in section G of the report.
+8. **Pushed:** the report and the 46 run files, by name. `git status -sb` shows no ahead. I did not commit `ledger.json`, since it is shared with other jobs.
+
+The report is `C:\CE_PLAN\areas\release-v3-colleagues-ROBOT_B3_CASES_VALIDATION_28OCT.md`. No AutoCAD is running and the lock is free.
+
+**Summary:** N23 to N29 pass twice on Civil 3.0.85 with all twins failing as intended, and are moved for independent review. N25 needed one click moved. Planner values for N23, N26, N27 and N29 were confirmed. N30 fails twice: the one-page New Pipe window has no recent-invert buttons, a finding for the desk, left in drafts. A mid-job install from 3.0.84 to 3.0.85 meant re-running the pairs. CD_RecentValues.json was rewritten, not restored.

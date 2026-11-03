@@ -1,0 +1,5 @@
+== verifyA78c_c88 (usage 29.0% -> 30.0%): AUTOCAD CLOSED
+
+1. **Results:** 2 DIFFERENT, both SURE; no new PASS. Leader touches the pipe, but the close view clips its size line. Esc left the mismatch window open twice; Cancel closed it without adding a pipe.
+2. **Clean end:** Lock released. Four settings files unchanged. Remembered pipe values changed as expected; desk restoration remains.
+3. **Report:** [A78c verification](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_A78c_20261101_2158.md>). Three earlier PASS items were not repeated, as instructed.

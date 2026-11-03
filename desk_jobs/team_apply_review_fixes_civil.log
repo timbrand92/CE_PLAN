@@ -1,0 +1,6 @@
+All six PRs have their review fixes pushed to their own branches as normal fast-forward commits. The report is at `C:\CE_PLAN\areas\release-v3-colleagues-REVIEW_FIXES_APPLIED_25OCT.md` and is pushed. Built and unit-tested only; nothing opened in AutoCAD.
+
+- **Civil PRs:** #1753 (new switch), #1734, #1735, #1743 and #1723 each passed the Civil net10 full suite on a trial merge with the base: about 20,250 tests, 0 failed. The Civil net48 test project compiles with 0 errors.
+- **#1738:** Manager net10 passed, 1,005 tests, 0 failed.
+- **#1723:** I also changed where its test saves window pictures, because the base's BUG-318 guard failed it.
+- **#1743:** the branch now carries a merge of the base to clear the clash.

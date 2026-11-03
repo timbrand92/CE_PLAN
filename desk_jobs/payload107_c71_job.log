@@ -1,0 +1,8 @@
+Candidate `C:\ce_rc_scratch\c1067` is built and proved, and nothing was installed. The report is at `C:\Lisp Files\_TEST_COPIES_20260923\PAYLOAD_C1067_REPORT.md`.
+
+- **Counts:** Civil verified 828, bad 0, extra 0. Manager verified 75, bad 0, extra 0. File lists match installed (added 0, removed 0).
+- **Branch:** `claude/rel-20261026v` is at `a2408a96` (signed head `160e620d` plus the version commit).
+- **Installed line:** C-70, Civil 3.0.80+270215aa and Manager 1.1.80+270215aa.
+- **Tests:** all pin tests passed with 0 failed. That includes the six C-71 PR test classes and `SelectionObserver_ReturnsOnTheEchoWindowBeforeAnyDiagnosticCall`.
+- **Strings:** 936 string rows, 0 not as expected.
+- **Odd:** #1818, #1819 and #1824 have no discriminating string, so they are proved by the Civil DLL differing and by their tests. The only string row for #1820 is weak, so it is proved by a method-name check instead. Tim's four settings files and the six installed DLLs are identical before and after.

@@ -1,0 +1,15 @@
+FOR TIM
+
+1. **Result:** I reviewed four fixes that no senior reviewer had looked at yet. All four are safe to merge. None has been opened in AutoCAD.
+2. **Into the next Civil/Manager release (C-64):**
+   - **#1730:** after you look at CEMANAGER or About CE Suite, your next U takes back your last drawing change.
+   - **#1733:** the About heading is now dark grey and readable, not white on near-white.
+   - **#1728:** the Pipe Flows roughness box now starts from your office Settings value.
+3. **Into the next Structural release (S-44):** **#1736**. Level marks are no longer drawn onto a locked 25DIMS or 25TEXT layer, and they stop during REFEDIT.
+4. **Tests:** I ran the tests for the three Civil/Manager fixes and all passed (40 Manager, 607 Civil). I only read #1736's code. I did not build it.
+5. **Not reviewed:** batch 6 has three fixes but no report yet, so I left them alone. Batches 7 to 13 have produced nothing yet.
+6. **Something I didn't make:** a `.codex` folder appeared in the main plugin folder during the night. I left it alone.
+
+Report: `C:\CE_PLAN\areas\REVIEW_PILE_B15_24OCT.md` (pushed).
+
+**Summary (under 100 words):** I reviewed four PRs (#1730, #1733, the follow-up commit on #1728, and #1736) and all four are MERGE. #1730, #1733 and #1728 go to C-64; #1736 goes to S-44. They only clash in `REGRESSION_LOG.md`. One filtered test run passed: Manager 40 of 40, Civil 607 of 607. I didn't build #1736; I reviewed it by reading the code and doing a trial merge. Batch 6 (no report yet) and batches 7 to 13 (nothing on GitHub) were skipped. Batch 5's other PRs were already reviewed. Nothing was deployed and AutoCAD was not started.

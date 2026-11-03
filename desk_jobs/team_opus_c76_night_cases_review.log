@@ -1,0 +1,36 @@
+## FOR TIM
+
+1. **The night run can go ahead.** I checked all 10 new robot tests line by line against the program and the test robot. None is wrong.
+2. **I fixed one problem, in the double-click downpipe test (R09s) and its two switch-off versions.**
+   1. **What was wrong:** the robot listed the open windows only 3 seconds after the double-click. CE's Edit source window can take longer than that the first time it opens in a fresh AutoCAD.
+   2. **What it would have cost:** a working fix reported as a failure, and one of the two passing runs lost tonight.
+   3. **What I changed:** the robot now lists the windows after waiting up to 10 seconds for Edit source. No check was removed or made easier.
+3. **Everything else is sound as written:**
+   1. the CDCHECK wording test with its switch off;
+   2. the downpipe speed test and its slow control;
+   3. the layer test and the Pit Schedule order test, each with its broken version.
+4. **Two things only tonight's run can show:**
+   1. **Downpipe speed:** on a fresh copy the first drawing read might still take more than 1.5 s, even with the fix. That would be a real result about the program, not a faulty test.
+   2. **Double-click:** whether AutoCAD obeys CE's "stop" for its own attribute editor.
+5. **What you need to do:** nothing.
+
+---
+
+1. **Report:** `C:\CE_PLAN\areas\C76_NIGHT_CASES_DESIGN_REVIEW_29OCT.md`, pushed as `09e3a776`. The leak scan was clean and `git status -sb` shows nothing ahead of origin.
+2. **Edits:** in all three R09s files, the windows-new line now comes after the ui-dump line, and one review comment line was added. The backups sit beside each file as `.case.txt.pre_review`. SHA-256 before → after:
+   1. **R09s:** `f79060475067` → `22a1f00846ea`
+   2. **R09s_new_switch_off_broken:** `e42a64bd6c9f` → `0dbdcd01c45f`
+   3. **R09s_compound_off_broken:** `25c12ea46e1c` → `5ba73d0df221`
+3. **Format check:** the offline validate gave 6 of 6 ok, with the same step and check counts as before. The AutoCAD count was 1 before and 1 after (Tim's own session).
+4. **Timing patterns:** I re-ran the N36 time patterns myself and got 11 of 11 right. A real CE log line confirms the wording "DP completed 30143 ms".
+5. **Desk trap:** count the N32_BROKEN red only if line 28 is the failing check and line 29 passes.
+6. **Not changed:** the spec file. Its name matching, its grouping into AutoCAD starts and its order are all safe.
+7. **What I did NOT verify:**
+   1. Nothing ran in AutoCAD.
+   2. The title-bar Close press on the Edit source window has never been seen working. Past runs did find title-bar Close buttons on two other windows.
+   3. I have not seen the tag box read "DP1".
+   4. I have not seen a new setting key, one that is not yet in Tim's file, being picked up.
+   5. A second Opus reviewer did the line-by-line check of N32 and N33. I spot-checked its main claims, not every line it quoted.
+   6. I did not re-check the allow-list pin.
+
+**Summary:** I reviewed 10 new C-76 night tests against the 3.0.86 source and the runner. Nine are sound as written. The three R09s files read the open windows too early, at 3 seconds, which could have reported a working fix as a failure. I fixed all three, kept backups, recorded hashes, and the format check passes 6 of 6. The report is pushed and nothing ran in AutoCAD.

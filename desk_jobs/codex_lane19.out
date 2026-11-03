@@ -1,0 +1,26 @@
+== cx_s09 (usage 34.0% -> %): 1. **DONE — 2 HIGH, 2 MEDIUM, 0 LOW.** Most important: CDJOINT deletes existing joints before replacement prompts finish; pressing Esc leaves them erased.
+
+2. **Report:** [S09 findings and deterministic tests](C:/CE_PLAN/areas/CODEX_SWEEP_S09_23OCT.md). All four findings are verified by reading; AutoCAD tests were not run.
+
+---
+
+3. **Published:** Commit `ba3f8413` is on `origin/main`. Only the findings file was committed; no source changes or builds.
+== cx_s10 (usage % -> 43.0%): 1. **DONE — HIGH 1 / MEDIUM 3 / LOW 0.** Read all 154 files. Biggest fault: changing the New Drawing destination retains the previous job’s title-block details.
+
+2. **Report:** [CODEX_SWEEP_S10_23OCT.md](C:/CE_PLAN/areas/CODEX_SWEEP_S10_23OCT.md). Includes exact evidence and deterministic tests.
+
+---
+
+1. **Saved and pushed:** `82d70a4d` on CE_PLAN main; leak scan passed. Only the findings file committed.
+
+2. **Verification:** Code reading only. No builds, tests or AutoCAD runs.
+== cx_s11 (usage 43.0% -> 49.0%): 1. **DONE — 3 HIGH, 3 MEDIUM, 0 LOW.** Read all 154 files. Most important: changing the selected pipe can retain the previous grade and double the displayed capacity.
+
+2. **Report:** [CODEX_SWEEP_S11_23OCT.md](C:/CE_PLAN/areas/CODEX_SWEEP_S11_23OCT.md). Six code-proven findings with deterministic reproduction steps.
+
+3. **Pushed:** `ab5b830c` to CE_PLAN `main`; leak scan passed. No builds, tests, AutoCAD, sub-agents or code changes.
+== cx_s12 (usage 49.0% -> 53.0%): 1. **DONE — 1 HIGH, 2 MEDIUM, 0 LOW.** Biggest finding: a cascade can save a pipe flat while reporting 1 in 300.
+
+2. **Report:** [CODEX_SWEEP_S12_23OCT.md](C:/CE_PLAN/areas/CODEX_SWEEP_S12_23OCT.md). All 126 files read; findings verified by reading, with deterministic tests provided.
+
+3. **Published:** Only the findings file committed and pushed: `c795e534`. Leak scan passed. No builds, tests or AutoCAD run.

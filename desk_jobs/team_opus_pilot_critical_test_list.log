@@ -1,0 +1,22 @@
+I finished all three steps. **0 of the 60 pilot-critical bugs are closed.** The robot can only test 2 of the installed fixes today, so I wrote tests for those 2, not 8 to 12.
+
+1. **The list:** `C:\CE_PLAN\areas\PILOT_CRITICAL_TEST_LIST_29OCT.md`, pushed twice and fully in step with GitHub.
+   - 26 of the 60 have a fix in the installed code. I checked this in the source history of Civil 3.0.85, not in the files on your PC.
+   - 2 now have a robot test written.
+   - 18 need a new test: 8 need a test drawing or a small robot change, and 10 need another PC, a spare Windows login or AutoCAD 2024.
+   - 6 need a Codex look, because the answer sits in a window the robot cannot read.
+   - 2 need your engineering word: BUG-905 (is 0.9 the right hard-ground C?) and BUG-1097 (should the 300 mm check use the head you type?).
+   - 32 have no fix on your PC.
+2. **The two robot tests:** in `C:\Lisp Files\_ACAD_DRIVER\cases\drafts_pilot_29oct\`.
+   - **P01 (BUG-1194):** CDTEXTSEG puts the pipe label on the leg you click.
+   - **P02 (BUG-1140):** moving a pasted downpipe leaves the original's label where it was.
+   - **Broken twins:** each test has a copy with the fix's switch turned off, which must fail.
+   - **Format check:** offline only, 4 files, 0 errors. Your AutoCAD was the only one running, before and after.
+3. **Run order:** about 50 to 85 minutes in total, over three AutoCAD starts. It can only run once your AutoCAD is closed: tonight after 5:30 pm, or the weekend.
+   - P01 rewrites your recent-levels file, `CD_RecentValues.json`. P02 might; I couldn't confirm.
+
+**Findings:**
+- The bug entries for BUG-1167 and BUG-1149 describe a check their fix will never pass, so I didn't write tests for them.
+- The confirm step in the BUG-1202 entry types LISP, which robot tests can't do.
+
+**Not verified:** nothing ran in AutoCAD. The expected label positions and downpipe-label behaviour in the tests are worked out from the code, not seen. I didn't read the installed version numbers from the DLLs.

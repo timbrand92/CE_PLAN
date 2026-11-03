@@ -1,0 +1,9 @@
+== cx_rd20 (usage 87.0% -> 90.0%): 1. **DONE — [findings saved and pushed](C:/CE_PLAN/areas/CODEX_AUDIT2_RD20_24OCT.md).** 0 HIGH, 3 MEDIUM, 1 LOW. Three supported by code; one suspected.
+
+2. **Most important:** opening another AutoCAD can falsely record the still-running first session as crashed.
+
+3. **Untested:** no builds, tests or AutoCAD runs. Temporary worktree removed.
+
+---
+
+1. **Commit:** `6bc3963c`. Only the findings file committed. Leak scan passed; `main` shows no ahead commits.

@@ -1,0 +1,7 @@
+== cx_rd17 (usage 69.0% -> 76.0%): 1. **DONE — 1 HIGH, 2 MEDIUM, 0 LOW.** Biggest fault: schedule refresh can understate pit depth and remove “With Step Irons”.
+
+2. **[Findings report](C:/CE_PLAN/areas/CODEX_AUDIT2_RD17_24OCT.md)** includes exact evidence, smallest fixes and deterministic checks. Verified by reading only; no builds, tests or AutoCAD.
+
+---
+
+1. **Saved and pushed:** `b5048055`. Only the findings file committed; leak scan passed; no commits ahead. Temporary worktree removed.

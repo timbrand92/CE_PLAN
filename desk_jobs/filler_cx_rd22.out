@@ -1,0 +1,9 @@
+== cx_rd22 (usage 92.0% -> 3.0%): 1. **DONE — six new findings:** HIGH 0, MEDIUM 3, LOW 3. Main fault: Feedback Help promises separate saving and sending, but one action does both.
+
+2. **Report:** [CODEX_AUDIT2_RD22_24OCT.md](C:/CE_PLAN/areas/CODEX_AUDIT2_RD22_24OCT.md). Includes evidence, smallest fixes and deterministic tests.
+
+3. **Read-only audit:** No code changes, builds, tests or AutoCAD session. Temporary worktree removed.
+
+---
+
+1. **Saved and pushed:** `4d69df73`. Only the findings file committed. Leak scan passed; `main` shows no ahead commits.

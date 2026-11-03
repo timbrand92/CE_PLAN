@@ -1,0 +1,10 @@
+Draft PR #1989 (B-161) is open against `claude/rel-20261102a`, with one commit. The report is pushed to `C:\CE_PLAN\areas\BUGFIX_w655_REPORT_02NOV.md`.
+
+- **Fault:** confirmed. `PropagationPreviewDialog.xaml` line 164 bound only `Errors`, while the view model filled `Warnings` and nothing showed them.
+- **Fix:** one warning-coloured, scrolling list bound to `Warnings`. The Errors list and the new list now sit in one stack panel in the same row. There is no new layout row and no size change.
+- **Switch:** `preview.showsPlanWarnings`, Default: on. It sits in a new `preview` settings group.
+- **Files:** the dialog, its view model, `UserSettings.cs`, `REGRESSION_LOG.md` and a new test file.
+- **Tests:** 82 of 82 passed on net10, and the net48 compile has 0 errors. I did not run the new tests against the unfixed XAML to see them fail.
+- **Real data:** some files under your AutoCAD data folders changed during my run. An `acad.exe` that started before my test was running. My own run wrote nothing, so I think it was that session, but I haven't proven whose it is.
+
+Not proven: nobody has looked at the window in AutoCAD. The report holds the robot case spec, `W655_preview_junction_warnings` with a switch-off twin.

@@ -1,0 +1,7 @@
+== cx_lf21 (usage 34.0% -> 34.0%): 1. **FOR TIM — DONE:** BUG-973 to BUG-977 skipped: existing draft fixes cover all five. No drawing changes. [Report saved and pushed](C:/CE_PLAN/areas/CODEX_LEDGER_FIX_BATCH21_23OCT.md).
+
+---
+
+2. **Draft audit:** [PR #1675](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1675), branch `cx2/bug-973-batch21-audit`, tip `16b0c1d0`.
+
+3. **Checks:** 0 tests added/run; 0 builds. Documentation checks and leak scans passed. No deployment or AutoCAD testing. Existing fixes still need native checks; BUG-976’s refusal message remains outstanding.

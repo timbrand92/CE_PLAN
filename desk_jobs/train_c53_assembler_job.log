@@ -1,0 +1,12 @@
+Train C-53 is assembled and pushed as `claude/rel-20261020g`, head `ac4bab78`, with the report pushed to C:\CE_PLAN.
+
+- **Merged:** #1239, #1228, #1226, #1171, #1169 and #1166, each at its briefed head. Each merge's file list matches its PR.
+- **Conflicts:** all resolved by keeping both sides. #1226 also conflicted in a Manager test file, which the brief did not name.
+- **Shared/Manager:** nothing in Shared. #1226 and #1169 touch Manager, so Manager ships with this train.
+- **Build:** 0 errors.
+- **Tests:**
+  - Civil net10: 18,938 run, 1 red (the known Glen Eira).
+  - Manager: 823/823.
+  - net48 focused: 167/167.
+- **Settings:** `CD_Settings.json` read differently at the start (15,356 bytes) than at the end (15,270). The end value matches the earlier reports and I never touched it. Other three unchanged.
+- **Cleanup:** worktree and temp folders removed.

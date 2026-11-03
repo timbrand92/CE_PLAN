@@ -1,0 +1,32 @@
+**GO at `e7009af18232ff9add418834259524a127305d3b`** on `claude/rel-20261026t`. The report is pushed to `C:\CE_PLAN\areas\release-v3-colleagues-TRAIN_C69_FINALIZER_REPORT_2026-10-26.md`, with log entries 1660 to 1666 and the sign-off line.
+
+1. **Mistakes and gaps first:**
+   - A robot or Codex AutoCAD session ran during my work; I did not start it. It rewrote `CD_Settings.json` at 12:27, so my first hash caught its temporary copy. By 13:55 all four of Tim's settings files matched the assembler's hashes again.
+   - In the full Civil run, the PDF page test failed once while AutoCAD was open. It passed when I re-ran it on its own.
+
+2. **What I changed:** one commit, tests only. It pins every new C-69 setting at its default and the Manager outbox switch OFF. No product code changed, nothing reverted, and no version was bumped. The payload builder's 3.0.79 / 1.1.79 stamp is the Manager version bump the review asked for.
+
+3. **The eleven PRs:** I read each one in full on the merged code, and every fix the review asked for is really there. All eleven stay in.
+   - **REDO:** none of them adds anything that could break REDO. The REDO call-graph test passes 25 of 25.
+   - **#1787 (gravity 9.81):** the one existing test it edits (the Darebin orifice) changes because of Tim's 17 Jul ruling "9.81 everywhere". BUG-543 is not done: the 0.61 places remain.
+
+4. **Defaults:** I kept them all as built.
+   - **ON:** the paste line, gravity 9.81, and the council orifice coefficient on the Detention tab.
+   - **OFF:** the per-material speed limit, the pit drop following the box, and the Manager outbox.
+   - **Today's numbers:** the slab falls, connection pipe, WSUD tab, Charged tab and the reach distances.
+   - **Visible by default:**
+     - The printed computations sheet headings change from blue to black.
+     - CDDESIGN prints one new note: "Connection pipe size assumes 10 m of UPVC (CE's assumption, not the drawn pipe)."
+
+5. **Held out:** #1771, #1756, #1767 and #1204. Tim has not answered any of them since 11:00 today, and none of them is safe without his answer. The other left-out PRs stay out too; the only old PR head in the branch is #954's, which #1788 is built on by design.
+
+6. **Tests:**
+   - **Whole solution:** 0 errors on all three frameworks.
+   - **Civil net10:** 20,479 total, 0 failed apart from the PDF test above.
+   - **Manager net10:** 1,041 total, 0 failed.
+   - **Settings window:** still fits at 670 px.
+   - **Manager release build:** passed its 75-file check ("Complete 75-file, three-lane release candidate verified.").
+   - **net48:** the failures are identical to the base build, which I built and ran myself.
+   - **Untouched:** the shared library, the installer and the signed-update code.
+
+**Not tested:** nothing was opened in AutoCAD. Nobody has done a real paste (#1782) or looked at the printed PDF (#1783). The Installer tests were compiled but not run. Nothing is marked FIXED.

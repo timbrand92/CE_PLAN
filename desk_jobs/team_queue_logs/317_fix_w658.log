@@ -1,0 +1,8 @@
+I opened no PR for BUG-658, because the same fix is already built as draft PR #1972 (B-119) on `claude/rel-20261102a`.
+
+- **Fault:** it was real on the base. The cascade question ran inside Edit Pipe's still-open drawing change, before the commit.
+- **PR #1972:** it adds the switch `pipe.cascadeQuestionAfterEditCommits`, ON, and asks after the commit. I read its diff only. I did not build it or run its tests, and I did not check its settings-read tests or its REGRESSION_LOG.md entry. No `dotnet` command ran in this job, so the isolation listings did not apply.
+- **My mistake:** I built a duplicate before searching for an existing PR. I discarded it unpushed and removed the worktree and scratch folder.
+- **Report:** `C:\CE_PLAN\areas\BUGFIX_w658_REPORT_03NOV.md`, pushed.
+
+BUG-658 stays open.

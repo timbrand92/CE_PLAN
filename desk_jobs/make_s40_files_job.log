@@ -1,0 +1,8 @@
+I wrote the five S-40 job files in `C:\CE_PLAN\desk_jobs` and pushed them to main (commit 40090adc). Nothing was run, built or installed. The leak-scan hook passed, and the files have no control characters.
+
+1. **Files:** `train_s40_assembler_job.txt`, `train_s40_finalizer_job.txt`, `chain_s40.ps1`, `payload89_s40_job.txt`, `scripts\desk_install_s40.ps1`.
+2. **Branch tip:** `claude/rel-20261020s` is still 063a6351 on origin.
+3. **Chain:** it runs the payload builder only if the finalizer report says GO. It doesn't install.
+4. **Payload 89:** candidate folder `s1038`, report `PAYLOAD_S1038_REPORT.md`; the highest existing payload report was S1037.
+
+I did not edit DESK_LOG.md.

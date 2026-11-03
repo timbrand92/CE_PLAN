@@ -1,0 +1,6 @@
+**GO at `160e620d1508928e86f11a414ca8d22137cec366`** on `claude/rel-20261026v`. The report is pushed to `C:\CE_PLAN\areas\release-v3-colleagues-TRAIN_C71_FINALIZER_REPORT_2026-10-27.md`.
+
+1. **Verdicts:** #1818 (the pick-time order is back to 3.0.79's), #1819, #1823 and #1824 KEEP. #1820 and #1821 KEEP-WITH-NOTE: pit-invert rows on the markup plan still round to two decimals, and an empty record entry still counts as "no record".
+2. **My change:** one commit with 6 new tests that pin the default settings and #1818's order. No product code changed.
+3. **Tests:** Civil net10 20,589, 0 failed. Manager 1,041, 0 failed. Civil net48 has the same 55 known failures as before. The Manager release build passed its 75-file check.
+4. **Held:** all six bugs stay OPEN. Nothing has been tried in AutoCAD.

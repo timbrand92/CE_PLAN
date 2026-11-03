@@ -1,0 +1,28 @@
+**C-39 is assembled and pushed.** The branch is `claude/rel-20261010e` at head `4005e3217c43429d620c92cc92c12c50020994c2`, and local equals origin. It contains the C-38 line (`rel-20261010b` at 48662ddd, the `Version: Civil 3.0.49 / Manager 1.1.49` commit) plus the PRs below. The branch is built and unit-tested only. Nothing is installed and nobody has driven it in AutoCAD.
+
+I used `e` because `a` and `c` are taken on origin and `d` is the Structural assembler's local branch.
+
+1. **Merged (6):** #1218, #1222, #1223, #1224, #1237, #1244, each at its brief head.
+2. **Skipped (6):**
+   - **#1229:** clashes with the base in `LandXmlParser.cs`.
+   - **#1230:** clashes with the base in `RulebookEngine.cs`.
+   - **#1235:** clashes in `CePluginInstallerService.cs` and two Manager test files.
+   - **#1236:** clashes in `CeFeedbackInboxService.cs`, `CeReleaseStatusService.cs`, `ManagerDisabledReason.cs`, `PluginManagerWindow.xaml` and a test file.
+   - **#1240:** clashes with the base in `AutoDesignService.cs`.
+   - **#1221:** git merged it cleanly, but the build failed with a duplicate definition. It adds `SpsLabelHeightSingleMm` and `SpsLabelHeightNumberedMm` to `PitSettings`, and the C-38 base already has both from #970. I reset the branch and redid the merges without #1221.
+3. **New Settings properties, all OFF:** `designTabStartsAtSettingsPreDevC` (#1224), `levelRangeFollowsSettings` and `pipeSizesFollowSettingsLadder` (#1223), `LongSectionUsesSettingsRoughness` (#1218), `CoverUsesRulebookValue` (#1222). No default changes in this train.
+4. **Registry, Shared and versions:** `command-registry.json` and `council-profiles.json` did not change, so there are no registry entries. Nothing under Shared/ changed, so Civil and Manager keep byte-identical CE_SHARED. No version, csproj or PackageContents change.
+5. **Build:** the whole solution in Release has 0 errors and 873 warnings.
+6. **Tests (net10, AutoCAD 2027 on PATH):**
+   - **Civil:** 17,258 run, 17,238 pass, 19 skipped, 1 failed. The failure is Glen Eira, the known old red.
+   - **Manager:** 751/751.
+   - **Others:** CommandTruth 64, TestHarness 101, Spine 81, Diagnostics 19, AI.Core 42, ReleaseTests 16, all passing and identical to C-38.
+   - **Installer.Tests:** 273 run, 36 failed, the same 36 names as the earlier run I compared against.
+   - **Focused net48 Civil run:** 140 run, 112 pass, 28 skipped, 0 failed.
+7. **Redo guard:** it stayed green and I did not touch the baseline file. No added line contains `StartTransaction`, `SetCurrentView`, `SetSystemVariable` or any of the other watched hooks.
+8. **Hygiene:** Tim's three settings files were unchanged by my runs. `CE_STRUC_SUITE\CS_Settings.json` is 34,196 bytes, not the 33,198 in the brief; it was already that size before I started. The live CE folders grew slightly while AutoCAD was up. The installed Civil DLL is 3.0.48+92ec2c00.
+9. **Not run or not checked:**
+   - **Not run:** Structural tests, AI.Harness tests, accoreconsole, and anything in AutoCAD.
+   - **Manager net48:** the filtered Manager net48 run printed no result line, so I have no net48 number for `Bug452TraceScrubTests` (it passes on net10).
+
+The full report is at `C:\Lisp Files\_TEST_COPIES_20260923\TRAIN_C39_ASSEMBLY_REPORT.md`.

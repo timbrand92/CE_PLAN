@@ -1,0 +1,11 @@
+**BUG-495: no PR opened, because the fault is already fixed in the code on the C-78 line.** The 9 Oct bug hunt read an older build (9babe787, which doesn't contain the rebuilt Issue code).
+
+- **Where it was fixed:** commit 50572182 (10 Sep) is in the C-78 line. Publish Issue now stamps only sheets ticked "include in issue", and a review window shows before anything plots.
+- **Tests:** existing tests already pin the unticked-sheet case. I ran 21 focused tests on net10 and all passed.
+- **Settings files:** unchanged by the run.
+- **Not built:** the blank-revision refusal against INT-059 item 22 needs Tim's wording first.
+- **Not proven:** nobody has driven it in AutoCAD, and the window needs a Codex look.
+- **Report:** `C:\CE_PLAN\areas\BUGFIX_p6_REPORT_30OCT.md`, pushed. It includes robot case `S31_issue_unticked_keeps_rev`.
+
+Files changed: none.
+Switch: none.

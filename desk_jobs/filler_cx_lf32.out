@@ -1,0 +1,7 @@
+== cx_lf32 (usage 36.0% -> 36.0%): 1. **DONE — audit complete:** BUG-1028 skipped: existing fix is already in the base. BUG-1029 skipped: menu decision awaits Tim, ledger Monday question 8.
+2. **Published:** [Draft PR #1686](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1686), branch `cx2/bug-1028-batch32-audit`, tip `a7c524d0`.
+3. **Checks:** 0 tests added/run; no builds, deployment or AutoCAD checks. No production changes.
+
+---
+
+4. **Report:** [Batch 32 report](C:/CE_PLAN/areas/CODEX_LEDGER_FIX_BATCH32_23OCT.md) saved and pushed. Both leak scans passed.

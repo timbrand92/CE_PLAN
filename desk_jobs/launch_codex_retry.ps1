@@ -13,7 +13,7 @@ function Gate {
   # 23 Oct 2026: job presence no longer blocks (lock, AutoCAD process and settings guard do)
   if (Test-Path 'C:\Lisp Files\_ACAD_DRIVER\settings_guard.json') { return $false }
   $lock = 'C:\ce_rc_drv\ACAD_LOCK.json'
-  if (Test-Path $lock) { try { $j = Get-Content $lock -Raw | ConvertFrom-Json; if ([double]$j.expires -gt [DateTimeOffset]::UtcNow.ToUnixTimeSeconds()) { return $false } } catch { return $false } }
+  if (Test-Path $lock) { try { $j = Get-Content $lock -Raw | ConvertFrom-Json; if ([double]$j.expires -gt [DateTimeOffset]::UtcNow.ToUnixTimeSeconds() -and [string]$j.who -ne (LockName)) { return $false } } catch { return $false } }
   return $true
 }
 function LockName { 'Codex-' + ($name -replace '^verify','' -replace '_.*$','') }

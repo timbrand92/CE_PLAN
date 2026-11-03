@@ -1,0 +1,22 @@
+**FOR TIM**
+
+1. **Verdict: GO.** Train C-56 (Civil + Manager) can be installed. The final version is `8d0eb8f2540bf80d8000ce82b211e2ededebb229`. I changed nothing: no fix was needed.
+2. **Manager must ship: NO.** None of Manager's files changed.
+3. **The Civil installer must be rebuilt and published at deploy time.** If it isn't, the fix that stops an older update going onto a PC (BUG-834) won't be active on anyone's PC.
+4. **What you'll see in AutoCAD:**
+   1. If you type 1000 mm for the step-iron depth in CDS, it stays 1000 after you restart AutoCAD. Your own settings hold 900 today, so nothing changes for you.
+   2. CDS gets a new **Fixes** tab full of ticked boxes, plus one new box each on the Survey, Design and Advanced tabs. Nothing behaves differently unless someone unticks a box.
+5. **Don't mark these FIXED yet:** BUG-825 and BUG-834. Codex still needs to look at the new Fixes tab in real AutoCAD.
+6. **Something to know:** your Civil settings file changed while I was working, but not because of me. It's now back to how it was before 9 pm. The likeliest cause is the Codex AutoCAD test that had AutoCAD open from 9:03 pm, but I haven't proved it.
+
+---
+
+1. **Tests (Release):**
+   1. **Whole solution:** builds with 0 errors.
+   2. **Civil net10:** 19,035 tests, 19,015 pass, 19 skipped, 1 failure (Glen Eira, the known one).
+   3. **Manager:** 832 of 832 pass.
+   4. **Civil net48 focused:** 288 of 288 pass.
+   5. **Installer build:** completes with 0 errors.
+   6. **Manager release build:** "Complete 75-file".
+2. **Signed-update gate:** the installer change cannot affect the signed-update check (OfficialReleaseGate). That check isn't touched, and the new rule runs only after it has passed. The new rule can only refuse an update, never let one through.
+3. **Clean-up:** my worktree, temp folders and the test installer's archive folder are all removed. The finalizer report and review-log entries 1512–1515, with the sign-off line, are pushed to CE_PLAN.

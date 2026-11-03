@@ -1,0 +1,9 @@
+Batch 7 is done. Three bugs are fixed in draft PRs, BUG-1045 is partly fixed, and BUG-1046 is skipped because Codex PR #1720 already covers it.
+
+- **BUG-1045:** Structural half in PR #1749 (CE_INSPECT now runs on a read-only drawing). Civil CDDIAG/CDDASHBOARD skipped; they need Tim's word on the design.
+- **BUG-1046:** skipped; commented on #1720.
+- **BUG-1047:** PR #1738, Manager 938 of 939 pass.
+- **BUG-1048:** PR #1746.
+- **BUG-1049:** PR #1743, Civil full run 19,532 of 19,556 pass; 2 IL-shape tests fail, not checked against the base.
+
+Not tested: AutoCAD, and the full Structural suite (it timed out). Report pushed to `C:\CE_PLAN\areas`.

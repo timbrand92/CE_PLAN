@@ -1,0 +1,12 @@
+== verifyH2_c85 (usage 17.0% -> 18.0%): AUTOCAD CLOSED
+
+1. **Results:** 1 PASS, 1 BLOCKED; both SURE. No FAILs. Feedback buttons and Cancel passed. Help search clicks were rejected, so BUG-1215 remains unverified.
+2. **Build:** Civil 3.0.86 / Manager 1.1.86 / Structural 1.0.125.
+3. **Clean end:** Nothing sent; all four settings files unchanged; acad.exe gone; lock released. Fixtures wanted: none.
+4. **Report:** [H2 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_H2_20261030_0756.md>).
+== verifyH2_c85 (usage 21.0% -> 21.0%): AUTOCAD CLOSED
+
+1. **Blocked at setup:** Screenshot capture timed out twice. Both H2 looks are **NOT TESTED**; no verdict on BUG-1215. Nothing sent.
+2. **Installed:** Civil 3.0.86 / Manager 1.1.86 / Structural 1.0.125.
+3. **Clean end:** All four settings hashes unchanged; lock released. PASS 0, FAIL 0, NOT TESTED 2; SURE 2, UNSURE 0.
+4. **Report:** [H2 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_H2_20261030_1219.md>).

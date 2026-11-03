@@ -1,0 +1,239 @@
+{
+  "header": {
+    "run_id": "RUN-20261028-1831-C3.0.84-bX2",
+    "started": "2026-10-28 18:31:05",
+    "finished": "2026-10-28 19:31:18",
+    "build": {
+      "civil": {
+        "product_version": "3.0.84+94f521cc75811785800faf436d7c259c26337569",
+        "file_version": "3.0.84.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.84+94f521cc75811785800faf436d7c259c26337569",
+        "file_version": "1.1.84.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.84+94f521cc / struc 1.0.125+204dfad2 / mgr 1.1.84+94f521cc",
+    "acad_version": "",
+    "pack_sha256": "FB40606FC8FF8316303653A3E7803C6754B1DBF96CED663AE3FE2D2B5A0E6EB5",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.84+94f521cc75811785800faf436d7c259c26337569; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.84+94f521cc75811785800faf436d7c259c26337569",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4CD773B85EC5, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 13955AAA60D1, case_runner_lib.ps1 8F9B8DCBB473, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 4 case file(s) plus 1 shared setup(s); pack SHA-256 FB40606FC8FF8316303653A3E7803C6754B1DBF96CED663AE3FE2D2B5A0E6EB5; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json B3B5A004B929 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Wed 28 Oct 2026 18:31 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 0,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 4,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261028-1831-C3.0.84-bX2-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-28 19:31:18",
+      "finished": "2026-10-28 19:31:18",
+      "result": "BLOCKED",
+      "blocked": "the lock or AutoCAD did not become free, or the free time before Tim's AutoCAD hours ran short (needs about 22 minutes), within 60 minutes. No AutoCAD was started.",
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": null,
+      "copy": null,
+      "cases": [
+        "N04",
+        "N05",
+        "N06",
+        "N12"
+      ],
+      "calibration": null,
+      "clean": null,
+      "acad_left": null,
+      "lock_holder_after": null,
+      "lock_after": null,
+      "guard_clear": null,
+      "hashes_start": null,
+      "hashes_end": null,
+      "hash_differences": null,
+      "hash_unexpected_at_start": null,
+      "extra_copies_removed": 0,
+      "acad_version": "",
+      "quit_attempts": null
+    }
+  ],
+  "cases": [
+    {
+      "id": "N04",
+      "proves_bugs": "",
+      "title": "A downpipe and a raingarden place on empty ground with no pipe to join, nothing is refused, and one U takes back only the raingarden",
+      "kind": "deterministic",
+      "order": 40,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "DP at 150000,-80000 prints 'Downpipe placed. Tag: DP<n>. Nothing nearby. The source connects when a pipe is drawn to it.' and offers the next DP; Esc stops it; one new DOWNPIPE DYNAMIC WITH MASK insert exists. CDRG with the four corners 160000,-80000 / 164000,-80000 / 164000,-77000 / 160000,-77000, C (Close) and Skip at the GIO question prints 'Raingarden RG<n> placed. 4 vertices, 12.0 m2' (square metres), with no 'CDRG command cancelled.' and no error; the object count rises; one U echoes CDRG and the object count returns to the count after the downpipe (the downpipe stays).",
+      "why_not_unit": "The placement route depends on the live drawing having no pipe near the point to split or join, and the outline is collected by a live drag prompt.",
+      "not_automated": [
+        "A drawing with NO pipe at all (the card's blank fixture F-BLANK) is not used: the runner has no blank DRV master. Codex D7-01 covered the blank drawing on 3.0.78 (DIFFERENT only on the unitless-area wording).",
+        "The RG plan label and the raingarden's look are not judged (Codex D7-01 could not read the RG1 label; a picture item)."
+      ],
+      "file_sha256": "74CA6C503ADD33264B0BC67424D39168E7F03E12249632C2B74C6383AE072E27",
+      "plan_item": "UX-SRC-05 (daily card D07); BUG-176 (CDRG no longer needs a pipe)",
+      "result": "BLOCKED",
+      "blocked": "session BLOCKED: the lock or AutoCAD did not become free, or the free time before Tim's AutoCAD hours ran short (needs about 22 minutes), within 60 minutes. No AutoCAD was started.",
+      "first_failure": null,
+      "steps": [],
+      "assertions": [],
+      "pictures": [],
+      "observations": [],
+      "seconds": 0,
+      "setup": "",
+      "setup_note": null,
+      "session_id": "RUN-20261028-1831-C3.0.84-bX2-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 1,
+        "red_before": true
+      }
+    },
+    {
+      "id": "N05",
+      "proves_bugs": "",
+      "title": "A placed pit gets one PIT LABEL reading P8 on layer STORMWATER PIT LABEL and one cover text reading CL 19.000, and one U removes all three",
+      "kind": "deterministic",
+      "order": 50,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "PIT at 150000,-80000 with cover level 19.000, the label point clicked at 150000,-78500 and the cover text point clicked at 151500,-81500: exactly one new pit block on STORMWATER PIT, one new PIT LABEL block on STORMWATER PIT LABEL whose PIT_LABEL attribute reads P8, and one new text reading exactly CL 19.000 (no IL line); the command line says 'Pit placed successfully.' and offers the next pit; one U echoes PIT and leaves no new object behind.",
+      "why_not_unit": "The label block, its attribute and the cover MText are created by the live PIT prompts in the real drawing.",
+      "not_automated": [
+        "The label position is not asserted to the millimetre (card asks within 1 unit of the typed point): a mouse click lands near, not exactly on, the point (R01 note). The distance is recorded.",
+        "The cover text's corner (BR) and its look are a picture item."
+      ],
+      "file_sha256": "4C28CE66C02FB7C77F35F91A95DAE34D2B188CC3025134F293DB92C2938EC7D0",
+      "plan_item": "UX-CPLAN-21 (daily card D09)",
+      "result": "BLOCKED",
+      "blocked": "session BLOCKED: the lock or AutoCAD did not become free, or the free time before Tim's AutoCAD hours ran short (needs about 22 minutes), within 60 minutes. No AutoCAD was started.",
+      "first_failure": null,
+      "steps": [],
+      "assertions": [],
+      "pictures": [],
+      "observations": [],
+      "seconds": 0,
+      "setup": "",
+      "setup_note": null,
+      "session_id": "RUN-20261028-1831-C3.0.84-bX2-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 1,
+        "red_before": true
+      }
+    },
+    {
+      "id": "N06",
+      "proves_bugs": "",
+      "title": "After PIT and CD the current layer is still BLOCKS, nothing new is on layer 0 or on BLOCKS, the pit is on STORMWATER PIT and the flow arrow on ARROW",
+      "kind": "deterministic",
+      "order": 60,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "After SETUP-P8 (PIT at 150000,-80000 and a CD pipe to 170000,-80000) the current layer CLAYER still reads BLOCKS (its value when the drawing opened); none of the new objects is on layer 0 or on BLOCKS; the one new pit block is on STORMWATER PIT; the one new flow arrow (TIM_CVL_ARROW) is on ARROW. The layers of the IL texts, the pipe label and the pipe object are recorded.",
+      "why_not_unit": "Layer choice and the current-layer restore happen in the live drawing's layer table during real PIT and CD runs.",
+      "not_automated": [
+        "'An existing layer is never recoloured' is NOT BUILT; the layer table colours are not read.",
+        "The pit label layer is covered by N05 (this setup escapes the label prompt, so no label exists here)."
+      ],
+      "file_sha256": "4A402A8FB2CF87861EEAEA07BCA0011EDF2900FC62417FF887B253B737E8CD24",
+      "plan_item": "UX-LYR-01 installed part (daily card D24); the never-recolour half is not built",
+      "result": "BLOCKED",
+      "blocked": "session BLOCKED: the lock or AutoCAD did not become free, or the free time before Tim's AutoCAD hours ran short (needs about 22 minutes), within 60 minutes. No AutoCAD was started.",
+      "first_failure": null,
+      "steps": [],
+      "assertions": [],
+      "pictures": [],
+      "observations": [],
+      "seconds": 0,
+      "setup": "SETUP-P8",
+      "setup_note": null,
+      "session_id": "RUN-20261028-1831-C3.0.84-bX2-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 1,
+        "red_before": true
+      }
+    },
+    {
+      "id": "N12",
+      "proves_bugs": "",
+      "title": "COPY of pit P3 makes one new pit numbered P8 with its own PIT LABEL, says Check levels, keeps P3's own label, and one U takes the copy away",
+      "kind": "deterministic",
+      "order": 120,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "Select pit P3 (109D56) and COPY it by 0,-5000 (Enter ends COPY): the command line says '1 pit copied and numbered as new. Check levels: they came across from the originals (the Inspector shows which ones to confirm).'; exactly one new PIT BLOCK and one new PIT LABEL are added and the new label reads P8; one U echoes COPY and the object count returns to its value before the COPY; the drawing file on disk is unchanged.",
+      "why_not_unit": "CE reacts to a real native COPY and renumbers the clone in the live drawing.",
+      "not_automated": [
+        "The Inspector's Check levels mark is a picture item (Codex).",
+        "A COPY that takes pipes with the pit ('1 pit and N pipes copied ...') is not driven."
+      ],
+      "file_sha256": "9E2E8556D1BC76DFC9E8E63B5BDA9024C330E91145263B1EF1EDDEDD96F6607F",
+      "plan_item": "UX-EDIT-02 plain COPY (daily card D15)",
+      "result": "BLOCKED",
+      "blocked": "session BLOCKED: the lock or AutoCAD did not become free, or the free time before Tim's AutoCAD hours ran short (needs about 22 minutes), within 60 minutes. No AutoCAD was started.",
+      "first_failure": null,
+      "steps": [],
+      "assertions": [],
+      "pictures": [],
+      "observations": [],
+      "seconds": 0,
+      "setup": "",
+      "setup_note": null,
+      "session_id": "RUN-20261028-1831-C3.0.84-bX2-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 1,
+        "red_before": true
+      }
+    }
+  ]
+}

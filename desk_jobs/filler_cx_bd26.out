@@ -1,0 +1,9 @@
+== cx_bd26 (usage 53.0% -> 82.0%): 1. **BUG-1107 — DONE.** Draft [PR #1815](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1815), head `57f93284fdab479007e6f0c9ad484ddf8cc02691`. Uses “[CE] Outlet not tracked”. Not installed; AutoCAD not opened. Worktree removed.
+
+---
+
+2. **Red → green.** `RaingardenOutlet_Bug1107_InletPipeToPitP3_RecordsOutletP3`: `Unknown` → `Passed`. All 20 focused checks passed.
+
+3. **Totals.** Before: 20,539 — 20,505 passed, 32 skipped, 2 failed. After: 20,559 — 20,525 passed, 32 skipped, identical 2 failures. Three builds: 0 errors each.
+
+4. **Limit and report.** Settings row omitted: 689 px exceeds 673 px. [Report saved and pushed](C:/CE_PLAN/areas/CODEX_BUILD_BD26_26OCT.md).

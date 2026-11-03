@@ -1,0 +1,6 @@
+== verifyA1_c86 (usage 19.0% -> 19.0%): AUTOCAD CLOSED
+
+1. **A1-01 PASS, SURE:** All five rows, hint and Close fit at 100% on Manager 1.1.86.
+2. **A1-02 BLOCKED, SURE:** No known 150% display. Scale unchanged.
+3. **Clean end:** Four settings hashes unchanged; lock released. No failures.
+4. **Report:** [A1 verification](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_A1_20261030_0842.md>).

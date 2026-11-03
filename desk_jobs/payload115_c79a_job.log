@@ -1,0 +1,12 @@
+The C-79a candidate is built and proved, and the report is written. Nothing was installed.
+
+1. **Candidate:** `C:\ce_rc_scratch\c1075` holds both bundles. The final check ran after the worktree was removed: Civil verified 832, bad 0, extra 0; Manager verified 75, bad 0, extra 0.
+2. **Report:** `C:\Lisp Files\_TEST_COPIES_20260923\PAYLOAD_C1075_REPORT.md`.
+3. **Branch and class:** `claude/rel-20261106a` is at `61fd6fbc72710872048a69ef5b46d0e5b55087fa` (Version: Civil 3.0.89 / Manager 1.1.89). The class is AREA.
+4. **Installed line found:** C-78, 3.0.88 and 1.1.88 at `3fbb9da5`, in all six DLLs.
+5. **Tests:** every pin class passed, with no failures. String proof: 2,550 rows, 0 not as expected, run twice.
+6. **Odd:**
+   - Manager 1.1.89 carries real code, not a re-stamp.
+   - The robot's AutoCAD started during both string runs, which only read files.
+   - Manager's real-settings guard class was not run, because `settings_guard.json` showed an entry again.
+   - Untracked files in the main checkout (`.codex/`, `payload114_probe_c78.ps1` and others) are not mine.

@@ -1,0 +1,1 @@
+`C:\CE_PLAN\areas\OPUS_PREREVIEW_W1094_1272_1273_02NOV.md`: only job 242 opened a PR (#1994, BUG-1273). Verdict is **HOLD for Tim's word**: the code is fine, but the wording it builds is still Tim's open question 3, and that question recommends the other way. Jobs 240, 241 and 243 opened no PR and are skipped.

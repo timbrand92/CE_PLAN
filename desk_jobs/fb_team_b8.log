@@ -1,0 +1,7 @@
+BUG-1051 is fixed in draft PR #1753, and the other four already have Codex PRs. Everything is built and unit-tested only. Nothing was opened in AutoCAD and no bug is marked FIXED.
+
+- **BUG-1050:** already covered by Codex PR #1720, so I commented there and skipped it.
+- **BUG-1052, BUG-1053, BUG-1054:** already covered by Codex PR #1716, so I commented there and skipped them.
+- **BUG-1051:** PR #1753, commit `0217714d`. Four new cases fail on the old arithmetic and pass now. The Civil net10 suite ran 19,553 tests with 0 failed and 22 skipped, and the net48 build had 0 errors.
+
+The report is `C:\CE_PLAN\areas\release-v3-colleagues-FB_TEAM_BATCH8_REPORT.md`, pushed to `origin/main`. Its working tree still shows `areas/runner-reports/ledger.json` modified, which is not mine.

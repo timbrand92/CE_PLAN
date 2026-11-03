@@ -1,0 +1,39 @@
+Six briefs are written (bj26 to bj31), but the build/02 items 17 and 25 you named did not qualify. The chain passes `bash -n`. Nothing was built or run, and nothing in `C:\CE_PLAN` or the repo was changed.
+
+Every brief names its base, branch, worktree, build and test commands. All commands carry `-p:SkipDevBundle=true -nr:false --disable-build-servers`, `-m:1` and Below Normal. A scan of all eight files found no control characters and no use of "follow".
+
+Briefs, in order of value:
+1. **bj26** (Civil, 4 to 5 pts): a "New features" Settings page with a box for each built-but-OFF switch. These are pit label and join behaviour, right-click Edit, Checks off-pit and progress, and the branch level rule. Base is `rel-20261009x`, stacked on Codex PR #1208.
+2. **bj27** (Structural, 3 to 4 pts): Publish Issue rows for the one-PDF switch (#702) and the DWG snapshot switch and folder name (#700). Base is `rel-20261009v`, stacked on #1063. The preview box (#719) already exists on `rel-20261009v`, so the brief says not to add it twice.
+3. **bj28** (Civil, 4 to 6 pts): the one-page "Keep my bottom level or use automatic" window for BUG-160 part 2 (#391). Nobody has built it, and it needs no Settings change. Base is `rel-20261009x`, independent of the other briefs.
+4. **bj29** (Structural, 3 to 4 pts): a "Roof and levels" Settings page for roof point loads (#737), roof set-out (#792) and level carry (#825). Stacked on bj27.
+5. **bj30** (Civil, 3 to 4 pts): a "Privacy and me" page with the AI master switch (#953), the drawing person name (#888) and the personal timer values. Stacked on bj26.
+6. **bj31** (Civil, 4 to 5 pts): two pages, "Survey and markup" (#785, 12 values) and "Detention and drains". Stacked on bj30.
+
+Total is about 25 points (range 21 to 28), each run capped at 91%. `chain_bj_v4.sh` waits for `BJ_GO.flag`, skips any brief whose END line is already in `queue.log`, and runs them one at a time.
+
+Left out:
+- **Items 17 and 25:** FADOPT (#1157) asks on the command line, so no window is owed. Issue hardening (#1182) is an engine whose wording sits in the window Codex already built (#768). Both PRs are in neither `rel-20261009v` nor y.
+- **Structural reo and footing rows:** a seventh brief is ready to write (Rebar keys, pad and screw pile sizes, stud wording). I held it back for the six-brief cap.
+- **Draft-only keys:** the 26 CEAUTOSUPPORT rows, the markup windows, the Checks palette (z-only) and the pump and detention rows exist only in draft PRs outside the signed-off lines.
+- **Shared:** #992 touches `CE_SHARED`, so I did not brief it.
+- **Civil windows still owed on `rel-20261009x`:** Manager status (#394), What CE learned (#396), levels proposal (#406), message box (#390) and the CDCALC storm box (#413). I did not read their cards, so each is listed unbriefed.
+- Full reasons are in `BJ_BRIEFS_INDEX.md`.
+
+Doubts:
+1. **Colour:** your brief said CE deep blue #1E5AA8 on light. bj23 to bj25 say INT-075 (no blue) supersedes that. I kept R1 to R6 verbatim and wrote gold, black, white and grey with no blue. Where to change it if you disagree is in the index.
+2. **Stack conflicts:** merging #1208 into `rel-20261009x` conflicts in `AdvancedSettingsViewModel.cs` as well as `REGRESSION_LOG.md`. The Structural merge of #1063 into `rel-20261009v` conflicts only in `REGRESSION_LOG.md`. Merging both into the next trains first removes the stack steps.
+3. **"No box today"** was judged by property name only. Each brief tells the builder to grep for a reader and an existing box before adding one.
+4. **bj28** changes what a drafter sees, since the command-line question becomes a window, and it has no switch.
+
+Files are in `C:\Lisp Files\_CODEX_RUNNER`:
+- `bj26_cesettings_switches_civil.txt`
+- `bj27_cesettings_issue_struc.txt`
+- `bj28_gradekeep_window_civil.txt`
+- `bj29_cesettings_roof_struc.txt`
+- `bj30_cesettings_privacy_civil.txt`
+- `bj31_cesettings_limits_civil.txt`
+- `chain_bj_v4.sh`
+- `BJ_BRIEFS_INDEX.md`
+
+BJ BRIEFS DONE: 6 briefs, about 25 points

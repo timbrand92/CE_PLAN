@@ -1,0 +1,6 @@
+== verifyAUD3_c88 (usage 50.0% -> 50.0%): AUTOCAD CLOSED
+
+1. **Results:** AUD-01ÔÇô03: **3 PASS UNSURE ÔÇö PICTURE LIMIT**. Driver replies match; saved pictures miss the key lines. No FAIL, DIFFERENT or BLOCKED.
+2. **Not tested:** AUD-04ÔÇô12: not in AUD3.
+3. **Safe end:** Nothing saved. Four settings hashes unchanged. Lock released.
+4. **Report:** [AUD3 report](<C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_AUD3_20261102_1748.md>).

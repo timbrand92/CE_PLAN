@@ -1,0 +1,11 @@
+**GO for train C-79a at `37dc1e62c106efdb062e6ed974851d203d2c4edb`, class AREA** (the areas the train touches, plus the start-up smoke N91 and one smoke case per shared file).
+
+1. **Verdicts:** all 22 merged PRs kept (13 KEEP, 9 KEEP-WITH-NOTE). #1922 and #1923 stay out, for the assembler's reasons.
+2. **New wording point:** #1949's warning always says "the pipe gets bigger", even where the outlet pipe is the same size or smaller. It's a warning only; queued as a question.
+3. **My change:** one tests-only commit adding source guards (22 tests).
+4. **Tests:**
+   - Civil net10: 21,893 run, 0 failed.
+   - Civil net48 focused: the 114 known reds, plus 6 of the same kind, plus the real-settings guard (tripped by the robot restoring Tim's settings file; probable, not proven).
+   - Manager: 1,148 run, 0 failed.
+   - Bundle: 832 files, same as installed. Manager release guard: 75 files.
+5. **Held:** nothing. Nothing tested in AutoCAD; every bug stays open.

@@ -1,0 +1,9 @@
+I applied the Opus review fixes to the 13 PRs that needed them and pushed each to its own branch. The merged trains pass their tests; nothing has been opened in AutoCAD. #1524 and #1533 were left untouched (heads recorded in the report).
+
+- **Merged train:** the 13 Civil PRs dry-merged in order give Civil 19,419 tests, 0 failed. Manager is 916 tests, 0 failed. Structural (S-42) is about 5,703 tests, 0 failed, run by class chunks because a plain whole-suite run hangs.
+- **Clashes:** only REGRESSION_LOG.md, plus the two `settings-*-8-fixes.png` pictures that #1526 and #1531 both add. The first train run found three real clashes, now fixed on the PRs.
+- **Deviation:** I did not move #1526's ticks to Newer tools; measured, that makes the tab 703 px. Trimming spacing brings it to 670 px instead.
+- **Defaults:** #1538 and #1540 now ship ON.
+- **Still owed:** #1540's Opus review suggested staging ON after a Codex pass. #1538 and #1540 still need Settings rows.
+
+The report is at `C:\CE_PLAN\areas\release-v3-colleagues-FIX_ROUND_23OCT_REPORT.md`.

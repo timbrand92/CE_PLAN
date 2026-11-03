@@ -1,0 +1,1530 @@
+{
+  "header": {
+    "run_id": "RUN-20261101-1418-C3.0.88-tW07",
+    "started": "2026-11-01 14:18:09",
+    "finished": "2026-11-01 14:27:44",
+    "build": {
+      "civil": {
+        "product_version": "3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+        "file_version": "3.0.88.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+        "file_version": "1.1.88.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.88+3fbb9da5 / struc 1.0.125+204dfad2 / mgr 1.1.88+3fbb9da5",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "9F90B89A2EE75DED7611FAB7A4EA9C14B11D079E6CBA883307E93B0C3555F8AE",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+      "Driver files (SHA-256, first 12): v2 F4D8F40C3675 (expected F4D8F40C3675), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4B0175FFAB00, v3 session F061E3240C47, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 BBF42DBA8958, case_runner_lib.ps1 89AD455619F8, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 4 case file(s) plus 0 shared setup(s); pack SHA-256 9F90B89A2EE75DED7611FAB7A4EA9C14B11D079E6CBA883307E93B0C3555F8AE; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json D604CE689671 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sun 01 Nov 2026 14:18 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 0,
+    "FAIL": 3,
+    "FAIL_known": 1,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261101-1418-C3.0.88-tW07-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-11-01 14:18:12",
+      "finished": "2026-11-01 14:20:39",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31418151_B1.dwg",
+      "cases": [
+        "W743_BROKEN",
+        "W740_BROKEN"
+      ],
+      "whatsnew_dismissed_at_start": "no, window was not there",
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : D604CE689671 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    },
+    {
+      "session_id": "RUN-20261101-1418-C3.0.88-tW07-s2",
+      "phase": "main",
+      "session_no": 2,
+      "started": "2026-11-01 14:20:39",
+      "finished": "2026-11-01 14:22:01",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31420432_B1.dwg",
+      "cases": [
+        "W742_BROKEN"
+      ],
+      "whatsnew_dismissed_at_start": "no, window was not there",
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : D604CE689671 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    },
+    {
+      "session_id": "RUN-20261101-1418-C3.0.88-tW07-s3",
+      "phase": "main",
+      "session_no": 3,
+      "started": "2026-11-01 14:26:22",
+      "finished": "2026-11-01 14:27:44",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31426263_B1.dwg",
+      "cases": [
+        "W741_BROKEN"
+      ],
+      "whatsnew_dismissed_at_start": "no, window was not there",
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "E223ED835D78",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "E223ED835D78",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": [
+        "TIM_CE_CADTOOLS\\CD_Settings.json : E223ED835D78 (expected ACD64E79A33B)",
+        "CE_STRUC_SUITE\\CS_Settings.json : D604CE689671 (expected 2972CE70C514)"
+      ],
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "W743_BROKEN",
+      "proves_bugs": "",
+      "title": "BROKEN VARIANT of W743: grate C gets Enter instead of Blank, so it carries PCL 45.200 (must FAIL on a check)",
+      "kind": "deterministic",
+      "order": 901,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "red-before-green proof for W743",
+      "bug": "BUG-743",
+      "known_fail": "BROKEN-VARIANT",
+      "reviewed_against": "builder-filled: Opus review still needed",
+      "variant_of": "W743",
+      "expected": "Same checks as W743. Because grate C is answered with Enter, CE offers the 45.2 typed for grate B in this drawing, so callout C ends PCL 45.200 m AHD and the check not-contains $tc \"PCL\" FAILS.",
+      "why_not_unit": "The cover level remembered between two live CDTG runs, the Blank keyword at AutoCAD's own number prompt and the callout written into the drawing only meet in a real AutoCAD session.",
+      "not_automated": [
+        "As W743."
+      ],
+      "file_sha256": "DCF52A62008B5ED65179BB33A37652F29DABA66973F829A22FD4711031DBB2F9",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "'PCL' WAS found in: TG4 — 300 WIDE TRENCH WITH CLASS C GRATE\\PCL 45.200 m AHD",
+      "started": "2026-11-01 14:18:56",
+      "seconds": 38.9,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "copy CLDV31418151_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDTG{NL}162000,-68000{NL}164000,-68000{NL}300{NL}Standard{NL}C{NL}{NL}\" -Force -TimeoutSec 90 -> $tga",
+          "ok": true,
+          "seconds": 7.1,
+          "evidence": "typed 'CDTG 162000,-68000 164000,-68000 300 Standard C': Command: | Command: CDTG | Specify trench drain start point: 162000,-68000 | Specify trench drain end point: 164000,-68000 | Trench width <300> <300.000>: 300 | Trench grate style [Standard/ACO] <Standard> [Standard/ACO]..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDTG{NL}164500,-68000{NL}166500,-68000{NL}300{NL}Standard{NL}C{NL}45.2{NL}\" -Force -TimeoutSec 90 -> $tgb",
+          "ok": true,
+          "seconds": 7.3,
+          "evidence": "typed 'CDTG 164500,-68000 166500,-68000 300 Standard C 45.2': Command: | Command: CDTG | Specify trench drain start point: 164500,-68000 | Specify trench drain end point: 166500,-68000 | Trench width <300> <300.000>: 300 | Trench grate style [Standard/ACO] <Standard> [Standard/ACO]..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDTG{NL}167000,-68000{NL}169000,-68000{NL}300{NL}Standard{NL}C{NL}{NL}\" -Force -TimeoutSec 90 -> $tgc",
+          "ok": true,
+          "seconds": 7.5,
+          "evidence": "typed 'CDTG 167000,-68000 169000,-68000 300 Standard C': Command: | Command: CDTG | Specify trench drain start point: 167000,-68000 | Specify trench drain end point: 169000,-68000 | Trench width <300> <300.000>: 300 | Trench grate style [Standard/ACO] <Standard> [Standard/ACO]..."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDTG{NL}169500,-68000{NL}171500,-68000{NL}300{NL}Standard{NL}C{NL}{NL}\" -Force -TimeoutSec 90 -> $tgd",
+          "ok": true,
+          "seconds": 6.9,
+          "evidence": "typed 'CDTG 169500,-68000 171500,-68000 300 Standard C': Command: | Command: CDTG | Specify trench drain start point: 169500,-68000 | Specify trench drain end point: 171500,-68000 | Trench width <300> <300.000>: 300 | Trench grate style [Standard/ACO] <Standard> [Standard/ACO]..."
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 2",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "slept 2 s"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $new",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "12 object(s) after index 1034 (model space now 1046); by type: AcDbBlockReference 4; AcDbMText 4; AcDbText 4; first: 11C55B AcDbBlockReference TRENCH GRATE TRENCH GRATE ; 11C581 AcDbText GUIDELINES TG ; 11C585 AcDbMText 25DIMS TG2 — 300 WIDE TRENCH WITH CLASS C GRATE ; 11C590 AcDbBlockReference TRENCH GRATE TRENCH GRATE ; 11C5B5 AcDbText GUIDELINES TG ; 11C5B9 AcDbMText 25DIMS TG3 — 300 WIDE TRENCH WITH CLASS C GRATE\\PCL 45.200 m AHD ; 11C5C4 AcDbBlockReference TRENCH GRATE TRENCH GRATE ; 11C5E9 AcDbText GUIDELINES TG ; 11C5ED AcDb..."
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"name=TRENCH GRATE\" -> $grates",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 4 of 12: 11C55B TRENCH GRATE TRENCH GRATE ; 11C590 TRENCH GRATE TRENCH GRATE ; 11C5C4 TRENCH GRATE TRENCH GRATE ; 11C5F8 TRENCH GRATE TRENCH GRATE"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"text~WIDE TRENCH WITH CLASS C GRATE\" \"near=162000,-67350,400\" -> $coa",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 12: 11C585 TG2 — 300 WIDE TRENCH WITH CLASS C GRATE 25DIMS"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"text~WIDE TRENCH WITH CLASS C GRATE\" \"near=164500,-67350,400\" -> $cob",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 12: 11C5B9 TG3 — 300 WIDE TRENCH WITH CLASS C GRATE\\PCL 45.200 m AHD 25DIMS"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"text~WIDE TRENCH WITH CLASS C GRATE\" \"near=167000,-67350,400\" -> $coc",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 12: 11C5ED TG4 — 300 WIDE TRENCH WITH CLASS C GRATE\\PCL 45.200 m AHD 25DIMS"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"text~WIDE TRENCH WITH CLASS C GRATE\" \"near=169500,-67350,400\" -> $cod",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 12: 11C621 TG5 — 300 WIDE TRENCH WITH CLASS C GRATE\\PCL 45.200 m AHD 25DIMS"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $coa text -> $ta",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = TG2 — 300 WIDE TRENCH WITH CLASS C GRATE"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $cob text -> $tb",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = TG3 — 300 WIDE TRENCH WITH CLASS C GRATE\\PCL 45.200 m AHD"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $coc text -> $tc",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = TG4 — 300 WIDE TRENCH WITH CLASS C GRATE\\PCL 45.200 m AHD"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $cod text -> $td",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = TG5 — 300 WIDE TRENCH WITH CLASS C GRATE\\PCL 45.200 m AHD"
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $grates layer -All -> $glay",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'layer' = TRENCH GRATE | TRENCH GRATE | TRENCH GRATE | TRENCH GRATE"
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $new object -All -> $types",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'object' = AcDbBlockReference | AcDbText | AcDbMText | AcDbBlockReference | AcDbText | AcDbMText | AcDbBlockReference | AcDbText | AcDbMText | AcDbBlockReference | AcDbText | AcDbMText"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $w_end",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31418151_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "contains $tga \"Cover Level (m AHD) or [Blank] <enter to skip>\"",
+          "ok": true,
+          "expected": "contains 'Cover Level (m AHD) or [Blank] <enter to skip>'",
+          "actual": "Command: | Command: CDTG | Specify trench drain start point: 162000,-68000 | Specify trench drain end point: 164000,-68000 | Trench width <300> <300.000>: 300 | Trench grate style [Standard/ACO] <Stan...",
+          "evidence": "found 'Cover Level (m AHD) or [Blank] <enter to skip>' in: Command: | Command: CDTG | Specify trench drain start point: 162000,-68000 | Specify trench drain end point: 164000,-68000 | Trench width <300> <300.000>: 300 |..."
+        },
+        {
+          "n": 2,
+          "text": "contains $tga \"Trench grate placed. Tag: TG\"",
+          "ok": true,
+          "expected": "contains 'Trench grate placed. Tag: TG'",
+          "actual": "Command: | Command: CDTG | Specify trench drain start point: 162000,-68000 | Specify trench drain end point: 164000,-68000 | Trench width <300> <300.000>: 300 | Trench grate style [Standard/ACO] <Stan...",
+          "evidence": "found 'Trench grate placed. Tag: TG' in: Command: | Command: CDTG | Specify trench drain start point: 162000,-68000 | Specify trench drain end point: 164000,-68000 | Trench width <300> <300.000>: 300 |..."
+        },
+        {
+          "n": 3,
+          "text": "contains $tgb \"Trench grate placed. Tag: TG\"",
+          "ok": true,
+          "expected": "contains 'Trench grate placed. Tag: TG'",
+          "actual": "Command: | Command: CDTG | Specify trench drain start point: 164500,-68000 | Specify trench drain end point: 166500,-68000 | Trench width <300> <300.000>: 300 | Trench grate style [Standard/ACO] <Stan...",
+          "evidence": "found 'Trench grate placed. Tag: TG' in: Command: | Command: CDTG | Specify trench drain start point: 164500,-68000 | Specify trench drain end point: 166500,-68000 | Trench width <300> <300.000>: 300 |..."
+        },
+        {
+          "n": 4,
+          "text": "contains $tgc \"Trench grate placed. Tag: TG\"",
+          "ok": true,
+          "expected": "contains 'Trench grate placed. Tag: TG'",
+          "actual": "Command: | Command: CDTG | Specify trench drain start point: 167000,-68000 | Specify trench drain end point: 169000,-68000 | Trench width <300> <300.000>: 300 | Trench grate style [Standard/ACO] <Stan...",
+          "evidence": "found 'Trench grate placed. Tag: TG' in: Command: | Command: CDTG | Specify trench drain start point: 167000,-68000 | Specify trench drain end point: 169000,-68000 | Trench width <300> <300.000>: 300 |..."
+        },
+        {
+          "n": 5,
+          "text": "contains $tgd \"Trench grate placed. Tag: TG\"",
+          "ok": true,
+          "expected": "contains 'Trench grate placed. Tag: TG'",
+          "actual": "Command: | Command: CDTG | Specify trench drain start point: 169500,-68000 | Specify trench drain end point: 171500,-68000 | Trench width <300> <300.000>: 300 | Trench grate style [Standard/ACO] <Stan...",
+          "evidence": "found 'Trench grate placed. Tag: TG' in: Command: | Command: CDTG | Specify trench drain start point: 169500,-68000 | Specify trench drain end point: 171500,-68000 | Trench width <300> <300.000>: 300 |..."
+        },
+        {
+          "n": 6,
+          "text": "history absent \"TG command cancelled.\"",
+          "ok": true,
+          "expected": "command line lacks 'TG command cancelled.'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'TG command cancelled.' (40 lines read)"
+        },
+        {
+          "n": 7,
+          "text": "history absent \"Requires numeric value\"",
+          "ok": true,
+          "expected": "command line lacks 'Requires numeric value'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'Requires numeric value' (40 lines read)"
+        },
+        {
+          "n": 8,
+          "text": "count $grates = 4",
+          "ok": true,
+          "expected": "count = 4",
+          "actual": "4",
+          "evidence": "count of $grates = 4 (expected = 4)"
+        },
+        {
+          "n": 9,
+          "text": "count $coa = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $coa = 1 (expected = 1)"
+        },
+        {
+          "n": 10,
+          "text": "count $cob = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $cob = 1 (expected = 1)"
+        },
+        {
+          "n": 11,
+          "text": "count $coc = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $coc = 1 (expected = 1)"
+        },
+        {
+          "n": 12,
+          "text": "count $cod = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $cod = 1 (expected = 1)"
+        },
+        {
+          "n": 13,
+          "text": "contains $ta \"300 WIDE TRENCH WITH CLASS C GRATE\"",
+          "ok": true,
+          "expected": "contains '300 WIDE TRENCH WITH CLASS C GRATE'",
+          "actual": "TG2 — 300 WIDE TRENCH WITH CLASS C GRATE",
+          "evidence": "found '300 WIDE TRENCH WITH CLASS C GRATE' in: TG2 — 300 WIDE TRENCH WITH CLASS C GRATE"
+        },
+        {
+          "n": 14,
+          "text": "not-contains $ta \"PCL\"",
+          "ok": true,
+          "expected": "does not contain 'PCL'",
+          "actual": "TG2 — 300 WIDE TRENCH WITH CLASS C GRATE",
+          "evidence": "'PCL' is absent from: TG2 — 300 WIDE TRENCH WITH CLASS C GRATE"
+        },
+        {
+          "n": 15,
+          "text": "contains $tb \"PCL 45.200 m AHD\"",
+          "ok": true,
+          "expected": "contains 'PCL 45.200 m AHD'",
+          "actual": "TG3 — 300 WIDE TRENCH WITH CLASS C GRATE\\PCL 45.200 m AHD",
+          "evidence": "found 'PCL 45.200 m AHD' in: TG3 — 300 WIDE TRENCH WITH CLASS C GRATE\\PCL 45.200 m AHD"
+        },
+        {
+          "n": 16,
+          "text": "not-contains $tc \"PCL\"",
+          "ok": false,
+          "expected": "does not contain 'PCL'",
+          "actual": "TG4 — 300 WIDE TRENCH WITH CLASS C GRATE\\PCL 45.200 m AHD",
+          "evidence": "'PCL' WAS found in: TG4 — 300 WIDE TRENCH WITH CLASS C GRATE\\PCL 45.200 m AHD"
+        },
+        {
+          "n": 17,
+          "text": "contains $td \"PCL 45.200 m AHD\"",
+          "ok": true,
+          "expected": "contains 'PCL 45.200 m AHD'",
+          "actual": "TG5 — 300 WIDE TRENCH WITH CLASS C GRATE\\PCL 45.200 m AHD",
+          "evidence": "found 'PCL 45.200 m AHD' in: TG5 — 300 WIDE TRENCH WITH CLASS C GRATE\\PCL 45.200 m AHD"
+        },
+        {
+          "n": 18,
+          "text": "equals $glay \"TRENCH GRATE | TRENCH GRATE | TRENCH GRATE | TRENCH GRATE\"",
+          "ok": true,
+          "expected": "TRENCH GRATE | TRENCH GRATE | TRENCH GRATE | TRENCH GRATE",
+          "actual": "TRENCH GRATE | TRENCH GRATE | TRENCH GRATE | TRENCH GRATE",
+          "evidence": "value 'TRENCH GRATE | TRENCH GRATE | TRENCH GRATE | TRENCH GRATE' (expected 'TRENCH GRATE | TRENCH GRATE | TRENCH GRATE | TRENCH GRATE')"
+        },
+        {
+          "n": 19,
+          "text": "not-contains $w_end \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31418151_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV31418151_B1.dwg]"
+        },
+        {
+          "n": 20,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 21,
+          "text": "record $tga \"FULL grate A (Enter, nothing typed yet in this drawing)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDTG | Specify trench drain start point: 162000,-68000 | Specify trench drain end point: 164000,-68000 | Trench width <300> <300.000>: 300 | Trench grate style [Standard/ACO] <Standard> [Standard/ACO] <Standard>: Standard | Grate class [A/B/C/D] <C> [A/B/C/D] <C>: C | Cover Level (m AHD) or [Blank] <enter to skip> [Blank]: | Select outlet pit or pipe (Enter to skip): | Trench grate placed. Tag: TG2. Length: 2000mm Width: 300mm Rotation: 0deg",
+          "evidence": "RECORDED, not judged: FULL grate A (Enter, nothing typed yet in this drawing) = Command: | Command: CDTG | Specify trench drain start point: 162000,-68000 | Specify trench drain end point: 164000,-68000 | Trench width <300> <300.000>: 300 | Trench grate style [Standard/ACO] <Standard> [Standard/ACO] <Standard>: Standard | Grate class [A/B/C/D] <C> [A/B/C/D] <C>: C | Cover Level (m AHD) or [Blank] <enter to skip> [Blank]: | Select outlet pit or pipe (Enter to skip): | Trench grate placed. Tag: TG2. Length: 2000mm Width: 300mm Rotation: 0deg"
+        },
+        {
+          "n": 22,
+          "text": "record $tgb \"FULL grate B (45.2 typed)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDTG | Specify trench drain start point: 164500,-68000 | Specify trench drain end point: 166500,-68000 | Trench width <300> <300.000>: 300 | Trench grate style [Standard/ACO] <Standard> [Standard/ACO] <Standard>: Standard | Grate class [A/B/C/D] <C> [A/B/C/D] <C>: C | Cover Level (m AHD) or [Blank] <enter to skip> [Blank]: 45.2 | Select outlet pit or pipe (Enter to skip): | Trench grate placed. Tag: TG3. Length: 2000mm Width: 300mm Rotation: 0deg",
+          "evidence": "RECORDED, not judged: FULL grate B (45.2 typed) = Command: | Command: CDTG | Specify trench drain start point: 164500,-68000 | Specify trench drain end point: 166500,-68000 | Trench width <300> <300.000>: 300 | Trench grate style [Standard/ACO] <Standard> [Standard/ACO] <Standard>: Standard | Grate class [A/B/C/D] <C> [A/B/C/D] <C>: C | Cover Level (m AHD) or [Blank] <enter to skip> [Blank]: 45.2 | Select outlet pit or pipe (Enter to skip): | Trench grate placed. Tag: TG3. Length: 2000mm Width: 300mm Rotation: 0deg"
+        },
+        {
+          "n": 23,
+          "text": "record $tgc \"FULL grate C (Enter typed in the broken variant)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDTG | Specify trench drain start point: 167000,-68000 | Specify trench drain end point: 169000,-68000 | Trench width <300> <300.000>: 300 | Trench grate style [Standard/ACO] <Standard> [Standard/ACO] <Standard>: Standard | Grate class [A/B/C/D] <C> [A/B/C/D] <C>: C | Cover Level (m AHD) or [Blank] <enter to skip> [Blank] <45.200>: | Select outlet pit or pipe (Enter to skip): | Trench grate placed. Tag: TG4. Length: 2000mm Width: 300mm Rotation: 0deg",
+          "evidence": "RECORDED, not judged: FULL grate C (Enter typed in the broken variant) = Command: | Command: CDTG | Specify trench drain start point: 167000,-68000 | Specify trench drain end point: 169000,-68000 | Trench width <300> <300.000>: 300 | Trench grate style [Standard/ACO] <Standard> [Standard/ACO] <Standard>: Standard | Grate class [A/B/C/D] <C> [A/B/C/D] <C>: C | Cover Level (m AHD) or [Blank] <enter to skip> [Blank] <45.200>: | Select outlet pit or pipe (Enter to skip): | Trench grate placed. Tag: TG4. Length: 2000mm Width: 300mm Rotation: 0deg"
+        },
+        {
+          "n": 24,
+          "text": "record $tgd \"FULL grate D (Enter after 45.2: the prompt should show the remembered 45.2)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDTG | Specify trench drain start point: 169500,-68000 | Specify trench drain end point: 171500,-68000 | Trench width <300> <300.000>: 300 | Trench grate style [Standard/ACO] <Standard> [Standard/ACO] <Standard>: Standard | Grate class [A/B/C/D] <C> [A/B/C/D] <C>: C | Cover Level (m AHD) or [Blank] <enter to skip> [Blank] <45.200>: | Select outlet pit or pipe (Enter to skip): | Trench grate placed. Tag: TG5. Length: 2000mm Width: 300mm Rotation: 0deg",
+          "evidence": "RECORDED, not judged: FULL grate D (Enter after 45.2: the prompt should show the remembered 45.2) = Command: | Command: CDTG | Specify trench drain start point: 169500,-68000 | Specify trench drain end point: 171500,-68000 | Trench width <300> <300.000>: 300 | Trench grate style [Standard/ACO] <Standard> [Standard/ACO] <Standard>: Standard | Grate class [A/B/C/D] <C> [A/B/C/D] <C>: C | Cover Level (m AHD) or [Blank] <enter to skip> [Blank] <45.200>: | Select outlet pit or pipe (Enter to skip): | Trench grate placed. Tag: TG5. Length: 2000mm Width: 300mm Rotation: 0deg"
+        },
+        {
+          "n": 25,
+          "text": "record $ta \"FULL callout A\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "TG2 — 300 WIDE TRENCH WITH CLASS C GRATE",
+          "evidence": "RECORDED, not judged: FULL callout A = TG2 — 300 WIDE TRENCH WITH CLASS C GRATE"
+        },
+        {
+          "n": 26,
+          "text": "record $tb \"FULL callout B\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "TG3 — 300 WIDE TRENCH WITH CLASS C GRATE\\PCL 45.200 m AHD",
+          "evidence": "RECORDED, not judged: FULL callout B = TG3 — 300 WIDE TRENCH WITH CLASS C GRATE\\PCL 45.200 m AHD"
+        },
+        {
+          "n": 27,
+          "text": "record $tc \"FULL callout C\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "TG4 — 300 WIDE TRENCH WITH CLASS C GRATE\\PCL 45.200 m AHD",
+          "evidence": "RECORDED, not judged: FULL callout C = TG4 — 300 WIDE TRENCH WITH CLASS C GRATE\\PCL 45.200 m AHD"
+        },
+        {
+          "n": 28,
+          "text": "record $td \"FULL callout D\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "TG5 — 300 WIDE TRENCH WITH CLASS C GRATE\\PCL 45.200 m AHD",
+          "evidence": "RECORDED, not judged: FULL callout D = TG5 — 300 WIDE TRENCH WITH CLASS C GRATE\\PCL 45.200 m AHD"
+        },
+        {
+          "n": 29,
+          "text": "record $glay \"layers of the four grate blocks\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "TRENCH GRATE | TRENCH GRATE | TRENCH GRATE | TRENCH GRATE",
+          "evidence": "RECORDED, not judged: layers of the four grate blocks = TRENCH GRATE | TRENCH GRATE | TRENCH GRATE | TRENCH GRATE"
+        },
+        {
+          "n": 30,
+          "text": "record $types \"object types the four CDTG runs added\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "AcDbBlockReference | AcDbText | AcDbMText | AcDbBlockReference | AcDbText | AcDbMText | AcDbBlockReference | AcDbText | AcDbMText | AcDbBlockReference | AcDbText | AcDbMText",
+          "evidence": "RECORDED, not judged: object types the four CDTG runs added = AcDbBlockReference | AcDbText | AcDbMText | AcDbBlockReference | AcDbText | AcDbMText | AcDbBlockReference | AcDbText | AcDbMText | AcDbBlockReference | AcDbText | AcDbMText"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 275 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDTG completed 3219 ms ; Command outcome: CDTG completed 3268 ms ; Command outcome: CDTG completed 3268 ms ; Command outcome: CDTG completed 3028 ms"
+      ],
+      "error": null,
+      "finished": "2026-11-01 14:19:34",
+      "session_id": "RUN-20261101-1418-C3.0.88-tW07-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [
+          "known failure (BROKEN-VARIANT): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "W740_BROKEN",
+      "proves_bugs": "BUG-740 (twin: must fail)",
+      "title": "BROKEN twin of W740: no COPY, so the next Roof drain is ROOF DRAIN 2 and the copy checks must fail",
+      "kind": "deterministic",
+      "order": 7401,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "BUG-proof wave 1, group T (tags, sources and fall suggestion); BUG-740",
+      "bug": "BUG-740",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed",
+      "variant_of": "",
+      "expected": "FAILS: no copy is made, so no second SOURCE block or label appears after the copy step, and the second CDSOURCE says 'Source block placed. ID: ROOF DRAIN 2.' instead of ROOF DRAIN 3.",
+      "why_not_unit": "Twin of W740: shows ROOF DRAIN 3 comes from the stored tag of the copy.",
+      "not_automated": [
+        "As W740."
+      ],
+      "file_sha256": "C805F55888EB09F0D6682F83E2F3671D7A727F95D5745CDFB637FB1B4374952B",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "count of $src2 = 0 (expected = 1)",
+      "started": "2026-11-01 14:19:34",
+      "seconds": 44.6,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV31418151_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDSOURCE{NL}RoofDrain{NL}150000,-98000\" -Force -TimeoutSec 90 -> $s1",
+          "ok": true,
+          "seconds": 9.0,
+          "evidence": "typed 'CDSOURCE RoofDrain 150000,-98000': Command: CDSOURCE | Source type [Roof drain/Air-conditioning unit/Overflow pipe/Hot-water unit/Custom] <Roof drain>: RoofDrain | Specify ROOF DRAIN 1 insertion point: 150000,-98000 | [CE] The source name 'AGI' is on 4 bl..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $s1e",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "esc-prompt: Specify ROOF DRAIN 1 insertion point: 150000,-98000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Source block placed. ID: ROOF DRAIN 1. Nothin..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1036 objects"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $new1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "2 object(s) after index 1034 (model space now 1036); by type: AcDbBlockReference 1; AcDbText 1; first: 11C55B AcDbBlockReference DOWNPIPES SOURCE ; 11C561 AcDbText GUIDELINES ROOF DRAIN 1"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new1 \"name=SOURCE\" -> $src1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C55B SOURCE DOWNPIPES"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new1 \"text~^ROOF DRAIN 1$\" -> $lab1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C561 ROOF DRAIN 1 GUIDELINES"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $src1 handle -> $h1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C55B"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 4",
+          "ok": true,
+          "seconds": 4.0,
+          "evidence": "slept 4 s"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c2",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "model space holds 1036 objects"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c1 -> $new2",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "0 object(s) after index 1036 (model space now 1036); by type: ; first: "
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new2 \"name=SOURCE\" -> $src2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 0: "
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new2 \"text~^ROOF DRAIN( 2)?$\" -> $lab2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 0: "
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new2 \"text~^ROOF1?$\" -> $lab2_cut",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 0: "
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDSOURCE{NL}RoofDrain{NL}156000,-98000\" -Force -TimeoutSec 90 -> $s3",
+          "ok": true,
+          "seconds": 8.4,
+          "evidence": "typed 'CDSOURCE RoofDrain 156000,-98000': Command: | Command: CDSOURCE | Source type [Roof drain/Air-conditioning unit/Overflow pipe/Hot-water unit/Custom] <Roof drain>: RoofDrain | Specify ROOF DRAIN 2 insertion point: 156000,-98000 | [CE] The source name 'AGI'..."
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $s3e",
+          "ok": true,
+          "seconds": 3.6,
+          "evidence": "esc-prompt: Specify ROOF DRAIN 2 insertion point: 156000,-98000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Source block placed. ID: ROOF DRAIN 2. Nothin..."
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31418151_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"Source block placed. ID: ROOF DRAIN 1.\"",
+          "ok": true,
+          "expected": "command line has 'Source block placed. ID: ROOF DRAIN 1.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Source block placed. ID: ROOF DRAIN 1. Nothing nearby. The source connects when a pipe is drawn to it.'"
+        },
+        {
+          "n": 2,
+          "text": "count $src1 = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $src1 = 1 (expected = 1)"
+        },
+        {
+          "n": 3,
+          "text": "count $lab1 = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $lab1 = 1 (expected = 1)"
+        },
+        {
+          "n": 4,
+          "text": "count $src2 = 1",
+          "ok": false,
+          "expected": "count = 1",
+          "actual": "0",
+          "evidence": "count of $src2 = 0 (expected = 1)"
+        },
+        {
+          "n": 5,
+          "text": "count $lab2 = 1",
+          "ok": false,
+          "expected": "count = 1",
+          "actual": "0",
+          "evidence": "count of $lab2 = 0 (expected = 1)"
+        },
+        {
+          "n": 6,
+          "text": "count $lab2_cut = 0",
+          "ok": true,
+          "expected": "count = 0",
+          "actual": "0",
+          "evidence": "count of $lab2_cut = 0 (expected = 0)"
+        },
+        {
+          "n": 7,
+          "text": "history absent \"could not be given its own link\"",
+          "ok": true,
+          "expected": "command line lacks 'could not be given its own link'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'could not be given its own link' (17 lines read)"
+        },
+        {
+          "n": 8,
+          "text": "history has \"Source block placed. ID: ROOF DRAIN 3.\"",
+          "ok": false,
+          "expected": "command line has 'Source block placed. ID: ROOF DRAIN 3.'",
+          "actual": "0 matching line(s)",
+          "evidence": "no command-line line contains 'Source block placed. ID: ROOF DRAIN 3.' (17 lines read: Command: CDSOURCE | Source type [Roof drain/Air-conditioning unit/Overflow pipe/Hot-water unit/Custom] <Roof drain>: RoofDrain | Specify ROOF DRAIN 1 insertion point: 150000,-98000; log file CLDV31418151_B1_1d4456f6b.log, from byte 2000)"
+        },
+        {
+          "n": 9,
+          "text": "history count \"Source block placed. ID: ROOF DRAIN 2.\" = 0",
+          "ok": false,
+          "expected": "0 line(s) with 'Source block placed. ID: ROOF DRAIN 2.'",
+          "actual": "1",
+          "evidence": "command line holds 1 line(s) containing 'Source block placed. ID: ROOF DRAIN 2.' (expected 0)"
+        },
+        {
+          "n": 10,
+          "text": "history absent \"ROOF1\"",
+          "ok": true,
+          "expected": "command line lacks 'ROOF1'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'ROOF1' (17 lines read)"
+        },
+        {
+          "n": 11,
+          "text": "not-contains $win_end \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31418151_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV31418151_B1.dwg]"
+        },
+        {
+          "n": 12,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 13,
+          "text": "record $s1 \"FULL first CDSOURCE\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: CDSOURCE | Source type [Roof drain/Air-conditioning unit/Overflow pipe/Hot-water unit/Custom] <Roof drain>: RoofDrain | Specify ROOF DRAIN 1 insertion point: 150000,-98000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Source block placed. ID: ROOF DRAIN 1. Nothing nearby. The source connects when a pipe is drawn to it. | [CE] Choose the next source, or press Esc to stop.",
+          "evidence": "RECORDED, not judged: FULL first CDSOURCE = Command: CDSOURCE | Source type [Roof drain/Air-conditioning unit/Overflow pipe/Hot-water unit/Custom] <Roof drain>: RoofDrain | Specify ROOF DRAIN 1 insertion point: 150000,-98000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Source block placed. ID: ROOF DRAIN 1. Nothing nearby. The source connects when a pipe is drawn to it. | [CE] Choose the next source, or press Esc to stop."
+        },
+        {
+          "n": 14,
+          "text": "record $new1 \"FULL objects the first CDSOURCE added\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"index\":1034,\"handle\":\"11C55B\",\"object\":\"AcDbBlockReference\",\"layer\":\"DOWNPIPES\",\"name\":\"SOURCE\",\"text\":\"\",\"x\":150000.0,\"y\":-98000.0} | {\"index\":1035,\"handle\":\"11C561\",\"object\":\"AcDbText\",\"layer\":\"GUIDELINES\",\"name\":\"\",\"text\":\"ROOF DRAIN 1\",\"x\":150250.0,\"y\":-97750.0}",
+          "evidence": "RECORDED, not judged: FULL objects the first CDSOURCE added = {\"index\":1034,\"handle\":\"11C55B\",\"object\":\"AcDbBlockReference\",\"layer\":\"DOWNPIPES\",\"name\":\"SOURCE\",\"text\":\"\",\"x\":150000.0,\"y\":-98000.0} | {\"index\":1035,\"handle\":\"11C561\",\"object\":\"AcDbText\",\"layer\":\"GUIDELINES\",\"name\":\"\",\"text\":\"ROOF DRAIN 1\",\"x\":150250.0,\"y\":-97750.0}"
+        },
+        {
+          "n": 15,
+          "text": "record $new2 \"FULL objects after the left-out copy (expected none)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: FULL objects after the left-out copy (expected none) = "
+        },
+        {
+          "n": 16,
+          "text": "record $s3 \"FULL second CDSOURCE (expected ID ROOF DRAIN 2 in this twin)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDSOURCE | Source type [Roof drain/Air-conditioning unit/Overflow pipe/Hot-water unit/Custom] <Roof drain>: RoofDrain | Specify ROOF DRAIN 2 insertion point: 156000,-98000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Source block placed. ID: ROOF DRAIN 2. Nothing nearby. The source connects when a pipe is drawn to it. | [CE] Choose the next source, or press Esc to stop.",
+          "evidence": "RECORDED, not judged: FULL second CDSOURCE (expected ID ROOF DRAIN 2 in this twin) = Command: | Command: CDSOURCE | Source type [Roof drain/Air-conditioning unit/Overflow pipe/Hot-water unit/Custom] <Roof drain>: RoofDrain | Specify ROOF DRAIN 2 insertion point: 156000,-98000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Source block placed. ID: ROOF DRAIN 2. Nothing nearby. The source connects when a pipe is drawn to it. | [CE] Choose the next source, or press Esc to stop."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV31418151_B1_1d4456f6b.log)",
+        "Civil CE log: 122 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDSOURCE completed 9190 ms ; Command outcome: CDSOURCE completed 8789 ms"
+      ],
+      "error": null,
+      "finished": "2026-11-01 14:20:19",
+      "session_id": "RUN-20261101-1418-C3.0.88-tW07-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "W742_BROKEN",
+      "proves_bugs": "BUG-742 (twin: must fail)",
+      "title": "BROKEN twin of W742: the used-name switch is off, so CDTAG gives pit P10 the name WT2 and the refusal checks must fail",
+      "kind": "deterministic",
+      "order": 7421,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "BUG-proof wave 1, group T (tags, sources and fall suggestion); BUG-742",
+      "bug": "BUG-742",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed",
+      "variant_of": "",
+      "expected": "FAILS on the refusal line: with the switch off CDTAG tags P10 as WT2 (or refuses for another reason), so 'WT2 is already on another source' is absent and model space gains the WT2 label.",
+      "why_not_unit": "Twin of W742: shows the W742 check comes from the BUG-742 free-name rule and not from some other refusal.",
+      "not_automated": [
+        "As W742."
+      ],
+      "file_sha256": "08743A60863E20DD9D036BE5D412D4FA035C1D647B92AD2E9A844BA7DCF5FEEE",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "no command-line line contains '[CE] CDTAG: WT2 is already on another source. Choose a different number. Nothing was changed.' (12 lines read: Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or; log file CLDV31420432_B1_17b836437.log, from byte 2350)",
+      "started": "2026-11-01 14:21:28",
+      "seconds": 17.1,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM _C 59232,-69535 15000\"",
+          "ok": true,
+          "seconds": 3.3,
+          "evidence": "typed '_.ZOOM _C 59232,-69535 15000': Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _C | Specify center point: 59232,-69535 | Enter magnifi..."
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV31420432_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDTAG{NL}54436.3,-69493.6{NL}WT2{NL}\" -Force -TimeoutSec 90 -> $tg",
+          "ok": true,
+          "seconds": 7.8,
+          "evidence": "typed 'CDTAG 54436.3,-69493.6 WT2': Command: | Command: CDTAG | Pick the source to label: 54436.3,-69493.6 | Enter tag (e.g., DP, WT1, IO): WT2 | Show the tag label on the drawing? [Yes/No] <Yes>: | [CE] Tagged WT2. 2 pipes are connected to it. | SETTINGS ..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $tge",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "esc-prompt: Command: CDTAG | Pick the source to label: 54436.3,-69493.6 | Enter tag (e.g., DP, WT1, IO): WT2 | Show the tag label on the drawing? [Yes/No] <Yes>: | [CE] Tagged WT2. 2 pipes are connected to it. | SETTINGS GUARD ACTIV..."
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1035 objects"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31420432_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"[CE] CDTAG: WT2 is already on another source. Choose a different number. Nothing was changed.\"",
+          "ok": false,
+          "expected": "command line has '[CE] CDTAG: WT2 is already on another source. Choose a different number. Nothing was changed.'",
+          "actual": "0 matching line(s)",
+          "evidence": "no command-line line contains '[CE] CDTAG: WT2 is already on another source. Choose a different number. Nothing was changed.' (12 lines read: Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or; log file CLDV31420432_B1_17b836437.log, from byte 2350)"
+        },
+        {
+          "n": 2,
+          "text": "history absent \"Tagged WT2\"",
+          "ok": false,
+          "expected": "command line lacks 'Tagged WT2'",
+          "actual": "1 matching line(s)",
+          "evidence": "found: '[CE] Tagged WT2. 2 pipes are connected to it.'"
+        },
+        {
+          "n": 3,
+          "text": "history absent \"CDTAG applied\"",
+          "ok": true,
+          "expected": "command line lacks 'CDTAG applied'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'CDTAG applied' (12 lines read)"
+        },
+        {
+          "n": 4,
+          "text": "history absent \"Nothing Selected\"",
+          "ok": true,
+          "expected": "command line lacks 'Nothing Selected'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'Nothing Selected' (12 lines read)"
+        },
+        {
+          "n": 5,
+          "text": "equals $c1 $c0",
+          "ok": false,
+          "expected": "1034",
+          "actual": "1035",
+          "evidence": "value '1035' (expected '1034')"
+        },
+        {
+          "n": 6,
+          "text": "not-contains $win_end \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31420432_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV31420432_B1.dwg]"
+        },
+        {
+          "n": 7,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 8,
+          "text": "record $tg \"FULL what the typed CDTAG chain showed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDTAG | Pick the source to label: 54436.3,-69493.6 | Enter tag (e.g., DP, WT1, IO): WT2 | Show the tag label on the drawing? [Yes/No] <Yes>: | [CE] Tagged WT2. 2 pipes are connected to it. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL what the typed CDTAG chain showed = Command: | Command: CDTAG | Pick the source to label: 54436.3,-69493.6 | Enter tag (e.g., DP, WT1, IO): WT2 | Show the tag label on the drawing? [Yes/No] <Yes>: | [CE] Tagged WT2. 2 pipes are connected to it. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 9,
+          "text": "record $tge \"FULL what the closing esc-prompt saw\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: CDTAG | Pick the source to label: 54436.3,-69493.6 | Enter tag (e.g., DP, WT1, IO): WT2 | Show the tag label on the drawing? [Yes/No] <Yes>: | [CE] Tagged WT2. 2 pipes are connected to it. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL what the closing esc-prompt saw = Command: CDTAG | Pick the source to label: 54436.3,-69493.6 | Enter tag (e.g., DP, WT1, IO): WT2 | Show the tag label on the drawing? [Yes/No] <Yes>: | [CE] Tagged WT2. 2 pipes are connected to it. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 99 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDTAG completed 3445 ms"
+      ],
+      "error": null,
+      "finished": "2026-11-01 14:21:45",
+      "session_id": "RUN-20261101-1418-C3.0.88-tW07-s2",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "W741_BROKEN",
+      "proves_bugs": "BUG-741 (twin: must fail)",
+      "title": "BROKEN twin of W741: the used-name switch stays on, no WT1 pair is made, so the WT13 / WT14 proposal checks must fail",
+      "kind": "deterministic",
+      "order": 7411,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "BUG-proof wave 1, group T (tags, sources and fall suggestion); BUG-741",
+      "bug": "BUG-741",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed",
+      "variant_of": "",
+      "expected": "FAILS: both CDTAG WT1 steps are refused, CDFIXTAGS proposes only AGI 1, AGI 2, AGI 3, so 'Tagged WT1.' is absent and '-> WT13' / '-> WT14' are absent.",
+      "why_not_unit": "Twin of W741: shows the WT13 / WT14 lines come from the doubled WT1 the case makes.",
+      "not_automated": [
+        "As W741."
+      ],
+      "file_sha256": "9382021C0C0B0E20A410AB6AC6D787688C80BED829B8734D13D6DF84D162CC03",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "command line holds 0 line(s) containing 'Tagged WT1.' (expected 2)",
+      "started": "2026-11-01 14:27:08",
+      "seconds": 21.3,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM _C 59232,-69535 15000\"",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "typed '_.ZOOM _C 59232,-69535 15000': Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _C | Specify center point: 59232,-69535 | Enter magnifi..."
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV31426263_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDTAG{NL}54436.3,-69493.6{NL}WT1{NL}\" -Force -TimeoutSec 90 -> $t10",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "typed 'CDTAG 54436.3,-69493.6 WT1': Command: | Command: CDTAG | Pick the source to label: 54436.3,-69493.6 | Enter tag (e.g., DP, WT1, IO): WT1 | Show the tag label on the drawing? [Yes/No] <Yes>: | [CE] CDTAG: WT1 is already on another source. Choose a di..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $t10e",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "esc-prompt: Command: CDTAG | Pick the source to label: 54436.3,-69493.6 | Enter tag (e.g., DP, WT1, IO): WT1 | Show the tag label on the drawing? [Yes/No] <Yes>: | [CE] CDTAG: WT1 is already on another source. Choose a different num..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDTAG{NL}64028,-69576.4{NL}WT1{NL}\" -Force -TimeoutSec 90 -> $t9",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "typed 'CDTAG 64028,-69576.4 WT1': Command: | Command: CDTAG | Pick the source to label: 64028,-69576.4 | Enter tag (e.g., DP, WT1, IO): WT1 | Show the tag label on the drawing? [Yes/No] <Yes>: | [CE] CDTAG: WT1 is already on another source. Choose a diff..."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $t9e",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "esc-prompt: Command: CDTAG | Pick the source to label: 64028,-69576.4 | Enter tag (e.g., DP, WT1, IO): WT1 | Show the tag label on the drawing? [Yes/No] <Yes>: | [CE] CDTAG: WT1 is already on another source. Choose a different numbe..."
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDFIXTAGS{NL}No\" -Force -TimeoutSec 90 -> $fx",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "typed 'CDFIXTAGS No': Command: | Command: CDFIXTAGS | [CE] Repeated source names in this drawing: | The source tag 'AGI' is on more than one block (4 blocks). | [CE] Proposed renames (the first block of each name keeps it): | AGI block at X 1..."
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $fxe",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "esc-prompt: AGI block at X 109476.37, Y -19984.82 -> AGI 1 | AGI block at X 97011.97, Y -14990.25 -> AGI 2 | AGI block at X 96961.28, Y -32610.41 -> AGI 3 | Rename them now? [Yes/No] <Yes>: No | [CE] Nothing was renamed. | SETTINGS ..."
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31426263_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history count \"Tagged WT1.\" = 2",
+          "ok": false,
+          "expected": "2 line(s) with 'Tagged WT1.'",
+          "actual": "0",
+          "evidence": "command line holds 0 line(s) containing 'Tagged WT1.' (expected 2)"
+        },
+        {
+          "n": 2,
+          "text": "history absent \"is already on another source\"",
+          "ok": false,
+          "expected": "command line lacks 'is already on another source'",
+          "actual": "2 matching line(s)",
+          "evidence": "found: '[CE] CDTAG: WT1 is already on another source. Choose a different number. Nothing was changed.'"
+        },
+        {
+          "n": 3,
+          "text": "contains $fx \"The source tag 'WT1' is on more than one block (3 blocks).\"",
+          "ok": false,
+          "expected": "contains 'The source tag 'WT1' is on more than one block (3 blocks).'",
+          "actual": "Command: | Command: CDFIXTAGS | [CE] Repeated source names in this drawing: | The source tag 'AGI' is on more than one block (4 blocks). | [CE] Proposed renames (the first block of each name keeps it)...",
+          "evidence": "'The source tag 'WT1' is on more than one block (3 blocks).' is NOT in: Command: | Command: CDFIXTAGS | [CE] Repeated source names in this drawing: | The source tag 'AGI' is on more than one block (4 blocks). | [CE] Proposed renames (the first block of each name keeps it)..."
+        },
+        {
+          "n": 4,
+          "text": "contains $fx \"-> WT13\"",
+          "ok": false,
+          "expected": "contains '-> WT13'",
+          "actual": "Command: | Command: CDFIXTAGS | [CE] Repeated source names in this drawing: | The source tag 'AGI' is on more than one block (4 blocks). | [CE] Proposed renames (the first block of each name keeps it)...",
+          "evidence": "'-> WT13' is NOT in: Command: | Command: CDFIXTAGS | [CE] Repeated source names in this drawing: | The source tag 'AGI' is on more than one block (4 blocks). | [CE] Proposed renames (the first block of each name keeps it)..."
+        },
+        {
+          "n": 5,
+          "text": "contains $fx \"-> WT14\"",
+          "ok": false,
+          "expected": "contains '-> WT14'",
+          "actual": "Command: | Command: CDFIXTAGS | [CE] Repeated source names in this drawing: | The source tag 'AGI' is on more than one block (4 blocks). | [CE] Proposed renames (the first block of each name keeps it)...",
+          "evidence": "'-> WT14' is NOT in: Command: | Command: CDFIXTAGS | [CE] Repeated source names in this drawing: | The source tag 'AGI' is on more than one block (4 blocks). | [CE] Proposed renames (the first block of each name keeps it)..."
+        },
+        {
+          "n": 6,
+          "text": "history absent \"WT1 1\"",
+          "ok": true,
+          "expected": "command line lacks 'WT1 1'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'WT1 1' (28 lines read)"
+        },
+        {
+          "n": 7,
+          "text": "history absent \"WT1 2\"",
+          "ok": true,
+          "expected": "command line lacks 'WT1 2'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'WT1 2' (28 lines read)"
+        },
+        {
+          "n": 8,
+          "text": "contains $fx \"[CE] Nothing was renamed.\"",
+          "ok": true,
+          "expected": "contains '[CE] Nothing was renamed.'",
+          "actual": "Command: | Command: CDFIXTAGS | [CE] Repeated source names in this drawing: | The source tag 'AGI' is on more than one block (4 blocks). | [CE] Proposed renames (the first block of each name keeps it)...",
+          "evidence": "found '[CE] Nothing was renamed.' in: Command: | Command: CDFIXTAGS | [CE] Repeated source names in this drawing: | The source tag 'AGI' is on more than one block (4 blocks). | [CE] Proposed renames..."
+        },
+        {
+          "n": 9,
+          "text": "not-contains $win_end \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31426263_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV31426263_B1.dwg]"
+        },
+        {
+          "n": 10,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 11,
+          "text": "record $t10 \"FULL CDTAG WT1 on P10\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDTAG | Pick the source to label: 54436.3,-69493.6 | Enter tag (e.g., DP, WT1, IO): WT1 | Show the tag label on the drawing? [Yes/No] <Yes>: | [CE] CDTAG: WT1 is already on another source. Choose a different number. Nothing was changed. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL CDTAG WT1 on P10 = Command: | Command: CDTAG | Pick the source to label: 54436.3,-69493.6 | Enter tag (e.g., DP, WT1, IO): WT1 | Show the tag label on the drawing? [Yes/No] <Yes>: | [CE] CDTAG: WT1 is already on another source. Choose a different number. Nothing was changed. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 12,
+          "text": "record $t9 \"FULL CDTAG WT1 on P9\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDTAG | Pick the source to label: 64028,-69576.4 | Enter tag (e.g., DP, WT1, IO): WT1 | Show the tag label on the drawing? [Yes/No] <Yes>: | [CE] CDTAG: WT1 is already on another source. Choose a different number. Nothing was changed. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL CDTAG WT1 on P9 = Command: | Command: CDTAG | Pick the source to label: 64028,-69576.4 | Enter tag (e.g., DP, WT1, IO): WT1 | Show the tag label on the drawing? [Yes/No] <Yes>: | [CE] CDTAG: WT1 is already on another source. Choose a different number. Nothing was changed. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 13,
+          "text": "record $fx \"FULL what CDFIXTAGS showed (all proposal lines)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDFIXTAGS | [CE] Repeated source names in this drawing: | The source tag 'AGI' is on more than one block (4 blocks). | [CE] Proposed renames (the first block of each name keeps it): | AGI block at X 109476.37, Y -19984.82 -> AGI 1 | AGI block at X 97011.97, Y -14990.25 -> AGI 2 | AGI block at X 96961.28, Y -32610.41 -> AGI 3 | Rename them now? [Yes/No] <Yes>: No | [CE] Nothing was renamed. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL what CDFIXTAGS showed (all proposal lines) = Command: | Command: CDFIXTAGS | [CE] Repeated source names in this drawing: | The source tag 'AGI' is on more than one block (4 blocks). | [CE] Proposed renames (the first block of each name keeps it): | AGI block at X 109476.37, Y -19984.82 -> AGI 1 | AGI block at X 97011.97, Y -14990.25 -> AGI 2 | AGI block at X 96961.28, Y -32610.41 -> AGI 3 | Rename them now? [Yes/No] <Yes>: No | [CE] Nothing was renamed. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 14 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDTAG completed 38 ms ; Command outcome: CDTAG completed 18 ms ; Command outcome: CDFIXTAGS completed 38 ms"
+      ],
+      "error": null,
+      "finished": "2026-11-01 14:27:30",
+      "session_id": "RUN-20261101-1418-C3.0.88-tW07-s3",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}

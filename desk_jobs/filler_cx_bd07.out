@@ -1,0 +1,5 @@
+== cx_bd07 (usage 85.0% -> 16.0%): 1. **BLOCKED validation — [draft PR #1725](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1725).** Four new tests pass and fail correctly before their fixes. Three builds: **0 errors**. Full suite: **19,529 passed, 1 Help timeout, 22 skipped**. Cleanup and temporary settings-file changes remain unresolved in the [pushed report](C:/CE_PLAN/areas/CODEX_TESTS_BD07_24OCT.md).
+
+---
+
+2. **Handoff:** `cx3/tests-bd07` at `6a4790f9fe2755c924eb9a9ac8a5d7c19b320aea`. No product code changed or deployment performed. No AutoCAD testing by this job.

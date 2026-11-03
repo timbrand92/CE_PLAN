@@ -1,0 +1,5 @@
+== verifyW1_c60 (usage 5.0% -> 6.0%): 1. **W1 report:** [Open report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_W1_20261023_0842.md>). **1 PASS, 0 FAIL, 1 DIFFERENT, 2 BLOCKED, 0 NOT TESTED, 1 SEEN.** SURE 5; UNSURE 0.
+
+2. **Outstanding:** Cascade stopped at an unlisted warning; MOVE Undo remains inconclusive; tag refusal needs a confirmed DP3 fixture. No failure established.
+
+3. **Clean end:** AutoCAD closed, lock released, autosave restored, all four settings hashes unchanged. Installed: Civil **3.0.70**, Manager **1.1.70**, Structural **1.0.121**.

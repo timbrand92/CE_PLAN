@@ -1,0 +1,8 @@
+Both review fixes are applied to PR #1779. The head moved from `6ed25ea4` to `a8f64f6b`, as a normal fast-forward commit with no force-push. The PR is still open and draft.
+
+1. **Wording:** the AutoCAD check now says to type REGEN before looking at the Inspector. I changed it in the PR description, `REGRESSION_LOG.md` and the fix report.
+2. **Log line:** I removed the transaction-count read from the first-pick diagnostic. No test mentioned that text, so none was removed.
+3. **Tests:** net48 compiles with 0 errors. The Civil net10 suite passed 20,217, with 0 failed and 32 skipped. The four BUG-861 tests ran.
+4. **Report:** `release-v3-colleagues-PR1779_FIXES_APPLIED_25OCT.md` is pushed to CE_PLAN, and `git status -sb` shows no ahead.
+
+Not run in AutoCAD, so not FIXED. The private worktree is removed.

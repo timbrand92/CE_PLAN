@@ -1,0 +1,10 @@
+**Candidate:** `C:\ce_rc_scratch\c1061`, the expected number. It holds `CE_CVL_SUITE.bundle` and `CE_SUITE_MANAGER.bundle`. Nothing is installed.
+
+- **Bundle check:** Civil verified 828, bad 0, extra 0. Manager verified 75, bad 0, extra 0. File lists match installed.
+- **Train branch:** `claude/rel-20261025o` is now at `2c805a39`, which is the signed head `89d02b3e` plus the version commit. It was a normal push (4 files, 4 insertions, 4 deletions).
+- **Tests:** pin tests 41 and 61 passed, and the new switch-defaults tests passed 6 of 6.
+- **String proof:** 516 rows, 0 not as expected. #1756 and #1767 are absent.
+- **Settings files:** identical before and after.
+- **Odd:** none. AutoCAD was open at times, so builds waited for a gap.
+
+The report is `C:\Lisp Files\_TEST_COPIES_20260923\PAYLOAD_C1061_REPORT.md`.

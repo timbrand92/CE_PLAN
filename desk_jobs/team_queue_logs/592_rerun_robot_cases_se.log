@@ -1,0 +1,16 @@
+C:\CE_PLAN\areas\ROBOT_CASE_DRAFTS_SET03_INSPECTOR_RECORDS_02NOV.md — verdict: the file is ready for CE 05 to validate. It holds 2 robot cases with switch-off twins (W1880 and W1958), plus Codex-only looks for #1953 and #1955. Nothing was run, built or opened in AutoCAD, and none of the cases has been validated.
+
+- **File already existed:** it held a complete draft from an earlier pass, so I checked it and corrected it rather than rewriting it.
+- **Fixes made:**
+  - **Step name:** it used `v3 ui-windows`, which isn't a driver step. I changed all four uses to `windows-snapshot`.
+  - **Carpark entries:** the draft said the BUG-1240 and BUG-1263 to BUG-1266 entries were missing from `BUG_CARPARK.md`. They are there and agree with the PRs, so I corrected that section.
+- **Case search redone:** I found no existing case or draft for any of the five fixes.
+- **Log line:** the "could not be read" line is worded the same on the #1880 and #1958 branches.
+- **Codex-only fixes:**
+  - **#1953:** needs two drawings and a failed save.
+  - **#1955:** needs two drawings and an Undo, so it needs an Opus review before it is run.
+- **No case for #1951:** it is a code tidy with no switch of its own, so there is nothing to turn off for a broken twin.
+- **Not proven:**
+  - **Log text:** the log wording comes from the PR source, not from a run.
+  - **Inspector refresh:** whether the robot's pick makes the Inspector refresh is unknown.
+  - **Inspector window:** the Inspector window can't be read by the robot, so whether a healthy list shows real values is covered only by the Codex look.

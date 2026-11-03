@@ -1,0 +1,12 @@
+**Train C-50 is GO.** Final head is `82a58cda850d6c005726b93bd7a147a6cbf61b94`. I changed nothing: no fix was needed and every default stays as it was. The CDSURVEY multi-line-text switch stays OFF.
+
+1. **Tests:**
+   - Whole solution: 0 errors.
+   - Civil full: 18,878 of 18,898 pass. The 1 failure is the known Glen Eira one.
+   - Manager: 824 of 824 pass.
+   - Civil older-AutoCAD target, focused run: 206 of 207 pass. The 1 failure also fails on the installed C-49 train.
+2. **Manager must ship:** no.
+3. **Installer:** this train doesn't touch it, so the signed-update gate can't be affected.
+4. **Not fixed yet:** BUG-683, BUG-709 and BUG-141 are built and tested in code only; none has been tried in AutoCAD.
+
+The report and sign-off are pushed to `C:\CE_PLAN`.

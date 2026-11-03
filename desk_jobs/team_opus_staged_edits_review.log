@@ -1,0 +1,40 @@
+**FOR TIM**
+
+1. **Answer: the staged test edits are sound. I fixed one small gap, and none of this needs anything from you.**
+   - 17 of the 18 files do exactly what the reviews asked, and none weakens a check.
+   - The only checks that changed meaning are the four floor-waste ones, and they now follow your "no" ruling.
+2. **The fix:** one test COPYs a pit with layer 25TEXT locked. It now checks that CE says "no cover text".
+   - The matching "switch-off" test (the one that must fail) did not have that check. So nobody could prove the new check can ever fail.
+   - I added the same one line to the switch-off test, in the waiting copy only. Codex's second review had asked for this.
+3. **The pit numbers the robot will expect are right.**
+   - The test drawing has P1 to P7, P9, P10, C1 and X1, so a first copy takes the gap P8.
+   - The next copies take P11, then P12. This morning's runs read P8 for the COPY and P12 for the SCALE Copy, with the ROTATE Copy in between, which leaves P11 for the ROTATE Copy.
+4. **Floor waste on an inspection opening:** the four tests now expect CE to refuse and place nothing. The wording matches what CE actually printed at each opening, for example "IO2 is already at this point, and a new source cannot sit on top of it."
+5. **What you need to do:** nothing. The robot applies these after 5:30 pm and runs each one twice.
+
+---
+
+**Detail**
+
+1. **Checked:**
+   - I compared each waiting file with its original and with the live file. All 17 live files are still untouched.
+   - I matched every edit to the line that was asked for (B8, B7, the two Codex reviews, the five bug entries and your ruling).
+   - I read how the runner decides that a failing switch-off test counts. It only counts if the test fails on a check, not on a step that stops.
+   - The fixture's pit labels and the IO1 to IO4 sentences come from recorded runs. The three new renumber checks pass my test in the same regex engine the runner uses.
+2. **The C33m edit:**
+   - One line added: `contains $cp1 "got their own number but no cover text"`.
+   - SHA-256 before `9DF1A38740AC…` and after `5D112376D563…`. Line endings kept, and the original is backed up as `.pre_review`.
+   - Offline validate: 18 files, 0 invalid. The one AutoCAD running was yours; I started none.
+3. **Notes for the robot and desk (no decision needed from you):**
+   - **Two hashes differ from the staging report:** C33m's is now `5D112376D563`, and C36e's correct one is `FC5C7C905431`. A note sits in the staging folder.
+   - **C36e result:** expect it to fail checks 1 and 2, not just check 2.
+   - **R34sn:** rightly not applied. It is a wording-only change.
+   - **Three floor-waste tests can't be accepted yet:** the ones for openings 2 to 4 have no failing switch-off test of their own. Three new switch-off tests would fix that; I didn't create them because new files were outside this job.
+4. **Not verified:**
+   - Nothing was run in AutoCAD.
+   - P11 has never been read in a run.
+   - The new switch-off test (R34so_OFF_BROKEN)'s label search has never run in that test.
+   - I did not re-read the driver line that makes an empty label stop a step.
+5. **Report:** `C:\CE_PLAN\areas\STAGED_EDITS_REVIEW_29OCT.md`, pushed. Git shows nothing waiting to go up.
+
+**Summary:** I reviewed all 18 waiting test files. 17 are sound and weaken nothing. The pit numbers fit the drawing's labels and today's P8 and P12 readings, and IO1 to IO4 match what CE printed in both sessions. I fixed one gap in the waiting copy only: C33m now has the "no cover text" check, with a backup kept. R34sn is rightly skipped. The tests for openings 2 to 4 need their own switch-off tests before they can be accepted. Validate: 18 files, 0 invalid. Report pushed.

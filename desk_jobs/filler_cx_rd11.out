@@ -1,0 +1,9 @@
+== cx_rd11 (usage 47.0% -> 52.0%): 1. **DONE — eight new findings:** HIGH 0, MEDIUM 7, LOW 1. Most important: Structural labels backup copies as “autosave”, potentially misleading drafters about unsaved work.
+
+2. **[Findings report](C:/CE_PLAN/areas/CODEX_AUDIT2_RD11_23OCT.md)** saved and pushed. Each finding includes evidence, a small fix and a repeatable test.
+
+3. **Reading only.** No AutoCAD, builds or tests run. Temporary worktree removed.
+
+---
+
+1. **Commit:** `22be055a`. Only the requested report committed. Leak scan passed; `main` matches `origin/main`, with no ahead commits.

@@ -1,0 +1,10 @@
+sed: can't read C:/Lisp Files/_CODEX_RUNNER/verifyB_c88.txt: No such file or directory
+== verifyB_c88 (usage 56.0% -> 56.0%): 1. **BLOCKED ÔÇö task missing.** Which window, bug or plan item should I work on? For example: ÔÇ£Fix clipping in the Settings window.ÔÇØ
+
+2. **Checked.** Read TimÔÇÖs rules, router and plan starting page. No files changed; AutoCAD stayed closed.
+
+3. **Handoff.** PR: none. Branch tip: none. Builds/tests: not run. The supplied working folder is not a Git repository; IÔÇÖll use an isolated plugin worktree once the task is identified.
+sed: can't read C:/Lisp Files/_CODEX_RUNNER/verifyB_c88.txt: No such file or directory
+== verifyB_c88 (usage 56.0% -> 56.0%): 1. **BLOCKED ÔÇö brief missing.** Which window, bug or feature should I work on? For example: ÔÇ£Fix clipped text in the Help window.ÔÇØ
+
+2. **Status.** Rules and plan starting page read. No files changed, builds run or AutoCAD opened. PR: none. Branch tip: unchanged, not checked. Tests: 0 run.

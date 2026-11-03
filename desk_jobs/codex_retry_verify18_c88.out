@@ -1,0 +1,10 @@
+sed: can't read C:/Lisp Files/_CODEX_RUNNER/verify18_c88.txt: No such file or directory
+== verify18_c88 (usage 56.0% -> 56.0%): 1. **BLOCKED ÔÇö brief missing:** What specific window, bug or plan item should I work on? For example, name the window and what should change.
+
+2. **Status:** Rules and router read. No files changed; no builds or tests run. PR: none. Branch tip: not established.
+sed: can't read C:/Lisp Files/_CODEX_RUNNER/verify18_c88.txt: No such file or directory
+== verify18_c88 (usage 56.0% -> 56.0%): CE_ACAD / general / build / 01
+
+1. **Ready.** IÔÇÖve read TimÔÇÖs rules and router. IÔÇÖll follow your worktree, protected-file, design, testing and PR requirements.
+
+2. **Missing brief.** What specific window, command or defect should I work on? No files changed, builds run or AutoCAD opened.

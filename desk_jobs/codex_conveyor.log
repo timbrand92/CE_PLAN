@@ -1,0 +1,937 @@
+Thu 21:48 a robot/driver job owns AutoCAD: cleanup skipped
+Thu 21:48 conveyor started
+Thu 21:48 starting verifyV9b_s41 (look id V9B)
+Fri 01:50 finished verifyV9b_s41
+Fri 01:51 a robot/driver job owns AutoCAD: cleanup skipped
+Fri 01:51 starting verifyW1_c60 (look id W1)
+Fri 04:54 lock held by Claude-driverv3: cleanup skipped
+Fri 04:54 conveyor started
+Fri 04:54 starting verifyW1_c60 (look id W1)
+Fri 05:22 finished verifyW1_c60
+Fri 05:23 lock held by Claude-driverv3: cleanup skipped
+Fri 05:23 starting verifyW2_c60 (look id W2)
+Fri 06:20 finished verifyW2_c60
+Fri 06:21 lock held by Claude-driverv3: cleanup skipped
+Fri 06:21 starting verifyW3_c60 (look id W3)
+Fri 07:26 finished verifyW3_c60
+Fri 07:27 starting verifyW4_c60 (look id W4)
+Fri 08:14 finished verifyW4_c60
+Fri 08:16 starting verifyW5_c60 (look id W5)
+Fri 08:38 finished verifyW5_c60
+Fri 08:39 starting verifyW1_c60 (look id W1)
+Fri 09:06 finished verifyW1_c60
+Fri 09:08 starting verifyW3_c60 (look id W3)
+Fri 09:32 finished verifyW3_c60
+Fri 09:34 STOP flag
+Fri 10:25 conveyor started
+Fri 10:25 starting verifyW6_c60 (look id W6)
+Fri 10:41 finished verifyW6_c60
+Fri 10:42 starting verifyW7_c60 (look id W7)
+Fri 11:25 finished verifyW7_c60
+Fri 11:27 starting verifyW8_c60 (look id W8)
+Fri 11:53 finished verifyW8_c60
+Fri 12:24 STOP flag
+Fri 12:29 conveyor started
+Fri 12:34 starting verifyX1_c60 (look id X1)
+Fri 12:43 finished verifyX1_c60
+Fri 12:45 starting verifyX2_c60 (look id X2)
+Fri 16:50 finished verifyX2_c60
+Fri 16:51 starting verifyX3_c60 (look id X3)
+Fri 17:16 finished verifyX3_c60
+Fri 17:18 starting verifyX4_c60 (look id X4)
+Fri 17:45 finished verifyX4_c60
+Fri 17:47 lock held by Claude-driverv3: cleanup skipped
+Fri 17:47 starting verifyX5_c60 (look id X5)
+Fri 18:28 conveyor started
+Fri 18:28 starting verifyX5_c60 (look id X5)
+Fri 20:10 finished verifyX5_c60
+Fri 20:11 lock held by Claude-driverv3: cleanup skipped
+Fri 20:11 starting verifyX6_c60 (look id X6)
+Fri 20:28 lock held by Claude-driverv3: cleanup skipped
+Fri 20:28 conveyor started
+Fri 20:28 starting verifyX5_c60 (look id X5)
+Fri 21:28 lock held by Claude-driverv3: cleanup skipped
+Fri 21:28 conveyor started
+Fri 21:28 starting verifyX5_c60 (look id X5)
+Fri 21:46 conveyor started
+Fri 21:46 starting verifyX5_c60 (look id X5)
+Fri 22:52 finished verifyX5_c60
+Fri 22:53 lock held by Claude-driverv3: cleanup skipped
+Fri 22:53 starting verifyX6_c60 (look id X6)
+Sat 00:08 finished verifyX6_c60
+Sat 00:09 starting verifyX7_c60 (look id X7)
+Sat 00:42 finished verifyX7_c60
+Sat 00:43 starting verifyX8_c60 (look id X8)
+Sat 01:21 finished verifyX8_c60
+Sat 01:22 starting verifyX9_c60 (look id X9)
+Sat 01:58 finished verifyX9_c60
+Sat 02:00 starting verifyX10_c60 (look id X10)
+Sat 02:23 finished verifyX10_c60
+Sat 04:49 Codex weekly usage 90 percent: stop
+Sat 05:38 lock held by Claude-driverv3: cleanup skipped
+Sat 05:38 conveyor started
+Sat 05:38 over today's cap (16): waiting 10 minutes
+Sat 05:49 over today's cap (16): waiting 10 minutes
+Sat 05:57 lock held by Claude-driverv3: cleanup skipped
+Sat 05:57 conveyor started
+Sat 05:57 starting verifyD1_cur (look id D1)
+Sat 06:38 finished verifyD1_cur
+Sat 06:39 starting verifyD2_cur (look id D2)
+Sat 06:59 finished verifyD2_cur
+Sat 07:00 lock held by Claude-driverv3: cleanup skipped
+Sat 07:00 over today's cap (16): waiting 10 minutes
+Sat 07:10 over today's cap (16): waiting 10 minutes
+Sat 07:21 over today's cap (16): waiting 10 minutes
+Sat 07:31 over today's cap (16): waiting 10 minutes
+Sat 07:41 over today's cap (16): waiting 10 minutes
+Sat 07:51 over today's cap (16): waiting 10 minutes
+Sat 08:01 over today's cap (16): waiting 10 minutes
+Sat 08:11 over today's cap (16): waiting 10 minutes
+Sat 08:21 over today's cap (16): waiting 10 minutes
+Sat 08:31 over today's cap (16): waiting 10 minutes
+Sat 08:41 over today's cap (16): waiting 10 minutes
+Sat 08:51 over today's cap (16): waiting 10 minutes
+Sat 09:01 over today's cap (16): waiting 10 minutes
+Sat 09:12 over today's cap (16): waiting 10 minutes
+Sat 09:22 over today's cap (16): waiting 10 minutes
+Sat 09:32 over today's cap (16): waiting 10 minutes
+Sat 09:42 over today's cap (16): waiting 10 minutes
+Sat 09:52 over today's cap (16): waiting 10 minutes
+Sat 10:02 over today's cap (16): waiting 10 minutes
+Sat 10:12 over today's cap (16): waiting 10 minutes
+Sat 10:22 over today's cap (16): waiting 10 minutes
+Sat 10:32 over today's cap (16): waiting 10 minutes
+Sat 10:42 over today's cap (16): waiting 10 minutes
+Sat 10:53 over today's cap (16): waiting 10 minutes
+Sat 11:03 over today's cap (16): waiting 10 minutes
+Sat 11:14 over today's cap (16): waiting 10 minutes
+Sat 11:24 over today's cap (16): waiting 10 minutes
+Sat 11:34 STOP flag
+Sat 11:38 conveyor started
+Sat 11:38 over today's cap (16): waiting 10 minutes
+Sat 11:48 over today's cap (16): waiting 10 minutes
+Sat 11:58 over today's cap (16): waiting 10 minutes
+Sat 12:08 over today's cap (16): waiting 10 minutes
+Sat 12:18 over today's cap (16): waiting 10 minutes
+Sat 12:28 over today's cap (16): waiting 10 minutes
+Sat 12:38 STOP flag
+Sat 12:45 lock held by Claude-driverv3: cleanup skipped
+Sat 12:45 conveyor started
+Sat 12:45 over today's cap (16): waiting 10 minutes
+Sat 12:55 over today's cap (16): waiting 10 minutes
+Sat 13:06 over today's cap (16): waiting 10 minutes
+Sat 13:16 over today's cap (16): waiting 10 minutes
+Sat 13:26 over today's cap (16): waiting 10 minutes
+Sat 13:36 over today's cap (16): waiting 10 minutes
+Sat 13:46 over today's cap (16): waiting 10 minutes
+Sat 13:56 over today's cap (16): waiting 10 minutes
+Sat 14:06 over today's cap (16): waiting 10 minutes
+Sat 14:16 over today's cap (16): waiting 10 minutes
+Sat 14:26 over today's cap (16): waiting 10 minutes
+Sat 14:36 over today's cap (16): waiting 10 minutes
+Sat 14:47 over today's cap (16): waiting 10 minutes
+Sat 14:57 over today's cap (16): waiting 10 minutes
+Sat 15:07 over today's cap (16): waiting 10 minutes
+Sat 15:17 over today's cap (16): waiting 10 minutes
+Sat 15:27 over today's cap (16): waiting 10 minutes
+Sat 15:37 over today's cap (16): waiting 10 minutes
+Sat 15:47 over today's cap (16): waiting 10 minutes
+Sat 15:57 over today's cap (16): waiting 10 minutes
+Sat 16:07 over today's cap (16): waiting 10 minutes
+Sat 16:17 over today's cap (16): waiting 10 minutes
+Sat 16:27 over today's cap (16): waiting 10 minutes
+Sat 16:37 over today's cap (16): waiting 10 minutes
+Sat 16:47 over today's cap (16): waiting 10 minutes
+Sat 16:58 over today's cap (16): waiting 10 minutes
+Sat 17:08 over today's cap (16): waiting 10 minutes
+Sat 17:18 STOP flag
+Sat 17:23 lock held by Claude-driverv3: cleanup skipped
+Sat 17:23 conveyor started
+Sat 17:23 over today's cap (16): waiting 10 minutes
+Sat 17:33 over today's cap (16): waiting 10 minutes
+Sat 17:43 over today's cap (16): waiting 10 minutes
+Sat 17:53 over today's cap (16): waiting 10 minutes
+Sat 18:03 over today's cap (16): waiting 10 minutes
+Sat 18:14 over today's cap (16): waiting 10 minutes
+Sat 18:24 over today's cap (16): waiting 10 minutes
+Sat 18:34 over today's cap (16): waiting 10 minutes
+Sat 18:44 over today's cap (16): waiting 10 minutes
+Sat 18:54 over today's cap (16): waiting 10 minutes
+Sat 19:04 over today's cap (16): waiting 10 minutes
+Sat 19:14 over today's cap (16): waiting 10 minutes
+Sat 19:24 over today's cap (16): waiting 10 minutes
+Sat 19:34 over today's cap (16): waiting 10 minutes
+Sat 19:44 over today's cap (16): waiting 10 minutes
+Sat 19:54 over today's cap (16): waiting 10 minutes
+Sat 20:04 over today's cap (16): waiting 10 minutes
+Sat 20:14 over today's cap (16): waiting 10 minutes
+Sat 20:24 over today's cap (16): waiting 10 minutes
+Sat 20:34 over today's cap (16): waiting 10 minutes
+Sat 20:44 over today's cap (16): waiting 10 minutes
+Sat 20:54 over today's cap (16): waiting 10 minutes
+Sat 21:04 over today's cap (16): waiting 10 minutes
+Sat 21:14 over today's cap (16): waiting 10 minutes
+Sat 21:25 over today's cap (16): waiting 10 minutes
+Sat 21:35 over today's cap (16): waiting 10 minutes
+Sat 21:45 over today's cap (16): waiting 10 minutes
+Sat 21:55 over today's cap (16): waiting 10 minutes
+Sat 22:05 over today's cap (16): waiting 10 minutes
+Sat 22:15 over today's cap (16): waiting 10 minutes
+Sat 22:25 over today's cap (16): waiting 10 minutes
+Sat 22:35 over today's cap (16): waiting 10 minutes
+Sat 22:45 over today's cap (16): waiting 10 minutes
+Sat 22:55 over today's cap (16): waiting 10 minutes
+Sat 23:05 over today's cap (16): waiting 10 minutes
+Sat 23:15 over today's cap (16): waiting 10 minutes
+Sat 23:25 over today's cap (16): waiting 10 minutes
+Sat 23:35 over today's cap (16): waiting 10 minutes
+Sat 23:45 over today's cap (16): waiting 10 minutes
+Sat 23:55 over today's cap (16): waiting 10 minutes
+Sun 00:05 over today's cap (16): waiting 10 minutes
+Sun 00:16 over today's cap (16): waiting 10 minutes
+Sun 00:26 over today's cap (16): waiting 10 minutes
+Sun 00:36 over today's cap (16): waiting 10 minutes
+Sun 00:46 over today's cap (16): waiting 10 minutes
+Sun 00:56 over today's cap (16): waiting 10 minutes
+Sun 01:06 over today's cap (16): waiting 10 minutes
+Sun 01:16 over today's cap (16): waiting 10 minutes
+Sun 01:26 over today's cap (16): waiting 10 minutes
+Sun 01:36 over today's cap (16): waiting 10 minutes
+Sun 01:46 over today's cap (16): waiting 10 minutes
+Sun 01:56 over today's cap (16): waiting 10 minutes
+Sun 02:07 over today's cap (16): waiting 10 minutes
+Sun 02:17 over today's cap (16): waiting 10 minutes
+Sun 02:27 over today's cap (16): waiting 10 minutes
+Sun 02:37 over today's cap (16): waiting 10 minutes
+Sun 02:47 over today's cap (16): waiting 10 minutes
+Sun 02:57 over today's cap (16): waiting 10 minutes
+Sun 03:07 over today's cap (16): waiting 10 minutes
+Sun 03:17 over today's cap (16): waiting 10 minutes
+Sun 03:27 over today's cap (16): waiting 10 minutes
+Sun 03:36 lock held by Claude-driverv3: cleanup skipped
+Sun 03:36 conveyor started
+Sun 03:36 over today's cap (16): waiting 10 minutes
+Sun 03:46 over today's cap (16): waiting 10 minutes
+Sun 03:56 over today's cap (16): waiting 10 minutes
+Sun 04:06 over today's cap (16): waiting 10 minutes
+Sun 04:16 over today's cap (16): waiting 10 minutes
+Sun 04:26 over today's cap (16): waiting 10 minutes
+Sun 04:36 over today's cap (16): waiting 10 minutes
+Sun 04:46 starting verifyD3_cur (look id D3)
+Sun 05:18 finished verifyD3_cur
+Sun 05:20 lock held by Claude-driverv3: cleanup skipped
+Sun 05:20 over today's cap (30): waiting 10 minutes
+Sun 05:30 over today's cap (30): waiting 10 minutes
+Sun 05:40 over today's cap (30): waiting 10 minutes
+Sun 05:50 over today's cap (30): waiting 10 minutes
+Sun 06:00 over today's cap (30): waiting 10 minutes
+Sun 06:10 over today's cap (30): waiting 10 minutes
+Sun 06:20 over today's cap (30): waiting 10 minutes
+Sun 06:30 over today's cap (30): waiting 10 minutes
+Sun 06:40 over today's cap (30): waiting 10 minutes
+Sun 06:50 over today's cap (30): waiting 10 minutes
+Sun 07:01 over today's cap (30): waiting 10 minutes
+Sun 07:11 over today's cap (30): waiting 10 minutes
+Sun 07:21 over today's cap (30): waiting 10 minutes
+Sun 07:31 over today's cap (30): waiting 10 minutes
+Sun 07:41 over today's cap (30): waiting 10 minutes
+Sun 07:51 over today's cap (30): waiting 10 minutes
+Sun 08:01 over today's cap (30): waiting 10 minutes
+Sun 08:11 over today's cap (30): waiting 10 minutes
+Sun 08:21 over today's cap (30): waiting 10 minutes
+Sun 08:31 over today's cap (30): waiting 10 minutes
+Sun 08:41 over today's cap (30): waiting 10 minutes
+Sun 08:51 over today's cap (30): waiting 10 minutes
+Sun 09:01 over today's cap (30): waiting 10 minutes
+Sun 09:12 over today's cap (30): waiting 10 minutes
+Sun 09:22 over today's cap (30): waiting 10 minutes
+Sun 09:32 over today's cap (30): waiting 10 minutes
+Sun 09:42 over today's cap (30): waiting 10 minutes
+Sun 09:52 over today's cap (30): waiting 10 minutes
+Sun 10:02 over today's cap (30): waiting 10 minutes
+Sun 10:12 over today's cap (30): waiting 10 minutes
+Sun 10:22 over today's cap (30): waiting 10 minutes
+Sun 10:32 over today's cap (30): waiting 10 minutes
+Sun 10:42 over today's cap (30): waiting 10 minutes
+Sun 10:52 over today's cap (30): waiting 10 minutes
+Sun 11:02 over today's cap (30): waiting 10 minutes
+Sun 11:12 over today's cap (30): waiting 10 minutes
+Sun 11:23 over today's cap (30): waiting 10 minutes
+Sun 11:33 over today's cap (30): waiting 10 minutes
+Sun 11:43 over today's cap (30): waiting 10 minutes
+Sun 11:53 over today's cap (30): waiting 10 minutes
+Sun 12:03 over today's cap (30): waiting 10 minutes
+Sun 12:13 over today's cap (30): waiting 10 minutes
+Sun 12:23 over today's cap (30): waiting 10 minutes
+Sun 12:33 over today's cap (30): waiting 10 minutes
+Sun 12:43 over today's cap (30): waiting 10 minutes
+Sun 12:53 over today's cap (30): waiting 10 minutes
+Sun 13:03 over today's cap (30): waiting 10 minutes
+Sun 13:13 over today's cap (30): waiting 10 minutes
+Sun 13:23 over today's cap (30): waiting 10 minutes
+Sun 13:34 over today's cap (30): waiting 10 minutes
+Sun 13:44 over today's cap (30): waiting 10 minutes
+Sun 13:54 over today's cap (30): waiting 10 minutes
+Sun 14:04 over today's cap (30): waiting 10 minutes
+Sun 14:14 over today's cap (30): waiting 10 minutes
+Sun 14:24 over today's cap (30): waiting 10 minutes
+Sun 14:34 over today's cap (30): waiting 10 minutes
+Sun 14:44 over today's cap (30): waiting 10 minutes
+Sun 14:54 over today's cap (30): waiting 10 minutes
+Sun 15:04 STOP flag
+Sun 15:13 lock held by Claude-driverv3: cleanup skipped
+Sun 15:13 conveyor started
+Sun 15:13 over today's cap (30): waiting 10 minutes
+Sun 15:24 over today's cap (30): waiting 10 minutes
+Sun 15:34 over today's cap (30): waiting 10 minutes
+Sun 15:44 over today's cap (30): waiting 10 minutes
+Sun 15:54 over today's cap (30): waiting 10 minutes
+Sun 16:04 over today's cap (30): waiting 10 minutes
+Sun 16:14 over today's cap (30): waiting 10 minutes
+Sun 16:24 over today's cap (30): waiting 10 minutes
+Sun 16:34 over today's cap (30): waiting 10 minutes
+Sun 16:44 over today's cap (30): waiting 10 minutes
+Sun 16:54 over today's cap (30): waiting 10 minutes
+Sun 17:04 over today's cap (30): waiting 10 minutes
+Sun 17:14 over today's cap (30): waiting 10 minutes
+Sun 17:24 over today's cap (30): waiting 10 minutes
+Sun 17:34 STOP flag
+Sun 17:43 lock held by Claude-driverv3: cleanup skipped
+Sun 17:43 conveyor started
+Sun 17:43 over today's cap (30): waiting 10 minutes
+Sun 17:54 over today's cap (30): waiting 10 minutes
+Sun 18:04 over today's cap (30): waiting 10 minutes
+Sun 18:14 over today's cap (30): waiting 10 minutes
+Sun 18:24 over today's cap (30): waiting 10 minutes
+Sun 18:34 over today's cap (30): waiting 10 minutes
+Sun 18:44 over today's cap (30): waiting 10 minutes
+Sun 18:54 STOP flag
+Sun 20:45 conveyor started
+Sun 20:45 over today's cap (30): waiting 10 minutes
+Sun 20:55 STOP flag
+Mon 00:12 conveyor started
+Mon 00:12 over today's cap (30): waiting 10 minutes
+Mon 00:22 over today's cap (30): waiting 10 minutes
+Mon 00:32 over today's cap (30): waiting 10 minutes
+Mon 00:43 over today's cap (30): waiting 10 minutes
+Mon 00:53 STOP flag
+Mon 03:45 lock held by Claude-driverv3: cleanup skipped
+Mon 03:45 conveyor started
+Mon 03:45 starting verifyD4_cur (look id D4)
+Mon 04:20 finished verifyD4_cur
+Mon 04:21 lock held by Claude-driverv3: cleanup skipped
+Mon 04:21 starting verifyD5_cur (look id D5)
+Mon 05:06 finished verifyD5_cur
+Mon 05:08 lock held by Claude-driverv3: cleanup skipped
+Mon 05:08 starting verifyD6_cur (look id D6)
+Mon 05:34 finished verifyD6_cur
+Mon 05:36 lock held by Claude-driverv3: cleanup skipped
+Mon 05:36 STOP flag
+Mon 05:44 lock held by Claude-driverv3: cleanup skipped
+Mon 05:44 conveyor started
+Mon 05:45 starting verifyD7_cur (look id D7)
+Mon 06:16 finished verifyD7_cur
+Mon 06:17 lock held by Claude-driverv3: cleanup skipped
+Mon 06:17 starting verifyD8_cur (look id D8)
+Mon 06:44 finished verifyD8_cur
+Mon 06:45 lock held by Claude-driverv3: cleanup skipped
+Mon 07:32 starting verifyE1_cur (look id E1)
+Mon 08:03 finished verifyE1_cur
+Mon 08:05 lock held by Claude-driverv3: cleanup skipped
+Mon 08:05 starting verifyE2_cur (look id E2)
+Mon 08:24 finished verifyE2_cur
+Mon 08:26 starting verifyE3_cur (look id E3)
+Mon 08:47 finished verifyE3_cur
+Mon 08:49 starting verifyE4_cur (look id E4)
+Mon 08:59 finished verifyE4_cur
+Mon 09:01 starting verifyE5_cur (look id E5)
+Mon 09:08 finished verifyE5_cur
+Mon 09:09 starting verifyE6_cur (look id E6)
+Mon 09:27 finished verifyE6_cur
+Mon 09:28 over today's cap (25): waiting 10 minutes
+Mon 09:38 over today's cap (25): waiting 10 minutes
+Mon 09:48 over today's cap (25): waiting 10 minutes
+Mon 09:58 over today's cap (25): waiting 10 minutes
+Mon 10:09 over today's cap (25): waiting 10 minutes
+Mon 10:19 over today's cap (25): waiting 10 minutes
+Mon 10:29 over today's cap (25): waiting 10 minutes
+Mon 10:39 over today's cap (25): waiting 10 minutes
+Mon 10:49 over today's cap (25): waiting 10 minutes
+Mon 10:59 over today's cap (25): waiting 10 minutes
+Mon 11:09 over today's cap (25): waiting 10 minutes
+Mon 11:19 over today's cap (25): waiting 10 minutes
+Mon 11:29 over today's cap (25): waiting 10 minutes
+Mon 11:40 over today's cap (25): waiting 10 minutes
+Mon 11:50 over today's cap (25): waiting 10 minutes
+Mon 12:00 over today's cap (25): waiting 10 minutes
+Mon 12:10 over today's cap (25): waiting 10 minutes
+Mon 12:20 over today's cap (25): waiting 10 minutes
+Mon 12:30 over today's cap (25): waiting 10 minutes
+Mon 12:41 over today's cap (25): waiting 10 minutes
+Mon 12:51 over today's cap (25): waiting 10 minutes
+Mon 13:01 over today's cap (25): waiting 10 minutes
+Mon 13:11 over today's cap (25): waiting 10 minutes
+Mon 13:22 over today's cap (25): waiting 10 minutes
+Mon 13:32 over today's cap (25): waiting 10 minutes
+Mon 13:42 over today's cap (25): waiting 10 minutes
+Mon 13:52 over today's cap (25): waiting 10 minutes
+Mon 14:02 over today's cap (25): waiting 10 minutes
+Mon 14:13 over today's cap (25): waiting 10 minutes
+Mon 14:23 over today's cap (25): waiting 10 minutes
+Mon 14:33 over today's cap (25): waiting 10 minutes
+Mon 14:43 over today's cap (25): waiting 10 minutes
+Mon 14:53 over today's cap (25): waiting 10 minutes
+Mon 15:03 over today's cap (25): waiting 10 minutes
+Mon 15:13 over today's cap (25): waiting 10 minutes
+Mon 15:24 over today's cap (25): waiting 10 minutes
+Mon 15:34 over today's cap (25): waiting 10 minutes
+Mon 15:44 over today's cap (25): waiting 10 minutes
+Mon 15:54 over today's cap (25): waiting 10 minutes
+Mon 16:04 over today's cap (25): waiting 10 minutes
+Mon 16:14 over today's cap (25): waiting 10 minutes
+Mon 16:24 over today's cap (25): waiting 10 minutes
+Mon 16:35 over today's cap (25): waiting 10 minutes
+Mon 16:45 over today's cap (25): waiting 10 minutes
+Mon 16:55 over today's cap (25): waiting 10 minutes
+Mon 17:01 conveyor started
+Mon 17:01 over today's cap (25): waiting 10 minutes
+Mon 17:11 over today's cap (25): waiting 10 minutes
+Mon 17:21 over today's cap (25): waiting 10 minutes
+Mon 17:31 starting verifyE7_cur (look id E7)
+Mon 19:11 finished verifyE7_cur
+Mon 19:13 AutoCAD left running (pid 60904): killed
+Mon 19:13 starting verifyE8_cur (look id E8)
+Mon 20:56 finished verifyE8_cur
+Mon 20:58 AutoCAD left running (pid 117728): killed
+Mon 20:58 starting verifyE9_cur (look id E9)
+Mon 22:36 finished verifyE9_cur
+Mon 22:38 starting verifyE10_cur (look id E10)
+Mon 22:49 finished verifyE10_cur
+Mon 22:50 lock held by Claude-driverv3: cleanup skipped
+Mon 22:50 starting verifyE11_cur (look id E11)
+Mon 23:41 conveyor started
+Mon 23:42 starting verifyE11_cur (look id E11)
+Tue 01:23 finished verifyE11_cur
+Tue 01:25 lock held by Claude-driverv3: cleanup skipped
+Tue 01:25 starting verifyE12_cur (look id E12)
+Tue 01:49 finished verifyE12_cur
+Tue 01:51 lock held by Claude-driverv3: cleanup skipped
+Tue 01:51 starting verifyF1_cur (look id F1)
+Tue 01:57 finished verifyF1_cur
+Tue 01:59 lock held by Claude-driverv3: cleanup skipped
+Tue 01:59 starting verifyF2_cur (look id F2)
+Tue 02:34 finished verifyF2_cur
+Tue 02:36 lock held by Claude-driverv3: cleanup skipped
+Tue 02:36 starting verifyF3_cur (look id F3)
+Tue 03:01 finished verifyF3_cur
+Tue 03:02 lock held by Claude-driverv3: cleanup skipped
+Tue 03:02 starting verifyF4_cur (look id F4)
+Tue 03:22 finished verifyF4_cur
+Tue 03:23 lock held by Claude-driverv3: cleanup skipped
+Tue 03:23 starting verifyF5_cur (look id F5)
+Tue 03:37 finished verifyF5_cur
+Tue 03:39 lock held by Claude-driverv3: cleanup skipped
+Tue 03:39 starting verifyF6_cur (look id F6)
+Tue 03:48 finished verifyF6_cur
+Tue 03:50 AutoCAD left running (pid 110544): killed
+Tue 03:50 starting verifyF7_cur (look id F7)
+Tue 04:03 finished verifyF7_cur
+Tue 04:04 lock held by Claude-driverv3: cleanup skipped
+Tue 04:04 starting verifyF8_cur (look id F8)
+Tue 04:23 finished verifyF8_cur
+Tue 04:24 starting verifyF9_cur (look id F9)
+Tue 04:34 finished verifyF9_cur
+Tue 04:36 lock held by Claude-driverv3: cleanup skipped
+Tue 04:36 starting verifyF10_cur (look id F10)
+Tue 04:55 finished verifyF10_cur
+Tue 04:57 lock held by Claude-driverv3: cleanup skipped
+Tue 05:32 starting verifyF3_cur (look id F3)
+Tue 05:46 finished verifyF3_cur
+Tue 05:47 lock held by Claude-driverv3: cleanup skipped
+Tue 05:47 starting verifyF4_cur (look id F4)
+Tue 06:05 lock held by Claude-driverv3: cleanup skipped
+Tue 06:05 conveyor started
+Tue 06:05 starting verifyF4_cur (look id F4)
+Tue 06:15 finished verifyF4_cur
+Tue 06:16 lock held by Claude-driverv3: cleanup skipped
+Tue 06:16 STOP flag
+Tue 06:27 conveyor started
+Tue 06:27 starting verifyF5_cur (look id F5)
+Tue 06:29 finished verifyF5_cur
+Tue 06:30 lock held by Claude-driverv3: cleanup skipped
+Tue 06:31 starting verifyF7_cur (look id F7)
+Tue 06:53 finished verifyF7_cur
+Tue 06:54 lock held by Claude-driverv3: cleanup skipped
+Tue 07:34 starting verifyF1_cur (look id F1)
+Tue 07:45 finished verifyF1_cur
+Tue 07:47 lock held by Claude-driverv3: cleanup skipped
+Tue 07:47 starting verifyF5_cur (look id F5)
+Tue 07:59 finished verifyF5_cur
+Tue 08:01 lock held by Claude-driverv3: cleanup skipped
+Tue 08:01 starting verifyF10_cur (look id F10)
+Tue 08:08 finished verifyF10_cur
+Tue 08:09 lock held by Claude-driverv3: cleanup skipped
+Tue 08:35 starting verifyF1_cur (look id F1)
+Tue 08:59 finished verifyF1_cur
+Tue 09:00 lock held by Claude-driverv3: cleanup skipped
+Tue 09:00 starting verifyF10_cur (look id F10)
+Tue 09:13 finished verifyF10_cur
+Tue 09:14 lock held by Claude-driverv3: cleanup skipped
+Tue 09:29 Codex weekly usage 97 percent: stop
+Tue 09:32 lock held by Claude-driverv3: cleanup skipped
+Tue 09:32 conveyor started
+Tue 09:32 Codex weekly usage 97 percent: stop
+Tue 09:34 lock held by Claude-driverv3: cleanup skipped
+Tue 09:34 conveyor started
+Tue 09:34 Codex weekly usage 97 percent: stop
+Tue 09:36 conveyor started
+Tue 09:36 Codex weekly usage 97 percent: stop
+Tue 09:38 conveyor started
+Tue 09:38 Codex weekly usage 97 percent: stop
+Tue 09:41 lock held by Claude-driverv3: cleanup skipped
+Tue 09:41 conveyor started
+Tue 09:41 Codex weekly usage 97 percent: stop
+Tue 09:43 lock held by Claude-driverv3: cleanup skipped
+Tue 09:43 conveyor started
+Tue 09:43 Codex weekly usage 97 percent: stop
+Tue 09:45 lock held by Claude-driverv3: cleanup skipped
+Tue 09:45 conveyor started
+Tue 09:45 Codex weekly usage 97 percent: stop
+Tue 09:47 lock held by Claude-driverv3: cleanup skipped
+Tue 09:47 conveyor started
+Tue 09:47 Codex weekly usage 97 percent: stop
+Tue 09:49 lock held by Claude-driverv3: cleanup skipped
+Tue 09:49 conveyor started
+Tue 09:49 Codex weekly usage 97 percent: stop
+Tue 09:51 lock held by Claude-driverv3: cleanup skipped
+Tue 09:51 conveyor started
+Tue 09:51 Codex weekly usage 97 percent: stop
+Tue 09:53 conveyor started
+Tue 09:53 Codex weekly usage 97 percent: stop
+Tue 09:56 conveyor started
+Tue 09:56 Codex weekly usage 97 percent: stop
+Tue 09:58 lock held by Claude-driverv3: cleanup skipped
+Tue 09:58 conveyor started
+Tue 09:58 Codex weekly usage 97 percent: stop
+Tue 10:00 lock held by Claude-driverv3: cleanup skipped
+Tue 10:00 conveyor started
+Tue 10:00 Codex weekly usage 97 percent: stop
+Tue 10:02 lock held by Claude-driverv3: cleanup skipped
+Tue 10:02 conveyor started
+Tue 10:02 Codex weekly usage 97 percent: stop
+Tue 10:04 lock held by Claude-driverv3: cleanup skipped
+Tue 10:04 conveyor started
+Tue 10:04 Codex weekly usage 97 percent: stop
+Tue 10:06 lock held by Claude-driverv3: cleanup skipped
+Tue 10:06 conveyor started
+Tue 10:06 Codex weekly usage 97 percent: stop
+Tue 10:08 conveyor started
+Tue 10:09 Codex weekly usage 97 percent: stop
+Tue 10:11 conveyor started
+Tue 10:11 Codex weekly usage 97 percent: stop
+Tue 10:13 lock held by Claude-driverv3: cleanup skipped
+Tue 10:13 conveyor started
+Tue 10:13 Codex weekly usage 97 percent: stop
+Tue 10:15 lock held by Claude-driverv3: cleanup skipped
+Tue 10:15 conveyor started
+Tue 10:15 Codex weekly usage 97 percent: stop
+Tue 10:17 lock held by Claude-driverv3: cleanup skipped
+Tue 10:17 conveyor started
+Tue 10:17 Codex weekly usage 97 percent: stop
+Tue 10:19 lock held by Claude-driverv3: cleanup skipped
+Tue 10:19 conveyor started
+Tue 10:19 Codex weekly usage 97 percent: stop
+Tue 10:21 conveyor started
+Tue 10:21 Codex weekly usage 97 percent: stop
+Tue 10:23 conveyor started
+Tue 10:23 Codex weekly usage 97 percent: stop
+Tue 10:25 lock held by Claude-driverv3: cleanup skipped
+Tue 10:25 conveyor started
+Tue 10:25 Codex weekly usage 97 percent: stop
+Tue 10:27 lock held by Claude-driverv3: cleanup skipped
+Tue 10:27 conveyor started
+Tue 10:27 Codex weekly usage 97 percent: stop
+Tue 10:30 lock held by Claude-driverv3: cleanup skipped
+Tue 10:30 conveyor started
+Tue 10:30 Codex weekly usage 97 percent: stop
+Tue 10:32 lock held by Claude-driverv3: cleanup skipped
+Tue 10:32 conveyor started
+Tue 10:32 Codex weekly usage 97 percent: stop
+Tue 10:34 lock held by Claude-driverv3: cleanup skipped
+Tue 10:34 conveyor started
+Tue 10:34 Codex weekly usage 97 percent: stop
+Tue 10:36 conveyor started
+Tue 10:36 Codex weekly usage 97 percent: stop
+Tue 10:38 conveyor started
+Tue 10:38 Codex weekly usage 97 percent: stop
+Tue 10:40 lock held by Claude-driverv3: cleanup skipped
+Tue 10:40 conveyor started
+Tue 10:40 Codex weekly usage 97 percent: stop
+Tue 10:42 lock held by Claude-driverv3: cleanup skipped
+Tue 10:42 conveyor started
+Tue 10:42 Codex weekly usage 97 percent: stop
+Tue 10:44 lock held by Claude-driverv3: cleanup skipped
+Tue 10:44 conveyor started
+Tue 10:44 Codex weekly usage 97 percent: stop
+Tue 10:46 lock held by Claude-driverv3: cleanup skipped
+Tue 10:46 conveyor started
+Tue 10:46 Codex weekly usage 97 percent: stop
+Tue 10:49 conveyor started
+Tue 10:49 Codex weekly usage 97 percent: stop
+Tue 10:51 conveyor started
+Tue 10:51 Codex weekly usage 97 percent: stop
+Tue 10:53 conveyor started
+Tue 10:53 Codex weekly usage 97 percent: stop
+Tue 10:55 conveyor started
+Tue 10:55 Codex weekly usage 97 percent: stop
+Tue 10:57 conveyor started
+Tue 10:57 Codex weekly usage 97 percent: stop
+Tue 10:59 conveyor started
+Tue 10:59 Codex weekly usage 97 percent: stop
+Tue 11:01 lock held by Claude-driverv3: cleanup skipped
+Tue 11:01 conveyor started
+Tue 11:01 Codex weekly usage 97 percent: stop
+Tue 11:03 lock held by Claude-driverv3: cleanup skipped
+Tue 11:03 conveyor started
+Tue 11:03 Codex weekly usage 97 percent: stop
+Tue 11:06 lock held by Claude-driverv3: cleanup skipped
+Tue 11:06 conveyor started
+Tue 11:06 Codex weekly usage 97 percent: stop
+Tue 11:08 lock held by Claude-driverv3: cleanup skipped
+Tue 11:08 conveyor started
+Tue 11:08 Codex weekly usage 97 percent: stop
+Tue 11:10 lock held by Claude-driverv3: cleanup skipped
+Tue 11:10 conveyor started
+Tue 11:10 Codex weekly usage 97 percent: stop
+Tue 11:12 lock held by Claude-driverv3: cleanup skipped
+Tue 11:12 conveyor started
+Tue 11:12 Codex weekly usage 97 percent: stop
+Tue 11:14 lock held by Claude-driverv3: cleanup skipped
+Tue 11:14 conveyor started
+Tue 11:14 Codex weekly usage 97 percent: stop
+Tue 11:20 conveyor started
+Tue 11:20 Codex weekly usage 97 percent: stop
+Tue 11:23 lock held by Claude-driverv3: cleanup skipped
+Tue 11:23 conveyor started
+Tue 11:23 Codex weekly usage 97 percent: stop
+Tue 11:25 conveyor started
+Tue 11:25 Codex weekly usage 97 percent: stop
+Tue 11:27 conveyor started
+Tue 11:27 Codex weekly usage 97 percent: stop
+Tue 11:29 AutoCAD left running (pid 118516): killed
+Tue 11:29 conveyor started
+Tue 11:29 Codex weekly usage 97 percent: stop
+Tue 11:31 conveyor started
+Tue 11:31 Codex weekly usage 97 percent: stop
+Tue 11:33 lock held by Claude-driverv3: cleanup skipped
+Tue 11:33 conveyor started
+Tue 11:33 Codex weekly usage 97 percent: stop
+Tue 11:35 lock held by Claude-driverv3: cleanup skipped
+Tue 11:35 conveyor started
+Tue 11:35 Codex weekly usage 97 percent: stop
+Tue 11:37 lock held by Claude-driverv3: cleanup skipped
+Tue 11:37 conveyor started
+Tue 11:37 Codex weekly usage 97 percent: stop
+Tue 11:39 lock held by Claude-driverv3: cleanup skipped
+Tue 11:39 conveyor started
+Tue 11:39 Codex weekly usage 97 percent: stop
+Tue 11:42 conveyor started
+Tue 11:42 Codex weekly usage 97 percent: stop
+Tue 11:44 conveyor started
+Tue 11:44 Codex weekly usage 97 percent: stop
+Tue 11:46 lock held by Claude-driverv3: cleanup skipped
+Tue 11:46 conveyor started
+Tue 11:46 Codex weekly usage 97 percent: stop
+Tue 11:48 lock held by Claude-driverv3: cleanup skipped
+Tue 11:48 conveyor started
+Tue 11:48 Codex weekly usage 97 percent: stop
+Tue 11:50 lock held by Claude-driverv3: cleanup skipped
+Tue 11:50 conveyor started
+Tue 11:50 Codex weekly usage 97 percent: stop
+Tue 11:52 lock held by Claude-driverv3: cleanup skipped
+Tue 11:52 conveyor started
+Tue 11:52 Codex weekly usage 97 percent: stop
+Tue 11:54 conveyor started
+Tue 11:54 Codex weekly usage 97 percent: stop
+Tue 11:57 conveyor started
+Tue 11:57 Codex weekly usage 97 percent: stop
+Tue 11:59 lock held by Claude-driverv3: cleanup skipped
+Tue 11:59 conveyor started
+Tue 11:59 Codex weekly usage 97 percent: stop
+Tue 12:01 lock held by Claude-driverv3: cleanup skipped
+Tue 12:01 conveyor started
+Tue 12:01 Codex weekly usage 97 percent: stop
+Tue 12:03 lock held by Claude-driverv3: cleanup skipped
+Tue 12:03 conveyor started
+Tue 12:03 Codex weekly usage 97 percent: stop
+Tue 12:05 lock held by Claude-driverv3: cleanup skipped
+Tue 12:05 conveyor started
+Tue 12:05 Codex weekly usage 97 percent: stop
+Tue 12:07 lock held by Claude-driverv3: cleanup skipped
+Tue 12:07 conveyor started
+Tue 12:07 Codex weekly usage 97 percent: stop
+Tue 12:09 conveyor started
+Tue 12:09 Codex weekly usage 97 percent: stop
+Tue 12:11 lock held by Claude-driverv3: cleanup skipped
+Tue 12:11 conveyor started
+Tue 12:12 Codex weekly usage 97 percent: stop
+Tue 12:14 lock held by Claude-driverv3: cleanup skipped
+Tue 12:14 conveyor started
+Tue 12:14 Codex weekly usage 97 percent: stop
+Tue 12:16 lock held by Claude-driverv3: cleanup skipped
+Tue 12:16 conveyor started
+Tue 12:16 Codex weekly usage 97 percent: stop
+Tue 12:18 lock held by Claude-driverv3: cleanup skipped
+Tue 12:18 conveyor started
+Tue 12:18 Codex weekly usage 97 percent: stop
+Tue 12:20 conveyor started
+Tue 12:20 Codex weekly usage 97 percent: stop
+Tue 12:22 conveyor started
+Tue 12:22 Codex weekly usage 97 percent: stop
+Tue 12:24 lock held by Claude-driverv3: cleanup skipped
+Tue 12:24 conveyor started
+Tue 12:24 Codex weekly usage 97 percent: stop
+Tue 12:26 lock held by Claude-driverv3: cleanup skipped
+Tue 12:26 conveyor started
+Tue 12:26 Codex weekly usage 97 percent: stop
+Tue 12:29 lock held by Claude-driverv3: cleanup skipped
+Tue 12:29 conveyor started
+Tue 12:29 Codex weekly usage 97 percent: stop
+Tue 12:31 lock held by Claude-driverv3: cleanup skipped
+Tue 12:31 conveyor started
+Tue 12:31 Codex weekly usage 97 percent: stop
+Tue 12:33 conveyor started
+Tue 12:33 Codex weekly usage 97 percent: stop
+Tue 12:35 conveyor started
+Tue 12:35 Codex weekly usage 97 percent: stop
+Tue 12:37 lock held by Claude-driverv3: cleanup skipped
+Tue 12:37 conveyor started
+Tue 12:37 Codex weekly usage 97 percent: stop
+Tue 12:40 lock held by Claude-driverv3: cleanup skipped
+Tue 12:40 conveyor started
+Tue 12:40 Codex weekly usage 97 percent: stop
+Tue 12:42 lock held by Claude-driverv3: cleanup skipped
+Tue 12:42 conveyor started
+Tue 12:42 Codex weekly usage 97 percent: stop
+Tue 12:44 conveyor started
+Tue 12:44 Codex weekly usage 97 percent: stop
+Tue 12:46 conveyor started
+Tue 12:46 Codex weekly usage 97 percent: stop
+Tue 12:48 lock held by Claude-driverv3: cleanup skipped
+Tue 12:48 conveyor started
+Tue 12:48 Codex weekly usage 97 percent: stop
+Tue 12:50 lock held by Claude-driverv3: cleanup skipped
+Tue 12:50 conveyor started
+Tue 12:50 Codex weekly usage 97 percent: stop
+Tue 12:52 lock held by Claude-driverv3: cleanup skipped
+Tue 12:52 conveyor started
+Tue 12:52 Codex weekly usage 97 percent: stop
+Tue 12:54 lock held by Claude-driverv3: cleanup skipped
+Tue 12:54 conveyor started
+Tue 12:54 Codex weekly usage 97 percent: stop
+Tue 12:57 lock held by Claude-driverv3: cleanup skipped
+Tue 12:57 conveyor started
+Tue 12:57 Codex weekly usage 97 percent: stop
+Tue 12:59 lock held by Claude-driverv3: cleanup skipped
+Tue 12:59 conveyor started
+Tue 12:59 Codex weekly usage 97 percent: stop
+Tue 13:01 lock held by Claude-driverv3: cleanup skipped
+Tue 13:01 conveyor started
+Tue 13:01 Codex weekly usage 97 percent: stop
+Tue 13:03 lock held by Claude-driverv3: cleanup skipped
+Tue 13:03 conveyor started
+Tue 13:03 Codex weekly usage 97 percent: stop
+Tue 13:05 lock held by Claude-driverv3: cleanup skipped
+Tue 13:05 conveyor started
+Tue 13:05 Codex weekly usage 97 percent: stop
+Tue 13:07 lock held by Claude-driverv3: cleanup skipped
+Tue 13:07 conveyor started
+Tue 13:07 Codex weekly usage 97 percent: stop
+Tue 13:09 conveyor started
+Tue 13:09 Codex weekly usage 97 percent: stop
+Tue 13:12 conveyor started
+Tue 13:12 Codex weekly usage 97 percent: stop
+Tue 13:14 lock held by Claude-driverv3: cleanup skipped
+Tue 13:14 conveyor started
+Tue 13:14 Codex weekly usage 97 percent: stop
+Tue 13:16 lock held by Claude-driverv3: cleanup skipped
+Tue 13:16 conveyor started
+Tue 13:16 Codex weekly usage 97 percent: stop
+Tue 13:18 lock held by Claude-driverv3: cleanup skipped
+Tue 13:18 conveyor started
+Tue 13:18 Codex weekly usage 97 percent: stop
+Tue 13:20 lock held by Claude-driverv3: cleanup skipped
+Tue 13:20 conveyor started
+Tue 13:20 Codex weekly usage 97 percent: stop
+Tue 13:23 conveyor started
+Tue 13:23 Codex weekly usage 97 percent: stop
+Tue 13:25 lock held by Claude-driverv3: cleanup skipped
+Tue 13:25 conveyor started
+Tue 13:25 Codex weekly usage 97 percent: stop
+Tue 13:27 lock held by Claude-driverv3: cleanup skipped
+Tue 13:27 conveyor started
+Tue 13:27 Codex weekly usage 97 percent: stop
+Tue 13:29 lock held by Claude-driverv3: cleanup skipped
+Tue 13:29 conveyor started
+Tue 13:29 Codex weekly usage 97 percent: stop
+Tue 13:31 lock held by Claude-driverv3: cleanup skipped
+Tue 13:31 conveyor started
+Tue 13:31 Codex weekly usage 97 percent: stop
+Tue 13:33 conveyor started
+Tue 13:33 Codex weekly usage 97 percent: stop
+Tue 13:35 conveyor started
+Tue 13:35 Codex weekly usage 97 percent: stop
+Tue 13:37 lock held by Claude-driverv3: cleanup skipped
+Tue 13:37 conveyor started
+Tue 13:37 Codex weekly usage 97 percent: stop
+Tue 13:40 lock held by Claude-driverv3: cleanup skipped
+Tue 13:40 conveyor started
+Tue 13:40 Codex weekly usage 97 percent: stop
+Tue 13:42 lock held by Claude-driverv3: cleanup skipped
+Tue 13:42 conveyor started
+Tue 13:42 Codex weekly usage 97 percent: stop
+Tue 13:44 lock held by Claude-driverv3: cleanup skipped
+Tue 13:44 conveyor started
+Tue 13:44 Codex weekly usage 97 percent: stop
+Tue 13:46 conveyor started
+Tue 13:46 Codex weekly usage 97 percent: stop
+Tue 13:48 conveyor started
+Tue 13:48 Codex weekly usage 97 percent: stop
+Tue 13:50 conveyor started
+Tue 13:50 Codex weekly usage 97 percent: stop
+Tue 13:52 conveyor started
+Tue 13:52 Codex weekly usage 97 percent: stop
+Tue 13:54 conveyor started
+Tue 15:47 lock held by Claude-driverv3: cleanup skipped
+Tue 15:47 conveyor started
+Tue 19:38 STOP flag
+Tue 19:44 conveyor started
+Wed 01:52 no new queue line for 6 h: stop
+Wed 01:55 lock held by Claude-driverv3: cleanup skipped
+Wed 01:55 conveyor started
+Wed 08:02 no new queue line for 6 h: stop
+Wed 08:04 lock held by Claude-driverv3: cleanup skipped
+Wed 08:04 conveyor started
+Wed 12:46 STOP flag
+Wed 13:02 lock held by Claude-driverv3: cleanup skipped
+Wed 13:02 conveyor started
+Wed 18:29 starting verifyG1_c84 (look id G1)
+Wed 19:37 finished verifyG1_c84
+Wed 19:39 lock held by Claude-driverv3: cleanup skipped
+Wed 19:39 starting verifyG2_c84 (look id G2)
+Wed 20:02 finished verifyG2_c84
+Wed 20:03 lock held by Claude-driverv3: cleanup skipped
+Wed 20:03 starting verifyG1b_c84 (look id G1B)
+Wed 21:10 finished verifyG1b_c84
+Wed 21:11 lock held by Claude-driverv3: cleanup skipped
+Thu 00:17 STOP flag
+Thu 00:25 lock held by Claude-driverv3: cleanup skipped
+Thu 00:25 conveyor started
+Thu 06:38 no new queue line for 6 h: stop
+Thu 06:40 conveyor started
+Fri 06:19 conveyor started
+Fri 06:19 starting verifyG3_c84 (look id G3)
+Fri 06:22 finished verifyG3_c84
+Fri 06:23 starting verifyG7_c84 (look id G7)
+Fri 06:42 finished verifyG7_c84
+Fri 06:44 starting verifyG3_c84 (look id G3)
+Fri 06:57 finished verifyG3_c84
+Fri 06:58 starting verifyG4_c84 (look id G4)
+Fri 07:11 finished verifyG4_c84
+Fri 07:12 starting verifyG6_c84 (look id G6)
+Fri 07:25 finished verifyG6_c84
+Fri 07:26 starting verifyG4_c84 (look id G4)
+Fri 07:38 finished verifyG4_c84
+Fri 07:38 conveyor started
+Fri 07:38 starting verifyG5_c84 (look id G5)
+Fri 07:49 finished verifyG5_c84
+Fri 07:49 starting verifyH1_c85 (look id H1)
+Fri 07:54 finished verifyH1_c85
+Fri 07:54 starting verifyH2_c85 (look id H2)
+Fri 08:05 finished verifyH2_c85
+Fri 08:06 starting verifyH3_c85 (look id H3)
+Fri 08:18 finished verifyH3_c85
+Fri 08:19 starting verifyH4_c85 (look id H4)
+Fri 08:26 finished verifyH4_c85
+Fri 08:27 starting verifyH5_c85 (look id H5)
+Fri 08:35 finished verifyH5_c85
+Fri 08:35 starting verifyH6_c85 (look id H6)
+Fri 08:41 finished verifyH6_c85
+Fri 08:41 starting verifyA1_c86 (look id A1)
+Fri 08:52 finished verifyA1_c86
+Fri 08:53 starting verifyC6_c86 (look id C6)
+Fri 09:11 finished verifyC6_c86
+Fri 09:12 starting verifyC3_c86 (look id C3)
+Fri 09:28 finished verifyC3_c86
+Fri 09:28 starting verifyC1_c86 (look id C1)
+Fri 09:33 finished verifyC1_c86
+Fri 12:03 conveyor started
+Fri 12:10 starting verifyH2_c85 (look id H2)
+Fri 12:23 finished verifyH2_c85
+Fri 12:25 lock held by Claude-driverv3: cleanup skipped
+Fri 12:32 starting verifyH3_c85 (look id H3)
+Fri 12:45 finished verifyH3_c85
+Fri 12:46 lock held by Claude-driverv3: cleanup skipped
+Fri 12:54 starting verifyJ1_c86 (look id J1)
+Fri 13:06 finished verifyJ1_c86
+Fri 13:08 lock held by Claude-driverv3: cleanup skipped
+Fri 13:20 starting verifyJ2_c86 (look id J2)
+Fri 13:30 finished verifyJ2_c86
+Fri 13:31 lock held by Claude-driverv3: cleanup skipped
+Fri 13:33 starting verifyJ1_c86 (look id J1)
+Fri 13:44 finished verifyJ1_c86
+Fri 13:45 starting verifyJ3_c86 (look id J3)
+Fri 13:54 finished verifyJ3_c86
+Fri 13:55 lock held by Claude-driverv3: cleanup skipped
+Fri 13:58 starting verifyJ1_c86 (look id J1)
+Fri 14:05 finished verifyJ1_c86
+Fri 14:06 lock held by Claude-driverv3: cleanup skipped
+Fri 14:09 starting verifyJ4_c86 (look id J4)
+Fri 14:18 finished verifyJ4_c86
+Fri 14:34 conveyor started
+Fri 14:34 ROBOT_STOP_AT.txt says stop at 14:17: not launching a look
+Fri 14:35 STOP flag
+Fri 18:33 conveyor started
+Fri 18:33 starting verifyJ4_c86 (look id J4)
+Fri 18:45 finished verifyJ4_c86
+Fri 18:46 starting verifyJ5_c86 (look id J5)
+Fri 18:49 finished verifyJ5_c86
+Fri 18:49 starting verifyJ7_c86 (look id J7)
+Fri 18:57 finished verifyJ7_c86
+Fri 18:57 starting verifyJ4_c86 (look id J4)
+Fri 19:06 finished verifyJ4_c86
+Fri 19:06 starting verifyJ5_c86 (look id J5)
+Fri 19:17 finished verifyJ5_c86
+Fri 19:18 starting verifyJ4_c86 (look id J4)
+Fri 19:30 finished verifyJ4_c86
+Fri 19:30 starting verifyH1b_c85 (look id H1B)
+Fri 19:40 finished verifyH1b_c85
+Fri 19:41 starting verifyH5b_c85 (look id H5B)
+Fri 19:50 finished verifyH5b_c85
+Fri 19:51 starting verifyH6b_c85 (look id H6B)
+Fri 20:04 finished verifyH6b_c85
+Fri 20:04 starting verifyA1b_c86 (look id A1B)
+Fri 20:15 finished verifyA1b_c86
+Fri 20:16 AutoCAD still busy after 15 minutes: not launching a look yet
+Fri 20:18 starting verifyG6b_c84 (look id G6B)
+Fri 20:30 finished verifyG6b_c84
+Sat 00:37 conveyor started
+Sat 00:38 starting verifyJ6_c86 (look id J6)
+Sat 00:47 finished verifyJ6_c86
+Sat 00:48 starting verifyH4b_c85 (look id H4B)
+Sat 00:58 finished verifyH4b_c85
+Sat 01:01 starting verifyC1b_c86 (look id C1B)
+Sat 01:14 finished verifyC1b_c86
+Sat 05:29 conveyor started
+Sat 05:29 STOP flag
+Sat 05:31 conveyor started
+Sat 05:31 STOP flag
+Sat 07:06 conveyor started
+Sat 07:11 STOP flag
+Sat 19:22 conveyor started
+Sat 19:27 STOP flag
+Sun 05:03 lock held by Claude-driverv3: cleanup skipped
+Sun 05:03 conveyor started
+Sun 05:13 STOP flag
+Sun 13:06 lock held by Claude-driverv3: cleanup skipped
+Sun 13:06 conveyor started

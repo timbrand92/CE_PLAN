@@ -1,0 +1,6 @@
+== verifyH6b_c85 (usage 25.0% -> 25.0%): AUTOCAD CLOSED
+
+1. **DIFFERENT ÔÇö SURE:** One CE Tools tab with Manager, Version and Health. Civil and Home tabs absent. Exact timing remains unproven because captures repeated.
+2. **Run FAIL:** Structural changed its settings file during startup. Both hashes are recorded; Codex did not alter or restore it.
+3. **Finished:** Lock released. PASS 0, FAIL 0, DIFFERENT 1, BLOCKED 0, NOT TESTED 0. SURE 1, UNSURE 0.
+4. **[Full report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_H6b_20261030_1953.md>)**

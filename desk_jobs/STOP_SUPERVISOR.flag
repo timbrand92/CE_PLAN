@@ -1,0 +1,1 @@
+CE 02 13:21 Sun 1 Nov: holds the Codex SUPERVISOR lane while batchA2_codex.ps1 runs Codex batch A (CE 00 13:35 request). start_lanes honours STOP_SUPERVISOR.flag; launch_codex_retry.ps1 reads only STOP_CODEX.flag, so the batch itself is not stopped. batchA2_codex.ps1 puts STOP_CODEX.flag back at its end; delete this file then.

@@ -1,0 +1,22 @@
+**FOR TIM**
+
+Batch 8 is reviewed. I read the code of 11 pull requests (PRs). The report is at `C:\CE_PLAN\areas\REVIEW_PILE_B8_24OCT.md` and has been pushed.
+
+1. **Verdicts:**
+   1. **Merge:** 8.
+   2. **Merge after a small fix:** 3.
+   3. **Hold or reject:** none.
+   4. **Skipped:** #1578, which already had an Opus review in batch 1.
+2. **Biggest fault, #1584 (Sheets save):** it fixes the Save button in the old Sheets window, not the window CESHEETS opens. There, changing one sheet title and clicking Save still marks the list up to date, so a colleague's new layout stays out of issuing. The fix is one line.
+3. **#1579 (CEMARKUPUNDO):** the fix works. It now refuses to undo drawing A's markup while you are in drawing B. Only its notes overstate when the undo happens, so they need rewording.
+4. **#1587 and #1581 (CSREOBAR):** they collide in one file. Keep both changes.
+5. **Safe to merge today:**
+   1. **Structural (S-44):** #1574, #1575, #1577, #1582, #1585, #1581.
+   2. **Civil (C-64):** #1580, #1583.
+6. **Not done:** nothing was built or tested, and nothing was opened in AutoCAD. About 35 builds from other jobs and an AutoCAD session were already running.
+
+---
+
+No PR touches the installer, the signed-update files or CE_SHARED. None adds a bug-fix switch or a hard block. None overlaps C-63 or S-43 except the usual `REGRESSION_LOG.md` clash. I removed my scratch copy `C:\ce-tr\b8.git`, and `git status` shows nothing waiting to push.
+
+**Summary:** 11 PRs reviewed and 1 skipped (#1578). Verdicts are 8 MERGE, 3 MERGE-WITH-FIXES, 0 HOLD and 0 REJECT. Main faults: #1584 misses the Save button in the window CESHEETS opens, #1579's notes overstate the undo, and #1587 clashes with #1581. Safe today: Structural #1574, #1575, #1577, #1582, #1585, #1581 for S-44, and Civil #1580, #1583 for C-64. Nothing was built, tested or opened in AutoCAD.

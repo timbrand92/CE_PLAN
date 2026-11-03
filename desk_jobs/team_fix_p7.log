@@ -1,0 +1,10 @@
+Both Civil fixes are built and open as draft PRs against `claude/rel-20261102a`: **#1889** for BUG-1237 and **#1890** for BUG-1071. Neither has been run in AutoCAD, and no bug is marked fixed. Both switches ship ON.
+
+- **BUG-1237 (CDRENUMBER):** when no pipe leaves any pit to open ground, it now says to draw the last pipe from the downstream pit out to an open end, then run CDRENUMBER again. It still stops and renumbers nothing. Switch: `linking.renumberNoOutletSaysWhatToDraw`. Files: `PitRenumberNetworkBuilder.cs`, `PitRenumberCommand.cs`, new `PitRenumberOutletWordsRule.cs`.
+- **BUG-1071 (CDCHECKIGNORE and CDRULEBOOK):** when the drawing's CE data is held as unreadable, both now print "Not saved" with no Undo promise. All six CDRULEBOOK saves are covered. Switch: `linking.saveSkippedSaysNotSaved`. Files: `CheckIgnoreCommand.cs`, `RulebookCommand.cs`, two `ProjectDataService` writers, new `SaveSkippedWordsRule.cs`.
+
+**Tests**
+- **Full Civil suite on net10:** 21,540 passed and 2 failed on #1889, 21,544 passed and 3 failed on #1890, and the net48 compile has 0 errors. The 2 shared failures are IL-shape tests that fail the same way on the untouched base. The third failure on #1890, a PDF page test, passed when re-run alone.
+- **Settings files:** the listings before and after show no real settings file changed.
+
+BUILD_REGISTER has a single entry, B-067, for both bugs, so both PR titles start "B-067". The report with the robot case names is `C:\CE_PLAN\areas\BUGFIX_p7_REPORT_30OCT.md`, pushed to `C:\CE_PLAN` main.

@@ -1,0 +1,8 @@
+BUG-1061, BUG-1062 and BUG-1063 are fixed in one draft PR (#1762, head `f5cd0214`). BUG-1060 and BUG-1064 are skipped. Nothing was run in AutoCAD, and no bug is marked FIXED.
+
+1. **BUG-1061, BUG-1062 and BUG-1063:** the RCBEAM warning and preview now read the same bar-room rule as the section writer. The drawing itself is unchanged.
+2. **Tests:** 17 new cases pass. The Structural net10 chunks total over 5,000 passed, with the Sbeam, Window and Sheets groups left out. The net48 compile has 0 errors.
+3. **BUG-1060:** needs Tim's word on the edition. Options are in the report.
+4. **BUG-1064:** protected Installer code. Options are in the report.
+
+The "Real-AutoCAD check" steps are in the PR and the report. The report is `C:\CE_PLAN\areas\release-v3-colleagues-FB_TEAM_BATCH10_REPORT.md`, pushed with no 'ahead'.

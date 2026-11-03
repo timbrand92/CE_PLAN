@@ -1,0 +1,8 @@
+PR #1863 compiles on net10 and its 72 focused tests pass. The full Civil suite and the net48 compile did not run, because no build slot came free in the 3-hour wait.
+
+- **Built (net10):** 0 errors, Release.
+- **Focused tests:** 72 total, 72 passed, 0 failed. That includes `Bug1088SizerGradeLadderTests`, the C75 switch-default tests and the GB-01 slice 1 falls tests.
+- **Not run:** the full Civil suite, the net48 compile, and anything in AutoCAD. The Debug-only `SourceAtomicCoordinatorDependencyTests` failures were not seen and not touched.
+- **No code changes:** the branch `fb/bug1088-sizer-grade-ladder` is still at `30990e61`, and the switch `designStandards.sizerStepsUpBeforeSteepGrade` still defaults ON.
+- **PR #1863:** still a draft; title and body now say "built net10 + focused tests only".
+- **Report:** a BUILD AND TEST section is appended to `release-v3-colleagues-BUG1088_FIX_REPORT.md` and pushed. Proof in AutoCAD is the robot case `N88_sizer_grade` with the switch-off control `C88`.

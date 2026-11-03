@@ -1,0 +1,10 @@
+== cx_rv09 (usage 77.0% -> 85.0%): 1. **DONE.** [Findings report](C:/CE_PLAN/areas/CODEX_PR_REVIEW_GROUP09_24OCT.md) committed and pushed.
+
+2. **11 PRs reviewed:** 2 MERGE, 2 MERGE-WITH-FIXES, 5 HOLD, 2 REJECT.
+
+3. **One new HIGH:** #1721 still allows Refresh Blocks to change locked pit symbols. Verified by reading; deterministic AutoCAD test provided.
+
+---
+
+1. **Commit:** `af910da6`. Only the findings file committed; leak scan passed.
+2. **Execution:** no builds, tests, AutoCAD, installations or sub-agents.

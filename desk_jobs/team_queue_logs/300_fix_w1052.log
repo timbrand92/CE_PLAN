@@ -1,0 +1,7 @@
+I did not open the PR for BUG-1052 (B-171). The isolation check turned up changed files in your real AutoCAD data folders, so I stopped as the rules say.
+
+- **Fix:** the CDAGI/CDPERIMETER grade check now converts the drawn length to real metres from the drawing's units. A 10 m drain from RL 10.001 to 10.000 in a metre drawing now reads 1:10000, below the office minimum. The switch is `surface.agiGradeUsesDrawingUnits`, ON by default.
+- **Where it is:** committed locally as `6b26e852` on branch `w1052-bug1052-agi-units`. It changes `AgiCommand.cs`, `UserSettings.cs`, `REGRESSION_LOG.md` and a new test file; CE_SHARED is untouched.
+- **Tests:** 54 of 54 pass on net10, and net48 compiles clean. The net48 test run shows 12 `Point2d` failures; the existing `TotalRunLength` test fails the same way. Nobody has opened it in AutoCAD.
+- **Stop reason:** the before and after listings of your real data folders differ. Most likely another job's AutoCAD session wrote them, but I can't prove that.
+- **Report:** pushed to `C:\CE_PLAN\areas\BUGFIX_w1052_REPORT_03NOV.md`.

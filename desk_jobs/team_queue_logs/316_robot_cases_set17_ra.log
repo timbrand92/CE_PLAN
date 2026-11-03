@@ -1,0 +1,1 @@
+`C:\CE_PLAN\areas\ROBOT_CASE_DRAFTS_SET17_RAINGARDEN_TIDY_OLDER_02NOV.md` — verdict: 3 robot cases with twins drafted (W1847, W1759, W1813), 2 Codex-only looks (#1815, #1753), and #1845/#1870 skipped because N90 and N90x already cover them. Nothing was run or built. #1815 and #1813 are not in any release branch, only in the open PRs, so W1813 fails until #1813 is installed.

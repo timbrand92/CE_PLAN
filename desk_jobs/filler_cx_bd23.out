@@ -1,0 +1,5 @@
+== cx_bd23 (usage 51.0% -> 74.0%): 1. **BUG-1102 — DONE.** [Draft PR #1810](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1810). Built and unit-tested; AutoCAD not run. AboveGround remains default. CDDESIGN reports the unrecorded share. Settings row omitted at 689 px. [Report](C:/CE_PLAN/areas/CODEX_BUILD_BD23_26OCT.md).
+
+---
+
+2. **Handoff:** `cx6/bug-1102-bd23`, head `46fc6968540092648407e10fbe9b0f385b08c981`. Red: **2 failed, 3 passed**. Green: **12 passed**. Full CLI before: **20,539 — 20,505 passed/2 failed/32 skipped**; after: **20,551 — 20,517 passed/2 failed/32 skipped**. Same failing names. Three builds: **0 errors**. Saved and pushed; worktree removed.

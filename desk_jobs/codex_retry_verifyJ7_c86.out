@@ -1,0 +1,6 @@
+== verifyJ7_c86 (usage 23.0% -> 24.0%): AUTOCAD STILL RUNNING
+
+1. **J7 blocked:** Office-list check PASS; Dashboard check BLOCKED by my driver invocation fault. Both results SURE; no feature failure established.
+2. **Unchanged:** Administrator list and all four settings hashes match. Nothing saved; no Yes answered.
+3. **Close incomplete:** AutoCAD remained after Close attempts. Lock retained; the session needs closing before another run.
+4. **Report:** [J7 verification](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_J7_20261030_1851.md>).

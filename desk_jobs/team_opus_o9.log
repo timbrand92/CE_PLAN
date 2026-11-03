@@ -1,0 +1,38 @@
+## FOR TIM
+
+1. **Answer:** the plan is written: `C:\CE_PLAN\areas\C77B_SIZER_STACK_PLAN_30OCT.md`. Nothing was built, tested or installed. This job only reads the code and writes a plan.
+2. **The two pipe-sizer fixes don't contradict each other:**
+   1. **BUG-1088** changes how CE picks a pipe size. It uses the flattest fall each size is allowed, and goes up a size before making a pipe steeper. Example: 40 L/s comes out as DN225 at 1 in 100, not DN100 at 1 in 3.
+   2. **BUG-1091** makes Civil Design and the network redesign use your large-pipe minimum fall. Example: a 450 carrying 30 L/s gets 1 in 200, not about 1 in 890.
+   3. **Together:** once you've typed a large-pipe fall, a big flow goes up a size instead of making the 450 steeper.
+3. **Why they clashed with C-77:** both edited the same two places as other changes did — a list of settings that CDRULES ignores, and the top of the change log. Nothing in the engineering clashes. I tried "keep both sides" on a throwaway copy, and it matched each fix line for line.
+4. **Order:** BUG-1088 first, then BUG-1091. BUG-1088 has already passed its own tests. BUG-1091 has never been built, so if something breaks we'll know it was that one.
+5. **As shipped (large-pipe row blank), BUG-1091 changes nothing.** It only matters once someone types a figure in that row.
+6. **To look at later, not a fault:** when you approved BUG-1088 you said "about 1 in 200". It gives 1 in 100, because your guidebook ruling made 1 in 100 the flattest fall for every ordinary size. If you want 1 in 200 for connection pipes, that's a Settings change, not a code change.
+7. **My mistake:** about five minutes in, the C-77 branch moved to a newer version. I had to redo my trial merges on it. No harm to the work. But it means the other C-77b plan (the council fixes, written this morning) has check numbers that no longer match. Its step-by-step instructions still work.
+8. **Nothing for you to decide now.**
+
+---
+
+**Technical detail**
+
+1. **No PR (planning job).** The report is pushed to CE_PLAN as commit `2925dee8` and is on origin. CE_PLAN shows "ahead 1" now, but that's another session's later commit `8f65d2b0` (C-78), so I didn't push it.
+2. **Heads:**
+   - #1863 is at `30990e61` and #1868 at `c88cd7dc`. Both branch from `78fda55b`.
+   - The train moved from `c87249c6` to `b40fa2a4` while I worked. I redid every trial merge on `b40fa2a4`.
+3. **Conflicts:**
+   - #1863: one block each in `RulebookValues.cs` and `REGRESSION_LOG.md`.
+   - #1868: one block each in `UserSettings.cs` and `REGRESSION_LOG.md`.
+   - Every block is "keep both". The report gives the final text for each. Trap: the shared `ShouldSerialize` line has to be written twice.
+4. **Check that the trial merges were exact:**
+   - Each merge's numstat equals the PR's own numstat.
+   - Trees on `b40fa2a4`: `92a6881b…` after #1863, `d30a2bdd…` after #1868.
+5. **One code path:** CDDESIGN, auto-design, CDRUNSOLVE and the redesign all go through `CreateDefault()` → `GradeLadder` → `EffectiveMinGradeLadder()`. Inside the sizer, `LookupMinGrade` feeds both the existing minimum-grade check and the new step-up pass.
+6. **Risks:**
+   - #1868 has never compiled.
+   - #1863's full test suite has never run.
+   - #1868 also reaches the CD grade suggestion and other screens that use `CreateDefault()`, but only when the large-pipe row is filled.
+   - BUG-1088's test file doesn't isolate its settings from other tests.
+7. **Robot case:** `N90_redesign_450_fall` with switch-off control `C90`.
+
+**Summary:** No PR; a read-only plan in `C:\CE_PLAN\areas\C77B_SIZER_STACK_PLAN_30OCT.md`. It merges #1863 then #1868 onto `claude/rel-20261030b` (from `b40fa2a4`), resolving four "keep both" blocks in `RulebookValues.cs`, `UserSettings.cs` and `REGRESSION_LOG.md`. It adds `C77bSizerStackTests.cs` for the 450 at 30 L/s example (1 in 200). Switches: `designStandards.sizerStepsUpBeforeSteepGrade` and `pipe.largePipeRedesignReadsMinFall`, both ON. The throwaway checkout `C:\ce-fx\o9` is removed.

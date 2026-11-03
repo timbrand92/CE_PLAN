@@ -1,0 +1,6 @@
+BUG-879 has a draft PR, #2002 (title starts B-183). It is built and unit-tested only, and nobody has opened it in AutoCAD.
+
+- **Switch:** `linking.ceMovesMarkHandPlaced`, on by default. With it on and "hand-placed labels stay" on, CE's own Slide, Move away, Flip side, CDANNOTATIONEDIT and the pit cover-text flip grip mark the label as placed by hand.
+- **Tests:** 21 new tests pass, plus 162 settings and tidy tests on net10. The net48 compile has 0 errors.
+- **Not covered:** a pit cover text moved with AutoCAD's own MOVE (BUG-1252, on hold).
+- **Report and cleanup:** the report is `C:\CE_PLAN\areas\BUGFIX_w879_REPORT_03NOV.md`. C: free space went from 67.8 GB to 67.6 GB after cleanup.

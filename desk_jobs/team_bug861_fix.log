@@ -1,0 +1,8 @@
+I couldn't find which step loses REDO, so this is a safe deferral plus a diagnostic, not a proven fix. Draft PR 1779 is open against `claude/rel-20261025o`.
+
+1. **Cause:** the code on that first click does only reads, and CE's log shows no write. I can't tell which step the robot is hitting.
+2. **Fix:** after a U, the Inspector reads nothing until the next command ends, then shows the pick. A switch (ON) turns it off, and CE logs `[REDO]` lines for the deferral and the first pick.
+3. **Tests:** the new tests pass; 3 of 4 fail on the base. The Debug full suite has 20,215 passed and 2 failed, not 0. Both are code-shape checks in untouched code, and both pass in Release.
+4. **Status:** built and unit-tested only. Not tested in AutoCAD, so it isn't marked FIXED.
+
+Report: `C:\CE_PLAN\areas\release-v3-colleagues-BUG861_FIX_REPORT.md`, pushed.

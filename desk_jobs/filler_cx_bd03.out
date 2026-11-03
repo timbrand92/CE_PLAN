@@ -1,0 +1,7 @@
+== cx_bd03 (usage 52.0% -> 55.0%): 1. **DONE.** Nine regression tests added. [Draft PR #1703](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1703).
+2. **Checks.** Six builds: zero errors. Manager: 940 passed, 1 skipped. Civil: 19,526 passed, 22 console-skipped. Zero failed. Civil’s cleanup warning and skipped-count discrepancy are documented.
+3. **Saved and pushed.** [Report](C:/CE_PLAN/areas/CODEX_TESTS_BD03_23OCT.md). No product changes, AutoCAD run or deployment.
+
+---
+
+1. **Handoff.** Branch `cx3/tests-bd03`, tip `4cb41a0b91d248408d8639d643aa501fb194f529`.

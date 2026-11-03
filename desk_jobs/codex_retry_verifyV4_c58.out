@@ -1,0 +1,18 @@
+== verifyV4_c58 (usage 15.0% -> 16.0%): dex-accepted.
+
+2. **Report saved.** [V4 report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_V4_20261022_0634.md>) records the observations, deviations and remaining checks.
+
+3. **Cleanup complete.** AutoCAD is closed, settings restored exactly, guard empty and lock released. Installed versions: Civil **3.0.68**, Manager **1.1.68**, Structural **1.0.119**.
+
+---
+
+4. **Settings SHA-256 checks.** Both passes restored their original bytes:
+
+   A1 = C1 = A2 = C2:  
+   `ACD64E79A33BE9C152149FF2145A3CD2C29CABE11245F211183FD5C7DE783140`
+
+   B1:  
+   `4D32B55B90F64B4BCC9E6647CDBF78CE781B2BA5523AAF30161FCAFC8A2BA846`
+
+   B2:  
+   `9F83BDBAB479AB696C1A335527067ED3DA5E87DC9DFAF38B90F6A0BFC7C9CA18`

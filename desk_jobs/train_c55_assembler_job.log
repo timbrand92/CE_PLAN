@@ -1,0 +1,13 @@
+Train C-55 is assembled and pushed as `claude/rel-20261020i` at `8e76e1d9`, but one of Tim's Structural settings files changed during my runs and I couldn't find the cause.
+
+- **Merged:** only #1486 (BUG-856), live head `e27b4971`. It has no Opus review entry, so the finalizer must review it. I resolved a `REGRESSION_LOG.md` conflict by keeping every entry from both sides.
+- **Build and tests:**
+  - Solution Release build: 0 errors.
+  - Civil net10: only the known Glen Eira red.
+  - Manager net10: 832 of 832.
+  - Civil net48 focused: 2 reds, `SamePlanBreak_DoesNotAskForTheMainToBeTidied` and `XcivilImport_DoesNotAskForTheMainToBeTidied`, which also fail on the base `6644752b`.
+- **Settings file:** `CE_STRUC_SUITE\CS_Settings.json` changed from `24d8e5f7` to `f68eeb5e` at 18:24:30, inside my net48 test window. I ran no Structural tests or AutoCAD and have no copy of the old file. The other three settings files are unchanged.
+- **Shared/ and Manager:** #1486 touches neither.
+- **Cleanup:** report pushed to `C:\CE_PLAN`, worktrees removed.
+
+The report is `C:\CE_PLAN\areas\release-v3-colleagues-TRAIN_C55_ASSEMBLY_REPORT_2026-10-20.md`.

@@ -1,0 +1,6 @@
+**GO at `1dec83dedb60267c4fbc238b5ba30d69ca3b14b5`** on `claude/rel-20261026z`. The report and the review-lane log entries 1704 to 1711 are pushed to CE_PLAN (`10dac3ba`).
+
+1. **My mistake first:** a test I wrote myself was wrong. It flagged CE reading whether a layer is locked as if CE were unlocking it. The first full run had 1 failure, and it was in my test, not the plugin. I fixed the test, and it cost about 30 minutes of rebuild and re-run.
+2. **The three fixes:** ROTATE/SCALE Copy (#1831) keep it, with notes. The Edit Pipe arrow (#1832) keep it. Floor waste at an opening (#1833) keep it, with a note. Nothing draws on a locked layer, Xref or REFEDIT, and nothing new can wipe out REDO.
+3. **Tests:** Civil net10 ran 20,806 with 0 failed. Manager ran 1,041 with 0 failed. The net48 failures are the 84 already known; all 84 come from the test-only AutoCAD library. Arch passed 14 of 14 and the Manager guard passed at 75 files.
+4. **Still open:** nothing is FIXED and nothing has been opened in AutoCAD. Whether a floor waste may sit on an inspection opening is still your call.

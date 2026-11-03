@@ -1,0 +1,28 @@
+**FOR TIM**
+
+1. **Answer: GO.** Train C-79b1 is safe to install as Civil 3.0.90. The final version is `bab2dbf81b1a034c2a907ab441756f18a8f402d1`. Manager stays at 1.1.89 because nothing in it changed.
+2. **Re-test: only the parts this train touches.** That means the start-up check plus one quick check for each shared part: move a pit and undo, close and reopen a job, copy a downpipe, click a pit with the Inspector open, run Edit Pipe, and run a redesign Apply.
+3. **Mistake found and fixed:** when the earlier job combined the 18 fixes, it left 17 scraps of merge text in the change log. They had no effect on the plugin. I removed them, and a new test now catches this.
+4. **One decision for you, and it blocks nothing:** the large-pipe fix does nothing until you type a minimum fall for pipes of 450 mm and bigger. I recommend 1 in 200.
+5. **Nothing was opened in AutoCAD, and every bug stays open.**
+
+---
+
+**Technical detail**
+
+- **The 18 fixes:** all kept. 8 are kept as they are and 10 are kept with a note in the report. Each fix landed exactly as written.
+- **Undo/Redo safety:** I re-checked the two renamed lines in the Undo/Redo safety list. Both are the same code under a new name, so both stand.
+- **Protected record code:** nothing writes over an unreadable record, and nothing writes to a locked layer, an Xref or a block being edited in place.
+- **Pit-label double-click:** ships off, as you ruled on 22 Oct. It also needs the main double-click switch, which is still off.
+- **The C-79a base moved during the job:** it gained only its expected version commit, which I merged in.
+
+**Tests on the final version:**
+- **Civil, newer AutoCAD lane:** all 22,199 passed or skipped, 0 failed.
+- **Civil, older AutoCAD lane (focused run):** 120 failed, the same failures by name as C-79a, so nothing new.
+- **Manager:** 1,150, 0 failed.
+- **Old Structural copy:** the same 7 failures as before.
+- **Tim's-files guards:** the test that checks your real settings file passed on its own once the robot had finished (05:22).
+
+The full report is `C:\CE_PLAN\areas\release-v3-colleagues-TRAIN_C79B1_FINALIZER_REPORT_2026-11-01.md`, with review-lane entries 1738 to 1744. My working folders are still in place because C: has 53.5 GB free.
+
+**Summary:** GO at `bab2dbf81b1a034c2a907ab441756f18a8f402d1`, class AREA. Changes: one tests commit, which also removed 17 merge scraps from the change log, plus the C-79a version merge. Tests: Civil newer lane 22,199 with 0 failed; older lane only the known 120; Manager 1,150 with 0 failed; Structural the same 7 old failures. Held: the large-pipe figure waits for you, and the pit-label double-click ships off.

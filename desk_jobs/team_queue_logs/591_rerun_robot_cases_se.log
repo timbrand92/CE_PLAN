@@ -1,0 +1,8 @@
+`C:\CE_PLAN\areas\ROBOT_CASE_DRAFTS_SET02_COVER_AND_CHECKS_02NOV.md` — verdict: a draft already existed from this morning's pass, and I kept it with two small corrections. Nothing was built, run or tested.
+
+1. **Cases drafted:** two robot cases with broken twins. W1949 is the outlet pipe top sitting above the inlet pipe top at a pit. W1890 is CDRULEBOOK saying "Not saved". Each twin turns the PR's own switch off before launch.
+2. **Codex-only:** #1882, #1897 with #1920, #1962 and #1889, with exact Codex steps in the file.
+3. **Needs an Opus review before it runs:** W1890, because it uses one Undo and a deliberately damaged CE record.
+4. **Corrections:** the earlier pass said no carpark entries existed for these bugs, which was wrong. All six are in `BUG_CARPARK.md` and open. I re-read the PR diffs for #1949, #1889 and #1962, and the switch names, defaults and wording the cases use match. I changed no case text.
+5. **No existing cases:** none of the seven PRs has a case, draft or ledger line.
+6. **Not proven:** every printed line marked DERIVED comes from the PR text, not from a run. W1949 may also fail because CDRULES prints only 20 rows.

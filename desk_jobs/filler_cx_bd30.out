@@ -1,0 +1,9 @@
+== cx_bd30 (usage 65.0% -> 88.0%): 1. **BUG-1044 — DONE.** Draft [PR #1816](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1816). Branch head: `d38ca6ed75c9fe33682444fc06c678083d48e95c`.
+
+2. **Result:** P2/P3 remain placeable; P1 is warned about and omitted. Settings row omitted because it exceeded the height limit.
+
+3. **Checks:** Red: 2 failed, 1 passed. Green: 15 passed. Three builds: 0 errors.
+
+4. **Full suite:** Before: 20,539 total, 20,497 passed, 10 failed, 32 skipped. After: 20,554 total, 20,514 passed, 8 failed, 32 skipped. No new failures.
+
+5. **Saved and pushed:** [Report](C:/CE_PLAN/areas/CODEX_BUILD_BD30_26OCT.md). Own worktree removed. AutoCAD not run; nothing installed.

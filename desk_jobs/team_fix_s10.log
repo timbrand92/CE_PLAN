@@ -1,0 +1,8 @@
+**No PR opened for S-10: I skipped both items, so no code changed and no tests ran.** BUG-630 and BUG-631 are both still faulty on Structural 1.0.125 (`origin/claude/rel-20261026s`, head 204dfad2).
+
+- **BUG-630:** SM still asks for the points and direction first. It then draws the line and both bubbles straight away, with no final preview. A fix needs a new preview step that can't be proved without AutoCAD. It also needs a decision on whether the bubble comes from the approved SECT MARK block or stays as drawn geometry.
+- **BUG-631:** nothing links the cut line to the bubbles and labels, so MOVE only takes what you pick. A fix needs a new link between the pieces, and that needs a reviewed design and an AutoCAD run.
+
+I couldn't check for clashing open PRs because `gh` isn't available in this shell, so that check isn't done. The settings-file listings in the report show nothing of mine changed.
+
+The report is `C:\CE_PLAN\areas\BUGFIX_s10_REPORT_31OCT.md`. It is pushed and `git status` shows nothing ahead. It holds the FOR TIM block and the two questions for CE 04. The questions are the bubble source and approving the SM card (ST3-9/10).

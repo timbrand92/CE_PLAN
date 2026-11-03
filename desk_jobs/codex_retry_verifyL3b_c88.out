@@ -1,0 +1,12 @@
+== verifyL3b_c88 (usage 56.0% -> 56.0%): AUTOCAD CLOSED
+
+1. **Not completed.** My driver-call helper mishandled switches during setup. All three looks are **NOT TESTED**; no fixes accepted. PASS 0, FAIL 0, DIFFERENT 0, BLOCKED 0.
+2. **Clean end verified.** Drawing discarded, all four settings hashes unchanged, Structural still 1.0.125, lock released. No missing fixture established.
+3. **Report.** [L3b verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_L3b_20261102_2131.md>). Includes the exact error and recovery.
+== verifyL3b_c88 (usage 59.0% -> 59.0%): AUTOCAD CLOSED
+
+1. **No fixes accepted:** Dots blocked by driver BUSY; drawn Z unreadable; column wording correct, but key-9 delivery uncertain. Results: 2 BLOCKED, 1 NOT TESTED; SURE 1, UNSURE 2.
+
+2. **Run FAIL:** Structural changed its settings during SBEAM placement. Hash D604CE689671 ÔåÆ 94BD6382E9D5; full hashes recorded. Other settings unchanged. Drawing discarded; lock released. Structural stayed 1.0.125.
+
+3. **Report:** [L3b verification](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_L3b_20261103_0712.md>). Includes my delayed-alarm handling error and evidence limitations. No missing fixture established.

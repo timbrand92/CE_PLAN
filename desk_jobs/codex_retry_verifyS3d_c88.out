@@ -1,0 +1,11 @@
+== verifyS3d_c88 (usage 55.0% -> 56.0%): AUTOCAD CLOSED
+
+1. **Blocked:** S3-01 stopped because the second pit remained out of view. My first wheel movement landed over command history. No PASS claimed.
+2. **Counts:** 1 BLOCKED, 4 NOT TESTED under the updated run list. Settings unchanged; drawing discarded; lock released.
+3. **Report:** [S3 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_S3d_20261102_2056.md>).
+== verifyS3d_c88 (usage 56.0% -> 57.0%): AUTOCAD CLOSED
+
+1. **BLOCKED:** S3-01 could not reach the second pipe. My first two wheel notches landed over command history; after four total, the second pit remained off-screen.
+2. **Counts:** 0 PASS, 0 FAIL, 1 BLOCKED, 4 NOT TESTED per the S3d run list. SURE 5; UNSURE 0.
+3. **Clean end:** Nothing saved. All four settings hashes unchanged. Lock released. Civil/Manager 3.0.89/1.1.89; Structural 1.0.125.
+4. **Report:** [S3d verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_S3d_20261103_0612.md>).

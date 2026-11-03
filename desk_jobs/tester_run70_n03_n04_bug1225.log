@@ -1,0 +1,17 @@
+BUG-1225 is real on Civil 3.0.83. DP and OF were refused in 8 of 8 sessions where the first drawing had already placed something. N03 and N04 are ready for the independent reviewer. The report is pushed to `C:\CE_PLAN`, and the status shows no ahead.
+
+- **BUG-1225 steps:**
+  1. Place DP, or OF and FO, in the first drawing.
+  2. Close it without saving and reopen a fresh copy in the same AutoCAD.
+  3. Run DP or OF again.
+  4. It is refused with "The source landing could not be refreshed."
+- **What narrows it:** reopening alone did not trigger it (DP placed in 2 of 2 sessions where the first drawing placed nothing). A 60-second wait after the reopen did not help.
+- **Not tested:** the runner's reopen-copy was used, not a drafter's own close and reopen, so someone should try the steps by hand once.
+- **N03:** it now checks the full tags (OF1, FO1) and both plan labels. It passed in 2 separate sessions. N03_BROKEN, run alone, failed on the missing FO line while OF placed normally, which is the intended red.
+- **N04:** it passed in 2 separate sessions. N04_BROKEN, run alone, failed on the object count, which is the intended red.
+- **New cases:**
+  - N13 and N14 are the guards for BUG-1225, each with a first-half helper case (N13a, N14a).
+  - N13b, N13c and N13d are the narrowing cases.
+- **Housekeeping:** no AutoCAD or background process was left running.
+
+Report: `C:\CE_PLAN\areas\release-v3-colleagues-ROBOT_N03_N04_BUG1225_28OCT.md`

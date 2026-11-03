@@ -1,0 +1,23 @@
+**FOR TIM**
+
+1. **Verdict: GO.** Train C-57 (Civil + Manager) ends at `a76f8caf22ab0160883715b6f8921ac6a893993a`.
+2. **What I changed:** one commit that only touches tests; no plugin code changed. Moving the version command into Manager made three command checks fail, because this branch still holds an old copy of Structural that has the command too. I updated the checks to match. They will flag themselves for removal once the Structural change reaches this branch.
+3. **Manager must ship: yes.** Your PC already has the new Structural (S-39), so the Manager update will not be refused. A colleague's PC with an older Structural would refuse it, so Structural goes on first.
+4. **Tests:**
+   - **Whole solution:** builds with 0 errors.
+   - **Civil:** 19,020 of 19,040 pass, 19 skipped, 1 fail. The fail is the known Glen Eira test.
+   - **Manager:** 837 of 837 pass, plus 65 of 65 command checks.
+   - **Civil (older AutoCAD build), focused set:** 198 of 198 pass.
+   - **Manager release package:** builds complete, 75 files as expected.
+5. **What you'll see in AutoCAD:**
+   - **Version:** CE Tools > Version opens again. It shows your Civil, Structural and Manager versions, or "Not loaded" for a suite that isn't there.
+   - **Right-click on a pit:** "Select this run" looks the same as before.
+6. **Don't mark these FIXED:** BUG-416 and BUG-852. Nobody has opened either in AutoCAD yet.
+7. **Main risk:** this right-click fix probably does not cure the "Nothing to redo" problem Codex found. That test had one drawing open, and the save this fix removes only happens with two drawings open. Codex's next check (in AutoCAD: LINE, U, right-click, Escape, REDO) will show whether AutoCAD or CE is breaking REDO.
+8. **Your CD settings file changed during my run.** It was put back to an older saved copy (dated 4 Oct). A robot test had AutoCAD open at the time and is the likely cause, but I haven't proven it.
+
+Report: `C:\CE_PLAN\areas\release-v3-colleagues-TRAIN_C57_FINALIZER_REPORT_2026-10-20.md`
+
+---
+
+**Summary:** GO at `a76f8caf`. One test-only commit adjusted three command checks after CE_VERSION moved to Manager. Tests: Civil net10 19,020/19,040 (Glen Eira the only fail), Manager 837/837, CommandTruth 65/65, net48 focused 198/198, Manager release build 75 files. Manager ships. Held: no version bump, no install; Structural and #1382/#1384/#1419/#1423 not merged. Review log entries 1536–1539 and the sign-off line are pushed. Worktree and temporary folders removed.

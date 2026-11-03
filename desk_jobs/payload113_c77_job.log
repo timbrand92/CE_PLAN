@@ -1,0 +1,7 @@
+Candidate `C:\ce_rc_scratch\c1073` is built and verified; the report is at `C:\Lisp Files\_TEST_COPIES_20260923\PAYLOAD_C1073_REPORT.md`. Nothing is installed or opened in AutoCAD.
+
+- **Verified:** Civil 832 files and Manager 75, both "bad 0, extra 0". Civil is 832, not the 829 the job text expected, because `colleague-defaults.json` is shipped in four places.
+- **Branch head:** `claude/rel-20261030a` @ `f5dd72a0`, a 4-file version commit. CLASS is FULL.
+- **Installed line found:** Civil 3.0.86 and Manager 1.1.86 (C-76, `5888ee75`).
+- **Manager is not a re-stamp:** #1860 changed its code, so the Manager DLLs differ by real code, not just version bytes.
+- **Tests:** string proof is 1,773 rows with 0 not as expected, and all pin classes pass with 0 failed.

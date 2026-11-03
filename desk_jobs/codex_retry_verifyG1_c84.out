@@ -1,0 +1,10 @@
+== verifyG1_c84 (usage 0.0% -> 0.0%): 
+== verifyG1_c84 (usage 0.0% -> 1.0%): AUTOCAD CLOSED
+
+1. **BLOCKED:** My setup click opened UCS while AutoCADÔÇÖs layout moved. G1ÔÇÖs pipe-label check was **NOT TESTED**. No product failure established.
+
+2. **Verified:** Civil **3.0.84**, Manager **1.1.84**, Structural **1.0.125**. All four settings files unchanged; drawing unsaved; lock released.
+
+3. **Counts:** PASS 0, FAIL 0, DIFFERENT 0, NOT TESTED 1. SURE 1, UNSURE 0. No missing fixtures.
+
+4. **Report:** [G1 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_G1_20261028_1932.md>).

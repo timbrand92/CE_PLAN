@@ -1,0 +1,3 @@
+== cx_cr22 (usage 15.0% -> 18.0%): 1. **DONE — saved and pushed.** [Review report](C:/CE_PLAN/areas/CODEX_CASE_REVIEW_cx_cr22.md), commit `3626b086`. Leak scan passed; branch has no unpushed commits.
+
+2. **Summary:** None of eight cases is ready: four partial, three historical failures, one needs a Codex look. Installed Civil is 3.0.79; none has runs on it. R04 still omits CDREBUILD despite three older-build passes. No acceptance files or bug statuses changed. Nothing was run.

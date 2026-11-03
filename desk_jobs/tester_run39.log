@@ -1,0 +1,15 @@
+Nothing failed in run 39: 9 checks passed, 1 is blocked and 2 are unproven. The blocked one is BUG-505, because the driver's `dialog-path` verb errored twice.
+
+The installed builds read 3.0.63 / 1.1.63 as required. The report is committed and pushed to `C:\CE_PLAN` (commit 1a7ddb68) and the leak-scan was clean.
+
+- **BUG-516, freeboard (pass):** with Tim's own settings (both copies 150) CDRULES printed "freeboard 150 mm" and CDTWL printed "150 mm is wanted". With the Design Standards copy set to 200 and the Pipe copy left at 150, both commands printed 200. I did not test the reverse case (Pipe copy changed alone).
+- **BUG-557, heartbeat switch (pass, weak evidence):** the outbox file held 0 lines before and after, with the switch on or off, so the line count can't tell them apart. What differs is the file's modified time: it moved at start-up with the switch on and did not move with it off.
+- **BUG-505, CHECK THE SCALE (blocked):** the import window opened and the file dialog appeared, but `dialog-path` failed twice with "Unable to find type [System.Windows.Automation.AutomationElement]", so the import question was never reached. The open dialog then stopped `quit` closing AutoCAD, and I used `quit -Kill` as the driver instructs. It killed only the AutoCAD this driver launched.
+- **BUG-476 (unproven):** the first-administrator question sits behind a Manager button the driver won't press, so I did not open Manager.
+- **#1166 command-name guard (unproven):** it is a source test with nothing to drive in AutoCAD. The 9 commands I typed all worked.
+- **Regressions (all pass):** Tidy labels (P8 line stays gone; the P3 → P2 label still has no clear spot, naming the "SC" text), Recover Inverts totals (20 already had invert text, 24 skipped), the R-06 fix line (30 of 30 rows), the Edit Pipe cascade with U and REDO, CDSYNC leaving the Pit Schedule rows identical (header 95 → 96 as in earlier runs), and quick edits opening no CE window.
+- **Settings and driver:** Tim's four real settings files read ACD64E79A33B, 622A246F7D3B, 24D8E5F7D87B and EFE307C4FC74 at the start and end of both sessions, and I re-read them myself afterwards. Driver hashes are unchanged (120EE24D15B2 and 5B542F2145F4).
+- **Copies for the desk to delete in `C:\ce_rc_drv`:** CLD391_B1.dwg, CLD391_B1_PRE_C7_20261020_153011.dwg, CLD392_B1.dwg, CLD392_B1_PRE_C7_20261020_154257.dwg and CLD393_METRE.dwg.
+
+AUTOCAD CLOSED
+SETTINGS RESTORED

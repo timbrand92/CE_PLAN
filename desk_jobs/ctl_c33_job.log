@@ -1,0 +1,25 @@
+C-33 is assembled and pushed, with one new red that PR #858 caused. I merged 13 of the 15 PRs and skipped #892 and #931 because of a `LandXmlParser.cs` clash.
+
+- **Head:** `4e3e39a0212018ad5154c9512443c1cf629d3c78` on `claude/rel-20261009z`, pushed. Local head equals origin head.
+- **Base:** C-37 plus its 3.0.47 / 1.1.47 version commit (`74248c1d`). It was already there, so I didn't have to wait. No version, csproj or PackageContents file changed.
+- **Merged:** #836, #838, #840, #841, #858, #839, #849, #850, #910, #926, #928, #936, #947. All 15 heads were open and at the newest head in the log. Each newest Opus review was MERGE at that head. None was already in the base.
+- **Skipped:** #892 and #931. The base already carries #911's markers in `LandXmlParser.cs`, and both PRs clash with them there. I aborted both merges. Nothing is stacked on either, so no other PR was lost. Both need a hand merge by the Opus finalizer.
+- **One extra commit:** my first log-conflict script swallowed one blank line in #926's merge. I restored it in a separate commit. `REGRESSION_LOG.md` is now +298 lines, 0 removed, no conflict markers, no control characters.
+- **Shared and registry:** nothing under `Shared/` changed. `command-registry.json` and `council-profiles.json` did not change.
+- **New Settings:** all OFF, or inert with neutral defaults. No existing default changed. They cover the Checks chain (shared result, ignore, show-where, slowdown pause), the three layout/text switches, the pipe-storage switch, and `layerNames` with `layerChecks` (wrong-layer and layer-differs rows).
+- **Build:** the whole solution built in Release with 0 errors.
+- **Tests:**
+  - Manager 749/749.
+  - Civil net10: 17,075 run, 17,054 pass, 19 skipped, 2 failed.
+  - CommandTruth 64, TestHarness 101, Spine 81, Diagnostics 19, AI.Core 42 and ReleaseTests 16, all passing.
+  - Installer: 273 run, 36 failed, the same count as C-37; I did not compare the names.
+  - The redo guard test passed on net10 and net48, and I did not touch `RedoSafeReviewedHooks.baseline.txt`.
+- **Reds:**
+  - `BackTest_GlenEira24115_Computed_WithinTolerance` is the old known red.
+  - **New red:** `ProductionSource_DoesNotCallHostIncompatibleJTokenFormattingOverload`, from PR #858 at `Slowdown.cs:250`. It calls `payload.ToString(Formatting.Indented)`, which AutoCAD's own Newtonsoft.Json can lack. That is a real code problem, not a baseline, so I left it. The finalizer should switch that line to `JsonConvert.SerializeObject(payload, Formatting.Indented)` or drop #858. The feature is switched OFF.
+  - A focused net48 run of the changed test classes (457 run) had 10 failures, all in `AgiCommandSurfaceDrainKindTests`, with `InvalidProgramException` from the net48 reference assemblies. I'm treating that as the known net48 stub limit, because those tests pass on net10. I did not run them against the base to confirm.
+- **Redo scan:** one added `StartTransaction` in non-test code, `ProjectDataService.IgnoredChecks.cs:39` (from #840). Nothing calls it yet, so it is LOW now, but it must only run inside a command once it is wired in.
+- **Hygiene:** Tim's three settings files and the live `%APPDATA%` CE folders were identical before and after every run. Installed Civil is still 3.0.46+2388c329. I did not run any accoreconsole, and acad.exe was not running during my tests.
+- **Not tested:** anything in AutoCAD. I did not run the Structural tests or the AI.Harness tests.
+
+The report is at `C:\Lisp Files\_TEST_COPIES_20260923\TRAIN_C33_ASSEMBLY_REPORT.md`.

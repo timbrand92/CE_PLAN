@@ -1,0 +1,9 @@
+I wrote 20 Codex briefs and queued them. Nothing was run or built, and no settings were touched.
+
+- **Reviews (cx_rv19 to cx_rv28, cost 2 each):** read-only second opinions on the six S-45 Structural PRs, #1798, the C-69 PRs and the ArchUnitNET baseline #1780. The TOOL-ARCH-01 adoption PR doesn't exist yet. Each report states whether Codex disagrees with Opus.
+- **Builds (cx_bd21 to cx_bd30, cost 8 each):** BUG-1095, 1053, 1102, 1104, 1201, 1107, 1110, 1216, 1098 and 1044.
+- **Queue order:** round 1's cx_bd15 to cx_bd20 sit ahead of these in `FILLER_QUEUE.txt`. Those six builds run before the ten reviews, so the reviews won't go first unless the queue is reordered.
+- **Cost:** about 100 points against roughly 61 free. The last builds will wait on the cap unless the reset lands.
+- **Unchecked:** the build causes come from the carpark entries, not from reading the code.
+
+The report is `areas\release-v3-colleagues-CODEX_BURN_BRIEFS2_26OCT_REPORT.md`, pushed to `C:\CE_PLAN` with the queue file, and `git status -sb` shows no ahead.

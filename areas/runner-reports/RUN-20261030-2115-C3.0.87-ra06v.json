@@ -1,0 +1,197 @@
+{
+  "header": {
+    "run_id": "RUN-20261030-2115-C3.0.87-ra06v",
+    "started": "2026-10-30 21:15:57",
+    "finished": "2026-10-30 21:26:20",
+    "build": {
+      "civil": {
+        "product_version": "3.0.87+f5dd72a0652c7f749ab52228cea0f9675047b9cb",
+        "file_version": "3.0.87.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.87+f5dd72a0652c7f749ab52228cea0f9675047b9cb",
+        "file_version": "1.1.87.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.87+f5dd72a0 / struc 1.0.125+204dfad2 / mgr 1.1.87+f5dd72a0",
+    "acad_version": "",
+    "pack_sha256": "30DB6810EDEDC74FB339BA67251386DE3B54AEB9BE94CF62DC3430DD661390C7",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.87+f5dd72a0652c7f749ab52228cea0f9675047b9cb; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.87+f5dd72a0652c7f749ab52228cea0f9675047b9cb",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4CD773B85EC5, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 13955AAA60D1, case_runner_lib.ps1 8F9B8DCBB473, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 1 shared setup(s); pack SHA-256 30DB6810EDEDC74FB339BA67251386DE3B54AEB9BE94CF62DC3430DD661390C7; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json D604CE689671 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Fri 30 Oct 2026 21:15 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 0,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 1,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261030-2115-C3.0.87-ra06v-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-30 21:16:01",
+      "finished": "2026-10-30 21:26:19",
+      "result": "FAIL",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV32116071_B1.dwg",
+      "cases": [
+        "R01v87"
+      ],
+      "calibration": {
+        "ok": false,
+        "max_raw_px": null,
+        "max_corrected_px": null,
+        "why": "centre : the click failed: AutoCAD would not come to the front (not_foreground). Nothing was clicked.",
+        "canvas": {
+          "left": 2225,
+          "top": 421,
+          "width": 1584,
+          "height": 569,
+          "how": "exact (tol 0)",
+          "scale_vs_screensize": 1.0,
+          "dpi": 96
+        }
+      },
+      "clean": false,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : D604CE689671 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "",
+      "quit_attempts": [
+        {
+          "attempt": 1,
+          "how": "v2 quit",
+          "ok": false,
+          "ended_by": null,
+          "error": "AutoCAD did not close gracefully and was NOT killed. If it is stuck, run quit again with -Kill."
+        },
+        {
+          "attempt": 2,
+          "how": "v2 quit",
+          "ok": false,
+          "ended_by": null,
+          "error": "REFUSED: AutoCAD is busy (a command is active) and the last known drawing cannot be trusted: no drawing has been seen yet by this driver. Nothing was closed."
+        },
+        {
+          "attempt": 3,
+          "how": "v2 quit -Kill",
+          "ok": true,
+          "killed": true,
+          "error": ""
+        }
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "id": "R01v87",
+      "proves_bugs": "BUG-862 (the 'completed' half only: a PIT and a CD run that placed objects and ended by Esc are logged 'completed'; the 'cancelled' half is R05 v2 and the 'refused' half is R10 v2)",
+      "title": "PIT and CD keep placing until Esc, Esc keeps what was placed, and one U takes back only the last pipe",
+      "kind": "deterministic",
+      "order": 40,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "UX-STD-01b (daily case D01), BUG-862 (completed word)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "PIT places a first pit, offers the next, takes a second pit; CD places a first pipe, offers the next, takes a second pipe; each Esc ends it with the 'Stopped' line and keeps what was placed: 2 new pits on layer STORMWATER PIT, 2 new pipe objects, 2 flow arrows, 4 IL texts (18.000, 17.800, 17.700, 17.500) and 2 pipe labels; no New Pit or New Pipe window is left open; the Civil log says 'Command outcome: PIT completed' and 'Command outcome: CD completed' and never 'cancelled' for either; ONE U takes back only the last pipe with its two IL texts, its label and its arrow, leaves both pits and the first pipe.",
+      "why_not_unit": "The run is a chain of real AutoCAD command instances queued one behind another. Only live AutoCAD shows that the next pick really places another object, what Esc keeps and what one U takes back.",
+      "not_automated": [
+        "The second pit and the second pipe are placed with the real mouse (typed text is lost while CE waits at a prompt). The second pipe's length is not asserted (its label read 1 IN 54 in probe PRH1: the click point is not the exact typed point).",
+        "The pit label block and the text sizes are not judged (a look item for Codex)."
+      ],
+      "file_sha256": "D9B7122FCC80F4936BA059D2C5C1C3973839DC0F9F191192806DDC1054C7A4DD",
+      "result": "BLOCKED",
+      "blocked": "AutoCAD busy",
+      "first_failure": null,
+      "started": "2026-10-30 21:21:35",
+      "seconds": 166.5,
+      "setup": "SETUP-P8x2v",
+      "setup_note": "shared setup SETUP-P8x2v run here for the first time at 21:22:38",
+      "steps": [
+        {
+          "n": 1,
+          "phase": "setup",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.9,
+          "evidence": "copy CLDV32116071_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "setup",
+          "verb": "ms-count",
+          "text": "ms-count -> $n0",
+          "ok": false,
+          "seconds": 61.0,
+          "evidence": "the step stopped with an error: BUSY: AutoCAD did not accept a COM call for 61 s (it kept answering 'call rejected': it is busy). Exception calling \"Get\" with \"2\" argument(s): \"Call was rejected by callee. (0x80010001 (RPC_E_CALL_REJECTED))\""
+        }
+      ],
+      "assertions": [],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 0 new line(s) while the case ran, 0 with [ERR]",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)"
+      ],
+      "error": null,
+      "finished": "2026-10-30 21:24:22",
+      "session_id": "RUN-20261030-2115-C3.0.87-ra06v-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}

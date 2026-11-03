@@ -1,0 +1,27 @@
+## FOR TIM
+
+1. **Moving the pit and pressing U is not what breaks R21.** Between cases the robot throws the drawing away and opens the file fresh. R21 never sees anything R12 did.
+2. **The real fault: CDCHECK gives the wrong answer on a drawing that has been closed and opened again in the same AutoCAD.** CE holds one pit and pipe list in memory. After the reopen, it doesn't load the new copy's list until a command that draws or edits runs. CDCHECK only reads, so it runs with no list.
+3. **What you'd see:** every pipe shows as "An unnamed pipe", pits show long IDs instead of P3, and you get 44 Unresolved instead of 4. Nothing in the drawing is wrong; only the check's answer is.
+4. **It's old.** The same 142 / 44 numbers appear in robot runs back to 3.0.73 (24 Oct). That was a case already expected to fail for another reason, so nobody noticed. It's not caused by the 3.0.86 changes, and yesterday's pipe-stealing fix (BUG-1227) won't fix it.
+5. **Proposed fix (not built):** when CE has no list in memory for this drawing, CDCHECK reads the list saved inside the drawing, changing nothing. CDCHECK's pipe-to-pit size check already does this. New setting **checks.cdcheckReadsThisDrawingsRecord**, ON.
+6. **Not proven:** I ran nothing. The proof is the CE log: the drawing reopened at 00:11:32, CDCHECK ran at 00:11:37 with no pit and pipe list loaded, and the list only loaded at 00:12:28 when the next case placed a pit.
+
+---
+
+**Technical detail** (report: `C:\CE_PLAN\areas\R21_MOVE_UNDO_DIAGNOSIS_30OCT.md`, pushed, CE_PLAN not ahead)
+
+1. **Cause:** `SpineCheckCommand.CheckConnections` never binds the record. `ChecksResultReader.GatherSpine` calls `LinkService.BuildSpineRecords` with no snapshot. `PeekProjectForDatabase` then calls `ProjectDataService.TryPeekCurrent`, which returns null because `_currentDatabase` is still the closed drawing.
+   - So `FindPit` and `FindPipe` return null, pipes lose their From/To pit keys, and the pit-side rows become "Unresolved (not confirmed from the other side)".
+   - Comparing the saved CDCHECK lists from 3.0.85 and 3.0.86 confirms it: every name is missing on the reopen.
+2. **Not a C-76 regression:** the numbers are identical on 3.0.73 to 3.0.83. My prediction for CE 02's runs: X8 red, X9 red, X7 green.
+3. **BUG-1227 Part A:** won't fix it. It doesn't touch the read path.
+4. **Fix design:**
+   - A pure rule `CdCheckProjectSourceRule` decides which list CDCHECK uses. With the switch ON it ignores a list whose drawing has closed, which also covers the risk that AutoCAD reuses the closed drawing's memory.
+   - `GatherSpine` reads `TryReadProjectWithoutChanging` once and uses it for both the connection list and the fit check.
+   - Six unit tests are listed in the report.
+5. **Robot cases:**
+   - **N38_cdcheck_reopen / C38:** R21 twice in one start, the second after the normal reopen. Expect 179 / 4 with the switch ON. C38 (switch OFF) must print 142 / 44, which today's build already shows without any setting.
+   - **N39_move_undo_cdcheck:** CDCHECK, MOVE P3 by 0,2000, U, then CDCHECK again on the same drawing. The P3 rows in the saved list must still number 6.
+
+**Summary:** No PR (read-only). R21's failure isn't R12's MOVE and U. CDCHECK on a reopened drawing reads no pit and pipe list: `BuildSpineRecords` gets null from `ProjectDataService.TryPeekCurrent`, and `SpineCheckCommand` never loads it. The fault is old (since 3.0.73), not from C-76, and not fixed by BUG-1227 Part A. Proposed fix: `ChecksResultReader.GatherSpine` reads the drawing's own saved list, behind switch `checks.cdcheckReadsThisDrawingsRecord` (ON). Proof: N38 / C38.

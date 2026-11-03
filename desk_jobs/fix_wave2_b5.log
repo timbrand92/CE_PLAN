@@ -1,0 +1,11 @@
+All five fixes (ledger items 21–25) were real, and each now has a draft PR against `claude/rel-20261022m`. None is installed or opened in AutoCAD, and nothing is marked FIXED.
+
+- **BUG-999 (#1617):** CDRUNSOLVE now says it could not solve instead of "every invert already matches". Feeding it real flows needs Tim's word; options are in the report.
+- **BUG-969 (#1619):** CDNEWDWG follows the job folder you choose.
+- **BUG-947 (#1621):** a damaged prepared update is moved aside and rebuilt.
+- **BUG-1004 (#1623):** Design lists a changed orifice head or detention answer.
+- **BUG-1019 (#1625):** CDCALC accepts levels at or below RL 0.00.
+
+Each fix has a test that failed before and passes after. The Civil suite ran 19,134–19,141 tests with one failure, the known GE 24-115 back-test. Manager passed 857 of 857.
+
+The report is pushed as `areas/release-v3-colleagues-FIX_WAVE2_BATCH5_REPORT.md`.

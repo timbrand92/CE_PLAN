@@ -1,0 +1,11 @@
+The C-72 candidate is built and proved, and the report is written at `C:\Lisp Files\_TEST_COPIES_20260923\PAYLOAD_C1068_REPORT.md`. Nothing is installed.
+
+- **Candidate:** `C:\ce_rc_scratch\c1068`. The number c1068 was free, so no other number was used.
+- **Verified:** Civil verified 828, bad 0, extra 0. Manager verified 75, bad 0, extra 0.
+- **Branch:** `claude/rel-20261026w`, version commit `e30556ca` (4 files, 4 insertions, 4 deletions), pushed normally.
+- **Installed line found:** C-71, Civil 3.0.81+a2408a96 and Manager 1.1.81+a2408a96.
+- **Tests:** all pin tests and the C66 to C72 default tests passed, zero failed.
+- **Strings:** 1,044 string rows, none unexpected.
+- **Manager:** a pure re-stamp (132 / 133 / 133 differing bytes, all version and identity bytes).
+- **Settings files:** identical before and after.
+- **Odd:** AutoCAD was open briefly at the start, and the build waited for it to close.

@@ -1,0 +1,7 @@
+== cx_lf12 (usage 31.0% -> 32.0%): 1. **DONE — all five skipped:** BUG-928–BUG-932 already have changes in draft PR #1534, still on HOLD. No duplicate fixes made.
+
+2. **Delivered:** documentation-only [draft PR #1662](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1662), branch `cx2/bug-928-batch12-triage`, tip `beb1dca4`.
+
+3. **Checks:** tests added/run **0/0**; builds not run. Nothing installed; AutoCAD not opened. Both pushes passed leak scans.
+
+4. **Report saved and pushed:** [Batch 12 report](C:/CE_PLAN/areas/CODEX_LEDGER_FIX_BATCH12_23OCT.md), including per-bug evidence and exact future AutoCAD checks.

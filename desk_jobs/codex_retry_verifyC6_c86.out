@@ -1,0 +1,7 @@
+== verifyC6_c86 (usage 19.0% -> 20.0%): AUTOCAD CLOSED
+
+1. **Results:** 2 PASS, 1 FAIL, 1 SEEN; all four tested, SURE. No blocked or untested looks.
+2. **Fault:** Moving P3 put the upper-left IL 18.24 text across its pipe.
+3. **Question 19:** Hand-shifted text travelled 600 mm after the 500 mm pit move; it overlapped the pit. Reported only.
+4. **Cleanup:** Changes discarded, all four settings hashes unchanged, lock released. No fixtures missing.
+5. **Report:** [C6 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_C6_20261030_0854.md>).

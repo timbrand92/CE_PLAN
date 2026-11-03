@@ -1,0 +1,5 @@
+== cx_fa01 (usage 58.0% -> 15.0%): 1. **DONE — [Draft PR #1720](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1720).** Branch `cx4/fa01-inspection`, tip `10d43278`. Three code fixes, one partial fix; seven findings routed.
+
+2. **Verified.** Three build lanes: zero errors. All 35 added cases pass. Full Civil suite: **19,561 passed, 0 failed, 22 console skips**; raw results include 50 not-run records.
+
+3. **Saved and pushed.** [Final report](C:/CE_PLAN/areas/CODEX_FIXAUDIT_FA01_23OCT.md). Own worktree removed. AutoCAD, installation and native acceptance checks were not run.

@@ -1,0 +1,3 @@
+== cx_cr21 (usage 14.0% -> 17.0%): 1. **DONE — 0 of 5 ready.** R33 and R36 are PARTIAL; R12 NEEDS STRONGER ASSERTION; R09 and R36e record real faults on 3.0.78. None has runs on installed 3.0.79.
+2. **Report saved and pushed:** [cx_cr21 review](C:/CE_PLAN/areas/CODEX_CASE_REVIEW_cx_cr21.md), commit `9baca857`. Leak scan passed; no commits remain ahead.
+3. **Read-only limits kept.** No AutoCAD or tests run, no review files written, no bugs marked fixed.

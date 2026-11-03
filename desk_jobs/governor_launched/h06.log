@@ -1,0 +1,28 @@
+**FOR TIM**
+
+The hunt of the Structural framing, footings and beams code is finished. It turned up 41 problems that nobody has written down before. I read the code only; nothing was run in AutoCAD.
+
+The 10 worst:
+
+1. **Rafter and joist tags (R1, FJ1, P1) can land metres off the walls.** This happens if you pick the right-hand wall first, or the wall line was drawn right to left. On an 8 m bay the tag ends up about 5.6 m out. This may also explain where the tag landed in BUG-584.
+2. **R1, FJ1 and P1 slide the whole span line sideways when dodging nearby text.** The line overshoots one wall and falls short of the other, by up to about 1.4 m.
+3. **Beam commands 1 and 2 ignore the beam layer names in Settings.** They always draw on BEAM and BEAM LOWER.
+4. **Beam commands 1 and 2 won't draw at all if the drawing's BEAM layer is a different colour.** They also refuse if the layer is turned off, or if the HIDDEN linetype isn't loaded. An architect's drawing with its own BEAM layer stops every beam.
+5. **Footing labels creep sideways.** At every redraw a label shifts left by about half its width (around 300 mm for PF1). Each FEDIT shifts it again.
+6. **Strip footings that meet at a corner leave a 150 x 150 notch missing from the outer corner.**
+7. **CSLOADPATH treats every pier, stump and screw pile as 450 across, whatever size you drew.** A post 200 mm off a 300 pier shows as "supported", which is the unsafe direction.
+8. **Screw piles and stump footings are missing from the footing schedule, with no warning.**
+9. **CSPIER puts piers past the end of the row.** A 5 m row at 2400 centres puts the last pier 2.2 m past the end.
+10. **Beam command 1 treats roof beams like LRB1 as lintels.** Real lintels with a level number, like 1L1, are not treated as lintels.
+
+There is nothing for you to do. The controller will give these bug numbers. The full write-up, with exact steps to try each one on a copy, is in `C:\CE_PLAN\areas\release-v3-colleagues-HUNT_STRUC_FRAMING_2026-10-12.md`.
+
+---
+
+**Technical notes**
+
+1. **Version audited:** `origin/claude/rel-20261017s` (9a8e5d4e, Structural 1.0.118). That matches the installed bundle's AppVersion. Master was not used.
+2. **How it was checked:** four read-only sub-audits (beams, footings, schedules, framing). I then re-read the decisive code lines for the top 10 and several others myself. One sub-audit claim was wrong and has been dropped: FEDIT can't change a strip into a pad, because that question is only offered on pads. Each item was grepped against the bug carpark, the earlier HUNT, HUNT2 and R00 files, and the area files.
+3. **Contents of the file:** 33 numbered findings plus 8 in hidden or switched-off commands. Each has file and line, steps, wrong result against right result, severity, confidence, a fix idea, and whether a unit test can show it RED.
+4. **Caveat:** items 1 and 2 depend on where the RAFTER-JOISTV2 block's origin sits. That block was not opened.
+5. **Git:** committed to C:\CE_PLAN as 0970143b and pushed by name to origin/main; it was already up to date with origin/main, with no rebase. The worktree at `C:\ce-hunt\struc-framing` has been removed.

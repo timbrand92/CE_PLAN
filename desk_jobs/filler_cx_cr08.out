@@ -1,0 +1,3 @@
+== cx_cr08 (usage 1.0% -> 4.0%): 1. **DONE — 0 of 3 ready on installed Civil 3.0.79.** R32 and R32b have real failures on 3.0.75; current-build behaviour is unknown. R33 is PARTIAL.
+2. **Report:** [cx_cr08 review](C:/CE_PLAN/areas/CODEX_CASE_REVIEW_cx_cr08.md), committed as `9c52ec67` and pushed. No “ahead” remains.
+3. **Read-only limits kept:** nothing run, no bugs marked fixed, no review files written.

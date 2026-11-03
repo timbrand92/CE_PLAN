@@ -1,0 +1,9 @@
+The C-66 candidate is built and proven, with nothing installed. It is at `C:\ce_rc_scratch\c1062`, the number the install chain expects.
+
+- **Result:** Civil is verified 828, bad 0, extra 0. Manager is verified 75, bad 0, extra 0. Neither bundle adds or drops a file against installed.
+- **Branch:** `claude/rel-20261025p`, head `577b5ce4`.
+- **Tests:** 41/41 Civil pin, 61/61 Manager pin, 9/9 switch-default tests.
+- **String proof:** 603 rows, 0 not as expected. Every one of the ten PRs has a proof. #1771, #1756 and #1767 are absent.
+- **Odd — read first:** `CD_Settings.json` read 15,323 bytes at 12:21:28, then was back to the original 15,270-byte hash at 12:21:43. I never touch it; AutoCAD was running in short sessions.
+
+Report is `C:\Lisp Files\_TEST_COPIES_20260923\PAYLOAD_C1062_REPORT.md`.

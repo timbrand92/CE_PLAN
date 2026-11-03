@@ -1,0 +1,8 @@
+All 17 MERGE-WITH-FIXES PRs now have a new draft PR with the review's fixes applied: #1781 to #1797 (11 Civil/Manager, 6 Structural). Old PRs untouched, and every live head matched the review's.
+
+- **Civil/Manager:** the full suite ran on every PR and net48 compiles clean. The only red in any final run was the PDF render test, which passed on its own re-run each time.
+- **Structural:** the full suite hung on this PC, so I stopped it. The six PRs got focused tests only (all green) and a net48 compile. The full suite is still owed.
+- **#954:** no version bump (left for the train's assembly).
+- **Nothing was installed or deployed.** No bug is marked FIXED.
+
+Report: `C:\CE_PLAN\areas\release-v3-colleagues-R2_FIXES_APPLIED_26OCT.md`, pushed.

@@ -1,0 +1,12 @@
+The re-grade is done and the report is pushed to `C:\CE_PLAN` (`git status -sb` shows nothing ahead). The per-run reports and `ledger.json` stay uncommitted, as the runner wrote them.
+
+Civil 3.0.80 landed at about 23:37 Monday, partway through the job, so I re-graded on 3.0.80 after a single pass on 3.0.79.
+
+- **Re-grade, no regression:** all 20 counted accepted cases passed twice on 3.0.80, and once on 3.0.79. No case file had changed since its review.
+- **Codex-ask cases:** R04, R11, R13, R19, R14 with its three raised-setting cases, R21 and R26 passed twice, and every broken twin failed as it should. They are ready for the independent reviewer.
+- **Still failing as meant:** R09 (BUG-859) and R22 (BUG-372) both failed twice on 3.0.80.
+- **R08 (extra, not counted):** one pass and one fail on 3.0.80, so BUG-861 stays open.
+- **R24 not run:** no drawing proven to be saved in metres, and I probed none. The report lists the five untested candidates.
+- **Environment:** no AutoCAD of mine is left running. The desk's Structural 1.0.125 install changed the Structural settings file; I did not touch it.
+
+The report is `C:\CE_PLAN\areas\release-v3-colleagues-RUNNER_REGRADE_3_0_79_REPORT.md`.

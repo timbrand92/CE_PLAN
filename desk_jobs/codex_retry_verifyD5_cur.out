@@ -1,0 +1,6 @@
+== verifyD5_cur (usage 5.0% -> 6.0%): AUTOCAD STILL RUNNING
+
+1. **D5 closed cleanly:** Claude subsequently opened another session; left untouched. D5ÔÇÖs lock was released and all four settings files remained unchanged.
+2. **Results:** PASS 2, FAIL 0, DIFFERENT 2, BLOCKED 1, NOT TESTED 0, SEEN 1. SURE 6; UNSURE 0.
+3. **Gaps:** Renumber needs the changing tags in view; Recover Inverts needs missing-label fixtures. CDTWL named P6 ÔåÆ P5.
+4. **Report:** [D5 verification](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_D5_20261026_0426.md>).

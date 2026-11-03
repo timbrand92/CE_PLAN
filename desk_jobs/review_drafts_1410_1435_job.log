@@ -1,0 +1,9 @@
+The review is done and written to the review log as entries 1227 to 1268, pushed in four commits. Nothing was merged or closed, and nothing went to the plugin repo.
+
+1. **Verdicts on the 26 new drafts:** 5 MERGE (#1418, 1425, 1430, 1433, 1434), 19 MERGE-WITH-FIXES, 2 HOLD, 0 REJECT.
+2. **Need fixes:** #1410, 1411, 1412, 1413, 1414, 1415, 1416, 1417, 1420, 1421, 1422, 1424, 1426, 1427, 1428, 1429, 1431, 1432, 1435.
+3. **HOLD:** #1423, because a typed cover still lands on the wrong row (the main BUG-787 case). #1419, because CDREBUILD can give two pits the same number.
+4. **Seven fix rounds:** 5 now MERGE. #1395 and #1402 each need one small fix. #1407 from the earlier set now needs a test fix.
+5. **Tests on a trial merge of all 49 PRs:** Civil 18,693 run, 4 failed. One is a failure that also shows on the base build. The other three trace to #1407, #1402, and #1410/#1426 (an Undo/Redo safety test). Whole solution 0 errors; Structural 231/231. Nothing tested in AutoCAD.
+
+Several claude.ai connectors (Slack, Gmail, Asana and others) need authorising in claude.ai's connector settings; none were needed here.

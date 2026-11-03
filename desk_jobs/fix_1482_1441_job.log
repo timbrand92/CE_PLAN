@@ -1,0 +1,6 @@
+Both PRs are fixed and pushed. Each has a "needs Opus re-review" comment. Nothing is installed or tested in AutoCAD.
+
+1. **#1482:** new head `a4c53b9f`. Tidy still moves a label off a detention tank's end walls, and the outline pipe ends snap to is unchanged. The new test failed first, then 146 of 146 passed, and net48 built with 0 errors. I could not confirm whether the block also draws side walls, because it is a DWG, so only the ends are widened. The checklist wording in the PR's REGRESSION_LOG is fixed.
+2. **#1441:** new head `0fdf8176`. The space after the comma is back, and 49 of 49 focused tests passed. I did not merge the base line in.
+
+Settings files are unchanged, and I added log entries 1385 to 1387. I did not run Installer tests.

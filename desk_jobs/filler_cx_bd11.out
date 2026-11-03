@@ -1,0 +1,9 @@
+== cx_bd11 (usage 22.0% -> 65.0%): 1. **BUG-1191 — DONE:** [Draft PR #1809](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1809). [Report](C:/CE_PLAN/areas/CODEX_BUILD_BD11_26OCT.md). Built and unit-tested; not installed. AutoCAD/Manager on screen not run. Worktree removed.
+
+---
+
+2. **Head:** `1b0190e13989eff0d6979ca9f768a18f87916745`.
+
+3. **Red → green:** `SurveyIntakePendingReview_Bug1191_ElevenFindings_AllElevenAreListed`: missing “Spot RL 100.000 at (31.0, 0.0)” → passed. All 18 new and 78 related checks passed.
+
+4. **Totals:** Before: 20,380—20,347 passed, 1 failed, 32 skipped. After: 20,398—20,366 passed, 0 failed, 32 skipped. All three builds: zero errors.

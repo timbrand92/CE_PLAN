@@ -1,0 +1,7 @@
+== verifyH1_c85 (usage 17.0% -> 17.0%): AUTOCAD STILL RUNNING
+
+1. **Blocked:** Neither CDCALC tab was reached because command-strip typing failed during required start checks.
+2. **Installed:** Civil 3.0.86 / Manager 1.1.86 / Structural 1.0.125.
+3. **Safe end:** Four settings hashes unchanged; lock released. AutoCADÔÇÖs window closed, but PID 56876 remains.
+4. **Results:** 0 PASS, 0 FAIL, 1 BLOCKED, 1 NOT TESTED; 2 SURE, 0 UNSURE. No feature accepted.
+5. **Report:** [H1 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_H1_20261030_0752.md>).

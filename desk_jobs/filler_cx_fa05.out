@@ -1,0 +1,5 @@
+== cx_fa05 (usage 59.0% -> 63.0%): 1. **FOR TIM — DONE.** [Draft PR #1719](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1719) delivers the false-pass corrections. Native drawing checks and the Structural repair remain open. AutoCAD was not run; nothing was installed. [Report](C:/CE_PLAN/areas/CODEX_FIXAUDIT_FA05_23OCT.md) saved and pushed; worktree removed.
+
+---
+
+2. **Handoff.** Branch `cx4/fa05-rd09-tests`, tip `b6d3d692`. **24 tests added.** Full Civil: **19,540 passed, 0 failed, 32 skipped**, plus 28 on-demand exclusions—all explained. All three build lanes finished with **0 errors**.

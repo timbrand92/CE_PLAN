@@ -1,0 +1,13 @@
+The Structural 1.0.123 candidate is built and verified. It is not installed, and nobody has opened it in AutoCAD.
+
+- **Candidate:** `C:\ce_rc_scratch\s1041\CE_STRUC_SUITE.bundle`.
+- **Manifest:** `verified 2007, bad 0, extra 0`, re-checked after cleanup. Added 0 and removed 0 against installed.
+- **Branch head:** version commit `4af3f37d` is on `claude/rel-20261024s`, on top of the signed head `69fc3269`.
+- **Tests:**
+  - Pin tests: 48 of 48.
+  - Release tests: 3 of 3 on each of net48, net8 and net10.
+  - Central register test: 5 of 5.
+- **String proof:** 78 of 78 rows as expected, with every merged PR covered. #1699 is test-only, so it is proven by its test class in the test DLL.
+- **Settings and installed DLLs:** Tim's four settings files and the six installed DLL hashes are identical before and after.
+- **Odd:** the build lock is a file held by another job, so I built with my own TEMP. Detail is in the report.
+- **Report:** `C:\Lisp Files\_TEST_COPIES_20260923\PAYLOAD_S1041_REPORT.md`.

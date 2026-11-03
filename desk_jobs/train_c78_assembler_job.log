@@ -1,0 +1,13 @@
+C-78 is assembled and the report is pushed. The branch is `claude/rel-20261102a` at `636d4a4d`, built on the installed C-77 version commit `f5dd72a0`. Nobody has run it in AutoCAD.
+
+1. **Merged:** only two PRs were PROMOTED, #1867 (BUG-1227 pit copy keeps its pipe ends) and #1858 (BUG-857 Grade mismatch box). The first run had already merged and pushed both before it died; I checked them and kept them. Only `REGRESSION_LOG.md` clashed, resolved by keeping both entries.
+2. **Skipped:** every other item in the list is NOT PROMOTED, and I did not merge #1863, #1868, #1857, #1854, #1855 or #1869.
+3. **Settings:** two new switches, both ON. Nothing existing was changed, and Shared, Manager and the installer are untouched.
+4. **Build and tests:** the whole solution builds with 0 errors on net48, net8 and net10.
+   - Civil net10: 21,528 tests, 0 failed.
+   - Manager: 1,085 tests, 0 failed.
+   - Civil net48: 114 failures, the same names as the C-77 baseline (all reference-only AutoCAD errors).
+   - Arch: 14 of 14.
+5. **Caveat:** AutoCAD was open (a robot pass) during my runs. `CD_Settings.json` changed during that window; I can't tell whether the robot or my run wrote it.
+
+Report: `C:\CE_PLAN\areas\release-v3-colleagues-TRAIN_C78_ASSEMBLY_REPORT_2026-10-29.md`. The changed-files list is `TRAIN_C78_CHANGED_FILES.txt` in the same folder.

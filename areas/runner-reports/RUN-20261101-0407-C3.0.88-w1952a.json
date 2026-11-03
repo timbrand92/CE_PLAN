@@ -1,0 +1,600 @@
+{
+  "header": {
+    "run_id": "RUN-20261101-0407-C3.0.88-w1952a",
+    "started": "2026-11-01 04:07:47",
+    "finished": "2026-11-01 04:10:06",
+    "build": {
+      "civil": {
+        "product_version": "3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+        "file_version": "3.0.88.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+        "file_version": "1.1.88.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.88+3fbb9da5 / struc 1.0.125+204dfad2 / mgr 1.1.88+3fbb9da5",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "617445F2A03136F729E68613FF0971B0EE4B9F80741EA9E0F1C8F9C88F585441",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+      "Driver files (SHA-256, first 12): v2 F4D8F40C3675 (expected F4D8F40C3675), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4B0175FFAB00, v3 session F061E3240C47, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 BBF42DBA8958, case_runner_lib.ps1 89AD455619F8, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 1 shared setup(s); pack SHA-256 617445F2A03136F729E68613FF0971B0EE4B9F80741EA9E0F1C8F9C88F585441; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json D604CE689671 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sun 01 Nov 2026 04:07 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 0,
+    "FAIL": 1,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261101-0407-C3.0.88-w1952a-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-11-01 04:07:47",
+      "finished": "2026-11-01 04:10:06",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV30407531_B1.dwg",
+      "cases": [
+        "W1952"
+      ],
+      "whatsnew_dismissed_at_start": "no, window was not there",
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : D604CE689671 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "W1952",
+      "proves_bugs": "BUG-1070",
+      "title": "U takes the 'cannot save over an unreadable record' hold off when it brings back a good record, and REDO of the damage puts it back on",
+      "kind": "deterministic",
+      "order": 920,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "C-79b1",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed. Written 1 Nov 2026 from the PR",
+      "variant_of": "",
+      "expected": "The command line holds exactly TWO lines '[CE] Not saved to the CE record (CE's own record save): the CE record in this drawing could not be read, so CE does not save over it. The original record stays in the drawing; drafting carries on.' (after the first and second CDREBUILD) and THREE '[CE] CDREBUILD complete:' lines. The record reads damaged after the setup and after REDO, good after the U at (h), and good after the last CDREBUILD. The Civil log has '[ProjectData] The CE record in this drawing exists but could not be read'.",
+      "why_not_unit": "The unit test drives the hold class with true/false answers; only AutoCAD runs the real re-read at the end of U and REDO and shows whether the next CE save is skipped.",
+      "not_automated": [
+        "Nothing to see: text only. Whether each U took back exactly the step named here is read from the record, not from what U showed (the U lines are recorded)."
+      ],
+      "file_sha256": "6572DAEE01E31546E45066C94E40507D64213AFE45FB496207B2E2F2BD60094C",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "command line holds 1 line(s) containing '[CE] Not saved to the CE record (CE's own record save): the CE record in this drawing could not be read, so CE does not save over it.' (expected 2)",
+      "started": "2026-11-01 04:08:32",
+      "seconds": 77.3,
+      "setup": "SETUP-DMG-PITLIST",
+      "setup_note": "shared setup SETUP-DMG-PITLIST run here for the first time at 04:08:35",
+      "steps": [
+        {
+          "n": 1,
+          "phase": "setup",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "copy CLDV30407531_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "setup",
+          "verb": "v3",
+          "text": "v3 record-set nod -Part CE_CVL_SUITE_PROJECT/PROJECT_DATA -To READ -> $dmg_pitlist_before",
+          "ok": true,
+          "seconds": 0.6,
+          "evidence": "v3 record-set nod: record-set READ nod||CE_CVL_SUITE_PROJECT/PROJECT_DATA|C:\\ce_rc_drv\\CLDV30407531_B1.dwg : 958 group(s), 244096 characters, starts: {\"version\":\"2.2\",\"drawingPath\":\"C:\\\\Users\\\\TimothyBrand\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C-..."
+        },
+        {
+          "n": 3,
+          "phase": "setup",
+          "verb": "v3",
+          "text": "v3 record-set nod -Part CE_CVL_SUITE_PROJECT/PROJECT_DATA -To DMGBROKEN2A4 -> $dmg_pitlist_write",
+          "ok": true,
+          "seconds": 0.5,
+          "evidence": "v3 record-set nod: record-set WRITE nod||CE_CVL_SUITE_PROJECT/PROJECT_DATA|C:\\ce_rc_drv\\CLDV30407531_B1.dwg : was 244096 characters, now 12, read back equal; nothing saved (the test copy is not written to disk)"
+        },
+        {
+          "n": 4,
+          "phase": "setup",
+          "verb": "v3",
+          "text": "v3 record-set nod -Part CE_CVL_SUITE_PROJECT/PROJECT_DATA -To READ -> $dmg_pitlist_after",
+          "ok": true,
+          "seconds": 0.4,
+          "evidence": "v3 record-set nod: record-set READ nod||CE_CVL_SUITE_PROJECT/PROJECT_DATA|C:\\ce_rc_drv\\CLDV30407531_B1.dwg : 1 group(s), 12 characters, starts: DMGBROKEN2A4"
+        },
+        {
+          "n": 5,
+          "phase": "setup",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 6,
+          "phase": "setup",
+          "verb": "ms-count",
+          "text": "ms-count -> $n0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.LINE{NL}190000,-95000{NL}191000,-95000{NL}\" -Force -> $line_a",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "typed '_.LINE 190000,-95000 191000,-95000': Command: | Command: _.LINE | Specify first point: 190000,-95000 | Specify next point or [Undo]: 191000,-95000 | Specify next point or [Undo]: | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. ..."
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -Force -> $u_a",
+          "ok": true,
+          "seconds": 2.2,
+          "evidence": "typed 'U': Command: | Command: U | LINE | Command: | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guar..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDREBUILD\" -Force -> $rb1",
+          "ok": true,
+          "seconds": 13.2,
+          "evidence": "typed 'CDREBUILD': [CE] After Undo, CE could not re-read its pit and pipe records from this drawing. Save, close and reopen the drawing before relying on the pit schedule or calculations. | Command: CDREBUILD | [CE] CDREBUILD will rebuild ..."
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -Force -> $u_c",
+          "ok": true,
+          "seconds": 2.2,
+          "evidence": "typed 'U': Command: | Command: U | CDREBUILD | Command: | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings..."
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -Force -> $u_d",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "typed 'U': [CE] After Undo, CE could not re-read its pit and pipe records from this drawing. Save, close and reopen the drawing before relying on the pit schedule or calculations. | Command: U | SETTINGS GUARD ACTIVE: 1 settings fi..."
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 12",
+          "ok": true,
+          "seconds": 12.0,
+          "evidence": "slept 12 s"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"REDO\" -Force -> $redo_e",
+          "ok": true,
+          "seconds": 2.3,
+          "evidence": "typed 'REDO': Command: | Command: REDO | Command: | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 record-set nod -Part CE_CVL_SUITE_PROJECT/PROJECT_DATA -To READ -> $rec_e",
+          "ok": true,
+          "seconds": 0.4,
+          "evidence": "v3 record-set nod: record-set READ nod||CE_CVL_SUITE_PROJECT/PROJECT_DATA|C:\\ce_rc_drv\\CLDV30407531_B1.dwg : 1 group(s), 12 characters, starts: DMGBROKEN2A4"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDREBUILD\" -Force -> $rb2",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "typed 'CDREBUILD': [CE] After Undo, CE could not re-read its pit and pipe records from this drawing. Save, close and reopen the drawing before relying on the pit schedule or calculations. | Command: CDREBUILD | [CE] CDREBUILD will rebuild ..."
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -Force -> $u_g",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "typed 'U': Command: | Command: U | CDREBUILD | Command: | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings..."
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -Force -> $u_h",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "typed 'U': [CE] After Undo, CE could not re-read its pit and pipe records from this drawing. Save, close and reopen the drawing before relying on the pit schedule or calculations. | Command: U | SETTINGS GUARD ACTIVE: 1 settings fi..."
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 record-set nod -Part CE_CVL_SUITE_PROJECT/PROJECT_DATA -To READ -> $rec_h",
+          "ok": true,
+          "seconds": 0.4,
+          "evidence": "v3 record-set nod: record-set READ nod||CE_CVL_SUITE_PROJECT/PROJECT_DATA|C:\\ce_rc_drv\\CLDV30407531_B1.dwg : 958 group(s), 244096 characters, starts: {\"version\":\"2.2\",\"drawingPath\":\"C:\\\\Users\\\\TimothyBrand\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C-..."
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDREBUILD\" -Force -> $rb3",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "typed 'CDREBUILD': Command: | Command: CDREBUILD | [CE] CDREBUILD will rebuild this drawing's stored pit and pipe data - pit numbers, cover and invert levels - from what is currently drawn. It writes that record inside this drawing; it doe..."
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 29,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 record-set nod -Part CE_CVL_SUITE_PROJECT/PROJECT_DATA -To READ -> $rec_j",
+          "ok": true,
+          "seconds": 0.5,
+          "evidence": "v3 record-set nod: record-set READ nod||CE_CVL_SUITE_PROJECT/PROJECT_DATA|C:\\ce_rc_drv\\CLDV30407531_B1.dwg : 958 group(s), 244096 characters, starts: {\"version\":\"2.2\",\"drawingPath\":\"C:\\\\Users\\\\TimothyBrand\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C-..."
+        },
+        {
+          "n": 30,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 31,
+          "phase": "case",
+          "verb": "log-read",
+          "text": "log-read civil -> $civlog",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "240 new line(s) in the civil CE log since the case began "
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "not-contains $dmg_pitlist_before \"DMGBROKEN2A4\"",
+          "ok": true,
+          "expected": "does not contain 'DMGBROKEN2A4'",
+          "actual": "{\"ok\":true,\"verb\":\"record-set\",\"started\":\"2026-11-01 04:08:32\",\"elapsed_ms\":538,\"error\":null,\"refused\":false,\"output\":[\"record-set READ nod||CE_CVL_SUITE_PROJECT/PROJECT_DATA|C:\\\\ce_rc_drv\\\\CLDV304075...",
+          "evidence": "'DMGBROKEN2A4' is absent from: {\"ok\":true,\"verb\":\"record-set\",\"started\":\"2026-11-01 04:08:32\",\"elapsed_ms\":538,\"error\":null,\"refused\":false,\"output\":[\"record-set READ nod||CE_CVL_SUITE_PROJEC..."
+        },
+        {
+          "n": 2,
+          "text": "contains $dmg_pitlist_after \"DMGBROKEN2A4\"",
+          "ok": true,
+          "expected": "contains 'DMGBROKEN2A4'",
+          "actual": "{\"ok\":true,\"verb\":\"record-set\",\"started\":\"2026-11-01 04:08:34\",\"elapsed_ms\":436,\"error\":null,\"refused\":false,\"output\":[\"record-set READ nod||CE_CVL_SUITE_PROJECT/PROJECT_DATA|C:\\\\ce_rc_drv\\\\CLDV304075...",
+          "evidence": "found 'DMGBROKEN2A4' in: {\"ok\":true,\"verb\":\"record-set\",\"started\":\"2026-11-01 04:08:34\",\"elapsed_ms\":436,\"error\":null,\"refused\":false,\"output\":[\"record-set READ nod||CE_CVL_SUITE_PROJEC..."
+        },
+        {
+          "n": 3,
+          "text": "contains $rec_e \"DMGBROKEN2A4\"",
+          "ok": true,
+          "expected": "contains 'DMGBROKEN2A4'",
+          "actual": "{\"ok\":true,\"verb\":\"record-set\",\"started\":\"2026-11-01 04:09:26\",\"elapsed_ms\":421,\"error\":null,\"refused\":false,\"output\":[\"record-set READ nod||CE_CVL_SUITE_PROJECT/PROJECT_DATA|C:\\\\ce_rc_drv\\\\CLDV304075...",
+          "evidence": "found 'DMGBROKEN2A4' in: {\"ok\":true,\"verb\":\"record-set\",\"started\":\"2026-11-01 04:09:26\",\"elapsed_ms\":421,\"error\":null,\"refused\":false,\"output\":[\"record-set READ nod||CE_CVL_SUITE_PROJEC..."
+        },
+        {
+          "n": 4,
+          "text": "not-contains $rec_h \"DMGBROKEN2A4\"",
+          "ok": true,
+          "expected": "does not contain 'DMGBROKEN2A4'",
+          "actual": "{\"ok\":true,\"verb\":\"record-set\",\"started\":\"2026-11-01 04:09:41\",\"elapsed_ms\":424,\"error\":null,\"refused\":false,\"output\":[\"record-set READ nod||CE_CVL_SUITE_PROJECT/PROJECT_DATA|C:\\\\ce_rc_drv\\\\CLDV304075...",
+          "evidence": "'DMGBROKEN2A4' is absent from: {\"ok\":true,\"verb\":\"record-set\",\"started\":\"2026-11-01 04:09:41\",\"elapsed_ms\":424,\"error\":null,\"refused\":false,\"output\":[\"record-set READ nod||CE_CVL_SUITE_PROJEC..."
+        },
+        {
+          "n": 5,
+          "text": "not-contains $rec_j \"DMGBROKEN2A4\"",
+          "ok": true,
+          "expected": "does not contain 'DMGBROKEN2A4'",
+          "actual": "{\"ok\":true,\"verb\":\"record-set\",\"started\":\"2026-11-01 04:09:46\",\"elapsed_ms\":440,\"error\":null,\"refused\":false,\"output\":[\"record-set READ nod||CE_CVL_SUITE_PROJECT/PROJECT_DATA|C:\\\\ce_rc_drv\\\\CLDV304075...",
+          "evidence": "'DMGBROKEN2A4' is absent from: {\"ok\":true,\"verb\":\"record-set\",\"started\":\"2026-11-01 04:09:46\",\"elapsed_ms\":440,\"error\":null,\"refused\":false,\"output\":[\"record-set READ nod||CE_CVL_SUITE_PROJEC..."
+        },
+        {
+          "n": 6,
+          "text": "history count \"[CE] Not saved to the CE record (CE's own record save): the CE record in this drawing could not be read, so CE does not save over it.\" = 2",
+          "ok": false,
+          "expected": "2 line(s) with '[CE] Not saved to the CE record (CE's own record save): the CE record in this drawing could not be read, so CE does not save over it.'",
+          "actual": "1",
+          "evidence": "command line holds 1 line(s) containing '[CE] Not saved to the CE record (CE's own record save): the CE record in this drawing could not be read, so CE does not save over it.' (expected 2)"
+        },
+        {
+          "n": 7,
+          "text": "history count \"[CE] CDREBUILD complete:\" = 3",
+          "ok": true,
+          "expected": "3 line(s) with '[CE] CDREBUILD complete:'",
+          "actual": "3",
+          "evidence": "command line holds 3 line(s) containing '[CE] CDREBUILD complete:' (expected 3)"
+        },
+        {
+          "n": 8,
+          "text": "log civil has \"[ProjectData] The CE record in this drawing exists but could not be read (it may have been written by a newer CE). CE will not save over it; the original stays in the drawing.\"",
+          "ok": true,
+          "expected": "civil log has '[ProjectData] The CE record in this drawing exists but could not be read (it may have been written by a newer CE). CE will not save over it; the original stays in the drawing.'",
+          "actual": "1",
+          "evidence": "log: '2026-11-01 04:08:47.419 [WARN] [ProjectData] The CE record in this drawing exists but could not be read (it may have been written by a newer CE). CE will not save over it; the original stays in the drawing.'"
+        },
+        {
+          "n": 9,
+          "text": "record $u_a \"FULL what U (a) showed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: U | LINE | Command: | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL what U (a) showed = Command: | Command: U | LINE | Command: | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 10,
+          "text": "record $u_c \"FULL what U (c) showed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: U | CDREBUILD | Command: | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL what U (c) showed = Command: | Command: U | CDREBUILD | Command: | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 11,
+          "text": "record $u_d \"FULL what U (d) showed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "[CE] After Undo, CE could not re-read its pit and pipe records from this drawing. Save, close and reopen the drawing before relying on the pit schedule or calculations. | Command: U | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL what U (d) showed = [CE] After Undo, CE could not re-read its pit and pipe records from this drawing. Save, close and reopen the drawing before relying on the pit schedule or calculations. | Command: U | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 12,
+          "text": "record $redo_e \"FULL what REDO (e) showed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: REDO | Command: | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL what REDO (e) showed = Command: | Command: REDO | Command: | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 13,
+          "text": "record $u_g \"FULL what U (g) showed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: U | CDREBUILD | Command: | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL what U (g) showed = Command: | Command: U | CDREBUILD | Command: | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 14,
+          "text": "record $u_h \"FULL what U (h) showed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "[CE] After Undo, CE could not re-read its pit and pipe records from this drawing. Save, close and reopen the drawing before relying on the pit schedule or calculations. | Command: U | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL what U (h) showed = [CE] After Undo, CE could not re-read its pit and pipe records from this drawing. Save, close and reopen the drawing before relying on the pit schedule or calculations. | Command: U | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 15,
+          "text": "record $civlog \"FULL civil log lines since the case began\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "2026-11-01 04:08:40.716 [ERROR] Failed to load project data from DWG: JsonReaderException: Unexpected character encountered while parsing value: D. Path '', line 0, position 0. | 2026-11-01 04:08:40.716 [WARN] Project data was not reloaded after Undo/Redo because the embedded record could not be read; CE will try once more when AutoCAD is idle. | 2026-11-01 04:08:40.716 [WARN] Project data could not be refreshed after U; reopen CDEDIT before relying on schedule values. | 2026-11-01 04:08:40.727 [INFO] [PERF] LinkService.CacheExistingPitPositions: 10.6 ms count=1034 | 2026-11-01 04:08:40.738 [INFO] [PERF] LinkService.CacheExistingSourcePositions: 11.2 ms count=1034 | 2026-11-01 04:08:40.755 [INFO] [PERF] LinkService.CacheExistingBreaklineAnchors: 17.2 ms count=1034 | 2026-11-01 04:08:40.755 [INFO] [PERF] LinkService.RebuildRuntimeCaches: 39.3 ms trigger=undo/redo | 2026-11-01 04:08:40.780 [ERROR] Failed to load project data from DWG: JsonReaderException: Unexpected character encountered while parsing value: D. Path '', line 0, position 0. | 2026-11-01 04:08:40.780 [WARN] Project data still could not be re-read after Undo/Redo. | 2026-11-01 04:08:43.760 [INFO] [REDO] Automatic Project QA waits for the next command so REDO stays available (after U / REDO nothing is read through a transaction). | 2026-11-01 04:08:47.418 [ERROR] Failed to load project data from DWG: JsonReaderException: Unexpected character encountered while parsing value: D. Path '', line 0, position 0. | 2026-11-01 04:08:47.419 [WARN] [ProjectData] The CE record in this drawing exists but could not be read (it may have been written by a newer CE). CE will not save over it; the original stays in the drawing. | 2026-11-01 04:08:47.424 [WARN] [ProjectData] CE's own record save: not written, because the CE record in this drawing could not be read; the original is kept (BUG-971). | 2026-11-01 04:08:47.427 [INFO] Project data switched to: C:\\Users\\TimothyBrand\\AppData\\Roaming\\TIM_CE_CADTOOLS\\projects\\CD_ProjectData_CLDV30407531_B1_2f92cf63.json | 2026-11-01 04:08:47.441 [INFO] [PERF] ProjectDataService.EnsureDrawingDataCurrent.ReconcileOrphanedHandlesByPosition: 0.6 ms | 2026-11-01 04:08:47.442 [INFO] [PERF] ProjectDataService.EnsureDrawingDataCurrent.Snapshot: 0.7 ms | 2026-11-01 04:08:47.443 [INFO] [PERF] ProjectDataService.EnsureDrawingDataCurrent.SyncWithDrawingCore: 0.9 ms | 2026-11-01 04:08:47.592 [INFO] Pipe endpoints updated: 1091A0 from=AGI to= | 2026-11-01 04:08:47.654 [INFO] Pipe endpoints updated: 1091E0 from=TG1 to= | 2026-11-01 04:08:47.732 [INFO] Pipe endpoints updated: 109359 from= to=X1 | 2026-11-01 04:08:47.800 [INFO] Pipe endpoints updated: 109390 from=X1 to= | 2026-11-01 04:08:48.034 [INFO] Pipe endpoints updated: 1094BE from= to=STUB | 2026-11-01 04:08:48.104 [INFO] Pipe endpoints updated: 109500 from=STUB to=X1 | 2026-11-01 04:08:48.173 [INFO] Pipe endpoints updated: 109835 from=P2 to=P1 | 2026-11-01 04:08:48.239 [INFO] Pipe endpoints updated: 109874 from=WT12 to=P2 | 2026-11-01 04:08:48.557 [INFO] Pipe endpoints updated: 109A30 from=WT1 to=P2 | 2026-11-01 04:08:48.617 [INFO] Pipe endpoints updated: 109B80 from= to=WT2 | 2026-11-01 04:08:48.688 [INFO] Pipe endpoints updated: 109BBC from=WT2 to=P2 | 2026-11-01 04:08:48.750 [INFO] Pipe endpoints updated: 109C15 from= to=WT11 | 2026-11-01 04:08:48.812 [INFO] Pipe endpoints updated: 109C55 from=WT11 to=P2 | 2026-11-01 04:08:48.937 [INFO] Pipe endpoints updated: 109E23 from=P3 to=P2 | 2026-11-01 04:08:48.984 [INFO] Pipe endpoints updated: 109E6D from=WT10 to=IO8 | 2026-11-01 04:08:49.024 [INFO] Pipe endpoints updated: 109ED4 from=IO8 to=P3 | 2026-11-01 04:08:49.143 [INFO] Pipe endpoints updated: 10A1D4 from= to=WT5 | 2026-11-01 04:08:49.205 [INFO] Pipe endpoints updated: 10A243 from=WT5 to=P6 | 2026-11-01 04:08:49.573 [INFO] Pipe endpoints updated: 10A86B from= to=WT9 | 2026-11-01 04:08:49.640 [INFO] Pipe endpoints updated: 10A899 from= to=WT8 | 2026-11-01 04:08:49.699 [INFO] Pipe endpoints updated: 10...",
+          "evidence": "RECORDED, not judged: FULL civil log lines since the case began = 2026-11-01 04:08:40.716 [ERROR] Failed to load project data from DWG: JsonReaderException: Unexpected character encountered while parsing value: D. Path '', line 0, position 0. | 2026-11-01 04:08:40.716 [WARN] Project data was not reloaded after Undo/Redo because the embedded record could not be read; CE will try once more when AutoCAD is idle. | 2026-11-01 04:08:40.716 [WARN] Project data could not be refreshed after U; reopen CDEDIT before relying on schedule values. | 2026-11-01 04:08:40.727 [INFO] [PERF] LinkService.CacheExistingPitPositions: 10.6 ms count=1034 | 2026-11-01 04:08:40.738 [INFO] [PERF] LinkService.CacheExistingSourcePositions: 11.2 ms count=1034 | 2026-11-01 04:08:40.755 [INFO] [PERF] LinkService.CacheExistingBreaklineAnchors: 17.2 ms count=1034 | 2026-11-01 04:08:40.755 [INFO] [PERF] LinkService.RebuildRuntimeCaches: 39.3 ms trigger=undo/redo | 2026-11-01 04:08:40.780 [ERROR] Failed to load project data from DWG: JsonReaderException: Unexpected character encountered while parsing value: D. Path '', line 0, position 0. | 2026-11-01 04:08:40.780 [WARN] Project data still could not be re-read after Undo/Redo. | 2026-11-01 04:08:43.760 [INFO] [REDO] Automatic Project QA waits for the next command so REDO stays available (after U / REDO nothing is read through a transaction). | 2026-11-01 04:08:47.418 [ERROR] Failed to load project data from DWG: JsonReaderException: Unexpected character encountered while parsing value: D. Path '', line 0, position 0. | 2026-11-01 04:08:47.419 [WARN] [ProjectData] The CE record in this drawing exists but could not be read (it may have been written by a newer CE). CE will not save over it; the original stays in the drawing. | 2026-11-01 04:08:47.424 [WARN] [ProjectData] CE's own record save: not written, because the CE record in this drawing could not be read; the original is kept (BUG-971). | 2026-11-01 04:08:47.427 [INFO] Project data switched to: C:\\Users\\TimothyBrand\\AppData\\Roaming\\TIM_CE_CADTOOLS\\projects\\CD_ProjectData_CLDV30407531_B1_2f92cf63.json | 2026-11-01 04:08:47.441 [INFO] [PERF] ProjectDataService.EnsureDrawingDataCurrent.ReconcileOrphanedHandlesByPosition: 0.6 ms | 2026-11-01 04:08:47.442 [INFO] [PERF] ProjectDataService.EnsureDrawingDataCurrent.Snapshot: 0.7 ms | 2026-11-01 04:08:47.443 [INFO] [PERF] ProjectDataService.EnsureDrawingDataCurrent.SyncWithDrawingCore: 0.9 ms | 2026-11-01 04:08:47.592 [INFO] Pipe endpoints updated: 1091A0 from=AGI to= | 2026-11-01 04:08:47.654 [INFO] Pipe endpoints updated: 1091E0 from=TG1 to= | 2026-11-01 04:08:47.732 [INFO] Pipe endpoints updated: 109359 from= to=X1 | 2026-11-01 04:08:47.800 [INFO] Pipe endpoints updated: 109390 from=X1 to= | 2026-11-01 04:08:48.034 [INFO] Pipe endpoints updated: 1094BE from= to=STUB | 2026-11-01 04:08:48.104 [INFO] Pipe endpoints updated: 109500 from=STUB to=X1 | 2026-11-01 04:08:48.173 [INFO] Pipe endpoints updated: 109835 from=P2 to=P1 | 2026-11-01 04:08:48.239 [INFO] Pipe endpoints updated: 109874 from=WT12 to=P2 | 2026-11-01 04:08:48.557 [INFO] Pipe endpoints updated: 109A30 from=WT1 to=P2 | 2026-11-01 04:08:48.617 [INFO] Pipe endpoints updated: 109B80 from= to=WT2 | 2026-11-01 04:08:48.688 [INFO] Pipe endpoints updated: 109BBC from=WT2 to=P2 | 2026-11-01 04:08:48.750 [INFO] Pipe endpoints updated: 109C15 from= to=WT11 | 2026-11-01 04:08:48.812 [INFO] Pipe endpoints updated: 109C55 from=WT11 to=P2 | 2026-11-01 04:08:48.937 [INFO] Pipe endpoints updated: 109E23 from=P3 to=P2 | 2026-11-01 04:08:48.984 [INFO] Pipe endpoints updated: 109E6D from=WT10 to=IO8 | 2026-11-01 04:08:49.024 [INFO] Pipe endpoints updated: 109ED4 from=IO8 to=P3 | 2026-11-01 04:08:49.143 [INFO] Pipe endpoints updated: 10A1D4 from= to=WT5 | 2026-11-01 04:08:49.205 [INFO] Pipe endpoints updated: 10A243 from=WT5 to=P6 | 2026-11-01 04:08:49.573 [INFO] Pipe endpoints updated: 10A86B from= to=WT9 | 2026-11-01 04:08:49.640 [INFO] Pipe endpoints updated: 10A899 from= to=WT8 | 2026-11-01 04:08:49.699 [INFO] Pipe endpoints updated: 10..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 240 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDREBUILD completed 8165 ms ; Command outcome: CDREBUILD completed 82 ms ; Command outcome: CDREBUILD completed 48 ms"
+      ],
+      "error": null,
+      "finished": "2026-11-01 04:09:50",
+      "session_id": "RUN-20261101-0407-C3.0.88-w1952a-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}

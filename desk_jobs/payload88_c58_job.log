@@ -1,0 +1,12 @@
+The C-58 candidate is built and verified, and nothing is installed or AutoCAD-tested.
+
+- **Candidate:** `C:\ce_rc_scratch\c1054` (Civil 828 files, Manager 75).
+- **Manifests:** civil verified 828, bad 0, extra 0; manager verified 75, bad 0, extra 0. Added and removed files versus installed: 0 for both.
+- **Version commit:** `33ef049e` on `claude/rel-20261020l`, fast-forward from `95fa0153`; the pre-push diff was 4 files, 4 insertions, 4 deletions.
+- **Tests:** Civil 41/41, Manager 51/51.
+- **Strings proof:** 126/126 rows as expected.
+- **Settings and installed DLLs:** Tim's four settings files and the six installed DLL hashes are identical before and after.
+- **New Settings key:** `doubleClick.sourceEditWindow`, default true.
+- **Odd:** the installer build wrote another archive under `C:\Lisp Files\SUPERSEDED` (left in place). No Installer change from #1492 appeared in this range.
+
+Report: `C:\Lisp Files\_TEST_COPIES_20260923\PAYLOAD_C1054_REPORT.md`

@@ -1,0 +1,218 @@
+{
+  "header": {
+    "run_id": "RUN-20261101-0403-C3.0.88-w1892a",
+    "started": "2026-11-01 04:03:15",
+    "finished": "2026-11-01 04:05:26",
+    "build": {
+      "civil": {
+        "product_version": "3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+        "file_version": "3.0.88.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+        "file_version": "1.1.88.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.88+3fbb9da5 / struc 1.0.125+204dfad2 / mgr 1.1.88+3fbb9da5",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "1F9DFCEDFC3C2BC0F4E186D43BBF603905EBD0BAD2BAEFB7ED4E674004F5D3F1",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+      "Driver files (SHA-256, first 12): v2 F4D8F40C3675 (expected F4D8F40C3675), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4B0175FFAB00, v3 session F061E3240C47, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 BBF42DBA8958, case_runner_lib.ps1 89AD455619F8, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 1 shared setup(s); pack SHA-256 1F9DFCEDFC3C2BC0F4E186D43BBF603905EBD0BAD2BAEFB7ED4E674004F5D3F1; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json D604CE689671 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sun 01 Nov 2026 04:03 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 0,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 1,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261101-0403-C3.0.88-w1892a-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-11-01 04:03:16",
+      "finished": "2026-11-01 04:05:26",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV30403201_B1.dwg",
+      "cases": [
+        "W1892"
+      ],
+      "whatsnew_dismissed_at_start": "no, window was not there",
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : D604CE689671 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "W1892",
+      "proves_bugs": "BUG-1141",
+      "title": "One unreadable pit link record is skipped and named once at U; the other pits still load; the damaged record is left exactly as it is",
+      "kind": "deterministic",
+      "order": 910,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "C-79b1",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed. Written 1 Nov 2026 from the PR",
+      "variant_of": "",
+      "expected": "The damaged PIT_LINK record on pit 109D56 reads back as DMGBROKEN2A4 after the setup and still after two LINE + U rounds. The command line holds exactly one line starting '[CE] The CE link record on one pit (drawing handle 109D56, at ' and ending 'could not be read, so CE skipped it and loaded the rest. That pit may not drag its pipes when it is moved; its record has been left as it is.' The Civil log holds exactly one '[Link] BUG-1141: pit 109D56 has a link record that cannot be read; skipped by the cache rebuild and left as it is.' No other pit is named. MOVE of pit P2 says '1 found' and nothing names P2.",
+      "why_not_unit": "The unit test reads ten records in memory; only AutoCAD runs the real rebuild at U over every pit in a real drawing and writes to the real command line.",
+      "not_automated": [
+        "SEEN by Codex: after the MOVE of pit P2 (109768) by 0,2000 its pipe end(s) follow the pit (the robot cannot read a CE pipe object's points). Also SEEN: pit P3 itself is not dragged on a MOVE (the PR says every other reader still reads as before, so the damaged pit stays undragged until repaired)."
+      ],
+      "file_sha256": "13107A7C6414238A57728BE8EB9B9B74A29BE6AC706E3C41F5EB2C5D51EA7C72",
+      "result": "BLOCKED",
+      "blocked": "AutoCAD busy",
+      "first_failure": null,
+      "started": "2026-11-01 04:04:00",
+      "seconds": 68.5,
+      "setup": "SETUP-DMG-LINKS",
+      "setup_note": "shared setup SETUP-DMG-LINKS run here for the first time at 04:04:03",
+      "steps": [
+        {
+          "n": 1,
+          "phase": "setup",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "copy CLDV30403201_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "setup",
+          "verb": "v3",
+          "text": "v3 record-set ent 109D56 -Part CE_CVL_SUITE_LINKS/PIT_LINK -To READ -> $dmg_links_before",
+          "ok": true,
+          "seconds": 0.6,
+          "evidence": "v3 record-set ent 109D56: record-set READ ent|109D56|CE_CVL_SUITE_LINKS/PIT_LINK|C:\\ce_rc_drv\\CLDV30403201_B1.dwg : 2 group(s), 288 characters, starts: {\"PitHandle\":\"109D56\",\"Pipes\":[{\"PipeHandle\":\"109E23\",\"EndIndex\":0},{\"PipeHandle\":\"109ED4\",\"En..."
+        },
+        {
+          "n": 3,
+          "phase": "setup",
+          "verb": "v3",
+          "text": "v3 record-set ent 109D56 -Part CE_CVL_SUITE_LINKS/PIT_LINK -To DMGBROKEN2A4 -> $dmg_links_write",
+          "ok": true,
+          "seconds": 0.5,
+          "evidence": "v3 record-set ent 109D56: record-set WRITE ent|109D56|CE_CVL_SUITE_LINKS/PIT_LINK|C:\\ce_rc_drv\\CLDV30403201_B1.dwg : was 288 characters, now 12, read back equal; nothing saved (the test copy is not written to disk)"
+        },
+        {
+          "n": 4,
+          "phase": "setup",
+          "verb": "v3",
+          "text": "v3 record-set ent 109D56 -Part CE_CVL_SUITE_LINKS/PIT_LINK -To READ -> $dmg_links_after",
+          "ok": true,
+          "seconds": 0.5,
+          "evidence": "v3 record-set ent 109D56: record-set READ ent|109D56|CE_CVL_SUITE_LINKS/PIT_LINK|C:\\ce_rc_drv\\CLDV30403201_B1.dwg : 1 group(s), 12 characters, starts: DMGBROKEN2A4"
+        },
+        {
+          "n": 5,
+          "phase": "setup",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 6,
+          "phase": "setup",
+          "verb": "ms-count",
+          "text": "ms-count -> $n0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.LINE{NL}190000,-95000{NL}191000,-95000\" -Force -> $line1",
+          "ok": true,
+          "seconds": 6.6,
+          "evidence": "typed '_.LINE 190000,-95000 191000,-95000': Command: | Command: _.LINE | Specify first point: 190000,-95000 | Specify next point or [Undo]: 191000,-95000 | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) b..."
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": false,
+          "seconds": 32.1,
+          "evidence": "wait for idle: AutoCAD still busy after 30 s. "
+        }
+      ],
+      "assertions": [],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 0 new line(s) while the case ran, 0 with [ERR]",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=True)"
+      ],
+      "error": null,
+      "finished": "2026-11-01 04:05:08",
+      "session_id": "RUN-20261101-0403-C3.0.88-w1892a-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+**GO.** Train C-51 (`claude/rel-20261020e`) is signed off at `ec358f0bcfcacbd8c3b3936eb6741b2e246de9e5`. I made no changes to the train, and Manager does not need to ship.
+
+1. **Tests:** whole solution 0 errors.
+   - Civil: 18,888 of 18,909 pass. Glen Eira is the known failure. A PDF test also failed, then passed when re-run on the same build; its file is not in this train.
+   - Manager: 824 of 824. Civil net48: 217 of 218 (the known stub failure).
+2. **#1484 (border fix):** the new tests fail on the old rule, so they test the fix.
+3. **Installer:** #1475 is not on this train, so the signed-update check is untouched.
+4. **Held:** BUG-141 is not FIXED until it is tested in AutoCAD. The fixed "2x" size number goes to the Settings page later.
+
+Report and log entries are pushed to CE_PLAN.

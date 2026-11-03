@@ -1,0 +1,7 @@
+**FOR TIM:** No twin PR was opened for B-068 (BUG-467). The Structural line (rel-20261026s, 1.0.125) already has the fix, from the earlier job HUNT-S-02 (#879). BT1, AB, BB, R1 Point, FPFC and FSF already convert clicks from a rotated UCS to World. The Civil-line PR #1883 differs only by adding a Settings switch, which I did not copy over. #1885 and #1886 (B-065) already exist as Structural twins, so I did not repeat them.
+
+My own mistake: I started a cherry-pick before reading the code, and it conflicted in every file. I aborted it and the branch is unchanged. The checklist for you in AutoCAD is in the report, and nothing has been seen in AutoCAD yet.
+
+Report: C:\CE_PLAN\areas\BUGFIX_p15_REPORT_30OCT.md, pushed.
+
+**Summary:** No PR was opened. No files changed and no switch was added, and I ran no dotnet builds or tests. The settings listings before and after were identical.

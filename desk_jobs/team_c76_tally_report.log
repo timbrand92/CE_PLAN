@@ -1,0 +1,9 @@
+The report is written and pushed, and the push left no commits ahead of origin. The leak-scan was clean.
+
+- **Fixes:** BUG-859 (R09s), BUG-372 (R22) and BUG-1228 (N36) all work on 3.0.86 in the robot's AutoCAD. Each control with its switch off failed on the expected checks. The one wrinkle is that N36 missed its limits on its first start (1617 ms read, DP 11.3 s) and passed the next two.
+- **Re-test:** 64 of 66 cases have two clean PASS starts. R08 (known mouse-focus fault) never ran. R21 is the known B-055 fault, not a C-76 regression.
+- **N32:** one clean start so far, plus its second PASS in b80X5b.
+- **N33 and R09:** N33 has two passes. R09 was blocked twice, so R09s stands in for it.
+- **Not in the report:** the CD_RecentValues "before" hash was never recorded, and b80X5a session 2 raised a settings-guard ALARM that CE 02 should confirm is clear. The R09s drafts were edited at 16:33, before the chain started, so their hashes differ from the job text.
+
+BUG-090 still needs the Codex look. No bug is marked FIXED.

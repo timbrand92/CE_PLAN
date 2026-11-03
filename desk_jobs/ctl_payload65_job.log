@@ -1,0 +1,17 @@
+The C-33 install candidate (Civil 3.0.48 and Manager 1.1.48) is built and checked. It is not installed, and nobody has opened it in AutoCAD.
+
+- **Head sha:** `92ec2c00a12bd6d327b08fe3a25f2387f71327cd` on `origin/claude/rel-20261009z`. It is one version-only commit (4 files) on top of the signed-off `ef4e8f94`, pushed before the build. Local HEAD equals origin and the worktree is clean.
+- **Candidate:** `C:\ce_rc_scratch\c1034\` holds the Civil bundle (822 files) and the Manager bundle (78 files).
+- **Verify line:** `civil: manifest 822 files, verified 822, bad 0, extra 0` and `manager: manifest 78 files, verified 78, bad 0, extra 0`.
+- **Versions:** all three lanes read `3.0.48+92ec2c00` for Civil and `1.1.48+92ec2c00` for Manager. `PackageContents` shows `AppVersion` 3.0.48 and 1.1.48. Installed is still 3.0.47 and 1.1.47.
+- **Tests (net10):** Civil 37 of 37 and Manager 51 of 51, run through the relaxed gate. No version pin test named a 3.0.47 or 1.1.47 literal.
+- **CE_SHARED:** identical between the Civil and Manager bundles in all lanes. It differs from the installed one by about 112 to 113 bytes per lane, which is the build stamp and commit id only.
+- **Natives, registry and council profiles:** the native C++ diff since `660487d1` was empty, so the three native files are the installed bytes. `command-registry.json` and `council-profiles.json` match the installed ones.
+- **Stale-build proof:** five new type names from different PRs, 26 of the 27 searched Settings keys, `numberAttributeLayer` (#1090) and two new Manager sentences are present in the candidate and absent from the installed 3.0.47 DLLs. The Manager gate passed with 0 errors.
+
+**Odd things**
+1. **Structural settings hash:** `CE_STRUC_SUITE\CS_Settings.json` is now `D661AF90…` at 33,817 bytes, not the `5A8C447A…` 33,198 bytes in the brief. It was already like that at my first snapshot (last written 00:27) and did not change during my run. `CD_Settings.json` is unchanged and matches `ACD64E79…3140`, as does the TIM_CE_CADTOOLS `CS_Settings.json`.
+2. **#1090 refusal sentence:** the "Pit not inserted - layer … is locked" wording is already in the installed 3.0.47, so it does not prove the new build. `numberAttributeLayer` does.
+3. **Wider JSON hash:** 29 differences, all telemetry and session files from a running AutoCAD. No settings file is involved.
+
+The full report is `C:\Lisp Files\_TEST_COPIES_20260923\PAYLOAD_C1034_REPORT.md`.

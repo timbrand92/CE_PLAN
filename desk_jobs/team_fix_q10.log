@@ -1,0 +1,10 @@
+**B-153, q10:** draft PR **#1986** is open against `claude/rel-20261026s`, and the report is pushed. Nobody has run BP in AutoCAD, and BUG-536 is not marked fixed.
+
+- **Fault check:** BP already follows the diameter. There is only one pier block, `450DIABPV2`, and it holds the 300, 450 and 600 sizes. The real fault was a silent 450 fallback when Settings holds a size the block lacks.
+- **Fix:** BP now prints one warning line and still draws. Switch: `FootingWidth.BoredPierBlockFollowsDiameter`, ON.
+- **Files:** `UserSettings.cs`, `BoredPierDiameterChoice.cs`, `FoundationService.cs`, `REGRESSION_LOG.md`, one new test file.
+- **Tests:** 28 ran, 0 failed. net48 compile has 0 errors.
+- **Isolation flag:** real AutoCAD log files changed during the run. A live AutoCAD session was already running, so I believe those writes aren't mine, but I haven't proven it.
+- **Cleanup:** I lost the exact free-space figure from before cleanup.
+
+Report: `C:\CE_PLAN\areas\BUGFIX_q10_REPORT_01NOV.md`.

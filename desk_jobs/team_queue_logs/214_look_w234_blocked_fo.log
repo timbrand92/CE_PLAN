@@ -1,0 +1,24 @@
+I wrote the brief to `C:\CE_PLAN\areas\LOOKBRIEF_W234_BLOCKED_CASES_02NOV.md`. Verdict: ready for CE 02 to copy, but nothing in it has been run or seen on screen. The banned-word search now finds zero matches. The first search found one use, which I fixed.
+
+It holds five Codex looks in three short AutoCAD sessions. Session 3 needs a GO.
+
+- **W234-01 (BUG-234):** place the four pits, draw the flat pipe, click OK on Design Warnings by mouse, and MOVE the pipe onto P93 and P94. Read "Flow: P93 -> P94" in Edit Pipe and the log, then Undo.
+- **W234-01c (control):** a 5 m MOVE that stops short of both pits, so the flow line should not name them. Codex cannot reproduce BUG-234's actual old fault, because I found no switch or older build for it.
+- **W234-02:** "Show grade in pipe text" turned off behind More… (case N35).
+- **W234-03 (BUG-859):** Edit source, type DP7, Accept (case N42s).
+- **W234-04:** the "Use recent…" buttons in New Pipe (cases N30/N45).
+- **W234-05:** Profiles Apply draws one long section, and one Undo removes it (case N55).
+
+W234-02 to W234-05 are my additions beyond W234 itself.
+
+The facts I couldn't find are marked NOT FOUND in the brief:
+
+- **Flat-pipe warning words:** the Design Warnings text for a flat pipe isn't in the files I read.
+- **W234-05 values:** the route, the Datum RL and the insertion point are chosen by me and marked that way.
+- **Handle by `LIST`:** this is an unproven route for getting the pipe's handle.
+- **Button captions:** several come from the robot cases, not from the screen.
+- **Undo result in W234-01:** what Undo restores is derived, because the original case never read it.
+
+The file also holds the three launch lines, with `verifyW234_c88`, `verifyW234b_c88` and `verifyW234c_c88` free in the runner folder. It lists the 16 blocked-case groups I found and which I skipped or left to other briefs. K1_09 (PR #1881), K1_12 to K1_15 and K07/K08 are not covered anywhere I could find. I left them out for lack of facts or because they sit outside this job's causes.
+
+The brief says "copy word for word" for rules N1–N17, D1–D12 and changes (a)–(i) from `verifyA78c_c88_full.txt`. I didn't paste them in, so CE 02 needs to assemble them as for batch A.

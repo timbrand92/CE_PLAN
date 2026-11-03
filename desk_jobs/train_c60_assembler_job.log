@@ -1,0 +1,10 @@
+I merged both PRs into `claude/rel-20261022m` (head `037b9311`, pushed). I checked that both merges' file lists match the PRs' own.
+
+1. **Merged:** #1520 at live head `9daa061d` (Opus's fix is in) and #1517 at live head `440b13fa`. Neither clashed, not even `REGRESSION_LOG.md`.
+2. **Scope:** nothing changed under Shared, Installer or Manager. No Settings keys were added. `doubleClick.sourceEditWindow` stays ON and `checks.allowIgnoreFinding` stays OFF.
+3. **Build:** whole solution has 0 errors.
+4. **Civil net10:** 19,154 tests, 1 failed. The failure is the known Glen Eira back-test.
+5. **Civil net48 focused:** 348 of 348 passed, including the command-count guard (146).
+6. **Not run:** Manager tests, since Manager is unchanged.
+7. **Checks:** AutoCAD was closed during the runs. Tim's four settings files are unchanged.
+8. **Clean-up:** worktree and temp folders removed. The report is pushed to `C:\CE_PLAN`.

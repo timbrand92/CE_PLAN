@@ -12,3 +12,5 @@ CONTROL ROOM HOURLY CHECK (CE 00; desk plan/03; see C:\CE_PLAN\areas\CE_SESSIONS
 4. WAKE the other sessions by SendMessage so each recreates its own check-in (rule 11): CE 01 (local_2214c743-c21c-477e-a02b-f94537c38188), CE 02 (local_cd568cde-a11d-47bb-8f0b-50d431e0bd09), CE 07 (local_1c1741bd-d338-4eb4-94ab-2c7351d13092). Idle sessions (CE 03, 04, 05, 10) need nothing.
 
 5. Facts to keep true: STOP_CHAIN.flag (CE 01, 16:37) pauses lanes; remove before chain_install_c76. HOLD_ROBOT.flag stays until Tim says AutoCAD is free or after 17:30. Team 5-hour window resets 20:00; CE 01 restarts the lane chains at the payload report or 20:00. CE 02 starts no new Team jobs until then.
+
+6. UPDATE Fri 30 Oct 06:33: the hourly check is now cron d918bfd6 (replaced a237450e). Its prompt adds Rule 15 (AutoCAD occupancy, breach = fix first then tell Tim) and Rule 16 (accepted of 40 = union of Tim's hand acceptance and the robot route). Recreate it from the Rule 14, 15 and 16 text in areas\CE_SESSIONS_MAP_29OCT.md plus section 1 above if it is gone.

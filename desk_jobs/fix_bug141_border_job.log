@@ -1,0 +1,6 @@
+PR #1484 is open as a draft against `claude/rel-20261020d`. Head is `01fb0b2a`. Built and unit-tested only: no AutoCAD run, and BUG-141 is not marked FIXED.
+
+- **Rule:** the frame must be more than twice the window each way (the 2× number is still hard-coded, not on the Settings page) and either surround the window or hold the pipe's start and the window's centre. It sits under the existing `tidyIgnoresSheetFrame` switch, ON. No new switch or number. The #1483 log reason follows the new rule.
+- **Tests:** red first, 6 failed on the old rule. `Bug141SheetFrameTests` now 25 (11 new, using the run-36 numbers). The focused set is 128/128 on net10; the net48 build has 0 errors.
+- **Not covered:** the "SC" text obstacle. Tim's settings files are unchanged. REVIEWLANE log entry 1419 is pushed.
+- **Leftover:** `C:\ce-hunt\fxb141` is an empty locked folder. The worktree was removed from git, but the folder itself would not delete.

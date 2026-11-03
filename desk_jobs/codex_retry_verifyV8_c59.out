@@ -1,0 +1,6 @@
+== verifyV8_c59 (usage 19.0% -> 19.0%): AUTOCAD STILL RUNNING
+
+1. **Report:** [V8 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_V8_20261022_1506.md>).
+2. **Results:** 2 PASS, 1 DIFFERENT, 1 NOT TESTED; 0 FAIL/BLOCKED. SURE 3, UNSURE 1. V8-02 could not start after both QUIT attempts.
+3. **Settings:** All four hashes unchanged; autosave restored. acad.exe remains running; lock retained.
+4. **Saved copies:** `LKV8_XSRC_M.dwg`, `LKV8_XSRC_Z.dwg`. No `_PRE_C7_` backups. Fixtures wanted: none.

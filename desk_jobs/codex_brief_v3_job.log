@@ -1,0 +1,8 @@
+I've written both Codex briefs, added section 9 to the queue plan, and written the launcher. Nothing was run, built or started. Written about 22:35 Melbourne.
+
+1. **Finding for the desk:** V3-02 can't be done through the Civil Settings (CDS) window. The C-56 source has no step-iron depth box in CDS or Manager. The brief changes the value in `CD_Settings.json` through the settings guard instead. This is the ruling for the desk's call (not Tim): add a box, or keep this route. It restores to the start hash.
+2. **Guard risks:** the guard may refuse to add a missing `oldStartingValuesMoved` key. CE rewriting the file on close may also force one `settings-restore -Force`.
+3. **Pushed:** `launch_codex_v3.ps1` is on CE_PLAN main. The queue plan and briefs sit outside any repo.
+4. **Not in the brief:** BUG-416, BUG-852, BUG-834, Manager administrator work.
+
+Files are in `C:\Lisp Files\_CODEX_RUNNER` (`verifyV3_c56.txt` and `_full.txt`, plus `QUEUE_20OCT_PLAN.md`) and `C:\CE_PLAN\desk_jobs`.

@@ -1,0 +1,14 @@
+Train C-58 is assembled and pushed as `claude/rel-20261020l` at `2e63cc7a`. It merges 3 of the 4 PRs: #1511, #1512 and #1499. #1514 was skipped because its live head is `57259b24`, not the `b18a07e9` named in its review entry.
+
+- **Merge conflicts:** only `REGRESSION_LOG.md` clashed (on #1499), and I kept both sides.
+- **Shared and Manager:** no merged PR touches `Shared/` or Manager, so Manager does not need to ship with this train.
+- **Build and tests:**
+  - Whole solution builds with 0 errors.
+  - Civil net10 ran 19,068 tests with 1 failure, the known Glen Eira one.
+  - Manager passes 837 of 837. Its first runs showed 8 reds, but those came from my test log folder being outside Temp.
+  - Civil net48 focused passes 178 of 178.
+- **Switches:** `layerChecks.wrongLayerRows` is OFF. `doubleClick.sourceEditWindow` is ON on purpose, since Tim asked for it.
+- **Tim's settings files:** all four unchanged.
+- **Also in the report:** I probably overwrote `hash.sh` and `hash_before.txt` in `C:\ce-asm`.
+
+The report is pushed to `C:\CE_PLAN`, and the worktree and scratch files are removed.

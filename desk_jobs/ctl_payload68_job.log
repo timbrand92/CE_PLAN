@@ -1,0 +1,18 @@
+The C-39 install candidate is built and verified. Nothing is installed, and nobody has opened it in AutoCAD.
+
+1. **Branch head:** `d36f9545e1de00f9c48bd90e8cec0206269a65c2` on `claude/rel-20261010e`. It is one version-only commit (4 files) on top of the signed-off `4005e321`. Local head equals origin, the worktree is clean, and the leak scan found nothing.
+2. **Candidate:** `C:\ce_rc_scratch\c1036\` holds `CE_CVL_SUITE.bundle` (822 files) and `CE_SUITE_MANAGER.bundle` (78 files).
+3. **Verify line:** `civil: manifest 822 files, verified 822, bad 0, extra 0` and `manager: manifest 78 files, verified 78, bad 0, extra 0`.
+4. **Versions:** all three lanes read Civil `3.0.50+d36f9545` and Manager `1.1.50+d36f9545`. `PackageContents.xml` matches. The installed bundles are 3.0.49 and 1.1.49.
+5. **Tests (net10):** Civil 37 of 37 (the three pin and redo-guard sets) and Manager 51 of 51. The brief said "20 of 20 or the finalizer's figure". The finalizer report gives no figure for this set, and 37 matches payload 67.
+6. **Builds:** Civil installer build and Manager release gate (78 files) both passed, with no retired stub.
+7. **CE_SHARED:** identical between the Civil and Manager bundles in all lanes. It differs from the installed 3.0.49 one only in the build stamp (114 or 115 bytes, first at offset 136).
+8. **Unchanged from installed:** `command-registry.json` and `council-profiles.json`, and the three native files (their sources are unchanged since `660487d1`).
+9. **Strings:** the new Settings members and keys (the five new switches plus `MinimumCoverForChecks`) are present in all three Civil lanes and absent from the installed 3.0.49. All five switches default to OFF in the source.
+10. **Tim's settings and the installed DLLs:** unchanged before and after. `CD_Settings.json` is still `ACD64E79…3140`.
+
+**Odd:**
+- **Wait for the compiler:** my unit tests waited about 2 h 20 min for another job's hung Structural testhost, which the controller killed at 00:50. The builds had already finished.
+- **Two fixes without a new string:** the BUG-560 fix and the Manager BUG-452 fix only add calls to names that already exist in the installed build. A string search can't prove them, but the DLL hashes do differ.
+
+Report: `C:\Lisp Files\_TEST_COPIES_20260923\PAYLOAD_C1036_REPORT.md`

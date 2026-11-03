@@ -1,0 +1,9 @@
+== cx_lf10 (usage 28.0% -> 34.0%): 1. **DONE:** BUG-918’s remaining update promise corrected in draft [PR #1672](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1672). BUG-919–922 skipped: covered by #1534.
+
+2. **Verified:** six new cases fail before and pass after; 15/15 focused. Civil: 19,429 passed, 22 skipped. Manager: 921 passed, 1 skipped. Zero failed cases; six builds, zero errors. Civil cleanup warning remains recorded.
+
+3. **Saved and pushed:** [report](C:/CE_PLAN/areas/CODEX_LEDGER_FIX_BATCH10_23OCT.md). Nothing installed. AutoCAD check blocked: no command uses this message yet.
+
+---
+
+4. **Handoff:** `cx2/bug-918-update-promise` @ `8b3a1e09fb414b28f3efd5a7836e8b3bbf66197c`.

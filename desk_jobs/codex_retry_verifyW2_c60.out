@@ -1,0 +1,4 @@
+== verifyW2_c60 (usage 3.0% -> 3.0%): 1. **W2 results:** 1 PASS, 1 FAIL, 1 BLOCKED, 1 NOT TESTED; 0 DIFFERENT. SURE 4, UNSURE 0.
+2. **Findings:** Cell marking passed. BUG-817 remains: untouched open-close adds a `PITSCHEDULE` undo step. Delete cell was blocked; FROM needs a suitable fixture.
+3. **Clean end:** AutoCAD closed, lock released, settings unchanged and test DWG unchanged.
+4. **Report:** [W2 verification report](<C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_W2_20261023_0551.md>).

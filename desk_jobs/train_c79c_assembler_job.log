@@ -1,0 +1,17 @@
+**C-79c is assembled and pushed.** All 9 PRs are merged on `claude/rel-20261112a`, head `a98e782325eb1e08ea084a33d488140b5db61d48`, read back with `git ls-remote`. The report and changed-files list are pushed to `C:\CE_PLAN` (commit `97901f2e`). Nothing was opened in AutoCAD, installed or deployed.
+
+- **Base and PRs:** the base `d4ce878e` was unchanged, and all nine PR heads matched the job text.
+- **PRs merged:** #1941, #1942, #1881, #1975, #1976, #1977, #1978, #1979 and #1980, each as its branch. #1881's merge showed exactly its own 10 files and 3 commits, so I merged it rather than cherry-picking.
+- **Civil net10 full run:** 22,703 tests, 22,671 passed, 32 skipped, 0 failed. The real-settings guard ran inside it and passed. The robot's settings guard file was absent before and after that run.
+- **Manager full run:** 1,152 tests, 1,150 passed, 2 skipped, 0 failed. No Manager, Shared, installer or loader file changed.
+- **Civil net48 focused run:** 2,116 tests, 14 failed. Two were the stale test pins below, and they pass after a rebuild. The other 12 are the known AutoCAD-type-outside-AutoCAD kind. Eight of those are in classes outside the C-79b2 finalizer's filter, so I could not compare them by name against its list.
+- **Hygiene checks:** no byte-order mark was lost, `REGRESSION_LOG.md` has 0 conflict-marker lines, and the new settings' summary comment lines are intact.
+- **New test class:** `C79cNewSwitchDefaultsTests` pins the ten new switches (all ON) and the five Pit Schedule figures through both start-up reads. All 31 tests pass.
+
+Mistakes, as the report says them:
+- **Change-log merges:** my first two change-log merges kept git's base copy as well, giving stray markers and duplicated text. I caught it on the third merge, discarded the local unpushed merges and redid all nine. Nothing wrong was pushed.
+- **Test pins:** two source-shape test pins failed only with #1979 and #1980 together. I repaired the test text only, with no product code change, and noted it in the change log.
+
+**#1975 and the retest class:** it uses the existing tidy step that runs after every pit MOVE. That step already opens a transaction and moves label text, but never on a locked layer or hand-placed text. No added line writes to an Xref, a locked layer or a REFEDIT object. I recommend the FULL retest class, with the robot checks listed in the report.
+
+Isolation stamps: Tim's `CD_Settings.json` was the robot's changed copy at the start and the 4 Oct original at the end, which is the robot's own restore, not my tests. `CS_Settings.json` is unchanged. The outbox grew by 39 files. I read the 11:28 burst and it came from the robot's installed plugin, but I did not read all 39.

@@ -1,0 +1,6 @@
+== verifyC3_c86 (usage 20.0% -> 21.0%): AUTOCAD CLOSED
+
+1. **Results:** 2 PASS, 1 DIFFERENT, 1 SEEN. No FAIL, BLOCKED or NOT TESTED; all four SURE.
+2. **Observed:** Send and layout Analyse markups showed ÔÇ£Nothing was sent.ÔÇØ X-Civil offered no AI extraction, but its closing words differed. PDF route untested.
+3. **Clean end:** Settings unchanged, drawings unsaved, lock released. No fixtures missing.
+4. **Report:** [C3 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_C3_20261030_0913.md>).

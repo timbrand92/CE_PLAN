@@ -1,0 +1,7 @@
+== cx_fa04 (usage 59.0% -> 60.0%): 1. **BLOCKED — all three fixes require protected Installer files.** RD08-01..03 remain present as BUG-1064..1066. No eligible Civil/Manager repair.
+
+2. **Saved and pushed:** draft [PR #1714](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1714), branch `cx4/fa04-rd08-desk`, tip `fe99515f`. Routing record only.
+
+3. **Report:** [FA04 findings and checks](C:/CE_PLAN/areas/CODEX_FIXAUDIT_FA04_23OCT.md), pushed to CE_PLAN. Worktree removed.
+
+4. **Tests:** 0 added, 0 run. No builds, AutoCAD, settings changes or deployment. Protected-owner repair options and exact checks are recorded.

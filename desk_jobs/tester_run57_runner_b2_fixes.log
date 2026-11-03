@@ -1,0 +1,10 @@
+The report is pushed (commit 701fe7d8) and `git status -sb` shows no "ahead". Every case passed in two separate sessions and each red variant failed as it should.
+
+1. **Build:** the installed build is Civil 3.0.75, Manager 1.1.75, Structural 1.0.123, not 3.0.74. Everything ran on 3.0.75.
+2. **R23, R12, R19b:** R23 now checks that CE says it will not unlock the layer. R12 measures the invert texts back exactly after U. R19b has a red variant.
+3. **R28:** the old "Select a CE pit block." refusal was the case's own fault: the pit was outside the view. With a zoom first, the pick works and a Profiles window opens.
+4. **R15, R16, R17, R20:** re-passed twice each, files unchanged. The runner printed ACCEPTED-READY for each.
+5. **Pit Schedule:** the IL and cover cells can be read as text. R38 already does this, so I wrote no new case.
+6. **Needs fresh review files:** R12, R23, R28 and R19b.
+
+Settings files are restored and no AutoCAD is left running. I did not edit any `review.txt`, the ledger, `DESK_LOG.md` or `BUG_CARPARK.md`.

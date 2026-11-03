@@ -1,0 +1,8 @@
+== verifyX2_c60 (usage 8.0% -> 9.0%): 
+== verifyX2_c60 (usage 9.0% -> 10.0%): 1. **Results:** 1 PASS, 2 BLOCKED; no established FAILs. C2 appeared correctly in FROM. Both selection readings were inconclusive because the prescribed Esc keys cleared the selection.
+
+2. **Builds:** Civil 3.0.71, Manager 1.1.71, Structural 1.0.122. SURE 1; UNSURE 2.
+
+3. **Clean end:** AutoCAD closed, lock released, all four settings hashes unchanged.
+
+4. **Report:** [X2 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_X2_20261023_1627.md>). Evidence limitations and follow-up steps are recorded.

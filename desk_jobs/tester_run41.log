@@ -1,0 +1,15 @@
+**BUG-856 passes in AutoCAD: the Tidy labels preview now names the pipe.** The run has 12 PASS, 0 FAIL, 0 BLOCKED and 1 UNPROVEN, on installed Civil 3.0.65 / Manager 1.1.65. The report is committed and pushed (b97ef851).
+
+1. **Open end:** the preview line reads "pipe P8 -> open end start invert text would move 275 mm (further out)." I ran Tidy labels All with debug logging OFF, on a new pit P8 and a 20 m pipe with one pit and an open end.
+2. **Open start:** a second pipe from an open point into P8 reads "pipe open end -> P8 start invert text would move 275 mm (further out)." The counts are unchanged at 0 · 0 · 1 with P3 -> P2 as the only "No clear spot".
+3. **The one UNPROVEN:** the old Drawing Border line with `tidyIgnoresSheetFrame` OFF. CE reads that switch at start-up, so my mid-session change did nothing and the check needs its own launch with the switch set before it. That was my planning slip.
+4. **Notes on regressions that otherwise pass:**
+   - Recover Inverts reads 22 already had text rather than 20, because I ran it after adding two pipes.
+   - On the Edit Pipe cascade, "Everything has been redone" was not captured on the CDEDIT REDO. A LISP count of the IL texts shows the new levels back, so the redo worked.
+   - After CDSYNC one P8 cell changed from "18.000" to "18.00", and the Pit Schedule header went from 95 to 97 data issues.
+5. **Settings restore proof:** both `quit` calls printed restored_verified. I read the four real settings files after the last `quit`: ACD64E79A33B, 622A246F7D3B, F68EEB5E343C and EFE307C4FC74, all equal to the expected hashes, and `debugLogging` is back to false.
+6. **Driver and versions:** driver hashes 120EE24D15B2 and 5B542F2145F4 are unchanged, and installed versions read 3.0.65 / 1.1.65.
+7. **Copies for the desk to delete in `C:\ce_rc_drv`:** CLD411_B1.dwg, CLD411_B1_PRE_C7_20261020_200618.dwg, CLD421_B1.dwg and CLD421_B1_PRE_C7_20261020_202235.dwg.
+
+AUTOCAD CLOSED
+SETTINGS RESTORED

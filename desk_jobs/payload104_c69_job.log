@@ -1,0 +1,13 @@
+The C-69 install candidate is built and proved, and the report is written last as required. I did not install anything.
+
+- **Candidate:** `C:\ce_rc_scratch\c1065`. The number was free, so no other was used.
+- **Verification:** Civil `verified 828, bad 0, extra 0`; Manager `verified 75, bad 0, extra 0`. The Manager guard passed at exactly 75 files.
+- **Branch head:** `claude/rel-20261026t` at `d3f9c5df` (version commit on top of the signed `e7009af1`). The commit changed exactly the 4 version files.
+- **Tests:** all 41 + 89 + 18 + 136 selected tests ran with 0 failed. The 3 skips are `C60AuditSourcePinGuardTests` markers.
+- **Installed line:** C-68, Civil 3.0.78 and Manager 1.1.78, both on commit `d8840a09`.
+- **String proof:** 813 rows, 0 not as expected.
+- **Odd:** #1781 adds no new name. Its two strings already exist in installed, so I proved it by method signatures read from the DLLs.
+
+Tim's settings files and the six installed DLLs are identical before and after. AutoCAD was open for hours, so the builds and tests waited for gaps.
+
+The report is `C:\Lisp Files\_TEST_COPIES_20260923\PAYLOAD_C1065_REPORT.md`, with the evidence in `PAYLOAD_C1065_evidence` beside it.

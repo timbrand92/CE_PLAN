@@ -1,0 +1,9 @@
+== verifyH4_c85 (usage 18.0% -> 19.0%): AUTOCAD CLOSED
+
+1. **BLOCKED:** The pit cover stayed blank after the permitted retype. Drawing Repair and Fix it were not reached; BUG-1180 remains unverified.
+
+2. **Build:** Civil 3.0.86 / Manager 1.1.86 / Structural 1.0.125.
+
+3. **Results:** BLOCKED 1, SURE 1. All other result counts 0; no FAILs. All four settings files unchanged; lock released; nothing saved. No missing fixtures.
+
+4. **Report:** [H4 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_H4_20261030_0820.md>).

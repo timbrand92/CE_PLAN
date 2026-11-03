@@ -1,0 +1,11 @@
+== cx_bd18 (usage 30.0% -> 33.0%): 1. **BUG-1182 — DONE:** [Draft PR #1800](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1800). Built and tested; AutoCAD and the Manager window were not run.
+
+---
+
+2. **Branch head:** `a20ea384bc2a172f643bfa1db9fef80ffedb4ec2`.
+
+3. **Red → green:** expected `CIVIL-ONLY-NOTE`, received `MANAGER-ONLY-NOTE`; afterwards all 36 focused checks passed.
+
+4. **Full totals:** before 1,041: 1,040 passed, 1 skipped, 0 failed. After 1,077: 1,076 passed, 1 skipped, 0 failed. All three builds: zero errors.
+
+5. **Saved and pushed:** [report](C:/CE_PLAN/areas/CODEX_BUILD_BD18_26OCT.md). Working copy removed.

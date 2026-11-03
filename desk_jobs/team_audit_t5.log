@@ -1,0 +1,25 @@
+## FOR TIM
+
+**Answer first:** the hand copy itself is sound. Putting the two CE folders into Max's own AutoCAD plug-ins folder needs no administrator rights. But the handover is not ready.
+
+1. **Checklist:** of 30 things that must be true before you hand it over, **6 are met, 14 are not met, and 10 are unknown** (mostly about Max's PC).
+2. **Worst new problem:** if an old CE Civil was ever installed for all users on Max's PC, CE takes its pit blocks from that old copy first. PIT would quietly put last year's pit block on his first job. Removing that old copy needs an administrator.
+3. **Second:** Civil looks for the office OneDrive folders in only one place. If Max's OneDrive sets them up differently, his CDFEEDBACK reports stay on his PC and his job time never reaches the office. You would hear about no bugs in his first week.
+4. **Third:** the install has never been rehearsed on a normal (non-administrator) login. The package is also not yet locked to the exact files that were tested (BUG-885).
+5. **What to do the week before:** have someone look at Max's PC for three things:
+   - any old CE folders,
+   - his AutoCAD year,
+   - where OneDrive puts "Creative Engineering - Drafting".
+
+**The report** is at `C:\CE_PLAN\areas\TEAM_AUDIT_T5_24OCT.md` and is saved to the plan. It has 14 new findings (6 medium, 8 low, none high) and a top-ten risk list with job examples.
+
+**Not tested:** nothing was run in AutoCAD, installed or built. Every finding comes from reading the code.
+
+---
+
+1. **Reviewers:** three Opus reviewers did part of the code reading. I re-checked their main claims in the code myself, and downgraded one that turned out to overlap the known BUG-165.
+2. **Slip:** one reviewer listed the folder names in your installed plug-ins folder, which the brief said not to touch. It opened no file and changed nothing. This is recorded in the report.
+3. **Clean-up:** my two read-only worktrees were removed. The plan repository is pushed and shows no "ahead".
+4. **Not mine:** another job's change to `ledger.json` is still sitting in the plan repository. I didn't touch it.
+
+**Summary:** Hand-copying Civil 3.0.72 and Manager 1.1.72 needs no administrator rights. The checklist stands at 6 met, 14 not met and 10 unknown, with 14 new findings (6 medium, 8 low). The top risks are an old all-users CE copy supplying the pit blocks, Civil looking for the office folders in only one place, and an unrehearsed, unsealed install. Max's AutoCAD year, any old CE copies and his OneDrive layout need checking before 9 Nov. Report pushed to `C:\CE_PLAN\areas\TEAM_AUDIT_T5_24OCT.md`.

@@ -1,0 +1,6 @@
+== verifyE12_cur (usage 74.0% -> 76.0%): AUTOCAD CLOSED
+
+1. **NOT STARTED:** Native screen access is disabled; the required Explorer screenshot could not be obtained. All seven looks are **NOT TESTED**.
+2. **Installed:** Civil 3.0.80, Manager 1.1.80, Structural 1.0.124.
+3. **Safe end:** Lock released. No settings or drawings changed. No failures judged.
+4. **Report:** [E12 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_E12_20261027_0148.md>).

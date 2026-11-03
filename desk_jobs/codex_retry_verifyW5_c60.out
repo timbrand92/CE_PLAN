@@ -1,0 +1,7 @@
+== verifyW5_c60 (usage 5.0% -> 5.0%): 1. **W5 results:** 3 PASS, 1 FAIL, 1 DIFFERENT, 1 BLOCKED; 0 NOT TESTED result lines. SURE 6, UNSURE 0. [Report](<C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_W5_20261023_0820.md>).
+
+2. **Findings:** CDCALC left an Undo step. Pump System lacked the read-only banner, although both sampled calculators rejected typing. Selection retention remains blocked: the clicked finding was not a drawing object. That look needs a specified selectable finding.
+
+3. **Installed:** Civil 3.0.70, Manager 1.1.70, Structural 1.0.121.
+
+4. **Cleanup verified:** AutoCAD closed; lock released; SAVETIME restored; all four settings hashes unchanged. Source and test-copy DWGs remain unchanged.

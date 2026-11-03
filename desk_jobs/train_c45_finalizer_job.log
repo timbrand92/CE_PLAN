@@ -1,0 +1,12 @@
+**FOR TIM**
+
+Train C-45 is **GO**. Final head: `a72ab578089608dec9b92b514a7aef1c5ea517e3`. It is built and unit-tested only; nobody has opened it in AutoCAD.
+
+1. **Reviewed:** the three new PRs, #1436, #1437 and #1438, are all fine to keep. #1438 ships switched off. Nothing was reverted.
+2. **Changed:** CDTWL keeps offering the same top water level as today. The new "highest obvert" default stays off until you say which pipe counts as "the highest" detention pipe. I also fixed 18 failing tests on the older test lane.
+3. **Tests:** whole solution 0 errors. Civil 18,800 run, 1 failure (the known Glen Eira one). Manager 757 of 757. Civil older lane 758 pass, 0 fail.
+4. **Manager:** it must ship with this train.
+
+---
+
+The report and review-log entries 1269 to 1278 (sign-off included) are pushed to C:\CE_PLAN.

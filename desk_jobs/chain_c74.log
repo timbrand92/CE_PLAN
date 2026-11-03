@@ -1,0 +1,9 @@
+Wed 08:56 chain start: C-74 (Civil + Manager, one bug-fix PR #1830, BUG-1225 reopened drawing loads its own record); nothing is installed by this chain.
+Wed 08:56 starting train_c74_assembler_job.txt (sonnet)
+Wed 10:36 finished train_c74_assembler_job.txt
+Wed 10:36 starting train_c74_finalizer_job.txt (opus)
+Wed 12:09 finished train_c74_finalizer_job.txt
+Wed 12:09 C-74 finalizer verdict GO and C-73 installed: building payload 110 (candidate c1070). Nothing is installed by this chain.
+Wed 12:09 starting payload110_c74_job.txt (sonnet)
+Wed 12:42 finished payload110_c74_job.txt
+Wed 12:42 chain complete

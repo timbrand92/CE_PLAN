@@ -1,0 +1,5 @@
+== verifyF2_cur (usage 78.0% -> 80.0%): AUTOCAD STILL RUNNING
+
+1. **BLOCKED:** Unexpected command input prevented verification. Pit Schedule: **0 tested; 1 blocked, 1 not tested**. SURE 1 / UNSURE 1.
+2. **Safe state:** Four settings hashes unchanged. Test drawing not saved. Driver reported lock released. Final AutoCAD PID: **99852**, not launched by this run.
+3. **Report:** [F2 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_F2_20261027_0226.md>). No FAIL verdicts; no fixtures missing.

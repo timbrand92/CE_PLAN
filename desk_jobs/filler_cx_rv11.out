@@ -1,0 +1,7 @@
+== cx_rv11 (usage 8.0% -> 10.0%): 1. **DONE.** Reviewed all 15 PRs: **2 HOLD, 13 MERGE-WITH-FIXES**. One new MEDIUM fault: #1120 can make footing labels 100 times too tall.
+
+2. **Report:** [CODEX_PR_REVIEW_GROUP11_24OCT.md](C:/CE_PLAN/areas/CODEX_PR_REVIEW_GROUP11_24OCT.md), saved and pushed.
+
+---
+
+1. **Commit:** `8f80dcb2`. Leak scan passed. No code changes, builds, tests or AutoCAD sessions.

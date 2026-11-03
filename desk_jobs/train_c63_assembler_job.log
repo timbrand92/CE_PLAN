@@ -1,0 +1,13 @@
+C-63 is assembled on `claude/rel-20261024m` at `28987b73`, pushed, with the report pushed to `C:\CE_PLAN`. All 28 listed PRs merged at their reference heads, with no clashes needing a code decision; #1706 is left out.
+
+- **Version:** untouched. The versions are not bumped.
+- **Installer:** #1648 changes it (5 files).
+- **Settings:** three new switches, all ON by default.
+- **Build:** whole solution 0 errors; Installer and its tests compiled, not run.
+- **Civil net10:** 19,803 tests, 0 failed.
+- **Manager net10:** 950 tests, 0 failed.
+- **Civil net48 (focused):** only the 17 known reference-only reds.
+- **REDO baseline:** 25 of 25 pass.
+- **Disk guard:** it deletes build outputs under `C:\ce-*`. I moved my builds to `C:\asm63\w` and have removed my worktrees and temp folders.
+
+The report is `release-v3-colleagues-TRAIN_C63_ASSEMBLY_REPORT_2026-10-24.md` in `C:\CE_PLAN\areas`.

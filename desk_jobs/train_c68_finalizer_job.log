@@ -1,0 +1,38 @@
+Report and log pushed to `C:\CE_PLAN` (`3f284ca7`). Train branch still at `73dda759`; nothing is running.
+
+**FOR TIM**
+
+1. **Verdict: GO** for update C-68 (Civil 3.0.78 / Manager 1.1.78 once the next step stamps it). Final version: `73dda759c9352c00496fe26b7c1b88dec2dc24d3`.
+2. **Mistake first:** I lost about 1.5 hours waiting for disk space. My own build filled C: down to 6.4 GB free, which also paused the Codex lane. At 03:38 something else freed about 50 GB. I deleted nothing.
+3. **What this update fixes (BUG-861):** REDO was being lost after the first click in a freshly opened drawing.
+   - Now, after a U, clicking pit P3 leaves the Inspector saying "Selection changing — actions paused."
+   - Type REDO and it says "Everything has been redone".
+   - Type REGEN and the Inspector shows P3. If it says "Nothing selected", click P3 again.
+4. **Status:** it builds and the automated checks pass. It is not installed, and nobody has run it in AutoCAD. The cause of the lost REDO is still unknown: this change makes the Inspector wait until it is safe, rather than curing the cause. Not marked FIXED.
+5. **Your questions for the Monday session (full wording in the report):**
+   - **(a)** The computations-sheet sentence (#1771).
+   - **(b)** The detached survey XREF (#1756).
+   - **(c)** Bind versus detach of a stage drawing (#1767).
+   - **(d)** Should the waiting Inspector also say "Shown after your next command, so REDO stays available."? I recommend yes.
+   - **(e) to (g)** are unchanged from last time.
+
+   All three PRs from (a) to (c) stay out until you answer.
+
+---
+
+**Summary:** GO at `73dda759`.
+
+- **What I changed:** one test file (`C68NewSwitchDefaultsTests`), which checks the new switch defaults to ON. No product code changed.
+- **Review of the fix:** I read #1779 in full. Both review fixes are really in the code, and it is safe for REDO in both Inspector layouts.
+- **One new low-priority finding:** a diagnostic line still runs when the switch is OFF. So the switch-OFF test run is the old behaviour plus that line, not exactly the old behaviour.
+- **Settings default:** ON, because the old behaviour is the bug.
+- **Tests:**
+  - Civil net10: 20,380 run, 0 failed.
+  - Manager: 1,013 run, 0 failed.
+  - Civil net48: the same 51 known failures as before, which come from the stand-in AutoCAD files used for testing; nothing new.
+  - REDO safety check: 25 of 25 pass.
+  - Settings window: fits at 670 px.
+  - Manager release build: the 75-file check passed.
+- **Untouched:** Shared, Installer and Manager code.
+
+Held: #1771, #1756, #1767 and #1706, plus the AutoCAD proof runs still owed.

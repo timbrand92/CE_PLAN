@@ -1,0 +1,11 @@
+**FOR TIM:** The job is only partly finished. R04, R11, R13 and R19 each passed twice on Civil 3.0.78 with a failing twin. Civil 3.0.79 landed about 17:00 mid-job, so those passes count as the older build.
+
+- **3.0.79 (one pass each):** R14, R21, R26 and R13 each passed once. R14 includes the raised-freeboard cases.
+- **Real faults:** R22 fails the same way on both builds (BUG-372). R09 failed twice on 3.0.78 (BUG-859: CE catches the double-click, but AutoCAD's own attribute editor still opens first). R09 and R11 are blocked on 3.0.79 by robot faults, and R19 and R04 were never run there.
+- **R24:** not run. No drawing genuinely saved in metres exists on this PC.
+- **What cut it short:** Codex held the AutoCAD lock for about 100 minutes, which blocked one whole pack. My background runner then hit its 2-hour limit; I did not restart it.
+- **Left behind:** no AutoCAD of mine is running, and Tim's four settings files read back at their expected hashes. I removed my own stale lock file.
+
+The report is `C:\CE_PLAN\areas\release-v3-colleagues-RUNNER_B5_FIXES_REPORT.md`. It is pushed, and the last merge and push left `git status -sb` with no "ahead" (two unrelated modified files remain).
+
+**Summary:** On 3.0.78, R04, R11, R13 and R19 passed twice with failing twins. R09 and R22 fail as real faults. On 3.0.79, R14, R21, R26 and R13 passed once. R09 and R11 on 3.0.79 were blocked by robot faults, Codex held the lock for 100 minutes, and the runner hit its time limit. R24 was not run because no genuine metre drawing exists. No bug status changed.

@@ -1,0 +1,13 @@
+The C-70 branch is built, tested and pushed, and the report is pushed to `C:\CE_PLAN` (commit `ded5c2b2`). Nobody has run #1798 in AutoCAD.
+
+- **Branch:** `claude/rel-20261026u`, head `f2c1bf81`, on the C-69 tip `d3f9c5df`, which carries the 3.0.79 / 1.1.79 version commit.
+- **#1798:** merged, and its head did not move since the reference. Only `REGRESSION_LOG.md` clashed, and I kept both sides.
+- **Scope:** Shared, Installer and Manager are untouched, so Manager 1.1.80 will be a re-stamp. The `diag.redo` group adds fifteen keys, all default off.
+- **Build:** the whole solution builds with 0 errors on net48, net8 and net10.
+- **Tests:**
+  - Civil net10 passes: 20,514 total, 0 failed.
+  - Manager net10 passes: 1,041 total, 0 failed.
+  - Civil net48 has the same 55 reference-only reds as C-69.
+  - The 35 new `Bug861DiagSwitchesTests` pass on both.
+- **AutoCAD:** it was open during the test runs; I never touched it.
+- **Settings files:** unchanged.

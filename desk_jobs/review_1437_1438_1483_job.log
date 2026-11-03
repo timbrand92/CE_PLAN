@@ -1,0 +1,20 @@
+**FOR TIM**
+
+1. **#1437 (same-plan break asks the real length first): MERGE.** The new commit only fixes how two tests find their files. You will see no change in AutoCAD.
+2. **#1438 (CDSURVEY reads multi-line text and LEVEL/ELEV tags): MERGE. The medium problem is fixed.** Both survey readers now find the same levels. It still ships switched OFF.
+3. **#1483 (log says why "Drawing Border" stays an obstacle): MERGE WITH FIXES. It is not ready as it is.**
+   - It writes its line only when CDDEBUG is on. Run 35 didn't turn it on, so it would have logged nothing.
+   - It leaves out the layer.
+   - It can't explain "SC", because "SC" is a piece of text, not a block.
+4. **Order for C-50:** #1437, then #1438, then #1483 after its fixes. All three sit on branches that are already installed.
+5. **Nothing marked FIXED:** BUG-683, 709 and 141.
+
+---
+
+1. **Live heads:** they match the brief: f5e5472a, bccc9ca5 and 596b8c5c.
+2. **Builds:** I built a trial C-50 (d25cefa8 plus the three PRs), with 0 errors on net10 and net48.
+3. **Tests:** the three PR test classes passed 42 of 42. The wider filter passed 336 of 336.
+4. **Fixes for a Sonnet fixer on #1483:** the exact steps are in REVIEWLANE_LOG entry 1406.
+5. **Hygiene:** Tim's settings files are unchanged and the worktree is removed. The log entries are 1403 to 1409, pushed to CE_PLAN as 9e23d766.
+
+**Summary:** #1437 MERGE. #1438 MERGE, the MEDIUM is cured and it ships OFF. #1483 MERGE-WITH-FIXES: it needs a CDDEBUG step, it needs the layer, and it doesn't cover "SC". Tests: trial C-50 built 0 errors on net10 and net48, 42/42 in the PR classes, 336/336 in the wider filter.

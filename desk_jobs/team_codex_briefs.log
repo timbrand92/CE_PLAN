@@ -1,0 +1,9 @@
+The briefs are written and pushed. Codex's new reviews and builds will not start yet, because the desk's Codex supervisor (the script that feeds Codex jobs) needs a change I did not make. Nothing was run.
+
+- **Case reviews:** `cx_cr01`–`cx_cr20`, 20 briefs covering all 49 cases (I added R08).
+- **Looks:** `verifyE1_cur`–`verifyE12_cur`. They cover 38 of the 59 A2 bugs; the other 21 are listed with reasons in `E6_E12_A2_MAP.txt`.
+- **Builds:** `cx_bd09`–`cx_bd14`, one bug each.
+- **Cost:** 144 points against about 83 left, so most fixes won't run.
+- **Supervisor gap:** it only accepts `cx_rv`/`cx_bd` names, and it holds all reviews and builds while any look is waiting.
+
+Report: `C:\CE_PLAN\areas\release-v3-colleagues-CODEX_BRIEFS_26OCT_REPORT.md`

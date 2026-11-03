@@ -1,0 +1,7 @@
+== verifyX8_c60 (usage 57.0% -> 58.0%): 1. **DONE ÔÇö [X8 report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_X8_20261024_0045.md>).** Installed: Civil 3.0.72, Manager 1.1.72, Structural 1.0.122.
+
+2. **Faults confirmed.** BUG-1032 wording fails at all three volumes. BUG-1031: Delete cell absent in all three menus. Actual pipe name: **P6 ÔåÆ P5**.
+
+3. **Results.** FAIL 1, ABSENT 1, SEEN 1; PASS/DIFFERENT/BLOCKED/NOT TESTED 0. SURE 3, UNSURE 0. Fixtures wanted: none.
+
+4. **Clean end.** AutoCAD closed; lock released; all four settings hashes unchanged. Drawing copy unsaved and unchanged on disk.

@@ -1,0 +1,10 @@
+Run 36 is filed and pushed (commit dd615120). The leak-scan came back clean.
+
+1. **BUG-141:** I added the border cause, the SC text note as UNPROVEN, and a PASS for the pit half.
+2. **PASS notes:** BUG-820, BUG-854 and BUG-815 each got "run 36: PASS (20 Oct, 3.0.60)". Nothing is marked FIXED.
+3. **UNPROVEN:** BUG-709 and BUG-683.
+4. **Fix queue:** section 17 has one lane 04 line, the text-obstacle log line with no behaviour change. The report names no other real product problem, and I did not duplicate the border fix.
+5. **Robot gaps:** the run 36 section is added.
+6. **QUESTIONS_FOR_MONDAY.md:** nothing added, because the report raises no decision only Tim can make.
+
+No new bug ids. `DESK_LOG.md` was not edited.

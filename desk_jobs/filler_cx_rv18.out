@@ -1,0 +1,10 @@
+== cx_rv18 (usage 15.0% -> 16.0%): 1. **DONE:** Reviewed all 14 PRs. **HIGH 0 / MEDIUM 2 / LOW 0.** Biggest finding: #1661 displays a 10 m detention length as **10,000 m**.
+
+2. **Verdicts:** 8 MERGE, 3 MERGE-WITH-FIXES, 1 HOLD, 2 REJECT.
+
+3. **Saved and pushed:** [Findings report](C:/CE_PLAN/areas/CODEX_PR_REVIEW_GROUP18_24OCT.md).
+
+---
+
+1. **Evidence:** Verified by reading. No builds, tests or AutoCAD runs.
+2. **Commit:** `d9cf6a79` on CE_PLAN `main`; remote verified and leak scan clean. Only the findings file changed.

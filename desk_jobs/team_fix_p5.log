@@ -1,0 +1,9 @@
+Both fixes are open as draft PRs and the report is pushed. Neither has been opened in AutoCAD, and neither bug is marked fixed.
+
+1. **BUG-625 (Level Update), PR #1885.** Level Update (LMU) now changes only the number of a real CE level mark (FFL, RL, SSL, NGL). Ordinary notes in the selection are left alone and counted on the command line. Switch: `LevelUpdateOnlyChangesCeLevelMarks`, ON by default, with a tick box on the Annotation tab. The approved Preview and Apply step is not built.
+2. **BUG-1183 (pier schedule rows), PR #1886.** After whole rows of the Bored Pier Schedule are swapped, STRSCHEDSYNC matches each row to its own pier. Switch: `PierSyncChecksRowIdentity`, ON by default.
+3. **Tests.** 16 of 16 focused tests pass on net10 for BUG-625, and 47 of 47 on net10 and net48 for BUG-1183. The full suite and any AutoCAD run were not done, and my before and after listings show Tim's real settings files unchanged.
+4. **My mistake.** I first built BUG-625 on the branch the job named (`claude/rel-20261102a`) as PR #1879. That branch only holds a July copy of the Structural code (1.0.42). Both final PRs are on `claude/rel-20261026s` (1.0.125, the installed Structural line); I left #1879 open because I may not close PRs.
+5. **Where the report is.** `C:\CE_PLAN\areas\BUGFIX_p5_REPORT_30OCT.md`, with the FOR TIM block first and robot cases S21 and S22, each with a switch-off control.
+
+Both PR titles carry B-065.

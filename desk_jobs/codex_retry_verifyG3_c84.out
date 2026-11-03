@@ -1,0 +1,13 @@
+== verifyG3_c84 (usage 14.0% -> 14.0%): AUTOCAD CLOSED
+
+1. **NOT STARTED:** Gate 2.4 found `verifyG1b_c84` with no END after its 20:56 START. G3: **0 tested, 1 not tested**.
+2. **Installed:** Civil 3.0.86 / Manager 1.1.86 / Structural 1.0.125.
+3. **Safe finish:** Lock released; no settings changed. Explorer screenshot was readable and not saved because private locations were visible.
+4. **Report:** [G3 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_G3_20261030_0621.md>).
+== verifyG3_c84 (usage 15.0% -> 15.0%): AUTOCAD CLOSED
+
+1. **G3: PASS, SURE.** DP1 placed; the raingarden was closed and filled. One Undo removed only the raingarden.
+2. **RG LABEL: NONE.** No drawn RG1 text or attribute.
+3. **Clean end.** Settings unchanged, drawing unsaved, lock released. Versions: Civil 3.0.86 / Manager 1.1.86 / Structural 1.0.125.
+4. **Counts.** PASS 1; all other results 0. No FAILs.
+5. **[Report](<C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_G3_20261030_0645.md>)** includes screenshots and disclosed procedure deviations.

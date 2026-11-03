@@ -1,0 +1,27 @@
+## FOR TIM
+
+1. **The change is written but not compiled or tested.** Draft PR #1863 holds it. Other jobs used the PC's build slot all night (20:08 to 03:10), so I could not compile it or run its tests. A later job has to do both before anyone trusts it.
+2. **What it does once working:** when CDDESIGN, Run solve or network redesign picks a pipe size, it tries each size at the flattest fall that size is allowed. It goes up a size before it makes the pipe steeper.
+3. **Example (40 L/s UPVC connection pipe, 10 m):**
+   - **Before:** 100 mm at 1 in 3, falling 3.55 m.
+   - **After:** 225 mm at 1 in 100, falling 100 mm.
+   - **Why 1 in 100 and not your 1 in 200:** your guidebook ruling made 1 in 100 the flattest fall at every ordinary size.
+4. **Pipes 450 mm and larger:** no minimum fall is set for them yet, so CE sizes them at the fall the flow needs, the same as today.
+5. **Unchanged:** Edit Pipe's size-for-flow strip, Project Review pipe-size proposals, CDRULES and CDCHECK. These check the pipe you drew, and your ruling named only CDDESIGN and network redesign.
+6. **Your UPVC 3.0 m/s speed rule (R-01) does not reach this sizer.** CDDESIGN and network sizing use the general 6 m/s limit. Even at 3.0 m/s, 40 L/s would come out 150 mm at about 1 in 24, so that rule alone would not have fixed this.
+7. **Off switch:** `sizerStepsUpBeforeSteepGrade` in the settings file, then restart AutoCAD. It ships ON. There is no tick box on the Settings page yet.
+
+---
+
+**Technical detail**
+
+1. **PR:** #1863, draft, into `claude/gb01-slice1-falls` (guidebook slice 1). Slice 1 must merge first.
+2. **Cause:** `PipeSizingSolver.TrySize` returned the smallest size that worked at any grade. The line numbers were checked against the shipping release branch. On the slice 1 branch these files are the same apart from one comment line.
+3. **Change:** a new first pass in `TrySize`. Only `AutoDesignService` and both `NetworkDesignService` sizing calls switch it on. The two-argument call keeps the old search exactly.
+4. **Switch:** `designStandards.sizerStepsUpBeforeSteepGrade`, default ON. It is left out of the CDRULES fingerprint, so saved CDRULES runs do not go stale.
+5. **Report:** `C:\CE_PLAN\areas\release-v3-colleagues-BUG1088_FIX_REPORT.md`, pushed. It includes robot case `N88_sizer_grade` with control `C88`, which reads the Diameter and Grade lines in CDDESIGN's CONNECTION PIPE section.
+6. **Mistakes of my own:**
+   - My background waits hit the tool's 30-minute and 2-hour limits, so the wait restarted three times. No work was lost.
+   - My first version also switched Edit Pipe and Project Review sizing. I narrowed it before anything ran.
+
+**Summary:** B-020: draft PR #1863 (based on GB-01 slice 1) makes CDDESIGN and network sizing step up a pipe size before going steeper. Switch `designStandards.sizerStepsUpBeforeSteepGrade`, ON. Changed: `PipeSizingSolver.cs`, `AutoDesignService.cs`, `NetworkDesignService.cs`, `UserSettings.cs`, `RulebookValues.cs`. New: `SizerGradeLadderRule.cs`, `Bug1088SizerGradeLadderTests.cs`, plus a REGRESSION_LOG entry. Not compiled or tested: no build slot came free all night.

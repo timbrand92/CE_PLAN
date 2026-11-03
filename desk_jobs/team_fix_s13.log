@@ -1,0 +1,20 @@
+PR #1910 is open as a draft against `claude/rel-20261026s`, but it fixes only part of BUG-535. BUG-526 and BUG-533 were skipped.
+
+Nobody has opened it in AutoCAD. Not marked fixed.
+
+**What a drafter sees:** CESETTINGS Bracing page has two new boxes, "Longest wall brace before CE warns (mm)" and "Brace length when you press Enter (mm)". A new Footings page has the strip and beam footing widths. These four could only be changed by editing the file before.
+
+**Switch:** none, because the commands already read these values and nothing they draw changes.
+
+**Skipped:**
+- **BUG-526:** you need to mark which of the 29 Settings groups a drafter should change before rows can be added.
+- **BUG-533:** the entry says to fix it together with BUG-500 and BUG-496 (job record), not separately.
+- **Rest of BUG-535 (wind class steps, founding note wording, lintel values):** need the tab layout, the AS 2870 wording, and your ruling on the per-job lintel override.
+
+**Tests:** the 6 new tests pass, and 216 existing window tests passed with them, none failing. The net48 compile gave 0 errors. The full Structural suite was not run, as instructed.
+
+**Real-files check:** `CE_STRUC_SUITE`, `CE_CVL_SUITE\settings.json` and the Structural `CS_Settings.json` are unchanged. `CD_Settings.json` and several outbox, session and log files changed, but a robot AutoCAD (pid 38492) started at 04:09 and rewrote them. My tests only wrote under `C:\ce-scratch\s13`.
+
+The report is in `C:\CE_PLAN\areas\BUGFIX_s13_REPORT_31OCT.md` with both before and after file listings. It is committed and the push went through, but the last `git status -sb` I ran showed `main...origin/main` with two modified files and no ahead count; I didn't check whether anything else was left unpushed.
+
+**Summary:** PR #1910, B-089. Files: `CeSettingsDialog.xaml`, `CeSettingsDialog.xaml.cs`, `CeSettingsNumberBoxes.cs`, `REGRESSION_LOG.md`, `Bug535SettingsRowsTests.cs`. No switch.

@@ -1,0 +1,9 @@
+`C:\CE_PLAN\areas\ROBOT_CASE_DRAFTS_FIXES_316_323_03NOV.md` — DRAFTED, NOT RUN: six cases (three fixes, each with a must-fail twin: #2001 BUG-648, #2002 BUG-879, #2005 BUG-1046), orders 840 to 845. Nothing was built or tested, and none of the six PRs (#2000 to #2005) is in 3.0.89, b1 or b2.
+
+Five of the eight jobs get no case, each with its reason in the file.
+
+- **w806:** no command reaches the orifice detail code.
+- **w658 and w235:** no PR was opened.
+- **w958 and w1018:** the robot can't do them, so the file gives Codex steps.
+
+The brief's output path read `C:\CE_PLANreas`; I wrote to `C:\CE_PLAN\areas`.

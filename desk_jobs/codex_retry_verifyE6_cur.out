@@ -1,0 +1,6 @@
+== verifyE6_cur (usage 24.0% -> 25.0%): AUTOCAD CLOSED
+
+1. **Results:** PASS 2, FAIL 1, DIFFERENT 0, BLOCKED 0, NOT TESTED 1. SURE 4; UNSURE 0.
+2. **Finding:** About clips the AutoCAD row and hides Runtime (BUG-090). Versions agree; Feedback passes. WhatÔÇÖs New: no route found.
+3. **Clean end:** All four settings unchanged; lock released. FIXTURES WANTED: none.
+4. **Report:** [E6 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_E6_20261026_0913.md>).

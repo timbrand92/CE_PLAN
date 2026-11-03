@@ -1,0 +1,7 @@
+== cx_rv24 (usage 44.0% -> 47.0%): 1. **DONE — both MERGE-WITH-FIXES.** #1784 misses CDCALC and performs the new lookup while OFF. #1785 silently falls back for “not a number”.
+2. **Opus:** 2 agree, 0 disagree. The report discloses that Opus’s summary was exposed before the code read.
+3. **Decision:** none needed from Tim. No builds, tests or AutoCAD were run.
+
+---
+
+1. **Saved and pushed:** [Review report](C:/CE_PLAN/areas/CODEX_PR_REVIEW_cx_rv24.md), commit `211e1a4d`. Only the review file was committed. Leak scan passed; nothing remains ahead.

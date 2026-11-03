@@ -1,0 +1,7 @@
+== cx_rd25 (usage 20.0% -> 23.0%): 1. **DONE — HIGH 0 / MEDIUM 2 / LOW 1.** Biggest finding: release checks accept Civil without the file required by Copy Rotate and Move Rotate.
+
+2. **Report:** [CODEX_AUDIT2_RD25_24OCT.md](C:/CE_PLAN/areas/CODEX_AUDIT2_RD25_24OCT.md). Includes exact tests and smallest fixes. Verified by reading; no builds, tests or AutoCAD runs.
+
+---
+
+1. **Saved and pushed:** `382db0d8`. Leak scan passed; no commits ahead. Only the findings file committed. Audit worktree removed.

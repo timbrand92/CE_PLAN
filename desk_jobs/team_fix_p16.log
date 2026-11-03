@@ -1,0 +1,11 @@
+Draft PR #1896 is open for BUG-1218 and BUG-1220 (against `claude/rel-20261102a`). BUG-822 is not built. Help wording only, no switch. Built and unit-tested, not opened in AutoCAD. The report is pushed to `C:\CE_PLAN\areas\BUGFIX_p16_REPORT_30OCT.md`, with no ahead status.
+
+**Files:** `guide-content.js`, `REGRESSION_LOG.md`, and three Civil test files (a new `B074HelpWordingTests`, plus `HelpGuideCoverageTests` and the 81-to-83 card-count test).
+
+- **BUG-1220:** the Reverse Flow card now describes the Yes/No question and no longer promises a preview or Apply.
+- **BUG-1218:** Label Styles and Move Arrow now have Help cards, so searching either name finds a topic.
+- **BUG-822:** not built, because the cause is unknown and it isn't a wording fault. Question for CE 04: has Tim ever seen a docked "What's New" panel open by itself? The report has the full question.
+
+**Tests:** focused Civil tests 31 of 31 pass. The full Civil suite had 21,594 pass and 2 fail, both IL-shape tests unrelated to Help. I did not compare them with the base by name. The net48 compile has 0 errors. I did not run Manager tests.
+
+**Settings listings:** one file changed, `CD_RecentValues.json`. It fell inside my full-test window, but a robot AutoCAD session started at 23:13, so I can't prove which wrote it. `CD_Settings.json` is unchanged.

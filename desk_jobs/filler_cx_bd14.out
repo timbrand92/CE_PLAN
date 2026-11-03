@@ -1,0 +1,5 @@
+== cx_bd14 (usage 23.0% -> 25.0%): 1. **BUG-1181 — DONE, built and unit-tested.** Draft [PR #1799](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1799). Branch head: `e1172154bde5ca5730c856acc6127ff10e91b890`.
+
+2. **Proof.** Red: `HealthSummaryIsNotHealthy` returned “Healthy”; green: PASS. All 22 BUG-1181 checks pass. Full suite before: 1,013 total, 1,012 passed, 1 skipped; after: 1,035 total, 1,034 passed, 1 skipped. Zero failures. Three Manager builds: zero errors.
+
+3. **Saved and pushed.** [Report](C:/CE_PLAN/areas/CODEX_BUILD_BD14_26OCT.md). Working copy removed. AutoCAD and the live Manager window were not run.

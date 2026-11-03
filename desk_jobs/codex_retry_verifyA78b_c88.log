@@ -1,0 +1,12 @@
+Sun 14:22 claimed the lock as Codex-A78b
+Sun 14:22 try 1 starting verifyA78b_c88
+Sun 14:23 try 1 finished; report: CODEX_VERIFY_A78b_20261101_1423.md; first line: NOT STARTED: shared lock held by Codex-A78b; required owner Codex-A78; driver you_hold_it=false. AUTOCAD CLOSED
+Sun 14:24 claimed the lock as Codex-A78b
+Sun 14:25 try 2 starting verifyA78b_c88
+Sun 14:26 try 2 finished; report: CODEX_VERIFY_A78b_20261101_1425.md; first line: AUTOCAD CLOSED
+Sun 14:26 done
+Sun 14:50 STOP flag
+Sun 15:26 claimed the lock as Codex-A78b
+Sun 15:26 try 1 starting verifyA78b_c88
+Sun 15:38 try 1 finished; report: CODEX_VERIFY_A78b_20261101_1527.md; first line: AUTOCAD CLOSED
+Sun 15:38 done

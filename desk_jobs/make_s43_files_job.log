@@ -1,0 +1,11 @@
+Pushed; the status shows no "ahead" (the other modified files belong to other jobs).
+
+**S-43 job files are written, committed and pushed (nothing run or started).** In `C:\CE_PLAN\desk_jobs`:
+
+- `train_s43_assembler_job.txt` (Sonnet): branch `claude/rel-20261024s` from tip `e6d597c0`, merges #1695 to #1699.
+- `train_s43_finalizer_job.txt` (Opus): reviews each PR fully and drops any it judges HOLD.
+- `payload97_s43_job.txt` (Sonnet): candidate `s1041`, Structural 1.0.123.
+- `scripts\desk_install_s43.ps1`
+- `chain_s43.ps1`: assembler, then finalizer, then payload only on GO.
+
+No other open Structural PR has a passed Opus review; #1705 is left out as unreviewed.

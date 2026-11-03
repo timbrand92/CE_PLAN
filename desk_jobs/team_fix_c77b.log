@@ -1,0 +1,8 @@
+Draft PR #1845 is open: CDRG now draws the raingarden's name (RG1, RG2 and so on, numbered per drawing) at the centre of the outline. It is built and unit-tested only, and nobody has opened it in AutoCAD.
+
+The full Civil net10 run had one red (20,790 of 20,823 passed), a REDO safety list that needed 24 lines for the moved label writer. I fixed it and re-ran that check (43 of 43 pass), but did not re-run the whole suite. The Civil net48 build has 0 errors.
+
+- **Files:** `Rules/RaingardenLabelRule.cs` (new), `Services/SourcePlacementService.cs`, `Services/SourceTagService.cs`, `Services/RaingardenPlacementPlan.cs`, `Models/UserSettings.cs`, `REGRESSION_LOG.md`, the REDO baseline, and `RaingardenLabelTests.cs` (new).
+- **Switch:** `linking.raingardenTagLabel`, ON by default.
+- **Robot case:** C31_rg_label, with C31s as the switch-off control.
+- **Report:** `C:\CE_PLAN\areas\release-v3-colleagues-RAINGARDEN_LABEL_REPORT.md`, pushed to `main`.

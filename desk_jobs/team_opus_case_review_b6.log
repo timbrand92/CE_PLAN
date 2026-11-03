@@ -1,0 +1,33 @@
+Review finished and pushed to the plan repo: commit 4227c42e, leak scan clean, nothing left unpushed.
+
+**For Tim**
+
+1. **My mistakes:** my first try at fingerprinting the case files was in the wrong command window and did nothing; I redid it straight away, no harm done. I also replaced the old "not ready" note on the quick MOVE case, and kept a copy.
+2. **Five cases are now Claude-accepted for a named part, on Civil 3.0.84:**
+   1. **Quick MOVE:** no window opens, the texts go with the pit, and one U puts everything back.
+   2. **Locked pit text layers:** PIT refuses before anything goes in.
+   3. **Floor waste in open space.**
+   4. **Perimeter drain text:** follows the drain on MOVE, ERASE and COPY.
+   5. **Plain COPY of a pit.**
+3. **BUG-460 may be written "FIXED (Claude-accepted, Civil 3.0.84, 28 Oct 2026)" in full.** BUG-236, 672, 262, 132 and 102 may be written that way for the named part only; their entries stay open.
+4. **No new everyday tool becomes whole.** Copying a pit (D15) was already accepted this morning on 3.0.83. On 3.0.84 it still needs one added check: that the copy gets the next free number, P8. Then two runs.
+5. **Four faults are proven real.** For three of them I found the part of CE that causes them; for the arrow I found where CE decides its direction, but not the exact cause:
+   1. **ROTATE Copy:** the copied pit gets no label or cover text, even with the Settings tick on.
+   2. **Edit Pipe:** a second Save turns the flow arrow back, so it points uphill.
+   3. **Floor waste at an inspection opening:** CE gives a false "changed while you picked" message and places nothing.
+   4. **COPY with the cover-text layer locked:** CE wrongly says "no label" when a label was drawn.
+6. **Not ready:**
+   1. **COPY and SCALE Copy numbers (R34sn):** it doesn't check that the two copies get different numbers.
+   2. **CDCHECKDWG (R40):** needs a Codex look at its results window. The card and BUG-606 also disagree on where the report should go.
+7. **One decision for you, already on the list:** should a floor waste be placed at an inspection opening, or should CE refuse with a plain reason? Either way, today's message is wrong.
+
+---
+
+**For the desk**
+
+1. **A broken twin case:** R34s_OFF_BROKEN has a stray second VARIANT_OF line, so the gate will never count it as R34s's failing twin. Delete that line and re-run it. I didn't edit it, because this job was read-only.
+2. **Mislabelled ledger row:** the b6b1-s3 PASS row for R34sn says 3.0.83 but ran on 3.0.84. Don't count it as a 3.0.83 pass.
+
+The full report is `C:\CE_PLAN\areas\release-v3-colleagues-OPUS_CASE_REVIEW_B6_28OCT.md`. The five review slips sit next to their cases and are copied into `areas\runner-reports\reviews\`. Running the runner's own review check offline, it accepts exactly those five and none of the twin or neighbouring cases.
+
+**Summary:** Five cases are Claude-accepted for named parts on 3.0.84. BUG-460 can be written fixed in full, and five other bugs for parts only. No new whole everyday tool. D15 on 3.0.84 needs one "P8" check. Four faults are proven real: ROTATE Copy, the Edit Pipe arrow, floor waste at an opening, and the COPY message. R34sn needs a different-numbers check and R40 needs a Codex look.

@@ -1,0 +1,31 @@
+C-37 is assembled, built and pushed: branch `claude/rel-20261009x`, head `929c59fdce87974c8a4b273a8203cf3f7960826f` (local equals origin). It is C-32's head (954553a5) plus one `--no-ff` merge of C-36's head (2388c329). Built and unit-tested only. Nobody has opened it in AutoCAD.
+
+- **Conflict:** one hunk, in `CeSuiteManagerMenuService.cs`. I resolved it as you approved: C-32's plain-words messages, C-36's failed-this-session flag, Idle retry stays removed. `REGRESSION_LOG.md`, `UserSettings.cs` and `Plugin.cs` merged cleanly. `REGRESSION_LOG.md` gained 74 lines and lost none.
+- **One slip of mine, fixed before the push:** my first resolution script put a real line break inside a quoted `"\n"` in two message lines, which broke the Manager build. I corrected it and amended the merge commit, so the broken version was never pushed.
+- **C-36 fixes present:**
+  - The open-close reads are in `BlockService.cs`, `LinkService.Cache.cs` and `LinkService.Reactors.cs`.
+  - The global REDO wait (`RedoWindowGuard`) is in.
+  - The first-Idle menu install is in (`ScheduleOneTryAtIdle`, called from `Plugin.cs`).
+  - Versions are 3.0.46 and 1.1.46, with no hand edits.
+- **Redo scan:** the 68 `StartTransaction`, `SetCurrentView` and `SetSystemVariable` lines in files either side touched are listed in the report (file:line). Most run inside a user's own command. The few that can be reached from a hook between commands are listed separately.
+- **Redo guard tests:** 126/126 on net10 and 126/126 on net48. The `RedoSafeReviewedHooks.baseline.txt` file was not edited, and neither side touched it.
+- **Shared/:** no files changed, so Civil and Manager keep byte-identical CE_SHARED. `command-registry.json` and `council-profiles.json` are unchanged.
+- **New Settings keys (all from C-36):** `crossingServices` (switch off), `showProgressWhenSlow` (false) and `progressAfterSeconds` (1.0).
+- **Build:** the whole `CE_ACAD_PLUGIN.slnx` Release builds with 0 errors. One non-code hiccup: this machine's PATH is over cmd's 8,191-character limit, so git was not found inside the Installer.Tests build. I used a short PATH in my build script.
+- **Tests (net10, all printed non-zero totals):**
+  - Manager: 738/738.
+  - Civil: 16,854 run, 16,834 pass, 19 skipped, 1 failed. The failure is the known Glen Eira test, and the PDF flake did not fire.
+  - CommandTruth: 64/64.
+  - TestHarness: 101/101.
+  - Spine: 81/81.
+  - Diagnostics: 19/19.
+  - AI.Core: 42/42.
+  - ReleaseTests: 16/16.
+  - Installer: 237 pass, 36 failed, matching the known old reds in count (I did not diff the names).
+- **Not run:**
+  - A net48 Manager run, because that test project has no net48 output in this build.
+  - The Structural, DesignCore, Structural ReleaseTests and AI.Harness suites, which were not in the brief.
+  - Nothing in real AutoCAD: no U/REDO run, no first-Idle menu install, no on-screen messages.
+- **Hygiene:** Tim's three settings files and the live log folders were identical before and after every run. Installed DLLs are unchanged at 3.0.46+2388c329. Someone else renamed the installed bundle folder from `CE_CVL_SUITE.bundle.off_ctrl` to `CE_CVL_SUITE.bundle` while I was working. I wrote nothing under ApplicationPlugins. AutoCAD was running during the tests, so the relaxed test gate applied.
+
+The full report is at `C:\Lisp Files\_TEST_COPIES_20260923\TRAIN_C37_ASSEMBLY_REPORT.md`.

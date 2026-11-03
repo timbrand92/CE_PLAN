@@ -1,0 +1,1 @@
+`C:\CE_PLAN\areas\ROBOT_CASE_DRAFTS_SET11_PIT_SCHEDULE_02NOV.md` — verdict: only #1722 (BUG-1035) can be drafted as a robot case, and only in part. It gets a case, W1722, and a twin, W1722_BROKEN. The other five (#1881, #1760, #1764, #1765, #1767) are BLOCKED-FOR-ROBOT, each with a numbered Codex look. Nothing was built or run, so none of it is proven.

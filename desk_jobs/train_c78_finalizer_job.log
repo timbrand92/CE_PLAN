@@ -1,0 +1,13 @@
+1. **Verdict: GO** at `91963bd08ad7b99ff2d68cce7d15267c9cd0c410`, **CLASS: AREA.** The train only adds three new switches, all on. No default, Settings loader, CE_SHARED or Manager code changed, so Manager 1.1.88 is a re-stamp.
+2. **Changes I made:** I merged the late #1870 (plain "RG" raingarden label) cleanly and added 26 switch tests. #1867 and #1858 are kept with notes, #1870 is kept, and nothing was dropped.
+3. **Tests:**
+   - The whole solution built with 0 errors.
+   - Civil: 21,565 tests on net10 with 0 failed. On net48, the only 114 failures are the same ones already known from C-77.
+   - Manager: 1,085 tests with 0 failed, and its 75-file check passed.
+   - Arch (Civil half): 14 of 14.
+4. **Mistake:** I re-checked for a free build slot every 10 seconds instead of every 60, after waiting 36 minutes.
+5. **Not done:** nothing has been opened in AutoCAD, and no bug is marked FIXED.
+
+---
+
+The full report is pushed to `C:\CE_PLAN\areas\release-v3-colleagues-TRAIN_C78_FINALIZER_REPORT_2026-10-29.md`.

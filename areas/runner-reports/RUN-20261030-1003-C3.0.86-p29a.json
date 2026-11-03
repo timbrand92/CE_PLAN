@@ -1,0 +1,1227 @@
+{
+  "header": {
+    "run_id": "RUN-20261030-1003-C3.0.86-p29a",
+    "started": "2026-10-30 10:03:10",
+    "finished": "2026-10-30 10:13:22",
+    "build": {
+      "civil": {
+        "product_version": "3.0.86+5888ee757244aac89283aaaf2ba68e51470ecbb3",
+        "file_version": "3.0.86.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.86+5888ee757244aac89283aaaf2ba68e51470ecbb3",
+        "file_version": "1.1.86.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.86+5888ee75 / struc 1.0.125+204dfad2 / mgr 1.1.86+5888ee75",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "321A32BB2CA3FD5B73BB6209CB1C6A4A77B9C8D8367C4A7478ED27C5CEB0A264",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.86+5888ee757244aac89283aaaf2ba68e51470ecbb3; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.86+5888ee757244aac89283aaaf2ba68e51470ecbb3",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4CD773B85EC5, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 13955AAA60D1, case_runner_lib.ps1 8F9B8DCBB473, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 2 case file(s) plus 0 shared setup(s); pack SHA-256 321A32BB2CA3FD5B73BB6209CB1C6A4A77B9C8D8367C4A7478ED27C5CEB0A264; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json B3B5A004B929 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Fri 30 Oct 2026 10:03 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 2,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 2
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261030-1003-C3.0.86-p29a-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-30 10:08:12",
+      "finished": "2026-10-30 10:13:22",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31008181_B1.dwg",
+      "cases": [
+        "P01",
+        "P02"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : B3B5A004B929 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "P01",
+      "proves_bugs": "",
+      "title": "CDTEXTSEG puts the pipe label on the leg you click, even when the middle of the other leg is nearer the click",
+      "kind": "deterministic",
+      "order": 10,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "BUG-1194 CDTEXTSEG clicked leg (pilot-critical list 29 Oct 2026, entry 13; fix PR",
+      "bug": "BUG-1194",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "A CE pipe made with CD E along 150000,-96000 / 170000,-96000 / 170000,-95000 (levels 18.000 and 17.800) has one label reading 'DIA.'. CDTEXTSEG with a click at 170000,-95500 (on the short leg) prints 'Pipe text moved.' and the label's x is above 168500 (beside the short leg). CDTEXTSEG again with a click at 169000,-96000 (on the long leg, 1 m from the bend) prints 'Pipe text moved.' and the label's x is below 166000 (beside the long leg). On the old rule the second click would keep the label on the short leg, because the short leg's middle is nearer that click. The drawing file on disk is unchanged.",
+      "why_not_unit": "The unit tests check the leg chooser on its own; only a live CDTEXTSEG shows that the real command passes the clicked point to it and moves the real label in the drawing.",
+      "not_automated": [
+        "How the label looks (side, reading direction, clear of the line) is a Codex look; this case reads only which leg the label is beside, by its x.",
+        "The other three callers named in the fix (the CD and Edit Pipe 'move arrow AND text to that segment' question, and placing an arrow on a picked leg) are not driven; the CD question is answered with Esc as in R39.",
+        "A pipe between pits and a pipe with more than two legs are not driven. U after CDTEXTSEG is not driven."
+      ],
+      "file_sha256": "6F7B249A81547143601C7E3F466CCB56E0D36060959DB6A9B40E58C5141896BD",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-30 10:09:55",
+      "seconds": 98.6,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "copy CLDV31008181_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.PLINE{NL}150000,-96000{NL}170000,-96000{NL}170000,-95000{NL}\" -Force -> $pl",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "typed '_.PLINE 150000,-96000 170000,-96000 170000,-95000': Command: | Command: _.PLINE | Specify start point: 150000,-96000 | Current line-width is 0.000 | Specify next point or [Arc/Halfwidth/Length/Undo/Width]: 170000,-96000 | Specify next point or [Arc/Close/Halfwidth/Length/..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM{NL}_W{NL}148000,-98000{NL}172000,-93000\" -Force",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "typed '_.ZOOM _W 148000,-98000 172000,-93000': Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _W | Specify first corner: 148000,-98000 | Specify oppo..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}E{NL}155000,-96000\" -Force -ExpectWindow \"New Pipe\" -TimeoutSec 120 -> $cd",
+          "ok": true,
+          "seconds": 8.7,
+          "evidence": "typed 'CD E 155000,-96000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: E | Pick the drawn polyline to use as the pipe route: 15..."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 4.2,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: "
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.800\"",
+          "ok": true,
+          "seconds": 15.0,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.800: "
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $t2",
+          "ok": true,
+          "seconds": 36.6,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $e1",
+          "ok": true,
+          "seconds": 8.8,
+          "evidence": "esc-prompt: [CE] End is free: open end flagged, connect it later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: Open end -> Open end | [CE] Pipe has 2 segment(s). | Pick a point to move arrow A..."
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $e1b",
+          "ok": true,
+          "seconds": 4.1,
+          "evidence": "esc-prompt: Inserted flow arrow. Flow: Open end -> Open end | [CE] Pipe has 2 segment(s). | Pick a point to move arrow AND text to that segment, or press Enter to accept: *Cancel* | [CE] Pipe placed. Pick the next pipe's first point..."
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $e1c",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "esc-prompt: [CE] Pipe has 2 segment(s). | Pick a point to move arrow AND text to that segment, or press Enter to accept: *Cancel* | [CE] Pipe placed. Pick the next pipe's first point, or press Esc to stop. | Specify first point or [..."
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $after0",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "5 object(s) after index 1034 (model space now 1039); by type: AcDbBlockReference 1; AcDbMText 3; CeCvlPipeObject 1; first: 11C55C CeCvlPipeObject STORMWATER PIPE ; 11C562 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 105 ; 11C567 AcDbMText 20TEXT IL 18.000 ; 11C56C AcDbMText 20TEXT IL 17.800 ; 11C58E AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after0 \"object~^CeCvlPipeObject$\" -> $pipe",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 5: 11C55C STORMWATER PIPE"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after0 \"text~DIA\\. \" -> $lab0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 5: 11C562 225 DIA. UPVC PIPE AT 1 IN 105 25TEXT"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $lab0 handle -> $hlab",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C562"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $lab0 x -> $x0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 160000"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $lab0 y -> $y0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'y' = -95762.5"
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDTEXTSEG{NL}155000,-96000{NL}170000,-95500\" -Force -TimeoutSec 120 -> $ts1",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "typed 'CDTEXTSEG 155000,-96000 170000,-95500': Command: | Command: CDTEXTSEG | Select pipe to move text between segments: 155000,-96000 | Pipe text auto-placed on the clearest segment. Pipe has 2 segment(s). | Pick a point to move pipe text to that segment, or press ..."
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $after1",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "5 object(s) after index 1034 (model space now 1039); by type: AcDbBlockReference 1; AcDbMText 3; CeCvlPipeObject 1; first: 11C55C CeCvlPipeObject STORMWATER PIPE ; 11C562 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 105 ; 11C567 AcDbMText 20TEXT IL 18.000 ; 11C56C AcDbMText 20TEXT IL 17.800 ; 11C58E AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after1 \"handle~^{$hlab}$\" -> $lab1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 5: 11C562 225 DIA. UPVC PIPE AT 1 IN 105 25TEXT"
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $lab1 x -> $x1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 169762.5"
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $lab1 y -> $y1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'y' = -95500"
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDTEXTSEG{NL}155000,-96000{NL}169000,-96000\" -Force -TimeoutSec 120 -> $ts2",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "typed 'CDTEXTSEG 155000,-96000 169000,-96000': Command: | Command: CDTEXTSEG | Select pipe to move text between segments: 155000,-96000 | Pipe text auto-placed on the clearest segment. Pipe has 2 segment(s). | Pick a point to move pipe text to that segment, or press ..."
+        },
+        {
+          "n": 29,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 30,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $after2",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "5 object(s) after index 1034 (model space now 1039); by type: AcDbBlockReference 1; AcDbMText 3; CeCvlPipeObject 1; first: 11C55C CeCvlPipeObject STORMWATER PIPE ; 11C562 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 105 ; 11C567 AcDbMText 20TEXT IL 18.000 ; 11C56C AcDbMText 20TEXT IL 17.800 ; 11C58E AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 31,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after2 \"handle~^{$hlab}$\" -> $lab2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 5: 11C562 225 DIA. UPVC PIPE AT 1 IN 105 25TEXT"
+        },
+        {
+          "n": 32,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $lab2 x -> $x2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 160000"
+        },
+        {
+          "n": 33,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $lab2 y -> $y2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'y' = -95762.5"
+        },
+        {
+          "n": 34,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $lab2 text -> $lab2_text",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = 225 DIA. UPVC PIPE AT 1 IN 105"
+        },
+        {
+          "n": 35,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31008181_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "not-contains $cd \"already a CE pipe\"",
+          "ok": true,
+          "expected": "does not contain 'already a CE pipe'",
+          "actual": "Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: E | Pick the drawn polyline to use a...",
+          "evidence": "'already a CE pipe' is absent from: Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existin..."
+        },
+        {
+          "n": 2,
+          "text": "count $pipe = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $pipe = 1 (expected = 1)"
+        },
+        {
+          "n": 3,
+          "text": "count $lab0 = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $lab0 = 1 (expected = 1)"
+        },
+        {
+          "n": 4,
+          "text": "count $lab1 = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $lab1 = 1 (expected = 1)"
+        },
+        {
+          "n": 5,
+          "text": "count $lab2 = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $lab2 = 1 (expected = 1)"
+        },
+        {
+          "n": 6,
+          "text": "contains $ts1 \"Pipe text moved.\"",
+          "ok": true,
+          "expected": "contains 'Pipe text moved.'",
+          "actual": "Command: | Command: CDTEXTSEG | Select pipe to move text between segments: 155000,-96000 | Pipe text auto-placed on the clearest segment. Pipe has 2 segment(s). | Pick a point to move pipe text to tha...",
+          "evidence": "found 'Pipe text moved.' in: Command: | Command: CDTEXTSEG | Select pipe to move text between segments: 155000,-96000 | Pipe text auto-placed on the clearest segment. Pipe has 2 segment(s)...."
+        },
+        {
+          "n": 7,
+          "text": "number $x1 > 168500",
+          "ok": true,
+          "expected": "> 168500",
+          "actual": "169762.5",
+          "evidence": "$x1 = 169762.5 (expected > 168500)"
+        },
+        {
+          "n": 8,
+          "text": "contains $ts2 \"Pipe text moved.\"",
+          "ok": true,
+          "expected": "contains 'Pipe text moved.'",
+          "actual": "Command: | Command: CDTEXTSEG | Select pipe to move text between segments: 155000,-96000 | Pipe text auto-placed on the clearest segment. Pipe has 2 segment(s). | Pick a point to move pipe text to tha...",
+          "evidence": "found 'Pipe text moved.' in: Command: | Command: CDTEXTSEG | Select pipe to move text between segments: 155000,-96000 | Pipe text auto-placed on the clearest segment. Pipe has 2 segment(s)...."
+        },
+        {
+          "n": 9,
+          "text": "number $x2 < 166000",
+          "ok": true,
+          "expected": "< 166000",
+          "actual": "160000",
+          "evidence": "$x2 = 160000 (expected < 166000)"
+        },
+        {
+          "n": 10,
+          "text": "history count \"Pipe text moved.\" = 2",
+          "ok": true,
+          "expected": "2 line(s) with 'Pipe text moved.'",
+          "actual": "2",
+          "evidence": "command line holds 2 line(s) containing 'Pipe text moved.' (expected 2)"
+        },
+        {
+          "n": 11,
+          "text": "not-contains $win_end \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31008181_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV31008181_B1.dwg]"
+        },
+        {
+          "n": 12,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 13,
+          "text": "record $cd \"FULL CD E and the point\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: E | Pick the drawn polyline to use as the pipe route: 155000,-96000",
+          "evidence": "RECORDED, not judged: FULL CD E and the point = Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: E | Pick the drawn polyline to use as the pipe route: 155000,-96000"
+        },
+        {
+          "n": 14,
+          "text": "record $e1c \"FULL after the third Esc (the move-arrow-and-text question)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "[CE] Pipe has 2 segment(s). | Pick a point to move arrow AND text to that segment, or press Enter to accept: *Cancel* | [CE] Pipe placed. Pick the next pipe's first point, or press Esc to stop. | Specify first point or [Existing line] [Existing]: *Cancel* | [CE] Stopped. Everything placed stays; U takes back the last one.",
+          "evidence": "RECORDED, not judged: FULL after the third Esc (the move-arrow-and-text question) = [CE] Pipe has 2 segment(s). | Pick a point to move arrow AND text to that segment, or press Enter to accept: *Cancel* | [CE] Pipe placed. Pick the next pipe's first point, or press Esc to stop. | Specify first point or [Existing line] [Existing]: *Cancel* | [CE] Stopped. Everything placed stays; U takes back the last one."
+        },
+        {
+          "n": 15,
+          "text": "record $x0 \"label x after Start Pipe (auto-placed)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "160000",
+          "evidence": "RECORDED, not judged: label x after Start Pipe (auto-placed) = 160000"
+        },
+        {
+          "n": 16,
+          "text": "record $y0 \"label y after Start Pipe\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "-95762.5",
+          "evidence": "RECORDED, not judged: label y after Start Pipe = -95762.5"
+        },
+        {
+          "n": 17,
+          "text": "record $ts1 \"FULL first CDTEXTSEG (click on the short leg)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDTEXTSEG | Select pipe to move text between segments: 155000,-96000 | Pipe text auto-placed on the clearest segment. Pipe has 2 segment(s). | Pick a point to move pipe text to that segment, or press Enter to accept: 170000,-95500 | Pipe text moved.Regenerating model.",
+          "evidence": "RECORDED, not judged: FULL first CDTEXTSEG (click on the short leg) = Command: | Command: CDTEXTSEG | Select pipe to move text between segments: 155000,-96000 | Pipe text auto-placed on the clearest segment. Pipe has 2 segment(s). | Pick a point to move pipe text to that segment, or press Enter to accept: 170000,-95500 | Pipe text moved.Regenerating model."
+        },
+        {
+          "n": 18,
+          "text": "record $y1 \"label y after the first CDTEXTSEG\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "-95500",
+          "evidence": "RECORDED, not judged: label y after the first CDTEXTSEG = -95500"
+        },
+        {
+          "n": 19,
+          "text": "record $ts2 \"FULL second CDTEXTSEG (click on the long leg, 1 m from the bend)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDTEXTSEG | Select pipe to move text between segments: 155000,-96000 | Pipe text auto-placed on the clearest segment. Pipe has 2 segment(s). | Pick a point to move pipe text to that segment, or press Enter to accept: 169000,-96000 | Pipe text moved.Regenerating model.",
+          "evidence": "RECORDED, not judged: FULL second CDTEXTSEG (click on the long leg, 1 m from the bend) = Command: | Command: CDTEXTSEG | Select pipe to move text between segments: 155000,-96000 | Pipe text auto-placed on the clearest segment. Pipe has 2 segment(s). | Pick a point to move pipe text to that segment, or press Enter to accept: 169000,-96000 | Pipe text moved.Regenerating model."
+        },
+        {
+          "n": 20,
+          "text": "record $y2 \"label y after the second CDTEXTSEG\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "-95762.5",
+          "evidence": "RECORDED, not judged: label y after the second CDTEXTSEG = -95762.5"
+        },
+        {
+          "n": 21,
+          "text": "record $lab2_text \"label text at the end\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "225 DIA. UPVC PIPE AT 1 IN 105",
+          "evidence": "RECORDED, not judged: label text at the end = 225 DIA. UPVC PIPE AT 1 IN 105"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 91 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CD completed 74627 ms ; Command outcome: CDTEXTSEG completed 58 ms ; Command outcome: CDTEXTSEG completed 43 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-30 10:11:34",
+      "session_id": "RUN-20261030-1003-C3.0.86-p29a-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "no independent review: no P01_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)",
+          "bug case (BUG-1194) has no recorded FAIL on an earlier build or on a deliberately broken variant"
+        ],
+        "passing_sessions_on_this_build": 2,
+        "red_before": false
+      }
+    },
+    {
+      "id": "P02",
+      "proves_bugs": "",
+      "title": "A pasted copy of a downpipe moved with MOVE leaves the original downpipe's label where it was, and the original's own MOVE still takes its label",
+      "kind": "deterministic",
+      "order": 20,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "BUG-1140 pasted downpipe and the original's label, MOVE half (pilot-critical list 29 Oct 2026, entry 12; fix PR",
+      "bug": "BUG-1140",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "DP at 150000,-80000 prints 'Downpipe placed. Tag: DP' and adds one DOWNPIPE DYNAMIC WITH MASK block and one text on GUIDELINES (its label). The block alone is copied with COPYCLIP and pasted with PASTECLIP at 156000,-80000: one more DOWNPIPE DYNAMIC WITH MASK block appears. MOVE of the pasted copy by 0,3000 leaves the original block and the original label where they were (each within 1 mm). MOVE of the original by 0,2000 moves the original label by 2000 mm (within 1 mm). The drawing file on disk is unchanged.",
+      "why_not_unit": "The fix reads the label's owner note on the real objects; only a live paste and a live MOVE show which label the pasted downpipe drags.",
+      "not_automated": [
+        "The CDREPAIR half of BUG-1140 is not driven: CDREPAIR opens the Drawing Repair window, which is not on the robot's read or press lists. It needs a Codex look.",
+        "A paste from ANOTHER drawing, a downpipe with a hitbox circle, and an old drawing whose labels carry no owner note are not driven. Whether the pasted copy gets a label of its own is recorded, not judged.",
+        "U after either MOVE is not driven."
+      ],
+      "file_sha256": "0F5D48A216B1E5D625D6E4AB9C8B7A7E559C5BBEFD24D0D43C18604CDE3DD070",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-30 10:11:34",
+      "seconds": 61.4,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "copy CLDV31008181_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM{NL}_W{NL}146000,-86000{NL}164000,-74000\" -Force",
+          "ok": true,
+          "seconds": 2.8,
+          "evidence": "typed '_.ZOOM _W 146000,-86000 164000,-74000': Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _W | Specify first corner: 146000,-86000 | Specify opposite corner..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"DP{NL}150000,-80000\" -Force -> $dp",
+          "ok": true,
+          "seconds": 8.0,
+          "evidence": "typed 'DP 150000,-80000': Command: | Command: DP | Specify downpipe insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $dpe",
+          "ok": true,
+          "seconds": 3.7,
+          "evidence": "esc-prompt: Specify downpipe insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. Nothing nearby. The so..."
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $n1",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "2 object(s) after index 1034 (model space now 1036); by type: AcDbBlockReference 1; AcDbText 1; first: 11C55B AcDbBlockReference DOWNPIPES DOWNPIPE DYNAMIC WITH MASK ; 11C563 AcDbText GUIDELINES DP"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $n1 \"name=DOWNPIPE DYNAMIC WITH MASK\" -> $dpA",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C55B DOWNPIPE DYNAMIC WITH MASK DOWNPIPES"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $dpA handle -> $hA",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C55B"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $dpA x -> $ax0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 150000"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $dpA y -> $ay0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "field 'y' = -80000"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $n1 \"object~^AcDbText$\" \"layer~^GUIDELINES$\" -> $labA0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C563 DP GUIDELINES"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $labA0 handle -> $hlab",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C563"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $labA0 x -> $lx0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 150250"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $labA0 y -> $ly0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'y' = -79750"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $labA0 text -> $lab_text0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = DP"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1036 objects"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"{$hA}\"",
+          "ok": true,
+          "seconds": 2.8,
+          "evidence": "pick-first 11C55B: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"11C55B\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.COPYCLIP\" -Force -> $cc",
+          "ok": true,
+          "seconds": 2.6,
+          "evidence": "typed '_.COPYCLIP': Command: | Command: _.COPYCLIP | 1 found"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.PASTECLIP{NL}156000,-80000\" -Force -> $pc",
+          "ok": true,
+          "seconds": 3.1,
+          "evidence": "typed '_.PASTECLIP 156000,-80000': Command: | Command: _.PASTECLIP | Duplicate definition of block DOWNPIPE DYNAMIC WITH MASK ignored. | Substituting [simplex.shx] for [rpnf.shx]. | Substituting [simplex.shx] for [ASFONTS.shx]. | Substituting [simplex.shx..."
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c1 -> $n2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "1 object(s) after index 1036 (model space now 1037); by type: AcDbBlockReference 1; first: 11C598 AcDbBlockReference DOWNPIPES DOWNPIPE DYNAMIC WITH MASK"
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $n2 \"name=DOWNPIPE DYNAMIC WITH MASK\" -> $dpB",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 1: 11C598 DOWNPIPE DYNAMIC WITH MASK DOWNPIPES"
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $dpB handle -> $hB",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C598"
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $n2 handle -All -> $n2_handles",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C598"
+        },
+        {
+          "n": 29,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"{$hB}\"",
+          "ok": true,
+          "seconds": 2.2,
+          "evidence": "pick-first 11C598: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"11C598\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 30,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.MOVE{NL}0,0{NL}0,3000\" -Force -> $mvB",
+          "ok": true,
+          "seconds": 2.2,
+          "evidence": "typed '_.MOVE 0,0 0,3000': Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,3000"
+        },
+        {
+          "n": 31,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 32,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 33,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $n3",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "3 object(s) after index 1034 (model space now 1037); by type: AcDbBlockReference 2; AcDbText 1; first: 11C55B AcDbBlockReference DOWNPIPES DOWNPIPE DYNAMIC WITH MASK ; 11C563 AcDbText GUIDELINES DP ; 11C598 AcDbBlockReference DOWNPIPES DOWNPIPE DYNAMIC WITH MASK"
+        },
+        {
+          "n": 34,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $n3 \"handle~^{$hlab}$\" -> $labA1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 3: 11C563 DP GUIDELINES"
+        },
+        {
+          "n": 35,
+          "phase": "case",
+          "verb": "dist",
+          "text": "dist $labA1 \"{$lx0},{$ly0}\" -> $d1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "distance from object 11C563 to 150250,-79750 = 0"
+        },
+        {
+          "n": 36,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $n3 \"handle~^{$hA}$\" -> $dpA1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 3: 11C55B DOWNPIPE DYNAMIC WITH MASK DOWNPIPES"
+        },
+        {
+          "n": 37,
+          "phase": "case",
+          "verb": "dist",
+          "text": "dist $dpA1 \"{$ax0},{$ay0}\" -> $da1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "distance from object 11C55B to 150000,-80000 = 0"
+        },
+        {
+          "n": 38,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"{$hA}\"",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "pick-first 11C55B: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"11C55B\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 39,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.MOVE{NL}0,0{NL}0,2000\" -Force -> $mvA",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "typed '_.MOVE 0,0 0,2000': Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,2000"
+        },
+        {
+          "n": 40,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 41,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 42,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $n4",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "3 object(s) after index 1034 (model space now 1037); by type: AcDbBlockReference 2; AcDbText 1; first: 11C55B AcDbBlockReference DOWNPIPES DOWNPIPE DYNAMIC WITH MASK ; 11C563 AcDbText GUIDELINES DP ; 11C598 AcDbBlockReference DOWNPIPES DOWNPIPE DYNAMIC WITH MASK"
+        },
+        {
+          "n": 43,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $n4 \"handle~^{$hlab}$\" -> $labA2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 3: 11C563 DP GUIDELINES"
+        },
+        {
+          "n": 44,
+          "phase": "case",
+          "verb": "dist",
+          "text": "dist $labA2 \"{$lx0},{$ly0}\" -> $d2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "distance from object 11C563 to 150250,-79750 = 2000"
+        },
+        {
+          "n": 45,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31008181_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"Downpipe placed. Tag: DP\"",
+          "ok": true,
+          "expected": "command line has 'Downpipe placed. Tag: DP'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Downpipe placed. Tag: DP1. Nothing nearby. The source connects when a pipe is drawn to it.'"
+        },
+        {
+          "n": 2,
+          "text": "count $dpA = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $dpA = 1 (expected = 1)"
+        },
+        {
+          "n": 3,
+          "text": "count $labA0 = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $labA0 = 1 (expected = 1)"
+        },
+        {
+          "n": 4,
+          "text": "count $dpB = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $dpB = 1 (expected = 1)"
+        },
+        {
+          "n": 5,
+          "text": "count $labA1 = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $labA1 = 1 (expected = 1)"
+        },
+        {
+          "n": 6,
+          "text": "number $da1 < 1",
+          "ok": true,
+          "expected": "< 1",
+          "actual": "0",
+          "evidence": "$da1 = 0 (expected < 1)"
+        },
+        {
+          "n": 7,
+          "text": "number $d1 < 1",
+          "ok": true,
+          "expected": "< 1",
+          "actual": "0",
+          "evidence": "$d1 = 0 (expected < 1)"
+        },
+        {
+          "n": 8,
+          "text": "number $d2 = 2000 +- 1",
+          "ok": true,
+          "expected": "= 2000",
+          "actual": "2000",
+          "evidence": "$d2 = 2000 (expected = 2000 +- 1)"
+        },
+        {
+          "n": 9,
+          "text": "not-contains $win_end \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31008181_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV31008181_B1.dwg]"
+        },
+        {
+          "n": 10,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 11,
+          "text": "record $dp \"FULL what DP printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: DP | Specify downpipe insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. Nothing nearby. The source connects when a pipe is drawn to it. | [CE] Pick the next DP, or press Esc to stop.",
+          "evidence": "RECORDED, not judged: FULL what DP printed = Command: | Command: DP | Specify downpipe insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. Nothing nearby. The source connects when a pipe is drawn to it. | [CE] Pick the next DP, or press Esc to stop."
+        },
+        {
+          "n": 12,
+          "text": "record $lab_text0 \"the original label's text\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "DP",
+          "evidence": "RECORDED, not judged: the original label's text = DP"
+        },
+        {
+          "n": 13,
+          "text": "record $cc \"FULL what COPYCLIP printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: _.COPYCLIP | 1 found",
+          "evidence": "RECORDED, not judged: FULL what COPYCLIP printed = Command: | Command: _.COPYCLIP | 1 found"
+        },
+        {
+          "n": 14,
+          "text": "record $pc \"FULL what PASTECLIP printed (any CE line about the paste)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: _.PASTECLIP | Duplicate definition of block DOWNPIPE DYNAMIC WITH MASK ignored. | Substituting [simplex.shx] for [rpnf.shx]. | Substituting [simplex.shx] for [ASFONTS.shx]. | Substituting [simplex.shx] for [ASFONTS.shx]. | Substituting [simplex.shx] for [ASFONTS.shx]. | Substituting [simplex.shx] for [ASFONTS.shx]. | Substituting [simplex.shx] for [ASFONTS.shx]. | Substituting [simplex.shx] for [ASFONTS.shx]. | Specify insertion point: 156000,-80000",
+          "evidence": "RECORDED, not judged: FULL what PASTECLIP printed (any CE line about the paste) = Command: | Command: _.PASTECLIP | Duplicate definition of block DOWNPIPE DYNAMIC WITH MASK ignored. | Substituting [simplex.shx] for [rpnf.shx]. | Substituting [simplex.shx] for [ASFONTS.shx]. | Substituting [simplex.shx] for [ASFONTS.shx]. | Substituting [simplex.shx] for [ASFONTS.shx]. | Substituting [simplex.shx] for [ASFONTS.shx]. | Substituting [simplex.shx] for [ASFONTS.shx]. | Substituting [simplex.shx] for [ASFONTS.shx]. | Specify insertion point: 156000,-80000"
+        },
+        {
+          "n": 15,
+          "text": "record $n2_handles \"every object the paste added (a label of its own for the copy shows here)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "11C598",
+          "evidence": "RECORDED, not judged: every object the paste added (a label of its own for the copy shows here) = 11C598"
+        },
+        {
+          "n": 16,
+          "text": "record $mvB \"FULL MOVE of the pasted copy\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,3000",
+          "evidence": "RECORDED, not judged: FULL MOVE of the pasted copy = Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,3000"
+        },
+        {
+          "n": 17,
+          "text": "record $mvA \"FULL MOVE of the original\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,2000",
+          "evidence": "RECORDED, not judged: FULL MOVE of the original = Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,2000"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV31008181_B1_13af9adc0.log)",
+        "Civil CE log: 135 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: DP completed 9209 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-30 10:12:35",
+      "session_id": "RUN-20261030-1003-C3.0.86-p29a-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "no independent review: no P02_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)",
+          "bug case (BUG-1140) has no recorded FAIL on an earlier build or on a deliberately broken variant"
+        ],
+        "passing_sessions_on_this_build": 2,
+        "red_before": false
+      }
+    }
+  ]
+}

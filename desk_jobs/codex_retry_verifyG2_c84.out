@@ -1,0 +1,6 @@
+== verifyG2_c84 (usage 1.0% -> 1.0%): AUTOCAD CLOSED
+
+1. **G2 PASS ÔÇö SURE:** No preserved both numbers; Yes matched the preview; one U restored both. Circles and pit symbols stayed put.
+2. **Counts:** PASS 1; all other results 0. SURE 1, UNSURE 0. No failures.
+3. **Clean end:** Four settings hashes unchanged; versions unchanged; acad.exe gone; lock released. Fixtures wanted: none. Engineering numbering order was not judged.
+4. **Report:** [G2 verification and evidence](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_G2_20261028_1947.md>). Capture limitations and procedure deviations are recorded.

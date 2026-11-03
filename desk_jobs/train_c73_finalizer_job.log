@@ -1,0 +1,19 @@
+**FOR TIM**
+
+1. **Verdict: GO.** Branch `claude/rel-20261026x`, final head `34dd19d7f8150fe075f423cc9bbdc09bf19736a1`.
+2. **Mistake first:** one test that takes screenshots of the Inspector palette failed once in each full run, because it could not overwrite a screenshot it had just saved. It passed when run on its own on both versions, and #1829 doesn't touch it. I didn't rebuild the C-72 base to test it there, because it doesn't fail even on this build when run alone.
+3. **#1829: keep, with a note.** With all four new switches off, a drafter sees nothing different from 3.0.82, and the CE log has no new lines. The new "gap watch" only listens and writes to the log. It never changes a drawing, setting or view.
+4. **What I added:** one set of 11 tests, which pass on both versions (net10 and net48). They check that all nineteen REDO diagnostic switches start off, and that turning one on affects only that one.
+5. **Tests (built and unit-tested only, nobody has opened it in AutoCAD):**
+   1. **Whole solution:** builds with 0 errors.
+   2. **Civil, full run:** 20,692 tests, no real failures.
+   3. **Manager:** 1,041 tests, 0 failed.
+   4. **Civil, older version:** the same 55 known failures as C-72, plus the screenshot clash.
+   5. **Manager release build:** the file-count check passed at 75 files.
+6. **Nothing is FIXED:** BUG-861 stays open. This build only helps the robot find the cause.
+7. **One new question for you, left open:** may the robot do one test session with the Structural and Manager add-ins switched off? I recommend saying yes only after the robot has run the gap watch and the end-of-undo switches, because those may find the cause first.
+
+---
+
+1. **Scope:** no change to the shared library, Installer, Manager or Arch projects. Your settings files were unchanged and the installed version is still 3.0.82. My worktree is removed.
+2. **Report:** `C:\CE_PLAN\areas\release-v3-colleagues-TRAIN_C73_FINALIZER_REPORT_2026-10-27.md`, with the review-lane log entries 1692 to 1697 and the sign-off line, pushed to CE_PLAN as `90bfde1b`.

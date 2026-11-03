@@ -1,0 +1,12 @@
+1. **Answer:** 2 of my 4 bugs now have a robot case and a "must fail" twin. The other 2 can't be proved by the robot and go to a Codex look. Nobody has run any of them yet.
+2. **BUG-782 has a case (W782, twin W782_BROKEN):** a pipe drawn from its LOW end, with its high-end level typed by hand, then a Recalculate downstream from the pipe above it.
+3. **What W782 checks, in drawing terms:** pits A, B and C sit in a row. Pipe B to C is drawn starting at C, then its B end is typed by hand as 18.38. Lowering pipe A to B at B to 18.30 and answering Yes to Recalculate must leave B to C reading IL 18.38 (kept) and IL 18.15 (moved down).
+4. **The old fault it catches:** before the fix, CE held the wrong end. B to C came out 18.28 (your typed level overwritten) and 18.25 (the low end stuck). The twin expects that old answer, so it must fail.
+5. **BUG-780 has a case (W780, twin W780_BROKEN):** two downpipes and a pipe from another pit all run into one pit, then the robot reads the Pit Schedule window.
+6. **What W780 checks:** DP1 and DP2 (100 mm) both arrive at 18.31, so the schedule merges them into one "DPs" row. The next row is the 225 mm pipe from the upstream pit at 18.53. It must show 225 and 18.53, not DP2's 100 and 18.31.
+7. **BUG-779 (moving the drawn schedule changes pit records): no robot case.** The robot can't make a live drawn schedule on the test drawing, and it can't type into a schedule cell. This needs a Codex look.
+8. **BUG-783 (Delete cell comes back as the word DELETE): no robot case.** "Delete cell" is on the right-click menu, and the robot can't press menu items. This needs a Codex look.
+9. **Offline checks passed:** the format check found 0 invalid out of 49 files in the folder, and every window control the cases use is a known one.
+10. **Biggest risk in W782:** the robot has never answered CE's "you drew it one way but the levels run the other way" question by typing UseLevelDirection. If that step goes wrong the run stops BLOCKED. That would mean the case's route is wrong, not CE.
+11. **Biggest risk in W780:** the robot has never drawn a pipe starting on a downpipe (case N53 is written but hasn't run). If CE doesn't join the pipe to the downpipe, the DPs check fails and the record shows why.
+12. **Nothing for you to do now.** The Opus review reads these next, then CE 02 runs them.

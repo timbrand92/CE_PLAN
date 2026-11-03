@@ -1,0 +1,12 @@
+1. **2 of my 5 PRs have a robot case family; 3 do not.** 4 files in `C:\Lisp Files\_ACAD_DRIVER\cases\drafts_c79b1_01nov\`, all NOT RUN.
+2. **#1891 (BUG-1246, copied downpipe's own tag): family bug1246.** W1246 plus twin W1246_BROKEN (switch off). A real red.
+3. **#1972 (BUG-658, cascade question after the save): family bug658.** W658 plus twin W658_BROKEN. Partial: the robot proves the moved question still works and one U takes back everything. It cannot see the ORDER. That goes to a Codex look.
+4. **#1868 (BUG-1091, large-pipe minimum fall): no case.** The PR only changes the grade CE *proposes* inside windows. It adds no warning line. The plan's "read the warning" describes #1841, which is already in. Unit tests are the evidence, plus a Codex look.
+5. **#1945 (BUG-1158, CDDESIGN Save As warning): no case.** The robot cannot approve outlets (CDLPD window), and the driver refuses Save As. A one-off fixture would make it robot-provable.
+6. **#1970 (BUG-1157, "level was not saved"): no case.** Its only triggers are a pipe that vanishes mid-save or AutoCAD refusing the write. A locked layer is not a trigger: it skips quietly. The damaged-record setups need typed Lisp, and the runner blocks typed Lisp. The PR's own log says no robot route exists.
+7. **Offline checks are clean.** Validate: 4 files, 0 invalid. Control ids: all known. No "print" in my files, no street names, every level copied from R11v87.
+8. **Runs needed: 6.** W1246 x2 starts, W1246_BROKEN x1, W658 x2, W658_BROKEN x1.
+9. **Codex looks: 4.** The #1972 order and refused save, the #1891 label position, the #1868 grade strip, and #1945 if no fixture is made.
+10. **#1972 was written against head 32fc1a44.** That is CE 05's fx72 fix commit, newer than the 556b3848 in the PR list.
+11. **C79B1_FIXTURE_NOTE.md did not exist when I wrote this.** None of my cases uses a SETUP-DMG setup.
+12. **Nothing is FIXED.** These are unrun drafts.

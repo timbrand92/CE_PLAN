@@ -1,0 +1,300 @@
+{
+  "header": {
+    "run_id": "RUN-20261102-0325-C3.0.88-pPSc",
+    "started": "2026-11-02 03:25:36",
+    "finished": "2026-11-02 03:27:23",
+    "build": {
+      "civil": {
+        "product_version": "3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+        "file_version": "3.0.88.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+        "file_version": "1.1.88.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.88+3fbb9da5 / struc 1.0.125+204dfad2 / mgr 1.1.88+3fbb9da5",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "DFDFD06203B5E0F8A120925D69295F20E60A5B6016D79006B7A72A3E01A08AF7",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+      "Driver files (SHA-256, first 12): v2 F4D8F40C3675 (expected F4D8F40C3675), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4B0175FFAB00, v3 session F061E3240C47, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 BBF42DBA8958, case_runner_lib.ps1 89AD455619F8, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 0 shared setup(s); pack SHA-256 DFDFD06203B5E0F8A120925D69295F20E60A5B6016D79006B7A72A3E01A08AF7; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json D604CE689671 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Mon 02 Nov 2026 03:25 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 0,
+    "FAIL": 1,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261102-0325-C3.0.88-pPSc-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-11-02 03:25:36",
+      "finished": "2026-11-02 03:27:23",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV30325401_B1.dwg",
+      "cases": [
+        "PROBE-PS-CTL"
+      ],
+      "whatsnew_dismissed_at_start": "no, window was not there",
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : D604CE689671 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "PROBE-PS-CTL",
+      "proves_bugs": "",
+      "title": "PROBE: names and states of the Pit Schedule window controls that decide Continue to Place / update",
+      "kind": "deterministic",
+      "order": 342,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "Wave 1 look steps (route to a drawn Pit Schedule), CE 00 request 1 Nov 22:15",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "probe, nothing proved",
+      "variant_of": "",
+      "expected": "Evidence lines name the controls.",
+      "why_not_unit": "Reads the live window.",
+      "not_automated": [
+        "This probe judges nothing; it records."
+      ],
+      "file_sha256": "C8E0B42F6267FCAB1425F3C88722C9320E743682F50364F6492D5CB1FACCBA89",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "control 'Continue to Place / update' enabled = False",
+      "started": "2026-11-02 03:26:23",
+      "seconds": 40.0,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"PITSCHEDULE\" -Force -ExpectWindow \"Pit Schedule\" -TimeoutSec 120 -> $ps1",
+          "ok": true,
+          "seconds": 10.6,
+          "evidence": "typed 'PITSCHEDULE': Command: | Command: PITSCHEDULE"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Pit Schedule\" -> $psd1",
+          "ok": true,
+          "seconds": 5.9,
+          "evidence": "ui-dump 'Creative Engineering | Pit Schedule (PITSCHEDULE)': 660 controls, tabs: Source | Rows | Changes | Placement"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "control $psd1 \"Continue to Place / update\" exists",
+          "ok": true,
+          "expected": "control 'Continue to Place / update' exists",
+          "actual": "2",
+          "evidence": "'Continue to Place / update' found in 'Creative Engineering | Pit Schedule (PITSCHEDULE)' (2 control(s))"
+        },
+        {
+          "n": 2,
+          "text": "control $psd1 \"Continue to Place / update\" enabled",
+          "ok": false,
+          "expected": "'Continue to Place / update' enabled",
+          "actual": "False",
+          "evidence": "control 'Continue to Place / update' enabled = False"
+        },
+        {
+          "n": 3,
+          "text": "control $psd1 \"Update existing schedule\" exists",
+          "ok": false,
+          "expected": "control 'Update existing schedule' exists",
+          "actual": "none",
+          "evidence": "no control named 'Update existing schedule' in 'Creative Engineering | Pit Schedule (PITSCHEDULE)'"
+        },
+        {
+          "n": 4,
+          "text": "control $psd1 \"Update existing schedule\" enabled",
+          "ok": false,
+          "expected": "control 'Update existing schedule' enabled",
+          "actual": "none",
+          "evidence": "no control named 'Update existing schedule' in 'Creative Engineering | Pit Schedule (PITSCHEDULE)'"
+        },
+        {
+          "n": 5,
+          "text": "control-text $psd1 has \"current drawing\"",
+          "ok": false,
+          "expected": "window shows 'current drawing'",
+          "actual": "0",
+          "evidence": "no control of 'Creative Engineering | Pit Schedule (PITSCHEDULE)' shows 'current drawing' (660 controls read)"
+        },
+        {
+          "n": 6,
+          "text": "control-text $psd1 has \"another drawing\"",
+          "ok": false,
+          "expected": "window shows 'another drawing'",
+          "actual": "0",
+          "evidence": "no control of 'Creative Engineering | Pit Schedule (PITSCHEDULE)' shows 'another drawing' (660 controls read)"
+        },
+        {
+          "n": 7,
+          "text": "control-text $psd1 has \"Main\"",
+          "ok": false,
+          "expected": "window shows 'Main'",
+          "actual": "0",
+          "evidence": "no control of 'Creative Engineering | Pit Schedule (PITSCHEDULE)' shows 'Main' (660 controls read)"
+        },
+        {
+          "n": 8,
+          "text": "control-text $psd1 has \"Choose\"",
+          "ok": false,
+          "expected": "window shows 'Choose'",
+          "actual": "0",
+          "evidence": "no control of 'Creative Engineering | Pit Schedule (PITSCHEDULE)' shows 'Choose' (660 controls read)"
+        },
+        {
+          "n": 9,
+          "text": "control-text $psd1 has \"Select\"",
+          "ok": true,
+          "expected": "window shows 'Select'",
+          "actual": "3",
+          "evidence": "window 'Creative Engineering | Pit Schedule (PITSCHEDULE)' shows 'Selected pit'"
+        },
+        {
+          "n": 10,
+          "text": "control-text $psd1 has \"Insert\"",
+          "ok": false,
+          "expected": "window shows 'Insert'",
+          "actual": "0",
+          "evidence": "no control of 'Creative Engineering | Pit Schedule (PITSCHEDULE)' shows 'Insert' (660 controls read)"
+        },
+        {
+          "n": 11,
+          "text": "control-text $psd1 has \"Place\"",
+          "ok": true,
+          "expected": "window shows 'Place'",
+          "actual": "6",
+          "evidence": "window 'Creative Engineering | Pit Schedule (PITSCHEDULE)' shows 'Will be placed: 27 rows · All sets · All systems'"
+        },
+        {
+          "n": 12,
+          "text": "control-text $psd1 has \"Pick\"",
+          "ok": false,
+          "expected": "window shows 'Pick'",
+          "actual": "0",
+          "evidence": "no control of 'Creative Engineering | Pit Schedule (PITSCHEDULE)' shows 'Pick' (660 controls read)"
+        },
+        {
+          "n": 13,
+          "text": "control-text $psd1 has \"Source\"",
+          "ok": true,
+          "expected": "window shows 'Source'",
+          "actual": "2",
+          "evidence": "window 'Creative Engineering | Pit Schedule (PITSCHEDULE)' shows 'Source'"
+        },
+        {
+          "n": 14,
+          "text": "control-text $psd1 has \"existing schedule\"",
+          "ok": false,
+          "expected": "window shows 'existing schedule'",
+          "actual": "0",
+          "evidence": "no control of 'Creative Engineering | Pit Schedule (PITSCHEDULE)' shows 'existing schedule' (660 controls read)"
+        },
+        {
+          "n": 15,
+          "text": "control-text $psd1 has \"needs\"",
+          "ok": false,
+          "expected": "window shows 'needs'",
+          "actual": "0",
+          "evidence": "no control of 'Creative Engineering | Pit Schedule (PITSCHEDULE)' shows 'needs' (660 controls read)"
+        },
+        {
+          "n": 16,
+          "text": "control-text $psd1 has \"first\"",
+          "ok": false,
+          "expected": "window shows 'first'",
+          "actual": "0",
+          "evidence": "no control of 'Creative Engineering | Pit Schedule (PITSCHEDULE)' shows 'first' (660 controls read)"
+        },
+        {
+          "n": 17,
+          "text": "control-text $psd1 has \"ready\"",
+          "ok": false,
+          "expected": "window shows 'ready'",
+          "actual": "0",
+          "evidence": "no control of 'Creative Engineering | Pit Schedule (PITSCHEDULE)' shows 'ready' (660 controls read)"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 4 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-11-02 03:27:03",
+      "session_id": "RUN-20261102-0325-C3.0.88-pPSc-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}

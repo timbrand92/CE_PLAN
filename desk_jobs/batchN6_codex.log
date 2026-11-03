@@ -1,0 +1,28 @@
+Mon 21:20:17 batch N6 waiting for batchN5 to finish L3b
+Mon 21:37:27 batchN5 stopped after L3b; N6 takes over for the rest of the evening
+Mon 21:37:38 stopped idle chain4 pid 76292
+Mon 21:37:39 backed up CD_RecentValues.json sha 4E17C983A5AD
+Mon 21:37:39 backed up CD_Settings.json sha ACD64E79A33B
+Mon 21:37:39 backed up CS_Settings.json sha D604CE689671
+Mon 21:37:39 backed up settings.json sha EFE307C4FC74
+Mon 21:37:39 STOP_CODEX.flag lifted (STOP_SUPERVISOR.flag stays up)
+Mon 21:37:44 Codex usage before B : 56 percent
+Mon 21:37:44 starting verifyB_c88
+Mon 21:42:30 verifyB_c88 launcher finished; Codex usage after: 56 percent
+Mon 21:42:30 after B : settings.json sha EFE307C4FC74 (original EFE307C4FC74)
+Mon 21:42:30 after B : CS_Settings.json sha D604CE689671 (original D604CE689671)
+Mon 21:42:30 after B : CD_Settings.json sha ACD64E79A33B (original ACD64E79A33B)
+Mon 21:42:30 Codex usage before 18 : 56 percent
+Mon 21:42:30 starting verify18_c88
+Mon 22:15:06 verify18_c88 launcher finished; Codex usage after: 56 percent
+Mon 22:15:06 after 18 : settings.json sha EFE307C4FC74 (original EFE307C4FC74)
+Mon 22:15:06 after 18 : CS_Settings.json sha D604CE689671 (original D604CE689671)
+Mon 22:15:06 after 18 : CD_Settings.json sha ACD64E79A33B (original ACD64E79A33B)
+Mon 22:15:06 unchanged settings.json sha EFE307C4FC74
+Mon 22:15:06 unchanged CS_Settings.json sha D604CE689671
+Mon 22:15:06 unchanged CD_RecentValues.json sha 4E17C983A5AD
+Mon 22:15:06 unchanged CD_Settings.json sha ACD64E79A33B
+Mon 22:15:06 HOLD_ROBOT.flag removed.
+Mon 22:15:07 restarting chain4 on spec_passk.txt (build 3.0.89+61fd6fbc72710872048a69ef5b46d0e5b55087fa; finished packs are skipped)
+Mon 22:15:07 CODEX_NEXT.txt rewritten to the early window
+Mon 22:15:07 Batch N6 ends.

@@ -1,0 +1,27 @@
+Mon 17:24:10 batch N2 waiting for batchN to finish S3b
+Mon 17:28:07 stopped batchN pid 900 and its helper after S3b
+Mon 17:28:07 batchN stopped after S3b; N2 takes over for the rest of the evening
+Mon 17:28:13 backed up CD_RecentValues.json sha DE16458B2359
+Mon 17:28:13 backed up CD_Settings.json sha ACD64E79A33B
+Mon 17:28:13 backed up CS_Settings.json sha D604CE689671
+Mon 17:28:13 backed up settings.json sha EFE307C4FC74
+Mon 17:28:19 Codex usage before B1b : 49 percent
+Mon 17:28:19 starting verifyB1b_c88
+Mon 17:46:51 verifyB1b_c88 launcher finished; Codex usage after: 50 percent
+Mon 17:46:51 after B1b : CS_Settings.json sha D604CE689671 (original D604CE689671)
+Mon 17:46:51 after B1b : CD_Settings.json sha ACD64E79A33B (original ACD64E79A33B)
+Mon 17:46:51 after B1b : settings.json sha EFE307C4FC74 (original EFE307C4FC74)
+Mon 17:46:51 Codex usage before AUD3 : 50 percent
+Mon 17:46:51 starting verifyAUD3_c88
+Mon 17:56:25 verifyAUD3_c88 launcher finished; Codex usage after: 50 percent
+Mon 17:56:25 after AUD3 : CS_Settings.json sha D604CE689671 (original D604CE689671)
+Mon 17:56:25 after AUD3 : CD_Settings.json sha ACD64E79A33B (original ACD64E79A33B)
+Mon 17:56:25 after AUD3 : settings.json sha EFE307C4FC74 (original EFE307C4FC74)
+Mon 17:56:25 Codex usage before B2b : 50 percent
+Mon 17:56:25 starting verifyB2b_c88
+Mon 18:07:02 verifyB2b_c88 launcher finished; Codex usage after: 50 percent
+Mon 18:07:02 after B2b : CS_Settings.json sha D604CE689671 (original D604CE689671)
+Mon 18:07:02 after B2b : CD_Settings.json sha ACD64E79A33B (original ACD64E79A33B)
+Mon 18:07:02 after B2b : settings.json sha EFE307C4FC74 (original EFE307C4FC74)
+Mon 18:07:02 Codex usage before S5 : 50 percent
+Mon 18:07:02 starting verifyS5_c88

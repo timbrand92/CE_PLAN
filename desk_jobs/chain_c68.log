@@ -1,0 +1,11 @@
+Sun 23:30 chain start: C-68 (Civil + Manager); nothing is installed by this chain.
+Sun 23:30 C: only 9.8 GB free: chain stops before the assembler
+Sun 23:50 chain start: C-68 (Civil + Manager); nothing is installed by this chain.
+Sun 23:50 starting train_c68_assembler_job.txt (sonnet)
+Mon 01:46 finished train_c68_assembler_job.txt
+Mon 01:46 starting train_c68_finalizer_job.txt (opus)
+Mon 04:24 finished train_c68_finalizer_job.txt
+Mon 04:24 C-68 finalizer verdict GO: building payload 103 (candidate c1064). Nothing is installed by this chain.
+Mon 04:24 starting payload103_c68_job.txt (sonnet)
+Mon 05:33 finished payload103_c68_job.txt
+Mon 05:33 chain complete

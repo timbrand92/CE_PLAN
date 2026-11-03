@@ -1,0 +1,9 @@
+== cx_rd01 (usage 37.0% -> 39.0%): 1. **DONE — HIGH 0 / MEDIUM 1 / LOW 1.** Main finding: Pit Schedule uses a fixed 300 mm “Shallow” threshold that cannot be changed in Settings.
+
+2. **Saved and pushed:** [Findings report](C:/CE_PLAN/areas/CODEX_AUDIT2_RD01_23OCT.md). Both findings include deterministic tests; known bugs are excluded.
+
+---
+
+1. **Verification:** source reading only. No builds, tests or AutoCAD. Temporary worktree removed.
+
+2. **Git:** `a4807bfa`; leak scan passed; `main` has no ahead commits. Only the findings file was committed.

@@ -1,0 +1,12 @@
+1. **Result:** 3 of my 4 bugs have a case and a twin: BUG-223, BUG-261, BUG-278. BUG-292 has no case.
+2. **Files:** 6 files in `_ACAD_DRIVER\cases\drafts_wave1_31oct\`: W223 + W223_BROKEN, W261 + W261_BROKEN, W278 + W278_BROKEN.
+3. **Offline checks:** validate 30 files, 0 invalid. check_ids: every control id is known. No "print", no 17.9, no street name in my files.
+4. **Why BUG-292 has no case:** it needs a pipe whose drawn ends store NO level while its record does. Every pipe CD draws stores both levels on the pipe itself, so the robot cannot make that pipe on DRV1_B1. It needs a made-up wave 2 drawing with one old-style pipe, or a Codex look.
+5. **One route change, said plainly:** Tim's and Codex's steps for BUG-261 and BUG-278 start with CD's "Use level direction" question. A case cannot answer that question after a window press (R31's finding). My cases reach the same stored pipe through an Edit Pipe save instead. A Codex look should still run the CD-question route once.
+6. **What is already proven elsewhere:** R32v87 (PASS on 3.0.88 today) already proves BUG-223's arrow half. W223 adds the window half: the box names and the plain note.
+7. **Twins:** each twin leaves out the one Edit Pipe step that turns the pipe round. All other steps and checks are identical, so it fails on a check, never on a stalled step.
+8. **Robot time (an estimate):** about 5 to 7 minutes a case, so about 35 to 40 minutes for all six.
+9. **Not seen on any run yet:** the window words BEFORE Save (W223), the reopened boxes after a size-only save (W261), and P8's schedule row as an INLET (W278). Each is marked DERIVED below.
+10. **Could merge:** W223 and W261 use the same pipe and route. Merging them would save about 5 minutes but needs one twin for two bugs. I kept them apart.
+11. **Faults noticed in existing files:** R32v87 and R32bv87 still say they are "expected to FAIL" (BUG-1222), but both PASS on 3.0.88. Carpark BUG-292 names the wrong PR. Carpark BUG-223's status line is stale. Details are in the last section.
+12. **Nothing for Tim to do now.** The cases need the wave Opus review, then CE 02's robot run, then a Codex look.

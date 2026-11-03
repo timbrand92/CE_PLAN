@@ -1,0 +1,15 @@
+== verifyA78b_c88 (usage 29.0% -> 29.0%): AUTOCAD CLOSED
+
+1. **NOT STARTED:** Lock belongs to `Codex-A78b`; the brief requires `Codex-A78`. Driver reported `you_hold_it=false`. Lock left untouched.
+2. **Results:** 0 tested; 5 NOT TESTED. No settings changed.
+3. **Report:** [A78b verification report](/C:/Lisp%20Files/_TEST_COPIES_20260923/CODEX_VERIFY_A78b_20261101_1423.md).
+== verifyA78b_c88 (usage 29.0% -> 29.0%): AUTOCAD CLOSED
+
+1. **NOT STARTED:** Lock belongs to `Codex-A78b`; the brief requires `Codex-A78`. Driver reported `you_hold_it = false`. Lock left untouched.
+2. **Results:** Four required checks untested; RG excluded by the retry note. Settings unchanged. Explorer capture was readable and not saved.
+3. **Report:** [A78b verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_A78b_20261101_1425.md>). Installed versions recorded: Civil 3.0.88, Manager 1.1.88, Structural 1.0.125.
+== verifyA78b_c88 (usage 29.0% -> 29.0%): AUTOCAD CLOSED
+
+1. **Results:** 2 PASSÔÇöGrade mismatch wording/Cancel and X. Esc: DIFFERENT, inconclusive key delivery. Leader: BLOCKED after hand entry triggered PASTECLIP. RG not repeated, as directed.
+2. **Safety:** Settings hashes unchanged; nothing saved; lock released. No FAILs. SURE 3, UNSURE 1. Fixtures wanted: none.
+3. **Report:** [A78b verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_A78b_20261101_1527.md>). Esc and leader acceptance remain blocked.

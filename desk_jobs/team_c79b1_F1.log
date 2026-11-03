@@ -1,0 +1,24 @@
+I've written all four setups and all four probe cases, but none of them can run. The robot refuses typed Lisp on purpose, a safety rule added after typed Lisp jammed AutoCAD in run 47. I did not change the driver. Unblocking needs CE 00 or Tim to approve a driver change.
+
+The 4 probes failed the offline check (4 invalid). I moved them to `drafts_c79b1_01nov\held_dmg_lisp_blocked\` so the other writers' "0 invalid" check stays clean. I've also flagged three gaps in the note that the robot can't cover even once unblocked:
+
+- **#1958 and #1953** only show their behaviour on a drawing opened with the damage already saved in it, and the robot can't reopen a drawing it changed.
+- **#1970** needs a damaged pipe record, not the pit record, and I don't know a pipe handle in the test drawing.
+- **Outlet roles and LPD:** CE only reads these when you click Apply in the Civil Hub redesign window. So those two probes can show the damage is in place, but not CE's warning.
+
+First 12 lines of `C:\CE_PLAN\areas\C79B1_FIXTURE_NOTE.md`:
+
+```
+# C-79b1 damaged-record fixture: F1 note (Sun 1 Nov 2026, Opus fixture builder F1)
+
+**Answer first: the four setups and four probes are written, but NONE can run today.** The robot deliberately refuses typed Lisp: the case validator says "typed text may not contain '(' (typed LISP wedged AutoCAD in run 47)", and v2 `type` refuses "(" unless `-AllowLisp`, which the case runner never passes. Validate: the 4 probes are 4 invalid, so I moved them to `cases\drafts_c79b1_01nov\held_dmg_lisp_blocked\` (the main folder validates 0 of 0 and the writers' checks stay clean). Control ids: every control id is known (no window steps).
+
+1. **What is needed to unblock (CE 00 / Tim decide; F1 edited no driver file):** recommended, one new v3 driver verb that writes ONE text into ONE named CE record through COM (no typed Lisp, so no run-47 wedge risk). Second choice, let the runner forward `-AllowLisp` and lift the validator ban for that flag only; that reverses a safety rule made after a real wedge.
+2. **Files written:** `cases\_setups\SETUP-DMG-LINKS`, `SETUP-DMG-OUTLETROLES`, `SETUP-DMG-LPD`, `SETUP-DMG-PITLIST` (`.setup.txt`); probes `PROBE-DMG-LINKS`, `-PITLIST`, `-OUTLETROLES`, `-LPD` (`.case.txt`, FAMILY dmgprobe, ORDER 901 to 904) in the held folder.
+3. **Damaged bytes:** only #1892's test builds real bytes: `{"Pipes":[{"PipeHandle":"2A4",` (truncated JSON, "as BUG-1154 leaves it", `Bug1141UnreadableLinkRecordTests.cs`, PR #1892 diff line 114). #1940, #1943, #1952, #1958 and #1953 pass a "damaged" flag, not bytes, so all four setups write that same string. It is invalid JSON in every reader, and every reader treats invalid JSON as unreadable (traced below).
+4. **Writers: use these names now.** The setup names are final; only the Lisp route changes once unblocked. Each setup leaves `$<name>_before`, `$<name>_after` (expected `DMGREAD {"Pipes":[{"PipeHandle":"2A4",`) and `$n0`.
+
+---
+
+## Common to all four setups
+```

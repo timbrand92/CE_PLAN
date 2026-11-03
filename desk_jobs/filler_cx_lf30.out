@@ -1,0 +1,4 @@
+== cx_lf30 (usage 35.0% -> 36.0%): 1. **DONE — Batch 30 audit.** Three bugs already have draft fixes; BUG-1018 needs protected files; BUG-1020 needs an engineering decision. All five skipped as instructed.
+2. **Draft PR:** [#1684](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1684), branch `cx2/bug-1018-batch30-audit`, tip `18aaf038`.
+3. **Validation:** 0 builds, 0 tests added/run—documentation only. Nothing installed; AutoCAD unopened.
+4. **Report pushed:** [per-bug evidence, existing test totals and exact AutoCAD checks](C:/CE_PLAN/areas/CODEX_LEDGER_FIX_BATCH30_23OCT.md).

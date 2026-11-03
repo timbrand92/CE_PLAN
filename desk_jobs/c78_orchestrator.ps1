@@ -5,7 +5,7 @@
 $d = 'C:\CE_PLAN\desk_jobs'; $log = 'C:\ce-fx\c75regrade3\c78_orchestrator.log'; $stateF = 'C:\ce-fx\c75regrade3\orch78_state.txt'
 $typedSpec = 'C:\ce-fx\retest\spec_c78_full.txt'; $typedProg = 'C:\ce-fx\c75regrade3\progress_spec_c78_full.txt'
 $queueF = 'C:\ce-fx\retest\orch78_pointer_queue.txt'; $reports = 'C:\CE_PLAN\areas\runner-reports'; $dll = "$env:APPDATA\Autodesk\ApplicationPlugins\CE_CVL_SUITE.bundle\Contents\Win64\Modern\CE_CVL_SUITE.dll"
-$quietNeed = 300; $blockMin = 180; $maxTries = 3
+$quietNeed = 600; $blockMin = 180; $maxTries = 3
 Add-Type @"
 using System; using System.Runtime.InteropServices;
 public class LIO { [StructLayout(LayoutKind.Sequential)] public struct LASTINPUTINFO { public uint cbSize; public uint dwTime; }
@@ -42,7 +42,7 @@ while ($true) {
   $curP = try { (Get-Item $dllP).VersionInfo.ProductVersion } catch { '' }
   if (-not $curP -or $curP -eq $baseP) { $stableP = 0; $lastP = ''; continue }
   if ($curP -eq $lastP) { $stableP++ } else { $stableP = 0; $lastP = $curP; Add-Content $log ("{0} installed build now reads {1}; waiting for it to stay put" -f (Get-Date -Format 'ddd HH:mm:ss'), $curP) }
-  $busyP = @(Get-Process acad, accoreconsole -ErrorAction SilentlyContinue).Count -gt 0
+  $busyP = @(Get-Process acad -ErrorAction SilentlyContinue).Count -gt 0   # accoreconsole is ignored here: the EV-04 scan launches one every 20 s and would hold the start back for ever
   $instP = @(Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -match 'payload1|chain_install|desk_install|payload_final|installer' -and $_.Name -match 'pwsh|cmd|powershell' -and $_.CommandLine -notmatch 'wait_install_then_run|c78_orchestrator|make_c78' }).Count -gt 0
   if ($stableP -ge 6 -and -not $busyP -and -not $instP -and -not (Test-Path "$d\HOLD_ROBOT.flag") -and -not (Test-Path "$d\TIM_AT_PC.flag") -and -not (Test-Path "$d\CLOSED_WINDOW_NOTICE.txt")) { break }
 }

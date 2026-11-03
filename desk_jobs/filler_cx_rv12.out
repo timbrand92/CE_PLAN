@@ -1,0 +1,11 @@
+== cx_rv12 (usage 8.0% -> 11.0%): 1. **DONE — [findings report](C:/CE_PLAN/areas/CODEX_PR_REVIEW_GROUP12_24OCT.md) saved and pushed.** All 15 PRs covered.
+
+2. **Findings:** HIGH 0, MEDIUM 2, LOW 1. Most important: #1225 still exposes part of bracketed drawing names in fault reports.
+
+3. **Verdicts:** 2 MERGE-WITH-FIXES, 3 HOLD, 10 REJECT.
+
+4. **Verification:** Code reading only. No builds, tests or AutoCAD runs; no plugin changes.
+
+---
+
+1. **Saved:** CE_PLAN commit `a6bb3434`, verified on remote `main`. Only the named findings file was committed.

@@ -1,0 +1,12 @@
+Both bugs now have a fix in **draft PR #1831**. It is not merged and not installed, and nobody has run it in AutoCAD.
+
+1. **BUG-665 cause:** CE only copied a pit's label and cover text onto a copy that sat at the same angle as the original. ROTATE Copy turns the pit, so it got neither, but CE still said "numbered as new". A second cause: with the Settings tick off, which is the default, ROTATE Copy and SCALE Copy were treated as plain moves.
+2. **BUG-672 cause:** after a copy with a locked layer, CE always printed "no label or cover text", even when the label was drawn.
+3. **What a drafter sees now:** a pit copied with ROTATE or SCALE gets its own number label and cover text, beside it as a COPY puts them. With 25TEXT locked, the line says "no cover text" instead. Both fixes are new Settings switches that ship ON. Grip Ctrl-drag copies and mirrored copies are unchanged.
+4. **My own mistakes:** my first full test run had one failure. An older check still required the "same angle only" line that caused the bug, so I updated it and re-ran. I also couldn't find the installed Civil file to re-check its time stamp. Every build used the "do not install" flag, but I didn't see that the installed copy was untouched with my own eyes.
+5. **Tests:** 20,721 passed, 0 failed, and the net48 compile has 0 errors.
+6. **Robot cases:** once installed, R34, R34s, R34so and R33m should turn from FAIL to PASS. The twin R34s_OFF_BROKEN needs one added line that turns the new rotate switch off, or it will pass when it should fail.
+
+The report is at `C:\CE_PLAN\areas\release-v3-colleagues-BUG665_672_FIX_REPORT.md` and has been pushed. My worktree is removed and the branch is kept. An untracked `.codex/` folder I didn't make has appeared in the main checkout. I left it alone.
+
+Summary: the turned-copy refusal and the fixed sentence were the causes. PR #1831 fixes both behind two ON switches. 20,721 tests pass. Not yet tested in AutoCAD.

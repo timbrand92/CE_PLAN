@@ -1,0 +1,8 @@
+== cx_rd24 (usage 19.0% -> 23.0%): 1. **DONE — six new findings:** HIGH 1, MEDIUM 4, LOW 1. Biggest: an unwritable diagnostics folder can stop Structural completing start-up.
+2. **Report:** [RD24 findings](C:/CE_PLAN/areas/CODEX_AUDIT2_RD24_24OCT.md), with exact evidence, smallest fixes and repeatable tests.
+3. **Verification:** Source reading only. No builds, tests or AutoCAD; no code changed.
+
+---
+
+1. **Saved and pushed:** `7aba989b`. Only the report committed; leak scan passed; `main` shows no ahead.
+2. **Cleanup:** Temporary worktree removed. Other sessions’ files untouched.

@@ -1,0 +1,5 @@
+== cx_bd08 (usage 85.0% -> 12.0%): 1. **DONE:** [Draft PR #1726](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1726), branch `cx3/tests-bd08`, tip `cd16bebcefc94ed6a7063d6d22582bb057b83882`.
+
+2. **Tests:** Six BUG-628 geometry cases supplement existing sizing coverage. All six fail before the fix and pass afterwards. Structural: **5,701 passed**. DesignCore: **2,195 with passing evidence**, including five cleared on retry. Builds: zero errors.
+
+3. **Saved and pushed:** [Report](C:/CE_PLAN/areas/CODEX_TESTS_BD08_24OCT.md), including exclusions and the exact AutoCAD check. No product changes, deployment or AutoCAD launch.

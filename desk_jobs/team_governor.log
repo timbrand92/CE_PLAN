@@ -1,0 +1,1019 @@
+Mon 12 00:21 governor started (end target 0.98, max jobs 3)
+Mon 12 00:21 7d 25.0% vs pace 20.0% (week 20% gone); 5h 24%; claude -p 4; governor jobs in last 3h 0
+Mon 12 00:41 7d 38.0% vs pace 20.2% (week 21% gone); 5h 103%; claude -p 0; governor jobs in last 3h 0
+Mon 12 01:01 7d 38.0% vs pace 20.4% (week 21% gone); 5h 103%; claude -p 0; governor jobs in last 3h 0
+Mon 12 01:21 7d 38.0% vs pace 20.6% (week 21% gone); 5h 103%; claude -p 0; governor jobs in last 3h 0
+Mon 12 01:42 7d 38.0% vs pace 20.8% (week 21% gone); 5h 103%; claude -p 0; governor jobs in last 3h 0
+Mon 12 02:02 7d 38.0% vs pace 21.0% (week 21% gone); 5h 103%; claude -p 0; governor jobs in last 3h 0
+Mon 12 02:22 7d 38.0% vs pace 21.2% (week 22% gone); 5h 103%; claude -p 0; governor jobs in last 3h 0
+Mon 12 02:42 7d 38.0% vs pace 21.4% (week 22% gone); 5h 103%; claude -p 0; governor jobs in last 3h 0
+Mon 12 03:02 7d 38.0% vs pace 21.6% (week 22% gone); 5h 103%; claude -p 0; governor jobs in last 3h 0
+Mon 12 03:22 7d 38.0% vs pace 21.8% (week 22% gone); 5h 103%; claude -p 0; governor jobs in last 3h 0
+Mon 12 03:42 7d 38.0% vs pace 22.0% (week 22% gone); 5h 0%; claude -p 2; governor jobs in last 3h 0
+Mon 12 04:02 7d 40.0% vs pace 22.2% (week 23% gone); 5h 9%; claude -p 3; governor jobs in last 3h 0
+Mon 12 04:22 7d 40.0% vs pace 22.4% (week 23% gone); 5h 11%; claude -p 2; governor jobs in last 3h 0
+Mon 12 04:43 7d 40.0% vs pace 22.6% (week 23% gone); 5h 12%; claude -p 0; governor jobs in last 3h 0
+Mon 12 05:03 7d 40.0% vs pace 22.8% (week 23% gone); 5h 12%; claude -p 0; governor jobs in last 3h 0
+Mon 12 05:23 7d 40.0% vs pace 23.0% (week 23% gone); 5h 12%; claude -p 0; governor jobs in last 3h 0
+Mon 12 05:43 7d 40.0% vs pace 23.2% (week 24% gone); 5h 12%; claude -p 0; governor jobs in last 3h 0
+Mon 12 06:03 7d 41.0% vs pace 23.4% (week 24% gone); 5h 18%; claude -p 2; governor jobs in last 3h 1
+Mon 12 06:23 7d 41.0% vs pace 23.6% (week 24% gone); 5h 19%; claude -p 1; governor jobs in last 3h 1
+Mon 12 06:43 7d 42.0% vs pace 23.8% (week 24% gone); 5h 20%; claude -p 1; governor jobs in last 3h 1
+Mon 12 07:04 7d 42.0% vs pace 24.0% (week 24% gone); 5h 22%; claude -p 3; governor jobs in last 3h 1
+Mon 12 07:24 7d 42.0% vs pace 24.2% (week 25% gone); 5h 23%; claude -p 2; governor jobs in last 3h 1
+Mon 12 07:44 7d 42.0% vs pace 24.3% (week 25% gone); 5h 24%; claude -p 2; governor jobs in last 3h 1
+Mon 12 08:04 7d 42.0% vs pace 24.5% (week 25% gone); 5h 25%; claude -p 1; governor jobs in last 3h 1
+Mon 12 08:24 7d 42.0% vs pace 24.7% (week 25% gone); 5h 25%; claude -p 0; governor jobs in last 3h 1
+Mon 12 08:44 7d 42.0% vs pace 24.9% (week 25% gone); 5h 0%; claude -p 0; governor jobs in last 3h 1
+Mon 12 09:04 7d 42.0% vs pace 25.1% (week 26% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Mon 12 09:25 7d 42.0% vs pace 25.3% (week 26% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Mon 12 09:45 7d 42.0% vs pace 25.5% (week 26% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Mon 12 10:05 7d 42.0% vs pace 25.7% (week 26% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Mon 12 10:25 7d 42.0% vs pace 25.9% (week 26% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Mon 12 10:45 7d 42.0% vs pace 26.1% (week 27% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Mon 12 11:05 7d 42.0% vs pace 26.3% (week 27% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Mon 12 11:25 7d 42.0% vs pace 26.5% (week 27% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Mon 12 11:45 7d 42.0% vs pace 26.7% (week 27% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Mon 12 12:06 7d 42.0% vs pace 26.9% (week 27% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Mon 12 12:26 7d 42.0% vs pace 27.1% (week 28% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Mon 12 12:46 7d 42.0% vs pace 27.3% (week 28% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Mon 12 13:06 7d 42.0% vs pace 27.5% (week 28% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Mon 12 13:26 7d 42.0% vs pace 27.7% (week 28% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Mon 12 13:46 7d 42.0% vs pace 27.9% (week 28% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Mon 12 14:06 7d 43.0% vs pace 28.1% (week 29% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Mon 12 14:26 7d 43.0% vs pace 28.3% (week 29% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Mon 12 14:46 7d 43.0% vs pace 28.5% (week 29% gone); 5h 2%; claude -p 0; governor jobs in last 3h 0
+Mon 12 15:07 7d 43.0% vs pace 28.7% (week 29% gone); 5h 3%; claude -p 0; governor jobs in last 3h 0
+Mon 12 15:27 7d 43.0% vs pace 28.8% (week 29% gone); 5h 3%; claude -p 0; governor jobs in last 3h 0
+Mon 12 15:47 7d 43.0% vs pace 29.0% (week 30% gone); 5h 4%; claude -p 0; governor jobs in last 3h 0
+Mon 12 16:07 7d 43.0% vs pace 29.2% (week 30% gone); 5h 5%; claude -p 2; governor jobs in last 3h 0
+Mon 12 16:27 7d 43.0% vs pace 29.4% (week 30% gone); 5h 5%; claude -p 0; governor jobs in last 3h 0
+Mon 12 16:47 7d 43.0% vs pace 29.6% (week 30% gone); 5h 6%; claude -p 0; governor jobs in last 3h 0
+Mon 12 17:07 7d 44.0% vs pace 29.8% (week 30% gone); 5h 7%; claude -p 0; governor jobs in last 3h 0
+Mon 12 17:28 7d 44.0% vs pace 30.0% (week 31% gone); 5h 8%; claude -p 0; governor jobs in last 3h 0
+Mon 12 17:48 7d 44.0% vs pace 30.2% (week 31% gone); 5h 8%; claude -p 0; governor jobs in last 3h 0
+Mon 12 18:08 7d 44.0% vs pace 30.4% (week 31% gone); 5h 9%; claude -p 0; governor jobs in last 3h 0
+Mon 12 18:28 7d 44.0% vs pace 30.6% (week 31% gone); 5h 10%; claude -p 0; governor jobs in last 3h 0
+Mon 12 18:48 7d 44.0% vs pace 30.8% (week 31% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Mon 12 19:08 7d 44.0% vs pace 31.0% (week 32% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Mon 12 19:28 7d 44.0% vs pace 31.2% (week 32% gone); 5h 2%; claude -p 1; governor jobs in last 3h 0
+Mon 12 19:48 7d 45.0% vs pace 31.4% (week 32% gone); 5h 3%; claude -p 0; governor jobs in last 3h 0
+Mon 12 20:09 7d 45.0% vs pace 31.6% (week 32% gone); 5h 4%; claude -p 0; governor jobs in last 3h 0
+Mon 12 20:29 7d 45.0% vs pace 31.8% (week 32% gone); 5h 4%; claude -p 0; governor jobs in last 3h 0
+Mon 12 20:49 7d 45.0% vs pace 32.0% (week 33% gone); 5h 6%; claude -p 0; governor jobs in last 3h 0
+Mon 12 21:09 7d 45.0% vs pace 32.2% (week 33% gone); 5h 6%; claude -p 0; governor jobs in last 3h 0
+Mon 12 21:29 7d 45.0% vs pace 32.4% (week 33% gone); 5h 7%; claude -p 0; governor jobs in last 3h 0
+Mon 12 21:49 7d 46.0% vs pace 32.6% (week 33% gone); 5h 10%; claude -p 4; governor jobs in last 3h 0
+Mon 12 22:10 7d 46.0% vs pace 32.8% (week 33% gone); 5h 13%; claude -p 4; governor jobs in last 3h 0
+Mon 12 22:30 7d 46.0% vs pace 33.0% (week 34% gone); 5h 15%; claude -p 3; governor jobs in last 3h 0
+Mon 12 22:50 7d 47.0% vs pace 33.2% (week 34% gone); 5h 16%; claude -p 3; governor jobs in last 3h 0
+Mon 12 23:10 7d 47.0% vs pace 33.4% (week 34% gone); 5h 17%; claude -p 2; governor jobs in last 3h 0
+Mon 12 23:30 7d 47.0% vs pace 33.5% (week 34% gone); 5h 18%; claude -p 2; governor jobs in last 3h 0
+Mon 12 23:50 7d 47.0% vs pace 33.7% (week 34% gone); 5h 1%; claude -p 2; governor jobs in last 3h 0
+Tue 13 00:10 7d 48.0% vs pace 33.9% (week 35% gone); 5h 2%; claude -p 2; governor jobs in last 3h 0
+Tue 13 00:31 7d 48.0% vs pace 34.1% (week 35% gone); 5h 3%; claude -p 2; governor jobs in last 3h 0
+Tue 13 00:51 7d 48.0% vs pace 34.3% (week 35% gone); 5h 4%; claude -p 2; governor jobs in last 3h 0
+Tue 13 01:11 7d 48.0% vs pace 34.5% (week 35% gone); 5h 5%; claude -p 1; governor jobs in last 3h 0
+Tue 13 01:31 7d 48.0% vs pace 34.7% (week 35% gone); 5h 7%; claude -p 0; governor jobs in last 3h 0
+Tue 13 01:51 7d 48.0% vs pace 34.9% (week 36% gone); 5h 7%; claude -p 0; governor jobs in last 3h 0
+Tue 13 02:11 7d 49.0% vs pace 35.1% (week 36% gone); 5h 8%; claude -p 0; governor jobs in last 3h 0
+Tue 13 02:31 7d 49.0% vs pace 35.3% (week 36% gone); 5h 10%; claude -p 0; governor jobs in last 3h 0
+Tue 13 02:51 7d 49.0% vs pace 35.5% (week 36% gone); 5h 11%; claude -p 0; governor jobs in last 3h 0
+Tue 13 03:12 7d 49.0% vs pace 35.7% (week 36% gone); 5h 12%; claude -p 0; governor jobs in last 3h 0
+Tue 13 03:32 7d 49.0% vs pace 35.9% (week 37% gone); 5h 13%; claude -p 0; governor jobs in last 3h 0
+Tue 13 03:52 7d 49.0% vs pace 36.1% (week 37% gone); 5h 14%; claude -p 0; governor jobs in last 3h 0
+Tue 13 04:12 7d 50.0% vs pace 36.3% (week 37% gone); 5h 15%; claude -p 0; governor jobs in last 3h 0
+Tue 13 04:32 7d 50.0% vs pace 36.5% (week 37% gone); 5h 16%; claude -p 0; governor jobs in last 3h 0
+Tue 13 04:52 7d 50.0% vs pace 36.7% (week 37% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Tue 13 05:12 7d 50.0% vs pace 36.9% (week 38% gone); 5h 2%; claude -p 0; governor jobs in last 3h 0
+Tue 13 05:33 7d 50.0% vs pace 37.1% (week 38% gone); 5h 3%; claude -p 0; governor jobs in last 3h 0
+Tue 13 05:53 7d 51.0% vs pace 37.3% (week 38% gone); 5h 4%; claude -p 0; governor jobs in last 3h 0
+Tue 13 06:13 7d 51.0% vs pace 37.5% (week 38% gone); 5h 6%; claude -p 0; governor jobs in last 3h 0
+Tue 13 06:33 7d 51.0% vs pace 37.7% (week 38% gone); 5h 7%; claude -p 0; governor jobs in last 3h 0
+Tue 13 06:53 7d 51.0% vs pace 37.9% (week 39% gone); 5h 8%; claude -p 0; governor jobs in last 3h 0
+Tue 13 07:13 7d 51.0% vs pace 38.0% (week 39% gone); 5h 9%; claude -p 0; governor jobs in last 3h 0
+Tue 13 07:33 7d 52.0% vs pace 38.2% (week 39% gone); 5h 10%; claude -p 0; governor jobs in last 3h 0
+Tue 13 07:53 7d 52.0% vs pace 38.4% (week 39% gone); 5h 12%; claude -p 0; governor jobs in last 3h 0
+Tue 13 08:14 7d 52.0% vs pace 38.6% (week 39% gone); 5h 13%; claude -p 0; governor jobs in last 3h 0
+Tue 13 08:34 7d 52.0% vs pace 38.8% (week 40% gone); 5h 14%; claude -p 0; governor jobs in last 3h 0
+Tue 13 08:54 7d 53.0% vs pace 39.0% (week 40% gone); 5h 16%; claude -p 0; governor jobs in last 3h 0
+Tue 13 09:14 7d 53.0% vs pace 39.2% (week 40% gone); 5h 17%; claude -p 0; governor jobs in last 3h 0
+Tue 13 09:34 7d 53.0% vs pace 39.4% (week 40% gone); 5h 19%; claude -p 0; governor jobs in last 3h 0
+Tue 13 09:54 7d 53.0% vs pace 39.6% (week 40% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Tue 13 10:14 7d 53.0% vs pace 39.8% (week 41% gone); 5h 2%; claude -p 0; governor jobs in last 3h 0
+Tue 13 10:35 7d 54.0% vs pace 40.0% (week 41% gone); 5h 4%; claude -p 0; governor jobs in last 3h 0
+Tue 13 10:55 7d 54.0% vs pace 40.2% (week 41% gone); 5h 5%; claude -p 0; governor jobs in last 3h 0
+Tue 13 11:15 7d 54.0% vs pace 40.4% (week 41% gone); 5h 7%; claude -p 0; governor jobs in last 3h 0
+Tue 13 11:35 7d 54.0% vs pace 40.6% (week 41% gone); 5h 8%; claude -p 0; governor jobs in last 3h 0
+Tue 13 11:55 7d 55.0% vs pace 40.8% (week 42% gone); 5h 9%; claude -p 0; governor jobs in last 3h 0
+Tue 13 12:15 7d 55.0% vs pace 41.0% (week 42% gone); 5h 11%; claude -p 0; governor jobs in last 3h 0
+Tue 13 12:35 7d 55.0% vs pace 41.2% (week 42% gone); 5h 12%; claude -p 0; governor jobs in last 3h 0
+Tue 13 12:55 7d 55.0% vs pace 41.4% (week 42% gone); 5h 14%; claude -p 1; governor jobs in last 3h 0
+Tue 13 13:15 7d 56.0% vs pace 41.6% (week 42% gone); 5h 15%; claude -p 0; governor jobs in last 3h 0
+Tue 13 13:36 7d 56.0% vs pace 41.8% (week 43% gone); 5h 17%; claude -p 0; governor jobs in last 3h 0
+Tue 13 13:56 7d 56.0% vs pace 42.0% (week 43% gone); 5h 18%; claude -p 0; governor jobs in last 3h 0
+Tue 13 14:16 7d 56.0% vs pace 42.2% (week 43% gone); 5h 20%; claude -p 0; governor jobs in last 3h 0
+Tue 13 14:36 7d 57.0% vs pace 42.4% (week 43% gone); 5h 21%; claude -p 0; governor jobs in last 3h 0
+Tue 13 14:56 7d 57.0% vs pace 42.6% (week 43% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Tue 13 15:16 7d 57.0% vs pace 42.7% (week 44% gone); 5h 3%; claude -p 0; governor jobs in last 3h 0
+Tue 13 15:36 7d 57.0% vs pace 42.9% (week 44% gone); 5h 4%; claude -p 1; governor jobs in last 3h 0
+Tue 13 15:56 7d 58.0% vs pace 43.1% (week 44% gone); 5h 6%; claude -p 0; governor jobs in last 3h 0
+Tue 13 16:17 7d 58.0% vs pace 43.3% (week 44% gone); 5h 7%; claude -p 0; governor jobs in last 3h 0
+Tue 13 16:37 7d 58.0% vs pace 43.5% (week 44% gone); 5h 9%; claude -p 0; governor jobs in last 3h 0
+Tue 13 16:57 7d 58.0% vs pace 43.7% (week 45% gone); 5h 11%; claude -p 0; governor jobs in last 3h 0
+Tue 13 17:17 7d 59.0% vs pace 43.9% (week 45% gone); 5h 12%; claude -p 0; governor jobs in last 3h 0
+Tue 13 17:37 7d 59.0% vs pace 44.1% (week 45% gone); 5h 14%; claude -p 0; governor jobs in last 3h 0
+Tue 13 17:57 7d 59.0% vs pace 44.3% (week 45% gone); 5h 16%; claude -p 0; governor jobs in last 3h 0
+Tue 13 18:18 7d 59.0% vs pace 44.5% (week 45% gone); 5h 17%; claude -p 0; governor jobs in last 3h 0
+Tue 13 18:38 7d 60.0% vs pace 44.7% (week 46% gone); 5h 19%; claude -p 1; governor jobs in last 3h 0
+Tue 13 18:58 7d 60.0% vs pace 44.9% (week 46% gone); 5h 20%; claude -p 0; governor jobs in last 3h 0
+Tue 13 19:18 7d 60.0% vs pace 45.1% (week 46% gone); 5h 22%; claude -p 0; governor jobs in last 3h 0
+Tue 13 19:38 7d 61.0% vs pace 45.3% (week 46% gone); 5h 24%; claude -p 0; governor jobs in last 3h 0
+Tue 13 19:58 7d 61.0% vs pace 45.5% (week 46% gone); 5h 2%; claude -p 0; governor jobs in last 3h 0
+Tue 13 20:18 7d 61.0% vs pace 45.7% (week 47% gone); 5h 4%; claude -p 0; governor jobs in last 3h 0
+Tue 13 20:38 7d 61.0% vs pace 45.9% (week 47% gone); 5h 5%; claude -p 0; governor jobs in last 3h 0
+Tue 13 20:59 7d 62.0% vs pace 46.1% (week 47% gone); 5h 7%; claude -p 0; governor jobs in last 3h 0
+Tue 13 21:19 7d 62.0% vs pace 46.3% (week 47% gone); 5h 9%; claude -p 1; governor jobs in last 3h 0
+Tue 13 21:39 7d 62.0% vs pace 46.5% (week 47% gone); 5h 10%; claude -p 0; governor jobs in last 3h 0
+Tue 13 21:59 7d 63.0% vs pace 46.7% (week 48% gone); 5h 12%; claude -p 0; governor jobs in last 3h 0
+Tue 13 22:19 7d 63.0% vs pace 46.9% (week 48% gone); 5h 14%; claude -p 0; governor jobs in last 3h 0
+Tue 13 22:39 7d 63.0% vs pace 47.1% (week 48% gone); 5h 16%; claude -p 0; governor jobs in last 3h 0
+Tue 13 22:59 7d 63.0% vs pace 47.2% (week 48% gone); 5h 18%; claude -p 0; governor jobs in last 3h 0
+Tue 13 23:19 7d 64.0% vs pace 47.4% (week 48% gone); 5h 19%; claude -p 0; governor jobs in last 3h 0
+Tue 13 23:40 7d 64.0% vs pace 47.6% (week 49% gone); 5h 21%; claude -p 0; governor jobs in last 3h 0
+Wed 14 00:00 7d 64.0% vs pace 47.8% (week 49% gone); 5h 23%; claude -p 0; governor jobs in last 3h 0
+Wed 14 00:20 7d 65.0% vs pace 48.0% (week 49% gone); 5h 25%; claude -p 0; governor jobs in last 3h 0
+Wed 14 00:40 7d 65.0% vs pace 48.2% (week 49% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Wed 14 01:00 7d 65.0% vs pace 48.4% (week 49% gone); 5h 2%; claude -p 0; governor jobs in last 3h 0
+Wed 14 01:20 7d 66.0% vs pace 48.6% (week 50% gone); 5h 4%; claude -p 0; governor jobs in last 3h 0
+Wed 14 01:40 7d 66.0% vs pace 48.8% (week 50% gone); 5h 6%; claude -p 0; governor jobs in last 3h 0
+Wed 14 02:00 7d 66.0% vs pace 49.0% (week 50% gone); 5h 8%; claude -p 0; governor jobs in last 3h 0
+Wed 14 02:21 7d 66.0% vs pace 49.2% (week 50% gone); 5h 9%; claude -p 0; governor jobs in last 3h 0
+Wed 14 02:41 7d 67.0% vs pace 49.4% (week 50% gone); 5h 12%; claude -p 1; governor jobs in last 3h 0
+Wed 14 03:01 7d 67.0% vs pace 49.6% (week 51% gone); 5h 13%; claude -p 0; governor jobs in last 3h 0
+Wed 14 03:21 7d 67.0% vs pace 49.8% (week 51% gone); 5h 15%; claude -p 0; governor jobs in last 3h 0
+Wed 14 03:41 7d 68.0% vs pace 50.0% (week 51% gone); 5h 17%; claude -p 0; governor jobs in last 3h 0
+Wed 14 04:01 7d 68.0% vs pace 50.2% (week 51% gone); 5h 19%; claude -p 0; governor jobs in last 3h 0
+Wed 14 04:21 7d 68.0% vs pace 50.4% (week 51% gone); 5h 21%; claude -p 0; governor jobs in last 3h 0
+Wed 14 04:41 7d 69.0% vs pace 50.6% (week 52% gone); 5h 23%; claude -p 1; governor jobs in last 3h 0
+Wed 14 05:02 7d 69.0% vs pace 50.8% (week 52% gone); 5h 25%; claude -p 0; governor jobs in last 3h 0
+Wed 14 05:22 7d 69.0% vs pace 51.0% (week 52% gone); 5h 27%; claude -p 0; governor jobs in last 3h 0
+Wed 14 05:42 7d 70.0% vs pace 51.2% (week 52% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Wed 14 06:02 7d 70.0% vs pace 51.4% (week 52% gone); 5h 2%; claude -p 0; governor jobs in last 3h 0
+Wed 14 06:22 7d 70.0% vs pace 51.6% (week 53% gone); 5h 4%; claude -p 0; governor jobs in last 3h 0
+Wed 14 06:42 7d 71.0% vs pace 51.7% (week 53% gone); 5h 6%; claude -p 0; governor jobs in last 3h 0
+Wed 14 07:02 7d 71.0% vs pace 51.9% (week 53% gone); 5h 8%; claude -p 1; governor jobs in last 3h 0
+Wed 14 07:23 7d 71.0% vs pace 52.1% (week 53% gone); 5h 11%; claude -p 0; governor jobs in last 3h 0
+Wed 14 07:43 7d 72.0% vs pace 52.3% (week 53% gone); 5h 13%; claude -p 1; governor jobs in last 3h 0
+Wed 14 08:03 7d 72.0% vs pace 52.5% (week 54% gone); 5h 14%; claude -p 0; governor jobs in last 3h 0
+Wed 14 08:23 7d 72.0% vs pace 52.7% (week 54% gone); 5h 17%; claude -p 0; governor jobs in last 3h 0
+Wed 14 08:43 7d 73.0% vs pace 52.9% (week 54% gone); 5h 19%; claude -p 0; governor jobs in last 3h 0
+Wed 14 09:03 7d 73.0% vs pace 53.1% (week 54% gone); 5h 21%; claude -p 0; governor jobs in last 3h 0
+Wed 14 09:23 7d 74.0% vs pace 53.3% (week 54% gone); 5h 23%; claude -p 0; governor jobs in last 3h 0
+Wed 14 09:44 7d 74.0% vs pace 53.5% (week 55% gone); 5h 26%; claude -p 1; governor jobs in last 3h 0
+Wed 14 10:04 7d 74.0% vs pace 53.7% (week 55% gone); 5h 28%; claude -p 1; governor jobs in last 3h 0
+Wed 14 10:24 7d 75.0% vs pace 53.9% (week 55% gone); 5h 30%; claude -p 0; governor jobs in last 3h 0
+Wed 14 10:44 7d 75.0% vs pace 54.1% (week 55% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Wed 14 11:04 7d 75.0% vs pace 54.3% (week 55% gone); 5h 3%; claude -p 0; governor jobs in last 3h 0
+Wed 14 11:24 7d 76.0% vs pace 54.5% (week 56% gone); 5h 5%; claude -p 0; governor jobs in last 3h 0
+Wed 14 11:44 7d 76.0% vs pace 54.7% (week 56% gone); 5h 7%; claude -p 0; governor jobs in last 3h 0
+Wed 14 12:04 7d 76.0% vs pace 54.9% (week 56% gone); 5h 10%; claude -p 0; governor jobs in last 3h 0
+Wed 14 12:25 7d 77.0% vs pace 55.1% (week 56% gone); 5h 12%; claude -p 0; governor jobs in last 3h 0
+Wed 14 12:45 7d 77.0% vs pace 55.3% (week 56% gone); 5h 14%; claude -p 0; governor jobs in last 3h 0
+Wed 14 13:05 7d 78.0% vs pace 55.5% (week 57% gone); 5h 16%; claude -p 0; governor jobs in last 3h 0
+Wed 14 13:25 7d 78.0% vs pace 55.7% (week 57% gone); 5h 19%; claude -p 0; governor jobs in last 3h 0
+Wed 14 13:45 7d 78.0% vs pace 55.9% (week 57% gone); 5h 21%; claude -p 0; governor jobs in last 3h 0
+Wed 14 14:05 7d 79.0% vs pace 56.1% (week 57% gone); 5h 23%; claude -p 0; governor jobs in last 3h 0
+Wed 14 14:25 7d 79.0% vs pace 56.3% (week 57% gone); 5h 26%; claude -p 0; governor jobs in last 3h 0
+Wed 14 14:46 7d 80.0% vs pace 56.4% (week 58% gone); 5h 28%; claude -p 0; governor jobs in last 3h 0
+Wed 14 15:06 7d 80.0% vs pace 56.6% (week 58% gone); 5h 31%; claude -p 0; governor jobs in last 3h 0
+Wed 14 15:26 7d 80.0% vs pace 56.8% (week 58% gone); 5h 32%; claude -p 1; governor jobs in last 3h 0
+Wed 14 15:46 7d 81.0% vs pace 57.0% (week 58% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Wed 14 16:06 7d 81.0% vs pace 57.2% (week 58% gone); 5h 3%; claude -p 0; governor jobs in last 3h 0
+Wed 14 16:26 7d 81.0% vs pace 57.4% (week 59% gone); 5h 6%; claude -p 0; governor jobs in last 3h 0
+Wed 14 16:46 7d 82.0% vs pace 57.6% (week 59% gone); 5h 8%; claude -p 0; governor jobs in last 3h 0
+Wed 14 17:07 7d 82.0% vs pace 57.8% (week 59% gone); 5h 10%; claude -p 0; governor jobs in last 3h 0
+Wed 14 17:27 7d 83.0% vs pace 58.0% (week 59% gone); 5h 13%; claude -p 0; governor jobs in last 3h 0
+Wed 14 17:47 7d 83.0% vs pace 58.2% (week 59% gone); 5h 15%; claude -p 0; governor jobs in last 3h 0
+Wed 14 18:07 7d 83.0% vs pace 58.4% (week 60% gone); 5h 18%; claude -p 1; governor jobs in last 3h 0
+Wed 14 18:27 7d 84.0% vs pace 58.6% (week 60% gone); 5h 20%; claude -p 0; governor jobs in last 3h 0
+Wed 14 18:47 7d 84.0% vs pace 58.8% (week 60% gone); 5h 23%; claude -p 0; governor jobs in last 3h 0
+Wed 14 19:07 7d 85.0% vs pace 59.0% (week 60% gone); 5h 25%; claude -p 0; governor jobs in last 3h 0
+Wed 14 19:27 7d 85.0% vs pace 59.2% (week 60% gone); 5h 28%; claude -p 0; governor jobs in last 3h 0
+Wed 14 19:48 7d 86.0% vs pace 59.4% (week 61% gone); 5h 30%; claude -p 0; governor jobs in last 3h 0
+Wed 14 20:08 7d 86.0% vs pace 59.6% (week 61% gone); 5h 33%; claude -p 1; governor jobs in last 3h 0
+Wed 14 20:28 7d 86.0% vs pace 59.8% (week 61% gone); 5h 35%; claude -p 0; governor jobs in last 3h 0
+Wed 14 20:48 7d 87.0% vs pace 60.0% (week 61% gone); 5h 1%; claude -p 1; governor jobs in last 3h 0
+Wed 14 21:08 7d 87.0% vs pace 60.2% (week 61% gone); 5h 3%; claude -p 0; governor jobs in last 3h 0
+Wed 14 21:28 7d 88.0% vs pace 60.4% (week 62% gone); 5h 6%; claude -p 0; governor jobs in last 3h 0
+Wed 14 21:48 7d 88.0% vs pace 60.6% (week 62% gone); 5h 9%; claude -p 0; governor jobs in last 3h 0
+Wed 14 22:09 7d 88.0% vs pace 60.8% (week 62% gone); 5h 11%; claude -p 0; governor jobs in last 3h 0
+Wed 14 22:29 7d 89.0% vs pace 61.0% (week 62% gone); 5h 14%; claude -p 0; governor jobs in last 3h 0
+Wed 14 22:49 7d 89.0% vs pace 61.1% (week 62% gone); 5h 17%; claude -p 0; governor jobs in last 3h 0
+Wed 14 23:09 7d 90.0% vs pace 61.3% (week 63% gone); 5h 19%; claude -p 0; governor jobs in last 3h 0
+Wed 14 23:29 7d 90.0% vs pace 61.5% (week 63% gone); 5h 21%; claude -p 0; governor jobs in last 3h 0
+Wed 14 23:49 7d 91.0% vs pace 61.7% (week 63% gone); 5h 24%; claude -p 0; governor jobs in last 3h 0
+Thu 15 00:09 7d 91.0% vs pace 61.9% (week 63% gone); 5h 27%; claude -p 0; governor jobs in last 3h 0
+Thu 15 00:29 7d 91.0% vs pace 62.1% (week 63% gone); 5h 30%; claude -p 0; governor jobs in last 3h 0
+Thu 15 00:50 7d 92.0% vs pace 62.3% (week 64% gone); 5h 32%; claude -p 1; governor jobs in last 3h 0
+Thu 15 01:10 7d 92.0% vs pace 62.5% (week 64% gone); 5h 35%; claude -p 0; governor jobs in last 3h 0
+Thu 15 01:30 7d 93.0% vs pace 62.7% (week 64% gone); 5h 38%; claude -p 0; governor jobs in last 3h 0
+Thu 15 01:50 7d 93.0% vs pace 62.9% (week 64% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Thu 15 02:10 7d 94.0% vs pace 63.1% (week 64% gone); 5h 4%; claude -p 0; governor jobs in last 3h 0
+Thu 15 02:30 7d 94.0% vs pace 63.3% (week 65% gone); 5h 7%; claude -p 1; governor jobs in last 3h 0
+Thu 15 02:50 7d 95.0% vs pace 63.5% (week 65% gone); 5h 10%; claude -p 0; governor jobs in last 3h 0
+Thu 15 03:11 7d 95.0% vs pace 63.7% (week 65% gone); 5h 12%; claude -p 0; governor jobs in last 3h 0
+Thu 15 03:31 7d 96.0% vs pace 63.9% (week 65% gone); 5h 16%; claude -p 0; governor jobs in last 3h 0
+Thu 15 03:51 7d 96.0% vs pace 64.1% (week 65% gone); 5h 18%; claude -p 0; governor jobs in last 3h 0
+Thu 15 04:11 7d 96.0% vs pace 64.3% (week 66% gone); 5h 21%; claude -p 0; governor jobs in last 3h 0
+Thu 15 04:31 7d 97.0% vs pace 64.5% (week 66% gone); 5h 23%; claude -p 2; governor jobs in last 3h 0
+Thu 15 04:51 7d 97.0% vs pace 64.7% (week 66% gone); 5h 27%; claude -p 1; governor jobs in last 3h 0
+Thu 15 05:11 7d 98.0% vs pace 64.9% (week 66% gone); 5h 29%; claude -p 0; governor jobs in last 3h 0
+Thu 15 05:32 7d 98.0% vs pace 65.1% (week 66% gone); 5h 31%; claude -p 0; governor jobs in last 3h 0
+Thu 15 05:52 7d 99.0% vs pace 65.3% (week 67% gone); 5h 35%; claude -p 0; governor jobs in last 3h 0
+Thu 15 06:12 7d 99.0% vs pace 65.5% (week 67% gone); 5h 38%; claude -p 0; governor jobs in last 3h 0
+Thu 15 06:32 7d 99.0% vs pace 65.7% (week 67% gone); 5h 40%; claude -p 0; governor jobs in last 3h 0
+Thu 15 06:52 7d 100.0% vs pace 65.8% (week 67% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Thu 15 07:12 7d 100.0% vs pace 66.0% (week 67% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Thu 15 07:33 7d 100.0% vs pace 66.2% (week 68% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Thu 15 07:53 7d 100.0% vs pace 66.4% (week 68% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Thu 15 08:13 7d 100.0% vs pace 66.6% (week 68% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Thu 15 08:33 7d 100.0% vs pace 66.8% (week 68% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Thu 15 08:53 7d 100.0% vs pace 67.0% (week 68% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Thu 15 09:13 7d 100.0% vs pace 67.2% (week 69% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Thu 15 09:33 7d 100.0% vs pace 67.4% (week 69% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Thu 15 09:53 7d 100.0% vs pace 67.6% (week 69% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Thu 15 10:14 7d 100.0% vs pace 67.8% (week 69% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Thu 15 10:34 7d 100.0% vs pace 68.0% (week 69% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Thu 15 10:54 7d 100.0% vs pace 68.2% (week 70% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Thu 15 11:14 7d 100.0% vs pace 68.4% (week 70% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Thu 15 11:34 7d 100.0% vs pace 68.6% (week 70% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Thu 15 11:54 7d 100.0% vs pace 68.8% (week 70% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 15 12:14 7d 100.0% vs pace 69.0% (week 70% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 15 12:34 7d 100.0% vs pace 69.2% (week 71% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 15 12:54 7d 100.0% vs pace 69.4% (week 71% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 15 13:15 7d 100.0% vs pace 69.6% (week 71% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 15 13:35 7d 100.0% vs pace 69.8% (week 71% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 15 13:55 7d 100.0% vs pace 70.0% (week 71% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 15 14:15 7d 100.0% vs pace 70.1% (week 72% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 15 14:35 7d 100.0% vs pace 70.3% (week 72% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 15 14:55 7d 100.0% vs pace 70.5% (week 72% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 15 15:15 7d 100.0% vs pace 70.7% (week 72% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 15 15:35 7d 100.0% vs pace 70.9% (week 72% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 15 15:55 7d 100.0% vs pace 71.1% (week 73% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 15 16:15 7d 100.0% vs pace 71.3% (week 73% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 15 16:36 7d 100.0% vs pace 71.5% (week 73% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 15 16:56 7d 100.0% vs pace 71.7% (week 73% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 15 17:16 7d 100.0% vs pace 71.9% (week 73% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 15 17:36 7d 100.0% vs pace 72.1% (week 74% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 15 17:56 7d 100.0% vs pace 72.3% (week 74% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 15 18:16 7d 100.0% vs pace 72.5% (week 74% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 15 18:36 7d 100.0% vs pace 72.7% (week 74% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 15 18:56 7d 100.0% vs pace 72.9% (week 74% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 15 19:16 7d 100.0% vs pace 73.1% (week 75% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 15 19:36 7d 100.0% vs pace 73.3% (week 75% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 15 19:56 7d 100.0% vs pace 73.5% (week 75% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 15 20:17 7d 100.0% vs pace 73.7% (week 75% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 15 20:37 7d 100.0% vs pace 73.9% (week 75% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 15 20:57 7d 100.0% vs pace 74.1% (week 76% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 15 21:17 7d 100.0% vs pace 74.3% (week 76% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 15 21:37 7d 100.0% vs pace 74.4% (week 76% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 15 21:57 7d 100.0% vs pace 74.6% (week 76% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 15 22:17 7d 100.0% vs pace 74.8% (week 76% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 15 22:37 7d 100.0% vs pace 75.0% (week 77% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 15 22:57 7d 100.0% vs pace 75.2% (week 77% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 15 23:18 7d 100.0% vs pace 75.4% (week 77% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 15 23:38 7d 100.0% vs pace 75.6% (week 77% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 15 23:58 7d 100.0% vs pace 75.8% (week 77% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 00:18 7d 100.0% vs pace 76.0% (week 78% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 00:38 7d 100.0% vs pace 76.2% (week 78% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 00:58 7d 100.0% vs pace 76.4% (week 78% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 01:18 7d 100.0% vs pace 76.6% (week 78% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 01:38 7d 100.0% vs pace 76.8% (week 78% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 01:58 7d 100.0% vs pace 77.0% (week 79% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 02:18 7d 100.0% vs pace 77.2% (week 79% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 02:39 7d 100.0% vs pace 77.4% (week 79% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 02:59 7d 100.0% vs pace 77.6% (week 79% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 03:19 7d 100.0% vs pace 77.8% (week 79% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 03:39 7d 100.0% vs pace 78.0% (week 80% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 03:59 7d 100.0% vs pace 78.2% (week 80% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 04:19 7d 100.0% vs pace 78.4% (week 80% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 04:39 7d 100.0% vs pace 78.6% (week 80% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 04:59 7d 100.0% vs pace 78.7% (week 80% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 05:19 7d 100.0% vs pace 78.9% (week 81% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 05:39 7d 100.0% vs pace 79.1% (week 81% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 05:59 7d 100.0% vs pace 79.3% (week 81% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 06:20 7d 100.0% vs pace 79.5% (week 81% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 06:40 7d 100.0% vs pace 79.7% (week 81% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 07:00 7d 100.0% vs pace 79.9% (week 82% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 07:20 7d 100.0% vs pace 80.1% (week 82% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 07:40 7d 100.0% vs pace 80.3% (week 82% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 08:00 7d 100.0% vs pace 80.5% (week 82% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 08:20 7d 100.0% vs pace 80.7% (week 82% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 08:40 7d 100.0% vs pace 80.9% (week 83% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 09:00 7d 100.0% vs pace 81.1% (week 83% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 09:20 7d 100.0% vs pace 81.3% (week 83% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 09:41 7d 100.0% vs pace 81.5% (week 83% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 10:01 7d 100.0% vs pace 81.7% (week 83% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 10:21 7d 100.0% vs pace 81.9% (week 84% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 10:41 7d 100.0% vs pace 82.1% (week 84% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 11:01 7d 100.0% vs pace 82.3% (week 84% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 11:21 7d 100.0% vs pace 82.5% (week 84% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 11:41 7d 100.0% vs pace 82.7% (week 84% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 12:01 7d 100.0% vs pace 82.8% (week 85% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 12:21 7d 100.0% vs pace 83.0% (week 85% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 12:41 7d 100.0% vs pace 83.2% (week 85% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 13:01 7d 100.0% vs pace 83.4% (week 85% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 13:22 7d 100.0% vs pace 83.6% (week 85% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 13:42 7d 100.0% vs pace 83.8% (week 86% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 14:02 7d 100.0% vs pace 84.0% (week 86% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 14:22 7d 100.0% vs pace 84.2% (week 86% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 14:42 7d 100.0% vs pace 84.4% (week 86% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 15:02 7d 100.0% vs pace 84.6% (week 86% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 15:22 7d 100.0% vs pace 84.8% (week 87% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 15:42 7d 100.0% vs pace 85.0% (week 87% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 16:02 7d 100.0% vs pace 85.2% (week 87% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 16:22 7d 100.0% vs pace 85.4% (week 87% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 16:43 7d 100.0% vs pace 85.6% (week 87% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 17:03 7d 100.0% vs pace 85.8% (week 88% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 17:23 7d 100.0% vs pace 86.0% (week 88% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 17:43 7d 100.0% vs pace 86.2% (week 88% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 18:03 7d 100.0% vs pace 86.4% (week 88% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 18:23 7d 100.0% vs pace 86.6% (week 88% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 18:43 7d 100.0% vs pace 86.8% (week 89% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 19:03 7d 100.0% vs pace 87.0% (week 89% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 19:23 7d 100.0% vs pace 87.1% (week 89% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 19:43 7d 100.0% vs pace 87.3% (week 89% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 20:03 7d 100.0% vs pace 87.5% (week 89% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 20:24 7d 100.0% vs pace 87.7% (week 90% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 20:44 7d 100.0% vs pace 87.9% (week 90% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 21:04 7d 100.0% vs pace 88.1% (week 90% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 21:24 7d 100.0% vs pace 88.3% (week 90% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 21:44 7d 100.0% vs pace 88.5% (week 90% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 22:04 7d 100.0% vs pace 88.7% (week 91% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 22:24 7d 100.0% vs pace 88.9% (week 91% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 22:44 7d 100.0% vs pace 89.1% (week 91% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 23:05 7d 100.0% vs pace 89.3% (week 91% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 23:25 7d 100.0% vs pace 89.5% (week 91% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Fri 16 23:45 7d 100.0% vs pace 89.7% (week 92% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Sat 17 00:05 7d 100.0% vs pace 89.9% (week 92% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Sat 17 00:25 7d 100.0% vs pace 90.1% (week 92% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Sat 17 00:45 7d 100.0% vs pace 90.3% (week 92% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Sat 17 01:06 7d 100.0% vs pace 90.5% (week 92% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Sat 17 01:26 7d 100.0% vs pace 90.7% (week 93% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Sat 17 01:46 7d 100.0% vs pace 90.9% (week 93% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Sat 17 02:06 7d 100.0% vs pace 91.1% (week 93% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Sat 17 02:26 7d 100.0% vs pace 91.3% (week 93% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Sat 17 02:46 7d 100.0% vs pace 91.5% (week 93% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Sat 17 03:06 7d 100.0% vs pace 91.7% (week 94% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Sat 17 03:27 7d 100.0% vs pace 91.8% (week 94% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Sat 17 03:47 7d 100.0% vs pace 92.0% (week 94% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Sat 17 04:07 7d 100.0% vs pace 92.2% (week 94% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Sat 17 04:27 7d 100.0% vs pace 92.4% (week 94% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Sat 17 04:47 7d 100.0% vs pace 92.6% (week 95% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Sat 17 05:07 7d 100.0% vs pace 92.8% (week 95% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Sat 17 05:27 7d 100.0% vs pace 93.0% (week 95% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Sat 17 05:47 7d 100.0% vs pace 93.2% (week 95% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Sat 17 06:07 7d 100.0% vs pace 93.4% (week 95% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Sat 17 06:28 7d 100.0% vs pace 93.6% (week 96% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Sat 17 06:48 7d 100.0% vs pace 93.8% (week 96% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Sat 17 07:08 7d 100.0% vs pace 94.0% (week 96% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Sat 17 07:28 7d 100.0% vs pace 94.2% (week 96% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Sat 17 07:48 7d 100.0% vs pace 94.4% (week 96% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Sat 17 08:08 7d 100.0% vs pace 94.6% (week 97% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Sat 17 08:28 7d 100.0% vs pace 94.8% (week 97% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Sat 17 08:48 7d 100.0% vs pace 95.0% (week 97% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Sat 17 09:08 7d 100.0% vs pace 95.2% (week 97% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Sat 17 09:28 7d 100.0% vs pace 95.4% (week 97% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Sat 17 09:48 7d 100.0% vs pace 95.6% (week 98% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Sat 17 10:09 7d 100.0% vs pace 95.8% (week 98% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Sat 17 10:29 7d 100.0% vs pace 96.0% (week 98% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Sat 17 10:49 7d 100.0% vs pace 96.1% (week 98% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Sat 17 11:09 7d 100.0% vs pace 96.3% (week 98% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Sat 17 11:29 7d 100.0% vs pace 96.5% (week 99% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Sat 17 11:49 7d 100.0% vs pace 96.7% (week 99% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Sat 17 12:09 7d 100.0% vs pace 96.9% (week 99% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Sat 17 12:29 7d 100.0% vs pace 97.1% (week 99% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Sat 17 12:49 7d 100.0% vs pace 97.3% (week 99% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Sat 17 13:09 7d 100.0% vs pace 97.5% (week 100% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Sat 17 13:30 7d 100.0% vs pace 97.7% (week 100% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Sat 17 13:50 7d 100.0% vs pace 97.9% (week 100% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Sat 17 14:10 7d 0.0% vs pace 0.1% (week 0% gone); 5h 2%; claude -p 3; governor jobs in last 3h 0
+Sat 17 14:30 7d 1.0% vs pace 0.3% (week 0% gone); 5h 3%; claude -p 1; governor jobs in last 3h 0
+Sat 17 14:50 7d 1.0% vs pace 0.5% (week 1% gone); 5h 4%; claude -p 0; governor jobs in last 3h 0
+Sat 17 15:10 7d 1.0% vs pace 0.7% (week 1% gone); 5h 4%; claude -p 0; governor jobs in last 3h 0
+Sat 17 15:30 7d 1.0% vs pace 0.9% (week 1% gone); 5h 4%; claude -p 0; governor jobs in last 3h 0
+Sat 17 15:50 7d 1.0% vs pace 1.1% (week 1% gone); 5h 4%; claude -p 0; governor jobs in last 3h 0
+Sat 17 16:10 7d 1.0% vs pace 1.3% (week 1% gone); 5h 4%; claude -p 0; governor jobs in last 3h 0
+Sat 17 16:31 7d 1.0% vs pace 1.5% (week 1% gone); 5h 4%; claude -p 0; governor jobs in last 3h 0
+Sat 17 16:51 7d 1.0% vs pace 1.7% (week 2% gone); 5h 4%; claude -p 0; governor jobs in last 3h 0
+Sat 17 17:11 7d 1.0% vs pace 1.9% (week 2% gone); 5h 6%; claude -p 0; governor jobs in last 3h 0
+Sat 17 17:31 7d 1.0% vs pace 2.1% (week 2% gone); 5h 6%; claude -p 0; governor jobs in last 3h 0
+Sat 17 17:51 7d 1.0% vs pace 2.3% (week 2% gone); 5h 6%; claude -p 0; governor jobs in last 3h 0
+Sat 17 18:11 7d 1.0% vs pace 2.4% (week 2% gone); 5h 6%; claude -p 1; governor jobs in last 3h 0
+Sat 17 18:32 7d 1.0% vs pace 2.6% (week 3% gone); 5h 7%; claude -p 1; governor jobs in last 3h 0
+Sat 17 18:52 7d 1.0% vs pace 2.8% (week 3% gone); 5h 7%; claude -p 0; governor jobs in last 3h 0
+Sat 17 19:12 7d 1.0% vs pace 3.0% (week 3% gone); 5h 1%; claude -p 1; governor jobs in last 3h 0
+Sat 17 19:12 LAUNCHED C:\CE_PLAN\desk_jobs\governor_launched\h01.txt started pid 71348 (opus)
+Sat 17 19:32 7d 4.0% vs pace 3.2% (week 3% gone); 5h 16%; claude -p 1; governor jobs in last 3h 1
+Sat 17 19:52 7d 4.0% vs pace 3.4% (week 4% gone); 5h 17%; claude -p 1; governor jobs in last 3h 1
+Sat 17 20:13 7d 4.0% vs pace 3.6% (week 4% gone); 5h 17%; claude -p 1; governor jobs in last 3h 1
+Sat 17 20:33 7d 4.0% vs pace 3.8% (week 4% gone); 5h 18%; claude -p 1; governor jobs in last 3h 1
+Sat 17 20:53 7d 4.0% vs pace 4.0% (week 4% gone); 5h 18%; claude -p 1; governor jobs in last 3h 1
+Sat 17 21:13 7d 5.0% vs pace 4.2% (week 4% gone); 5h 20%; claude -p 1; governor jobs in last 3h 1
+Sat 17 21:33 7d 5.0% vs pace 4.4% (week 5% gone); 5h 20%; claude -p 0; governor jobs in last 3h 1
+Sat 17 21:53 7d 5.0% vs pace 4.6% (week 5% gone); 5h 20%; claude -p 0; governor jobs in last 3h 1
+Sat 17 22:14 7d 5.0% vs pace 4.8% (week 5% gone); 5h 21%; claude -p 2; governor jobs in last 3h 0
+Sat 17 22:34 7d 5.0% vs pace 5.0% (week 5% gone); 5h 23%; claude -p 2; governor jobs in last 3h 0
+Sat 17 22:54 7d 5.0% vs pace 5.2% (week 5% gone); 5h 25%; claude -p 1; governor jobs in last 3h 0
+Sat 17 23:14 7d 6.0% vs pace 5.4% (week 6% gone); 5h 26%; claude -p 1; governor jobs in last 3h 0
+Sat 17 23:34 7d 6.0% vs pace 5.6% (week 6% gone); 5h 26%; claude -p 1; governor jobs in last 3h 0
+Sat 17 23:54 7d 6.0% vs pace 5.8% (week 6% gone); 5h 27%; claude -p 1; governor jobs in last 3h 0
+Sun 18 00:14 7d 6.0% vs pace 6.0% (week 6% gone); 5h 0%; claude -p 1; governor jobs in last 3h 0
+Sun 18 00:35 7d 6.0% vs pace 6.2% (week 6% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Sun 18 00:55 7d 6.0% vs pace 6.4% (week 7% gone); 5h 1%; claude -p 1; governor jobs in last 3h 0
+Sun 18 01:15 7d 6.0% vs pace 6.6% (week 7% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Sun 18 01:35 7d 6.0% vs pace 6.8% (week 7% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Sun 18 01:55 7d 6.0% vs pace 7.0% (week 7% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Sun 18 02:15 7d 6.0% vs pace 7.2% (week 7% gone); 5h 2%; claude -p 2; governor jobs in last 3h 0
+Sun 18 02:35 7d 6.0% vs pace 7.3% (week 7% gone); 5h 3%; claude -p 0; governor jobs in last 3h 0
+Sun 18 02:56 7d 6.0% vs pace 7.5% (week 8% gone); 5h 4%; claude -p 0; governor jobs in last 3h 0
+Sun 18 03:16 7d 7.0% vs pace 7.7% (week 8% gone); 5h 4%; claude -p 0; governor jobs in last 3h 0
+Sun 18 03:36 7d 7.0% vs pace 7.9% (week 8% gone); 5h 4%; claude -p 0; governor jobs in last 3h 0
+Sun 18 03:56 7d 7.0% vs pace 8.1% (week 8% gone); 5h 4%; claude -p 0; governor jobs in last 3h 0
+Sun 18 04:16 7d 7.0% vs pace 8.3% (week 8% gone); 5h 5%; claude -p 1; governor jobs in last 3h 0
+Sun 18 04:36 7d 7.0% vs pace 8.5% (week 9% gone); 5h 5%; claude -p 0; governor jobs in last 3h 0
+Sun 18 04:56 7d 7.0% vs pace 8.7% (week 9% gone); 5h 5%; claude -p 0; governor jobs in last 3h 0
+Sun 18 05:17 7d 7.0% vs pace 8.9% (week 9% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Sun 18 05:37 7d 7.0% vs pace 9.1% (week 9% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Sun 18 05:37 LAUNCHED C:\CE_PLAN\desk_jobs\governor_launched\h02.txt started pid 73540 (opus)
+Sun 18 05:57 7d 8.0% vs pace 9.3% (week 9% gone); 5h 7%; claude -p 1; governor jobs in last 3h 1
+Sun 18 06:17 7d 8.0% vs pace 9.5% (week 10% gone); 5h 8%; claude -p 0; governor jobs in last 3h 1
+Sun 18 06:37 7d 8.0% vs pace 9.7% (week 10% gone); 5h 8%; claude -p 0; governor jobs in last 3h 1
+Sun 18 06:57 7d 8.0% vs pace 9.9% (week 10% gone); 5h 10%; claude -p 1; governor jobs in last 3h 1
+Sun 18 07:17 7d 8.0% vs pace 10.1% (week 10% gone); 5h 11%; claude -p 1; governor jobs in last 3h 1
+Sun 18 07:17 LAUNCHED C:\CE_PLAN\desk_jobs\governor_launched\h03.txt started pid 71424 (opus)
+Sun 18 07:38 7d 10.0% vs pace 10.3% (week 10% gone); 5h 21%; claude -p 1; governor jobs in last 3h 2
+Sun 18 07:58 7d 10.0% vs pace 10.5% (week 11% gone); 5h 21%; claude -p 0; governor jobs in last 3h 2
+Sun 18 08:18 7d 10.0% vs pace 10.7% (week 11% gone); 5h 22%; claude -p 1; governor jobs in last 3h 2
+Sun 18 08:38 7d 10.0% vs pace 10.9% (week 11% gone); 5h 24%; claude -p 2; governor jobs in last 3h 1
+Sun 18 08:58 7d 11.0% vs pace 11.1% (week 11% gone); 5h 25%; claude -p 1; governor jobs in last 3h 1
+Sun 18 09:18 7d 11.0% vs pace 11.3% (week 11% gone); 5h 27%; claude -p 1; governor jobs in last 3h 1
+Sun 18 09:38 7d 11.0% vs pace 11.5% (week 12% gone); 5h 28%; claude -p 1; governor jobs in last 3h 1
+Sun 18 09:59 7d 11.0% vs pace 11.7% (week 12% gone); 5h 29%; claude -p 0; governor jobs in last 3h 1
+Sun 18 10:19 7d 11.0% vs pace 11.9% (week 12% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Sun 18 10:39 7d 11.0% vs pace 12.0% (week 12% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Sun 18 10:59 7d 11.0% vs pace 12.2% (week 12% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Sun 18 11:19 7d 11.0% vs pace 12.4% (week 13% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Sun 18 11:39 7d 11.0% vs pace 12.6% (week 13% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Sun 18 11:59 7d 12.0% vs pace 12.8% (week 13% gone); 5h 2%; claude -p 0; governor jobs in last 3h 0
+Sun 18 12:20 7d 12.0% vs pace 13.0% (week 13% gone); 5h 2%; claude -p 1; governor jobs in last 3h 0
+Sun 18 12:40 7d 12.0% vs pace 13.2% (week 13% gone); 5h 3%; claude -p 1; governor jobs in last 3h 0
+Sun 18 13:00 7d 12.0% vs pace 13.4% (week 14% gone); 5h 4%; claude -p 1; governor jobs in last 3h 0
+Sun 18 13:20 7d 12.0% vs pace 13.6% (week 14% gone); 5h 4%; claude -p 0; governor jobs in last 3h 0
+Sun 18 13:40 7d 12.0% vs pace 13.8% (week 14% gone); 5h 4%; claude -p 0; governor jobs in last 3h 0
+Sun 18 14:00 7d 12.0% vs pace 14.0% (week 14% gone); 5h 6%; claude -p 1; governor jobs in last 3h 0
+Sun 18 14:00 LAUNCHED C:\CE_PLAN\desk_jobs\governor_launched\h04.txt started pid 72692 (opus)
+Sun 18 14:20 7d 13.0% vs pace 14.2% (week 14% gone); 5h 10%; claude -p 0; governor jobs in last 3h 1
+Sun 18 14:41 7d 13.0% vs pace 14.4% (week 15% gone); 5h 10%; claude -p 0; governor jobs in last 3h 1
+Sun 18 15:01 7d 13.0% vs pace 14.6% (week 15% gone); 5h 11%; claude -p 1; governor jobs in last 3h 1
+Sun 18 15:21 7d 13.0% vs pace 14.8% (week 15% gone); 5h 0%; claude -p 1; governor jobs in last 3h 1
+Sun 18 15:41 7d 13.0% vs pace 15.0% (week 15% gone); 5h 1%; claude -p 0; governor jobs in last 3h 1
+Sun 18 16:01 7d 13.0% vs pace 15.2% (week 15% gone); 5h 1%; claude -p 1; governor jobs in last 3h 1
+Sun 18 16:01 LAUNCHED C:\CE_PLAN\desk_jobs\governor_launched\h05.txt started pid 64952 (opus)
+Sun 18 16:21 7d 15.0% vs pace 15.4% (week 16% gone); 5h 13%; claude -p 1; governor jobs in last 3h 2
+Sun 18 16:41 7d 16.0% vs pace 15.6% (week 16% gone); 5h 14%; claude -p 1; governor jobs in last 3h 2
+Sun 18 17:02 7d 16.0% vs pace 15.8% (week 16% gone); 5h 15%; claude -p 1; governor jobs in last 3h 1
+Sun 18 17:22 7d 16.0% vs pace 16.0% (week 16% gone); 5h 15%; claude -p 0; governor jobs in last 3h 1
+Sun 18 17:42 7d 16.0% vs pace 16.2% (week 16% gone); 5h 16%; claude -p 1; governor jobs in last 3h 1
+Sun 18 18:02 7d 16.0% vs pace 16.4% (week 17% gone); 5h 17%; claude -p 1; governor jobs in last 3h 1
+Sun 18 18:22 7d 16.0% vs pace 16.6% (week 17% gone); 5h 17%; claude -p 0; governor jobs in last 3h 1
+Sun 18 18:42 7d 17.0% vs pace 16.7% (week 17% gone); 5h 23%; claude -p 0; governor jobs in last 3h 1
+Sun 18 19:02 7d 17.0% vs pace 16.9% (week 17% gone); 5h 24%; claude -p 2; governor jobs in last 3h 0
+Sun 18 19:23 7d 17.0% vs pace 17.1% (week 17% gone); 5h 24%; claude -p 1; governor jobs in last 3h 0
+Sun 18 19:43 7d 17.0% vs pace 17.3% (week 18% gone); 5h 25%; claude -p 1; governor jobs in last 3h 0
+Sun 18 20:03 7d 17.0% vs pace 17.5% (week 18% gone); 5h 25%; claude -p 1; governor jobs in last 3h 0
+Sun 18 20:23 7d 18.0% vs pace 17.7% (week 18% gone); 5h 1%; claude -p 3; governor jobs in last 3h 0
+Sun 18 20:43 7d 18.0% vs pace 17.9% (week 18% gone); 5h 6%; claude -p 3; governor jobs in last 3h 0
+Sun 18 21:03 7d 19.0% vs pace 18.1% (week 18% gone); 5h 7%; claude -p 3; governor jobs in last 3h 0
+Sun 18 21:23 7d 19.0% vs pace 18.3% (week 19% gone); 5h 9%; claude -p 2; governor jobs in last 3h 0
+Sun 18 21:44 7d 19.0% vs pace 18.5% (week 19% gone); 5h 12%; claude -p 3; governor jobs in last 3h 0
+Sun 18 22:04 7d 20.0% vs pace 18.7% (week 19% gone); 5h 17%; claude -p 3; governor jobs in last 3h 0
+Sun 18 22:24 7d 21.0% vs pace 18.9% (week 19% gone); 5h 22%; claude -p 2; governor jobs in last 3h 0
+Sun 18 22:44 7d 21.0% vs pace 19.1% (week 19% gone); 5h 23%; claude -p 1; governor jobs in last 3h 0
+Sun 18 23:04 7d 21.0% vs pace 19.3% (week 20% gone); 5h 23%; claude -p 1; governor jobs in last 3h 0
+Sun 18 23:24 7d 21.0% vs pace 19.5% (week 20% gone); 5h 24%; claude -p 1; governor jobs in last 3h 0
+Sun 18 23:44 7d 21.0% vs pace 19.7% (week 20% gone); 5h 25%; claude -p 1; governor jobs in last 3h 0
+Mon 19 00:05 7d 22.0% vs pace 19.9% (week 20% gone); 5h 25%; claude -p 1; governor jobs in last 3h 0
+Mon 19 00:25 7d 22.0% vs pace 20.1% (week 20% gone); 5h 26%; claude -p 1; governor jobs in last 3h 0
+Mon 19 00:45 7d 22.0% vs pace 20.3% (week 21% gone); 5h 26%; claude -p 1; governor jobs in last 3h 0
+Mon 19 01:05 7d 22.0% vs pace 20.5% (week 21% gone); 5h 27%; claude -p 1; governor jobs in last 3h 0
+Mon 19 01:25 7d 22.0% vs pace 20.7% (week 21% gone); 5h 0%; claude -p 1; governor jobs in last 3h 0
+Mon 19 01:45 7d 22.0% vs pace 20.9% (week 21% gone); 5h 1%; claude -p 1; governor jobs in last 3h 0
+Mon 19 02:05 7d 22.0% vs pace 21.1% (week 21% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Mon 19 02:26 7d 22.0% vs pace 21.3% (week 22% gone); 5h 2%; claude -p 1; governor jobs in last 3h 0
+Mon 19 02:46 7d 22.0% vs pace 21.4% (week 22% gone); 5h 3%; claude -p 1; governor jobs in last 3h 0
+Mon 19 03:06 7d 22.0% vs pace 21.6% (week 22% gone); 5h 3%; claude -p 0; governor jobs in last 3h 0
+Mon 19 03:26 7d 22.0% vs pace 21.8% (week 22% gone); 5h 3%; claude -p 0; governor jobs in last 3h 0
+Mon 19 03:46 7d 22.0% vs pace 22.0% (week 22% gone); 5h 3%; claude -p 0; governor jobs in last 3h 0
+Mon 19 04:06 7d 22.0% vs pace 22.2% (week 23% gone); 5h 3%; claude -p 0; governor jobs in last 3h 0
+Mon 19 04:26 7d 22.0% vs pace 22.4% (week 23% gone); 5h 3%; claude -p 0; governor jobs in last 3h 0
+Mon 19 04:47 7d 22.0% vs pace 22.6% (week 23% gone); 5h 3%; claude -p 0; governor jobs in last 3h 0
+Mon 19 05:07 7d 22.0% vs pace 22.8% (week 23% gone); 5h 3%; claude -p 0; governor jobs in last 3h 0
+Mon 19 05:27 7d 22.0% vs pace 23.0% (week 23% gone); 5h 3%; claude -p 0; governor jobs in last 3h 0
+Mon 19 05:47 7d 22.0% vs pace 23.2% (week 24% gone); 5h 3%; claude -p 0; governor jobs in last 3h 0
+Mon 19 06:07 7d 22.0% vs pace 23.4% (week 24% gone); 5h 3%; claude -p 0; governor jobs in last 3h 0
+Mon 19 06:27 7d 23.0% vs pace 23.6% (week 24% gone); 5h 0%; claude -p 1; governor jobs in last 3h 0
+Mon 19 06:48 7d 23.0% vs pace 23.8% (week 24% gone); 5h 1%; claude -p 1; governor jobs in last 3h 0
+Mon 19 07:08 7d 23.0% vs pace 24.0% (week 24% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Mon 19 07:28 7d 23.0% vs pace 24.2% (week 25% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Mon 19 07:48 7d 23.0% vs pace 24.4% (week 25% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Mon 19 08:08 7d 23.0% vs pace 24.6% (week 25% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Mon 19 08:28 7d 23.0% vs pace 24.8% (week 25% gone); 5h 2%; claude -p 1; governor jobs in last 3h 0
+Mon 19 08:49 7d 23.0% vs pace 25.0% (week 25% gone); 5h 4%; claude -p 1; governor jobs in last 3h 0
+Mon 19 09:09 7d 23.0% vs pace 25.2% (week 26% gone); 5h 5%; claude -p 1; governor jobs in last 3h 0
+Mon 19 09:09 LAUNCHED C:\CE_PLAN\desk_jobs\governor_launched\h06.txt started pid 75276 (opus)
+Mon 19 09:29 7d 25.0% vs pace 25.4% (week 26% gone); 5h 14%; claude -p 0; governor jobs in last 3h 1
+Mon 19 09:49 7d 25.0% vs pace 25.6% (week 26% gone); 5h 14%; claude -p 0; governor jobs in last 3h 1
+Mon 19 10:09 7d 25.0% vs pace 25.8% (week 26% gone); 5h 15%; claude -p 1; governor jobs in last 3h 1
+Mon 19 10:29 7d 25.0% vs pace 26.0% (week 26% gone); 5h 16%; claude -p 0; governor jobs in last 3h 1
+Mon 19 10:49 7d 25.0% vs pace 26.2% (week 27% gone); 5h 16%; claude -p 0; governor jobs in last 3h 1
+Mon 19 11:10 7d 25.0% vs pace 26.3% (week 27% gone); 5h 0%; claude -p 0; governor jobs in last 3h 1
+Mon 19 11:30 7d 25.0% vs pace 26.5% (week 27% gone); 5h 0%; claude -p 0; governor jobs in last 3h 1
+Mon 19 11:50 7d 25.0% vs pace 26.7% (week 27% gone); 5h 0%; claude -p 0; governor jobs in last 3h 1
+Mon 19 12:10 7d 25.0% vs pace 26.9% (week 27% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Mon 19 12:30 7d 25.0% vs pace 27.1% (week 28% gone); 5h 1%; claude -p 1; governor jobs in last 3h 0
+Mon 19 12:30 LAUNCHED C:\CE_PLAN\desk_jobs\governor_launched\h07.txt started pid 81840 (opus)
+Mon 19 12:50 7d 26.0% vs pace 27.3% (week 28% gone); 5h 9%; claude -p 1; governor jobs in last 3h 1
+Mon 19 13:10 7d 27.0% vs pace 27.5% (week 28% gone); 5h 9%; claude -p 0; governor jobs in last 3h 1
+Mon 19 13:31 7d 27.0% vs pace 27.7% (week 28% gone); 5h 9%; claude -p 0; governor jobs in last 3h 1
+Mon 19 13:51 7d 27.0% vs pace 27.9% (week 28% gone); 5h 9%; claude -p 0; governor jobs in last 3h 1
+Mon 19 14:11 7d 27.0% vs pace 28.1% (week 29% gone); 5h 9%; claude -p 0; governor jobs in last 3h 1
+Mon 19 14:31 7d 27.0% vs pace 28.3% (week 29% gone); 5h 10%; claude -p 0; governor jobs in last 3h 1
+Mon 19 14:51 7d 27.0% vs pace 28.5% (week 29% gone); 5h 10%; claude -p 0; governor jobs in last 3h 1
+Mon 19 15:11 7d 27.0% vs pace 28.7% (week 29% gone); 5h 10%; claude -p 0; governor jobs in last 3h 1
+Mon 19 15:31 7d 27.0% vs pace 28.9% (week 29% gone); 5h 10%; claude -p 0; governor jobs in last 3h 0
+Mon 19 15:52 7d 27.0% vs pace 29.1% (week 30% gone); 5h 10%; claude -p 0; governor jobs in last 3h 0
+Mon 19 15:52 LAUNCHED C:\CE_PLAN\desk_jobs\governor_launched\h08.txt started pid 71744 (opus)
+Mon 19 16:12 7d 28.0% vs pace 29.3% (week 30% gone); 5h 0%; claude -p 1; governor jobs in last 3h 1
+Mon 19 16:32 7d 28.0% vs pace 29.5% (week 30% gone); 5h 2%; claude -p 1; governor jobs in last 3h 1
+Mon 19 16:52 7d 28.0% vs pace 29.7% (week 30% gone); 5h 2%; claude -p 1; governor jobs in last 3h 1
+Mon 19 17:12 7d 28.0% vs pace 29.9% (week 30% gone); 5h 3%; claude -p 1; governor jobs in last 3h 1
+Mon 19 17:32 7d 29.0% vs pace 30.1% (week 31% gone); 5h 4%; claude -p 2; governor jobs in last 3h 1
+Mon 19 17:52 7d 29.0% vs pace 30.3% (week 31% gone); 5h 6%; claude -p 3; governor jobs in last 3h 1
+Mon 19 18:13 7d 30.0% vs pace 30.5% (week 31% gone); 5h 10%; claude -p 2; governor jobs in last 3h 1
+Mon 19 18:33 7d 30.0% vs pace 30.7% (week 31% gone); 5h 13%; claude -p 3; governor jobs in last 3h 1
+Mon 19 18:53 7d 30.0% vs pace 30.9% (week 31% gone); 5h 14%; claude -p 2; governor jobs in last 3h 0
+Mon 19 19:13 7d 30.0% vs pace 31.0% (week 32% gone); 5h 15%; claude -p 0; governor jobs in last 3h 0
+Mon 19 19:33 7d 30.0% vs pace 31.2% (week 32% gone); 5h 15%; claude -p 0; governor jobs in last 3h 0
+Mon 19 19:53 7d 30.0% vs pace 31.4% (week 32% gone); 5h 15%; claude -p 0; governor jobs in last 3h 0
+Mon 19 20:13 7d 31.0% vs pace 31.6% (week 32% gone); 5h 15%; claude -p 0; governor jobs in last 3h 0
+Mon 19 20:34 7d 31.0% vs pace 31.8% (week 32% gone); 5h 17%; claude -p 2; governor jobs in last 3h 0
+Mon 19 20:54 7d 31.0% vs pace 32.0% (week 33% gone); 5h 17%; claude -p 1; governor jobs in last 3h 0
+Mon 19 21:14 7d 31.0% vs pace 32.2% (week 33% gone); 5h 0%; claude -p 1; governor jobs in last 3h 0
+Mon 19 21:34 7d 31.0% vs pace 32.4% (week 33% gone); 5h 1%; claude -p 1; governor jobs in last 3h 0
+Mon 19 21:54 7d 31.0% vs pace 32.6% (week 33% gone); 5h 1%; claude -p 1; governor jobs in last 3h 0
+Mon 19 22:14 7d 31.0% vs pace 32.8% (week 33% gone); 5h 2%; claude -p 2; governor jobs in last 3h 0
+Mon 19 22:35 7d 31.0% vs pace 33.0% (week 34% gone); 5h 3%; claude -p 2; governor jobs in last 3h 0
+Mon 19 22:35 LAUNCHED C:\CE_PLAN\desk_jobs\governor_launched\h09.txt started pid 77156 (sonnet)
+Mon 19 22:55 7d 32.0% vs pace 33.2% (week 34% gone); 5h 5%; claude -p 1; governor jobs in last 3h 1
+Mon 19 23:15 7d 32.0% vs pace 33.4% (week 34% gone); 5h 6%; claude -p 2; governor jobs in last 3h 1
+Mon 19 23:35 7d 32.0% vs pace 33.6% (week 34% gone); 5h 7%; claude -p 1; governor jobs in last 3h 1
+Mon 19 23:55 7d 32.0% vs pace 33.8% (week 34% gone); 5h 7%; claude -p 0; governor jobs in last 3h 1
+Tue 20 00:15 7d 32.0% vs pace 34.0% (week 35% gone); 5h 7%; claude -p 1; governor jobs in last 3h 1
+Tue 20 00:35 7d 32.0% vs pace 34.2% (week 35% gone); 5h 7%; claude -p 1; governor jobs in last 3h 1
+Tue 20 00:35 LAUNCHED C:\CE_PLAN\desk_jobs\governor_launched\h10.txt started pid 53572 (opus)
+Tue 20 00:55 7d 34.0% vs pace 34.4% (week 35% gone); 5h 17%; claude -p 1; governor jobs in last 3h 2
+Tue 20 01:16 7d 34.0% vs pace 34.6% (week 35% gone); 5h 18%; claude -p 0; governor jobs in last 3h 2
+Tue 20 01:36 7d 34.0% vs pace 34.8% (week 35% gone); 5h 18%; claude -p 1; governor jobs in last 3h 1
+Tue 20 01:56 7d 34.0% vs pace 35.0% (week 36% gone); 5h 19%; claude -p 0; governor jobs in last 3h 1
+Tue 20 02:16 7d 34.0% vs pace 35.2% (week 36% gone); 5h 0%; claude -p 1; governor jobs in last 3h 1
+Tue 20 02:36 7d 34.0% vs pace 35.4% (week 36% gone); 5h 2%; claude -p 2; governor jobs in last 3h 1
+Tue 20 02:56 7d 34.0% vs pace 35.6% (week 36% gone); 5h 2%; claude -p 2; governor jobs in last 3h 1
+Tue 20 03:16 7d 34.0% vs pace 35.7% (week 36% gone); 5h 3%; claude -p 1; governor jobs in last 3h 1
+Tue 20 03:37 7d 35.0% vs pace 35.9% (week 37% gone); 5h 3%; claude -p 1; governor jobs in last 3h 0
+Tue 20 03:57 7d 35.0% vs pace 36.1% (week 37% gone); 5h 3%; claude -p 1; governor jobs in last 3h 0
+Tue 20 04:17 7d 35.0% vs pace 36.3% (week 37% gone); 5h 4%; claude -p 2; governor jobs in last 3h 0
+Tue 20 04:37 7d 35.0% vs pace 36.5% (week 37% gone); 5h 5%; claude -p 1; governor jobs in last 3h 0
+Tue 20 04:57 7d 35.0% vs pace 36.7% (week 37% gone); 5h 5%; claude -p 1; governor jobs in last 3h 0
+Tue 20 05:17 7d 35.0% vs pace 36.9% (week 38% gone); 5h 6%; claude -p 1; governor jobs in last 3h 0
+Tue 20 05:38 7d 35.0% vs pace 37.1% (week 38% gone); 5h 6%; claude -p 1; governor jobs in last 3h 0
+Tue 20 05:38 LAUNCHED C:\CE_PLAN\desk_jobs\governor_launched\h11.txt started pid 81636 (opus)
+Tue 20 05:58 7d 37.0% vs pace 37.3% (week 38% gone); 5h 18%; claude -p 0; governor jobs in last 3h 1
+Tue 20 06:18 7d 37.0% vs pace 37.5% (week 38% gone); 5h 19%; claude -p 1; governor jobs in last 3h 1
+Tue 20 06:38 7d 37.0% vs pace 37.7% (week 38% gone); 5h 20%; claude -p 1; governor jobs in last 3h 1
+Tue 20 06:58 7d 37.0% vs pace 37.9% (week 39% gone); 5h 21%; claude -p 1; governor jobs in last 3h 1
+Tue 20 07:18 7d 38.0% vs pace 38.1% (week 39% gone); 5h 0%; claude -p 1; governor jobs in last 3h 1
+Tue 20 07:38 7d 38.0% vs pace 38.3% (week 39% gone); 5h 1%; claude -p 1; governor jobs in last 3h 1
+Tue 20 07:59 7d 38.0% vs pace 38.5% (week 39% gone); 5h 1%; claude -p 0; governor jobs in last 3h 1
+Tue 20 08:19 7d 38.0% vs pace 38.7% (week 39% gone); 5h 1%; claude -p 1; governor jobs in last 3h 1
+Tue 20 08:39 7d 38.0% vs pace 38.9% (week 40% gone); 5h 2%; claude -p 1; governor jobs in last 3h 0
+Tue 20 08:59 7d 38.0% vs pace 39.1% (week 40% gone); 5h 2%; claude -p 1; governor jobs in last 3h 0
+Tue 20 09:19 7d 38.0% vs pace 39.3% (week 40% gone); 5h 2%; claude -p 1; governor jobs in last 3h 0
+Tue 20 09:39 7d 38.0% vs pace 39.5% (week 40% gone); 5h 3%; claude -p 1; governor jobs in last 3h 0
+Tue 20 09:59 7d 38.0% vs pace 39.7% (week 40% gone); 5h 3%; claude -p 1; governor jobs in last 3h 0
+Tue 20 10:19 7d 38.0% vs pace 39.9% (week 41% gone); 5h 4%; claude -p 2; governor jobs in last 3h 0
+Tue 20 10:40 7d 39.0% vs pace 40.1% (week 41% gone); 5h 6%; claude -p 1; governor jobs in last 3h 0
+Tue 20 11:00 7d 39.0% vs pace 40.3% (week 41% gone); 5h 7%; claude -p 1; governor jobs in last 3h 0
+Tue 20 11:20 7d 39.0% vs pace 40.4% (week 41% gone); 5h 7%; claude -p 1; governor jobs in last 3h 0
+Tue 20 11:40 7d 39.0% vs pace 40.6% (week 41% gone); 5h 7%; claude -p 1; governor jobs in last 3h 0
+Tue 20 12:00 7d 39.0% vs pace 40.8% (week 42% gone); 5h 8%; claude -p 1; governor jobs in last 3h 0
+Tue 20 12:20 7d 39.0% vs pace 41.0% (week 42% gone); 5h 1%; claude -p 3; governor jobs in last 3h 0
+Tue 20 12:20 LAUNCHED C:\CE_PLAN\desk_jobs\governor_launched\r11.txt started pid 83776 (opus)
+Tue 20 12:40 7d 40.0% vs pace 41.2% (week 42% gone); 5h 9%; claude -p 1; governor jobs in last 3h 1
+Tue 20 13:01 7d 41.0% vs pace 41.4% (week 42% gone); 5h 10%; claude -p 1; governor jobs in last 3h 1
+Tue 20 13:21 7d 41.0% vs pace 41.6% (week 42% gone); 5h 10%; claude -p 1; governor jobs in last 3h 1
+Tue 20 13:41 7d 41.0% vs pace 41.8% (week 43% gone); 5h 11%; claude -p 1; governor jobs in last 3h 1
+Tue 20 14:01 7d 41.0% vs pace 42.0% (week 43% gone); 5h 12%; claude -p 1; governor jobs in last 3h 1
+Tue 20 14:21 7d 41.0% vs pace 42.2% (week 43% gone); 5h 14%; claude -p 3; governor jobs in last 3h 1
+Tue 20 14:41 7d 42.0% vs pace 42.4% (week 43% gone); 5h 16%; claude -p 3; governor jobs in last 3h 1
+Tue 20 15:01 7d 42.0% vs pace 42.6% (week 43% gone); 5h 18%; claude -p 1; governor jobs in last 3h 1
+Tue 20 15:21 7d 42.0% vs pace 42.8% (week 44% gone); 5h 18%; claude -p 1; governor jobs in last 3h 0
+Tue 20 15:42 7d 42.0% vs pace 43.0% (week 44% gone); 5h 19%; claude -p 1; governor jobs in last 3h 0
+Tue 20 16:02 7d 42.0% vs pace 43.2% (week 44% gone); 5h 20%; claude -p 1; governor jobs in last 3h 0
+Tue 20 16:22 7d 42.0% vs pace 43.4% (week 44% gone); 5h 21%; claude -p 1; governor jobs in last 3h 0
+Tue 20 16:42 7d 43.0% vs pace 43.6% (week 44% gone); 5h 22%; claude -p 1; governor jobs in last 3h 0
+Tue 20 17:02 7d 43.0% vs pace 43.8% (week 45% gone); 5h 22%; claude -p 1; governor jobs in last 3h 0
+Tue 20 17:22 7d 43.0% vs pace 44.0% (week 45% gone); 5h 0%; claude -p 1; governor jobs in last 3h 0
+Tue 20 17:43 7d 43.0% vs pace 44.2% (week 45% gone); 5h 1%; claude -p 1; governor jobs in last 3h 0
+Tue 20 18:03 7d 43.0% vs pace 44.4% (week 45% gone); 5h 2%; claude -p 1; governor jobs in last 3h 0
+Tue 20 18:23 7d 43.0% vs pace 44.6% (week 45% gone); 5h 3%; claude -p 1; governor jobs in last 3h 0
+Tue 20 18:43 7d 44.0% vs pace 44.8% (week 46% gone); 5h 6%; claude -p 2; governor jobs in last 3h 0
+Tue 20 19:03 7d 44.0% vs pace 45.0% (week 46% gone); 5h 8%; claude -p 1; governor jobs in last 3h 0
+Tue 20 19:23 7d 44.0% vs pace 45.1% (week 46% gone); 5h 9%; claude -p 0; governor jobs in last 3h 0
+Tue 20 19:43 7d 44.0% vs pace 45.3% (week 46% gone); 5h 9%; claude -p 0; governor jobs in last 3h 0
+Tue 20 20:04 7d 44.0% vs pace 45.5% (week 46% gone); 5h 10%; claude -p 1; governor jobs in last 3h 0
+Tue 20 20:24 7d 45.0% vs pace 45.7% (week 47% gone); 5h 12%; claude -p 1; governor jobs in last 3h 0
+Tue 20 20:44 7d 45.0% vs pace 45.9% (week 47% gone); 5h 14%; claude -p 2; governor jobs in last 3h 0
+Tue 20 21:04 7d 46.0% vs pace 46.1% (week 47% gone); 5h 18%; claude -p 3; governor jobs in last 3h 0
+Tue 20 21:24 7d 46.0% vs pace 46.3% (week 47% gone); 5h 20%; claude -p 4; governor jobs in last 3h 0
+Tue 20 21:44 7d 46.0% vs pace 46.5% (week 47% gone); 5h 22%; claude -p 2; governor jobs in last 3h 0
+Tue 20 22:04 7d 47.0% vs pace 46.7% (week 48% gone); 5h 24%; claude -p 2; governor jobs in last 3h 0
+Tue 20 22:25 7d 47.0% vs pace 46.9% (week 48% gone); 5h 1%; claude -p 2; governor jobs in last 3h 0
+Tue 20 22:45 7d 47.0% vs pace 47.1% (week 48% gone); 5h 2%; claude -p 1; governor jobs in last 3h 0
+Tue 20 23:05 7d 47.0% vs pace 47.3% (week 48% gone); 5h 3%; claude -p 1; governor jobs in last 3h 0
+Tue 20 23:25 7d 47.0% vs pace 47.5% (week 48% gone); 5h 3%; claude -p 0; governor jobs in last 3h 0
+Tue 20 23:45 7d 47.0% vs pace 47.7% (week 49% gone); 5h 3%; claude -p 0; governor jobs in last 3h 0
+Wed 21 00:05 7d 47.0% vs pace 47.9% (week 49% gone); 5h 4%; claude -p 0; governor jobs in last 3h 0
+Wed 21 00:25 7d 47.0% vs pace 48.1% (week 49% gone); 5h 4%; claude -p 0; governor jobs in last 3h 0
+Wed 21 00:46 7d 47.0% vs pace 48.3% (week 49% gone); 5h 4%; claude -p 0; governor jobs in last 3h 0
+Wed 21 01:06 7d 47.0% vs pace 48.5% (week 49% gone); 5h 4%; claude -p 0; governor jobs in last 3h 0
+Wed 21 01:26 7d 47.0% vs pace 48.7% (week 50% gone); 5h 4%; claude -p 0; governor jobs in last 3h 0
+Wed 21 01:46 7d 47.0% vs pace 48.9% (week 50% gone); 5h 4%; claude -p 0; governor jobs in last 3h 0
+Wed 21 02:06 7d 47.0% vs pace 49.1% (week 50% gone); 5h 4%; claude -p 0; governor jobs in last 3h 0
+Wed 21 02:06 LAUNCHED C:\CE_PLAN\desk_jobs\governor_launched\r12.txt started pid 93404 (opus)
+Wed 21 02:26 7d 49.0% vs pace 49.3% (week 50% gone); 5h 14%; claude -p 0; governor jobs in last 3h 1
+Wed 21 02:46 7d 49.0% vs pace 49.5% (week 50% gone); 5h 14%; claude -p 0; governor jobs in last 3h 1
+Wed 21 03:07 7d 49.0% vs pace 49.7% (week 51% gone); 5h 16%; claude -p 3; governor jobs in last 3h 1
+Wed 21 03:27 7d 50.0% vs pace 49.8% (week 51% gone); 5h 1%; claude -p 1; governor jobs in last 3h 1
+Wed 21 03:47 7d 50.0% vs pace 50.0% (week 51% gone); 5h 1%; claude -p 1; governor jobs in last 3h 1
+Wed 21 04:07 7d 50.0% vs pace 50.2% (week 51% gone); 5h 3%; claude -p 3; governor jobs in last 3h 1
+Wed 21 04:27 7d 50.0% vs pace 50.4% (week 51% gone); 5h 5%; claude -p 3; governor jobs in last 3h 1
+Wed 21 04:47 7d 50.0% vs pace 50.6% (week 52% gone); 5h 6%; claude -p 0; governor jobs in last 3h 1
+Wed 21 05:07 7d 50.0% vs pace 50.8% (week 52% gone); 5h 6%; claude -p 0; governor jobs in last 3h 0
+Wed 21 05:28 7d 51.0% vs pace 51.0% (week 52% gone); 5h 7%; claude -p 0; governor jobs in last 3h 0
+Wed 21 05:48 7d 51.0% vs pace 51.2% (week 52% gone); 5h 7%; claude -p 0; governor jobs in last 3h 0
+Wed 21 06:08 7d 51.0% vs pace 51.4% (week 52% gone); 5h 7%; claude -p 1; governor jobs in last 3h 0
+Wed 21 06:28 7d 51.0% vs pace 51.6% (week 53% gone); 5h 8%; claude -p 2; governor jobs in last 3h 0
+Wed 21 06:48 7d 51.0% vs pace 51.8% (week 53% gone); 5h 10%; claude -p 2; governor jobs in last 3h 0
+Wed 21 07:08 7d 51.0% vs pace 52.0% (week 53% gone); 5h 12%; claude -p 1; governor jobs in last 3h 0
+Wed 21 07:28 7d 52.0% vs pace 52.2% (week 53% gone); 5h 13%; claude -p 1; governor jobs in last 3h 0
+Wed 21 07:49 7d 52.0% vs pace 52.4% (week 53% gone); 5h 14%; claude -p 0; governor jobs in last 3h 0
+Wed 21 08:09 7d 52.0% vs pace 52.6% (week 54% gone); 5h 14%; claude -p 0; governor jobs in last 3h 0
+Wed 21 08:29 7d 52.0% vs pace 52.8% (week 54% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Wed 21 08:49 7d 52.0% vs pace 53.0% (week 54% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Wed 21 09:09 7d 52.0% vs pace 53.2% (week 54% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Wed 21 09:29 7d 52.0% vs pace 53.4% (week 54% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Wed 21 09:49 7d 52.0% vs pace 53.6% (week 55% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Wed 21 10:10 7d 52.0% vs pace 53.8% (week 55% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Wed 21 10:30 7d 52.0% vs pace 54.0% (week 55% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Wed 21 10:50 7d 52.0% vs pace 54.2% (week 55% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Wed 21 10:50 queue empty: desk should refill governor_queue
+Wed 21 11:10 7d 52.0% vs pace 54.4% (week 55% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Wed 21 11:10 queue empty: desk should refill governor_queue
+Wed 21 11:30 7d 52.0% vs pace 54.5% (week 56% gone); 5h 2%; claude -p 0; governor jobs in last 3h 0
+Wed 21 11:30 queue empty: desk should refill governor_queue
+Wed 21 11:50 7d 52.0% vs pace 54.7% (week 56% gone); 5h 2%; claude -p 1; governor jobs in last 3h 0
+Wed 21 11:50 queue empty: desk should refill governor_queue
+Wed 21 12:10 7d 52.0% vs pace 54.9% (week 56% gone); 5h 2%; claude -p 0; governor jobs in last 3h 0
+Wed 21 12:10 queue empty: desk should refill governor_queue
+Wed 21 12:30 7d 52.0% vs pace 55.1% (week 56% gone); 5h 2%; claude -p 0; governor jobs in last 3h 0
+Wed 21 12:30 queue empty: desk should refill governor_queue
+Wed 21 12:51 7d 52.0% vs pace 55.3% (week 56% gone); 5h 2%; claude -p 0; governor jobs in last 3h 0
+Wed 21 12:51 queue empty: desk should refill governor_queue
+Wed 21 13:11 7d 52.0% vs pace 55.5% (week 57% gone); 5h 2%; claude -p 0; governor jobs in last 3h 0
+Wed 21 13:11 queue empty: desk should refill governor_queue
+Wed 21 13:31 7d 52.0% vs pace 55.7% (week 57% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Wed 21 13:31 queue empty: desk should refill governor_queue
+Wed 21 13:51 7d 52.0% vs pace 55.9% (week 57% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Wed 21 13:51 queue empty: desk should refill governor_queue
+Wed 21 14:11 7d 52.0% vs pace 56.1% (week 57% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Wed 21 14:11 queue empty: desk should refill governor_queue
+Wed 21 14:31 7d 53.0% vs pace 56.3% (week 57% gone); 5h 3%; claude -p 1; governor jobs in last 3h 0
+Wed 21 14:31 queue empty: desk should refill governor_queue
+Wed 21 14:51 7d 53.0% vs pace 56.5% (week 58% gone); 5h 4%; claude -p 0; governor jobs in last 3h 0
+Wed 21 14:51 queue empty: desk should refill governor_queue
+Wed 21 15:12 7d 53.0% vs pace 56.7% (week 58% gone); 5h 4%; claude -p 0; governor jobs in last 3h 0
+Wed 21 15:12 queue empty: desk should refill governor_queue
+Wed 21 15:32 7d 53.0% vs pace 56.9% (week 58% gone); 5h 5%; claude -p 2; governor jobs in last 3h 0
+Wed 21 15:32 queue empty: desk should refill governor_queue
+Wed 21 15:52 7d 53.0% vs pace 57.1% (week 58% gone); 5h 5%; claude -p 1; governor jobs in last 3h 0
+Wed 21 15:52 queue empty: desk should refill governor_queue
+Wed 21 16:12 7d 53.0% vs pace 57.3% (week 58% gone); 5h 6%; claude -p 1; governor jobs in last 3h 0
+Wed 21 16:12 queue empty: desk should refill governor_queue
+Wed 21 16:32 7d 53.0% vs pace 57.5% (week 59% gone); 5h 7%; claude -p 2; governor jobs in last 3h 0
+Wed 21 16:32 queue empty: desk should refill governor_queue
+Wed 21 16:52 7d 53.0% vs pace 57.7% (week 59% gone); 5h 7%; claude -p 1; governor jobs in last 3h 0
+Wed 21 16:52 queue empty: desk should refill governor_queue
+Wed 21 17:13 7d 54.0% vs pace 57.9% (week 59% gone); 5h 9%; claude -p 0; governor jobs in last 3h 0
+Wed 21 17:13 queue empty: desk should refill governor_queue
+Wed 21 17:33 7d 54.0% vs pace 58.1% (week 59% gone); 5h 9%; claude -p 1; governor jobs in last 3h 0
+Wed 21 17:33 queue empty: desk should refill governor_queue
+Wed 21 17:53 7d 54.0% vs pace 58.3% (week 59% gone); 5h 9%; claude -p 0; governor jobs in last 3h 0
+Wed 21 17:53 queue empty: desk should refill governor_queue
+Wed 21 18:13 7d 54.0% vs pace 58.5% (week 60% gone); 5h 9%; claude -p 0; governor jobs in last 3h 0
+Wed 21 18:13 queue empty: desk should refill governor_queue
+Wed 21 18:33 7d 54.0% vs pace 58.7% (week 60% gone); 5h 0%; claude -p 2; governor jobs in last 3h 0
+Wed 21 18:33 queue empty: desk should refill governor_queue
+Wed 21 18:53 7d 54.0% vs pace 58.9% (week 60% gone); 5h 1%; claude -p 1; governor jobs in last 3h 0
+Wed 21 18:53 queue empty: desk should refill governor_queue
+Wed 21 19:13 7d 54.0% vs pace 59.1% (week 60% gone); 5h 2%; claude -p 0; governor jobs in last 3h 0
+Wed 21 19:13 queue empty: desk should refill governor_queue
+Wed 21 19:34 7d 54.0% vs pace 59.2% (week 60% gone); 5h 2%; claude -p 1; governor jobs in last 3h 0
+Wed 21 19:34 queue empty: desk should refill governor_queue
+Wed 21 19:54 7d 54.0% vs pace 59.4% (week 61% gone); 5h 2%; claude -p 0; governor jobs in last 3h 0
+Wed 21 19:54 queue empty: desk should refill governor_queue
+Wed 21 20:14 7d 54.0% vs pace 59.6% (week 61% gone); 5h 2%; claude -p 0; governor jobs in last 3h 0
+Wed 21 20:14 queue empty: desk should refill governor_queue
+Wed 21 20:34 7d 54.0% vs pace 59.8% (week 61% gone); 5h 2%; claude -p 0; governor jobs in last 3h 0
+Wed 21 20:34 queue empty: desk should refill governor_queue
+Wed 21 20:54 7d 54.0% vs pace 60.0% (week 61% gone); 5h 2%; claude -p 0; governor jobs in last 3h 0
+Wed 21 20:54 queue empty: desk should refill governor_queue
+Wed 21 21:14 7d 54.0% vs pace 60.2% (week 61% gone); 5h 2%; claude -p 0; governor jobs in last 3h 0
+Wed 21 21:14 queue empty: desk should refill governor_queue
+Wed 21 21:35 7d 54.0% vs pace 60.4% (week 62% gone); 5h 2%; claude -p 0; governor jobs in last 3h 0
+Wed 21 21:35 queue empty: desk should refill governor_queue
+Wed 21 21:55 7d 54.0% vs pace 60.6% (week 62% gone); 5h 2%; claude -p 0; governor jobs in last 3h 0
+Wed 21 21:55 queue empty: desk should refill governor_queue
+Wed 21 22:15 7d 54.0% vs pace 60.8% (week 62% gone); 5h 2%; claude -p 0; governor jobs in last 3h 0
+Wed 21 22:15 queue empty: desk should refill governor_queue
+Wed 21 22:35 7d 54.0% vs pace 61.0% (week 62% gone); 5h 3%; claude -p 0; governor jobs in last 3h 0
+Wed 21 22:35 queue empty: desk should refill governor_queue
+Wed 21 22:55 7d 54.0% vs pace 61.2% (week 62% gone); 5h 3%; claude -p 0; governor jobs in last 3h 0
+Wed 21 22:55 queue empty: desk should refill governor_queue
+Wed 21 23:15 7d 54.0% vs pace 61.4% (week 63% gone); 5h 3%; claude -p 0; governor jobs in last 3h 0
+Wed 21 23:15 queue empty: desk should refill governor_queue
+Wed 21 23:35 7d 54.0% vs pace 61.6% (week 63% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Wed 21 23:35 queue empty: desk should refill governor_queue
+Wed 21 23:56 7d 54.0% vs pace 61.8% (week 63% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Wed 21 23:56 queue empty: desk should refill governor_queue
+Thu 22 00:16 7d 54.0% vs pace 62.0% (week 63% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 22 00:16 queue empty: desk should refill governor_queue
+Thu 22 00:36 7d 54.0% vs pace 62.2% (week 63% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 22 00:36 queue empty: desk should refill governor_queue
+Thu 22 00:56 7d 54.0% vs pace 62.4% (week 64% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 22 00:56 queue empty: desk should refill governor_queue
+Thu 22 01:16 7d 54.0% vs pace 62.6% (week 64% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 22 01:16 queue empty: desk should refill governor_queue
+Thu 22 01:36 7d 54.0% vs pace 62.8% (week 64% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Thu 22 01:36 queue empty: desk should refill governor_queue
+Thu 22 01:56 7d 54.0% vs pace 63.0% (week 64% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Thu 22 01:56 queue empty: desk should refill governor_queue
+Thu 22 02:17 7d 54.0% vs pace 63.2% (week 64% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Thu 22 02:17 queue empty: desk should refill governor_queue
+Thu 22 02:37 7d 54.0% vs pace 63.4% (week 65% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Thu 22 02:37 queue empty: desk should refill governor_queue
+Thu 22 02:57 7d 54.0% vs pace 63.6% (week 65% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Thu 22 02:57 queue empty: desk should refill governor_queue
+Thu 22 03:17 7d 54.0% vs pace 63.8% (week 65% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Thu 22 03:17 queue empty: desk should refill governor_queue
+Thu 22 03:37 7d 54.0% vs pace 63.9% (week 65% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Thu 22 03:37 queue empty: desk should refill governor_queue
+Thu 22 03:57 7d 54.0% vs pace 64.1% (week 65% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Thu 22 03:57 queue empty: desk should refill governor_queue
+Thu 22 04:17 7d 54.0% vs pace 64.3% (week 66% gone); 5h 1%; claude -p 0; governor jobs in last 3h 0
+Thu 22 04:17 queue empty: desk should refill governor_queue
+Thu 22 04:37 7d 54.0% vs pace 64.5% (week 66% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 22 04:37 queue empty: desk should refill governor_queue
+Thu 22 04:58 7d 54.0% vs pace 64.7% (week 66% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 22 04:58 queue empty: desk should refill governor_queue
+Thu 22 05:18 7d 54.0% vs pace 64.9% (week 66% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 22 05:18 queue empty: desk should refill governor_queue
+Thu 22 05:38 7d 54.0% vs pace 65.1% (week 66% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 22 05:38 queue empty: desk should refill governor_queue
+Thu 22 05:58 7d 54.0% vs pace 65.3% (week 67% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 22 05:58 queue empty: desk should refill governor_queue
+Thu 22 06:18 7d 54.0% vs pace 65.5% (week 67% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 22 06:18 queue empty: desk should refill governor_queue
+Thu 22 06:38 7d 55.0% vs pace 65.7% (week 67% gone); 5h 2%; claude -p 2; governor jobs in last 3h 0
+Thu 22 06:38 queue empty: desk should refill governor_queue
+Thu 22 06:59 7d 55.0% vs pace 65.9% (week 67% gone); 5h 3%; claude -p 2; governor jobs in last 3h 0
+Thu 22 06:59 queue empty: desk should refill governor_queue
+Thu 22 07:19 7d 55.0% vs pace 66.1% (week 67% gone); 5h 5%; claude -p 1; governor jobs in last 3h 0
+Thu 22 07:19 queue empty: desk should refill governor_queue
+Thu 22 07:39 7d 55.0% vs pace 66.3% (week 68% gone); 5h 6%; claude -p 1; governor jobs in last 3h 0
+Thu 22 07:39 queue empty: desk should refill governor_queue
+Thu 22 07:59 7d 55.0% vs pace 66.5% (week 68% gone); 5h 7%; claude -p 1; governor jobs in last 3h 0
+Thu 22 07:59 queue empty: desk should refill governor_queue
+Thu 22 08:19 7d 55.0% vs pace 66.7% (week 68% gone); 5h 7%; claude -p 1; governor jobs in last 3h 0
+Thu 22 08:19 queue empty: desk should refill governor_queue
+Thu 22 08:39 7d 56.0% vs pace 66.9% (week 68% gone); 5h 9%; claude -p 1; governor jobs in last 3h 0
+Thu 22 08:39 queue empty: desk should refill governor_queue
+Thu 22 08:59 7d 56.0% vs pace 67.1% (week 68% gone); 5h 10%; claude -p 1; governor jobs in last 3h 0
+Thu 22 08:59 queue empty: desk should refill governor_queue
+Thu 22 09:20 7d 56.0% vs pace 67.3% (week 69% gone); 5h 11%; claude -p 0; governor jobs in last 3h 0
+Thu 22 09:20 queue empty: desk should refill governor_queue
+Thu 22 09:40 7d 56.0% vs pace 67.5% (week 69% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 22 09:40 queue empty: desk should refill governor_queue
+Thu 22 10:00 7d 56.0% vs pace 67.7% (week 69% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 22 10:00 queue empty: desk should refill governor_queue
+Thu 22 10:20 7d 56.0% vs pace 67.9% (week 69% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 22 10:20 queue empty: desk should refill governor_queue
+Thu 22 10:40 7d 56.0% vs pace 68.1% (week 69% gone); 5h 2%; claude -p 1; governor jobs in last 3h 0
+Thu 22 10:40 queue empty: desk should refill governor_queue
+Thu 22 11:00 7d 56.0% vs pace 68.3% (week 70% gone); 5h 3%; claude -p 1; governor jobs in last 3h 0
+Thu 22 11:00 queue empty: desk should refill governor_queue
+Thu 22 11:20 7d 57.0% vs pace 68.5% (week 70% gone); 5h 3%; claude -p 1; governor jobs in last 3h 0
+Thu 22 11:20 queue empty: desk should refill governor_queue
+Thu 22 11:41 7d 57.0% vs pace 68.6% (week 70% gone); 5h 4%; claude -p 1; governor jobs in last 3h 0
+Thu 22 11:41 queue empty: desk should refill governor_queue
+Thu 22 12:01 7d 57.0% vs pace 68.8% (week 70% gone); 5h 4%; claude -p 1; governor jobs in last 3h 0
+Thu 22 12:01 queue empty: desk should refill governor_queue
+Thu 22 12:21 7d 57.0% vs pace 69.0% (week 70% gone); 5h 5%; claude -p 1; governor jobs in last 3h 0
+Thu 22 12:21 queue empty: desk should refill governor_queue
+Thu 22 12:41 7d 57.0% vs pace 69.2% (week 71% gone); 5h 6%; claude -p 2; governor jobs in last 3h 0
+Thu 22 12:41 queue empty: desk should refill governor_queue
+Thu 22 13:01 7d 57.0% vs pace 69.4% (week 71% gone); 5h 7%; claude -p 1; governor jobs in last 3h 0
+Thu 22 13:01 queue empty: desk should refill governor_queue
+Thu 22 13:21 7d 57.0% vs pace 69.6% (week 71% gone); 5h 8%; claude -p 1; governor jobs in last 3h 0
+Thu 22 13:21 queue empty: desk should refill governor_queue
+Thu 22 13:41 7d 57.0% vs pace 69.8% (week 71% gone); 5h 9%; claude -p 0; governor jobs in last 3h 0
+Thu 22 13:41 queue empty: desk should refill governor_queue
+Thu 22 14:02 7d 57.0% vs pace 70.0% (week 71% gone); 5h 9%; claude -p 0; governor jobs in last 3h 0
+Thu 22 14:02 queue empty: desk should refill governor_queue
+Thu 22 14:22 7d 57.0% vs pace 70.2% (week 72% gone); 5h 9%; claude -p 0; governor jobs in last 3h 0
+Thu 22 14:22 queue empty: desk should refill governor_queue
+Thu 22 14:42 7d 58.0% vs pace 70.4% (week 72% gone); 5h 2%; claude -p 1; governor jobs in last 3h 0
+Thu 22 14:42 queue empty: desk should refill governor_queue
+Thu 22 15:02 7d 58.0% vs pace 70.6% (week 72% gone); 5h 3%; claude -p 0; governor jobs in last 3h 0
+Thu 22 15:02 queue empty: desk should refill governor_queue
+Thu 22 15:22 7d 58.0% vs pace 70.8% (week 72% gone); 5h 3%; claude -p 0; governor jobs in last 3h 0
+Thu 22 15:22 queue empty: desk should refill governor_queue
+Thu 22 15:42 7d 58.0% vs pace 71.0% (week 72% gone); 5h 3%; claude -p 0; governor jobs in last 3h 0
+Thu 22 15:42 queue empty: desk should refill governor_queue
+Thu 22 16:02 7d 58.0% vs pace 71.2% (week 73% gone); 5h 3%; claude -p 0; governor jobs in last 3h 0
+Thu 22 16:02 queue empty: desk should refill governor_queue
+Thu 22 16:23 7d 58.0% vs pace 71.4% (week 73% gone); 5h 3%; claude -p 0; governor jobs in last 3h 0
+Thu 22 16:23 queue empty: desk should refill governor_queue
+Thu 22 16:43 7d 58.0% vs pace 71.6% (week 73% gone); 5h 4%; claude -p 1; governor jobs in last 3h 0
+Thu 22 16:43 queue empty: desk should refill governor_queue
+Thu 22 17:03 7d 58.0% vs pace 71.8% (week 73% gone); 5h 5%; claude -p 1; governor jobs in last 3h 0
+Thu 22 17:03 queue empty: desk should refill governor_queue
+Thu 22 17:23 7d 58.0% vs pace 72.0% (week 73% gone); 5h 5%; claude -p 1; governor jobs in last 3h 0
+Thu 22 17:23 queue empty: desk should refill governor_queue
+Thu 22 17:43 7d 59.0% vs pace 72.2% (week 74% gone); 5h 6%; claude -p 1; governor jobs in last 3h 0
+Thu 22 17:43 queue empty: desk should refill governor_queue
+Thu 22 18:03 7d 59.0% vs pace 72.4% (week 74% gone); 5h 6%; claude -p 1; governor jobs in last 3h 0
+Thu 22 18:03 queue empty: desk should refill governor_queue
+Thu 22 18:24 7d 59.0% vs pace 72.6% (week 74% gone); 5h 7%; claude -p 1; governor jobs in last 3h 0
+Thu 22 18:24 queue empty: desk should refill governor_queue
+Thu 22 18:44 7d 59.0% vs pace 72.8% (week 74% gone); 5h 8%; claude -p 0; governor jobs in last 3h 0
+Thu 22 18:44 queue empty: desk should refill governor_queue
+Thu 22 19:04 7d 59.0% vs pace 73.0% (week 74% gone); 5h 8%; claude -p 0; governor jobs in last 3h 0
+Thu 22 19:04 queue empty: desk should refill governor_queue
+Thu 22 19:24 7d 59.0% vs pace 73.2% (week 75% gone); 5h 8%; claude -p 0; governor jobs in last 3h 0
+Thu 22 19:24 queue empty: desk should refill governor_queue
+Thu 22 19:44 7d 59.0% vs pace 73.4% (week 75% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 22 19:44 queue empty: desk should refill governor_queue
+Thu 22 20:04 7d 59.0% vs pace 73.5% (week 75% gone); 5h 0%; claude -p 0; governor jobs in last 3h 0
+Thu 22 20:04 queue empty: desk should refill governor_queue
+Thu 22 20:24 7d 59.0% vs pace 73.7% (week 75% gone); 5h 0%; claude -p 1; governor jobs in last 3h 0
+Thu 22 20:24 queue empty: desk should refill governor_queue
+Thu 22 20:44 7d 59.0% vs pace 73.9% (week 75% gone); 5h 3%; claude -p 1; governor jobs in last 3h 0
+Thu 22 20:44 queue empty: desk should refill governor_queue
+Thu 22 21:05 7d 59.0% vs pace 74.1% (week 76% gone); 5h 3%; claude -p 1; governor jobs in last 3h 0
+Thu 22 21:05 queue empty: desk should refill governor_queue
+Thu 22 21:25 7d 60.0% vs pace 74.3% (week 76% gone); 5h 5%; claude -p 2; governor jobs in last 3h 0
+Thu 22 21:25 queue empty: desk should refill governor_queue
+Thu 22 21:45 7d 60.0% vs pace 74.5% (week 76% gone); 5h 9%; claude -p 1; governor jobs in last 3h 0
+Thu 22 21:45 queue empty: desk should refill governor_queue
+Thu 22 22:05 7d 60.0% vs pace 74.7% (week 76% gone); 5h 10%; claude -p 2; governor jobs in last 3h 0
+Thu 22 22:05 queue empty: desk should refill governor_queue
+Thu 22 22:25 7d 61.0% vs pace 74.9% (week 76% gone); 5h 10%; claude -p 1; governor jobs in last 3h 0
+Thu 22 22:25 queue empty: desk should refill governor_queue
+Thu 22 22:45 7d 61.0% vs pace 75.1% (week 77% gone); 5h 10%; claude -p 1; governor jobs in last 3h 0
+Thu 22 22:45 queue empty: desk should refill governor_queue
+Thu 22 23:05 7d 61.0% vs pace 75.3% (week 77% gone); 5h 10%; claude -p 1; governor jobs in last 3h 0
+Thu 22 23:05 queue empty: desk should refill governor_queue
+Thu 22 23:26 7d 61.0% vs pace 75.5% (week 77% gone); 5h 11%; claude -p 2; governor jobs in last 3h 0
+Thu 22 23:26 queue empty: desk should refill governor_queue
+Thu 22 23:46 7d 61.0% vs pace 75.7% (week 77% gone); 5h 12%; claude -p 2; governor jobs in last 3h 0
+Thu 22 23:46 queue empty: desk should refill governor_queue
+Fri 23 00:06 7d 61.0% vs pace 75.9% (week 77% gone); 5h 14%; claude -p 3; governor jobs in last 3h 0
+Fri 23 00:06 queue empty: desk should refill governor_queue
+Fri 23 00:26 7d 61.0% vs pace 76.1% (week 78% gone); 5h 16%; claude -p 2; governor jobs in last 3h 0
+Fri 23 00:26 queue empty: desk should refill governor_queue
+Fri 23 00:46 7d 62.0% vs pace 76.3% (week 78% gone); 5h 0%; claude -p 1; governor jobs in last 3h 0
+Fri 23 00:46 queue empty: desk should refill governor_queue
+Fri 23 01:07 7d 62.0% vs pace 76.5% (week 78% gone); 5h 0%; claude -p 1; governor jobs in last 3h 0
+Fri 23 01:07 queue empty: desk should refill governor_queue
+Fri 23 01:27 7d 62.0% vs pace 76.7% (week 78% gone); 5h 1%; claude -p 1; governor jobs in last 3h 0
+Fri 23 01:27 queue empty: desk should refill governor_queue
+Fri 23 01:47 7d 62.0% vs pace 76.9% (week 78% gone); 5h 3%; claude -p 1; governor jobs in last 3h 0
+Fri 23 01:47 queue empty: desk should refill governor_queue
+Fri 23 02:07 7d 62.0% vs pace 77.1% (week 79% gone); 5h 4%; claude -p 1; governor jobs in last 3h 0
+Fri 23 02:07 queue empty: desk should refill governor_queue
+Fri 23 02:27 7d 62.0% vs pace 77.3% (week 79% gone); 5h 4%; claude -p 0; governor jobs in last 3h 0
+Fri 23 02:27 queue empty: desk should refill governor_queue
+Fri 23 02:47 7d 62.0% vs pace 77.5% (week 79% gone); 5h 5%; claude -p 0; governor jobs in last 3h 0
+Fri 23 02:47 queue empty: desk should refill governor_queue
+Fri 23 03:08 7d 62.0% vs pace 77.7% (week 79% gone); 5h 5%; claude -p 0; governor jobs in last 3h 0
+Fri 23 03:08 queue empty: desk should refill governor_queue
+Fri 23 03:28 7d 62.0% vs pace 77.9% (week 79% gone); 5h 5%; claude -p 0; governor jobs in last 3h 0
+Fri 23 03:28 queue empty: desk should refill governor_queue
+Fri 23 03:48 7d 62.0% vs pace 78.1% (week 80% gone); 5h 5%; claude -p 0; governor jobs in last 3h 0
+Fri 23 03:48 queue empty: desk should refill governor_queue
+Fri 23 04:08 7d 62.0% vs pace 78.2% (week 80% gone); 5h 5%; claude -p 0; governor jobs in last 3h 0
+Fri 23 04:08 queue empty: desk should refill governor_queue
+Fri 23 04:28 7d 62.0% vs pace 78.4% (week 80% gone); 5h 5%; claude -p 0; governor jobs in last 3h 0
+Fri 23 04:28 queue empty: desk should refill governor_queue
+Fri 23 04:48 7d 62.0% vs pace 78.6% (week 80% gone); 5h 6%; claude -p 2; governor jobs in last 3h 0
+Fri 23 04:48 queue empty: desk should refill governor_queue
+Fri 23 05:08 7d 63.0% vs pace 78.8% (week 80% gone); 5h 6%; claude -p 2; governor jobs in last 3h 0
+Fri 23 05:08 queue empty: desk should refill governor_queue
+Fri 23 05:29 7d 63.0% vs pace 79.0% (week 81% gone); 5h 8%; claude -p 3; governor jobs in last 3h 0
+Fri 23 05:29 queue empty: desk should refill governor_queue
+Fri 23 05:49 7d 63.0% vs pace 79.2% (week 81% gone); 5h 1%; claude -p 4; governor jobs in last 3h 0
+Fri 23 05:49 queue empty: desk should refill governor_queue
+Fri 23 06:09 7d 63.0% vs pace 79.4% (week 81% gone); 5h 2%; claude -p 4; governor jobs in last 3h 0
+Fri 23 06:09 queue empty: desk should refill governor_queue
+Fri 23 06:29 7d 63.0% vs pace 79.6% (week 81% gone); 5h 4%; claude -p 4; governor jobs in last 3h 0
+Fri 23 06:29 queue empty: desk should refill governor_queue
+Fri 23 06:49 7d 64.0% vs pace 79.8% (week 81% gone); 5h 5%; claude -p 5; governor jobs in last 3h 0
+Fri 23 06:49 queue empty: desk should refill governor_queue
+Fri 23 07:09 7d 64.0% vs pace 80.0% (week 82% gone); 5h 7%; claude -p 5; governor jobs in last 3h 0
+Fri 23 07:09 queue empty: desk should refill governor_queue
+Fri 23 07:30 7d 64.0% vs pace 80.2% (week 82% gone); 5h 9%; claude -p 5; governor jobs in last 3h 0
+Fri 23 07:30 queue empty: desk should refill governor_queue
+Fri 23 07:50 7d 65.0% vs pace 80.4% (week 82% gone); 5h 13%; claude -p 4; governor jobs in last 3h 0
+Fri 23 07:50 queue empty: desk should refill governor_queue
+Fri 23 08:10 7d 65.0% vs pace 80.6% (week 82% gone); 5h 16%; claude -p 4; governor jobs in last 3h 0
+Fri 23 08:10 queue empty: desk should refill governor_queue
+Fri 23 08:30 7d 66.0% vs pace 80.8% (week 82% gone); 5h 22%; claude -p 5; governor jobs in last 3h 0
+Fri 23 08:30 queue empty: desk should refill governor_queue
+Fri 23 08:50 7d 67.0% vs pace 81.0% (week 83% gone); 5h 28%; claude -p 5; governor jobs in last 3h 0
+Fri 23 08:50 queue empty: desk should refill governor_queue
+Fri 23 09:10 7d 68.0% vs pace 81.2% (week 83% gone); 5h 32%; claude -p 5; governor jobs in last 3h 0
+Fri 23 09:10 queue empty: desk should refill governor_queue
+Fri 23 09:31 7d 69.0% vs pace 81.4% (week 83% gone); 5h 35%; claude -p 4; governor jobs in last 3h 0
+Fri 23 09:31 queue empty: desk should refill governor_queue
+Fri 23 09:51 7d 69.0% vs pace 81.6% (week 83% gone); 5h 36%; claude -p 4; governor jobs in last 3h 0
+Fri 23 09:51 queue empty: desk should refill governor_queue
+Fri 23 10:11 7d 69.0% vs pace 81.8% (week 83% gone); 5h 38%; claude -p 4; governor jobs in last 3h 0
+Fri 23 10:11 queue empty: desk should refill governor_queue
+Fri 23 10:31 7d 69.0% vs pace 82.0% (week 84% gone); 5h 40%; claude -p 3; governor jobs in last 3h 0
+Fri 23 10:31 queue empty: desk should refill governor_queue
+Fri 23 10:51 7d 70.0% vs pace 82.2% (week 84% gone); 5h 1%; claude -p 2; governor jobs in last 3h 0
+Fri 23 10:51 queue empty: desk should refill governor_queue
+Fri 23 11:11 7d 70.0% vs pace 82.4% (week 84% gone); 5h 1%; claude -p 2; governor jobs in last 3h 0
+Fri 23 11:11 queue empty: desk should refill governor_queue
+Fri 23 11:31 7d 70.0% vs pace 82.6% (week 84% gone); 5h 3%; claude -p 2; governor jobs in last 3h 0
+Fri 23 11:31 queue empty: desk should refill governor_queue
+Fri 23 11:52 7d 70.0% vs pace 82.8% (week 84% gone); 5h 4%; claude -p 2; governor jobs in last 3h 0
+Fri 23 11:52 queue empty: desk should refill governor_queue
+Fri 23 12:12 7d 70.0% vs pace 83.0% (week 85% gone); 5h 6%; claude -p 2; governor jobs in last 3h 0
+Fri 23 12:12 queue empty: desk should refill governor_queue
+Fri 23 12:32 7d 71.0% vs pace 83.1% (week 85% gone); 5h 8%; claude -p 3; governor jobs in last 3h 0
+Fri 23 12:32 queue empty: desk should refill governor_queue
+Fri 23 12:52 7d 71.0% vs pace 83.3% (week 85% gone); 5h 10%; claude -p 3; governor jobs in last 3h 0
+Fri 23 12:52 queue empty: desk should refill governor_queue
+Fri 23 13:12 7d 71.0% vs pace 83.5% (week 85% gone); 5h 11%; claude -p 2; governor jobs in last 3h 0
+Fri 23 13:12 queue empty: desk should refill governor_queue
+Fri 23 13:32 7d 71.0% vs pace 83.7% (week 85% gone); 5h 11%; claude -p 2; governor jobs in last 3h 0
+Fri 23 13:32 queue empty: desk should refill governor_queue
+Fri 23 13:52 7d 71.0% vs pace 83.9% (week 86% gone); 5h 12%; claude -p 2; governor jobs in last 3h 0
+Fri 23 13:52 queue empty: desk should refill governor_queue
+Fri 23 14:13 7d 71.0% vs pace 84.1% (week 86% gone); 5h 12%; claude -p 2; governor jobs in last 3h 0
+Fri 23 14:13 queue empty: desk should refill governor_queue
+Fri 23 14:33 7d 71.0% vs pace 84.3% (week 86% gone); 5h 12%; claude -p 2; governor jobs in last 3h 0
+Fri 23 14:33 queue empty: desk should refill governor_queue
+Fri 23 14:53 7d 72.0% vs pace 84.5% (week 86% gone); 5h 13%; claude -p 2; governor jobs in last 3h 0
+Fri 23 14:53 queue empty: desk should refill governor_queue
+Fri 23 15:13 7d 72.0% vs pace 84.7% (week 86% gone); 5h 13%; claude -p 2; governor jobs in last 3h 0
+Fri 23 15:13 queue empty: desk should refill governor_queue
+Fri 23 15:33 7d 72.0% vs pace 84.9% (week 87% gone); 5h 15%; claude -p 2; governor jobs in last 3h 0
+Fri 23 15:33 queue empty: desk should refill governor_queue
+Fri 23 15:53 7d 72.0% vs pace 85.1% (week 87% gone); 5h 1%; claude -p 2; governor jobs in last 3h 0
+Fri 23 15:53 queue empty: desk should refill governor_queue
+Fri 23 16:13 7d 72.0% vs pace 85.3% (week 87% gone); 5h 2%; claude -p 2; governor jobs in last 3h 0
+Fri 23 16:13 queue empty: desk should refill governor_queue
+Fri 23 16:34 7d 72.0% vs pace 85.5% (week 87% gone); 5h 2%; claude -p 2; governor jobs in last 3h 0
+Fri 23 16:34 queue empty: desk should refill governor_queue
+Fri 23 16:54 7d 73.0% vs pace 85.7% (week 87% gone); 5h 3%; claude -p 1; governor jobs in last 3h 0
+Fri 23 16:54 queue empty: desk should refill governor_queue
+Fri 23 17:14 7d 73.0% vs pace 85.9% (week 88% gone); 5h 3%; claude -p 1; governor jobs in last 3h 0
+Fri 23 17:14 queue empty: desk should refill governor_queue
+Fri 23 17:34 7d 73.0% vs pace 86.1% (week 88% gone); 5h 3%; claude -p 1; governor jobs in last 3h 0
+Fri 23 17:34 queue empty: desk should refill governor_queue
+Fri 23 17:54 7d 73.0% vs pace 86.3% (week 88% gone); 5h 3%; claude -p 1; governor jobs in last 3h 0
+Fri 23 17:54 queue empty: desk should refill governor_queue

@@ -1,0 +1,5 @@
+== cx_b13_xclmtxt (usage 30.0% -> 54.0%): 1. **DONE — draft [PR #1533](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1533).** Decimal names and EA/UA labels corrected. Branch `cx/xclmtxt-s41`, tip `40c9a977`. Saved and pushed.
+
+2. **Checks:** 12 builds, 0 errors. Focused: 445 passed; 32 failed before. Structural net10: 5,650 passed. Net48: 4,910 passed, 39 verified baseline failures, 698 skipped. DesignCore: 2,190/2,195 per lane; release: 30/30; central: 22/23—remaining failures match baseline.
+
+3. **[Report](C:/CE_PLAN/areas/CODEX_BUILD_XCLMTXT_23OCT.md)** contains the exact unrun AutoCAD check. No deployment. Civil settings hash changed during the session; writer unidentified and documented.

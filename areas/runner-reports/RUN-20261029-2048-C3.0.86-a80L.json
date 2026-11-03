@@ -1,0 +1,1594 @@
+{
+  "header": {
+    "run_id": "RUN-20261029-2048-C3.0.86-a80L",
+    "started": "2026-10-29 20:48:56",
+    "finished": "2026-10-29 21:01:56",
+    "build": {
+      "civil": {
+        "product_version": "3.0.86+5888ee757244aac89283aaaf2ba68e51470ecbb3",
+        "file_version": "3.0.86.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.86+5888ee757244aac89283aaaf2ba68e51470ecbb3",
+        "file_version": "1.1.86.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.86+5888ee75 / struc 1.0.125+204dfad2 / mgr 1.1.86+5888ee75",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "AAD605F62FD659E426E68F8C938EC13FFFC33E8A74BCB93BA99720BA7CC45DF0",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.86+5888ee757244aac89283aaaf2ba68e51470ecbb3; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.86+5888ee757244aac89283aaaf2ba68e51470ecbb3",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4CD773B85EC5, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 13955AAA60D1, case_runner_lib.ps1 8F9B8DCBB473, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 5 case file(s) plus 0 shared setup(s); pack SHA-256 AAD605F62FD659E426E68F8C938EC13FFFC33E8A74BCB93BA99720BA7CC45DF0; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json B3B5A004B929 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Thu 29 Oct 2026 20:48 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 4,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 1,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 4
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261029-2048-C3.0.86-a80L-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-29 20:48:58",
+      "finished": "2026-10-29 20:59:12",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV32049001_B1.dwg",
+      "cases": [
+        "R05",
+        "R07",
+        "R10",
+        "R08"
+      ],
+      "calibration": {
+        "ok": true,
+        "max_raw_px": 1.912,
+        "max_corrected_px": 0.5,
+        "why": "",
+        "canvas": {
+          "left": 1951,
+          "top": 421,
+          "width": 1858,
+          "height": 569,
+          "how": "exact (tol 0)",
+          "scale_vs_screensize": 1.0,
+          "dpi": 96
+        }
+      },
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : B3B5A004B929 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    },
+    {
+      "session_id": "RUN-20261029-2048-C3.0.86-a80L-s2",
+      "phase": "main",
+      "session_no": 2,
+      "started": "2026-10-29 20:59:12",
+      "finished": "2026-10-29 21:01:56",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV32059172_B1.dwg",
+      "cases": [
+        "R34sn"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : B3B5A004B929 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "Alt+F4 (close posted to the AutoCAD window)",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "R05",
+      "proves_bugs": "BUG-862 (the 'cancelled' half only: a command stopped by Esc with nothing placed is logged 'cancelled'; the 'completed after placing' half is R01 v2 and the 'refused' half is R10 v2)",
+      "title": "A finished CE command writes one outcome line with its time, and a command stopped with nothing placed says cancelled",
+      "kind": "deterministic",
+      "order": 20,
+      "slot": "launch",
+      "fixture": "DRV1_B1",
+      "plan_item": "",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "CDCHECKCURRENT (the drawing check) asks no question, opens the CE Civil 'What CE Found' palette (by design) and the Civil CE log gains exactly one line 'Command outcome: CDCHECKCURRENT completed <n> ms'. Then PIT is started and stopped with Esc at its first prompt, placing nothing: the log says 'Command outcome: PIT cancelled' once and never 'PIT completed'.",
+      "why_not_unit": "The line is written by the installed plugin when a real AutoCAD command ends; only a live run shows it reaches the log file that the log watcher reads, and with which word.",
+      "not_automated": [
+        "The 'refused' word is R10 v2 (CDCHECKIGNORE with its switch off); the 'completed after placing and Esc' word is R01 v2.",
+        "Structural and Manager outcome lines (#1547,",
+        "One line for EVERY CE command is not proved: this case covers CDCHECKCURRENT (completed) and PIT (cancelled)."
+      ],
+      "file_sha256": "4E5A615417F86FF76D51E0C9CA012835722D85CCCACE2E8A9029327DD69DDA8A",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-29 20:53:39",
+      "seconds": 20.5,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDCHECKCURRENT\" -Force -> $check",
+          "ok": true,
+          "seconds": 2.4,
+          "evidence": "typed 'CDCHECKCURRENT': Command: | Command: CDCHECKCURRENT | [CE] Drawing check complete. 27 items need checking. Nothing has been fixed automatically."
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 2",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "slept 2 s"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_check",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV32049001_B1.dwg] ; CE Civil - What CE Found"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "log-read",
+          "text": "log-read civil -> $lg1",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "1 new line(s) in the civil CE log since the case began "
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"PIT\" -Force -> $pit_t",
+          "ok": true,
+          "seconds": 6.7,
+          "evidence": "typed 'PIT': Command: | Command: PIT"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_esc",
+          "ok": true,
+          "seconds": 2.6,
+          "evidence": "esc-prompt: Command: | Command: PIT | Specify pit insertion point: *Cancel* | PIT command cancelled."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 2",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "slept 2 s"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "log-read",
+          "text": "log-read civil -> $lg2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "20 new line(s) in the civil CE log since the case began "
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "log civil has \"Command outcome: CDCHECKCURRENT completed\"",
+          "ok": true,
+          "expected": "civil log has 'Command outcome: CDCHECKCURRENT completed'",
+          "actual": "1",
+          "evidence": "log: '2026-10-29 20:53:40.931 [INFO] Command outcome: CDCHECKCURRENT completed 220 ms'"
+        },
+        {
+          "n": 2,
+          "text": "log civil count \"Command outcome: CDCHECKCURRENT\" = 1",
+          "ok": true,
+          "expected": "1 line(s) with 'Command outcome: CDCHECKCURRENT'",
+          "actual": "1",
+          "evidence": "civil log holds 1 new line(s) containing 'Command outcome: CDCHECKCURRENT' (expected 1): 2026-10-29 20:53:40.931 [INFO] Command outcome: CDCHECKCURRENT completed 220 ms"
+        },
+        {
+          "n": 3,
+          "text": "matches $lg1 \"Command outcome: CDCHECKCURRENT completed \\d+ ms\"",
+          "ok": true,
+          "expected": "matches /Command outcome: CDCHECKCURRENT completed \\d+ ms/",
+          "actual": "2026-10-29 20:53:40.931 [INFO] Command outcome: CDCHECKCURRENT completed 220 ms",
+          "evidence": "matched 'Command outcome: CDCHECKCURRENT completed 220 ms'"
+        },
+        {
+          "n": 4,
+          "text": "log civil has \"Command outcome: PIT cancelled\"",
+          "ok": true,
+          "expected": "civil log has 'Command outcome: PIT cancelled'",
+          "actual": "1",
+          "evidence": "log: '2026-10-29 20:53:54.200 [INFO] Command outcome: PIT cancelled 7485 ms'"
+        },
+        {
+          "n": 5,
+          "text": "log civil count \"Command outcome: PIT\" = 1",
+          "ok": true,
+          "expected": "1 line(s) with 'Command outcome: PIT'",
+          "actual": "1",
+          "evidence": "civil log holds 1 new line(s) containing 'Command outcome: PIT' (expected 1): 2026-10-29 20:53:54.200 [INFO] Command outcome: PIT cancelled 7485 ms"
+        },
+        {
+          "n": 6,
+          "text": "log civil absent \"Command outcome: PIT completed\"",
+          "ok": true,
+          "expected": "civil log lacks 'Command outcome: PIT completed'",
+          "actual": "0",
+          "evidence": "no new civil log line contains 'Command outcome: PIT completed' (20 new lines read)"
+        },
+        {
+          "n": 7,
+          "text": "record $check \"what the command line printed for CDCHECKCURRENT\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDCHECKCURRENT | [CE] Drawing check complete. 27 items need checking. Nothing has been fixed automatically.",
+          "evidence": "RECORDED, not judged: what the command line printed for CDCHECKCURRENT = Command: | Command: CDCHECKCURRENT | [CE] Drawing check complete. 27 items need checking. Nothing has been fixed automatically."
+        },
+        {
+          "n": 8,
+          "text": "record $win_check \"windows open after CDCHECKCURRENT (the palette is docked and may not be listed)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV32049001_B1.dwg] | CE Civil - What CE Found",
+          "evidence": "RECORDED, not judged: windows open after CDCHECKCURRENT (the palette is docked and may not be listed) = Autodesk AutoCAD 2027 - [CLDV32049001_B1.dwg] | CE Civil - What CE Found"
+        },
+        {
+          "n": 9,
+          "text": "record $pit_esc \"what the Esc at the first PIT prompt printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: PIT | Specify pit insertion point: *Cancel* | PIT command cancelled.",
+          "evidence": "RECORDED, not judged: what the Esc at the first PIT prompt printed = Command: | Command: PIT | Specify pit insertion point: *Cancel* | PIT command cancelled."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 20 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDCHECKCURRENT completed 220 ms ; Command outcome: PIT cancelled 7485 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-29 20:53:59",
+      "session_id": "RUN-20261029-2048-C3.0.86-a80L-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": true
+      }
+    },
+    {
+      "id": "R07",
+      "proves_bugs": "",
+      "title": "The Settings window opens with all eight tabs, a changed value is thrown away by Cancel, and the four settings files are unchanged",
+      "kind": "deterministic",
+      "order": 40,
+      "slot": "launch",
+      "fixture": "DRV1_B1",
+      "plan_item": "Settings window (spec C13 reduced to the eight tabs; spec C14: a changed value is thrown away by Cancel)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "CDS opens 'Creative Engineering | Settings (CDS)' with the eight tabs Drafting, Pipes and Pits, Design, Survey, Display, Advanced, Newer tools and Fixes, a Cancel and a Save button, and the line 'No changes. Everything shown is saved.'; changing the Drafting field Label slide step to 123 makes that line go and the field read 123; Cancel closes the window; the four settings files have the same SHA-256 as before the window was opened (checked BEFORE the guard's restore runs).",
+      "why_not_unit": "The window loads the real settings file in real AutoCAD; only a live run shows that opening it and pressing Cancel writes nothing.",
+      "not_automated": [
+        "Batch 3 fixes of 25 Oct 2026 (spec C14 assertion 2): the window is opened a SECOND time after the Cancel and must show the saved value again (Label slide step 125, the value in Tim's file) and the 'No changes' line, so a Cancel that kept 123 in memory would fail. The true red for the hashes-unchanged check is the variant R07_SETTING_BROKEN (the settings guard changes CD_Settings.json in the middle of the case; a Save press is not possible because the v2 allow-list refuses the button now named \"Settings, Save\").",
+        "The per-field look and the discard wording (spec C14) are not judged. C14 itself IS covered: one field (Drafting, Label slide step) is changed to 123 with the settings guard armed, the window shows the change (the No-changes line goes), Cancel closes it, and the four settings files are byte-for-byte unchanged (no Save, no discard prompt answered).",
+        "The per-tab look (C13) and the tab contents are not read: only that all eight tabs exist."
+      ],
+      "file_sha256": "7D08DB109F80C46F3DC3A615F37452087F75FB02A6666C20E922A60DBE755BBB",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-29 20:53:59",
+      "seconds": 111.9,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "settings-arm",
+          "text": "settings-arm",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "settings guard armed: ok"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDS\" -Force -ExpectWindow \"Settings\" -> $t",
+          "ok": true,
+          "seconds": 17.2,
+          "evidence": "typed 'CDS': Command: CDS | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Settings\" -> $set",
+          "ok": true,
+          "seconds": 6.8,
+          "evidence": "ui-dump 'Creative Engineering | Settings (CDS)': 77 controls, tabs: Settings, Settings Tabs, Drafting | Settings, Settings Tabs, Pipes and Pits | Settings, Settings Tabs, Design | Settings, Settings Tabs, Survey | Settings, Settings Tabs, Display | Settings, Settings Tabs, Advanced | Settings, Settings Tabs, Newer tools | Settings, Settings Tabs, Fixes"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"Settings\" \"AdvancedSettingsDialog.SettingsTabs.Drafting.LabelSlideStepMm\" \"123\"",
+          "ok": true,
+          "seconds": 10.5,
+          "evidence": "ui set 'Settings' AdvancedSettingsDialog.SettingsTabs.Drafting.LabelSlideStepMm = 123: SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Settings\" -> $set2",
+          "ok": true,
+          "seconds": 7.2,
+          "evidence": "ui-dump 'Creative Engineering | Settings (CDS)': 77 controls, tabs: Settings, Settings Tabs, Drafting | Settings, Settings Tabs, Pipes and Pits | Settings, Settings Tabs, Design | Settings, Settings Tabs, Survey | Settings, Settings Tabs, Display | Settings, Settings Tabs, Advanced | Settings, Settings Tabs, Newer tools | Settings, Settings Tabs, Fixes"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Settings\" \"Settings, Cancel\" -> $pr",
+          "ok": true,
+          "seconds": 17.4,
+          "evidence": "pressed 'Settings, Cancel' in /Settings/: window closed = True"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV32049001_B1.dwg] ; CE Civil - What CE Found"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDS\" -Force -ExpectWindow \"Settings\" -> $t3",
+          "ok": true,
+          "seconds": 15.9,
+          "evidence": "typed 'CDS': Command: | Command: CDS | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Settings\" -> $set3",
+          "ok": true,
+          "seconds": 6.1,
+          "evidence": "ui-dump 'Creative Engineering | Settings (CDS)': 77 controls, tabs: Settings, Settings Tabs, Drafting | Settings, Settings Tabs, Pipes and Pits | Settings, Settings Tabs, Design | Settings, Settings Tabs, Survey | Settings, Settings Tabs, Display | Settings, Settings Tabs, Advanced | Settings, Settings Tabs, Newer tools | Settings, Settings Tabs, Fixes"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Settings\" \"Settings, Cancel\" -> $pr3",
+          "ok": true,
+          "seconds": 15.8,
+          "evidence": "pressed 'Settings, Cancel' in /Settings/: window closed = True"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end3",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV32049001_B1.dwg] ; CE Civil - What CE Found"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "control $set \"AdvancedSettingsDialog.SettingsTabs.Drafting.LabelSlideStepMm\" value \"125\"",
+          "ok": true,
+          "expected": "125",
+          "actual": "125",
+          "evidence": "control 'AdvancedSettingsDialog.SettingsTabs.Drafting.LabelSlideStepMm' value '125' (expected '125')"
+        },
+        {
+          "n": 2,
+          "text": "control $set3 \"AdvancedSettingsDialog.SettingsTabs.Drafting.LabelSlideStepMm\" value \"125\"",
+          "ok": true,
+          "expected": "125",
+          "actual": "125",
+          "evidence": "control 'AdvancedSettingsDialog.SettingsTabs.Drafting.LabelSlideStepMm' value '125' (expected '125')"
+        },
+        {
+          "n": 3,
+          "text": "control-text $set3 has \"No changes. Everything shown is saved.\"",
+          "ok": true,
+          "expected": "window shows 'No changes. Everything shown is saved.'",
+          "actual": "1",
+          "evidence": "window 'Creative Engineering | Settings (CDS)' shows 'No changes. Everything shown is saved.'"
+        },
+        {
+          "n": 4,
+          "text": "window-closed $pr3",
+          "ok": true,
+          "expected": "the window closed",
+          "actual": "closed=True",
+          "evidence": "ui-press reported window_closed = True"
+        },
+        {
+          "n": 5,
+          "text": "not-contains $win_end3 \"Settings (CDS)\"",
+          "ok": true,
+          "expected": "does not contain 'Settings (CDS)'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV32049001_B1.dwg] | CE Civil - What CE Found",
+          "evidence": "'Settings (CDS)' is absent from: Autodesk AutoCAD 2027 - [CLDV32049001_B1.dwg] | CE Civil - What CE Found"
+        },
+        {
+          "n": 6,
+          "text": "control $set \"AdvancedSettingsDialog.CancelCommand\" exists",
+          "ok": true,
+          "expected": "control 'AdvancedSettingsDialog.CancelCommand' exists",
+          "actual": "1",
+          "evidence": "'AdvancedSettingsDialog.CancelCommand' found in 'Creative Engineering | Settings (CDS)' (1 control(s))"
+        },
+        {
+          "n": 7,
+          "text": "control $set \"AdvancedSettingsDialog.OkCommand\" exists",
+          "ok": true,
+          "expected": "control 'AdvancedSettingsDialog.OkCommand' exists",
+          "actual": "1",
+          "evidence": "'AdvancedSettingsDialog.OkCommand' found in 'Creative Engineering | Settings (CDS)' (1 control(s))"
+        },
+        {
+          "n": 8,
+          "text": "control $set \"Settings, Settings Tabs, Drafting\" exists",
+          "ok": true,
+          "expected": "control 'Settings, Settings Tabs, Drafting' exists",
+          "actual": "1",
+          "evidence": "'Settings, Settings Tabs, Drafting' found in 'Creative Engineering | Settings (CDS)' (1 control(s))"
+        },
+        {
+          "n": 9,
+          "text": "control $set \"Settings, Settings Tabs, Pipes and Pits\" exists",
+          "ok": true,
+          "expected": "control 'Settings, Settings Tabs, Pipes and Pits' exists",
+          "actual": "1",
+          "evidence": "'Settings, Settings Tabs, Pipes and Pits' found in 'Creative Engineering | Settings (CDS)' (1 control(s))"
+        },
+        {
+          "n": 10,
+          "text": "control $set \"Settings, Settings Tabs, Design\" exists",
+          "ok": true,
+          "expected": "control 'Settings, Settings Tabs, Design' exists",
+          "actual": "1",
+          "evidence": "'Settings, Settings Tabs, Design' found in 'Creative Engineering | Settings (CDS)' (1 control(s))"
+        },
+        {
+          "n": 11,
+          "text": "control $set \"Settings, Settings Tabs, Survey\" exists",
+          "ok": true,
+          "expected": "control 'Settings, Settings Tabs, Survey' exists",
+          "actual": "1",
+          "evidence": "'Settings, Settings Tabs, Survey' found in 'Creative Engineering | Settings (CDS)' (1 control(s))"
+        },
+        {
+          "n": 12,
+          "text": "control $set \"Settings, Settings Tabs, Display\" exists",
+          "ok": true,
+          "expected": "control 'Settings, Settings Tabs, Display' exists",
+          "actual": "1",
+          "evidence": "'Settings, Settings Tabs, Display' found in 'Creative Engineering | Settings (CDS)' (1 control(s))"
+        },
+        {
+          "n": 13,
+          "text": "control $set \"Settings, Settings Tabs, Advanced\" exists",
+          "ok": true,
+          "expected": "control 'Settings, Settings Tabs, Advanced' exists",
+          "actual": "1",
+          "evidence": "'Settings, Settings Tabs, Advanced' found in 'Creative Engineering | Settings (CDS)' (1 control(s))"
+        },
+        {
+          "n": 14,
+          "text": "control $set \"Settings, Settings Tabs, Newer tools\" exists",
+          "ok": true,
+          "expected": "control 'Settings, Settings Tabs, Newer tools' exists",
+          "actual": "1",
+          "evidence": "'Settings, Settings Tabs, Newer tools' found in 'Creative Engineering | Settings (CDS)' (1 control(s))"
+        },
+        {
+          "n": 15,
+          "text": "control $set \"Settings, Settings Tabs, Fixes\" exists",
+          "ok": true,
+          "expected": "control 'Settings, Settings Tabs, Fixes' exists",
+          "actual": "1",
+          "evidence": "'Settings, Settings Tabs, Fixes' found in 'Creative Engineering | Settings (CDS)' (1 control(s))"
+        },
+        {
+          "n": 16,
+          "text": "control-text $set has \"No changes. Everything shown is saved.\"",
+          "ok": true,
+          "expected": "window shows 'No changes. Everything shown is saved.'",
+          "actual": "1",
+          "evidence": "window 'Creative Engineering | Settings (CDS)' shows 'No changes. Everything shown is saved.'"
+        },
+        {
+          "n": 17,
+          "text": "window-closed $pr",
+          "ok": true,
+          "expected": "the window closed",
+          "actual": "closed=True",
+          "evidence": "ui-press reported window_closed = True"
+        },
+        {
+          "n": 18,
+          "text": "not-contains $win_end \"Settings (CDS)\"",
+          "ok": true,
+          "expected": "does not contain 'Settings (CDS)'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV32049001_B1.dwg] | CE Civil - What CE Found",
+          "evidence": "'Settings (CDS)' is absent from: Autodesk AutoCAD 2027 - [CLDV32049001_B1.dwg] | CE Civil - What CE Found"
+        },
+        {
+          "n": 19,
+          "text": "control $set2 \"AdvancedSettingsDialog.SettingsTabs.Drafting.LabelSlideStepMm\" value \"123\"",
+          "ok": true,
+          "expected": "123",
+          "actual": "123",
+          "evidence": "control 'AdvancedSettingsDialog.SettingsTabs.Drafting.LabelSlideStepMm' value '123' (expected '123')"
+        },
+        {
+          "n": 20,
+          "text": "control-text $set2 absent \"No changes. Everything shown is saved.\"",
+          "ok": true,
+          "expected": "window lacks 'No changes. Everything shown is saved.'",
+          "actual": "0",
+          "evidence": "no control of 'Creative Engineering | Settings (CDS)' shows 'No changes. Everything shown is saved.'"
+        },
+        {
+          "n": 21,
+          "text": "hashes-unchanged",
+          "ok": true,
+          "expected": "the four settings files unchanged",
+          "actual": "0 changed",
+          "evidence": "all four equal: ACD64E79A33B 622A246F7D3B EFE307C4FC74 B3B5A004B929"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV32049001_B1_1d8cfb042.log)",
+        "Civil CE log: 10 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDS completed 46513 ms ; Command outcome: CDS completed 26786 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-29 20:55:51",
+      "session_id": "RUN-20261029-2048-C3.0.86-a80L-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": true
+      }
+    },
+    {
+      "id": "R10",
+      "proves_bugs": "BUG-863 (the off path saves no project record into the drawing: no 'Project data saved to DWG' log line and the drawing's modified flag does not move); BUG-862 (the 'refused' half only)",
+      "title": "CDCHECKIGNORE with the switch off says so in one line, asks nothing, saves nothing and logs 'refused'",
+      "kind": "deterministic",
+      "order": 50,
+      "slot": "launch",
+      "fixture": "DRV1_B1",
+      "plan_item": "",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "With the switch off, typing CDCHECKIGNORE prints 'Ignoring a finding is switched off in CE Settings. Nothing was changed.' at once, asks no question (no command is left active), leaves no window behind, writes no 'Project data saved to DWG' line to the Civil log, leaves the drawing's modified flag (DBMOD) where it was, and logs 'Command outcome: CDCHECKIGNORE refused'; the four settings files are unchanged.",
+      "why_not_unit": "The refusal depends on the switch value CE read from the real settings file when AutoCAD started, and on the real command line, log and drawing showing one line, no question and no save.",
+      "not_automated": [
+        "The switch is read from the settings file as it is (off). The ON paths of CDCHECKIGNORE (spec C17 to C19) need a settings profile and are not in this case; this case counts for the switch-off half of UX-DI-03 only.",
+        "DBMOD is a flag set, so it proves 'not modified again' only if it was still clear or already settled: the case therefore ALSO reads the CE log for a project-record save, which is the exact symptom of BUG-863."
+      ],
+      "file_sha256": "AB3377887B1DC0C1D7A270F8BF9A9947E2D32A5C1C614BE8DF39441F6CF282B2",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-29 20:55:51",
+      "seconds": 17.0,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "getvar",
+          "text": "getvar DBMOD -> $m0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "DBMOD = 1"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 pick-read -> $s0",
+          "ok": true,
+          "seconds": 0.6,
+          "evidence": "v3 pick-read : pick-first set: 0 object(s)"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDCHECKIGNORE\" -Force -> $ig",
+          "ok": true,
+          "seconds": 2.2,
+          "evidence": "typed 'CDCHECKIGNORE': Command: CDCHECKIGNORE | [CE] Ignoring a finding is switched off in CE Settings. Nothing was changed. | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before yo..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 2",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "slept 2 s"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "getvar",
+          "text": "getvar CMDACTIVE -> $ca",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "CMDACTIVE = 0"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "getvar",
+          "text": "getvar DBMOD -> $m1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "DBMOD = 1"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 pick-read -> $s1",
+          "ok": true,
+          "seconds": 0.6,
+          "evidence": "v3 pick-read : pick-first set: 0 object(s)"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV32049001_B1.dwg] ; CE Civil - What CE Found"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "contains $s0 \"pick-first set: 0 object(s)\"",
+          "ok": true,
+          "expected": "contains 'pick-first set: 0 object(s)'",
+          "actual": "{\"ok\":true,\"verb\":\"pick-read\",\"started\":\"2026-10-29 20:56:00\",\"elapsed_ms\":545,\"error\":null,\"refused\":false,\"output\":[\"pick-first set: 0 object(s) \"],\"data\":{\"pickfirst\":{\"count\":0,\"handles\":[]}}}",
+          "evidence": "found 'pick-first set: 0 object(s)' in: {\"ok\":true,\"verb\":\"pick-read\",\"started\":\"2026-10-29 20:56:00\",\"elapsed_ms\":545,\"error\":null,\"refused\":false,\"output\":[\"pick-first set: 0 object(s) \"],\"data\":{\"p..."
+        },
+        {
+          "n": 2,
+          "text": "contains $s1 \"pick-first set: 0 object(s)\"",
+          "ok": true,
+          "expected": "contains 'pick-first set: 0 object(s)'",
+          "actual": "{\"ok\":true,\"verb\":\"pick-read\",\"started\":\"2026-10-29 20:56:06\",\"elapsed_ms\":584,\"error\":null,\"refused\":false,\"output\":[\"pick-first set: 0 object(s) \"],\"data\":{\"pickfirst\":{\"count\":0,\"handles\":[]}}}",
+          "evidence": "found 'pick-first set: 0 object(s)' in: {\"ok\":true,\"verb\":\"pick-read\",\"started\":\"2026-10-29 20:56:06\",\"elapsed_ms\":584,\"error\":null,\"refused\":false,\"output\":[\"pick-first set: 0 object(s) \"],\"data\":{\"p..."
+        },
+        {
+          "n": 3,
+          "text": "not-contains $ig \"Command outcome\"",
+          "ok": true,
+          "expected": "does not contain 'Command outcome'",
+          "actual": "Command: CDCHECKIGNORE | [CE] Ignoring a finding is switched off in CE Settings. Nothing was changed. | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be changed. Run settings-restore...",
+          "evidence": "'Command outcome' is absent from: Command: CDCHECKIGNORE | [CE] Ignoring a finding is switched off in CE Settings. Nothing was changed. | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up ..."
+        },
+        {
+          "n": 4,
+          "text": "contains $ig \"Ignoring a finding is switched off in CE Settings. Nothing was changed.\"",
+          "ok": true,
+          "expected": "contains 'Ignoring a finding is switched off in CE Settings. Nothing was changed.'",
+          "actual": "Command: CDCHECKIGNORE | [CE] Ignoring a finding is switched off in CE Settings. Nothing was changed. | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be changed. Run settings-restore...",
+          "evidence": "found 'Ignoring a finding is switched off in CE Settings. Nothing was changed.' in: Command: CDCHECKIGNORE | [CE] Ignoring a finding is switched off in CE Settings. Nothing was changed. | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up ..."
+        },
+        {
+          "n": 5,
+          "text": "not-contains $ig \"Specify\"",
+          "ok": true,
+          "expected": "does not contain 'Specify'",
+          "actual": "Command: CDCHECKIGNORE | [CE] Ignoring a finding is switched off in CE Settings. Nothing was changed. | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be changed. Run settings-restore...",
+          "evidence": "'Specify' is absent from: Command: CDCHECKIGNORE | [CE] Ignoring a finding is switched off in CE Settings. Nothing was changed. | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up ..."
+        },
+        {
+          "n": 6,
+          "text": "equals $ca 0",
+          "ok": true,
+          "expected": "0",
+          "actual": "0",
+          "evidence": "value '0' (expected '0')"
+        },
+        {
+          "n": 7,
+          "text": "not-contains $win_end \"Ignore\"",
+          "ok": true,
+          "expected": "does not contain 'Ignore'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV32049001_B1.dwg] | CE Civil - What CE Found",
+          "evidence": "'Ignore' is absent from: Autodesk AutoCAD 2027 - [CLDV32049001_B1.dwg] | CE Civil - What CE Found"
+        },
+        {
+          "n": 8,
+          "text": "equals $m0 $m1",
+          "ok": true,
+          "expected": "1",
+          "actual": "1",
+          "evidence": "value '1' (expected '1')"
+        },
+        {
+          "n": 9,
+          "text": "hashes-unchanged",
+          "ok": true,
+          "expected": "the four settings files unchanged",
+          "actual": "0 changed",
+          "evidence": "all four equal: ACD64E79A33B 622A246F7D3B EFE307C4FC74 B3B5A004B929"
+        },
+        {
+          "n": 10,
+          "text": "log civil has \"Command outcome: CDCHECKIGNORE refused\"",
+          "ok": true,
+          "expected": "civil log has 'Command outcome: CDCHECKIGNORE refused'",
+          "actual": "1",
+          "evidence": "log: '2026-10-29 20:56:02.043 [INFO] Command outcome: CDCHECKIGNORE refused 6 ms'"
+        },
+        {
+          "n": 11,
+          "text": "log civil count \"Command outcome: CDCHECKIGNORE\" = 1",
+          "ok": true,
+          "expected": "1 line(s) with 'Command outcome: CDCHECKIGNORE'",
+          "actual": "1",
+          "evidence": "civil log holds 1 new line(s) containing 'Command outcome: CDCHECKIGNORE' (expected 1): 2026-10-29 20:56:02.043 [INFO] Command outcome: CDCHECKIGNORE refused 6 ms"
+        },
+        {
+          "n": 12,
+          "text": "log civil absent \"Project data saved to DWG\"",
+          "ok": true,
+          "expected": "civil log lacks 'Project data saved to DWG'",
+          "actual": "0",
+          "evidence": "no new civil log line contains 'Project data saved to DWG' (1 new lines read)"
+        },
+        {
+          "n": 13,
+          "text": "record $ig \"what the command line printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: CDCHECKIGNORE | [CE] Ignoring a finding is switched off in CE Settings. Nothing was changed. | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before yo...",
+          "evidence": "RECORDED, not judged: what the command line printed = Command: CDCHECKIGNORE | [CE] Ignoring a finding is switched off in CE Settings. Nothing was changed. | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before yo..."
+        },
+        {
+          "n": 14,
+          "text": "record $m0 \"DBMOD before\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "1",
+          "evidence": "RECORDED, not judged: DBMOD before = 1"
+        },
+        {
+          "n": 15,
+          "text": "record $m1 \"DBMOD after\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "1",
+          "evidence": "RECORDED, not judged: DBMOD after = 1"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV32049001_B1_199fcf591.log)",
+        "Civil CE log: 1 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDCHECKIGNORE refused 6 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-29 20:56:08",
+      "session_id": "RUN-20261029-2048-C3.0.86-a80L-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": true
+      }
+    },
+    {
+      "id": "R08",
+      "proves_bugs": "BUG-861 (the one-drawing, real-mouse pick half only: REDO survives U and a real pit pick, five times in a fresh AutoCAD; the right-click CE menu half is not covered)",
+      "title": "REDO still works after U and a real-mouse pick of a pit, five times in a row (no runner read between U and REDO)",
+      "kind": "deterministic",
+      "order": 60,
+      "slot": "launch",
+      "fixture": "DRV1_B1",
+      "plan_item": "BUG-861 (spec C32, real-mouse pick)",
+      "bug": "BUG-861",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "First a control round with no pick (draw a line, U, REDO: 'Everything has been redone'). Then five rounds: draw a line, U, click the pit P3 with the real mouse, wait 12 seconds, REDO: the command line says 'Everything has been redone' every time, never 'Nothing to redo'. After the rounds, one more click on the same point selects pit 109D56 (proof the click picks the pit). Between U and REDO the runner reads nothing from AutoCAD.",
+      "why_not_unit": "Whether REDO survives depends on what CE does in the seconds after a pick (the Inspector refresh) inside a real AutoCAD undo stack.",
+      "not_automated": [
+        "The right-click CE menu half of BUG-861 and BUG-416 (the right-click menu is not read yet), and a second open drawing.",
+        "The click between U and REDO is a blind click (stored view, no hit proof, by design: any read of AutoCAD between U and REDO loses REDO by itself). That the click selected the pit is proved once, after the five rounds, by a second click at the same pixel and a pick-first read.",
+        "A pick made by the driver's typed LISP (v2 pick-first) or with the runner's usual proof reads is NOT used: those routes lose REDO even for a plain line."
+      ],
+      "file_sha256": "4A42C588E54945E41A22158134AD3FB04AFCBF78E336B3364F2ACAE62EC0201B",
+      "result": "BLOCKED",
+      "blocked": "AutoCAD busy",
+      "first_failure": null,
+      "started": "2026-10-29 20:56:08",
+      "seconds": 131.4,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 setvar PICKFIRST 1",
+          "ok": true,
+          "seconds": 0.5,
+          "evidence": "v3 setvar PICKFIRST 1: PICKFIRST (profile): already 1, nothing written"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM _C 53777.7,-25569.9 1200\"",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "typed '_.ZOOM _C 53777.7,-25569.9 1200': Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _C | Specify center point: 53777.7,-25569.9 | Enter magnification ..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 view-read",
+          "ok": true,
+          "seconds": 0.5,
+          "evidence": "v3 view-read : view stored: centre 53,777.700,-25,569.900 height 1,200.000 screen 1858x569"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 deselect",
+          "ok": true,
+          "seconds": 18.6,
+          "evidence": "v3 deselect : one Esc key sent to AutoCAD"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.LINE 53500,-26000 53900,-26000\" -> $line0",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "typed '_.LINE 53500,-26000 53900,-26000': Command: _.LINE | Command: 53500,-26000 Unknown command \"53500,-26000\". Press F1 for help. | Command: 53900,-26000 | Unknown command \"53900,-26000\". Press F1 for help. | SETTINGS GUARD ACTIVE: 4 settings file(s) are back..."
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "esc-prompt: Command: _.LINE | Command: 53500,-26000 Unknown command \"53500,-26000\". Press F1 for help. | Command: 53900,-26000 | Unknown command \"53900,-26000\". Press F1 for help. | SETTINGS GUARD ACTIVE: 4 settings file(s) are back..."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -> $u0",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "typed 'U': Command: | Command: U | ZOOM | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"REDO\" -> $redo0",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "typed 'REDO': Command: | Command: REDO | ZOOM | Everything has been redone | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_..."
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 esc-key",
+          "ok": true,
+          "seconds": 1.2,
+          "evidence": "v3 esc-key : one Esc key sent to AutoCAD"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 view-read",
+          "ok": true,
+          "seconds": 0.5,
+          "evidence": "v3 view-read : view stored: centre 53,777.700,-25,569.900 height 1,200.000 screen 1858x569"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.LINE 53500,-26000 53900,-26000\" -> $line1",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "typed '_.LINE 53500,-26000 53900,-26000': Command: _.LINE | Command: 53500,-26000 Unknown command \"53500,-26000\". Press F1 for help. | Command: 53900,-26000 | Unknown command \"53900,-26000\". Press F1 for help. | SETTINGS GUARD ACTIVE: 4 settings file(s) are back..."
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "esc-prompt: Command: _.LINE | Command: 53500,-26000 Unknown command \"53500,-26000\". Press F1 for help. | Command: 53900,-26000 | Unknown command \"53900,-26000\". Press F1 for help. | SETTINGS GUARD ACTIVE: 4 settings file(s) are back..."
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -> $u1",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "typed 'U': Command: | Command: U | ZOOM | SETTINGS GUARD ACTIVE: 4 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 pt-click \"53777.726,-25569.875\" -Blind -> $click1",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "v3 pt-click 53777.726,-25569.875: pt-click: world 53,777.726,-25,569.875 -> pixel 2880,706 (exact 2,879.51,705.99); cursor read-back 2880,706; view stored (9 s old)"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 12",
+          "ok": true,
+          "seconds": 12.0,
+          "evidence": "slept 12 s"
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"REDO\" -> $redo1",
+          "ok": false,
+          "seconds": 24.7,
+          "evidence": "type refused or failed: BUSY: AutoCAD rejected the text four times (a dialog may be open). Nothing was typed."
+        }
+      ],
+      "assertions": [],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV32049001_B1_189586098.log)",
+        "Civil CE log: 23 new line(s) while the case ran, 0 with [ERR]",
+        "deselect: SendCommand of the two Esc said 'Invalid input' on this AutoCAD, so one real Esc key was sent instead (esc-key ok=True)",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=True)"
+      ],
+      "error": null,
+      "finished": "2026-10-29 20:58:20",
+      "session_id": "RUN-20261029-2048-C3.0.86-a80L-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": true
+      }
+    },
+    {
+      "id": "R34sn",
+      "proves_bugs": "",
+      "title": "With the Settings tick \"Clean up grip Ctrl-drag, ROTATE Copy and SCALE Copy like COPY\" switched ON, the copies of pit P3 made by COPY and by SCALE Copy each carry a pit number of their own (not P3) (the ROTATE Copy adds no label to read: see R34s)",
+      "kind": "deterministic",
+      "order": 35,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "BUG-665 part only: the COPY and SCALE Copy labels each read a P number other than P3, switch ON; D15 is case R34a",
+      "bug": "BUG-665",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "With the tick ON when AutoCAD starts, the PIT LABEL of the COPY and of the SCALE Copy of pit P3 each reads a pit number that is not P3 (the ROTATE Copy label count is recorded, not judged). The drawing file on disk is unchanged.",
+      "why_not_unit": "The number is given by the live COPY / ROTATE / SCALE clean-up and read back from the PIT LABEL block in the real drawing.",
+      "not_automated": [
+        "DERIVED (29 Oct 2026 fix-up, Opus B6 review item 6): the COPY label reading exactly P8 is taken from the first free number on this test drawing (the other pit numbers on DRV1_B1 are P1 to P7, P9 and P10 and C1, so P8 is the one gap), not from a card line that guarantees P8; the SCALE label is only checked to differ from P3 and from the COPY label (P8), so the two copies cannot share a number. The ROTATE Copy of pit P3 about its own centre (the route R34 uses) adds NO PIT LABEL even with the tick ON (run b3v1, 25 Oct 2026), so its number cannot be read: that is R34s's red, and the label count is only recorded here. Grip Ctrl-drag copy is not driven. Which number each copy should get (P12, P13, ...) is not asserted: only that it is a number of its own."
+      ],
+      "file_sha256": "F8A2788F0DEC0B46B19F7E4943F883696DA4048F37DE8AF94B3EA3B7C3FE2677",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-29 20:59:53",
+      "seconds": 70.7,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "copy CLDV32059172_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"109D56\"",
+          "ok": true,
+          "seconds": 2.3,
+          "evidence": "pick-first 109D56: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"109D56\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.COPY{NL}0,0{NL}0,-5000{NL}{NL}\" -Force -> $cp",
+          "ok": true,
+          "seconds": 2.7,
+          "evidence": "typed '_.COPY 0,0 0,-5000': Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as displacement>: 0,-5000 |..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 4",
+          "ok": true,
+          "seconds": 4.0,
+          "evidence": "slept 4 s"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1037 objects"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $new_cp",
+          "ok": true,
+          "seconds": 0.4,
+          "evidence": "3 object(s) after index 1034 (model space now 1037); by type: AcDbBlockReference 2; AcDbMText 1; first: 11C55B AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C575 AcDbBlockReference STORMWATER PIT LABEL PIT LABEL ; 11C57C AcDbMText 25TEXT CL 18.88"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_cp \"name~^PIT LABEL\" -> $cp_label",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 3: 11C575 PIT LABEL STORMWATER PIT LABEL"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $cp_label handle -> $hcp",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C575"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$hcp} -> $cpl",
+          "ok": true,
+          "seconds": 0.6,
+          "evidence": "ent-read 11C575: {\"handle\":\"11C575\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.88923993723,-31238.287379591762,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"PIT_LA..."
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"109D56\"",
+          "ok": true,
+          "seconds": 2.5,
+          "evidence": "pick-first 109D56: Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"109D56\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2PICKFIRST \"..."
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ROTATE{NL}53777.7,-25569.9{NL}C{NL}90{NL}\" -Force -> $ro",
+          "ok": true,
+          "seconds": 2.8,
+          "evidence": "typed '_.ROTATE 53777.7,-25569.9 C 90': Command: | Command: _.ROTATE | Current positive angle in UCS: ANGDIR=counterclockwise ANGBASE=0.000 | 1 found | Specify base point: 53777.7,-25569.9 | Specify rotation angle or [Copy/Reference] <0.000>: C | Rotating a co..."
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 8",
+          "ok": true,
+          "seconds": 8.1,
+          "evidence": "slept 8 s"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $roe",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "esc-prompt: [CE] Pit schedule cell for P3 (inlet pipe size) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] Pit schedule cell for P3 (inlet from) not updated: the pit or pipe it was pla..."
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1040 objects"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c1 -> $new_ro",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "3 object(s) after index 1037 (model space now 1040); by type: AcDbBlockReference 2; AcDbMText 1; first: 11C581 AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C59B AcDbBlockReference STORMWATER PIT LABEL PIT LABEL ; 11C5A2 AcDbMText 25TEXT CL 18.88"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_ro \"name~^PIT LABEL\" -> $ro_label",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 3: 11C59B PIT LABEL STORMWATER PIT LABEL"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"109D56\"",
+          "ok": true,
+          "seconds": 2.4,
+          "evidence": "pick-first 109D56: Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"109D56\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2PICKFIRST \"..."
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.SCALE{NL}53777.7,-25569.9{NL}C{NL}1.5{NL}\" -Force -> $sc",
+          "ok": true,
+          "seconds": 2.7,
+          "evidence": "typed '_.SCALE 53777.7,-25569.9 C 1.5': Command: | Command: _.SCALE | 1 found | Specify base point: 53777.7,-25569.9 | Specify scale factor or [Copy/Reference]: C | Scaling a copy of the selected objects. | Specify scale factor or [Copy/Reference]: 1.5 | 1 pit..."
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 8",
+          "ok": true,
+          "seconds": 8.0,
+          "evidence": "slept 8 s"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $sce",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "esc-prompt: [CE] Pit schedule cell for P3 (inlet pipe size) not updated: the pit or pipe it was placed for no longer matches this drawing's record. | [CE] Pit schedule cell for P3 (inlet from) not updated: the pit or pipe it was pla..."
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c3",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1043 objects"
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c2 -> $new_sc",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "3 object(s) after index 1040 (model space now 1043); by type: AcDbBlockReference 2; AcDbMText 1; first: 11C5A7 AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C5C1 AcDbBlockReference STORMWATER PIT LABEL PIT LABEL ; 11C5C8 AcDbMText 25TEXT CL 18.88"
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_sc \"name~^PIT LABEL\" -> $sc_label",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 3: 11C5C1 PIT LABEL STORMWATER PIT LABEL"
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $sc_label handle -> $hsc",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C5C1"
+        },
+        {
+          "n": 29,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$hsc} -> $scl",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "ent-read 11C5C1: {\"handle\":\"11C5C1\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.90230611701,-26238.275094625427,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"PIT_LA..."
+        },
+        {
+          "n": 30,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV32059172_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "matches $cpl \"text.:.P(?!3.,)[0-9]+.,.insertion\"",
+          "ok": true,
+          "expected": "matches /text.:.P(?!3.,)[0-9]+.,.insertion/",
+          "actual": "{\"handle\":\"11C575\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.88923993723,-31238.287379591762,0.0],\"rotation\":0.0,\"...",
+          "evidence": "matched 'text\":\"P8\",\"insertion'"
+        },
+        {
+          "n": 2,
+          "text": "matches $scl \"text.:.P(?!3.,)[0-9]+.,.insertion\"",
+          "ok": true,
+          "expected": "matches /text.:.P(?!3.,)[0-9]+.,.insertion/",
+          "actual": "{\"handle\":\"11C5C1\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.90230611701,-26238.275094625427,0.0],\"rotation\":0.0,\"...",
+          "evidence": "matched 'text\":\"P12\",\"insertion'"
+        },
+        {
+          "n": 3,
+          "text": "matches $cpl \"text.:.P8.,.insertion\"",
+          "ok": true,
+          "expected": "matches /text.:.P8.,.insertion/",
+          "actual": "{\"handle\":\"11C575\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.88923993723,-31238.287379591762,0.0],\"rotation\":0.0,\"...",
+          "evidence": "matched 'text\":\"P8\",\"insertion'"
+        },
+        {
+          "n": 4,
+          "text": "matches $scl \"text.:.P(?!3.,)(?!8.,)[0-9]+.,.insertion\"",
+          "ok": true,
+          "expected": "matches /text.:.P(?!3.,)(?!8.,)[0-9]+.,.insertion/",
+          "actual": "{\"handle\":\"11C5C1\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.90230611701,-26238.275094625427,0.0],\"rotation\":0.0,\"...",
+          "evidence": "matched 'text\":\"P12\",\"insertion'"
+        },
+        {
+          "n": 5,
+          "text": "not-contains $win_end \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV32059172_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV32059172_B1.dwg]"
+        },
+        {
+          "n": 6,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 7,
+          "text": "record $cpl \"FULL the COPY's PIT LABEL\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C575\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.88923993723,-31238.287379591762,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"PIT_LABEL\",\"text\":\"P8\",\"insertion\":[52325.69824403,-31413.287379591762,0.0],\"rotation\":0.0,\"height\":350.0,\"alignment\":10,\"align_point\":[52570.88923993723,-31238.287379591762,0.0],\"bbox\":[52325.69824403,-31419.256001692716,52816.080235844456,-31061.854910287533]}],\"bbox\":[52170.88923993723,-31638.287379591762,52970.88923993723,-30838.287379591762],\"block_parts\":[{\"index\":0,\"object\":\"AcDbWipeout\",\"layer\":\"50CONT\",\"color\":256},{\"index\":1,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"35TEXT\",\"color\":256,\"tag\":\"PIT_LABEL\",\"world_insertion\":[52325.69824403,-31413.287379591762]}]}",
+          "evidence": "RECORDED, not judged: FULL the COPY's PIT LABEL = {\"handle\":\"11C575\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.88923993723,-31238.287379591762,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"PIT_LABEL\",\"text\":\"P8\",\"insertion\":[52325.69824403,-31413.287379591762,0.0],\"rotation\":0.0,\"height\":350.0,\"alignment\":10,\"align_point\":[52570.88923993723,-31238.287379591762,0.0],\"bbox\":[52325.69824403,-31419.256001692716,52816.080235844456,-31061.854910287533]}],\"bbox\":[52170.88923993723,-31638.287379591762,52970.88923993723,-30838.287379591762],\"block_parts\":[{\"index\":0,\"object\":\"AcDbWipeout\",\"layer\":\"50CONT\",\"color\":256},{\"index\":1,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"35TEXT\",\"color\":256,\"tag\":\"PIT_LABEL\",\"world_insertion\":[52325.69824403,-31413.287379591762]}]}"
+        },
+        {
+          "n": 8,
+          "text": "record $ro_label \"how many PIT LABEL blocks the ROTATE Copy added (0 on 3.0.75: it is the fault R34s shows)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"index\":1038,\"handle\":\"11C59B\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"text\":\"\",\"x\":52570.83853764498,\"y\":-26238.285817164862}",
+          "evidence": "RECORDED, not judged: how many PIT LABEL blocks the ROTATE Copy added (0 on 3.0.75: it is the fault R34s shows) = {\"index\":1038,\"handle\":\"11C59B\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"text\":\"\",\"x\":52570.83853764498,\"y\":-26238.285817164862}"
+        },
+        {
+          "n": 9,
+          "text": "record $scl \"FULL the SCALE Copy's PIT LABEL\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C5C1\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.90230611701,-26238.275094625427,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"PIT_LABEL\",\"text\":\"P12\",\"insertion\":[52214.21744936394,-26413.275094625427,0.0],\"rotation\":0.0,\"height\":350.0,\"alignment\":10,\"align_point\":[52570.90230611701,-26238.275094625427,0.0],\"bbox\":[52214.21744936394,-26413.275094625427,52927.58716287008,-26061.8426253212]}],\"bbox\":[52170.90230611701,-26638.275094625427,52970.90230611701,-25838.275094625427],\"block_parts\":[{\"index\":0,\"object\":\"AcDbWipeout\",\"layer\":\"50CONT\",\"color\":256},{\"index\":1,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"35TEXT\",\"color\":256,\"tag\":\"PIT_LABEL\",\"world_insertion\":[52325.71131020978,-26413.275094625427]}]}",
+          "evidence": "RECORDED, not judged: FULL the SCALE Copy's PIT LABEL = {\"handle\":\"11C5C1\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.90230611701,-26238.275094625427,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"PIT_LABEL\",\"text\":\"P12\",\"insertion\":[52214.21744936394,-26413.275094625427,0.0],\"rotation\":0.0,\"height\":350.0,\"alignment\":10,\"align_point\":[52570.90230611701,-26238.275094625427,0.0],\"bbox\":[52214.21744936394,-26413.275094625427,52927.58716287008,-26061.8426253212]}],\"bbox\":[52170.90230611701,-26638.275094625427,52970.90230611701,-25838.275094625427],\"block_parts\":[{\"index\":0,\"object\":\"AcDbWipeout\",\"layer\":\"50CONT\",\"color\":256},{\"index\":1,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"35TEXT\",\"color\":256,\"tag\":\"PIT_LABEL\",\"world_insertion\":[52325.71131020978,-26413.275094625427]}]}"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 116 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-10-29 21:01:04",
+      "session_id": "RUN-20261029-2048-C3.0.86-a80L-s2",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": true
+      }
+    }
+  ]
+}

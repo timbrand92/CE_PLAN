@@ -1,0 +1,5 @@
+== cx_cr11 (usage 3.0% -> 7.0%): 1. **DONE — 0 of 2 ready.** R36e records a real fault on Civil 3.0.77/78. R37b covers move, erase and copy only; renumbering and Settings height remain unproved.
+
+2. **Installed build:** Civil 3.0.79. Neither case has recorded runs on it. No bugs marked fixed, no review slips written, nothing run.
+
+3. **Saved and pushed:** [Review report](C:/CE_PLAN/areas/CODEX_CASE_REVIEW_cx_cr11.md), commit `55bdb37e`. Leak scan passed; branch has no commits ahead.

@@ -1,0 +1,8 @@
+Candidate is at `C:\ce_rc_scratch\c1049`. Both bundles verify: `civil 828, verified 828, bad 0, extra 0` and `manager 75, verified 75, bad 0, extra 0`. Nothing is installed or run in AutoCAD.
+
+- **Branch head:** `ac5750ec` on `claude/rel-20261020g`, on top of `7375e387`. The commit is exactly 4 files, 4 insertions, 4 deletions.
+- **Tests:** 39 of 39 Civil and 51 of 51 Manager pin tests pass. 90 of 90 string checks match.
+- **Settings:** Tim's four settings files and the six installed DLLs are identical before and after.
+- **Odd:** the Manager build refuses at the 78-file guard in `Modules/Manager/CE_SUITE_MANAGER.csproj` (line 297), because Manager now ships 75 files. I changed 78 to 75 in the scratch worktree only, built, then reverted it. That fix is not on the branch and still needs its own commit.
+
+Report: `C:\Lisp Files\_TEST_COPIES_20260923\PAYLOAD_C1049_REPORT.md`.

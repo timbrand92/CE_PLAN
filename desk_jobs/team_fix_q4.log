@@ -1,0 +1,7 @@
+I didn't build q4 and opened no PR, so there are no PR numbers, code changes or new switch. The report is pushed to `C:\CE_PLAN\areas\BUGFIX_q4_REPORT_01NOV.md`.
+
+Tim already ruled on this on 4 Oct (INT-043): "stop overriding", with the typed cover staying. The menu item is already renamed on 3.0.88 (`PitScheduleDialog.xaml:547`). Its hover text and status line say the typed values stay, and existing tests lock that in.
+
+Restoring 18.74 would also contradict his 9 Oct answer that typed pit levels wait for "Stop overriding". I ran no tests, builds or AutoCAD, so the 3.0.88 behaviour is read from code only.
+
+The report holds one question for CE 04 to ask Tim: should the typed cover stay, or should CE put its own figure back?

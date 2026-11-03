@@ -1,0 +1,451 @@
+{
+  "header": {
+    "run_id": "RUN-20261031-1435-C3.0.88-bF9r37",
+    "started": "2026-10-31 14:35:07",
+    "finished": "2026-10-31 14:36:50",
+    "build": {
+      "civil": {
+        "product_version": "3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+        "file_version": "3.0.88.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+        "file_version": "1.1.88.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.88+3fbb9da5 / struc 1.0.125+204dfad2 / mgr 1.1.88+3fbb9da5",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "B2690482B84019A7AADB3A3439881A839A251740C3A4BFCA16CB43AC15B0E76A",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+      "Driver files (SHA-256, first 12): v2 F4D8F40C3675 (expected F4D8F40C3675), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 482EB7B20C6C, v3 session 4D3524AAA60B, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 BBF42DBA8958, case_runner_lib.ps1 01751833A6EA, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 0 shared setup(s); pack SHA-256 B2690482B84019A7AADB3A3439881A839A251740C3A4BFCA16CB43AC15B0E76A; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json D604CE689671 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sat 31 Oct 2026 14:35 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 1,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 1,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261031-1435-C3.0.88-bF9r37-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-31 14:35:11",
+      "finished": "2026-10-31 14:36:50",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31435151_B1.dwg",
+      "cases": [
+        "R37"
+      ],
+      "whatsnew_dismissed_at_start": "no, window was not there",
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : D604CE689671 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "R37",
+      "proves_bugs": "BUG-217 (CDPERIMETER: the drain on the plan carries its own PD1 tag text, and the prompts say perimeter drain, not AGI vertex / AGI drain; read from the command line and from the placed objects)",
+      "title": "CDPERIMETER with levels 18 and 17.9 says perimeter drain in every prompt (never AGI), places PD1 on the plan with a PD1 text on the drain's layer, and one U takes it back",
+      "kind": "deterministic",
+      "order": 37,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "Perimeter drain (triage group R2; daily card D07 neighbour); BUG-217",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 25 Oct 2026 with BUG-217 in BUG_CARPARK.md (Codex pass 18: expected \"the drain on the plan carries its own PD tag (PD1), matching the command line and the record\"; seen: the plan repeated \"AG\" text and no PD tag, prompts said \"AGI vertex\" and \"Place this AGI drain?\"). BUG-236 (the PD1 text follows the drain on MOVE, ERASE, COPY) is R37b.",
+      "variant_of": "",
+      "expected": "CDPERIMETER with two vertices (150000,-80000 and 152000,-80000), no outlet, levels 18 and 17.9 prints the Preview line with \"Grade: 1:20\" and \"meets the office minimum 1:100\", then \"Place this perimeter drain? [Accept/Cancel] <Accept>:\" and, on Accept, \"Perimeter drain PD1 placed\". One polyline and one text PD1 are added on layer AGI DRAIN. No prompt says \"AGI vertex\" or \"Place this AGI drain\". One U takes both back. The drawing file on disk is unchanged.",
+      "why_not_unit": "The prompts, the tag counter and the drawn tag text all come from the live command in the real drawing.",
+      "not_automated": [
+        "That the PD1 text is visible and readable on the plan (its height, position and colour) is a Codex look; the case reads that a text PD1 exists on the drain's layer. BUG-236 (move, erase, copy) is R37b. The outlet choice and the Charged / Suspended property are not driven."
+      ],
+      "file_sha256": "60891583BAAC5F43963FD56348668D8F6BE15EF94D8EEF8AB754EDF43582F779",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-31 14:36:08",
+      "seconds": 15.6,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "copy CLDV31435151_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDPERIMETER{NL}{NL}150000,-80000{NL}152000,-80000{NL}{NL}{NL}18{NL}17.9{NL}\" -Force -TimeoutSec 90 -> $pd",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "typed 'CDPERIMETER 150000,-80000 152000,-80000 18 17.9': Command: | Command: CDPERIMETER | Perimeter drain pipe property [None/Charged/Suspended] <None> [None/Charged/Suspended] <None>: | Specify first perimeter drain vertex: 150000,-80000 | Next perimeter drain vertex [Undo]:..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.2,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pde",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "esc-prompt: Start invert level (m) <skip>: 18 | End invert level (m) <skip>: 17.9 | Preview: perimeter drain, 2 vertices, open. Grade: 1:20 ? meets the office minimum 1:100 | Place this perimeter drain? [Accept/Cancel] <Accept>: | [..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1036 objects"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $new",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "2 object(s) after index 1034 (model space now 1036); by type: AcDbMText 1; AcDbPolyline 1; first: 11C55B AcDbPolyline AGI DRAIN ; 11C55C AcDbMText AGI DRAIN PD1"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"object~^AcDbPolyline$\" -> $pd_line",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C55B AGI DRAIN"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"text~^PD1$\" -> $pd_tag",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C55C PD1 AGI DRAIN"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $pd_line layer -> $line_layer",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'layer' = AGI DRAIN"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $pd_tag layer -> $tag_layer",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'layer' = AGI DRAIN"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -Force -> $u1",
+          "ok": true,
+          "seconds": 2.4,
+          "evidence": "typed 'U': Command: | Command: U | CDPERIMETER"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31435151_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "contains $pd \"Perimeter drain pipe property [None/Charged/Suspended]\"",
+          "ok": true,
+          "expected": "contains 'Perimeter drain pipe property [None/Charged/Suspended]'",
+          "actual": "Command: | Command: CDPERIMETER | Perimeter drain pipe property [None/Charged/Suspended] <None> [None/Charged/Suspended] <None>: | Specify first perimeter drain vertex: 150000,-80000 | Next perimeter ...",
+          "evidence": "found 'Perimeter drain pipe property [None/Charged/Suspended]' in: Command: | Command: CDPERIMETER | Perimeter drain pipe property [None/Charged/Suspended] <None> [None/Charged/Suspended] <None>: | Specify first perimeter drain..."
+        },
+        {
+          "n": 2,
+          "text": "contains $pd \"Specify first perimeter drain vertex\"",
+          "ok": true,
+          "expected": "contains 'Specify first perimeter drain vertex'",
+          "actual": "Command: | Command: CDPERIMETER | Perimeter drain pipe property [None/Charged/Suspended] <None> [None/Charged/Suspended] <None>: | Specify first perimeter drain vertex: 150000,-80000 | Next perimeter ...",
+          "evidence": "found 'Specify first perimeter drain vertex' in: Command: | Command: CDPERIMETER | Perimeter drain pipe property [None/Charged/Suspended] <None> [None/Charged/Suspended] <None>: | Specify first perimeter drain..."
+        },
+        {
+          "n": 3,
+          "text": "matches $pd \"Preview: perimeter drain, 2 vertices, open\\. Grade: 1:20\"",
+          "ok": true,
+          "expected": "matches /Preview: perimeter drain, 2 vertices, open\\. Grade: 1:20/",
+          "actual": "Command: | Command: CDPERIMETER | Perimeter drain pipe property [None/Charged/Suspended] <None> [None/Charged/Suspended] <None>: | Specify first perimeter drain vertex: 150000,-80000 | Next perimeter ...",
+          "evidence": "matched 'Preview: perimeter drain, 2 vertices, open. Grade: 1:20'"
+        },
+        {
+          "n": 4,
+          "text": "contains $pd \"meets the office minimum 1:100\"",
+          "ok": true,
+          "expected": "contains 'meets the office minimum 1:100'",
+          "actual": "Command: | Command: CDPERIMETER | Perimeter drain pipe property [None/Charged/Suspended] <None> [None/Charged/Suspended] <None>: | Specify first perimeter drain vertex: 150000,-80000 | Next perimeter ...",
+          "evidence": "found 'meets the office minimum 1:100' in: Command: | Command: CDPERIMETER | Perimeter drain pipe property [None/Charged/Suspended] <None> [None/Charged/Suspended] <None>: | Specify first perimeter drain..."
+        },
+        {
+          "n": 5,
+          "text": "contains $pd \"Place this perimeter drain? [Accept/Cancel] <Accept>:\"",
+          "ok": true,
+          "expected": "contains 'Place this perimeter drain? [Accept/Cancel] <Accept>:'",
+          "actual": "Command: | Command: CDPERIMETER | Perimeter drain pipe property [None/Charged/Suspended] <None> [None/Charged/Suspended] <None>: | Specify first perimeter drain vertex: 150000,-80000 | Next perimeter ...",
+          "evidence": "found 'Place this perimeter drain? [Accept/Cancel] <Accept>:' in: Command: | Command: CDPERIMETER | Perimeter drain pipe property [None/Charged/Suspended] <None> [None/Charged/Suspended] <None>: | Specify first perimeter drain..."
+        },
+        {
+          "n": 6,
+          "text": "contains $pd \"Perimeter drain PD1 placed\"",
+          "ok": true,
+          "expected": "contains 'Perimeter drain PD1 placed'",
+          "actual": "Command: | Command: CDPERIMETER | Perimeter drain pipe property [None/Charged/Suspended] <None> [None/Charged/Suspended] <None>: | Specify first perimeter drain vertex: 150000,-80000 | Next perimeter ...",
+          "evidence": "found 'Perimeter drain PD1 placed' in: Command: | Command: CDPERIMETER | Perimeter drain pipe property [None/Charged/Suspended] <None> [None/Charged/Suspended] <None>: | Specify first perimeter drain..."
+        },
+        {
+          "n": 7,
+          "text": "history absent \"AGI vertex\"",
+          "ok": true,
+          "expected": "command line lacks 'AGI vertex'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'AGI vertex' (15 lines read)"
+        },
+        {
+          "n": 8,
+          "text": "history absent \"Place this AGI drain\"",
+          "ok": true,
+          "expected": "command line lacks 'Place this AGI drain'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'Place this AGI drain' (15 lines read)"
+        },
+        {
+          "n": 9,
+          "text": "count $pd_line = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $pd_line = 1 (expected = 1)"
+        },
+        {
+          "n": 10,
+          "text": "count $pd_tag = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $pd_tag = 1 (expected = 1)"
+        },
+        {
+          "n": 11,
+          "text": "equals $line_layer \"AGI DRAIN\"",
+          "ok": true,
+          "expected": "AGI DRAIN",
+          "actual": "AGI DRAIN",
+          "evidence": "value 'AGI DRAIN' (expected 'AGI DRAIN')"
+        },
+        {
+          "n": 12,
+          "text": "equals $tag_layer \"AGI DRAIN\"",
+          "ok": true,
+          "expected": "AGI DRAIN",
+          "actual": "AGI DRAIN",
+          "evidence": "value 'AGI DRAIN' (expected 'AGI DRAIN')"
+        },
+        {
+          "n": 13,
+          "text": "number $c1 = 1036",
+          "ok": true,
+          "expected": "= 1036",
+          "actual": "1036",
+          "evidence": "$c1 = 1036 (expected = 1036)"
+        },
+        {
+          "n": 14,
+          "text": "equals $c2 $c0",
+          "ok": true,
+          "expected": "1034",
+          "actual": "1034",
+          "evidence": "value '1034' (expected '1034')"
+        },
+        {
+          "n": 15,
+          "text": "not-contains $win_end \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31435151_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV31435151_B1.dwg]"
+        },
+        {
+          "n": 16,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 17,
+          "text": "record $pd \"FULL CDPERIMETER\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDPERIMETER | Perimeter drain pipe property [None/Charged/Suspended] <None> [None/Charged/Suspended] <None>: | Specify first perimeter drain vertex: 150000,-80000 | Next perimeter drain vertex [Undo]: 152000,-80000 | Next perimeter drain vertex (2 pts) or Enter to finish [Undo]: | Select outlet pit or pipe (Enter to skip): | Start invert level (m) <skip>: 18 | End invert level (m) <skip>: 17.9 | Preview: perimeter drain, 2 vertices, open. Grade: 1:20 ? meets the office minimum 1:100 | Place this perimeter drain? [Accept/Cancel] <Accept>: | [CE] Perimeter drain PD1 placed. Vertices: 2. Closed: no. Grade: 1:20 ? meets the office minimum 1:100. One Undo removes it and its record.",
+          "evidence": "RECORDED, not judged: FULL CDPERIMETER = Command: | Command: CDPERIMETER | Perimeter drain pipe property [None/Charged/Suspended] <None> [None/Charged/Suspended] <None>: | Specify first perimeter drain vertex: 150000,-80000 | Next perimeter drain vertex [Undo]: 152000,-80000 | Next perimeter drain vertex (2 pts) or Enter to finish [Undo]: | Select outlet pit or pipe (Enter to skip): | Start invert level (m) <skip>: 18 | End invert level (m) <skip>: 17.9 | Preview: perimeter drain, 2 vertices, open. Grade: 1:20 ? meets the office minimum 1:100 | Place this perimeter drain? [Accept/Cancel] <Accept>: | [CE] Perimeter drain PD1 placed. Vertices: 2. Closed: no. Grade: 1:20 ? meets the office minimum 1:100. One Undo removes it and its record."
+        },
+        {
+          "n": 18,
+          "text": "record $pde \"FULL after the wait\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Start invert level (m) <skip>: 18 | End invert level (m) <skip>: 17.9 | Preview: perimeter drain, 2 vertices, open. Grade: 1:20 ? meets the office minimum 1:100 | Place this perimeter drain? [Accept/Cancel] <Accept>: | [CE] Perimeter drain PD1 placed. Vertices: 2. Closed: no. Grade: 1:20 ? meets the office minimum 1:100. One Undo removes it and its record.",
+          "evidence": "RECORDED, not judged: FULL after the wait = Start invert level (m) <skip>: 18 | End invert level (m) <skip>: 17.9 | Preview: perimeter drain, 2 vertices, open. Grade: 1:20 ? meets the office minimum 1:100 | Place this perimeter drain? [Accept/Cancel] <Accept>: | [CE] Perimeter drain PD1 placed. Vertices: 2. Closed: no. Grade: 1:20 ? meets the office minimum 1:100. One Undo removes it and its record."
+        },
+        {
+          "n": 19,
+          "text": "record $new \"FULL objects it added\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"index\":1034,\"handle\":\"11C55B\",\"object\":\"AcDbPolyline\",\"layer\":\"AGI DRAIN\",\"name\":\"\",\"text\":\"\",\"x\":150000.0,\"y\":-80000.0} | {\"index\":1035,\"handle\":\"11C55C\",\"object\":\"AcDbMText\",\"layer\":\"AGI DRAIN\",\"name\":\"\",\"text\":\"PD1\",\"x\":151000.0,\"y\":-79925.0}",
+          "evidence": "RECORDED, not judged: FULL objects it added = {\"index\":1034,\"handle\":\"11C55B\",\"object\":\"AcDbPolyline\",\"layer\":\"AGI DRAIN\",\"name\":\"\",\"text\":\"\",\"x\":150000.0,\"y\":-80000.0} | {\"index\":1035,\"handle\":\"11C55C\",\"object\":\"AcDbMText\",\"layer\":\"AGI DRAIN\",\"name\":\"\",\"text\":\"PD1\",\"x\":151000.0,\"y\":-79925.0}"
+        },
+        {
+          "n": 20,
+          "text": "record $u1 \"FULL what U echoed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: U | CDPERIMETER",
+          "evidence": "RECORDED, not judged: FULL what U echoed = Command: | Command: U | CDPERIMETER"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 22 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDPERIMETER completed 324 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-31 14:36:23",
+      "session_id": "RUN-20261031-1435-C3.0.88-bF9r37-s1",
+      "acceptance": {
+        "state": "ACCEPTED-READY",
+        "reasons": [],
+        "passing_sessions_on_this_build": 2,
+        "red_before": true
+      }
+    }
+  ]
+}

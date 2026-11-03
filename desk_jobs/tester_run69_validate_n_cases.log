@@ -1,0 +1,10 @@
+**FOR TIM:** 11 of the 12 new robot checks (N01 to N09, N11, N12) passed twice in separate AutoCAD sessions on Civil 3.0.83. Each deliberately wrong twin fails as intended. Nothing is accepted yet.
+
+1. **N10 (hide grade):** skipped as instructed, along with its twin.
+2. **Text fixes:** two one-line fixes. N05 had the wrong pit-label block name ("PIT LABEL 2"). N08 needed AutoCAD's doubled `[Yes/No]` prompt matched. No check was weakened.
+3. **CE faults:** none found.
+4. **Moved to `cases\` and `cases\variants\`:** all 11, ready for the independent reviewer. I did not run the reviewer.
+5. **One slip:** two runs (N07 and N08 pairs) started about 4 seconds after the previous AutoCAD session closed, not 3 minutes. N07 was re-run cleanly, and the N08 run in question failed before its fix, so it doesn't count.
+6. **Not touched:** `CD_RecentValues.json` holds robot test values. N05, N06 and N07 are the cases that likely wrote it.
+
+Report: `C:\CE_PLAN\areas\release-v3-colleagues-ROBOT_N_CASES_VALIDATION_27OCT.md`. It is pushed to `CE_PLAN` with no leak-scan hits and not ahead.

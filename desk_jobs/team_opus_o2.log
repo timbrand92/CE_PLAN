@@ -1,0 +1,47 @@
+## FOR TIM
+
+1. **Answer:** I've reviewed all five guidebook changes. Two need something before they go into a train; the other three can be merged, each with a note.
+
+2. **#1850 (cover by surface): hold it until you answer one question.** It passes a pipe under a concrete driveway with 100 mm cover, measured from the top of the driveway. The standard's 100 mm (or 75 mm for reinforced concrete) is measured **below the underside of the slab**.
+   1. Example: with a 125 mm slab and the pipe 120 mm down, the top of the pipe is inside the slab, and CDRULES says OK.
+   2. **My recommendation:** keep 100 / 75 and add a "slab thickness" value in Settings, starting at 100 mm. A paved driveway would then need about 200 mm from the top.
+   3. Second question in the same batch: in Frankston, the council's 250 mm replaces the whole table. A pipe under a road there passes at 300 mm instead of 600. **My recommendation:** use whichever figure is bigger, the council's or the table's.
+
+3. **#1843 (lid class): one small fix first.** Picking "Driveway (larger vehicles)" from the list gives Class C, which is right. Typing "driveway for larger vehicles" instead gives **Class B**. The fix is one extra row in the lid chart.
+
+4. **#1841 (falls 1 in 100): OK to merge as you ruled, but it does not fix BUG-1091.** Once someone types a figure for 450 mm and larger pipes, Edit Pipe and CDRULES will use it, but Civil Design, auto-design and redesign won't.
+   1. Example: set 1 in 200 for big pipes, and redesign still proposes about 1 in 890 for a 450. BUG-1091 stays open.
+   2. Offices that edited their grade list by hand won't see old CDRULES runs marked Stale. That is a one-line fix.
+   3. Expect every saved CDRULES run on the robot's test copies to show Stale once. Re-run CDRULES on them before the timing cases.
+
+5. **#1842 (pit size table):** nothing changes for a drafter. Every depth gives the same pit size as today.
+
+6. **#1849 (pipes under garages):** OK to merge, with three notes.
+   1. Every job shows two "not checked" rows until the office types its garage and house layer names.
+   2. House outlines inside an architect's Xref are not read.
+   3. The older-AutoCAD (net48) build still has to be run once before it goes into a train.
+
+7. **Merge order:** #1842, then #1843, then #1849 is right, and those three merge cleanly.
+   1. #1841, #1848 and #1850 each clash with them in one to three files. Every clash is two additions at the same spot: keep both.
+   2. Trap: merging #1843 or #1849 on GitHub as they stand puts them into the branch below, not the release branch.
+
+8. **Safety:** none of the five makes a new drawing change, regen or system-variable change, and none unlocks anything.
+
+9. **My mistakes:** none that cost a test run. I only read the code. Nothing was built, run or opened in AutoCAD.
+
+---
+
+**Technical detail:**
+
+1. The report is `C:\CE_PLAN\areas\OPUS_PREREVIEW_B_29OCT.md`, pushed to CE_PLAN main (commit `b73a444d`, not ahead).
+2. Each PR section has file:line findings, a severity, a one-line fix, a proof-case name and a verdict:
+   1. #1841: **KEEP-WITH-NOTE**
+   2. #1842: **KEEP**
+   3. #1843: **FIX-FIRST**
+   4. #1849: **KEEP-WITH-NOTE**
+   5. #1850: **FIX-FIRST**
+3. Sonnet's stray build-file finding on #1841 is already fixed by commit `78fda55b`.
+4. The clashes were found with `git merge-tree` dry runs only; no branch was checked out or written. I fetched the PR heads as local refs `pr/<N>` in the main checkout.
+5. Nothing was posted on GitHub and no PR was touched. Two CE_PLAN files that other sessions had changed were left uncommitted.
+
+**Summary:** I reviewed PRs #1841, #1842, #1843, #1849 and #1850 (plus #1848 for clashes) without building or running anything. The two blockers are on #1850 (paved cover rows measured from the wrong level; Tim's answer needed) and #1843 (needs a "larger vehicles" = C row). #1841 is not the BUG-1091 fix because `SettingsSizingStandards.ForEveryMaterial` drops the 450 mm+ row. None of the five has a switch: #1841 and #1843 by Tim's ruling, and #1842, #1849 and #1850 change nothing until a Settings value is filled in. The report is in `C:\CE_PLAN\areas\OPUS_PREREVIEW_B_29OCT.md`.

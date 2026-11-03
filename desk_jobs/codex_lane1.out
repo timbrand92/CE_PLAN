@@ -1,0 +1,18 @@
+== cx_audit_civil (usage 22.0% -> 24.0%): 1. **DONE — 7 findings:** 2 HIGH, 4 MEDIUM, 1 LOW. Six verified by reading; one suspected.
+
+2. **Most important:** Disabled Ignore and Tidy preview/cancel paths can write to the drawing before the user authorises changes. BUG-861’s exact REDO cause remains unproven.
+
+3. **Report:** [CODEX_AUDIT_CIVIL_22OCT.md](C:/CE_PLAN/areas/CODEX_AUDIT_CIVIL_22OCT.md), including deterministic reproduction steps.
+
+---
+
+1. **Committed and pushed:** CE_PLAN `4c07385c`. Only the report changed; leak scan passed.
+
+2. **Validation:** Source review only. No builds, tests, AutoCAD runs or source repository changes.
+== cx_build_ignore_undo (usage 24.0% -> 36.0%): 1. **DONE:** [Draft PR #1524](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1524), `cx/ignore-undo-c60` at `e1a59824`.
+
+2. **Cause:** re-listing ran drawing setup that saved project data. The fix separates listing from completed changes.
+
+3. **Verified:** three builds, **0 errors**. Civil: **19,153 passed, 1 known failure, 19 console-skipped**. Focused net10/net48: **121/121 each**. Final tip adds documentation only to tested code `5ba082d9`.
+
+4. **Saved and pushed:** [report and exact AutoCAD steps](C:/CE_PLAN/areas/CODEX_BUILD_IGNORE_UNDO_22OCT.md). Nothing installed; real-AutoCAD verification remains pending.

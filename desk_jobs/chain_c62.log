@@ -1,0 +1,9 @@
+Fri 14:47 chain start: C-62 (Civil + Manager); nothing is installed by this chain.
+Fri 14:47 C:\CE_PLAN\desk_jobs\train_c62_assembler_job.txt started pid 93444 (sonnet)
+Fri 15:29 finished train_c62_assembler_job.txt
+Fri 15:29 C:\CE_PLAN\desk_jobs\train_c62_finalizer_job.txt started pid 84320 (opus)
+Fri 16:04 finished train_c62_finalizer_job.txt
+Fri 16:04 C-62 finalizer verdict GO: building payload 95 (candidate c1058). Nothing is installed by this chain.
+Fri 16:04 C:\CE_PLAN\desk_jobs\payload95_c62_job.txt started pid 92712 (sonnet)
+Fri 16:50 finished payload95_c62_job.txt
+Fri 16:50 chain complete

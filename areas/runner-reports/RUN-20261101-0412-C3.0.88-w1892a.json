@@ -1,0 +1,466 @@
+{
+  "header": {
+    "run_id": "RUN-20261101-0412-C3.0.88-w1892a",
+    "started": "2026-11-01 04:12:32",
+    "finished": "2026-11-01 04:14:11",
+    "build": {
+      "civil": {
+        "product_version": "3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+        "file_version": "3.0.88.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+        "file_version": "1.1.88.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.88+3fbb9da5 / struc 1.0.125+204dfad2 / mgr 1.1.88+3fbb9da5",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "617445F2A03136F729E68613FF0971B0EE4B9F80741EA9E0F1C8F9C88F585441",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+      "Driver files (SHA-256, first 12): v2 F4D8F40C3675 (expected F4D8F40C3675), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4B0175FFAB00, v3 session F061E3240C47, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 BBF42DBA8958, case_runner_lib.ps1 89AD455619F8, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 1 shared setup(s); pack SHA-256 617445F2A03136F729E68613FF0971B0EE4B9F80741EA9E0F1C8F9C88F585441; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json D604CE689671 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sun 01 Nov 2026 04:12 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 0,
+    "FAIL": 1,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261101-0412-C3.0.88-w1892a-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-11-01 04:12:32",
+      "finished": "2026-11-01 04:14:11",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV30412371_B1.dwg",
+      "cases": [
+        "W1892"
+      ],
+      "whatsnew_dismissed_at_start": "no, window was not there",
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : D604CE689671 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "W1892",
+      "proves_bugs": "BUG-1141",
+      "title": "One unreadable pit link record is skipped and named once at U; the other pits still load; the damaged record is left exactly as it is",
+      "kind": "deterministic",
+      "order": 910,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "C-79b1",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed. Written 1 Nov 2026 from the PR",
+      "variant_of": "",
+      "expected": "The damaged PIT_LINK record on pit 109D56 reads back as DMGBROKEN2A4 after the setup and still after two LINE + U rounds. The command line holds exactly one line starting '[CE] The CE link record on one pit (drawing handle 109D56, at ' and ending 'could not be read, so CE skipped it and loaded the rest. That pit may not drag its pipes when it is moved; its record has been left as it is.' The Civil log holds exactly one '[Link] BUG-1141: pit 109D56 has a link record that cannot be read; skipped by the cache rebuild and left as it is.' No other pit is named. MOVE of pit P2 says '1 found' and nothing names P2.",
+      "why_not_unit": "The unit test reads ten records in memory; only AutoCAD runs the real rebuild at U over every pit in a real drawing and writes to the real command line.",
+      "not_automated": [
+        "SEEN by Codex: after the MOVE of pit P2 (109768) by 0,2000 its pipe end(s) follow the pit (the robot cannot read a CE pipe object's points). Also SEEN: pit P3 itself is not dragged on a MOVE (the PR says every other reader still reads as before, so the damaged pit stays undragged until repaired)."
+      ],
+      "file_sha256": "C3C00CD8DFE425F72A5BFAE5D5F2FB991735B8CF98F7F14CC6FA2C268D3C9077",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "command line holds 0 line(s) containing '[CE] The CE link record on one pit (drawing handle 109D56, at ' (expected 1)",
+      "started": "2026-11-01 04:13:17",
+      "seconds": 35.2,
+      "setup": "SETUP-DMG-LINKS",
+      "setup_note": "shared setup SETUP-DMG-LINKS run here for the first time at 04:13:20",
+      "steps": [
+        {
+          "n": 1,
+          "phase": "setup",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV30412371_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "setup",
+          "verb": "v3",
+          "text": "v3 record-set ent 109D56 -Part CE_CVL_SUITE_LINKS/PIT_LINK -To READ -> $dmg_links_before",
+          "ok": true,
+          "seconds": 0.6,
+          "evidence": "v3 record-set ent 109D56: record-set READ ent|109D56|CE_CVL_SUITE_LINKS/PIT_LINK|C:\\ce_rc_drv\\CLDV30412371_B1.dwg : 2 group(s), 288 characters, starts: {\"PitHandle\":\"109D56\",\"Pipes\":[{\"PipeHandle\":\"109E23\",\"EndIndex\":0},{\"PipeHandle\":\"109ED4\",\"En..."
+        },
+        {
+          "n": 3,
+          "phase": "setup",
+          "verb": "v3",
+          "text": "v3 record-set ent 109D56 -Part CE_CVL_SUITE_LINKS/PIT_LINK -To DMGBROKEN2A4 -> $dmg_links_write",
+          "ok": true,
+          "seconds": 0.5,
+          "evidence": "v3 record-set ent 109D56: record-set WRITE ent|109D56|CE_CVL_SUITE_LINKS/PIT_LINK|C:\\ce_rc_drv\\CLDV30412371_B1.dwg : was 288 characters, now 12, read back equal; nothing saved (the test copy is not written to disk)"
+        },
+        {
+          "n": 4,
+          "phase": "setup",
+          "verb": "v3",
+          "text": "v3 record-set ent 109D56 -Part CE_CVL_SUITE_LINKS/PIT_LINK -To READ -> $dmg_links_after",
+          "ok": true,
+          "seconds": 0.5,
+          "evidence": "v3 record-set ent 109D56: record-set READ ent|109D56|CE_CVL_SUITE_LINKS/PIT_LINK|C:\\ce_rc_drv\\CLDV30412371_B1.dwg : 1 group(s), 12 characters, starts: DMGBROKEN2A4"
+        },
+        {
+          "n": 5,
+          "phase": "setup",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 6,
+          "phase": "setup",
+          "verb": "ms-count",
+          "text": "ms-count -> $n0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.LINE{NL}190000,-95000{NL}191000,-95000{NL}\" -Force -> $line1",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "typed '_.LINE 190000,-95000 191000,-95000': Command: | Command: _.LINE | Specify first point: 190000,-95000 | Specify next point or [Undo]: 191000,-95000 | Specify next point or [Undo]: | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. ..."
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -Force -> $u1",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "typed 'U': Command: | Command: U | LINE | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.LINE{NL}190000,-96000{NL}191000,-96000{NL}\" -Force -> $line2",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "typed '_.LINE 190000,-96000 191000,-96000': Command: | Command: _.LINE | Specify first point: 190000,-96000 | Specify next point or [Undo]: 191000,-96000 | Specify next point or [Undo]: | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. ..."
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -Force -> $u2",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "typed 'U': Command: | Command: U | LINE | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 record-set ent 109D56 -Part CE_CVL_SUITE_LINKS/PIT_LINK -To READ -> $rb_after_u",
+          "ok": true,
+          "seconds": 0.5,
+          "evidence": "v3 record-set ent 109D56: record-set READ ent|109D56|CE_CVL_SUITE_LINKS/PIT_LINK|C:\\ce_rc_drv\\CLDV30412371_B1.dwg : 1 group(s), 12 characters, starts: DMGBROKEN2A4"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"109768\"",
+          "ok": true,
+          "seconds": 2.2,
+          "evidence": "pick-first 109768: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"109768\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.MOVE{NL}0,0{NL}0,2000\" -Force -> $mv_p2",
+          "ok": true,
+          "seconds": 2.2,
+          "evidence": "typed '_.MOVE 0,0 0,2000': Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,2000 | [CE Civil] Tidy-up after the move: pipe P3 -> P2 label..."
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win1",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30412371_B1.dwg]"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "log-read",
+          "text": "log-read civil -> $civlog",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "43 new line(s) in the civil CE log since the case began "
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "contains $dmg_links_after \"DMGBROKEN2A4\"",
+          "ok": true,
+          "expected": "contains 'DMGBROKEN2A4'",
+          "actual": "{\"ok\":true,\"verb\":\"record-set\",\"started\":\"2026-11-01 04:13:18\",\"elapsed_ms\":450,\"error\":null,\"refused\":false,\"output\":[\"record-set READ ent|109D56|CE_CVL_SUITE_LINKS/PIT_LINK|C:\\\\ce_rc_drv\\\\CLDV304123...",
+          "evidence": "found 'DMGBROKEN2A4' in: {\"ok\":true,\"verb\":\"record-set\",\"started\":\"2026-11-01 04:13:18\",\"elapsed_ms\":450,\"error\":null,\"refused\":false,\"output\":[\"record-set READ ent|109D56|CE_CVL_SUITE_..."
+        },
+        {
+          "n": 2,
+          "text": "contains $rb_after_u \"DMGBROKEN2A4\"",
+          "ok": true,
+          "expected": "contains 'DMGBROKEN2A4'",
+          "actual": "{\"ok\":true,\"verb\":\"record-set\",\"started\":\"2026-11-01 04:13:39\",\"elapsed_ms\":460,\"error\":null,\"refused\":false,\"output\":[\"record-set READ ent|109D56|CE_CVL_SUITE_LINKS/PIT_LINK|C:\\\\ce_rc_drv\\\\CLDV304123...",
+          "evidence": "found 'DMGBROKEN2A4' in: {\"ok\":true,\"verb\":\"record-set\",\"started\":\"2026-11-01 04:13:39\",\"elapsed_ms\":460,\"error\":null,\"refused\":false,\"output\":[\"record-set READ ent|109D56|CE_CVL_SUITE_..."
+        },
+        {
+          "n": 3,
+          "text": "history count \"[CE] The CE link record on one pit (drawing handle 109D56, at \" = 1",
+          "ok": false,
+          "expected": "1 line(s) with '[CE] The CE link record on one pit (drawing handle 109D56, at '",
+          "actual": "0",
+          "evidence": "command line holds 0 line(s) containing '[CE] The CE link record on one pit (drawing handle 109D56, at ' (expected 1)"
+        },
+        {
+          "n": 4,
+          "text": "history has \"could not be read, so CE skipped it and loaded the rest. That pit may not drag its pipes when it is moved; its record has been left as it is.\"",
+          "ok": false,
+          "expected": "command line has 'could not be read, so CE skipped it and loaded the rest. That pit may not drag its pipes when it is moved; its record has been left as it is.'",
+          "actual": "0 matching line(s)",
+          "evidence": "no command-line line contains 'could not be read, so CE skipped it and loaded the rest. That pit may not drag its pipes when it is moved; its record has been left as it is.' (25 lines read: Command: | Command: _.LINE | Specify first point: 190000,-95000; log file CLDV30412371_B1_1d9b0fbd4.log, from byte 2350)"
+        },
+        {
+          "n": 5,
+          "text": "log civil count \"[Link] BUG-1141: pit 109D56 has a link record that cannot be read; skipped by the cache rebuild and left as it is.\" = 1",
+          "ok": false,
+          "expected": "1 line(s) with '[Link] BUG-1141: pit 109D56 has a link record that cannot be read; skipped by the cache rebuild and left as it is.'",
+          "actual": "0",
+          "evidence": "civil log holds 0 new line(s) containing '[Link] BUG-1141: pit 109D56 has a link record that cannot be read; skipped by the cache rebuild and left as it is.' (expected 1): "
+        },
+        {
+          "n": 6,
+          "text": "history absent \"drawing handle 109768\"",
+          "ok": true,
+          "expected": "command line lacks 'drawing handle 109768'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'drawing handle 109768' (25 lines read)"
+        },
+        {
+          "n": 7,
+          "text": "contains $mv_p2 \"1 found\"",
+          "ok": true,
+          "expected": "contains '1 found'",
+          "actual": "Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,2000 | [CE Civil] Tidy-up after the move:...",
+          "evidence": "found '1 found' in: Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,2..."
+        },
+        {
+          "n": 8,
+          "text": "not-contains $win1 \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30412371_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV30412371_B1.dwg]"
+        },
+        {
+          "n": 9,
+          "text": "record $dmg_links_before \"FULL the P3 link record before the damage (first 60 characters)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"ok\":true,\"verb\":\"record-set\",\"started\":\"2026-11-01 04:13:17\",\"elapsed_ms\":588,\"error\":null,\"refused\":false,\"output\":[\"record-set READ ent|109D56|CE_CVL_SUITE_LINKS/PIT_LINK|C:\\\\ce_rc_drv\\\\CLDV30412371_B1.dwg : 2 group(s), 288 characters, starts: {\\\"PitHandle\\\":\\\"109D56\\\",\\\"Pipes\\\":[{\\\"PipeHandle\\\":\\\"109E23\\\",\\\"EndIndex\\\":0},{\\\"PipeHandle\\\":\\\"109ED4\\\",\\\"EndIndex\\\":1},{\\\"PipeHandle\\\":\\\"\"],\"data\":{\"key\":\"ent|109D56|CE_CVL_SUITE_LINKS/PIT_LINK|C:\\\\ce_rc_drv\\\\CLDV30412371_B1.dwg\",\"old_groups\":2,\"old_length\":288,\"old_text\":\"{\\\"PitHandle\\\":\\\"109D56\\\",\\\"Pipes\\\":[{\\\"PipeHandle\\\":\\\"109E23\\\",\\\"EndIndex\\\":0},{\\\"PipeHandle\\\":\\\"109ED4\\\",\\\"EndIndex\\\":1},{\\\"PipeHandle\\\":\\\"\"}}",
+          "evidence": "RECORDED, not judged: FULL the P3 link record before the damage (first 60 characters) = {\"ok\":true,\"verb\":\"record-set\",\"started\":\"2026-11-01 04:13:17\",\"elapsed_ms\":588,\"error\":null,\"refused\":false,\"output\":[\"record-set READ ent|109D56|CE_CVL_SUITE_LINKS/PIT_LINK|C:\\\\ce_rc_drv\\\\CLDV30412371_B1.dwg : 2 group(s), 288 characters, starts: {\\\"PitHandle\\\":\\\"109D56\\\",\\\"Pipes\\\":[{\\\"PipeHandle\\\":\\\"109E23\\\",\\\"EndIndex\\\":0},{\\\"PipeHandle\\\":\\\"109ED4\\\",\\\"EndIndex\\\":1},{\\\"PipeHandle\\\":\\\"\"],\"data\":{\"key\":\"ent|109D56|CE_CVL_SUITE_LINKS/PIT_LINK|C:\\\\ce_rc_drv\\\\CLDV30412371_B1.dwg\",\"old_groups\":2,\"old_length\":288,\"old_text\":\"{\\\"PitHandle\\\":\\\"109D56\\\",\\\"Pipes\\\":[{\\\"PipeHandle\\\":\\\"109E23\\\",\\\"EndIndex\\\":0},{\\\"PipeHandle\\\":\\\"109ED4\\\",\\\"EndIndex\\\":1},{\\\"PipeHandle\\\":\\\"\"}}"
+        },
+        {
+          "n": 10,
+          "text": "record $u1 \"FULL what the first U showed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: U | LINE | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL what the first U showed = Command: | Command: U | LINE | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 11,
+          "text": "record $u2 \"FULL what the second U showed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: U | LINE | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL what the second U showed = Command: | Command: U | LINE | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 12,
+          "text": "record $mv_p2 \"FULL what the MOVE of pit P2 showed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,2000 | [CE Civil] Tidy-up after the move: pipe P3 -> P2 label moved 700 mm (the other side) clear of \"SC\". | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL what the MOVE of pit P2 showed = Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,2000 | [CE Civil] Tidy-up after the move: pipe P3 -> P2 label moved 700 mm (the other side) clear of \"SC\". | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 13,
+          "text": "record $civlog \"FULL civil log lines since the case began\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "2026-11-01 04:13:24.782 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-11-01 04:13:24.812 [INFO] Project data reloaded after Undo/Redo: pits=11, pipes=49 | 2026-11-01 04:13:24.815 [INFO] [PERF] LinkService.CacheExistingPitPositions: 2.8 ms | 2026-11-01 04:13:24.816 [INFO] [PERF] LinkService.RebuildRuntimeCaches: 3.0 ms trigger=undo/redo | 2026-11-01 04:13:24.816 [ERROR] LinkService OnCommandEnded failed: JsonReaderException: Unexpected character encountered while parsing value: D. Path '', line 0, position 0. | 2026-11-01 04:13:27.809 [INFO] [REDO] Automatic Project QA waits for the next command so REDO stays available (after U / REDO nothing is read through a transaction). | 2026-11-01 04:13:31.259 [INFO] [PERF] CivilProjectQaAutomaticService.Advance: 37.6 ms trigger=phase2 | 2026-11-01 04:13:34.690 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-11-01 04:13:34.692 [INFO] Project data reloaded after Undo/Redo: pits=11, pipes=49 | 2026-11-01 04:13:34.695 [INFO] [PERF] LinkService.CacheExistingPitPositions: 2.7 ms | 2026-11-01 04:13:34.695 [INFO] [PERF] LinkService.RebuildRuntimeCaches: 2.7 ms trigger=undo/redo | 2026-11-01 04:13:34.695 [ERROR] LinkService OnCommandEnded failed: JsonReaderException: Unexpected character encountered while parsing value: D. Path '', line 0, position 0. | 2026-11-01 04:13:37.705 [INFO] [REDO] Automatic Project QA waits for the next command so REDO stays available (after U / REDO nothing is read through a transaction). | 2026-11-01 04:13:40.386 [INFO] [REDO] write after U finished, before the next command: object changed (BlockReference) in the drawing where U ran; no CE code on the stack (no Civil, Structural, Manager, CE.Shared or CE.AI code above CE's own change reporter: AutoCAD itself, a native add-in or LISP made this change; CE only saw it) [seen by LinkService.OnObjectModified] | 2026-11-01 04:13:43.004 [INFO] [CivilGripProbe] callback-cache-miss type=BlockReference handle=109768 | 2026-11-01 04:13:43.206 [INFO] [REDO] first Inspector pick in this drawing (pick seen): redoWindowOpen=True, UNDOMARKS=0, UNDOCTL=53 | 2026-11-01 04:13:43.354 [INFO] [REDO] Inspector pick (BUG-861: nothing is read between U and REDO) waits for the next command so REDO stays available (after U / REDO nothing is read through a transaction). | 2026-11-01 04:13:43.354 [INFO] [REDO] first Inspector pick in this drawing (pick deferred): redoWindowOpen=True, UNDOMARKS=0, UNDOCTL=53 | 2026-11-01 04:13:45.143 [INFO] [REDO] 1 write(s) reached the drawing between the end of U and the start of MOVE; AutoCAD discards its Redo list after a write, so Redo was not available in that gap. | 2026-11-01 04:13:45.210 [INFO] [PitMove] pit 109768 moved (0,2000); attachment 10981A followed | 2026-11-01 04:13:45.210 [INFO] [PitMove] pit 109768 moved (0,2000); attachment 109821 followed | 2026-11-01 04:13:45.227 [INFO] [PERF] ProjectDataService.SaveToDrawing: 3.8 ms jsonLen=243921 | 2026-11-01 04:13:45.227 [INFO] Project data saved to DWG successfully | 2026-11-01 04:13:45.229 [INFO] [PitMove] pit 109768 moved (0,2000) via cached position: pipes relinked, label and cover text followed | 2026-11-01 04:13:45.232 [INFO] [PERF] LinkService.ApplyPendingLinkUpdates.PitMoves: 0.4 ms count=0 | 2026-11-01 04:13:45.233 [INFO] [PERF] LinkService.ApplyPendingLinkUpdates.SourceMoves: 0.5 ms count=0 | 2026-11-01 04:13:45.240 [INFO] Pipe diameter updated: 109835 -> 450 | 2026-11-01 04:13:45.240 [INFO] Pipe diameter updated: 109874 -> 150 | 2026-11-01 04:13:45.241 [INFO] Pipe diameter updated: 109A30 -> 150 | 2026-11-01 04:13:45.241 [INFO] Pipe diameter updated: 109BBC -> 150 | 2026-11-01 04:13:45.241 [INFO] Pipe diameter updated: 109C55 -> 150 | 2026-11-01 04:13:45.242 [INFO] Pipe diameter updated: 109E23 -> 450 | 2026-11-01 04:13:45.242 [INFO] Pit cover updated: P2 -> 18.91 | 2026-11-01 04:13:45.242 [INFO] [PERF] LinkService.ApplyPendingLinkUpdates.Attachments: 9.3 m...",
+          "evidence": "RECORDED, not judged: FULL civil log lines since the case began = 2026-11-01 04:13:24.782 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-11-01 04:13:24.812 [INFO] Project data reloaded after Undo/Redo: pits=11, pipes=49 | 2026-11-01 04:13:24.815 [INFO] [PERF] LinkService.CacheExistingPitPositions: 2.8 ms | 2026-11-01 04:13:24.816 [INFO] [PERF] LinkService.RebuildRuntimeCaches: 3.0 ms trigger=undo/redo | 2026-11-01 04:13:24.816 [ERROR] LinkService OnCommandEnded failed: JsonReaderException: Unexpected character encountered while parsing value: D. Path '', line 0, position 0. | 2026-11-01 04:13:27.809 [INFO] [REDO] Automatic Project QA waits for the next command so REDO stays available (after U / REDO nothing is read through a transaction). | 2026-11-01 04:13:31.259 [INFO] [PERF] CivilProjectQaAutomaticService.Advance: 37.6 ms trigger=phase2 | 2026-11-01 04:13:34.690 [INFO] [ProjectData] Loaded schema version '2.2' — upgrading to '2.3' on next save. | 2026-11-01 04:13:34.692 [INFO] Project data reloaded after Undo/Redo: pits=11, pipes=49 | 2026-11-01 04:13:34.695 [INFO] [PERF] LinkService.CacheExistingPitPositions: 2.7 ms | 2026-11-01 04:13:34.695 [INFO] [PERF] LinkService.RebuildRuntimeCaches: 2.7 ms trigger=undo/redo | 2026-11-01 04:13:34.695 [ERROR] LinkService OnCommandEnded failed: JsonReaderException: Unexpected character encountered while parsing value: D. Path '', line 0, position 0. | 2026-11-01 04:13:37.705 [INFO] [REDO] Automatic Project QA waits for the next command so REDO stays available (after U / REDO nothing is read through a transaction). | 2026-11-01 04:13:40.386 [INFO] [REDO] write after U finished, before the next command: object changed (BlockReference) in the drawing where U ran; no CE code on the stack (no Civil, Structural, Manager, CE.Shared or CE.AI code above CE's own change reporter: AutoCAD itself, a native add-in or LISP made this change; CE only saw it) [seen by LinkService.OnObjectModified] | 2026-11-01 04:13:43.004 [INFO] [CivilGripProbe] callback-cache-miss type=BlockReference handle=109768 | 2026-11-01 04:13:43.206 [INFO] [REDO] first Inspector pick in this drawing (pick seen): redoWindowOpen=True, UNDOMARKS=0, UNDOCTL=53 | 2026-11-01 04:13:43.354 [INFO] [REDO] Inspector pick (BUG-861: nothing is read between U and REDO) waits for the next command so REDO stays available (after U / REDO nothing is read through a transaction). | 2026-11-01 04:13:43.354 [INFO] [REDO] first Inspector pick in this drawing (pick deferred): redoWindowOpen=True, UNDOMARKS=0, UNDOCTL=53 | 2026-11-01 04:13:45.143 [INFO] [REDO] 1 write(s) reached the drawing between the end of U and the start of MOVE; AutoCAD discards its Redo list after a write, so Redo was not available in that gap. | 2026-11-01 04:13:45.210 [INFO] [PitMove] pit 109768 moved (0,2000); attachment 10981A followed | 2026-11-01 04:13:45.210 [INFO] [PitMove] pit 109768 moved (0,2000); attachment 109821 followed | 2026-11-01 04:13:45.227 [INFO] [PERF] ProjectDataService.SaveToDrawing: 3.8 ms jsonLen=243921 | 2026-11-01 04:13:45.227 [INFO] Project data saved to DWG successfully | 2026-11-01 04:13:45.229 [INFO] [PitMove] pit 109768 moved (0,2000) via cached position: pipes relinked, label and cover text followed | 2026-11-01 04:13:45.232 [INFO] [PERF] LinkService.ApplyPendingLinkUpdates.PitMoves: 0.4 ms count=0 | 2026-11-01 04:13:45.233 [INFO] [PERF] LinkService.ApplyPendingLinkUpdates.SourceMoves: 0.5 ms count=0 | 2026-11-01 04:13:45.240 [INFO] Pipe diameter updated: 109835 -> 450 | 2026-11-01 04:13:45.240 [INFO] Pipe diameter updated: 109874 -> 150 | 2026-11-01 04:13:45.241 [INFO] Pipe diameter updated: 109A30 -> 150 | 2026-11-01 04:13:45.241 [INFO] Pipe diameter updated: 109BBC -> 150 | 2026-11-01 04:13:45.241 [INFO] Pipe diameter updated: 109C55 -> 150 | 2026-11-01 04:13:45.242 [INFO] Pipe diameter updated: 109E23 -> 450 | 2026-11-01 04:13:45.242 [INFO] Pit cover updated: P2 -> 18.91 | 2026-11-01 04:13:45.242 [INFO] [PERF] LinkService.ApplyPendingLinkUpdates.Attachments: 9.3 m..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 43 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-11-01 04:13:52",
+      "session_id": "RUN-20261101-0412-C3.0.88-w1892a-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}

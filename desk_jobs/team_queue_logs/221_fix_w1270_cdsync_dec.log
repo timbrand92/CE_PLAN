@@ -1,0 +1,9 @@
+PR #1990 is open as a draft. It stops CDSYNC rewriting a typed level like `IL 17.900` as `IL 17.90`. The cause is read from the code, not seen running, and nothing has been tried in AutoCAD.
+
+- **Cause:** CDSYNC re-links every pipe, then the held-grade step re-writes the lower level at the Settings decimals (2), even when the level is the same.
+- **Switch:** `cdsync.keepsLevelTextFormat`, ON by default. OFF restores the old rewrite exactly.
+- **Files:** a new rule `GradeLockLevelFormatRule.cs`, one early return in `LinkService.Utilities.cs`, plus `CdSyncSettings.cs`, `UserSettings.cs`, the regression log and tests. CE_SHARED is untouched, and the P8 depth change is not touched.
+- **Tests:** 6 new, passing on net48 and net10.
+- **Isolation:** real `%APPDATA%` files changed during the run. An `acad.exe` from another job had started at 12:03:25, and `CD_Settings.json` changed 3 seconds before that. My tests write no files. The listings are in the report.
+- **Report:** `C:\CE_PLAN\areas\BUGFIX_w1270_REPORT_02NOV.md`, pushed.
+- **Cleanup:** the worktree and scratch folder are removed. C: free space did not change (48 GB).

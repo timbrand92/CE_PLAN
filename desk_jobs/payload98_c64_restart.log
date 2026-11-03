@@ -1,0 +1,8 @@
+The C-64 candidate is built and proved, and nothing is installed. It is at `C:\ce_rc_scratch\c1060`, with the report in `C:\Lisp Files\_TEST_COPIES_20260923\PAYLOAD_C1060_REPORT.md`. The number c1060 was free, so no other number was used.
+
+- **Manifests:** Civil verified 828, bad 0, extra 0. Manager verified 75, bad 0, extra 0. Both lists match the installed bundles (added 0, removed 0).
+- **Branch head:** `a15b414c` on `claude/rel-20261024n`, the version commit on the signed `f73755ee`.
+- **Tests:** Civil pin tests 41 of 41, Manager pin tests 61 of 61, new-switch defaults tests 6 of 6.
+- **String proof:** 318 rows, 0 unexpected.
+- **Settings files:** identical before and after.
+- **Odd:** AutoCAD was open much of the time, so builds waited for gaps.

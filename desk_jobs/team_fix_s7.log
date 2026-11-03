@@ -1,0 +1,9 @@
+Three draft PRs are open for S-7 (B-083), all against `claude/rel-20261026s`, and the report is pushed. They are built and unit-tested only; nobody has run them in AutoCAD and no bug is marked fixed.
+
+- **#1903 (BUG-1123):** XCLMTXT now applies an office row for a UB/UC size before locking the sizes. It is in `ExcelMTextService.cs`, behind `Excel.OfficeSpellingBeforeSizeLock` (on by default).
+- **#1904 (BUG-1128):** the word PL becomes PLATE at the start, middle or end of a cell. It is in `ExcelMTextService.cs`, behind `Excel.PlateWordEverywhere` (on by default).
+- **#1905 (BUG-1122):** SBEAM search finds 410UB59 as 410UB60, and 460UB75 as 460UB74. It is behind `SbeamPicker.MatchMassSpelling` (on by default). The `CeMemberPrompts.cs` lookup (typed CEMEMBER names) is not done because open PR #1900 edits that file. The Lysaght names are not done because they need the BUG-818 section list.
+
+**Settings files:** `CS_Settings.json` (Structural) is unchanged. `CD_Settings.json` (Civil) did change, while the robot's AutoCAD was running; my runs were redirected away from it.
+
+The report is `C:\CE_PLAN\areas\BUGFIX_s7_REPORT_31OCT.md`.

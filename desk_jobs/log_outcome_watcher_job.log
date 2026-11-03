@@ -1,0 +1,7 @@
+The watcher is built, tested on 18, 19 and 20 Oct, and pushed (commit 2c50b6b3). The leak-scan was clean. The loop is not started and `DESK_LOG.md` is untouched.
+
+- **Built:** `log_outcomes.ps1`, `log_outcomes_loop.ps1`, `LOG_OUTCOMES_README.md`, the 18–20 Oct day reports and `LOG_FAILURE_CANDIDATES.md`.
+- **20 Oct:** 122 runs: 87 worked, 29 refused, 4 warned, 2 failed. All 35 non-worked runs match the robot reports (CDFIXTAGS, CDTAG, CDTIDYLABELS, PITSCHEDULE). 11 CDEDIT cascades matched too, along with CDTWL, CDRULES, CDRECOVERINVERTS, CDSYNC, CD and PIT.
+- **False positives:** the first pass mislabelled 32 of 89 runs; the fixes brought that to 0 of 35 checked.
+- **Biggest gap:** start/end lines are DEBUG-only, so Tim's normal debug-off use hides CDSYNC, CDRULES Values and most CDRECOVERINVERTS runs. The README lists the INFO log lines to add.
+- **Not tested:** the loop's 30-minute cycling and 19:00 run; only `-Once` was run.

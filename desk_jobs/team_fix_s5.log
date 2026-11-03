@@ -1,0 +1,13 @@
+Draft PR #1900 is open for BUG-1121, and BUG-1132 is skipped with evidence. Nothing has been run in AutoCAD, so BUG-1121 is built and unit-tested only. It is not marked fixed.
+
+**BUG-1121:** typing 114.3x6 at the CEMEMBER "Section name" prompt no longer picks 114.3x6.4CHS. CEMEMBER now says there is no such section.
+- **Files changed:** `CeMemberPrompts.cs`, `CeMemberCommands.cs`, `UserSettings.cs`, two test files, and `REGRESSION_LOG.md`.
+- **Switch:** `CeMember.SectionNamePrefixStopsAtDecimalPoint`, ON by default.
+- **Tests:** 18 focused tests passed across the three runs, and the net48 compile has 0 errors. I did not run the full Structural suite, as the batch rule says.
+- **Rule used:** the carpark's "next character must be a letter" contradicts its own 310UB3 example. I used "next character is not a decimal point", which satisfies every listed example.
+
+**BUG-1132:** skipped. The fault only appears after the BUG-818 rename. The section list is not renamed yet, and nothing calls the redraw code. The report has the question for CE 04.
+
+**Real-files compare:** `CD_Settings.json`, the live logs and a CE_Admin file changed during my run. I did not write them: a robot AutoCAD (pid 56084) is running, and Civil logs can't come from my Structural tests. I couldn't fully prove one 77-byte `ce_struc_suite.log` line wasn't mine. No `CS_Settings.json` changed.
+
+There is no B number for this batch in the register, so the title carries the BUG number only. The report is pushed at `C:\CE_PLAN\areas\BUGFIX_s5_REPORT_31OCT.md`, with the before and after file listings in `C:\ce-scratch\s5`.

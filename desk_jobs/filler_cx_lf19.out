@@ -1,0 +1,3 @@
+== cx_lf19 (usage 33.0% -> 34.0%): 1. **DONE — all five skipped as already covered.** BUG-963: #1567/#1571; BUG-964: #1669; BUG-965: #1570; BUG-966: #1552; BUG-967: #1553. No duplicate branches or PRs created.
+2. **Report saved and pushed:** [Batch 19 report](C:/CE_PLAN/areas/CODEX_LEDGER_FIX_BATCH19_23OCT.md), commit `48a44d65`. Includes current branch heads, previous test totals and exact AutoCAD checks. Leak scan passed.
+3. **This session:** 0 tests added or run; no builds, deployment or AutoCAD testing. Existing fixes remain awaiting their review and acceptance checks.

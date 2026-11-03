@@ -1,0 +1,29 @@
+**FOR TIM**
+
+1. **Why PIT is slow:** each time a pit goes in, right after you place the cover text, CE re-checks every pipe in the drawing to see which pit sits at each end. For each pipe it looks through the whole drawing six times. CE's own timer in your log says this takes about 0.06 s per pipe. That is about **3 seconds per pit** on a 50-pipe drawing like yours this morning.
+2. **On bigger jobs it gets much worse:** with 150 pipes I estimate 30 to 40 seconds per pit. That figure is worked out from the timing above; nobody has measured it.
+3. **Why the downpipe fix doesn't help:** the DP speed-up (B-004, in tonight's 3.0.86 install) only switches on while a downpipe is being placed. PIT's pipe re-check doesn't use it.
+4. **Second cause:** the first PIT after a drawing's pit and pipe list goes missing spends **10 seconds** rebuilding it before the "Specify pit insertion point" prompt. Your log shows this at 10:00 this morning. It only happens once per drawing.
+5. **Third cause:** DP and the other sources run the same full pipe re-check after placing. So DP may still have about 3 seconds left over after B-004.
+6. **These parts are not slow:** opening the New Pit window (1 to 2 seconds on your drawing), the label, the cover text and the Pit Schedule refresh.
+7. **The robot's "50 to 60 seconds per pit" is mostly the robot waiting.** Your own pits took 16 to 17 seconds each, including your clicks. About 4 to 5 seconds of that was CE working.
+8. **My mistake:** at first I counted a 28-second robot gap as CE time. Your own runs showed it was mostly robot. I corrected it before writing; it cost about 10 minutes and no test runs.
+9. **Recommended fix (planned only, not built):** give the pipe re-check the same "look at each object once" approach as B-004. It sits behind a new switch, ON by default. The pits each pipe joins come out the same; only the time drops. I expect about 3 seconds to fall under 1, but that is a guess until the robot measures it.
+
+---
+
+**Technical detail**
+
+- **Report:** `C:\CE_PLAN\areas\release-v3-colleagues-PIT_SLOW_DIAGNOSIS_29OCT.md`, pushed to CE_PLAN main (`a4becb64`, nothing left to push).
+- **No PR:** this was read-only. No dotnet, worktree or branch; nothing installed.
+- **Cause 1:** `PitCommand.cs:583` calls `RelinkAllPipeEndpoints(relinkTr)`, which runs `LinkService.Geometry.cs:937`. Each pipe then does six whole-model walks: `FindBestPitOwnerAtPoint` at line 1265, `FindBestTaggedOwnerAtPoint` at line 1358 (1385 on 3.0.86), and `RemovePipeLinksFromAllOwners` at line 1501 (1575 on 3.0.86). The memo is off because `context == null`. The log measures `LinksFromGeometry` at 54 to 66 ms per pipe.
+- **Cause 2:** `ProjectDataService.cs:664/772`, the missing-entity merge: 10,119 ms.
+- **Cause 3:** `SourcePlacementService.cs:1308/1453/1488`.
+- **Does #1837's memo apply?** Yes, with one catch. The re-check writes link records between walks, so the memo may only remember facts the re-check never changes (not a block, not a pit, pit outline, no tag). Link records must be read fresh every time.
+- **Plan:**
+  - Switches: `linking.pitRelinkReadsEachObjectOnce` (ON) and log-only `linking.pitRelinkTimingLog` (OFF).
+  - Base: `claude/rel-20261029a`.
+  - Tests: the memo, with link records rewritten between pipes in the test.
+  - Robot case: **N41_pit_time** and its switch-off twin **C41_pit_time_switch_off**. The re-check timing line should be under 800 ms; with the switch off, expect about 2,500 to 3,500 ms. CE 02 still needs to confirm the case number is free.
+
+**Summary:** No PR; this was a read-only diagnosis for B-031. The main cause is the pipe re-check after every pit (`PitCommand.cs:583` into `LinkService.Geometry.cs:937`): about 56 ms per pipe, so about 3 s per pit, with B-004's memo off on this path. The second cause is the once-per-drawing merge (`ProjectDataService.cs:664/772`, 10.1 s); the third is the same re-check after sources. The planned switch is `linking.pitRelinkReadsEachObjectOnce`, ON by default. The report is in `C:\CE_PLAN\areas`.

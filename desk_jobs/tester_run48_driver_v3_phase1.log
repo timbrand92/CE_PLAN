@@ -1,0 +1,10 @@
+Driver v3 phase 1 is built and passed all five items in real AutoCAD, and the self-test passed twice on the final code. The report is pushed to CE_PLAN (32086dda). AutoCAD is closed, the lock is free, the four settings fingerprints are unchanged and v2 files are untouched.
+
+- **UI Automation:** the About, Settings (CDS) and Checks windows were read and closed through their own Close/Cancel buttons.
+- **Pointer:** maximum click error was 1.22 px at three zoom levels and after a pan.
+- **BUG-859:** on Civil 3.0.70 all four double-click targets (downpipe circle, centre, angled DP text and pit label) open AutoCAD's Enhanced Attribute Editor. None opens CE's "Edit source".
+- **Lifecycle:** three clean start-and-end sessions in a row.
+
+Not built or not run: `ui-set`, v3 `dialog-path`/`dialog-cancel`, `layer-read`, `ent-count`, and `pt-rclick`/`pt-hover`/`pt-drag` in AutoCAD. There's no Opus review yet.
+
+Two things for Tim: a bug of mine left his OSMODE (object snap) at 0 for one launch (fixed; it reads 5375 every session since), and the registry value for it reads 4133, which I couldn't explain. The report also lists the files with sizes and SHA-256 hashes, and what's left for the desk.

@@ -1,0 +1,21 @@
+The S-36 install candidate (Structural 1.0.116) is built and verified. Nothing is installed, and nothing has been opened in AutoCAD.
+
+1. **Head:** `claude/rel-20261009y` is at `f180b349a88617070a8517b563b2df7b5854131e`. That is the Opus GO commit `b90c5d6e` plus one version-only commit, "Version: Structural 1.0.116 (S-36)" (3 files, 3 lines). It was pushed as a fast-forward, and local matches origin.
+2. **Candidate:** `C:\ce_rc_scratch\s1034\CE_STRUC_SUITE.bundle`. The receipt reads Validated.
+3. **Verify line:** `struc: manifest 2007 files, verified 2007, bad 0, extra 0`. The build gave 0 errors and 6 warnings, the same count as payload 62.
+4. **Versions:**
+   - Structural reads `1.0.116+f180b349…` in all three lanes (Legacy, Net8, Modern).
+   - DesignCore reads `1.0.0+f180b349…`.
+   - There are 0 CE_SHARED files, and PackageContents shows `AppVersion="1.0.116"`.
+5. **Test:** `RuntimeLaneContractTests` ran 13, passed 13, failed 0.
+6. **Registry:** 374 to 375 entries. The only difference from the installed 1.0.115 is the added `CEMARKUPCHECK` (hidden). Nothing was removed and no existing entry changed.
+7. **File list versus installed 1.0.115:** 0 added, 0 removed, 12 changed. The changed files are PackageContents, the Structural DLL x3, the DesignCore DLL x3, deps.json x2 and the command registry x3.
+8. **Native file:** the native check (`git diff 9babe787 HEAD`) was empty. The ARX re-linked, so I put the installed bytes back; its hash is `6DE0A45B…`.
+9. **Stale-build proof:** 24 of 24 checks OK (8 strings x 3 lanes). Each string is in the candidate and absent from the installed 1.0.115. The finalizer's new help text is in the candidate registry in all three lanes, and the old wording is gone.
+10. **Settings and installed bundle:** Tim's three settings files are identical before and after (Structural 33,817 bytes `D661AF90…`, CD 15,270 bytes `ACD64E79…`, CS 351,713 bytes `622A246F…`). The installed 1.0.115 DLLs are unchanged.
+11. **Odd:**
+    1. **#956 proof is weak:** it adds no new text to the DLL, so I used the new member name `LayoutCheckFirstFootingCommands` as its probe. My first probe, "drew no footing", was already in 1.0.115 and was replaced.
+    2. **#973 not probed:** it is test-only, so there was nothing to probe.
+    3. **AutoCAD log differences:** AutoCAD was up by the end of my run, not started by me. Logs, session files, telemetry and the CVL ledger differ in the live app-data folder. No settings file differs.
+
+The report is at `C:\Lisp Files\_TEST_COPIES_20260923\PAYLOAD_S1034_REPORT.md`. The worktree `s36asm` is clean and at origin.

@@ -1,0 +1,16 @@
+All six C-64 job files and the 40-PR list are written, committed and pushed to `C:\CE_PLAN`. `git status -sb` shows no "ahead". I started no chain, and I built and ran nothing.
+
+**Installed version is 3.0.73 / 1.1.73, not 3.0.74.** The six installed DLLs read `3.0.73+5467f705` and `1.1.73+5467f705`, and the repo tip's version commit and the 11:36 install log agree. So C-64 becomes 3.0.74 / 1.1.74, and the payload job stops if the installed DLLs read anything else.
+
+Files, in `C:\CE_PLAN`:
+1. `areas\TRAIN_C64_PR_LIST_2026-10-24.md` — 40 PRs, ranked, with the waiting and next-in-line lists.
+2. `desk_jobs\train_c64_assembler_job.txt` (Sonnet), `train_c64_finalizer_job.txt` (Opus), `payload98_c64_job.txt` (Sonnet, candidate c1060, report `PAYLOAD_C1060_REPORT.md`).
+3. `desk_jobs\chain_c64.ps1` and `scripts\desk_install_c64.ps1`; neither was run.
+
+Things you should know about the list:
+1. **#1748 (BUG-1138, data loss) is left out.** Its review says merge once one wording string is fixed, and nobody has pushed the fix. A builder should push it before the assembler starts.
+2. **The other waiting PRs:** #1643, #1593, #1588, #1657, #1691, #1000, #1620, #1195 and #1198.
+3. **Pilot-critical batches 2 and 3 have not landed.** Add their reviewed PRs to the list before the assembler starts.
+4. **No PR in the 40 touches Shared, Installer or signing files.** The finalizer is told to check that.
+
+I did not read the builders' fix commits; "fix pushed" means the live head equals the head in the builder report.

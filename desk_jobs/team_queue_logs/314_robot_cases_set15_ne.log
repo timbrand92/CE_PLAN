@@ -1,0 +1,7 @@
+`C:\CE_PLAN\areas\ROBOT_CASE_DRAFTS_SET15_NEW_PIPE_OLDER_02NOV.md` is written: 4 robot cases (W1838, W1857, W1861, W1700), each with a broken twin, nothing run or validated, and some of the checks may be wrong.
+
+- **Not read:** I did not read BUG_CARPARK.md, the BUGFIX reports, REGRESSION_LOG.md, or the R02/R14/R18 runner reports. I did not read TOP12 and WAVE1 in full, so I copied SET01's format instead of theirs.
+- **Weakest checks:** the control names in W1838 and W1861 are guesses from the PR text and have never appeared in a window dump.
+- **W1700:** it has no switch, so its twin only expects the old result. It needs an Opus review because it ends with one Undo.
+- **Codex-only:** #1846 (robot only runs as Tim's login) and #1805 (CDCALC result is window-only). Their steps are in section 4.
+- **Skipped:** the unset-material-speed half of #1857 (N41).

@@ -1,0 +1,10 @@
+== cx_rd04 (usage 39.0% -> 44.0%): 1. **DONE — five new findings:** HIGH 3 / MEDIUM 1 / LOW 1. [Findings report](C:/CE_PLAN/areas/CODEX_AUDIT2_RD04_23OCT.md).
+
+2. **Biggest risk:** metre drawings can falsely pass slab and AG drain falls. LandXML elevations can also be mistaken for metres.
+
+3. **Evidence:** verified by reading only. No builds, tests or AutoCAD. Audit worktree removed.
+
+---
+
+1. **Saved and pushed:** `b3170138`; leak scan passed; no commits ahead.
+2. **Save mistake recorded:** an amend caught another chat’s commit. Its content remained unchanged; its original history was restored without force-pushing.

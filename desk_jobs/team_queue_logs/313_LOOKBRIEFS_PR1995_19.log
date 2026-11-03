@@ -1,0 +1,12 @@
+Only the real switch name contains the word, and it's needed exactly. I'm finishing up.
+
+`C:\CE_PLAN\areas\LOOKBRIEFS_PR1995_1999_03NOV.md` — verdict: five look briefs written (G1 to G5), none of the five fixes is in any existing build. Nothing was built, tested or run in AutoCAD.
+
+1. **Fix ancestry:** after a fresh `git fetch origin`, none of the five PR heads is inside 61fd6fbc (Civil 3.0.89), cf059dcf (b1), aa3b92ac (b2) or the base branch. I did not read the DLL itself, so 3.0.89 = 61fd6fbc is as given in the order. The five new switch names are also absent from the settings file on those three builds.
+2. **Runnable today as BEFORE looks:**
+   - G1 (#1995, LandXML levels)
+   - G2 (#1996, blank cover level)
+   - G3 (#1997, no "MIN." on the pipe label)
+3. **G4 (#1998, OneDrive office folders) stops at step 0 on your PC.** The brief checks the folders first and stops with "NOT TESTED: THIS PC CANNOT SHOW IT" if the plain office folders are on disk. The robot drafter read them as present on 3 Nov.
+4. **G5 (#1999, X-Civil PDF pages) stops with "NOT TESTED: NO SAMPLE".** It needs a made-up two-sheet X-Civil package in `C:\Lisp Files\_CODEX_RUNNER\G5_SAMPLE\`, and none exists.
+5. **Not proven:** every window word marked DERIVED came from code and the fix reports, never from a screen. The PR descriptions were read only for #1999. The output path in the order was missing a backslash, so I wrote to `C:\CE_PLAN\areas\`.

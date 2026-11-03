@@ -1,0 +1,5 @@
+I reviewed 17 PRs: 9 of the 10 pilot bug fixes are safe once 2 small fixes are made, 1 is on hold, and 2 old plan PRs repeat work that is already installed. The report is pushed to CE_PLAN as `areas\REVIEW_PILE_B3_24OCT.md`. Nothing was built or tested, nothing was merged, and AutoCAD was not opened.
+
+1. **Pilot bug fixes (items 21 to 30):** 7 can go on the next train (C-64) today: #1601, #1607, #1616, #1554, #1655, #1656 and #1640. #1657 and #1691 need small fixes first. #1423 is on hold: it changes the same Pit Schedule line as two later fixes.
+2. **Plan PRs (items 6 to 12):** #1070 and #1192 repeat work already installed, so I recommend not merging them. Closing them is your call. #1084 is the second PR for the same rule as #707. #1086, #1048, #1037 and #1039 are safe for a later train, not the 9 Nov pilot.
+3. **One engineering question:** #1656 only notes when the 5-minute storm needs the most storage. A peak between two tested storms can still read 2 to 3% low with nothing said.

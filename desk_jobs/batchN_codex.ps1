@@ -25,7 +25,7 @@ $before = @{}; foreach ($f in $watch) { if (Test-Path -LiteralPath $f) { $before
 foreach ($f in @($before.Keys)) { $n = [IO.Path]::GetFileName($f); if ($known.ContainsKey($n) -and $before[$f].sha -ne $known[$n]) { L "ABORT: $n reads $($before[$f].sha), not the known original $($known[$n]): nothing started, nothing restored"; Stop-Job $roller -ErrorAction SilentlyContinue; Remove-Item "$d\HOLD_ROBOT.flag", "$d\ROBOT_STOP_AT.txt" -Force -ErrorAction SilentlyContinue; exit } }
 if (Test-Path "$d\STOP_CODEX.flag") { Remove-Item "$d\STOP_CODEX.flag" -Force; L 'STOP_CODEX.flag lifted (STOP_SUPERVISOR.flag stays up)' }
 Start-Process explorer.exe 'C:\Lisp Files\_TEST_COPIES_20260923'; Start-Sleep 5
-$looks = @(@('L1a', 34), @('L2a', 32), @('L3a', 33), @('L2b', 21), @('L1b', 32), @('L3b', 31), @('BWb', 29), @('BWa', 22))
+$looks = @(@('AUD2', 15), @('S3b', 22), @('B1b', 30), @('S5', 34), @('L1a', 34), @('L2a', 32), @('L3a', 33), @('L2b', 21), @('L1b', 32), @('L3b', 31), @('BWb', 29), @('BWa', 22))
 foreach ($lk in $looks) {
   $id = $lk[0]; $mins = $lk[1]
   if ((Get-Date).AddMinutes($mins + 5) -gt $end) { L "$id not started: it needs about $mins minutes and the window ends 10:45"; continue }

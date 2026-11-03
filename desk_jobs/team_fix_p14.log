@@ -1,0 +1,8 @@
+B-022 BUG-903 is built and tested as draft PR #1897, against `claude/rel-20261102a`; nobody has opened it in AutoCAD.
+
+- **Switch:** `checks.screensShareOneCover`, ON by default. OFF restores each screen's old figure.
+- **Files:** `MinimumCoverForChecks.cs`, `UserSettings.cs`, the Inspector, Hub and repair-check services, the Edit Pipe, CD and pit strips, `Bug903OneCoverFigureTests.cs`, and the `REGRESSION_LOG.md` entry.
+- **Tests:** full Civil suite passed 21622, 0 failed; net48 build 0 errors.
+- **My mistake:** a run lost its filter and ran Manager and Structural tests for about 25 minutes before I stopped it. `CD_Settings.json` is back at its original size and date, but I can't prove the robot did that.
+
+The report is `C:\CE_PLAN\areas\BUGFIX_p14_REPORT_30OCT.md`, pushed.

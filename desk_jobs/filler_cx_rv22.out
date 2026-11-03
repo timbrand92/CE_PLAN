@@ -1,0 +1,9 @@
+== cx_rv22 (usage 42.0% -> 44.0%): 1. **DONE.** [Review saved and pushed](C:/CE_PLAN/areas/CODEX_PR_REVIEW_cx_rv22.md).
+2. **#1798: MERGE-WITH-FIXES.** OFF checks precede a time-sensitive selection guard; unchanged behaviour is not proven.
+3. **#1780: HOLD.** Keep the trial unmerged. No adoption PR found.
+4. **Opus:** one agreement, one disagreement. No decision needed from Tim.
+
+---
+
+1. **Saved:** `8cba0cf4`; leak scan clean; no commits ahead.
+2. **Validation:** reading only. No builds, tests, AutoCAD, installations or code changes.

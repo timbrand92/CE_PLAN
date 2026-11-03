@@ -1,0 +1,38 @@
+== lookL1_civil_sheets (usage 5.0% -> 5.0%): 1. **FOR TIM ÔÇö BLOCKED:** I couldnÔÇÖt take the required fresh Explorer screenshot: the computer-use inventory showed no open apps or browsers, and its window-list method was unavailable. I stopped before reading the look-pass instructions or opening AutoCAD. No settings or files were changed.
+
+2. **Next step:** Re-run when the Explorer window is available to capture and inspect. This look pass was not started.
+== lookL1b_catchment_sol (usage 5.0% -> 6.0%): 1. **DONE ÔÇö 2 FAIL, both SURE.** No boundary separates the catchment halves; P1ÔÇÖs catchment label overlaps the pipe wording. PASS 0, DIFFERENT 0, BLOCKED 0, NOT TESTED 0; UNSURE 0.
+
+2. **Clean end.** Four settings files unchanged, SAVETIME restored, AutoCAD gone, lock released. Only catchment checks performed.
+
+3. **Report:** [CODEX_LOOK_L1B_20261018_0922.md](<C:/Lisp Files/_TEST_COPIES_20260923/CODEX_LOOK_L1B_20261018_0922.md>). Screenshots saved alongside the test copy in LOOKS\L1B_20261018_0922.
+== lookL2_structural (usage 6.0% -> 8.0%): OPIES_20260923/CODEX_LOOK_L2_20261018_1001.md>): PASS 0, FAIL 0, DIFFERENT 3, BLOCKED 2, NOT TESTED 1. SURE 4; UNSURE 2. No confirmed OLD FAULT failures.
+
+2. **Findings.** DOTS becomes solid at 1:100; AD refuses 1:50. Section mark blocked by input fault; footing label unreadable. Evidence limitations recorded.
+
+3. **Cleanup verified.** AutoCAD gone; lock released; drawing discarded. All four settings hashes match START. One guarded key changed and restored exactly:
+   
+   A: `24D8E5F7D87B39B5E0E4D736A10C0506DA411CC8D7758E5AE3DA5517B92B4804`
+   
+   B: `00C155C27F20CC8FF690D35567547DF8B4521DD318F59AF41960C1635DF87F85`
+   
+   C: `24D8E5F7D87B39B5E0E4D736A10C0506DA411CC8D7758E5AE3DA5517B92B4804`
+== lookL3_windows_pictures (usage 8.0% -> 9.0%): 1. **BLOCKED:** Launch checks produced no readable result. All 21 looks blocked; none assessed. PASS/FAIL/DIFFERENT/NOT TESTED: 0 each. SURE 21, UNSURE 0; no FAILs identified.
+
+2. **Clean end:** AutoCAD is gone, lock released, all four settings hashes unchanged. FIXTURES WANTED: none.
+
+3. **Report:** [CODEX_LOOK_L3_20261018_1005.md](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_LOOK_L3_20261018_1005.md>).
+== lookL4_mouse (usage 9.0% -> 9.0%): 1. **NOT STARTED:** Native screen and mouse access is unavailable. Explorer could not be captured or checked.
+
+2. **Results:** PASS 0 / FAIL 0 / DIFFERENT 0 / BLOCKED 0 / NOT TESTED 17. SURE 0 / UNSURE 17. No failures judged.
+
+3. **Safe state:** No settings changed. AutoCAD was absent at the gate. Lock free; never acquired.
+
+4. **Report:** [CODEX_LOOK_L4_20261018_1011.md](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_LOOK_L4_20261018_1011.md>)
+== lookL5_cursor_ribbon (usage 9.0% -> 9.0%): 1. **BLOCKED:** CE STRUC ribbon tab was absent. The mandatory startup check stopped all 17 looks.
+
+2. **Counts:** PASS 0 / FAIL 0 / DIFFERENT 0 / BLOCKED 17 / NOT TESTED 0. SURE 17 / UNSURE 0 for the startup blocker. No tested failures to rank.
+
+3. **Clean end:** AutoCAD is gone; lock released. All four settings hashes unchanged. No drawings saved. FIXTURES WANTED: none.
+
+4. **Report:** [CODEX_LOOK_L5_20261018_1014.md](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_LOOK_L5_20261018_1014.md>).

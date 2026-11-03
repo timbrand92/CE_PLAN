@@ -1,0 +1,459 @@
+{
+  "header": {
+    "run_id": "RUN-20261101-0129-C3.0.88-tN90r",
+    "started": "2026-11-01 01:29:05",
+    "finished": "2026-11-01 01:31:51",
+    "build": {
+      "civil": {
+        "product_version": "3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+        "file_version": "3.0.88.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+        "file_version": "1.1.88.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.88+3fbb9da5 / struc 1.0.125+204dfad2 / mgr 1.1.88+3fbb9da5",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "ED7DDCA1421A25C3A9CC4F62390C454F5EF9C679C515B9B8444F08287673FC62",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+      "Driver files (SHA-256, first 12): v2 F4D8F40C3675 (expected F4D8F40C3675), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 482EB7B20C6C, v3 session 4D3524AAA60B, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 BBF42DBA8958, case_runner_lib.ps1 01751833A6EA, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 0 shared setup(s); pack SHA-256 ED7DDCA1421A25C3A9CC4F62390C454F5EF9C679C515B9B8444F08287673FC62; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json D604CE689671 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sun 01 Nov 2026 01:29 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 0,
+    "FAIL": 0,
+    "FAIL_known": 1,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261101-0129-C3.0.88-tN90r-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-11-01 01:29:06",
+      "finished": "2026-11-01 01:31:51",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV30129111_B1.dwg",
+      "cases": [
+        "N90_BROKEN"
+      ],
+      "whatsnew_dismissed_at_start": "no, window was not there",
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : D604CE689671 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "N90_BROKEN",
+      "proves_bugs": "",
+      "title": "BROKEN TWIN (old build text): expects the old numbered labels RG1 and RG2, so it must FAIL on C-78",
+      "kind": "deterministic",
+      "order": 41,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "B-007b raingarden plan label without the number (PR 1870, Tim's ruling decisions item 77); regression test C31",
+      "bug": "",
+      "known_fail": "BROKEN-VARIANT",
+      "reviewed_against": "builder-filled: Opus review still needed. Rule read from the code by CE 01 (not by me) and sent 30 Oct 21:35; not compared with a run.",
+      "variant_of": "N90_plain_rg_label",
+      "expected": "The twin expects the 3.0.87 labels RG1 and RG2; on C-78 they read RG, so the text checks fail (and it passes on 3.0.87, which identifies the build).",
+      "why_not_unit": "The label is drawn by the live CDRG command into the real drawing, on its layer.",
+      "not_automated": [
+        "The text height (250 on a fresh copy) and the look are recorded, not asserted. The locked-GUIDELINES refusal message is not exercised."
+      ],
+      "file_sha256": "47FF627506EC7DE541880E9DF4C3D063655EE0E6722400D5C8B2D4D56B2F9406",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "no match for /^RG2$/ in: RG",
+      "started": "2026-11-01 01:30:10",
+      "seconds": 55.5,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDRG{NL}160000,-80000{NL}164000,-80000{NL}164000,-77000{NL}160000,-77000{NL}C{NL}Skip\" -Force -> $rg1",
+          "ok": true,
+          "seconds": 2.8,
+          "evidence": "typed 'CDRG 160000,-80000 164000,-80000 164000,-77000 160000,-77000 C Skip': Command: | Command: CDRG | Specify first raingarden point: 160000,-80000 | Next point [Undo] [Undo]: 164000,-80000 | Next point [Undo] [Undo]: 164000,-77000 | Next point (3 pts) [Close/Undo] [Close/Undo]: 160000,-77000 |..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 2",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "slept 2 s"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDRG{NL}170000,-80000{NL}174000,-80000{NL}174000,-77000{NL}170000,-77000{NL}C{NL}Skip\" -Force -> $rg2",
+          "ok": true,
+          "seconds": 2.6,
+          "evidence": "typed 'CDRG 170000,-80000 174000,-80000 174000,-77000 170000,-77000 C Skip': Command: | Command: CDRG | Specify first raingarden point: 170000,-80000 | Next point [Undo] [Undo]: 174000,-80000 | Next point [Undo] [Undo]: 174000,-77000 | Next point (3 pts) [Close/Undo] [Close/Undo]: 170000,-77000 |..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 2",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "slept 2 s"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $new",
+          "ok": true,
+          "seconds": 0.5,
+          "evidence": "6 object(s) after index 1034 (model space now 1040); by type: AcDbHatch 2; AcDbPolyline 2; AcDbText 2; first: 11C55C AcDbPolyline 50CONT ; 11C55D AcDbHatch HATCH113 ; 11C55E AcDbText GUIDELINES RG ; 11C55F AcDbPolyline 50CONT ; 11C560 AcDbHatch HATCH113 ; 11C561 AcDbText GUIDELINES RG"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"text~^RG\" -> $labels",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 2 of 6: 11C55E RG GUIDELINES ; 11C561 RG GUIDELINES"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $labels \"text~^RG\" \"near=162000,-78500,1500\" -> $l1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C55E RG GUIDELINES"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $labels \"text~^RG\" \"near=172000,-78500,1500\" -> $l2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C561 RG GUIDELINES"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $l1 text -> $t1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = RG"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $l2 text -> $t2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = RG"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $l1 layer -> $y1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'layer' = GUIDELINES"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $l1 object -> $o1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'object' = AcDbText"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "dist",
+          "text": "dist $l1 \"162000,-78500\" -> $d1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "distance from object 11C55E to 162000,-78500 = 248.5"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $l1 handle -> $h1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C55E"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$h1} -> $e1",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "ent-read 11C55E: {\"handle\":\"11C55E\",\"object\":\"AcDbText\",\"layer\":\"GUIDELINES\",\"text\":\"RG\",\"insertion\":[161785.21487039563,-78625.0,0.0]}"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -> $u1",
+          "ok": true,
+          "seconds": 2.6,
+          "evidence": "typed 'U': Command: | Command: U | CDRG"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 36.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $after_u",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "3 object(s) after index 1034 (model space now 1037); by type: AcDbHatch 1; AcDbPolyline 1; AcDbText 1; first: 11C55C AcDbPolyline 50CONT ; 11C55D AcDbHatch HATCH113 ; 11C55E AcDbText GUIDELINES RG"
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $after_u \"text~^RG\" -> $left",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 3: 11C55E RG GUIDELINES"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"Raingarden RG2\"",
+          "ok": true,
+          "expected": "command line has 'Raingarden RG2'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Raingarden RG2 placed. 4 vertices, 12.0 m².'"
+        },
+        {
+          "n": 2,
+          "text": "history has \"Raingarden RG3\"",
+          "ok": true,
+          "expected": "command line has 'Raingarden RG3'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Raingarden RG3 placed. 4 vertices, 12.0 m².'"
+        },
+        {
+          "n": 3,
+          "text": "count $labels = 2",
+          "ok": true,
+          "expected": "count = 2",
+          "actual": "2",
+          "evidence": "count of $labels = 2 (expected = 2)"
+        },
+        {
+          "n": 4,
+          "text": "count $l1 = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $l1 = 1 (expected = 1)"
+        },
+        {
+          "n": 5,
+          "text": "count $l2 = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $l2 = 1 (expected = 1)"
+        },
+        {
+          "n": 6,
+          "text": "matches $t1 \"^RG2$\"",
+          "ok": false,
+          "expected": "matches /^RG2$/",
+          "actual": "RG",
+          "evidence": "no match for /^RG2$/ in: RG"
+        },
+        {
+          "n": 7,
+          "text": "matches $t2 \"^RG3$\"",
+          "ok": false,
+          "expected": "matches /^RG3$/",
+          "actual": "RG",
+          "evidence": "no match for /^RG3$/ in: RG"
+        },
+        {
+          "n": 8,
+          "text": "equals $y1 \"GUIDELINES\"",
+          "ok": true,
+          "expected": "GUIDELINES",
+          "actual": "GUIDELINES",
+          "evidence": "value 'GUIDELINES' (expected 'GUIDELINES')"
+        },
+        {
+          "n": 9,
+          "text": "equals $o1 \"AcDbText\"",
+          "ok": true,
+          "expected": "AcDbText",
+          "actual": "AcDbText",
+          "evidence": "value 'AcDbText' (expected 'AcDbText')"
+        },
+        {
+          "n": 10,
+          "text": "number $d1 <= 500",
+          "ok": true,
+          "expected": "<= 500",
+          "actual": "248.5",
+          "evidence": "$d1 = 248.5 (expected <= 500)"
+        },
+        {
+          "n": 11,
+          "text": "count $left = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $left = 1 (expected = 1)"
+        },
+        {
+          "n": 12,
+          "text": "record $e1 \"FULL the first label entity (height, justification)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C55E\",\"object\":\"AcDbText\",\"layer\":\"GUIDELINES\",\"text\":\"RG\",\"insertion\":[161785.21487039563,-78625.0,0.0]}",
+          "evidence": "RECORDED, not judged: FULL the first label entity (height, justification) = {\"handle\":\"11C55E\",\"object\":\"AcDbText\",\"layer\":\"GUIDELINES\",\"text\":\"RG\",\"insertion\":[161785.21487039563,-78625.0,0.0]}"
+        },
+        {
+          "n": 13,
+          "text": "record $d1 \"distance of label 1 from the typed centre (mm)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "248.5",
+          "evidence": "RECORDED, not judged: distance of label 1 from the typed centre (mm) = 248.5"
+        },
+        {
+          "n": 14,
+          "text": "record $rg1 \"FULL what the first CDRG printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDRG | Specify first raingarden point: 160000,-80000 | Next point [Undo] [Undo]: 164000,-80000 | Next point [Undo] [Undo]: 164000,-77000 | Next point (3 pts) [Close/Undo] [Close/Undo]: 160000,-77000 | Next point (4 pts) [Close/Undo] [Close/Undo]: C | Add a GIO source to this raingarden? [Place/Skip] <Skip> [Place/Skip] <Skip>: Skip | Raingarden RG2 placed. 4 vertices, 12.0 m².",
+          "evidence": "RECORDED, not judged: FULL what the first CDRG printed = Command: | Command: CDRG | Specify first raingarden point: 160000,-80000 | Next point [Undo] [Undo]: 164000,-80000 | Next point [Undo] [Undo]: 164000,-77000 | Next point (3 pts) [Close/Undo] [Close/Undo]: 160000,-77000 | Next point (4 pts) [Close/Undo] [Close/Undo]: C | Add a GIO source to this raingarden? [Place/Skip] <Skip> [Place/Skip] <Skip>: Skip | Raingarden RG2 placed. 4 vertices, 12.0 m²."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 16 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDRG completed 248 ms ; Command outcome: CDRG completed 121 ms"
+      ],
+      "error": null,
+      "finished": "2026-11-01 01:31:06",
+      "session_id": "RUN-20261101-0129-C3.0.88-tN90r-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [
+          "known failure (BROKEN-VARIANT): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}

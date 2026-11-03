@@ -1,0 +1,1879 @@
+{
+  "header": {
+    "run_id": "RUN-20261030-0441-C3.0.86-a80X8",
+    "started": "2026-10-30 04:41:08",
+    "finished": "2026-10-30 04:44:26",
+    "build": {
+      "civil": {
+        "product_version": "3.0.86+5888ee757244aac89283aaaf2ba68e51470ecbb3",
+        "file_version": "3.0.86.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.86+5888ee757244aac89283aaaf2ba68e51470ecbb3",
+        "file_version": "1.1.86.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.86+5888ee75 / struc 1.0.125+204dfad2 / mgr 1.1.86+5888ee75",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "AAD605F62FD659E426E68F8C938EC13FFFC33E8A74BCB93BA99720BA7CC45DF0",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.86+5888ee757244aac89283aaaf2ba68e51470ecbb3; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.86+5888ee757244aac89283aaaf2ba68e51470ecbb3",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4CD773B85EC5, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 13955AAA60D1, case_runner_lib.ps1 8F9B8DCBB473, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 2 case file(s) plus 0 shared setup(s); pack SHA-256 AAD605F62FD659E426E68F8C938EC13FFFC33E8A74BCB93BA99720BA7CC45DF0; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json B3B5A004B929 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Fri 30 Oct 2026 04:41 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 1,
+    "FAIL": 1,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 1,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261030-0441-C3.0.86-a80X8-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-30 04:41:10",
+      "finished": "2026-10-30 04:44:26",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV30441141_B1.dwg",
+      "cases": [
+        "R12",
+        "R21"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : B3B5A004B929 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "R12",
+      "proves_bugs": "",
+      "title": "Moving a pit with MOVE opens no CE window, its label, cover text and invert texts follow, and one U puts everything back",
+      "kind": "deterministic",
+      "order": 10,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "quick MOVE (gap plan section 3 item 7; spec C37-C41 regressions; backlog W1-02)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 24 Oct 2026 with card C41 (TEST_CASES_DRAFT_22OCT.md) and robot run 47 B.4.1. Same MOVE and U steps. Batch 6 (28 Oct 2026, Codex cx_cr03 and cx_cr21): how far the pit label, the cover text and the four IL texts 1155B6, 116A3C, 116BE4 and 116A0E move is now ASSERTED (2000 mm +- 150), not only recorded; the positions of the pit, the label, the cover text and all six IL texts are read unrounded before and after the U and must match to 0.001 mm (the card's tolerance). The card's 'documented placement rules' for linked labels are still not recorded anywhere, so how far each text should move beyond 2000 +- 150 is not judged.",
+      "variant_of": "",
+      "expected": "Pick pit P3 (handle 109D56, at 53777.7,-25569.9), run MOVE with displacement 0,0 to 0,2000: AutoCAD says '1 found', the pit's insertion point is now 2000 mm higher (Y -23569.9, X unchanged), no Edit Pit, Edit Pipe, New Pit, New Pipe or Cascade window opened, and one U (echo word MOVE) puts the pit back at Y -25569.9.",
+      "why_not_unit": "Native MOVE has to drive CE's live link updates inside AutoCAD without a blocking window; only a live drawing shows the pit position and the window list afterwards.",
+      "not_automated": [
+        "Phase 3 batch 2: the invert texts (IL) within 4000 mm of the pit (six on this drawing) are read before the move, at the pit's new place and after U, and must be the same six objects; two of them must have moved 2000 mm +- 150 (they follow the pit on 3.0.73, probe 24 Oct). Batch 4 (26 Oct): the pit's name label and cover text are read (moved and returned); the four IL texts 1155B6, 116A3C, 116BE4 and 116A0E (probe b4p1: 116A0E sits at 53026.75,-26891.46, IL 18.10, south-west of the pit) are read after the U and must be back within 0.5 mm of where they were; how far each moved is asserted at 2000 mm +- 150 (batch 6, 28 Oct 2026). The pipe ends are not read (a pipe returns only handle, object and layer through ent-read).",
+        "A CE message line about a label with no clear spot appears on this drawing after the move; it is recorded, not judged."
+      ],
+      "file_sha256": "58A9ACD407FB20C471A8D8D1D091B38ABC655A37F7AE368079BFA99495045317",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-30 04:41:55",
+      "seconds": 81.2,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read 109D56 -> $pit0",
+          "ok": true,
+          "seconds": 0.7,
+          "evidence": "ent-read 109D56: {\"handle\":\"109D56\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U182\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[53777.726132359574,-25569.87543006733,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[52827.726132..."
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win0",
+          "ok": true,
+          "seconds": 0.7,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30441141_B1.dwg]"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 0 -> $z0",
+          "ok": true,
+          "seconds": 11.4,
+          "evidence": "500 object(s) after index 0 (model space now 1034); by type: AcDbBlockReference 157; AcDbCircle 32; AcDbHatch 7; AcDbLine 58; AcDbMline 1; AcDbMText 30; AcDbPolyline 38; AcDbRotatedDimension 1; AcDbText 134; CeCvlPipeObject 42; first: 1003FA AcDbBlockReference XREF XW2614-Arch Survey ; 10040D AcDbBlockReference XREF XW2614-Arch Ground ; 10041A AcDbBlockReference XREF XW2614-Arch Site ; 10127D AcDbHatch HATCH 51 ; 10127E AcDbPolyline HATCHOUTLINE ; 10127F AcDbBlockReference BLOCKS A$C32C15792 ; 10128C AcDbMText 25TEXT THIS DRAWING IS TO BE READ IN CONJUNCTION WITH ARCHITECTURAL DOCUMENTATION. ; 10128E AcDbHatch HATCH 51 ; 10128F AcDbPolyline HATCHO..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $z0 \"handle=109E08\" -> $lab0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 500: 109E08 PIT LABEL STORMWATER PIT LABEL"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $z0 \"handle=109E0F\" -> $cl0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 500: 109E0F CL 18.88 25TEXT"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "dist",
+          "text": "dist $lab0 \"52570.89,-26238.29\" -> $lab_old",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "distance from object 109E08 to 52570.89,-26238.29 = 0"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "dist",
+          "text": "dist $cl0 \"54354.41,-24866.60\" -> $cl_old",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "distance from object 109E0F to 54354.41,-24866.60 = 0"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 500 -> $a0",
+          "ok": true,
+          "seconds": 8.8,
+          "evidence": "500 object(s) after index 500 (model space now 1034); by type: AcDbBlockReference 226; AcDbHatch 20; AcDbLeader 1; AcDbLine 24; AcDbMLeader 6; AcDbMline 1; AcDbMText 118; AcDbPolyline 22; AcDbText 75; CeCvlPipeObject 7; first: 10EC12 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC15 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC18 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC1B AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC1E AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC21 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC24 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC27 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC2A AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC2D..."
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 1000 -> $b0",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "34 object(s) after index 1000 (model space now 1034); by type: AcDbBlockReference 14; AcDbLeader 4; AcDbLine 1; AcDbMLeader 2; AcDbMText 8; AcDbRotatedDimension 1; AcDbText 4; first: 116BB6 AcDbText 20TEXT IL 18.24 ; 116BD7 AcDbBlockReference ARROW TIM_CVL_ARROW ; 116BDC AcDbMText 25TEXT 150 DIA. UPVC SEWER CLASS PIPE AT 1 IN 97 ; 116BE0 AcDbText 20TEXT IL 18.60 ; 116BE4 AcDbText 20TEXT IL 18.24 ; 116C05 AcDbBlockReference ARROW TIM_CVL_ARROW ; 116FC6 AcDbBlockReference BLOCKS A$Cfdd7d71d ; 11978C AcDbMLeader 25DIMS ; 11978E AcDbLine SLAB SC ; 11978F AcDbMLeader 25DIMS ; 1197BB AcDbBlockReference..."
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $a0 \"text~^IL \" \"near=53777.7,-25569.8,4000\" -> $ila0",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "selected 4 of 500: 1101B8 IL 17.25 20TEXT ; 1155B6 IL 17.30 20TEXT ; 116A0E IL 18.10 20TEXT ; 116A3C IL 18.10 20TEXT"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $b0 \"text~^IL \" \"near=53777.7,-25569.8,4000\" -> $ilb0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 2 of 34: 116BB6 IL 18.24 20TEXT ; 116BE4 IL 18.24 20TEXT"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $ila0 handle -All -> $ha0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 1101B8 | 1155B6 | 116A0E | 116A3C"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $ilb0 handle -All -> $hb0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 116BB6 | 116BE4"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $a0 \"handle=116A0E\" -> $q116a0e0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 500: 116A0E IL 18.10 20TEXT"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "dist",
+          "text": "dist $q116a0e0 \"53026.75,-26891.46\" -> $s116a0e",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "distance from object 116A0E to 53026.75,-26891.46 = 0"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $z0 \"handle=109D56\" -> $u0_pit",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 500: 109D56 PIT BLOCK 3 STORMWATER PIT"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $a0 \"handle=1101B8\" -> $u0_a1101",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "selected 1 of 500: 1101B8 IL 17.25 20TEXT"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $b0 \"handle=116BB6\" -> $u0_b116b",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 34: 116BB6 IL 18.24 20TEXT"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $a0 \"handle=1155B6\" -> $u0_1155",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "selected 1 of 500: 1155B6 IL 17.30 20TEXT"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $a0 \"handle=116A3C\" -> $u0_116a3c",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "selected 1 of 500: 116A3C IL 18.10 20TEXT"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $b0 \"handle=116BE4\" -> $u0_116be4",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 34: 116BE4 IL 18.24 20TEXT"
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $u0_pit x -> $pit_x0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 53777.7261323596"
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $u0_pit y -> $pit_y0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'y' = -25569.8754300673"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $lab0 x -> $lab_x0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 52570.8892399372"
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $lab0 y -> $lab_y0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'y' = -26238.2873795918"
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $cl0 x -> $cl_x0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 54354.4091651018"
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $cl0 y -> $cl_y0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'y' = -24866.5973616254"
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $u0_a1101 x -> $a1101_x0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 54327.7237944863"
+        },
+        {
+          "n": 29,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $u0_a1101 y -> $a1101_y0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'y' = -25217.5591057691"
+        },
+        {
+          "n": 30,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $u0_b116b x -> $b116b_x0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 53922.4981693185"
+        },
+        {
+          "n": 31,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $u0_b116b y -> $b116b_y0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'y' = -25007.0580650023"
+        },
+        {
+          "n": 32,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $u0_1155 x -> $i1155_x0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 52367.6304628793"
+        },
+        {
+          "n": 33,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $u0_1155 y -> $i1155_y0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'y' = -25217.6066650945"
+        },
+        {
+          "n": 34,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $u0_116a3c x -> $i116a3c_x0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 54262.9263743631"
+        },
+        {
+          "n": 35,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $u0_116a3c y -> $i116a3c_y0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'y' = -26095.5347073798"
+        },
+        {
+          "n": 36,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $u0_116be4 x -> $i116be4_x0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 53376.6145419975"
+        },
+        {
+          "n": 37,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $u0_116be4 y -> $i116be4_y0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'y' = -25031.4544549785"
+        },
+        {
+          "n": 38,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $q116a0e0 x -> $i116a0e_x0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 53026.7474394765"
+        },
+        {
+          "n": 39,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $q116a0e0 y -> $i116a0e_y0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'y' = -26891.457980793"
+        },
+        {
+          "n": 40,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"109D56\"",
+          "ok": true,
+          "seconds": 2.6,
+          "evidence": "pick-first 109D56: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"109D56\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 41,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.MOVE{NL}0,0{NL}0,2000\" -Force -> $mv",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "typed '_.MOVE 0,0 0,2000': Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,2000 | [CE Civil] pipe P3 -> P2 label: no clear spot among it..."
+        },
+        {
+          "n": 42,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 43,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win1",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30441141_B1.dwg]"
+        },
+        {
+          "n": 44,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read 109D56 -> $pit1",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "ent-read 109D56: {\"handle\":\"109D56\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U182\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[53777.726132359574,-23569.87543006733,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[52827.726132..."
+        },
+        {
+          "n": 45,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 500 -> $a1",
+          "ok": true,
+          "seconds": 9.7,
+          "evidence": "500 object(s) after index 500 (model space now 1034); by type: AcDbBlockReference 226; AcDbHatch 20; AcDbLeader 1; AcDbLine 24; AcDbMLeader 6; AcDbMline 1; AcDbMText 118; AcDbPolyline 22; AcDbText 75; CeCvlPipeObject 7; first: 10EC12 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC15 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC18 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC1B AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC1E AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC21 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC24 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC27 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC2A AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC2D..."
+        },
+        {
+          "n": 46,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 1000 -> $b1",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "34 object(s) after index 1000 (model space now 1034); by type: AcDbBlockReference 14; AcDbLeader 4; AcDbLine 1; AcDbMLeader 2; AcDbMText 8; AcDbRotatedDimension 1; AcDbText 4; first: 116BB6 AcDbText 20TEXT IL 18.24 ; 116BD7 AcDbBlockReference ARROW TIM_CVL_ARROW ; 116BDC AcDbMText 25TEXT 150 DIA. UPVC SEWER CLASS PIPE AT 1 IN 91 ; 116BE0 AcDbText 20TEXT IL 18.60 ; 116BE4 AcDbText 20TEXT IL 18.24 ; 116C05 AcDbBlockReference ARROW TIM_CVL_ARROW ; 116FC6 AcDbBlockReference BLOCKS A$Cfdd7d71d ; 11978C AcDbMLeader 25DIMS ; 11978E AcDbLine SLAB SC ; 11978F AcDbMLeader 25DIMS ; 1197BB AcDbBlockReference..."
+        },
+        {
+          "n": 47,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $a1 \"text~^IL \" \"near=53777.7,-23569.8,4000\" -> $ila1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 4 of 500: 1101B8 IL 17.25 20TEXT ; 1155B6 IL 17.30 20TEXT ; 116A0E IL 18.10 20TEXT ; 116A3C IL 18.10 20TEXT"
+        },
+        {
+          "n": 48,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $b1 \"text~^IL \" \"near=53777.7,-23569.8,4000\" -> $ilb1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 2 of 34: 116BB6 IL 18.24 20TEXT ; 116BE4 IL 18.24 20TEXT"
+        },
+        {
+          "n": 49,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $ila1 handle -All -> $ha1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 1101B8 | 1155B6 | 116A0E | 116A3C"
+        },
+        {
+          "n": 50,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $ilb1 handle -All -> $hb1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 116BB6 | 116BE4"
+        },
+        {
+          "n": 51,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $a1 \"handle=1101B8\" -> $one_a",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 500: 1101B8 IL 17.25 20TEXT"
+        },
+        {
+          "n": 52,
+          "phase": "case",
+          "verb": "dist",
+          "text": "dist $one_a \"54327.72,-25217.56\" -> $moved_a",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "distance from object 1101B8 to 54327.72,-25217.56 = 1990.3"
+        },
+        {
+          "n": 53,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $b1 \"handle=116BB6\" -> $one_b",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 34: 116BB6 IL 18.24 20TEXT"
+        },
+        {
+          "n": 54,
+          "phase": "case",
+          "verb": "dist",
+          "text": "dist $one_b \"53922.50,-25007.06\" -> $moved_b",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "distance from object 116BB6 to 53922.50,-25007.06 = 1988"
+        },
+        {
+          "n": 55,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 0 -> $z1",
+          "ok": true,
+          "seconds": 10.8,
+          "evidence": "500 object(s) after index 0 (model space now 1034); by type: AcDbBlockReference 157; AcDbCircle 32; AcDbHatch 7; AcDbLine 58; AcDbMline 1; AcDbMText 30; AcDbPolyline 38; AcDbRotatedDimension 1; AcDbText 134; CeCvlPipeObject 42; first: 1003FA AcDbBlockReference XREF XW2614-Arch Survey ; 10040D AcDbBlockReference XREF XW2614-Arch Ground ; 10041A AcDbBlockReference XREF XW2614-Arch Site ; 10127D AcDbHatch HATCH 51 ; 10127E AcDbPolyline HATCHOUTLINE ; 10127F AcDbBlockReference BLOCKS A$C32C15792 ; 10128C AcDbMText 25TEXT THIS DRAWING IS TO BE READ IN CONJUNCTION WITH ARCHITECTURAL DOCUMENTATION. ; 10128E AcDbHatch HATCH 51 ; 10128F AcDbPolyline HATCHO..."
+        },
+        {
+          "n": 56,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $z1 \"handle=109E08\" -> $lab1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 500: 109E08 PIT LABEL STORMWATER PIT LABEL"
+        },
+        {
+          "n": 57,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $z1 \"handle=109E0F\" -> $cl1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 500: 109E0F CL 18.88 25TEXT"
+        },
+        {
+          "n": 58,
+          "phase": "case",
+          "verb": "dist",
+          "text": "dist $lab1 \"52570.89,-26238.29\" -> $mv_lab",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "distance from object 109E08 to 52570.89,-26238.29 = 2000"
+        },
+        {
+          "n": 59,
+          "phase": "case",
+          "verb": "dist",
+          "text": "dist $cl1 \"54354.41,-24866.60\" -> $mv_cl",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "distance from object 109E0F to 54354.41,-24866.60 = 2000"
+        },
+        {
+          "n": 60,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $a1 \"handle=1155B6\" -> $o1155",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 500: 1155B6 IL 17.30 20TEXT"
+        },
+        {
+          "n": 61,
+          "phase": "case",
+          "verb": "dist",
+          "text": "dist $o1155 \"52367.63,-25217.61\" -> $mv_1155",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "distance from object 1155B6 to 52367.63,-25217.61 = 1899.4"
+        },
+        {
+          "n": 62,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $a1 \"handle=116A3C\" -> $o116a3c",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 500: 116A3C IL 18.10 20TEXT"
+        },
+        {
+          "n": 63,
+          "phase": "case",
+          "verb": "dist",
+          "text": "dist $o116a3c \"54262.93,-26095.53\" -> $mv_116a3c",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "distance from object 116A3C to 54262.93,-26095.53 = 1925.7"
+        },
+        {
+          "n": 64,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $b1 \"handle=116BE4\" -> $o116be4",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 34: 116BE4 IL 18.24 20TEXT"
+        },
+        {
+          "n": 65,
+          "phase": "case",
+          "verb": "dist",
+          "text": "dist $o116be4 \"53376.61,-25031.45\" -> $mv_116be4",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "distance from object 116BE4 to 53376.61,-25031.45 = 1999.1"
+        },
+        {
+          "n": 66,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $a1 \"handle=116A0E\" -> $o116a0e",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 500: 116A0E IL 18.10 20TEXT"
+        },
+        {
+          "n": 67,
+          "phase": "case",
+          "verb": "dist",
+          "text": "dist $o116a0e \"53026.75,-26891.46\" -> $mv_116a0e",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "distance from object 116A0E to 53026.75,-26891.46 = 1894.2"
+        },
+        {
+          "n": 68,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -> $u1",
+          "ok": true,
+          "seconds": 2.2,
+          "evidence": "typed 'U': Command: | Command: U | MOVE"
+        },
+        {
+          "n": 69,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 70,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win2",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30441141_B1.dwg]"
+        },
+        {
+          "n": 71,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read 109D56 -> $pit2",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "ent-read 109D56: {\"handle\":\"109D56\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U182\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[53777.726132359574,-25569.87543006733,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[52827.726132..."
+        },
+        {
+          "n": 72,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 500 -> $a2",
+          "ok": true,
+          "seconds": 9.5,
+          "evidence": "500 object(s) after index 500 (model space now 1034); by type: AcDbBlockReference 226; AcDbHatch 20; AcDbLeader 1; AcDbLine 24; AcDbMLeader 6; AcDbMline 1; AcDbMText 118; AcDbPolyline 22; AcDbText 75; CeCvlPipeObject 7; first: 10EC12 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC15 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC18 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC1B AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC1E AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC21 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC24 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC27 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC2A AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC2D..."
+        },
+        {
+          "n": 73,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 1000 -> $b2",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "34 object(s) after index 1000 (model space now 1034); by type: AcDbBlockReference 14; AcDbLeader 4; AcDbLine 1; AcDbMLeader 2; AcDbMText 8; AcDbRotatedDimension 1; AcDbText 4; first: 116BB6 AcDbText 20TEXT IL 18.24 ; 116BD7 AcDbBlockReference ARROW TIM_CVL_ARROW ; 116BDC AcDbMText 25TEXT 150 DIA. UPVC SEWER CLASS PIPE AT 1 IN 97 ; 116BE0 AcDbText 20TEXT IL 18.60 ; 116BE4 AcDbText 20TEXT IL 18.24 ; 116C05 AcDbBlockReference ARROW TIM_CVL_ARROW ; 116FC6 AcDbBlockReference BLOCKS A$Cfdd7d71d ; 11978C AcDbMLeader 25DIMS ; 11978E AcDbLine SLAB SC ; 11978F AcDbMLeader 25DIMS ; 1197BB AcDbBlockReference..."
+        },
+        {
+          "n": 74,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $a2 \"text~^IL \" \"near=53777.7,-25569.8,4000\" -> $ila2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 4 of 500: 1101B8 IL 17.25 20TEXT ; 1155B6 IL 17.30 20TEXT ; 116A0E IL 18.10 20TEXT ; 116A3C IL 18.10 20TEXT"
+        },
+        {
+          "n": 75,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $b2 \"text~^IL \" \"near=53777.7,-25569.8,4000\" -> $ilb2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 2 of 34: 116BB6 IL 18.24 20TEXT ; 116BE4 IL 18.24 20TEXT"
+        },
+        {
+          "n": 76,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $ila2 handle -All -> $ha2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 1101B8 | 1155B6 | 116A0E | 116A3C"
+        },
+        {
+          "n": 77,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $ilb2 handle -All -> $hb2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 116BB6 | 116BE4"
+        },
+        {
+          "n": 78,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $a2 \"handle=1101B8\" -> $back_a",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 500: 1101B8 IL 17.25 20TEXT"
+        },
+        {
+          "n": 79,
+          "phase": "case",
+          "verb": "dist",
+          "text": "dist $back_a \"54327.72,-25217.56\" -> $ret_a",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "distance from object 1101B8 to 54327.72,-25217.56 = 0"
+        },
+        {
+          "n": 80,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $b2 \"handle=116BB6\" -> $back_b",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 34: 116BB6 IL 18.24 20TEXT"
+        },
+        {
+          "n": 81,
+          "phase": "case",
+          "verb": "dist",
+          "text": "dist $back_b \"53922.50,-25007.06\" -> $ret_b",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "distance from object 116BB6 to 53922.50,-25007.06 = 0"
+        },
+        {
+          "n": 82,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 0 -> $z2",
+          "ok": true,
+          "seconds": 10.7,
+          "evidence": "500 object(s) after index 0 (model space now 1034); by type: AcDbBlockReference 157; AcDbCircle 32; AcDbHatch 7; AcDbLine 58; AcDbMline 1; AcDbMText 30; AcDbPolyline 38; AcDbRotatedDimension 1; AcDbText 134; CeCvlPipeObject 42; first: 1003FA AcDbBlockReference XREF XW2614-Arch Survey ; 10040D AcDbBlockReference XREF XW2614-Arch Ground ; 10041A AcDbBlockReference XREF XW2614-Arch Site ; 10127D AcDbHatch HATCH 51 ; 10127E AcDbPolyline HATCHOUTLINE ; 10127F AcDbBlockReference BLOCKS A$C32C15792 ; 10128C AcDbMText 25TEXT THIS DRAWING IS TO BE READ IN CONJUNCTION WITH ARCHITECTURAL DOCUMENTATION. ; 10128E AcDbHatch HATCH 51 ; 10128F AcDbPolyline HATCHO..."
+        },
+        {
+          "n": 83,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $z2 \"handle=109E08\" -> $lab2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 500: 109E08 PIT LABEL STORMWATER PIT LABEL"
+        },
+        {
+          "n": 84,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $z2 \"handle=109E0F\" -> $cl2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 500: 109E0F CL 18.88 25TEXT"
+        },
+        {
+          "n": 85,
+          "phase": "case",
+          "verb": "dist",
+          "text": "dist $lab2 \"52570.89,-26238.29\" -> $ret_lab",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "distance from object 109E08 to 52570.89,-26238.29 = 0"
+        },
+        {
+          "n": 86,
+          "phase": "case",
+          "verb": "dist",
+          "text": "dist $cl2 \"54354.41,-24866.60\" -> $ret_cl",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "distance from object 109E0F to 54354.41,-24866.60 = 0"
+        },
+        {
+          "n": 87,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $a2 \"handle=1155B6\" -> $b1155",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 500: 1155B6 IL 17.30 20TEXT"
+        },
+        {
+          "n": 88,
+          "phase": "case",
+          "verb": "dist",
+          "text": "dist $b1155 \"52367.63,-25217.61\" -> $r1155",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "distance from object 1155B6 to 52367.63,-25217.61 = 0"
+        },
+        {
+          "n": 89,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $a2 \"handle=116A3C\" -> $b116a3c",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 500: 116A3C IL 18.10 20TEXT"
+        },
+        {
+          "n": 90,
+          "phase": "case",
+          "verb": "dist",
+          "text": "dist $b116a3c \"54262.93,-26095.53\" -> $r116a3c",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "distance from object 116A3C to 54262.93,-26095.53 = 0"
+        },
+        {
+          "n": 91,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $b2 \"handle=116BE4\" -> $b116be4",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 34: 116BE4 IL 18.24 20TEXT"
+        },
+        {
+          "n": 92,
+          "phase": "case",
+          "verb": "dist",
+          "text": "dist $b116be4 \"53376.61,-25031.45\" -> $r116be4",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "distance from object 116BE4 to 53376.61,-25031.45 = 0"
+        },
+        {
+          "n": 93,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $a2 \"handle=116A0E\" -> $b116a0e",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "selected 1 of 500: 116A0E IL 18.10 20TEXT"
+        },
+        {
+          "n": 94,
+          "phase": "case",
+          "verb": "dist",
+          "text": "dist $b116a0e \"53026.75,-26891.46\" -> $r116a0e",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "distance from object 116A0E to 53026.75,-26891.46 = 0"
+        },
+        {
+          "n": 95,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $z2 \"handle=109D56\" -> $u2_pit",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "selected 1 of 500: 109D56 PIT BLOCK 3 STORMWATER PIT"
+        },
+        {
+          "n": 96,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $u2_pit x -> $pit_x2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 53777.7261323596"
+        },
+        {
+          "n": 97,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $u2_pit y -> $pit_y2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'y' = -25569.8754300673"
+        },
+        {
+          "n": 98,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $lab2 x -> $lab_x2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 52570.8892399372"
+        },
+        {
+          "n": 99,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $lab2 y -> $lab_y2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'y' = -26238.2873795918"
+        },
+        {
+          "n": 100,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $cl2 x -> $cl_x2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 54354.4091651018"
+        },
+        {
+          "n": 101,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $cl2 y -> $cl_y2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'y' = -24866.5973616254"
+        },
+        {
+          "n": 102,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $back_a x -> $a1101_x2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 54327.7237944863"
+        },
+        {
+          "n": 103,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $back_a y -> $a1101_y2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'y' = -25217.5591057691"
+        },
+        {
+          "n": 104,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $back_b x -> $b116b_x2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 53922.4981693185"
+        },
+        {
+          "n": 105,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $back_b y -> $b116b_y2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'y' = -25007.0580650023"
+        },
+        {
+          "n": 106,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $b1155 x -> $i1155_x2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 52367.6304628793"
+        },
+        {
+          "n": 107,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $b1155 y -> $i1155_y2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'y' = -25217.6066650945"
+        },
+        {
+          "n": 108,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $b116a3c x -> $i116a3c_x2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 54262.9263743631"
+        },
+        {
+          "n": 109,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $b116a3c y -> $i116a3c_y2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'y' = -26095.5347073798"
+        },
+        {
+          "n": 110,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $b116be4 x -> $i116be4_x2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 53376.6145419975"
+        },
+        {
+          "n": 111,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $b116be4 y -> $i116be4_y2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'y' = -25031.4544549785"
+        },
+        {
+          "n": 112,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $b116a0e x -> $i116a0e_x2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 53026.7474394765"
+        },
+        {
+          "n": 113,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $b116a0e y -> $i116a0e_y2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'y' = -26891.457980793"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "number $s116a0e = 0 +- 0.5",
+          "ok": true,
+          "expected": "= 0",
+          "actual": "0",
+          "evidence": "$s116a0e = 0 (expected = 0 +- 0.5)"
+        },
+        {
+          "n": 2,
+          "text": "number $r1155 = 0 +- 0.5",
+          "ok": true,
+          "expected": "= 0",
+          "actual": "0",
+          "evidence": "$r1155 = 0 (expected = 0 +- 0.5)"
+        },
+        {
+          "n": 3,
+          "text": "number $r116a3c = 0 +- 0.5",
+          "ok": true,
+          "expected": "= 0",
+          "actual": "0",
+          "evidence": "$r116a3c = 0 (expected = 0 +- 0.5)"
+        },
+        {
+          "n": 4,
+          "text": "number $r116be4 = 0 +- 0.5",
+          "ok": true,
+          "expected": "= 0",
+          "actual": "0",
+          "evidence": "$r116be4 = 0 (expected = 0 +- 0.5)"
+        },
+        {
+          "n": 5,
+          "text": "number $r116a0e = 0 +- 0.5",
+          "ok": true,
+          "expected": "= 0",
+          "actual": "0",
+          "evidence": "$r116a0e = 0 (expected = 0 +- 0.5)"
+        },
+        {
+          "n": 6,
+          "text": "number $mv_116a0e = 2000 +- 150",
+          "ok": true,
+          "expected": "= 2000",
+          "actual": "1894.2",
+          "evidence": "$mv_116a0e = 1894.2 (expected = 2000 +- 150)"
+        },
+        {
+          "n": 7,
+          "text": "number $lab_old = 0 +- 0.5",
+          "ok": true,
+          "expected": "= 0",
+          "actual": "0",
+          "evidence": "$lab_old = 0 (expected = 0 +- 0.5)"
+        },
+        {
+          "n": 8,
+          "text": "number $cl_old = 0 +- 0.5",
+          "ok": true,
+          "expected": "= 0",
+          "actual": "0",
+          "evidence": "$cl_old = 0 (expected = 0 +- 0.5)"
+        },
+        {
+          "n": 9,
+          "text": "number $mv_lab = 2000 +- 150",
+          "ok": true,
+          "expected": "= 2000",
+          "actual": "2000",
+          "evidence": "$mv_lab = 2000 (expected = 2000 +- 150)"
+        },
+        {
+          "n": 10,
+          "text": "number $mv_cl = 2000 +- 150",
+          "ok": true,
+          "expected": "= 2000",
+          "actual": "2000",
+          "evidence": "$mv_cl = 2000 (expected = 2000 +- 150)"
+        },
+        {
+          "n": 11,
+          "text": "number $ret_lab = 0 +- 0.5",
+          "ok": true,
+          "expected": "= 0",
+          "actual": "0",
+          "evidence": "$ret_lab = 0 (expected = 0 +- 0.5)"
+        },
+        {
+          "n": 12,
+          "text": "number $ret_cl = 0 +- 0.5",
+          "ok": true,
+          "expected": "= 0",
+          "actual": "0",
+          "evidence": "$ret_cl = 0 (expected = 0 +- 0.5)"
+        },
+        {
+          "n": 13,
+          "text": "record $mv_lab \"how far the pit name label (109E08) moved with the pit (mm)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "2000",
+          "evidence": "RECORDED, not judged: how far the pit name label (109E08) moved with the pit (mm) = 2000"
+        },
+        {
+          "n": 14,
+          "text": "record $mv_cl \"how far the cover level text (109E0F) moved with the pit (mm)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "2000",
+          "evidence": "RECORDED, not judged: how far the cover level text (109E0F) moved with the pit (mm) = 2000"
+        },
+        {
+          "n": 15,
+          "text": "number $mv_1155 = 2000 +- 150",
+          "ok": true,
+          "expected": "= 2000",
+          "actual": "1899.4",
+          "evidence": "$mv_1155 = 1899.4 (expected = 2000 +- 150)"
+        },
+        {
+          "n": 16,
+          "text": "number $mv_116a3c = 2000 +- 150",
+          "ok": true,
+          "expected": "= 2000",
+          "actual": "1925.7",
+          "evidence": "$mv_116a3c = 1925.7 (expected = 2000 +- 150)"
+        },
+        {
+          "n": 17,
+          "text": "number $mv_116be4 = 2000 +- 150",
+          "ok": true,
+          "expected": "= 2000",
+          "actual": "1999.1",
+          "evidence": "$mv_116be4 = 1999.1 (expected = 2000 +- 150)"
+        },
+        {
+          "n": 18,
+          "text": "record $ret_lab \"how far the pit name label is from its original place after U (mm)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "0",
+          "evidence": "RECORDED, not judged: how far the pit name label is from its original place after U (mm) = 0"
+        },
+        {
+          "n": 19,
+          "text": "record $ret_cl \"how far the cover level text is from its original place after U (mm)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "0",
+          "evidence": "RECORDED, not judged: how far the cover level text is from its original place after U (mm) = 0"
+        },
+        {
+          "n": 20,
+          "text": "matches $pit0 \"insertion\\W+53777\\.7\\d*,-25569\\.8\"",
+          "ok": true,
+          "expected": "matches /insertion\\W+53777\\.7\\d*,-25569\\.8/",
+          "actual": "{\"handle\":\"109D56\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U182\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[53777.726132359574,-25569.87543006733,0.0],\"rotation\":0.0,\"xscale\":...",
+          "evidence": "matched 'insertion\":[53777.726132359574,-25569.8'"
+        },
+        {
+          "n": 21,
+          "text": "contains $mv \"1 found\"",
+          "ok": true,
+          "expected": "contains '1 found'",
+          "actual": "Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,2000 | [CE Civil] pipe P3 -> P2 label: no...",
+          "evidence": "found '1 found' in: Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,2..."
+        },
+        {
+          "n": 22,
+          "text": "matches $pit1 \"insertion\\W+53777\\.7\\d*,-23569\\.8\"",
+          "ok": true,
+          "expected": "matches /insertion\\W+53777\\.7\\d*,-23569\\.8/",
+          "actual": "{\"handle\":\"109D56\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U182\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[53777.726132359574,-23569.87543006733,0.0],\"rotation\":0.0,\"xscale\":...",
+          "evidence": "matched 'insertion\":[53777.726132359574,-23569.8'"
+        },
+        {
+          "n": 23,
+          "text": "equals $win1 $win0",
+          "ok": true,
+          "expected": "Autodesk AutoCAD 2027 - [CLDV30441141_B1.dwg]",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30441141_B1.dwg]",
+          "evidence": "value 'Autodesk AutoCAD 2027 - [CLDV30441141_B1.dwg]' (expected 'Autodesk AutoCAD 2027 - [CLDV30441141_B1.dwg]')"
+        },
+        {
+          "n": 24,
+          "text": "contains $u1 \"MOVE\"",
+          "ok": true,
+          "expected": "contains 'MOVE'",
+          "actual": "Command: | Command: U | MOVE",
+          "evidence": "found 'MOVE' in: Command: | Command: U | MOVE"
+        },
+        {
+          "n": 25,
+          "text": "matches $pit2 \"insertion\\W+53777\\.7\\d*,-25569\\.8\"",
+          "ok": true,
+          "expected": "matches /insertion\\W+53777\\.7\\d*,-25569\\.8/",
+          "actual": "{\"handle\":\"109D56\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"*U182\",\"effective_name\":\"PIT BLOCK 3\",\"insertion\":[53777.726132359574,-25569.87543006733,0.0],\"rotation\":0.0,\"xscale\":...",
+          "evidence": "matched 'insertion\":[53777.726132359574,-25569.8'"
+        },
+        {
+          "n": 26,
+          "text": "equals $win2 $win0",
+          "ok": true,
+          "expected": "Autodesk AutoCAD 2027 - [CLDV30441141_B1.dwg]",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30441141_B1.dwg]",
+          "evidence": "value 'Autodesk AutoCAD 2027 - [CLDV30441141_B1.dwg]' (expected 'Autodesk AutoCAD 2027 - [CLDV30441141_B1.dwg]')"
+        },
+        {
+          "n": 27,
+          "text": "count $ila0 = 4",
+          "ok": true,
+          "expected": "count = 4",
+          "actual": "4",
+          "evidence": "count of $ila0 = 4 (expected = 4)"
+        },
+        {
+          "n": 28,
+          "text": "count $ilb0 = 2",
+          "ok": true,
+          "expected": "count = 2",
+          "actual": "2",
+          "evidence": "count of $ilb0 = 2 (expected = 2)"
+        },
+        {
+          "n": 29,
+          "text": "equals $ha1 $ha0",
+          "ok": true,
+          "expected": "1101B8 | 1155B6 | 116A0E | 116A3C",
+          "actual": "1101B8 | 1155B6 | 116A0E | 116A3C",
+          "evidence": "value '1101B8 | 1155B6 | 116A0E | 116A3C' (expected '1101B8 | 1155B6 | 116A0E | 116A3C')"
+        },
+        {
+          "n": 30,
+          "text": "equals $hb1 $hb0",
+          "ok": true,
+          "expected": "116BB6 | 116BE4",
+          "actual": "116BB6 | 116BE4",
+          "evidence": "value '116BB6 | 116BE4' (expected '116BB6 | 116BE4')"
+        },
+        {
+          "n": 31,
+          "text": "number $moved_a = 2000 +- 150",
+          "ok": true,
+          "expected": "= 2000",
+          "actual": "1990.3",
+          "evidence": "$moved_a = 1990.3 (expected = 2000 +- 150)"
+        },
+        {
+          "n": 32,
+          "text": "number $moved_b = 2000 +- 150",
+          "ok": true,
+          "expected": "= 2000",
+          "actual": "1988",
+          "evidence": "$moved_b = 1988 (expected = 2000 +- 150)"
+        },
+        {
+          "n": 33,
+          "text": "equals $ha2 $ha0",
+          "ok": true,
+          "expected": "1101B8 | 1155B6 | 116A0E | 116A3C",
+          "actual": "1101B8 | 1155B6 | 116A0E | 116A3C",
+          "evidence": "value '1101B8 | 1155B6 | 116A0E | 116A3C' (expected '1101B8 | 1155B6 | 116A0E | 116A3C')"
+        },
+        {
+          "n": 34,
+          "text": "equals $hb2 $hb0",
+          "ok": true,
+          "expected": "116BB6 | 116BE4",
+          "actual": "116BB6 | 116BE4",
+          "evidence": "value '116BB6 | 116BE4' (expected '116BB6 | 116BE4')"
+        },
+        {
+          "n": 35,
+          "text": "number $ret_a = 0 +- 0.5",
+          "ok": true,
+          "expected": "= 0",
+          "actual": "0",
+          "evidence": "$ret_a = 0 (expected = 0 +- 0.5)"
+        },
+        {
+          "n": 36,
+          "text": "number $ret_b = 0 +- 0.5",
+          "ok": true,
+          "expected": "= 0",
+          "actual": "0",
+          "evidence": "$ret_b = 0 (expected = 0 +- 0.5)"
+        },
+        {
+          "n": 37,
+          "text": "record $ret_a \"how far text 1101B8 is from its original place after U (mm)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "0",
+          "evidence": "RECORDED, not judged: how far text 1101B8 is from its original place after U (mm) = 0"
+        },
+        {
+          "n": 38,
+          "text": "record $ret_b \"how far text 116BB6 is from its original place after U (mm)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "0",
+          "evidence": "RECORDED, not judged: how far text 116BB6 is from its original place after U (mm) = 0"
+        },
+        {
+          "n": 39,
+          "text": "record $mv \"FULL what MOVE printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,2000 | [CE Civil] pipe P3 -> P2 label: no clear spot among its usual positions, left where it is (on \"SC\").",
+          "evidence": "RECORDED, not judged: FULL what MOVE printed = Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,2000 | [CE Civil] pipe P3 -> P2 label: no clear spot among its usual positions, left where it is (on \"SC\")."
+        },
+        {
+          "n": 40,
+          "text": "record $win1 \"windows open after the MOVE\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30441141_B1.dwg]",
+          "evidence": "RECORDED, not judged: windows open after the MOVE = Autodesk AutoCAD 2027 - [CLDV30441141_B1.dwg]"
+        },
+        {
+          "n": 41,
+          "text": "record $ha0 \"handles of the invert texts within 4000 mm of the pit before the move\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "1101B8 | 1155B6 | 116A0E | 116A3C",
+          "evidence": "RECORDED, not judged: handles of the invert texts within 4000 mm of the pit before the move = 1101B8 | 1155B6 | 116A0E | 116A3C"
+        },
+        {
+          "n": 42,
+          "text": "record $moved_a \"how far text 1101B8 moved (mm)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "1990.3",
+          "evidence": "RECORDED, not judged: how far text 1101B8 moved (mm) = 1990.3"
+        },
+        {
+          "n": 43,
+          "text": "record $moved_b \"how far text 116BB6 moved (mm)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "1988",
+          "evidence": "RECORDED, not judged: how far text 116BB6 moved (mm) = 1988"
+        },
+        {
+          "n": 44,
+          "text": "number $pit_x2 = $pit_x0 +- 0.001",
+          "ok": true,
+          "expected": "= 53777.7261323596",
+          "actual": "53777.7261323596",
+          "evidence": "$pit_x2 = 53777.7261323596 (expected = 53777.7261323596 +- 0.001)"
+        },
+        {
+          "n": 45,
+          "text": "number $pit_y2 = $pit_y0 +- 0.001",
+          "ok": true,
+          "expected": "= -25569.8754300673",
+          "actual": "-25569.8754300673",
+          "evidence": "$pit_y2 = -25569.8754300673 (expected = -25569.8754300673 +- 0.001)"
+        },
+        {
+          "n": 46,
+          "text": "number $lab_x2 = $lab_x0 +- 0.001",
+          "ok": true,
+          "expected": "= 52570.8892399372",
+          "actual": "52570.8892399372",
+          "evidence": "$lab_x2 = 52570.8892399372 (expected = 52570.8892399372 +- 0.001)"
+        },
+        {
+          "n": 47,
+          "text": "number $lab_y2 = $lab_y0 +- 0.001",
+          "ok": true,
+          "expected": "= -26238.2873795918",
+          "actual": "-26238.2873795918",
+          "evidence": "$lab_y2 = -26238.2873795918 (expected = -26238.2873795918 +- 0.001)"
+        },
+        {
+          "n": 48,
+          "text": "number $cl_x2 = $cl_x0 +- 0.001",
+          "ok": true,
+          "expected": "= 54354.4091651018",
+          "actual": "54354.4091651018",
+          "evidence": "$cl_x2 = 54354.4091651018 (expected = 54354.4091651018 +- 0.001)"
+        },
+        {
+          "n": 49,
+          "text": "number $cl_y2 = $cl_y0 +- 0.001",
+          "ok": true,
+          "expected": "= -24866.5973616254",
+          "actual": "-24866.5973616254",
+          "evidence": "$cl_y2 = -24866.5973616254 (expected = -24866.5973616254 +- 0.001)"
+        },
+        {
+          "n": 50,
+          "text": "number $a1101_x2 = $a1101_x0 +- 0.001",
+          "ok": true,
+          "expected": "= 54327.7237944863",
+          "actual": "54327.7237944863",
+          "evidence": "$a1101_x2 = 54327.7237944863 (expected = 54327.7237944863 +- 0.001)"
+        },
+        {
+          "n": 51,
+          "text": "number $a1101_y2 = $a1101_y0 +- 0.001",
+          "ok": true,
+          "expected": "= -25217.5591057691",
+          "actual": "-25217.5591057691",
+          "evidence": "$a1101_y2 = -25217.5591057691 (expected = -25217.5591057691 +- 0.001)"
+        },
+        {
+          "n": 52,
+          "text": "number $b116b_x2 = $b116b_x0 +- 0.001",
+          "ok": true,
+          "expected": "= 53922.4981693185",
+          "actual": "53922.4981693185",
+          "evidence": "$b116b_x2 = 53922.4981693185 (expected = 53922.4981693185 +- 0.001)"
+        },
+        {
+          "n": 53,
+          "text": "number $b116b_y2 = $b116b_y0 +- 0.001",
+          "ok": true,
+          "expected": "= -25007.0580650023",
+          "actual": "-25007.0580650023",
+          "evidence": "$b116b_y2 = -25007.0580650023 (expected = -25007.0580650023 +- 0.001)"
+        },
+        {
+          "n": 54,
+          "text": "number $i1155_x2 = $i1155_x0 +- 0.001",
+          "ok": true,
+          "expected": "= 52367.6304628793",
+          "actual": "52367.6304628793",
+          "evidence": "$i1155_x2 = 52367.6304628793 (expected = 52367.6304628793 +- 0.001)"
+        },
+        {
+          "n": 55,
+          "text": "number $i1155_y2 = $i1155_y0 +- 0.001",
+          "ok": true,
+          "expected": "= -25217.6066650945",
+          "actual": "-25217.6066650945",
+          "evidence": "$i1155_y2 = -25217.6066650945 (expected = -25217.6066650945 +- 0.001)"
+        },
+        {
+          "n": 56,
+          "text": "number $i116a3c_x2 = $i116a3c_x0 +- 0.001",
+          "ok": true,
+          "expected": "= 54262.9263743631",
+          "actual": "54262.9263743631",
+          "evidence": "$i116a3c_x2 = 54262.9263743631 (expected = 54262.9263743631 +- 0.001)"
+        },
+        {
+          "n": 57,
+          "text": "number $i116a3c_y2 = $i116a3c_y0 +- 0.001",
+          "ok": true,
+          "expected": "= -26095.5347073798",
+          "actual": "-26095.5347073798",
+          "evidence": "$i116a3c_y2 = -26095.5347073798 (expected = -26095.5347073798 +- 0.001)"
+        },
+        {
+          "n": 58,
+          "text": "number $i116be4_x2 = $i116be4_x0 +- 0.001",
+          "ok": true,
+          "expected": "= 53376.6145419975",
+          "actual": "53376.6145419975",
+          "evidence": "$i116be4_x2 = 53376.6145419975 (expected = 53376.6145419975 +- 0.001)"
+        },
+        {
+          "n": 59,
+          "text": "number $i116be4_y2 = $i116be4_y0 +- 0.001",
+          "ok": true,
+          "expected": "= -25031.4544549785",
+          "actual": "-25031.4544549785",
+          "evidence": "$i116be4_y2 = -25031.4544549785 (expected = -25031.4544549785 +- 0.001)"
+        },
+        {
+          "n": 60,
+          "text": "number $i116a0e_x2 = $i116a0e_x0 +- 0.001",
+          "ok": true,
+          "expected": "= 53026.7474394765",
+          "actual": "53026.7474394765",
+          "evidence": "$i116a0e_x2 = 53026.7474394765 (expected = 53026.7474394765 +- 0.001)"
+        },
+        {
+          "n": 61,
+          "text": "number $i116a0e_y2 = $i116a0e_y0 +- 0.001",
+          "ok": true,
+          "expected": "= -26891.457980793",
+          "actual": "-26891.457980793",
+          "evidence": "$i116a0e_y2 = -26891.457980793 (expected = -26891.457980793 +- 0.001)"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 71 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-10-30 04:43:16",
+      "session_id": "RUN-20261030-0441-C3.0.86-a80X8-s1",
+      "acceptance": {
+        "state": "ACCEPTED-READY",
+        "reasons": [],
+        "passing_sessions_on_this_build": 3,
+        "red_before": true
+      }
+    },
+    {
+      "id": "R21",
+      "proves_bugs": "",
+      "title": "CDCHECK All and Problems repeat the expected totals; object count and file on disk stay unchanged",
+      "kind": "deterministic",
+      "order": 10,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "CDCHECK fixed-fixture totals baseline only; not D28, Checks palette acceptance or whole BUG-461/BUG-809",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 24 Oct 2026 with triage group C1 (BUG-461 and BUG-809 item 1 as written in BUG_CARPARK.md) and the wording CDCHECK printed on build 3.0.73: only the totals line, that both answers print it and that the drawing and the file are unchanged are checked; BUG-461 sentence and the palette counts are not compared.",
+      "variant_of": "",
+      "expected": "CDCHECK with the answer All prints '[CE] CDCHECK: 212 objects, 184 connections: 179 Connected, 1 Possible, 4 Unresolved, 0 Not Connected' and the same totals line again for Problems; 179 + 1 + 4 + 0 = 184; the number of objects in the drawing and the file on disk are unchanged afterwards; no CE window stays open.",
+      "why_not_unit": "The totals come from the real drawing's links and the sentence is only seen on the live command line.",
+      "not_automated": [
+        "Whether the Checks palette (\"What CE Found\") shows the same counts as CDCHECK (BUG-809 item 1) is not read here: the palette is not driven.",
+        "No complete in-memory drawing comparison, action/failure route or palette-count comparison is made (cx_cr05, run B5). Moving an object or changing a stored level would keep the object count and the unsaved file: the case does not prove the drawing is unchanged beyond those two reads.",
+        "The sentence \"Nothing in the drawing has been changed so far.\" is asserted in the Esc reply of both answers (run B5); BUG-461 action and failure routes are not driven."
+      ],
+      "file_sha256": "2462CD753D2920F4E412A964C10EBADA700362BD8E32C1766241BC260531B4AB",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "command line holds 0 line(s) containing '[CE] CDCHECK: 212 objects, 184 connections: 179 Connected, 1 Possible, 4 Unresolved, 0 Not Connected' (expected 2)",
+      "started": "2026-10-30 04:43:16",
+      "seconds": 36.4,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "copy CLDV30441141_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $cnt0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDCHECK{NL}\" -Force -> $all1",
+          "ok": true,
+          "seconds": 7.6,
+          "evidence": "typed 'CDCHECK': Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: | [CE] CDCHECK: 212 objects, 187 connections: 142 Connected, 1 Possible, 44 Unresolved, 0 Not Connected, 0 Unknow..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $all_e",
+          "ok": true,
+          "seconds": 4.2,
+          "evidence": "esc-prompt: [CE] Pipe end 19. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 20. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 21. Pipe 1..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "history-tail",
+          "text": "history-tail -Index 40 -> $h_all",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "history: 54. An unnamed pipe flows to WT8: Connected | 55. An unnamed pipe flows from WT4: Connected | 56. An unnamed pipe flows from AGI: Connected | 57. An unnamed pipe flows from WT12: Connected | 58. An unnamed pipe flows from WT11: Connected | ..."
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDCHECK{NL}Problems\" -Force -> $prob1",
+          "ok": true,
+          "seconds": 7.5,
+          "evidence": "typed 'CDCHECK Problems': Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: Problems | [CE] CDCHECK: 212 objects, 187 connections: 142 Connected, 1 Possible, 44 Unresolved, 0 Not..."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $prob_e",
+          "ok": true,
+          "seconds": 2.7,
+          "evidence": "esc-prompt: [CE] Pipe end 19. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 20. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 21. Pipe 1..."
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $cnt1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30441141_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history count \"[CE] CDCHECK: 212 objects, 184 connections: 179 Connected, 1 Possible, 4 Unresolved, 0 Not Connected\" = 2",
+          "ok": false,
+          "expected": "2 line(s) with '[CE] CDCHECK: 212 objects, 184 connections: 179 Connected, 1 Possible, 4 Unresolved, 0 Not Connected'",
+          "actual": "0",
+          "evidence": "command line holds 0 line(s) containing '[CE] CDCHECK: 212 objects, 184 connections: 179 Connected, 1 Possible, 4 Unresolved, 0 Not Connected' (expected 2)"
+        },
+        {
+          "n": 2,
+          "text": "contains $all1 \"[CE] CDCHECK: 212 objects, 184 connections: 179 Connected, 1 Possible, 4 Unresolved, 0 Not Connected\"",
+          "ok": false,
+          "expected": "contains '[CE] CDCHECK: 212 objects, 184 connections: 179 Connected, 1 Possible, 4 Unresolved, 0 Not Connected'",
+          "actual": "Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: | [CE] CDCHECK: 212 objects, 187 connections: 142 Connected, 1 Possible, 44 Unresolved, 0 Not...",
+          "evidence": "'[CE] CDCHECK: 212 objects, 184 connections: 179 Connected, 1 Possible, 4 Unresolved, 0 Not Connected' is NOT in: Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: | [CE] CDCHECK: 212 objects, 187 connections: 142 Connected, 1 Possible, 44 Unresolved, 0 Not..."
+        },
+        {
+          "n": 3,
+          "text": "contains $prob1 \"[CE] CDCHECK: 212 objects, 184 connections: 179 Connected, 1 Possible, 4 Unresolved, 0 Not Connected\"",
+          "ok": false,
+          "expected": "contains '[CE] CDCHECK: 212 objects, 184 connections: 179 Connected, 1 Possible, 4 Unresolved, 0 Not Connected'",
+          "actual": "Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: Problems | [CE] CDCHECK: 212 objects, 187 connections: 142 Connected, 1 Possible, ...",
+          "evidence": "'[CE] CDCHECK: 212 objects, 184 connections: 179 Connected, 1 Possible, 4 Unresolved, 0 Not Connected' is NOT in: Command: | Command: CDCHECK | CE check: show all connections, problems only, or save as CSV [All/Problems/Csv] <All>: Problems | [CE] CDCHECK: 212 objects, 187 connections: 142 Connected, 1 Possible, ..."
+        },
+        {
+          "n": 4,
+          "text": "contains $all_e \"Nothing in the drawing has been changed so far.\"",
+          "ok": true,
+          "expected": "contains 'Nothing in the drawing has been changed so far.'",
+          "actual": "[CE] Pipe end 19. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 20. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE]...",
+          "evidence": "found 'Nothing in the drawing has been changed so far.' in: [CE] Pipe end 19. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 20. Pipe 150: one end is not connected (the star..."
+        },
+        {
+          "n": 5,
+          "text": "contains $prob_e \"Nothing in the drawing has been changed so far.\"",
+          "ok": true,
+          "expected": "contains 'Nothing in the drawing has been changed so far.'",
+          "actual": "[CE] Pipe end 19. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 20. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE]...",
+          "evidence": "found 'Nothing in the drawing has been changed so far.' in: [CE] Pipe end 19. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 20. Pipe 150: one end is not connected (the star..."
+        },
+        {
+          "n": 6,
+          "text": "not-contains $win_end \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30441141_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV30441141_B1.dwg]"
+        },
+        {
+          "n": 7,
+          "text": "equals $cnt1 $cnt0",
+          "ok": true,
+          "expected": "1034",
+          "actual": "1034",
+          "evidence": "value '1034' (expected '1034')"
+        },
+        {
+          "n": 8,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 9,
+          "text": "record $h_all \"FULL the last 40 lines CDCHECK printed after All\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "54. An unnamed pipe flows to WT8: Connected | 55. An unnamed pipe flows from WT4: Connected | 56. An unnamed pipe flows from AGI: Connected | 57. An unnamed pipe flows from WT12: Connected | 58. An unnamed pipe flows from WT11: Connected | 59. An unnamed pipe flows from AGI: Connected | 60. An unnamed pipe flows from WT3: Connected | ... 127 more in the saved list. | [CE] Pipe-to-pit fit: not checked for 35 pipe ends (older drawing - no pit and pipe fit sizes recorded yet) | [CE] FALL arrow direction: 5 arrow(s) point away from their nearest grated pit. | [CE] Fall 1. FALL arrow points away from the nearest grated pit P4 (off by 168°). Check the fall direction or move the arrow. | [CE] Fall 2. FALL arrow points away from the nearest grated pit P3 (off by 173°). Check the fall direction or move the arrow. | [CE] Fall 3. FALL arrow points away from the nearest grated pit P2 (off by 173°). Check the fall direction or move the arrow. | [CE] Fall 4. FALL arrow points away from the nearest grated pit P2 (off by 172°). Check the fall direction or move the arrow. | [CE] Fall 5. FALL arrow points away from the nearest grated pit P1 (off by 172°). Check the fall direction or move the arrow. | [CE] Pipe ends: 22 with an open end, 0 branch(es) above their main. | [CE] Pipe end 1. Pipe 450: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 2. Pipe 450: one end is not connected (the end). Connect it, or leave it open. | [CE] Pipe end 3. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 4. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 5. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 6. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 7. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 8. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 9. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 10. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 11. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 12. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 13. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 14. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 15. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 16. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 17. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 18. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 19. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 20. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 21. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 22. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Full list saved: C:\\Users\\TimothyBrand\\AppData\\Roaming\\CE_CVL_SUITE\\logs\\cdcheck-CLDV30441141_B1-20261029-174326.txt. Nothing in the drawing has been changed so far. | Jump to item number (1-60) or [Ends]: *Cancel*",
+          "evidence": "RECORDED, not judged: FULL the last 40 lines CDCHECK printed after All = 54. An unnamed pipe flows to WT8: Connected | 55. An unnamed pipe flows from WT4: Connected | 56. An unnamed pipe flows from AGI: Connected | 57. An unnamed pipe flows from WT12: Connected | 58. An unnamed pipe flows from WT11: Connected | 59. An unnamed pipe flows from AGI: Connected | 60. An unnamed pipe flows from WT3: Connected | ... 127 more in the saved list. | [CE] Pipe-to-pit fit: not checked for 35 pipe ends (older drawing - no pit and pipe fit sizes recorded yet) | [CE] FALL arrow direction: 5 arrow(s) point away from their nearest grated pit. | [CE] Fall 1. FALL arrow points away from the nearest grated pit P4 (off by 168°). Check the fall direction or move the arrow. | [CE] Fall 2. FALL arrow points away from the nearest grated pit P3 (off by 173°). Check the fall direction or move the arrow. | [CE] Fall 3. FALL arrow points away from the nearest grated pit P2 (off by 173°). Check the fall direction or move the arrow. | [CE] Fall 4. FALL arrow points away from the nearest grated pit P2 (off by 172°). Check the fall direction or move the arrow. | [CE] Fall 5. FALL arrow points away from the nearest grated pit P1 (off by 172°). Check the fall direction or move the arrow. | [CE] Pipe ends: 22 with an open end, 0 branch(es) above their main. | [CE] Pipe end 1. Pipe 450: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 2. Pipe 450: one end is not connected (the end). Connect it, or leave it open. | [CE] Pipe end 3. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 4. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 5. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 6. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 7. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 8. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 9. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 10. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 11. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 12. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 13. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 14. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 15. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 16. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 17. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 18. Pipe 150: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 19. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 20. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 21. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 22. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Full list saved: C:\\Users\\TimothyBrand\\AppData\\Roaming\\CE_CVL_SUITE\\logs\\cdcheck-CLDV30441141_B1-20261029-174326.txt. Nothing in the drawing has been changed so far. | Jump to item number (1-60) or [Ends]: *Cancel*"
+        },
+        {
+          "n": 10,
+          "text": "record $prob_e \"FULL what the Esc after Problems printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "[CE] Pipe end 19. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 20. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 21. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 22. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Full list saved: C:\\Users\\TimothyBrand\\AppData\\Roaming\\CE_CVL_SUITE\\logs\\cdcheck-CLDV30441141_B1-20261029-174341.txt. Nothing in the drawing has been changed so far. | Jump to item number (1-44) or [Ends]: *Cancel*",
+          "evidence": "RECORDED, not judged: FULL what the Esc after Problems printed = [CE] Pipe end 19. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 20. Pipe 150: one end is not connected (the start). Connect it, or leave it open. | [CE] Pipe end 21. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Pipe end 22. Pipe 100: both ends are not connected. Connect it, or leave it open. | [CE] Full list saved: C:\\Users\\TimothyBrand\\AppData\\Roaming\\CE_CVL_SUITE\\logs\\cdcheck-CLDV30441141_B1-20261029-174341.txt. Nothing in the drawing has been changed so far. | Jump to item number (1-44) or [Ends]: *Cancel*"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV30441141_B1_18e991fcd.log)",
+        "Civil CE log: 6 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDCHECK cancelled 8751 ms ; Command outcome: CDCHECK cancelled 8153 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-30 04:43:52",
+      "session_id": "RUN-20261030-0441-C3.0.86-a80X8-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": true
+      }
+    }
+  ]
+}

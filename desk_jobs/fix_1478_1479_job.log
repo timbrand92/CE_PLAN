@@ -1,0 +1,14 @@
+Both PRs are fixed and pushed. Neither has been tested in AutoCAD.
+
+1. **#1478 is now at 66744813.**
+   - CDTAG's refusal for "another kind of object" no longer names CDFIXTAGS, and neither line says "pit or pipe" any more.
+   - The new CDTAG wording test failed on the old wording, then passed.
+   - The focused net10 Release run passed 364 of 364, and net48 compiles.
+2. **#1479 is now at 89f8ac9d.**
+   - I merged the installed line into it. Only `REGRESSION_LOG.md` conflicted, and both sides were kept.
+   - A detention pipe with no length still gets the "not known" row, which now shows its size and the range.
+   - The new test failed on the old wording, then passed. The focused net10 Release run passed 139 of 139, and net48 compiles.
+
+I did not run the Installer tests, which neither PR touches. The runs were focused, so the full suite and its "thousands of tests" count were not checked.
+
+Both PRs have the "needs Opus re-review" comment and the log entries (1356–1358) are pushed. Tim's settings files are unchanged. Nothing was closed, retargeted or merged.

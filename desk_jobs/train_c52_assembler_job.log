@@ -1,0 +1,13 @@
+Train C-52 is assembled and the report is pushed. The remaining worktree match for "c52" is another agent's, not mine.
+
+- **Branch:** `claude/rel-20261020f`, head `5bc96167`, pushed.
+- **Merged:** only #1485 (BUG-141 text obstacle), live head `b56839b8`. It has no Opus review, so the finalizer must review it. It touches nothing in Shared.
+- **Build:** whole solution Release, 0 errors.
+- **Tests:**
+  - Civil net10: 18,893 of 18,913 pass; the 1 failure is the known Glen Eira test.
+  - Manager net10: 824 of 824.
+  - Civil net48 focused: 221 of 222; the 1 failure is the same Bug141 test that has failed since C-49.
+- **Settings:** your four settings files are unchanged.
+- **Cleanup:** my worktree and scratch folders are removed.
+
+Report: `C:\CE_PLAN\areas\release-v3-colleagues-TRAIN_C52_ASSEMBLY_REPORT_2026-10-20.md`

@@ -1,0 +1,21 @@
+Run 47 is done and the report is pushed to `C:\CE_PLAN` (commit f11fa657). Two results need your attention: BUG-861 reproduced in one typed run, and U after a re-read of CDCHECKIGNORE doesn't undo the ignore.
+
+**Totals:** PASS 16, FAIL 1, BLOCKED 1, UNPROVEN 9, plus findings. I used the full 90 counted calls and 16 minutes.
+
+1. **CDCHECKIGNORE with the switch off:** PASS. CE said "Ignoring a finding is switched off in CE Settings. Nothing was changed." with no question.
+2. **CDCHECKIGNORE with the switch on:** PASS for Ignore, Un-ignore and Escape.
+   - **Ignore:** one finding (WT4) dropped off the list and the "more" count fell from 344 to 343.
+   - **Un-ignore:** CE printed "Brought back: unnamed pipe and WT4".
+   - **U:** one U straight after an ignore puts the finding back. If you list the findings again first, even ending it with Escape, U does not undo the ignore. I think each re-read leaves its own undo step, but I haven't proved that.
+3. **DBMOD:** it read 1 throughout, so it couldn't show the write.
+4. **BUG-861 (typed part only):** run A kept REDO ("Everything has been redone"). Run B lost it ("Nothing to redo") after a typed pick of pit P3. The only CE line I saw between the U and the failed REDO was a grip-probe line at the pick. BUG-861 stays open. I can't say whether the pick or the second open drawing caused it, because my control run wedged AutoCAD. The mouse and right-click runs are left to Codex V10-05.
+5. **Outcome lines:** CDTWL "completed", CDTIDYLABELS "cancelled", CDEDIT "completed". CSREOBAR still writes no line.
+6. **Regressions:** quick edits, the BUG-856 preview, Recover Inverts, the CDTWL freeboard lines, the Edit Pipe cascade with U and REDO, and CSREOBAR all pass. The cascade Apply press reported a HARD TIMEOUT even though the update had been applied. CDSYNC with the Pit Schedule compare was not run (out of calls).
+7. **Wedge:** a typed LISP control line froze AutoCAD, and only `quit -Kill` ended it. It killed only the AutoCAD the driver launched.
+8. **Settings and driver:** installed Civil 3.0.70, Manager 1.1.70 and Structural 1.0.121. All four settings files end at their start hashes. The driver hashes are unchanged.
+9. **Copies to delete:** the CLD471, CLD472 and CLD473 files in `C:\ce_rc_drv` (names are in the report).
+
+I also saved a short memory note on the driver's typing quirks.
+
+AUTOCAD CLOSED
+SETTINGS RESTORED

@@ -1,0 +1,11 @@
+== verifyL2b_c88 (usage 56.0% -> 56.0%): AUTOCAD CLOSED
+
+1. **BLOCKED:** Annotate panel absent; XCLMTXT driver alarm stopped the CSV step. Neither bug verified. PASS 0, FAIL 0, BLOCKED 2; both SURE.
+2. **Clean end:** Drawing discarded, four settings hashes unchanged, versions unchanged, lock released. End driver readings and log-switch restoration remain unverified under D6.
+3. **Report:** [L2b verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_L2b_20261102_2114.md>). Fixtures wanted: none.
+== verifyL2b_c88 (usage 58.0% -> 59.0%): AUTOCAD CLOSED
+
+1. **Both looks blocked:** Annotate panel absent; XCLMTXT driver alarm required cancellation before review.
+2. **Results:** 0 PASS, 0 FAIL, 0 DIFFERENT, 4 BLOCKED lines; SURE 4, UNSURE 0. Neither bug verified.
+3. **Clean end:** Settings unchanged, drawing unsaved, acad.exe gone, lock released. No fixtures missing.
+4. **Report:** [L2b verification](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_L2b_20261103_0704.md>).

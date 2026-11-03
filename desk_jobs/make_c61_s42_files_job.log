@@ -1,0 +1,14 @@
+I wrote the C-61 and S-42 job files and pushed them (commit `6116014f`, leak scan clean, no "ahead"). No chain was started and nothing was built or installed.
+
+Files in `C:\CE_PLAN\desk_jobs`:
+- `train_c61_assembler_job.txt`
+- `train_c61_finalizer_job.txt`
+- `payload93_c61_job.txt` (candidate c1057)
+- `scripts\desk_install_c61.ps1`
+- `train_s42_assembler_job.txt`
+- `train_s42_finalizer_job.txt`
+- `payload94_s42_job.txt` (candidate s1040)
+- `scripts\desk_install_s42.ps1`
+- `chain_c61_s42.ps1`
+
+The fix-round report already existed, and every live PR head matched it. Control-character, non-ASCII and parse checks are clean. I did not edit `DESK_LOG.md`.

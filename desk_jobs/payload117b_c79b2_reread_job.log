@@ -1,0 +1,11 @@
+The verdict is **OK**: the merge brings in only the one version commit, which moves Civil from 3.0.89 to 3.0.90 and changes nothing else. It is written to `C:\CE_PLAN\desk_jobs\PAYLOAD117B_VERDICT.md`.
+
+1. **Commits:** on top of `d4ce878e` there are exactly two commits, the merge `02c1a090` and `cf059dcf`. The parent of `cf059dcf` is `bab2dbf8`.
+2. **What changed:** one line each in `PackageContents.xml` and `CE_CVL_SUITE.csproj`, 3.0.89 to 3.0.90, with no other byte or line-ending change.
+3. **Manager:** still 1.1.89 and untouched.
+4. **b2 train:** the 81 files in the b2 train are identical in file list and content after the merge.
+5. **UserSettings.cs:** the UTF-8 mark (EF BB BF) is present before and after the merge.
+6. **Tests:** stage A's counts show 0 failures in all 12 named classes. The version/pin/stamp sweep had 188 tests: 185 passed, 3 skipped, none failed. No red was expected.
+7. **Not yet done:** no net48 build, the real-settings-file guard was not run, and nothing has been tested in AutoCAD.
+
+I changed no file except the verdict file.

@@ -1,0 +1,7 @@
+== cx_bd09 (usage 21.0% -> 43.0%): 1. **BUG-1113 — BLOCKED.** Draft [PR #1804](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1804). Branch head: `cc44ab02acdbe510b4a107a10e613f4c85b50742`.
+
+2. **Red → green:** `BlueFactorReport_Bug1113_SameNameDifferentAreaRows_BothCount`: “Expected: 2; But was: 1” → PASS [1 ms]. Focused checks: **97/97 passed**. Three builds: **0 errors**.
+
+3. **Full suites:** before **20,380 — 1 failed**; completed after **20,395 — 2 failed**. Extra logging/timing failures block validation.
+
+4. **[Report saved and pushed](C:/CE_PLAN/areas/CODEX_BUILD_BD09_26OCT.md).** AutoCAD and real reports were not tested. Worktree removed.

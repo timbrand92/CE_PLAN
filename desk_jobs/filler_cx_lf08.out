@@ -1,0 +1,4 @@
+== cx_lf08 (usage 28.0% -> 28.0%): 1. **DONE — all five triaged and skipped under the brief.** BUG-908 needs engineering values; BUG-909/910 need Structural decisions and protected files.
+2. **Already covered:** BUG-911 draft #1598, head `55502890`; BUG-912 draft #1590, head `bd91dbd7`. No duplicate PR created.
+3. **Saved and pushed:** [Batch 08 report](C:/CE_PLAN/areas/CODEX_LEDGER_FIX_BATCH08_23OCT.md), plan `main` tip `e1689201`. Leak scans passed.
+4. **Testing:** 0 builds/tests run because all bugs were skipped. Existing reported counts and pending AutoCAD checks are documented. Nothing installed, deployed or started in AutoCAD.

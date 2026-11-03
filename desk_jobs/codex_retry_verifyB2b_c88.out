@@ -1,0 +1,6 @@
+== verifyB2b_c88 (usage 50.0% -> 50.0%): AUTOCAD CLOSED
+
+1. **BLOCKED:** Both label checks stopped when the prescribed pick returned ÔÇ£That is not a pipe.ÔÇØ Neither moved-label angle was proved.
+2. **Results:** 0 PASS, 0 FAIL, 0 DIFFERENT, 2 BLOCKED, 2 NOT TESTED (ÔÇ£not in B2bÔÇØ). All four SURE.
+3. **Clean end:** Four settings hashes unchanged; lock released. Nothing saved or imported into a drawing.
+4. **Report:** [B2b verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_B2b_20261102_1757.md>).

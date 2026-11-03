@@ -1,0 +1,153 @@
+{
+  "header": {
+    "run_id": "RUN-20261025-2316-C3.0.77-g77b2",
+    "started": "2026-10-25 23:16:43",
+    "finished": "2026-10-25 23:20:56",
+    "build": {
+      "civil": {
+        "product_version": "3.0.77+0d8850949cb764e4b3af36f99276b74312584ce5",
+        "file_version": "3.0.77.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.124+3a3caac5db7687f1b5d1a6e09571976c52b2b05a",
+        "file_version": "1.0.124.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.77+0d8850949cb764e4b3af36f99276b74312584ce5",
+        "file_version": "1.1.77.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.77+0d885094 / struc 1.0.124+3a3caac5 / mgr 1.1.77+0d885094",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "7727F75A084F1490B985F9ED516825777CF65C960235C5672E9D6FA6C3C12DF9",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.77+0d8850949cb764e4b3af36f99276b74312584ce5; Structural 1.0.124+3a3caac5db7687f1b5d1a6e09571976c52b2b05a; Manager 1.1.77+0d8850949cb764e4b3af36f99276b74312584ce5",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 7CADBF80D5AA, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 7E3BC77F93F4, case_runner_lib.ps1 A229DC0BAFA1, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 0 shared setup(s); pack SHA-256 7727F75A084F1490B985F9ED516825777CF65C960235C5672E9D6FA6C3C12DF9; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json 0791B07EBCD9 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sun 25 Oct 2026 23:16 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 0,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 1,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261025-2316-C3.0.77-g77b2-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-25 23:16:44",
+      "finished": "2026-10-25 23:20:56",
+      "result": "FAIL",
+      "blocked": null,
+      "error": "Exception setting \"CalibRetry\": \"The property 'CalibRetry' cannot be found on this object. Verify that the property exists and can be set.\"",
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV32316471_B1.dwg",
+      "cases": [
+        "R08"
+      ],
+      "calibration": {
+        "ok": false,
+        "max_raw_px": 1.686,
+        "max_corrected_px": 0.585,
+        "why": "the click on the empty centre (upper left) did not read as empty: the shared lock is not held (state: none). Take it first: session-run does, or v2 'lock acquire'.",
+        "canvas": {
+          "left": 1926,
+          "top": 421,
+          "width": 1604,
+          "height": 569,
+          "how": "exact (tol 0)",
+          "scale_vs_screensize": 1.0,
+          "dpi": 96
+        }
+      },
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "0791B07EBCD9"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "0791B07EBCD9"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : 0791B07EBCD9 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "R08",
+      "proves_bugs": "BUG-861 (the one-drawing, real-mouse pick half only: REDO survives U and a real pit pick, five times in a fresh AutoCAD; the right-click CE menu half is not covered)",
+      "title": "REDO still works after U and a real-mouse pick of a pit, five times in a row (no runner read between U and REDO)",
+      "kind": "deterministic",
+      "order": 60,
+      "slot": "launch",
+      "fixture": "DRV1_B1",
+      "bug": "BUG-861",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "First a control round with no pick (draw a line, U, REDO: 'Everything has been redone'). Then five rounds: draw a line, U, click the pit P3 with the real mouse, wait 12 seconds, REDO: the command line says 'Everything has been redone' every time, never 'Nothing to redo'. After the rounds, one more click on the same point selects pit 109D56 (proof the click picks the pit). Between U and REDO the runner reads nothing from AutoCAD.",
+      "why_not_unit": "Whether REDO survives depends on what CE does in the seconds after a pick (the Inspector refresh) inside a real AutoCAD undo stack.",
+      "not_automated": [
+        "The right-click CE menu half of BUG-861 and BUG-416 (the right-click menu is not read yet), and a second open drawing.",
+        "The click between U and REDO is a blind click (stored view, no hit proof, by design: any read of AutoCAD between U and REDO loses REDO by itself). That the click selected the pit is proved once, after the five rounds, by a second click at the same pixel and a pick-first read.",
+        "A pick made by the driver's typed LISP (v2 pick-first) or with the runner's usual proof reads is NOT used: those routes lose REDO even for a plain line."
+      ],
+      "file_sha256": "4A42C588E54945E41A22158134AD3FB04AFCBF78E336B3364F2ACAE62EC0201B",
+      "plan_item": "BUG-861 (spec C32, real-mouse pick)",
+      "result": "BLOCKED",
+      "blocked": "session BLOCKED: Exception setting \"CalibRetry\": \"The property 'CalibRetry' cannot be found on this object. Verify that the property exists and can be set.\"",
+      "first_failure": null,
+      "steps": [],
+      "assertions": [],
+      "pictures": [],
+      "observations": [],
+      "seconds": 0,
+      "setup": "",
+      "setup_note": null,
+      "session_id": "RUN-20261025-2316-C3.0.77-g77b2-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "updated": "2026-10-23 18:00",
+  "seenMessages": {
+    "Civil|WRN|[Source] CDFIXTAGS not renamed: block <h> DP# -> DP#: CE could not match this source block to the drawing's own records, so nothing was changed. Run CDREPAIR, then try again.": "2026-10-19",
+    "Civil|WRN|[InlineSplit] not split: No inline pipe segment found at owner point. considered=#, geometryRejected=#, hitboxRejected=#, nearestPipe=<h>, nearestDistance=<h>.#.": "2026-10-18",
+    "Civil|WRN|[BUG-#] Project data for <dwg> could not be saved before CE switched to another drawing; it is kept and written at that drawing's next command or save.": "2026-10-18",
+    "Civil|ERR|CDTAG failed: InvalidOperationException: The requested source tag is not unique in the drawing.": "2026-10-18",
+    "Civil|ERR|CDFIXTAGS could not rename block <h>: InvalidOperationException: A source child does not have exactly one matching claim by the selected source.": "2026-10-18",
+    "Civil|ERR|CDFIXTAGS could not rename block <h>: InvalidOperationException: The captured object has no unique matching drawing/project spine identity. [OtherKindOfObject]": "2026-10-20",
+    "Civil|WRN|Runtime linking: the project record was the drawing's only unsaved change, so CE wrote it before the save question (BUG-#/BUG-#); if the close is cancelled, one U takes back only that record write": "2026-10-18",
+    "Civil|WRN|[Source] CDFIXTAGS not renamed: block <h> DP# -> DP#: The captured object has no unique matching drawing/project spine identity.": "2026-10-18",
+    "Civil|WRN|LayerService: layer '#DIMS' is locked; properties were left unchanged.": "2026-10-18",
+    "Civil|WRN|PipeEdit: exact pipe-text roles unavailable for <h> — A pipe-text-layer child has no exact supported text role: it is unclassified, recorded before CE stored text roles.": "2026-10-18",
+    "Civil|ERR|CDFIXTAGS could not rename block <h>: InvalidOperationException: The captured object has no unique matching drawing/project spine identity.": "2026-10-18",
+    "Civil|ERR|CDTAG failed: InvalidOperationException: The captured object has no unique matching drawing/project spine identity. [OtherKindOfObject]": "2026-10-20",
+    "Civil|WRN|[Source] CDFIXTAGS not renamed: block <h> AGI -> AGI #: A source child does not have exactly one matching claim by the selected source.": "2026-10-18",
+    "Civil|WRN|[NetworkEdit] MOVE: The AutoCAD geometry remains as edited, but CE did not change its linked records. Pipe <h> in the drawing does not match a single pipe in the project record. Run CE Repair/Audit before the next linked edit.": "2026-10-18",
+    "Civil|WRN|[Source] CDFIXTAGS not renamed: block <h> DP# -> DP#: This block already carries the CE identity of another kind of object (such as a pit), not a source block, so CDFIXTAGS left it as it was.": "2026-10-20",
+    "Structural|ERR|Error disposing palette: Object reference not set to an instance of an object.": "2026-10-18",
+    "Civil|WRN|CDEDIT: pipe <h> has ambiguous pipe-text attachment ownership or roles; edit refused. Cause: A pipe-text-layer child has no exact supported text role: it is unclassified, recorded before CE stored text roles.": "2026-10-18"
+  },
+  "candidates": [
+    "2026-10-18|(no command marker)|Error disposing palette: Object reference not set to an instance of an object.",
+    "2026-10-18|CDFIXTAGS|CDFIXTAGS could not rename block <h>: InvalidOperationException: A source child does not have exactly one matching claim by the selected source.",
+    "2026-10-18|CDFIXTAGS|CDFIXTAGS could not rename block <h>: InvalidOperationException: The captured object has no unique matching drawing/project spine identity.",
+    "2026-10-18|CDTAG|CDTAG failed: InvalidOperationException: The requested source tag is not unique in the drawing.",
+    "2026-10-19|CDFIXTAGS|CDFIXTAGS could not rename block <h>: InvalidOperationException: A source child does not have exactly one matching claim by the selected source.",
+    "2026-10-19|CDFIXTAGS|CDFIXTAGS could not rename block <h>: InvalidOperationException: The captured object has no unique matching drawing/project spine identity.",
+    "2026-10-19|(no command marker)|Error disposing palette: Object reference not set to an instance of an object.",
+    "2026-10-20|CDFIXTAGS|CDFIXTAGS could not rename block <h>: InvalidOperationException: A source child does not have exactly one matching claim by the selected source."
+  ]
+}

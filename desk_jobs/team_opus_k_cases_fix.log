@@ -1,0 +1,8 @@
+All eight K cases and P02 are corrected and pass the offline check, but none has been run in AutoCAD yet.
+
+1. **K01:** the short pipe is now 1.9 m instead of 1 m. At 1 m, CE rightly asked its Grade mismatch question and the robot stopped; at 1.9 m the grade is 5 % off, so CE should not ask.
+2. **K02 to K06:** these now tick the second-level box by its real screen name, "Set second end level". The brief said R32 and N23 already tick it. They don't, so I took the name from the product source and the robot's screen map.
+3. **K04 and K07:** each gets a third Esc after placing a pit. K07 and K08 now press "Cancel without saving".
+4. **P02:** one added check that the pasted copy really moved 3 m.
+
+The report is pushed and your open AutoCAD was not touched.

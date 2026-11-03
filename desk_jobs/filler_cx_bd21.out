@@ -1,0 +1,9 @@
+== cx_bd21 (usage 50.0% -> 80.0%): 1. **BUG-1095 — DONE:** Draft [PR #1814](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1814). Branch head: `434468ca63521d16017cf958a69429bcc1800dcb`.
+
+2. **Checks:** Red: expected C 0.80, actual 0.70—3 failed, 6 passed. Green: 35/35 passed. Three builds: 0 errors.
+
+3. **Full suite:** Before: 20,539 total, 20,505 passed, 32 skipped, 2 failed. After: 20,574 total, 20,541 passed, 32 skipped, 1 failed. No new failures.
+
+4. **Limits:** Settings row omitted; fourth Pump System calculator unchanged. AutoCAD not run; nothing installed.
+
+5. **Saved:** [Report](C:/CE_PLAN/areas/CODEX_BUILD_BD21_26OCT.md) pushed; own worktree removed.

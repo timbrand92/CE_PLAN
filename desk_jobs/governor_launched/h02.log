@@ -1,0 +1,26 @@
+**FOR TIM**
+
+I found about 45 new faults in survey, levels, LandXML, X-Civil and source tags. About 17 are serious. None repeats a bug already in the carpark. This was a code read only: nothing has been seen in AutoCAD and no code was changed.
+
+**The worst five:**
+1. **LandXML brings in pits only, no pipes.** CE looks for the wrong attribute names for a pipe's two ends. CE's own test files use the same wrong names, so the tests pass. I'm confident of the correct names from the LandXML standard, but they haven't been checked against a real Civil 3D export yet.
+2. **CDSURVEY drops every level above RL 500 or below RL 0.** A Daylesford survey (RL 600-plus) is refused outright. On a coastal site, the spots below zero vanish and the pit picks up another point's level.
+3. **A metre survey attached to a millimetre drawing gives ground levels 1000 times too high.** You could be offered a cover level of 102340.00 instead of 102.34.
+4. **Both imports can delete real work.** In X-Civil, choosing Replace and then closing the review erases the old import and draws nothing. Re-importing also deletes pipes you drew by hand to an imported pit. LandXML erases any earlier import without asking at all.
+5. **Wrong things drawn:**
+   - LandXML detention pits are drawn twice as long.
+   - X-Civil merges two pits with the same cover level that sit within 1.8 m of each other.
+   - "ROOF DRAIN 1" becomes "ROOF" after a COPY.
+   - CDFALLSUGGEST writes "1:0.1" on metre drawings where it should be 1:100.
+
+**Fix first:** LandXML items 1 and the detention pit length, and the survey level limit. Each is about one line, and a plain test can prove it wrong without AutoCAD. Fix the two deleting faults before any colleague re-imports a job.
+
+**Report:** `C:\CE_PLAN\areas\release-v3-colleagues-HUNT_CIVIL_B_2026-10-12.md`. It has your top 10 in plain English, then full details for each finding.
+
+---
+
+**Technical notes**
+
+1. **Audited:** `origin/claude/rel-20261018b` @ `b06126db` (Civil 3.0.53 / Manager 1.1.53), not master. Five parallel read-only auditors covered survey, levels/surfaces, LandXML, X-Civil and source tags. I re-read the key lines of each top-10 finding myself.
+2. **Committed** to CE_PLAN as `57715d2b` and pushed (merged origin/main first, no rebase, leak scan clean). The worktree `C:\ce-hunt\civilB` was removed.
+3. **No BUG numbers filed**, as briefed. About half the findings name a unit test that would show the fault.

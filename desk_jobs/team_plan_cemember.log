@@ -1,0 +1,6 @@
+I've written the CEMEMBER window plan and the picture, and pushed both to C:\CE_PLAN (commit `ef292142`). Nothing is built or run. I read the code on the S-45 branch only.
+
+- **Picture:** `areas\CEMEMBER_WINDOW_MOCK_29OCT.html` is labelled MOCK-UP, in gold on dark with no blue. I checked a headless-Edge screenshot at 1920x1032 and it fits without scrolling. The lower panel puts Option A (real size) next to Option B (about 5 times) with the numbers.
+- **Plan:** `areas\release-v3-colleagues-CEMEMBER_WINDOW_PLAN_29OCT.md`. It covers about 10 days across 3 slices plus proof, starting after the Civil freeze, and uses two switches defaulting ON: `structural.cememberWindow` and the size-warning switch.
+- **The 5 times claim:** CEMEMBER always draws real size. The old SBEAM draws DIMSCALE/20 (5 times at 1:100). LTSCALE is not the cause, and I did not draw either command in AutoCAD.
+- **Waiting on Tim:** A or B, and whether SBEAM also gets the warning line.

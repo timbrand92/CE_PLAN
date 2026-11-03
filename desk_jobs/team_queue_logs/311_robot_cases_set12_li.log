@@ -1,0 +1,7 @@
+C:\CE_PLAN\areas\ROBOT_CASE_DRAFTS_SET12_LINK_RECORDS_OLDER_02NOV.md — I drafted one robot case with its broken twin (W1752 and W1752_BROKEN) and Codex look notes for the other five. Nothing was run or built, and no case file was created.
+
+- **#1752 (BUG-1142):** this is the one robot case. It has no settings switch, so the twin leaves out the record damage instead. The twin shows the line checks can go red, but not that the old build fails.
+- **#1748, #1777, #1758, #1816:** Codex only.
+- **#1712 (BUG-811):** not drafted, because too many window and prompt wordings are unseen. I wrote a Codex look for it instead.
+- **PR status:** all six PRs show OPEN on GitHub, not merged as the brief said.
+- **Where the code is:** I found the code for five of them on rel-20261102a. I did not find #1816's code there. Whether any of them is installed is not verified.

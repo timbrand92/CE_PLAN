@@ -1,0 +1,5 @@
+I wrote all six briefs (a launcher and a full brief each for V5, V6 and V7) and added section 11 to `QUEUE_20OCT_PLAN.md`. Nothing was run, built or started. The files have no control characters and no "follow".
+
+- **F2:** the job says F2 opens the text window. The briefs use typed TEXTSCR and GRAPHSCR instead, because `lookCOMMON_full.txt` records that F2 runs the CE command CLEAN on this PC.
+- **V7 keys:** I found no match for the settings key names in the `.cs` files. The V7 brief marks BLOCKED if the guard refuses a key.
+- **CE_PLAN:** nothing to commit.

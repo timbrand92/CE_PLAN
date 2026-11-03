@@ -1,0 +1,8 @@
+None of the four items can be ticked as whole today. The report is pushed to `C:\CE_PLAN\areas\OPUS_PLAN_ITEM_REVIEW_30OCT.md`, and the plan folder is level with GitHub.
+
+1. **UX-LIVE-01 (live updates): PART.** Labels update straight after Edit Pipe or MOVE. Not proven: a placed schedule table updating by itself, the OSD block, and Cancel on big jobs.
+2. **Downpipe/raingarden: PART, wrong number.** The plan calls this UX-SRC-05. UX-SRC-02 is strip drain, which no cited case touches, so UX-SRC-02 is NO.
+3. **UX-WORD-01: PART, nearly NO.** "Free end" never appears in any run on today's build.
+4. **UX-LBL-01: waiting on question 19.** Codex also saw it fail this morning (BUG-1252).
+
+Most failing twins last ran on older builds.

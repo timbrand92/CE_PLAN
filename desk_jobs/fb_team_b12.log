@@ -1,0 +1,27 @@
+**FOR TIM**
+
+1. **My mistake first:** when I cleaned up, I deleted my scratch files with wildcards in a folder other jobs share (`C:\ce-fx`). That removed part of another job's live temporary folder (job f1048, a Structural full test run) and maybe other jobs' notes stored there. If f1048's results look odd, run it again. I've saved a memory note so this doesn't happen again.
+
+2. **BUG-1072, fixed in draft PR #1744:** in Structural Settings, the tick now says "Also keep backup copies of Civil-only drawings" instead of "autosave". The grey note under it adds "Copies the last saved drawing only. Unsaved changes are not included." It saves the same setting and works exactly as before.
+   - **Check in AutoCAD:** type CESETTINGS, click System, then Saving and diagnostics. Read the tick and the grey line, then click Cancel.
+
+3. **BUG-1073, fixed in draft PR #1745:** opening a damaged saved markup review now says "[CE] CE could not read this saved markup review. Choose another saved copy." It used to say "Failed to deserialize package."
+   - **Check in AutoCAD:** make a file called RD11_BAD_REVIEW.json containing only the word `null`. Type CEMARKUPLOAD, pick that file and press F2. The new sentence should show, with no "deserialize".
+
+4. **BUG-1070 and BUG-1071, not fixed:** both faults are inside PR #1658, the damaged-record safeguard, which hasn't been merged yet. They can't be fixed on the base release. I wrote the cause and a suggested fix on #1658 for the Opus lane.
+
+5. **BUG-1074, skipped:** Codex already fixed it in PR #1718, and I noted that on the PR.
+
+6. **Tests:** each fix passes about 5,800 automated tests with 0 failures. Nobody has opened either fix in AutoCAD, and neither bug is marked fixed.
+
+---
+
+1. **Branch heads:** #1744 is `65078082` and #1745 is `770759a2`, both on base `claude/rel-20261023s` @ `e6d597c0`.
+2. **Test evidence:**
+   - The new tests fail before the fix and pass after. For BUG-1073 the "before" run used a deliberately broken copy, because the old code can't compile the new test.
+   - The net10 runs were split into chunks, leaving out the Sbeam evidence cases that are known to hang.
+   - net48 compiled with 0 errors on both branches; its tests weren't run.
+3. **Merge clash:** #1744 and #1739 (BUG-1076) edit neighbouring lines of the same Settings page, so merging both gives a text conflict. The fix is to keep both sides' wording line by line; I've noted that on #1744.
+4. **Report:** `C:\CE_PLAN\areas\release-v3-colleagues-FB_TEAM_BATCH12_REPORT.md` is pushed, and `git status` shows nothing left to push.
+
+**Summary:** BUG-1072 and BUG-1073 are fixed in draft PRs #1744 and #1745, each passing about 5,800 tests with 0 failures; not opened in AutoCAD. BUG-1070 and BUG-1071 are faults inside unmerged PR #1658, so I left the cause and fix there instead of duplicating. BUG-1074 is already fixed in Codex PR #1718. My clean-up wrongly deleted part of another job's files in the shared `C:\ce-fx` folder; that's recorded in the report.

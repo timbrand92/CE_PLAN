@@ -1,0 +1,4 @@
+Thu 00:14 payload report clean and C-74 installed; Codex lane held (STOP_CODEX.flag); waiting for AutoCAD, the lock and every Codex AutoCAD job to be clear
+Thu 00:20 AutoCAD free and lock claimed: installing C-75
+Thu 00:21 2026-10-29 00:21:25 INSTALL VERIFIED: Civil 3.0.85 / Manager 1.1.85 installed, every file matches the candidate, CE_SHARED identical, settings unchanged
+Thu 00:21 lock released; Codex hold lifted; the supervisor restarts the conveyor

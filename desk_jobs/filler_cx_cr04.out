@@ -1,0 +1,3 @@
+== cx_cr04 (usage 20.0% -> 22.0%): 1. **DONE — zero ready.** R14 is **PARTIAL**: higher-freeboard checks and valid paired passes remain missing. R18 **NEEDS CODEX LOOK** for label placement and reading direction.
+2. **Current build:** neither has passes on Civil 3.0.78. No bug accepted as fixed; no review files changed; nothing run in AutoCAD.
+3. **Saved and pushed:** [Review report](C:/CE_PLAN/areas/CODEX_CASE_REVIEW_cx_cr04.md), commit `d4873943`. Leak scan passed; branch shows no ahead commits.

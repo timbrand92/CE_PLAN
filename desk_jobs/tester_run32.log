@@ -1,0 +1,29 @@
+Run 32 is done and the report is pushed to `C:\CE_PLAN` as `areas\release-v3-colleagues-CLAUDE_DRIVER_RUN32_V2_2026-10-19.md` (commit cd8bf76b). Both sessions ran on test copies of DRV1_B1, and each ended with `quit`.
+
+Installed builds read first were Civil 3.0.56 and Manager 1.1.56. Driver hashes and all four real settings hashes were identical at the start and end of both sessions. That includes the three settings keys I changed through the guard, each restored by `quit` with a hash proof.
+
+The 19 numbered checks came out as **PASS 7, FAIL 4, BLOCKED 4, UNPROVEN 4**.
+
+- **PASS:** The Edit Pipe cascade (Yes, Apply, U, REDO) works. CDSYNC left the Pit Schedule identical. A typed MOVE and STRETCH, with U and REDO, opened no CE window and left the Pit Schedule unchanged. CDTAG refuses a used number in plain words (WT2). Recover Inverts redrew both deleted IL texts on the new pipe.
+- **FAIL:**
+  - BUG-815 still fails. CDCHECKS gives the same 63 / 243 / 312 as run 31, and the false R-06 rows are still on the downpipes.
+  - The CDCHECKS rows still name pipes by handle, not "unnamed pipe".
+  - Tidy labels on a 20 m pipe still says "No clear spot found 2". The picture shows the "IL 18.000" text about 27 pixels clear of the pit box.
+  - CDFIXTAGS still renames nothing on my DP3 pair. The refusal is now in plain words: "CE could not match this source block to the drawing's own records, so nothing was changed. Run CDREPAIR, then try again."
+- **Recover Inverts condition:** If only one of a pipe's two IL texts is erased, it writes nothing, because either text counts as "already has text".
+- **BLOCKED:**
+  - The same-plan break (#1437): the New Pipe window hides its break options behind "More…", which the driver refuses to press.
+  - The drawn Pit Schedule checks: the test copy has no drawn schedule and Place can't be driven.
+  - CDCHECKDWG: it asks for a path and `answer ""` was refused.
+- **UNPROVEN:**
+  - CDPROPAGATE low-end and locked layer: not attempted, because the recipe needs a rising draw direction that may trigger a message box I can't answer.
+  - The CDTAG retag refusal: CDTAG ignored the pick-first selection.
+  - A failed-read CDCHECKS.
+  - Merged inlet rows.
+
+Two calls hit the 30 s watchdog (`ui close "Checks"` and a `ui windows` while a command prompt was waiting). In both cases the settings stayed in place until `quit` restored them and proved it by hash.
+
+The CLD copies for the desk to delete in `C:\ce_rc_drv` are CLD321_B1.dwg, CLD321_B1_PRE_C7_20261019_122627.dwg, CLD322_B1.dwg and CLD322_B1_PRE_C7_20261019_124752.dwg. Nothing was saved over a real file.
+
+AUTOCAD CLOSED
+SETTINGS RESTORED

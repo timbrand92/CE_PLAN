@@ -1,0 +1,9 @@
+#1517 is done. Its base is now `claude/rel-20261022l` and its head is `440b13fa`.
+
+- **Old head:** the PR was already at `9621f604`, an earlier fix round that covered both MEDIUMs and LOW 1. I checked it by running the tests. LOW 2 needed no change: the store already turns a blank note into none.
+- **Tests:** I added none. The two red guards Opus named now pass.
+- **Civil net10:** 19,135 total, 1 failed (the known Glen Eira back-test). The net48 compile has 0 errors.
+- **#1520:** the dry merge together with #1517 is clean.
+- **Report:** `C:\CE_PLAN\areas\release-v3-colleagues-FIX_1517_REPORT.md` is pushed.
+- **Not tested:** nothing was run in AutoCAD.
+- **Cleanup:** the worktree is removed, but `C:\ce-fx` still holds my scripts and logs; the shell blocked deleting that folder.

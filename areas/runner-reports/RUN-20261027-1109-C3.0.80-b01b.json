@@ -1,0 +1,859 @@
+{
+  "header": {
+    "run_id": "RUN-20261027-1109-C3.0.80-b01b",
+    "started": "2026-10-27 11:09:28",
+    "finished": "2026-10-27 11:17:18",
+    "build": {
+      "civil": {
+        "product_version": "3.0.80+270215aa2ba9540d5b75233acb1d0a0a2a5fc1a1",
+        "file_version": "3.0.80.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.80+270215aa2ba9540d5b75233acb1d0a0a2a5fc1a1",
+        "file_version": "1.1.80.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.80+270215aa / struc 1.0.125+204dfad2 / mgr 1.1.80+270215aa",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "684F6B4FA8F6A9C88A11119CE83A36BE46CFD5E4ACB2FAE16FC85E492C25DEC3",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.80+270215aa2ba9540d5b75233acb1d0a0a2a5fc1a1; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.80+270215aa2ba9540d5b75233acb1d0a0a2a5fc1a1",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4CD773B85EC5, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 13955AAA60D1, case_runner_lib.ps1 8F9B8DCBB473, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 0 shared setup(s); pack SHA-256 684F6B4FA8F6A9C88A11119CE83A36BE46CFD5E4ACB2FAE16FC85E492C25DEC3; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json B3B5A004B929 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Tue 27 Oct 2026 11:09 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 0,
+    "FAIL": 1,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261027-1109-C3.0.80-b01b-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-27 11:09:29",
+      "finished": "2026-10-27 11:17:18",
+      "result": "FAIL",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31109331_B1.dwg",
+      "cases": [
+        "R08x_1_exact"
+      ],
+      "calibration": {
+        "ok": true,
+        "max_raw_px": 1.686,
+        "max_corrected_px": 0.585,
+        "why": "",
+        "canvas": {
+          "left": 1926,
+          "top": 421,
+          "width": 1604,
+          "height": 569,
+          "how": "exact (tol 0)",
+          "scale_vs_screensize": 1.0,
+          "dpi": 96
+        }
+      },
+      "clean": false,
+      "acad_left": 0,
+      "lock_holder_after": "Desk-install-c71",
+      "lock_after": "held",
+      "guard_clear": false,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : B3B5A004B929 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "R08x_1_exact",
+      "proves_bugs": "",
+      "title": "R08 probe 1: the exact R08 round 1 again (control round, then three real-mouse pit picks)",
+      "kind": "deterministic",
+      "order": 60,
+      "slot": "launch",
+      "fixture": "DRV1_B1",
+      "plan_item": "BUG-861 characterisation (R08 round 1 fails on Civil 3.0.75)",
+      "bug": "BUG-861",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "Control round says 'Everything has been redone'. Then three rounds: draw a line, U, blind real-mouse click on pit P3, wait 12 s, REDO. On 3.0.75 round 1 is expected to say 'Nothing to redo' and rounds 2 and 3 'Everything has been redone' (the R08 result). The probe records what happens, it does not judge CE.",
+      "why_not_unit": "Whether REDO survives depends on what happens in a real AutoCAD undo stack in the seconds after a pick.",
+      "not_automated": [
+        "This is a probe for the R08 question only; it is not a feature test and is never accepted."
+      ],
+      "file_sha256": "55F1B957B68FE4A9F50AA3CCFD7C832169B13D8D6F798EA00E2F5AE651602B99",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "'Everything has been redone' is NOT in: Command: | Command: REDO | Nothing to redo",
+      "started": "2026-10-27 11:14:05",
+      "seconds": 175.7,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 setvar PICKFIRST 1",
+          "ok": true,
+          "seconds": 0.6,
+          "evidence": "v3 setvar PICKFIRST 1: PICKFIRST (profile): already 1, nothing written"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM _C 53777.7,-25569.9 1200\"",
+          "ok": true,
+          "seconds": 2.7,
+          "evidence": "typed '_.ZOOM _C 53777.7,-25569.9 1200': Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _C | Specify center point: 53777.7,-25569.9 | Enter mag..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 view-read",
+          "ok": true,
+          "seconds": 0.5,
+          "evidence": "v3 view-read : view stored: centre 53,777.700,-25,569.900 height 1,200.000 screen 1604x569"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 deselect",
+          "ok": true,
+          "seconds": 17.0,
+          "evidence": "v3 deselect : one Esc key sent to AutoCAD"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.LINE 53500,-26000 53900,-26000\" -> $line0",
+          "ok": true,
+          "seconds": 6.1,
+          "evidence": "typed '_.LINE 53500,-26000 53900,-26000': Command: | Command: _.LINE | Specify first point: 53500,-26000 | Specify next point or [Undo]: 53900,-26000"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt",
+          "ok": true,
+          "seconds": 2.7,
+          "evidence": "esc-prompt: Command: | Command: _.LINE | Specify first point: 53500,-26000 | Specify next point or [Undo]: 53900,-26000 | Specify next point or [Undo]: *Cancel*"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -> $u0",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "typed 'U': Command: | Command: U | LINE"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"REDO\" -> $redo0",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "typed 'REDO': Command: | Command: REDO | LINE | Everything has been redone"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 esc-key",
+          "ok": true,
+          "seconds": 1.2,
+          "evidence": "v3 esc-key : one Esc key sent to AutoCAD"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 view-read",
+          "ok": true,
+          "seconds": 0.5,
+          "evidence": "v3 view-read : view stored: centre 53,777.700,-25,569.900 height 1,200.000 screen 1604x569"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.LINE 53500,-26000 53900,-26000\" -> $line1",
+          "ok": true,
+          "seconds": 6.2,
+          "evidence": "typed '_.LINE 53500,-26000 53900,-26000': Command: | Command: _.LINE | Specify first point: 53500,-26000 | Specify next point or [Undo]: 53900,-26000"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt",
+          "ok": true,
+          "seconds": 2.7,
+          "evidence": "esc-prompt: Command: | Command: _.LINE | Specify first point: 53500,-26000 | Specify next point or [Undo]: 53900,-26000 | Specify next point or [Undo]: *Cancel*"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -> $u1",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "typed 'U': Command: | Command: U | LINE"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 pt-click \"53777.726,-25569.875\" -Blind -> $click1",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "v3 pt-click 53777.726,-25569.875: pt-click: world 53,777.726,-25,569.875 -> pixel 2728,706 (exact 2,727.51,705.99); cursor read-back 2728,706; view stored (14 s old)"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 12",
+          "ok": true,
+          "seconds": 12.1,
+          "evidence": "slept 12 s"
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"REDO\" -> $redo1",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "typed 'REDO': Command: | Command: REDO | Nothing to redo"
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "history-tail",
+          "text": "history-tail -Index 10 -> $h1",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "history: Specify first point: 53500,-26000 | Specify next point or [Undo]: 53900,-26000 | Specify next point or [Undo]: *Cancel* | Command: | Command: U | LINE | Command: | Command: | Command: REDO | Nothing to redo"
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 esc-key -> $esc1",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "v3 esc-key : one Esc key sent to AutoCAD"
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 view-read",
+          "ok": true,
+          "seconds": 0.5,
+          "evidence": "v3 view-read : view stored: centre 53,777.700,-25,569.900 height 1,200.000 screen 1604x569"
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.LINE 53500,-26000 53900,-26000\" -> $line2",
+          "ok": true,
+          "seconds": 6.2,
+          "evidence": "typed '_.LINE 53500,-26000 53900,-26000': Command: | Command: _.LINE | Specify first point: 53500,-26000 | Specify next point or [Undo]: 53900,-26000"
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt",
+          "ok": true,
+          "seconds": 2.8,
+          "evidence": "esc-prompt: Command: | Command: _.LINE | Specify first point: 53500,-26000 | Specify next point or [Undo]: 53900,-26000 | Specify next point or [Undo]: *Cancel*"
+        },
+        {
+          "n": 29,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 30,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -> $u2",
+          "ok": true,
+          "seconds": 2.3,
+          "evidence": "typed 'U': Command: | Command: U | LINE"
+        },
+        {
+          "n": 31,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 32,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 pt-click \"53777.726,-25569.875\" -Blind -> $click2",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "v3 pt-click 53777.726,-25569.875: pt-click: world 53,777.726,-25,569.875 -> pixel 2728,706 (exact 2,727.51,705.99); cursor read-back 2728,706; view stored (15 s old)"
+        },
+        {
+          "n": 33,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 12",
+          "ok": true,
+          "seconds": 12.0,
+          "evidence": "slept 12 s"
+        },
+        {
+          "n": 34,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"REDO\" -> $redo2",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "typed 'REDO': Command: | Command: REDO | LINE | Everything has been redone"
+        },
+        {
+          "n": 35,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 36,
+          "phase": "case",
+          "verb": "history-tail",
+          "text": "history-tail -Index 10 -> $h2",
+          "ok": true,
+          "seconds": 1.2,
+          "evidence": "history: Specify next point or [Undo]: 53900,-26000 | Specify next point or [Undo]: *Cancel* | Command: | Command: U | LINE | Command: | Command: | Command: REDO | LINE | Everything has been redone"
+        },
+        {
+          "n": 37,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 esc-key -> $esc2",
+          "ok": true,
+          "seconds": 1.2,
+          "evidence": "v3 esc-key : one Esc key sent to AutoCAD"
+        },
+        {
+          "n": 38,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 view-read",
+          "ok": true,
+          "seconds": 0.5,
+          "evidence": "v3 view-read : view stored: centre 53,777.700,-25,569.900 height 1,200.000 screen 1604x569"
+        },
+        {
+          "n": 39,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.LINE 53500,-26000 53900,-26000\" -> $line3",
+          "ok": true,
+          "seconds": 6.2,
+          "evidence": "typed '_.LINE 53500,-26000 53900,-26000': Command: | Command: _.LINE | Specify first point: 53500,-26000 | Specify next point or [Undo]: 53900,-26000"
+        },
+        {
+          "n": 40,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt",
+          "ok": true,
+          "seconds": 2.7,
+          "evidence": "esc-prompt: Command: | Command: _.LINE | Specify first point: 53500,-26000 | Specify next point or [Undo]: 53900,-26000 | Specify next point or [Undo]: *Cancel*"
+        },
+        {
+          "n": 41,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 42,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -> $u3",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "typed 'U': Command: | Command: U | LINE"
+        },
+        {
+          "n": 43,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 44,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 pt-click \"53777.726,-25569.875\" -Blind -> $click3",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "v3 pt-click 53777.726,-25569.875: pt-click: world 53,777.726,-25,569.875 -> pixel 2728,706 (exact 2,727.51,705.99); cursor read-back 2728,706; view stored (14 s old)"
+        },
+        {
+          "n": 45,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 12",
+          "ok": true,
+          "seconds": 12.0,
+          "evidence": "slept 12 s"
+        },
+        {
+          "n": 46,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"REDO\" -> $redo3",
+          "ok": true,
+          "seconds": 2.3,
+          "evidence": "typed 'REDO': Command: | Command: REDO | LINE | Everything has been redone"
+        },
+        {
+          "n": 47,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 48,
+          "phase": "case",
+          "verb": "history-tail",
+          "text": "history-tail -Index 10 -> $h3",
+          "ok": true,
+          "seconds": 1.2,
+          "evidence": "history: Specify next point or [Undo]: 53900,-26000 | Specify next point or [Undo]: *Cancel* | Command: | Command: U | LINE | Command: | Command: | Command: REDO | LINE | Everything has been redone"
+        },
+        {
+          "n": 49,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 esc-key -> $esc3",
+          "ok": true,
+          "seconds": 1.2,
+          "evidence": "v3 esc-key : one Esc key sent to AutoCAD"
+        },
+        {
+          "n": 50,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 view-read",
+          "ok": true,
+          "seconds": 0.6,
+          "evidence": "v3 view-read : view stored: centre 53,777.700,-25,569.900 height 1,200.000 screen 1604x569"
+        },
+        {
+          "n": 51,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.LINE 53500,-26000 53900,-26000\" -> $line4",
+          "ok": true,
+          "seconds": 6.4,
+          "evidence": "typed '_.LINE 53500,-26000 53900,-26000': Command: | Command: _.LINE | Specify first point: 53500,-26000 | Specify next point or [Undo]: 53900,-26000"
+        },
+        {
+          "n": 52,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt",
+          "ok": true,
+          "seconds": 3.5,
+          "evidence": "esc-prompt: Command: | Command: _.LINE | Specify first point: 53500,-26000 | Specify next point or [Undo]: 53900,-26000 | Specify next point or [Undo]: *Cancel*"
+        },
+        {
+          "n": 53,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 54,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -> $u4",
+          "ok": true,
+          "seconds": 2.5,
+          "evidence": "typed 'U': Command: | Command: U | LINE"
+        },
+        {
+          "n": 55,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 56,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 pt-click \"53777.726,-25569.875\" -Blind -> $click4",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "v3 pt-click 53777.726,-25569.875: pt-click: world 53,777.726,-25,569.875 -> pixel 2728,706 (exact 2,727.51,705.99); cursor read-back 2728,706; view stored (16 s old)"
+        },
+        {
+          "n": 57,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 12",
+          "ok": true,
+          "seconds": 12.0,
+          "evidence": "slept 12 s"
+        },
+        {
+          "n": 58,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 pick-read -> $pk4",
+          "ok": true,
+          "seconds": 0.7,
+          "evidence": "v3 pick-read : pick-first set: 1 object(s) 109D56"
+        },
+        {
+          "n": 59,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 esc-key",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "v3 esc-key : one Esc key sent to AutoCAD"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "contains $u0 \"LINE\"",
+          "ok": true,
+          "expected": "contains 'LINE'",
+          "actual": "Command: | Command: U | LINE",
+          "evidence": "found 'LINE' in: Command: | Command: U | LINE"
+        },
+        {
+          "n": 2,
+          "text": "contains $redo0 \"Everything has been redone\"",
+          "ok": true,
+          "expected": "contains 'Everything has been redone'",
+          "actual": "Command: | Command: REDO | LINE | Everything has been redone",
+          "evidence": "found 'Everything has been redone' in: Command: | Command: REDO | LINE | Everything has been redone"
+        },
+        {
+          "n": 3,
+          "text": "contains $u1 \"LINE\"",
+          "ok": true,
+          "expected": "contains 'LINE'",
+          "actual": "Command: | Command: U | LINE",
+          "evidence": "found 'LINE' in: Command: | Command: U | LINE"
+        },
+        {
+          "n": 4,
+          "text": "contains $redo1 \"Everything has been redone\"",
+          "ok": false,
+          "expected": "contains 'Everything has been redone'",
+          "actual": "Command: | Command: REDO | Nothing to redo",
+          "evidence": "'Everything has been redone' is NOT in: Command: | Command: REDO | Nothing to redo"
+        },
+        {
+          "n": 5,
+          "text": "not-contains $redo1 \"Nothing to redo\"",
+          "ok": false,
+          "expected": "does not contain 'Nothing to redo'",
+          "actual": "Command: | Command: REDO | Nothing to redo",
+          "evidence": "'Nothing to redo' WAS found in: Command: | Command: REDO | Nothing to redo"
+        },
+        {
+          "n": 6,
+          "text": "contains $u2 \"LINE\"",
+          "ok": true,
+          "expected": "contains 'LINE'",
+          "actual": "Command: | Command: U | LINE",
+          "evidence": "found 'LINE' in: Command: | Command: U | LINE"
+        },
+        {
+          "n": 7,
+          "text": "contains $redo2 \"Everything has been redone\"",
+          "ok": true,
+          "expected": "contains 'Everything has been redone'",
+          "actual": "Command: | Command: REDO | LINE | Everything has been redone",
+          "evidence": "found 'Everything has been redone' in: Command: | Command: REDO | LINE | Everything has been redone"
+        },
+        {
+          "n": 8,
+          "text": "not-contains $redo2 \"Nothing to redo\"",
+          "ok": true,
+          "expected": "does not contain 'Nothing to redo'",
+          "actual": "Command: | Command: REDO | LINE | Everything has been redone",
+          "evidence": "'Nothing to redo' is absent from: Command: | Command: REDO | LINE | Everything has been redone"
+        },
+        {
+          "n": 9,
+          "text": "contains $u3 \"LINE\"",
+          "ok": true,
+          "expected": "contains 'LINE'",
+          "actual": "Command: | Command: U | LINE",
+          "evidence": "found 'LINE' in: Command: | Command: U | LINE"
+        },
+        {
+          "n": 10,
+          "text": "contains $redo3 \"Everything has been redone\"",
+          "ok": true,
+          "expected": "contains 'Everything has been redone'",
+          "actual": "Command: | Command: REDO | LINE | Everything has been redone",
+          "evidence": "found 'Everything has been redone' in: Command: | Command: REDO | LINE | Everything has been redone"
+        },
+        {
+          "n": 11,
+          "text": "not-contains $redo3 \"Nothing to redo\"",
+          "ok": true,
+          "expected": "does not contain 'Nothing to redo'",
+          "actual": "Command: | Command: REDO | LINE | Everything has been redone",
+          "evidence": "'Nothing to redo' is absent from: Command: | Command: REDO | LINE | Everything has been redone"
+        },
+        {
+          "n": 12,
+          "text": "contains $pk4 \"109D56\"",
+          "ok": true,
+          "expected": "contains '109D56'",
+          "actual": "{\"ok\":true,\"verb\":\"pick-read\",\"started\":\"2026-10-27 11:16:56\",\"elapsed_ms\":656,\"error\":null,\"refused\":false,\"output\":[\"pick-first set: 1 object(s) 109D56\"],\"data\":{\"pickfirst\":{\"count\":1,\"handles\":[\"1...",
+          "evidence": "found '109D56' in: {\"ok\":true,\"verb\":\"pick-read\",\"started\":\"2026-10-27 11:16:56\",\"elapsed_ms\":656,\"error\":null,\"refused\":false,\"output\":[\"pick-first set: 1 object(s) 109D56\"],\"dat..."
+        },
+        {
+          "n": 13,
+          "text": "record $click1 \"FULL click 1 (time)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"ok\":true,\"verb\":\"pt-click\",\"started\":\"2026-10-27 11:14:59\",\"elapsed_ms\":1461,\"error\":null,\"refused\":false,\"output\":[\"pt-click: world 53,777.726,-25,569.875 -> pixel 2728,706 (exact 2,727.51,705.99); cursor read-back 2728,706; view stored (14 s old)\"],\"data\":{\"dpi_awareness_thread\":2,\"view\":{\"doc\":\"CLDV31109331_B1.dwg\",\"time\":1793060086,\"cx\":53777.7,\"cy\":-25569.899999999994,\"viewsize\":1200.0,\"ssw\":1604,\"ssh\":569,\"ctab\":\"Model\",\"twist\":0.0,\"worlducs\":1,\"problems\":[]},\"view_source\":\"stored (14 s old)\",\"target\":{\"x\":53777.726,\"y\":-25569.875,\"source\":\"world point\"},\"expect\":null,\"canvas\":{\"hwnd\":254412664,\"left\":1926,\"top\":421,\"width\":1604,\"height\":569,\"class\":\"MDIClient\",\"how\":\"exact (tol 0)\",\"scale_vs_screensize\":1.0,\"dpi\":96,\"frame_dpi\":96},\"pixel\":{\"x_exact\":2727.512,\"y_exact\":705.988,\"x\":2728,\"y\":706,\"pixels_per_unit\":0.474167},\"pc_idle_ms\":5813,\"target_check\":\"ok\",\"cursor_readback\":\"2728,706\",\"cursor_error_px\":0,\"action\":\"click\",\"result\":\"sent\",\"hit_proof\":\"not proven: this target has no expected object (a bare world point) and no -VerifyPoint\"}}",
+          "evidence": "RECORDED, not judged: FULL click 1 (time) = {\"ok\":true,\"verb\":\"pt-click\",\"started\":\"2026-10-27 11:14:59\",\"elapsed_ms\":1461,\"error\":null,\"refused\":false,\"output\":[\"pt-click: world 53,777.726,-25,569.875 -> pixel 2728,706 (exact 2,727.51,705.99); cursor read-back 2728,706; view stored (14 s old)\"],\"data\":{\"dpi_awareness_thread\":2,\"view\":{\"doc\":\"CLDV31109331_B1.dwg\",\"time\":1793060086,\"cx\":53777.7,\"cy\":-25569.899999999994,\"viewsize\":1200.0,\"ssw\":1604,\"ssh\":569,\"ctab\":\"Model\",\"twist\":0.0,\"worlducs\":1,\"problems\":[]},\"view_source\":\"stored (14 s old)\",\"target\":{\"x\":53777.726,\"y\":-25569.875,\"source\":\"world point\"},\"expect\":null,\"canvas\":{\"hwnd\":254412664,\"left\":1926,\"top\":421,\"width\":1604,\"height\":569,\"class\":\"MDIClient\",\"how\":\"exact (tol 0)\",\"scale_vs_screensize\":1.0,\"dpi\":96,\"frame_dpi\":96},\"pixel\":{\"x_exact\":2727.512,\"y_exact\":705.988,\"x\":2728,\"y\":706,\"pixels_per_unit\":0.474167},\"pc_idle_ms\":5813,\"target_check\":\"ok\",\"cursor_readback\":\"2728,706\",\"cursor_error_px\":0,\"action\":\"click\",\"result\":\"sent\",\"hit_proof\":\"not proven: this target has no expected object (a bare world point) and no -VerifyPoint\"}}"
+        },
+        {
+          "n": 14,
+          "text": "record $esc1 \"FULL esc 1 (time, after REDO 1)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"ok\":true,\"verb\":\"esc-key\",\"started\":\"2026-10-27 11:15:17\",\"elapsed_ms\":1244,\"error\":null,\"refused\":false,\"output\":[\"one Esc key sent to AutoCAD\"],\"data\":{\"pc_idle_ms\":17984}}",
+          "evidence": "RECORDED, not judged: FULL esc 1 (time, after REDO 1) = {\"ok\":true,\"verb\":\"esc-key\",\"started\":\"2026-10-27 11:15:17\",\"elapsed_ms\":1244,\"error\":null,\"refused\":false,\"output\":[\"one Esc key sent to AutoCAD\"],\"data\":{\"pc_idle_ms\":17984}}"
+        },
+        {
+          "n": 15,
+          "text": "record $h1 \"FULL command line after REDO 1\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Specify first point: 53500,-26000 | Specify next point or [Undo]: 53900,-26000 | Specify next point or [Undo]: *Cancel* | Command: | Command: U | LINE | Command: | Command: | Command: REDO | Nothing to redo",
+          "evidence": "RECORDED, not judged: FULL command line after REDO 1 = Specify first point: 53500,-26000 | Specify next point or [Undo]: 53900,-26000 | Specify next point or [Undo]: *Cancel* | Command: | Command: U | LINE | Command: | Command: | Command: REDO | Nothing to redo"
+        },
+        {
+          "n": 16,
+          "text": "record $click2 \"FULL click 2 (time)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"ok\":true,\"verb\":\"pt-click\",\"started\":\"2026-10-27 11:15:33\",\"elapsed_ms\":1504,\"error\":null,\"refused\":false,\"output\":[\"pt-click: world 53,777.726,-25,569.875 -> pixel 2728,706 (exact 2,727.51,705.99); cursor read-back 2728,706; view stored (15 s old)\"],\"data\":{\"dpi_awareness_thread\":2,\"view\":{\"doc\":\"CLDV31109331_B1.dwg\",\"time\":1793060119,\"cx\":53777.7,\"cy\":-25569.899999999994,\"viewsize\":1200.0,\"ssw\":1604,\"ssh\":569,\"ctab\":\"Model\",\"twist\":0.0,\"worlducs\":1,\"problems\":[]},\"view_source\":\"stored (15 s old)\",\"target\":{\"x\":53777.726,\"y\":-25569.875,\"source\":\"world point\"},\"expect\":null,\"canvas\":{\"hwnd\":254412664,\"left\":1926,\"top\":421,\"width\":1604,\"height\":569,\"class\":\"MDIClient\",\"how\":\"exact (tol 0)\",\"scale_vs_screensize\":1.0,\"dpi\":96,\"frame_dpi\":96},\"pixel\":{\"x_exact\":2727.512,\"y_exact\":705.988,\"x\":2728,\"y\":706,\"pixels_per_unit\":0.474167},\"pc_idle_ms\":6578,\"target_check\":\"ok\",\"cursor_readback\":\"2728,706\",\"cursor_error_px\":0,\"action\":\"click\",\"result\":\"sent\",\"hit_proof\":\"not proven: this target has no expected object (a bare world point) and no -VerifyPoint\"}}",
+          "evidence": "RECORDED, not judged: FULL click 2 (time) = {\"ok\":true,\"verb\":\"pt-click\",\"started\":\"2026-10-27 11:15:33\",\"elapsed_ms\":1504,\"error\":null,\"refused\":false,\"output\":[\"pt-click: world 53,777.726,-25,569.875 -> pixel 2728,706 (exact 2,727.51,705.99); cursor read-back 2728,706; view stored (15 s old)\"],\"data\":{\"dpi_awareness_thread\":2,\"view\":{\"doc\":\"CLDV31109331_B1.dwg\",\"time\":1793060119,\"cx\":53777.7,\"cy\":-25569.899999999994,\"viewsize\":1200.0,\"ssw\":1604,\"ssh\":569,\"ctab\":\"Model\",\"twist\":0.0,\"worlducs\":1,\"problems\":[]},\"view_source\":\"stored (15 s old)\",\"target\":{\"x\":53777.726,\"y\":-25569.875,\"source\":\"world point\"},\"expect\":null,\"canvas\":{\"hwnd\":254412664,\"left\":1926,\"top\":421,\"width\":1604,\"height\":569,\"class\":\"MDIClient\",\"how\":\"exact (tol 0)\",\"scale_vs_screensize\":1.0,\"dpi\":96,\"frame_dpi\":96},\"pixel\":{\"x_exact\":2727.512,\"y_exact\":705.988,\"x\":2728,\"y\":706,\"pixels_per_unit\":0.474167},\"pc_idle_ms\":6578,\"target_check\":\"ok\",\"cursor_readback\":\"2728,706\",\"cursor_error_px\":0,\"action\":\"click\",\"result\":\"sent\",\"hit_proof\":\"not proven: this target has no expected object (a bare world point) and no -VerifyPoint\"}}"
+        },
+        {
+          "n": 17,
+          "text": "record $esc2 \"FULL esc 2 (time, after REDO 2)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"ok\":true,\"verb\":\"esc-key\",\"started\":\"2026-10-27 11:15:51\",\"elapsed_ms\":1180,\"error\":null,\"refused\":false,\"output\":[\"one Esc key sent to AutoCAD\"],\"data\":{\"pc_idle_ms\":17734}}",
+          "evidence": "RECORDED, not judged: FULL esc 2 (time, after REDO 2) = {\"ok\":true,\"verb\":\"esc-key\",\"started\":\"2026-10-27 11:15:51\",\"elapsed_ms\":1180,\"error\":null,\"refused\":false,\"output\":[\"one Esc key sent to AutoCAD\"],\"data\":{\"pc_idle_ms\":17734}}"
+        },
+        {
+          "n": 18,
+          "text": "record $h2 \"FULL command line after REDO 2\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Specify next point or [Undo]: 53900,-26000 | Specify next point or [Undo]: *Cancel* | Command: | Command: U | LINE | Command: | Command: | Command: REDO | LINE | Everything has been redone",
+          "evidence": "RECORDED, not judged: FULL command line after REDO 2 = Specify next point or [Undo]: 53900,-26000 | Specify next point or [Undo]: *Cancel* | Command: | Command: U | LINE | Command: | Command: | Command: REDO | LINE | Everything has been redone"
+        },
+        {
+          "n": 19,
+          "text": "record $click3 \"FULL click 3 (time)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"ok\":true,\"verb\":\"pt-click\",\"started\":\"2026-10-27 11:16:07\",\"elapsed_ms\":1410,\"error\":null,\"refused\":false,\"output\":[\"pt-click: world 53,777.726,-25,569.875 -> pixel 2728,706 (exact 2,727.51,705.99); cursor read-back 2728,706; view stored (14 s old)\"],\"data\":{\"dpi_awareness_thread\":2,\"view\":{\"doc\":\"CLDV31109331_B1.dwg\",\"time\":1793060153,\"cx\":53777.7,\"cy\":-25569.899999999994,\"viewsize\":1200.0,\"ssw\":1604,\"ssh\":569,\"ctab\":\"Model\",\"twist\":0.0,\"worlducs\":1,\"problems\":[]},\"view_source\":\"stored (14 s old)\",\"target\":{\"x\":53777.726,\"y\":-25569.875,\"source\":\"world point\"},\"expect\":null,\"canvas\":{\"hwnd\":254412664,\"left\":1926,\"top\":421,\"width\":1604,\"height\":569,\"class\":\"MDIClient\",\"how\":\"exact (tol 0)\",\"scale_vs_screensize\":1.0,\"dpi\":96,\"frame_dpi\":96},\"pixel\":{\"x_exact\":2727.512,\"y_exact\":705.988,\"x\":2728,\"y\":706,\"pixels_per_unit\":0.474167},\"pc_idle_ms\":6235,\"target_check\":\"ok\",\"cursor_readback\":\"2728,706\",\"cursor_error_px\":0,\"action\":\"click\",\"result\":\"sent\",\"hit_proof\":\"not proven: this target has no expected object (a bare world point) and no -VerifyPoint\"}}",
+          "evidence": "RECORDED, not judged: FULL click 3 (time) = {\"ok\":true,\"verb\":\"pt-click\",\"started\":\"2026-10-27 11:16:07\",\"elapsed_ms\":1410,\"error\":null,\"refused\":false,\"output\":[\"pt-click: world 53,777.726,-25,569.875 -> pixel 2728,706 (exact 2,727.51,705.99); cursor read-back 2728,706; view stored (14 s old)\"],\"data\":{\"dpi_awareness_thread\":2,\"view\":{\"doc\":\"CLDV31109331_B1.dwg\",\"time\":1793060153,\"cx\":53777.7,\"cy\":-25569.899999999994,\"viewsize\":1200.0,\"ssw\":1604,\"ssh\":569,\"ctab\":\"Model\",\"twist\":0.0,\"worlducs\":1,\"problems\":[]},\"view_source\":\"stored (14 s old)\",\"target\":{\"x\":53777.726,\"y\":-25569.875,\"source\":\"world point\"},\"expect\":null,\"canvas\":{\"hwnd\":254412664,\"left\":1926,\"top\":421,\"width\":1604,\"height\":569,\"class\":\"MDIClient\",\"how\":\"exact (tol 0)\",\"scale_vs_screensize\":1.0,\"dpi\":96,\"frame_dpi\":96},\"pixel\":{\"x_exact\":2727.512,\"y_exact\":705.988,\"x\":2728,\"y\":706,\"pixels_per_unit\":0.474167},\"pc_idle_ms\":6235,\"target_check\":\"ok\",\"cursor_readback\":\"2728,706\",\"cursor_error_px\":0,\"action\":\"click\",\"result\":\"sent\",\"hit_proof\":\"not proven: this target has no expected object (a bare world point) and no -VerifyPoint\"}}"
+        },
+        {
+          "n": 20,
+          "text": "record $esc3 \"FULL esc 3 (time, after REDO 3)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"ok\":true,\"verb\":\"esc-key\",\"started\":\"2026-10-27 11:16:25\",\"elapsed_ms\":1200,\"error\":null,\"refused\":false,\"output\":[\"one Esc key sent to AutoCAD\"],\"data\":{\"pc_idle_ms\":18219}}",
+          "evidence": "RECORDED, not judged: FULL esc 3 (time, after REDO 3) = {\"ok\":true,\"verb\":\"esc-key\",\"started\":\"2026-10-27 11:16:25\",\"elapsed_ms\":1200,\"error\":null,\"refused\":false,\"output\":[\"one Esc key sent to AutoCAD\"],\"data\":{\"pc_idle_ms\":18219}}"
+        },
+        {
+          "n": 21,
+          "text": "record $h3 \"FULL command line after REDO 3\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Specify next point or [Undo]: 53900,-26000 | Specify next point or [Undo]: *Cancel* | Command: | Command: U | LINE | Command: | Command: | Command: REDO | LINE | Everything has been redone",
+          "evidence": "RECORDED, not judged: FULL command line after REDO 3 = Specify next point or [Undo]: 53900,-26000 | Specify next point or [Undo]: *Cancel* | Command: | Command: U | LINE | Command: | Command: | Command: REDO | LINE | Everything has been redone"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 105 new line(s) while the case ran, 0 with [ERR]",
+        "deselect: SendCommand of the two Esc said 'Invalid input' on this AutoCAD, so one real Esc key was sent instead (esc-key ok=True)"
+      ],
+      "error": null,
+      "finished": "2026-10-27 11:17:01",
+      "session_id": "RUN-20261027-1109-C3.0.80-b01b-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}

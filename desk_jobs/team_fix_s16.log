@@ -1,0 +1,9 @@
+Three draft PRs are open against `claude/rel-20261026s`, and the report is pushed to `C:\CE_PLAN\areas\BUGFIX_s16_REPORT_31OCT.md`. All three faults were still present on that line. None is marked fixed, and nothing has been opened in AutoCAD.
+
+1. **BUG-1134, PR #1914:** `310UB32` and `310 UB 32` now count as one size in CSMEMBERSCHED. Switch: `MemberSchedule.CompareSizesIgnoringSpaces`, ON.
+2. **BUG-1203, PR #1915:** unticking "Background refresh enabled" stops the start-up folder scan and cache load. Files: `Plugin.cs`, `XclmTxtCorpusIndexService.cs`, `UserSettings.cs`. Switch: `XclmTxt.BackgroundRefreshSwitchIsHonoured`, ON.
+3. **BUG-1219, PR #1916:** CEHELP for Beam Settings (8) and RJSET now says they open CE Settings. This is wording only in `command-registry.json`, with no switch.
+
+Focused net10 tests passed (109, 658 and 50). The net48 compile was run for #1914 and #1915 and gave 0 errors; #1916 has no C# change. The real settings folders were identical before and after.
+
+The two new switches have no Settings page row. No B number is in BUILD_REGISTER for these bugs, so the PR titles carry the BUG number only.

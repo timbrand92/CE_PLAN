@@ -1,0 +1,12 @@
+The three tank picks are out of the shipped defaults file and pushed to draft PR #1844. The full suite and the net48 compile never ran.
+
+- **Not run:** I queued both twice for 3 hours each. Other jobs held the build lanes the whole time, so both waits timed out.
+- **What did run:** the focused tests passed, 291 of 291. The change is one data file, one test file and the log, so the risk is small but unproven.
+- **Not run in AutoCAD:** a colleague on a fresh login should no longer get your "U/G TANK" plan pre-selected in CDWT.
+
+I pushed commit `ab8ea0b9` to `fb/f023-colleague-defaults` with a normal push. I appended the follow-up section to `release-v3-colleagues-F023_BUILD_REPORT.md` in `C:\CE_PLAN`, with the FOR TIM block and the robot case F23t_no_tank_pick. No switch was added.
+
+Files changed:
+- `Modules/Drainage/Assets/Config/colleague-defaults.json`
+- `Modules/Drainage.Tests/Services/F023ColleagueDefaultsTests.cs`
+- `REGRESSION_LOG.md`

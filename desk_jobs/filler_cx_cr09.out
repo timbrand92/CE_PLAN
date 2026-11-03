@@ -1,0 +1,3 @@
+== cx_cr09 (usage 1.0% -> 4.0%): 1. **DONE:** [Report saved and pushed](C:/CE_PLAN/areas/CODEX_CASE_REVIEW_cx_cr09.md), commit `b4cfa677`. Leak scan clean; no commits ahead.
+2. **Neither case is ready:** R34 and R34s reproduce missing-label faults on earlier builds. BUG-665 stays open.
+3. **Installed Civil is 3.0.79:** neither case has recorded runs on it. No acceptance files created; AutoCAD, runner and tests untouched.

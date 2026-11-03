@@ -1,0 +1,9 @@
+**Draft PR #1883 (BUG-467), half done: not marked FIXED.** BT1, A, B and the R1 Point option now follow a rotated UCS. FPFC and the FSF two-point line are not fixed, because they sit in `FoundationService.cs`, which p3b owns.
+
+- **Switch:** `Bracing.PickedPointsFollowUcs`, on by default, with a checkbox on the Settings Bracing tab. Off restores the old behaviour exactly.
+- **Files changed:** `BracingCommands.cs`, `BracingService.cs`, `RafterJoistCommands.cs`, `UserSettings.cs`, the Settings dialog, `REGRESSION_LOG.md` and the new `BracingRotatedUcsTests.cs`.
+- **Tests:** 8 of 8 new tests pass on net10, and the Structural net48 compile has 0 errors. I did not run the full Structural suite, per the isolation rule. Nothing was tried in AutoCAD.
+- **Settings files:** unchanged before and after, including `TIM_CE_CADTOOLS`.
+- **PR title:** the build register has no B number for BUG-467, so CE 01 renames it.
+- **Report:** `areas\BUGFIX_p8_REPORT_30OCT.md`, pushed. It names robot case `S32_bt1_rotated_ucs`, with a switch-off twin.
+- **Left uncommitted:** `areas/BUG_REGISTER_TRIAGE_2026-10-24.md` shows as modified in `C:\CE_PLAN`. I did not edit it; it was already modified.

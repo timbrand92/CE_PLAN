@@ -1,0 +1,9 @@
+All five fixes are built, unit-tested and open as draft PRs. None is installed or opened in AutoCAD, and no bug is marked FIXED. I verified each cause in the code first, and nothing was skipped.
+
+1. **BUG-966, CDSPOON:** PR #1552. The spoon was drawn ByLayer but CE's own check wanted the layer's old colour number, so every spoon was rolled back. The check now accepts ByLayer.
+2. **BUG-967, Blue Factor:** PR #1553. Garden and lawn no longer count as roof and paved. Catchments marked "Other" are unchanged and flagged for Tim.
+3. **BUG-964, network redesign:** PR #1555, stacked on #1537. Each pit's level is now where its outgoing pipe starts, so no pipe drops into a pit.
+4. **BUG-970, CDTWL:** PR #1556, stacked on #1538. When two schedule sets reuse a pit number, CDTWL asks which set.
+5. **BUG-876, Replace:** PR #1557. An old imported pit stays when its replacement needs a locked layer.
+
+Civil net10 ran 19,156 to 19,178 tests per fix. The only failure on #1552, #1553, #1556 and #1557 is the known `BackTest_GlenEira24115`. On #1555, 12 tests fail, all of them failing on #1537's own branch too. The report is pushed to `C:\CE_PLAN\areas\release-v3-colleagues-FIX_WAVE2_BATCH1_REPORT.md`.

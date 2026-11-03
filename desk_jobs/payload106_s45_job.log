@@ -1,0 +1,11 @@
+The S-45 candidate is built and verified, and nothing is installed.
+
+- **Candidate:** `C:\ce_rc_scratch\s1043\CE_STRUC_SUITE.bundle` — verified 2007, bad 0, extra 0.
+- **Branch head:** `claude/rel-20261026s` is now at `204dfad2`, after the version commit "Version: Structural 1.0.125 (S-45)".
+- **Tests:** the pin tests all ran and passed: 48 Structural, 9 manifest release tests (3 each on net48, net8, net10), 5 central register. String proof was 117 of 117 rows as expected.
+- **Odd:**
+  1. #1794 was dropped by the finalizer, so Share learning data stays ON on a new PC.
+  2. A robot AutoCAD overlapped the start of the release build.
+  3. A robot AutoCAD briefly changed `CD_Settings.json` at 05:03 and restored it before my baseline.
+
+Report: `C:\Lisp Files\_TEST_COPIES_20260923\PAYLOAD_S1043_REPORT.md`.

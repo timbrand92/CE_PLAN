@@ -1,0 +1,2298 @@
+{
+  "header": {
+    "run_id": "RUN-20261103-0420-C3.0.89-plW06",
+    "started": "2026-11-03 04:20:50",
+    "finished": "2026-11-03 04:44:19",
+    "build": {
+      "civil": {
+        "product_version": "3.0.89+61fd6fbc72710872048a69ef5b46d0e5b55087fa",
+        "file_version": "3.0.89.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.89+61fd6fbc72710872048a69ef5b46d0e5b55087fa",
+        "file_version": "1.1.89.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.89+61fd6fbc / struc 1.0.125+204dfad2 / mgr 1.1.89+61fd6fbc",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "2091934B26B24A53C673B4E039EBC31EE405EFA2DA7DD7ECA687F0F40187ABDB",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.89+61fd6fbc72710872048a69ef5b46d0e5b55087fa; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.89+61fd6fbc72710872048a69ef5b46d0e5b55087fa",
+      "Driver files (SHA-256, first 12): v2 F4D8F40C3675 (expected F4D8F40C3675), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4B0175FFAB00, v3 session F061E3240C47, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 BBF42DBA8958, case_runner_lib.ps1 89AD455619F8, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 4 case file(s) plus 1 shared setup(s); pack SHA-256 2091934B26B24A53C673B4E039EBC31EE405EFA2DA7DD7ECA687F0F40187ABDB; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json D604CE689671 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Tue 03 Nov 2026 04:20 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 4,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 4
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261103-0420-C3.0.89-plW06-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-11-03 04:21:00",
+      "finished": "2026-11-03 04:27:30",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV30421051_B1.dwg",
+      "cases": [
+        "W713",
+        "W740"
+      ],
+      "whatsnew_dismissed_at_start": "no, window was not there",
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : D604CE689671 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    },
+    {
+      "session_id": "RUN-20261103-0420-C3.0.89-plW06-s2",
+      "phase": "main",
+      "session_no": 2,
+      "started": "2026-11-03 04:27:30",
+      "finished": "2026-11-03 04:35:47",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV30427362_B1.dwg",
+      "cases": [
+        "W671"
+      ],
+      "whatsnew_dismissed_at_start": "no, window was not there",
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : D604CE689671 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    },
+    {
+      "session_id": "RUN-20261103-0420-C3.0.89-plW06-s3",
+      "phase": "main",
+      "session_no": 3,
+      "started": "2026-11-03 04:41:01",
+      "finished": "2026-11-03 04:44:19",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV30441093_B1.dwg",
+      "cases": [
+        "W672"
+      ],
+      "whatsnew_dismissed_at_start": "no, window was not there",
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : D604CE689671 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "W713",
+      "proves_bugs": "BUG-713 (the finder ranks only spots that read as a level: a blank spot nearer the pick point no longer hides a valid one; CDFALLSUGGEST route only, the pit design-level offer is not driven)",
+      "title": "CDFALLSUGGEST reads the P19.020 spot 40 mm away although a blank spot sits 20 mm away, suggests FALL toward the new pit at 1:100, and Skip places nothing",
+      "kind": "deterministic",
+      "order": 902,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "Bug-proof plan wave 1 (BUG_PROOF_PLAN_31OCT.md), group T: spot-level finder CDFALLSUGGEST",
+      "bug": "BUG-713",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed",
+      "variant_of": "",
+      "expected": "A grated pit typed at 156000,-61500 with cover 19.000. A blank spot level (CDSL, Enter) at 156020,-63500 and a spot level P19.020 at 156040,-63500. CDFALLSUGGEST picked at 156000,-63500 never asks 'No spot level here'; it says '[CE] Suggested: FALL toward P<n>, 1:100.'; Skip; Esc gives 'CDFALLSUGGEST finished. 0 placed, 1 skipped.' No FALL block is added, no CE window is left open and the drawing file is unchanged.",
+      "why_not_unit": "The two real SPOT LEVEL blocks, their LEVEL attributes as CDSL wrote them and the live CDFALLSUGGEST read only meet in a real drawing.",
+      "not_automated": [
+        "The pit design-level offer (Services/DesignLevelService.cs line 222, the same reader with designOnly) is not driven: it needs the New Pit window's offer to be read, which no case has done yet.",
+        "An UNREADABLE (not blank) nearer spot cannot be made by CDSL any more (BUG-711 refuses text that is not a level), so only the blank half of the bug is driven; the unreadable half is the same ranking code (SpotLevelText.cs lines 77-78)."
+      ],
+      "file_sha256": "561EF4BCED058BEEE8485796A8A2658BB6CAB209849F2ADB9A993ED1AA3D69F7",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-11-03 04:22:46",
+      "seconds": 182.8,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "copy CLDV30421051_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"PIT{NL}156000,-61500\" -Force -ExpectWindow \"New Pit\" -> $pit_t1",
+          "ok": true,
+          "seconds": 18.7,
+          "evidence": "typed 'PIT 156000,-61500': Command: | Command: PIT | Specify pit insertion point: 156000,-61500"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.CoverLevel\" \"19.000\"",
+          "ok": true,
+          "seconds": 14.6,
+          "evidence": "ui set 'New Pit' C2.CoverLevel = 19.000: "
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pit\" \"New pit, Continue placement\" -> $pit_t2",
+          "ok": true,
+          "seconds": 88.0,
+          "evidence": "pressed 'New pit, Continue placement' in /New Pit/: window closed = True"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pit\" -Secs 120",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "the window /^New Pit/ closed after 0 s"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e1",
+          "ok": true,
+          "seconds": 9.5,
+          "evidence": "esc-prompt: Command: | Command: PIT | Specify pit insertion point: 156000,-61500 | Specify pit label insertion point: *Cancel*"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e2",
+          "ok": true,
+          "seconds": 10.2,
+          "evidence": "esc-prompt: Command: | Command: PIT | Specify pit insertion point: 156000,-61500 | Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel*"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e3",
+          "ok": true,
+          "seconds": 4.4,
+          "evidence": "esc-prompt: Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit, or press Esc to stop. | Specify pit insertion point: *Canc..."
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDSL{NL}156020,-63500{NL}\" -Force -> $sl_blank",
+          "ok": true,
+          "seconds": 3.9,
+          "evidence": "typed 'CDSL 156020,-63500': Command: | Command: CDSL | Specify spot level insertion point: 156020,-63500 | Enter proposed spot level (m): | Spot level placed. Level: (blank)"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDSL{NL}156040,-63500{NL}19.020\" -Force -> $sl_good",
+          "ok": true,
+          "seconds": 4.5,
+          "evidence": "typed 'CDSL 156040,-63500 19.020': Command: | Command: CDSL | Specify spot level insertion point: 156040,-63500 | Enter proposed spot level (m): 19.020 | Spot level placed. Level: P19.020"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c1",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "model space holds 1037 objects"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDFALLSUGGEST{NL}156000,-63500{NL}Skip\" -Force -TimeoutSec 90 -> $fs",
+          "ok": true,
+          "seconds": 7.7,
+          "evidence": "typed 'CDFALLSUGGEST 156000,-63500 Skip': Command: | Command: CDFALLSUGGEST | Pick a level to suggest a FALL arrow toward the nearest downhill grated pit, or Enter to finish: 156000,-63500 | [CE] Suggested: FALL toward P8, 1:100. | Accept, Move or Skip this fall..."
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $fs_e1",
+          "ok": true,
+          "seconds": 4.3,
+          "evidence": "esc-prompt: Command: CDFALLSUGGEST | Pick a level to suggest a FALL arrow toward the nearest downhill grated pit, or Enter to finish: 156000,-63500 | [CE] Suggested: FALL toward P8, 1:100. | Accept, Move or Skip this fall? [Accept/M..."
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $fs_e2",
+          "ok": true,
+          "seconds": 2.5,
+          "evidence": "esc-prompt: Pick a level to suggest a FALL arrow toward the nearest downhill grated pit, or Enter to finish: 156000,-63500 | [CE] Suggested: FALL toward P8, 1:100. | Accept, Move or Skip this fall? [Accept/Move/Skip] <Accept>: Skip ..."
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $new",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "3 object(s) after index 1034 (model space now 1037); by type: AcDbBlockReference 3; first: 11C5AD AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C651 AcDbBlockReference 25DIMS SPOT LEVEL ; 11C654 AcDbBlockReference 25DIMS SPOT LEVEL"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c1 -> $new_fall",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "0 object(s) after index 1037 (model space now 1037); by type: ; first: "
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"name~^SPOT LEVEL$\" \"x~^156020$\" -> $sp_blank",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 3: 11C651 SPOT LEVEL 25DIMS"
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"name~^SPOT LEVEL$\" \"x~^156040$\" -> $sp_good",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 3: 11C654 SPOT LEVEL 25DIMS"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $sp_blank handle -> $hb",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C651"
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $sp_good handle -> $hg",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C654"
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$hb} -> $eb",
+          "ok": true,
+          "seconds": 0.5,
+          "evidence": "ent-read 11C651: {\"handle\":\"11C651\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[156020.0,-63500.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"LEVEL\",\"text\":\"P__.__\",\"insertion\":[15..."
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$hg} -> $eg",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "ent-read 11C654: {\"handle\":\"11C654\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[156040.0,-63500.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"LEVEL\",\"text\":\"P19.020\",\"insertion\":[1..."
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"near=156000,-61500,5\" \"object=AcDbBlockReference\" \"layer~PIT\" -> $pit",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 3: 11C5AD PIT BLOCK 3 STORMWATER PIT"
+        },
+        {
+          "n": 29,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_fall \"name~FALL\" -> $falls",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 0: "
+        },
+        {
+          "n": 30,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $w_end",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30421051_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "contains $sl_blank \"Spot level placed. Level: (blank)\"",
+          "ok": true,
+          "expected": "contains 'Spot level placed. Level: (blank)'",
+          "actual": "Command: | Command: CDSL | Specify spot level insertion point: 156020,-63500 | Enter proposed spot level (m): | Spot level placed. Level: (blank)",
+          "evidence": "found 'Spot level placed. Level: (blank)' in: Command: | Command: CDSL | Specify spot level insertion point: 156020,-63500 | Enter proposed spot level (m): | Spot level placed. Level: (blank)"
+        },
+        {
+          "n": 2,
+          "text": "contains $sl_good \"Spot level placed. Level: P19.020\"",
+          "ok": true,
+          "expected": "contains 'Spot level placed. Level: P19.020'",
+          "actual": "Command: | Command: CDSL | Specify spot level insertion point: 156040,-63500 | Enter proposed spot level (m): 19.020 | Spot level placed. Level: P19.020",
+          "evidence": "found 'Spot level placed. Level: P19.020' in: Command: | Command: CDSL | Specify spot level insertion point: 156040,-63500 | Enter proposed spot level (m): 19.020 | Spot level placed. Level: P19.020"
+        },
+        {
+          "n": 3,
+          "text": "count $sp_blank = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $sp_blank = 1 (expected = 1)"
+        },
+        {
+          "n": 4,
+          "text": "count $sp_good = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $sp_good = 1 (expected = 1)"
+        },
+        {
+          "n": 5,
+          "text": "matches $eb \"LEVEL.,.text.:.P__.__.,.insertion\"",
+          "ok": true,
+          "expected": "matches /LEVEL.,.text.:.P__.__.,.insertion/",
+          "actual": "{\"handle\":\"11C651\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[156020.0,-63500.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\"...",
+          "evidence": "matched 'LEVEL\",\"text\":\"P__.__\",\"insertion'"
+        },
+        {
+          "n": 6,
+          "text": "matches $eg \"text.:.P19.020.,.insertion\"",
+          "ok": true,
+          "expected": "matches /text.:.P19.020.,.insertion/",
+          "actual": "{\"handle\":\"11C654\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[156040.0,-63500.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\"...",
+          "evidence": "matched 'text\":\"P19.020\",\"insertion'"
+        },
+        {
+          "n": 7,
+          "text": "count $pit = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $pit = 1 (expected = 1)"
+        },
+        {
+          "n": 8,
+          "text": "contains $fs \"Pick a level to suggest a FALL arrow toward the nearest downhill grated pit\"",
+          "ok": true,
+          "expected": "contains 'Pick a level to suggest a FALL arrow toward the nearest downhill grated pit'",
+          "actual": "Command: | Command: CDFALLSUGGEST | Pick a level to suggest a FALL arrow toward the nearest downhill grated pit, or Enter to finish: 156000,-63500 | [CE] Suggested: FALL toward P8, 1:100. | Accept, Mo...",
+          "evidence": "found 'Pick a level to suggest a FALL arrow toward the nearest downhill grated pit' in: Command: | Command: CDFALLSUGGEST | Pick a level to suggest a FALL arrow toward the nearest downhill grated pit, or Enter to finish: 156000,-63500 | [CE] Sugges..."
+        },
+        {
+          "n": 9,
+          "text": "not-contains $fs \"No spot level here\"",
+          "ok": true,
+          "expected": "does not contain 'No spot level here'",
+          "actual": "Command: | Command: CDFALLSUGGEST | Pick a level to suggest a FALL arrow toward the nearest downhill grated pit, or Enter to finish: 156000,-63500 | [CE] Suggested: FALL toward P8, 1:100. | Accept, Mo...",
+          "evidence": "'No spot level here' is absent from: Command: | Command: CDFALLSUGGEST | Pick a level to suggest a FALL arrow toward the nearest downhill grated pit, or Enter to finish: 156000,-63500 | [CE] Sugges..."
+        },
+        {
+          "n": 10,
+          "text": "history absent \"No spot level here\"",
+          "ok": true,
+          "expected": "command line lacks 'No spot level here'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'No spot level here' (26 lines read)"
+        },
+        {
+          "n": 11,
+          "text": "history absent \"No level at this point\"",
+          "ok": true,
+          "expected": "command line lacks 'No level at this point'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'No level at this point' (26 lines read)"
+        },
+        {
+          "n": 12,
+          "text": "contains $fs \"[CE] Suggested: FALL toward P\"",
+          "ok": true,
+          "expected": "contains '[CE] Suggested: FALL toward P'",
+          "actual": "Command: | Command: CDFALLSUGGEST | Pick a level to suggest a FALL arrow toward the nearest downhill grated pit, or Enter to finish: 156000,-63500 | [CE] Suggested: FALL toward P8, 1:100. | Accept, Mo...",
+          "evidence": "found '[CE] Suggested: FALL toward P' in: Command: | Command: CDFALLSUGGEST | Pick a level to suggest a FALL arrow toward the nearest downhill grated pit, or Enter to finish: 156000,-63500 | [CE] Sugges..."
+        },
+        {
+          "n": 13,
+          "text": "contains $fs \", 1:100.\"",
+          "ok": true,
+          "expected": "contains ', 1:100.'",
+          "actual": "Command: | Command: CDFALLSUGGEST | Pick a level to suggest a FALL arrow toward the nearest downhill grated pit, or Enter to finish: 156000,-63500 | [CE] Suggested: FALL toward P8, 1:100. | Accept, Mo...",
+          "evidence": "found ', 1:100.' in: Command: | Command: CDFALLSUGGEST | Pick a level to suggest a FALL arrow toward the nearest downhill grated pit, or Enter to finish: 156000,-63500 | [CE] Sugges..."
+        },
+        {
+          "n": 14,
+          "text": "history has \"CDFALLSUGGEST finished. 0 placed, 1 skipped.\"",
+          "ok": true,
+          "expected": "command line has 'CDFALLSUGGEST finished. 0 placed, 1 skipped.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'CDFALLSUGGEST finished. 0 placed, 1 skipped.'"
+        },
+        {
+          "n": 15,
+          "text": "history absent \"no grated pit was found\"",
+          "ok": true,
+          "expected": "command line lacks 'no grated pit was found'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'no grated pit was found' (26 lines read)"
+        },
+        {
+          "n": 16,
+          "text": "count $falls = 0",
+          "ok": true,
+          "expected": "count = 0",
+          "actual": "0",
+          "evidence": "count of $falls = 0 (expected = 0)"
+        },
+        {
+          "n": 17,
+          "text": "not-contains $w_end \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30421051_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV30421051_B1.dwg]"
+        },
+        {
+          "n": 18,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 19,
+          "text": "record $pit_t1 \"FULL what PIT showed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: PIT | Specify pit insertion point: 156000,-61500",
+          "evidence": "RECORDED, not judged: FULL what PIT showed = Command: | Command: PIT | Specify pit insertion point: 156000,-61500"
+        },
+        {
+          "n": 20,
+          "text": "record $sl_blank \"FULL CDSL blank\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDSL | Specify spot level insertion point: 156020,-63500 | Enter proposed spot level (m): | Spot level placed. Level: (blank)",
+          "evidence": "RECORDED, not judged: FULL CDSL blank = Command: | Command: CDSL | Specify spot level insertion point: 156020,-63500 | Enter proposed spot level (m): | Spot level placed. Level: (blank)"
+        },
+        {
+          "n": 21,
+          "text": "record $sl_good \"FULL CDSL P19.020\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDSL | Specify spot level insertion point: 156040,-63500 | Enter proposed spot level (m): 19.020 | Spot level placed. Level: P19.020",
+          "evidence": "RECORDED, not judged: FULL CDSL P19.020 = Command: | Command: CDSL | Specify spot level insertion point: 156040,-63500 | Enter proposed spot level (m): 19.020 | Spot level placed. Level: P19.020"
+        },
+        {
+          "n": 22,
+          "text": "record $eb \"FULL the blank spot (LEVEL attribute must be empty)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C651\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[156020.0,-63500.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"LEVEL\",\"text\":\"P__.__\",\"insertion\":[156120.0,-63741.42135623731,0.0],\"rotation\":5.497787143782214,\"height\":200.0,\"alignment\":9,\"align_point\":[156190.71067811866,-63670.71067811865,0.0],\"bbox\":[156095.30431978393,-64280.481750953564,156775.78607073758,-63599.99999999999]}],\"bbox\":[155849.28932188134,-64280.481750953564,156775.78607073758,-63329.28932188135],\"block_parts\":[{\"index\":0,\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"color\":256},{\"index\":1,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"20TEXT\",\"color\":256,\"tag\":\"LEVEL\",\"world_insertion\":[156120.0,-63741.42135623731]},{\"index\":2,\"object\":\"AcDbPolyline\",\"layer\":\"GUIDELINES\",\"color\":256},{\"index\":3,\"object\":\"AcDbPolyline\",\"layer\":\"GUIDELINES\",\"color\":256}]}",
+          "evidence": "RECORDED, not judged: FULL the blank spot (LEVEL attribute must be empty) = {\"handle\":\"11C651\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[156020.0,-63500.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"LEVEL\",\"text\":\"P__.__\",\"insertion\":[156120.0,-63741.42135623731,0.0],\"rotation\":5.497787143782214,\"height\":200.0,\"alignment\":9,\"align_point\":[156190.71067811866,-63670.71067811865,0.0],\"bbox\":[156095.30431978393,-64280.481750953564,156775.78607073758,-63599.99999999999]}],\"bbox\":[155849.28932188134,-64280.481750953564,156775.78607073758,-63329.28932188135],\"block_parts\":[{\"index\":0,\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"color\":256},{\"index\":1,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"20TEXT\",\"color\":256,\"tag\":\"LEVEL\",\"world_insertion\":[156120.0,-63741.42135623731]},{\"index\":2,\"object\":\"AcDbPolyline\",\"layer\":\"GUIDELINES\",\"color\":256},{\"index\":3,\"object\":\"AcDbPolyline\",\"layer\":\"GUIDELINES\",\"color\":256}]}"
+        },
+        {
+          "n": 23,
+          "text": "record $eg \"FULL the P19.020 spot\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C654\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[156040.0,-63500.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"LEVEL\",\"text\":\"P19.020\",\"insertion\":[156140.0,-63741.42135623731,0.0],\"rotation\":5.497787143782214,\"height\":200.0,\"alignment\":9,\"align_point\":[156210.71067811866,-63670.71067811865,0.0],\"bbox\":[156137.5883124789,-64347.430196539295,156885.59731402335,-63599.421194994924]}],\"bbox\":[155869.28932188134,-64347.430196539295,156885.59731402335,-63329.28932188135],\"block_parts\":[{\"index\":0,\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"color\":256},{\"index\":1,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"20TEXT\",\"color\":256,\"tag\":\"LEVEL\",\"world_insertion\":[156140.0,-63741.42135623731]},{\"index\":2,\"object\":\"AcDbPolyline\",\"layer\":\"GUIDELINES\",\"color\":256},{\"index\":3,\"object\":\"AcDbPolyline\",\"layer\":\"GUIDELINES\",\"color\":256}]}",
+          "evidence": "RECORDED, not judged: FULL the P19.020 spot = {\"handle\":\"11C654\",\"object\":\"AcDbBlockReference\",\"layer\":\"25DIMS\",\"name\":\"SPOT LEVEL\",\"effective_name\":\"SPOT LEVEL\",\"insertion\":[156040.0,-63500.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"LEVEL\",\"text\":\"P19.020\",\"insertion\":[156140.0,-63741.42135623731,0.0],\"rotation\":5.497787143782214,\"height\":200.0,\"alignment\":9,\"align_point\":[156210.71067811866,-63670.71067811865,0.0],\"bbox\":[156137.5883124789,-64347.430196539295,156885.59731402335,-63599.421194994924]}],\"bbox\":[155869.28932188134,-64347.430196539295,156885.59731402335,-63329.28932188135],\"block_parts\":[{\"index\":0,\"object\":\"AcDbBlockReference\",\"layer\":\"20TEXT\",\"color\":256},{\"index\":1,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"20TEXT\",\"color\":256,\"tag\":\"LEVEL\",\"world_insertion\":[156140.0,-63741.42135623731]},{\"index\":2,\"object\":\"AcDbPolyline\",\"layer\":\"GUIDELINES\",\"color\":256},{\"index\":3,\"object\":\"AcDbPolyline\",\"layer\":\"GUIDELINES\",\"color\":256}]}"
+        },
+        {
+          "n": 24,
+          "text": "record $fs \"FULL what CDFALLSUGGEST showed up to Skip\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDFALLSUGGEST | Pick a level to suggest a FALL arrow toward the nearest downhill grated pit, or Enter to finish: 156000,-63500 | [CE] Suggested: FALL toward P8, 1:100. | Accept, Move or Skip this fall? [Accept/Move/Skip] <Accept>: Skip",
+          "evidence": "RECORDED, not judged: FULL what CDFALLSUGGEST showed up to Skip = Command: | Command: CDFALLSUGGEST | Pick a level to suggest a FALL arrow toward the nearest downhill grated pit, or Enter to finish: 156000,-63500 | [CE] Suggested: FALL toward P8, 1:100. | Accept, Move or Skip this fall? [Accept/Move/Skip] <Accept>: Skip"
+        },
+        {
+          "n": 25,
+          "text": "record $fs_e1 \"FULL the first Esc\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: CDFALLSUGGEST | Pick a level to suggest a FALL arrow toward the nearest downhill grated pit, or Enter to finish: 156000,-63500 | [CE] Suggested: FALL toward P8, 1:100. | Accept, Move or Skip this fall? [Accept/Move/Skip] <Accept>: Skip | Next level (0 placed, 1 skipped), or Enter to finish: *Cancel* | CDFALLSUGGEST finished. 0 placed, 1 skipped.",
+          "evidence": "RECORDED, not judged: FULL the first Esc = Command: CDFALLSUGGEST | Pick a level to suggest a FALL arrow toward the nearest downhill grated pit, or Enter to finish: 156000,-63500 | [CE] Suggested: FALL toward P8, 1:100. | Accept, Move or Skip this fall? [Accept/Move/Skip] <Accept>: Skip | Next level (0 placed, 1 skipped), or Enter to finish: *Cancel* | CDFALLSUGGEST finished. 0 placed, 1 skipped."
+        },
+        {
+          "n": 26,
+          "text": "record $fs_e2 \"FULL the second Esc (expected: nothing to cancel)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Pick a level to suggest a FALL arrow toward the nearest downhill grated pit, or Enter to finish: 156000,-63500 | [CE] Suggested: FALL toward P8, 1:100. | Accept, Move or Skip this fall? [Accept/Move/Skip] <Accept>: Skip | Next level (0 placed, 1 skipped), or Enter to finish: *Cancel* | CDFALLSUGGEST finished. 0 placed, 1 skipped.",
+          "evidence": "RECORDED, not judged: FULL the second Esc (expected: nothing to cancel) = Pick a level to suggest a FALL arrow toward the nearest downhill grated pit, or Enter to finish: 156000,-63500 | [CE] Suggested: FALL toward P8, 1:100. | Accept, Move or Skip this fall? [Accept/Move/Skip] <Accept>: Skip | Next level (0 placed, 1 skipped), or Enter to finish: *Cancel* | CDFALLSUGGEST finished. 0 placed, 1 skipped."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 153 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: PIT completed 142026 ms ; Command outcome: CDSL completed 192 ms ; Command outcome: CDSL completed 142 ms ; Command outcome: CDFALLSUGGEST cancelled 8378 ms"
+      ],
+      "error": null,
+      "finished": "2026-11-03 04:25:49",
+      "session_id": "RUN-20261103-0420-C3.0.89-plW06-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "no independent review: no W713_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": true
+      }
+    },
+    {
+      "id": "W740",
+      "proves_bugs": "BUG-740: the CDSOURCE and COPY routes for a multi-word name (ROOF DRAIN). The CDTAG Set route and the 'source numbering' project setting route are NOT driven (see the report).",
+      "title": "CDSOURCE Roof drain then COPY: the copy is numbered ROOF DRAIN 2 with a 'ROOF DRAIN' label (never 'ROOF' or 'ROOF1'), so the next Roof drain is ROOF DRAIN 3",
+      "kind": "deterministic",
+      "order": 7400,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "BUG-proof wave 1, group T (tags, sources and fall suggestion); BUG-740",
+      "bug": "BUG-740",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed",
+      "variant_of": "",
+      "expected": "CDSOURCE RoofDrain at 150000,-98000 says 'Source block placed. ID: ROOF DRAIN 1.' and adds a SOURCE block with the label 'ROOF DRAIN 1'; COPY of that block 3 m east adds one SOURCE block and one label reading 'ROOF DRAIN' (or 'ROOF DRAIN 2'), never 'ROOF' or 'ROOF1'; a second CDSOURCE RoofDrain at 156000,-98000 says 'Source block placed. ID: ROOF DRAIN 3.'; the drawing file on disk is unchanged.",
+      "why_not_unit": "CategoryOf, TagFor and NextNumberedName are unit-tested as text; only live AutoCAD shows the native COPY handler reads the real stored tag, writes the copy's tag and label, and that a later CDSOURCE sees that stored tag.",
+      "not_automated": [
+        "CDTAG Set on a Roof drain (a tagged block cannot be picked by a typed point: run 31 C.4; pick-first CDTAG was ignored in run 32) and the 'Number sources' project setting (a window route) are not driven. Hot water unit and AC unit are the same code (GenericSourceTypes.cs 17-23) and are not driven."
+      ],
+      "file_sha256": "9F1878AD7D646032EAB2267325CA5F74793B8EB9FCA33508E1672B3C4FB2E79C",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-11-03 04:25:49",
+      "seconds": 71.1,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV30421051_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDSOURCE{NL}RoofDrain{NL}150000,-98000\" -Force -TimeoutSec 90 -> $s1",
+          "ok": true,
+          "seconds": 13.7,
+          "evidence": "typed 'CDSOURCE RoofDrain 150000,-98000': Command: CDSOURCE | Source type [Roof drain/Air-conditioning unit/Overflow pipe/Hot-water unit/Custom] <Roof drain>: RoofDrain | Specify ROOF DRAIN 1 insertion point: 150000,-98000 | [CE] The source name 'AGI' is on 4 bl..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $s1e",
+          "ok": true,
+          "seconds": 5.0,
+          "evidence": "esc-prompt: Specify ROOF DRAIN 1 insertion point: 150000,-98000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Source block placed. ID: ROOF DRAIN 1. Nothin..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1036 objects"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $new1",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "2 object(s) after index 1034 (model space now 1036); by type: AcDbBlockReference 1; AcDbText 1; first: 11C55B AcDbBlockReference DOWNPIPES SOURCE ; 11C561 AcDbText GUIDELINES ROOF DRAIN 1"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new1 \"name=SOURCE\" -> $src1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C55B SOURCE DOWNPIPES"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new1 \"text~^ROOF DRAIN 1$\" -> $lab1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C561 ROOF DRAIN 1 GUIDELINES"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $src1 handle -> $h1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C55B"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"{$h1}\"",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "pick-first 11C55B: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"11C55B\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.COPY{NL}0,0{NL}3000,0{NL}{NL}\" -Force -> $cp",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "typed '_.COPY 0,0 3000,0': Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as displacement>: 3000,0 | ..."
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 4",
+          "ok": true,
+          "seconds": 4.0,
+          "evidence": "slept 4 s"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1038 objects"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c1 -> $new2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "2 object(s) after index 1036 (model space now 1038); by type: AcDbBlockReference 1; AcDbText 1; first: 11C56A AcDbBlockReference DOWNPIPES SOURCE ; 11C573 AcDbText GUIDELINES ROOF DRAIN"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new2 \"name=SOURCE\" -> $src2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C56A SOURCE DOWNPIPES"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new2 \"text~^ROOF DRAIN( 2)?$\" -> $lab2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C573 ROOF DRAIN GUIDELINES"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new2 \"text~^ROOF1?$\" -> $lab2_cut",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 2: "
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDSOURCE{NL}RoofDrain{NL}156000,-98000\" -Force -TimeoutSec 90 -> $s3",
+          "ok": true,
+          "seconds": 9.5,
+          "evidence": "typed 'CDSOURCE RoofDrain 156000,-98000': Command: CDSOURCE | Source type [Roof drain/Air-conditioning unit/Overflow pipe/Hot-water unit/Custom] <Roof drain>: RoofDrain | Specify ROOF DRAIN 3 insertion point: 156000,-98000 | [CE] The source name 'AGI' is on 4 bl..."
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $s3e",
+          "ok": true,
+          "seconds": 4.2,
+          "evidence": "esc-prompt: Specify ROOF DRAIN 3 insertion point: 156000,-98000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Source block placed. ID: ROOF DRAIN 3. Nothin..."
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.2,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30421051_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"Source block placed. ID: ROOF DRAIN 1.\"",
+          "ok": true,
+          "expected": "command line has 'Source block placed. ID: ROOF DRAIN 1.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Source block placed. ID: ROOF DRAIN 1. Nothing nearby. The source connects when a pipe is drawn to it.'"
+        },
+        {
+          "n": 2,
+          "text": "count $src1 = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $src1 = 1 (expected = 1)"
+        },
+        {
+          "n": 3,
+          "text": "count $lab1 = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $lab1 = 1 (expected = 1)"
+        },
+        {
+          "n": 4,
+          "text": "count $src2 = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $src2 = 1 (expected = 1)"
+        },
+        {
+          "n": 5,
+          "text": "count $lab2 = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $lab2 = 1 (expected = 1)"
+        },
+        {
+          "n": 6,
+          "text": "count $lab2_cut = 0",
+          "ok": true,
+          "expected": "count = 0",
+          "actual": "0",
+          "evidence": "count of $lab2_cut = 0 (expected = 0)"
+        },
+        {
+          "n": 7,
+          "text": "history absent \"could not be given its own link\"",
+          "ok": true,
+          "expected": "command line lacks 'could not be given its own link'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'could not be given its own link' (27 lines read)"
+        },
+        {
+          "n": 8,
+          "text": "history has \"Source block placed. ID: ROOF DRAIN 3.\"",
+          "ok": true,
+          "expected": "command line has 'Source block placed. ID: ROOF DRAIN 3.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Source block placed. ID: ROOF DRAIN 3. Nothing nearby. The source connects when a pipe is drawn to it.'"
+        },
+        {
+          "n": 9,
+          "text": "history count \"Source block placed. ID: ROOF DRAIN 2.\" = 0",
+          "ok": true,
+          "expected": "0 line(s) with 'Source block placed. ID: ROOF DRAIN 2.'",
+          "actual": "0",
+          "evidence": "command line holds 0 line(s) containing 'Source block placed. ID: ROOF DRAIN 2.' (expected 0)"
+        },
+        {
+          "n": 10,
+          "text": "history absent \"ROOF1\"",
+          "ok": true,
+          "expected": "command line lacks 'ROOF1'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'ROOF1' (27 lines read)"
+        },
+        {
+          "n": 11,
+          "text": "not-contains $win_end \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30421051_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV30421051_B1.dwg]"
+        },
+        {
+          "n": 12,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 13,
+          "text": "record $s1 \"FULL first CDSOURCE\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: CDSOURCE | Source type [Roof drain/Air-conditioning unit/Overflow pipe/Hot-water unit/Custom] <Roof drain>: RoofDrain | Specify ROOF DRAIN 1 insertion point: 150000,-98000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Source block placed. ID: ROOF DRAIN 1. Nothing nearby. The source connects when a pipe is drawn to it. | [CE] Choose the next source, or press Esc to stop.",
+          "evidence": "RECORDED, not judged: FULL first CDSOURCE = Command: CDSOURCE | Source type [Roof drain/Air-conditioning unit/Overflow pipe/Hot-water unit/Custom] <Roof drain>: RoofDrain | Specify ROOF DRAIN 1 insertion point: 150000,-98000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Source block placed. ID: ROOF DRAIN 1. Nothing nearby. The source connects when a pipe is drawn to it. | [CE] Choose the next source, or press Esc to stop."
+        },
+        {
+          "n": 14,
+          "text": "record $new1 \"FULL objects the first CDSOURCE added\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"index\":1034,\"handle\":\"11C55B\",\"object\":\"AcDbBlockReference\",\"layer\":\"DOWNPIPES\",\"name\":\"SOURCE\",\"text\":\"\",\"x\":150000.0,\"y\":-98000.0} | {\"index\":1035,\"handle\":\"11C561\",\"object\":\"AcDbText\",\"layer\":\"GUIDELINES\",\"name\":\"\",\"text\":\"ROOF DRAIN 1\",\"x\":150250.0,\"y\":-97750.0}",
+          "evidence": "RECORDED, not judged: FULL objects the first CDSOURCE added = {\"index\":1034,\"handle\":\"11C55B\",\"object\":\"AcDbBlockReference\",\"layer\":\"DOWNPIPES\",\"name\":\"SOURCE\",\"text\":\"\",\"x\":150000.0,\"y\":-98000.0} | {\"index\":1035,\"handle\":\"11C561\",\"object\":\"AcDbText\",\"layer\":\"GUIDELINES\",\"name\":\"\",\"text\":\"ROOF DRAIN 1\",\"x\":150250.0,\"y\":-97750.0}"
+        },
+        {
+          "n": 15,
+          "text": "record $cp \"FULL what COPY showed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as displacement>: 3000,0 | Specify second point or [Array/Exit/Undo] <Exit>: | Command:",
+          "evidence": "RECORDED, not judged: FULL what COPY showed = Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as displacement>: 3000,0 | Specify second point or [Array/Exit/Undo] <Exit>: | Command:"
+        },
+        {
+          "n": 16,
+          "text": "record $new2 \"FULL objects the COPY added (the copy's label text is the BUG-740 check)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"index\":1036,\"handle\":\"11C56A\",\"object\":\"AcDbBlockReference\",\"layer\":\"DOWNPIPES\",\"name\":\"SOURCE\",\"text\":\"\",\"x\":153000.0,\"y\":-98000.0} | {\"index\":1037,\"handle\":\"11C573\",\"object\":\"AcDbText\",\"layer\":\"GUIDELINES\",\"name\":\"\",\"text\":\"ROOF DRAIN\",\"x\":153250.0,\"y\":-97750.0}",
+          "evidence": "RECORDED, not judged: FULL objects the COPY added (the copy's label text is the BUG-740 check) = {\"index\":1036,\"handle\":\"11C56A\",\"object\":\"AcDbBlockReference\",\"layer\":\"DOWNPIPES\",\"name\":\"SOURCE\",\"text\":\"\",\"x\":153000.0,\"y\":-98000.0} | {\"index\":1037,\"handle\":\"11C573\",\"object\":\"AcDbText\",\"layer\":\"GUIDELINES\",\"name\":\"\",\"text\":\"ROOF DRAIN\",\"x\":153250.0,\"y\":-97750.0}"
+        },
+        {
+          "n": 17,
+          "text": "record $s3 \"FULL second CDSOURCE (expected ID ROOF DRAIN 3)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: CDSOURCE | Source type [Roof drain/Air-conditioning unit/Overflow pipe/Hot-water unit/Custom] <Roof drain>: RoofDrain | Specify ROOF DRAIN 3 insertion point: 156000,-98000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Source block placed. ID: ROOF DRAIN 3. Nothing nearby. The source connects when a pipe is drawn to it. | [CE] Choose the next source, or press Esc to stop.",
+          "evidence": "RECORDED, not judged: FULL second CDSOURCE (expected ID ROOF DRAIN 3) = Command: CDSOURCE | Source type [Roof drain/Air-conditioning unit/Overflow pipe/Hot-water unit/Custom] <Roof drain>: RoofDrain | Specify ROOF DRAIN 3 insertion point: 156000,-98000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Source block placed. ID: ROOF DRAIN 3. Nothing nearby. The source connects when a pipe is drawn to it. | [CE] Choose the next source, or press Esc to stop."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV30421051_B1_184db3208.log)",
+        "Civil CE log: 148 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDSOURCE completed 14584 ms ; Command outcome: CDSOURCE completed 10691 ms"
+      ],
+      "error": null,
+      "finished": "2026-11-03 04:27:00",
+      "session_id": "RUN-20261103-0420-C3.0.89-plW06-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "no independent review: no W740_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)",
+          "bug case (BUG-740) has no recorded FAIL on an earlier build or on a deliberately broken variant"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": false
+      }
+    },
+    {
+      "id": "W671",
+      "proves_bugs": "BUG-671 (COPY of a pipe and only its size label: the level texts and the flow arrow are drawn for the copy; one label, not two)",
+      "title": "COPY of a pipe with only its size label: CE draws the copy's IL 18.000 and IL 17.800 texts and its flow arrow, and no second label",
+      "kind": "deterministic",
+      "order": 6710,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "BUG-671 (pipe copied with only some of its labels gets the missing pieces)",
+      "bug": "BUG-671",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed",
+      "variant_of": "",
+      "expected": "After SETUP-R47v, COPY of the new pipe and its label only, by 0,15000, shows \"1 pipe copied and numbered as new.\" and adds exactly one CE pipe object, exactly one pipe label (the copied one: text containing \" DIA. \"), one \"IL 18.000\" text within 1000 mm of 150225,-65000, one \"IL 17.800\" text within 1000 mm of 170000,-65000 and one flow arrow block (the total number of new objects is recorded, not judged). No CE window is left open. The drawing file on disk is unchanged.",
+      "why_not_unit": "The rule (CopyCleanUpCompletenessRule) is unit-tested; this case proves that the live COPY clean-up uses it on a real drawing, with the pieces AutoCAD really copied.",
+      "not_automated": [
+        "DERIVED, not yet seen on a run: that the copy's level texts read \"IL 18.000\" and \"IL 17.800\" (drawn from the copied record, CloneRegeneration.cs 161-185); the 1000 mm radius (select near=) allows R03's 800 mm plus the 225 mm wall move; the arrow is matched by a block name containing ARROW (as R32). A real crossing window is not used: picking the two objects by handle gives AutoCAD exactly the selection a crossing window that caught only the label would give.",
+        "Not driven: a copy with the level texts but no label (the label branch), and the look of the drawn pieces (Codex look)."
+      ],
+      "file_sha256": "8B800AEE49FDD6EADE3B5950D5A957346819840EF73107C867CB950CE93C9398",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-11-03 04:28:54",
+      "seconds": 363.5,
+      "setup": "SETUP-R47v",
+      "setup_note": "shared setup SETUP-R47v run here for the first time at 04:34:27",
+      "steps": [
+        {
+          "n": 1,
+          "phase": "setup",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV30427362_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "setup",
+          "verb": "pick-first",
+          "text": "pick-first \"109D56\"",
+          "ok": true,
+          "seconds": 4.1,
+          "evidence": "pick-first 109D56: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"109D56\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 3,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"_.MOVE{NL}0,0{NL}0,2000\" -Force -> $setup_move",
+          "ok": true,
+          "seconds": 5.1,
+          "evidence": "typed '_.MOVE 0,0 0,2000': Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,2000 | [CE Civil] pipe P3 -> P2 label: no clear spot among it..."
+        },
+        {
+          "n": 4,
+          "phase": "setup",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "setup",
+          "verb": "ms-count",
+          "text": "ms-count -> $n0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 6,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"PIT{NL}150000,-80000\" -Force -ExpectWindow \"New Pit\" -> $pit_t1",
+          "ok": true,
+          "seconds": 18.6,
+          "evidence": "typed 'PIT 150000,-80000': Command: | Command: PIT | Specify pit insertion point: 150000,-80000 | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C..."
+        },
+        {
+          "n": 7,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.CoverLevel\" \"19.000\"",
+          "ok": true,
+          "seconds": 15.1,
+          "evidence": "ui set 'New Pit' C2.CoverLevel = 19.000: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 8,
+          "phase": "setup",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pit\" \"New pit, Continue placement\" -> $pit_t2",
+          "ok": true,
+          "seconds": 102.6,
+          "evidence": "pressed 'New pit, Continue placement' in /New Pit/: window closed = True"
+        },
+        {
+          "n": 9,
+          "phase": "setup",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pit\" -Secs 120",
+          "ok": true,
+          "seconds": 0.4,
+          "evidence": "the window /^New Pit/ closed after 0 s"
+        },
+        {
+          "n": 10,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e1",
+          "ok": true,
+          "seconds": 10.5,
+          "evidence": "esc-prompt: Command: | Command: PIT | Specify pit insertion point: 150000,-80000 | Specify pit label insertion point: *Cancel* | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or qu..."
+        },
+        {
+          "n": 11,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e2",
+          "ok": true,
+          "seconds": 10.8,
+          "evidence": "esc-prompt: Command: PIT | Specify pit insertion point: 150000,-80000 | Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit..."
+        },
+        {
+          "n": 12,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e3",
+          "ok": true,
+          "seconds": 4.7,
+          "evidence": "esc-prompt: Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit, or press Esc to stop. | Specify pit insertion point: *Canc..."
+        },
+        {
+          "n": 13,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-80000{NL}170000,-80000{NL}\" -Force -ExpectWindow \"New Pipe\" -> $pipe_t1",
+          "ok": true,
+          "seconds": 19.2,
+          "evidence": "typed 'CD 150000,-80000 170000,-80000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-80000 | Specify second point: 170000,-80000 | Se..."
+        },
+        {
+          "n": 14,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 16.4,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 15,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.800\"",
+          "ok": true,
+          "seconds": 16.8,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.800: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 16,
+          "phase": "setup",
+          "verb": "ui-dump",
+          "text": "ui-dump \"New Pipe\" -> $np_win",
+          "ok": true,
+          "seconds": 10.9,
+          "evidence": "ui-dump 'New Pipe': 152 controls, tabs: "
+        },
+        {
+          "n": 17,
+          "phase": "setup",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $pipe_t2",
+          "ok": true,
+          "seconds": 84.0,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 18,
+          "phase": "setup",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 19,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pipe_e1",
+          "ok": true,
+          "seconds": 7.5,
+          "evidence": "esc-prompt: [CE] Pipe kept. One or more ends have no proven connection. The route stays drawn; confirm the intended connection later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: P8 -> Open en..."
+        },
+        {
+          "n": 20,
+          "phase": "setup",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 21,
+          "phase": "setup",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_after_setup",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30427362_B1.dwg]"
+        },
+        {
+          "n": 22,
+          "phase": "setup",
+          "verb": "ms-new",
+          "text": "ms-new $n0 -> $new_all",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "6 object(s) after index 1034 (model space now 1040); by type: AcDbBlockReference 2; AcDbMText 3; CeCvlPipeObject 1; first: 11C5AD AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C651 CeCvlPipeObject STORMWATER PIPE ; 11C657 AcDbMText 25TEXT 100 DIA. UPVC PIPE AT 1 IN 100 ; 11C65C AcDbMText 20TEXT IL 18.000 ; 11C661 AcDbMText 20TEXT IL 17.800 ; 11C683 AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copyw",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV30427362_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_all \"object~^CeCvlPipeObject$\" -> $pipe0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 6: 11C651 STORMWATER PIPE"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_all \"text~ DIA\\. \" -> $label0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 6: 11C657 100 DIA. UPVC PIPE AT 1 IN 100 25TEXT"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $pipe0 handle -> $hp",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C651"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $label0 handle -> $hl",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C657"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1040 objects"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"{$hp},{$hl}\"",
+          "ok": true,
+          "seconds": 10.8,
+          "evidence": "pick-first 11C651,11C657: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"11C651\" \"11C657\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (str..."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.COPY{NL}0,0{NL}0,15000{NL}{NL}\" -Force -> $cp",
+          "ok": true,
+          "seconds": 5.0,
+          "evidence": "typed '_.COPY 0,0 0,15000': Command: | Command: _.COPY | 2 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as displacement>: 0,15000 |..."
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 6",
+          "ok": true,
+          "seconds": 6.1,
+          "evidence": "slept 6 s"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $cpe",
+          "ok": true,
+          "seconds": 2.7,
+          "evidence": "esc-prompt: Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as displacement>: 0,15000 | Specify second point or [Array/Exit/Undo] <Exit>: | 1 pipe copied and numbered ..."
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c1",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "model space holds 1045 objects"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $new_cp",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "5 object(s) after index 1040 (model space now 1045); by type: AcDbBlockReference 1; AcDbMText 3; CeCvlPipeObject 1; first: 11C688 CeCvlPipeObject STORMWATER PIPE ; 11C68D AcDbMText 25TEXT 100 DIA. UPVC PIPE AT 1 IN 100 ; 11C692 AcDbMText 20TEXT IL 18.000 ; 11C697 AcDbMText 20TEXT IL 17.800 ; 11C6B9 AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_cp \"object~^CeCvlPipeObject$\" -> $cp_pipe",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 5: 11C688 STORMWATER PIPE"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_cp \"text~ DIA\\. \" -> $cp_label",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 5: 11C68D 100 DIA. UPVC PIPE AT 1 IN 100 25TEXT"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_cp \"text~^IL \" -> $cp_ils",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 2 of 5: 11C692 IL 18.000 20TEXT ; 11C697 IL 17.800 20TEXT"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $cp_ils \"text~^IL 18\\.0*$\" \"near=150225,-65000,1000\" -> $cp_il18",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C692 IL 18.000 20TEXT"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $cp_ils \"text~^IL 17\\.80*$\" \"near=170000,-65000,1000\" -> $cp_il17",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C697 IL 17.800 20TEXT"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_cp \"name~ARROW\" -> $cp_arrow",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 5: 11C6B9 TIM_CVL_ARROW ARROW"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30427362_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "count $pipe0 = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $pipe0 = 1 (expected = 1)"
+        },
+        {
+          "n": 2,
+          "text": "count $label0 = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $label0 = 1 (expected = 1)"
+        },
+        {
+          "n": 3,
+          "text": "history has \"1 pipe copied and numbered as new.\"",
+          "ok": true,
+          "expected": "command line has '1 pipe copied and numbered as new.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '1 pipe copied and numbered as new. Check levels: they came across from the originals (the Inspector shows which ones to confirm).'"
+        },
+        {
+          "n": 4,
+          "text": "count $cp_pipe = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $cp_pipe = 1 (expected = 1)"
+        },
+        {
+          "n": 5,
+          "text": "count $cp_label = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $cp_label = 1 (expected = 1)"
+        },
+        {
+          "n": 6,
+          "text": "count $cp_ils = 2",
+          "ok": true,
+          "expected": "count = 2",
+          "actual": "2",
+          "evidence": "count of $cp_ils = 2 (expected = 2)"
+        },
+        {
+          "n": 7,
+          "text": "count $cp_il18 = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $cp_il18 = 1 (expected = 1)"
+        },
+        {
+          "n": 8,
+          "text": "count $cp_il17 = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $cp_il17 = 1 (expected = 1)"
+        },
+        {
+          "n": 9,
+          "text": "count $cp_arrow = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $cp_arrow = 1 (expected = 1)"
+        },
+        {
+          "n": 10,
+          "text": "not-contains $win_end \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30427362_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV30427362_B1.dwg]"
+        },
+        {
+          "n": 11,
+          "text": "copy-unchanged $copyw",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 12,
+          "text": "record $cp \"FULL COPY of the pipe and its label\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: _.COPY | 2 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as displacement>: 0,15000 | Specify second point or [Array/Exit/Undo] <Exit>: | 1 pipe copied and numbered as new. Check levels: they came across from the originals (the Inspector shows which ones to confirm). | Command: | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL COPY of the pipe and its label = Command: | Command: _.COPY | 2 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as displacement>: 0,15000 | Specify second point or [Array/Exit/Undo] <Exit>: | 1 pipe copied and numbered as new. Check levels: they came across from the originals (the Inspector shows which ones to confirm). | Command: | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 13,
+          "text": "record $cpe \"FULL after the wait\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as displacement>: 0,15000 | Specify second point or [Array/Exit/Undo] <Exit>: | 1 pipe copied and numbered as new. Check levels: they came across from the originals (the Inspector shows which ones to confirm). | Command: | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL after the wait = Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as displacement>: 0,15000 | Specify second point or [Array/Exit/Undo] <Exit>: | 1 pipe copied and numbered as new. Check levels: they came across from the originals (the Inspector shows which ones to confirm). | Command: | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 14,
+          "text": "record $new_cp \"FULL objects the COPY added\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"index\":1040,\"handle\":\"11C688\",\"object\":\"CeCvlPipeObject\",\"layer\":\"STORMWATER PIPE\",\"name\":\"\",\"text\":\"\",\"x\":150225.0,\"y\":-65050.0,\"note\":\"CE pipe object: x,y is the lower-left corner of its bounding box (150225, -65050, 170000, -64950)\"} | {\"index\":1041,\"handle\":\"11C68D\",\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"name\":\"\",\"text\":\"100 DIA. UPVC PIPE AT 1 IN 100\",\"x\":160112.5,\"y\":-64825.0} | {\"index\":1042,\"handle\":\"11C692\",\"object\":\"AcDbMText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 18.000\",\"x\":150425.0,\"y\":-65120.0} | {\"index\":1043,\"handle\":\"11C697\",\"object\":\"AcDbMText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 17.800\",\"x\":169800.0,\"y\":-65120.0} | {\"index\":1044,\"handle\":\"11C6B9\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"text\":\"\",\"x\":160112.5,\"y\":-65175.0}",
+          "evidence": "RECORDED, not judged: FULL objects the COPY added = {\"index\":1040,\"handle\":\"11C688\",\"object\":\"CeCvlPipeObject\",\"layer\":\"STORMWATER PIPE\",\"name\":\"\",\"text\":\"\",\"x\":150225.0,\"y\":-65050.0,\"note\":\"CE pipe object: x,y is the lower-left corner of its bounding box (150225, -65050, 170000, -64950)\"} | {\"index\":1041,\"handle\":\"11C68D\",\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"name\":\"\",\"text\":\"100 DIA. UPVC PIPE AT 1 IN 100\",\"x\":160112.5,\"y\":-64825.0} | {\"index\":1042,\"handle\":\"11C692\",\"object\":\"AcDbMText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 18.000\",\"x\":150425.0,\"y\":-65120.0} | {\"index\":1043,\"handle\":\"11C697\",\"object\":\"AcDbMText\",\"layer\":\"20TEXT\",\"name\":\"\",\"text\":\"IL 17.800\",\"x\":169800.0,\"y\":-65120.0} | {\"index\":1044,\"handle\":\"11C6B9\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"text\":\"\",\"x\":160112.5,\"y\":-65175.0}"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 262 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: PIT completed 159145 ms ; Command outcome: CD completed 151036 ms"
+      ],
+      "error": null,
+      "finished": "2026-11-03 04:34:58",
+      "session_id": "RUN-20261103-0420-C3.0.89-plW06-s2",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "no independent review: no W671_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": true
+      }
+    },
+    {
+      "id": "W672",
+      "proves_bugs": "BUG-672 (COPY of a pit with one annotation layer locked: the other annotation is still copied, the locked one is skipped and named, the line names only what is missing; checked with the cover-text layer locked and again with the label layer locked)",
+      "title": "COPY of a pit with only its cover-text layer locked keeps the number label, and with only its label layer locked keeps the cover text; each time CE names only the missing piece and its layer, and one U takes the copy back",
+      "kind": "deterministic",
+      "order": 6720,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "BUG-672 (copy what sits on open layers and report the one skipped), both halves: behaviour and wording",
+      "bug": "BUG-672",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed",
+      "variant_of": "",
+      "expected": "(A) With 25TEXT locked, COPY of P3 by 0,-5000 shows \"1 pit copied and numbered as new.\" and \"1 copied pit(s) got their own number but no cover text: layer 25TEXT is locked, and CE does not draw on it. Undo (U), unlock layer 25TEXT, then copy again.\", never \"no label\", and adds one pit block (STORMWATER PIT), one PIT LABEL block (STORMWATER PIT LABEL) and no CL text; one U brings the object count back. (B) With 25TEXT unlocked and STORMWATER PIT LABEL locked, the same COPY shows \"1 pit copied and numbered as new.\" and \"1 copied pit(s) got their own number but no label: layer STORMWATER PIT LABEL is locked, and CE does not draw on it. Undo (U), unlock layer STORMWATER PIT LABEL, then copy again.\", and adds one pit block, no PIT LABEL block and one CL text on 25TEXT; one U brings the object count back. Both layers are unlocked at the end. No CE window is left open. The drawing file on disk is unchanged.",
+      "why_not_unit": "It needs AutoCAD's real layer lock and the real COPY clean-up on the live drawing.",
+      "not_automated": [
+        "The copy's number in A is not read here (R33 reads P8 on this route, accepted on 3.0.84 and PASS on 3.0.88); in B there is no label to read, so \"got their own number\" is CE's own claim, held only by the words. The Pit Schedule row of the copy is not read. The schedule-cell lines that A also shows (R33, BUG-262) are recorded, not judged.",
+        "DERIVED, not yet seen on a run: the whole B sentence (from CloneCleanupMessages.cs 170-171 with <what> = \"label\"), and that the PIT LABEL is identified as a label (BlockService.IsPitLabelBlock) so the B line says \"label\" and not \"label or cover text\"."
+      ],
+      "file_sha256": "5DD66701E7E9F2F3A5E7830164E4D4721C33A9F6525EC5AC39C203D663E0B017",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-11-03 04:42:19",
+      "seconds": 81.6,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV30441093_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.-LAYER{NL}_LOCK{NL}25TEXT{NL}{NL}\" -Force -> $lkA",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "typed '_.-LAYER _LOCK 25TEXT': Command: | Command: _.-LAYER | Current layer: \"BLOCKS\" | Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _LOCK | Ent..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.2,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"109D56\"",
+          "ok": true,
+          "seconds": 7.2,
+          "evidence": "pick-first 109D56: Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"109D56\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2PICKFIRST \"..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.COPY{NL}0,0{NL}0,-5000{NL}{NL}\" -Force -> $cpA",
+          "ok": true,
+          "seconds": 7.7,
+          "evidence": "typed '_.COPY 0,0 0,-5000': Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as displacement>: 0,-5000 |..."
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $cpAe",
+          "ok": true,
+          "seconds": 2.5,
+          "evidence": "esc-prompt: [CE] Pit schedule cell for P5 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P6 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P7 (lid..."
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 3.1,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c1",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "model space holds 1036 objects"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $newA",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "2 object(s) after index 1034 (model space now 1036); by type: AcDbBlockReference 2; first: 11C55B AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C575 AcDbBlockReference STORMWATER PIT LABEL PIT LABEL"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $newA \"name~^PIT BLOCK\" -> $a_pit",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C55B PIT BLOCK 3 STORMWATER PIT"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $newA \"name~^PIT LABEL\" -> $a_label",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C575 PIT LABEL STORMWATER PIT LABEL"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $newA \"text~^CL \" -> $a_cover",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 2: "
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $a_pit layer -> $a_pit_layer",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'layer' = STORMWATER PIT"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $a_label layer -> $a_label_layer",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'layer' = STORMWATER PIT LABEL"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -Force -> $uA",
+          "ok": true,
+          "seconds": 3.3,
+          "evidence": "typed 'U': Command: U | COPY | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c2",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.-LAYER{NL}_UNLOCK{NL}25TEXT{NL}{NL}\" -Force -> $ulA",
+          "ok": true,
+          "seconds": 3.7,
+          "evidence": "typed '_.-LAYER _UNLOCK 25TEXT': Command: | Command: _.-LAYER | Current layer: \"BLOCKS\" | Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _UNLOCK | E..."
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.-LAYER{NL}_LOCK{NL}STORMWATER PIT LABEL{NL}{NL}\" -Force -> $lkB",
+          "ok": true,
+          "seconds": 3.2,
+          "evidence": "typed '_.-LAYER _LOCK STORMWATER PIT LABEL': Command: _.-LAYER | Current layer: \"BLOCKS\" | Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _LOCK | Enter name lis..."
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"109D56\"",
+          "ok": true,
+          "seconds": 3.5,
+          "evidence": "pick-first 109D56: Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"109D56\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2PICKFIRST \"..."
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.COPY{NL}0,0{NL}0,-5000{NL}{NL}\" -Force -> $cpB",
+          "ok": true,
+          "seconds": 4.2,
+          "evidence": "typed '_.COPY 0,0 0,-5000': Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as displacement>: 0,-5000 |..."
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.2,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $cpBe",
+          "ok": true,
+          "seconds": 2.8,
+          "evidence": "esc-prompt: Specify second point or [Array] <use first point as displacement>: 0,-5000 | Specify second point or [Array/Exit/Undo] <Exit>: | 1 pit copied and numbered as new. Check levels: they came across from the originals (the In..."
+        },
+        {
+          "n": 29,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 30,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 31,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c3",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1036 objects"
+        },
+        {
+          "n": 32,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c2 -> $newB",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "2 object(s) after index 1034 (model space now 1036); by type: AcDbBlockReference 1; AcDbMText 1; first: 11C57C AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C596 AcDbMText 25TEXT CL 18.88"
+        },
+        {
+          "n": 33,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $newB \"name~^PIT BLOCK\" -> $b_pit",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C57C PIT BLOCK 3 STORMWATER PIT"
+        },
+        {
+          "n": 34,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $newB \"name~^PIT LABEL\" -> $b_label",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 2: "
+        },
+        {
+          "n": 35,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $newB \"text~^CL \" -> $b_cover",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C596 CL 18.88 25TEXT"
+        },
+        {
+          "n": 36,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $b_cover layer -> $b_cover_layer",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'layer' = 25TEXT"
+        },
+        {
+          "n": 37,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -Force -> $uB",
+          "ok": true,
+          "seconds": 4.0,
+          "evidence": "typed 'U': Command: U | COPY | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 38,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 39,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c4",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 40,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.-LAYER{NL}_UNLOCK{NL}STORMWATER PIT LABEL{NL}{NL}\" -Force -> $ulB",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "typed '_.-LAYER _UNLOCK STORMWATER PIT LABEL': Command: | Command: _.-LAYER | Current layer: \"BLOCKS\" | Enter an option [?/Make/Set/New/Rename/ON/OFF/Color/Ltype/LWeight/TRansparency/MATerial/Plot/Freeze/Thaw/LOck/Unlock/stAte/Description/rEconcile/Xref]: _UNLOCK | E..."
+        },
+        {
+          "n": 41,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 42,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV30441093_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "contains $cpA \"1 pit copied and numbered as new.\"",
+          "ok": true,
+          "expected": "contains '1 pit copied and numbered as new.'",
+          "actual": "Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as disp...",
+          "evidence": "found '1 pit copied and numbered as new.' in: Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second p..."
+        },
+        {
+          "n": 2,
+          "text": "contains $cpA \"1 copied pit(s) got their own number but no cover text: layer 25TEXT is locked, and CE does not draw on it. Undo (U), unlock layer 25TEXT, then copy again.\"",
+          "ok": true,
+          "expected": "contains '1 copied pit(s) got their own number but no cover text: layer 25TEXT is locked, and CE does not draw on it. Undo (U), unlock layer 25TEXT, then copy again.'",
+          "actual": "Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as disp...",
+          "evidence": "found '1 copied pit(s) got their own number but no cover text: layer 25TEXT is locked, and CE does not draw on it. Undo (U), unlock layer 25TEXT, then copy again.' in: Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second p..."
+        },
+        {
+          "n": 3,
+          "text": "not-contains $cpA \"no label\"",
+          "ok": true,
+          "expected": "does not contain 'no label'",
+          "actual": "Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as disp...",
+          "evidence": "'no label' is absent from: Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second p..."
+        },
+        {
+          "n": 4,
+          "text": "count $a_pit = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $a_pit = 1 (expected = 1)"
+        },
+        {
+          "n": 5,
+          "text": "count $a_label = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $a_label = 1 (expected = 1)"
+        },
+        {
+          "n": 6,
+          "text": "count $a_cover = 0",
+          "ok": true,
+          "expected": "count = 0",
+          "actual": "0",
+          "evidence": "count of $a_cover = 0 (expected = 0)"
+        },
+        {
+          "n": 7,
+          "text": "equals $a_pit_layer \"STORMWATER PIT\"",
+          "ok": true,
+          "expected": "STORMWATER PIT",
+          "actual": "STORMWATER PIT",
+          "evidence": "value 'STORMWATER PIT' (expected 'STORMWATER PIT')"
+        },
+        {
+          "n": 8,
+          "text": "equals $a_label_layer \"STORMWATER PIT LABEL\"",
+          "ok": true,
+          "expected": "STORMWATER PIT LABEL",
+          "actual": "STORMWATER PIT LABEL",
+          "evidence": "value 'STORMWATER PIT LABEL' (expected 'STORMWATER PIT LABEL')"
+        },
+        {
+          "n": 9,
+          "text": "equals $c2 $c0",
+          "ok": true,
+          "expected": "1034",
+          "actual": "1034",
+          "evidence": "value '1034' (expected '1034')"
+        },
+        {
+          "n": 10,
+          "text": "contains $cpB \"1 pit copied and numbered as new.\"",
+          "ok": true,
+          "expected": "contains '1 pit copied and numbered as new.'",
+          "actual": "Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as disp...",
+          "evidence": "found '1 pit copied and numbered as new.' in: Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second p..."
+        },
+        {
+          "n": 11,
+          "text": "contains $cpB \"1 copied pit(s) got their own number but no label: layer STORMWATER PIT LABEL is locked, and CE does not draw on it. Undo (U), unlock layer STORMWATER PIT LABEL, then copy again.\"",
+          "ok": true,
+          "expected": "contains '1 copied pit(s) got their own number but no label: layer STORMWATER PIT LABEL is locked, and CE does not draw on it. Undo (U), unlock layer STORMWATER PIT LABEL, then copy again.'",
+          "actual": "Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as disp...",
+          "evidence": "found '1 copied pit(s) got their own number but no label: layer STORMWATER PIT LABEL is locked, and CE does not draw on it. Undo (U), unlock layer STORMWATER PIT LABEL, then copy again.' in: Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second p..."
+        },
+        {
+          "n": 12,
+          "text": "not-contains $cpB \"no label or cover text\"",
+          "ok": true,
+          "expected": "does not contain 'no label or cover text'",
+          "actual": "Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as disp...",
+          "evidence": "'no label or cover text' is absent from: Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second p..."
+        },
+        {
+          "n": 13,
+          "text": "count $b_pit = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $b_pit = 1 (expected = 1)"
+        },
+        {
+          "n": 14,
+          "text": "count $b_label = 0",
+          "ok": true,
+          "expected": "count = 0",
+          "actual": "0",
+          "evidence": "count of $b_label = 0 (expected = 0)"
+        },
+        {
+          "n": 15,
+          "text": "count $b_cover = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $b_cover = 1 (expected = 1)"
+        },
+        {
+          "n": 16,
+          "text": "equals $b_cover_layer \"25TEXT\"",
+          "ok": true,
+          "expected": "25TEXT",
+          "actual": "25TEXT",
+          "evidence": "value '25TEXT' (expected '25TEXT')"
+        },
+        {
+          "n": 17,
+          "text": "equals $c4 $c0",
+          "ok": true,
+          "expected": "1034",
+          "actual": "1034",
+          "evidence": "value '1034' (expected '1034')"
+        },
+        {
+          "n": 18,
+          "text": "not-contains $win_end \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV30441093_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV30441093_B1.dwg]"
+        },
+        {
+          "n": 19,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 20,
+          "text": "record $cpA \"FULL COPY with 25TEXT locked\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as displacement>: 0,-5000 | Specify second point or [Array/Exit/Undo] <Exit>: | 1 pit copied and numbered as new. Check levels: they came across from the originals (the Inspector shows which ones to confirm). | [CE] 1 copied pit(s) got their own number but no cover text: layer 25TEXT is locked, and CE does not draw on it. Undo (U), unlock layer 25TEXT, then copy again. | [CE] Pit schedule cell for C1 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for C1 (inlet from) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for C1 (inlet from) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P1 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P1 (inlet from) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P1 (inlet from) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P2 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P3 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P4 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P5 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P6 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P7 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] The drawn pit schedule still shows the old values. Unlock the layer or finish the reference edit, then run PITEDIT on the pit or Update existing schedule in PITSCHEDULE. | Command: | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL COPY with 25TEXT locked = Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as displacement>: 0,-5000 | Specify second point or [Array/Exit/Undo] <Exit>: | 1 pit copied and numbered as new. Check levels: they came across from the originals (the Inspector shows which ones to confirm). | [CE] 1 copied pit(s) got their own number but no cover text: layer 25TEXT is locked, and CE does not draw on it. Undo (U), unlock layer 25TEXT, then copy again. | [CE] Pit schedule cell for C1 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for C1 (inlet from) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for C1 (inlet from) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P1 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P1 (inlet from) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P1 (inlet from) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P2 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P3 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P4 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P5 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P6 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P7 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] The drawn pit schedule still shows the old values. Unlock the layer or finish the reference edit, then run PITEDIT on the pit or Update existing schedule in PITSCHEDULE. | Command: | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 21,
+          "text": "record $cpAe \"FULL after the wait (A)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "[CE] Pit schedule cell for P5 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P6 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P7 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] The drawn pit schedule still shows the old values. Unlock the layer or finish the reference edit, then run PITEDIT on the pit or Update existing schedule in PITSCHEDULE. | Command: | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL after the wait (A) = [CE] Pit schedule cell for P5 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P6 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] Pit schedule cell for P7 (lid and remarks) not updated: its layer (25TEXT) is locked. | [CE] The drawn pit schedule still shows the old values. Unlock the layer or finish the reference edit, then run PITEDIT on the pit or Update existing schedule in PITSCHEDULE. | Command: | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 22,
+          "text": "record $newA \"FULL objects the COPY added (A)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"index\":1034,\"handle\":\"11C55B\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"PIT BLOCK 3\",\"text\":\"\",\"x\":53777.726132359574,\"y\":-30569.87543006733} | {\"index\":1035,\"handle\":\"11C575\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"text\":\"\",\"x\":52570.88923993723,\"y\":-31238.287379591762}",
+          "evidence": "RECORDED, not judged: FULL objects the COPY added (A) = {\"index\":1034,\"handle\":\"11C55B\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"PIT BLOCK 3\",\"text\":\"\",\"x\":53777.726132359574,\"y\":-30569.87543006733} | {\"index\":1035,\"handle\":\"11C575\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"text\":\"\",\"x\":52570.88923993723,\"y\":-31238.287379591762}"
+        },
+        {
+          "n": 23,
+          "text": "record $uA \"FULL what U echoed (A)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: U | COPY | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL what U echoed (A) = Command: U | COPY | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 24,
+          "text": "record $cpB \"FULL COPY with STORMWATER PIT LABEL locked\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as displacement>: 0,-5000 | Specify second point or [Array/Exit/Undo] <Exit>: | 1 pit copied and numbered as new. Check levels: they came across from the originals (the Inspector shows which ones to confirm). | [CE] 1 copied pit(s) got their own number but no label: layer STORMWATER PIT LABEL is locked, and CE does not draw on it. Undo (U), unlock layer STORMWATER PIT LABEL, then copy again. | Command: | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL COPY with STORMWATER PIT LABEL locked = Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as displacement>: 0,-5000 | Specify second point or [Array/Exit/Undo] <Exit>: | 1 pit copied and numbered as new. Check levels: they came across from the originals (the Inspector shows which ones to confirm). | [CE] 1 copied pit(s) got their own number but no label: layer STORMWATER PIT LABEL is locked, and CE does not draw on it. Undo (U), unlock layer STORMWATER PIT LABEL, then copy again. | Command: | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 25,
+          "text": "record $cpBe \"FULL after the wait (B)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Specify second point or [Array] <use first point as displacement>: 0,-5000 | Specify second point or [Array/Exit/Undo] <Exit>: | 1 pit copied and numbered as new. Check levels: they came across from the originals (the Inspector shows which ones to confirm). | [CE] 1 copied pit(s) got their own number but no label: layer STORMWATER PIT LABEL is locked, and CE does not draw on it. Undo (U), unlock layer STORMWATER PIT LABEL, then copy again. | Command: | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL after the wait (B) = Specify second point or [Array] <use first point as displacement>: 0,-5000 | Specify second point or [Array/Exit/Undo] <Exit>: | 1 pit copied and numbered as new. Check levels: they came across from the originals (the Inspector shows which ones to confirm). | [CE] 1 copied pit(s) got their own number but no label: layer STORMWATER PIT LABEL is locked, and CE does not draw on it. Undo (U), unlock layer STORMWATER PIT LABEL, then copy again. | Command: | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 26,
+          "text": "record $newB \"FULL objects the COPY added (B)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"index\":1034,\"handle\":\"11C57C\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"PIT BLOCK 3\",\"text\":\"\",\"x\":53777.726132359574,\"y\":-30569.87543006733} | {\"index\":1035,\"handle\":\"11C596\",\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"name\":\"\",\"text\":\"CL 18.88\",\"x\":54354.409165101824,\"y\":-29866.597361625376}",
+          "evidence": "RECORDED, not judged: FULL objects the COPY added (B) = {\"index\":1034,\"handle\":\"11C57C\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT\",\"name\":\"PIT BLOCK 3\",\"text\":\"\",\"x\":53777.726132359574,\"y\":-30569.87543006733} | {\"index\":1035,\"handle\":\"11C596\",\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"name\":\"\",\"text\":\"CL 18.88\",\"x\":54354.409165101824,\"y\":-29866.597361625376}"
+        },
+        {
+          "n": 27,
+          "text": "record $uB \"FULL what U echoed (B)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: U | COPY | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL what U echoed (B) = Command: U | COPY | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 98 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-11-03 04:43:41",
+      "session_id": "RUN-20261103-0420-C3.0.89-plW06-s3",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "no independent review: no W672_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": true
+      }
+    }
+  ]
+}

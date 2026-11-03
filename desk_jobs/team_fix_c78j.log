@@ -1,0 +1,8 @@
+B-026 BUG-902 is not finished: there is no PR, and the code has never been built or tested.
+
+I waited about six hours for a free build slot and never got one. Other lanes' builds kept starting back-to-back.
+
+- **Branch:** `fb/bug902-cover-unknown-note`, one local commit `d1d088ab`, on top of B-012's `fb/cover-to-pipe-outside`. Not pushed.
+- **Files:** `UserSettings.cs`, `RulebookValues.cs`, `RulebookEngine.cs`, `RuleFixAdvisor.cs`, `RulebookLevelsCheck.cs`, `REGRESSION_LOG.md`, and a new `Bug902CoverBetweenPitsNoteTests.cs` (14 cases).
+- **Switch:** `cover.rowSaysUnknown`, ON by default.
+- **Report:** `release-v3-colleagues-BUG902_FIX_REPORT.md` in `C:\CE_PLAN\areas`, pushed. It lists what is unproven and the robot case `N33_cover_between_note`.

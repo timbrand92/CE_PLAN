@@ -1,0 +1,16 @@
+The nine-PR list and all C-67 job files are written and pushed (commit `0d23c25a`). Nothing was run, built or installed. `git status -sb` shows no "ahead".
+
+**Your brief named the list `TRAIN_C66_PR_LIST`, but that file already exists and is the C-66 record.** I wrote `TRAIN_C67_PR_LIST_2026-10-25.md` instead and left the C-66 file untouched.
+
+Files:
+- `areas\TRAIN_C67_PR_LIST_2026-10-25.md`
+- `train_c67_assembler_job.txt`
+- `train_c67_finalizer_job.txt`
+- `payload102_c67_job.txt`
+- `chain_c67.ps1`
+- `chain_install_c67.ps1`
+- `scripts\desk_install_c67.ps1`
+
+The list has 9 PRs: #1753 #1734 #1735 #1743 #1738 #1759 #1724 #1725 #1723. Their live heads were checked, and a trial merge clashed only in `REGRESSION_LOG.md`. The branch is `claude/rel-20261025q`, versions 3.0.77 / 1.1.77, candidate c1063.
+
+C-66 may still be uninstalled, so the install script reads the installed commit itself.

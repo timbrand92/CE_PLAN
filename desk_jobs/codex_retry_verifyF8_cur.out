@@ -1,0 +1,6 @@
+== verifyF8_cur (usage 87.0% -> 88.0%): AUTOCAD CLOSED
+
+1. **Results:** PASS 1, DIFFERENT 1; FAIL/BLOCKED/NOT TESTED 0. SURE 2, UNSURE 0.
+2. **Seen:** Eight pages captured. Seven have fewer than 31 controls. Check-ignore switch is readable and unticked. No confirmed failures.
+3. **Safe end:** All four settings hashes unchanged; installed versions unchanged; lock released.
+4. **Report:** [F8 verification](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_F8_20261027_0408.md>). No fixtures missing.

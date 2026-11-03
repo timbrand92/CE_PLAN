@@ -1,0 +1,6 @@
+== verifyL1a_c88 (usage 54.0% -> 54.0%): AUTOCAD CLOSED
+
+1. **Results:** 1 PASS, 2 SEEN, 3 BLOCKED; all SURE. West callout passed. Pipe tab and eight Settings tabs seen.
+2. **Blocked:** Three tooltip looksÔÇöribbon controls absent; exact driver calls also refused. No FAIL recorded.
+3. **Safe end:** Four settings hashes unchanged, copy discarded, lock released. Installed: Civil 3.0.89 / Manager 1.1.89 / Structural 1.0.125.
+4. **Report:** [L1a verification](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_L1a_20261102_2006.md>).

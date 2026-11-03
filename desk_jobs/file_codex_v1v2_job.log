@@ -1,0 +1,9 @@
+Four bugs are marked Codex-accepted; both retries are written and queued on paper, and nothing was started. The CE_PLAN files are pushed (626a1dc7, leak-scan clean).
+
+1. **Marked FIXED (Codex-accepted, Civil 3.0.64):** BUG-854, BUG-815 (R-06 wording), BUG-820 (totals half only; Tim's "draw the missing end?" question stays open) and BUG-141 (Drawing Border half only).
+2. **Retry pending, not FIXED:** BUG-141 pit-body, BUG-516 freeboard, BUG-797, BUG-782 (Edit Pipe cascade), BUG-416, BUG-505.
+3. **Briefs:**
+   - V1 and the shared file `lookCOMMON_full.txt` now check TRUSTEDPATHS only by length.
+   - New `verifyV2b_retry.txt` and `_full.txt` cover V2-03, V2-05 and V2-06.
+   - Both retries are added to `QUEUE_20OCT_PLAN.md` as section 7, 4 points each.
+4. **Extra:** filed BUG-857 (the Grade mismatch box's X still places the pipe) and updated the ROBOT_GAPS and triage files (section 21, no lane line).

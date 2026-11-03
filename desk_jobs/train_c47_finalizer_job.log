@@ -1,0 +1,6 @@
+**GO** on train C-47. Final head is `65507bc34beca79927e31533d8d0d98ac20668c9`. It is built and unit-tested only; nobody has opened it in AutoCAD.
+
+1. **Changed:** I only added the train's entry to the change log. No code or default changed, and both new switches stay ON because each one stops a false warning.
+2. **Tests:** Civil 18,843 of 18,863 pass, with 1 failure, the known Glen Eira back-test. Manager 824 of 824. The older-AutoCAD (net48) checks 269 of 269. The whole build has 0 errors.
+3. **Manager:** must ship with Civil and the Installer.
+4. **Held:** #1441's new commit goes in the next train once a missing space in its message is fixed.

@@ -1,0 +1,15 @@
+I reviewed all 14 cases: 1 accepted in full, 12 accepted in part, 1 not yet (W244). I wrote 13 review slips next to the cases and none for W244. The first 12 lines of `C:\CE_PLAN\areas\W1_REVIEW_E_REPORT.md`:
+
+```
+# Wave 1 batch case review E (14 cases) — Sun 1 Nov 2026
+
+1. **Result:** 1 ACCEPT FULL, 12 ACCEPT PART, 1 NOT YET, 0 ALREADY. 13 slips written (no slip existed before); none for W244.
+2. **NOT YET — W244:** its deciding check can never fail. The line `log civil absent "Pipe inverts updated: {$hp} from=17."` uses the AutoCAD handle (11C55B), but CE writes that log line with the pipe's CE identity (`{pipe.Id}`, ProjectDataService.Mutations.cs 1458 at 3fbb9da5; the run shows the identity `CE-CIV-PIPE-A114...`). No "Pipe inverts updated" line was written at all in 295 log lines, so the twin "fails" only because the line it asks for can never exist.
+3. **Three weakest accepted cases:** W210 (its Edit Pit check is too weak to fail, and LEAVING is checked only in the twin), W267 (its "links back" check, `0 Not Connected`, cannot fail), and W278 / W285 / W324 together (each twin was BLOCKED, never FAILED).
+4. **Hold on three slips:** W278, W285 and W324 are not Claude-accepted until their twin FAILs on a check. Each slip says this.
+5. **Engineering note:** W654 accepts "warn and write the back-fall" in place of the bug's "block, or stop the walk". That follows BUG-1040 and rule R-27, so I did not raise it with Tim.
+6. **Report file name:** the job named this file W1_REVIEW_E_REPORT.md; the brief's pattern was C78_REVIEW_E_REPORT.md. I followed the job.
+7. **Time:** 17:53 to 18:00 by the PC clock, about 8 minutes. Read-only apart from the 13 slips and this report. I ran no AutoCAD, built nothing and committed nothing.
+8. **Hashes:** all 14 case files hash to the sha256 on the list line.
+9. **Wording source:** every asserted wording is in the source at 3fbb9da5, or was seen on both passing runs (some are split or interpolated in the source: "pipes selected", "Min grade", "CDEDIT-CASCADE: anchor=", "arrives at"). Nothing is UNSOURCED.
+```

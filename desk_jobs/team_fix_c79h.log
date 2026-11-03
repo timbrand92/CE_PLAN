@@ -1,0 +1,7 @@
+**PR #1861** (draft, B-043a, branch `fb/declutter-s1-recent-line`) adds one "Recent:" line under Size and Material on New Pipe and Edit Pipe. It holds recent sizes, materials and, via B-006's switch, levels. Switch `pipe.declutteredLayout` is ON, and OFF returns today's page.
+
+Tests: focused 299 passed, full Civil suite 20,798 passed with 0 failed, net48 compile 0 errors. Not seen in AutoCAD, and BUG-1238 is not marked fixed.
+
+Files: `PipeOnePageLayout.cs`, `UserSettings.cs`, `Bug1238RecentLineTests.cs`, `Bug1226RecentButtonsTests.cs`, `C75NewSwitchDefaultsTests.cs`, `REGRESSION_LOG.md`.
+
+Report is pushed: `areas\release-v3-colleagues-DECLUTTER_S1_REPORT.md`. It names robot case `N51_recent_line` and its switch-off control, and says a Codex look is needed at real size and at 150%.

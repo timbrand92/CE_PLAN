@@ -1,0 +1,6 @@
+PR #1507 is open as a draft, with the "needs Opus review" comment. Head is `5ce7f6b3`, on base `claude/rel-20261020j`. It is built and unit-tested only; nobody has run it in AutoCAD.
+
+- **Tests:** on net10 Release, 15 new tests pass, plus 26 RedoSafe tests and 234 of 235 Settings tests. net48 compiles with 0 errors. The one red is "Settings fits 1920x1080 at 150% (dark)". It also fails with this PR's tick-box removed, so the PR doesn't cause it. I haven't shown that the Advanced tab still fits at that size.
+- **Tim's settings:** `CD_Settings.json` changed (acd64e79 to 9d27b04c) during my test runs. I didn't touch it and have no copy of the old content. The other three are unchanged.
+- **CE_PLAN:** reviewlane entry 1535 and the reader and README updates are pushed. The reader was tested on a made-up log of eight runs.
+- **Setting name:** the switch is `Options.CommandOutcomeLines`, next to `debugLogging`, not `logging.commandOutcomeLines`.

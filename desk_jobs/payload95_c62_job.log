@@ -1,0 +1,7 @@
+1. **Candidate:** `C:\ce_rc_scratch\c1058` is ready. Civil `verified 828, bad 0, extra 0`; Manager `verified 75, bad 0, extra 0` (re-checked after cleanup). Nothing was installed.
+2. **Branch head:** `f7f7d551552c21db3058ed839abacd1ec8a3b4d4` on `claude/rel-20261023m`. The version commit was 4 files, 4 insertions, 4 deletions.
+3. **Tests:** Civil 41/41, Manager 61/61, C-62 switch-defaults test 3/3.
+4. **Strings:** 243/243 as expected. #1609, #1611 and #1586 have no discriminating string.
+5. **Odd:** AutoCAD was open for most of the job, so builds waited. Settings and the six installed DLLs are identical before and after.
+
+Report: `C:\Lisp Files\_TEST_COPIES_20260923\PAYLOAD_C1058_REPORT.md`.

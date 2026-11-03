@@ -1,0 +1,8 @@
+BUG-806 is built and unit-tested as draft PR #2000 (B-179, Civil, base `claude/rel-20261102a`). Nothing has been opened in AutoCAD, and BUG-806 stays open.
+
+- **Changes:** with the switch on, the orifice detail's HIGH callout counts from the orifice level, so the Bayside example gives 420 instead of 670. The orifice diameter is never rounded up, so 55.6 gives 55.
+- **Switch:** `detention.orificeDetailHeadFromOrificeIl`, on by default. Off restores the old behaviour exactly.
+- **Files:** `OrificeDetailFieldMap.cs`, `UserSettings.cs`, new `Bug806OrificeHeadTests.cs`, the existing `OrificeDetailFieldMapTests.cs` (old-value tests now pin the off path), and `REGRESSION_LOG.md`. CE_SHARED is untouched.
+- **Tests:** 36 passed and the net48 compile has 0 errors. The real AppData listings are identical before and after.
+- **Not fixed:** the centre pit invert tag still shows the orifice level. Tim needs to say which level the template wants; the question is in the report.
+- **Report:** `C:\CE_PLAN\areas\BUGFIX_w806_REPORT_03NOV.md`, pushed. The worktree is removed.

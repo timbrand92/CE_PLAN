@@ -1,0 +1,7 @@
+B-017 BUG-1095 is built as draft PR #1852 (`fb/bug1095-council-min-c` into `claude/rel-20261026z`). Nobody has opened it in AutoCAD, and it is not marked FIXED.
+
+- **What changes:** CDDESIGN, automatic pump sizing and the CDCALC Boyd's tab now use at least the council minimum C. The Darebin 600 m² example goes from C 0.70 to 0.80.
+- **Switch:** `detention.councilMinimumRunoffCApplied`, default ON. It has no Settings page row.
+- **Files:** `UserSettings.cs`, `CouncilRuleValues.cs`, `AutoDesignService.cs`, `PumpSizingService.cs`, `ComputationsRecordBuilder.cs`, `BoydsCalcViewModel.cs`, `REGRESSION_LOG.md`, and two test files.
+- **Tests:** 59 focused and 20,809 full-suite passed, 0 failed, 32 skipped. The net48 compile had 0 errors.
+- **Report:** `release-v3-colleagues-BUG1095_FIX_REPORT.md`, pushed to C:\CE_PLAN. Robot case: N32_bug1095_council_c.

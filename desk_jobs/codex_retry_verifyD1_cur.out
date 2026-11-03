@@ -1,0 +1,9 @@
+== verifyD1_cur (usage 10.0% -> 15.0%): AUTOCAD STILL RUNNING
+
+1. **D1 result:** 1 PASSÔÇöEsc at third point. 3 BLOCKED by capture/typing faults. FAIL 0, DIFFERENT 0, NOT TESTED 0. SURE 4, UNSURE 0.
+
+2. **Shutdown:** D1 closed and released its lock. Another runner subsequently opened AutoCAD; untouched.
+
+3. **Settings:** All four hashes unchanged. No drawings saved. No established FAILs or missing fixtures.
+
+4. **Report:** [D1 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_D1_20261024_0607.md>).

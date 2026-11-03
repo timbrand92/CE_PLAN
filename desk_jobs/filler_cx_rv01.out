@@ -1,0 +1,8 @@
+== cx_rv01 (usage 11.0% -> 15.0%): 1. **DONE — ten PRs reviewed.** Found **1 HIGH, 2 MEDIUM, 0 LOW** new faults. Most important: a typed schedule depth can remove the step-iron note while the pit remains deep.
+
+2. **Report saved and pushed:** [Group 1 findings](C:/CE_PLAN/areas/CODEX_PR_REVIEW_GROUP01_23OCT.md), including every PR verdict and deterministic retest steps.
+
+---
+
+1. **Evidence:** verified by reading only. No builds, tests, AutoCAD or source changes.
+2. **Commit:** `176d083c` on CE_PLAN `main`. Only the findings file committed; leak scan passed.

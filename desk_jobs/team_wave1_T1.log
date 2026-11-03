@@ -1,0 +1,12 @@
+1. **All 4 bugs have a case and a must-fail twin:** 8 new files, all pass the offline check (57 files checked, 0 invalid; every control id known). Nobody has run them.
+2. **Two bugs are only half covered.** BUG-740: the CDSOURCE and COPY routes are covered; the CDTAG Set and "Number sources" setting routes are not. BUG-741: the WT1 half is covered; the "ROOF DRAIN 1" half is not.
+3. **Why the halves are missing:** no typed route can make two blocks both called "ROOF DRAIN 1", and CDTAG cannot pick an already-tagged block with a typed point. These go to a Codex look (section 6).
+4. **BUG-216, CDFALLSUGGEST Enter:** W216 picks an empty spot, skips the level, then presses Enter at "Next level (0 placed, 1 skipped), or Enter to finish:". The command must end on that Enter with "CDFALLSUGGEST finished. 0 placed, 1 skipped." and no "Invalid point".
+5. **BUG-742, CDTAG used name:** W742 tags pit P10 as WT2, which is already taken. It must refuse with "[CE] CDTAG: WT2 is already on another source. Choose a different number. Nothing was changed." and add nothing.
+6. **BUG-741, CDFIXTAGS numbering:** W741 tags pits P10 and P9 as WT1 (switch off), so three blocks share WT1. CDFIXTAGS must propose WT13 and WT14 (the drawing already holds WT1 to WT12), never "WT1 1", and No renames nothing.
+7. **BUG-740, Roof drain copy:** W740 places a Roof drain (ROOF DRAIN 1), copies it 3 m east, then places another Roof drain. The copy's label must read "ROOF DRAIN" (never "ROOF" or "ROOF1"), and the second Roof drain must come out ROOF DRAIN 3.
+8. **Each twin breaks one thing:** W216 leaves out the last Enter, W742 turns the used-name switch off, W741 leaves it on, and W740 leaves out the copy.
+9. **Least certain step:** W740 is the first robot case ever to drive CDSOURCE. If CDSOURCE refuses (SOURCE block missing) or the keyword route differs, W740 fails on its first check, not on a stall.
+10. **One thing the desk should know:** the run 34 and 35 notes quote old CDTAG wording ("Show tag label on screen?", "CDTAG applied: tag=..."). The 3.0.88 code says "Show the tag label on the drawing?" and "[CE] Tagged WT1. ...". My cases assert the 3.0.88 words only.
+11. **Not tested by anyone:** every number and line below comes from the code or from earlier runs on 3.0.55 to 3.0.59. None of it has been seen on 3.0.88.
+12. **Next step:** CE 02 runs the 8 files (about 4 minutes each, no pointer steps, no windows). Then an Opus paper review.

@@ -1,0 +1,10 @@
+Run 32's bug notes and fix queue are committed and pushed to C:\CE_PLAN. The leak scan came back clean. I didn't run any AutoCAD tests.
+
+- **Bugs updated:** 815, 813, 814, 141, 372, 816, 817, 698, 740, 742, 789, 797 and 782.
+  - The 797 and 782 notes cover the cascade Apply/U/REDO pass only. Their locked-layer and low-end cases weren't tested.
+  - Nothing was marked FIXED.
+  - BUG-815 says the #1436 fix did not take effect on that drawing, with the cause unproven.
+- **New bugs filed:** BUG-820, 821 and 822. The next ID is BUG-823.
+- **Fix queue:** triage section 11 holds 4 lines for lane 03 and 4 for lane 04. BUG-815's second attempt is first in lane 03.
+- **Robot gaps:** 13, in `areas/release-v3-colleagues-ROBOT_GAPS_2026-10-19.md`.
+- **Logs:** the TEAMLANE3 and TEAMLANE4 lines are added.

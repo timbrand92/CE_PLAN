@@ -1,0 +1,13 @@
+The report is written and pushed. Robot hours aren't what's holding the count back: from today it still has about 128 free hours a week on your PC.
+
+1. **Where the time goes:** a third of the robot's time is a fixed 3-minute wait with AutoCAD closed after every session. About 5 more hours over three days went on lining up the mouse with the screen. Each install then sets off a full re-test of 6 to 8 hours.
+2. **Recommended order:**
+   - **First:** shorten that wait, about 40% more sessions an hour (estimate).
+   - **Second:** put the mouse-click checks into fewer AutoCAD starts.
+   - **Third:** after an install, re-test only what the fix touched. This needs a yes or no from you or CE 00.
+   - **Fourth:** switch on the spare work PC. Its AutoCAD must have its own licence, not your login.
+3. **Not recommended:** a hidden "no screen" robot, or one that runs when you step away from your desk. Neither can run while your AutoCAD is open.
+
+I ran nothing in AutoCAD; every "after" figure is an estimate.
+
+Report: `C:\CE_PLAN\areas\TESTING_SPEED_OPTIONS_29OCT.md`

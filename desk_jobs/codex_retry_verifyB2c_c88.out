@@ -1,0 +1,6 @@
+== verifyB2c_c88 (usage 51.0% -> 52.0%): AUTOCAD CLOSED
+
+1. **PASS:** B2-01a and B2-01b. Both moved labels lie along their pipe leg, upright and readable at approximately +45┬░ / ÔêÆ45┬░.
+2. **Not tested:** B2-02a/b excluded from B2c. Three later looks recorded as NOT RUN. Results: **2 PASS, 2 NOT TESTED; 4 SURE, 0 UNSURE.**
+3. **Clean end:** Nothing saved. Four settings hashes unchanged; remembered pipe values changed as expected. AutoCAD is gone; lock released.
+4. **Report:** [B2c evidence and results](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_B2c_20261102_1900.md>). Later fixture wanted: a made-up no-units drawing with millimetre-sized objects.

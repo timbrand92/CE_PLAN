@@ -1,0 +1,5 @@
+== cx_bd17 (usage 26.0% -> 60.0%): 1. **BUG-1115 — BLOCKED.** Draft [PR #1807](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1807). Extra PDF failure blocks the suite comparison. Settings row omitted: height limit. Nothing installed; AutoCAD unrun. [Report](C:/CE_PLAN/areas/CODEX_BUILD_BD17_26OCT.md).
+
+---
+
+2. **Handoff.** Head `446980a0747f2440804ad427b4c1163005650681`. Red: expected 0, was 1000; 2 passed/1 failed. Green: 12 passed. Three builds: 0 errors. Full suite before: **20,539**—20,505 passed/2 failed/32 skipped. After: **20,550**—20,515 passed/3 failed/32 skipped. Saved, pushed; worktree removed.

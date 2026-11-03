@@ -1,0 +1,9 @@
+== cx_lf24 (usage 34.0% -> 35.0%): 1. **DONE — audit delivered.** Four bugs already have draft fixes. BUG-989 was skipped: Tim’s decision and protected-file changes are required. No drawing behaviour changed.
+
+2. **Saved and pushed:** [Batch 24 report](C:/CE_PLAN/areas/CODEX_LEDGER_FIX_BATCH24_23OCT.md), including exact AutoCAD checks still owed.
+
+---
+
+3. **Draft PR:** [#1678](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1678), branch `cx2/bug-988-batch24-audit`, tip `474f2613`.
+
+4. **Validation:** documentation only; 0 tests added/run, 0 builds. Diff and preservation checks passed. AutoCAD unopened; nothing deployed.

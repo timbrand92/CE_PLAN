@@ -1,0 +1,8 @@
+**GO.** The Structural update S-39 is ready, at `e3f581d2f4b358924657093cfe907f78720285cb`.
+
+1. **My one change:** a release check still required Structural to own CE_VERSION. It failed first, now passes 7 of 7.
+2. **Tests:** whole solution 0 errors. Structural net10 5164 of 5164. net48 4427 passed, 36 failed, 698 not run; all 36 fail on S-38 too. ReleaseTests 10 of 10 ×3. CommandTruth 22 of 23 (red on S-38 too).
+3. **In AutoCAD:** CEMEMBER isn't a command yet, so there's nothing to see. CE_VERSION says "Unknown command" until Manager's half is installed.
+4. **Held:** install this first, Manager half second. Nothing marked FIXED or installed. Tim's settings unchanged.
+
+Report is in `C:\CE_PLAN\areas\`.

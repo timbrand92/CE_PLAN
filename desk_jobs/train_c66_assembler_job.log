@@ -1,0 +1,18 @@
+Train C-66 is assembled and pushed, and the report is pushed. Nothing has been checked in AutoCAD.
+
+All ten PRs merged cleanly onto the installed C-65 line (3.0.75 / 1.1.75 on `2c805a39`). The branch is `claude/rel-20261025p`, head `784640d5`. I made no commits of my own.
+
+1. **PR heads:** no PR had moved since the list. Every merge commit's second parent equals the live head.
+2. **Clashes:** the `UserSettings.cs` clash between #1770 and #1772 is resolved with both switches kept. `REGRESSION_LOG.md` clashed on nine merges and every entry is kept.
+3. **Scope:** `Shared/`, the Installer folders and the config files are untouched. Manager changed three small files with no new file.
+4. **Switches:** six new bug-fix switches, all on by default, none with a Settings page row.
+5. **Build:** the whole solution builds with 0 errors on net48, net8.0-windows and net10.0-windows. The Installer projects compiled but were not run.
+6. **Civil net10:** 20,300 tests, 0 failed.
+7. **Manager net10:** 1,002 tests, 0 failed.
+8. **Civil net48 (focused):** the same 51 reference-only reds as C-65, nothing new.
+9. **REDO call-graph baseline:** 25 of 25.
+10. **Tim's settings files:** unchanged by my runs.
+
+Two things to know. The Manager 75-file bundle guard was not run, because it needs a payload build. AutoCAD (`acad.exe`) was open during every test step, so a Codex or robot pass may have been running; I never touched it.
+
+The report is `C:\CE_PLAN\areas\release-v3-colleagues-TRAIN_C66_ASSEMBLY_REPORT_2026-10-25.md` (pushed to CE_PLAN as `501b0751`). The worktrees and temp folders are removed.

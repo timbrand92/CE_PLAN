@@ -1,0 +1,7 @@
+== verifyX10_c60 (usage 58.0% -> 60.0%): 1. **REDO loss seen:** first pick-only run said ÔÇ£Nothing to redoÔÇØ; the fresh-copy repeat kept REDO. BUG-861 remains open.
+
+2. **Downpipe check blocked:** the required handle list was clipped. Three double-click checks and both controls remain untested.
+
+3. **Counts:** 1 SEEN, 1 BLOCKED; 0 PASS/FAIL/DIFFERENT. Both results SURE.
+
+4. **Clean end:** AutoCAD closed, lock released, all four settings hashes unchanged. [X10 report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_X10_20261024_0201.md>).

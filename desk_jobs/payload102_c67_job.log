@@ -1,0 +1,15 @@
+**Stopped at the disk check. There is no candidate and no report.** I did not write `PAYLOAD_C1063_REPORT.md`, so the install chain has nothing to install.
+
+- **Why:** C: has 11.68 GB free and stayed flat from 19:52 to 20:02. The brief's stop line is 12 GB. I deleted nothing.
+- **Not done:** `c1063` was not built. I made no version commit and pushed nothing. There is no worktree and no `subst R:`.
+- **Installed line (case A):** all six DLLs read 3.0.75 and 1.1.75 at `2c805a39`. C-66 is not installed.
+- **Branch:** `claude/rel-20261025q` is at `b839d084`, matching the GO line in the finalizer report.
+- **Diffs against the train:**
+  - `Shared` is empty against both `577b5ce4` and `2c805a39`.
+  - The Installer diff is empty against `577b5ce4`.
+  - The native `.cpp`, `.h` and `.vcxproj` diff is empty against both.
+  - The old-version grep finds exactly the four version lines and no extras.
+- **Settings and installed DLLs:** unchanged. AutoCAD was not running.
+- **To resume:** free about 0.5 GB or more. A build needs roughly 4 GB.
+- **Still to edit before the build:** the string rows and the pin scripts need their C-67 edits.
+- **Note:** `C:\ce_rc_scratch\p102_scripts\BLOCKED_disk_20261025.md`.

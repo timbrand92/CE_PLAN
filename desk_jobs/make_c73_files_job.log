@@ -1,0 +1,14 @@
+The C-73 job files and PR list are written and pushed (`b38b5c4c`). No chain was started and nothing was run. `git status -sb` shows no ahead.
+
+**Files, all in `C:\CE_PLAN\desk_jobs` unless noted:**
+- `train_c73_assembler_job.txt`
+- `train_c73_finalizer_job.txt`
+- `payload109_c73_job.txt`
+- `chain_c73.ps1`
+- `chain_install_c73.ps1`
+- `scripts\desk_install_c73.ps1`
+- `areas\TRAIN_C73_PR_LIST_2026-10-27.md`
+
+The list holds #1829 only (head `1790777a`, 12 files, 692 added, 6 removed). The base is the C-72 tip `e30556ca`, already on `claude/rel-20261026w`. The new branch is `claude/rel-20261026x`, versions are Civil 3.0.83 / Manager 1.1.83, and the candidate is c1069.
+
+All files have no control characters and no tables. The three scripts parse cleanly.

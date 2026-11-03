@@ -1,0 +1,10 @@
+== cx_rv07 (usage 72.0% -> 85.0%): 1. **DONE — 17 PRs reviewed.** Found **2 HIGH, 4 MEDIUM, 0 LOW** new faults. Verdicts: 9 MERGE, 7 MERGE-WITH-FIXES, 1 HOLD.
+
+2. **Most important:** #1659 can assign a branch connection to the wrong half after splitting a pipe.
+
+3. **Report saved and pushed:** [CODEX_PR_REVIEW_GROUP07_24OCT.md](C:/CE_PLAN/areas/CODEX_PR_REVIEW_GROUP07_24OCT.md).
+
+---
+
+1. **Commit:** `56a18893` — only the named findings file.
+2. **Verification:** Code reading only. Zero builds/tests; no AutoCAD, installation or code changes.

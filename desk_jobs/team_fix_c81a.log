@@ -1,0 +1,8 @@
+**B-012b is pushed to PR #1848 (draft) as commit `21a3bbb4`. A pipe with no wall figure, such as a UPVC 150, now reads Unknown in CDRULES instead of a green Pass.** I didn't add wall figures for other sizes. No pipe table or pipe record in the plugin holds one, and nothing may be hard-coded, so Tim needs to supply them. The CD screens still using the old measure are B-022, not fixed here.
+
+- **Files:** `Rules/RulebookEngine.cs`, the `UserSettings.cs` doc line, five test files, `REGRESSION_LOG.md`.
+- **Switch:** `cover.measuredToPipeOutside`, still ON. Turning it off brings back the old Pass.
+- **Tests:** full Civil net10 Release run 0 failed (20,809 passed of 20,869). net48 compile passed. Nothing was run in AutoCAD.
+- **Report:** follow-up section pushed to `release-v3-colleagues-COVER_OUTSIDE_REPORT.md`, with the robot case `C81_cover_unknown_wall`.
+
+For part of one run, three dotnet commands were alive at once (two were other jobs').

@@ -1,0 +1,25 @@
+The recount is done and pushed to the plan repo: `C:\CE_PLAN\areas\release-v3-colleagues-V3_RECOUNT_2026-10-18.md` (commit d45d1b76; the privacy scan passed).
+
+**What it counts against:** 548 plan items. 526 are UX IDs from Codex's index, which matches my own count of 508 plus 18 IDs found only in the rulings file. The other 22 are build-queue items that are not UX IDs. The 762 bugs are counted separately.
+
+**Whole plan, 548 items:**
+1. **Built:** 412, 75% (estimated).
+2. **Reachable:** 262, 48% (estimated).
+3. **Installed:** 300, 55% (counted).
+4. **Switched on by default:** 179, 33% (estimated).
+5. **Tested on the installed build:** 9, 2% (counted).
+6. **Accepted:** 0 (counted).
+
+**9 Nov release, 390 items (Civil, Manager and shared):**
+1. **Built:** 290, 74%.
+2. **Reachable:** 161, 41%.
+3. **Installed:** 184, 47%.
+4. **Switched on by default:** 123, 32%.
+5. **Tested on the installed build:** 9, 2%.
+6. **Accepted:** 0.
+
+**Bugs, 762:** 34 closed; up to 383 fixed or part fixed and awaiting Tim's check; 74 fixed but not installed; 271 with no fix yet (last three estimated).
+
+**Paused:** 127 of the 136 unbuilt items are held by ruling A.
+
+Nothing was run in AutoCAD.

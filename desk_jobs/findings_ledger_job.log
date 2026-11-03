@@ -1,0 +1,8 @@
+The ledger is written and pushed to `C:\CE_PLAN\areas\FINDINGS_LEDGER_22OCT.md` (commit b2dd7689). It has 151 distinct findings: **HIGH 32, MEDIUM 82, LOW 37**.
+
+- **Where it stands:** 110 findings are in the installed Civil/Manager 3.0.70 code, and about 25 of those sit behind OFF switches. 16 already have a BUG id and 25 need Tim's word.
+- **Carpark entries:** 100 ready-to-append entries, BUG-873 to BUG-972. BUG-866 is used twice in the carpark (Ignore Undo, and the rainfall note); the desk should renumber one before appending.
+- **Other sections:** the first 20 fix briefs are ranked, and the 12 findings most likely to hurt a colleague on 9 Nov are in the answer block.
+- **Sources merged:** 14 files. The carpark reconciliation went in as context only, with no new findings.
+- **Not merged yet:** the settings, records, design, structcmds, privacy and compat hunts (they hadn't landed at 00:20 Friday). A new HIGH finding shifts every later BUG number, so re-running will renumber them.
+- **Checks run:** every id F-001 to F-151 and BUG-873 to BUG-972 is present, and each BUG entry points to the matching finding. I did not edit BUG_CARPARK.md or DESK_LOG.md, and nothing in the plugin repo was changed.

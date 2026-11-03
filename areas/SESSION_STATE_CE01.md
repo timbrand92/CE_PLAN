@@ -179,3 +179,9 @@ Then: arm the chain by hand (pwsh via WMI), watch the log C:\CE_PLAN\desk_jobs\c
 3. **Bug558IdleHandlersStartNoCommandTests** was not run by the payload jobs for b1 or b2 (the finalizers ran it on the same code); consistent, not a gap.
 4. **New CE 00 rule (Tue 04:25):** a Team job never waits for AutoCAD: it finishes what it can, writes state to a file and exits; copy and compare-with-installed steps are done by CE 01 at a robot gap. Apply to the C-79c payload job (Civil 3.0.92; merge aa3b92ac, one version commit, into rel-20261112a) when it is built, after b2 is installed.
 5. c79a and c79af build folders cleaned (3.11 GB freed). C: 30 GB at 04:25. Next free B number for CE 01: B-175.
+
+## 29. Tue 3 Nov 11:05 (CE 01)
+1. **C-79b1 INSTALLED** 11:03 (register 280). Installed line now Civil 3.0.90+cf059dcf / Manager 1.1.89+cf059dcf. Undo: rename the two *_PRE_61fd6fbc_20261103-110159.backup folders back.
+2. **C-79c pre-build running** on Team: `chain_payload118.ps1` (A merge aa3b92ac and revert #1881, B Opus re-read, C build to c1078). Notes: PAYLOAD118A_MERGE_NOTE.md, PAYLOAD118B_VERDICT.md, PAYLOAD_C1078_REPORT.md. No install. Never waits for AutoCAD. Register B-176 (item 279).
+3. **C-79b2 install** (`chain_install_c79b2.ps1`) waits for CE 02's clean b1 smoke; Wednesday. Before starting: chain_install_c79b2.ps1 still lifts STOP_CODEX.flag and uses 10 quiet minutes: apply the same patch as `C:\CE_WORK\scratch\ce01\patch_chain_b1.ps1` (keep CE 00's hold, 30 minutes quiet, check the clock is past the slot).
+4. Rule: never start an install chain before the stated time; the chain acts within seconds.

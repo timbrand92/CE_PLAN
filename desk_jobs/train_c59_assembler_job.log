@@ -1,0 +1,14 @@
+Train C-59 is assembled and pushed as `claude/rel-20261022l` at `919161f0`, but #1507 adds 3 new red tests.
+
+- **Merged:** all 5 PRs went in at their named heads (#1516, #1513, #1507, #1508, #1515).
+- **The 3 reds:** #1507's new Advanced tick makes the settings window too tall at 150% on a 1920x1080 screen. The base passes these tests, and #1507's own head fails them, so it needs a fix round.
+- **Build and tests:**
+  - Build: 0 errors.
+  - Civil net10: 19,086 passed, 4 failed (Glen Eira plus those 3).
+  - Manager net10: 853 of 853.
+  - Civil net48 focused: 3 failed, the same ones.
+- **Shared/Installer:** nothing touched; Manager ships.
+- **Settings keys:** `checks.leaveOutRemovedPits` is OFF; `commandOutcomeLines` is ON.
+- **Tim's settings files:** the content hashes of all four are unchanged.
+
+The report is at `C:\CE_PLAN\areas\release-v3-colleagues-TRAIN_C59_ASSEMBLY_REPORT_2026-10-22.md`, pushed, and my worktrees and temp folders are removed.

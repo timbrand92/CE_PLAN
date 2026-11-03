@@ -1,0 +1,22 @@
+== verifyF10_cur (usage 88.0% -> 88.0%): AUTOCAD CLOSED
+
+1. **NOT STARTED:** Native screen and mouse access is disabled. Explorer screenshot unavailable; About window not tested.
+2. **Installed:** Civil 3.0.80, Manager 1.1.80, Structural 1.0.124.
+3. **Results:** NOT TESTED 1; all other results 0. SURE 0; UNSURE 1. No failures established.
+4. **Safe end:** No settings changed; recorded hashes equal. AutoCAD processes absent; lock released. Usage 88%.
+5. **Report:** [F10 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_F10_20261027_0454.md>).
+== verifyF10_cur (usage 92.0% -> 92.0%): AUTOCAD STILL RUNNING ÔÇö a later Claude session; F10ÔÇÖs session closed.
+
+1. **BLOCKED:** The prescribed zoom printed `nil`; rule N17 required stopping. About CE Suite was not tested.
+2. **Safe end:** F10 lock released; all four settings hashes unchanged at F10ÔÇÖs end.
+3. **Results:** 0 PASS, 0 FAIL, 0 DIFFERENT, 1 BLOCKED; SURE 1, UNSURE 0. No fixtures missing.
+4. **Report:** [F10 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_F10_20261027_0803.md>).
+== verifyF10_cur (usage 94.0% -> 96.0%): AUTOCAD CLOSED
+
+1. **F10: FAIL ÔÇö SURE.** On Civil 3.0.80 / Manager 1.1.80, BUG-090 remains: AutoCAD row clipped, Runtime row hidden. Heading readable; Close works.
+
+2. **Counts:** PASS 0, FAIL 1, DIFFERENT 0, BLOCKED 0, NOT TESTED 0. SURE 1, UNSURE 0.
+
+3. **Clean end:** All four settings hashes unchanged. Nothing saved to drawings. Lock released. No fixtures missing.
+
+4. **Evidence:** [Report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_F10_20261027_0907.md>) ┬À [About window](</C:/Lisp Files/_TEST_COPIES_20260923/LOOKS/F10_20261027_0907/screenshots/F10-07-A1-about.png>).

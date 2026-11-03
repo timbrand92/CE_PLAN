@@ -1,0 +1,6 @@
+Run 40 is filed and pushed to `C:\CE_PLAN` (commit 84db6c61). I didn't touch the plugin repo or AutoCAD, and I didn't edit DESK_LOG.md.
+
+1. **BUG_CARPARK.md:** BUG-416 is noted UNPROVEN, since the right-click items can't be driven. BUG-522 is a PASS for the matched-copies case only. Run 40 PASS notes are added under BUG-820, 854, 815, 516 and 141. None is marked FIXED or closed.
+2. **Robot gaps file:** a run 40 section covers the right-click limit and the one launch anomaly.
+3. **Fix queue:** section 20 has no new fix line.
+4. **QUESTIONS_FOR_MONDAY.md:** item 10 is the REDO-after-right-click check for 29 Oct.

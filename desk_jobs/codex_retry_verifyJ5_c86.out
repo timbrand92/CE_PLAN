@@ -1,0 +1,15 @@
+== verifyJ5_c86 (usage 23.0% -> 23.0%): AUTOCAD CLOSED
+
+1. **NOT STARTED:** Checks switch is OFF and `J5_GO.flag` is missing. J5-01: NOT TESTED, SURE. No visual result judged.
+2. **Installed:** Civil 3.0.87 / Manager 1.1.87 / Structural 1.0.125.
+3. **Clean end:** No settings changed; all four hashes unchanged. Lock released.
+4. **Report:** [J5 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_J5_20261030_1848.md>).
+== verifyJ5_c86 (usage 24.0% -> 24.0%): AUTOCAD CLOSED
+
+1. **J5: DIFFERENT, SURE.** Gold banner: 44 findings and 369 not known. Passes folded into one grey ÔÇ£268 checked and fineÔÇØ line. Green ÔÇ£Network OKÔÇØ remains unverified; a clean fixture is needed.
+
+2. **Counts:** DIFFERENT 1; all other results 0. SURE 1, UNSURE 0. Installed Civil 3.0.87 / Manager 1.1.87 / Structural 1.0.125.
+
+3. **Restored:** Settings A=C: `ACD64E79A33BE9C152149FF2145A3CD2C29CABE11245F211183FD5C7DE783140`. All four settings hashes match START. Lock released; copy unsaved.
+
+4. **Report:** [J5 verification and evidence](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_J5_20261030_1909.md>). Procedure deviations are recorded.

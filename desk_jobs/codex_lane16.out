@@ -1,0 +1,19 @@
+== cx_fb03 (usage 49.0% -> 55.0%): 1. **DONE:** FB-03 built and unit-tested. [Draft PR #1540](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1540). Switch starts OFF; nothing deployed. Opus review and real-AutoCAD FX-03 remain owed.
+
+2. **Report:** [Saved and pushed](C:/CE_PLAN/areas/CODEX_BUILD_FB03_23OCT.md), including the exact AutoCAD check.
+
+---
+
+3. **Head:** `cx/fb03-c60` — `07010c09`.
+
+4. **Checks:** Three builds, zero errors. All 17 new cases passed on both frameworks. Net10: **19,171 total; 19,151 passed, 19 skipped, 1 unchanged base failure**. Focused net48: **109/109 passed**.
+== cx_fb06 (usage 55.0% -> 1.0%): 1. **BLOCKED — draft [PR #1550](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1550).** Protected Edit Pit/LinkService integration remains unapplied. Branch `cx/fb06-c60`, tip `6c2e90f5`. BUG-664 remains open.
+
+2. **Checks:** all builds 0 errors; 15/15 new tests pass. Full results: 19,149 passed, 1 baseline failure, 47 not run.
+
+3. **Saved and pushed:** [report with exact AutoCAD check](C:/CE_PLAN/areas/CODEX_BUILD_FB06_23OCT.md). Leak scans passed. Nothing deployed; AutoCAD not run.
+== cx_fb09 (usage 1.0% -> 3.0%): 1. **DONE:** [Draft PR #1554](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1554), branch `cx/fb09-c60`, tip `7f4f8c39`.
+
+2. **Checks:** 19 new cases; focused tests **43/43** on net10 and net48. Full Civil: **19,151 passed, 19 skipped, 1 known failure**. Three build lanes and solution: **0 errors**. Eight pictures inspected.
+
+3. **Saved and pushed:** [Answer-first report](C:/CE_PLAN/areas/CODEX_BUILD_FB09_23OCT.md), including exact AutoCAD checks and unattributed settings-hash changes. No deployment; real-AutoCAD verification remains pending.

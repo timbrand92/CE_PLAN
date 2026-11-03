@@ -1,0 +1,19 @@
+**FOR TIM**
+
+1. **Ten of the 11 PRs are ready to merge.** #1516, #1507, #1513, #1508, #1515, #1510, #1498, #1496, #1509 and #1518 need nothing more. Each fix the last review asked for is really in the code.
+2. **#1517 (CDCHECKIGNORE) needs two small fixes first.** My full Civil test run turned up two failing checks in it: the wording of its Ignore/Unignore question, and the total count of Civil commands. The builder had only run 61 tests.
+3. **The new command-log line should stay switched ON.** It only writes to CE's log, never to the drawing. Once the next Civil update is installed, the log shows on your PC on 29 Oct whether each CE command completed, was cancelled or failed.
+4. **Your Structural settings file changed at 08:36:12.** That was nine seconds after AutoCAD started, while none of my tests was running. It fits the new Structural version adding its settings on start-up. I haven't read the file to prove it.
+
+---
+
+1. **Merge order:**
+   - **Next Civil + Manager update (C-59):** #1516, #1513, #1507, #1508 then #1515, and #1517 last once fixed.
+   - **Next Structural update (S-41):** #1510, #1498, #1496 (keep both Settings lines where it clashes with #1498), #1509, #1518.
+2. **Tests run** (private copies under `C:\ce-hunt`, since removed):
+   - **Civil:** 19,113 of 19,135 passed, 19 skipped. The 3 failures are the known Glen Eira back-test and the two #1517 problems. The Civil net48 build has 0 errors.
+   - **Manager:** 853 of 853 passed.
+   - **Structural:** focused set 724 of 724 passed; the net48 build has 0 errors.
+   - **Structural engine (DesignCore):** 653 of 654 passed. The one failure is a missing release value, as in S-40, not a code fault.
+3. **Not tested:** nothing was opened in AutoCAD. Codex still needs to look at the Advanced Settings tab (#1507) and the SBEAM window picture of a Z purlin (#1510).
+4. **Log:** entries 1569 to 1583 are in `REVIEWLANE_LOG.md`, pushed to CE_PLAN as `a0cf73bc` (leak scan clean). Nothing was marked FIXED.

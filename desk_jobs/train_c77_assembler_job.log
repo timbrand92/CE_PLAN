@@ -1,0 +1,17 @@
+Train C-77 is assembled and pushed to `claude/rel-20261030a`, head `9889c01a`. 23 of the 25 promoted PRs are merged. Built and unit-tested only; nothing has been tried in AutoCAD.
+
+- **Skipped:** #1854 and #1855 clash with #1841 in two files I wasn't allowed to hand-resolve (`CouncilProfileModels.cs`, `CouncilSweepParityTests.cs`). Neither is merged.
+- **One red test:** `NewSettingsKeys_NeedADocumentedDefault` fails because #1849's `draftingChecks` setting has no "Default:" line in its comment. I left it for the finalizer.
+- **Test totals:**
+  - Civil net10: 21,424 tests, 1 failed (the one above).
+  - Manager net10: 1,085 tests, 0 failed.
+  - Civil net48 focused: the 106 known baseline reds plus 9 more. Of those, 4 are in the new #1864 class and the other 4 fail on the base too; the 9th is the `draftingChecks` test above.
+  - Arch Civil half: 14 of 14.
+- **Manager is not unchanged:** #1860 edits three Manager files, and #1862 adds a double-click setting.
+- **Two defaults flipped to ON:** Tidy labels and hard-ground 0.9 in Boyd's.
+- **My mistakes:** I dropped a byte-order mark in `UserSettings.cs` and pushed one log heading without its blank line. Both are fixed in small follow-up commits.
+- **Late PR:** #1866 was promoted at 07:17 after I started; I did not merge it. The finalizer merges it first.
+
+The report and the changed-files list are in `C:\CE_PLAN\areas`:
+- `release-v3-colleagues-TRAIN_C77_ASSEMBLY_REPORT_2026-10-29.md`
+- `TRAIN_C77_CHANGED_FILES.txt`

@@ -1,0 +1,16 @@
+The P2 case files and the report are finished. All checks are clean: validate found 0 invalid and check_ids says every control id is known. The first 12 lines of the report's answer-first section:
+
+1. **Counts:** 4 of 5 bugs have a case and a broken twin (8 files): BUG-267, BUG-285, BUG-325, BUG-667. 1 bug has no case: BUG-330.
+2. **Why BUG-330 has none:** its installed fix (PR #627) only changes how metre drawings read pipe length (CDCALC pre-fill, Design Review, dashboard fix). That needs the wave 2 metre drawing. Its OOPS item (pipes losing their end-owner choice) has no fix in the installed code, so no case can pass.
+3. **Cases (folder `cases\drafts_wave1_31oct`):** W267 and W267_BROKEN; W285 and W285_BROKEN; W325 and W325_BROKEN; W667 and W667_BROKEN.
+4. **What they prove in drafting terms:** OOPS after erasing a pit brings back its name label and cover text (W267). OOPS after erasing a pipe brings back its label, IL texts and arrow, and moving its pit then drags the pipe again (W285). OOPS says what it brought back in one line, and one U takes it all away (W325). A pit label erased on its own no longer breaks the next U or PITDELETE (W667).
+5. **Made-up drawing only:** DRV1_B1 plus new objects at 150000,-80000. W267 and W285 use SETUP-R47v. W325 and W667 place their own pit with its label (linking.pitLabelOnEsc ON, the N80 route).
+6. **Twins:** each twin changes one check to the old, broken behaviour, so it must FAIL on that check. The checks are: pit back bare at 1038 objects; pipe back bare at 1036; no OOPS line; the old 'Error during PITDELETE' line.
+7. **Checks done offline:** validate 16 files, 0 invalid (the folder is shared with other writers). check_ids: 'every control id is known'. My 8 files contain no 'print', no street name, and only one level, 17.800 (correct, see W325).
+8. **Biggest risk 1:** W667 picks the pit by typing a point on its north wall (150000,-79675). That position comes from the code and has never been driven. If the pick misses, W667 FAILS on the PITDELETE line, and its record shows the prompt again.
+9. **Biggest risk 2:** the word list of pipe items in the OOPS line ('label, 2 IL texts and flow arrow') depends on the type CE stored against each item. It is not pinned: the cases match it loosely and record it.
+10. **Biggest risk 3:** W267 expects 'pit P3 with its 2 labels'. That needs CE to read the owner note on the fixture's older labels. Codex C6-07 saw 'pit P2 with its label' in the same family of drawing, so it is likely.
+11. **Never seen on a run (DERIVED):** every OOPS line, every count after ERASE, OOPS and U, the PITDELETE line, and the pipe position after the MOVE. Measured inputs: 1040 objects after SETUP-R47v, P3's ERASE taking 3 objects, the CDCHECK totals line, the six new objects and their layers.
+12. **Codex look still needed:** after OOPS, do the labels look right and sit where they were (C5-07 left the far IL text and arrow Unknown)? Check BUG-330 on a metre drawing in wave 2.
+
+The full report is at `C:\CE_PLAN\areas\WAVE1_WRITING_P2_REPORT.md`.

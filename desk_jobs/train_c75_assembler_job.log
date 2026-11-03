@@ -1,0 +1,20 @@
+C-75 is assembled and pushed. The three PRs are merged on `claude/rel-20261026z`, head `905dd2ba`. Build and tests are clean apart from the net48 reds explained below. The report is committed and pushed to `C:\CE_PLAN` as `areas\release-v3-colleagues-TRAIN_C75_ASSEMBLY_REPORT_2026-10-28.md` (commit `f2fe8977`).
+
+1. **Base:** `94f521cc`, the C-74 version commit. It sits directly on the C-74 finalizer's signed head `6d76a267`. The six installed DLLs read Civil 3.0.84 and Manager 1.1.84.
+2. **Merges:**
+   - All three merged with plain `--no-ff`; none of the three PRs had moved since the reference heads.
+   - Only `REGRESSION_LOG.md` clashed, and I kept both sides. `UserSettings.cs` merged cleanly on its own.
+   - The diff is 17 files, 1,096 added and 20 removed. The PR list said 19 files; its 1,096 and 20 are right, but 17 is the true distinct file count.
+   - Shared, Installer, Manager and `DiagSettings.cs` are untouched. Four settings keys were added, all ON.
+3. **Build:** the whole solution built with 0 errors (24 min 32 s).
+4. **Tests:**
+   - Civil net10: 20,782 total, 0 failed.
+   - Manager net10: 1,041 total, 0 failed.
+   - Arch Civil half: 14 of 14.
+   - Civil net48: 84 reds, all `InvalidProgramException` from the reference-only AutoCAD DLL. Of those, 55 are the C-74 baseline. I built the base tip and confirmed 22 more fail there too (three existing classes the C-74 filter did not include). The last 7 are in the new `Bug1222EditPipeArrowReadTests` (the 14-test class); all 14 pass on net10.
+   - `RedoSafeCallGraphTests` passes 25 of 25 on net10 with no baseline file touched.
+5. **Not tested:** nobody has run #1831, #1832 or #1833 in AutoCAD, and none has had an independent read. An `acad.exe` was open during my runs and I never touched it. Tim's four settings files hash the same before and after.
+6. **For the finalizer:** the SCOPE CHECK 9 hit list is in the report. Real hits are `try`/`catch` settings readers in `ExternalMutationCommandPolicy.cs` and `LinkService.SourceLanding.cs`, and a read of `IsLocked` in `LinkService.CloneRegeneration.cs`. #1831 also adds a log line for a turned or mirrored copy.
+7. **Clean-up:** worktrees and scratch folders are removed. Nothing was closed, retargeted, deleted or marked FIXED.
+
+**Summary:** C-75 is assembled. #1831, #1832 and #1833 are merged on `claude/rel-20261026z` at `905dd2ba`, none moved, four keys ON, and no Shared, Installer or Manager change. The solution has 0 errors. Civil net10 ran 20,782 tests with 0 failed, and Manager ran 1,041 with 0 failed. Arch passed 14 of 14. The net48 reds are all reference-only. Nothing has been run in AutoCAD.

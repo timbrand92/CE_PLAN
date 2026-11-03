@@ -1,0 +1,33 @@
+**FOR TIM**
+
+I found about 30 new Structural problems that weren't in the earlier hunts or the carpark. This was a code read only: nothing was opened in AutoCAD, so every item still needs a check on a copy.
+
+The report is at `C:\CE_PLAN\areas\release-v3-colleagues-HUNT_STRUC_BRACING_REO_2026-10-12.md` and is pushed.
+
+**The 5 that matter most for your colleagues:**
+
+1. **Publish Issue sends out PDFs with the old revision on the title block.** You type D in Publish Issue. The folder and register say D, but every PDF title block still says C, unless someone pressed "Update Drawings" first.
+2. **Clicking in and out of the "Structural Rev" box changes every Structural sheet's revision.** You don't have to type anything. One sheet at C among six at B goes back to B.
+3. **Renumber Sheets then Update Drawings renames only some layout tabs.** Publish then stops with "Layout 'S05' was not found", and the register numbers no longer match the tabs.
+4. **On a job with more than one drawing file, the sheet list starts out of order.** Pressing Renumber then gives sheets the wrong numbers.
+5. **Syncing the bracing schedule (STRSCHEDSYNC) can swing a brace off its wall.** It happens to a brace you turned with AutoCAD ROTATE. It also shows AutoCAD's crash box if a brace in the schedule was erased or its layer is locked.
+
+**Others worth knowing:**
+
+1. **Bracing totals:** the bracing panel ignores ROTATE. A copied brace turned onto an East-West wall still counts as North-South.
+2. **Footing marks:** FPFC "Increment" can reuse an erased pad's mark and its old size without asking for a size.
+3. **Mixed sheet sizes:** a drawing with an A1 tab and A3 tabs can plot the A1 tab on A3 paper.
+4. **Stirrups:** typed STR draws a stirrup with a sloping top bar and no 135° hook. Your rule says STR was deleted, but it still works when typed.
+
+**One thing for you to confirm:** the Engineering Rulebook still says "AB bracing capped 2700 mm". On 28 Sep you ruled "keep the drawn length and warn", and the code does that.
+- **I recommend:** marking the 2700 cap line as superseded.
+- **Also confirm:** BB now gives the same "over 2700" warning as AB. Is that what you want?
+
+**Not done:** no BUG numbers were filed (the controller does that), and nothing was built or tested.
+
+---
+
+1. **What was audited:** the installed Structural 1.0.118 (commit 9a8e5d4e on `rel-20261017s`), confirmed from the installed DLL's version string. The Civil release branch holds only an old 1.0.42 copy of Structural, so I didn't use it.
+2. **How:** a temporary read-only worktree at `C:\ce-hunt\struc-brace`, now removed. Four read-only auditors each took one area. I re-read the code for the top findings myself.
+3. **Correction to the brief:** it gave N10 bar mass as 0.632 kg/m. AS/NZS 4671's nominal area gives 0.617, and the code's 0.617 is correct.
+4. **Commit:** CE_PLAN `d6603757`. It was a plain merge with no rebase, only the one file was added, and the leak scan was clean.

@@ -1,0 +1,15 @@
+All 11 cases now have their Codex text asks applied and have been re-run. Seven give good results and four show real CE faults. The report is written and pushed, with `git status -sb` showing no ahead. I left `ledger.json` uncommitted because the runner wrote it and it carries other jobs' rows. No AutoCAD is left running, and all four settings files read back at their start values.
+
+Civil 3.0.84 installed at 12:59:39, in the middle of chain b6b1. That chain's sessions 2 and 3 ran on 3.0.84 but are labelled 3.0.83, so I flagged them as void. Every "two passes" below is two sessions on 3.0.84.
+
+- **Ready for the reviewer (two passes, failing twin):** R12, R33, R36 and R37b for their parts only, and R34sn for its part. New R34a (plain COPY, original keeps P3, one U undoes it) is ready for its plain-COPY part. R40 passes but is part only and needs a Codex look at its window.
+- **Real faults still present on 3.0.84:**
+  - **BUG-1223:** CDFW at four inspection openings is refused with "A nearby pipe's Civil record changed while you picked". Still faulty on 3.0.83 as well.
+  - **BUG-665:** ROTATE Copy of a pit gets no label or cover text, with the Settings tick on. With the tick off, SCALE Copy lacks them too.
+  - **BUG-1222:** a second plain Save in Edit Pipe flips the arrow back (R32, R32b). Both were also run on 3.0.83.
+  - **BUG-672:** new R33m shows CE says "no label" while a label is drawn.
+- **R40 backspace:** already gone (removed 25 Oct). A scan of 325 case files today is clean.
+- **My mistake:** my helper `Rd` is PowerShell's remove alias and deleted the R12 case file; I restored it from my own backup straight away.
+- **Not done:** R37b text height and renumbering need runner additions, and R40's line-order and report-count checks need new runner verbs.
+
+The report is `C:\CE_PLAN\areas\release-v3-colleagues-ROBOT_REMAINING_ASKS_28OCT.md`.

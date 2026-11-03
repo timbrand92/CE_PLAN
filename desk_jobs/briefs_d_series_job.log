@@ -1,0 +1,9 @@
+Pushed; no "ahead". The index is pushed and the queue file holds the 8 new lines. That file is tracked, but it is not pushed because it also holds other sessions' unstaged edits, and you asked for the index by name only.
+
+**Summary:** I wrote the eight Codex looks D1 to D8 (launcher about 2.1 KB, full brief 20.9 to 24.5 KB each) in `C:\Lisp Files\_CODEX_RUNNER`. Together they cover all 30 daily tools, the 8 named tools and the About CE Suite look. None has been run.
+
+- **Settings:** D6 and D8 each use one settings pass. The other six call the guard never.
+- **Banned verb:** a search of all 16 files found no use of it.
+- **Queue and index:** 8 lines are in `CONVEYOR_QUEUE.txt`, and the index is pushed.
+
+Two things are unproven: whether the guard accepts a number or a nested key, and the prompt wording for CDREBUILD and CDRG. The briefs mark a refused key or unknown prompt BLOCKED rather than guessing.

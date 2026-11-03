@@ -1,0 +1,10 @@
+Draft PR #1869 is open against `fb/cover-to-pipe-outside` (B-012 #1848), and the report's BUILD AND TEST section is pushed to `C:\CE_PLAN`. Nothing has been run in AutoCAD.
+
+- **Switch:** `cover.rowSaysUnknown`, on by default.
+- **Files:** `UserSettings.cs`, `RulebookValues.cs`, `RulebookEngine.cs`, `RuleFixAdvisor.cs`, `RulebookLevelsCheck.cs`, `REGRESSION_LOG.md`, the new `Bug902CoverBetweenPitsNoteTests.cs`, and two existing test files (`RulebookEngineTests.cs`, `RuleSourceEvidenceTests.cs`).
+- **Tests:**
+  - **Full suite:** the first run had 5 failures out of 20,852; I fixed all five.
+  - **Re-run:** the affected classes pass 66 of 66.
+  - **Not re-run:** the full suite after the fixes.
+  - **net48:** compiles with 0 errors.
+- **Tidy-up:** the worktree's build output is cleaned.

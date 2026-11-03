@@ -1,0 +1,14 @@
+Draft PR #1880 is open for BUG-1240, and the report is pushed. It is built and unit-tested only; nobody has opened it in AutoCAD, and BUG-1240 is not marked FIXED.
+
+**For Tim:** after a reopen or Save As, picking a pit now shows its real number and levels in the Inspector straight away. It used to say "Unknown" until CDSYNC or the Pit Schedule had run.
+
+- **Cause:** `InspectorPaletteService.cs` read only the pit list in CE's memory, which is filled only when a CE draw or edit command runs.
+- **Fix:** with no list in memory, the Inspector reads the list saved in the drawing, read only. New files are `InspectorProjectSourceRule.cs` and a new test class, plus changes to `UserSettings.cs` and `REGRESSION_LOG.md`.
+- **Switch:** `linking.inspectorReadsSavedRecordWhenNotLoaded`, ON. Setting it to false gives the old Inspector exactly.
+- **Tests:** focused 444 of 444. Full net10: 21,542 passed, 2 failed, 32 skipped. net48 compiles with 0 errors.
+- **The 2 failures:** the same two names the #1866 report lists. I did not run the base to confirm they fail there.
+- **Not proven:** the pick on a real reopened drawing, and the speed of the read on a large drawing.
+- **B number:** the register has none for BUG-1240, so CE 01 needs to rename the PR.
+- **Robot proof to add:** `N39_inspector_reopen`, with control `C39` (switch false), is described in the report.
+
+The report is `C:\CE_PLAN\areas\BUGFIX_p2_REPORT_30OCT.md`.

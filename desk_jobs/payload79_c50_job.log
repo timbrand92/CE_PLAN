@@ -1,0 +1,12 @@
+The C-50 candidate is built and not installed. It is at `C:\ce_rc_scratch\c1046` (`CE_CVL_SUITE.bundle` and `CE_SUITE_MANAGER.bundle`).
+
+- **Manifests:** civil "verified 828, bad 0, extra 0"; manager "verified 78, bad 0, extra 0". Rechecked after cleanup. Added 0, removed 0 against installed.
+- **Branch head:** version commit `9c97d36f` on `claude/rel-20261020d`, on top of `82a58cda`; diff stat was 4 files, 4 insertions, 4 deletions.
+- **Tests:** Civil pin tests 39 of 39, Manager 51 of 51.
+- **Odd:**
+  - `ATTR:ELEV` and `ATTR:LEVEL` are not in either DLL, because the code builds them at run time.
+  - ` on layer ` and `[TidyUp] ` also exist in installed 3.0.59.
+  - Instead, 11 other strings are True in the candidate and False in installed, in all three lanes.
+- **Settings:** the four files and the six installed DLLs are identical before and after. `survey.surveyReadsMTextAndMoreTags` defaults OFF.
+
+The full report is at `C:\Lisp Files\_TEST_COPIES_20260923\PAYLOAD_C1046_REPORT.md`.

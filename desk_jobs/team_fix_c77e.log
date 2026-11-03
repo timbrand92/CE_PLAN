@@ -1,0 +1,16 @@
+B-010 BUG-505: draft PR #1853 is open against `claude/rel-20261026z`. It is unit-tested only and not tried in AutoCAD; BUG-505 is not marked FIXED.
+
+A source drawing with units "Unitless" is still imported as millimetres. The first pre-flight line of CDIMPORTXCIVIL now reads "This drawing has no units set; CE read it as millimetres." once per import. It is a note only and never blocks. The switch is `xcivilImport.noUnitsNote`, ON by default.
+
+Tests: the focused tests pass (44). The full net10 run had 4 failures. Two are code-inspection tests and two are the offline Help window render. They all pass in a Release re-run, so I took them as Debug-build and environment effects, but I did not compare against the base. The net48 compile is clean.
+
+Files:
+- `Models/UserSettings.cs`
+- `Services/XcivilSourceUnitsCheck.cs`
+- `Services/XcivilImportService.cs`
+- `Drainage.Tests/Services/Bug505NoUnitsNoteTests.cs`
+- `REGRESSION_LOG.md`
+
+Report: `C:\CE_PLAN\areas\release-v3-colleagues-BUG505_FIX_REPORT.md`, pushed to `main`.
+
+CDIMPORTLANDXML is not covered, because it never reads a drawing's units. In `C:\CE_PLAN`, `git status -sb` shows `areas/drawing-intelligence.md` modified. I didn't touch it, but the report's push did not leave the working tree clean.

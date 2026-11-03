@@ -1,0 +1,9 @@
+== cx_lf04 (usage 24.0% -> 26.0%): 1. **BLOCKED overall; BUG-889 built and tested.** Draft [#1653](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1653) lets returned findings be ignored directly. BUG-888 needs its active installer owner; BUG-890/891 require protected files; BUG-892 already has #1609.
+
+2. **Verified:** three builds, 0 errors; four new tests; 19,433 passed, 0 failed, 50 NotExecuted in TRX. Not installed or AutoCAD-tested.
+
+3. **Saved and pushed:** [Full report and exact AutoCAD checks](C:/CE_PLAN/areas/CODEX_LEDGER_FIX_BATCH04_23OCT.md).
+
+---
+
+4. **Handoff:** `cx2/bug-889-asked-again` at `98115e67e5ec07b9dec1e908cc542c312fd049c8`.

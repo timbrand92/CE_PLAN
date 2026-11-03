@@ -1,0 +1,7 @@
+`C:\CE_PLAN\areas\CARD_DRAFTS_PIT_SCHEDULE_02NOV.md` is written: five draft cards, nothing run or installed. Only the #1881 row growth is on a line (C-79c, `rel-20261112a`); #1423, #1816, #1593, #987, #1047 and #1983 are on neither line.
+
+Open gaps are listed in the file's FOR TIM block:
+- `gh` isn't on this tool path, so PR states come from the Opus pre-reviews and the build register, not a live check.
+- The ribbon tab title for Pit Schedule wasn't read.
+- The REGRESSION_LOG entries and C4 workflow cards weren't read.
+- Fields 16 (older family card) on Cards 4 and 5 are marked GUESS.

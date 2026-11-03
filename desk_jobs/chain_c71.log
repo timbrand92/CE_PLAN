@@ -1,0 +1,9 @@
+Tue 08:00 chain start: C-71 (Civil + Manager, six follow-up fixes); nothing is installed by this chain.
+Tue 08:00 starting train_c71_assembler_job.txt (sonnet)
+Tue 09:02 finished train_c71_assembler_job.txt
+Tue 09:02 starting train_c71_finalizer_job.txt (opus)
+Tue 10:41 finished train_c71_finalizer_job.txt
+Tue 10:41 C-71 finalizer verdict GO and C-70 installed: building payload 107 (candidate c1067). Nothing is installed by this chain.
+Tue 10:41 starting payload107_c71_job.txt (sonnet)
+Tue 11:14 finished payload107_c71_job.txt
+Tue 11:14 chain complete

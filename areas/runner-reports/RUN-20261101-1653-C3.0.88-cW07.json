@@ -1,0 +1,754 @@
+{
+  "header": {
+    "run_id": "RUN-20261101-1653-C3.0.88-cW07",
+    "started": "2026-11-01 16:53:17",
+    "finished": "2026-11-01 17:01:16",
+    "build": {
+      "civil": {
+        "product_version": "3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+        "file_version": "3.0.88.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+        "file_version": "1.1.88.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.88+3fbb9da5 / struc 1.0.125+204dfad2 / mgr 1.1.88+3fbb9da5",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "9F90B89A2EE75DED7611FAB7A4EA9C14B11D079E6CBA883307E93B0C3555F8AE",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+      "Driver files (SHA-256, first 12): v2 F4D8F40C3675 (expected F4D8F40C3675), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4B0175FFAB00, v3 session F061E3240C47, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 BBF42DBA8958, case_runner_lib.ps1 89AD455619F8, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 2 case file(s) plus 0 shared setup(s); pack SHA-256 9F90B89A2EE75DED7611FAB7A4EA9C14B11D079E6CBA883307E93B0C3555F8AE; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json D604CE689671 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sun 01 Nov 2026 16:53 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 1,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 1,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 1
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261101-1653-C3.0.88-cW07-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-11-01 16:53:20",
+      "finished": "2026-11-01 17:01:16",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31653231_B1.dwg",
+      "cases": [
+        "W234",
+        "W216"
+      ],
+      "whatsnew_dismissed_at_start": "no, window was not there",
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : D604CE689671 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "W234",
+      "proves_bugs": "BUG-234 (MOVE branch, and the one-end branch by a typed STRETCH; the real grip drag and the Pit Schedule rows are not driven)",
+      "title": "A flat pipe P91 to P92 MOVEd onto pits P93 and P94 records P93 to P94; its east end STRETCHed onto P92 then records P93 to P92",
+      "kind": "deterministic",
+      "order": 234,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "Bug-proof plan wave 1 (BUG_PROOF_PLAN_31OCT.md), group P: relink after MOVE or an end move",
+      "bug": "BUG-234",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed",
+      "variant_of": "",
+      "expected": "Four pits P91 to P94 and a flat 225 mm pipe P91 to P92 (both levels 18.000, no window). MOVE of the pipe alone by 0,-6000: the Civil log says 'Pipe endpoints updated: <pipe> from=P93 to=P94' and Edit Pipe shows 'Flow: P93 -> P94' with no P91 or P92 anywhere. STRETCH of the pipe's east end 6 m north onto P92: the log says 'Pipe endpoints updated: <pipe> from=P93 to=P92' and Edit Pipe shows 'Flow: P93 -> P92' with no P94. Both IL texts still read IL 18.000. Edit Pipe is closed with Cancel each time; no CE window is left open and the drawing file on disk is unchanged.",
+      "why_not_unit": "The pipe record is rewritten by CE's relink when AutoCAD ends the native MOVE and STRETCH commands on the live drawing.",
+      "not_automated": [
+        "The real grip drag of an end (the bug's 'grip one end from P2 onto P3') is replaced by a typed STRETCH of that end; the Pit Schedule FROM / TO cells of P91 to P94 and U after each step are not driven.",
+        "DERIVED: that the four hand-typed numbers P91 to P94 are free in DRV1_B1 (it holds P1 to P10 by the R19 / R34 / N71 notes); if CE renumbers a pit the 'from=P93' checks fail first and the numbers are in the recorded Edit Pipe dumps."
+      ],
+      "file_sha256": "1C66A55F15182A6B976DCE3878767E2D252713D51C0B65492AD2BA88E06F3489",
+      "result": "BLOCKED",
+      "blocked": "v2 HARD TIMEOUT: AutoCAD did not answer in time (a tool or load problem, not a result)",
+      "first_failure": null,
+      "started": "2026-11-01 16:54:05",
+      "seconds": 394.6,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "copy CLDV31653231_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $n0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"PIT{NL}150000,-66000\" -Force -ExpectWindow \"New Pit\" -TimeoutSec 120 -> $a_t1",
+          "ok": true,
+          "seconds": 10.2,
+          "evidence": "typed 'PIT 150000,-66000': Command: | Command: PIT | Specify pit insertion point: 150000,-66000"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.PitNumber\" \"P91\"",
+          "ok": true,
+          "seconds": 7.5,
+          "evidence": "ui set 'New Pit' C2.PitNumber = P91: "
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.CoverLevel\" \"19.000\"",
+          "ok": true,
+          "seconds": 6.6,
+          "evidence": "ui set 'New Pit' C2.CoverLevel = 19.000: "
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pit\" \"New pit, Continue placement\" -> $a_t2",
+          "ok": true,
+          "seconds": 39.7,
+          "evidence": "pressed 'New pit, Continue placement' in /New Pit/: window closed = True"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pit\" -Secs 120",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "the window /^New Pit/ closed after 0 s"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $a_e1",
+          "ok": true,
+          "seconds": 8.6,
+          "evidence": "esc-prompt: Command: | Command: PIT | Specify pit insertion point: 150000,-66000 | Specify pit label insertion point: *Cancel*"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $a_e2",
+          "ok": true,
+          "seconds": 7.1,
+          "evidence": "esc-prompt: Command: PIT | Specify pit insertion point: 150000,-66000 | Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit..."
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $a_e3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "esc-prompt: Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit, or press Esc to stop. | Specify pit insertion point: *Canc..."
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"PIT{NL}160000,-66000\" -Force -ExpectWindow \"New Pit\" -TimeoutSec 120 -> $b_t1",
+          "ok": true,
+          "seconds": 10.4,
+          "evidence": "typed 'PIT 160000,-66000': Command: | Command: PIT | Specify pit insertion point: 160000,-66000"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.PitNumber\" \"P92\"",
+          "ok": true,
+          "seconds": 8.0,
+          "evidence": "ui set 'New Pit' C2.PitNumber = P92: "
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.CoverLevel\" \"19.000\"",
+          "ok": true,
+          "seconds": 8.0,
+          "evidence": "ui set 'New Pit' C2.CoverLevel = 19.000: "
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pit\" \"New pit, Continue placement\" -> $b_t2",
+          "ok": true,
+          "seconds": 32.2,
+          "evidence": "pressed 'New pit, Continue placement' in /New Pit/: window closed = True"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pit\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /^New Pit/ closed after 0 s"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $b_e1",
+          "ok": true,
+          "seconds": 7.0,
+          "evidence": "esc-prompt: Command: | Command: PIT | Specify pit insertion point: 160000,-66000 | Specify pit label insertion point: *Cancel*"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $b_e2",
+          "ok": true,
+          "seconds": 7.3,
+          "evidence": "esc-prompt: Command: PIT | Specify pit insertion point: 160000,-66000 | Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit..."
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $b_e3",
+          "ok": true,
+          "seconds": 3.1,
+          "evidence": "esc-prompt: Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit, or press Esc to stop. | Specify pit insertion point: *Canc..."
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"PIT{NL}150000,-72000\" -Force -ExpectWindow \"New Pit\" -TimeoutSec 120 -> $c_t1",
+          "ok": true,
+          "seconds": 10.4,
+          "evidence": "typed 'PIT 150000,-72000': Command: | Command: PIT | Specify pit insertion point: 150000,-72000"
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.PitNumber\" \"P93\"",
+          "ok": true,
+          "seconds": 7.2,
+          "evidence": "ui set 'New Pit' C2.PitNumber = P93: "
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.CoverLevel\" \"19.000\"",
+          "ok": true,
+          "seconds": 7.1,
+          "evidence": "ui set 'New Pit' C2.CoverLevel = 19.000: "
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pit\" \"New pit, Continue placement\" -> $c_t2",
+          "ok": true,
+          "seconds": 30.5,
+          "evidence": "pressed 'New pit, Continue placement' in /New Pit/: window closed = True"
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pit\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /^New Pit/ closed after 0 s"
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $c_e1",
+          "ok": true,
+          "seconds": 6.8,
+          "evidence": "esc-prompt: Command: | Command: PIT | Specify pit insertion point: 150000,-72000 | Specify pit label insertion point: *Cancel*"
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $c_e2",
+          "ok": true,
+          "seconds": 6.8,
+          "evidence": "esc-prompt: Command: PIT | Specify pit insertion point: 150000,-72000 | Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit..."
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $c_e3",
+          "ok": true,
+          "seconds": 2.8,
+          "evidence": "esc-prompt: Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit, or press Esc to stop. | Specify pit insertion point: *Canc..."
+        },
+        {
+          "n": 29,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 30,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"PIT{NL}160000,-72000\" -Force -ExpectWindow \"New Pit\" -TimeoutSec 120 -> $d_t1",
+          "ok": true,
+          "seconds": 9.2,
+          "evidence": "typed 'PIT 160000,-72000': Command: | Command: PIT | Specify pit insertion point: 160000,-72000"
+        },
+        {
+          "n": 31,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.PitNumber\" \"P94\"",
+          "ok": true,
+          "seconds": 6.4,
+          "evidence": "ui set 'New Pit' C2.PitNumber = P94: "
+        },
+        {
+          "n": 32,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.CoverLevel\" \"19.000\"",
+          "ok": true,
+          "seconds": 7.5,
+          "evidence": "ui set 'New Pit' C2.CoverLevel = 19.000: "
+        },
+        {
+          "n": 33,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pit\" \"New pit, Continue placement\" -> $d_t2",
+          "ok": true,
+          "seconds": 29.6,
+          "evidence": "pressed 'New pit, Continue placement' in /New Pit/: window closed = True"
+        },
+        {
+          "n": 34,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pit\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /^New Pit/ closed after 0 s"
+        },
+        {
+          "n": 35,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $d_e1",
+          "ok": true,
+          "seconds": 6.8,
+          "evidence": "esc-prompt: Command: | Command: PIT | Specify pit insertion point: 160000,-72000 | Specify pit label insertion point: *Cancel*"
+        },
+        {
+          "n": 36,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $d_e2",
+          "ok": true,
+          "seconds": 7.0,
+          "evidence": "esc-prompt: Command: PIT | Specify pit insertion point: 160000,-72000 | Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit..."
+        },
+        {
+          "n": 37,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $d_e3",
+          "ok": true,
+          "seconds": 2.6,
+          "evidence": "esc-prompt: Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit, or press Esc to stop. | Specify pit insertion point: *Canc..."
+        },
+        {
+          "n": 38,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 39,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1038 objects"
+        },
+        {
+          "n": 40,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-66000{NL}160000,-66000{NL}\" -Force -ExpectWindow \"New Pipe\" -TimeoutSec 120 -> $p_t1",
+          "ok": true,
+          "seconds": 9.3,
+          "evidence": "typed 'CD 150000,-66000 160000,-66000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-66000 | Specify second point: 160000,-66000 | Se..."
+        },
+        {
+          "n": 41,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 6.7,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: "
+        },
+        {
+          "n": 42,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 6.5,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 18.000: "
+        },
+        {
+          "n": 43,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $p_t2",
+          "ok": true,
+          "seconds": 6.6,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 44,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 45,
+          "phase": "case",
+          "verb": "ui2-press",
+          "text": "ui2-press \"Design Warnings\" \"OK\"",
+          "ok": false,
+          "seconds": 33.6,
+          "evidence": "ui press 'Design Warnings' 'OK': HARD TIMEOUT: AutoCAD did not answer. A dialog may be open or a command may be waiting at a prompt. Press Esc in AutoCAD; nothing further was sent. If the settings guard held backups: while the test AutoCAD you launched ..."
+        }
+      ],
+      "assertions": [],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 204 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: PIT completed 80594 ms ; Command outcome: PIT completed 73887 ms ; Command outcome: PIT completed 69673 ms ; Command outcome: PIT completed 67411 ms",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=True)"
+      ],
+      "error": null,
+      "finished": "2026-11-01 17:00:40",
+      "session_id": "RUN-20261101-1653-C3.0.88-cW07-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 1,
+        "red_before": false
+      }
+    },
+    {
+      "id": "W216",
+      "proves_bugs": "BUG-216: the Enter-at-the-next-prompt half on a skipped point. The Enter after an accepted arrow (Codex 14 Oct, 1 placed) is the same prompt code (FallSuggestCommand.cs 64 and 89-93) but is not driven here.",
+      "title": "CDFALLSUGGEST: Enter at \"Next level ... or Enter to finish\" ends the command and states the count; no \"Invalid point\"",
+      "kind": "deterministic",
+      "order": 2160,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "BUG-proof wave 1, group T (tags, sources and fall suggestion); BUG-216",
+      "bug": "BUG-216",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed",
+      "variant_of": "",
+      "expected": "CDFALLSUGGEST, typed point 150000,-98000, Enter at the level question (skipped: 'No level at this point'), Enter at 'Next level (0 placed, 1 skipped), or Enter to finish:'. The command ends on that Enter and says 'CDFALLSUGGEST finished. 0 placed, 1 skipped.' inside the typed result; no 'Invalid point' anywhere; no FALL block is added; the drawing file on disk is unchanged.",
+      "why_not_unit": "The unit test proves the prompt options allow an empty answer; only live AutoCAD shows that a real Enter at that prompt ends the command instead of AutoCAD's own 'Invalid point.'.",
+      "not_automated": [
+        "Accept a suggested arrow and then Enter (needs a point with a known level uphill of a grated pit with a known cover level; the fixture's levels near P4 are not read here). Esc at the same prompt is the old way out and is not the subject."
+      ],
+      "file_sha256": "F4152EC8DCE4ABC47600962752BE1CAA079FB9A57D31B6E49EBE5C5D901090C3",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-11-01 17:00:40",
+      "seconds": 15.7,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV31653231_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDFALLSUGGEST{NL}150000,-98000{NL}{NL}\" -Force -TimeoutSec 90 -> $fs",
+          "ok": true,
+          "seconds": 2.2,
+          "evidence": "typed 'CDFALLSUGGEST 150000,-98000': Command: CDFALLSUGGEST | Pick a level to suggest a FALL arrow toward the nearest downhill grated pit, or Enter to finish: 150000,-98000 | No spot level here - enter a level (m), or Enter to skip: | [CE] No level at this ..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $fse",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "esc-prompt: Pick a level to suggest a FALL arrow toward the nearest downhill grated pit, or Enter to finish: 150000,-98000 | No spot level here - enter a level (m), or Enter to skip: | [CE] No level at this point ? type or pick a le..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31653231_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "contains $fs \"CDFALLSUGGEST finished. 0 placed, 1 skipped.\"",
+          "ok": true,
+          "expected": "contains 'CDFALLSUGGEST finished. 0 placed, 1 skipped.'",
+          "actual": "Command: CDFALLSUGGEST | Pick a level to suggest a FALL arrow toward the nearest downhill grated pit, or Enter to finish: 150000,-98000 | No spot level here - enter a level (m), or Enter to skip: | [C...",
+          "evidence": "found 'CDFALLSUGGEST finished. 0 placed, 1 skipped.' in: Command: CDFALLSUGGEST | Pick a level to suggest a FALL arrow toward the nearest downhill grated pit, or Enter to finish: 150000,-98000 | No spot level here - e..."
+        },
+        {
+          "n": 2,
+          "text": "not-contains $fs \"Invalid point\"",
+          "ok": true,
+          "expected": "does not contain 'Invalid point'",
+          "actual": "Command: CDFALLSUGGEST | Pick a level to suggest a FALL arrow toward the nearest downhill grated pit, or Enter to finish: 150000,-98000 | No spot level here - enter a level (m), or Enter to skip: | [C...",
+          "evidence": "'Invalid point' is absent from: Command: CDFALLSUGGEST | Pick a level to suggest a FALL arrow toward the nearest downhill grated pit, or Enter to finish: 150000,-98000 | No spot level here - e..."
+        },
+        {
+          "n": 3,
+          "text": "history absent \"Invalid point\"",
+          "ok": true,
+          "expected": "command line lacks 'Invalid point'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'Invalid point' (6 lines read)"
+        },
+        {
+          "n": 4,
+          "text": "history has \"No level at this point\"",
+          "ok": true,
+          "expected": "command line has 'No level at this point'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CE] No level at this point  type or pick a level first. CE never guesses a fall direction.'"
+        },
+        {
+          "n": 5,
+          "text": "history has \"Next level (0 placed, 1 skipped), or Enter to finish\"",
+          "ok": true,
+          "expected": "command line has 'Next level (0 placed, 1 skipped), or Enter to finish'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Next level (0 placed, 1 skipped), or Enter to finish:'"
+        },
+        {
+          "n": 6,
+          "text": "history count \"CDFALLSUGGEST finished.\" = 1",
+          "ok": true,
+          "expected": "1 line(s) with 'CDFALLSUGGEST finished.'",
+          "actual": "1",
+          "evidence": "command line holds 1 line(s) containing 'CDFALLSUGGEST finished.' (expected 1)"
+        },
+        {
+          "n": 7,
+          "text": "equals $c1 $c0",
+          "ok": true,
+          "expected": "1034",
+          "actual": "1034",
+          "evidence": "value '1034' (expected '1034')"
+        },
+        {
+          "n": 8,
+          "text": "not-contains $win_end \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31653231_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV31653231_B1.dwg]"
+        },
+        {
+          "n": 9,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 10,
+          "text": "record $fs \"FULL what the typed CDFALLSUGGEST chain showed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: CDFALLSUGGEST | Pick a level to suggest a FALL arrow toward the nearest downhill grated pit, or Enter to finish: 150000,-98000 | No spot level here - enter a level (m), or Enter to skip: | [CE] No level at this point ? type or pick a level first. CE never guesses a fall direction. | Next level (0 placed, 1 skipped), or Enter to finish: | CDFALLSUGGEST finished. 0 placed, 1 skipped.",
+          "evidence": "RECORDED, not judged: FULL what the typed CDFALLSUGGEST chain showed = Command: CDFALLSUGGEST | Pick a level to suggest a FALL arrow toward the nearest downhill grated pit, or Enter to finish: 150000,-98000 | No spot level here - enter a level (m), or Enter to skip: | [CE] No level at this point ? type or pick a level first. CE never guesses a fall direction. | Next level (0 placed, 1 skipped), or Enter to finish: | CDFALLSUGGEST finished. 0 placed, 1 skipped."
+        },
+        {
+          "n": 11,
+          "text": "record $fse \"FULL what the closing esc-prompt saw (expected: nothing to cancel)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Pick a level to suggest a FALL arrow toward the nearest downhill grated pit, or Enter to finish: 150000,-98000 | No spot level here - enter a level (m), or Enter to skip: | [CE] No level at this point ? type or pick a level first. CE never guesses a fall direction. | Next level (0 placed, 1 skipped), or Enter to finish: | CDFALLSUGGEST finished. 0 placed, 1 skipped.",
+          "evidence": "RECORDED, not judged: FULL what the closing esc-prompt saw (expected: nothing to cancel) = Pick a level to suggest a FALL arrow toward the nearest downhill grated pit, or Enter to finish: 150000,-98000 | No spot level here - enter a level (m), or Enter to skip: | [CE] No level at this point ? type or pick a level first. CE never guesses a fall direction. | Next level (0 placed, 1 skipped), or Enter to finish: | CDFALLSUGGEST finished. 0 placed, 1 skipped."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV31653231_B1_140244514.log)",
+        "Civil CE log: 28 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDFALLSUGGEST completed 74 ms"
+      ],
+      "error": null,
+      "finished": "2026-11-01 17:00:55",
+      "session_id": "RUN-20261101-1653-C3.0.88-cW07-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "no independent review: no W216_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)",
+          "bug case (BUG-216) has no recorded FAIL on an earlier build or on a deliberately broken variant"
+        ],
+        "passing_sessions_on_this_build": 2,
+        "red_before": false
+      }
+    }
+  ]
+}

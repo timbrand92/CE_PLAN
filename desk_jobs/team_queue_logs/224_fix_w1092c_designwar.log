@@ -1,0 +1,8 @@
+Draft PR #1993 (B-165) makes an uphill ERROR row in the Design Warnings window show a red bullet and red words. Warning rows stay amber. Nobody has looked at the window in AutoCAD, so Codex needs to check the colour. The report is pushed to `C:\CE_PLAN\areas\BUGFIX_w1092c_REPORT_02NOV.md`.
+
+- **Cause confirmed:** `PipeValidationWarningDialog.xaml` lines 52–61 gave every row an amber bullet and never read the row's severity.
+- **Files:** that XAML (one trigger on the existing row template), new `ValidationErrorRowConverter.cs`, `UserSettings.cs`, `REGRESSION_LOG.md` and 8 new tests.
+- **Switch:** `validation.errorRowsShowRed`, default on. Off restores the amber rows exactly.
+- **Tests:** 8 new tests pass and 251 neighbouring tests pass on net10, and the net48 build has 0 errors.
+- **Real AppData listings differ:** I believe a real AutoCAD session run by another job wrote those CE logs and session files, because all three CE plugins logged "plugin terminated" at 19:08:39. My test host never starts the plugins. It's in the report for you to check.
+- **Footer wording:** it still says "Warnings are informational - the pipe has been saved" under a red error row. I left it for you or Codex to reword.

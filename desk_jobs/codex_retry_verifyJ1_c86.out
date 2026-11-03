@@ -1,0 +1,19 @@
+== verifyJ1_c86 (usage 22.0% -> 22.0%): AUTOCAD STILL RUNNING
+
+1. **J1 blocked:** Driver refused the required length-only TRUSTEDPATHS check. Export Excel remains untested; no workbook produced. No BUG-1255 verdict.
+2. **Versions:** Civil 3.0.86 / Manager 1.1.86 / Structural 1.0.125.
+3. **Cleanup:** This runÔÇÖs AutoCAD closed; a new AutoCAD process appeared after lock release and was left untouched. All four settings hashes unchanged.
+4. **Report:** [J1 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_J1_20261030_1302.md>). PASS 0, FAIL 0, NOT TESTED 1; SURE 1, UNSURE 0.
+== verifyJ1_c86 (usage 22.0% -> 22.0%): AUTOCAD CLOSED
+
+1. **J1 not tested:** I called driver status too early during startup. It refused; DR5 required stopping. No workbook was exported. BUG-1255 remains unverified.
+2. **Installed:** Civil 3.0.86 / Manager 1.1.86 / Structural 1.0.125.
+3. **Cleanup:** All four settings hashes unchanged; test drawing unsaved; lock released.
+4. **Report:** [J1 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_J1_20261030_1342.md>). PASS 0, FAIL 0, NOT TESTED 1 ÔÇö SURE.
+== verifyJ1_c86 (usage 23.0% -> 23.0%): AUTOCAD CLOSED
+
+1. **J1 NOT TESTED ÔÇö SET-UP:** Startup readiness was not confirmed within 90 seconds. Export Excel was not attempted; BUG-1255 and the Checking sheet remain unverified.
+
+2. **Installed:** Civil 3.0.86 / Manager 1.1.86 / Structural 1.0.125. All four settings hashes unchanged. Lock released.
+
+3. **Report:** [J1 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_J1_20261030_1359.md>). Counts: 0 PASS, 0 FAIL, 1 NOT TESTED; SURE 1, UNSURE 0.

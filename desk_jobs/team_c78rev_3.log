@@ -1,0 +1,18 @@
+Job C is finished: all 14 cases were reviewed, nothing came back NOT YET, and 14 slips were written next to the case files. Here are the first 12 lines of `C:\CE_PLAN\areas\C78_REVIEW_C_REPORT.md`:
+
+```
+# C-78 batch case review, job C (Opus-Team-C78rev-C, Sun 1 Nov 2026)
+
+**Answer:** 14 cases reviewed against their cards and the source at 3fbb9da5: **5 ACCEPT FULL, 9 ACCEPT PART, 0 NOT YET, 0 ALREADY.** 14 slips written (no earlier slips existed; every case sha256 matched the list line).
+
+1. **ACCEPT FULL (5):** N70, N71v87, N72 (BUG-1227 Part A and both guards), N90_plain_rg_label, N90x_switch_off (B-007b).
+2. **ACCEPT PART (9):** N80, N81 (UX-CPLAN-22), N91 (start-up smoke), R01v87, R02v87, R02bv87, R03v87, R04v87, R11v87.
+3. **Weakest three:** (a) **R02bv87:** only the flow line proves the join; its 'pipe box y' check passes whether the pipe joins or not. (b) **N91:** the twin only flips two claims, so the three version checks have never been red; ribbon tabs not read. (c) **R11v87:** the twin breaks REDO only; the 'one U puts it all back' checks have never been red.
+4. **For Tim to judge (not blocking):** the raingarden plan label (N90) sits on GUIDELINES, which CE makes non-plot, so it will not print; R03's IL text reads 'IL 18.000' (3 decimals) where your ruling's example is 'IL 33.00'.
+5. **Text fix at next edit:** N90 and N90x EXPECTED lines say RG1 and RG2; their checks (correctly) say RG2 and RG3.
+6. **Time:** 08:16:10 to 08:20:27 by the date command (about 4 minutes on the PC clock). Read-only: no case, setup, driver or settings file edited; nothing run, built, committed or pushed.
+
+## Cases
+```
+
+The 4-minute time is what the date command printed at the start and end. It looks too short for this much reading, so the PC clock may be wrong; I recorded it as printed.

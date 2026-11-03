@@ -1,0 +1,13 @@
+== verifyS3_c88 (usage 34.0% -> 35.0%): AUTOCAD CLOSED
+
+1. **Results:** 0 PASS, 0 FAIL, 0 DIFFERENT, 1 BLOCKED, 4 NOT TESTED. SURE 5, UNSURE 0. No acceptance claimed.
+2. **Blockers:** S3-01ÔÇÖs view changed before the second pipe. The other four looks lost valid evidence because my saver repeated an old capture.
+3. **Safe end:** Nothing saved. Four settings hashes unchanged. 25TEXT unlocked. Lock released. Usage 35%. No fixtures missing.
+4. **Report:** [S3 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_S3_20261102_0800.md>).
+== verifyS3_c88 (usage 42.0% -> 43.0%): AUTOCAD CLOSED
+
+1. **Results:** 4 PASS, 1 BLOCKED; 0 FAIL, DIFFERENT or NOT TESTED result lines. SURE 5, UNSURE 0. S3-01 blocked when placement changed the view before pipe 2ÔÇÖs clicks.
+
+2. **Clean end:** Nothing saved. 25TEXT unlocked, lock released, four watched settings unchanged. Remembered values changed for the desk to restore. No fixtures missing.
+
+3. **Report:** [S3 verification report](<C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_S3_20261102_1454.md>). Installed Civil/Manager **.89**, Structural **.125**.

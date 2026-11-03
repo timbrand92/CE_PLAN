@@ -1,0 +1,34 @@
+The draft PR is open: **#1919**, titled B-093, against `claude/rel-20261102a`. It is built and unit-tested only; nobody has opened it in AutoCAD.
+
+**FOR TIM**
+
+1. **Custom grade, typed levels flatter than the grade you chose:** CE no longer opens the Grade mismatch window. It writes one line and draws the pipe with your levels. The line also shows in the New Pipe window's warning box. For example: "Levels typed give 1 in 200, flatter than the 1 in 100 grade chosen. Your levels are used."
+2. **Steeper pipe ("2no but warn"):** the same line, saying "steeper than". This is a guess at what you meant and is unconfirmed. It has its own switch so it can be turned off alone.
+3. **Default grade, two typed levels flatter than the Settings minimum (1 in 100 as shipped):** the same line, worded "minimum grade". The minimum is read from Settings.
+4. **Not done: CDRULES.** The stored pipe doesn't keep the grade you chose, so there is nothing to compare. CDRULES already warns on a stored pipe flatter than the minimum grade. Adding "typed against chosen" would mean storing the chosen grade on the pipe, which is your call.
+5. **Mistakes of my own:**
+   - I broke an old source-guard test, `Bug331MetreLengthTests.CD_Held_WorksNoLevelOutOfTheLength_AndAsksNoMismatchQuestion`, by rewording one line in the Draw code. I restored the line and re-ran it green.
+   - My first test run failed because the placeholder transform file was missing in the fresh worktree.
+6. **Not proven:** nothing was tried in AutoCAD. The warning box, the command-line line and the window staying away have not been seen on screen.
+
+**Tests:** the focused net10 run passed 158 of 158, and net48 compiles with 0 errors. The full Civil run was 21,604 passed and 3 failed. Two of the failures are the known IL-shape tests; the third is the Bug331 guard I fixed. I did not re-run the full suite after that fix; the focused re-run covers it.
+
+**Real-files compare:** no settings file changed, but other files under `%APPDATA%` did. They are consistent with another AutoCAD session (pid 79280, started 14:26:30), not my tests. I can't prove none of the 14:14 to 14:17 files came from my run, though their content is from the installed 2026 plugin. The listing is in the report.
+
+**Switches, all ON:** `pipe.gradeMismatchIsWarningLine`, `pipe.steeperThanGradeWarns`, `pipe.flatterThanMinimumWarnsInDefault`.
+
+**Robot cases proposed:** GM3 (flatter), GM4 (steeper), GM5 (Default grade) and GM6 (CE's own level stays quiet). Each has a switch-off control, written up in the report.
+
+**Cleanup:** the last command was meant to remove the worktree and scratch folder. Its output was lost because the scratch folder holding the output file was deleted mid-command. I did not check afterwards, so look for leftovers under `C:\CE_WORK\build\w1` and `C:\CE_WORK\scratch\w1`.
+
+Files are in `Modules/Drainage`:
+- `Rules/GradeMismatchWarningRule.cs` (new)
+- `Commands/CdCommand.cs`
+- `Commands/CdCommand.Grade.cs`
+- `Models/UserSettings.cs`
+- `ViewModels/CdViewModel.Inverts.cs`
+- `ViewModels/CdViewModel.Grade.cs`
+- `Drainage.Tests/Commands/B093GradeMismatchWarningTests.cs` (new)
+- `REGRESSION_LOG.md` (repo root)
+
+The report is `C:\CE_PLAN\areas\BUGFIX_w1_REPORT_31OCT.md` (pushed).

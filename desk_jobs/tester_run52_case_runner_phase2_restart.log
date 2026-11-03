@@ -1,0 +1,10 @@
+The case-file runner works and the first 10 cases ran twice on Civil 3.0.72, Structural 1.0.122, Manager 1.1.72. R01–R07 and R10 passed both times; R08 and R09 failed both times.
+
+- **R08 (REDO after a pit click):** REDO says "Nothing to redo" five times out of five after a real mouse click on a pit. The control with no pick works, so this looks like BUG-861 and needs a human look.
+- **R09 (DP1 double-click):** AutoCAD's attribute editor opened, not CE's Edit source window, so BUG-859 still fails on 3.0.72.
+- **Broken variants:** both fail in both runs, as they must.
+- **Acceptance:** nothing is ACCEPTED-READY. `reviewed_against` is empty on all ten, and R06 still needs a Codex look at its picture.
+- **Changes to phase 1B files:** three button names added to the v3 allow-list and the Settings guard, with the pin re-set. v2 is untouched, and the four settings hashes were unchanged at the last check.
+- **Session-end alarms:** two report an unclean end. One is false (Codex took the lock within seconds). In the other, a stuck AutoCAD survived and I ended it myself.
+
+Report and run evidence are pushed to CE_PLAN and `git status -sb` shows no `ahead`; `README_V3.md` is updated.

@@ -1,0 +1,16 @@
+I wrote the C-69 PR list and the six job files and pushed them. No chain was started and nothing was run.
+
+**Not taken:**
+- **#1247:** its only commit edits Structural code, so it goes with the Structural train.
+- **Manager version bump for #954:** the payload's 1.1.79 stamp is that bump, so the assembler leaves the version files alone.
+
+The train is the eleven new PRs: #1781 to #1787 and #1789 to #1791 (Civil), plus #1788 (Manager). All heads match live. The fixes have had no second read, and the list and finalizer job say so.
+
+Files, in `C:\CE_PLAN`:
+- `areas\TRAIN_C69_PR_LIST_2026-10-26.md`
+- `desk_jobs\train_c69_assembler_job.txt`
+- `desk_jobs\train_c69_finalizer_job.txt`
+- `desk_jobs\payload104_c69_job.txt`
+- `desk_jobs\chain_c69.ps1`
+- `desk_jobs\chain_install_c69.ps1`
+- `desk_jobs\scripts\desk_install_c69.ps1`

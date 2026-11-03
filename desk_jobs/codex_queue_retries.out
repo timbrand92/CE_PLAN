@@ -1,0 +1,17 @@
+== verifyV2b_retry (usage 2.0% -> 2.0%): 1. **NOT STARTED:** Native screen and mouse access was unavailable. The required Explorer screenshot could not be captured.
+
+2. **Results:** PASS 0, FAIL 0, DIFFERENT 0, BLOCKED 0, NOT TESTED 3. SURE 0, UNSURE 3. No product failures observed.
+
+3. **Installed:** Civil 3.0.65 / Manager 1.1.65 / Structural 1.0.118.
+
+4. **Safe state:** Settings unchanged; AutoCAD processes absent; lock free and never acquired. FIXTURES WANTED: none.
+
+5. **Report:** [CODEX_VERIFY_V2b_20261020_2031.md](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_V2b_20261020_2031.md>)
+== verifyV1_robot_gaps (usage 2.0% -> 2.0%): 1. **V1 complete.** [Report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_V1_20261020_2034.md>). Actual installed Civil/Manager build was **.65**, not .64.
+
+2. **Results.** PASS 0 ┬À FAIL 1 ┬À DIFFERENT 0 ┬À BLOCKED 1 ┬À SEEN 1 ┬À NOT TESTED 1. SURE 3 ┬À UNSURE 1.
+   BUG-416: ÔÇ£Nothing to redoÔÇØ; line visibility uncertain. BUG-505: unexpected first prompt blocked import. DP1 behaviour recorded. BUG-476 parked.
+
+3. **Clean end.** Four settings files unchanged; autosave restored. AutoCAD gone; lock released. Automatic Temp save disclosed in report.
+
+4. **Fixture needed.** Empty import target already tagged Civil, or amended instructions for that first question.

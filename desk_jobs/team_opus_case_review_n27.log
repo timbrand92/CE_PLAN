@@ -1,0 +1,32 @@
+**FOR TIM**
+
+1. **My mistakes first:** none that cost anything. One search of CE's log ran too long and I stopped it. I used the robot's own run records instead.
+2. **Result:** all 11 new robot checks passed twice on the installed Civil 3.0.83, with no install between runs. 9 can count now and 2 can't yet.
+3. **Ready as whole tools (2):** CDREBUILD warns and never saves (N01), and EXPLODE on a pit (N02).
+4. **Ready for part of their tool only (7):**
+   - pit label and cover level
+   - office layers
+   - Undo names (with the switches on)
+   - CDRENUMBER
+   - Pit Schedule order
+   - the cascade levels in the schedule
+   - COPY of a pit
+5. **Not ready (2):**
+   - **OF and FO (N03):** the check only reads "OF", not "OF1", and doesn't check the plan labels. Its deliberately wrong twin also failed for the wrong reason.
+   - **Downpipe and raingarden (N04):** held until item 7 is explained.
+6. **These may now be written "FIXED (Claude-accepted, Civil 3.0.83, 28 Oct 2026)" as whole tools:**
+   - D16 EXPLODE
+   - D18 CE never saves (N01 together with the older R04 check)
+   - D27 CDSYNC and CDREBUILD warn first (N01 together with the older R13 check)
+7. **New problem the robot's report missed:** twice tonight, DP and OF refused to place with "The source landing could not be refreshed. Nothing will be placed here." It happened in a fresh copy of the drawing reopened in the same AutoCAD session. A drafter who closes without saving and reopens could hit it. It needs a bug number and someone to find the cause. I'm not allowed to edit the bug file, so the desk has to add it.
+8. **Nothing for you to decide or test.**
+
+---
+
+- **Report:** `C:\CE_PLAN\areas\release-v3-colleagues-OPUS_CASE_REVIEW_N27_28OCT.md`. It also gives the exact lines to add to N03, N08 and N12, and two other notes for the desk:
+  - Card D07 asks for an "RG1 label", but the robot found no label object and I found no label code. Either the card or the tool is wrong.
+  - In N11 the typed level 17.60 leaves pipe P3 150 mm above the pipe coming into pit P4. CE did what was typed and gave no warning. Whether it should warn is Tim's call.
+- **Review files:** 9 written next to the cases, each tied to the case's exact current version. Copies are in `areas\runner-reports\reviews\`, and a copy of the runner's own acceptance check passes for all 9.
+- **Pushed** to CE_PLAN (commit `ce7c6604`, only my files added). The leak scan was clean and nothing is left unpushed.
+
+**Summary:** All 11 cases passed twice on Civil 3.0.83. N01 and N02 are ready whole and seven are ready for part. N03 needs stronger checks and a clean twin run, and N04 is held. D16, D18 and D27 can now be written Claude-accepted. New finding: DP and OF refused to place in a reopened drawing, which needs a bug number and its cause found.

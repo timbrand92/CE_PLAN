@@ -1,0 +1,16 @@
+**FOR TIM**
+
+1. **Can the laptop be a test machine? Yes, but only for AutoCAD 2026, and only once the licence has been checked.** AutoCAD 2026 loads a different set of CE files from your 2027. So anything that passes on the laptop is a 2026 pass. It never counts towards your 19 of 40.
+2. **How long:** about 3 working days after you say yes, and about 45 minutes of your time. The earliest it could be ready is Tue 3 Nov.
+3. **Check the licence first.** Open AutoCAD 2026 on the laptop and look at the name at the top right. If it's your own Autodesk login, ask the office admin whether the licence is per person. If it is, the robot starting AutoCAD on the laptop could sign you out of your 2027 while you're drafting.
+4. **The main difference is the pipe.** On your PC, the robot's test drawing turns every CE pipe into a one-piece CE pipe object when it opens. On 2026, pipes stay ordinary polylines, which is what every colleague gets. So 20 of the 85 checks will read differently there.
+5. **One correction:** BUG-1209 (downpipe on a pit) and BUG-1210 (the plan picture in Edit Pipe and Edit Pit) are recorded as "2022 to 2024 only". The program files show they also affect 2025 and 2026. I was not allowed to edit the bug file, so I've flagged it for the desk.
+6. **My recommendation:** set it up now as the PC for rehearsing the colleague install and for a first 2026 check. Decide whether the robot runs on it every night once Max tells you his AutoCAD year.
+
+---
+
+**Summary:** A laptop with AutoCAD 2026 can test the part of CE that AutoCAD 2025 and 2026 load, and it can be used to rehearse the colleague install. Its results never stand for your 2027.
+
+Before the robot can run there, it needs about one day of reviewed changes. It currently refuses anything but 2027, its working-hours stop applies on any PC, and its build check would record a 2026 run as a 2027 one.
+
+Nothing was run, installed or changed on any PC. The addendum is now at the end of `C:\CE_PLAN\areas\TESTING_SPEED_OPTIONS_29OCT.md`, and the steps for CE 07 are in `C:\CE_PLAN\areas\TEST_LAPTOP_STEPS_29OCT.md`. Both are pushed, and the scan for private data was clean.

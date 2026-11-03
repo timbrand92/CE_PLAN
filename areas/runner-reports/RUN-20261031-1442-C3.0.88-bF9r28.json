@@ -1,0 +1,344 @@
+{
+  "header": {
+    "run_id": "RUN-20261031-1442-C3.0.88-bF9r28",
+    "started": "2026-10-31 14:42:24",
+    "finished": "2026-10-31 14:44:39",
+    "build": {
+      "civil": {
+        "product_version": "3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+        "file_version": "3.0.88.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+        "file_version": "1.1.88.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.88+3fbb9da5 / struc 1.0.125+204dfad2 / mgr 1.1.88+3fbb9da5",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "B2690482B84019A7AADB3A3439881A839A251740C3A4BFCA16CB43AC15B0E76A",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+      "Driver files (SHA-256, first 12): v2 F4D8F40C3675 (expected F4D8F40C3675), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 482EB7B20C6C, v3 session 4D3524AAA60B, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 BBF42DBA8958, case_runner_lib.ps1 01751833A6EA, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 0 shared setup(s); pack SHA-256 B2690482B84019A7AADB3A3439881A839A251740C3A4BFCA16CB43AC15B0E76A; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json D604CE689671 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sat 31 Oct 2026 14:42 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 1,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 1,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261031-1442-C3.0.88-bF9r28-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-31 14:42:27",
+      "finished": "2026-10-31 14:44:39",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31442311_B1.dwg",
+      "cases": [
+        "R28"
+      ],
+      "whatsnew_dismissed_at_start": "no, window was not there",
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : D604CE689671 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "R28",
+      "proves_bugs": "",
+      "title": "CDPROFILE asks for a starting pit, takes pit P3 and opens the Profiles window; closing it leaves nothing drawn",
+      "kind": "deterministic",
+      "order": 70,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "Long section / CDPROFILE (triage group Q1)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 25 Oct 2026 with triage group Q1 only (the first prompt of CDPROFILE and the window that the accepted pick opens). No long-section value and no Q1 bug text is proved.",
+      "variant_of": "",
+      "expected": "CDPROFILE asks 'Select starting CE pit for profile review:'. With the view zoomed to pit P3, a pick 200 mm to the right of the pit's insertion point is accepted (CE does not say 'Select a CE pit block.'), the window 'Creative Engineering | Profiles (CDPROFILE)' opens, closing it leaves no CE window, and the object count and the file on disk do not change.",
+      "why_not_unit": "The prompts and the long-section values come from the real drawing.",
+      "not_automated": [
+        "THE DRAWN LONG SECTION IS NOT DRIVEN: datum, grade, depth, cover and rows (BUG-542, BUG-599, BUG-757 to BUG-759, BUG-761 to BUG-763, BUG-768, BUG-769) need the profile to be placed; only the start of the route (the first prompt, an accepted pit pick and the window that opens) is checked.",
+        "What the Profiles window lists and what its buttons do are not read or pressed."
+      ],
+      "file_sha256": "7F29403F16E7605D4F7C05737A2427581935C688B007D359044F9BF2D3CBF852",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-31 14:43:18",
+      "seconds": 56.4,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "copy CLDV31442311_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $cnt0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM{NL}_W{NL}52000,-27000{NL}55500,-24000\" -Force -> $zoom",
+          "ok": true,
+          "seconds": 3.5,
+          "evidence": "typed '_.ZOOM _W 52000,-27000 55500,-24000': Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _W | Specify first corner: 52000,-27000 | Specify oppos..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDPROFILE{NL}53977.7,-25569.8\" -Force -ExpectWindow \"Profiles\" -TimeoutSec 120 -> $p1",
+          "ok": true,
+          "seconds": 8.5,
+          "evidence": "typed 'CDPROFILE 53977.7,-25569.8': Command: | Command: CDPROFILE | Select starting CE pit for profile review: 53977.7,-25569.8"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_p",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31442311_B1.dwg] ; Creative Engineering | Profiles (CDPROFILE)"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Profiles\" -> $pd",
+          "ok": true,
+          "seconds": 6.9,
+          "evidence": "ui-dump 'Creative Engineering | Profiles (CDPROFILE)': 82 controls, tabs: Profiles"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "close-windows",
+          "text": "close-windows -> $closed",
+          "ok": true,
+          "seconds": 29.6,
+          "evidence": "closed open CE windows: round 1: 'Creative Engineering | Profiles (CDPROFILE)' <- Cancel without saving : ok=False no button 'Cancel without saving' that is on the v3 press list was found in a window matching /Creative\\ Engineering\\ \\|\\ Profiles\\ \\(CDPROFILE\\)/ (windows: Creative Eng..."
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $p_e",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "esc-prompt: Command: | Command: CDPROFILE | Select starting CE pit for profile review: 53977.7,-25569.8"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_after",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31442311_B1.dwg]"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $cnt1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "contains $p1 \"Select starting CE pit for profile review:\"",
+          "ok": true,
+          "expected": "contains 'Select starting CE pit for profile review:'",
+          "actual": "Command: | Command: CDPROFILE | Select starting CE pit for profile review: 53977.7,-25569.8",
+          "evidence": "found 'Select starting CE pit for profile review:' in: Command: | Command: CDPROFILE | Select starting CE pit for profile review: 53977.7,-25569.8"
+        },
+        {
+          "n": 2,
+          "text": "not-contains $p1 \"Select a CE pit block.\"",
+          "ok": true,
+          "expected": "does not contain 'Select a CE pit block.'",
+          "actual": "Command: | Command: CDPROFILE | Select starting CE pit for profile review: 53977.7,-25569.8",
+          "evidence": "'Select a CE pit block.' is absent from: Command: | Command: CDPROFILE | Select starting CE pit for profile review: 53977.7,-25569.8"
+        },
+        {
+          "n": 3,
+          "text": "contains $win_p \"Profiles (CDPROFILE)\"",
+          "ok": true,
+          "expected": "contains 'Profiles (CDPROFILE)'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31442311_B1.dwg] | Creative Engineering | Profiles (CDPROFILE)",
+          "evidence": "found 'Profiles (CDPROFILE)' in: Autodesk AutoCAD 2027 - [CLDV31442311_B1.dwg] | Creative Engineering | Profiles (CDPROFILE)"
+        },
+        {
+          "n": 4,
+          "text": "matches $pd \"name.:.Choose a start pit and route\\. Preview before placing or updating the profile\\..[^{]*\\},\\{.type.:.Text.,.name.:.P3.\"",
+          "ok": true,
+          "expected": "matches /name.:.Choose a start pit and route\\. Preview before placing or updating the profile\\..[^{]*\\},\\{.type.:.Text.,.name.:.P3./",
+          "actual": "{\"title\":\"Creative Engineering | Profiles (CDPROFILE)\",\"handle\":6161492,\"class\":\"Window\",\"source\":\"win32\",\"bounds\":[346,32,1574,1000],\"control_count\":82,\"truncated\":false,\"tabs\":[{\"name\":\"Profiles\",\"s...",
+          "evidence": "matched 'name\":\"Choose a start pit and route. Preview before placing or updating the profile.\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":3,\"enabled\":true,\"offscreen\":false,\"bounds\":[397,232,434,17]},{\"type\":\"Text\",\"name\":\"P3\"'"
+        },
+        {
+          "n": 5,
+          "text": "not-contains $win_after \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31442311_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV31442311_B1.dwg]"
+        },
+        {
+          "n": 6,
+          "text": "equals $cnt1 $cnt0",
+          "ok": true,
+          "expected": "1034",
+          "actual": "1034",
+          "evidence": "value '1034' (expected '1034')"
+        },
+        {
+          "n": 7,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 8,
+          "text": "record $p1 \"FULL what CDPROFILE printed after the pit pick\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDPROFILE | Select starting CE pit for profile review: 53977.7,-25569.8",
+          "evidence": "RECORDED, not judged: FULL what CDPROFILE printed after the pit pick = Command: | Command: CDPROFILE | Select starting CE pit for profile review: 53977.7,-25569.8"
+        },
+        {
+          "n": 9,
+          "text": "record $win_p \"windows after the pit pick\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31442311_B1.dwg] | Creative Engineering | Profiles (CDPROFILE)",
+          "evidence": "RECORDED, not judged: windows after the pit pick = Autodesk AutoCAD 2027 - [CLDV31442311_B1.dwg] | Creative Engineering | Profiles (CDPROFILE)"
+        },
+        {
+          "n": 10,
+          "text": "record $win_after \"windows after closing\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31442311_B1.dwg]",
+          "evidence": "RECORDED, not judged: windows after closing = Autodesk AutoCAD 2027 - [CLDV31442311_B1.dwg]"
+        },
+        {
+          "n": 11,
+          "text": "record $p_e \"FULL what Esc printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDPROFILE | Select starting CE pit for profile review: 53977.7,-25569.8",
+          "evidence": "RECORDED, not judged: FULL what Esc printed = Command: | Command: CDPROFILE | Select starting CE pit for profile review: 53977.7,-25569.8"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 4 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDPROFILE completed 33386 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-31 14:44:15",
+      "session_id": "RUN-20261031-1442-C3.0.88-bF9r28-s1",
+      "acceptance": {
+        "state": "ACCEPTED-READY",
+        "reasons": [],
+        "passing_sessions_on_this_build": 2,
+        "red_before": true
+      }
+    }
+  ]
+}

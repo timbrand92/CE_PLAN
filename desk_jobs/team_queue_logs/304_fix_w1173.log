@@ -1,0 +1,9 @@
+BUG-1173 is ALREADY FIXED in the colleague pack, so I opened no PR, added no Settings switch and changed no code.
+
+- **Pack page:** `02_INSTALL_AND_UPDATE.md` line 31 lists all five settings folders. Line 91 has the `MENULOAD`, unload `CE_SUITE_MANAGER_MENU` line. Both came in with C:\CE_PLAN commit db6bbd79.
+- **Pack location:** it lives in `C:\CE_PLAN`, not the plug-in repo, so there is nothing to put in a plug-in PR.
+- **Still open:** the menu-unload rollback has not been rehearsed, so the bug stays OPEN.
+- **Question for Tim:** may I add the `%APPDATA%\CE_SUITE` and "if `_PRE_V3` exists, stop" lines to page 02?
+- **Not run:** no build, test or worktree.
+
+Report pushed: `C:\CE_PLAN\areas\BUGFIX_w1173_REPORT_03NOV.md`.

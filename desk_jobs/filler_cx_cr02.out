@@ -1,0 +1,5 @@
+== cx_cr02 (usage 18.0% -> 20.0%): 1. **DONE — 0 of 2 ready.** R09 and R40 are **PARTIAL**. R09’s current attempt was blocked before double-clicking; R40 has one passing session on Civil 3.0.78 but lacks required checks and a window look. Neither bug may be marked fixed.
+
+2. **Report saved and pushed:** [CODEX_CASE_REVIEW_cx_cr02.md](C:/CE_PLAN/areas/CODEX_CASE_REVIEW_cx_cr02.md). Commit `e42b8b3b`; `main` has no ahead commits. Leak scan passed.
+
+3. **Read-only limits kept.** No AutoCAD, cases, builds or tests run. No review files created or bugs changed.

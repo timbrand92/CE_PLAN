@@ -1,0 +1,11 @@
+== cx_rv15 (usage 11.0% -> 14.0%): 1. **DONE — 15 PRs reviewed:** 9 MERGE, 6 MERGE-WITH-FIXES.
+
+2. **New findings:** HIGH 1 / MEDIUM 1 / LOW 0. Changed recommendations for **#1574** and **#1585**. Most important: sheet updates can still hide unrelated Xref linework.
+
+3. **[Findings report](C:/CE_PLAN/areas/CODEX_PR_REVIEW_GROUP15_24OCT.md)** includes exact fixes and deterministic tests.
+
+---
+
+1. **Saved and pushed:** `74c5b109`. Only the findings file committed; leak scan passed.
+
+2. **Verification:** Code reading only. No builds, tests or AutoCAD runs.

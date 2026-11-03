@@ -1,0 +1,3 @@
+== cx_cr06 (usage 22.0% -> 23.0%): 1. **DONE — saved and pushed.** [Review report](C:/CE_PLAN/areas/CODEX_CASE_REVIEW_cx_cr06.md), commit `4e809e95`. No commits remain ahead.
+2. **Verdicts:** R24 NEEDS STRONGER ASSERTION; R25 NEEDS CODEX LOOK; R26 PARTIAL.
+3. **Summary:** Zero cases or bugs gain acceptance. None has passing sessions on installed Civil 3.0.78. Exact corrections are in the report. No AutoCAD, tests or runner executed; no review files written.

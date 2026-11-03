@@ -1,0 +1,209 @@
+{
+  "header": {
+    "run_id": "RUN-20261027-0307-C3.0.80-g80b3",
+    "started": "2026-10-27 03:07:40",
+    "finished": "2026-10-27 03:26:16",
+    "build": {
+      "civil": {
+        "product_version": "3.0.80+270215aa2ba9540d5b75233acb1d0a0a2a5fc1a1",
+        "file_version": "3.0.80.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.124+3a3caac5db7687f1b5d1a6e09571976c52b2b05a",
+        "file_version": "1.0.124.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.80+270215aa2ba9540d5b75233acb1d0a0a2a5fc1a1",
+        "file_version": "1.1.80.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.80+270215aa / struc 1.0.124+3a3caac5 / mgr 1.1.80+270215aa",
+    "acad_version": "",
+    "pack_sha256": "CDB192366B5B1C18339A9FE5845E1CF192945991F1BCC5BEE55E6CF5CD351B3F",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.80+270215aa2ba9540d5b75233acb1d0a0a2a5fc1a1; Structural 1.0.124+3a3caac5db7687f1b5d1a6e09571976c52b2b05a; Manager 1.1.80+270215aa2ba9540d5b75233acb1d0a0a2a5fc1a1",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4CD773B85EC5, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 13955AAA60D1, case_runner_lib.ps1 8F9B8DCBB473, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 3 case file(s) plus 0 shared setup(s); pack SHA-256 CDB192366B5B1C18339A9FE5845E1CF192945991F1BCC5BEE55E6CF5CD351B3F; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json 0791B07EBCD9 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Tue 27 Oct 2026 03:07 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 0,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 3,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261027-0307-C3.0.80-g80b3-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-27 03:25:45",
+      "finished": "2026-10-27 03:26:16",
+      "result": "BLOCKED",
+      "blocked": null,
+      "error": "the watchdog did not start within 20 s",
+      "fixture": "DRV1_B1",
+      "fixture_sha256": null,
+      "copy": null,
+      "cases": [
+        "R35",
+        "R19b",
+        "R28"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "0791B07EBCD9"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "0791B07EBCD9"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : 0791B07EBCD9 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "",
+      "quit_attempts": null
+    }
+  ],
+  "cases": [
+    {
+      "id": "R35",
+      "proves_bugs": "BUG-711 (typed spot-level input: a number in metres with an optional P, RL or m, or a decimal comma, is accepted and written as P plus 3 decimals; \"18600\" is refused and asked again; read back from the placed blocks LEVEL attributes)",
+      "title": "CDSL writes 18.6m, P18.6, RL18.6, 18,6 and 18.600 as the level P18.600, refuses 18600 and asks again, and Esc then places nothing",
+      "kind": "deterministic",
+      "order": 20,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 25 Oct 2026 with BUG-711 in BUG_CARPARK.md (expected: a number in metres, optional P or RL, is accepted; bad input is asked again; the text is written as P plus 3 dp) and daily card D26 step 5 (\"18600\" refusal wording). Not claimed: BUG-713 to BUG-716 (the spot-level finder, CDSLAB and the pit design-level offer are not driven) and the survey half of D26.",
+      "variant_of": "",
+      "expected": "CDSL at five points with the levels 18.6m, P18.6, 18.600, RL18.6 and 18,6 prints \"Spot level placed. Level: P18.600\" each time and the five placed SPOT LEVEL blocks (layer 25DIMS) each hold the attribute value P18.600 (never PP18.6, P18.6m or P18,6). CDSL with 18600 prints the refusal sentence and asks again; Esc then prints \"CDSL command cancelled. Nothing was placed.\" and the block count stays at five. The drawing file is unchanged.",
+      "why_not_unit": "The typed answer, the refusal loop and the attribute written into the real SPOT LEVEL block only meet in a live CDSL run.",
+      "not_automated": [
+        "BUG-713 (the spot-level finder ignoring blank blocks), BUG-714 (CDSLAB versus the finder), BUG-715, BUG-716 and the existing-survey-level line of D26 are NOT driven."
+      ],
+      "file_sha256": "81C7A36F125FE44F1AA2EDAA78131F478C55EA9C2CBEE4506CD04EB238273C07",
+      "plan_item": "Spot level typed input (triage group V2; daily card D26, the typed-level half); BUG-711",
+      "result": "BLOCKED",
+      "blocked": "session BLOCKED: the watchdog did not start within 20 s",
+      "first_failure": null,
+      "steps": [],
+      "assertions": [],
+      "pictures": [],
+      "observations": [],
+      "seconds": 0,
+      "setup": "",
+      "setup_note": null,
+      "session_id": "RUN-20261027-0307-C3.0.80-g80b3-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 1,
+        "red_before": true
+      }
+    },
+    {
+      "id": "R19b",
+      "proves_bugs": "",
+      "title": "Erasing the pit P3 that has several pipes keeps every pipe, says how many pipe ends are now Not connected, and one U restores the pit",
+      "kind": "deterministic",
+      "order": 46,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed. Written from the review's own proposal (RUNNER_CASE_REVIEW_R11_R20_2026-10-24.md item 9, R19b) and daily card D14. The Pit Schedule half of D14 is not covered.",
+      "variant_of": "",
+      "expected": "Select the pit P3 (109D56) and type ERASE: the command line says 'The pit was erased and the schedule is updated. N pipes now have ends that are Not connected yet. U restores everything.' (N two or more), the pipe 10A98D is still there, and one U (echo word ERASE) brings the pit back on the STORMWATER PIT layer.",
+      "why_not_unit": "The message comes from CE watching a real native ERASE and its links in the drawing.",
+      "not_automated": [
+        "The Pit Schedule figures after the erase and after U (card D14) are not read: the driver cannot close the Pit Schedule on 3.0.72/3.0.73.",
+        "The links coming back after U (that each pipe end is joined to the pit again) are not read; only the pit's return is."
+      ],
+      "file_sha256": "3536E3A4615D3BAD4FC45895769C6E70CDAD640EE35D9CA7B71948947B4984B0",
+      "plan_item": "UX-EDIT-01 (daily case D14, pit P3 with several pipes); BUG family M2 (ERASE and OOPS)",
+      "result": "BLOCKED",
+      "blocked": "session BLOCKED: the watchdog did not start within 20 s",
+      "first_failure": null,
+      "steps": [],
+      "assertions": [],
+      "pictures": [],
+      "observations": [],
+      "seconds": 0,
+      "setup": "",
+      "setup_note": null,
+      "session_id": "RUN-20261027-0307-C3.0.80-g80b3-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 1,
+        "red_before": true
+      }
+    },
+    {
+      "id": "R28",
+      "proves_bugs": "",
+      "title": "CDPROFILE asks for a starting pit, takes pit P3 and opens the Profiles window; closing it leaves nothing drawn",
+      "kind": "deterministic",
+      "order": 70,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 25 Oct 2026 with triage group Q1 only (the first prompt of CDPROFILE and the window that the accepted pick opens). No long-section value and no Q1 bug text is proved.",
+      "variant_of": "",
+      "expected": "CDPROFILE asks 'Select starting CE pit for profile review:'. With the view zoomed to pit P3, a pick 200 mm to the right of the pit's insertion point is accepted (CE does not say 'Select a CE pit block.'), the window 'Creative Engineering | Profiles (CDPROFILE)' opens, closing it leaves no CE window, and the object count and the file on disk do not change.",
+      "why_not_unit": "The prompts and the long-section values come from the real drawing.",
+      "not_automated": [
+        "THE DRAWN LONG SECTION IS NOT DRIVEN: datum, grade, depth, cover and rows (BUG-542, BUG-599, BUG-757 to BUG-759, BUG-761 to BUG-763, BUG-768, BUG-769) need the profile to be placed; only the start of the route (the first prompt, an accepted pit pick and the window that opens) is checked.",
+        "What the Profiles window lists and what its buttons do are not read or pressed."
+      ],
+      "file_sha256": "7F29403F16E7605D4F7C05737A2427581935C688B007D359044F9BF2D3CBF852",
+      "plan_item": "Long section / CDPROFILE (triage group Q1)",
+      "result": "BLOCKED",
+      "blocked": "session BLOCKED: the watchdog did not start within 20 s",
+      "first_failure": null,
+      "steps": [],
+      "assertions": [],
+      "pictures": [],
+      "observations": [],
+      "seconds": 0,
+      "setup": "",
+      "setup_note": null,
+      "session_id": "RUN-20261027-0307-C3.0.80-g80b3-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 1,
+        "red_before": true
+      }
+    }
+  ]
+}

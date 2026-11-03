@@ -1,0 +1,16 @@
+**FOR TIM**
+
+**GO for train C-46.** The update is ready to package. It has been built and unit-tested only: nobody has opened it in AutoCAD, and nothing is installed.
+
+1. **Final version of the train:** `1de8d3fdc704bd871b1ceca0b445b1ebc1dd0e25`.
+2. **What I changed:** one written record of the train. I changed no code and no Settings switches.
+3. **Tests:** whole build 0 errors. Civil passed 18,810 of 18,830, with 1 known failure (Glen Eira). Manager passed 815 of 815. The older-AutoCAD check passed 279 of 279.
+4. **Taken out:** none.
+5. **Ship together:** Civil, Manager and the colleague installer go out as one update.
+6. **Installer check:** colleagues' installer still refuses any update that is unsigned or has been altered.
+
+---
+
+Report: `C:\CE_PLAN\areas\release-v3-colleagues-TRAIN_C46_FINALIZER_REPORT_2026-10-20.md`. Review log entries 1335–1342 and the sign-off line are pushed.
+
+Your settings files are unchanged. AutoCAD was not running.

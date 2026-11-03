@@ -1,0 +1,5 @@
+== cx_bd12 (usage 23.0% -> 39.0%): 1. **BUG-1111 — BLOCKED.** Draft [PR #1801](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1801). Branch head: `efa2fc2bde63a78ec6d36ac2d0050989f5203e99`.
+
+2. **Checks.** Red: Whitehorse printed 0.3 for 0.35. Green: all 13 added cases and 179 focused checks passed. Three builds: zero errors. Complete full suite before: **20,347 passed / 1 failed / 32 skipped**; after: **20,359 / 2 / 32**. An additional PDF rendering failure blocks comparison.
+
+3. **Delivered.** [Report](C:/CE_PLAN/areas/CODEX_BUILD_BD12_26OCT.md) pushed; worktree removed. AutoCAD and the on-screen source viewer were not run.

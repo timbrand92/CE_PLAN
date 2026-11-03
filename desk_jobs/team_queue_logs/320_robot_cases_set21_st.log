@@ -1,0 +1,1 @@
+`C:\CE_PLAN\areas\ROBOT_CASE_DRAFTS_SET21_STRUC_SETTINGS_SCHEDULES_02NOV.md`: verdict: only #1986 (BP) could be drafted as a robot case, with its switch-off broken twin (W1986 and W1986_BROKEN, orders 900 and 901). The other five fixes are BLOCKED-FOR-ROBOT with Codex looks. Nothing was built, run or validated, and the full-path SETTING lines are unproven in the runner.

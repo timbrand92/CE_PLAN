@@ -1,0 +1,16 @@
+Draft PR #1921 (B-109) is open against `claude/rel-20261026s`. The fault was real on the start point, and BUG-467 is not marked fixed.
+
+**FOR TIM**
+1. **What you'll see:** with the UCS turned (for example UCS Z 30), BT1, AB and BB now put the brace between the two points you pick. Two points 2400 mm apart give a 2400 mm brace at 30°. Before, it came out 10579.52 mm at 112.63°.
+2. **Unchanged:** World UCS, ENTER (2700), Zero and R1 Point behave as before. There is no Settings switch (decision 169).
+3. **Not proven:** nobody has opened it in AutoCAD. A clicked second point, snaps, and the drag line need a Codex look.
+
+**Technical detail**
+- **Files:** `BracingCommands.cs`, `BracingService.cs`, a new `Structural.DesignCore/BracingSecondPoint.cs`, the `HuntS02UcsTests` source pins, a new `BracingSecondPointTests` and the `REGRESSION_LOG.md` entry.
+- **Tests:** 4 new tests passed and 15 focused Structural tests passed. The net48 compile had 0 errors. I did not run the new test against the start point to show it failing; the old 10579.52 / 112.63 figures are pinned in a test instead.
+- **Real-files compare:** no settings file changed. CVL and Manager heartbeat, session and menu files changed at 14:40 to 14:42. Structural-only tests can't write those, so another AutoCAD session probably started then; I can't prove that.
+- **Clash:** open draft #889 also edits `BracingCommands.cs` (locked-layer skip), so a merge conflict is possible later.
+- **Robot cases for CE 02:** the aS1, aS2 and aS3 cases and their broken twins, S467a and S467b unchanged, and the new control S467e_bt1_ucs30_enter. The report names these cases.
+- **Cleanup:** the build worktree is removed. `C:\CE_WORK\scratch\p20` is still there because my session's own temp folder sits inside it. Remove it once this session ends.
+
+Report: `C:\CE_PLAN\areas\BUGFIX_p20_REPORT_31OCT.md`, pushed.

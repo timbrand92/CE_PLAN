@@ -1,0 +1,9 @@
+== verifyS3b_c88 (usage 48.0% -> 49.0%): AUTOCAD CLOSED
+
+1. **BLOCKED:** S3-01 stopped when the driver refused the required zoom as **BUSY**. Pipe 2 was not placed. The full briefÔÇÖs run list excluded the other four looks.
+
+2. **Results:** 0 PASS, 0 FAIL, 0 DIFFERENT, 1 BLOCKED, 4 NOT TESTED. SURE 5; UNSURE 0.
+
+3. **Clean end:** Nothing saved. All four watched settings unchanged; lock released. Installed: Civil 3.0.89 / Manager 1.1.89 / Structural 1.0.125.
+
+4. **Report:** [Verification evidence and exact refusal](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_S3b_20261102_1716.md>).

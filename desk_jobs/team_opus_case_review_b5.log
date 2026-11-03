@@ -1,0 +1,29 @@
+**For Tim**
+
+1. **My mistakes:** none that cost anything. I wrote one review time wrong (11:40 instead of 11:20) and fixed it before anything was saved to the plan repo.
+2. **All 7 cases are sound on the installed build (Civil 3.0.80).** Each one passed in two separate AutoCAD starts on exactly the same builds. Every deliberately broken copy of a case failed each time, at the check meant to catch it. None of them shows a CE fault.
+3. **2 are ready as whole items:**
+   1. **CDTWL water level:** says the water must stay 150 mm below the lid, names C1, P1 and P7, and changes to 200 mm when you raise the setting.
+   2. **Erasing a pit with one pipe:** the pipe stays, the message is right, and one U brings the pit back.
+4. **5 are ready only for the part they check:**
+   1. **CE never saves:** CDREBUILD isn't tried yet.
+   2. **Edit Pipe cascade with U and REDO:** only the IL text on the drawing is checked; the levels CE stores for each pipe are not.
+   3. **CDSYNC:** the warning and every Pit Schedule row are checked; CDREBUILD and the schedule header are not.
+   4. **CDCHECK totals:** the totals line only.
+   5. **CDSURVEY:** the refusal half only.
+5. **Newly whole:** one of the 40 named checks, "CDTWL freeboard". No everyday-tool card is newly whole and no bug is newly fixed.
+6. **Two things the test robot's report got wrong or didn't test:**
+   1. It says no settings file changed during its runs. One did: Structural rewrote its own settings the first time AutoCAD started after this morning's Structural install. It doesn't affect the Civil results.
+   2. Your file has two freeboard settings, and each one moves the warning on its own. Nobody has tried what happens when they disagree (say one is 100 and the other 200).
+7. **Nothing for you to decide or test.**
+
+---
+
+**Detail**
+
+- **Report:** `C:\CE_PLAN\areas\release-v3-colleagues-OPUS_CASE_REVIEW_B5_27OCT.md`.
+- **Review files:** ten, beside the cases: R04, R11, R13, R14, the three raised-setting R14h cases, R19, R21 and R26. Copies are in `areas\runner-reports\reviews\`. Five of them replace older not-ready review files; the old wording is quoted in the report. I checked all ten against a copy of the gate's three checks and they pass.
+- **Pushed:** CE_PLAN at commit 5c058a18. The leak scan was clean and the repo shows nothing waiting to push.
+- **Not checked:** nothing was looked at on screen. The setup-file hashes aren't covered by the gate. Whether the engineering values are right is your call.
+
+**Summary:** All seven cases passed twice on one installed build (Civil 3.0.80, Structural 1.0.125), and every broken copy failed where it should. R14 and R19 are ready as whole items. R04, R11, R13, R21 and R26 are ready only for the parts they check. I wrote ten review files and pushed them with the report. "CDTWL freeboard" is newly whole; no everyday-tool card or bug is newly fixed. The robot's report missed one settings change, which was Structural's own file on its first start after install. What happens when the two freeboard settings disagree is untested.

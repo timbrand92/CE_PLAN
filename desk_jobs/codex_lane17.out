@@ -1,0 +1,29 @@
+== cx_s01 (usage 34.0% -> 38.0%): 1. **DONE — 0 HIGH, 2 MEDIUM, 1 LOW.** All 112 files reviewed. Most important: a moved roof can leave pits near its old position out of the warning list.
+
+2. **Report:** [CODEX_SWEEP_S01_23OCT.md](C:/CE_PLAN/areas/CODEX_SWEEP_S01_23OCT.md). Findings verified by reading, with deterministic AutoCAD tests. No tests run or plugin changes made.
+
+---
+
+3. **Published:** Commit `54a4fe97` pushed to CE_PLAN/main. Leak scan passed; remote report verified.
+== cx_s02 (usage 38.0% -> 43.0%): 1. **DONE — 1 HIGH, 4 MEDIUM, 0 LOW.** Read all 112 files. Biggest fault: a schedule diameter change can write 375 metres instead of 375 mm into an older pipe’s width.
+
+2. **Report saved and pushed:** [CODEX_SWEEP_S02_23OCT.md](C:/CE_PLAN/areas/CODEX_SWEEP_S02_23OCT.md). Each finding includes a deterministic test.
+
+---
+
+1. **Evidence:** Verified by reading; no builds, tests or AutoCAD checks run.
+2. **Commit:** `dac6add0` on CE_PLAN `main`. Only the findings file committed; leak scan passed.
+== cx_s03 (usage 43.0% -> 48.0%): 1. **DONE — 2 HIGH, 2 MEDIUM, 0 LOW.** Most important: cascading levels can write the upstream invert onto the sole downstream label.
+
+2. **[Findings and deterministic checks](/C:/CE_PLAN/areas/CODEX_SWEEP_S03_23OCT.md).** Verified by reading only. No builds, tests or AutoCAD runs performed.
+
+---
+
+1. **Saved and pushed:** `1a0ad020` on `CE_PLAN/main`. The commit contains only the named findings file.
+== cx_s04 (usage 48.0% -> 53.0%): 1. **DONE — HIGH 1 / MEDIUM 2 / LOW 0.** Read all 112 files. Biggest fault: Network redesign can propose a 170 mm rise through a pit.
+
+2. **Report:** [CODEX_SWEEP_S04_23OCT.md](/C:/CE_PLAN/areas/CODEX_SWEEP_S04_23OCT.md). Includes deterministic tests; all findings verified by reading only.
+
+---
+
+1. **Published:** CE_PLAN commit `a45e6341`, pushed; leak scan passed. Only the report changed. No builds, tests or AutoCAD run.

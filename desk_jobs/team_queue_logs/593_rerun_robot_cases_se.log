@@ -1,0 +1,7 @@
+The draft file for this set was already complete when I started, so I left it alone and wrote nothing new. A previous pass at this same task wrote it at 06:47 today. It has four cases, each with a broken twin, and Codex notes for the other two PRs.
+
+I checked it again against the cases folders and the ledger. There is no W1963 to W1973 case anywhere, and the ledger has no mention of them. I read the file's structure and its closing sections, not every case line. I did not re-read the six PR diffs.
+
+Nothing was built, run or tested, and none of the printed wordings has been seen on a run.
+
+Verdict: C:\CE_PLAN\areas\ROBOT_CASE_DRAFTS_SET04_CDRULES_COUNCIL_ROWS_02NOV.md — existing draft complete (W1971, W1963, W1966, W1968 with twins; #1964 and #1973 Codex-only), not re-drafted, not run.

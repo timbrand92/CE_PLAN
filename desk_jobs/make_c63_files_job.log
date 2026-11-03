@@ -1,0 +1,7 @@
+I wrote the five C-63 files (no chain started) and pushed them; `git status -sb` shows no "ahead". Nothing was run or built.
+
+- **Files:** `train_c63_assembler_job.txt` (Sonnet), `train_c63_finalizer_job.txt` (Opus), `payload96_c63_job.txt` (Sonnet), `scripts\desk_install_c63.ps1`, `chain_c63.ps1`.
+- **Numbers:** branch `claude/rel-20261024m` from `f7f7d551`, candidate `c1059`, payload 96. All 28 PR heads match GitHub.
+- **Brief was wrong:** #1648 changes `Installer/`, so Installer won't diff empty. The jobs expect only #1648's files there; Shared must be empty.
+- **Also flagged:** #1647 touches the signed-approval reader in Manager.
+- **#1706:** left out.

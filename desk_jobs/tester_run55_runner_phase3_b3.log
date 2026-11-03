@@ -1,0 +1,11 @@
+I wrote and ran 13 new daily-tool cases (R31 to R40, plus R32b, R37b and R39b), and 11 pass in both runs. Two fail both runs because CE has real faults. The runs were two separate AutoCAD sessions per case on Civil 3.0.75, Structural 1.0.123 and Manager 1.1.75. The report is pushed; the push left no "ahead" in `git status -sb`.
+
+1. **Passing cases (11):** R31 CD direction question, R32 Edit Pipe level reversal, R33 locked pit text layers, R35 CDSL typed levels, R36 CDFW, R37 and R37b CDPERIMETER, R38 Pit Schedule levels, R39 and R39b CD existing line, R40 CDCHECKDWG. Each has a deliberately broken variant that fails as it must.
+2. **R34 fails:** ROTATE Copy and SCALE Copy of a pit add only a bare pit block, with no label, no cover text and no CE line. This matches BUG-665.
+3. **R32b fails:** a diameter-only Edit Pipe save turns the flow arrow back after the levels were reversed, so the arrow points against the levels. BUG-292 is the nearest entry, and the report gives exact steps in case the desk wants a new one.
+4. **Acceptance:** nothing is ACCEPTED-READY because no case has an independent review. The report names 16 bugs the desk may mark Claude-accepted once the cases are reviewed, each only for the part the case proves.
+5. **State at the end:** no AutoCAD running, lock free, and Tim's four settings files back at their expected fingerprints. The runner and driver files are untouched. `README_CASES.md` got a new section, and I saved a memory note.
+
+Report: `C:\CE_PLAN\areas\release-v3-colleagues-RUNNER_PHASE3_BATCH3_REPORT.md`
+
+**Summary:** 13 daily-tool cases written from triage A1 and run twice on Civil 3.0.75. 11 pass with failing broken variants. Two real CE faults: ROTATE and SCALE Copy leave a label-less pit twin (BUG-665), and a diameter-only Edit Pipe save flips the arrow back (nearest entry BUG-292). Sixteen bugs are named for the desk. No case has an independent review, so none is ACCEPTED-READY.

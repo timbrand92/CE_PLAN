@@ -1,0 +1,11 @@
+Four of the five fixes are built and tested, and each is an open draft PR. The fifth, BUG-885, I skipped because it needs Tim's word. Nothing was opened in AutoCAD, nothing was installed, and no bug is marked FIXED. The report is pushed and `git status -sb` shows no "ahead".
+
+1. **BUG-878:** PR #1586, head `fca3e025`. A pipe no longer takes a level the file names for another pipe. The new test fails on the base and passes after the fix. Civil: 19,155 tests, 2 failures. One is the known GlenEira back-test. The other is a PDF render test that passes when run alone. Neither touches this code.
+2. **BUG-968:** PR #1591, head `ffd8e500`. CDRENUMBER no longer closes AutoCAD on a looped pipe record. Without the fix the test run aborts on a stack overflow. With it all 44 renumber tests pass. Civil: 19,157 tests, 1 failure (GlenEira).
+3. **BUG-946:** PR #1594, head `fc12426c`. CEHEALTH now warns when Civil is installed but not loaded. Manager: 855 of 855 pass.
+4. **BUG-948:** PR #1595, head `a388870b`. A colleague now gets the Manager Updates page from the Updates & Rollback button. Manager: 855 of 855 pass.
+5. **BUG-885: skipped.** Sealing the accepted candidate needs Tim to say what "accepted" means and where it lives. The report gives three options with a recommendation.
+
+Manager has only 855 tests at this base, so "thousands" holds for Civil only. Not built: net48 for all four, and a base re-run of the two Civil failures. I left an unused local branch, `fw2/bug-885-tmp`, because no branch gets deleted.
+
+The report is `C:\CE_PLAN\areas\release-v3-colleagues-FIX_WAVE2_BATCH3_REPORT.md`.

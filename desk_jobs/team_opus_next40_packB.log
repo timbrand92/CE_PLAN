@@ -1,0 +1,34 @@
+## FOR TIM
+
+1. **What's done:** I wrote robot tests for list items 19 to 31: 14 new cases (N55 to N67, with N56 in two parts), each with a twin built to fail. All 28 files passed the robot's offline check with nothing wrong. Nothing has been run in AutoCAD yet.
+
+2. **The robot can prove 8 items by itself:**
+   - **N56:** a 300 mm pipe size is still offered after AutoCAD restarts.
+   - **N57:** Tidy labels moves only CE labels. A plain text placed on top of an IL text stays put.
+   - **N58:** a pipe started 74 mm from another pipe's free end gets joined to it. One started 76 mm away stays free.
+   - **N60:** dragging a pipe off pit P8 prints one quiet line and asks nothing.
+   - **N61:** a finding you ignore stays ignored.
+   - **N62:** CD's prompts read like AutoCAD's own.
+   - **N64:** BREAK splits a CE pipe in two, and U puts it back.
+   - **N67:** Tidy labels Yes, then one U puts the text back exactly. There is no REDO, which avoids BUG-861.
+
+3. **Four items only go part way:**
+   - **N55 (long section):** the Apply button isn't on the robot's list of buttons it may press. The Datum RL box also needs a small code change before anything can type into it.
+   - **N65 and N66 (one grade for several pipes):** the robot can open the "Edit 2 Pipes" window but can't type the grade or press Apply.
+   - **N59 (wrong layer in Checks):** the "P3 pit is on layer 0" row comes after the 20 rows the command line shows. The robot needs a new step to check that the count went up by one.
+
+4. **N63 (MIRROR keeps pit text readable) can't be tested on 3.0.86.** The setting is there, but nothing in the code acts on it yet. The case is written and held back from the run list.
+
+5. **Two plan numbers on the list are wrong.** Items 29 and 30 are really UX-PIPE-06c, not UX-PIPE-07 and 08.
+
+Nothing for you to do. Adding the "Edit 2 Pipes" and Profiles buttons to the robot's allowed list needs a reviewer's yes. The desk will bring that with the other list changes.
+
+---
+
+- **Report:** `C:\CE_PLAN\areas\NEXT40_PACK_B_DRAFT_30OCT.md`. It is pushed, and the plan repo is not ahead of the server.
+- **Cases:** `cases\drafts_next40_b_30oct\` (28 files).
+- **Run list:** `C:\ce-fx\retest\spec_next40_b.txt`, with 12 first-pass lines and 11 second-pass lines. The robot's own name-matching picks exactly the right files on every line. The two N56 halves must run on back-to-back lines.
+- **Not verified:** every line marked DERIVED in the cases is worked out from the code and nobody has seen it in AutoCAD. Window button names come from the code, not from reading the real windows.
+- **N60 caution:** the bigger "quiet re-check" engine in the plan isn't connected, so a reviewer may count this item as part only.
+
+**Summary:** I drafted N55 to N67 with failing twins, and all 28 pass the offline check. The robot can prove 8 items outright. Four need a press-list change, a code change or a new robot step: long section, wrong layer, and the two one-grade cases. N63 is held back because its setting does nothing yet on 3.0.86. The report is pushed and the run list is written. Nothing ran in AutoCAD.

@@ -1,0 +1,28 @@
+**Head 3d19c290ed38c6bbdab11c0311c589e87612c01a**, on `claude/rel-20261010b`, pushed. Local head equals origin head. `rel-20261010a` and `c` were already taken on origin, so I used `b`.
+
+It contains the C-33 branch (`claude/rel-20261009z`, 92ec2c00, installed 3.0.48) plus the merged PRs below. No version file changed. It is built and unit-tested only. Nothing was installed or opened in AutoCAD, and nobody has driven it there.
+
+- **Merged (12):** #959, #963, #969, #961, #965, #967, #970, #968, #974, #958, #971, #975. After each merge the numstat matched the PR's own.
+- **Skipped (4):**
+  - #972 and #962 clash with the C-33 base in `PitCommand.cs`.
+  - #996 is stacked on #972, so it went with it.
+  - #976 clashes with #975 in `RulebookValues.cs`.
+  - None of these is an allowed clash file, so each merge was aborted.
+- **Newest reviews:** all 16 heads are open and match the brief. The newest review at each head says MERGE. For #972, #996, #971, #975 and #976 that review is the Fable run 6 one, not Opus.
+- **Settings:** the only change is `UserSettings.cs`, with no lines removed. Two new defaults change behaviour. Tim's stored `CD_Settings.json` has neither key, so both apply to him. `SETTINGS_LOOK_2026-10-09.md` was missing, so I read his file directly.
+  - **`loadSurveySkipSuspectPoints` is ON (#958):** a survey with a wrong-looking level used to be refused. Now it warns, skips that level and loads.
+  - **`nearestSpotLevelMaxDistanceM` is 3 m (#959):** the nearest survey spot level used to be used at any distance. Setting it to 0 gives that back.
+- **Other new Settings keys:**
+  - **OFF or inert:** `longSection.officeLayout`, `pit.coverTextStyle`, `offerDesignLevelsBeforeSurvey`.
+  - **Equal to today:** `pit.spsLabelHeightSingleMm` 300 and `pit.spsLabelHeightNumberedMm` 250, plus the `longSection.rows` list.
+- **Registry and Shared:** no registry entries added, and `command-registry.json` and `council-profiles.json` are unchanged. No file under `Shared/` changed.
+- **Build:** the whole solution built in Release with 0 errors and 867 warnings.
+- **Tests (net10):** Manager 749/749. Civil 17,199 run, 17,179 pass, 19 skipped, 1 failed. CommandTruth 64, TestHarness 101, Spine 81, Diagnostics 19, AI.Core 42 and ReleaseTests 16 all pass. Installer 273 run, 237 pass, 36 fail, the same count as C-33. I did not diff the 36 names.
+- **Red:** the only Civil failure is `BackTest_GlenEira24115_Computed_WithinTolerance`, the known old one. The redo guard stayed green and I did not touch its baseline. I found no redo-killing calls (`StartTransaction`, `SetCurrentView`, `SetSystemVariable`, event hooks) in the added lines.
+- **net48 focused run:** 26 of 313 failed. 23 are the known stub-assembly `InvalidProgramException`. The other 3 are the NaN/infinity cursor-seed tests, which expected an ArgumentException. I did not read their actual exception text and assumed the same stub limit. The same tests pass on net10.
+- **Hygiene:** `CD_Settings.json` and the TIM_CE_CADTOOLS `CS_Settings.json` were unchanged before and after every run. The Structural `CS_Settings.json` was already 34,196 bytes (B339F3E9...) when I started, not the 33,198 in the brief. It did not change during my run.
+- **Running AutoCAD:** acad.exe was running throughout (relaxed test gate). The live CE folders under %APPDATA% grew slightly. Two idle snapshots with no test running also showed growth, and the one new file is a usage record for a cancelled `PIT` command, so this looks like the running AutoCAD. I did not prove my runs wrote nothing there.
+- **Not done:** I did not run accoreconsole, Structural tests or the AI.Harness tests. The installed Civil DLLs are 3.0.48+92ec2c00.
+- **My mistakes:** one script bug and one merge loop that ran past a stop. Both are in the report section 4 (items 3 and 4). No bad content was committed.
+
+Report: `C:\Lisp Files\_TEST_COPIES_20260923\TRAIN_C38_ASSEMBLY_REPORT.md`

@@ -1,0 +1,35 @@
+## FOR TIM
+
+1. **Short answer:** the Structural version you have installed is already safe. So are Civil and the Manager. The leak is somewhere else.
+2. **Structural (installed): already fixed.** Three fixes from 1 and 3 October already send a test run's log, settings and reports to a throw-away folder.
+3. **Civil and Manager: already safe.** I checked every place that writes into your log, settings, sessions and outbox folders (the outbox is where the Manager collects usage and fault reports). Each one goes to a throw-away folder during a test run.
+4. **The real leak:** the Civil branch still carries a copy of Structural from 2 July. When a session runs the Structural tests from that branch, they write into your real Structural log. They can also re-save your real Structural settings file, which is very likely what happened in the 30 Oct 7:47 pm run.
+5. **My recommendation for step 2:** copy the October fixes into that old Structural copy. That is about five small files, and AutoCAD behaves exactly the same afterwards. I'd also add one end-of-run check that fails if a test run creates or changes any of your real files.
+6. **What you need to do:** nothing. Nothing changes in a drawing, so there's nothing to test in AutoCAD.
+7. **Note:** AutoCAD was open while I worked (started 2:01 pm), so your real log and outbox were changing. That was AutoCAD, not this job. I ran no tests and wrote nothing outside the report.
+
+---
+
+**Technical detail**
+
+1. **Claims checked against the code:**
+   - CE 01's claim is correct. On rel-20261026s, Logger, LoggingService, CommandHistoryService and HealthCheckService all go through `LogFolderRedirect` (e8e9631f).
+   - #1884's "still exposed" list describes the old Structural copy on rel-20261102a, not the Structural line.
+   - `SupportBundleService` does not exist on the Structural line at all.
+2. **Outbox writer:** `AdminTelemetryService`. In Civil it goes through the shared `CeTelemetryStore.Root` (`CeTelemetryStore.cs:60`). In Structural it goes through `StructuralAppDataPaths.AdminTelemetryRoot()` (`StructuralAppDataPaths.cs:28-31`). Both honour `CE_LOG_DIR_OVERRIDE`.
+3. **Writers that don't redirect, all in the old copy on rel-20261102a:**
+   - `Logger.cs:33`
+   - `LoggingService.cs:69` (reached by LoggingServiceThroughputTests)
+   - `CommandHistoryService.cs:73`
+   - `XclmTxtService.cs:2733`
+   - Commits e8e9631f, c3d4897a and 26321e13 are not on that line.
+4. **Guard proposal:**
+   - Use one shared watch file linked into all three test projects, and run the check in the assembly-level teardown.
+   - It watches 14 named real files or today's folders.
+   - It should report Inconclusive whenever any AutoCAD is running, not only one started during the run.
+   - A planted-file control test proves the watch reacts.
+5. **Not proven:** no tests were run. I didn't check whether the Civil bundle ships the old Structural DLL. Manager tests weren't run (standing rule).
+6. **Real-folder listing:** taken once at 2:10 pm (names, sizes and times only) and included in the report. There is no "after" listing because no test ran.
+7. **Clean-up:** no worktree was created. I removed my scratch script. The `logs`, `struc` and `tmp` folders in `C:\CE_WORK\scratch\y1` were already there for this job's override variables, so I left them.
+
+**Summary:** No PR (step 1, read-only). The Structural line is already fixed by e8e9631f, c3d4897a and 26321e13. Civil and Manager are clean for the four folders. The leak is the 2 July Structural copy on rel-20261102a: `Logger.cs`, `LoggingService.cs`, `CommandHistoryService.cs` and `XclmTxtService.cs` there have no redirect. No switch is needed because nothing changes in AutoCAD. The report is pushed as 4cd8b831 at `C:\CE_PLAN\areas\BUGFIX_y1_REPORT_31OCT.md`.

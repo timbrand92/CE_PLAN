@@ -1,0 +1,25 @@
+== verifyJ4_c86 (usage 23.0% -> 23.0%): AUTOCAD CLOSED
+
+1. **BLOCKED ÔÇö SURE.** The driver refused Esc at the label question. Automatic label placement and one-U removal remain untested.
+
+2. **Safe end.** Copy discarded; four settings hashes unchanged; lock released. Installed: Civil 3.0.87 / Manager 1.1.87 / Structural 1.0.125.
+
+3. **Report.** [J4 evidence and exact refusal](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_J4_20261030_1836.md>). Counts: BLOCKED 1; all other results 0.
+== verifyJ4_c86 (usage 24.0% -> 24.0%): AUTOCAD CLOSED
+
+1. **BLOCKED ÔÇö my setup error.** Missing `VIEW-P3.txt` caused a driver refusal. No pit was created; label placement and one-U removal remain untested.
+
+2. **Safe finish.** All four settings hashes unchanged. AutoCAD process gone; lock released. Results: BLOCKED 1, SURE 1; all other result counts 0. No product fault judged.
+
+3. **Report.** [J4 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_J4_20261030_1859.md>). Installed: Civil 3.0.87 / Manager 1.1.87 / Structural 1.0.125. A fresh J4 run is required.
+== verifyJ4_c86 (usage 24.0% -> 24.0%): AUTOCAD CLOSED
+
+1. **J4 BLOCKED:** The driver refused Esc at the visible label question. Automatic label placement and one-U removal remain unverified.
+
+2. **Build:** Civil 3.0.87 / Manager 1.1.87 / Structural 1.0.125.
+
+3. **Cleanup:** Copy discarded without saving; all four settings hashes unchanged; lock released. Driver log-setting restoration remains unverified.
+
+4. **Counts:** BLOCKED 1, SURE 1; all other result counts 0. No FAIL established. No fixtures missing.
+
+5. **Report:** [J4 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_J4_20261030_1921.md>).

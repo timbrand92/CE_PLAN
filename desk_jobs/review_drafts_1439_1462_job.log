@@ -1,0 +1,14 @@
+All 24 drafts are reviewed: 19 MERGE, 5 MERGE-WITH-FIXES, none on HOLD or REJECT. The entries are 1279 to 1311 in the review log (merge order 1305 and 1306, do-not-mark-fixed list 1308), committed and pushed.
+
+1. **Needing fixes (each small enough for a Sonnet fixer):**
+   - **#1439:** two connection sentences come out broken ("start lies on  12.30 m"), and the pipe code comes back in a longer form.
+   - **#1451:** the support-zip clean-up checks only the file name, so a client's name in a folder slips through.
+   - **#1456:** a PC could create a second copy of the office administrator list. It also stops compiling once #1454 is merged.
+   - **#1457:** Reset Defaults no longer resets about twenty schedule settings the window shows. Its new question box also hangs two existing Structural window tests (seen: a 28-minute hang).
+   - **#1458:** its new test doesn't build in the older (net48) build, which breaks the whole-solution build.
+2. **The job note's train name:** C-45 is already finished and installed, so these 22 Civil/Manager PRs belong in the next train, C-46. #1449, #1458 and #1462 change CE_SHARED, so Civil and Manager must ship together.
+3. **Tests run:** the trial merge first failed with 47 build errors; 44 came from my own trial merge of #1443 and #1444's tests (the log gives the exact hand merge). After three changes in my private copy, the whole solution built with 0 errors. Manager passed 803 of 803. Focused Civil tests passed 410 of 410. On Structural, the two new test classes passed 13 of 13. The wider run hit the #1457 hang; I stopped it after 397 passed. Installer tests were compiled only, and nothing was opened in AutoCAD.
+
+---
+
+The PRs are all built and unit-tested only; none is installed, tested in AutoCAD or accepted. Tim's four settings files were the same size and checksum before and after. Both worktrees were removed and no PR was touched.

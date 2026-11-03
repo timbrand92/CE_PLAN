@@ -1,0 +1,11 @@
+All 20 counted cases passed in two separate AutoCAD sessions on Civil 3.0.77+0d885094, and none failed. I wrote the report and pushed it. The push was clean and `git status -sb` shows no "ahead".
+
+1. **Cases kept:** 21 review files said ready and still matched their case files. 20 were counted. The 21st is R08, which was run only as an extra.
+2. **Result:** The runner printed ACCEPTED-READY for all 20 on the second pass. There was no regression, so no third session was needed.
+3. **Cards covered:** D01, D03, D04, D12, D14 and D17 in full, and D26 in part. The other 13 cases cover bug and spec items rather than a D-card.
+4. **R08:** It failed in the first session, both attempts, with "Nothing to redo" where "Everything has been redone" was expected. The second session was BLOCKED by a runner error (`CalibRetry`), not a CE result. R08 is not counted and BUG-861 stays open.
+5. **Stale Structural hash:** `CE_STRUC_SUITE\CS_Settings.json` now reads 0791B07EBCD9, not the 2972CE70C514 quoted in earlier jobs. It was last written at 17:41 on 25 Oct, hours before this job started, and the runner's own check showed no changes during it. I don't know why it changed at 17:41; the guard's expected hash for it looks stale.
+
+The build stayed 3.0.77 throughout, so no run straddles an install. No AutoCAD was left running and the lock is free. I did not touch `DESK_LOG.md`, `BUG_CARPARK.md`, any case or review file, or `ledger.json`.
+
+The report is `C:\CE_PLAN\areas\release-v3-colleagues-RUNNER_REGRADE_3_0_77_REPORT.md`.

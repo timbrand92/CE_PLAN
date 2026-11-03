@@ -1,0 +1,7 @@
+== cx_lf31 (usage 35.0% -> 36.0%): 1. **DONE — audit delivered.** All five skipped: BUG-1023 needs Tim’s decision; BUG-1024/1025 have existing drafts; BUG-1026/1027 are already covered at the requested base.
+2. **Saved and pushed:** [Report with exact AutoCAD checks](C:/CE_PLAN/areas/CODEX_LEDGER_FIX_BATCH31_23OCT.md). No production changes or deployment.
+
+---
+
+1. **Draft PR:** [#1685](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1685), branch `cx2/bug-1023-batch31-audit`, tip `92eb3479b049b9ca2093a3e07c6403eaba534930`.
+2. **Validation:** 0 tests added/run; 0 builds. Change checks and leak-scans passed. AutoCAD checks remain unrun.

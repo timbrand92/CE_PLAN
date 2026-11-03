@@ -1,0 +1,29 @@
+The 18 PRs are merged onto a new branch, `claude/rel-20261108a`, at head `f5eebc77efbbaa0357559c6412076b7b5fbf3a21`. It is pushed, and `git ls-remote` reads the same head back. Nothing was opened in AutoCAD, installed or deployed, and no bug is marked fixed.
+
+- **Base:** the branch sits on `claude/rel-20261106a` at 37dc1e62. The C-79a finalizer report exists and starts with GO.
+- **Heads:** every live PR head matched the list. #1972 merged at its fixed head 32fc1a44 and #1923 at 454e3eab.
+- **#1923 switch:** I read `PitLabelStopsAttributeEditorFirstDefault = false` in the diff before merging, so it ships OFF.
+- **Merge order:** #1922 first, #1868 second, #1923 last. Conflicts were only the top of `REGRESSION_LOG.md` and neighbouring switches in `UserSettings.cs`. All were purely additive and I kept both sides. No PR was stopped, and I resolved no hunk in the protected persistence files.
+- **Byte-order mark:** #1953 dropped the UTF-8 mark on `UserSettings.cs`, the same trap #1962 hit in C-79a. I restored it in its own commit.
+- **New switches:** 18, of which 15 are ON and 3 are OFF. The OFF ones are the two "stop" switches (#1940, #1943) and #1923's. `C79b1NewSwitchDefaultsTests` pins all 18 through both start-up reads. There is no Manager change.
+
+Test totals, all Release on net10:
+
+| Run | Total | Passed | Failed | Skipped |
+|---|---|---|---|---|
+| Civil, focused | 524 | 524 | 0 | 0 |
+| Civil, full (after the last commit) | 22,176 | 22,144 | 0 | 32 |
+| Manager, full | 1,152 | 1,150 | 0 | 2 |
+
+- **Real-settings guard:** the full Civil run left out `ZzRealSettingsFileGuard` while the robot was active. I ran it on its own once `settings_guard.json` was gone, and it passed (2 of 2).
+- **Builds:** Civil and Manager both compile on net10 and net48 with 0 errors. The Civil net10 build first needed an empty `CE_TRANSFORM_2027.arx` placeholder, which is git-ignored and not committed.
+- **Not run:** Structural tests and the net48 test lanes.
+- **Isolation:** Tim's `CD_Settings.json` and `CS_Settings.json` read the same before and after. The CE_Admin outbox grew by 32 files (28,329 to 28,361) while the robot was running. I did not find which process wrote them.
+
+I made four commits beyond the merges, all small and easy to revert:
+- **REDO-safe baseline** (`24c8e539`): I added two renamed lines to the REDO-safe review list. The compiler renumbered `StartCdEditAsync` from d__40 to d__41 after #1923, and #1970 moved the level write into `TryStorePipeInverts`. This is a REDO-safety call made by Sonnet, so **the Opus finalizer must confirm it**. If it disagrees, revert that commit and the guard goes red.
+- **C-79a test** (`2363cc1a`): the C-79a test saying the #1923 switch is absent now says it is absent or ships OFF.
+- **Source-shape pins** (`f5eebc77`): two tests pinned the exact code of #1952 and #1950, which those PRs changed on purpose. I updated them and kept their intent; the #1952 pin now also checks the reader is still an open-close read.
+- **Switch tests** (`4445c243`): the new `C79b1NewSwitchDefaultsTests` class above.
+
+The report and the changed-files list (85 paths) are committed in `C:\CE_PLAN` (head e8703488). They are `areas\release-v3-colleagues-TRAIN_C79B1_ASSEMBLY_REPORT_2026-11-01.md` and `areas\TRAIN_C79B1_CHANGED_FILES.txt`. The report names the shared paths and the smoke case each needs. It lists the nine files #1922 changes in the old Structural copy: all are log-folder redirects that return the real folder when the override variable is unset.

@@ -1,0 +1,9 @@
+== verifyX9_c60 (usage 58.0% -> 58.0%): 1. **BLOCKED:** X9-03 asked ÔÇ£Move these 2 labels now?ÔÇØ The brief requires stopping on an unmatched prompt. Apply and sheet-size checks remain untested.
+
+2. **Results:** SEEN 2, BLOCKED 1; PASS/FAIL/DIFFERENT 0. SURE 3, UNSURE 0. No FAILs. [Report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_X9_20261024_0124.md>).
+
+3. **Cleanup:** AutoCAD closed, lock released, drawing unsaved. All four settings hashes match START. FIXTURES WANTED: none.
+
+4. **Civil settings restored exactly:**
+   A: `ACD64E79A33BE9C152149FF2145A3CD2C29CABE11245F211183FD5C7DE783140`
+   C: `ACD64E79A33BE9C152149FF2145A3CD2C29CABE11245F211183FD5C7DE783140`

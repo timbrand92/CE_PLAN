@@ -1,0 +1,31 @@
+== verifyV1_robot_gaps (usage 0.0% -> 0.0%): 1. **BLOCKED at setup:** START readings were obscured. Tested 0; NOT TESTED 4, including parked BUG-476. No product failures established.
+
+2. **Safe end:** AutoCAD closed, lock released, all four settings hashes unchanged. SURE 4; UNSURE 0.
+
+3. **Report:** [V1 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_V1_20261020_1859.md>).
+== verifyV2_second_eyes (usage 0.0% -> 1.0%): ial verification:** PASS 5 ┬À FAIL 0 ┬À DIFFERENT 0 ┬À BLOCKED 1 ┬À NOT TESTED 2. SURE 6 ┬À UNSURE 2. [Report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_V2_20261020_1909.md>).
+
+2. **Main finding:** Closing Grade mismatch with X still placed the pipe. Freeboard comparison and visual U/REDO restoration remain unverified. No old-fault FAIL was confirmed.
+
+3. **Clean end:** AutoCAD is gone; lock released. All four watched settings files match their starting hashes. FIXTURES WANTED: none.
+
+4. **Settings restored ÔÇö both sessions:** Session 1 A = C and Session 2 A = C, each independently checked against this full hash:
+   `ACD64E79A33BE9C152149FF2145A3CD2C29CABE11245F211183FD5C7DE783140`
+== bj33_cesettings_fix_switches_schedules_civil (usage 1.0% -> 1.0%): our builds passed with zero errors. Focused tests: **212 passed**. Full Civil suite: **18,967 passed, one known failure, 19 skipped**.
+
+3. **Still required:** Opus review and the later Codex AutoCAD look run. Nothing installed; nobody opened the window in AutoCAD. Three live settings hashes stayed unchanged; `CD_Settings.json` changed during the run and was left untouched under R1.
+
+---
+
+4. **Handoff:** branch `codex/cesettings-fixes-sched-civil`, tip `e33719c6`. Sole failure: `BackTest_GlenEira24115_Computed_WithinTolerance`, listed in the builder rules. No defaults, keys or command behaviour changed. Code and the single lane-log line were saved and pushed; worktree build artifacts cleaned.
+== bj34_cesettings_fix_switches_drafting_civil (usage 1.0% -> 2.0%): test demonstrates why a Claude rule change is needed first.
+
+3. **Verification:** four builds, zero errors; **249 tests passed, zero failed/skipped**. Full suite deferred because AutoCAD was running. Opus review and the real-window look run remain outstanding. Nothing installed or merged.
+
+4. **Settings:** three live hashes unchanged; CD_Settings.json changed during the runÔÇöreported only. Tests used temporary settings.
+
+---
+
+1. **Saved:** branch `codex/cesettings-fixes-draft-civil`, tip `c7333338`, based on `codex/cesettings-fixes-sched-civil` (bj33). Lane log pushed; worktree clean; 21.5 GB free.
+
+2. **Not tested:** real AutoCAD appearance or drawing behaviour. Built and unit-tested only.

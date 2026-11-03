@@ -1,0 +1,4 @@
+== cx_cr07 (usage 0.0% -> 2.0%): 1. **DONE — 0 ready:** R27, R29 and R30 all **NEEDS CODEX LOOK**. Each also needs two passing sessions on installed Civil **3.0.79**.
+2. **Corrections:** all three were previously reviewed; R30 does not test the Manager update window.
+3. **Saved and pushed:** [Review report](C:/CE_PLAN/areas/CODEX_CASE_REVIEW_cx_cr07.md), commit `b8f9b1a0`. Leak scan passed; no commits ahead.
+4. **Summary:** No tests run, bugs marked fixed or review files written. Manager administrator work remains parked.

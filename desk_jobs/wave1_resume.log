@@ -1,0 +1,13 @@
+Sun 08:33:18 wave1_resume started
+Sun 13:17:46 starting chain4 on C:\ce-fx\retest\spec_wave1.txt (build 3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527)
+Sun 13:44:14 chain4 on C:\ce-fx\retest\spec_wave1.txt ended
+Sun 14:12:37 starting chain4 on C:\ce-fx\retest\spec_wave1.txt (build 3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527)
+Sun 14:42:34 chain4 on C:\ce-fx\retest\spec_wave1.txt ended
+Sun 14:42:34 starting chain4 on C:\ce-fx\retest\spec_wave1_retry.txt (build 3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527)
+Sun 15:29:37 chain4 on C:\ce-fx\retest\spec_wave1_retry.txt ended
+Sun 15:40:49 starting chain4 on C:\ce-fx\retest\spec_wave1.txt (build 3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527)
+Sun 16:19:58 wave1_resume started
+Sun 16:28:04 starting chain4 on C:\ce-fx\retest\spec_wave1_retry.txt (build 3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527)
+Sun 17:31:11 chain4 on C:\ce-fx\retest\spec_wave1_retry.txt ended
+Sun 17:31:11 retry spec ALL DONE: wave1_resume ends
+Sun 17:31:11 wave1_resume ends (Mon 08:20)

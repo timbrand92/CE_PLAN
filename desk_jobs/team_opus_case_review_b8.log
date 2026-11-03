@@ -1,0 +1,37 @@
+The review is finished: five robot cases are now accepted on Civil 3.0.85, but none of the six cards in the brief can be written fixed. The other 15 cases each need one more step, listed below.
+
+**FOR TIM**
+
+1. **The six cards in the brief (D02, D20, D09, D13, D24, D21):** none of these cases touches them. That list looks carried over from the previous review job.
+2. **Card D15 (copying a pit) is now accepted in full on 3.0.85.** COPY a pit and:
+   - the copy reads P8, the next free number on the test drawing;
+   - P3 keeps its own label;
+   - the "Check levels" sentence appears;
+   - one U gives back exactly the same objects.
+
+   D15 was already counted from an earlier build, so the 18 does not go up.
+3. **BUG-1222 (Edit Pipe arrow flips back) can be written "FIXED (Claude-accepted, Civil 3.0.85, 29 Oct 2026)".** This covers the bug's own steps on a pipe with free ends. Swap its levels and Save, then Save again or change only the size. The arrow keeps pointing from IL 18.000 down to IL 17.900. Pipes joined to pits were not tried.
+4. **Two bugs are fixed for a part only:**
+   - **BUG-672:** copy a pit with layer 25TEXT locked, and CE no longer says "no label". It names the locked layer and says how to recover.
+   - **BUG-665:** a COPY gets P8 and a SCALE Copy gets its own number, P12.
+5. **ROTATE Copy is not proven yet.** The rotated copy now gets a label and a cover text. But no case reads what that label says. If it read P3, that would be the bug itself. Each of the three ROTATE cases needs one label check, then two new runs.
+6. **Floor waste at an inspection opening (BUG-1223):** the false "record changed" message is gone at all four openings. CE now says plainly, for example, "IO2 is already at this point". These cases wait on your ruling: may a floor waste sit on top of an opening? I recommend **no**, because two drainage objects would claim the same pipe end.
+7. **Something I noticed but have not proven:** a ROTATE Copy or SCALE Copy landing exactly on top of P3 makes CE print 6 to 9 warnings about P3's pit schedule. It also happened on 3.0.84. I recommend the desk adds it to the bug list; I was not allowed to edit that list.
+8. **My mistakes:** none that cost anything.
+
+---
+
+1. **Review slips written** (in `_ACAD_DRIVER\cases\` and copied to `CE_PLAN\areas\runner-reports\reviews\`):
+   - **R32b (BUG-1222 as filed) and R34a (D15):** whole claim.
+   - **R32, R33m and R34sn:** a named part only.
+   - **R34a:** the new slip replaces the 28 Oct one, because its text changed; the old slip is kept in `C:\ce_rc_scratch\opusb8\old_slips\`.
+
+   The runner's own acceptance check reads each slip as valid for its current hash, and no slip carries over to a neighbouring case.
+2. **Not ready:**
+   - **R34, R34s and R34so:** need the ROTATE label check.
+   - **R34s_OFF_BROKEN:** still passes; it needs a line turning the new switch off before it fails again.
+   - **R36e and its three twins:** wait on your ruling.
+3. **Old "expected to fail" tags:** six cases that now pass still carry them. They don't block acceptance, but if one of these breaks again the robot will file it as a known failure. Removing a tag changes the case's fingerprint, so it needs a new pair of runs. Doing it in the same edit as the new checks means only one pair. After that edit, the four switch-off control cases need a line pointing at their case, or the robot loses their failing proof.
+4. **Report:** `C:\CE_PLAN\areas\release-v3-colleagues-OPUS_CASE_REVIEW_B8_29OCT.md`, pushed. The plan repo is level with GitHub.
+
+**Summary:** Five slips written on 3.0.85: R32b and R34a whole, R32, R33m and R34sn for parts. BUG-1222 can be written fixed as filed; D15 is accepted in full but was already counted. ROTATE Copy needs one label check per case. The opening cases wait on Tim's ruling. None of the six named cards is affected.

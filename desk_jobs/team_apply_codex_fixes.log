@@ -1,0 +1,8 @@
+All ten Codex fixes are done as new draft PRs #1818 to #1827, based on the C-70 tip `270215aa`. Built and unit-tested only. Nothing installed or opened in AutoCAD, nothing marked FIXED, no switch changed.
+
+- **Combined tests:** Civil net10 full suite 20,643 tests, 20,611 passed, 0 failed. The first run had one failure I caused; it is fixed on #1827. Civil net48 compile 0 errors.
+- **Beyond Codex's wording:** I made #1789 and #1790 refuse a saved text like "630,5", which was being read as 6305. On #1784 an unset material speed falls back to the office figure with no new message. Both are for Tim to accept or reject.
+- **#1783:** no fix needed.
+- **#1788:** held, no code change, privacy findings in the report.
+
+Report: `C:\CE_PLAN\areas\release-v3-colleagues-CODEX_FIXES_APPLIED_27OCT.md`

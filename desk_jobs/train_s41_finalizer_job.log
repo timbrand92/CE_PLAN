@@ -1,0 +1,14 @@
+**GO for Structural train S-41 at `871ad9716fa2996fb7cbd5a76c0e52be94defc05`** (branch `claude/rel-20261022s2`, pushed as a normal fast-forward).
+
+1. **The one change I made:** #1518 claimed CEMEMBER never changes an existing layer, but that was wrong. If the office points the hidden-line layer setting at one of its own layers that is already in the drawing, CEMEMBER would have silently switched that layer to the HIDDEN linetype. I fixed that and added a test. The same commit also corrects a comment in the SBEAM Z purlin code.
+2. **Tests:** whole solution builds with 0 errors. All other results are the known failures listed in the S-40 report, or new tests that cannot run on net48 and pass on net10:
+   - **Structural net10:** 5212 of 5212 pass.
+   - **Structural net48:** 39 fail. 37 also fail on the base. The other two are new #1510 tests that cannot run on net48.
+   - **DesignCore:** 5 known release-settings failures on each of net48, net8 and net10.
+   - **CommandTruth:** 22 of 23 (the long-standing count failure).
+   - **ReleaseTests:** 10 of 10 on all three.
+3. **Held:**
+   - Nothing is marked fixed.
+   - LBH (load bearing wall over) hatch also changes at 1:50 and 1:100, and nobody has looked at it yet.
+   - Tim's settings files are unchanged.
+   - Built and unit-tested only. Nobody has opened it in AutoCAD.

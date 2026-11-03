@@ -1,0 +1,993 @@
+{
+  "header": {
+    "run_id": "RUN-20261027-2141-C3.0.83-x83a7",
+    "started": "2026-10-27 21:41:37",
+    "finished": "2026-10-27 21:56:09",
+    "build": {
+      "civil": {
+        "product_version": "3.0.83+96455f13fa2df1e63f8bc7cf9d48bd7dc2c14737",
+        "file_version": "3.0.83.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.83+96455f13fa2df1e63f8bc7cf9d48bd7dc2c14737",
+        "file_version": "1.1.83.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.83+96455f13 / struc 1.0.125+204dfad2 / mgr 1.1.83+96455f13",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "8AA9DB20DD6B7CC3166DFFA92BCC91CF6ADE9C23CC8125EB42E60BEA48D229AA",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.83+96455f13fa2df1e63f8bc7cf9d48bd7dc2c14737; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.83+96455f13fa2df1e63f8bc7cf9d48bd7dc2c14737",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4CD773B85EC5, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 13955AAA60D1, case_runner_lib.ps1 8F9B8DCBB473, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 2 case file(s) plus 0 shared setup(s); pack SHA-256 8AA9DB20DD6B7CC3166DFFA92BCC91CF6ADE9C23CC8125EB42E60BEA48D229AA; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json B3B5A004B929 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Tue 27 Oct 2026 21:41 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 0,
+    "FAIL": 0,
+    "FAIL_known": 2,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261027-2141-C3.0.83-x83a7-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-27 21:41:38",
+      "finished": "2026-10-27 21:48:45",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV32141431_B1.dwg",
+      "cases": [
+        "R09_OFF_BROKEN"
+      ],
+      "calibration": {
+        "ok": true,
+        "max_raw_px": 1.686,
+        "max_corrected_px": 0.585,
+        "why": "",
+        "canvas": {
+          "left": 1926,
+          "top": 421,
+          "width": 1604,
+          "height": 569,
+          "how": "exact (tol 0)",
+          "scale_vs_screensize": 1.0,
+          "dpi": 96
+        }
+      },
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : B3B5A004B929 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    },
+    {
+      "session_id": "RUN-20261027-2141-C3.0.83-x83a7-s2",
+      "phase": "main",
+      "session_no": 2,
+      "started": "2026-10-27 21:48:45",
+      "finished": "2026-10-27 21:56:09",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV32148502_B1.dwg",
+      "cases": [
+        "R09"
+      ],
+      "calibration": {
+        "ok": true,
+        "max_raw_px": 1.686,
+        "max_corrected_px": 0.585,
+        "why": "",
+        "canvas": {
+          "left": 1926,
+          "top": 421,
+          "width": 1604,
+          "height": 569,
+          "how": "exact (tol 0)",
+          "scale_vs_screensize": 1.0,
+          "dpi": 96
+        }
+      },
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : B3B5A004B929 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "R09_OFF_BROKEN",
+      "proves_bugs": "",
+      "title": "BROKEN VARIANT of R09: the switch doubleClick.sourceEditWindow is OFF, so AutoCAD's own editor opens instead of the CE Edit source window (must FAIL)",
+      "kind": "deterministic",
+      "order": 91,
+      "slot": "launch",
+      "fixture": "DRV1_B1",
+      "plan_item": "red-before-green proof for R09 (a real switch)",
+      "bug": "",
+      "known_fail": "BROKEN-VARIANT",
+      "reviewed_against": "",
+      "variant_of": "R09",
+      "expected": "A double-click on the outer circle of a freshly placed downpipe (tag DP1) opens CE's 'Edit source' window with DP1 in its Tag box, and not AutoCAD's Enhanced Attribute Editor. Cancel closes it.",
+      "why_not_unit": "Unit tests passed while the real AutoCAD double-click still reached EATTEDIT with nothing picked (BUG-859 round 1); only a real mouse double-click on a real block shows which window opens.",
+      "not_automated": [
+        "The name of the Tag box in the Edit source window is not proven (the window has never opened); the check 'control Tag value DP1' uses the name 'Tag' and may need that one word corrected once the fix is installed.",
+        "Batch 3 fixes of 25 Oct 2026: run unchanged first on Civil 3.0.75 it FAILED for the real reason (the double-click opened AutoCAD's Enhanced Attribute Editor, run b3r09a), so the Tag box name is still unknown. Cancel is now pressed with ui-press (Edit source, Cancel) and its closing is asserted; close-windows stays behind it only to put AutoCAD right if the wrong window opened. The true red after this edit is the variant R09_OFF_BROKEN (the switch doubleClick.sourceEditWindow set false: AutoCAD's editor must open).",
+        "Batch 4 (26 Oct 2026, Civil 3.0.77): evidence for BUG-859 from CE own log at every double-click of runs on 3.0.75 (b3r09a, b3w1, b3z4): \"double-click hit-test: 1 block(s) under the pointer; source tag = DP1\", \"pick set emptied so EATTEDIT stops at its prompt\", \"CANCELCMD posted=true for EATTEDIT\", \"CDEDIT scheduled at Idle\", then \"starting CDEDIT in command context\" only 21 to 37 s later, after the robot had closed AutoCAD Enhanced Attribute Editor. So CE catches the double-click but AutoCAD editor still opens first. The check log civilx has CDEDIT scheduled at Idle (civilx = the structured CE log ce_cvl_structured_<date>.log, a runner key added 26 Oct 2026 because the first try with log civil could not pass on any build: those lines are written only to the structured log, not to CE_CVL_SUITE.log; runs b4c1 b4c2) passes when the switch is ON and must FAIL in R09_OFF_BROKEN, where CE logs EATTEDIT left to AutoCAD: the double-click switch reads OFF (that is its true red). R09 itself stays a real fault (EXPECT-FAIL BUG-859) because AutoCAD editor opens first.",
+        "The red centre, the angled DP text and the green label (BUG-860) are not clicked here; only the outer circle named in the bug.",
+        "Run B5 evidence (26 Oct 2026, Civil 3.0.78+d8840a09, run RUN-20261026-1312-C3.0.78-b5a1, the first run in which the log check read the right log): in CE structured log at 13:18:20 \"TryRedirectToCdEdit: target registered; CDEDIT scheduled at Idle\" was present (check 2 PASSED); the robot window list after the double-click read only \"Enhanced Attribute Editor\" (checks 3 to 6 FAILED, real fault BUG-859 on 3.0.78); with doubleClick.sourceEditWindow OFF the variant FAILED check 2 (96 new log lines, no scheduled-CDEDIT line). Scope (cx_cr02): outer-circle opening and Cancel only; the red centre, the angled DP text and OK saving a changed tag are not proved; whole BUG-859 not proved."
+      ],
+      "file_sha256": "93283A5F52548E83CB8143F807F5990AC7EDDDD401409FB2DCD3A0D2905DFB92",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "no new civilx log line contains 'TryRedirectToCdEdit: target registered; CDEDIT scheduled at Idle' (96 new lines read) ",
+      "started": "2026-10-27 21:46:03",
+      "seconds": 145.1,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 setvar PICKFIRST 1",
+          "ok": true,
+          "seconds": 0.6,
+          "evidence": "v3 setvar PICKFIRST 1: PICKFIRST (profile): already 1, nothing written"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 setvar DBLCLKEDIT 1",
+          "ok": true,
+          "seconds": 0.5,
+          "evidence": "v3 setvar DBLCLKEDIT 1: DBLCLKEDIT (profile): already 1, nothing written"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $n0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM _C 3000,3000 3000\"",
+          "ok": true,
+          "seconds": 2.7,
+          "evidence": "typed '_.ZOOM _C 3000,3000 3000': Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _C | Specify center point: 3000,3000 | Enter magnificat..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"DP{NL}3000,3000\" -Force -ExpectPrompt \"Pick the next DP\" -TimeoutSec 60 -> $placed",
+          "ok": true,
+          "seconds": 26.5,
+          "evidence": "typed 'DP 3000,3000': Command: | Command: DP | Specify downpipe insertion point: 3000,3000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. N..."
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "esc-prompt: Specify downpipe insertion point: 3000,3000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. Nothing nearby. The source..."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.2,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "history-tail",
+          "text": "history-tail -Index 12 -> $tail",
+          "ok": true,
+          "seconds": 1.2,
+          "evidence": "history: Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _C | Specify center point: 3000,3000 | Enter magnification or height <23920.948>: 3000 | Command: | Comm..."
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $n0 -> $new",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "2 object(s) after index 1034 (model space now 1036); by type: AcDbBlockReference 1; AcDbText 1; first: 11C55C AcDbBlockReference DOWNPIPES DOWNPIPE DYNAMIC WITH MASK ; 11C564 AcDbText GUIDELINES DP"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new object=AcDbBlockReference \"name~^DOWNPIPE\" -> $dp_blocks",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C55C DOWNPIPE DYNAMIC WITH MASK DOWNPIPES"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $dp_blocks handle -> $dp",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C55C"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "ent-part",
+          "text": "ent-part $dp outer-circle -> $part",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "outer circle of 11C55C is part block:1 (world radius 75)"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM _C 3000,3000 1200\"",
+          "ok": true,
+          "seconds": 2.6,
+          "evidence": "typed '_.ZOOM _C 3000,3000 1200': Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _C | Specify center point: 3000,3000 | Enter magnificat..."
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.2,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 view-read",
+          "ok": true,
+          "seconds": 0.5,
+          "evidence": "v3 view-read : view stored: centre 3,000.000,3,000.000 height 1,200.000 screen 1604x569"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 deselect",
+          "ok": true,
+          "seconds": 17.1,
+          "evidence": "v3 deselect : one Esc key sent to AutoCAD"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $w0",
+          "ok": true,
+          "seconds": 0.4,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV32141431_B1.dwg]"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 pt-dblclick \"ent {$dp}\" -Part \"{$part}\" -> $dc",
+          "ok": true,
+          "seconds": 5.3,
+          "evidence": "v3 pt-dblclick ent 11C55C: pt-dblclick: world 3,075.000,3,000.000 -> pixel 2763,706 (exact 2,763.02,706.00); cursor read-back 2763,706; view live (aim check: AutoCAD reports 1 object(s) picked: 11C55C (expected 11C55C); after Esc 0 selected)"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "windows-new",
+          "text": "windows-new $w0 -> $opened",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "new window(s): Enhanced Attribute Editor"
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Edit source\" -Optional -TimeoutSec 3 -> $es",
+          "ok": true,
+          "seconds": 9.2,
+          "evidence": "no window matching /Edit source/ is open (optional): no visible window of AutoCAD matches /Edit source/ and is on the v3 read list. Windows seen: Autodesk AutoCAD 2027 - [CLDV32141431_B1.dwg] ; Enhanced Attribute Editor ; Workspace ; AdImpApplicationFrame ; Ribbon ; CE CVL..."
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Edit source\" \"Cancel\" -Optional -> $esc",
+          "ok": true,
+          "seconds": 4.6,
+          "evidence": "ui-press 'Cancel' (optional) not done: no visible allowed window matches /Edit source/"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "close-windows",
+          "text": "close-windows",
+          "ok": true,
+          "seconds": 10.8,
+          "evidence": "closed open CE windows: round 1: 'Enhanced Attribute Editor' <- Cancel : ok=True"
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 10",
+          "ok": true,
+          "seconds": 10.0,
+          "evidence": "slept 10 s"
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $w_after",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV32141431_B1.dwg]"
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Edit source\" -Optional -TimeoutSec 30 -> $es2",
+          "ok": true,
+          "seconds": 35.4,
+          "evidence": "no window matching /Edit source/ is open (optional): no visible window of AutoCAD matches /Edit source/ and is on the v3 read list. Windows seen: Autodesk AutoCAD 2027 - [CLDV32141431_B1.dwg] ; Workspace ; AdImpApplicationFrame ; Ribbon ; CE CVL - Layout ; CE CVL - Import/..."
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Edit source\" \"Cancel\" -Optional -> $esc2",
+          "ok": true,
+          "seconds": 5.8,
+          "evidence": "ui-press 'Cancel' (optional) not done: no visible allowed window matches /Edit source/"
+        },
+        {
+          "n": 29,
+          "phase": "case",
+          "verb": "close-windows",
+          "text": "close-windows",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "closed open CE windows: "
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"Tag: DP1\"",
+          "ok": true,
+          "expected": "command line has 'Tag: DP1'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Downpipe placed. Tag: DP1. Nothing nearby. The source connects when a pipe is drawn to it.'"
+        },
+        {
+          "n": 2,
+          "text": "log civilx has \"TryRedirectToCdEdit: target registered; CDEDIT scheduled at Idle\"",
+          "ok": false,
+          "expected": "civilx log has 'TryRedirectToCdEdit: target registered; CDEDIT scheduled at Idle'",
+          "actual": "0",
+          "evidence": "no new civilx log line contains 'TryRedirectToCdEdit: target registered; CDEDIT scheduled at Idle' (96 new lines read) "
+        },
+        {
+          "n": 3,
+          "text": "contains $opened \"Edit source\"",
+          "ok": false,
+          "expected": "contains 'Edit source'",
+          "actual": "Enhanced Attribute Editor",
+          "evidence": "'Edit source' is NOT in: Enhanced Attribute Editor"
+        },
+        {
+          "n": 4,
+          "text": "not-contains $opened \"Enhanced Attribute Editor\"",
+          "ok": false,
+          "expected": "does not contain 'Enhanced Attribute Editor'",
+          "actual": "Enhanced Attribute Editor",
+          "evidence": "'Enhanced Attribute Editor' WAS found in: Enhanced Attribute Editor"
+        },
+        {
+          "n": 5,
+          "text": "control $es \"Tag\" value \"DP1\"",
+          "ok": false,
+          "expected": "control 'Tag' value",
+          "actual": "window not open",
+          "evidence": "the window was not open, so control 'Tag' could not be read"
+        },
+        {
+          "n": 6,
+          "text": "control $es \"Cancel\" exists",
+          "ok": false,
+          "expected": "control 'Cancel' exists",
+          "actual": "window not open",
+          "evidence": "the window was not open, so control 'Cancel' could not be read"
+        },
+        {
+          "n": 7,
+          "text": "control $es \"OK\" exists",
+          "ok": false,
+          "expected": "control 'OK' exists",
+          "actual": "window not open",
+          "evidence": "the window was not open, so control 'OK' could not be read"
+        },
+        {
+          "n": 8,
+          "text": "window-closed $esc",
+          "ok": false,
+          "expected": "the window closed",
+          "actual": "closed=",
+          "evidence": "ui-press reported window_closed = "
+        },
+        {
+          "n": 9,
+          "text": "record $opened \"the window(s) the double-click opened\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Enhanced Attribute Editor",
+          "evidence": "RECORDED, not judged: the window(s) the double-click opened = Enhanced Attribute Editor"
+        },
+        {
+          "n": 10,
+          "text": "record $w_after \"windows open after AutoCAD editor was closed (does CE Edit source open second?)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV32141431_B1.dwg]",
+          "evidence": "RECORDED, not judged: windows open after AutoCAD editor was closed (does CE Edit source open second?) = Autodesk AutoCAD 2027 - [CLDV32141431_B1.dwg]"
+        },
+        {
+          "n": 11,
+          "text": "record $es2 \"the Edit source dump taken after AutoCAD editor was closed (empty if CE window never opened)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: the Edit source dump taken after AutoCAD editor was closed (empty if CE window never opened) = "
+        },
+        {
+          "n": 12,
+          "text": "record $placed \"what the DP command printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: DP | Specify downpipe insertion point: 3000,3000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. N...",
+          "evidence": "RECORDED, not judged: what the DP command printed = Command: | Command: DP | Specify downpipe insertion point: 3000,3000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. N..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 95 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: DP completed 27615 ms",
+        "deselect: SendCommand of the two Esc said 'Invalid input' on this AutoCAD, so one real Esc key was sent instead (esc-key ok=True)"
+      ],
+      "error": null,
+      "finished": "2026-10-27 21:48:29",
+      "session_id": "RUN-20261027-2141-C3.0.83-x83a7-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [
+          "known failure (BROKEN-VARIANT): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "R09",
+      "proves_bugs": "",
+      "title": "Double-click on the DP1 downpipe circle opens the CE Edit source window",
+      "kind": "deterministic",
+      "order": 10,
+      "slot": "launch",
+      "fixture": "DRV1_B1",
+      "plan_item": "BUG-859,",
+      "bug": "BUG-859",
+      "known_fail": "BUG-859",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "A double-click on the outer circle of a freshly placed downpipe (tag DP1) opens CE's 'Edit source' window with DP1 in its Tag box, and not AutoCAD's Enhanced Attribute Editor. Cancel closes it.",
+      "why_not_unit": "Unit tests passed while the real AutoCAD double-click still reached EATTEDIT with nothing picked (BUG-859 round 1); only a real mouse double-click on a real block shows which window opens.",
+      "not_automated": [
+        "The name of the Tag box in the Edit source window is not proven (the window has never opened); the check 'control Tag value DP1' uses the name 'Tag' and may need that one word corrected once the fix is installed.",
+        "Batch 3 fixes of 25 Oct 2026: run unchanged first on Civil 3.0.75 it FAILED for the real reason (the double-click opened AutoCAD's Enhanced Attribute Editor, run b3r09a), so the Tag box name is still unknown. Cancel is now pressed with ui-press (Edit source, Cancel) and its closing is asserted; close-windows stays behind it only to put AutoCAD right if the wrong window opened. The true red after this edit is the variant R09_OFF_BROKEN (the switch doubleClick.sourceEditWindow set false: AutoCAD's editor must open).",
+        "Batch 4 (26 Oct 2026, Civil 3.0.77): evidence for BUG-859 from CE own log at every double-click of runs on 3.0.75 (b3r09a, b3w1, b3z4): \"double-click hit-test: 1 block(s) under the pointer; source tag = DP1\", \"pick set emptied so EATTEDIT stops at its prompt\", \"CANCELCMD posted=true for EATTEDIT\", \"CDEDIT scheduled at Idle\", then \"starting CDEDIT in command context\" only 21 to 37 s later, after the robot had closed AutoCAD Enhanced Attribute Editor. So CE catches the double-click but AutoCAD editor still opens first. The check log civilx has CDEDIT scheduled at Idle (civilx = the structured CE log ce_cvl_structured_<date>.log, a runner key added 26 Oct 2026 because the first try with log civil could not pass on any build: those lines are written only to the structured log, not to CE_CVL_SUITE.log; runs b4c1 b4c2) passes when the switch is ON and must FAIL in R09_OFF_BROKEN, where CE logs EATTEDIT left to AutoCAD: the double-click switch reads OFF (that is its true red). R09 itself stays a real fault (EXPECT-FAIL BUG-859) because AutoCAD editor opens first.",
+        "The red centre, the angled DP text and the green label (BUG-860) are not clicked here; only the outer circle named in the bug.",
+        "Run B5 evidence (26 Oct 2026, Civil 3.0.78+d8840a09, run RUN-20261026-1312-C3.0.78-b5a1, the first run in which the log check read the right log): in CE structured log at 13:18:20 \"TryRedirectToCdEdit: target registered; CDEDIT scheduled at Idle\" was present (check 2 PASSED); the robot window list after the double-click read only \"Enhanced Attribute Editor\" (checks 3 to 6 FAILED, real fault BUG-859 on 3.0.78); with doubleClick.sourceEditWindow OFF the variant FAILED check 2 (96 new log lines, no scheduled-CDEDIT line). Scope (cx_cr02): outer-circle opening and Cancel only; the red centre, the angled DP text and OK saving a changed tag are not proved; whole BUG-859 not proved."
+      ],
+      "file_sha256": "8763A665A9C3EEFB8E04AFFED95632E407945453E05158982DB28F41872C9B74",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "'Edit source' is NOT in: Enhanced Attribute Editor",
+      "started": "2026-10-27 21:53:08",
+      "seconds": 166.9,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 setvar PICKFIRST 1",
+          "ok": true,
+          "seconds": 0.5,
+          "evidence": "v3 setvar PICKFIRST 1: PICKFIRST (profile): already 1, nothing written"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 setvar DBLCLKEDIT 1",
+          "ok": true,
+          "seconds": 0.5,
+          "evidence": "v3 setvar DBLCLKEDIT 1: DBLCLKEDIT (profile): already 1, nothing written"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $n0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM _C 3000,3000 3000\"",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "typed '_.ZOOM _C 3000,3000 3000': Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _C | Specify center point: 3000,3000 | Enter magnificat..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.2,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"DP{NL}3000,3000\" -Force -ExpectPrompt \"Pick the next DP\" -TimeoutSec 60 -> $placed",
+          "ok": true,
+          "seconds": 29.5,
+          "evidence": "typed 'DP 3000,3000': Command: | Command: DP | Specify downpipe insertion point: 3000,3000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. N..."
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt",
+          "ok": true,
+          "seconds": 2.6,
+          "evidence": "esc-prompt: Specify downpipe insertion point: 3000,3000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. Nothing nearby. The source..."
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.2,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "history-tail",
+          "text": "history-tail -Index 12 -> $tail",
+          "ok": true,
+          "seconds": 1.1,
+          "evidence": "history: Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _C | Specify center point: 3000,3000 | Enter magnification or height <23920.948>: 3000 | Command: | Comm..."
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $n0 -> $new",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "2 object(s) after index 1034 (model space now 1036); by type: AcDbBlockReference 1; AcDbText 1; first: 11C55C AcDbBlockReference DOWNPIPES DOWNPIPE DYNAMIC WITH MASK ; 11C564 AcDbText GUIDELINES DP"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new object=AcDbBlockReference \"name~^DOWNPIPE\" -> $dp_blocks",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C55C DOWNPIPE DYNAMIC WITH MASK DOWNPIPES"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $dp_blocks handle -> $dp",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C55C"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "ent-part",
+          "text": "ent-part $dp outer-circle -> $part",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "outer circle of 11C55C is part block:1 (world radius 75)"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM _C 3000,3000 1200\"",
+          "ok": true,
+          "seconds": 2.6,
+          "evidence": "typed '_.ZOOM _C 3000,3000 1200': Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _C | Specify center point: 3000,3000 | Enter magnificat..."
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.2,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 view-read",
+          "ok": true,
+          "seconds": 0.5,
+          "evidence": "v3 view-read : view stored: centre 3,000.000,3,000.000 height 1,200.000 screen 1604x569"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 deselect",
+          "ok": true,
+          "seconds": 16.5,
+          "evidence": "v3 deselect : one Esc key sent to AutoCAD"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $w0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV32148502_B1.dwg]"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 pt-dblclick \"ent {$dp}\" -Part \"{$part}\" -> $dc",
+          "ok": true,
+          "seconds": 5.2,
+          "evidence": "v3 pt-dblclick ent 11C55C: pt-dblclick: world 3,075.000,3,000.000 -> pixel 2763,706 (exact 2,763.02,706.00); cursor read-back 2763,706; view live (aim check: AutoCAD reports 1 object(s) picked: 11C55C (expected 11C55C); after Esc 0 selected)"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "windows-new",
+          "text": "windows-new $w0 -> $opened",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "new window(s): Enhanced Attribute Editor"
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Edit source\" -Optional -TimeoutSec 3 -> $es",
+          "ok": true,
+          "seconds": 9.1,
+          "evidence": "no window matching /Edit source/ is open (optional): no visible window of AutoCAD matches /Edit source/ and is on the v3 read list. Windows seen: Autodesk AutoCAD 2027 - [CLDV32148502_B1.dwg] ; Enhanced Attribute Editor ; Workspace ; AdImpApplicationFrame ; Ribbon ; CE CVL..."
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Edit source\" \"Cancel\" -Optional -> $esc",
+          "ok": true,
+          "seconds": 4.5,
+          "evidence": "ui-press 'Cancel' (optional) not done: no visible allowed window matches /Edit source/"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "close-windows",
+          "text": "close-windows",
+          "ok": true,
+          "seconds": 30.8,
+          "evidence": "closed open CE windows: round 1: 'Enhanced Attribute Editor' <- Cancel : ok=True ; round 2: 'Creative Engineering | Edit source' <- Cancel without saving : ok=False no button 'Cancel without saving' that is on the v3 press list was found in a window matching /Creative\\ Engineering\\ \\..."
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 10",
+          "ok": true,
+          "seconds": 10.0,
+          "evidence": "slept 10 s"
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $w_after",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV32148502_B1.dwg]"
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Edit source\" -Optional -TimeoutSec 30 -> $es2",
+          "ok": true,
+          "seconds": 35.9,
+          "evidence": "no window matching /Edit source/ is open (optional): no visible window of AutoCAD matches /Edit source/ and is on the v3 read list. Windows seen: Autodesk AutoCAD 2027 - [CLDV32148502_B1.dwg] ; Workspace ; AdImpApplicationFrame ; Ribbon ; CE CVL - Layout ; CE CVL - Import/..."
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Edit source\" \"Cancel\" -Optional -> $esc2",
+          "ok": true,
+          "seconds": 6.0,
+          "evidence": "ui-press 'Cancel' (optional) not done: no visible allowed window matches /Edit source/"
+        },
+        {
+          "n": 29,
+          "phase": "case",
+          "verb": "close-windows",
+          "text": "close-windows",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "closed open CE windows: "
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"Tag: DP1\"",
+          "ok": true,
+          "expected": "command line has 'Tag: DP1'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Downpipe placed. Tag: DP1. Nothing nearby. The source connects when a pipe is drawn to it.'"
+        },
+        {
+          "n": 2,
+          "text": "log civilx has \"TryRedirectToCdEdit: target registered; CDEDIT scheduled at Idle\"",
+          "ok": true,
+          "expected": "civilx log has 'TryRedirectToCdEdit: target registered; CDEDIT scheduled at Idle'",
+          "actual": "1",
+          "evidence": "log: '2026-10-27 21:54:13.308 [INF] TryRedirectToCdEdit: target registered; CDEDIT scheduled at Idle'"
+        },
+        {
+          "n": 3,
+          "text": "contains $opened \"Edit source\"",
+          "ok": false,
+          "expected": "contains 'Edit source'",
+          "actual": "Enhanced Attribute Editor",
+          "evidence": "'Edit source' is NOT in: Enhanced Attribute Editor"
+        },
+        {
+          "n": 4,
+          "text": "not-contains $opened \"Enhanced Attribute Editor\"",
+          "ok": false,
+          "expected": "does not contain 'Enhanced Attribute Editor'",
+          "actual": "Enhanced Attribute Editor",
+          "evidence": "'Enhanced Attribute Editor' WAS found in: Enhanced Attribute Editor"
+        },
+        {
+          "n": 5,
+          "text": "control $es \"Tag\" value \"DP1\"",
+          "ok": false,
+          "expected": "control 'Tag' value",
+          "actual": "window not open",
+          "evidence": "the window was not open, so control 'Tag' could not be read"
+        },
+        {
+          "n": 6,
+          "text": "control $es \"Cancel\" exists",
+          "ok": false,
+          "expected": "control 'Cancel' exists",
+          "actual": "window not open",
+          "evidence": "the window was not open, so control 'Cancel' could not be read"
+        },
+        {
+          "n": 7,
+          "text": "control $es \"OK\" exists",
+          "ok": false,
+          "expected": "control 'OK' exists",
+          "actual": "window not open",
+          "evidence": "the window was not open, so control 'OK' could not be read"
+        },
+        {
+          "n": 8,
+          "text": "window-closed $esc",
+          "ok": false,
+          "expected": "the window closed",
+          "actual": "closed=",
+          "evidence": "ui-press reported window_closed = "
+        },
+        {
+          "n": 9,
+          "text": "record $opened \"the window(s) the double-click opened\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Enhanced Attribute Editor",
+          "evidence": "RECORDED, not judged: the window(s) the double-click opened = Enhanced Attribute Editor"
+        },
+        {
+          "n": 10,
+          "text": "record $w_after \"windows open after AutoCAD editor was closed (does CE Edit source open second?)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV32148502_B1.dwg]",
+          "evidence": "RECORDED, not judged: windows open after AutoCAD editor was closed (does CE Edit source open second?) = Autodesk AutoCAD 2027 - [CLDV32148502_B1.dwg]"
+        },
+        {
+          "n": 11,
+          "text": "record $es2 \"the Edit source dump taken after AutoCAD editor was closed (empty if CE window never opened)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: the Edit source dump taken after AutoCAD editor was closed (empty if CE window never opened) = "
+        },
+        {
+          "n": 12,
+          "text": "record $placed \"what the DP command printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: DP | Specify downpipe insertion point: 3000,3000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. N...",
+          "evidence": "RECORDED, not judged: what the DP command printed = Command: | Command: DP | Specify downpipe insertion point: 3000,3000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. N..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 116 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: DP completed 29869 ms ; Command outcome: CDEDIT completed 18558 ms",
+        "deselect: SendCommand of the two Esc said 'Invalid input' on this AutoCAD, so one real Esc key was sent instead (esc-key ok=True)"
+      ],
+      "error": null,
+      "finished": "2026-10-27 21:55:54",
+      "session_id": "RUN-20261027-2141-C3.0.83-x83a7-s2",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [
+          "known failure (BUG-859): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": true
+      }
+    }
+  ]
+}

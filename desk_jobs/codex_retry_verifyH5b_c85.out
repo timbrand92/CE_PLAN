@@ -1,0 +1,5 @@
+== verifyH5b_c85 (usage 25.0% -> 25.0%): AUTOCAD CLOSED
+
+1. **BLOCKED ÔÇö SURE:** The hand-answer tool cancelled the report question. BUG-1106 remains unverified on Civil 3.0.87.
+2. **Settings failure:** StructuralÔÇÖs settings file changed unexpectedly; three others stayed unchanged. Full hashes recorded. Lock released.
+3. **Report:** [H5b verification](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_H5b_20261030_1943.md>). Results: 0 PASS, 0 FAIL, 1 BLOCKED.

@@ -1,0 +1,3 @@
+`C:\CE_PLAN\areas\FILL_ALREADYDONE_CHECK_09_02NOV.md`: ALREADY-DONE 10, PARTLY-DONE 0, SUPERSEDED 0, NOT-DONE 0, DOCS-ONLY 0, CANNOT-CONFIRM 0. Nine heads are on `rel-20261102a` and #440 is on `rel-20261026s`.
+
+I added ten local `refs/tmp/prN` names to the main checkout by fetching the PR heads. Nothing else in the checkout changed.

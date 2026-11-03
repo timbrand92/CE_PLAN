@@ -1,0 +1,4 @@
+== cx_cr15 (usage 8.0% -> 12.0%): 1. **DONE — [report saved and pushed](C:/CE_PLAN/areas/CODEX_CASE_REVIEW_cx_cr15.md)** in commit **38545caa**. No commits remain ahead.
+2. **R15 and R16: NEEDS RUNS.** Each needs two sessions on installed Civil **3.0.79**. Review files qualify their older 3.0.78 evidence.
+3. **R17: PARTIAL.** It never checks the pipe’s two vertices or compares all original handles after Esc.
+4. **No bugs marked fixed; nothing run in AutoCAD.** The [leak-scan](C:/TimOS/skills/leak-scan/SKILL.md) passed.

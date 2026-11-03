@@ -1,0 +1,20 @@
+**FOR TIM**
+
+I reviewed the 12 plan-work PRs. One can go in as it is, seven need small fixes, four should wait, and none should be thrown out. The report is in `C:\CE_PLAN\areas\REVIEW_PILE_B12_24OCT.md`.
+
+1. **Safe for the next Civil update after C-63:**
+   - **#985:** the AI markup reader never sends a picture of the Model tab. It can go in as it is.
+   - **#1010:** a LandXML circular pit comes in at its real size, not 600 x 600.
+   - **#1000:** pick prompts say "pit" instead of "pit block". It needs a small clean-up first.
+2. **One question for you (when you're back at work):** should a pipe label read FLAT when the two inverts are within 5 mm? On a 1 m pipe, 5 mm is a real 1 in 200 grade. I recommend FLAT only when the grade is flatter than a number you set, for example 1 in 1,000.
+3. **Main faults:**
+   - **#1020:** the CDCHECK progress line would be a second way of doing a job the installed code already does. It needs rebuilding.
+   - **#972 (assumed levels):** whoever merges it must keep the newer cover-text spacing from Settings. Otherwise the old fixed 200/250 mm spacing quietly comes back.
+4. **Not checked:** nothing was built, tested or opened in AutoCAD.
+
+---
+
+- **The triage called these 12 "not reviewed", which is wrong.** All 12 already had verdicts at the same versions in the 10 Oct review log, entries 910 and 965–967. I reviewed them again anyway, because the installed code has moved on two weeks since then.
+- **Untracked `.codex/` folder:** the local clone has one. I did not create it and did not touch it.
+
+Summary: 12 plan-work PRs reviewed: 1 MERGE, 7 MERGE-WITH-FIXES, 4 HOLD, 0 REJECT. #985, #1010 and #1000 can join the next Civil train after C-63 (#1000 after a small clean-up). #1020 must be rebuilt. #1019 waits for Tim's FLAT number. #992 waits until after 9 Nov because it changes shared ribbon code. The triage's "not reviewed" label was wrong. Nothing was built or run in AutoCAD.

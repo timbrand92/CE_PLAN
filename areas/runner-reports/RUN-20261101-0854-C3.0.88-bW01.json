@@ -1,0 +1,374 @@
+{
+  "header": {
+    "run_id": "RUN-20261101-0854-C3.0.88-bW01",
+    "started": "2026-11-01 08:54:06",
+    "finished": "2026-11-01 09:02:53",
+    "build": {
+      "civil": {
+        "product_version": "3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+        "file_version": "3.0.88.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+        "file_version": "1.1.88.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.88+3fbb9da5 / struc 1.0.125+204dfad2 / mgr 1.1.88+3fbb9da5",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "14BAFDF66C85E933F04956B2C5235C806E9A2853A2E49A985C169B5E968C6FE5",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+      "Driver files (SHA-256, first 12): v2 F4D8F40C3675 (expected F4D8F40C3675), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4B0175FFAB00, v3 session F061E3240C47, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 BBF42DBA8958, case_runner_lib.ps1 89AD455619F8, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 4 case file(s) plus 1 shared setup(s); pack SHA-256 14BAFDF66C85E933F04956B2C5235C806E9A2853A2E49A985C169B5E968C6FE5; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json D604CE689671 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sun 01 Nov 2026 08:54 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 0,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 4,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261101-0854-C3.0.88-bW01-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-11-01 08:54:08",
+      "finished": "2026-11-01 09:02:53",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV30854121_B1.dwg",
+      "cases": [
+        "W223",
+        "W210",
+        "W234",
+        "W216"
+      ],
+      "whatsnew_dismissed_at_start": "no, window was not there",
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : D604CE689671 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": [
+        {
+          "attempt": 1,
+          "how": "v2 quit",
+          "ok": false,
+          "ended_by": null,
+          "error": "AutoCAD did not close gracefully and was NOT killed. If it is stuck, run quit again with -Kill."
+        },
+        {
+          "attempt": 2,
+          "how": "v2 quit",
+          "ok": false,
+          "ended_by": null,
+          "error": "REFUSED: AutoCAD is busy (a command is active) and the last known drawing cannot be trusted: no drawing has been seen yet by this driver. Nothing was closed."
+        },
+        {
+          "attempt": 3,
+          "how": "v2 quit -Kill",
+          "ok": true,
+          "killed": true,
+          "error": ""
+        }
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "id": "W223",
+      "proves_bugs": "BUG-223 (CDEDIT branch: the window words, the save and the reopen). The CD not-drawn-first branch and the \"Flow:\" line of the New Pipe window are not read (the New Pipe window dump on 3.0.88 holds no \"Flow:\" text).",
+      "title": "Edit Pipe on a pipe between two open ends: typing the levels the other way round makes the window name the first box Downstream and say the levels fall from point 2 to point 1; Save turns the arrow with no uphill line, and reopening shows the same",
+      "kind": "deterministic",
+      "order": 140,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "BUG-proof wave 1, group E (Edit Pipe, flow direction); BUG-223",
+      "bug": "BUG-223",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed",
+      "variant_of": "",
+      "expected": "CD from 150000,-90000 to 170000,-90000 with 18.000 then 17.800: the arrow reads rotation 0. CDEDIT: at first open the first box is named Upstream and there is no \"levels fall\" note. Type 17.800 in the first box and 18.000 in the second: the first box is now named Downstream, the second Upstream, the note reads \"The levels fall from point 2 to point 1; CE records that as the flow direction.\" and the old note \"Upstream invert is lower than downstream\" is absent. Save: \"Pipe updated.\", no command-line line contains \"flows uphill\", and the arrow turns (rotation about 3.14). CDEDIT again: the first box reads 17.800 and is named Downstream, the second reads 18.000, the note is still there; Cancel without saving closes it. No CE window is left open and the drawing file on disk is unchanged.",
+      "why_not_unit": "The box names and the note are what the live Edit Pipe window shows on top of the real drawing; the save and the arrow are the live CDEDIT write.",
+      "not_automated": [
+        "The schedule row of a pipe with two open ends (From IL 18.00 -> To IL 17.80) is not read: two open ends give no pit row in the Pit Schedule. The arrow picture is a Codex look (the robot reads only the arrow block's rotation).",
+        "Tim's step \"CDEDIT again with 18.00 / 18.00: nothing is reversed\" is NOT driven: a level pipe is flatter than 1 in 100 and opens the Grade mismatch window on 3.0.87 and later."
+      ],
+      "file_sha256": "9FCB9D22B62F55C8C6436744438654C933FE8988D5A0024142902105CE920B36",
+      "result": "BLOCKED",
+      "blocked": "refused by a driver guard",
+      "first_failure": null,
+      "started": "2026-11-01 08:54:57",
+      "seconds": 156.8,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "copy CLDV30854121_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-90000{NL}170000,-90000{NL}\" -Force -ExpectWindow \"New Pipe\" -TimeoutSec 120 -> $t1",
+          "ok": true,
+          "seconds": 9.9,
+          "evidence": "typed 'CD 150000,-90000 170000,-90000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-90000 | Specify second point: 170000,-90000 | Se..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 7.1,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: "
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.800\"",
+          "ok": true,
+          "seconds": 4.5,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.800: "
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $t2",
+          "ok": true,
+          "seconds": 33.4,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $e1",
+          "ok": false,
+          "seconds": 2.6,
+          "evidence": "esc-prompt: REFUSED: no key was sent (not_foreground): the AutoCAD main window would not take the keyboard."
+        }
+      ],
+      "assertions": [],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 60 new line(s) while the case ran, 0 with [ERR]",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)"
+      ],
+      "error": null,
+      "finished": "2026-11-01 08:57:34",
+      "session_id": "RUN-20261101-0854-C3.0.88-bW01-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 1,
+        "red_before": false
+      }
+    },
+    {
+      "id": "W210",
+      "proves_bugs": "BUG-210 (one pipe end, a copied lone pit, Edit Pit and CDCHECK read at once; the Pit Schedule cells and the six-pipe junction are not driven)",
+      "title": "ERASE pit P8, COPY a lone pit onto its spot: the copy is linked to the pipe end at once (CDCHECK connections back, Edit Pit lists the pipe)",
+      "kind": "deterministic",
+      "order": 210,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "Bug-proof plan wave 1 (BUG_PROOF_PLAN_31OCT.md), group P: erase then copy onto the junction",
+      "bug": "BUG-210",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed",
+      "variant_of": "",
+      "expected": "After SETUP-R47v, a lone pit is placed at 150000,-70000 (CDCHECK Problems still reads '189 connections: 184 Connected, 1 Possible, 4 Unresolved, 0 Not Connected, 0 Unknown.'). ERASE of P8 says '1 pipe now has an end that is Not connected yet' and CDCHECK reads '188 connections: 183 Connected'. COPY of the lone pit by 0,-10000 puts one new pit block at 150000,-80000 (within 1 mm) and says '1 pit copied and numbered as new'. Straight after, with no other command, CDCHECK reads '189 connections: 184 Connected, 1 Possible, 4 Unresolved, 0 Not Connected, 0 Unknown.' again, and Edit Pit (PITEDIT) on the copy lists the pipe as LEAVING and never says 'The pit has no recorded connection to this pipe.'; Cancel closes it. No CE window is left open and the drawing file on disk is unchanged.",
+      "why_not_unit": "The link is made when AutoCAD ends the native COPY command and CE's clone reconcile runs on the live drawing.",
+      "not_automated": [
+        "The Pit Schedule FROM / inlet / outlet cells for the copy are not read (the schedule needs its own window route); the six-pipe junction of the bug report and U after the copy are not driven.",
+        "DERIVED: the CDCHECK totals with the lone pit (no connection added by a pit with no pipes), and the role word LEAVING in Edit Pit. The copy's number is NOT asserted (it may take P8 back or the next free number): it is recorded from the PITEDIT dump."
+      ],
+      "file_sha256": "4BA555B605B21EAE2A28657DB535DA0A8B03108DA75441D024462FE300437B42",
+      "result": "BLOCKED",
+      "blocked": "AutoCAD busy: the fresh copy of the drawing could not be opened (reopen-copy): BUSY: AutoCAD is busy (a command or window is active). Nothing was done.",
+      "first_failure": null,
+      "started": "2026-11-01 08:57:34",
+      "seconds": 104.3,
+      "setup": "SETUP-R47v",
+      "setup_note": null,
+      "steps": [],
+      "assertions": [],
+      "pictures": [],
+      "observations": [
+        "the fresh copy of the drawing could not be opened (reopen-copy): BUSY: AutoCAD is busy (a command or window is active). Nothing was done.",
+        "Civil CE log: 0 new line(s) while the case ran, 0 with [ERR]",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)"
+      ],
+      "error": null,
+      "finished": "2026-11-01 08:59:18",
+      "session_id": "RUN-20261101-0854-C3.0.88-bW01-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "W234",
+      "proves_bugs": "BUG-234 (MOVE branch, and the one-end branch by a typed STRETCH; the real grip drag and the Pit Schedule rows are not driven)",
+      "title": "A flat pipe P91 to P92 MOVEd onto pits P93 and P94 records P93 to P94; its east end STRETCHed onto P92 then records P93 to P92",
+      "kind": "deterministic",
+      "order": 234,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "Bug-proof plan wave 1 (BUG_PROOF_PLAN_31OCT.md), group P: relink after MOVE or an end move",
+      "bug": "BUG-234",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed",
+      "variant_of": "",
+      "expected": "Four pits P91 to P94 and a flat 225 mm pipe P91 to P92 (both levels 18.000, no window). MOVE of the pipe alone by 0,-6000: the Civil log says 'Pipe endpoints updated: <pipe> from=P93 to=P94' and Edit Pipe shows 'Flow: P93 -> P94' with no P91 or P92 anywhere. STRETCH of the pipe's east end 6 m north onto P92: the log says 'Pipe endpoints updated: <pipe> from=P93 to=P92' and Edit Pipe shows 'Flow: P93 -> P92' with no P94. Both IL texts still read IL 18.000. Edit Pipe is closed with Cancel each time; no CE window is left open and the drawing file on disk is unchanged.",
+      "why_not_unit": "The pipe record is rewritten by CE's relink when AutoCAD ends the native MOVE and STRETCH commands on the live drawing.",
+      "not_automated": [
+        "The real grip drag of an end (the bug's 'grip one end from P2 onto P3') is replaced by a typed STRETCH of that end; the Pit Schedule FROM / TO cells of P91 to P94 and U after each step are not driven.",
+        "DERIVED: that the four hand-typed numbers P91 to P94 are free in DRV1_B1 (it holds P1 to P10 by the R19 / R34 / N71 notes); if CE renumbers a pit the 'from=P93' checks fail first and the numbers are in the recorded Edit Pipe dumps."
+      ],
+      "file_sha256": "1C66A55F15182A6B976DCE3878767E2D252713D51C0B65492AD2BA88E06F3489",
+      "result": "BLOCKED",
+      "blocked": "AutoCAD busy: the fresh copy of the drawing could not be opened (reopen-copy): BUSY: AutoCAD is busy (a command or window is active). Nothing was done.",
+      "first_failure": null,
+      "started": "2026-11-01 08:59:18",
+      "seconds": 102.6,
+      "setup": "",
+      "setup_note": null,
+      "steps": [],
+      "assertions": [],
+      "pictures": [],
+      "observations": [
+        "the fresh copy of the drawing could not be opened (reopen-copy): BUSY: AutoCAD is busy (a command or window is active). Nothing was done.",
+        "Civil CE log: 0 new line(s) while the case ran, 0 with [ERR]",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)"
+      ],
+      "error": null,
+      "finished": "2026-11-01 09:01:01",
+      "session_id": "RUN-20261101-0854-C3.0.88-bW01-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    },
+    {
+      "id": "W216",
+      "proves_bugs": "BUG-216: the Enter-at-the-next-prompt half on a skipped point. The Enter after an accepted arrow (Codex 14 Oct, 1 placed) is the same prompt code (FallSuggestCommand.cs 64 and 89-93) but is not driven here.",
+      "title": "CDFALLSUGGEST: Enter at \"Next level ... or Enter to finish\" ends the command and states the count; no \"Invalid point\"",
+      "kind": "deterministic",
+      "order": 2160,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "bug": "BUG-216",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed",
+      "variant_of": "",
+      "expected": "CDFALLSUGGEST, typed point 150000,-98000, Enter at the level question (skipped: 'No level at this point'), Enter at 'Next level (0 placed, 1 skipped), or Enter to finish:'. The command ends on that Enter and says 'CDFALLSUGGEST finished. 0 placed, 1 skipped.' inside the typed result; no 'Invalid point' anywhere; no FALL block is added; the drawing file on disk is unchanged.",
+      "why_not_unit": "The unit test proves the prompt options allow an empty answer; only live AutoCAD shows that a real Enter at that prompt ends the command instead of AutoCAD's own 'Invalid point.'.",
+      "not_automated": [
+        "Accept a suggested arrow and then Enter (needs a point with a known level uphill of a grated pit with a known cover level; the fixture's levels near P4 are not read here). Esc at the same prompt is the old way out and is not the subject."
+      ],
+      "file_sha256": "F4152EC8DCE4ABC47600962752BE1CAA079FB9A57D31B6E49EBE5C5D901090C3",
+      "plan_item": "BUG-proof wave 1, group T (tags, sources and fall suggestion); BUG-216",
+      "result": "BLOCKED",
+      "blocked": "the session was stopped after two tool faults in a row; this case was not tried",
+      "first_failure": null,
+      "steps": [],
+      "assertions": [],
+      "pictures": [],
+      "observations": [],
+      "seconds": 0,
+      "setup": "",
+      "setup_note": null,
+      "session_id": "RUN-20261101-0854-C3.0.88-bW01-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+BUG-648 has a draft PR, #2001 ("B-182: BUG-648 AG drain draws its 1:N grade text"), but the grade text is not yet tied to the drain on move, copy or erase. It is built and unit-tested only; nobody has opened it in AutoCAD, and BUG-648 stays open.
+
+- **Fault confirmed:** on the base, Accept draws only the AG_LINE polyline. It stores and prints the grade but never draws it.
+- **Fix:** Accept now also draws one "1:50" text under the middle of the longest leg, in the same Undo step as the drain. A rising run reads "1:50 rising"; skipped or equal levels draw nothing.
+- **Files and switch:** the change is in `AgiCommand.GradeLabel.cs` (new), `AgiCommand.Apply.cs`, `UserSettings.cs`, the tests and `REGRESSION_LOG.md`. The switch is `agDrainGradeLabel`, on by default.
+- **Question for Tim:** should the grade text follow the drain on move, copy and erase like the PD tag does? I did not reuse the PD tag link because a renumber would overwrite "1:50". I recommend a follow-up build with its own link.
+- **Tests:** 17 new tests and 423 related tests pass; the net48 compile has 0 errors.
+- **Isolation:** the real AppData listings are identical before and after.
+- **Cleanup:** the worktree and scratch folder are removed, and C: free space went from about 69 GB to 68 GB.
+- **Report:** `C:\CE_PLAN\areas\BUGFIX_w648_REPORT_03NOV.md`.

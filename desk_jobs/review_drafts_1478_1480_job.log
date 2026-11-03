@@ -1,0 +1,17 @@
+**FOR TIM**
+
+I reviewed all three fixes and logged them as entries 1343 to 1351 in the review log (pushed to `C:\CE_PLAN`).
+
+1. **MERGE (1):** #1480. Tidy labels stops treating the drawing border as something in the way, so labels can move again.
+2. **MERGE-WITH-FIXES (2):**
+   - **#1478:** CDTAG would wrongly say "CDFIXTAGS left it", and the message names "pit or pipe" too narrowly.
+   - **#1479:** the 14 false "detention diameter 100 mm" warnings do go. But a real detention pipe drawn with no length would also lose its size warning. The fix is to show the size and range in the new "not known" line.
+3. **HOLD / REJECT:** none.
+4. **Tests:** 347 of 347 focused tests passed. I confirmed #1479's tests fail without the fix. Civil's older build and the whole solution built with 0 errors. Nothing has been tested in AutoCAD.
+
+---
+
+Two things the next run should know:
+
+1. **#1436's later commits were never installed.** Only its first version is in 3.0.57; its two later commits are in no train. So run 32/33's "the fix did not take effect" never tested them. #1479 brings both in.
+2. **Still open:** BUG-813, 815 and 141 all stay OPEN. Nobody yet knows why 14 downpipes are stored as Detention, and the pit P8 half of BUG-141 is unproven.

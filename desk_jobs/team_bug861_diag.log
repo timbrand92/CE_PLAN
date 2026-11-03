@@ -1,0 +1,9 @@
+I built the diagnostic version of the plugin and opened draft PR #1798. Nothing has been tried in AutoCAD, so I don't yet know which component loses REDO, and BUG-861 stays open.
+
+- **What it does:** it adds 14 `diag.redo` switches, one for each component that runs on the first click, plus `disableAllSelectionWork` to switch them all off at once. Every switch defaults to normal, so nothing changes for a drafter.
+- **Settings:** the keys sit in `%APPDATA%\TIM_CE_CADTOOLS\CD_Settings.json` and are read when AutoCAD starts, so the robot must set one before launching. A change mid-session does nothing.
+- **Logging:** each skipped component writes a `[REDO-DIAG]` log line.
+- **Tests:** the Civil net10 full suite gave 20,381 passed and 2 failed. Those two are the compiled-code-shape tests that already fail in Debug on #1779, and both pass in Release. I did not run them on the untouched base. The net48 compile has 0 errors.
+- **Report:** `C:\CE_PLAN\areas\release-v3-colleagues-BUG861_DIAG_REPORT.md`, pushed to `main` with nothing ahead.
+
+My worktree is removed.

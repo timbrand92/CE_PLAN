@@ -1,0 +1,33 @@
+**FOR TIM**
+
+1. **The answer: GO.** C-77 is ready to package as Civil 3.0.87 / Manager 1.1.87, at `02681d9f8998cacb91f49a6847292e67147677e3`. It is built and unit-tested only. Nobody has opened it in AutoCAD.
+2. **Re-test class: FULL.** The train changes three shared things, and any one of them means everything gets re-tested:
+   - how CE loads your settings at start-up
+   - the Manager
+   - the shared double-click
+3. **Mistake first:** the build stuck twice before it started compiling, which cost about 27 minutes. A setting from the stopped first run made a helper tool hang. I stopped only my own stuck build and re-ran it, and it then built cleanly.
+4. **The two missing fixes are now in the train:**
+   - In Checks (CDRULES), a pipe whose wall thickness CE doesn't know now shows "Unknown" instead of a green Pass.
+   - A colleague on a fresh login no longer gets your remembered water-tank plans.
+5. **One fix of my own:** at a Road pit, CDRULES warned "below 600 mm cover", but its suggested fix only lowered the pipe enough for 300 mm. The fix now aims at 600 mm.
+6. **What you'll notice on your own PC:**
+   - Tidy labels is on.
+   - Boyd's counts roof and paving at 0.9 instead of 1.0, so storage comes out about 10% smaller.
+   - Your saved minimum-grade list and lid-class table are CE's old ones, so the first time you start 3.0.87 CE swaps them for the new ones.
+   - CDRULES shows many more "Unknown" rows than before.
+7. **Nothing for you to do now.** The questions in the report are for work hours, and none of them holds up the train.
+
+---
+
+Summary:
+- **Merges:** #1851 at 7c547ebb, #1844 at ab8ea0b9 and #1866 at dd8ea64d are all in the train. #1863 and #1867 are left for C-78.
+- **My changes:** one fix to the CDRULES cover suggestion (`d238d3a7`). Tests only otherwise (`02681d9f`): `C77NewSwitchDefaultsTests` (60) and one 150% Recent-line fit test, which passes.
+- **Solution build:** 0 errors.
+- **Civil net10:** 21,505 tests, 0 failed.
+- **net48:** 4,758 tests. All 114 failures are the known test-only kind, so the net48 baseline is now 114 names.
+- **Manager:** 1,085 tests, 0 failed; the 75-file bundle check passed.
+- **Civil Arch guards:** 14 of 14.
+- **Civil bundle:** 832 files. That's the C-76 828 plus the new office starting-settings file in four places, so the 829 in the brief was wrong.
+- **Not tested:** nothing ran in AutoCAD, nothing was installed and no bug is marked FIXED.
+
+The full report is at `C:\CE_PLAN\areas\release-v3-colleagues-TRAIN_C77_FINALIZER_REPORT_2026-10-29.md` and is pushed.

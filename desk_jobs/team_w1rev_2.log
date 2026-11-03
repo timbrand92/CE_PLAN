@@ -1,0 +1,16 @@
+I reviewed all 13 cases: 3 are fully accepted, 10 are partly accepted and none are rejected. I wrote 13 review slips, one next to each case, and nothing was run or edited. The first 12 lines of `C:\CE_PLAN\areas\W1_REVIEW_F_REPORT.md`:
+
+```
+# W1 review F report (wave 1 bug-proof cases, list w1rev_list_2.txt), Sun 1 Nov 2026
+
+1. **Answer:** 13 cases: 3 ACCEPT FULL (W671, W672, W742), 10 ACCEPT PART, 0 NOT YET, 0 ALREADY. 13 slips written.
+2. **Weakest 1, W667:** the twin only flips the expected line, so the old PITDELETE error has never been seen. The pipe-label and schedule symptoms of the bug are not driven.
+3. **Weakest 2, W713:** CDSL's "blank" spot actually reads P__.__, so the unreadable-text path is proved, not the empty-text skip. The twin moves the spot out of reach and also fails a stale check.
+4. **Weakest 3, W741:** the twin removes the WT1 set-up instead of turning the fix off. The "never WT1 1" checks have never been seen red.
+5. **Hashes:** every case file's sha256 matched its list line. No slip existed before, so nothing was copied to .old.
+6. **Untouched:** no case, setup, spec, driver or settings file was edited. Nothing was run, built, committed or pushed.
+7. **Time:** clock read 17:53:46 at start and 17:57:30 when the slips were finished (Melbourne, AUSEST). That is about 4 minutes by the PC clock. The clock looks low for this much work, so treat the figure with care.
+8. **Report name:** the job message named this file. The brief's pattern (C78_REVIEW_F_REPORT.md) was not used.
+9. **Twins:** 9 of 13 twins turn the fix off or reproduce the fault. W665, W667, W713 and W741 have weaker twins (see each entry).
+10. **Word check:** every asserted CE line was found in source at 3fbb9da5 or seen on a run. Nothing is UNSOURCED.
+```

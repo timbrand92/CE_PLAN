@@ -1,0 +1,5 @@
+== cx_cr16 (usage 9.0% -> 12.0%): 1. **DONE.** [Review report](C:/CE_PLAN/areas/CODEX_CASE_REVIEW_cx_cr16.md) committed and pushed as **fd9dd200**; no commits ahead.
+
+2. **Verdicts:** R19b, R20 and R23 are ready on older Civil **3.0.78**. Each **NEEDS RUNS**—two separate sessions on installed **3.0.79**.
+
+3. **Summary:** Three matching-hash review files refreshed with explicit build limits. No AutoCAD or tests run, no bugs marked fixed, and no acceptance counted on the installed build.

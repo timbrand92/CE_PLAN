@@ -1,0 +1,7 @@
+== cx_lf25 (usage 35.0% -> 35.0%): 1. **DONE — all five skipped as already covered:** BUG-993 #1583; BUG-994 #1588; BUG-995 #1599; BUG-996 #1641; BUG-997 #1627.
+
+2. **Saved and pushed:** [Batch 25 report](C:/CE_PLAN/areas/CODEX_LEDGER_FIX_BATCH25_23OCT.md), including existing test counts and exact AutoCAD checks still owed. Nothing installed; AutoCAD not opened.
+
+---
+
+3. **Audit delivery:** draft [PR #1679](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1679), branch `cx2/bug-993-batch25-audit`, tip `12c69c19`. Documentation only: **0 tests added/run, 0 builds**. Both pushes passed leak scans.

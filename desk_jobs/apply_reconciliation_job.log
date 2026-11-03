@@ -1,0 +1,27 @@
+Applied 370 of the 427 status-line replacements; 57 skipped. It's committed and pushed as `8f4b7de5` ("Carpark: apply status reconciliation (370 lines)") with the script and an undo patch. To undo it, run `git apply -R C:\CE_PLAN\desk_jobs\carpark_reconciliation_undo.patch` and commit.
+
+**Checks on the result**
+- **Lines changed:** `git diff --numstat` shows 370 added and 370 removed.
+- **Only status lines:** every changed line begins `**Status:**`. No index-table rows were listed, so none were touched.
+- **Unchanged:** line count is still 11769 and the `## BUG-` heading count is still 823.
+- **No newer file:** `origin/main` had no new commits, so there was nothing to merge in.
+- **New FIXED lines:** 15, each with Codex-accepted or Tim's-word evidence in the line. The reconciliation's headline said 17 newly accepted; BUG-466 and BUG-580 are two of the skipped ones.
+- **Not touched:** nothing from BUG-873 onwards was changed. I didn't run the build, and `DESK_LOG.md` is unedited.
+
+**Skipped (57)**
+- **Reason:** each old line was not a `**Status:**` line, or the entry has no status line at all. Replacing these would overwrite other text or add a line, which your rule forbids.
+- **IDs:** 176, 195, 376, 377, 378, 381, 382, 383, 384, 387, 388, 389, 393, 394, 397, 401, 402, 405, 406, 407, 408, 409, 416, 417, 418, 420, 422, 423, 424, 454, 459, 460, 466, 558, 560, 565, 567, 568, 569, 580, 581, 582, 587, 588, 589, 614, 615, 616, 617, 618, 619, 629, 632, 636, 638, 649, 650.
+- **"Changed since" skips:** none.
+
+**Counts per state**
+- **Where the reconciliation puts all 822 bugs:** open no fix 203, built not installed 63, installed untested 468, fails in AutoCAD 6, FIXED 41, plus 21 installed-and-robot-PASS and 20 superseded or duplicate.
+- **Not yet true in the file:** it will only match once the 57 skipped entries are fixed.
+- **FIXED:** I did not recount from the file. The 41 includes the 15 new FIXED lines.
+
+**Where the reconciliation looks wrong**
+1. **BUG-007:** the text calls it superseded, but the replacement line says "OPEN (umbrella record only)".
+2. **BUG-872:** section 5 lists it as superseded, but the replacement line says OPEN.
+3. **BUG-866:** the register has two `## BUG-866` headings (lines 11699 and 11709), so there are 823 headings for 822 entries.
+4. **BUG-466 and BUG-580:** in the "accepted but never marked FIXED" list, but their entries have no `**Status:**` line, so they could not be marked.
+
+Summary: 370 status lines applied, 57 skipped for having no `**Status:**` line to replace. Verified as 370 added = 370 removed, only status lines changed, line and heading counts unchanged. Committed and pushed, with an undo patch saved. Nothing at BUG-873 or later was touched. Four oddities in the reconciliation are listed above.

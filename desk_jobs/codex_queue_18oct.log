@@ -1,0 +1,15 @@
+Sun 08:55 starting bj32 (window builder)
+Sun 09:16 bj32 queue call returned
+Sun 09:18 starting lookL1_civil_sheets
+Sun 09:19 finished lookL1_civil_sheets
+Sun 09:21 starting lookL1b_catchment_sol
+Sun 09:31 finished lookL1b_catchment_sol
+Sun 09:33 starting lookL2_structural
+Sun 10:02 finished lookL2_structural
+Sun 10:04 starting lookL3_windows_pictures
+Sun 10:09 finished lookL3_windows_pictures
+Sun 10:11 starting lookL4_mouse
+Sun 10:11 finished lookL4_mouse
+Sun 10:14 starting lookL5_cursor_ribbon
+Sun 10:18 finished lookL5_cursor_ribbon
+Sun 10:18 queue complete

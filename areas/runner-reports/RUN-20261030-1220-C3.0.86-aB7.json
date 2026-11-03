@@ -1,0 +1,1260 @@
+{
+  "header": {
+    "run_id": "RUN-20261030-1220-C3.0.86-aB7",
+    "started": "2026-10-30 12:20:57",
+    "finished": "2026-10-30 12:32:33",
+    "build": {
+      "civil": {
+        "product_version": "3.0.86+5888ee757244aac89283aaaf2ba68e51470ecbb3",
+        "file_version": "3.0.86.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.86+5888ee757244aac89283aaaf2ba68e51470ecbb3",
+        "file_version": "1.1.86.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.86+5888ee75 / struc 1.0.125+204dfad2 / mgr 1.1.86+5888ee75",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "76E868CE67E6640A14FAB4B43FF6D4B7E39993AFEC2493AC4569484EB1D90944",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.86+5888ee757244aac89283aaaf2ba68e51470ecbb3; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.86+5888ee757244aac89283aaaf2ba68e51470ecbb3",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4CD773B85EC5, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 13955AAA60D1, case_runner_lib.ps1 8F9B8DCBB473, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 0 shared setup(s); pack SHA-256 76E868CE67E6640A14FAB4B43FF6D4B7E39993AFEC2493AC4569484EB1D90944; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json B3B5A004B929 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Fri 30 Oct 2026 12:20 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 0,
+    "FAIL": 0,
+    "FAIL_known": 1,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261030-1220-C3.0.86-aB7-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-30 12:23:03",
+      "finished": "2026-10-30 12:32:33",
+      "result": "FAIL",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31223091_B1.dwg",
+      "cases": [
+        "C32"
+      ],
+      "calibration": null,
+      "clean": false,
+      "acad_left": 0,
+      "lock_holder_after": "Codex-H3",
+      "lock_after": "held",
+      "guard_clear": false,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : B3B5A004B929 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "Alt+F4 (close posted to the AutoCAD window)",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "C32",
+      "proves_bugs": "BUG-223 CDEDIT branch only; BUG-686 Edit Pipe zero-level branch only; BUG-1222 later plain Save regression. The CD branches are not covered. Detail: BUG-223 (CDEDIT on a pipe between two open ends, levels typed the other way round: the flow arrow follows the levels, the pipe is not left uphill without a plain warning); BUG-686 (the same with a level of exactly 0.00: the arrow follows the levels). BUG-261, BUG-292 and the size-only save are in R32b, not here.",
+      "title": "Edit Pipe on a pipe with two free ends: levels typed the other way round turn the flow arrow, also with a level of exactly 0.00, and the IL texts follow the typed levels",
+      "kind": "deterministic",
+      "order": 9325,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "Edit Pipe single save (triage group K3; daily card D17 neighbour); BUG-223, BUG-686",
+      "bug": "",
+      "known_fail": "BUG-1222",
+      "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 25 Oct 2026 with BUG-223 (steps: draw a pipe between two open ends, CDEDIT it, type the levels the other way round: not uphill without a plain warning) and BUG-686 (CD or Edit Pipe flow arrow, a level of exactly 0.00: the arrow follows the levels) as written in BUG_CARPARK.md.",
+      "variant_of": "R32",
+      "expected": "A new 20 m pipe with free ends and levels 18.000 / 17.900 has its flow arrow pointing from the first end to the second (arrow block rotation 0). CDEDIT with the levels typed 17.900 / 18.000 and Save prints \"Pipe updated.\" and turns the arrow round (rotation about 3.1416: the pipe now falls from its second end), or says in plain words that the pipe flows uphill; it never ends uphill with no word. The same for a second pipe drawn 0.50 / 0.00 and edited to 0.00 / 0.50. The IL texts read the typed levels at the ends (IL 17.900 left and IL 18.000 right; IL 0.00 left and IL 0.50 right). No CE window is left open and the drawing file on disk is unchanged. Second, independent check (batch 3 review, 25 Oct): the left IL text (17.900 and 0.00) sits west of the pipe's middle (x below 160000) and the right one (18.000 and 0.50) east of it, and after a SECOND plain Edit Pipe save (nothing typed) the arrow is still turned round (rotation about 3.1416), so the first turn was a real change of direction, not only a redraw. On Civil 3.0.75 that last check is expected to FAIL: BUG-1222 (a later save turns the flipped arrow back).",
+      "why_not_unit": "The levels, the arrow block and the IL texts are rewritten by the live Edit Pipe save into the real drawing.",
+      "not_automated": [
+        "Which way the arrow points is read from the arrow block rotation (0 = along the drawn direction, about 3.1416 = turned round); that the picture looks right is a Codex look. The size-only save is in R32b. BUG-261 and BUG-292 (a CD direction question, a plain save reversing a downstream-first pipe) are not claimed here. Pipes on pits (levels from the pits) are not driven."
+      ],
+      "file_sha256": "51EB04625BB9A39F5BCF2442EA0A87E26F69C032E6459E27DBA1C7D255ADECFB",
+      "result": "FAIL",
+      "blocked": null,
+      "first_failure": "no match for /rotation.:3\\.14/ in: {\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90237.5,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[]...",
+      "started": "2026-10-30 12:25:03",
+      "seconds": 370.3,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.4,
+          "evidence": "copy CLDV31223091_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-90000{NL}170000,-90000{NL}\" -Force -ExpectWindow \"New Pipe\" -TimeoutSec 120 -> $t1",
+          "ok": true,
+          "seconds": 16.0,
+          "evidence": "typed 'CD 150000,-90000 170000,-90000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-90000 | Specify second point: 170000,-90000 | Se..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 6.1,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.900\"",
+          "ok": true,
+          "seconds": 4.7,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.900: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $t2",
+          "ok": true,
+          "seconds": 43.9,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $e1",
+          "ok": true,
+          "seconds": 6.1,
+          "evidence": "esc-prompt: [CE] End is free: open end flagged, connect it later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: Open end -> Open end | [CE] Pipe placed. Pick the next pipe's first point, or pre..."
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $newA",
+          "ok": true,
+          "seconds": 0.6,
+          "evidence": "5 object(s) after index 1034 (model space now 1039); by type: AcDbBlockReference 1; AcDbMText 3; CeCvlPipeObject 1; first: 11C55B CeCvlPipeObject STORMWATER PIPE ; 11C561 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 200 ; 11C566 AcDbMText 20TEXT IL 18.000 ; 11C56B AcDbMText 20TEXT IL 17.900 ; 11C58D AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $newA \"object~^CeCvlPipeObject$\" -> $npA",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 5: 11C55B STORMWATER PIPE"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $npA handle -> $hpA",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C55B"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $newA \"name~ARROW\" -> $arA",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 5: 11C58D TIM_CVL_ARROW ARROW"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $arA handle -> $haA",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C58D"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$haA} -> $arrowA0",
+          "ok": true,
+          "seconds": 0.7,
+          "evidence": "ent-read 11C58D: {\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90237.5,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-90237.5,160375.0,-902..."
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"{$hpA}\"",
+          "ok": true,
+          "seconds": 3.1,
+          "evidence": "pick-first 11C55B: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"11C55B\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDEDIT\" -Force -ExpectWindow \"Edit Pipe\" -TimeoutSec 120 -> $edA",
+          "ok": true,
+          "seconds": 17.4,
+          "evidence": "typed 'CDEDIT': Command: | Command: CDEDIT | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"Edit Pipe\" \"C2.FirstInvert\" \"17.900\"",
+          "ok": true,
+          "seconds": 9.3,
+          "evidence": "ui set 'Edit Pipe' C2.FirstInvert = 17.900: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"Edit Pipe\" \"C2.SecondInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 5.7,
+          "evidence": "ui set 'Edit Pipe' C2.SecondInvert = 18.000: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Edit Pipe\" \"Edit pipe, Save\" -> $svA",
+          "ok": true,
+          "seconds": 12.0,
+          "evidence": "pressed 'Edit pipe, Save' in /Edit Pipe/: window closed = True"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 6",
+          "ok": true,
+          "seconds": 6.0,
+          "evidence": "slept 6 s"
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $hA",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "esc-prompt: Command: | Command: CDEDIT | Pipe updated. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_g..."
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$haA} -> $arrowA1",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "ent-read 11C58D: {\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90237.5,0.0],\"rotation\":3.141592653589793,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-90237.5..."
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $afterA",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "5 object(s) after index 1034 (model space now 1039); by type: AcDbBlockReference 1; AcDbMText 3; CeCvlPipeObject 1; first: 11C55B CeCvlPipeObject STORMWATER PIPE ; 11C561 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 200 ; 11C566 AcDbMText 20TEXT IL 17.900 ; 11C56B AcDbMText 20TEXT IL 18.000 ; 11C58D AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $afterA \"text~^IL \" -> $ilA",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 2 of 5: 11C566 IL 17.900 20TEXT ; 11C56B IL 18.000 20TEXT"
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $ilA text -All -> $ilA_text",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = IL 17.900 | IL 18.000"
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $ilA x -All -> $ilA_x",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 150200 | 169800"
+        },
+        {
+          "n": 29,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $afterA \"text~^IL 17\\.900$\" -> $il17",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 5: 11C566 IL 17.900 20TEXT"
+        },
+        {
+          "n": 30,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il17 x -> $x17",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 150200"
+        },
+        {
+          "n": 31,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $afterA \"text~^IL 18\\.000$\" -> $il18",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 5: 11C56B IL 18.000 20TEXT"
+        },
+        {
+          "n": 32,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il18 x -> $x18",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 169800"
+        },
+        {
+          "n": 33,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"{$hpA}\"",
+          "ok": true,
+          "seconds": 2.3,
+          "evidence": "pick-first 11C55B: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"11C55B\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 34,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDEDIT\" -Force -ExpectWindow \"Edit Pipe\" -TimeoutSec 120 -> $edA2",
+          "ok": true,
+          "seconds": 9.5,
+          "evidence": "typed 'CDEDIT': Command: | Command: CDEDIT | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 35,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Edit Pipe\" \"Edit pipe, Save\" -> $svA2",
+          "ok": true,
+          "seconds": 12.6,
+          "evidence": "pressed 'Edit pipe, Save' in /Edit Pipe/: window closed = True"
+        },
+        {
+          "n": 36,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 6",
+          "ok": true,
+          "seconds": 6.0,
+          "evidence": "slept 6 s"
+        },
+        {
+          "n": 37,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $hA2",
+          "ok": true,
+          "seconds": 2.3,
+          "evidence": "esc-prompt: Command: | Command: CDEDIT | Pipe updated. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_g..."
+        },
+        {
+          "n": 38,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 39,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$haA} -> $arrowA2",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "ent-read 11C58D: {\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90237.5,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-90237.5,160375.0,-902..."
+        },
+        {
+          "n": 40,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $afterA2",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "5 object(s) after index 1034 (model space now 1039); by type: AcDbBlockReference 1; AcDbMText 3; CeCvlPipeObject 1; first: 11C55B CeCvlPipeObject STORMWATER PIPE ; 11C561 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 200 ; 11C566 AcDbMText 20TEXT IL 17.900 ; 11C56B AcDbMText 20TEXT IL 18.000 ; 11C58D AcDbBlockReference ARROW TIM_CVL_ARROW"
+        },
+        {
+          "n": 41,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $afterA2 \"text~^IL 17\\.900$\" -> $il17a2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 5: 11C566 IL 17.900 20TEXT"
+        },
+        {
+          "n": 42,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il17a2 x -> $x17a2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 150200"
+        },
+        {
+          "n": 43,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $afterA2 \"text~^IL 18\\.000$\" -> $il18a2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 5: 11C56B IL 18.000 20TEXT"
+        },
+        {
+          "n": 44,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il18a2 x -> $x18a2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 169800"
+        },
+        {
+          "n": 45,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-92000{NL}170000,-92000{NL}\" -Force -ExpectWindow \"New Pipe\" -TimeoutSec 120 -> $t3",
+          "ok": true,
+          "seconds": 23.0,
+          "evidence": "typed 'CD 150000,-92000 170000,-92000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-92000 | Specify second point: 170000,-92000 | Se..."
+        },
+        {
+          "n": 46,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"0.50\"",
+          "ok": true,
+          "seconds": 12.3,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 0.50: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 47,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"0.00\"",
+          "ok": true,
+          "seconds": 8.8,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 0.00: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 48,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $t4",
+          "ok": true,
+          "seconds": 41.4,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 49,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 50,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $e2",
+          "ok": true,
+          "seconds": 4.0,
+          "evidence": "esc-prompt: [CE] End is free: open end flagged, connect it later. | [CE] End is free: open end flagged, connect it later. | Inserted flow arrow. Flow: Open end -> Open end | [CE] Pipe placed. Pick the next pipe's first point, or pre..."
+        },
+        {
+          "n": 51,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 52,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $newB",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "10 object(s) after index 1034 (model space now 1044); by type: AcDbBlockReference 2; AcDbMText 6; CeCvlPipeObject 2; first: 11C55B CeCvlPipeObject STORMWATER PIPE ; 11C561 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 200 ; 11C566 AcDbMText 20TEXT IL 17.900 ; 11C56B AcDbMText 20TEXT IL 18.000 ; 11C58D AcDbBlockReference ARROW TIM_CVL_ARROW ; 11C594 CeCvlPipeObject STORMWATER PIPE ; 11C59A AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 40 ; 11C59F AcDbMText 20TEXT IL 0.50 ; 11C5A4 AcDbMText 20TEXT IL 0.00 ; 11C5C6 AcDbBlockReference ARROW TIM_C..."
+        },
+        {
+          "n": 53,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $newB \"object~^CeCvlPipeObject$\" \"handle~^(?!{$hpA}$)\" -> $npB",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 10: 11C594 STORMWATER PIPE"
+        },
+        {
+          "n": 54,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $npB handle -> $hpB",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C594"
+        },
+        {
+          "n": 55,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $newB \"name~ARROW\" \"handle~^(?!{$haA}$)\" -> $arB",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 10: 11C5C6 TIM_CVL_ARROW ARROW"
+        },
+        {
+          "n": 56,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $arB handle -> $haB",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C5C6"
+        },
+        {
+          "n": 57,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$haB} -> $arrowB0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "ent-read 11C5C6: {\"handle\":\"11C5C6\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-92237.5,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-92237.5,160375.0,-922..."
+        },
+        {
+          "n": 58,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"{$hpB}\"",
+          "ok": true,
+          "seconds": 2.4,
+          "evidence": "pick-first 11C594: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"11C594\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 59,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDEDIT\" -Force -ExpectWindow \"Edit Pipe\" -TimeoutSec 120 -> $edB",
+          "ok": true,
+          "seconds": 12.0,
+          "evidence": "typed 'CDEDIT': Command: | Command: CDEDIT | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 60,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"Edit Pipe\" \"C2.FirstInvert\" \"0.00\"",
+          "ok": true,
+          "seconds": 7.7,
+          "evidence": "ui set 'Edit Pipe' C2.FirstInvert = 0.00: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 61,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"Edit Pipe\" \"C2.SecondInvert\" \"0.50\"",
+          "ok": true,
+          "seconds": 12.7,
+          "evidence": "ui set 'Edit Pipe' C2.SecondInvert = 0.50: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 62,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Edit Pipe\" \"Edit pipe, Save\" -> $svB",
+          "ok": true,
+          "seconds": 12.9,
+          "evidence": "pressed 'Edit pipe, Save' in /Edit Pipe/: window closed = True"
+        },
+        {
+          "n": 63,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 6",
+          "ok": true,
+          "seconds": 6.2,
+          "evidence": "slept 6 s"
+        },
+        {
+          "n": 64,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $hB",
+          "ok": true,
+          "seconds": 2.4,
+          "evidence": "esc-prompt: Command: | Command: CDEDIT | Pipe updated. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_g..."
+        },
+        {
+          "n": 65,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 66,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$haB} -> $arrowB1",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "ent-read 11C5C6: {\"handle\":\"11C5C6\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-92237.5,0.0],\"rotation\":3.141592653589793,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-92237.5..."
+        },
+        {
+          "n": 67,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $afterB",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "10 object(s) after index 1034 (model space now 1044); by type: AcDbBlockReference 2; AcDbMText 6; CeCvlPipeObject 2; first: 11C55B CeCvlPipeObject STORMWATER PIPE ; 11C561 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 200 ; 11C566 AcDbMText 20TEXT IL 17.900 ; 11C56B AcDbMText 20TEXT IL 18.000 ; 11C58D AcDbBlockReference ARROW TIM_CVL_ARROW ; 11C594 CeCvlPipeObject STORMWATER PIPE ; 11C59A AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 40 ; 11C59F AcDbMText 20TEXT IL 0.00 ; 11C5A4 AcDbMText 20TEXT IL 0.50 ; 11C5C6 AcDbBlockReference ARROW TIM_C..."
+        },
+        {
+          "n": 68,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $afterB \"text~^IL \" -> $ilB",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 4 of 10: 11C566 IL 17.900 20TEXT ; 11C56B IL 18.000 20TEXT ; 11C59F IL 0.00 20TEXT ; 11C5A4 IL 0.50 20TEXT"
+        },
+        {
+          "n": 69,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $ilB text -All -> $ilB_text",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = IL 17.900 | IL 18.000 | IL 0.00 | IL 0.50"
+        },
+        {
+          "n": 70,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $afterB \"text~^IL 0\\.00$\" -> $il00",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 10: 11C59F IL 0.00 20TEXT"
+        },
+        {
+          "n": 71,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il00 x -> $x00",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 150200"
+        },
+        {
+          "n": 72,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $afterB \"text~^IL 0\\.50$\" -> $il50",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 10: 11C5A4 IL 0.50 20TEXT"
+        },
+        {
+          "n": 73,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il50 x -> $x50",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 169800"
+        },
+        {
+          "n": 74,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"{$hpB}\"",
+          "ok": true,
+          "seconds": 2.4,
+          "evidence": "pick-first 11C594: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"11C594\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 75,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDEDIT\" -Force -ExpectWindow \"Edit Pipe\" -TimeoutSec 120 -> $edB2",
+          "ok": true,
+          "seconds": 20.5,
+          "evidence": "typed 'CDEDIT': Command: | Command: CDEDIT | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 76,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Edit Pipe\" \"Edit pipe, Save\" -> $svB2",
+          "ok": true,
+          "seconds": 11.7,
+          "evidence": "pressed 'Edit pipe, Save' in /Edit Pipe/: window closed = True"
+        },
+        {
+          "n": 77,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 6",
+          "ok": true,
+          "seconds": 6.0,
+          "evidence": "slept 6 s"
+        },
+        {
+          "n": 78,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $hB2",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "esc-prompt: Command: | Command: CDEDIT | Pipe updated. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_g..."
+        },
+        {
+          "n": 79,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 80,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$haB} -> $arrowB2",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "ent-read 11C5C6: {\"handle\":\"11C5C6\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-92237.5,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-92237.5,160375.0,-922..."
+        },
+        {
+          "n": 81,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $afterB2",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "10 object(s) after index 1034 (model space now 1044); by type: AcDbBlockReference 2; AcDbMText 6; CeCvlPipeObject 2; first: 11C55B CeCvlPipeObject STORMWATER PIPE ; 11C561 AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 200 ; 11C566 AcDbMText 20TEXT IL 17.900 ; 11C56B AcDbMText 20TEXT IL 18.000 ; 11C58D AcDbBlockReference ARROW TIM_CVL_ARROW ; 11C594 CeCvlPipeObject STORMWATER PIPE ; 11C59A AcDbMText 25TEXT 225 DIA. UPVC PIPE AT 1 IN 40 ; 11C59F AcDbMText 20TEXT IL 0.00 ; 11C5A4 AcDbMText 20TEXT IL 0.50 ; 11C5C6 AcDbBlockReference ARROW TIM_C..."
+        },
+        {
+          "n": 82,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $afterB2 \"text~^IL 0\\.00$\" -> $il00b2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 10: 11C59F IL 0.00 20TEXT"
+        },
+        {
+          "n": 83,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il00b2 x -> $x00b2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 150200"
+        },
+        {
+          "n": 84,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $afterB2 \"text~^IL 0\\.50$\" -> $il50b2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 10: 11C5A4 IL 0.50 20TEXT"
+        },
+        {
+          "n": 85,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il50b2 x -> $x50b2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 169800"
+        },
+        {
+          "n": 86,
+          "phase": "case",
+          "verb": "set",
+          "text": "set $dirA \"{$arrowA1} || {$hA}\"",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "set $dirA"
+        },
+        {
+          "n": 87,
+          "phase": "case",
+          "verb": "set",
+          "text": "set $dirB \"{$arrowB1} || {$hB}\"",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "set $dirB"
+        },
+        {
+          "n": 88,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31223091_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "matches $arrowA0 \"rotation.:0\\.0,\"",
+          "ok": true,
+          "expected": "matches /rotation.:0\\.0,/",
+          "actual": "{\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90237.5,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[]...",
+          "evidence": "matched 'rotation\":0.0,'"
+        },
+        {
+          "n": 2,
+          "text": "contains $hA \"Pipe updated.\"",
+          "ok": true,
+          "expected": "contains 'Pipe updated.'",
+          "actual": "Command: | Command: CDEDIT | Pipe updated. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_r...",
+          "evidence": "found 'Pipe updated.' in: Command: | Command: CDEDIT | Pipe updated. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before y..."
+        },
+        {
+          "n": 3,
+          "text": "matches $dirA \"rotation.:3\\.14|uphill\"",
+          "ok": true,
+          "expected": "matches /rotation.:3\\.14|uphill/",
+          "actual": "{\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90237.5,0.0],\"rotation\":3.141592653589793,\"xscale\":1.0,\"...",
+          "evidence": "matched 'rotation\":3.14'"
+        },
+        {
+          "n": 4,
+          "text": "matches $ilA_text \"^IL 17\\.900 \\| IL 18\\.000$\"",
+          "ok": true,
+          "expected": "matches /^IL 17\\.900 \\| IL 18\\.000$/",
+          "actual": "IL 17.900 | IL 18.000",
+          "evidence": "matched 'IL 17.900 | IL 18.000'"
+        },
+        {
+          "n": 5,
+          "text": "matches $arrowB0 \"rotation.:0\\.0,\"",
+          "ok": true,
+          "expected": "matches /rotation.:0\\.0,/",
+          "actual": "{\"handle\":\"11C5C6\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-92237.5,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[]...",
+          "evidence": "matched 'rotation\":0.0,'"
+        },
+        {
+          "n": 6,
+          "text": "contains $hB \"Pipe updated.\"",
+          "ok": true,
+          "expected": "contains 'Pipe updated.'",
+          "actual": "Command: | Command: CDEDIT | Pipe updated. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_r...",
+          "evidence": "found 'Pipe updated.' in: Command: | Command: CDEDIT | Pipe updated. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before y..."
+        },
+        {
+          "n": 7,
+          "text": "matches $dirB \"rotation.:3\\.14|uphill\"",
+          "ok": true,
+          "expected": "matches /rotation.:3\\.14|uphill/",
+          "actual": "{\"handle\":\"11C5C6\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-92237.5,0.0],\"rotation\":3.141592653589793,\"xscale\":1.0,\"...",
+          "evidence": "matched 'rotation\":3.14'"
+        },
+        {
+          "n": 8,
+          "text": "matches $ilB_text \"IL 17\\.900 \\| IL 18\\.000 \\| IL 0\\.00 \\| IL 0\\.50\"",
+          "ok": true,
+          "expected": "matches /IL 17\\.900 \\| IL 18\\.000 \\| IL 0\\.00 \\| IL 0\\.50/",
+          "actual": "IL 17.900 | IL 18.000 | IL 0.00 | IL 0.50",
+          "evidence": "matched 'IL 17.900 | IL 18.000 | IL 0.00 | IL 0.50'"
+        },
+        {
+          "n": 9,
+          "text": "number $x17 < 160000",
+          "ok": true,
+          "expected": "< 160000",
+          "actual": "150200",
+          "evidence": "$x17 = 150200 (expected < 160000)"
+        },
+        {
+          "n": 10,
+          "text": "number $x18 > 160000",
+          "ok": true,
+          "expected": "> 160000",
+          "actual": "169800",
+          "evidence": "$x18 = 169800 (expected > 160000)"
+        },
+        {
+          "n": 11,
+          "text": "number $x00 < 160000",
+          "ok": true,
+          "expected": "< 160000",
+          "actual": "150200",
+          "evidence": "$x00 = 150200 (expected < 160000)"
+        },
+        {
+          "n": 12,
+          "text": "number $x50 > 160000",
+          "ok": true,
+          "expected": "> 160000",
+          "actual": "169800",
+          "evidence": "$x50 = 169800 (expected > 160000)"
+        },
+        {
+          "n": 13,
+          "text": "matches $arrowA2 \"rotation.:3\\.14\"",
+          "ok": false,
+          "expected": "matches /rotation.:3\\.14/",
+          "actual": "{\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90237.5,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[]...",
+          "evidence": "no match for /rotation.:3\\.14/ in: {\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90237.5,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[]..."
+        },
+        {
+          "n": 14,
+          "text": "matches $arrowB2 \"rotation.:3\\.14\"",
+          "ok": false,
+          "expected": "matches /rotation.:3\\.14/",
+          "actual": "{\"handle\":\"11C5C6\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-92237.5,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[]...",
+          "evidence": "no match for /rotation.:3\\.14/ in: {\"handle\":\"11C5C6\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-92237.5,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[]..."
+        },
+        {
+          "n": 15,
+          "text": "contains $hA2 \"Pipe updated.\"",
+          "ok": true,
+          "expected": "contains 'Pipe updated.'",
+          "actual": "Command: | Command: CDEDIT | Pipe updated. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_r...",
+          "evidence": "found 'Pipe updated.' in: Command: | Command: CDEDIT | Pipe updated. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before y..."
+        },
+        {
+          "n": 16,
+          "text": "contains $hB2 \"Pipe updated.\"",
+          "ok": true,
+          "expected": "contains 'Pipe updated.'",
+          "actual": "Command: | Command: CDEDIT | Pipe updated. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_r...",
+          "evidence": "found 'Pipe updated.' in: Command: | Command: CDEDIT | Pipe updated. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before y..."
+        },
+        {
+          "n": 17,
+          "text": "matches $arrowB1 \"rotation.:3\\.14\"",
+          "ok": true,
+          "expected": "matches /rotation.:3\\.14/",
+          "actual": "{\"handle\":\"11C5C6\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-92237.5,0.0],\"rotation\":3.141592653589793,\"xscale\":1.0,\"...",
+          "evidence": "matched 'rotation\":3.14'"
+        },
+        {
+          "n": 18,
+          "text": "count $il17a2 = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $il17a2 = 1 (expected = 1)"
+        },
+        {
+          "n": 19,
+          "text": "count $il18a2 = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $il18a2 = 1 (expected = 1)"
+        },
+        {
+          "n": 20,
+          "text": "number $x17a2 < 160000",
+          "ok": true,
+          "expected": "< 160000",
+          "actual": "150200",
+          "evidence": "$x17a2 = 150200 (expected < 160000)"
+        },
+        {
+          "n": 21,
+          "text": "number $x18a2 > 160000",
+          "ok": true,
+          "expected": "> 160000",
+          "actual": "169800",
+          "evidence": "$x18a2 = 169800 (expected > 160000)"
+        },
+        {
+          "n": 22,
+          "text": "count $il00b2 = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $il00b2 = 1 (expected = 1)"
+        },
+        {
+          "n": 23,
+          "text": "count $il50b2 = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $il50b2 = 1 (expected = 1)"
+        },
+        {
+          "n": 24,
+          "text": "number $x00b2 < 160000",
+          "ok": true,
+          "expected": "< 160000",
+          "actual": "150200",
+          "evidence": "$x00b2 = 150200 (expected < 160000)"
+        },
+        {
+          "n": 25,
+          "text": "number $x50b2 > 160000",
+          "ok": true,
+          "expected": "> 160000",
+          "actual": "169800",
+          "evidence": "$x50b2 = 169800 (expected > 160000)"
+        },
+        {
+          "n": 26,
+          "text": "not-contains $win_end \"Creative Engineering\"",
+          "ok": true,
+          "expected": "does not contain 'Creative Engineering'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31223091_B1.dwg]",
+          "evidence": "'Creative Engineering' is absent from: Autodesk AutoCAD 2027 - [CLDV31223091_B1.dwg]"
+        },
+        {
+          "n": 27,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 28,
+          "text": "record $ilA_x \"IL text x values after the first reversing save (pipe 1)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "150200 | 169800",
+          "evidence": "RECORDED, not judged: IL text x values after the first reversing save (pipe 1) = 150200 | 169800"
+        },
+        {
+          "n": 29,
+          "text": "record $hA2 \"FULL what CE said after a second plain Save (pipe 1)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDEDIT | Pipe updated. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL what CE said after a second plain Save (pipe 1) = Command: | Command: CDEDIT | Pipe updated. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 30,
+          "text": "record $arrowA2 \"FULL arrow 1 after a second plain Save\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90237.5,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-90237.5,160375.0,-90237.5],\"block_parts\":[{\"index\":0,\"object\":\"AcDbLeader\",\"layer\":\"25DIMS\",\"color\":256}]}",
+          "evidence": "RECORDED, not judged: FULL arrow 1 after a second plain Save = {\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90237.5,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-90237.5,160375.0,-90237.5],\"block_parts\":[{\"index\":0,\"object\":\"AcDbLeader\",\"layer\":\"25DIMS\",\"color\":256}]}"
+        },
+        {
+          "n": 31,
+          "text": "record $hB2 \"FULL what CE said after a second plain Save (pipe 2)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDEDIT | Pipe updated. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL what CE said after a second plain Save (pipe 2) = Command: | Command: CDEDIT | Pipe updated. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 32,
+          "text": "record $arrowB2 \"FULL arrow 2 after a second plain Save\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C5C6\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-92237.5,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-92237.5,160375.0,-92237.5],\"block_parts\":[{\"index\":0,\"object\":\"AcDbLeader\",\"layer\":\"25DIMS\",\"color\":256}]}",
+          "evidence": "RECORDED, not judged: FULL arrow 2 after a second plain Save = {\"handle\":\"11C5C6\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-92237.5,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-92237.5,160375.0,-92237.5],\"block_parts\":[{\"index\":0,\"object\":\"AcDbLeader\",\"layer\":\"25DIMS\",\"color\":256}]}"
+        },
+        {
+          "n": 33,
+          "text": "record $hA \"FULL what CE said after the reversing save (pipe 1)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDEDIT | Pipe updated. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL what CE said after the reversing save (pipe 1) = Command: | Command: CDEDIT | Pipe updated. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 34,
+          "text": "record $arrowA0 \"FULL arrow 1 before\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90237.5,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-90237.5,160375.0,-90237.5],\"block_parts\":[{\"index\":0,\"object\":\"AcDbLeader\",\"layer\":\"25DIMS\",\"color\":256}]}",
+          "evidence": "RECORDED, not judged: FULL arrow 1 before = {\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90237.5,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-90237.5,160375.0,-90237.5],\"block_parts\":[{\"index\":0,\"object\":\"AcDbLeader\",\"layer\":\"25DIMS\",\"color\":256}]}"
+        },
+        {
+          "n": 35,
+          "text": "record $arrowA1 \"FULL arrow 1 after the reversing save\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90237.5,0.0],\"rotation\":3.141592653589793,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-90237.5,160375.0,-90237.5],\"block_parts\":[{\"index\":0,\"object\":\"AcDbLeader\",\"layer\":\"25DIMS\",\"color\":256}]}",
+          "evidence": "RECORDED, not judged: FULL arrow 1 after the reversing save = {\"handle\":\"11C58D\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-90237.5,0.0],\"rotation\":3.141592653589793,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-90237.5,160375.0,-90237.5],\"block_parts\":[{\"index\":0,\"object\":\"AcDbLeader\",\"layer\":\"25DIMS\",\"color\":256}]}"
+        },
+        {
+          "n": 36,
+          "text": "record $ilA_text \"IL texts after the first reversing save\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "IL 17.900 | IL 18.000",
+          "evidence": "RECORDED, not judged: IL texts after the first reversing save = IL 17.900 | IL 18.000"
+        },
+        {
+          "n": 37,
+          "text": "record $hB \"FULL what CE said after the reversing save (pipe 2, zero level)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDEDIT | Pipe updated. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard.",
+          "evidence": "RECORDED, not judged: FULL what CE said after the reversing save (pipe 2, zero level) = Command: | Command: CDEDIT | Pipe updated. | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 38,
+          "text": "record $arrowB0 \"FULL arrow 2 before\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C5C6\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-92237.5,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-92237.5,160375.0,-92237.5],\"block_parts\":[{\"index\":0,\"object\":\"AcDbLeader\",\"layer\":\"25DIMS\",\"color\":256}]}",
+          "evidence": "RECORDED, not judged: FULL arrow 2 before = {\"handle\":\"11C5C6\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-92237.5,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-92237.5,160375.0,-92237.5],\"block_parts\":[{\"index\":0,\"object\":\"AcDbLeader\",\"layer\":\"25DIMS\",\"color\":256}]}"
+        },
+        {
+          "n": 39,
+          "text": "record $arrowB1 \"FULL arrow 2 after the reversing save\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C5C6\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-92237.5,0.0],\"rotation\":3.141592653589793,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-92237.5,160375.0,-92237.5],\"block_parts\":[{\"index\":0,\"object\":\"AcDbLeader\",\"layer\":\"25DIMS\",\"color\":256}]}",
+          "evidence": "RECORDED, not judged: FULL arrow 2 after the reversing save = {\"handle\":\"11C5C6\",\"object\":\"AcDbBlockReference\",\"layer\":\"ARROW\",\"name\":\"TIM_CVL_ARROW\",\"effective_name\":\"TIM_CVL_ARROW\",\"insertion\":[160000.0,-92237.5,0.0],\"rotation\":3.141592653589793,\"xscale\":1.0,\"attributes\":[],\"bbox\":[159625.0,-92237.5,160375.0,-92237.5],\"block_parts\":[{\"index\":0,\"object\":\"AcDbLeader\",\"layer\":\"25DIMS\",\"color\":256}]}"
+        },
+        {
+          "n": 40,
+          "text": "record $ilB_text \"IL texts after both reversing saves\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "IL 17.900 | IL 18.000 | IL 0.00 | IL 0.50",
+          "evidence": "RECORDED, not judged: IL texts after both reversing saves = IL 17.900 | IL 18.000 | IL 0.00 | IL 0.50"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 256 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CD completed 71220 ms ; Command outcome: CDEDIT completed 34831 ms ; Command outcome: CDEDIT completed 12393 ms ; Command outcome: CD completed 86685 ms ; Command outcome: CDEDIT completed 35545 ms ; Command outcome: CDEDIT completed 22207 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-30 12:31:13",
+      "session_id": "RUN-20261030-1220-C3.0.86-aB7-s1",
+      "acceptance": {
+        "state": "FAIL",
+        "reasons": [
+          "known failure (BUG-1222): it must fail until the fix is installed, then pass in two sessions"
+        ],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,1236 @@
+{
+  "header": {
+    "run_id": "RUN-20261030-1506-C3.0.87-aF1",
+    "started": "2026-10-30 15:06:06",
+    "finished": "2026-10-30 15:23:36",
+    "build": {
+      "civil": {
+        "product_version": "3.0.87+f5dd72a0652c7f749ab52228cea0f9675047b9cb",
+        "file_version": "3.0.87.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.87+f5dd72a0652c7f749ab52228cea0f9675047b9cb",
+        "file_version": "1.1.87.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.87+f5dd72a0 / struc 1.0.125+204dfad2 / mgr 1.1.87+f5dd72a0",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "B2690482B84019A7AADB3A3439881A839A251740C3A4BFCA16CB43AC15B0E76A",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.87+f5dd72a0652c7f749ab52228cea0f9675047b9cb; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.87+f5dd72a0652c7f749ab52228cea0f9675047b9cb",
+      "Driver files (SHA-256, first 12): v2 120EE24D15B2 (expected 120EE24D15B2), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4CD773B85EC5, v3 session 9A7B8D210C7F, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 13955AAA60D1, case_runner_lib.ps1 8F9B8DCBB473, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 7 case file(s) plus 2 shared setup(s); pack SHA-256 B2690482B84019A7AADB3A3439881A839A251740C3A4BFCA16CB43AC15B0E76A; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json B3B5A004B929 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Fri 30 Oct 2026 15:06 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 2,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 5,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 2
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261030-1506-C3.0.87-aF1-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-30 15:06:08",
+      "finished": "2026-10-30 15:16:59",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31506181_B1.dwg",
+      "cases": [
+        "N03",
+        "N04",
+        "N06",
+        "N08",
+        "N09",
+        "N11"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : B3B5A004B929 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": [
+        {
+          "attempt": 1,
+          "how": "v2 quit",
+          "ok": false,
+          "ended_by": null,
+          "error": "AutoCAD did not close gracefully and was NOT killed. If it is stuck, run quit again with -Kill."
+        },
+        {
+          "attempt": 2,
+          "how": "v2 quit",
+          "ok": false,
+          "ended_by": null,
+          "error": "REFUSED: AutoCAD is busy (a command is active) and the last known drawing cannot be trusted: no drawing has been seen yet by this driver. Nothing was closed."
+        },
+        {
+          "attempt": 3,
+          "how": "v2 quit -Kill",
+          "ok": true,
+          "killed": true,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "session_id": "RUN-20261030-1506-C3.0.87-aF1-s2",
+      "phase": "main",
+      "session_no": 2,
+      "started": "2026-10-30 15:16:59",
+      "finished": "2026-10-30 15:23:36",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31517042_B1.dwg",
+      "cases": [
+        "R14h_dstd_200"
+      ],
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "B3B5A004B929"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : B3B5A004B929 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": [
+        {
+          "attempt": 1,
+          "how": "v2 quit",
+          "ok": false,
+          "ended_by": null,
+          "error": "AutoCAD did not close gracefully and was NOT killed. If it is stuck, run quit again with -Kill."
+        },
+        {
+          "attempt": 2,
+          "how": "v2 quit",
+          "ok": false,
+          "ended_by": null,
+          "error": "REFUSED: AutoCAD is busy (a command is active) and the last known drawing cannot be trusted: no drawing has been seen yet by this driver. Nothing was closed."
+        },
+        {
+          "attempt": 3,
+          "how": "v2 quit -Kill",
+          "ok": true,
+          "killed": true,
+          "error": ""
+        }
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "id": "N03",
+      "proves_bugs": "",
+      "title": "OF and FO each place one OVERFLOW symbol, say Overflow placed with an OF tag and Front overflow placed with an FO tag, and offer the next one until Esc",
+      "kind": "deterministic",
+      "order": 30,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "UX-SRC-01 (daily card D08)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "OF at 150000,-80000 prints 'Overflow placed. Tag: OF<n>.' and '[CE] Pick the next OF, or press Esc to stop.'; one Esc stops it; FO at 152000,-80000 prints 'Front overflow placed. Tag: FO<n>.' and '[CE] Pick the next FO, or press Esc to stop.'; exactly two new OVERFLOW block inserts exist, one at each point, so both use the same symbol.",
+      "why_not_unit": "The real block insert, the tag counter and the label are written in the live drawing by the live command.",
+      "not_automated": [
+        "The plan labels OF and FO (card D08 assertion 3, the Number sources setting) are RECORDED only: the object that carries the plan label has not been read by any run yet.",
+        "Tag numbers counting from 1 need a blank drawing; on DRV1_B1 the number is recorded, not asserted.",
+        "That the two symbols look identical on the plan is a picture item (Codex D7-02 PASS on 3.0.78)."
+      ],
+      "file_sha256": "AADE74748DAFB64BCF3848B7EF2160AD765B0B2EA5E535BDCF99BFAB917935EC",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-30 15:08:04",
+      "seconds": 26.4,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"OF{NL}150000,-80000\" -Force -> $of",
+          "ok": true,
+          "seconds": 7.8,
+          "evidence": "typed 'OF 150000,-80000': Command: | Command: OF | Specify overflow insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Overflow placed. Tag: OF..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $of_esc",
+          "ok": true,
+          "seconds": 2.8,
+          "evidence": "esc-prompt: Specify overflow insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Overflow placed. Tag: OF1. Nothing nearby. The so..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"FO{NL}152000,-80000\" -Force -> $fo",
+          "ok": true,
+          "seconds": 7.3,
+          "evidence": "typed 'FO 152000,-80000': Command: | Command: FO | Specify front overflow insertion point: 152000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Front overflow pla..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $fo_esc",
+          "ok": true,
+          "seconds": 2.7,
+          "evidence": "esc-prompt: Specify front overflow insertion point: 152000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Front overflow placed. Tag: FO1. Nothing ne..."
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1038 objects"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $new",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "4 object(s) after index 1034 (model space now 1038); by type: AcDbBlockReference 2; AcDbText 2; first: 11C55B AcDbBlockReference DOWNPIPES OVERFLOW ; 11C561 AcDbText GUIDELINES OF ; 11C56A AcDbBlockReference DOWNPIPES OVERFLOW ; 11C570 AcDbText GUIDELINES FO"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"name=OVERFLOW\" -> $ovs",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 2 of 4: 11C55B OVERFLOW DOWNPIPES ; 11C56A OVERFLOW DOWNPIPES"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $ovs \"near=150000,-80000,50\" -> $ov_of",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C55B OVERFLOW DOWNPIPES"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $ovs \"near=152000,-80000,50\" -> $ov_fo",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C56A OVERFLOW DOWNPIPES"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $ov_of handle -> $h_of",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C55B"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $ov_fo handle -> $h_fo",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C56A"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$h_of} -> $e_of",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "ent-read 11C55B: {\"handle\":\"11C55B\",\"object\":\"AcDbBlockReference\",\"layer\":\"DOWNPIPES\",\"name\":\"OVERFLOW\",\"effective_name\":\"OVERFLOW\",\"insertion\":[150000.0,-80000.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[149423.02372896555,-80175.0,150175.0,..."
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$h_fo} -> $e_fo",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "ent-read 11C56A: {\"handle\":\"11C56A\",\"object\":\"AcDbBlockReference\",\"layer\":\"DOWNPIPES\",\"name\":\"OVERFLOW\",\"effective_name\":\"OVERFLOW\",\"insertion\":[152000.0,-80000.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[151423.02372896555,-80175.0,152175.0,..."
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $new name -All -> $new_names",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'name' = OVERFLOW | | OVERFLOW |"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $new text -All -> $new_texts",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = | OF | | FO"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"Overflow placed. Tag: OF1.\"",
+          "ok": true,
+          "expected": "command line has 'Overflow placed. Tag: OF1.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Overflow placed. Tag: OF1. Nothing nearby. The source connects when a pipe is drawn to it.'"
+        },
+        {
+          "n": 2,
+          "text": "history has \"Front overflow placed. Tag: FO1.\"",
+          "ok": true,
+          "expected": "command line has 'Front overflow placed. Tag: FO1.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Front overflow placed. Tag: FO1. Nothing nearby. The source connects when a pipe is drawn to it.'"
+        },
+        {
+          "n": 3,
+          "text": "matches $new_texts \"(^|\\| )OF( \\||$)\"",
+          "ok": true,
+          "expected": "matches /(^|\\| )OF( \\||$)/",
+          "actual": "| OF | | FO",
+          "evidence": "matched '| OF |'"
+        },
+        {
+          "n": 4,
+          "text": "matches $new_texts \"(^|\\| )FO( \\||$)\"",
+          "ok": true,
+          "expected": "matches /(^|\\| )FO( \\||$)/",
+          "actual": "| OF | | FO",
+          "evidence": "matched '| FO'"
+        },
+        {
+          "n": 5,
+          "text": "history has \"[CE] Pick the next OF, or press Esc to stop.\"",
+          "ok": true,
+          "expected": "command line has '[CE] Pick the next OF, or press Esc to stop.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CE] Pick the next OF, or press Esc to stop.'"
+        },
+        {
+          "n": 6,
+          "text": "history has \"[CE] Pick the next FO, or press Esc to stop.\"",
+          "ok": true,
+          "expected": "command line has '[CE] Pick the next FO, or press Esc to stop.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CE] Pick the next FO, or press Esc to stop.'"
+        },
+        {
+          "n": 7,
+          "text": "history count \"[CE] Stopped. Everything placed stays; U takes back the last one.\" = 2",
+          "ok": true,
+          "expected": "2 line(s) with '[CE] Stopped. Everything placed stays; U takes back the last one.'",
+          "actual": "2",
+          "evidence": "command line holds 2 line(s) containing '[CE] Stopped. Everything placed stays; U takes back the last one.' (expected 2)"
+        },
+        {
+          "n": 8,
+          "text": "count $ovs = 2",
+          "ok": true,
+          "expected": "count = 2",
+          "actual": "2",
+          "evidence": "count of $ovs = 2 (expected = 2)"
+        },
+        {
+          "n": 9,
+          "text": "count $ov_of = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $ov_of = 1 (expected = 1)"
+        },
+        {
+          "n": 10,
+          "text": "count $ov_fo = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $ov_fo = 1 (expected = 1)"
+        },
+        {
+          "n": 11,
+          "text": "record $of \"FULL what OF printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: OF | Specify overflow insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Overflow placed. Tag: OF1. Nothing nearby. The source connects when a pipe is drawn to it. | [CE] Pick the next OF, or press Esc to stop.",
+          "evidence": "RECORDED, not judged: FULL what OF printed = Command: | Command: OF | Specify overflow insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Overflow placed. Tag: OF1. Nothing nearby. The source connects when a pipe is drawn to it. | [CE] Pick the next OF, or press Esc to stop."
+        },
+        {
+          "n": 12,
+          "text": "record $fo \"FULL what FO printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: FO | Specify front overflow insertion point: 152000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Front overflow placed. Tag: FO1. Nothing nearby. The source connects when a pipe is drawn to it. | [CE] Pick the next FO, or press Esc to stop.",
+          "evidence": "RECORDED, not judged: FULL what FO printed = Command: | Command: FO | Specify front overflow insertion point: 152000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Front overflow placed. Tag: FO1. Nothing nearby. The source connects when a pipe is drawn to it. | [CE] Pick the next FO, or press Esc to stop."
+        },
+        {
+          "n": 13,
+          "text": "record $e_of \"FULL the OF insert (attributes, layer)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C55B\",\"object\":\"AcDbBlockReference\",\"layer\":\"DOWNPIPES\",\"name\":\"OVERFLOW\",\"effective_name\":\"OVERFLOW\",\"insertion\":[150000.0,-80000.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[149423.02372896555,-80175.0,150175.0,-79370.45799612555],\"block_parts\":[{\"index\":0,\"object\":\"AcDbHatch\",\"layer\":\"DOWNPIPES HATCH\",\"color\":256,\"hatch\":true},{\"index\":1,\"object\":\"AcDbCircle\",\"layer\":\"DOWNPIPES\",\"color\":256,\"world_center\":[150000.0,-80000.0],\"world_radius\":75.0,\"world_on_line\":[150075.0,-80000.0]},{\"index\":2,\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"color\":256},{\"index\":3,\"object\":\"AcDbCircle\",\"layer\":\"DEFPOINTS\",\"color\":256,\"world_center\":[150000.0,-80000.0],\"world_radius\":175.0,\"world_on_line\":[150175.0,-80000.0]}]}",
+          "evidence": "RECORDED, not judged: FULL the OF insert (attributes, layer) = {\"handle\":\"11C55B\",\"object\":\"AcDbBlockReference\",\"layer\":\"DOWNPIPES\",\"name\":\"OVERFLOW\",\"effective_name\":\"OVERFLOW\",\"insertion\":[150000.0,-80000.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[149423.02372896555,-80175.0,150175.0,-79370.45799612555],\"block_parts\":[{\"index\":0,\"object\":\"AcDbHatch\",\"layer\":\"DOWNPIPES HATCH\",\"color\":256,\"hatch\":true},{\"index\":1,\"object\":\"AcDbCircle\",\"layer\":\"DOWNPIPES\",\"color\":256,\"world_center\":[150000.0,-80000.0],\"world_radius\":75.0,\"world_on_line\":[150075.0,-80000.0]},{\"index\":2,\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"color\":256},{\"index\":3,\"object\":\"AcDbCircle\",\"layer\":\"DEFPOINTS\",\"color\":256,\"world_center\":[150000.0,-80000.0],\"world_radius\":175.0,\"world_on_line\":[150175.0,-80000.0]}]}"
+        },
+        {
+          "n": 14,
+          "text": "record $e_fo \"FULL the FO insert (attributes, layer)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C56A\",\"object\":\"AcDbBlockReference\",\"layer\":\"DOWNPIPES\",\"name\":\"OVERFLOW\",\"effective_name\":\"OVERFLOW\",\"insertion\":[152000.0,-80000.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[151423.02372896555,-80175.0,152175.0,-79370.45799612555],\"block_parts\":[{\"index\":0,\"object\":\"AcDbHatch\",\"layer\":\"DOWNPIPES HATCH\",\"color\":256,\"hatch\":true},{\"index\":1,\"object\":\"AcDbCircle\",\"layer\":\"DOWNPIPES\",\"color\":256,\"world_center\":[152000.0,-80000.0],\"world_radius\":75.0,\"world_on_line\":[152075.0,-80000.0]},{\"index\":2,\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"color\":256},{\"index\":3,\"object\":\"AcDbCircle\",\"layer\":\"DEFPOINTS\",\"color\":256,\"world_center\":[152000.0,-80000.0],\"world_radius\":175.0,\"world_on_line\":[152175.0,-80000.0]}]}",
+          "evidence": "RECORDED, not judged: FULL the FO insert (attributes, layer) = {\"handle\":\"11C56A\",\"object\":\"AcDbBlockReference\",\"layer\":\"DOWNPIPES\",\"name\":\"OVERFLOW\",\"effective_name\":\"OVERFLOW\",\"insertion\":[152000.0,-80000.0,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[],\"bbox\":[151423.02372896555,-80175.0,152175.0,-79370.45799612555],\"block_parts\":[{\"index\":0,\"object\":\"AcDbHatch\",\"layer\":\"DOWNPIPES HATCH\",\"color\":256,\"hatch\":true},{\"index\":1,\"object\":\"AcDbCircle\",\"layer\":\"DOWNPIPES\",\"color\":256,\"world_center\":[152000.0,-80000.0],\"world_radius\":75.0,\"world_on_line\":[152075.0,-80000.0]},{\"index\":2,\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"color\":256},{\"index\":3,\"object\":\"AcDbCircle\",\"layer\":\"DEFPOINTS\",\"color\":256,\"world_center\":[152000.0,-80000.0],\"world_radius\":175.0,\"world_on_line\":[152175.0,-80000.0]}]}"
+        },
+        {
+          "n": 15,
+          "text": "record $new_names \"block names of every new object\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "OVERFLOW | | OVERFLOW |",
+          "evidence": "RECORDED, not judged: block names of every new object = OVERFLOW | | OVERFLOW |"
+        },
+        {
+          "n": 16,
+          "text": "record $new_texts \"text of every new text object (plan labels, if they are text)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "| OF | | FO",
+          "evidence": "RECORDED, not judged: text of every new text object (plan labels, if they are text) = | OF | | FO"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 98 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: OF completed 8710 ms ; Command outcome: FO completed 8036 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-30 15:08:31",
+      "session_id": "RUN-20261030-1506-C3.0.87-aF1-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": true
+      }
+    },
+    {
+      "id": "N04",
+      "proves_bugs": "",
+      "title": "A downpipe and a raingarden place on empty ground with no pipe to join, nothing is refused, and one U takes back only the raingarden",
+      "kind": "deterministic",
+      "order": 40,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "UX-SRC-05 (daily card D07); BUG-176 (CDRG no longer needs a pipe)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "DP at 150000,-80000 prints 'Downpipe placed. Tag: DP<n>. Nothing nearby. The source connects when a pipe is drawn to it.' and offers the next DP; Esc stops it; one new DOWNPIPE DYNAMIC WITH MASK insert exists. CDRG with the four corners 160000,-80000 / 164000,-80000 / 164000,-77000 / 160000,-77000, C (Close) and Skip at the GIO question prints 'Raingarden RG<n> placed. 4 vertices, 12.0 m2' (square metres), with no 'CDRG command cancelled.' and no error; the object count rises; one U echoes CDRG and the object count returns to the count after the downpipe (the downpipe stays).",
+      "why_not_unit": "The placement route depends on the live drawing having no pipe near the point to split or join, and the outline is collected by a live drag prompt.",
+      "not_automated": [
+        "A drawing with NO pipe at all (the card's blank fixture F-BLANK) is not used: the runner has no blank DRV master. Codex D7-01 covered the blank drawing on 3.0.78 (DIFFERENT only on the unitless-area wording).",
+        "The RG plan label and the raingarden's look are not judged (Codex D7-01 could not read the RG1 label; a picture item)."
+      ],
+      "file_sha256": "74CA6C503ADD33264B0BC67424D39168E7F03E12249632C2B74C6383AE072E27",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-30 15:08:31",
+      "seconds": 29.6,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"DP{NL}150000,-80000\" -Force -> $dp",
+          "ok": true,
+          "seconds": 7.1,
+          "evidence": "typed 'DP 150000,-80000': Command: DP | Specify downpipe insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. Nothing ..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $dp_esc",
+          "ok": true,
+          "seconds": 2.6,
+          "evidence": "esc-prompt: Specify downpipe insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. Nothing nearby. The so..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1036 objects"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $new_dp",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "2 object(s) after index 1034 (model space now 1036); by type: AcDbBlockReference 1; AcDbText 1; first: 11C55B AcDbBlockReference DOWNPIPES DOWNPIPE DYNAMIC WITH MASK ; 11C563 AcDbText GUIDELINES DP"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_dp \"name=DOWNPIPE DYNAMIC WITH MASK\" -> $dps",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 2: 11C55B DOWNPIPE DYNAMIC WITH MASK DOWNPIPES"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDRG{NL}160000,-80000{NL}164000,-80000{NL}164000,-77000{NL}160000,-77000{NL}C{NL}Skip\" -Force -> $rg",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "typed 'CDRG 160000,-80000 164000,-80000 164000,-77000 160000,-77000 C Skip': Command: | Command: CDRG | Specify first raingarden point: 160000,-80000 | Next point [Undo] [Undo]: 164000,-80000 | Next point [Undo] [Undo]: 164000,-77000 | Next point (3 pts) [Close/Undo] [Close/Undo]: 160000,-77000 |..."
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 2",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "slept 2 s"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1039 objects"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c1 -> $new_rg",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "3 object(s) after index 1036 (model space now 1039); by type: AcDbHatch 1; AcDbPolyline 1; AcDbText 1; first: 11C56D AcDbPolyline 50CONT ; 11C56E AcDbHatch HATCH113 ; 11C56F AcDbText GUIDELINES RG2"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $new_rg object -All -> $rg_objects",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'object' = AcDbPolyline | AcDbHatch | AcDbText"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -> $u1",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "typed 'U': Command: | Command: U | CDRG"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c3",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1036 objects"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"Downpipe placed. Tag: DP\"",
+          "ok": true,
+          "expected": "command line has 'Downpipe placed. Tag: DP'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Downpipe placed. Tag: DP1. Nothing nearby. The source connects when a pipe is drawn to it.'"
+        },
+        {
+          "n": 2,
+          "text": "history has \"The source connects when a pipe is drawn to it.\"",
+          "ok": true,
+          "expected": "command line has 'The source connects when a pipe is drawn to it.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Downpipe placed. Tag: DP1. Nothing nearby. The source connects when a pipe is drawn to it.'"
+        },
+        {
+          "n": 3,
+          "text": "history has \"[CE] Pick the next DP, or press Esc to stop.\"",
+          "ok": true,
+          "expected": "command line has '[CE] Pick the next DP, or press Esc to stop.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CE] Pick the next DP, or press Esc to stop.'"
+        },
+        {
+          "n": 4,
+          "text": "count $dps = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $dps = 1 (expected = 1)"
+        },
+        {
+          "n": 5,
+          "text": "history has \"Add a GIO source to this raingarden?\"",
+          "ok": true,
+          "expected": "command line has 'Add a GIO source to this raingarden?'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Add a GIO source to this raingarden? [Place/Skip] <Skip> [Place/Skip] <Skip>: Skip'"
+        },
+        {
+          "n": 6,
+          "text": "history has \"Raingarden RG\"",
+          "ok": true,
+          "expected": "command line has 'Raingarden RG'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Raingarden RG2 placed. 4 vertices, 12.0 m².'"
+        },
+        {
+          "n": 7,
+          "text": "history has \"placed. 4 vertices, 12.0 m\"",
+          "ok": true,
+          "expected": "command line has 'placed. 4 vertices, 12.0 m'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Raingarden RG2 placed. 4 vertices, 12.0 m².'"
+        },
+        {
+          "n": 8,
+          "text": "history absent \"CDRG command cancelled.\"",
+          "ok": true,
+          "expected": "command line lacks 'CDRG command cancelled.'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'CDRG command cancelled.' (19 lines read)"
+        },
+        {
+          "n": 9,
+          "text": "history absent \"Error during CDRG\"",
+          "ok": true,
+          "expected": "command line lacks 'Error during CDRG'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'Error during CDRG' (19 lines read)"
+        },
+        {
+          "n": 10,
+          "text": "history absent \"was not placed\"",
+          "ok": true,
+          "expected": "command line lacks 'was not placed'",
+          "actual": "0 matching line(s)",
+          "evidence": "no line contains 'was not placed' (19 lines read)"
+        },
+        {
+          "n": 11,
+          "text": "number $c2 > $c1",
+          "ok": true,
+          "expected": "> 1036",
+          "actual": "1039",
+          "evidence": "$c2 = 1039 (expected > 1036)"
+        },
+        {
+          "n": 12,
+          "text": "contains $u1 \"CDRG\"",
+          "ok": true,
+          "expected": "contains 'CDRG'",
+          "actual": "Command: | Command: U | CDRG",
+          "evidence": "found 'CDRG' in: Command: | Command: U | CDRG"
+        },
+        {
+          "n": 13,
+          "text": "equals $c3 $c1",
+          "ok": true,
+          "expected": "1036",
+          "actual": "1036",
+          "evidence": "value '1036' (expected '1036')"
+        },
+        {
+          "n": 14,
+          "text": "record $dp \"FULL what DP printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: DP | Specify downpipe insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. Nothing nearby. The source connects when a pipe is drawn to it. | [CE] Pick the next DP, or press Esc to stop.",
+          "evidence": "RECORDED, not judged: FULL what DP printed = Command: DP | Specify downpipe insertion point: 150000,-80000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. Nothing nearby. The source connects when a pipe is drawn to it. | [CE] Pick the next DP, or press Esc to stop."
+        },
+        {
+          "n": 15,
+          "text": "record $rg \"FULL what CDRG printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDRG | Specify first raingarden point: 160000,-80000 | Next point [Undo] [Undo]: 164000,-80000 | Next point [Undo] [Undo]: 164000,-77000 | Next point (3 pts) [Close/Undo] [Close/Undo]: 160000,-77000 | Next point (4 pts) [Close/Undo] [Close/Undo]: C | Add a GIO source to this raingarden? [Place/Skip] <Skip> [Place/Skip] <Skip>: Skip | Raingarden RG2 placed. 4 vertices, 12.0 m².",
+          "evidence": "RECORDED, not judged: FULL what CDRG printed = Command: | Command: CDRG | Specify first raingarden point: 160000,-80000 | Next point [Undo] [Undo]: 164000,-80000 | Next point [Undo] [Undo]: 164000,-77000 | Next point (3 pts) [Close/Undo] [Close/Undo]: 160000,-77000 | Next point (4 pts) [Close/Undo] [Close/Undo]: C | Add a GIO source to this raingarden? [Place/Skip] <Skip> [Place/Skip] <Skip>: Skip | Raingarden RG2 placed. 4 vertices, 12.0 m²."
+        },
+        {
+          "n": 16,
+          "text": "record $rg_objects \"object types CDRG added\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "AcDbPolyline | AcDbHatch | AcDbText",
+          "evidence": "RECORDED, not judged: object types CDRG added = AcDbPolyline | AcDbHatch | AcDbText"
+        },
+        {
+          "n": 17,
+          "text": "record $u1 \"FULL what U printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: U | CDRG",
+          "evidence": "RECORDED, not judged: FULL what U printed = Command: | Command: U | CDRG"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV31506181_B1_1b8ec26a8.log)",
+        "Civil CE log: 100 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: DP completed 7817 ms ; Command outcome: CDRG completed 79 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-30 15:09:00",
+      "session_id": "RUN-20261030-1506-C3.0.87-aF1-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": true
+      }
+    },
+    {
+      "id": "N06",
+      "proves_bugs": "",
+      "title": "After PIT and CD the current layer is still BLOCKS, nothing new is on layer 0 or on BLOCKS, the pit is on STORMWATER PIT and the flow arrow on ARROW",
+      "kind": "deterministic",
+      "order": 60,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "UX-LYR-01 installed part (daily card D24); the never-recolour half is not built",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "After SETUP-P8 (PIT at 150000,-80000 and a CD pipe to 170000,-80000) the current layer CLAYER still reads BLOCKS (its value when the drawing opened); none of the new objects is on layer 0 or on BLOCKS; the one new pit block is on STORMWATER PIT; the one new flow arrow (TIM_CVL_ARROW) is on ARROW. The layers of the IL texts, the pipe label and the pipe object are recorded.",
+      "why_not_unit": "Layer choice and the current-layer restore happen in the live drawing's layer table during real PIT and CD runs.",
+      "not_automated": [
+        "'An existing layer is never recoloured' is NOT BUILT; the layer table colours are not read.",
+        "The pit label layer is covered by N05 (this setup escapes the label prompt, so no label exists here)."
+      ],
+      "file_sha256": "4A402A8FB2CF87861EEAEA07BCA0011EDF2900FC62417FF887B253B737E8CD24",
+      "result": "BLOCKED",
+      "blocked": "refused by a driver guard",
+      "first_failure": null,
+      "started": "2026-10-30 15:09:00",
+      "seconds": 162.4,
+      "setup": "SETUP-P8",
+      "setup_note": "shared setup SETUP-P8 run here for the first time at 15:10:04",
+      "steps": [
+        {
+          "n": 1,
+          "phase": "setup",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV31506181_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "setup",
+          "verb": "ms-count",
+          "text": "ms-count -> $n0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"PIT{NL}150000,-80000\" -Force -ExpectWindow \"New Pit\" -> $pit_t1",
+          "ok": true,
+          "seconds": 14.9,
+          "evidence": "typed 'PIT 150000,-80000': Command: PIT | Specify pit insertion point: 150000,-80000"
+        },
+        {
+          "n": 4,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.CoverLevel\" \"19.000\"",
+          "ok": true,
+          "seconds": 4.0,
+          "evidence": "ui set 'New Pit' C2.CoverLevel = 19.000: "
+        },
+        {
+          "n": 5,
+          "phase": "setup",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pit\" \"New pit, Continue placement\" -> $pit_t2",
+          "ok": true,
+          "seconds": 34.2,
+          "evidence": "pressed 'New pit, Continue placement' in /New Pit/: window closed = True"
+        },
+        {
+          "n": 6,
+          "phase": "setup",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pit\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /^New Pit/ closed after 0 s"
+        },
+        {
+          "n": 7,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e1",
+          "ok": false,
+          "seconds": 2.5,
+          "evidence": "esc-prompt: REFUSED: no key was sent (not_foreground): the AutoCAD main window would not take the keyboard."
+        }
+      ],
+      "assertions": [],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV31506181_B1_1ffb42507.log)",
+        "Civil CE log: 33 new line(s) while the case ran, 0 with [ERR]",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)"
+      ],
+      "error": null,
+      "finished": "2026-10-30 15:11:43",
+      "session_id": "RUN-20261030-1506-C3.0.87-aF1-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": true
+      }
+    },
+    {
+      "id": "N08",
+      "proves_bugs": "",
+      "title": "CDRENUMBER lists P9 -> P8 and P10 -> P9, No changes nothing, Yes renumbers the two pits, the Pit Schedule follows, and U brings the old numbers back",
+      "kind": "deterministic",
+      "order": 80,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "UX-CPLAN-18/19 CDRENUMBER (daily card D20)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "On the untouched copy CDRENUMBER says the main outlet is not obvious and asks 'Which pit is the main outlet? ... [C1/X1] <C1>:' (answered C1), lists 'Renumber downhill to uphill:', 'P9 -> P8' and 'P10 -> P9', and asks '2 pit(s) will be renumbered. Apply? [Yes/No] <No>:'. No prints 'Renumber cancelled - nothing changed.'. Run again and Yes prints 'Renumbered 2 pit(s) downhill to uphill. One Undo restores the old numbers.'; the Pit Schedule then lists Pit P8 and no Pit P10; two U (the first echoes PITSCHEDULE, the second CDRENUMBER) and the schedule lists Pit P10 again and no Pit P8.",
+      "why_not_unit": "The network walk runs on the real drawing's pits and pipes and writes every label in one live command; the schedule is read from the live drawing.",
+      "not_automated": [
+        "The PIT LABEL blocks on the plan are not read one by one (their handles are not known); the Pit Schedule rows are read instead. The non-P marks (C1, AGI, TG, WT) are checked only by recording the schedule before and after.",
+        "Whether the network order chosen is the right engineering order is not judged (the preview is taken as CE's rule; Tim's word for the rule itself)."
+      ],
+      "file_sha256": "35C4E2C9193115E573FB9BD7E7F35F744BBEE54845EF3F577BE3EF0FCF3E0E88",
+      "result": "BLOCKED",
+      "blocked": "AutoCAD busy: the fresh copy of the drawing could not be opened (reopen-copy): BUSY: AutoCAD is busy (a command or window is active). Nothing was done.",
+      "first_failure": null,
+      "started": "2026-10-30 15:11:43",
+      "seconds": 104.7,
+      "setup": "",
+      "setup_note": null,
+      "steps": [],
+      "assertions": [],
+      "pictures": [],
+      "observations": [
+        "the fresh copy of the drawing could not be opened (reopen-copy): BUSY: AutoCAD is busy (a command or window is active). Nothing was done.",
+        "Civil CE log: 0 new line(s) while the case ran, 0 with [ERR]",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=True)"
+      ],
+      "error": null,
+      "finished": "2026-10-30 15:13:28",
+      "session_id": "RUN-20261030-1506-C3.0.87-aF1-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": true
+      }
+    },
+    {
+      "id": "N09",
+      "proves_bugs": "",
+      "title": "The Pit Schedule lists P1, P2 ... P7, P9, P10 in number order and never puts P10 before P1 or P2",
+      "kind": "deterministic",
+      "order": 90,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "UX-SCHED-06 basic natural order (daily card D21)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "PITSCHEDULE on the untouched copy lists the pit rows Pit P1, Pit P2, Pit P3, Pit P4, Pit P5, Pit P6, Pit P7, Pit P9 and Pit P10 in that order from top to bottom; no Pit P10 row comes before the Pit P1 or Pit P2 row; the Close button closes the window.",
+      "why_not_unit": "The order shown depends on the live window reading the real pits of the drawing.",
+      "not_automated": [
+        "The refinement P1A straight after P1 and SPS2 before SPS10 is behind linking.pitScheduleNaturalOrder (OFF) and needs a fixture with such names: not tested.",
+        "The group order LPD, OG, P, CP, then the rest is RECORDED (the full row list), not asserted.",
+        "Pits placed new in the session (card steps 1 to 3) are not used; the fixture's own P9 and P10 prove the same sorting rule."
+      ],
+      "file_sha256": "6597D8D540B38D5E9F68644211D491E3E394938730ED269751B2428CF551D5BD",
+      "result": "BLOCKED",
+      "blocked": "AutoCAD busy: the fresh copy of the drawing could not be opened (reopen-copy): BUSY: AutoCAD is busy (a command or window is active). Nothing was done.",
+      "first_failure": null,
+      "started": "2026-10-30 15:13:28",
+      "seconds": 107.6,
+      "setup": "",
+      "setup_note": null,
+      "steps": [],
+      "assertions": [],
+      "pictures": [],
+      "observations": [
+        "the fresh copy of the drawing could not be opened (reopen-copy): BUSY: AutoCAD is busy (a command or window is active). Nothing was done.",
+        "Civil CE log: 0 new line(s) while the case ran, 0 with [ERR]",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=True)",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)"
+      ],
+      "error": null,
+      "finished": "2026-10-30 15:15:15",
+      "session_id": "RUN-20261030-1506-C3.0.87-aF1-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": true
+      }
+    },
+    {
+      "id": "N11",
+      "proves_bugs": "",
+      "title": "After an Edit Pipe cascade from P3, U and REDO, the Pit Schedule rows of P3 and P2 carry the new levels, and after two more U every schedule row reads exactly as before the edit",
+      "kind": "deterministic",
+      "order": 110,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "Before the edit the P3 row reads FROM P4, 450, 17.30, 450, 17.25, cover 18.88. Edit Pipe on 10A98D with 17.60 / 17.50, Recalculate Yes and Apply say 'Updated 4 pipes and 3 pits from P3 (IL 17.50)'; one U echoes CDEDIT; after 12 s REDO says 'Everything has been redone'; the Pit Schedule then shows the P3 row with inlet 17.50 and outlet 17.45 and the P2 row with inlet 17.33 and outlet 17.28; two U (PITSCHEDULE, then CDEDIT) and the schedule rows read exactly as before the edit.",
+      "why_not_unit": "The real Edit Pipe window, the downstream recalculation, CE's stored records, the schedule and AutoCAD's undo stack all take part; only a live drawing shows that U and REDO carry the stored levels too.",
+      "not_automated": [
+        "The Recalculate box body and the STUB to X1 warning are not proved (as R11).",
+        "Pipe-by-pipe stored grades are not read (the schedule shows pit levels, not grades)."
+      ],
+      "file_sha256": "C13A2B8D31203C2DB6263B4B5BAD0791713C59594D9D7D334E153F9CB59C78AC",
+      "plan_item": "Edit Pipe cascade with U and REDO, the stored-level half (gap plan section 3 item 7; card C40; R11 covers the IL texts)",
+      "result": "BLOCKED",
+      "blocked": "the session was stopped after two tool faults in a row; this case was not tried",
+      "first_failure": null,
+      "steps": [],
+      "assertions": [],
+      "pictures": [],
+      "observations": [],
+      "seconds": 0,
+      "setup": "",
+      "setup_note": null,
+      "session_id": "RUN-20261030-1506-C3.0.87-aF1-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": true
+      }
+    },
+    {
+      "id": "R14h_dstd_200",
+      "proves_bugs": "",
+      "title": "CDTWL wording follows designStandards.detentionFreeboardMm raised to 200 mm (the other key stays 150)",
+      "kind": "deterministic",
+      "order": 33,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "CDTWL freeboard follows a RAISED setting (C39 higher-setting coverage)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed. Built on 26 Oct 2026 exactly as cx_cr04 (Codex independent review) asks: same setup and answers as R14, freeboard raised to 200 mm through the settings guard.",
+      "variant_of": "",
+      "expected": "After CDTWL with the answers 10 and 18.70 the command line says 'Only 40 mm between the water and the lid of pit C1 (200 mm is wanted).' and 'Only 110 mm' for pits P1 and P7 with '(200 mm is wanted)'; CDTWL ends idle and the Civil log holds one CDTWL completed line.",
+      "why_not_unit": "Which Settings key the real CDTWL reads, and whether a raised value reaches the wording, is only seen on the live command line.",
+      "not_automated": [
+        "200 mm is a diagnostic value, not an engineering approval; the other freeboard key stays at the 150 baseline unless named in the SETTING lines. How the two keys are combined is read from the result, not assumed."
+      ],
+      "file_sha256": "75A91D22C7542579B661A60D938481BD0E141D2837D276427CC8FCA759528A14",
+      "result": "BLOCKED",
+      "blocked": "refused by a driver guard",
+      "first_failure": null,
+      "started": "2026-10-30 15:18:43",
+      "seconds": 183.0,
+      "setup": "SETUP-R47",
+      "setup_note": "shared setup SETUP-R47 run here for the first time at 15:20:05",
+      "steps": [
+        {
+          "n": 1,
+          "phase": "setup",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV31517042_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "setup",
+          "verb": "pick-first",
+          "text": "pick-first \"109D56\"",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "pick-first 109D56: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"109D56\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 3,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"_.MOVE{NL}0,0{NL}0,2000\" -Force -> $setup_move",
+          "ok": true,
+          "seconds": 5.4,
+          "evidence": "typed '_.MOVE 0,0 0,2000': Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,2000 | [CE Civil] pipe P3 -> P2 label: no clear spot among it..."
+        },
+        {
+          "n": 4,
+          "phase": "setup",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 6.2,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "setup",
+          "verb": "ms-count",
+          "text": "ms-count -> $n0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 6,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"PIT{NL}150000,-80000\" -Force -ExpectWindow \"New Pit\" -> $pit_t1",
+          "ok": true,
+          "seconds": 15.5,
+          "evidence": "typed 'PIT 150000,-80000': Command: | Command: PIT | Specify pit insertion point: 150000,-80000 | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C..."
+        },
+        {
+          "n": 7,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.CoverLevel\" \"19.000\"",
+          "ok": true,
+          "seconds": 3.2,
+          "evidence": "ui set 'New Pit' C2.CoverLevel = 19.000: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 8,
+          "phase": "setup",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pit\" \"New pit, Continue placement\" -> $pit_t2",
+          "ok": true,
+          "seconds": 41.0,
+          "evidence": "pressed 'New pit, Continue placement' in /New Pit/: window closed = True"
+        },
+        {
+          "n": 9,
+          "phase": "setup",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pit\" -Secs 120",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "the window /^New Pit/ closed after 0 s"
+        },
+        {
+          "n": 10,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e1",
+          "ok": false,
+          "seconds": 8.2,
+          "evidence": "esc-prompt: REFUSED: no key was sent (not_foreground): the AutoCAD main window would not take the keyboard."
+        }
+      ],
+      "assertions": [],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 86 new line(s) while the case ran, 0 with [ERR]",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=False)"
+      ],
+      "error": null,
+      "finished": "2026-10-30 15:21:46",
+      "session_id": "RUN-20261030-1506-C3.0.87-aF1-s2",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}

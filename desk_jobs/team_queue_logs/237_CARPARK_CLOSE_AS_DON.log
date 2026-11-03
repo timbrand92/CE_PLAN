@@ -1,0 +1,1 @@
+`C:\CE_PLAN\areas\CARPARK_CLOSE_AS_DONE_CHECK_02NOV.md` — BUG-1229 and BUG-1215 are ALREADY-FIXED-IN-3.0.89; BUG-1217, BUG-1233 and BUG-1230 are NOT-FIXED. I wrote to `C:\CE_PLAN\areas\` because the path in your order looked like it was missing a backslash.

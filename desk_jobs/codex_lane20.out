@@ -1,0 +1,30 @@
+== cx_s13 (usage 36.0% -> 42.0%): 1. **Four findings saved and pushed:** 3 HIGH, 1 MEDIUM. Biggest: **“Preview drawing updates” saves changes to drawings immediately.** [Findings and exact tests](C:/CE_PLAN/areas/CODEX_SWEEP_S13_23OCT.md).
+
+2. **Sweep incomplete:** all 189 files were retrieved and indexed, but full-body reading remains unfinished. No builds, tests or AutoCAD sessions ran.
+
+---
+
+1. **Saved:** `2b85610b` on CE_PLAN `main`. Only the findings file committed; leak scan passed.
+== cx_s14 (usage 42.0% -> 47.0%): 1. **DONE — 6 findings:** 3 HIGH, 3 MEDIUM, 0 LOW across 189 files.
+
+2. **Most important:** Markup Undo targets the active drawing after switching drawings, while falsely marking the earlier batch undone.
+
+3. **Saved and pushed:** [S14 findings and reproduction steps](C:/CE_PLAN/areas/CODEX_SWEEP_S14_23OCT.md).
+
+---
+
+1. **Evidence:** Verified by reading only. No builds, tests or AutoCAD runs; no plugin changes.
+
+2. **Commit:** `e99dba12`. Only the findings file committed. Leak scan passed.
+== cx_s15 (usage 47.0% -> 50.0%): 1. **DONE — 3 HIGH, 1 MEDIUM, 0 LOW.** Most important: switching one support can erase and move a neighbouring support’s text.
+
+2. **Report:** [CODEX_SWEEP_S15_23OCT.md](C:/CE_PLAN/areas/CODEX_SWEEP_S15_23OCT.md). Includes code evidence and deterministic reproduction steps.
+
+---
+
+3. **Delivered:** Only the findings file committed and pushed to `CE_PLAN/main`: `6d186c7e`. Leak scan passed. Findings verified by reading; no builds, tests or AutoCAD run.
+== cx_s16 (usage 50.0% -> 54.0%): 1. **DONE — HIGH 0 / MEDIUM 2 / LOW 1.** Read all 183 files. Most important: Manager buttons can feed command names into an unfinished AutoCAD prompt.
+
+2. **Report:** [CODEX_SWEEP_S16_23OCT.md](C:/CE_PLAN/areas/CODEX_SWEEP_S16_23OCT.md). Includes source references and deterministic tests.
+
+3. **Pushed:** `a429841b` to CE_PLAN/main; leak scan clean. Only the findings file committed. No builds, tests or AutoCAD run.

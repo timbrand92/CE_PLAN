@@ -1,0 +1,8 @@
+**BUG-859 round 2: draft PR #1522 opened (head `8799d200`). It is not in AutoCAD yet.**
+
+- **Cause:** AutoCAD's double-click hands the block to the attribute editor inside the command, so the pick-first set CE reads is empty.
+- **Fix:** keep the double-click position, then find the one block under it. Several blocks, an Xref block, or any failure leaves AutoCAD's editor alone.
+- **Log line:** it also writes "double-click hit-test: N block(s) under the pointer; source tag = X".
+- **Tests:** 19,107 total, 1 red (known GlenEira). net48 builds clean.
+- **Unproven:** whether the position is a drawing point or a screen pixel. Both readings are tried; the log shows which.
+- **Report:** `C:\CE_PLAN\areas\release-v3-colleagues-BUG859_R2_REPORT.md`, pushed. Worktree removed.

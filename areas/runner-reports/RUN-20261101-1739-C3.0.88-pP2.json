@@ -1,0 +1,543 @@
+{
+  "header": {
+    "run_id": "RUN-20261101-1739-C3.0.88-pP2",
+    "started": "2026-11-01 17:39:23",
+    "finished": "2026-11-01 17:44:55",
+    "build": {
+      "civil": {
+        "product_version": "3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+        "file_version": "3.0.88.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+        "file_version": "1.1.88.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.88+3fbb9da5 / struc 1.0.125+204dfad2 / mgr 1.1.88+3fbb9da5",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "47630E3F49C9852280189B1266129098C48053C58A87F874F18EBBCC2A55B353",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+      "Driver files (SHA-256, first 12): v2 F4D8F40C3675 (expected F4D8F40C3675), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4B0175FFAB00, v3 session F061E3240C47, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 BBF42DBA8958, case_runner_lib.ps1 89AD455619F8, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 0 shared setup(s); pack SHA-256 47630E3F49C9852280189B1266129098C48053C58A87F874F18EBBCC2A55B353; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json D604CE689671 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sun 01 Nov 2026 17:39 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 1,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 1
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261101-1739-C3.0.88-pP2-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-11-01 17:39:24",
+      "finished": "2026-11-01 17:44:55",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31739291_B1.dwg",
+      "cases": [
+        "PROBE-W780"
+      ],
+      "whatsnew_dismissed_at_start": "no, window was not there",
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : D604CE689671 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "PROBE-W780",
+      "proves_bugs": "",
+      "title": "PROBE: what window is open after the first CD pipe Start Pipe (W780 block)",
+      "kind": "deterministic",
+      "order": 90,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "BUG-proof wave 1, group S (Pit Schedule merged inlet rows); BUG-780",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed",
+      "variant_of": "",
+      "expected": "Pits Y and X, downpipes DP1 and DP2, pipes DP1->X and DP2->X (100 mm, both arriving at 18.31), Y->X (225 mm, arriving at 18.53) and X->open end. PITSCHEDULE (Pit and pipes view) shows pit X with a row FROM 'DPs', DIA 100, IL 18.31, and a row FROM <Y>, DIA 225, IL 18.53. No row carries a P-numbered FROM with DIA 100 and IL 18.31. The window closes with Close; no CE window is left open; the drawing file is unchanged.",
+      "why_not_unit": "ConsolidateInletsKeepingSource is pure and unit-tested; only the live drawing shows that the window's real inlet order (by the stored level, ties in drawing order), the real FROM labels of downpipes and the real drawn sizes give the row its own pipe.",
+      "not_automated": [
+        "The drawn table and the CDDESIGN redesign review (NetworkRedesignScheduleReviewService, the bug's other two copies of the pairing) are not driven: placing or updating the drawn schedule is blocked on DRV1_B1 (see report), and CDDESIGN redesign Apply is out of scope. An edit on the row writing to the right pipe (the bug's 'link handle points at DP2') is not driven: the window grid cells have no control ids.",
+        "The look of the window (Codex): only the dump text is read."
+      ],
+      "file_sha256": "D71694DABFE73255FBA5D1B319B135EEC78AE44575F0E8A5AEB7A657EDFA4F6E",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-11-01 17:40:11",
+      "seconds": 265.2,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "copy CLDV31739291_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM _W 146000,-78000 174000,-56000\" -Force",
+          "ok": true,
+          "seconds": 2.8,
+          "evidence": "typed '_.ZOOM _W 146000,-78000 174000,-56000': Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _W | Specify first corner: 146000,-78000 Specify opposi..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"PIT{NL}160000,-60000\" -Force -ExpectWindow \"New Pit\" -TimeoutSec 120 -> $pitY",
+          "ok": true,
+          "seconds": 9.8,
+          "evidence": "typed 'PIT 160000,-60000': Command: | Command: PIT | Specify pit insertion point: 160000,-60000 | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.CoverLevel\" \"19.000\"",
+          "ok": true,
+          "seconds": 6.5,
+          "evidence": "ui set 'New Pit' C2.CoverLevel = 19.000: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pit\" \"New pit, Continue placement\" -> $pitY2",
+          "ok": true,
+          "seconds": 28.4,
+          "evidence": "pressed 'New pit, Continue placement' in /New Pit/: window closed = True"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pit\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /^New Pit/ closed after 0 s"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pitY_e1",
+          "ok": true,
+          "seconds": 6.7,
+          "evidence": "esc-prompt: Command: | Command: PIT | Specify pit insertion point: 160000,-60000 | Specify pit label insertion point: *Cancel* | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or qu..."
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pitY_e2",
+          "ok": true,
+          "seconds": 6.8,
+          "evidence": "esc-prompt: Command: PIT | Specify pit insertion point: 160000,-60000 | Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit..."
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pitY_e3",
+          "ok": true,
+          "seconds": 3.8,
+          "evidence": "esc-prompt: Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit, or press Esc to stop. | Specify pit insertion point: *Canc..."
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"PIT{NL}160000,-70000\" -Force -ExpectWindow \"New Pit\" -TimeoutSec 120 -> $pitX",
+          "ok": true,
+          "seconds": 11.8,
+          "evidence": "typed 'PIT 160000,-70000': Command: | Command: PIT | Specify pit insertion point: 160000,-70000 | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C..."
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.CoverLevel\" \"19.000\"",
+          "ok": true,
+          "seconds": 7.2,
+          "evidence": "ui set 'New Pit' C2.CoverLevel = 19.000: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pit\" \"New pit, Continue placement\" -> $pitX2",
+          "ok": true,
+          "seconds": 33.0,
+          "evidence": "pressed 'New pit, Continue placement' in /New Pit/: window closed = True"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pit\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /^New Pit/ closed after 0 s"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pitX_e1",
+          "ok": true,
+          "seconds": 6.7,
+          "evidence": "esc-prompt: Command: | Command: PIT | Specify pit insertion point: 160000,-70000 | Specify pit label insertion point: *Cancel* | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or qu..."
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pitX_e2",
+          "ok": true,
+          "seconds": 6.8,
+          "evidence": "esc-prompt: Command: PIT | Specify pit insertion point: 160000,-70000 | Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit..."
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pitX_e3",
+          "ok": true,
+          "seconds": 2.7,
+          "evidence": "esc-prompt: Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit, or press Esc to stop. | Specify pit insertion point: *Canc..."
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"DP{NL}150000,-66000\" -Force -ExpectPrompt \"Pick the next DP\" -TimeoutSec 90 -> $dp1",
+          "ok": true,
+          "seconds": 6.1,
+          "evidence": "typed 'DP 150000,-66000': Command: | Command: DP | Specify downpipe insertion point: 150000,-66000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP..."
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $dp1_esc",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "esc-prompt: Specify downpipe insertion point: 150000,-66000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP1. Nothing nearby. The so..."
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"DP{NL}150000,-74000\" -Force -ExpectPrompt \"Pick the next DP\" -TimeoutSec 90 -> $dp2",
+          "ok": true,
+          "seconds": 5.8,
+          "evidence": "typed 'DP 150000,-74000': Command: | Command: DP | Specify downpipe insertion point: 150000,-74000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP..."
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $dp2_esc",
+          "ok": true,
+          "seconds": 2.9,
+          "evidence": "esc-prompt: Specify downpipe insertion point: 150000,-74000 | [CE] The source name 'AGI' is on 4 blocks. Nothing was stopped by it. Run CDFIXTAGS to give each block its own number. | Downpipe placed. Tag: DP2. Nothing nearby. The so..."
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-66000{NL}160000,-70000{NL}\" -Force -ExpectWindow \"New Pipe\" -TimeoutSec 150 -> $cd1",
+          "ok": true,
+          "seconds": 9.7,
+          "evidence": "typed 'CD 150000,-66000 160000,-70000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-66000 | Specify second point: 160000,-70000 | Se..."
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.Diameter\" \"100\"",
+          "ok": true,
+          "seconds": 6.4,
+          "evidence": "ui set 'New Pipe' C2.Diameter = 100: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 29,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.CreatePipeText\" \"off\"",
+          "ok": true,
+          "seconds": 6.6,
+          "evidence": "ui set 'New Pipe' C2.CreatePipeText = off: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 30,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.AutoCalcSecondInvert\" \"off\"",
+          "ok": true,
+          "seconds": 6.6,
+          "evidence": "ui set 'New Pipe' C2.AutoCalcSecondInvert = off: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 31,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.IsGradeDefault\" \"on\"",
+          "ok": true,
+          "seconds": 6.9,
+          "evidence": "ui set 'New Pipe' C2.IsGradeDefault = on: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 32,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.51\"",
+          "ok": true,
+          "seconds": 7.1,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.51: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 33,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"18.31\"",
+          "ok": true,
+          "seconds": 7.1,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 18.31: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 34,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"^New Pipe\" -TimeoutSec 60 -> $np1",
+          "ok": true,
+          "seconds": 3.7,
+          "evidence": "ui-dump 'New Pipe': 152 controls, tabs: "
+        },
+        {
+          "n": 35,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $st1",
+          "ok": true,
+          "seconds": 6.7,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 36,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 37,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $snap1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31739291_B1.dwg] ; Creative Engineering | Grade mismatch"
+        },
+        {
+          "n": 38,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 ui-windows -> $uw1",
+          "ok": true,
+          "seconds": 2.7,
+          "evidence": "v3 ui-windows : Autodesk AutoCAD 2027 - [CLDV31739291_B1.dwg] [uia] not on list 1920,-4,1920,1080 | Creative Engineering | Grade mismatch [win32] READ-LIST 2600,408,560,257"
+        },
+        {
+          "n": 39,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Design Warnings\" -Optional -TimeoutSec 20 -> $dw1",
+          "ok": true,
+          "seconds": 24.1,
+          "evidence": "no window matching /Design Warnings/ is open (optional): no visible window of AutoCAD matches /Design Warnings/ and is on the v3 read list. Windows seen: Autodesk AutoCAD 2027 - [CLDV31739291_B1.dwg] ; Creative Engineering | Grade mismatch ; Workspace ; AdImpApplicationFrame ;..."
+        },
+        {
+          "n": 40,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Creative Engineering\" -Optional -TimeoutSec 20 -> $dw2",
+          "ok": true,
+          "seconds": 2.8,
+          "evidence": "ui-dump 'Creative Engineering | Grade mismatch': 13 controls, tabs: "
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "record $snap1 \"windows the snapshot saw at the blocked step\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31739291_B1.dwg] | Creative Engineering | Grade mismatch",
+          "evidence": "RECORDED, not judged: windows the snapshot saw at the blocked step = Autodesk AutoCAD 2027 - [CLDV31739291_B1.dwg] | Creative Engineering | Grade mismatch"
+        },
+        {
+          "n": 2,
+          "text": "record $uw1 \"v3 ui-windows: every window of AutoCAD with title, visible, enabled\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"ok\":true,\"verb\":\"ui-windows\",\"started\":\"2026-11-01 17:43:51\",\"elapsed_ms\":2672,\"error\":null,\"refused\":false,\"output\":[\"Autodesk AutoCAD 2027 - [CLDV31739291_B1.dwg] [uia] not on list 1920,-4,1920,1080\",\"Creative Engine...",
+          "evidence": "RECORDED, not judged: v3 ui-windows: every window of AutoCAD with title, visible, enabled = {\"ok\":true,\"verb\":\"ui-windows\",\"started\":\"2026-11-01 17:43:51\",\"elapsed_ms\":2672,\"error\":null,\"refused\":false,\"output\":[\"Autodesk AutoCAD 2027 - [CLDV31739291_B1.dwg] [uia] not on list 1920,-4,1920,1080\",\"Creative Engine..."
+        },
+        {
+          "n": 3,
+          "text": "record $dw1 \"dump of Design Warnings if it is there\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "",
+          "evidence": "RECORDED, not judged: dump of Design Warnings if it is there = "
+        },
+        {
+          "n": 4,
+          "text": "record $dw2 \"dump of any Creative Engineering window\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"title\":\"Creative Engineering | Grade mismatch\",\"handle\":2362752,\"class\":\"Window\",\"source\":\"win32\",\"bounds\":[2600,408,560,257],\"control_count\":13,\"truncated\":false,\"tabs\":[],\"controls\":[{\"type\":\"TitleBar\",\"name\":\"Creati...",
+          "evidence": "RECORDED, not judged: dump of any Creative Engineering window = {\"title\":\"Creative Engineering | Grade mismatch\",\"handle\":2362752,\"class\":\"Window\",\"source\":\"win32\",\"bounds\":[2600,408,560,257],\"control_count\":13,\"truncated\":false,\"tabs\":[],\"controls\":[{\"type\":\"TitleBar\",\"name\":\"Creati..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 113 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: PIT completed 59776 ms ; Command outcome: PIT completed 65930 ms ; Command outcome: DP completed 7067 ms ; Command outcome: DP completed 6724 ms"
+      ],
+      "error": null,
+      "finished": "2026-11-01 17:44:37",
+      "session_id": "RUN-20261101-1739-C3.0.88-pP2-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)",
+          "no independent review: no PROBE-W780_*.review.txt from the independent reviewer sits next to the case file (a REVIEWED_AGAINST line written by the builder does not count)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": false
+      }
+    }
+  ]
+}

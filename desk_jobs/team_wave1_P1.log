@@ -1,0 +1,12 @@
+1. **All 5 bugs have a case:** 4 cases, each with a "must fail" twin (8 files). Nobody has run them yet.
+2. **BUG-248 and BUG-258 share one case (W248):** they are the same fault, filed twice. Erase a perimeter drain, type OOPS: the drain AND its PD1 text must come back.
+3. **BUG-210 (W210):** erase pit P8, copy a lone pit onto its spot. The copy must be linked to the pipe at once (CDCHECK and Edit Pit both show it).
+4. **BUG-234 (W234):** a flat pipe P91 to P92 moved onto pits P93 and P94 must record P93 to P94. One end then stretched onto P92 must record P93 to P92.
+5. **BUG-244 (W244):** a pipe between two open ends, saved high end first, must never be recorded uphill after MOVE, an end STRETCH and CDSYNC.
+6. **Partly proved, needs a Codex look:** BUG-244's IL-text-edit branch (the robot cannot edit MText). For BUG-234 and BUG-244, the real grip drag (the robot types STRETCH instead).
+7. **Weakest proof:** W244's deciding check is an absence (no uphill record line in the log). Its twin can only flip that check; it cannot make CE write a real uphill line.
+8. **Offline checks:** validate gave 24 files, 0 invalid (my 8 plus other writers'). check_ids: "every control id is known". No "print", no street names. Every 17.x level matches the arithmetic below.
+9. **Run time:** W234 places 4 pits, so allow up to 30 minutes. W210 runs SETUP-R47v (3 to 8 minutes). Run them in the free window.
+10. **Untested routes:** two have never been driven by the robot: the Edit Pit window dump (W210) and OOPS (W248). If either step fails, it is a tool fault, not a result.
+11. **Carpark tidy-up for the desk:** BUG-248 and BUG-258 are one fault. If W248 passes twice and Codex agrees, both can close together.
+12. **Files:** `C:\Lisp Files\_ACAD_DRIVER\cases\drafts_wave1_31oct\W210*`, `W234*`, `W244*`, `W248*` (twins end `_BROKEN`).

@@ -1,0 +1,10 @@
+Train S-43 is assembled and pushed as `claude/rel-20261024s` at `9ad9f605`, on base `e6d597c0`. Nobody has opened it in AutoCAD.
+
+1. **Merged:** all five PRs (#1695 to #1699) at their live heads, which matched the brief. Only `REGRESSION_LOG.md` conflicted, resolved by keeping every entry.
+2. **Left out:** #1705, and four newer drafts (#1726, #1729, #1731, #1732) with no review.
+3. **Scope:** no settings added, nothing outside Structural touched, and no UCS, view or system-variable change.
+4. **Build:** 0 errors, 927 warnings (same as S-42).
+5. **Tests:** Structural net10 5,721 passed, 0 failed. Net48 has 39 reds, identical by name to the base. DesignCore, CommandTruth and ReleaseTests match S-42, and the new tests pass.
+6. **Caveats:** an AutoCAD session started at 09:32 and was open during later runs. Some build folders were deleted mid-run, so I rebuilt clean and reran.
+
+Report is pushed in C:\CE_PLAN.

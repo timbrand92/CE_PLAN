@@ -1,0 +1,8 @@
+Train C-46 is assembled: branch `claude/rel-20261019b`, head `9638622b`, pushed, with 25 PRs merged. It is built and unit-tested only; nothing was installed or opened in AutoCAD.
+
+1. **Merged (25):** #1439–1444, #1446–1450, #1452–1456, #1458, #1459, #1461–1463, #1469, #1470, #1473, #1476. #1445 and #1451 are not in the list because they were superseded by #1470 and #1474.
+2. **Left out:** #1474, #1475 and #1477, whose fix rounds aren't pushed yet. The superseded PRs are out too.
+3. **Shared/ touched by:** #1449, #1458, #1462 (CE_SHARED), and #1442 (release gate).
+4. **Build and tests:** 0 errors. Civil net10 18,830 run, 1 failed (Glen Eira). Manager 815/815. Civil net48 focused 256/256.
+5. **Opus review:** every merged PR has one.
+6. **Report:** `C:\CE_PLAN\areas\release-v3-colleagues-TRAIN_C46_ASSEMBLY_REPORT_2026-10-20.md`, pushed. The worktree is removed.

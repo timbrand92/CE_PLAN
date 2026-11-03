@@ -1,0 +1,7 @@
+The hide-grade change for the robot is written but not applied. The robot will be able to click **More...** in New Pipe, turn "Show grade in pipe text" off and on, and click **Back**. It still refuses every "Use recent ..." button, Send report, Export, Save as ... and Delete. Offline tests passed 73 of 73. Nothing in AutoCAD was touched.
+
+1. **Draft check:** N35 hides the grade on one pipe and turns it back on for a second. It has a must-fail twin, and both pass the format check.
+2. **Found:** the toggle sits on a closed "Drawing" tab in the More window, so the change also lets the robot open that one tab.
+3. **For you:** card D06 point 3 is wrong. "Hide grade" is remembered in a file the robot does not restore. If a run stops halfway, your next CD pipe label would leave out "AT 1 IN".
+
+Report: `C:\CE_PLAN\areas\ROBOT_MORE_BUTTON_B5_29OCT.md`

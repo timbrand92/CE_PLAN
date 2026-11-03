@@ -1,0 +1,6 @@
+== verifyD4_cur (usage 4.0% -> 5.0%): AUTOCAD CLOSED
+
+1. **Results:** 2 PASS, 1 DIFFERENT, 1 BLOCKED; no FAILs. All four results SURE.
+2. **Findings:** Both repair tools preserved P3ÔÇÖs schedule values. Number order was correct; new names differed. The open-DWG hash read was blocked.
+3. **Clean end:** All four settings files unchanged; lock released. No fixtures needed.
+4. **Report:** [D4 verification](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_D4_20261026_0357.md>).

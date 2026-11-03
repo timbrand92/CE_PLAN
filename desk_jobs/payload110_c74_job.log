@@ -1,0 +1,10 @@
+**Candidate C-74 is built and the report is written** (`PAYLOAD_C1070_REPORT.md`). It is not installed and has not been opened in AutoCAD.
+
+- **Candidate:** `C:\ce_rc_scratch\c1070`, number c1070 as planned.
+- **Manifests:** Civil verified 828, bad 0, extra 0. Manager verified 75, bad 0, extra 0.
+- **Branch head:** `claude/rel-20261026y` @ `94f521cc` (version commit on top of signed head `6d76a267`).
+- **Installed line found:** C-73 (3.0.83 / 1.1.83, `+96455f13`).
+- **Tests:** all pin classes passed, including `Bug1225ReopenedDrawingRecordTests` 17 of 17. No full suites run.
+- **String proof:** 1,221 rows, none unexpected.
+- **Settings and installed DLLs:** identical before and after.
+- **Oddity:** a script slip garbled four scripts before anything ran. I regenerated them with no cost.

@@ -1,0 +1,31 @@
+**FOR TIM**
+
+The hunt is finished. The report is saved and pushed to the plan: `C:\CE_PLAN\areas\release-v3-colleagues-HUNT_DATALOSS_SILENT_2026-10-12.md`. It holds 33 new problems, none already in the bug carpark. Nobody has seen any of them in AutoCAD yet, and nothing in the plugin was changed.
+
+**The close crash (BUG-224) is fixed** in the installed Civil 3.0.57. No other close step writes to a drawing as it closes.
+
+**The 10 worst:**
+1. **Civil writes one job's pit records into another drawing.** Run PIT in job A. In job B, type PIT on a layout tab (it refuses), or run CDS or CDHELP. CE then saves A's pit records into B.
+2. **Civil wipes pit records it can't read.** A damaged record is replaced by an empty one at the next PIT or PITEDIT.
+3. **Changes you threw away come back.** Close a drawing with No to "save changes", reopen it and run PIT: the discarded pit edits return and get saved.
+4. **FASTSAVE in a new, never-saved drawing may save over the office template.** This needs one AutoCAD 2027 check to confirm.
+5. **Structural deletes its own file while saving it.** This covers job notes, checklists and time logs. If OneDrive holds the file at that moment, both copies are lost.
+6. **CDJOINT: Esc at "Select slab type" deletes every joint on the slab** and says nothing.
+7. **Job Notes and the office-wide project tags file are wiped** after one bad read, as soon as you add a note.
+8. **ABSWITCH erases the old braces, then says "It was left as it was".**
+9. **CSBSMTWALL saves into the wrong job file**, or wipes that job's wind class and soil report.
+10. **One bad read of the footing data empties the footing record** at the next PFC or FEDIT.
+
+**Next step:** the controller gives these bug numbers and queues the fixes. You don't need to do anything now.
+
+---
+
+**Technical detail**
+
+1. **Code audited:** Civil/Manager on `origin/claude/rel-20261019b` (3.0.57 / 1.1.57) and Structural on `origin/claude/rel-20261017s` (1.0.118). Master was not used.
+2. **How it was done:** four read-only auditors ran in parallel, each on one area. I re-read four of the worst claims in the source myself: items 1, 4, 5 and 6 above. Item 1 holds because switching drawing tabs never switches CE's in-memory record, and the forced save never checks which drawing that record belongs to.
+3. **Duplicate check:** every finding was checked against the carpark titles and full text, and against the earlier HUNT, AUDIT and R00 files.
+4. **Git:** committed as `49e84cc4` on C:\CE_PLAN main, after `git fetch` and `git merge origin/main`, with only that one file added. The leak scan was clean. Both private worktrees under `C:\ce-hunt` have been removed.
+5. **Unit tests:** about two thirds of the findings can be shown RED by a unit test or a source-contract test. Items 1, 2 and 3 can.
+
+**Summary:** the BUG-224 fix holds, and no other close step writes to a dying drawing. The real risk is elsewhere, in three groups. First, Civil's in-drawing pit record can be overwritten with another drawing's data, an empty record, or a discarded copy (DS-01 to DS-03). Second, in many places a failed read becomes standard values, and the next save writes them over the real file (Structural job record, footings, Job Notes, checklists; Civil parts catalogue and label styles). Third, half-done drawing edits report success or say nothing (CDJOINT, ABSWITCH, CDFALL, CDTG, CD mirror text). Structural's shared file writer also deletes the real file before the new one is safely in place.

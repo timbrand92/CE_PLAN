@@ -1,0 +1,17 @@
+== verifyF5_cur (usage 85.0% -> 86.0%): AUTOCAD CLOSED
+
+1. **BLOCKED:** The prescribed zoom printed `nil`; N17 required stopping. CDMANAGER was not reached.
+2. **Safe end:** Settings unchanged, drawing unsaved, lock released. Installed: Civil 3.0.80 / Manager 1.1.80 / Structural 1.0.124.
+3. **Results:** BLOCKED 1, SURE 1; all other result counts 0. No product faults judged; no fixtures missing.
+4. **Report:** [F5 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_F5_20261027_0328.md>).
+== verifyF5_cur (usage 90.0% -> 90.0%): AUTOCAD CLOSED
+
+1. **NOT STARTED:** Desktop screen and mouse control unavailable. F5 remains untested.
+2. **Recorded:** Civil 3.0.80, Manager 1.1.80, Structural 1.0.125. All four settings hashes unchanged. Lock released.
+3. **Results:** PASS 0, FAIL 0, DIFFERENT 0, BLOCKED 0, NOT TESTED 1. SURE 0, UNSURE 1. No failures observed.
+4. **Report:** [F5 report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_F5_20261027_0629.md>). No fixtures requested.
+== verifyF5_cur (usage 91.0% -> 92.0%): AUTOCAD STILL RUNNING
+
+1. **F5: FAIL, SURE.** Eight layer names appeared twice in Draw Order. Close asked no question; object count stayed 1054. Unseen rows remain untested.
+2. **Clean end.** All four settings unchanged; lock released. F5ÔÇÖs AutoCAD closed. A new session started afterwards and was left untouched.
+3. **Report.** [F5 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_F5_20261027_0751.md>). Counts: 1 FAIL; all other whole-look results 0. No fixtures wanted.

@@ -1,0 +1,6 @@
+Draft PR #1985 is open for BUG-1258 (B-148), stacked on #1857's branch `fb/1788-extras-comma-and-speed`. It is built and unit-tested only; nobody has opened it in AutoCAD. BUG-1258 is not marked fixed.
+
+- **Files:** `PipeSizeNetworkReviewService.cs` now uses #1857's `ScourVelocityForCheck` lookup, the one CDRULES uses. `PipeSpeedChecksSettings.cs` gets the switch `pipeSpeedChecks.projectReviewUsesOfficeVelocityForUnsetMaterial`, ON by default. The commit also adds a `REGRESSION_LOG.md` entry and 13 new tests. Switch off gives Unknown exactly as before.
+- **Tests:** 239 passed, 0 failed. The net48 compile has 0 errors.
+- **Real-folder check:** the before and after listings of Tim's real folders differ by 38 lines. They match an AutoCAD start by another process at 22:16, not my runs.
+- **Report:** `C:\CE_PLAN\areas\BUGFIX_q5_REPORT_01NOV.md`, pushed.

@@ -1,0 +1,8 @@
+== cx_rd05 (usage 40.0% -> 45.0%): 1. **DONE — five findings:** HIGH 1, MEDIUM 3, LOW 1. Most important: CDTWL omits the habitable-floor freeboard check.
+
+2. **[Report saved and pushed](C:/CE_PLAN/areas/CODEX_AUDIT2_RD05_23OCT.md).** Includes exact scenarios, proposed tests and source limitations.
+
+---
+
+1. **Verification:** Code reading only. No builds, tests or AutoCAD. Temporary worktree removed.
+2. **Git:** Report commit `96ab2b47`; leak scan passed; no “ahead” status.

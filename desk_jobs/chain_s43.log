@@ -1,0 +1,12 @@
+Sat 02:08 chain start: S-43 (Structural only); nothing is installed by this chain.
+Sat 02:08 a C-63 job is running: waiting for it to finish
+Sat 06:14 waited 4 hours for the C-63 job: carrying on
+Sat 06:14 starting train_s43_assembler_job.txt (sonnet)
+Sat 10:01 finished train_s43_assembler_job.txt
+Sat 10:01 a C-63 job is running: waiting for it to finish
+Sat 10:13 starting train_s43_finalizer_job.txt (opus)
+Sat 11:57 finished train_s43_finalizer_job.txt
+Sat 11:57 S-43 finalizer verdict GO: building payload 97 (candidate s1041). Nothing is installed by this chain.
+Sat 11:57 starting payload97_s43_job.txt (sonnet)
+Sat 12:30 finished payload97_s43_job.txt
+Sat 12:30 chain complete

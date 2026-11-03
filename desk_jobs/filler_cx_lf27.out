@@ -1,0 +1,8 @@
+== cx_lf27 (usage 35.0% -> 35.0%): 1. **DONE — Batch 27 audit.** BUG-1003, 1004, 1005 and 1007 already have fix PRs. BUG-1006 remains held for Tim’s engineering wording. No production changes or deployment.
+
+2. **Saved and pushed:** [report](C:/CE_PLAN/areas/CODEX_LEDGER_FIX_BATCH27_23OCT.md), including exact AutoCAD checks still owed. Both pushes passed leak scans.
+
+---
+
+1. **Draft PR:** [#1681](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1681), branch `cx2/bug-1003-batch27-audit`, tip `4528be9d`.
+2. **Validation:** documentation checks passed; 0 tests added/run, 0 builds. AutoCAD not opened. Existing authors’ test totals are labelled separately in the report.

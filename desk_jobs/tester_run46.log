@@ -1,0 +1,17 @@
+Run 46 is finished and the report is pushed to `C:\CE_PLAN` (commit `bccc1baf`, leak scan clean). The result is PASS 14, FAIL 0, BLOCKED 1, UNPROVEN 3, plus one finding. The report is `areas/release-v3-colleagues-CLAUDE_DRIVER_RUN46_V2_2026-10-22.md`.
+
+- **Outcome log lines:** every Civil CE command I ran wrote one line in the Civil log with the right word. They were `completed` for CDTWL, CDTIDYLABELS, CDEDIT, CDRECOVERINVERTS, CDSYNC and PITSCHEDULE, and `cancelled` for PIT, CD and the Esc'd CDTIDYLABELS and CDTWL. Nothing printed on the command line.
+- **Finding:** CSREOBAR, CEMEMBER, LBUH, LBH and CE_VERSION wrote no outcome line in any Structural or Manager log. I don't know why.
+- **Not proven:** a `failed` line could not be forced; my two tries ended `completed` and `cancelled`.
+- **CEMEMBER:** it asked `View [SIde/Top/SEction/Reset] <Side>:` and Esc ended it with "CEMEMBER cancelled. Nothing changed." DBMOD was 0 before and after. Typing SE is UNPROVEN because the driver refused it.
+- **Hatch scales at DIMSCALE 50:** LBUH read DOTS at pattern scale 50, and LBH read ANSI31 at 125, both matching the desk's expectation.
+- **EBT at DIMSCALE 50 beside a 25C note:** UNPROVEN, skipped for budget.
+- **Regressions:** BUG-856, Recover Inverts, the CDTWL 150 mm freeboard, the Edit Pipe cascade with U and REDO, CDSYNC, quick edits and CSREOBAR all pass, same as run 45.
+- **CE_VERSION:** it opens the About window, but the driver can't read it, so the versions are proven only by the installed DLLs (Civil 3.0.69, Manager 1.1.69, Structural 1.0.121).
+- **Budget overrun, my mistake:** I used 77 counted calls against the 70 allowed.
+- **Settings:** the setting I changed was restored by hash (CD_Settings.json back to ACD64E79A33B). CE itself rewrote the Structural settings file at its start (F68292935180 to 2972CE70C514), which I report and did not touch. Next pass should expect 2972CE70C514 for that file. Driver hashes are unchanged.
+- **AutoCAD close:** the About window left AutoCAD busy, so the first quit timed out, the next two were refused, and `quit -Kill` was needed. It killed only the AutoCAD the driver launched, and 0 acad.exe remain.
+- **Cleanup for the desk:** delete CLD461_B1, its `_PRE_C7_` backup, CLD461_S1 and CLD462_S1 from `C:\ce_rc_drv`.
+
+AUTOCAD CLOSED
+SETTINGS RESTORED

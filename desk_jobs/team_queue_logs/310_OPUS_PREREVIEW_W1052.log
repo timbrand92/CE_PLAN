@@ -1,0 +1,1 @@
+`C:\CE_PLAN\areas\OPUS_PREREVIEW_W1052_W900_02NOV.md`: GO on all five (#1995–#1999). Notes: #1998 fixes only Civil's half of BUG-1166 (keep it open), and #1999's "warning in the import report" lands in the debug lines. Nothing built or tested; on the first merge check I used a git form that writes trial objects locally (no branch moved).

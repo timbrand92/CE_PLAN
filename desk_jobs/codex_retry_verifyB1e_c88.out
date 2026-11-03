@@ -1,0 +1,12 @@
+== verifyB1e_c88 (usage 55.0% -> 55.0%): AUTOCAD CLOSED
+
+1. **BLOCKED:** First invert entry stayed blank after the allowed retry. No pipe placed; palette reading and CDRULES were not reached.
+2. **Not tested:** B1b-06b ÔÇö not in B1e. Counts: 0 PASS, 1 BLOCKED, 1 NOT TESTED; both SURE.
+3. **Clean end:** Four watched settings files unchanged, nothing saved or sent, lock released.
+4. **Report:** [CODEX_VERIFY_B1e_20261102_2047.md](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_B1e_20261102_2047.md>).
+== verifyB1e_c88 (usage 57.0% -> 57.0%): AUTOCAD CLOSED
+
+1. **BLOCKED:** Inspector shows ÔÇ£Drawing healthÔÇØ and ÔÇ£ChecksÔÇØ tabs, but no minimum-grade warning on the displayed pages. CDRULES opened an unlisted option prompt; cancelled safely.
+2. **Not tested:** B1b-06b ÔÇö not in B1e. No other looks run.
+3. **Clean end:** Four settings files unchanged; test drawing discarded; lock released. No PASS claimed.
+4. **Report:** [CODEX_VERIFY_B1e_20261103_0625.md](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_B1e_20261103_0625.md>)

@@ -1,0 +1,11 @@
+== verifyV2b_retry (usage 2.0% -> 2.0%): utside the view. Visible U/REDO behaviour passed.
+
+2. **Report:** [CODEX_VERIFY_V2b_20261020_2102.md](<C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_V2b_20261020_2102.md>). Counts: PASS 2; FAIL 0; DIFFERENT 0; BLOCKED 0; NOT TESTED 1. SURE 3; UNSURE 0. No failures observed.
+
+3. **Cleanup:** AutoCAD is gone; lock released; all four settings hashes match their originals. The one temporary settings change was restored exactly:
+   
+   **HASH A:** `ACD64E79A33BE9C152149FF2145A3CD2C29CABE11245F211183FD5C7DE783140`
+   
+   **HASH C:** `ACD64E79A33BE9C152149FF2145A3CD2C29CABE11245F211183FD5C7DE783140`
+
+4. **Remaining:** Complete-run view coordinates needed for V2-05. FIXTURES WANTED: none missing.

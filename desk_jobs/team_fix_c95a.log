@@ -1,0 +1,10 @@
+PR #1875 (still a draft) now has commit 1a6c332b pushed to `fb/bug816-tidy-setting-row`. I haven't tried it in AutoCAD.
+
+- **Fix:** the switch `linking.tidyTextAfterMove` now covers only the tidy after MOVE, STRETCH, ROTATE, SCALE, TRIM, JOIN and grip edits. Drawing a pipe, Edit Pipe, Edit Pit and the source split always tidy. The row, tooltip, catalog and log say so.
+- **Files:** `TextClashTidyUpRule.cs`, `LinkService.TextClashTidyUp.cs`, both Settings views, `SettingsValueCatalog.cs`, `Bug816TidyAfterMoveSwitchTests.cs`, `SettingsWindowV3Tests.cs`, `REGRESSION_LOG.md`.
+- **Tests:** full Civil suite in Release passed 20805, 0 failed. The net48 compile has 0 errors.
+- **Page height:** the Drafting tab measures 606 px against the 670 px limit.
+- **#1871 and #1873:** neither carries the wrong test. I edited neither.
+- **PR text:** not updated, because `gh` isn't on this PC.
+
+The follow-up is appended to `release-v3-colleagues-BUG816_FIX_REPORT.md` and pushed.

@@ -1,0 +1,9 @@
+Sat 14:31 chain start: C-64 (Civil + Manager); nothing is installed by this chain.
+Sat 14:31 starting train_c64_assembler_job.txt (sonnet)
+Sat 15:42 finished train_c64_assembler_job.txt
+Sat 15:42 starting train_c64_finalizer_job.txt (opus)
+Sat 16:28 finished train_c64_finalizer_job.txt
+Sat 16:28 C-64 finalizer verdict GO: building payload 98 (candidate c1060). Nothing is installed by this chain.
+Sat 16:28 starting payload98_c64_job.txt (sonnet)
+Sat 16:35 finished payload98_c64_job.txt
+Sat 16:35 chain complete

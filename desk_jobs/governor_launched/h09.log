@@ -1,0 +1,24 @@
+The audit report is written, committed and pushed to `C:\CE_PLAN` (commit 3a85c776). It's read-only: nothing was built or run, and nothing was seen in AutoCAD. The worktrees are removed.
+
+The file is `C:\CE_PLAN\areas\release-v3-colleagues-HUNT_WORDING_COLOUR_2026-10-12.md`. It has the plain-English top 10 at the top and no tables. I filed no BUG numbers.
+
+**What I read:**
+- **Civil 3.0.56 and Manager 1.1.56:** `claude/rel-20261019b`.
+- **Structural 1.0.118:** `claude/rel-20261017s`. The Civil head doesn't contain that Structural commit, so all Structural line numbers come from 1.0.118.
+
+**Summary:** Part B re-checks the 9 Oct HUNT3 list against those heads.
+- **Still there:** about 15 items, including blue in the light theme of all three products, the blue computations sheet, and the Structural start-up text.
+- **Fixed:** the PITEDIT, RunSolve and PITDELETE wording.
+
+Part A lists 10 new groups. None puts a wrong number on a drawing. The main ones:
+1. **Command-names switch:** turning "Show AutoCAD command names" off still leaves a command on 44 of the 65 visible Civil buttons, because it's typed into the label itself. I couldn't confirm which label file the ribbon actually reads.
+2. **Slab command line:** `Pit cover (P3, 450mm): 12.345` reads as a depth, but the 450 mm is the click distance and 12.345 is a level with no unit.
+3. **"Repair Center":** American spelling in seven places, in a product that says "Help Centre".
+4. **Suite Manager:** the Structural module's stripe is blue (#1E6BB0).
+5. **Jargon:** about 20 Civil and 11 Structural sentences still use program words, each with proposed plain wording.
+6. **Units:** "m3", "m²", "l/s" and "L/s" are mixed on screen and on drawings.
+7. **Titles and button names:** capitalisation is inconsistent and some ribbon names don't match their window titles.
+
+**Retracted claim:** I dropped HUNT3's claim that MR and CR exist only in Civil, because Structural 1.0.118 has them too. The four advertised Structural commands (BTXT2MT, BMT2TXT, SBL, BREAKLINE) only look unregistered by string search. Type them in AutoCAD before filing a bug.
+
+**Not checked:** ribbon icon pixels, the help-page text beyond its blue accent, the LISP files, and wording assembled at run time. I couldn't tell whether a few strings reach the screen or only the log, and the report says which.

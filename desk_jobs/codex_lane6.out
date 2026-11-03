@@ -1,0 +1,36 @@
+== cx_h07_labels (usage 24.0% -> 26.0%): 1. **DONE — 6 findings:** HIGH 1 / MEDIUM 5 / LOW 0. Biggest: CE’s own slide action does not protect hand-placed labels from later tidying.
+
+2. **Report:** [CODEX_HUNT_LABELS_22OCT.md](/C:/CE_PLAN/areas/CODEX_HUNT_LABELS_22OCT.md). Includes source references and deterministic tests; earlier findings excluded.
+
+---
+
+1. **Saved and pushed:** `6b11091e`. Leak scan passed. Only the findings file was authored.
+
+2. **Verification:** code reading only. No builds, tests, AutoCAD, installation or sub-agents.
+== cx_h08_manager (usage 26.0% -> 28.0%): 1. **DONE — 3 MEDIUM findings; 0 HIGH, 0 LOW.** Most important: CE Health can report Civil as OK when it has not loaded.
+
+2. **Report saved and pushed:** [Manager findings](C:/CE_PLAN/areas/CODEX_HUNT_MANAGER_22OCT.md). Includes exact failure scenarios and deterministic checks.
+
+3. **Verified by reading only.** No builds, tests, AutoCAD or installs. Administrator work remains parked.
+
+---
+
+1. **Commit:** `e7d728b0` on CE_PLAN `main`. Only the findings file committed; leak scan passed.
+== cx_h11_perf (usage % -> 30.0%): 1. **DONE — 0 HIGH, 3 MEDIUM, 1 LOW.** Biggest finding: refreshing 2,000 pits performs four million comparisons before some commands ask for a point.
+
+2. **Report:** [CODEX_HUNT_PERF_22OCT.md](C:/CE_PLAN/areas/CODEX_HUNT_PERF_22OCT.md). Includes exact source evidence and deterministic tests.
+
+3. **Verification:** Code reading only. No builds, tests or AutoCAD runs.
+
+---
+
+1. **Saved and pushed:** CE_PLAN commit `632133a4`; only the findings file changed. Leak scan passed. No PR.
+== cx_h12_compat (usage 30.0% -> 32.0%): 1. **Review complete: HIGH 1 / MEDIUM 2 / LOW 0.** Biggest fault: Structural skips startup in a second AutoCAD process.
+
+2. **Findings saved:** [Compatibility report](C:/CE_PLAN/areas/CODEX_HUNT_COMPAT_22OCT.md), with evidence and deterministic tests. No builds, tests or AutoCAD runs.
+
+3. **Push BLOCKED.** The scanner flags an Autodesk link in an earlier save. Current text is corrected; another chat’s intervening save was restored unchanged. The hook was not bypassed.
+
+---
+
+1. **Local tip:** `c04105ad`. Only the findings file was authored. Coordinated unpublished-history repair remains necessary before pushing.

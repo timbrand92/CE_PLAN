@@ -1,0 +1,26 @@
+**FOR TIM**
+
+All 16 PRs are merged on `claude/rel-20261110a`, head `c01788a723e3a103453f9c25102be60a14da66dc`. It is pushed, and `git ls-remote` reads the same head back. It sits on the C-79b1 GO head `bab2dbf8`, which had not moved. Nothing was opened in AutoCAD.
+
+1. **Merged:** 16 of 16. Fifteen went in as branches. #1937 went in as a net diff only, as ordered. #1874, #1954 and #1956 each carried only their own commits, so no net-diff fallback was needed.
+2. **First job:** it ended its turn early, with the build still running and nothing tested or pushed. This job re-checked the worktree (clean, head 2869183a, 39 commits ahead) and then did the rest.
+3. **Tests:** full Civil net10 Release: 22,493 tests, 0 failed, 32 skipped. Full Manager: 1,152 tests, 0 failed, 2 skipped. The focused set passed at 2,990 of 2,993, with 3 skipped. The real-settings guard ran and passed, because `settings_guard.json` was absent at 06:54, 07:03 and 07:17.
+4. **One fix from me (commit c01788a7):** the "every new setting has a Default line" test failed on #1939's two survey-layer word lists. I added a "Default: none" line and an explicit `= null` to each. It changes nothing on screen.
+5. **Changed figures a drafter will see:**
+   - **#1960:** a uPVC connection pipe and the Edit Pipe grade strip now use 3.0 m/s instead of 6.0. Metal reads 4.0, also down from 6.0. Concrete stays 6.0. The Settings table values do not move, but the two screens now read them by default.
+   - **#1965:** the CDCALC Pump system and Rational tabs now follow the Settings roof-and-paved C. At the shipped 0.9 nothing changes.
+   - **Saved values:** no user's saved value moves in either case.
+6. **No REDO-sensitive hits.** I scanned the added lines of every non-test file in the train and found none. No REDO-safe baseline file changed. #1937 writes nothing to an Xref, a locked layer or a REFEDIT object.
+7. **Byte-order marks:** none lost across 80 changed files. The one earlier loss (SettingsSizingStandards.cs) is already restored in its own commit.
+8. **Your real files:** the three settings files are byte-identical before and after. The CE_Admin outbox folder time is unchanged, but its file count went from 28,483 at 05:17 to 28,614 at 07:31. The robot's AutoCAD was running on this PC, and I did not prove which process wrote those 131 files.
+
+Report: `C:\CE_PLAN\areas\release-v3-colleagues-TRAIN_C79B2_ASSEMBLY_REPORT_2026-11-01.md`. Changed-files list: `C:\CE_PLAN\areas\TRAIN_C79B2_CHANGED_FILES.txt`. Both are pushed to CE_PLAN main at `b15c8b11`.
+
+---
+
+**Technical notes**
+
+1. **No Manager change:** the Manager tests ran in full anyway.
+2. **Not done:** I did not re-read the PR state on GitHub, because `gh` is not on this job's path. I read the heads from git, and all 16 match the list. I also read only the Opus review AD (#1965, #1967 and #1974, all KEEP-WITH-NOTE), not the earlier reviews.
+3. **Not run:** the net48 test lanes, the Structural tests and any robot case.
+4. **Nothing stopped.**

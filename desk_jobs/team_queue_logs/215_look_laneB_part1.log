@@ -1,0 +1,10 @@
+`C:\CE_PLAN\areas\LOOKBRIEF_LANEB_PART1_02NOV.md` is written. Six of the nine bugs still need a look: 011, 050, 194, 226, 227 and 228. BUG-090 and BUG-219 were already seen PASS. BUG-180 is half seen: Pipe and Pit tabs work, and the Home-tab half is BLOCKED, WORKSPACE (TIM 2026 SETUP has no Home tab).
+
+- **Sessions:** The brief is two Codex sessions, Civil `verifyLB1_c88` and Structural `verifyLB1s_c88`, with launch lines and report globs.
+- **GO flag:** One GO flag is needed, for the Settings window half of BUG-227. Nothing else needs a setting change.
+- **Not found:** BUG-050 has no recorded prompts for beam command 1 and no Structural fixture with an Xref wall. The Design Guidebook v1.3 has no wording for any of the nine.
+- **Report location:** The runner's retry launcher reads reports only from `_TEST_COPIES_20260923`, and `C:\CE_WORK\codex` doesn't exist yet. The brief makes Codex write the report in both places. CE 02 should check Codex can create that folder.
+- **Banned word:** I searched the file for "follow" in any form and found none. There are no tables.
+- **Not run:** I opened no AutoCAD, ran no robot and changed no code or settings.
+
+**Urgent:** the live `C:\CE_PLAN\BUG_CARPARK.md` is only about 1 KB. Commits 20e999d3 and 5cd059e9 replaced the whole 2.1 MB bug register with a short note. The last whole copy is commit b498a968, which I read the nine entries from. I changed nothing; CE 05 or CE 00 needs to restore it.

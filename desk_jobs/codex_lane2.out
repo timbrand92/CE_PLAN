@@ -1,0 +1,14 @@
+== cx_audit_struct (usage 22.0% -> 24.0%): 1. **DONE — [audit report saved](C:/CE_PLAN/areas/CODEX_AUDIT_STRUCTURAL_22OCT.md).** Eight findings: **3 HIGH, 4 MEDIUM, 1 LOW**, with reproduction steps and calculated hatch scales/text heights.
+
+2. **Biggest risks:** existing hidden-layer linetypes can change; metre-drawing members can be 1,000 times oversized; hatch repair can replace correct spacing.
+
+3. **Verification:** source reading only. No builds, tests, AutoCAD or plugin changes.
+
+---
+
+1. **Saved remotely:** audit commit `f1fa69d2` is confirmed on `origin/main`. Only the named report was committed by this audit.
+== cx_cases_draft (usage 24.0% -> 24.0%): 1. **DONE:** [TEST_CASES_DRAFT_22OCT.md](C:/CE_PLAN/areas/TEST_CASES_DRAFT_22OCT.md) contains C01–C40 plus eight backlog cases.
+
+2. **Counts:** 35 deterministic, 13 needing a window look; 37 also marked ROUTE UNPROVEN with missing evidence identified.
+
+3. **Saved and pushed:** document-only commit `b23fd107`; leak scan clean. No AutoCAD, builds or tests run.

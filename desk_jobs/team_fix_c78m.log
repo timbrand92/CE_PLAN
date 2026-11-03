@@ -1,0 +1,14 @@
+**Draft PR #1846** (`fb/pipe-object-on-for-everyone`) makes the one-piece pipe object on for every Windows login when the setting is left Automatic. An explicit Off stays Off, and no settings file is edited. The switch is `options.pipeObjectAutomaticIsOnForEveryone` (ON by default). With it false, the old rule (Automatic on only for Tim's login) returns exactly.
+
+Nothing was run in AutoCAD, so B-046 stays open. AutoCAD 2022 to 2024 PCs are unchanged because the one-piece object still can't load there. The full Civil net10 suite passed (20,864 passed, 0 failed, 32 skipped) and the net48 compile had 0 errors.
+
+PR #1844 only conflicts in `REGRESSION_LOG.md` (keep both entries). Its robot cases F23s and F23x change meaning.
+
+Files:
+- `PipeObjectUpgradeGate.cs`
+- `UserSettings.cs`
+- `AdvancedSettingsDialog.xaml`
+- new `B046PipeObjectOnForEveryoneTests.cs`
+- `REGRESSION_LOG.md`
+
+The report is `release-v3-colleagues-PIPE_OBJECT_DEFAULT_REPORT.md` in `C:\CE_PLAN\areas`.

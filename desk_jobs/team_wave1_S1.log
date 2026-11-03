@@ -1,0 +1,12 @@
+1. **Answer:** 0 of my 4 bugs have a robot case. All 4 go to a Codex look in real AutoCAD; no case file was written.
+2. **Why, in one line:** every one of them needs a Pit Schedule table drawn in the drawing, a typed edit in a schedule cell, or the right-click "Stop overriding" item. The robot can do none of these today.
+3. **No drawn schedule:** the robot may not press "Place schedule". Its two press lists allow "Place", "Update existing schedule" and "Refresh", but not "Place schedule". No robot drawing is known to hold a placed schedule already (R38 says the same).
+4. **No cell edits:** the schedule cells have no name the robot can type into. "Stop overriding" sits on a right-click menu, and the robot never right-clicks inside a window.
+5. **BUG-312 also needs a close and reopen in the middle of the test.** One robot case runs in one AutoCAD start, so it cannot.
+6. **Other route checked for BUG-312 (CDRENUMBER, which is typed):** it does not work. CDRENUMBER refuses up front when a label is on a locked layer, so no label is ever held back.
+7. **One small change would let the robot reach BUG-246 and BUG-573:** add "Place schedule" to the Pit Schedule press list in `acad_driver_witness_v2.allowlist.json`. That list is pinned, so the change needs a reviewed edit and Tim's word. BUG-312 and BUG-385 would still need cell edits.
+8. **BUG-385 has already passed twice with Codex on older builds:** W6-02 on 3.0.28 (rows 30 to 30 to 30) and W7-03 on the C-15 build. The carpark still says "not yet tested" against the 3.0.70 fix set, so one Codex recheck on 3.0.88 is enough.
+9. **Codex look steps for all four** are in section 2, with the exact words from the code.
+10. **Folder check:** `validate` on `drafts_wave1_31oct` printed "35 file(s) checked, 0 invalid". These are other writers' files. None of mine are there, and no W246, W312, W385 or W573 file exists.
+11. **The id check and the grep for print, levels and street names** have nothing of mine to check.
+12. **No fault found in an existing case or setup** (section 3).

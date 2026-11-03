@@ -1,0 +1,21 @@
+**FOR TIM**
+
+I fixed five of the seven "day one" bugs. Each one is in a draft PR. They're built and unit-tested, but nobody has opened any of them in AutoCAD.
+
+1. **BUG-1135 (#1747):** an older CE no longer deletes newer parts of the job record, such as ignored findings and approvals. This only protects drawings from this build on; copies already installed on other PCs still lose them.
+2. **BUG-1138 (#1748):** on a PC that can't read CE pipe objects, CDSYNC and every pipe relink now stop with one line. Before, they emptied every pit's pipe list.
+3. **BUG-1206 (#1750):** the CE Tools tab now shows straight away when Manager loads before Civil.
+4. **BUG-1165 (#1751):** pit and other CE blocks come from the CE copy that's running, not an old all-users copy. It has a new switch, on by default.
+5. **BUG-1167 (#1754):** a settings file copied from your PC no longer points a colleague's CDWT, CDNEWDWG and job time at your folders. It has a new switch, on by default.
+6. **Skipped, BUG-1166 and BUG-1169:** both need a change to the shared file I wasn't allowed to touch, or a look at Max's PC first. The options are in the report.
+
+**Before 9 Nov:** on Max's PC, check where his OneDrive puts "Creative Engineering - Drafting", and whether his old July Structural is still installed.
+
+---
+
+1. **Tests:** every full Civil run was 19,806 to 19,819 tests, with 0 failures except one picture-renderer test. That test fails and passes on the same build, and also fails on the base. Manager: 952 tests, 0 failed.
+2. **Tests that fail on the old code:** for #1747, #1748 and #1750, the new tests fail against the base code. For #1751 and #1754 they can't, because the new tests use code that doesn't exist there yet. Each PR says where it rewrote an older test.
+3. **Report:** `C:\CE_PLAN\areas\release-v3-colleagues-PILOT_CRITICAL_BATCH1_REPORT.md`, pushed. It has the AutoCAD check steps for each fix.
+4. **Main checkout:** it has two untracked items I didn't create: `.codex/` and `Modules/Structural.Tests/Models/BracingLengthSettingsTests.cs`. I left them alone.
+
+Five day-one bugs are fixed in draft PRs #1747, #1748, #1750, #1751 and #1754, all unit-tested and none opened in AutoCAD. BUG-1166 and BUG-1169 are skipped: they need the protected shared file or a check on Max's PC.

@@ -1,0 +1,11 @@
+Draft PR #1895 is open for BUG-1184, but I stopped on one thing: a real settings file changed during my run. The report is pushed to `C:\CE_PLAN`, and I did not edit BUG_CARPARK.md.
+
+**FOR TIM**
+
+1. **Settings file changed:** `%APPDATA%\TIM_CE_CADTOOLS\CD_Settings.json` read 21:55 on 30 Oct (15,357 bytes) before my first test. After my last test it read 4 Oct 08:22 (15,270 bytes), so something copied an older file over it. My tests only touch Structural, with its settings folder redirected to scratch, so I think it was another job. I can't prove that from here, so please check your Civil settings. The other three settings files did not change.
+2. **Wrong start point in the task:** `rel-20261102a` has no `TimberSubfloorService.cs` at all. I built on `claude/rel-20261026s` (Structural 1.0.125), and the PR is against that. CE 01 may want to move it.
+3. **What you'll see:** CSTAGBEARERS runs with 150x50 F17, 200x75 F17 and 150x50 F17 now give BR1, BR2, BR1, and stumps and piers do the same with SPR. Before, every run gave BR1 because the command wrote its label on 25TEXT but looked for earlier labels on the bearer layer. If a drawing already has one mark on two sizes, CE prints a warning and carries on.
+4. **Tested:** 62 focused tests pass on net10, and the net48 compile is clean. I did not run the full suite (the isolation rule forbids it). The real drawing scan was not run in AutoCAD, and BUG-1184 is not marked fixed.
+5. **Robot case:** `C13_bearer_marks` types CSTAGBEARERS three times and expects BR1, BR2, BR1 on 25TEXT. The control `C13_bearer_marks_off` sets the switch to false and expects the second label to read BR1.
+
+**Summary:** PR #1895. Files changed: `TimberSubfloorService.cs`, new `SubfloorMarkScanRules.cs`, `UserSettings.cs`, `SettingsService.LoadRecovery.cs`, the new `SubfloorMarkScanRulesTests.cs`, and `REGRESSION_LOG.md`. Switch: `TimberSubfloor.MarksReadTextLayer`, on by default. The report is `BUGFIX_p13_REPORT_30OCT.md`.

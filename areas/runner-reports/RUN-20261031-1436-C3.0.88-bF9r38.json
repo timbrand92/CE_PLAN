@@ -1,0 +1,612 @@
+{
+  "header": {
+    "run_id": "RUN-20261031-1436-C3.0.88-bF9r38",
+    "started": "2026-10-31 14:36:56",
+    "finished": "2026-10-31 14:40:03",
+    "build": {
+      "civil": {
+        "product_version": "3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+        "file_version": "3.0.88.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+        "file_version": "1.1.88.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.88+3fbb9da5 / struc 1.0.125+204dfad2 / mgr 1.1.88+3fbb9da5",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "B2690482B84019A7AADB3A3439881A839A251740C3A4BFCA16CB43AC15B0E76A",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.88+3fbb9da5e2c5972a233d6dd7ca867109b8431527",
+      "Driver files (SHA-256, first 12): v2 F4D8F40C3675 (expected F4D8F40C3675), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 482EB7B20C6C, v3 session 4D3524AAA60B, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 BBF42DBA8958, case_runner_lib.ps1 01751833A6EA, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 1 case file(s) plus 0 shared setup(s); pack SHA-256 B2690482B84019A7AADB3A3439881A839A251740C3A4BFCA16CB43AC15B0E76A; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json D604CE689671 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Sat 31 Oct 2026 14:36 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 1,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 0,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 1,
+    "PASS-UNREVIEWED": 0
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261031-1436-C3.0.88-bF9r38-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-10-31 14:37:03",
+      "finished": "2026-10-31 14:40:03",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31437071_B1.dwg",
+      "cases": [
+        "R38"
+      ],
+      "whatsnew_dismissed_at_start": "no, window was not there",
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : D604CE689671 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "R38",
+      "proves_bugs": "",
+      "title": "The Pit Schedule row of pit P3 shows its inlet and outlet invert levels (not blank), and they equal the IL texts on the plan; the schedule closes and changes nothing",
+      "kind": "deterministic",
+      "order": 41,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "Pit Schedule row P3 guard (triage groups S2 and S3; daily cards D21 and D23 neighbour). Batch 3 fixes of 25 Oct 2026: the BUG-376 claim is dropped (see NOT_AUTOMATED)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed. Compared by the builder on 25 Oct 2026 with BUG-376 in BUG_CARPARK.md (found on DRV17_B1: row P3 had IL (Inlet) and IL (Outlet) blank while the plan showed IL 18.10 at the P3 end of a pipe; expected the schedule to carry the plan's levels) and with daily cards D21 and D23 (the schedule window is read, not edited). Not claimed: the other S2 and S3 bugs (BUG-098, BUG-694, BUG-780, BUG-784, BUG-786, BUG-965, BUG-246, BUG-779, BUG-785, BUG-807, BUG-869): they need cell edits, a twin-inlet drawing, a placed schedule or other data this fixture does not have.",
+      "variant_of": "",
+      "expected": "PITSCHEDULE opens; the row of pit P3 reads FROM P4, inlet dia 450 with IL 17.30, outlet dia 450 with IL 17.25 and cover 18.88; the plan holds the texts IL 17.30 and IL 17.25 (the same levels); the Close button closes the window; the drawing file on disk is unchanged.",
+      "why_not_unit": "The schedule is built by the live window from the links in the real drawing, and the plan texts are real drawing objects.",
+      "not_automated": [
+        "BUG-376 is NOT claimed (batch 3 review, probe of 25 Oct 2026 on Civil 3.0.75): the plan holds IL 18.10 texts (x 96908, 53026 and 54262; the middle one sits about 750 mm west of P3), but the row of pit P3 has no cell reading 18.10: its inlet comes from P4 (17.30). Whether the schedule should also list the inlet from the IO8 pipe is not recorded: the desk decides. The case guards the P3 row only: its two levels are IL texts within 2.5 m of pit P3 on the plan.",
+        "Which plan text belongs to which pipe end is not mapped: the case checks that the schedule's two numbers are among the IL texts drawn on the plan. Cell edits, Refresh and a placed (drawn) schedule are not driven (the grid cells have no accessible id).",
+        "That the window looks right is R25's Codex look; this case reads text only."
+      ],
+      "file_sha256": "2A94934EBE9120078A8DCA0F475B79EB93232B1174A2077E75F0B53AC09375C5",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-10-31 14:38:07",
+      "seconds": 96.5,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "copy CLDV31437071_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 0 -> $m0",
+          "ok": true,
+          "seconds": 13.3,
+          "evidence": "500 object(s) after index 0 (model space now 1034); by type: AcDbBlockReference 157; AcDbCircle 32; AcDbHatch 7; AcDbLine 58; AcDbMline 1; AcDbMText 30; AcDbPolyline 38; AcDbRotatedDimension 1; AcDbText 134; CeCvlPipeObject 42; first: 1003FA AcDbBlockReference XREF XW2614-Arch Survey ; 10040D AcDbBlockReference XREF XW2614-Arch Ground ; 10041A AcDbBlockReference XREF XW2614-Arch Site ; 10127D AcDbHatch HATCH 51 ; 10127E AcDbPolyline HATCHOUTLINE ; 10127F AcDbBlockReference BLOCKS A$C32C15792 ; 10128C AcDbMText 25TEXT THIS DRAWING IS TO BE READ IN CONJUNCTION WITH ARCHITECTURAL DOCUMENTATION. ; 10128E AcDbHatch HATCH 51 ; 10128F AcDbPolyline HATCHO..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 500 -> $m5",
+          "ok": true,
+          "seconds": 11.2,
+          "evidence": "500 object(s) after index 500 (model space now 1034); by type: AcDbBlockReference 226; AcDbHatch 20; AcDbLeader 1; AcDbLine 24; AcDbMLeader 6; AcDbMline 1; AcDbMText 118; AcDbPolyline 22; AcDbText 75; CeCvlPipeObject 7; first: 10EC12 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC15 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC18 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC1B AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC1E AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC21 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC24 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC27 AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC2A AcDbBlockReference 20TEXT SPOT LEVEL ; 10EC2D..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new 1000 -> $m10",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "34 object(s) after index 1000 (model space now 1034); by type: AcDbBlockReference 14; AcDbLeader 4; AcDbLine 1; AcDbMLeader 2; AcDbMText 8; AcDbRotatedDimension 1; AcDbText 4; first: 116BB6 AcDbText 20TEXT IL 18.24 ; 116BD7 AcDbBlockReference ARROW TIM_CVL_ARROW ; 116BDC AcDbMText 25TEXT 150 DIA. UPVC SEWER CLASS PIPE AT 1 IN 97 ; 116BE0 AcDbText 20TEXT IL 18.60 ; 116BE4 AcDbText 20TEXT IL 18.24 ; 116C05 AcDbBlockReference ARROW TIM_CVL_ARROW ; 116FC6 AcDbBlockReference BLOCKS A$Cfdd7d71d ; 11978C AcDbMLeader 25DIMS ; 11978E AcDbLine SLAB SC ; 11978F AcDbMLeader 25DIMS ; 1197BB AcDbBlockReference..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m0 \"text~^IL \" -> $il0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 500: "
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m5 \"text~^IL \" -> $il5",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 42 of 500: 10FEC2 IL 17.67 20TEXT ; 10FEC6 IL 17.58 20TEXT ; 10FFA1 IL 17.53 20TEXT ; 10FFA5 IL 17.45 20TEXT ; 1101B8 IL 17.25 20TEXT ; 1101BC IL 17.13 20TEXT ; 110361 IL 18.20 20TEXT ; 110393 IL 18.00 20TEXT"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m10 \"text~^IL \" -> $il10",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 3 of 34: 116BB6 IL 18.24 20TEXT ; 116BE0 IL 18.60 20TEXT ; 116BE4 IL 18.24 20TEXT"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il0 text -All -> $il0t",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' of an empty list: empty"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il5 text -All -> $il5t",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.25 | IL 17.13 | IL 18.20 | IL 18.00 | IL 17.08 | IL 16.98 | IL 18.50 | IL 18.10 | IL 16.93 | IL 16.87 | IL 17.40 | IL 17.30 | IL 16.82 | IL 16.61 | IL..."
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $il10 text -All -> $il10t",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = IL 18.24 | IL 18.60 | IL 18.24"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "set",
+          "text": "set $plan_il \"{$il0t} | {$il5t} | {$il10t}\"",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "set $plan_il"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m0 \"text~^IL 17\\.30$\" \"near=53777.7,-25569.9,2500\" -> $in0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 500: "
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m5 \"text~^IL 17\\.30$\" \"near=53777.7,-25569.9,2500\" -> $in5",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "selected 1 of 500: 1155B6 IL 17.30 20TEXT"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m10 \"text~^IL 17\\.30$\" \"near=53777.7,-25569.9,2500\" -> $in10",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 34: "
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $in0 handle -All -> $inh0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' of an empty list: empty"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $in5 handle -All -> $inh5",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 1155B6"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $in10 handle -All -> $inh10",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' of an empty list: empty"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "set",
+          "text": "set $in_near \"{$inh0}{$inh5}{$inh10}\"",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "set $in_near"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m0 \"text~^IL 17\\.25$\" \"near=53777.7,-25569.9,2500\" -> $out0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "selected 0 of 500: "
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m5 \"text~^IL 17\\.25$\" \"near=53777.7,-25569.9,2500\" -> $out5",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 500: 1101B8 IL 17.25 20TEXT"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m10 \"text~^IL 17\\.25$\" \"near=53777.7,-25569.9,2500\" -> $out10",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 34: "
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $out0 handle -All -> $outh0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' of an empty list: empty"
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $out5 handle -All -> $outh5",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 1101B8"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $out10 handle -All -> $outh10",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' of an empty list: empty"
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "set",
+          "text": "set $out_near \"{$outh0}{$outh5}{$outh10}\"",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "set $out_near"
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m0 \"text~^IL 18\\.10$\" -> $t0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 500: "
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m5 \"text~^IL 18\\.10$\" -> $t5",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 3 of 500: 113662 IL 18.10 20TEXT ; 116A0E IL 18.10 20TEXT ; 116A3C IL 18.10 20TEXT"
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $m10 \"text~^IL 18\\.10$\" -> $t10",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 0 of 34: "
+        },
+        {
+          "n": 29,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $t0 x -All -> $tx0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' of an empty list: empty"
+        },
+        {
+          "n": 30,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $t5 x -All -> $tx5",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' = 96908.6847913974 | 53026.7474394765 | 54262.9263743631"
+        },
+        {
+          "n": 31,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $t10 x -All -> $tx10",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'x' of an empty list: empty"
+        },
+        {
+          "n": 32,
+          "phase": "case",
+          "verb": "set",
+          "text": "set $t1810 \"{$tx0}{$tx5}{$tx10}\"",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "set $t1810"
+        },
+        {
+          "n": 33,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"PITSCHEDULE\" -Force -ExpectWindow \"Pit Schedule\" -TimeoutSec 120 -> $ps1",
+          "ok": true,
+          "seconds": 16.1,
+          "evidence": "typed 'PITSCHEDULE': Command: | Command: PITSCHEDULE"
+        },
+        {
+          "n": 34,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 5",
+          "ok": true,
+          "seconds": 5.0,
+          "evidence": "slept 5 s"
+        },
+        {
+          "n": 35,
+          "phase": "case",
+          "verb": "ui-dump",
+          "text": "ui-dump \"Pit Schedule\" -> $psd",
+          "ok": true,
+          "seconds": 15.7,
+          "evidence": "ui-dump 'Creative Engineering | Pit Schedule (PITSCHEDULE)': 660 controls, tabs: Source | Rows | Changes | Placement"
+        },
+        {
+          "n": 36,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"Pit Schedule\" \"Close\" -> $psc",
+          "ok": true,
+          "seconds": 25.9,
+          "evidence": "pressed 'Close' in /Pit Schedule/: window closed = True"
+        },
+        {
+          "n": 37,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"Pit Schedule\" -Secs 120",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "the window /Pit Schedule/ closed after 0 s"
+        },
+        {
+          "n": 38,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 39,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31437071_B1.dwg]"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "control $psd \"Pit P3\" exists",
+          "ok": true,
+          "expected": "control 'Pit P3' exists",
+          "actual": "2",
+          "evidence": "'Pit P3' found in 'Creative Engineering | Pit Schedule (PITSCHEDULE)' (2 control(s))"
+        },
+        {
+          "n": 2,
+          "text": "matches $psd \"name.:.Pit P3.,.id(?:(?!name.:.Pit ).)*?name.:.P4.(?:(?!name.:.Pit ).)*?name.:.17\\.30.(?:(?!name.:.Pit ).)*?name.:.17\\.25.(?:(?!name.:.Pit ).)*?name.:.18\\.88.\"",
+          "ok": true,
+          "expected": "matches /name.:.Pit P3.,.id(?:(?!name.:.Pit ).)*?name.:.P4.(?:(?!name.:.Pit ).)*?name.:.17\\.30.(?:(?!name.:.Pit ).)*?name.:.17\\.25.(?:(?!name.:.Pit ).)*?name.:.18\\.88./",
+          "actual": "{\"title\":\"Creative Engineering | Pit Schedule (PITSCHEDULE)\",\"handle\":19662264,\"class\":\"Window\",\"source\":\"win32\",\"bounds\":[2160,136,1440,800],\"control_count\":660,\"truncated\":false,\"tabs\":[{\"name\":\"Sou...",
+          "evidence": "matched 'name\":\"Pit P3\",\"id\":\"\",\"class\":\"DataGridRow\",\"depth\":5,\"enabled\":true,\"offscreen\":true,\"bounds\":[2189,766,1101,26],\"selected\":false},{\"type\":\"Custom\",\"name\":\"P3\",\"id\":\"\",\"class\":\"DataGridCell\",\"depth\":6,\"enabled\":true,\"offscreen\":true,\"bounds\":[2189,766,80,26],\"value\":\"P3\",\"readonly\":false},{\"type\":\"Text\",\"name\":\"P3\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":7,\"enabled\":true,\"offscreen\":false,\"bounds\":[2191,766,76,24]},{\"type\":\"Custom\",\"name\":\"900 x 900\",\"id\":\"\",\"class\":\"DataGridCell\",\"depth\":6,\"enabled\":true,\"offscreen\":true,\"bounds\":[2269,766,140,26],\"value\":\"900 x 900\",\"readonly\":false},{\"type\":\"Text\",\"name\":\"900 x 900\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":7,\"enabled\":true,\"offscreen\":false,\"bounds\":[2269,766,140,24]},{\"type\":\"Custom\",\"name\":\"DET X (Grated): blank\",\"id\":\"\",\"class\":\"DataGridCell\",\"depth\":6,\"enabled\":true,\"offscreen\":true,\"bounds\":[2409,766,95,26],\"value\":\"\",\"readonly\":false},{\"type\":\"Text\",\"name\":\"\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":7,\"enabled\":true,\"offscreen\":false,\"bounds\":[2411,766,91,24]},{\"type\":\"Custom\",\"name\":\"P4\",\"id\":\"\",\"class\":\"DataGridCell\",\"depth\":6,\"enabled\":true,\"offscreen\":true,\"bounds\":[2504,766,80,26],\"value\":\"P4\",\"readonly\":false},{\"type\":\"Text\",\"name\":\"P4\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":7,\"enabled\":true,\"offscreen\":false,\"bounds\":[2506,766,76,24]},{\"type\":\"Custom\",\"name\":\"450\",\"id\":\"\",\"class\":\"DataGridCell\",\"depth\":6,\"enabled\":true,\"offscreen\":true,\"bounds\":[2584,766,90,26],\"value\":\"450\",\"readonly\":false},{\"type\":\"Text\",\"name\":\"450\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":7,\"enabled\":true,\"offscreen\":false,\"bounds\":[2586,766,86,24]},{\"type\":\"Custom\",\"name\":\"17.30\",\"id\":\"\",\"class\":\"DataGridCell\",\"depth\":6,\"enabled\":true,\"offscreen\":true,\"bounds\":[2674,766,90,26],\"value\":\"17.30\",\"readonly\":false},{\"type\":\"Text\",\"name\":\"17.30\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":7,\"enabled\":true,\"offscreen\":false,\"bounds\":[2676,766,86,24]},{\"type\":\"Custom\",\"name\":\"450\",\"id\":\"\",\"class\":\"DataGridCell\",\"depth\":6,\"enabled\":true,\"offscreen\":true,\"bounds\":[2764,766,95,26],\"value\":\"450\",\"readonly\":false},{\"type\":\"Text\",\"name\":\"450\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":7,\"enabled\":true,\"offscreen\":false,\"bounds\":[2766,766,91,24]},{\"type\":\"Custom\",\"name\":\"17.25\",\"id\":\"\",\"class\":\"DataGridCell\",\"depth\":6,\"enabled\":true,\"offscreen\":true,\"bounds\":[2859,766,95,26],\"value\":\"17.25\",\"readonly\":false},{\"type\":\"Text\",\"name\":\"17.25\",\"id\":\"\",\"class\":\"TextBlock\",\"depth\":7,\"enabled\":true,\"offscreen\":false,\"bounds\":[2861,766,91,24]},{\"type\":\"Custom\",\"name\":\"18.88\"'"
+        },
+        {
+          "n": 3,
+          "text": "matches $plan_il \"IL 17\\.30\"",
+          "ok": true,
+          "expected": "matches /IL 17\\.30/",
+          "actual": "| IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.25 | IL 17.13 | IL 18.20 | IL 18.00 | IL 17.08 | IL 16.98 | IL 18.50 | IL 18.10 | IL 16.93 | IL 16.87 | IL 17.40 | IL 17.30 | IL 16.82 | IL 16.61 | ...",
+          "evidence": "matched 'IL 17.30'"
+        },
+        {
+          "n": 4,
+          "text": "matches $plan_il \"IL 17\\.25\"",
+          "ok": true,
+          "expected": "matches /IL 17\\.25/",
+          "actual": "| IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.25 | IL 17.13 | IL 18.20 | IL 18.00 | IL 17.08 | IL 16.98 | IL 18.50 | IL 18.10 | IL 16.93 | IL 16.87 | IL 17.40 | IL 17.30 | IL 16.82 | IL 16.61 | ...",
+          "evidence": "matched 'IL 17.25'"
+        },
+        {
+          "n": 5,
+          "text": "matches $in_near \"^[0-9A-F]+$\"",
+          "ok": true,
+          "expected": "matches /^[0-9A-F]+$/",
+          "actual": "1155B6",
+          "evidence": "matched '1155B6'"
+        },
+        {
+          "n": 6,
+          "text": "matches $out_near \"^[0-9A-F]+$\"",
+          "ok": true,
+          "expected": "matches /^[0-9A-F]+$/",
+          "actual": "1101B8",
+          "evidence": "matched '1101B8'"
+        },
+        {
+          "n": 7,
+          "text": "record $in_near \"handle of the IL 17.30 text within 2.5 m of pit P3\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "1155B6",
+          "evidence": "RECORDED, not judged: handle of the IL 17.30 text within 2.5 m of pit P3 = 1155B6"
+        },
+        {
+          "n": 8,
+          "text": "record $out_near \"handle of the IL 17.25 text within 2.5 m of pit P3\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "1101B8",
+          "evidence": "RECORDED, not judged: handle of the IL 17.25 text within 2.5 m of pit P3 = 1101B8"
+        },
+        {
+          "n": 9,
+          "text": "record $t1810 \"x of every IL 18.10 text on the plan (BUG-376 condition)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "96908.6847913974 | 53026.7474394765 | 54262.9263743631",
+          "evidence": "RECORDED, not judged: x of every IL 18.10 text on the plan (BUG-376 condition) = 96908.6847913974 | 53026.7474394765 | 54262.9263743631"
+        },
+        {
+          "n": 10,
+          "text": "window-closed $psc",
+          "ok": true,
+          "expected": "the window closed",
+          "actual": "closed=True",
+          "evidence": "ui-press reported window_closed = True"
+        },
+        {
+          "n": 11,
+          "text": "not-contains $win_end \"Pit Schedule\"",
+          "ok": true,
+          "expected": "does not contain 'Pit Schedule'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31437071_B1.dwg]",
+          "evidence": "'Pit Schedule' is absent from: Autodesk AutoCAD 2027 - [CLDV31437071_B1.dwg]"
+        },
+        {
+          "n": 12,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 13,
+          "text": "record $plan_il \"FULL every IL text on the plan\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "| IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.25 | IL 17.13 | IL 18.20 | IL 18.00 | IL 17.08 | IL 16.98 | IL 18.50 | IL 18.10 | IL 16.93 | IL 16.87 | IL 17.40 | IL 17.30 | IL 16.82 | IL 16.61 | IL 17.65 | IL 17.58 | IL 17.98 | IL 18.60 | IL 18.00 | IL 18.60 | IL 18.00 | IL 18.40 | IL 18.15 | IL 18.40 | IL 18.15 | IL 18.40 | IL 18.10 | IL 18.40 | IL 18.10 | IL 18.40 | IL 18.19 | IL 18.40 | IL 18.14 | IL 18.60 | IL 18.34 | IL 18.60 | IL 18.28 | IL 18.60 | IL 18.24 | IL 18.60 | IL 18.24",
+          "evidence": "RECORDED, not judged: FULL every IL text on the plan = | IL 17.67 | IL 17.58 | IL 17.53 | IL 17.45 | IL 17.25 | IL 17.13 | IL 18.20 | IL 18.00 | IL 17.08 | IL 16.98 | IL 18.50 | IL 18.10 | IL 16.93 | IL 16.87 | IL 17.40 | IL 17.30 | IL 16.82 | IL 16.61 | IL 17.65 | IL 17.58 | IL 17.98 | IL 18.60 | IL 18.00 | IL 18.60 | IL 18.00 | IL 18.40 | IL 18.15 | IL 18.40 | IL 18.15 | IL 18.40 | IL 18.10 | IL 18.40 | IL 18.10 | IL 18.40 | IL 18.19 | IL 18.40 | IL 18.14 | IL 18.60 | IL 18.34 | IL 18.60 | IL 18.28 | IL 18.60 | IL 18.24 | IL 18.60 | IL 18.24"
+        },
+        {
+          "n": 14,
+          "text": "record $psc \"FULL what pressing Close reported\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"window\":\"Creative Engineering | Pit Schedule (PITSCHEDULE)\",\"button\":\"Close\",\"button_id\":\"\",\"invoke_call\":\"returned\",\"window_closed\":true}",
+          "evidence": "RECORDED, not judged: FULL what pressing Close reported = {\"window\":\"Creative Engineering | Pit Schedule (PITSCHEDULE)\",\"button\":\"Close\",\"button_id\":\"\",\"invoke_call\":\"returned\",\"window_closed\":true}"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 8 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: PITSCHEDULE completed 41590 ms"
+      ],
+      "error": null,
+      "finished": "2026-10-31 14:39:44",
+      "session_id": "RUN-20261031-1436-C3.0.88-bF9r38-s1",
+      "acceptance": {
+        "state": "ACCEPTED-READY",
+        "reasons": [],
+        "passing_sessions_on_this_build": 2,
+        "red_before": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+The C-33 train is a GO at `ef4e8f94`. Nothing serious is left open. It is built and unit-tested only: nobody has opened it in AutoCAD and nothing is installed.
+
+1. **Slow-feature pause report:** this was the one new failing test. The report now uses the JSON call AutoCAD can handle, and the guard test passes. No command reaches this report yet, so no drafter could hit it.
+2. **#892 and #931 (LandXML units) are left out.** Both add a switch that is ON by default and changes how a LandXML file's coordinates or sizes come in. The brief says to leave out anything that changes the LandXML reader for a drafter.
+3. **#1090 (BUG-565) is merged.** PIT and Edit Pit now refuse with one plain sentence, before drawing anything, when the pit-number layer (35TEXT) is locked.
+   - It finds that layer from the pit label block itself, not a fixed name.
+   - It unlocks nothing, and the earlier label and cover-text lock checks are unchanged.
+   - Once merged, its own test expected Edit Pit's old wording. I updated the test and its log entry to the current sentence; the code is unchanged.
+   - Not covered yet: Edit Pit adding a label to a pit that has none still fails late, as it does in 3.0.46. I posted the review verdict and this gap on the PR.
+4. **Tests on the final version:**
+   - Civil: 17,082 run, 17,062 passed, 19 skipped. The only failure is the old Glen Eira back-test.
+   - The 7 extra runs are #1090's new tests. The JSON guard now passes.
+   - Manager: 749 of 749.
+   - Undo/redo safety tests: 78 of 78 on the AutoCAD 2027 build. On the older AutoCAD 2024 build, 95 of 95 (the same 78 plus #1090's pit tests and the JSON guard).
+5. **The 10 failures on the older AutoCAD 2024 build** are the same 10 test names at the starting version and at the final one. That is the known limit of that build's stand-in AutoCAD files, not a fault in this train.
+6. **Nothing that shouldn't change did.**
+   - Shared code, command registry, council profiles, version numbers and the redo baseline are untouched. The regression log only gained lines.
+   - All 20 new settings are OFF or blank. No existing default changed.
+   - With the switches OFF, CDCHECK, CDRULES and What CE Found behave as 3.0.46.
+   - Your CD_Settings.json kept the same size and fingerprint throughout.
+7. **Things to know:**
+   - AutoCAD started at 03:47 while I was testing. I didn't start it, and nothing was in the Codex queue. Its own logs grew the CE folders under AppData; your settings files did not change.
+   - The JSON fix was already sitting unsaved in the assembler's working folder (written at 00:15, after the assembler's last commit). I checked and kept it.
+8. **Two problems are safe to ship but must be fixed before their switches go on:**
+   - **Shared Checks result:** it would hide pit fit warnings in What CE Found.
+   - **Pause:** after U, the next save would write the pause back.
+
+My three commits are the JSON fix (`23ccb195`), the #1090 merge (`ccb76f5c`) and the test wording (`ef4e8f94`). They are pushed by fast-forward and the local copy matches GitHub. Nothing is left for the controller to merge.
+
+The report, with the Codex AutoCAD checklist (including the W59-02..05 retest), is at `C:\Lisp Files\_TEST_COPIES_20260923\TRAIN_C33_FINALIZER_REPORT.md`.
+
+OPUS SIGN-OFF train claude/rel-20261009z GO (ef4e8f94d2bbdbfa36bf46bcfbdcce27a9895774)

@@ -1,0 +1,9 @@
+**FOR TIM**
+
+1. **GO at `31689290d9338e81832931fa0526229977915c9c`** on `claude/rel-20261024m`.
+2. **What I changed:** one test-only commit. It checks that the three new switches load ON from an older settings file.
+3. **Tests:** Civil 19,806 (net10), 0 failed. Manager 950, 0 failed. The Manager release check passed with 75 files. On net48, only the 17 known failures, all from the AutoCAD reference files on this PC.
+4. **Held back:** #1706 (Pit tab Close button), because I can't show it is safe for REDO. The Installer tests were not run.
+5. **Your call:** a pipe with no material is now sized at 0.013, as rough as concrete. I recommend keeping it.
+
+Nothing is installed, and nobody has opened any of this in AutoCAD.

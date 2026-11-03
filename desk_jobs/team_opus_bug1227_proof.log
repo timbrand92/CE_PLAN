@@ -1,0 +1,7 @@
+The robot proof for the pit copy fix and the Codex look for the new Cancel button are both written. Nothing has been run yet. They need tonight's C-77b build, because C-77 (Civil 3.0.87) has neither fix.
+
+1. **Robot cases:** N70 rotates and scales copies onto pit P3 and checks P3 keeps all five pipes. C70 is the same with the fix switched off, and must show the copy taking them. N71 checks a copy dropped on a loose pipe end still joins it. N72 checks a copy placed 5 m away changes nothing. N71 and N72 each have a twin that must fail. All six passed the offline format check.
+2. **One correction to the job text:** the line "10A901 from=WT9 to=P11" is the pipe being taken by the copy. So N70 checks it is absent and C70 checks it is present, as the pre-review says.
+3. **Codex look J8:** checks the three buttons can be read, then backs out with the X, Esc and Cancel and checks no pipe is drawn. Enter must still draw the pipe as typed. Rules N1 to N17 match the G3 brief word for word.
+
+Report pushed: `C:\CE_PLAN\areas\BUG1227_PROOF_DRAFT_30OCT.md`.

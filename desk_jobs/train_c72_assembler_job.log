@@ -1,0 +1,7 @@
+C-72 is assembled: all five PRs are merged on `claude/rel-20261026w` at `becc4686`, pushed, and the report is pushed to `C:\CE_PLAN` (commit `b82697fb`).
+
+1. **Merge:** none of the five PRs had moved since the reference heads. The only clash was `REGRESSION_LOG.md`, and every entry is kept. The total is 22 files, 1,570 added, 28 removed, as the list expected. I added no Settings key, and Shared, Installer and Manager are untouched.
+2. **Build and tests:** the whole solution builds with 0 errors. Civil net10 ran 20,649 tests with 0 failed, and Manager net10 ran 1,041 with 0 failed. The Civil net48 run has the same 55 reference-only reds as C-71.
+3. **One red:** the Structural half of the Arch tests (#1828) passes 3 of 4 on both runtimes. This branch's older Structural line always references CE_SHARED, so the "Structural uses no CE_SHARED code" rule finds 26 violations. The Civil half passes 14 of 14 on both. I did not revert the merge; the finalizer decides.
+4. **Not tested:** nothing was run in AutoCAD. The C-71 build was installed on Tim's PC while I worked; I installed nothing. I did not see the Manager 75-file guard run as a named test.
+5. **Leftover:** an empty `C:\asm72` folder remains, because the safety layer refused to remove it.

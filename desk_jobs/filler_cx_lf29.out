@@ -1,0 +1,7 @@
+== cx_lf29 (usage 35.0% -> 35.0%): 1. **DONE — all five audited.** BUG-1013, BUG-1015, BUG-1016 and BUG-1017 already have draft fixes. BUG-1014 requires protected Structural files and was skipped.
+2. **Report saved and pushed:** [Batch 29 report](C:/CE_PLAN/areas/CODEX_LEDGER_FIX_BATCH29_23OCT.md), including exact future AutoCAD checks.
+
+---
+
+3. **Draft PR:** [#1683](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1683). Branch `cx2/bug-1013-batch29-audit`, tip `cf75f76a`.
+4. **Validation:** documentation only; 0 tests added, 0 run, 0 builds. Diff and leak scans passed. No production change, installation or AutoCAD run.

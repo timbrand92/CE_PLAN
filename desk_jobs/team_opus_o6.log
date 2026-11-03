@@ -1,0 +1,41 @@
+## FOR TIM
+
+1. **This fix does not need the protected shared file changed.** Three earlier write-ups said it did: the bug list, the build register and today's triage. That's wrong. Manager already has the code to collect Civil's reports from Civil's folder. That code is in the Manager version you have installed (1.1.85), but it's switched off. So this can be a Manager-only fix in a normal update.
+
+2. **Moving Civil's reports into Manager's folder would make privacy worse.** Manager sends its own folder's files whole, without checking what's in them. When it collects from Civil's folder, it checks every file and cuts drawing names down to the job number.
+
+3. **What's piling up on your own PC:** 25,842 Civil report files from 28 Apr to 29 Oct (1,950 failures, 23,893 usage records), about 43 MB. Nothing ever sends them or clears them. I haven't measured Max's PC.
+
+4. **One clash with your ruling:** the existing collector deletes old files the first time it's switched on, without sending them. You said "never delete anything unsent". It's off today, so nothing has been deleted. The fix changes it to move those files into a "kept, not sent" folder on the PC instead.
+
+5. **What you'd see after the fix:** when Max's command fails, a short report reaches the office IT folder with the job number, the command, a code for his PC and the date. No drawing names, client names or error text. You set up once in Manager's private name book on your PC that the code means Max's PC.
+
+6. **Four questions for you**, each with my recommendation, are written up ready for the questions chat. The main one is whether Manager may start sending once the short list is built and tested.
+
+7. **Not proven:** all of it. This is a plan only. No code was changed, nothing was built and no PR was opened.
+
+---
+
+**Report:** `C:\CE_PLAN\areas\release-v3-colleagues-BUG1171_SHARED_PLAN_29OCT.md`, pushed to CE_PLAN main (`a5c52bf8`, then `b7e79696`). `git status -sb` shows nothing ahead. I committed only that one file. Changes from other sessions that were already sitting in CE_PLAN were left alone.
+
+**What I checked:**
+- The #1788 PR branch is already part of the release branch `claude/rel-20261026z`, with no diff in its three code files.
+- The installed Civil and Manager copies of CE_SHARED match in all three lanes (same SHA-256).
+- The installed Structural DLLs don't reference CE_SHARED.
+- The monorepo Structural project does reference CE_SHARED and uses `CeTelemetryStore`. The memory note `ce-shared-one-assembly-identity` is out of date on that point.
+
+**Other risks in the report:**
+- Manager's one-time folder move (`CeAdminStorageService.cs:36-40`) carries Civil's outbox into Manager's own folder, which is sent unchecked. The plan stops the move from taking the outbox.
+- Manager's own records already go out with their full (cleaned) text, whatever the switch says.
+
+**What CE 01 needs to do:**
+1. Append the questions block in report section 8 to `QUESTIONS_FOR_MONDAY.md`. I didn't write to that file.
+2. Correct the build register line for B-050 (CE 01 owns it); the bug list's "fix kind" is CE 05's to correct.
+3. Build B-050 as a Manager-only draft PR, as set out in section 4.
+
+**Summary:** No PR. BUG-1171 / B-050 needs no CE_SHARED change. The plan is a Manager-only fix in `Modules/Manager/Services/CeAdminStorageService.cs` and `CeOneGlanceStatus.cs`:
+- send only the short list;
+- move unsent files to "kept, not sent" instead of deleting them;
+- stop the one-time move from taking Civil's outbox.
+
+It's guarded by a new switch, `pluginOutboxFullRecords`, which is off by default so the fix is on; switching it on brings back today's behaviour. `drainPluginOutbox` stays off until Tim answers Q1.

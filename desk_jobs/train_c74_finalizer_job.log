@@ -1,0 +1,23 @@
+**FOR TIM**
+
+1. **The verdict is GO at `6d76a2678aef5476b90e901fd86b7a2968fd6e96`** on train branch `claude/rel-20261026y`. It is built and unit-tested only. Nobody has opened it in AutoCAD, and nothing is marked FIXED.
+2. **What the fix (#1830) does.** Place a downpipe, close the drawing without saving, then open the same file again. On 3.0.83, DP and OF were then refused with "could not be refreshed". With this fix, CE reads the reopened drawing's own pits and pipes at the first CE command, so they place normally.
+3. **My verdict on #1830 is keep, with two notes.**
+   - Closing a drawing now only sets a mark in CE's memory. It writes nothing to the drawing and does nothing to REDO.
+   - The second suspect in the original bug report (the check reads a pipe row, then may change it) is not fixed. So BUG-1225 stays open until the robot cases N13 and N14 pass on 3.0.84 and Codex has a look.
+4. **One thing I can't explain.** The contents of your `CD_Settings.json` did not change. But its file date moved from 4 Oct to 11 Mar while an AutoCAD session (not mine) was running on your PC. I never touched the file.
+5. **Nothing for you to decide now.** The open questions carried over from C-73 are listed in the report, all still open.
+
+---
+
+1. **What I changed:** one commit, tests only (`6d76a267`). It adds `C74NewSwitchDefaultsTests`, 11 tests, which pass on both net10 and net48. I did not revert, drop or fix anything in the product code.
+2. **Build:** the whole solution builds with 0 errors.
+3. **Civil tests (net10):** 20,720 total, 0 failed, 32 skipped.
+4. **Manager tests (net10):** 1,041 total, 0 failed, 1 skipped.
+5. **Civil tests (net48, the usual subset):** the only failures are the same 55 as every recent train, all caused by the reference-only AutoCAD library. There is no new failure.
+6. **Arch check (Civil half):** 14 of 14 pass. The Structural half wasn't run; it is the known 3-of-4 failure carried over from earlier trains.
+7. **Manager release build:** the file-count check passed at 75 files. Manager code is unchanged, so its new version is a re-stamp only.
+8. **Shared code and installer:** CE_SHARED, the Installer and Manager have no changes in this train.
+9. **Report:** `C:\CE_PLAN\areas\release-v3-colleagues-TRAIN_C74_FINALIZER_REPORT_2026-10-28.md`, pushed. The review log entries 1698 to 1703 and the sign-off line are pushed with it.
+
+**Summary:** GO at `6d76a2678aef5476b90e901fd86b7a2968fd6e96`. My only change is one tests commit (11 tests, passing on net10 and net48). The solution builds with 0 errors. Civil net10 is 20,720 tests with 0 failed, Manager is 1,041 with 0 failed, and net48 shows only the 55 known failures. The Manager file count is 75. BUG-1225 and BUG-861 stay open. Nothing has been run in AutoCAD.

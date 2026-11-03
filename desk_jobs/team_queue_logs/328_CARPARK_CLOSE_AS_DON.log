@@ -1,0 +1,1 @@
+C:\CE_PLAN\areas\CARPARK_CLOSE_AS_DONE_CHECK_BATCH2_03NOV.md: all 20 fixes are in 61fd6fbc (Civil 3.0.89), but only 4 (BUG-854, 815, 711, 684) have the ledger acceptance to close. The other 16 still need a robot or Codex look in AutoCAD. Nothing was built or tested, and I wrote to `C:\CE_PLAN\areas\` because `C:\CE_PLANreas\` looked like a typo.

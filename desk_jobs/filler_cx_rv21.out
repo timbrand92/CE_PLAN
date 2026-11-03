@@ -1,0 +1,7 @@
+== cx_rv21 (usage 41.0% -> 42.0%): 1. **DONE — #1796 MERGE; #1797 MERGE.** Two agreements with Opus’s earlier conditional approvals; zero disagreements. No Tim decision needed.
+2. **Key finding.** #1796 adds an error-message condition; #1797 changes exactly five messages. Command behaviour stays unchanged.
+
+---
+
+3. **Saved and pushed.** [Review report](C:/CE_PLAN/areas/CODEX_PR_REVIEW_cx_rv21.md), commit `ab3ff7be`. Leak scan passed; no commits ahead.
+4. **Limits.** No builds, tests or AutoCAD runs. No separate Opus sign-off found for the replacement heads.

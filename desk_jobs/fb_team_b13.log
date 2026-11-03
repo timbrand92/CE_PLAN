@@ -1,0 +1,25 @@
+**FOR TIM**
+
+I fixed four of the five bugs as draft PRs. The fifth, BUG-1075, was already fixed by Codex, so I skipped it. Everything is built and unit-tested only; nobody has opened any of it in AutoCAD.
+
+1. **BUG-1075 (CDSPINEUPGRADE preview wording):** skipped. Codex's PR #1718 already fixes it, and I left a comment there saying so.
+2. **BUG-1076 (Structural Settings), PR #1739:** CESETTINGS > System > the first tab is now "Saving and fault reports". The boxes read "Record fault and speed information", "Include extra detail in that log" and "Show save messages on the command line". A grey line under the second box says the extra detail is only for investigating a fault. I looked at a test picture of the page and nothing is cut off.
+3. **BUG-1077 (BSET), PR #1740:** the hover now says "Pick a point inside the building so CE can put lintel labels outside."
+4. **BUG-1078 (markup Help), PR #1741:** the markup tools' Help now describes what each one does to the review and the drawing.
+   - **Your call:** these tools sit under the "Administration" heading in Help. I recommend moving them to a "Markup" drafting heading, because they are drafting tools. I haven't moved them; it needs your word.
+5. **BUG-1079 (PDF export Help), PR #1742:** the old Help was wrong as well as technical. It said the PDF plots "in the background", but it actually plots while AutoCAD waits. The Help now says that.
+
+**Tests:** with all four fixes together, 5,747 Structural tests passed and none failed. Each new test failed on the old text and passes on the new.
+
+**What to check in AutoCAD (don't run the export or the markup Run):**
+1. Type CESETTINGS, click System, open the first tab and read the labels. Then Cancel.
+2. Hover the BSET button on the ribbon.
+3. Type CEHELP and open these entries: BSET, CEMARKUPLOAD, CEMARKUPREGISTER, CEMARKUPRUN, STRUCEXPORTPDF.
+
+---
+
+1. **Not tested:** the older AutoCAD version's tests (only compiled, 0 errors), the Structural net8, DesignCore, Drainage and Manager test sets, and any plotting.
+2. **Full suite ran once:** it ran on the four fixes combined, not once per branch.
+3. **Report:** `C:\CE_PLAN\areas\release-v3-colleagues-FB_TEAM_BATCH13_REPORT.md`, pushed. The working folders have been removed.
+
+Summary: BUG-1075 was skipped because Codex PR #1718 already fixes it. BUG-1076 to BUG-1079 are wording fixes in draft PRs #1739 to #1742 on the Structural 1.0.122 train. 5,747 tests passed, 0 failed, and each new test failed on the old text first. BUG-1079's old Help also falsely promised background plotting. Grouping the markup tools is left for Tim.

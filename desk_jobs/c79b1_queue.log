@@ -1,0 +1,11 @@
+Sun 00:21:38 queue started; waits for 03:10 Sun
+Sun 03:10:13 it is 03:10 or later: launching F1 and W1
+Sun 03:10:17 launched F1 pid 59860 rc 0 (running before: 3)
+Sun 03:18:14 launched W1 pid 82604 rc 0 (running before: 3)
+Sun 03:22:03 F1 ended
+Sun 03:22:04 launched W2 pid 22552 rc 0 (running before: 2)
+Sun 03:26:54 W1 ended
+Sun 03:30:58 W2 ended
+Sun 03:30:59 launched R pid 64848 rc 0 (running before: 1)
+Sun 03:37:21 R ended
+Sun 03:37:21 all four jobs and the review ended; queue ends

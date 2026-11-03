@@ -1,0 +1,8 @@
+F-023 is built as DRAFT PR #1844, waiting for Tim on QUESTIONS item 40; the report is pushed. Built and unit-tested only; no AutoCAD run on a clean profile.
+
+- **Branch:** `fb/f023-colleague-defaults`, commit `7d59574f`.
+- **Files:** `Assets/Config/colleague-defaults.json`, `ColleagueDefaultsService.cs`, `SettingsService.cs`, `UserSettings.cs`, `F023ColleagueDefaultsTests.cs`, `REGRESSION_LOG.md`.
+- **Switch:** `settings.firstStartUsesColleagueDefaults`, ON; OFF is the same key written false in the shipped file.
+- **Tests:** net10 20,798 passed, 32 skipped. One timing test failed under load and passed alone. net48 compile has 0 errors.
+- **Not built:** Tim's item 63 ("default on for everyone") also needs the built-in default changed, which is a separate change.
+- **Report:** `C:\CE_PLAN\areas\release-v3-colleagues-F023_BUILD_REPORT.md`, with robot cases F23_fresh_profile, F23s and F23x.

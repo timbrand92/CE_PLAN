@@ -1,0 +1,2113 @@
+{
+  "header": {
+    "run_id": "RUN-20261102-1146-C3.0.89-smF2",
+    "started": "2026-11-02 11:46:55",
+    "finished": "2026-11-02 12:07:45",
+    "build": {
+      "civil": {
+        "product_version": "3.0.89+61fd6fbc72710872048a69ef5b46d0e5b55087fa",
+        "file_version": "3.0.89.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_CVL_SUITE.bundle\\Contents\\Win64\\Modern\\CE_CVL_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "struc": {
+        "product_version": "1.0.125+204dfad268caf967f3404d876648480a94efe1cd",
+        "file_version": "1.0.125.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_STRUC_SUITE.bundle\\Contents\\Win64\\Modern\\CE_STRUC_SUITE.dll",
+        "same_in_all_three_runtime_folders": true
+      },
+      "mgr": {
+        "product_version": "1.1.89+61fd6fbc72710872048a69ef5b46d0e5b55087fa",
+        "file_version": "1.1.89.0",
+        "dll": "C:\\Users\\TimothyBrand\\AppData\\Roaming\\Autodesk\\ApplicationPlugins\\CE_SUITE_MANAGER.bundle\\Contents\\Win64\\Modern\\CE_SUITE_MANAGER.dll",
+        "same_in_all_three_runtime_folders": true
+      }
+    },
+    "build_key": "civil 3.0.89+61fd6fbc / struc 1.0.125+204dfad2 / mgr 1.1.89+61fd6fbc",
+    "acad_version": "26.0s (LMS Tech)",
+    "pack_sha256": "B2690482B84019A7AADB3A3439881A839A251740C3A4BFCA16CB43AC15B0E76A",
+    "header_lines": [
+      "Installed build (product-version string of each loaded DLL, Modern folder; same in the Net8 and Legacy folders: civil True, struc True, mgr True): Civil 3.0.89+61fd6fbc72710872048a69ef5b46d0e5b55087fa; Structural 1.0.125+204dfad268caf967f3404d876648480a94efe1cd; Manager 1.1.89+61fd6fbc72710872048a69ef5b46d0e5b55087fa",
+      "Driver files (SHA-256, first 12): v2 F4D8F40C3675 (expected F4D8F40C3675), v2 allow-list 5B542F2145F4 (expected 5B542F2145F4), v3 4B0175FFAB00, v3 session F061E3240C47, v3 allow-list B8B495131283, v3 watchdog 20EB2449248E",
+      "Runner files: case_runner.ps1 BBF42DBA8958, case_runner_lib.ps1 89AD455619F8, case_selftest_offline.ps1 88592ABF44F8",
+      "Pack: 6 case file(s) plus 2 shared setup(s); pack SHA-256 B2690482B84019A7AADB3A3439881A839A251740C3A4BFCA16CB43AC15B0E76A; each case file's own SHA-256 is in report.json",
+      "Fixture masters (SHA-256 first 12): DRV1_B1 34BBE37C2EA4",
+      "Settings fingerprints at pack start: TIM_CE_CADTOOLS\\CD_Settings.json ACD64E79A33B; TIM_CE_CADTOOLS\\CS_Settings.json 622A246F7D3B; CE_CVL_SUITE\\settings.json EFE307C4FC74; CE_STRUC_SUITE\\CS_Settings.json D604CE689671 (expected ACD64E79A33B 622A246F7D3B EFE307C4FC74 2972CE70C514)",
+      "Melbourne time at start: Mon 02 Nov 2026 11:46 (PC clock); in Tim's AutoCAD hours now: False"
+    ],
+    "invalid_cases": []
+  },
+  "counts": {
+    "PASS": 3,
+    "FAIL": 0,
+    "FAIL_known": 0,
+    "BLOCKED": 3,
+    "FLAKY": 0
+  },
+  "acceptance_counts": {
+    "ACCEPTED-READY": 0,
+    "PASS-UNREVIEWED": 3
+  },
+  "sessions": [
+    {
+      "session_id": "RUN-20261102-1146-C3.0.89-smF2-s1",
+      "phase": "main",
+      "session_no": 1,
+      "started": "2026-11-02 11:46:58",
+      "finished": "2026-11-02 12:03:17",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31147031_B1.dwg",
+      "cases": [
+        "R01",
+        "N05",
+        "N12",
+        "N20",
+        "N24"
+      ],
+      "whatsnew_dismissed_at_start": "no, window was not there",
+      "calibration": {
+        "ok": true,
+        "max_raw_px": 1.912,
+        "max_corrected_px": 0.5,
+        "why": "",
+        "canvas": {
+          "left": 1951,
+          "top": 421,
+          "width": 1858,
+          "height": 569,
+          "how": "exact (tol 0)",
+          "scale_vs_screensize": 1.0,
+          "dpi": 96
+        }
+      },
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : D604CE689671 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    },
+    {
+      "session_id": "RUN-20261102-1146-C3.0.89-smF2-s2",
+      "phase": "main",
+      "session_no": 2,
+      "started": "2026-11-02 12:03:17",
+      "finished": "2026-11-02 12:07:45",
+      "result": "PASS",
+      "blocked": null,
+      "error": null,
+      "fixture": "DRV1_B1",
+      "fixture_sha256": "34BBE37C2EA4",
+      "copy": "C:\\ce_rc_drv\\CLDV31203222_B1.dwg",
+      "cases": [
+        "R14h_pipekey_200"
+      ],
+      "whatsnew_dismissed_at_start": "no, window was not there",
+      "calibration": null,
+      "clean": true,
+      "acad_left": 0,
+      "lock_holder_after": null,
+      "lock_after": "none",
+      "guard_clear": true,
+      "hashes_start": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hashes_end": {
+        "TIM_CE_CADTOOLS\\CD_Settings.json": "ACD64E79A33B",
+        "TIM_CE_CADTOOLS\\CS_Settings.json": "622A246F7D3B",
+        "CE_CVL_SUITE\\settings.json": "EFE307C4FC74",
+        "CE_STRUC_SUITE\\CS_Settings.json": "D604CE689671"
+      },
+      "hash_differences": null,
+      "hash_unexpected_at_start": "CE_STRUC_SUITE\\CS_Settings.json : D604CE689671 (expected 2972CE70C514)",
+      "extra_copies_removed": 0,
+      "acad_version": "26.0s (LMS Tech)",
+      "quit_attempts": {
+        "attempt": 1,
+        "how": "v2 quit",
+        "ok": true,
+        "ended_by": "CloseMainWindow",
+        "error": ""
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "R01",
+      "proves_bugs": "BUG-862 (the 'completed' half only: a PIT and a CD run that placed objects and ended by Esc are logged 'completed'; the 'cancelled' half is R05 v2 and the 'refused' half is R10 v2)",
+      "title": "PIT and CD keep placing until Esc, Esc keeps what was placed, and one U takes back only the last pipe",
+      "kind": "deterministic",
+      "order": 40,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "UX-STD-01b (daily case D01), BUG-862 (completed word)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "PIT places a first pit, offers the next, takes a second pit; CD places a first pipe, offers the next, takes a second pipe; each Esc ends it with the 'Stopped' line and keeps what was placed: 2 new pits on layer STORMWATER PIT, 2 new pipe objects, 2 flow arrows, 4 IL texts (18.000, 17.900, 17.800, 17.700) and 2 pipe labels; no New Pit or New Pipe window is left open; the Civil log says 'Command outcome: PIT completed' and 'Command outcome: CD completed' and never 'cancelled' for either; ONE U takes back only the last pipe with its two IL texts, its label and its arrow, leaves both pits and the first pipe.",
+      "why_not_unit": "The run is a chain of real AutoCAD command instances queued one behind another. Only live AutoCAD shows that the next pick really places another object, what Esc keeps and what one U takes back.",
+      "not_automated": [
+        "The second pit and the second pipe are placed with the real mouse (typed text is lost while CE waits at a prompt). The second pipe's length is not asserted (its label read 1 IN 54 in probe PRH1: the click point is not the exact typed point).",
+        "The pit label block and the text sizes are not judged (a look item for Codex)."
+      ],
+      "file_sha256": "99BC70E236751F8086E5542A7547A3C5431B56F16F31BC83BB62C8D3C5020108",
+      "result": "BLOCKED",
+      "blocked": "refused by a driver guard: AutoCAD would not come to the front (frame_disabled). Nothing was clicked.",
+      "first_failure": null,
+      "started": "2026-11-02 11:52:34",
+      "seconds": 221.1,
+      "setup": "SETUP-P8x2",
+      "setup_note": "shared setup SETUP-P8x2 run here for the first time at 11:55:46",
+      "steps": [
+        {
+          "n": 1,
+          "phase": "setup",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "copy CLDV31147031_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "setup",
+          "verb": "ms-count",
+          "text": "ms-count -> $n0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"_.ZOOM _C 160000,-85000 30000\"",
+          "ok": true,
+          "seconds": 3.8,
+          "evidence": "typed '_.ZOOM _C 160000,-85000 30000': Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _C | Specify center point: 160000,-85000 | Enter magnif..."
+        },
+        {
+          "n": 4,
+          "phase": "setup",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.2,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "setup",
+          "verb": "v3",
+          "text": "v3 view-read",
+          "ok": true,
+          "seconds": 0.7,
+          "evidence": "v3 view-read : view stored: centre 160,000.000,-85,000.000 height 30,000.000 screen 1858x569"
+        },
+        {
+          "n": 6,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"PIT{NL}150000,-80000\" -Force -ExpectWindow \"New Pit\" -> $pit_t1",
+          "ok": true,
+          "seconds": 9.0,
+          "evidence": "typed 'PIT 150000,-80000': Command: | Command: PIT | Specify pit insertion point: 150000,-80000"
+        },
+        {
+          "n": 7,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.CoverLevel\" \"19.000\"",
+          "ok": true,
+          "seconds": 4.5,
+          "evidence": "ui set 'New Pit' C2.CoverLevel = 19.000: "
+        },
+        {
+          "n": 8,
+          "phase": "setup",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pit\" \"New pit, Continue placement\" -> $pit_t2",
+          "ok": true,
+          "seconds": 43.7,
+          "evidence": "pressed 'New pit, Continue placement' in /New Pit/: window closed = True"
+        },
+        {
+          "n": 9,
+          "phase": "setup",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pit\" -Secs 120",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "the window /^New Pit/ closed after 0 s"
+        },
+        {
+          "n": 10,
+          "phase": "setup",
+          "verb": "v3",
+          "text": "v3 pt-click \"150000,-78500\" -Blind -> $pit_click_label1",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "v3 pt-click 150000,-78500: pt-click: world 150,000.000,-78,500.000 -> pixel 2690,583 (exact 2,690.07,582.72); cursor read-back 2690,583; view stored (58 s old)"
+        },
+        {
+          "n": 11,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_esc_cover1",
+          "ok": true,
+          "seconds": 8.1,
+          "evidence": "esc-prompt: Command: | Command: PIT | Specify pit insertion point: 150000,-80000 | Specify pit label insertion point: | Click to place cover text (Enter = <BR>): *Cancel*"
+        },
+        {
+          "n": 12,
+          "phase": "setup",
+          "verb": "v3",
+          "text": "v3 pt-click \"150000,-90000\" -Blind -> $pit_click_next",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "v3 pt-click 150000,-90000: pt-click: world 150,000.000,-90,000.000 -> pixel 2690,801 (exact 2,690.07,800.83); cursor read-back 2690,801; view stored (68 s old)"
+        },
+        {
+          "n": 13,
+          "phase": "setup",
+          "verb": "ui-dump",
+          "text": "ui-dump \"^New Pit\" -TimeoutSec 60 -> $pit_w2",
+          "ok": true,
+          "seconds": 6.3,
+          "evidence": "ui-dump 'New Pit': 72 controls, tabs: "
+        },
+        {
+          "n": 14,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.CoverLevel\" \"19.000\"",
+          "ok": true,
+          "seconds": 3.6,
+          "evidence": "ui set 'New Pit' C2.CoverLevel = 19.000: "
+        },
+        {
+          "n": 15,
+          "phase": "setup",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pit\" \"New pit, Continue placement\" -> $pit_t3",
+          "ok": true,
+          "seconds": 43.7,
+          "evidence": "pressed 'New pit, Continue placement' in /New Pit/: window closed = True"
+        },
+        {
+          "n": 16,
+          "phase": "setup",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pit\" -Secs 120",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "the window /^New Pit/ closed after 0 s"
+        },
+        {
+          "n": 17,
+          "phase": "setup",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 18,
+          "phase": "setup",
+          "verb": "v3",
+          "text": "v3 esc-key",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "v3 esc-key : one Esc key sent to AutoCAD"
+        },
+        {
+          "n": 19,
+          "phase": "setup",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 20,
+          "phase": "setup",
+          "verb": "v3",
+          "text": "v3 esc-key",
+          "ok": true,
+          "seconds": 1.5,
+          "evidence": "v3 esc-key : one Esc key sent to AutoCAD"
+        },
+        {
+          "n": 21,
+          "phase": "setup",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 22,
+          "phase": "setup",
+          "verb": "v3",
+          "text": "v3 esc-key",
+          "ok": true,
+          "seconds": 1.4,
+          "evidence": "v3 esc-key : one Esc key sent to AutoCAD"
+        },
+        {
+          "n": 23,
+          "phase": "setup",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 24,
+          "phase": "setup",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 25,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"_.ZOOM _C 160000,-85000 30000\"",
+          "ok": true,
+          "seconds": 3.3,
+          "evidence": "typed '_.ZOOM _C 160000,-85000 30000': Command: | Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _C | Specify center point: 160000,-85000 | Enter magnif..."
+        },
+        {
+          "n": 26,
+          "phase": "setup",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 27,
+          "phase": "setup",
+          "verb": "v3",
+          "text": "v3 view-read",
+          "ok": true,
+          "seconds": 0.6,
+          "evidence": "v3 view-read : view stored: centre 160,000.000,-85,000.000 height 30,000.000 screen 1858x569"
+        },
+        {
+          "n": 28,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-80000{NL}170000,-80000{NL}\" -Force -ExpectWindow \"New Pipe\" -> $pipe_t1",
+          "ok": true,
+          "seconds": 9.2,
+          "evidence": "typed 'CD 150000,-80000 170000,-80000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-80000 | Specify second point: 170000,-80000 | Se..."
+        },
+        {
+          "n": 29,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 6.7,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: "
+        },
+        {
+          "n": 30,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.900\"",
+          "ok": true,
+          "seconds": 5.5,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.900: "
+        },
+        {
+          "n": 31,
+          "phase": "setup",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $pipe_t2",
+          "ok": true,
+          "seconds": 15.8,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 32,
+          "phase": "setup",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 33,
+          "phase": "setup",
+          "verb": "v3",
+          "text": "v3 pt-click \"150000,-90000\" -Blind -> $pipe_click_a",
+          "ok": false,
+          "seconds": 1.1,
+          "evidence": "v3 pt-click 150000,-90000: AutoCAD would not come to the front (frame_disabled). Nothing was clicked."
+        }
+      ],
+      "assertions": [],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 103 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: PIT completed 66347 ms ; Command outcome: PIT completed 67201 ms"
+      ],
+      "error": null,
+      "finished": "2026-11-02 11:56:15",
+      "session_id": "RUN-20261102-1146-C3.0.89-smF2-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": true
+      }
+    },
+    {
+      "id": "N05",
+      "proves_bugs": "",
+      "title": "A placed pit gets one PIT LABEL reading P8 on layer STORMWATER PIT LABEL and one cover text reading CL 19.000, and one U removes all three",
+      "kind": "deterministic",
+      "order": 50,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "UX-CPLAN-21 (daily card D09)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "PIT at 150000,-80000 with cover level 19.000, the label point clicked at 150000,-78500 and the cover text point clicked at 151500,-81500: exactly one new pit block on STORMWATER PIT, one new PIT LABEL block on STORMWATER PIT LABEL whose PIT_LABEL attribute reads P8, and one new text reading exactly CL 19.000 (no IL line); the command line says 'Pit placed successfully.' and offers the next pit; one U echoes PIT and leaves no new object behind.",
+      "why_not_unit": "The label block, its attribute and the cover MText are created by the live PIT prompts in the real drawing.",
+      "not_automated": [
+        "The label position is not asserted to the millimetre (card asks within 1 unit of the typed point): a mouse click lands near, not exactly on, the point (R01 note). The distance is recorded.",
+        "The cover text's corner (BR) and its look are a picture item."
+      ],
+      "file_sha256": "4C28CE66C02FB7C77F35F91A95DAE34D2B188CC3025134F293DB92C2938EC7D0",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-11-02 11:56:15",
+      "seconds": 112.1,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM _C 150000,-80000 8000\"",
+          "ok": true,
+          "seconds": 3.7,
+          "evidence": "typed '_.ZOOM _C 150000,-80000 8000': Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _C | Specify center point: 150000,-80000 | Enter magnification or ..."
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 view-read",
+          "ok": true,
+          "seconds": 0.8,
+          "evidence": "v3 view-read : view stored: centre 150,000.000,-80,000.000 height 8,000.000 screen 1858x569"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $n0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"PIT{NL}150000,-80000\" -Force -ExpectWindow \"New Pit\" -TimeoutSec 120 -> $pit_t1",
+          "ok": true,
+          "seconds": 10.2,
+          "evidence": "typed 'PIT 150000,-80000': Command: | Command: PIT | Specify pit insertion point: 150000,-80000"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.CoverLevel\" \"19.000\"",
+          "ok": true,
+          "seconds": 5.3,
+          "evidence": "ui set 'New Pit' C2.CoverLevel = 19.000: "
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pit\" \"New pit, Continue placement\" -> $pit_t2",
+          "ok": true,
+          "seconds": 50.5,
+          "evidence": "pressed 'New pit, Continue placement' in /New Pit/: window closed = True"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pit\" -Secs 120",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "the window /^New Pit/ closed after 0 s"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 pt-click \"150000,-78500\" -Blind -> $click_label",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "v3 pt-click 150000,-78500: pt-click: world 150,000.000,-78,500.000 -> pixel 2880,599 (exact 2,879.50,599.31); cursor read-back 2880,599; view stored (67 s old)"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 pt-click \"151500,-81500\" -Blind -> $click_cover",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "v3 pt-click 151500,-81500: pt-click: world 151,500.000,-81,500.000 -> pixel 2986,813 (exact 2,986.06,812.69); cursor read-back 2986,813; view stored (72 s old)"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 esc-key",
+          "ok": true,
+          "seconds": 1.3,
+          "evidence": "v3 esc-key : one Esc key sent to AutoCAD"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $n0 -> $new",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "3 object(s) after index 1034 (model space now 1037); by type: AcDbBlockReference 2; AcDbMText 1; first: 11C5AD AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C651 AcDbBlockReference STORMWATER PIT LABEL PIT LABEL 2 ; 11C658 AcDbMText 25TEXT CL 19.000"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new object=AcDbBlockReference \"layer=STORMWATER PIT\" -> $pits",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 3: 11C5AD PIT BLOCK 3 STORMWATER PIT"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"name~^PIT LABEL\" -> $labels",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 3: 11C651 PIT LABEL 2 STORMWATER PIT LABEL"
+        },
+        {
+          "n": 19,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $labels handle -> $lh",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C651"
+        },
+        {
+          "n": 20,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $labels layer -> $ll",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'layer' = STORMWATER PIT LABEL"
+        },
+        {
+          "n": 21,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$lh} -> $le",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "ent-read 11C651: {\"handle\":\"11C651\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"effective_name\":\"PIT LABEL 2\",\"insertion\":[150007.0379654346,-78495.6061596281,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"PIT_..."
+        },
+        {
+          "n": 22,
+          "phase": "case",
+          "verb": "dist",
+          "text": "dist $labels \"150000,-78500\" -> $ld",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "distance from object 11C651 to 150000,-78500 = 8.3"
+        },
+        {
+          "n": 23,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new \"text~^CL \" -> $covers",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 3: 11C658 CL 19.000 25TEXT"
+        },
+        {
+          "n": 24,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $covers text -> $ct",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'text' = CL 19.000"
+        },
+        {
+          "n": 25,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $covers layer -> $cl",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'layer' = 25TEXT"
+        },
+        {
+          "n": 26,
+          "phase": "case",
+          "verb": "windows-snapshot",
+          "text": "windows-snapshot -> $win_end",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "windows now: Autodesk AutoCAD 2027 - [CLDV31147031_B1.dwg]"
+        },
+        {
+          "n": 27,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -> $u1",
+          "ok": true,
+          "seconds": 2.8,
+          "evidence": "typed 'U': Command: | Command: U | PIT"
+        },
+        {
+          "n": 28,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 29,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $n0 -> $after_u",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "0 object(s) after index 1034 (model space now 1034); by type: ; first: "
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"Pit placed successfully.\"",
+          "ok": true,
+          "expected": "command line has 'Pit placed successfully.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: 'Pit placed successfully.'"
+        },
+        {
+          "n": 2,
+          "text": "history has \"[CE] Pit placed. Pick the next pit, or press Esc to stop.\"",
+          "ok": true,
+          "expected": "command line has '[CE] Pit placed. Pick the next pit, or press Esc to stop.'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '[CE] Pit placed. Pick the next pit, or press Esc to stop.'"
+        },
+        {
+          "n": 3,
+          "text": "count $pits = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $pits = 1 (expected = 1)"
+        },
+        {
+          "n": 4,
+          "text": "count $labels = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $labels = 1 (expected = 1)"
+        },
+        {
+          "n": 5,
+          "text": "equals $ll \"STORMWATER PIT LABEL\"",
+          "ok": true,
+          "expected": "STORMWATER PIT LABEL",
+          "actual": "STORMWATER PIT LABEL",
+          "evidence": "value 'STORMWATER PIT LABEL' (expected 'STORMWATER PIT LABEL')"
+        },
+        {
+          "n": 6,
+          "text": "matches $le \"text.:.P8.,.insertion\"",
+          "ok": true,
+          "expected": "matches /text.:.P8.,.insertion/",
+          "actual": "{\"handle\":\"11C651\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"effective_name\":\"PIT LABEL 2\",\"insertion\":[150007.0379654346,-78495.6061596281,0.0],\"rotation\":0.0...",
+          "evidence": "matched 'text\":\"P8\",\"insertion'"
+        },
+        {
+          "n": 7,
+          "text": "count $covers = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $covers = 1 (expected = 1)"
+        },
+        {
+          "n": 8,
+          "text": "equals $ct \"CL 19.000\"",
+          "ok": true,
+          "expected": "CL 19.000",
+          "actual": "CL 19.000",
+          "evidence": "value 'CL 19.000' (expected 'CL 19.000')"
+        },
+        {
+          "n": 9,
+          "text": "not-contains $win_end \"New Pit\"",
+          "ok": true,
+          "expected": "does not contain 'New Pit'",
+          "actual": "Autodesk AutoCAD 2027 - [CLDV31147031_B1.dwg]",
+          "evidence": "'New Pit' is absent from: Autodesk AutoCAD 2027 - [CLDV31147031_B1.dwg]"
+        },
+        {
+          "n": 10,
+          "text": "contains $u1 \"PIT\"",
+          "ok": true,
+          "expected": "contains 'PIT'",
+          "actual": "Command: | Command: U | PIT",
+          "evidence": "found 'PIT' in: Command: | Command: U | PIT"
+        },
+        {
+          "n": 11,
+          "text": "count $after_u = 0",
+          "ok": true,
+          "expected": "count = 0",
+          "actual": "0",
+          "evidence": "count of $after_u = 0 (expected = 0)"
+        },
+        {
+          "n": 12,
+          "text": "record $ld \"distance of the label insertion point from the clicked point (mm)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "8.3",
+          "evidence": "RECORDED, not judged: distance of the label insertion point from the clicked point (mm) = 8.3"
+        },
+        {
+          "n": 13,
+          "text": "record $cl \"layer of the cover text\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "25TEXT",
+          "evidence": "RECORDED, not judged: layer of the cover text = 25TEXT"
+        },
+        {
+          "n": 14,
+          "text": "record $le \"FULL the new PIT LABEL\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"11C651\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"effective_name\":\"PIT LABEL 2\",\"insertion\":[150007.0379654346,-78495.6061596281,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"PIT_LABEL\",\"text\":\"P8\",\"insertion\":[149761.84696952737,-78670.6061596281,0.0],\"rotation\":0.0,\"height\":350.0,\"alignment\":10,\"align_point\":[150007.0379654346,-78495.6061596281,0.0],\"bbox\":[149761.84696952737,-78676.57478172907,150252.22896134184,-78319.17369032388]}],\"bbox\":[149607.0379654346,-78895.6061596281,150407.0379654346,-78095.6061596281],\"block_parts\":[{\"index\":0,\"object\":\"AcDbWipeout\",\"layer\":\"50CONT\",\"color\":256},{\"index\":1,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"35TEXT\",\"color\":256,\"tag\":\"PIT_LABEL\",\"world_insertion\":[149761.84696952737,-78670.6061596281]}]}",
+          "evidence": "RECORDED, not judged: FULL the new PIT LABEL = {\"handle\":\"11C651\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"effective_name\":\"PIT LABEL 2\",\"insertion\":[150007.0379654346,-78495.6061596281,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"PIT_LABEL\",\"text\":\"P8\",\"insertion\":[149761.84696952737,-78670.6061596281,0.0],\"rotation\":0.0,\"height\":350.0,\"alignment\":10,\"align_point\":[150007.0379654346,-78495.6061596281,0.0],\"bbox\":[149761.84696952737,-78676.57478172907,150252.22896134184,-78319.17369032388]}],\"bbox\":[149607.0379654346,-78895.6061596281,150407.0379654346,-78095.6061596281],\"block_parts\":[{\"index\":0,\"object\":\"AcDbWipeout\",\"layer\":\"50CONT\",\"color\":256},{\"index\":1,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"35TEXT\",\"color\":256,\"tag\":\"PIT_LABEL\",\"world_insertion\":[149761.84696952737,-78670.6061596281]}]}"
+        },
+        {
+          "n": 15,
+          "text": "record $click_label \"what the label click reported\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"ok\":true,\"verb\":\"pt-click\",\"started\":\"2026-11-02 11:57:43\",\"elapsed_ms\":1755,\"error\":null,\"refused\":false,\"output\":[\"pt-click: world 150,000.000,-78,500.000 -> pixel 2880,599 (exact 2,879.50,599.31); cursor read-back 2...",
+          "evidence": "RECORDED, not judged: what the label click reported = {\"ok\":true,\"verb\":\"pt-click\",\"started\":\"2026-11-02 11:57:43\",\"elapsed_ms\":1755,\"error\":null,\"refused\":false,\"output\":[\"pt-click: world 150,000.000,-78,500.000 -> pixel 2880,599 (exact 2,879.50,599.31); cursor read-back 2..."
+        },
+        {
+          "n": 16,
+          "text": "record $click_cover \"what the cover click reported\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"ok\":true,\"verb\":\"pt-click\",\"started\":\"2026-11-02 11:57:48\",\"elapsed_ms\":1795,\"error\":null,\"refused\":false,\"output\":[\"pt-click: world 151,500.000,-81,500.000 -> pixel 2986,813 (exact 2,986.06,812.69); cursor read-back 2...",
+          "evidence": "RECORDED, not judged: what the cover click reported = {\"ok\":true,\"verb\":\"pt-click\",\"started\":\"2026-11-02 11:57:48\",\"elapsed_ms\":1795,\"error\":null,\"refused\":false,\"output\":[\"pt-click: world 151,500.000,-81,500.000 -> pixel 2986,813 (exact 2,986.06,812.69); cursor read-back 2..."
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV31147031_B1_138824771.log)",
+        "Civil CE log: 88 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: PIT completed 74759 ms"
+      ],
+      "error": null,
+      "finished": "2026-11-02 11:58:07",
+      "session_id": "RUN-20261102-1146-C3.0.89-smF2-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": true
+      }
+    },
+    {
+      "id": "N12",
+      "proves_bugs": "",
+      "title": "COPY of pit P3 makes one new pit numbered P8 with its own PIT LABEL, says Check levels, keeps P3's own label, and one U takes the copy away",
+      "kind": "deterministic",
+      "order": 120,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "UX-EDIT-02 plain COPY (daily card D15)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "Select pit P3 (109D56) and COPY it by 0,-5000 (Enter ends COPY): the command line says '1 pit copied and numbered as new. Check levels: they came across from the originals (the Inspector shows which ones to confirm).'; exactly one new PIT BLOCK and one new PIT LABEL are added and the new label reads P8; one U echoes COPY and the object count returns to its value before the COPY; the drawing file on disk is unchanged.",
+      "why_not_unit": "CE reacts to a real native COPY and renumbers the clone in the live drawing.",
+      "not_automated": [
+        "The Inspector's Check levels mark is a picture item (Codex).",
+        "A COPY that takes pipes with the pit ('1 pit and N pipes copied ...') is not driven."
+      ],
+      "file_sha256": "9E2E8556D1BC76DFC9E8E63B5BDA9024C330E91145263B1EF1EDDEDD96F6607F",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-11-02 11:58:07",
+      "seconds": 39.8,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.4,
+          "evidence": "copy CLDV31147031_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read 109E08 -> $p3_label0",
+          "ok": true,
+          "seconds": 0.5,
+          "evidence": "ent-read 109E08: {\"handle\":\"109E08\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.88923993723,-26238.287379591762,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"PIT_LA..."
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "pick-first",
+          "text": "pick-first \"109D56\"",
+          "ok": true,
+          "seconds": 4.6,
+          "evidence": "pick-first 109D56: Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"109D56\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2PICKFIRST \"..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.COPY{NL}0,0{NL}0,-5000{NL}{NL}\" -Force -> $cp",
+          "ok": true,
+          "seconds": 3.9,
+          "evidence": "typed '_.COPY 0,0 0,-5000': Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as displacement>: 0,-5000 |..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 2.1,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 4",
+          "ok": true,
+          "seconds": 4.1,
+          "evidence": "slept 4 s"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c1",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "model space holds 1037 objects"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "ms-new",
+          "text": "ms-new $c0 -> $new_cp",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "3 object(s) after index 1034 (model space now 1037); by type: AcDbBlockReference 2; AcDbMText 1; first: 11C55B AcDbBlockReference STORMWATER PIT PIT BLOCK 3 ; 11C575 AcDbBlockReference STORMWATER PIT LABEL PIT LABEL ; 11C57C AcDbMText 25TEXT CL 18.88"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_cp \"name~^PIT BLOCK\" -> $cp_pit",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 3: 11C55B PIT BLOCK 3 STORMWATER PIT"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_cp \"name~^PIT LABEL\" -> $cp_label",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "selected 1 of 3: 11C575 PIT LABEL STORMWATER PIT LABEL"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "field",
+          "text": "field $cp_label handle -> $hcp",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "field 'handle' = 11C575"
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read {$hcp} -> $cpl",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "ent-read 11C575: {\"handle\":\"11C575\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.88923993723,-31238.287379591762,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"PIT_LA..."
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "select",
+          "text": "select $new_cp \"text~^CL \" -> $cp_cover",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "selected 1 of 3: 11C57C CL 18.88 25TEXT"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read 109E08 -> $p3_label1",
+          "ok": true,
+          "seconds": 0.3,
+          "evidence": "ent-read 109E08: {\"handle\":\"109E08\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.88923993723,-26238.287379591762,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"PIT_LA..."
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -> $u1",
+          "ok": true,
+          "seconds": 2.7,
+          "evidence": "typed 'U': Command: U | COPY"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c2",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"1 pit copied and numbered as new. Check levels: they came across from the originals (the Inspector shows which ones to confirm).\"",
+          "ok": true,
+          "expected": "command line has '1 pit copied and numbered as new. Check levels: they came across from the originals (the Inspector shows which ones to confirm).'",
+          "actual": "1 matching line(s)",
+          "evidence": "command line: '1 pit copied and numbered as new. Check levels: they came across from the originals (the Inspector shows which ones to confirm).'"
+        },
+        {
+          "n": 2,
+          "text": "count $cp_pit = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $cp_pit = 1 (expected = 1)"
+        },
+        {
+          "n": 3,
+          "text": "count $cp_label = 1",
+          "ok": true,
+          "expected": "count = 1",
+          "actual": "1",
+          "evidence": "count of $cp_label = 1 (expected = 1)"
+        },
+        {
+          "n": 4,
+          "text": "matches $cpl \"text.:.P8.,.insertion\"",
+          "ok": true,
+          "expected": "matches /text.:.P8.,.insertion/",
+          "actual": "{\"handle\":\"11C575\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.88923993723,-31238.287379591762,0.0],\"rotation\":0.0,\"...",
+          "evidence": "matched 'text\":\"P8\",\"insertion'"
+        },
+        {
+          "n": 5,
+          "text": "contains $u1 \"COPY\"",
+          "ok": true,
+          "expected": "contains 'COPY'",
+          "actual": "Command: U | COPY",
+          "evidence": "found 'COPY' in: Command: U | COPY"
+        },
+        {
+          "n": 6,
+          "text": "equals $c2 $c0",
+          "ok": true,
+          "expected": "1034",
+          "actual": "1034",
+          "evidence": "value '1034' (expected '1034')"
+        },
+        {
+          "n": 7,
+          "text": "copy-unchanged $copy0",
+          "ok": true,
+          "expected": "file unchanged",
+          "actual": "unchanged",
+          "evidence": "SHA-256 34BBE37C2EA4 vs 34BBE37C2EA4; last written 01:39:47 same"
+        },
+        {
+          "n": 8,
+          "text": "record $p3_label0 \"FULL P3's own label 109E08 before the COPY (expected to read P3; not asserted)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"109E08\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.88923993723,-26238.287379591762,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"PIT_LABEL\",\"text\":\"P3\",\"insertion\":[52325.69824403,-26413.287379591762,0.0],\"rotation\":0.0,\"height\":350.0,\"alignment\":10,\"align_point\":[52570.88923993723,-26238.287379591762,0.0],\"bbox\":[52325.69824403,-26419.256001692716,52816.080235844456,-26061.854910287533]}],\"bbox\":[52170.88923993723,-26638.287379591762,52970.88923993723,-25838.287379591762],\"block_parts\":[{\"index\":0,\"object\":\"AcDbWipeout\",\"layer\":\"50CONT\",\"color\":256},{\"index\":1,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"35TEXT\",\"color\":256,\"tag\":\"PIT_LABEL\",\"world_insertion\":[52325.69824403,-26413.287379591762]}]}",
+          "evidence": "RECORDED, not judged: FULL P3's own label 109E08 before the COPY (expected to read P3; not asserted) = {\"handle\":\"109E08\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.88923993723,-26238.287379591762,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"PIT_LABEL\",\"text\":\"P3\",\"insertion\":[52325.69824403,-26413.287379591762,0.0],\"rotation\":0.0,\"height\":350.0,\"alignment\":10,\"align_point\":[52570.88923993723,-26238.287379591762,0.0],\"bbox\":[52325.69824403,-26419.256001692716,52816.080235844456,-26061.854910287533]}],\"bbox\":[52170.88923993723,-26638.287379591762,52970.88923993723,-25838.287379591762],\"block_parts\":[{\"index\":0,\"object\":\"AcDbWipeout\",\"layer\":\"50CONT\",\"color\":256},{\"index\":1,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"35TEXT\",\"color\":256,\"tag\":\"PIT_LABEL\",\"world_insertion\":[52325.69824403,-26413.287379591762]}]}"
+        },
+        {
+          "n": 9,
+          "text": "record $p3_label1 \"FULL P3's own label 109E08 after the COPY (expected to read P3; not asserted)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"handle\":\"109E08\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.88923993723,-26238.287379591762,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"PIT_LABEL\",\"text\":\"P3\",\"insertion\":[52325.69824403,-26413.287379591762,0.0],\"rotation\":0.0,\"height\":350.0,\"alignment\":10,\"align_point\":[52570.88923993723,-26238.287379591762,0.0],\"bbox\":[52325.69824403,-26419.256001692716,52816.080235844456,-26061.854910287533]}],\"bbox\":[52170.88923993723,-26638.287379591762,52970.88923993723,-25838.287379591762],\"block_parts\":[{\"index\":0,\"object\":\"AcDbWipeout\",\"layer\":\"50CONT\",\"color\":256},{\"index\":1,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"35TEXT\",\"color\":256,\"tag\":\"PIT_LABEL\",\"world_insertion\":[52325.69824403,-26413.287379591762]}]}",
+          "evidence": "RECORDED, not judged: FULL P3's own label 109E08 after the COPY (expected to read P3; not asserted) = {\"handle\":\"109E08\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.88923993723,-26238.287379591762,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"PIT_LABEL\",\"text\":\"P3\",\"insertion\":[52325.69824403,-26413.287379591762,0.0],\"rotation\":0.0,\"height\":350.0,\"alignment\":10,\"align_point\":[52570.88923993723,-26238.287379591762,0.0],\"bbox\":[52325.69824403,-26419.256001692716,52816.080235844456,-26061.854910287533]}],\"bbox\":[52170.88923993723,-26638.287379591762,52970.88923993723,-25838.287379591762],\"block_parts\":[{\"index\":0,\"object\":\"AcDbWipeout\",\"layer\":\"50CONT\",\"color\":256},{\"index\":1,\"object\":\"AcDbAttributeDefinition\",\"layer\":\"35TEXT\",\"color\":256,\"tag\":\"PIT_LABEL\",\"world_insertion\":[52325.69824403,-26413.287379591762]}]}"
+        },
+        {
+          "n": 10,
+          "text": "record $cp_cover \"the copy's cover text, if any\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"index\":1036,\"handle\":\"11C57C\",\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"name\":\"\",\"text\":\"CL 18.88\",\"x\":54354.409165101824,\"y\":-29866.597361625376}",
+          "evidence": "RECORDED, not judged: the copy's cover text, if any = {\"index\":1036,\"handle\":\"11C57C\",\"object\":\"AcDbMText\",\"layer\":\"25TEXT\",\"name\":\"\",\"text\":\"CL 18.88\",\"x\":54354.409165101824,\"y\":-29866.597361625376}"
+        },
+        {
+          "n": 11,
+          "text": "record $cp \"FULL what COPY printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as displacement>: 0,-5000 | Specify second point or [Array/Exit/Undo] <Exit>: | 1 pit copied and numbered as new. Check levels: they came across from the originals (the Inspector shows which ones to confirm). | Command:",
+          "evidence": "RECORDED, not judged: FULL what COPY printed = Command: | Command: _.COPY | 1 found | Current settings: Copy mode = Multiple | Specify base point or [Displacement/mOde] <Displacement>: 0,0 | Specify second point or [Array] <use first point as displacement>: 0,-5000 | Specify second point or [Array/Exit/Undo] <Exit>: | 1 pit copied and numbered as new. Check levels: they came across from the originals (the Inspector shows which ones to confirm). | Command:"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV31147031_B1_1e00c16aa.log)",
+        "Civil CE log: 53 new line(s) while the case ran, 0 with [ERR]"
+      ],
+      "error": null,
+      "finished": "2026-11-02 11:58:47",
+      "session_id": "RUN-20261102-1146-C3.0.89-smF2-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": true
+      }
+    },
+    {
+      "id": "N20",
+      "proves_bugs": "",
+      "title": "A 2 m pipe gets its label on a leader: CE asks to snap the callout arrow to the pipe, places exactly one multileader, and draws no plain label along the pipe",
+      "kind": "deterministic",
+      "order": 200,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "UX-CPLAN-24 short-pipe label on a leader (daily card D11)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "CD from 150000,-80000 to 152000,-80000 with inverts 18.000 / 17.990 and Start Pipe: CE asks 'Snap callout arrow to pipe:'; a click on the pipe at 151000,-80000 and a click for the text at 151000,-78500 place the label; the CD run then offers the next pipe and Esc ends it. The drawing gains exactly one pipe, exactly one multileader, and no plain text containing ' DIA. '; 'Pipe text callout cancelled.' is never printed.",
+      "why_not_unit": "The fit test uses the real text width and the drawn length, and the leader is placed by live prompts in the drawing.",
+      "not_automated": [
+        "The leader's arrow point lying on the pipe (card assertion 2) and the leader's look are a Codex look; the arrow point is not readable by the robot.",
+        "The leader's own wording (size, material, grade) is RECORDED only: the robot has never read a multileader's text."
+      ],
+      "file_sha256": "AA6B716294DFF09799BF5036A7B3A1CACA9522F571BCA8C7ACF8146A57C70D7C",
+      "result": "BLOCKED",
+      "blocked": "refused by a driver guard: the window under the target pixel 2813,753 is not the drawing area (other_window_under_point): a palette, a CE window or another program is in the way. Nothing was clicked.",
+      "first_failure": null,
+      "started": "2026-11-02 11:58:47",
+      "seconds": 164.4,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"_.ZOOM _C 151000,-79500 6000\"",
+          "ok": true,
+          "seconds": 3.5,
+          "evidence": "typed '_.ZOOM _C 151000,-79500 6000': Command: _.ZOOM | Specify corner of window, enter a scale factor (nX or nXP), or | [All/Center/Dynamic/Extents/Previous/Scale/Window/Object] <real time>: _C | Specify center point: 151000,-79500 | Enter magnification or ..."
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.7,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 view-read",
+          "ok": true,
+          "seconds": 0.7,
+          "evidence": "v3 view-read : view stored: centre 151,000.000,-79,500.000 height 6,000.000 screen 1858x569"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "ms-count",
+          "text": "ms-count -> $c0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-80000{NL}152000,-80000{NL}\" -Force -ExpectWindow \"New Pipe\" -TimeoutSec 120 -> $t1",
+          "ok": true,
+          "seconds": 9.6,
+          "evidence": "typed 'CD 150000,-80000 152000,-80000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-80000 | Specify second point: 152000,-80000 | Se..."
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 9.8,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: "
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.990\"",
+          "ok": true,
+          "seconds": 10.4,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.990: "
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $t2",
+          "ok": true,
+          "seconds": 51.0,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 3",
+          "ok": true,
+          "seconds": 3.0,
+          "evidence": "slept 3 s"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 pt-click \"150300,-80000\" -Blind -> $click_anchor",
+          "ok": false,
+          "seconds": 0.8,
+          "evidence": "v3 pt-click 150300,-80000: the window under the target pixel 2813,753 is not the drawing area (other_window_under_point): a palette, a CE window or another program is in the way. Nothing was clicked."
+        }
+      ],
+      "assertions": [],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV31147031_B1_1ec7d6dc6.log)",
+        "Civil CE log: 14 new line(s) while the case ran, 0 with [ERR]",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=True)",
+        "tidy-up: AutoCAD was not idle after the case; one Esc sent (ok=True)"
+      ],
+      "error": null,
+      "finished": "2026-11-02 12:01:32",
+      "session_id": "RUN-20261102-1146-C3.0.89-smF2-s1",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": true
+      }
+    },
+    {
+      "id": "N24",
+      "proves_bugs": "",
+      "title": "CDRENUMBER on the plan: No leaves every pit label as it was, Yes turns the P9 label into P8 and the P10 label into P9 (same blocks) and leaves P1 to P7 and C1 alone, and one U puts every label back",
+      "kind": "deterministic",
+      "order": 240,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "UX-CPLAN-18/19 CDRENUMBER, the plan-label half (daily card D20 assertions 1 to 3 on the labels; with N15 the whole card)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "",
+      "variant_of": "",
+      "expected": "On the untouched copy the plan labels read P1 to P7, P9, P10 and C1, and none reads P8. CDRENUMBER answered C1 then No prints 'Renumber cancelled - nothing changed.' and every label still reads what it read. CDRENUMBER answered C1 then Yes prints 'Renumbered 2 pit(s) downhill to uphill. One Undo restores the old numbers.'; the block that read P9 now reads P8, the block that read P10 now reads P9, no label reads P10 or a temporary id, and the blocks reading P1 to P7, C1 and X1 are unchanged (109E08 still reads P3). One U echoes CDRENUMBER and the P9 and P10 blocks read P9 and P10 again; no label reads P8. Added 29 Oct 2026 (Opus B7 review item 2): after No and after the U, EVERY plan label (all 11 blocks, handle by handle) reads exactly what it read before, and after Yes the X1 block is untouched.",
+      "why_not_unit": "The network walk runs on the real drawing's pits and pipes and writes every plan label in one live command.",
+      "not_automated": [
+        "A TG mark is not in this fixture, so 'TG untouched' is not checked. Whether the numbering order is right as engineering is Tim's word.",
+        "DBMOD before and after the No answer is recorded, not judged (it is already 1 when the copy opens: N15)."
+      ],
+      "file_sha256": "7F2B7FA6380D21F57746A4E55617F74AA44941BEFB6059529A474C71F58D3DD9",
+      "result": "PASS",
+      "blocked": null,
+      "first_failure": null,
+      "started": "2026-11-02 12:01:32",
+      "seconds": 74.8,
+      "setup": "",
+      "setup_note": null,
+      "steps": [
+        {
+          "n": 1,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 ent-find AcDbBlockReference -Part \"STORMWATER PIT LABEL\" -> $lab0",
+          "ok": true,
+          "seconds": 19.7,
+          "evidence": "v3 ent-find AcDbBlockReference: scanned 1034 of 1034 objects; 11 match | {\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]}"
+        },
+        {
+          "n": 2,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read 109E08 -> $p3_0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "ent-read 109E08: {\"handle\":\"109E08\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.88923993723,-26238.287379591762,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"PIT_LA..."
+        },
+        {
+          "n": 3,
+          "phase": "case",
+          "verb": "getvar",
+          "text": "getvar DBMOD -> $m0",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "DBMOD = 1"
+        },
+        {
+          "n": 4,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDRENUMBER{NL}C1{NL}No\" -Force -> $rn_no",
+          "ok": true,
+          "seconds": 2.6,
+          "evidence": "typed 'CDRENUMBER C1 No': Command: CDRENUMBER | More than one pit discharges outside the network - its main outlet is not obvious: | C1 | X1 | Which pit is the main outlet? Type its mark or pick it on screen [C1/X1] <C1> [C1/X1] <C1>: C1 | Renumb..."
+        },
+        {
+          "n": 5,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 6,
+          "phase": "case",
+          "verb": "getvar",
+          "text": "getvar DBMOD -> $m1",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "DBMOD = 1"
+        },
+        {
+          "n": 7,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 ent-find AcDbBlockReference -Part \"STORMWATER PIT LABEL\" -> $labN",
+          "ok": true,
+          "seconds": 7.1,
+          "evidence": "v3 ent-find AcDbBlockReference: scanned 1034 of 1034 objects; 11 match | {\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]}"
+        },
+        {
+          "n": 8,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"CDRENUMBER{NL}C1{NL}Yes\" -Force -> $rn_yes",
+          "ok": true,
+          "seconds": 2.4,
+          "evidence": "typed 'CDRENUMBER C1 Yes': Command: | Command: CDRENUMBER | More than one pit discharges outside the network - its main outlet is not obvious: | C1 | X1 | Which pit is the main outlet? Type its mark or pick it on screen [C1/X1] <C1> [C1/X1] <C1>: ..."
+        },
+        {
+          "n": 9,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.6,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 10,
+          "phase": "case",
+          "verb": "sleep",
+          "text": "sleep 2",
+          "ok": true,
+          "seconds": 2.0,
+          "evidence": "slept 2 s"
+        },
+        {
+          "n": 11,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 ent-find AcDbBlockReference -Part \"STORMWATER PIT LABEL\" -> $lab1",
+          "ok": true,
+          "seconds": 7.0,
+          "evidence": "v3 ent-find AcDbBlockReference: scanned 1034 of 1034 objects; 11 match | {\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]}"
+        },
+        {
+          "n": 12,
+          "phase": "case",
+          "verb": "ent-read",
+          "text": "ent-read 109E08 -> $p3_1",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "ent-read 109E08: {\"handle\":\"109E08\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.88923993723,-26238.287379591762,0.0],\"rotation\":0.0,\"xscale\":1.0,\"attributes\":[{\"tag\":\"PIT_LA..."
+        },
+        {
+          "n": 13,
+          "phase": "case",
+          "verb": "type",
+          "text": "type \"U\" -> $u1",
+          "ok": true,
+          "seconds": 2.4,
+          "evidence": "typed 'U': Command: | Command: U | CDRENUMBER"
+        },
+        {
+          "n": 14,
+          "phase": "case",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.8,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 15,
+          "phase": "case",
+          "verb": "v3",
+          "text": "v3 ent-find AcDbBlockReference -Part \"STORMWATER PIT LABEL\" -> $lab2",
+          "ok": true,
+          "seconds": 7.7,
+          "evidence": "v3 ent-find AcDbBlockReference: scanned 1034 of 1034 objects; 11 match | {\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]}"
+        },
+        {
+          "n": 16,
+          "phase": "case",
+          "verb": "set",
+          "text": "set $jn \"{$lab0} @@AFTER@@ {$labN}\"",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "set $jn"
+        },
+        {
+          "n": 17,
+          "phase": "case",
+          "verb": "set",
+          "text": "set $jy \"{$lab0} @@AFTER@@ {$lab1}\"",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "set $jy"
+        },
+        {
+          "n": 18,
+          "phase": "case",
+          "verb": "set",
+          "text": "set $ju \"{$lab0} @@AFTER@@ {$lab2}\"",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "set $ju"
+        }
+      ],
+      "assertions": [
+        {
+          "n": 1,
+          "text": "history has \"Which pit is the main outlet?\"",
+          "ok": true,
+          "expected": "command line has 'Which pit is the main outlet?'",
+          "actual": "2 matching line(s)",
+          "evidence": "command line: 'Which pit is the main outlet? Type its mark or pick it on screen [C1/X1] <C1> [C1/X1] <C1>: C1'"
+        },
+        {
+          "n": 2,
+          "text": "history count \"P9 -> P8\" = 2",
+          "ok": true,
+          "expected": "2 line(s) with 'P9 -> P8'",
+          "actual": "2",
+          "evidence": "command line holds 2 line(s) containing 'P9 -> P8' (expected 2)"
+        },
+        {
+          "n": 3,
+          "text": "history count \"P10 -> P9\" = 2",
+          "ok": true,
+          "expected": "2 line(s) with 'P10 -> P9'",
+          "actual": "2",
+          "evidence": "command line holds 2 line(s) containing 'P10 -> P9' (expected 2)"
+        },
+        {
+          "n": 4,
+          "text": "history count \"Renumber cancelled - nothing changed.\" = 1",
+          "ok": true,
+          "expected": "1 line(s) with 'Renumber cancelled - nothing changed.'",
+          "actual": "1",
+          "evidence": "command line holds 1 line(s) containing 'Renumber cancelled - nothing changed.' (expected 1)"
+        },
+        {
+          "n": 5,
+          "text": "history count \"Renumbered 2 pit(s) downhill to uphill. One Undo restores the old numbers.\" = 1",
+          "ok": true,
+          "expected": "1 line(s) with 'Renumbered 2 pit(s) downhill to uphill. One Undo restores the old numbers.'",
+          "actual": "1",
+          "evidence": "command line holds 1 line(s) containing 'Renumbered 2 pit(s) downhill to uphill. One Undo restores the old numbers.' (expected 1)"
+        },
+        {
+          "n": 6,
+          "text": "matches $lab0 \"PIT_LABEL=P9\\W\"",
+          "ok": true,
+          "expected": "matches /PIT_LABEL=P9\\W/",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:01:48\",\"elapsed_ms\":19635,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STOR...",
+          "evidence": "matched 'PIT_LABEL=P9\\'"
+        },
+        {
+          "n": 7,
+          "text": "matches $lab0 \"PIT_LABEL=P10\\W\"",
+          "ok": true,
+          "expected": "matches /PIT_LABEL=P10\\W/",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:01:48\",\"elapsed_ms\":19635,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STOR...",
+          "evidence": "matched 'PIT_LABEL=P10\\'"
+        },
+        {
+          "n": 8,
+          "text": "not-contains $lab0 \"PIT_LABEL=P8\"",
+          "ok": true,
+          "expected": "does not contain 'PIT_LABEL=P8'",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:01:48\",\"elapsed_ms\":19635,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STOR...",
+          "evidence": "'PIT_LABEL=P8' is absent from: {\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:01:48\",\"elapsed_ms\":19635,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",..."
+        },
+        {
+          "n": 9,
+          "text": "matches $jn \"handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P9\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P9\\W\"",
+          "ok": true,
+          "expected": "matches /handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P9\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P9\\W/",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:01:48\",\"elapsed_ms\":19635,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STOR...",
+          "evidence": "matched 'handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P10\"]},{\"handle\":\"11A09A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"]}]}} @@AFTER@@ {\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:02:12\",\"elapsed_ms\":7044,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=C1\\\"]}\",\"{\\\"handle\\\":\\\"10933E\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=X1\\\"]}\",\"{\\\"handle\\\":\\\"1096B3\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P1\\\"]}\",\"{\\\"handle\\\":\\\"10981A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P2\\\"]}\",\"{\\\"handle\\\":\\\"109E08\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P3\\\"]}\",\"{\\\"handle\\\":\\\"10A18D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P6\\\"]}\",\"{\\\"handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P10\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P10\"]},{\"handle\":\"11A09A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"'"
+        },
+        {
+          "n": 10,
+          "text": "matches $jn \"handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P10\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P10\\W\"",
+          "ok": true,
+          "expected": "matches /handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P10\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P10\\W/",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:01:48\",\"elapsed_ms\":19635,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STOR...",
+          "evidence": "matched 'handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P10\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P10\"]},{\"handle\":\"11A09A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"]}]}} @@AFTER@@ {\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:02:12\",\"elapsed_ms\":7044,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=C1\\\"]}\",\"{\\\"handle\\\":\\\"10933E\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=X1\\\"]}\",\"{\\\"handle\\\":\\\"1096B3\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P1\\\"]}\",\"{\\\"handle\\\":\\\"10981A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P2\\\"]}\",\"{\\\"handle\\\":\\\"109E08\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P3\\\"]}\",\"{\\\"handle\\\":\\\"10A18D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P6\\\"]}\",\"{\\\"handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P10\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P10\"'"
+        },
+        {
+          "n": 11,
+          "text": "not-contains $labN \"PIT_LABEL=P8\"",
+          "ok": true,
+          "expected": "does not contain 'PIT_LABEL=P8'",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:02:12\",\"elapsed_ms\":7044,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORM...",
+          "evidence": "'PIT_LABEL=P8' is absent from: {\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:02:12\",\"elapsed_ms\":7044,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"..."
+        },
+        {
+          "n": 12,
+          "text": "matches $jy \"handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P9\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P8\\W\"",
+          "ok": true,
+          "expected": "matches /handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P9\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P8\\W/",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:01:48\",\"elapsed_ms\":19635,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STOR...",
+          "evidence": "matched 'handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P10\"]},{\"handle\":\"11A09A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"]}]}} @@AFTER@@ {\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:02:25\",\"elapsed_ms\":7020,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=C1\\\"]}\",\"{\\\"handle\\\":\\\"10933E\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=X1\\\"]}\",\"{\\\"handle\\\":\\\"1096B3\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P1\\\"]}\",\"{\\\"handle\\\":\\\"10981A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P2\\\"]}\",\"{\\\"handle\\\":\\\"109E08\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P3\\\"]}\",\"{\\\"handle\\\":\\\"10A18D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P6\\\"]}\",\"{\\\"handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P8\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"]},{\"handle\":\"11A09A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P8\"'"
+        },
+        {
+          "n": 13,
+          "text": "matches $jy \"handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P10\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P9\\W\"",
+          "ok": true,
+          "expected": "matches /handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P10\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P9\\W/",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:01:48\",\"elapsed_ms\":19635,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STOR...",
+          "evidence": "matched 'handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P10\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P10\"]},{\"handle\":\"11A09A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"]}]}} @@AFTER@@ {\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:02:25\",\"elapsed_ms\":7020,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=C1\\\"]}\",\"{\\\"handle\\\":\\\"10933E\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=X1\\\"]}\",\"{\\\"handle\\\":\\\"1096B3\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P1\\\"]}\",\"{\\\"handle\\\":\\\"10981A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P2\\\"]}\",\"{\\\"handle\\\":\\\"109E08\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P3\\\"]}\",\"{\\\"handle\\\":\\\"10A18D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P6\\\"]}\",\"{\\\"handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P8\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"'"
+        },
+        {
+          "n": 14,
+          "text": "not-contains $lab1 \"PIT_LABEL=P10\"",
+          "ok": true,
+          "expected": "does not contain 'PIT_LABEL=P10'",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:02:25\",\"elapsed_ms\":7020,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORM...",
+          "evidence": "'PIT_LABEL=P10' is absent from: {\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:02:25\",\"elapsed_ms\":7020,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"..."
+        },
+        {
+          "n": 15,
+          "text": "not-contains $lab1 \"TEMP\"",
+          "ok": true,
+          "expected": "does not contain 'TEMP'",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:02:25\",\"elapsed_ms\":7020,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORM...",
+          "evidence": "'TEMP' is absent from: {\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:02:25\",\"elapsed_ms\":7020,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"..."
+        },
+        {
+          "n": 16,
+          "text": "matches $jy \"handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P1\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P1\\W\"",
+          "ok": true,
+          "expected": "matches /handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P1\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P1\\W/",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:01:48\",\"elapsed_ms\":19635,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STOR...",
+          "evidence": "matched 'handle\\\":\\\"1096B3\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P1\\\"]}\",\"{\\\"handle\\\":\\\"10981A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P2\\\"]}\",\"{\\\"handle\\\":\\\"109E08\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P3\\\"]}\",\"{\\\"handle\\\":\\\"10A18D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P6\\\"]}\",\"{\\\"handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P10\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P10\"]},{\"handle\":\"11A09A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"]}]}} @@AFTER@@ {\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:02:25\",\"elapsed_ms\":7020,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=C1\\\"]}\",\"{\\\"handle\\\":\\\"10933E\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=X1\\\"]}\",\"{\\\"handle\\\":\\\"1096B3\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P1\\\"]}\",\"{\\\"handle\\\":\\\"10981A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P2\\\"]}\",\"{\\\"handle\\\":\\\"109E08\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P3\\\"]}\",\"{\\\"handle\\\":\\\"10A18D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P6\\\"]}\",\"{\\\"handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P8\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"'"
+        },
+        {
+          "n": 17,
+          "text": "matches $jy \"handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P2\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P2\\W\"",
+          "ok": true,
+          "expected": "matches /handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P2\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P2\\W/",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:01:48\",\"elapsed_ms\":19635,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STOR...",
+          "evidence": "matched 'handle\\\":\\\"10981A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P2\\\"]}\",\"{\\\"handle\\\":\\\"109E08\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P3\\\"]}\",\"{\\\"handle\\\":\\\"10A18D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P6\\\"]}\",\"{\\\"handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P10\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P10\"]},{\"handle\":\"11A09A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"]}]}} @@AFTER@@ {\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:02:25\",\"elapsed_ms\":7020,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=C1\\\"]}\",\"{\\\"handle\\\":\\\"10933E\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=X1\\\"]}\",\"{\\\"handle\\\":\\\"1096B3\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P1\\\"]}\",\"{\\\"handle\\\":\\\"10981A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P2\\\"]}\",\"{\\\"handle\\\":\\\"109E08\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P3\\\"]}\",\"{\\\"handle\\\":\\\"10A18D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P6\\\"]}\",\"{\\\"handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P8\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"'"
+        },
+        {
+          "n": 18,
+          "text": "matches $jy \"handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P4\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P4\\W\"",
+          "ok": true,
+          "expected": "matches /handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P4\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P4\\W/",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:01:48\",\"elapsed_ms\":19635,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STOR...",
+          "evidence": "matched 'handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P10\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P10\"]},{\"handle\":\"11A09A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"]}]}} @@AFTER@@ {\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:02:25\",\"elapsed_ms\":7020,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=C1\\\"]}\",\"{\\\"handle\\\":\\\"10933E\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=X1\\\"]}\",\"{\\\"handle\\\":\\\"1096B3\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P1\\\"]}\",\"{\\\"handle\\\":\\\"10981A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P2\\\"]}\",\"{\\\"handle\\\":\\\"109E08\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P3\\\"]}\",\"{\\\"handle\\\":\\\"10A18D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P6\\\"]}\",\"{\\\"handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P8\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"'"
+        },
+        {
+          "n": 19,
+          "text": "matches $jy \"handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P5\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P5\\W\"",
+          "ok": true,
+          "expected": "matches /handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P5\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P5\\W/",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:01:48\",\"elapsed_ms\":19635,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STOR...",
+          "evidence": "matched 'handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P10\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P10\"]},{\"handle\":\"11A09A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"]}]}} @@AFTER@@ {\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:02:25\",\"elapsed_ms\":7020,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=C1\\\"]}\",\"{\\\"handle\\\":\\\"10933E\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=X1\\\"]}\",\"{\\\"handle\\\":\\\"1096B3\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P1\\\"]}\",\"{\\\"handle\\\":\\\"10981A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P2\\\"]}\",\"{\\\"handle\\\":\\\"109E08\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P3\\\"]}\",\"{\\\"handle\\\":\\\"10A18D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P6\\\"]}\",\"{\\\"handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P8\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"'"
+        },
+        {
+          "n": 20,
+          "text": "matches $jy \"handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P6\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P6\\W\"",
+          "ok": true,
+          "expected": "matches /handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P6\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P6\\W/",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:01:48\",\"elapsed_ms\":19635,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STOR...",
+          "evidence": "matched 'handle\\\":\\\"10A18D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P6\\\"]}\",\"{\\\"handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P10\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P10\"]},{\"handle\":\"11A09A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"]}]}} @@AFTER@@ {\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:02:25\",\"elapsed_ms\":7020,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=C1\\\"]}\",\"{\\\"handle\\\":\\\"10933E\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=X1\\\"]}\",\"{\\\"handle\\\":\\\"1096B3\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P1\\\"]}\",\"{\\\"handle\\\":\\\"10981A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P2\\\"]}\",\"{\\\"handle\\\":\\\"109E08\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P3\\\"]}\",\"{\\\"handle\\\":\\\"10A18D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P6\\\"]}\",\"{\\\"handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P8\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"'"
+        },
+        {
+          "n": 21,
+          "text": "matches $jy \"handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P7\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P7\\W\"",
+          "ok": true,
+          "expected": "matches /handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P7\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P7\\W/",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:01:48\",\"elapsed_ms\":19635,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STOR...",
+          "evidence": "matched 'handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P10\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P10\"]},{\"handle\":\"11A09A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"]}]}} @@AFTER@@ {\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:02:25\",\"elapsed_ms\":7020,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=C1\\\"]}\",\"{\\\"handle\\\":\\\"10933E\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=X1\\\"]}\",\"{\\\"handle\\\":\\\"1096B3\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P1\\\"]}\",\"{\\\"handle\\\":\\\"10981A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P2\\\"]}\",\"{\\\"handle\\\":\\\"109E08\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P3\\\"]}\",\"{\\\"handle\\\":\\\"10A18D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P6\\\"]}\",\"{\\\"handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P8\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"'"
+        },
+        {
+          "n": 22,
+          "text": "matches $jy \"handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=C1\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=C1\\W\"",
+          "ok": true,
+          "expected": "matches /handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=C1\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=C1\\W/",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:01:48\",\"elapsed_ms\":19635,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STOR...",
+          "evidence": "matched 'handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=C1\\\"]}\",\"{\\\"handle\\\":\\\"10933E\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=X1\\\"]}\",\"{\\\"handle\\\":\\\"1096B3\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P1\\\"]}\",\"{\\\"handle\\\":\\\"10981A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P2\\\"]}\",\"{\\\"handle\\\":\\\"109E08\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P3\\\"]}\",\"{\\\"handle\\\":\\\"10A18D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P6\\\"]}\",\"{\\\"handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P10\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P10\"]},{\"handle\":\"11A09A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"]}]}} @@AFTER@@ {\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:02:25\",\"elapsed_ms\":7020,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=C1\\\"]}\",\"{\\\"handle\\\":\\\"10933E\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=X1\\\"]}\",\"{\\\"handle\\\":\\\"1096B3\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P1\\\"]}\",\"{\\\"handle\\\":\\\"10981A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P2\\\"]}\",\"{\\\"handle\\\":\\\"109E08\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P3\\\"]}\",\"{\\\"handle\\\":\\\"10A18D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P6\\\"]}\",\"{\\\"handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P8\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"'"
+        },
+        {
+          "n": 23,
+          "text": "matches $p3_0 \"PIT_LABEL.,.text.:.P3.,.insertion\"",
+          "ok": true,
+          "expected": "matches /PIT_LABEL.,.text.:.P3.,.insertion/",
+          "actual": "{\"handle\":\"109E08\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.88923993723,-26238.287379591762,0.0],\"rotation\":0.0,\"...",
+          "evidence": "matched 'PIT_LABEL\",\"text\":\"P3\",\"insertion'"
+        },
+        {
+          "n": 24,
+          "text": "matches $p3_1 \"PIT_LABEL.,.text.:.P3.,.insertion\"",
+          "ok": true,
+          "expected": "matches /PIT_LABEL.,.text.:.P3.,.insertion/",
+          "actual": "{\"handle\":\"109E08\",\"object\":\"AcDbBlockReference\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"effective_name\":\"PIT LABEL\",\"insertion\":[52570.88923993723,-26238.287379591762,0.0],\"rotation\":0.0,\"...",
+          "evidence": "matched 'PIT_LABEL\",\"text\":\"P3\",\"insertion'"
+        },
+        {
+          "n": 25,
+          "text": "matches $u1 \"(^|\\| )CDRENUMBER\\s*(\\||$)\"",
+          "ok": true,
+          "expected": "matches /(^|\\| )CDRENUMBER\\s*(\\||$)/",
+          "actual": "Command: | Command: U | CDRENUMBER",
+          "evidence": "matched '| CDRENUMBER '"
+        },
+        {
+          "n": 26,
+          "text": "matches $ju \"handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P9\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P9\\W\"",
+          "ok": true,
+          "expected": "matches /handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P9\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P9\\W/",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:01:48\",\"elapsed_ms\":19635,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STOR...",
+          "evidence": "matched 'handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P10\"]},{\"handle\":\"11A09A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"]}]}} @@AFTER@@ {\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:02:37\",\"elapsed_ms\":7739,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=C1\\\"]}\",\"{\\\"handle\\\":\\\"10933E\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=X1\\\"]}\",\"{\\\"handle\\\":\\\"1096B3\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P1\\\"]}\",\"{\\\"handle\\\":\\\"10981A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P2\\\"]}\",\"{\\\"handle\\\":\\\"109E08\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P3\\\"]}\",\"{\\\"handle\\\":\\\"10A18D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P6\\\"]}\",\"{\\\"handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P10\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P10\"]},{\"handle\":\"11A09A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"'"
+        },
+        {
+          "n": 27,
+          "text": "matches $ju \"handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P10\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P10\\W\"",
+          "ok": true,
+          "expected": "matches /handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=P10\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=P10\\W/",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:01:48\",\"elapsed_ms\":19635,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STOR...",
+          "evidence": "matched 'handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P10\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P10\"]},{\"handle\":\"11A09A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"]}]}} @@AFTER@@ {\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:02:37\",\"elapsed_ms\":7739,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=C1\\\"]}\",\"{\\\"handle\\\":\\\"10933E\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=X1\\\"]}\",\"{\\\"handle\\\":\\\"1096B3\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P1\\\"]}\",\"{\\\"handle\\\":\\\"10981A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P2\\\"]}\",\"{\\\"handle\\\":\\\"109E08\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P3\\\"]}\",\"{\\\"handle\\\":\\\"10A18D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P6\\\"]}\",\"{\\\"handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P10\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P10\"'"
+        },
+        {
+          "n": 28,
+          "text": "not-contains $lab2 \"PIT_LABEL=P8\"",
+          "ok": true,
+          "expected": "does not contain 'PIT_LABEL=P8'",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:02:37\",\"elapsed_ms\":7739,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORM...",
+          "evidence": "'PIT_LABEL=P8' is absent from: {\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:02:37\",\"elapsed_ms\":7739,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"..."
+        },
+        {
+          "n": 29,
+          "text": "matches $jn \"\\Whits\\W+(\\[.*?\\}\\])\\}\\}.*@@AFTER@@.*\\Whits\\W+\\1\\}\\}\"",
+          "ok": true,
+          "expected": "matches /\\Whits\\W+(\\[.*?\\}\\])\\}\\}.*@@AFTER@@.*\\Whits\\W+\\1\\}\\}/",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:01:48\",\"elapsed_ms\":19635,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STOR...",
+          "evidence": "matched '\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P10\"]},{\"handle\":\"11A09A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"]}]}} @@AFTER@@ {\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:02:12\",\"elapsed_ms\":7044,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=C1\\\"]}\",\"{\\\"handle\\\":\\\"10933E\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=X1\\\"]}\",\"{\\\"handle\\\":\\\"1096B3\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P1\\\"]}\",\"{\\\"handle\\\":\\\"10981A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P2\\\"]}\",\"{\\\"handle\\\":\\\"109E08\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P3\\\"]}\",\"{\\\"handle\\\":\\\"10A18D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P6\\\"]}\",\"{\\\"handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P10\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P10\"]},{\"handle\":\"11A09A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"]}]}}'"
+        },
+        {
+          "n": 30,
+          "text": "matches $ju \"\\Whits\\W+(\\[.*?\\}\\])\\}\\}.*@@AFTER@@.*\\Whits\\W+\\1\\}\\}\"",
+          "ok": true,
+          "expected": "matches /\\Whits\\W+(\\[.*?\\}\\])\\}\\}.*@@AFTER@@.*\\Whits\\W+\\1\\}\\}/",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:01:48\",\"elapsed_ms\":19635,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STOR...",
+          "evidence": "matched '\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P10\"]},{\"handle\":\"11A09A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"]}]}} @@AFTER@@ {\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:02:37\",\"elapsed_ms\":7739,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=C1\\\"]}\",\"{\\\"handle\\\":\\\"10933E\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=X1\\\"]}\",\"{\\\"handle\\\":\\\"1096B3\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P1\\\"]}\",\"{\\\"handle\\\":\\\"10981A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P2\\\"]}\",\"{\\\"handle\\\":\\\"109E08\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P3\\\"]}\",\"{\\\"handle\\\":\\\"10A18D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P6\\\"]}\",\"{\\\"handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P10\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P10\"]},{\"handle\":\"11A09A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"]}]}}'"
+        },
+        {
+          "n": 31,
+          "text": "matches $jy \"handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=X1\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=X1\\W\"",
+          "ok": true,
+          "expected": "matches /handle\\W+([0-9A-F]{4,8})\\W[^}]*PIT_LABEL=X1\\W.*@@AFTER@@.*handle\\W+\\1\\W[^}]*PIT_LABEL=X1\\W/",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:01:48\",\"elapsed_ms\":19635,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STOR...",
+          "evidence": "matched 'handle\\\":\\\"10933E\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=X1\\\"]}\",\"{\\\"handle\\\":\\\"1096B3\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P1\\\"]}\",\"{\\\"handle\\\":\\\"10981A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P2\\\"]}\",\"{\\\"handle\\\":\\\"109E08\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P3\\\"]}\",\"{\\\"handle\\\":\\\"10A18D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P6\\\"]}\",\"{\\\"handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P10\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P10\"]},{\"handle\":\"11A09A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"]}]}} @@AFTER@@ {\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:02:25\",\"elapsed_ms\":7020,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=C1\\\"]}\",\"{\\\"handle\\\":\\\"10933E\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=X1\\\"]}\",\"{\\\"handle\\\":\\\"1096B3\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P1\\\"]}\",\"{\\\"handle\\\":\\\"10981A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P2\\\"]}\",\"{\\\"handle\\\":\\\"109E08\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P3\\\"]}\",\"{\\\"handle\\\":\\\"10A18D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P6\\\"]}\",\"{\\\"handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P8\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"'"
+        },
+        {
+          "n": 32,
+          "text": "record $m0 \"DBMOD before CDRENUMBER No (not judged)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "1",
+          "evidence": "RECORDED, not judged: DBMOD before CDRENUMBER No (not judged) = 1"
+        },
+        {
+          "n": 33,
+          "text": "record $m1 \"DBMOD after CDRENUMBER No (not judged; card D20 asks for it unchanged)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "1",
+          "evidence": "RECORDED, not judged: DBMOD after CDRENUMBER No (not judged; card D20 asks for it unchanged) = 1"
+        },
+        {
+          "n": 34,
+          "text": "record $lab0 \"FULL every plan label before (handle and PIT_LABEL)\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:01:48\",\"elapsed_ms\":19635,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=C1\\\"]}\",\"{\\\"handle\\\":\\\"10933E\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=X1\\\"]}\",\"{\\\"handle\\\":\\\"1096B3\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P1\\\"]}\",\"{\\\"handle\\\":\\\"10981A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P2\\\"]}\",\"{\\\"handle\\\":\\\"109E08\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P3\\\"]}\",\"{\\\"handle\\\":\\\"10A18D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P6\\\"]}\",\"{\\\"handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P10\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P10\"]},{\"handle\":\"11A09A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"]}]}}",
+          "evidence": "RECORDED, not judged: FULL every plan label before (handle and PIT_LABEL) = {\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:01:48\",\"elapsed_ms\":19635,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=C1\\\"]}\",\"{\\\"handle\\\":\\\"10933E\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=X1\\\"]}\",\"{\\\"handle\\\":\\\"1096B3\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P1\\\"]}\",\"{\\\"handle\\\":\\\"10981A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P2\\\"]}\",\"{\\\"handle\\\":\\\"109E08\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P3\\\"]}\",\"{\\\"handle\\\":\\\"10A18D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P6\\\"]}\",\"{\\\"handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P10\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P10\"]},{\"handle\":\"11A09A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"]}]}}"
+        },
+        {
+          "n": 35,
+          "text": "record $lab1 \"FULL every plan label after Yes\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "{\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:02:25\",\"elapsed_ms\":7020,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=C1\\\"]}\",\"{\\\"handle\\\":\\\"10933E\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=X1\\\"]}\",\"{\\\"handle\\\":\\\"1096B3\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P1\\\"]}\",\"{\\\"handle\\\":\\\"10981A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P2\\\"]}\",\"{\\\"handle\\\":\\\"109E08\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P3\\\"]}\",\"{\\\"handle\\\":\\\"10A18D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P6\\\"]}\",\"{\\\"handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P8\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"]},{\"handle\":\"11A09A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P8\"]}]}}",
+          "evidence": "RECORDED, not judged: FULL every plan label after Yes = {\"ok\":true,\"verb\":\"ent-find\",\"started\":\"2026-11-02 12:02:25\",\"elapsed_ms\":7020,\"error\":null,\"refused\":false,\"output\":[\"scanned 1034 of 1034 objects; 11 match\",\"{\\\"handle\\\":\\\"1090F6\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=C1\\\"]}\",\"{\\\"handle\\\":\\\"10933E\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=X1\\\"]}\",\"{\\\"handle\\\":\\\"1096B3\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P1\\\"]}\",\"{\\\"handle\\\":\\\"10981A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P2\\\"]}\",\"{\\\"handle\\\":\\\"109E08\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P3\\\"]}\",\"{\\\"handle\\\":\\\"10A18D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P6\\\"]}\",\"{\\\"handle\\\":\\\"10A56D\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P7\\\"]}\",\"{\\\"handle\\\":\\\"10A68C\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P5\\\"]}\",\"{\\\"handle\\\":\\\"10A7AB\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P4\\\"]}\",\"{\\\"handle\\\":\\\"119F9A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P9\\\"]}\",\"{\\\"handle\\\":\\\"11A09A\\\",\\\"layer\\\":\\\"STORMWATER PIT LABEL\\\",\\\"name\\\":\\\"PIT LABEL 2\\\",\\\"attrs\\\":[\\\"PIT_LABEL=P8\\\"]}\"],\"data\":{\"model_space_count\":1034,\"scanned\":1034,\"hits\":[{\"handle\":\"1090F6\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=C1\"]},{\"handle\":\"10933E\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=X1\"]},{\"handle\":\"1096B3\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P1\"]},{\"handle\":\"10981A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P2\"]},{\"handle\":\"109E08\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P3\"]},{\"handle\":\"10A18D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P6\"]},{\"handle\":\"10A56D\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P7\"]},{\"handle\":\"10A68C\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P5\"]},{\"handle\":\"10A7AB\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL\",\"attrs\":[\"PIT_LABEL=P4\"]},{\"handle\":\"119F9A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P9\"]},{\"handle\":\"11A09A\",\"layer\":\"STORMWATER PIT LABEL\",\"name\":\"PIT LABEL 2\",\"attrs\":[\"PIT_LABEL=P8\"]}]}}"
+        },
+        {
+          "n": 36,
+          "text": "record $rn_yes \"FULL what CDRENUMBER printed for Yes\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: CDRENUMBER | More than one pit discharges outside the network - its main outlet is not obvious: | C1 | X1 | Which pit is the main outlet? Type its mark or pick it on screen [C1/X1] <C1> [C1/X1] <C1>: C1 | Renumber downhill to uphill: | P9 -> P8 | P10 -> P9 | 2 pit(s) will be renumbered. Apply? [Yes/No] [Yes/No] <No>: Yes | Renumbered 2 pit(s) downhill to uphill. One Undo restores the old numbers.",
+          "evidence": "RECORDED, not judged: FULL what CDRENUMBER printed for Yes = Command: | Command: CDRENUMBER | More than one pit discharges outside the network - its main outlet is not obvious: | C1 | X1 | Which pit is the main outlet? Type its mark or pick it on screen [C1/X1] <C1> [C1/X1] <C1>: C1 | Renumber downhill to uphill: | P9 -> P8 | P10 -> P9 | 2 pit(s) will be renumbered. Apply? [Yes/No] [Yes/No] <No>: Yes | Renumbered 2 pit(s) downhill to uphill. One Undo restores the old numbers."
+        },
+        {
+          "n": 37,
+          "text": "record $u1 \"FULL what U printed\"",
+          "ok": true,
+          "expected": "recorded only",
+          "actual": "Command: | Command: U | CDRENUMBER",
+          "evidence": "RECORDED, not judged: FULL what U printed = Command: | Command: U | CDRENUMBER"
+        }
+      ],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: the session copy was reopened before this case (v2 reopen-copy -Force; unsaved changes of the earlier case discarded: True; file SHA-256 34BBE37C2EA4); the setup and the log start are this case's own; the command-line log moved to a new file (CLDV31147031_B1_15fa7f7b3.log)",
+        "Civil CE log: 36 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: CDRENUMBER completed 109 ms ; Command outcome: CDRENUMBER completed 158 ms"
+      ],
+      "error": null,
+      "finished": "2026-11-02 12:02:46",
+      "session_id": "RUN-20261102-1146-C3.0.89-smF2-s1",
+      "acceptance": {
+        "state": "PASS-UNREVIEWED",
+        "reasons": [
+          "needs a PASS in two separate AutoCAD sessions on this build (has 1)"
+        ],
+        "passing_sessions_on_this_build": 1,
+        "red_before": true
+      }
+    },
+    {
+      "id": "R14h_pipekey_200",
+      "proves_bugs": "",
+      "title": "CDTWL wording follows pipe.detentionFreeboardMm raised to 200 mm (the other key stays 150)",
+      "kind": "deterministic",
+      "order": 34,
+      "slot": "fresh",
+      "fixture": "DRV1_B1",
+      "plan_item": "CDTWL freeboard follows a RAISED setting (C39 higher-setting coverage)",
+      "bug": "",
+      "known_fail": "",
+      "reviewed_against": "builder-filled: Opus review still needed. Built on 26 Oct 2026 exactly as cx_cr04 (Codex independent review) asks: same setup and answers as R14, freeboard raised to 200 mm through the settings guard.",
+      "variant_of": "",
+      "expected": "After CDTWL with the answers 10 and 18.70 the command line says 'Only 40 mm between the water and the lid of pit C1 (200 mm is wanted).' and 'Only 110 mm' for pits P1 and P7 with '(200 mm is wanted)'; CDTWL ends idle and the Civil log holds one CDTWL completed line.",
+      "why_not_unit": "Which Settings key the real CDTWL reads, and whether a raised value reaches the wording, is only seen on the live command line.",
+      "not_automated": [
+        "200 mm is a diagnostic value, not an engineering approval; the other freeboard key stays at the 150 baseline unless named in the SETTING lines. How the two keys are combined is read from the result, not assumed."
+      ],
+      "file_sha256": "CCF6A4F7A29385316A662548EB22EAF995510A833F852808E9037719825C523A",
+      "result": "BLOCKED",
+      "blocked": "refused by a driver guard",
+      "first_failure": null,
+      "started": "2026-11-02 12:04:16",
+      "seconds": 191.8,
+      "setup": "SETUP-R47",
+      "setup_note": "shared setup SETUP-R47 run here for the first time at 12:07:04",
+      "steps": [
+        {
+          "n": 1,
+          "phase": "setup",
+          "verb": "copy-info",
+          "text": "copy-info -> $copy0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "copy CLDV31203222_B1.dwg: 1080181 bytes, SHA-256 34BBE37C2EA4, last written 01:39:47; folder holds 256 files"
+        },
+        {
+          "n": 2,
+          "phase": "setup",
+          "verb": "pick-first",
+          "text": "pick-first \"109D56\"",
+          "ok": true,
+          "seconds": 3.3,
+          "evidence": "pick-first 109D56: Command: | Command: (progn (setq v2ss (ssadd) v2n 0) (foreach v2h (list \"109D56\") (if (setq v2e (handent v2h)) (progn (ssadd v2e v2ss) (setq v2n (1+ v2n))))) (sssetfirst nil v2ss) (princ (strcat \"\\nV2..."
+        },
+        {
+          "n": 3,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"_.MOVE{NL}0,0{NL}0,2000\" -Force -> $setup_move",
+          "ok": true,
+          "seconds": 4.4,
+          "evidence": "typed '_.MOVE 0,0 0,2000': Command: | Command: _.MOVE | 1 found | Specify base point or [Displacement] <Displacement>: 0,0 | Specify second point or <use first point as displacement>: 0,2000 | [CE Civil] pipe P3 -> P2 label: no clear spot among it..."
+        },
+        {
+          "n": 4,
+          "phase": "setup",
+          "verb": "wait",
+          "text": "wait",
+          "ok": true,
+          "seconds": 1.9,
+          "evidence": "wait for idle: idle"
+        },
+        {
+          "n": 5,
+          "phase": "setup",
+          "verb": "ms-count",
+          "text": "ms-count -> $n0",
+          "ok": true,
+          "seconds": 0.0,
+          "evidence": "model space holds 1034 objects"
+        },
+        {
+          "n": 6,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"PIT{NL}150000,-80000\" -Force -ExpectWindow \"New Pit\" -> $pit_t1",
+          "ok": true,
+          "seconds": 14.3,
+          "evidence": "typed 'PIT 150000,-80000': Command: | Command: PIT | Specify pit insertion point: 150000,-80000 | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C..."
+        },
+        {
+          "n": 7,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pit\" \"C2.CoverLevel\" \"19.000\"",
+          "ok": true,
+          "seconds": 10.8,
+          "evidence": "ui set 'New Pit' C2.CoverLevel = 19.000: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 8,
+          "phase": "setup",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pit\" \"New pit, Continue placement\" -> $pit_t2",
+          "ok": true,
+          "seconds": 52.9,
+          "evidence": "pressed 'New pit, Continue placement' in /New Pit/: window closed = True"
+        },
+        {
+          "n": 9,
+          "phase": "setup",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pit\" -Secs 120",
+          "ok": true,
+          "seconds": 0.2,
+          "evidence": "the window /^New Pit/ closed after 0 s"
+        },
+        {
+          "n": 10,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e1",
+          "ok": true,
+          "seconds": 7.3,
+          "evidence": "esc-prompt: Command: | Command: PIT | Specify pit insertion point: 150000,-80000 | Specify pit label insertion point: *Cancel* | SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or qu..."
+        },
+        {
+          "n": 11,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e2",
+          "ok": true,
+          "seconds": 7.8,
+          "evidence": "esc-prompt: Command: | Command: PIT | Specify pit insertion point: 150000,-80000 | Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | SETTINGS GUARD ACTIVE: 1 settings file(s) are back..."
+        },
+        {
+          "n": 12,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pit_e3",
+          "ok": true,
+          "seconds": 3.7,
+          "evidence": "esc-prompt: Specify pit label insertion point: *Cancel* | Click to place cover text (Enter = <BR>): *Cancel* | Pit placed successfully. | [CE] Pit placed. Pick the next pit, or press Esc to stop. | Specify pit insertion point: *Canc..."
+        },
+        {
+          "n": 13,
+          "phase": "setup",
+          "verb": "type",
+          "text": "type \"CD{NL}150000,-80000{NL}170000,-80000{NL}\" -Force -ExpectWindow \"New Pipe\" -> $pipe_t1",
+          "ok": true,
+          "seconds": 15.6,
+          "evidence": "typed 'CD 150000,-80000 170000,-80000': Command: | Command: CD | Select the first two points to start the polyline, or E to use a line you have drawn. | Specify first point or [Existing line] [Existing]: 150000,-80000 | Specify second point: 170000,-80000 | Se..."
+        },
+        {
+          "n": 14,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.FirstInvert\" \"18.000\"",
+          "ok": true,
+          "seconds": 12.2,
+          "evidence": "ui set 'New Pipe' C2.FirstInvert = 18.000: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 15,
+          "phase": "setup",
+          "verb": "ui2-set",
+          "text": "ui2-set \"New Pipe\" \"C2.SecondInvert\" \"17.900\"",
+          "ok": true,
+          "seconds": 12.2,
+          "evidence": "ui set 'New Pipe' C2.SecondInvert = 17.900: SETTINGS GUARD ACTIVE: 1 settings file(s) are backed up and may be changed. Run settings-restore (or quit) before you finish. Originals are kept in C:\\ce_rc_scratch\\settings_guard."
+        },
+        {
+          "n": 16,
+          "phase": "setup",
+          "verb": "ui-dump",
+          "text": "ui-dump \"New Pipe\" -> $np_win",
+          "ok": true,
+          "seconds": 6.3,
+          "evidence": "ui-dump 'New Pipe': 152 controls, tabs: "
+        },
+        {
+          "n": 17,
+          "phase": "setup",
+          "verb": "ui-press",
+          "text": "ui-press \"New Pipe\" \"New pipe, Start Pipe\" -> $pipe_t2",
+          "ok": true,
+          "seconds": 11.9,
+          "evidence": "pressed 'New pipe, Start Pipe' in /New Pipe/: window closed = True"
+        },
+        {
+          "n": 18,
+          "phase": "setup",
+          "verb": "await-window-gone",
+          "text": "await-window-gone \"^New Pipe\" -Secs 120",
+          "ok": true,
+          "seconds": 0.1,
+          "evidence": "the window /^New Pipe/ closed after 0 s"
+        },
+        {
+          "n": 19,
+          "phase": "setup",
+          "verb": "esc-prompt",
+          "text": "esc-prompt -> $pipe_e1",
+          "ok": false,
+          "seconds": 2.4,
+          "evidence": "esc-prompt: REFUSED: the AutoCAD main window is disabled: a window is open in front of it and the key would go to that window. No key was sent."
+        }
+      ],
+      "assertions": [],
+      "pictures": [],
+      "observations": [
+        "fresh drawing: first case of this session, the drawing is the copy the session launched",
+        "Civil CE log: 128 new line(s) while the case ran, 0 with [ERR]",
+        "outcome lines seen: Command outcome: PIT completed 94315 ms"
+      ],
+      "error": null,
+      "finished": "2026-11-02 12:07:28",
+      "session_id": "RUN-20261102-1146-C3.0.89-smF2-s2",
+      "acceptance": {
+        "state": "BLOCKED",
+        "reasons": [],
+        "passing_sessions_on_this_build": 0,
+        "red_before": false
+      }
+    }
+  ]
+}

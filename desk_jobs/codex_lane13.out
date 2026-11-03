@@ -1,0 +1,5 @@
+== cx_b14_manager_support (usage 32.0% -> 48.0%): 1. **BLOCKED — [draft PR #1535](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1535).** Branch `cx/manager-support-c60`, tip `96c27b5b`. Three fixes implemented; the protected palette edit awaits its owner.
+
+2. **Checks:** six build lanes passed; exactly 75 Manager files; Shared byte-identical. Manager: 865 passed, 1 palette failure. Civil full suite stopped after a live-settings hash changed; writer unknown.
+
+3. **Saved and pushed:** [handoff report](C:/CE_PLAN/areas/CODEX_BUILD_MANAGER_SUPPORT_23OCT.md), including all four AutoCAD checks. Nothing deployed; AutoCAD was not launched by this session.

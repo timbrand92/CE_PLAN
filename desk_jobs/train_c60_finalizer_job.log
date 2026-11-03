@@ -1,0 +1,10 @@
+**GO at `4095a678e9bac9532492b630585bd8289da8ea3e`** for the Civil-only C-60 train (`claude/rel-20261022m`).
+
+1. **Change made:** one formatting-only commit restoring a blank line in REGRESSION_LOG.md that the #1517 branch merge had dropped. Pushed as a normal fast-forward.
+2. **Reviews:** both fixes are exactly what entries 1588 and 1575 asked for.
+3. **Defaults:** none changed (source window ON, ignore-finding OFF, pit-label OFF).
+4. **Manager:** unchanged; only its version is re-stamped (1.1.69 to 1.1.70).
+5. **Tests:** whole solution 0 errors. Civil net10: 19,154 total, 1 failed (the known Glen Eira back-test). Civil net48 focused: 348/348.
+6. **Held:** BUG-859 and CDCHECKIGNORE stay not FIXED until a robot PASS plus a Codex PASS.
+
+The report is at `C:\CE_PLAN\areas\release-v3-colleagues-TRAIN_C60_FINALIZER_REPORT_2026-10-22.md`.

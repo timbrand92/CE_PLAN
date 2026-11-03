@@ -1,0 +1,13 @@
+BUG-958 has a fix: draft PR #2003 is open (B-184, base `claude/rel-20261102a`). It is built and unit-tested only; nobody has opened it in AutoCAD. BUG-958 stays open.
+
+- **Cause:** CE's own screen fit set Edit Pipe, Edit Pit, New Pit and CDS to Manual, and the position hook skipped Manual windows.
+- **Files:**
+  - `WindowSizingService.cs`
+  - `CeWindowPlacementHook.cs`
+  - `UserSettings.cs`
+  - a new `Bug958RememberFittedWindowsTests.cs`
+  - `REGRESSION_LOG.md`
+- **Switch:** `windowPlacement.rememberFittedWindows`, on by default.
+- **Tests:** net10 focused run 86 passed, 0 failed, 3 skipped; net48 compile clean.
+- **BUG-959:** not included, because it is a different multi-monitor change.
+- **Report:** `C:\CE_PLAN\areas\BUGFIX_w958_REPORT_03NOV.md`, pushed.

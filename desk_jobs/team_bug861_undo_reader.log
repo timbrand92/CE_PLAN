@@ -1,0 +1,37 @@
+I found no CE code that explains the lost REDO, so I built diagnostic switches (draft PR #1829) and no fix. None of it has been tried in AutoCAD, and BUG-861 stays open.
+
+**My mistakes first**
+1. I used a wrong name for one AutoCAD setting in the code, so the first build failed (cost about 2 minutes).
+2. My first test run had 9 failures. Two older test files count the diagnostic switches exactly, and I had not updated them for the four new ones. I fixed that and the rerun was clean.
+3. I started from the newest release line (C-72), not C-71, which the brief allowed. The installed 3.0.81 doesn't have these switches, so the robot needs a new install first.
+
+**The answer**
+4. **Most likely cause: something outside CE, probably AutoCAD itself on the first click of a session.** This is not proven. My reasons:
+   - The robot switched off every part of CE that reacts to a click, and REDO was still lost.
+   - CE's log for the failing first click is line for line the same as for the second and third clicks, which keep REDO.
+   - Structural and Manager have no click handling at all. Nothing in Civil or the shared library changes the drawing when you click a plain line.
+   - What CE does on every U (re-reading its pit and pipe records and rebuilding its memory of positions) also runs in the rounds that keep REDO.
+
+**Suspects, most likely first**
+5. AutoCAD itself, or another add-in or LISP, changing a setting, locking the drawing or running a hidden command on that first click.
+6. Civil's work at the end of every U (the re-read and rebuild above).
+7. Structural's work at the end of every U and while AutoCAD is idle (beam links, foundation check, auto-save tracking).
+8. Manager's one-time menu set-up. It runs at start-up, before any U, so this one is unlikely.
+
+**What I built: draft PR #1829**
+9. Four new settings for the test robot only. All are off by default, so your drawings behave exactly as before:
+   - **`disableUndoProjectReload`:** CE skips re-reading its pit and pipe records after U.
+   - **`disableUndoCacheRebuild`:** CE skips rebuilding its memory of positions after U.
+   - **`disableUndoEndWork`:** Civil does none of its after-U work.
+   - **`watchUndoGap`:** changes nothing. It writes to the log every setting change, drawing lock and command between U and REDO, and says whether CE or AutoCAD did it.
+10. Tests: the full Civil set ran 20,681 tests with 0 failures, and the older 2024-version build compiles with no errors.
+
+**Next steps**
+11. The robot's step-by-step test plan is in the report. It starts with `watchUndoGap`, which should show in one run who acts on that first click.
+12. If that doesn't settle it, the last step needs your yes later: one robot test with the Structural and Manager add-ins not loaded. Nothing else for you to test or decide now.
+
+---
+
+The report is at `C:\CE_PLAN\areas\release-v3-colleagues-BUG861_UNDO_READER_REPORT.md` (pushed). The branch is `fb/bug861-diag2` (`1790777a`). My private working copy is removed. An untracked `.codex/` folder appeared in the main checkout during the session. It isn't mine and I left it alone.
+
+**Summary (under 100 words):** No CE code explains the lost REDO. The failing first click and the passing clicks run identical CE work. Nothing in Civil, Structural, Manager or the shared library changes the drawing on a plain-line click. AutoCAD's own first-click handling is the leading suspect, unproven. Draft PR #1829 adds four robot-only settings, all off by default: three skip Civil's after-U work, one logs what anyone does between U and REDO. Full Civil test run: 0 failed. No fix branch. Not tried in AutoCAD.

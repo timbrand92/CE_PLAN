@@ -1,0 +1,10 @@
+**GO.** Train C-48 (`claude/rel-20261020b`) is ready to ship. The final head is unchanged at `69fdb56dd6258b1c86bf5c7534134b0e05d06980`.
+
+1. **Changes:** none. #1481 matched its reviewed version. No new Settings switches or defaults, and no installer, Manager or Shared changes. Civil only: Manager doesn't need to ship.
+2. **Tests:**
+   - **Whole solution:** builds with 0 errors.
+   - **Civil net10:** 18,844 of 18,865 pass. Two known failures: Glen Eira, and the PDF test, which passed when re-run.
+   - **Manager:** 824 of 824.
+   - **Civil net48 (focused):** 168 of 168.
+3. **Held:** #1482 needs a fix round. #1441's one-character fix hasn't been pushed.
+4. **Push target:** the brief named the installed C-47 branch, not this train's. With no commits, nothing was pushed. Settings files are unchanged and the worktree is removed.

@@ -1,0 +1,8 @@
+== cx_bd27 (usage 54.0% -> 86.0%): 1. **BUG-1110 — DONE:** [Draft PR #1811](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1811). Whitehorse’s unused warning is removed; sourced council C is used and named. AutoCAD not run.
+
+---
+
+2. **Branch head:** `59a1f29bea3d83e83407180c3a70d21380206b2a`.
+3. **Red → green:** Three requested failures first; then 20/20 passed. Three builds: zero errors.
+4. **Full totals:** Before: 20,539—20,505 passed, 2 failed, 32 skipped. After: 20,559—20,527 passed, 0 failed, 32 skipped. Same log cleanup error remains.
+5. **Delivered:** [Report pushed](C:/CE_PLAN/areas/CODEX_BUILD_BD27_26OCT.md); worktree removed.

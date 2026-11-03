@@ -1,0 +1,6 @@
+I've reviewed all twelve PRs and the report is pushed to `C:\CE_PLAN\areas\REVIEW_PILE_B1_24OCT.md`. Nothing was built, tested or opened in AutoCAD, and GitHub shows no automated checks on any of these branches.
+
+1. **Verdicts on the top ten unreviewed PRs:** 6 can merge as they are and 4 need small fixes first. None need holding or rejecting.
+2. **Do not merge #397.** Its branch now only undoes an old change, and merging it would quietly remove the Structural unit copy tools you already have installed. Closing it is your call; I closed nothing.
+3. **Safe to merge today,** into a new update after the one already put together (C-63): #1672, #1642, #1569, #1565, #1578, #1627 and #1635.
+4. **The four needing fixes:** #1643 clashes with C-63. #1597 would stop Rollback undoing the original identity upgrade. #1593 still names the wrong pit in some warnings. #1626 can show a pipe's before levels swapped.

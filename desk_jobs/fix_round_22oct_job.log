@@ -1,0 +1,11 @@
+Only #1516 and #1507 needed new work. #1508, #1515, #1513 and #1509 already carried a full fix round from 21 Oct, so I checked each against its Opus verdict and re-ran its tests instead. Everything is built and unit-tested only. Nothing has been opened in AutoCAD.
+
+- **#1508 / #1515:** no change. Manager tests 853 of 853 at the #1515 head, which contains #1508's fix.
+- **#1516:** the removed-pit filter is now one function used by all four checks. Head is `fe3041e4`. 5 new tests failed before the fix. Civil suite 19028 passed, 1 known failure.
+- **#1513:** no change. 125 of 125 tidy tests pass.
+- **#1507:** retargeted to `rel-20261020l`; the HIGH, MEDIUM and LOW are all fixed. Head is `24bda1b0`. Civil suite 19073 passed, 1 known failure (`BackTest_GlenEira24115_Computed_WithinTolerance`).
+- **#1509:** no change. 128 CEMEMBER tests pass.
+
+**Log line (exact format):** `Command outcome: <COMMAND> completed|cancelled|failed <N> ms`, or `(time unknown)` if the start wasn't seen. I kept the PR's wording because the watcher already reads it, so it differs from your `[CE] … in N ms` form.
+
+The report is `C:\CE_PLAN\areas\release-v3-colleagues-FIX_ROUND_22OCT_REPORT.md`, pushed. It also lists what I didn't run (net48 compile, Structural.Tests, AutoCAD).

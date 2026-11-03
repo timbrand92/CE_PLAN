@@ -1,0 +1,8 @@
+**FOR TIM**
+
+1. **A floor waste is still not placed on an inspection opening, on purpose.** Each opening is already a CE drainage object sitting on those pipe ends. CE has a rule that a new one never goes on top of another, so I kept the refusal.
+2. **What I fixed:** the false "record changed while you picked" message. CDFW at an opening now says "IO2 is already at this point… Move clear of IO2 and pick again, or press Esc."
+3. **Where it is:** draft PR #1833, with a Settings switch that is ON by default. All 20,703 tests passed and none failed. It is not installed, and nobody has tried it in AutoCAD.
+4. **Your call:** allow a floor waste on an opening? I recommend no.
+
+Report: `C:\CE_PLAN\areas\release-v3-colleagues-BUG1223_FIX_REPORT.md`

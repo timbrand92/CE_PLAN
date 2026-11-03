@@ -1,0 +1,10 @@
+I've triaged all 47 bugs and none can be marked fixed today. I wrote robot tests for eight, ready for tonight's free window after 5:30 pm; nothing was run in AutoCAD.
+
+1. **Already proven:** 2. BUG-075 (Codex pass, 27 Oct) needs only a reviewer; BUG-188 passed on an older build.
+2. **Robot can close:** 16. Eight have tests written, each with a deliberately wrong twin; the other eight need one look-around run first.
+3. **Codex look:** 9. **Your word:** 6. **No longer real:** 6. **Structural:** 5. **Unknown:** 1.
+4. **Still broken:** 2. New Pipe preview (BUG-073) and New Pit window (BUG-173).
+5. **Likely live fault:** typing only one pipe level still gives "AT 1 IN 100 MIN.", against your 26 Sep "no MIN." ruling.
+6. **Before the robot runs:** the runner doesn't restore New Pipe's remembered choices. Three tests reset them at the end; one that stops early would need a hand reset.
+
+You need do nothing now. Report: `C:\CE_PLAN\areas\CARPARK_RETEST_TRIAGE_29OCT.md`.

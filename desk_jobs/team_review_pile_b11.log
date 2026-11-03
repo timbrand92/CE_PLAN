@@ -1,0 +1,15 @@
+I've reviewed the 8 PRs in this batch that had no Opus review yet. The other 12 already had one in batches 1 to 3, so I skipped them. Report: `C:\CE_PLAN\areas\REVIEW_PILE_B11_24OCT.md`, pushed to CE_PLAN.
+
+1. **Safe to merge today, into C-64 after C-63:** #1638, #1633, #1690, #1703.
+   - **#1638:** CDCHECKIGNORE stops saving the drafter's Windows login inside the drawing.
+   - **#1633:** CDTAG's two messages in plain words.
+   - **#1690:** the Checks and What CE Found palettes change colour when the theme changes.
+   - **#1703:** Manager tests only.
+2. **Merge after a small wording fix:**
+   - **#1634:** one message says "pipe or pit" when the object is a pit or downpipe block. Another says "no levels" when CE has no record of the pit. "CDREPAIR > Rebuild" doesn't say which of the two Rebuild buttons to click.
+   - **#1637:** the CDAUDIT note says a drawing "was copied" when CE doesn't know that. It should say "may have been".
+3. **Hold:** #1661 (council source window) has never been built or tested. I tried one build, but another job held the shared build lock for my whole 30-minute wait.
+4. **Reject:** #1670 changes no code. It only adds a "nothing done" note to the change log. Whether to close it is your call.
+5. **No risks found:** none of the eight writes between a U and its REDO, gets round locked layers or Xrefs, or touches installer files. The only clash with C-63 is in the change log; keeping both entries settles it.
+
+None of these is built, installed or tested in AutoCAD, and the pass counts in #1690 and #1703 are the authors' own. A stray `.codex` folder appeared in the main checkout; it isn't mine and I left it.

@@ -1,0 +1,32 @@
+Run 31 is finished and the report is pushed to C:\CE_PLAN (commit 4eafcd77, leak-scan clean). Of 16 checks, 10 passed, 1 failed, 2 are blocked, 2 are unproven and 1 is a finding.
+
+- **CDFIXTAGS:** the numbering is right, but it never writes a rename.
+  - **Numbering:** a doubled DP3 is proposed as "DP3 -> DP4".
+  - **Rename:** answering Yes renamed nothing. The DP3 block failed with "no unique matching drawing/project spine identity". The four duplicate AGI blocks were refused.
+  - **Fixture:** my DP3 pair were two pit blocks, so that failure may come from my fixture rather than the build (not proven).
+  - **Blocked or unproven:** WT1 and ROOF DRAIN numbering (BUG-741) and tag removal (BUG-746) are blocked. Label state (BUG-744) is unproven. A typed point could not pick any block I tried, and no multi-word names exist in the drawing.
+- **Tidy labels:** a 20 m pipe still gives "No clear spot found" for the start invert text.
+  - **Picture:** the text sits about 20 pixels clear of the pit's dashed box.
+  - **Obstacle:** CE names pit P8 as the obstacle, so the run 30 guess about the Drawing Border does not hold at this spot.
+  - **Clear case:** the pipe label and end text on that same pipe are not flagged, so the clear case passes.
+- **Regression checks on the build:** all pass.
+  - CDSYNC left the Pit Schedule identical (27 rows, no differences).
+  - The Edit Pipe cascade answered Yes, Apply wrote it, REDO brought it back, and U took it back to the original schedule. A U right after opening the Pit Schedule first undoes that window's own step, so it takes two U's.
+  - Typed MOVE and STRETCH opened no CE window and left the schedule unchanged.
+  - CDCHECKS opened, listed findings and closed cleanly.
+- **BUG-650:** unproven. A CDFW cancel changed nothing in the Pit Schedule, but I ran out of calls before I could read a sump pit's bottom level before and after.
+- **Driver fixes:** proven live.
+  - Apply (34 s) and New Pit Continue placement (65 s and 54 s) came back normally under the 120 s watchdog.
+  - A real hard timeout left the settings in place until `quit` restored them.
+  - The Start Pipe and Checks Close presses hit the 30 s watchdog even though the action worked. The report recommends adding both to the slow-press list.
+- **Settings restore proof:**
+  - Session 1 changed three keys in CD_Settings.json through the guard; session 2 changed none.
+  - After `quit`, the four real settings files hash the same as at the start: ACD64E79A33B, 622A246F7D3B, 24D8E5F7D87B and EFE307C4FC74.
+  - `settings-temp status` shows 0 entries.
+  - The driver hashes are unchanged: 120EE24D15B2, 5B542F2145F4, C9BA503D4636 and 0B1116C64249.
+- **Copies for the desk to delete** in `C:\ce_rc_drv`: CLD101_B1.dwg, CLD101_B1_PRE_C7_20261018_172900.dwg, CLD102_B1.dwg and CLD102_B1_PRE_C7_20261018_174433.dwg.
+
+The brief says BUG-746 "must not erase its records", but the bug file says the record must be erased with the tag. I took the bug file as right.
+
+AUTOCAD CLOSED
+SETTINGS RESTORED

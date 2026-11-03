@@ -1,0 +1,6 @@
+== verifyAUD_c88 (usage 36.0% -> 38.0%): AUTOCAD CLOSED
+
+1. **Results:** 10 PASS, 1 DIFFERENT, 0 FAIL, 0 BLOCKED. AUD-12 not run as instructed. Confidence: 9 SURE, 3 UNSURE.
+2. **Finding:** AUD-07ÔÇÖs two named switches were absent; its drawing behaviour matched. AUD-01ÔÇô03 lack clear screenshot proof of their captured command text.
+3. **Clean end:** Settings unchanged, versions unchanged, nothing saved, lock released.
+4. **Report:** [AUD verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_AUD_20261102_0848.md>).

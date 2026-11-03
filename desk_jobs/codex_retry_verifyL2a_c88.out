@@ -1,0 +1,12 @@
+== verifyL2a_c88 (usage 54.0% -> 55.0%): AUTOCAD CLOSED
+
+1. **L2a incomplete:** Settings search showed no command-name switch row; Cancel closed it. The five named Civil ribbon buttons were not visible.
+2. **Stopped under D6:** The Settings driver call raised an alarm. Remaining nine checks were not tested. Results: 1 DIFFERENT, 1 SEEN, no PASS or FAIL.
+3. **Clean end:** All four settings files unchanged; installed versions unchanged; lock released.
+4. **Report:** [L2a verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_L2a_20261102_2021.md>).
+== verifyL2a_c88 (usage 58.0% -> 58.0%): AUTOCAD CLOSED
+
+1. **Results:** 2 PASS, 0 FAIL, 1 DIFFERENT, 4 BLOCKED, 4 NOT TESTED. SURE 9; UNSURE 2. Verification remains incomplete.
+2. **Passed:** Orifice coefficient wording and readable Manager ribbon labels. Other preview sources still lack document/page detail.
+3. **Safe end:** Settings and drawing hashes unchanged; AutoCAD process gone; lock released. No new fixtures requested.
+4. **Report:** [L2a verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_L2a_20261103_0648.md>).

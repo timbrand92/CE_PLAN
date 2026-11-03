@@ -1,0 +1,8 @@
+C-54 is assembled and pushed as `claude/rel-20261020h` at `a85ea975`, with both PRs merged at their fix-round heads. The report is pushed to `C:\CE_PLAN`.
+
+- **Merged:** #1170 at `5d1d89e1` and #1165 at `d3c9c142`. Both matched the live PR heads. The only conflict was `REGRESSION_LOG.md`, and I kept every entry.
+- **Shared/:** neither PR changes it, so Civil and Manager keep the same CE_SHARED.
+- **Build:** whole solution Release, 0 errors.
+- **Tests:** Civil net10 18,929 of 18,949 pass (the only failure is the known Glen Eira red). Manager net10 832 of 832. Civil net48 focused 265 of 265.
+- **Not run:** Installer.Tests and AutoCAD.
+- **Settings:** your four settings files are unchanged. The worktree and temp folders are removed.

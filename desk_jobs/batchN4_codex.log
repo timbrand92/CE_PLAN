@@ -1,0 +1,48 @@
+Mon 18:22:52 batch N4 waiting for batchN3 to finish S3c
+Mon 18:23:13 batch N4 waiting for batchN3 to finish S3c
+Mon 18:51:41 batch N4 waiting for batchN3 to finish S3c
+Mon 18:58:15 stopped batchN pid 78212 and its helper after S3b
+Mon 18:58:15 batchN3 stopped after S3c; N4 takes over for the rest of the evening
+Mon 18:58:19 cleared stale lock Codex-S5 left by the killed launcher
+Mon 18:58:25 backed up CD_RecentValues.json sha CC398672E196
+Mon 18:58:25 backed up CD_Settings.json sha ACD64E79A33B
+Mon 18:58:25 backed up CS_Settings.json sha D604CE689671
+Mon 18:58:25 backed up settings.json sha EFE307C4FC74
+Mon 18:58:30 Codex usage before B2c : 51 percent
+Mon 18:58:31 starting verifyB2c_c88
+Mon 19:10:27 verifyB2c_c88 launcher finished; Codex usage after: 52 percent
+Mon 19:10:27 after B2c : CS_Settings.json sha D604CE689671 (original D604CE689671)
+Mon 19:10:27 after B2c : settings.json sha EFE307C4FC74 (original EFE307C4FC74)
+Mon 19:10:27 after B2c : CD_Settings.json sha ACD64E79A33B (original ACD64E79A33B)
+Mon 19:10:27 Codex usage before B1d : 52 percent
+Mon 19:10:27 starting verifyB1d_c88
+Mon 19:21:56 verifyB1d_c88 launcher finished; Codex usage after: 52 percent
+Mon 19:21:56 after B1d : CS_Settings.json sha D604CE689671 (original D604CE689671)
+Mon 19:21:56 after B1d : settings.json sha EFE307C4FC74 (original EFE307C4FC74)
+Mon 19:21:56 after B1d : CD_Settings.json sha ACD64E79A33B (original ACD64E79A33B)
+Mon 19:21:56 Codex usage before S5 : 52 percent
+Mon 19:21:56 starting verifyS5_c88
+Mon 20:04:52 verifyS5_c88 launcher finished; Codex usage after: 54 percent
+Mon 20:04:52 after S5 : CS_Settings.json sha D604CE689671 (original D604CE689671)
+Mon 20:04:52 after S5 : settings.json sha EFE307C4FC74 (original EFE307C4FC74)
+Mon 20:04:52 after S5 : CD_Settings.json sha ACD64E79A33B (original ACD64E79A33B)
+Mon 20:04:52 Codex usage before L1a : 54 percent
+Mon 20:04:52 starting verifyL1a_c88
+Mon 20:19:56 verifyL1a_c88 launcher finished; Codex usage after: 54 percent
+Mon 20:19:56 after L1a : CS_Settings.json sha D604CE689671 (original D604CE689671)
+Mon 20:19:56 after L1a : settings.json sha EFE307C4FC74 (original EFE307C4FC74)
+Mon 20:19:56 after L1a : CD_Settings.json sha ACD64E79A33B (original ACD64E79A33B)
+Mon 20:19:56 Codex usage before L2a : 54 percent
+Mon 20:19:56 starting verifyL2a_c88
+Mon 20:31:23 verifyL2a_c88 launcher finished; Codex usage after: 55 percent
+Mon 20:31:23 after L2a : CS_Settings.json sha D604CE689671 (original D604CE689671)
+Mon 20:31:23 after L2a : settings.json sha EFE307C4FC74 (original EFE307C4FC74)
+Mon 20:31:23 after L2a : CD_Settings.json sha ACD64E79A33B (original ACD64E79A33B)
+Mon 20:31:23 Codex usage before L3a : 55 percent
+Mon 20:31:23 starting verifyL3a_c88
+Mon 20:45:35 verifyL3a_c88 launcher finished; Codex usage after: 55 percent
+Mon 20:45:35 after L3a : CS_Settings.json sha D604CE689671 (original D604CE689671)
+Mon 20:45:35 after L3a : settings.json sha EFE307C4FC74 (original EFE307C4FC74)
+Mon 20:45:35 after L3a : CD_Settings.json sha ACD64E79A33B (original ACD64E79A33B)
+Mon 20:45:35 Codex usage before L2b : 55 percent
+Mon 20:45:35 starting verifyL2b_c88

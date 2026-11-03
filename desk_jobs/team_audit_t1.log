@@ -1,0 +1,16 @@
+I've written and pushed the Civil hydraulics audit to `C:\CE_PLAN\areas\TEAM_AUDIT_T1_24OCT.md`. The formulas are correct: on seven pipes, one orifice and one charged line, my hand calculations match the code within 0.3%. The real problem is how the auto-sizer chooses pipes, not the arithmetic.
+
+1. **New findings: 7** (1 HIGH, 3 MEDIUM, 3 LOW). I found no new unit mix-ups. Another 14 hydraulics bugs are already in the carpark, so the report gives only their BUG numbers.
+2. **HIGH (sure):** the auto-sizer always takes the smallest pipe that works, however steep the grade gets. For 40 L/s, CDDESIGN's connection pipe comes out as DN100 at about 1 in 3, when DN225 at 1 in 200 would carry it. Network redesign and auto-design use the same sizer. CDRUNSOLVE will do the same once it is fed real flows (today it gets none, BUG-999). Fixing it needs your ruling on the steepest grade the sizer may propose.
+3. **MEDIUM (sure):** CDCALC Pipe Flows warns at its own 0.5 and 3.0 m/s and ignores Settings. A concrete DN375 at 1 in 20 (3.55 m/s) gets "check for scour risk" in CDCALC but passes in CDRULES.
+4. **MEDIUM (sure):** CE never works out a hydraulic grade line or pit losses, and no screen says so. Frankston, Banyule and Whitehorse ask for one.
+5. **MEDIUM (sure):** CDDESIGN, network redesign and auto-design apply no minimum grade to DN450 and larger. On a preserve-existing-sizes redesign, an existing DN450 carrying 30 L/s gets proposed at 1 in 1,509; Edit Pipe would say 1 in 200.
+6. **Pipe-by-pipe numbers:** the report has all seven pipes, including 375 mm concrete at 1% (175 L/s), 600 mm at 0.5% (434 L/s) and 225 mm UPVC at 2% (82.6 L/s). The only differences above 2% are between screens, such as the Inspector reading 23% low on UPVC, and those are already known.
+
+**Not checked:** I ran nothing in AutoCAD and did no build or test. I did not check any Australian Standard clause, so the grade table, the speed limits and my roughness figures are marked UNVERIFIED. The structural branch has no drainage hydraulics, so I didn't read it.
+
+My own worktree is removed; the main checkout is clean.
+
+---
+
+**Summary:** Civil's Manning, orifice, Hazen-Williams and rational formulas match hand calculations within 0.3%. Of seven new findings, the worst is that the auto-sizer always picks the smallest pipe and lets the grade run steep: DN100 at about 1 in 3 for 40 L/s. CDCALC Pipe Flows also uses its own speed limits, no screen says the hydraulic grade line isn't checked, and DN450 and up get no minimum grade in redesign. Fourteen known bugs are cited by number. Report pushed to CE_PLAN. Nothing was run in AutoCAD.

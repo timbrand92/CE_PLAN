@@ -1,0 +1,36 @@
+The train C-38 candidate is built at `C:\ce_rc_scratch\c1035`, with Civil 3.0.49 and Manager 1.1.49. Nothing is installed and nobody has opened it in AutoCAD.
+
+1. **New head:** `48662dddb2dc36d09a121642f36aecc2465cc673` on `claude/rel-20261010b`. It is one version-only commit (4 files) on top of the signed-off `4acdc13e`, pushed before the build. Local HEAD equals origin and the worktree is clean.
+2. **Verify line:**
+   - `civil: manifest 822 files, verified 822, bad 0, extra 0`
+   - `manager: manifest 78 files, verified 78, bad 0, extra 0`
+3. **Versions:**
+   - Civil reads `3.0.49+48662ddd` in all three lanes.
+   - Manager reads `1.1.49+48662ddd` in all three lanes.
+   - `PackageContents.xml` shows `AppVersion` 3.0.49 and 1.1.49.
+   - The installed bundle is still 3.0.48 and 1.1.48, and its six DLL hashes are unchanged.
+4. **Tests (net10):**
+   - Civil version pins plus the redo guard: 37 of 37 passed.
+   - Manager `CeRunningVersionTests` and `ManagerSwitchFileTests`: 51 of 51 passed.
+   - No test file named a literal 3.0.48 or 1.1.48, so none needed editing.
+5. **CE_SHARED:**
+   - It is byte-identical between the Civil and Manager bundles in all three lanes.
+   - It differs from the installed 3.0.48 one by 114 to 115 bytes per lane, which is the build stamp and commit id. Ship the two bundles together.
+6. **Natives and registry:**
+   - The native C++ sources are unchanged since `660487d1`, so the three native files are the installed bytes.
+   - `command-registry.json` and `council-profiles.json` match the installed ones exactly.
+7. **Stale-string proof:** all of these are in the candidate and absent from the installed 3.0.48, in every Civil lane.
+   - **#962:** `EscapeEndsInspectPause`.
+   - **#976:** `RisingMainSplitLps`, `RisingMainSmallDiameterMm`, `risingMainSplitLps`, `risingMainSmallMm` and `risingMainLargeMm`.
+   - **Other PRs:** `PitTextStyleRule`, `CoverLevelSourceService`, `LongitudinalSectionRows`, `ReuseCreditRule`, `PitPickWording` and `SpotLevelReader`.
+   - **New Settings keys:** all seven you listed are present.
+8. **Survey defaults (from source at head):**
+   - `loadSurveySkipSuspectPoints` defaults to `false`.
+   - `nearestSpotLevelMaxDistanceM` defaults to `0.0` (no limit).
+   - Both are today's behaviour.
+9. **Stubs and extra files:** neither retired stub, no `*.Tests*` output and no `RedoSafeReviewedHooks` file is in either bundle.
+10. **Tim's settings:** `CD_Settings.json` is `ACD64E79…3140` before and after. The two `CS_Settings.json` files (Structural `B339F3E9…`, `TIM_CE_CADTOOLS` `622A246F…`) are also unchanged.
+
+**One thing to know:** `acad.exe` was running the whole session, so the unit tests ran under the relaxed gate. During my test run the live CE log folders grew in bytes (file counts the same), which I put down to the running AutoCAD appending to open logs. I did not take a snapshot five minutes before starting, so that attribution is unproven. No settings file changed.
+
+The report is at `C:\Lisp Files\_TEST_COPIES_20260923\PAYLOAD_C1035_REPORT.md`.

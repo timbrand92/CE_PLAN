@@ -1,0 +1,12 @@
+The BUG-1225 fix works on Civil 3.0.84 in the robot's AutoCAD, and nothing regressed. The report is pushed, and `git status -sb` shows no ahead.
+
+1. **Proof:** All 6 sessions passed (3 for DP, 3 for OF). Each placed "Downpipe placed. Tag: DP1." or "Overflow placed. Tag: OF1." both times. Each also showed the `[BUG-1225] ... was opened again` log line in the reopened drawing, with no "could not be refreshed".
+2. **Control:** With the switch OFF, the refusal came back in 2 of 2 sessions. My first control was invalid because the setting sat on only one of the two cases, so there was no reopen. I fixed it and re-ran it.
+3. **Regrade:** All 49 counted accepted cases passed in two separate sessions on 3.0.84. All review hashes still match their case files, and the build never changed.
+4. **Known-fault extras:** R08, R09 and R22 each failed twice, as expected, and were not counted.
+5. **Lock delay:** Codex held the lock for 60 minutes, which blocked one group (N04, N05, N06, N12). Nothing ran, and I re-ran it later and it passed.
+6. **Not tested:** nobody has done the close and reopen by hand. BUG-1225 is not marked fixed.
+
+The report is `C:\CE_PLAN\areas\release-v3-colleagues-RUNNER_BUG1225_REGRADE_3_0_84_REPORT.md`.
+
+**Summary:** The fix works in 6 of 6 sessions, and with the switch OFF the refusal returned in 2 of 2. All 49 counted accepted cases passed twice on Civil 3.0.84, with no regression from C-74. R08, R09 and R22 failed twice as known faults. Codex's lock blocked one group, and I re-ran it. Not tried by hand, and BUG-1225 is not marked fixed.

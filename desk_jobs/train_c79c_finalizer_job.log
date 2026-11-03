@@ -1,0 +1,23 @@
+1. **Train C-79c is GO at `ccaf0783185ee185f8e00a6a7dfb1707d4565007`, class AREA.** All 9 PRs are kept: 3 KEEP (#1942, #1978, #1980) and 6 KEEP-WITH-NOTE (#1941, #1881, #1975, #1976, #1977, #1979).
+
+2. **Why AREA, not FULL:** #1975 changes the label tidy that runs after every pit MOVE, but it is a brand-new switch on that one tool. Tim's decision 148 dropped the full re-test. The re-test list names the pit-MOVE cases instead:
+   1. the strip case N10 and its switch-off twin C10;
+   2. a "nothing else moved" check on labels already beside the pipe;
+   3. a sloping pipe;
+   4. Undo and Redo after the MOVE;
+   5. Tidy labels with No and with Esc;
+   6. the start-up smoke N91.
+
+3. **What I changed:** one commit, `ccaf0783`, tests and change log only. It adds 8 guard tests and puts back one missing blank line in the change log. No program code changed.
+
+4. **Test results:**
+   1. **Civil full run:** 22,708 tests, 0 failed. The real-settings guard ran alone afterwards: 2 of 2 passed.
+   2. **Civil focused run:** 4,601 tests, 0 failed.
+   3. **net48 focused run:** the 129 known reds plus 4 of the same kind in #1881's own new tests.
+   4. **Manager:** 1,150 tests, 0 failed. Manager stays 1.1.89.
+
+5. **Held for the desk:** Tim's decision 43.3 asked to see a picture of a three-line Pit Schedule remark before #1881 ships. I found no record of that, so the picture is owed before install.
+
+6. **Not tested:** nothing was opened in AutoCAD and every bug stays open. The real-folder guard said "inconclusive" because the robot's AutoCAD was running.
+
+Report: `C:\CE_PLAN\areas\release-v3-colleagues-TRAIN_C79C_FINALIZER_REPORT_2026-11-01.md`

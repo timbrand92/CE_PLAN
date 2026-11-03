@@ -1,0 +1,8 @@
+== cx_lf16 (usage 33.0% -> 33.0%): 1. **DONE — Batch 16 audited.** All five skipped: existing drafts cover BUG-948 and parts of BUG-950/951; remaining work requires protected Structural files or Tim’s decision. All remain open.
+
+2. **Saved and pushed:** [Report](C:/CE_PLAN/areas/CODEX_LEDGER_FIX_BATCH16_23OCT.md) and draft [PR #1670](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1670). Nothing deployed; AutoCAD not opened.
+
+---
+
+1. **Branch:** `cx2/bug-948-batch16-audit`, tip `62c94cef`.
+2. **Validation:** documentation checks passed. Tests added: **0**; application tests run: **0**. Exact future AutoCAD checks are recorded in the report.

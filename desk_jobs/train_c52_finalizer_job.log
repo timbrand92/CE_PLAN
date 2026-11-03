@@ -1,0 +1,27 @@
+**FOR TIM**
+
+1. **Verdict: GO.** Train C-52 is `claude/rel-20261020f` at `5bc9616746a0b62ffea7e52044fcd3718798305e`. The train head was the same at the start and at the end.
+2. **What I changed:** nothing. The one PR on the train (#1485) needed no fix.
+3. **Manager must ship:** no. The change is Civil only.
+4. **What you'll see in AutoCAD:** no change on the drawing, and Tidy labels moves labels exactly as before. When CDDEBUG is on, the CE log gets one extra line for each text a label bumps into. That line will tell us which "SC" text on layer SLAB SC is blocking the P3 → P2 label.
+5. **Tests:**
+   1. **Whole solution:** builds with 0 errors.
+   2. **Civil net10:** 18,893 of 18,913 pass, 19 skipped, 1 known failure (Glen Eira).
+   3. **Manager:** 824 of 824 pass.
+   4. **Civil net48 focused:** 221 of 222 pass. The 1 failure has been failing the same way since C-49.
+   5. **Nothing new fails.**
+6. **Do not mark fixed:** BUG-141. Nobody has run it in AutoCAD, and this change only adds a log line.
+7. **New switches:** none. One existing switch, "tidy ignores the sheet frame" (`linking.tidyIgnoresSheetFrame`), still has no row on the Settings page.
+8. **Installer:** C-52 doesn't touch the installer or the signed-update check (OfficialReleaseGate).
+9. **Correction to the C-51 finalizer:** it said #1475 changed the signed-update check and wasn't installed. Both parts were wrong. #1475 is already in what you have installed, and all it changed is how the installer deletes its own old folders. It never touched the signed-update check.
+10. **Your settings files:** unchanged.
+
+---
+
+1. **Files written and pushed in C:\CE_PLAN:**
+   1. The C-52 finalizer report: `areas/release-v3-colleagues-TRAIN_C52_FINALIZER_REPORT_2026-10-20.md`.
+   2. REVIEWLANE log entries 1479 to 1482, plus the sign-off line.
+2. **Clean-up:** my worktree and temp folders are removed. `C:\ce-fin\logs` (64 MB, from 19 Oct) isn't from this job, so I left it.
+3. **Not run:** the installer tests (compile only), the full net48 suite, Structural, and anything in AutoCAD.
+
+**Summary:** GO at `5bc96167`, with no changes made. Tests: Civil net10 18,893 of 18,913, Manager 824 of 824, net48 focused 221 of 222; the only failures are the two known ones. Held: BUG-141 stays open until an AutoCAD pass, Structural is not merged, and #1382, #1384, #1419 and #1423 are not merged.

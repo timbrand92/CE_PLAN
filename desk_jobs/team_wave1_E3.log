@@ -1,0 +1,14 @@
+1. **Count:** all 4 bugs (654, 655, 656, 657) have a robot case and a twin that must fail, 8 files in all. None needs a Codex check or your judgement instead. Nobody has run them yet.
+2. **BUG-654 (hand-typed level kept, pipe runs backwards):** W654 types a level by hand in Edit Pipe, then lowers the pipe upstream by 200 mm. CE must then say "P82 -> P83 will be flat or running backwards". Its twin lowers it only 50 mm, so no warning should appear.
+3. **BUG-655 (two pipes into one pit):** W655 raises one of the two pipes arriving at P83 by 200 mm. The outgoing pipe must stay at 17.88 under the lower pipe, and CE must name P82 -> P83 as the reason. Its twin turns the fix's setting off.
+4. **BUG-656 (cascade relinks the whole drawing):** W656 runs the downstream recalculation on the test drawing, using the route that passed today on 3.0.88, then reads the CE log. Only a pipe that was in the preview may be relinked, and none of four far-away pipes. Its twin turns the fix's setting off.
+5. **BUG-657 (locked level-text layer):** W657 moves one of a pipe's two level texts onto a new locked layer. The recalculation must change neither text and say "Nothing was changed". Its twin leaves the layer unlocked, so both texts change.
+6. **Offline checks:** the format check found 0 faults in 43 files, and every window control the cases press is known. My files contain no "print", no street or client names, and every level matches the worked levels in the report.
+7. **Main risk (654, 655, 657):** these cases draw new pits and pipes on empty ground, with pit numbers P81 to P84 typed by hand, then edit those pipes. Each step is copied from a case that has already run, but this exact sequence has not run.
+8. **Main risk (656):** this case relies on the CE log line "Pipe endpoints updated". Two real 3.0.88 runs of this route each wrote exactly one such line. That the twin adds lines for the far pipes is an inference from runs that placed pits, not something seen.
+9. **What 654 cannot show:** the bug was a pipe written backwards with no warning. On 3.0.88 a later fix (BUG-1040) turned this fix's refusal into a warning, so the backwards level is still written. The case proves CE now warns, not that it stops the write.
+10. **Not tested anywhere:** CDPROPAGATE, the other command all four bugs affect. It needs a pick on a pit, which the robot has not yet done reliably. Codex can check it if wanted.
+11. **Problem spotted in another writer's case (I did not edit it):** W652 edits a 225 mm pipe to about 1 in 32. From the code, that runs at 2.6 m/s against the 2.0 m/s pit-outlet limit, so a Design Warnings window could open and stop the case.
+12. **Next:** an Opus paper review of these 8 files, then one robot run of the four main cases and their four twins.
+
+The full report is `C:\CE_PLAN\areas\WAVE1_WRITING_E3_REPORT.md`, and the case files are in `C:\Lisp Files\_ACAD_DRIVER\cases\drafts_wave1_31oct\` (W654 to W657 and their `_BROKEN` twins).

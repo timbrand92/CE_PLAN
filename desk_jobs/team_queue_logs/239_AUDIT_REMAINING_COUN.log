@@ -1,0 +1,5 @@
+`C:\CE_PLAN\areas\AUDIT_REMAINING_COUNT_02NOV.md` is written: 1,056 of 1,222 carpark entries are still OPEN, only 27 are FIXED the ledger way, and 38 have no fix work at all. I opened no AutoCAD and built and tested nothing. I could not run `gh`, so "no PR" means no commit, branch or carpark PR note.
+
+The order named the path `C:\CE_PLANreas\...`; I took that as a lost backslash and wrote to `C:\CE_PLAN\areas\`.
+
+The audit's "top 25 with no PR" list is wrong for BUG-497, 498, 1080, 1081, 1083, 1064, 1065 and 1175, which already have fix work. The 75 "fixable now" falls to about 38 truly untouched, and the file names the ten buildable today.

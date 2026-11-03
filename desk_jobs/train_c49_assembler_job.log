@@ -1,0 +1,10 @@
+Train C-49 is assembled on `claude/rel-20261020c`, head `58a83210`, pushed. It merges #1482 and #1441, both Opus MERGE at their live heads. It touches no `Shared/`, Manager or Installer file.
+
+- **Build:** whole solution Release, 0 errors.
+- **Tests:**
+  - Civil net10 18,878 run, only Glen Eira failed (the known red).
+  - Manager net10 824/824.
+  - Civil net48 focused 229 pass, 1 fail: the `Point3d` stub error, which fails on the base too.
+- **Left out:** #1438 and #1437 need an Opus re-review of their fix-round commits.
+- **Cleanup:** settings files unchanged, my worktrees removed.
+- **Report:** `C:\CE_PLAN\areas\release-v3-colleagues-TRAIN_C49_ASSEMBLY_REPORT_2026-10-20.md`, pushed as `c3620331`.

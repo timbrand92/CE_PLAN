@@ -1,0 +1,10 @@
+PR #1857 (draft, branch `fb/1788-extras-comma-and-speed`) compiles and passes. I changed no code, so the branch is still at 09a6d1b8.
+
+- **Focused tests:** 26 of 26 pass on net10, in `TypedFigureCommaTests` and `UnsetMaterialSpeedFallbackTests`.
+- **Full Civil suite:** 20,800 passed, 0 failed, 32 skipped.
+- **net48 compile:** 0 errors.
+- **Switches:** `pipe.boxRefusesCommaFigure` and `pipeSpeedChecks.unsetMaterialUsesOfficeFigure`, both ON.
+- **Report:** the BUILD AND TEST section is appended to `release-v3-colleagues-1788_EXTRAS_REPORT.md` and pushed.
+- **Not proven:** nothing has been tried in AutoCAD.
+
+I also built once in the main checkout by mistake, which left ignored build folders there.

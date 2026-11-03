@@ -1,0 +1,7 @@
+Sixteen briefs are written, queued and pushed: ten acceptance looks (F1–F10) and six builds (cx_bd15–cx_bd20). Nothing was run. Cost is 78 points (30 for the looks, 48 for the builds). With Codex at about 23, that reaches 101 against the cap of 97, so the last build may be skipped.
+
+- **Looks:** F1 pipe label (R18), F2 Pit Schedule (R25), F3 CDDESIGN (R27), F4 LandXML (R29), F5 Drawing Standards Manager (R30), F6 PD1 tag (R37), F7 pit/pipe labels (R01, R02, R02b), F8 Settings pages (C13, R10), F9 downpipe double-click (R09, C04), F10 About CE Suite (R06). Each has a full brief and queue line.
+- **Builds:** BUG-1089, 1093, 1115, 1182, 1178 and 1174, on `rel-20261026u`. Three are wording fixes, not wrong-number or data-loss fixes. The strong wrong-answer and data-loss bugs are already in open PRs, in protected files, or need Tim's ruling.
+- **Not checked:** no brief was dry-run, and the PR scan covered only the newest 1,000. F6, F7 and F9 have the weakest typed routes.
+
+The report is `C:\CE_PLAN\areas\release-v3-colleagues-CODEX_BURN_BRIEFS_26OCT_REPORT.md`.

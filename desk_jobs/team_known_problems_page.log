@@ -1,0 +1,9 @@
+I've written the new known-problems page as a draft and pushed it. It isn't published or copied anywhere else, so Tim still has to approve it (checklist 28). The scan was clean and `git status -sb` shows no ahead. I didn't open AutoCAD or read the installed files.
+
+The file is `C:\CE_PLAN\areas\COLLEAGUE_KNOWN_PROBLEMS_DRAFT_25OCT.md`. It starts with a FOR TIM block, then the page.
+
+- **Layout:** the five day-one things come first. The problems are then grouped by drafter job (A–F), followed by a fixed-and-checked list and the decisions Tim hasn't made yet.
+- **Bug numbers:** the body has none. A desk-only list at the bottom maps each statement to its bugs, to be removed before publishing.
+- **Versions:** I used Civil 3.0.75, Manager 1.1.75 and Structural 1.0.123 from the brief. I didn't confirm them against the installed DLLs.
+- **Unverified statements:** about 30 are marked [CHECK]. Most are 22 Oct items I couldn't re-check without AutoCAD, plus whether 3.0.75 holds every fix I list.
+- **BUG-384:** the carpark file has no FIXED line for it, only the desk log's 09:00 entry, so it is marked [CHECK].

@@ -1,0 +1,42 @@
+**FOR TIM**
+
+1. **Fixed, but only built and unit-tested.** Nothing was opened in AutoCAD, and BUG-587 stays open. If a drafter switches the long-note feature off on a schedule that already has a double row, then Update placed schedule now puts the table back. The white strips are removed, and the rows go back to the normal 750 spacing. The frame holds all the pits again.
+2. **Locked layer:** if the strip layer is locked, the strips stay. CE never unlocks anything, and one line on the command line says so.
+3. **A schedule that never had a double row, with the switch off:** nothing changes.
+4. **Said plainly now:** at the shipped figures, a note of three lines or more goes straight to a double row. A two-line note fits as drawn. The "draw the lines closer" step effectively never happens. No threshold was lowered.
+5. **Wrong wording corrected:** once a schedule has a double row, it does move on Update. A drafter's own nudge of 300 or more is reset, and smaller nudges are kept.
+6. **No Settings page rows added.** For the question with CE 04, the five figures are 0.75 (character width), 1.2 (closest line spacing), 50 (text margin), 20 (strip inset) and 25 (strip half height). The two switches are file-only as well.
+7. **To check in AutoCAD on a copy:**
+   1. Place the P1/P2/P3 schedule.
+   2. Set `linking.scheduleRowGrowsForLongRemark` to false.
+   3. Press Update placed schedule.
+   4. Rows should be 750 apart, with no white strips, and the frame should hold all three pits.
+
+**Technical**
+
+1. **New head:** `72b032fa` on `fb/bug587-schedule-row-height`, pushed normally with no force. The fix commit is `07df4f48`.
+2. **Merge:** I merged origin/claude/rel-20261102a (`7c6af57b`) with a normal `--no-ff` merge. Only `REGRESSION_LOG.md` clashed, and I kept both sides. The PR is still a draft against `claude/rel-20261026z`, and I updated its body.
+3. **Focused tests:** 38 passed, 0 failed, with 4 new tests plus a source guard on the fix.
+4. **Full Civil net10 Release suite, on the merged result:** 21,628 passed, 32 skipped, 1 failed, 21,661 total. The one failure was an offline-Help window render timeout (`HelpGuideWindowRenderTests`, 30 s, under load). It passes on its own, 2 of 2. I did not investigate it further.
+5. **net48 compile of Drainage:** 0 errors.
+6. **Recent-values file, before and after my runs:**
+   1. Before: `CD_RecentValues.json` was 11,948 bytes, modified 21:36:44.
+   2. After: 11,948 bytes, modified 21:53:36.
+   3. None of my test runs was executing at 21:53 (mine were waiting for a build slot), so that change is the robot's AutoCAD.
+7. **Isolation:** every test run used a fresh scratch folder with `CE_LOG_DIR_OVERRIDE`, `CE_STRUC_SUITE_APPDATA_ROOT`, `TEMP` and `TMP` set. I did not touch `%APPDATA%`, Tim's settings, bundles or ProgramData. `CE_SHARED` is unchanged.
+8. **Still to do for BUG-587:** the robot case and a Codex look. The switch-off Update of an already-grown schedule is now a case the robot can run (expect 750 apart and 0 strips).
+9. **Records:** the B-028b section is appended to `release-v3-colleagues-BUG587_FIX_REPORT.md` and pushed in `C:\CE_PLAN` (`0dd8f5e2`).
+
+**What I did NOT test**
+
+1. The strip erase and the switch-off Update in AutoCAD. Only the decision logic and cell positions are tested, because the erase itself needs AutoCAD.
+2. A locked strip layer in AutoCAD.
+3. net48 tests.
+4. The earlier unproven list still stands:
+   1. the line-count estimate against AutoCAD's real wrapping;
+   2. the strip outline (WIPEOUTFRAME);
+   3. plotting;
+   4. Undo and Redo;
+   5. save and reopen;
+   6. Xref and REFEDIT.
+5. Review findings B, C, F and G (draw order, strips above older text, cosmetic spacing, strip positions against the real block) are untouched.

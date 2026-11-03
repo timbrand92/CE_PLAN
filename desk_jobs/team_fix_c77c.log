@@ -1,0 +1,7 @@
+**Draft PR #1847** (`fb/tidy-labels-default-on`, base `claude/rel-20261026z`) makes "Switch on Tidy labels (moves clashing pipe labels clear)" ON by default for colleagues and new installs. I assumed this is the switch you meant by "Tidy labels names the pipe".
+
+The setting is `linking.tidyLabelsEnabled`, in `UserSettings.cs`. I also changed the gate rule comment, both Settings pages and the value catalogue ("Default: on."), `TidyLabelsGateTests`, a new `C76TidyLabelsDefaultOnTests`, and `REGRESSION_LOG.md`.
+
+A settings file with no key reads ON. One that says false keeps false. Tim's file holds no key, so it was never OFF. It will read ON.
+
+Tests: the focused set passed. The full Civil net10 run had 2 failures, in IL-shape tests; they passed in Release. The net48 compile had 0 errors. Not opened in AutoCAD. The report is pushed.

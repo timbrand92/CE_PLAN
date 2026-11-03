@@ -1,0 +1,21 @@
+Train C-74 is assembled and the report is pushed. Nothing was run in AutoCAD, and BUG-1225 stays open.
+
+**Branch:** `claude/rel-20261026y` at `0ed1b87e`. I built it from the C-73 version commit `96455f13`, which matches the installed 3.0.83 (Civil) and 1.1.83 (Manager).
+
+**Merge:**
+- **PR:** #1830 (BUG-1225) merged clean at `431c27c2`, and the PR had not moved since the list.
+- **Diff:** 8 files, 332 added, 4 removed.
+- **Untouched:** Shared, Installer and Manager.
+- **Setting:** one new key, ON by default.
+- **Hit list:** the added lines contain none of the 17 flagged terms you listed.
+- **For the finalizer:** the two lines added to `LinkService.OnDocumentToBeDestroyed` sit outside any try block.
+
+**Build and tests:**
+- **Build:** the whole solution built with 0 errors.
+- **Civil net10:** 20,709 total. 2 tests failed in the full run, and both passed when re-run alone: a relink timing test and the PDF page test.
+- **Manager net10:** 1,041 total, 0 failed.
+- **Civil net48:** 56 failed. They are the 55 known reference-only failures plus one Bug960 screenshot file clash, which passed alone.
+- **Arch (Civil half):** 14 of 14.
+- **New tests:** all 17 `Bug1225ReopenedDrawingRecordTests` pass on net10 and net48.
+
+**Not covered:** nobody has run #1830 in AutoCAD. The report is `areas\release-v3-colleagues-TRAIN_C74_ASSEMBLY_REPORT_2026-10-28.md` in `C:\CE_PLAN`.

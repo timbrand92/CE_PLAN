@@ -1,0 +1,8 @@
+I did not find the culprit of the lost REDO, but the gap watch shows one difference. The report is pushed to `main` with no "ahead". The two modified files left in the working copy are `ledger.json` and `.last_tick`, which I didn't touch.
+
+- **Baseline:** on Civil 3.0.83 REDO was lost in round 1 in 4 of 4 sessions, as on 3.0.81 and 3.0.82.
+- **Gap watch:** in round 1 only, at the first click, the drawing's write lock dropped and was retaken twice within 3 ms. No CE code was on the stack. This was seen in 4 of 4 sessions. I have not shown that this is what removes REDO.
+- **`disableUndoEndWork`:** REDO was still lost in 4 of 4 sessions, so Civil's work at the end of U is cleared. I did not run the project-reload and cache-rebuild splits.
+- **Next step (needs Tim's yes):** run the cases with Structural and Manager off, then with all CE off.
+
+Report: `C:\CE_PLAN\areas\release-v3-colleagues-RUNNER_BUG861_GAPWATCH_REPORT.md`. I added 8 variant case files in `cases\controls` (4 not run).

@@ -1,0 +1,19 @@
+CODEX LOOK BRIEF, STRUCTURAL: BUG-467 (rotated UCS) and BUG-472 (layout tab / REFEDIT). Written by the CE 02 case writer (Opus), Fri 30 Oct 2026. NOT SENT: CE 00 decides when.
+
+WHAT THIS IS. Both fixes are already installed in Structural 1.0.125 (BUG-467 by HUNT-S-02, PR #879; BUG-472 by HUNT-S-07, PR #887). These are PROOFS OF INSTALLED FIXES. A PASS proves the installed fix works in AutoCAD; a FAIL means it does not. The robot cases in C:\Lisp Files\_ACAD_DRIVER\cases\drafts_struc_30oct prove positions and command-line lines; this brief covers only what must be SEEN or needs the mouse.
+
+RULES. A fresh copy of C:\ce_rc_drv\DRV2_S1.dwg only (SHA-256 starts 950AFDF6E523; Structural test copy with pads PF1 to PF4 along the X axis). Never Tim's drawings. Never save. Screenshot each step and write the exact steps. Check the installed Structural version reads 1.0.125 first. Run only in a free AutoCAD window (Melbourne time: before 8:30 am, 2:00 to 3:00 pm, after 5:30 pm, weekends).
+
+1. Drag preview in a rotated UCS (BUG-467, BT1, AB, BB). Type UCS, Z, 30. Type BT1, click a first point. Move the mouse slowly. RIGHT: the preview line runs from the clicked point to the cursor tip, all the way, in every direction. WRONG: the line starts somewhere else, or ends away from the cursor. Click a second point, Enter for truss 1, No to flip. RIGHT: the brace sits exactly on the two clicked points. Repeat with AB and BB. Then UCS, W and BT1 once more: same behaviour.
+
+2. R1 Point option in a rotated UCS (BUG-467). Still UCS Z 30. Type R1, P, click a point; at the second question P again and move the mouse. RIGHT: the rubber band starts at the first click. Finish four picks round a bay and tag RT1. RIGHT: the tag sits inside the bay you picked, along the bay.
+
+3. FPFC in a rotated UCS (BUG-467). Still UCS Z 30. FPFC, mark PF7, 600, 600, 0, click a centre, Enter at the rotation. RIGHT: the pad is centred on the click and its sides run square to the rotated UCS (30 degrees in World); the PF7 label is readable and next to the pad. Then UCS, W.
+
+4. REFEDIT (BUG-472), only if robot case S472b came out BLOCKED or its REFEDITNAME check failed. Make a plain block first: draw a line, BLOCK it, INSERT it. Type REFEDIT, pick the block, OK, All. Type BT1, then C1, then BTX. RIGHT: each prints one line "A block or Xref is open for in-place editing (REFEDIT), so CE ... Close it (REFCLOSE) and try again." and nothing appears. REFCLOSE, Discard.
+
+5. BTX on a text that sits on the LAYOUT (BUG-472 worst case). Go to a layout tab (not inside a viewport). Put a TEXT on the sheet with TEXT. Type BTX. RIGHT: "You are on a layout tab (paper space), so CE changed no text. Go to the Model tab, or double-click into a viewport, and try again." and the text is still on the sheet, unchanged. WRONG: the text vanishes from the sheet.
+
+6. C1 with a click on a layout tab (BUG-472). On the layout tab (paper space) type C1. RIGHT: the layout line ("... so CE placed no support ..."), no question for a point. Double-click inside a viewport and type C1: RIGHT: C1 asks for its insertion point as normal (inside a viewport is allowed on purpose); Esc.
+
+REPORT. One line per item: PASS / FAIL / NOT RUN, with the screenshot file names, to C:\CE_PLAN\areas\ (name it CODEX_LOOK_STRUC_467_472_<date>.md).

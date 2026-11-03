@@ -1,0 +1,6 @@
+== verifyB1f_c88 (usage 59.0% -> 60.0%): AUTOCAD CLOSED
+
+1. **Inspector:** Minimum-grade warning and ÔÇ£To fixÔÇØ line NOT FOUND in the permitted views. ÔÇ£Drawing healthÔÇØ and ÔÇ£ChecksÔÇØ tabs were visible but not clicked.
+2. **CDRULES:** BLOCKED by an unlisted choice prompt. B1b-06b: **NOT TESTED: not in B1f**.
+3. **Safe end:** Four settings hashes unchanged; drawing discarded; lock released.
+4. **Report:** [CODEX_VERIFY_B1f_20261103_0727.md](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_B1f_20261103_0727.md>)

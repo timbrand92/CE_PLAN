@@ -1,0 +1,18 @@
+== verifyS5_c88 (usage 35.0% -> 36.0%): AUTOCAD CLOSED
+
+1. **Results:** PASS 1, DIFFERENT 1, BLOCKED 1, NOT TESTED 1. SURE 4, UNSURE 0; no FAILs.
+2. **P3 passed.** Junction outlet levels stayed correct, but its preview showed no warning before Apply. S5-01 was blocked by my checkbox error; reversal remains unverified. S5-04 was not run.
+3. **Clean end:** Nothing saved. Four watched settings files unchanged; remembered values changed for the desk to restore. Lock released. Usage 36%.
+4. **[Report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_S5_20261102_0823.md>)** includes exact words and screenshot evidence.
+== verifyS5_c88 (usage 44.0% -> 46.0%): AUTOCAD CLOSED
+
+1. **Report:** [S5 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_S5_20261102_1551.md>).
+2. **Results:** DIFFERENT 3; NOT TESTED 1; PASS/FAIL/BLOCKED 0. SURE 3, UNSURE 1. Arrow behaviour, P3 changes and junction outlet confirmed; P82ÔÇÖs complete text/count remains partly obscured. S5-04 not run.
+3. **Builds:** Civil 3.0.89 / Manager 1.1.89 / Structural 1.0.125, unchanged.
+4. **Cleanup:** Nothing saved; four settings hashes unchanged; lock released. No observed old faults.
+== verifyS5_c88 (usage 52.0% -> 54.0%): AUTOCAD CLOSED
+
+1. **Results:** PASS 1, DIFFERENT 2, FAIL 0, BLOCKED 0. All three SURE. S5-04 not run.
+2. **Findings:** Arrow stayed reversed; outlet levels stayed unchanged. Duplicate banner, clipped heading, absent preview warning and partly hidden P82 label recorded.
+3. **Clean end:** Nothing saved. Four settings unchanged. Lock released.
+4. **Report:** [S5 verification](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_S5_20261102_1923.md>).

@@ -168,3 +168,6 @@ kept for CE_STRUC_SUITE: CE_STRUC_SUITE_PRE_4e17dd50_20261012-051824.backup, CE_
 16 17:34 remove CE_SUITE_MANAGER_PRE_fc6d2e68_20260929-032512.backup
 16 17:34 remove CE_SUITE_MANAGER_PRE_fe9c22ac_20261004-095043.backup
 kept for CE_SUITE_MANAGER: CE_SUITE_MANAGER_PRE_92ec2c00_20261012-073323.backup, CE_SUITE_MANAGER_PRE_74248c1d_20261012-050841.backup, CE_SUITE_MANAGER_PRE_2388c329_20261012-001721.backup, CE_SUITE_MANAGER_PRE_f34abfeb_20261010-205740.backup, CE_SUITE_MANAGER_PRE_b7eed253_20261010-135928.backup
+Sat 17 22:24 deleted stale 1.1 GB python REPL task output from 10 Oct (not growing, no process)
+Sun 18 06:49 deleted raw DWG working copies in the local evidence store (job1\src, job2\work); indexes and pictures kept
+Sun 18 14:56 deleted two stale dotnet SDK workload-resolver temp folders from 14 Oct (5.5 GB)

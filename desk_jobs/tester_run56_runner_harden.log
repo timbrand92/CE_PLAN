@@ -1,0 +1,9 @@
+The old R08 failure came from the test route, not from CE. R08's five rounds in three sessions, plus five single-round control sessions, kept REDO in all 20 pit-pick rounds on Civil 3.0.74. That rests on the new route: a real-mouse click with no AutoCAD read between U and REDO. The old route read AutoCAD in between, and it lost REDO with no pick at all (5 of 5). It also lost it on a plain line (5 of 5).
+
+- **Hardened:** R01, R02, R03, R05, R07, R08 and R10 each passed in two separate sessions and each has a variant that fails.
+- **R04:** it has only an offline red, so the desk needs to decide on that exception.
+- **Left alone:** R06 needs a Codex look, and R09 is a real fault (BUG-859 round 3 is not installed).
+- **Reviews:** none of the new case texts has an independent review yet.
+- **Not run:** a pit pick with CE not loaded, because that would mean renaming Tim's live bundle folders.
+
+The report is `C:\CE_PLAN\areas\release-v3-colleagues-RUNNER_HARDEN_REPORT.md`. It is pushed and `git status -sb` shows no "ahead".

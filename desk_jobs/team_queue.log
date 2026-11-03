@@ -100,3 +100,436 @@ Mon 06:27 starting 301_robot_cases_set02_co (sonnet)
 Mon 06:32 finished 301_robot_cases_set02_co
 Mon 06:35 FEEDER launched 302_robot_cases_set03_inspector_records.txt pid 900 (Team week 32, C: 54.7 GB)
 Mon 06:35 starting 302_robot_cases_set03_in (sonnet)
+Mon 06:38 finished 302_robot_cases_set03_in
+Mon 06:40 FEEDER launched 303_robot_cases_set04_cdrules_council_rows.txt pid 76128 (Team week 32, C: 54.7 GB)
+Mon 06:40 starting 303_robot_cases_set04_cd (sonnet)
+Mon 06:41 FEEDER feeder started
+Mon 06:47 finished 303_robot_cases_set04_cd
+Mon 06:50 FEEDER launched 200_look_c78_part_seen_halves.txt pid 77024 (Team week 32, C: 54.5 GB)
+Mon 06:50 starting 200_look_c78_part_seen_h (sonnet)
+Mon 06:56 finished 200_look_c78_part_seen_h
+Mon 06:59 FEEDER launched 210_look_k1_02b_cdcalc_xlsx.txt pid 46684 (Team week 33, C: 54.3 GB)
+Mon 06:59 starting 210_look_k1_02b_cdcalc_x (sonnet)
+Mon 07:05 finished 210_look_k1_02b_cdcalc_x
+Mon 07:08 FEEDER launched 211_look_batchB_civil_screens.txt pid 77964 (Team week 33, C: 54.3 GB)
+Mon 07:08 starting 211_look_batchB_civil_sc (sonnet)
+Mon 07:19 finished 211_look_batchB_civil_sc
+Mon 07:22 FEEDER launched 212_look_batchB_drawing_and_manager.txt pid 75372 (Team week 33, C: 54.1 GB)
+Mon 07:22 starting 212_look_batchB_drawing_ (sonnet)
+Mon 07:34 finished 212_look_batchB_drawing_
+Mon 07:37 FEEDER launched 213_look_batchC_hub_and_edits.txt pid 45152 (Team week 33, C: 53.7 GB)
+Mon 07:37 starting 213_look_batchC_hub_and_ (sonnet)
+Mon 07:52 finished 213_look_batchC_hub_and_
+Mon 07:55 FEEDER launched 214_look_w234_blocked_for_robot.txt pid 67724 (Team week 34, C: 53.5 GB)
+Mon 07:55 starting 214_look_w234_blocked_fo (sonnet)
+Mon 08:02 finished 214_look_w234_blocked_fo
+Mon 08:05 FEEDER launched 215_look_laneB_part1.txt pid 80132 (Team week 34, C: 53.3 GB)
+Mon 08:05 starting 215_look_laneB_part1 (sonnet)
+Mon 08:14 finished 215_look_laneB_part1
+Mon 08:17 FEEDER launched 216_look_laneB_part2.txt pid 68560 (Team week 34, C: 53.3 GB)
+Mon 08:17 starting 216_look_laneB_part2 (sonnet)
+Mon 08:27 finished 216_look_laneB_part2
+Mon 08:30 FEEDER launched 217_look_laneB_part3.txt pid 7844 (Team week 35, C: 52.9 GB)
+Mon 08:30 starting 217_look_laneB_part3 (sonnet)
+Mon 08:43 finished 217_look_laneB_part3
+Mon 08:46 FEEDER launched 218_look_export_save_box_fixes.txt pid 9452 (Team week 35, C: 52.6 GB)
+Mon 08:46 starting 218_look_export_save_box (sonnet)
+Mon 08:54 finished 218_look_export_save_box
+Mon 08:57 FEEDER launched 205_rerun_audit_chunk21.txt pid 65972 (Team week 35, C: 52.4 GB)
+Mon 08:57 starting 205_rerun_audit_chunk21 (sonnet)
+Mon 08:59 finished 205_rerun_audit_chunk21
+Mon 09:02 FEEDER launched 206_carpark_recheck_lookbriefs.txt pid 61380 (Team week 35, C: 52.4 GB)
+Mon 09:02 starting 206_carpark_recheck_look (sonnet)
+Mon 09:08 finished 206_carpark_recheck_look
+Mon 09:10 FEEDER launched 219_look_ribbon_second_drawing_two_starts.txt pid 69360 (Team week 36, C: 52.3 GB)
+Mon 09:10 starting 219_look_ribbon_second_d (sonnet)
+Mon 09:22 finished 219_look_ribbon_second_d
+Mon 09:25 FEEDER launched 220_fix_w655_preview_warnings.txt pid 75128 (Team week 36, C: 52.1 GB)
+Mon 09:25 starting 220_fix_w655_preview_war (sonnet)
+Mon 09:39 finished 220_fix_w655_preview_war
+Mon 09:41 FEEDER launched 304_robot_cases_set05_detention_and_rainfall.txt pid 32928 (Team week 36, C: 51.8 GB)
+Mon 09:41 starting 304_robot_cases_set05_de (sonnet)
+Mon 09:44 finished 304_robot_cases_set05_de
+Mon 09:46 FEEDER launched 305_robot_cases_set06_design_drafts_and_reuse.txt pid 51216 (Team week 36, C: 51.8 GB)
+Mon 09:46 starting 305_robot_cases_set06_de (sonnet)
+Mon 09:49 finished 305_robot_cases_set06_de
+Mon 09:51 FEEDER launched 306_robot_cases_set07_xcivil_import_and_xrefs.txt pid 32528 (Team week 36, C: 51.4 GB)
+Mon 09:51 starting 306_robot_cases_set07_xc (sonnet)
+Mon 09:53 finished 306_robot_cases_set07_xc
+Mon 09:56 FEEDER launched 307_robot_cases_set08_labels_and_units.txt pid 48736 (Team week 36, C: 51.4 GB)
+Mon 09:56 starting 307_robot_cases_set08_la (sonnet)
+Mon 10:01 finished 307_robot_cases_set08_la
+Mon 10:04 FEEDER launched 308_robot_cases_set09_longsection_and_startup.txt pid 45148 (Team week 36, C: 51 GB)
+Mon 10:04 starting 308_robot_cases_set09_lo (sonnet)
+Mon 10:08 finished 308_robot_cases_set09_lo
+Mon 10:11 FEEDER launched 309_robot_cases_set10_manager.txt pid 11924 (Team week 37, C: 51 GB)
+Mon 10:11 starting 309_robot_cases_set10_ma (sonnet)
+Mon 10:14 finished 309_robot_cases_set10_ma
+Mon 10:17 FEEDER launched 310_robot_cases_set11_pit_schedule.txt pid 5716 (Team week 37, C: 50.8 GB)
+Mon 10:17 starting 310_robot_cases_set11_pi (sonnet)
+Mon 10:21 finished 310_robot_cases_set11_pi
+Mon 10:24 FEEDER launched 311_robot_cases_set12_link_records_older.txt pid 73824 (Team week 37, C: 50.7 GB)
+Mon 10:24 starting 311_robot_cases_set12_li (sonnet)
+Mon 10:27 finished 311_robot_cases_set12_li
+Mon 10:31 FEEDER launched 312_robot_cases_set13_checks_older.txt pid 81796 (Team week 37, C: 50.6 GB)
+Mon 10:31 starting 312_robot_cases_set13_ch (sonnet)
+Mon 10:35 finished 312_robot_cases_set13_ch
+Mon 10:37 FEEDER launched 313_robot_cases_set14_landxml_longsection_older.txt pid 43056 (Team week 37, C: 50.6 GB)
+Mon 10:37 starting 313_robot_cases_set14_la (sonnet)
+Mon 10:40 finished 313_robot_cases_set14_la
+Mon 10:42 FEEDER launched 314_robot_cases_set15_new_pipe_older.txt pid 60308 (Team week 37, C: 50.5 GB)
+Mon 10:42 starting 314_robot_cases_set15_ne (sonnet)
+Mon 10:46 finished 314_robot_cases_set15_ne
+Mon 10:48 FEEDER launched 315_robot_cases_set16_detention_older.txt pid 84052 (Team week 37, C: 50.3 GB)
+Mon 10:48 starting 315_robot_cases_set16_de (sonnet)
+Mon 10:51 finished 315_robot_cases_set16_de
+Mon 10:53 FEEDER launched 316_robot_cases_set17_raingarden_tidy_older.txt pid 64780 (Team week 37, C: 50.1 GB)
+Mon 10:53 starting 316_robot_cases_set17_ra (sonnet)
+Mon 10:57 finished 316_robot_cases_set17_ra
+Mon 11:49 FEEDER launched 221_fix_w1270_cdsync_decimals.txt pid 39628 (Team week 38, C: 47.8 GB)
+Mon 11:49 starting 221_fix_w1270_cdsync_dec (sonnet)
+Mon 12:08 finished 221_fix_w1270_cdsync_dec
+Mon 12:11 FEEDER launched 317_robot_cases_set18_struc_footings.txt pid 72012 (Team week 38, C: 47.7 GB)
+Mon 12:11 starting 317_robot_cases_set18_st (sonnet)
+Mon 12:14 finished 317_robot_cases_set18_st
+Mon 12:17 FEEDER launched 318_robot_cases_set19_struc_xclmtxt_sbeam.txt pid 34132 (Team week 38, C: 47.7 GB)
+Mon 12:17 starting 318_robot_cases_set19_st (sonnet)
+Mon 12:20 finished 318_robot_cases_set19_st
+Mon 12:23 FEEDER launched 319_robot_cases_set20_struc_tags_layers.txt pid 39560 (Team week 38, C: 47.6 GB)
+Mon 12:23 starting 319_robot_cases_set20_st (sonnet)
+Mon 12:30 finished 319_robot_cases_set20_st
+Mon 12:32 FEEDER launched 320_robot_cases_set21_struc_settings_schedules.txt pid 72436 (Team week 38, C: 47.5 GB)
+Mon 12:32 starting 320_robot_cases_set21_st (sonnet)
+Mon 12:37 finished 320_robot_cases_set21_st
+Mon 12:39 FEEDER launched 321_robot_cases_set22_struc_marks_publish.txt pid 1452 (Team week 38, C: 47.5 GB)
+Mon 12:39 starting 321_robot_cases_set22_st (sonnet)
+Mon 12:43 finished 321_robot_cases_set22_st
+Mon 12:46 FEEDER launched 322_robot_cases_set23_struc_ffl_sm_startup.txt pid 50380 (Team week 38, C: 47.5 GB)
+Mon 12:46 starting 322_robot_cases_set23_st (sonnet)
+Mon 12:51 finished 322_robot_cases_set23_st
+Mon 12:54 FEEDER launched 323_robot_cases_set24_struc_rc_older.txt pid 46836 (Team week 39, C: 47.5 GB)
+Mon 12:54 starting 323_robot_cases_set24_st (sonnet)
+Mon 12:58 finished 323_robot_cases_set24_st
+Mon 13:01 FEEDER launched 601_prereview_rec_record_safety.txt pid 28392 (Team week 39, C: 47.3 GB)
+Mon 13:01 starting 601_prereview_rec_record (opus)
+Mon 13:10 finished 601_prereview_rec_record
+Mon 13:12 FEEDER launched 602_prereview_uphill_cd_stack.txt pid 84252 (Team week 39, C: 47.3 GB)
+Mon 13:12 starting 602_prereview_uphill_cd_ (opus)
+Mon 13:23 finished 602_prereview_uphill_cd_
+Mon 13:25 FEEDER launched 603_prereview_chain_cd_fixes_1022m.txt pid 63260 (Team week 39, C: 47.2 GB)
+Mon 13:25 starting 603_prereview_chain_cd_f (opus)
+Mon 13:33 finished 603_prereview_chain_cd_f
+Mon 13:36 FEEDER launched 604_prereview_long_section_frame.txt pid 82772 (Team week 39, C: 47.2 GB)
+Mon 13:36 starting 604_prereview_long_secti (opus)
+Mon 13:43 finished 604_prereview_long_secti
+Mon 13:46 FEEDER launched 605_prereview_chk_checks_and_reads.txt pid 39084 (Team week 39, C: 47.1 GB)
+Mon 13:46 starting 605_prereview_chk_checks (opus)
+Mon 13:55 finished 605_prereview_chk_checks
+Mon 13:58 FEEDER launched 606_prereview_edit_native_protection.txt pid 43040 (Team week 40, C: 47.1 GB)
+Mon 13:58 starting 606_prereview_edit_nativ (opus)
+Mon 14:09 finished 606_prereview_edit_nativ
+Mon 14:11 FEEDER launched 607_prereview_detn_tank_and_pipe_material.txt pid 80204 (Team week 40, C: 47 GB)
+Mon 14:11 starting 607_prereview_detn_tank_ (opus)
+Mon 14:20 finished 607_prereview_detn_tank_
+Mon 14:23 FEEDER launched 608_prereview_older_civil_switches.txt pid 58200 (Team week 40, C: 47 GB)
+Mon 14:23 starting 608_prereview_older_civi (opus)
+Mon 14:26 FEEDER feeder started
+Mon 14:31 finished 608_prereview_older_civi
+Mon 14:34 FEEDER launched 590_rerun_robot_cases_set01_pipe_levels.txt pid 66928 (Team week 40, C: 47 GB)
+Mon 14:34 starting 590_rerun_robot_cases_se (sonnet)
+Mon 14:35 finished 590_rerun_robot_cases_se
+Mon 14:38 FEEDER launched 591_rerun_robot_cases_set02_cover_and_checks.txt pid 82204 (Team week 40, C: 46.7 GB)
+Mon 14:38 starting 591_rerun_robot_cases_se (sonnet)
+Mon 14:39 finished 591_rerun_robot_cases_se
+Mon 14:42 FEEDER launched 592_rerun_robot_cases_set03_inspector_records.txt pid 55516 (Team week 40, C: 46.7 GB)
+Mon 14:42 starting 592_rerun_robot_cases_se (sonnet)
+Mon 14:43 finished 592_rerun_robot_cases_se
+Mon 14:45 FEEDER launched 593_rerun_robot_cases_set04_cdrules_council_rows.txt pid 10460 (Team week 40, C: 46.6 GB)
+Mon 14:46 starting 593_rerun_robot_cases_se (sonnet)
+Mon 14:46 finished 593_rerun_robot_cases_se
+Mon 14:49 FEEDER launched 609_prereview_late_settings_ribbon_checks.txt pid 78912 (Team week 40, C: 46.5 GB)
+Mon 14:49 starting 609_prereview_late_setti (opus)
+Mon 15:04 finished 609_prereview_late_setti
+Mon 15:06 FEEDER launched 610_prereview_mgr_manager_switches.txt pid 26188 (Team week 41, C: 46.2 GB)
+Mon 15:06 starting 610_prereview_mgr_manage (opus)
+Mon 15:14 finished 610_prereview_mgr_manage
+Mon 15:16 FEEDER launched 611_prereview_struc_switches.txt pid 72420 (Team week 41, C: 46.2 GB)
+Mon 15:16 starting 611_prereview_struc_swit (opus)
+Mon 15:24 finished 611_prereview_struc_swit
+Mon 15:26 FEEDER launched 612_prereview_old_redo_and_sync.txt pid 34820 (Team week 41, C: 45.9 GB)
+Mon 15:26 starting 612_prereview_old_redo_a (opus)
+Mon 15:31 finished 612_prereview_old_redo_a
+Mon 15:34 FEEDER launched 613_prereview_ps1_pit_schedule_numbers.txt pid 69592 (Team week 41, C: 45.7 GB)
+Mon 15:34 starting 613_prereview_ps1_pit_sc (opus)
+Mon 15:42 finished 613_prereview_ps1_pit_sc
+Mon 15:45 FEEDER launched 614_prereview_ps2_pit_schedule_rows.txt pid 84408 (Team week 41, C: 45.4 GB)
+Mon 15:45 starting 614_prereview_ps2_pit_sc (opus)
+Mon 15:51 finished 614_prereview_ps2_pit_sc
+Mon 15:54 FEEDER launched 615_prereview_ps3_pit_schedule_merge_and_bridge.txt pid 69716 (Team week 41, C: 45 GB)
+Mon 15:54 starting 615_prereview_ps3_pit_sc (opus)
+Mon 16:05 finished 615_prereview_ps3_pit_sc
+Mon 16:07 FEEDER launched 700_cards_import_survey.txt pid 77768 (Team week 42, C: 44.9 GB)
+Mon 16:07 starting 700_cards_import_survey (sonnet)
+Mon 16:12 finished 700_cards_import_survey
+Mon 16:15 FEEDER launched 701_alreadydone_check01.txt pid 30768 (Team week 42, C: 47 GB)
+Mon 16:15 starting 701_alreadydone_check01 (sonnet)
+Mon 16:25 finished 701_alreadydone_check01
+Mon 16:27 FEEDER launched 222_fix_w1271_editpipe_caption.txt pid 60700 (Team week 42, C: 46.8 GB)
+Mon 16:27 starting 222_fix_w1271_editpipe_c (sonnet)
+Mon 16:49 finished 222_fix_w1271_editpipe_c
+Mon 16:51 FEEDER launched 701_cards_pit_schedule.txt pid 79672 (Team week 42, C: 46.2 GB)
+Mon 16:51 starting 701_cards_pit_schedule (sonnet)
+Mon 16:55 finished 701_cards_pit_schedule
+Mon 16:57 FEEDER launched 223_fix_w1092d_shallow_fall_wording.txt pid 66404 (Team week 42, C: 46.2 GB)
+Mon 16:57 starting 223_fix_w1092d_shallow_f (sonnet)
+Mon 17:05 finished 223_fix_w1092d_shallow_f
+Mon 17:07 FEEDER launched 702_alreadydone_check02.txt pid 5948 (Team week 42, C: 45.6 GB)
+Mon 17:07 starting 702_alreadydone_check02 (sonnet)
+Mon 17:09 finished 702_alreadydone_check02
+Mon 17:12 FEEDER launched 702_cards_labels.txt pid 14600 (Team week 42, C: 45.4 GB)
+Mon 17:12 starting 702_cards_labels (sonnet)
+Mon 17:17 finished 702_cards_labels
+Mon 17:20 FEEDER launched 703_alreadydone_check03.txt pid 64064 (Team week 42, C: 45.2 GB)
+Mon 17:20 starting 703_alreadydone_check03 (sonnet)
+Mon 17:24 finished 703_alreadydone_check03
+Mon 17:27 FEEDER launched 703_cards_new_pipe.txt pid 61200 (Team week 42, C: 45 GB)
+Mon 17:27 starting 703_cards_new_pipe (sonnet)
+Mon 17:30 finished 703_cards_new_pipe
+Mon 17:33 FEEDER launched 704_alreadydone_check04.txt pid 76224 (Team week 43, C: 44.8 GB)
+Mon 17:33 starting 704_alreadydone_check04 (sonnet)
+Mon 17:39 finished 704_alreadydone_check04
+Mon 17:42 FEEDER launched 704_cards_edit_pipe.txt pid 13340 (Team week 43, C: 44.7 GB)
+Mon 17:42 starting 704_cards_edit_pipe (sonnet)
+Mon 17:48 finished 704_cards_edit_pipe
+Mon 17:51 FEEDER launched 705_alreadydone_check05.txt pid 50184 (Team week 43, C: 44.4 GB)
+Mon 17:51 starting 705_alreadydone_check05 (sonnet)
+Mon 17:53 finished 705_alreadydone_check05
+Mon 17:56 FEEDER launched 705_cards_inspector_checks.txt pid 51104 (Team week 43, C: 44.2 GB)
+Mon 17:56 starting 705_cards_inspector_chec (sonnet)
+Mon 18:02 finished 705_cards_inspector_chec
+Mon 18:04 FEEDER launched 706_alreadydone_check06.txt pid 56428 (Team week 43, C: 44 GB)
+Mon 18:05 starting 706_alreadydone_check06 (sonnet)
+Mon 18:09 finished 706_alreadydone_check06
+Mon 18:11 FEEDER launched 706_cards_cover_rules.txt pid 76584 (Team week 43, C: 43.8 GB)
+Mon 18:11 starting 706_cards_cover_rules (sonnet)
+Mon 18:16 finished 706_cards_cover_rules
+Mon 18:20 FEEDER launched 707_alreadydone_check07.txt pid 26628 (Team week 43, C: 43.3 GB)
+Mon 18:20 starting 707_alreadydone_check07 (sonnet)
+Mon 18:26 finished 707_alreadydone_check07
+Mon 18:28 FEEDER launched 707_cards_cddesign.txt pid 71392 (Team week 43, C: 43.6 GB)
+Mon 18:28 starting 707_cards_cddesign (sonnet)
+Mon 18:33 finished 707_cards_cddesign
+Mon 18:36 FEEDER launched 708_alreadydone_check08.txt pid 79224 (Team week 43, C: 43.5 GB)
+Mon 18:36 starting 708_alreadydone_check08 (sonnet)
+Mon 18:40 finished 708_alreadydone_check08
+Mon 18:43 FEEDER launched 708_cards_cdcalc_cdwt.txt pid 71292 (Team week 43, C: 42.6 GB)
+Mon 18:43 starting 708_cards_cdcalc_cdwt (sonnet)
+Mon 18:48 finished 708_cards_cdcalc_cdwt
+Mon 18:51 FEEDER launched 709_alreadydone_check09.txt pid 78092 (Team week 43, C: 43.3 GB)
+Mon 18:51 starting 709_alreadydone_check09 (sonnet)
+Mon 18:56 finished 709_alreadydone_check09
+Mon 18:59 FEEDER launched 224_fix_w1092c_designwarn_colour.txt pid 83820 (Team week 44, C: 43.1 GB)
+Mon 18:59 starting 224_fix_w1092c_designwar (sonnet)
+Mon 19:14 finished 224_fix_w1092c_designwar
+Mon 19:16 FEEDER launched 709_cards_longsection_misc.txt pid 72760 (Team week 44, C: 42.5 GB)
+Mon 19:16 starting 709_cards_longsection_mi (sonnet)
+Mon 19:21 finished 709_cards_longsection_mi
+Mon 19:23 FEEDER launched 225_robot_cases_bug1195_ucs_import_updates.txt pid 59108 (Team week 44, C: 42.3 GB)
+Mon 19:23 starting 225_robot_cases_bug1195_ (sonnet)
+Mon 19:34 finished 225_robot_cases_bug1195_
+Mon 19:36 FEEDER launched 710_alreadydone_check10.txt pid 4864 (Team week 44, C: 42.2 GB)
+Mon 19:36 starting 710_alreadydone_check10 (sonnet)
+Mon 19:38 finished 710_alreadydone_check10
+Mon 19:41 FEEDER launched 710_cards_civil_startup_help.txt pid 80788 (Team week 44, C: 42.1 GB)
+Mon 19:41 starting 710_cards_civil_startup_ (sonnet)
+Mon 19:45 finished 710_cards_civil_startup_
+Mon 19:48 FEEDER launched 711_cards_manager.txt pid 71424 (Team week 44, C: 42.1 GB)
+Mon 19:48 starting 711_cards_manager (sonnet)
+Mon 19:51 finished 711_cards_manager
+Mon 19:54 FEEDER launched 712_cards_struc_footings_schedules.txt pid 76524 (Team week 44, C: 42.1 GB)
+Mon 19:54 starting 712_cards_struc_footings (sonnet)
+Mon 19:57 finished 712_cards_struc_footings
+Mon 20:00 FEEDER launched 713_cards_struc_tags_layouts.txt pid 79900 (Team week 44, C: 42.1 GB)
+Mon 20:00 starting 713_cards_struc_tags_lay (sonnet)
+Mon 20:03 finished 713_cards_struc_tags_lay
+Mon 20:05 FEEDER launched 714_cards_struc_sheets_markup.txt pid 82648 (Team week 44, C: 42.1 GB)
+Mon 20:05 starting 714_cards_struc_sheets_m (sonnet)
+Mon 20:10 finished 714_cards_struc_sheets_m
+Mon 20:12 FEEDER launched 990_audit_merge.txt pid 60800 (Team week 44, C: 41.8 GB)
+Mon 20:12 starting 990_audit_merge (sonnet)
+Mon 20:14 finished 990_audit_merge
+Mon 20:16 FEEDER queue empty
+Mon 20:22 FEEDER queue empty
+Mon 20:28 FEEDER launched 226_robot_cases_fixes_1989_1993.txt pid 48536 (Team week 45, C: 41.4 GB)
+Mon 20:28 starting 226_robot_cases_fixes_19 (sonnet)
+Mon 20:34 finished 226_robot_cases_fixes_19
+Mon 20:36 FEEDER launched 227_OPUS_PREREVIEW_1989_1993_02NOV.md.txt pid 35164 (Team week 45, C: 41.1 GB)
+Mon 20:36 starting 227_OPUS_PREREVIEW_1989_ (opus)
+Mon 20:42 finished 227_OPUS_PREREVIEW_1989_
+Mon 20:44 FEEDER launched 228_ROBOT_CASE_DRAFTS_PRS_1982_1988_02NOV.md.txt pid 12156 (Team week 45, C: 40.9 GB)
+Mon 20:44 starting 228_ROBOT_CASE_DRAFTS_PR (sonnet)
+Mon 20:51 finished 228_ROBOT_CASE_DRAFTS_PR
+Mon 20:54 FEEDER launched 229_LOOKBRIEFS_B1_PART1_02NOV.md.txt pid 85104 (Team week 45, C: 40.3 GB)
+Mon 20:54 starting 229_LOOKBRIEFS_B1_PART1_ (sonnet)
+Mon 20:58 finished 229_LOOKBRIEFS_B1_PART1_
+Mon 21:01 FEEDER launched 230_LOOKBRIEFS_B1_PART2_02NOV.md.txt pid 82568 (Team week 45, C: 39.9 GB)
+Mon 21:01 starting 230_LOOKBRIEFS_B1_PART2_ (sonnet)
+Mon 21:04 finished 230_LOOKBRIEFS_B1_PART2_
+Mon 21:06 FEEDER launched 231_LOOKBRIEFS_B1_PART3_02NOV.md.txt pid 67200 (Team week 45, C: 39.9 GB)
+Mon 21:06 starting 231_LOOKBRIEFS_B1_PART3_ (sonnet)
+Mon 21:08 finished 231_LOOKBRIEFS_B1_PART3_
+Mon 21:11 FEEDER launched 232_LOOKBRIEFS_FIXES_1989_1993_02NOV.md.txt pid 62396 (Team week 45, C: 39.9 GB)
+Mon 21:11 starting 232_LOOKBRIEFS_FIXES_198 (sonnet)
+Mon 21:16 finished 232_LOOKBRIEFS_FIXES_198
+Mon 21:18 FEEDER launched 233_CARD_DRAFTS_B1_COMMANDS_02NOV.md.txt pid 31592 (Team week 45, C: 39.5 GB)
+Mon 21:18 starting 233_CARD_DRAFTS_B1_COMMA (sonnet)
+Mon 21:19 finished 233_CARD_DRAFTS_B1_COMMA
+Mon 21:22 FEEDER launched 234_CARD_DRAFTS_B2_COMMANDS_02NOV.md.txt pid 54044 (Team week 45, C: 39.3 GB)
+Mon 21:22 starting 234_CARD_DRAFTS_B2_COMMA (sonnet)
+Mon 21:24 finished 234_CARD_DRAFTS_B2_COMMA
+Mon 21:27 FEEDER launched 235_OPUS_PREREVIEW_UNREVIEWED_GROUP_02NOV.md.txt pid 73772 (Team week 45, C: 39.3 GB)
+Mon 21:27 starting 235_OPUS_PREREVIEW_UNREV (opus)
+Mon 21:47 finished 235_OPUS_PREREVIEW_UNREV
+Mon 21:50 FEEDER launched 236_WEAKCHECK_REPAIRS_OPEN_02NOV.md.txt pid 67728 (Team week 46, C: 37.9 GB)
+Mon 21:50 starting 236_WEAKCHECK_REPAIRS_OP (sonnet)
+Mon 21:57 finished 236_WEAKCHECK_REPAIRS_OP
+Mon 22:00 FEEDER launched 237_CARPARK_CLOSE_AS_DONE_CHECK_02NOV.md.txt pid 85600 (Team week 46, C: 37.8 GB)
+Mon 22:00 starting 237_CARPARK_CLOSE_AS_DON (sonnet)
+Mon 22:01 finished 237_CARPARK_CLOSE_AS_DON
+Mon 22:04 FEEDER launched 238_OPEN_QUESTIONS_FOR_TIM_BATCH_02NOV.md.txt pid 27476 (Team week 46, C: 37.5 GB)
+Mon 22:04 starting 238_OPEN_QUESTIONS_FOR_T (sonnet)
+Mon 22:08 finished 238_OPEN_QUESTIONS_FOR_T
+Mon 22:11 FEEDER launched 239_AUDIT_REMAINING_COUNT_02NOV.md.txt pid 36540 (Team week 46, C: 37.4 GB)
+Mon 22:11 starting 239_AUDIT_REMAINING_COUN (sonnet)
+Mon 22:18 finished 239_AUDIT_REMAINING_COUN
+Mon 22:20 FEEDER queue empty
+Mon 22:26 FEEDER launched 240_fix_w1094.txt pid 84308 (Team week 46, C: 36.9 GB)
+Mon 22:26 starting 240_fix_w1094 (sonnet)
+Mon 22:31 finished 240_fix_w1094
+Mon 22:33 FEEDER launched 241_fix_w1272.txt pid 48872 (Team week 46, C: 36.5 GB)
+Mon 22:33 starting 241_fix_w1272 (sonnet)
+Mon 23:41 finished 241_fix_w1272
+Mon 23:44 FEEDER launched 242_fix_w1273.txt pid 12152 (Team week 46, C: 35.1 GB)
+Mon 23:44 starting 242_fix_w1273 (sonnet)
+Tue 00:16 finished 242_fix_w1273
+Tue 00:18 FEEDER launched 243_fix_w1270b.txt pid 55044 (Team week 46, C: 35.1 GB)
+Tue 00:18 starting 243_fix_w1270b (sonnet)
+Tue 00:21 finished 243_fix_w1270b
+Tue 00:23 FEEDER launched 244_ROBOT_CASE_DRAFTS_W1094_1272_1273_02NOV.md.txt pid 27120 (Team week 47, C: 35.1 GB)
+Tue 00:23 starting 244_ROBOT_CASE_DRAFTS_W1 (sonnet)
+Tue 00:26 finished 244_ROBOT_CASE_DRAFTS_W1
+Tue 00:28 FEEDER launched 245_OPUS_PREREVIEW_W1094_1272_1273_02NOV.md.txt pid 82872 (Team week 47, C: 35.1 GB)
+Tue 00:28 starting 245_OPUS_PREREVIEW_W1094 (opus)
+Tue 00:34 finished 245_OPUS_PREREVIEW_W1094
+Tue 00:36 FEEDER launched 246_LOOKBRIEFS_W1094_1272_1273_02NOV.md.txt pid 31028 (Team week 47, C: 35 GB)
+Tue 00:36 starting 246_LOOKBRIEFS_W1094_127 (sonnet)
+Tue 00:38 finished 246_LOOKBRIEFS_W1094_127
+Tue 00:41 FEEDER launched 247_fix_w857.txt pid 80876 (Team week 47, C: 34.8 GB)
+Tue 00:41 starting 247_fix_w857 (sonnet)
+Tue 00:42 finished 247_fix_w857
+Tue 00:45 FEEDER queue empty
+Tue 00:51 FEEDER queue empty
+Tue 04:14 FEEDER launched 300_fix_w1052.txt pid 81092 (Team week 47, C: 27 GB)
+Tue 04:14 starting 300_fix_w1052 (sonnet)
+Tue 04:50 finished 300_fix_w1052
+Tue 04:53 FEEDER launched 301_fix_w1053.txt pid 60272 (Team week 48, C: 29.1 GB)
+Tue 04:53 starting 301_fix_w1053 (sonnet)
+Tue 05:13 finished 301_fix_w1053
+Tue 05:15 FEEDER launched 302_fix_w1042.txt pid 27728 (Team week 48, C: 28.9 GB)
+Tue 05:15 starting 302_fix_w1042 (sonnet)
+Tue 05:30 finished 302_fix_w1042
+Tue 05:33 FEEDER launched 303_fix_w027.txt pid 51516 (Team week 48, C: 28.9 GB)
+Tue 05:33 starting 303_fix_w027 (sonnet)
+Tue 05:53 finished 303_fix_w027
+Tue 05:55 FEEDER launched 304_fix_w1173.txt pid 79936 (Team week 48, C: 28.6 GB)
+Tue 05:55 starting 304_fix_w1173 (sonnet)
+Tue 05:57 finished 304_fix_w1173
+Tue 05:59 FEEDER launched 305_fix_w1166.txt pid 81896 (Team week 48, C: 28.6 GB)
+Tue 05:59 starting 305_fix_w1166 (sonnet)
+Tue 06:12 finished 305_fix_w1166
+Tue 06:14 FEEDER launched 306_fix_w900.txt pid 64460 (Team week 48, C: 28.4 GB)
+Tue 06:14 starting 306_fix_w900 (sonnet)
+Tue 06:25 finished 306_fix_w900
+Tue 06:27 FEEDER launched 307_fix_w396.txt pid 83716 (Team week 48, C: 27.8 GB)
+Tue 06:27 starting 307_fix_w396 (sonnet)
+Tue 06:29 finished 307_fix_w396
+Tue 06:31 FEEDER launched 308_CARD_DRAFT_BUG1105_BUG213_02NOV.md.txt pid 86728 (Team week 48, C: 27.7 GB)
+Tue 06:31 starting 308_CARD_DRAFT_BUG1105_B (sonnet)
+Tue 06:34 finished 308_CARD_DRAFT_BUG1105_B
+Tue 06:36 FEEDER launched 309_ROBOT_CASE_DRAFTS_W1052_W900_02NOV.md.txt pid 50952 (Team week 48, C: 27.5 GB)
+Tue 06:36 starting 309_ROBOT_CASE_DRAFTS_W1 (sonnet)
+Tue 06:42 finished 309_ROBOT_CASE_DRAFTS_W1
+Tue 06:45 FEEDER launched 310_OPUS_PREREVIEW_W1052_W900_02NOV.md.txt pid 67628 (Team week 49, C: 46.7 GB)
+Tue 06:45 starting 310_OPUS_PREREVIEW_W1052 (opus)
+Tue 06:53 finished 310_OPUS_PREREVIEW_W1052
+Tue 06:56 FEEDER launched 311_LOOKBRIEFS_W1052_W900_02NOV.md.txt pid 1304 (Team week 49, C: 46.2 GB)
+Tue 06:56 starting 311_LOOKBRIEFS_W1052_W90 (sonnet)
+Tue 07:00 finished 311_LOOKBRIEFS_W1052_W90
+Tue 07:03 FEEDER launched 312_ROBOT_CASE_DRAFTS_PR1995_1998_03NOV.md.txt pid 79224 (Team week 49, C: 45.9 GB)
+Tue 07:03 starting 312_ROBOT_CASE_DRAFTS_PR (sonnet)
+Tue 07:10 finished 312_ROBOT_CASE_DRAFTS_PR
+Tue 07:13 FEEDER launched 313_LOOKBRIEFS_PR1995_1999_03NOV.md.txt pid 73496 (Team week 49, C: 45.1 GB)
+Tue 07:13 starting 313_LOOKBRIEFS_PR1995_19 (sonnet)
+Tue 07:18 finished 313_LOOKBRIEFS_PR1995_19
+Tue 07:21 FEEDER launched 314_PREREVIEW_PR1995_1999_03NOV.md.txt pid 81160 (Team week 49, C: 44.9 GB)
+Tue 07:21 starting 314_PREREVIEW_PR1995_199 (opus)
+Tue 07:29 finished 314_PREREVIEW_PR1995_199
+Tue 07:32 FEEDER launched 315_CARPARK_NOTES_DRAFT_300_307_03NOV.md.txt pid 72416 (Team week 49, C: 44.4 GB)
+Tue 07:32 starting 315_CARPARK_NOTES_DRAFT_ (sonnet)
+Tue 07:35 finished 315_CARPARK_NOTES_DRAFT_
+Tue 07:37 FEEDER queue empty
+Tue 07:43 FEEDER queue empty
+Tue 07:49 FEEDER queue empty
+Tue 07:55 FEEDER queue empty
+Tue 08:01 FEEDER queue empty
+Tue 08:07 FEEDER queue empty
+Tue 08:13 FEEDER queue empty
+Tue 08:19 FEEDER launched 316_fix_w806.txt pid 45868 (Team week 49, C: 68.3 GB)
+Tue 08:19 starting 316_fix_w806 (sonnet)
+Tue 08:29 finished 316_fix_w806
+Tue 08:31 FEEDER launched 317_fix_w658.txt pid 68188 (Team week 49, C: 68.1 GB)
+Tue 08:31 starting 317_fix_w658 (sonnet)
+Tue 08:34 finished 317_fix_w658
+Tue 08:36 FEEDER launched 318_fix_w235.txt pid 77288 (Team week 49, C: 68.1 GB)
+Tue 08:36 starting 318_fix_w235 (sonnet)
+Tue 08:37 finished 318_fix_w235
+Tue 08:40 FEEDER launched 319_fix_w648.txt pid 83424 (Team week 50, C: 68.1 GB)
+Tue 08:40 starting 319_fix_w648 (sonnet)
+Tue 08:51 finished 319_fix_w648
+Tue 08:54 FEEDER launched 320_fix_w879.txt pid 75828 (Team week 50, C: 67.8 GB)
+Tue 08:54 starting 320_fix_w879 (sonnet)
+Tue 09:05 finished 320_fix_w879
+Tue 09:08 FEEDER launched 321_fix_w958.txt pid 80404 (Team week 50, C: 67.6 GB)
+Tue 09:08 starting 321_fix_w958 (sonnet)
+Tue 09:20 finished 321_fix_w958
+Tue 09:23 FEEDER launched 322_fix_w1018.txt pid 16596 (Team week 50, C: 67.4 GB)
+Tue 09:23 starting 322_fix_w1018 (sonnet)
+Tue 09:32 finished 322_fix_w1018
+Tue 09:35 FEEDER launched 323_fix_w1046.txt pid 54828 (Team week 50, C: 67.1 GB)
+Tue 09:35 starting 323_fix_w1046 (sonnet)
+Tue 09:43 finished 323_fix_w1046
+Tue 09:46 FEEDER launched 324_ROBOT_CASE_DRAFTS_FIXES_316_323_03NOV.md.txt pid 66668 (Team week 50, C: 67.1 GB)
+Tue 09:46 starting 324_ROBOT_CASE_DRAFTS_FI (sonnet)
+Tue 09:51 finished 324_ROBOT_CASE_DRAFTS_FI
+Tue 09:54 FEEDER launched 325_LOOKBRIEFS_FIXES_316_323_03NOV.md.txt pid 47920 (Team week 50, C: 67.1 GB)
+Tue 09:54 starting 325_LOOKBRIEFS_FIXES_316 (sonnet)
+Tue 09:59 finished 325_LOOKBRIEFS_FIXES_316
+Tue 10:01 FEEDER launched 326_PREREVIEW_FIXES_316_323_03NOV.md.txt pid 86820 (Team week 50, C: 67.1 GB)
+Tue 10:01 starting 326_PREREVIEW_FIXES_316_ (opus)
+Tue 10:07 finished 326_PREREVIEW_FIXES_316_
+Tue 10:10 FEEDER launched 327_CARD_DRAFT_BUG396_DOUBLECLICK_03NOV.md.txt pid 87808 (Team week 50, C: 67.1 GB)
+Tue 10:10 starting 327_CARD_DRAFT_BUG396_DO (sonnet)
+Tue 10:13 finished 327_CARD_DRAFT_BUG396_DO
+Tue 10:15 FEEDER launched 328_CARPARK_CLOSE_AS_DONE_CHECK_BATCH2_03NOV.md.txt pid 79180 (Team week 51, C: 67.1 GB)
+Tue 10:15 starting 328_CARPARK_CLOSE_AS_DON (sonnet)
+Tue 10:18 finished 328_CARPARK_CLOSE_AS_DON
+Tue 10:20 FEEDER launched 329_OPEN_ITEMS_FOR_CODEX_WINDOW_03NOV.md.txt pid 69044 (Team week 51, C: 67.1 GB)
+Tue 10:20 starting 329_OPEN_ITEMS_FOR_CODEX (sonnet)
+Tue 10:28 finished 329_OPEN_ITEMS_FOR_CODEX
+Tue 10:30 FEEDER queue empty
+Tue 10:36 FEEDER queue empty
+Tue 10:42 FEEDER queue empty
+Tue 10:48 FEEDER queue empty
+Tue 10:54 FEEDER launched 330_fix_w882.txt pid 82796 (Team week 51, C: 66.8 GB)
+Tue 10:54 starting 330_fix_w882 (sonnet)
+Tue 10:55 finished 330_fix_w882

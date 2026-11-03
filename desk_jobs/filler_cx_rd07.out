@@ -1,0 +1,8 @@
+== cx_rd07 (usage 43.0% -> 46.0%): 1. **DONE — 3 new MEDIUM findings; 0 HIGH, 0 LOW.** Most important: rebated beams can place overlapping reinforcement while the preview shows separated bars.
+
+2. **Report:** [CODEX_AUDIT2_RD07_23OCT.md](C:/CE_PLAN/areas/CODEX_AUDIT2_RD07_23OCT.md). Includes exact test steps and smallest fixes. Known issues excluded; full AS 3600 numerical compliance remains unverified.
+
+---
+
+1. **Saved and pushed:** `104c3fea`. Leak scan passed; no commits ahead. Temporary worktree removed.
+2. **Read-only audit:** no code changes, builds, tests or AutoCAD use. Findings verified by reading only.

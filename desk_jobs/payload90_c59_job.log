@@ -1,0 +1,10 @@
+**Candidate is built and verified, not installed.** It is at `C:\ce_rc_scratch\c1055` (Civil 3.0.69, Manager 1.1.69).
+
+1. **Verify:** Civil `verified 828, bad 0, extra 0`. Manager `verified 75, bad 0, extra 0`. No files added or removed against installed.
+2. **Branch head:** `375a4ebc` on `claude/rel-20261022l`, a 4-file version commit on the signed `31d6c697`.
+3. **Tests:** Civil 41 of 41, Manager 61 of 61.
+4. **Strings:** 150 of 150 as expected. `TidyLeaderOut` was already installed, so it's a control, not a discriminator.
+5. **Settings hashes:** identical before and after. Structural `CS_Settings.json` had already changed since last night's job.
+6. **New switch default:** `commandOutcomeLines` defaults ON.
+
+The full report is `C:\Lisp Files\_TEST_COPIES_20260923\PAYLOAD_C1055_REPORT.md`.

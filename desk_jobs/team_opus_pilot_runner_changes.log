@@ -1,0 +1,45 @@
+**FOR TIM**
+
+1. **What's done.** I've designed the four small robot changes that unlock 8 more pilot-critical bugs. They're tested on copies, not installed. Your live robot files are unchanged, and I never touched AutoCAD.
+   Example: the robot will be able to select two 300 mm pipes, run CDEDIT, tick "Change Diameter", type 375, press "Apply to Selected", and check both labels say 375 and each kept its own material (BUG-1049).
+2. **What the robot still can't press.** Send, Export, Save as, Delete, every "Use recent ..." button, Inspect Drawing, "Carry downstream", and anything in a CE Manager window. The only new presses are:
+   - Save in Edit Pit
+   - "Apply to Selected" and Cancel in Edit 2 Pipes
+   - Open in the LandXML file chooser
+3. **Codex needs to make four test drawings, once, on copies.** The recipes are in the report:
+   - **Pasted network:** pasted into a new drawing and saved without CDREPAIR.
+   - **Damaged pit:** one pit with a damaged link record. Plain AutoCAD commands can't do this, so Codex types one LISP line on a copy.
+   - **Survey Xref:** turned 90 degrees, with a nested level block. Codex must approve the survey itself, because approval happens in a CE Manager window the robot may never press.
+   - **Stage and sheet:** a stage drawing with a placed Pit Schedule, plus a sheet that Xrefs it.
+4. **What the robot can prove afterwards:**
+   - **On its own:** 6 of the 8 (BUG-1196, 1049, 1188, 540, 1150, 1145).
+   - **BUG-1142:** needs the reviewer to accept a weaker "must fail" version of the test.
+   - **BUG-1190:** needs Codex for the survey approval step.
+   - It takes about 4 to 5 working days.
+5. **Nothing for you to do today.** The change needs its own review first. It goes in after 5:30 pm in one install, together with the earlier "More..." change, because both edit the same lines.
+6. **One thing for later, no action now.** CE's pit size suggestion still decides step irons from a fixed size step, not from your Settings step-iron depth (900 mm). I've noted it for the BUG-540 card.
+
+---
+
+**Details**
+
+1. **The changes.** The diff is `C:\ce-fx\pilot_runner\pilot_runner.diff`: 48 lines added, 6 changed. Two of the four changes needed a press-list entry (BUG-1196 and BUG-1049). The LandXML file chooser and the Pit Schedule remarks only needed new robot steps.
+2. **Tests, offline only.**
+   - 224 of 224 checks pass.
+   - All 184 existing robot cases pass the format check with identical output before and after.
+   - The combined set (this change plus the "More...") passes both my 224 checks and the "More..." job's own 73.
+3. **The plan list was wrong in four places:**
+   - **Edit 2 Pipes:** the robot can already read this window.
+   - **Edit Pit Save:** the driver already allows "Save pit and close"; only the robot's own format check blocks it.
+   - **File chooser:** the driver already has a step for typing a path into it.
+   - **Remarks:** they sit behind a "Lid and remarks" column-view button. The depth figure is under its cell, which the old reader skipped.
+4. **Report:** `C:\CE_PLAN\areas\PILOT_RUNNER_CHANGES_AND_DRAWINGS_29OCT.md`, pushed. The leak scan was clean and nothing is left un-pushed.
+
+**What I did NOT verify**
+1. Nothing was seen in AutoCAD: no window, button, tick, file chooser, drawn schedule or label.
+2. The real on-screen names of the new buttons and ticks come from reading the source. The one exception is Edit Pipe's save name, which comes from real runs.
+3. I haven't confirmed the robot's typing step finds the LandXML chooser.
+4. The drawing recipes, the LISP line and the LandXML test file have never been run or opened.
+5. The robot's own self-tests were not run, because your AutoCAD was open.
+
+**Summary:** I've written and tested on copies, but not installed, four robot changes for 8 pilot-critical bugs: Edit Pit Save, the Edit 2 Pipes ticks and Apply, the LandXML file-chooser step, and two new reading steps. Offline 224/224 checks pass, refused buttons stay refused, and the existing cases are unchanged; a combined set with "More..." also passes. The four drawing recipes are ready for Codex. Afterwards the robot proves 6 alone, BUG-1142 with the reviewer's agreement, and BUG-1190 with Codex. Allow about 4 to 5 days. Nothing ran in AutoCAD.

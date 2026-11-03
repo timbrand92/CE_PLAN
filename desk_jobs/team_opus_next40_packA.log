@@ -1,0 +1,8 @@
+I've drafted 11 robot cases (N45 to N54, plus an extra N52b) and 10 failing twins for top-40 items 5 to 15. All 21 files passed the offline check, but none has been run in AutoCAD yet.
+
+1. **Ready for the robot (8 items):** new and old command names, three pipes with three labels, no "Are you sure?" after a preview, trench drain, downpipe and overflow carrying on, a pipe joining a downpipe, and the AG drain.
+2. **Job timer (N47) only half provable:** the robot can show a drawing outside a job folder isn't timed. Proving a real job drawing starts its timer needs a Codex look or a robot change.
+3. **Enter repeats CD (N49) has one untried step:** pressing a bare Enter. If that step doesn't work, it needs a Codex look too.
+4. **Written to fail today:** in the installed build, CDRG and CDFW stop after one raingarden or floor waste. CDTG and CDAGI also stop after one. No CS command names exist yet.
+
+The report is pushed to C:\CE_PLAN. That push also sent another chat's unpushed BUG-1255 commit, which was waiting on the same branch.

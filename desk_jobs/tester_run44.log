@@ -1,0 +1,20 @@
+**FOR TIM**
+
+Run 44 scored 10 pass, 0 fail, 1 blocked and 1 unproven, and nothing needs doing in AutoCAD. The headline: typing CE_VERSION on the new build now opens a window called "About CE Suite", where run 43 got `Unknown command`.
+
+1. **Blocked: I could not read that window.** The test driver can't read or close it, so I couldn't see its Civil, Structural and Manager lines. The status bar and CEHEALTH both show Civil 3.0.67, Manager 1.1.67 and Structural 1.0.119. The window is modal, so AutoCAD refuses typing until someone closes it. I ended that session with `quit` and ran the rest in a second session. BUG-852 stays open until Codex or a driver update reads the window.
+2. **Unproven: the right-click fix (BUG-416).** It can't be driven, as briefed.
+3. **Pass: all the regressions.** The Tidy labels preview names pipe P8 and the 275 mm move. Recover Inverts totals, the CDTWL 150 mm warning and the Edit Pipe cascade with undo and redo all passed. So did the Pit Schedule after CDSYNC (only the 95 to 96 issue count changed), quick edits opening no window, CSREOBAR with undo and redo, and CEMEMBER still being `Unknown command`. Start-up logs show 0 errors.
+4. **My mistake: I deleted two Structural diagnostic logs by accident.** A helper I named `Rd` clashed with PowerShell's built-in `rd` delete alias. It removed `ce_struc_suite.log` (3.2 MB) and `native_grip_2027.log` from `%APPDATA%\CE_STRUC_SUITE\logs`. They can't be recovered. No setting, drawing or source file was touched.
+5. **For the desk:**
+   - **Start Pipe timeout:** it hit the driver's 30 s timeout again, so it needs adding to the slow-press list.
+   - **About window:** it needs a read-only entry in the allow-list.
+   - **Old Manager still installed:** CEHEALTH still warns that Manager 1.0.0 is installed in ProgramData next to the current one, so the version window may show a conflict.
+   - **First quit:** it timed out for 248 s only in the session where the About window was stuck open. It worked in 5 s in the other session.
+6. **Report:** `C:\CE_PLAN\areas\release-v3-colleagues-CLAUDE_DRIVER_RUN44_V2_2026-10-21.md`, committed and pushed (6bd26521).
+7. **Copies for the desk to delete in `C:\ce_rc_drv`:** `CLD441_B1.dwg`, `CLD441_B1_PRE_C7_20261021_063930.dwg`, `CLD441_S1.dwg`, `CLD442_B1.dwg`, `CLD442_B1_PRE_C7_20261021_064649.dwg` and `CLD442_S1.dwg`.
+
+All four real settings files hash the same as at the start. Driver hashes (`120EE24D15B2`, `5B542F2145F4`) and the three installed versions were as required, both before and after.
+
+AUTOCAD CLOSED
+SETTINGS RESTORED

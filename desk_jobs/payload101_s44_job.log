@@ -1,0 +1,9 @@
+**Candidate built and verified, but the pin tests did not run.** C: stayed under the 12 GB line (11.4 to 11.6 GB) and a robot AutoCAD was open, so I stopped before the test build.
+
+- **Candidate:** `C:\ce_rc_scratch\s1042\CE_STRUC_SUITE.bundle`, verified 2007, bad 0, extra 0. Added 0, removed 0 against installed.
+- **Branch head:** `3a3caac5`, version commit on `claude/rel-20261025s` (3 files, +3/−3).
+- **Strings:** 180 of 180 rows as expected. Seven PRs have no compiled string and are proved by git diff instead.
+- **Odd:** the literal `Bracing.UnknownWhenTypesDiffer` is absent from both builds; I proved it by the property name `UnknownWhenTypesDiffer`.
+- **Settings:** Tim's settings files and installed DLLs are identical before and after.
+
+Report: `C:\Lisp Files\_TEST_COPIES_20260923\PAYLOAD_S1042_REPORT.md`.

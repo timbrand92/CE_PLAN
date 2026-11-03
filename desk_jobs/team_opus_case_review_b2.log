@@ -1,0 +1,35 @@
+## FOR TIM
+
+1. **My mistakes:** none that cost anything. One look-up used a tool this PC doesn't have, so I ran it another way.
+2. **Result:** all 8 new robot checks passed twice on the installed Civil 3.0.83, and each deliberately wrong copy failed for the right reason. None found a fault in CE.
+3. **Ready, whole tool (4):**
+   1. **COPY of a pit:** the copy becomes P8 and the original still says P3.
+   2. **Undo names on your own switches:** U says CD, PIT or MOVE, whichever you just did.
+   3. **Undo names with the switches on:** the same, after [Undo] takes back a point on the pipe route.
+   4. **EXPLODE a pit with no pipes:** the plain sentence with no pipe part, and U brings the pit back.
+4. **Ready for part only (4):**
+   1. **CDRENUMBER:** everything is checked through the Pit Schedule, but the pit labels on the plan are never read one by one.
+   2. **Pit catch:** 50 mm outside joins the pit and 150 mm stays free, but the exact 100 mm line isn't tested.
+   3. **Short pipe leader:** one leader and no squeezed label. What the leader says and where its arrow lands need a Codex look.
+   4. **CDFEEDBACK:** Cancel prints one "CDFEEDBACK cancelled." line. Send report was never pressed.
+5. **You can now write "FIXED (Claude-accepted, Civil 3.0.83, 28 Oct 2026)" for:**
+   1. **D15 COPY** (a pit copied on its own).
+   2. **D19 Undo names.**
+   3. **D16 EXPLODE**, which now also covers the no-pipe wording.
+   4. **For part only:** D20, D02, D11 and D29.
+   5. **Count:** the everyday-tools figure should go up by two (D15 and D19). I didn't recount it myself.
+6. **The robot's two odd findings:**
+   1. **The window that blocked the pit-catch check's first attempt is probably not "Grade mismatch".** The code only asks that question when the grade is more than 10% off; here it was 0.5%. So the robot guessed wrong, and which window opened is still unknown.
+   2. **The refused click on the short pipe** was the robot's own safety check, not CE. A real mouse click isn't affected.
+   3. **Neither looks like a CE fault.**
+7. **What you need to do:** nothing.
+
+---
+
+**Detail:** the full review is in `C:\CE_PLAN\areas\release-v3-colleagues-OPUS_CASE_REVIEW_B2_28OCT.md`.
+- **Review files:** 8 written beside the cases, each naming the case file's exact current fingerprint (SHA-256). All 8 pass a copy of the runner's three acceptance checks. Copies are in `areas\runner-reports\reviews\`.
+- **Saved:** the report and copies are pushed to CE_PLAN, and the scan for private data came back clean. CE_PLAN is fully in step with GitHub.
+- **Undo:** delete the 8 review files and revert that one commit.
+- **Not done:** nothing was opened in AutoCAD, and no picture was looked at.
+
+**Summary:** All 8 batch-2 cases passed twice on Civil 3.0.83, and every twin failed for the right reason. N16, N17, N18 and N22 are ready as whole tools. N15, N19, N20 and N21 are ready for their named part. D15 and D19 become whole, and D16 now covers both branches. The N19 window was probably not "Grade mismatch", and neither robot finding looks like a CE fault. Eight review files are written and pushed.

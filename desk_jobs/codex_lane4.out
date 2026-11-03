@@ -1,0 +1,23 @@
+== cx_h01_undo (usage 24.0% -> 27.0%): 1. **DONE — 1 HIGH, 2 MEDIUM, 0 LOW.** Most important: Esc after placing a callout pipe can discard its label-to-pipe link.
+
+2. **[Findings report](C:/CE_PLAN/areas/CODEX_HUNT_UNDO_22OCT.md)** saved and pushed, with exact source references and deterministic tests. Earlier findings excluded.
+
+---
+
+1. **Verification:** source reading only. No builds, tests, AutoCAD or installation. Leak scans passed.
+2. **Commit:** `d9911b89`. Only the findings file committed; no PR required.
+== cx_h03_settings (usage 27.0% -> 28.0%): 
+== cx_h05_records (usage 28.0% -> 30.0%): 1. **DONE — 4 HIGH, 3 MEDIUM, 0 LOW.** Biggest finding: CDSYNC can transfer another pit’s lid class, remarks and schedule inclusion to a valid pit.
+2. **Report:** [Findings and seven deterministic tests](C:/CE_PLAN/areas/CODEX_HUNT_RECORDS_22OCT.md). All verified by reading; AutoCAD reproduction remains pending.
+
+---
+
+1. **Saved and pushed:** `d487d454`. Only the findings file was committed.
+2. **Execution:** builds 0; tests 0; AutoCAD launches 0; installs 0; sub-agents 0.
+== cx_h09_struct_cmds (usage 30.0% -> 32.0%): 1. **DONE — HIGH 2 / MEDIUM 3 / LOW 0.** Four verified-by-reading findings; one suspected. Most important: SBEAM can place members away from picked points in a shifted or rotated UCS.
+
+2. **Report:** [Findings and deterministic tests](C:/CE_PLAN/areas/CODEX_HUNT_STRUCTCMDS_22OCT.md). No builds, tests or AutoCAD runs.
+
+---
+
+1. **Published:** `2c4b3ef5` on CE_PLAN main. Only the findings file was pushed; leak scan passed. Unrelated commits were preserved and excluded.

@@ -1,0 +1,9 @@
+I wrote the V9B brief and added section 14 to `QUEUE_20OCT_PLAN.md`. Codex was not started and nothing was run. I wrote no CE_PLAN files, so there was nothing to commit or push.
+
+- **Files:** `verifyV9b_s41.txt` and `verifyV9b_s41_full.txt` are in `C:\Lisp Files\_CODEX_RUNNER`. Both are clean (no control characters, no "follow", no tables).
+- **Z purlin:** V9 placed it at DIMSCALE 1, where SBEAM draws it at 1/20 size, so the wall came out 0.15 mm. The brief sets DIMSCALE 20 first and gives four typed zooms.
+- **Hatch readback:** it lists only the entities made after a saved `entlast`. The expected pattern scales are LBUH 20 / 50 / 100 and LBH 50 / 125 / 250.
+- **25C and EBT:** both ask a number first, then the insertion point, and EBT then takes Enter for rotation. Neither asks for a beam. Expected height is 125 for both.
+- **CEMEMBER:** it asks "Points sit on" and "Break lines at" before any point. The brief uses the Top view of a 310UB32, which gives hidden lines without a further question. The "layer already exists" case is made in the same session, so there is one session and one settings key.
+
+I did not prove that typing `!name` is accepted at the SBEAM and CEMEMBER point prompts. The brief gives the typed numbers as a fallback. I also didn't find the run 46 report file, so the 50 / 125 values come from the job text.

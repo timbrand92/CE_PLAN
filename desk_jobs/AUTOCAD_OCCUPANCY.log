@@ -1,0 +1,2628 @@
+2026-10-30 06:21 watchdog started
+2026-10-30 06:21 watchdog started
+2026-10-30 06:25 IDLE with no allowed reason since 06:21; pending: codex:verifyG3_c84, codex:verifyG7_c84, codex:verifyG4_c84, codex:verifyG6_c84, codex:verifyG5_c84, codex:verifyH1_c85, codex:verifyH2_c85, codex:verifyH3_c85, codex:verifyH4_c85, codex:verifyH5_c85, codex:verifyH6_c85, codex:verifyA1_c86, codex:verifyC6_c86, codex:verifyC3_c86, codex:verifyC1_c86
+2026-10-30 06:25 ran start_lanes.ps1
+2026-10-30 06:27 IDLE ENDED after 6.1 min (started 06:21)
+2026-10-30 06:28 watchdog started
+2026-10-30 06:28 watchdog started
+2026-10-30 06:46 IDLE ENDED after 4 min (started 06:42)
+2026-10-30 06:58 occupancy last 30 min: busy 24 min, idle 8 min
+2026-10-30 07:00 IDLE with no allowed reason since 06:56; pending: codex:verifyG4_c84, codex:verifyG6_c84, codex:verifyG5_c84, codex:verifyH1_c85, codex:verifyH2_c85, codex:verifyH3_c85, codex:verifyH4_c85, codex:verifyH5_c85, codex:verifyH6_c85, codex:verifyA1_c86, codex:verifyC6_c86, codex:verifyC3_c86, codex:verifyC1_c86
+2026-10-30 07:00 ran start_lanes.ps1
+2026-10-30 07:02 IDLE ENDED after 6.1 min (started 06:56)
+2026-10-30 07:14 IDLE ENDED after 4 min (started 07:10)
+2026-10-30 07:20 watchdog started
+2026-10-30 07:20 watchdog started
+2026-10-30 07:22 watchdog started
+2026-10-30 07:23 watchdog started
+2026-10-30 07:29 IDLE ENDED after 4 min (started 07:25)
+2026-10-30 07:35 watchdog started
+2026-10-30 07:40 IDLE ENDED after 2 min (started 07:37)
+2026-10-30 07:52 IDLE ENDED after 4 min (started 07:48)
+2026-10-30 07:58 IDLE ENDED after 2 min (started 07:56)
+2026-10-30 08:06 occupancy last 30 min: busy 20 min, idle 12 min
+2026-10-30 08:08 IDLE ENDED after 4 min (started 08:04)
+2026-10-30 08:22 IDLE ENDED after 4 min (started 08:18)
+2026-10-30 08:28 IDLE ENDED after 2 min (started 08:26)
+2026-10-30 08:36 occupancy last 30 min: busy 20 min, idle 10 min
+2026-10-30 08:38 IDLE ENDED after 4 min (started 08:34)
+2026-10-30 08:44 IDLE ENDED after 4 min (started 08:40)
+2026-10-30 08:54 IDLE ENDED after 2 min (started 08:52)
+2026-10-30 09:06 occupancy last 30 min: busy 24 min, idle 6 min
+2026-10-30 09:14 IDLE ENDED after 4 min (started 09:10)
+2026-10-30 09:28 idle, allowed: a Codex look is launching
+2026-10-30 09:30 IDLE ENDED after 6 min (started 09:24)
+2026-10-30 09:36 IDLE with no allowed reason since 09:32; pending: 
+2026-10-30 09:36 ran start_lanes.ps1
+2026-10-30 09:36 queues were empty: moved tester_run79_pilot_p01_p02.txt into ROBOT_QUEUE.txt
+2026-10-30 09:36 occupancy last 30 min: busy 14 min, idle 16 min
+2026-10-30 09:39 ran start_lanes.ps1
+2026-10-30 09:39 queues were empty: moved tester_run78_apply_staged_and_run.txt into ROBOT_QUEUE.txt
+2026-10-30 09:39 AutoCAD idle with nothing queued: started the filler C:\CE_PLAN\desk_jobs\fill_drafts.ps1
+2026-10-30 09:39 IDLE 6+ min: AUTOCAD IDLE since Fri 09:32 with no allowed reason. Pending work: robot:tester_run79_pilot_p01_p02.txt, robot:tester_run78_apply_staged_and_run.txt. Codex cap/mode: PACE.
+2026-10-30 09:41 ran start_lanes.ps1
+2026-10-30 09:43 IDLE ENDED after 10.3 min (started 09:32)
+2026-10-30 09:51 IDLE ENDED after 2 min (started 09:49)
+2026-10-30 10:03 IDLE ENDED after 4 min (started 09:59)
+2026-10-30 10:07 occupancy last 30 min: busy 20 min, idle 10 min
+2026-10-30 10:15 IDLE ENDED after 2 min (started 10:13)
+2026-10-30 10:25 IDLE ENDED after 4 min (started 10:21)
+2026-10-30 10:37 IDLE ENDED after 2 min (started 10:35)
+2026-10-30 10:37 occupancy last 30 min: busy 22 min, idle 8 min
+2026-10-30 10:43 IDLE ENDED after 2 min (started 10:41)
+2026-10-30 10:47 IDLE ENDED after 2 min (started 10:45)
+2026-10-30 11:03 IDLE ENDED after 2 min (started 11:01)
+2026-10-30 11:07 occupancy last 30 min: busy 24 min, idle 6 min
+2026-10-30 11:17 IDLE with no allowed reason since 11:13; pending: robot:tester_run78_apply_staged_and_run.txt
+2026-10-30 11:17 ran start_lanes.ps1
+2026-10-30 11:19 ran start_lanes.ps1
+2026-10-30 11:19 IDLE 6+ min: AUTOCAD IDLE since Fri 11:13 with no allowed reason. Pending work: robot:tester_run78_apply_staged_and_run.txt. Codex cap/mode: PACE.
+2026-10-30 11:21 IDLE ENDED after 8.2 min (started 11:13)
+2026-10-30 11:37 IDLE ENDED after 4 min (started 11:33)
+2026-10-30 11:37 occupancy last 30 min: busy 18 min, idle 12 min
+2026-10-30 11:49 IDLE with no allowed reason since 11:45; pending: robot:tester_run78_apply_staged_and_run.txt
+2026-10-30 11:49 ran start_lanes.ps1
+2026-10-30 11:51 ran start_lanes.ps1
+2026-10-30 11:51 IDLE 6+ min: AUTOCAD IDLE since Fri 11:45 with no allowed reason. Pending work: robot:tester_run78_apply_staged_and_run.txt. Codex cap/mode: PACE.
+2026-10-30 11:53 IDLE ENDED after 8.1 min (started 11:45)
+2026-10-30 12:01 watchdog started
+2026-10-30 12:03 watchdog started
+2026-10-30 12:07 IDLE ENDED after 4 min (started 12:03)
+2026-10-30 12:15 IDLE ENDED after 4 min (started 12:11)
+2026-10-30 12:21 IDLE ENDED after 2 min (started 12:19)
+2026-10-30 12:33 occupancy last 30 min: busy 20 min, idle 12 min
+2026-10-30 12:35 IDLE ENDED after 2 min (started 12:33)
+2026-10-30 12:36 watchdog started
+2026-10-30 12:43 IDLE STARTED 12:43:44 (checking for an allowed reason)
+2026-10-30 12:44 IDLE ENDED after 1 min (started 12:43)
+2026-10-30 12:46 IDLE STARTED 12:46:55 (checking for an allowed reason)
+2026-10-30 12:50 IDLE with no allowed reason since 12:46; pending: robot:tester_run78_apply_staged_and_run.txt
+2026-10-30 12:50 ran start_lanes.ps1
+2026-10-30 12:51 IDLE ENDED after 4.1 min (started 12:46)
+2026-10-30 12:55 IDLE STARTED 12:55:09 (checking for an allowed reason)
+2026-10-30 12:58 IDLE ENDED after 3.6 min (started 12:55)
+2026-10-30 13:00 IDLE STARTED 13:00:46 (checking for an allowed reason)
+2026-10-30 13:02 IDLE ENDED after 2 min (started 13:00)
+2026-10-30 13:05 IDLE STARTED 13:05:52 (checking for an allowed reason)
+2026-10-30 13:06 IDLE ENDED after 0.5 min (started 13:05)
+2026-10-30 13:06 occupancy last 30 min: busy 19 min, idle 10.5 min
+2026-10-30 13:19 watchdog started
+2026-10-30 13:21 IDLE STARTED 13:21:01 (checking for an allowed reason)
+2026-10-30 13:23 IDLE ENDED after 2 min (started 13:21)
+2026-10-30 13:28 IDLE STARTED 13:28:12 (checking for an allowed reason)
+2026-10-30 13:29 IDLE ENDED after 1 min (started 13:28)
+2026-10-30 13:33 IDLE STARTED 13:33:51 (checking for an allowed reason)
+2026-10-30 13:37 IDLE ENDED after 3.6 min (started 13:33)
+2026-10-30 13:40 IDLE STARTED 13:40:00 (checking for an allowed reason)
+2026-10-30 13:41 IDLE ENDED after 1.5 min (started 13:40)
+2026-10-30 13:43 IDLE STARTED 13:43:04 (checking for an allowed reason)
+2026-10-30 13:44 IDLE ENDED after 1 min (started 13:43)
+2026-10-30 13:46 IDLE STARTED 13:46:07 (checking for an allowed reason)
+2026-10-30 13:47 IDLE ENDED after 1.5 min (started 13:46)
+2026-10-30 13:50 occupancy last 30 min: busy 19.5 min, idle 10.5 min
+2026-10-30 13:52 IDLE STARTED 13:52:14 (checking for an allowed reason)
+2026-10-30 13:53 IDLE ENDED after 1 min (started 13:52)
+2026-10-30 13:58 IDLE STARTED 13:58:24 (checking for an allowed reason)
+2026-10-30 14:00 IDLE ENDED after 2 min (started 13:58)
+2026-10-30 14:03 IDLE STARTED 14:03:31 (checking for an allowed reason)
+2026-10-30 14:05 IDLE ENDED after 1.5 min (started 14:03)
+2026-10-30 14:09 IDLE STARTED 14:09:39 (checking for an allowed reason)
+2026-10-30 14:11 IDLE ENDED after 1.5 min (started 14:09)
+2026-10-30 14:16 IDLE STARTED 14:16:16 (checking for an allowed reason)
+2026-10-30 14:17 IDLE ENDED after 1 min (started 14:16)
+2026-10-30 14:19 IDLE STARTED 14:19:23 (checking for an allowed reason)
+2026-10-30 14:20 occupancy last 30 min: busy 21 min, idle 8.5 min
+2026-10-30 14:20 watchdog started
+2026-10-30 14:20 IDLE STARTED 14:20:47 (checking for an allowed reason)
+2026-10-30 14:24 idle, allowed: requested idle window: CE 01 CLOSED NOW 14:17: C-77 payload final steps and install (AutoCAD and accoreconsole must stay closed)
+2026-10-30 14:33 ran start_lanes.ps1
+2026-10-30 14:33 AutoCAD idle with nothing queued: started the filler C:\CE_PLAN\desk_jobs\fill_twins.ps1
+2026-10-30 14:33 IDLE 6+ min: AUTOCAD IDLE since Fri 14:20 with no allowed reason. Pending work: codex:verifyJ4_c86, codex:verifyJ5_c86, codex:verifyJ6_c86, codex:verifyJ7_c86, codex:verifyH1b_c85, codex:verifyH4b_c85, codex:verifyH5b_c85, codex:verifyH6b_c85, codex:verifyC1b_c86, codex:verifyA1b_c86, codex:verifyG6b_c84. Codex cap/mode: PACE.
+2026-10-30 14:33 ran start_lanes.ps1
+2026-10-30 14:33 AutoCAD idle with nothing queued: started the filler C:\CE_PLAN\desk_jobs\fill_gap_cases.ps1
+2026-10-30 14:34 ran start_lanes.ps1
+2026-10-30 14:34 AutoCAD idle with nothing queued: started the filler C:\CE_PLAN\desk_jobs\fill_carpark_30oct.ps1
+2026-10-30 14:34 ran start_lanes.ps1
+2026-10-30 14:34 AutoCAD idle with nothing queued: started the filler C:\CE_PLAN\desk_jobs\fill_next40_a.ps1
+2026-10-30 14:35 ran start_lanes.ps1
+2026-10-30 14:35 IDLE ENDED after 15 min (started 14:20)
+2026-10-30 14:38 IDLE STARTED 14:38:20 (checking for an allowed reason)
+2026-10-30 14:38 IDLE ENDED after 0.5 min (started 14:38)
+2026-10-30 14:41 IDLE STARTED 14:41:54 (checking for an allowed reason)
+2026-10-30 14:43 IDLE ENDED after 1.5 min (started 14:41)
+2026-10-30 14:51 occupancy last 30 min: busy 13.5 min, idle 16.5 min
+2026-10-30 15:03 IDLE STARTED 15:03:43 (checking for an allowed reason)
+2026-10-30 15:04 IDLE ENDED after 0.5 min (started 15:03)
+2026-10-30 15:05 IDLE STARTED 15:05:45 (checking for an allowed reason)
+2026-10-30 15:06 IDLE ENDED after 1 min (started 15:05)
+2026-10-30 15:16 IDLE STARTED 15:16:57 (checking for an allowed reason)
+2026-10-30 15:17 IDLE ENDED after 0.5 min (started 15:16)
+2026-10-30 15:21 occupancy last 30 min: busy 27.5 min, idle 2 min
+2026-10-30 15:23 IDLE STARTED 15:23:36 (checking for an allowed reason)
+2026-10-30 15:24 IDLE ENDED after 1 min (started 15:23)
+2026-10-30 15:30 IDLE STARTED 15:30:13 (checking for an allowed reason)
+2026-10-30 15:31 IDLE ENDED after 1 min (started 15:30)
+2026-10-30 15:39 IDLE STARTED 15:39:56 (checking for an allowed reason)
+2026-10-30 15:41 IDLE with no allowed reason since 15:39; pending: codex:verifyJ4_c86, codex:verifyJ5_c86, codex:verifyJ6_c86, codex:verifyJ7_c86, codex:verifyH1b_c85, codex:verifyH4b_c85, codex:verifyH5b_c85, codex:verifyH6b_c85, codex:verifyC1b_c86, codex:verifyA1b_c86, codex:verifyG6b_c84
+2026-10-30 15:41 ran start_lanes.ps1
+2026-10-30 15:41 Codex looks queued: leaving the gap to the conveyor
+2026-10-30 15:42 ran start_lanes.ps1
+2026-10-30 15:42 Codex looks queued: leaving the gap to the conveyor
+2026-10-30 15:42 IDLE ENDED after 2.8 min (started 15:39)
+2026-10-30 15:51 occupancy last 30 min: busy 25 min, idle 4.5 min
+2026-10-30 16:07 IDLE STARTED 16:07:28 (checking for an allowed reason)
+2026-10-30 16:08 IDLE ENDED after 1 min (started 16:07)
+2026-10-30 16:21 occupancy last 30 min: busy 28.5 min, idle 1 min
+2026-10-30 16:25 IDLE STARTED 16:25:52 (checking for an allowed reason)
+2026-10-30 16:26 IDLE ENDED after 1 min (started 16:25)
+2026-10-30 16:27 IDLE STARTED 16:27:24 (checking for an allowed reason)
+2026-10-30 16:27 IDLE ENDED after 0.5 min (started 16:27)
+2026-10-30 16:28 IDLE STARTED 16:28:55 (checking for an allowed reason)
+2026-10-30 16:29 IDLE ENDED after 1 min (started 16:28)
+2026-10-30 16:30 IDLE STARTED 16:30:28 (checking for an allowed reason)
+2026-10-30 16:32 IDLE with no allowed reason since 16:30; pending: codex:verifyJ4_c86, codex:verifyJ5_c86, codex:verifyJ6_c86, codex:verifyJ7_c86, codex:verifyH1b_c85, codex:verifyH4b_c85, codex:verifyH5b_c85, codex:verifyH6b_c85, codex:verifyC1b_c86, codex:verifyA1b_c86, codex:verifyG6b_c84
+2026-10-30 16:32 ran start_lanes.ps1
+2026-10-30 16:32 Codex looks queued: leaving the gap to the conveyor
+2026-10-30 16:32 IDLE ENDED after 2.1 min (started 16:30)
+2026-10-30 16:33 IDLE STARTED 16:33:38 (checking for an allowed reason)
+2026-10-30 16:34 IDLE ENDED after 0.5 min (started 16:33)
+2026-10-30 16:42 IDLE STARTED 16:42:23 (checking for an allowed reason)
+2026-10-30 16:43 IDLE ENDED after 1 min (started 16:42)
+2026-10-30 16:44 IDLE STARTED 16:44:58 (checking for an allowed reason)
+2026-10-30 16:45 IDLE ENDED after 0.5 min (started 16:44)
+2026-10-30 16:50 IDLE STARTED 16:50:36 (checking for an allowed reason)
+2026-10-30 16:51 IDLE ENDED after 0.5 min (started 16:50)
+2026-10-30 16:52 occupancy last 30 min: busy 22.5 min, idle 7 min
+2026-10-30 17:02 IDLE STARTED 17:02:27 (checking for an allowed reason)
+2026-10-30 17:04 IDLE ENDED after 1.5 min (started 17:02)
+2026-10-30 17:19 watchdog started
+2026-10-30 17:39 IDLE STARTED 17:39:59 (checking for an allowed reason)
+2026-10-30 17:40 IDLE ENDED after 0.5 min (started 17:39)
+2026-10-30 17:44 IDLE STARTED 17:44:35 (checking for an allowed reason)
+2026-10-30 17:45 IDLE ENDED after 1 min (started 17:44)
+2026-10-30 17:50 occupancy last 30 min: busy 28.5 min, idle 1.5 min
+2026-10-30 17:55 IDLE STARTED 17:55:28 (checking for an allowed reason)
+2026-10-30 17:56 IDLE ENDED after 1 min (started 17:55)
+2026-10-30 18:01 IDLE STARTED 18:01:41 (checking for an allowed reason)
+2026-10-30 18:03 IDLE ENDED after 1.6 min (started 18:01)
+2026-10-30 18:20 occupancy last 30 min: busy 27 min, idle 2.5 min
+2026-10-30 18:27 IDLE STARTED 18:27:49 (checking for an allowed reason)
+2026-10-30 18:29 IDLE ENDED after 1.5 min (started 18:27)
+2026-10-30 18:29 IDLE STARTED 18:29:53 (checking for an allowed reason)
+2026-10-30 18:30 IDLE ENDED after 1 min (started 18:29)
+2026-10-30 18:35 IDLE STARTED 18:35:31 (checking for an allowed reason)
+2026-10-30 18:37 IDLE ENDED after 1.5 min (started 18:35)
+2026-10-30 18:41 IDLE STARTED 18:41:38 (checking for an allowed reason)
+2026-10-30 18:42 IDLE ENDED after 1 min (started 18:41)
+2026-10-30 18:46 IDLE STARTED 18:46:15 (checking for an allowed reason)
+2026-10-30 18:46 IDLE ENDED after 0.5 min (started 18:46)
+2026-10-30 18:47 IDLE STARTED 18:47:52 (checking for an allowed reason)
+2026-10-30 18:49 IDLE ENDED after 2 min (started 18:47)
+2026-10-30 18:50 IDLE STARTED 18:50:56 (checking for an allowed reason)
+2026-10-30 18:50 occupancy last 30 min: busy 21.5 min, idle 8 min
+2026-10-30 18:52 IDLE ENDED after 1.5 min (started 18:50)
+2026-10-30 18:57 IDLE STARTED 18:57:37 (checking for an allowed reason)
+2026-10-30 18:58 IDLE ENDED after 0.5 min (started 18:57)
+2026-10-30 18:58 IDLE STARTED 18:58:38 (checking for an allowed reason)
+2026-10-30 19:00 IDLE ENDED after 1.5 min (started 18:58)
+2026-10-30 19:04 IDLE STARTED 19:04:15 (checking for an allowed reason)
+2026-10-30 19:05 IDLE ENDED after 1.5 min (started 19:04)
+2026-10-30 19:06 IDLE STARTED 19:06:17 (checking for an allowed reason)
+2026-10-30 19:07 IDLE ENDED after 1 min (started 19:06)
+2026-10-30 19:09 IDLE STARTED 19:09:01 (checking for an allowed reason)
+2026-10-30 19:10 IDLE ENDED after 1 min (started 19:09)
+2026-10-30 19:15 IDLE STARTED 19:15:08 (checking for an allowed reason)
+2026-10-30 19:16 IDLE ENDED after 1 min (started 19:15)
+2026-10-30 19:20 IDLE STARTED 19:20:50 (checking for an allowed reason)
+2026-10-30 19:21 occupancy last 30 min: busy 21 min, idle 8.5 min
+2026-10-30 19:21 IDLE ENDED after 1 min (started 19:20)
+2026-10-30 19:26 IDLE STARTED 19:26:58 (checking for an allowed reason)
+2026-10-30 19:27 IDLE ENDED after 1 min (started 19:26)
+2026-10-30 19:28 IDLE STARTED 19:28:30 (checking for an allowed reason)
+2026-10-30 19:29 IDLE ENDED after 0.5 min (started 19:28)
+2026-10-30 19:29 IDLE STARTED 19:29:31 (checking for an allowed reason)
+2026-10-30 19:30 IDLE ENDED after 0.5 min (started 19:29)
+2026-10-30 19:32 IDLE STARTED 19:32:05 (checking for an allowed reason)
+2026-10-30 19:33 IDLE ENDED after 1 min (started 19:32)
+2026-10-30 19:37 IDLE STARTED 19:37:44 (checking for an allowed reason)
+2026-10-30 19:39 IDLE ENDED after 1.5 min (started 19:37)
+2026-10-30 19:40 IDLE STARTED 19:40:03 (checking for an allowed reason)
+2026-10-30 19:40 IDLE ENDED after 0.5 min (started 19:40)
+2026-10-30 19:42 IDLE STARTED 19:42:39 (checking for an allowed reason)
+2026-10-30 19:44 IDLE ENDED after 1.5 min (started 19:42)
+2026-10-30 19:48 IDLE STARTED 19:48:48 (checking for an allowed reason)
+2026-10-30 19:49 IDLE ENDED after 0.5 min (started 19:48)
+2026-10-30 19:51 occupancy last 30 min: busy 22 min, idle 7 min
+2026-10-30 19:52 IDLE STARTED 19:52:53 (checking for an allowed reason)
+2026-10-30 19:54 IDLE ENDED after 1.5 min (started 19:52)
+2026-10-30 20:00 IDLE STARTED 20:00:40 (checking for an allowed reason)
+2026-10-30 20:01 IDLE ENDED after 0.5 min (started 20:00)
+2026-10-30 20:03 IDLE STARTED 20:03:47 (checking for an allowed reason)
+2026-10-30 20:04 IDLE ENDED after 0.5 min (started 20:03)
+2026-10-30 20:06 IDLE STARTED 20:06:53 (checking for an allowed reason)
+2026-10-30 20:08 IDLE ENDED after 1.5 min (started 20:06)
+2026-10-30 20:13 IDLE STARTED 20:13:33 (checking for an allowed reason)
+2026-10-30 20:14 IDLE ENDED after 1 min (started 20:13)
+2026-10-30 20:20 IDLE STARTED 20:20:41 (checking for an allowed reason)
+2026-10-30 20:21 IDLE ENDED after 0.5 min (started 20:20)
+2026-10-30 20:21 occupancy last 30 min: busy 23.5 min, idle 5.5 min
+2026-10-30 20:27 IDLE STARTED 20:27:58 (checking for an allowed reason)
+2026-10-30 20:28 IDLE ENDED after 0.5 min (started 20:27)
+2026-10-30 20:32 IDLE STARTED 20:32:35 (checking for an allowed reason)
+2026-10-30 20:33 IDLE ENDED after 0.5 min (started 20:32)
+2026-10-30 20:52 occupancy last 30 min: busy 28.5 min, idle 1 min
+2026-10-30 20:57 IDLE STARTED 20:57:51 (checking for an allowed reason)
+2026-10-30 20:58 IDLE ENDED after 0.5 min (started 20:57)
+2026-10-30 21:08 IDLE STARTED 21:08:46 (checking for an allowed reason)
+2026-10-30 21:09 IDLE ENDED after 0.5 min (started 21:08)
+2026-10-30 21:16 IDLE STARTED 21:16:01 (checking for an allowed reason)
+2026-10-30 21:16 IDLE ENDED after 0.5 min (started 21:16)
+2026-10-30 21:22 occupancy last 30 min: busy 27.5 min, idle 1.5 min
+2026-10-30 21:39 IDLE STARTED 21:39:22 (checking for an allowed reason)
+2026-10-30 21:40 IDLE ENDED after 1.6 min (started 21:39)
+2026-10-30 21:52 occupancy last 30 min: busy 27.5 min, idle 1.5 min
+2026-10-30 21:55 IDLE STARTED 21:55:23 (checking for an allowed reason)
+2026-10-30 21:55 IDLE ENDED after 0.5 min (started 21:55)
+2026-10-30 22:06 IDLE STARTED 22:06:18 (checking for an allowed reason)
+2026-10-30 22:06 IDLE ENDED after 0.5 min (started 22:06)
+2026-10-30 22:15 IDLE STARTED 22:15:00 (checking for an allowed reason)
+2026-10-30 22:15 IDLE ENDED after 0.5 min (started 22:15)
+2026-10-30 22:22 occupancy last 30 min: busy 27.5 min, idle 1.5 min
+2026-10-30 22:26 IDLE STARTED 22:26:54 (checking for an allowed reason)
+2026-10-30 22:28 IDLE ENDED after 1.6 min (started 22:26)
+2026-10-30 22:38 IDLE STARTED 22:38:50 (checking for an allowed reason)
+2026-10-30 22:39 IDLE ENDED after 0.5 min (started 22:38)
+2026-10-30 22:48 IDLE STARTED 22:48:12 (checking for an allowed reason)
+2026-10-30 22:48 IDLE ENDED after 0.5 min (started 22:48)
+2026-10-30 22:52 occupancy last 30 min: busy 26.5 min, idle 2.5 min
+2026-10-30 22:58 IDLE STARTED 22:58:32 (checking for an allowed reason)
+2026-10-30 22:59 IDLE ENDED after 0.5 min (started 22:58)
+2026-10-30 22:59 IDLE STARTED 22:59:33 (checking for an allowed reason)
+2026-10-30 23:00 IDLE ENDED after 0.5 min (started 22:59)
+2026-10-30 23:20 IDLE STARTED 23:20:13 (checking for an allowed reason)
+2026-10-30 23:20 IDLE ENDED after 0.5 min (started 23:20)
+2026-10-30 23:22 occupancy last 30 min: busy 28 min, idle 1.5 min
+2026-10-30 23:47 IDLE STARTED 23:47:13 (checking for an allowed reason)
+2026-10-30 23:47 IDLE ENDED after 0.5 min (started 23:47)
+2026-10-30 23:52 IDLE STARTED 23:52:18 (checking for an allowed reason)
+2026-10-30 23:52 IDLE ENDED after 0.5 min (started 23:52)
+2026-10-30 23:52 occupancy last 30 min: busy 28.5 min, idle 1 min
+2026-10-30 23:55 IDLE STARTED 23:55:52 (checking for an allowed reason)
+2026-10-30 23:56 IDLE ENDED after 0.5 min (started 23:55)
+2026-10-31 00:00 IDLE STARTED 00:00:26 (checking for an allowed reason)
+2026-10-31 00:00 IDLE ENDED after 0.5 min (started 00:00)
+2026-10-31 00:20 IDLE STARTED 00:20:15 (checking for an allowed reason)
+2026-10-31 00:20 IDLE ENDED after 0.5 min (started 00:20)
+2026-10-31 00:23 occupancy last 30 min: busy 28.5 min, idle 1.5 min
+2026-10-31 00:28 IDLE STARTED 00:28:24 (checking for an allowed reason)
+2026-10-31 00:28 IDLE ENDED after 0.5 min (started 00:28)
+2026-10-31 00:37 IDLE STARTED 00:37:01 (checking for an allowed reason)
+2026-10-31 00:37 IDLE ENDED after 0.5 min (started 00:37)
+2026-10-31 00:40 IDLE STARTED 00:40:04 (checking for an allowed reason)
+2026-10-31 00:41 IDLE ENDED after 1.5 min (started 00:40)
+2026-10-31 00:45 IDLE STARTED 00:45:39 (checking for an allowed reason)
+2026-10-31 00:46 IDLE ENDED after 1 min (started 00:45)
+2026-10-31 00:50 IDLE STARTED 00:50:18 (checking for an allowed reason)
+2026-10-31 00:51 IDLE ENDED after 1 min (started 00:50)
+2026-10-31 00:53 occupancy last 30 min: busy 25 min, idle 4.5 min
+2026-10-31 00:55 IDLE STARTED 00:55:55 (checking for an allowed reason)
+2026-10-31 00:56 IDLE ENDED after 1 min (started 00:55)
+2026-10-31 01:03 IDLE STARTED 01:03:02 (checking for an allowed reason)
+2026-10-31 01:04 IDLE ENDED after 1 min (started 01:03)
+2026-10-31 01:12 IDLE STARTED 01:12:11 (checking for an allowed reason)
+2026-10-31 01:13 IDLE ENDED after 1 min (started 01:12)
+2026-10-31 01:23 occupancy last 30 min: busy 26.5 min, idle 3 min
+2026-10-31 01:27 IDLE STARTED 01:27:19 (checking for an allowed reason)
+2026-10-31 01:27 IDLE ENDED after 0.5 min (started 01:27)
+2026-10-31 01:33 IDLE STARTED 01:33:56 (checking for an allowed reason)
+2026-10-31 01:34 IDLE ENDED after 0.7 min (started 01:33)
+2026-10-31 01:35 IDLE STARTED 01:35:38 (checking for an allowed reason)
+2026-10-31 01:36 IDLE ENDED after 0.5 min (started 01:35)
+2026-10-31 01:53 occupancy last 30 min: busy 27.5 min, idle 1.5 min
+2026-10-31 02:05 IDLE STARTED 02:05:01 (checking for an allowed reason)
+2026-10-31 02:05 IDLE ENDED after 0.5 min (started 02:05)
+2026-10-31 02:21 IDLE STARTED 02:21:47 (checking for an allowed reason)
+2026-10-31 02:22 IDLE ENDED after 0.5 min (started 02:21)
+2026-10-31 02:24 occupancy last 30 min: busy 29 min, idle 1 min
+2026-10-31 02:25 IDLE STARTED 02:25:51 (checking for an allowed reason)
+2026-10-31 02:26 IDLE ENDED after 1 min (started 02:25)
+2026-10-31 02:35 IDLE STARTED 02:35:29 (checking for an allowed reason)
+2026-10-31 02:35 IDLE ENDED after 0.5 min (started 02:35)
+2026-10-31 02:43 IDLE STARTED 02:43:10 (checking for an allowed reason)
+2026-10-31 02:43 IDLE ENDED after 0.5 min (started 02:43)
+2026-10-31 02:49 IDLE STARTED 02:49:15 (checking for an allowed reason)
+2026-10-31 02:49 IDLE ENDED after 0.5 min (started 02:49)
+2026-10-31 02:54 occupancy last 30 min: busy 27 min, idle 2.5 min
+2026-10-31 02:56 IDLE STARTED 02:56:21 (checking for an allowed reason)
+2026-10-31 02:57 IDLE ENDED after 0.8 min (started 02:56)
+2026-10-31 02:58 IDLE STARTED 02:58:09 (checking for an allowed reason)
+2026-10-31 02:59 IDLE ENDED after 1 min (started 02:58)
+2026-10-31 03:07 IDLE STARTED 03:07:28 (checking for an allowed reason)
+2026-10-31 03:08 IDLE ENDED after 1 min (started 03:07)
+2026-10-31 03:15 IDLE STARTED 03:15:31 (checking for an allowed reason)
+2026-10-31 03:16 IDLE ENDED after 0.5 min (started 03:15)
+2026-10-31 03:22 IDLE STARTED 03:22:04 (checking for an allowed reason)
+2026-10-31 03:22 IDLE ENDED after 0.5 min (started 03:22)
+2026-10-31 03:23 IDLE STARTED 03:23:43 (checking for an allowed reason)
+2026-10-31 03:24 IDLE ENDED after 0.5 min (started 03:23)
+2026-10-31 03:24 occupancy last 30 min: busy 24 min, idle 4 min
+2026-10-31 03:28 IDLE STARTED 03:28:00 (checking for an allowed reason)
+2026-10-31 03:28 IDLE ENDED after 0.5 min (started 03:28)
+2026-10-31 03:29 IDLE STARTED 03:29:31 (checking for an allowed reason)
+2026-10-31 03:30 IDLE ENDED after 0.5 min (started 03:29)
+2026-10-31 03:31 IDLE STARTED 03:31:03 (checking for an allowed reason)
+2026-10-31 03:31 IDLE ENDED after 0.5 min (started 03:31)
+2026-10-31 03:33 IDLE STARTED 03:33:05 (checking for an allowed reason)
+2026-10-31 03:33 IDLE ENDED after 0.5 min (started 03:33)
+2026-10-31 03:35 IDLE STARTED 03:35:48 (checking for an allowed reason)
+2026-10-31 03:36 IDLE ENDED after 0.5 min (started 03:35)
+2026-10-31 03:38 IDLE STARTED 03:38:20 (checking for an allowed reason)
+2026-10-31 03:38 IDLE ENDED after 0.5 min (started 03:38)
+2026-10-31 03:41 IDLE STARTED 03:41:54 (checking for an allowed reason)
+2026-10-31 03:42 IDLE ENDED after 1 min (started 03:41)
+2026-10-31 03:53 IDLE STARTED 03:53:08 (checking for an allowed reason)
+2026-10-31 03:53 IDLE ENDED after 0.5 min (started 03:53)
+2026-10-31 03:54 occupancy last 30 min: busy 25 min, idle 4.5 min
+2026-10-31 04:05 IDLE STARTED 04:05:52 (checking for an allowed reason)
+2026-10-31 04:06 IDLE ENDED after 0.5 min (started 04:05)
+2026-10-31 04:16 IDLE STARTED 04:16:31 (checking for an allowed reason)
+2026-10-31 04:17 IDLE ENDED after 0.5 min (started 04:16)
+2026-10-31 04:21 IDLE STARTED 04:21:37 (checking for an allowed reason)
+2026-10-31 04:22 IDLE ENDED after 0.5 min (started 04:21)
+2026-10-31 04:23 IDLE STARTED 04:23:09 (checking for an allowed reason)
+2026-10-31 04:23 IDLE ENDED after 0.5 min (started 04:23)
+2026-10-31 04:24 occupancy last 30 min: busy 27 min, idle 2 min
+2026-10-31 04:29 IDLE STARTED 04:29:15 (checking for an allowed reason)
+2026-10-31 04:29 IDLE ENDED after 0.5 min (started 04:29)
+2026-10-31 04:34 IDLE STARTED 04:34:53 (checking for an allowed reason)
+2026-10-31 04:35 IDLE ENDED after 1 min (started 04:34)
+2026-10-31 04:49 IDLE STARTED 04:49:07 (checking for an allowed reason)
+2026-10-31 04:50 IDLE ENDED after 1 min (started 04:49)
+2026-10-31 04:50 IDLE STARTED 04:50:40 (checking for an allowed reason)
+2026-10-31 04:51 IDLE ENDED after 0.5 min (started 04:50)
+2026-10-31 04:52 IDLE STARTED 04:52:23 (checking for an allowed reason)
+2026-10-31 04:52 IDLE ENDED after 0.5 min (started 04:52)
+2026-10-31 04:54 occupancy last 30 min: busy 26 min, idle 3.5 min
+2026-10-31 04:58 IDLE STARTED 04:58:08 (checking for an allowed reason)
+2026-10-31 04:58 IDLE ENDED after 0.5 min (started 04:58)
+2026-10-31 05:04 IDLE STARTED 05:04:29 (checking for an allowed reason)
+2026-10-31 05:05 IDLE ENDED after 1 min (started 05:04)
+2026-10-31 05:07 IDLE STARTED 05:07:44 (checking for an allowed reason)
+2026-10-31 05:08 IDLE ENDED after 0.5 min (started 05:07)
+2026-10-31 05:09 IDLE STARTED 05:09:05 (checking for an allowed reason)
+2026-10-31 05:09 IDLE ENDED after 0.5 min (started 05:09)
+2026-10-31 05:10 IDLE STARTED 05:10:50 (checking for an allowed reason)
+2026-10-31 05:11 IDLE ENDED after 0.5 min (started 05:10)
+2026-10-31 05:11 IDLE STARTED 05:11:58 (checking for an allowed reason)
+2026-10-31 05:12 IDLE ENDED after 0.5 min (started 05:11)
+2026-10-31 05:15 IDLE STARTED 05:15:31 (checking for an allowed reason)
+2026-10-31 05:16 IDLE ENDED after 0.5 min (started 05:15)
+2026-10-31 05:17 IDLE STARTED 05:17:03 (checking for an allowed reason)
+2026-10-31 05:17 IDLE ENDED after 0.5 min (started 05:17)
+2026-10-31 05:19 IDLE STARTED 05:19:40 (checking for an allowed reason)
+2026-10-31 05:20 IDLE ENDED after 0.5 min (started 05:19)
+2026-10-31 05:22 IDLE STARTED 05:22:57 (checking for an allowed reason)
+2026-10-31 05:24 IDLE with no allowed reason since 05:22; pending: 
+2026-10-31 05:24 released stale STOP_CODEX.flag (CE 02's own, no job of ours running)
+2026-10-31 05:24 ran start_lanes.ps1
+2026-10-31 05:24 closed-window notice active: no filler now
+2026-10-31 05:25 ran start_lanes.ps1
+2026-10-31 05:25 closed-window notice active: no filler now
+2026-10-31 05:25 released stale STOP_CODEX.flag (CE 02's own, no job of ours running)
+2026-10-31 05:25 ran start_lanes.ps1
+2026-10-31 05:25 closed-window notice active: no filler now
+2026-10-31 05:26 released stale STOP_CODEX.flag (CE 02's own, no job of ours running)
+2026-10-31 05:26 ran start_lanes.ps1
+2026-10-31 05:26 closed-window notice active: no filler now
+2026-10-31 05:26 released stale STOP_CODEX.flag (CE 02's own, no job of ours running)
+2026-10-31 05:26 ran start_lanes.ps1
+2026-10-31 05:26 closed-window notice active: no filler now
+2026-10-31 05:27 released stale STOP_CODEX.flag (CE 02's own, no job of ours running)
+2026-10-31 05:27 ran start_lanes.ps1
+2026-10-31 05:27 closed-window notice active: no filler now
+2026-10-31 05:27 released stale STOP_CODEX.flag (CE 02's own, no job of ours running)
+2026-10-31 05:27 ran start_lanes.ps1
+2026-10-31 05:27 closed-window notice active: no filler now
+2026-10-31 05:28 released stale STOP_CODEX.flag (CE 02's own, no job of ours running)
+2026-10-31 05:28 ran start_lanes.ps1
+2026-10-31 05:28 closed-window notice active: no filler now
+2026-10-31 05:29 released stale STOP_CODEX.flag (CE 02's own, no job of ours running)
+2026-10-31 05:29 ran start_lanes.ps1
+2026-10-31 05:29 closed-window notice active: no filler now
+2026-10-31 05:29 released stale STOP_CODEX.flag (CE 02's own, no job of ours running)
+2026-10-31 05:29 ran start_lanes.ps1
+2026-10-31 05:29 closed-window notice active: no filler now
+2026-10-31 05:30 released stale STOP_CODEX.flag (CE 02's own, no job of ours running)
+2026-10-31 05:30 ran start_lanes.ps1
+2026-10-31 05:30 closed-window notice active: no filler now
+2026-10-31 05:30 released stale STOP_CODEX.flag (CE 02's own, no job of ours running)
+2026-10-31 05:30 ran start_lanes.ps1
+2026-10-31 05:30 closed-window notice active: no filler now
+2026-10-31 05:31 released stale STOP_CODEX.flag (CE 02's own, no job of ours running)
+2026-10-31 05:31 ran start_lanes.ps1
+2026-10-31 05:31 closed-window notice active: no filler now
+2026-10-31 05:31 released stale STOP_CODEX.flag (CE 02's own, no job of ours running)
+2026-10-31 05:31 ran start_lanes.ps1
+2026-10-31 05:31 closed-window notice active: no filler now
+2026-10-31 05:32 released stale STOP_CODEX.flag (CE 02's own, no job of ours running)
+2026-10-31 05:32 ran start_lanes.ps1
+2026-10-31 05:32 closed-window notice active: no filler now
+2026-10-31 05:32 released stale STOP_CODEX.flag (CE 02's own, no job of ours running)
+2026-10-31 05:33 ran start_lanes.ps1
+2026-10-31 05:33 closed-window notice active: no filler now
+2026-10-31 05:33 released stale STOP_CODEX.flag (CE 02's own, no job of ours running)
+2026-10-31 05:33 ran start_lanes.ps1
+2026-10-31 05:33 closed-window notice active: no filler now
+2026-10-31 05:34 released stale STOP_CODEX.flag (CE 02's own, no job of ours running)
+2026-10-31 05:34 ran start_lanes.ps1
+2026-10-31 05:34 AutoCAD idle with nothing queued: started the filler C:\CE_PLAN\desk_jobs\fill_priority_tier2.ps1
+2026-10-31 05:34 IDLE 6+ min: AUTOCAD IDLE since Sat 05:22 with no allowed reason. Pending work: NONE (queues empty: top them up). Codex cap/mode: PACE.
+2026-10-31 05:34 occupancy last 30 min: busy 20.5 min, idle 15.5 min
+2026-10-31 05:34 IDLE ENDED after 11.7 min (started 05:22)
+2026-10-31 05:37 IDLE STARTED 05:37:42 (checking for an allowed reason)
+2026-10-31 05:38 IDLE ENDED after 0.5 min (started 05:37)
+2026-10-31 05:43 IDLE STARTED 05:43:47 (checking for an allowed reason)
+2026-10-31 05:44 IDLE ENDED after 0.5 min (started 05:43)
+2026-10-31 05:45 IDLE STARTED 05:45:49 (checking for an allowed reason)
+2026-10-31 05:46 IDLE ENDED after 0.5 min (started 05:45)
+2026-10-31 05:52 IDLE STARTED 05:52:25 (checking for an allowed reason)
+2026-10-31 05:53 IDLE with no allowed reason since 05:52; pending: 
+2026-10-31 05:53 ran start_lanes.ps1
+2026-10-31 05:54 ran start_lanes.ps1
+2026-10-31 05:55 ran start_lanes.ps1
+2026-10-31 05:55 ran start_lanes.ps1
+2026-10-31 05:56 ran start_lanes.ps1
+2026-10-31 05:56 ran start_lanes.ps1
+2026-10-31 05:56 IDLE 6+ min: AUTOCAD IDLE since Sat 05:52 with no allowed reason. Pending work: NONE (queues empty: top them up). Codex cap/mode: PACE.
+2026-10-31 05:57 IDLE ENDED after 4.9 min (started 05:52)
+2026-10-31 06:00 IDLE STARTED 06:00:50 (checking for an allowed reason)
+2026-10-31 06:01 IDLE ENDED after 1 min (started 06:00)
+2026-10-31 06:02 IDLE STARTED 06:02:21 (checking for an allowed reason)
+2026-10-31 06:02 IDLE ENDED after 0.5 min (started 06:02)
+2026-10-31 06:04 occupancy last 30 min: busy 22 min, idle 7.5 min
+2026-10-31 06:08 IDLE STARTED 06:08:57 (checking for an allowed reason)
+2026-10-31 06:09 IDLE ENDED after 0.5 min (started 06:08)
+2026-10-31 06:17 IDLE STARTED 06:17:54 (checking for an allowed reason)
+2026-10-31 06:18 IDLE ENDED after 0.5 min (started 06:17)
+2026-10-31 06:23 IDLE STARTED 06:23:07 (checking for an allowed reason)
+2026-10-31 06:23 IDLE ENDED after 0.5 min (started 06:23)
+2026-10-31 06:24 IDLE STARTED 06:24:40 (checking for an allowed reason)
+2026-10-31 06:25 IDLE ENDED after 0.5 min (started 06:24)
+2026-10-31 06:27 IDLE STARTED 06:27:12 (checking for an allowed reason)
+2026-10-31 06:28 IDLE ENDED after 1 min (started 06:27)
+2026-10-31 06:28 IDLE STARTED 06:28:44 (checking for an allowed reason)
+2026-10-31 06:29 IDLE ENDED after 0.5 min (started 06:28)
+2026-10-31 06:33 IDLE STARTED 06:33:48 (checking for an allowed reason)
+2026-10-31 06:34 IDLE ENDED after 0.5 min (started 06:33)
+2026-10-31 06:34 occupancy last 30 min: busy 25.5 min, idle 4 min
+2026-10-31 06:46 IDLE STARTED 06:46:00 (checking for an allowed reason)
+2026-10-31 06:46 IDLE ENDED after 0.5 min (started 06:46)
+2026-10-31 07:01 IDLE STARTED 07:01:47 (checking for an allowed reason)
+2026-10-31 07:03 IDLE with no allowed reason since 07:01; pending: 
+2026-10-31 07:03 ran start_lanes.ps1
+2026-10-31 07:03 closed-window notice active: no filler now
+2026-10-31 07:04 ran start_lanes.ps1
+2026-10-31 07:04 closed-window notice active: no filler now
+2026-10-31 07:04 ran start_lanes.ps1
+2026-10-31 07:04 closed-window notice active: no filler now
+2026-10-31 07:05 IDLE ENDED after 3.7 min (started 07:01)
+2026-10-31 07:05 occupancy last 30 min: busy 26 min, idle 4 min
+2026-10-31 07:06 IDLE STARTED 07:06:59 (checking for an allowed reason)
+2026-10-31 07:07 IDLE ENDED after 0.6 min (started 07:06)
+2026-10-31 07:11 IDLE STARTED 07:11:46 (checking for an allowed reason)
+2026-10-31 07:12 IDLE ENDED after 0.5 min (started 07:11)
+2026-10-31 07:14 IDLE STARTED 07:14:50 (checking for an allowed reason)
+2026-10-31 07:15 IDLE ENDED after 0.5 min (started 07:14)
+2026-10-31 07:22 IDLE STARTED 07:22:29 (checking for an allowed reason)
+2026-10-31 07:22 IDLE ENDED after 0.5 min (started 07:22)
+2026-10-31 07:35 occupancy last 30 min: busy 27.5 min, idle 2 min
+2026-10-31 07:37 IDLE STARTED 07:37:45 (checking for an allowed reason)
+2026-10-31 07:38 IDLE ENDED after 0.5 min (started 07:37)
+2026-10-31 07:53 IDLE STARTED 07:53:01 (checking for an allowed reason)
+2026-10-31 07:53 IDLE ENDED after 0.5 min (started 07:53)
+2026-10-31 07:59 IDLE STARTED 07:59:07 (checking for an allowed reason)
+2026-10-31 07:59 IDLE ENDED after 0.5 min (started 07:59)
+2026-10-31 08:05 occupancy last 30 min: busy 28 min, idle 1.5 min
+2026-10-31 08:13 IDLE STARTED 08:13:52 (checking for an allowed reason)
+2026-10-31 08:14 IDLE ENDED after 0.5 min (started 08:13)
+2026-10-31 08:19 IDLE STARTED 08:19:57 (checking for an allowed reason)
+2026-10-31 08:20 IDLE ENDED after 0.5 min (started 08:19)
+2026-10-31 08:29 IDLE STARTED 08:29:06 (checking for an allowed reason)
+2026-10-31 08:29 IDLE ENDED after 0.5 min (started 08:29)
+2026-10-31 08:31 IDLE STARTED 08:31:38 (checking for an allowed reason)
+2026-10-31 08:32 IDLE ENDED after 0.5 min (started 08:31)
+2026-10-31 08:34 IDLE STARTED 08:34:11 (checking for an allowed reason)
+2026-10-31 08:34 IDLE ENDED after 0.5 min (started 08:34)
+2026-10-31 08:36 occupancy last 30 min: busy 27.5 min, idle 2.5 min
+2026-10-31 08:56 IDLE STARTED 08:56:34 (checking for an allowed reason)
+2026-10-31 08:57 IDLE ENDED after 1 min (started 08:56)
+2026-10-31 08:59 IDLE STARTED 08:59:06 (checking for an allowed reason)
+2026-10-31 08:59 IDLE ENDED after 0.5 min (started 08:59)
+2026-10-31 09:01 IDLE STARTED 09:01:09 (checking for an allowed reason)
+2026-10-31 09:01 IDLE ENDED after 0.5 min (started 09:01)
+2026-10-31 09:06 occupancy last 30 min: busy 27.5 min, idle 2 min
+2026-10-31 09:06 IDLE STARTED 09:06:44 (checking for an allowed reason)
+2026-10-31 09:07 IDLE ENDED after 0.5 min (started 09:06)
+2026-10-31 09:16 IDLE STARTED 09:16:24 (checking for an allowed reason)
+2026-10-31 09:16 IDLE ENDED after 0.5 min (started 09:16)
+2026-10-31 09:23 IDLE STARTED 09:23:32 (checking for an allowed reason)
+2026-10-31 09:24 IDLE ENDED after 0.5 min (started 09:23)
+2026-10-31 09:26 IDLE STARTED 09:26:36 (checking for an allowed reason)
+2026-10-31 09:27 IDLE ENDED after 0.5 min (started 09:26)
+2026-10-31 09:30 IDLE STARTED 09:30:40 (checking for an allowed reason)
+2026-10-31 09:31 IDLE ENDED after 0.5 min (started 09:30)
+2026-10-31 09:32 IDLE STARTED 09:32:12 (checking for an allowed reason)
+2026-10-31 09:33 IDLE ENDED after 1 min (started 09:32)
+2026-10-31 09:36 occupancy last 30 min: busy 26 min, idle 3.5 min
+2026-10-31 09:44 IDLE STARTED 09:44:25 (checking for an allowed reason)
+2026-10-31 09:44 IDLE ENDED after 0.5 min (started 09:44)
+2026-10-31 09:47 IDLE STARTED 09:47:58 (checking for an allowed reason)
+2026-10-31 09:48 IDLE ENDED after 0.5 min (started 09:47)
+2026-10-31 10:06 occupancy last 30 min: busy 29 min, idle 1 min
+2026-10-31 10:09 IDLE STARTED 10:09:18 (checking for an allowed reason)
+2026-10-31 10:09 IDLE ENDED after 0.5 min (started 10:09)
+2026-10-31 10:12 IDLE STARTED 10:12:21 (checking for an allowed reason)
+2026-10-31 10:12 IDLE ENDED after 0.5 min (started 10:12)
+2026-10-31 10:27 IDLE STARTED 10:27:06 (checking for an allowed reason)
+2026-10-31 10:28 IDLE ENDED after 1 min (started 10:27)
+2026-10-31 10:33 IDLE STARTED 10:33:12 (checking for an allowed reason)
+2026-10-31 10:33 IDLE ENDED after 0.5 min (started 10:33)
+2026-10-31 10:36 occupancy last 30 min: busy 27 min, idle 2.5 min
+2026-10-31 10:43 IDLE STARTED 10:43:53 (checking for an allowed reason)
+2026-10-31 10:44 IDLE ENDED after 0.5 min (started 10:43)
+2026-10-31 10:46 IDLE STARTED 10:46:26 (checking for an allowed reason)
+2026-10-31 10:46 IDLE ENDED after 0.5 min (started 10:46)
+2026-10-31 10:50 IDLE STARTED 10:50:30 (checking for an allowed reason)
+2026-10-31 10:51 IDLE ENDED after 0.5 min (started 10:50)
+2026-10-31 10:53 IDLE STARTED 10:53:03 (checking for an allowed reason)
+2026-10-31 10:53 IDLE ENDED after 0.5 min (started 10:53)
+2026-10-31 10:57 IDLE STARTED 10:57:39 (checking for an allowed reason)
+2026-10-31 10:58 IDLE ENDED after 0.5 min (started 10:57)
+2026-10-31 11:06 occupancy last 30 min: busy 27 min, idle 2.5 min
+2026-10-31 11:09 IDLE STARTED 11:09:54 (checking for an allowed reason)
+2026-10-31 11:10 IDLE ENDED after 0.5 min (started 11:09)
+2026-10-31 11:17 IDLE STARTED 11:17:01 (checking for an allowed reason)
+2026-10-31 11:17 IDLE ENDED after 0.5 min (started 11:17)
+2026-10-31 11:21 IDLE STARTED 11:21:37 (checking for an allowed reason)
+2026-10-31 11:22 IDLE ENDED after 1 min (started 11:21)
+2026-10-31 11:30 IDLE STARTED 11:30:49 (checking for an allowed reason)
+2026-10-31 11:31 IDLE ENDED after 0.5 min (started 11:30)
+2026-10-31 11:36 IDLE STARTED 11:36:55 (checking for an allowed reason)
+2026-10-31 11:36 occupancy last 30 min: busy 26.5 min, idle 3 min
+2026-10-31 11:37 IDLE ENDED after 0.5 min (started 11:36)
+2026-10-31 11:39 IDLE STARTED 11:39:27 (checking for an allowed reason)
+2026-10-31 11:39 IDLE ENDED after 0.5 min (started 11:39)
+2026-10-31 11:41 IDLE STARTED 11:41:29 (checking for an allowed reason)
+2026-10-31 11:42 IDLE ENDED after 0.5 min (started 11:41)
+2026-10-31 11:46 IDLE STARTED 11:46:03 (checking for an allowed reason)
+2026-10-31 11:47 IDLE ENDED after 1 min (started 11:46)
+2026-10-31 11:54 IDLE STARTED 11:54:10 (checking for an allowed reason)
+2026-10-31 11:55 IDLE ENDED after 1 min (started 11:54)
+2026-10-31 11:57 IDLE STARTED 11:57:45 (checking for an allowed reason)
+2026-10-31 11:58 IDLE ENDED after 0.5 min (started 11:57)
+2026-10-31 12:01 IDLE STARTED 12:01:50 (checking for an allowed reason)
+2026-10-31 12:02 IDLE ENDED after 0.5 min (started 12:01)
+2026-10-31 12:05 IDLE STARTED 12:05:24 (checking for an allowed reason)
+2026-10-31 12:06 IDLE ENDED after 1 min (started 12:05)
+2026-10-31 12:06 occupancy last 30 min: busy 24.5 min, idle 5 min
+2026-10-31 12:08 IDLE STARTED 12:08:27 (checking for an allowed reason)
+2026-10-31 12:08 IDLE ENDED after 0.5 min (started 12:08)
+2026-10-31 12:11 IDLE STARTED 12:11:00 (checking for an allowed reason)
+2026-10-31 12:12 IDLE ENDED after 1 min (started 12:11)
+2026-10-31 12:15 IDLE STARTED 12:15:04 (checking for an allowed reason)
+2026-10-31 12:15 IDLE ENDED after 0.5 min (started 12:15)
+2026-10-31 12:17 IDLE STARTED 12:17:06 (checking for an allowed reason)
+2026-10-31 12:17 IDLE ENDED after 0.5 min (started 12:17)
+2026-10-31 12:29 IDLE STARTED 12:29:49 (checking for an allowed reason)
+2026-10-31 12:30 IDLE ENDED after 0.5 min (started 12:29)
+2026-10-31 12:33 IDLE STARTED 12:33:53 (checking for an allowed reason)
+2026-10-31 12:34 IDLE ENDED after 0.5 min (started 12:33)
+2026-10-31 12:36 occupancy last 30 min: busy 26 min, idle 3.5 min
+2026-10-31 12:51 IDLE STARTED 12:51:13 (checking for an allowed reason)
+2026-10-31 12:51 IDLE ENDED after 0.5 min (started 12:51)
+2026-10-31 12:55 IDLE STARTED 12:55:18 (checking for an allowed reason)
+2026-10-31 12:55 IDLE ENDED after 0.5 min (started 12:55)
+2026-10-31 12:58 IDLE STARTED 12:58:53 (checking for an allowed reason)
+2026-10-31 12:59 IDLE ENDED after 1 min (started 12:58)
+2026-10-31 13:07 occupancy last 30 min: busy 27.5 min, idle 2 min
+2026-10-31 13:11 IDLE STARTED 13:11:07 (checking for an allowed reason)
+2026-10-31 13:11 IDLE ENDED after 0.5 min (started 13:11)
+2026-10-31 13:15 IDLE STARTED 13:15:12 (checking for an allowed reason)
+2026-10-31 13:15 IDLE ENDED after 0.5 min (started 13:15)
+2026-10-31 13:28 IDLE STARTED 13:28:57 (checking for an allowed reason)
+2026-10-31 13:29 IDLE ENDED after 0.5 min (started 13:28)
+2026-10-31 13:34 IDLE STARTED 13:34:33 (checking for an allowed reason)
+2026-10-31 13:35 IDLE ENDED after 0.5 min (started 13:34)
+2026-10-31 13:37 occupancy last 30 min: busy 27.5 min, idle 2 min
+2026-10-31 13:39 IDLE STARTED 13:39:07 (checking for an allowed reason)
+2026-10-31 13:39 IDLE ENDED after 0.5 min (started 13:39)
+2026-10-31 13:49 IDLE STARTED 13:49:48 (checking for an allowed reason)
+2026-10-31 13:50 IDLE ENDED after 1 min (started 13:49)
+2026-10-31 13:56 IDLE STARTED 13:56:25 (checking for an allowed reason)
+2026-10-31 13:56 IDLE ENDED after 0.5 min (started 13:56)
+2026-10-31 14:00 IDLE STARTED 14:00:29 (checking for an allowed reason)
+2026-10-31 14:01 IDLE ENDED after 1 min (started 14:00)
+2026-10-31 14:07 occupancy last 30 min: busy 26.5 min, idle 3 min
+2026-10-31 14:16 IDLE STARTED 14:16:27 (checking for an allowed reason)
+2026-10-31 14:17 IDLE ENDED after 1.1 min (started 14:16)
+2026-10-31 14:25 IDLE STARTED 14:25:47 (checking for an allowed reason)
+2026-10-31 14:26 IDLE ENDED after 1 min (started 14:25)
+2026-10-31 14:35 IDLE STARTED 14:35:03 (checking for an allowed reason)
+2026-10-31 14:35 IDLE ENDED after 0.5 min (started 14:35)
+2026-10-31 14:37 IDLE STARTED 14:37:06 (checking for an allowed reason)
+2026-10-31 14:37 IDLE ENDED after 0.5 min (started 14:37)
+2026-10-31 14:37 occupancy last 30 min: busy 26.5 min, idle 3 min
+2026-10-31 14:40 IDLE STARTED 14:40:12 (checking for an allowed reason)
+2026-10-31 14:40 IDLE ENDED after 0.5 min (started 14:40)
+2026-10-31 14:42 IDLE STARTED 14:42:16 (checking for an allowed reason)
+2026-10-31 14:42 IDLE ENDED after 0.5 min (started 14:42)
+2026-10-31 14:44 IDLE STARTED 14:44:51 (checking for an allowed reason)
+2026-10-31 14:45 IDLE ENDED after 0.5 min (started 14:44)
+2026-10-31 14:52 IDLE STARTED 14:52:34 (checking for an allowed reason)
+2026-10-31 14:54 IDLE with no allowed reason since 14:52; pending: 
+2026-10-31 14:54 ran start_lanes.ps1
+2026-10-31 14:54 ran start_lanes.ps1
+2026-10-31 14:55 ran start_lanes.ps1
+2026-10-31 14:55 ran start_lanes.ps1
+2026-10-31 14:56 ran start_lanes.ps1
+2026-10-31 14:57 ran start_lanes.ps1
+2026-10-31 14:57 IDLE 6+ min: AUTOCAD IDLE since Sat 14:52 with no allowed reason. Pending work: NONE (queues empty: top them up). Codex cap/mode: PACE.
+2026-10-31 14:57 IDLE ENDED after 5.1 min (started 14:52)
+2026-10-31 14:59 IDLE STARTED 14:59:42 (checking for an allowed reason)
+2026-10-31 15:00 IDLE ENDED after 1 min (started 14:59)
+2026-10-31 15:04 IDLE STARTED 15:04:49 (checking for an allowed reason)
+2026-10-31 15:06 IDLE with no allowed reason since 15:04; pending: 
+2026-10-31 15:06 ran start_lanes.ps1
+2026-10-31 15:06 ran start_lanes.ps1
+2026-10-31 15:07 ran start_lanes.ps1
+2026-10-31 15:08 ran start_lanes.ps1
+2026-10-31 15:08 occupancy last 30 min: busy 18.5 min, idle 10.5 min
+2026-10-31 15:08 IDLE ENDED after 3.9 min (started 15:04)
+2026-10-31 15:09 IDLE STARTED 15:09:44 (checking for an allowed reason)
+2026-10-31 15:11 IDLE with no allowed reason since 15:09; pending: 
+2026-10-31 15:11 ran start_lanes.ps1
+2026-10-31 15:11 ran start_lanes.ps1
+2026-10-31 15:12 ran start_lanes.ps1
+2026-10-31 15:13 ran start_lanes.ps1
+2026-10-31 15:13 ran start_lanes.ps1
+2026-10-31 15:14 ran start_lanes.ps1
+2026-10-31 15:14 IDLE 6+ min: AUTOCAD IDLE since Sat 15:09 with no allowed reason. Pending work: NONE (queues empty: top them up). Codex cap/mode: PACE.
+2026-10-31 15:14 ran start_lanes.ps1
+2026-10-31 15:15 IDLE ENDED after 5.7 min (started 15:09)
+2026-10-31 15:27 IDLE STARTED 15:27:44 (checking for an allowed reason)
+2026-10-31 15:28 IDLE ENDED after 0.5 min (started 15:27)
+2026-10-31 15:31 IDLE STARTED 15:31:19 (checking for an allowed reason)
+2026-10-31 15:32 IDLE ENDED after 1.5 min (started 15:31)
+2026-10-31 15:36 IDLE STARTED 15:36:57 (checking for an allowed reason)
+2026-10-31 15:37 IDLE ENDED after 0.5 min (started 15:36)
+2026-10-31 15:38 occupancy last 30 min: busy 21.5 min, idle 7.5 min
+2026-10-31 16:01 IDLE STARTED 16:01:59 (checking for an allowed reason)
+2026-10-31 16:03 IDLE ENDED after 1 min (started 16:01)
+2026-10-31 16:08 occupancy last 30 min: busy 28.5 min, idle 1 min
+2026-10-31 16:33 IDLE STARTED 16:33:11 (checking for an allowed reason)
+2026-10-31 16:33 IDLE ENDED after 0.5 min (started 16:33)
+2026-10-31 16:38 occupancy last 30 min: busy 29 min, idle 0.5 min
+2026-10-31 16:45 IDLE STARTED 16:45:33 (checking for an allowed reason)
+2026-10-31 16:46 IDLE ENDED after 0.5 min (started 16:45)
+2026-10-31 16:51 IDLE STARTED 16:51:44 (checking for an allowed reason)
+2026-10-31 16:52 IDLE ENDED after 0.5 min (started 16:51)
+2026-10-31 16:57 IDLE STARTED 16:57:23 (checking for an allowed reason)
+2026-10-31 16:57 IDLE ENDED after 0.5 min (started 16:57)
+2026-10-31 17:03 IDLE STARTED 17:03:02 (checking for an allowed reason)
+2026-10-31 17:04 IDLE ENDED after 1 min (started 17:03)
+2026-10-31 17:09 occupancy last 30 min: busy 27 min, idle 2.5 min
+2026-10-31 17:26 IDLE STARTED 17:26:46 (checking for an allowed reason)
+2026-10-31 17:27 IDLE ENDED after 0.5 min (started 17:26)
+2026-10-31 17:33 IDLE STARTED 17:33:59 (checking for an allowed reason)
+2026-10-31 17:34 IDLE ENDED after 0.5 min (started 17:33)
+2026-10-31 17:39 occupancy last 30 min: busy 28.5 min, idle 1 min
+2026-10-31 17:40 IDLE STARTED 17:40:39 (checking for an allowed reason)
+2026-10-31 17:41 IDLE ENDED after 1 min (started 17:40)
+2026-10-31 17:44 IDLE STARTED 17:44:46 (checking for an allowed reason)
+2026-10-31 17:45 IDLE ENDED after 0.5 min (started 17:44)
+2026-10-31 17:48 IDLE STARTED 17:48:55 (checking for an allowed reason)
+2026-10-31 17:49 IDLE ENDED after 1 min (started 17:48)
+2026-10-31 17:53 IDLE STARTED 17:53:02 (checking for an allowed reason)
+2026-10-31 17:53 IDLE ENDED after 0.5 min (started 17:53)
+2026-10-31 17:57 IDLE STARTED 17:57:11 (checking for an allowed reason)
+2026-10-31 17:58 IDLE ENDED after 1 min (started 17:57)
+2026-10-31 18:03 IDLE STARTED 18:03:51 (checking for an allowed reason)
+2026-10-31 18:04 IDLE ENDED after 1 min (started 18:03)
+2026-10-31 18:10 occupancy last 30 min: busy 24.5 min, idle 5 min
+2026-10-31 18:17 IDLE STARTED 18:17:47 (checking for an allowed reason)
+2026-10-31 18:18 IDLE ENDED after 1 min (started 18:17)
+2026-10-31 18:31 IDLE STARTED 18:31:42 (checking for an allowed reason)
+2026-10-31 18:32 IDLE ENDED after 1 min (started 18:31)
+2026-10-31 18:39 IDLE STARTED 18:39:26 (checking for an allowed reason)
+2026-10-31 18:39 IDLE ENDED after 0.5 min (started 18:39)
+2026-10-31 18:40 occupancy last 30 min: busy 27 min, idle 2.5 min
+2026-10-31 18:48 IDLE STARTED 18:48:46 (checking for an allowed reason)
+2026-10-31 18:49 IDLE ENDED after 1 min (started 18:48)
+2026-10-31 19:00 IDLE STARTED 19:00:41 (checking for an allowed reason)
+2026-10-31 19:01 IDLE ENDED after 1 min (started 19:00)
+2026-10-31 19:10 occupancy last 30 min: busy 27.5 min, idle 2 min
+2026-10-31 19:14 IDLE STARTED 19:14:05 (checking for an allowed reason)
+2026-10-31 19:15 IDLE ENDED after 1 min (started 19:14)
+2026-10-31 19:19 IDLE STARTED 19:19:14 (checking for an allowed reason)
+2026-10-31 19:20 IDLE with no allowed reason since 19:19; pending: 
+2026-10-31 19:20 ran start_lanes.ps1
+2026-10-31 19:21 released stale STOP_CODEX.flag (CE 02's own, no job of ours running)
+2026-10-31 19:21 ran start_lanes.ps1
+2026-10-31 19:21 AutoCAD idle with nothing queued: started the filler C:\CE_PLAN\desk_jobs\fill_twins.ps1
+2026-10-31 19:22 ran start_lanes.ps1
+2026-10-31 19:22 AutoCAD idle with nothing queued: started the filler C:\CE_PLAN\desk_jobs\fill_carpark_30oct.ps1
+2026-10-31 19:22 ran start_lanes.ps1
+2026-10-31 19:22 AutoCAD idle with nothing queued: started the filler C:\CE_PLAN\desk_jobs\fill_gap_cases.ps1
+2026-10-31 19:23 ran start_lanes.ps1
+2026-10-31 19:23 AutoCAD idle with nothing queued: started the filler C:\CE_PLAN\desk_jobs\fill_next40_b.ps1
+2026-10-31 19:23 IDLE 6+ min: AUTOCAD IDLE since Sat 19:19 with no allowed reason. Pending work: NONE (queues empty: top them up). Codex cap/mode: PACE.
+2026-10-31 19:24 ran start_lanes.ps1
+2026-10-31 19:24 ran start_lanes.ps1
+2026-10-31 19:25 ran start_lanes.ps1
+2026-10-31 19:25 ran start_lanes.ps1
+2026-10-31 19:26 ran start_lanes.ps1
+2026-10-31 19:27 ran start_lanes.ps1
+2026-10-31 19:28 IDLE ENDED after 8.9 min (started 19:19)
+2026-10-31 19:31 IDLE STARTED 19:31:14 (checking for an allowed reason)
+2026-10-31 19:32 IDLE with no allowed reason since 19:31; pending: 
+2026-10-31 19:32 ran start_lanes.ps1
+2026-10-31 19:33 ran start_lanes.ps1
+2026-10-31 19:34 ran start_lanes.ps1
+2026-10-31 19:34 ran start_lanes.ps1
+2026-10-31 19:35 ran start_lanes.ps1
+2026-10-31 19:35 IDLE 6+ min: AUTOCAD IDLE since Sat 19:31 with no allowed reason. Pending work: NONE (queues empty: top them up). Codex cap/mode: PACE.
+2026-10-31 19:35 ran start_lanes.ps1
+2026-10-31 19:36 ran start_lanes.ps1
+2026-10-31 19:37 ran start_lanes.ps1
+2026-10-31 19:37 ran start_lanes.ps1
+2026-10-31 19:38 ran start_lanes.ps1
+2026-10-31 19:39 ran start_lanes.ps1
+2026-10-31 19:39 ran start_lanes.ps1
+2026-10-31 19:40 ran start_lanes.ps1
+2026-10-31 19:40 IDLE ENDED after 9.7 min (started 19:31)
+2026-10-31 19:41 occupancy last 30 min: busy 10.5 min, idle 16.5 min
+2026-10-31 19:50 IDLE STARTED 19:50:39 (checking for an allowed reason)
+2026-10-31 19:51 IDLE ENDED after 1 min (started 19:50)
+2026-10-31 20:01 IDLE STARTED 20:01:31 (checking for an allowed reason)
+2026-10-31 20:02 IDLE ENDED after 0.5 min (started 20:01)
+2026-10-31 20:05 IDLE STARTED 20:05:39 (checking for an allowed reason)
+2026-10-31 20:07 IDLE with no allowed reason since 20:05; pending: 
+2026-10-31 20:07 ran start_lanes.ps1
+2026-10-31 20:08 ran start_lanes.ps1
+2026-10-31 20:09 ran start_lanes.ps1
+2026-10-31 20:09 ran start_lanes.ps1
+2026-10-31 20:10 ran start_lanes.ps1
+2026-10-31 20:10 IDLE 6+ min: AUTOCAD IDLE since Sat 20:05 with no allowed reason. Pending work: NONE (queues empty: top them up). Codex cap/mode: PACE.
+2026-10-31 20:11 ran start_lanes.ps1
+2026-10-31 20:11 ran start_lanes.ps1
+2026-10-31 20:11 occupancy last 30 min: busy 21.5 min, idle 7 min
+2026-10-31 20:12 ran start_lanes.ps1
+2026-10-31 20:12 ran start_lanes.ps1
+2026-10-31 20:13 IDLE ENDED after 7.7 min (started 20:05)
+2026-10-31 20:24 IDLE STARTED 20:24:15 (checking for an allowed reason)
+2026-10-31 20:25 IDLE ENDED after 1 min (started 20:24)
+2026-10-31 20:27 IDLE STARTED 20:27:51 (checking for an allowed reason)
+2026-10-31 20:28 IDLE ENDED after 0.5 min (started 20:27)
+2026-10-31 20:32 IDLE STARTED 20:32:29 (checking for an allowed reason)
+2026-10-31 20:33 IDLE ENDED after 0.5 min (started 20:32)
+2026-10-31 20:41 occupancy last 30 min: busy 26 min, idle 3 min
+2026-10-31 20:42 IDLE STARTED 20:42:50 (checking for an allowed reason)
+2026-10-31 20:43 IDLE ENDED after 1 min (started 20:42)
+2026-10-31 20:47 IDLE STARTED 20:47:29 (checking for an allowed reason)
+2026-10-31 20:48 IDLE ENDED after 1 min (started 20:47)
+2026-10-31 21:00 IDLE STARTED 21:00:54 (checking for an allowed reason)
+2026-10-31 21:01 IDLE ENDED after 0.5 min (started 21:00)
+2026-10-31 21:12 occupancy last 30 min: busy 27 min, idle 2.5 min
+2026-10-31 21:13 IDLE STARTED 21:13:48 (checking for an allowed reason)
+2026-10-31 21:14 IDLE ENDED after 1 min (started 21:13)
+2026-10-31 21:25 IDLE STARTED 21:25:41 (checking for an allowed reason)
+2026-10-31 21:26 IDLE ENDED after 1 min (started 21:25)
+2026-10-31 21:41 IDLE STARTED 21:41:41 (checking for an allowed reason)
+2026-10-31 21:42 IDLE ENDED after 0.5 min (started 21:41)
+2026-10-31 21:42 occupancy last 30 min: busy 27 min, idle 2.5 min
+2026-10-31 21:45 IDLE STARTED 21:45:17 (checking for an allowed reason)
+2026-10-31 21:45 IDLE ENDED after 0.5 min (started 21:45)
+2026-10-31 21:57 IDLE STARTED 21:57:09 (checking for an allowed reason)
+2026-10-31 21:57 IDLE ENDED after 0.5 min (started 21:57)
+2026-10-31 22:13 occupancy last 30 min: busy 28.5 min, idle 1 min
+2026-10-31 22:24 IDLE STARTED 22:24:54 (checking for an allowed reason)
+2026-10-31 22:25 IDLE ENDED after 1 min (started 22:24)
+2026-10-31 22:34 IDLE STARTED 22:34:40 (checking for an allowed reason)
+2026-10-31 22:35 IDLE ENDED after 0.5 min (started 22:34)
+2026-10-31 22:40 IDLE STARTED 22:40:18 (checking for an allowed reason)
+2026-10-31 22:40 IDLE ENDED after 0.5 min (started 22:40)
+2026-10-31 22:43 occupancy last 30 min: busy 27.5 min, idle 2 min
+2026-10-31 22:50 IDLE STARTED 22:50:32 (checking for an allowed reason)
+2026-10-31 22:51 IDLE ENDED after 0.5 min (started 22:50)
+2026-10-31 23:01 IDLE STARTED 23:01:51 (checking for an allowed reason)
+2026-10-31 23:02 IDLE ENDED after 1 min (started 23:01)
+2026-10-31 23:10 IDLE STARTED 23:10:34 (checking for an allowed reason)
+2026-10-31 23:11 IDLE ENDED after 0.5 min (started 23:10)
+2026-10-31 23:12 IDLE STARTED 23:12:37 (checking for an allowed reason)
+2026-10-31 23:13 IDLE ENDED after 1 min (started 23:12)
+2026-10-31 23:13 occupancy last 30 min: busy 26.5 min, idle 3 min
+2026-10-31 23:29 IDLE STARTED 23:29:05 (checking for an allowed reason)
+2026-10-31 23:30 IDLE ENDED after 1 min (started 23:29)
+2026-10-31 23:34 IDLE STARTED 23:34:43 (checking for an allowed reason)
+2026-10-31 23:35 IDLE ENDED after 0.5 min (started 23:34)
+2026-10-31 23:41 IDLE STARTED 23:41:25 (checking for an allowed reason)
+2026-10-31 23:41 IDLE ENDED after 0.5 min (started 23:41)
+2026-10-31 23:43 occupancy last 30 min: busy 27.5 min, idle 2 min
+2026-10-31 23:50 IDLE STARTED 23:50:40 (checking for an allowed reason)
+2026-10-31 23:51 IDLE ENDED after 0.5 min (started 23:50)
+2026-10-31 23:53 IDLE STARTED 23:53:44 (checking for an allowed reason)
+2026-10-31 23:54 IDLE ENDED after 0.5 min (started 23:53)
+2026-11-01 00:01 IDLE STARTED 00:01:58 (checking for an allowed reason)
+2026-11-01 00:02 IDLE ENDED after 1 min (started 00:01)
+2026-11-01 00:08 IDLE STARTED 00:08:39 (checking for an allowed reason)
+2026-11-01 00:09 IDLE ENDED after 1 min (started 00:08)
+2026-11-01 00:11 IDLE STARTED 00:11:45 (checking for an allowed reason)
+2026-11-01 00:13 IDLE ENDED after 1.5 min (started 00:11)
+2026-11-01 00:14 occupancy last 30 min: busy 25 min, idle 4.5 min
+2026-11-01 00:15 IDLE STARTED 00:15:52 (checking for an allowed reason)
+2026-11-01 00:16 IDLE ENDED after 1 min (started 00:15)
+2026-11-01 00:27 IDLE STARTED 00:27:14 (checking for an allowed reason)
+2026-11-01 00:28 IDLE with no allowed reason since 00:27; pending: 
+2026-11-01 00:28 ran start_lanes.ps1
+2026-11-01 00:29 IDLE ENDED after 2.2 min (started 00:27)
+2026-11-01 00:31 IDLE STARTED 00:31:59 (checking for an allowed reason)
+2026-11-01 00:33 IDLE ENDED after 1.6 min (started 00:31)
+2026-11-01 00:38 IDLE STARTED 00:38:49 (checking for an allowed reason)
+2026-11-01 00:40 IDLE ENDED after 1.3 min (started 00:38)
+2026-11-01 00:44 occupancy last 30 min: busy 23 min, idle 5.5 min
+2026-11-01 00:48 IDLE STARTED 00:48:20 (checking for an allowed reason)
+2026-11-01 00:49 IDLE with no allowed reason since 00:48; pending: 
+2026-11-01 00:49 ran start_lanes.ps1
+2026-11-01 00:50 ran start_lanes.ps1
+2026-11-01 00:51 ran start_lanes.ps1
+2026-11-01 00:51 IDLE ENDED after 3.4 min (started 00:48)
+2026-11-01 00:57 IDLE STARTED 00:57:23 (checking for an allowed reason)
+2026-11-01 00:58 IDLE ENDED after 1 min (started 00:57)
+2026-11-01 01:00 IDLE STARTED 01:00:59 (checking for an allowed reason)
+2026-11-01 01:01 IDLE ENDED after 0.5 min (started 01:00)
+2026-11-01 01:03 IDLE STARTED 01:03:34 (checking for an allowed reason)
+2026-11-01 01:04 IDLE ENDED after 0.5 min (started 01:03)
+2026-11-01 01:05 IDLE STARTED 01:05:38 (checking for an allowed reason)
+2026-11-01 01:06 IDLE ENDED after 1 min (started 01:05)
+2026-11-01 01:10 IDLE STARTED 01:10:48 (checking for an allowed reason)
+2026-11-01 01:11 IDLE ENDED after 0.5 min (started 01:10)
+2026-11-01 01:14 occupancy last 30 min: busy 22.5 min, idle 6.5 min
+2026-11-01 01:16 IDLE STARTED 01:16:57 (checking for an allowed reason)
+2026-11-01 01:17 IDLE ENDED after 1 min (started 01:16)
+2026-11-01 01:28 IDLE STARTED 01:28:47 (checking for an allowed reason)
+2026-11-01 01:29 IDLE ENDED after 1 min (started 01:28)
+2026-11-01 01:31 IDLE STARTED 01:31:51 (checking for an allowed reason)
+2026-11-01 01:32 IDLE ENDED after 0.5 min (started 01:31)
+2026-11-01 01:37 IDLE STARTED 01:37:00 (checking for an allowed reason)
+2026-11-01 01:38 IDLE ENDED after 1 min (started 01:37)
+2026-11-01 01:45 occupancy last 30 min: busy 26 min, idle 3.5 min
+2026-11-01 01:45 IDLE STARTED 01:45:44 (checking for an allowed reason)
+2026-11-01 01:46 IDLE ENDED after 0.5 min (started 01:45)
+2026-11-01 01:54 IDLE STARTED 01:54:27 (checking for an allowed reason)
+2026-11-01 01:55 IDLE ENDED after 1 min (started 01:54)
+2026-11-01 01:59 IDLE STARTED 01:59:35 (checking for an allowed reason)
+2026-11-01 02:00 IDLE ENDED after 0.5 min (started 01:59)
+2026-11-01 02:05 IDLE STARTED 02:05:13 (checking for an allowed reason)
+2026-11-01 02:05 IDLE ENDED after 0.5 min (started 02:05)
+2026-11-01 02:15 occupancy last 30 min: busy 27 min, idle 2.5 min
+2026-11-01 02:24 IDLE STARTED 02:24:41 (checking for an allowed reason)
+2026-11-01 02:25 IDLE ENDED after 0.5 min (started 02:24)
+2026-11-01 02:32 IDLE STARTED 02:32:22 (checking for an allowed reason)
+2026-11-01 02:32 IDLE ENDED after 0.5 min (started 02:32)
+2026-11-01 02:40 IDLE STARTED 02:40:40 (checking for an allowed reason)
+2026-11-01 02:41 IDLE ENDED after 1.1 min (started 02:40)
+2026-11-01 02:45 occupancy last 30 min: busy 27.5 min, idle 2 min
+2026-11-01 02:48 IDLE STARTED 02:48:53 (checking for an allowed reason)
+2026-11-01 02:49 IDLE ENDED after 1 min (started 02:48)
+2026-11-01 02:56 IDLE STARTED 02:56:05 (checking for an allowed reason)
+2026-11-01 02:57 IDLE ENDED after 1 min (started 02:56)
+2026-11-01 03:05 IDLE STARTED 03:05:24 (checking for an allowed reason)
+2026-11-01 03:05 IDLE ENDED after 0.5 min (started 03:05)
+2026-11-01 03:14 IDLE STARTED 03:14:11 (checking for an allowed reason)
+2026-11-01 03:14 IDLE ENDED after 0.5 min (started 03:14)
+2026-11-01 03:16 occupancy last 30 min: busy 26.5 min, idle 3 min
+2026-11-01 03:20 IDLE STARTED 03:20:19 (checking for an allowed reason)
+2026-11-01 03:20 IDLE ENDED after 0.5 min (started 03:20)
+2026-11-01 03:24 IDLE STARTED 03:24:24 (checking for an allowed reason)
+2026-11-01 03:24 IDLE ENDED after 0.5 min (started 03:24)
+2026-11-01 03:29 IDLE STARTED 03:29:30 (checking for an allowed reason)
+2026-11-01 03:30 IDLE ENDED after 1 min (started 03:29)
+2026-11-01 03:31 IDLE STARTED 03:31:01 (checking for an allowed reason)
+2026-11-01 03:31 IDLE ENDED after 0.5 min (started 03:31)
+2026-11-01 03:33 IDLE STARTED 03:33:34 (checking for an allowed reason)
+2026-11-01 03:34 IDLE ENDED after 0.5 min (started 03:33)
+2026-11-01 03:35 IDLE STARTED 03:35:06 (checking for an allowed reason)
+2026-11-01 03:35 IDLE ENDED after 0.5 min (started 03:35)
+2026-11-01 03:38 IDLE STARTED 03:38:40 (checking for an allowed reason)
+2026-11-01 03:39 IDLE ENDED after 1 min (started 03:38)
+2026-11-01 03:41 IDLE STARTED 03:41:13 (checking for an allowed reason)
+2026-11-01 03:41 IDLE ENDED after 0.5 min (started 03:41)
+2026-11-01 03:43 IDLE STARTED 03:43:15 (checking for an allowed reason)
+2026-11-01 03:43 IDLE ENDED after 0.5 min (started 03:43)
+2026-11-01 03:46 occupancy last 30 min: busy 24 min, idle 5.5 min
+2026-11-01 03:49 IDLE STARTED 03:49:22 (checking for an allowed reason)
+2026-11-01 03:49 IDLE ENDED after 0.5 min (started 03:49)
+2026-11-01 03:55 IDLE STARTED 03:55:28 (checking for an allowed reason)
+2026-11-01 03:55 IDLE ENDED after 0.5 min (started 03:55)
+2026-11-01 04:03 IDLE STARTED 04:03:07 (checking for an allowed reason)
+2026-11-01 04:03 IDLE ENDED after 0.5 min (started 04:03)
+2026-11-01 04:07 IDLE STARTED 04:07:42 (checking for an allowed reason)
+2026-11-01 04:08 IDLE ENDED after 0.5 min (started 04:07)
+2026-11-01 04:10 IDLE STARTED 04:10:14 (checking for an allowed reason)
+2026-11-01 04:10 IDLE ENDED after 0.5 min (started 04:10)
+2026-11-01 04:14 IDLE STARTED 04:14:18 (checking for an allowed reason)
+2026-11-01 04:14 IDLE ENDED after 0.5 min (started 04:14)
+2026-11-01 04:15 IDLE STARTED 04:15:50 (checking for an allowed reason)
+2026-11-01 04:16 IDLE ENDED after 0.5 min (started 04:15)
+2026-11-01 04:16 occupancy last 30 min: busy 26 min, idle 3.5 min
+2026-11-01 04:26 IDLE STARTED 04:26:36 (checking for an allowed reason)
+2026-11-01 04:28 IDLE with no allowed reason since 04:26; pending: 
+2026-11-01 04:28 ran start_lanes.ps1
+2026-11-01 04:28 ran start_lanes.ps1
+2026-11-01 04:29 ran start_lanes.ps1
+2026-11-01 04:29 IDLE ENDED after 3.4 min (started 04:26)
+2026-11-01 04:36 IDLE STARTED 04:36:38 (checking for an allowed reason)
+2026-11-01 04:38 IDLE with no allowed reason since 04:36; pending: 
+2026-11-01 04:38 ran start_lanes.ps1
+2026-11-01 04:38 ran start_lanes.ps1
+2026-11-01 04:39 ran start_lanes.ps1
+2026-11-01 04:39 IDLE ENDED after 3.3 min (started 04:36)
+2026-11-01 04:46 occupancy last 30 min: busy 23 min, idle 6 min
+2026-11-01 04:47 IDLE STARTED 04:47:04 (checking for an allowed reason)
+2026-11-01 04:48 IDLE with no allowed reason since 04:47; pending: 
+2026-11-01 04:48 ran start_lanes.ps1
+2026-11-01 04:49 ran start_lanes.ps1
+2026-11-01 04:49 ran start_lanes.ps1
+2026-11-01 04:50 IDLE ENDED after 3.3 min (started 04:47)
+2026-11-01 04:57 IDLE STARTED 04:57:32 (checking for an allowed reason)
+2026-11-01 04:59 IDLE with no allowed reason since 04:57; pending: 
+2026-11-01 04:59 ran start_lanes.ps1
+2026-11-01 04:59 ran start_lanes.ps1
+2026-11-01 05:00 released stale STOP_CODEX.flag (CE 02's own, no job of ours running)
+2026-11-01 05:00 ran start_lanes.ps1
+2026-11-01 05:00 IDLE ENDED after 3.3 min (started 04:57)
+2026-11-01 05:15 IDLE STARTED 05:15:08 (checking for an allowed reason)
+2026-11-01 05:15 IDLE ENDED after 0.5 min (started 05:15)
+2026-11-01 05:16 occupancy last 30 min: busy 22.5 min, idle 6.5 min
+2026-11-01 05:22 IDLE STARTED 05:22:17 (checking for an allowed reason)
+2026-11-01 05:23 IDLE ENDED after 1 min (started 05:22)
+2026-11-01 05:32 IDLE STARTED 05:32:30 (checking for an allowed reason)
+2026-11-01 05:33 IDLE ENDED after 1 min (started 05:32)
+2026-11-01 05:39 IDLE STARTED 05:39:08 (checking for an allowed reason)
+2026-11-01 05:40 IDLE ENDED after 1 min (started 05:39)
+2026-11-01 05:41 IDLE STARTED 05:41:41 (checking for an allowed reason)
+2026-11-01 05:42 IDLE ENDED after 0.5 min (started 05:41)
+2026-11-01 05:46 occupancy last 30 min: busy 26 min, idle 3.5 min
+2026-11-01 05:49 IDLE STARTED 05:49:20 (checking for an allowed reason)
+2026-11-01 05:50 IDLE ENDED after 1 min (started 05:49)
+2026-11-01 05:55 IDLE STARTED 05:55:27 (checking for an allowed reason)
+2026-11-01 05:56 IDLE ENDED after 1 min (started 05:55)
+2026-11-01 06:01 IDLE STARTED 06:01:33 (checking for an allowed reason)
+2026-11-01 06:02 IDLE ENDED after 1 min (started 06:01)
+2026-11-01 06:07 IDLE STARTED 06:07:40 (checking for an allowed reason)
+2026-11-01 06:08 IDLE ENDED after 0.5 min (started 06:07)
+2026-11-01 06:13 IDLE STARTED 06:13:46 (checking for an allowed reason)
+2026-11-01 06:14 IDLE ENDED after 0.5 min (started 06:13)
+2026-11-01 06:16 occupancy last 30 min: busy 25.5 min, idle 4 min
+2026-11-01 06:19 IDLE STARTED 06:19:22 (checking for an allowed reason)
+2026-11-01 06:20 IDLE ENDED after 1 min (started 06:19)
+2026-11-01 06:27 IDLE STARTED 06:27:00 (checking for an allowed reason)
+2026-11-01 06:28 IDLE ENDED after 1 min (started 06:27)
+2026-11-01 06:35 IDLE STARTED 06:35:09 (checking for an allowed reason)
+2026-11-01 06:36 IDLE ENDED after 1 min (started 06:35)
+2026-11-01 06:37 IDLE STARTED 06:37:12 (checking for an allowed reason)
+2026-11-01 06:38 IDLE ENDED after 1.5 min (started 06:37)
+2026-11-01 06:46 occupancy last 30 min: busy 25 min, idle 4.5 min
+2026-11-01 06:58 IDLE STARTED 06:58:06 (checking for an allowed reason)
+2026-11-01 06:58 IDLE ENDED after 0.5 min (started 06:58)
+2026-11-01 07:12 IDLE STARTED 07:12:23 (checking for an allowed reason)
+2026-11-01 07:12 IDLE ENDED after 0.5 min (started 07:12)
+2026-11-01 07:16 occupancy last 30 min: busy 28.5 min, idle 1 min
+2026-11-01 07:26 IDLE STARTED 07:26:10 (checking for an allowed reason)
+2026-11-01 07:26 IDLE ENDED after 0.5 min (started 07:26)
+2026-11-01 07:30 IDLE STARTED 07:30:15 (checking for an allowed reason)
+2026-11-01 07:31 IDLE ENDED after 1 min (started 07:30)
+2026-11-01 07:47 occupancy last 30 min: busy 28 min, idle 1.5 min
+2026-11-01 07:57 IDLE STARTED 07:57:15 (checking for an allowed reason)
+2026-11-01 07:57 IDLE ENDED after 0.5 min (started 07:57)
+2026-11-01 08:07 IDLE STARTED 08:07:26 (checking for an allowed reason)
+2026-11-01 08:08 IDLE ENDED after 1 min (started 08:07)
+2026-11-01 08:14 IDLE STARTED 08:14:34 (checking for an allowed reason)
+2026-11-01 08:15 IDLE ENDED after 0.5 min (started 08:14)
+2026-11-01 08:17 IDLE STARTED 08:17:07 (checking for an allowed reason)
+2026-11-01 08:17 occupancy last 30 min: busy 27 min, idle 2.5 min
+2026-11-01 08:17 IDLE ENDED after 0.5 min (started 08:17)
+2026-11-01 08:22 IDLE STARTED 08:22:12 (checking for an allowed reason)
+2026-11-01 08:22 IDLE ENDED after 0.5 min (started 08:22)
+2026-11-01 08:31 IDLE STARTED 08:31:22 (checking for an allowed reason)
+2026-11-01 08:31 IDLE ENDED after 0.5 min (started 08:31)
+2026-11-01 08:34 IDLE STARTED 08:34:26 (checking for an allowed reason)
+2026-11-01 08:34 IDLE ENDED after 0.5 min (started 08:34)
+2026-11-01 08:36 IDLE STARTED 08:36:28 (checking for an allowed reason)
+2026-11-01 08:36 IDLE ENDED after 0.5 min (started 08:36)
+2026-11-01 08:37 IDLE STARTED 08:37:59 (checking for an allowed reason)
+2026-11-01 08:38 IDLE ENDED after 0.5 min (started 08:37)
+2026-11-01 08:39 IDLE STARTED 08:39:00 (checking for an allowed reason)
+2026-11-01 08:39 IDLE ENDED after 0.5 min (started 08:39)
+2026-11-01 08:44 IDLE STARTED 08:44:35 (checking for an allowed reason)
+2026-11-01 08:45 IDLE ENDED after 0.5 min (started 08:44)
+2026-11-01 08:47 occupancy last 30 min: busy 26 min, idle 3.5 min
+2026-11-01 08:53 IDLE STARTED 08:53:44 (checking for an allowed reason)
+2026-11-01 08:54 IDLE ENDED after 0.5 min (started 08:53)
+2026-11-01 09:02 IDLE STARTED 09:02:55 (checking for an allowed reason)
+2026-11-01 09:03 IDLE ENDED after 0.5 min (started 09:02)
+2026-11-01 09:17 IDLE STARTED 09:17:12 (checking for an allowed reason)
+2026-11-01 09:17 occupancy last 30 min: busy 28 min, idle 1.5 min
+2026-11-01 09:18 IDLE ENDED after 1 min (started 09:17)
+2026-11-01 09:35 IDLE STARTED 09:35:31 (checking for an allowed reason)
+2026-11-01 09:36 IDLE ENDED after 0.5 min (started 09:35)
+2026-11-01 09:46 IDLE STARTED 09:46:13 (checking for an allowed reason)
+2026-11-01 09:46 IDLE ENDED after 0.5 min (started 09:46)
+2026-11-01 09:47 occupancy last 30 min: busy 28 min, idle 1.5 min
+2026-11-01 09:58 IDLE STARTED 09:58:55 (checking for an allowed reason)
+2026-11-01 09:59 IDLE ENDED after 0.5 min (started 09:58)
+2026-11-01 10:12 IDLE STARTED 10:12:38 (checking for an allowed reason)
+2026-11-01 10:13 IDLE ENDED after 1 min (started 10:12)
+2026-11-01 10:17 occupancy last 30 min: busy 28.5 min, idle 1.5 min
+2026-11-01 10:21 IDLE STARTED 10:21:47 (checking for an allowed reason)
+2026-11-01 10:22 IDLE ENDED after 0.5 min (started 10:21)
+2026-11-01 10:24 IDLE STARTED 10:24:20 (checking for an allowed reason)
+2026-11-01 10:24 IDLE ENDED after 0.5 min (started 10:24)
+2026-11-01 10:28 IDLE STARTED 10:28:54 (checking for an allowed reason)
+2026-11-01 10:29 IDLE ENDED after 0.5 min (started 10:28)
+2026-11-01 10:36 IDLE STARTED 10:36:01 (checking for an allowed reason)
+2026-11-01 10:36 IDLE ENDED after 0.5 min (started 10:36)
+2026-11-01 10:38 IDLE STARTED 10:38:03 (checking for an allowed reason)
+2026-11-01 10:38 IDLE ENDED after 0.5 min (started 10:38)
+2026-11-01 10:41 IDLE STARTED 10:41:06 (checking for an allowed reason)
+2026-11-01 10:41 IDLE ENDED after 0.5 min (started 10:41)
+2026-11-01 10:42 IDLE STARTED 10:42:37 (checking for an allowed reason)
+2026-11-01 10:43 IDLE ENDED after 0.5 min (started 10:42)
+2026-11-01 10:47 occupancy last 30 min: busy 26 min, idle 3.5 min
+2026-11-01 10:48 IDLE STARTED 10:48:44 (checking for an allowed reason)
+2026-11-01 10:49 IDLE ENDED after 1 min (started 10:48)
+2026-11-01 11:00 IDLE STARTED 11:00:29 (checking for an allowed reason)
+2026-11-01 11:00 IDLE ENDED after 0.5 min (started 11:00)
+2026-11-01 11:17 occupancy last 30 min: busy 28 min, idle 1.5 min
+2026-11-01 11:21 IDLE STARTED 11:21:23 (checking for an allowed reason)
+2026-11-01 11:22 IDLE with no allowed reason since 11:21; pending: 
+2026-11-01 11:22 ran start_lanes.ps1
+2026-11-01 11:23 ran start_lanes.ps1
+2026-11-01 11:24 ran start_lanes.ps1
+2026-11-01 11:24 ran start_lanes.ps1
+2026-11-01 11:25 ran start_lanes.ps1
+2026-11-01 11:25 ran start_lanes.ps1
+2026-11-01 11:25 IDLE 6+ min: AUTOCAD IDLE since Sun 11:21 with no allowed reason. Pending work: NONE (queues empty: top them up). Codex cap/mode: PACE.
+2026-11-01 11:26 ran start_lanes.ps1
+2026-11-01 11:26 ran start_lanes.ps1
+2026-11-01 11:27 ran start_lanes.ps1
+2026-11-01 11:28 ran start_lanes.ps1
+2026-11-01 11:28 IDLE ENDED after 7.2 min (started 11:21)
+2026-11-01 11:40 IDLE STARTED 11:40:44 (checking for an allowed reason)
+2026-11-01 11:41 IDLE ENDED after 0.5 min (started 11:40)
+2026-11-01 11:47 occupancy last 30 min: busy 22 min, idle 7 min
+2026-11-01 11:50 IDLE STARTED 11:50:30 (checking for an allowed reason)
+2026-11-01 11:51 IDLE ENDED after 0.5 min (started 11:50)
+2026-11-01 11:54 IDLE STARTED 11:54:34 (checking for an allowed reason)
+2026-11-01 11:55 IDLE ENDED after 1 min (started 11:54)
+2026-11-01 12:09 IDLE STARTED 12:09:21 (checking for an allowed reason)
+2026-11-01 12:09 IDLE ENDED after 0.5 min (started 12:09)
+2026-11-01 12:18 occupancy last 30 min: busy 27.5 min, idle 2 min
+2026-11-01 12:35 IDLE STARTED 12:35:49 (checking for an allowed reason)
+2026-11-01 12:36 IDLE ENDED after 0.5 min (started 12:35)
+2026-11-01 12:48 IDLE STARTED 12:48:02 (checking for an allowed reason)
+2026-11-01 12:48 occupancy last 30 min: busy 28.5 min, idle 1 min
+2026-11-01 12:49 IDLE ENDED after 1 min (started 12:48)
+2026-11-01 13:00 IDLE STARTED 13:00:15 (checking for an allowed reason)
+2026-11-01 13:00 IDLE ENDED after 0.5 min (started 13:00)
+2026-11-01 13:02 IDLE STARTED 13:02:47 (checking for an allowed reason)
+2026-11-01 13:04 IDLE ENDED after 2 min (started 13:02)
+2026-11-01 13:07 IDLE STARTED 13:07:53 (checking for an allowed reason)
+2026-11-01 13:09 IDLE ENDED after 1.5 min (started 13:07)
+2026-11-01 13:10 IDLE STARTED 13:10:56 (checking for an allowed reason)
+2026-11-01 13:12 IDLE ENDED after 1.5 min (started 13:10)
+2026-11-01 13:13 IDLE STARTED 13:13:29 (checking for an allowed reason)
+2026-11-01 13:15 IDLE with no allowed reason since 13:13; pending: 
+2026-11-01 13:15 released stale STOP_CODEX.flag (CE 02's own, no job of ours running)
+2026-11-01 13:15 ran start_lanes.ps1
+2026-11-01 13:15 ran start_lanes.ps1
+2026-11-01 13:16 ran start_lanes.ps1
+2026-11-01 13:16 ran start_lanes.ps1
+2026-11-01 13:17 ran start_lanes.ps1
+2026-11-01 13:17 ran start_lanes.ps1
+2026-11-01 13:17 IDLE 6+ min: AUTOCAD IDLE since Sun 13:13 with no allowed reason. Pending work: NONE (queues empty: top them up). Codex cap/mode: PACE.
+2026-11-01 13:18 ran start_lanes.ps1
+2026-11-01 13:18 occupancy last 30 min: busy 18.5 min, idle 11 min
+2026-11-01 13:18 ran start_lanes.ps1
+2026-11-01 13:19 ran start_lanes.ps1
+2026-11-01 13:20 ran start_lanes.ps1
+2026-11-01 13:20 ran start_lanes.ps1
+2026-11-01 13:21 ran start_lanes.ps1
+2026-11-01 13:21 ran start_lanes.ps1
+2026-11-01 13:22 ran start_lanes.ps1
+2026-11-01 13:22 ran start_lanes.ps1
+2026-11-01 13:24 IDLE ENDED after 11.5 min (started 13:13)
+2026-11-01 13:38 IDLE STARTED 13:38:40 (checking for an allowed reason)
+2026-11-01 13:39 IDLE ENDED after 0.5 min (started 13:38)
+2026-11-01 13:41 IDLE STARTED 13:41:13 (checking for an allowed reason)
+2026-11-01 13:42 IDLE ENDED after 1.5 min (started 13:41)
+2026-11-01 13:48 occupancy last 30 min: busy 22 min, idle 7.5 min
+2026-11-01 13:49 IDLE STARTED 13:49:21 (checking for an allowed reason)
+2026-11-01 13:51 IDLE with no allowed reason since 13:49; pending: 
+2026-11-01 13:51 released stale HOLD_ROBOT.flag (CE 02's own, no job of ours running)
+2026-11-01 13:51 ran start_lanes.ps1
+2026-11-01 13:51 ran start_lanes.ps1
+2026-11-01 13:52 ran start_lanes.ps1
+2026-11-01 13:53 ran start_lanes.ps1
+2026-11-01 13:53 ran start_lanes.ps1
+2026-11-01 13:53 IDLE 6+ min: AUTOCAD IDLE since Sun 13:49 with no allowed reason. Pending work: NONE (queues empty: top them up). Codex cap/mode: PACE.
+2026-11-01 13:54 ran start_lanes.ps1
+2026-11-01 13:54 ran start_lanes.ps1
+2026-11-01 13:55 ran start_lanes.ps1
+2026-11-01 13:55 ran start_lanes.ps1
+2026-11-01 13:56 ran start_lanes.ps1
+2026-11-01 13:56 ran start_lanes.ps1
+2026-11-01 13:57 ran start_lanes.ps1
+2026-11-01 13:58 ran start_lanes.ps1
+2026-11-01 13:58 ran start_lanes.ps1
+2026-11-01 13:59 ran start_lanes.ps1
+2026-11-01 14:00 IDLE ENDED after 11.4 min (started 13:49)
+2026-11-01 14:07 IDLE STARTED 14:07:20 (checking for an allowed reason)
+2026-11-01 14:09 IDLE with no allowed reason since 14:07; pending: 
+2026-11-01 14:09 released stale STOP_CODEX.flag (CE 02's own, no job of ours running)
+2026-11-01 14:09 ran start_lanes.ps1
+2026-11-01 14:10 ran start_lanes.ps1
+2026-11-01 14:11 ran start_lanes.ps1
+2026-11-01 14:11 ran start_lanes.ps1
+2026-11-01 14:11 IDLE 6+ min: AUTOCAD IDLE since Sun 14:07 with no allowed reason. Pending work: NONE (queues empty: top them up). Codex cap/mode: PACE.
+2026-11-01 14:12 ran start_lanes.ps1
+2026-11-01 14:12 ran start_lanes.ps1
+2026-11-01 14:13 ran start_lanes.ps1
+2026-11-01 14:13 ran start_lanes.ps1
+2026-11-01 14:14 ran start_lanes.ps1
+2026-11-01 14:14 ran start_lanes.ps1
+2026-11-01 14:15 ran start_lanes.ps1
+2026-11-01 14:16 ran start_lanes.ps1
+2026-11-01 14:16 ran start_lanes.ps1
+2026-11-01 14:17 ran start_lanes.ps1
+2026-11-01 14:17 ran start_lanes.ps1
+2026-11-01 14:18 ran start_lanes.ps1
+2026-11-01 14:18 IDLE ENDED after 11.4 min (started 14:07)
+2026-11-01 14:19 occupancy last 30 min: busy 7.5 min, idle 21 min
+2026-11-01 14:20 IDLE STARTED 14:20:45 (checking for an allowed reason)
+2026-11-01 14:21 IDLE ENDED after 0.5 min (started 14:20)
+2026-11-01 14:22 IDLE STARTED 14:22:17 (checking for an allowed reason)
+2026-11-01 14:26 IDLE with no allowed reason since 14:22; pending: 
+2026-11-01 14:26 ran start_lanes.ps1
+2026-11-01 14:26 IDLE 6+ min: AUTOCAD IDLE since Sun 14:22 with no allowed reason. Pending work: NONE (queues empty: top them up). Codex cap/mode: PACE.
+2026-11-01 14:26 IDLE ENDED after 4.7 min (started 14:22)
+2026-11-01 14:27 IDLE STARTED 14:27:57 (checking for an allowed reason)
+2026-11-01 14:28 IDLE ENDED after 0.5 min (started 14:27)
+2026-11-01 14:42 IDLE STARTED 14:42:43 (checking for an allowed reason)
+2026-11-01 14:43 IDLE ENDED after 0.5 min (started 14:42)
+2026-11-01 14:49 occupancy last 30 min: busy 23.5 min, idle 6 min
+2026-11-01 14:50 IDLE STARTED 14:50:22 (checking for an allowed reason)
+2026-11-01 14:50 IDLE ENDED after 0.5 min (started 14:50)
+2026-11-01 14:58 IDLE STARTED 14:58:30 (checking for an allowed reason)
+2026-11-01 14:59 IDLE ENDED after 0.5 min (started 14:58)
+2026-11-01 15:03 IDLE STARTED 15:03:35 (checking for an allowed reason)
+2026-11-01 15:04 IDLE ENDED after 0.5 min (started 15:03)
+2026-11-01 15:15 IDLE STARTED 15:15:16 (checking for an allowed reason)
+2026-11-01 15:15 IDLE ENDED after 0.5 min (started 15:15)
+2026-11-01 15:17 IDLE STARTED 15:17:49 (checking for an allowed reason)
+2026-11-01 15:18 IDLE ENDED after 0.5 min (started 15:17)
+2026-11-01 15:19 occupancy last 30 min: busy 27.5 min, idle 2.5 min
+2026-11-01 15:26 IDLE STARTED 15:26:27 (checking for an allowed reason)
+2026-11-01 15:27 IDLE ENDED after 1.5 min (started 15:26)
+2026-11-01 15:36 IDLE STARTED 15:36:38 (checking for an allowed reason)
+2026-11-01 15:38 IDLE with no allowed reason since 15:36; pending: 
+2026-11-01 15:38 released stale STOP_CODEX.flag (CE 02's own, no job of ours running)
+2026-11-01 15:38 ran start_lanes.ps1
+2026-11-01 15:39 ran start_lanes.ps1
+2026-11-01 15:39 ran start_lanes.ps1
+2026-11-01 15:40 ran start_lanes.ps1
+2026-11-01 15:40 ran start_lanes.ps1
+2026-11-01 15:40 IDLE 6+ min: AUTOCAD IDLE since Sun 15:36 with no allowed reason. Pending work: NONE (queues empty: top them up). Codex cap/mode: PACE.
+2026-11-01 15:41 ran start_lanes.ps1
+2026-11-01 15:42 ran start_lanes.ps1
+2026-11-01 15:42 ran start_lanes.ps1
+2026-11-01 15:43 ran start_lanes.ps1
+2026-11-01 15:43 ran start_lanes.ps1
+2026-11-01 15:44 ran start_lanes.ps1
+2026-11-01 15:44 ran start_lanes.ps1
+2026-11-01 15:45 ran start_lanes.ps1
+2026-11-01 15:45 ran start_lanes.ps1
+2026-11-01 15:46 ran start_lanes.ps1
+2026-11-01 15:47 IDLE ENDED after 10.4 min (started 15:36)
+2026-11-01 15:50 occupancy last 30 min: busy 18 min, idle 11 min
+2026-11-01 16:00 IDLE STARTED 16:00:15 (checking for an allowed reason)
+2026-11-01 16:00 IDLE ENDED after 0.5 min (started 16:00)
+2026-11-01 16:10 IDLE STARTED 16:10:55 (checking for an allowed reason)
+2026-11-01 16:11 IDLE ENDED after 1 min (started 16:10)
+2026-11-01 16:20 occupancy last 30 min: busy 28.5 min, idle 1.5 min
+2026-11-01 16:21 IDLE STARTED 16:21:35 (checking for an allowed reason)
+2026-11-01 16:22 IDLE ENDED after 0.5 min (started 16:21)
+2026-11-01 16:25 IDLE STARTED 16:25:08 (checking for an allowed reason)
+2026-11-01 16:26 IDLE with no allowed reason since 16:25; pending: 
+2026-11-01 16:26 released stale STOP_CODEX.flag (CE 02's own, no job of ours running)
+2026-11-01 16:26 ran start_lanes.ps1
+2026-11-01 16:27 ran start_lanes.ps1
+2026-11-01 16:27 ran start_lanes.ps1
+2026-11-01 16:28 IDLE ENDED after 3.2 min (started 16:25)
+2026-11-01 16:40 IDLE STARTED 16:40:32 (checking for an allowed reason)
+2026-11-01 16:41 IDLE ENDED after 0.5 min (started 16:40)
+2026-11-01 16:42 IDLE STARTED 16:42:03 (checking for an allowed reason)
+2026-11-01 16:42 IDLE ENDED after 0.5 min (started 16:42)
+2026-11-01 16:50 occupancy last 30 min: busy 25 min, idle 4.5 min
+2026-11-01 16:52 IDLE STARTED 16:52:48 (checking for an allowed reason)
+2026-11-01 16:53 IDLE ENDED after 1 min (started 16:52)
+2026-11-01 17:01 IDLE STARTED 17:01:27 (checking for an allowed reason)
+2026-11-01 17:01 IDLE ENDED after 0.5 min (started 17:01)
+2026-11-01 17:07 IDLE STARTED 17:07:02 (checking for an allowed reason)
+2026-11-01 17:07 IDLE ENDED after 0.5 min (started 17:07)
+2026-11-01 17:12 IDLE STARTED 17:12:08 (checking for an allowed reason)
+2026-11-01 17:12 IDLE ENDED after 0.5 min (started 17:12)
+2026-11-01 17:20 occupancy last 30 min: busy 27 min, idle 2.5 min
+2026-11-01 17:23 IDLE STARTED 17:23:49 (checking for an allowed reason)
+2026-11-01 17:24 IDLE ENDED after 0.5 min (started 17:23)
+2026-11-01 17:31 IDLE STARTED 17:31:27 (checking for an allowed reason)
+2026-11-01 17:32 IDLE ENDED after 1 min (started 17:31)
+2026-11-01 17:39 IDLE STARTED 17:39:04 (checking for an allowed reason)
+2026-11-01 17:39 IDLE ENDED after 0.5 min (started 17:39)
+2026-11-01 17:45 IDLE STARTED 17:45:10 (checking for an allowed reason)
+2026-11-01 17:46 IDLE with no allowed reason since 17:45; pending: 
+2026-11-01 17:46 ran start_lanes.ps1
+2026-11-01 17:47 ran start_lanes.ps1
+2026-11-01 17:47 ran start_lanes.ps1
+2026-11-01 17:48 ran start_lanes.ps1
+2026-11-01 17:48 ran start_lanes.ps1
+2026-11-01 17:49 ran start_lanes.ps1
+2026-11-01 17:49 IDLE 6+ min: AUTOCAD IDLE since Sun 17:45 with no allowed reason. Pending work: NONE (queues empty: top them up). Codex cap/mode: PACE.
+2026-11-01 17:50 ran start_lanes.ps1
+2026-11-01 17:50 ran start_lanes.ps1
+2026-11-01 17:51 IDLE ENDED after 6 min (started 17:45)
+2026-11-01 17:51 occupancy last 30 min: busy 22 min, idle 7.5 min
+2026-11-01 18:03 IDLE STARTED 18:03:24 (checking for an allowed reason)
+2026-11-01 18:04 IDLE ENDED after 1.5 min (started 18:03)
+2026-11-01 18:16 IDLE STARTED 18:16:10 (checking for an allowed reason)
+2026-11-01 18:16 IDLE ENDED after 0.5 min (started 18:16)
+2026-11-01 18:21 occupancy last 30 min: busy 27.5 min, idle 2 min
+2026-11-01 18:28 IDLE STARTED 18:28:56 (checking for an allowed reason)
+2026-11-01 18:29 IDLE ENDED after 0.5 min (started 18:28)
+2026-11-01 18:41 IDLE STARTED 18:41:42 (checking for an allowed reason)
+2026-11-01 18:43 IDLE with no allowed reason since 18:41; pending: 
+2026-11-01 18:43 ran start_lanes.ps1
+2026-11-01 18:43 ran start_lanes.ps1
+2026-11-01 18:44 ran start_lanes.ps1
+2026-11-01 18:45 ran start_lanes.ps1
+2026-11-01 18:45 ran start_lanes.ps1
+2026-11-01 18:46 ran start_lanes.ps1
+2026-11-01 18:46 IDLE 6+ min: AUTOCAD IDLE since Sun 18:41 with no allowed reason. Pending work: NONE (queues empty: top them up). Codex cap/mode: PACE.
+2026-11-01 18:46 ran start_lanes.ps1
+2026-11-01 18:47 ran start_lanes.ps1
+2026-11-01 18:47 ran start_lanes.ps1
+2026-11-01 18:48 ran start_lanes.ps1
+2026-11-01 18:49 ran start_lanes.ps1
+2026-11-01 18:49 ran start_lanes.ps1
+2026-11-01 18:50 IDLE ENDED after 8.4 min (started 18:41)
+2026-11-01 18:51 occupancy last 30 min: busy 21 min, idle 8 min
+2026-11-01 18:52 IDLE STARTED 18:52:09 (checking for an allowed reason)
+2026-11-01 18:52 IDLE ENDED after 0.5 min (started 18:52)
+2026-11-01 18:56 IDLE STARTED 18:56:46 (checking for an allowed reason)
+2026-11-01 18:57 IDLE ENDED after 1 min (started 18:56)
+2026-11-01 19:02 IDLE STARTED 19:02:53 (checking for an allowed reason)
+2026-11-01 19:03 IDLE ENDED after 0.5 min (started 19:02)
+2026-11-01 19:13 IDLE STARTED 19:13:06 (checking for an allowed reason)
+2026-11-01 19:13 IDLE ENDED after 0.5 min (started 19:13)
+2026-11-01 19:21 occupancy last 30 min: busy 27 min, idle 2.5 min
+2026-11-01 19:22 IDLE STARTED 19:22:19 (checking for an allowed reason)
+2026-11-01 19:22 IDLE ENDED after 0.5 min (started 19:22)
+2026-11-01 19:25 IDLE STARTED 19:25:53 (checking for an allowed reason)
+2026-11-01 19:26 IDLE ENDED after 0.5 min (started 19:25)
+2026-11-01 19:30 IDLE STARTED 19:30:30 (checking for an allowed reason)
+2026-11-01 19:31 IDLE ENDED after 1 min (started 19:30)
+2026-11-01 19:33 IDLE STARTED 19:33:03 (checking for an allowed reason)
+2026-11-01 19:33 IDLE ENDED after 0.5 min (started 19:33)
+2026-11-01 19:49 IDLE STARTED 19:49:59 (checking for an allowed reason)
+2026-11-01 19:50 IDLE ENDED after 0.5 min (started 19:49)
+2026-11-01 19:52 occupancy last 30 min: busy 26.5 min, idle 3 min
+2026-11-01 19:54 IDLE STARTED 19:54:37 (checking for an allowed reason)
+2026-11-01 19:55 IDLE ENDED after 1 min (started 19:54)
+2026-11-01 20:13 IDLE STARTED 20:13:30 (checking for an allowed reason)
+2026-11-01 20:14 IDLE ENDED after 0.5 min (started 20:13)
+2026-11-01 20:18 IDLE STARTED 20:18:06 (checking for an allowed reason)
+2026-11-01 20:18 IDLE ENDED after 0.5 min (started 20:18)
+2026-11-01 20:22 IDLE STARTED 20:22:11 (checking for an allowed reason)
+2026-11-01 20:22 occupancy last 30 min: busy 27 min, idle 2.5 min
+2026-11-01 20:22 IDLE ENDED after 0.5 min (started 20:22)
+2026-11-01 20:39 IDLE STARTED 20:39:34 (checking for an allowed reason)
+2026-11-01 20:40 IDLE ENDED after 0.5 min (started 20:39)
+2026-11-01 20:50 IDLE STARTED 20:50:47 (checking for an allowed reason)
+2026-11-01 20:51 IDLE ENDED after 0.5 min (started 20:50)
+2026-11-01 20:52 occupancy last 30 min: busy 28.5 min, idle 1 min
+2026-11-01 20:53 IDLE STARTED 20:53:51 (checking for an allowed reason)
+2026-11-01 20:54 IDLE ENDED after 0.5 min (started 20:53)
+2026-11-01 20:59 IDLE STARTED 20:59:58 (checking for an allowed reason)
+2026-11-01 21:00 IDLE ENDED after 0.5 min (started 20:59)
+2026-11-01 21:04 IDLE STARTED 21:04:33 (checking for an allowed reason)
+2026-11-01 21:05 IDLE ENDED after 1 min (started 21:04)
+2026-11-01 21:16 IDLE STARTED 21:16:48 (checking for an allowed reason)
+2026-11-01 21:17 IDLE ENDED after 1 min (started 21:16)
+2026-11-01 21:22 occupancy last 30 min: busy 26.5 min, idle 3 min
+2026-11-01 21:23 IDLE STARTED 21:23:56 (checking for an allowed reason)
+2026-11-01 21:25 IDLE with no allowed reason since 21:23; pending: 
+2026-11-01 21:25 ran start_lanes.ps1
+2026-11-01 21:26 ran start_lanes.ps1
+2026-11-01 21:26 ran start_lanes.ps1
+2026-11-01 21:27 ran start_lanes.ps1
+2026-11-01 21:27 ran start_lanes.ps1
+2026-11-01 21:28 ran start_lanes.ps1
+2026-11-01 21:28 IDLE 6+ min: AUTOCAD IDLE since Sun 21:23 with no allowed reason. Pending work: NONE (queues empty: top them up). Codex cap/mode: PACE.
+2026-11-01 21:28 ran start_lanes.ps1
+2026-11-01 21:29 ran start_lanes.ps1
+2026-11-01 21:30 ran start_lanes.ps1
+2026-11-01 21:30 ran start_lanes.ps1
+2026-11-01 21:31 ran start_lanes.ps1
+2026-11-01 21:31 ran start_lanes.ps1
+2026-11-01 21:32 ran start_lanes.ps1
+2026-11-01 21:32 IDLE ENDED after 8.9 min (started 21:23)
+2026-11-01 21:36 IDLE STARTED 21:36:21 (checking for an allowed reason)
+2026-11-01 21:37 IDLE with no allowed reason since 21:36; pending: 
+2026-11-01 21:37 ran start_lanes.ps1
+2026-11-01 21:38 ran start_lanes.ps1
+2026-11-01 21:39 ran start_lanes.ps1
+2026-11-01 21:39 ran start_lanes.ps1
+2026-11-01 21:40 ran start_lanes.ps1
+2026-11-01 21:40 ran start_lanes.ps1
+2026-11-01 21:40 IDLE 6+ min: AUTOCAD IDLE since Sun 21:36 with no allowed reason. Pending work: NONE (queues empty: top them up). Codex cap/mode: PACE.
+2026-11-01 21:41 ran start_lanes.ps1
+2026-11-01 21:41 ran start_lanes.ps1
+2026-11-01 21:42 ran start_lanes.ps1
+2026-11-01 21:42 ran start_lanes.ps1
+2026-11-01 21:43 ran start_lanes.ps1
+2026-11-01 21:44 ran start_lanes.ps1
+2026-11-01 21:44 ran start_lanes.ps1
+2026-11-01 21:45 ran start_lanes.ps1
+2026-11-01 21:45 ran start_lanes.ps1
+2026-11-01 21:46 IDLE ENDED after 10 min (started 21:36)
+2026-11-01 21:52 occupancy last 30 min: busy 11 min, idle 17 min
+2026-11-01 21:56 IDLE STARTED 21:56:41 (checking for an allowed reason)
+2026-11-01 21:59 IDLE ENDED after 3.1 min (started 21:56)
+2026-11-01 22:06 IDLE STARTED 22:06:26 (checking for an allowed reason)
+2026-11-01 22:07 IDLE with no allowed reason since 22:06; pending: 
+2026-11-01 22:08 ran start_lanes.ps1
+2026-11-01 22:08 ran start_lanes.ps1
+2026-11-01 22:09 ran start_lanes.ps1
+2026-11-01 22:09 ran start_lanes.ps1
+2026-11-01 22:10 ran start_lanes.ps1
+2026-11-01 22:10 ran start_lanes.ps1
+2026-11-01 22:10 IDLE 6+ min: AUTOCAD IDLE since Sun 22:06 with no allowed reason. Pending work: NONE (queues empty: top them up). Codex cap/mode: PACE.
+2026-11-01 22:11 ran start_lanes.ps1
+2026-11-01 22:12 ran start_lanes.ps1
+2026-11-01 22:12 ran start_lanes.ps1
+2026-11-01 22:13 ran start_lanes.ps1
+2026-11-01 22:13 ran start_lanes.ps1
+2026-11-01 22:14 ran start_lanes.ps1
+2026-11-01 22:15 ran start_lanes.ps1
+2026-11-01 22:15 ran start_lanes.ps1
+2026-11-01 22:16 ran start_lanes.ps1
+2026-11-01 22:16 IDLE ENDED after 10.3 min (started 22:06)
+2026-11-01 22:21 IDLE STARTED 22:21:51 (checking for an allowed reason)
+2026-11-01 22:22 IDLE ENDED after 0.5 min (started 22:21)
+2026-11-01 22:22 occupancy last 30 min: busy 16 min, idle 12.5 min
+2026-11-01 22:24 IDLE STARTED 22:24:55 (checking for an allowed reason)
+2026-11-01 22:25 IDLE ENDED after 0.5 min (started 22:24)
+2026-11-01 22:30 IDLE STARTED 22:30:33 (checking for an allowed reason)
+2026-11-01 22:31 IDLE ENDED after 1 min (started 22:30)
+2026-11-01 22:33 IDLE STARTED 22:33:37 (checking for an allowed reason)
+2026-11-01 22:34 IDLE ENDED after 0.5 min (started 22:33)
+2026-11-01 22:36 IDLE STARTED 22:36:10 (checking for an allowed reason)
+2026-11-01 22:36 IDLE ENDED after 0.5 min (started 22:36)
+2026-11-01 22:43 IDLE STARTED 22:43:51 (checking for an allowed reason)
+2026-11-01 22:44 IDLE ENDED after 1 min (started 22:43)
+2026-11-01 22:46 IDLE STARTED 22:46:26 (checking for an allowed reason)
+2026-11-01 22:47 IDLE ENDED after 1 min (started 22:46)
+2026-11-01 22:48 IDLE STARTED 22:48:30 (checking for an allowed reason)
+2026-11-01 22:49 IDLE ENDED after 0.5 min (started 22:48)
+2026-11-01 22:50 IDLE STARTED 22:50:02 (checking for an allowed reason)
+2026-11-01 22:51 IDLE ENDED after 1 min (started 22:50)
+2026-11-01 22:53 occupancy last 30 min: busy 23.5 min, idle 6 min
+2026-11-01 22:54 IDLE STARTED 22:54:38 (checking for an allowed reason)
+2026-11-01 22:55 IDLE ENDED after 0.5 min (started 22:54)
+2026-11-01 22:59 IDLE STARTED 22:59:46 (checking for an allowed reason)
+2026-11-01 23:00 IDLE ENDED after 1 min (started 22:59)
+2026-11-01 23:04 IDLE STARTED 23:04:21 (checking for an allowed reason)
+2026-11-01 23:04 IDLE ENDED after 0.5 min (started 23:04)
+2026-11-01 23:12 IDLE STARTED 23:12:00 (checking for an allowed reason)
+2026-11-01 23:13 IDLE ENDED after 1 min (started 23:12)
+2026-11-01 23:19 IDLE STARTED 23:19:39 (checking for an allowed reason)
+2026-11-01 23:20 IDLE ENDED after 1 min (started 23:19)
+2026-11-01 23:23 occupancy last 30 min: busy 25.5 min, idle 4 min
+2026-11-01 23:26 IDLE STARTED 23:26:16 (checking for an allowed reason)
+2026-11-01 23:26 IDLE ENDED after 0.5 min (started 23:26)
+2026-11-01 23:32 IDLE STARTED 23:32:55 (checking for an allowed reason)
+2026-11-01 23:33 IDLE ENDED after 0.5 min (started 23:32)
+2026-11-01 23:39 IDLE STARTED 23:39:02 (checking for an allowed reason)
+2026-11-01 23:40 IDLE ENDED after 1 min (started 23:39)
+2026-11-01 23:45 IDLE STARTED 23:45:08 (checking for an allowed reason)
+2026-11-01 23:46 IDLE ENDED after 1 min (started 23:45)
+2026-11-01 23:53 IDLE STARTED 23:53:17 (checking for an allowed reason)
+2026-11-01 23:53 occupancy last 30 min: busy 26 min, idle 3.5 min
+2026-11-01 23:53 IDLE ENDED after 0.5 min (started 23:53)
+2026-11-02 00:00 IDLE STARTED 00:00:56 (checking for an allowed reason)
+2026-11-02 00:01 IDLE ENDED after 1 min (started 00:00)
+2026-11-02 00:04 IDLE STARTED 00:04:00 (checking for an allowed reason)
+2026-11-02 00:04 IDLE ENDED after 0.5 min (started 00:04)
+2026-11-02 00:13 IDLE STARTED 00:13:42 (checking for an allowed reason)
+2026-11-02 00:14 IDLE ENDED after 0.5 min (started 00:13)
+2026-11-02 00:16 IDLE STARTED 00:16:14 (checking for an allowed reason)
+2026-11-02 00:16 IDLE ENDED after 0.5 min (started 00:16)
+2026-11-02 00:18 IDLE STARTED 00:18:17 (checking for an allowed reason)
+2026-11-02 00:19 IDLE ENDED after 1 min (started 00:18)
+2026-11-02 00:21 IDLE STARTED 00:21:21 (checking for an allowed reason)
+2026-11-02 00:21 IDLE ENDED after 0.5 min (started 00:21)
+2026-11-02 00:23 occupancy last 30 min: busy 25.5 min, idle 4 min
+2026-11-02 00:23 IDLE STARTED 00:23:53 (checking for an allowed reason)
+2026-11-02 00:24 IDLE ENDED after 0.5 min (started 00:23)
+2026-11-02 00:26 IDLE STARTED 00:26:26 (checking for an allowed reason)
+2026-11-02 00:27 IDLE ENDED after 1 min (started 00:26)
+2026-11-02 00:31 IDLE STARTED 00:31:01 (checking for an allowed reason)
+2026-11-02 00:31 IDLE ENDED after 0.5 min (started 00:31)
+2026-11-02 00:39 IDLE STARTED 00:39:11 (checking for an allowed reason)
+2026-11-02 00:39 IDLE ENDED after 0.5 min (started 00:39)
+2026-11-02 00:47 IDLE STARTED 00:47:21 (checking for an allowed reason)
+2026-11-02 00:48 IDLE ENDED after 1 min (started 00:47)
+2026-11-02 00:49 IDLE STARTED 00:49:23 (checking for an allowed reason)
+2026-11-02 00:50 IDLE ENDED after 1.5 min (started 00:49)
+2026-11-02 00:52 IDLE STARTED 00:52:27 (checking for an allowed reason)
+2026-11-02 00:52 IDLE ENDED after 0.5 min (started 00:52)
+2026-11-02 00:53 occupancy last 30 min: busy 24 min, idle 5.5 min
+2026-11-02 00:58 IDLE STARTED 00:58:34 (checking for an allowed reason)
+2026-11-02 00:59 IDLE ENDED after 0.5 min (started 00:58)
+2026-11-02 01:08 IDLE STARTED 01:08:47 (checking for an allowed reason)
+2026-11-02 01:09 IDLE ENDED after 1 min (started 01:08)
+2026-11-02 01:18 IDLE STARTED 01:18:28 (checking for an allowed reason)
+2026-11-02 01:19 IDLE ENDED after 1 min (started 01:18)
+2026-11-02 01:23 occupancy last 30 min: busy 27 min, idle 2.5 min
+2026-11-02 01:33 IDLE STARTED 01:33:18 (checking for an allowed reason)
+2026-11-02 01:33 IDLE ENDED after 0.5 min (started 01:33)
+2026-11-02 01:37 IDLE STARTED 01:37:23 (checking for an allowed reason)
+2026-11-02 01:38 IDLE ENDED after 1 min (started 01:37)
+2026-11-02 01:53 occupancy last 30 min: busy 28 min, idle 1.5 min
+2026-11-02 02:17 IDLE STARTED 02:17:08 (checking for an allowed reason)
+2026-11-02 02:17 IDLE ENDED after 0.5 min (started 02:17)
+2026-11-02 02:23 IDLE STARTED 02:23:17 (checking for an allowed reason)
+2026-11-02 02:23 IDLE ENDED after 0.5 min (started 02:23)
+2026-11-02 02:23 occupancy last 30 min: busy 28.5 min, idle 1 min
+2026-11-02 02:27 IDLE STARTED 02:27:55 (checking for an allowed reason)
+2026-11-02 02:28 IDLE ENDED after 0.5 min (started 02:27)
+2026-11-02 02:32 IDLE STARTED 02:32:30 (checking for an allowed reason)
+2026-11-02 02:33 IDLE ENDED after 1 min (started 02:32)
+2026-11-02 02:40 IDLE STARTED 02:40:09 (checking for an allowed reason)
+2026-11-02 02:40 IDLE ENDED after 0.5 min (started 02:40)
+2026-11-02 02:42 IDLE STARTED 02:42:11 (checking for an allowed reason)
+2026-11-02 02:43 IDLE ENDED after 1 min (started 02:42)
+2026-11-02 02:45 IDLE STARTED 02:45:15 (checking for an allowed reason)
+2026-11-02 02:46 IDLE ENDED after 1 min (started 02:45)
+2026-11-02 02:49 IDLE STARTED 02:49:19 (checking for an allowed reason)
+2026-11-02 02:49 IDLE ENDED after 0.5 min (started 02:49)
+2026-11-02 02:50 IDLE STARTED 02:50:51 (checking for an allowed reason)
+2026-11-02 02:51 IDLE ENDED after 0.5 min (started 02:50)
+2026-11-02 02:53 occupancy last 30 min: busy 24.5 min, idle 5 min
+2026-11-02 03:06 IDLE STARTED 03:06:09 (checking for an allowed reason)
+2026-11-02 03:06 IDLE ENDED after 0.5 min (started 03:06)
+2026-11-02 03:17 IDLE STARTED 03:17:23 (checking for an allowed reason)
+2026-11-02 03:17 IDLE ENDED after 0.5 min (started 03:17)
+2026-11-02 03:24 occupancy last 30 min: busy 28.5 min, idle 1 min
+2026-11-02 03:25 IDLE STARTED 03:25:07 (checking for an allowed reason)
+2026-11-02 03:26 IDLE ENDED after 1 min (started 03:25)
+2026-11-02 03:27 IDLE STARTED 03:27:40 (checking for an allowed reason)
+2026-11-02 03:28 IDLE ENDED after 0.5 min (started 03:27)
+2026-11-02 03:30 IDLE STARTED 03:30:43 (checking for an allowed reason)
+2026-11-02 03:31 IDLE ENDED after 1 min (started 03:30)
+2026-11-02 03:42 IDLE STARTED 03:42:27 (checking for an allowed reason)
+2026-11-02 03:42 IDLE ENDED after 0.5 min (started 03:42)
+2026-11-02 03:52 IDLE STARTED 03:52:39 (checking for an allowed reason)
+2026-11-02 03:53 IDLE ENDED after 1 min (started 03:52)
+2026-11-02 03:54 occupancy last 30 min: busy 25.5 min, idle 4 min
+2026-11-02 04:08 IDLE STARTED 04:08:29 (checking for an allowed reason)
+2026-11-02 04:09 IDLE ENDED after 0.5 min (started 04:08)
+2026-11-02 04:12 IDLE STARTED 04:12:34 (checking for an allowed reason)
+2026-11-02 04:13 IDLE ENDED after 0.5 min (started 04:12)
+2026-11-02 04:24 occupancy last 30 min: busy 28.5 min, idle 1 min
+2026-11-02 04:42 IDLE STARTED 04:42:38 (checking for an allowed reason)
+2026-11-02 04:43 IDLE ENDED after 0.5 min (started 04:42)
+2026-11-02 04:46 IDLE STARTED 04:46:43 (checking for an allowed reason)
+2026-11-02 04:47 IDLE ENDED after 0.5 min (started 04:46)
+2026-11-02 04:54 occupancy last 30 min: busy 28.5 min, idle 1 min
+2026-11-02 04:57 IDLE STARTED 04:57:57 (checking for an allowed reason)
+2026-11-02 04:58 IDLE ENDED after 0.5 min (started 04:57)
+2026-11-02 05:19 IDLE STARTED 05:19:54 (checking for an allowed reason)
+2026-11-02 05:20 IDLE ENDED after 0.5 min (started 05:19)
+2026-11-02 05:24 occupancy last 30 min: busy 28.5 min, idle 1 min
+2026-11-02 05:28 IDLE STARTED 05:28:36 (checking for an allowed reason)
+2026-11-02 05:30 IDLE ENDED after 2 min (started 05:28)
+2026-11-02 05:38 IDLE STARTED 05:38:19 (checking for an allowed reason)
+2026-11-02 05:38 IDLE ENDED after 0.5 min (started 05:38)
+2026-11-02 05:41 IDLE STARTED 05:41:22 (checking for an allowed reason)
+2026-11-02 05:41 IDLE ENDED after 0.5 min (started 05:41)
+2026-11-02 05:44 IDLE STARTED 05:44:26 (checking for an allowed reason)
+2026-11-02 05:44 IDLE ENDED after 0.5 min (started 05:44)
+2026-11-02 05:47 IDLE STARTED 05:47:30 (checking for an allowed reason)
+2026-11-02 05:48 IDLE ENDED after 0.5 min (started 05:47)
+2026-11-02 05:51 IDLE STARTED 05:51:04 (checking for an allowed reason)
+2026-11-02 05:51 IDLE ENDED after 0.5 min (started 05:51)
+2026-11-02 05:54 occupancy last 30 min: busy 25 min, idle 4.5 min
+2026-11-02 06:04 IDLE STARTED 06:04:22 (checking for an allowed reason)
+2026-11-02 06:06 IDLE ENDED after 2 min (started 06:04)
+2026-11-02 06:18 IDLE STARTED 06:18:10 (checking for an allowed reason)
+2026-11-02 06:20 IDLE with no allowed reason since 06:18; pending: 
+2026-11-02 06:20 ran start_lanes.ps1
+2026-11-02 06:20 ran start_lanes.ps1
+2026-11-02 06:21 ran start_lanes.ps1
+2026-11-02 06:22 ran start_lanes.ps1
+2026-11-02 06:22 ran start_lanes.ps1
+2026-11-02 06:22 IDLE 6+ min: AUTOCAD IDLE since Mon 06:18 with no allowed reason. Pending work: NONE (queues empty: top them up). Codex cap/mode: PACE.
+2026-11-02 06:23 ran start_lanes.ps1
+2026-11-02 06:23 ran start_lanes.ps1
+2026-11-02 06:24 ran start_lanes.ps1
+2026-11-02 06:24 ran start_lanes.ps1
+2026-11-02 06:24 occupancy last 30 min: busy 20.5 min, idle 8.5 min
+2026-11-02 06:25 ran start_lanes.ps1
+2026-11-02 06:25 ran start_lanes.ps1
+2026-11-02 06:26 ran start_lanes.ps1
+2026-11-02 06:27 ran start_lanes.ps1
+2026-11-02 06:27 ran start_lanes.ps1
+2026-11-02 06:28 IDLE ENDED after 10.1 min (started 06:18)
+2026-11-02 06:37 IDLE STARTED 06:37:56 (checking for an allowed reason)
+2026-11-02 06:38 IDLE ENDED after 1 min (started 06:37)
+2026-11-02 06:47 IDLE STARTED 06:47:11 (checking for an allowed reason)
+2026-11-02 06:50 IDLE ENDED after 3.1 min (started 06:47)
+2026-11-02 06:54 IDLE STARTED 06:54:53 (checking for an allowed reason)
+2026-11-02 06:54 occupancy last 30 min: busy 22 min, idle 7 min
+2026-11-02 06:56 IDLE with no allowed reason since 06:54; pending: 
+2026-11-02 06:56 ran start_lanes.ps1
+2026-11-02 06:57 ran start_lanes.ps1
+2026-11-02 06:57 ran start_lanes.ps1
+2026-11-02 06:58 ran start_lanes.ps1
+2026-11-02 06:58 ran start_lanes.ps1
+2026-11-02 06:59 ran start_lanes.ps1
+2026-11-02 06:59 IDLE 6+ min: AUTOCAD IDLE since Mon 06:54 with no allowed reason. Pending work: NONE (queues empty: top them up). Codex cap/mode: PACE.
+2026-11-02 06:59 ran start_lanes.ps1
+2026-11-02 07:00 ran start_lanes.ps1
+2026-11-02 07:01 ran start_lanes.ps1
+2026-11-02 07:01 ran start_lanes.ps1
+2026-11-02 07:02 ran start_lanes.ps1
+2026-11-02 07:02 ran start_lanes.ps1
+2026-11-02 07:03 ran start_lanes.ps1
+2026-11-02 07:03 ran start_lanes.ps1
+2026-11-02 07:04 ran start_lanes.ps1
+2026-11-02 07:04 IDLE ENDED after 10.1 min (started 06:54)
+2026-11-02 07:09 IDLE STARTED 07:09:04 (checking for an allowed reason)
+2026-11-02 07:11 IDLE ENDED after 2.6 min (started 07:09)
+2026-11-02 07:24 occupancy last 30 min: busy 17.5 min, idle 11 min
+2026-11-02 07:25 IDLE STARTED 07:25:28 (checking for an allowed reason)
+2026-11-02 07:29 IDLE ENDED after 4.1 min (started 07:25)
+2026-11-02 07:55 occupancy last 30 min: busy 25.5 min, idle 4 min
+2026-11-02 07:56 IDLE STARTED 07:56:13 (checking for an allowed reason)
+2026-11-02 07:58 IDLE with no allowed reason since 07:56; pending: 
+2026-11-02 07:58 ran start_lanes.ps1
+2026-11-02 08:00 IDLE ENDED after 4.2 min (started 07:56)
+2026-11-02 08:19 IDLE STARTED 08:19:22 (checking for an allowed reason)
+2026-11-02 08:23 IDLE ENDED after 4.1 min (started 08:19)
+2026-11-02 08:25 occupancy last 30 min: busy 21.5 min, idle 8 min
+2026-11-02 08:44 IDLE STARTED 08:44:28 (checking for an allowed reason)
+2026-11-02 08:48 idle, allowed: a Codex look is launching
+2026-11-02 08:49 IDLE ENDED after 4.7 min (started 08:44)
+2026-11-02 08:55 occupancy last 30 min: busy 25 min, idle 4.5 min
+2026-11-02 09:24 IDLE STARTED 09:24:28 (checking for an allowed reason)
+2026-11-02 09:26 occupancy last 30 min: busy 27.5 min, idle 2 min
+2026-11-02 09:28 idle, allowed: a Codex look is launching
+2026-11-02 09:29 IDLE ENDED after 4.7 min (started 09:24)
+2026-11-02 09:46 IDLE STARTED 09:46:34 (checking for an allowed reason)
+2026-11-02 09:50 IDLE ENDED after 3.6 min (started 09:46)
+2026-11-02 09:56 occupancy last 30 min: busy 23.5 min, idle 6 min
+2026-11-02 10:00 IDLE STARTED 10:00:55 (checking for an allowed reason)
+2026-11-02 10:03 IDLE ENDED after 2.6 min (started 10:00)
+2026-11-02 10:10 IDLE STARTED 10:10:07 (checking for an allowed reason)
+2026-11-02 10:12 IDLE with no allowed reason since 10:10; pending: 
+2026-11-02 10:12 ran start_lanes.ps1
+2026-11-02 10:13 ran start_lanes.ps1
+2026-11-02 10:15 IDLE ENDED after 5.3 min (started 10:10)
+2026-11-02 10:26 occupancy last 30 min: busy 22 min, idle 7.5 min
+2026-11-02 10:46 IDLE STARTED 10:46:38 (checking for an allowed reason)
+2026-11-02 10:50 idle, allowed: a Codex look is launching
+2026-11-02 10:51 IDLE ENDED after 5.2 min (started 10:46)
+2026-11-02 10:52 closed stale Codex START of verifyS2_c88 in queue.log
+2026-11-02 10:52 IDLE STARTED 10:52:52 (checking for an allowed reason)
+2026-11-02 10:54 IDLE with no allowed reason since 10:52; pending: 
+2026-11-02 10:54 ran start_lanes.ps1
+2026-11-02 10:55 ran start_lanes.ps1
+2026-11-02 10:55 ran start_lanes.ps1
+2026-11-02 10:56 ran start_lanes.ps1
+2026-11-02 10:56 ran start_lanes.ps1
+2026-11-02 10:56 occupancy last 30 min: busy 20 min, idle 9 min
+2026-11-02 10:57 ran start_lanes.ps1
+2026-11-02 10:57 IDLE 6+ min: AUTOCAD IDLE since Mon 10:52 with no allowed reason. Pending work: NONE (queues empty: top them up). Codex cap/mode: PACE.
+2026-11-02 10:57 ran start_lanes.ps1
+2026-11-02 10:58 ran start_lanes.ps1
+2026-11-02 10:59 ran start_lanes.ps1
+2026-11-02 10:59 IDLE ENDED after 6.8 min (started 10:52)
+2026-11-02 11:02 IDLE STARTED 11:02:45 (checking for an allowed reason)
+2026-11-02 11:04 IDLE with no allowed reason since 11:02; pending: 
+2026-11-02 11:04 ran start_lanes.ps1
+2026-11-02 11:04 ran start_lanes.ps1
+2026-11-02 11:05 ran start_lanes.ps1
+2026-11-02 11:06 ran start_lanes.ps1
+2026-11-02 11:06 IDLE ENDED after 3.9 min (started 11:02)
+2026-11-02 11:15 IDLE STARTED 11:15:20 (checking for an allowed reason)
+2026-11-02 11:16 IDLE with no allowed reason since 11:15; pending: 
+2026-11-02 11:16 ran start_lanes.ps1
+2026-11-02 11:17 ran start_lanes.ps1
+2026-11-02 11:18 ran start_lanes.ps1
+2026-11-02 11:18 ran start_lanes.ps1
+2026-11-02 11:19 IDLE ENDED after 3.9 min (started 11:15)
+2026-11-02 11:23 IDLE STARTED 11:23:20 (checking for an allowed reason)
+2026-11-02 11:24 IDLE with no allowed reason since 11:23; pending: 
+2026-11-02 11:24 ran start_lanes.ps1
+2026-11-02 11:25 ran start_lanes.ps1
+2026-11-02 11:26 ran start_lanes.ps1
+2026-11-02 11:26 IDLE ENDED after 3.3 min (started 11:23)
+2026-11-02 11:27 occupancy last 30 min: busy 16.5 min, idle 12 min
+2026-11-02 11:32 IDLE STARTED 11:32:13 (checking for an allowed reason)
+2026-11-02 11:33 IDLE with no allowed reason since 11:32; pending: 
+2026-11-02 11:33 ran start_lanes.ps1
+2026-11-02 11:34 ran start_lanes.ps1
+2026-11-02 11:34 ran start_lanes.ps1
+2026-11-02 11:35 IDLE ENDED after 3.3 min (started 11:32)
+2026-11-02 11:43 IDLE STARTED 11:43:43 (checking for an allowed reason)
+2026-11-02 11:45 IDLE with no allowed reason since 11:43; pending: 
+2026-11-02 11:45 ran start_lanes.ps1
+2026-11-02 11:45 ran start_lanes.ps1
+2026-11-02 11:46 ran start_lanes.ps1
+2026-11-02 11:47 ran start_lanes.ps1
+2026-11-02 11:47 IDLE ENDED after 3.9 min (started 11:43)
+2026-11-02 11:57 occupancy last 30 min: busy 22.5 min, idle 6.5 min
+2026-11-02 12:07 IDLE STARTED 12:07:40 (checking for an allowed reason)
+2026-11-02 12:09 IDLE with no allowed reason since 12:07; pending: 
+2026-11-02 12:09 ran start_lanes.ps1
+2026-11-02 12:09 IDLE ENDED after 2.1 min (started 12:07)
+2026-11-02 12:11 IDLE STARTED 12:11:18 (checking for an allowed reason)
+2026-11-02 12:12 IDLE ENDED after 1 min (started 12:11)
+2026-11-02 12:18 IDLE STARTED 12:18:59 (checking for an allowed reason)
+2026-11-02 12:20 IDLE ENDED after 1 min (started 12:18)
+2026-11-02 12:27 occupancy last 30 min: busy 25.5 min, idle 4 min
+2026-11-02 12:28 IDLE STARTED 12:28:44 (checking for an allowed reason)
+2026-11-02 12:29 IDLE ENDED after 1 min (started 12:28)
+2026-11-02 12:33 IDLE STARTED 12:33:20 (checking for an allowed reason)
+2026-11-02 12:33 IDLE ENDED after 0.5 min (started 12:33)
+2026-11-02 12:35 IDLE STARTED 12:35:23 (checking for an allowed reason)
+2026-11-02 12:36 IDLE ENDED after 1 min (started 12:35)
+2026-11-02 12:47 IDLE STARTED 12:47:41 (checking for an allowed reason)
+2026-11-02 12:48 IDLE ENDED after 1 min (started 12:47)
+2026-11-02 12:52 IDLE STARTED 12:52:17 (checking for an allowed reason)
+2026-11-02 12:52 IDLE ENDED after 0.5 min (started 12:52)
+2026-11-02 12:56 IDLE STARTED 12:56:53 (checking for an allowed reason)
+2026-11-02 12:57 IDLE ENDED after 1 min (started 12:56)
+2026-11-02 12:57 occupancy last 30 min: busy 24.5 min, idle 5 min
+2026-11-02 13:00 IDLE STARTED 13:00:27 (checking for an allowed reason)
+2026-11-02 13:01 IDLE ENDED after 1 min (started 13:00)
+2026-11-02 13:05 IDLE STARTED 13:05:34 (checking for an allowed reason)
+2026-11-02 13:06 IDLE ENDED after 0.5 min (started 13:05)
+2026-11-02 13:07 IDLE STARTED 13:07:36 (checking for an allowed reason)
+2026-11-02 13:08 IDLE ENDED after 1 min (started 13:07)
+2026-11-02 13:26 IDLE STARTED 13:26:03 (checking for an allowed reason)
+2026-11-02 13:26 IDLE ENDED after 0.5 min (started 13:26)
+2026-11-02 13:28 occupancy last 30 min: busy 26.5 min, idle 3 min
+2026-11-02 13:30 IDLE STARTED 13:30:40 (checking for an allowed reason)
+2026-11-02 13:31 IDLE ENDED after 1 min (started 13:30)
+2026-11-02 13:58 occupancy last 30 min: busy 28.5 min, idle 1 min
+2026-11-02 14:00 IDLE STARTED 14:00:53 (checking for an allowed reason)
+2026-11-02 14:01 IDLE ENDED after 1 min (started 14:00)
+2026-11-02 14:11 IDLE STARTED 14:11:38 (checking for an allowed reason)
+2026-11-02 14:12 IDLE ENDED after 1 min (started 14:11)
+2026-11-02 14:19 IDLE STARTED 14:19:19 (checking for an allowed reason)
+2026-11-02 14:20 IDLE ENDED after 1 min (started 14:19)
+2026-11-02 14:22 IDLE STARTED 14:22:54 (checking for an allowed reason)
+2026-11-02 14:23 IDLE ENDED after 0.5 min (started 14:22)
+2026-11-02 14:27 IDLE STARTED 14:27:33 (checking for an allowed reason)
+2026-11-02 14:28 occupancy last 30 min: busy 24.5 min, idle 5 min
+2026-11-02 14:31 idle, allowed: a Codex look is launching
+2026-11-02 14:40 ran start_lanes.ps1
+2026-11-02 14:40 IDLE 6+ min: AUTOCAD IDLE since Mon 14:27 with no allowed reason. Pending work: NONE (queues empty: top them up). Codex cap/mode: PACE.
+2026-11-02 14:40 ran start_lanes.ps1
+2026-11-02 14:41 ran start_lanes.ps1
+2026-11-02 14:41 ran start_lanes.ps1
+2026-11-02 14:42 ran start_lanes.ps1
+2026-11-02 14:42 ran start_lanes.ps1
+2026-11-02 14:43 ran start_lanes.ps1
+2026-11-02 14:44 ran start_lanes.ps1
+2026-11-02 14:44 ran start_lanes.ps1
+2026-11-02 14:45 ran start_lanes.ps1
+2026-11-02 14:45 ran start_lanes.ps1
+2026-11-02 14:46 ran start_lanes.ps1
+2026-11-02 14:46 ran start_lanes.ps1
+2026-11-02 14:47 ran start_lanes.ps1
+2026-11-02 14:47 ran start_lanes.ps1
+2026-11-02 14:48 ran start_lanes.ps1
+2026-11-02 14:49 ran start_lanes.ps1
+2026-11-02 14:49 ran start_lanes.ps1
+2026-11-02 14:50 ran start_lanes.ps1
+2026-11-02 14:50 ran start_lanes.ps1
+2026-11-02 14:51 ran start_lanes.ps1
+2026-11-02 14:52 ran start_lanes.ps1
+2026-11-02 14:52 ran start_lanes.ps1
+2026-11-02 14:53 ran start_lanes.ps1
+2026-11-02 14:53 ran start_lanes.ps1
+2026-11-02 14:54 ran start_lanes.ps1
+2026-11-02 14:55 ran start_lanes.ps1
+2026-11-02 14:55 IDLE ENDED after 28 min (started 14:27)
+2026-11-02 14:58 occupancy last 30 min: busy 3.5 min, idle 24 min
+2026-11-02 15:20 IDLE STARTED 15:20:15 (checking for an allowed reason)
+2026-11-02 15:24 idle, allowed: a Codex look is launching
+2026-11-02 15:25 IDLE ENDED after 5.2 min (started 15:20)
+2026-11-02 15:29 occupancy last 30 min: busy 24.5 min, idle 5 min
+2026-11-02 15:31 IDLE STARTED 15:31:34 (checking for an allowed reason)
+2026-11-02 15:35 IDLE ENDED after 3.6 min (started 15:31)
+2026-11-02 15:48 IDLE STARTED 15:48:00 (checking for an allowed reason)
+2026-11-02 15:52 IDLE ENDED after 4.2 min (started 15:48)
+2026-11-02 15:59 occupancy last 30 min: busy 22 min, idle 7.5 min
+2026-11-02 16:23 IDLE STARTED 16:23:23 (checking for an allowed reason)
+2026-11-02 16:26 IDLE with no allowed reason since 16:23; pending: 
+2026-11-02 16:26 ran start_lanes.ps1
+2026-11-02 16:29 IDLE ENDED after 5.8 min (started 16:23)
+2026-11-02 16:29 occupancy last 30 min: busy 24 min, idle 5.5 min
+2026-11-02 16:43 IDLE STARTED 16:43:31 (checking for an allowed reason)
+2026-11-02 16:47 IDLE ENDED after 3.6 min (started 16:43)
+2026-11-02 16:58 IDLE STARTED 16:58:58 (checking for an allowed reason)
+2026-11-02 16:59 occupancy last 30 min: busy 24.5 min, idle 5 min
+2026-11-02 17:03 IDLE ENDED after 4.1 min (started 16:58)
+2026-11-02 17:07 IDLE STARTED 17:07:43 (checking for an allowed reason)
+2026-11-02 17:10 IDLE ENDED after 3.1 min (started 17:07)
+2026-11-02 17:14 IDLE STARTED 17:14:55 (checking for an allowed reason)
+2026-11-02 17:17 IDLE ENDED after 2.6 min (started 17:14)
+2026-11-02 17:26 IDLE STARTED 17:26:43 (checking for an allowed reason)
+2026-11-02 17:28 IDLE with no allowed reason since 17:26; pending: 
+2026-11-02 17:28 ran start_lanes.ps1
+2026-11-02 17:30 IDLE ENDED after 3.7 min (started 17:26)
+2026-11-02 17:30 occupancy last 30 min: busy 18 min, idle 11.5 min
+2026-11-02 17:44 IDLE STARTED 17:44:48 (checking for an allowed reason)
+2026-11-02 17:48 IDLE ENDED after 4.1 min (started 17:44)
+2026-11-02 17:54 IDLE STARTED 17:54:34 (checking for an allowed reason)
+2026-11-02 17:58 IDLE ENDED after 4.1 min (started 17:54)
+2026-11-02 18:00 occupancy last 30 min: busy 21.5 min, idle 8 min
+2026-11-02 18:05 IDLE STARTED 18:05:21 (checking for an allowed reason)
+2026-11-02 18:09 idle, allowed: a Codex look is launching
+2026-11-02 18:17 ran start_lanes.ps1
+2026-11-02 18:17 IDLE 6+ min: AUTOCAD IDLE since Mon 18:05 with no allowed reason. Pending work: NONE (queues empty: top them up). Codex cap/mode: PACE.
+2026-11-02 18:18 ran start_lanes.ps1
+2026-11-02 18:18 ran start_lanes.ps1
+2026-11-02 18:20 ran start_lanes.ps1
+2026-11-02 18:20 ran start_lanes.ps1
+2026-11-02 18:21 ran start_lanes.ps1
+2026-11-02 18:22 ran start_lanes.ps1
+2026-11-02 18:23 ran start_lanes.ps1
+2026-11-02 18:23 ran start_lanes.ps1
+2026-11-02 18:24 IDLE ENDED after 19 min (started 18:05)
+2026-11-02 18:31 occupancy last 30 min: busy 11 min, idle 16.5 min
+2026-11-02 18:43 IDLE STARTED 18:43:47 (checking for an allowed reason)
+2026-11-02 18:47 idle, allowed: a Codex look is launching
+2026-11-02 18:50 IDLE ENDED after 6.8 min (started 18:43)
+2026-11-02 18:56 IDLE STARTED 18:56:13 (checking for an allowed reason)
+2026-11-02 18:58 IDLE with no allowed reason since 18:56; pending: 
+2026-11-02 18:58 ran start_lanes.ps1
+2026-11-02 19:00 IDLE ENDED after 4.7 min (started 18:56)
+2026-11-02 19:01 occupancy last 30 min: busy 18.5 min, idle 11 min
+2026-11-02 19:09 IDLE STARTED 19:09:09 (checking for an allowed reason)
+2026-11-02 19:12 IDLE ENDED after 3.6 min (started 19:09)
+2026-11-02 19:19 IDLE STARTED 19:19:25 (checking for an allowed reason)
+2026-11-02 19:23 idle, allowed: a Codex look is launching
+2026-11-02 19:24 IDLE ENDED after 5.2 min (started 19:19)
+2026-11-02 19:31 occupancy last 30 min: busy 21 min, idle 8.5 min
+2026-11-02 20:02 IDLE STARTED 20:02:00 (checking for an allowed reason)
+2026-11-02 20:02 occupancy last 30 min: busy 29 min, idle 0.5 min
+2026-11-02 20:06 idle, allowed: a Codex look is launching
+2026-11-02 20:07 IDLE ENDED after 5.2 min (started 20:02)
+2026-11-02 20:17 IDLE STARTED 20:17:57 (checking for an allowed reason)
+2026-11-02 20:22 idle, allowed: a Codex look is launching
+2026-11-02 20:22 IDLE ENDED after 4.7 min (started 20:17)
+2026-11-02 20:28 IDLE STARTED 20:28:51 (checking for an allowed reason)
+2026-11-02 20:32 occupancy last 30 min: busy 16.5 min, idle 13 min
+2026-11-02 20:33 idle, allowed: a Codex look is launching
+2026-11-02 20:33 IDLE ENDED after 4.7 min (started 20:28)
+2026-11-02 20:42 IDLE STARTED 20:42:45 (checking for an allowed reason)
+2026-11-02 20:45 IDLE with no allowed reason since 20:42; pending: 
+2026-11-02 20:45 ran start_lanes.ps1
+2026-11-02 20:48 IDLE ENDED after 5.3 min (started 20:42)
+2026-11-02 20:53 IDLE STARTED 20:53:10 (checking for an allowed reason)
+2026-11-02 20:57 IDLE ENDED after 4.2 min (started 20:53)
+2026-11-02 21:02 occupancy last 30 min: busy 20 min, idle 9.5 min
+2026-11-02 21:09 IDLE STARTED 21:09:10 (checking for an allowed reason)
+2026-11-02 21:13 IDLE ENDED after 4.2 min (started 21:09)
+2026-11-02 21:16 IDLE STARTED 21:16:56 (checking for an allowed reason)
+2026-11-02 21:21 IDLE ENDED after 4.2 min (started 21:16)
+2026-11-02 21:27 IDLE STARTED 21:27:18 (checking for an allowed reason)
+2026-11-02 21:31 idle, allowed: a Codex look is launching
+2026-11-02 21:32 IDLE ENDED after 4.7 min (started 21:27)
+2026-11-02 21:33 occupancy last 30 min: busy 16.5 min, idle 12.5 min
+2026-11-02 21:36 IDLE STARTED 21:36:08 (checking for an allowed reason)
+2026-11-02 21:37 IDLE with no allowed reason since 21:36; pending: 
+2026-11-02 21:37 ran start_lanes.ps1
+2026-11-02 21:48 ran start_lanes.ps1
+2026-11-02 21:48 IDLE 6+ min: AUTOCAD IDLE since Mon 21:36 with no allowed reason. Pending work: NONE (queues empty: top them up). Codex cap/mode: PACE.
+2026-11-02 21:48 ran start_lanes.ps1
+2026-11-02 21:49 ran start_lanes.ps1
+2026-11-02 21:49 ran start_lanes.ps1
+2026-11-02 21:50 ran start_lanes.ps1
+2026-11-02 21:51 ran start_lanes.ps1
+2026-11-02 21:51 ran start_lanes.ps1
+2026-11-02 21:52 ran start_lanes.ps1
+2026-11-02 21:52 ran start_lanes.ps1
+2026-11-02 21:53 ran start_lanes.ps1
+2026-11-02 21:54 ran start_lanes.ps1
+2026-11-02 21:54 ran start_lanes.ps1
+2026-11-02 21:55 ran start_lanes.ps1
+2026-11-02 21:55 ran start_lanes.ps1
+2026-11-02 21:56 ran start_lanes.ps1
+2026-11-02 21:57 ran start_lanes.ps1
+2026-11-02 21:57 ran start_lanes.ps1
+2026-11-02 21:58 ran start_lanes.ps1
+2026-11-02 21:58 ran start_lanes.ps1
+2026-11-02 21:59 ran start_lanes.ps1
+2026-11-02 21:59 ran start_lanes.ps1
+2026-11-02 22:00 ran start_lanes.ps1
+2026-11-02 22:01 ran start_lanes.ps1
+2026-11-02 22:01 ran start_lanes.ps1
+2026-11-02 22:02 ran start_lanes.ps1
+2026-11-02 22:02 ran start_lanes.ps1
+2026-11-02 22:03 ran start_lanes.ps1
+2026-11-02 22:03 occupancy last 30 min: busy 2.5 min, idle 25 min
+2026-11-02 22:04 ran start_lanes.ps1
+2026-11-02 22:04 ran start_lanes.ps1
+2026-11-02 22:05 ran start_lanes.ps1
+2026-11-02 22:05 ran start_lanes.ps1
+2026-11-02 22:06 ran start_lanes.ps1
+2026-11-02 22:06 ran start_lanes.ps1
+2026-11-02 22:07 ran start_lanes.ps1
+2026-11-02 22:08 ran start_lanes.ps1
+2026-11-02 22:08 ran start_lanes.ps1
+2026-11-02 22:09 ran start_lanes.ps1
+2026-11-02 22:09 ran start_lanes.ps1
+2026-11-02 22:10 ran start_lanes.ps1
+2026-11-02 22:11 ran start_lanes.ps1
+2026-11-02 22:11 ran start_lanes.ps1
+2026-11-02 22:12 ran start_lanes.ps1
+2026-11-02 22:12 ran start_lanes.ps1
+2026-11-02 22:13 ran start_lanes.ps1
+2026-11-02 22:14 ran start_lanes.ps1
+2026-11-02 22:14 ran start_lanes.ps1
+2026-11-02 22:15 ran start_lanes.ps1
+2026-11-02 22:15 IDLE ENDED after 39.6 min (started 21:36)
+2026-11-02 22:20 IDLE STARTED 22:20:55 (checking for an allowed reason)
+2026-11-02 22:21 IDLE ENDED after 0.5 min (started 22:20)
+2026-11-02 22:26 IDLE STARTED 22:26:05 (checking for an allowed reason)
+2026-11-02 22:27 IDLE with no allowed reason since 22:26; pending: 
+2026-11-02 22:27 ran start_lanes.ps1
+2026-11-02 22:28 ran start_lanes.ps1
+2026-11-02 22:28 ran start_lanes.ps1
+2026-11-02 22:29 ran start_lanes.ps1
+2026-11-02 22:30 ran start_lanes.ps1
+2026-11-02 22:30 ran start_lanes.ps1
+2026-11-02 22:30 IDLE 6+ min: AUTOCAD IDLE since Mon 22:26 with no allowed reason. Pending work: NONE (queues empty: top them up). Codex cap/mode: PACE.
+2026-11-02 22:31 ran start_lanes.ps1
+2026-11-02 22:31 ran start_lanes.ps1
+2026-11-02 22:32 ran start_lanes.ps1
+2026-11-02 22:33 ran start_lanes.ps1
+2026-11-02 22:33 ran start_lanes.ps1
+2026-11-02 22:33 occupancy last 30 min: busy 9.5 min, idle 17.5 min
+2026-11-02 22:34 ran start_lanes.ps1
+2026-11-02 22:34 ran start_lanes.ps1
+2026-11-02 22:35 ran start_lanes.ps1
+2026-11-02 22:35 IDLE ENDED after 9.9 min (started 22:26)
+2026-11-02 22:37 IDLE STARTED 22:37:30 (checking for an allowed reason)
+2026-11-02 22:38 IDLE ENDED after 1 min (started 22:37)
+2026-11-02 22:41 IDLE STARTED 22:41:07 (checking for an allowed reason)
+2026-11-02 22:41 IDLE ENDED after 0.5 min (started 22:41)
+2026-11-02 22:44 IDLE STARTED 22:44:12 (checking for an allowed reason)
+2026-11-02 22:45 IDLE ENDED after 1 min (started 22:44)
+2026-11-02 22:55 IDLE STARTED 22:55:31 (checking for an allowed reason)
+2026-11-02 22:57 IDLE with no allowed reason since 22:55; pending: 
+2026-11-02 22:57 ran start_lanes.ps1
+2026-11-02 22:57 ran start_lanes.ps1
+2026-11-02 22:58 ran start_lanes.ps1
+2026-11-02 22:58 ran start_lanes.ps1
+2026-11-02 22:59 ran start_lanes.ps1
+2026-11-02 23:00 ran start_lanes.ps1
+2026-11-02 23:00 IDLE 6+ min: AUTOCAD IDLE since Mon 22:55 with no allowed reason. Pending work: NONE (queues empty: top them up). Codex cap/mode: PACE.
+2026-11-02 23:00 ran start_lanes.ps1
+2026-11-02 23:01 ran start_lanes.ps1
+2026-11-02 23:01 ran start_lanes.ps1
+2026-11-02 23:02 ran start_lanes.ps1
+2026-11-02 23:03 ran start_lanes.ps1
+2026-11-02 23:03 ran start_lanes.ps1
+2026-11-02 23:03 occupancy last 30 min: busy 16.5 min, idle 11.5 min
+2026-11-02 23:04 ran start_lanes.ps1
+2026-11-02 23:05 ran start_lanes.ps1
+2026-11-02 23:05 IDLE ENDED after 10 min (started 22:55)
+2026-11-02 23:12 IDLE STARTED 23:12:17 (checking for an allowed reason)
+2026-11-02 23:13 IDLE with no allowed reason since 23:12; pending: 
+2026-11-02 23:13 ran start_lanes.ps1
+2026-11-02 23:14 ran start_lanes.ps1
+2026-11-02 23:15 ran start_lanes.ps1
+2026-11-02 23:15 ran start_lanes.ps1
+2026-11-02 23:16 ran start_lanes.ps1
+2026-11-02 23:17 ran start_lanes.ps1
+2026-11-02 23:17 IDLE 6+ min: AUTOCAD IDLE since Mon 23:12 with no allowed reason. Pending work: NONE (queues empty: top them up). Codex cap/mode: PACE.
+2026-11-02 23:17 ran start_lanes.ps1
+2026-11-02 23:18 ran start_lanes.ps1
+2026-11-02 23:18 ran start_lanes.ps1
+2026-11-02 23:19 ran start_lanes.ps1
+2026-11-02 23:20 IDLE ENDED after 7.7 min (started 23:12)
+2026-11-02 23:33 occupancy last 30 min: busy 20.5 min, idle 7.5 min
+2026-11-02 23:34 IDLE STARTED 23:34:57 (checking for an allowed reason)
+2026-11-02 23:36 IDLE with no allowed reason since 23:34; pending: 
+2026-11-02 23:36 ran start_lanes.ps1
+2026-11-02 23:37 ran start_lanes.ps1
+2026-11-02 23:37 ran start_lanes.ps1
+2026-11-02 23:38 ran start_lanes.ps1
+2026-11-02 23:39 ran start_lanes.ps1
+2026-11-02 23:39 IDLE 6+ min: AUTOCAD IDLE since Mon 23:34 with no allowed reason. Pending work: NONE (queues empty: top them up). Codex cap/mode: PACE.
+2026-11-02 23:39 ran start_lanes.ps1
+2026-11-02 23:40 ran start_lanes.ps1
+2026-11-02 23:40 ran start_lanes.ps1
+2026-11-02 23:41 ran start_lanes.ps1
+2026-11-02 23:42 ran start_lanes.ps1
+2026-11-02 23:42 IDLE ENDED after 7.7 min (started 23:34)
+2026-11-02 23:44 IDLE STARTED 23:44:45 (checking for an allowed reason)
+2026-11-02 23:45 IDLE ENDED after 1 min (started 23:44)
+2026-11-02 23:48 IDLE STARTED 23:48:21 (checking for an allowed reason)
+2026-11-02 23:49 IDLE ENDED after 1 min (started 23:48)
+2026-11-03 00:01 IDLE STARTED 00:01:19 (checking for an allowed reason)
+2026-11-03 00:02 IDLE with no allowed reason since 00:01; pending: 
+2026-11-03 00:02 ran start_lanes.ps1
+2026-11-03 00:03 ran start_lanes.ps1
+2026-11-03 00:04 ran start_lanes.ps1
+2026-11-03 00:04 occupancy last 30 min: busy 16.5 min, idle 11.5 min
+2026-11-03 00:04 ran start_lanes.ps1
+2026-11-03 00:05 ran start_lanes.ps1
+2026-11-03 00:05 IDLE 6+ min: AUTOCAD IDLE since Tue 00:01 with no allowed reason. Pending work: NONE (queues empty: top them up). Codex cap/mode: PACE.
+2026-11-03 00:06 ran start_lanes.ps1
+2026-11-03 00:06 ran start_lanes.ps1
+2026-11-03 00:07 ran start_lanes.ps1
+2026-11-03 00:08 ran start_lanes.ps1
+2026-11-03 00:08 ran start_lanes.ps1
+2026-11-03 00:09 ran start_lanes.ps1
+2026-11-03 00:09 ran start_lanes.ps1
+2026-11-03 00:10 ran start_lanes.ps1
+2026-11-03 00:11 ran start_lanes.ps1
+2026-11-03 00:11 ran start_lanes.ps1
+2026-11-03 00:12 ran start_lanes.ps1
+2026-11-03 00:13 ran start_lanes.ps1
+2026-11-03 00:13 ran start_lanes.ps1
+2026-11-03 00:14 ran start_lanes.ps1
+2026-11-03 00:14 ran start_lanes.ps1
+2026-11-03 00:15 ran start_lanes.ps1
+2026-11-03 00:15 ran start_lanes.ps1
+2026-11-03 00:16 ran start_lanes.ps1
+2026-11-03 00:17 ran start_lanes.ps1
+2026-11-03 00:17 ran start_lanes.ps1
+2026-11-03 00:18 ran start_lanes.ps1
+2026-11-03 00:18 ran start_lanes.ps1
+2026-11-03 00:19 ran start_lanes.ps1
+2026-11-03 00:20 ran start_lanes.ps1
+2026-11-03 00:20 ran start_lanes.ps1
+2026-11-03 00:21 ran start_lanes.ps1
+2026-11-03 00:21 ran start_lanes.ps1
+2026-11-03 00:22 ran start_lanes.ps1
+2026-11-03 00:22 ran start_lanes.ps1
+2026-11-03 00:23 ran start_lanes.ps1
+2026-11-03 00:24 ran start_lanes.ps1
+2026-11-03 00:24 ran start_lanes.ps1
+2026-11-03 00:25 ran start_lanes.ps1
+2026-11-03 00:25 ran start_lanes.ps1
+2026-11-03 00:26 ran start_lanes.ps1
+2026-11-03 00:26 ran start_lanes.ps1
+2026-11-03 00:27 ran start_lanes.ps1
+2026-11-03 00:28 ran start_lanes.ps1
+2026-11-03 00:28 ran start_lanes.ps1
+2026-11-03 00:29 ran start_lanes.ps1
+2026-11-03 00:29 ran start_lanes.ps1
+2026-11-03 00:30 ran start_lanes.ps1
+2026-11-03 00:30 ran start_lanes.ps1
+2026-11-03 00:31 ran start_lanes.ps1
+2026-11-03 00:32 ran start_lanes.ps1
+2026-11-03 00:32 ran start_lanes.ps1
+2026-11-03 00:33 ran start_lanes.ps1
+2026-11-03 00:33 ran start_lanes.ps1
+2026-11-03 00:34 ran start_lanes.ps1
+2026-11-03 00:34 occupancy last 30 min: busy 0 min, idle 25.5 min
+2026-11-03 00:34 ran start_lanes.ps1
+2026-11-03 00:35 ran start_lanes.ps1
+2026-11-03 00:36 ran start_lanes.ps1
+2026-11-03 00:36 ran start_lanes.ps1
+2026-11-03 00:37 ran start_lanes.ps1
+2026-11-03 00:37 ran start_lanes.ps1
+2026-11-03 00:38 ran start_lanes.ps1
+2026-11-03 00:38 ran start_lanes.ps1
+2026-11-03 00:39 ran start_lanes.ps1
+2026-11-03 00:40 ran start_lanes.ps1
+2026-11-03 00:40 ran start_lanes.ps1
+2026-11-03 00:41 ran start_lanes.ps1
+2026-11-03 00:41 ran start_lanes.ps1
+2026-11-03 00:42 ran start_lanes.ps1
+2026-11-03 00:43 ran start_lanes.ps1
+2026-11-03 00:43 ran start_lanes.ps1
+2026-11-03 00:44 ran start_lanes.ps1
+2026-11-03 00:44 ran start_lanes.ps1
+2026-11-03 00:45 ran start_lanes.ps1
+2026-11-03 00:45 ran start_lanes.ps1
+2026-11-03 00:46 ran start_lanes.ps1
+2026-11-03 00:47 ran start_lanes.ps1
+2026-11-03 00:47 ran start_lanes.ps1
+2026-11-03 00:48 ran start_lanes.ps1
+2026-11-03 00:48 ran start_lanes.ps1
+2026-11-03 00:49 ran start_lanes.ps1
+2026-11-03 00:50 ran start_lanes.ps1
+2026-11-03 00:50 ran start_lanes.ps1
+2026-11-03 00:51 ran start_lanes.ps1
+2026-11-03 00:51 ran start_lanes.ps1
+2026-11-03 00:52 ran start_lanes.ps1
+2026-11-03 00:52 ran start_lanes.ps1
+2026-11-03 00:53 ran start_lanes.ps1
+2026-11-03 00:54 ran start_lanes.ps1
+2026-11-03 00:54 ran start_lanes.ps1
+2026-11-03 00:55 IDLE ENDED after 54 min (started 00:01)
+2026-11-03 00:58 IDLE STARTED 00:58:56 (checking for an allowed reason)
+2026-11-03 01:00 IDLE with no allowed reason since 00:58; pending: 
+2026-11-03 01:00 ran start_lanes.ps1
+2026-11-03 01:01 ran start_lanes.ps1
+2026-11-03 01:01 ran start_lanes.ps1
+2026-11-03 01:02 IDLE ENDED after 3.3 min (started 00:58)
+2026-11-03 01:04 occupancy last 30 min: busy 6.5 min, idle 20.5 min
+2026-11-03 01:12 IDLE STARTED 01:12:04 (checking for an allowed reason)
+2026-11-03 01:13 IDLE with no allowed reason since 01:12; pending: 
+2026-11-03 01:13 ran start_lanes.ps1
+2026-11-03 01:14 ran start_lanes.ps1
+2026-11-03 01:14 ran start_lanes.ps1
+2026-11-03 01:15 ran start_lanes.ps1
+2026-11-03 01:16 ran start_lanes.ps1
+2026-11-03 01:16 ran start_lanes.ps1
+2026-11-03 01:16 IDLE 6+ min: AUTOCAD IDLE since Tue 01:12 with no allowed reason. Pending work: NONE (queues empty: top them up). Codex cap/mode: PACE.
+2026-11-03 01:17 ran start_lanes.ps1
+2026-11-03 01:17 ran start_lanes.ps1
+2026-11-03 01:18 IDLE ENDED after 6.5 min (started 01:12)
+2026-11-03 01:21 IDLE STARTED 01:21:06 (checking for an allowed reason)
+2026-11-03 01:22 IDLE with no allowed reason since 01:21; pending: 
+2026-11-03 01:22 ran start_lanes.ps1
+2026-11-03 01:23 ran start_lanes.ps1
+2026-11-03 01:23 ran start_lanes.ps1
+2026-11-03 01:24 IDLE ENDED after 3.4 min (started 01:21)
+2026-11-03 01:28 IDLE STARTED 01:28:04 (checking for an allowed reason)
+2026-11-03 01:29 IDLE with no allowed reason since 01:28; pending: 
+2026-11-03 01:29 ran start_lanes.ps1
+2026-11-03 01:30 ran start_lanes.ps1
+2026-11-03 01:30 ran start_lanes.ps1
+2026-11-03 01:31 IDLE ENDED after 3.3 min (started 01:28)
+2026-11-03 01:35 occupancy last 30 min: busy 16.5 min, idle 11.5 min
+2026-11-03 01:44 IDLE STARTED 01:44:47 (checking for an allowed reason)
+2026-11-03 01:46 IDLE with no allowed reason since 01:44; pending: 
+2026-11-03 01:46 ran start_lanes.ps1
+2026-11-03 01:46 ran start_lanes.ps1
+2026-11-03 01:47 ran start_lanes.ps1
+2026-11-03 01:48 ran start_lanes.ps1
+2026-11-03 01:48 ran start_lanes.ps1
+2026-11-03 01:49 ran start_lanes.ps1
+2026-11-03 01:49 IDLE 6+ min: AUTOCAD IDLE since Tue 01:44 with no allowed reason. Pending work: NONE (queues empty: top them up). Codex cap/mode: PACE.
+2026-11-03 01:50 ran start_lanes.ps1
+2026-11-03 01:50 ran start_lanes.ps1
+2026-11-03 01:51 ran start_lanes.ps1
+2026-11-03 01:51 ran start_lanes.ps1
+2026-11-03 01:52 ran start_lanes.ps1
+2026-11-03 01:53 ran start_lanes.ps1
+2026-11-03 01:53 IDLE ENDED after 8.8 min (started 01:44)
+2026-11-03 02:05 occupancy last 30 min: busy 21 min, idle 7.5 min
+2026-11-03 02:07 IDLE STARTED 02:07:02 (checking for an allowed reason)
+2026-11-03 02:08 IDLE with no allowed reason since 02:07; pending: 
+2026-11-03 02:08 ran start_lanes.ps1
+2026-11-03 02:09 ran start_lanes.ps1
+2026-11-03 02:09 ran start_lanes.ps1
+2026-11-03 02:10 ran start_lanes.ps1
+2026-11-03 02:11 ran start_lanes.ps1
+2026-11-03 02:11 ran start_lanes.ps1
+2026-11-03 02:11 IDLE 6+ min: AUTOCAD IDLE since Tue 02:07 with no allowed reason. Pending work: NONE (queues empty: top them up). Codex cap/mode: PACE.
+2026-11-03 02:12 ran start_lanes.ps1
+2026-11-03 02:12 IDLE ENDED after 5.8 min (started 02:07)
+2026-11-03 02:31 IDLE STARTED 02:31:25 (checking for an allowed reason)
+2026-11-03 02:31 IDLE ENDED after 0.5 min (started 02:31)
+2026-11-03 02:35 occupancy last 30 min: busy 23 min, idle 5.5 min
+2026-11-03 02:36 IDLE STARTED 02:36:33 (checking for an allowed reason)
+2026-11-03 02:38 IDLE with no allowed reason since 02:36; pending: 
+2026-11-03 02:38 ran start_lanes.ps1
+2026-11-03 02:38 ran start_lanes.ps1
+2026-11-03 02:39 ran start_lanes.ps1
+2026-11-03 02:39 ran start_lanes.ps1
+2026-11-03 02:40 ran start_lanes.ps1
+2026-11-03 02:41 ran start_lanes.ps1
+2026-11-03 02:41 IDLE 6+ min: AUTOCAD IDLE since Tue 02:36 with no allowed reason. Pending work: NONE (queues empty: top them up). Codex cap/mode: PACE.
+2026-11-03 02:41 ran start_lanes.ps1
+2026-11-03 02:42 ran start_lanes.ps1
+2026-11-03 02:42 ran start_lanes.ps1
+2026-11-03 02:43 ran start_lanes.ps1
+2026-11-03 02:44 ran start_lanes.ps1
+2026-11-03 02:44 ran start_lanes.ps1
+2026-11-03 02:45 ran start_lanes.ps1
+2026-11-03 02:45 IDLE ENDED after 9.3 min (started 02:36)
+2026-11-03 03:03 IDLE STARTED 03:03:19 (checking for an allowed reason)
+2026-11-03 03:03 IDLE ENDED after 0.5 min (started 03:03)
+2026-11-03 03:05 occupancy last 30 min: busy 20 min, idle 8.5 min
+2026-11-03 03:25 IDLE STARTED 03:25:24 (checking for an allowed reason)
+2026-11-03 03:25 IDLE ENDED after 0.5 min (started 03:25)
+2026-11-03 03:36 occupancy last 30 min: busy 29 min, idle 0.5 min
+2026-11-03 03:43 IDLE STARTED 03:43:26 (checking for an allowed reason)
+2026-11-03 03:44 IDLE with no allowed reason since 03:43; pending: 
+2026-11-03 03:45 ran start_lanes.ps1
+2026-11-03 03:45 ran start_lanes.ps1
+2026-11-03 03:46 ran start_lanes.ps1
+2026-11-03 03:46 ran start_lanes.ps1
+2026-11-03 03:47 ran start_lanes.ps1
+2026-11-03 03:47 IDLE 6+ min: AUTOCAD IDLE since Tue 03:43 with no allowed reason. Pending work: NONE (queues empty: top them up). Codex cap/mode: PACE.
+2026-11-03 03:48 ran start_lanes.ps1
+2026-11-03 03:48 ran start_lanes.ps1
+2026-11-03 03:49 ran start_lanes.ps1
+2026-11-03 03:49 IDLE ENDED after 6.5 min (started 03:43)
+2026-11-03 04:01 IDLE STARTED 04:01:44 (checking for an allowed reason)
+2026-11-03 04:02 IDLE ENDED after 0.5 min (started 04:01)
+2026-11-03 04:06 occupancy last 30 min: busy 22.5 min, idle 6 min
+2026-11-03 04:11 IDLE STARTED 04:11:29 (checking for an allowed reason)
+2026-11-03 04:13 IDLE with no allowed reason since 04:11; pending: 
+2026-11-03 04:13 ran start_lanes.ps1
+2026-11-03 04:13 ran start_lanes.ps1
+2026-11-03 04:14 ran start_lanes.ps1
+2026-11-03 04:14 ran start_lanes.ps1
+2026-11-03 04:15 ran start_lanes.ps1
+2026-11-03 04:16 ran start_lanes.ps1
+2026-11-03 04:16 IDLE 6+ min: AUTOCAD IDLE since Tue 04:11 with no allowed reason. Pending work: NONE (queues empty: top them up). Codex cap/mode: PACE.
+2026-11-03 04:16 ran start_lanes.ps1
+2026-11-03 04:17 ran start_lanes.ps1
+2026-11-03 04:17 ran start_lanes.ps1
+2026-11-03 04:18 ran start_lanes.ps1
+2026-11-03 04:18 ran start_lanes.ps1
+2026-11-03 04:19 ran start_lanes.ps1
+2026-11-03 04:20 ran start_lanes.ps1
+2026-11-03 04:20 ran start_lanes.ps1
+2026-11-03 04:21 IDLE ENDED after 9.9 min (started 04:11)
+2026-11-03 04:27 IDLE STARTED 04:27:34 (checking for an allowed reason)
+2026-11-03 04:28 IDLE ENDED after 0.5 min (started 04:27)
+2026-11-03 04:35 IDLE STARTED 04:35:55 (checking for an allowed reason)
+2026-11-03 04:36 IDLE ENDED after 0.5 min (started 04:35)
+2026-11-03 04:36 occupancy last 30 min: busy 18.5 min, idle 9.5 min
+2026-11-03 04:41 IDLE STARTED 04:41:09 (checking for an allowed reason)
+2026-11-03 04:41 IDLE ENDED after 0.5 min (started 04:41)
+2026-11-03 04:44 IDLE STARTED 04:44:15 (checking for an allowed reason)
+2026-11-03 04:45 IDLE ENDED after 1 min (started 04:44)
+2026-11-03 04:49 IDLE STARTED 04:49:26 (checking for an allowed reason)
+2026-11-03 04:50 IDLE with no allowed reason since 04:49; pending: 
+2026-11-03 04:51 ran start_lanes.ps1
+2026-11-03 04:51 ran start_lanes.ps1
+2026-11-03 04:52 ran start_lanes.ps1
+2026-11-03 04:52 ran start_lanes.ps1
+2026-11-03 04:53 ran start_lanes.ps1
+2026-11-03 04:53 IDLE 6+ min: AUTOCAD IDLE since Tue 04:49 with no allowed reason. Pending work: NONE (queues empty: top them up). Codex cap/mode: PACE.
+2026-11-03 04:54 ran start_lanes.ps1
+2026-11-03 04:54 ran start_lanes.ps1
+2026-11-03 04:55 ran start_lanes.ps1
+2026-11-03 04:55 ran start_lanes.ps1
+2026-11-03 04:56 ran start_lanes.ps1
+2026-11-03 04:57 ran start_lanes.ps1
+2026-11-03 04:57 ran start_lanes.ps1
+2026-11-03 04:58 ran start_lanes.ps1
+2026-11-03 04:58 ran start_lanes.ps1
+2026-11-03 04:59 IDLE ENDED after 10 min (started 04:49)
+2026-11-03 05:01 IDLE STARTED 05:01:31 (checking for an allowed reason)
+2026-11-03 05:02 IDLE ENDED after 0.5 min (started 05:01)
+2026-11-03 05:04 IDLE STARTED 05:04:05 (checking for an allowed reason)
+2026-11-03 05:04 IDLE ENDED after 0.5 min (started 05:04)
+2026-11-03 05:06 IDLE STARTED 05:06:09 (checking for an allowed reason)
+2026-11-03 05:06 IDLE ENDED after 0.5 min (started 05:06)
+2026-11-03 05:06 occupancy last 30 min: busy 16.5 min, idle 11.5 min
+2026-11-03 05:24 IDLE STARTED 05:24:10 (checking for an allowed reason)
+2026-11-03 05:25 IDLE with no allowed reason since 05:24; pending: 
+2026-11-03 05:25 ran start_lanes.ps1
+2026-11-03 05:26 ran start_lanes.ps1
+2026-11-03 05:26 ran start_lanes.ps1
+2026-11-03 05:27 ran start_lanes.ps1
+2026-11-03 05:28 ran start_lanes.ps1
+2026-11-03 05:28 ran start_lanes.ps1
+2026-11-03 05:28 IDLE 6+ min: AUTOCAD IDLE since Tue 05:24 with no allowed reason. Pending work: NONE (queues empty: top them up). Codex cap/mode: PACE.
+2026-11-03 05:29 ran start_lanes.ps1
+2026-11-03 05:29 ran start_lanes.ps1
+2026-11-03 05:30 ran start_lanes.ps1
+2026-11-03 05:31 ran start_lanes.ps1
+2026-11-03 05:31 ran start_lanes.ps1
+2026-11-03 05:32 ran start_lanes.ps1
+2026-11-03 05:32 ran start_lanes.ps1
+2026-11-03 05:33 IDLE ENDED after 9.3 min (started 05:24)
+2026-11-03 05:37 occupancy last 30 min: busy 20.5 min, idle 8 min
+2026-11-03 05:50 IDLE STARTED 05:50:06 (checking for an allowed reason)
+2026-11-03 05:51 IDLE with no allowed reason since 05:50; pending: 
+2026-11-03 05:51 ran start_lanes.ps1
+2026-11-03 05:52 ran start_lanes.ps1
+2026-11-03 05:52 ran start_lanes.ps1
+2026-11-03 05:53 ran start_lanes.ps1
+2026-11-03 05:54 ran start_lanes.ps1
+2026-11-03 05:54 ran start_lanes.ps1
+2026-11-03 05:54 IDLE 6+ min: AUTOCAD IDLE since Tue 05:50 with no allowed reason. Pending work: NONE (queues empty: top them up). Codex cap/mode: PACE.
+2026-11-03 05:55 ran start_lanes.ps1
+2026-11-03 05:56 ran start_lanes.ps1
+2026-11-03 05:56 ran start_lanes.ps1
+2026-11-03 05:57 ran start_lanes.ps1
+2026-11-03 05:57 ran start_lanes.ps1
+2026-11-03 05:58 ran start_lanes.ps1
+2026-11-03 05:59 IDLE ENDED after 8.9 min (started 05:50)
+2026-11-03 06:07 occupancy last 30 min: busy 20.5 min, idle 7.5 min
+2026-11-03 06:09 IDLE STARTED 06:09:22 (checking for an allowed reason)
+2026-11-03 06:13 IDLE ENDED after 3.6 min (started 06:09)
+2026-11-03 06:22 IDLE STARTED 06:22:47 (checking for an allowed reason)
+2026-11-03 06:26 IDLE ENDED after 3.6 min (started 06:22)
+2026-11-03 06:33 IDLE STARTED 06:33:37 (checking for an allowed reason)
+2026-11-03 06:37 IDLE ENDED after 3.6 min (started 06:33)
+2026-11-03 06:37 occupancy last 30 min: busy 19 min, idle 10.5 min
+2026-11-03 06:43 IDLE STARTED 06:43:29 (checking for an allowed reason)
+2026-11-03 06:47 IDLE ENDED after 4.2 min (started 06:43)
+2026-11-03 07:00 IDLE STARTED 07:00:31 (checking for an allowed reason)
+2026-11-03 07:04 idle, allowed: a Codex look is launching
+2026-11-03 07:05 IDLE ENDED after 4.7 min (started 07:00)
+2026-11-03 07:07 occupancy last 30 min: busy 20.5 min, idle 8.5 min
+2026-11-03 07:09 IDLE STARTED 07:09:51 (checking for an allowed reason)
+2026-11-03 07:13 IDLE ENDED after 3.7 min (started 07:09)
+2026-11-03 07:24 IDLE STARTED 07:24:20 (checking for an allowed reason)
+2026-11-03 07:27 IDLE ENDED after 3.6 min (started 07:24)
+2026-11-03 07:35 IDLE STARTED 07:35:41 (checking for an allowed reason)
+2026-11-03 07:37 IDLE with no allowed reason since 07:35; pending: 
+2026-11-03 07:37 ran start_lanes.ps1
+2026-11-03 07:37 ran start_lanes.ps1
+2026-11-03 07:37 occupancy last 30 min: busy 19.5 min, idle 9.5 min
+2026-11-03 07:38 ran start_lanes.ps1
+2026-11-03 07:39 ran start_lanes.ps1
+2026-11-03 07:39 ran start_lanes.ps1
+2026-11-03 07:40 ran start_lanes.ps1
+2026-11-03 07:40 IDLE 6+ min: AUTOCAD IDLE since Tue 07:35 with no allowed reason. Pending work: NONE (queues empty: top them up). Codex cap/mode: PACE.
+2026-11-03 07:40 ran start_lanes.ps1
+2026-11-03 07:41 ran start_lanes.ps1
+2026-11-03 07:42 ran start_lanes.ps1
+2026-11-03 07:42 ran start_lanes.ps1
+2026-11-03 07:43 ran start_lanes.ps1
+2026-11-03 07:43 ran start_lanes.ps1
+2026-11-03 07:44 ran start_lanes.ps1
+2026-11-03 07:45 ran start_lanes.ps1
+2026-11-03 07:45 IDLE ENDED after 9.9 min (started 07:35)
+2026-11-03 07:54 IDLE STARTED 07:54:54 (checking for an allowed reason)
+2026-11-03 07:56 IDLE with no allowed reason since 07:54; pending: 
+2026-11-03 07:56 ran start_lanes.ps1
+2026-11-03 07:57 ran start_lanes.ps1
+2026-11-03 07:57 ran start_lanes.ps1
+2026-11-03 07:58 ran start_lanes.ps1
+2026-11-03 07:58 ran start_lanes.ps1
+2026-11-03 07:59 ran start_lanes.ps1
+2026-11-03 07:59 IDLE 6+ min: AUTOCAD IDLE since Tue 07:54 with no allowed reason. Pending work: NONE (queues empty: top them up). Codex cap/mode: PACE.
+2026-11-03 08:00 ran start_lanes.ps1
+2026-11-03 08:00 ran start_lanes.ps1
+2026-11-03 08:01 ran start_lanes.ps1
+2026-11-03 08:01 ran start_lanes.ps1
+2026-11-03 08:02 ran start_lanes.ps1
+2026-11-03 08:03 ran start_lanes.ps1
+2026-11-03 08:03 ran start_lanes.ps1
+2026-11-03 08:04 ran start_lanes.ps1
+2026-11-03 08:04 ran start_lanes.ps1
+2026-11-03 08:05 IDLE ENDED after 10.5 min (started 07:54)
+2026-11-03 08:06 IDLE STARTED 08:06:55 (checking for an allowed reason)
+2026-11-03 08:07 occupancy last 30 min: busy 10.5 min, idle 16.5 min
+2026-11-03 08:08 IDLE with no allowed reason since 08:06; pending: 
+2026-11-03 08:08 ran start_lanes.ps1
+2026-11-03 08:09 ran start_lanes.ps1
+2026-11-03 08:09 ran start_lanes.ps1
+2026-11-03 08:10 ran start_lanes.ps1
+2026-11-03 08:10 ran start_lanes.ps1
+2026-11-03 08:11 ran start_lanes.ps1
+2026-11-03 08:11 IDLE 6+ min: AUTOCAD IDLE since Tue 08:06 with no allowed reason. Pending work: NONE (queues empty: top them up). Codex cap/mode: PACE.
+2026-11-03 08:12 ran start_lanes.ps1
+2026-11-03 08:12 ran start_lanes.ps1
+2026-11-03 08:13 ran start_lanes.ps1
+2026-11-03 08:13 ran start_lanes.ps1
+2026-11-03 08:14 ran start_lanes.ps1
+2026-11-03 08:15 ran start_lanes.ps1
+2026-11-03 08:15 ran start_lanes.ps1
+2026-11-03 08:16 ran start_lanes.ps1
+2026-11-03 08:16 ran start_lanes.ps1
+2026-11-03 08:17 ran start_lanes.ps1
+2026-11-03 08:18 ran start_lanes.ps1
+2026-11-03 08:18 ran start_lanes.ps1
+2026-11-03 08:19 ran start_lanes.ps1
+2026-11-03 08:19 ran start_lanes.ps1
+2026-11-03 08:20 ran start_lanes.ps1
+2026-11-03 08:21 ran start_lanes.ps1
+2026-11-03 08:21 ran start_lanes.ps1
+2026-11-03 08:22 ran start_lanes.ps1
+2026-11-03 08:22 ran start_lanes.ps1
+2026-11-03 08:23 ran start_lanes.ps1
+2026-11-03 08:24 ran start_lanes.ps1
+2026-11-03 08:24 ran start_lanes.ps1
+2026-11-03 08:25 ran start_lanes.ps1
+2026-11-03 08:25 ran start_lanes.ps1
+2026-11-03 08:26 ran start_lanes.ps1
+2026-11-03 08:27 ran start_lanes.ps1
+2026-11-03 08:27 ran start_lanes.ps1
+2026-11-03 08:28 ran start_lanes.ps1
+2026-11-03 08:28 ran start_lanes.ps1
+2026-11-03 08:29 ran start_lanes.ps1
+2026-11-03 08:29 ran start_lanes.ps1
+2026-11-03 08:30 ran start_lanes.ps1
+2026-11-03 08:31 ran start_lanes.ps1
+2026-11-03 08:31 ran start_lanes.ps1
+2026-11-03 08:32 ran start_lanes.ps1
+2026-11-03 08:32 ran start_lanes.ps1
+2026-11-03 08:33 ran start_lanes.ps1
+2026-11-03 08:34 ran start_lanes.ps1
+2026-11-03 08:34 ran start_lanes.ps1
+2026-11-03 08:35 ran start_lanes.ps1
+2026-11-03 08:35 ran start_lanes.ps1
+2026-11-03 08:36 ran start_lanes.ps1
+2026-11-03 08:36 ran start_lanes.ps1
+2026-11-03 08:37 ran start_lanes.ps1
+2026-11-03 08:38 ran start_lanes.ps1
+2026-11-03 08:38 occupancy last 30 min: busy 0 min, idle 25.5 min
+2026-11-03 08:38 ran start_lanes.ps1
+2026-11-03 08:39 ran start_lanes.ps1
+2026-11-03 08:39 ran start_lanes.ps1
+2026-11-03 08:40 ran start_lanes.ps1
+2026-11-03 08:40 ran start_lanes.ps1
+2026-11-03 08:41 ran start_lanes.ps1
+2026-11-03 08:42 ran start_lanes.ps1
+2026-11-03 08:42 ran start_lanes.ps1
+2026-11-03 08:43 ran start_lanes.ps1
+2026-11-03 08:43 ran start_lanes.ps1
+2026-11-03 08:44 ran start_lanes.ps1
+2026-11-03 08:45 ran start_lanes.ps1
+2026-11-03 08:45 ran start_lanes.ps1
+2026-11-03 08:46 ran start_lanes.ps1
+2026-11-03 08:46 ran start_lanes.ps1
+2026-11-03 08:47 ran start_lanes.ps1
+2026-11-03 08:48 ran start_lanes.ps1
+2026-11-03 08:48 ran start_lanes.ps1
+2026-11-03 08:49 ran start_lanes.ps1
+2026-11-03 08:49 ran start_lanes.ps1
+2026-11-03 08:50 ran start_lanes.ps1
+2026-11-03 08:51 ran start_lanes.ps1
+2026-11-03 08:51 ran start_lanes.ps1
+2026-11-03 08:52 ran start_lanes.ps1
+2026-11-03 08:52 ran start_lanes.ps1
+2026-11-03 08:53 ran start_lanes.ps1
+2026-11-03 08:53 ran start_lanes.ps1
+2026-11-03 08:54 ran start_lanes.ps1
+2026-11-03 08:55 ran start_lanes.ps1
+2026-11-03 08:55 ran start_lanes.ps1
+2026-11-03 08:56 ran start_lanes.ps1
+2026-11-03 08:56 ran start_lanes.ps1
+2026-11-03 08:57 ran start_lanes.ps1
+2026-11-03 08:58 ran start_lanes.ps1
+2026-11-03 08:58 ran start_lanes.ps1
+2026-11-03 08:59 ran start_lanes.ps1
+2026-11-03 08:59 ran start_lanes.ps1
+2026-11-03 09:00 ran start_lanes.ps1
+2026-11-03 09:01 ran start_lanes.ps1
+2026-11-03 09:01 ran start_lanes.ps1
+2026-11-03 09:02 ran start_lanes.ps1
+2026-11-03 09:02 ran start_lanes.ps1
+2026-11-03 09:03 ran start_lanes.ps1
+2026-11-03 09:03 ran start_lanes.ps1
+2026-11-03 09:04 ran start_lanes.ps1
+2026-11-03 09:05 ran start_lanes.ps1
+2026-11-03 09:05 ran start_lanes.ps1
+2026-11-03 09:06 ran start_lanes.ps1
+2026-11-03 09:06 ran start_lanes.ps1
+2026-11-03 09:07 ran start_lanes.ps1
+2026-11-03 09:07 ran start_lanes.ps1
+2026-11-03 09:08 ran start_lanes.ps1
+2026-11-03 09:08 occupancy last 30 min: busy 0 min, idle 26 min
+2026-11-03 09:09 ran start_lanes.ps1
+2026-11-03 09:09 ran start_lanes.ps1
+2026-11-03 09:10 ran start_lanes.ps1
+2026-11-03 09:10 ran start_lanes.ps1
+2026-11-03 09:11 ran start_lanes.ps1
+2026-11-03 09:11 ran start_lanes.ps1
+2026-11-03 09:12 ran start_lanes.ps1
+2026-11-03 09:13 ran start_lanes.ps1
+2026-11-03 09:13 ran start_lanes.ps1
+2026-11-03 09:14 ran start_lanes.ps1
+2026-11-03 09:14 ran start_lanes.ps1
+2026-11-03 09:15 ran start_lanes.ps1
+2026-11-03 09:16 ran start_lanes.ps1
+2026-11-03 09:16 ran start_lanes.ps1
+2026-11-03 09:17 ran start_lanes.ps1
+2026-11-03 09:17 ran start_lanes.ps1
+2026-11-03 09:18 ran start_lanes.ps1
+2026-11-03 09:18 ran start_lanes.ps1
+2026-11-03 09:19 ran start_lanes.ps1
+2026-11-03 09:20 ran start_lanes.ps1
+2026-11-03 09:20 ran start_lanes.ps1
+2026-11-03 09:21 ran start_lanes.ps1
+2026-11-03 09:21 ran start_lanes.ps1
+2026-11-03 09:22 ran start_lanes.ps1
+2026-11-03 09:23 ran start_lanes.ps1
+2026-11-03 09:23 ran start_lanes.ps1
+2026-11-03 09:24 ran start_lanes.ps1
+2026-11-03 09:24 ran start_lanes.ps1
+2026-11-03 09:25 ran start_lanes.ps1
+2026-11-03 09:25 ran start_lanes.ps1
+2026-11-03 09:26 ran start_lanes.ps1
+2026-11-03 09:27 ran start_lanes.ps1
+2026-11-03 09:27 ran start_lanes.ps1
+2026-11-03 09:28 ran start_lanes.ps1
+2026-11-03 09:28 ran start_lanes.ps1
+2026-11-03 09:29 ran start_lanes.ps1
+2026-11-03 09:30 ran start_lanes.ps1
+2026-11-03 09:30 ran start_lanes.ps1
+2026-11-03 09:31 ran start_lanes.ps1
+2026-11-03 09:31 ran start_lanes.ps1
+2026-11-03 09:32 ran start_lanes.ps1
+2026-11-03 09:32 ran start_lanes.ps1
+2026-11-03 09:33 ran start_lanes.ps1
+2026-11-03 09:34 ran start_lanes.ps1
+2026-11-03 09:34 ran start_lanes.ps1
+2026-11-03 09:35 ran start_lanes.ps1
+2026-11-03 09:35 ran start_lanes.ps1
+2026-11-03 09:36 ran start_lanes.ps1
+2026-11-03 09:36 ran start_lanes.ps1
+2026-11-03 09:37 ran start_lanes.ps1
+2026-11-03 09:38 ran start_lanes.ps1
+2026-11-03 09:38 ran start_lanes.ps1
+2026-11-03 09:38 occupancy last 30 min: busy 0 min, idle 26 min
+2026-11-03 09:39 ran start_lanes.ps1
+2026-11-03 09:39 ran start_lanes.ps1
+2026-11-03 09:40 ran start_lanes.ps1
+2026-11-03 09:41 ran start_lanes.ps1
+2026-11-03 09:41 ran start_lanes.ps1
+2026-11-03 09:42 ran start_lanes.ps1
+2026-11-03 09:42 ran start_lanes.ps1
+2026-11-03 09:43 ran start_lanes.ps1
+2026-11-03 09:44 ran start_lanes.ps1
+2026-11-03 09:44 ran start_lanes.ps1
+2026-11-03 09:45 ran start_lanes.ps1
+2026-11-03 09:45 ran start_lanes.ps1
+2026-11-03 09:46 ran start_lanes.ps1
+2026-11-03 09:46 ran start_lanes.ps1
+2026-11-03 09:47 ran start_lanes.ps1
+2026-11-03 09:48 ran start_lanes.ps1
+2026-11-03 09:48 ran start_lanes.ps1
+2026-11-03 09:49 ran start_lanes.ps1
+2026-11-03 09:49 ran start_lanes.ps1
+2026-11-03 09:50 ran start_lanes.ps1
+2026-11-03 09:50 ran start_lanes.ps1
+2026-11-03 09:51 ran start_lanes.ps1
+2026-11-03 09:52 ran start_lanes.ps1
+2026-11-03 09:52 ran start_lanes.ps1
+2026-11-03 09:53 ran start_lanes.ps1
+2026-11-03 09:53 ran start_lanes.ps1
+2026-11-03 09:54 ran start_lanes.ps1
+2026-11-03 09:55 ran start_lanes.ps1
+2026-11-03 09:55 ran start_lanes.ps1
+2026-11-03 09:56 ran start_lanes.ps1
+2026-11-03 09:56 ran start_lanes.ps1
+2026-11-03 09:57 ran start_lanes.ps1
+2026-11-03 09:57 ran start_lanes.ps1
+2026-11-03 09:58 ran start_lanes.ps1
+2026-11-03 09:59 ran start_lanes.ps1
+2026-11-03 09:59 ran start_lanes.ps1
+2026-11-03 10:00 ran start_lanes.ps1
+2026-11-03 10:00 ran start_lanes.ps1
+2026-11-03 10:01 ran start_lanes.ps1
+2026-11-03 10:02 ran start_lanes.ps1
+2026-11-03 10:02 ran start_lanes.ps1
+2026-11-03 10:03 ran start_lanes.ps1
+2026-11-03 10:03 ran start_lanes.ps1
+2026-11-03 10:04 ran start_lanes.ps1
+2026-11-03 10:04 ran start_lanes.ps1
+2026-11-03 10:05 ran start_lanes.ps1
+2026-11-03 10:06 ran start_lanes.ps1
+2026-11-03 10:06 ran start_lanes.ps1
+2026-11-03 10:07 ran start_lanes.ps1
+2026-11-03 10:07 ran start_lanes.ps1
+2026-11-03 10:08 ran start_lanes.ps1
+2026-11-03 10:08 ran start_lanes.ps1
+2026-11-03 10:08 occupancy last 30 min: busy 0 min, idle 26 min
+2026-11-03 10:09 ran start_lanes.ps1
+2026-11-03 10:10 ran start_lanes.ps1
+2026-11-03 10:10 ran start_lanes.ps1
+2026-11-03 10:11 ran start_lanes.ps1
+2026-11-03 10:11 ran start_lanes.ps1
+2026-11-03 10:12 ran start_lanes.ps1
+2026-11-03 10:13 ran start_lanes.ps1
+2026-11-03 10:13 ran start_lanes.ps1
+2026-11-03 10:14 ran start_lanes.ps1
+2026-11-03 10:14 ran start_lanes.ps1
+2026-11-03 10:15 ran start_lanes.ps1
+2026-11-03 10:15 ran start_lanes.ps1
+2026-11-03 10:16 ran start_lanes.ps1
+2026-11-03 10:17 ran start_lanes.ps1
+2026-11-03 10:17 ran start_lanes.ps1
+2026-11-03 10:18 ran start_lanes.ps1
+2026-11-03 10:18 ran start_lanes.ps1
+2026-11-03 10:19 ran start_lanes.ps1
+2026-11-03 10:19 ran start_lanes.ps1
+2026-11-03 10:20 ran start_lanes.ps1
+2026-11-03 10:21 ran start_lanes.ps1
+2026-11-03 10:21 ran start_lanes.ps1
+2026-11-03 10:22 ran start_lanes.ps1
+2026-11-03 10:22 ran start_lanes.ps1
+2026-11-03 10:23 ran start_lanes.ps1
+2026-11-03 10:23 ran start_lanes.ps1
+2026-11-03 10:24 ran start_lanes.ps1
+2026-11-03 10:25 ran start_lanes.ps1
+2026-11-03 10:25 ran start_lanes.ps1
+2026-11-03 10:26 ran start_lanes.ps1
+2026-11-03 10:26 ran start_lanes.ps1
+2026-11-03 10:27 ran start_lanes.ps1
+2026-11-03 10:28 ran start_lanes.ps1
+2026-11-03 10:28 ran start_lanes.ps1
+2026-11-03 10:29 ran start_lanes.ps1
+2026-11-03 10:29 ran start_lanes.ps1
+2026-11-03 10:30 ran start_lanes.ps1
+2026-11-03 10:30 ran start_lanes.ps1
+2026-11-03 10:31 ran start_lanes.ps1
+2026-11-03 10:32 ran start_lanes.ps1
+2026-11-03 10:32 ran start_lanes.ps1
+2026-11-03 10:33 ran start_lanes.ps1
+2026-11-03 10:33 ran start_lanes.ps1
+2026-11-03 10:34 ran start_lanes.ps1
+2026-11-03 10:34 ran start_lanes.ps1
+2026-11-03 10:35 ran start_lanes.ps1
+2026-11-03 10:35 ran start_lanes.ps1
+2026-11-03 10:36 ran start_lanes.ps1
+2026-11-03 10:37 ran start_lanes.ps1
+2026-11-03 10:37 ran start_lanes.ps1
+2026-11-03 10:38 ran start_lanes.ps1
+2026-11-03 10:38 ran start_lanes.ps1
+2026-11-03 10:39 ran start_lanes.ps1
+2026-11-03 10:39 occupancy last 30 min: busy 0 min, idle 26.5 min
+2026-11-03 10:39 ran start_lanes.ps1
+2026-11-03 10:40 ran start_lanes.ps1
+2026-11-03 10:41 ran start_lanes.ps1
+2026-11-03 10:41 ran start_lanes.ps1
+2026-11-03 10:42 ran start_lanes.ps1
+2026-11-03 10:42 ran start_lanes.ps1
+2026-11-03 10:43 ran start_lanes.ps1
+2026-11-03 10:43 ran start_lanes.ps1
+2026-11-03 10:44 ran start_lanes.ps1
+2026-11-03 10:45 ran start_lanes.ps1
+2026-11-03 10:45 ran start_lanes.ps1
+2026-11-03 10:46 ran start_lanes.ps1
+2026-11-03 10:46 ran start_lanes.ps1
+2026-11-03 10:47 ran start_lanes.ps1
+2026-11-03 10:47 ran start_lanes.ps1
+2026-11-03 10:48 ran start_lanes.ps1
+2026-11-03 10:48 ran start_lanes.ps1
+2026-11-03 10:49 ran start_lanes.ps1
+2026-11-03 10:50 ran start_lanes.ps1
+2026-11-03 10:50 ran start_lanes.ps1
+2026-11-03 10:51 ran start_lanes.ps1
+2026-11-03 10:51 ran start_lanes.ps1
+2026-11-03 10:52 ran start_lanes.ps1
+2026-11-03 10:52 ran start_lanes.ps1
+2026-11-03 10:53 ran start_lanes.ps1
+2026-11-03 10:54 ran start_lanes.ps1
+2026-11-03 10:54 ran start_lanes.ps1
+2026-11-03 10:55 ran start_lanes.ps1
+2026-11-03 10:56 ran start_lanes.ps1
+2026-11-03 10:56 ran start_lanes.ps1
+2026-11-03 10:57 ran start_lanes.ps1
+2026-11-03 10:57 ran start_lanes.ps1
+2026-11-03 10:58 ran start_lanes.ps1
+2026-11-03 10:58 ran start_lanes.ps1
+2026-11-03 10:59 ran start_lanes.ps1
+2026-11-03 11:00 ran start_lanes.ps1
+2026-11-03 11:00 ran start_lanes.ps1
+2026-11-03 11:01 ran start_lanes.ps1
+2026-11-03 11:01 ran start_lanes.ps1
+2026-11-03 11:02 ran start_lanes.ps1
+2026-11-03 11:02 ran start_lanes.ps1
+2026-11-03 11:03 ran start_lanes.ps1

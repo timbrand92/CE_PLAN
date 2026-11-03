@@ -1,0 +1,10 @@
+**FOR TIM**
+
+1. **Found and fixed (draft PR #1832, nothing installed).** When Edit Pipe opened, it checked whether you had reversed the flow arrow on purpose. It checked too early, while the levels were still in "upstream first" order instead of matching the pipe's drawn ends. So on a turned-round pipe, the correct arrow looked "reversed", and the next Save flipped it back uphill.
+2. **Now:** a second Save, or one that changes only the size, keeps the arrow pointing from the higher IL to the lower IL. A switch turns the fix off; it ships ON.
+3. **Proof needed:** robot cases R32 and R32b should change from FAIL to PASS once the fix is installed. It hasn't been tried in AutoCAD yet.
+
+---
+
+1. **Tests:** all Civil tests pass (20,702 passed, 0 failed) and the older build compiles. The report is at `C:\CE_PLAN\areas\release-v3-colleagues-BUG1222_FIX_REPORT.md`.
+2. **Mistakes:** two small ones of mine, about 10 minutes lost: a wrong tool path in my script, and one test check I had written too strictly.

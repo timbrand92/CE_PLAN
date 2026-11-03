@@ -1,0 +1,31 @@
+**FOR TIM:** Nothing to do in AutoCAD. The Drawing Border no longer blocks the P3 → P2 label. That label is still left where it is, because a small "SC" note text now blocks it, so don't mark BUG-141 fixed.
+
+Run 37 on Civil 3.0.61 / Manager 1.1.61 (train C-51) scored 11 PASS, 1 STILL FAILS, 0 BLOCKED, 1 UNPROVEN. The robot tested on copies only, two sessions, 13:30 to 13:48 Melbourne.
+
+1. **Border, switch ON (the default):** the typed MOVE that used to say "(on the block Drawing Border)" now says "(on "SC")". The log says the border is "far bigger than the pipe area and holds the label's start; treated as the sheet frame, not an obstacle".
+2. **Still failing:** Tidy labels still says "No clear spot found 1" for pipe P3 → P2. The blocker is a text "SC" on layer SLAB SC. The CE log has no line for a text obstacle, so I could not tell which of the several "SC" texts along the pipe it meant.
+3. **Border, switch OFF:** the old Drawing Border line came back, with the reason "because the switch Linking.TidyIgnoresSheetFrame is OFF". Same border and same window as run 36, so the switch is what changed it.
+4. **Pits and ordinary blocks are still avoided:**
+   1. A label I put on pit P8 was moved off it.
+   2. A SPOT LEVEL block I moved onto the same label stayed on the obstacle list, and Tidy labels said it would move 235 mm. That line doesn't name which pipe's label, so I believe it is P8's, but didn't prove it.
+5. **Unproven:** the "Would sit on top of ..." drag words, because the driver has no way to drag a callout.
+6. **Regressions all hold:**
+   1. P8 "No clear spot" stays gone.
+   2. Recover Inverts reads "20 already had invert text, 24 skipped".
+   3. R-06 rows: 30 of 30 now end "Enter the detention length, or untick Detention".
+   4. Edit Pipe cascade Yes, Apply, U, REDO all pass.
+   5. CDSYNC leaves the Pit Schedule rows identical, but the header went from 95 to 96 data issues, as in run 35.
+   6. Quick edits open no CE window. I did not re-read the Pit Schedule after them.
+7. **My slips:**
+   1. In session 2 the driver refused 4 `settings-temp` calls because my helper still used the session 1 lock name. Nothing changed.
+   2. In session 1 I sent the pipe command before PIT had stopped, which cost 2 timed-out calls. No harm.
+8. **Call counts:** 62 counted in session 1 and 7 counted in session 2 (11 with the 4 refusals). Both are under the cap of 70.
+
+**Settings and driver:** all four real settings files hash exactly as at the start, which I read myself after the last `quit`. `debugLogging` is back to `false`. Driver hashes are unchanged at 120EE24D15B2 and 5B542F2145F4. Installed versions read 3.0.61 / 1.1.61 first.
+
+**Copies for the desk to delete, in `C:\ce_rc_drv`:** CLD371_B1.dwg, CLD371_B1_PRE_C7_20261020_133137.dwg, CLD372_B1.dwg, CLD372_B1_PRE_C7_20261020_134629.dwg.
+
+The report is pushed to `C:\CE_PLAN\areas\release-v3-colleagues-CLAUDE_DRIVER_RUN37_V2_2026-10-20.md`.
+
+AUTOCAD CLOSED
+SETTINGS RESTORED

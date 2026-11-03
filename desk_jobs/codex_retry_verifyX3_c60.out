@@ -1,0 +1,5 @@
+== verifyX3_c60 (usage 10.0% -> 10.0%): 1. **X3 complete:** [Report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_X3_20261023_1655.md>). PASS 1, FAIL 1, BLOCKED 1, SEEN 1; DIFFERENT 0, NOT TESTED 0. SURE 4, UNSURE 0.
+
+2. **Failure:** Undo echoed `CDCHECKS` instead of `CIRCLE`; Redo said ÔÇ£Nothing to redoÔÇØ. Count agreement was blocked by hidden command history.
+
+3. **Clean finish:** AutoCAD closed, lock released, all settings hashes restored exactly. Original/restored Civil hash: `ACD64E79A33BE9C152149FF2145A3CD2C29CABE11245F211183FD5C7DE783140`. Fixtures wanted: none.

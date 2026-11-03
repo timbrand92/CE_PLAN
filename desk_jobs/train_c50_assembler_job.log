@@ -1,0 +1,11 @@
+Train C-50 is assembled and pushed as `claude/rel-20261020d`, head `82a58cda`, with the report pushed in C:\CE_PLAN.
+
+- **Merged:** #1437 (BUG-683), #1438 (BUG-709 reading half, ships OFF) and #1483 (BUG-141 diagnostic) at `f40de93d`.
+- **#1483:** it has no Opus re-review at that head, so the finalizer should read its fix round.
+- **Shared/:** no merged PR touches it.
+- **Build:** the whole solution built with 0 errors.
+- **Civil net10:** 18,878 of 18,898 pass; the one red is Glen Eira.
+- **Manager net10:** 824 of 824.
+- **Civil net48 focused:** 206 of 207 pass; the one failure is the Bug141 test, which also failed in C-49's runs.
+- **Settings files:** unchanged.
+- **Cleanup:** worktree and temp folders removed.

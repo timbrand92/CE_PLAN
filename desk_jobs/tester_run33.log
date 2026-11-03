@@ -1,0 +1,25 @@
+Run 33 is finished. The Civil 3.0.57 / Manager 1.1.57 pass came out PASS 7, STILL FAILS 2, BLOCKED 1, UNPROVEN 1 across 11 checks, on test copies only. The report is `C:\CE_PLAN\areas\release-v3-colleagues-CLAUDE_DRIVER_RUN33_V2_2026-10-20.md`, committed and pushed as 7db13f3e; the leak scan was clean.
+
+Before starting I read the installed versions (3.0.57 / 1.1.57, +0bbf4882) and confirmed the driver hashes (120EE24D15B2 and 5B542F2145F4). Both matched.
+
+- **Regressions:** all three PASS. Edit Pipe cascade (Yes, Apply, U, REDO) works, CDSYNC left the Pit Schedule identical, and typed MOVE and STRETCH opened no CE window and left the Pit Schedule unchanged.
+- **BUG-815:** STILL THERE, unchanged. CDCHECKS reads 63 / 243 / 312 as before, and 14 of the 20 printed rows are the false R-06 detention rows. Edit Pipe on a 100 mm downpipe (1093C7) shows "Detention pipe · 100 mm", the Detention button on and the required length empty. The pipe's own record says Detention, which is where the second attempt should start.
+- **"Unnamed pipe" wording:** PASS. No handles in the Checks rows.
+- **Tidy labels:** the line now says "a pipe's start invert text" (PASS). The start invert text still doesn't move, even though the picture shows it about 30 pixels clear of the pit (STILL FAILS). The "on the block Drawing Border" wording after a typed MOVE also still prints.
+- **Recover Inverts with one of two IL texts erased:** PASS for the new wording. It lists up to five pipe names ("and 1 more"). The untouched copy gives 5, so the sixth is the pipe I erased. It still draws nothing for such a pipe.
+- **BUG-825, typed 3.0 m/s:** PASS, but only by setting the value through the guard, not the Settings window. A 20 m pipe at 1 in 10 gave "Full-bore velocity 4.64 m/s exceeds maximum 3.00 m/s". The 6.0 control and the no-flag path were not run.
+- **Not testable here:**
+  - The Civil Settings Reset/Save fix (#1476) is BLOCKED, because the Settings window is forbidden.
+  - The Admin Dashboard "behind approved" check is UNPROVEN: it reads "Behind Approved 2", but the tab content needs a click the driver refuses.
+  - Nothing in the robot gaps file was retried, and none of its gaps is closed.
+- **Driver and settings:**
+  - Both sessions took the lock first, used no `-Force`, and ended with `quit`.
+  - I counted 58 and 19 capped calls (70 and 26 in total) across about 22 minutes.
+  - One call hit the 30 s watchdog (`ui press "Design Warnings" OK`); the settings stayed in place until `quit` restored them.
+  - The one `msgbox-answer` was a Yes on the Recalculate box.
+  - Tim's four real settings files hash the same at the start and end (ACD64E79A33B, 622A246F7D3B, 24D8E5F7D87B, EFE307C4FC74), and both `quit` calls proved the restore by hash.
+  - One lesson: CE reads its settings when AutoCAD starts, so a switch set after launch does nothing. Testers must set switches before `launch`.
+- **For the desk to delete in `C:\ce_rc_drv`:** CLD331_B1.dwg, CLD331_B1_PRE_C7_20261019_230837.dwg, CLD332_B1.dwg, CLD332_B1_PRE_C7_20261019_232458.dwg.
+
+AUTOCAD CLOSED
+SETTINGS RESTORED

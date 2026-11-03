@@ -1,0 +1,9 @@
+**FOR TIM:** PR #1868 (BUG-1091) now compiles and its tests pass. Nobody has opened it in AutoCAD. It isn't installed, and the bug stays open.
+
+- **Tests:** 31 of 31 focused tests passed. The full Civil suite ran 20,840 tests with 0 failed. The net48 compile had 0 errors.
+- **Branch:** I pushed one commit (`38c3f825`) to the same branch, with no force-push. It only updates the REGRESSION_LOG.md line from "not built" to the real result. No code changed.
+- **My mistake:** my first two waits for a build slot were killed by the tool after 30 minutes. The first build only started at 5:36 pm.
+- **Not proven:** how it behaves in AutoCAD. The proof is robot case `C78_redesign_min_fall` (450 at 30 L/s, 1 in 200 row, switch-off control) plus a Codex look H8.
+- **Report:** the BUILD AND TEST section is appended to `release-v3-colleagues-BUG1091_FIX_REPORT.md` and pushed. `git status -sb` in CE_PLAN shows no ahead. The unstaged `areas/runner-reports/ledger.json` is another job's file; I did not touch it.
+
+Files: REGRESSION_LOG.md and the report. Switch: `pipe.largePipeRedesignReadsMinFall`.

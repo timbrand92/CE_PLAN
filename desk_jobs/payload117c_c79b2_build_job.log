@@ -1,0 +1,15 @@
+**Candidate `C:\ce_rc_scratch\c1077` is built and proved. It holds both bundles, from one head. Nothing was installed.**
+
+- **Counts:** Civil `verified 832, bad 0, extra 0`. Manager `verified 75, bad 0, extra 0`.
+- **Branch:** `claude/rel-20261110a` @ `aa3b92ac18bb489d682a6595826b16acffa7af16` (Civil 3.0.91). Class AREA.
+- **Tests:** 141 classes, 2,440 tests, 0 failed. `C79b2NewSwitchDefaultsTests` 46 and `C79b2FinalizerGuardsTests` 24.
+- **Installed line found:** C-79a, 3.0.89+61fd6fbc.
+- **Modern DLL SHA256, Civil:** `C18DD0E73FCEA2888FB390384EBDB55B81B572921EF7660E07C007C1CDB00EF6`.
+- **Modern DLL SHA256, Manager:** `93BBD4561FE3076020AC51182ACF04CA9D45C8E99D296A670D3ABFA0A1BA4D76`.
+- **Odd:**
+  - Disk stayed below the 29 GB start line.
+  - I ran the small Manager and test builds anyway, on the 22 GB stop line.
+  - My first string-proof run was faulty (my script's mistake); the re-run is clean.
+  - `Bug558IdleHandlersStartNoCommandTests` was not run.
+
+Report: `C:\Lisp Files\_TEST_COPIES_20260923\PAYLOAD_C1077_REPORT.md`.

@@ -1,0 +1,6 @@
+I wrote the five C-62 files in `C:\CE_PLAN\desk_jobs` and pushed them (commit 01b884c7, leak scan clean, status shows no "ahead"). Nothing was run.
+
+- **Files:** `train_c62_assembler_job.txt` (Sonnet), `train_c62_finalizer_job.txt` (Opus), `payload95_c62_job.txt` (Sonnet, candidate c1058), `scripts\desk_install_c62.ps1`, `chain_c62.ps1`.
+- **Base:** `claude/rel-20261023l` @ 88bd62f7, which is what is installed (3.0.71 / 1.1.71 read from the DLLs). Branch `claude/rel-20261023m` is free.
+- **Merges:** 22 PRs plus #1645 CDRG, all live heads matching the fix-round report.
+- **Checks:** no control characters, and both scripts parse cleanly.

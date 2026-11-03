@@ -1,0 +1,16 @@
+`C:\CE_PLAN\areas\LOOKBRIEF_BATCHB_CIVIL_SCREENS_02NOV.md`: draft done, nothing built or run, and the banned word "follow" is gone (searched twice, 0 hits). The #1887 look (B1-06) is likely to end BLOCKED, and the #1949 and speed looks depend on a fixture that may not exist.
+
+**What the file holds:** FOR TIM, notes for CE 02, the SHORT LAUNCHER, the FULL BRIEF (looks B1-01 to B1-10) and the GO flag and launch lines. It reads `verifyB1_c79a|C:/Lisp Files/_TEST_COPIES_20260923|gpt-6.1-sol|low|90|6`, with `-ReportGlob "CODEX_VERIFY_B1_*"`. I listed the runner folder first and nothing clashes.
+
+Things CE 02 should know:
+
+1. **Branch.** `rel-20261102a` is still the C-78 tip and does not hold C-79a. I read the C-79a code at `61fd6fbc`, the Civil 3.0.89 version commit on `rel-20261106a`.
+2. **gh and diffs.** `gh` had no git on its path, so I added it for my own command only. I did not run `gh pr diff`; I read the same code with `git show` and `git grep`.
+3. **PR state.** All five PRs are still open drafts on GitHub.
+4. **#1887 is not in CDRULES.** The red uphill line comes from the Design Warnings window after CD or Edit Pipe Save. CD asks "Uphill Pipe Warning" first, which may block the route.
+5. **The comma sentence is "Diameter box: 630,5 has a comma: type 630.5".** The finalizer's report dropped the word "box".
+6. **#1949 wording.** The full on-screen line is longer than the PR text and ends "the pipe gets bigger, so the outlet invert needs to be lower".
+7. **Missing fixtures.** There is no fixture for the #1949 pit, the #1887 pipe, or a material with a blank speed. B1-05 and B1-07 only read what is already in DRV1_B1.
+8. **Robot proof.** None of these has any robot proof. The two robot cases named in the PR (N40_comma_refused, N41_unset_speed) exist only in design notes, not as case files.
+
+Not run: the build-gate and list-reader scripts, which I wrote new. Not found: the installed build, the Settings tab captions, and whether the settings guard accepts the three switch names.

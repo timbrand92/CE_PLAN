@@ -1,0 +1,14 @@
+== verifyL1b_c88 (usage 56.0% -> 56.0%): AUTOCAD CLOSED
+
+1. **Both looks BLOCKED.** Rectangle: driver refused CDDISCIPLINE. Beams: unexpected support-selection question. Neither fix verified.
+2. **Installed:** Structural 1.0.125, Civil 3.0.89, Manager 1.1.89; unchanged.
+3. **Clean end:** nothing saved; four settings hashes unchanged; lock released.
+4. **Counts:** PASS 0, FAIL 0, DIFFERENT 0, BLOCKED 2. SURE 2, UNSURE 0. Xref-wall fixture still wanted.
+5. **[Report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_L1b_20261102_2121.md>)** ÔÇö evidence and exact blockers recorded.
+== verifyL1b_c88 (usage 57.0% -> 58.0%): AUTOCAD CLOSED
+
+1. **Results:** LB1-05 BLOCKED by driver refusal. LB1-06 NOT TESTED because its screenshot freshness check repeated identical hashes. Neither fix verified.
+2. **Installed:** Structural 1.0.125, Civil 3.0.89, Manager 1.1.89; unchanged.
+3. **Clean end:** Four settings hashes unchanged. Nothing drawn or saved. Lock released. Usage 58%.
+4. **Counts:** PASS 0, FAIL 0, DIFFERENT 0, BLOCKED 1, NOT TESTED 1. SURE 1, UNSURE 1.
+5. **Report:** [Full results](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_L1b_20261103_0636.md>). Xref-wall fixture remains missing.

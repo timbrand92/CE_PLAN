@@ -1,0 +1,7 @@
+I wrote the seven C-74 files and pushed them to `C:\CE_PLAN` (commit 155fa6ef). Nothing was started, built or installed. Git shows no "ahead", the leak scan came back clean, and the three scripts parse cleanly.
+
+- **PR list:** `areas\TRAIN_C74_PR_LIST_2026-10-28.md` holds #1830 only. Its head 431c27c2 was re-read from GitHub and the file numstat was added up from the live API.
+- **Jobs:** `train_c74_assembler_job.txt`, `train_c74_finalizer_job.txt` and `payload110_c74_job.txt`, all in `desk_jobs`. They use branch `claude/rel-20261026y` (free), Civil 3.0.84 and Manager 1.1.84, and candidate c1070.
+- **Scripts:** `chain_c74.ps1`, `chain_install_c74.ps1` and `scripts\desk_install_c74.ps1`.
+
+I re-checked the PR number, versions and paths after writing, and removed no stale C-73 numbers.

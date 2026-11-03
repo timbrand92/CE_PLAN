@@ -1,0 +1,31 @@
+== cx_h02_import (usage 24.0% -> 26.0%): 1. **DONE — 3 HIGH, 3 MEDIUM, 0 LOW.** Most important: Replace can erase an existing pit, then skip its replacement because a required text layer is locked.
+
+2. **Report saved and pushed:** [CODEX_HUNT_IMPORT_22OCT.md](C:/CE_PLAN/areas/CODEX_HUNT_IMPORT_22OCT.md). Includes exact source lines and deterministic retests; known findings excluded.
+
+---
+
+1. **Evidence:** verified by reading only. No builds, tests or AutoCAD runs.
+2. **Commit:** `aca5b67a` on CE_PLAN `main`. Only the findings file committed; leak scan passed.
+== cx_h04_windows (usage 26.0% -> 29.0%): 1. **DONE — [Findings report](C:/CE_PLAN/areas/CODEX_HUNT_WINDOWS_22OCT.md).** HIGH **1**, MEDIUM **6**, LOW **2**, with deterministic tests and the control inventory.
+2. **Most important:** Structural’s window sizing can put controls off-screen at 150% scaling.
+
+---
+
+1. **Saved and pushed:** report commit `ca6b022b`; leak scan clean.
+2. **Verification:** source reading only. No builds, tests, AutoCAD launch or plugin edits.
+== cx_h06_design (usage 29.0% -> 31.0%): 1. **DONE — 1 HIGH, 3 MEDIUM, 1 LOW.** Biggest fault: CDTWL can combine separate networks with repeated pit numbers and falsely report enough storage.
+
+2. **[Findings and exact test steps](C:/CE_PLAN/areas/CODEX_HUNT_DESIGN_22OCT.md).** Verified by reading; AutoCAD checks remain pending. No builds or tests run.
+
+---
+
+1. **Saved and pushed.** Report commit `0937b058`; leak scan clean. Only the findings file was changed.
+== cx_h10_privacy (usage 32.0% -> 33.0%): 1. **DONE — 2 HIGH, 2 MEDIUM findings.** Most important: the AI sender can follow a redirect to an unapproved address, carrying drawing information and the access token.
+
+2. **Report saved:** [CODEX_HUNT_PRIVACY_22OCT.md](C:/CE_PLAN/areas/CODEX_HUNT_PRIVACY_22OCT.md). Includes exact heartbeat fields, SEC-001 recheck and deterministic tests.
+
+3. **Verification:** Source reading only. No builds, tests, AutoCAD, installs or sub-agents.
+
+---
+
+1. **Delivery:** Report commit `97640e2a` pushed; leak scan passed. Shared `main` advanced during delivery, so the push also included another session’s already-committed change. This session authored only the findings file.

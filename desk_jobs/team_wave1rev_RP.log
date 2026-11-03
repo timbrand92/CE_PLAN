@@ -1,0 +1,14 @@
+I reviewed all 12 cases and their twins on paper; nothing was run in AutoCAD. Report: `C:\CE_PLAN\areas\WAVE1_REVIEW_RP_REPORT.md`. These are the first 12 lines of its answer-first section:
+
+1. **Counts (12 cases, each with its twin, 24 files):** READY TO RUN 11. FIX FIRST 1 (W210). NOT RUNNABLE 0. NEEDS A CODEX LOOK 0 as a verdict (Codex look items listed per case).
+2. **The one fix, W210 and its twin:** Edit Pit is opened with typed PITEDIT after picking the pit. PITEDIT ignores a picked pit, so AutoCAD stops at "Select pit block to edit:" and the case stalls with the prompt left open.
+3. **Exact fix:** `W210_copy_pit_onto_erased_junction.case.txt` line 63 and `W210_BROKEN.case.txt` line 60, replace `type "PITEDIT" -Force -ExpectWindow "Edit Pit" -TimeoutSec 120 -> $pe` with `type "CDEDIT" -Force -ExpectWindow "Edit Pit" -TimeoutSec 120 -> $pe`.
+4. **Why CDEDIT:** CDEDIT takes a picked pit and opens the pit editor directly. The robot has already seen this window ("Creative Engineering | Edit Pit", with a "P11 → P12 · LEAVING" row) in `ui_map\w1_edit_selected_pit.txt`.
+5. **Riskiest 1, W210 (even after the fix):** the Edit Pit route has never run in a case. The "188 connections: 183 Connected" count after erasing P8 was last seen on 3.0.83, not 3.0.88.
+6. **Riskiest 2, W244:** its deciding check is an absence (no uphill record line). CDSYNC never touches a CE pipe object (it handles only plain polylines), so the CDSYNC part proves nothing. If CE does not rewrite the record after a MOVE, the case passes with or without the fix.
+7. **Riskiest 3, W667:** PITDELETE picks the pit by a typed point on its outer wall (150000,-79675), worked out from the code and never driven. If the pick misses, the fixed build FAILS on a check (it does not stall: an Esc follows).
+8. **Next most risky, W234:** four hand-numbered pits, a flat pipe and the "Flow: P93 → P94" header have never run together. The arithmetic and the words all check out.
+9. **Offline checks:** validate gave 49 files, 0 invalid. check_ids says "every control id is known". No ent-read on a handle that may be missing, except W665 (lines 38 and 52), which stalls only on a build without the fix.
+10. **Arithmetic re-done:** every level, length, position and count in the 12 cases matches my own working (details below). No 20 m level map is used on a pipe of a different length.
+11. **Leaves no window open:** every case closes what it opens (Continue placement plus three Esc for New Pit, Start Pipe plus Esc for New Pipe, Cancel for Edit Pipe and Edit Pit). The one exception is W210 before the fix.
+12. **Same fault elsewhere (not mine, not edited):** `drafts_next40_a_30oct\N46_old_names_still_work.case.txt` line 32 types PITEDIT after a pick. It will stall the same way; its writer should look.

@@ -1,0 +1,36 @@
+I've written the re-test map and the Saturday full re-test plan. The map works, but there's a catch: as your rule is written, almost every install would still mean re-testing everything. One question for you below. Nothing was run in AutoCAD, and your AutoCAD wasn't touched.
+
+1. **What the map does:** it sorts the 66 checks the robot has accepted into 17 tools, such as Edit Pipe, Pit Schedule, CDTWL, and copy/move/rotate. After an install, the robot re-runs only the checks for the tools the fix changed. Every other check keeps its earlier pass, labelled "carried from 3.0.85", until the Saturday full re-test.
+
+2. **Hours saved (estimates):**
+   - **An Edit Pipe fix:** the 7 Edit Pipe checks, about 1 h 5 min instead of 6 h 40 min for all 66.
+   - **A fix like the last install (3.0.85):** 32 checks, about 3 h 25 min instead of 6 h 40 min.
+   - **A PIT or CD fix:** about 30 checks, roughly half a night. Many checks place a pit and a pipe before they start.
+
+3. **The catch, and my question:** every fix also adds its own new on/off switch to the CE settings file. Your rule says any settings change means re-test everything.
+   - **Question:** may a fix that only adds its own new switch, and changes no existing setting, count as touching only its own tool?
+   - **I recommend yes.** A new switch with a new name can't change how PIT, CD or CDTWL read their own settings. Editing or removing an existing setting would still mean a full re-test.
+   - **If yes:** the 3.0.85 install re-tests 32 checks and carries the other 34. **If no:** every install re-tests all 66, and the new rule saves nothing.
+   - **Until you answer,** the robot treats any settings change as a full re-test.
+
+4. **Tried on the last four installs:** three changed CE's core (the stored pit and pipe data, the undo/redo handling, the start-up), so they'd have been full re-tests anyway. Only 3.0.85 would have been cut down, and only with a yes to item 3. Nothing would have been missed: the 3.0.85 re-test had 0 failures on 53 checks.
+
+5. **The Saturday full re-test:** all 66 checks, twice each, in 38 AutoCAD starts.
+   - **Today:** about 6 h 40 min.
+   - **Once the shorter wait between sessions goes live:** about 5 h 45 min.
+   - **Set up the old way:** about 8 h 15 min.
+
+6. **What it can't catch:** a fix to one tool that breaks another through a hidden link. For example, an Edit Pipe fix stores a pipe level differently, and CDSYNC (which syncs pit and pipe data with the drawing) then reads it wrongly. CDSYNC's checks would stay "carried" until Saturday, so the most a break like that can hide is a few working days.
+
+**What you need to do:** answer item 3, yes or no.
+
+---
+
+- **Not tested:** all hour figures are estimates from past timings, with no allowance for stalls. The new groupings of checks haven't been run together yet.
+- **Ledger label:** I've proposed the "carried from" ledger wording and a counting method that leaves the ledger file itself untouched. Neither is applied.
+- **Before Saturday:** the robot's run script has to be pointed at the new build first.
+- **Files:**
+  - Report (pushed): `C:\CE_PLAN\areas\RETEST_AREA_MAP_29OCT.md`
+  - Weekend list: `C:\ce-fx\retest\spec_full_weekend.txt`
+
+**Summary:** The map is written and pushed. An Edit Pipe fix would re-test 7 checks in about 1 hour instead of 6 h 40 min. Because every fix adds a settings switch, your rule as written still forces a full re-test, so I need a yes or no on item 3. On the last four installs the rule gives a full re-test three times and halves the 3.0.85 re-test, missing nothing. The Saturday list covers all 66 twice: about 6 h 40 min, or 5 h 45 min with the shorter wait.

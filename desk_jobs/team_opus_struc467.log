@@ -1,0 +1,26 @@
+I wrote 12 robot test cases and they all pass the offline check: `12 file(s) checked, 0 invalid`. None has been run in AutoCAD. Each case is a proof of a fix that is already installed in Structural 1.0.125: a pass shows the fix works in AutoCAD, a fail shows it doesn't. Six are proofs and six are "broken twins". A twin claims the old fault and must fail on 1.0.125, which shows the proof can tell a good build from a bad one.
+
+**The brief was wrong about the drawing.** It said the robot has no Structural copy, but it does: `C:\ce_rc_drv\DRV2_S1.dwg`, the Structural test copy with pads PF1 to PF4. Robot run 2 already ran BT1 on it on 9 Oct, so every case uses it and no new drawing is needed. A Civil copy would also work if it is in millimetres, because typed points need no wall lines.
+
+**Files written**
+1. In `C:\Lisp Files\_ACAD_DRIVER\cases\drafts_struc_30oct\`:
+   - **BT1:** `S467a_bt1_rotated_ucs_proof.case.txt` and `S467a_bt1_rotated_ucs_BROKEN.case.txt`
+   - **AB and BB:** `S467b_ab_bb_rotated_ucs_proof.case.txt` and `S467b_ab_bb_rotated_ucs_BROKEN.case.txt`
+   - **R1, Point picks:** `S467c_r1_point_rotated_ucs_proof.case.txt` and `S467c_r1_point_rotated_ucs_BROKEN.case.txt`
+   - **FPFC:** `S467d_fpfc_rotated_ucs_proof.case.txt` and `S467d_fpfc_rotated_ucs_BROKEN.case.txt`
+   - **Layout tab (BT1, C1, BTX):** `S472a_layout_tab_stops_proof.case.txt` and `S472a_layout_tab_stops_BROKEN.case.txt`
+   - **REFEDIT (BT1, C1, BTX):** `S472b_refedit_stops_proof.case.txt` and `S472b_refedit_stops_BROKEN.case.txt`
+2. **Codex look brief:** `C:\CE_PLAN\desk_jobs\CODEX_LOOK_STRUC_467_472_30OCT.txt` (not sent).
+3. **Report:** `C:\CE_PLAN\areas\CASE_WRITING_STRUC_REPORT_30OCT.md`. It also lists what a minimum Structural drawing needs.
+
+**Validate result:** `12 file(s) checked, 0 invalid`
+
+**What I could not write, or what may stop on the first run**
+1. **Things that must be seen:** the drag preview following the cursor in a rotated UCS, the R1 rubber band, and how the FPFC pad looks. These are in the Codex look brief.
+2. **BTX on a text sitting on the sheet:** this was the worst case in the bug entry. The robot cannot pick on a layout, so it is also a Codex look.
+3. **Structural settings can't be set by a case.** The test runner only knows the old settings folder, not the one Structural 1.0.125 actually reads. So the AB/BB Wall option route is not tested. Every case backs up the settings files first and puts them back at the end.
+4. **The REFEDIT setup has never been tried.** I guessed the order of questions for typed -BLOCK, -INSERT and -REFEDIT. If the first check (that REFEDIT is actually open) fails, the setup is at fault, not CE.
+5. **Not covered:** R1, AB, BB, TS1, FSF and FPFC on a layout tab or inside REFEDIT, editing an Xref in place, and the two-point FSF route.
+6. **The FPFC case uses mark PF7.** If that drawing already remembers a size for PF7, the size questions are skipped and that case goes out of step.
+
+I did not edit the bug list. The desk may want to add a line under BUG-467 and BUG-472 saying these cases exist and have not been run.

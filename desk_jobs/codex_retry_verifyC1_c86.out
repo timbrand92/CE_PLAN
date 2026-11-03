@@ -1,0 +1,6 @@
+== verifyC1_c86 (usage 21.0% -> 21.0%): AUTOCAD CLOSED
+
+1. **BLOCKED:** Startup readings failed after the permitted retry. Seven checks blocked, all SURE; no colour verdict or PDF.
+2. **Build:** Civil 3.0.86 / Manager 1.1.86 / Structural 1.0.125.
+3. **Clean end:** Settings unchanged, drawings unsaved, lock released.
+4. **Report:** [C1 verification](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_C1_20261030_0929.md>).

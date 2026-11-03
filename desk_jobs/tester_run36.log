@@ -1,0 +1,22 @@
+**The BUG-141 diagnostic works and names the cause: the P3 → P2 search window runs 3,381 units past the Drawing Border's right edge.** The border block (layer BLOCKS, x −3,982 to 75,518) is more than twice the window's size both ways (about 3.0 times as wide, 10.2 as tall). It surrounds the window on the left, bottom and top. Pit P2 and its pit label sit outside the border to the right, so the window reaches x = 78,899. The "3.0 and 10.2 times" figures are my arithmetic from the corners in the log line.
+
+Run 36 on Civil 3.0.60 / Manager 1.1.60 finished as 8 PASS, 1 STILL FAILS, 0 BLOCKED, 3 UNPROVEN. I read the installed versions first and they were 3.0.60 / 1.1.60.
+
+1. **BUG-141 border:** I turned `options.debugLogging` on in the settings guard before launch and ran the typed MOVE of 109D56. The border still counts as an obstacle ("No clear spot", as in runs 34 and 35), which is the one STILL FAILS. Nothing was fixed, as briefed.
+2. **"SC" obstacle: UNPROVEN.** It did not reproduce. The second MOVE named a different text, "THICKEN SPOON DRAIN AT STORMWA…", and the log has no line for text obstacles.
+3. **BUG-709: UNPROVEN.** There is no typed form for CDSURVEY.
+4. **BUG-683: UNPROVEN.** The "More..." button is still refused.
+5. **Regressions all hold:**
+   - Tidy labels on the new pit P8 no longer prints "No clear spot".
+   - CDRECOVERINVERTS reads "20 already had invert text, 24 skipped".
+   - R-06 fix line says "Enter the detention length, or untick Detention" on 30 of 30 rows.
+   - Edit Pipe cascade passes Yes, Apply, U and REDO.
+   - CDSYNC and quick edits leave the Pit Schedule identical and open no CE window.
+6. **Settings, driver and calls:**
+   - The four real settings files hash the same at the start and end (ACD64E79A33B, 622A246F7D3B, 24D8E5F7D87B, EFE307C4FC74), and I read them again after `quit`.
+   - Driver hashes are unchanged (120EE24D15B2, 5B542F2145F4).
+   - One session, 53 counted calls, 14 minutes.
+7. **Report and copies:** the report is pushed to C:\CE_PLAN (e847fdc3). The copies to delete from `C:\ce_rc_drv` are `CLD361_B1.dwg`, `CLD361_B1_PRE_C7_20261020_120256.dwg` and `CLD362_B1.dwg`.
+
+AUTOCAD CLOSED
+SETTINGS RESTORED

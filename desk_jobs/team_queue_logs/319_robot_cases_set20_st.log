@@ -1,0 +1,8 @@
+`C:\CE_PLAN\areas\ROBOT_CASE_DRAFTS_SET20_STRUC_TAGS_LAYERS_02NOV.md`: I drafted 4 robot cases, each with a broken twin, for #1895, #1906, #1912 and #1907. #1913 and #1918 are BLOCKED-FOR-ROBOT and have Codex looks instead. Nothing was built, run or opened in AutoCAD, and the output file is the only file written.
+
+- **#1912 and the #1918 Codex look:** both are locked-layer items and need an Opus review before they are run. No case unlocks anything.
+- **Not provable yet:** every prompt and printed line is DERIVED from the PR code, not seen on a run.
+- **Doubts:** the full-path SETTING line for the twins is unproven in the runner, and I did not check that the robot AutoCAD loads the Structural bundle.
+- **Build pending:** the installed Structural bundle is dated 27 Oct, so the fixes are not in it yet.
+
+I checked again for existing cases and found none for any of the six fixes.

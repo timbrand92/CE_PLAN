@@ -1,0 +1,10 @@
+All four fixes are pushed to draft PR #1871 (branch `fb/bug1255-closedxml-autocad-2027`, head `0b8698eb`). They are built and unit-tested only; nobody has opened this in AutoCAD, and BUG-1255 stays open.
+
+1. **CE's own Excel part:** it is now handed out only for the version CE ships, so another plug-in asking for a different version gets nothing (`Shared/ExcelBinding/ExcelLibraryBinding.cs`).
+2. **Settings comment:** now says the switch lives only in the settings file, not on the Settings page (`UserSettings.cs`).
+3. **Wording:** CDCALC and STRUCEXPORTCSV now say only "Excel export could not start on this AutoCAD." Pit Schedule keeps its Export CSV sentence.
+4. **Probe re-run:** I rebuilt the Civil Release DLL from the branch and re-ran the AutoCAD 2027 console probe. Both load orders save the Pit Schedule workbook (sheets "Pit Schedule" and "Checking"), and both fail with the switch off.
+
+Civil full suite in Release: 21,502 passed, 0 failed. Structural full suite: 7 failed. Those 7 are source-reading guards that open files not in this tree, and none touches Excel, but I did not run them on the base. Both net48 compiles are clean.
+
+The report's FOLLOW-UP section is pushed, and it says N41c must be rewritten before it runs: with the switch off, the old failure shows, not the plain sentence. The `REGRESSION_LOG.md` entry is added. Not proven: the full AutoCAD window, CDCALC and Structural saves, and Excel opening the file.

@@ -1,0 +1,7 @@
+== cx_lf18 (usage 33.0% -> 36.0%): 1. **DONE — draft PRs:** BUG-960 [#1690](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1690), tip `a39b638b`; BUG-961 [#1691](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1691), tip `b1c1ab64`.
+
+2. **Verified:** Civil 19,433 passed/22 skipped; Manager 917 passed/1 skipped. Zero failures. Six new tests pass; all six build lanes have zero errors. Fourteen pictures inspected.
+
+3. **Skipped:** BUG-958, BUG-959 and BUG-962 require protected files.
+
+4. **Saved and pushed:** [Report and exact AutoCAD checks](C:/CE_PLAN/areas/CODEX_LEDGER_FIX_BATCH18_23OCT.md). Nothing installed; AutoCAD not started.

@@ -1,0 +1,31 @@
+2026-10-21 03:09 | sessions 62 | worked 40 | refused 17 | cancelled 1 | warned 0 | failed 2 | unknown 2 | new msgs 13 | candidates +0 | acad yes
+2026-10-21 03:09 | sessions 20 | worked 16 | refused 2 | cancelled 0 | warned 0 | failed 1 | unknown 1 | new msgs 1 | candidates +0 | acad yes
+2026-10-21 03:09 | sessions 122 | worked 87 | refused 29 | cancelled 0 | warned 4 | failed 2 | unknown 0 | new msgs 3 | candidates +0 | acad yes
+2026-10-22 16:24 | loop started (stop flag: STOP_LOGWATCH.flag)
+2026-10-22 16:30 | sessions 31 | worked 25 | refused 2 | cancelled 4 | warned 0 | failed 0 | unknown 0 | new msgs 0 | candidates +0 | acad no
+2026-10-22 17:00 | skipped: AutoCAD not running and no CE log changed
+2026-10-22 17:30 | skipped: AutoCAD not running and no CE log changed
+2026-10-22 18:00 | skipped: AutoCAD not running and no CE log changed
+2026-10-22 18:30 | sessions 32 | worked 26 | refused 2 | cancelled 4 | warned 0 | failed 0 | unknown 0 | new msgs 0 | candidates +0 | acad yes
+2026-10-22 19:00 | sessions 37 | worked 27 | refused 2 | cancelled 8 | warned 0 | failed 0 | unknown 0 | new msgs 0 | candidates +0 | acad yes
+2026-10-23 08:00 | sessions 64 | worked 50 | refused 4 | cancelled 10 | warned 0 | failed 0 | unknown 0 | new msgs 0 | candidates +0 | acad yes
+2026-10-23 08:30 | sessions 67 | worked 53 | refused 4 | cancelled 10 | warned 0 | failed 0 | unknown 0 | new msgs 0 | candidates +0 | acad yes
+2026-10-23 09:00 | sessions 74 | worked 59 | refused 4 | cancelled 11 | warned 0 | failed 0 | unknown 0 | new msgs 0 | candidates +0 | acad yes
+2026-10-23 09:30 | sessions 78 | worked 62 | refused 4 | cancelled 12 | warned 0 | failed 0 | unknown 0 | new msgs 0 | candidates +0 | acad no
+2026-10-23 10:00 | skipped: AutoCAD not running and no CE log changed
+2026-10-23 10:30 | sessions 79 | worked 63 | refused 4 | cancelled 12 | warned 0 | failed 0 | unknown 0 | new msgs 0 | candidates +0 | acad yes
+2026-10-23 11:00 | sessions 84 | worked 64 | refused 4 | cancelled 16 | warned 0 | failed 0 | unknown 0 | new msgs 0 | candidates +0 | acad yes
+2026-10-23 11:30 | sessions 89 | worked 64 | refused 4 | cancelled 21 | warned 0 | failed 0 | unknown 0 | new msgs 0 | candidates +0 | acad no
+2026-10-23 12:00 | sessions 98 | worked 73 | refused 4 | cancelled 21 | warned 0 | failed 0 | unknown 0 | new msgs 0 | candidates +0 | acad no
+2026-10-23 12:30 | skipped: AutoCAD not running and no CE log changed
+2026-10-23 13:00 | sessions 102 | worked 77 | refused 4 | cancelled 21 | warned 0 | failed 0 | unknown 0 | new msgs 0 | candidates +0 | acad yes
+2026-10-23 13:30 | sessions 104 | worked 79 | refused 4 | cancelled 21 | warned 0 | failed 0 | unknown 0 | new msgs 0 | candidates +0 | acad yes
+2026-10-23 14:00 | sessions 104 | worked 79 | refused 4 | cancelled 21 | warned 0 | failed 0 | unknown 0 | new msgs 0 | candidates +0 | acad yes
+2026-10-23 14:30 | sessions 104 | worked 79 | refused 4 | cancelled 21 | warned 0 | failed 0 | unknown 0 | new msgs 0 | candidates +0 | acad yes
+2026-10-23 15:00 | sessions 104 | worked 79 | refused 4 | cancelled 21 | warned 0 | failed 0 | unknown 0 | new msgs 0 | candidates +0 | acad yes
+2026-10-23 15:30 | sessions 104 | worked 79 | refused 4 | cancelled 21 | warned 0 | failed 0 | unknown 0 | new msgs 0 | candidates +0 | acad yes
+2026-10-23 16:00 | sessions 104 | worked 79 | refused 4 | cancelled 21 | warned 0 | failed 0 | unknown 0 | new msgs 0 | candidates +0 | acad yes
+2026-10-23 16:30 | sessions 105 | worked 80 | refused 4 | cancelled 21 | warned 0 | failed 0 | unknown 0 | new msgs 0 | candidates +0 | acad yes
+2026-10-23 17:00 | sessions 112 | worked 87 | refused 4 | cancelled 21 | warned 0 | failed 0 | unknown 0 | new msgs 0 | candidates +0 | acad yes
+2026-10-23 17:30 | sessions 116 | worked 91 | refused 4 | cancelled 21 | warned 0 | failed 0 | unknown 0 | new msgs 0 | candidates +0 | acad yes
+2026-10-23 18:00 | sessions 123 | worked 98 | refused 4 | cancelled 21 | warned 0 | failed 0 | unknown 0 | new msgs 0 | candidates +0 | acad yes

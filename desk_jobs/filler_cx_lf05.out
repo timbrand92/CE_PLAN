@@ -1,0 +1,7 @@
+== cx_lf05 (usage 25.0% -> 25.0%): 1. **BLOCKED — all five skipped.** BUG-893–BUG-897 require protected files. All remain open; no fixes implemented.
+
+2. **Saved and pushed.** [Report with evidence and exact AutoCAD checks](C:/CE_PLAN/areas/CODEX_LEDGER_FIX_BATCH05_23OCT.md).
+
+---
+
+3. **Handoff.** Draft routing PR [#1651](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1651), branch `cx2/bug-893-ledger-batch05`, tip `8b19defd`. Only the regression log changed. Tests added/run: **0/0**. No builds, AutoCAD checks or deployment performed.

@@ -1,0 +1,7 @@
+== verifyH4b_c85 (usage 26.0% -> 26.0%): AUTOCAD CLOSED
+
+1. **BLOCKED:** The driver refused the briefÔÇÖs label reading: **ÔÇ£'PRINT' is on the deny list.ÔÇØ** Pipe drawn and levels verified; owner removal and **Fix it** not reached. BUG-1180 remains unverified.
+2. **Installed:** Civil **3.0.87**, Manager **1.1.87**, Structural **1.0.125**.
+3. **Clean end:** No drawing saved. All four settings hashes unchanged. Lock released.
+4. **Results:** 0 PASS, 0 FAIL, 0 DIFFERENT, 1 BLOCKED ÔÇö SURE. No fixtures missing.
+5. **Report:** [H4b verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_H4b_20261031_0050.md>).

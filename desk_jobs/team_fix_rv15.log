@@ -1,0 +1,1 @@
+C:\CE_PLAN\areas\OPUS_PREREVIEW_AE_1881_NETDIFF_01NOV.md: KEEP-WITH-NOTE; the real change is 10 files and 3 commits (not 189), the earlier switch-off fault is fixed in code but not seen in AutoCAD, it merges onto the C-79 line with only the REGRESSION_LOG clash, and it rides C-79c as area plus smoke.

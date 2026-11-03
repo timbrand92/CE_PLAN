@@ -1,0 +1,5 @@
+== cx_bd22 (usage 51.0% -> 53.0%): 1. **BUG-1053 — ALREADY-COVERED:** [Draft PR #1727](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1727) already covers the elevation fault. No code changed. Missing-unit behaviour and switch differences are recorded.
+
+2. **Saved and pushed:** [Report](C:/CE_PLAN/areas/CODEX_BUILD_BD22_26OCT.md). Worktree removed.
+
+3. **Branch head:** `270215aa2ba9540d5b75233acb1d0a0a2a5fc1a1`. Red/green: not run. Suite totals: unavailable; baseline stopped during compilation after overlap confirmation. AutoCAD not run.

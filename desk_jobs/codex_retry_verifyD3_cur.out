@@ -1,0 +1,7 @@
+== verifyD3_cur (usage 29.0% -> 30.0%): AUTOCAD STILL RUNNING
+
+1. **D3 finished:** Its session closed; Claude subsequently started another session. Left untouched. D3ÔÇÖs lock released; four settings hashes unchanged.
+
+2. **Results:** 2 PASS, 2 DIFFERENT, 1 BLOCKED, 0 FAIL, 0 NOT TESTED. SURE 4; UNSURE 1. Copy geometry was obscured; cascade and erase counts differed.
+
+3. **Evidence:** [D3 report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_D3_20261025_0457.md>). No drawings saved. No fixtures missing.

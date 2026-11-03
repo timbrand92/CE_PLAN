@@ -1,0 +1,8 @@
+BUG-1166 is built, but only unit-tested; nobody has opened it in AutoCAD. Draft PR #1998 is open against `claude/rel-20261102a`, titled B-176. The bug is not marked fixed.
+
+- **Change:** one shared lookup, `Shared/CE.OfficeFolders/OfficeFolderLookup.cs`, uses the Manager's order. Civil uses it for CDFEEDBACK, job time, StructPlus blocks, and the Standard Details and Drawing Templates folders. CE_SHARED is untouched.
+- **Switch:** `linking.officeFolderFollowsOneDrive`, on by default. Off restores the old behaviour exactly.
+- **Tests:** 57 passed, 0 failed; the net48 build has 0 errors.
+- **Not changed:** Manager and CE Blocks, which the batch said to leave alone.
+- **Flag:** 18 real files in the AutoCAD data folders changed during my run. I think they came from a live AutoCAD session, not my tests, but it isn't proven.
+- **Report:** `C:\CE_PLAN\areas\BUGFIX_w1166_REPORT_03NOV.md`, pushed. The worktree and scratch are removed, and C: free space didn't move.

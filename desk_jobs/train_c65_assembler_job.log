@@ -1,0 +1,7 @@
+Train C-65 is assembled and pushed as `claude/rel-20261025o` at head `2793168a`, but the solution build has one error. The report is pushed too (`e1757147`).
+
+1. **Merged:** all 26 PRs, one plain merge each. No PR head had moved since the list, and none was skipped. Scope: Shared and Installer untouched, Manager has 7 small edits and no new file, no config or command change.
+2. **Build error, not fixed:** #1718 breaks `Tests\CE.TestHarness.Tests`, a test-only project. It links `ManagerScreenText.cs` but not the telemetry service the PR now calls. Every other project built for net48, net8 and net10.
+3. **Red test, not fixed:** #1010 now reads a circular pit's `diameter`, so an older LandXML test that expects the old 600 placeholder fails (900 instead).
+4. **My one commit:** `2793168a` adds missing "Default:" documentation lines for the `help` group and the LandXML switch. No value changed.
+5. **Tests:** Civil net10 ran 20,239 tests with 3 reds (the two above plus one load-timing flake that passes alone). Manager net10: 993 of 994 passed. Civil net48 reds are all reference-DLL `InvalidProgramException` failures; 17 are on the known list and 17 more fail the same way on the base. The other 17 are new reds in test files this train adds (#1757, #1755, #1719). Nothing was tested in AutoCAD.

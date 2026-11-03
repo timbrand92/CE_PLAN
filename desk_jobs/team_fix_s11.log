@@ -1,0 +1,12 @@
+Draft PR #1907 is open for BUG-640, and BUG-634 is not built: it needs Tim's call on what counts as a recognised dimension style.
+
+**Built and unit-tested only. Nobody has opened it in AutoCAD, and neither bug is marked fixed.**
+
+- **BUG-640 (RD):** RD now asks for the arc or circle first, then the dimension type, then AutoCAD's own preview and placement. A circle is offered Radius and Diameter only; an arc is offered Length, Radius and Diameter. The switch is `Annotation.ArcDimSelectsGeometryFirst`, ON by default, and OFF restores the old order exactly.
+- **Files:** `DimensionCommands.cs`, `Core/Units/ArcDimensionTypePolicy.cs`, `UserSettings.cs`, `SettingsService.LoadRecovery.cs`, `ArcDimensionTypePolicyTests.cs` and `REGRESSION_LOG.md`.
+- **Tests:** 29 passed across the focused Structural classes on net10, and the net48 compile has 0 errors.
+- **Not proven:** that AutoCAD accepts the already-picked arc or circle being handed to its own dimension command and then shows its normal preview. Also unproven are the polyline arc-segment route, Escape at each step, and one Undo.
+- **BUG-634 (DSET1):** the fault is still on the 1.0.125 line, but nothing in the repo or `C:\CE_PLAN` defines "recognised style". The question is in the report. My suggestion there: only "TIM LEADER" and "TIM DOT LEADER" count, and everything else is skipped and listed.
+- **Real-files compare:** no settings file changed, but other files changed at 03:04–03:06. They came from an `acad.exe` (PID 41876, started 03:04:20) that I did not launch, and my scratch folder stayed empty. The listings are local only (`C:\ce-scratch\s11\real_before.txt` and `real_after.txt`) because they contain job folder names.
+
+No B number was found in the build register for these bugs, so the PR title has none. The report is at `C:\CE_PLAN\areas\BUGFIX_s11_REPORT_31OCT.md`. It was pushed and `main` shows no commits ahead. Two other files in `C:\CE_PLAN` show as modified but were not mine and were not added.

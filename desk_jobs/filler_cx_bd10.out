@@ -1,0 +1,9 @@
+== cx_bd10 (usage 21.0% -> 40.0%): 1. **BUG-1143 — DONE.** [Draft PR #1803](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1803). Branch and [report](C:/CE_PLAN/areas/CODEX_BUILD_BD10_26OCT.md) pushed; worktree removed. AutoCAD and a real damaged drawing were not tested.
+
+---
+
+2. **Branch head:** `b76db8f3b415b3f20343a4ba21a3a761c47e92e3`.
+
+3. **Red → green:** “Expected: True; But was: False” — 3 failed/1 passed. Green: 13/13; all 15 added cases passed.
+
+4. **Totals:** Before: 20,346 passed/2 failed/32 skipped. After: 20,362 passed/1 failed/32 skipped. No new failure. All three builds: **0 errors**.

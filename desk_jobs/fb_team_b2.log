@@ -1,0 +1,11 @@
+Four of the five fixes now have draft PRs; I skipped FB-15. Nothing has been opened in AutoCAD, so all four are built and unit-tested only. The report is pushed to `C:\CE_PLAN` and `git status -sb` shows no "ahead".
+
+1. **FB-11 (BUG-570), #1693:** Edit Pit's plan picture shows the typed number and cover text as you type. Civil net10 full run: 19,552 tests, 0 failed. I did not build net48 (the changed files are net10-only).
+2. **FB-13 (BUG-771), #1700:** CDRG finishes on Enter with 3 or more points, and Undo no longer cancels. Civil net10: 19,558 tests, 0 failed. net48 built with 0 errors.
+3. **FB-14 (BUG-796 report half), #1701:** CDLINKDANGLINGPIPES, CDREBUILDLINKS and CDPROPAGATE now report what was done, not what was tried. Civil net10: 19,557 tests, 1 failed, an unrelated help-host test that passed twice when its class was re-run alone. net48 built with 0 errors.
+4. **FB-12 (BUG-225), #1706:** I could not reproduce the fault and the cause is still unknown. This is a second-chance fix, one Idle follow-up after Close, so it needs the Opus Idle review. Civil net10: 19,555 tests, 0 failed. net48 built with 0 errors.
+5. **FB-15 (BUG-855), skipped:** the brief's first step needs an accoreconsole probe, which this job may not run. The report gives two options.
+
+No existing PR held a real fix for any of the five.
+
+Report: `C:\CE_PLAN\areas\release-v3-colleagues-FB_TEAM_BATCH2_REPORT.md`

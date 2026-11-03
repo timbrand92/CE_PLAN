@@ -1,0 +1,7 @@
+All three PRs are fixed and pushed, and each has the "needs Opus re-review" comment. None was rebased, force-pushed, retargeted or merged, and nothing is marked FIXED.
+
+1. **#1474** is now at `13dd7478`. It holds only the BUG-847 support-zip fix, and the BUG-846 half and its test hook are gone. Manager.Tests 824 of 824 and RedoSafe 24 of 24 pass.
+2. **#1475** is now at `f2c6f848`. It holds only the installer half. Installer.Tests were compiled (0 errors) but not run. RedoSafe 24 of 24 pass.
+3. **#1477** is now at `906802c9`. It adds the early-exit log lines, with no behaviour change, and BUG-430 stays open. The new test failed on the old code and now passes, and the focused set passes 156 of 156.
+
+The review log entries are 1352–1355. Tim's settings files are unchanged.

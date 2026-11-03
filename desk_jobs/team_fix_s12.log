@@ -1,0 +1,15 @@
+Two draft PRs are open and BUG-615 is skipped. Nothing was tested in AutoCAD, and neither bug is marked fixed. The report is pushed to `C:\CE_PLAN\areas\BUGFIX_s12_REPORT_31OCT.md`, with no push ahead.
+
+- **PR #1908, BUG-1129:** BARWEIGHT now reads the bar schedule's mass table, so 100 N20 at 6 m is 1479.6 kg in both. N40, R6 and R10 still show UNKNOWN on the schedule, because the catalogue has no row for them. The switch is `Options.BarWeightUsesBarCatalogue`, on by default.
+- **PR #1909, BUG-579:** The cause was in the code. FPFC and FSF saved the depth only in the size list, never on the footing record. FEDIT now offers the typed depth and the schedule shows it. The switch is `FootingWidth.FootingDepthKeptOnPlacement`, on by default. I did not trace the Undo/Redo part, and FADOPT, screw pile and stump footings are not changed.
+- **BUG-615:** Skipped. It needs a live-preview and Apply workflow, and no command card is approved for it. The question for CE 04 is in the report.
+
+Both PRs are titled B-088 and sit against `claude/rel-20261026s`.
+
+**Tests:** focused net10 classes all passed, 16 and 103 for BUG-1129 and 42 and 163 for BUG-579. The net48 compile had 0 errors on both branches. I did not run the full suite.
+
+**Real files:** the settings files are unchanged. Other real files did change: the logs, session files and usage outbox, plus Civil's `CD_RecentValues.json`. An `acad.exe` I did not start began at 03:36 and explains most of them. I could not attribute `CD_RecentValues.json`, written at 03:27, so the report flags it.
+
+**Robot cases:** `S12_barweight_one_table` and `S12_fpfc_depth_kept`, each with a switch-off control.
+
+The listings are in `C:\ce-scratch\s12\before.txt` and `after.txt`.

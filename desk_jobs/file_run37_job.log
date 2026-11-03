@@ -1,0 +1,6 @@
+Run 37 is filed and pushed to C:\CE_PLAN (commit 50724360, leak-scan clean). BUG-141 stays OPEN: the border half passes on the robot, and the "SC" text blocker is not shown to be a bug.
+
+1. **BUG_CARPARK.md:** I added the BUG-141 run 37 notes. I added "run 37: PASS (20 Oct, 3.0.61)" under BUG-820, BUG-854 and BUG-815. The callout drag words are marked UNPROVEN. Nothing is marked FIXED.
+2. **BUG-856 (new, LOW):** the Tidy labels "would move" line doesn't name the pipe.
+3. **Fix queue:** the lane 04 text-obstacle diagnostic stays, with a note that it's now the missing evidence for BUG-141. I added no other fix line.
+4. **Robot gaps and questions:** I added the run 37 gaps section and question 9 for Tim (leave the "SC"-blocked label where it is; recommendation yes).

@@ -1,0 +1,5 @@
+== verifyD2_cur (usage 16.0% -> 16.0%): AUTOCAD STILL RUNNING
+
+1. **D2 blocked:** Screenshot capture timed out twice during setup. All five looks are NOT TESTED; no PASS or FAIL claimed.
+2. **D2 cleaned up:** Its AutoCAD closed without saving, four settings hashes stayed unchanged, and its lock was released. Claude subsequently started another session, left untouched.
+3. **Report:** [D2 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_D2_20261024_0650.md>). Installed: Civil 3.0.72, Manager 1.1.72, Structural 1.0.122.

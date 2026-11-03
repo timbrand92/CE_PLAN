@@ -1,0 +1,9 @@
+I've written the lunch-window helper and its decision logic passes 52 of 52 offline checks, but it has never run on a real AutoCAD and is not switched on yet. Your AutoCAD was left alone.
+
+1. **At 14:00:** if AutoCAD is open and the robot has a test waiting, it saves every drawing, checks each save worked, then closes AutoCAD normally.
+2. **At 15:00:** it starts AutoCAD with your drawings in the same order and the same one in front.
+3. **It refuses** when a never-saved drawing has work in it, a command or dialog is still open, or a save fails. It never force-closes AutoCAD.
+4. **Today it would do nothing:** the robot is on hold.
+5. **Next:** a real test tonight after 17:30 on throw-away copies. The earliest lunch run is Friday 30 Oct.
+
+The report is at `C:\CE_PLAN\areas\LUNCH_WINDOW_HELPER_29OCT.md`.

@@ -1,0 +1,8 @@
+== cx_lf01 (usage 20.0% -> 25.0%): 1. **DONE:** [Draft PR #1650](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1650) covers BUG-875 and BUG-802: ignored warnings return after relevant design changes. Existing Ignore default stays OFF.
+2. **Skipped:** BUG-873 is protected; BUG-874, BUG-876 and BUG-877 already have drafts.
+3. **Validated:** 19 new cases; full Civil 19,448 passed, 22 skipped, zero failures. Focused net10/net48: 99/99 each. Three builds: zero errors.
+4. **Saved and pushed:** [Report](C:/CE_PLAN/areas/CODEX_LEDGER_FIX_BATCH01_23OCT.md). Nothing installed; real-AutoCAD checks remain pending.
+
+---
+
+1. **Branch:** `cx2/bug-875-ignore-inputs` at `6b0a09da`.

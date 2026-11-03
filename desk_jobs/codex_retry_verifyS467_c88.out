@@ -1,0 +1,14 @@
+== verifyS467_c88 (usage 27.0% -> 27.0%): AUTOCAD CLOSED
+
+1. **Incomplete:** I stopped the start check too early; CE Tools appeared while closing. All 10 looks are NOT TESTED. No bug conclusions.
+2. **Safe end:** Nothing saved; all four settings hashes unchanged; lock released. Installed: Structural 1.0.125 / Civil 3.0.88 / Manager 1.1.88.
+3. **Report:** [S467 verification report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_S467_20261101_1311.md>). The full pass needs rerunning.
+== verifyS467_c88 (usage 28.0% -> 28.0%): AUTOCAD CLOSED
+
+1. **Incomplete:** C1 passed on the sheet and inside a viewport. Totals: **2 PASS, 0 FAIL, 0 DIFFERENT, 2 BLOCKED, 6 NOT TESTED**; SURE 9, UNSURE 1.
+
+2. **Remaining:** Brace previews and R1 need move-only mouse control; FPFCÔÇÖs label was unreadable; BTX text setup and REFEDIT setup were blocked. Execution deviations are recorded.
+
+3. **Safe end:** Nothing saved. All settings hashes and installed versions unchanged. Lock released. No fixtures missing.
+
+4. **Report:** [S467 verification](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_S467_20261101_1342.md>).

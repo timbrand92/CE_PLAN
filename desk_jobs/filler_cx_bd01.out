@@ -1,0 +1,9 @@
+== cx_bd01 (usage 50.0% -> 56.0%): 1. **BLOCKED:** C: fell to **11.90 GB**. Your disk guard stopped net48/net8 before either build started.
+
+2. **Saved and pushed:** [Draft PR #1704](https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/1704). Ten new tests pass. Full Civil receipt: **19,536 passed, 0 failed, 50 not executed**.
+
+3. **Report:** [CODEX_TESTS_BD01_23OCT.md](/C:/CE_PLAN/areas/CODEX_TESTS_BD01_23OCT.md), including BUG-006’s source-level finding. No product changes, AutoCAD run or deployment.
+
+---
+
+1. **Handoff:** `cx3/tests-bd01` at `0f328926`.

@@ -1,0 +1,8 @@
+== verifyW4_c60 (usage 4.0% -> 5.0%): 1. **W4 complete:** PASS 2, FAIL 0, DIFFERENT 2, BLOCKED 0, NOT TESTED 1. SURE 4; UNSURE 1. [Report](</C:/Lisp Files/_TEST_COPIES_20260923/CODEX_VERIFY_W4_20261023_0731.md>).
+
+2. **Findings:** baseline and Esc passed. Apply cleared the pit, but sheet detail remained unreadable. Undo changed the view; label undo remains unverified. No classified FAILs.
+
+3. **Settings restored:** original A = restored C:
+   `ACD64E79A33BE9C152149FF2145A3CD2C29CABE11245F211183FD5C7DE783140`
+
+4. **Clean end:** AutoCAD gone, lock released, drawing unsaved, SAVETIME restored. FIXTURES WANTED: none.

@@ -1,0 +1,10 @@
+I wrote the five C-60 files in `C:\CE_PLAN\desk_jobs` and pushed them (commit c05a585c). Nothing was started. Control-character scan clean, both scripts parse, no `$var:` strings; the install script only has valid `$env:` uses.
+
+Files:
+1. `train_c60_assembler_job.txt` (Sonnet)
+2. `train_c60_finalizer_job.txt` (Opus)
+3. `payload92_c60_job.txt` (Sonnet, candidate c1056)
+4. `scripts\desk_install_c60.ps1` (written, never run)
+5. `chain_c60.ps1` (installs nothing)
+
+`FIX_1517_REPORT.md` already exists, so the assembler won't need to wait. The #1517 head it names is 440b13fa.

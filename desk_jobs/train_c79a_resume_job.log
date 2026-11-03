@@ -1,0 +1,17 @@
+**Train C-79a is built, tested and pushed, with 22 of the 24 PRs merged. Nothing was installed or opened in AutoCAD.** The branch is `claude/rel-20261106a` at **b8089300**, confirmed on origin.
+
+1. **Not merged:** #1922 and #1923, both stopped on the first run.
+   - #1922 touches a folder outside this train (`Modules/TestSupport`) and carries 16 files.
+   - #1923 ships its switch ON, and Tim's ruling is OFF.
+2. **Civil, full net10 run:** 21,893 tests, 21,860 passed, 1 failed, 32 skipped.
+3. **The one failure was new and is fixed.** PR #1962's head had dropped the byte-order mark (the invisible 3-byte marker at the start of the file) from the Civil `UserSettings.cs`. I restored it in b8089300. A re-run of the affected classes passed 105 of 105. I did not repeat the 15-minute full Civil run after that fix.
+4. **Manager, full run:** 1,148 tests, 1,146 passed, 0 failed, 2 skipped.
+5. **Focused runs:** Civil 488 of 488 passed, Manager 72 passed with 1 skipped, and the REDO-safe hook guard passed.
+6. **#1884's new guard:** it did not go red.
+7. **Isolation stamps:** Tim's `CD_Settings.json` changed at 23:41:44, from 15,270 to 15,357 bytes. My runs were isolated and had finished before then. AutoCAD started at 23:41:51 on this PC, so I believe CE 02's robot did it, but I have not proved that. `CS_Settings.json` is unchanged. The CE_Admin outbox grew from 28,119 to 28,182 files.
+8. **Changed files:** 103 files. The shared ones are `UserSettings.cs`, `colleague-defaults.json`, `CdCommand.cs`, `WorkspaceMenuInstallerService.cs`, `MarkupFileImageLoader.cs`, Manager `Plugin.cs` and `PluginManagerCommands.cs`. The re-test class is area plus N91.
+9. **Still to do:** #1868 (B-019) was not in this train and goes first in C-79b1. #1841 is already in the line and must never be merged again.
+
+The report and changed-files list are committed and pushed in `C:\CE_PLAN`:
+- `areas/release-v3-colleagues-TRAIN_C79A_ASSEMBLY_REPORT_2026-10-31.md`
+- `areas/TRAIN_C79A_CHANGED_FILES.txt`

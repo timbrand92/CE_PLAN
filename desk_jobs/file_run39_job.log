@@ -1,0 +1,6 @@
+Run 39 is filed and pushed to C:\CE_PLAN as commit ef340a96.
+
+1. **BUG_CARPARK.md:** notes added under BUG-516, 557, 505, 476 and 556. "Run 39: PASS" regressions added under BUG-820, 854, 815 and the BUG-141 pit half. Nothing is marked FIXED or closed.
+2. **Robot gaps file:** run 39 section added. It covers the dialog-path fault, the open file dialog needing `quit -Kill`, read-only Manager windows, the outbox limit and the CDTWL typed form. The driver is untouched. The driver-v3 task lists the hash lines the briefs must change.
+3. **Fix queue:** section 19 added, with no new product lane. It records the Manager release-build guard fix at 0d3b1f49, awaiting Opus re-review.
+4. **QUESTIONS_FOR_MONDAY.md:** unchanged.
