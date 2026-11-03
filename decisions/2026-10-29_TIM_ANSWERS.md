@@ -805,3 +805,15 @@ Tim's words: "1. yes / 2. yes / 3. 1 schedules block with all schedule lines in 
 212. **FO symbol (item 111.12): yes.** One reviewed job for all source symbols (FO, DP, IO), card first.
 213. **Concrete pipe velocity (item 114): as recommended.** Keep the house 6.0 m/s; Settings note "house rule; CPAA manual allows 8".
 214. **Store the chosen grade on the pipe (item 95.2, decision 199 confirmed): no.** SUPERSEDES decision 199: do not store it. The New Pipe warning line (decision 118) already tells the drafter at the time. Desk (CE 05) must: stop the DRAFT build of the stored grade.
+
+## Voice batch 11 answers (4 Nov 2026)
+
+Tim's words: "1. YES / 2. YOU SAVE / 3. YES / 4. AS YOU SUGGEST / 5. NO / 6. YES / 7. YES". Numbers are batch 11's own (map: QUESTIONS item 126, updated by 127 and 128).
+
+215. **Kingston tank credit follows the council (item 115.1): yes.** 500 L per 2,000 L tank and 1,000 L for a tank of 2,500 L or more (Kingston Part A Version 5, September 2018, on disk; decision 176 applies). This replaces the 10 Jun conservative block reading. Desk (CE 05) must: change the Kingston tank credit to the council's rule, source "Kingston Part A, Version 5, Sept 2018", and say plainly in the report that a 3,000 L tank now gets 1,000 L, not 500 L.
+216. **Council documents not yet on disk (Kingston Issue 5 2025, Darebin June 2025 guidelines and OSD checklist, Whittlesea Neighbourhood Design Manual engineering guidelines v1.0, DoT supplement to AGRD Part 3 v5.0): "YOU SAVE".** Tim's word to download them into his Councils folder, new names, never overwriting. CE 04 must: try again by a normal browser route (the sites refused a plain download with HTTP 403); never bypass bot checks; if blocked, say which ones remain and give Tim the links.
+217. **Bayside pump storm (item 115.4): yes.** Use the council's numbers from the adopted 2026 Guideline: pump storage covers a 2-hour 10-year ARI storm, or 2-hour 100-year ARI where a basement pump takes direct runoff; label "Bayside Developer Drainage Design Guideline, March 2026". The office 1 in 20 goes (not in the council document). Desk (CE 05) must: change the Bayside pump storm row; also note PSD (5-year, 5-minute, C 0.35) and storage (Cat A 100-year, Cat B 10-year, both plus 18.5 per cent climate allowance) as the Bayside profile's sources.
+218. **Glen Eira method (item 115.5): "AS YOU SUGGEST" = Boyd's (C 0.35, 1 in 5 storm, 5 min).** The guidebook v1.3 is the design authority. Desk must: fix the shipped Glen Eira profile (Swinburne, 1 in 10 today) and the test sheet to match; job 24-115 stops being 30 per cent off.
+219. **Inspector amber "near the limit" band (item 115.6): no.**
+220. **About 30 numbers fixed in code move to Settings (item 115.7, BUG-908): yes.** Today's value as the office default, each labelled "office default", no value changes.
+221. **One combined schedules block when two schedules share a frame (decision 203 reading check): yes.** Decision 203 stands as read. Desk (CE 05) must: draw the card with a picture first (review gate) and build as DRAFT after it.
