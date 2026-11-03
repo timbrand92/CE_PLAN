@@ -786,3 +786,22 @@ Tim's words: "1. b / 2. ... as per recommendation / 3. yes / 4. yes / 5. yes / 6
 198. **X-Civil units (item 95.1): yes.** Use the drawing's UNITS when set; guess the size only when UNITS is not set; ships ON as a Settings switch.
 199. **Store the chosen grade on the pipe so CDRULES can say "typed against chosen" (item 95.2): "yes".** AGAINST the recommendation (recommended no). GUESS: batch 9 gave the question without its explanation, so Tim may have answered the short form. Desk must: build as DRAFT, and CE 04 will confirm in plain words in the next batch before it ships.
 200. **CESETTINGS five printing groups (item 95.3, BUG-526): yes to all four parts.** Five groups: Founding note, Foundation plan, Slabs, Sheet layout, Plan levels; one new tab "Drawing text and sizes"; template-drawing paths and A1/A3 origins left for the later batch; founding note editable by any drafter with a plain warning line. Windows are Codex-owned: Codex builds the layout, Tim approves one picture.
+
+## Voice batch 10 answers (4 Nov 2026)
+
+Tim's words: "1. yes / 2. yes / 3. 1 schedules block with all schedule lines in the one block if that makes sense? / 4. yes / 5. yes but warn end user / 6. yes / 7. yes / 8. no / 9. yes / 10. compare only the drawing name and folder name, so a different drive letter or OneDrive prefix stays quiet, and warn once per drawing per session / 11. yes / 12. yes / 13. as recommended / 14. no". Numbers are batch 10's own (map: QUESTIONS item 125).
+
+201. **Damaged saved record at Apply (item 104.1): yes.** Warn, keep a copy of the damaged record beside the drawing's data, carry on; not a third hard block (R-27 stays at two). Settings switch.
+202. **Save As copy and approval (item 104.2): yes.** Warn on a Save As copy; do not un-approve.
+203. **Two schedules sharing a frame (item 103.2): NOT the recommendation.** Tim: one schedules block holding all the schedule lines "if that makes sense". GUESS: he means schedules that share a frame are combined into ONE block (one table), not left as drawn and not one copy each. Desk (CE 05) must: draw a card (the review gate) for one combined block, with a picture, and ask Tim if the reading is wrong; until then BUG-1197 stays leave-as-drawn with the command-line note as the DRAFT default. Open follow-up question in the next batch.
+204. **CD label text follows DIMSCALE (item 107): yes.** Behind a Settings switch; 1:50 gives 125 mm, 1:100 stays 250 mm, 1:200 gives 500 mm; labels already drawn are not rewritten. This is Tim's 20 Oct ruling 12 applied to CD label text.
+205. **Grade lock keeps the typed downstream level (item 108.5): yes, but warn the end user.** GUESS on the warning: a plain line when a pit move changes the other end (upstream level moved because the downstream one was typed); never a block.
+206. **Flat pipe switches the grade setting to Levels (item 108.6): yes,** only when the two levels are exactly equal.
+207. **Repair of "1 IN 1" / "0.01m" labels (item 108.7): yes, card first.**
+208. **Pit Schedule "rows left as drawn" reminder (item 108.8): no.** Not pilot work.
+209. **Recall last settings ticked for colleagues (item 109.9): yes,** including both levels, as Tim's own window.
+210. **Save As copy warning in CDDESIGN (items 109.10 and 110): compare only the drawing name and the folder name, so a different drive letter or OneDrive prefix stays quiet, and warn once per drawing per session.** (c) plus (b), Tim's own words.
+211. **Rainfall note wording (item 111.11): yes.** The wording stands: office curve "may be high or low by up to about 8 per cent, and the storage moves about 2.5 times as much".
+212. **FO symbol (item 111.12): yes.** One reviewed job for all source symbols (FO, DP, IO), card first.
+213. **Concrete pipe velocity (item 114): as recommended.** Keep the house 6.0 m/s; Settings note "house rule; CPAA manual allows 8".
+214. **Store the chosen grade on the pipe (item 95.2, decision 199 confirmed): no.** SUPERSEDES decision 199: do not store it. The New Pipe warning line (decision 118) already tells the drafter at the time. Desk (CE 05) must: stop the DRAFT build of the stored grade.
