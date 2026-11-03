@@ -1721,3 +1721,5 @@ Format: `YYYY-MM-DD HH:MM | KIND | what happened | evidence (file or id)`. KIND:
 - CE 02 Tue 03 Nov 2026 10:53 Melbourne: CE 01 asked lanes paused for the C-79b1 install (Civil 3.0.90). Checked: no acad, no chain4/case_runner, no Codex launcher, STOP_CODEX.flag set. Told CE 01. Robot waits for "installed" then runs spec_c79b1_smoke.txt.
 
 - CE 02 Tue 03 Nov 2026 11:05 Melbourne: C-79b1 installed by CE 01 (Civil 3.0.90+cf059dcf, Manager 1.1.89+cf059dcf, read back from the Modern DLL). Smoke spec_c79b1_smoke.txt started: chain4 pid 80256, first pack bmN91 11:04:55, cut-offs 17:20/17:30. First attempt (11:04, quoted dates) skipped every pack by my own quoting fault, nothing ran. Tim idle about 3 h at start.
+
+- Tue 03 Nov 11:10 PC clock CE 00: Tim said "im not working today either i will be back in tomorrow at 8:30" (decision 2026-11-03_TIM_AWAY_ALL_DAY_TUE.md). b1 (Civil 3.0.90) was installed 11:01-11:03 by CE 01. WRITTEN GO: Codex day batch from 13:00 after the b1 smoke (stop at Codex 68), robot takes AutoCAD between and after; all out by Wed 08:00. b2 not before Wed 11:01, after 17:30 Wed unless Tim says away.
