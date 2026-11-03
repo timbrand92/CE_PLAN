@@ -817,3 +817,8 @@ Tim's words: "1. YES / 2. YOU SAVE / 3. YES / 4. AS YOU SUGGEST / 5. NO / 6. YES
 219. **Inspector amber "near the limit" band (item 115.6): no.**
 220. **About 30 numbers fixed in code move to Settings (item 115.7, BUG-908): yes.** Today's value as the office default, each labelled "office default", no value changes.
 221. **One combined schedules block when two schedules share a frame (decision 203 reading check): yes.** Decision 203 stands as read. Desk (CE 05) must: draw the card with a picture first (review gate) and build as DRAFT after it.
+
+222. **QUESTIONS 60, cover under paved ground and the council figure (CE 10 builder chat, 4 Nov 2026): Tim chose "Keep the draft".**
+   1. Tim's words: "Keep the draft" (the button read: "QUESTIONS 60: yes to both recommended answers. Paved cover is measured below the slab (100 plus a slab thickness setting), and the council figure is a floor so the bigger of council and table applies.").
+   2. Interpretation: (a) the Footpath and Driveway cover rows are measured below the slab, so judged from the top as 100 + the slab thickness (Settings, 100 mm to start); (b) a council's cover figure is a floor, so the bigger of the council figure and the table row applies (Frankston Road needs 600). A project override still wins. Both stay Settings values (slab thickness, paved surfaces list, floor on/off), so the office can change them.
+   3. Done: PR 1850 (and 1851 which contains it) now say "confirmed by Tim 4 Nov 2026, QUESTIONS 60" and no longer read Assumed; no number moved. The five table rows were already confirmed 29 Oct ("Keep as built").

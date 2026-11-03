@@ -4,7 +4,7 @@
 
 These change what the GB-01 and GB-02 steps below should show. Where a step below disagrees, this section wins.
 
-1. **Slice 2 cover, paved rows (PR 1850; draft on the recommended answer of QUESTIONS 60, Tim's answer replaces it):** Surface = Driveway or Footpath is now judged from the TOP as 100 + slab thickness (slab 100 by default, so 200). A driveway pit with the top of the pipe 120 mm down now WARNS (it passed). About 220 mm passes. The source line says "plus 100 mm slab ... Tim's answer to QUESTIONS 60 pending".
+1. **Slice 2 cover, paved rows (PR 1850; QUESTIONS 60 answered by Tim 4 Nov 2026, "Keep the draft"):** Surface = Driveway or Footpath is now judged from the TOP as 100 + slab thickness (slab 100 by default, so 200). A driveway pit with the top of the pipe 120 mm down now WARNS (it passed). About 220 mm passes. The source line says "plus 100 mm slab ... confirmed by Tim 4 Nov 2026, QUESTIONS 60" and the row no longer reads Assumed.
 2. **Slice 2, council figure is a floor:** in Frankston (250) a pipe under a ROAD now needs 600 (the table's figure is bigger); a Driveway needs at least 250. The switch `designStandards.minCoverCouncilFigureIsFloor` = false gives the first build (council figure always wins).
 3. **Slice 3 minimum pit depth (PR 1851):** the "Minimum pit depth" rows can be switched off with `cover.pitMinimumDepthCheck` = false (none appear). A pipe whose wall is not in `cover.pipeWallThicknessMm` now reads Unknown when the pit meets the need without the wall (UPVC 450 into a 760 pit); it still warns when the pit is short even without the wall (UPVC 450 into 700).
 4. **Slice 4 lid class (PR 1843):** typing the use "driveway for larger vehicles" (not picking) now gives Class C, like picking "Driveway (larger vehicles)".
