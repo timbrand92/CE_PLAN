@@ -1,1 +1,1 @@
-2026-11-03T13:00 Codex DAY batch (Tim away all Tue, back Wed 08:30): needs CE 00 written GO (given 11:10). FIRST B1_04c_inspector_checks_grade Checks-tab look, then b1 (Civil 3.0.90) Codex looks, S4, S7, reruns; stop at Codex 68; out of AutoCAD by Wed 08:00
+2026-11-03T19:00 Codex NIGHT batch, continuous until Wed 08:00 (Tim: use Codex before it resets Wed 4 Nov 17:50; WRITTEN GO 14:35): b1 looks, S4, S7, reruns, then Codex review/build of draft fix PRs (no AutoCAD needed); stop line 92; Rule 17 out of AutoCAD by 08:00
