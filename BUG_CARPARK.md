@@ -3209,6 +3209,8 @@ History: previous status was: OPEN (LOW). Not fixed until Tim confirms in AutoCA
 ---
 - **Update 8 Oct 02:06 (W17):** a fifth episode, AFTER the launchers were reworded to "carry out every step of that file exactly". While Codex typed `(setvar "SAVETIME" 0)` the command line showed untyped text `follow UCSFOLLOW`, `Enter new value for UCSFOLLOW <0>:` and `it.`: the same word "follow" and "it." again, so the fragment probably comes from the brief text itself (the brief says "follow ..." in its rules), not only from the launcher. Esc twice, no value submitted to UCSFOLLOW, no harm. Next step: find every sentence in the brief files that contains the word "follow" and reword it ("carry out", "keep to").
 
+- **Update 3 Nov 22:40 (CE 02, evidence from the S1 Codex look, report CODEX_VERIFY_S1_20261103_2157, S1-06 BLOCKED):** a different cause from the brief-wording one: a chat-style sentence (a read-this-file-and-do-stage-A prompt about EV-04_LIBRARY_READ_BRIEF) was in the New Pipe first invert box. CE 00 found the same text in Codex's own 21:56 session file as the banner it copied, so it was in the box before or while Codex typed: almost certainly a STALE WINDOWS CLIPBOARD pasted by Codex. No CE session typed into AutoCAD. Action taken: lookCOMMON_full.txt now has step 3.8 (clear the clipboard with Set-Clipboard -Value $null and read it back empty before AutoCAD opens and after every paste step). Status stays WONT FIX (not a CE fault); watch the next looks for STRAY TEXT.
+
 **Status:** WONT FIX - not a CE fault: stray text typed during Codex passes came from brief wording. (CE 05, Sat 31 Oct 2026. Closed on Tim's yes (voice batch 6, decision 178, 31 Oct 2026) with the reason stated; nothing is marked FIXED; the entry is kept (D6).)
 
 
