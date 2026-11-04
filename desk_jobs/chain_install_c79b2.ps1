@@ -41,7 +41,7 @@ while ($true) {
   $acad = [bool](Get-Process acad, accoreconsole -ErrorAction SilentlyContinue)
   $guard = Test-Path 'C:\Lisp Files\_ACAD_DRIVER\settings_guard.json'
   $cl = [bool](Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -match "codex exec" -and $_.CommandLine -match "_TEST_COPIES" -and $_.CommandLine -notmatch "Get-CimInstance" })
-  $quiet = ([IdleProbeC79a]::IdleMinutes() -ge 30)
+  $quiet = ([IdleProbeC79a]::IdleMinutes() -ge 15)
   if (-not $live -and -not $acad -and -not $guard -and -not $cl -and $quiet) {
     $now = [DateTimeOffset]::UtcNow.ToUnixTimeSeconds()
     $rec = [ordered]@{ who = 'Desk-install-c79b2'; pid = $PID; acad_pid = 0; acad_start = 0; since = $now; since_text = (Get-Date -Format 'yyyy-MM-dd HH:mm:ss'); refreshed = $now; note = 'claimed by the C-79b2 install chain'; expires = ($now + 900); expires_text = (Get-Date).AddMinutes(15).ToString('yyyy-MM-dd HH:mm:ss') }
