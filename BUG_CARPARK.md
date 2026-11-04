@@ -18091,3 +18091,19 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Note:** CEMEMBER is the design that replaces SBEAM (18 Oct); whether the old SBEAM path is still reachable is being read from the code.
 
 **Status:** OPEN. Logged Thu 5 Nov 2026 by CE 05 on CE 00's report. Nothing built, nothing tested; fix-draft, Opus review and a copy-drawing case queued as Team jobs.
+
+## BUG-1276 — CE autosave made no backup for hours of editing in a Structural drawing (data loss risk)
+
+**Command / Area:** CE autosave (DrawingAutoSaveService, Structural), AutoCAD 2027 on Tim's PC. Found Thu 5 Nov 2026. HIGH; DATA LOSS RISK.
+
+**Symptom:** for drawing "25-131_STR_24 Herbert Street, Albert Park_P3" CE made NO backup after 14:42:17 Wed although Tim kept editing until about 17:20; AutoCAD then stayed open and crashed at 08:46 Thu (BUG-1275). Evidence (CE 00): the AutoSaveBackups folder for that drawing (C:\Users\TimothyBrand\AppData\Roaming\TIM_CE_CADTOOLS\AutoSaveBackups\CE_CVL_SUITE\25-131_STR_24 Herbert Street, Albert Park_P3_4E9BD6C8\) holds ONE file, _P3_20261104_144232171.dwg (14:42:17, same as the saved DWG); the Xref_25-131 backups ran every about 12 minutes to 13:39; no AutoCAD .sv$ files in %TEMP% and no .bak; the structural log shows AutoSave.Idle 0.0 ms (idle autosave did nothing) and AutoSave.DirtyTrack.Modified calls.
+
+**Cause:** NOT known. Job 594 reads Modules\Structural\Services\DrawingAutoSaveService.cs for why the idle save was deferred or skipped (recovery drawing, not marked dirty, a command active for hours, an Xref drawing active).
+
+**Expected behaviour:** while a drawing is being edited, a backup copy is written every few minutes (the Settings interval) whatever else is open; if a backup cannot be made, CE says so once in plain words.
+
+**Steps to confirm in AutoCAD:** on a COPY of a structural drawing, edit for 30 minutes with an Xref open and a long-lived command or palette; right: a new backup file about every interval; today (suspected): none after the first.
+
+**Reference:** Modules\Structural\Services\DrawingAutoSaveService.cs. CE 01 is separately restoring QSAVE to CLEAN (Tim order); do not duplicate that.
+
+**Status:** OPEN. Logged Thu 5 Nov 2026 by CE 05 on CE 00's report. Nothing built, nothing tested.
