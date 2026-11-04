@@ -1,0 +1,23 @@
+# BUGFIX w1274r report: B-1274 Pit Schedule says what it leaves out (rebuilt), 5 Nov 2026
+
+## FOR TIM
+
+1. **What you will see:** open PITSCHEDULE on a drawing with pits the schedule leaves out. The banner now says so, for example "6 plastic pits are not in this schedule: P3 to P8. Open PIT on each and press Number and schedule this one anyway to add it." Pits switched off for the schedule, and pits marked To be removed, each get their own sentence. Nothing in the drawing changes.
+2. **What was wrong with the first PR (#2019):** it sat on the old master and worked out "is this pit scheduled" its own way, so it could not name pits dropped as To be removed. The new draft PR #2023 sits on rel-20261112a, and the schedule and the notice now ask the same rule, so the count matches what the schedule really leaves out. #2019 is untouched.
+3. **My own mistakes:** my first edit script blanked two source files (UserSettings.cs and the Pit Schedule file). I caught it at once and restored both from git before anything was built or committed. One test-file name clash cost one extra build. Nothing from either reached the PR.
+4. **The switch:** Pit Schedule left-out notice, `pitScheduleSaysWhatItLeavesOut`. Default: on. Off gives the old banner exactly.
+5. **NOT proven:** nobody has opened the window in AutoCAD, and no robot case has run. BUG-1274 stays OPEN. Wording, and whether plastic pits should carry a number on the plan at all, are still your call. Project QA (CDCHECK) is not in this change.
+6. **Robot case to prove it (name: B1274_ps_leftout):** on a drawing with 5 normal pits and 6 plastic 350 pits (P3 to P8), type PITSCHEDULE and read the banner line: it must be "6 plastic pits are not in this schedule: P3 to P8. ...". Mark P2 To be removed and reopen: the banner must add "1 pit marked To be removed is not in this schedule: P2." Control: set `pit.pitScheduleSaysWhatItLeavesOut` to false before launch, reopen, and the banner must show none of those lines. The schedule rows must be identical in both runs.
+7. **Real-folder check:** the listings before and after the test differ in one file, `CE_Admin\sessions\CE_SUITE_MANAGER.json` (228 bytes, timestamp 00:08:28 to 00:14:28). I ran Drainage tests only and never Manager tests. An AutoCAD session was running on this PC (the test guard said so), and that file is its Manager heartbeat. I believe it is not mine, but I did not prove it.
+
+---
+
+## Technical detail
+
+1. **Fault confirmed on rel-20261112a:** `PitScheduleViewModel.Data.cs` `IsEligibleScheduledPit` (was lines 851 to 859) drops a pit for IncludeInSchedule false, `ObjectStatusRule.CountsInPitSchedule` false (To be removed) or the plastic rule. Nothing told the drafter. Not already fixed: `git grep LeftOut` finds only the unrelated pipe-batch notice. Civil only.
+2. **Base:** brief gave two bases. I used `origin/claude/rel-20261112a` (title, review section 2019 and the stack all say so). Branch `claude/b-1274-rebuilt-on-rel-20261112a`, one commit `ad68a773`, PR **#2023** (draft, base rel-20261112a).
+3. **Files:** `Modules/Drainage/Rules/PitScheduleLeftOutNotice.cs` (new: `ReasonLeftOut`, `LeftOutReason`, wording builder, range listing), `Modules/Drainage/ViewModels/PitScheduleViewModel.Data.cs` (`IsEligibleScheduledPit` now asks `ReasonLeftOut`, same answer for every pit; `ApplyLeftOutNotice` after `RunPreFlightCheck`), `Modules/Drainage/Models/UserSettings.cs` (BOM kept; PitSettings: the switch and three wording strings), `Modules/Drainage.Tests/Rules/PitScheduleLeftOutNoticeTests.cs` (new), `REGRESSION_LOG.md`. CE_SHARED untouched.
+4. **Tests:** one project, net10.0-windows, filter `PitScheduleLeftOutNoticeTests|PitScheduleViewModel|C79cNewSwitchDefaults`: **40 total, 40 passed**. They include the Dromana case, To be removed, agreement with `EligibleScheduledPits` pit by pit, and the switch default through both `DeserializeSettings` and `DeserializeSettingsTolerant`. The test run printed a TearDown "inconclusive" from RealFolderGuardSetup because AutoCAD was running (0 differences seen by the guard).
+5. **Build:** net48 `CE_CVL_SUITE` Release, 0 errors. Every command had `-p:SkipDevBundle=true -nr:false --disable-build-servers -m:2` and the refs from the C-62 report. Isolation variables set (CE_LOG_DIR_OVERRIDE, TEMP, TMP under `C:\CE_WORK\scratch\w1274r`). Listings: `C:\CE_WORK\appdata_before.txt` and `appdata_after.txt` (37,000 lines each; one changed line, item 7 above).
+6. **Not tested:** the window itself, AutoCAD, the robot, Manager tests (never run), the net8 target.
+7. **Not done:** the focused test did not add a new entry to `C79cNewSwitchDefaultsTests`; the pin lives in the new test class through both reads.
