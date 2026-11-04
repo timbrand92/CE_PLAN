@@ -94,4 +94,4 @@ Tim: "Yes, all three". So, as recommended:
 
 First slice (Tim's answer 14, as recommended): OFF switch and the open prompt, then the banner. Test drawings: copies only of the Dromana job plus two older jobs Tim names (answer 13).
 
-**Status:** all 18 questions and A, B, C answered. Waiting for Tim's approval of this one-page card before any code (review gate step 6). Not built, not tested. A build needs the release chat to take it; this chat does not build it.
+**Status:** APPROVED by Tim, Wed 4 Nov 2026: "Approve card" (decisions/2026-11-04_TIM_CIVIL_OFF_OLD_PROJECTS.md). Not built, not tested. The release chat builds it; the chat that wrote it does not.
