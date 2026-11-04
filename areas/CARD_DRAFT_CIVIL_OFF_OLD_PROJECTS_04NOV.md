@@ -32,3 +32,18 @@ Answers are recorded under each question as Tim's words with the date he gives t
 12. **"Handle old projects far better": pick your top 3.** a) banner on open saying the project is older; b) Pit Schedule and Project QA say what they leave out (BUG-1274); c) preview of what an upgrade would change before it runs; d) open read-only option; e) merge of the old AppData project file; f) something else. Recommend: a, b, c.
 13. **Test drawings:** recommend: copies only of Dromana (PRE_C7) plus two older jobs you name.
 14. **First slice:** recommend: OFF switch (questions 2 to 5) first, banner (12a) second, the rest after you have used it.
+
+## Added requirement (Tim, Wed 4 Nov 2026, after question list 1 to 14)
+
+Tim: "IT ALSO NEEDS TO BE CLEAR WHAT AN END USER NEEDS TO DO TO GET THE OLD DRAWING UPGRADED".
+
+What an end user has today (read from code at cf059dcf, not run):
+1. **Automatic on open** on Tim's PC only (pipe upgrade, one PRE_C7 backup, no question). On a colleague's PC it is held and says only "Pipe upgrade is held on this PC until it is proven on AutoCAD 2022-2024." which tells the drafter nothing about what to do.
+2. **CDC7UPGRADE** converts the pipes in place after a backup (AutoCAD 2027 only). **CDUPGRADE** refreshes CE's record from the drawing and asks Merge or Replace. Two commands, two jobs, no word "upgrade" tells which is which, no order, and no ribbon button.
+3. **Nothing on screen** says a drawing is old, what is needed, or whether it has been done.
+
+Questions 15 to 18 (recommendation first):
+15. **One action or two?** Recommend: one ribbon button and one command, "Upgrade this drawing", that runs the steps in the right order and says what it did. The two old commands stay for now.
+16. **What the drafter sees before it runs:** recommend: a short window listing what will change in plain words (for example "46 pipes become pipe objects, 5 pits get a CE number identity, a backup is saved as <name>") with Upgrade and Cancel.
+17. **What the drafter sees after:** recommend: a done message with the backup file name, the count of things changed, and the one-line undo ("U" once, or restore the backup). A not-done drawing shows "UPGRADE NEEDED" on the toggle from question 4.
+18. **When the upgrade cannot run** (colleague's AutoCAD 2022 to 2024, locked layer, Xref): recommend: say why in plain words and what to do ("Open this drawing on AutoCAD 2027" or "Ask Tim"), never the engineering held-line.
