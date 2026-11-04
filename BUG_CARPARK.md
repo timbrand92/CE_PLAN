@@ -18071,3 +18071,23 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Reference:** Modules/Drainage/ViewModels/PitScheduleViewModel.Data.cs (IsEligibleScheduledPit); Rules/PitPresetLocks.cs (CanNumberAndSchedule); Rules/ObjectStatusRule.cs; Dialogs/PitDialog.xaml line 353. Not fix-ready: needs Tim's wording and a decision on plastic pits that carry a number on the plan.
 
 **Status:** OPEN. Logged Wed 4 Nov 2026 by the plugin chat on Tim's yes; nothing built, nothing tested.
+
+## BUG-1275 — AutoCAD crashes (access violation) placing a steel beam section in Structural, drawing at risk
+
+**Command / Area:** DrawSteelBeamSection (steel beam section, SectionDetailCommands), Structural, SBEAM placement writer. Found Thu 5 Nov 2026 08:46:35 on Tim's own PC, AutoCAD 2027, drawing "25-131_STR_24 Herbert Street P3" (open since Wed 08:45). HIGH; CRASH, unsaved work at risk.
+
+**Symptom:** acad.exe closed with a Windows error: faulting module coreclr.dll 10.0.12, exception 0xc0000005 (access violation), ".NET terminated due to an unhandled exception". Tim was placing a steel beam section.
+
+**Stack (top first, from CE 00):** Transaction.GetObject(ObjectId, OpenMode, Boolean) <- CE_STRUC_SUITE.Services.SbeamAtomicPlacementWriter.RecheckAdmission(Transaction, Database, SbeamPlacementPlan) <- StageOwnedEntities <- TryStage <- SbeamRunPlacementSession.TryPlace <- SbeamRunTransactionBoundary.ExecutePlacement <- SbeamCommandRunner.Run <- SectionDetailCommands.DrawSteelBeamSection.
+
+**Likely cause (NOT proven):** RecheckAdmission opens an ObjectId that is no longer valid (erased, or from another drawing database) inside the transaction. A safe open (IsErased and null checks, or catch and refuse) is needed. Code is at Modules/Structural/Services/SbeamAtomicPlacementWriter.cs line 371 on claude/rel-20261026s (the Structural line).
+
+**Expected behaviour:** a stale or foreign object in a placement plan makes CE refuse the placement with a plain message and leave the drawing as it was; AutoCAD never closes.
+
+**Steps to confirm in AutoCAD:** on a COPY of a structural drawing, place a steel beam section after erasing or replacing something the plan refers to; right: CE refuses with a message; today (suspected): AutoCAD may close. Not reproduced.
+
+**Evidence on disk (do not copy into any repo, may hold client data):** C:\Users\TimothyBrand\AppData\Local\Autodesk\CER\6d903fba150168a4abc949c7d407680bbfba5e80\1793828795620 (minidump.dmp.zip).
+
+**Note:** CEMEMBER is the design that replaces SBEAM (18 Oct); whether the old SBEAM path is still reachable is being read from the code.
+
+**Status:** OPEN. Logged Thu 5 Nov 2026 by CE 05 on CE 00's report. Nothing built, nothing tested; fix-draft, Opus review and a copy-drawing case queued as Team jobs.
