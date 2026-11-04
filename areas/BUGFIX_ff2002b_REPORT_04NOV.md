@@ -1,25 +1,20 @@
-# ff2002b: draft PR #2002 (B-183, BUG-879), finding C5 (Reset on the pit cover text grip menu), 4 Nov 2026
+# BUGFIX ff2002b report: #2002 (B-183, BUG-879) fix-first, Thu 5 Nov 2026
 
 ## FOR TIM
 
-1. **What you will see differently (once built into AutoCAD):** select a pit's cover level text and hover its grip square. If you have flipped or moved that text by hand (so Tidy labels leaves it alone), the menu now has a fifth line, "Reset cover text position". Pick it and Tidy labels may move that text again. The text itself does not move when you pick Reset. If the text was never marked, the line is not shown.
-2. **Your decision 193 (YES) is done for the grip menu.** Reset is the only change in this job.
-3. **My own mistakes:** my first Edit-by-script put two real line breaks inside two quoted strings and broke the line endings of two files. I caught it by reading the diff and repaired it before any build. Nothing broken reached the PR.
-4. **Isolation listing differs, and it is not mine.** The before and after listings of the four AppData folders differ by 5 new files and some changed sizes and times. All of it is your live AutoCAD session working on `25-131_STR_24 Herbert Street, Albert Park_P3.dwg` (MTEDIT lines in the Civil log at 14:45 to 14:48, a Structural autosave folder at 14:42, three usage files, the Manager session file, Structural logs). My run was Drainage tests only, with the log and temp folders set under `C:\CE_WORK\scratch\ff2002b`. I did not stop on this because none of those files is one a Drainage unit test writes, but I am saying so first as the rule asks.
-5. **NOT proven:** nothing was opened in AutoCAD. Built and unit-tested only. BUG-879 stays OPEN. The new test reads the code text (the same weakness as review item C7), it does not drive the grip. The hover menu itself (that the fifth line appears and runs) is only provable in AutoCAD.
-6. **Robot case:** `N879_pit_reset` in the N31_dp_time style. Setup: a drawing with one pit, "hand-placed labels stay" ON, `ceMovesMarkHandPlaced` ON. Type a CE grip flip on the pit cover text (CDPITCOVERFLIP via the grip), then CDTIDYLABELS and check the command line says the pit text is "placed by hand, so it stays". Then type the grip menu pick "Reset" (the `CDPITCOVERFLIP` Reset keyword), run CDTIDYLABELS again and check the pit text count under "Placed by hand" drops by 1 and the text is moved clear if it overlapped. Switch-off control: set `ceMovesMarkHandPlaced` false before AutoCAD starts, repeat the flip, CDTIDYLABELS: the text is moved (never held), and the grip menu shows no Reset line.
+1. **What you will see:** pick "Reset cover text position" on a pit cover text grip and the command line now says "[CE] Cover text handed back to Tidy labels. It moves the next time Tidy labels runs." Before, it said nothing and looked broken.
+2. **What does NOT change:** the text does not jump back on Reset. That waits on your answer (I recommend yes, as a separate job). No new switch; `linking.ceMovesMarkHandPlaced` stays ON.
+3. **Mistakes of my own:** none that cost anything. My first log-script run failed (wrong shell) and was rerun.
+4. **NOT proven:** built and unit-tested only. Nobody has opened this in AutoCAD. BUG-879 stays open.
+5. **Robot case (to write, not run):** like N31_dp_time. Mark a pit cover text by hand (flip its grip), open the grip menu, pick Reset cover text position, and check the command line contains "handed back to Tidy labels". Switch-off control: with the switch OFF on a fresh pit the Reset line is not offered, so the line is absent.
 
 ---
 
-## Technical detail
+## Technical
 
-1. **PR / commit:** #2002, branch `claude/w879-hand-placed`, one additional normal commit `da825208` on top of `fddbd2e7`. No force-push, no retarget, no merge, no new PR. Leak scan clean.
-2. **Behaviour:** new mode id `ModeCoverReset = 210` in `PipeAttachmentGripMenuPE.cs`, built by `BuildCoverResetMode()`, listed in `GetGripModes` only when `PitCoverCornerGripData.MarkedByHand`. `SetCurrentMode` turns it into the queue request `PitCoverTextFlipGripOverrule.ResetRequest` ("RESET"). `PitCoverTextFlipCommand` handles it first and returns before any move or regen.
-3. **Service:** `LinkService.IsPitCoverTextMarkedByHand(ObjectId)` (read, used when the grips are built, wrapped in a try with a logged fallback) and `LinkService.TryResetPitCoverTextHandMark(ObjectId, out reason)` in `LinkService.PitCoverText.cs`. The reset sets `CoverTextPlacedByHand = false` on the pit record and saves the project record once. It writes no drawing entity, so locked layers, Xrefs and REFEDIT are not involved.
-4. **Switch:** unchanged, `linking.ceMovesMarkHandPlaced`, ON, "Default: on.", both start-up reads still pinned. A mark only exists while the switches were on, and OFF already releases it, so Reset needs no second switch (same as pipe Reset Position). OFF gives the old behaviour: no mark, so no Reset line.
-5. **REDO:** no new command, regen, view or system-variable change; one project-record save, the same kind the mark itself already makes.
-6. **Test:** `ThePitCoverTextGripMenuOffersResetOnlyForAMarkedTextAndResetClearsOnlyTheMark` added to `Bug879CeMovesMarkHandPlacedTests` (source-level).
-7. **Build and test:** `dotnet test Modules/Drainage.Tests/CE_CVL_SUITE.Tests.csproj -f net10.0-windows --filter "FullyQualifiedName~Bug879|FullyQualifiedName~Bug284LockedLayerChangeTests"` with `-p:SkipDevBundle=true -nr:false --disable-build-servers -m:2` and the C62 refs: 77 passed, 0 failed, 0 skipped. net48 build of the test project: 0 errors, 297 warnings. Not run: the full Civil suite.
-8. **Files touched (6):** `Commands/PitCoverTextFlipCommand.cs`, `Services/LinkService.PitCoverText.cs`, `Services/PipeAttachmentGripMenuPE.cs`, `Services/PitCoverTextFlipGripOverrule.cs`, `Modules/Drainage.Tests/Rules/Bug879CeMovesMarkHandPlacedTests.cs`, `REGRESSION_LOG.md` (line 3b). CE_SHARED untouched.
-9. **Isolation:** `CE_LOG_DIR_OVERRIDE`, `TEMP`, `TMP` set to `C:\CE_WORK\scratch\ff2002b\...` and echoed before the test run. Listings at `C:\CE_WORK\scratch\ff2002b\appdata_before.txt` (36,968 files) and `appdata_after.txt` (36,973 files); differences are listed in FOR TIM item 4 (live AutoCAD session). No Manager tests. No AutoCAD, Codex or accoreconsole started by me.
-10. **Not done:** C6 (legacy pit upgrade drops the mark) and C7 (more result-level tests) were not part of this job.
+1. **Commit:** dfbe6edc on claude/w879-hand-placed (one normal commit on top of da825208; no force-push, no new PR, no retarget).
+2. **Files:** Modules/Drainage/Commands/PitCoverTextFlipCommand.cs (success line in the Reset branch, 2 lines), Modules/Drainage.Tests/Rules/Bug879CeMovesMarkHandPlacedTests.cs (2 asserts added to the existing Reset guard test: the line is present, the branch has no Regen), REGRESSION_LOG.md (item 3c). CE_SHARED untouched.
+3. **Test:** CE_CVL_SUITE.Tests, filter Bug879CeMovesMarkHandPlacedTests|NewSwitchDefaults: net48 261/261 pass, net10.0 261/261 pass (net8 target matched none, not our target). net48 compiles.
+4. **Isolation:** TEMP, TMP, CE_LOG_DIR_OVERRIDE set to C:\CE_WORK\scratch\ff2002b\temp. Manager tests not run.
+5. **Real folder listing before/after** (full lists in C:\CE_WORK\scratch\ff2002b\before.txt and after.txt, 244 lines): one difference, CE_CADTOOLS/CE_Admin/sessions/CE_SUITE_MANAGER.json, 228 bytes, modified 04:23 to 04:30. That is the Manager app's own session heartbeat (Manager was running on this PC); my run does not run Manager and does not write there. Flagging it as asked.
+6. **Still open (not in this job):** review item 2.7 (Reset line stays after the switch is turned OFF on an already-marked pit), left alone as the review advised.
