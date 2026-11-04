@@ -75,3 +75,23 @@ Open points (CE has not decided these for Tim):
 - **A. Answer 2 against answer 3.** Answer 2 says OFF makes the plugin unusable in that drawing; answer 3 says read-only commands (PITSCHEDULE, CDCHECK, exports) still run and changing commands ask. Recommendation: answer 2 wins (OFF = nothing runs, ribbon greyed, one line says "Civil is OFF in this drawing. Upgrade it or turn Civil ON."), and answer 3 applies after the drawing is turned ON. Tim to confirm.
 - **B. Answer 7 needs a stamp.** The drawing's CE record carries only a record-format number (2.3 on the Dromana job, 2.1 on its October saves), not the CE build that last saved it. Recommendation: from the next build every save writes the CE build into the record, and a drawing with no stamp counts as "prior to 3.0.89" (old). Tim to confirm.
 - **C. "Whole plugin".** Assumed to mean the whole Civil plugin, not Structural or Manager. Tim to confirm.
+
+## Tim's confirmation of open points A, B and C (Wed 4 Nov 2026)
+
+Tim: "Yes, all three". So, as recommended:
+- **A (decided):** OFF means nothing runs in that drawing and the ribbon is greyed; one line says "Civil is OFF in this drawing. Upgrade it or turn Civil ON." Answer 3 (read-only commands run) applies only after the drawing is turned ON. Answer 3 as first given is superseded by this for OFF drawings.
+- **B (decided):** every save from the next build writes the CE version into the drawing; a drawing with no stamp counts as prior to 3.0.89 (old).
+- **C (decided):** "whole plugin" means the whole Civil plugin; Structural and Manager are not touched.
+
+## The card in one page: what a drafter sees (for Tim's approval)
+
+1. **Open an old drawing** (no CE version stamp, or a stamp before 3.0.89): a window asks once. "This is an older project. Upgrade it now, or leave it as it is (Civil OFF)?" Nothing in the drawing has changed yet.
+2. **Leave as it is:** Civil is OFF for that drawing. The ribbon is greyed, the command line says "Civil is OFF in this drawing. Upgrade it or turn Civil ON.", and CE does not touch the drawing. The toggle on the Civil panel shows OFF and "UPGRADE NEEDED".
+3. **Upgrade it (one button, one command, same window):** a short list in plain words (for example "46 pipes become pipe objects, 5 pits get a CE identity, a backup is saved as <name>") with Upgrade and Cancel. A backup is taken first.
+4. **After it runs:** a done message with the backup file name, how many things changed and the undo (U once, or restore the backup). The toggle shows ON and the CE version is stamped.
+5. **When it cannot run** (AutoCAD 2022 to 2024, locked layer, Xref): a plain sentence says why and what to do, for example "Open this drawing in AutoCAD 2027."
+6. **Pit Schedule and Project QA** say how many pits they leave out and why (BUG-1274). The banner on open says the project is older.
+
+First slice (Tim's answer 14, as recommended): OFF switch and the open prompt, then the banner. Test drawings: copies only of the Dromana job plus two older jobs Tim names (answer 13).
+
+**Status:** all 18 questions and A, B, C answered. Waiting for Tim's approval of this one-page card before any code (review gate step 6). Not built, not tested. A build needs the release chat to take it; this chat does not build it.
