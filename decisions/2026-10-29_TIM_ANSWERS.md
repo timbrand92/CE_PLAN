@@ -822,3 +822,9 @@ Tim's words: "1. YES / 2. YOU SAVE / 3. YES / 4. AS YOU SUGGEST / 5. NO / 6. YES
    1. Tim's words: "Keep the draft" (the button read: "QUESTIONS 60: yes to both recommended answers. Paved cover is measured below the slab (100 plus a slab thickness setting), and the council figure is a floor so the bigger of council and table applies.").
    2. Interpretation: (a) the Footpath and Driveway cover rows are measured below the slab, so judged from the top as 100 + the slab thickness (Settings, 100 mm to start); (b) a council's cover figure is a floor, so the bigger of the council figure and the table row applies (Frankston Road needs 600). A project override still wins. Both stay Settings values (slab thickness, paved surfaces list, floor on/off), so the office can change them.
    3. Done: PR 1850 (and 1851 which contains it) now say "confirmed by Tim 4 Nov 2026, QUESTIONS 60" and no longer read Assumed; no number moved. The five table rows were already confirmed 29 Oct ("Keep as built").
+
+## Unsaved-work protection (5 Nov 2026)
+
+Tim's word, as relayed by CE 00 from the desk chat (5 Nov): "c". The options Tim saw were CE 00's lettering: a = reminder only, b = timed backup copies only, c = both. (My item 133 listed only A and B; CE 00's "c" is the both-option.) Interpretation (CE 00's reading, GUESS, not seen directly by CE 04).
+
+223. **BUG-1276 unsaved-work protection (item 133): "c" = both.** Build the "Not saved for 25 minutes" reminder (a plain line; the 25 Sep ruling) AND timed backup copies of unsaved work. Backups go to the CE backup folder only, never over Tim's drawing and nothing written behind his back to the drawing file. Desk (CE 05) must: build both as DRAFT, with the backup interval and folder as Settings values (R-00), warn never block (R-27), and show Tim a picture of the reminder line. GUESS: the backup interval is not named; use a Settings value starting at 25 minutes unless Tim says otherwise.
