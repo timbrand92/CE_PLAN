@@ -1,11 +1,11 @@
 # FOR TIM
+
 1. **GO — PR #2013:** the Opus blocking finding is fixed at branch tip `2058816d`.
-2. **What changes:** a 0.001 mm slide step becomes 5 mm at the usual 500 mm limit, so Tidy labels has fewer positions to consider.
-3. **Switch:** `pipe.labelSlideWorkBudget` defaults ON; OFF keeps the original placement calculation and produces no new warning.
-4. **Marker restored:** `Modules/Drainage/Models/UserSettings.cs:1` has its UTF-8 BOM again.
-5. **Still recommended:** show the raised step once on the command line; currently the CE log repeats it for each affected label.
-6. **Safety:** this change adds no drawing writes, layer unlocking or changes to Xref/REFEDIT protection; CE_SHARED is unchanged.
-7. **Limits:** read-only review; 0 builds and 0 tests run, no AutoCAD opened. BUG-897 stays OPEN.
+2. **Switch:** `pipe.labelSlideWorkBudget` defaults ON; OFF keeps the original placement calculation and produces no new warning.
+3. **Marker restored:** `Modules/Drainage/Models/UserSettings.cs:1` has its UTF-8 BOM again.
+4. **Still recommended:** show the raised step once on the command line; currently the CE log repeats it for each affected label.
+5. **Safety:** this change adds no drawing writes, layer unlocking or changes to Xref/REFEDIT protection; CE_SHARED is unchanged.
+6. **Limits:** read-only review; 0 builds and 0 tests run, no AutoCAD opened. BUG-897 stays OPEN.
 
 ---
 
