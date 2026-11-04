@@ -9,7 +9,7 @@ Source idea: IDEAS_INBOX.md, IDEA-OLD-PROJECTS-CIVIL-OFF. Tim's words: "WE NEE D
    1. Disable on Restart (CEMANAGER, BUG-851/#1473) switches Civil off for the whole PC, needs a restart, hits every drawing.
    2. Civil already goes quiet per drawing. A drawing with no Civil content (a Structural drawing) is decided "quiet" at open and stays quiet until a Civil command runs, it is tagged Civil, or a Civil object is written (one rule: DrawingDisciplinePolicy.ShouldCivilBeActive). A drawing with a CE record is always "Civil active", whatever its name or tag says.
    3. An explicit tag in the drawing (CE_CVL_DISCIPLINE, CVL or STR) already beats the file name. There is no "OFF" value.
-   4. Open-time pipe upgrade (the C7 upgrade): converts CE pipes to pipe objects, takes one PRE_C7 backup the first time, gives pipes CE identities, turns PROXYGRAPHICS on. It is already "held" (does nothing) on colleagues' PCs; Tim's PC upgrades.
+   4. Open-time pipe upgrade (the C7 upgrade): converts CE pipes to pipe objects, takes one PRE_C7 backup the first time, gives pipes CE identities, turns PROXYGRAPHICS on. CORRECTED 4 Nov 2026 (Tim: "ITS ON SILVIAS PC THE UPGRADE BUT ALSO MINE"): it is NOT held on colleagues' PCs. B-046 (29 Oct, "defualt on for everyone") made Automatic mean On for every sign-in on AutoCAD 2027; the old "held on colleagues' PCs" text (UX-MIX-03, 26 Sep) is superseded. The first reading in this card was wrong.
 4. **What is missing:** no way to say "this drawing: hands off". Once a drawing holds a CE record, Civil is awake on it and the open-time upgrade runs on Tim's PC.
 5. **Design idea (not decided):** reuse the existing quiet flag and add an explicit OFF tag in the drawing that wins over "has Civil content" and stops the wake-up. One code path, no second switch (design rule 1).
 6. **Seen on the Dromana job today (log, 4 Nov 2026):** at 13:30 the open upgrade converted 6 pipes; CDRENUMBER at 13:32 and 13:42 changed pit numbers; CE's relinking ran after commands. Which of these "messed stuff up" is Tim's to say (question 1).
@@ -38,7 +38,7 @@ Answers are recorded under each question as Tim's words with the date he gives t
 Tim: "IT ALSO NEEDS TO BE CLEAR WHAT AN END USER NEEDS TO DO TO GET THE OLD DRAWING UPGRADED".
 
 What an end user has today (read from code at cf059dcf, not run):
-1. **Automatic on open** on Tim's PC only (pipe upgrade, one PRE_C7 backup, no question). On a colleague's PC it is held and says only "Pipe upgrade is held on this PC until it is proven on AutoCAD 2022-2024." which tells the drafter nothing about what to do.
+1. **Automatic on open** on Tim's PC only (pipe upgrade, one PRE_C7 backup, no question). SUPERSEDED 4 Nov (see item 4 correction): it also runs on colleagues' PCs on AutoCAD 2027. The held line only shows on a PC where the setting is Off or the enabler is missing (AutoCAD 2022 to 2024), and tells the drafter nothing about what to do.
 2. **CDC7UPGRADE** converts the pipes in place after a backup (AutoCAD 2027 only). **CDUPGRADE** refreshes CE's record from the drawing and asks Merge or Replace. Two commands, two jobs, no word "upgrade" tells which is which, no order, and no ribbon button.
 3. **Nothing on screen** says a drawing is old, what is needed, or whether it has been done.
 
@@ -47,3 +47,31 @@ Questions 15 to 18 (recommendation first):
 16. **What the drafter sees before it runs:** recommend: a short window listing what will change in plain words (for example "46 pipes become pipe objects, 5 pits get a CE number identity, a backup is saved as <name>") with Upgrade and Cancel.
 17. **What the drafter sees after:** recommend: a done message with the backup file name, the count of things changed, and the one-line undo ("U" once, or restore the backup). A not-done drawing shows "UPGRADE NEEDED" on the toggle from question 4.
 18. **When the upgrade cannot run** (colleague's AutoCAD 2022 to 2024, locked layer, Xref): recommend: say why in plain words and what to do ("Open this drawing on AutoCAD 2027" or "Ask Tim"), never the engineering held-line.
+
+## Tim's answers, Wed 4 Nov 2026 (verbatim, capitals are his)
+
+"ITS ON SILVIAS PC THE UPGRADE BUT ALSO MINE" (correction of the card's first reading, see item 4)
+
+1. "ITS THE JOB I SENT YOU" (the Dromana job). Reading: the 09:39:59 PRE_C7 backup of that job is not in Tim's log, so the open-time upgrade that morning was most likely on Silvia's PC (interpretation, not proven).
+2. "MEANS THE WHOLE PLUGIN TURNS OFF AND ISNT USABLE AND DOESNT TOUCH THE DRAWING THAT IS OPEN"
+3. "YES"  (CONFLICTS with answer 2, see open point A)
+4. "YES"
+5. "YES"
+6. "ASK USER WHEN OPENS"
+7. "ANYTHING PRIOR TO V3.0.89" (open point B: the record has no CE build stamp)
+8. "YES"
+9. "YES"
+10. "LEAVE AS IS"
+11. "RECOMMENDED"
+12. "AS YOU RECOMMEND" (banner, Pit Schedule and Project QA say what they leave out, preview before upgrade)
+13. "AS RECOMMENDED"
+14. "AS RECOMMENDED"
+15. "ONE ACTION - PROMPT ON OPENING OF DRAWING"
+16. "YEP"
+17. "YEP"
+18. "YEP"
+
+Open points (CE has not decided these for Tim):
+- **A. Answer 2 against answer 3.** Answer 2 says OFF makes the plugin unusable in that drawing; answer 3 says read-only commands (PITSCHEDULE, CDCHECK, exports) still run and changing commands ask. Recommendation: answer 2 wins (OFF = nothing runs, ribbon greyed, one line says "Civil is OFF in this drawing. Upgrade it or turn Civil ON."), and answer 3 applies after the drawing is turned ON. Tim to confirm.
+- **B. Answer 7 needs a stamp.** The drawing's CE record carries only a record-format number (2.3 on the Dromana job, 2.1 on its October saves), not the CE build that last saved it. Recommendation: from the next build every save writes the CE build into the record, and a drawing with no stamp counts as "prior to 3.0.89" (old). Tim to confirm.
+- **C. "Whole plugin".** Assumed to mean the whole Civil plugin, not Structural or Manager. Tim to confirm.
