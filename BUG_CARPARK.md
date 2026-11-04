@@ -18111,3 +18111,17 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 - Note (CE 05, Thu 5 Nov 2026 ~11:00): BUG-1275 crash dump read (Max Opus, in place on Tim's PC, nothing copied; report areas\READING_B1275_CRASH_DUMP_05NOV.md). AutoCAD closed on the main thread inside AutoCAD's own drawing-database code (acdb26.dll) while it checked which drawing the current drawing-space id belongs to: it followed a forwarded-record link to memory that was freed or overwritten and read address 0x1. coreclr was only the messenger. Not an erased or null object; no idle, timer, jig or event handler on the stack; the crash came straight from the SBEAM command in RecheckAdmission, on the call that opens database.CurrentSpaceId for read. So PR #2024 (the stale-id guard) does NOT stop this crash; it is a harmless safety check and must not be described as the fix. Why the link was broken is NOT proven (candidates: an Xref or another drawing changing underneath, or memory damaged earlier by other code). Proposed next: log-only change around SBEAM runs (space id, transaction and Xref state, no behaviour change), a Windows full-crash-file setting for acad.exe (Tim or IT only), and a design option to commit each placement in its own transaction instead of holding one open across picks (changes SBEAM Undo behaviour; needs Tim's word and the command review gate). Status: still OPEN, built-and-unit-tested guard only, nothing accepted.
 
 - Note (CE 05, Thu 5 Nov 2026, from CE 00): BUG-1275 context: AutoCAD had been running about 24 hours (open since Wed 4 Nov 08:45, crashed Thu 5 Nov 08:46), so a restart-daily habit is worth a line to Tim. CE 00 approved a log-only SBEAM diagnostics draft (Sonnet, Structural line, no behaviour change; it does NOT fix the crash). The Windows full-crash-file setting is Tim or IT only. The one-transaction-per-placement design and the BUG-1105 reuse-versus-total question went to Tim via CE 04.
+
+## BUG-1277 — Visual Studio Community 2026 on Tim's PC reports itself incomplete, so native AutoCAD module builds refuse to run
+
+**Command / Area:** PC tooling (Visual Studio Community 2026), Structural native AutoCAD module build. Found Thu 5 Nov 2026 by CE 01 (via CE 00). MEDIUM; blocks any change to native source.
+
+**Symptom:** the PC's Visual Studio Community 2026 reports itself incomplete (probably left half-updated when SSMS 22 was installed or updated). Any Structural build that recompiles the native AutoCAD module refuses to run.
+
+**Workaround in use:** CE 01 builds the CLEAN-saves build by reusing the installed native bytes (native source unchanged).
+
+**Expected behaviour:** Visual Studio Community 2026 is healthy and a native rebuild runs.
+
+**Fix (Tim, at a convenient time):** run Visual Studio Installer, pick Visual Studio Community 2026, Repair (needs his admin prompt, 5 to 15 minutes, maybe a restart). Must be done BEFORE any change to native source.
+
+**Status:** OPEN. Logged Thu 5 Nov 2026 by CE 05 on CE 00's report. Nothing for the plugin code; a PC repair for Tim.
