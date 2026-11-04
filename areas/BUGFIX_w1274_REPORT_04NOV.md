@@ -1,0 +1,29 @@
+# BUGFIX w1274 report, Wed 4 Nov 2026 (BUG-1274, Pit Schedule says what it leaves out)
+
+## FOR TIM
+
+1. **What you will see differently:** open PITSCHEDULE on the Dromana drawing. The banner under the window title now says "6 plastic pits are not in this schedule: P3 to P8. Open PIT on each and press Number and schedule this one anyway to add it." A pit switched off for the schedule gets its own sentence ("... switched off for the schedule: P2. Open PIT on each and turn on Include in schedule to add it."). Nothing in the drawing changes.
+2. **Draft PR:** #2019, "B-1274: Pit Schedule says which pits it leaves out and why (BUG-1274) DRAFT", normal branch off master 650c0c19.
+3. **Switch:** Settings, Pit group, `pitScheduleSaysWhatItLeavesOut`. Default: on. Off gives the old banner exactly. The wording is two Settings strings, so you can change it without a build.
+4. **My own mistakes first:**
+   1. I first put the line on the window's "status" text. It is not shown anywhere on screen. I caught that before pushing and moved it to the drawing-check banner, which is shown.
+   2. My first test runs failed on a path with a space in it. No cost to you.
+   3. The Settings window tests redrew the 12 Settings pictures in my working copy. I put them back; they are not in the PR.
+5. **Not done, with the reason:**
+   1. **Project QA (CDCHECK):** not one small change. It is a separate surface (`SpineCheckCommand` plus the Project QA services). It needs its own job.
+   2. **"Marked To be removed":** this does not exist on the current master (no `ObjectStatusRule`). Only plastic pits and switched-off pits are covered.
+6. **What is NOT proven:** nobody has opened the window in AutoCAD, so how the line looks (wrapping, colour) is unseen. The old banner already listed switched-off pits as "Excluded from schedule (informational)". Your bug says no message appeared, so either that banner did not show on Dromana or it was too vague. I have not seen which.
+7. **Built and tested, not installed, not accepted.** 13 new tests pass. A neighbour run of 584 tests (Settings, REDO-safety, Pit Schedule, colleague defaults) passes. Both net48 and net10 build with 0 errors.
+8. **Robot case that proves it:** `N32_pit_schedule_left_out` (name proposed; not written, because this job may not start AutoCAD). It would open a copy of the Dromana drawing, type `PITSCHEDULE`, and read the banner text: the line must read "6 plastic pits are not in this schedule: P3 to P8." with the Open PIT sentence. Switch-off control: set `pitScheduleSaysWhatItLeavesOut` to false before launch (it is read at AutoCAD start), repeat, and the banner must not contain "not in this schedule". Second step: open PIT on P3, press Number and schedule this one anyway, rerun, and the line must say 5 pits, P4 to P8.
+
+## Technical detail
+
+1. **Fault confirmed on origin/master 650c0c19:** `PitScheduleViewModel.Data.cs` line 253 builds the schedule from `EligibleScheduledPits` (line 811: `IncludeInSchedule` and `PitPresetLocks.CanNumberAndSchedule`). Pits that fail the test are dropped with no wording. `ScheduleStatusMessage` has no XAML binding; the visible message area is `PreFlightHeadline` and `PreFlightDetailText` (`PitScheduleDialog.xaml` lines 110 and 186 to 202).
+2. **Files:** `Modules/Drainage/Rules/PitScheduleLeftOutNotice.cs` (new), `ViewModels/PitScheduleViewModel.Data.cs` (`ApplyLeftOutNotice`, `BuildLeftOutNotice`, one call after `RunPreFlightCheck`), `Models/UserSettings.cs` (one block at the end of `PitSettings`), `Drainage.Tests/Rules/PitScheduleLeftOutNoticeTests.cs` (new), `REGRESSION_LOG.md` (entry at the top).
+3. **Banner behaviour:** with no other data issue the notice becomes the banner headline and detail. With other issues it leads the detail text and the existing headline stays.
+4. **Settings:** `UserSettings.cs` first three bytes EF BB BF before and after. Only `SettingsService.DeserializeSettings` exists on this base (no tolerant read), so the default is pinned through that read, for `{}`, `{"pit":{}}` and an explicit false.
+5. **REDO-safe:** no drawing write, command, regen, view or system-variable change. CE_SHARED, Structural and Manager untouched. No locked-layer, Xref or REFEDIT content touched.
+6. **Test commands** (one project each, with a filter, SkipDevBundle, below normal priority, isolation variables set in the script): `PitScheduleLeftOutNoticeTests` 13 of 13; guards `SettingsWindow|UserSettings|RedoSafe|PitSchedule|CrossModuleGuard|ColleagueDefaults` 584 of 584. Net48 Release build of `CE_CVL_SUITE.csproj`: 0 errors. The 0-byte `CE_TRANSFORM_2027.arx` placeholder was created where the build names it.
+7. **Isolation listing (rule 1):** before and after listings of the four real folders (36,978 files each) are in `C:\CE_WORK\scratch\w1274\appdata_before.txt` and `appdata_after.txt`. Eight lines differ (four files, before and after). They are `CE_STRUC_SUITE\logs\ce_struc_suite.log`, `StructuralCommands\struct_commands_20261104.log`, `CE_CVL_SUITE\logs\ce_cvl_structured_20261104.log` and `CE_CADTOOLS\CE_Admin\sessions\CE_SUITE_MANAGER.json`. These are written by Tim's live AutoCAD (acad.exe PID 36680, started 8:45 am; the Manager session file names that PID, and the Civil log tail is PASTECLIP activity). My run set `CE_LOG_DIR_OVERRIDE`, `TEMP` and `TMP` to the scratch folder and wrote none of them. No real file that my run could have written changed.
+8. **AutoCAD was open** (Tim's session) during the runs, at below normal priority. The runs were in his work hours.
+9. **Disk:** C: had 74.1 GB free before the build. After `git clean -fdXq`, `git worktree remove` and removing the scratch folder, C: free space moved by about 416 MB (other jobs were also using the disk, so this is not a clean measure). The local test logs went with the scratch folder; the listing differences are quoted in item 7.
