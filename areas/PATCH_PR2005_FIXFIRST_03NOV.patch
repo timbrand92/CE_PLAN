@@ -1,0 +1,47 @@
+diff --git a/Modules/Drainage.Tests/Services/Bug1046OfficeEditorsOpenAnywhereTests.cs b/Modules/Drainage.Tests/Services/Bug1046OfficeEditorsOpenAnywhereTests.cs
+index ee70f889..9a010d15 100644
+--- a/Modules/Drainage.Tests/Services/Bug1046OfficeEditorsOpenAnywhereTests.cs
++++ b/Modules/Drainage.Tests/Services/Bug1046OfficeEditorsOpenAnywhereTests.cs
+@@ -30,7 +30,6 @@ namespace CE_CVL_SUITE.Tests.Services
+             Assert.That(DrawingSafetyService.OpensAnywhere(command, null), Is.True, "no settings group reads ON");
+         }
+ 
+-        [TestCase("CDDASHBOARD")]
+         [TestCase("CDPIT600")]
+         [TestCase("CD")]
+         [TestCase("PIT")]
+@@ -42,6 +41,18 @@ namespace CE_CVL_SUITE.Tests.Services
+             Assert.That(DrawingSafetyService.OpensAnywhere(command, new OptionSettings()), Is.False);
+         }
+ 
++        [TestCase("CDDASHBOARD")]
++        [TestCase(" cddashboard ")]
++        public void Dashboard_KeepsItsLayoutCheck_WithTheSwitchOnOffOrMissing(string command)
++        {
++            Assert.That(DrawingSafetyService.OpensAnywhere(command, new OptionSettings()), Is.False);
++            Assert.That(DrawingSafetyService.OpensAnywhere(command,
++                new OptionSettings { OfficeEditorsOpenAnywhere = false }), Is.False);
++            Assert.That(DrawingSafetyService.OpensAnywhere(command, null), Is.False);
++            Assert.That(DrawingSafetyService.ReferenceEditRefusal("test-reference", command), Is.Null,
++                "the dashboard's existing REFEDIT permission is unchanged");
++        }
++
+         [TestCase("CDPARTS")]
+         [TestCase("CDLABELSTYLE")]
+         public void SwitchOff_TheOldRefusalsReturnExactly(string command)
+diff --git a/REGRESSION_LOG.md b/REGRESSION_LOG.md
+index a6fe7920..94279db2 100644
+--- a/REGRESSION_LOG.md
++++ b/REGRESSION_LOG.md
+@@ -1,3 +1,11 @@
++## B-186 / BUG-1046: PR #2005 fix-first dashboard regression guard (5 November 2026, N3)
++
++1. **Read:** PR tip c27c2996 already contains the requested three-command list, dashboard exclusion, settings summary and earlier log correction (9de8882d). No product code change was needed.
++2. **Test:** a dedicated dashboard case now covers the switch ON, OFF and a missing settings group, including a lower-case, space-padded command. It also pins the dashboard's existing REFEDIT permission, so this layout protection does not change it.
++3. **Unchanged:** the switch still ships ON; OFF still restores the office editors' old refusals. No window, drawing, layer, Xref, REFEDIT content or shared code changed. Earlier entries below are retained.
++4. **Built and tested:** Release net10.0-windows Civil test project: 0 build errors (54 warnings); native prerequisite: 0 errors (1 warning). BUG-1046 fixture: 20 passed, 0 failed, 0 skipped. Whole Civil project console: 21,611 passed, 0 failed, 32 skipped (21,643 total); TRX: 21,611 passed and 60 NotExecuted (21,671 records). Unexecuted cases are not passes. README safety flags used; AutoCAD dependency folder added to the test process PATH for discovery, without opening AutoCAD.
++5. **Not proven:** no AutoCAD, visual, zoom, layout or REFEDIT execution was performed. BUG-1046 remains open. Build/test counts and patch hand-off: `C:\CE_PLAN\areas\CODEX_FIXFIRST_PR2005_03NOV.md`. Undo: revert this test-and-log commit.
++
+ ## BUG-1046: CDPARTS, CDLABELSTYLE and CDDIAG open on a layout sheet, and CDPARTS and CDLABELSTYLE open during REFEDIT (`options.officeEditorsOpenAnywhere`, ON, 3 November 2026)
+ 
+ Built and unit-tested only. Nobody has opened this in AutoCAD. Not marked FIXED: BUG-1046 stays open.
