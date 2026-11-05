@@ -18141,3 +18141,19 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 - Note (CE 05, BUG-1274, Thu 5 Nov, #2023 B-1274, draft, base rel-20261112a, head ad68a773; replaces #2019): **Built:** not stated in the report beyond the test project; net48 not claimed by me. **Tested:** 40 of 40 pass per the author. **Installed:** no. **Accepted:** no. **Opus: GO.** The notice and the schedule now ask the same rule, so the count matches what the schedule really leaves out (plastic pits, pits switched off, pits marked To be removed). Switch `pitScheduleSaysWhatItLeavesOut`, ON. Display points to check: the headline is cut with "..." at window width; with other data problems the note goes only in the hover and Source tab. #2019 (old master base) is to be closed with a pointer. **NOT proven:** in AutoCAD; robot case B1274_ps_leftout is drafted, not run; whether plastic pits should carry a number on the plan at all is still Tim's call.
 - Note (CE 05, BUG-900, Thu 5 Nov, update): B-217 is now draft PR #2032 (base rel-20261112a, all PDF pages), Opus GO (REVIEW_2031FF_2032_05NOV.md); built and unit-tested only, never run on a real two-page PDF or in AutoCAD, not installed, not accepted.
 - Note (CE 05, BUG-1275, Thu 5 Nov, update): fix-first and log-only follow-ups: #2033 (B-219, log-only SBEAM run diagnostics, not a fix) has commit a25311d8, Opus GO on the re-check; still built and unit-tested only. BUG-1275 stays OPEN.
+
+## BUG-1278 — Hatches cannot be modified since the plugin (Associative and Annotative greyed out)
+
+**Command / Area:** AutoCAD hatch editing (Hatch Editor tab) with the CE plugin loaded; installed Civil 3.0.90, Manager 1.1.89, Structural 1.0.125. Found Thu 5 Nov 2026 by Tim on his structural P3 drawing. HIGH; daily drafting blocked.
+
+**Symptom:** Tim: since the plugin, he clicks a HATCH and "can't modify it"; it did not happen before. His screenshot (a block-wall hatch on layer "HATCH 11" selected): the Hatch Editor tab opens but the Associative and Annotative buttons are greyed out; grips show two yellow dots and one blue dot. He is an eight-year AutoCAD user: do not ask him to test.
+
+**Checked so far by CE 00 (all negative):** no CE overrule vetoes hatch edits (CompoundTransformOverrule passes hatches through; the slab MoveOverrule is off, StartupEnabled=false; the native grip module only acts on block references and MText). The CLEAN command does not modify existing hatches but resets NEW-hatch defaults (HPNAME SOLID, HPLAYER "HATCH 21", HPCOLOR BYLAYER, HPBACKGROUNDCOLOR None, plus CECOLOR/CELTYPE/CELWEIGHT) and ran three times Wed 4 Nov 14:41 to 16:43. CE logs today show no hatch line and no warning or error.
+
+**Not yet checked:** (a) the real layer state of "HATCH 11" and the hatch's associative flag in the P3 file (to be done on a COPY after the CLEAN install; headless accoreconsole cannot run while Tim's AutoCAD is open); (b) whether any Structural reactor (BeamLink.Follow.ObjectOpenedForModify, FoundationMonitor, DirtyTrack) throws or cancels on a hatch open-for-write; (c) whether the Civil 3.0.89/3.0.90 or Structural 1.0.125 changes touched any entity open/modify path. (b) and (c) are a read-only Max job (CE 05).
+
+**Expected behaviour:** a hatch can be selected and edited as normal, Associative and Annotative available.
+
+**Steps to confirm in AutoCAD:** on a COPY of the P3 drawing, select the hatch on layer HATCH 11; right: Associative and Annotative are available and the hatch edits; today: greyed out.
+
+**Status:** OPEN. Logged Thu 5 Nov 2026 by CE 05 on CE 00's report. Nothing built, nothing tested. The screenshot (client drawing) is not copied anywhere.
