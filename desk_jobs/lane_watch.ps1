@@ -7,7 +7,7 @@ $q   = 'C:\Lisp Files\_CODEX_RUNNER\queue.log'
 $teamLastBusy = Get-Date
 $acadLastSeen = Get-Date
 $nf = 'C:\CE_PLAN\desk_jobs\CODEX_NEXT.txt'
-while ($true) {
+while ($true) { try {
   $now = Get-Date
   $teamJobs = @(Get-CimInstance Win32_Process | Where-Object { $_.Name -match '^(claude|node)\.exe$' -and $_.CommandLine -match '(\s-p\s|--print)' }).Count
   if ($teamJobs -gt 0) { $teamLastBusy = $now }
@@ -36,5 +36,6 @@ while ($true) {
   $stopF = 'C:\CE_PLAN\desk_jobs\CHAIN_Q_STOPPED.txt'
   if (Test-Path $stopF) { $lines += "ALERT TEAM FEEDER STOPPED: " + ((Get-Content $stopF -TotalCount 2) -join ' ') }
   Set-Content -Path $out -Value $lines
+  } catch { Add-Content -Path 'C:\CE_PLAN\desk_jobs\lane_watch_errors.log' -Value ("{0} {1}" -f (Get-Date -Format s), $_.Exception.Message) }
   Start-Sleep -Seconds $Seconds
 }
