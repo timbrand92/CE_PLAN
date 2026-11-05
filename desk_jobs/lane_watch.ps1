@@ -9,7 +9,7 @@ $acadLastSeen = Get-Date
 $nf = 'C:\CE_PLAN\desk_jobs\CODEX_NEXT.txt'
 while ($true) { try {
   $now = Get-Date
-  $teamJobs = @(Get-CimInstance Win32_Process | Where-Object { $_.Name -match '^(claude|node)\.exe$' -and $_.CommandLine -match '(\s-p\s|--print)' }).Count
+  $teamJobs = @(Get-CimInstance Win32_Process | Where-Object { $_.Name -match '^(claude|node)\.exe$' -and $_.CommandLine -match '(\s-p\s|--print)' -and $_.CommandLine -notmatch '--sdk-url' }).Count
   if ($teamJobs -gt 0) { $teamLastBusy = $now }
   $teamIdle = [int]($now - $teamLastBusy).TotalMinutes
   $lastEnd = $null
