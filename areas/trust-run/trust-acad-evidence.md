@@ -1,0 +1,4 @@
+# Lane trust-acad-evidence: status (newest line last)
+
+- 2026-11-13 00:00 (Melbourne): QUEUE item 1, the five probes, DONE on the installed build (Civil 3.0.90, `cf059dcf`). Results: `areas\TRUST_PROBES_13NOV.md`. Built n/a. Tested yes (evidence). Installed no. Accepted no. Not proven: Edit Pit Save, Edit Pipe, PIT, CD, 2022 to 2024, Structural, Manager, any real job. AutoCAD closed with the driver at 23:55, lock released, four settings files byte-identical to the start. Defaults taken for Tim to confirm: largest CE copy (1.3 MB) used, not the 4 MB consultant file; the made-up job has 370 pipes not 300; Edit Pit tested with Cancel only (driver cannot press Save).
+- 2026-11-13 00:00: next, item 2 (old block versions). Needs the office palette and block library drawings named in `TRUST_READER_DESIGN_12NOV.md` section 2b.
