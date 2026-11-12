@@ -114,6 +114,20 @@
 
 **trust-reader, add to its items:** the old pit block "Stormwater Pit" (no attributes, layers STORMWATER PIT, PITS HIDDEN, GRATED TRENCH), plain-text pit numbers, the old level blocks COVER LEVEL, INVERT and NEW LEVEL, the old "100/150/225/300 DIA. PIPE" blocks, the old DOWNPIPE block (attribute DP) and old tank blocks (attribute WT): each as a known older version, Proposed with the reason, never Sure.
 
+### Refill, Fri 13 Nov 01:20 PC clock (controller), from the tool notes rewritten out of the code
+
+**trust-safety-fixes, add after its current items (verify each in the installed code first; one small draft pull request each, with a test that fails without the fix):**
+6. The forced full record update before the first question (the BUG-650 pattern) still in CDTG, CDSL and CDWT: Esc before a pick must leave CE's stored data exactly as it was.
+7. Edit Pipe single Save has no locked-layer or Xref check: refuse with a plain line; never unlock.
+8. Esc must cancel, not skip, at the CDWT questions and the CDAGI level questions.
+9. CD reports success when a label, level or arrow failed, and CD ignores the answer to "Continues to another plan?" (the breakline is placed on No or Esc).
+10. CDMA: Esc must place nothing and the tool must not say "Flow arrow moved" when it did not; CDMA and CDANNOTATIONEDIT must refuse objects that are not CE labels or arrows.
+11. CDLPD search distances converted for metre drawings.
+12. The start-up checks (read-only drawing, paper space, Structural drawing) missing from thirteen tools: list them, then add the same existing check the other tools use.
+
+**trust-acad-evidence, add:**
+9. `areas\trust-run\BUGS_FIXED_IN_CODE_NOT_PROVEN.md` (when it appears): about 170 bugs the records list as open that the installed code appears to fix. Start with the ten the file names as mattering most (BUG-650 CDFW cancel, BUG-1255 Excel export, BUG-458 REFEDIT refusal first). For each, on copies, on the INSTALLED build: seen fixed, seen still broken, or could not be tested this way. This is the cheapest trust there is: no new code, only proof. Write results to `areas\trust-run\EVIDENCE_STALE_BUGS.md`. Do not edit the bug file's statuses; the controller does that from your evidence under RULES 13.3.
+
 ### trust-struc-mgr-plan (planning only)
 1. `areas\trust-plan-structural.md` and `areas\trust-plan-manager.md` (its brief).
 2. Draft cards, in the TRUST card shape, for the first three Structural steps and for "going back a version, rehearsed" in Manager.
