@@ -94,6 +94,20 @@ Built and unit-tested only (82 of 82 on net10 and net48). Branch `claude/trust-r
 
 **Update 13 Nov 01:11 (second run):** the eight review fixes (3eb415c9), the read-only copy-filler (ab4fc1f7) and the old palette blocks (222a303e) are built; 155 of 155 unit tests on net10 and net48. The copy-filler now exists, so the AutoCAD check becomes possible (robot, lane trust-acad-evidence, on copies, without installing): (1) load the branch build in accoreconsole, open a made-up or labelled test copy read-only, call `TrustSnapshotFiller.Fill`, read twice; the two readings must be identical; (2) the drawing's DBMOD stays 0 and CE's stored record text is byte-identical before and after; (3) one old-palette copy with a "Stormwater Pit" must list it as a Proposed pit, not as unrecognised.
 
+## TRUST-S1 Structural core tab (DRAFT, switch OFF), draft PR 2054 — 13 Nov 2026
+
+Built and unit-tested only. Branch `claude/trust-struc-s1-e13111`, https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/2054. Test on a COPY (a made-up Structural drawing), AutoCAD 2027, a build that contains this branch.
+
+1. **Switch off (default):** start AutoCAD. Right looks like: the Structural tab "CE STRUC" with its seven panels, exactly as today.
+2. **Switch on:** close AutoCAD. In the Structural settings file add `"structuralCoreTab": true` under the `CommandHub` group. Start AutoCAD, wait a minute. Right looks like: one tab "CE Structural" with panels Roof, Floors, Bracing, Tools, in that order. 28 buttons: Roof has Rafter Marks and Purlin Marks; Floors has one Beam button (click its arrow: Regular, Lower, Special, Offset beam), then the beam, stud and column tools; Bracing has A bracing, B bracing, Switch A and B; Tools has Clean and save, Help, Settings, CE Blocks. The bracing truss, bracing panel and schedule buttons are NOT on the tab (held off on purpose).
+3. **Press each button once** on the copy: each starts its own command. Right looks like: nothing says "Unknown command".
+4. **Hidden commands:** type SDS, ABS, FASTSAVE, STRSCHEDCREATE, BT1. Right looks like: each still runs.
+5. **Tooltips:** hover Rafter Marks, Column marker, Clean and save. Right looks like: each ends with "Known fault: ..." in plain words.
+6. **Way back:** remove the `structuralCoreTab` line (or set false) and restart. Right looks like: today's "CE STRUC" tab, complete.
+7. **Look:** screenshot the tab at normal and narrow window width. Right looks like: no cut-off labels, every button has a picture, no software words.
+8. **Not covered:** the shared-ribbon Structural tab, the pull-down menu on every AutoCAD year (not changed), AutoCAD 2022 to 2026.
+9. **DRAFT defaults for Tim to confirm:** at the top of `Services/CeStrucCoreRibbonList.cs`.
+
 ## TRUST-03 office setup (DRAFT, switch OFF), draft PR 2043 — 12 Nov 2026
 
 Built and unit-tested only. Branch `claude/trust-core-settings-e13111`, https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/2043. Behaviour only: the window, "Make this the office setup" and the first-start offer are not built, so most of this cannot be driven in AutoCAD yet. Settings file: the `options` group of `CD_Settings.json`, on a TEST Windows login, never Tim's own.
