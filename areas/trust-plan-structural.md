@@ -10,7 +10,7 @@
 
 # FOR TIM
 
-**Answer: keep about 25 Structural tools on a cut-down tab, in roof-down order, and fix six things first: the bracing schedule, the bracing totals, the column size taken from the schedule, CLEAN's mixed messages, the missing save reminder and the SBEAM crash.**
+**Answer: keep about 30 Structural tools (32 in the full list) on a cut-down tab, in roof-down order, and fix six things first: the bracing schedule, the bracing totals, the column size taken from the schedule, CLEAN's mixed messages, the missing save reminder and the SBEAM crash.**
 
 ```mermaid
 flowchart TD
@@ -78,7 +78,7 @@ Evidence: Tim's command log on real jobs (`areas\CORE_TICK_LIST_05NOV.md` sectio
 2. **CSTIEDOWN, CSWINDCLASS, CSSOILREPORT:** HIDE (2 or 3 uses each). Join one at a time.
 3. **Every footing tool** (FST, FSF, BP family, CSPIER, stump footings): HIDE for the first core. Footings come last in the drafting order and carry open faults (BUG-300, BUG-536).
 4. **The roof-down tools that ship switched off** (roof setout, floor span arrow, lintels, framing legend, member schedule, wall schedule, footing proposals): stay off, as today. **Verified** off by default, for example `Models\UserSettings.cs:1430` (roof setout).
-5. **About 340 other commands** (hatches, text codes, legacy details, sheets, markup): HIDE from the colleague tab. The full keep / hide list is the next item in this lane's queue.
+5. **About 340 other commands** (hatches, text codes, legacy details, sheets, markup): HIDE from the colleague tab. The full keep / later / hide list, with ten questions only you can answer: `areas\STRUCTURAL_COMMAND_SORT_12NOV.md`.
 
 ## 2. What already exists to cut the tab down, and what does not
 
@@ -233,4 +233,5 @@ Same gate as Civil: card, your approval, built small, robot then Codex on copies
 ## 11. Status
 
 1. **This document:** PROPOSAL. Built no. Tested no. Installed no. Accepted no.
-2. **Steps S1 to S6:** no cards yet. Cards for S1 to S3 are next in this lane's queue, then the keep / hide list.
+2. **Steps S1 to S3:** cards DRAFT in `04_REFERENCE\ux-plan\cards\` (TRUST-S1, TRUST-S2, TRUST-S3). S4 to S6: no cards yet.
+3. **Keep / later / hide list:** PROPOSAL, `areas\STRUCTURAL_COMMAND_SORT_12NOV.md`.

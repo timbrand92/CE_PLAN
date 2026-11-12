@@ -8,7 +8,7 @@
 
 ## FOR TIM
 
-**Today the Structural tab shows about 300 buttons in seven panels sorted by kind of tool. This card shows about 25, in the order you draft a house: roof, floors, bracing, then tools.**
+**Today the Structural tab shows about 300 buttons in seven panels sorted by kind of tool. This card shows about 30 (32 in the full list, `areas\STRUCTURAL_COMMAND_SORT_12NOV.md`), in the order you draft a house: roof, floors, bracing, then tools.**
 
 ```before
 Tab "CE STRUC" (or "CE Structural"): Beams | Columns & Footings | Rebar & Bracing |
@@ -19,7 +19,7 @@ P1 and Settings sit in Annotate because nothing says where they belong.
 ```after
 Tab "CE Structural": Roof (R1, P1, BT1) | Floors (beams 1 2 4 5, BDL, BSET,
 DS, DS1, TS1, C1, C2, the five switches, FJ1) | Bracing (AB, BB, A/B switch,
-bracing panel, schedules) | Tools (CLEAN, Help, Settings). About 25 buttons.
+bracing panel, schedules) | Tools (CLEAN, Help, Settings). 32 buttons.
 ```
 
 **What this card does not do:**
