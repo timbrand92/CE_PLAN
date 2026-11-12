@@ -14,7 +14,7 @@
 2. **The main check is an "oracle" case (Y11).** For about 14 everyday tools the robot reads CE's record before and after, works out for itself what really changed, and compares each number in CE's line with that. It also checks the opposite: a tool that changed something must print a line, and a tool that changed nothing must print none.
 3. **The undo promise is tested, not trusted.** Today CDSYNC prints "One U undoes it" and nobody has proven it. Y12 compares the whole drawing after one U. If U does not put everything back, the line must not say it does.
 4. **Three things the line has never counted** (pipes dropped, pipes re-joined to another pit, levels changed from drawing text) each get a case (Y9, Y10), because a change with no line is the exact fault Tim named.
-5. **Not known, so only recorded:** how AutoCAD's U treats these updates (the plan's first probe); which of the 60 or so places in the code fire on real jobs.
+5. **Not known, so only recorded:** how AutoCAD's U treats these updates (the plan's first Undo test); which of the 60 or so places in the code fire on real jobs.
 
 ---
 
@@ -100,7 +100,7 @@
 **Y12. The undo promise**
 1. **Drawing:** MD-02 and MD-12.
 2. **Do:** run Edit Pit (an update runs). Press U once. Compare the record reading and the **full drawing reading** with those from before the tool.
-3. **Right:** two outcomes are allowed, and the case checks the line matches the outcome. If one U puts both readings back exactly, the line may say "U undoes it". If one U does not, the line must **not** say it. RECORD which outcome occurs, tool by tool (this is the plan's probe on Undo, run for real).
+3. **Right:** two outcomes are allowed, and the case checks the line matches the outcome. If one U puts both readings back exactly, the line may say "U undoes it". If one U does not, the line must **not** say it. RECORD which outcome occurs, tool by tool (this is the plan's Undo test, run for real).
 4. **Faulty partner:** a build whose line says "One U undoes it" while U leaves the record changed. Must fail. The installed CDSYNC is run through the same case and its result recorded: if its promise is false, it fails today.
 
 **Y13. Two switches, both ways**
