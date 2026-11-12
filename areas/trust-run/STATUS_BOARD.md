@@ -7,7 +7,7 @@
 # FOR TIM
 
 1. **Trial changes built as drafts:** 48 open on GitHub (pull requests 2038 to 2085). None merged, none installed.
-2. **Latest review verdict:** 45 fit for the robot to test on copies, 3 to fix first (2053, 2082, 2085), 0 not reviewed yet ().
+2. **Latest review verdict:** 45 fit for the robot to test on copies, 3 to fix first (2053, 2082, 2085), none waiting for a first review.
 3. **Moved on GitHub since their last review, verdict not re-confirmed:** 5 (2040, 2049, 2066, 2068, 2078).
 4. **Any real evidence on the trial builds themselves:** 5 of 48 (2040, 2041, 2045, 2049, 2050), all from the core console; none from a window, the ribbon or a drawing opening in full AutoCAD. For 2073 only the fault it cures has been seen.
 5. **Still owed by every one:** the robot on copies in full AutoCAD, a Codex look where something is seen, and your trial; that waits on question 0 (where trial builds may be seen). Some rows owe more first; each row says.
