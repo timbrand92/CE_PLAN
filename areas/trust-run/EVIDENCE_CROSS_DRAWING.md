@@ -6,7 +6,7 @@
 
 # FOR TIM
 
-1. **Yes. The mix-up is real and I have seen it happen, in both directions.** If you work in one job, then open a second drawing and, as the very first thing, run Help (CDHELP) or Settings (CDS), CE can write the FIRST job's pits and pipes into the SECOND drawing. Seen on the installed build, four times in six tries.
+1. **Yes. The mix-up is real and I have seen it happen, in both directions.** If you work in one job, then open a second drawing and, as the very first thing, run Help (CDHELP) or Settings (CDS), CE can write the FIRST job's pits and pipes into the SECOND drawing. Seen on the installed build, six times in eleven tries (the other five are described below).
 2. **A drawing with no CE data got a whole job.** I opened a blank drawing second and ran CDHELP. The blank drawing's stored record then held the first job's 11 pits and 49 pipes. Its "changed" counter went from 0 to 1, so closing it would ask "save changes?" and saving would keep that job inside it.
 3. **A different job lost its own record.** The second job had 2 pits and 46 pipes. After CDHELP its stored record read 11 pits and 49 pipes (the first job's). Its own 2 pits and 46 pipes were gone from the stored record.
 4. **The other way round too.** I read a second job into CE's memory first, then switched to the standard drawing and ran CDHELP: the standard drawing's record (11 pits and 49 pipes) was replaced by the second job's (2 pits and 46 pipes).
