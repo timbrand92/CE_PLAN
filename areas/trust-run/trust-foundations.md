@@ -189,3 +189,5 @@
   3. **Tests written:** `Bug1456CopyWriteDoorTests` (cases, the installed build as the faulty version, the source travelling through the real copy routine, both doors pinned on the compiled plugin with broken copies). Headless check `BUG-1456-CROSS-03` (`CEPROOFCROSSCOPY`) written.
   4. **Build and whole test run queued** behind another lane's build (working-hours rule lifted for today, run file 3c). Not pushed until clean.
   5. **Also read:** the re-check of 2083 agrees the failed `CEPROOFCROSSCHANGE` was the check's own fault and that the corrected check (pushed 08:52, `8a6decef`) also closes a blind spot it names; it still has to be run again by trust-acad-evidence.
+
+- **13 Nov 09:10, seen working in the core console: pull request 2083 at `8a6decef`, `CEPROOFCROSSCHANGE` (BUG-1456-CROSS-02) PASS and `CEPROOFCROSSDRAWING` PASS** (trust-acad-evidence, built fresh, nothing installed). So the earlier FAIL is closed: it was the check's own stale count. The pull request text and `PENDING_TESTS.md` row 8 say so. Still only the core console (one drawing, the other held in memory); two real drawings are the robot's. The fourth door's build is still queued.
