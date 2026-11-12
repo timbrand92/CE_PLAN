@@ -20,6 +20,16 @@ PR 2041 (DRAFT, never merged by the run), branch `claude/trust-01-open-line`, cu
 
 Built and unit-tested only (82 of 82 on net10 and net48). Branch `claude/trust-reader`, https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/2040. **Nothing to test in AutoCAD yet:** no command, window or button uses it. It becomes testable when the read-only copy of a real drawing is built (next item) and probe P3 runs it on the test-set copies. Then: read each copy twice, the readings must be identical and the copy unchanged; score against the answer sheet.
 
+## TRUST-03 office setup (DRAFT, switch OFF), draft PR 2043 — 12 Nov 2026
+
+Built and unit-tested only. Branch `claude/trust-core-settings-e13111`, https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/2043. Behaviour only: the window, "Make this the office setup" and the first-start offer are not built, so most of this cannot be driven in AutoCAD yet. Settings file: the `options` group of `CD_Settings.json`, on a TEST Windows login, never Tim's own.
+
+1. **Switch off (default):** start AutoCAD. Right looks like: nothing new in the CE log (no line starting "Office setup").
+2. **Switch on, no values shipped:** add `"followOfficeSetup": true` under `options`, restart. Right looks like: one CE log line "Office setup: not known (this release carries no office values yet)". Settings file unchanged.
+3. **Switch on, a test office file:** put a copy of `office-setup.json` with a few `values` (for example `{"pit":{"xWidth":450}}`) in the bundle's Assets\Config on the TEST login, restart. Right looks like: log line "Office setup: no, 1 value differs".
+4. **Tim's PC:** with `"thisPcIsOfficeSource": true` the line reads "Office setup: this PC makes it" and nothing is ever changed.
+5. **Not covered:** applying, putting back, and the window need the built window; today the robot tests prove them on temporary files only.
+
 ## TRUST-02 core ribbon (DRAFT, switch OFF), draft PR 2038 — 12 Nov 2026
 
 Built and unit-tested only. Branch `claude/trust-core-ribbon-e13111`, draft pull request https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/2038. Test on a COPY, AutoCAD 2027, a build that contains this branch.
