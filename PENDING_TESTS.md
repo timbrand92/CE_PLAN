@@ -1,5 +1,17 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+### Trust plan step 0, the reader: CETRUSTREAD, stored LPDs, and the three evidence misses — 13 November 2026 (Built and unit-tested only; NOT installed; the command's switch ships OFF; robot only, on COPIES)
+
+PR 2040 (DRAFT, never merged by the run), branch `claude/trust-reader` at `ebf7a21a`, cut from the installed Civil commit `cf059dcf`. Setting: `diag.trustReaderCommand` (OFF; set it to true in `CD_Settings.json` for these cases and put it back after). Command: CETRUSTREAD (typed; hidden; on no ribbon). It replaces the evidence lane's throwaway probe `CEPROOFREADER`. Every case on a COPY; never the live bundle until Tim says so.
+
+1. **Switch off:** CETRUSTREAD. Right = "CETRUSTREAD is switched off (diag.trustReaderCommand). Nothing was read or changed."; drawing not marked changed.
+2. **Switch on, the six drawings of EVIDENCE_READER.md:** type a plain name (T01 or MADEUP_...). Right = the reading on the command line AND in `%TEMP%\CE_TrustReader\<NAME>_<date>_<time>.txt`; nothing beside the drawing; DBMOD the same before and after; no new Undo step; CE's stored record text identical before and after (read directly, not through a CE tool); two runs word for word the same.
+3. **MADEUP_oldpit_levels_01:** cover levels 12.30, 12.10, 11.95, 11.60 on pits 1, 2, 3, 5 and inverts 11.20, 11.05 on pits 1 and 2, each Proposed with "COVER LEVEL block ... with its value text ... is 1860 mm from pit ..."; pit 4 cover level Unknown; NEW LEVEL 11.95 not a cover level.
+4. **MADEUP_oldlisp_01:** pipe A-B inverts 1.10 and 0.90, pipe B-C 0.88 and 0.75 ("lies beside the pipe, 2200 mm along from its end"); pits P1 and P2 no longer take an invert.
+5. **MADEUP_oldpipeblocks_01:** the loose pipe's size Unknown with "text found, wording not recognised: "150 DIA. PIPE"".
+6. **A copy with an LPD set (CDLPD, and one with the newer set from CDDESIGN):** each LPD a Proposed row "a stored LPD is read as a proposal for the start point"; a copy holding both forms: one Unknown LPD and the note "CE's stored LPD could not be read: both LPD forms are stored ...".
+7. **Not covered:** real AutoCAD (core console only is fine for this command), AutoCAD 2022 to 2024, a real old job.
+
 ### BUG-1456, CE's record is never written into a drawing it does not belong to — 13 November 2026 (Built and unit-tested only; NOT installed; no switch; robot and Codex to run on COPIES)
 
 PR 2073 (DRAFT, never merged by the run), branch `claude/bug-1456-record-own-drawing`, cut straight from the installed Civil commit `cf059dcf`. No setting to turn on: the protection is always there. What was seen on the installed build is in `areas\trust-run\EVIDENCE_CROSS_DRAWING.md`. Every case uses two DIFFERENT jobs (a copy of the same job can hide the fault) and reads the second drawing's stored CE record (pits, pipes, stored path) before and after.
