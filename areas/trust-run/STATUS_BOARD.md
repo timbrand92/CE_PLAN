@@ -1,15 +1,15 @@
 # Trust run status board
 
-**Rebuilt 2026-11-13 06:26 PC clock by lane trust-struc-mgr-plan, after the review `reviews\status-board-check.md` (FIX FIRST, eight corrections). Counted from GitHub (open draft pull requests whose branch names contain "trust" or "bug-1456") and from the files named at the end. Nothing here is installed or accepted. Rebuilt at every check-in until told otherwise.**
+**Rebuilt 2026-11-13 06:28 PC clock by lane trust-struc-mgr-plan, after the review `reviews\status-board-check.md` (FIX FIRST, eight corrections). Counted from GitHub (open draft pull requests whose branch names contain "trust" or "bug-1456") and from the files named at the end. Nothing here is installed or accepted. Rebuilt at every check-in until told otherwise.**
 
 ---
 
 # FOR TIM
 
-1. **Trial changes built as drafts:** 38 open on GitHub (pull requests 2038 to 2075). None merged, none installed.
-2. **Latest review verdict:** 33 fit for the robot to test on copies, 4 to fix first (2053, 2064, 2071, 2074), 1 not reviewed yet (2075).
+1. **Trial changes built as drafts:** 40 open on GitHub (pull requests 2038 to 2077). None merged, none installed.
+2. **Latest review verdict:** 33 fit for the robot to test on copies, 4 to fix first (2053, 2064, 2071, 2074), 3 not reviewed yet (2077, 2076, 2075).
 3. **Moved on GitHub since their last review, verdict not re-confirmed:** 5 (2040, 2049, 2064, 2066, 2068).
-4. **Any real evidence on the trial builds themselves:** 5 of 38 (2040, 2041, 2045, 2049, 2050), all from the core console; none from a window, the ribbon or a drawing opening in full AutoCAD. For 2073 only the fault it cures has been seen.
+4. **Any real evidence on the trial builds themselves:** 5 of 40 (2040, 2041, 2045, 2049, 2050), all from the core console; none from a window, the ribbon or a drawing opening in full AutoCAD. For 2073 only the fault it cures has been seen.
 5. **Still owed by every one:** the robot on copies in full AutoCAD, a Codex look where something is seen, and your trial; that waits on question 0 (where trial builds may be seen). Some rows owe more first; each row says.
 6. **Accepted by you or by Codex:** none.
 
@@ -89,11 +89,16 @@
 
 38. **Pull request 2054: One Structural tab with the core tools in roof-down order, switch off.** Verdict: GO (2026-11-13 04:14); reviewed head 10a50084, same on GitHub. Evidence: None. Owed: the robot on copies, then a Codex look where something is seen, then your trial.
 
+## On GitHub but not yet placed in a step by this lane
+
+1. **Pull request 2076.** GitHub head e12f0eb3, not reviewed yet.
+1. **Pull request 2077.** GitHub head 35ec2928, not reviewed yet.
+
 ---
 
 ## Where these come from
 
-1. **The list and the GitHub heads:** `gh pr list --state open --draft` on the plugin repository at 2026-11-13 06:26, branches containing "trust" or "bug-1456".
+1. **The list and the GitHub heads:** `gh pr list --state open --draft` on the plugin repository at 2026-11-13 06:28, branches containing "trust" or "bug-1456".
 2. **Verdicts, times and reviewed heads:** the latest line per pull request in `areas\trust-run\trust-review.md`, including "re-reviewed at" heads and the 06:21 re-read of 2038, 2043, 2047 and 2051 (GO holds at their new heads).
 3. **What each row owes beyond the robot:** the review files in `areas\trust-run\reviews\` and `reviews\status-board-check.md`.
 4. **Evidence:** `areas\trust-run\EVIDENCE_BRANCHES.md`, `EVIDENCE_READER.md`, `EVIDENCE_CROSS_DRAWING.md`, `EVIDENCE_STALE_BUGS.md`. Fixes seen on the installed build (BUG-650, BUG-968, BUG-290) are not trial changes; they are on the morning page.
