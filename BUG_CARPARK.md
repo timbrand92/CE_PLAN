@@ -19960,3 +19960,309 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
 
 **Status:** OPEN
+
+## BUG-1376 — R1, P1 and FJ1 do not report a size the block did not take when the value cannot be read back
+
+**Command / Area:** R1, P1, FJ1 (rafter, purlin and floor joist markers). LOW. WRONG ANSWER, a failed size hidden. Engineering judgement: Tim.
+
+**Symptom:** After placing the marker CE reads each size back from the block and reports any that did not take ("internal width 3600 became 3200"). A value that cannot be read back is counted as fine and never reported. A size that failed to reach the block is hidden, and the drafter sees a marker at the wrong size with no line.
+
+**Expected behaviour:** A size that cannot be read back is reported as "could not check", not treated as correct.
+
+**Steps to confirm in AutoCAD:** (1) On a copy run R1 on a block whose dynamic size properties are missing or read-only (an older block). (2) Read the command line. Right = a line saying the sizes could not be checked. Wrong = no line and a marker of a different size.
+
+**Test that catches it:** Unit: Describe with a check whose Actual is null returns a "could not check" line.
+
+**Reference:** Services\DynamicPropertyReadback.cs:46-47 and 53 (Where c.Actual.HasValue; unreadable values are skipped). Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1377 — R1, P1 and FJ1 use fixed numbers (25, 300, plus 200) that have no Settings name
+
+**Command / Area:** R1, P1, FJ1 (rafter, purlin and floor joist markers). LOW. SETTINGS (Settings-first rule R-00). Engineering judgement: Tim.
+
+**Symptom:** The 25-unit minimum between depth picks, the 300 default depth and the 200 added to the internal width to give the outer width are written into the code. A drafter cannot see or change them, and the outer width drawn is always the picked width plus 200 mm.
+
+**Expected behaviour:** Each is a named value on the Settings window.
+
+**Steps to confirm in AutoCAD:** (1) Open CESETTINGS and look in the rafter and joist group for a box for the default depth and the outer width allowance. Right = both are there. Wrong = neither is.
+
+**Test that catches it:** Source guard: no literal 25.0, 300.0 or 200.0 in the placement path; they come from Settings.
+
+**Reference:** Commands\RafterJoistCommands.cs:27 (DefaultDepth 300), 351 and 362 (25), 635 (outerDistance = internalDistance + 200.0). Related BUG-471 (units), BUG-537 (other fixed values). Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1378 — In a metre, centimetre or inch drawing the "held" line talks about footings and tells the drafter to LIST one footing
+
+**Command / Area:** R1, P1, FJ1, AB, BB, BT1, C1, C2, DS, DS1, TS1 (every command held in a non-millimetre drawing). LOW. WORDING.
+
+**Symptom:** When these commands refuse to run in a drawing that is not in millimetres, the line says "This command draws footings, labels and text at millimetre size and cannot convert them yet" and ends "Check what the drawing is really drawn in (LIST one footing)". A drafter placing a brace or a column is told about footings and told to list a footing that does not exist.
+
+**Expected behaviour:** The line names what the command draws (braces, columns, markers) and says how to check the drawing's units in general ("type UNITS").
+
+**Steps to confirm in AutoCAD:** (1) On a copy set INSUNITS to metres. (2) Run AB. Right = a line about bracing and units. Wrong = a line about footings and LIST one footing.
+
+**Test that catches it:** Unit: HeldNote takes the command's own word for what it draws.
+
+**Reference:** Structural.DesignCore\DrawingUnitRule.cs:329-336 via Services\FoundationService.Identity.cs:119-128. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1379 — AB, BB and BT1 say the brace was set "from the Xref walls: the side with fewer wall lines" whatever the real reason
+
+**Command / Area:** AB, BB, BT1 (bracing markers). LOW. WORDING, a reason stated that may be untrue.
+
+**Symptom:** Every time CE decides the brace side by itself it prints the same line, "CE set the brace direction from the Xref walls: it goes on the side with fewer wall lines." The code also decides by the two-lines rule for type A, by a local crowding test and by a fallback. The drafter is told a reason that is not the one used.
+
+**Expected behaviour:** The line states the rule actually used.
+
+**Steps to confirm in AutoCAD:** (1) On a copy place an AB brace where the crowding test decides. Read the line. Right = it names crowding. Wrong = it says "fewer wall lines".
+
+**Test that catches it:** Unit: each decision path returns its own plain-words reason.
+
+**Reference:** Commands\BracingCommands.cs:64-68; Services\BracingService.cs:163-209, 249-261, 315-328. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1380 — AB, BB and BT1 move the brace end by up to 1 degree to a square angle with no line
+
+**Command / Area:** AB, BB, BT1, ABS (bracing markers). LOW. WRONG ANSWER, angle changed silently. Engineering judgement: Tim.
+
+**Symptom:** A brace picked within 1 degree of horizontal or vertical is drawn exactly square. The tolerance is fixed in the code and nothing is said, so the drafter's picked angle and the drawn angle differ by up to 1 degree.
+
+**Expected behaviour:** A line says the brace was set square, or the tolerance is a Settings value.
+
+**Steps to confirm in AutoCAD:** (1) On a copy run AB and pick a 3 m brace 0.8 degrees off horizontal. Right = a line saying it was set to horizontal. Wrong = it is drawn horizontal with no line.
+
+**Test that catches it:** Unit: SnapNearCardinal reports when it moves the angle.
+
+**Reference:** Services\BracingService.cs:38 (CardinalSnapToleranceDegrees 1.0), 98-105 and 2217-2221. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1381 — AB, BB and BT1 add layer 25CONT to the drawing if it is missing, with no line
+
+**Command / Area:** AB, BB, BT1 (bracing markers). LOW. UNEXPECTED DRAWING CHANGE.
+
+**Symptom:** After drawing, the command restores the current layer to 25CONT, and creates that layer if the drawing has none. A drawing without 25CONT gets a new layer the drafter did not ask for.
+
+**Expected behaviour:** The drawing is left with the layer it started on, or one plain line says 25CONT was added.
+
+**Steps to confirm in AutoCAD:** (1) On a copy delete layer 25CONT (purge it). (2) Run AB. Right = no new layer, or a line saying one was added. Wrong = 25CONT appears silently.
+
+**Test that catches it:** Fixture: drawing without 25CONT; assert the layer list is unchanged or a message is printed.
+
+**Reference:** Services\BracingService.cs:1610-1643 (RestoreTo25Cont creates the layer); Commands\BracingCommands.cs:102-103. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1382 — BT1 help lists "BT number 1-9" before "Insert point" but the tool asks the points first
+
+**Command / Area:** BT1 (bracing truss), Help. LOW. WORDING.
+
+**Symptom:** The Help list shows the BT1 prompts as "BT number 1-9" then "Insert point". The command asks for the first point and the second point first, then the truss number.
+
+**Expected behaviour:** Help lists the prompts in the order they are asked.
+
+**Steps to confirm in AutoCAD:** (1) Open CEHELP, find BT1, read the prompts. (2) Run BT1. Right = the order matches. Wrong = number listed first, points asked first.
+
+**Test that catches it:** Source guard: the registry prompt order for BT1 matches the command's prompt order.
+
+**Reference:** Assets\Config\command-registry.json:2562-2565 against Commands\BracingCommands.cs:271, 288. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1383 — Switches that change what AB, BB, the bracing panel, STRSCHEDCREATE and FASTSAVE do have no box on the Settings window
+
+**Command / Area:** AB, BB (Wall option), CSBRACINGPANEL (mixed-types switch), R1, BT1, C1, TS1 (non-millimetre hold), STRSCHEDCREATE (update on rerun, pier table without LAYER and HANDLE), FASTSAVE (also clean). LOW. SETTINGS (Settings-first rule R-00). Engineering judgement: Tim.
+
+**Symptom:** Six switches exist only in the settings file: the [Wall] option for AB and BB (off), the bracing panel's "mixed types not weighted" switch (on), the hold in non-millimetre drawings (on), the update-on-rerun switch for STRSCHEDCREATE (off), the bored pier table without LAYER and HANDLE (off) and the FASTSAVE also-clean switch (off). A drafter cannot see or change them from CESETTINGS.
+
+**Expected behaviour:** Each has a plain-named box on the Settings window.
+
+**Steps to confirm in AutoCAD:** (1) Open CESETTINGS and search every Structural page for each of the six. Right = each has a box. Wrong = none of them does.
+
+**Test that catches it:** Source guard: every public bool setting in these groups has a control in CeSettingsDialog.
+
+**Reference:** Models\UserSettings.cs:816 (UnknownWhenTypesDiffer), 820 (WallOption), 2128 (HoldInNonMillimetreDrawings), 2136 (UpdateExistingOnRerun), 2141 (PierTableWithoutLayerAndHandle), 372 (FastSaveAlsoCleans); UI\Dialogs\CeSettingsDialog.xaml.cs:137 and 357 (no reference to any of the six). Related BUG-526, BUG-535. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1384 — On a layout tab or in REFEDIT the beam tools show an "internal problem" or "safety checks" line instead of "go to model space"
+
+**Command / Area:** Beam commands 1, 2, 4 and 5. MEDIUM. WORDING, no plain reason.
+
+**Symptom:** On a layout tab or during REFEDIT, tools 1 and 2 print "CE hit an internal problem at the drawing check step", and tools 4 and 5 print "could not confirm ... safety checks ... Run the command again." Running again cannot help. AB, BB and the others say plainly that Model space is needed.
+
+**Expected behaviour:** One plain line ("Go to Model space or close REFEDIT, then run the command again") and nothing drawn.
+
+**Steps to confirm in AutoCAD:** (1) On a copy open a layout tab. (2) Run 1 and pick a beam. Right = a Model space line. Wrong = "internal problem" wording. (3) Repeat for 2, 4, 5, and inside REFEDIT.
+
+**Test that catches it:** Fixture: layout tab current; assert the message names Model space or REFEDIT.
+
+**Reference:** Services\ConnectedDesign\Host\BeamCommandAutoCadContext.cs:47-75; Services\ConnectedDesign\Host\BeamCommandAutoCadRoute.cs:155-175; Structural.DesignCore\ConnectedDesign\BeamRefusalWording.cs:626-649; Services\ConnectedDesign\Host\BeamSpecialCommandAutoCadCaptureFactory.cs:78-83 and 107-110; BeamRefusalWording.cs:602-606. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1385 — Beam tools 1, 2, 4 and 5 ignore the beam and text layer names set on the Settings window
+
+**Command / Area:** Beam commands 1, 2, 4 and 5. MEDIUM. WRONG ANSWER, a Settings value silently not used.
+
+**Symptom:** Settings has a layer name for beams and for lower beams (default BEAM and BEAM LOWER). The new route that places beams writes only BEAM, BEAM LOWER and 25TEXT whatever Settings says, so an office that renamed its beam layer gets beams on the old name. BDL does use the Settings names.
+
+**Expected behaviour:** The Settings layer names are used by every beam tool.
+
+**Steps to confirm in AutoCAD:** (1) On a copy set the beam layer name to BEAM-NEW on Settings. (2) Run 1 and place a beam. (3) Check the layer. Right = BEAM-NEW. Wrong = BEAM.
+
+**Test that catches it:** Fixture: Settings with a changed beam layer; assert the layer of the written line.
+
+**Reference:** Structural.DesignCore\ConnectedDesign\BeamAtomicCommitAdmission.cs:25-42 (names fixed) against Models\UserSettings.cs:439 and 442 and Services\BeamDraftingStandards.cs:22-23 (Settings names, used by BDL). Related BUG-532. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1386 — Beam tools 2, 4 and 5 give no "best available" choice when neither side of the beam has room for the mark
+
+**Command / Area:** Beam commands 2, 4 and 5. MEDIUM. WORDING and MISSING CHOICE.
+
+**Symptom:** Tool 1 offers a best-available label position when both sides are crowded. Tools 2, 4 and 5 do not, and the code PLACEMENT_CONTEXT_UNRESOLVED has no wording, so the drafter probably reads the generic "internal problem" line.
+
+**Expected behaviour:** The same best-available question as tool 1, or a plain line ("No room for the mark on either side").
+
+**Steps to confirm in AutoCAD:** (1) On a copy put walls close on both sides of a short beam. (2) Run 2. Right = a plain line or a question. Wrong = "internal problem". Repeat for 4 and 5.
+
+**Test that catches it:** Fixture: two-sided crowding; assert the outcome has its own wording.
+
+**Reference:** Structural.DesignCore\ConnectedDesign\BeamCommandPreviewPlanner.cs:161-162 (fallback only for Command1Regular); BeamPlacementPlanner.cs:488-491; BeamSpecialCommandPreviewPlanner.cs:234-249. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1387 — Beam tools 4 and 5 place a lintel mark as an ordinary mark when no inside point is known, with no line
+
+**Command / Area:** Beam commands 4 and 5 (marks L, RL and other lintel prefixes). MEDIUM. WRONG ANSWER, mark may land on the inside. Engineering judgement: Tim.
+
+**Symptom:** A mark starting with a lintel prefix needs an inside point to land on the outside of the building. If none is known, tools 4 and 5 place it as an ordinary mark with no refusal and no line, so it can land on the inside. Tools 1 and 2 refuse.
+
+**Expected behaviour:** Tools 4 and 5 ask for the inside point or stop with a plain line, as 1 and 2 do.
+
+**Steps to confirm in AutoCAD:** (1) On a copy with no inside points saved run 4 and place a beam marked L1. Right = it asks for or reports the inside point. Wrong = the mark is placed with no line.
+
+**Test that catches it:** Fixture: lintel label, HasProposedInsidePoint false; assert not Ordinary without a message.
+
+**Reference:** Structural.DesignCore\ConnectedDesign\BeamSpecialCommandPreviewPlanner.cs:201-206. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1388 — Beam tools 4 and 5 ask the inside-point question for every mark when none is saved, not only for lintels
+
+**Command / Area:** Beam commands 4 and 5. LOW. WORDING, extra question.
+
+**Symptom:** Tools 1 and 2 ask for an inside point only for lintel marks. Tools 4 and 5 ask it for any mark when no point is saved and the Settings switch is on, so a plain beam mark brings an extra "click inside the building" question.
+
+**Expected behaviour:** Only lintel marks bring the question.
+
+**Steps to confirm in AutoCAD:** (1) On a copy with the inside-outside switch on and no saved points run 4 and enter the mark B1. Right = no inside-point question. Wrong = the question appears.
+
+**Test that catches it:** Fixture: non-lintel mark; assert no inside-point prompt.
+
+**Reference:** Services\ConnectedDesign\Host\BeamSpecialCommandAutoCadFinalPromptAdapter.cs:105-124; Services\ConnectedDesign\Host\BeamCommandAutoCadInsidePointProposalAdapter.cs:130-135. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1389 — Beam tools 4 and 5 can only shorten or offset by 45 or 100, with no Settings list
+
+**Command / Area:** Beam commands 4 and 5. MEDIUM. MISSING SETTING. Engineering judgement: Tim.
+
+**Symptom:** The "Shorten by" and offset distance questions offer only 45 and 100. The older code offered a list set on Settings. A drafter needing a 60 mm shortening cannot enter it.
+
+**Expected behaviour:** The distances come from a Settings list, and a typed distance is accepted.
+
+**Steps to confirm in AutoCAD:** (1) Run 4, choose Start at "Shorten beam line?". Right = a typed distance such as 60 is accepted. Wrong = only 45 and 100 are offered.
+
+**Test that catches it:** Fixture: choose 60; assert it is drawn or a plain line explains the limit.
+
+**Reference:** Services\ConnectedDesign\Host\BeamSpecialCommandAutoCadFinalPromptAdapter.cs:165-197; Services\ConnectedDesign\Host\BeamSpecialCommandAutoCadPromptSession.cs:194-206; Structural.DesignCore\ConnectedDesign\BeamRefusalWording.cs:405-407; Commands\BeamPlacementCommands.cs:1427. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1390 — Enter at "Enter text" with no text shown prints "one of the command-line prompts did not complete properly"
+
+**Command / Area:** Beam commands 1, 2, 4 and 5. LOW. WORDING.
+
+**Symptom:** Pressing Enter at "Enter text:" when no default is shown ends the command with a message about command-line prompts failing, which sounds like a fault.
+
+**Expected behaviour:** "No text entered. Nothing was drawn." or the beam is drawn with no mark if that is allowed.
+
+**Steps to confirm in AutoCAD:** (1) Run 1, place a beam and press Enter at "Enter text:". Right = a plain line saying no text was entered. Wrong = the prompts line.
+
+**Test that catches it:** Unit: an empty label returns its own code and wording.
+
+**Reference:** Services\ConnectedDesign\Host\BeamCommandAutoCadPromptAdapter.cs:719-750; Structural.DesignCore\ConnectedDesign\BeamRefusalWording.cs:587-591. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1391 — "Remember last choices" does not remember the mark, beam type, suffix or shortening in the new beam route
+
+**Command / Area:** Beam commands 1, 2, 4 and 5, BDL. LOW. WRONG ANSWER, setting does not do what it says.
+
+**Symptom:** With "remember last choices" on, the new route reads the last mark but never saves it, so only BDL (and the older paths) write the remembered mark. After BDL, BDL's mark is offered as the default for tools 1 to 5. The beam type, suffix and shortening are not remembered at all.
+
+**Expected behaviour:** Every beam tool remembers its own last choices, or the setting says what it covers.
+
+**Steps to confirm in AutoCAD:** (1) Turn remember on. Run 1 with mark B7, then run 1 again. Right = B7 is offered. Wrong = nothing is offered, or an older BDL mark is.
+
+**Test that catches it:** Fixture: two runs of tool 1; assert the second offers the first mark.
+
+**Reference:** Commands\BeamPlacementCommands.cs:194, 412, 610 (only these write LastBeamText); Services\ConnectedDesign\Host\BeamCommandSettingsSnapshotReader.cs:137-139; Services\ConnectedDesign\Host\BeamSpecialCommandAutoCadPromptHelpers.cs:40-47. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1392 — Any beam mark starting with L (such as LVL1) is treated as a lintel
+
+**Command / Area:** Beam commands 1, 2, 4 and 5. LOW. WRONG ANSWER.
+
+**Symptom:** The lintel test is "mark starts with L or RL" (Settings list, default L,RL). A beam marked LVL1 or LB1 is read as a lintel, so it brings the inside-point question and outside placement.
+
+**Expected behaviour:** The test matches whole mark patterns (L followed by a number), or the Settings list says plainly it is a prefix test.
+
+**Steps to confirm in AutoCAD:** (1) Run 1 and mark a beam LVL1. Right = no inside-point question. Wrong = it is treated as a lintel.
+
+**Test that catches it:** Unit: IsLintel("LVL1", "L,RL") is false if the rule is L plus digits.
+
+**Reference:** Structural.DesignCore\ConnectedDesign\BeamLabelClassification.cs (StartsWith each prefix); Models\UserSettings.cs:737. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
