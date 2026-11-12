@@ -1,6 +1,7 @@
 # TRUST-02: the core ribbon, two tabs with only what you keep
 
 **Status: DRAFT.** Not approved, not built, not tested, not installed. No code starts until Tim approves this card and lifts the HOLD for it.
+**CORRECTED 12 Nov (review of draft pull request 2038):** wherever this card says the way back is the existing "Show the old CE tabs" switch, that is wrong. That switch brings up an earlier three-tab layout. The way back is the new core-layout switch, off by default: off means today's ribbon exactly. Also found: New Job (CDNEWDWG) exists only in the AutoCAD 2027 version, so on 2025 and 2026 the button must be left off or greyed with a plain reason; and each core button must keep today's plain tooltip.
 **Class:** Modify (the Civil ribbon). Nothing is deleted; every command can still be typed.
 **Source:** Tim, 5 Nov: small core for colleagues. Voice talk 6 Nov: two tabs, both always visible, CE Drainage left to right pits, downpipes and tanks, pipes, Check this drawing, schedules; CE Design for the engineering. Tim, 7 Nov: "some of the commands are useful in all drawings as ce tools". Step 2 of `areas\trust-plan.md`. Button list: `areas\CIVIL_COMMAND_SORT_06NOV.md`.
 
