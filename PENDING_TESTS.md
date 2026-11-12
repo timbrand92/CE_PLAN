@@ -1,5 +1,20 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+### Trust plan step 5, the record update made visible (TRUST-05, DRAFT card) — 12 November 2026 (Built and unit-tested only; NOT installed; robot and Codex to run on COPIES)
+
+PR 2045 (DRAFT, never merged by the run), branch `claude/trust-05-sync-visible`, stacked on step 1 (PR 2041). Settings: `trust.readOnlyToolsNeverUpdateRecord` (ON), `trust.sayWhatRecordUpdateChanged` (ON). The robot must read the stored record directly from a copy (not through any CE tool), or its own reading would run the update.
+
+1. **Each read-only tool changes nothing:** on a Civil copy, read the stored record, run CDGRAPH, read it again. Right = identical, and no "save changes?" question on close. Repeat for CDDIAG, its window's Refresh, and CDDASHBOARD. (CEHEALTH is Manager's command and never touched Civil's record; nothing to test there.)
+2. **Record behind the drawing:** add one polyline on the stormwater pipe layer, run CDGRAPH. Right = `CE: needs checking. 1 line on a pipe layer not in the CE record. Type CDCHECKCURRENT to see them.` and the record is still unchanged.
+3. **Edit Pit on that copy:** Right = one line starting `CE updated its record (` with the command that was typed in the brackets, then `1 pipe added. Guessed, not read from the drawing: 1 pipe size (100), 1 pipe material.` and the record really gained exactly one pipe.
+4. **Nothing to update:** run PIT's edit window twice in a row. Right = no "CE updated its record" line the second time.
+5. **Erase a pit, then run PIT:** Right = the line counts 1 pit removed and its pipes removed.
+6. **Edit a pit's cover level text on the plan, then run a tool:** Right = `1 cover level read from the drawing`.
+7. **CDPROPAGATE, then Cancel:** Right = no "CE updated its record" line. Accept instead: the line appears once.
+8. **CDRECOVERINVERTS on a copy with a pipe of no size:** Right = the pipe is not given 100 before the tool looks at its size.
+9. **Both switches off:** every tool behaves exactly as on the installed build, and no line appears.
+10. **Not provable by the robot alone:** the wording of the lines (one Codex look); whether any read-only tool now shows older information than before (Tim, on jobs he knows); what one U does after an update (probe P2).
+
 ### Trust plan step 1, the opening line (UX-OPEN-01) — 12 November 2026 (Built and unit-tested only; NOT installed; robot and Codex to run on COPIES)
 
 PR 2041 (DRAFT, never merged by the run), branch `claude/trust-01-open-line`, cut from the installed Civil commit `cf059dcf`. Settings: `trust.sayDrawingStateOnOpen` (ON), `trust.openCheckMaxObjects` (50000, a DRAFT figure until probe P1 times the check).
