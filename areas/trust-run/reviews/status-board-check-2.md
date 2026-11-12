@@ -50,3 +50,15 @@ Rows 2, 4 to 19, 21 to 24, 26, 29 to 32, 34 to 36, 39, 40, 42, 44 to 47 (2041, 2
 
 1. The evidence column (FOR TIM item 4 and each row's "Evidence"): not compared with the evidence files in this run.
 2. The plain names in the row titles.
+
+---
+
+# Addendum (2026-11-13 07:43 PC clock): the board was rebuilt at 07:42, one minute after this check
+
+The 07:42 rebuild (commits `231ad435`, `4c87e955`) put right rows 25, 27, 28, 37, 38, 41, the missing 2085 row and FOR TIM items 1 and 2 (48; 45 GO, 3 FIX FIRST: 2053, 2082, 2085). **Still wrong at 07:42:**
+
+1. **Rows for 2040, 2049, 2066 and 2068** still say "moved since review, GO not yet re-confirmed". My lane re-read each at its current head and wrote "GO holds" (2040, 2066, 2068 at 07:03; 2049 at 03:45). The board reads those re-read lines as if they were not re-reviews.
+2. **Row for 2078** says "reviewed head 26f110fa, GitHub head e1bdc16e: moved". The 07:37 line names both heads, the later one last: GO at `e1bdc16e`.
+3. **FOR TIM item 3** says 5 moved without a re-check (2040, 2049, 2066, 2068, 2078); the true count is 0.
+
+For the board builder: in a line, "GO holds at <head>" and "re-reviewed ... at <head>" are re-confirmations at that head; when a line names two heads, the last is the one reviewed.
