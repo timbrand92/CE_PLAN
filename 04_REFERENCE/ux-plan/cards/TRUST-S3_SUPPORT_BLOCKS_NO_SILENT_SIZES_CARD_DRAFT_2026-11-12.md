@@ -57,7 +57,7 @@ One row only, and a size the block can show: no question, as today.
 ## 4. What it reuses
 
 1. **The schedule record** XCLMTXT already saves in the drawing (it keeps only included rows since the BUG-974 fix, Verified, `Services\XclmTxtService.cs:303-319`).
-2. **The floor names on the schedule sheet,** if XCLMTXT can read them. Whether it can is not known ("Not known yet", line 1).
+2. **The floor XCLMTXT already works out for each row.** Corrected 13 Nov after review: the import sets a floor on each row from the group titles (`Models\ExcelWorkbenchModels.cs:32`, `Services\ExcelMTextSourcePreviewLoader.cs:430-456`) and then drops it when the schedule is saved (`Services\XclmTxtService.cs:308-319`, `Services\MemberScheduleService.cs:16-22`). **This card keeps the floor when the schedule is saved,** so the question names the floor in most cases.
 3. **The existing size question** C2 already asks when no schedule row exists.
 
 ## 5. How it gets proven
@@ -77,7 +77,7 @@ One row only, and a size the block can show: no question, as today.
 
 ## 6. Not known yet
 
-1. **Whether the schedule sheets XCLMTXT reads carry a floor name** in a fixed place. Needs one look at a few real schedules (Structural test set).
+1. **How often XCLMTXT fails to find a floor** for a row (rows left at Unknown floor). Needs a few real schedules (Structural test set). Drawings that already hold a saved schedule have no floor stored, so they need a re-import or the row-number question (decision 2).
 2. **How often a mark is reused across floors** on real jobs.
 3. **Whether the installed BUG-437 and BUG-438 fixes work.** Fix installed in 1.0.121, never tested.
 

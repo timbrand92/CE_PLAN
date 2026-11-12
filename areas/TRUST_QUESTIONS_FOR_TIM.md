@@ -10,7 +10,7 @@
 
 # FOR TIM
 
-**68 questions in 17 batches of four. The first batches change the most about what gets built; the last ones are layout and wording. Each has the recommended answer first, so ticking the first box on every question is the "go with the recommendations" route.**
+**71 questions in 18 batches (the last, added after a review, has three). The first batches change the most about what gets built; the last ones are layout and wording. Each has the recommended answer first, so ticking the first box on every question is the "go with the recommendations" route.**
 
 ```mermaid
 flowchart TD
@@ -408,11 +408,11 @@ flowchart TD
 3. **On a job:** a colleague imports the member schedule from the Floors panel before placing columns.
 4. **Options:** [ ] The 32 plus XCLMTXT and the daily dimension and level tools (Recommended) [ ] The 32 only [ ] I will mark the list
 
-**Q59. Bracing numbers (engineering, your word).** (Structural plan decisions 5 and 6, BUG-499.) Draft built: no.
-1. **Context:** roof bracing trusses (BT1) are added to wall bracing totals, and a brace with no type counts as type A.
-2. **Recommended:** BT1 never added to wall totals, shown on its own line; a brace with no type counted as Unknown and the panel turns amber. Because overstated bracing is the dangerous direction.
-3. **On a job:** two 4 m roof trusses no longer turn a short wall direction green.
-4. **Options:** [ ] Both as recommended (Recommended) [ ] BT1 counts toward walls [ ] Blank type stays type A
+**Q59. Roof bracing trusses (BT1) in the wall bracing totals (engineering judgement, yours only).** (BUG-499; framed as in review `trust-run\reviews\claude-trust04-s-b499-trusses-out.md` section 2.2; Structural plan decision 5.) Draft built: yes, under card TRUST-04 (draft pull request 2047): trusses left out, with no line saying so, until you answer.
+1. **Context:** BT1 draws its roof bracing truss on a layer named "WALL BRACING TYPE BT1", so the office's own layer standard files these trusses with wall bracing. Should they count in the wall bracing totals?
+2. **Recommended:** none. This is engineering judgement, so both readings are put to you as the review frames them: leave them out (the 9 Oct bug hunt said "a roof truss is not wall bracing", marked "I think"), or count them (the layer name suggests the office does). Whichever you choose, the panel will say in one line what it left out or counted.
+3. **On a job:** one 2700 A brace plus one 4000 BT1 truss, both north-south, reads 2700 provided if trusses are left out, 6700 if counted.
+4. **Options:** [ ] Leave BT trusses out of the wall totals (recommended by the bug hunt) [ ] Count them (the layer name suggests the office does)
 
 **Q60. Support block sizes from the member schedule.** (TRUST-S3 decisions 1 to 3.) Draft built: no.
 1. **Context:** C1 and C2 take the first schedule row with their mark, whatever the floor; DS1 can name a timber size from the schedule but draw 90 x 90.
@@ -473,6 +473,26 @@ flowchart TD
 4. **Options:** [ ] From step 5 on (Recommended) [ ] From step 1
 
 ---
+
+## Batch 18: added 13 Nov after the review of the Structural and Manager plans
+
+**Q69. A brace with no type (engineering, your word).** (Structural plan decision 6, split from Q59.) Draft built: no.
+1. **Context:** a brace whose type tag is blank is counted as type A today.
+2. **Recommended:** counted as "type ?" and the bracing panel turns amber, not green. Because an Unknown should never become a value.
+3. **On a job:** a brace pasted from an older job with its tag cleared stops being counted as type A.
+4. **Options:** [ ] Type ?, panel amber (Recommended) [ ] Keep counting it as type A
+
+**Q70. Old beam links converted when a Structural drawing opens.** (Structural plan decision 11, review item 8.) Draft built: no.
+1. **Context:** for Civil you chose "Nothing changes on open"; Structural still converts old beam links and writes a marker whenever a drawing opens, so a drawing only opened then asks "save changes?".
+2. **Recommended:** move it out of opening, as Civil step 8 does for the pit symbols, so opening only reads. Because the same rule should hold for both products.
+3. **On a job:** an old Structural job you only open to print no longer asks "save changes?" when you close it.
+4. **Options:** [ ] Move it out of opening (Recommended) [ ] Keep it on opening, with one line saying so
+
+**Q71. Which way is north-south on the bracing panel?** (Review item 3, a fault found on 13 Nov.) Draft built: no.
+1. **Context:** the panel splits north-south from east-west by the drawing's own X axis, so a plan turned to fit the sheet gets its two totals swapped or mixed.
+2. **Recommended:** CE asks once per drawing which way the building runs (pick a wall line), stores it in the drawing, and splits by that. Because the totals must follow the building, not the sheet.
+3. **On a job:** a house drawn at 30 degrees to fit an A3 sheet gets the same totals as the same house drawn square.
+4. **Options:** [ ] Ask once, store in the drawing (Recommended) [ ] Use the drawing's axes, and say so on the panel
 
 ## Questions gathered but left out, and why
 

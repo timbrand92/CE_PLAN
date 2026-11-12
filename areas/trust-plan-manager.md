@@ -37,7 +37,7 @@ flowchart TD
 3. **Going back a version.** The pack's hand steps have never been tried. Manager's own button is hidden and only you can see it.
 4. **That a drawing saved on a newer CE opens cleanly on the older one.**
 
-**Six steps, safest first.** M1 reads only. M2 is a rehearsal with no code. M3 to M5 are small code changes, each behind a switch.
+**Seven steps, safest first.** M1 reads only. M2 and M6 are rehearsals with no code. M3, M4, M5 and M7 are small code changes, each behind a switch; M7 (Structural on its own release route) is needed only before Structural reaches colleagues.
 
 **Decisions for you are straight below** (five, each with a recommendation). Nothing waits on them: the steps are written on the recommended answers, marked DRAFT.
 
@@ -57,7 +57,7 @@ flowchart TD
 
 1. **AutoCAD starts.** Manager waits about 15 seconds, then looks in the office IT Admin folder for an approved build newer than what this PC has. **Verified:** `Modules\Manager\Plugin.cs:141-147` ("Thread.Sleep(15_000) ... StageManagedUpdates").
 2. **If there is one, it copies it into a waiting folder** on this PC, with no question asked. Civil first; if Civil fails, Manager is skipped with a plain note. **Verified:** `Services\CeApprovedReleaseService.cs:626-647` ("was not staged because CE Civil could not be staged first").
-3. **On AutoCAD 2025 to 2027 the ribbon says an update is ready** and to ask your CE administrator. **On 2022 to 2024 nothing tells the colleague.** **Verified:** the status hook is inside a 2025-and-later block, `Plugin.cs:159-161`.
+3. **On AutoCAD 2025 to 2027 the ribbon says an update is ready** and to ask your CE administrator. **On 2022 to 2024 the ribbon line does not exist.** **Partly verified:** the status hook is inside a 2025-and-later block, `Plugin.cs:159-161`; whether the menu bar or the command line says anything on those years was not searched (corrected 13 Nov after review).
 4. **Nothing in Manager runs the installer.** The colleague is told to "ask your CE administrator to finish the install". **Verified:** `Services\CeInstallWords.cs:6-12`.
 5. **The installer, run by hand, swaps one plugin per run.** It refuses while AutoCAD is open, keeps a copy of the old plugin, and puts it back if the swap fails. **Verified:** `Installer\SafeBundleInstaller.cs:315-317` (the kept copy), `356-361` (put back), `402` ("AutoCAD is still running"). **Carried:** that the installer has no Civil and Manager pair check of its own.
 6. **The old install scripts are retired** and refuse to run. **Verified:** `Installer\Install-CECvlSuite.ps1:9` ("RETIRED ... cannot install CE").
@@ -86,7 +86,7 @@ flowchart TD
 
 1. **CESUPPORT makes a zip of the last 14 days of CE logs on the colleague's desktop and stops.** It never sends anything. **Verified:** `Services\CeSupportBundleService.cs:47-50` ("never queued for upload and never copied to the office folder").
 2. **Names, PC names and drawing paths are taken out** before the zip is made. **Carried:** `Services\CeSupportBundleScrub.cs:97-112`.
-3. **A different button, "Send a fault report", does write straight into the office folder.** So there are two routes with different privacy treatment. **Carried:** `Services\CeDiagnosticsService.cs:303-310`.
+3. **A different button, "Send a fault report", does write straight into the office folder** (the IT Admin folder, "CE Diagnostics", one folder per PC). **Verified:** `Services\CeDiagnosticsService.cs:302-305`. Its text goes through the shared name scrub (`CeDiagnosticsService.cs:278`), but whether that scrub takes out drawing names and job folder paths was not checked; check it before step M5, because it decides whether colleague job names reach the office folder.
 4. **Civil's own feedback tool promises a send step that does not exist** (BUG-1215, Civil side). **Carried** from the trust check.
 
 ## 5. The steps (safest first)
@@ -107,7 +107,7 @@ Each step follows the same gate as the Civil steps (`areas\trust-plan.md` sectio
 
 1. **Goal:** one page of going-back steps that has actually been done once, on a PC set up like a colleague's.
 2. **What you see:** the steps in drafting words, with pictures of each folder; a short record: "Rehearsed on <date>: newer build in, a drawing saved, older build back, drawing opened, CEHEALTH clean."
-3. **Depends on:** a colleague-style PC. **Recommended: a second Windows login on a spare office PC,** never your own login (decision 1). Your PC is only used outside your hours if no spare PC exists.
+3. **Depends on:** a colleague-style PC. **Recommended: a second Windows login on a spare office PC,** never your own login (decision 1). One rule, matching card TRUST-M2 (corrected 13 Nov after review): a spare office PC first; your PC only if no spare PC exists, then on a second login, outside your hours, and the rehearsal never touches the all-users plugin folder there, because that folder is shared with your own AutoCAD.
 4. **Proven by:**
    1. **robot:** before and after, the fingerprint of each plugin file matches the build it should be; CE_VERSION reads the right numbers;
    2. **a drawing test:** a made-up drawing saved under the newer build opens under the older one, and the robot reads the same pits, pipes and supports from it;
@@ -152,6 +152,16 @@ Each step follows the same gate as the Civil steps (`areas\trust-plan.md` sectio
 4. **Proven by:** CEHEALTH all OK, CE_VERSION right, the core ribbon present; Codex looks.
 5. **Undo:** the M2 steps.
 6. **Risk: LOW.**
+
+### M7: Structural on its own release route (small code, switch)
+
+1. **Goal, added 13 Nov after review:** Manager can send Structural on its own and take it back on its own, which the Structural plan requires before a colleague gets Structural (`areas\trust-plan-structural.md` section 6 line 5).
+2. **Why:** the signed release kinds today are "Coordinated CE", "Standalone Manager" and "Standalone Civil"; there is no Structural-only kind. **Verified:** `Shared\CE.Release\OfficialReleaseGate.cs:160-165`.
+3. **What you see:** a Structural release prepared, installed and gone back on its own, with Civil and Manager untouched; CE_VERSION shows only the Structural number changed.
+4. **Depends on:** M2 (the going-back rehearsal) and M3. Only needed before Structural reaches colleagues (Manager decision 3).
+5. **Proven by:** robot on the spare login: a Structural-only release in, then back; Civil and Manager file fingerprints unchanged both times. Codex looks at CE_VERSION.
+6. **Undo:** a switch removes the Structural-only kind; Structural then travels only in the full set, as today.
+7. **Risk: MEDIUM.** It touches the signed release check, which guards every install.
 
 **What is left out on purpose:** Manager finishing an update by itself when AutoCAD closes. The parts exist but nothing uses them (**Carried:** `Services\CeFinishUpdatePlanner.cs` is used only by tests). Turning that on is a big change to colleagues' PCs and is not needed for the first release; updates stay by hand, by the keeper, as the release process draft proposes.
 
@@ -204,4 +214,4 @@ Moved to the top of this file, straight after FOR TIM (RULES 2.9).
 ## 12. Status
 
 1. **This document:** PROPOSAL. Built no. Tested no. Installed no. Accepted no.
-2. **Steps M1 to M6:** no cards yet. The card for "going back a version, rehearsed" (M2) is next in this lane's queue.
+2. **Cards:** TRUST-M2 (going back a version, rehearsed) and TRUST-M4 (what each colleague is running) are DRAFT in `04_REFERENCE\ux-plan\cards\`. M1, M3, M5, M6 and M7 have no card yet. (Corrected 13 Nov after review; this line was stale.)

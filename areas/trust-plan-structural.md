@@ -40,7 +40,7 @@ flowchart TD
 4. **CLEAN saves (your 5 Nov fix), but its tooltip and the Settings page both say CE never saves.**
 5. **No reminder when work has gone unsaved.** Only a small label on the palette.
 
-**Decisions for you are straight below** (ten, each with a recommendation and an example). Nothing waits on them: the steps are written on the recommended answers, marked DRAFT.
+**Decisions for you are straight below** (eleven; ten with a recommendation and an example, and decision 5 put to you with both readings and no recommendation, because it is engineering judgement). Nothing waits on them: the steps are written on the recommended answers, marked DRAFT.
 
 
 ## Decisions for Tim (read these first)
@@ -50,12 +50,13 @@ flowchart TD
 2. **CLEAN meets an object on a locked layer.** Recommended: **leave it alone, list it, carry on and save.** Example: a locked title-block layer no longer stops the whole text clean-up; CE says "1 text on locked layer TITLE left as it was". OPEN.
 3. **SBEAM in the first core.** Recommended: **hidden** until the 5 Nov crash has been reproduced on a copy and shown not to happen, and the section list is checked. A guard is written on the held S-46 build; the crash itself is not reproduced or proven fixed. Example: a colleague places a steel section on a deadline and AutoCAD closes, as it did for you on 5 Nov. OPEN.
 4. **The same mark on two floors of the schedule.** Recommended: **ask which floor, showing both sizes.** Example: "C1 is 89 SHS on GROUND and 75 SHS on FIRST. Which?" OPEN.
-5. **Roof bracing trusses in the wall bracing totals** (engineering). Recommended: **never added to wall totals; shown on their own line.** Example: two 4 m BT1 trusses no longer turn a short wall direction green. OPEN, needs your word.
+5. **Roof bracing trusses (BT1) in the wall bracing totals** (engineering, your word only). Corrected 13 Nov after review: BT1 draws its truss on a layer named "WALL BRACING TYPE BT1", so the office's own layer standard files these trusses with wall bracing. Should they count in the wall bracing totals? Both readings: leave them out (the 9 Oct bug hunt, marked "I think"), or count them (the layer name suggests the office does). No recommendation is made here; this is engineering judgement. A draft under card TRUST-04 (draft pull request 2047) leaves them out, with no line saying so, until you answer. Example: one 2700 A brace plus one 4000 BT1 truss north-south reads 2700 provided if left out, 6700 if counted. OPEN.
 6. **A brace with no type** (engineering). Recommended: **counted as Unknown, panel amber.** Example: a brace pasted from an older job with its tag cleared stops being counted as type A. OPEN, needs your word.
 7. **The core list.** Recommended: **the list in section 1.** Example: CSTIEDOWN stays typed only until it has its own three days. OPEN (your marks on the keep / hide list).
 8. **The save reminder: DECIDED, not a question.** Your decision 223 (`decisions\2026-10-29_TIM_ANSWERS.md`, line 830): "c" = both: a "Not saved for 25 minutes" reminder (your 25 Sep ruling) AND timed backup copies of unsaved work to the CE backup folder only, never over your drawing. The record says you named neither number; 25 is from your 25 Sep ruling, a copy every 10 minutes is the desk's default. (Corrected 12 Nov 23:53: this line first recommended 20 minutes, which ignored that decision.)
 9. **What decides a button: the core list or the expert mark.** Recommended: **the core list alone; the expert mark keeps its palette meaning** (changed 12 Nov 23:53 to match card TRUST-S1; the earlier recommendation, "expert = typed only", is superseded). Example: STRSCHEDREFRESH is marked expert today but is in the core list, so it goes on the tab once S4 is in. OPEN.
 10. **Explaining Structural days roof-down.** Already your standing rule (4 Oct, UX-STRUC-13). Not a question; recorded so the cards follow it.
+11. **Old beam links converted when a drawing opens.** Added 13 Nov after review. Recommended: **move it out of opening, as Civil step 8 does for the pit symbols, so opening only reads** (your Civil B5 answer, applied to Structural). Example: an old Structural job you only open to print no longer asks "save changes?" on closing. OPEN.
 
 ---
 
@@ -66,7 +67,7 @@ Evidence: Tim's command log on real jobs (`areas\CORE_TICK_LIST_05NOV.md` sectio
 ### Roof
 
 1. **R1 (rafter marks), P1 (purlin marks):** KEEP. Few uses, but every roof needs them. R1 is on the Beams panel; P1 falls to the catch-all Annotate panel because its row has no group. **Verified:** registry line 2651 (R1), line 195 (P1, empty group). Open: bay sizes not reaching the block (BUG-584, fix installed, untested), wrong place in a rotated UCS (BUG-467).
-2. **BT1 (roof bracing truss):** KEEP, with S4 first, because its trusses are added to the wall totals today.
+2. **BT1 (roof bracing truss):** KEEP, once its TRUST-04 fix (BUG-499) and step S4 are in, because its trusses are added to the wall totals today.
 
 ### Upper floors
 
@@ -79,8 +80,8 @@ Evidence: Tim's command log on real jobs (`areas\CORE_TICK_LIST_05NOV.md` sectio
 ### Walls and ground
 
 8. **AB, BB (wall bracing) and the A/B switch:** KEEP. BB 134, AB 93 uses. The switch is typed ABS; the name ABSWITCH is hidden as a duplicate when AutoCAD starts. **Verified:** registry lines 2490 (ABS), 2512 (ABSWITCH); the duplicate hiding is **Verified** (`Services\CommandRegistryService.cs:505-539`: any entry whose name is another entry's other name is marked hidden at start-up).
-9. **CSBRACINGPANEL (required against provided):** KEEP, with S4 first.
-10. **STRSCHEDCREATE, STRSCHEDREFRESH, STRSCHEDSYNC (bracing, pier and tie-down schedules):** KEEP, with S4 first.
+9. **CSBRACINGPANEL (required against provided):** KEEP, once TRUST-04 (BUG-499) and step S4 are in.
+10. **STRSCHEDCREATE, STRSCHEDREFRESH, STRSCHEDSYNC (bracing, pier and tie-down schedules):** KEEP, once their TRUST-04 fixes (BUG-497, 498) are in.
 
 ### On every drawing
 
@@ -114,10 +115,10 @@ Evidence: Tim's command log on real jobs (`areas\CORE_TICK_LIST_05NOV.md` sectio
 
 ## 4. Structural "guesses shown as facts"
 
-1. **C1 and C2 take their size from the first schedule row with the same mark,** with no floor. The schedule has no floor field at all. The command line then says the size came "from the schedule" and skips the size question (BUG-501). **Verified:** `Commands\SupportBlockCommands.cs:249-255`, `Services\MemberScheduleService.cs:31-44`.
+1. **C1 and C2 take their size from the first schedule row with the same mark,** with no floor. Corrected 13 Nov after review: the schedule import (XCLMTXT) already works out a floor for each row from the group titles, then drops it when the schedule is saved in the drawing. **Verified:** `Models\ExcelWorkbenchModels.cs:32` (a floor on each row), `Services\ExcelMTextSourcePreviewLoader.cs:430-456` (set from the title rows), `Services\XclmTxtService.cs:308-319` and `Services\MemberScheduleService.cs:16-22` (the saved row keeps mark, size, group and note only). The command line then says the size came "from the schedule" and skips the size question (BUG-501). **Verified:** `Commands\SupportBlockCommands.cs:249-255`, `Services\MemberScheduleService.cs:31-44`.
 2. **If that schedule size is not a size the block knows** (for example a timber stud pack on DS1), CE quietly draws the default 90 x 90, while the line on screen still names the schedule size. Log only. **Verified:** `Commands\SupportBlockCommands.cs:1470-1480` and the defaults at lines 66 to 69.
 3. **A brace with no type is counted as type A.** **Verified:** `Services\ProjectDataService.cs:316-320`.
-4. **Roof bracing trusses count as wall bracing.** BT1 inserts the same BRACING block, and the totals pick up every BRACING block by name (BUG-499). **Verified:** `Commands\BracingCommands.cs:318-320` ("BRACING", "WALL BRACING TYPE BT1"), `Services\ProjectDataService.cs:282-283`.
+4. **Roof bracing trusses count as wall bracing.** BT1 inserts the same BRACING block, and the totals pick up every BRACING block by name (BUG-499). **Verified:** `Commands\BracingCommands.cs:323-324` ("BRACING", "WALL BRACING TYPE BT1"; line numbers corrected after review), `Services\ProjectDataService.cs:282-283`.
 5. **The bracing schedule is one row short when made, and keeps erased braces when refreshed** (BUG-497, BUG-498). **Verified:** `Services\ScheduleService.cs:384` (rows = braces + 1, but title and heading take two), `681-699` (refresh adds rows, never clears leftovers). The pier schedule has the same shape (lines 422, 701 to 723); the tie-down schedule does clear leftovers.
 6. **CLEAN says two opposite things.** Its tooltip says "Does not save: save the drawing yourself"; its long description and the code save. The Settings page says "CE never saves". **Verified:** registry lines 4145 to 4146; `UI\Dialogs\CeSettingsDialog.xaml:557`.
 7. **CLEAN can report "saved" when it is not sure.** If its own save fails it sends QSAVE and marks the save done without checking. **Verified:** `Services\CleanPipelineService.cs:167-169`.
@@ -133,7 +134,7 @@ Same gate as Civil: card, your approval, built small, robot then Codex on copies
 1. **Goal:** a colleague sees only the core tools, in roof-down order; everything else can still be typed.
 2. **What you see:** one Structural tab: Roof (R1, P1, BT1) | Floors (beams, BSET, supports, switches, FJ1) | Bracing (AB, BB, switch, panel, schedules) | Tools (CLEAN, Help, Settings). Today's flat tab stays behind a switch.
 3. **Depends on:** your marks on the keep / hide list (next in this lane). Civil step 2, so both tabs use one way of choosing buttons.
-4. **How:** a new office core list, read by both the ribbon and the pull-down menu, so they cannot drift. The core list alone decides; the expert mark is not used for it (decision 9). Behind a NEW switch, off by default.
+4. **How:** a core list that the ribbon reads. Corrected 13 Nov after review: the Civil core list built under card TRUST-02 (draft pull request 2038) is written into the plugin, not an office file, and the Civil pull-down menu does not read it yet. So S1 follows that pattern for the ribbon, and making the pull-down menu read the same list is extra work S1 must do itself, or the menu claim is dropped. Which Structural ribbon builder is live depends on a build setting: without it only the own "CE STRUC" tab is built (**Verified:** `CE_STRUC_SUITE.csproj:96-98`, `Plugin.cs:196-204`). The core list alone decides; the expert mark is not used for it (decision 9). Behind a NEW switch, off by default.
 5. **Proven by:** robot reads the ribbon back against the list, button by button, and presses each once on a copy; a list with one button removed must fail; ten hidden commands still run when typed; the menu lists the same tools. Codex looks at the tab at normal and narrow widths. You draft with it for three days.
 6. **Undo:** switch off and restart AutoCAD; today's tab is back.
 7. **Risk: LOW.** Nothing in a drawing changes. Main risk: a tool you use daily that the log never saw.
@@ -148,7 +149,7 @@ Same gate as Civil: card, your approval, built small, robot then Codex on copies
    4. **Reset Defaults:** asks first and keeps a copy of the old settings.
 3. **Depends on:** nothing. Can run beside S1.
 4. **Proven by:** each fix has its robot case and a broken twin that must fail: CLEAN on a copy with one locked object (drawing saved, locked object untouched, line printed); the reminder after a set time on a copy; SBEAM with a deliberately stale object; Reset then the copy restored. Codex reads every new line. You use CLEAN for three days.
-5. **Undo:** the previous build, by the install's named backup. Each change also has a switch.
+5. **Undo:** the previous build, by the install's named backup. The reminder and backup copies have a Settings switch; the wording, the save check, the locked-layer skip and the SBEAM guard do not, because a fix to a wrong result gets no off switch (matches card TRUST-S2).
 6. **Risk: MEDIUM.** Saving is the thing you can least afford to break; it already broke once, on a real job in the week of 5 Nov.
 7. **Waits on:** decision 2 for the locked-layer behaviour.
 
@@ -157,20 +158,26 @@ Same gate as Civil: card, your approval, built small, robot then Codex on copies
 1. **Goal:** C1, C2, DS, DS1 and TS1 never draw a size the drafter did not choose or see.
 2. **What you see:** if a mark appears on more than one floor of the schedule: "C1 is 89 SHS on GROUND and 75 SHS on FIRST. Which?" If the schedule size is not a block size: "DS1 schedule says '2 No 90 x 45 F17 KDHW'; the block cannot show that. Size?" instead of a quiet 90 x 90.
 3. **Depends on:** S2 (so the reminder protects the trial). Decision 4.
-4. **Also in this step:** BUG-1139 (a copied beam takes over the original's links), and proving the installed fixes for BUG-437 and BUG-438 (support text Enter and the number question).
+4. **Also in this step:** keep each row's floor when XCLMTXT saves the schedule (the import already works it out, section 4 line 1), so the question names the floor in most cases; schedules already saved in drawings have no floor and need a re-import or the row-number question (card S3 decision 2). BUG-1139 (a copied beam takes over the original's links), and proving the installed fixes for BUG-437 and BUG-438 (support text Enter and the number question).
 5. **Proven by:** robot on a made-up job with the same mark on two floors (must ask), a timber schedule row on DS1 (must ask, never draw 90 x 90 unasked), a copied beam (the original keeps its links); broken twins that take the first row must fail. Codex looks at the questions. You on real jobs.
 6. **Undo:** a switch returns today's behaviour.
 7. **Risk: MEDIUM.** More questions at first, on exactly the jobs that were quietly wrong.
 
-### S4: the bracing schedule and totals
+### S4: the bracing panel and schedule, what is left after TRUST-04
 
-1. **Goal:** the bracing numbers on a sheet are never overstated.
-2. **What you see:** the schedule lists every brace once and drops erased ones on refresh; roof trusses are shown on their own line, not added to wall bracing; a brace with no type shows "type ?" and the panel goes amber, not green.
-3. **Depends on:** nothing in S1 to S3. Decision 5 and 6 (engineering: your word).
-4. **How:** lift the BUG-497 and BUG-498 fixes alone out of the held S-46 build; BUG-499 and the blank-type rule are new work.
-5. **Proven by:** robot on a made-up plan: 4 braces, schedule shows 4; erase one, refresh, shows 3; two BT1 trusses, wall totals unchanged; one brace with its type cleared, panel amber. Each with a broken twin. You check one real job's bracing by hand against the schedule.
-6. **Undo:** the previous build; schedules already placed are refreshed again.
-7. **Risk: MEDIUM.** Some existing jobs will show less bracing provided than before. That is the honest number.
+1. **Owner, corrected 13 Nov after review:** BUG-497 (schedule one row short), BUG-498 (erased braces stay) and BUG-499 (trusses in wall totals) are owned by card TRUST-04; the trust-safety-fixes lane has built them there as drafts (pull requests 2044, 2046, 2047). S4 covers only what is left.
+2. **Goal:** the bracing panel's totals are never overstated.
+3. **What is left, and what you see:**
+   1. **Trusses:** once you answer decision 5, the panel says what it left out or counted, for example "Not counted: 1 bracing truss (BT1), 4.0 m". The TRUST-04 draft leaves them out silently.
+   2. **A brace with no type:** counted as "type ?" and the panel goes amber (decision 6). Today it is read as type A (**Verified:** `Services\ProjectDataService.cs:316-320`).
+   3. **Drawing units:** the panel adds the braces' lengths as they are drawn, with no units conversion, so a 2.7 m brace in a metre drawing reads about 3 mm (BUG-503 item 2). New braces cannot be placed in such a drawing, but braces already there are read. **Verified** by reading: the length is read straight from the block (`Services\ProjectDataService.cs:322`) and the calculator has no units step (`Structural.DesignCore\BracingPanelCalculator.cs`).
+   4. **North-south against east-west:** decided by the brace's angle to the drawing's own X axis, with exactly 45 degrees counted east-west, so a plan turned to fit the sheet gets its two totals swapped or mixed. **Verified:** `Structural.DesignCore\BracingPanelCalculator.cs:54-60`. Fix: the directions follow the building, set once per drawing, or the panel asks.
+   5. **Older type C bracing labels** (PT250 to PT600 LABEL) are probably not counted at all (section 9 line 8, an inference).
+4. **Depends on:** card TRUST-04's three fixes. Decisions 5 and 6 (engineering: your word).
+5. **Until S4 is in:** the units, direction and type C faults go on the bracing panel's tool note as known faults before any colleague sees the panel.
+6. **Proven by:** robot on made-up plans: a metre copy reads the same totals as the millimetre copy; the same plan turned 30 degrees reads the same totals; a brace with its type cleared turns the panel amber; the truss line matches decision 5. Each with a broken twin.
+7. **Undo:** the previous build; schedules already placed are refreshed again.
+8. **Risk: MEDIUM.** Some jobs will show different totals. That is the honest number.
 
 ### S5: the quiet changes made visible
 
@@ -180,15 +187,17 @@ Same gate as Civil: card, your approval, built small, robot then Codex on copies
 4. **Proven by:** robot compares the drawing before and after each quiet change and checks the line's numbers match; a broken twin that changes something and prints nothing must fail. Codex reads the lines.
 5. **Undo:** a switch silences the lines.
 6. **Risk: LOW to MEDIUM.** The lines may show that some of these run more often than expected.
+7. **Open, added 13 Nov after review:** old beam links are converted, and a marker written, whenever a drawing opens (section 3 line 3), so a drawing that was only opened asks "save changes?". For Civil you chose "Nothing changes on open" (B5). Whether that applies to Structural is decision 11; S5 only makes the conversion say a line.
 
 ### S6: same settings for everyone (shared with Civil step 3)
 
 1. **Goal:** every colleague runs the office Structural setup.
 2. **What you see:** the same "office settings changed" window and CE Health line as Civil step 3.
-3. **Why it matters here:** Structural writes its whole settings file the first time it starts, so every login is frozen on the defaults of the build it first ran, even if nobody ever pressed Save. **Verified:** `Services\SettingsService.cs:675-684` (start-up write); the full write is **Verified** (line 928 writes the whole settings object).
-4. **Proven by:** as Civil step 3, on two logins.
-5. **Undo:** the old settings file is kept beside the new one.
-6. **Risk: MEDIUM.**
+3. **Never office values, corrected 13 Nov after review:** job figures and last-used values. Structural keeps the required bracing figures in the PC's settings (BUG-500; **Verified:** `Commands\BracingPanelCommands.cs:93, 123`), so a Civil-style office setup taken from your PC would send your last job's required bracing to every colleague. S6 therefore has its own personal list for Structural (required bracing first, then every remembered last-used value), or waits until BUG-500 moves the figures into the drawing (question Q61).
+4. **Why it matters here:** Structural writes its whole settings file the first time it starts, so every login is frozen on the defaults of the build it first ran, even if nobody ever pressed Save. **Verified:** `Services\SettingsService.cs:675-684` (start-up write); the full write is **Verified** (line 928 writes the whole settings object).
+5. **Proven by:** as Civil step 3, on two logins, plus one case: the required bracing figures on your PC never reach a colleague's settings file.
+6. **Undo:** the old settings file is kept beside the new one.
+7. **Risk: MEDIUM.**
 
 **Left out on purpose:** CEMEMBER, the sheets and register tools, markup QA, computations, the roof-down proposal tools. Each needs its own card and joins later, one at a time.
 
@@ -196,9 +205,9 @@ Same gate as Civil: card, your approval, built small, robot then Codex on copies
 
 1. **The Civil core is with colleagues and has had its clean days** (unless you decide otherwise, decision 1).
 2. **S1 to S4 accepted by you,** each after its own trial. S5 and S6 accepted, or their faults written on the tool notes.
-3. **A Structural test set:** about five real past jobs, roof to footings, with the right bracing totals and support sizes written down. Zero wrong values shown as facts.
+3. **A Structural test set:** about five real past jobs, roof to footings, with the right bracing totals and support sizes written down. Zero wrong values shown as facts. Same rules as the Civil test set (`areas\TRUST_TEST_SET_12NOV.md`): copies only, the originals never opened by a test, the right answers taken from the issued plan's labels, and no client name, address or job address in any file, file name or log line.
 4. **Every core tool has its one-page note** and passes the five trust rules.
-5. **Manager can send Structural on its own and take it back on its own.** Today it cannot: Manager's signed releases cover Civil and Manager, and Structural only as part of the full set (`areas\trust-plan-manager.md`, section 2 line 5).
+5. **Manager can send Structural on its own and take it back on its own.** Today it cannot: Manager's signed releases cover Civil and Manager, and Structural only as part of the full set (`areas\trust-plan-manager.md`, section 2 line 5). Manager step M7 (added 13 Nov) is the step that builds this route.
 6. **The colleague's AutoCAD year is known** and the core checked on it. The 2022 to 2024 greyed-tool behaviour (UX-STRUC-12) is part of that check.
 
 ## 7. Decisions for Tim

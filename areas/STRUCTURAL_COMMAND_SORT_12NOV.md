@@ -22,7 +22,7 @@ Evidence is thin. It comes from your command log on real jobs (59 days from 3 Ju
 **1. Roof (3)**
 1. **R1:** rafter marks on RAFTERS. Open: bay sizes not reaching the block (BUG-584, fix installed, untested).
 2. **P1:** purlin marks. Today it falls to the Annotate panel because its entry has no group.
-3. **BT1:** roof bracing truss. Joins only once card S4 stops its trusses being added to wall totals (BUG-499).
+3. **BT1:** roof bracing truss. Joins once the TRUST-04 fix for BUG-499 and step S4 are in.
 
 **2. Floors (19)**
 1. **1:** regular beam. The log calls the beam tools "BEAM"; which number is used most is not known.
@@ -49,9 +49,9 @@ Evidence is thin. It comes from your command log on real jobs (59 days from 3 Ju
 1. **AB:** A bracing.
 2. **BB:** B bracing.
 3. **ABS:** switch A and B. (ABSWITCH, STRUCABS are the same tool under other names.)
-4. **CSBRACINGPANEL:** bracing required against provided. Card S4 first.
-5. **STRSCHEDCREATE:** make the bracing, pier and tie-down schedules. Card S4 first (one row short, BUG-497).
-6. **STRSCHEDREFRESH:** refresh a schedule. Card S4 first (erased braces stay, BUG-498). Marked expert today; the core list, not the expert mark, decides (card TRUST-S1 decision 6).
+4. **CSBRACINGPANEL:** bracing required against provided. TRUST-04 (BUG-499) and step S4 first.
+5. **STRSCHEDCREATE:** make the bracing, pier and tie-down schedules. TRUST-04 fix first (one row short, BUG-497).
+6. **STRSCHEDREFRESH:** refresh a schedule. TRUST-04 fix first (erased braces stay, BUG-498). Marked expert today; the core list, not the expert mark, decides (card TRUST-S1 decision 6).
 7. **STRSCHEDSYNC:** push schedule values back to the blocks.
 
 **4. Tools (3)**

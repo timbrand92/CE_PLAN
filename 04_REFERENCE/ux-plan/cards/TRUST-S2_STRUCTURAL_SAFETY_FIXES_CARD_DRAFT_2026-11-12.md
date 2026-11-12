@@ -3,7 +3,7 @@
 **Status: DRAFT.** Not approved, not built, not tested, not installed. No code starts until Tim approves this card.
 **Class:** Modify (fixes to existing tools). Nothing is retired.
 **Source:** the week of 5 Nov: about 3 hours of drawing work lost (CLEAN had stopped saving, no reminder), an AutoCAD crash in SBEAM (BUG-1275), no CE backup for hours (BUG-1276). Tim, 6 Nov: "the clean and save fix is for me". Step S2 of `areas\trust-plan-structural.md`.
-**Overlap:** card TRUST-04 lists the Structural reminder, SBEAM and bracing fixes. This card takes the reminder and SBEAM from it and adds three CLEAN pieces and Reset Defaults; the bracing fixes are card S4. TRUST-04's Structural half points here once Tim approves.
+**Overlap:** card TRUST-04 lists the Structural reminder, SBEAM and bracing fixes. This card takes the reminder and SBEAM from it and adds three CLEAN pieces and Reset Defaults. The bracing fixes (BUG-497, 498, 499) stay with card TRUST-04, where they are built as drafts (pull requests 2044, 2046, 2047); step S4 covers only what is left (corrected 13 Nov after review). TRUST-04's Structural half points here once Tim approves.
 
 ---
 
@@ -71,7 +71,7 @@ Reset Defaults: "Put every Structural setting back? A copy of your current
 **Robot, AutoCAD 2027, each with a broken twin that must fail:**
 
 1. CLEAN on a made-up copy: the file's saved time moves; the line says "Saved".
-2. CLEAN on a read-only copy: "NOT SAVED" and the file is unchanged. Twin: a build that says "Saved" anyway must fail.
+2. CLEAN on a copy the robot has locked open in another program, with AutoCAD's file dialogs switched off (FILEDIA 0) so a Save As window cannot appear and stall the run: "NOT SAVED" and the file is unchanged. Twin: a build that says "Saved" anyway must fail. (Corrected 13 Nov after review: a read-only file would make CE's fallback QSAVE open the Save As window, because CLEAN does not refuse a read-only drawing first.)
 3. CLEAN on a copy with one text on a locked layer: that text unchanged, every other text cleaned, the line names it.
 4. Edit a copy without saving past the set time: exactly one "Not saved for 25 minutes" line, the drawing's changed-flag untouched by CE, the drawing file on disk unchanged.
 5. Edit a copy without saving for 10 minutes: one backup copy appears in the CE backup folder and holds the unsaved work; the drawing file on disk is unchanged. Twin: a build that writes over the drawing must fail.

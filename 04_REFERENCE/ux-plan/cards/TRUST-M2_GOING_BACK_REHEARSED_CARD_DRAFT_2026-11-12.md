@@ -33,12 +33,12 @@ The colleague pack's going-back page with every [CHECK] answered.
 
 ## 1. What happens, in order
 
-1. **Set up:** a second Windows login on a spare office PC with AutoCAD 2027, holding the build a colleague has today (decision 1). Never Tim's own login.
+1. **Set up:** a second Windows login on a spare office PC with AutoCAD 2027, holding the build a colleague has today (decision 1). Never Tim's own login. One rule, corrected 13 Nov after review: a spare office PC first; Tim's PC only if no spare PC exists, then on a second login, outside his hours, and the rehearsal never touches the all-users plugin folder there (step 4 of section 2 becomes a look only), because that folder is shared with Tim's own AutoCAD.
 2. **Record the starting point:** the fingerprint of each CE plugin file, CE_VERSION, CEHEALTH, a copy of the five CE settings folders.
 3. **Install the newer build** by the colleague pack's steps (rename the old folders to `.backup`, copy in the new ones, Civil and Manager together).
 4. **Use it:** open a made-up test drawing, place a few pits, pipes and supports, change one setting, save.
 5. **Go back** by the pack's steps: close AutoCAD, rename the new folders aside, take `.backup` off the old ones, put the settings copies back only if needed.
-6. **Check:** fingerprints match the starting point; CE_VERSION and CEHEALTH clean; the made-up drawing opens; the robot reads the same pits, pipes and supports from it; the changed setting is either kept or plainly reset.
+6. **Check:** fingerprints match the starting point; CE_VERSION and CEHEALTH clean; the made-up drawing opens; the robot reads the same pits and pipes from it with the Civil reader, and the same supports by comparing their block names, counts and attribute values (there is no Structural reader); the changed setting is either kept or plainly reset.
 7. **Do it a second time** from a clean start, timed, by following only the written page.
 8. **Write the record** and correct the colleague pack wherever reality differed.
 
@@ -62,7 +62,7 @@ None changed by the rehearsal except the one setting changed on purpose in step 
 
 ## 5. How it gets proven
 
-1. **Robot:** fingerprints before and after each swap; the made-up drawing read under both builds gives the same pits, pipes and supports.
+1. **Robot:** fingerprints before and after each swap; the made-up drawing read under both builds gives the same pits and pipes (Civil reader) and the same support block names, counts and attribute values (read directly; no Structural reader exists).
 2. **Codex:** looks at the ribbon and CEHEALTH after each swap, with screenshots kept.
 3. **Tim:** reads the one-page record. Right = the steps fit on one page and took about 2 minutes the second time.
 
