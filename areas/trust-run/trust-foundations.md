@@ -125,3 +125,7 @@
   6. **Decision for Tim:** what the repair should be (remove the stored record after showing what it holds; rebuild from the drawing's own objects; restore from a backup).
   7. **Defaults for Tim to confirm:** the wording (controller's draft); "most" = more than 50 percent (`trust.anotherDrawingsDataMissingPercent`); switch `trust.sayWhenDataLooksLikeAnotherDrawings` ON; the other drawing's file name, never its folder, is shown in the check list; the line replaces the count line.
   8. **Installed:** no. **Accepted:** no. **Robot cases:** `PENDING_TESTS.md`, BUG-1456 follow-up (9 rows).
+
+- **13 Nov 06:32, QUEUE EMPTY.** Re-read the queue (refill of 06:15 gives this lane nothing new) and the run rules (no change). Items 1 to 8 and the controller's two items of 05:52 are all pushed as drafts.
+  1. **Waiting on review, nothing to fix yet:** pull request 2064 (head `9d44a9c0`, re-review of the four FIX FIRST items) and pull request 2078 (head `5bde761b`, first review). 2051's GO holds at `b9bed2e8` (re-review 2), 2058 and 2073 have GO.
+  2. **Open for the controller to assign (not started):** the review of 2073 names one door left: a tool that changes CE's record in a drawing it never attached changes the other drawing's record in memory, and 2073 then keeps that save for the other drawing. The cure would be a check where the record is changed, in files this lane owns (`Services\ProjectDataService*.cs`). Say the word and it is the next item.
