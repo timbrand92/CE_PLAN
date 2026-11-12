@@ -155,3 +155,21 @@
 1. **The new check PASSES (CEPROOFCROSSCOPY, BUG-1456-CROSS-03).** A tool that changes several things in one step writes a copy of CE's record into the drawing as part of that step. When that copy came from another drawing's record, it wrote nothing here and did not become this drawing's live record. The faulty version (a copy of unknown source) did write and the check noticed it. A copy of the drawing's own record is still written. All three parts seen to pass, with the detail line the foundations lane said to expect.
 2. **The two earlier checks still pass on this head:** CEPROOFCROSSCHANGE (2083's door) and CEPROOFCROSSDRAWING (2073's cure).
 3. **Not proven:** the real-AutoCAD part (ordinary batch tools in one drawing never print the refusal line; the other four rows of the pending-tests list). The core console cannot run Edit Pit batch Apply or the other windows; the check drives the write step directly, which proves the rule, not the whole drafter's job.
+
+---
+
+# PR 2090 (BUG-1456, the refusal said on screen), core console, Fri 13 Nov 09:50 PC clock
+
+**Build:** `claude/bug-1456d-refusal-said-on-screen` at `39e489e9`, built fresh in my own folder, 0 errors, core console only, nothing installed. Draft evidence, robot only, not Codex-looked.
+
+## FOR TIM
+
+1. **All three cross-drawing checks still PASS on this head** (CEPROOFCROSSCOPY, CEPROOFCROSSCHANGE, CEPROOFCROSSDRAWING).
+2. **The new line IS shown on the command line, once, in the two checks where something is refused.** In the change check: "CE: this change was not recorded. CE is holding another drawing's pits and pipes, not this drawing's. Nothing in CE's data was changed. Please report which tool you were using." In the copy check: "CE: CE's own data in this drawing was not updated by this tool, because CE is holding another drawing's pits and pipes. Please report which tool you were using." The cure check (end of PIT, CDHELP, CDS) prints neither, as it should (nothing is refused there that a tool reports; it just writes nothing).
+3. **Wording is DRAFT** (for Tim to confirm). "Please report which tool you were using" is a software-ish ask: a drafter will not know what to report beyond the command name; worth a look.
+4. **Not proven:** that a drafter in real AutoCAD never sees these lines in ordinary work (the pending-tests row). Only the console was run.
+
+## DETAIL
+
+1. Count of the new line in each console transcript: copy check 1, change check 1, cure check 0. (The transcript file is UTF-16; a plain text search finds nothing, which fooled my first look.)
+2. CE's log in the same runs still carries its own refusal lines as before.
