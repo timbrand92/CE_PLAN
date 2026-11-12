@@ -27,3 +27,4 @@ Chat: CE_ACAD / trust plan / plan / 02 Structural + Manager. Queue: `areas\trust
 - 2026-11-13 01:48: items 10 to 12 DONE. QUEUE EMPTY.
 - 2026-11-13 01:55: check-in. QUEUE EMPTY (01:45 refill items 10 to 12 done; no newer refill).
 - 2026-11-13 02:24: check-in. QUEUE EMPTY.
+- 2026-11-13 02:41, item 13 DONE: batch 0 (Q0) rewritten: recommended answer is now the spare work PC (Tim's ruling D5, 17 Oct; his 29 Oct words; 30 minutes once with TEST_PC_START_PROMPT.md); overnight installs on his own PC are option (b) with the cost stated ("a mistake costs you a morning"); the 2026 laptop and "not yet" kept; the change of recommendation stated plainly with its evidence (HOW_TO_SEE_TRIAL_BUILDS.md). Not answered. Built no, Tested no, Installed no, Accepted no.

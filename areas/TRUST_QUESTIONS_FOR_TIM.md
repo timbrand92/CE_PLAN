@@ -10,11 +10,11 @@
 
 # FOR TIM
 
-**79 questions in 21 batches. Batch 0 is the one the run is waiting on now: may trial builds go on your PC overnight. Then the batches that change the most about what gets built; layout and wording come later, and batches 18 to 20 were added on 13 Nov. Each has the recommended answer first, so ticking the first box on every question is the "go with the recommendations" route.**
+**79 questions in 21 batches. Batch 0 is the one the run is waiting on now: where trial builds may be seen in real AutoCAD (recommended: the spare work PC). Then the batches that change the most about what gets built; layout and wording come later, and batches 18 to 20 were added on 13 Nov. Each has the recommended answer first, so ticking the first box on every question is the "go with the recommendations" route.**
 
 ```mermaid
 flowchart TD
-    Z[Batch 0: trial builds overnight on your PC?] --> A
+    Z[Batch 0: where trial builds are seen, spare PC recommended] --> A
     A[Batches 1 to 4: what right means, Sure and Unknown, fill-ins, old drawings] --> B[Batches 5 to 9: Check this drawing, LPD, record lines, same settings]
     B --> C[Batches 10 to 12: Civil ribbon and safety fixes]
     C --> D[Batches 13 to 14: releases and Manager]
@@ -33,15 +33,16 @@ flowchart TD
 
 ## Batch 0: the one question the run is waiting on now (added 13 Nov, 01:50 PC clock)
 
-**Q0. May trial builds be put on your PC overnight, to be seen in real AutoCAD?** (Controller, 13 Nov; evidence `trust-run\EVIDENCE_BRANCHES.md` FOR TIM item 5.) Draft built: not applicable.
-1. **Context:** the trial builds are built and unit-tested, but several things can only be seen with the build loaded in real AutoCAD: the opening line, Edit Pit's line, every window, the ribbon, what one U does on the new builds, and all the Structural fixes. Loading a build into AutoCAD means installing it. The run was told installs are not lifted (RULES 8.7 and the 5 Nov HOLD), although your 30 Oct ruling said "you can install anything on my pc at your free will as long as im not at my desk"; the HOLD since 5 Nov is why that is asked again rather than used.
-2. **Recommended:** (a), because it is the only way to see these before you are asked to trial anything, it uses the hours you are away, and the build on your PC each morning is exactly today's, checked file by file.
+**Q0. Where may trial builds be seen in real AutoCAD?** (Controller, 13 Nov; evidence `trust-run\EVIDENCE_BRANCHES.md` FOR TIM item 5 and `trust-run\HOW_TO_SEE_TRIAL_BUILDS.md`.) Draft built: not applicable. **Recommendation changed 13 Nov, about 02:50:** the controller first recommended overnight installs on your PC, then changed its mind on the evidence in `HOW_TO_SEE_TRIAL_BUILDS.md`.
+1. **Context:** the trial builds are built and unit-tested, but the opening line, Edit Pit's line, every window, the ribbon, what one U does on the new builds and all the Structural fixes can only be seen with the build loaded in real AutoCAD. On your own login that means installing it, because AutoCAD loads your installed CE first. The AutoCAD core console already loads trial builds safely, but it has no ribbon, no windows and nothing that happens when a drawing opens. The virtual machine test station never got past set-up (last entry 24 Sep).
+2. **Recommended:** (a), the spare work PC. It is your own ruling D5 of 17 Oct (`decisions\2026-10-17_V3_ALIGNMENT_RESET.md`: "a separate work PC (no purchase) for AutoCAD testing") and your 29 Oct words, "on the other one testing all day". It gives a real AutoCAD with windows and the ribbon, all day, and your own PC is never touched.
 3. **What each costs you:**
-   1. **(a) Your PC, overnight only:** the robot installs a trial build only between 5:30pm and 8:10am, tests on copies, and puts back exactly what was there (Civil 3.0.90, Manager 1.1.89, Structural 1.0.126, checked file by file) before 8:10am, every night until you say stop. Cost: a small risk that a put-back fails and you start a morning on the wrong build; the robot would leave a one-line note and the backup folder named. Your PC is busy overnight.
-   2. **(b) A separate test PC or the virtual machine only, never your PC:** no risk to your PC. Cost: a test PC or the virtual machine must be set up and kept alive (whether it still works is being checked by another lane), and it may not match your AutoCAD exactly.
-   3. **(c) Not yet:** no risk at all. Cost: the opening line, the windows, the ribbon and every Structural fix stay unseen, so nothing can be offered to you for a trial until you answer.
-4. **On a job:** under (a), you open AutoCAD at 8:30am on 3.0.90 as usual; a note says "Trial build of step 1 seen overnight on copies; your build put back at 6:52am, checked."
-5. **Options:** [ ] (a) My PC, 5:30pm to 8:10am, put back and checked before 8:10am (Recommended) [ ] (b) Only a separate test PC or the virtual machine [ ] (c) Not yet
+   1. **(a) The spare work PC:** about 30 minutes of yours, once, pasting `04_REFERENCE\TEST_PC_START_PROMPT.md` into Claude on that PC, and the PC left on and awake at work. You said on 29 Oct you could not do it then.
+   2. **(b) Your own PC overnight:** the robot installs a trial build only between 5:30pm and 8:10am, tests on copies, and puts back exactly Civil 3.0.90, Manager 1.1.89 and Structural 1.0.126, checked file by file, before 8:10am. Nothing from you. Cost: it is the one choice that touches your bundle, and a mistake costs you a morning. It also needs your word again, because of the 5 Nov HOLD, although your 30 Oct ruling said "you can install anything on my pc at your free will as long as im not at my desk".
+   3. **(c) The AutoCAD 2026 laptop you offered on 29 Oct:** whose laptop, its login and Autodesk sign-in, and when it can stay on; nobody has assessed it, and it is a different AutoCAD year, so a first look, not the 2027 proof.
+   4. **(d) Not yet:** no risk. Cost: nothing that needs real AutoCAD can be offered to you for a trial.
+4. **On a job:** under (a), you open AutoCAD at 8:30am exactly as always; the spare PC has already shown the trial opening line on copies overnight and through the day.
+5. **Options:** [ ] (a) The spare work PC; I give it 30 minutes once (Recommended) [ ] (b) My own PC, 5:30pm to 8:10am, put back and checked [ ] (c) The 2026 laptop [ ] (d) Not yet
 
 ## Batch 1: what "right" means for the test jobs
 
