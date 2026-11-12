@@ -20806,3 +20806,273 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
 
 **Status:** OPEN
+
+## BUG-1423 — Support tools say nothing about a frozen or switched-off support layer
+
+**Command / Area:** C1, C2, DS, DS1, TS1 (support blocks). LOW. WRONG ANSWER, support placed but invisible.
+
+**Symptom:** The footing tools tell the drafter when their layer is frozen or off. The support tools have no such check, so a support placed on a frozen layer disappears or is refused by AutoCAD in a way not known without a test. No CE line explains it.
+
+**Expected behaviour:** A plain line naming the frozen or off layer before the point is asked.
+
+**Steps to confirm in AutoCAD:** (1) On a copy freeze the support layer. (2) Run C1 and place a support. Right = a line naming the layer. Wrong = no line (note what AutoCAD does).
+
+**Test that catches it:** Fixture: frozen support layer; assert a message names it.
+
+**Reference:** Commands\SupportBlockCommands.cs (no layer-state call found in the insert path); footing tools use HiddenLayerLine for comparison. Related BUG-1047 (CE Blocks). Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1424 — STRSCHEDCREATE on a layout tab or in REFEDIT still puts the tables in Model space at the point clicked on the sheet
+
+**Command / Area:** STRSCHEDCREATE (Create Schedules). MEDIUM. WRONG ANSWER, tables in the wrong place.
+
+**Symptom:** STRSCHEDCREATE uses the plain pre-flight. On a layout tab or during REFEDIT it asks for the insertion point, then adds all three tables to Model space at the sheet coordinates, far from the plan. Hunt item 9 (19 Oct) never got a bug number.
+
+**Expected behaviour:** A plain stop line on a layout tab or in REFEDIT, nothing drawn.
+
+**Steps to confirm in AutoCAD:** (1) On a copy open a layout tab and run STRSCHEDCREATE. Right = a Model space line and nothing drawn. Wrong = three tables in Model space.
+
+**Test that catches it:** Source guard: STRSCHEDCREATE calls CommandPreFlightModelSpace.
+
+**Reference:** Services\ScheduleService.cs:193 (CommandPreFlight) and 210-221 (point used, tables written to Model space). Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1425 — In a rotated UCS the schedule tables land away from the point clicked
+
+**Command / Area:** STRSCHEDCREATE (Create Schedules). MEDIUM. WRONG ANSWER, tables in the wrong place.
+
+**Symptom:** The click is used as a World point though AutoCAD returns it in the current UCS, so with a turned UCS the tables land away from the click.
+
+**Expected behaviour:** The click is converted to World first.
+
+**Steps to confirm in AutoCAD:** (1) On a copy rotate the UCS 30 degrees. (2) Run STRSCHEDCREATE and click an empty spot. Right = the table's corner is at the click. Wrong = it is somewhere else.
+
+**Test that catches it:** Fixture: rotated UCS; assert the table position equals the World click.
+
+**Reference:** Services\ScheduleService.cs:210, 221, 228. Related BUG-467 (same fault in BT1, R1, FPFC). Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1426 — A second STRSCHEDCREATE adds three more tables and leaves the first three out of date
+
+**Command / Area:** STRSCHEDCREATE (Create Schedules). MEDIUM. WRONG ANSWER, an out-of-date schedule left looking current. Engineering judgement: Tim.
+
+**Symptom:** The update-on-rerun switch ships off and has no Settings box, so each run places three new tables and leaves the earlier three showing old braces, piers and tie-downs. Two tables of the same kind then disagree, and the old one looks current.
+
+**Expected behaviour:** A rerun updates the existing tables, or says that earlier tables are out of date and where they are.
+
+**Steps to confirm in AutoCAD:** (1) On a copy run STRSCHEDCREATE, add a brace, run it again. Right = the first set is updated or a line names it as out of date. Wrong = two sets, the first one not updated, no line.
+
+**Test that catches it:** Fixture: two runs; assert one set or a message.
+
+**Reference:** Core\ScheduleSetPlan.cs:34-35; Models\UserSettings.cs:2134-2136 (UpdateExistingOnRerun false); Services\ScheduleService.cs:198-208. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1427 — The schedule tables sit on whatever layer is current, because CE sets none
+
+**Command / Area:** STRSCHEDCREATE (Create Schedules). LOW. LOOK.
+
+**Symptom:** The three tables are added without a layer, so they take the current layer (maybe a hatch, text or locked-adjacent layer) and may not plot with the schedules.
+
+**Expected behaviour:** A named schedule layer, or a line saying which layer was used.
+
+**Steps to confirm in AutoCAD:** (1) On a copy make layer TEST current and run STRSCHEDCREATE. Right = tables on a schedule layer. Wrong = tables on TEST.
+
+**Test that catches it:** Fixture: current layer TEST; assert the table layer.
+
+**Reference:** Services\ScheduleService.cs:382-474 (no Layer set on the table). Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1428 — The bracing table's ROTATION column ignores AutoCAD ROTATE on a brace and shows the block's own setting
+
+**Command / Area:** STRSCHEDCREATE, STRSCHEDREFRESH (bracing table). MEDIUM. WRONG ANSWER, wrong angle shown. Engineering judgement: Tim.
+
+**Symptom:** The schedule reads the block's dynamic ROTATION value and uses the object's own rotation only when that value is near zero. A brace the drafter turned with ROTATE shows the wrong angle in the table. Hunt item BRACE-02.
+
+**Expected behaviour:** The table shows the angle the brace is drawn at.
+
+**Steps to confirm in AutoCAD:** (1) On a copy place an AB brace and ROTATE it 30 degrees. (2) Run STRSCHEDCREATE. Right = the angle matches Properties. Wrong = it shows the block's setting.
+
+**Test that catches it:** Fixture: ROTATEd brace; assert the table angle equals the drawn angle.
+
+**Reference:** Services\ProjectDataService.cs:322-326. Related: the sync turn again fault filed from the same lines. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1429 — Help for the three schedule commands lists "Command-specific utility prompts" and describes them as "Create Schedule."
+
+**Command / Area:** STRSCHEDCREATE, STRSCHEDREFRESH, STRSCHEDSYNC, Help. LOW. WORDING.
+
+**Symptom:** The Help list names no steps, only "Command-specific utility prompts", and gives one-line descriptions that do not say what each command changes.
+
+**Expected behaviour:** Each says what it asks and what it changes.
+
+**Steps to confirm in AutoCAD:** (1) CEHELP, find STRSCHEDSYNC. Right = it says it writes edits from the table back to the braces. Wrong = "utility prompts".
+
+**Test that catches it:** Source guard: no placeholder prompt text in the registry.
+
+**Reference:** Assets\Config\command-registry.json:1941-1943, 1959-1961, 1977-1979. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1430 — STRSCHEDREFRESH on a table CE did not make does nothing and prints nothing
+
+**Command / Area:** STRSCHEDREFRESH (refresh a schedule table). LOW. WORDING, silent no-op.
+
+**Symptom:** Picking a table that is not one of CE's schedules ends the command with no line.
+
+**Expected behaviour:** "That table is not a CE schedule. Nothing changed."
+
+**Steps to confirm in AutoCAD:** (1) Draw a plain AutoCAD table, run STRSCHEDREFRESH, pick it. Right = a line. Wrong = nothing.
+
+**Test that catches it:** Fixture: foreign table; assert a message.
+
+**Reference:** Services\ScheduleService.cs:328-331; Commands\UtilityCommands.cs:83. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1431 — STRSCHEDREFRESH re-sorts a schedule the drafter sorted by hand
+
+**Command / Area:** STRSCHEDREFRESH (refresh a schedule table). LOW. LOST WORK.
+
+**Symptom:** Rows follow the order CE finds blocks. A table the drafter ordered by hand is put back in CE's order on refresh.
+
+**Expected behaviour:** Refresh keeps the row order, or says rows were re-sorted.
+
+**Steps to confirm in AutoCAD:** (1) Swap two rows in the bracing table by hand. (2) Run STRSCHEDREFRESH. Right = the order is kept. Wrong = back to CE's order.
+
+**Test that catches it:** Fixture: swapped rows; assert order after refresh.
+
+**Reference:** Services\ProjectDataService.cs:268-308; Services\ScheduleService.cs:692-696. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1432 — STRSCHEDREFRESH is marked expert, so CEHELP hides it until "Show advanced commands" is ticked
+
+**Command / Area:** STRSCHEDREFRESH, CEHELP. LOW. DISCOVERY.
+
+**Symptom:** A drafter looking in CEHELP for the schedule refresh does not find it.
+
+**Expected behaviour:** It is shown with STRSCHEDCREATE and STRSCHEDSYNC.
+
+**Steps to confirm in AutoCAD:** (1) Open CEHELP with advanced commands off and look for STRSCHEDREFRESH. Right = listed. Wrong = missing.
+
+**Test that catches it:** Source guard: schedule commands share the expert flag.
+
+**Reference:** Assets\Config\command-registry.json:1965; UI\Dialogs\CommandHelpWindow.xaml.cs:47 and 71. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1433 — An old three-column pier table gets no MARK or DIA MM column on refresh and nothing says so
+
+**Command / Area:** STRSCHEDREFRESH (Bored Pier Schedule). LOW. WRONG ANSWER, columns silently absent.
+
+**Symptom:** A bored pier table made before MARK and DIA MM existed is refreshed with its three old columns and gets neither new column, and no line says why.
+
+**Expected behaviour:** A line says the old table has no MARK or DIA MM and offers to create a new one.
+
+**Steps to confirm in AutoCAD:** (1) Open a drawing with an old three-column pier table and run STRSCHEDREFRESH. Right = a line. Wrong = no line, no new columns.
+
+**Test that catches it:** Fixture: three-column table; assert a message.
+
+**Reference:** Services\ScheduleService.cs:512-537 and 557-561. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1434 — STRSCHEDSYNC on an erased brace or a locked brace layer gives AutoCAD's own error and nothing is synced
+
+**Command / Area:** STRSCHEDSYNC. MEDIUM. WRONG ANSWER, edits lost with an error window.
+
+**Symptom:** The sync opens each brace for writing with no catch. One erased brace, or one brace on a locked layer, makes AutoCAD show its own error and the whole transaction is dropped, so no edit in the table reaches any brace. Hunt item BRACE-03.
+
+**Expected behaviour:** The erased or locked brace is skipped with a line naming it, and the rest are synced.
+
+**Steps to confirm in AutoCAD:** (1) On a copy erase one brace after STRSCHEDCREATE, edit another row, run STRSCHEDSYNC. Right = a line naming the missing brace and the other edit applied. Wrong = an error and no edit applied.
+
+**Test that catches it:** Fixture: one erased handle; assert the other rows sync.
+
+**Reference:** Services\ScheduleService.cs:732-735 and 780-783; Commands\UtilityCommands.cs:92-96 (no catch). Related BUG-583. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1435 — Typing B over A in the bracing table changes the type text only; the brace stays on the A layer and plots as A
+
+**Command / Area:** STRSCHEDSYNC. MEDIUM. WRONG ANSWER, schedule and drawing disagree. Engineering judgement: Tim.
+
+**Symptom:** The sync sets the brace's type attribute but not its layer. The schedule says B and the drawing plots the brace as A (layer WALL BRACING TYPE A, colour of A). Hunt item SCHED-09.
+
+**Expected behaviour:** The sync switches the brace as ABS does, or refuses a type change and says so.
+
+**Steps to confirm in AutoCAD:** (1) On a copy type B over an A row, run STRSCHEDSYNC. Right = the brace is on the B layer or a line says it cannot be changed here. Wrong = type B, layer A.
+
+**Test that catches it:** Fixture: type edit; assert layer equals the type's layer.
+
+**Reference:** Services\ScheduleService.cs:742-743 (SetAttributeValue only). Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1436 — STRSCHEDSYNC says nothing about values it skipped
+
+**Command / Area:** STRSCHEDSYNC. MEDIUM. WRONG ANSWER, edit did not reach the drawing and no line. Engineering judgement: Tim.
+
+**Symptom:** A cell that is not a number, or a block that refuses the value, is skipped silently. The drafter believes the edit reached the brace.
+
+**Expected behaviour:** A count and list of cells that were not written.
+
+**Steps to confirm in AutoCAD:** (1) On a copy type "abc" in a LENGTH cell and run STRSCHEDSYNC. Right = a line naming the cell. Wrong = no line.
+
+**Test that catches it:** Fixture: bad cell; assert a skipped list.
+
+**Reference:** Services\ScheduleService.cs:745-754; Services\BlockReferenceHelpers.cs:79-84. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1437 — Edits to the tie-down table and typed pier MARK or DIA MM go nowhere with STRSCHEDSYNC and nothing says so
+
+**Command / Area:** STRSCHEDSYNC. LOW. WRONG ANSWER, edit did not reach the drawing and no line. Engineering judgement: Tim.
+
+**Symptom:** Only the bracing table and the pier VISIBILITY column are written back. Edits to the tie-down table or to a pier's MARK or DIA MM are ignored without a line.
+
+**Expected behaviour:** A line says which tables and columns the sync can write.
+
+**Steps to confirm in AutoCAD:** (1) On a copy change a pier's MARK in the table and run STRSCHEDSYNC. Right = a line saying MARK is not synced. Wrong = no line, pier unchanged.
+
+**Test that catches it:** Fixture: typed MARK; assert a message.
+
+**Reference:** Services\ScheduleService.cs:369-376 and 762-766; Services\BlockReferenceHelpers.cs:66. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
