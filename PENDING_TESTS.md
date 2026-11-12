@@ -1,5 +1,19 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+### Trust plan queue item 7, a cancelled command writes nothing — 13 November 2026 (Built and unit-tested only; NOT installed; the switch ships OFF; robot and Codex to run on COPIES)
+
+PR 2064 (DRAFT, never merged by the run), branch `claude/trust-09-cancel-writes-nothing`, on step 6 plus the headless checks. Setting: `trust.cancelledCommandWritesNothing` (OFF; set it to true in `CD_Settings.json` for these cases and put it back after). Every case starts from a FRESHLY OPENED copy and compares the whole stored CE record text, the drawing's object count and the Undo list. Use a copy whose record is in an older format as well as a current one.
+
+1. **Core console first:** `CEPROOFTRUSTCANCEL` (TRUST-CANCEL-01). Right = PASS, and its detail line shows the faulty version (switch off) was noticed.
+2. **Switch off:** every case below behaves as the installed build (a cancelled PIT rewrites the record). This is the comparison run.
+3. **Esc at the first question, switch on, one tool per fresh copy:** PIT, CD (Esc at the first point, and Cancel in the New Pipe window), CDFW, CDAGI, CDSTRIP, CDRUNSOLVE, DP, IO, OF, FO, GIO, CDTG, CDSL, CDWT, Edit Pit (Cancel), Edit Pipe (Cancel). Right = stored record identical, character for character; no new Undo step named after the tool; closing the drawing asks nothing.
+4. **Help and CD Settings in a second drawing:** copy A open, run any CE tool in it; open copy B (a blank drawing, then a different job); type CDHELP and close it; type CDS and close it. Right = B's CE store is exactly as it was (a blank drawing still has none; another job still has its own pits). Switch off on the installed build: record what B holds afterwards (the review expects A's record in B).
+5. **A real change is still written, and still one U:** PIT placed properly; Edit Pit with a changed cover level, OK; CD drawing a pipe. Right = the record changes, one U puts the record and the drawing back together.
+6. **A brand new drawing:** PIT, Esc at the first question. Right = the drawing holds no CE store at all afterwards. PIT placed properly: the drawing is marked Civil and the record holds the pit; reopen: the opening line counts it.
+7. **A drawing with a stray line on the pipe layer (the record really is behind):** PIT, Cancel. Right (said plainly, NOT fixed by this item) = the record may still change, and step 5's "CE updated its record" line says what changed.
+8. **Old job, record in an older format:** open, run CDFW, Esc. Right = the stored record keeps its older format and no identities are added. Then place one floor waste: the record is written in today's format with the identities.
+9. **Two drawings, work waiting in the first:** change a pit in A (Edit Pit, OK), switch to B, run a CE tool. Right = A's change is in A's record (never lost, never in B).
+
 ### Trust plan step 7, the LPD as the one stored start point (TRUST-07, DRAFT card) — 13 November 2026 (Built and unit-tested only; NOT installed; the switch ships ON; robot and Codex to run on COPIES)
 
 PR 2058 (DRAFT, never merged by the run), branch `claude/trust-07-lpd-start-point`, stacked on step 6. Setting: `trust.toolsStartFromConfirmedLpd` (ON). Full case set: `areas\trust-run\cases\TRUST-07.md`. Existing robot scripts for CDRENUMBER and CDRUNSOLVE meet ONE NEW QUESTION on a drawing with an LPD; answer it or switch the setting off.
