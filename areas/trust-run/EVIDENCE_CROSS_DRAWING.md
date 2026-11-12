@@ -42,3 +42,29 @@
 8. **Not proven:** saving the contaminated drawing (I never saved); what exactly a later CE tool does with the wrong record; the dependence on what ran in the previous drawing (my best reading: the first CE command that ends a drawing's use binds the record, and CDHELP and CDS write the record held in memory at their end without first binding it to the current drawing, as the reviewer thought; the drawing pair that shows it needs a CE command like CDDIAG to have run in the first drawing). I also did not run the Edit Pit, Pit Schedule or Project Review windows in a contaminated drawing.
 9. **What I did not do:** change any setting; touch anything but copies under `C:\CE_WORK\scratch\trustprobe\TRUST_VERIFY` (copies named CLDTP_X*.dwg); send anything anywhere.
 10. **Files:** `C:\CE_WORK\scratch\trustprobe\ab\cross*.txt` (the run transcripts), `reads\X*` (the record dumps).
+
+---
+
+# PART 2 (13 Nov, 05:40 to 06:10): what is left in a contaminated drawing, and can Tim get his own data back
+
+**Same build and rules as above** (installed Civil 3.0.90, real AutoCAD 2027, copies in `C:\CE_WORK\scratch\trustprobe\TRUST_VERIFY`, saved only under a NEW name in that folder). The AutoCAD used is mine (started 05:41) and I close it before 08:10.
+
+## FOR TIM
+
+1. **If you save the drawing after the mix-up, the other job's data is saved inside it.** I made it happen on a copy of an older job (2 pits, 46 pipes): after Help, its stored record read 11 pits and 49 pipes (the standard drawing's). I saved that copy under a new name, closed it, reopened it.
+2. **The reopened drawing gives no warning.** The "changed" counter reads 0, so nothing asks to save, and CE's opening messages say nothing different.
+3. **The Pit Schedule then lists the OTHER job.** The window showed rows for P1 to P7 and the water tanks WT1 to WT12 (17 rows; "Pit P1, pipe from AGIs", "Pit P2, pipe from WT1" and so on). The same job, untouched, shows one row. A schedule printed for council from that drawing would carry another job's pits.
+4. **CDCHECKCURRENT says 82 items need checking, against 48 on the untouched copy.** A person could read that as a messy job, not as a mix-up.
+5. **Tim's own data is recoverable, in two ways I tested:**
+   1. **One U, straight after the Help window closes, puts the drawing's own record back exactly** (37,921 characters, 2 pits and 46 pipes). The record write shows in AutoCAD's undo list as "CDHELP". So if you notice at once, U fixes it.
+   2. **The unsaved original file is untouched.** The drawing I saved under a new name left the file it came from exactly as it was (same fingerprint as the original). If you had used Save instead of Save As, the plain Save would have replaced that file; I did not test AutoCAD's .bak copy.
+6. **After saving, nothing inside the saved file says which job it really was.** The stored file path inside the record names the other drawing (for example "the standard drawing's file name"), which is the only clue.
+7. **It is state dependent, as before:** it happened only when the first thing run in the second drawing was Help or Settings, with CE holding the other drawing's record in memory.
+
+## DETAIL
+
+1. **U right after the mix-up (2 pits and 46 pipes, then 11 and 49, then back):** B opened with 37,921 characters (2/46). CDHELP then close: 247,604 characters, path = the other drawing, 11/49. One U (undo list names "CDHELP"): 37,921 characters, 2/46, record text identical to the opening one. Changed counter 1 throughout (opening marks it changed already).
+2. **A second try gave no mix-up:** after that U and some other work CE's memory no longer held the standard drawing's record, so CDHELP kept B's own record (2/46, path rebound). That is the state dependence, not a different behaviour; to repeat it I reran CDDIAG in the standard drawing first and opened a fresh copy of B: mix-up again (2/46 to 11/49).
+3. **Saved copy, reopened:** record 247,604 characters, 11 pits, 49 pipes, path = the standard drawing's copy; changed counter 0; 1,285 drawn objects (B's own, unchanged). CE's open-time line: "0 pipe(s) upgraded to CE pipe objects, 1 left as drawn" (the baseline says "19 left as drawn": the contaminated record changes what CE thinks needs upgrading). CDCHECKCURRENT: "82 items need checking" (baseline 48).
+4. **Pit Schedule, contaminated reopened copy:** window with 17 data rows; names include 'Pit P1', 'Pit P1, pipe from AGIs', 'Pit P2', 'Pit P2, pipe from WT1/WT2/WT11'; pit-looking texts P1 to P7 and WT1 to WT12. **Baseline (same job, untouched):** 1 row, 'Pit P1'. The record dump after the window closed was unchanged (the window did not rewrite it). Window dumps: `C:\CE_WORK\scratch\trustprobe\ab\ps_contaminated.txt` and `ps_baseline.txt`.
+5. **What I did not do:** a plain Save over a copy to see AutoCAD's .bak; Edit Pit or Pit Schedule edits in the contaminated drawing; a print or export from it.
