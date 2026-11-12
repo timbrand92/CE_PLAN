@@ -103,3 +103,18 @@ Each line: seen to pass, seen to fail, or could not be run (BLOCKED means this b
 3. 2064 `CEPROOFTRUSTCANCEL`, `CEPROOFTRUSTESC`, `CEPROOFTRUSTOPEN`, `CEPROOFTRUSTREADONLY`, `CEPROOFTRUSTUPDATE`, `CEPROOFTRUSTUNKNOWN`, `CEPROOFPITLABEL`: PASS each. CANCEL faulty half: "drawing objects: 7 changed, 1 added, 0 erased"; READONLY faulty half: "23 changed, 5 added".
 4. 2045 (`d0cf644c`): OPEN, READONLY, UPDATE PASS; UNKNOWN BLOCKED ("CE's TrustSettings has no ShowUnknownInsteadOfGuess"). 2049 (`98d81717`): OPEN, READONLY, UPDATE, UNKNOWN all PASS. 2041 (`31f426ab`): OPEN PASS; READONLY BLOCKED (no ReadOnlyToolLegacyUpdate); UPDATE BLOCKED (no ProjectDataService.LastRecordUpdate); UNKNOWN BLOCKED (no ShowUnknownInsteadOfGuess).
 5. The older-head runs use the harness from PR 2050's head (`03af5393`, the probe) with each head's own Civil build, as the foundations lane planned.
+
+---
+
+# I. PR 2083 rerun at the fixed check, head `8a6decef` (13 Nov 09:06, PC clock; core console, nothing installed)
+
+**FOR TIM**
+
+1. **PR 2083's change-door check now PASSES.** While CE held another drawing's record, adding a pit, changing a pipe's ends and clearing everything all left the record alone. A change made with no check was noticed. And with the record the drawing's own, the pit was added. Seen to pass.
+2. **Its cross-drawing check also passes again** (CEPROOFCROSSDRAWING).
+3. **The earlier FAIL was the check's own fault** (a stale list); the fix is one test-tooling file, no plugin code.
+
+**DETAIL**
+
+1. Build: `claude/bug-1456b-record-change-door` at `8a6decef`, 0 errors. First rebuild attempt failed on an empty placeholder file my own tidy-up had removed (`CE_TRANSFORM_2027.arx`, a build copy step), not on the change; recreated and rebuilt.
+2. Result lines: `PASS BUG-1456-CROSS-02` and `PASS BUG-1456-CROSS-01`. I did not keep the per-step pit counts (the evidence folder was cleared with my temp runs); the PASS line is the check's own verdict.
