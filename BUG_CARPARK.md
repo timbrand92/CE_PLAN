@@ -21213,7 +21213,7 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
 
-**Note 2026-11-13 (lane trust-core-ribbon):** draft fix in pull request 2074: CLEAN and FASTSAVE stop first on a read-only drawing, a layout tab or REFEDIT with one plain line (so CLEAN no longer runs from a layout tab). Built and unit-tested only; not seen in AutoCAD. Status unchanged.
+**Note 2026-11-13 (lane trust-core-ribbon):** draft fix in pull request 2074: CLEAN and FASTSAVE stop first on a read-only drawing or REFEDIT with one plain line. The layout-tab stop was dropped after review (Tim types CLEAN and expects it to save wherever he is), so CLEAN still runs from a layout tab; whether it should be refused there is a question for Tim. Built and unit-tested only; not seen in AutoCAD. Status unchanged.
 
 **Status:** OPEN
 

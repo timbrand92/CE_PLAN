@@ -226,7 +226,7 @@ None of these faults has been seen in AutoCAD; test on a COPY (a made-up Structu
 1. **BUG-1361 (PR 2071), bracing table sync:** draw a flat brace (Enter at the angle) and ROTATE it 30 degrees; place a second brace. STRSCHEDCREATE, note each brace's length and angle with LIST, run STRSCHEDSYNC without editing. Right looks like: both braces identical to before. Then type a new length in one cell and sync: only that brace's length changes.
 2. **BUG-1435 (PR 2072), B over A:** with an A brace in the table, type B over its row and run STRSCHEDSYNC. Right looks like: a plain line saying the type cannot be changed from the table and to use ABS; the brace still on layer A and plotting as A.
 3. **BUG-1439 (PR 2074), locked layer:** lock a layer that holds text, run CLEAN. Right looks like: the text step completes and says how many objects on locked layers were left alone; nothing unlocked; no AutoCAD error word.
-4. **BUG-1442 (PR 2074):** run CLEAN on a read-only copy and inside REFEDIT. Right looks like: one plain stop line and nothing purged or saved. Note: CLEAN now also stops on a layout tab.
+4. **BUG-1442 (PR 2074):** run CLEAN on a read-only copy and inside REFEDIT. Right looks like: one plain stop line and nothing purged or saved. Note: CLEAN does NOT stop on a layout tab (dropped 13 Nov after review; it still cleans and saves there). Test: on a layout tab CLEAN runs and saves as before. Question for Tim: should it be refused there?
 5. **BUG-1447 (PR 2074):** save, then run CLEAN. Right looks like: after "saved", a line saying CE kept no copy from before, and what .bak file is or is not beside the drawing (named with its time, called AutoCAD's own).
 6. **Not covered:** AutoCAD 2022 to 2026; a real pre-clean copy (not made, Tim's decision).
 
