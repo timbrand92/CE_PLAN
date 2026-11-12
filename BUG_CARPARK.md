@@ -20536,3 +20536,273 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
 
 **Status:** OPEN
+
+## BUG-1408 — Support switch commands do not check that the size change took, so the layer and position change even if the block keeps its old size
+
+**Command / Area:** SDS, SDS1, STS1, SC1, SC2 (support switch commands). MEDIUM. WRONG ANSWER, size not changed but everything else is. Engineering judgement: Tim.
+
+**Symptom:** The switch sets the new size, then moves the block and changes its layer without reading whether the size took. On an outdated support block (SC2 for example) the block keeps its old size but lands on the new layer at the new position, so the drawing looks switched and is not.
+
+**Expected behaviour:** If the size change fails the command leaves the support as it was and says so.
+
+**Steps to confirm in AutoCAD:** (1) On a copy use a support block missing the target size and run SC2. Right = a line, support unchanged. Wrong = layer and position changed, size unchanged.
+
+**Test that catches it:** Fixture: block without the target visibility state; assert layer and position unchanged.
+
+**Reference:** Commands\SupportBlockCommands.cs:567-572 (SetDynamicVisibility result not read). Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1409 — Support switch commands have no layout tab, REFEDIT or non-millimetre check
+
+**Command / Area:** SDS, SDS1, STS1, SC1, SC2 (support switch commands). MEDIUM. PROTECTION and UNITS.
+
+**Symptom:** The insert tools (C1, DS and the rest) stop on a layout tab, in REFEDIT or in a non-millimetre drawing. The switch commands use the plain pre-flight, so they run there and move supports and labels by millimetre amounts in other units.
+
+**Expected behaviour:** The switches stop with the same plain lines as the insert tools.
+
+**Steps to confirm in AutoCAD:** (1) On a copy in a metre drawing run SC1 on a support. Right = a units line. Wrong = the support moves by millimetre amounts in metres. (2) Repeat on a layout tab.
+
+**Test that catches it:** Source guard: SwitchSupportBlock calls CommandPreFlightModelSpace and the units hold.
+
+**Reference:** Commands\SupportBlockCommands.cs:469 against 215-216. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1410 — Switching a support with a label on a locked text layer draws the label again on top of the old one
+
+**Command / Area:** SDS, SDS1, STS1, SC1, SC2 (support switch commands). MEDIUM. WRONG ANSWER, two labels stacked.
+
+**Symptom:** The switch erases the support's side labels and redraws them. A label on a locked text layer cannot be erased, and the failure is ignored, so the label is drawn again and two labels sit on top of each other. The new label is also not turned with the support.
+
+**Expected behaviour:** A locked label is left alone and said so, with no second copy drawn.
+
+**Steps to confirm in AutoCAD:** (1) On a copy lock the support text layer. (2) Run SDS on a support with a label. Right = a line naming the locked layer and one label. Wrong = two overlapping labels.
+
+**Test that catches it:** Fixture: locked label layer; assert the label count is unchanged after the switch.
+
+**Reference:** Commands\SupportBlockCommands.cs:1905-1924 (catch at 1919 ignores erase failures), 1926-1987 (labels recreated), 737-748. Related BUG-424. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1411 — After a support switch the redrawn labels are not recorded as the support's own, so they stop following it when it moves
+
+**Command / Area:** SDS, SDS1, STS1, SC1, SC2 (support switch commands). MEDIUM. WRONG ANSWER, labels left behind on a move.
+
+**Symptom:** A new support's label is recorded against it so it follows when the support is moved. The switch redraws the labels but does not record them, so after a switch MOVE of the support leaves its labels behind.
+
+**Expected behaviour:** The redrawn labels are recorded as the support's own.
+
+**Steps to confirm in AutoCAD:** (1) On a copy place C1 with a label, switch it with SDS, then MOVE the support. Right = the label follows. Wrong = the label stays.
+
+**Test that catches it:** Fixture: switch then move; assert the label moves with it.
+
+**Reference:** Commands\SupportBlockCommands.cs:466-627 (RecordSupportLabel is called only at 376 in the insert); Services\BeamLinkService.SupportLabel.cs:111-122. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1412 — In a support switch the block turns about its insertion corner while its labels turn about its centre
+
+**Command / Area:** SDS, SDS1, STS1, SC1, SC2 (support switch commands). LOW. LOOK.
+
+**Symptom:** The rotation preview sets the block's own rotation (about its insertion point) while the labels are turned about the computed centre of the support, so after a turn the labels end up a few tens of millimetres from where they were. By reading the code; not seen.
+
+**Expected behaviour:** Block and labels turn about the same point.
+
+**Steps to confirm in AutoCAD:** (1) Switch a support and turn it 90 degrees at the preview. Right = labels keep the same gap to the support. Wrong = the gap changes.
+
+**Test that catches it:** Fixture: measure label offset before and after a 90-degree turn.
+
+**Reference:** Services\SupportBlockJig.cs:94-99 (br.Rotation set); Commands\SupportBlockCommands.cs:700 and 732 (labels rotated about basePointWcs). Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1413 — A label carried across a support switch keeps its old wording and layer, so a column can read "DS3"
+
+**Command / Area:** SDS, SDS1, STS1, SC1, SC2 (support switch commands). LOW. WRONG ANSWER, label does not match the support. Engineering judgement: Tim.
+
+**Symptom:** Labels are recreated with their old contents and layer. A support switched from a stud to a column can still be labelled "DS3", and SDS prints nothing about carrying labels.
+
+**Expected behaviour:** A line says labels were carried and may need renaming, or the prefix follows the new type.
+
+**Steps to confirm in AutoCAD:** (1) Switch a labelled DS support to a column with SC1. Right = a line about the labels or a new mark. Wrong = the old mark stays with no line.
+
+**Test that catches it:** Fixture: switch type; assert the label prefix or a message.
+
+**Reference:** Commands\SupportBlockCommands.cs:1926-1987 and 609-618 (the carried-label line prints only when the switch has text commands). Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1414 — "Support linked to nearby beam" can print when the link was not saved
+
+**Command / Area:** C1, C2, DS, DS1, TS1 (support blocks). MEDIUM. WRONG ANSWER, success overstated.
+
+**Symptom:** The line "[CE] Support linked to nearby beam." is printed when a beam is found and the link routine returns true. The write of the link is inside a catch that only logs, so if saving the link fails the line still says linked. A later move of the beam then does not carry the support.
+
+**Expected behaviour:** The line is printed only when the link was saved.
+
+**Steps to confirm in AutoCAD:** (1) On a copy make the beam entity read-only for the CE record (lock its layer) and place C1 beside it. Right = a line saying the link was not saved. Wrong = "Support linked".
+
+**Test that catches it:** Fixture: failing WriteBeamLinkData; assert the result is false.
+
+**Reference:** Services\BeamLinkService.cs:50-90, 130-148 and 419-421 (returns true after RegisterAttachment); Services\BeamLinkService.Persistence.cs:52-65 (WriteBeamLinkData catches and logs); Commands\SupportBlockCommands.cs:423-430. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1415 — The remembered label text for support tools carries from one drawing to the next in the same AutoCAD session
+
+**Command / Area:** C1, C2, DS1, TS1 and the label step of SDS1, STS1, SC1, SC2. LOW. WRONG ANSWER, text from another job offered.
+
+**Symptom:** The text offered when the drafter presses Enter at the label question is kept in a list shared by every open drawing. After working on one job the next job offers the first job's text.
+
+**Expected behaviour:** The remembered text is kept per drawing.
+
+**Steps to confirm in AutoCAD:** (1) Place C1 with text C5 in drawing A. Open drawing B and run C1, press Enter at the text question. Right = nothing offered. Wrong = C5 is offered.
+
+**Test that catches it:** Unit: LastTextByCommand is keyed by drawing.
+
+**Reference:** Services\CeTextService.cs:23 (static LastTextByCommand), 1988-2016, 5523-5542 (the per-drawing FstCacheByDrawing exists for another feature). Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1416 — Support label height 200, the 45 degree label turn, the 260 label search radius and the support colours are fixed in the code
+
+**Command / Area:** C1, C2, DS, DS1, TS1 and the support switches. LOW. SETTINGS (Settings-first rule R-00). Engineering judgement: Tim.
+
+**Symptom:** Label height 200, the 45 degree label turn, the 260 mm radius for finding a support's labels, the support and label layers and colours, and the size-to-width table are written into the code. BUG-537 names only the sizes. A drafter cannot see or change these.
+
+**Expected behaviour:** Each is a named Settings value.
+
+**Steps to confirm in AutoCAD:** (1) Open CESETTINGS and look for the support label height and search radius. Right = both there. Wrong = neither.
+
+**Test that catches it:** Source guard: no literal 200, 45.0 or 260.0 in the support label path.
+
+**Reference:** Services\CeTextService.cs:680-721; Commands\SupportBlockCommands.cs:66-70, 562, 1602-1655. Related BUG-537. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1417 — A member schedule saved with every row left out does not replace the old schedule, so the old sizes keep being used
+
+**Command / Area:** C1, C2, DS, DS1, TS1 (support blocks), XCLMTXT (member schedule snapshot). LOW. WRONG ANSWER, old sizes kept. Engineering judgement: Tim.
+
+**Symptom:** When the schedule snapshot has no rows (every row left out), it returns without writing, so the old schedule stays in the drawing and the support tools keep using its sizes.
+
+**Expected behaviour:** An empty schedule replaces the old one, or a line says the old one was kept.
+
+**Steps to confirm in AutoCAD:** (1) Save a schedule, then save one with every row left out. Place DS1. Right = the default size or a line. Wrong = the first schedule's size.
+
+**Test that catches it:** Fixture: empty snapshot; assert the stored schedule is cleared or a message is printed.
+
+**Reference:** Services\XclmTxtService.cs:329-332. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1418 — Only C2 checks that the support block in the drawing is the current one
+
+**Command / Area:** C1, DS, DS1, TS1 and the support switches. LOW. WRONG ANSWER, an outdated block used silently.
+
+**Symptom:** C2 upgrades or checks its block against the approved definition. The other support tools use whatever block of that name is in the drawing, so an old copy with fewer sizes is used with no line.
+
+**Expected behaviour:** Every support tool checks the block against the approved definition.
+
+**Steps to confirm in AutoCAD:** (1) On a copy use a drawing holding an old support block and run DS1. Right = a line or an upgrade. Wrong = placed from the old block.
+
+**Test that catches it:** Fixture: old block definition; assert the check runs for every support command.
+
+**Reference:** Commands\SupportBlockCommands.cs:1327-1328 (the check runs only when requireApprovedC2Definition). Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1419 — The first C2 placement can print AutoCAD's "Duplicate definition of block _Dot ignored"
+
+**Command / Area:** C2 (support block). LOW. WORDING, noise.
+
+**Symptom:** C2 loads its block by inserting from the approved file. The C1 route uses a quiet read that suppresses AutoCAD's line "Duplicate definition of block _Dot ignored"; C2 does not, so the line can appear.
+
+**Expected behaviour:** No such line.
+
+**Steps to confirm in AutoCAD:** (1) On a new copy run C2 once. Right = no duplicate line. Wrong = "Duplicate definition of block _Dot ignored".
+
+**Test that catches it:** Source guard: both routes load blocks through QuietBlockRead.
+
+**Reference:** Commands\SupportBlockDefinitionUpgradeService.cs:83, 216, 318; Commands\SupportBlockCommands.cs:1357; Services\QuietBlockRead.cs:8. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1420 — If the C2 support block cannot be loaded the screen shows the raw error text
+
+**Command / Area:** C2 (support block). LOW. WORDING.
+
+**Symptom:** The line reads "Bundled approved support asset could not be loaded: <error text>", with AutoCAD's raw error.
+
+**Expected behaviour:** A plain line: "CE could not load its support block file. Check the CE install, then try again."
+
+**Steps to confirm in AutoCAD:** (1) Rename the approved block file on a copy of the install and run C2. Right = a plain line. Wrong = the raw error.
+
+**Test that catches it:** Fixture: missing file; assert the message has no exception text.
+
+**Reference:** Commands\SupportBlockDefinitionUpgradeService.cs:90 and 138. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1421 — With the rotation preview switched off the line says "CE could not turn the support to the wall direction by itself"
+
+**Command / Area:** C1, C2, DS, DS1, TS1 (support blocks). LOW. WORDING, untrue reason.
+
+**Symptom:** Switching the rotation preview off on Settings is a choice, but the fallback prints "CE could not turn the support to the wall direction by itself. Type the rotation angle." as if something failed.
+
+**Expected behaviour:** "Type the rotation angle." with no apology when the preview is off.
+
+**Steps to confirm in AutoCAD:** (1) Turn the rotation preview off on Settings and run C1. Right = just the angle question. Wrong = the line about CE not being able to turn it.
+
+**Test that catches it:** Unit: the fallback reason "rotation-preview-disabled" gives no failure line.
+
+**Reference:** Commands\SupportBlockCommands.cs:770-771 and 842-843. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1422 — Help for DS and the five support switches lists prompts these commands do not ask
+
+**Command / Area:** DS, SDS, SDS1, STS1, SC1, SC2, Help. LOW. WORDING.
+
+**Symptom:** Help for DS lists "Insertion point" and "Text value/orientation"; the switches ask "Select support block:". The listed prompts are not the ones asked.
+
+**Expected behaviour:** Help lists the real prompts.
+
+**Steps to confirm in AutoCAD:** (1) CEHELP for SDS, read the prompts, run SDS. Right = they match. Wrong = they differ.
+
+**Test that catches it:** Source guard: registry prompts match each command's prompts.
+
+**Reference:** Assets\Config\command-registry.json:2769-2787 and 2807-2902. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
