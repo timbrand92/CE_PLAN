@@ -129,6 +129,12 @@ Evidence: Tim's command log on real jobs (`areas\CORE_TICK_LIST_05NOV.md` sectio
 
 Same gate as Civil: card, your approval, built small, robot then Codex on copies, installed with its undo named, about three working days on real jobs, your word. Structural steps start only after the Civil core is accepted, unless you say otherwise (decision 1).
 
+### S0: one line on opening a Structural drawing (read only; card DRAFT `04_REFERENCE\ux-plan\cards\TRUST-S0_STRUCTURAL_OPENING_LINE_CARD_DRAFT_2026-11-13.md`)
+
+1. **Goal, added 13 Nov:** the Structural twin of the Civil opening line. One line says what CE sees (supports, beam ends with no support, braces with no type, schedules that no longer match the plan) and changes nothing.
+2. **Depends on:** nothing; it can run beside S1. It also says when old beam links were converted on opening, until decision 11 moves that out.
+3. **Undo:** a Settings switch. **Risk: LOW.**
+
 ### S1: the Structural tab cut down to the core (layout only)
 
 1. **Goal:** a colleague sees only the core tools, in roof-down order; everything else can still be typed.
