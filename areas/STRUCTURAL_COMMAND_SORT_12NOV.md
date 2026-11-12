@@ -51,7 +51,7 @@ Evidence is thin. It comes from your command log on real jobs (59 days from 3 Ju
 3. **ABS:** switch A and B. (ABSWITCH, STRUCABS are the same tool under other names.)
 4. **CSBRACINGPANEL:** bracing required against provided. Card S4 first.
 5. **STRSCHEDCREATE:** make the bracing, pier and tie-down schedules. Card S4 first (one row short, BUG-497).
-6. **STRSCHEDREFRESH:** refresh a schedule. Card S4 first (erased braces stay, BUG-498). Marked expert today.
+6. **STRSCHEDREFRESH:** refresh a schedule. Card S4 first (erased braces stay, BUG-498). Marked expert today; the core list, not the expert mark, decides (card TRUST-S1 decision 6).
 7. **STRSCHEDSYNC:** push schedule values back to the blocks.
 
 **4. Tools (3)**
@@ -74,7 +74,7 @@ Evidence is thin. It comes from your command log on real jobs (59 days from 3 Ju
 6. **8:** beam settings (expert).
 7. **SUPTEXTAUTO:** support tag placement.
 8. **CE_MEMBERLABEL:** leadered member label.
-9. **SBEAM, SBEAMEDIT:** steel and timber sections. Wait for the crash fix (BUG-1275) and the section list check (BUG-818, 819). CEMEMBER replaces them later.
+9. **SBEAM, SBEAMEDIT:** steel and timber sections. Wait until the 5 Nov crash (BUG-1275) is reproduced on a copy and shown not to happen (a guard exists; the crash is not proven fixed) and the section list check (BUG-818, 819). CEMEMBER replaces them later.
 10. **RCBEAM, RCRECTCOL, RCCIRCCOL:** concrete beam and column sections.
 11. **CEMEMBER:** the SBEAM replacement. Typed only, no window yet.
 12. **CSLEVELCARRY, CSPLANLEVEL, CSLINTELPROPOSE, CSLINTELTABLE, CSFRAMINGLEGEND, CSMEMBERSCHED, CSFLOORSETOUT:** roof-down plan tools. Built, mostly switched off; cards DRAFT.
@@ -139,7 +139,7 @@ Evidence is thin. It comes from your command log on real jobs (59 days from 3 Ju
 4. **BSETLIST and BSETRESET.** Recommended: inside the BSET button, not their own buttons. OPEN.
 5. **Footings in the first colleague release.** Recommended: **none;** footings join last, one tool at a time. Example: a colleague would draft roof to ground with CE and footings by hand for the first weeks. OPEN.
 6. **One hatch button.** Recommended: **CEHATCH on the Tools panel** as the one hatch button (your 25 Sep ruling). Example: the 38 preset codes still work when typed. OPEN.
-7. **SBEAM before CEMEMBER.** Recommended: **typed only** until the crash fix is proven. OPEN.
+7. **SBEAM before CEMEMBER.** Recommended: **typed only** until the 5 Nov crash is reproduced on a copy and shown not to happen. A guard is added; the crash itself is not proven fixed. OPEN.
 8. **Tie-downs, wind class and soil report.** Recommended: **LATER,** each after its own three days. OPEN.
 9. **CESHEETS (sheets and issue).** Recommended: **LATER** until its HIGH fault (BUG-495) is fixed. Example: Publish Issue is the step that goes to the builder. OPEN.
 10. **Anything you use daily that is not in the core.** Write it in. OPEN.

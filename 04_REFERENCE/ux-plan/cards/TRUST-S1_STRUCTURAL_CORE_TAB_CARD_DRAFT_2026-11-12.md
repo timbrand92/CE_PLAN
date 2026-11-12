@@ -17,24 +17,27 @@ P1 and Settings sit in Annotate because nothing says where they belong.
 ```
 
 ```after
-Tab "CE Structural": Roof (R1, P1, BT1) | Floors (beams 1 2 4 5, BDL, BSET,
-DS, DS1, TS1, C1, C2, the five switches, FJ1) | Bracing (AB, BB, A/B switch,
-bracing panel, schedules) | Tools (CLEAN, Help, Settings). 32 buttons.
+Tab "CE Structural", once cards S2 to S4 are in: Roof (R1, P1, BT1) |
+Floors (beams 1 2 4 5, BDL, BSET, DS, DS1, TS1, C1, C2, the five switches, FJ1) |
+Bracing (AB, BB, A/B switch, bracing panel, schedules) | Tools (CLEAN, Help, Settings).
+32 buttons. On the first trial day (decision 3, recommended): 27; BT1, the bracing
+panel and the three schedule tools stay typed only until card S4 is in.
 ```
 
 **What this card does not do:**
 
 1. **It does not stop anyone typing a hidden command.**
-2. **It does not fix any tool.** BT1, the bracing panel and the schedules wait for S4, the support blocks for S3, CLEAN for S2 (decision 3).
+2. **It does not fix any tool.** Which faulty tools wait off the tab is decision 3.
 3. **It does not touch footings.** Footing tools are typed only until each earns its place.
 
 ## Decisions for Tim (read these first)
 
 1. **The button list.** Recommended: the list above (from your command log). OPEN.
 2. **Panel names.** Recommended: Roof, Floors, Bracing, Tools. Example: a new colleague drafting a roof looks left first. OPEN.
-3. **Buttons with open faults** (BT1, bracing panel, schedules, support blocks, CLEAN). Recommended: on the tab only once their S2 to S4 fix is in; until then typed only. Example: a colleague clicks Bracing Schedule and gets a table one row short. OPEN.
+3. **Buttons with open faults.** Recommended: **off the tab until card S4 is in: BT1, the bracing panel, STRSCHEDCREATE, STRSCHEDREFRESH, STRSCHEDSYNC,** because each can overstate bracing or change the wrong pier on a sheet. **On the tab, with the fault written on the tool note: the support blocks and CLEAN,** because they are your most used tools, the support block fault bites only when a member schedule is in the drawing, and CLEAN's fault is its wording. Example: a colleague clicks Bracing Schedule and gets a table one row short; under this they cannot click it until it is fixed. OPEN.
 4. **Beam drop-down:** recommended **yes**, one Beam button with 1, 2, 4, 5 inside, because the numbers mean nothing to a new colleague. OPEN.
 5. **Tab name:** recommended **"CE Structural"**, matching "CE Drainage" and "CE Design". OPEN.
+6. **What decides a button: the core list or the expert mark.** Recommended: **the core list alone.** The expert mark keeps its present meaning (it only hides tools in the palette and Help). Example: STRSCHEDREFRESH is marked expert today but is in the core list, so it is on the tab once card S4 is in. OPEN.
 
 ## 1. What you'd see
 
@@ -57,7 +60,7 @@ bracing panel, schedules) | Tools (CLEAN, Help, Settings). 32 buttons.
 
 1. **"Structural core tab"** (new, off by default): on = the four-panel tab. This is the switch for the trial and the undo.
 2. **The core list** lives in one office file shipped with the release, read by the ribbon and the menu. Office-wide, not per person.
-3. **The expert mark** in the command list starts to mean "never on the core tab". Today the ribbon ignores it (Verified, `Services\RibbonCommandHubService.cs:178`).
+3. **The expert mark is not used for the core tab** (decision 6). Today the ribbon ignores it (Verified, `Services\RibbonCommandHubService.cs:178`); the core list alone decides.
 
 ## 4. What it reuses
 

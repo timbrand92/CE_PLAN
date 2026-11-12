@@ -48,13 +48,13 @@ flowchart TD
 
 1. **When Structural reaches colleagues.** Recommended: **after the Civil core has had its clean days with colleagues.** Example: if C1 put the wrong size on a first-floor plan in the same week as a Civil fault, you could not tell which release caused it. OPEN.
 2. **CLEAN meets an object on a locked layer.** Recommended: **leave it alone, list it, carry on and save.** Example: a locked title-block layer no longer stops the whole text clean-up; CE says "1 text on locked layer TITLE left as it was". OPEN.
-3. **SBEAM in the first core.** Recommended: **hidden** until the crash fix is proven and the section list is checked. Example: a colleague places a steel section on a deadline and AutoCAD closes, as it did for you on 5 Nov. OPEN.
+3. **SBEAM in the first core.** Recommended: **hidden** until the 5 Nov crash has been reproduced on a copy and shown not to happen, and the section list is checked. A guard is written on the held S-46 build; the crash itself is not reproduced or proven fixed. Example: a colleague places a steel section on a deadline and AutoCAD closes, as it did for you on 5 Nov. OPEN.
 4. **The same mark on two floors of the schedule.** Recommended: **ask which floor, showing both sizes.** Example: "C1 is 89 SHS on GROUND and 75 SHS on FIRST. Which?" OPEN.
 5. **Roof bracing trusses in the wall bracing totals** (engineering). Recommended: **never added to wall totals; shown on their own line.** Example: two 4 m BT1 trusses no longer turn a short wall direction green. OPEN, needs your word.
 6. **A brace with no type** (engineering). Recommended: **counted as Unknown, panel amber.** Example: a brace pasted from an older job with its tag cleared stops being counted as type A. OPEN, needs your word.
 7. **The core list.** Recommended: **the list in section 1.** Example: CSTIEDOWN stays typed only until it has its own three days. OPEN (your marks on the keep / hide list).
-8. **The save reminder time.** Recommended: **the existing 10-minute setting, reminding once at 20 minutes and every 10 after.** Example: after 20 minutes unsaved the command line says so once. OPEN.
-9. **What the expert mark means.** Recommended: **expert = typed only, never on the colleague tab.** Example: STRSCHEDREFRESH is marked expert today but sits on the ribbon; under this it would be typed or reached through the schedule. OPEN.
+8. **The save reminder: DECIDED, not a question.** Your decision 223 (`decisions\2026-10-29_TIM_ANSWERS.md`, line 830): "c" = both: a "Not saved for 25 minutes" reminder (your 25 Sep ruling) AND timed backup copies of unsaved work to the CE backup folder only, never over your drawing. The record says you named neither number; 25 is from your 25 Sep ruling, a copy every 10 minutes is the desk's default. (Corrected 12 Nov 23:53: this line first recommended 20 minutes, which ignored that decision.)
+9. **What decides a button: the core list or the expert mark.** Recommended: **the core list alone; the expert mark keeps its palette meaning** (changed 12 Nov 23:53 to match card TRUST-S1; the earlier recommendation, "expert = typed only", is superseded). Example: STRSCHEDREFRESH is marked expert today but is in the core list, so it goes on the tab once S4 is in. OPEN.
 10. **Explaining Structural days roof-down.** Already your standing rule (4 Oct, UX-STRUC-13). Not a question; recorded so the cards follow it.
 
 ---
@@ -89,7 +89,7 @@ Evidence: Tim's command log on real jobs (`areas\CORE_TICK_LIST_05NOV.md` sectio
 
 ### Hidden for the first core (typed still works, nothing deleted)
 
-1. **SBEAM and SBEAMEDIT:** HIDE until BUG-1275 (the crash on 5 Nov) is fixed and proven, and the section list is checked (BUG-818, 819). CEMEMBER replaces it later.
+1. **SBEAM and SBEAMEDIT:** HIDE until the 5 Nov crash (BUG-1275) is reproduced on a copy and shown not to happen (a guard exists on the held S-46 build; the crash itself is not proven fixed), and the section list is checked (BUG-818, 819). CEMEMBER replaces it later.
 2. **CSTIEDOWN, CSWINDCLASS, CSSOILREPORT:** HIDE (2 or 3 uses each). Join one at a time.
 3. **Every footing tool** (FST, FSF, BP family, CSPIER, stump footings): HIDE for the first core. Footings come last in the drafting order and carry open faults (BUG-300, BUG-536).
 4. **The roof-down tools that ship switched off** (roof setout, floor span arrow, lintels, framing legend, member schedule, wall schedule, footing proposals): stay off, as today. **Verified** off by default, for example `Models\UserSettings.cs:1430` (roof setout).
@@ -132,7 +132,7 @@ Same gate as Civil: card, your approval, built small, robot then Codex on copies
 1. **Goal:** a colleague sees only the core tools, in roof-down order; everything else can still be typed.
 2. **What you see:** one Structural tab: Roof (R1, P1, BT1) | Floors (beams, BSET, supports, switches, FJ1) | Bracing (AB, BB, switch, panel, schedules) | Tools (CLEAN, Help, Settings). Today's flat tab stays behind a switch.
 3. **Depends on:** your marks on the keep / hide list (next in this lane). Civil step 2, so both tabs use one way of choosing buttons.
-4. **How:** a new office core list, read by both the ribbon and the pull-down menu, so they cannot drift. The expert mark starts to mean "not on the colleague tab". Behind a NEW switch, off by default.
+4. **How:** a new office core list, read by both the ribbon and the pull-down menu, so they cannot drift. The core list alone decides; the expert mark is not used for it (decision 9). Behind a NEW switch, off by default.
 5. **Proven by:** robot reads the ribbon back against the list, button by button, and presses each once on a copy; a list with one button removed must fail; ten hidden commands still run when typed; the menu lists the same tools. Codex looks at the tab at normal and narrow widths. You draft with it for three days.
 6. **Undo:** switch off and restart AutoCAD; today's tab is back.
 7. **Risk: LOW.** Nothing in a drawing changes. Main risk: a tool you use daily that the log never saw.
@@ -142,8 +142,8 @@ Same gate as Civil: card, your approval, built small, robot then Codex on copies
 1. **Goal:** nothing a colleague does can lose work without warning.
 2. **What you see:**
    1. **CLEAN:** the tooltip and the Settings page say plainly that CLEAN saves; if the save cannot be confirmed it says "NOT SAVED: save the drawing yourself"; an object on a locked layer is left alone and listed, instead of the whole step failing.
-   2. **Save reminder:** "CE: 20 minutes of work not saved in this drawing." on the command line, from the 10-minute setting that already exists (BUG-1276, Structural half).
-   3. **SBEAM:** no crash on a stale object (BUG-1275); the fix is lifted alone out of the held S-46 build.
+   2. **Save reminder and backup copies (decision 223):** "Not saved for 25 minutes." on the command line, and a backup copy of unsaved work every 10 minutes in the CE backup folder only (BUG-1276, Structural half).
+   3. **SBEAM:** the stale-object guard is lifted alone out of the held S-46 build. A guard is added; the 5 Nov crash itself is not reproduced or proven fixed, so SBEAM stays typed only.
    4. **Reset Defaults:** asks first and keeps a copy of the old settings.
 3. **Depends on:** nothing. Can run beside S1.
 4. **Proven by:** each fix has its robot case and a broken twin that must fail: CLEAN on a copy with one locked object (drawing saved, locked object untouched, line printed); the reminder after a set time on a copy; SBEAM with a deliberately stale object; Reset then the copy restored. Codex reads every new line. You use CLEAN for three days.
@@ -213,7 +213,7 @@ Moved to the top of this file, straight after FOR TIM (RULES 2.9).
 5. **Ribbon families off (UX-STRUC-02 to 08):** Verified (section 2 line 5).
 6. **Roof-down tools ship off:** **Verified** for all twelve switches: `Models\UserSettings.cs:1207, 1282, 1324, 1430, 1471, 1537, 1677`, `Models\LintelTableSettings.cs:11`, `Models\WallScheduleSettings.cs:13`, `Models\FoundationProposalSettings.cs:18`, `Models\FoundationGripSettings.cs:11` (each "Enabled = false"). The roof point load pair (lines 1585, 1589) is **Carried**.
 7. **CLEAN saves (B-178):** Verified.
-8. **SBEAM stale-object crash fixed only in S-46:** no BUG-1275 mark is in the installed code. **Verified** by search. That S-46 holds the fix is **Carried** from the audit.
+8. **SBEAM crash guard only in S-46:** no BUG-1275 mark is in the installed code. **Verified** by search. That S-46 holds a guard is **Carried** from the audit; the crash-dump note says the guard does not explain the 5 Nov crash, so nothing here says the crash is fixed.
 9. **"Guards for units, layout and locked layer are in the code" for R1, BT1, C1, TS1, AB, BB:** units **Verified** (section 4 line 8); the locked-layer check for supports **Verified** (`Commands\SupportBlockCommands.cs:225-231`). The layout guard was not checked.
 10. **No unsaved-work reminder:** the timed save is removed and only a palette label is left. **Verified:** `Services\DrawingAutoSaveService.cs:1112-1118`; palette label `UI\Palette\MainPalette.xaml.cs:1096-1117`.
 11. **Reset Defaults wipes all Structural settings (HUNT-MI-04):** Verified: `UI\Dialogs\CeSettingsDialog.xaml.cs:475-478` saves brand-new settings with no question.
