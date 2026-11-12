@@ -6,7 +6,7 @@
 
 # FOR TIM
 
-**1. How many.** 149 different bugs. Because a few show up under more than one tool, the lists below hold 159 lines across 32 of the 47 tools. The other 15 tools have none: CDPITCOVERFLIP, IO, FO, GIO, CDSOURCE, CDANNOTATIONEDIT, CDMA, CDSL, MR, CDCHECKCURRENT, CDFEEDBACK, CDRAINFALL, CDDEST, CDRULEBOOK, CDSYSTEM.
+**1. How many.** 148 different bugs (BUG-890 removed on 13 Nov, see CDTIDYLABELS). Because a few show up under more than one tool, the lists below hold 158 lines across 31 of the 47 tools. The other 16 tools have none: CDTIDYLABELS, CDPITCOVERFLIP, IO, FO, GIO, CDSOURCE, CDANNOTATIONEDIT, CDMA, CDSL, MR, CDCHECKCURRENT, CDFEEDBACK, CDRAINFALL, CDDEST, CDRULEBOOK, CDSYSTEM.
 
 **2. The rule.** NONE of these may be marked fixed until it is seen working in AutoCAD. The notes read the code, not the drawing. "A change is in the code" is not proof. Every one stays OPEN (or IN PROGRESS where the carpark already says so) until the robot and Codex have seen it pass in real AutoCAD.
 
@@ -38,11 +38,11 @@
 ## PIT: Place a pit (7)
 
 1. **BUG-458, PIT, PP, CD and the schedule ran during REFEDIT.**
-   - **Fix is at:** `DrawingSafetyService.cs:78-90`.
-   - **What must be seen in AutoCAD to prove it:** Open an Xref with REFEDIT then run PIT, PP and PITSCHEDULE: each refuses and changes nothing.
+   - **Fix is at:** `Services\DrawingSafetyService.cs:78-90` (the shared start-up refusal, called by CD, PIT, PP, PITEDIT and CDEDIT; batch Apply re-checks); `PitScheduleCommand.cs:30-40` (the Pit Schedule refuses on its own). Filed in the code as HUNT-C-01 and HUNT-C-07, commits `980b10c6` and `c9b556e9`, so a search for the bug number finds nothing.
+   - **What must be seen in AutoCAD to prove it:** Open an Xref with REFEDIT then run CD, PIT, PP, Edit Pit and PITSCHEDULE: each refuses and changes nothing.
 
 2. **BUG-690, Pipe split under a new pit left links and junctions on the first half.**
-   - **Fix is at:** `LinkService.Split.cs:1555-1573`, `1624-1626`, `1653-1665`.
+   - **Fix is at:** the call inside the split's own step, `Services\LinkService.Split.cs:1624-1626`; the logic is in `Services\LinkService.SplitDecisions.cs` and `Services\InlineSplitDecisionPolicy.cs` (switch on). Commit `62a8dea8`. (The other lines once listed here, 1555-1573 and 1653-1665, belong to BUG-691 to 693.) A failure only writes a log line.
    - **What must be seen in AutoCAD to prove it:** Split a pipe under a new pit: the junction past the split stays in the Pit Schedule and the links sit on the right half.
 
 3. **BUG-691, Split of a pipe broken across plans worked the level over one half.**
@@ -68,11 +68,11 @@
 ## PP: Quick plastic pit (5)
 
 1. **BUG-458, PIT, PP, CD and the schedule ran during REFEDIT.**
-   - **Fix is at:** `Services\DrawingSafetyService.cs:78-90` (as in the PIT note).
-   - **What must be seen in AutoCAD to prove it:** Open an Xref with REFEDIT then run PIT, PP and PITSCHEDULE: each refuses and changes nothing.
+   - **Fix is at:** `Services\DrawingSafetyService.cs:78-90` (as in the PIT note; the shared start-up refusal, called by CD, PIT, PP, PITEDIT and CDEDIT; batch Apply re-checks); `PitScheduleCommand.cs:30-40` (the Pit Schedule refuses on its own). Filed in the code as HUNT-C-01 and HUNT-C-07, commits `980b10c6` and `c9b556e9`, so a search for the bug number finds nothing.
+   - **What must be seen in AutoCAD to prove it:** Open an Xref with REFEDIT then run CD, PIT, PP, Edit Pit and PITSCHEDULE: each refuses and changes nothing.
 
 2. **BUG-690, Pipe split under a new pit left links and junctions on the first half.**
-   - **Fix is at:** `Services\LinkService.Split.cs:1555-1573, 1624-1626, 1653-1665` (as in the PIT note).
+   - **Fix is at:** as in the PIT note: `Services\LinkService.Split.cs:1624-1626`, with the logic in `LinkService.SplitDecisions.cs` and `InlineSplitDecisionPolicy.cs`; commit `62a8dea8`.
    - **What must be seen in AutoCAD to prove it:** Split a pipe under a new pit: the junction past the split stays in the Pit Schedule and the links sit on the right half.
 
 3. **BUG-691, Split of a pipe broken across plans worked the level over one half.**
@@ -168,8 +168,8 @@
 ## CDFW: Floor waste (2)
 
 1. **BUG-650, Cancelling CDFW wiped stored pit inverts.**
-   - **Fix is at:** `FloorWasteCommand.cs:41-45`, `Services\ProjectDataService.Mutations.cs:244-289`; `Services\ProjectDataService.cs:984-998`.
-   - **What must be seen in AutoCAD to prove it:** Run CDFW on a drawing with pit inverts, press Esc: the stored pit inverts are unchanged.
+   - **Fix is at:** `FloorWasteCommand.cs:41-45` and the matching CDSOURCE fix `SourceBlockGenericCommand.cs:50-54` (both no longer refresh and save the record before the first question; commit `da006db6`); `Services\ProjectDataService.Mutations.cs:244-289`; `Services\ProjectDataService.cs:984-998` (the shared refresh takes an invert only from a label that shows an IL line). The carpark says the exact cause was never traced, so this closes the likely route, not proven the only one.
+   - **What must be seen in AutoCAD to prove it:** Run CDFW, and Generic Source (CDSOURCE), on a drawing with pit inverts, press Esc at the first question: the stored pit inverts are unchanged.
 
 2. **BUG-1223, Pick on an inspection opening said the record changed.**
    - **Fix is at:** `LinkService.SourceLanding.cs:443-450, 501-509`, `Rules\SourcePickPipeRecordRule.cs:26-31`, `Models\UserSettings.cs:774-775`.
@@ -214,11 +214,11 @@
    - **What must be seen in AutoCAD to prove it:** Leave one invert blank: Start Pipe and Save work with a warning, and the blank stays Unknown.
 
 3. **BUG-1226, Recent levels row missing from the one-page New Pipe window.**
-   - **Fix is at:** `PipeOnePageLayout.cs:82-85`, `UserSettings.cs:1736, 1747`.
+   - **Fix is at:** `Dialogs\PipeOnePageLayout.cs:341-389` (with both switches on, as shipped, one "Recent:" line under Size and Material holds sizes, materials and levels; lines 82-85 only choose which version is built; the code runs to about 421), `UserSettings.cs:1736, 1747`. Commits `07eebe49`, `5092bbf9`, reshaped by `70dec2c2` (BUG-1238). Same window for Edit Pipe.
    - **What must be seen in AutoCAD to prove it:** Place two pipes then run CD again: a Recent row offers recent sizes, materials and levels.
 
 4. **BUG-1238, Recent diameters, materials and levels not one-click buttons.**
-   - **Fix is at:** `PipeOnePageLayout.cs:82-85`, `UserSettings.cs:1736, 1747`.
+   - **Fix is at:** `Dialogs\PipeOnePageLayout.cs:341-389` (82-85 only choose the version), `UserSettings.cs:1736, 1747`; commit `70dec2c2`.
    - **What must be seen in AutoCAD to prove it:** Place two pipes of different size and material then run CD: buttons for the recent sizes, materials and levels show.
 
 5. **BUG-675, Pit fit used the wrong wall of a rotated pit.**
@@ -351,11 +351,9 @@
    - **Fix is at:** `Assets\Help\guide-content.js:103`.
    - **What must be seen in AutoCAD to prove it:** Help says no preview and no Apply, and Enter at "Continue?" leaves the inverts unchanged.
 
-## CDTIDYLABELS: Tidy labels (1)
+## CDTIDYLABELS: Tidy labels (0)
 
-1. **BUG-890, Leader-out planning reserved room using a label that stays put.**
-   - **Fix is at:** `Rules\TextClashTidyUpRule.cs:250-264`, `UserSettings.cs:1458`.
-   - **What must be seen in AutoCAD to prove it:** With the switch on, the final tidy never overlaps a label that stays.
+**BUG-890 removed Fri 13 Nov 2026** after independent review: it is NOT fixed in the installed code. `Rules\TidyLeaderOutRule.cs:121` still reserves the new place for every label that finds a spot further out, plain texts included, and only afterwards (`Services\LinkService.TextClashTidyUp.cs:440-447`) are plain texts marked "needs a new leader" and left where they were, so a later callout can still land on the plain text. The tool note now lists it under "Still there".
 
 ## CDTEXTSEG: Move pipe text to another segment (2)
 
@@ -410,8 +408,8 @@
    - **What must be seen in AutoCAD to prove it:** Export CSV then Cancel: no "Project data saved" line and the record is unchanged.
 
 3. **BUG-458, PIT, PP, CD and the schedule ran during REFEDIT.**
-   - **Fix is at:** `PitScheduleCommand.cs:30-40`, `Services\DrawingSafetyService.cs:51-59`.
-   - **What must be seen in AutoCAD to prove it:** Open an Xref with REFEDIT then run PIT, PP and PITSCHEDULE: each refuses and changes nothing.
+   - **Fix is at:** `PitScheduleCommand.cs:30-40`, `Services\DrawingSafetyService.cs:51-59, 78-90`. Filed in the code as HUNT-C-01 and HUNT-C-07, commits `980b10c6` and `c9b556e9`.
+   - **What must be seen in AutoCAD to prove it:** Open an Xref with REFEDIT then run CD, PIT, PP, Edit Pit and PITSCHEDULE: each refuses and changes nothing.
 
 4. **BUG-464, Pit Schedule skipped the read-only drawing check.**
    - **Fix is at:** `PitScheduleViewModel.cs:352, 401-421`.
