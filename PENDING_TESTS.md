@@ -34,6 +34,13 @@ PR 2058 (DRAFT, never merged by the run), branch `claude/trust-07-lpd-start-poin
 14. **Switch off (H22):** CDRENUMBER and CDRUNSOLVE ask nothing and behave as the installed build; the stored confirmation is still in the drawing.
 15. **Undo (H9), RECORD only:** confirm, press U once, read the LPD group. No line may promise what U does.
 16. **Not built, do not test as built:** the long section (CDPROFILE), placing the LPD from inside a tool, two LPDs choosing by which pits drain where, an LPD inside an attached drawing, the Pit Schedule's order.
+17. **Added 13 Nov after the review of PR 2058. Stale on any change:** confirm; then (a) stretch one end of the LPD's pipe, (b) on a fresh confirmed copy re-join the pipe to another pit, (c) on a fresh confirmed copy reverse the pipe. Right each time = the opening line says "needs checking" with "the LPD was changed since it was confirmed", and the next CDRENUMBER asks the question again.
+18. **Renumbering does not undo the yes:** confirm, run CDRENUMBER and accept, run CDRENUMBER again. Right = not asked again; the opening line still says LPD confirmed.
+19. **Moving the LPD's note or callout:** confirm, MOVE the callout 3 m. Right = still confirmed (the note is not part of what was confirmed). RECORD.
+20. **More than one LPD (replaces case 3 of the card, which is NOT BUILT):** a job with two outlets set in the Design window. CDRENUMBER and CDRUNSOLVE. Right = no start-point question; one line "CE: more than one LPD in this drawing. CE does not yet know which pits drain to each, so the order is worked out as before."; the solver never prints "not confirmed".
+21. **Long section:** LPD stored, not confirmed: CDPROFILE. Right = one line "CE: LPD not confirmed. The long section still stops at the LPD stored in this drawing." and no question; the routes stop at the LPD as on the installed build. Confirmed: no line.
+22. **Save As and AutoCAD's drawing fingerprint (settles a point the review raised):** on a copy read FINGERPRINTGUID, Save As to a new name, read it again. RECORD both. Then on a confirmed copy: Save As, reopen the new file. Right (by reading) = same fingerprint, still "LPD confirmed", no question.
+23. **LPD set again on the same pipe end with another pit:** confirm; CDLPD picking a different pit that resolves to the same pipe end. Right = asked again.
 
 ### Trust plan step 8 slice A, the read-only Check this drawing list (TRUST-08, DRAFT card) — 13 November 2026 (Built and unit-tested only; NOT installed; the switch ships OFF; robot and Codex to run on COPIES)
 
