@@ -47,6 +47,15 @@
 4. **trust-acad-evidence:** the probes in `trust-plan.md` section 5 that need AutoCAD, on made-up and existing test copies, on the installed build. Later, evidence for the builders' branches where that can be done without installing.
 5. **trust-struc-mgr-plan:** the Structural and Manager part of the plan, written from the 6 Nov audit and the tick list. Planning only.
 
+## 3b. Tim's working hours: nothing heavy on his PC (added Fri 13 Nov 07:40 PC clock)
+
+RULES 1.8: big builds and automated testing go in the free windows. Tim drafts on this PC on weekdays from 8:30am to 2:00pm and 3:00pm to 5:30pm, and builds and test runs have slowed his AutoCAD before.
+
+1. **From 8:20am to 2:00pm and from 3:00pm to 5:30pm on weekdays, every lane:** no builds, no test runs, no AutoCAD, no AutoCAD core console. Finish or stop any run that is going by 8:20am and release the build lock.
+2. **What carries on in those hours:** reading code, read-only reviews, writing and correcting documents, planning the next piece, writing tests that will be run later.
+3. **Free windows for building and testing:** 2:00pm to 3:00pm, after 5:30pm, before 8:20am, and weekends.
+4. **A lane with only building left** writes "WAITING FOR THE FREE WINDOW AT <time>" in its status file and does document work from its queue, or nothing.
+
 ## 4b. Controller continuity note (written Fri 13 Nov 05:45 PC clock; read this first after any compaction or in a new controller chat)
 
 1. **How the run works now:** nine lanes, queues and models in `areas\trust-run\QUEUES.md` (newest "Refill" block wins). Five side sessions (trust-foundations, trust-safety-fixes, trust-core-ribbon, trust-acad-evidence, trust-struc-mgr-plan) each with their own 40-minute check-in. Four helper lanes (reader, review, test-cases, records) are started by the controller with the Agent tool. The controller has an hourly check at 23 minutes past, and a one-off at 7:52am Friday to finish the morning page and send Tim one phone notification about BUG-1456.
