@@ -100,3 +100,5 @@ Each card follows the same shape: what works today (Keep/Modify/Rebuild/Retire/M
 example drawings (the labelled test copies DWG-A/B/S), automated guards versus Tim's own AutoCAD checklist,
 smallest-first build slices, and OPEN questions each with a recommended answer. No client name or site
 address appears in any of them.
+
+- **[UX-OPEN-01_DRAWING_STATE_LINE_CARD_2026-11-06.md](UX-OPEN-01_DRAWING_STATE_LINE_CARD_2026-11-06.md)** : one read-only line on opening a Civil drawing. Awaiting Tim's approval, not built.
