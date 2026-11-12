@@ -8,14 +8,14 @@
 2. **Seen in real AutoCAD on your installed build,** on copies only, 6 times in 11 tries, both ways round. A blank drawing gained a whole job and then asked to save; another job's own record was replaced.
 3. **Safe habit 1:** in a drawing you have just opened or switched to, do not make Help or Settings the first CE thing you run. Any plain AutoCAD command first (even a circle, then U) avoided it every time.
 4. **Safe habit 2:** if a drawing you did not edit asks to save when you close it, answer No.
-5. **Two fixes are drafted, neither installed nor seen working:** pull request 2064 (reviewed FIX FIRST: it only works with a switch that ships off) and a second cure, pull request 2073 (each drawing keeps its own record, no switch; reviewed GO for the robot to test on copies at 05:53).
+5. **The cure is drafted, not installed and never run in AutoCAD:** pull request 2073 (each drawing keeps its own record, no switch), reviewed GO at 05:53; its check in AutoCAD's command-line-only version comes first, then the robot on copies. (Pull request 2064 no longer carries this cure.)
 
 ## What ran overnight
 
-1. **Builders:** 34 trial changes built as drafts, none merged, none installed.
-2. **Reviewer:** read every one; 30 are fit for the robot to test, 4 need fixing first.
+1. **Builders:** 38 trial changes built as drafts, none merged, none installed.
+2. **Reviewer:** 33 are fit for the robot to test, 4 need fixing first, 1 is not reviewed yet; 5 have changed since their last review and wait to be re-checked.
 3. **AutoCAD robot:** tested on copies outside your hours, then closed AutoCAD.
-4. **Code readers:** wrote a one-page note for each of your 47 Civil and 32 Structural core tools, and filed 176 new faults.
+4. **Code readers:** wrote a one-page note for each of your 47 Civil and 32 Structural core tools, and filed 177 new faults.
 5. **Planning:** your questions gathered in one file: 87, the first one matters most.
 
 ## Proven in real AutoCAD (on copies)
@@ -51,10 +51,10 @@
 
 ## Where these numbers come from
 
-0. **BUG-1456, 6 in 11, both ways, the two habits:** `areas\trust-run\EVIDENCE_CROSS_DRAWING.md` and the BUG-1456 entry at the end of `BUG_CARPARK.md`; FIX FIRST for pull request 2064 (05:04) and GO for pull request 2073 (05:53) from `areas\trust-run\trust-review.md`.
-1. **34 trial changes, 30 and 4:** the latest verdict per pull request in `areas\trust-run\trust-review.md` (pull requests 2038 to 2073), counted by this lane; the list is `areas\trust-run\STATUS_BOARD.md`.
+0. **BUG-1456, 6 in 11, both ways, the two habits:** `areas\trust-run\EVIDENCE_CROSS_DRAWING.md` and the BUG-1456 entry at the end of `BUG_CARPARK.md`; GO for pull request 2073 (05:53) and the note that 2064 no longer carries the cure (06:21), from `areas\trust-run\trust-review.md`; the check that comes first: `PENDING_TESTS.md` (CEPROOFCROSSDRAWING).
+1. **38 trial changes, 33, 4, 1 and 5:** GitHub's open draft pull requests with "trust" or "bug-1456" in the branch name (2038 to 2075), with the latest verdict per pull request in `areas\trust-run\trust-review.md`; the list, with each one's head, is `areas\trust-run\STATUS_BOARD.md`.
 2. **47 and 32 tool notes:** the files in `04_REFERENCE\core-tool-notes\` (47 plus a README) and `04_REFERENCE\core-tool-notes\structural\` (32).
-3. **176 new faults:** bug numbers BUG-1280 to BUG-1455 in `BUG_CARPARK.md`, counted by this lane.
+3. **177 new faults:** bug numbers BUG-1280 to BUG-1456 in `BUG_CARPARK.md`, counted by this lane at 06:27.
 4. **87 questions:** `areas\TRUST_QUESTIONS_FOR_TIM.md`.
 5. **BUG-650, BUG-968:** `areas\trust-run\EVIDENCE_STALE_BUGS.md`.
 6. **CDGRAPH and CDDIAG on the trial build:** `areas\trust-run\EVIDENCE_BRANCHES.md`.
