@@ -1,6 +1,6 @@
 # Review: PR 2078 `claude/trust-01b-other-drawings-data` (BUG-1456 follow-up: a read-only line when a drawing opens that already holds another job's CE data)
 
-**Reviewer:** lane trust-review (thirteenth run), Fri 13 Nov 2026, 06:58 PC clock (written 06:42 to 06:58). **Head reviewed:** `5bde761b` (one commit on the opening line's head `31f426ab`, PR 2041; base of the PR is `claude/trust-01-open-line`, confirmed). **Against:** the brief's six tests, `EVIDENCE_CROSS_DRAWING.md` parts 1 and 2, and the PR's own claims. **Four states:** Built yes (lane: net48 and net10.0-windows, 0 errors). Tested unit only (lane: 22,275 ran, 0 failed; 74 opening-line and new tests). Installed no. Accepted no.
+**Reviewer:** lane trust-review (thirteenth run), Fri 13 Nov 2026, 06:57 PC clock (written 06:42 to 06:57). **Head reviewed:** `5bde761b` (one commit on the opening line's head `31f426ab`, PR 2041; base of the PR is `claude/trust-01-open-line`, confirmed). **Against:** the brief's six tests, `EVIDENCE_CROSS_DRAWING.md` parts 1 and 2, and the PR's own claims. **Four states:** Built yes (lane: net48 and net10.0-windows, 0 errors). Tested unit only (lane: 22,275 ran, 0 failed; 74 opening-line and new tests). Installed no. Accepted no.
 
 ---
 
