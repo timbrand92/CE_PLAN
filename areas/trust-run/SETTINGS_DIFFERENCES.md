@@ -8,24 +8,22 @@
 
 # FOR TIM
 
-**Your setup differs from a new colleague's on 27 office-type values.** 10 values differ between a new colleague and CE's own built-in values (the colleague starting values were set to match your habits). Your file also holds about 20 memory values (window positions, recent lists, tour flags) that are yours alone and should never be sent to anyone.
+**Ten differences would change what a new colleague sees most. Your saved setup differs from a new colleague's on 27 office-type values in all; these are the ten that show on a job.** Each has a one-line example. Your file also holds about 20 memory values (window positions, recent lists, tour flags) that are yours alone and should never go to anyone.
 
-**What a colleague gets today that you do not have:**
+1. **Pipe grades for big pipes.** You: 225 pipe 1 in 200, 300 pipe 1 in 250, 375 pipe 1 in 300. Colleague: 1 in 100 for all three. *On a job:* the same 300 pipe draws at a different fall on the two PCs.
+2. **Pit drop between pipes.** You: 5 mm. Colleague: 20 mm. *On a job:* the downstream invert at a pit is 15 mm lower on the colleague's drawing.
+3. **Starting pit size.** You: 600 x 900. Colleague: 450 x 450. *On a job:* the same Place Pit click gives a different pit.
+4. **Detention pit widths and the SPS radius.** You: 0. Colleague: 450 each and 900. *On a job:* a colleague's detention pit opens with sizes already filled in.
+5. **Driveway lid class.** You: C. Colleague: B. *On a job:* the lid class on the pit schedule differs for a pit in a driveway.
+6. **Pit label corner.** You: top right. Colleague: bottom right. *On a job:* the pit label sits in a different corner and can clash with other text.
+7. **Steepest grade warning.** You: 1 in 20, marked "Assumed, office value to confirm", not confirmed. Colleague: no limit, warns above 1 in 10, marked confirmed. *On a job:* a 1 in 12 pipe warns on your PC and not on a colleague's.
+8. **Default grade wording.** You: "100 MIN." Colleague: "100". *On a job:* the pipe label reads differently.
+9. **Starting inverts typed in the pipe window.** You: 19.00 and 18.50 (left from a job). Colleague: 1.10 and 1.20. *On a job:* a colleague's first pipe starts at a level that has nothing to do with the site.
+10. **Remember my pipe-window values.** You: off. Colleague: on. *On a job:* a colleague's New Pipe window reopens with the last size and material, yours always starts fresh.
 
-1. **Pipe grades for big pipes.** You: 225 pipe 1 in 200, 300 pipe 1 in 250, 375 pipe 1 in 300. Colleague: 1 in 100 for all three.
-2. **Pit drop between pipes.** You: 5 mm. Colleague: 20 mm.
-3. **Starting pit size.** You: 600 x 900. Colleague: 450 x 450.
-4. **Detention pit widths and the SPS radius.** You: 0. Colleague: 450 each and 900.
-5. **Driveway lid class.** You: C. Colleague: B.
-6. **Pit label corner.** You: top right. Colleague: bottom right.
-7. **Steepest grade warning.** You: 1 in 20, marked "Assumed, office value to confirm", not confirmed. Colleague: no limit, warns above 1 in 10, marked confirmed.
-8. **Default grade wording.** You: "100 MIN." Colleague: "100".
-9. **Starting inverts typed in the pipe window.** You: 19.00 and 18.50 (left from a job). Colleague: 1.10 and 1.20.
-10. **Charged-system destination and pit cover level.** You: tank and 21.00 (left from a job). Colleague: blank.
-11. **Remember my pipe-window values.** You: off. Colleague: on.
-12. **Pipe object upgrade.** You: Automatic. Colleague: On. (Same result on AutoCAD 2027 since 29 Oct.)
+**Also different, less visible:** charged-system destination and pit cover level (yours are left from a job; a colleague's are blank), and the pipe object upgrade wording (same result on AutoCAD 2027).
 
-**What this means for step 3:** items 1 to 3 and 5 to 6 look like real office or habit values. A colleague would draw different pits and grade pipes differently from you with no warning. The plan needs your word on which are office values (everyone gets them) and which are only yours.
+**What this means for step 3:** items 1 to 3 and 5 to 6 look like real office or habit values. The plan needs your word on which are office values (everyone gets them) and which are only yours.
 
 ---
 
