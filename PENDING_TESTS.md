@@ -1,3 +1,4 @@
+# PENDING TESTS — what is built and waiting for Tim in AutoCAD
 ## TRUST-02 core ribbon (DRAFT, switch OFF), draft PR 2038 — 12 Nov 2026
 
 Built and unit-tested only. Branch `claude/trust-core-ribbon-e13111`, draft pull request https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/2038. Test on a COPY, AutoCAD 2027, a build that contains this branch.
@@ -12,7 +13,6 @@ Built and unit-tested only. Branch `claude/trust-core-ribbon-e13111`, draft pull
 8. **Not covered:** AutoCAD 2022 to 2024 (menu file not changed), Manager's later rebuild keeping both tabs (check the tabs are still two after about a minute and after CEMANAGERREFRESH).
 9. **DRAFT defaults for Tim to confirm:** listed in the draft PR and at the top of `Services/CeCvlCoreRibbonList.cs`.
 
-# PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
 ### Review fixes on the guidebook stack (Opus pre-reviews B and C) — 29 October 2026 (Built and unit-tested only; Codex to run on COPIES)
 
