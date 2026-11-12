@@ -19318,3 +19318,273 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
 
 **Status:** OPEN
+
+## BUG-1342 — PITSCHEDULE: Export CSV has no guard if the file is open in Excel
+
+**Command / Area:** PITSCHEDULE window, Export CSV. MEDIUM-LOW. POSSIBLE UNHANDLED ERROR (effect not seen).
+
+**Symptom:** Export CSV opens the chosen file for writing with no try/catch around it, and the button's command wrapper has none either. If the file is already open in Excel, or the folder is read-only, the write fails with an error that nothing in this path turns into a plain line. The status line that says 'CSV export complete.' is only reached on success, so the drafter may see a program error box or nothing at all.
+
+**Expected behaviour:** A plain line: 'The file is open in another program. Close it and export again.' The window stays open.
+
+**Steps to confirm in AutoCAD:** (1) On a copy export the schedule to a CSV and leave that file open in Excel. (2) Export again to the same name. Right = a plain line and the window still works. Wrong = an error box, a crash message or nothing.
+
+**Test that catches it:** Fixture: export to a path held open by another stream; assert no exception escapes and a status line is set.
+
+**Reference:** ViewModels\PitScheduleViewModel.Schedule.cs:46-75 (new StreamWriter with no guard); ViewModels\RelayCommand.cs:41-43 (no catch). Note PITSCHEDULE.md section 7 'New in code' 1. The effect depends on whether AutoCAD's own handler catches it; not proven. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\PITSCHEDULE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1343 — CDPROFILE: the sump depth, existing-pipe stub and long section scales are fixed in the code
+
+**Command / Area:** CDPROFILE (long section). LOW-MEDIUM. HARD-CODED VALUES (R-00).
+
+**Symptom:** The pit sump depth (0.30 m), the length drawn for an existing pipe stub (1.20 m) and the starting horizontal and vertical scales (1:100 and 1:10) are typed into the program. The note also lists the survey search distances and counts. None is on the Settings page, so an office with a different standard cannot change them.
+
+**Expected behaviour:** Each is a named value on the Settings page, starting at the figure Tim confirms.
+
+**Steps to confirm in AutoCAD:** (1) Run CDPROFILE on a copy and note the sump depth and stub length drawn. (2) Change the matching Settings values (once they exist) and run again. Right = the drawing follows. Wrong = no setting exists.
+
+**Test that catches it:** Source guard: no numeric literal for these values in LongitudinalSectionService and the route window.
+
+**Reference:** Services\LongitudinalSectionService.cs:340 (PitSumpDepthM = 0.30) and 361 (EndpointExistingPipeDisplayLengthM = 1.20); ViewModels\ProfileRouteReviewViewModel.cs:82-83 (scales '100' and '10'). Note CDPROFILE.md section 7 'New in code' 2. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDPROFILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1344 — CDHELP: the 10-minute 'last command' window is fixed, and 2022 to 2024 logs a warning on every call
+
+**Command / Area:** CDHELP. LOW. HARD-CODED VALUE and LOG NOISE.
+
+**Symptom:** CDHELP jumps to the help page of the last CE command only if it ran in the last 10 minutes; the 10 is typed into the program. On AutoCAD 2022 to 2024 the embedded help window is not built, so every CDHELP writes a warning to the CE log ('embedded help window failed') before opening the browser, which hides real warnings.
+
+**Expected behaviour:** The time is a Settings value; on 2022 to 2024 the browser route is taken without a warning.
+
+**Steps to confirm in AutoCAD:** (1) On AutoCAD 2024 run CDHELP and open the CE log. Right = no warning. Wrong = a warning line each time. (2) On any version run a CE command, wait 11 minutes, run CDHELP: it opens the general page (as designed today).
+
+**Test that catches it:** Fixture: net48 build; assert CDHELP writes no warning for the expected fallback.
+
+**Reference:** Services\CdHelpService.cs:28 (ContextMaxAgeMinutes = 10); Services\HelpLauncher.cs:37-69 (#if NET8_0_OR_GREATER; else throws PlatformNotSupportedException, caught and logged as a warning). Note CDHELP.md section 7 'New in code' 1 and 2. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDHELP.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1345 — CDS: the ribbon says 'Open Settings on the last page you used' but it always opens on Drafting
+
+**Command / Area:** CDS (Settings), ribbon button tooltip. LOW. WORDING.
+
+**Symptom:** The Settings launcher tooltip promises the last page used. The window always opens on the first page, Drafting (the code says 'Opens on Drafting every time').
+
+**Expected behaviour:** Either it opens on the last page, or the tooltip says it opens on Drafting.
+
+**Steps to confirm in AutoCAD:** (1) Open CDS, go to the Design page, close it. (2) Click Settings on the ribbon. Right = Design (as the tooltip says). Wrong = Drafting.
+
+**Test that catches it:** Source guard: tooltip words match the opening behaviour.
+
+**Reference:** Services\CeCvlRibbonContributor.cs:163; Dialogs\AdvancedSettingsDialog.xaml.cs:96-101. Note CDS.md section 7 'New in code' 1. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDS.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1346 — CDFEEDBACK: the typed report is lost if the save fails, because the window has already closed
+
+**Command / Area:** CDFEEDBACK (report a problem). MEDIUM. LOST TYPING.
+
+**Symptom:** The window closes when you click Submit, and only then is the report saved. If the save fails (disk full, folder missing) the command prints a one-line 'did not finish' and everything typed is gone.
+
+**Expected behaviour:** The save is tried before the window closes, or the text is kept and offered again when the save fails.
+
+**Steps to confirm in AutoCAD:** (1) On a copy make the feedback folder unwritable (read-only). (2) Run CDFEEDBACK, type a report and Submit. Right = the window stays with the text and a line says why. Wrong = the window closes and the text is lost.
+
+**Test that catches it:** Fixture: save throws; assert the view model text is still available to reopen.
+
+**Reference:** Commands\FeedbackCommand.cs:44-52 and 66-70 (save after the window closes; failure caught and reported generically); Dialogs\FeedbackDialog.xaml.cs:29-35 (closes on Submit). Note CDFEEDBACK.md section 7 'New in code' 1. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDFEEDBACK.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1347 — CDFEEDBACK: the 2,000-character limit on the title and description cuts the text without telling you
+
+**Command / Area:** CDFEEDBACK. LOW. SILENT CUT.
+
+**Symptom:** The title and the description are each cut to 2,000 characters when saved. A long pasted description loses its end and nothing says so, before or after.
+
+**Expected behaviour:** The window shows a character count and stops typing at the limit, or a line says the text was shortened.
+
+**Steps to confirm in AutoCAD:** (1) Run CDFEEDBACK and paste about 3,000 characters in the description. (2) Submit and open the saved report. Right = the limit was shown or a line said the text was cut. Wrong = it ended at 2,000 with no word.
+
+**Test that catches it:** Unit case: a 3,000 character description; assert a notice or a stop at the limit.
+
+**Reference:** Services\FeedbackService.cs:126-130 (FreeTextCap = 2000, Substring). Note CDFEEDBACK.md section 7 'New in code' 2. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDFEEDBACK.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1348 — CEBLOCKS: a missing palette file shows a raw program message and stops the whole palette
+
+**Command / Area:** CEBLOCKS (office blocks palette). LOW-MEDIUM. WORDING and ALL-OR-NOTHING.
+
+**Symptom:** The palette reads twelve office palette files (BLOCKS CIVIL, FRAMING, STEEL and so on). If any one is missing or unreadable the whole palette does not open, and the command line shows 'CE Blocks palette files are unavailable: ' followed by the program's own error text (for example a file path and 'Could not find file').
+
+**Expected behaviour:** The palette opens with the groups it could read and a plain line names the group that is missing ('The STEEL palette file was not found in the office folder').
+
+**Steps to confirm in AutoCAD:** (1) On a copy of the office palette folder remove one .xtp file. (2) Run CEBLOCKS. Right = the palette opens, minus that group, with a plain line. Wrong = nothing opens and a raw error shows.
+
+**Test that catches it:** Fixture: folder with 11 of 12 files; assert 11 groups load and a plain line is returned.
+
+**Reference:** Modules\Manager\Services\CeBlocksPaletteService.cs:18-28 (one exception ends Show with ex.Message); Modules\Manager\Services\CeBlocksCatalog.cs:38-52 (twelve files read in one loop). Note CEBLOCKS.md section 7 'New in code' 1. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CEBLOCKS.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1349 — CEBLOCKS: Help says each block goes in at 'its own fixed size', but a scale question comes first
+
+**Command / Area:** CEBLOCKS Help text. LOW. WORDING.
+
+**Symptom:** The help says a clicked block goes in at 'its own fixed size'. The insert actually asks 'Scale for <block> [Enter keeps 100]' first, so the size can be changed each time.
+
+**Expected behaviour:** Help describes the scale question: 'Press Enter to keep the block's usual scale, or type another.'
+
+**Steps to confirm in AutoCAD:** (1) Open CEBLOCKS and click a block. (2) Read the first question. Right = help and prompt agree. Wrong = help says fixed size, prompt asks scale.
+
+**Test that catches it:** Source guard: help text for CEBLOCKS mentions the scale question.
+
+**Reference:** Assets\Help\guide-content.js:11; Modules\Manager\Services\CeBlocksInsertService.cs:104-113 (ResolveStampScale). Note CEBLOCKS.md section 7 'New in code' 2. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CEBLOCKS.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1350 — CDRAINFALL and CDDESIGN: the office rainfall curve, storm list, pump and orifice numbers are fixed in the code
+
+**Command / Area:** CDRAINFALL (office curve), CDDESIGN (detention, pump and orifice sizing). MEDIUM. HARD-CODED ENGINEERING VALUES (R-00).
+
+**Symptom:** The office rainfall curve (all seven storm frequencies' coefficients), the list of storm durations (5 to 180 minutes), the pump runoff coefficient (0.90), the pump size ladder, the 30 minute empty time, one council's 1 in 20 pump storm and the orifice constant (21.9) are typed into the program. Tim's rule is that every engineering and council value lives on the Settings page. A change of standard or council cannot be made without a new build.
+
+**Expected behaviour:** Each is a named value on the Settings page (or in the council figures), starting at today's figure, and the Design window shows where each came from.
+
+**Steps to confirm in AutoCAD:** (1) Open CDS and look for each value above. Right = each is listed. Wrong = none of them is. (2) Change one (for example the pump coefficient) and run CDDESIGN: the result must change.
+
+**Test that catches it:** Source guard: no literal 0.90, 21.9 or storm-duration array in the sizing services; Settings round-trip for each.
+
+**Reference:** Rules\RainfallCurve.cs:152-171 (office curve); Services\DetentionSizingService.cs:64-67 (storm list); Services\PumpSizingService.cs:75, 85, 92, 159; Services\OrificeSizer.cs:53-55. Notes CDRAINFALL.md (7 new 1) and CDDESIGN.md (7 new 3). Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDDESIGN.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1351 — CDTWL: the 0.5 L 'enough' margin and the 10 m ceiling above the floor are fixed in the code
+
+**Command / Area:** CDTWL (top water level). LOW-MEDIUM. HARD-CODED VALUES (R-00).
+
+**Symptom:** The check calls storage 'enough' if it is within 0.5 L of the requirement, and when there is no lid it takes a ceiling 10 m above the lowest level. Both are typed into the program. A system with tiny storage or a deep sump gets the wrong verdict and nothing can change it.
+
+**Expected behaviour:** Both are values on the Settings page, with the ceiling taken from the lid when there is one and stated when it is assumed.
+
+**Steps to confirm in AutoCAD:** (1) Run CDTWL on a copy with no lid recorded and read the capacity. Right = it says the ceiling was assumed and by what Settings value. Wrong = a capacity worked to an unstated 10 m.
+
+**Test that catches it:** Source guard: no literal 0.5 or 10.0 in the verdict and ceiling code.
+
+**Reference:** Services\DetentionTwlService.cs:262 (low + 10.0); Rules\DetentionTwlSolver.cs:147 (total + 0.5 >= required). Note CDTWL.md section 7 'New in code' 3. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDTWL.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1352 — CDCALC: Charged System and WSUD open pre-filled with sample figures
+
+**Command / Area:** CDCALC (Charged System and WSUD tabs). MEDIUM-HIGH. WRONG ANSWER RISK.
+
+**Symptom:** The tabs start with working numbers already typed in: WSUD with a 1000 m2 site, 200 m2 impervious before and 700 m2 after; Charged System with a rainfall intensity of 126, a catchment of 390, a 48.5 m pipe, 0.15 m diameter and 0.84 head. A drafter who forgets to overwrite one field gets an answer built on a sample figure, shown like a real result.
+
+**Expected behaviour:** The fields start blank (or from the job's own record), and a result says which inputs were not entered.
+
+**Steps to confirm in AutoCAD:** (1) Open CDCALC on a new drawing and go to Charged System. Right = empty fields, no result until filled. Wrong = a result already showing. (2) Check the WSUD tab the same way.
+
+**Test that catches it:** Unit case: a new view model has empty inputs and no result.
+
+**Reference:** ViewModels\WsudViewModel.cs:19-21; ViewModels\ChargedSystemCalcViewModel.cs:24-31. Note CDCALC.md section 7 'New in code' 3. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDCALC.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1353 — CDRAINFALL: the record is rebuilt from the drawing before the window opens
+
+**Command / Area:** CDRAINFALL (the job's rainfall curve). LOW-MEDIUM. UNEXPECTED STORED-DATA CHANGE.
+
+**Symptom:** Before the window opens CDRAINFALL brings CE's saved record up to date with the drawing (removes stale pits and pipes, imports missing ones, saves). Choosing a rainfall curve does not need this, and cancelling the window does not put the record back. It is the same kind of pre-command rebuild that overwrote typed levels in BUG-290.
+
+**Expected behaviour:** CDRAINFALL reads the record without rewriting it, and Esc leaves it exactly as it was.
+
+**Steps to confirm in AutoCAD:** (1) On a copy with typed pit and pipe levels, note them in the Pit Schedule. (2) Run CDRAINFALL and cancel. (3) Compare the schedule. Right = identical. Wrong = a level or row differs.
+
+**Test that catches it:** Source guard: CDRAINFALL does not call EnsureDrawingDataCurrent. Fixture: record bytes before and after a cancelled run are equal.
+
+**Reference:** Commands\RainfallCurveCommand.cs:52 (EnsureDrawingDataCurrent); Services\ProjectDataService.cs:595-640 (removes stale entries, imports missing, saves). Note CDRAINFALL.md section 7 'New in code' 2. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDRAINFALL.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1354 — CDTWL and CDDEST: a CE mark is written into the drawing before the first question, and Esc does not take it back
+
+**Command / Area:** CDTWL (top water level) and CDDEST (where each downpipe ends up). LOW-MEDIUM. UNEXPECTED DRAWING CHANGE.
+
+**Symptom:** Both commands start by stamping the drawing as a CE drainage drawing. CDTWL's own description says it never changes the drawing. The stamp is saved in a committed transaction, so a drawing that was only being looked at is now changed, AutoCAD asks to save it on close, and Esc at the first question does not remove it.
+
+**Expected behaviour:** A look-only command writes nothing, and a Structural drawing is never stamped.
+
+**Steps to confirm in AutoCAD:** (1) On a drawing that has never had a CE command run, open it, run CDTWL and press Esc. (2) Close the drawing. Right = no 'save changes' question. Wrong = AutoCAD asks to save. (3) Repeat for CDDEST.
+
+**Test that catches it:** Fixture: fresh drawing; run to the first prompt and Esc; assert the drawing's modified flag and dictionary are unchanged.
+
+**Reference:** Commands\DetentionTwlCommand.cs:21 and 42 (MarkDrawingActive); Commands\SourceDestinationCommand.cs:44 (MarkDrawingActive); Services\ProjectDataService.Persistence.cs:903-925 (writes in a committed transaction). Notes CDTWL.md (7 new 1) and CDDEST.md (7 new 1). Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDTWL.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1355 — CDRUNSOLVE: the run follows the first pipe found leaving each pit, by name
+
+**Command / Area:** CDRUNSOLVE (solve inverts down a run). MEDIUM. WRONG RUN (effect at branches, not seen).
+
+**Symptom:** To build the run, CDRUNSOLVE starts at the pit you pick and takes the first pipe in the list whose From is that pit, then repeats from its To. At a pit with two pipes leaving it (a branch) it follows whichever is listed first, which may be the wrong branch. It does not use the schedule set or the drawn geometry to decide.
+
+**Expected behaviour:** At a branch the drafter is asked which pipe the run follows, or the run is built from the picked pipes only.
+
+**Steps to confirm in AutoCAD:** (1) On a copy build a pit with two pipes leaving it. (2) Run CDRUNSOLVE from the pit above. Right = it asks which way, or follows the drawn run. Wrong = it follows one branch with no question, whichever was drawn first.
+
+**Test that catches it:** Unit case: pit with two outgoing pipes; assert the builder reports an ambiguity.
+
+**Reference:** Services\ProposalApplyService.PlanBuilders.cs:474-486 (FirstOrDefault of the pipe whose From matches). Note CDRUNSOLVE.md section 7 'New in code' 2. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDRUNSOLVE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1356 — CDRUNSOLVE: the preview quotes pipe sizes and grades that Apply does not write
+
+**Command / Area:** CDRUNSOLVE preview and Apply. MEDIUM. WRONG ANSWER (preview promises more than Apply does).
+
+**Symptom:** Each preview line reads like 'Whole-run solve: DN225 at 1:150, 1.05 m/s'. The changes actually built from it are the upstream and downstream invert levels only. The size and grade are in the words but not written to the pipe.
+
+**Expected behaviour:** The preview says only what Apply writes ('Invert levels') and shows the proposed size and grade as advice, or Apply writes them.
+
+**Steps to confirm in AutoCAD:** (1) On a copy with a four-pit run run CDRUNSOLVE and Apply. (2) Open CDEDIT on a pipe: compare its size and grade to the preview line. Right = they match what the preview said. Wrong = only the levels changed.
+
+**Test that catches it:** Unit case: the plan's change list for a solved pipe; assert every quoted figure has a matching change.
+
+**Reference:** Services\ProposalApplyService.PlanBuilders.cs:105-112 (reason words with DN and grade; only AddInvertChange calls follow). Note CDRUNSOLVE.md section 7 'New in code' 3. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDRUNSOLVE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
