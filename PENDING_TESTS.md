@@ -1,4 +1,21 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
+
+### Trust plan step 1, the opening line (UX-OPEN-01) — 12 November 2026 (Built and unit-tested only; NOT installed; robot and Codex to run on COPIES)
+
+PR 2041 (DRAFT, never merged by the run), branch `claude/trust-01-open-line`, cut from the installed Civil commit `cf059dcf`. Settings: `trust.sayDrawingStateOnOpen` (ON), `trust.openCheckMaxObjects` (50000, a DRAFT figure until probe P1 times the check).
+
+1. **Civil job, all linked (copy):** open it. Right = one line `CE: N pits, N pipes, all linked.` and the numbers match the job. Close without editing: no "save changes?" question.
+2. **Same job with one extra polyline on the stormwater pipe layer:** open it. Right = `CE: needs checking. 1 line on a pipe layer not in the CE record. Type CDCHECKCURRENT to see them.` and CDCHECKCURRENT lists the same one line ("Line on a pipe layer is not in the CE record").
+3. **Old drawing with pit symbols and no CE record:** Right = `CE: N pit blocks found, no CE record. Nothing has been changed by this check. ...`
+4. **Structural drawing, consultant drawing, blank drawing:** Right = no CE line at all.
+5. **Read-only file:** the line still shows; nothing is written.
+6. **A drawing whose pit symbols get updated on opening (older PIT BLOCK 2):** Right = a second line `CE: pit symbols were updated when this drawing opened.`
+7. **U, then open another drawing, then back:** Redo still works in the first drawing.
+8. **Size limit:** set `trust.openCheckMaxObjects` to 10 in `CD_Settings.json`, open a Civil job: `CE: large drawing, not checked on opening. Type CDCHECKCURRENT to check it.` Put it back after.
+9. **Switch off:** `trust.sayDrawingStateOnOpen` = false: no line on any drawing and CDCHECKCURRENT is exactly as before.
+10. **Broken twin (already proven without AutoCAD):** a deliberately broken copy of the check that writes is caught twice, by the changed-counter guard and by the compiled-plugin scan. In AutoCAD the equivalent check is case 1's "no save question" (DBMOD unchanged).
+11. **Not provable by the robot alone:** the look of the line (one Codex look, also on a large drawing); the counts on real old jobs (Tim, five jobs he knows and one messy one).
+
 ## TRUST step 0, the read-only reader and scorer (DRAFT, nothing calls it), draft PR 2040 — 12 Nov 2026
 
 Built and unit-tested only (82 of 82 on net10 and net48). Branch `claude/trust-reader`, https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/2040. **Nothing to test in AutoCAD yet:** no command, window or button uses it. It becomes testable when the read-only copy of a real drawing is built (next item) and probe P3 runs it on the test-set copies. Then: read each copy twice, the readings must be identical and the copy unchanged; score against the answer sheet.
