@@ -45,3 +45,25 @@
 ## Tidy-up
 
 AutoCAD closed with the driver's quit; lock released; the four settings files byte-identical. My scratch build copies and DXF exports were deleted; C: free rose from 34.6 to 38 GB. The reference test left no file in the testset folder (it used a copy).
+
+---
+
+# Added Fri 13 Nov 03:45: second session, BUG-290, BUG-968, and what could not be done
+
+**Same rules as above:** the installed build (Civil 3.0.90, `cf059dcf`), real AutoCAD 2027, fresh copies of the standard test drawing, a SECOND and separate AutoCAD start (a different process from the first), no status edited, nothing installed, four settings files checked at the end.
+
+## FOR TIM
+
+1. **BUG-650 (CDFW cancel wiping pit inverts): SEEN FIXED IN TWO SEPARATE AUTOCAD SESSIONS.** The second session gave the same answer as the first: after Esc at CDFW's first question, and after placing a floor waste, the 8 stored pit inverts and the 25 pipe levels are unchanged (the stored levels have the same fingerprint, 86745A395C46, before and after). So the "two sessions" rule of 24 Oct is met for this fix, on the robot's evidence.
+2. **BUG-290 (a hidden refresh overwriting levels, in CDAGI, CDSTRIP, CDRUNSOLVE): SEEN FIXED for the case I could drive; the full case was not tried.** In all three commands, pressing Esc at the first question left every stored pit and pipe level unchanged (same fingerprint). Not tried: typing a level into a window first and then running the command (the original fault).
+   1. **One thing each of them still does:** the Esc rewrites CE's record quietly (the stored text gets shorter by 148 characters, no level changes). One U puts it back (shown earlier for PIT).
+3. **BUG-968 (CDRENUMBER closing AutoCAD with two pipes running opposite ways between the same two pits): SEEN FIXED.** I drew two pipes between P10 and P9, one each way. CDRENUMBER ran: it asked for the main outlet (C1 or X1), showed its list ("P9 to P8, P10 to P9"), asked "Apply?", and Esc at that question left the drawing and CE's record exactly as before. AutoCAD never closed (same process throughout).
+4. **Could not be done this way:** BUG-674, 780 and 785 (they need the Edit Pit Save and Pit Schedule Place buttons, which the driver never presses); BUG-969 (it makes a new drawing file in a job folder, not something to do on a copy here). **Not attempted:** BUG-683, 681 (need a typed-length pipe and a Pit Schedule row compared by eye) and BUG-756 (the long section). Say so rather than guess.
+
+## DETAIL
+
+1. **BUG-650 second session.** Session start 03:02. Before: record 600,382 characters, levels fingerprint 86745A395C46 (8 pits with a stored invert, 25 pipes with one). CDFW then Esc ("CDFW cancelled - nothing was placed."): record 603,308 characters, same fingerprint. After a reopen: same fingerprint again. CDFW with a point ("Floor waste placed. Tag: FW1."): record 605,005, same fingerprint. Record growth is the quiet identity and format-number rewrite described above (no level value).
+2. **BUG-290.** Each from a fresh reopen. CDAGI: first question "AG drain pipe property [None/Charged/Suspended]", Esc: "CDAGI command cancelled."; fingerprint unchanged; record 600,382 to 600,234 characters. CDSTRIP: first question "Justification [Top/Center/Bottom]", Esc: "CDSTRIP cancelled - nothing was drawn."; fingerprint unchanged; 600,234. CDRUNSOLVE: first question "Select the start pit (upstream end) of the run to solve", it waited at it (my script's 60-second wait ended, then one Esc), Esc: cancelled; fingerprint unchanged; 600,234.
+3. **BUG-968.** Two pipes drawn with CD (New Pipe window, levels left blank, Start Pipe pressed through the v3 driver), P10 to P9 then P9 to P10: objects 1,034 to 1,040. CDRENUMBER: "More than one pit discharges outside the network - its main outlet is not obvious: C1 X1"; Esc: "Renumber cancelled - nothing changed." Run again, answer C1: "Renumber downhill to uphill: P9 -> P8, P10 -> P9", "2 pit(s) will be renumbered. Apply? [Yes/No] <No>", Esc: "Renumber cancelled - nothing changed." Record and drawing fingerprints identical to before CDRENUMBER (604,422 characters). The AutoCAD process number was the same at the end. I did not answer Yes (it would renumber the copy).
+4. **Not seen:** whether the original crash needed a different drawing (the entry says "before the list appeared"; here the list appeared and nothing closed).
+5. **Set-up notes for whoever repeats these:** the New Pit window needs a cover level typed before Continue placement enables; the driver's v2 press list refuses the renamed "New pit, Continue placement" and "New pipe, Start Pipe" buttons, the v3 `ui-press` accepts them; a CE command left at a prompt is ended with the driver's one-Esc verb.
