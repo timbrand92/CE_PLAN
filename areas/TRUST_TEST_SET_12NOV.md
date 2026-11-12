@@ -18,7 +18,7 @@ Pick about 10 jobs that between them cover this list. One job can cover several 
 1. **A clean current job** drawn start to finish with the current tools. This is the control.
 2. **A revision** of a job first drawn months ago and reopened since.
 3. **An old LISP-era job** with no CE record at all.
-4. **A job drawn partly on AutoCAD 2022 to 2024 and partly on 2027,** so some pipes are the new one-piece pipe and some are ordinary lines.
+4. **A job drawn partly on AutoCAD 2022 to 2024 and partly on 2027,** so some pipes are the new one-piece pipe and some are ordinary lines. Optional: on 12 Nov Tim did not list this kind among the revisions that come back (answer B1). He did list old LISP-era jobs, early plugin jobs and hand-drawn jobs with no CE tools, so lines 3 and 14 matter most.
 5. **A job with plastic pits** (350 x 350) as well as concrete pits.
 6. **A job with a pit that has more than one pipe in** and one with more than one pipe out.
 7. **A job with downpipes** connected by charged or suspended pipes.
@@ -28,6 +28,7 @@ Pick about 10 jobs that between them cover this list. One job can cover several 
 11. **A large job,** your biggest drainage plan.
 12. **The messiest job you can think of:** copied from another job, labels moved, things exploded.
 13. **One a colleague drew,** not you.
+14. **A hand-drawn job with no CE tools at all:** pits and pipes as plain AutoCAD blocks and lines (added from answer B1, 12 Nov). Right for this job = CE claims nothing as Sure and invents nothing.
 
 For each job, the file that gets used is the last issued drawing, not a working copy.
 

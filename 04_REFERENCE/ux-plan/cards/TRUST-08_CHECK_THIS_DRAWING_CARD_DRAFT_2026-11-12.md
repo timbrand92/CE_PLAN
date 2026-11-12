@@ -105,7 +105,7 @@ Outlet: P1, confirmed.
 2. **Everyday tools on a drawing that needs checking:** carry on with what CE knows and say "needs checking", never block. Recommended, and it matches no-hard-blocks. OPEN (C2).
 3. **What one Apply may do:** only what you ticked, in one step. Old-drawing upgrade (slice D) is always its own Apply, never mixed with link fixes. Recommended. OPEN (C3).
 4. **Unsaved changes before Apply:** warn and allow, as above. OPEN.
-5. **Pipe conversion and the pit symbol swap that run on opening today:** move them behind this door as rows, so opening a drawing changes nothing. This needs your word because of the 16 Sep and 4 Nov answers. Recommended yes. OPEN (B5).
+5. **Pipe conversion and the pit symbol swap that run on opening today:** move them behind this door as rows, so opening a drawing changes nothing. ANSWERED 12 Nov (interview B5). Tim chose "Nothing changes on open": "Opening only reads. The pipe conversion and symbol update become rows in Check this drawing, which you tick and apply. One U undoes it." This supersedes the 16 Sep and 4 Nov answers for the core.
 6. **Clicking a pit lights up what it is linked to** (voice talk): in slice A, inside this window. Whether it also works from the Inspector with no window open is a separate small card. OPEN.
 
 ## 8. Not known yet

@@ -81,7 +81,7 @@ The opening line can now say: "14 pits, 22 pipes, all linked, outlet P1."
 
 ## 6. Decisions for Tim
 
-1. **Is the LPD the start point,** or is the start point the last pit before it? On a job where the LPD is a kerb outlet 6 m past the last pit, which one do pit numbers count from? OPEN (interview B4).
+1. **Is the LPD the start point,** or the last pit before it? ANSWERED 12 Nov (interview B4). Tim chose "The LPD itself": "The start point is the legal point of discharge. Pit numbers count up from the first pit upstream of it. One stored thing, matching what council calls the outlet." Sections 1 and the before/after above were written before this answer and still say "outlet P1"; they are to be reworded to "LPD" when the card is next revised.
 2. **Two outlets on one job:** one start point per network, each confirmed. Recommended. OPEN.
 3. **When CE can only offer "lowest invert":** propose it, or make no proposal and ask you to pick? Recommended: propose it, labelled "not proven". OPEN.
 4. **Should the marker print?** Recommended: on a no-plot layer, so it guides the drafter and never reaches council. OPEN.

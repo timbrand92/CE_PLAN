@@ -81,4 +81,21 @@ Tim, 12 Nov 2026: "send questions using claude question interface". From here th
    - INTERPRETATION: the fourth applies from the point a step has promised it. Until step 5 is in, everyday tools still update the record quietly by design, so that alone does not take step 1 to 4 off. For Tim to correct.
 3. **A3, which AutoCAD year is the first colleague on?** Tim chose: "2027".
    - INTERPRETATION: the first colleague release is proven on 2027. The 2022 to 2024 pull-down menu work in card TRUST-02 is not needed for the first release, but those users stay in scope later (15 Sep ruling), so each step still records what it does on those years. Which colleague, and that their PC really is 2027, has not been read from the PC.
+### B1, B4, B5 and the old tools, answered Thu 12 Nov 2026 (late evening, PC clock)
+
+1. **B1, which kinds of old drawing come back as revisions?** Tim chose three of four: "Old LISP-era jobs", "Early plugin jobs", "Hand-drawn, no CE tools". He did not choose "Mixed AutoCAD years".
+   - INTERPRETATION: the reader and the test set must cover those three kinds. Mixed-year jobs are not something he sees as revisions, so they are not a required test job; one real job on 4 Nov did show a mix (46 pipes, 6 converted), so the reader still has to read both pipe forms.
+2. **B4, what is the start point of a network?** Tim chose: "The LPD itself (Recommended)". The option read: "The start point is the legal point of discharge. Pit numbers count up from the first pit upstream of it. One stored thing, matching what council calls the outlet."
+3. **B5, what happens when a drawing opens?** Tim chose: "Nothing changes on open (Recommended)". The option read: "Opening only reads. The pipe conversion and symbol update become rows in Check this drawing, which you tick and apply. One U undoes it."
+   - This SUPERSEDES, for the core, his 16 Sep answer ("IT NEEDS TO BE IMPLEMENTED EVERYTIME YOU OPEN AN EXISTING JOB"; 29 Oct "defualt on for everyone") and his 4 Nov answer ("ASK USER WHEN OPENS"). Both stay on record, marked superseded 12 Nov 2026.
+   - INTERPRETATION: until Check this drawing can do the conversion (step 8, slice D), today's behaviour on opening is unchanged; nothing is switched off by this answer alone. For Tim to correct.
+4. **Old LISP tools and old block files, where are they?** Tim typed: "on my work pc".
+   - INTERPRETATION: this PC. The first search looked in only two places; a wider read-only search of this PC is the next job. Which folder is still not known.
+
+### Tim's instruction, same evening
+
+"can you work autonomously until tomorrow midday on anything you think is worthwhile"
+
+INTERPRETATION: carry on with reading and planning work without waiting for answers. It does not lift the HOLD: no builds, tests, installs, AutoCAD or colleague releases, and no code changes. Questions are queued for him rather than asked while he is away.
+
 4. **A4, how is Tim's trial time used?** Tim chose: "Group the safe ones (Recommended)". The option read: "Steps 1, 2 and 3 change nothing in a drawing, so they share one 3-day trial. Steps 4 to 8 each get their own. About 6 trials instead of 8."

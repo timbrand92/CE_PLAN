@@ -134,7 +134,7 @@ Each step has its own card. Step 1's card is answered; the others are DRAFT in `
 
 1. **Goal:** one start point per network, confirmed once, stored in the drawing, read by every tool.
 2. **What you see:** "CE proposes P1 as the outlet because the LPD is drawn at its outlet pipe. Confirm?" After that CDRENUMBER, the schedule, the solver and the long section stop asking, and a marker shows where it is.
-3. **Depends on:** step 6 (a proposal must never be a guess presented as fact). Your word on jobs with two outlets (B4).
+3. **Depends on:** step 6 (a proposal must never be a guess presented as fact). The start point is the LPD itself, and pit numbers count up from the first pit upstream of it (Tim, 12 Nov, answer B4). Jobs with two outlets are still a card decision.
 4. **Proven by:** robot: confirm once, save, close, reopen, every reader gives the same outlet; two-outlet job; job with no outlet drawn; Codex looks at the question and the marker; Tim on real jobs.
 5. **Undo:** the confirmation is one U. A Settings switch sends the readers back to today's behaviour.
 6. **Risk: MEDIUM.** Two stored forms of the LPD exist today and each refuses to be written while the other is there. The safe design reads both and migrates neither at first.
@@ -204,7 +204,7 @@ These need AutoCAD on copies, so they wait for Tim to lift the hold for them. No
 Nothing here is changed by this plan. Each needs Tim's word (interview section H and C).
 
 1. **UX-REP-01 (25 Sep):** CDSYNC and CDREBUILD stay direct typed commands. The plan keeps them typed and working; putting them behind a preview needs his word.
-2. **Pipe conversion on opening:** 16 Sep "EVERYTIME YOU OPEN AN EXISTING JOB" against 4 Nov "ASK USER WHEN OPENS".
+2. **Pipe conversion and the pit symbol update on opening:** ANSWERED 12 Nov (B5). Tim chose "Nothing changes on open": opening only reads, and both become rows in Check this drawing. This supersedes 16 Sep "EVERYTIME YOU OPEN AN EXISTING JOB" and 4 Nov "ASK USER WHEN OPENS" for the core. Today's behaviour stays until step 8 slice D can do the job (interpretation).
 3. **Rule 15 (AutoCAD never idle), the 17 Oct switch-on ruling, percentages in every message:** in force until he says otherwise. Under this plan, robot and Codex evidence comes first but cannot let a tool into the core.
 4. **The plastic pit rule (5 Sep, item 58):** kept. Step 4 only makes the schedule say which pits it left out.
 5. **CE never saves for you (UX-STD-03):** kept in every step.

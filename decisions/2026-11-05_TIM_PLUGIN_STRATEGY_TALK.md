@@ -102,3 +102,16 @@ Asked: "Shall I write the card for the first step, the read-only line on opening
 Asked whether CE should stay silent on non-Civil drawings and say when pit symbols were updated on opening, Tim said: "yes but some of the commands are useful in all drawings as ce tools".
 
 Interpretation, for Tim to correct: both card choices are agreed. Only the opening line stays silent on non-Civil drawings; CE tools stay available on every drawing. The HOLD stands and nothing is built. Which tools count as all-drawing tools has not been listed.
+
+## Decisions 7 to 12 (Thu 12 Nov 2026, trust plan interview)
+
+Given through the question interface, so these are the options Tim chose, as worded to him. Full record with the interpretations: areas\TRUST_PLAN_INTERVIEW_12NOV.md.
+
+7. **Finish line for the first colleague release:** "Zero wrong, all 10 (Recommended)": no wrong value shown as fact on any of the 10 test jobs, Unknowns allowed where the drawing lacks the information, plus three clean working days.
+8. **Faults that take a step or release off the same day:** "Lost work", "AutoCAD crash", "Wrong value shown as fact", "Changed without telling".
+9. **First colleague's AutoCAD year:** "2027". Not read from their PC.
+10. **Trials:** "Group the safe ones (Recommended)": steps 1 to 3 share one trial, steps 4 to 8 one each.
+11. **Start point of a network:** "The LPD itself (Recommended)".
+12. **On opening a drawing:** "Nothing changes on open (Recommended)". SUPERSEDES for the core: 16 Sep 2026 "IT NEEDS TO BE IMPLEMENTED EVERYTIME YOU OPEN AN EXISTING JOB" (and 29 Oct "defualt on for everyone") and 4 Nov 2026 "ASK USER WHEN OPENS". Both stay on record, superseded 12 Nov 2026. Today's behaviour is unchanged until Check this drawing can do the job (interpretation).
+
+Also 12 Nov, typed by Tim: old LISP tools and block files are "on my work pc"; and "can you work autonomously until tomorrow midday on anything you think is worthwhile" (read as: reading and planning only; the HOLD stands).
