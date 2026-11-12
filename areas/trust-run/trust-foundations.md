@@ -89,3 +89,14 @@
   4. **Proof:** unit tests (every answer with the switch off equals the installed rule; the plugin's own list of 16; the installed rule as the faulty version; the real housekeeping scope with the real switch). Headless check `TRUST-CANCEL-01` (`CEPROOFTRUSTCANCEL`) written, NOT run.
   5. **Defaults taken for Tim to confirm:** the switch off; an older-format record is not brought up to date by merely attaching it; the "Civil" mark is dropped for a command that added nothing to the drawing; a changed-nothing update is judged on the whole record's text.
   6. **Robot cases:** `PENDING_TESTS.md`, queue item 7 (9 rows).
+
+- **13 Nov 05:44, BUG-1456 cure pushed as its own DRAFT pull request 2073** (branch `claude/bug-1456-record-own-drawing`, head `1a28c3b3`, cut from the installed Civil commit `cf059dcf`, NO switch).
+  1. **What it does:** Help and CD Settings are off the list of commands that write CE's record at their end (14 names left). Both of CE's save routines, and the place a save is aimed at a drawing, now refuse when the record in memory does not belong to the drawing being written; one plain line goes to CE's log. A real change still waiting for its own open drawing is kept waiting for that drawing, never dropped and never written elsewhere.
+  2. **Built:** the plugin, net48 and net10, 0 errors. The headless proof project with the new check has NOT compiled yet (queued behind another lane's build).
+  3. **Tested:** unit tests only. Whole Civil test project: 22,222 ran, 22,190 passed, 32 skipped, 0 failed. New tests: the six seen sequences, the controls, three deliberately broken copies (the check taken out of each place) that are caught.
+  4. **Not tested:** nothing run in AutoCAD or the core console. The check `BUG-1456-CROSS-01` (`CEPROOFCROSSDRAWING`) is written, not run. The tests do not open two drawings.
+  5. **Installed:** no. **Accepted:** no.
+  6. **Default for Tim to confirm:** no switch (it is never right to write one job's data into another drawing).
+  7. **Robot cases:** `PENDING_TESTS.md`, BUG-1456 (9 rows).
+  8. **Also since my last line here, pushed:** pull request 2058 (LPD) review fixes at `772b221d` (22,361 ran, 22,329 passed, 32 skipped, 0 failed); pull request 2051 (check list) small fix at `b9bed2e8` (stand-in code no longer shows).
+  9. **Next:** the other four review items on pull request 2064 are written and committed locally (`9d44a9c0`, with this cure merged in); its whole test run is queued behind another lane's build. Not pushed until that run is clean.

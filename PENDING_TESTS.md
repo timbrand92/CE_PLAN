@@ -1,5 +1,19 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+### BUG-1456, CE's record is never written into a drawing it does not belong to — 13 November 2026 (Built and unit-tested only; NOT installed; no switch; robot and Codex to run on COPIES)
+
+PR 2073 (DRAFT, never merged by the run), branch `claude/bug-1456-record-own-drawing`, cut straight from the installed Civil commit `cf059dcf`. No setting to turn on: the protection is always there. What was seen on the installed build is in `areas\trust-run\EVIDENCE_CROSS_DRAWING.md`. Every case uses two DIFFERENT jobs (a copy of the same job can hide the fault) and reads the second drawing's stored CE record (pits, pipes, stored path) before and after.
+
+1. **Core console first:** `CEPROOFCROSSDRAWING` (BUG-1456-CROSS-01). Right = PASS, and its detail line shows the faulty version (the installed writer called with no check) wrote the other record and was noticed.
+2. **The seen sequences, real AutoCAD:** (a) CDDIAG in job A, open job B, CDHELP and close; (b) CDDIAG in A, open a blank drawing, CDS and close; (c) CDDIAG in A, open B, CDS alone; (d) the other order: CDDIAG in B, make A current, CDHELP. Right each time = the second drawing's record is exactly as it was; the blank drawing still has no CE record and does not ask to be saved.
+3. **The log line:** when a write is refused, CE's log holds one line "CE did not write its record into this drawing: the record CE is holding belongs to another drawing. Nothing was written here." Help and CD Settings no longer write at their end at all, so after case 2 the line may not appear; that is right too. Record which was seen.
+4. **The comparison run on the installed build (3.0.90):** the same four; expect the fault (6 of 11 there).
+5. **The controls must still pass:** (a) in B, a circle then U, then CDS: B keeps its own record; (b) the same with CDHELP; (c) a cancelled PIT and a cancelled CD in A, then B and a blank drawing with CDHELP and CDS: nothing changed in B or the blank drawing.
+6. **A real change is not lost:** Edit Pit in A with a changed cover level, OK; switch to B; CDHELP. Right = A's stored record holds the new level (now, or after A's next command), and B is untouched.
+7. **A real change whose drawing has closed:** Edit Pit in A, OK, close A without saving, then CDHELP in B. Right = nothing of A's is written into B.
+8. **One drawing, ordinary work:** PIT, CD, Edit Pit, save, reopen. Right = everything is stored as on the installed build (the check never stops a drawing's own record being written).
+9. **Not covered by this change:** a drawing that already holds another job's record from before is not repaired.
+
 ### Trust plan queue item 7, a cancelled command writes nothing — 13 November 2026 (Built and unit-tested only; NOT installed; the switch ships OFF; robot and Codex to run on COPIES)
 
 PR 2064 (DRAFT, never merged by the run), branch `claude/trust-09-cancel-writes-nothing`, on step 6 plus the headless checks. Setting: `trust.cancelledCommandWritesNothing` (OFF; set it to true in `CD_Settings.json` for these cases and put it back after). Every case starts from a FRESHLY OPENED copy and compares the whole stored CE record text, the drawing's object count and the Undo list. Use a copy whose record is in an older format as well as a current one.
