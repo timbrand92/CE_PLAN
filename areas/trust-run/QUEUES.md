@@ -180,6 +180,18 @@
 
 **trust-acad-evidence, next:** the two-drawing test for CDHELP and CDS (sent as top priority at 03:12, still not written up) comes before everything else; then the second-session repeat of BUG-650; close the AutoCAD you started by 8:10am.
 
+### Refill, Fri 13 Nov 05:25 PC clock (controller)
+
+**trust-core-ribbon, next (Structural, each its own small draft cut from 8de95c34, a test that fails without the fix, read the bug entry first):**
+13. BUG-1361: a schedule sync with no edits must change nothing in the drawing: no brace turned again, no length or angle rewritten at table rounding. Engineering figures on a drawing: list anything you have to assume as a decision for Tim.
+14. BUG-1424: typing B over A in the bracing table changes the text only; the brace stays on layer A and plots as A. Draft default: the table edit and the brace must agree, or the edit is refused with a plain line.
+15. BUG-1442 and BUG-1447: CLEAN must not drop a whole step silently when one object is on a locked layer (say which step was skipped and why; unlock nothing), and say truthfully what copy exists from before the clean-up.
+16. Fix what trust-review finds on 2068, 2069 and 2070.
+
+**trust-struc-mgr-plan, next:**
+19. One status board for Tim, `areas\trust-run\STATUS_BOARD.md`, rebuilt from the files each time you check in: every trust draft pull request (number, plain name of what it does on a drawing, latest review verdict and head from `trust-review.md`, what real AutoCAD evidence exists from the EVIDENCE files, what is still owed), grouped by plan step, newest verdict wins. Numbered lists, no tables, FOR TIM first with the counts. Count from the files; never estimate. Keep it current at every check-in until told otherwise.
+20. Bring the morning page `areas\TRUST_MORNING_BRIEF_13NOV.md` up to date for BUG-1456 (seen on the installed build; `areas\trust-run\EVIDENCE_CROSS_DRAWING.md`; bug entry at the end of `BUG_CARPARK.md`): it is the FIRST item, with the two safe habits, and the page must say plainly that the fix is drafted, reviewed FIX FIRST, and not installed.
+
 ### trust-struc-mgr-plan (planning only)
 1. `areas\trust-plan-structural.md` and `areas\trust-plan-manager.md` (its brief).
 2. Draft cards, in the TRUST card shape, for the first three Structural steps and for "going back a version, rehearsed" in Manager.
