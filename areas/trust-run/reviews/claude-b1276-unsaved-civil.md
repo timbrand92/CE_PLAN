@@ -1,0 +1,35 @@
+# Review: claude/b1276-unsaved-civil (BUG-1276 Civil half, draft PR #2035)
+
+**Reviewer:** lane trust-review, Thu 12 Nov 2026, about 23:15. Read only. Nothing built, run or installed.
+**Base checked:** the branch is NOT cut from the installed `cf059dcf`. It sits on `7cc4d306` (the held C-79c build, Civil 3.0.92). Its own change is four commits, `07e17c89` to `26d4994c`, diffed with `git diff 7cc4d306...origin/claude/b1276-unsaved-civil`.
+**Card:** TRUST-04, Civil item 1. **Bug:** BUG-1276. **Tim's ruling:** decision 223 in `decisions/2026-10-29_TIM_ANSWERS.md` line 830, "c" = both a reminder and timed backup copies.
+
+---
+
+# FOR TIM
+
+1. **What it does:** after 25 minutes unsaved, the CE status text says "Not saved for 25 min" and the command line says so once (again at 50, 75). Every 10 minutes CE also copies AutoCAD's own automatic-save file into CE's backup folder. Your drawing is never saved or touched.
+2. **It follows your decision 223.** The card for this step is out of date and should be corrected to match you, not the other way round.
+3. **Verdict: FIX FIRST** (a new line shows even with everything switched off and uses software words; CE never tells you when it cannot make copies; a real job's number and street are in the tests; move it onto your installed build).
+
+---
+
+## Findings
+
+1. **The card is stale, not the code (RULES 12.6).** Card TRUST-04 says the Civil half is a reminder only, recommends 15 minutes, and its robot case expects "no file written". Tim's decision 223 is reminder (25 minutes, from his 25 Sep ruling) AND timed copies every 10 minutes into the CE backup folder. The code matches decision 223. **Controller: correct card TRUST-04 items 1, decision 3 and robot case 4** (right = no write to the drawing and its changed-flag untouched; one copy file appears in the backup folder per interval).
+2. **FIX FIRST: lift onto the installed build.** The branch carries all of C-79c, which TRUST-04 says is not installed whole. Dry run of the four commits onto `cf059dcf` conflicts only in `REGRESSION_LOG.md`; every class it calls exists at `cf059dcf` (`RedoWindowGuard.DeferWhileRedoOpen` and `IsOpenAnywhere`, `CeDrawingPathRules`, `CivilBackgroundXrefReader`, `DrawingSafetyService.TryGetIdleAutoSaveDrawing`). Not compiled.
+3. **FIX FIRST: a new command-line line that ignores the switches and uses software words.** `Services/DrawingBackupService.cs` 322 now prints "CE: backup copy not made (reason)." whenever the after-save backup is skipped, with no switch check, although the change log and the settings notes say both switches off means today's behaviour exactly. The reasons come from `Services/DrawingSafetyService.cs` 142 to 247 and include "document disposed", "database inaccessible", "database missing", ".sv$ autosave drawing", "non-DWG drawing". Gate the line (Structural gates it on the reminder switch) and turn each reason into plain words, for example "this is a recovered or automatic-save copy of a drawing" or "this drawing is a template".
+4. **FIX FIRST: CE never says on screen when it cannot make copies.** The bug's expected behaviour: "if a backup cannot be made, CE says so once in plain words." When AutoCAD's own automatic save is off (`UnsavedWorkPlanner.cs` 197, "SAVETIME 0"), or no automatic-save file ever appears, the copy is skipped and only logged (`LogSkipOnChange`, `DrawingBackupService.cs` 634) or shown on the status-bar tooltip. The drafter believes copies are being kept. Print one line per session, for example "CE cannot keep copies of unsaved work: AutoCAD's automatic save is off (OPTIONS, Open and Save tab, Automatic save)." This matters for the incident itself: the bug records that no AutoCAD automatic-save files existed on 4 Nov, so in those conditions the copy half would have done nothing, silently.
+5. **FIX FIRST: a real job's number and street name are in the tests.** `Modules/Drainage.Tests/Services/UnsavedWorkPlannerTests.cs` lines 22, 23, 40 and onward use the real Structural job's number and street from the bug report as drawing and folder names. Run rule 3.7 and RULES 11: use made-up names when lifting. The old commits stay in this branch's history (listed for the controller, RULES 11.3).
+6. **Should fix before colleagues: copies land in one of two folders.** Whichever suite starts first does the copying (the AppDomain slot, `UnsavedWorkPlanner.cs` `TryClaimOwner`). Civil writes to `AutoSaveBackups\CE_CVL_SUITE` (`DrawingBackupService.cs` 868), Structural to `AutoSaveBackups\CE_STRUC_SUITE`. After a crash the drafter's copies may be in either. Use one folder for copies of unsaved work whatever suite owns the slot, or name the folder in the reminder line.
+7. **Worth tidying, not a fault: the background copy writes shared state without the lock.** `StartUnsavedCopy` (649 onward) sets the drawing's copy fields from a background thread while the timer reads them. It is held safe in practice by the interlocked in-flight flag. Structural hands the result back under the lock and applies it on the main thread (`ConsumePendingCopyResult`); one pattern in both suites would follow design rule 1.
+8. **Scope notes for the controller, not faults:** the reminder repeats at each multiple (25, 50, 75 minutes; `UnsavedWorkPlanner.cs` 120), where the card says "once"; the Settings-page rows are not built (values are in the settings file only); the reminder will probably also fire on a drawing changed only by CE's own work on opening, such as the pit symbol swap (my inference: those changes should set the drawing's changed-flag; not checked). That would be true, and is a useful sign for card TRUST-05.
+9. **Disk use not measured.** Twelve copies per drawing of a 50 to 100 MB automatic-save file is 0.6 to 1.2 GB per drawing in the CE settings folder, before the retention days prune them. Needs a figure before colleagues get it.
+10. **Checked and fine:** never saves, wblocks, locks or opens a transaction on the drawing (a source-text test guards it, `UnsavedWorkPlannerTests.cs` line 459); skips read-only drawings, a drawing being edited in place (REFEDIT), a drawing open as an Xref of another, two open drawings with the same file name, and automatic-save files older than the unsaved work; a half-written file is never taken (copy to a temporary name, then move); the AutoCAD save-time option is changed only with a switch that ships OFF, and only between commands with no Redo open; the two Redo test changes are additions that check the new code asks the Redo guard first, not weakenings; no units involved; `Shared\CE_SHARED` untouched.
+
+## What I did not check
+
+1. Nothing was built or run. Not seen in AutoCAD: the automatic-save file name and folder on 2027, whether AutoCAD's own automatic save leaves the changed-flag set, and the copy time.
+2. Why Tim's PC had no automatic-save files on 4 Nov. Suggest the evidence lane reads SAVETIME and SAVEFILEPATH on Tim's PC and watches for those files during a CE session on a copy.
+3. Status-bar wording as drawn on screen (needs a Codex look).
+4. AutoCAD 2022 to 2024.
