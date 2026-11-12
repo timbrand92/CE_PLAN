@@ -19588,3 +19588,75 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
 
 **Status:** OPEN
+
+## BUG-1357 — CDRULES: 'results recorded in the project' is printed even when the record write was held back
+
+**Command / Area:** CDRULES (check against the engineering rulebook). LOW-MEDIUM. WRONG MESSAGE.
+
+**Symptom:** The command always closes with 'Drawing geometry unchanged; results recorded in the project.' The write is skipped when the drawing's record is unreadable or held back, and the function that skips it returns false, but CDRULES ignores the return and prints the line anyway.
+
+**Expected behaviour:** When the write was held back the line says 'The results were shown but could not be saved to the drawing, and why'.
+
+**Steps to confirm in AutoCAD:** (1) On a copy whose CE record is unreadable or held back (the case the held-back check covers), run CDRULES. Right = a line says the results were not saved. Wrong = 'results recorded'.
+
+**Test that catches it:** Fixture: write held back; assert the closing line does not say recorded.
+
+**Reference:** Commands\RulesCommand.cs:112-115; Services\ProjectDataService.RulebookDrawing.cs:385-391 (void; ignores the false from WriteRulebookMetadata at 395-400). Note CDRULES.md section 7 'New in code' 1. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDRULES.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1358 — CDRULES: every run adds its whole findings list to the drawing and nothing trims it
+
+**Command / Area:** CDRULES (check against the engineering rulebook). MEDIUM. HIDDEN DATA GROWTH.
+
+**Symptom:** Each run stores a full copy of that run's findings in the drawing's CE record (the 'run record'). The code that adds it has no limit and no trimming that was found, so the drawing file keeps growing the more often the check is run, and the CE record takes longer to read and save.
+
+**Expected behaviour:** Only the last few runs (or only the last) are kept, and the number is a Settings value.
+
+**Steps to confirm in AutoCAD:** (1) On a copy with many findings note the file size after saving. (2) Run CDRULES twenty times, save, and compare the size. Right = about the same. Wrong = it grows with each run.
+
+**Test that catches it:** Unit case: record twelve runs; assert the stored list is capped.
+
+**Reference:** Services\ProjectDataService.RulebookDrawing.cs:385-391 (Runs.Add with no cap; no trimming found in the file); Rules\RulebookRunRecord.cs:16-21 (each run keeps a full copy of its findings). Note CDRULES.md section 7 'New in code' 2. Not seen in a real drawing; the size effect is read from the code only. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDRULES.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1359 — CDSYSTEM: the count is pipes changed, not pipes picked, and '0 pipe(s) recorded' can print
+
+**Command / Area:** CDSYSTEM (set the pipe system: Property, Outfall, Council, Inherit). LOW. WORDING.
+
+**Symptom:** After the choice CDSYSTEM prints '[CE] N pipe(s) recorded as Outfall drain.', where N counts only the picked pipes that have a saved CE record. A picked pipe with no record is skipped and never mentioned, so picking ten pipes can print '3 pipe(s) recorded' or '0 pipe(s) recorded as ...' with no explanation of the other seven.
+
+**Expected behaviour:** The line says how many were picked, how many were recorded and how many were skipped because CE has no record of them (and to run CDSYNC).
+
+**Steps to confirm in AutoCAD:** (1) On a copy select three pipes, one of them a plain polyline with no CE record. (2) Run CDSYSTEM and choose Outfall. Right = '2 recorded, 1 skipped (no CE record)'. Wrong = '2 pipe(s) recorded as Outfall drain.' with no word about the third.
+
+**Test that catches it:** Unit case: three picked handles, one unknown; assert the line names the skipped one.
+
+**Reference:** Commands\PipeSystemCommand.cs:78-81 (prints the changed count); Services\ProjectDataService.Mutations.cs:1647 (UpdatePipeSystemByHandles returns the changed count). Note CDSYSTEM.md section 7 'New in code' 1. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDSYSTEM.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1360 — CDSYSTEM: other objects in the selection are dropped without a count
+
+**Command / Area:** CDSYSTEM. LOW. WORDING.
+
+**Symptom:** Select pipes together with text or pits in one window and CDSYSTEM quietly uses only the pipes. Nothing says how many other objects were left out. Only when none is a pipe does it say 'None of those is a CE pipe'.
+
+**Expected behaviour:** One line: 'N pipes used, M other objects ignored.'
+
+**Steps to confirm in AutoCAD:** (1) On a copy window-select a run of pipes plus their labels and pits. (2) Run CDSYSTEM. Right = the line says how many were ignored. Wrong = silent.
+
+**Test that catches it:** Unit case: selection with two pipes and three other objects; assert the line names the three.
+
+**Reference:** Commands\PipeSystemCommand.cs:36-48 (non-pipes skipped in the loop, no count). Note CDSYSTEM.md section 7 'New in code' 2. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDSYSTEM.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
