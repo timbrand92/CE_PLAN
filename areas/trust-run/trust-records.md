@@ -116,3 +116,4 @@ Tables: 0. Long FOR TIM paragraphs: 0. Jargon hits: {len(jar)}. OPEN-on-answered
 - Item 5, BUGS_BY_STRUCTURAL_CORE_TOOL.md: 28 of 32 KEEP buttons searched. 132 rows, 69 unique bugs. 3 with no open entry (BDL, BSETLIST, BSETRESET). Not searched: the four digit-named tools 1, 2, 4 and 5 (a digit is not a usable search word).
 - Counts are open, in progress and on hold entries only; closed bugs were not listed.
 - Titles copied from each Command / Area line, cut at 220 characters.
+- Fri 13 Nov 2026 01:16 (PC clock): job 1 done. Wrote areas/trust-run/BUGS_FIXED_IN_CODE_NOT_PROVEN.md from the 47 tool notes: 149 bugs, 159 lines, 32 tools. No carpark status changed.
