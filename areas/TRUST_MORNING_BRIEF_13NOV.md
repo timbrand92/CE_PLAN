@@ -14,12 +14,12 @@
 8. **How to spot one today:** the Pit Schedule shows pits that are not on the plan, or Check Current Drawing shows far more items than you expect (seen: 82 against 48).
 9. **How to get your own data back:** one U straight after closing Help or Settings puts it back. The file on disk is untouched until you save over it.
 10. **No .bak to fall back on:** AutoCAD keeps no .bak files on this PC (ISAVEBAK is 0), but CE's own `_PRE_C7_` copy beside the drawing held the original.
-11. **The fix, pull request 2073,** is drafted and has GO for testing on copies; it has never run in AutoCAD and is not installed.
+11. **The fix, pull request 2073,** is drafted and has GO for testing on copies, and so does the last door, pull request 2083 (a change to CE's record is refused when it belongs to another drawing). Neither has run in AutoCAD; neither is installed.
 
 ## What ran overnight
 
 1. **Builders:** 48 trial changes built as drafts, none merged, none installed.
-2. **Reviewer:** 45 are fit for the robot to test, 3 need fixing first, none is waiting for a first review; 5 have changed since their last review and wait to be re-checked.
+2. **Reviewer:** 45 are fit for the robot to test, 3 need fixing first (2053, 2082, 2085), none is waiting for a first review, and every one that changed has been re-checked.
 3. **AutoCAD robot:** tested on copies outside your hours, then closed AutoCAD.
 4. **Code readers:** wrote a one-page note for each of your 47 Civil and 32 Structural core tools, and filed 177 new faults.
 5. **Planning:** your questions gathered in one file: 87, the first one matters most.
@@ -59,7 +59,7 @@
 ## Where these numbers come from
 
 0. **BUG-1456, 6 in 11, both ways, the two habits, 17 rows against 1, 82 against 48, one U, tab switch, only Help and Settings, ISAVEBAK 0, the _PRE_C7_ copy:** `areas\trust-run\EVIDENCE_CROSS_DRAWING.md` (parts 1 to 3) and the BUG-1456 entry at the end of `BUG_CARPARK.md`; GO for pull request 2073 (05:53) and the note that 2064 no longer carries the cure (06:21), from `areas\trust-run\trust-review.md`; the check that comes first: `PENDING_TESTS.md` (CEPROOFCROSSDRAWING).
-1. **48 trial changes, 45, 3, 0 and 5:** GitHub's open draft pull requests with "trust" or "bug-1456" in the branch name (2038 to 2085, counted at 07:41), with the latest verdict per pull request in `areas\trust-run\trust-review.md`; the list, with each one's head, is `areas\trust-run\STATUS_BOARD.md`.
+1. **48 trial changes, 45, 3, 0 and 0:** GitHub's open draft pull requests with "trust" or "bug-1456" in the branch name (2038 to 2085, counted at 07:46), with the latest verdict per pull request in `areas\trust-run\trust-review.md`; the list, with each one's head, is `areas\trust-run\STATUS_BOARD.md`.
 2. **47 and 32 tool notes:** the files in `04_REFERENCE\core-tool-notes\` (47 plus a README) and `04_REFERENCE\core-tool-notes\structural\` (32).
 3. **177 new faults:** bug numbers BUG-1280 to BUG-1456 in `BUG_CARPARK.md`, counted by this lane at 06:27.
 4. **87 questions:** `areas\TRUST_QUESTIONS_FOR_TIM.md`.
