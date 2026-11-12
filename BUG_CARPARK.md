@@ -21404,3 +21404,25 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
 
 **Status:** OPEN
+
+## BUG-1456 — Help (CDHELP) or Settings (CDS) run first in a second drawing writes the FIRST drawing's pits and pipes into it
+
+**Command / Area:** CDHELP and CDS, Civil 3.0.90 (commit cf059dcf), AutoCAD 2027. HIGH; DATA: one job's stored CE data is overwritten by another job's, with nothing on screen. Found Fri 13 Nov 2026: first by a reviewer reading the code, then SEEN by the robot in real AutoCAD on the installed build, on copies only, 6 times in 11 tries, in both directions. Evidence: `areas\trust-run\EVIDENCE_CROSS_DRAWING.md`. Not Codex-looked, not seen by Tim.
+
+**Symptom:** work in job A (any CE command run there, so CE holds A's record in memory). Open or switch to drawing B. As the very first thing in B, run Help (CDHELP) or Settings (CDS) and close the window. B's stored CE record is now A's. Seen: a blank drawing with no CE data gained 11 pits and 49 pipes and its changed counter went from 0 to 1 (so it asks "save changes?"); a different job holding 2 pits and 46 pipes was overwritten with the first job's 11 and 49; and the other way round the first job was overwritten with the second job's 2 and 46. Nothing is printed. The drafter sees a normal Help or Settings window.
+
+**When it does NOT happen (seen):** when any plain AutoCAD command (a circle, then U) was run in the second drawing first; and in one run after a cancelled PIT and a cancelled CD. Two copies of the same job hide it, because the wrong record looks the same.
+
+**Expected behaviour:** Help and Settings never write to any drawing. No CE command ever writes one drawing's record into another.
+
+**Cause (read from the code, consistent with what was seen):** CDHELP and CDS are on the list of commands whose end saves CE's stored record even when nothing is waiting, and they never attach the record to the current drawing first, so the record still in memory from the previous drawing is written into the current one. Same family as BUG-385, BUG-378 and BUG-1225.
+
+**Until it is fixed, the safe habit:** in a drawing you have just opened or switched to, do not make Help or Settings the first CE thing you run; and if a drawing you did not edit asks to save, answer No.
+
+**Fix in progress (not installed, not accepted):** draft pull request 2064 (`claude/trust-09-cancel-writes-nothing`, switch off by default): a command that never attached the record to the current drawing never writes; a cancelled command writes nothing.
+
+**A test that catches it:** two different made-up jobs; run a CE command in the first; make the second current; run CDHELP and close; the second drawing's stored record and changed counter must be exactly as before. Repeat with CDS, with a blank drawing, and in the other order. A deliberately faulty version that writes must fail.
+
+**Steps to confirm the fix in AutoCAD:** (1) open test job A and run CDDIAG; (2) open test job B, which has different pits; (3) straight away type CDHELP, close the window; (4) open the Pit Schedule in B: right = B's own pits, not A's; (5) open a blank drawing, type CDS, close it, then close the drawing: right = no "save changes?" question. Not yet known: what a later tool does with the wrong record, and what happens if the contaminated drawing is saved (the robot never saved).
+
+**Status:** OPEN. Found by test on the installed build 13 Nov 2026.
