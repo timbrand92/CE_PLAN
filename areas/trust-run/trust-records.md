@@ -117,3 +117,4 @@ Tables: 0. Long FOR TIM paragraphs: 0. Jargon hits: {len(jar)}. OPEN-on-answered
 - Counts are open, in progress and on hold entries only; closed bugs were not listed.
 - Titles copied from each Command / Area line, cut at 220 characters.
 - Fri 13 Nov 2026 01:16 (PC clock): job 1 done. Wrote areas/trust-run/BUGS_FIXED_IN_CODE_NOT_PROVEN.md from the 47 tool notes: 149 bugs, 159 lines, 32 tools. No carpark status changed.
+- Fri 13 Nov 2026 01:22 (PC clock): job 2 done. Added BUG-1280 to BUG-1296 (17 entries) to BUG_CARPARK.md from the new faults in the tool notes, each checked against the installed code copy. Not filed (other new faults in the notes, about 85 smaller lines): left in the tool notes.

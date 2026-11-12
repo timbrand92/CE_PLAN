@@ -18202,3 +18202,309 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 - Note (CE 05, Thu 5 Nov 2026, BUG-1054): draft PR #2037 (B-222, base rel-20261112a, one commit). In a metre drawing CDAGI/CDPERIMETER finishing 0.5 m short of the start now stays open with four vertices; a pick within 1 mm of the start still closes; a millimetre drawing behaves as before. Settings value surface.agiSnapClosureUsesDrawingUnits, ON by default, OFF gives the old behaviour exactly; unitless drawings keep the old reading. Built (Civil net48 0 errors, net10 builds); tested 57/57 AGI-related unit tests on net10; NOT run in AutoCAD, not installed, not accepted. Not covered: the copy paths in LinkService.SurfaceDrainTags.cs (copied-drain remarks/tag) still use the old raw tolerance. A separate local BUG-1052 draft exists (C:\CE_WORK\build\w1052, commit 6b26e852, based on C-78, not pushed, no PR); #2037 does not duplicate it, but both add a switch at the end of the same Surface settings class and edit AgiCommand.cs, so expect a small merge conflict. No Opus review (CE 00 order to launch nothing further). Status OPEN.
 
 - Note (CE 05, Thu 5 Nov 2026 17:41, from CE 02, BUG-1278): differential look H1 on a copy of the P3 drawing of job 25-131 (Civil 3.0.90, Manager 1.1.89, Structural 1.0.126, CE loaded, 14:46 to 14:54): HATCHEDIT opens the Hatch Edit dialog, -HATCHEDIT offers its options, Properties accepted pattern scale 1000 to 2000 and the pattern changed. Associative and Annotative are grey but the hatch reads both No; the hatch is on layer HATCH 11 (not frozen, not locked), in Model, no REFEDIT; no square grips seen; PICKSTYLE 1, HPASSOC 1, GRIPS 2, GRIPMULTIFUNCTIONAL 3, HPDLGMODE 2, QPMODE -1. Hatch editing was NOT reproduced as broken with CE loaded. The CE-off comparison (H2) was aborted at 15:01 when Tim needed AutoCAD, so it was not tested. Tim said later the problem was "fixed now, I dont know what happened". Silvia's PC (Civil 3.0.89) was not looked at. Report: C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_H1278_H1_20261105_1445.md. Status stays NOT REPRODUCED, CAUSE UNKNOWN, WATCH.
+
+## BUG-1280 — CDPITCOVERFLIP: the ribbon button Flip Cover Text does nothing
+
+**Command / Area:** Pit context tab on the CE ribbon, button Flip Cover Text (command CDPITCOVERFLIP). MEDIUM. DEAD BUTTON.
+
+**Symptom:** Select a pit. The Pit tab shows Flip Cover Text, and Help says to select a pit, open the Pit tab and choose it. Click it and nothing happens on screen. The command only acts on a request queued by the cover text's own grip, and that needs the cover text itself selected. From the ribbon it finds no request, writes one line to the CE log and says nothing to the drafter.
+
+**Expected behaviour:** Clicking Flip Cover Text with a pit selected moves the cover level text to the next corner, or says plainly what to do instead (for example 'Select the cover text and use its grip').
+
+**Steps to confirm in AutoCAD:** (1) On a copy, place a pit with a cover level shown. (2) Click the pit so the Pit tab appears. (3) Click Flip Cover Text. Right = the cover text moves to another corner. Wrong = nothing moves and nothing is printed. (4) After the fix, also try the grip on the cover text itself and check it still works.
+
+**Test that catches it:** A source guard: the ribbon button's command, run with no queued request, either acts on the selected pit or prints one line. Fixture: pit with cover text, run CDPITCOVERFLIP with the pit selected, assert the text corner changed or a line was written.
+
+**Reference:** Commands\PitCoverTextFlipCommand.cs:10-27; Services\CeCvlRibbonContributor.cs:212; Assets\Help\guide-content.js:105. Note CDPITCOVERFLIP.md section 7 'New in code'. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\(the tool's note).
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1281 — CD: the answer to 'Continues to another plan?' is ignored, the break symbol is placed even on No
+
+**Command / Area:** CD (New Pipe), first half of a split rising main, the 'Continues to another plan?' window. MEDIUM. WRONG DRAWING OUTPUT.
+
+**Symptom:** CD asks 'Continue from previous rising main?' in a window with Yes and No. Whatever you answer, including No or Esc, CD places the breakline symbol at the pipe end, records the anchor, and prints 'Next: run CD again at the ground-floor location - you'll be prompted to continue this rising main.' The answer is stored in a variable and never used afterwards.
+
+**Expected behaviour:** Yes places the symbol and records the anchor. No or Esc places nothing and prints nothing about continuing.
+
+**Steps to confirm in AutoCAD:** (1) On a copy, run CD for a rising main in the basement-half workflow. (2) At the Continue window click No. (3) Look at the pipe end and the command line. Right = no break symbol, no 'Next: run CD again' line. Wrong = symbol placed and the line printed. (4) Repeat with Esc, then with Yes (symbol and line expected).
+
+**Test that catches it:** Source guard: the value returned by PromptContinueRisingMainPopup is read before TryPlaceRisingMainBreaklineCore. Fixture: answer No, assert no glyph handle on the pipe record.
+
+**Reference:** Commands\CdCommand.Breakline.cs:37-64 (answer stored at line 41, never read). Related fixed-in-code items BUG-030 and BUG-031 (the window itself). Note CD.md section 7 'New in code' 1. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\(the tool's note).
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1282 — CD: reports success when a label, level text or arrow could not be made, and the record says it exists
+
+**Command / Area:** CD (New Pipe), pipe text, invert (level) text and flow arrow creation. MEDIUM. WRONG ANSWER (record out of step with the drawing).
+
+**Symptom:** If creating the pipe label, a level text or the arrow fails, CD only writes the failure to the CE log. The drafter sees no warning. The schedule record is written with the requested flags (first and second level shown, label made), so the record says the label exists when the drawing has none. Only a missing MLINE border gets an on-screen warning.
+
+**Expected behaviour:** A failed label, level text or arrow prints one plain line naming which one is missing, and the record does not claim it exists (it stays Unknown or is marked missing).
+
+**Steps to confirm in AutoCAD:** (1) Needs a way to make the label fail, which is not yet known; one way to try on a copy is to lock and freeze the text layer, then run CD for one pipe. If the label still draws, the test needs a deliberately broken text style from the robot. (2) Read the command line. Right = a line says the label or level text was not made. Wrong = the pipe is reported done with no label. (3) Open CDEDIT on that pipe: the label and levels should not read as present.
+
+**Test that catches it:** Fixture: force CreateInvertText to return a null id, run the creation service, assert a warning line and no 'invert shown' flag in the saved pipe record.
+
+**Reference:** Services\PipeCreationService.cs:347-350, 397-437, 450-453, 553-556 (each failure is caught and logged only); Commands\CdCommand.cs:634, 816; Commands\CdCommand.Schedule.cs:91, 98. Note CD.md section 7 'New in code' 4. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\(the tool's note).
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1283 — CDMA: always says 'Flow arrow moved.' and pressing Esc at the invert or reverse questions still places an arrow
+
+**Command / Area:** CDMA (Move flow arrow). LOW-MEDIUM. WORDING and WRONG ACTION.
+
+**Symptom:** Pick a pipe, then press Esc at 'Enter first invert level', at 'second invert level' or at 'Reverse arrow direction?'. Esc is read as 'skip', so the arrow is placed anyway. The command always finishes with 'Flow arrow moved.', even after Esc, after the arrow was left because its layer is locked, or after 'Failed to move arrow.' was printed a moment before.
+
+**Expected behaviour:** Esc at any question cancels the command and changes nothing. The closing line says what really happened: moved, left as it was (and why), or cancelled.
+
+**Steps to confirm in AutoCAD:** (1) On a copy, run CDMA and pick a pipe segment. (2) At the first invert question press Esc. Right = 'Command cancelled', no arrow placed. Wrong = an arrow appears and 'Flow arrow moved.' prints. (3) Run CDMA, pick an existing arrow, then press Esc at the new position: the line must not say 'moved'. (4) Lock the arrow layer and move an arrow: the line must say it was left.
+
+**Test that catches it:** Fixture: drive MoveFlowArrowCore with a cancelled invert prompt, assert NotApplied; with MoveArrow returning false, assert the result is not 'Flow arrow moved.'.
+
+**Reference:** Commands\CdCommand.Arrows.cs:300 (always AppliedResult 'Flow arrow moved.'), 312-345 (MoveExistingArrow returns void), 385-428 (Esc treated as skip). Note CDMA.md section 7 'New in code' 1 and 2. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\(the tool's note).
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1284 — CDMA and CDANNOTATIONEDIT will move any text or block, not only CE labels and arrows
+
+**Command / Area:** CDMA (Move flow arrow) and CDANNOTATIONEDIT (Move one label or arrow). MEDIUM. WRONG TARGET.
+
+**Symptom:** CDMA accepts any block you pick and moves it as if it were a flow arrow. CDANNOTATIONEDIT accepts any text, multiline text or block, and only turns away CE pit and source blocks. A drafter who clicks a title block, a north point or a note by mistake can move it, rotate it, mirror it or flip it. CDANNOTATIONEDIT also never marks a label as placed by hand, so Tidy labels can move it again.
+
+**Expected behaviour:** Both tools only act on CE's own labels, level texts and flow arrows, and say 'That is not a CE label' for anything else.
+
+**Steps to confirm in AutoCAD:** (1) On a copy, run CDMA and click a plain block (for example a north point). Right = refused with a plain line. Wrong = it asks for a new position and moves it. (2) Run CDANNOTATIONEDIT and click a plain note text: Right = refused. Wrong = the Move/Rotate/Mirror/Flip question appears. (3) Run it on a CE level text: it must still work.
+
+**Test that catches it:** Fixture: a plain block and a plain MText in model space; assert both commands refuse them and a CE arrow and CE level text are accepted.
+
+**Reference:** Commands\CdCommand.Arrows.cs:264-268, 281-285 (any block allowed); Commands\AnnotationEditCommand.cs:36-41, 54 (only the pit and source blocks are refused). Notes CDMA.md and CDANNOTATIONEDIT.md section 7 'New in code'. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\(the tool's note).
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1285 — CDTG, CDSL and CDWT run a forced full record update before their first question
+
+**Command / Area:** CDTG (trench grate), CDSL (spot level), CDWT (water tank). MEDIUM-HIGH. UNEXPECTED STORED-DATA CHANGE.
+
+**Symptom:** Each of these starts by forcing CE to rebuild its whole job record from the drawing before it asks anything. That rebuild is the same one that overwrote typed levels (BUG-290) and wiped stored pit inverts when CDFW was cancelled (BUG-650). A spot level or a trench grate does not need it. Pressing Esc at the first question does not put the record back.
+
+**Expected behaviour:** These three commands read the record without rewriting it, and Esc at any question leaves the record exactly as it was. (CDFW and CDSTRIP already had this removed.)
+
+**Steps to confirm in AutoCAD:** (1) On a copy with pit inverts and typed pipe levels, note them in CDEDIT or the Pit Schedule. (2) Run CDSL, press Esc at the first point. (3) Re-open the Pit Schedule and compare every level and pit size to step 1. Right = identical. Wrong = a level or size differs. (4) Repeat for CDTG and CDWT.
+
+**Test that catches it:** Source guard: none of the three command entry points calls SyncWithDrawing or EnsureDrawingDataCurrent with force before the first prompt. Fixture: saved record bytes before and after an Esc at the first prompt are equal.
+
+**Reference:** Commands\SourceBlockInsertCommands.cs:147-149 (CDTG); Commands\SpotLevelCommand.cs:41-43 (CDSL); Commands\WaterTankCommand.cs:57 with Commands\CeCommandBase.cs:43-47 (CDWT); Services\ProjectDataService.cs:264-270 (SyncWithDrawing forces a full refresh). Related BUG-290, BUG-650. Notes CDTG, CDSL, CDWT.md section 7 'New in code'. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\(the tool's note).
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1286 — Fifteen tools have no start-up checks (read-only drawing, Paper Space, REFEDIT, Structural drawing)
+
+**Command / Area:** CDCALC, CDDEST, CDMA, CDMANAGER, CDRAINFALL, CDREVERSEFLOW, CDRULEBOOK, CDRULES, CDSYSTEM, CDTEXTSEG, CDTIDYLABELS, CDTWL, CR, MR and PITSCHEDULE. MEDIUM. MISSING PROTECTION.
+
+**Symptom:** The commands that do check (PIT, CD, CDEDIT and others) start with one common check and refuse with a plain line on a read-only drawing, in Paper Space, during REFEDIT or in a Structural drawing. These fifteen never call it. So CDREVERSEFLOW, CDMA, CDTEXTSEG, CDTIDYLABELS, CR, MR and CDSYSTEM can try to change a read-only drawing, or move things during REFEDIT. CDCALC and CDRULES open in a Structural drawing with no question. PITSCHEDULE catches REFEDIT and read-only itself, but not Paper Space or drawing type. (The notes counted thirteen; the code search finds fifteen with no call, leaving out CDCHECKCURRENT, CDFEEDBACK, CDHELP and CDS because they do not change the drawing.)
+
+**Expected behaviour:** Every one of these starts with the same check as PIT and CD, and refuses in plain words before asking anything.
+
+**Steps to confirm in AutoCAD:** (1) Open a copy and make it read-only (file attribute). Run CDREVERSEFLOW, CDMA, CDTEXTSEG, CDTIDYLABELS, MR and CDSYSTEM on it. Right = each says the drawing is read-only and changes nothing. Wrong = it asks questions or changes things. (2) Open a Structural drawing copy and run CDCALC and CDRULES: Right = it refuses or asks first. (3) Start REFEDIT on an Xref and run CR and MR: Right = refused.
+
+**Test that catches it:** Source guard: every CommandMethod in Modules\Drainage either calls DrawingSafetyService.CommandPreFlight or is on a short reviewed list of commands that never touch the drawing.
+
+**Reference:** No call to CommandPreFlight in CalculationsCommand.cs, SourceDestinationCommand.cs, LayerManagerCommand.cs, RainfallCurveCommand.cs, RibbonContextCommands.cs, RulesCommand.cs, RulebookCommand.cs, PipeSystemCommand.cs, TidyLabelsCommand.cs, DetentionTwlCommand.cs, CopyRotateCommands.cs, PitScheduleCommand.cs, CdCommand.Arrows.cs. Related BUG-458 and BUG-464 (the same gap in PIT and the Pit Schedule). Notes' sections 3 and 7. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\(the tool's note).
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1287 — CDLPD: search distances are millimetres but compared with drawing units, so a metre drawing finds the nearest pipe end anywhere
+
+**Command / Area:** CDLPD (legal point of discharge), metre drawings. MEDIUM-HIGH. ENGINEERING-RESULT RISK.
+
+**Symptom:** The Settings search distances (pit 500, other block 2500, picked point 250, within 500 mm) are millimetres. CDLPD measures the pipe-end distance in raw drawing units and compares the two with no conversion. In a drawing in metres the 250 mm picked-point search becomes 250 m, so the nearest pipe end in the whole drawing is taken as the discharge point, whichever one you were near.
+
+**Expected behaviour:** The search distances are converted to the drawing's units (250 mm = 0.25 m in a metre drawing), so only a pipe end really within reach is found.
+
+**Steps to confirm in AutoCAD:** (1) On a copy in metres (INSUNITS 6) draw two pipes with ends 20 m apart. (2) Run CDLPD and pick a point 5 m from one pipe end and 15 m from the other. Right = 'No pipe end found near selection' (5 m is outside 250 mm). Wrong = it takes the nearest end. (3) Repeat in a millimetre drawing at 100 mm from an end: it must be found.
+
+**Test that catches it:** Fixture: TryFindNearestPipeEnd with a metre-unit drawing, tolerance 250 mm, a pipe end 5 m away; assert not found.
+
+**Reference:** Commands\LpdCommand.cs:89, 105, 132, 187; Services\LpdService.cs:462-498, 520; Models\ReachSettings.cs:29-32. Related BUG-331 and BUG-871 (the same class in CD and CDTWL). Note CDLPD.md section 7 'New in code' 1. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\(the tool's note).
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1288 — Edit Pipe: a single Save has no locked-layer or Xref check before it changes the pipe
+
+**Command / Area:** CDEDIT on a pipe, the one-pipe Save. MEDIUM-HIGH. MISSING PROTECTION (native protection rule).
+
+**Symptom:** Batch edit and cascade check for locked layers and Xrefs and refuse or skip with a plain line. The single-pipe Save does not. It opens the pipe polyline for writing (UpdatePolyline) after making sure the layer exists, with no check that the pipe's layer is locked or that the pipe is in an Xref. A drafter can change the size of a pipe that AutoCAD itself would not let them edit.
+
+**Expected behaviour:** A pipe on a locked layer, or from an Xref, is left as it was with one plain line naming the layer or the Xref, as the batch route already does. Never silently unlocked.
+
+**Steps to confirm in AutoCAD:** (1) On a copy, lock the pipe's layer. (2) Run CDEDIT on that pipe, change the diameter, Save. Right = refused naming the locked layer, pipe unchanged. Wrong = the pipe changes. (3) Repeat with a pipe inside an attached Xref: Right = refused.
+
+**Test that catches it:** Fixture: a pipe on a locked layer; drive the single Save; assert the polyline length, width and layer are unchanged and a refusal line was written.
+
+**Reference:** Commands\PipeEditCommand.Update.cs:2097-2110 (UpdatePolyline, OpenMode.ForWrite); no lock test in PipeEditCommand.cs, .Update.cs or .DataCollection.cs; compare the batch route Commands\PipeEditCommand.SizeWrite.cs:57-58 and Commands\PipeEditCommand.Batch.Cascade.cs:903-963. Related BUG-284. Note CDEDIT.md section 7 'New in code' 1. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\(the tool's note).
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1289 — CDWT and CDAGI: Esc at their questions skips the question instead of cancelling
+
+**Command / Area:** CDWT (water tank: detention volume, callout point, riser point, dropper point) and CDAGI (AGI drain: the optional level questions). MEDIUM. WRONG ACTION.
+
+**Symptom:** In CDWT, Esc at the detention volume, the callout point, the riser point or the dropper point is read the same as Enter ('skip'), so the tank is placed anyway. In CDAGI, Esc at the first and second level questions is read the same as Enter, so the drain carries on with no levels. A drafter pressing Esc to get out of the command ends up with the object placed.
+
+**Expected behaviour:** Enter skips an optional item. Esc cancels the whole command and places nothing.
+
+**Steps to confirm in AutoCAD:** (1) On a copy, run CDWT, pick the tank point, enter the litres, then at the callout location press Esc. Right = 'CDWT cancelled - nothing was placed.' Wrong = the tank is placed. Repeat at the riser and dropper points and at 'Detention volume'. (2) Run CDAGI to the first level question and press Esc. Right = cancelled, nothing drawn. Wrong = it carries on.
+
+**Test that catches it:** Fixture: feed a cancelled status at each optional prompt; assert no placement and no write.
+
+**Reference:** Commands\WaterTankCommand.cs:498-517, 222-232, 682-694; Commands\AgiCommand.cs:304-313. Related: the CDMA Esc entry filed with this one. Notes CDWT.md and CDAGI.md section 7 'New in code'. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\(the tool's note).
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1290 — CDRG: a self-crossing raingarden outline is accepted and its area is wrong
+
+**Command / Area:** CDRG (raingarden). LOW-MEDIUM. WRONG ANSWER (area).
+
+**Symptom:** Pick the corners of the outline in a figure-eight or bow-tie order. CE accepts it and works the area by adding up cross products, which cancels part of the area where the outline crosses itself. The raingarden is placed with a smaller or near-zero area, and nothing warns the drafter that the outline crosses itself.
+
+**Expected behaviour:** A self-crossing outline is refused with a plain line ('The outline crosses itself - pick the corners in order round the edge'), or the area is shown as Unknown with that reason.
+
+**Steps to confirm in AutoCAD:** (1) On a copy run CDRG and pick four corners of a square in the order 1, 3, 2, 4 so the outline crosses itself. (2) Finish with Enter. Right = a plain refusal, nothing placed. Wrong = the raingarden is placed and its area reads about half the square or zero. (3) Pick the same corners in order 1, 2, 3, 4: the full area must show.
+
+**Test that catches it:** Unit case: the plan builder given a bow-tie outline returns not accepted, or an Unknown area with a reason.
+
+**Reference:** Services\RaingardenPlacementPlan.cs:103-132 (area is a plain shoelace sum, no crossing test). Note CDRG.md section 7 'New in code' 1. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\(the tool's note).
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1291 — CDRUNSOLVE: every pit's design flow is set to 0 when the run is built
+
+**Command / Area:** CDRUNSOLVE (solve inverts down a run). MEDIUM-HIGH. WRONG ANSWER or REFUSAL.
+
+**Symptom:** When CE builds the run to solve, every pit is given a local flow of 0.0 (CatchmentFlowLps = 0). The solver adds the pits' flows up the run, so the total flow in every pipe is 0, and the sizing step refuses a flow of zero or less. The drafter gets 'none of them has a design flow yet' even when each pit has a design flow recorded, or a size that did not use the pits' flows at all.
+
+**Expected behaviour:** The run takes each pit's recorded design flow, so the pipe flows add up down the run, and sizes and grades are worked from them.
+
+**Steps to confirm in AutoCAD:** (1) On a copy with a run of four pits, each with a design flow typed (for example 20, 15, 10 and 5 L/s) and no pipe sizes fixed. (2) Run CDRUNSOLVE and open the preview. Right = the proposed sizes grow down the run (the last pipe carries about 50 L/s). Wrong = it says there is no design flow, or every pipe gets the smallest size. (3) Compare one pipe size with Pipe Flows in CDCALC at the same flow.
+
+**Test that catches it:** Unit case: a three-pit run with local flows 10, 10, 10 gives pipe flows 10, 20, 30 L/s in the plan, not 0.
+
+**Reference:** Services\ProposalApplyService.PlanBuilders.cs:604-626 (CatchmentFlowLps: 0.0 at line 624); Services\NetworkDesignService.cs:221-240; Services\PipeSizingSolver.cs:60-66. Note CDRUNSOLVE.md section 7 'New in code' 1 (its source lines in the note do not match this file; the lines here were read directly). Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\(the tool's note).
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1292 — CDMANAGER: says 'saved' or 'applied' when nothing was saved or applied
+
+**Command / Area:** CDMANAGER (layer colours and draw order). MEDIUM. WRONG MESSAGE.
+
+**Symptom:** Save layer order prints 'Layer order settings saved.' and the colour page prints 'N colour override(s) saved' whether or not the file was written (the save is skipped when settings are held back or fail). Apply Now prints 'Applied preview to model space' even in a drawing with no CE mark, where the draw-order change quietly does nothing. Related: Close drops unsaved edits with no question, and Apply Now switches AutoCAD's undo recording off for its change, so U cannot undo it.
+
+**Expected behaviour:** A message says 'saved' or 'applied' only when it was. If nothing was done it says so and why (settings held back, drawing not set up for CE).
+
+**Steps to confirm in AutoCAD:** (1) On a copy with no CE mark (a brand-new drawing), open CDMANAGER, change a draw-order rule, click Apply Now. Right = a line says nothing was applied and why. Wrong = 'Applied preview to model space.' (2) Make the settings file read-only, click Save: Right = it says the save failed. Wrong = 'saved'. (3) Apply Now on a CE drawing, then press U: note whether the draw order comes back.
+
+**Test that catches it:** Fixture: ApplyLayerOrderPreview on a drawing with no CE mark returns a not-applied result and the status text says so; SaveSettings with the file locked returns false and the status text does not say saved.
+
+**Reference:** ViewModels\LayerManagerViewModel.cs:204-210, 215, 320-325; Services\LayerService.cs:968-973, 1087; Services\SettingsService.cs:613-626; Dialogs\LayerManagerDialog.xaml.cs:71-75. Note CDMANAGER.md section 7 'New in code' 1 to 4. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\(the tool's note).
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1293 — CDCALC cannot be closed without saving, and a refused save traps you in the window
+
+**Command / Area:** CDCALC (drainage calculations window), Close button and the window's X. MEDIUM. TRAP.
+
+**Symptom:** Whichever way you close CDCALC, the window first tries to save the calculation draft into the drawing. There is no way to leave without saving. If the save is refused (for example the drawing is read-only or in REFEDIT) the close is cancelled and you stay in the window. A drafter who only looked at a tab, or who wants to throw their typing away, cannot.
+
+**Expected behaviour:** Close offers Save, Don't save and Stay. If the save is refused, the window says why and still lets you leave without saving.
+
+**Steps to confirm in AutoCAD:** (1) On a read-only copy, open CDCALC, type a value, click Close. Right = a question with a way out, or a plain line and the window closes. Wrong = the window stays open and cannot be closed. (2) On a normal copy, open CDCALC, change a value, close with the X, reopen: note whether the change was kept. Right = only if you chose to save.
+
+**Test that catches it:** Fixture: a draft save that returns false; assert the dialog still closes when the user chooses not to save.
+
+**Reference:** Dialogs\CalculationsV2Dialog.xaml.cs:136-146 (OnClosing cancels when TrySaveForClose fails); Dialogs\CalculationsV2Dialog.xaml:1339 (Close is IsCancel). Related BUG-1030. Note CDCALC.md section 7 'New in code' 1. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\(the tool's note).
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1294 — PP opens the older pit window while PIT opens the one-page window
+
+**Command / Area:** PP (quick plastic pit) and PIT (place a pit). LOW. LOOK (two layouts for one job).
+
+**Symptom:** PIT and Edit Pit open the new one-page window. PP, which places the same kind of pit, still opens the older window, because the code only switches the new window on for a command named PIT and says PP 'retains its existing entry until separately reviewed'. A drafter moving between PIT and PP sees two different layouts, with different default buttons.
+
+**Expected behaviour:** PP opens the same one-page window as PIT, pre-set to the quick plastic pit, or the difference is a decision Tim has agreed.
+
+**Steps to confirm in AutoCAD:** (1) On a copy run PIT and note the window layout and its default button. (2) Run PP and compare. Right = the same window layout. Wrong = the older window appears. (3) Check Esc, Enter and Cancel behave the same in both.
+
+**Test that catches it:** Source guard: both commands select the same window class, or a test records the reviewed exception.
+
+**Reference:** Dialogs\WorkshopPitCreation.cs:18-22 (only a command named PIT gets the one-page window); Dialogs\WorkshopEditorSession.cs:90-98; Dialogs\PitDialog.xaml:629, 658. Note PP.md section 7 'New in code' 1. Needs a command card before anything is built (review gate). Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\(the tool's note).
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1295 — CDSTRIP overwrites the TIM LEADER dimension style in the drawing every time it runs
+
+**Command / Area:** CDSTRIP (strip drain). MEDIUM. UNEXPECTED STYLE CHANGE.
+
+**Symptom:** Before the strip drain is placed, CDSTRIP opens the drawing's TIM LEADER dimension style for writing and sets its overall scale to 100 and arrow size to 3.0, whatever the drafter had set. Any other leaders or dimensions drawn with that style change on the next regen. Nothing is said on screen. Only a log line is written when the style is missing.
+
+**Expected behaviour:** CDSTRIP leaves the dimension style alone, or reads it and uses a private copy, or says plainly that it is changing it and asks first.
+
+**Steps to confirm in AutoCAD:** (1) On a copy open DIMSTYLE, pick TIM LEADER, set the overall scale to 50 and the arrow size to 2.0, and draw a leader with it. (2) Run CDSTRIP and place a strip drain. (3) Open DIMSTYLE again. Right = still 50 and 2.0 and the old leader unchanged. Wrong = 100 and 3.0 and the old leader's arrow has grown.
+
+**Test that catches it:** Fixture: a drawing with TIM LEADER at scale 50; after the CDSTRIP apply the style's Dimscale and Dimasz are unchanged.
+
+**Reference:** Commands\StripDrainCommand.Apply.cs:95 and 374-388 (EnsureLeaderDimstyleScaleInTransaction sets Dimscale and Dimasz); Commands\StripDrainCommand.cs:40-41, 50-52. Note CDSTRIP.md section 7 'New in code' 1. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\(the tool's note).
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1296 — New Pit: the shallow-pit warning is fixed at 0.6 m in the code, not read from Settings
+
+**Command / Area:** PIT (New Pit window), the depth hint under Cover and Invert. LOW-MEDIUM. HARD-CODED VALUE (R-00).
+
+**Symptom:** Type a cover level and an invert level in New Pit. The hint reads '~0.55 m depth - shallow (<0.6 m min)' and turns amber whenever the depth is under 0.6 m. The 0.6 is typed into the program. The Pit Schedule has its own shallow depth (300 mm, BUG-1035) and CDRULES reads the Settings minimum cover, so the three can disagree for the same pit, and an office that wants a different figure cannot change this one.
+
+**Expected behaviour:** The hint uses a named value on the Settings page (CDS), starting at the figure Tim confirms, and the Pit Schedule and CDRULES use the same value.
+
+**Steps to confirm in AutoCAD:** (1) On a copy open New Pit and type cover 10.50 and invert 10.00. Right = the hint judges 0.50 m against the Settings shallow depth. (2) Change that Settings value to 0.45 and reopen New Pit with the same levels: Right = no shallow warning. Wrong = still 'shallow (<0.6 m min)'.
+
+**Test that catches it:** Source guard: no literal 0.6 in PitViewModel depth text; unit case with the Settings value 0.45 and depth 0.50 gives Ok.
+
+**Reference:** ViewModels\PitViewModel.cs:400-427 (depth < 0.6). Related BUG-1035 (Pit Schedule fixed 300 mm). Note PIT.md section 7 'New in code' 1. Tim's rule: every engineering value lives on the Settings page (R-00). Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\(the tool's note).
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
