@@ -71,7 +71,7 @@
 
 ## Where this comes from
 
-Paths are under `C:\CE_WORK\scratch\audit_struc\Modules\Structural\`.
+Paths are under `C:\CE_WORK\scratch\audit_struc\Modules\Structural\`. Paths that start `Structural.DesignCore\` (or `..\Structural.DesignCore\`) are under `Modules\`, beside `Structural\`, not inside it (corrected 13 Nov after review `reviews\structural-tool-notes-sample.md`).
 
 1. **1.1, 2.1, 3.1, 3.2, 4.1-4.3:** `Commands\BeamInsidePointCommands.cs:57-75`; `Services\BeamInsidePointStore.cs:80-96`, `141-169`.
 2. **1.2:** `Commands\BeamInsidePointCommands.cs:53-56` (the comment); `..\Structural.DesignCore\ConnectedDesign\BeamPlacementPlanner.cs:336-373`; `Services\ConnectedDesign\Host\BeamCommandAutoCadInsidePointProposalAdapter.cs:130-135`.

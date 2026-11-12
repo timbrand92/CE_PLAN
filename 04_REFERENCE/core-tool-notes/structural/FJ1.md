@@ -23,7 +23,7 @@
 ## 3. What it will not do
 
 1. **Refuses before it asks anything:** read-only drawing, layout tab ("... so CE placed no tag. Go to the Model tab, or double-click into a viewport, and try again."), REFEDIT open ("... so CE placed no tag. Close it (REFCLOSE) and try again.").
-2. **Refuses a drawing in metres, centimetres or inches** with the footing-words line (see fault 7 new 4). Units "not set" count as millimetres.
+2. **Refuses every drawing whose units are not millimetres or not set** (metres, centimetres, inches, feet and the rest (corrected 13 Nov after review `reviews\structural-tool-notes-sample.md`)) with the footing-words line (see fault 7 new 4). Units "not set" count as millimetres.
 3. **Bay too small or picks too close:** "[FJ1] Member length is too short to place the block." and the other "too close together" lines.
 4. **Layer name AutoCAD would refuse:** "[FJ1] The Settings layer name is not one AutoCAD accepts, so JOISTS is used."
 5. **No locked-layer check.** If the joist layer is locked it still draws there.
@@ -81,7 +81,7 @@
 
 ## Where this comes from
 
-Paths are under `C:\CE_WORK\scratch\audit_struc\Modules\Structural\`.
+Paths are under `C:\CE_WORK\scratch\audit_struc\Modules\Structural\`. Paths that start `Structural.DesignCore\` (or `..\Structural.DesignCore\`) are under `Modules\`, beside `Structural\`, not inside it (corrected 13 Nov after review `reviews\structural-tool-notes-sample.md`).
 
 1. **1.1, 1.2:** `Commands\RafterJoistCommands.cs:22, 75-82, 124-149`.
 2. **2.1, 2.2, 3.4:** `RafterJoistCommands.cs:53-67, 78-81`; `Models\UserSettings.cs:979-982`.

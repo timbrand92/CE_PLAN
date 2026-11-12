@@ -25,7 +25,7 @@
 ## 3. What it will not do
 
 1. **Refuses before it asks anything:** read-only drawing, layout tab ("You are on a layout tab (paper space), so CE drew no bracing. Go to the Model tab, or double-click into a viewport, and try again."), REFEDIT open ("... so CE drew no bracing. Close it (REFCLOSE) and try again.").
-2. **Refuses a drawing in metres, centimetres or inches** with the footing-words line (see fault 7 new 5). Units "not set" count as millimetres.
+2. **Refuses every drawing whose units are not millimetres or not set** (metres, centimetres, inches, feet and the rest (corrected 13 Nov after review `reviews\structural-tool-notes-sample.md`)) with the footing-words line (see fault 7 new 5). Units "not set" count as millimetres.
 3. **Refuses a locked layer:** "Layer WALL BRACING TYPE A is locked, so CE drew no bracing. Unlock it and try again." CE never unlocks it.
 4. **Never cuts a long brace.** Over the limit it prints "This brace is <n> mm, longer than the office limit of <limit> mm in CE Settings. CE kept the length you drew; check it."
 5. **Limit left blank:** "The longest wall brace in CE Settings is not set, so CE did not check this brace's length. It was drawn as picked."
@@ -86,7 +86,7 @@
 
 ## Where this comes from
 
-Paths are under `C:\CE_WORK\scratch\audit_struc\Modules\Structural\`.
+Paths are under `C:\CE_WORK\scratch\audit_struc\Modules\Structural\`. Paths that start `Structural.DesignCore\` (or `..\Structural.DesignCore\`) are under `Modules\`, beside `Structural\`, not inside it (corrected 13 Nov after review `reviews\structural-tool-notes-sample.md`).
 
 1. **1.1, 1.2, 1.3:** `Commands\BracingCommands.cs:13-121`; `Structural.DesignCore\BracingLengthPolicy.cs:34-54, 63-77`.
 2. **1.4:** `BracingCommands.cs:123-127`; `Services\RibbonCommandHubService.cs:787-792`; `Services\CommandRegistryService.cs:117-126, 572-581`; registry `Assets\Config\command-registry.json:2372-2392`.

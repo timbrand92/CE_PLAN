@@ -8,10 +8,10 @@
 
 1. **How many:** 104 faults across the four tool families (20 roof and bracing, 27 beams, 20 supports, 37 schedules and tools). A few appear in two families.
 2. **The worst, each checked or traced by this lane where marked:**
-   1. **Schedule sync turns braces again (STRSCHEDSYNC):** a sync with no edits writes a ROTATEd brace's angle into it a second time, and rewrites every brace's length and angle at the table's two-decimal rounding. **Checked in the code by this lane:** `Services\ScheduleService.cs:725-756` with `Services\ProjectDataService.cs:322-326`.
-   2. **The A/B switch can lose an older brace (ABS):** it erases the old block first; if the new block cannot be drawn it still says "It was left as it was." **Checked in the code by this lane:** `Services\BracingService.cs:2151-2206`, message at `Commands\BracingCommands.cs:498`.
+   1. **Schedule sync turns braces again (STRSCHEDSYNC), narrowed 04:19 13 Nov after review:** a sync with no edits turns again only a brace drawn flat and later ROTATEd, on the first sync; it and rewrites every brace's length and angle at the table's two-decimal rounding. **Checked in the code by this lane:** `Services\ScheduleService.cs:725-756` with `Services\ProjectDataService.cs:322-326`.
+   2. **The A/B switch can lose an older brace (ABS), narrowed 04:19 13 Nov after review:** only when the BRACING block cannot be loaded; it then erases the old block and still says "It was left as it was." One U brings it back. **Checked in the code by this lane:** `Services\BracingService.cs:2151-2206`, message at `Commands\BracingCommands.cs:498`.
    3. **A schedule size the block cannot show is drawn as the default size (C1, C2, DS, DS1, TS1)** while the line names the schedule size (card TRUST-S3 covers it; no bug number yet).
-   4. **BDL has no units handling:** in a metre drawing its minimums, offsets and support search are read as metres.
+   4. **BDL has no units handling:** in a metre drawing its minimum length, lower-line offset and wall and opening search are read as metres, so almost every beam would be refused as too short (corrected after review: a wall and opening search, not a support search).
    5. **Beam tools 1 and 2 refuse every beam with "CE hit an internal problem"** when the beam or text layer is locked, off, frozen or a different colour or linetype from CE's.
    6. **CLEAN or FASTSAVE on a never-saved drawing might save over its template** (plausible from the code, not measured).
 3. **None of these is filed yet.** Each needs a carpark entry and, before any is called fixed, a robot case and a Codex look on a copy.

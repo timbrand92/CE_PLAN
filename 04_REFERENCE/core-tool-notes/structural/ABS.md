@@ -74,7 +74,7 @@
 
 ## Where this comes from
 
-Paths are under `C:\CE_WORK\scratch\audit_struc\Modules\Structural\`.
+Paths are under `C:\CE_WORK\scratch\audit_struc\Modules\Structural\`. Paths that start `Structural.DesignCore\` (or `..\Structural.DesignCore\`) are under `Modules\`, beside `Structural\`, not inside it (corrected 13 Nov after review `reviews\structural-tool-notes-sample.md`).
 
 1. **1.1:** `Commands\BracingCommands.cs:369-373, 381-549`.
 2. **1.2, 3.5, 5.1:** `BracingCommands.cs:469-473`; `Services\BracingService.cs:2079-2144`.

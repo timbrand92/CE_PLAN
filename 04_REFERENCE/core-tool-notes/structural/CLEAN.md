@@ -32,7 +32,7 @@
 4. **Does not refuse a read-only drawing, a layout tab or REFEDIT.** It runs. On a read-only drawing CE's own save declines, and CLEAN then sends a plain QSAVE.
 5. **Does not follow Settings > Xref Layer.** The layer name XREF, HATCH 21 and the Arial Narrow font are fixed inside CLEAN.
 6. **A recovery or autosave drawing is cleaned but not saved.** It prints "[CLEAN] Recovery/autosave save-protection active (reason). Cleanup will run, but automatic save will be skipped."
-7. **Keeps no copy of the drawing from before the clean-up.**
+7. **CE writes no copy of its own from before the clean-up, but AutoCAD keeps the previous file as a .bak,** because CE's save asks it to (`Services\DrawingAutoSaveService.cs:198`, second argument true (corrected 13 Nov after review `reviews\structural-tool-notes-sample.md`)).
 
 ## 4. What it asks you, and what Enter means
 
@@ -43,7 +43,7 @@
 ## 5. When it says Unknown or "needs checking"
 
 1. **It never says Unknown.**
-2. **"FAIL" against a step** means that whole step was dropped and nothing from it was kept. The reason shown is AutoCAD's own word (for a locked layer, eOnLockedLayer).
+2. **"FAIL" against a step** means that step's drawing changes were dropped. Exception: the ByLayer step sets the current colour, linetype, lineweight and dimension settings before it writes, and a FAIL does not put those back (`Services\CleanPipelineService.cs:468-479` (corrected 13 Nov after review `reviews\structural-tool-notes-sample.md`)). The reason shown is AutoCAD's own word (for a locked layer, eOnLockedLayer).
 3. **"drawing saved" is printed whenever a save was attempted by QSAVE,** even if that save was not checked (see section 7).
 4. **"NOT SAVED" is the only line to trust as a fault.** Save the drawing yourself when you see it.
 
@@ -52,7 +52,7 @@
 1. **U once should undo the clean-up in memory.** The clean-up is wrapped in one undo mark, so one U is intended. Not proven in AutoCAD.
 2. **U does not undo the save.** The file on disk already holds the cleaned drawing; it changes back only when you save again after U.
 3. **A record says CLEAN adds an extra empty undo step** (BUG-425), so a second U may seem to do nothing.
-4. **The Settings that stay changed** (section 2 item 6) are not undone by U. Not proven either way.
+4. **The settings that stay changed** (section 2 item 6): whether U puts them back is not known; nothing was run (corrected 13 Nov after review `reviews\structural-tool-notes-sample.md`).
 
 ## 7. Known faults
 

@@ -64,8 +64,8 @@ From the installed code (Structural 1.0.126) and the 104 new findings. "Verified
 
 5. **Moved single-line text has its anchor re-set when AutoCAD goes idle,** with nothing said. Verified: `Services\DrawingAutoSaveService.cs:1098-1105`, changes at `959` and `966`.
 6. **Footing outlines are redrawn and the footing schedule marked out of date,** silently when it works. Verified: `Services\FoundationService.cs:785, 796-798`.
-7. **Schedule sync with no edits turns a ROTATEd brace again** and rewrites every brace's length and angle at two-decimal rounding. Verified: `Services\ScheduleService.cs:725-756` with `Services\ProjectDataService.cs:322-326`.
-8. **The A/B switch erases an older brace before drawing the new one,** and if the new one fails it still says "It was left as it was." Verified: `Services\BracingService.cs:2151-2206`, message at `Commands\BracingCommands.cs:498`.
+7. **Schedule sync with no edits turns a brace again** (only one drawn flat and later ROTATEd, on the first sync; narrowed after review), and rewrites every brace's length and angle at two-decimal rounding. Verified: `Services\ScheduleService.cs:725-756` with `Services\ProjectDataService.cs:322-326`.
+8. **The A/B switch erases an older brace before drawing the new one,** and if the BRACING block cannot be loaded it still says "It was left as it was." (narrowed after review; one U brings it back). Verified: `Services\BracingService.cs:2151-2206`, message at `Commands\BracingCommands.cs:498`.
 9. **A schedule size the block cannot show is drawn as the default size** while the line names the schedule size. Verified: `Commands\SupportBlockCommands.cs:1470-1480`.
 
 Items 1 to 4 are what this card would make visible at opening (1 and 2 in a line; 3 and 4 belong to CE Health and card TRUST-03). Items 5 to 9 belong to steps S2 to S5.

@@ -53,7 +53,7 @@
 ## 5. When it says Unknown or "needs checking"
 
 1. **It never shows Unknown.** A missing fact becomes a refusal line or one of the questions above.
-2. **"Beam result is uncertain. Do not repeat the command; inspect the drawing."** CE cannot confirm whether the beam was written. Look at the drawing and the Undo list first.
+2. **"Beam result is uncertain: CE cannot confirm whether the beam was written. Do not repeat the command — check the drawing and the Undo list first."** (corrected 13 Nov after review `reviews\structural-tool-notes-sample.md`): the shorter wording shows only when no reason is attached, and an uncertain result always carries one (`Structural.DesignCore\ConnectedDesign\BeamRefusalWording.cs:311-314`). CE cannot confirm whether the beam was written. Look at the drawing and the Undo list first.
 3. **"Beam placed, but its post-write update needs review."** The beam is in. The follow-along was not told.
 4. **"Beam not placed: CE could not confirm this beam's preview or write still exactly matches the drawing (one of command 4 or 5's safety checks). Run the command again."** CE's own check between preview and write failed. This line is also given for other, different causes (see 7).
 

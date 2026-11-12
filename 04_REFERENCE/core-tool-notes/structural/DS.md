@@ -15,7 +15,7 @@
 ## 2. What it changes in the drawing
 
 1. **The marker block** on layer SUPPORT DS (colour 150, made if missing), at scale 1. DS1 and TS1 use layer SUPPORT instead.
-2. **When a beam end is near:** a link written into the beam's own record and the marker. One line says so. The beam is not moved.
+2. **When a beam end is near:** a link written into the beam's own record only. The marker's own list of beams is updated only if it already has one, and a newly placed marker never does (corrected 13 Nov after review `reviews\structural-tool-notes-sample.md`). One line says so. The beam is not moved.
 3. **The block definition** is loaded from CE's files when the drawing has none.
 4. **The current layer** is put back as it was.
 5. **Not touched:** the member schedule record. The support file has no save call.
@@ -25,7 +25,7 @@
 1. **Read-only drawing:** "[CE_STRUC] DS: the drawing is read-only. Save a copy you can edit first."
 2. **Layout tab:** "You are on a layout tab (paper space), so CE placed no support. Go to the Model tab, or double-click into a viewport, and try again."
 3. **REFEDIT open:** "A block or Xref is open for in-place editing (REFEDIT), so CE placed no support. Close it (REFCLOSE) and try again."
-4. **Drawing not in millimetres:** it stops and places nothing. The line starts "This drawing's units are ...". A Settings value (Day1Units, HoldInNonMillimetreDrawings, on) turns the stop off.
+4. **Drawing not in millimetres:** it stops and places nothing. The line starts "This drawing's units are ...". The stop is a Settings value (Day1Units, HoldInNonMillimetreDrawings), on by default; turning it OFF lifts the stop. A drawing with units not set goes ahead (corrected 13 Nov after review `reviews\structural-tool-notes-sample.md`).
 5. **Locked layer:** "Layer SUPPORT DS is locked, so CE drew no support. Unlock it and try again." It checks that one layer and never unlocks.
 6. **No frozen or off layer check.**
 7. **No size question.** With no schedule row it draws the Settings size (90 x 90) and says nothing about it.
@@ -37,9 +37,9 @@
 
 ## 4. What it asks you, and what Enter means
 
-1. **When the schedule has a DS row** (a line, not a question): "[CE] DS: size '<schedule size>' from the schedule, shown as '<block size>'."
+1. **When the schedule has a DS row** (a line, not a question): "[CE] DS: size '<schedule size>' from the schedule, shown as '<the schedule size, shortened>'." The second value is the schedule size made shorter, not the size the block shows: if the block cannot show it, the block falls back to the command's default size and only the log says so (corrected 13 Nov after review `reviews\structural-tool-notes-sample.md`).
 2. **"Specify insertion point for DS: "** Esc: nothing placed. Enter: the command ends with no line.
-3. **AutoCAD's own ROTATE** then runs on the new marker (AutoCAD's wording, not CE's). Enter takes AutoCAD's default angle of 0. Esc removes the marker (Settings value, on).
+3. **AutoCAD's own ROTATE** then runs on the new marker (AutoCAD's wording, not CE's). Enter takes AutoCAD's own default, normally the last angle used; CE's code does not settle it (corrected 13 Nov after review `reviews\structural-tool-notes-sample.md`). Esc removes the marker (Settings value, on).
 4. **Last line:** "[CE] Support linked to nearby beam." or "[CE] No beam found nearby, so the support is not linked. Place the beam first, or run BEAMLINKMIGRATE." or "[CE] Beam linking is switched off in Settings, so the support is not linked."
 
 ## 5. When it says Unknown or "needs checking"

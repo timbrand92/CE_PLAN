@@ -85,7 +85,7 @@
 
 ## Where this comes from
 
-Paths are under `C:\CE_WORK\scratch\audit_struc\Modules\Structural\`.
+Paths are under `C:\CE_WORK\scratch\audit_struc\Modules\Structural\`. Paths that start `Structural.DesignCore\` (or `..\Structural.DesignCore\`) are under `Modules\`, beside `Structural\`, not inside it (corrected 13 Nov after review `reviews\structural-tool-notes-sample.md`).
 
 1. **1.1, 1.2, 4.3-4.6:** `Commands\BeamPlacementCommands.cs:93-231`; registry `Assets\Config\command-registry.json:2135-2155`.
 2. **1.3:** `Commands\BeamPlacementCommands.cs:110-112, 202, 214` (PointsOnly, no suffix, no inside point); `Services\BeamService.cs:49-63`.

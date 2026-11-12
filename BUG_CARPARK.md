@@ -19707,6 +19707,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
 
+**Note 2026-11-13 04:19 (lane trust-struc-mgr-plan, after review `areas\trust-run\reviews\structural-tool-notes-sample.md`; status unchanged):** the trigger is narrower than the title. AB and BB draw a brace with the block turned 0 and the angle in the brace's own turning value (`Services\BracingService.cs:1677-1681, 1706-1708`). So only a brace drawn flat (within 1 degree, or the Enter default) and later turned with AutoCAD ROTATE gets its angle applied a second time, and only on the first sync. A brace drawn at an angle and then turned shows the wrong angle in the table, but sync writes the same value back and nothing moves. The two-decimal rewrite of every length and angle is real and small. Steps to confirm: draw the brace flat (Enter at the angle), then ROTATE it 30 degrees.
+
 **Status:** OPEN
 
 ## BUG-1362 — ABS (A-B switch) erases an older brace first, and if the new one cannot be drawn says "It was left as it was"
@@ -19724,6 +19726,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Reference:** Services\BracingService.cs:2169-2191 (ConvertLegacyToNew erases at 2171-2172, inserts at 2176, returns false at 2190-2191); Commands\BracingCommands.cs:395-398 and 496-499 (message). Related BUG-583 (locked brace, unhandled error). Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
 
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Note 2026-11-13 04:19 (lane trust-struc-mgr-plan, after review `areas\trust-run\reviews\structural-tool-notes-sample.md`; status unchanged):** the trigger is narrower than the title. The brace is lost only when the BRACING block cannot be loaded: ABS then only warns and carries on (`Commands\BracingCommands.cs:395-398`), erases the old brace and keeps that change (`Services\BracingService.cs:2169-2174`), the insert fails with "Block 'BRACING' not found" (1670-1673), and the line still says it was left as it was (`BracingCommands.cs:496-499`). A locked target layer is refused earlier and does not trigger it, so step 2's "lock the target brace layer" will not show the fault; make the BRACING block unavailable instead. One U brings the brace back.
 
 **Status:** OPEN
 

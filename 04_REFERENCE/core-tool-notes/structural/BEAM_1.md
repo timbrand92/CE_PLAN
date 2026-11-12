@@ -32,9 +32,9 @@
 3. **Model space only.** On a layout tab or during REFEDIT it stops, but the line it prints is the wrong one (see 7).
 4. **Old beam-link engine switched on in Settings:** "Beam not placed: the old command-8 beam-linking engine is switched on in CE Settings ... Switch the old engine off, then run the command again."
 5. **A support or line inside an Xref:** "Beam not placed: that endpoint belongs to an Xref, which CE will not edit." Only a CE support block, a straight line or one polyline segment can be an end.
-6. **Beam shorter than 50 mm** (scaled for the drawing units): "Beam not placed: the two points you picked are too close together. Pick a longer beam line."
+6. **Beam shorter than 50 mm** (scaled for the drawing units), checked only when both ends are picked as points (corrected 13 Nov after review `reviews\structural-tool-notes-sample.md`): "Beam not placed: the two points you picked are too close together. Pick a longer beam line."
 7. **The same support or line for both ends** is refused.
-8. **Layers BEAM or 25TEXT locked, off, frozen, recoloured or with another linetype:** refused before writing, never unlocked. The line it shows is wrong (see 7).
+8. **Layers BEAM or 25TEXT locked, off, frozen, no-plot, from an Xref, recoloured or with another linetype:** refused before writing, never unlocked, but only after you press Accept (`Services\ConnectedDesign\Commit\BeamAtomicLayerWriter.cs:54-71`; the catch is at `BeamAtomicWriteSession.cs:120-125` (corrected 13 Nov after review `reviews\structural-tool-notes-sample.md`)). The line it shows is wrong (see 7).
 9. **Mark blank, or longer than 512 characters:** stops. The line it shows is wrong (see 7).
 10. **Does not use the layer names on Settings.** It always writes BEAM and 25TEXT (see 7).
 
@@ -54,7 +54,7 @@
 ## 5. When it says Unknown or "needs checking"
 
 1. **It never shows Unknown.** A missing fact becomes a refusal line or one of the questions above.
-2. **"Beam result is uncertain. Do not repeat the command; inspect the drawing."** CE cannot confirm whether the beam was written. Look at the drawing and the Undo list before running it again.
+2. **"Beam result is uncertain: CE cannot confirm whether the beam was written. Do not repeat the command — check the drawing and the Undo list first."** (corrected 13 Nov after review `reviews\structural-tool-notes-sample.md`): the shorter wording shows only when no reason is attached, and an uncertain result always carries one (`Structural.DesignCore\ConnectedDesign\BeamRefusalWording.cs:311-314`). CE cannot confirm whether the beam was written. Look at the drawing and the Undo list before running it again.
 3. **"Beam placed, but its post-write update needs review."** The beam is in. The step that tells the follow-along that a beam was added did not complete.
 
 ## 6. How to undo it

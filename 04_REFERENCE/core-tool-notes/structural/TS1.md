@@ -17,7 +17,7 @@
 1. **The marker block** on layer SUPPORT (colour 2, made if missing), at scale 1.
 2. **The tag:** plain text, 200 high, turned 45 degrees, on layer SUPPORT TEXT (colour 2).
 3. **A note on the marker saying which tag is its own.** No line on screen.
-4. **When a beam end is near:** a link written into the beam's own record and the marker. One line says so. The beam is not moved.
+4. **When a beam end is near:** a link written into the beam's own record only. The marker's own list of beams is updated only if it already has one, and a newly placed marker never does (corrected 13 Nov after review `reviews\structural-tool-notes-sample.md`). One line says so. The beam is not moved.
 5. **The block definition** is loaded from CE's files when the drawing has none.
 6. **The current layer** is put back as it was.
 7. **Not touched:** the member schedule record. The support file has no save call.
@@ -27,7 +27,7 @@
 1. **Read-only drawing:** "[CE_STRUC] TS1: the drawing is read-only. Save a copy you can edit first."
 2. **Layout tab:** "You are on a layout tab (paper space), so CE placed no support. Go to the Model tab, or double-click into a viewport, and try again."
 3. **REFEDIT open:** "A block or Xref is open for in-place editing (REFEDIT), so CE placed no support. Close it (REFCLOSE) and try again."
-4. **Drawing not in millimetres:** it stops and places nothing. The line starts "This drawing's units are ...". A Settings value (Day1Units, HoldInNonMillimetreDrawings, on) turns the stop off.
+4. **Drawing not in millimetres:** it stops and places nothing. The line starts "This drawing's units are ...". The stop is a Settings value (Day1Units, HoldInNonMillimetreDrawings), on by default; turning it OFF lifts the stop. A drawing with units not set goes ahead (corrected 13 Nov after review `reviews\structural-tool-notes-sample.md`).
 5. **Locked layer:** "Layer SUPPORT is locked, so CE drew no support. Unlock it and try again." It checks the marker layer and the tag layer, and never unlocks.
 6. **No frozen or off layer check.**
 7. **No size question.** With no schedule row it draws the Settings size (135 x 90) and says nothing about it.
@@ -39,9 +39,9 @@
 
 ## 4. What it asks you, and what Enter means
 
-1. **When the schedule has a TS1 row** (a line, not a question): "[CE] TS1: size '<schedule size>' from the schedule, shown as '<block size>'."
+1. **When the schedule has a TS1 row** (a line, not a question): "[CE] TS1: size '<schedule size>' from the schedule, shown as '<the schedule size, shortened>'." The second value is the schedule size made shorter, not the size the block shows: if the block cannot show it, the block falls back to the command's default size and only the log says so (corrected 13 Nov after review `reviews\structural-tool-notes-sample.md`).
 2. **"Specify insertion point for TS1: "** Esc: nothing placed. Enter: the command ends with no line.
-3. **AutoCAD's own ROTATE** then runs on the new marker (AutoCAD's wording, not CE's). Enter takes AutoCAD's default angle of 0. Esc removes the marker (Settings value, on).
+3. **AutoCAD's own ROTATE** then runs on the new marker (AutoCAD's wording, not CE's). Enter takes AutoCAD's own default, normally the last angle used; CE's code does not settle it (corrected 13 Nov after review `reviews\structural-tool-notes-sample.md`). Esc removes the marker (Settings value, on).
 4. **"Pick desired support text location (auto left/right/top/bottom), or Enter for auto right: "** Enter prints "Label on the right: enter its text, then click where it goes." A click prints "Label at the <side>: enter its text, it goes at the spot you picked." Esc removes the marker. (If Settings "Auto detect support text side" is off, it asks "Text position [L/R] <R>: " instead.)
 5. **"Enter a number to append to 'TS' (or press Enter to exit): "** Typing 1 makes the tag TS1. Enter with nothing remembered: no tag, no line, the marker stays. Esc removes the marker.
 6. **"Enter text for 'TS' or <1>: "** is asked instead once a tag has been typed. Enter takes that remembered text again.
@@ -87,7 +87,7 @@
 2. **A Settings size the block does not offer** leaves the block in whatever state it was. No line.
 3. **"Support linked to nearby beam" can print when the link was not written.** A failed write is only logged.
 4. **The remembered tag text carries from one drawing to the next** in the same AutoCAD session.
-5. **Tag height 200, the 45 degree turn, and the label search radius 260** are fixed in the code.
+5. **Tag height 200, the 45 degree turn** are fixed in the code. (The 260 label search distance belongs to the switch commands such as SC1, not this one (corrected 13 Nov after review `reviews\structural-tool-notes-sample.md`).)
 6. **A schedule saved with every row left out** does not replace the old schedule, so TS1 keeps using the old one.
 7. **TS1 uses whatever support block is already in the drawing,** without checking it is the current one.
 8. **Rotation wording:** with the rotation preview off in Settings, it still says "CE could not turn the support to the wall direction by itself. Type the rotation angle."

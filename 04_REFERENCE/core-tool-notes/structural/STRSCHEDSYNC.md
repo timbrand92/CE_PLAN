@@ -32,7 +32,7 @@
 ## 4. What it asks you, and what Enter means
 
 1. **"Select schedule table to sync: "** One pick. Anything that is not a table is refused with "Select a Table."
-2. **Esc ends the command with nothing changed.** What a bare Enter does is not known (the code does not offer it as an answer).
+2. **Esc ends the command with nothing changed.** Anything other than a proper pick ends the command with nothing changed (`Services\ScheduleService.cs:358-359` (corrected 13 Nov after review `reviews\structural-tool-notes-sample.md`)).
 3. **No other question and no line on success.**
 
 ## 5. When it says Unknown or "needs checking"
@@ -52,8 +52,8 @@
 1. **BUG-1183 (HIGH, hides a wrong result):** rearrange the pier schedule rows (keeping each row's text together), sync, and two piers swap their drawn sizes with no warning. CE trusts its saved row order when the row count matches and ignores the HANDLE cell. Not seen in AutoCAD.
 
 **New in code, no bug covers it**
-1. **A sync with no edits can turn a brace again (hunt BRACE-01, 19 Oct; HIGH).** A brace turned with AutoCAD ROTATE shows its block rotation in the table; sync writes that value into the rotation setting as well, so the brace turns a second time. All braces also get their length and rotation rewritten at the table's two-decimal rounding.
-2. **Erased brace or locked brace layer: AutoCAD's error, nothing synced (hunt BRACE-03; MEDIUM-HIGH).** The write has no check for either and no catch. Four braces, create, erase one, sync is enough. The same plain-line fix BUG-503 gave the refresh was not given here.
+1. **A sync with no edits can turn a brace again (hunt BRACE-01, 19 Oct; HIGH), narrowed 13 Nov after review:** only a brace drawn flat (within 1 degree, or the Enter default) and later turned with AutoCAD ROTATE, and only on the first sync. Braces drawn at an angle and then turned show the wrong angle in the table, but sync writes the same value back and nothing moves (`Services\BracingService.cs:1677-1681, 1706-1708`; `Services\ProjectDataService.cs:322-326`; `Services\ScheduleService.cs:750-753`). The original wording follows: A brace turned with AutoCAD ROTATE shows its block rotation in the table; sync writes that value into the rotation setting as well, so the brace turns a second time. All braces also get their length and rotation rewritten at the table's two-decimal rounding.
+2. **Erased brace or locked brace layer: AutoCAD's error, nothing synced (hunt BRACE-03; MEDIUM-HIGH).** Narrowed 13 Nov after review: the error after an erased brace happens only in the same session; after save and reopen that row is skipped without a word (`Services\ScheduleService.cs:838-853`). The write has no check for either and no catch. Four braces, create, erase one, sync is enough. The same plain-line fix BUG-503 gave the refresh was not given here.
 3. **Typing a new TYPE changes the text only (hunt SCHED-09; MEDIUM-LOW).** The brace stays on its old layer and plots as the old type while the schedule says the new one. A blank type is written back as A.
 4. **A value the block refuses is skipped in silence.** The refusal goes only to a debug trace.
 5. **Tie-down edits and typed pier marks go nowhere, with no word.**

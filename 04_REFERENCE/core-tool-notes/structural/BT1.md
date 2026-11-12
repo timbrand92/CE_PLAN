@@ -24,7 +24,7 @@
 ## 3. What it will not do
 
 1. **Refuses before it asks anything:** read-only drawing, layout tab ("You are on a layout tab (paper space), so CE drew no bracing truss. Go to the Model tab, or double-click into a viewport, and try again."), REFEDIT open ("... so CE drew no bracing truss. Close it (REFCLOSE) and try again.").
-2. **Refuses a drawing in metres, centimetres or inches** with the footing-words line (see fault 7 new 5). Units "not set" count as millimetres.
+2. **Refuses every drawing whose units are not millimetres or not set** (metres, centimetres, inches, feet and the rest (corrected 13 Nov after review `reviews\structural-tool-notes-sample.md`)) with the footing-words line (see fault 7 new 5). Units "not set" count as millimetres.
 3. **Refuses a locked layer:** "Layer WALL BRACING TYPE BT1 is locked, so CE drew no bracing. Unlock it and try again." CE never unlocks it.
 4. **Does not check the length** against the Settings "longest wall brace". Whether that is a fault is not settled in the records (section 7).
 5. **ABS will not switch a truss.** ABS skips it because its type is not A or B.
@@ -88,7 +88,7 @@
 
 ## Where this comes from
 
-Paths are under `C:\CE_WORK\scratch\audit_struc\Modules\Structural\`.
+Paths are under `C:\CE_WORK\scratch\audit_struc\Modules\Structural\`. Paths that start `Structural.DesignCore\` (or `..\Structural.DesignCore\`) are under `Modules\`, beside `Structural\`, not inside it (corrected 13 Nov after review `reviews\structural-tool-notes-sample.md`).
 
 1. **1.1, 1.2:** `Commands\BracingCommands.cs:244-367`.
 2. **1.3, 3.4, 7 BUG-475:** no `BracingLengthPolicy` call in `BracingCommands.cs:305-307` (compare `BracingCommands.cs:48-58`); BUG-475 and BUG-535 in `C:\CE_PLAN\BUG_CARPARK.md`.
