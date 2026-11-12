@@ -173,3 +173,305 @@ A bug that names two commands appears under both.
     14. BUG-1072: CESETTINGS > System > Saving and diagnostics, Structural 1.0.122 (Codex audit RD11-01, 23 Oct 2026). MEDIUM, SURE (verified by reading).
     15. BUG-1076: CESETTINGS > System > Saving and diagnostics, Structural 1.0.122 (Codex audit RD11-05, 23 Oct 2026). MEDIUM, SURE (verified by reading).
     16. BUG-1203: Structural start-up, CESETTINGS, Schedules / Markup, Structural 1.0.122 (RD19-02). MEDIUM, SURE.
+
+## Added 13 Nov from the code read
+
+Fri 13 Nov 2026. 95 new entries, BUG-1361 to BUG-1455, all OPEN, all found by reading the installed Structural 1.0.126 code (commit 8de95c34) and not yet seen in AutoCAD. A bug that names several tools appears under each. FASTSAVE is not one of the 32 KEEP tools; it is listed last because several entries name it.
+
+1. **R1**: 8 new
+    - BUG-1372: R1, P1 and FJ1 draw a guessed arrow depth when the top and bottom picks are under 25 units apart, with no line
+    - BUG-1373: R1, P1 and FJ1 straighten a bay within 12 degrees of horizontal or vertical and measure the width along that axis, with no line
+    - BUG-1374: R1, P1 and FJ1 slide the marker inside the bay to miss text and walls with no line
+    - BUG-1375: R1, P1 and FJ1 draw on a locked RAFTERS, PURLINS or JOISTS layer where AB, BB and BT1 refuse
+    - BUG-1376: R1, P1 and FJ1 do not report a size the block did not take when the value cannot be read back
+    - BUG-1377: R1, P1 and FJ1 use fixed numbers (25, 300, plus 200) that have no Settings name
+    - BUG-1378: In a metre, centimetre or inch drawing the "held" line talks about footings and tells the drafter to LIST one footing
+    - BUG-1383: Switches that change what AB, BB, the bracing panel, STRSCHEDCREATE and FASTSAVE do have no box on the Settings window
+2. **P1**: 8 new
+    - BUG-1371: P1 purlin lap is fixed at 1200 mm and the question "Apply purlin lap?" does not show the number
+    - BUG-1372: R1, P1 and FJ1 draw a guessed arrow depth when the top and bottom picks are under 25 units apart, with no line
+    - BUG-1373: R1, P1 and FJ1 straighten a bay within 12 degrees of horizontal or vertical and measure the width along that axis, with no line
+    - BUG-1374: R1, P1 and FJ1 slide the marker inside the bay to miss text and walls with no line
+    - BUG-1375: R1, P1 and FJ1 draw on a locked RAFTERS, PURLINS or JOISTS layer where AB, BB and BT1 refuse
+    - BUG-1376: R1, P1 and FJ1 do not report a size the block did not take when the value cannot be read back
+    - BUG-1377: R1, P1 and FJ1 use fixed numbers (25, 300, plus 200) that have no Settings name
+    - BUG-1378: In a metre, centimetre or inch drawing the "held" line talks about footings and tells the drafter to LIST one footing
+3. **BT1**: 6 new
+    - BUG-1378: In a metre, centimetre or inch drawing the "held" line talks about footings and tells the drafter to LIST one footing
+    - BUG-1379: AB, BB and BT1 say the brace was set "from the Xref walls: the side with fewer wall lines" whatever the real reason
+    - BUG-1380: AB, BB and BT1 move the brace end by up to 1 degree to a square angle with no line
+    - BUG-1381: AB, BB and BT1 add layer 25CONT to the drawing if it is missing, with no line
+    - BUG-1382: BT1 help lists "BT number 1-9" before "Insert point" but the tool asks the points first
+    - BUG-1383: Switches that change what AB, BB, the bracing panel, STRSCHEDCREATE and FASTSAVE do have no box on the Settings window
+4. **1**: 9 new
+    - BUG-1365: Beam tools 1, 2, 4 and 5 refuse every beam with "CE hit an internal problem" when the beam or text layer is locked, off, frozen or set differently
+    - BUG-1384: On a layout tab or in REFEDIT the beam tools show an "internal problem" or "safety checks" line instead of "go to model space"
+    - BUG-1385: Beam tools 1, 2, 4 and 5 ignore the beam and text layer names set on the Settings window
+    - BUG-1390: Enter at "Enter text" with no text shown prints "one of the command-line prompts did not complete properly"
+    - BUG-1391: "Remember last choices" does not remember the mark, beam type, suffix or shortening in the new beam route
+    - BUG-1392: Any beam mark starting with L (such as LVL1) is treated as a lintel
+    - BUG-1393: Beam tools 1, 2, 4 and 5 shorten a beam end by the auto-trim with no line saying so
+    - BUG-1394: Walls and openings steer the beam mark only when the layer name contains WALL, WINDOW or DOOR
+    - BUG-1404: After 128 saved inside points the beam tools stop with "the saved inside-of-building point looks wrong" and BSET does not warn
+5. **2**: 10 new
+    - BUG-1365: Beam tools 1, 2, 4 and 5 refuse every beam with "CE hit an internal problem" when the beam or text layer is locked, off, frozen or set differently
+    - BUG-1384: On a layout tab or in REFEDIT the beam tools show an "internal problem" or "safety checks" line instead of "go to model space"
+    - BUG-1385: Beam tools 1, 2, 4 and 5 ignore the beam and text layer names set on the Settings window
+    - BUG-1386: Beam tools 2, 4 and 5 give no "best available" choice when neither side of the beam has room for the mark
+    - BUG-1390: Enter at "Enter text" with no text shown prints "one of the command-line prompts did not complete properly"
+    - BUG-1391: "Remember last choices" does not remember the mark, beam type, suffix or shortening in the new beam route
+    - BUG-1392: Any beam mark starting with L (such as LVL1) is treated as a lintel
+    - BUG-1393: Beam tools 1, 2, 4 and 5 shorten a beam end by the auto-trim with no line saying so
+    - BUG-1394: Walls and openings steer the beam mark only when the layer name contains WALL, WINDOW or DOOR
+    - BUG-1404: After 128 saved inside points the beam tools stop with "the saved inside-of-building point looks wrong" and BSET does not warn
+6. **4**: 13 new
+    - BUG-1365: Beam tools 1, 2, 4 and 5 refuse every beam with "CE hit an internal problem" when the beam or text layer is locked, off, frozen or set differently
+    - BUG-1384: On a layout tab or in REFEDIT the beam tools show an "internal problem" or "safety checks" line instead of "go to model space"
+    - BUG-1385: Beam tools 1, 2, 4 and 5 ignore the beam and text layer names set on the Settings window
+    - BUG-1386: Beam tools 2, 4 and 5 give no "best available" choice when neither side of the beam has room for the mark
+    - BUG-1387: Beam tools 4 and 5 place a lintel mark as an ordinary mark when no inside point is known, with no line
+    - BUG-1388: Beam tools 4 and 5 ask the inside-point question for every mark when none is saved, not only for lintels
+    - BUG-1389: Beam tools 4 and 5 can only shorten or offset by 45 or 100, with no Settings list
+    - BUG-1390: Enter at "Enter text" with no text shown prints "one of the command-line prompts did not complete properly"
+    - BUG-1391: "Remember last choices" does not remember the mark, beam type, suffix or shortening in the new beam route
+    - BUG-1392: Any beam mark starting with L (such as LVL1) is treated as a lintel
+    - BUG-1393: Beam tools 1, 2, 4 and 5 shorten a beam end by the auto-trim with no line saying so
+    - BUG-1394: Walls and openings steer the beam mark only when the layer name contains WALL, WINDOW or DOOR
+    - BUG-1404: After 128 saved inside points the beam tools stop with "the saved inside-of-building point looks wrong" and BSET does not warn
+7. **5**: 14 new
+    - BUG-1365: Beam tools 1, 2, 4 and 5 refuse every beam with "CE hit an internal problem" when the beam or text layer is locked, off, frozen or set differently
+    - BUG-1384: On a layout tab or in REFEDIT the beam tools show an "internal problem" or "safety checks" line instead of "go to model space"
+    - BUG-1385: Beam tools 1, 2, 4 and 5 ignore the beam and text layer names set on the Settings window
+    - BUG-1386: Beam tools 2, 4 and 5 give no "best available" choice when neither side of the beam has room for the mark
+    - BUG-1387: Beam tools 4 and 5 place a lintel mark as an ordinary mark when no inside point is known, with no line
+    - BUG-1388: Beam tools 4 and 5 ask the inside-point question for every mark when none is saved, not only for lintels
+    - BUG-1389: Beam tools 4 and 5 can only shorten or offset by 45 or 100, with no Settings list
+    - BUG-1390: Enter at "Enter text" with no text shown prints "one of the command-line prompts did not complete properly"
+    - BUG-1391: "Remember last choices" does not remember the mark, beam type, suffix or shortening in the new beam route
+    - BUG-1392: Any beam mark starting with L (such as LVL1) is treated as a lintel
+    - BUG-1393: Beam tools 1, 2, 4 and 5 shorten a beam end by the auto-trim with no line saying so
+    - BUG-1394: Walls and openings steer the beam mark only when the layer name contains WALL, WINDOW or DOOR
+    - BUG-1395: Help for beam tool 5 says "Beam offset helper command" and does not say the beam moves 45 or 100 mm
+    - BUG-1404: After 128 saved inside points the beam tools stop with "the saved inside-of-building point looks wrong" and BSET does not warn
+8. **BDL**: 6 new
+    - BUG-1364: BDL has no units handling: in a metre drawing its 50 minimum, 100 offset and 250 search are metres
+    - BUG-1391: "Remember last choices" does not remember the mark, beam type, suffix or shortening in the new beam route
+    - BUG-1396: BDL ends silently with both beam lines already drawn if Esc or Enter is pressed at the text questions
+    - BUG-1397: BDL has no Model space or REFEDIT check: on a layout tab its lines go into Model space at the picked coordinates
+    - BUG-1398: BDL draws on a locked BEAM, BEAM LOWER or 25TEXT layer where tools 1, 2, 4 and 5 refuse
+    - BUG-1399: BDL zooms the view with no line, and the zoom is not part of Undo
+9. **BSET**: 4 new
+    - BUG-1400: BSET, BSETRESET and BSETLIST report success or "none stored" when the store could not be written or read
+    - BUG-1402: BSET saves the clicked point as given, so a turned UCS can save the wrong place
+    - BUG-1403: BSET and BSETRESET have no read-only, Model space or REFEDIT check
+    - BUG-1404: After 128 saved inside points the beam tools stop with "the saved inside-of-building point looks wrong" and BSET does not warn
+10. **BSETLIST**: 2 new
+    - BUG-1400: BSET, BSETRESET and BSETLIST report success or "none stored" when the store could not be written or read
+    - BUG-1405: Help for BSETLIST and BSETRESET still says the points are stored in the drawing's XRecord
+11. **BSETRESET**: 4 new
+    - BUG-1400: BSET, BSETRESET and BSETLIST report success or "none stored" when the store could not be written or read
+    - BUG-1401: BSETRESET clears every saved inside point with no question
+    - BUG-1403: BSET and BSETRESET have no read-only, Model space or REFEDIT check
+    - BUG-1405: Help for BSETLIST and BSETRESET still says the points are stored in the drawing's XRecord
+12. **DS**: 11 new
+    - BUG-1363: A schedule size the support block cannot show is drawn as the default size while the screen line names the schedule size
+    - BUG-1378: In a metre, centimetre or inch drawing the "held" line talks about footings and tells the drafter to LIST one footing
+    - BUG-1406: With no schedule row the support is drawn at the default size and nothing says where the size came from
+    - BUG-1407: A Settings size the support block does not offer leaves the block in whatever state it had, with no line
+    - BUG-1414: "Support linked to nearby beam" can print when the link was not saved
+    - BUG-1416: Support label height 200, the 45 degree label turn, the 260 label search radius and the support colours are fixed in the code
+    - BUG-1417: A member schedule saved with every row left out does not replace the old schedule, so the old sizes keep being used
+    - BUG-1418: Only C2 checks that the support block in the drawing is the current one
+    - BUG-1421: With the rotation preview switched off the line says "CE could not turn the support to the wall direction by itself"
+    - BUG-1422: Help for DS and the five support switches lists prompts these commands do not ask
+    - BUG-1423: Support tools say nothing about a frozen or switched-off support layer
+13. **DS1**: 11 new
+    - BUG-1363: A schedule size the support block cannot show is drawn as the default size while the screen line names the schedule size
+    - BUG-1378: In a metre, centimetre or inch drawing the "held" line talks about footings and tells the drafter to LIST one footing
+    - BUG-1406: With no schedule row the support is drawn at the default size and nothing says where the size came from
+    - BUG-1407: A Settings size the support block does not offer leaves the block in whatever state it had, with no line
+    - BUG-1414: "Support linked to nearby beam" can print when the link was not saved
+    - BUG-1415: The remembered label text for support tools carries from one drawing to the next in the same AutoCAD session
+    - BUG-1416: Support label height 200, the 45 degree label turn, the 260 label search radius and the support colours are fixed in the code
+    - BUG-1417: A member schedule saved with every row left out does not replace the old schedule, so the old sizes keep being used
+    - BUG-1418: Only C2 checks that the support block in the drawing is the current one
+    - BUG-1421: With the rotation preview switched off the line says "CE could not turn the support to the wall direction by itself"
+    - BUG-1423: Support tools say nothing about a frozen or switched-off support layer
+14. **TS1**: 12 new
+    - BUG-1363: A schedule size the support block cannot show is drawn as the default size while the screen line names the schedule size
+    - BUG-1378: In a metre, centimetre or inch drawing the "held" line talks about footings and tells the drafter to LIST one footing
+    - BUG-1383: Switches that change what AB, BB, the bracing panel, STRSCHEDCREATE and FASTSAVE do have no box on the Settings window
+    - BUG-1406: With no schedule row the support is drawn at the default size and nothing says where the size came from
+    - BUG-1407: A Settings size the support block does not offer leaves the block in whatever state it had, with no line
+    - BUG-1414: "Support linked to nearby beam" can print when the link was not saved
+    - BUG-1415: The remembered label text for support tools carries from one drawing to the next in the same AutoCAD session
+    - BUG-1416: Support label height 200, the 45 degree label turn, the 260 label search radius and the support colours are fixed in the code
+    - BUG-1417: A member schedule saved with every row left out does not replace the old schedule, so the old sizes keep being used
+    - BUG-1418: Only C2 checks that the support block in the drawing is the current one
+    - BUG-1421: With the rotation preview switched off the line says "CE could not turn the support to the wall direction by itself"
+    - BUG-1423: Support tools say nothing about a frozen or switched-off support layer
+15. **C1**: 12 new
+    - BUG-1363: A schedule size the support block cannot show is drawn as the default size while the screen line names the schedule size
+    - BUG-1378: In a metre, centimetre or inch drawing the "held" line talks about footings and tells the drafter to LIST one footing
+    - BUG-1383: Switches that change what AB, BB, the bracing panel, STRSCHEDCREATE and FASTSAVE do have no box on the Settings window
+    - BUG-1406: With no schedule row the support is drawn at the default size and nothing says where the size came from
+    - BUG-1407: A Settings size the support block does not offer leaves the block in whatever state it had, with no line
+    - BUG-1414: "Support linked to nearby beam" can print when the link was not saved
+    - BUG-1415: The remembered label text for support tools carries from one drawing to the next in the same AutoCAD session
+    - BUG-1416: Support label height 200, the 45 degree label turn, the 260 label search radius and the support colours are fixed in the code
+    - BUG-1417: A member schedule saved with every row left out does not replace the old schedule, so the old sizes keep being used
+    - BUG-1418: Only C2 checks that the support block in the drawing is the current one
+    - BUG-1421: With the rotation preview switched off the line says "CE could not turn the support to the wall direction by itself"
+    - BUG-1423: Support tools say nothing about a frozen or switched-off support layer
+16. **C2**: 10 new
+    - BUG-1363: A schedule size the support block cannot show is drawn as the default size while the screen line names the schedule size
+    - BUG-1378: In a metre, centimetre or inch drawing the "held" line talks about footings and tells the drafter to LIST one footing
+    - BUG-1414: "Support linked to nearby beam" can print when the link was not saved
+    - BUG-1415: The remembered label text for support tools carries from one drawing to the next in the same AutoCAD session
+    - BUG-1416: Support label height 200, the 45 degree label turn, the 260 label search radius and the support colours are fixed in the code
+    - BUG-1417: A member schedule saved with every row left out does not replace the old schedule, so the old sizes keep being used
+    - BUG-1419: The first C2 placement can print AutoCAD's "Duplicate definition of block _Dot ignored"
+    - BUG-1420: If the C2 support block cannot be loaded the screen shows the raw error text
+    - BUG-1421: With the rotation preview switched off the line says "CE could not turn the support to the wall direction by itself"
+    - BUG-1423: Support tools say nothing about a frozen or switched-off support layer
+17. **SDS**: 9 new
+    - BUG-1408: Support switch commands do not check that the size change took, so the layer and position change even if the block keeps its old size
+    - BUG-1409: Support switch commands have no layout tab, REFEDIT or non-millimetre check
+    - BUG-1410: Switching a support with a label on a locked text layer draws the label again on top of the old one
+    - BUG-1411: After a support switch the redrawn labels are not recorded as the support's own, so they stop following it when it moves
+    - BUG-1412: In a support switch the block turns about its insertion corner while its labels turn about its centre
+    - BUG-1413: A label carried across a support switch keeps its old wording and layer, so a column can read "DS3"
+    - BUG-1416: Support label height 200, the 45 degree label turn, the 260 label search radius and the support colours are fixed in the code
+    - BUG-1418: Only C2 checks that the support block in the drawing is the current one
+    - BUG-1422: Help for DS and the five support switches lists prompts these commands do not ask
+18. **SDS1**: 10 new
+    - BUG-1408: Support switch commands do not check that the size change took, so the layer and position change even if the block keeps its old size
+    - BUG-1409: Support switch commands have no layout tab, REFEDIT or non-millimetre check
+    - BUG-1410: Switching a support with a label on a locked text layer draws the label again on top of the old one
+    - BUG-1411: After a support switch the redrawn labels are not recorded as the support's own, so they stop following it when it moves
+    - BUG-1412: In a support switch the block turns about its insertion corner while its labels turn about its centre
+    - BUG-1413: A label carried across a support switch keeps its old wording and layer, so a column can read "DS3"
+    - BUG-1415: The remembered label text for support tools carries from one drawing to the next in the same AutoCAD session
+    - BUG-1416: Support label height 200, the 45 degree label turn, the 260 label search radius and the support colours are fixed in the code
+    - BUG-1418: Only C2 checks that the support block in the drawing is the current one
+    - BUG-1422: Help for DS and the five support switches lists prompts these commands do not ask
+19. **STS1**: 10 new
+    - BUG-1408: Support switch commands do not check that the size change took, so the layer and position change even if the block keeps its old size
+    - BUG-1409: Support switch commands have no layout tab, REFEDIT or non-millimetre check
+    - BUG-1410: Switching a support with a label on a locked text layer draws the label again on top of the old one
+    - BUG-1411: After a support switch the redrawn labels are not recorded as the support's own, so they stop following it when it moves
+    - BUG-1412: In a support switch the block turns about its insertion corner while its labels turn about its centre
+    - BUG-1413: A label carried across a support switch keeps its old wording and layer, so a column can read "DS3"
+    - BUG-1415: The remembered label text for support tools carries from one drawing to the next in the same AutoCAD session
+    - BUG-1416: Support label height 200, the 45 degree label turn, the 260 label search radius and the support colours are fixed in the code
+    - BUG-1418: Only C2 checks that the support block in the drawing is the current one
+    - BUG-1422: Help for DS and the five support switches lists prompts these commands do not ask
+20. **SC1**: 10 new
+    - BUG-1408: Support switch commands do not check that the size change took, so the layer and position change even if the block keeps its old size
+    - BUG-1409: Support switch commands have no layout tab, REFEDIT or non-millimetre check
+    - BUG-1410: Switching a support with a label on a locked text layer draws the label again on top of the old one
+    - BUG-1411: After a support switch the redrawn labels are not recorded as the support's own, so they stop following it when it moves
+    - BUG-1412: In a support switch the block turns about its insertion corner while its labels turn about its centre
+    - BUG-1413: A label carried across a support switch keeps its old wording and layer, so a column can read "DS3"
+    - BUG-1415: The remembered label text for support tools carries from one drawing to the next in the same AutoCAD session
+    - BUG-1416: Support label height 200, the 45 degree label turn, the 260 label search radius and the support colours are fixed in the code
+    - BUG-1418: Only C2 checks that the support block in the drawing is the current one
+    - BUG-1422: Help for DS and the five support switches lists prompts these commands do not ask
+21. **SC2**: 10 new
+    - BUG-1408: Support switch commands do not check that the size change took, so the layer and position change even if the block keeps its old size
+    - BUG-1409: Support switch commands have no layout tab, REFEDIT or non-millimetre check
+    - BUG-1410: Switching a support with a label on a locked text layer draws the label again on top of the old one
+    - BUG-1411: After a support switch the redrawn labels are not recorded as the support's own, so they stop following it when it moves
+    - BUG-1412: In a support switch the block turns about its insertion corner while its labels turn about its centre
+    - BUG-1413: A label carried across a support switch keeps its old wording and layer, so a column can read "DS3"
+    - BUG-1415: The remembered label text for support tools carries from one drawing to the next in the same AutoCAD session
+    - BUG-1416: Support label height 200, the 45 degree label turn, the 260 label search radius and the support colours are fixed in the code
+    - BUG-1418: Only C2 checks that the support block in the drawing is the current one
+    - BUG-1422: Help for DS and the five support switches lists prompts these commands do not ask
+22. **FJ1**: 7 new
+    - BUG-1372: R1, P1 and FJ1 draw a guessed arrow depth when the top and bottom picks are under 25 units apart, with no line
+    - BUG-1373: R1, P1 and FJ1 straighten a bay within 12 degrees of horizontal or vertical and measure the width along that axis, with no line
+    - BUG-1374: R1, P1 and FJ1 slide the marker inside the bay to miss text and walls with no line
+    - BUG-1375: R1, P1 and FJ1 draw on a locked RAFTERS, PURLINS or JOISTS layer where AB, BB and BT1 refuse
+    - BUG-1376: R1, P1 and FJ1 do not report a size the block did not take when the value cannot be read back
+    - BUG-1377: R1, P1 and FJ1 use fixed numbers (25, 300, plus 200) that have no Settings name
+    - BUG-1378: In a metre, centimetre or inch drawing the "held" line talks about footings and tells the drafter to LIST one footing
+23. **AB**: 5 new
+    - BUG-1378: In a metre, centimetre or inch drawing the "held" line talks about footings and tells the drafter to LIST one footing
+    - BUG-1379: AB, BB and BT1 say the brace was set "from the Xref walls: the side with fewer wall lines" whatever the real reason
+    - BUG-1380: AB, BB and BT1 move the brace end by up to 1 degree to a square angle with no line
+    - BUG-1381: AB, BB and BT1 add layer 25CONT to the drawing if it is missing, with no line
+    - BUG-1383: Switches that change what AB, BB, the bracing panel, STRSCHEDCREATE and FASTSAVE do have no box on the Settings window
+24. **BB**: 5 new
+    - BUG-1378: In a metre, centimetre or inch drawing the "held" line talks about footings and tells the drafter to LIST one footing
+    - BUG-1379: AB, BB and BT1 say the brace was set "from the Xref walls: the side with fewer wall lines" whatever the real reason
+    - BUG-1380: AB, BB and BT1 move the brace end by up to 1 degree to a square angle with no line
+    - BUG-1381: AB, BB and BT1 add layer 25CONT to the drawing if it is missing, with no line
+    - BUG-1383: Switches that change what AB, BB, the bracing panel, STRSCHEDCREATE and FASTSAVE do have no box on the Settings window
+25. **ABS**: 4 new
+    - BUG-1362: ABS (A-B switch) erases an older brace first, and if the new one cannot be drawn says "It was left as it was"
+    - BUG-1366: ABS on a layout tab or inside REFEDIT erases the older brace there and redraws it in Model space with no stop line
+    - BUG-1367: ABS reads the type of an untagged brace block from its layer name
+    - BUG-1380: AB, BB and BT1 move the brace end by up to 1 degree to a square angle with no line
+26. **CSBRACINGPANEL**: 4 new
+    - BUG-1368: The bracing panel keeps the last totals on screen with no sign when a read fails
+    - BUG-1369: Older-named brace blocks count as zero in the bracing panel and are left out of the bracing schedule
+    - BUG-1370: Braces on a frozen or switched-off layer are counted in the bracing panel and the bracing schedule
+    - BUG-1383: Switches that change what AB, BB, the bracing panel, STRSCHEDCREATE and FASTSAVE do have no box on the Settings window
+27. **STRSCHEDCREATE**: 10 new
+    - BUG-1361: STRSCHEDSYNC with no edits turns every rotated brace again and rewrites every brace's length and angle
+    - BUG-1369: Older-named brace blocks count as zero in the bracing panel and are left out of the bracing schedule
+    - BUG-1370: Braces on a frozen or switched-off layer are counted in the bracing panel and the bracing schedule
+    - BUG-1383: Switches that change what AB, BB, the bracing panel, STRSCHEDCREATE and FASTSAVE do have no box on the Settings window
+    - BUG-1424: STRSCHEDCREATE on a layout tab or in REFEDIT still puts the tables in Model space at the point clicked on the sheet
+    - BUG-1425: In a rotated UCS the schedule tables land away from the point clicked
+    - BUG-1426: A second STRSCHEDCREATE adds three more tables and leaves the first three out of date
+    - BUG-1427: The schedule tables sit on whatever layer is current, because CE sets none
+    - BUG-1428: The bracing table's ROTATION column ignores AutoCAD ROTATE on a brace and shows the block's own setting
+    - BUG-1429: Help for the three schedule commands lists "Command-specific utility prompts" and describes them as "Create Schedule."
+28. **STRSCHEDREFRESH**: 8 new
+    - BUG-1369: Older-named brace blocks count as zero in the bracing panel and are left out of the bracing schedule
+    - BUG-1370: Braces on a frozen or switched-off layer are counted in the bracing panel and the bracing schedule
+    - BUG-1428: The bracing table's ROTATION column ignores AutoCAD ROTATE on a brace and shows the block's own setting
+    - BUG-1429: Help for the three schedule commands lists "Command-specific utility prompts" and describes them as "Create Schedule."
+    - BUG-1430: STRSCHEDREFRESH on a table CE did not make does nothing and prints nothing
+    - BUG-1431: STRSCHEDREFRESH re-sorts a schedule the drafter sorted by hand
+    - BUG-1432: STRSCHEDREFRESH is marked expert, so CEHELP hides it until "Show advanced commands" is ticked
+    - BUG-1433: An old three-column pier table gets no MARK or DIA MM column on refresh and nothing says so
+29. **STRSCHEDSYNC**: 7 new
+    - BUG-1361: STRSCHEDSYNC with no edits turns every rotated brace again and rewrites every brace's length and angle
+    - BUG-1429: Help for the three schedule commands lists "Command-specific utility prompts" and describes them as "Create Schedule."
+    - BUG-1434: STRSCHEDSYNC on an erased brace or a locked brace layer gives AutoCAD's own error and nothing is synced
+    - BUG-1435: Typing B over A in the bracing table changes the type text only; the brace stays on the A layer and plots as A
+    - BUG-1436: STRSCHEDSYNC says nothing about values it skipped
+    - BUG-1437: Edits to the tie-down table and typed pier MARK or DIA MM go nowhere with STRSCHEDSYNC and nothing says so
+    - BUG-1438: STRSCHEDSYNC has no read-only drawing check, unlike the other two schedule commands
+30. **CLEAN**: 11 new
+    - BUG-1439: CLEAN: one object on a locked layer drops the whole text step and the whole ByLayer step, and the drawing is still saved after a half clean-up
+    - BUG-1440: The CLEAN tooltip says "Does not save: save the drawing yourself" and Settings says "CE never saves" while CLEAN saves
+    - BUG-1441: CLEAN prints "saved" when it only sent QSAVE and never checked the save
+    - BUG-1442: CLEAN has no read-only, layout tab or REFEDIT check at the start
+    - BUG-1443: CLEAN ignores the Xref layer settings on the Settings window and always uses layer XREF, colour 7, hatch 21 and Arial Narrow
+    - BUG-1444: After CLEAN the next hatch is SOLID on layer HATCH 21 for the rest of the session
+    - BUG-1445: CLEAN sets attribute definitions inside blocks to STANDARD while the summary says "attributes=preserved"
+    - BUG-1446: CLEAN saves in the running AutoCAD's own file version, not the Save As format setting
+    - BUG-1447: CLEAN keeps no copy from before the clean-up, because CE's backup copy is taken after the save
+    - BUG-1448: FASTSAVE Help still says "lighter cleanup sequence" and lists FASTSAVE as another name for CLEAN
+    - BUG-1452: CEHELP "Run command" starts the selected command with no confirmation, including CLEAN, which saves
+31. **CEHELP**: 4 new
+    - BUG-1449: CEHELP opens already filtered by the last thing searched, so the list can be empty with "No matching command"
+    - BUG-1450: The 19 visible Foundations commands (FPFC, FSF, FST, BP and others) never appear in the CEHELP list
+    - BUG-1451: CEHELP rewrites the settings file on every key typed in the search box, every tick and every Run
+    - BUG-1452: CEHELP "Run command" starts the selected command with no confirmation, including CLEAN, which saves
+32. **CESETTINGS**: 3 new
+    - BUG-1453: Blanking a note or list box on CESETTINGS is ignored on Save and the old text stays
+    - BUG-1454: "Share learning data" is ticked by default, nothing in the code reads it, and the page does not say where anything goes
+    - BUG-1455: The Markup service page still offers an API key name, a service URL and an AI model that do nothing while page-send is blocked
+33. **FASTSAVE**: 6 new
+    - BUG-1383: Switches that change what AB, BB, the bracing panel, STRSCHEDCREATE and FASTSAVE do have no box on the Settings window
+    - BUG-1441: CLEAN prints "saved" when it only sent QSAVE and never checked the save
+    - BUG-1442: CLEAN has no read-only, layout tab or REFEDIT check at the start
+    - BUG-1446: CLEAN saves in the running AutoCAD's own file version, not the Save As format setting
+    - BUG-1447: CLEAN keeps no copy from before the clean-up, because CE's backup copy is taken after the save
+    - BUG-1448: FASTSAVE Help still says "lighter cleanup sequence" and lists FASTSAVE as another name for CLEAN
+

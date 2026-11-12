@@ -21346,3 +21346,57 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
 
 **Status:** OPEN
+
+## BUG-1453 — Blanking a note or list box on CESETTINGS is ignored on Save and the old text stays
+
+**Command / Area:** CESETTINGS (candidate positions, lintel prefixes, Xref patterns, steel and timber notes). LOW. WRONG ANSWER, a change that does not take.
+
+**Symptom:** For these boxes the code assigns the typed text only if it is not blank. A drafter who clears the lintel prefix list or the timber note and presses Save finds the old text back, with no line.
+
+**Expected behaviour:** A blank box is saved as blank, or a line says a blank is not allowed and why.
+
+**Steps to confirm in AutoCAD:** (1) On CESETTINGS clear the lintel prefixes and press Save. (2) Reopen. Right = blank, or a line explaining. Wrong = the old list is back with no line.
+
+**Test that catches it:** Fixture: blank each box; assert the saved value or a message.
+
+**Reference:** UI\Dialogs\CeSettingsDialog.xaml.cs:294-296 and 325-337 (IsNullOrWhiteSpace guards). Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1454 — "Share learning data" is ticked by default, nothing in the code reads it, and the page does not say where anything goes
+
+**Command / Area:** CESETTINGS (Markup service page). LOW. WORDING and PRIVACY.
+
+**Symptom:** The tick box "Share learning data" is on by default. No code reads the value. A drafter cannot tell whether anything is shared or where it would go.
+
+**Expected behaviour:** The box says what it covers and where it goes, or it is removed while nothing uses it.
+
+**Steps to confirm in AutoCAD:** (1) Open the Markup page on CESETTINGS. Right = a line saying what is shared and where, or no box. Wrong = a ticked box with no explanation.
+
+**Test that catches it:** Source guard: every Settings tick box has a reader.
+
+**Reference:** Models\MarkupAIModels.cs:231 (LearningDataOptIn true); UI\Dialogs\CeSettingsDialog.xaml:827; UI\Dialogs\CeSettingsDialog.xaml.cs:234 and 457 (the only references). Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1455 — The Markup service page still offers an API key name, a service URL and an AI model that do nothing while page-send is blocked
+
+**Command / Area:** CESETTINGS (Markup service page). LOW. WORDING.
+
+**Symptom:** The page shows "API key environment variable name", "Service URL" and "AI model" as if they worked. MaySendOffPc always returns false in this version, so none of them has an effect.
+
+**Expected behaviour:** The boxes are hidden or marked "not used in this version".
+
+**Steps to confirm in AutoCAD:** (1) Open the Markup page and type a service URL. Right = the page says it is not used. Wrong = it looks live.
+
+**Test that catches it:** Source guard: controls whose setting is unused are disabled.
+
+**Reference:** UI\Dialogs\CeSettingsDialog.xaml:781-790; Services\MarkupAIOffPcPolicy.cs:32-35. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
