@@ -59,6 +59,13 @@ Every item on the sheet gets exactly one of four marks:
 2. **Unknown:** CE says Unknown for something the sheet has. Honest, but a miss.
 3. **Wrong:** CE states a value as a fact and it differs from the sheet. This is the fault that costs trust.
 4. **Invented:** CE reports something that is not in the drawing at all (a pipe that is a construction line, a pit that is not there).
+5. **Proposed, wrong value (added from the review, 12 Nov):** CE offers a value as a proposal and it differs from the sheet. This fails the job exactly as Wrong does, because one tick would turn it into a fact. On an old job nearly everything is a proposal, so without this mark an old job could never fail.
+
+**Where the sheet's values come from (changed by the review):** the labels on the issued plan, or a print Tim has marked up. Never CE's own old Pit Schedule, which can carry values CE made up at the time. A value CE has stored with no note of where it came from is read as "stored, source unknown", not as Right by default.
+
+**What else gets scored (added from the review):** reading alone is not enough. For each job the robot also does one ordinary edit on a copy (open Edit Pit and close it; place one pit; draw one pipe) and reads the job again. Anything that changed and was not the edit itself is a fault.
+
+**Held-back jobs:** two of the jobs are never used to teach the reader its list of old block versions. They are only used to test it.
 
 ## 5. What counts as a pass (recommended; question A1 and B3 are OPEN)
 

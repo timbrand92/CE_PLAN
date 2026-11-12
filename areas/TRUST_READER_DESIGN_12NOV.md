@@ -77,6 +77,23 @@ Read from the installed code (Civil 3.0.90). "Known versions" means the code nam
 
 1. **CE's record carries one format number** (2.3 today) for the whole drawing. Individual pits and pipes do not say which CE version wrote them. So the reader tells versions apart by what is on the object, not by a date.
 
+## 2b. The old LISP tools, found 12 Nov (one reader's pass over the LISP source; not re-checked here)
+
+Tim, 12 Nov: the old tools are "on my work pc". They are in the office drafting folder, under "Lisp Files" (subfolders TIM, TIM EXPORT, UPDATED LISP FILES, SUPERSEDED, C DRIVE STUFF). The main one is the old pipe command, CDD.
+
+1. **An old LISP pipe is a plain polyline on a pipe layer.** The same four layer names as today: stormwater pipe, charged UPVC pipe, suspended pipe, rising main. Beside it, parallel lines on "DRAINAGE" or "DRAINAGE HIDDEN".
+2. **It stored nothing on the line.** No hidden data of any kind. Everything it knew is in the text next to the pipe.
+3. **The text follows a fixed pattern,** which is what makes a fixed rule possible:
+   1. pipe text: "150 DIA. UPVC PIPE AT 1 IN 100 MIN." (no "MIN." when both inverts were given);
+   2. charged pipe: "100 DIA. UPVC CHARGED PIPE TO WT";
+   3. detention pipe: "... PIPE AT 1 IN 200 - 12.5m FOR DETENTION";
+   4. invert text: "IL 1.10", on its own, at each end;
+   5. pipe text on layer 25TEXT, invert text on 20TEXT, flow arrow block "TIM_CVL_ARROW" on layer ARROW.
+4. **Where "100" and "UPVC" come from.** They were the old tool's starting values in its window. Today's fill-in of "100 dia UPVC" copies that habit. In an old LISP drawing a pipe reading "100 DIA. UPVC" in its text is real; a pipe with no text at all has no known size.
+5. **Proposed rule for an old LISP pipe:** a plain polyline on a pipe layer, with exactly one pipe text in the fixed pattern lying along it, is Proposed as a pipe of that size, material and grade, reason "read from its label". No such text, or two candidates: size Unknown. Invert text matched the same way, each end.
+6. **Pits, pit labels and downpipes had no LISP tool.** They were blocks dragged from the "BLOCKS CIVIL" tool palette. Older palettes are kept in the office drafting folder under "OLD TOOL PALETTES", and an old block library drawing from 2022 is kept under "Superseded Stuff". Those are where the oldest pit and label blocks will be found. Nobody has opened them yet; that needs AutoCAD.
+7. **No tank block was found** among the old tools, only the standard detail drawings.
+
 ## 3. What the reader hands back
 
 A reading of the drawing, as plain rows. It is what Check this drawing shows and what the test set is marked against.

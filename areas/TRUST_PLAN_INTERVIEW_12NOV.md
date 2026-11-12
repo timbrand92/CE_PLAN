@@ -68,6 +68,19 @@ INTERPRETATION of "properly": ask the questions that decide whether the plan wor
    5. TRUST-08: warn and allow when the drawing has unsaved changes before Apply.
 2. Reader design: where old block files or LISP tools are kept, if anywhere.
 
+**J. Questions raised by the independent review (12 Nov, all OPEN; recommendation first)**
+1. J1. On an old job, can proposed pipe sizes be ticked all at once? Recommended: tick-all for links only; sizes, levels and numbers one by one.
+2. J2. Do the right answers for test jobs come from the plan labels or a marked-up print, not the old Pit Schedule? Recommended yes.
+3. J3. When the core reaches colleagues, does the whole office move on the same day? Recommended yes, because an older version re-guesses drawings the core has touched.
+4. J4. The steps add up to about ten three-day trials. Keep Tim's own trials for steps 4, 6 and 8 only, with the robot and Codex accepting the rest? Recommended yes.
+5. J5. If a colleague types CDSYNC or CDREBUILD, does CE print one line pointing to Check this drawing and then carry on? Recommended yes.
+6. J6. When a drawing has no units set, does CE ask once whether it is millimetres or metres and remember it in the drawing? Recommended yes.
+7. J7. Are Tim's switched-on trial features left out of the office setup? Recommended yes.
+8. J8. With no LPD drawn, does CE ask for the LPD point to be picked, rather than offer the lowest pit? Recommended yes.
+9. J9. If Esc is pressed at the LPD question, is the Pit Schedule still made in today's order with a warning line? Recommended yes.
+10. J10. Do colleagues keep their current Structural version in the first release? Recommended yes.
+11. J11. Does Tim approve the five trust rules as the gate, with any exception named and signed by him? Recommended yes.
+
 ---
 
 ## Answers

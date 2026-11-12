@@ -2,7 +2,11 @@
 
 **Status: PROPOSAL, written Thu 12 Nov 2026 by chat CE_ACAD / trust plan / plan / 01.** Nothing here is built, tested, installed or accepted. The HOLD stands: no builds, installs or colleague releases until Tim lifts it himself.
 
-**What is decided (Tim's words, `decisions\2026-11-05_TIM_PLUGIN_STRATEGY_TALK.md`):** a small core for colleagues; Civil first; the pilot date is off; "I want something that works. If it's going to take time to make that happen, then let's take the time."; the first colleague release waits for Check this drawing; testing goes Codex on a test set, then Tim on real jobs for about 3 days, then colleagues; two always-visible tabs, CE Drainage and CE Design; CE tools stay available on every drawing; card UX-OPEN-01's three decisions.
+**What is decided (Tim's words, `decisions\2026-11-05_TIM_PLUGIN_STRATEGY_TALK.md`):** a small core for colleagues; Civil first; the pilot date is off; "I want something that works. If it's going to take time to make that happen, then let's take the time."; CE tools stay available on every drawing; card UX-OPEN-01's three decisions; and decisions 7 to 13 of 12 Nov (finish line, stop faults, first colleague on 2027, trials, the LPD as the start point, nothing changes on open, the autonomous run).
+
+**Agreed direction, not quoted rulings (6 Nov voice talk, written up by the voice chat):** the first colleague release waits for Check this drawing; testing goes Codex on a test set, then Tim on real jobs for about 3 days, then colleagues; two always-visible tabs, CE Drainage and CE Design. The 5 Nov plan itself is approved by interpretation only (decision 3).
+
+**Reviewed 12 Nov:** an independent review found ten holes; they and the fixes are in `areas\TRUST_PLAN_REVIEW_12NOV.md`. The corrections are folded in below where marked "review".
 
 **What is NOT decided:** everything marked OPEN in `areas\TRUST_PLAN_INTERVIEW_12NOV.md`. Each step below says which open questions it waits on.
 
@@ -75,6 +79,27 @@ flowchart TD
 
 Each step has its own card. Step 1's card is answered; the others are DRAFT in `04_REFERENCE\ux-plan\cards\`.
 
+### Step 0: the measuring stick (added from the review, 12 Nov)
+
+1. **Goal:** have something to measure every later step against, before any step is trialled.
+2. **What it is:** the test jobs picked by Tim; an answer sheet for each, taken from the labels on the issued plan or a marked-up print (never from CE's own old schedule, which can repeat CE's old mistakes); and the read-only reader running well enough to produce a reading of each job.
+3. **Depends on:** Tim picking the jobs. Until he does, made-up drawings and the existing labelled test copies stand in, and every result says so.
+4. **Proven by:** two readings of the same copy are identical; reading changes nothing in the drawing.
+5. **Undo:** nothing to undo; it only reads copies.
+6. **Risk: LOW.** The risk is in skipping it.
+
+### Cases every card must answer (added from the review, 12 Nov)
+
+1. A drawing that is read-only or open on another PC.
+2. A job made by Save As from another job, and pits copied or WBLOCKed between jobs: the copies carry CE's identity and can look Sure when they are wrong.
+3. Drawing units not set, or set wrong.
+4. Drainage that sits inside an attached drawing (Xref).
+5. Paper space: schedules placed on layouts.
+6. A colleague typing a hidden command from habit.
+7. A drawing last touched by a different CE version, older or newer.
+8. CE blocks that were exploded, scaled, mirrored or rotated; other people's blocks named like pits.
+9. One job split over several drawings.
+
 ### Step 1: the open line (card UX-OPEN-01, decisions answered)
 
 1. **Goal:** tell the drafter the state of a Civil drawing the moment it opens, changing nothing.
@@ -82,7 +107,7 @@ Each step has its own card. Step 1's card is answered; the others are DRAFT in `
 3. **Depends on:** nothing. Before code: time the existing check on copies of large jobs to set the size limit.
 4. **Proven by:** robot, 8 cases on copies, including a deliberately broken version that writes to the drawing and must be caught; Codex, one look at the line; Tim, five jobs he knows, one messy job, one Structural drawing.
 5. **Undo:** one Settings switch. Nothing to restore, because nothing was written.
-6. **Risk: LOW.** Worst case is a misleading count on an old job, which is itself useful to learn before step 8.
+6. **Risk: LOW to MEDIUM (raised by the review).** The existing check only looks inside CE's own record. Counting pits and pipe lines that are drawn but not recorded needs a new read-only scan, and so does giving an old no-record job any line at all. Nothing is written either way.
 7. **Waits on:** Tim lifting the hold for it. No open question.
 
 ### Step 2: the core ribbon (card TRUST-02, DRAFT)
@@ -229,7 +254,8 @@ The plugin does not own the drawings, so most do not apply (15.9). Stated, not s
 1. **Step 1:** card answered. Built no. Tested no. Installed no. Accepted no.
 2. **Steps 2 to 8:** cards DRAFT. Built no. Tested no. Installed no. Accepted no.
 3. **Test set, reader, release process, trust checklist:** DRAFT documents. No jobs picked yet.
-4. **Interview:** started 12 Nov; A1 asked; no answers yet.
+4. **Interview:** started 12 Nov. Answered: A1 to A4, B1, B4, B5 and where the old tools are. Everything else is OPEN and queued in `areas\TRUST_PLAN_INTERVIEW_12NOV.md`.
+5. **Autonomous run (from 12 Nov 22:45):** five side sessions building and testing under `areas\TRUST_AUTONOMOUS_RUN_12NOV.md`. Nothing is installed or merged. Their status lines are in that file, section 5.
 
 ## 9. What this plan has not checked
 

@@ -1,6 +1,7 @@
 # TRUST-07: the start point, confirmed once and stored in the drawing
 
 **Status: DRAFT.** Not approved, not built, not tested, not installed. No code starts until Tim approves this card and lifts the HOLD for it.
+**TO BE REWRITTEN (review, 12 Nov):** Tim answered that the start point is the LPD itself, one stored thing. This draft still proposes a pit, falls back to "lowest invert", and adds a record beside the two that exist. The rewrite confirms the LPD's position, keeps one stored record, and on Esc lets the tool carry on in today's order with a warning line (no hard block). "One U" is only promised once the Undo test proves it.
 **Class:** Modify (CDLPD and the tools that need the outlet). Nothing is retired.
 **Source:** Tim, 5 Nov: "it also doesn't really make it clear where the start point of the entire system is". Voice talk 6 Nov: the LPD, "CE proposes, Tim confirms once, stored in the drawing, more than one LPD handled". Step 7 of `areas\trust-plan.md`.
 
