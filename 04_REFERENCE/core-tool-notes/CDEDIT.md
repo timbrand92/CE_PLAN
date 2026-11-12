@@ -14,7 +14,7 @@
 ## 2. What it changes in the drawing
 
 1. **Quiet record update first.** As soon as it knows what you picked, it brings CE's record up to date with the drawing (only if something changed): adds missing pits and pipes, drops records whose object is gone, re-reads details, fills blank pit inverts. Nothing is printed.
-2. **Edit Pipe Save:** the pipe record, the pipe, its labels, level text, flow arrow and From/To names, in one step. Then it may ask about downstream levels and tidy clashing text near the pipe. It never writes remembered values.
+2. **Edit Pipe Save:** the pipe record, the pipe, its labels, level text, flow arrow and From/To names, in one step. Then it may ask about downstream levels and tidy clashing text near the pipe. **Save also adds the size, material and both levels to the Recent lists and saves your Settings file, on the button press, even if the save is then refused.**
 3. **Edit Pit Save:** the pit block, its label and cover text; if the number changed, the connected pipes' records and notes; then the pit record. A change of size, rotation or SPS radius moves connected pipe ends to the new walls. A drawn Pit Schedule is refreshed.
 4. **Edit Pit also saves about 22 values as the next New Pit's starting values** when you press Save, before the drawing is changed, even if the save is then refused.
 5. **Edit Pit with nothing changed** still rewrites the pit record and clears its "levels to check" flag.
@@ -50,7 +50,7 @@
 ## 6. How to undo it
 
 1. **U once** for a Save: the edit, the moved pipe ends, the schedule refresh and the record. A batch Apply is one step ("One Ctrl+Z undoes all of it").
-2. **Not undone by U:** Edit Pit's remembered values on your PC.
+2. **Not undone by U:** Edit Pit's remembered values on your PC, and Edit Pipe's Recent size, material and level lists (and the Settings file saved with them).
 3. **Cancel does not undo the quiet record update** that ran before the window (Edit Pipe holds its own second update until Save; Edit Pit holds nothing).
 
 ## 7. Known faults
@@ -75,11 +75,11 @@
 3. **"Unlock it, or leave it out"** wording in single Edit Pit.
 4. **Esc at "Press Enter to reopen"** ends a single pit edit but reopens the batch editor.
 
-## 8. On AutoCAD 2022 to 2024
+## 8. On AutoCAD 2022 to 2026 (every build except 2027)
 
 1. **Same commands and questions.**
-2. **Edit Pipe shows a schematic** instead of the real plan beside the pipe.
-3. **Edit Pit shows a sketch** instead of the real pit block, and clicking a pipe tag on it does nothing.
+2. **Edit Pipe shows a schematic** (also on 2025 and 2026) instead of the real plan beside the pipe.
+3. **Edit Pit shows a sketch** (also on 2025 and 2026) instead of the real pit block, and clicking a pipe tag on it does nothing.
 
 ## 9. Proven by
 
@@ -94,7 +94,7 @@ Paths are under `C:\CE_WORK\scratch\audit_civil\Modules\Drainage\`.
 1. **1.1:** `Commands\HubCommands.cs:75`, `125-140` (RouteSingleTarget), `PipeEditCommand.cs`, `PitEditCommand.cs:244, 280`.
 2. **1.2, 3.2, 3.3, 3.4:** `HubCommands.cs:100-105`, `185-300` (mixed `227-235`, sources `237-247`, non-CE `254-259`, batch `288`).
 3. **2.1:** `HubCommands.cs:134-135`, `188`; `Services\ProjectDataService.cs:595-693`.
-4. **2.2:** `Commands\PipeEditCommand.Update.cs:548-567`, `1122-1125`, `1257-1340`; `PipeEditCommand.cs:236-237`; `ViewModels\CdViewModel.Settings.cs:248-251`.
+4. **2.2:** `ViewModels\CdViewModel.Commands.cs:43-51` (Save adds Recent size, material and levels and saves Settings; Edit Pipe uses this view model, `PipeEditCommand.cs:128`); `Commands\PipeEditCommand.Update.cs:548-567`, `1122-1125`, `1257-1340`; `PipeEditCommand.cs:236-237`; `ViewModels\CdViewModel.Settings.cs:248-251`.
 5. **2.3:** `Commands\PitEditCommand.cs:415-445`, `576-659`.
 6. **2.4, 7 new 2:** `ViewModels\PitViewModel.cs:980-991`, `1229-1258`.
 7. **2.5:** `PitEditCommand.cs:632-647` (line 638).
@@ -106,7 +106,7 @@ Paths are under `C:\CE_WORK\scratch\audit_civil\Modules\Drainage\`.
 13. **4.2, 4.3:** `Dialogs\PipeEditWorkshopDialog.xaml:493-494`; `Dialogs\PitEditWorkshopDialog.xaml:330-331`; `Dialogs\BatchEditWorkshopDialog.xaml:388-392`; window choice `Services\DialogService.cs:49, 71-105, 241-248`.
 14. **4.4:** `PipeEditCommand.Update.cs:2036-2086`; `Services\DialogService.cs:303-306`.
 15. **4.5:** `Commands\PipeEditCommand.OlderPipeLabels.cs:21-23`, `164-264`, `414-430`; `Rules\OlderPipeLabelRule.cs:194-207`.
-16. **4.6:** `PipeEditCommand.Update.cs:536-543`.
+16. **4.6:** `PipeEditCommand.Update.cs:522` (the message).
 17. **4.7, 7 new 4:** `PitEditCommand.cs:287-297`; `Commands\BatchEditDialogHost.cs:41-48`.
 18. **4.8:** `Commands\PitEditCommand.Batch.cs:546-562`.
 19. **5.1, 7 BUG-1043:** `Models\UserSettings.cs:1633-1639`; `Rules\PipeStartReadiness.cs:195-208`.
@@ -117,6 +117,6 @@ Paths are under `C:\CE_WORK\scratch\audit_civil\Modules\Drainage\`.
 24. **6.3:** `PipeEditCommand.cs:54-59`, `112`, `225`; no hold in `PitEditCommand*.cs` (update at `PitEditCommand.cs:64`).
 25. **7 BUG-677:** `PitEditCommand.Batch.cs:511-515`, `540-542`, `788-792`; `PitEditCommand.cs:1189`.
 26. **7 fixed list:** BUG-070 `ViewModels\CdViewModel.GradeSuggestion.cs:486, 540-544`; BUG-072 `Helpers\PitAnnotationShift.cs`, `PitEditCommand.cs:1693`; BUG-078 `PipeEditCommand.Attachments.cs:418-520`; BUG-094 `HubCommands.cs:110, 141, 199`; BUG-186 `PipeEditCommand.Batch.cs:849-862`; BUG-223 `PipeEditCommand.Update.cs:1779-1800`; BUG-291 `PipeEditCommand.Update.cs:239-250`; BUG-674 `PitEditCommand.Batch.cs:681-731`; BUG-071 `Dialogs\GradeMismatchDialog.xaml:6`, `Dialogs\ContinueRisingMainDialog.xaml:6`.
-27. **8.2:** `Dialogs\PipeOnePageLayout.cs:246-265`. **8.3:** `Dialogs\PitOnePageLayout.cs:96-113`. The `#if NET48` in `HubCommands.cs:793` is CDMENU, not CDEDIT.
+27. **8.2:** `Dialogs\PipeOnePageLayout.cs:246-265` (`#if NET10_0_OR_GREATER`, so every other build). **8.3:** `Dialogs\PitOnePageLayout.cs:96-113` (same `#if`/`#else`). The `#if NET48` in `HubCommands.cs:793` is CDMENU, not CDEDIT.
 
-Checked against the installed code (Civil 3.0.90), Fri 13 Nov 2026, 00:34. Nothing was run in AutoCAD.
+Checked against the installed code (Civil 3.0.90), Fri 13 Nov 2026, 02:33; corrected after independent review. Nothing was run in AutoCAD.

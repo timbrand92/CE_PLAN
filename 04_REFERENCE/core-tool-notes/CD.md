@@ -37,13 +37,13 @@
 2. **"Specify second point":** Enter is not accepted.
 3. **"Select point 3 (or Enter for straight pipe)", then "Select point N (or Enter to finish ...)":** Enter finishes the pipe. Even a two-point pipe needs this Enter.
 4. **New Pipe window:** Enter = **Start Pipe**. Cancel: "CD command cancelled." A "Recent:" line offers your last sizes, materials and levels once you have used some.
-5. **Levels run against the chosen direction:** "[UseLevelDirection / KeepNominatedDirection / Review] <Review>". Enter reopens the window.
+5. **Levels run against the chosen direction:** "Choose: Use level direction [UseLevelDirection], Keep nominated direction [KeepNominatedDirection], or [Review] <Review>:". Enter reopens the window.
 6. **Pipe wider than a pit side:** [Upsize/Continue/Cancel]; **Enter = Upsize** the pit (Continue if no bigger size).
 7. **Detention pipe:** [ExtendPipe/MovePit/Cancel] <ExtendPipe>.
 8. **Same-plan break:** "Real total pipe length (m) <default>" first; Enter takes the default.
 9. **Typed grade more than 10% off the levels:** a box; Enter = Keep typed; Esc cancels.
 10. **After drawing:** callout arrow and elbow points (long label); manual text point, rotation (Enter = 0) and "mirror? <No>"; on 3 or more points "Pick a point to move arrow AND text to that segment, or press Enter to accept" (Enter and Esc both accept); design warnings (Enter = OK); breakline "Continues to another plan?" (Enter = Yes); same-plan break points; crossing pits (Enter = Yes).
-11. **Join a nearby pipe end** (two or more in reach): Enter = None.
+11. **Join a nearby pipe end** (two or more in reach): Enter = None. **This question exists only when the Settings switch "auto join pipe ends" is on, and it ships off.**
 12. **Next pipe:** "Specify first point or [Existing line]" again. Esc: "Stopped. Everything placed stays; U takes back the last one."
 13. **Window-first mode only:** the Uphill box. Enter = Yes (flip the levels), No = rising main, Cancel = erase.
 
@@ -95,9 +95,9 @@
 4. **A label, level or arrow that fails** is only logged; CD still reports success and the record says the label exists.
 5. **Window-first starting levels 1.10 and 1.20 run uphill.**
 
-## 8. On AutoCAD 2022 to 2024
+## 8. On AutoCAD 2022 to 2026 (every build except 2027)
 
-1. **The window shows a schematic,** not the real plan beside the pipe.
+1. **The window shows a schematic,** not the real plan beside the pipe (also on 2025 and 2026; the real plan is built only on 2027).
 2. **The pipe is expected to stay a plain polyline:** the one-piece pipe object's loader says "AutoCAD 2027 only". Whether any older-AutoCAD loader exists was not found.
 
 ## 9. Proven by
@@ -126,11 +126,11 @@ Paths are under `C:\CE_WORK\scratch\audit_civil\Modules\Drainage\`.
 14. **3.4:** `Commands\CdCommand.ExistingLine.cs:149-215`.
 15. **3.5:** `Services\LinkService.Persistence.cs:1275-1296`; `Rules\LockedLayerRecordWriteRule.cs:88-106`.
 16. **3.6, 4.1 to 4.3:** `CdCommand.ExistingLine.cs:80, 103, 128`; `Rules\CdRoutePromptRules.cs:23, 36`; `CdCommand.cs:1244-1278`; `UserSettings.cs:2332`.
-17. **4.5:** `CdCommand.cs:166-178, 269-272`.
+17. **4.5:** `CdCommand.cs:166-178, 269-271` (the exact prompt text).
 18. **4.8:** `Commands\CdCommand.SamePlanBreak.cs:265-270`; `UserSettings.cs:1068-1069`.
 19. **4.9:** `Dialogs\GradeMismatchDialog.xaml:58`; `UserSettings.cs:1990-1991`.
 20. **4.10:** `Services\TextService.cs:104, 131-141, 401, 1625`; `Services\MirrorService.cs:42`; `Commands\CdCommand.Arrows.cs:73-75`; `Dialogs\PipeValidationWarningDialog.xaml:83`; `Dialogs\ContinueRisingMainDialog.xaml:49`.
-21. **4.11:** `CdCommand.BranchEnds.cs:151`; `Services\LinkService.PipeEndJoin.cs:21`; `UserSettings.cs:1528`.
+21. **4.11:** `CdCommand.BranchEnds.cs:151`; `Services\LinkService.PipeEndJoin.cs:21` (off unless the switch is on); `UserSettings.cs:1528` (default false).
 22. **4.13, 7 BUG-681, 682:** `CdCommand.cs:865-910`; `UserSettings.cs:1053, 1061`.
 23. **5.1, 7 BUG-1043:** `UserSettings.cs:1633-1639`; `PipeStartReadiness.cs:195-208`.
 24. **5.2, 7 BUG-685:** `CdCommand.cs:536-547`; `UserSettings.cs:1703`; `Helpers\MathHelper.cs:322`.
@@ -143,6 +143,6 @@ Paths are under `C:\CE_WORK\scratch\audit_civil\Modules\Drainage\`.
 31. **7 new 3:** `PipeCreationService.cs:354, 397-437`; `CdCommand.cs:634, 816`.
 32. **7 new 4:** `PipeCreationService.cs:347-350, 414-417, 450-453, 553-556`; `CdCommand.Schedule.cs:91, 98`.
 33. **7 new 5:** `CdViewModel.Commands.cs:106-107`; `UserSettings.cs:1864, 1867`.
-34. **8.1:** `Dialogs\PipeOnePageLayout.cs:246-265`.
+34. **8.1:** `Dialogs\PipeOnePageLayout.cs:246-265` (`#if NET10_0_OR_GREATER`, so every other build shows the schematic).
 
-Checked against the installed code (Civil 3.0.90), Fri 13 Nov 2026, 00:43. Nothing was run in AutoCAD.
+Checked against the installed code (Civil 3.0.90), Fri 13 Nov 2026, 02:33; corrected after independent review. Nothing was run in AutoCAD.

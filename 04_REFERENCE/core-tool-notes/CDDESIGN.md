@@ -23,7 +23,7 @@
 ## 3. What it will not do
 
 1. **No start-up checks:** read-only, REFEDIT, Paper Space and drawing type are checked only at Confirm LPD, after the window.
-2. **Confirm LPD refuses** a locked or protected output layer ("LPD was not placed. The prepared output layer 'X' is protected or unavailable"), an existing LPD on a locked layer or Xref ("The existing LPD is protected by AutoCAD. Nothing was changed"), and REFEDIT ("Finish REFEDIT before confirming this outlet").
+2. **Confirm LPD refuses** a locked or protected output layer ("LPD was not placed. The prepared output layer 'X' is protected or unavailable"), an existing LPD on a locked layer or Xref ("The existing LPD is protected by AutoCAD. Nothing was changed"), and REFEDIT. **REFEDIT is met first by the standard start-up refusal** (read-only, REFEDIT and the other checks run when you press Confirm LPD): "[CE] CDDESIGN Confirm LPD cannot run while a reference is being edited in place (REFEDIT). Finish or close it (REFCLOSE) first. Nothing was changed." and Design ends without the window coming back. The line "Finish REFEDIT before confirming this outlet" shows only if that first check could not read the REFEDIT state.
 3. **No whole-drawing record update;** it reads CE's record as already loaded.
 4. **Reading council letters and rating reports needs AutoCAD 2027.**
 
@@ -33,7 +33,7 @@
 2. **Markup found:** "Switch this discipline to From markup / supplied design?" Enter = Yes; Esc = No ("Staying on Design from scratch").
 3. **No council loaded:** the job-folder suburb offer. Enter = Yes, unless the job names a council CE does not know, then Enter = No. Then possibly a council-letter search (2027 only).
 4. **Design window:** no default button. Cancel (Start tab) or Close; Esc closes.
-5. **Confirm LPD: "Pick the legal point of discharge or press Esc":** Enter or Esc cancels: "No outlet picked. Nothing changed." and the window comes back with your edits. Then "Pick the LPD note location or press Enter for beside the outlet": Enter = beside the outlet.
+5. **The window's "Pick in drawing" button** (not Confirm LPD, which asks nothing) **asks "Pick the legal point of discharge or press Esc":** Esc cancels (Enter is not accepted at that plain point question): "No outlet picked. Nothing changed." and the window comes back with your edits. Then "Pick the LPD note location or press Enter for beside the outlet": Enter = beside the outlet.
 
 ## 5. When it says Unknown or "needs checking"
 
@@ -93,16 +93,16 @@ Paths are under `C:\CE_WORK\scratch\audit_civil\Modules\Drainage\`.
 3. **2.2:** `ViewModels\CivilDesignWindowViewModel.cs:805`.
 4. **2.3:** `CivilDesignCommand.cs:238-246`; `Services\CivilProjectStartDraftStorage.cs:17, 77-101`.
 5. **2.4:** `CivilDesignCommand.cs:215-237`; `CivilDesignWindowViewModel.cs:744`.
-6. **2.5, 3.2, 7 new 1:** `CivilDesignCommand.cs:177-213`; `Commands\LpdCommand.cs:279-284, 322-323, 393-398`; `Services\LayerService.cs:471-475`.
+6. **2.5, 3.2, 7 new 1:** `CivilDesignCommand.cs:177-213` (pre-flight `179`); `Services\DrawingSafetyService.cs:51-59, 78-90` (the REFEDIT refusal text); `Commands\LpdCommand.cs:282-283` (the "Finish REFEDIT" fallback); `Commands\LpdCommand.cs:279-284, 322-323, 393-398`; `Services\LayerService.cs:471-475`.
 7. **2.6:** `CivilDesignCommand.cs:247-251`.
 8. **3.1:** `CivilDesignCommand.cs:179` (only pre-flight call).
 9. **3.3:** `Services\DetentionTwlService.cs:412`.
 10. **3.4, 8.1:** `Services\StormReportReader.cs:201-205`; `CivilDesignCommand.cs:304-312`.
-11. **4.1:** `CivilDesignCommand.cs:470-484, 594-603`. **4.2:** `CivilDesignCommand.cs:545-551, 727`. **4.3:** `CivilDesignCommand.cs:95-99, 666, 695`; `Rules\JobCouncilOfferRule.cs:43`. **4.5:** `CivilDesignCommand.cs:160-176, 308, 317-326`.
+11. **4.1:** `CivilDesignCommand.cs:470-484, 594-603`. **4.2:** `CivilDesignCommand.cs:545-551, 727`. **4.3:** `CivilDesignCommand.cs:95-99, 666, 695`; `Rules\JobCouncilOfferRule.cs:43`. **4.5:** `CivilDesignCommand.cs:160-176` (the pick prompts, run when `PickLpdRequested`), `308, 317-326`; Confirm LPD branch `177-213` asks nothing.
 12. **5.1:** `CivilDesignCommand.cs:50-52`. **5.2:** `Services\AutoDesignService.cs:116-124`; `Models\UserSettings.cs:3296`.
 13. **7 still there:** BUG-866 `Rules\RainfallCurve.cs:152-171, 244-247`; BUG-1088 `Services\PipeSizingSolver.cs:39, 197-262`; BUG-1096 `Services\CivilDesignService.cs:147-169`; BUG-1100 `Services\ReuseCreditService.cs:60-63`; BUG-1099 `Rules\CouncilRuleValues.cs`, `Assets\Config\council-profiles.json:842-843`; BUG-1110 `AutoDesignService.cs:324, 722-729`; BUG-1116 `Services\RationalFlowService.cs:375-387`; BUG-1143 `CivilProjectStartDraftStorage.cs:36-41, 88-99`; BUG-1156 `Models\CivilProjectStartDraft.cs`, `CivilDesignWindowViewModel.cs:612-637`.
 14. **7 partly:** BUG-319 `CivilDesignService.cs:89-103, 238-240`; BUG-342 `JobCouncilOfferRule.cs:43`, `Rules\DesignKeptAreaRule.cs:20-27`; BUG-538 `UserSettings.cs:3816-3824`, `Models\CouncilProfileModels.cs:223, 245`, `ReuseCreditService.cs:86-95`, `AutoDesignService.cs:436-438`; BUG-539 `Services\PumpSizingService.cs:75`; BUG-904 `Services\DetentionSizingService.cs:158-164`.
 15. **7 fixed:** BUG-174 `CivilDesignCommand.cs:476, 545`; BUG-259 `CivilDesignCommand.cs:160-176, 226-237`; BUG-365 `CivilDesignWindow.xaml`; BUG-506 `Services\DesignProposalReport.cs:308-316`; BUG-509 `DesignProposalReport.cs:173`; BUG-510 `AutoDesignService.cs:62-69`; BUG-511 `CivilDesignService.cs:164-166`; BUG-967 `Rules\BlueFactorReport.cs:89-107`; BUG-1004 `Rules\AgreedDesignRules.cs:224-229`; BUG-1091 `Services\SettingsSizingStandards.cs:133-136`; BUG-1095 `AutoDesignService.cs:102-111`; BUG-1106 `Rules\StormReportOffer.cs:123-130`; BUG-490 `Services\NetworkRedesignSignOffService.cs:31-32`; BUG-783 `Services\ScheduleCellOverrideText.cs`; BUG-785 `Services\ScheduleLinkService.cs:2734-2755`; BUG-812 `Services\NetworkRedesignScheduleReviewService.cs:920`.
 16. **7 new 2:** `CivilDesignWindow.xaml:59, 63`. **7 new 3:** `RainfallCurve.cs:152-171`; `DetentionSizingService.cs:66-67`; `PumpSizingService.cs:75, 85, 92, 159`; `Services\OrificeSizer.cs:55`.
 
-Checked against the installed code (Civil 3.0.90), Fri 13 Nov 2026, 01:06. Nothing was run in AutoCAD.
+Checked against the installed code (Civil 3.0.90), Fri 13 Nov 2026, 02:33; corrected after independent review. Nothing was run in AutoCAD.

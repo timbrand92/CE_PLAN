@@ -55,10 +55,10 @@
 1. **No start-up checks** (read-only, Paper Space, Structural drawing) on any AutoCAD version.
 2. **Cannot move pipes drawn on 2027** (CE's pipe object is not on the list); old plain-polyline pipes do move.
 
-## 8. On AutoCAD 2022 to 2024
+## 8. On AutoCAD 2022 to 2026
 
 1. **A different tool:** the office LISP move-rotate, with no object-type limits beyond AutoCAD's own, and REFEDIT refused ("MoveRot: Cannot run inside an active REFEDIT session").
-2. **Also on 2025 and 2026.** A Settings switch (off by default) can choose CE's own version there.
+2. **Also on 2025 and 2026** (every build except 2027). A Settings switch (off by default) chooses a CE version of the command there, but it is not the 2027 tool: it still runs AutoCAD's own MOVE then ROTATE, with its own REFEDIT refusal ("[CE] This command cannot run while you are editing in place (REFEDIT). Type REFCLOSE first, then try again.").
 
 ## 9. Proven by
 
@@ -71,8 +71,8 @@
 Paths are under `C:\CE_WORK\scratch\audit_civil\Modules\`.
 
 1. **1.1, 1.2, 3.2:** `Shared.Transform.Native2027\TransformCommands.cpp:157-176`, `256-338`; `Drainage\Commands\CopyRotateCommands.cs:1-66` (`#if NET10_0_OR_GREATER`, 2027).
-2. **1.3, 8.1, 8.2:** `Drainage\Commands\CopyRotateCommands.cs:67-126`, `374-389`, `399-424`; `Drainage\Models\UserSettings.cs:2324-2325`; LISP `Drainage\Assets\Lisp\Copy Rotate.lsp`.
-3. **2.2:** `Drainage\Services\ExternalMutationCommandPolicy.cs:20`; `Drainage\Services\LinkService.Reactors.cs:542, 636-660, 1739-1768`; `Drainage\Services\LinkService.Utilities.cs:253-258`.
+2. **1.3, 8.1, 8.2:** `Drainage\Commands\CopyRotateCommands.cs:67-424` (`#else` of `#if NET10_0_OR_GREATER`; switch at `117-186`: AutoCAD's own MOVE then ROTATE, REFEDIT line at about 147), `374-389`, `399-424`; `Drainage\Models\UserSettings.cs:2324-2325`; LISP `Drainage\Assets\Lisp\Copy Rotate.lsp`.
+3. **2.2:** `Drainage\Services\ExternalMutationCommandPolicy.cs:20`; `Drainage\Services\LinkService.Reactors.cs:542, 636-660, 1739-1768`; `Drainage\Services\LinkService.PipeMoveHelpers.cs:326-342` (labels following a moved pit; `LinkService.Utilities.cs:253-258` is the COPY clean-up, not MR).
 4. **2.3, 3.1, 7 new 1:** no `CommandPreFlight` in `CopyRotateCommands.cs`.
 5. **3.2, 7 new 2:** `TransformCommands.cpp:162-167`; pipe object class `Drainage.NativeObjects2027\CeCvlPipeObject.h:27`; `Drainage\Services\PipePickService.cs:20-30`; raingarden layers `Drainage\Services\LayerService.cs:205, 210`.
 6. **3.3:** `TransformCommands.cpp:140-176`, `262`.
@@ -82,4 +82,4 @@ Paths are under `C:\CE_WORK\scratch\audit_civil\Modules\`.
 10. **6.1:** `TransformCommands.cpp:269, 294, 322`.
 11. **7 BUG-519:** `Structural\Plugin.cs:178, 192, 214, 217, 221, 225`.
 
-Checked against the installed code (Civil 3.0.90), Fri 13 Nov 2026, 00:58. Nothing was run in AutoCAD.
+Checked against the installed code (Civil 3.0.90), Fri 13 Nov 2026, 02:33; corrected after independent review. Nothing was run in AutoCAD.

@@ -55,12 +55,13 @@
 5. **BUG-894:** pit cover text is planned as a slid box but written turned and re-anchored.
 6. **BUG-895:** cover text on a layout is counted as will-move, refused by the writer, and still reported as moved.
 7. **BUG-896:** over 1000 nearby texts throws and the pipe is counted unreadable.
-8. **BUG-897:** a tiny slide step from Settings (for example 0.001) is accepted and gives about 500,000 spots to try.
+8. **BUG-897:** a tiny slide step from Settings (for example 0.001) is accepted and gives a very large number of spots to try (an earlier figure of 500,000 was not confirmed; the review thinks it is nearer a million, counting both sides).
 9. **BUG-962:** the whole of Model Space is scanned, twice (count and apply).
 10. **BUG-1034:** a level text "in from the pipe end" can be moved onto its own pipe line.
+11. **BUG-890:** a label that finds a spot further out has its reserved place moved there even when it is a plain text; only afterwards are plain texts marked "needs a new leader" and left where they were, so a later callout can still land on the plain text.
 
 **Already fixed in this build, not yet seen working in AutoCAD**
-1. **BUG-890:** leader-out planning checks every placed item (switch off by default).
+1. **None listed.** BUG-890 was listed here by mistake; it is still there (see above).
 
 ## 8. On AutoCAD 2022 to 2024
 
@@ -98,7 +99,7 @@ Paths are under `C:\CE_WORK\scratch\audit_civil\Modules\Drainage\`.
 20. **7 BUG-897:** `TextClashTidyUp.cs:518-522`; `LabelPlacementRule.cs:83-93`.
 21. **7 BUG-962:** `TextClashTidyUp.cs:168, 744-759, 821`.
 22. **7 BUG-1034:** `TextClashTidyUp.cs:285, 716`; `LabelPlacementRule.cs:65-70`.
-23. **7 BUG-890:** `Rules\TextClashTidyUpRule.cs:250-264`; `UserSettings.cs:1458`.
+23. **7 BUG-890:** `Rules\TidyLeaderOutRule.cs:121` (the reserved place is set for every item); `Services\LinkService.TextClashTidyUp.cs:440-447` (plain texts marked "needs a new leader" only afterwards); `Rules\TextClashTidyUpRule.cs:250-264`; `UserSettings.cs:1458`.
 24. **8.1:** no `#if` on this path.
 
-Checked against the installed code (Civil 3.0.90), Fri 13 Nov 2026, 00:43. Nothing was run in AutoCAD.
+Checked against the installed code (Civil 3.0.90), Fri 13 Nov 2026, 02:33; corrected after independent review. Nothing was run in AutoCAD.

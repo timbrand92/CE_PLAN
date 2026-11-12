@@ -13,12 +13,12 @@
 
 ## 2. What it changes in the drawing
 
-1. **Draws** the downpipe block (layer DOWNPIPES) and a small green tag label on GUIDELINES (does not plot), 250 up and right of the block.
+1. **Draws** the downpipe block (layer DOWNPIPES) and a small green tag label on GUIDELINES (does not plot), 250 up and right of the block. **Every route sets an existing GUIDELINES layer back to colour 75, not plotted** (`LayerService.cs:724-733`).
 2. **The label reads "DP" without the number** by default (the number is in the tag, shown in the Inspector). A project can switch numbers on in the Pit Schedule window.
 3. **Never splits a main.** On a pipe run it says "The main is not split; draw the downpipe's pipe to it and it joins as a branch", and records a junction on the main.
 4. **Free pipe end:** the downpipe becomes that end's owner.
 5. **Pit (2027):** writes a downpipe-to-pit link on the block. The pit's pipes are not split.
-6. **Before the point question** it marks the drawing as a CE drawing, makes the DOWNPIPES layer if missing, and loads the downpipe block into the drawing. No whole-drawing record update on the normal route.
+6. **Before the point question** it marks the drawing as a CE drawing, makes the DOWNPIPES layer if missing, and loads the downpipe block into the drawing. No whole-drawing record update before the pick. **After the pick, on a pipe run (and any other landing that takes the older route), CE's whole-drawing record update runs and every pipe end is relinked** (`SourcePlacementService.cs:1332, 1370`).
 7. **Tag numbers are never reused**, even after a downpipe is erased.
 
 ## 3. What it will not do
@@ -26,13 +26,13 @@
 1. **Refuses before anything is asked:** read-only drawing, Paper Space, REFEDIT open, Structural drawing (asks first). REFEDIT is checked again before the pick; if AutoCAD cannot say, it refuses.
 2. **A pick that could connect two ways** (overlap, two candidates): "The source would have more than one possible connection. Move it and pick again." It asks again; it does not end.
 3. **On top of another source:** "<tag> is already at this point, and a new source cannot sit on top of it."
-4. **Locked DOWNPIPES or GUIDELINES layer:** checked after the pick. Placed on its own it says "The source or GUIDELINES layer is locked. Nothing was placed." Landing on a pit or pipe end it says only "Downpipe could not be placed. Nothing was changed - see CE log for details." (the layer is not named).
+4. **Locked DOWNPIPES or GUIDELINES layer:** checked after the pick. Normal route (a pick you make in the drawing, in open ground, on a pit or on a free pipe end): the lock is refused inside the one-step placement, which rolls back, and the line you read is "%s could not be placed. Nothing was changed - see CE log for details." (it does not name the layer; the CE log holds "The source or GUIDELINES layer is locked. Nothing was placed."; it is reported as printed twice). The plain line "[CE] The source or GUIDELINES layer is locked. Nothing was placed." appears only on the fallback route (a point handed in by another command, or a pick that is not taken as a landing). A downpipe on a pipe run takes a third route (CD-BRANCH-01, it never splits the main) in which no lock check was found.
 5. **Block missing from every block folder:** only "DP command cancelled." on screen; the reason is in the CE log.
 6. **Pit landing on AutoCAD 2022 to 2026:** refused (see 8).
 
 ## 4. What it asks you, and what Enter means
 
-1. **"Specify downpipe insertion point":** a live preview follows the cursor with green or red words. Enter is not accepted. Esc: "DP command cancelled."
+1. **"Specify downpipe insertion point":** a live preview follows the cursor; the green or red words show on a pit, a pipe end or open ground, but **not over a pipe run** (the preview there is plain on purpose). Enter is not accepted. Esc: "DP command cancelled."
 2. **A refused spot:** "Move the source and pick again, or press Esc."
 3. **Next downpipe:** "Pick the next DP, or press Esc to stop." Esc: "Stopped. Everything placed stays; U takes back the last one."
 4. **No tag question.** No window.
@@ -94,7 +94,7 @@ Paths are under `C:\CE_WORK\scratch\audit_civil\Modules\Drainage\`.
 9. **3.1:** `SourceBlockInsertCommands.cs:122`; `Services\DrawingSafetyService.cs:61-131`; `SourcePlacementService.cs:409-411`, `1448-1459`.
 10. **3.2, 4.2:** `Rules\SourceLanding.cs:103-137`, `113`; `BlockService.cs:920-928`, `979-1000`.
 11. **3.3:** `Rules\SourcePickPipeRecordRule.cs:49-54`.
-12. **3.4:** free-standing route `SourcePlacementService.cs:518` (`CommitFreeStandingPlacement`), `1384-1404`, `1440-1443`; pit or pipe-end route `LinkService.SourceLanding.cs:612-617` and `SourcePlacementService.cs:596-602`.
+12. **3.4:** normal route: `SourcePlacementService.cs:462-475` (route chosen by `Rules\SourceLanding.cs:202-212` and `1640-1646`: a free spot, pit or free pipe end is Supported, so one-step placement), `596-602` (the line shown), `Services\LinkService.SourceLanding.cs:612-617` (the lock refusal inside the placement, written to the log); fallback route `SourcePlacementService.cs:496-503`, `1440-1443`.
 13. **3.5:** `BlockService.cs:952`; `SourceBlockInsertCommands.cs:888`.
 14. **4.1 (Enter):** `BlockService.cs:1610-1615` (no empty answer allowed in the pick).
 15. **5.1:** `Rules\SourceLanding.cs:464-483`. **5.2:** `SourcePlacementService.cs:327-328`.
@@ -106,4 +106,4 @@ Paths are under `C:\CE_WORK\scratch\audit_civil\Modules\Drainage\`.
 21. **7 new 2:** `SourcePlacementService.cs:457, 477` and `SourceBlockInsertCommands.cs:888`.
 22. **7 new 3:** `SourcePlacementService.cs:1322-1378` (block added at 1333, no lock check on this route).
 
-Checked against the installed code (Civil 3.0.90), Fri 13 Nov 2026, 00:37. Nothing was run in AutoCAD.
+Checked against the installed code (Civil 3.0.90), Fri 13 Nov 2026, 02:33; corrected after independent review. Nothing was run in AutoCAD.

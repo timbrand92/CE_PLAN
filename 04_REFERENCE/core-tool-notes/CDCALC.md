@@ -33,7 +33,7 @@
 
 ## 5. When it says Unknown or "needs checking"
 
-1. **Boyd's and Catchments start blank** (switches on) with a "nothing worked out" warning; Boyd's outputs show zeros, not Unknown.
+1. **Boyd's starts blank** (switch on) with a "nothing worked out" warning; Boyd's outputs show zeros, not Unknown. **Catchments starts empty** with the line "Add a catchment to begin." (no warning).
 2. **Last-storm warning** on Boyd's when the worst storm is the last row.
 
 ## 6. How to undo it
@@ -51,9 +51,9 @@
 
 **Partly fixed**
 1. **BUG-507:** Boyd's starts blank with a warning; outputs are zeros, not Unknown.
-2. **BUG-539, 543, 544:** several values now come from Settings or the council; the rational C 0.9, gravity 9.81 against 9.8, and the 0.61 start on the Orifice tab remain.
+2. **BUG-539, 543, 544:** several values now come from Settings or the council; the rational C 0.9 remains. CDCALC's window has no Orifice tab: the 0.61 start and its own 9.81 sit in an older orifice calculator that nothing opens now. The older orifice sizer's fixed 9.8 is still in the code (the ruled 9.81 is used when the Settings switch is on, the default); that split is between the sizer and CDCALC's detention tab, not inside CDCALC.
 3. **BUG-758:** the older section writer now checks levels; the tab is still shown by default.
-4. **BUG-1089:** Pipe Flows warns at fixed 0.5 and 3.0 m/s unless the material-limit switch is on (off).
+4. **BUG-1089:** Pipe Flows warns at a fixed 3.0 m/s high limit unless the material-limit switch is on (off); only the high limit follows the switch. The low-speed warning is always fixed at 0.5 m/s.
 5. **BUG-1112:** WSUD still opens with a sample site; the export skips it until typed.
 
 **Already fixed in this build, not yet seen working in AutoCAD**
@@ -89,11 +89,11 @@ Paths are under `C:\CE_WORK\scratch\audit_civil\Modules\Drainage\`.
 5. **2.3, 3.4, 4.2:** `Services\OnSiteDetentionCriteriaService.cs:51-98`.
 6. **2.4:** `CalculationsV2Dialog.xaml.cs:346-366`; `Services\LongitudinalSectionService.cs:413-416, 467-470`.
 7. **3.2:** `CalculationsCommand.cs:63-69, 95`. **3.3:** `CalculationsV2Dialog.xaml.cs:65-92, 136-146`.
-8. **5.1, 7 BUG-507:** `ViewModels\BoydsCalcViewModel.cs:208-222`; `Models\UserSettings.cs:3250, 3288`. **5.2:** `BoydsCalcViewModel.cs:281`.
+8. **5.1, 7 BUG-507:** `ViewModels\BoydsCalcViewModel.cs:208-222`; Catchments empty line `ViewModels\RationalMethodViewModel.cs:163-167, 307-311`; `Models\UserSettings.cs:3250, 3288`. **5.2:** `BoydsCalcViewModel.cs:281`.
 9. **7 still there:** BUG-003 `Services\OrificePitDetailDwgWriter.cs` (no caller found); BUG-249 `BoydsCalcViewModel.cs:119-124`; BUG-1033 `CalculationsV2Dialog.xaml:780`; BUG-1103 `CalculationsV2Dialog.xaml:726, 734`.
-10. **7 partly:** BUG-543 `ViewModels\DetentionSystemViewModel.cs:19-30`, `Services\Hydraulics.cs:33`, `ViewModels\OrificeCalcViewModel.cs:18`; BUG-544 `ViewModels\RationalMethodViewModel.cs:417`; BUG-758 `UserSettings.cs:1226`, `CalculationsV2Dialog.xaml.cs:76-85`; BUG-1089 `ViewModels\PipeFlowCalcViewModel.cs:308-317`, `Models\PipeSpeedChecksSettings.cs:17`; BUG-1112 `ViewModels\WsudViewModel.cs:19-21`, `CalculationExportPackage.cs:510`.
+10. **7 partly:** BUG-543 `ViewModels\DetentionSystemViewModel.cs:19-30`, `Services\Hydraulics.cs:33` (9.8), `Services\OrificeBasis.cs:7-21` (9.81 switch), `ViewModels\OrificeCalcViewModel.cs:18-19` (0.61 and 9.81, used only by `Dialogs\CalculationsDialog.xaml`, which nothing opens; `CalculationsCommand.cs:58` opens `CalculationsV2Dialog`); BUG-544 `ViewModels\RationalMethodViewModel.cs:417`; BUG-758 `UserSettings.cs:1226`, `CalculationsV2Dialog.xaml.cs:76-85`; BUG-1089 `ViewModels\PipeFlowCalcViewModel.cs:308-311` (0.5 fixed; high limit from the switch at 310), `Models\PipeSpeedChecksSettings.cs:17`; BUG-1112 `ViewModels\WsudViewModel.cs:19-21`, `CalculationExportPackage.cs:510`.
 11. **7 fixed:** BUG-158 `CalculationExportPackage.cs:88-96, 380-391`; BUG-233 `Rules\CouncilSourceWords.cs`; BUG-515 `BoydsCalcViewModel.cs:281`; BUG-772 `WsudViewModel.cs:183`; BUG-905 `BoydsCalcViewModel.cs:236-242`; BUG-980 `PipeFlowCalcViewModel.cs:170, 211-218`; BUG-997 `LongitudinalSectionService.cs:503-530`; BUG-1019 `DetentionSystemViewModel.cs:633, 749-755, 861-883`; BUG-1036 `CalculationsV2Dialog.xaml:586-590`; BUG-1097 `ViewModels\ChargedSystemCalcViewModel.cs:229-262`; BUG-1101 `CalculationsV2ViewModel.cs:387`.
 12. **7 new 3:** `ChargedSystemCalcViewModel.cs:24-31`; `WsudViewModel.cs:19-21`.
 13. **8.1:** no `#if` in `CalculationsCommand.cs`, `Dialogs\CalculationsV2Dialog.xaml.cs`, `ViewModels\CalculationsV2ViewModel.cs`, `BoydsCalcViewModel.cs`, `DetentionSystemViewModel.cs` or `PipeFlowCalcViewModel.cs`.
 
-Checked against the installed code (Civil 3.0.90), Fri 13 Nov 2026, 01:06. Nothing was run in AutoCAD.
+Checked against the installed code (Civil 3.0.90), Fri 13 Nov 2026, 02:33; corrected after independent review. Nothing was run in AutoCAD.

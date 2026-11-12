@@ -10,12 +10,13 @@
 1. **Works out pipe inverts down a run** from a start pit to an end pit (or the network end), then shows the changes in a preview.
 2. **Apply writes the new inverts;** Cancel leaves the drawing unchanged.
 3. **Only inverts are written,** not sizes or grades.
+4. **A level typed by hand is kept, not overwritten** (the overwrite choice defaults to off); Apply says how many were kept.
 
 ## 2. What it changes in the drawing
 
 1. **After Apply:** pipe invert levels in CE's record, the level text on the plan, and pipe-end links.
 2. **Before the first question** it runs CE's forced whole-drawing record update, but holds the result in memory: Cancel, Esc or an error puts the record back.
-3. **A suggestion record** is written before the preview.
+3. **A suggestion record** is written before the preview, as a line in a file under your own AppData folder (not in the drawing), and even if you then cancel.
 4. **The CE mark** is written only after Apply.
 
 ## 3. What it will not do
@@ -27,7 +28,7 @@
 ## 4. What it asks you, and what Enter means
 
 1. **"Select the start pit (upstream end) of the run to solve"** (skipped when Edit Pit handed one over): Enter or Esc ends quietly.
-2. **"Select the downstream end pit / connection point (or press Enter to use the furthest downstream pit)"** (skipped if a pit named LPD exists): Enter walks to the network end. Esc ends quietly.
+2. **"Select the downstream end pit / connection point (or press Enter to use the furthest downstream pit)"** (skipped if any pit's number contains the LPD text from Settings, "LPD" by default, any case, not only a pit named exactly LPD): Enter walks to the network end. Esc ends quietly.
 3. **Preview window** (only if something changes): Enter = **Apply**. Cancel: "Cancelled - drawing unchanged."
 
 ## 5. When it says Unknown or "needs checking"
@@ -71,13 +72,13 @@
 
 Paths are under `C:\CE_WORK\scratch\audit_civil\Modules\Drainage\`.
 
-1. **1.1 to 1.3, 2.1:** `Commands\RunSolveCommand.cs:62-212`; `Services\ProposalApplyService.PlanBuilders.cs:105-111`; `Services\LinkService.RepairAudit.InvertPropagation.cs:768`.
+1. **1.1 to 1.3, 2.1:** (hand-set levels kept: `Services\LinkService.RepairAudit.InvertPropagation.cs:760, 1037`) `Commands\RunSolveCommand.cs:62-212`; `Services\ProposalApplyService.PlanBuilders.cs:105-111`; `Services\LinkService.RepairAudit.InvertPropagation.cs:768`.
 2. **2.2, 7 BUG-290, 7 BUG-311:** `RunSolveCommand.cs:77-80, 212`; `Services\ProjectDataService.RecordWriteHold.cs:19-24, 84-86`; `Rules\PipeLevelRefreshRule.cs`.
-3. **2.3:** `RunSolveCommand.cs:164`. **2.4:** `RunSolveCommand.cs:194`.
+3. **2.3:** `RunSolveCommand.cs:164`; `Services\SuggestionLedgerService.cs:79, 196` (a line in a file under AppData, written even when nothing is applied). **2.4:** `RunSolveCommand.cs:194`.
 4. **3.1:** `RunSolveCommand.cs:68`; `Services\DrawingSafetyService.cs:61-131`.
 5. **3.2:** `InvertPropagation.cs:868`.
 6. **3.3, 5.1, 7 BUG-999, 7 new 1:** `PlanBuilders.cs:114-123, 624`; `RunSolveCommand.cs:170-174`; `Services\PipeSizingSolver.cs:63`.
-7. **4.1:** `RunSolveCommand.cs:405-467`. **4.2:** `RunSolveCommand.cs:239-266`; `PlanBuilders.cs:509-516`. **4.3:** `RunSolveCommand.cs:176-188`; `Dialogs\ProposalPreviewDialog.xaml:136-143`.
+7. **4.1:** `RunSolveCommand.cs:405-467`. **4.2:** `RunSolveCommand.cs:239-266`; `PlanBuilders.cs:509-516` (`FindLpdPit` matches any pit number containing the text, any case); `Models\UserSettings.cs:2666` (default "LPD"). **4.3:** `RunSolveCommand.cs:176-188`; `Dialogs\ProposalPreviewDialog.xaml:136-143`.
 8. **5.2, 7 new 3:** `PlanBuilders.cs:105-111`.
 9. **6.1:** `RunSolveCommand.cs:193`.
 10. **7 BUG-056:** `RunSolveCommand.cs:232-393`; `PlanBuilders.cs:483, 579-581`.
@@ -85,4 +86,4 @@ Paths are under `C:\CE_WORK\scratch\audit_civil\Modules\Drainage\`.
 12. **7 new 2:** `PlanBuilders.cs:480-481`.
 13. **8.1:** no `#if` on this path.
 
-Checked against the installed code (Civil 3.0.90), Fri 13 Nov 2026, 01:08. Nothing was run in AutoCAD.
+Checked against the installed code (Civil 3.0.90), Fri 13 Nov 2026, 02:33; corrected after independent review. Nothing was run in AutoCAD.
