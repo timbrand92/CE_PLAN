@@ -19048,3 +19048,273 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
 
 **Status:** OPEN
+
+## BUG-1327 — CDANNOTATIONEDIT: the ribbon tooltip says Slide, Offset, Flip, Reset but the command asks Move, Rotate, Mirror, Flip
+
+**Command / Area:** CDANNOTATIONEDIT (Adjust Positions on the Pipe tab). LOW. WORDING.
+
+**Symptom:** The tooltip reads 'Slide / Offset / Flip / Reset this pipe's labels and arrow'. The command asks 'Action [Move/Rotate/mIrror/Flip]' and has no Slide, Offset or Reset.
+
+**Expected behaviour:** The tooltip names the actions the command offers.
+
+**Steps to confirm in AutoCAD:** (1) Select a pipe and hover Adjust Positions. (2) Run it, pick a label and read the action question. Right = the same words. Wrong = different words.
+
+**Test that catches it:** Source guard: tooltip words match the keyword list of the command.
+
+**Reference:** Services\CeCvlRibbonContributor.cs:195 (tooltip); Commands\AnnotationEditCommand.cs:72-79 (the real keywords). Note CDANNOTATIONEDIT.md section 7 'New in code' 2. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDANNOTATIONEDIT.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1328 — CDANNOTATIONEDIT: Flip turns a label upside down
+
+**Command / Area:** CDANNOTATIONEDIT, Flip. MEDIUM. LOOK (unreadable text).
+
+**Symptom:** Flip rotates the picked label 180 degrees about its centre. Text turned this way reads upside down. The Slide / flip-side tool that moves labels turns flipped text back to read; this one does not.
+
+**Expected behaviour:** After Flip the text still reads left to right or bottom to top, as the other flip routes keep it.
+
+**Steps to confirm in AutoCAD:** (1) On a copy run CDANNOTATIONEDIT, pick a pipe label or level text and choose Flip. Right = the text reads normally in its new place. Wrong = the text is upside down. (2) Compare with flipping the same label from its grip.
+
+**Test that catches it:** Fixture: flip a text; assert its final rotation reads within 90 degrees of horizontal.
+
+**Reference:** Commands\AnnotationEditCommand.cs:174-179 (Matrix3d.Rotation of Pi); compare Services\LinkService.PipeAttachmentActions.cs:328-329 (KeepFlippedTextReadable on the grip route, not called here). Note CDANNOTATIONEDIT.md section 7 'New in code' 3. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDANNOTATIONEDIT.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1329 — CDTEXTSEG: on twin detention pipes the label can land on the barrels
+
+**Command / Area:** CDTEXTSEG (move pipe text to another segment), twin detention pipes. LOW-MEDIUM. OVERLAP.
+
+**Symptom:** The new label position is worked out from the single pipe diameter. The flow arrow tool uses the width of the whole twin pair. On a twin detention pipe the moved label can sit on top of the barrels.
+
+**Expected behaviour:** The label clears the whole twin envelope, as the flow arrow does.
+
+**Steps to confirm in AutoCAD:** (1) On a copy draw a twin detention pipe with two or more segments. (2) Run CDTEXTSEG and move the label to another segment. Right = clear of both barrels. Wrong = over a barrel.
+
+**Test that catches it:** Fixture: twin pipe; assert the new label offset is at least half the twin envelope width.
+
+**Reference:** Services\PipeTextPlacementService.cs:69-70 (CalculatePipeTextPosition with the pipe diameter); compare Services\ArrowService.cs:33-36 (ResolveArrowPipeWidth uses the twin envelope). Note CDTEXTSEG.md section 7 'New in code' 2. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDTEXTSEG.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1330 — CDTEXTSEG: a label moved by hand is not marked 'placed by hand', so Tidy labels can move it again
+
+**Command / Area:** CDTEXTSEG (and CDANNOTATIONEDIT, see BUG-1284). LOW-MEDIUM. HAND WORK UNDONE.
+
+**Symptom:** When the Settings switch 'hand-placed labels stay' is on, Tidy labels leaves alone any label marked as placed by hand. The only code that sets the mark is Tidy labels' own clash step. A label moved by CDTEXTSEG carries no mark, so Tidy labels moves it again.
+
+**Expected behaviour:** A label moved with CDTEXTSEG, CDANNOTATIONEDIT or CDMA is marked as placed by hand.
+
+**Steps to confirm in AutoCAD:** (1) In CDS turn on 'hand-placed labels stay'. (2) Move a pipe label with CDTEXTSEG. (3) Run Tidy labels (CDTIDYLABELS). Right = the label stays where you put it. Wrong = it moves.
+
+**Test that catches it:** Fixture: move a label with CDTEXTSEG; assert PlacedByHand is true in the pipe's attachment record.
+
+**Reference:** Commands\CdCommand.Arrows.cs:18-50 (no mark written); the only place the mark is set is Services\LinkService.TextClashTidyUp.cs:260; setting at Models\UserSettings.cs:1136 and Rules\HandPlacedLabelRule.cs:14. Note CDTEXTSEG.md section 7 'New in code' 3. Related BUG-879. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDTEXTSEG.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1331 — CDMA: in a rotated UCS the arrow can be put on the wrong pipe leg
+
+**Command / Area:** CDMA (Move flow arrow), when the UCS is not World. LOW-MEDIUM. WRONG TARGET (not seen in a drawing).
+
+**Symptom:** When you pick a pipe segment, CDMA passes the picked point to the segment finder as it came from the screen (UCS), but the finder compares it with the pipe's World coordinates. In a rotated UCS the nearest leg can be the wrong one on a multi-leg pipe. The pipe pick used by other commands converts the point first (BUG-661).
+
+**Expected behaviour:** The picked point is converted to World before the nearest leg is chosen.
+
+**Steps to confirm in AutoCAD:** (1) On a copy draw a pipe with three legs and rotate the UCS (UCS, Z, 45). (2) Run CDMA, click the middle of the second leg. Right = the arrow lands on the second leg. Wrong = another leg.
+
+**Test that catches it:** Fixture: UCS rotated 45 degrees, pick on leg 2; assert segment index 1 is chosen.
+
+**Reference:** Commands\CdCommand.Arrows.cs:286-292 (PlaceArrowOnSegment given per.PickedPoint) and 366-372 (FindNearestSegment); compare Services\PipePickService.cs:52-54 (converts the pick). Note CDMA.md section 7 'New in code' 5. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDMA.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1332 — CDMA: invented fallback numbers (pipe size 100, levels 1.0 and 0.9) when the pipe has none
+
+**Command / Area:** CDMA (Move flow arrow). LOW. HARD-CODED VALUE.
+
+**Symptom:** If the pipe polyline has no width CDMA uses a pipe size of 100 mm, and if no invert levels are used it works with 1.0 and 0.9 (then 1.0 and 1.0). These are typed into the program, not read from the pipe or Settings, and are never mentioned, so the arrow offset and direction can be based on figures the drafter never gave.
+
+**Expected behaviour:** The arrow uses the pipe's own size and levels, or says it could not and leaves the arrow where it was.
+
+**Steps to confirm in AutoCAD:** (1) On a copy use a pipe whose line has no width. (2) Run CDMA and place the arrow. Right = a line says the size is not known, or the arrow keeps its place. Wrong = the arrow is placed using 100 mm.
+
+**Test that catches it:** Fixture: zero-width polyline; assert a refusal or a line naming the missing size.
+
+**Reference:** Commands\CdCommand.Arrows.cs:376-385 (diameter 100; levels 1.0 and 0.9) and 410-418 (1.0 and 1.0). Note CDMA.md section 7 'New in code' 6. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDMA.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1333 — CDSL: the highest level it accepts is 9000 m in the code, while Settings holds 3000 m for survey levels
+
+**Command / Area:** CDSL (spot level). LOW. HARD-CODED VALUE (R-00).
+
+**Symptom:** CDSL refuses a level above 9000 m (typed in the code). The survey reading limit in Settings (CDSURVEY) is 3000 m. The two limits differ and the CDSL one cannot be changed on the Settings page.
+
+**Expected behaviour:** One highest-level figure on the Settings page, used by both.
+
+**Steps to confirm in AutoCAD:** (1) In CDS set the survey highest level to 500 m. (2) Run CDSL and type 700. Right = refused using the Settings figure. Wrong = accepted (the 9000 m limit applies instead).
+
+**Test that catches it:** Source guard: no literal 9000 in SpotLevelText; unit case reading the Settings value.
+
+**Reference:** Rules\SpotLevelText.cs:15 (MaxPlausibleLevelM = 9000.0); Models\UserSettings.cs:3175 (surveyRlMaxM 3000). Note CDSL.md section 7 'New in code' 2. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDSL.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1334 — MR and CR: pipes drawn in AutoCAD 2027 cannot be moved or copied
+
+**Command / Area:** MR (move and rotate) and CR (copy and rotate), AutoCAD 2027 lane. MEDIUM. COMMAND REFUSES CE OBJECTS.
+
+**Symptom:** The 2027 transform tool accepts only a short list of plain object types (line, circle, arc, ellipse, polyline, text, multiline text, block). CE's own pipe object is a different class, so it fails closed and is skipped. A pipe drawn on 2027 cannot be moved or copied with MR or CR; pipes that are plain polylines (older drawings) can. Raingarden layers are refused separately. What the drafter is told when a pipe is skipped was not read.
+
+**Expected behaviour:** Either CE pipes are accepted (with their links kept), or the command says plainly 'Pipes cannot be moved with MR yet - use CDEDIT or MOVE'.
+
+**Steps to confirm in AutoCAD:** (1) On a copy in AutoCAD 2027 draw a pipe with CD. (2) Run MR, select the pipe and pit, pick the base point. Right = the pipe moves with the pit, or a plain line says why it did not. Wrong = the pipe silently stays. (3) Repeat with CR.
+
+**Test that catches it:** Fixture: a CE pipe object in the selection; assert it is accepted or a refusal line names it.
+
+**Reference:** Modules\Shared.Transform.Native2027\TransformCommands.cpp:157-170 (exact class list, others throw eNotApplicable); pipe class Modules\Drainage.NativeObjects2027\CeCvlPipeObject.h:27; Services\PipePickService.cs:20-30. Notes MR.md and CR.md section 7 'New in code' 2 (the note's line 162-167 is 157-170 in this copy). Already on the trial list as 'does not work on all objects yet'. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\MR.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1335 — CDSTRIP: the layer name is fixed as STRIP DRAIN, so a layer rename in Settings is ignored
+
+**Command / Area:** CDSTRIP (strip drain). LOW. SETTING IGNORED.
+
+**Symptom:** Every other CE layer name goes through the Settings page (Layer names), so an office can rename a layer. The strip drain layer is a fixed 'STRIP DRAIN' typed into the program, and so are the fall arrows on it.
+
+**Expected behaviour:** CDSTRIP uses the layer name from Settings, like the other tools.
+
+**Steps to confirm in AutoCAD:** (1) In CDS, Layer names, rename the strip drain layer to 25STRIP. (2) Run CDSTRIP. Right = drawn on 25STRIP. Wrong = a new layer called STRIP DRAIN.
+
+**Test that catches it:** Source guard: CDSTRIP resolves its layer through LayerService.Name.
+
+**Reference:** Commands\StripDrainCommand.cs:32 (const LAYER_STRIP_DRAIN) and Commands\StripDrainCommand.Apply.cs:49, 78, 93, 163 (used directly); compare Services\LayerService.cs:360-368 (Name resolves renames). Note CDSTRIP.md section 7 'New in code' 2. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDSTRIP.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1336 — CDSTRIP: 'Close' is offered after only 2 points
+
+**Command / Area:** CDSTRIP (strip drain). LOW. EDGE CASE.
+
+**Symptom:** The Close keyword appears once two points are picked. Closing two points makes a degenerate strip that doubles back on itself.
+
+**Expected behaviour:** Close is offered from three points.
+
+**Steps to confirm in AutoCAD:** (1) On a copy run CDSTRIP, pick two points. Right = no Close option. Wrong = Close offered; choosing it draws a doubled-back strip.
+
+**Test that catches it:** Unit case: the prompt builder with two points has no Close.
+
+**Reference:** Commands\StripDrainCommand.cs:251-258 (canClose = points.Count >= 2). Note CDSTRIP.md section 7 'New in code' 3. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDSTRIP.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1337 — CDSTRIP: a strip drain in a metre drawing is drawn 1000 times too wide
+
+**Command / Area:** CDSTRIP (strip drain), drawings in metres or other units. MEDIUM-HIGH. UNITS.
+
+**Symptom:** The strip width (100), the fall arrow length (610) and the side offset (200) are millimetre constants. They are used as drawing units with no conversion. In a drawing in metres the strip body is 100 m wide, and the fall arrows are 610 m long. In a millimetre drawing it is correct.
+
+**Expected behaviour:** The sizes are converted to the drawing's units (100 mm = 0.1 m in a metre drawing).
+
+**Steps to confirm in AutoCAD:** (1) On a copy with INSUNITS set to metres run CDSTRIP over a 10 m run. Right = a strip about 0.1 m wide with small arrows. Wrong = a strip 100 m wide. (2) Repeat in a millimetre drawing: it must look the same as today.
+
+**Test that catches it:** Fixture: plan built in a metre drawing; assert the strip width is 0.1 drawing units.
+
+**Reference:** Commands\StripDrainCommand.cs:40-48 (millimetre constants); Commands\StripDrainCommand.Apply.cs:160 (Scale = STRIP_DRAIN_WIDTH_MM); Commands\StripDrainCommand.Plan.cs:182 and 195; no INSUNITS use in StripDrainCommand*.cs. Note CDSTRIP.md section 7 'New in code' 4. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDSTRIP.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1338 — CDCHECKCURRENT: pits marked 'To be removed' are counted in the drawing summary
+
+**Command / Area:** CDCHECKCURRENT (What CE Found). LOW-MEDIUM. WRONG COUNT.
+
+**Symptom:** The pit count counts every pit in the record, including pits marked To be removed. The Pit Schedule already leaves those out, so the two counts disagree.
+
+**Expected behaviour:** The pit count leaves out pits marked To be removed, or shows them separately.
+
+**Steps to confirm in AutoCAD:** (1) On a copy with 5 pits, mark one To be removed. (2) Run CDCHECKCURRENT and read the pit count; open PITSCHEDULE and count rows. Right = both read 4 (or the check says '4, 1 to be removed'). Wrong = check reads 5.
+
+**Test that catches it:** Unit case: five pits, one removed, assert PitCount is 4.
+
+**Reference:** Services\CurrentDrawingCheckService.cs:404 (pits.Count with no status test); Rules\ObjectStatusRule.cs:38 (CountsInPitSchedule). Note CDCHECKCURRENT.md section 7 'New in code' 1. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDCHECKCURRENT.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1339 — CDCHECKCURRENT: a pit or pipe with a blank link to its drawing object is never flagged
+
+**Command / Area:** CDCHECKCURRENT (What CE Found). MEDIUM. MISSED PROBLEM.
+
+**Symptom:** The check flags a pit or pipe whose saved link points at an object that no longer exists. It only runs that test when the link is filled in. A record with a blank link (no drawing object recorded at all) is skipped, so a record with nothing behind it passes.
+
+**Expected behaviour:** A blank link is flagged as 'not linked to a drawing object', in the same list.
+
+**Steps to confirm in AutoCAD:** (1) On a copy erase a pit and its record link (or use a copied pit from another drawing). (2) Run CDCHECKCURRENT. Right = the record is listed as not linked. Wrong = nothing listed.
+
+**Test that catches it:** Unit case: a pipe record with an empty EntityHandle yields an attention item.
+
+**Reference:** Services\CurrentDrawingCheckService.cs:438 (pipes) and 457 (pits): the test starts with !IsNullOrWhiteSpace(handle). Note CDCHECKCURRENT.md section 7 'New in code' 2. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDCHECKCURRENT.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1340 — CDINSPECTOR: the cover depth warning band starts at a fixed 400 mm, with fallback grade and speed also fixed
+
+**Command / Area:** CDINSPECTOR (palette for a selected pit or pipe). LOW-MEDIUM. HARD-CODED VALUES (R-00).
+
+**Symptom:** The amber warning for cover depth starts at 400 mm, typed into the program, while the green and red limits come from Settings. If the Settings figure is above 400 the amber band is lost; if below, the amber band contradicts it. When Settings cannot be read the grade falls back to 1 in 200 and the speed to 3.0 m/s with no word.
+
+**Expected behaviour:** The amber figure is on the Settings page, and a missing Settings file is said.
+
+**Steps to confirm in AutoCAD:** (1) In CDS set minimum cover to 600. (2) Select a pit with 500 mm cover. Right = the palette judges 500 against the Settings figures. Wrong = amber for 400-599 only by the fixed number.
+
+**Test that catches it:** Source guard: no literal 400 in InspectorPaletteService cover status.
+
+**Reference:** Services\InspectorPaletteService.cs:3254 (>= 400); 3403-3404 (200.0 and 3.0 fallbacks). Note CDINSPECTOR.md section 7 'New in code' 1 and 2. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDINSPECTOR.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1341 — CDINSPECTOR: 'Not found in ProjectData' shown to the drafter
+
+**Command / Area:** CDINSPECTOR. LOW. WORDING (program word).
+
+**Symptom:** For a pit or pipe with no saved record the palette shows the error 'Not found in ProjectData'. ProjectData is a program name the drafter does not know.
+
+**Expected behaviour:** 'CE has no saved details for this pit. Run CDSYNC to read it from the drawing.'
+
+**Steps to confirm in AutoCAD:** (1) On a copy insert a plain pit block (no CE record). (2) Select it with the palette open. Right = a plain-words line. Wrong = 'Not found in ProjectData'.
+
+**Test that catches it:** Unit case on the warning text: does not contain 'ProjectData'.
+
+**Reference:** Services\InspectorPaletteService.cs:3214 (pit) and 3289 (pipe). Note CDINSPECTOR.md section 7 'New in code' 3. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDINSPECTOR.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
