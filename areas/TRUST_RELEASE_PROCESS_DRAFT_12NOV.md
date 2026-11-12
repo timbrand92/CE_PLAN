@@ -75,7 +75,7 @@ The percentages rule stays in force until you say otherwise (interview H1).
 ## 9. The first colleague release, specifically
 
 1. **Contents:** the whole core at once: steps 1 to 8. This is the one release that cannot be "one small change", because the core is the product.
-2. **To whom first:** one colleague, on the AutoCAD year they actually use (A3, OPEN).
+2. **To whom first:** one colleague, on AutoCAD 2027 (Tim's answer A3, 12 Nov). Which colleague is still OPEN, and their PC has not been read.
 3. **Then:** the next colleague after two clean working days, and so on.
 
 ## 10. Not known yet

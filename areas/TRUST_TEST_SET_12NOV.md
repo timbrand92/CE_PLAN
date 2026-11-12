@@ -67,7 +67,7 @@ Every item on the sheet gets exactly one of four marks:
 
 **Held-back jobs:** two of the jobs are never used to teach the reader its list of old block versions. They are only used to test it.
 
-## 5. What counts as a pass (recommended; question A1 and B3 are OPEN)
+## 5. What counts as a pass (A1 answered 12 Nov: zero wrong on all 10, Unknowns allowed; how many Unknowns is too many, B3, is still OPEN)
 
 **For one job:**
 

@@ -17,17 +17,17 @@ INTERPRETATION of "properly": ask the questions that decide whether the plan wor
 ## The interview map (biggest consequences first)
 
 **A. The finish line (what "works" means)**
-1. A1. When is the first colleague release ready? OPEN (asked 12 Nov).
-2. A2. What kind of fault stops a release, and what kind waits? OPEN.
-3. A3. Which colleagues are first, and which AutoCAD year is each on? (2022 to 2024 gets no ribbon today.) OPEN.
-4. A4. How much of Tim's own drafting time each step may use (about 3 working days on real jobs per step, or steps grouped). OPEN.
+1. A1. When is the first colleague release ready? ANSWERED 12 Nov, see Answers.
+2. A2. What kind of fault stops a release, and what kind waits? ANSWERED 12 Nov, see Answers.
+3. A3. Which colleagues are first, and which AutoCAD year is each on? (2022 to 2024 gets no ribbon today.) ANSWERED 12 Nov: 2027. Which colleague is still OPEN.
+4. A4. How much of Tim's own drafting time each step may use (about 3 working days on real jobs per step, or steps grouped). ANSWERED 12 Nov, see Answers.
 
 **B. Old and revised drawings (the reader and the test set)**
-1. B1. Which kinds of old drawing exist in the office (old LISP work, early plugin, current), and roughly how many of each come back as revisions. OPEN.
+1. B1. Which kinds of old drawing exist in the office (old LISP work, early plugin, current), and roughly how many of each come back as revisions. ANSWERED 12 Nov, see Answers.
 2. B2. The 10 test jobs: which ones, and how messy the messiest should be. OPEN. (Tim picks at his PC; no client name or address goes in any file.)
 3. B3. How many Unknowns on a job are acceptable before the reader has failed that job. OPEN.
-4. B4. The start point: is the LPD the one stored start point, and what happens on a job with two. Voice talk 6 Nov agreed "CE proposes, Tim confirms once, stored in the drawing, more than one LPD handled"; the detail is OPEN.
-5. B5. What CE may still change by itself when a drawing opens (pipes converted, pit symbols updated). Two earlier answers pull in different directions: 16 Sep "IT NEEDS TO BE IMPLEMENTED EVERYTIME YOU OPEN AN EXISTING JOB" and 4 Nov "ASK USER WHEN OPENS". OPEN.
+4. B4. The start point: is the LPD the one stored start point, and what happens on a job with two. Voice talk 6 Nov agreed "CE proposes, Tim confirms once, stored in the drawing, more than one LPD handled"; ANSWERED 12 Nov: the LPD itself. Two-LPD jobs still OPEN.
+5. B5. What CE may still change by itself when a drawing opens (pipes converted, pit symbols updated). Two earlier answers pull in different directions: 16 Sep "IT NEEDS TO BE IMPLEMENTED EVERYTIME YOU OPEN AN EXISTING JOB" and 4 Nov "ASK USER WHEN OPENS". ANSWERED 12 Nov: nothing changes on open; both superseded.
 
 **C. Check this drawing**
 1. C1. Do CDSYNC and CDREBUILD stay as direct typed commands once the one door exists (25 Sep ruling UX-REP-01)? OPEN.
