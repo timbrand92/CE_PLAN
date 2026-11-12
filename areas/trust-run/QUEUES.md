@@ -128,6 +128,13 @@
 **trust-acad-evidence, add:**
 9. `areas\trust-run\BUGS_FIXED_IN_CODE_NOT_PROVEN.md` (when it appears): about 170 bugs the records list as open that the installed code appears to fix. Start with the ten the file names as mattering most (BUG-650 CDFW cancel, BUG-1255 Excel export, BUG-458 REFEDIT refusal first). For each, on copies, on the INSTALLED build: seen fixed, seen still broken, or could not be tested this way. This is the cheapest trust there is: no new code, only proof. Write results to `areas\trust-run\EVIDENCE_STALE_BUGS.md`. Do not edit the bug file's statuses; the controller does that from your evidence under RULES 13.3.
 
+### Refill, Fri 13 Nov (after the reader's second run), controller
+
+**trust-acad-evidence, add:**
+10. The reader on real drawing files, in the core console, without installing: build `claude/trust-reader` (draft pull request 2040) in your own folder, and follow the P3 steps the reader lane put in `PENDING_TESTS.md`: run its read-only copy-filler and reader on your made-up drawings in `C:\CE_WORK\testset\MADEUP_*` (old LISP style, hand-drawn, the old "Stormwater Pit" block) and on the standard test copies. For each: is the drawing unchanged afterwards (changed counter and file hash), is the reading identical on a second run, and does the reading match the drawing's answer sheet (use the branch's scorer). Results to `areas\trust-run\EVIDENCE_READER.md`.
+
+**trust-review, next run:** re-review pull request 2040 at its new head (the eight items in `reviews\claude-trust-reader.md`, plus the new copy-filler and old-palette commits ab4fc1f7 and 222a303e); then an independent review of ten of the rewritten tool notes in `04_REFERENCE\core-tool-notes\` against the code.
+
 ### trust-struc-mgr-plan (planning only)
 1. `areas\trust-plan-structural.md` and `areas\trust-plan-manager.md` (its brief).
 2. Draft cards, in the TRUST card shape, for the first three Structural steps and for "going back a version, rehearsed" in Manager.
