@@ -18305,6 +18305,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 
 **Status:** OPEN
 
+- Note (trust-safety-fixes, Fri 13 Nov 2026, TRUST-04; nothing installed or accepted): draft PR #2060 (branch claude/trust04-cdma-annotation-protect): Esc at CDMA's invert and reverse questions places nothing, and the closing line says what really happened. Built and unit-tested only (twin fails). Not seen in AutoCAD.
+
 ## BUG-1284 — CDMA and CDANNOTATIONEDIT will move any text or block, not only CE labels and arrows
 
 **Command / Area:** CDMA (Move flow arrow) and CDANNOTATIONEDIT (Move one label or arrow). MEDIUM. WRONG TARGET.
@@ -18322,6 +18324,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
 
 **Status:** OPEN
+
+- Note (trust-safety-fixes, Fri 13 Nov 2026, TRUST-04; nothing installed or accepted): draft PR #2060, in part: CDMA moves only CE flow arrows and refuses an Xref; CDANNOTATIONEDIT refuses Xref objects. NOT built: CDANNOTATIONEDIT refusing ordinary text that is not a CE label (no reliable way yet to tell a CE label from plain text). Not seen in AutoCAD.
 
 ## BUG-1285 — CDTG, CDSL and CDWT run a forced full record update before their first question
 
@@ -18358,6 +18362,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
 
 **Status:** OPEN
+
+- Note (trust-safety-fixes, Fri 13 Nov 2026, TRUST-04; nothing installed or accepted): draft PR #2062 (branch claude/trust04-startup-checks): CDREVERSEFLOW, CDTEXTSEG, CDMA, CDTIDYLABELS, CDDEST and CDSYSTEM run the shared start-up check first; MR and CR (both code paths) run only the read-only and REFEDIT protections, never the Civil drawing-type question (Tim, 7 Nov: CE tools stay on every drawing). 8 of 15 done, 7 left on purpose, so this entry stays OPEN. Left without it as a DRAFT default for Tim: CDCALC, CDMANAGER, CDRAINFALL, CDRULEBOOK, CDRULES, CDTWL, PITSCHEDULE (they only read or open a window). Not seen in AutoCAD.
 
 ## BUG-1287 — CDLPD: search distances are millimetres but compared with drawing units, so a metre drawing finds the nearest pipe end anywhere
 
@@ -18611,6 +18617,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 
 **Status:** OPEN
 
+- Note (trust-safety-fixes, Fri 13 Nov 2026, TRUST-04; nothing installed or accepted): draft PR #2067 (branch claude/trust04-b1300-lpd-move-clears): moving the LPD takes the tag off the earlier pipe end; left alone when the end now holds a real pit or the LPD setting is a real pit number. Built and unit-tested only (twin fails). Not seen in AutoCAD.
+
 ## BUG-1301 — CDLPD: says 'LPD set.' when no note was drawn, and an old note is left without its link
 
 **Command / Area:** CDLPD, connection blank and level unknown. MEDIUM. WRONG MESSAGE.
@@ -18844,6 +18852,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
 
 **Status:** OPEN
+
+- Note (trust-safety-fixes, Fri 13 Nov 2026, TRUST-04; nothing installed or accepted): draft PR #2063 (branch claude/trust04-b1313-close-tolerance-metres): the 1 mm close distance in CDRG and CDAGI and CDAGI's same-end tie rule are converted to the drawing's units. Built and unit-tested only (twin fails). Not seen in AutoCAD.
 
 ## BUG-1314 — CDRG: a missing GIO block ends with only 'CDRG command cancelled.'
 
@@ -19223,6 +19233,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 
 **Status:** OPEN
 
+- Note (trust-safety-fixes, Fri 13 Nov 2026, TRUST-04; nothing installed or accepted): REPORT only, as the queue asks (side-session note trust-safety-fixes_findings_12nov.md section 5). The 2027 native transform accepts only plain AutoCAD classes, so one CE pipe object in the selection stops the whole MR/CR (rolled back, safe) with 'eNotApplicable' on screen. Recommended next: a C# pre-check that refuses in plain words before the native call (no native rebuild); accepting the pipe class later, with AutoCAD evidence.
+
 ## BUG-1335 — CDSTRIP: the layer name is fixed as STRIP DRAIN, so a layer rename in Settings is ignored
 
 **Command / Area:** CDSTRIP (strip drain). LOW. SETTING IGNORED.
@@ -19277,6 +19289,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 
 **Status:** OPEN
 
+- Note (trust-safety-fixes, Fri 13 Nov 2026, TRUST-04; nothing installed or accepted): BLOCKED for this lane. About 20 millimetre constants in four files, and the fall-arrow length is tuned against AutoCAD's arrowhead-hiding limit at DIMSCALE (BUG-101); converting without a look in AutoCAD could hide the arrowheads. Plan in areas/trust-run/trust-safety-fixes.md.
+
 ## BUG-1338 — CDCHECKCURRENT: pits marked 'To be removed' are counted in the drawing summary
 
 **Command / Area:** CDCHECKCURRENT (What CE Found). LOW-MEDIUM. WRONG COUNT.
@@ -19312,6 +19326,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
 
 **Status:** OPEN
+
+- Note (trust-safety-fixes, Fri 13 Nov 2026, TRUST-04; nothing installed or accepted): draft PR #2066 (branch claude/trust04-b1339-blank-link-flagged): a pit or pipe with a blank link is flagged in the same list with its own words. Built and unit-tested only (851 passed after the review fix that keeps entry names distinct, twin fails). Not seen in AutoCAD.
 
 ## BUG-1340 — CDINSPECTOR: the cover depth warning band starts at a fixed 400 mm, with fallback grade and speed also fixed
 
@@ -19547,6 +19563,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 
 **Status:** OPEN
 
+- Note (trust-safety-fixes, Fri 13 Nov 2026, TRUST-04; nothing installed or accepted): DEFERRED by this lane. About ten test files pin the sample figures, and BUG-1112's sample-site handling depends on them; opening blank needs a design choice (blank boxes versus a 'sample' banner) before code. Not built.
+
 ## BUG-1353 — CDRAINFALL: the record is rebuilt from the drawing before the window opens
 
 **Command / Area:** CDRAINFALL (the job's rainfall curve). LOW-MEDIUM. UNEXPECTED STORED-DATA CHANGE.
@@ -19618,6 +19636,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
 
 **Status:** OPEN
+
+- Note (trust-safety-fixes, Fri 13 Nov 2026, TRUST-04; nothing installed or accepted): draft PR #2065 (branch claude/trust04-b1356-runsolve-preview-words): the preview now says 'invert levels only' in its title and on each line, and gives the solver's size and grade as advice to set in Edit Pipe. Apply is unchanged (it writes the two inverts only). Built and unit-tested only. Not seen in AutoCAD.
 
 ## BUG-1357 — CDRULES: 'results recorded in the project' is printed even when the record write was held back
 
