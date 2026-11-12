@@ -1,6 +1,6 @@
 # Review: PR 2064 `claude/trust-09-cancel-writes-nothing` (trust queue item 7: "a cancelled command writes nothing")
 
-**Reviewer:** lane trust-review (tenth run), Fri 13 Nov 2026, 05:02 to 05:40 PC clock. **Head reviewed:** `d64e9a72`, one own commit on `claude/trust-proof-checks` at `03af5393` (which sits on step 6, step 5, step 1 and installed Civil `cf059dcf`; `cf059dcf` is an ancestor, checked). **Read against:** the PR text, `EVIDENCE_STALE_BUGS.md`, `TRUST_PROBES_13NOV.md`, `EVIDENCE_CROSS_DRAWING.md` and `BUG_CARPARK.md` BUG-1456 (added during this review, at the controller's request). **Four states:** Built yes (lane: net48 and net10, 0 errors). Tested unit only (lane: 22,329 ran, 0 failed; the headless check TRUST-CANCEL-01 is written, not run). Installed no. Accepted no.
+**Reviewer:** lane trust-review (tenth run), Fri 13 Nov 2026, 05:02 to 05:05 PC clock. **Head reviewed:** `d64e9a72`, one own commit on `claude/trust-proof-checks` at `03af5393` (which sits on step 6, step 5, step 1 and installed Civil `cf059dcf`; `cf059dcf` is an ancestor, checked). **Read against:** the PR text, `EVIDENCE_STALE_BUGS.md`, `TRUST_PROBES_13NOV.md`, `EVIDENCE_CROSS_DRAWING.md` and `BUG_CARPARK.md` BUG-1456 (added during this review, at the controller's request). **Four states:** Built yes (lane: net48 and net10, 0 errors). Tested unit only (lane: 22,329 ran, 0 failed; the headless check TRUST-CANCEL-01 is written, not run). Installed no. Accepted no.
 
 ---
 
@@ -84,8 +84,8 @@ No existing test, check or baseline file is changed (the diff adds one test file
 
 ## PRs 2053 and 2055
 
-1. **Neither sits on this PR.** Both are cut from `cf059dcf` (heads unchanged since their last reviews: 2053 `9ffbeccb`, 2055 `2629343d`).
-2. **2055 complements it, always on:** it moves CDSL's, CDWT's and the source tools' update after the first pick and binds without saving (`Commands\SpotLevelCommand.cs`, `WaterTankCommand.cs`, `SourceBlockInsertCommands.cs`). It does not duplicate this PR; its own FIX FIRST list stands (`reviews\claude-trust04-cancel-cdtg-cdsl-cdwt.md`).
+1. **Neither sits on this PR.** Both are cut from `cf059dcf` (2053 at `9ffbeccb`, unchanged; 2055 moved to `0627df45` during this review).
+2. **2055 complements it, always on:** for CDTG, CDSL and CDWT it binds without saving, drops or moves the update after the first pick and sets the Civil mark only after placing (`Commands\SpotLevelCommand.cs`, `WaterTankCommand.cs`, `SourceBlockInsertCommands.cs`). It does not duplicate this PR. Re-reviewed at `0627df45`: GO (`reviews\claude-trust04-cancel-cdtg-cdsl-cdwt-rereview.md`).
 3. **2053 is tests only** and reads CD's method text; the CD end-of-command write it found is cured here only with the switch on. Point its guard at the end-of-command rule, or mark it superseded once this is fixed.
 4. Expect a REGRESSION_LOG.md conflict only.
 
