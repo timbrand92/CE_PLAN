@@ -147,6 +147,16 @@
 **trust-acad-evidence, add:**
 11. Find out, without changing anything, every way a trial build could be seen in real AutoCAD WITHOUT touching Tim's installed bundle or any AutoCAD or Windows setting: read `C:\CE_PLAN\04_REFERENCE\TEST_STATION_SETUP.md`, `C:\CE_PLAN\TEST_STATION_REQUESTS.md` and `TEST_STATION_RESULTS.md` (is the virtual machine test station still alive, and how is a request made), and the driver's own notes. Write the options, what each needs from Tim, and your recommendation to `areas\trust-run\HOW_TO_SEE_TRIAL_BUILDS.md`. Do not install, do not change a setting, do not send a request anywhere.
 
+### Refill, Fri 13 Nov 02:45 PC clock (controller)
+
+**trust-struc-mgr-plan, next:**
+13. In `areas\TRUST_QUESTIONS_FOR_TIM.md` batch 0, change the recommended answer to the spare work PC (Tim's own ruling D5 of 17 Oct; it needs his one-off 30 minutes with `04_REFERENCE\TEST_PC_START_PROMPT.md`), with overnight installs on his own PC as the second option and its cost stated ("a mistake costs you a morning"). Evidence and reasoning: `areas\trust-run\HOW_TO_SEE_TRIAL_BUILDS.md`. Say plainly that the controller first recommended overnight installs and changed its mind on this evidence.
+14. The Structural core tools read from the installed code, the way the Civil ones were: for each of the 32 KEEP buttons in `areas\STRUCTURAL_COMMAND_SORT_12NOV.md`, a one-page tool note at `04_REFERENCE\core-tool-notes\structural\<COMMAND>.md` in the format of `areas\TRUST_RULES_CHECKLIST_12NOV.md` section 3, written from `C:\CE_WORK\scratch\audit_struc` (commit 8de95c34), every fact with its file and line under "Where this comes from", "not known" where not known. Avoid the three kinds of mistake found in the Civil notes (`areas\trust-run\reviews\core-tool-notes-second-sample.md`): a bug called fixed that is not; an on-screen message quoted from the wrong route; a claim about AutoCAD 2022 to 2024 with no line behind it. Quality over count. From it produce `areas\trust-run\STRUCTURAL_BUGS_FIXED_IN_CODE_NOT_PROVEN.md` (candidates from `areas\trust-run\BUGS_BY_STRUCTURAL_CORE_TOOL.md`) and a list of new faults with no bug, `areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md` (do not edit `BUG_CARPARK.md` yourself; the controller has them filed).
+
+**trust-acad-evidence, next (real AutoCAD only until 8:10am, then core console and write-ups):**
+12. Carry on with item 9 in real AutoCAD on the INSTALLED build: BUG-683, 681, 290, 968, 674, 780, 785, 756 and 969, each on its own fresh copy. For BUG-650 (seen fixed): repeat it once in a SECOND AutoCAD session and record both, because a robot result only counts toward acceptance when seen in two sessions (RULES, 24 Oct amendment).
+13. Clear the scratch you made tonight that is no longer needed (`%LOCALAPPDATA%\Temp\ce-headless-proof` and any other temp build copies that are YOURS, about 10 GB in all): C: is at 37 GB. Never delete a folder you did not create.
+
 ### trust-struc-mgr-plan (planning only)
 1. `areas\trust-plan-structural.md` and `areas\trust-plan-manager.md` (its brief).
 2. Draft cards, in the TRUST card shape, for the first three Structural steps and for "going back a version, rehearsed" in Manager.
