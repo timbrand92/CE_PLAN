@@ -63,13 +63,13 @@ Evidence: Tim's command log on real jobs (`areas\CORE_TICK_LIST_05NOV.md` sectio
 
 ### Walls and ground
 
-8. **AB, BB (wall bracing) and the A/B switch:** KEEP. BB 134, AB 93 uses. The switch is typed ABS; the name ABSWITCH is hidden as a duplicate when AutoCAD starts. **Verified:** registry lines 2490 (ABS), 2512 (ABSWITCH); the duplicate hiding is **Carried** (`Services\CommandRegistryService.cs:505-539`).
+8. **AB, BB (wall bracing) and the A/B switch:** KEEP. BB 134, AB 93 uses. The switch is typed ABS; the name ABSWITCH is hidden as a duplicate when AutoCAD starts. **Verified:** registry lines 2490 (ABS), 2512 (ABSWITCH); the duplicate hiding is **Verified** (`Services\CommandRegistryService.cs:505-539`: any entry whose name is another entry's other name is marked hidden at start-up).
 9. **CSBRACINGPANEL (required against provided):** KEEP, with S4 first.
 10. **STRSCHEDCREATE, STRSCHEDREFRESH, STRSCHEDSYNC (bracing, pier and tie-down schedules):** KEEP, with S4 first.
 
 ### On every drawing
 
-11. **CLEAN:** KEEP, with S2 first. FASTSAVE stays typed only (it is hidden today as a duplicate name of CLEAN, though it runs a lighter clean-up; **Carried**).
+11. **CLEAN:** KEEP, with S2 first. FASTSAVE stays typed only (it is hidden today as a duplicate name of CLEAN, though it runs a lighter clean-up). **Verified:** registry lines 4136-4138 list FASTSAVE as another name of CLEAN, and FASTSAVE has its own entry at line 4157, which the start-up rule above then hides.
 12. **CEHELP, CESETTINGS:** KEEP.
 
 ### Hidden for the first core (typed still works, nothing deleted)
@@ -83,18 +83,18 @@ Evidence: Tim's command log on real jobs (`areas\CORE_TICK_LIST_05NOV.md` sectio
 ## 2. What already exists to cut the tab down, and what does not
 
 1. **A "hidden" mark exists and the ribbon obeys it.** 63 of 375 rows are hidden. **Verified:** count of `"hidden": true` in the registry; the ribbon skips them at `Services\RibbonCommandHubService.cs:176-179`.
-2. **An "expert" mark exists, but the ribbon ignores it.** 39 rows are marked expert, and every ribbon builder asks for expert rows too. **Verified:** count of `"expert": true`; `RibbonCommandHubService.cs:178` and `Services\CeStrucRibbonContributor.cs:29` both say "includeExpert: true". The "show expert commands" setting only affects the palette (**Carried**).
-3. **No "core list" setting exists.** **Carried:** the pinned and recent lists only feed the palette.
-4. **The pull-down menu is a separate list.** It comes from a ready-made menu file, or failing that from a 219-command layout file, not from the command list the ribbon reads. **Carried:** `Services\WorkspaceMenuInstallerService.cs:40-61`, `Services\CuiMenuGeneratorService.cs:77-147`. So the ribbon and menu can drift, exactly as on the Civil side.
+2. **An "expert" mark exists, but the ribbon ignores it.** 39 rows are marked expert, and every ribbon builder asks for expert rows too. **Verified:** count of `"expert": true`; `RibbonCommandHubService.cs:178` and `Services\CeStrucRibbonContributor.cs:29` both say "includeExpert: true". The "show expert commands" setting only affects the palette and the help window. **Verified:** its only readers are `UI\Palette\CommandsPanel.xaml.cs:81` and `UI\Dialogs\CommandHelpWindow.xaml.cs:47`.
+3. **No "core list" setting exists.** **Verified:** the pinned list is read only by `UI\Palette\CommandsPanel.xaml.cs`; no other list of commands for the ribbon was found by search.
+4. **The pull-down menu is a separate list.** It comes from a ready-made menu file, then the menu already installed, and only failing both is it made fresh, from a layout file when that has entries and from the command list otherwise. **Verified:** `Services\WorkspaceMenuInstallerService.cs:40-61`, `Services\CuiMenuGeneratorService.cs:75-86`. The 219-entry count of the layout file is **Carried**. So the ribbon and menu can drift, exactly as on the Civil side.
 5. **The tidier ribbon you ruled for on 25 Sep** (about 40 tools in families) is built and switched off. **Verified:** `Models\UserSettings.cs:1164` (one name per tool), `1180` (beam family), `Models\CommandHubTagSettings.cs:16` (tag family), all false.
 
 ## 3. Structural "hidden changes" (CE changes the drawing without saying so)
 
-1. **After a MOVE, CE quietly re-sets the anchor point of moved single-line text** when AutoCAD goes idle. No line on screen. **Verified:** `Services\DrawingAutoSaveService.cs:1098-1105` (the repair runs on idle); the file's only command-line message is line 241, an autosave line. What exactly is changed is **Carried** (lines 881 to 968).
-2. **Footing outlines are redrawn after an edit** and the footing schedule is marked out of date, silently when it works. **Carried:** `Services\FoundationMonitor.cs`, `Services\FoundationService.cs:785-798`.
-3. **Old beam links are converted to the new form when a drawing opens,** with a record written into the drawing. The message reaches only the log. **Carried:** `Services\LinkMigrationService.cs:29-105`. Runs only on drawings that still have the old links.
-4. **CLEAN changes much more than its name suggests:** purge, every Xref onto layer XREF, every text and dimension onto STANDARD with Arial Narrow, dimensions and leaders to ByLayer, current colour and linetype reset, a HATCH 21 layer made, then a regen and a save. It prints a summary. **Carried** (stage list, `Services\CleanPipelineService.cs:114-589`); the save is **Verified** (lines 160 to 169).
-5. **Good model to copy:** when a beam follows its support, CE prints "CE moved ... One U undoes both." **Carried:** `ConnectedFollowApply.cs:553`. Every quiet change above should end the same way.
+1. **After a MOVE, CE quietly re-sets the anchor point of moved single-line text** when AutoCAD goes idle. No line on screen. **Verified:** `Services\DrawingAutoSaveService.cs:1098-1105` (the repair runs on idle); the file's only command-line message is line 241, an autosave line. What is changed is the text's insertion point or alignment point. **Verified:** lines 959 and 966 of the same file (inside the repair at line 881).
+2. **Footing outlines are redrawn after an edit** and the footing schedule is marked out of date, silently when it works. **Verified:** `Services\FoundationService.cs:785` (schedule marked out of date) and `796-798` (redraw with nothing said; a line only when it fails).
+3. **Old beam links are converted to the new form when a drawing opens,** with a marker written into the drawing. The message reaches only the log. **Verified:** `Services\LinkMigrationService.cs:29-33` (runs on every open drawing), `78-84` (only when old links exist), line 20 (the marker), and no command-line message anywhere in the file.
+4. **CLEAN changes much more than its name suggests:** purge, every Xref onto layer XREF, text onto Arial Narrow, current colour and linetype set to ByLayer, a HATCH 21 layer, then a regen and a save. It prints a summary. **Verified:** `Services\CleanPipelineService.cs:16-19` (XREF, HATCH 21, Arial Narrow), `114` (purge), `136-145` (ByLayer and regen), `468-469` (current colour and linetype), `160-169` (the save). The full per-object list (dimensions, leaders, multileader styles) is **Carried**.
+5. **Good model to copy:** when a beam follows its support, CE prints "CE moved ... One U undoes both." **Verified:** `Services\BeamLinkService.ConnectedFollowApply.cs:553`. Every quiet change above should end the same way.
 
 ## 4. Structural "guesses shown as facts"
 
@@ -105,7 +105,7 @@ Evidence: Tim's command log on real jobs (`areas\CORE_TICK_LIST_05NOV.md` sectio
 5. **The bracing schedule is one row short when made, and keeps erased braces when refreshed** (BUG-497, BUG-498). **Verified:** `Services\ScheduleService.cs:384` (rows = braces + 1, but title and heading take two), `681-699` (refresh adds rows, never clears leftovers). The pier schedule has the same shape (lines 422, 701 to 723); the tie-down schedule does clear leftovers.
 6. **CLEAN says two opposite things.** Its tooltip says "Does not save: save the drawing yourself"; its long description and the code save. The Settings page says "CE never saves". **Verified:** registry lines 4145 to 4146; `UI\Dialogs\CeSettingsDialog.xaml:557`.
 7. **CLEAN can report "saved" when it is not sure.** If its own save fails it sends QSAVE and marks the save done without checking. **Verified:** `Services\CleanPipelineService.cs:167-169`.
-8. **Beam tools 1, 2, 4, 5, SBEAM and the bracing service have no millimetre-drawing check;** the support blocks, AB, BB, BT1, R1, FJ1 and P1 do. **Carried** (reader searched for the units check; this chat did not re-search). Fixed distances such as a 250 link search and a 2000 beam search are in drawing units.
+8. **Drawing units.** CORRECTED 12 Nov 23:43: the code reader said the beam tools had no units check; that was wrong. The beam tools 1, 2 and 4 scale for millimetre, metre and inch drawings and refuse any other units with a plain line (BUG-577). **Verified:** `Services\ConnectedDesign\Host\BeamCommandAutoCadRenderPort.cs:65-75`, caught for 1 and 2 at `BeamCommandAutoCadPromptAdapter.cs:101` and for 4 at `BeamSpecialCommandAutoCadPromptSession.cs:256`. Beam 5 (offset helper) and BDL were not traced. The support blocks, AB, BB, BT1, R1, FJ1, P1 and CEMEMBER stop in a drawing that is not in millimetres. **Verified:** `Commands\SupportBlockCommands.cs:216`, `Commands\BracingCommands.cs:18, 134, 249`, `Commands\RafterJoistCommands.cs:100`, `Commands\CeMemberCommands.cs:40`. SBEAM's command file and the bracing service have no units check that a search could find. Fixed distances such as the 250 link search (`Services\BeamLinkService.cs:340-345`) and the 2000 beam search (`Models\UserSettings.cs:494`) are in drawing units. **Verified.**
 
 ## 5. The steps (safest first)
 
@@ -168,7 +168,7 @@ Same gate as Civil: card, your approval, built small, robot then Codex on copies
 
 1. **Goal:** every colleague runs the office Structural setup.
 2. **What you see:** the same "office settings changed" window and CE Health line as Civil step 3.
-3. **Why it matters here:** Structural writes its whole settings file the first time it starts, so every login is frozen on the defaults of the build it first ran, even if nobody ever pressed Save. **Verified:** `Services\SettingsService.cs:675-684` (start-up write); the full write is **Carried** (line 928).
+3. **Why it matters here:** Structural writes its whole settings file the first time it starts, so every login is frozen on the defaults of the build it first ran, even if nobody ever pressed Save. **Verified:** `Services\SettingsService.cs:675-684` (start-up write); the full write is **Verified** (line 928 writes the whole settings object).
 4. **Proven by:** as Civil step 3, on two logins.
 5. **Undo:** the old settings file is kept beside the new one.
 6. **Risk: MEDIUM.**
@@ -204,10 +204,10 @@ Same gate as Civil: card, your approval, built small, robot then Codex on copies
 3. **BUG-501 (C1 size by mark, no floor):** Verified (section 4 line 1). The mark lookup uses the command name as the mark.
 4. **BUG-974 (excluded schedule rows still used):** the fix is in the installed code. **Verified:** `Services\XclmTxtService.cs:303-319` keeps only included rows. The carpark entry may be stale; it needs a robot proof, not a new fix.
 5. **Ribbon families off (UX-STRUC-02 to 08):** Verified (section 2 line 5).
-6. **Roof-down tools ship off:** Verified for the roof setout; the others **Carried** (reader listed each switch and line).
+6. **Roof-down tools ship off:** **Verified** for all twelve switches: `Models\UserSettings.cs:1207, 1282, 1324, 1430, 1471, 1537, 1677`, `Models\LintelTableSettings.cs:11`, `Models\WallScheduleSettings.cs:13`, `Models\FoundationProposalSettings.cs:18`, `Models\FoundationGripSettings.cs:11` (each "Enabled = false"). The roof point load pair (lines 1585, 1589) is **Carried**.
 7. **CLEAN saves (B-178):** Verified.
-8. **SBEAM stale-object crash fixed only in S-46:** **Carried.** No BUG-1275 mark is in the installed code (reader's search).
-9. **"Guards for units, layout and locked layer are in the code" for R1, BT1, C1, TS1, AB, BB:** units **Carried** (reader quoted each call); the locked-layer check for supports **Verified** (`Commands\SupportBlockCommands.cs:225-231`).
+8. **SBEAM stale-object crash fixed only in S-46:** no BUG-1275 mark is in the installed code. **Verified** by search. That S-46 holds the fix is **Carried** from the audit.
+9. **"Guards for units, layout and locked layer are in the code" for R1, BT1, C1, TS1, AB, BB:** units **Verified** (section 4 line 8); the locked-layer check for supports **Verified** (`Commands\SupportBlockCommands.cs:225-231`). The layout guard was not checked.
 10. **No unsaved-work reminder:** the timed save is removed and only a palette label is left. **Verified:** `Services\DrawingAutoSaveService.cs:1112-1118`; palette label `UI\Palette\MainPalette.xaml.cs:1096-1117`.
 11. **Reset Defaults wipes all Structural settings (HUNT-MI-04):** Verified: `UI\Dialogs\CeSettingsDialog.xaml.cs:475-478` saves brand-new settings with no question.
 

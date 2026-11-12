@@ -40,7 +40,7 @@ One row only, and a size the block can show: no question, as today.
 4. **Undo:** one U removes one support and its text, as today (to be proven).
 5. **Save and reopen:** the schedule record is unchanged by placing a support.
 6. **Locked layers:** already refused with a plain line before anything is drawn (Verified, `Commands\SupportBlockCommands.cs:225-231`). Unchanged.
-7. **Millimetre check:** already in place for these commands (Carried, `SupportBlockCommands.cs:216`). Unchanged.
+7. **Millimetre check:** already in place for these commands (Verified, `SupportBlockCommands.cs:216`). Unchanged.
 8. **AutoCAD 2022 to 2024:** checked there too.
 
 ## 3. Settings

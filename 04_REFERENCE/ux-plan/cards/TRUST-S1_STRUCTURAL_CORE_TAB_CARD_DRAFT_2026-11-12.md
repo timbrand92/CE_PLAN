@@ -41,7 +41,7 @@ bracing panel, schedules) | Tools (CLEAN, Help, Settings). 32 buttons.
 2. **Prompts, selection, preview, Cancel, Undo:** none. Layout only; no drawing is touched.
 3. **Save and reopen:** nothing is stored in a drawing.
 4. **Locked layers, Xrefs, REFEDIT:** not touched.
-5. **The pull-down menu (all AutoCAD years):** today it comes from a ready-made menu file or a separate 219-command list, not from the list the ribbon reads (Carried, `Services\WorkspaceMenuInstallerService.cs:40-61`). **This card makes both read one office core list,** so they cannot drift.
+5. **The pull-down menu (all AutoCAD years):** today it comes from a ready-made menu file or a separate 219-command list, not from the list the ribbon reads (Verified, `Services\WorkspaceMenuInstallerService.cs:40-61`; the 219 count is carried). **This card makes both read one office core list,** so they cannot drift.
 6. **AutoCAD 2022 to 2024:** the tools that only work on 2027 stay greyed with a plain reason, as built for UX-STRUC-12.
 7. **Discovery:** Help lists every typed command, as today.
 
