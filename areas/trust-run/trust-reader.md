@@ -6,3 +6,41 @@ Lane rules: `areas\trust-run\QUEUES.md` and `areas\TRUST_AUTONOMOUS_RUN_12NOV.md
 - 2026-11-12 23:35, item 2 (old LISP text rules, design 2b): DONE. Built yes. Tested yes. Installed no. Accepted no. Commit 41369efb. Not proven: real old LISP drawings (none opened); the pattern alone decides, layer 25TEXT/20TEXT not required (DRAFT default, Tim to confirm).
 - 2026-11-12 23:35, items 3 and 4 (made-up test drawings as data; the scoring tool with the five marks): DONE. Built yes. Tested yes (82 of 82 trust-reader tests, net10 and net48). Installed no. Accepted no. Commit 71382aa0 (one commit: the fixture tests load the answer-sheet model in the scorer file). Five made-up jobs MADEUP_CURRENT, MADEUP_OLDLISP, MADEUP_HANDDRAWN, MADEUP_METRES, MADEUP_TWOPITS, each with an answer sheet, all PASS; broken twins (fills 100, picks the nearer pit, takes the nearer text) FAIL. Defaults for Tim: an object is Right only when every sheet value is Right; Unknown where the drawing shows nothing counts Right; numbers compare as numbers. Not done: real test set (Tim picks), the "one ordinary edit then read again" check.
 - 2026-11-12 23:40: item 5 (fix what trust-review finds): nothing received yet. Next useful work if the controller agrees: the AutoCAD-side doorway that fills the plain copy from a drawing opened for read only (new file, uses the existing read helpers), so probe P3 and step 8 slice A can use the reader. QUEUE EMPTY until the controller refills it or a review arrives.
+- 2026-11-13 00:45 (second run), item 5 (fix what trust-review found, `reviews\claude-trust-reader.md`, FIX FIRST eight items): DONE, all eight fixed. Built yes (net10 and net48, 0 errors). Tested yes: 138 of 138 trust-reader tests on net10 and on net48 (the run includes the 14 tests of item 6, uncommitted on the same tree at that moment; item 5's own commit carries 124). Installed no. Accepted no. Commit 3eb415c9 on `claude/trust-reader`, pushed (draft PR 2040). (1) scorer identity from the copy; twin "reads nothing" fails all five made-up jobs, "Unknown everywhere" fails the four where the drawing shows something; (2) two-pits truth is now the farther pit; a nearest-pit reader fails on its own ("1 Proposed wrong" on the nearer pit); (3) metre pits at 0.001 read 600 x 600 through CE's existing units-change rule; MADEUP_METRES has a 900 pit drawn 0.9; (4) record vs label and record vs block size give Unknown with both values; (5) PIT BLOCK / PIT LABEL Proposed unless in the record; (6) same tag on two blocks: both Proposed, "same identity twice"; (7) one doorway `TrustReaderSettings.FromOfficeSetup`, no personal Settings, wrong rename comment removed; (8) every default marked DRAFT in the code and listed below. Found: the first run's transform .arx is a 0-byte stand-in (gitignored, never committed); copied into this worktree for the unit-test build only. Not tested: anything in AutoCAD.
+
+## Every default the reader, the scorer and the copy-filler take (second run, 13 Nov 2026). Each is a DRAFT default, Tim to confirm. None is on a personal Settings page: they come through ONE doorway (`TrustReaderSettings.FromOfficeSetup`) that today returns built-in office values and later reads the office setup (card TRUST-03).
+
+Reader: distances and lists (all in the one doorway, no fixed number left in the reading rules)
+1. **Pit label reach:** a label counts for a pit within 5000 mm, centre to centre (same figure as CE's starting "pit label distance"). DRAFT default, Tim to confirm.
+2. **Old LISP pipe text reach:** 1000 mm from the line. DRAFT default, Tim to confirm.
+3. **Old LISP invert text reach:** 1500 mm from the pipe end. DRAFT default, Tim to confirm.
+4. **Downpipe label reach:** a "DP" text within 1000 mm of a downpipe block is that block's label, not a second downpipe (was a fixed number in the code; now an office value). DRAFT default, Tim to confirm.
+5. **Drawn width tolerance:** a drawn width within 0.5 mm of a listed size counts as that size. DRAFT default, Tim to confirm.
+6. **Size list:** CE's standard 100, 150, 225, 300, 375, 450, 525, 600, 675, 750, 825, 900, 1050, 1200, 1350, 1500. DRAFT default, Tim to confirm.
+7. **Downpipe words in a block name:** DP, DOWNPIPE, RWDP, RWP. DRAFT default, Tim to confirm.
+8. **Pipe and drainage layers:** CE's own layer names only. An office's renamed layers are NOT read until the office setup carries them, because a personal rename would make lines pipes on one PC only. DRAFT default, Tim to confirm.
+
+Reader: rules
+9. **Old LISP text:** the fixed pattern alone decides; the text's layer (25TEXT, 20TEXT) is not required. DRAFT default, Tim to confirm.
+10. **(a, was unlisted) Plain line on a pipe layer** is offered as a possible pipe, Proposed (design decision 1 and TRUST-06 decision 5 are OPEN). DRAFT default, Tim to confirm.
+11. **(b, was unlisted) A drawn width is used as a size at all**, Proposed, when it equals a listed size (design decision 2 is OPEN). DRAFT default, Tim to confirm.
+12. **(c, was unlisted) A drawing with no units is read as millimetres** (every reach would be 1000 times too long if it was really drawn in metres; the reading says so in its first lines). DRAFT default, Tim to confirm.
+13. **(d, was unlisted) CE's record against the drawing:** the first run let the record win over the label. Now record and label disagreeing on a pit number, or record and block disagreeing on a pit size, gives Unknown with both values. The record's pit type is NOT compared with the block's (the wording has not been checked on a real job), so the record's type stands. DRAFT default, Tim to confirm.
+14. **Oldest names:** a block called "PIT BLOCK" or "PIT LABEL" with nothing of CE's on it is Proposed ("oldest CE name, not yet confirmed from old jobs"); in CE's record it is Sure. DRAFT default, Tim to confirm.
+15. **Same CE tag on two blocks:** both Proposed, "same identity twice", every value offered not stated. DRAFT default, Tim to confirm.
+16. **Pit size scale:** read at the drawing's units change (1 in mm, 0.1 in cm, 0.001 in m), and at scale 1 in a drawing with no units; any other scale (a pit SCALEd by hand, a scale-1 pit in a metre drawing) is Unknown. DRAFT default, Tim to confirm.
+
+Scorer
+17. **An object is Right only when every value on the sheet is Right.** DRAFT default, Tim to confirm.
+18. **Unknown where the drawing shows nothing counts Right.** DRAFT default, Tim to confirm.
+19. **Numbers compare as numbers** (9.80 equals 9.8); text ignores case and spacing. DRAFT default, Tim to confirm.
+20. **"Carries CE's identity" comes from the drawing copy** (CE's record, a CE pipe, CE pipe data on the line, a CE tag, a stored LPD), never from the reading being marked. DRAFT default, Tim to confirm.
+21. **An Unknown on a value the answer sheet marks as shown on the drawing fails the job** (test set 5 rule 2; the Unknown limit B3 is OPEN). DRAFT default, Tim to confirm.
+22. **When the sheet lists the unrecognised blocks, a reading whose list differs fails the job.** DRAFT default, Tim to confirm.
+
+Copy-filler (queue item 6)
+23. **Record values only when the record's text holds them:** CE's own record classes fill 450 x 450, GRATED PIT and UPVC for blanks; the filler does not. DRAFT default, Tim to confirm.
+24. **A pipe's grade is stored only when typed by hand** ("custom" mode); a left-over typed grade under another mode is not read. DRAFT default, Tim to confirm.
+25. **Older-form pipe line:** diameter, material and grade only; its two inverts are not read (a stored 0 cannot be told from "not set"). DRAFT default, Tim to confirm.
+26. **A pit's stored label link** is an attachment on the pit's own link record that is a PIT LABEL block. DRAFT default, Tim to confirm.
+27. **Not filled yet:** stored LPDs (both forms), anything outside model space.
