@@ -97,6 +97,23 @@
 4. Complete `BUGS_BY_CORE_TOOL.md` where it says "+N more": search `BUG_CARPARK.md` for each of those commands by name in the "Command / Area" lines and add the missing bug numbers and titles. Copy only.
 5. The same list for the 32 Structural KEEP buttons in `areas\STRUCTURAL_COMMAND_SORT_12NOV.md`: to `areas\trust-run\BUGS_BY_STRUCTURAL_CORE_TOOL.md`.
 
+### Refill, Fri 13 Nov 00:45 PC clock (controller)
+
+**trust-core-ribbon, next (Structural work now; cut from the installed Structural commit 8de95c34 in a separate worktree branch):**
+8. Step S1 as a DRAFT (card `04_REFERENCE\ux-plan\cards\TRUST-S1*`, button list `areas\STRUCTURAL_COMMAND_SORT_12NOV.md`): the Structural tab cut down to the KEEP buttons, laid out roof down, behind a NEW switch that is OFF by default, with today's Structural ribbon provably unchanged when it is off (a test that pins every button). One data list that is easy to change. Draft pull request, never merged.
+9. Fix what trust-review finds on re-review of 2038 and 2043, and on S1.
+
+**trust-struc-mgr-plan, next:**
+8. One file for Tim: `areas\TRUST_QUESTIONS_FOR_TIM.md`. Gather EVERY open decision from `areas\TRUST_PLAN_INTERVIEW_12NOV.md` (sections C to J and the card decisions), every "Decisions for Tim" in the TRUST cards (Civil, Structural, Manager), every "Defaults taken for Tim to confirm" in the lane status files in `areas\trust-run\` and the nine reader defaults, and every "question for Tim" in `areas\trust-run\reviews\`. Remove duplicates. Order by how much each one changes what gets built. Write each as a tick-box question ready for the question interface: one line of context, the recommended answer first with why, a one-line example on a real job, two to four short options. Group in batches of four related questions. Mark which ones the builders have already built a draft default for. Do not answer any of them.
+9. Update `areas\trust-plan-structural.md` for the evidence in `areas\TRUST_PROBES_13NOV.md` and `areas\trust-run\OLD_BLOCKS_FOUND.md` where it bears on Structural or Manager; say "no bearing" if none.
+
+**trust-acad-evidence, next:**
+6. A/B evidence, in the core console, for each reviewed builder branch as its fixes land: opening line (2041), step 5 (2045), reader (2040), and the Structural schedule rows (2044, which has a GO for testing on copies). Use the step-by-step checks in `areas\trust-run\cases\`. Say for each check: seen to pass, seen to fail, or could not be run headless.
+7. Old jobs are still unread. Make two more made-up drawings from `OLD_BLOCKS_FOUND.md`: one using the old "Stormwater Pit" block with plain-text pit numbers and the old level blocks, and one with the old "DIA. PIPE" blocks; save under `C:\CE_WORK\testset\MADEUP_*` with answer sheets.
+8. Undo cases not yet tested: U after two other commands in between; Redo after that U; Edit Pipe; PIT; CD. Outside Tim's hours only where AutoCAD itself is needed.
+
+**trust-reader, add to its items:** the old pit block "Stormwater Pit" (no attributes, layers STORMWATER PIT, PITS HIDDEN, GRATED TRENCH), plain-text pit numbers, the old level blocks COVER LEVEL, INVERT and NEW LEVEL, the old "100/150/225/300 DIA. PIPE" blocks, the old DOWNPIPE block (attribute DP) and old tank blocks (attribute WT): each as a known older version, Proposed with the reason, never Sure.
+
 ### trust-struc-mgr-plan (planning only)
 1. `areas\trust-plan-structural.md` and `areas\trust-plan-manager.md` (its brief).
 2. Draft cards, in the TRUST card shape, for the first three Structural steps and for "going back a version, rehearsed" in Manager.

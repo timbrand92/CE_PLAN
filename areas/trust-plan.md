@@ -214,7 +214,22 @@ Read from the installed code (Civil and Manager cf059dcf, Structural 8de95c34) b
 
 ---
 
+## 4b. What AutoCAD showed on the night of 12 to 13 Nov (first real evidence)
+
+From the AutoCAD evidence lane, on the build installed on Tim's PC (Civil 3.0.90), on made-up and test copies only. Full write-up: `areas\TRUST_PROBES_13NOV.md` and `areas\trust-run\OLD_BLOCKS_FOUND.md`. The controller has read both write-ups; it has not repeated the tests.
+
+1. **One U does put CE's stored data back** after CDSYNC, after CDGRAPH and after Edit Pit. Compared before and after, exactly. The Undo worry in steps 5 and 8 is much smaller than feared. Not tested: U after other commands in between, Redo, Edit Pipe, PIT, CD.
+2. **One U does nothing for the change made when a drawing opens** (pipes turned into CE pipes). The only way back is the backup file beside the drawing, which misses unsaved work. This is the strongest reason for Tim's 12 Nov answer that nothing changes on open.
+3. **The "read-only" tools do write.** CDGRAPH, CDDIAG and the Project Review window update CE's stored data. So does Edit Pit, even when you press Cancel: the update runs before the window opens. CDCHECKCURRENT and CE Health did not change anything.
+4. **The made-up values are real.** A plain line on the pipe layer became "100 dia UPVC". A pit block with no label became "P8", 350 x 350, plastic, and left out of the schedule. In a metre drawing the invented pit was 350 (millimetres) beside a real pit of 0.6 (metres).
+5. **The check is fast; CDSYNC is slow.** The read-only check took 8 to 65 thousandths of a second, including on a made-up job of 200 pits and 370 pipes. CDSYNC took 4 minutes 6 seconds on that same job. The opening line can run on any size of job and must never call CDSYNC.
+6. **The pit symbol swap runs when any drawing opens, Civil or not,** and prints nothing of its own.
+7. **The old pit is a block called "Stormwater Pit", and CE does not see it as a pit at all.** It is in the office block drawing the tool palettes pull from, and in every old civil block library that could be opened (2021 and 2022). It has no number built in. There was never a pit label block in the old libraries: pit numbers and levels were plain text or small level blocks. Old pipes were also drawn as "100 DIA. PIPE" style blocks as well as lines. The reader must learn these names; until it does, an old job's pits are invisible to CE.
+8. **A downpipe from today's palette carries no data at all;** the old downpipe block carried one value (DP), and the old tank blocks one (WT).
+
 ## 5. Probes needed before some cards can be final
+
+**Done 12 to 13 Nov:** P1 (timing) and P2 (Undo, for the cases in 4b). P3 is part done: block names were read from the office block libraries, not yet from old jobs.
 
 These need AutoCAD on copies, so they wait for Tim to lift the hold for them. None changes a real job.
 
