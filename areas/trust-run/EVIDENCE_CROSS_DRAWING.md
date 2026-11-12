@@ -143,3 +143,15 @@
 1. **Alone (09:23:24):** fresh AutoCAD started 09:22:09 on a copy of the second job drawing; the first typed CE command was CDFEEDBACK. The robot printed its "may be waiting at a prompt" alarm (it does this whenever a window blocks); the window was in its list at once; AutoCAD said "Responding"; the robot's Cancel on the window closed it; command line "CDFEEDBACK cancelled."; record read afterwards: 37,921 characters, 2 pits, 46 pipes, version 2.2 (the untouched value). My very first record read, taken seconds after the launch, failed (the drawing was still loading); the later reads worked.
 2. **Sequence (09:26 to 09:30):** copy of the standard drawing as `CLDTP_FA2.dwg`, CDDIAG: 11/49, version 2.3, own name. Copy of the second job as `CLDTP_FB2.dwg`: "0 pipe(s) upgraded to CE pipe objects, 19 left as drawn" (the usual open-time step; backup `CLDTP_FB2_PRE_C7_...dwg` made beside it); before: 37,921 characters, 2/46. CDFEEDBACK, Cancel: 37,921, 2/46, own name. CDHELP then close: 247,605, 11/49, path = `CLDTP_FA2.dwg`.
 3. **Hang capture was NOT needed** (nothing wedged), so no stack or dump was taken.
+
+---
+
+# PR 2089 (BUG-1456, the fourth door), core console, Fri 13 Nov 09:35 PC clock
+
+**Build:** `claude/bug-1456c-snapshot-write-door` at `e938d0d4`, built fresh in my own folder, 0 errors, loaded only in AutoCAD's core console from a scratch folder. Nothing installed, no setting changed. Draft evidence, robot only, not Codex-looked.
+
+## FOR TIM
+
+1. **The new check PASSES (CEPROOFCROSSCOPY, BUG-1456-CROSS-03).** A tool that changes several things in one step writes a copy of CE's record into the drawing as part of that step. When that copy came from another drawing's record, it wrote nothing here and did not become this drawing's live record. The faulty version (a copy of unknown source) did write and the check noticed it. A copy of the drawing's own record is still written. All three parts seen to pass, with the detail line the foundations lane said to expect.
+2. **The two earlier checks still pass on this head:** CEPROOFCROSSCHANGE (2083's door) and CEPROOFCROSSDRAWING (2073's cure).
+3. **Not proven:** the real-AutoCAD part (ordinary batch tools in one drawing never print the refusal line; the other four rows of the pending-tests list). The core console cannot run Edit Pit batch Apply or the other windows; the check drives the write step directly, which proves the rule, not the whole drafter's job.
