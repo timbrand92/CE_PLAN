@@ -1,5 +1,26 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+### Trust plan step 7, the LPD as the one stored start point (TRUST-07, DRAFT card) — 13 November 2026 (Built and unit-tested only; NOT installed; the switch ships ON; robot and Codex to run on COPIES)
+
+PR 2058 (DRAFT, never merged by the run), branch `claude/trust-07-lpd-start-point`, stacked on step 6. Setting: `trust.toolsStartFromConfirmedLpd` (ON). Full case set: `areas\trust-run\cases\TRUST-07.md`. Existing robot scripts for CDRENUMBER and CDRUNSOLVE meet ONE NEW QUESTION on a drawing with an LPD; answer it or switch the setting off.
+
+1. **Asked once (H1, H5):** a copy with an LPD drawn by CDLPD. Run CDRENUMBER. Right = "CE found the LPD on the pipe leaving P1. Is this the start point?"; type Y; "CE: LPD confirmed on the pipe leaving P1."; answer No to the renumber. Run CDRENUMBER and CDRUNSOLVE again: no second question. Save, close, reopen: still no question.
+2. **Enter does not confirm:** at the question press Enter. Right = the question is asked again; nothing stored.
+3. **Escape (H8):** fresh copy; Escape at the question. Right = "CE: LPD not confirmed, order may differ.", the tool carries on as the installed build does, and the drawing's LPD group holds nothing new.
+4. **Opening line (H19):** confirmed copy, reopen. Right = "..., all linked, LPD confirmed." Erase the LPD's pipe, save, reopen. Right = "needs checking" with "the LPD's pipe is no longer in the drawing"; CDCHECKCURRENT lists "The LPD needs checking"; CDRENUMBER says the same and picks no other LPD.
+5. **CDRENUMBER with two pipes leaving the network:** not confirmed = it asks which pit is the main outlet (as today). Confirmed = it does not ask, and counts up from the pit at the LPD.
+6. **CDRENUMBER with no pipe leaving the network (BUG-1237, H28):** confirmed LPD = it renumbers from the pit at the LPD instead of stopping.
+7. **The solver and the pit named LPD-3 (H7):** LPD drawn at P1, pit P3 renamed LPD-3. Confirmed = the run from upstream of P3 goes on to the LPD. Not confirmed = "LPD found by pit name at 'LPD-3', not confirmed".
+8. **CDLPD cannot write (H14):** a drawing whose outlets were set in the Design window. Type CDLPD. Right = one plain line starting "[CE] CDLPD cannot change the LPD here:" before any window, ending "Nothing has been changed."; never "see CE log". Same for CDLPDRESET.
+9. **Move the LPD (H20):** confirmed copy; CDLPD onto another pipe end. Right = the next tool asks the question again. One U after the move: RECORD what comes back.
+10. **CDLPDRESET:** confirmed copy; reset. Right = the opening line no longer says LPD confirmed and says nothing about a left-over confirmation.
+11. **Save As (H17):** confirmed copy saved under a new name: still "LPD confirmed", no question. Then erase the network and draw a new one: "needs checking", and a new LPD is asked about.
+12. **Read-only (H27):** open a confirmed-less copy read-only, run CDRENUMBER, type Y. Right = "CE: this drawing is read-only, so the LPD confirmation is used for this session only and is not stored."; file time and size unchanged.
+13. **Installed build afterwards (H7 of the card's list, H15):** open a confirmed copy in the INSTALLED build. Right = CDLPD, CDLPDRESET and the Pit Schedule work as before and the LPD does not read as damaged.
+14. **Switch off (H22):** CDRENUMBER and CDRUNSOLVE ask nothing and behave as the installed build; the stored confirmation is still in the drawing.
+15. **Undo (H9), RECORD only:** confirm, press U once, read the LPD group. No line may promise what U does.
+16. **Not built, do not test as built:** the long section (CDPROFILE), placing the LPD from inside a tool, two LPDs choosing by which pits drain where, an LPD inside an attached drawing, the Pit Schedule's order.
+
 ### Trust plan step 8 slice A, the read-only Check this drawing list (TRUST-08, DRAFT card) — 13 November 2026 (Built and unit-tested only; NOT installed; the switch ships OFF; robot and Codex to run on COPIES)
 
 PR 2051 (DRAFT, never merged by the run), branch `claude/trust-08a-check-list`, stacked on step 6 with the reader (PR 2040) merged underneath. Setting: `trust.checkThisDrawingList` (OFF; set it to true in `CD_Settings.json` for these cases and put it back after). Command: CDCHECKDRAWING (typed; on no ribbon).
