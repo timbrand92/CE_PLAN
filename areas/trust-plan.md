@@ -118,7 +118,7 @@ Each step has its own card. Step 1's card is answered; the others are DRAFT in `
 2. **What you see:** CE Drainage, left to right: pits, downpipes and tanks, pipes, Check this drawing, schedules, help. CE Design beside it. Hidden tools can still be typed.
 3. **Depends on:** your answers to Civil sort questions 3 to 11 and the "CE tools on every drawing" list (interview F3 to F12). Step 1 for the Check button's first job.
 4. **Proven by:** robot reads the ribbon back and compares it with the approved list, button by button, and fires each button once; Codex looks at both tabs on 2027; the 2022 to 2024 pull-down menu is checked against the same list; Tim uses it for three days.
-5. **Undo:** the old layout is kept as the existing "Show the old CE tabs" switch. Switch it on and restart AutoCAD.
+5. **Undo (corrected 12 Nov):** the two-tab layout sits behind its own new switch, off by default. Switch it off and restart AutoCAD, and the ribbon is exactly today's, button for button (a test pins all 49). The older "Show the old CE tabs" switch is NOT the way back: it brings up an earlier three-tab layout.
 6. **Risk: LOW to MEDIUM.** Nothing in a drawing changes. The risks are a button you rely on going missing, and the 2022 to 2024 menu drifting from the ribbon because it is a separate list today.
 
 ### Step 3: same settings for everyone (card TRUST-03, DRAFT)
