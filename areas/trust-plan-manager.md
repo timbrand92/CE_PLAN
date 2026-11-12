@@ -126,7 +126,7 @@ Each step follows the same gate as the Civil steps (`areas\trust-plan.md` sectio
 5. **Undo:** a switch returns the installer to one-at-a-time.
 6. **Risk: LOW to MEDIUM.** It touches the installer, which is the one thing that can leave a PC without CE.
 
-### M4: one line saying what this PC runs (small code, switch; card DRAFT `04_REFERENCEX-planrdsTRUST-M4_WHAT_EACH_COLLEAGUE_RUNS_CARD_DRAFT_2026-11-12.md`)
+### M4: one line saying what this PC runs (small code, switch; card DRAFT `04_REFERENCE\ux-plan\cards\TRUST-M4_WHAT_EACH_COLLEAGUE_RUNS_CARD_DRAFT_2026-11-12.md`)
 
 1. **Goal:** you can see every colleague's Civil, Structural and Manager build and AutoCAD year, and whether they are on the office setup (from Civil step 3).
 2. **What you see:** your dashboard gets one row per PC: "Civil 3.0.90, Structural 1.0.126, Manager 1.1.89, AutoCAD 2027, office setup yes". The colleague sees the same line in CE_VERSION, with the year, not AutoCAD's internal number.
