@@ -349,3 +349,44 @@ Where a group says "+N more", the index does not list those numbers, so they are
     1. BUG-1109: No council value can be edited anywhere in the product
     2. BUG-1213: Older AutoCAD cannot open the council evidence behind a value or saved rule finding
 9. **CDSYSTEM**: no group in the index (no open bug named under this command)
+
+## Added 13 Nov from the code read
+
+64 new bugs, BUG-1297 to BUG-1360, filed after BUG-1280 to BUG-1296. Each was checked against the installed Civil 3.0.90 code copy. None has been seen in AutoCAD. A fault that touches several tools is filed once and listed under each.
+
+1. **PIT**: BUG-1297 (locked layer found only after the window is filled in)
+2. **CDLPD**: BUG-1298 to BUG-1302 (plain polyline accepted, old note kept on a locked layer, old LPD tag left on the earlier pipe, "LPD set." with no note, Design refusal reason only in the log)
+3. **CDEDIT**: BUG-1303 to BUG-1305 (Edit Pit saves next-pit defaults first, "leave it out" wording, Esc at reopen)
+4. **CDRENUMBER**: BUG-1306, BUG-1307 (second branch numbering order, "8" and "P8")
+5. **DP, IO, OF, FO, GIO**: BUG-1308 (reason printed twice), BUG-1309 (layer colour and linetype reset)
+6. **CDFW**: BUG-1308, BUG-1309
+7. **CDTG**: BUG-1310 (not all-or-nothing), BUG-1311 (Settings read once per session), BUG-1312 (enter to skip wording)
+8. **CDRG**: BUG-1313 (1 drawing unit close distance), BUG-1314 (missing GIO block), BUG-1315 (locked layer reason in the log)
+9. **CDWT**: BUG-1316 (library tank details lost), BUG-1317 (only 9 choices)
+10. **CDSOURCE**: BUG-1308, BUG-1309, BUG-1315, BUG-1318 (number reused after erase), BUG-1319 (name ending in a number)
+11. **CDTAG**: BUG-1320 (old label text after No), BUG-1321 (connection point reset), BUG-1322 (used-name refusal comes last)
+12. **CD**: BUG-1323 (level text side ignores Settings), BUG-1324 (Quick Mode inverts switch does nothing), BUG-1325 (starting levels run uphill)
+13. **CDREVERSEFLOW**: BUG-1326 (tooltip and list wording)
+14. **CDANNOTATIONEDIT**: BUG-1327 (tooltip words), BUG-1328 (Flip leaves text upside down), BUG-1330 (not marked placed by hand)
+15. **CDTEXTSEG**: BUG-1329 (twin detention label overlap), BUG-1330
+16. **CDMA**: BUG-1331 (rotated UCS), BUG-1332 (invented fallback numbers), BUG-1330
+17. **CDSL**: BUG-1333 (9000 m limit versus 3000 m in Settings)
+18. **MR and CR**: BUG-1334 (pipes drawn on 2027 cannot be moved or copied)
+19. **CDSTRIP**: BUG-1335 (layer name fixed), BUG-1336 (Close after 2 points), BUG-1337 (metre drawing 1000 times too wide)
+20. **CDCHECKCURRENT**: BUG-1338 (To be removed pits counted), BUG-1339 (blank links never flagged)
+21. **CDINSPECTOR**: BUG-1340 (fixed 400 mm band and fallbacks), BUG-1341 ("Not found in ProjectData" wording)
+22. **PITSCHEDULE**: BUG-1342 (CSV export has no guard), BUG-1309 (SCHEDULE layer reset to colour 7)
+23. **CDPROFILE**: BUG-1343 (fixed sump, stub and scales)
+24. **CDHELP**: BUG-1344
+25. **CDS**: BUG-1345
+26. **CDFEEDBACK**: BUG-1346 (typed report lost), BUG-1347 (silent 2,000 character cut)
+27. **CEBLOCKS**: BUG-1348 (raw message and all-or-nothing), BUG-1349 (help says fixed size)
+28. **CDDESIGN**: BUG-1350 (engineering numbers fixed in the code)
+29. **CDRAINFALL**: BUG-1350, BUG-1353 (record rebuilt before the window)
+30. **CDTWL**: BUG-1351 (fixed 0.5 L and 10 m), BUG-1354 (CE mark written first)
+31. **CDCALC**: BUG-1352 (sample figures pre-filled)
+32. **CDDEST**: BUG-1354
+33. **CDRUNSOLVE**: BUG-1355 (follows first pipe at a branch), BUG-1356 (preview quotes sizes it does not write)
+34. **CDRULES**: BUG-1357 ("results recorded" when held back), BUG-1358 (run record grows every run)
+35. **CDSYSTEM**: BUG-1359 (count wording), BUG-1360 (other objects dropped without a count)
+36. **No new entry (nothing confirmed in code):** CDPITCOVERFLIP, CDNEWDWG, CDRULEBOOK, CDTIDYLABELS, CDSOURCE-style unconfirmed items are named in trust-records.md
