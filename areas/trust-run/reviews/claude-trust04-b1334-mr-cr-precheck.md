@@ -1,6 +1,6 @@
 # Review: PR 2081 `claude/trust04-b1334-mr-cr-precheck` (BUG-1334, MR and CR on AutoCAD 2027 say in plain words what they cannot move)
 
-**Reviewer:** lane trust-review (fourteenth run). **Written:** 2026-11-13 07:27 PC clock. **Head reviewed:** `c78016cf` (own commits `323f6ec5`, `c78016cf` on `cf059dcf`, the installed Civil 3.0.90, confirmed as ancestor). Read only: no build, no test run, no AutoCAD.
+**Reviewer:** lane trust-review (fourteenth run). **Written:** 2026-11-13 07:24 PC clock. **Head reviewed:** `c78016cf` (own commits `323f6ec5`, `c78016cf` on `cf059dcf`, the installed Civil 3.0.90, confirmed as ancestor). Read only: no build, no test run, no AutoCAD.
 
 ---
 
