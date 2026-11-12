@@ -69,7 +69,7 @@
 
 1. **One small build or several:** recommended, the four Civil fixes go on your PC as one small safety build, after each has passed alone, and the Structural five as a second build later. Reason: installing two things one after the other means the second can wipe the first (RULES 8.5). OPEN.
 2. **Is BUG-1255 a blocker for the first colleague release,** or can the core ship with CSV only and the Excel fault on the tool note? Recommended: blocker, because the schedule is the thing colleagues send to council. OPEN.
-3. **Reminder time:** how many minutes without a save before CE speaks. Recommended 15. OPEN.
+3. **Reminder time:** ALREADY DECIDED, corrected 12 Nov. Tim's decision 223 (5 Nov, `decisions\2026-10-29_TIM_ANSWERS.md`): both a "Not saved for 25 minutes" reminder AND timed backup copies of unsaved work, the copies going to the CE backup folder only, never over the drawing. This card's earlier lines ("reminder only", "recommended 15", "no file written") were wrong; the checks for this fix must expect the backup copy in the backup folder and nothing written to the drawing.
 4. **Anything missing from this list** that has cost you or a colleague work. OPEN.
 
 ## 6. Not known yet
