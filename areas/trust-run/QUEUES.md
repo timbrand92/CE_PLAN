@@ -137,6 +137,16 @@
 
 **trust-review, next run:** re-review pull request 2040 at its new head (the eight items in `reviews\claude-trust-reader.md`, plus the new copy-filler and old-palette commits ab4fc1f7 and 222a303e); then an independent review of ten of the rewritten tool notes in `04_REFERENCE\core-tool-notes\` against the code.
 
+### Refill, Fri 13 Nov 01:45 PC clock (controller)
+
+**trust-struc-mgr-plan, next:**
+10. At the very top of `areas\TRUST_QUESTIONS_FOR_TIM.md`, as batch 0, add the ONE question the whole run is now waiting on, with the evidence: several things cannot be seen without the trial build loaded in real AutoCAD (the opening line, Edit Pit's line, every window, the ribbon, Undo on the new builds, all Structural fixes; see `areas\trust-run\EVIDENCE_BRANCHES.md` FOR TIM item 5). Loading it means installing it. Options to put, recommendation first: (a) the robot may install a trial build on Tim's PC only between 5:30pm and 8:10am, test on copies, and put back exactly what was there (Civil 3.0.90, Manager 1.1.89, Structural 1.0.126, checked file by file) before 8:10am, every night until told otherwise; (b) only on a separate test PC or the virtual machine, never on his PC; (c) not yet. Say what each costs him. Do not answer it.
+11. Keep that file current: add the reader lane's 35 draft defaults (`areas\trust-run\trust-reader.md`), the "where confirmed is kept" default for the LPD, and every new "Defaults taken for Tim to confirm" line in the lane files since you wrote it. Keep the count in FOR TIM right.
+12. A second trust check of the 47 core tools, now that better evidence exists: `areas\TRUST_CORE_TOOLS_SECOND_CHECK_13NOV.md`, same shape as the first check, built from the rewritten tool notes (`04_REFERENCE\core-tool-notes\`), `areas\trust-run\BUGS_FIXED_IN_CODE_NOT_PROVEN.md`, the new faults BUG-1280 to BUG-1360 (grep the bug file by number), `areas\TRUST_PROBES_13NOV.md` and `areas\trust-run\EVIDENCE_BRANCHES.md`. For each tool: which trust boxes are now known to pass, known to fail (with the bug number), or still never checked; and the single next thing that would move it forward. FOR TIM first: the ten tools closest to passing all five rules and what each still needs.
+
+**trust-acad-evidence, add:**
+11. Find out, without changing anything, every way a trial build could be seen in real AutoCAD WITHOUT touching Tim's installed bundle or any AutoCAD or Windows setting: read `C:\CE_PLAN\04_REFERENCE\TEST_STATION_SETUP.md`, `C:\CE_PLAN\TEST_STATION_REQUESTS.md` and `TEST_STATION_RESULTS.md` (is the virtual machine test station still alive, and how is a request made), and the driver's own notes. Write the options, what each needs from Tim, and your recommendation to `areas\trust-run\HOW_TO_SEE_TRIAL_BUILDS.md`. Do not install, do not change a setting, do not send a request anywhere.
+
 ### trust-struc-mgr-plan (planning only)
 1. `areas\trust-plan-structural.md` and `areas\trust-plan-manager.md` (its brief).
 2. Draft cards, in the TRUST card shape, for the first three Structural steps and for "going back a version, rehearsed" in Manager.
