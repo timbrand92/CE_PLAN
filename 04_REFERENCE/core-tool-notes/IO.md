@@ -24,7 +24,7 @@
 1. **Refuses before anything is asked:** read-only drawing, Paper Space, REFEDIT open, Structural drawing (asks first).
 2. **Ambiguous or overlapping spot:** asks you to pick again.
 3. **On top of another source:** refused, pick again.
-4. **Locked DOWNPIPES or GUIDELINES layer:** checked after the pick. On its own: "The source or GUIDELINES layer is locked. Nothing was placed." On a pipe or pit: only "... could not be placed. Nothing was changed - see CE log for details."
+4. **Locked DOWNPIPES or GUIDELINES layer:** checked after the pick. On the normal route (a pick you make in the drawing, in open ground, on a pit or on a free pipe end) a locked layer is refused inside the one-step placement, which rolls back; the line you read is "The source could not be placed. Nothing was changed - see CE log for details." It does not name the layer (the CE log holds "The source or GUIDELINES layer is locked. Nothing was placed."). The plain locked-layer line appears only on the fallback route (a point handed in by another command, or a pick not taken as a landing).
 5. **Missing block file:** only "IO command cancelled."; reason in the CE log.
 
 ## 4. What it asks you, and what Enter means
@@ -58,7 +58,7 @@ No bugs are filed under IO itself. Shared with DP and the other source commands:
 
 ## 8. On AutoCAD 2022 to 2024
 
-1. **Pit landing refused** ("Exact source COPY receipts are unavailable on this AutoCAD version"). Also on 2025 and 2026.
+1. **Pit landing refused:** "[CE] Source-to-pit placement is unavailable: Exact source COPY receipts are unavailable on this AutoCAD version. Move the source and pick again, or press Esc." Also on 2025 and 2026 (only the 2027 build has the copy component).
 
 ## 9. Proven by
 
@@ -79,11 +79,11 @@ Paths are under `C:\CE_WORK\scratch\audit_civil\Modules\Drainage\`.
 7. **2.5:** `Services\SourceTagService.cs:196-240`.
 8. **3.1:** `SourceBlockInsertCommands.cs:122`; `Services\DrawingSafetyService.cs:61-131`.
 9. **3.2, 3.3, 4.2:** `Rules\SourceLanding.cs:103-137`; `Rules\SourcePickPipeRecordRule.cs:49-54`; `BlockService.cs:920-928, 979-1000`.
-10. **3.4:** `SourcePlacementService.cs:1384-1404`, `1440-1443`; `LinkService.SourceLanding.cs:612-617`; `SourcePlacementService.cs:596-602`.
+10. **3.4:** `SourcePlacementService.cs:1384-1404`, `1440-1443`; `LinkService.SourceLanding.cs:612-617`; `SourcePlacementService.cs:596-602`. Route choice: `Rules\SourceLanding.cs:202-212`, `SourcePlacementService.cs:1640-1646` (a free spot, a pit and a free pipe end are all Supported, so they take the one-step placement at `462-475`); the plain locked-layer line is the fallback route only.
 11. **3.5:** `BlockService.cs:952`; `SourceBlockInsertCommands.cs:888`.
 12. **4.1 (Enter):** `BlockService.cs:1610-1615`.
 13. **5.1:** `Rules\SourceLanding.cs:464-483`.
 14. **6.1:** `LinkService.SourceLanding.cs:551` (one transaction); `PlacementContinuationService.cs:13-28`.
-15. **7, 8:** as in the DP note: `Services\SourceCloneMapNativeBridge.cs:185-229`; `SourcePlacementService.cs:1656-1658`; `Models\UserSettings.cs:843`; `SourcePlacementService.cs:457, 477` with `SourceBlockInsertCommands.cs:888`.
+15. **7, 8:** as in the DP note: `Services\SourceCloneMapNativeBridge.cs:185-229` (`#if NET10_0_OR_GREATER` is the 2027 build, the `#else` at 226-228 holds the reason; `CE_CVL_SUITE.csproj:4` has net48, net8.0 and net10.0); the line the drafter reads is built at `Services\LinkService.SourceLanding.cs:491-493` and printed by `Services\BlockService.cs:920-928, 999`; `SourcePlacementService.cs:1656-1658`; `Models\UserSettings.cs:843`; `SourcePlacementService.cs:457, 477` with `SourceBlockInsertCommands.cs:888`.
 
-Checked against the installed code (Civil 3.0.90), Fri 13 Nov 2026, 00:37. Nothing was run in AutoCAD.
+Checked against the installed code (Civil 3.0.90), Fri 13 Nov 2026, 02:33; corrected after independent review. Nothing was run in AutoCAD.

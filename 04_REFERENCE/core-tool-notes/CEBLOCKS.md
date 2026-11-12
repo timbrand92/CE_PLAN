@@ -22,10 +22,10 @@
 ## 3. What it will not do
 
 1. **REFEDIT open:** "Finish the reference edit before placing a CE block." If AutoCAD cannot say: "CE Blocks could not check the reference edit state. No block was placed."
-2. **Locked layer:** "Layer X is locked. No block was placed." (checked before the first question).
+2. **Locked layer:** "[CE] Layer X is locked. No block was placed." (checked before the first question; with the frozen-layer switch off it reads "Layer X is locked or frozen. ...").
 3. **Frozen but unlocked layer:** warns the block will be hidden (CE does not thaw it) and places it (switch on).
 4. **Office block drawing not synced:** "The source block drawing has not synced yet. Check OneDrive and try again."
-5. **Block from an Xref:** "This block is from an external drawing and cannot be placed."
+5. **Block from an Xref:** "CE Blocks could not place X: This block is from an external drawing and cannot be placed."
 6. **Not checked:** Paper Space, read-only drawing, metre drawings (the palette scale is used as stored).
 
 ## 4. What it asks you, and what Enter means
@@ -80,14 +80,14 @@ Paths are under `C:\CE_WORK\scratch\audit_civil\Modules\Manager\`.
 3. **2.3:** `CeBlocksInsertService.cs:184-205`.
 4. **2.4, 6.2:** `CeBlocksInsertService.cs:116-127`; `Services\CeBlocksSettings.cs:26, 37-41`.
 5. **3.1:** `CeBlocksInsertService.cs:30-42`.
-6. **3.2, 3.3, 7 BUG-1047:** `CeBlocksInsertService.cs:57-65, 251-261`; `Services\CeBlocksLayerGate.cs:20-35`; `CeBlocksSettings.cs:30`.
-7. **3.4:** `CeBlocksInsertService.cs:47`. **3.5:** `CeBlocksInsertService.cs:156`.
+6. **3.2, 3.3, 7 BUG-1047:** `CeBlocksInsertService.cs:57-65, 251-261`; `Services\CeBlocksLayerGate.cs:20-42` (message at 32-39); `CeBlocksSettings.cs:30`.
+7. **3.4:** `CeBlocksInsertService.cs:47`. **3.5:** `CeBlocksInsertService.cs:156` (thrown, then printed with the "CE Blocks could not place" prefix at 215).
 8. **4.1 to 4.3:** `CeBlocksInsertService.cs:68-112`.
 9. **4.4, 7 BUG-188:** no jig in `Modules\Manager`; `CeBlocksInsertService.cs:76, 86`.
 10. **5.1, 7 new 1:** `CeBlocksPaletteService.cs:26`; `Services\CeBlocksCatalog.cs:44-50`.
 11. **6.1, 7 new 2:** `Modules\Drainage\Assets\Help\guide-content.js:11`.
 12. **7 BUG-1166:** `CeBlocksSettings.cs:32-35`.
-13. **7 BUG-524:** `Shared\CE_SHARED\Services\RibbonBuilder.cs:268-270` (repo root); `Modules\Drainage\Models\UserSettings.cs:3668-3669`.
+13. **7 BUG-524:** `Shared\CE_SHARED\Services\RibbonBuilder.cs:143, 450-451` and `Shared\CE_SHARED\Services\CeRibbonLabel.cs:30-41` (repo root); `Modules\Drainage\PluginInitialization.cs:259` (Civil sets the switch); `Modules\Drainage\Models\UserSettings.cs:3668-3669`.
 14. **8.1:** no `#if` on this path.
 
-Checked against the installed code (Civil 3.0.90), Fri 13 Nov 2026, 01:06. Nothing was run in AutoCAD.
+Checked against the installed code (Civil 3.0.90), Fri 13 Nov 2026, 02:20; corrected after independent review. Nothing was run in AutoCAD.

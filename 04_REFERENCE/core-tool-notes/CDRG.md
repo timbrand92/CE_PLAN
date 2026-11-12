@@ -23,7 +23,7 @@
 ## 3. What it will not do
 
 1. **Refuses before anything is asked:** read-only drawing, Paper Space, REFEDIT open, Structural drawing (asks first).
-2. **Locked or Xref 50CONT or HATCH113 layer:** refused only after the outline and the GIO answers. On screen: "Raingarden could not be placed. Nothing was changed - see CE log for details." The layer is named only in the log.
+2. **Locked or Xref 50CONT or HATCH113 layer:** refused only after the outline and the GIO answers. On screen (no GIO): "Raingarden could not be placed. Nothing was changed - see CE log for details." With a GIO on the exact route the same refusal names the GIO instead ("GIO could not be placed. Nothing was changed - see CE log for details."); on the older GIO route it comes after "GIO ... was placed, but the raingarden boundary was not". The layer is named only in the log.
 3. **Locked GUIDELINES:** the raingarden is still placed and a line says the label was not.
 4. **A drawing in no metric units:** placed with area Unknown and "The raingarden was placed without a size ...".
 5. **Does not check for an outline that crosses itself;** the area is then wrong with no warning.
@@ -32,7 +32,7 @@
 ## 4. What it asks you, and what Enter means
 
 1. **"Specify first raingarden point":** Enter or Esc: "CDRG command cancelled."
-2. **"Next point [Undo]"** (under 3 points), then **"Next point (N pts) [Close/Undo]"**: Enter (or right-click) with 3 or more points finishes the outline; with fewer: "Pick at least 3 points." Undo removes the last point. Picking near the first point closes it. Esc cancels.
+2. **"Next point [Undo]"** (under 3 points), then **"Next point (N pts) [Close/Undo]"**: Enter (or right-click) with 3 or more points finishes the outline; with fewer: "[CE] Pick at least 3 points (N so far)." and it keeps asking. Undo removes the last point. Picking near the first point closes it. Esc cancels.
 3. **"Add a GIO source to this raingarden? [Place/Skip] <Skip>":** Enter = Skip.
 4. **"Specify GIO insertion point"** (if Place): Esc: "CDRG command cancelled."
 5. **No window.**
@@ -85,12 +85,12 @@ Paths are under `C:\CE_WORK\scratch\audit_civil\Modules\Drainage\`.
 5. **2.5:** `SourceBlockInsertCommands.cs:546-607`; `SourcePlacementService.cs:665-673, 686-726`.
 6. **2.6:** no record update call in CDRG; older route `SourcePlacementService.cs:1332`.
 7. **3.1:** `SourceBlockInsertCommands.cs:424`; `Services\DrawingSafetyService.cs:61-131`.
-8. **3.2, 7 new 2:** `SourcePlacementService.cs:843-860`, `602`; `SourceBlockInsertCommands.cs:612-614`.
+8. **3.2, 7 new 2:** `SourcePlacementService.cs:843-860`, `602` (family "RG" at `824` gives "Raingarden"; the GIO route at `678` gives "GIO"; older route wrapper `724-726`); `SourceBlockInsertCommands.cs:612-614`.
 9. **3.3:** `SourcePlacementService.cs:944-951`; `RaingardenLabelRule.cs:42-44`.
 10. **3.4, 5.1:** `SourceBlockInsertCommands.cs:597, 619-621`.
 11. **3.5, 7 new 1:** `RaingardenPlacementPlan.cs:103-132`.
 12. **3.6:** no `PlacementContinuationService` in CDRG.
-13. **4.1, 4.2, 7 BUG-771:** `SourceBlockInsertCommands.cs:438-518`, `923-934`; `Commands\RaingardenOutlineStep.cs:27-40`.
+13. **4.1, 4.2, 7 BUG-771:** `SourceBlockInsertCommands.cs:438-518`, `923-934`; `Commands\RaingardenOutlineStep.cs:27-40` ("Pick at least" is line 28; Close with too few points says "Need at least 3 points to close", line 32; a finished outline under 3 points ends with "Need at least 3 points. CDRG command cancelled.", `SourceBlockInsertCommands.cs:522`).
 14. **4.3, 4.4:** `SourceBlockInsertCommands.cs:526-559`.
 15. **5.2:** `SourcePlacementService.cs:723-726`.
 16. **6.1:** `SourcePlacementService.cs:686-699`.
@@ -98,4 +98,4 @@ Paths are under `C:\CE_WORK\scratch\audit_civil\Modules\Drainage\`.
 18. **7 new 3:** `Services\BlockService.cs:950-954`. **7 new 4:** `SourceBlockInsertCommands.cs:502-514`.
 19. **8.1:** no `#if` on this path; GIO pit landing `Services\SourceCloneMapNativeBridge.cs:185-229`.
 
-Checked against the installed code (Civil 3.0.90), Fri 13 Nov 2026, 00:40. Nothing was run in AutoCAD.
+Checked against the installed code (Civil 3.0.90), Fri 13 Nov 2026, 02:20; corrected after independent review. Nothing was run in AutoCAD.

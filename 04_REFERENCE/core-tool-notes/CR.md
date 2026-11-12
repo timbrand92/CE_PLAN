@@ -9,7 +9,7 @@
 
 1. **Copies the objects you select and then rotates the copy** about the destination point.
 2. **On AutoCAD 2027** it is CE's own copy-rotate, which accepts only eight plain kinds of object.
-3. **On AutoCAD 2022 to 2026** it runs the office LISP (AutoCAD's COPY, MOVE and ROTATE).
+3. **On AutoCAD 2022 to 2026** it runs the office LISP (AutoCAD's COPY, MOVE and ROTATE) by default. An opt-in switch (off) makes CE's own code drive the same AutoCAD commands instead.
 
 ## 2. What it changes in the drawing
 
@@ -53,7 +53,7 @@
 
 ## 8. On AutoCAD 2022 to 2024
 
-1. **A different tool:** the office LISP copy-rotate, also on 2025 and 2026, with no object-type limits beyond AutoCAD's own.
+1. **A different tool:** by default the office LISP copy-rotate, also on 2025 and 2026, with no object-type limits beyond AutoCAD's own. CE's 2027 code is under `#if NET10_0_OR_GREATER`; 2025 and 2026 are the net8 build, not 2027.
 
 ## 9. Proven by
 
@@ -66,7 +66,7 @@
 Paths are under `C:\CE_WORK\scratch\audit_civil\Modules\`.
 
 1. **1.1, 1.2, 3.2, 3.3:** `Shared.Transform.Native2027\TransformCommands.cpp:140-176`, `256-338` (copy at 304); `Drainage\Commands\CopyRotateCommands.cs:1-66`.
-2. **1.3, 8.1:** `Drainage\Commands\CopyRotateCommands.cs:67-124`, `399-424`; `Drainage\Models\UserSettings.cs:2324-2325`.
+2. **1.3, 8.1:** `Drainage\Commands\CopyRotateCommands.cs:1` (`#if NET10_0_OR_GREATER`), `67-137`, `374-390` (the opt-in switch, default off, or a unified host, picks the CE-written version), `399-424`; `Drainage\Models\UserSettings.cs:2318-2325`; `Drainage\CE_CVL_SUITE.csproj:4` (net48 = 2022 to 2024, net8 = 2025 and 2026, net10 = 2027).
 3. **2.2, 5.2, 7 BUG-1246:** `Drainage\Services\ExternalMutationCommandPolicy.cs:45`; `Drainage\Services\LinkService.Utilities.cs:231-248`; `Drainage\Services\LinkService.CopiedSourceOwnTag.cs:19-100`; `Drainage\Rules\CopiedSourceOwnTagRule.cs:60-70`; `Drainage\Rules\CloneSourceCopyRule.cs:28-35`; `UserSettings.cs:1360-1372`.
 4. **3.1, 7 new 1:** no `CommandPreFlight` in `CopyRotateCommands.cs`.
 5. **3.2, 7 new 2:** `TransformCommands.cpp:162-167`; `Drainage.NativeObjects2027\CeCvlPipeObject.h:27`.
@@ -74,4 +74,4 @@ Paths are under `C:\CE_WORK\scratch\audit_civil\Modules\`.
 7. **5.1, 7 BUG-1245:** `TransformCommands.cpp:322-336`.
 8. **6.1:** `TransformCommands.cpp:269, 304, 322`.
 
-Checked against the installed code (Civil 3.0.90), Fri 13 Nov 2026, 01:00. Nothing was run in AutoCAD.
+Checked against the installed code (Civil 3.0.90), Fri 13 Nov 2026, 02:20; corrected after independent review. Nothing was run in AutoCAD.

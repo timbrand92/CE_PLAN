@@ -24,7 +24,7 @@
 1. **Refuses before anything is asked:** read-only drawing, Paper Space, REFEDIT open, Structural drawing (asks first).
 2. **SOURCE block missing:** "CDSOURCE refused - SOURCE.dwg is not in the drawing or any trusted block path. Stage the block and retry CDSOURCE. Nothing was placed." Checked before the first question.
 3. **Custom with no name:** "CDSOURCE refused - a source needs a name. Nothing was placed."
-4. **Locked DOWNPIPES or GUIDELINES layer:** checked after the pick; on the usual route it says only "Generic Source could not be placed. Nothing was changed - see CE log for details." (the layer is not named).
+4. **Locked DOWNPIPES or GUIDELINES layer:** checked after the pick. On the normal route (a pick you make in the drawing, in open ground, on a pit or on a free pipe end) a locked layer is refused inside the one-step placement, which rolls back; the line you read is "Generic Source could not be placed. Nothing was changed - see CE log for details." It does not name the layer (the CE log holds "The source or GUIDELINES layer is locked. Nothing was placed."). The plain locked-layer line appears only on the fallback route (a point handed in by another command, or a pick not taken as a landing).
 5. **Ambiguous, overlapping, or on another source:** asks you to pick again.
 
 ## 4. What it asks you, and what Enter means
@@ -57,11 +57,11 @@
 1. **Error line printed twice** when placing fails.
 2. **Numbers can be reused:** CDSOURCE counts only names still in the drawing, so erasing ROOF DRAIN 3 and placing again gives ROOF DRAIN 3 again (not proven).
 3. **A custom name ending in a number** gets another number added ("GREASE TRAP 2" becomes "GREASE TRAP 2 1"; not proven).
-4. **Locked layer not named** on the usual route.
+4. **Locked layer not named:** the line you read on the normal route names no layer at all; the fallback line says only "the source or GUIDELINES layer".
 
 ## 8. On AutoCAD 2022 to 2024
 
-1. **Pit landing refused** ("Exact source COPY receipts are unavailable on this AutoCAD version"). Also on 2025 and 2026.
+1. **Pit landing refused** ("Source-to-pit placement is unavailable: Exact source COPY receipts are unavailable on this AutoCAD version."). Also on 2025 and 2026: the copy component exists only in the 2027 build (net10); the 2022 to 2024 build (net48) and the 2025 and 2026 build (net8) both refuse.
 
 ## 9. Proven by
 
@@ -84,12 +84,12 @@ Paths are under `C:\CE_WORK\scratch\audit_civil\Modules\Drainage\`.
 9. **3.1:** `SourceBlockGenericCommand.cs:45`; `Services\DrawingSafetyService.cs:61-131`.
 10. **3.2:** `SourceBlockGenericCommand.cs:56-59, 227`.
 11. **3.3:** `SourceBlockGenericCommand.cs:207`.
-12. **3.4, 7 new 4:** `LinkService.SourceLanding.cs:612-617`; `SourcePlacementService.cs:596-602`; `Rules\SourceFamilies.cs:71`.
+12. **3.4, 7 new 4:** free spot: `SourcePlacementService.cs:496-503`, `1440-1443`; pipe run: `LinkService.SourceLanding.cs:612-617`, `SourcePlacementService.cs:455-475`, `596-602`; `Rules\SourceFamilies.cs:71`. Route choice: `Rules\SourceLanding.cs:202-212`, `SourcePlacementService.cs:1640-1646` (a free spot, a pit and a free pipe end are all Supported, so they take the one-step placement at `462-475`); the plain locked-layer line is the fallback route only.
 13. **3.5:** `Rules\SourceLanding.cs:103-137`; `BlockService.cs:920-928, 979-1000`.
 14. **4.3 (Enter):** `BlockService.cs:1610-1615`; cancel words `SourceBlockGenericCommand.cs:91`.
 15. **5.1:** `SourceBlockGenericCommand.cs:94`.
 16. **7 BUG-740:** `Rules\SourceFamilies.cs:211-233`; `Services\LinkService.SpineClones.cs:157-159`; `Services\SourceTagService.SourceChangeApply.cs:33`; `Rules\SourceNumbering.cs:27-49`; `Commands\SourceTagCommand.cs:290`.
 17. **7 new 1:** `SourcePlacementService.cs:477` and `SourceBlockGenericCommand.cs:89-90`.
-18. **8.1:** `Services\SourceCloneMapNativeBridge.cs:185-229`; `LinkService.SourceLanding.cs:484-494`.
+18. **8.1:** `Services\SourceCloneMapNativeBridge.cs:185-229` (`#if NET10_0_OR_GREATER`; the `#else` at 226-228 gives the quoted reason); `LinkService.SourceLanding.cs:484-494` (the "Source-to-pit placement is unavailable:" line); `CE_CVL_SUITE.csproj:4` (targets net48, net8.0-windows, net10.0-windows).
 
-Checked against the installed code (Civil 3.0.90), Fri 13 Nov 2026, 00:43. Nothing was run in AutoCAD.
+Checked against the installed code (Civil 3.0.90), Fri 13 Nov 2026, 02:33; corrected after independent review. Nothing was run in AutoCAD.

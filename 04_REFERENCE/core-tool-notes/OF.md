@@ -22,7 +22,7 @@
 
 1. **Refuses before anything is asked:** read-only drawing, Paper Space, REFEDIT open, Structural drawing (asks first).
 2. **Ambiguous, overlapping, or on another source:** asks you to pick again.
-3. **Locked DOWNPIPES or GUIDELINES layer:** checked after the pick. On its own it names the lock; on a pipe or pit it says only "... could not be placed. Nothing was changed - see CE log for details."
+3. **Locked DOWNPIPES or GUIDELINES layer:** checked after the pick. On the normal route (a pick you make in the drawing, in open ground, on a pit or on a free pipe end) a locked layer is refused inside the one-step placement, which rolls back; the line you read is "The source could not be placed. Nothing was changed - see CE log for details." It does not name the layer (the CE log holds "The source or GUIDELINES layer is locked. Nothing was placed."). The plain locked-layer line appears only on the fallback route (a point handed in by another command, or a pick not taken as a landing).
 4. **Missing block file:** only "OF command cancelled."; reason in the CE log.
 
 ## 4. What it asks you, and what Enter means
@@ -77,10 +77,10 @@ Paths are under `C:\CE_WORK\scratch\audit_civil\Modules\Drainage\`.
 6. **2.4:** `Services\SourceTagService.cs:196-240`.
 7. **3.1:** `SourceBlockInsertCommands.cs:122`; `Services\DrawingSafetyService.cs:61-131`.
 8. **3.2, 4.2:** `Rules\SourceLanding.cs:103-137`; `Rules\SourcePickPipeRecordRule.cs:49-54`; `BlockService.cs:920-928, 979-1000`.
-9. **3.3:** `SourcePlacementService.cs:1384-1404`, `1440-1443`; `LinkService.SourceLanding.cs:612-617`; `SourcePlacementService.cs:596-602`.
+9. **3.3:** `SourcePlacementService.cs:1384-1404`, `1440-1443`; `LinkService.SourceLanding.cs:612-617`; `SourcePlacementService.cs:596-602`. Route choice: `Rules\SourceLanding.cs:202-212`, `SourcePlacementService.cs:1640-1646` (a free spot, a pit and a free pipe end are all Supported, so they take the one-step placement at `462-475`); the plain locked-layer line is the fallback route only.
 10. **3.4:** `BlockService.cs:952`; `SourceBlockInsertCommands.cs:888`.
 11. **4.1 (Enter):** `BlockService.cs:1610-1615`.
 12. **7 BUG-1145:** `Models\UserSettings.cs:701-706`; `Services\ProjectDataFingerprintService.cs:45-91`; `Services\PitScheduleStatusService.cs:196`.
 13. **7, 8 shared:** `Services\SourceCloneMapNativeBridge.cs:185-229`; `SourcePlacementService.cs:1656-1658`.
 
-Checked against the installed code (Civil 3.0.90), Fri 13 Nov 2026, 00:37. Nothing was run in AutoCAD.
+Checked against the installed code (Civil 3.0.90), Fri 13 Nov 2026, 02:33; corrected after independent review. Nothing was run in AutoCAD.

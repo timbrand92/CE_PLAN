@@ -21,7 +21,7 @@
 ## 3. What it will not do
 
 1. **Refuses before anything is asked:** read-only drawing, Paper Space, REFEDIT open. A Structural or untagged drawing is asked first; the answer is applied at Accept.
-2. **After the property question, before any point:** refuses a locked layer ("Layer X is locked.") or a missing AG_LINE line type.
+2. **After the property question, before any point:** refuses a locked layer ("CDAGI refused - Layer X is locked. Nothing was drawn.") or a missing AG_LINE line type (same "refused ... Nothing was drawn." wording).
 3. **A closed drain needs 3 points:** "A closed drain needs at least 3 distinct vertices."
 4. **At Accept** it refuses REFEDIT.
 
@@ -72,7 +72,7 @@ Paths are under `C:\CE_WORK\scratch\audit_civil\Modules\Drainage\`.
 3. **2.3, 6.1:** `AgiCommand.Apply.cs` (one transaction; message at `AgiCommand.cs:160`).
 4. **2.4, 7 BUG-290:** `AgiCommand.cs:84-93`; `Commands\CeCommandBase.cs:53-58`.
 5. **3.1:** `AgiCommand.cs:75`; `Services\DrawingSafetyService.cs:22-30`.
-6. **3.2:** `AgiCommand.Apply.cs:32-52`.
+6. **3.2:** `AgiCommand.cs:103-107` (the message printed); `AgiCommand.Apply.cs:32-52` (the reasons).
 7. **3.3:** `Commands\AgiCommand.Plan.cs:127`.
 8. **3.4:** `AgiCommand.Apply.cs:84-86`.
 9. **4.1, 4.2:** `AgiCommand.cs:185-191`, `336-399`.
@@ -81,4 +81,4 @@ Paths are under `C:\CE_WORK\scratch\audit_civil\Modules\Drainage\`.
 12. **7 new 2:** `AgiCommand.Plan.cs:77`; `AgiCommand.GradeDirection.cs:24`.
 13. **8.1:** no `#if` in `AgiCommand*.cs`.
 
-Checked against the installed code (Civil 3.0.90), Fri 13 Nov 2026, 01:00. Nothing was run in AutoCAD.
+Checked against the installed code (Civil 3.0.90), Fri 13 Nov 2026, 02:19; corrected after independent review. Nothing was run in AutoCAD.

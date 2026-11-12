@@ -61,11 +61,11 @@ Paths are under `C:\CE_WORK\scratch\audit_civil\Modules\Drainage\`.
 
 1. **1.1, 4.1:** `Commands\RulebookCommand.cs:22-70`.
 2. **1.2, 2.1:** `Services\ProjectDataService.RulebookDrawing.cs:344, 394-400`.
-3. **1.3, 8.1, 7 BUG-1213:** `RulebookCommand.cs:43-45, 72-78, 98-117` (`#if NET10_0_OR_GREATER`); `CE_CVL_SUITE.csproj:269-271`.
+3. **1.3, 8.1, 7 BUG-1213:** `RulebookCommand.cs:43-45, 72-78, 98-117` (`#if NET10_0_OR_GREATER`); `CE_CVL_SUITE.csproj:271-273` (page removed for every target except net10.0-windows).
 4. **2.3, 3.1:** `RulebookCommand.cs:30-31` (no `CommandPreFlight` or record update).
 5. **3.2, 7 BUG-1109:** `RulebookCommand.cs:152-187`.
 6. **3.3, 4.4:** `RulebookCommand.cs:191-212`. **3.4:** `RulebookCommand.cs:180`.
 7. **4.2:** `RulebookCommand.cs:137-142`. **4.3:** `RulebookCommand.cs:156-169`.
 8. **5.1:** `Models\UserSettings.cs:647`; `Rules\SaveSkippedWordsRule.cs:15`.
 
-Checked against the installed code (Civil 3.0.90), Fri 13 Nov 2026, 01:08. Nothing was run in AutoCAD.
+Checked against the installed code (Civil 3.0.90), Fri 13 Nov 2026, 02:20; corrected after independent review. Nothing was run in AutoCAD.

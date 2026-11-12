@@ -84,7 +84,7 @@
 
 1. **Same command and questions.**
 2. **The window shows a simple drawn sketch** of the pit, not the real pit block picture, and clicking a pipe tag on the picture does nothing. (The real picture is built only for AutoCAD 2027.)
-3. **The buttons** come from the older menu on 2023 and 2024, not the CE ribbon builder.
+3. **The buttons** come from the older workspace menu on the net48 build (AutoCAD 2022 to 2024; the comment in the code names only 2023 and 2024), not the CE ribbon builder. 2025 and 2026 use the ribbon builder.
 
 ## 9. Proven by
 
@@ -125,6 +125,6 @@ Paths are under `C:\CE_WORK\scratch\audit_civil\Modules\Drainage\`.
 27. **7 BUG-1165:** `Services\BlockService.cs:124-128`; `PitMigrationSettings.cs:13`.
 28. **7 BUG-035:** `PitCommand.cs:405-426`.
 29. **8.2:** `Dialogs\PitOnePageLayout.cs:96-113`.
-30. **8.3:** `Services\StandaloneCivilRibbonService.cs:21-25`.
+30. **8.3:** `Services\StandaloneCivilRibbonService.cs:21-25` (`#if NET48`; the `#else` at 48 is the ribbon builder); `CE_CVL_SUITE.csproj:4` (net48 = 2022 to 2024).
 
-Checked against the installed code (Civil 3.0.90), Fri 13 Nov 2026, 00:34. Nothing was run in AutoCAD.
+Checked against the installed code (Civil 3.0.90), Fri 13 Nov 2026, 02:20; corrected after independent review. Nothing was run in AutoCAD.

@@ -66,7 +66,7 @@
 2. **BUG-546, BUG-547:** several values still have no Settings box; not all were checked.
 
 **New in code, no bug covers it**
-1. **"Results recorded" can print when the record write was held back.**
+1. **"results recorded in the project" can print when the record write was held back.** (The line is "Full list saved: ... Drawing geometry unchanged; results recorded in the project.")
 2. **The run record grows** with every run (no cap found).
 3. **A second Apply in one Preview** is likely refused as out of date (not proven).
 
@@ -90,10 +90,10 @@ Paths are under `C:\CE_WORK\scratch\audit_civil\Modules\Drainage\`.
 4. **2.2, 6.2:** `RulesCommand.cs:274-296`.
 5. **2.4, 3.1:** no record update or `CommandPreFlight` in `RulesCommand.cs` (note at `15`).
 6. **4.2:** `RulesCommand.cs:75`. **4.4, 8.1:** `RulesCommand.cs:49-51, 61-67, 134-176` (`#if NET10_0_OR_GREATER`).
-7. **5.1:** `Rules\RulebookEngine.cs`. **5.2, 7 BUG-461, 7 new 1:** `RulesCommand.cs:40, 113, 130`; `Rules\CheckEndSentences.cs:9-14`; `ProjectDataService.RulebookDrawing.cs:385-400`.
+7. **5.1:** `Rules\RulebookEngine.cs`. **5.2, 7 BUG-461, 7 new 1:** `RulesCommand.cs:40, 113, 115, 130`; `Rules\CheckEndSentences.cs:9-14`; `ProjectDataService.RulebookDrawing.cs:385-400`.
 8. **7 still there:** BUG-520 `Models\UserSettings.cs:3585`; BUG-527 `Services\InspectorPaletteService.cs:3404`, `Services\LinkService.RepairAudit.Analysis.cs:37, 250`; BUG-902 `RulebookEngine.cs:524-566`; BUG-923 `RulebookEngine.cs:76, 290, 371, 482-490`; BUG-924 `RulebookEngine.cs:411, 505, 516, 536, 800, 895`; BUG-1006 `Rules\RuleFixAdvisor.cs:81, 86`; BUG-1057 `RulebookValues.cs:278-289`, `Models\CouncilProfileModels.cs`; BUG-1059 `RulebookValues.cs:295-300`; BUG-1060 `UserSettings.cs:3033`, `RulesCommand.cs:258`; BUG-1090 `RulebookEngine.cs:46-57`; BUG-1111 `CouncilProfileModels.cs:124`, `Rules\CouncilRuleValues.cs:147-153`.
 9. **7 partly:** BUG-521 `UserSettings.cs:3985`, `Services\MinimumCoverForChecks.cs:35-45`.
-10. **7 fixed:** BUG-239 `Rules\CouncilRuleValues.cs:19-22, 48-52`; BUG-514 `RulebookEngine.cs:488-490`; BUG-540 `ViewModels\PitScheduleViewModel.cs:41-43`; BUG-542 `UserSettings.cs:3597`, `Services\ProfileRouteEvidenceCaptureService.cs:798-804`; BUG-867 `RulebookEngine.cs:64-80`; BUG-901 `UserSettings.cs:317`, `RulebookEngine.cs:546-564`; BUG-906 `RulebookEngine.cs:631-636`; BUG-907 `UserSettings.cs:1918`, `RulebookEngine.cs:804-820`; BUG-1092 `Services\DesignValidationService.cs:318-349`, `RulebookEngine.cs:384-386`.
+10. **7 fixed:** BUG-239 `Rules\CouncilRuleValues.cs:19-22, 48-52`; BUG-514 `RulebookEngine.cs:488-490`; BUG-540 `ViewModels\PitScheduleViewModel.cs:41-43`, `Services\ScheduleLinkService.cs:2940, 2973`, `Services\PitSetupAdvisorService.cs:71`; BUG-542 `UserSettings.cs:3597`, `Services\ProfileRouteEvidenceCaptureService.cs:798-804`; BUG-867 `RulebookEngine.cs:64-80`; BUG-901 `UserSettings.cs:317`, `RulebookEngine.cs:546-564`; BUG-906 `RulebookEngine.cs:631-636`; BUG-907 `UserSettings.cs:1918`, `RulebookEngine.cs:804-820`; BUG-1092 `Services\DesignValidationService.cs:318-349`, `RulebookEngine.cs:384-386`.
 11. **7 BUG-546/547:** `ViewModels\AdvancedSettingsViewModel.cs:1339, 1679`.
 
-Checked against the installed code (Civil 3.0.90), Fri 13 Nov 2026, 01:08. Nothing was run in AutoCAD.
+Checked against the installed code (Civil 3.0.90), Fri 13 Nov 2026, 02:20; corrected after independent review. Nothing was run in AutoCAD.

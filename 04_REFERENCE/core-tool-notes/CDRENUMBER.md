@@ -22,7 +22,7 @@
 
 1. **Refuses before anything is asked:** read-only drawing, Paper Space, REFEDIT open, Structural drawing (asks first).
 2. **No pits:** "This drawing has no pits to renumber."
-3. **Two pits with the same number:** "More than one pit is already numbered X - fix the duplicate before renumbering."
+3. **Two pits with the same number:** "More than one pit is already numbered X — fix the duplicate before renumbering." (a long dash in the code)
 4. **No pipe leaves the network:** stops and says to draw the last pipe out to an open end (it does not let you pick the outlet yourself).
 5. **Locked layer or Xref** on a changing pit, its label or its cover text: refused before writing, but only after you have said Yes. It names the pit and the layer.
 6. **Pits with no number are skipped** without a word.
@@ -79,7 +79,7 @@ Paths are under `C:\CE_WORK\scratch\audit_civil\Modules\Drainage\`.
 5. **2.4, 7 new 3:** `PitRenumberCommand.cs:37` (reads the record; no update or bind call in the file).
 6. **3.1:** `PitRenumberCommand.cs:34`; `Services\DrawingSafetyService.cs:61-131`.
 7. **3.2:** `PitRenumberCommand.cs:41-45`.
-8. **3.3:** `Rules\PitRenumberNetworkBuilder.cs:64-67`, `91-97`.
+8. **3.3:** `Rules\PitRenumberNetworkBuilder.cs:64-67`, `91-97` (message text at line 96).
 9. **3.4, 7 BUG-1237:** `PitRenumberCommand.cs:51, 62-66`; `Rules\PitRenumberOutletWordsRule.cs:19-27`; `Models\UserSettings.cs:1273`.
 10. **3.5:** `PitRenumberApplyService.cs:36-104` (after Yes, `PitRenumberCommand.cs:110-118`).
 11. **3.6:** `PitRenumberNetworkBuilder.cs:70-72`.
@@ -93,4 +93,4 @@ Paths are under `C:\CE_WORK\scratch\audit_civil\Modules\Drainage\`.
 19. **7 new 1:** `PitRenumberPlanner.cs:173-195`. **7 new 2:** `PitRenumberNetworkBuilder.cs:91`; `PitRenumberPlanner.cs:118-126`.
 20. **8.1:** no `#if` in `PitRenumberCommand.cs`, `Rules\PitRenumber*.cs` or `PitRenumberApplyService.cs`.
 
-Checked against the installed code (Civil 3.0.90), Fri 13 Nov 2026, 00:37. Nothing was run in AutoCAD.
+Checked against the installed code (Civil 3.0.90), Fri 13 Nov 2026, 02:20; corrected after independent review. Nothing was run in AutoCAD.

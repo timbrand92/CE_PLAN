@@ -20,7 +20,7 @@
 ## 3. What it will not do
 
 1. **No start-up checks** (read-only, REFEDIT, Paper Space, drawing type); it changes nothing else anyway.
-2. **No CE records loaded:** "No CE drainage records yet". After switching drawings with no CE command run, it may say this when the drawing has records (not proven).
+2. **No CE records loaded:** "This drawing has no CE drainage records yet, so there is no system to check." After switching drawings with no CE command run, it may say this when the drawing has records (not proven).
 3. **Pipes drawn since CE last brought its record up to date may be missing** from the working (not proven).
 
 ## 4. What it asks you, and what Enter means
@@ -88,4 +88,4 @@ Paths are under `C:\CE_WORK\scratch\audit_civil\Modules\Drainage\`.
 14. **7 new 2:** `TopWaterLevelCandidates.cs:244-248`. **7 new 3:** `DetentionTwlService.cs:262`; `Rules\DetentionTwlSolver.cs:147`.
 15. **8.1:** no `#if` on this path.
 
-Checked against the installed code (Civil 3.0.90), Fri 13 Nov 2026, 01:08. Nothing was run in AutoCAD.
+Checked against the installed code (Civil 3.0.90), Fri 13 Nov 2026, 02:20; corrected after independent review. Nothing was run in AutoCAD.

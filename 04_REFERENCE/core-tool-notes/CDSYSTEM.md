@@ -26,7 +26,7 @@
 
 1. **"Select the pipes to put in a system":** Esc or an empty selection ends quietly.
 2. **"System for these pipes [Property/Outfall/Council/Inherit]" (Property is the default):** Esc ends quietly. Enter most likely means Property (AutoCAD returns the default; not proven).
-3. **When done:** "N pipe(s) recorded as ... Save the drawing to keep it."
+3. **When done:** "N pipe(s) recorded as ... Save the drawing to keep it." For Inherit it says "N pipe(s) now follow their upstream pipe's system. Save the drawing to keep it."
 
 ## 5. When it says Unknown or "needs checking"
 
@@ -65,7 +65,7 @@ Paths are under `C:\CE_WORK\scratch\audit_civil\Modules\Drainage\`.
 5. **3.2, 7 new 1:** `ProjectDataService.Mutations.cs:1647`; `PipeSystemCommand.cs:78-81`.
 6. **3.3:** `PipeSystemCommand.cs:51`.
 7. **4.1, 7 new 2:** `PipeSystemCommand.cs:36-48`.
-8. **4.3:** `PipeSystemCommand.cs:80-81`.
+8. **4.3:** `PipeSystemCommand.cs:79-81` (recorded line at 81, Inherit line at 80).
 9. **8.1:** no `#if` on this path.
 
-Checked against the installed code (Civil 3.0.90), Fri 13 Nov 2026, 01:08. Nothing was run in AutoCAD.
+Checked against the installed code (Civil 3.0.90), Fri 13 Nov 2026, 02:20; corrected after independent review. Nothing was run in AutoCAD.
