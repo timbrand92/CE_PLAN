@@ -125,6 +125,8 @@
 11. CDLPD search distances converted for metre drawings.
 12. The start-up checks (read-only drawing, paper space, Structural drawing) missing from thirteen tools: list them, then add the same existing check the other tools use.
 
+13. (added 01:45, from the 64 smaller faults filed as BUG-1297 to BUG-1360) After items 6 to 12, in this order, verifying each in code first: BUG-1337 (CDSTRIP 1000 times too wide in a metre drawing); BUG-1313 (CDRG and CDAGI close the outline within 1 drawing unit, so 1 m in a metre drawing); BUG-1356 (CDRUNSOLVE's preview quotes sizes and grades but Apply writes only inverts: make the preview say exactly what Apply will write); BUG-1352 (CDCALC Charged System and WSUD open pre-filled with sample figures: open blank); BUG-1339 (CDCHECKCURRENT never flags a record with a blank link to its object); BUG-1300 (moving the LPD leaves "LPD" on the earlier pipe); BUG-1334 (MR and CR cannot move or copy pipes drawn on AutoCAD 2027: investigate and report before fixing, because the first colleague is on 2027 and Tim named MR and CR as the first tools on trial).
+
 **trust-acad-evidence, add:**
 9. `areas\trust-run\BUGS_FIXED_IN_CODE_NOT_PROVEN.md` (when it appears): about 170 bugs the records list as open that the installed code appears to fix. Start with the ten the file names as mattering most (BUG-650 CDFW cancel, BUG-1255 Excel export, BUG-458 REFEDIT refusal first). For each, on copies, on the INSTALLED build: seen fixed, seen still broken, or could not be tested this way. This is the cheapest trust there is: no new code, only proof. Write results to `areas\trust-run\EVIDENCE_STALE_BUGS.md`. Do not edit the bug file's statuses; the controller does that from your evidence under RULES 13.3.
 
