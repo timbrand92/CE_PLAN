@@ -2068,3 +2068,12 @@ Claude driver run 2 saw 'Nothing to redo' 3 of 3 on a Civil copy (CLD10_B1, four
 2. **Hiddenentries:** CSGENNOTES/CSLEADERNOTE/CSBOXNOTES/CSSLABSTEPneedavailability/featuregatedisclosurechecksfirst;registryentryaloneisnotbuiltfeatureacceptance. Notes/stepsneedtheirownlaterUXrulingsandapprovedworkflowreview.
 3. **Cross-cuttingUX:** existingcasekeysnowlinkedtoSTD03/FAIL01/SEL01/LYR01;completecommandmatrixstillrequired. No-forcedSaveisboundedpositiveevidence;valid-object/wrong-targetfiltersandfailurehandlinghaveknownfaults;Settings-derivedlayercreationunproved. No whole-IDorpercentagecredit.
 4. **Authority639:** resolve11brokenhistoricalcardindexlinksagainstexactprovenance/currentpointerswithoutrewritingverbatimapprovaltextorsubstitutingsupersededarchives. CurrentmasterV3gatesincludingstandaloneCivilandcolleaguepilotremaininthecoverageaudit. No newnativecasesinthisreconciliation.
+
+
+## Structural BUG-1364, BUG-1400/1401/1403, BUG-1369/1370 (DRAFT, built and unit-tested only), draft PRs 2077, 2079, 2080 — 13 Nov 2026
+
+Built and unit-tested only. Test on a COPY (a made-up Structural drawing), AutoCAD 2027, a build that contains the branch. Nothing here is installed or accepted. Each branch is based on the installed Structural 1.0.126 commit 8de95c34.
+
+1. **BUG-1364 (PR 2077), BDL in a metre drawing:** on the copy set INSUNITS to metres and run BDL. Right looks like: one plain line (the same one AB says) and nothing drawn. Wrong: BDL asks for points and draws a lower line 100 m away. A millimetre copy behaves as today.
+2. **BUG-1400, BUG-1401, BUG-1403 (PR 2079), inside points:** save three points with BSET, then run BSETRESET. Right looks like: it asks "Clear them? [Yes/No] <No>" and names 3; Enter clears nothing; Yes clears them. On a drawing with none it says there is nothing to clear. On a layout tab and on a read-only copy, BSET and BSETRESET print a stop line first.
+3. **BUG-1369, BUG-1370 (PR 2080), bracing panel:** on the copy place one A - BRACING LEFT block and two BRACING blocks on a frozen layer. Run CSBRACINGPANEL. Right looks like: the command line and a red note on the panel say "1 older-named brace ... is not in the bracing total or the schedule" and "2 braces on frozen or switched-off layers are counted in the bracing total"; the two totals are the same as before the change. Thaw the layer and press Refresh: the second line goes. Only current visible braces: no note.

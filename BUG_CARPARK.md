@@ -19791,6 +19791,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
 
+**Note 2026-11-13 (lane trust-core-ribbon):** draft fix in pull request 2077: BDL makes the same first stop as AB and BB in a metre, centimetre or inch drawing (one plain line, nothing placed); millimetre and unset drawings unchanged. Converting the three figures to the drawing units is NOT done. Built and unit-tested only; not seen in AutoCAD. Status unchanged.
+
 **Status:** OPEN
 
 ## BUG-1365 — Beam tools 1, 2, 4 and 5 refuse every beam with "CE hit an internal problem" when the beam or text layer is locked, off, frozen or set differently
@@ -19883,6 +19885,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
 
+**Note 2026-11-13 (lane trust-core-ribbon):** draft change in pull request 2080 (with BUG-1370): no total changed. The bracing panel (red note) and CSBRACINGPANEL now say how many older-named braces are left out of the total and the schedule. STRSCHEDCREATE and STRSCHEDREFRESH do not say it yet. Whether to COUNT them is a decision for Tim. Built and unit-tested only; not seen in AutoCAD. Status unchanged.
+
 **Status:** OPEN
 
 ## BUG-1370 — Braces on a frozen or switched-off layer are counted in the bracing panel and the bracing schedule
@@ -19900,6 +19904,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Reference:** Services\ProjectDataService.cs:266-286 (no layer state test in ScanFromDrawing). Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
 
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Note 2026-11-13 (lane trust-core-ribbon):** draft change in pull request 2080 (with BUG-1369): no total changed. The bracing panel (red note) and CSBRACINGPANEL now say how many braces on frozen or switched-off layers are counted. STRSCHEDCREATE and STRSCHEDREFRESH do not say it yet. Whether to LEAVE THEM OUT is a decision for Tim. Built and unit-tested only; not seen in AutoCAD. Status unchanged.
 
 **Status:** OPEN
 
@@ -20441,6 +20447,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
 
+**Note 2026-11-13 (lane trust-core-ribbon):** draft fix in pull request 2079 (with BUG-1401 and BUG-1403): BSET, BSETLIST and BSETRESET say plainly when a save, read or clear failed and never say "added", "cleared" or "none stored" for a failure. Built and unit-tested only; not seen in AutoCAD. Status unchanged.
+
 **Status:** OPEN
 
 ## BUG-1401 — BSETRESET clears every saved inside point with no question
@@ -20458,6 +20466,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Reference:** Commands\BeamInsidePointCommands.cs:65-66; Services\BeamInsidePointStore.cs:80-96 and 153-165 (creates the record). Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
 
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Note 2026-11-13 (lane trust-core-ribbon):** draft fix in pull request 2079: BSETRESET reads first, says so when none are stored, and otherwise asks "Clear them? [Yes/No] <No>" naming the count before clearing. Built and unit-tested only; not seen in AutoCAD. Status unchanged.
 
 **Status:** OPEN
 
@@ -20494,6 +20504,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Reference:** Commands\BeamInsidePointCommands.cs:22-27 and 60-65 (no pre-flight). Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
 
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Note 2026-11-13 (lane trust-core-ribbon):** draft fix in pull request 2079: BSET and BSETRESET make the same first stop as the other beam commands (read-only drawing, layout tab, REFEDIT). Built and unit-tested only; not seen in AutoCAD. Status unchanged.
 
 **Status:** OPEN
 
