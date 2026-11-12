@@ -19729,6 +19729,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 
 **Note 2026-11-13 04:19 (lane trust-struc-mgr-plan, after review `areas\trust-run\reviews\structural-tool-notes-sample.md`; status unchanged):** the trigger is narrower than the title. The brace is lost only when the BRACING block cannot be loaded: ABS then only warns and carries on (`Commands\BracingCommands.cs:395-398`), erases the old brace and keeps that change (`Services\BracingService.cs:2169-2174`), the insert fails with "Block 'BRACING' not found" (1670-1673), and the line still says it was left as it was (`BracingCommands.cs:496-499`). A locked target layer is refused earlier and does not trigger it, so step 2's "lock the target brace layer" will not show the fault; make the BRACING block unavailable instead. One U brings the brace back.
 
+**Note 2026-11-13 (lane trust-core-ribbon):** draft fix in pull request 2068 (branch `claude/trust-b1362-abs-keeps-brace`): the new brace is drawn first and the older one erased last; if the older one cannot be erased the new one is taken back out. Built and unit-tested only (3 of 4 new tests fail on the installed code); not seen in AutoCAD. Status unchanged.
+
 **Status:** OPEN
 
 ## BUG-1363 — A schedule size the support block cannot show is drawn as the default size while the screen line names the schedule size
@@ -19746,6 +19748,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Reference:** Commands\SupportBlockCommands.cs:252-257 (message), 322-325 (SetDynamicVisibility with fallback), 1470-1480 (fallback applied, logged only). Plan card TRUST-S3. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
 
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Note 2026-11-13 (lane trust-core-ribbon):** draft fix in pull request 2070 (branch `claude/trust-b1363-support-size-unknown`): a new switch `Supports.stopWhenScheduleSizeCannotBeShown` (OFF) stops and places nothing with a plain line naming the size and the choices; with it OFF the default size is still drawn but one plain line now says so. Built and unit-tested only; not seen in AutoCAD; engineering judgement for Tim. Status unchanged.
 
 **Status:** OPEN
 
@@ -19782,6 +19786,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Reference:** Services\ConnectedDesign\Commit\BeamAtomicLayerWriter.cs:44-47 and 61-70 (throws REQUIRED_LINETYPE_MISSING and REQUIRED_LAYER_MISMATCH); Services\ConnectedDesign\Commit\BeamAtomicWriteSession.cs:112-116; Structural.DesignCore\ConnectedDesign\BeamAtomicCommitCoordinator.cs:107-117 (COMMIT_NOT_COMPLETED); Services\ConnectedDesign\Host\BeamCommandAutoCadRoute.cs:446-467; Structural.DesignCore\ConnectedDesign\BeamRefusalWording.cs:80-84 and 556-559, 602-606 (no wording for these codes; they reach the fallback lines). Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
 
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Note 2026-11-13 (lane trust-core-ribbon):** draft fix in pull request 2069 (branch `claude/trust-b1365-beam-layer-wording`): eight plain lines naming the layer and the problem (locked, off, frozen, from a reference drawing, not plotting, wrong colour, wrong linetype, linetype not loaded); nothing is unlocked or changed. Built and unit-tested only; not seen in AutoCAD. Status unchanged.
 
 **Status:** OPEN
 
