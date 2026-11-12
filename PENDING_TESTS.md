@@ -8,7 +8,7 @@ Built and unit-tested only. Branch `claude/trust-core-ribbon-e13111`, draft pull
 3. **Press each button once** in a Civil copy: each starts its own command. Right looks like: nothing says "Unknown command".
 4. **Pop-up tabs:** pick a pipe, a pit, a downpipe. Right looks like: the Pipe, Pit and Source tabs still appear.
 5. **Hidden commands:** type CDRULES, CDCHECK, CDSURVEY. Right looks like: each still runs.
-6. **Way back:** set `"showClassicCeTabs": true` as well and restart. Right looks like: the old "CE Civil" tabs, complete, and no CE Drainage or CE Design.
+6. **Way back:** set `"showCoreCivilTabs": false` (or remove the line) and restart. Right looks like: today's single "CE" tab, button for button, and no CE Drainage or CE Design. (`showClassicCeTabs` is a different, older three-tab layout kept for one release; leave it alone.)
 7. **Look:** screenshot both tabs at normal and narrow window width. Right looks like: no cut-off labels, every button has a picture, no software words.
 8. **Not covered:** AutoCAD 2022 to 2024 (menu file not changed), Manager's later rebuild keeping both tabs (check the tabs are still two after about a minute and after CEMANAGERREFRESH).
 9. **DRAFT defaults for Tim to confirm:** listed in the draft PR and at the top of `Services/CeCvlCoreRibbonList.cs`.
