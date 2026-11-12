@@ -60,7 +60,7 @@
 1. **BUG-319:** a typed area over CDCALC's is kept but CDCALC's wins on reopen; areas with thousands separators are not read.
 2. **BUG-342:** two of six parts fixed; the older-build wipe is BUG-1156; paste and array parts not checked.
 3. **BUG-508:** a note says which curve the flows used; the job curve is used only with a switch (off).
-4. **BUG-538:** rising-main sizes are Settings; Bayside storm, reuse credit and the orifice constant still fall back to built-in numbers because no shipped council profile carries them.
+4. **BUG-538:** rising-main sizes are Settings; one council's pump storm, reuse credit and the orifice constant still fall back to built-in numbers because no shipped council profile carries them.
 5. **BUG-539:** hard-ground C is Settings here; pump sizing still uses a fixed 0.90.
 6. **BUG-904:** notes when the worst storm is the first or last; the storm list is unchanged.
 
@@ -71,7 +71,7 @@
 **New in code, no bug covers it**
 1. **Confirm LPD saves land use first;** if the outlet is then refused, the land use stays saved.
 2. **Free-text council and suburb boxes on Start** are not the council the design uses.
-3. **Fixed engineering numbers:** office rainfall curve, storm list 5 to 180 min, pump C 0.90, pump ladder and 30 min empty time, Bayside 1 in 20, orifice constant 21.9.
+3. **Fixed engineering numbers:** office rainfall curve, storm list 5 to 180 min, pump C 0.90, pump ladder and 30 min empty time, one council's 1 in 20 pump storm, orifice constant 21.9.
 
 ## 8. On AutoCAD 2022 to 2024
 

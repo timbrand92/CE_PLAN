@@ -1,36 +1,71 @@
-# CDSYSTEM: tool note (DRAFT, Put pipes in a system)
+# TOOL NOTE: Put pipes in a system (CDSYSTEM)
 
-**Status: DRAFT (12 Nov 2026), lane trust-test-cases.** Facts are from the installed Civil code copy (commit cf059dcf), its shipped Help text and command list, and the records (`areas\TRUST_CORE_TOOLS_FIRST_CHECK_12NOV.md`, `BUG_CARPARK.md`). "Not known" means no record or code line says. Nothing here was run in AutoCAD. Format: `areas\TRUST_RULES_CHECKLIST_12NOV.md` section 3.
+**Core since:** not yet
+**Build this note describes:** Civil 3.0.90 (installed code, commit cf059dcf)
 
-```
-TOOL NOTE (DRAFT): Put pipes in a system (CDSYSTEM)
-Core since: not yet
-Build this note describes: Civil 3.0.90 (commit cf059dcf), as installed on 12 Nov 2026. Not checked in AutoCAD for this note.
+---
 
-1. WHAT IT DOES
-   Puts the pipes you pick in a system: Property drainage, Outfall drain or Council connection, or follows the upstream pipe. The shipped Help has no page for it.
+## 1. What it does
 
-2. WHAT IT CHANGES IN THE DRAWING
-   The system tag on the picked pipes. Not known: anything else. No link between these tags and outlets was found in the code (plan, step 7).
+1. **Records which system the pipes you select belong to:** Property, Outfall, Council or Inherit.
+2. **Changes only CE's record,** not the drawing's lines or labels.
 
-3. WHAT IT WILL NOT DO
-   Not known.
+## 2. What it changes in the drawing
 
-4. WHAT IT ASKS YOU, AND WHAT ENTER MEANS
-   Pick the pipes, then choose the system. Enter: not known.
+1. **Each selected pipe's system** in CE's record, then saves the record.
+2. **No geometry, labels or layers.**
+3. **No whole-drawing record update;** it makes CE's record this drawing's without saving.
 
-5. WHEN IT SAYS UNKNOWN OR "NEEDS CHECKING"
-   Not known.
+## 3. What it will not do
 
-6. HOW TO UNDO IT
-   Not known. Never checked.
+1. **No start-up checks** (read-only, REFEDIT, Paper Space, drawing type); no locked-layer check (it changes no objects).
+2. **Pipes with no CE record are skipped** without a word.
+3. **Nothing that is a CE pipe:** "None of those is a CE pipe. Nothing was changed."
 
-7. KNOWN FAULTS
-   None found. No bug names it by this command.
+## 4. What it asks you, and what Enter means
 
-8. ON AUTOCAD 2022 TO 2024
-   Not known.
+1. **"Select the pipes to put in a system":** Esc or an empty selection ends quietly.
+2. **"System for these pipes [Property/Outfall/Council/Inherit]" (Property is the default):** Esc ends quietly. Enter most likely means Property (AutoCAD returns the default; not proven).
+3. **When done:** "N pipe(s) recorded as ... Save the drawing to keep it."
 
-9. PROVEN BY
-   Robot cases: none. Codex looks: none. Tim's trial: no record found in any source read.
-```
+## 5. When it says Unknown or "needs checking"
+
+1. **Not applicable.**
+
+## 6. How to undo it
+
+1. **Whether U takes back the record change was not traced.**
+
+## 7. Known faults
+
+No bugs are filed under this command.
+
+**New in code, no bug covers it**
+1. **The count is pipes changed, not pipes picked;** skipped pipes are never mentioned, and "0 pipe(s) recorded" can print.
+2. **Other objects in the selection** are dropped without a count.
+
+## 8. On AutoCAD 2022 to 2024
+
+1. **Same.** No version differences found on this path.
+
+## 9. Proven by
+
+1. **Not counted in this note.** Nothing was run in AutoCAD for it.
+
+---
+
+## Where this comes from
+
+Paths are under `C:\CE_WORK\scratch\audit_civil\Modules\Drainage\`.
+
+1. **1.1, 4.2:** `Commands\PipeSystemCommand.cs:24, 64-72`.
+2. **2.1, 2.2:** `PipeSystemCommand.cs:78`; `Services\ProjectDataService.Mutations.cs:1634-1659`.
+3. **2.3:** `PipeSystemCommand.cs:33`.
+4. **3.1:** no `CommandPreFlight` in `PipeSystemCommand.cs`.
+5. **3.2, 7 new 1:** `ProjectDataService.Mutations.cs:1647`; `PipeSystemCommand.cs:78-81`.
+6. **3.3:** `PipeSystemCommand.cs:51`.
+7. **4.1, 7 new 2:** `PipeSystemCommand.cs:36-48`.
+8. **4.3:** `PipeSystemCommand.cs:80-81`.
+9. **8.1:** no `#if` on this path.
+
+Checked against the installed code (Civil 3.0.90), Fri 13 Nov 2026, 01:08. Nothing was run in AutoCAD.
