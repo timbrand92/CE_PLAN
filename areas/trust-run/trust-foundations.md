@@ -215,3 +215,7 @@
   6. **Installed:** no. **Accepted:** no. **Robot cases:** `PENDING_TESTS.md`, BUG-1456 change door, rows 9 and 10.
   7. **The BUG-1456 stack is now:** 2073 (`1a28c3b3`) then 2083 (`8a6decef`) then 2089 (`e938d0d4`), all three passed in the core console, then 2090 (`39e489e9`, not run). 2078 (`e1bdc16e`) sits on the opening line, 2041.
   8. **QUEUE EMPTY after this.** Still open for the controller to assign: the guard that every command which edits a pit or pipe taken from the record attaches the record first; the BUG-1358 trim in `ProjectDataService.Rulebook.cs`.
+
+- **13 Nov 09:45, seen working in the core console: pull request 2090 at `39e489e9`.** `CEPROOFCROSSDRAWING`, `CEPROOFCROSSCHANGE` and `CEPROOFCROSSCOPY` all PASS (trust-acad-evidence, built fresh, nothing installed), and both new command-line lines appear in the console transcript, once each (the change line in the change check, the copy line in the copy check, none in the first). So the whole BUG-1456 stack, 2073, 2083, 2089 and 2090, has passed in the core console. Still not run in real AutoCAD with two drawings.
+  1. **Wording note from that lane, added to the decisions for Tim in the pull request:** "Please report which tool you were using" asks a drafter for something they can only answer with a command name; the line could name the command itself, or say who to tell.
+  2. **Queue still empty.**
