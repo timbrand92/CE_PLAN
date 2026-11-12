@@ -18778,3 +18778,273 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
 
 **Status:** OPEN
+
+## BUG-1312 — CDTG: the cover level question says 'enter to skip' although Enter takes the remembered level
+
+**Command / Area:** CDTG (trench grate), the cover level question. LOW. WORDING.
+
+**Symptom:** The question reads 'Cover Level (m AHD) or [Blank] <enter to skip>'. If an earlier grate in this drawing had a level, Enter does not skip: it offers and takes that remembered level. A drafter who presses Enter to skip writes the last grate's level onto this one.
+
+**Expected behaviour:** The words match what Enter does: 'Enter keeps 10.35, or type Blank for no level'.
+
+**Steps to confirm in AutoCAD:** (1) On a copy run CDTG and type a cover level of 10.35. (2) Run CDTG again, pick the points, and read the cover level question. Right = it names 10.35. Wrong = it says 'enter to skip'. (3) Press Enter and check which level the callout shows.
+
+**Test that catches it:** Unit case on the prompt text with and without a remembered level.
+
+**Reference:** Commands\SourceBlockInsertCommands.cs:763 (fixed prompt words) and 767-772, 790-791 (Enter takes the remembered level). Note CDTG.md section 7 'New in code' 4. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDTG.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1313 — CDRG and CDAGI: 'close the outline' and 'same end' distances are 1 drawing unit, so 1 m in a metre drawing
+
+**Command / Area:** CDRG (raingarden outline) and CDAGI (AGI drain). MEDIUM. UNITS.
+
+**Symptom:** The code calls the snap-close distance 1 mm, but compares it with raw drawing units. In a metre drawing a click within 1 m of the first corner closes the raingarden outline early (the shape is lost), and CDAGI closes or joins within 1 m of the first point or outlet, and treats two ends within 1 m of equal distance as a tie. In a millimetre drawing it behaves as intended.
+
+**Expected behaviour:** The distances are converted from millimetres to the drawing's units, as the strip drain and trench grate checks already are.
+
+**Steps to confirm in AutoCAD:** (1) On a copy in metres (INSUNITS 6) run CDRG and pick a first corner, then click three more points about 0.5 m away from it, ending 0.8 m from the first corner. Right = the outline carries on until you press Enter or close it yourself. Wrong = it closes by itself at the 0.8 m click. (2) Repeat in a millimetre drawing: a click within 1 mm closes. (3) Run CDAGI in metres with ends 0.8 m apart from the outlet pick.
+
+**Test that catches it:** Fixture: closure test with a metre drawing and a 0.8 m gap; assert not closed.
+
+**Reference:** Commands\SourceBlockInsertCommands.cs:502-510, constant at 504 (SnapClosureTolerance 1.0 'mm in drawing units'); Commands\AgiCommand.Plan.cs:77 and 123 (SnapClosureToleranceMm compared with drawing units); Commands\AgiCommand.GradeDirection.cs:24 and 36 (OutletEndTieToleranceMm). Compare Rules for CDTG (IsSamePoint converts with INSUNITS). Notes CDRG.md and CDAGI.md section 7 'New in code'. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDRG.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1314 — CDRG: a missing GIO block ends with only 'CDRG command cancelled.'
+
+**Command / Area:** CDRG (raingarden) with 'Add a GIO source' answered Place. LOW-MEDIUM. WORDING.
+
+**Symptom:** If the GIO block file cannot be found, the GIO point step stops and CDRG prints 'CDRG command cancelled.', the same words as pressing Esc. The reason ('definition not found') goes only to the log, so a drafter thinks they cancelled.
+
+**Expected behaviour:** One line says the GIO block is missing and how to fix it ('GIO.dwg is not in the drawing or the block folder; nothing was placed').
+
+**Steps to confirm in AutoCAD:** (1) On a copy with the GIO block unavailable (rename the file in the office block folder), run CDRG, draw an outline, answer Place. Right = a line names the missing block. Wrong = 'CDRG command cancelled.' with no reason.
+
+**Test that catches it:** Fixture: block source missing; assert the line names the GIO block.
+
+**Reference:** Services\BlockService.cs:945-953 (warning to the log, returns false); Commands\SourceBlockInsertCommands.cs:543-559 (prints 'CDRG command cancelled.'). Note CDRG.md section 7 'New in code' 3. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDRG.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1315 — CDRG and CDSOURCE: a locked or protected layer is reported only as 'see CE log'
+
+**Command / Area:** CDRG and CDSOURCE (and any source placed by the same atomic route). MEDIUM-LOW. WORDING (reason hidden).
+
+**Symptom:** The locked-layer check for the raingarden layers runs at the very end, after every question. If a layer is locked the placement is rolled back and the drafter sees only 'Raingarden could not be placed. Nothing was changed - see CE log for details.' The same generic line is used for every rolled-back source. The reason, a named locked layer, is not said.
+
+**Expected behaviour:** The line names the layer: 'Layer RAINGARDEN is locked. Unlock it and run CDRG again.' The check also runs before the questions.
+
+**Steps to confirm in AutoCAD:** (1) On a copy lock the raingarden layer. (2) Run CDRG, pick the outline, answer Skip for the GIO. Right = a line naming the locked layer, ideally before the outline is picked. Wrong = 'see CE log for details'. (3) Repeat CDSOURCE with its layer locked.
+
+**Test that catches it:** Fixture: locked raingarden layer; assert the final line contains the layer name.
+
+**Reference:** Services\SourcePlacementService.cs:593-606 (generic rolled-back line); 843-860 (locked layer thrown as an InvalidOperationException at the end); Commands\SourceBlockInsertCommands.cs:606-616 (prints the result as it is). Notes CDRG.md (7 new 2) and CDSOURCE.md (7 new 4). Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDRG.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1316 — CDWT: the window route loses the library tank's make, size and lid, so the callout never shows them
+
+**Command / Area:** CDWT (water tank), tank chosen in the first window. MEDIUM. DETAIL LOST.
+
+**Symptom:** The command-line route remembers which library tank was chosen and carries its details (make, size, lid) into the callout and record. The window route, which is the normal one, never passes the chosen library tank along, so the callout and record are written without those details and the make-and-size line can never appear.
+
+**Expected behaviour:** The window route carries the same library tank details as the command-line route.
+
+**Steps to confirm in AutoCAD:** (1) On a copy run CDWT, choose a library tank in the window, place it. (2) Read the callout and open the record in CDEDIT. Right = make, size and lid shown. Wrong = litres only. (3) Repeat with the fallback (command-line) route and compare.
+
+**Test that catches it:** Fixture: window route with a library tank; assert the saved record and callout carry the make and size.
+
+**Reference:** Commands\WaterTankCommand.cs:81 (libraryChoice starts null), 130 (set only in the command-line branch), 150-157 (window branch passes it, still null). Note CDWT.md section 7 'New in code' 2. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDWT.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1317 — CDWT: the command-line route offers only the first 9 library tanks and plan blocks
+
+**Command / Area:** CDWT (water tank), command-line fallback (2022 to 2026, or when the window cannot open). MEDIUM. CHOICES HIDDEN.
+
+**Symptom:** The tank choices and the plan block choices on the command line stop at nine. Any tank or block past the ninth in the library is not offered and nothing says so.
+
+**Expected behaviour:** Every library tank and plan block can be chosen, or the line says how many were left out and where to see them.
+
+**Steps to confirm in AutoCAD:** (1) On a copy use the command-line route (window unavailable) with a library holding more than nine tanks. (2) Read the choices. Right = all offered, or a line 'N more not shown'. Wrong = nine and silence.
+
+**Test that catches it:** Unit case: ten library entries; assert ten keywords or a 'more not shown' line.
+
+**Reference:** Rules\TankLibrary.cs:210 (stops at 9); Services\WaterTankPlanBlockSource.cs:160-172 (at most 9). Note CDWT.md section 7 'New in code' 3. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDWT.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1318 — CDSOURCE: erasing the highest-numbered source and placing again reuses its number
+
+**Command / Area:** CDSOURCE (generic source, 'ROOF DRAIN 3'). MEDIUM. DUPLICATE ID.
+
+**Symptom:** The next number is one above the highest number still on a block in the drawing. Erase ROOF DRAIN 3, place another ROOF DRAIN, and it is called ROOF DRAIN 3 again, so a schedule or note that still names the old one now points at the new one. The code comment says numbers are never recycled; the code only counts blocks that still exist.
+
+**Expected behaviour:** A number once used is not given out again in the same drawing (a stored high-water mark, as DP, IO and the other families already keep).
+
+**Steps to confirm in AutoCAD:** (1) On a copy place ROOF DRAIN 1, 2 and 3 with CDSOURCE. (2) Erase 3 and run CDSOURCE for ROOF DRAIN again. Right = ROOF DRAIN 4. Wrong = ROOF DRAIN 3.
+
+**Test that catches it:** Unit case: existing tags 1 and 2 plus a stored high-water 3 gives 4.
+
+**Reference:** Services\SourcePlacementService.cs:357-380 (reads only live blocks); Rules\GenericSourceTypes.cs:60-83 (highest + 1); compare Services\SourceTagService.cs:233-236 (the other families use a stored high-water mark). Note CDSOURCE.md section 7 'New in code' 2. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDSOURCE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1319 — CDSOURCE: a custom name that already ends in a number gets another number added
+
+**Command / Area:** CDSOURCE, type chosen as Other and typed in. LOW. WRONG LABEL.
+
+**Symptom:** Type the name 'GREASE TRAP 2' and the source is tagged 'GREASE TRAP 2 1', because the number logic always appends ' 1' (or the next number) to whatever was typed.
+
+**Expected behaviour:** A typed name that already ends in a number is used as typed, if free, or the drafter is told it is taken.
+
+**Steps to confirm in AutoCAD:** (1) On a copy run CDSOURCE, choose Other, type GREASE TRAP 2, place it. Right = tagged GREASE TRAP 2. Wrong = GREASE TRAP 2 1.
+
+**Test that catches it:** Unit case: NextNumberedName for 'GREASE TRAP 2' with no existing tags.
+
+**Reference:** Rules\GenericSourceTypes.cs:66-83 (always baseName + ' ' + number); Commands\SourceBlockGenericCommand.cs:71-73. Note CDSOURCE.md section 7 'New in code' 3. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDSOURCE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1320 — CDTAG: re-tagging with 'No' to the label leaves the old label showing the old text
+
+**Command / Area:** CDTAG (tag or retag a source). MEDIUM. WRONG LABEL.
+
+**Symptom:** Retag a source that already has a label, change the tag, and answer No to showing the label. The record and the block take the new tag, but the label already on the drawing is neither updated nor removed, so it keeps the old text next to a block that now has a different tag.
+
+**Expected behaviour:** Answering No removes the label, or the label is updated to the new tag. It never shows the old tag.
+
+**Steps to confirm in AutoCAD:** (1) On a copy place DP1 with its label. (2) Run CDTAG on it, enter DP7, answer No to the label. Right = no label, or it reads DP7. Wrong = the label still reads DP1.
+
+**Test that catches it:** Fixture: retag with ShowLabel off on a labelled source; assert no label text equals the old tag.
+
+**Reference:** Services\SourceTagService.SourceChangeApply.cs:23-35 (label written only when ShowLabel) and 67-68 (verify requires the old label handle to stay). Note CDTAG.md section 7 'New in code' 1. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDTAG.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1321 — CDTAG: a retag moves a nudged connection point back to the block's insertion point
+
+**Command / Area:** CDTAG on a source that already has a tag. MEDIUM. UNEXPECTED MOVE.
+
+**Symptom:** The connection point (where the pipe joins the source) can be nudged. A retag rewrites it from the block's insertion point, so a nudged point snaps back and the pipe may no longer meet the source.
+
+**Expected behaviour:** A retag keeps the existing connection point and changes only the tag (and label if asked).
+
+**Steps to confirm in AutoCAD:** (1) On a copy place a source on a pipe and nudge its connection point with the grip. (2) Run CDTAG and change the tag. (3) Check the connection point. Right = unchanged. Wrong = back at the insertion point.
+
+**Test that catches it:** Fixture: source with a stored connection point away from the insertion point; after a retag assert it is unchanged.
+
+**Reference:** Commands\SourceTagCommand.cs:340-349 (retag request carries blockRef.Position); Services\SourceTagService.SourceChangeApply.cs:33-34 (SetConnectionPoint from the request). Note CDTAG.md section 7 'New in code' 2. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDTAG.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1322 — CDTAG: 'that name is already used' only appears after every question has been answered
+
+**Command / Area:** CDTAG (first tag of a block). LOW. LOST TYPING.
+
+**Symptom:** The name, then the label question, are asked before CE checks whether another block already carries the numbered name. The refusal comes last, so the answers are wasted.
+
+**Expected behaviour:** The used-name check runs as soon as the name is typed.
+
+**Steps to confirm in AutoCAD:** (1) On a copy place DP1 and an untagged block. (2) Run CDTAG on the plain block and type DP1. Right = refused straight away. Wrong = asked about the label first, then refused.
+
+**Test that catches it:** Fixture: name in use; assert the refusal comes before the label prompt.
+
+**Reference:** Commands\SourceTagCommand.cs:294 (name asked), 329 (label asked), 351-359 (used-name refusal). Note CDTAG.md section 7 'New in code' 5. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDTAG.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1323 — CD: the default side for level text ignores Settings unless 'remember' is on
+
+**Command / Area:** CD (New Pipe), level (invert) text side. LOW-MEDIUM. SETTING IGNORED.
+
+**Symptom:** Settings holds a default invert position (Bottom). The CD window starts with both invert texts set to Above, and CD always applies that choice to the drawing, so the Settings value is not used unless the drafter's remembered choice happens to match.
+
+**Expected behaviour:** The window starts from the Settings default.
+
+**Steps to confirm in AutoCAD:** (1) In CDS set the default invert position to Bottom, with remember off. (2) Run CD and draw a pipe. Right = level texts below. Wrong = above.
+
+**Test that catches it:** Unit case: view model reset reads the Settings value for the position.
+
+**Reference:** ViewModels\CdViewModel.Commands.cs:109-110 (both Above set); Commands\CdCommand.cs:741-744 (always passed through); Models\UserSettings.cs:2112 (the Settings default, Bottom). Note CD.md section 7 'New in code' 2. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CD.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1324 — CD: the Quick Mode inverts switch changes nothing about where level text is placed
+
+**Command / Area:** CD (New Pipe), Settings > Quick Mode > inverts. LOW-MEDIUM. SETTING HAS NO EFFECT.
+
+**Symptom:** Turning Quick Mode inverts on or off should change how level text is placed. The level text is always placed automatically, whatever the switch says. The switch only changes a padding number from 10% to 15%.
+
+**Expected behaviour:** The switch does what its name says, or is removed from Settings.
+
+**Steps to confirm in AutoCAD:** (1) In CDS turn Quick Mode inverts off. (2) Draw a pipe with CD and compare the level text placement with it on. Right = a visible difference as described in Settings. Wrong = identical placement.
+
+**Test that catches it:** Source guard: every Quick Mode setting is read by a placement decision.
+
+**Reference:** Commands\CdCommand.cs:634 and 816 (autoPlaceInverts used only for padding 0.15 or 0.10); Services\PipeCreationService.cs:353-356 and 397-401 (always auto-place). Note CD.md section 7 'New in code' 3. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CD.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1325 — CD: the starting levels in the window (1.10 then 1.20) run uphill
+
+**Command / Area:** CD (New Pipe), window opened first, levels not yet typed. LOW-MEDIUM. WRONG DEFAULT.
+
+**Symptom:** The first level starts as 1.10 and the second as 1.20. The pipe flows from the first end to the second, so the pipe starts out running uphill by 0.10 m. A drafter who accepts the starting values gets a pipe with reverse fall and perhaps a wrong grade label.
+
+**Expected behaviour:** Starting levels fall in the direction of flow, or start blank so the drafter must enter them.
+
+**Steps to confirm in AutoCAD:** (1) On a copy run CD and draw a pipe, leaving the levels as offered. (2) Open CDEDIT on it. Right = level falls from first to second, or the window forced an entry. Wrong = first 1.10, second 1.20.
+
+**Test that catches it:** Unit case: the reset values give a first level at or above the second.
+
+**Reference:** ViewModels\CdViewModel.Commands.cs:106-107 (1.10 and 1.20); Models\UserSettings.cs:1864 and 1867 (the same two values). Note CD.md section 7 'New in code' 5. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CD.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1326 — CDREVERSEFLOW: the ribbon tooltip and command list promise things the command does not do
+
+**Command / Area:** CDREVERSEFLOW (Reverse Flow). LOW. WORDING.
+
+**Symptom:** The Pipe tab tooltip says it 'Lists what else changes (ILs, arrow, schedule rows) and asks first'. The command asks one question naming From/To, end values and the arrow, and no schedule refresh was found. The command list text says 'labels and decisions swap'; the command's own question says label positions stay put.
+
+**Expected behaviour:** The tooltip and list say what the command does, as its question does.
+
+**Steps to confirm in AutoCAD:** (1) Select a pipe and hover Reverse Flow on the Pipe tab. (2) Run it and read the question. Right = the two agree. Wrong = tooltip lists schedule rows and labels swapping. (3) Check whether the Pit Schedule changes after Yes.
+
+**Test that catches it:** Source guard: the tooltip text for the command matches the confirm prompt.
+
+**Reference:** Services\CeCvlRibbonContributor.cs:197-198; Assets\Config\command-registry.json:1063; Commands\RibbonContextCommands.cs:49 and 65. Note CDREVERSEFLOW.md section 7 'New in code' 2 and 3. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDREVERSEFLOW.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
