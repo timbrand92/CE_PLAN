@@ -14409,6 +14409,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1920 (B-096, on the #1897 branch): cove
 
 **Status:** OPEN
 
+- Note (trust-safety-fixes, Fri 13 Nov 2026, TRUST-04; nothing installed or accepted): draft PR #2075 (stacked on #2057) converts CDAGI's and CDPERIMETER's run length to millimetres before the grade check. Built and unit-tested only. Not seen in AutoCAD.
+
 ## BUG-1053 — LandXML cover and invert elevations are not converted from millimetres to metres
 
 **Command / Area:** CDIMPORTLANDXML (Choose LandXML > Read source > Import to drawing), Civil 3.0.72 (Codex audit RD04-03, 23 Oct 2026). HIGH (engineering result), SURE (verified by reading).
@@ -18909,6 +18911,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 
 **Status:** OPEN
 
+- Note (trust-safety-fixes, Fri 13 Nov 2026, TRUST-04; nothing installed or accepted): draft PR #2082: the window route hands back the chosen library tank. ENGINEERING FIGURE for Tim: window-placed library tanks with a base level are now counted in the detention storage. Not seen in AutoCAD.
+
 ## BUG-1317 — CDWT: the command-line route offers only the first 9 library tanks and plan blocks
 
 **Command / Area:** CDWT (water tank), command-line fallback (2022 to 2026, or when the window cannot open). MEDIUM. CHOICES HIDDEN.
@@ -18944,6 +18948,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
 
 **Status:** OPEN
+
+- Note (trust-safety-fixes, Fri 13 Nov 2026, TRUST-04; nothing installed or accepted): draft PR #2084: CDSOURCE reads the stored highest number. Known limit: names with a digit or sign. Not seen in AutoCAD.
 
 ## BUG-1319 — CDSOURCE: a custom name that already ends in a number gets another number added
 
@@ -18981,6 +18987,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 
 **Status:** OPEN
 
+- Note (trust-safety-fixes, Fri 13 Nov 2026, TRUST-04; nothing installed or accepted): draft PR #2085: a label already on the drawing follows the new tag even after No (DRAFT default: kept and updated, never erased); both read-back checks use one rule; a locked label layer is refused in plain words. Not seen in AutoCAD.
+
 ## BUG-1321 — CDTAG: a retag moves a nudged connection point back to the block's insertion point
 
 **Command / Area:** CDTAG on a source that already has a tag. MEDIUM. UNEXPECTED MOVE.
@@ -18998,6 +19006,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
 
 **Status:** OPEN
+
+- Note (trust-safety-fixes, Fri 13 Nov 2026, TRUST-04; nothing installed or accepted): draft PR #2086: a retag keeps the stored connection point. Not seen in AutoCAD.
 
 ## BUG-1322 — CDTAG: 'that name is already used' only appears after every question has been answered
 
@@ -19235,6 +19245,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 
 - Note (trust-safety-fixes, Fri 13 Nov 2026, TRUST-04; nothing installed or accepted): REPORT only, as the queue asks (side-session note trust-safety-fixes_findings_12nov.md section 5). The 2027 native transform accepts only plain AutoCAD classes, so one CE pipe object in the selection stops the whole MR/CR (rolled back, safe) with 'eNotApplicable' on screen. Recommended next: a C# pre-check that refuses in plain words before the native call (no native rebuild); accepting the pipe class later, with AutoCAD evidence.
 
+- Note (trust-safety-fixes, Fri 13 Nov 2026, TRUST-04; nothing installed or accepted): fix (c) built: draft PR #2081 (MR and CR on AutoCAD 2027 check the selection first and refuse in plain words naming the object; handed-over grips cleared after the transform). Moving a 2027 pipe (fix (a)) still needs a native rebuild. Not seen in AutoCAD.
+
 ## BUG-1335 — CDSTRIP: the layer name is fixed as STRIP DRAIN, so a layer rename in Settings is ignored
 
 **Command / Area:** CDSTRIP (strip drain). LOW. SETTING IGNORED.
@@ -19455,6 +19467,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 
 **Status:** OPEN
 
+- Note (trust-safety-fixes, Fri 13 Nov 2026, TRUST-04; nothing installed or accepted): draft PR #2088: the report is saved while the window is open; a failed save keeps the window and the text. Not seen in AutoCAD.
+
 ## BUG-1347 — CDFEEDBACK: the 2,000-character limit on the title and description cuts the text without telling you
 
 **Command / Area:** CDFEEDBACK. LOW. SILENT CUT.
@@ -19674,6 +19688,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
 
 **Status:** OPEN
+
+- Note (trust-safety-fixes, Fri 13 Nov 2026, TRUST-04; nothing installed or accepted): draft PR #2087: only the newest runs kept (Settings checks.rulesRunsKept, DRAFT 5); the in-memory warning path left to trust-foundations. Not seen in AutoCAD.
 
 ## BUG-1359 — CDSYSTEM: the count is pipes changed, not pipes picked, and '0 pipe(s) recorded' can print
 
