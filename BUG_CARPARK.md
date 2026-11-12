@@ -19690,3 +19690,273 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
 
 **Status:** OPEN
+
+## BUG-1361 — STRSCHEDSYNC with no edits turns every rotated brace again and rewrites every brace's length and angle
+
+**Command / Area:** STRSCHEDSYNC (Schedules, sync the bracing table back to the drawing). HIGH. WRONG ANSWER, silent change to bracing on the drawing. Engineering judgement: Tim.
+
+**Symptom:** The bracing table's ROTATION column shows the block's own rotation setting, which is zero for a brace the drafter turned with AutoCAD ROTATE, so the table then shows the object's turn instead. STRSCHEDSYNC reads every row back and writes each row's length and rotation into the brace block again, even when nobody edited the table. A ROTATEd brace gets its angle applied a second time, so it turns again. Every brace's length and angle is also rewritten at the table's two-decimal rounding (a 2699.996 mm brace becomes 2700, an angle of 89.9973 becomes 90). The drafter sees braces move or change length after a sync they did only to push one typed edit.
+
+**Expected behaviour:** A sync changes only the cells the drafter edited. A brace the drafter turned with ROTATE is never turned again, and lengths and angles that were not edited keep their exact stored values.
+
+**Steps to confirm in AutoCAD:** (1) On a copy, place two AB braces and ROTATE one of them 30 degrees. (2) Run STRSCHEDCREATE and note the table. (3) Note each brace's length and angle with LIST or Properties. (4) Run STRSCHEDSYNC on the bracing table without editing any cell. (5) Compare both braces to step 3. Right = both identical to step 3. Wrong = the turned brace is now at a different angle, or a length or angle changed in the third decimal.
+
+**Test that catches it:** Fixture: a bracing table built from a drawing with one ROTATEd brace; run the sync with no cell edits; assert every brace's length, rotation and position equal their values before the sync. Unit: a cell whose text equals the rounded stored value is not written back.
+
+**Reference:** Services\ScheduleService.cs:409-410 (table cells written at two decimals) and 725-756 (SyncBracingTable writes length and rotation for every row, no change test); Services\ProjectDataService.cs:322-326 (rotation falls back to br.Rotation when the dynamic value is under 0.0001). Already named in the hunt note as BRACE-01 with no bug number. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1362 — ABS (A-B switch) erases an older brace first, and if the new one cannot be drawn says "It was left as it was"
+
+**Command / Area:** ABSWITCH (Structural A-B bracing switch), older-named brace blocks ("A - BRACING LEFT" and the like). HIGH. WRONG ANSWER, lost brace with a false message. Engineering judgement: Tim.
+
+**Symptom:** When ABS converts an older brace block to the new BRACING block it erases the old block, then tries to draw the new one. If the new block cannot be drawn (block missing, layer problem, insert fails) the brace is gone, but the command line says "Could not convert one older bracing block. It was left as it was." The drafter loses a brace from the wall and is told it is still there. Bracing totals then fall short with no warning.
+
+**Expected behaviour:** The old brace is erased only after the new one is drawn. If the new one cannot be drawn the old brace stays exactly as it was and the line says so truthfully. Undo puts back what the command did.
+
+**Steps to confirm in AutoCAD:** (1) On a copy place an older-named brace block ("A - BRACING LEFT") on a wall line and note it. (2) Make the new BRACING block unavailable (rename it in the Block Editor on the copy, or lock the target brace layer so the insert fails). (3) Run ABS and pick the old brace. (4) Look at the line and the drawing. Right = the old brace is still there and unchanged. Wrong = the brace has gone while the line says it was left as it was.
+
+**Test that catches it:** Fixture: older-named brace plus a failing InsertBracingBlock; assert the old block is not erased when the insert fails and the message does not claim it was kept unless it is present.
+
+**Reference:** Services\BracingService.cs:2169-2191 (ConvertLegacyToNew erases at 2171-2172, inserts at 2176, returns false at 2190-2191); Commands\BracingCommands.cs:395-398 and 496-499 (message). Related BUG-583 (locked brace, unhandled error). Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1363 — A schedule size the support block cannot show is drawn as the default size while the screen line names the schedule size
+
+**Command / Area:** C1, C2, DS, DS1, TS1 (support blocks). HIGH. WRONG ANSWER, size on the drawing differs from the schedule. Engineering judgement: Tim.
+
+**Symptom:** When the member schedule gives a size the block has no state for (a timber stud pack such as "2 No 90 x 45 F17 KDHW", or a steel size the block lacks), the command still prints "[CE] DS1: size 'X' from the schedule, shown as 'Y'". The block is placed at the command's built-in default size (for example 89 SHS or 90 x 90) instead. The drafter sees the schedule's size on the command line and a different size on the drawing. Plan card TRUST-S3 covers it; there was no bug number.
+
+**Expected behaviour:** If the schedule size cannot be shown, say so in plain words (the schedule size and the size the block took), and ideally leave the size as Unknown until the drafter picks one. The line never names a size the block does not show.
+
+**Steps to confirm in AutoCAD:** (1) On a copy put a member schedule row for DS1 with a timber pack size. (2) Run DS1 and place a support. (3) Compare the command line with the block's visible size (Properties, Visibility). Right = the line says the size could not be shown and names the size used. Wrong = the line says the schedule size and the block shows the default.
+
+**Test that catches it:** Fixture: schedule row with a non-steel size; run the visibility step; assert the message names the fallback when the requested state is not offered. Unit: SetDynamicVisibility returns a distinct result when it used the fallback.
+
+**Reference:** Commands\SupportBlockCommands.cs:252-257 (message), 322-325 (SetDynamicVisibility with fallback), 1470-1480 (fallback applied, logged only). Plan card TRUST-S3. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1364 — BDL has no units handling: in a metre drawing its 50 minimum, 100 offset and 250 search are metres
+
+**Command / Area:** BDL (Beam Dual Layer: BEAM and BEAM LOWER lines). HIGH. UNITS, WRONG ANSWER. Engineering judgement: Tim.
+
+**Symptom:** BDL does not read the drawing's units. The shortest beam it accepts (50), the lower-beam offset it offers by default (100 when the Settings value is blank) and the distance it searches for a nearby support (250) are all taken as drawing units. In a metre drawing a BEAM LOWER line is offered 100 m away, a 3 m beam is accepted but a 0.05 m click error is not caught, and the support search looks 250 m. The other beam tools hold in non-millimetre drawings; BDL runs and says nothing.
+
+**Expected behaviour:** BDL converts its millimetre figures to the drawing's units, or stops with one plain line as the other beam commands do.
+
+**Steps to confirm in AutoCAD:** (1) On a copy set INSUNITS to metres. (2) Run BDL, pick a 5 m beam, accept the default offset. Right = the lower line is about 0.1 m from the upper. Wrong = it is 100 m away (off the screen). (3) Repeat in a millimetre drawing: it must behave as today.
+
+**Test that catches it:** Fixture: metre drawing, BDL with defaults; assert the offset is 0.1 drawing units and the support search 0.25. Source guard: BDL calls the same unit hold as AB.
+
+**Reference:** Commands\BeamPlacementCommands.cs:97 (CommandPreFlight only), 121-127 (50 minimum), 145 (100 default), 737 (SupportLinkSearchTolerance = 250.0); Services\BeamDraftingStandards.cs:78 (MinBeamLength = 50.0 "Drawings are in millimetres"). Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1365 — Beam tools 1, 2, 4 and 5 refuse every beam with "CE hit an internal problem" when the beam or text layer is locked, off, frozen or set differently
+
+**Command / Area:** Beam commands 1, 2, 4 and 5 (regular, lower, special and offset beams). HIGH. CRASH-LIKE REFUSAL with no plain reason.
+
+**Symptom:** If the BEAM, BEAM LOWER or 25TEXT layer is locked, switched off, frozen, not plottable, a different colour from CE's (BEAM 4, BEAM LOWER 2, 25TEXT 7) or a different linetype (BEAM LOWER must be HIDDEN), or the HIDDEN linetype is not loaded, the beam is refused. The drafter reads "Beam not placed. CE hit an internal problem it could not put into a plain reason. Nothing was drawn. Try again." (tools 1 and 2), or "could not confirm this beam's preview or write still exactly matches the drawing ... Run the command again." (tools 4 and 5), and running it again cannot help. The reason, a layer set-up, is never named.
+
+**Expected behaviour:** One plain line naming the layer and what is wrong with it ("Layer BEAM is locked"), as AB and BB do for a locked brace layer. Nothing is unlocked or changed.
+
+**Steps to confirm in AutoCAD:** (1) On a copy lock the BEAM layer with the Layer command. (2) Run 1 and pick a beam. Right = a line naming layer BEAM as locked and nothing drawn. Wrong = "CE hit an internal problem". (3) Repeat for frozen, off and with the layer colour changed to 1, and for tools 2, 4 and 5.
+
+**Test that catches it:** Fixture: each bad layer state; assert the result code has its own wording and names the layer. Source guard: no layer-mismatch code falls through to UnknownCodeFallback.
+
+**Reference:** Services\ConnectedDesign\Commit\BeamAtomicLayerWriter.cs:44-47 and 61-70 (throws REQUIRED_LINETYPE_MISSING and REQUIRED_LAYER_MISMATCH); Services\ConnectedDesign\Commit\BeamAtomicWriteSession.cs:112-116; Structural.DesignCore\ConnectedDesign\BeamAtomicCommitCoordinator.cs:107-117 (COMMIT_NOT_COMPLETED); Services\ConnectedDesign\Host\BeamCommandAutoCadRoute.cs:446-467; Structural.DesignCore\ConnectedDesign\BeamRefusalWording.cs:80-84 and 556-559, 602-606 (no wording for these codes; they reach the fallback lines). Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1366 — ABS on a layout tab or inside REFEDIT erases the older brace there and redraws it in Model space with no stop line
+
+**Command / Area:** ABSWITCH (Structural A-B bracing switch). MEDIUM. WRONG ANSWER, brace moved to another space. Engineering judgement: Tim.
+
+**Symptom:** ABS uses the plain pre-flight, not the Model space and REFEDIT check that AB, BB and BT1 use. On a layout tab or during REFEDIT it converts an older brace anyway: the old block is erased where it is, and the new block is always drawn in Model space. The brace leaves the space it was in and nothing says so.
+
+**Expected behaviour:** ABS stops with one plain line on a layout tab or in REFEDIT and changes nothing, as AB, BB and BT1 do.
+
+**Steps to confirm in AutoCAD:** (1) On a copy open a layout tab (or start REFEDIT on an Xref that holds a brace). (2) Run ABS and pick a brace. Right = a plain stop line and no change. Wrong = the brace disappears from the layout or working set and a new one appears in Model space.
+
+**Test that catches it:** Source guard: ABSWITCH calls CommandPreFlightModelSpace. Fixture: ABS with the layout tab current draws nothing.
+
+**Reference:** Commands\BracingCommands.cs:385 (CommandPreFlight, against AB at 17 which uses CommandPreFlightModelSpace); Services\BracingService.cs:1676 (always Model space) and 2171 (erase). Related BUG-472 (same fault for R1, BT1, C1, TS1, fixed on the train line, ABS not named). Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1367 — ABS reads the type of an untagged brace block from its layer name
+
+**Command / Area:** ABSWITCH (Structural A-B bracing switch). LOW. WRONG ANSWER, an unknown turned into a value. Engineering judgement: Tim.
+
+**Symptom:** A BRACING block with a blank type tag that sits on a layer whose name contains "TYPE B" (for example the bracing truss layer "WALL BRACING TYPE BT1") is read as type B and is switched to A. The tag is the record of the type; the layer name is a guess. The drafter's truss is turned into a wall brace of the other type with no line saying the type was guessed.
+
+**Expected behaviour:** A blank type is Unknown and ABS skips that brace with a line naming it, rather than reading the type from the layer name.
+
+**Steps to confirm in AutoCAD:** (1) On a copy place a BT1 truss and blank its type tag in Properties. (2) Run ABS and pick it. Right = skipped with a line saying its type is not known. Wrong = it is switched to A.
+
+**Test that catches it:** Unit: a block with a blank tag on a "TYPE B" layer returns an Unknown type.
+
+**Reference:** Services\BracingService.cs:2104-2113 (blank tag falls back to the layer name) and 2126-2141 (same for the other name shapes). Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1368 — The bracing panel keeps the last totals on screen with no sign when a read fails
+
+**Command / Area:** CSBRACINGPANEL (live bracing panel). MEDIUM. WRONG ANSWER, old totals shown as current. Engineering judgement: Tim.
+
+**Symptom:** If the panel's refresh from the drawing fails for any reason, the error is swallowed and the previous numbers stay on screen. The drafter sees a green or red tick and a provided length that may be minutes old, with no sign that it is not current.
+
+**Expected behaviour:** A failed read shows plainly on the panel ("Could not read the drawing; figures may be out of date") or clears the figures to Unknown.
+
+**Steps to confirm in AutoCAD:** (1) On a copy open CSBRACINGPANEL with braces drawn. (2) Cause a read failure (for example run the panel while a command holds the drawing, or open it on a drawing whose bracing block definition is damaged). Right = the panel says the figures are not current. Wrong = old totals stay with no sign.
+
+**Test that catches it:** Unit: BuildSnapshot throws; assert the panel state reads "not current" rather than keeping old values.
+
+**Reference:** UI\Dialogs\BracingPanelWindow.xaml.cs:111-123 (empty catch, "Leave the last known values on screen"). Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1369 — Older-named brace blocks count as zero in the bracing panel and are left out of the bracing schedule
+
+**Command / Area:** CSBRACINGPANEL, STRSCHEDCREATE, STRSCHEDREFRESH. MEDIUM. WRONG ANSWER, bracing understated, no message. Engineering judgement: Tim.
+
+**Symptom:** ABS and the block reader know the older names ("A - BRACING LEFT", "A - BRACING RIGHT", "B - BRACING"), but the scan that feeds the panel and the schedule keeps only blocks named exactly BRACING. A drawing with older brace blocks shows 0 provided and a schedule with no braces, and nothing says braces were skipped. Bracing provided is understated, so a wall can show a red cross it does not deserve, or a drafter may place more bracing than is needed. Hunt item BRACE-05.
+
+**Expected behaviour:** Older-named braces are counted and listed, or the panel and schedule say how many were left out and why.
+
+**Steps to confirm in AutoCAD:** (1) On a copy place two older-named brace blocks and no new ones. (2) Open CSBRACINGPANEL and run STRSCHEDCREATE. Right = both braces counted and listed, or a line saying 2 older braces were left out. Wrong = 0 provided and an empty bracing table with no line.
+
+**Test that catches it:** Fixture: drawing with older-named braces; assert the scan counts them or reports the skipped count.
+
+**Reference:** Services\ProjectDataService.cs:282-283 (name must equal BRACING) against Services\BracingService.cs:2089-2104 (older names recognised). Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1370 — Braces on a frozen or switched-off layer are counted in the bracing panel and the bracing schedule
+
+**Command / Area:** CSBRACINGPANEL, STRSCHEDCREATE, STRSCHEDREFRESH. LOW. WRONG ANSWER, bracing may be overstated. Engineering judgement: Tim.
+
+**Symptom:** The scan counts every BRACING block in Model space whether its layer is frozen or off. A drafter who freezes the bracing layer to hide an old scheme still sees it in the provided total and in the schedule.
+
+**Expected behaviour:** Hidden layers are either left out or the panel says how many hidden braces are included.
+
+**Steps to confirm in AutoCAD:** (1) On a copy place one AB brace, freeze WALL BRACING TYPE A. (2) Open CSBRACINGPANEL. Right = provided is 0, or a line says one hidden brace is counted. Wrong = the frozen brace's length is counted with no line.
+
+**Test that catches it:** Fixture: frozen-layer brace; assert the provided total or a note reflects it.
+
+**Reference:** Services\ProjectDataService.cs:266-286 (no layer state test in ScanFromDrawing). Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1371 — P1 purlin lap is fixed at 1200 mm and the question "Apply purlin lap?" does not show the number
+
+**Command / Area:** P1 (purlin marker). MEDIUM. WRONG ANSWER, hidden engineering figure. Engineering judgement: Tim.
+
+**Symptom:** Answering Yes to "Apply purlin lap? [Yes/No] <No>:" draws a purlin lap of 1200 mm. The 1200 is written in the code, is not on the Settings window and is not shown in the question. The drafter cannot see what lap will be drawn.
+
+**Expected behaviour:** The question names the lap ("Apply the 1200 mm purlin lap?") and the value is a Settings value the drafter can change.
+
+**Steps to confirm in AutoCAD:** (1) On a copy run P1 and answer Yes at the lap question. (2) Read the question and look for the lap on Settings. Right = the question shows the lap length and Settings has a box for it. Wrong = no number shown and no Settings box.
+
+**Test that catches it:** Source guard: no literal 1200.0 in the lap path; the lap comes from Settings. Unit: the prompt text contains the lap value.
+
+**Reference:** Commands\RafterJoistCommands.cs:283 (1200.0), prompt at 179-184. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1372 — R1, P1 and FJ1 draw a guessed arrow depth when the top and bottom picks are under 25 units apart, with no line
+
+**Command / Area:** R1, P1, FJ1 (rafter, purlin and floor joist markers). LOW. WRONG ANSWER, a guess shown as a pick. Engineering judgement: Tim.
+
+**Symptom:** If the two picks that give the arrow depth are under 25 drawing units apart, the code replaces them with a depth of 300 or a quarter of the bay width, whichever is larger. The drafter picked a depth, the marker shows another, and nothing says so.
+
+**Expected behaviour:** A line says the picks were too close and the depth used, or the tool asks again.
+
+**Steps to confirm in AutoCAD:** (1) On a copy run R1 and pick top and bottom points 10 units apart. Right = a line naming the depth used. Wrong = a 300-deep arrow with no line.
+
+**Test that catches it:** Unit: picks under 25 apart return a flag the command turns into a message.
+
+**Reference:** Commands\RafterJoistCommands.cs:362-368 and 533-539; fixed number DefaultDepth = 300.0 at line 27. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1373 — R1, P1 and FJ1 straighten a bay within 12 degrees of horizontal or vertical and measure the width along that axis, with no line
+
+**Command / Area:** R1, P1, FJ1 (rafter, purlin and floor joist markers). LOW. WRONG ANSWER, width slightly under the picked length. Engineering judgement: Tim.
+
+**Symptom:** A bay whose picks lie within 12 degrees of horizontal or vertical is drawn exactly horizontal or vertical, and its width is taken along that axis, so the width is a little under the length the drafter picked. Nothing says it was straightened.
+
+**Expected behaviour:** The line says the marker was set square and by how many degrees, or the tolerance is a visible Settings value.
+
+**Steps to confirm in AutoCAD:** (1) On a copy pick a bay 8 degrees off horizontal with R1. Right = a line saying it was set to horizontal. Wrong = the marker is horizontal and its width is shorter than the pick, with no line.
+
+**Test that catches it:** Unit: AlignFrameToDirection reports when it changes the axis.
+
+**Reference:** Commands\RafterJoistCommands.cs:168-171 and 496-564; Models\UserSettings.cs:970 (DirectionSnapToleranceDeg 12.0, no box on Settings). Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1374 — R1, P1 and FJ1 slide the marker inside the bay to miss text and walls with no line
+
+**Command / Area:** R1, P1, FJ1 (rafter, purlin and floor joist markers). LOW. LOOK.
+
+**Symptom:** With auto placement on, the marker is moved away from text and walls inside the bay. The result is only reported when detailed logging is on, so the drafter sees the marker away from where the bay centre is, with no line saying why.
+
+**Expected behaviour:** A short line ("Marker moved 120 mm to clear text") or a Settings choice that is visible.
+
+**Steps to confirm in AutoCAD:** (1) On a copy put text in the centre of a bay and run R1. Right = a line saying the marker was moved. Wrong = it is off centre with no line.
+
+**Test that catches it:** Unit: ResolveInsertionPoint reports a moved flag.
+
+**Reference:** Commands\RafterJoistCommands.cs:194-200 (WriteDebug only; 1595-1600 prints only when DebugLogging is on). Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1375 — R1, P1 and FJ1 draw on a locked RAFTERS, PURLINS or JOISTS layer where AB, BB and BT1 refuse
+
+**Command / Area:** R1, P1, FJ1 (rafter, purlin and floor joist markers). LOW. PROTECTION.
+
+**Symptom:** AB, BB and BT1 stop with a plain line when their layer is locked. R1, P1 and FJ1 have no locked-layer check, so the marker is added on a locked layer, against AutoCAD's normal layer protection.
+
+**Expected behaviour:** They stop with a plain line naming the locked layer and draw nothing, and nothing is unlocked.
+
+**Steps to confirm in AutoCAD:** (1) On a copy lock layer RAFTERS. (2) Run R1. Right = a line naming RAFTERS as locked and nothing drawn. Wrong = a marker appears on the locked layer.
+
+**Test that catches it:** Source guard: the command calls FirstLockedLayer before drawing. Fixture: locked layer, assert nothing is added.
+
+**Reference:** Commands\RafterJoistCommands.cs:96-272 (no FirstLockedLayer call) against Commands\BracingCommands.cs:19-24. Related BUG-473 (same gap for BT1, C1, TS1, BTX). Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
