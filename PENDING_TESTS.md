@@ -8,8 +8,11 @@ PR 2045 (DRAFT, never merged by the run), branch `claude/trust-05-sync-visible`,
 2. **Record behind the drawing:** add one polyline on the stormwater pipe layer, run CDGRAPH. Right = `CE: needs checking. 1 line on a pipe layer not in the CE record. Type CDCHECKCURRENT to see them.` and the record is still unchanged.
 3. **Edit Pit on that copy:** Right = one line starting `CE updated its record (` with the command that was typed in the brackets, then `1 pipe added. Guessed, not read from the drawing: 1 pipe size (100), 1 pipe material.` and the record really gained exactly one pipe.
 4. **Nothing to update:** run PIT's edit window twice in a row. Right = no "CE updated its record" line the second time.
-5. **Erase a pit, then run PIT:** Right = the line counts 1 pit removed and its pipes removed.
-6. **Edit a pit's cover level text on the plan, then run a tool:** Right = `1 cover level read from the drawing`.
+5. **Erase a pit (leave its pipes drawn), then run PIT:** Right = the line counts `1 pit removed` and, for each pipe that ran to it, either `pipe end no longer joined` or the pipe `removed` and `added` again. Which of the two the update does is not settled from reading the code: the robot compares the line with the real difference in the stored record, number for number.
+6. **Edit a pit's cover level text on the plan, then run a tool:** Right = `1 cover level changed from the drawing` (a level that was blank before reads `read from the drawing`; a CL line deleted from the text reads `cleared`).
+6a. **Erase a pit by mistake and press U, then run a tool:** Right = no "Guessed" sentence when CE put the pipes' own sizes and materials back.
+6b. **Pit Schedule, Relink:** Right = one line for the whole relink, including pipe ends it re-joined.
+6c. **Take every "before" reading after one ordinary CE command** has run in the drawing, so a save CE already owed the drawing does not fail a case for a reason outside the tool.
 7. **CDPROPAGATE, then Cancel:** Right = no "CE updated its record" line. Accept instead: the line appears once.
 8. **CDRECOVERINVERTS on a copy with a pipe of no size:** Right = the pipe is not given 100 before the tool looks at its size.
 9. **Both switches off:** every tool behaves exactly as on the installed build, and no line appears.
@@ -24,12 +27,15 @@ PR 2041 (DRAFT, never merged by the run), branch `claude/trust-01-open-line`, cu
 3. **Old drawing with pit symbols and no CE record:** Right = `CE: N pit blocks found, no CE record. Nothing has been changed by this check. ...`
 4. **Structural drawing, consultant drawing, blank drawing:** Right = no CE line at all.
 5. **Read-only file:** the line still shows; nothing is written.
-6. **A drawing whose pit symbols get updated on opening (older PIT BLOCK 2):** Right = a second line `CE: pit symbols were updated when this drawing opened.`
+6. **A drawing whose pit blocks get updated on opening (older PIT BLOCK 2):** Right = a second line `CE: pit blocks were updated when this drawing opened.`
 7. **U, then open another drawing, then back:** Redo still works in the first drawing.
 8. **Size limit:** set `trust.openCheckMaxObjects` to 10 in `CD_Settings.json`, open a Civil job: `CE: large drawing, not checked on opening. Type CDCHECKCURRENT to check it.` Put it back after.
 9. **Switch off:** `trust.sayDrawingStateOnOpen` = false: no line on any drawing and CDCHECKCURRENT is exactly as before.
 10. **Broken twin (already proven without AutoCAD):** a deliberately broken copy of the check that writes is caught twice, by the changed-counter guard and by the compiled-plugin scan. In AutoCAD the equivalent check is case 1's "no save question" (DBMOD unchanged).
-11. **Not provable by the robot alone:** the look of the line (one Codex look, also on a large drawing); the counts on real old jobs (Tim, five jobs he knows and one messy one).
+11. **Start AutoCAD by double-clicking a Civil test copy (review of PR 2041, finding 1):** Right = that first drawing gets its line too.
+12. **A current job with an outlet pipe ending at the LPD, a pipe starting at a downpipe and one at a connection point (review finding 2):** Right = `all linked`; none of those ends is counted as not linked.
+13. **Run cases 1 to 4 once with the Inspector showing and once with it hidden:** with it showing, opening may also print step 5's "CE updated its record" line.
+14. **Not provable by the robot alone:** the look of the line (one Codex look, also on a large drawing); the counts on real old jobs (Tim, five jobs he knows and one messy one).
 
 ## TRUST step 0, the read-only reader and scorer (DRAFT, nothing calls it), draft PR 2040 — 12 Nov 2026
 
