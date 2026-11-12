@@ -80,3 +80,26 @@ Files: `C:\CE_WORK\scratch\trustprobe\ab\` (DXF exports, parsed records, console
 2. **What the faulty-version lines say:** "drawing objects: N changed, M added, 0 erased (changed DBDictionary, changed Xrecord, added DBDictionary, ...); CE's stored record; CE's record in memory". All three detectors fired for both faulty versions.
 3. **Not shown:** the real "CE updated its record" line after Edit Pit and PIT (windows and prompts: not headless); Undo on the new build; the opening line itself on a real drawing opening (the check proves the counting and the no-write rule through CE's own code, not the idle event).
 4. **A mistake I made twice tonight, so you can trust the corrected file:** my transcript summary stops at 60 lines, and CDGRAPH prints more than that, so lines after it can be cut. The CDDIAG lines are present at both heads (read from the full console file).
+
+---
+
+# H. Core-console matrix, 13 Nov 07:41 to 08:03 (every head built fresh under the build lock; nothing installed)
+
+Each line: seen to pass, seen to fail, or could not be run (BLOCKED means this build does not have the thing the check drives, which is expected for an older branch, not a fault).
+
+**FOR TIM**
+
+1. **PR 2064 (cancel writes nothing), head `dde7825e`: all seven checks PASS.** Cancelled-command check (TRUST-CANCEL-01), the Esc check in a drawing with no Civil mark (TRUST-CANCEL-02), the opening line, the read-only door, the update count, Unknown instead of a guess, and the pit label. Each faulty version was noticed. Core console only: the real-AutoCAD rows are still open.
+2. **PR 2073 (the BUG-1456 cure), head `1a28c3b3`: its check PASSES.** While CE held another drawing's record, the end of PIT, CDHELP and CDS, the flush and a save aimed at this drawing all wrote nothing into this drawing; the installed writer with no check did write it and was noticed.
+3. **PR 2083 (the change door), head `522e5502`: its first check PASSES, its second FAILS, and the failure is the check's own fault.** The refusal worked (the three refused changes left the record at 2 pits). The check's own tidy-up read a stale list afterwards. The foundations lane has the fix (not yet pushed) and says to rerun it in the 2:00pm window.
+4. **PR 2045 and 2049 (steps 5 and 6): all four proof checks PASS on 2049; on 2045 three pass and one is BLOCKED** because Unknown-instead-of-100 is step 6's work, not in step 5's branch.
+5. **PR 2041 (the opening line) alone: the opening check PASSES; the other three are BLOCKED** because step 5 and step 6 are not in that branch.
+6. **Not covered tonight:** PR 2078 (no headless check exists; it needs the build loaded in real AutoCAD), the Structural pull requests (2044, 2046, 2047), the ribbon (2038), and PR 2083's second check after its fix.
+
+**DETAIL (the lines the harness printed)**
+
+1. 2073 `CEPROOFCROSSDRAWING`: PASS BUG-1456-CROSS-01.
+2. 2083 `CEPROOFCROSSDRAWING`: PASS. `CEPROOFCROSSCHANGE`: FAIL BUG-1456-CROSS-02: "the check did not leave CE's record as it found it (3 pit(s), 1 pipe(s) ... was 2 pit(s), 1 pipe(s) ...)". Detail: 2 pits at the start; 2 after three refused changes; 3 with a pit put straight in (the faulty version, noticed); 3 with the record the drawing's own and a pit added; 3 at the end. The foundations lane's reading: the check kept counting a list CE replaces on every save.
+3. 2064 `CEPROOFTRUSTCANCEL`, `CEPROOFTRUSTESC`, `CEPROOFTRUSTOPEN`, `CEPROOFTRUSTREADONLY`, `CEPROOFTRUSTUPDATE`, `CEPROOFTRUSTUNKNOWN`, `CEPROOFPITLABEL`: PASS each. CANCEL faulty half: "drawing objects: 7 changed, 1 added, 0 erased"; READONLY faulty half: "23 changed, 5 added".
+4. 2045 (`d0cf644c`): OPEN, READONLY, UPDATE PASS; UNKNOWN BLOCKED ("CE's TrustSettings has no ShowUnknownInsteadOfGuess"). 2049 (`98d81717`): OPEN, READONLY, UPDATE, UNKNOWN all PASS. 2041 (`31f426ab`): OPEN PASS; READONLY BLOCKED (no ReadOnlyToolLegacyUpdate); UPDATE BLOCKED (no ProjectDataService.LastRecordUpdate); UNKNOWN BLOCKED (no ShowUnknownInsteadOfGuess).
+5. The older-head runs use the harness from PR 2050's head (`03af5393`, the probe) with each head's own Civil build, as the foundations lane planned.

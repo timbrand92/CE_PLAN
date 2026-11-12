@@ -104,3 +104,22 @@
 2. **What was seen:** no CE window the driver could list, and no new line on the command line that the driver could read. Straight after, the driver could no longer talk to AutoCAD: its next reads failed with "System call failed" and then "AutoCAD is running but is not registered for COM automation". AutoCAD itself still said it was responding. The driver's normal quit refused. Its kill-quit (which only ends the AutoCAD the driver started) ended it about three minutes later. Only scratch copies were open; nothing real was lost.
 3. **Not known:** whether this is the robot's problem or a real fault in CDFEEDBACK. A window CE opens that the driver does not know about (a feedback or web window) would look exactly like this to the robot, so it may be harmless to a person. It may also be a real hang. It was not repeated. Whether CDFEEDBACK also writes CE's record into the second drawing is therefore unmeasured.
 4. **What would settle it:** a person typing CDFEEDBACK once in a spare copy and saying what appears and whether AutoCAD stays usable.
+
+---
+
+# The cure, pull request 2073 (BUG-1456), tested in the core console (13 Nov 07:54)
+
+**Build:** `claude/bug-1456-record-own-drawing` at `1a28c3b3` (also inside PR 2083), built in my own folder under the build lock, loaded only in AutoCAD's core console from a scratch folder. Nothing installed, no setting changed.
+
+## FOR TIM
+
+1. **The cure's own check PASSES.** `CEPROOFCROSSDRAWING` (BUG-1456-CROSS-01): while CE held another drawing's record, the end of PIT, CDHELP and CDS, the flush, and a save aimed at this drawing all wrote nothing into this drawing. The old way of writing, with no check, did write the other record and the check noticed it. And the drawing's own record is still saved properly. Seen to pass, twice: on PR 2073's head and on PR 2083's head.
+2. **My six seen sequences (1, R1, 2, R2, R3, C3) could NOT be run in the core console.** CDHELP and CDS open windows, and the tab switching and idle moments they depend on do not exist in the core console. So for each of them the answer is: **could not be run headless.** The check above stands in for them by driving CE's own end-of-command step directly, which is a fair proof of the writing rule but not of the whole thing a drafter does.
+3. **The full proof needs the cure build loaded in real AutoCAD,** and this run may not install it. So the six sequences on the cure build are NOT proven. What is proven is the rule inside CE's code.
+4. **What to do once a test machine exists:** repeat sequences R1 (CDDIAG in A, open B, CDHELP), R2 (blank drawing, CDHELP), R3 (CDS alone), C3 (the other order) and the tab-switch case on the cure build; each should leave the second drawing's own record exactly as it was.
+
+## DETAIL
+
+1. `CEPROOFCROSSDRAWING` on 2073: PASS BUG-1456-CROSS-01 "while CE held another drawing's record, the end of PIT, CDHELP and CDS, the flush and a save aimed at this drawing all wrote nothing here; the installed writer with no check DID write it and was noticed; and the drawing's own record is still saved". On 2083 (`522e5502`): the same PASS.
+2. The core console loads the cure's own build from a scratch folder; the live CE log did not change; the full AutoCAD was closed.
+3. Pull request 2083's second check (the change door) failed for a reason in the check itself (see `EVIDENCE_BRANCHES.md` section H); the door's refusal worked in that run (three refused changes left the record unchanged).
