@@ -19,7 +19,7 @@
 
 1. **Earlier finding, the internal object code listed as a pit number: NOT FIXED.** See FIX FIRST 1. The PR's own review section lists the two things it changed (a guard test, the place name) and does not mention this finding.
 2. **Earlier finding, real job details in the repository: FIXED at the tip, NOT in the branch history.**
-   1. The tip names the case "the 4 Nov job" (`PitScheduleLeftOutNoticeTests.cs` 12, 28); no suburb, street or job number in any file the branch adds or changes, nor in the change log. The only "Dromana" left in the tree is the council list in `council-profiles.json`, which was there before and is unrelated.
+   1. The tip names the case "the 4 Nov job" (`PitScheduleLeftOutNoticeTests.cs` 12, 28); no suburb, street or job number in any file the branch adds or changes, nor in the change log. The only place that suburb's name still appears in the tree is the council list in `council-profiles.json`, which was there before and is unrelated.
    2. Commit `a3f06dd9` on this branch re-commits the suburb (test comment, helper name, change-log line); `7115c129` takes it out again. See FIX FIRST 2.
    3. No job number appears in any of the five commits.
 3. **Does a test fail without the change? YES, as far as the lane's broken twin shows.**
