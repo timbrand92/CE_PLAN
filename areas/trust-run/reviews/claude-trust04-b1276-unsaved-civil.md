@@ -42,7 +42,8 @@
 1. **Card TRUST-04 is only half corrected.** Decision 3 now records Tim's decision 223, but robot case 4 (card line 59) still expects "no file written". It should expect one copy in the backup folder per interval and nothing written to the drawing.
 2. **The PR calls the lift "code identical to the reviewed branch"** without saying that review was FIX FIRST and two of its code items are still open. True, but it reads as if the review were cleared (RULES 6.2).
 3. **Still open from the last review, not blocking a trial on Tim's PC:** copies land in the Civil or the Structural folder depending on which suite started first (item 6); twelve copies of a large automatic-save file per drawing is about 1 GB, not measured (item 9); the background copy writes its results without the lock (item 7, tidy only).
-4. **The lane found a small risk of its own:** a second AutoCAD session with a drawing of the same file name writes its automatic-save file to the same folder, and CE cannot tell the two apart. Reasonable to note and leave.
+4. **The robot steps the PR points to are not there yet** (added 00:00, while reviewing PR 2044): PR 2042 says the AutoCAD steps are in `PENDING_TESTS.md`, section "TRUST-04 core safety fixes", row 3. That section is not in `PENDING_TESTS.md` on `main`. The change log's step 5 has the right content.
+5. **The lane found a small risk of its own:** a second AutoCAD session with a drawing of the same file name writes its automatic-save file to the same folder, and CE cannot tell the two apart. Reasonable to note and leave.
 
 ## 4. Not checked
 
