@@ -123,3 +123,30 @@ Setup in A1: one polyline with no width on `STORMWATER PIPE` and one `PIT BLOCK 
 1. "Largest test copy" taken as the largest CE test drawing (1.3 MB), not the 4 MB consultant file.
 2. The made-up drawing has 370 pipes, not 300.
 3. The Edit Pit "no change" case was tested with Cancel only, because the driver cannot press Save.
+
+---
+
+# 9. More Undo cases (added Fri 13 Nov 2026, 01:30 to 01:55)
+
+**Same build and rules as above:** installed Civil 3.0.90 in AutoCAD 2027, a fresh copy of the standard test drawing (11 pits, 49 pipes), CE's record read by the same read-only script before and after each step, "the same" meaning the record text and drawing fingerprint match with CE's random ids masked. Settings files hashed before and after: unchanged. AutoCAD closed with the driver; lock released.
+
+## FOR TIM
+
+1. **U after two other commands in between: works.** CDSYNC, then two circles, then U, U, U. The first two U take the circles. The third takes CDSYNC, and CE's record is back exactly as it was before CDSYNC.
+2. **Redo after that U: works.** REDO brings the CDSYNC state back exactly.
+3. **Edit Pipe (Cancel): it updates CE's record behind the drawing, and one U puts it back exactly.** My code reading said Edit Pipe holds its writes until Save; on a drawing where the record was behind, it did not.
+4. **PIT, one pit placed: one U takes the pit back,** and the record and the drawing return exactly to before PIT (including the pipe the pit split).
+5. **PIT cancelled at its first question (Esc, nothing placed): it still changed CE's record** (600,382 to 600,234 characters, drawing unchanged). One U put it back exactly. A tool that was cancelled has changed the record: that is the "changes CE's record without telling" fault.
+6. **CD, one pipe drawn between two pits: one U takes the whole pipe back,** record and drawing exactly as before.
+
+**Not tested:** Edit Pipe with Save (the Save button cannot be pressed by the driver); U after Edit Pit's Save; U after a drawing has been saved and reopened; any Undo of the open-time conversion (see section 1: it cannot be undone).
+
+## DETAIL
+
+1. **U-A (CDSYNC, circle, circle, U, U, U, REDO).** Record normalised hashes: open 76DC4ACAD922; after CDSYNC 21B7AF88818A; after the two circles 21B7AF88818A (circles are drawing objects only); after U 1 and U 2 still 21B7AF88818A and the drawing hash walks back through the two circles; after U 3 76DC4ACAD922 (= open) and the drawing hash 09EFC779 (= open); after REDO 21B7AF88818A and the drawing hash of the CDSYNC state. Command line: U, U, U named "CIRCLE", "CIRCLE", "CDSYNC"; REDO named CDSYNC.
+2. **U-B (Edit Pipe, Cancel, record behind).** Stray polyline added on the pipe layer (record 600,382, normalised 76DC4ACAD922). Edit Pipe opened on the pipe 1091A0 and cancelled with "Cancel without saving": record 601,000 characters (hash 28A7E67D01F0): one new pipe entry, nothing else. One U ("CDEDIT" in the undo line): 600,382, 76DC4ACAD922, the drawing (with its stray polyline) unchanged. The record changed on Cancel even though the window says "Cancel without saving".
+3. **U-C (PIT).** On this build PIT first asks for the pit's position at the command line ("Specify pit insertion point") and only then opens the New Pit window; the window needed a cover level before its "Continue placement" button would enable (12.50 was typed). PIT then asked for the label position and the cover-text position, which were skipped with Esc; the pit was placed ("The pit split the pipe it sits on into two pipes. Pit placed successfully.") and PIT stayed open for the next pit until a further Esc. Before: 600,234 characters (this copy had a cancelled PIT earlier, see 4), 1,034 objects. After: 603,733 characters, 1,038 objects. One U ("PIT"): 600,234 characters, hash BD7ADB3D4E48 (= before), 1,034 objects and the drawing hash of the starting drawing.
+4. **U-D (PIT cancelled at the first question).** Open: 600,382, 76DC4ACAD922. PIT typed then Esc ("PIT command cancelled."): 600,234, BD7ADB3D4E48; objects 1,034 and the drawing hash unchanged. One U ("PIT"): 600,382, 76DC4ACAD922 exactly. So a cancelled PIT changes the record (148 characters shorter: something the open left in it is rewritten) and one U restores it.
+5. **U-E (CD between the P10 and P9 pit centres).** The New Pipe window said "Both invert levels are blank: they are saved blank (Unknown)"; Start Pipe was pressed with both blank (this needed the v3 driver, whose press list has the renamed button). The pipe was placed, with a flow arrow ("levels Unknown"), and CD waited for the next pipe until Esc. Before: 600,382, 76DC4ACAD922, 1,034 objects. After: 602,074 characters, 1,037 objects. One U ("CD"): 600,382, 76DC4ACAD922, 1,034 objects and the starting drawing hash. The whole pipe, its arrow and its record entry went in one U.
+6. **What could not be done through the driver:** the answer verb refused ("no CE command at a prompt") at the PIT label prompt, so prompts were skipped with Esc; Edit Pipe Save, and Edit Pit Save, are on the driver's never-press list.
+7. **What these cases do not prove:** that U is clean after a long session with many other CE commands; the same on AutoCAD 2022 to 2024; the same with the CE record absent.
