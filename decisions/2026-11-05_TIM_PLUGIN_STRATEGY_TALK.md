@@ -115,3 +115,9 @@ Given through the question interface, so these are the options Tim chose, as wor
 12. **On opening a drawing:** "Nothing changes on open (Recommended)". SUPERSEDES for the core: 16 Sep 2026 "IT NEEDS TO BE IMPLEMENTED EVERYTIME YOU OPEN AN EXISTING JOB" (and 29 Oct "defualt on for everyone") and 4 Nov 2026 "ASK USER WHEN OPENS". Both stay on record, superseded 12 Nov 2026. Today's behaviour is unchanged until Check this drawing can do the job (interpretation).
 
 Also 12 Nov, typed by Tim: old LISP tools and block files are "on my work pc"; and "can you work autonomously until tomorrow midday on anything you think is worthwhile" (read as: reading and planning only; the HOLD stands).
+
+## Decision 13 (Thu 12 Nov 2026, about 22:40 PC clock): autonomous run, hold lifted for building and testing
+
+Tim: "you can test, get evidence, fix, build, anything else you deem necessary"; "you can create side sessions to do seperate things, i need you to use all weekly usage before reset then complete everything before continuing to work but managing usage based on a smooth week of usage 12-13% per day"; "i cant respond after this message so please dont get stuck".
+
+INTERPRETATION: the HOLD is lifted for building, testing, fixing and evidence. It is NOT lifted for installing on Tim's PC, anything to colleagues, or merging into the lines that ship; he named none of those. Scope, rules and status: areas\TRUST_AUTONOMOUS_RUN_12NOV.md.
