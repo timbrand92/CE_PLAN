@@ -1,5 +1,21 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+### Trust plan step 8 slice A, the read-only Check this drawing list (TRUST-08, DRAFT card) — 13 November 2026 (Built and unit-tested only; NOT installed; the switch ships OFF; robot and Codex to run on COPIES)
+
+PR 2051 (DRAFT, never merged by the run), branch `claude/trust-08a-check-list`, stacked on step 6 with the reader (PR 2040) merged underneath. Setting: `trust.checkThisDrawingList` (OFF; set it to true in `CD_Settings.json` for these cases and put it back after). Command: CDCHECKDRAWING (typed; on no ribbon).
+
+1. **Switch off:** type CDCHECKDRAWING. Right = one line saying it is not switched on yet; nothing else happens.
+2. **Current job copy, switch on:** Right = `Sure (N): ...` with the job's pits and pipes, `Proposed (0).`, `Unknown (0).` or the single line `CE: all linked. Nothing to check.` Close without editing: no "save changes?" question.
+3. **Same copy with one extra polyline on the stormwater pipe layer:** Right = that line is in Proposed or Unknown with a reason, never in Sure, and the state line says needs checking.
+4. **A pit block with no label:** Right = in Unknown as `Pit: ... Number Unknown (...)`.
+5. **Old drawing with no CE record:** Right = nothing is Sure; every pit and pipe is Proposed or Unknown, each with a reason.
+6. **A drawing that is not Civil:** Right = `Sure (0).`, nothing proposed, or the nothing-to-check line; the drawing is not changed and not marked Civil.
+7. **A read-only drawing:** the list still shows (it writes nothing).
+8. **Run it twice on fresh copies of the same file:** Right = the same lines, row for row.
+9. **Read the stored record before and after (straight from the drawing):** identical.
+10. **Broken twin (already proven without AutoCAD):** a copy of the list that writes to the drawing is caught by the compiled-plugin scan.
+11. **Not provable by the robot alone:** whether each proposal's reason is one a drafter agrees with (Tim, on jobs he knows); the wording of the rows (one Codex look).
+
 ### Trust plan step 6, Unknown instead of made-up values (TRUST-06, DRAFT card) — 12 November 2026 (Built and unit-tested only; NOT installed; the Unknown switch ships OFF; robot and Codex to run on COPIES)
 
 PR 2049 (DRAFT, never merged by the run), branch `claude/trust-06-guesses-removed`, stacked on step 5. Settings: `trust.showUnknownInsteadOfGuess` (OFF), `trust.reachesFollowDrawingUnits` (ON), `reaches.pitLabelSearchPastPitMm` (2000), `reaches.pitLevelTextSearchPastPitMm` (2500), `reaches.restoreByPositionMm` (200), `reaches.orphanPitMatchMm` (50). Each fill-in is an engineering default: the robot and Codex can prove the behaviour, only Tim's word settles what each should be.
