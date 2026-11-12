@@ -169,6 +169,17 @@ Built and unit-tested only (82 of 82 on net10 and net48). Branch `claude/trust-r
 
 **Update 13 Nov 01:11 (second run):** the eight review fixes (3eb415c9), the read-only copy-filler (ab4fc1f7) and the old palette blocks (222a303e) are built; 155 of 155 unit tests on net10 and net48. The copy-filler now exists, so the AutoCAD check becomes possible (robot, lane trust-acad-evidence, on copies, without installing): (1) load the branch build in accoreconsole, open a made-up or labelled test copy read-only, call `TrustSnapshotFiller.Fill`, read twice; the two readings must be identical; (2) the drawing's DBMOD stays 0 and CE's stored record text is byte-identical before and after; (3) one old-palette copy with a "Stormwater Pit" must list it as a Proposed pit, not as unrecognised.
 
+## Structural fixes BUG-1361, BUG-1435, BUG-1439/1442/1447 (DRAFT, built and unit-tested only), draft PRs 2071, 2072, 2074 — 13 Nov 2026
+
+None of these faults has been seen in AutoCAD; test on a COPY (a made-up Structural drawing), AutoCAD 2027, a build that contains the branch (2072 is stacked on 2071, so test it with 2071).
+
+1. **BUG-1361 (PR 2071), bracing table sync:** draw a flat brace (Enter at the angle) and ROTATE it 30 degrees; place a second brace. STRSCHEDCREATE, note each brace's length and angle with LIST, run STRSCHEDSYNC without editing. Right looks like: both braces identical to before. Then type a new length in one cell and sync: only that brace's length changes.
+2. **BUG-1435 (PR 2072), B over A:** with an A brace in the table, type B over its row and run STRSCHEDSYNC. Right looks like: a plain line saying the type cannot be changed from the table and to use ABS; the brace still on layer A and plotting as A.
+3. **BUG-1439 (PR 2074), locked layer:** lock a layer that holds text, run CLEAN. Right looks like: the text step completes and says how many objects on locked layers were left alone; nothing unlocked; no AutoCAD error word.
+4. **BUG-1442 (PR 2074):** run CLEAN on a read-only copy and inside REFEDIT. Right looks like: one plain stop line and nothing purged or saved. Note: CLEAN now also stops on a layout tab.
+5. **BUG-1447 (PR 2074):** save, then run CLEAN. Right looks like: after "saved", a line saying CE kept no copy from before, and what .bak file is or is not beside the drawing (named with its time, called AutoCAD's own).
+6. **Not covered:** AutoCAD 2022 to 2026; a real pre-clean copy (not made, Tim's decision).
+
 ## Structural fixes BUG-1362, BUG-1363, BUG-1365 (DRAFT, built and unit-tested only), draft PRs 2068, 2070, 2069 — 13 Nov 2026
 
 Each on its own branch from the installed Structural commit 8de95c34. None of the three faults has been seen in AutoCAD; test on a COPY (a made-up Structural drawing), AutoCAD 2027, a build that contains the branch, on a TEST Windows login for the one switch.

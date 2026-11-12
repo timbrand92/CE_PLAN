@@ -19709,6 +19709,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 
 **Note 2026-11-13 04:19 (lane trust-struc-mgr-plan, after review `areas\trust-run\reviews\structural-tool-notes-sample.md`; status unchanged):** the trigger is narrower than the title. AB and BB draw a brace with the block turned 0 and the angle in the brace's own turning value (`Services\BracingService.cs:1677-1681, 1706-1708`). So only a brace drawn flat (within 1 degree, or the Enter default) and later turned with AutoCAD ROTATE gets its angle applied a second time, and only on the first sync. A brace drawn at an angle and then turned shows the wrong angle in the table, but sync writes the same value back and nothing moves. The two-decimal rewrite of every length and angle is real and small. Steps to confirm: draw the brace flat (Enter at the angle), then ROTATE it 30 degrees.
 
+**Note 2026-11-13 (lane trust-core-ribbon):** draft fix in pull request 2071 (branch `claude/trust-b1361-sync-changes-nothing`): the sync writes only the cells the drafter edited; an unedited cell (its text equals what the table shows for the brace now) is left alone, so nothing is turned again and no length or angle is rewritten at table rounding. Built and unit-tested only; not seen in AutoCAD; assumptions for Tim are in the pull request (what an edited ROTATION cell should mean for a brace turned with ROTATE is not decided). Status unchanged.
+
 **Status:** OPEN
 
 ## BUG-1362 — ABS (A-B switch) erases an older brace first, and if the new one cannot be drawn says "It was left as it was"
@@ -21049,6 +21051,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
 
+**Note 2026-11-13 (lane trust-core-ribbon):** the queue called this BUG-1424. Draft fix in pull request 2072 (stacked on 2071, branch `claude/trust-b1435-sync-refuses-type-change`): a type typed over in the bracing table is refused with a plain line and the brace is left as it is (use ABS to switch it). Built and unit-tested only; not seen in AutoCAD; DRAFT default for Tim. Status unchanged.
+
 **Status:** OPEN
 
 ## BUG-1436 — STRSCHEDSYNC says nothing about values it skipped
@@ -21121,6 +21125,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
 
+**Note 2026-11-13 (lane trust-core-ribbon):** draft fix in pull request 2074 (branch `claude/trust-clean-honest-steps`, with BUG-1442 and BUG-1447): objects on locked layers are left alone and counted (nothing unlocked) and the step completes; a failed step shows a plain line, not AutoCAD's raw word. Built and unit-tested only; not seen in AutoCAD. Status unchanged.
+
 **Status:** OPEN
 
 ## BUG-1440 — The CLEAN tooltip says "Does not save: save the drawing yourself" and Settings says "CE never saves" while CLEAN saves
@@ -21174,6 +21180,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Reference:** Services\CleanPipelineService.cs:59-90. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
 
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Note 2026-11-13 (lane trust-core-ribbon):** draft fix in pull request 2074: CLEAN and FASTSAVE stop first on a read-only drawing, a layout tab or REFEDIT with one plain line (so CLEAN no longer runs from a layout tab). Built and unit-tested only; not seen in AutoCAD. Status unchanged.
 
 **Status:** OPEN
 
@@ -21264,6 +21272,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Reference:** Services\DrawingAutoSaveService.cs:198-219 and 308-312 (backup after SaveAs). Related BUG-1276. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
 
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Note 2026-11-13 (lane trust-core-ribbon):** draft change in pull request 2074: CLEAN now says plainly that CE keeps no copy from before the clean-up and reports only what is on disk (an AutoCAD .bak file, named with its time, never claimed to be the pre-clean version). A real pre-clean copy is NOT made: a decision for Tim. Built and unit-tested only; not seen in AutoCAD. Status unchanged.
 
 **Status:** OPEN
 
