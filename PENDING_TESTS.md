@@ -1,3 +1,17 @@
+## TRUST-02 core ribbon (DRAFT, switch OFF), draft PR 2038 — 12 Nov 2026
+
+Built and unit-tested only. Branch `claude/trust-core-ribbon-e13111`, draft pull request https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/2038. Test on a COPY, AutoCAD 2027, a build that contains this branch.
+
+1. **Switch off (default):** start AutoCAD. Right looks like: one tab "CE" with nine panels, exactly as today. No "CE Drainage" or "CE Design" tab.
+2. **Switch on:** close AutoCAD. In the settings file (`CD_Settings.json`, the `options` group) add `"showCoreCivilTabs": true`. Start AutoCAD, wait about a minute. Right looks like: tab "CE Drainage" with panels New Job, Pits, Downpipes and tanks, Pipes, Check this drawing, Schedules, Help, in that order, then tab "CE Design" with Design, Network, Rules. 47 buttons in all. Open a blank drawing and a Structural drawing: both tabs still show.
+3. **Press each button once** in a Civil copy: each starts its own command. Right looks like: nothing says "Unknown command".
+4. **Pop-up tabs:** pick a pipe, a pit, a downpipe. Right looks like: the Pipe, Pit and Source tabs still appear.
+5. **Hidden commands:** type CDRULES, CDCHECK, CDSURVEY. Right looks like: each still runs.
+6. **Way back:** set `"showClassicCeTabs": true` as well and restart. Right looks like: the old "CE Civil" tabs, complete, and no CE Drainage or CE Design.
+7. **Look:** screenshot both tabs at normal and narrow window width. Right looks like: no cut-off labels, every button has a picture, no software words.
+8. **Not covered:** AutoCAD 2022 to 2024 (menu file not changed), Manager's later rebuild keeping both tabs (check the tabs are still two after about a minute and after CEMANAGERREFRESH).
+9. **DRAFT defaults for Tim to confirm:** listed in the draft PR and at the top of `Services/CeCvlCoreRibbonList.cs`.
+
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
 ### Review fixes on the guidebook stack (Opus pre-reviews B and C) — 29 October 2026 (Built and unit-tested only; Codex to run on COPIES)

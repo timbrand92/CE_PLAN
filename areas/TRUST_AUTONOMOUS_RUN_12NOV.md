@@ -50,3 +50,4 @@
 ## 5. Status (each session adds dated lines here; newest last)
 
 - 2026-11-12 22:45: run opened by the controller. Nothing built yet.
+- 2026-11-12 23:20 trust-core-ribbon: step 2 built as DRAFT, switch OFF. Branch `claude/trust-core-ribbon-e13111`, draft PR https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/2038 (base rel-20261108a = installed cf059dcf). Built net48 + net10: yes (0 errors). Tested: 17 new tests pass; full net10 Drainage suite 22,183 passed, 3 failed, 1 mine (fixed, re-run green), 2 are IL-shape tests in SourceAtomicCoordinatorDependencyTests in code not touched (not yet compared with baseline). Installed no. Accepted no. CE_SHARED unchanged. Pull-down menu for 2022 to 2024 not changed.
