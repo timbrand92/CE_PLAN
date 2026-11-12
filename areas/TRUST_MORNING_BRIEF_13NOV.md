@@ -1,6 +1,6 @@
 # Morning, Fri 13 Nov: what ran overnight
 
-**DRAFT, written 04:45 PC clock by lane trust-struc-mgr-plan, BUG-1456 added first at 05:26. The controller checks and finishes it before 8am.**
+**Finished 07:55 PC clock, Fri 13 Nov. Written by lane trust-struc-mgr-plan; every number below was checked by the controller against its file or GitHub at 07:52 to 07:55 (draft count, bug count 1280 to 1456, tool notes, question count, BUG-650 in two sessions, BUG-968, installed Civil version, no AutoCAD running). The evidence itself was not re-run by the controller.**
 
 ## First: a fault that can mix two jobs, and two safe habits until it is fixed
 
@@ -18,8 +18,8 @@
 
 ## What ran overnight
 
-1. **Builders:** 48 trial changes built as drafts, none merged, none installed.
-2. **Reviewer:** 45 are fit for the robot to test, 3 need fixing first (2053, 2082, 2085), none is waiting for a first review, and every one that changed has been re-checked.
+1. **Builders:** 49 trial changes built as drafts (counted on GitHub at 07:52), none merged, none installed, none set to merge by itself.
+2. **Reviewer:** 45 are fit for the robot to test on copies, 3 need fixing first (2053, 2082, 2085), and 1 opened at 07:50 is waiting for its first review (2086).
 3. **AutoCAD robot:** tested on copies outside your hours, then closed AutoCAD.
 4. **Code readers:** wrote a one-page note for each of your 47 Civil and 32 Structural core tools, and filed 177 new faults.
 5. **Planning:** your questions gathered in one file: 87, the first one matters most.
