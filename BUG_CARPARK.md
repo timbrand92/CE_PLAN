@@ -18508,3 +18508,273 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
 
 **Status:** OPEN
+
+## BUG-1297 — PIT: a locked pit layer is only found after you have filled in the whole window
+
+**Command / Area:** PIT (New Pit). LOW-MEDIUM. LOST TYPING.
+
+**Symptom:** PIT asks for the point, then the whole one-page window, then (if used) the alignment line, and only then checks whether the pit layer, label layer or cover-text layer is locked. If one is locked the pit is refused with a plain line, but everything typed in the window is thrown away.
+
+**Expected behaviour:** The locked-layer check runs straight after the point is picked, before the window opens, so the drafter is told before typing anything.
+
+**Steps to confirm in AutoCAD:** (1) On a copy lock the pit layer. (2) Run PIT, pick a point, fill in the window and click Place Pit. Right = refused before the window opens. Wrong = refused only after Place Pit. (3) Unlock and repeat to check a pit still places.
+
+**Test that catches it:** Source guard: the pit-layer lock test is called before the window is shown. Fixture: locked layer, run PIT with a scripted point and assert the window never opened.
+
+**Reference:** Commands\PitCommand.cs:113-121 (point), 177 (window), 341-361 (lock checks, after both). Note PIT.md section 7 'New in code' 2. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\PIT.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1298 — CDLPD: any plain polyline you click is taken as the pipe
+
+**Command / Area:** CDLPD (legal point of discharge), picking an object. MEDIUM. WRONG TARGET.
+
+**Symptom:** When you click an object to say where the pipe ends, CDLPD accepts any ordinary polyline (a boundary, a kerb line) and treats its nearer end as the discharge point. The click-a-point route checks that the line is a CE pipe; the click-an-object route does not.
+
+**Expected behaviour:** Only a CE pipe (or its outline) is accepted; anything else gets 'That is not a CE pipe' and nothing is changed.
+
+**Steps to confirm in AutoCAD:** (1) On a copy draw a plain polyline beside a CE pipe. (2) Run CDLPD, choose the object route and click the plain polyline. Right = refused. Wrong = an LPD marker and note are placed at its end. (3) Click a real CE pipe: it must still work.
+
+**Test that catches it:** Fixture: a plain polyline in model space; assert the object route refuses it and a CE pipe is accepted.
+
+**Reference:** Commands\LpdCommand.cs:60-76 (any Polyline accepted; compare the point route check at Services\LpdService.cs:700-706). Note CDLPD.md section 7 'New in code' 2. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDLPD.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1299 — CDLPD: an old LPD note on a locked layer stays and a second note is added on top
+
+**Command / Area:** CDLPD, re-running to move or refresh the LPD. MEDIUM-LOW. DUPLICATE TEXT.
+
+**Symptom:** Before drawing the new note CDLPD tries to erase the earlier one. If the earlier note is on a locked layer the erase fails, the failure is swallowed, and the new note is added anyway. The drawing then holds two LPD notes, one stale, with no line saying so.
+
+**Expected behaviour:** A note that cannot be erased is named in one plain line ('The earlier LPD note is on locked layer X and was left'), and the new note is not drawn on top of it.
+
+**Steps to confirm in AutoCAD:** (1) On a copy place an LPD with CDLPD. (2) Lock the layer the LPD note is on. (3) Run CDLPD again on a different pipe end. Right = a line names the locked note and nothing doubles up. Wrong = two notes now show.
+
+**Test that catches it:** Fixture: existing note on a locked layer; assert the second run leaves one note and writes a line.
+
+**Reference:** Commands\LpdCommand.cs:457-475 (erase wrapped in an empty catch, then a new note is created at 484-512). Note CDLPD.md section 7 'New in code' 4. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDLPD.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1300 — CDLPD: moving the LPD leaves 'LPD' written in the earlier pipe's From or To
+
+**Command / Area:** CDLPD, moving the LPD to another pipe end. MEDIUM. STALE DATA.
+
+**Symptom:** CDLPD writes 'LPD' into the From or To of the pipe you pick (only when that end is blank). It never clears the 'LPD' it wrote on the earlier pipe when the LPD is moved. Two pipes then both read as ending at the LPD, and the Pit Schedule and checks see two discharge ends.
+
+**Expected behaviour:** Moving the LPD removes the 'LPD' tag from the earlier pipe end, so only the current pipe end carries it.
+
+**Steps to confirm in AutoCAD:** (1) On a copy run CDLPD on pipe A. (2) Run CDLPD again on pipe B. (3) Open CDEDIT on pipe A and look at its To. Right = blank (or what it was). Wrong = still 'LPD'.
+
+**Test that catches it:** Fixture: two pipes; set LPD on A then on B; assert A's From and To no longer hold the LPD tag.
+
+**Reference:** Commands\LpdCommand.cs:210-229 (only the picked pipe is updated; no code touches the earlier pipe). Note CDLPD.md section 7 'New in code' 5. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDLPD.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1301 — CDLPD: says 'LPD set.' when no note was drawn, and an old note is left without its link
+
+**Command / Area:** CDLPD, connection blank and level unknown. MEDIUM. WRONG MESSAGE.
+
+**Symptom:** If the connection type is blank and the level is not known, the note text comes out empty, so no note is drawn. CDLPD still finishes with 'LPD set.' The earlier note, if any, is not erased and the saved LPD record no longer points at it.
+
+**Expected behaviour:** The closing line says no note was drawn and why (for example 'Level not known - no note drawn'), and the earlier note stays linked.
+
+**Steps to confirm in AutoCAD:** (1) On a copy with an LPD already placed, run CDLPD on a pipe end with no connection and no level. Right = a line says no note was drawn. Wrong = 'LPD set.' and the old note is now orphaned (moving the LPD later leaves it behind).
+
+**Test that catches it:** Fixture: blank connection, unknown level; assert the result line is not 'LPD set.' and the callout handle is kept.
+
+**Reference:** Commands\LpdCommand.cs:457-458 (empty text returns a null id, before the old note is erased at 462-474), 205-206 (handle only stored if an id came back), 253-255 (always 'LPD set.'). Note CDLPD.md section 7 'New in code' 6. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDLPD.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1302 — CDLPD: when Design refuses the outlet the real reason is only in the CE log
+
+**Command / Area:** CDLPD (and the same writer reached from CDDESIGN Confirm LPD). LOW. WORDING.
+
+**Symptom:** If the design already controls the discharge point, CDLPD stops before writing and the drafter sees only '[CE] Error during CDLPD - see CE log for details.' The actual reason (Design owns this LPD) is only written to the log.
+
+**Expected behaviour:** The command line says in plain words that Design already holds the LPD and what to do ('Open CDDESIGN to change it').
+
+**Steps to confirm in AutoCAD:** (1) On a copy confirm an LPD in CDDESIGN. (2) Run CDLPD and pick a pipe end. Right = a sentence naming Design. Wrong = 'Error during CDLPD - see CE log'.
+
+**Test that catches it:** Fixture: authority set held by Design; assert the refusal text names Design.
+
+**Reference:** Commands\LpdCommand.cs:170-171 (EnsureLegacyWriterAllowed throws), 256-261 (catch prints the generic line). Note CDLPD.md section 7 'New in code' 7. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDLPD.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1303 — CDEDIT: Edit Pit saves the 'next pit' defaults before it checks it may write
+
+**Command / Area:** CDEDIT on a pit (Edit Pit window, Save). LOW-MEDIUM. UNEXPECTED STORED-DATA CHANGE.
+
+**Symptom:** Clicking Save in Edit Pit first stores the window's values as the defaults for the next new pit (SaveSettings) and closes the window. Only then does CE check the pit and its label and cover text for locked layers and Xrefs. If the pit is refused, the next New Pit still opens with the values from the edit you never applied.
+
+**Expected behaviour:** Edit Pit does not change the next-pit defaults at all, or only after the edit was accepted.
+
+**Steps to confirm in AutoCAD:** (1) On a copy lock the pit label layer. (2) Run CDEDIT on a pit, change the pit size to 1200 and Save (it is refused). (3) Run PIT and look at the starting size. Right = unchanged. Wrong = 1200.
+
+**Test that catches it:** Fixture: refused Edit Pit save; assert the next-pit defaults are as before the edit.
+
+**Reference:** ViewModels\PitViewModel.cs:980-991 (ExecutePlace calls SaveSettings, then closes); Commands\PitEditCommand.cs:400 and 576-600 (the check happens afterwards). Note CDEDIT.md section 7 'New in code' 2. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDEDIT.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1304 — CDEDIT: a locked pit says 'unlock it, or leave it out', though there is nothing to leave out
+
+**Command / Area:** CDEDIT on a single pit. LOW. WORDING.
+
+**Symptom:** A single pit on a locked layer is refused with the batch-edit wording '(unlock it, or leave it out, then run the edit again)'. With one pit there is nothing to leave out.
+
+**Expected behaviour:** The single-pit line says only that the layer is locked and to unlock it, then run CDEDIT again.
+
+**Steps to confirm in AutoCAD:** (1) On a copy lock the pit layer. (2) Run CDEDIT on one pit and Save. Right = 'unlock the layer and run it again'. Wrong = 'or leave it out'.
+
+**Test that catches it:** Unit case on the single-pit refusal text: it must not contain 'leave it out'.
+
+**Reference:** Services\CeBatchEditApplyCoordinator.cs:313 and 324-326 (shared wording); used by the single-pit pre-flight at Commands\PitEditCommand.cs:667-675. Note CDEDIT.md section 7 'New in code' 3. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDEDIT.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1305 — CDEDIT: Esc at 'Press Enter to reopen' ends a single pit edit but reopens the batch editor
+
+**Command / Area:** CDEDIT, Inspect drawing in the pit editor and in the batch editor. LOW. INCONSISTENT KEY.
+
+**Symptom:** After Inspect drawing the command asks 'Press Enter to reopen'. In the single Edit Pit, Esc ends the command ('PITEDIT command cancelled.'). In the batch editor the answer is ignored, so Esc reopens the window.
+
+**Expected behaviour:** Esc means the same in both: end the command and leave everything as it was.
+
+**Steps to confirm in AutoCAD:** (1) On a copy run CDEDIT on one pit, click Inspect drawing, press Esc at the prompt. Right (agreed) = command ends. (2) Select two pits, run CDEDIT, Inspect drawing, press Esc. Right = command ends. Wrong = the window reopens.
+
+**Test that catches it:** Fixture: batch host given a cancelled status at the reopen prompt; assert it returns Cancelled.
+
+**Reference:** Commands\PitEditCommand.cs:287-297 (Esc ends); Commands\BatchEditDialogHost.cs:41-48 (answer never read, loop continues). Note CDEDIT.md section 7 'New in code' 4. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDEDIT.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1306 — CDRENUMBER: a separate branch of pits is numbered after the main network, in its old number order
+
+**Command / Area:** CDRENUMBER (renumber pits from the outlet up). MEDIUM. WRONG NUMBER ORDER.
+
+**Symptom:** The renumber walks the pipes from the outlet and numbers pits downhill to uphill. Any pit the walk cannot reach (a branch to a second outlet, or a pit with no pipe join) is numbered after the whole main network, in the order of its old numbers. So a second outlet's branch is not numbered from its own outlet up.
+
+**Expected behaviour:** Each branch with its own outlet is numbered from that outlet up, or the unreached pits are listed in the preview as 'not reached' so the drafter sees them before saying Yes.
+
+**Steps to confirm in AutoCAD:** (1) On a copy with two separate pipe networks (two outlets) run CDRENUMBER and open the preview. Right = each network numbered from its own outlet, or the unreached pits named. Wrong = the second network's pits simply follow the first, in their old order, with no mention.
+
+**Test that catches it:** Unit case: two disconnected networks; assert the second is numbered outlet-first or flagged.
+
+**Reference:** Rules\PitRenumberPlanner.cs:173-195 (unreached pits appended after the walk, ordered by old number). Note CDRENUMBER.md section 7 'New in code' 1. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDRENUMBER.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1307 — CDRENUMBER: pits numbered '8' and 'P8' are not seen as the same number by the duplicate check
+
+**Command / Area:** CDRENUMBER. LOW. EDGE CASE.
+
+**Symptom:** The check that refuses two pits sharing one number compares the typed text, so '8' and 'P8' count as different. The planner works round it for the pits it leaves alone, but the up-front duplicate refusal does not catch the pair, and the pipe From/To links cannot tell which of the two a pipe means.
+
+**Expected behaviour:** '8' and 'P8' are treated as the same number, as the pit rename already does, and the renumber is refused with the usual 'fix the duplicate' line.
+
+**Steps to confirm in AutoCAD:** (1) On a copy give one pit the number 8 and another P8. (2) Run CDRENUMBER. Right = refused naming the duplicate. Wrong = it carries on.
+
+**Test that catches it:** Unit case: pits '8' and 'P8' give a duplicate refusal from the network builder.
+
+**Reference:** Rules\PitRenumberNetworkBuilder.cs:64-97 (dictionary keyed by the exact id, ignoring case only). Compare Rules\PitRenumberPlanner.cs:114-126, which uses PitNumberAsTyped.Clashes. Note CDRENUMBER.md section 7 'New in code' 2. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDRENUMBER.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1308 — DP, IO, OF, FO, GIO, CDFW and CDSOURCE: a refused placement prints its reason twice
+
+**Command / Area:** Every source placement command (DP, IO, OF, FO, GIO, CDFW, CDSOURCE). LOW. WORDING (repeated line).
+
+**Symptom:** When a placement is refused or fails, the shared placement routine prints the reason on the command line and then returns it, and the command prints the same words again. The drafter sees the same error line twice (for CDFW, the reason and then a second line).
+
+**Expected behaviour:** One line, once.
+
+**Steps to confirm in AutoCAD:** (1) On a copy make a placement fail (for example lock the DOWNPIPES layer, or start REFEDIT) and run DP. (2) Read the command line. Right = one reason line. Wrong = the same line twice. (3) Repeat with CDSOURCE and CDFW.
+
+**Test that catches it:** Fixture: refused placement; assert the reason appears once in the editor output.
+
+**Reference:** Services\SourcePlacementService.cs:455-478 (message written at 457 and 477); Commands\SourceBlockInsertCommands.cs:888 and Commands\SourceBlockGenericCommand.cs:91-94 and Commands\FloorWasteCommand.cs:65-70 (written again from the result). Notes DP.md, IO.md, CDSOURCE.md and CDFW.md section 7 'New in code'. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\DP.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1309 — Placing a source or a schedule resets the colour and linetype of a layer the drafter already set
+
+**Command / Area:** DP, IO, OF, FO, GIO, CDFW, CDSOURCE (DOWNPIPES layer) and PITSCHEDULE placement (SCHEDULE layer). MEDIUM. UNEXPECTED STYLE CHANGE.
+
+**Symptom:** Each time a source is placed CE makes sure its layer exists and, if the layer exists and is unlocked, sets its colour and linetype back to CE's (DOWNPIPES colour 2, continuous) before the first question. Placing the pit schedule does the same to the SCHEDULE layer, forcing colour 7. A drafter who recoloured either layer sees it change on the next command, with no line saying so. (Read in the shared Place routine, so it applies to every source command; the CDFW note found it first.)
+
+**Expected behaviour:** An existing layer is left exactly as the drafter set it. CE only sets colour and linetype when it creates the layer.
+
+**Steps to confirm in AutoCAD:** (1) On a copy set layer DOWNPIPES to colour red and linetype DASHED. (2) Run DP and press Esc at the point. (3) Check the layer again. Right = still red and dashed. Wrong = colour 2 and continuous. (4) Repeat for SCHEDULE and PITSCHEDULE placement.
+
+**Test that catches it:** Fixture: existing layer with a non-default colour; run the placement entry to the first prompt and assert the colour is unchanged.
+
+**Reference:** Services\SourcePlacementService.cs:406-421 (EnsureLayer before the prompt); Services\LayerService.cs:466-496 (sets colour and linetype on an existing unlocked layer); ViewModels\PitScheduleViewModel.Schedule.cs:828 (EnsureLayer colour 7, Continuous). Notes CDFW.md and PITSCHEDULE.md section 7 'New in code'. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDFW.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1310 — CDTG: the trench grate is placed in separate steps, so a failure part-way leaves a half-made grate
+
+**Command / Area:** CDTG (trench grate). LOW-MEDIUM. PARTIAL RESULT.
+
+**Symptom:** CDTG commits the grate block and its tag first, then places the callout, registers the grate, and splits the pipe in separate steps. If a later step fails, the grate is in the drawing without its callout or record, and nothing says which part is missing.
+
+**Expected behaviour:** The grate, callout and record go in together or not at all, as CDRG and the pit placement already do, or a failure names which part is missing.
+
+**Steps to confirm in AutoCAD:** (1) On a copy lock the text layer used by the callout and run CDTG. Right = the grate is not placed, or one line says the callout is missing. Wrong = the grate is placed with no callout and no word. (2) Press U once: the whole grate should go.
+
+**Test that catches it:** Fixture: callout creation forced to fail; assert the grate is rolled back or a missing-part line is written.
+
+**Reference:** Commands\SourceBlockInsertCommands.cs:255-414 (tr.Commit at 353 before the callout at 390, record and split at 394-398). Note CDTG.md section 7 'New in code' 2. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDTG.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1311 — CDTG: Settings for grate width and class are read once per AutoCAD session, not per drawing
+
+**Command / Area:** CDTG (trench grate), Settings > surface drainage. LOW. SETTING IGNORED.
+
+**Symptom:** The trench width and grate class defaults are copied from Settings the first time CDTG runs in the AutoCAD session and never again. Change them in Settings, or open another drawing, and CDTG still starts from the first values (then from the last placement).
+
+**Expected behaviour:** CDTG starts from the Settings value the first time in each drawing, and a Settings change takes effect straight away.
+
+**Steps to confirm in AutoCAD:** (1) Run CDTG once and Esc. (2) In CDS change the default trench width to 300. (3) Run CDTG again. Right = 300 offered. Wrong = the earlier width. (4) Open a second drawing and check the same.
+
+**Test that catches it:** Source guard: the seeded flag is per drawing and reset by a Settings change. Fixture: change Settings between two runs and assert the offered default follows.
+
+**Reference:** Commands\SourceBlockInsertCommands.cs:36-53 (one static flag, _trenchGrateSettingsSeeded). Note CDTG.md section 7 'New in code' 3. Installed Civil 3.0.90 (commit cf059dcf), read in the code copy C:\CE_WORK\scratch\audit_civil, paths under Modules\Drainage unless stated. Source: C:\CE_PLAN\04_REFERENCE\core-tool-notes\CDTG.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
