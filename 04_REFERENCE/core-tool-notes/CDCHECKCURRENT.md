@@ -1,36 +1,81 @@
-# CDCHECKCURRENT: tool note (DRAFT, Check this drawing (today's button))
+# TOOL NOTE: Check this drawing, read only (CDCHECKCURRENT)
 
-**Status: DRAFT (12 Nov 2026), lane trust-test-cases.** Facts are from the installed Civil code copy (commit cf059dcf), its shipped Help text and command list, and the records (`areas\TRUST_CORE_TOOLS_FIRST_CHECK_12NOV.md`, `BUG_CARPARK.md`). "Not known" means no record or code line says. Nothing here was run in AutoCAD. Format: `areas\TRUST_RULES_CHECKLIST_12NOV.md` section 3.
+**Core since:** not yet (holds the "Check this drawing" button until that is built)
+**Build this note describes:** Civil 3.0.90 (installed code, commit cf059dcf)
 
-```
-TOOL NOTE (DRAFT): Check this drawing, today's button (CDCHECKCURRENT)
-Core since: not yet. The new "Check this drawing" door (plan step 8) is not built. Until then the button opens this read-only check.
-Build this note describes: Civil 3.0.90 (commit cf059dcf), as installed on 12 Nov 2026. Not checked in AutoCAD for this note.
+---
 
-1. WHAT IT DOES
-   Shows what CE can read in the open drawing and what needs checking. It prints "[CE] Drawing check complete. N items need checking. Nothing has been fixed automatically." (read from the code). If "the one Checks list" switch is on (off by default) it opens that list instead.
+## 1. What it does
 
-2. WHAT IT CHANGES IN THE DRAWING
-   Nothing. It reads and does not sync, migrate or save (the code says so, and a changed-drawing counter check is built in). Not run in AutoCAD for this note.
+1. **Reads CE's saved record for this drawing and lists what it finds** in a palette, "CE Civil - What CE Found", Drawing Check tab.
+2. **Counts** pits, water tanks, pipes, slabs and raingardens from the record.
+3. **Flags** recorded pits or pipes whose drawn object is gone, open pipe ends, and pipes that may not fit their pits.
 
-3. WHAT IT WILL NOT DO
-   It reads CE's own record. It cannot see pits or pipe lines that are drawn but not in the record (plan, step 1). General notes such as "No attached source drawings found" still appear in its list.
+## 2. What it changes in the drawing
 
-4. WHAT IT ASKS YOU, AND WHAT ENTER MEANS
-   Nothing. It opens a window.
+1. **Nothing in the drawing or CE's record.** It reads only, and compares the drawing's "changed" flag before and after: it says "Nothing has been changed in the drawing." or that the drawing changed while it was checking.
+2. **Not drawing changes:** "Show selected" changes the selection and the view (your selection comes back when the palette closes, unless you changed it); a shaded overlay is shown on screen, not saved; attached Xref drawings are read from disk into memory.
+3. **No record update** of any kind.
 
-5. WHEN IT SAYS UNKNOWN OR "NEEDS CHECKING"
-   Each item says what it found and how sure CE is, for example "Observed in the saved Civil information" or "Needs engineering confirmation". If the check fails it says "CE could not check the current drawing. Nothing has been changed. Try the command again or close and reopen the drawing."
+## 3. What it will not do
 
-6. HOW TO UNDO IT
-   Nothing to undo.
+1. **Does not count pits or pipes that are drawn but not in the record.** It reads the record, not the drawing.
+2. **Looks at Model Space only.**
+3. **No start-up checks:** it runs on a read-only drawing, during REFEDIT and in a Structural drawing. As it only reads, that is harmless.
+4. **Pits marked "To be removed" are counted** (the Pit Schedule leaves them out).
+5. **A recorded pit or pipe with a blank link is never flagged** as missing.
 
-7. KNOWN FAULTS
-   None on record.
+## 4. What it asks you, and what Enter means
 
-8. ON AUTOCAD 2022 TO 2024
-   Not known. It needs no ribbon.
+1. **No command-line questions.**
+2. **"Pick a shaded surface area"** (palette button): Esc or Enter hides the overlay and says "Surface review closed. Nothing has been changed."
+3. **The palette has no OK or Cancel;** close it when done.
 
-9. PROVEN BY
-   Robot cases: none recorded. Codex looks: none. Tim's trial: none. Never checked in AutoCAD for the five rules.
-```
+## 5. When it says Unknown or "needs checking"
+
+1. **Record unreadable, no record, no attached drawings, Xref not available:** each has its own line in the palette.
+2. **Pipe-to-pit fit:** uses clearances from Settings that are marked not yet confirmed.
+
+## 6. How to undo it
+
+1. **Nothing to undo.**
+
+## 7. Known faults
+
+No bugs are filed under this command.
+
+**New in code, no bug covers it**
+1. **Pits marked "To be removed" are counted.**
+2. **Blank links are never flagged.**
+3. **A Settings switch** (off by default) makes this button open the newer checks list instead.
+
+## 8. On AutoCAD 2022 to 2024
+
+1. **Same.** No version differences found on this path.
+
+## 9. Proven by
+
+1. **Not counted in this note.** Nothing was run in AutoCAD for it.
+
+---
+
+## Where this comes from
+
+Paths are under `C:\CE_WORK\scratch\audit_civil\Modules\Drainage\`.
+
+1. **1.1:** `Commands\CheckCurrentDrawingCommand.cs:20-34`; `Services\DrawingCheckPaletteService.cs:34, 68, 79`.
+2. **1.2:** `Services\CurrentDrawingCheckService.cs:404-408`, `699-707`.
+3. **1.3:** `CurrentDrawingCheckService.cs:384-395`, `413-471`.
+4. **2.1:** `CurrentDrawingCheckService.cs:71-76`, `191-193`, `246`, `589-612`, `651-662`.
+5. **2.2:** `DrawingCheckPaletteService.cs:164-173`, `203-211`, `311-393`; `Services\SurfaceEvidenceSourceCacheService.cs:20-60`.
+6. **2.3, 3.3:** no `CommandPreFlight`, record update or bind in `CheckCurrentDrawingCommand.cs` or `CurrentDrawingCheckService.cs` (its own note at `19-20`, `577-578`).
+7. **3.1:** `CurrentDrawingCheckService.cs:262-273`, `709-716`.
+8. **3.2:** `CurrentDrawingCheckService.cs:250-256`.
+9. **3.4, 7 new 1:** `CurrentDrawingCheckService.cs:404`; `Rules\ObjectStatusRule.cs:38`.
+10. **3.5, 7 new 2:** `CurrentDrawingCheckService.cs:438, 457`.
+11. **4.2:** `DrawingCheckPaletteService.cs:234-241`. **4.3:** `DrawingCheckPaletteService.cs:58, 270`.
+12. **5.1:** `CurrentDrawingCheckService.cs:147-189`, `328-342`. **5.2:** `Models\UserSettings.cs:2589-2599`.
+13. **7 new 3:** `CheckCurrentDrawingCommand.cs:28`; `Commands\ChecksListCommand.cs:50`; `UserSettings.cs:4083`.
+14. **8.1:** no `#if` on this path.
+
+Checked against the installed code (Civil 3.0.90), Fri 13 Nov 2026, 01:00. Nothing was run in AutoCAD.
