@@ -10,7 +10,7 @@
 
 # FOR TIM
 
-**79 questions in 21 batches. Batch 0 is the one the run is waiting on now: where trial builds may be seen in real AutoCAD (recommended: the spare work PC). Then the batches that change the most about what gets built; layout and wording come later, and batches 18 to 20 were added on 13 Nov. Each has the recommended answer first, so ticking the first box on every question is the "go with the recommendations" route.**
+**87 questions in 23 batches. Batch 0 is the one the run is waiting on now: where trial builds may be seen in real AutoCAD (recommended: the spare work PC). Then the batches that change the most about what gets built; layout and wording come later, and batches 18 to 20 were added on 13 Nov. Each has the recommended answer first, so ticking the first box on every question is the "go with the recommendations" route.**
 
 ```mermaid
 flowchart TD
@@ -18,7 +18,7 @@ flowchart TD
     A[Batches 1 to 4: what right means, Sure and Unknown, fill-ins, old drawings] --> B[Batches 5 to 9: Check this drawing, LPD, record lines, same settings]
     B --> C[Batches 10 to 12: Civil ribbon and safety fixes]
     C --> D[Batches 13 to 14: releases and Manager]
-    D --> E[Batches 15 to 20: Structural, standing rules, later additions]
+    D --> E[Batches 15 to 22: Structural, standing rules, later additions]
 ```
 
 **How each question reads:**
@@ -416,7 +416,7 @@ flowchart TD
 3. **On a job:** a wrong C1 size is clearly a Structural release fault, not a Civil one.
 4. **Options:** [ ] After Civil, its own release (Recommended) [ ] With the first Civil release
 
-**Q58. The Structural core list.** (Interview G1, TRUST-S1 decision 1, Structural sort questions 1, 2 and 10.) Draft built: no.
+**Q58. The Structural core list.** (Interview G1, TRUST-S1 decision 1, Structural sort questions 1, 2 and 10.) Draft built: yes, the step S1 draft (pull request 2054, switch off) keeps CE Blocks on the tab and gives the daily dimension and level-mark tools no button; your answer settles both.
 1. **Context:** 32 tools keep a button, from your command log; the log misses typed tools.
 2. **Recommended:** the 32 in the sort, plus XCLMTXT in Floors (C1 and C2 read its schedule), plus AD, LD, Q, QD and the level marks in Tools if you use them most days. Because those are what the log and the support blocks need.
 3. **On a job:** a colleague imports the member schedule from the Floors panel before placing columns.
@@ -448,7 +448,7 @@ flowchart TD
 3. **On a job:** a colleague types SBEAM; it has no button.
 4. **Options:** [ ] Typed only (Recommended) [ ] On the tab with a warning
 
-**Q63. The Structural tab layout.** (TRUST-S1 decisions 2 to 6.) Draft built: no.
+**Q63. The Structural tab layout.** (TRUST-S1 decisions 2 to 6.) Draft built: yes, as recommended (pull request 2054, switch off): BT1, the bracing panel and the three schedule tools held off, one Beam button, tab name "CE Structural". The review found the installed build draws the own "CE STRUC" tab, so that is the one the draft changes.
 1. **Context:** a cut-down Structural tab in roof-down order.
 2. **Recommended:** panels Roof, Floors, Bracing, Tools; tab name "CE Structural"; one Beam button with 1, 2, 4 and 5 inside; BT1, the bracing panel and the three schedule tools off the tab until their fixes are in; the core list alone decides what is shown. Because new colleagues read words, not numbers.
 3. **On a job:** a colleague drafting a roof looks left first and finds R1, P1 and BT1.
@@ -536,7 +536,7 @@ flowchart TD
 
 ## Batch 20: other draft defaults added since 00:45
 
-**Q76. Where the LPD confirmation is kept.** (Card TRUST-07 section 3 item 3, settled as a DRAFT default 13 Nov.) Draft built: in the card and test cases; the step 7 build is waiting.
+**Q76. Where the LPD confirmation is kept.** (Card TRUST-07 section 3 item 3, settled as a DRAFT default 13 Nov.) Draft built: yes, written as recommended on branch `claude/trust-07-lpd-start-point` (not yet compiled or reviewed when this line was written).
 1. **Context:** both existing LPD records are read strictly, so adding a "confirmed" mark inside either would make the LPD read as damaged on a colleague's older build.
 2. **Recommended:** keep "confirmed" as one small separate item beside the two records, in the same LPD group in the drawing. Because colleagues on older builds then still read the LPD normally.
 3. **On a job:** a colleague on the previous build opens a job whose LPD you confirmed and sees the LPD as before.
@@ -553,6 +553,58 @@ flowchart TD
 2. **Recommended:** no switch for the schedule row fixes (BUG-497, 498); the truss rule becomes a Settings value, "Bracing trusses (BT) count toward wall bracing", set to whatever you answer in Q59. Because a wrong schedule row is a fault, but the truss rule is an engineering choice.
 3. **On a job:** if the office ever decides trusses count, the Settings value changes; nothing is rebuilt.
 4. **Options:** [ ] Rows fixed, truss rule on Settings (Recommended) [ ] No switch or Settings value for any of them
+
+## Batch 21: added 13 Nov, about 04:50, from the lanes' newest defaults and the reader's questions
+
+**Q80. How far from a pipe end did the old LISP tool write its IL text?** (Reader lane, question 1, 04:09.) Draft built: yes, the reader takes IL text within 2500 mm along the pipe from its end and 1000 mm beside it (draft pull request 2040).
+1. **Context:** on a made-up old job the inverts sat 2,200 mm from their pit and were missed; nobody knows where the real tool put them.
+2. **Recommended:** you say from memory or from one old job; until then the reader keeps 2500 mm along and 1000 mm beside. Because only you know how the old tool drew.
+3. **On a job:** an "IL 1.10" written 2 m along the pipe from the pit is read as that pipe end's invert.
+4. **Options:** [ ] Keep 2500 along, 1000 beside (Recommended until I check) [ ] Closer to the pit (write the distance) [ ] I will check one old job
+
+**Q81. A loose pipe note in other words, such as "150 DIA. PIPE".** (Reader lane, question 2.) Draft built: yes, read as a Proposed size when the note has PIPE, DIA or a diameter sign and a size on the list (draft pull request 2040).
+1. **Context:** the old LISP pipe text has a fixed wording; some old jobs carry exploded pipes with plainer notes.
+2. **Recommended:** Proposed size, with the reason "from a nearby pipe note", never Sure. Because the note names the size, but it is not CE's own text.
+3. **On a job:** an exploded pipe with "150 DIA. PIPE" beside it shows "150, proposed from a nearby note".
+4. **Options:** [ ] Proposed with the reason (Recommended) [ ] Unknown with the reason
+
+**Q82. Old level blocks and plain level text.** (Reader defaults 36 and 37.) Draft built: yes (draft pull request 2040).
+1. **Context:** old COVER LEVEL and INVERT blocks carry their number as plain text beside them.
+2. **Recommended:** a plain level number within 1000 mm of an old level block is that block's value, then given to the nearest pit only if exactly one pit is in reach; a plain level reads as a number with two decimals. Because that is how the office's old blocks were drawn.
+3. **On a job:** an old COVER LEVEL block with 12.30 beside it gives pit P1 cover 12.30, proposed.
+4. **Options:** [ ] Accept (Recommended) [ ] Change the distance (write it in)
+
+**Q83. Esc at a question means cancel, not skip.** (Lane trust-safety-fixes 03:06, draft pull request 2057.) Draft built: yes.
+1. **Context:** at CDWT's detention, callout, riser and dropper questions and CDAGI's level questions, Esc used to skip the question and carry on.
+2. **Recommended:** Esc cancels the command with nothing placed; Enter still skips (your 14 Sep ruling). Because Esc means stop everywhere else in AutoCAD.
+3. **On a job:** pressing Esc at CDWT's detention question ends the tank command; nothing is drawn.
+4. **Options:** [ ] Esc cancels, Enter skips (Recommended) [ ] Esc skips, as today
+
+## Batch 22: added 13 Nov, about 04:50 (continued)
+
+**Q84. Which tools skip the start-up checks?** (Lane trust-safety-fixes 03:53, BUG-1286, draft pull request 2062.) Draft built: yes, eight tools now check for a read-only drawing, Paper Space, REFEDIT and a Structural drawing; seven are left without it.
+1. **Context:** the seven left without it are CDCALC, CDMANAGER, CDRAINFALL, CDRULEBOOK, CDRULES, CDTWL and the Pit Schedule, called read-only or layout tools; but CDRAINFALL and CDTWL do write to the drawing (BUG-1353, BUG-1354) and CDRULES writes its findings (BUG-1358).
+2. **Recommended:** add the check to the three that write (CDRAINFALL, CDTWL, CDRULES); leave the other four. Because a tool that writes should refuse a read-only drawing first.
+3. **On a job:** CDTWL on a read-only drawing says so before asking anything.
+4. **Options:** [ ] Add it to the three that write (Recommended) [ ] Leave all seven as built [ ] Add it to all seven
+
+**Q85. CDGRAPH's pipe count: stored pipes or drawn pipes?** (Lane trust-foundations 03:32, draft pull request 2045.) Draft built: yes, stored pipes.
+1. **Context:** CDGRAPH traced the drawn network and counted a stray line as a pipe (50) while CE's record held 49.
+2. **Recommended:** count the stored pipes, and say in one line what is drawn but not stored, as the draft does: "1 line on a pipe layer is not in the record". Because the count should match what the rest of CE uses.
+3. **On a job:** CDGRAPH says 49 pipes and points at the one stray line.
+4. **Options:** [ ] Stored, with the stray line named (Recommended) [ ] Drawn pipes
+
+**Q86. "One U undoes it" on CDSYNC and CDREBUILD.** (Lane trust-foundations 02:15; your 25 Sep ruling UX-REP-01 pins the words.) Draft built: no change; the words stay until you say.
+1. **Context:** the trust rules say "one U" only where it is proven. The AutoCAD probe saw one U put CE's record back exactly after CDSYNC; CDREBUILD has not been tried.
+2. **Recommended:** keep the words on CDSYNC (seen to hold) and drop them from CDREBUILD until a probe shows the same. Because a promise on screen should be one that has been seen.
+3. **On a job:** after CDREBUILD the line no longer promises one U; after CDSYNC it still does.
+4. **Options:** [ ] Keep on CDSYNC, drop on CDREBUILD until proven (Recommended) [ ] Keep both as ruled on 25 Sep
+
+**Q87. The new pit warning wording for a blank cover level.** (Lane trust-safety-fixes 02:18, BUG-1042, draft pull request 2052.) Draft built: yes.
+1. **Context:** a blank cover level used to stop PIT from placing; the draft places the pit and warns instead (no hard blocks).
+2. **Recommended:** accept the warning as drafted, with Codex reading it in AutoCAD. Because the wording is the only open part.
+3. **On a job:** a pit placed without a cover level shows a plain warning and the cover box stays highlighted.
+4. **Options:** [ ] Accept, Codex reads it (Recommended) [ ] I want to see the wording first
 
 ## Questions gathered but left out, and why
 

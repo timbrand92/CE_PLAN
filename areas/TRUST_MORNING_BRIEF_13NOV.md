@@ -8,7 +8,7 @@
 2. **Reviewer:** read every one; 17 are fit for the robot to test, 6 need fixing first.
 3. **AutoCAD robot:** tested on copies outside your hours, then closed AutoCAD.
 4. **Code readers:** wrote a one-page note for each of your 47 Civil and 32 Structural core tools, and filed 176 new faults.
-5. **Planning:** your questions gathered in one file: 79, the first one matters most.
+5. **Planning:** your questions gathered in one file: 87, the first one matters most.
 
 ## Proven in real AutoCAD (on copies)
 
@@ -46,7 +46,7 @@
 1. **23 trial changes, 17 and 6:** the latest verdict per pull request in `areas\trust-run\trust-review.md` (pull requests 2038 to 2060, counted by this lane).
 2. **47 and 32 tool notes:** the files in `04_REFERENCE\core-tool-notes\` (47 plus a README) and `04_REFERENCE\core-tool-notes\structural\` (32).
 3. **176 new faults:** bug numbers BUG-1280 to BUG-1455 in `BUG_CARPARK.md`, counted by this lane.
-4. **79 questions:** `areas\TRUST_QUESTIONS_FOR_TIM.md`.
+4. **87 questions:** `areas\TRUST_QUESTIONS_FOR_TIM.md`.
 5. **BUG-650, BUG-968:** `areas\trust-run\EVIDENCE_STALE_BUGS.md`.
 6. **CDGRAPH and CDDIAG on the trial build:** `areas\trust-run\EVIDENCE_BRANCHES.md`.
 7. **Edit Pit on Cancel, the made-up values:** `areas\TRUST_PROBES_13NOV.md`.
