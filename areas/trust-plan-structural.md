@@ -110,6 +110,7 @@ Evidence: Tim's command log on real jobs (`areas\CORE_TICK_LIST_05NOV.md` sectio
 3. **Old beam links are converted to the new form when a drawing opens,** with a marker written into the drawing. The message reaches only the log. **Verified:** `Services\LinkMigrationService.cs:29-33` (runs on every open drawing), `78-84` (only when old links exist), line 20 (the marker), and no command-line message anywhere in the file.
 4. **CLEAN changes much more than its name suggests:** purge, every Xref onto layer XREF, text onto Arial Narrow, current colour and linetype set to ByLayer, a HATCH 21 layer, then a regen and a save. It prints a summary. **Verified:** `Services\CleanPipelineService.cs:16-19` (XREF, HATCH 21, Arial Narrow), `114` (purge), `136-145` (ByLayer and regen), `468-469` (current colour and linetype), `160-169` (the save). The full per-object list (dimensions, leaders, multileader styles) is **Carried**.
 5. **Good model to copy:** when a beam follows its support, CE prints "CE moved ... One U undoes both." **Verified:** `Services\BeamLinkService.ConnectedFollowApply.cs:553`. Every quiet change above should end the same way.
+6. **A Civil change that reaches Structural drawings.** When the Civil plugin is loaded, opening any drawing that holds the old pit symbol renames it to the new one and redraws it, prints nothing, and marks the drawing changed, even in a drawing with no CE data at all. **Seen in AutoCAD** by lane trust-acad-evidence on 13 Nov (`areas\TRUST_PROBES_13NOV.md` section 5), on a blank drawing. Not tested on a Structural drawing that still holds the old symbol. Civil step 8 moves this out of the open event; until then a Structural drawing with an old pit symbol in it can be changed on opening.
 
 ## 4. Structural "guesses shown as facts"
 
@@ -227,6 +228,8 @@ Moved to the top of this file, straight after FOR TIM (RULES 2.9).
 5. **What the pull-down menu looks like on 2022 to 2024** to a colleague today.
 6. **Whether any core tool passes "Cancel leaves everything as it was".** Never robot-checked for Structural.
 7. **How many real jobs have blank-type braces or a mark used on two floors.** The Structural test set will show.
+8. **Old Structural blocks in the office palettes.** The old block library opened on 13 Nov holds bracing label blocks PT250 to PT600 LABEL on layer WALL BRACING TYPE C, and BEAM LABEL (`areas\trust-run\OLD_BLOCKS_FOUND.md` item 10). No Structural code reads the PT labels or a type C bracing layer (**Verified** by search of 8de95c34); BEAM LABEL is known to the beam inspector (`Services\ConnectedDesign\SelectedBeamInspectorPresenter.cs:129`). INFERENCE, not checked: the bracing totals count only blocks named BRACING (section 4 line 4), so type C bracing drawn with those older blocks would probably not be counted by the bracing panel. Not checked on a real job.
+9. **Probes and Structural or Manager otherwise:** the 13 Nov probes ran on the Civil build only; Structural commands, Manager commands and AutoCAD 2022 to 2024 were not tested (`TRUST_PROBES_13NOV.md`, "What I did NOT test"). CE Health (Manager) left the Civil record unchanged in AutoCAD, which matches the code. All four settings files, including Structural's, were byte-identical before and after. No other bearing.
 
 ## 10. RULES 15.8, the six foundations (Structural)
 
