@@ -389,4 +389,4 @@ Where a group says "+N more", the index does not list those numbers, so they are
 33. **CDRUNSOLVE**: BUG-1355 (follows first pipe at a branch), BUG-1356 (preview quotes sizes it does not write)
 34. **CDRULES**: BUG-1357 ("results recorded" when held back), BUG-1358 (run record grows every run)
 35. **CDSYSTEM**: BUG-1359 (count wording), BUG-1360 (other objects dropped without a count)
-36. **No new entry (nothing confirmed in code):** CDPITCOVERFLIP, CDNEWDWG, CDRULEBOOK, CDTIDYLABELS, CDSOURCE-style unconfirmed items are named in trust-records.md
+36. **No new entry:** CDPITCOVERFLIP (its fault is BUG-1280), CDNEWDWG, CDRULEBOOK and CDTIDYLABELS (nothing new confirmed in code)
