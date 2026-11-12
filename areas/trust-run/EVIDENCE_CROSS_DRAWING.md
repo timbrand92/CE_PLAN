@@ -123,3 +123,23 @@
 1. `CEPROOFCROSSDRAWING` on 2073: PASS BUG-1456-CROSS-01 "while CE held another drawing's record, the end of PIT, CDHELP and CDS, the flush and a save aimed at this drawing all wrote nothing here; the installed writer with no check DID write it and was noticed; and the drawing's own record is still saved". On 2083 (`522e5502`): the same PASS.
 2. The core console loads the cure's own build from a scratch folder; the live CE log did not change; the full AutoCAD was closed.
 3. Pull request 2083's second check (the change door) failed for a reason in the check itself (see `EVIDENCE_BRANCHES.md` section H); the door's refusal worked in that run (three refused changes left the record unchanged).
+
+---
+
+# CDFEEDBACK again, alone and as the first command in the second drawing (Fri 13 Nov, 09:23 to 09:30 PC clock)
+
+**Build tested: the INSTALLED one** (Civil 3.0.90), real AutoCAD 2027, a fresh AutoCAD start (a different process from the one that stuck at 06:45), scratch copies only. Draft evidence, robot only, not Codex-looked, not Tim-accepted.
+
+## FOR TIM
+
+1. **CDFEEDBACK did NOT hang this time.** In a fresh AutoCAD, as the very first CE command in a second job's drawing, it opened its window ("Creative Engineering | Feedback (CDFEEDBACK)": a Problem or Idea choice, a title, a description of up to 2,000 characters, a tab "Included information", a Send report button greyed until a title is typed, and Cancel). The robot saw the window, pressed Cancel through it, the command line said "CDFEEDBACK cancelled.", AutoCAD stayed usable. So the 06:45 "hang" was most likely this window being open: while it is open, AutoCAD refuses the robot's reads, which looks like a hang. It is not shown to be a fault in CDFEEDBACK. (At 06:45 the robot could not list the window; this time it could. I do not know why.)
+2. **CDFEEDBACK does NOT cause the cross-drawing mix-up.** The sequence: the standard drawing (11 pits, 49 pipes) opened first with CDDIAG run in it, so CE held its record; then the second job (2 pits, 46 pipes, record 37,921 characters) opened; CDFEEDBACK as the first CE action, then Cancel. The second job's record after: still 2 pits, 46 pipes, 37,921 characters, its own drawing's name, version 2.2, unchanged.
+3. **Control in the same second drawing, straight after: CDHELP DID do it.** The second job's record became the standard drawing's (11 pits, 49 pipes, 247,605 characters, the standard drawing's file name, version 2.3). So the set-up was a real one, and the difference between CDFEEDBACK and CDHELP is real: Help and Settings write, Feedback does not.
+4. **So the list of commands that do it on the installed build is still: Help and Settings (CDHELP, CDS).** Tried and NOT doing it: CDFEEDBACK, CDCHECKCURRENT, CDINSPECTOR, CEBLOCKS, CDMANAGER, CEMANAGER, PITSCHEDULE, CDEDIT (Esc), MR (Esc).
+5. **Not tested:** typing a title and sending a report (writes a local file; not a thing to do here); CDFEEDBACK on a Structural drawing.
+
+## DETAIL
+
+1. **Alone (09:23:24):** fresh AutoCAD started 09:22:09 on a copy of the second job drawing; the first typed CE command was CDFEEDBACK. The robot printed its "may be waiting at a prompt" alarm (it does this whenever a window blocks); the window was in its list at once; AutoCAD said "Responding"; the robot's Cancel on the window closed it; command line "CDFEEDBACK cancelled."; record read afterwards: 37,921 characters, 2 pits, 46 pipes, version 2.2 (the untouched value). My very first record read, taken seconds after the launch, failed (the drawing was still loading); the later reads worked.
+2. **Sequence (09:26 to 09:30):** copy of the standard drawing as `CLDTP_FA2.dwg`, CDDIAG: 11/49, version 2.3, own name. Copy of the second job as `CLDTP_FB2.dwg`: "0 pipe(s) upgraded to CE pipe objects, 19 left as drawn" (the usual open-time step; backup `CLDTP_FB2_PRE_C7_...dwg` made beside it); before: 37,921 characters, 2/46. CDFEEDBACK, Cancel: 37,921, 2/46, own name. CDHELP then close: 247,605, 11/49, path = `CLDTP_FA2.dwg`.
+3. **Hang capture was NOT needed** (nothing wedged), so no stack or dump was taken.
