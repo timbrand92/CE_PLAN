@@ -10,14 +10,15 @@
 
 # FOR TIM
 
-**71 questions in 18 batches (the last, added after a review, has three). The first batches change the most about what gets built; the last ones are layout and wording. Each has the recommended answer first, so ticking the first box on every question is the "go with the recommendations" route.**
+**79 questions in 21 batches. Batch 0 is the one the run is waiting on now: may trial builds go on your PC overnight. Then the batches that change the most about what gets built; layout and wording come later, and batches 18 to 20 were added on 13 Nov. Each has the recommended answer first, so ticking the first box on every question is the "go with the recommendations" route.**
 
 ```mermaid
 flowchart TD
+    Z[Batch 0: trial builds overnight on your PC?] --> A
     A[Batches 1 to 4: what right means, Sure and Unknown, fill-ins, old drawings] --> B[Batches 5 to 9: Check this drawing, LPD, record lines, same settings]
     B --> C[Batches 10 to 12: Civil ribbon and safety fixes]
     C --> D[Batches 13 to 14: releases and Manager]
-    D --> E[Batches 15 to 17: Structural and standing rules]
+    D --> E[Batches 15 to 20: Structural, standing rules, later additions]
 ```
 
 **How each question reads:**
@@ -29,6 +30,18 @@ flowchart TD
 5. **Draft built:** whether a builder has already built the recommended answer as a DRAFT (switch off, nothing installed).
 
 ---
+
+## Batch 0: the one question the run is waiting on now (added 13 Nov, 01:50 PC clock)
+
+**Q0. May trial builds be put on your PC overnight, to be seen in real AutoCAD?** (Controller, 13 Nov; evidence `trust-run\EVIDENCE_BRANCHES.md` FOR TIM item 5.) Draft built: not applicable.
+1. **Context:** the trial builds are built and unit-tested, but several things can only be seen with the build loaded in real AutoCAD: the opening line, Edit Pit's line, every window, the ribbon, what one U does on the new builds, and all the Structural fixes. Loading a build into AutoCAD means installing it. The run was told installs are not lifted (RULES 8.7 and the 5 Nov HOLD), although your 30 Oct ruling said "you can install anything on my pc at your free will as long as im not at my desk"; the HOLD since 5 Nov is why that is asked again rather than used.
+2. **Recommended:** (a), because it is the only way to see these before you are asked to trial anything, it uses the hours you are away, and the build on your PC each morning is exactly today's, checked file by file.
+3. **What each costs you:**
+   1. **(a) Your PC, overnight only:** the robot installs a trial build only between 5:30pm and 8:10am, tests on copies, and puts back exactly what was there (Civil 3.0.90, Manager 1.1.89, Structural 1.0.126, checked file by file) before 8:10am, every night until you say stop. Cost: a small risk that a put-back fails and you start a morning on the wrong build; the robot would leave a one-line note and the backup folder named. Your PC is busy overnight.
+   2. **(b) A separate test PC or the virtual machine only, never your PC:** no risk to your PC. Cost: a test PC or the virtual machine must be set up and kept alive (whether it still works is being checked by another lane), and it may not match your AutoCAD exactly.
+   3. **(c) Not yet:** no risk at all. Cost: the opening line, the windows, the ribbon and every Structural fix stay unseen, so nothing can be offered to you for a trial until you answer.
+4. **On a job:** under (a), you open AutoCAD at 8:30am on 3.0.90 as usual; a note says "Trial build of step 1 seen overnight on copies; your build put back at 6:52am, checked."
+5. **Options:** [ ] (a) My PC, 5:30pm to 8:10am, put back and checked before 8:10am (Recommended) [ ] (b) Only a separate test PC or the virtual machine [ ] (c) Not yet
 
 ## Batch 1: what "right" means for the test jobs
 
@@ -84,7 +97,7 @@ flowchart TD
 
 ## Batch 3: values CE fills in today (engineering, your word)
 
-**Q9. A pipe with no size or material.** (TRUST-06 decision 1, review of TRUST-06 item 1, code facts A.) Draft built: no.
+**Q9. A pipe with no size or material.** (TRUST-06 decision 1, review of TRUST-06 item 1, code facts A.) Draft built: yes, behind a "Show Unknown" switch that ships OFF (draft pull request 2049, step 6); with it off nothing changes. Same for Q10 to Q12.
 1. **Context:** today CE fills "100" and "UPVC", CDPROPAGATE assumes 225 (which feeds invert levels), Edit Pipe saves 100 and UPVC when you press OK, and the flow calculator keeps 300 or the last size.
 2. **Recommended:** Unknown everywhere; CDPROPAGATE asks for the size instead of assuming 225; Edit Pipe opens with the boxes blank. Because each of these can turn into a wrong level or size on a sheet.
 3. **On a job:** a line on the pipe layer with no text reads "size Unknown" and CDPROPAGATE stops at it and asks.
@@ -110,7 +123,7 @@ flowchart TD
 
 ## Batch 4: reading old and hand-drawn drawings
 
-**Q13. A plain line on a pipe layer with no CE data.** (TRUST-06 decision 5, reader design decision 1, earlier ruling CV8-10.) Draft built: yes, as "possible pipe, Proposed" in the reader (draft pull request 2040).
+**Q13. A plain line on a pipe layer with no CE data.** (TRUST-06 decision 5, reader design decision 1, earlier ruling CV8-10.) Draft built: two drafts disagree. The reader (draft pull request 2040) offers it as "possible pipe, Proposed"; the step 6 draft (pull request 2049, switch off) still adds it to the record with Unknown size and material. Your answer settles both.
 1. **Context:** old LISP-era and hand-drawn jobs have pipes that are just lines on a layer.
 2. **Recommended:** listed as "possible pipe" in Check this drawing, not added to the record until you tick it. Because a layer alone is not proof (your earlier ruling).
 3. **On a job:** a hand-drawn job shows "22 possible pipes" for you to confirm.
@@ -128,9 +141,9 @@ flowchart TD
 3. **On a job:** an old LISP job asks once on first check, and never again.
 4. **Options:** [ ] Ask once, store in the drawing (Recommended) [ ] Assume millimetres and say so in the check [ ] Work it out from the drawing's size
 
-**Q16. The reader's reaches and text rules.** (Reader defaults in `trust-run\trust-reader.md`.) Draft built: yes, all as DRAFT (draft pull request 2040).
+**Q16. The reader's reaches and text rules.** (Reader defaults 1 to 9 and 29 in `trust-run\trust-reader.md`.) Draft built: yes, all as DRAFT (draft pull request 2040).
 1. **Context:** the reader needs fixed distances to match text to objects, the same on every PC.
-2. **Recommended:** pipe text within 1000 mm of its pipe, invert text within 1500 mm, "DP" text within 1000 mm of a downpipe block is its label, the old LISP pipe-text pattern alone decides (layer not required), and these come from the office setup, never a person's own settings. Because those match how the office labels.
+2. **Recommended:** a pit label block counts within 5000 mm of its pit (CE's own starting figure), plain pit number or level text within 2000 mm, old pipe text within 1000 mm of its pipe, invert text within 1500 mm, "DP" text within 1000 mm of a downpipe block is its label, a drawn width within 0.5 mm of CE's standard size list (100 to 1500) counts as that size, downpipe blocks known by DP, DOWNPIPE, RWDP or RWP in the name, only CE's own layer names read until the office setup carries renamed ones, and the old LISP pipe-text pattern alone decides (layer not required). All from the office setup, never a person's own settings. Because those match how the office labels.
 3. **On a job:** an "IL 1.10" text 1.8 m from the nearest pipe end is not matched to it.
 4. **Options:** [ ] Accept these, from the office setup (Recommended) [ ] Change the numbers (write them in)
 
@@ -252,7 +265,7 @@ flowchart TD
 3. **On a job:** a large site plan opens with no line rather than a slow count.
 4. **Options:** [ ] Accept all eight (Recommended) [ ] I want to change some (say which)
 
-**Q35. Plastic pits left off the schedule: how loud is the note?** (Reviews of BUG-1274.) Draft built: yes, as the review suggests (branch for BUG-1274).
+**Q35. Plastic pits left off the schedule: how loud is the note?** (Reviews of BUG-1274.) Draft built: yes, but NOT as recommended here: the BUG-1274 draft (pull request 2039) still shows unnumbered plastic pits in the attention colour (DRAFT default, lane trust-safety-fixes 01:18).
 1. **Context:** the schedule will say which pits it left out under your plastic pit rule.
 2. **Recommended:** numbered pits left out get the attention line; unnumbered plastic pits are a quiet count; pits marked To be removed are not counted as left out. Because a line that shows on every job gets ignored.
 3. **On a job:** "6 numbered pits are not scheduled: P3 to P8" in colour; "4 unnumbered plastic pits" in plain text.
@@ -494,12 +507,59 @@ flowchart TD
 3. **On a job:** a house drawn at 30 degrees to fit an A3 sheet gets the same totals as the same house drawn square.
 4. **Options:** [ ] Ask once, store in the drawing (Recommended) [ ] Use the drawing's axes, and say so on the panel
 
+## Batch 19: more of the reader's draft defaults (added 13 Nov, 01:50)
+
+**Q72. When CE's record and the drawing disagree.** (Reader defaults 13 to 16.) Draft built: yes (draft pull request 2040).
+1. **Context:** an old pit can carry one number in CE's record and another on its label, or a size in the record that the drawn block does not match.
+2. **Recommended:** Unknown, showing both values; the oldest block names ("PIT BLOCK", "PIT LABEL") with nothing of CE's on them are Proposed; the same CE tag on two blocks makes both Proposed ("same identity twice"); a pit scaled by hand is Unknown in size. Because neither source can be trusted over the other without you.
+3. **On a job:** P3 in the record and P4 on the label reads "Unknown: record says P3, label says P4".
+4. **Options:** [ ] Unknown with both values (Recommended) [ ] The record wins [ ] The label wins
+
+**Q73. Old palette blocks and plain text.** (Reader defaults 28 and 30 to 35, from the old blocks found on 13 Nov.) Draft built: yes (draft pull request 2040).
+1. **Context:** old jobs used blocks dragged from the old tool palettes ("Stormwater Pit", DIA. PIPE blocks, DOWNPIPE, litre tanks) and plain text for numbers and levels.
+2. **Recommended:** every old palette block is Proposed, never Sure; pit numbers read from text like P3, PIT 3, SWP3 or P3A; cover levels from CL 10.50 or C.L. 10.50; invert text from the old IL 9.60 pattern; pipe sizes from block names only when on the size list; tank size from "3000 LITRE TANK"; the attribute text "DP" left in a block is its default, not data; a text never overrules a label block. Because these are the patterns found in the office's old blocks.
+3. **On a job:** an old "Stormwater Pit" with "P3" written beside it reads "Proposed: pit P3, from nearby text".
+4. **Options:** [ ] Accept these patterns (Recommended) [ ] I will add or change patterns
+
+**Q74. How the robot marks a reading against your answer sheet.** (Reader defaults 17 to 22.) Draft built: yes (draft pull request 2040).
+1. **Context:** these rules decide whether a test job passes; they were left out of the first version of this file as test mechanics.
+2. **Recommended:** an object is right only when every value on the sheet is right; an Unknown where the drawing shows nothing counts as right; numbers compare as numbers (9.80 equals 9.8); an Unknown on a value the sheet says the drawing shows fails the job; a different list of unrecognised blocks fails the job. Because "zero wrong" must mean what it says.
+3. **On a job:** a pit with the right number and size but the wrong invert counts as wrong as a whole.
+4. **Options:** [ ] Accept these rules (Recommended) [ ] Count each value separately instead
+
+**Q75. What the read-only copy takes from CE's record.** (Reader defaults 23 to 27.) Draft built: yes (draft pull request 2040).
+1. **Context:** the reader copies CE's record without running CE's own update, which fills blanks with 450 x 450, GRATED PIT and UPVC.
+2. **Recommended:** only values actually written in the record; a pipe grade only when it was typed by hand; for the older pipe form, size, material and grade but not the two inverts (a stored 0 cannot be told from "not set"); stored LPDs not read yet. Because a blank must stay blank.
+3. **On a job:** an old pipe whose inverts were never set reads "inverts Unknown", not 0.000.
+4. **Options:** [ ] Accept (Recommended) [ ] Read the older inverts too and treat 0 as a value
+
+## Batch 20: other draft defaults added since 00:45
+
+**Q76. Where the LPD confirmation is kept.** (Card TRUST-07 section 3 item 3, settled as a DRAFT default 13 Nov.) Draft built: in the card and test cases; the step 7 build is waiting.
+1. **Context:** both existing LPD records are read strictly, so adding a "confirmed" mark inside either would make the LPD read as damaged on a colleague's older build.
+2. **Recommended:** keep "confirmed" as one small separate item beside the two records, in the same LPD group in the drawing. Because colleagues on older builds then still read the LPD normally.
+3. **On a job:** a colleague on the previous build opens a job whose LPD you confirmed and sees the LPD as before.
+4. **Options:** [ ] A separate item beside the records (Recommended) [ ] Inside the record, and every colleague moves together
+
+**Q77. The read-only Check this drawing list (step 8, first slice).** (Lane trust-foundations 01:40, draft pull request 2051.) Draft built: yes, switch OFF and hidden.
+1. **Context:** the first slice of Check this drawing only lists Sure, Proposed and Unknown; it changes nothing.
+2. **Recommended:** typed name CDCHECKDRAWING for the trial, rows grouped as the card says, 20 rows a group on the command line, switch off and hidden until its window exists. Because the window is Codex's work and comes next.
+3. **On a job:** typing CDCHECKDRAWING on an old job lists 14 Sure, 9 Proposed and 3 Unknown items.
+4. **Options:** [ ] Accept (Recommended) [ ] A different name (write it in)
+
+**Q78. The bracing fixes have no off switch; should the truss rule be a Settings value?** (Lane trust-safety-fixes 01:09; review of draft pull request 2047 section 3.1; rule R-00.) Draft built: yes, no switch (pull requests 2044, 2046, 2047).
+1. **Context:** card TRUST-04 says a fix to a wrong result gets no off switch; your rule R-00 says every engineering value lives on the Settings page, and whether trusses count (Q59) is an engineering rule.
+2. **Recommended:** no switch for the schedule row fixes (BUG-497, 498); the truss rule becomes a Settings value, "Bracing trusses (BT) count toward wall bracing", set to whatever you answer in Q59. Because a wrong schedule row is a fault, but the truss rule is an engineering choice.
+3. **On a job:** if the office ever decides trusses count, the Settings value changes; nothing is rebuilt.
+4. **Options:** [ ] Rows fixed, truss rule on Settings (Recommended) [ ] No switch or Settings value for any of them
+
 ## Questions gathered but left out, and why
 
-1. **The nine reader distances and scorer rules** are merged into Q16 (reaches) and the scorer rules (an object is right only when every value is right; Unknown where the drawing shows nothing counts right; numbers compare as numbers) are test mechanics, recorded in `trust-run\trust-reader.md`; ask only if you want them.
+1. **The reader's 35 draft defaults** are now asked in Q13 to Q16 and Q72 to Q75 (corrected 13 Nov; the scorer rules were left out of the first version).
 2. **The ribbon builder's own defaults** are listed in draft pull request 2038 and in its core ribbon list file; Q37 to Q44 cover the ones you would notice.
 3. **Test-case points marked RECORD** (for example how downpipes and tanks count in the opening line) are things the robot records first; they come back as questions only if the record shows a problem.
 4. **Unrecognised blocks on drainage layers** (reader decision 3): recommended "listed in the check, never on the opening line"; left out because the old blocks found on 13 Nov may answer it.
+5. **The probe lane's test choices** (the largest CE copy used, a 370-pipe made-up job, Edit Pit with Cancel only) are how the evidence was gathered, not choices about the plugin; recorded in `trust-run\trust-acad-evidence.md`.
 
 ## Not known yet
 
