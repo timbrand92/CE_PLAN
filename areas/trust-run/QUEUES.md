@@ -167,6 +167,19 @@
 15. Your 32 Structural tool notes are about to be sampled by trust-review; fix what it finds when `reviews\structural-tool-notes-sample.md` appears.
 16. A Structural "step S0": what would have to be read-only checked when a Structural drawing opens, in the spirit of the Civil opening line (card UX-OPEN-01), written as a DRAFT card with Decisions for Tim at the top. Use your 104 findings to say which hidden changes a Structural drafter is exposed to today.
 
+### Refill, Fri 13 Nov 04:45 PC clock (controller)
+
+**trust-core-ribbon, next (Structural, branches cut from 8de95c34):**
+10. BUG-1363 with card TRUST-S3: when the schedule gives a size the support block (C1, C2, DS, DS1, TS1) cannot show, do not draw the default size while naming the schedule size. Draft default: stop and say plainly which size the block cannot show and what the choices are; never draw a size different from the one named. Engineering judgement, so behind a switch OFF by default, and listed for Tim.
+11. BUG-1365: beam tools 1, 2, 4 and 5 refuse every beam with "CE hit an internal problem" when the beam or text layer is locked, off or frozen: a plain refusal that names the layer and what to do; nothing is unlocked or thawed.
+12. BUG-1362: the A/B switch must not erase the old brace until the new one is drawn (one step, so one U), and must never say "It was left as it was" when it was not.
+
+**trust-struc-mgr-plan, next:**
+17. Draft the morning page for Tim: `areas\TRUST_MORNING_BRIEF_13NOV.md`. One screen, phone-readable, FOR TIM only, no technical part: what ran overnight in five lines; the three things proven in real AutoCAD (from `areas\TRUST_PROBES_13NOV.md`, `areas\trust-run\EVIDENCE_BRANCHES.md`, `EVIDENCE_STALE_BUGS.md`, `EVIDENCE_READER.md`); the tally of draft pull requests by verdict (count the latest verdict per pull request in `areas\trust-run\trust-review.md`); the three faults found that matter most to a drafter; what is NOT done or not proven; what was NOT touched (his installed versions, colleagues, the shipped lines); and the ONE decision that unblocks the most (batch 0 of `areas\TRUST_QUESTIONS_FOR_TIM.md`). Every number must be read from a file, with the file named in a short "where these numbers come from" list at the very end. Mark it DRAFT; the controller checks and finishes it before 8am.
+18. Bring `areas\TRUST_QUESTIONS_FOR_TIM.md` up to date again with every "Defaults taken for Tim to confirm" written in the lane files since 01:45, and the reader's new questions (how far from a pipe end the old tool wrote its IL text; loose pipe text with unrecognised wording).
+
+**trust-acad-evidence, next:** the two-drawing test for CDHELP and CDS (sent as top priority at 03:12, still not written up) comes before everything else; then the second-session repeat of BUG-650; close the AutoCAD you started by 8:10am.
+
 ### trust-struc-mgr-plan (planning only)
 1. `areas\trust-plan-structural.md` and `areas\trust-plan-manager.md` (its brief).
 2. Draft cards, in the TRUST card shape, for the first three Structural steps and for "going back a version, rehearsed" in Manager.
