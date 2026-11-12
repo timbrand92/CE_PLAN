@@ -47,6 +47,8 @@ flowchart TD
 1. **The test set:** about 10 real past jobs with the right answers written down (`areas\TRUST_TEST_SET_12NOV.md`).
 2. **The reader:** fixed rules that recognise every older version of each CE block, with Unknown for the rest (`areas\TRUST_READER_DESIGN_12NOV.md`).
 3. **The release process:** who looks after a release, how problems come back, how to go back a version (`areas\TRUST_RELEASE_PROCESS_DRAFT_12NOV.md`).
+4. **The Structural part (proposal):** the Structural core in roof-down order and its six steps (`areas\trust-plan-structural.md`).
+5. **The Manager part (proposal):** install, update, going back rehearsed, seeing what a colleague runs (`areas\trust-plan-manager.md`).
 
 **How a tool earns its place:** the five trust rules, as a tick list, with a one-page note per tool (`areas\TRUST_RULES_CHECKLIST_12NOV.md`).
 
