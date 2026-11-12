@@ -1,6 +1,6 @@
 # Trust run status board
 
-**Rebuilt 2026-11-13 06:28 PC clock by lane trust-struc-mgr-plan, after the review `reviews\status-board-check.md` (FIX FIRST, eight corrections). Counted from GitHub (open draft pull requests whose branch names contain "trust" or "bug-1456") and from the files named at the end. Nothing here is installed or accepted. Rebuilt at every check-in until told otherwise.**
+**Rebuilt 2026-11-13 06:29 PC clock by lane trust-struc-mgr-plan, after the review `reviews\status-board-check.md` (FIX FIRST, eight corrections). Counted from GitHub (open draft pull requests whose branch names contain "trust" or "bug-1456") and from the files named at the end. Nothing here is installed or accepted. Rebuilt at every check-in until told otherwise.**
 
 ---
 
@@ -51,54 +51,51 @@
 20. **Pull request 2067: Moving the LPD takes the LPD tag off the earlier pipe end (BUG-1300).** Verdict: GO (2026-11-13 05:43); reviewed head 2d825913, same on GitHub. Evidence: None. Owed: the robot on copies, then a Codex look where something is seen, then your trial.
 21. **Pull request 2073: Each drawing keeps its own CE record: Help, Settings or any tool can no longer write one job into another (BUG-1456 cure, no switch).** Verdict: GO (2026-11-13 05:53); reviewed head 1a28c3b3, same on GitHub. Evidence: The fault it cures was seen on the installed build, 6 times in 11 tries; a saved mixed-up drawing reopens with no warning and its Pit Schedule lists the other job's pits; one U straight after Help restores the drawing's own record (EVIDENCE_CROSS_DRAWING.md, parts 1 and 2). The cure itself has never run in AutoCAD. Owed: the core-console check first (CEPROOFCROSSDRAWING, step 1 in PENDING_TESTS.md), then the robot on copies; for the controller: a tool that changes the record in a drawing it never attached still changes the other drawing's record in memory.
 22. **Pull request 2075: CDAGI's grade check is right in metre drawings.** Verdict: not reviewed; GitHub head 3960801a, not reviewed yet. Evidence: None. Owed: a review first.
+23. **Pull request 2076: A guard that a cancelled CD writes nothing, on 2064's rule (tests only, built on 2064).** Verdict: not reviewed; GitHub head e12f0eb3, not reviewed yet. Evidence: None. Owed: a review first.
 
 ## Step 4, Structural safety fixes (card TRUST-04 and the new Structural faults)
 
-23. **Pull request 2044: Bracing schedule tables big enough for every brace (BUG-497).** Verdict: GO (2026-11-13 00:06); reviewed head 87c29f01, same on GitHub. Evidence: None (no Structural branch could be shown headless, EVIDENCE_BRANCHES.md). Owed: the robot on copies, then a Codex look where something is seen, then your trial.
-24. **Pull request 2046: Refreshing a schedule drops erased braces and piers (BUG-498).** Verdict: GO (2026-11-13 00:57); reviewed head 49f30cf2, same on GitHub. Evidence: None. Owed: the robot on copies, then a Codex look where something is seen, then your trial.
-25. **Pull request 2047: Roof trusses (BT1) left out of wall bracing totals until you answer (BUG-499).** Verdict: GO (2026-11-13 06:21); reviewed head f6b2ea12, same on GitHub. Evidence: None. Owed: the left-out truss count is carried in the totals but shown in no window yet: it must be shown on screen before you are asked; then the robot on copies.
-26. **Pull request 2048: Unsaved-work reminder and backup copies, Structural (BUG-1276).** Verdict: GO (2026-11-13 05:43); reviewed head 4370d7b7, same on GitHub. Evidence: None. Owed: the robot on copies, then a Codex look where something is seen, then your trial.
-27. **Pull request 2068: The A/B switch draws the new brace before erasing the old one, so a failed switch keeps the brace (BUG-1362).** Verdict: GO (2026-11-13 05:43); reviewed head 9c457445, GitHub head e22522d3: moved since review, GO not yet re-confirmed. Evidence: None. Owed: the robot on copies, then a Codex look where something is seen, then your trial.
-28. **Pull request 2069: Beam tools name the layer that stopped them instead of "internal problem" (BUG-1365).** Verdict: GO (2026-11-13 05:43); reviewed head 44e1ac66, same on GitHub. Evidence: None. Owed: the robot on copies, then a Codex look where something is seen, then your trial.
-29. **Pull request 2070: A schedule size a support block cannot show is no longer drawn as a different size (BUG-1363).** Verdict: GO (2026-11-13 06:20); reviewed head db23f026, same on GitHub. Evidence: None. Owed: the robot on copies, then a Codex look where something is seen, then your trial.
-30. **Pull request 2071: The bracing table sync writes only the cells you edited (BUG-1361).** Verdict: FIX FIRST (2026-11-13 06:18); reviewed head a8ef1ec9, same on GitHub. Evidence: None. Owed: fix the review list, then the robot on copies.
-31. **Pull request 2072: Typing B over A in the bracing table is refused with a plain line (BUG-1435; built on 2071).** Verdict: GO (2026-11-13 06:19); reviewed head b3986ade, same on GitHub. Evidence: None. Owed: the robot on copies together with 2071, once 2071's items are fixed.
-32. **Pull request 2074: CLEAN skips objects on locked layers and says so (BUG-1439, 1442, 1447).** Verdict: FIX FIRST (2026-11-13 06:19); reviewed head 42610102, same on GitHub. Evidence: None. Owed: fix the review list, then the robot on copies.
+24. **Pull request 2044: Bracing schedule tables big enough for every brace (BUG-497).** Verdict: GO (2026-11-13 00:06); reviewed head 87c29f01, same on GitHub. Evidence: None (no Structural branch could be shown headless, EVIDENCE_BRANCHES.md). Owed: the robot on copies, then a Codex look where something is seen, then your trial.
+25. **Pull request 2046: Refreshing a schedule drops erased braces and piers (BUG-498).** Verdict: GO (2026-11-13 00:57); reviewed head 49f30cf2, same on GitHub. Evidence: None. Owed: the robot on copies, then a Codex look where something is seen, then your trial.
+26. **Pull request 2047: Roof trusses (BT1) left out of wall bracing totals until you answer (BUG-499).** Verdict: GO (2026-11-13 06:21); reviewed head f6b2ea12, same on GitHub. Evidence: None. Owed: the left-out truss count is carried in the totals but shown in no window yet: it must be shown on screen before you are asked; then the robot on copies.
+27. **Pull request 2048: Unsaved-work reminder and backup copies, Structural (BUG-1276).** Verdict: GO (2026-11-13 05:43); reviewed head 4370d7b7, same on GitHub. Evidence: None. Owed: the robot on copies, then a Codex look where something is seen, then your trial.
+28. **Pull request 2068: The A/B switch draws the new brace before erasing the old one, so a failed switch keeps the brace (BUG-1362).** Verdict: GO (2026-11-13 05:43); reviewed head 9c457445, GitHub head e22522d3: moved since review, GO not yet re-confirmed. Evidence: None. Owed: the robot on copies, then a Codex look where something is seen, then your trial.
+29. **Pull request 2069: Beam tools name the layer that stopped them instead of "internal problem" (BUG-1365).** Verdict: GO (2026-11-13 05:43); reviewed head 44e1ac66, same on GitHub. Evidence: None. Owed: the robot on copies, then a Codex look where something is seen, then your trial.
+30. **Pull request 2070: A schedule size a support block cannot show is no longer drawn as a different size (BUG-1363).** Verdict: GO (2026-11-13 06:20); reviewed head db23f026, same on GitHub. Evidence: None. Owed: the robot on copies, then a Codex look where something is seen, then your trial.
+31. **Pull request 2071: The bracing table sync writes only the cells you edited (BUG-1361).** Verdict: FIX FIRST (2026-11-13 06:18); reviewed head a8ef1ec9, same on GitHub. Evidence: None. Owed: fix the review list, then the robot on copies.
+32. **Pull request 2072: Typing B over A in the bracing table is refused with a plain line (BUG-1435; built on 2071).** Verdict: GO (2026-11-13 06:19); reviewed head b3986ade, same on GitHub. Evidence: None. Owed: the robot on copies together with 2071, once 2071's items are fixed.
+33. **Pull request 2074: CLEAN skips objects on locked layers and says so (BUG-1439, 1442, 1447).** Verdict: FIX FIRST (2026-11-13 06:19); reviewed head 42610102, same on GitHub. Evidence: None. Owed: fix the review list, then the robot on copies.
+34. **Pull request 2077: BDL stops with a plain line in a metre, centimetre or inch drawing (BUG-1364).** Verdict: not reviewed; GitHub head 35ec2928, not reviewed yet. Evidence: None. Owed: a review first.
 
 ## Step 5, record changes made visible
 
-33. **Pull request 2045: The read-only tools stop changing CE's record; every other change prints one line.** Verdict: GO (2026-11-13 03:45); reviewed head d0cf644c, same on GitHub. Evidence: Seen in the core console: CDGRAPH and CDDIAG leave the record identical, CDGRAPH counts 49 not 50 (EVIDENCE_BRANCHES.md). Owed: the robot on copies, then a Codex look where something is seen, then your trial.
+35. **Pull request 2045: The read-only tools stop changing CE's record; every other change prints one line.** Verdict: GO (2026-11-13 03:45); reviewed head d0cf644c, same on GitHub. Evidence: Seen in the core console: CDGRAPH and CDDIAG leave the record identical, CDGRAPH counts 49 not 50 (EVIDENCE_BRANCHES.md). Owed: the robot on copies, then a Codex look where something is seen, then your trial.
 
 ## Step 6, Unknown instead of made-up values
 
-34. **Pull request 2049: No more made-up "100 dia UPVC", lid class or pit numbers, switch off.** Verdict: GO (2026-11-13 02:17); reviewed head e7b9ccdc, GitHub head 98d81717: moved since review, GO not yet re-confirmed. Evidence: Proof check TRUST-UNKNOWN-01 passes in the core console (EVIDENCE_BRANCHES.md). Owed: the robot on copies, then a Codex look where something is seen, then your trial.
+36. **Pull request 2049: No more made-up "100 dia UPVC", lid class or pit numbers, switch off.** Verdict: GO (2026-11-13 02:17); reviewed head e7b9ccdc, GitHub head 98d81717: moved since review, GO not yet re-confirmed. Evidence: Proof check TRUST-UNKNOWN-01 passes in the core console (EVIDENCE_BRANCHES.md). Owed: the robot on copies, then a Codex look where something is seen, then your trial.
 
 ## Step 7, the LPD as the start point
 
-35. **Pull request 2058: The LPD confirmed once and stored; tools start from it.** Verdict: GO (2026-11-13 05:10); reviewed head 772b221d, same on GitHub. Evidence: None. Owed: the robot on copies, then a Codex look where something is seen, then your trial.
+37. **Pull request 2058: The LPD confirmed once and stored; tools start from it.** Verdict: GO (2026-11-13 05:10); reviewed head 772b221d, same on GitHub. Evidence: None. Owed: the robot on copies, then a Codex look where something is seen, then your trial.
 
 ## Step 8, Check this drawing, first slice
 
-36. **Pull request 2051: A read-only list of Sure, Proposed and Unknown (typed CDCHECKDRAWING), switch off.** Verdict: GO (2026-11-13 06:21); reviewed head b9bed2e8, same on GitHub. Evidence: None. Owed: the robot on copies, then a Codex look where something is seen, then your trial.
+38. **Pull request 2051: A read-only list of Sure, Proposed and Unknown (typed CDCHECKDRAWING), switch off.** Verdict: GO (2026-11-13 06:21); reviewed head b9bed2e8, same on GitHub. Evidence: None. Owed: the robot on copies, then a Codex look where something is seen, then your trial.
 
 ## The robot's own proof checks
 
-37. **Pull request 2050: Headless checks that prove steps 1, 5 and 6 change nothing.** Verdict: GO (2026-11-13 03:45); reviewed head 03af5393, same on GitHub. Evidence: All four checks pass in the core console, each with a faulty twin that fails (EVIDENCE_BRANCHES.md). Owed: the robot on copies, then a Codex look where something is seen, then your trial.
+39. **Pull request 2050: Headless checks that prove steps 1, 5 and 6 change nothing.** Verdict: GO (2026-11-13 03:45); reviewed head 03af5393, same on GitHub. Evidence: All four checks pass in the core console, each with a faulty twin that fails (EVIDENCE_BRANCHES.md). Owed: the robot on copies, then a Codex look where something is seen, then your trial.
 
 ## Structural step S1, the cut-down tab
 
-38. **Pull request 2054: One Structural tab with the core tools in roof-down order, switch off.** Verdict: GO (2026-11-13 04:14); reviewed head 10a50084, same on GitHub. Evidence: None. Owed: the robot on copies, then a Codex look where something is seen, then your trial.
-
-## On GitHub but not yet placed in a step by this lane
-
-1. **Pull request 2076.** GitHub head e12f0eb3, not reviewed yet.
-1. **Pull request 2077.** GitHub head 35ec2928, not reviewed yet.
+40. **Pull request 2054: One Structural tab with the core tools in roof-down order, switch off.** Verdict: GO (2026-11-13 04:14); reviewed head 10a50084, same on GitHub. Evidence: None. Owed: the robot on copies, then a Codex look where something is seen, then your trial.
 
 ---
 
 ## Where these come from
 
-1. **The list and the GitHub heads:** `gh pr list --state open --draft` on the plugin repository at 2026-11-13 06:28, branches containing "trust" or "bug-1456".
+1. **The list and the GitHub heads:** `gh pr list --state open --draft` on the plugin repository at 2026-11-13 06:29, branches containing "trust" or "bug-1456".
 2. **Verdicts, times and reviewed heads:** the latest line per pull request in `areas\trust-run\trust-review.md`, including "re-reviewed at" heads and the 06:21 re-read of 2038, 2043, 2047 and 2051 (GO holds at their new heads).
 3. **What each row owes beyond the robot:** the review files in `areas\trust-run\reviews\` and `reviews\status-board-check.md`.
 4. **Evidence:** `areas\trust-run\EVIDENCE_BRANCHES.md`, `EVIDENCE_READER.md`, `EVIDENCE_CROSS_DRAWING.md`, `EVIDENCE_STALE_BUGS.md`. Fixes seen on the installed build (BUG-650, BUG-968, BUG-290) are not trial changes; they are on the morning page.
