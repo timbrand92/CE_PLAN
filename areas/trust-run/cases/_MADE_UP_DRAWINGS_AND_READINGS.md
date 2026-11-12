@@ -55,6 +55,8 @@ These are described by what is in them. Lane trust-acad-evidence builds the real
 28. **MD-28, messy job.** MD-01 with the P3 pit label text edited, a cover-level text edited and one stray pit block, so several things differ from CE's record at once.
 29. **MD-29, unlinked ends.** MD-01 where two pipe ends touch their pits but are not linked in CE's record (the links cleared by script).
 30. **MD-30, a heavy revision.** MD-13 (400 pits) with 200 or more differences from CE's record made by script, so the check list has a large number of rows.
+31. **MD-31, ends that are not pits.** MD-01-DP where each downpipe drains through a short pipe starting at the downpipe and ending at a pit, the tank overflow is a pipe starting at the tank, and one more pipe starts at a connection point (an existing pipe from outside) and ends at P3. Every pipe is linked at both ends the way CE links such ends. Answer sheet: all linked.
+32. **MD-32, lines only.** A drawing with three plain polylines on the stormwater pipe layer, no pit blocks and no CE record.
 
 ## 2. The standard readings (named once, used everywhere)
 
