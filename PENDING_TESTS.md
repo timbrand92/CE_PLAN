@@ -76,6 +76,10 @@ PR 2064 (DRAFT, never merged by the run), branch `claude/trust-09-cancel-writes-
 13. **An update that really changed something, then Esc, switch on:** in a job copy, erase one pipe line with plain ERASE; PIT (its hidden update drops the pipe), Esc. Right = the changed record is written inside the PIT command (step 5's line says what changed); the next command (a LINE) has only the line in its Undo step.
 14. **A tool that asks for the mark only after placing (CDTG, CDSL, CDWT on the safety lane's branch, when merged):** in a new drawing place one. Right = the "Civil" mark is written with it, in the same Undo step.
 15. **The list is 14 names now:** Help and CD Settings never write CE's record at their end, switch on or off.
+16. **Added 13 Nov after the re-review of PR 2064 (head `dde7825e`). A ZOOM or PAN in the middle of a CE tool, switch on, in a brand new drawing:** start a spot level tool (it puts nothing in CE's record), type 'ZOOM (with the apostrophe) or pick Pan on the navigation bar at its first pick, finish the zoom, then place the spot level. Right = the drawing is marked "Civil" with it, in the same Undo step. Then the same with PIT.
+17. **The same, but Esc out of the tool after the zoom:** Right = nothing is written (no mark, no record), and a LINE drawn next has only the line in its Undo step.
+18. **A CE tool that runs other commands itself (Copy and Rotate) in a new drawing, switch on:** Right = the mark is written with what it places; nothing is lost.
+19. **Note on rows 2 and 4 (from the re-review):** on this branch the BUG-1456 mix-up no longer shows with the switch OFF either (PR 2073 is merged in); only the INSTALLED build still shows it. Row 14's CDTG, CDSL and CDWT apply once PR 2055 is merged with this.
 
 ### Trust plan step 7, the LPD as the one stored start point (TRUST-07, DRAFT card) — 13 November 2026 (Built and unit-tested only; NOT installed; the switch ships ON; robot and Codex to run on COPIES)
 
