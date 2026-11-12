@@ -51,7 +51,7 @@
    3. `ADeliberatelyWrongList_IsCaught` removes a button from an array and compares it with the expected list; it proves the comparison works, not that the code is caught.
    4. `ListedCommands_..._EveryButtonResolvesAPicture` checks only that a picture name is set; a missing picture falls back to "tool" (`CeCvlRibbonContributor.cs`, `ResolveIconKey`), so it cannot fail.
    5. Fix: rename them to what they check, or make them real (for example compare the Shared files' hashes with cf059dcf; run the classic test with the core switch on).
-5. **Name the two failing tests and compare them with cf059dcf.** The lane reports two failures in `SourceAtomicCoordinatorDependencyTests` "not yet compared against the baseline". They read compiled IL of source-placement methods and look sensitive to Debug versus Release builds, so pre-existing is likely, but RULES 6.1 asks for the names and a base run with the same settings.
+5. **Name the two failing tests and compare them with cf059dcf.** The lane reports two failures in `SourceAtomicCoordinatorDependencyTests` "not yet compared against the baseline". They read compiled IL of source-placement methods. Lane trust-foundations reports (PR 2041) that two tests in that class fail on a Debug build with or without any change and pass on Release, so pre-existing is likely; the core-ribbon lane should confirm the names match and re-run on Release (RULES 6.1).
 
 ## 3. For the controller (plan and card text, not code)
 
