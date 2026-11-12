@@ -1,5 +1,20 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+### Trust plan step 6, Unknown instead of made-up values (TRUST-06, DRAFT card) — 12 November 2026 (Built and unit-tested only; NOT installed; the Unknown switch ships OFF; robot and Codex to run on COPIES)
+
+PR 2049 (DRAFT, never merged by the run), branch `claude/trust-06-guesses-removed`, stacked on step 5. Settings: `trust.showUnknownInsteadOfGuess` (OFF), `trust.reachesFollowDrawingUnits` (ON), `reaches.pitLabelSearchPastPitMm` (2000), `reaches.pitLevelTextSearchPastPitMm` (2500), `reaches.restoreByPositionMm` (200), `reaches.orphanPitMatchMm` (50). Each fill-in is an engineering default: the robot and Codex can prove the behaviour, only Tim's word settles what each should be.
+
+1. **Unknown switch OFF, millimetre job (the shipped state):** run PIT, CD, CDEDIT, CDSYNC, CDUPGRADE and the Pit Schedule on a copy. Right = nothing differs from the installed build.
+2. **Unknown switch ON, a line on the pipe layer with no size:** run CDSYNC. Right = the pipe's size and material are blank in the record; the Pit Schedule shows "?"; nothing reads 100 or UPVC; step 5's line has no "Guessed" sentence.
+3. **Unknown switch ON, a pit symbol with no label:** Right = no P number is made up; the pit holds CE's code for its symbol; no number label is drawn. (Windows do not show "?" for it yet.)
+4. **The same job in a millimetre copy and a metre copy (units switch ON):** Right = identical readings, item for item, including a 225 pipe drawn 0.225 wide in the metre copy.
+5. **Metre drawing, a pit with a label 1.5 m away and another label 30 m away:** Right = only the first is matched.
+6. **Save, close, reopen with Unknowns:** Right = the same Unknowns.
+7. **Broken twin (already proven without AutoCAD):** a version that still fills "100" fails the same check as case 2.
+8. **Units switch OFF:** the metre copy behaves as on the installed build (the far label is matched too).
+9. **Not covered by this build (see the regression entry, item 6):** Edit Pit's lid offer, CDPROPAGATE's 225, the pipe flow calculator, the detention pipe volume, copies and pipe split, plan label wording, the Pit Schedule's "0 x 0" and write-back, flow direction, two pits in reach of one label, a no-units drawing that is really in metres.
+10. **Not provable by the robot alone:** how Unknown looks in the schedule window, Edit Pipe and Edit Pit (Codex look); whether the Unknowns are the ones Tim would expect on jobs he knows (Tim).
+
 ### TRUST-04 core safety fixes (session trust-safety-fixes) — 12 November 2026 (Built and unit-tested only; NOT installed; Codex or robot to run on COPIES)
 
 Each fix is its own draft pull request cut from the build Tim has installed (Civil 3.0.90 = cf059dcf, Structural 1.0.126 = 8de95c34). None is merged or installed. Card: `04_REFERENCE/ux-plan/cards/TRUST-04_CORE_SAFETY_FIXES_CARD_DRAFT_2026-11-12.md`. Findings: side-session note `trust-safety-fixes_findings_12nov.md`.
