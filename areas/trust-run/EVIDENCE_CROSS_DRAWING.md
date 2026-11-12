@@ -68,3 +68,28 @@
 3. **Saved copy, reopened:** record 247,604 characters, 11 pits, 49 pipes, path = the standard drawing's copy; changed counter 0; 1,285 drawn objects (B's own, unchanged). CE's open-time line: "0 pipe(s) upgraded to CE pipe objects, 1 left as drawn" (the baseline says "19 left as drawn": the contaminated record changes what CE thinks needs upgrading). CDCHECKCURRENT: "82 items need checking" (baseline 48).
 4. **Pit Schedule, contaminated reopened copy:** window with 17 data rows; names include 'Pit P1', 'Pit P1, pipe from AGIs', 'Pit P2', 'Pit P2, pipe from WT1/WT2/WT11'; pit-looking texts P1 to P7 and WT1 to WT12. **Baseline (same job, untouched):** 1 row, 'Pit P1'. The record dump after the window closed was unchanged (the window did not rewrite it). Window dumps: `C:\CE_WORK\scratch\trustprobe\ab\ps_contaminated.txt` and `ps_baseline.txt`.
 5. **What I did not do:** a plain Save over a copy to see AutoCAD's .bak; Edit Pit or Pit Schedule edits in the contaminated drawing; a print or export from it.
+
+---
+
+# PART 3 (13 Nov, 06:10 to 07:26): tab switch, the other commands, and the backup question
+
+**Same build and rules.** Installed Civil 3.0.90, real AutoCAD 2027, copies only. For each command below: a fresh copy of the standard drawing with CDDIAG run in it (CE's memory holds that job), then a fresh copy of the second job opened (2 pits, 46 pipes), then the command as the first CE action, windows closed, Esc at any prompt. "A's record appeared" means the second job's stored record became 11 pits and 49 pipes.
+
+## FOR TIM
+
+1. **Switching tabs is enough to trigger it.** With both drawings already open, I worked in the standard drawing (CDDIAG), switched back to the second job's tab and ran Help: the second job's record became the standard drawing's (11 pits, 49 pipes). Seen. You do not have to open a drawing: switching tabs then running Help or Settings does it.
+2. **The other commands tried as the first thing in the second drawing did NOT do it:** Check Current Drawing (CDCHECKCURRENT), the Inspector (CDINSPECTOR), CEBLOCKS, the Drawing Standards Manager (CDMANAGER), the Suite Manager (CEMANAGER), the Pit Schedule (PITSCHEDULE), CDEDIT with Esc at its pick, and MR with Esc. In each the second job's own record was unchanged. So of everything I tried, only Help and Settings do it.
+3. **One command I could not finish:** CDFEEDBACK. It opened something the driver could not see, and AutoCAD then stopped answering the driver's automation, so my own AutoCAD had to be ended by the driver's kill-quit. Nothing was lost (copies only). Whether CDFEEDBACK does the mix-up is not known.
+4. **The backup question: AutoCAD made no .bak, but CE's own "PRE_C7" backup holds the original.** After the mix-up I did a plain Save (not Save As) of a scratch copy. AutoCAD wrote no .bak file (its "keep a .bak" setting is off on this PC: ISAVEBAK 0). But CE had already saved a copy of the drawing as it was on disk, named like `<name>_PRE_C7_<time>.dwg`, when the drawing was opened. That copy is identical to the untouched original (same fingerprint), so Tim's own data survives there. It is a CE-made file beside the drawing, so it only helps if somebody knows to look.
+5. **So the ways back, in order:** U straight after Help; the CE `_PRE_C7_` file beside the drawing; the unsaved original file; none of these helps once the saved file is the only copy and the `_PRE_C7_` file has been deleted or tidied.
+
+## DETAIL
+
+1. **Tab switch (R5).** Standard drawing opened second, then the second job opened first; CDDIAG in the standard drawing (memory = standard drawing); switched to the second job by activating its tab (no new open); CDHELP then close: 247,605 characters, 11 pits, 49 pipes, path = the standard drawing's copy. Before: 37,921 characters, 2/46.
+2. **CDCHECKCURRENT:** "Drawing check complete. 48 items need checking", the same 48 as an untouched copy; second job's record 2/46, 37,921 characters, version 2.2, unchanged. It opens the dock palette "CE Civil - What CE Found" which the driver cannot close (it is on its unknown-window list); the check itself is read-only.
+3. **CDINSPECTOR, CEBLOCKS:** unchanged; same palette left open. **CDMANAGER** ("Creative Engineering | Drawing Standards Manager") and **CEMANAGER** ("CE Suite Manager"): windows opened and were closed through the driver; second job's record unchanged.
+4. **PITSCHEDULE:** window "Pit Schedule (PITSCHEDULE)" opened and was closed; the second job's record unchanged (37,921 characters). **CDEDIT:** "Select a pit, pipe, source or CE text to edit:" Esc: unchanged. **MR:** "Select objects:" Esc: unchanged.
+5. **CDFEEDBACK:** no visible window; the next read failed ("not registered for COM automation"), then every later step in that run failed to read. The driver's normal quit refused for the same reason; its kill-quit ended my AutoCAD (only the one it launched), 3 minutes later. Results for the three commands after it were measured again in a fresh session (items 4 above).
+6. **Backup test:** a fresh copy of the second job was contaminated by the usual sequence (record 11/49, path = the standard drawing's copy), then saved with a plain Save under its own name: the saved file's size changed (1,309,986 to 1,352,424 bytes). Files beside it: `<name>_PRE_C7_<time>.dwg` of 1,309,986 bytes, equal to the untouched original; no `.bak`. AutoCAD's save-a-backup variable ISAVEBAK reads 0.
+7. **Not done:** a read of CDFEEDBACK; the dock palette's effect when left open; the Pit Schedule's Apply or Place in a contaminated drawing.
+8. **AutoCAD:** closed with the driver's quit at 07:26, lock released, the four settings files byte-identical to the start of the night.
