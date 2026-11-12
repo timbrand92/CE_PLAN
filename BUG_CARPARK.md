@@ -20266,3 +20266,273 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
 
 **Status:** OPEN
+
+## BUG-1393 — Beam tools 1, 2, 4 and 5 shorten a beam end by the auto-trim with no line saying so
+
+**Command / Area:** Beam commands 1, 2, 4 and 5. LOW. WRONG ANSWER, length changed silently. Engineering judgement: Tim.
+
+**Symptom:** When the end-point auto-trim moves a beam end inward, only the preview shows it. After the beam is drawn the command line does not say the beam is shorter than the picked points.
+
+**Expected behaviour:** One line: "Beam start trimmed by 45 mm".
+
+**Steps to confirm in AutoCAD:** (1) On a copy pick a beam whose end lies on a support so the auto-trim applies. Right = a line naming the trim. Wrong = no line and a shorter beam.
+
+**Test that catches it:** Fixture: trim applied; assert the result message names it.
+
+**Reference:** Structural.DesignCore\ConnectedDesign\BeamAxisEndAdjustment.cs:16-18; Services\ConnectedDesign\Host\BeamCommandAutoCadRoute.cs:384-391 (the result line carries no trim information). Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1394 — Walls and openings steer the beam mark only when the layer name contains WALL, WINDOW or DOOR
+
+**Command / Area:** Beam commands 1, 2, 4 and 5. LOW. WRONG ANSWER, mark side chosen from an incomplete picture.
+
+**Symptom:** The mark side is chosen by looking at walls and openings recognised only by words in the layer name. A wall on a layer called A-WL or 100-BLK is invisible to it, so the mark can land across a wall. No line says which layers were read.
+
+**Expected behaviour:** The recognised words are a Settings list, and the line says how many wall lines were read.
+
+**Steps to confirm in AutoCAD:** (1) On a copy draw a wall on a layer named BLK and a beam beside it. Run 1. Right = the mark avoids the wall. Wrong = the mark lands across it.
+
+**Test that catches it:** Fixture: wall on a non-WALL layer; assert it is read.
+
+**Reference:** Commands\BeamPlacementCommands.cs:1296-1372 (GetReferenceKind and layer-name tests); Services\ConnectedDesign\Host\BeamCommandAutoCadReadScope.cs:467-470. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1395 — Help for beam tool 5 says "Beam offset helper command" and does not say the beam moves 45 or 100 mm
+
+**Command / Area:** Beam command 5, Help. LOW. WORDING.
+
+**Symptom:** The Help entry reads "Beam offset helper command" and "Follow-up tool for offset beam placement workflow". It does not say the beam is offset by 45 or 100 mm or on which side.
+
+**Expected behaviour:** Help says what 5 does in drawing words.
+
+**Steps to confirm in AutoCAD:** (1) CEHELP, find 5, read it. Right = it says it places a beam offset by 45 or 100 mm. Wrong = "helper command".
+
+**Test that catches it:** Source guard: the registry text for 5 contains the offset distances.
+
+**Reference:** Assets\Config\command-registry.json:2050-2062. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1396 — BDL ends silently with both beam lines already drawn if Esc or Enter is pressed at the text questions
+
+**Command / Area:** BDL (Beam Dual Layer). MEDIUM. WRONG ANSWER, partial result with no message.
+
+**Symptom:** BDL draws the BEAM line and the BEAM LOWER line, then asks for the BEAM text and the BEAM LOWER text. Esc, or Enter with no text shown, ends the command with no message. Both lines stay in the drawing with no mark, and the drafter does not know the command stopped half done.
+
+**Expected behaviour:** A line saying the lines were drawn and no text was added, or Esc removes the lines drawn in this run.
+
+**Steps to confirm in AutoCAD:** (1) Run BDL, pick a beam, accept the offset, press Esc at "Enter BEAM text". Right = a line, or both lines removed. Wrong = two lines left and nothing said.
+
+**Test that catches it:** Fixture: Esc at the first text question; assert a message or no lines.
+
+**Reference:** Commands\BeamPlacementCommands.cs:159-172 (lines drawn) against 191-192 and 206-207 (silent return). Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1397 — BDL has no Model space or REFEDIT check: on a layout tab its lines go into Model space at the picked coordinates
+
+**Command / Area:** BDL (Beam Dual Layer). MEDIUM. WRONG ANSWER, lines in the wrong place.
+
+**Symptom:** BDL uses the plain pre-flight. On a layout tab, or during REFEDIT, its lines are always added to Model space at the coordinates clicked on the sheet, so they land far from the plan.
+
+**Expected behaviour:** BDL stops with a plain line on a layout tab or in REFEDIT, as tools 1, 2, 4 and 5 and AB do.
+
+**Steps to confirm in AutoCAD:** (1) On a copy open a layout tab and run BDL. Right = a Model space line and nothing drawn. Wrong = lines appear in Model space at the sheet coordinates.
+
+**Test that catches it:** Source guard: BDL calls CommandPreFlightModelSpace.
+
+**Reference:** Commands\BeamPlacementCommands.cs:97; Services\BeamService.cs:92-93 (always Model space). Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1398 — BDL draws on a locked BEAM, BEAM LOWER or 25TEXT layer where tools 1, 2, 4 and 5 refuse
+
+**Command / Area:** BDL (Beam Dual Layer). MEDIUM. PROTECTION.
+
+**Symptom:** BDL has no locked-layer check. Lines and text are added on a locked layer, against AutoCAD's normal protection.
+
+**Expected behaviour:** BDL stops with a plain line naming the locked layer and draws nothing.
+
+**Steps to confirm in AutoCAD:** (1) Lock BEAM LOWER on a copy. (2) Run BDL. Right = a line naming the layer, nothing drawn. Wrong = a line appears on the locked layer.
+
+**Test that catches it:** Source guard: BDL calls FirstLockedLayer for the three layers.
+
+**Reference:** Services\BeamService.cs:70-84 (EnsureLayer keeps the lock) and 85-100 (CreateBeamLine); Services\LayerService.cs:206-216 (the shared check BDL does not call). Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1399 — BDL zooms the view with no line, and the zoom is not part of Undo
+
+**Command / Area:** BDL (Beam Dual Layer). LOW. LOOK.
+
+**Symptom:** After drawing the BEAM line BDL runs ZOOM Object then ZOOM 0.7X. The drafter's view jumps with no line saying so, and Undo does not bring the old view back.
+
+**Expected behaviour:** No zoom, or a line saying the view was changed.
+
+**Steps to confirm in AutoCAD:** (1) Zoom to a part of the plan, run BDL on a beam elsewhere. Right = the view stays. Wrong = the view jumps to the beam.
+
+**Test that catches it:** Source guard: no ed.Command ZOOM in BDL.
+
+**Reference:** Services\BeamService.cs:537-551; Commands\BeamPlacementCommands.cs:184. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1400 — BSET, BSETRESET and BSETLIST report success or "none stored" when the store could not be written or read
+
+**Command / Area:** BSET, BSETRESET, BSETLIST (inside-of-building points). MEDIUM. WRONG ANSWER, success overstated and failure reported as empty.
+
+**Symptom:** The inside-point store swallows every error. If a write fails BSET still prints "Inside-point added. Total stored: n" and BSETRESET prints "All inside-points cleared", though nothing changed. If the list cannot be read BSETLIST prints "No inside-points stored for this drawing", though points exist. Lintel marks then land on the wrong side and the drafter has no reason to suspect the points.
+
+**Expected behaviour:** Each command reports a failed write or read in plain words.
+
+**Steps to confirm in AutoCAD:** (1) On a copy make the drawing read-only or damage the CE record. (2) Run BSET, BSETLIST. Right = a line saying the point could not be saved or the list could not be read. Wrong = a success line, or "none stored".
+
+**Test that catches it:** Fixture: store with a failing write; assert the command message reports failure. Unit: GetAll distinguishes empty from unreadable.
+
+**Reference:** Services\BeamInsidePointStore.cs:43-48 (GetAll catch returns empty), 73-76 (Add catch), 92-95 (Clear catch); Commands\BeamInsidePointCommands.cs:39, 66, 88-94. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1401 — BSETRESET clears every saved inside point with no question
+
+**Command / Area:** BSETRESET. MEDIUM. LOST WORK.
+
+**Symptom:** One command clears every saved inside point, with no "are you sure" and no count of what was cleared. On a drawing that had none it also adds an empty record. The drafter's saved points are lost on one command, and lintel marks lose their guide.
+
+**Expected behaviour:** A question showing how many points will be cleared, and no empty record on a drawing with none.
+
+**Steps to confirm in AutoCAD:** (1) On a copy save three points with BSET. (2) Run BSETRESET. Right = it asks first and names 3. Wrong = it clears at once.
+
+**Test that catches it:** Fixture: three points; assert a confirm step; drawing with none stays without a record.
+
+**Reference:** Commands\BeamInsidePointCommands.cs:65-66; Services\BeamInsidePointStore.cs:80-96 and 153-165 (creates the record). Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1402 — BSET saves the clicked point as given, so a turned UCS can save the wrong place
+
+**Command / Area:** BSET (save an inside-of-building point). MEDIUM. WRONG ANSWER, wrong point saved.
+
+**Symptom:** The beam commands turn a point clicked in a rotated UCS into World coordinates. BSET saves the click as returned (it is in the current UCS) while a comment in the code says it is already World. In a rotated UCS the saved point lands in the wrong place, and lintel marks are steered to the wrong side with no line.
+
+**Expected behaviour:** BSET converts the click to World before saving.
+
+**Steps to confirm in AutoCAD:** (1) On a copy rotate the UCS 30 degrees. (2) Run BSET and click inside the building. (3) Run BSETLIST and compare with the same point read in World (ID). Right = equal. Wrong = different.
+
+**Test that catches it:** Fixture: rotated UCS, BSET at a known World point; assert the stored point equals it.
+
+**Reference:** Commands\BeamInsidePointCommands.cs:36-37 (comment says already World) against Services\ConnectedDesign\Host\BeamCommandAutoCadInsidePointProposalAdapter.cs:198-199 (TransformBy the current UCS). Related BUG-467. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1403 — BSET and BSETRESET have no read-only, Model space or REFEDIT check
+
+**Command / Area:** BSET, BSETRESET. MEDIUM. WRONG ANSWER, a point from the wrong space; read-only drawing changed.
+
+**Symptom:** A point clicked on a layout tab is saved as a Model space inside point, and a read-only drawing has its CE record changed. The other beam commands refuse in these cases.
+
+**Expected behaviour:** A plain stop line on a layout tab, in REFEDIT or on a read-only drawing.
+
+**Steps to confirm in AutoCAD:** (1) On a copy open a layout tab and run BSET. Right = a stop line. Wrong = a point is saved. (2) Repeat on a read-only copy.
+
+**Test that catches it:** Source guard: both commands call CommandPreFlightModelSpace.
+
+**Reference:** Commands\BeamInsidePointCommands.cs:22-27 and 60-65 (no pre-flight). Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1404 — After 128 saved inside points the beam tools stop with "the saved inside-of-building point looks wrong" and BSET does not warn
+
+**Command / Area:** BSET and beam commands 1, 2, 4, 5. LOW. WORDING, hidden limit.
+
+**Symptom:** The beam commands read at most 128 points. A drawing with more makes them stop with a line about a point that "looks wrong", while BSET keeps adding without a warning.
+
+**Expected behaviour:** BSET warns at the limit, and the beam line says the limit.
+
+**Steps to confirm in AutoCAD:** (1) Save 129 points with BSET. Run 1 on a lintel. Right = a line naming the 128 limit. Wrong = "looks wrong".
+
+**Test that catches it:** Fixture: 129 points; assert the wording names the limit.
+
+**Reference:** Services\ConnectedDesign\Host\BeamCommandAutoCadInsidePointProposalAdapter.cs:136-139; Services\ConnectedDesign\Host\BeamCommandAutoCadInsidePointStoreEvidenceReader.cs:170-181; Structural.DesignCore\ConnectedDesign\BeamRefusalWording.cs:257-259. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1405 — Help for BSETLIST and BSETRESET still says the points are stored in the drawing's XRecord
+
+**Command / Area:** BSETLIST, BSETRESET, Help. LOW. WORDING.
+
+**Symptom:** The Help text says "inside-points stored in the drawing's XRecord", a code word.
+
+**Expected behaviour:** Plain words: "points saved with the drawing".
+
+**Steps to confirm in AutoCAD:** (1) CEHELP, find BSETRESET, read it. Right = no code words. Wrong = XRecord.
+
+**Test that catches it:** Source guard: the registry text for these commands has no "XRecord".
+
+**Reference:** Assets\Config\command-registry.json:2176-2206 (longDesc at 2183). Related BUG-1077. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1406 — With no schedule row the support is drawn at the default size and nothing says where the size came from
+
+**Command / Area:** C1, DS, DS1, TS1 (support blocks). MEDIUM. WRONG ANSWER, a size the drafter did not choose. Engineering judgement: Tim.
+
+**Symptom:** When the member schedule has no row for the command's code, the support is drawn at the built-in default (89 SHS, 90 x 90, 135 x 90) with no size question and no line. The drafter takes the size on the drawing as chosen.
+
+**Expected behaviour:** A line says "No schedule row for DS1: drawn at the standard 90 x 90 size", or the size is left Unknown until chosen.
+
+**Steps to confirm in AutoCAD:** (1) On a copy with no member schedule run DS1 and place a support. Right = a line naming the size and that it is the default. Wrong = a size on the drawing and no line.
+
+**Test that catches it:** Fixture: no schedule row; assert the message states the default.
+
+**Reference:** Commands\SupportBlockCommands.cs:251-261; 65-69 (the default sizes). Related BUG-537. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1407 — A Settings size the support block does not offer leaves the block in whatever state it had, with no line
+
+**Command / Area:** C1, DS, DS1, TS1 (support blocks). MEDIUM. WRONG ANSWER, size not applied and not reported. Engineering judgement: Tim.
+
+**Symptom:** If the chosen size is not one the block offers and the fallback fails too, SetDynamicVisibility leaves the block as it was and returns false. Only C2 refuses; the others place the block anyway with no line.
+
+**Expected behaviour:** A plain line saying the size was not applied, or a refusal as C2 does.
+
+**Steps to confirm in AutoCAD:** (1) On a copy set a Settings support size the block lacks. (2) Run DS1. Right = a line or a refusal. Wrong = a block at an unknown size and no line.
+
+**Test that catches it:** Fixture: unknown size and fallback; assert a refusal or message.
+
+**Reference:** Commands\SupportBlockCommands.cs:322-330 (only C2 throws) and 1487-1491 (left unchanged, logged only). Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
