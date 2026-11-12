@@ -62,7 +62,7 @@ The opening line can say: "14 pits, 22 pipes, all linked, LPD confirmed."
 
 1. **The LPD records that already exist.** There are two forms, an older one written by CDLPD and a newer one written from Design that can hold several outlets. This card adds no third.
 2. **The one reader that already returns the LPD from either form.** Every tool is pointed at that reader.
-3. **"Confirmed" is one extra fact on the existing record,** added in a way older versions ignore. If that cannot be done without changing what older versions read, it is BLOCKED and comes back as a design question; it is not worked round with a new record.
+3. **Where "confirmed" is kept (settled as a DRAFT default, 13 Nov; Tim to confirm).** The builder checked the installed build: both LPD records are read strictly, so an extra value inside either makes the LPD read as damaged on a colleague's PC. So "confirmed" is kept as one small separate item beside the two records, in the same LPD group in the drawing, the way the drawing's path is already kept there. It holds only "this LPD was confirmed, on this pipe end, on this date". It never holds the LPD's position, and no tool reads it instead of the LPD. If the LPD or its pipe changes, it counts as not confirmed. The installed build must still read both records as healthy with it present; that is a required test.
 
 **The trap:** each of the two record forms refuses to be written while the other exists. This card does not convert one into the other.
 
