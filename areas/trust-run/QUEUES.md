@@ -192,6 +192,15 @@
 19. One status board for Tim, `areas\trust-run\STATUS_BOARD.md`, rebuilt from the files each time you check in: every trust draft pull request (number, plain name of what it does on a drawing, latest review verdict and head from `trust-review.md`, what real AutoCAD evidence exists from the EVIDENCE files, what is still owed), grouped by plan step, newest verdict wins. Numbered lists, no tables, FOR TIM first with the counts. Count from the files; never estimate. Keep it current at every check-in until told otherwise.
 20. Bring the morning page `areas\TRUST_MORNING_BRIEF_13NOV.md` up to date for BUG-1456 (seen on the installed build; `areas\trust-run\EVIDENCE_CROSS_DRAWING.md`; bug entry at the end of `BUG_CARPARK.md`): it is the FIRST item, with the two safe habits, and the page must say plainly that the fix is drafted, reviewed FIX FIRST, and not installed.
 
+### Refill, Fri 13 Nov 06:15 PC clock (controller)
+
+**trust-core-ribbon, next (Structural, each its own small draft cut from 8de95c34, read the bug entry first, a test that fails without the fix through the real code path):**
+17. Fix the three items in the review of 2070 (`reviews\claude-trust-b1363-support-size-unknown.md`): never print a size the symbol does not show; never tell the drafter to edit the member schedule to suit a symbol.
+18. BUG-1364: BDL has no units handling (its 50 minimum, 100 offset and 250 search are read as metres in a metre drawing).
+19. BUG-1389, BUG-1390, BUG-1391: BSET and BSETLIST say success or "none stored" when the store failed; BSETRESET clears every inside point with no question; BSET and BSETRESET have no read-only, layout tab or in-place reference-edit check.
+20. BUG-1369 and BUG-1370 are engineering judgement (older-named braces counted as zero; braces on frozen or off layers still counted): do NOT change any total. Instead make the bracing panel SAY what it left out or counted that a drafter might not expect, in one plain line each, and list both rules as decisions for Tim.
+21. Fix what trust-review finds on 2071, 2072 and 2074.
+
 ### trust-struc-mgr-plan (planning only)
 1. `areas\trust-plan-structural.md` and `areas\trust-plan-manager.md` (its brief).
 2. Draft cards, in the TRUST card shape, for the first three Structural steps and for "going back a version, rehearsed" in Manager.
