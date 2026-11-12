@@ -157,6 +157,16 @@
 12. Carry on with item 9 in real AutoCAD on the INSTALLED build: BUG-683, 681, 290, 968, 674, 780, 785, 756 and 969, each on its own fresh copy. For BUG-650 (seen fixed): repeat it once in a SECOND AutoCAD session and record both, because a robot result only counts toward acceptance when seen in two sessions (RULES, 24 Oct amendment).
 13. Clear the scratch you made tonight that is no longer needed (`%LOCALAPPDATA%\Temp\ce-headless-proof` and any other temp build copies that are YOURS, about 10 GB in all): C: is at 37 GB. Never delete a folder you did not create.
 
+### Refill, Fri 13 Nov 03:45 PC clock (controller)
+
+**trust-foundations, next:**
+7. The root of tonight's "Esc still rewrote things" findings, as its own small draft (you own `Services\ProjectDataService*.cs`): (a) the list of 16 commands that save CE's stored record at the command's end even when nothing is waiting: a cancelled command must write nothing, and a command that never bound the record to the current drawing (CDHELP and CDS are named by the reviewer) must never write at all; (b) `MarkDrawingActive` and the source placing code's filling-in of pipe identities (`SourcePlacementService.cs` about line 146) writing before the first accepted answer. One rule, shown by tests through the real code path and a deliberately faulty version: nothing is written before the first accepted answer, and nothing at the end of a cancelled command. Behind a switch, OFF by default. Coordinate with trust-safety-fixes by message so its cancel fixes (pull requests 2053, 2055) sit on this, not beside it. Real evidence to design against: `areas\trust-run\EVIDENCE_STALE_BUGS.md` (cancelled CDFW) and, when it appears, `areas\trust-run\EVIDENCE_CROSS_DRAWING.md`.
+8. Fix what trust-review finds on 2058 (step 7) and 2051.
+
+**trust-struc-mgr-plan, next:**
+15. Your 32 Structural tool notes are about to be sampled by trust-review; fix what it finds when `reviews\structural-tool-notes-sample.md` appears.
+16. A Structural "step S0": what would have to be read-only checked when a Structural drawing opens, in the spirit of the Civil opening line (card UX-OPEN-01), written as a DRAFT card with Decisions for Tim at the top. Use your 104 findings to say which hidden changes a Structural drafter is exposed to today.
+
 ### trust-struc-mgr-plan (planning only)
 1. `areas\trust-plan-structural.md` and `areas\trust-plan-manager.md` (its brief).
 2. Draft cards, in the TRUST card shape, for the first three Structural steps and for "going back a version, rehearsed" in Manager.
