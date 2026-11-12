@@ -4,7 +4,7 @@
 
 PR 2078 (DRAFT, never merged by the run), branch `claude/trust-01b-other-drawings-data`, on the opening line (PR 2041). Settings: `trust.sayWhenDataLooksLikeAnotherDrawings` (ON) and `trust.anotherDrawingsDataMissingPercent` (50). The line: "CE: this drawing holds CE data that looks like it belongs to another drawing. Nothing has been changed. Do not run CDSYNC; ask before fixing." Every case reads the drawing's changed flag and stored CE record before and after: both must be unchanged.
 
-1. **Make an affected drawing first (with the INSTALLED build, on copies):** CDDIAG in job A, open a copy of a different job B, CDHELP, save B and close (repeat until B's stored record holds A's pits; 6 of 11 on the installed build). Make a second one from a blank drawing the same way.
+1. **Start from the two real mixed-up drawings the evidence lane already saved** (`CLDTP_SAVED_CONTAM.dwg` and `CLDTP_SAVED_CONTAM2.dwg` in its TRUST_VERIFY scratch folder, with their untouched twin). Work on COPIES of them. Only if they are gone, make new ones with the INSTALLED build: CDDIAG in job A, open a copy of a different job B, CDHELP, save B under a new name and close (6 of 11 tries on the installed build).
 2. **Open each affected drawing on this build, touch nothing:** Right = the line above, once; no "save changes?" question on close.
 3. **CDCHECKCURRENT in the affected drawing:** Right = the first item is "CE data here looks like it belongs to another drawing", it names job A's file name (not its folder) and the count not drawn here, and its next step says not to run CDSYNC. Nothing changed.
 4. **A revision made by Save As:** open job A, Save As a new name, close, open the new file. Right = the usual line ("CE: N pits, N pipes, all linked." or its usual "needs checking"), NOT the line above.
@@ -13,6 +13,11 @@ PR 2078 (DRAFT, never merged by the run), branch `claude/trust-01b-other-drawing
 7. **The known limit, to be seen:** in an affected drawing run CDDIAG (it attaches the record), save, close, reopen. Expected = the line above is no longer said (the stored name is now this drawing's); the usual "needs checking, N pits with no object" line is said. Record what was seen.
 8. **Switch off** (`trust.sayWhenDataLooksLikeAnotherDrawings` false): case 2 gives the usual lines only.
 9. **A Structural drawing hit the same way** (job A's record written into it): Right = the line above is said (it now holds pits and pipes, so CE does not stay quiet).
+10. **Added 13 Nov after the review of PR 2078. The same untouched job opened from a different folder path** (copy its folder elsewhere, open it there): Right = the usual line.
+11. **The untouched job renamed in Explorer, then opened:** Right = the usual line.
+12. **A new drawing started from each office template:** Right = the usual line or nothing; never the line above.
+13. **CDCHECKCURRENT in a mixed-up copy shows ONE count:** the first item says "N of its M recorded pits and pipes are not drawn here (no block, or no pipe line, with that object number)", and no "X is not linked to a visible drawing object" items are listed under it. In the untouched twin the list is as on the installed build.
+14. **The known limit is permanent, to be seen once:** case 7 above (after any CE tool that attaches the record saves in the mixed-up drawing, the line is not said again).
 
 ### Trust plan step 0, the reader: CETRUSTREAD, stored LPDs, and the three evidence misses — 13 November 2026 (Built and unit-tested only; NOT installed; the command's switch ships OFF; robot only, on COPIES)
 
