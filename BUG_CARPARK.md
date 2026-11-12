@@ -2366,6 +2366,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1925 (B-113, rel-20261102a): each Xref 
 
 **Status:** OPEN
 
+- Note (trust-safety-fixes, Fri 13 Nov 2026, TRUST-04 core-tool check; nothing installed or accepted): commit 69451402. the fix is already in the INSTALLED Civil 3.0.90 (cf059dcf); checked 13 Nov by reading the history of the installed commit. Never seen in AutoCAD; robot or Codex still owed. No new branch.
+
 ## BUG-692
 
 **Command / Area:** PIT placed on a pipe whose callout text is pulled to the other side (HUNT Civil E finding G3, installed Civil 3.0.51).
@@ -2390,6 +2392,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1925 (B-113, rel-20261102a): each Xref 
 
 **Status:** OPEN (fix installed in Civil 3.0.70 / Manager 1.1.70 via PR #1335; not yet tested by robot or Codex; reconciled 23 Oct 2026)
 
+- Note (trust-safety-fixes, Fri 13 Nov 2026, TRUST-04 core-tool check; nothing installed or accepted): commit 934dc9c0 (switch ON; tests PairedPipeSplitRuleTests). the fix is already in the INSTALLED Civil 3.0.90 (cf059dcf); checked 13 Nov by reading the history of the installed commit. Never seen in AutoCAD; robot or Codex still owed. No new branch.
+
 ## BUG-690
 
 **Command / Area:** PIT placed on an existing pipe (inline split route) (HUNT Civil E finding G1, installed Civil 3.0.51).
@@ -2401,6 +2405,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1925 (B-113, rel-20261102a): each Xref 
 **Reference:** areas/release-v3-colleagues-HUNT_CIVIL_E_2026-10-12.md, finding G1. Code: Services/LinkService.Split.cs:1523-1788; SourceChangeDecisionPolicy.cs:66-80; LinkService.Spine.cs:301-315; Rules/BranchJunctionDisplay.cs:73-96, 114.
 
 **Status:** OPEN
+
+- Note (trust-safety-fixes, Fri 13 Nov 2026, TRUST-04 core-tool check; nothing installed or accepted): commit 62a8dea8 (PR #1659; tests InlineSplitDecisionTests). the fix is already in the INSTALLED Civil 3.0.90 (cf059dcf); checked 13 Nov by reading the history of the installed commit. Never seen in AutoCAD; robot or Codex still owed. No new branch.
 
 ## BUG-689
 
@@ -2488,6 +2494,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1925 (B-113, rel-20261102a): each Xref 
 
 **run 36: UNPROVEN (20 Oct, 3.0.60; no typed form; see robot gaps).** The same-plan break question is blocked at "More..." on the New Pipe window (robot gaps run 32 item 1); not retried. Evidence CLAUDE_DRIVER_RUN36_V2_2026-10-20.md B item 5.
 
+- Note (trust-safety-fixes, Fri 13 Nov 2026, TRUST-04 core-tool check; nothing installed or accepted): commits c807cd0e and f5e5472a (switch ON). the fix is already in the INSTALLED Civil 3.0.90 (cf059dcf); checked 13 Nov by reading the history of the installed commit. Never seen in AutoCAD; robot or Codex still owed. No new branch.
+
 ## BUG-682
 
 **Command / Area:** CD, Cancel in the Uphill box (HUNT Civil E finding E2, installed Civil 3.0.51).
@@ -2499,6 +2507,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1925 (B-113, rel-20261102a): each Xref 
 **Reference:** areas/release-v3-colleagues-HUNT_CIVIL_E_2026-10-12.md, finding E2. Code: Commands/CdCommand.cs:856; side effects at :723, :731, :739, :405, :426.
 
 **Status:** OPEN (fix installed in Civil 3.0.70 / Manager 1.1.70 via PR #1435; not yet tested by robot or Codex; reconciled 23 Oct 2026)
+
+- Note (trust-safety-fixes, Fri 13 Nov 2026, TRUST-04 core-tool check; nothing installed or accepted): commit 60fcad04. the fix is already in the INSTALLED Civil 3.0.90 (cf059dcf); checked 13 Nov by reading the history of the installed commit. Never seen in AutoCAD; robot or Codex still owed. No new branch.
 
 ## BUG-681
 
@@ -2512,6 +2522,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1925 (B-113, rel-20261102a): each Xref 
 
 **Status:** OPEN (fix installed in Civil 3.0.70 / Manager 1.1.70 via PR #1434; not yet tested by robot or Codex; reconciled 23 Oct 2026)
 
+- Note (trust-safety-fixes, Fri 13 Nov 2026, TRUST-04 core-tool check; nothing installed or accepted): commit b26a8ef3 (the schedule row follows the Uphill answer; switch linking.cdUphillAnswerUpdatesSchedule ON). The other half, asking the question before anything is written, was deliberately not built. the fix is already in the INSTALLED Civil 3.0.90 (cf059dcf); checked 13 Nov by reading the history of the installed commit. Never seen in AutoCAD; robot or Codex still owed. No new branch.
+
 ## BUG-680
 
 **Command / Area:** CD Upsize on a pit whose record number and label attribute disagree (HUNT Civil E finding D8, installed Civil 3.0.51).
@@ -2523,6 +2535,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1925 (B-113, rel-20261102a): each Xref 
 **Reference:** areas/release-v3-colleagues-HUNT_CIVIL_E_2026-10-12.md, finding D8. Code: Commands/PitEditCommand.Resize.cs:96-97, 143; PitEditCommand.cs:593-596.
 
 **Status:** OPEN (fix installed in Civil 3.0.70 / Manager 1.1.70 via PR #1323; not yet tested by robot or Codex; reconciled 23 Oct 2026)
+
+- Note (trust-safety-fixes, Fri 13 Nov 2026, TRUST-04 core-tool check; nothing installed or accepted): commits 2b8ab057 and 3c539f02. the fix is already in the INSTALLED Civil 3.0.90 (cf059dcf); checked 13 Nov by reading the history of the installed commit. Never seen in AutoCAD; robot or Codex still owed. No new branch.
 
 ## BUG-679
 
@@ -2560,6 +2574,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1925 (B-113, rel-20261102a): each Xref 
 
 **Status:** OPEN (fix installed in Civil 3.0.70 / Manager 1.1.70 via PR #1323; not yet tested by robot or Codex; reconciled 23 Oct 2026)
 
+- Note (trust-safety-fixes, Fri 13 Nov 2026, TRUST-04 core-tool check; nothing installed or accepted): commit 2b8ab057. the fix is already in the INSTALLED Civil 3.0.90 (cf059dcf); checked 13 Nov by reading the history of the installed commit. Never seen in AutoCAD; robot or Codex still owed. No new branch.
+
 ## BUG-676
 
 **Command / Area:** Edit Pit Save and CD Upsize overwrite the lid wording (HUNT Civil E finding D4, installed Civil 3.0.51).
@@ -2595,6 +2611,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1925 (B-113, rel-20261102a): each Xref 
 **Reference:** areas/release-v3-colleagues-HUNT_CIVIL_E_2026-10-12.md, finding D2. Code: Commands/PitEditCommand.Batch.cs:625-647, 708-714; only PitEditCommand.cs:418 and PitEditCommand.Resize.cs:141 call LinkService.ReSnapLinkedPipesToPitBoundary.
 
 **Status:** OPEN (fix installed in Civil 3.0.70 / Manager 1.1.70 via PR #1326; not yet tested by robot or Codex; reconciled 23 Oct 2026)
+
+- Note (trust-safety-fixes, Fri 13 Nov 2026, TRUST-04 core-tool check; nothing installed or accepted): commit f100040a. the fix is already in the INSTALLED Civil 3.0.90 (cf059dcf); checked 13 Nov by reading the history of the installed commit. Never seen in AutoCAD; robot or Codex still owed. No new branch.
 
 ## BUG-673
 
@@ -4874,6 +4892,8 @@ History: previous status was: OPEN (duplicate of BUG-095; current fix work under
 **Symptom:** Opus ADV 2 (1 Oct, MED): the pit's pipe list is skipped, so the link is one-sided: a later pit MOVE leaves the pipe behind, and "run the command again" would draw a second pipe.
 
 **Status:** OPEN (1 Oct 15:10)
+
+- Note (trust-safety-fixes, Fri 13 Nov 2026, TRUST-04 core-tool check; nothing installed or accepted): commit 71980a7f (C-5). the fix is already in the INSTALLED Civil 3.0.90 (cf059dcf); checked 13 Nov by reading the history of the installed commit. Never seen in AutoCAD; robot or Codex still owed. No new branch.
 
 ---
 
@@ -9738,6 +9758,8 @@ History: previous status was: OPEN (duplicate; tracked as BUG-435 and BUG-562; r
 
 **Status:** OPEN (found by reading code; not seen in AutoCAD yet; Codex W50 will SEE it). Filed 9 Oct by the controller from the Civil bug hunt. Never FIXED until Tim confirms in AutoCAD.
 
+- Note (trust-safety-fixes, Fri 13 Nov 2026, TRUST-04 core-tool check; nothing installed or accepted): commits 980b10c6 and b5e15dda: PIT, CD, Edit Pit and the Pit Schedule refuse during REFEDIT (one REFEDITNAME check in the shared start check; tests ReferenceEditPreFlightTests). the fix is already in the INSTALLED Civil 3.0.90 (cf059dcf); checked 13 Nov by reading the history of the installed commit. Never seen in AutoCAD; robot or Codex still owed. No new branch.
+
 ---
 
 ## BUG-459
@@ -12157,6 +12179,8 @@ Note (CE 05, Sat 31 Oct 2026, CORRECTION from CE 02): the 15:07 PASS above was a
 
 **Status:** OPEN
 
+- Note (trust-safety-fixes, Fri 13 Nov 2026, TRUST-04 core-tool check; nothing installed or accepted): commit cda22fb9 (switch ON). the fix is already in the INSTALLED Civil 3.0.90 (cf059dcf); checked 13 Nov by reading the history of the installed commit. Never seen in AutoCAD; robot or Codex still owed. No new branch.
+
 ## BUG-875
 
 **Command / Area:** CDCHECKIGNORE fingerprint, ledger F-005.
@@ -14219,6 +14243,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1920 (B-096, on the #1897 branch): cove
 
 **Status:** OPEN
 
+- Note (trust-safety-fixes, Fri 13 Nov 2026, TRUST-04 core-tool check; nothing installed or accepted): NOT in the installed build. Draft PR #2052 (branch claude/trust04-pit-b1042-blank-cover, base rel-20261108a = cf059dcf): a blank cover level is a warning, never a block, in New Pit and Edit Pit; the cover box is still highlighted; no off switch. net48 and net10 0 errors; Pit filter 4,214 ran, 4,206 passed, 8 skipped; broken twin 7 of 79 fail. Replaces the older draft PR #1996 (off switch, older base). Not seen in AutoCAD. Steps: PENDING_TESTS 'TRUST-04 core safety fixes' row 10.
+
 ## BUG-1043 — New pipe and Edit Pipe refuse to save when an invert level is blank
 
 **Command / Area:** CD and CDEDIT, Start / Save button, Civil 3.0.72 (Codex audit RD03-04, 23 Oct 2026). MEDIUM, SURE (verified by reading).
@@ -14234,6 +14260,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1920 (B-096, on the #1897 branch): cove
 **Steps to confirm in AutoCAD:** copy with a CE pipe P1-P2, 300 UPVC, first end blank, second 10.00. CDEDIT, change diameter to 375, Simple Pipe Only unticked. Right looks like: the change saves, the first level stays blank, a warning says so.
 
 **Status:** OPEN
+
+- Note (trust-safety-fixes, Fri 13 Nov 2026, TRUST-04 core-tool check; nothing installed or accepted): PR #1735 (46376980). the fix is already in the INSTALLED Civil 3.0.90 (cf059dcf); checked 13 Nov by reading the history of the installed commit. Never seen in AutoCAD; robot or Codex still owed. No new branch.
 
 ## BUG-1044 — Two Xref drawings that both have a pit "P1" give an empty combined Pit Schedule
 
@@ -14330,6 +14358,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1920 (B-096, on the #1897 branch): cove
 **Steps to confirm in AutoCAD:** select two 300 mm pipes with different materials, CDEDIT, tick Diameter 375, tick Material and leave it empty. Right looks like: Apply works, both pipes 375, each keeps its material.
 
 **Status:** OPEN
+
+- Note (trust-safety-fixes, Fri 13 Nov 2026, TRUST-04 core-tool check; nothing installed or accepted): PR #1743 (2a85890d). the fix is already in the INSTALLED Civil 3.0.90 (cf059dcf); checked 13 Nov by reading the history of the installed commit. Never seen in AutoCAD; robot or Codex still owed. No new branch.
 
 ## BUG-1050 — The last custom label style cannot be deleted
 
