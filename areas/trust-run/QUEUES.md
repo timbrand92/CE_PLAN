@@ -46,6 +46,7 @@
 3. Made-up test drawings described as data (so tests need no AutoCAD): a current job, an old LISP-style job, a hand-drawn job with no CE tools, a metre-unit job, a job with two pits in reach of one label.
 4. A scoring tool that marks a reading against an answer sheet with the five marks in `areas\TRUST_TEST_SET_12NOV.md`.
 5. Fix what trust-review finds.
+6. (added 12 Nov 23:25, after items 1 to 4 were reported done on draft pull request 2040) The missing half: fill the reader's plain copy from a real drawing, read only. It must NOT set off CE's record update (about 60 ways in): read the stored record and the drawn objects directly, in a read-only pass, and prove with a test that the drawing's changed counter and CE's stored record are untouched. Start only after trust-review has looked at 2040. The nine reach and scoring defaults listed in `trust-reader.md` stay marked "DRAFT default, Tim to confirm" and move to Settings here.
 
 ### trust-safety-fixes (code; Civil from cf059dcf, Structural from 8de95c34)
 1. Civil: BUG-650, BUG-1274, BUG-1276 (Civil half), BUG-1255 (cause first, fix only on evidence).
