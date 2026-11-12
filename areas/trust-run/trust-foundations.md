@@ -225,3 +225,5 @@
   2. **Also read:** CDRULES and its approved fix work on the drawing's own stored record, not the record in memory: safe. CDTIDYLABELS and CDRULES never attach the record themselves (the shape Help and CD Settings had), but neither is on the end-of-command write list and neither changes the record in memory except through routines that bind first.
   3. **Not done:** the automatic guard (a test that fails the build when a new routine outside the record service edits or saves the record without being reviewed). About half a day, test only; needs the controller's word.
   4. **QUEUE EMPTY.** Drafts standing: 2041, 2045, 2049, 2050, 2051, 2058, 2064, 2073, 2078, 2083, 2089, 2090. Open for the controller: the guard above; the BUG-1358 trim in `ProjectDataService.Rulebook.cs`.
+
+- **13 Nov 10:32, QUEUE EMPTY.** Nothing new since the 10:15 line: newest refill still 06:45, no review of my pull requests since 08:57 (2089 and 2090 are not yet reviewed; 2064 not re-reviewed at `dde7825e`), run rules unchanged. No build of mine is running and I hold no build lock. Waiting for the controller: the automatic guard from the audit, the BUG-1358 trim, or anything else.
