@@ -70,6 +70,8 @@ PR 2041 (DRAFT, never merged by the run), branch `claude/trust-01-open-line`, cu
 
 Built and unit-tested only (82 of 82 on net10 and net48). Branch `claude/trust-reader`, https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/2040. **Nothing to test in AutoCAD yet:** no command, window or button uses it. It becomes testable when the read-only copy of a real drawing is built (next item) and probe P3 runs it on the test-set copies. Then: read each copy twice, the readings must be identical and the copy unchanged; score against the answer sheet.
 
+**Update 13 Nov 01:11 (second run):** the eight review fixes (3eb415c9), the read-only copy-filler (ab4fc1f7) and the old palette blocks (222a303e) are built; 155 of 155 unit tests on net10 and net48. The copy-filler now exists, so the AutoCAD check becomes possible (robot, lane trust-acad-evidence, on copies, without installing): (1) load the branch build in accoreconsole, open a made-up or labelled test copy read-only, call `TrustSnapshotFiller.Fill`, read twice; the two readings must be identical; (2) the drawing's DBMOD stays 0 and CE's stored record text is byte-identical before and after; (3) one old-palette copy with a "Stormwater Pit" must list it as a Proposed pit, not as unrecognised.
+
 ## TRUST-03 office setup (DRAFT, switch OFF), draft PR 2043 — 12 Nov 2026
 
 Built and unit-tested only. Branch `claude/trust-core-settings-e13111`, https://github.com/timbrand92/CE_ACAD_PLUGIN/pull/2043. Behaviour only: the window, "Make this the office setup" and the first-start offer are not built, so most of this cannot be driven in AutoCAD yet. Settings file: the `options` group of `CD_Settings.json`, on a TEST Windows login, never Tim's own.
