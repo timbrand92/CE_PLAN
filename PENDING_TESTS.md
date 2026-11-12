@@ -1,5 +1,17 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+### BUG-1456 change door, a change to CE's record is refused when the record is another drawing's — 13 November 2026 (Built and unit-tested only; NOT installed; no switch; robot and Codex to run on COPIES)
+
+PR 2083 (DRAFT, never merged by the run), branch `claude/bug-1456b-record-change-door`, on the BUG-1456 cure (PR 2073). The refusal is said in CE's log only: `[BUG-1456] CE did not change its record: the record CE is holding belongs to another drawing, not the one this tool is working in. Nothing was changed.` Read CE's log after every case.
+
+1. **Core console first:** `CEPROOFCROSSCHANGE` (BUG-1456-CROSS-02) and `CEPROOFCROSSDRAWING` (CROSS-01). Right = PASS for both, each detail line showing its faulty version was noticed.
+2. **The most important case, ordinary work in ONE drawing:** PIT, CD, Edit Pit, Edit Pipe, a source tool, CDSYNC, the Pit Schedule window (edit a row), erase a pit, U, save, reopen. Right = everything is recorded as on the installed build and the refusal line NEVER appears in CE's log.
+3. **Two jobs, each worked in turn:** PIT in A, switch to B, PIT in B, switch back to A, Edit Pit in A. Right = each drawing's record holds its own pits only; the refusal line does not appear (these tools attach the record first).
+4. **X-Civil import** into a job copy, source drawing not open beforehand (CE opens it to read it). Right = the import's pits and pipes are all recorded; the refusal line does not appear.
+5. **X-Civil import with the source drawing already open in another tab.** Right = as case 4.
+6. **The Pit Schedule window left open on job A, job B brought to the front, a row edited in the window.** Right = either the edit lands in job A's record (the window brings its own drawing forward first) or it is refused with the log line; it must never land in job B. Record which was seen.
+7. **If any ordinary step in cases 2 to 5 logs the refusal line:** FAIL, and say which tool: that is a right change refused.
+
 ### BUG-1456 follow-up, the opening line says when a drawing already holds another drawing's CE data — 13 November 2026 (Built and unit-tested only; NOT installed; read only; robot and Codex to run on COPIES)
 
 PR 2078 (DRAFT, never merged by the run), branch `claude/trust-01b-other-drawings-data`, on the opening line (PR 2041). Settings: `trust.sayWhenDataLooksLikeAnotherDrawings` (ON) and `trust.anotherDrawingsDataMissingPercent` (50). The line: "CE: this drawing holds CE data that looks like it belongs to another drawing. Nothing has been changed. Do not run CDSYNC; ask before fixing." Every case reads the drawing's changed flag and stored CE record before and after: both must be unchanged.
