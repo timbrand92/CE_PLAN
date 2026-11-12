@@ -10,6 +10,12 @@ PR 2051 (DRAFT, never merged by the run), branch `claude/trust-08a-check-list`, 
 4. **A pit block with no label:** Right = in Unknown as `Pit: ... Number Unknown (...)`.
 5. **Old drawing with no CE record:** Right = nothing is Sure; every pit and pipe is Proposed or Unknown, each with a reason.
 6. **A drawing that is not Civil:** Right = `Sure (0).`, nothing proposed, or the nothing-to-check line; the drawing is not changed and not marked Civil.
+6a. **Changed 13 Nov after the review of PR 2051. Every case starts from a FRESHLY OPENED drawing** and compares CE's stored record before and after; AutoCAD's DBMOD is not proof (it is already set in a drawing with unsaved work).
+6b. **A drawing that is not Civil, or whose drainage is all inside an attached drawing:** Right = `CE found no pits or pipes in this drawing's model space.` and, with an Xref attached, the note that drainage inside attached drawings is not checked. NEVER `CE: all linked. Nothing to check.` (This replaces the expectation in case 6.)
+6c. **Copy a numbered pit within the job (or paste one in from another job) so two pits show the same number:** Right = neither is counted in Sure; both are listed under Unknown as `Number P3 is on 2 pits in this drawing`.
+6d. **A pit whose number is in CE's record but has no label on the plan (erase its label):** Right = under Proposed as `Proposed: number P8 (the number is in CE's record but no label on the plan shows it)`, and P8 is not in the "found" part of the row.
+6e. **Old job with no record, pits with a label nearby but no levels:** Right = each such pit is under Unknown with its Unknown levels AND `proposed number P3: label is ... from pit ..., the only pit in reach`.
+6f. **By eye on every list:** no row shows an object code (short strings of digits and the letters A to F such as 2A4F); no row says "card", "record format" or "attribute".
 7. **A read-only drawing:** the list still shows (it writes nothing).
 8. **Run it twice on fresh copies of the same file:** Right = the same lines, row for row.
 9. **Read the stored record before and after (straight from the drawing):** identical.
@@ -57,6 +63,7 @@ PR 2045 (DRAFT, never merged by the run), branch `claude/trust-05-sync-visible`,
 
 1. **Each read-only tool changes nothing:** on a Civil copy, read the stored record, run CDGRAPH, read it again. Right = identical, and no "save changes?" question on close. Repeat for CDDIAG, its window's Refresh, and CDDASHBOARD. (CEHEALTH is Manager's command and never touched Civil's record; nothing to test there.)
 2. **Record behind the drawing:** add one polyline on the stormwater pipe layer, run CDGRAPH. Right = `CE: needs checking. 1 line on a pipe layer not in the CE record. Type CDCHECKCURRENT to see them.` and the record is still unchanged.
+2a. **Added 13 Nov after the AutoCAD evidence run (fix `d0cf644c`): CDGRAPH counts the stored pipes.** Same copy as case 2 (one stray polyline on the stormwater pipe layer; record holds N pipes). Run CDGRAPH. Right = the summary line says N pipes (not N+1), and the next line says `[CDGRAPH] CE's record holds ... and N pipes. 1 line on a pipe layer is not in the record, so it is left out of this trace. Type CDCHECKCURRENT to see it.` Switch OFF: as the installed build (the line is added to the record, N+1, no extra line).
 3. **Edit Pit on that copy:** Right = one line starting `CE updated its record (` with the command that was typed in the brackets, then `1 pipe added. Guessed, not read from the drawing: 1 pipe size (100), 1 pipe material.` and the record really gained exactly one pipe.
 4. **Nothing to update:** run PIT's edit window twice in a row. Right = no "CE updated its record" line the second time.
 5. **Erase a pit (leave its pipes drawn), then run PIT:** Right = the line counts `1 pit removed` and, for each pipe that ran to it, either `pipe end no longer joined` or the pipe `removed` and `added` again. Which of the two the update does is not settled from reading the code: the robot compares the line with the real difference in the stored record, number for number.
