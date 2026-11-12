@@ -28,6 +28,14 @@ bracing panel, schedules) | Tools (CLEAN, Help, Settings). 32 buttons.
 2. **It does not fix any tool.** BT1, the bracing panel and the schedules wait for S4, the support blocks for S3, CLEAN for S2 (decision 3).
 3. **It does not touch footings.** Footing tools are typed only until each earns its place.
 
+## Decisions for Tim (read these first)
+
+1. **The button list.** Recommended: the list above (from your command log). OPEN.
+2. **Panel names.** Recommended: Roof, Floors, Bracing, Tools. Example: a new colleague drafting a roof looks left first. OPEN.
+3. **Buttons with open faults** (BT1, bracing panel, schedules, support blocks, CLEAN). Recommended: on the tab only once their S2 to S4 fix is in; until then typed only. Example: a colleague clicks Bracing Schedule and gets a table one row short. OPEN.
+4. **Beam drop-down:** recommended **yes**, one Beam button with 1, 2, 4, 5 inside, because the numbers mean nothing to a new colleague. OPEN.
+5. **Tab name:** recommended **"CE Structural"**, matching "CE Drainage" and "CE Design". OPEN.
+
 ## 1. What you'd see
 
 1. **One Structural tab** beside the Civil tabs, on every drawing, as today.
@@ -74,15 +82,7 @@ bracing panel, schedules) | Tools (CLEAN, Help, Settings). 32 buttons.
 
 **Tim, about three working days:** draft a real job roof to bracing from the tab. Right = you never typed a command you use daily and never hunted for a button.
 
-## 6. Decisions for Tim
-
-1. **The button list.** Recommended: the list above (from your command log). OPEN.
-2. **Panel names.** Recommended: Roof, Floors, Bracing, Tools. Example: a new colleague drafting a roof looks left first. OPEN.
-3. **Buttons with open faults** (BT1, bracing panel, schedules, support blocks, CLEAN). Recommended: on the tab only once their S2 to S4 fix is in; until then typed only. Example: a colleague clicks Bracing Schedule and gets a table one row short. OPEN.
-4. **Beam drop-down:** recommended **yes**, one Beam button with 1, 2, 4, 5 inside, because the numbers mean nothing to a new colleague. OPEN.
-5. **Tab name:** recommended **"CE Structural"**, matching "CE Drainage" and "CE Design". OPEN.
-
-## 7. Not known yet
+## 6. Not known yet
 
 1. **Which of the two Structural ribbon builders draws on Tim's PC today:** the own "CE STRUC" tab (`RibbonCommandHubService.cs:17`) or the shared "CE Structural" contribution (`CeStrucRibbonContributor.cs:18`). The card must change whichever is live. Both were read; which runs was not traced.
 2. **How the command log's "BEAM" maps to 1, 2, 4 and 5.**

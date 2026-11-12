@@ -28,6 +28,12 @@ Reset Defaults: "Put every Structural setting back? A copy of your current
   settings is kept." Yes / No.
 ```
 
+## Decisions for Tim (read these first)
+
+1. **CLEAN meets a locked object.** Recommended: skip it, list it, carry on and save. Example: a locked title-block layer no longer stops the text clean-up. OPEN.
+2. **Reminder time.** Recommended: 20 minutes, then every 10 (TRUST-04 recommends 15 for Civil; one number for both is better, so this is one decision for both cards). OPEN.
+3. **One small Structural safety build** with S2 and S4 together, after each fix passed alone. Recommended, because two installs one after the other can wipe each other (RULES 8.5). OPEN.
+
 ## 1. What you'd see, fix by fix
 
 1. **CLEAN's words.** The tooltip, its long help and the Settings page all say CLEAN saves. Verified today: tooltip and long help disagree (`Assets\Config\command-registry.json:4145-4146`); the Settings page says "CE never saves" (`UI\Dialogs\CeSettingsDialog.xaml:557`).
@@ -72,13 +78,7 @@ Reset Defaults: "Put every Structural setting back? A copy of your current
 
 **Tim, about three working days:** CLEAN at the end of each session. Right = it always says Saved or NOT SAVED, and you never lose work.
 
-## 6. Decisions for Tim
-
-1. **CLEAN meets a locked object.** Recommended: skip it, list it, carry on and save. Example: a locked title-block layer no longer stops the text clean-up. OPEN.
-2. **Reminder time.** Recommended: 20 minutes, then every 10 (TRUST-04 recommends 15 for Civil; one number for both is better, so this is one decision for both cards). OPEN.
-3. **One small Structural safety build** with S2 and S4 together, after each fix passed alone. Recommended, because two installs one after the other can wipe each other (RULES 8.5). OPEN.
-
-## 7. Not known yet
+## 6. Not known yet
 
 1. **Why CE made no backup for hours on 5 Nov** (BUG-1276 cause). The reminder is a guard, not the cure.
 2. **Whether the held BUG-1275 fix covers the exact crash** of 5 Nov.

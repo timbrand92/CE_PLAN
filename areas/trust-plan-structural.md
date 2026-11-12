@@ -40,7 +40,22 @@ flowchart TD
 4. **CLEAN saves (your 5 Nov fix), but its tooltip and the Settings page both say CE never saves.**
 5. **No reminder when work has gone unsaved.** Only a small label on the palette.
 
-**Decisions for you are in section 7** (ten, each with a recommendation and an example). Nothing waits on them: the steps are written on the recommended answers, marked DRAFT.
+**Decisions for you are straight below** (ten, each with a recommendation and an example). Nothing waits on them: the steps are written on the recommended answers, marked DRAFT.
+
+
+## Decisions for Tim (read these first)
+
+
+1. **When Structural reaches colleagues.** Recommended: **after the Civil core has had its clean days with colleagues.** Example: if C1 put the wrong size on a first-floor plan in the same week as a Civil fault, you could not tell which release caused it. OPEN.
+2. **CLEAN meets an object on a locked layer.** Recommended: **leave it alone, list it, carry on and save.** Example: a locked title-block layer no longer stops the whole text clean-up; CE says "1 text on locked layer TITLE left as it was". OPEN.
+3. **SBEAM in the first core.** Recommended: **hidden** until the crash fix is proven and the section list is checked. Example: a colleague places a steel section on a deadline and AutoCAD closes, as it did for you on 5 Nov. OPEN.
+4. **The same mark on two floors of the schedule.** Recommended: **ask which floor, showing both sizes.** Example: "C1 is 89 SHS on GROUND and 75 SHS on FIRST. Which?" OPEN.
+5. **Roof bracing trusses in the wall bracing totals** (engineering). Recommended: **never added to wall totals; shown on their own line.** Example: two 4 m BT1 trusses no longer turn a short wall direction green. OPEN, needs your word.
+6. **A brace with no type** (engineering). Recommended: **counted as Unknown, panel amber.** Example: a brace pasted from an older job with its tag cleared stops being counted as type A. OPEN, needs your word.
+7. **The core list.** Recommended: **the list in section 1.** Example: CSTIEDOWN stays typed only until it has its own three days. OPEN (your marks on the keep / hide list).
+8. **The save reminder time.** Recommended: **the existing 10-minute setting, reminding once at 20 minutes and every 10 after.** Example: after 20 minutes unsaved the command line says so once. OPEN.
+9. **What the expert mark means.** Recommended: **expert = typed only, never on the colleague tab.** Example: STRSCHEDREFRESH is marked expert today but sits on the ribbon; under this it would be typed or reached through the schedule. OPEN.
+10. **Explaining Structural days roof-down.** Already your standing rule (4 Oct, UX-STRUC-13). Not a question; recorded so the cards follow it.
 
 ---
 
@@ -184,18 +199,9 @@ Same gate as Civil: card, your approval, built small, robot then Codex on copies
 5. **Manager can send Structural on its own and take it back on its own.** Today it cannot: Manager's signed releases cover Civil and Manager, and Structural only as part of the full set (`areas\trust-plan-manager.md`, section 2 line 5).
 6. **The colleague's AutoCAD year is known** and the core checked on it. The 2022 to 2024 greyed-tool behaviour (UX-STRUC-12) is part of that check.
 
-## 7. Decisions for Tim (each with a recommendation; none blocks the steps)
+## 7. Decisions for Tim
 
-1. **When Structural reaches colleagues.** Recommended: **after the Civil core has had its clean days with colleagues.** Example: if C1 put the wrong size on a first-floor plan in the same week as a Civil fault, you could not tell which release caused it. OPEN.
-2. **CLEAN meets an object on a locked layer.** Recommended: **leave it alone, list it, carry on and save.** Example: a locked title-block layer no longer stops the whole text clean-up; CE says "1 text on locked layer TITLE left as it was". OPEN.
-3. **SBEAM in the first core.** Recommended: **hidden** until the crash fix is proven and the section list is checked. Example: a colleague places a steel section on a deadline and AutoCAD closes, as it did for you on 5 Nov. OPEN.
-4. **The same mark on two floors of the schedule.** Recommended: **ask which floor, showing both sizes.** Example: "C1 is 89 SHS on GROUND and 75 SHS on FIRST. Which?" OPEN.
-5. **Roof bracing trusses in the wall bracing totals** (engineering). Recommended: **never added to wall totals; shown on their own line.** Example: two 4 m BT1 trusses no longer turn a short wall direction green. OPEN, needs your word.
-6. **A brace with no type** (engineering). Recommended: **counted as Unknown, panel amber.** Example: a brace pasted from an older job with its tag cleared stops being counted as type A. OPEN, needs your word.
-7. **The core list.** Recommended: **the list in section 1.** Example: CSTIEDOWN stays typed only until it has its own three days. OPEN (your marks on the keep / hide list).
-8. **The save reminder time.** Recommended: **the existing 10-minute setting, reminding once at 20 minutes and every 10 after.** Example: after 20 minutes unsaved the command line says so once. OPEN.
-9. **What the expert mark means.** Recommended: **expert = typed only, never on the colleague tab.** Example: STRSCHEDREFRESH is marked expert today but sits on the ribbon; under this it would be typed or reached through the schedule. OPEN.
-10. **Explaining Structural days roof-down.** Already your standing rule (4 Oct, UX-STRUC-13). Not a question; recorded so the cards follow it.
+Moved to the top of this file, straight after FOR TIM (RULES 2.9).
 
 ## 8. Claims carried from the 6 Nov audit, and which were checked here
 

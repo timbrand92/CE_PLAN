@@ -39,7 +39,17 @@ flowchart TD
 
 **Six steps, safest first.** M1 reads only. M2 is a rehearsal with no code. M3 to M5 are small code changes, each behind a switch.
 
-**Decisions for you are in section 6** (five, each with a recommendation). Nothing waits on them: the steps are written on the recommended answers, marked DRAFT.
+**Decisions for you are straight below** (five, each with a recommendation). Nothing waits on them: the steps are written on the recommended answers, marked DRAFT.
+
+
+## Decisions for Tim (read these first)
+
+
+1. **Where the rehearsals happen.** Recommended: **a second Windows login on a spare office PC.** Example: the rehearsal swaps CE back and forth five times; on your own login one slip would leave you without CE on a job morning. OPEN.
+2. **Manager's Roll Back button.** Recommended: **stays hidden; going back is by hand** until the hand steps have passed twice and the button has been tried once on the spare login. Example: a colleague who pressed it today would change the approval for the whole office, and still need someone to run the installer. OPEN.
+3. **Structural in the same release as Civil, or after.** Recommended: **after,** as its own release, once Civil's first release has had its clean days (matches "civil is main priority"). Example: if Structural rode with Civil and a support block fault appeared, you could not tell colleagues "go back Structural only" because Manager has no Structural-only route. OPEN.
+4. **How a problem comes back.** Recommended: **a message to you (Teams or in person) with the CESUPPORT zip,** and the "Send a fault report" button kept quiet until it is checked for names. Example: a colleague sends "C1 put an 89 SHS on the first floor, should be 75" plus the zip; you know which tool and build from the zip. OPEN (same as release process E2).
+5. **2022 to 2024 colleagues.** Recommended: **no colleague on 2022 to 2024 in the first release** (your 12 Nov answer A3 was 2027 for the first colleague), and M2 rehearsed on 2027 only. Example: on 2024 nothing on screen says an update is waiting, so a colleague could sit on an old build without knowing. OPEN.
 
 ---
 
@@ -145,13 +155,9 @@ Each step follows the same gate as the Civil steps (`areas\trust-plan.md` sectio
 
 **What is left out on purpose:** Manager finishing an update by itself when AutoCAD closes. The parts exist but nothing uses them (**Carried:** `Services\CeFinishUpdatePlanner.cs` is used only by tests). Turning that on is a big change to colleagues' PCs and is not needed for the first release; updates stay by hand, by the keeper, as the release process draft proposes.
 
-## 6. Decisions for Tim (each with a recommendation; none blocks the steps)
+## 6. Decisions for Tim
 
-1. **Where the rehearsals happen.** Recommended: **a second Windows login on a spare office PC.** Example: the rehearsal swaps CE back and forth five times; on your own login one slip would leave you without CE on a job morning. OPEN.
-2. **Manager's Roll Back button.** Recommended: **stays hidden; going back is by hand** until the hand steps have passed twice and the button has been tried once on the spare login. Example: a colleague who pressed it today would change the approval for the whole office, and still need someone to run the installer. OPEN.
-3. **Structural in the same release as Civil, or after.** Recommended: **after,** as its own release, once Civil's first release has had its clean days (matches "civil is main priority"). Example: if Structural rode with Civil and a support block fault appeared, you could not tell colleagues "go back Structural only" because Manager has no Structural-only route. OPEN.
-4. **How a problem comes back.** Recommended: **a message to you (Teams or in person) with the CESUPPORT zip,** and the "Send a fault report" button kept quiet until it is checked for names. Example: a colleague sends "C1 put an 89 SHS on the first floor, should be 75" plus the zip; you know which tool and build from the zip. OPEN (same as release process E2).
-5. **2022 to 2024 colleagues.** Recommended: **no colleague on 2022 to 2024 in the first release** (your 12 Nov answer A3 was 2027 for the first colleague), and M2 rehearsed on 2027 only. Example: on 2024 nothing on screen says an update is waiting, so a colleague could sit on an old build without knowing. OPEN.
+Moved to the top of this file, straight after FOR TIM (RULES 2.9).
 
 ## 7. What must be true before a colleague release (the Manager half)
 

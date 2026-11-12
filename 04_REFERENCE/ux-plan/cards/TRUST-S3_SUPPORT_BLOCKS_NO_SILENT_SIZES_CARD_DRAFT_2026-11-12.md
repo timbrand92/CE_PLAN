@@ -24,6 +24,12 @@ show that size. Size? [90 x 90/...]"
 One row only, and a size the block can show: no question, as today.
 ```
 
+## Decisions for Tim (read these first)
+
+1. **Same mark on two floors.** Recommended: ask, showing both sizes. Example: "C1 is 89 SHS on GROUND and 75 SHS on FIRST. Which?" OPEN.
+2. **If the schedule sheet carries no floor names** (only marks and sizes). Recommended: ask whenever a mark appears twice, showing both sizes with their row numbers. Example: "C1 appears twice: row 4 = 89 SHS, row 11 = 75 SHS. Which?" OPEN.
+3. **Timber stud packs on DS1 and TS1.** Recommended: ask for the block size and put the schedule's wording in the support text. Example: the block shows 90 x 90 and the label reads "2 No 90 x 45 F17 KDHW". Engineering and drafting convention: needs your word. OPEN.
+
 ## 1. What you'd see
 
 1. **One clear row:** exactly as today. The command line names the size and where it came from.
@@ -51,7 +57,7 @@ One row only, and a size the block can show: no question, as today.
 ## 4. What it reuses
 
 1. **The schedule record** XCLMTXT already saves in the drawing (it keeps only included rows since the BUG-974 fix, Verified, `Services\XclmTxtService.cs:303-319`).
-2. **The floor names on the schedule sheet,** if XCLMTXT can read them. Whether it can is not known (section 7 line 1).
+2. **The floor names on the schedule sheet,** if XCLMTXT can read them. Whether it can is not known ("Not known yet", line 1).
 3. **The existing size question** C2 already asks when no schedule row exists.
 
 ## 5. How it gets proven
@@ -69,13 +75,7 @@ One row only, and a size the block can show: no question, as today.
 
 **Tim, about three working days:** real jobs with a member schedule. Right = every support size on the plan is one you saw or chose.
 
-## 6. Decisions for Tim
-
-1. **Same mark on two floors.** Recommended: ask, showing both sizes. Example: "C1 is 89 SHS on GROUND and 75 SHS on FIRST. Which?" OPEN.
-2. **If the schedule sheet carries no floor names** (only marks and sizes). Recommended: ask whenever a mark appears twice, showing both sizes with their row numbers. Example: "C1 appears twice: row 4 = 89 SHS, row 11 = 75 SHS. Which?" OPEN.
-3. **Timber stud packs on DS1 and TS1.** Recommended: ask for the block size and put the schedule's wording in the support text. Example: the block shows 90 x 90 and the label reads "2 No 90 x 45 F17 KDHW". Engineering and drafting convention: needs your word. OPEN.
-
-## 7. Not known yet
+## 6. Not known yet
 
 1. **Whether the schedule sheets XCLMTXT reads carry a floor name** in a fixed place. Needs one look at a few real schedules (Structural test set).
 2. **How often a mark is reused across floors** on real jobs.

@@ -24,6 +24,13 @@ drawing opened, CEHEALTH clean, settings read correctly."
 The colleague pack's going-back page with every [CHECK] answered.
 ```
 
+## Decisions for Tim (read these first)
+
+1. **Where it happens.** Recommended: a second Windows login on a spare office PC. Example: five swaps on your own login, and one slip leaves you without CE on a job morning. OPEN.
+2. **Who may go back on a colleague's PC.** Recommended: the release keeper only (you, for the first three releases). Example: a colleague who renames folders alone could leave Civil new and Manager old, and lose the CE ribbon. OPEN (release process E1, E3).
+3. **AutoCAD year.** Recommended: 2027 only for now, matching your answer that the first colleague is on 2027. OPEN.
+4. **Manager's Roll Back button.** Recommended: stays hidden; tried once on the spare login only after this hand rehearsal has passed twice. OPEN.
+
 ## 1. What happens, in order
 
 1. **Set up:** a second Windows login on a spare office PC with AutoCAD 2027, holding the build a colleague has today (decision 1). Never Tim's own login.
@@ -59,14 +66,7 @@ None changed by the rehearsal except the one setting changed on purpose in step 
 2. **Codex:** looks at the ribbon and CEHEALTH after each swap, with screenshots kept.
 3. **Tim:** reads the one-page record. Right = the steps fit on one page and took about 2 minutes the second time.
 
-## 6. Decisions for Tim
-
-1. **Where it happens.** Recommended: a second Windows login on a spare office PC. Example: five swaps on your own login, and one slip leaves you without CE on a job morning. OPEN.
-2. **Who may go back on a colleague's PC.** Recommended: the release keeper only (you, for the first three releases). Example: a colleague who renames folders alone could leave Civil new and Manager old, and lose the CE ribbon. OPEN (release process E1, E3).
-3. **AutoCAD year.** Recommended: 2027 only for now, matching your answer that the first colleague is on 2027. OPEN.
-4. **Manager's Roll Back button.** Recommended: stays hidden; tried once on the spare login only after this hand rehearsal has passed twice. OPEN.
-
-## 7. Not known yet
+## 6. Not known yet
 
 1. **Whether a spare office PC exists.**
 2. **Whether a drawing saved on the newer CE opens cleanly on the older one.** This card answers it.
