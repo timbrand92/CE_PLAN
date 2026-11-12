@@ -47,6 +47,16 @@
 4. **trust-acad-evidence:** the probes in `trust-plan.md` section 5 that need AutoCAD, on made-up and existing test copies, on the installed build. Later, evidence for the builders' branches where that can be done without installing.
 5. **trust-struc-mgr-plan:** the Structural and Manager part of the plan, written from the 6 Nov audit and the tick list. Planning only.
 
+## 4b. Controller continuity note (written Fri 13 Nov 05:45 PC clock; read this first after any compaction or in a new controller chat)
+
+1. **How the run works now:** nine lanes, queues and models in `areas\trust-run\QUEUES.md` (newest "Refill" block wins). Five side sessions (trust-foundations, trust-safety-fixes, trust-core-ribbon, trust-acad-evidence, trust-struc-mgr-plan) each with their own 40-minute check-in. Four helper lanes (reader, review, test-cases, records) are started by the controller with the Agent tool. The controller has an hourly check at 23 minutes past, and a one-off at 7:52am Friday to finish the morning page and send Tim one phone notification about BUG-1456.
+2. **Where to read state:** each lane's own file in `areas\trust-run\`; every review in `areas\trust-run\reviews\` with the list in `trust-review.md`; the board `areas\trust-run\STATUS_BOARD.md`; real AutoCAD evidence in `areas\TRUST_PROBES_13NOV.md` and `areas\trust-run\EVIDENCE_*.md`; the event log is the tail of `areas\release-v3-colleagues-DESK_LOG.md`.
+3. **The most important finding:** BUG-1456, seen on the INSTALLED build: Help or Settings run first in a second drawing writes the previous drawing's CE data into it. Fix drafted (pull request 2064 and a split-out branch), reviewed FIX FIRST, not installed. Tim to be told first thing with the two safe habits.
+4. **What is never done without Tim:** install on his PC, merge, anything to colleagues, AutoCAD in his hours (weekdays 8:30am to 2pm, 3pm to 5:30pm). All pull requests stay drafts with auto-merge off; the controller checks that and reads the installed versions every hour (Civil 3.0.90 cf059dcf, Structural 1.0.126 8de95c34).
+5. **Usage:** 42 percent of the week at 05:40 Friday; reset Friday 13:00; after the reset hold 12 to 13 percent a day by pausing the cheapest lanes first.
+6. **For Tim when he is back:** `areas\TRUST_MORNING_BRIEF_13NOV.md`, then `areas\TRUST_QUESTIONS_FOR_TIM.md` (batch 0 first: the spare work PC for seeing trial builds). Questions go to him through the question interface, four related ones at a time.
+7. **Clock:** every time written must be read from the PC clock. Several lanes and the controller wrote estimated times early in the run; the order of events is right, some times are not.
+
 ## 5. Status (each session adds dated lines here; newest last)
 
 - 2026-11-12 22:45: run opened by the controller. Nothing built yet.
