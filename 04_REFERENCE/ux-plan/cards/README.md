@@ -102,3 +102,11 @@ smallest-first build slices, and OPEN questions each with a recommended answer. 
 address appears in any of them.
 
 - **[UX-OPEN-01_DRAWING_STATE_LINE_CARD_2026-11-06.md](UX-OPEN-01_DRAWING_STATE_LINE_CARD_2026-11-06.md)** : one read-only line on opening a Civil drawing. Awaiting Tim's approval, not built.
+- **Trust plan cards, steps 2 to 8 (all DRAFT, 12 Nov 2026, not approved, not built; plan: `areas\trust-plan.md`):**
+  [TRUST-02 core ribbon](TRUST-02_CORE_RIBBON_CARD_DRAFT_2026-11-12.md),
+  [TRUST-03 same settings](TRUST-03_SAME_SETTINGS_CARD_DRAFT_2026-11-12.md),
+  [TRUST-04 core safety fixes](TRUST-04_CORE_SAFETY_FIXES_CARD_DRAFT_2026-11-12.md),
+  [TRUST-05 sync made visible](TRUST-05_SYNC_MADE_VISIBLE_CARD_DRAFT_2026-11-12.md),
+  [TRUST-06 guesses removed](TRUST-06_GUESSES_REMOVED_CARD_DRAFT_2026-11-12.md),
+  [TRUST-07 start point](TRUST-07_START_POINT_CARD_DRAFT_2026-11-12.md),
+  [TRUST-08 Check this drawing](TRUST-08_CHECK_THIS_DRAWING_CARD_DRAFT_2026-11-12.md).

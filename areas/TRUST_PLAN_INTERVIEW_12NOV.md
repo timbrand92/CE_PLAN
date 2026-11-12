@@ -59,6 +59,17 @@ INTERPRETATION of "properly": ask the questions that decide whether the plan wor
 
 ---
 
+**I. Decisions inside the draft cards (added 12 Nov, all OPEN)**
+1. Each card in `04_REFERENCE\ux-plan\cards\TRUST-02` to `TRUST-08` ends with its own "Decisions for Tim". Where one repeats a question above, the letter is given on the card. The ones with no letter above:
+   1. TRUST-04: one small safety build or several; is the Excel export fault a blocker for the first colleague release; reminder minutes.
+   2. TRUST-05: should CDRECOVERINVERTS stop running the hidden update first.
+   3. TRUST-06: each fill-in (size, material, lid, pit type, pit number, flow direction, pit invert from the lowest pipe); how Unknown looks on the plan; lines on a pipe layer with no CE data.
+   4. TRUST-07: is the start point the LPD or the last pit before it; should the marker print.
+   5. TRUST-08: warn and allow when the drawing has unsaved changes before Apply.
+2. Reader design: where old block files or LISP tools are kept, if anywhere.
+
+---
+
 ## Answers
 
 (none yet)

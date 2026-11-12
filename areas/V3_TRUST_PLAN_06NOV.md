@@ -1,5 +1,7 @@
 # How we get to a plugin you can trust (overnight check, 5 to 6 Nov 2026)
 
+> **12 Nov 2026: the working plan is now `areas\trust-plan.md` (area TRUST in MASTER_PLAN section B).** This file stays as the 6 Nov proposal and its evidence. Five of its claims were corrected on 12 Nov; see section 4 of the working plan.
+
 **STATUS: PROPOSAL.** Findings come from reading the code on Tim's PC and the plan. Nothing was run in AutoCAD. Nothing below is approved except the small core and Civil first (decisions\2026-11-05_TIM_PLUGIN_STRATEGY_TALK.md). If approved, this becomes a section of the one plan, not a second plan (RULES 9.1).
 
 **Update after the voice talk, 6 Nov (agreed direction; see the decision file):**
