@@ -201,6 +201,19 @@
 20. BUG-1369 and BUG-1370 are engineering judgement (older-named braces counted as zero; braces on frozen or off layers still counted): do NOT change any total. Instead make the bracing panel SAY what it left out or counted that a drafter might not expect, in one plain line each, and list both rules as decisions for Tim.
 21. Fix what trust-review finds on 2071, 2072 and 2074.
 
+### Refill, Fri 13 Nov 06:45 PC clock (controller)
+
+**trust-foundations, next:**
+9. YES to the door you found: a tool that changes CE's record while a drawing it never attached is current changes the OTHER drawing's record in memory, and 2073 then keeps that save for the other drawing. Close it where the record is changed (your files): a change is refused, with one plain log line, when the record in memory does not belong to the current drawing. Its own small draft on top of 2073, no switch, tests through the real code path with a deliberately faulty version, and a case showing a real change in the right drawing is never refused.
+10. Fix what trust-review finds on 2064 (at 9d44a9c0) and 2078.
+
+**trust-safety-fixes, next (verify each in the installed code first; one small draft each; a test that fails without the fix through the real code path; read the build lock's time before every build):**
+14. BUG-1334: go ahead with your fix (c), the plain pre-check, as a draft: Move and Rotate and Copy and Rotate must either move a pipe drawn on AutoCAD 2027 correctly or refuse it in plain words naming the object; never a code word; nothing unlocked or bypassed.
+15. BUG-1316 (CDWT by its window loses the library tank details), BUG-1318 (erasing the highest-numbered source and placing another reuses its number), BUG-1320 and BUG-1321 (CDTAG: retag with No to the label leaves the old label text; a retag snaps a nudged connection point back), BUG-1346 (CDFEEDBACK loses a typed report when the save fails), BUG-1358 (CDRULES adds its whole findings list to the drawing every run with nothing trimming it).
+16. BUG-1352 stays deferred for Tim. BUG-1337 and BUG-1275 stay blocked; keep their reasons current in your status file.
+
+**trust-acad-evidence, next:** finish the tab-switch and other-commands runs for BUG-1456, close the AutoCAD you started by 8:10am and write that it is closed; then (core console, any time) pull request 2073's check, then 2078 when it has GO.
+
 ### trust-struc-mgr-plan (planning only)
 1. `areas\trust-plan-structural.md` and `areas\trust-plan-manager.md` (its brief).
 2. Draft cards, in the TRUST card shape, for the first three Structural steps and for "going back a version, rehearsed" in Manager.
