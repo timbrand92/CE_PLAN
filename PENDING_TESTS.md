@@ -1,5 +1,19 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+### BUG-1456 follow-up, the opening line says when a drawing already holds another drawing's CE data — 13 November 2026 (Built and unit-tested only; NOT installed; read only; robot and Codex to run on COPIES)
+
+PR 2078 (DRAFT, never merged by the run), branch `claude/trust-01b-other-drawings-data`, on the opening line (PR 2041). Settings: `trust.sayWhenDataLooksLikeAnotherDrawings` (ON) and `trust.anotherDrawingsDataMissingPercent` (50). The line: "CE: this drawing holds CE data that looks like it belongs to another drawing. Nothing has been changed. Do not run CDSYNC; ask before fixing." Every case reads the drawing's changed flag and stored CE record before and after: both must be unchanged.
+
+1. **Make an affected drawing first (with the INSTALLED build, on copies):** CDDIAG in job A, open a copy of a different job B, CDHELP, save B and close (repeat until B's stored record holds A's pits; 6 of 11 on the installed build). Make a second one from a blank drawing the same way.
+2. **Open each affected drawing on this build, touch nothing:** Right = the line above, once; no "save changes?" question on close.
+3. **CDCHECKCURRENT in the affected drawing:** Right = the first item is "CE data here looks like it belongs to another drawing", it names job A's file name (not its folder) and the count not drawn here, and its next step says not to run CDSYNC. Nothing changed.
+4. **A revision made by Save As:** open job A, Save As a new name, close, open the new file. Right = the usual line ("CE: N pits, N pipes, all linked." or its usual "needs checking"), NOT the line above.
+5. **A job folder copied to another place** and opened there. Right = the usual line.
+6. **Job A itself with its pits and pipes erased by plain ERASE, saved, reopened.** Right = the usual "needs checking" line, NOT the line above.
+7. **The known limit, to be seen:** in an affected drawing run CDDIAG (it attaches the record), save, close, reopen. Expected = the line above is no longer said (the stored name is now this drawing's); the usual "needs checking, N pits with no object" line is said. Record what was seen.
+8. **Switch off** (`trust.sayWhenDataLooksLikeAnotherDrawings` false): case 2 gives the usual lines only.
+9. **A Structural drawing hit the same way** (job A's record written into it): Right = the line above is said (it now holds pits and pipes, so CE does not stay quiet).
+
 ### Trust plan step 0, the reader: CETRUSTREAD, stored LPDs, and the three evidence misses — 13 November 2026 (Built and unit-tested only; NOT installed; the command's switch ships OFF; robot only, on COPIES)
 
 PR 2040 (DRAFT, never merged by the run), branch `claude/trust-reader` at `ebf7a21a`, cut from the installed Civil commit `cf059dcf`. Setting: `diag.trustReaderCommand` (OFF; set it to true in `CD_Settings.json` for these cases and put it back after). Command: CETRUSTREAD (typed; hidden; on no ribbon). It replaces the evidence lane's throwaway probe `CEPROOFREADER`. Every case on a COPY; never the live bundle until Tim says so.
@@ -39,6 +53,12 @@ PR 2064 (DRAFT, never merged by the run), branch `claude/trust-09-cancel-writes-
 7. **A drawing with a stray line on the pipe layer (the record really is behind):** PIT, Cancel. Right (said plainly, NOT fixed by this item) = the record may still change, and step 5's "CE updated its record" line says what changed.
 8. **Old job, record in an older format:** open, run CDFW, Esc. Right = the stored record keeps its older format and no identities are added. Then place one floor waste: the record is written in today's format with the identities.
 9. **Two drawings, work waiting in the first:** change a pit in A (Edit Pit, OK), switch to B, run a CE tool. Right = A's change is in A's record (never lost, never in B).
+10. **Added 13 Nov after the review of PR 2064 (head `9d44a9c0`; BUG-1456 is now its own section above, PR 2073, and is merged into this branch). Core console:** `CEPROOFTRUSTESC` (TRUST-CANCEL-02) as well as `CEPROOFTRUSTCANCEL`. Right = PASS for both, each detail line showing its faulty version was noticed.
+11. **Esc in a brand new drawing (no "Civil" mark yet), switch on:** PIT, Esc at the first question; then draw a LINE. Right = CE's record and the "Civil" mark are NOT written with the LINE; one U takes back the line only; closing asks only about the line.
+12. **The same with the tool closed by its window's X or Cancel, and with a tool that fails** (for example PIT with its layer locked). Right = as case 11.
+13. **An update that really changed something, then Esc, switch on:** in a job copy, erase one pipe line with plain ERASE; PIT (its hidden update drops the pipe), Esc. Right = the changed record is written inside the PIT command (step 5's line says what changed); the next command (a LINE) has only the line in its Undo step.
+14. **A tool that asks for the mark only after placing (CDTG, CDSL, CDWT on the safety lane's branch, when merged):** in a new drawing place one. Right = the "Civil" mark is written with it, in the same Undo step.
+15. **The list is 14 names now:** Help and CD Settings never write CE's record at their end, switch on or off.
 
 ### Trust plan step 7, the LPD as the one stored start point (TRUST-07, DRAFT card) — 13 November 2026 (Built and unit-tested only; NOT installed; the switch ships ON; robot and Codex to run on COPIES)
 
