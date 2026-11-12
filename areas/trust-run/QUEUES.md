@@ -24,7 +24,7 @@
 8. **trust-test-cases:** Sonnet, medium. Writing robot cases, look briefs and tool notes from the cards.
 9. **trust-records:** Haiku, low. Mechanical record checks only; never code or engineering judgement.
 
-## Where each lane runs (13 Nov, 00:20)
+## Where each lane runs (Thu 12 Nov, 22:50 PC clock)
 
 1. **Own side sessions (each keeps itself going with its own 40-minute check-in):** trust-foundations, trust-safety-fixes, trust-core-ribbon, trust-acad-evidence, trust-struc-mgr-plan.
 2. **Inside the controller chat, as helpers the controller restarts at each hourly check:** trust-reader, trust-review, trust-test-cases, trust-records. The app refused to start these four as their own sessions while Tim was connected by Remote Control; started from the desktop app they could be sessions too.
