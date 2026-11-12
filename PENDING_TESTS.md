@@ -1,5 +1,15 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+### BUG-1456 fourth door, a copy of another drawing's record is never written by a tool's own step — 13 November 2026 (Built and unit-tested only; NOT installed; no switch; robot and Codex to run on COPIES)
+
+PR 2089 (DRAFT, never merged by the run), branch `claude/bug-1456c-snapshot-write-door`, on the change door (PR 2083). The refusal is in CE's log only: `[BUG-1456] CE did not write its record into this drawing: the record CE is holding belongs to another drawing. Nothing was written here.` Read CE's log after every case.
+
+1. **Core console first:** `CEPROOFCROSSCOPY` (BUG-1456-CROSS-03), with `CEPROOFCROSSCHANGE` and `CEPROOFCROSSDRAWING` on the same head. Right = PASS for all three, each detail line showing its faulty version was noticed.
+2. **The case that matters, ordinary work in ONE drawing, each tool that changes several things in one step:** CDEDIT with several pits and with several pipes (the batch edit), a Dashboard proposal applied, CDRUNSOLVE with its proposals applied, one source tool placed, CDSLAB, an AGI line, a strip drain, a water tank, CDREPAIR on a drawing with something to repair. Then U after each, save, reopen. Right = everything is recorded as on the installed build, and the refusal line NEVER appears in CE's log.
+3. **Two jobs worked in turn:** the batch edit in A, switch to B, the batch edit in B, back to A. Right = each drawing's record holds its own pits and pipes only; the refusal line does not appear (these tools attach the record first).
+4. **The CE Assistant panel's apply and a CDRULES approved fix** (the two routes the reviewer did not open), in one drawing and then with a second job opened first: Right = as case 2; if the refusal line appears, say which tool, and check that drawing's stored record was left exactly as it was.
+5. **If any ordinary step logs the refusal line:** FAIL, and say which tool: that is a right write refused.
+
 ### BUG-1456 change door, a change to CE's record is refused when the record is another drawing's — 13 November 2026 (Built and unit-tested only; NOT installed; no switch; robot and Codex to run on COPIES)
 
 PR 2083 (DRAFT, never merged by the run), branch `claude/bug-1456b-record-change-door`, on the BUG-1456 cure (PR 2073). The refusal is said in CE's log only: `[BUG-1456] CE did not change its record: the record CE is holding belongs to another drawing, not the one this tool is working in. Nothing was changed.` Read CE's log after every case.

@@ -191,3 +191,14 @@
   5. **Also read:** the re-check of 2083 agrees the failed `CEPROOFCROSSCHANGE` was the check's own fault and that the corrected check (pushed 08:52, `8a6decef`) also closes a blind spot it names; it still has to be run again by trust-acad-evidence.
 
 - **13 Nov 09:10, seen working in the core console: pull request 2083 at `8a6decef`, `CEPROOFCROSSCHANGE` (BUG-1456-CROSS-02) PASS and `CEPROOFCROSSDRAWING` PASS** (trust-acad-evidence, built fresh, nothing installed). So the earlier FAIL is closed: it was the check's own stale count. The pull request text and `PENDING_TESTS.md` row 8 say so. Still only the core console (one drawing, the other held in memory); two real drawings are the robot's. The fourth door's build is still queued.
+
+- **13 Nov 09:23, the fourth BUG-1456 door pushed as DRAFT pull request 2089** (branch `claude/bug-1456c-snapshot-write-door`, head `e938d0d4`, on pull request 2083's branch, NO switch). From the review lane's audit (`reviews\bug-1456-three-together.md`, section 3 item 1).
+  1. **What it does:** a copy CE takes from the record in memory now remembers which drawing that record belonged to. The routine that writes a copy inside a tool's own step (the batch edit and about 20 other callers) and the one that then makes the copy the live record both ask first. Another drawing's copy is not written and not adopted; one plain log line; nothing is thrown, so the tool's own drawing changes still go in. A copy of the drawing's own record, or one whose source CE does not know, goes in as before.
+  2. **Built:** net48 and net10, 0 errors; the headless proof project compiles, 0 errors.
+  3. **Tested:** unit tests only. 22,241 ran, 22,209 passed, 32 skipped, 0 failed.
+  4. **Not tested:** nothing in AutoCAD or the core console. `BUG-1456-CROSS-03` (`CEPROOFCROSSCOPY`) written, not run.
+  5. **Not closed:** a tool that re-makes its copy by its own means loses the source, so that copy is written as before (about eight callers were not traced by the reviewer); the kept-record write (by design it only writes a drawing's own record).
+  6. **Default for Tim to confirm:** no switch. Unlike 2083, a refusal here does not drop a drafter's drawing change.
+  7. **Installed:** no. **Accepted:** no. **Robot cases:** `PENDING_TESTS.md`, BUG-1456 fourth door (5 rows).
+  8. **The BUG-1456 stack is now:** 2073 (`1a28c3b3`, core console PASS) then 2083 (`8a6decef`, core console PASS) then 2089 (`e938d0d4`, not run); 2078 (`e1bdc16e`) sits on the opening line, 2041.
+  9. **QUEUE EMPTY after this.** Still open for the controller to assign: the guard that every command which edits a pit or pipe taken from the record attaches the record first; saying a refusal on the command line too; the BUG-1358 trim in `ProjectDataService.Rulebook.cs`.
