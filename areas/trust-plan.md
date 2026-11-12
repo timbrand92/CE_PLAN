@@ -61,10 +61,10 @@ flowchart TD
     H --> I[Tim says it is in]
 ```
 
-1. **One step in trial at a time.** A second step does not go on Tim's PC until he has said the first is in, or has rolled it back. Whether two no-risk steps may share a trial is question A4 (OPEN).
+1. **One trial at a time.** Steps 1, 2 and 3 change nothing in a drawing and share one trial of about 3 working days; steps 4 to 8 each get their own (Tim, 12 Nov, answer A4). A new trial does not go on Tim's PC until he has said the last is in, or has rolled it back.
 2. **The four states stay separate.** Every step's status line reads Built / Tested / Installed / Accepted, each yes or no. A green build proves nothing in AutoCAD.
 3. **The same check before and after every step (RULES 15.6).** The robot reads all test-set jobs before the step and after it. Anything that read correctly before must read the same after. One item that got worse blocks the step.
-4. **The stop rule.** Lost work, a crash, or a wrong value shown as a fact, on Tim's PC or a colleague's: the step is rolled back the same day, and the "clean days" count starts again. Which faults count is question A2 (OPEN).
+4. **The stop rule (Tim, 12 Nov, answer A2).** Four faults take a step or a release off the same day, on Tim's PC or a colleague's: lost work; an AutoCAD crash; a wrong value shown as a fact; CE changing the drawing or its record without telling. The "clean days" count then starts again. The fourth applies from the step that promises it (interpretation, see the interview file).
 5. **Every install names its undo** before it happens: where the backup is and the one action to go back (RULES 8.6).
 6. **Windows are Codex's work, behaviour is Claude's** (ruling B, 15 Sep). Where a step needs a window, the behaviour side writes the contract first.
 7. **AutoCAD 2022 to 2024 is checked at every step,** because those users are in scope and have no ribbon today.
@@ -152,7 +152,7 @@ Each step has its own card. Step 1's card is answered; the others are DRAFT in `
 
 ## 3. What must be true before the first colleague release
 
-All of these, none optional. The exact bar is question A1 (OPEN); this is the recommendation.
+All of these, none optional. The bar in line 2 is Tim's answer A1 of 12 Nov: zero wrong on all 10 jobs, Unknowns allowed where the drawing lacks the information, plus three clean days. The first colleague is on AutoCAD 2027 (answer A3), so the first release is proven on 2027.
 
 1. **Steps 1 to 8 accepted by Tim,** each after its own trial.
 2. **The test set passes:** on every job, nothing wrong shown as a fact; Unknowns within the limit Tim sets (B3).

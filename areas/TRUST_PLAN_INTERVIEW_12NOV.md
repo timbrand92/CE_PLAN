@@ -72,4 +72,13 @@ INTERPRETATION of "properly": ask the questions that decide whether the plan wor
 
 ## Answers
 
-(none yet)
+Tim, 12 Nov 2026: "send questions using claude question interface". From here the questions are asked through the tick-box question interface. What is recorded below is the option Tim chose, word for word as it was shown to him; these are his selections, not sentences he typed.
+
+### A1 to A4, answered Thu 12 Nov 2026 (late evening, PC clock)
+
+1. **A1, when is the first colleague release ready?** Tim chose: "Zero wrong, all 10 (Recommended)". The option read: "Every one of the 10 test jobs has no wrong value shown as fact. Unknowns are allowed where the drawing lacks the information. Plus your three clean working days on real jobs."
+2. **A2, which faults take a step or a release back off the same day?** Tim chose all four: "Lost work", "AutoCAD crash", "Wrong value shown as fact", "Changed without telling". The fourth read: "CE altered the drawing or its record and printed nothing, even if the result was correct."
+   - INTERPRETATION: the fourth applies from the point a step has promised it. Until step 5 is in, everyday tools still update the record quietly by design, so that alone does not take step 1 to 4 off. For Tim to correct.
+3. **A3, which AutoCAD year is the first colleague on?** Tim chose: "2027".
+   - INTERPRETATION: the first colleague release is proven on 2027. The 2022 to 2024 pull-down menu work in card TRUST-02 is not needed for the first release, but those users stay in scope later (15 Sep ruling), so each step still records what it does on those years. Which colleague, and that their PC really is 2027, has not been read from the PC.
+4. **A4, how is Tim's trial time used?** Tim chose: "Group the safe ones (Recommended)". The option read: "Steps 1, 2 and 3 change nothing in a drawing, so they share one 3-day trial. Steps 4 to 8 each get their own. About 6 trials instead of 8."
