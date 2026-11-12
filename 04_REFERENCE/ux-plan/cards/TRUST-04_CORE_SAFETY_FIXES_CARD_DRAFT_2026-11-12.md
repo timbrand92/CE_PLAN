@@ -74,7 +74,7 @@
 
 ## 6. Not known yet
 
-1. **BUG-1255's cause is not established.** The bug title names a library clash; the Codex look was BLOCKED and nobody has opened the log. No fix exists.
+1. **BUG-1255: CORRECTED 13 Nov.** A fix is already in the build on Tim's PC (3.0.90): when AutoCAD has loaded its own copy of the Excel part, CE uses that copy. Nobody has seen it work in AutoCAD. So the job is to prove it, not write it. See `areas\trust-run\CODE_FACTS_13NOV.md` section F. The earlier line here, "No fix exists", was wrong.
 2. **BUG-1276's cause is not known** for the Structural autosave that made no backup. The reminder is a guard, not the cure.
 3. **BUG-1275:** whether the fix on the held branch covers the crash you hit on 5 Nov.
 4. **Whether each held fix still applies cleanly** on top of what is installed. The held builds were not re-read for this card.
