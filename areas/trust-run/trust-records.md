@@ -109,3 +109,10 @@ Tables: 0. Long FOR TIM paragraphs: 0. Jargon hits: {len(jar)}. OPEN-on-answered
 
 1. The carpark index (CARPARK_BY_COMMAND_INDEX.md) lists bug numbers only and gives "+N more" for long groups. Those missing numbers are not in BUGS_BY_CORE_TOOL.md.
 2. Nothing was judged. Status lines are copied as written.
+
+## Item 4 and 5 (Thu 12 Nov 2026, 23:44 AEDT, PC clock)
+
+- Item 4, BUGS_BY_CORE_TOOL.md, CD: 10 open entries added (BUG-1043, 1226, 1229, 1230, 1233, 1234, 1235, 1238, 1239, 1267), taking CD to 55. The index of 29 Oct said 54 with 9 unlisted; the carpark now shows 10 unlisted, so one entry was probably added after the index. Not proven which. No other "not listed" lines in that file.
+- Item 5, BUGS_BY_STRUCTURAL_CORE_TOOL.md: 28 of 32 KEEP buttons searched. 132 rows, 69 unique bugs. 3 with no open entry (BDL, BSETLIST, BSETRESET). Not searched: the four digit-named tools 1, 2, 4 and 5 (a digit is not a usable search word).
+- Counts are open, in progress and on hold entries only; closed bugs were not listed.
+- Titles copied from each Command / Area line, cut at 220 characters.

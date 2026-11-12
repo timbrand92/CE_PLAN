@@ -87,7 +87,7 @@ Where a group says "+N more", the index does not list those numbers, so they are
     2. BUG-814: Plain-words fixes from run 31: CDTAG retag refusal, CDFIXTAGS refusal sentence, CDCHECKS names pipes by handle, "AGI 1" spacing
     3. BUG-821: CDTAG ignores a block that is already selected and asks for a pick
     4. BUG-927: CDTAG messages, ledger F-096.
-18. **CD**: 54 open or in progress in the index (45 numbers shown, 9 more not listed in the index)
+18. **CD**: 55 open or in progress in the carpark on 12 Nov 2026 (45 shown from the index of 29 Oct, which says 54; 10 added below, numbers 46 to 55)
     1. BUG-11: `CD` / `CDEDIT` — pipe callout (MLeader text label) placed WEST of the pipe
     2. BUG-14: `CD` command auto-calc grade — `MathHelper.TryParseGrade`
     3. BUG-15: `CD` command Custom Grade input — `CdCommand.BuildGradeValue` / `FormatGradeForDisplay`.
@@ -133,6 +133,16 @@ Where a group says "+N more", the index does not list those numbers, so they are
     43. BUG-941: CD window wording, ledger F-110.
     44. BUG-943: Repair Centre and CD help page wording, ledger F-112.
     45. BUG-996: CD (manual pipe text, Yes to mirror); no switch (Civil labels and Tidy labels), ledger F-193.
+    46. BUG-1043: CD and CDEDIT, Start / Save button, Civil 3.0.72 (Codex audit RD03-04, 23 Oct 2026). MEDIUM, SURE (verified by reading).
+    47. BUG-1226: CD New Pipe window (daily tool D05, recent invert buttons): the one-page New Pipe window that CD opens on Civil 3.0.84 and 3.0.85 shows NO 'Recent levels' row and no 'Use recent invert ...' buttons, although card D05...
+    48. BUG-1229: CD (New Pipe window), pipe grade "Set my own" + "I know one end - work the other out from the grade", Civil 3.0.85 (Tim's PC, by hand, 29 Oct 2026). WRONG ANSWER, severity to confirm.
+    49. BUG-1230: CD (New Pipe window) and CDEDIT (Edit Pipe window), "Plan preview", Civil 3.0.85 (Tim, by hand on his own PC, 29 Oct 2026). WRONG ANSWER (the preview), severity to confirm. Wording agreed with Tim 29 Oct 2026.
+    50. BUG-1233: CD (New Pipe) and CDEDIT (Edit Pipe) windows, "Pipe grade" choice (Standard / Set my own) with the "I know one end" invert working, Civil 3.0.85 (Tim, by hand on his own PC, 29 Oct 2026). WRONG ANSWER (the window chan...
+    51. BUG-1234: CD, labels and flow arrows on pipes that end at a pit, Civil 3.0.85 (Tim, by hand on his own PC, 29 Oct 2026, hand check H9 of pit catch). WRONG LOOK (drawing output), severity to confirm. Read from Tim's screenshot o...
+    52. BUG-1235: CD, the minimum-grade warning, Civil 3.0.85 (Tim's command line, hand check H9, 29 Oct 2026). WRONG WORDING / BOUNDARY, severity low.
+    53. BUG-1238: CD, New Pipe window, recent-value buttons, Civil 3.0.85 (Tim, from his own daily use, 29 Oct 2026, question 4 of the extra checks). MISSING OR NOT NOTICEABLE, severity to confirm.
+    54. BUG-1239: CD, pipe label position, Civil 3.0.85 (Tim, by hand on his own PC, 29 Oct 2026, while checking D06 'Show grade in pipe text' switched off). WRONG PLACE (drawing output), severity to confirm.
+    55. BUG-1267: CD (New Pipe window), "Set my own" with remembered levels. Civil. POSSIBLE BUG, UNCONFIRMED. Reported by CE 02 (30 Oct 2026, 23:22) from reading code via CE 00; nothing has been run in AutoCAD. It sits in the same flo...
 19. **CDREVERSEFLOW**: no group in the index (no open bug named under this command)
 20. **CDTIDYLABELS**: 11 open or in progress in the index
     1. BUG-873: CDTIDYLABELS (Tidy labels), ledger F-003.
