@@ -18,7 +18,7 @@
 
 ## What ran overnight
 
-1. **Builders:** 52 trial changes built as drafts (counted on GitHub at 07:52), none merged, none installed, none set to merge by itself.
+1. **Builders:** 52 trial changes built as drafts (counted on GitHub at 09:26), none merged, none installed, none set to merge by itself.
 2. **Reviewer:** 47 are fit for the robot to test, 2 need fixing first (2053, 2085), 3 are not reviewed yet (2087, 2088, 2089); 8 have changed since their last review and wait to be re-checked.
 3. **AutoCAD robot:** tested on copies outside your hours, then closed AutoCAD.
 4. **Code readers:** wrote a one-page note for each of your 47 Civil and 32 Structural core tools, and filed 177 new faults.
