@@ -43,7 +43,8 @@ Built and unit-tested only. Branch `claude/trust-core-settings-e13111`, https://
 2. **Switch on, no values shipped:** add `"followOfficeSetup": true` under `options`, restart. Right looks like: one CE log line "Office setup: not known (this release carries no office values yet)". Settings file unchanged.
 3. **Switch on, a test office file:** put a copy of `office-setup.json` with a few `values` (for example `{"pit":{"xWidth":450}}`) in the bundle's Assets\Config on the TEST login, restart. Right looks like: log line "Office setup: no, 1 value differs".
 4. **Tim's PC:** with `"thisPcIsOfficeSource": true` the line reads "Office setup: this PC makes it" and nothing is ever changed.
-5. **Not covered:** applying, putting back, and the window need the built window; today the robot tests prove them on temporary files only.
+5. **Settings are not frozen:** with the switch off, save the Settings window once on the TEST login. Right looks like: `followOfficeSetup` and `thisPcIsOfficeSource` do NOT appear in `CD_Settings.json`.
+6. **Not covered:** applying, putting back, and the window need the built window; today the robot tests prove them on temporary files only, including that an ordinary settings save after Apply keeps the office values.
 
 ## TRUST-02 core ribbon (DRAFT, switch OFF), draft PR 2038 — 12 Nov 2026 (updated after the independent review)
 
