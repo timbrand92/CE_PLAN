@@ -75,3 +75,17 @@ AutoCAD closed with the driver's quit; lock released; the four settings files by
 2. **BUG-683 (CD, typed real length after the level is worked out): COULD NOT BE TESTED THIS WAY.** The same-plan break question is behind the "More" button on the New Pipe window; the driver's press lists do not carry it (the carpark entry says the same for run 36). Not tried further.
 3. **Still not attempted:** BUG-756 (the long section).
 4. **A pattern worth knowing:** CE commands cancelled at their first question rewrite CE's record quietly (shorter by 148 characters, no values) in PIT, CDAGI, CDSTRIP, CDRUNSOLVE; CDFW also adds identities and the format number; CDRENUMBER and CD (at the uphill question) did not. One U restores each of those where tested.
+
+## Added Fri 13 Nov 09:30 (PC clock): BUG-756, BUG-674, BUG-780, BUG-785, BUG-969, exactly where the robot stops
+
+**FOR TIM**
+
+1. **BUG-756 (CDPROFILE, a pipe just before a size increase drawn one size too tall on the long section): COULD NOT BE TESTED on the test drawing.** CDPROFILE asks "Select starting CE pit for profile review"; I gave it the position of a real pit block (PIT BLOCK 3 on the standard test drawing). The Profiles window opened, but it says "No pit selected" and "The selected pit has no exact carrying PIT_LINK and spine identity", and its Preview New, Preview Update and Apply buttons stay greyed out. So the window refuses to draw a long section from this drawing's pits. Nothing was drawn.
+   1. **What would settle it:** a drawing whose pits carry CE's link and identity (one drawn fresh with the New Pit and New Pipe windows, with a size increase part-way along the run), then Preview New and Apply by a person or Codex, and read the long section by eye.
+2. **BUG-674 (Edit Pit window, batch Apply), BUG-780 and BUG-785 (Pit Schedule, Place): STOP at the buttons.** They need Save or Apply on the Edit Pit window and Place on the Pit Schedule window; the robot's press list never presses those (they write to the drawing). Not tried.
+3. **BUG-969: STOP.** It makes a new drawing file in a job folder; not something to do from here. Not tried.
+4. **Everything above is still "not seen". None of these is claimed fixed.**
+
+**DETAIL**
+
+1. The Profiles window controls: a Choose Pit button, Refresh, a Route (required) picker, Schedule set, Datum RL (m), Horizontal 1:100, Vertical 1:10 (10x), then a table (Pit, Chainage, Cover, Invert, Depth, Dia, Grade, Velocity, Full flow). Closed again by the robot with its own Close; the drawing was not changed (the copy's modified count is unchanged by CDPROFILE).
