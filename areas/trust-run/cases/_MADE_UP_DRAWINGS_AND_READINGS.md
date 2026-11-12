@@ -48,6 +48,13 @@ These are described by what is in them. Lane trust-acad-evidence builds the real
 21. **MD-21, ten pits.** Pits P1, P2 and P10 to P17, to show whether the Pit Schedule orders P1, P2, P10 or P1, P10, P2.
 22. **MD-22, damaged record.** MD-01 whose stored CE record is cut off half way by script.
 23. **MD-23, 100 and UPVC trap.** MD-01 where one pipe line has no CE size, no CE material and no drawn width, and one pit has no label.
+24. **MD-24, LPD in the older form.** MD-01 where the LPD is held as the older single stored record (linked to the pipe end and the pit), and nothing else.
+25. **MD-25, LPD in the newer form.** MD-01 where the outlets are held as the newer stored set that can hold several, and no older record.
+26. **MD-26, both forms present.** MD-01 with an older single record and a newer stored set both in the drawing, naming the same LPD.
+27. **MD-27, number trap.** MD-01 where pit P3 has been renamed LPD-3, though the LPD is drawn at P1.
+28. **MD-28, messy job.** MD-01 with the P3 pit label text edited, a cover-level text edited and one stray pit block, so several things differ from CE's record at once.
+29. **MD-29, unlinked ends.** MD-01 where two pipe ends touch their pits but are not linked in CE's record (the links cleared by script).
+30. **MD-30, a heavy revision.** MD-13 (400 pits) with 200 or more differences from CE's record made by script, so the check list has a large number of rows.
 
 ## 2. The standard readings (named once, used everywhere)
 
