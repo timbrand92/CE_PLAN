@@ -74,6 +74,29 @@
 3. Re-review after the builder says fixed. Never approve your own earlier mistake without re-reading the diff.
 4. When no pull request is waiting: review the next unreviewed card or plan document in area TRUST for holes, the way `areas\TRUST_PLAN_REVIEW_12NOV.md` did.
 
+### Refill, Thu 12 Nov 23:45 PC clock (controller)
+
+**trust-core-ribbon, next:**
+5. Fix the FIX FIRST list in `reviews\claude-trust-core-ribbon-e13111.md` on pull request 2038 (CDFW and PITSCHEDULE follow the card's recommended answer; keep today's plain tooltips from one place; New Job on AutoCAD 2025 and 2026; the rest as listed).
+6. Fix what trust-review finds on pull request 2043 when its review appears in `reviews\`.
+7. In `areas\trust-run\SETTINGS_DIFFERENCES.md`, add a FOR TIM part at the top if it has none: the ten differences that would most change what a colleague sees, each with a one-line job example.
+
+**trust-struc-mgr-plan, next:**
+4. First trust check of the Structural core tools from records only, in the shape of `areas\TRUST_CORE_TOOLS_FIRST_CHECK_12NOV.md`, for the 32 KEEP buttons in `areas\STRUCTURAL_COMMAND_SORT_12NOV.md`: to `areas\TRUST_STRUCTURAL_TOOLS_FIRST_CHECK_12NOV.md`.
+5. For each Structural claim carried (not verified) in `areas\trust-plan-structural.md`, verify it in the installed code copy (`C:\CE_WORK\scratch\audit_struc`) with file and line, and correct the document.
+6. A draft card "what each colleague is running" for Manager (build, AutoCAD year, office setup yes or no, shown to Tim in one place), in the TRUST card shape with Decisions for Tim at the top.
+7. Move "Decisions for Tim" to the top of each of your cards, straight after FOR TIM (RULES 2.9: nothing he must decide sits below the technical part).
+
+**trust-test-cases, next:**
+4. Redo `cases\TRUST-07.md` against the rewritten card (the LPD is the start point; no new store; Esc carries on with a warning).
+5. Settle the three disagreements between `cases\UX-OPEN-01.md` and the build listed in `reviews\cases-UX-OPEN-01.md` and `reviews\claude-trust-01-open-line.md` item 5: follow the card's approved wording; where the card is silent, mark the case RECORD.
+6. Cases for the Structural and Manager draft cards TRUST-S1, TRUST-S2, TRUST-S3 and TRUST-M2, same shape as the others.
+7. Correct the tool notes that `reviews\core-tool-notes-sample.md` finds wrong, then check the other 39 notes for the same kinds of mistake.
+
+**trust-records, next:**
+4. Complete `BUGS_BY_CORE_TOOL.md` where it says "+N more": search `BUG_CARPARK.md` for each of those commands by name in the "Command / Area" lines and add the missing bug numbers and titles. Copy only.
+5. The same list for the 32 Structural KEEP buttons in `areas\STRUCTURAL_COMMAND_SORT_12NOV.md`: to `areas\trust-run\BUGS_BY_STRUCTURAL_CORE_TOOL.md`.
+
 ### trust-struc-mgr-plan (planning only)
 1. `areas\trust-plan-structural.md` and `areas\trust-plan-manager.md` (its brief).
 2. Draft cards, in the TRUST card shape, for the first three Structural steps and for "going back a version, rehearsed" in Manager.
