@@ -93,3 +93,14 @@
 6. **Backup test:** a fresh copy of the second job was contaminated by the usual sequence (record 11/49, path = the standard drawing's copy), then saved with a plain Save under its own name: the saved file's size changed (1,309,986 to 1,352,424 bytes). Files beside it: `<name>_PRE_C7_<time>.dwg` of 1,309,986 bytes, equal to the untouched original; no `.bak`. AutoCAD's save-a-backup variable ISAVEBAK reads 0.
 7. **Not done:** a read of CDFEEDBACK; the dock palette's effect when left open; the Pit Schedule's Apply or Place in a contaminated drawing.
 8. **AutoCAD:** closed with the driver's quit at 07:26, lock released, the four settings files byte-identical to the start of the night.
+
+---
+
+# CDFEEDBACK hung AutoCAD's automation (13 Nov, about 06:45): what happened, and what is not known
+
+## FOR TIM
+
+1. **What was typed:** the command word `CDFEEDBACK` on its own, through the test driver, as the first CE command in a freshly opened second drawing (a fresh copy of the standard drawing had just had CDDIAG run in it).
+2. **What was seen:** no CE window the driver could list, and no new line on the command line that the driver could read. Straight after, the driver could no longer talk to AutoCAD: its next reads failed with "System call failed" and then "AutoCAD is running but is not registered for COM automation". AutoCAD itself still said it was responding. The driver's normal quit refused. Its kill-quit (which only ends the AutoCAD the driver started) ended it about three minutes later. Only scratch copies were open; nothing real was lost.
+3. **Not known:** whether this is the robot's problem or a real fault in CDFEEDBACK. A window CE opens that the driver does not know about (a feedback or web window) would look exactly like this to the robot, so it may be harmless to a person. It may also be a real hang. It was not repeated. Whether CDFEEDBACK also writes CE's record into the second drawing is therefore unmeasured.
+4. **What would settle it:** a person typing CDFEEDBACK once in a spare copy and saying what appears and whether AutoCAD stays usable.
