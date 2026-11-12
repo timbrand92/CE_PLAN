@@ -61,3 +61,22 @@ All 34 cases: **could not be run headless.** The line is printed when AutoCAD go
 3. **Defaults taken for Tim to confirm:** the test drawing is the standard test copy plus one stray line (not the cases' MD-02); the builds are loaded by the repo's harness with the installed object enabler beside them.
 
 Files: `C:\CE_WORK\scratch\trustprobe\ab\` (DXF exports, parsed records, console text). Scratch only.
+
+---
+
+# G. Rerun at the fixed heads (13 Nov 03:00): PR 2050's checks and step 5's CDGRAPH fix
+
+**Build:** `claude/trust-proof-checks` at `03af5393` (the fix `08781653`, step 6's head merged in, carrying step 5's CDGRAPH fix `d0cf644c`), Civil 3.0.90 build, 0 errors, 51 s, loaded in the core console from a scratch folder. Nothing installed.
+
+**FOR TIM**
+
+1. **The four proof checks all PASS now.** Opening line (TRUST-OPEN-01), read-only door (TRUST-READONLY-01), update count (TRUST-UPDATE-01) and Unknown instead of 100 UPVC (TRUST-UNKNOWN-01). The pit-label check from the older harness (MODELSPACE-CASE-01) also PASSES, so it was unblocked by the same fix. Seen to pass.
+2. **Each check also proves it can fail.** The two that run a deliberately faulty version noticed it all three ways: the drawing's own object events, CE's stored record text, and CE's record in memory (20 changed and 4 added objects for the opening check's faulty version; 23 changed and 5 added for the read-only one).
+3. **Step 5's CDGRAPH fix works in a real run.** On the stray-line copy, CDGRAPH now says 49 pipes (it said 50), prints "CE's record holds 11 pits and 49 pipes. 1 line on a pipe layer is not in the record, so it is left out of this trace. Type CDCHECKCURRENT to see it.", and CDGRAPH and CDDIAG leave CE's record identical (49 pipes, same text before and after each). CDDIAG still prints its own numbers (11 pits, 49 pipes recorded). Seen to pass.
+
+**Detail, answering the foundations lane's two questions**
+
+1. **Does merely reading fire an object event in the core console?** Not in these runs: both "real" halves report no changed, added or erased object. The faulty halves did fire them, as intended.
+2. **What the faulty-version lines say:** "drawing objects: N changed, M added, 0 erased (changed DBDictionary, changed Xrecord, added DBDictionary, ...); CE's stored record; CE's record in memory". All three detectors fired for both faulty versions.
+3. **Not shown:** the real "CE updated its record" line after Edit Pit and PIT (windows and prompts: not headless); Undo on the new build; the opening line itself on a real drawing opening (the check proves the counting and the no-write rule through CE's own code, not the idle event).
+4. **A mistake I made twice tonight, so you can trust the corrected file:** my transcript summary stops at 60 lines, and CDGRAPH prints more than that, so lines after it can be cut. The CDDIAG lines are present at both heads (read from the full console file).
