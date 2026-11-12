@@ -56,7 +56,7 @@
 1. BUG-650: read every pit invert, run CDFW, Esc, read again. Identical. Then place a floor waste and confirm inverts are still identical.
 2. BUG-1274: a copy with plastic and concrete pits. The note names exactly the pits left out.
 3. BUG-1255: export, then open the file and compare every row with the window.
-4. BUG-1276: edit without saving past the set time. One reminder, the drawing's changed-flag untouched by CE, no file written.
+4. BUG-1276 (corrected to Tim's decision 223): edit without saving past 25 minutes. One reminder; the drawing's changed-flag untouched by CE; one backup copy per interval in the CE backup folder and nowhere else; nothing written to or beside the drawing. With AutoCAD's own automatic save off: one plain line saying CE cannot keep copies.
 5. CLEAN: run on a copy, then read the file's saved time.
 6. BUG-497 and 498: add and erase braces, refresh, count rows against braces.
 7. BUG-499: a plan with roof trusses and wall braces; wall totals exclude the trusses.
