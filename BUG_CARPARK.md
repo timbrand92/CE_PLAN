@@ -21076,3 +21076,273 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
 
 **Status:** OPEN
+
+## BUG-1438 — STRSCHEDSYNC has no read-only drawing check, unlike the other two schedule commands
+
+**Command / Area:** STRSCHEDSYNC. LOW. PROTECTION.
+
+**Symptom:** STRSCHEDCREATE and STRSCHEDREFRESH refuse a read-only drawing with a plain line. STRSCHEDSYNC goes straight to the table pick and then to the write.
+
+**Expected behaviour:** The same plain line, before any question.
+
+**Steps to confirm in AutoCAD:** (1) Open a drawing read-only and run STRSCHEDSYNC. Right = a plain refusal. Wrong = it asks for a table and fails later.
+
+**Test that catches it:** Source guard: SyncSelectedSchedule calls CommandPreFlight.
+
+**Reference:** Commands\UtilityCommands.cs:92-96; Services\ScheduleService.cs:349-361 (no pre-flight). Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1439 — CLEAN: one object on a locked layer drops the whole text step and the whole ByLayer step, and the drawing is still saved after a half clean-up
+
+**Command / Area:** CLEAN. MEDIUM. WRONG ANSWER, half clean-up saved with a raw error word.
+
+**Symptom:** The text-style step and the ByLayer step open every object for writing. One object on a locked layer throws, and the whole step fails. The summary prints FAIL with AutoCAD's raw word, and CLEAN still saves the drawing after the half clean-up.
+
+**Expected behaviour:** Locked objects are skipped and counted ("12 objects on locked layers were left alone") and the rest of the step completes. No raw error word.
+
+**Steps to confirm in AutoCAD:** (1) On a copy lock one layer that holds text. (2) Run CLEAN. Right = the text step completes, a line says how many were skipped. Wrong = FAIL for the text step and the ByLayer step.
+
+**Test that catches it:** Fixture: one locked text object; assert the step succeeds for the others.
+
+**Reference:** Services\CleanPipelineService.cs:409 and 526 (ForWrite per entity, no catch), 232-236 (stage failure recorded), 746-751 (FAIL line with the exception text). Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1440 — The CLEAN tooltip says "Does not save: save the drawing yourself" and Settings says "CE never saves" while CLEAN saves
+
+**Command / Area:** CLEAN, CESETTINGS, tooltips. MEDIUM. WORDING that causes lost work.
+
+**Symptom:** Since 5 Nov CLEAN saves at the end. The shortDesc still says it does not save, and Settings says CE never saves. A drafter who does not want a save before checking the result is told wrongly.
+
+**Expected behaviour:** Both say that CLEAN saves the drawing when it finishes.
+
+**Steps to confirm in AutoCAD:** (1) Hover CLEAN in the ribbon and open the Autosave page on Settings. Right = both say CLEAN saves. Wrong = "does not save" and "CE never saves".
+
+**Test that catches it:** Source guard: no "Does not save" text on a command that calls the save step.
+
+**Reference:** Assets\Config\command-registry.json:4145 (shortDesc; longDesc at 4146 says it saves); UI\Dialogs\CeSettingsDialog.xaml:551-557; Services\DrawingAutoSaveService.cs:313. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1441 — CLEAN prints "saved" when it only sent QSAVE and never checked the save
+
+**Command / Area:** CLEAN, FASTSAVE. MEDIUM. WRONG ANSWER, a save overstated.
+
+**Symptom:** If the managed save fails CLEAN sends QSAVE and sets "saved" without reading whether the drawing is still modified. The fallback path does the same. A save that did not happen is reported as done.
+
+**Expected behaviour:** The line is printed after the drawing is seen to be unmodified, and a failed save says NOT SAVED.
+
+**Steps to confirm in AutoCAD:** (1) On a copy make the save fail (lock the file on disk, or put it on a read-only folder) and run CLEAN. Right = a NOT SAVED warning. Wrong = "saved <file>".
+
+**Test that catches it:** Fixture: failing save; assert the final line says not saved.
+
+**Reference:** Services\CleanPipelineService.cs:167-171, 284-287 and 202-208. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1442 — CLEAN has no read-only, layout tab or REFEDIT check at the start
+
+**Command / Area:** CLEAN, FASTSAVE. MEDIUM. PROTECTION.
+
+**Symptom:** CLEAN starts with only the recovery-drawing test. On a read-only drawing, a layout tab or in REFEDIT it goes ahead with purge, layer and style changes, and then tries to save.
+
+**Expected behaviour:** A plain stop line first, as the other CE commands print.
+
+**Steps to confirm in AutoCAD:** (1) Run CLEAN on a read-only copy and inside REFEDIT. Right = a plain refusal. Wrong = the steps run.
+
+**Test that catches it:** Source guard: Run calls the pre-flight with the Model space check.
+
+**Reference:** Services\CleanPipelineService.cs:59-90. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1443 — CLEAN ignores the Xref layer settings on the Settings window and always uses layer XREF, colour 7, hatch 21 and Arial Narrow
+
+**Command / Area:** CLEAN. MEDIUM. WRONG ANSWER, a Settings value silently not used.
+
+**Symptom:** Settings has Xref layer values. CLEAN uses constants (XREF, colour 7, HATCH 21, ARIALN.TTF), so an office that changed them gets the old ones.
+
+**Expected behaviour:** CLEAN reads the Settings values.
+
+**Steps to confirm in AutoCAD:** (1) Set the Xref layer to XREF-CE and colour 3 on Settings. (2) Run CLEAN on a copy with an Xref. Right = XREF-CE. Wrong = XREF.
+
+**Test that catches it:** Fixture: changed Settings; assert the layer and colour used.
+
+**Reference:** Services\CleanPipelineService.cs:16-19, 305 and 483 against UI\Dialogs\CeSettingsDialog.xaml.cs:171-173 and 403-405. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1444 — After CLEAN the next hatch is SOLID on layer HATCH 21 for the rest of the session
+
+**Command / Area:** CLEAN. LOW. UNEXPECTED STATE CHANGE.
+
+**Symptom:** CLEAN sets the hatch pattern, layer and colour defaults (HPNAME SOLID, HPLAYER HATCH 21, HPCOLOR BYLAYER) and these stay set after the command. The drafter's next HATCH is solid on that layer.
+
+**Expected behaviour:** The settings are put back at the end.
+
+**Steps to confirm in AutoCAD:** (1) Note HPNAME. (2) Run CLEAN. (3) Check HPNAME. Right = unchanged. Wrong = SOLID.
+
+**Test that catches it:** Fixture: read HPNAME before and after.
+
+**Reference:** Services\CleanPipelineService.cs:560-565. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1445 — CLEAN sets attribute definitions inside blocks to STANDARD while the summary says "attributes=preserved"
+
+**Command / Area:** CLEAN. LOW. WRONG ANSWER, a statement that is untrue.
+
+**Symptom:** Attribute definitions are a kind of text in block definitions, so the text step changes their style to STANDARD. The step's line still says "attributes=preserved".
+
+**Expected behaviour:** Attribute definitions are left alone, or the line says they were changed.
+
+**Steps to confirm in AutoCAD:** (1) On a copy use a block whose attribute uses another text style. (2) Run CLEAN. Right = the style is kept. Wrong = changed to STANDARD.
+
+**Test that catches it:** Fixture: block with an attribute definition style; assert after CLEAN.
+
+**Reference:** Services\CleanPipelineService.cs:133 (the line) and 416 (case DBText, which includes attribute definitions). Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1446 — CLEAN saves in the running AutoCAD's own file version, not the Save As format setting
+
+**Command / Area:** CLEAN, FASTSAVE. LOW. FILE FORMAT.
+
+**Symptom:** The save uses the current AutoCAD version. A drawing saved from 2027 may not open on 2022 to 2024, whatever the Save As format on the Options says. Whether 2027 files open on those versions is not known.
+
+**Expected behaviour:** The Save As format set in AutoCAD is used.
+
+**Steps to confirm in AutoCAD:** (1) Set Options, Open and Save, Save As to a 2018 format. (2) Run CLEAN. (3) Check the file version (open it on a 2022 PC). Right = opens. Wrong = refuses.
+
+**Test that catches it:** Fixture: SAVEFMT 2018; assert the written version.
+
+**Reference:** Services\DrawingAutoSaveService.cs:198 (DwgVersion.Current). Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1447 — CLEAN keeps no copy from before the clean-up, because CE's backup copy is taken after the save
+
+**Command / Area:** CLEAN, FASTSAVE. MEDIUM. LOST WORK.
+
+**Symptom:** CLEAN cleans and then saves over the drawing. The rolling backup copy is made after that save, so it holds the cleaned state. The pre-clean drawing has no way back except AutoCAD's own .bak.
+
+**Expected behaviour:** A copy of the drawing as it was is kept before the clean-up.
+
+**Steps to confirm in AutoCAD:** (1) On a copy save, run CLEAN, then look at the backup folder. Right = a copy from before CLEAN. Wrong = only the cleaned drawing.
+
+**Test that catches it:** Fixture: CLEAN; assert a backup whose content equals the pre-clean file.
+
+**Reference:** Services\DrawingAutoSaveService.cs:198-219 and 308-312 (backup after SaveAs). Related BUG-1276. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1448 — FASTSAVE Help still says "lighter cleanup sequence" and lists FASTSAVE as another name for CLEAN
+
+**Command / Area:** FASTSAVE, Help. LOW. WORDING.
+
+**Symptom:** FASTSAVE regenerates and saves by default (it cleans only if the also-clean switch is on). Help says "Runs lighter cleanup sequence", "May normalize object properties/layers", and lists FASTSAVE as an alias of CLEAN.
+
+**Expected behaviour:** Help says FASTSAVE regenerates and saves, and cleans only with the switch on.
+
+**Steps to confirm in AutoCAD:** (1) CEHELP, find FASTSAVE, read it. Right = regenerate and save. Wrong = lighter cleanup.
+
+**Test that catches it:** Source guard: the help text mentions the switch.
+
+**Reference:** Assets\Config\command-registry.json:4138, 4164 and 4168. Related BUG-620. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1449 — CEHELP opens already filtered by the last thing searched, so the list can be empty with "No matching command"
+
+**Command / Area:** CEHELP. LOW. DISCOVERY.
+
+**Symptom:** The window reopens with the last search text. If that text matches nothing now, the first thing the drafter sees is an empty list and "No matching command".
+
+**Expected behaviour:** The window opens with an empty search and the full list.
+
+**Steps to confirm in AutoCAD:** (1) Search "zzz" in CEHELP, close it, open it again. Right = full list. Wrong = empty list.
+
+**Test that catches it:** Fixture: LastSearch set; assert the list is not empty at open.
+
+**Reference:** UI\Dialogs\CommandHelpWindow.xaml.cs:43-49 and 101-107. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1450 — The 19 visible Foundations commands (FPFC, FSF, FST, BP and others) never appear in the CEHELP list
+
+**Command / Area:** CEHELP. LOW. DISCOVERY.
+
+**Symptom:** The tree shows only the categories Footings, Framing, Annotation, Scheduling, Tools and Admin. Commands in the Foundations group have a Foundations panel that the list does not show, so they appear only when typed exactly.
+
+**Expected behaviour:** Foundations is listed.
+
+**Steps to confirm in AutoCAD:** (1) Open CEHELP and look for FPFC. Right = listed under Foundations. Wrong = missing until typed.
+
+**Test that catches it:** Source guard: every panel name from GetRibbonPanelName is in CategoryOrder.
+
+**Reference:** UI\Dialogs\CommandHelpWindow.xaml.cs:16 and 110-143; Services\CommandRegistryService.cs:99-114. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1451 — CEHELP rewrites the settings file on every key typed in the search box, every tick and every Run
+
+**Command / Area:** CEHELP. LOW. PERFORMANCE and WEAR on the settings file.
+
+**Symptom:** Each keystroke in the search box saves the whole settings file. A crash or a second AutoCAD at that moment can leave the file half written.
+
+**Expected behaviour:** The search text is saved when the window closes.
+
+**Steps to confirm in AutoCAD:** (1) Watch the settings file's modified time while typing in the CEHELP search box. Right = unchanged until closing. Wrong = changes at every key.
+
+**Test that catches it:** Fixture: type five characters; assert one save.
+
+**Reference:** UI\Dialogs\CommandHelpWindow.xaml.cs:347-366 and 441. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
+
+## BUG-1452 — CEHELP "Run command" starts the selected command with no confirmation, including CLEAN, which saves
+
+**Command / Area:** CEHELP. LOW. UNEXPECTED ACTION.
+
+**Symptom:** Selecting CLEAN and pressing Run starts it at once, and CLEAN purges, changes layers and saves the drawing.
+
+**Expected behaviour:** A confirmation for commands that change or save the drawing.
+
+**Steps to confirm in AutoCAD:** (1) Select CLEAN in CEHELP and press Run. Right = a confirmation. Wrong = it starts.
+
+**Test that catches it:** Fixture: commands flagged as saving; assert a confirm step.
+
+**Reference:** UI\Dialogs\CommandHelpWindow.xaml.cs:409-421. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
+
+**Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Status:** OPEN
