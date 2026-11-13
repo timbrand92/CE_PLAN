@@ -227,3 +227,5 @@
   4. **QUEUE EMPTY.** Drafts standing: 2041, 2045, 2049, 2050, 2051, 2058, 2064, 2073, 2078, 2083, 2089, 2090. Open for the controller: the guard above; the BUG-1358 trim in `ProjectDataService.Rulebook.cs`.
 
 - **13 Nov 10:32, QUEUE EMPTY.** Nothing new since the 10:15 line: newest refill still 06:45, no review of my pull requests since 08:57 (2089 and 2090 are not yet reviewed; 2064 not re-reviewed at `dde7825e`), run rules unchanged. No build of mine is running and I hold no build lock. Waiting for the controller: the automatic guard from the audit, the BUG-1358 trim, or anything else.
+
+- **13 Nov 11:04, QUEUE EMPTY.** No refill since 06:45, no review of my pull requests since 08:57, run rules unchanged. No build of mine is running; no build lock held. One short question sent to the controller: which to start next, the automatic guard from the audit (test only) or the BUG-1358 trim. I start nothing until it answers.
