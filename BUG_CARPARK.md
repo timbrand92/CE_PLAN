@@ -20927,6 +20927,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
 
+**Note 2026-11-13 (lane trust-core-ribbon):** draft fix in pull request 2108 (with BUG-1430 and BUG-1438): STRSCHEDCREATE stops first on a layout tab or in REFEDIT with one plain line. Built and unit-tested only; not seen in AutoCAD. Status unchanged.
+
 **Status:** OPEN
 
 ## BUG-1425 — In a rotated UCS the schedule tables land away from the point clicked
@@ -21017,6 +21019,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
 
+**Note 2026-11-13 (lane trust-core-ribbon):** draft change in pull request 2109 (words only): the Help for the three schedule commands says what each asks and changes; STRSCHEDREFRESH stays marked expert (BUG-1432). Built and unit-tested only; not seen in AutoCAD. Status unchanged.
+
 **Status:** OPEN
 
 ## BUG-1430 — STRSCHEDREFRESH on a table CE did not make does nothing and prints nothing
@@ -21034,6 +21038,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Reference:** Services\ScheduleService.cs:328-331; Commands\UtilityCommands.cs:83. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
 
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Note 2026-11-13 (lane trust-core-ribbon):** draft fix in pull request 2108: STRSCHEDREFRESH and STRSCHEDSYNC say a picked table is not one of CE's schedule tables and change nothing. Built and unit-tested only; not seen in AutoCAD. Status unchanged.
 
 **Status:** OPEN
 
@@ -21180,6 +21186,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Reference:** Commands\UtilityCommands.cs:92-96; Services\ScheduleService.cs:349-361 (no pre-flight). Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
 
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Note 2026-11-13 (lane trust-core-ribbon):** draft fix in pull request 2108: STRSCHEDSYNC makes the read-only stop before any question. Built and unit-tested only; not seen in AutoCAD. Status unchanged.
 
 **Status:** OPEN
 

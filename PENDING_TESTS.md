@@ -2148,3 +2148,11 @@ Test on a COPY, AutoCAD 2027, a build that contains the branch. Nothing here is 
 2. **R1, P1, FJ1 (PR 2104, BUG-1373, 1374):** pick a bay 3 degrees off horizontal: a line says the marker was drawn exactly horizontal and how far off it was. Where auto placement moves the marker: a line says how far. A square bay with nothing in the way: no line.
 3. **AB, BB, BT1 (PR 2105, BUG-1380, 1381):** AB with the second point 0.6 degrees off horizontal: a line says the brace was set square. In a drawing with layer 25CONT purged first: a line says the layer was added.
 4. **Support rotation (PR 2106, BUG-1421):** rotation preview off in Settings, place C1: "Type the rotation angle." with no apology. Preview on: unchanged.
+
+
+## Structural schedule commands, PRs 2108 and 2109 (DRAFT, built and unit-tested only) — 13 Nov 2026
+
+Test on a COPY, AutoCAD 2027, a build that contains the branch. Nothing here is installed or accepted. Nothing the schedules draw or write changes.
+
+1. **Stops and lines (PR 2108, BUG-1424, 1430, 1438):** on a layout tab type STRSCHEDCREATE: one stop line, nothing asked. On a read-only copy STRSCHEDSYNC: the read-only line. Pick an ordinary table with STRSCHEDREFRESH and with STRSCHEDSYNC: "That table is not one of CE's schedule tables ... changed nothing."
+2. **Help words (PR 2109, BUG-1429):** CEHELP or the ribbon hover for STRSCHEDCREATE, STRSCHEDREFRESH and STRSCHEDSYNC read as: three tables at the point you pick; one table brought up to date; edits written back to the symbols (tie-down table not).
