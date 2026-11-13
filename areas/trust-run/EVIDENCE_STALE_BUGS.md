@@ -106,3 +106,17 @@ AutoCAD closed with the driver's quit; lock released; the four settings files by
 1. **CDLPD.** Copy `CLDTP_LPD2.dwg` (standard drawing, 11 pits, 49 pipes, an LPD already stored on the council stub). Polyline on layer 0, handle 11C55B, 150000,-250000 to 170000,-250000 to 170000,-240000. CDLPD window "Creative Engineering | Legal point of discharge (CDLPD)". Driver: "window ... is not on the V2 press / set allow-list" and "no button 'Continue in drawing' that is on the v3 press list". Closed with its Close button. Record before 600,382 characters, version 2.2; after 600,382, version 2.3; pits 11, pipes 49 both times.
 2. **CDRUNSOLVE.** Copies `CLDTP_RS1.dwg` (LPD kept) and `CLDTP_RS2.dwg` (LPD dictionary removed by me through AutoCAD's automation on the copy). New pipes drawn with CD: record order #50 P10->P9 (no levels), #51 P10->P4 (17.88 / 17.40, set by CD). Start pit picked on P10's outline (54436.3,-69718.6; a pick at its centre hit a pipe end: "That is not a pit"). Result lines quoted above, identical on both copies; record size unchanged before and after each run (604,436 and 604,216 characters).
 3. **Where the robot stops (for whoever repeats this):** CDLPD needs "Continue in drawing" pressed (a person or Codex); CDRUNSOLVE's end-pit pick needs a mouse click on the pit (typed points on the 900 mm pit blocks are refused); the driver's `answer` cannot reach CDRUNSOLVE's questions (they reach the log only after they are answered), so all answers were chained in one typed line.
+
+## Added Sat 14 Nov 01:05 (PC clock): pull request 2099 (BUG-1298, CDLPD takes only a CE pipe) at head 9c3f088e
+
+**FOR TIM**
+
+1. **SEEN BEFORE: COULD NOT TEST.** On the installed build the robot gets as far as CDLPD's window and stops: it may not press "Continue in drawing" (Fri/Sat night 23:47, above).
+2. **CORE CONSOLE AFTER: COULD NOT TEST.** CDLPD only works through its window, and the core console has no windows.
+3. **REAL AUTOCAD AFTER: needs the batch install, and a person (or Codex) to press "Continue in drawing".** Three things to check then, on a copy: a plain line on layer 0 clicked as the pipe gives "[CE] That line is not a CE pipe, so it cannot be the LPD pipe. Nothing was changed. Run CDLPD again and pick a CE pipe, a pit or a block, or choose to pick a point." with no marker, no note and no LPD stored; a real CE pipe sets the LPD as before; an older polyline on a CE pipe layer is accepted.
+4. **What IS shown:** the head builds (0 errors), and the new wording is inside the built program file. That proves the words are there, not that the check works.
+
+**DETAIL**
+
+1. Built in my own folder from `9c3f088e` (Civil net10, Release, SkipDevBundle), snapshot `C:\CE_WORK\scratch\trustprobe\build_s2099`, DLL `3.0.90+9c3f088eb81dc2fe00817b3e5378ceb40ca00c39`, SHA-256 `811E803E7D1C92AEAE8949F3551B6ED82C1C628F21C45464E479929A3371BD1E`. This is the net10 DLL only, for the batch's own payload build to use as a cross-check; it is not an install package.
+2. The builder's own figures (not re-run here): 287 of 287 unit tests, both broken twins fail.
