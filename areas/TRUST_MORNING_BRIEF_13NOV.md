@@ -16,6 +16,12 @@
 10. **No .bak to fall back on:** AutoCAD keeps no .bak files on this PC (ISAVEBAK is 0), but CE's own `_PRE_C7_` copy beside the drawing held the original.
 11. **The fix, pull request 2073,** is drafted and has GO for testing on copies, and so does the last door, pull request 2083 (a change to CE's record is refused when it belongs to another drawing). Neither has run in AutoCAD; neither is installed.
 
+## Second: CLEAN and FASTSAVE can save over a template
+
+1. **What happens:** in a new drawing made from a template and never saved, CLEAN or FASTSAVE saves straight into the template file with no question, so later drawings from that template start with that job's content (BUG-1457).
+2. **Seen in real AutoCAD on your installed build,** on a copy of a template only; your real template was not touched (same fingerprint).
+3. **Safe habit:** save a new drawing with its own name before running CLEAN or FASTSAVE.
+
 ## What ran overnight
 
 1. **Builders:** 53 trial changes built as drafts (counted on GitHub at 09:57), none merged, none installed, none set to merge by itself.

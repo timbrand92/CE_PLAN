@@ -21490,3 +21490,22 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Steps to confirm the fix in AutoCAD:** (1) open test job A and run CDDIAG; (2) open test job B, which has different pits; (3) straight away type CDHELP, close the window; (4) open the Pit Schedule in B: right = B's own pits, not A's; (5) open a blank drawing, type CDS, close it, then close the drawing: right = no "save changes?" question. Not yet known: what a later tool does with the wrong record, and what happens if the contaminated drawing is saved (the robot never saved).
 
 **Status:** OPEN. Found by test on the installed build 13 Nov 2026.
+
+
+## BUG-1457 — CLEAN and FASTSAVE in a drawing that has never been saved save straight over the template file it was made from
+
+**Command / Area:** CLEAN and FASTSAVE, Structural 1.0.126 (commit 8de95c34), AutoCAD 2027. HIGH; DATA: an office template can be overwritten, so every later drawing made from it starts with that job's content. SEEN in real AutoCAD by the robot on the installed build, on a scratch copy of AutoCAD's own metric template only. Evidence: `areas\trust-run\EVIDENCE_CLEAN_TEMPLATE.md`. Not Codex-looked, not seen by Tim. Earlier listed as "not confirmed, needs a robot probe" in `areas\trust-run\STRUCTURAL_FAULTS_NOT_CONFIRMED.md`; the probe has now confirmed it.
+
+**Symptom:** the drafter starts a new drawing from a template (it is still called Drawing1 and has never been saved) and runs CLEAN or FASTSAVE before using Save As. Nothing is asked. The command says it saved, the drawing is renamed after the template file, and the template file now holds that drawing. Seen: CLEAN took a template copy from 31,825 to 33,398 bytes; FASTSAVE took another copy from 31,825 to 32,022 bytes (fingerprints changed). FASTSAVE printed "saved <template name>.dwt". The next new drawing made from that template starts with the job's content.
+
+**Expected behaviour:** in a drawing that has never been saved, CLEAN and FASTSAVE do not save. They say "Save the drawing with a name first" and stop (the clean-up part may still run), or open AutoCAD's own Save As. They never write to a template file.
+
+**Cause (from the code, consistent with what was seen; the run did not trace it further):** `CleanPipelineService` runs its QSave stage through CE's managed save, `DrawingAutoSaveService.TrySaveNow`; for an unnamed drawing that save takes the drawing's template file as its name and `DrawingAutoSaveService.cs:198` calls `db.SaveAs(drawingPath, ...)` on it. `DrawingSafetyService.TryGetNormalProjectDrawing` only refuses the `.sv$` and `.ac$` autosave names, so nothing stops it. AutoCAD's own QSAVE would have asked for a name.
+
+**Until it is fixed, the safe habit:** save a new drawing with its own name before running CLEAN or FASTSAVE.
+
+**A test that catches it:** a made-up template file; start a new drawing from it (never saved); run CLEAN; the template file's size, date and fingerprint must be exactly as before and the drawing must still be unnamed. Repeat with FASTSAVE. Also run both after Save As with a real name: they must save into that file. A deliberately faulty version that saves to the template must fail.
+
+**Steps to confirm the fix in AutoCAD, on a COPY of a template only (never the office template):** (1) copy a template to a scratch folder and note its size and date; (2) start a new drawing from the copy and draw one line, do not save; (3) type CLEAN: right = a plain line saying to save with a name first (or AutoCAD's Save As opens), the title bar still says Drawing1; (4) repeat with FASTSAVE; (5) check the template copy: right = same size and date as in step 1; (6) now Save As with a real name and run CLEAN and FASTSAVE: right = both save into that file.
+
+**Status:** OPEN. Seen on the installed build, 13 Nov 2026, on a template copy; Tim's real template untouched (same hash).

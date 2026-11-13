@@ -5,6 +5,7 @@ Written Fri 13 Nov 2026 by the records helper for the controller chat. Source li
 ## Not confirmed (1)
 
 1. **Schedules item 23, CLEAN and FASTSAVE saving a never-saved drawing over its template (listed as HIGH).** Found in the code: nothing stops CLEAN or FASTSAVE on a drawing that has never been saved. `DrawingSafetyService.TryGetNormalProjectDrawing` only refuses the `.sv$` and `.ac$` autosave names, and `DrawingAutoSaveService.cs:198` calls `db.SaveAs(drawingPath, ...)` on whatever path it was given. What the code cannot show is whether AutoCAD 2027 gives a never-saved drawing's path as the template file; that decides whether a template is overwritten. Needs one robot probe (new drawing from the office template, run CLEAN, check the template file's date). If the probe shows the template changes, file it as HIGH, lost work. If it shows a Drawing1 path, file a LOW wording entry only.
+   - **Fri 13 Nov 2026 11:29 (PC clock): now confirmed.** The robot probe on the installed build (1.0.126) showed both CLEAN and FASTSAVE save a never-saved drawing over its template file. Filed as BUG-1457 (HIGH). Evidence: reas/trust-run/EVIDENCE_CLEAN_TEMPLATE.md.
 
 ## Already in the bug file (2), not filed again
 
