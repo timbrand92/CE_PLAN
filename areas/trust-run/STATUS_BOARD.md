@@ -1,13 +1,13 @@
 # Trust run status board
 
-**Rebuilt 2026-11-13 16:00 PC clock by lane trust-struc-mgr-plan, after the review `reviews\status-board-check.md` (FIX FIRST, eight corrections). Counted from GitHub (open draft pull requests whose branch names contain "trust" or "bug-1456") and from the files named at the end. Nothing here is installed or accepted. Rebuilt at every check-in until told otherwise.**
+**Rebuilt 2026-11-13 19:00 PC clock by lane trust-struc-mgr-plan, after the review `reviews\status-board-check.md` (FIX FIRST, eight corrections). Counted from GitHub (open draft pull requests whose branch names contain "trust" or "bug-1456") and from the files named at the end. Nothing here is installed or accepted. Rebuilt at every check-in until told otherwise.**
 
 ---
 
 # FOR TIM
 
 1. **Trial changes built as drafts:** 73 open on GitHub (pull requests 2038 to 2110). None merged, none installed.
-2. **Latest review verdict:** 49 fit for the robot to test on copies, 2 to fix first (2053, 2089), 22 not reviewed yet (2087, 2088, 2091, 2092, 2093, 2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110).
+2. **Latest review verdict:** 49 fit for the robot to test on copies, 3 to fix first (2053, 2089, 2100), 21 not reviewed yet (2087, 2088, 2091, 2092, 2093, 2094, 2095, 2096, 2097, 2098, 2099, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110).
 3. **Moved on GitHub since their last review, verdict not re-confirmed:** 10 (2071, 2072, 2076, 2079, 2080, 2081, 2083, 2086, 2089, 2090).
 4. **Any real evidence on the trial builds themselves:** 5 of 73 (2040, 2041, 2045, 2049, 2050), all from the core console; none from a window, the ribbon or a drawing opening in full AutoCAD. For 2073 only the fault it cures has been seen.
 5. **Still owed by every one:** the robot on copies in full AutoCAD, a Codex look where something is seen, and your trial; that waits on question 0 (where trial builds may be seen). Some rows owe more first; each row says.
@@ -67,7 +67,7 @@
 36. **Pull request 2092: CDRUNSOLVE never guesses which branch to follow (BUG-1355).** Verdict: not reviewed; GitHub head 0f496074, not reviewed yet. Evidence: None. Owed: a review first.
 37. **Pull request 2093: CDRENUMBER names the pits not joined to the outlet before you say Yes (BUG-1306).** Verdict: not reviewed; GitHub head d0806ac9, not reviewed yet. Evidence: None. Owed: a review first.
 38. **Pull request 2099: CDLPD takes only a CE pipe as the LPD pipe (BUG-1298).** Verdict: not reviewed; GitHub head c788a0ea, not reviewed yet. Evidence: None. Owed: a review first.
-39. **Pull request 2100: Job mix-up follow-up (BUG-1456): a guard on every routine outside the record service that saves or edits CE's record.** Verdict: not reviewed; GitHub head 364ccc4e, not reviewed yet. Evidence: None. Owed: a review first.
+39. **Pull request 2100: Job mix-up follow-up (BUG-1456): a guard on every routine outside the record service that saves or edits CE's record.** Verdict: FIX FIRST (2026-11-13 17:46); reviewed head 364ccc4e, same on GitHub. Evidence: None. Owed: fix the review list, then the robot on copies.
 40. **Pull request 2101: CDLPD says when no note was drawn and keeps the earlier note linked (BUG-1301).** Verdict: not reviewed; GitHub head dc5b17ea, not reviewed yet. Evidence: None. Owed: a review first.
 41. **Pull request 2103: CDWT's command line says when tanks or plan blocks are left out (BUG-1317).** Verdict: not reviewed; GitHub head fda04e40, not reviewed yet. Evidence: None. Owed: a review first.
 42. **Pull request 2107: Pit Schedule Export CSV says plainly when the file cannot be written (BUG-1342).** Verdict: not reviewed; GitHub head 320dcdcb, not reviewed yet. Evidence: None. Owed: a review first.
@@ -128,7 +128,7 @@
 
 ## Where these come from
 
-1. **The list and the GitHub heads:** `gh pr list --state open --draft` on the plugin repository at 2026-11-13 16:00, branches containing "trust" or "bug-1456".
+1. **The list and the GitHub heads:** `gh pr list --state open --draft` on the plugin repository at 2026-11-13 19:00, branches containing "trust" or "bug-1456".
 2. **Verdicts, times and reviewed heads:** the latest line per pull request in `areas\trust-run\trust-review.md`, including "re-reviewed at" heads and the 06:21 re-read of 2038, 2043, 2047 and 2051 (GO holds at their new heads).
 3. **What each row owes beyond the robot:** the review files in `areas\trust-run\reviews\` and `reviews\status-board-check.md`.
 4. **Evidence:** `areas\trust-run\EVIDENCE_BRANCHES.md`, `EVIDENCE_READER.md`, `EVIDENCE_CROSS_DRAWING.md`, `EVIDENCE_STALE_BUGS.md`. Fixes seen on the installed build (BUG-650, BUG-968, BUG-290) are not trial changes; they are on the morning page.
