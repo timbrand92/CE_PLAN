@@ -121,3 +121,49 @@
 3. Anything in AutoCAD: the A/B question as AutoCAD shows it, the preview window words, CLEAN or FASTSAVE on a template, CDLPD's refusal.
 4. Whether the robot's driver can send a single letter at a CE prompt.
 5. AutoCAD 2022 to 2024 (net48) for all three.
+
+---
+
+# PR 2094 (BUG-1457), third look: `226edc6c` to `2205dfde` (Sat 14 Nov 2026, 01:38 PC clock)
+
+**Verdict: BATCH-READY.** Read only: `git diff 226edc6c..2205dfde`, `CleanPipelineService.Run`, `TryFallbackSave` and `EmitSummary` and the whole of `DrawingSaveGuard.cs` read at `2205dfde`, compared with installed `8de95c34`. No build, no test run, no AutoCAD, nothing merged or pushed to the plugin repo, no GitHub comment.
+
+## 1. The safety-net save can no longer run for a template or standards file
+
+1. **Decided once** (`CleanPipelineService.cs:75`), right after the never-saved stop and before any step or save: `isTemplateFile` from the same `CheckDocument` the save step uses; `templateNotSaved` starts from it (`:96`).
+2. **Normal path:** the save step still refuses on its own check (`:173-179`); the safety net is skipped by `if (!qsaveDone && !templateNotSaved)` (`:204`).
+3. **Error outside a step, before the save step:** `templateNotSaved` is already true, so the safety net is skipped. Errors inside a step are caught by the step itself and the run carries on to the save step, which refuses.
+4. **Error before the `try`** (taking the settings snapshot, opening the undo group): it leaves the command with nothing saved, as installed. Safe.
+5. **Undo group:** closes in `finally` as before; nothing about it touches the save.
+6. **CLEAN and FASTSAVE:** one method, one path (`LegacyPortCommands.cs:12,15`). The safety net keeps its own template check (`:295-299`), and the managed save refuses too (first review), so a template is never written even if the flag were wrong.
+
+## 2. Every last line is now true
+
+1. **Template opened on purpose, CLEAN (or FASTSAVE with tidy-up on):** summary "N steps done, 0 failed, drawing not saved" (no "simpler clean-up", no "Fallback Save" step line); last line "CE cleaned it but did not save it; use QSAVE if you meant to change it". True.
+2. **Template, FASTSAVE with tidy-up off (the default):** only the regen runs; last line "FASTSAVE did not save it and cleaned nothing". True.
+3. **Template, error outside a step:** "This is a template or standards file (.dwt or .dws), so CE did not save it. Use Save As to give it a job name." True, no "cleaned", not the loud warning.
+4. **Never-saved drawing:** stopped first by `StopIfSaveUnsafe` with the plain Save As line, nothing cleaned or saved; unchanged since the last review.
+5. **Normal saved drawing:** the guard says Ok, so `isTemplateFile` and `templateNotSaved` are false and the safety net, summary and "saved <file>" or loud warning are exactly as installed `8de95c34` (the only difference is a DWGTITLED read that cannot throw).
+
+## 3. Messages, writes, settings
+
+1. **No line invites saving over the template unasked.** The loud "Save it yourself now" warning can no longer appear for a template. The normal template line says "use QSAVE if you meant to change it": conditional, and it is the DRAFT default still waiting for Tim (clean and leave unsaved, or refuse).
+2. **Nothing written on refusal; no new setting** (the FASTSAVE switch read is the existing one); no jargon in what the drafter reads.
+
+## 4. Tests and merge
+
+1. **The new tests fail on `226edc6c`:** `TemplateFinalLine` does not exist there (the line test cannot compile), `isTemplateFile` is absent (the decided-once test fails), and the changed anchor in `CleanSavesAgainTests` looks for the new condition.
+2. **What they exercise:** the line test calls the real `TemplateFinalLine`. The other two are source-text checks (order, the skip sitting directly above the safety-net call, the error flag). `Run` itself cannot be run without AutoCAD, so this is the most a unit test can do.
+3. **`git merge-tree --write-tree 8de95c34 2205dfde`:** clean (tree `32396ce7`; `8de95c34` is an ancestor).
+
+## 5. Not blocking (tidy later)
+
+1. **A step that fails inside the clean-up** (for example the purge) is counted as a failed step, not as an error, so CLEAN on a template still says "CE cleaned it" while the summary shows "1 failed". Mostly true; the summary tells the rest.
+2. **The two template lines give different advice** (QSAVE normally, Save As after an error). Both are true; settle with Tim's open choice.
+3. **Summary step line** still reads "OK QSave - not saved (template or standards file)". Cosmetic.
+4. **`REGRESSION_LOG.md` item 6** still speaks of the removed inventory test (item 10 corrects item 3 only).
+
+## 6. Could not verify
+
+1. A build or test run at `2205dfde` (the pull request comment says 390 related tests pass on net10, net8 and net48 build clean, SkipDevBundle).
+2. Anything in AutoCAD: CLEAN or FASTSAVE on a scratch copy of a template, the summary and last lines as AutoCAD prints them, AutoCAD 2022 to 2024.
