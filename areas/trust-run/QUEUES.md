@@ -214,6 +214,16 @@
 
 **trust-acad-evidence, next:** finish the tab-switch and other-commands runs for BUG-1456, close the AutoCAD you started by 8:10am and write that it is closed; then (core console, any time) pull request 2073's check, then 2078 when it has GO.
 
+### STANDING REFILL, Fri 13 Nov 11:35 PC clock (controller): builders refill themselves
+
+Two lanes sat idle for two hours this morning waiting for the controller. From now on a builder with an empty queue does NOT wait:
+
+1. **trust-safety-fixes:** when your queue is empty, take the next five unfixed faults yourself from `areas\trust-run\BUGS_BY_CORE_TOOL.md`, section "Added 13 Nov from the code read" (BUG-1297 to BUG-1360), the ones marked HIGH or that lose or hide data first, then in ribbon order. Verify each in the installed code first; one small draft each; a test that fails without the fix through the real code path. Write the five you took in your status file before starting. Skip anything that changes an engineering figure: list it for Tim instead.
+2. **trust-core-ribbon:** the same from `areas\trust-run\BUGS_BY_STRUCTURAL_CORE_TOOL.md`, section "Added 13 Nov from the code read" (BUG-1361 to BUG-1455), HIGH first. Never change a bracing total, a size or a schedule figure: where the fault is a wrong figure, make the tool SAY what it did and list the rule for Tim.
+3. **trust-foundations:** after your assigned items, the next item is always the review lane's newest FIX FIRST on your pull requests; then the next "not covered, why" line in your own step 5 and step 6 pull requests.
+4. **Every builder:** review fixes on your own pull requests come before new work. Five new drafts at most between check-ins, so the review lane can keep up.
+5. **trust-acad-evidence:** today your only job is `areas\trust-run\INSTALL_TRIAL_13NOV.md` until its end state is proven.
+
 ### trust-struc-mgr-plan (planning only)
 1. `areas\trust-plan-structural.md` and `areas\trust-plan-manager.md` (its brief).
 2. Draft cards, in the TRUST card shape, for the first three Structural steps and for "going back a version, rehearsed" in Manager.
