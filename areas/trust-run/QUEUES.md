@@ -238,3 +238,20 @@ Two lanes sat idle for two hours this morning waiting for the controller. From n
 1. In `areas\TRUST_CORE_TOOLS_FIRST_CHECK_12NOV.md`: look up the eleven bug numbers with no title (686, 685, 674, 677, 680, 681, 683, 693, 691, 692, 690) in `BUG_CARPARK.md` and report each one's title and status line to `areas\trust-run\trust-records.md`. Do not edit the first-check file.
 2. Scan every file in area TRUST (the `TRUST*` and `trust-*` files in `areas\`, and the TRUST cards) for: tables; paragraphs longer than three lines in the FOR TIM parts; the words on the reviewer's jargon list in `areas\TRUST_PLAN_REVIEW_12NOV.md`; lines that still say OPEN for a question answered in `areas\TRUST_PLAN_INTERVIEW_12NOV.md`. Report file and line; change nothing.
 3. Build `areas\trust-run\BUGS_BY_CORE_TOOL.md`: for each of the 47 core commands, the open bug numbers and their one-line titles from the carpark index. Copy, do not judge.
+
+## PROVE, DON'T DRAFT (Tim, Sat 14 Nov 2026 00:22). Replaces every queue and refill above.
+
+Rule text: `areas\TRUST_AUTONOMOUS_RUN_12NOV.md`, last section. No lane starts a new draft. One tool at a time, in this order. **DRAFT order by the controller, for Tim to replace with his own ten:**
+
+1. **Two jobs mixed up (CDHELP, CDS; BUG-1456).** Installed and robot-proven on Tim's PC. Left: Codex look, Tim's acceptance. Owner: controller.
+2. **CLEAN and FASTSAVE (BUG-1457).** Draft 2094, GO with five fixes. Owner: trust-core-ribbon (fixes), trust-acad-evidence (see it on scratch copies).
+3. **CDLPD (BUG-1298).** Draft 2099, GO with two fixes. Owner: trust-safety-fixes, then evidence.
+4. **CDRUNSOLVE (BUG-1355).** Draft 2092, FIX FIRST. Owner: trust-safety-fixes, then evidence.
+5. **Edit Pit (changes on Cancel, made-up values).** Existing drafts only (2064 and the step 6 draft 2049). Owner: trust-foundations, then evidence.
+6. **Pit Schedule (plastic pits left out, BUG-1274; Export CSV, draft 2107).** Owner: trust-safety-fixes, then evidence.
+7. **Renumber (BUG-968).** Seen fixed on the installed build. Left: Codex look, Tim's acceptance.
+8. **Floor waste tool (BUG-650).** Seen fixed on the installed build. Left: Codex look, Tim's acceptance.
+9. **Structural bracing schedule (BUG-497, 498, 499).** Existing drafts only. Owner: trust-core-ribbon, then evidence.
+10. **Structural supports linked to beams (draft 2096, FIX FIRST).** Owner: trust-core-ribbon, then evidence.
+
+**Lanes now:** builders work only on the review fixes for the tool in hand (items 2 to 4 first), in their Sat 14 Nov 08:00 slot. trust-acad-evidence sees each one on scratch copies when its fixes are in. trust-struc-mgr-plan: one board rebuild a day at 6:00pm, showing these ten first. Reader, test-cases, records helpers: stopped. Review helper: only for a changed head of the tool in hand.
