@@ -622,3 +622,7 @@ flowchart TD
 ## Added Fri 13 Nov 19:48, from the review of the template fix (BUG-1457, pull request 2094)
 
 1. **When you open a template (.dwt) on purpose and run CLEAN, what should happen?** The drafted fix refuses outright. AutoCAD's own save would save it. Recommended: **CLEAN still cleans, does not save, and says so in one line** (your 4 Sep rule: nothing restricts users unless really serious). Other choices: refuse as drafted; or clean and save as AutoCAD would. The same answer would apply to a standards file (.dws). NOT ANSWERED.
+
+## Added Sat 14 Nov 00:30, from the robot lane
+
+1. **May the robot press CDLPD's "Continue in drawing" button on scratch copies?** Its press list is a safety limit and does not include it, so the robot cannot test CDLPD past its window. Recommended: **yes, for CDLPD on scratch copies only.** NOT ANSWERED.
