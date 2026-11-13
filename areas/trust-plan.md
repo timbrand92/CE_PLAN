@@ -291,3 +291,4 @@ The plugin does not own the drawings, so most do not apply (15.9). Stated, not s
 4. **Way back:** estore_stateB.ps1 in C:\CE_WORK\scratch\trust_install with AutoCAD closed; the morning's 2,922 files are kept in BEFORE_13NOV. Record: reas\trust-run\INSTALL_TRIAL_RESULT_13NOV.md.
 5. **Colleagues:** nothing sent. They still have the fault. That is Tim's decision.
 6. **Also seen on the installed build and NOT fixed on his PC:** BUG-1457, CLEAN and FASTSAVE save into the template file in a never-saved drawing.
+7. **One related route still open on 3.0.90.2, by reading only:** CDJOINT run first in a second open job can put that job's slab and joint list into the first job's CE data (slabs and joints only). Fix drafted in pull request 2100, not reviewed, not installed. Detail: reas\trust-run\INSTALL_TRIAL_RESULT_13NOV.md, last section.

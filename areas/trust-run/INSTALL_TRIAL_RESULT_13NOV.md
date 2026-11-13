@@ -22,3 +22,11 @@
 5. **CE log:** in every trial start, the right version line, no "[BUG-1456]" refusal line, no ERROR, no load failure or version mismatch. End check 15:12: AutoCAD started on a copy, "CE_CVL_SUITE v3.0.90.2 Started", "Standalone CE Civil ribbon built: CE (9 panels)", the CE, Manager and Structural menu groups loaded, Help opened and closed, AutoCAD closed.
 6. **Backups kept:** `C:\CE_WORK\scratch\trust_install\BEFORE_13NOV\` (2,922 files, rechecked by hash at 15:11, bad 0); in ApplicationPlugins `CE_CVL_SUITE_PRE_cf059dcf_20261113-123246.backup` (3.0.90) and `CE_CVL_SUITE_PRE_0f6caa40_20261113-134421.backup` (3.0.90.1); candidates `C:\ce_rc_scratch\t13a` (3.0.90.1) and `t13b` (3.0.90.2).
 7. **Not done today (controller, 13:44):** Trials B, C and D. Pull requests 2089, 2090 and 2100 are not on the PC.
+
+## Added by the controller, Fri 13 Nov 16:20: one related route is still open on 3.0.90.2
+
+1. **By reading the code only, NOT seen in AutoCAD:** with two jobs open, if CDJOINT is the first CE tool run in the second job, the second job's slab and joint list can be put into the first job's CE data, and the first job's next CE save writes it in. Slabs and joints only; pits and pipes are not touched. The two changes on Tim's PC do not stop it.
+2. **A fix is drafted** (pull request 2100), not reviewed, not installed.
+3. **Cautious habit until it is tested:** with two jobs open in one AutoCAD, do not make CDJOINT the first CE tool you run in the second job.
+4. **Also still open, but not reachable on Tim's PC:** the CE Assistant pipe-size route (that feature is switched off on his PC; closed in draft pull request 2089, which needs a fix first).
+5. **Owed:** one robot run of the CDJOINT sequence on 3.0.90.2 as it stands.
