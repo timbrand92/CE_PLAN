@@ -14,7 +14,7 @@
 8. **How to spot one today:** the Pit Schedule shows pits that are not on the plan, or Check Current Drawing shows far more items than you expect (seen: 82 against 48).
 9. **How to get your own data back:** one U straight after closing Help or Settings puts it back. The file on disk is untouched until you save over it.
 10. **No .bak to fall back on:** AutoCAD keeps no .bak files on this PC (ISAVEBAK is 0), but CE's own `_PRE_C7_` copy beside the drawing held the original.
-11. **The fix, pull request 2073,** is drafted and has GO for testing on copies, and so does the last door, pull request 2083 (a change to CE's record is refused when it belongs to another drawing). Neither has run in AutoCAD; neither is installed.
+11. **The fix, pull request 2073,** is drafted and has GO for testing on copies, and so does the last door, pull request 2083 (a change to CE's record is refused when it belongs to another drawing). Neither has run in AutoCAD; neither is installed. **Overtaken, Fri 13 Nov afternoon:** with Tim's word for that day only, both were installed on his PC as Civil 3.0.90.2 and the robot passed 20 of 20; not yet accepted. See `areas\trust-run\INSTALL_TRIAL_RESULT_13NOV.md`.
 
 ## Second: CLEAN and FASTSAVE can save over a template
 
@@ -51,7 +51,7 @@
 
 ## Not touched
 
-1. **Your installed CE** (Civil 3.0.90, Manager 1.1.89, Structural 1.0.126): nothing was installed. The controller re-checks the files before 8am.
+1. **Your installed CE** (Civil 3.0.90, Manager 1.1.89, Structural 1.0.126): nothing was installed. The controller re-checks the files before 8am. **Overtaken, Fri 13 Nov afternoon:** Civil is now 3.0.90.2 (the mix-up fix only, installed with Tim's word); Manager and Structural unchanged.
 2. **Colleagues:** nothing sent, no pilot folder changed.
 3. **The lines that ship:** nothing merged.
 4. **Your working hours:** from 8:20am to 2:00pm and 3:00pm to 5:30pm on weekdays, no lane builds, tests or runs AutoCAD on this PC (run file section 3b).
