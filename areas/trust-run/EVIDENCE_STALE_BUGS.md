@@ -120,3 +120,22 @@ AutoCAD closed with the driver's quit; lock released; the four settings files by
 
 1. Built in my own folder from `9c3f088e` (Civil net10, Release, SkipDevBundle), snapshot `C:\CE_WORK\scratch\trustprobe\build_s2099`, DLL `3.0.90+9c3f088eb81dc2fe00817b3e5378ceb40ca00c39`, SHA-256 `811E803E7D1C92AEAE8949F3551B6ED82C1C628F21C45464E479929A3371BD1E`. This is the net10 DLL only, for the batch's own payload build to use as a cross-check; it is not an install package.
 2. The builder's own figures (not re-run here): 287 of 287 unit tests, both broken twins fail.
+
+## Added Sat 14 Nov 01:15 (PC clock): pull request 2092 (BUG-1355, CDRUNSOLVE at a split) at head d686e787
+
+**FOR TIM**
+
+1. **SEEN BEFORE (real AutoCAD, installed 3.0.90.2, 00:10 to 00:23):** at pit P10 with two pipes leaving it, CDRUNSOLVE went down the first one listed (P10 to P9, a dead end) instead of the leg to the end of the network. Written above.
+2. **CORE CONSOLE AFTER: SEEN WORKING.** The builder's new check lays out the same pits and pipes in the same order (P10 to P9 listed first, then P10 to P4, on to P3, P2, P1, C1) and runs CDRUNSOLVE's real route-finding. On the fixed build:
+   1. Enter at the end-pit question: the run stops at P10 and names both pipes (it no longer guesses).
+   2. End pit C1 picked: the run follows P10 to P4 to P3 to P2 to P1 to C1.
+   3. Asked which way at P10 ("to P9, to P4"), choosing P4: it follows on to C1.
+   4. Esc at that question: it stops at P10 and changes nothing.
+3. **The same check on your installed 3.0.90.2 FAILS, as it should:** with no end pit it goes P10 to P9; **even with end pit C1 picked it still goes P10 to P9**; and it cannot ask which way. So the fault is worse than the run in AutoCAD could show (there my typed end-pit picks were refused).
+4. **REAL AUTOCAD AFTER: needs the batch install.** On a copy of the same layout: Enter at the end pit, then answer B at the new "Which way does the run go? A = to P9, B = to P4" question: the run goes P10 to P4 and on; Esc changes nothing. The question wording is a DRAFT for you.
+
+**DETAIL**
+
+1. Built from `d686e787` in my own folder (Civil net10, Release, SkipDevBundle, 0 errors): `C:\CE_WORK\scratch\trustprobe\build_s2092`, DLL `3.0.90+d686e78774066c1ed21f855d0971dd753f6d03d3`, SHA-256 `0B0AD26F4438562F8B0B02262D0E7B1BACF443C1CA90735963315B41AB5603BF`.
+2. Check `CEPROOFRUNSPLIT` (RUNSOLVE-SPLIT-01), harness at the same head, AutoCAD 2027 core console, nothing installed. Fixed build 01:11: `PASS`. Installed copy (`3.0.90.2+5c89ce30`, the Modern lane copied to scratch) 01:11: `FAIL`, detail "Enter at the end-pit question: P10 -> P9; end pit C1: P10 -> P9; asked and chose to P4: (this build cannot ask)". Evidence folders `%TEMP%\ce-headless-proof\run-20261114-011115` and `run-20261114-011126`.
+3. The check builds the pit and pipe records in memory and runs the real walk; it does not draw, show the preview window or write levels. The preview wording change (no "connection pit", no "council assets untouched" when the run stops at a split) is NOT seen.
