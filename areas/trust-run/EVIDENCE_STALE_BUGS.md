@@ -130,7 +130,7 @@ AutoCAD closed with the driver's quit; lock released; the four settings files by
    1. Enter at the end-pit question: the run stops at P10 and names both pipes (it no longer guesses).
    2. End pit C1 picked: the run follows P10 to P4 to P3 to P2 to P1 to C1.
    3. Asked which way at P10 ("to P9, to P4"), choosing P4: it follows on to C1.
-   4. Esc at that question: it stops at P10 and changes nothing.
+   4. Enter at that question (the check's fourth case is Enter, not Esc): it stops at P10 and names both pipes. **Correction 14 Nov 01:40 (second review):** the check gives CE's route-finding a chosen leg; it does NOT run CDRUNSOLVE's own "Which way does the run go? A / B" question, and Esc was not tried. The question, A, B, Enter and Esc are for the real-AutoCAD passes after the batch install.
 3. **The same check on your installed 3.0.90.2 FAILS, as it should:** with no end pit it goes P10 to P9; **even with end pit C1 picked it still goes P10 to P9**; and it cannot ask which way. So the fault is worse than the run in AutoCAD could show (there my typed end-pit picks were refused).
 4. **REAL AUTOCAD AFTER: needs the batch install.** On a copy of the same layout: Enter at the end pit, then answer B at the new "Which way does the run go? A = to P9, B = to P4" question: the run goes P10 to P4 and on; Esc changes nothing. The question wording is a DRAFT for you.
 
