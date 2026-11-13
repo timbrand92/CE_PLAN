@@ -19393,6 +19393,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
 
+**Note 14 Nov 2026 (trust-safety-fixes, from the review of draft PR 2107):** the wording above overstates it. It is not an AutoCAD crash and no error box appears: CE's own window catcher (DialogService, BLK-013) stops the failure, so AutoCAD carries on and the window stays open. The only message is "[CE] ... rendering error - see CE log for details." on the command line, hidden behind the open window, and the window's status line says nothing. Draft PR 2107 (review fixes at head 9f8a73e4, not installed) makes the status line say what happened. Status unchanged.
+
 **Status:** OPEN
 
 ## BUG-1343 — CDPROFILE: the sump depth, existing-pipe stub and long section scales are fixed in the code
@@ -20735,7 +20737,7 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 
 **Expected behaviour:** The line is printed only when the link was saved.
 
-**Steps to confirm in AutoCAD:** (1) On a copy make the beam entity read-only for the CE record (lock its layer) and place C1 beside it. Right = a line saying the link was not saved. Wrong = "Support linked".
+**Steps to confirm in AutoCAD (corrected 14 Nov after review):** (1) On a copy draw a plain LINE on layer BEAM (a beam CE has never linked; a beam CE drew already holds its link record and a locked layer does not stop that), lock BEAM, and place C1 at one end. Right = a line saying the beam layer is locked and the link was not saved. Wrong = "Support linked". (2) Control: a beam drawn with CE's beam tool, BEAM locked: "Support linked" is true (BEAMLINKDEBUG lists the attachment).
 
 **Test that catches it:** Fixture: failing WriteBeamLinkData; assert the result is false.
 
