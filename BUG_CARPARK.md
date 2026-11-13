@@ -19941,6 +19941,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
 
+**Note 2026-11-13 (lane trust-core-ribbon):** draft change in pull request 2097: the purlin lap question now names the 1200 mm lap; no figure changed; making it a Settings value is a decision for Tim. Built and unit-tested only; not seen in AutoCAD. Status unchanged.
+
 **Status:** OPEN
 
 ## BUG-1372 — R1, P1 and FJ1 draw a guessed arrow depth when the top and bottom picks are under 25 units apart, with no line
@@ -19958,6 +19960,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Reference:** Commands\RafterJoistCommands.cs:362-368 and 533-539; fixed number DefaultDepth = 300.0 at line 27. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
 
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Note 2026-11-13 (lane trust-core-ribbon):** draft change in pull request 2098: R1, P1 and FJ1 say when the two depth picks were under 25 units apart and the depth they drew; no figure changed. Built and unit-tested only; not seen in AutoCAD. Status unchanged.
 
 **Status:** OPEN
 
@@ -20391,6 +20395,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
 
+**Note 2026-11-13 (lane trust-core-ribbon):** draft fix in pull request 2095 (with BUG-1397): BDL says what is on the drawing, and that U removes it, when it ends early after the lines are drawn. Built and unit-tested only; not seen in AutoCAD. Status unchanged.
+
 **Status:** OPEN
 
 ## BUG-1397 — BDL has no Model space or REFEDIT check: on a layout tab its lines go into Model space at the picked coordinates
@@ -20408,6 +20414,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Reference:** Commands\BeamPlacementCommands.cs:97; Services\BeamService.cs:92-93 (always Model space). Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
 
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Note 2026-11-13 (lane trust-core-ribbon):** draft fix in pull request 2095: BDL makes the same first stop as the other beam tools on a layout tab or in REFEDIT. Built and unit-tested only; not seen in AutoCAD. Status unchanged.
 
 **Status:** OPEN
 
@@ -20720,6 +20728,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Reference:** Services\BeamLinkService.cs:50-90, 130-148 and 419-421 (returns true after RegisterAttachment); Services\BeamLinkService.Persistence.cs:52-65 (WriteBeamLinkData catches and logs); Commands\SupportBlockCommands.cs:423-430. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
 
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Note 2026-11-13 (lane trust-core-ribbon):** draft fix in pull request 2096: the support line says the link could not be saved when it was not, and never "linked". Built and unit-tested only; not seen in AutoCAD. Status unchanged.
 
 **Status:** OPEN
 
@@ -21507,5 +21517,7 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **A test that catches it:** a made-up template file; start a new drawing from it (never saved); run CLEAN; the template file's size, date and fingerprint must be exactly as before and the drawing must still be unnamed. Repeat with FASTSAVE. Also run both after Save As with a real name: they must save into that file. A deliberately faulty version that saves to the template must fail.
 
 **Steps to confirm the fix in AutoCAD, on a COPY of a template only (never the office template):** (1) copy a template to a scratch folder and note its size and date; (2) start a new drawing from the copy and draw one line, do not save; (3) type CLEAN: right = a plain line saying to save with a name first (or AutoCAD's Save As opens), the title bar still says Drawing1; (4) repeat with FASTSAVE; (5) check the template copy: right = same size and date as in step 1; (6) now Save As with a real name and run CLEAN and FASTSAVE: right = both save into that file.
+
+**Note 2026-11-13 (lane trust-core-ribbon):** draft fix in pull request 2094: CLEAN and FASTSAVE stop first, with one plain line, in a never-saved drawing or one whose file is a template; the managed save, both CLEAN save stages and the sheet sync write refuse a template. Built and unit-tested only; the fault was seen in AutoCAD, the fix has not been. Status unchanged.
 
 **Status:** OPEN. Seen on the installed build, 13 Nov 2026, on a template copy; Tim's real template untouched (same hash).
