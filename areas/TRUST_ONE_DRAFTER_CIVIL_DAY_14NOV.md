@@ -66,5 +66,5 @@ After these ten, one drafter can take a simple job from blank drawing to council
 ## 6. Open for Tim
 
 1. **Is the usual job a site stormwater plan for council,** or should the walk-through follow a different kind of job?
-2. **Is this the right ten,** or which would he swap?
+2. **Is this the right ten?** ANSWERED Sat 14 Nov 2026 00:28: "Yes, use that ten (Recommended)". He can swap any later.
 3. **Ribbon in job order:** agreed, or keep today's layout?

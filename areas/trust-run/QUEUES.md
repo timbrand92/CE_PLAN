@@ -255,3 +255,24 @@ Rule text: `areas\TRUST_AUTONOMOUS_RUN_12NOV.md`, last section. No lane starts a
 10. **Structural supports linked to beams (draft 2096, FIX FIRST).** Owner: trust-core-ribbon, then evidence.
 
 **Lanes now:** builders work only on the review fixes for the tool in hand (items 2 to 4 first), in their Sat 14 Nov 08:00 slot. trust-acad-evidence sees each one on scratch copies when its fixes are in. trust-struc-mgr-plan: one board rebuild a day at 6:00pm, showing these ten first. Reader, test-cases, records helpers: stopped. Review helper: only for a changed head of the tool in hand.
+
+## THE TEN, ANSWERED BY TIM (Sat 14 Nov 2026 00:28 PC clock). Replaces the controller's draft order above.
+
+**Tim's answers.** The ten: "Yes, use that ten (Recommended)" (option text: "Work through them in job order, one at a time. You can swap any later."). Installs: "One batch, ask me once (Recommended)" (option text: "I gather the fixes the robot has seen working into one install, show you the list, and install only on your yes. Backup first, outside your hours.").
+
+1. **PIT** (place a pit)
+2. **CD** (draw a pipe)
+3. **CDLPD** (legal point of discharge): draft 2099, GO, two review fixes under way
+4. **CDEDIT** (edit a pit or pipe): existing drafts 2064 and 2049
+5. **CDRUNSOLVE** (solve inverts down a run): draft 2092, FIX FIRST, fixes under way
+6. **CDRENUMBER**: BUG-968 seen fixed on the installed build
+7. **PITSCHEDULE**: BUG-1274 draft; Export CSV draft 2107, GO
+8. **CDRULES with CDCALC**
+9. **CDCHECKCURRENT** (check this drawing, as the status line)
+10. **MR** (move and rotate)
+
+**Safety fixes outside the ten, first because they can lose work:** two jobs mixed up (installed, robot-proven, not accepted); CLEAN / FASTSAVE over a template (draft 2094, GO, fixes under way).
+
+**Install rule:** nothing goes onto Tim's PC as it is proven. The controller gathers what the robot has SEEN working on scratch copies into ONE batch, shows Tim the list, and installs only on his yes for that batch (backup first, outside his hours).
+
+Why this ten and what each must meet: `areas\TRUST_ONE_DRAFTER_CIVIL_DAY_14NOV.md`.
