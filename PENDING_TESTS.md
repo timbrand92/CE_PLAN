@@ -207,6 +207,8 @@ Each fix is its own draft pull request cut from the build Tim has installed (Civ
 34. **BUG-1298, CDLPD takes only a CE pipe (PR #2099).** Needs the PR installed. CDLPD, pick an ordinary polyline on layer 0: "That line is not a CE pipe... Nothing was changed."; pick a CE pipe: set as before.
 35. **BUG-1301, CDLPD with no note (PR #2101).** Needs the PR installed. CDLPD with a connection (a note appears); CDLPD again on the same end with the connection blank and no level: "LPD set. No note drawn: ..." and the earlier note is still there; a third CDLPD with a connection replaces it (one note only).
 36. **BUG-1317, CDWT command line on 2022 to 2026 (PR #2103).** Needs the PR installed, AutoCAD 2022 to 2026. More than nine above-ground tanks in Settings: CDWT, Above ground: a line says how many more tanks are not offered. More than nine plan blocks in the master: the same at the plan block question.
+37. **BUG-1342, Pit Schedule Export CSV when the file is open (PR #2107).** Needs the PR installed. Open Pit_Schedule.csv in Excel, PITSCHEDULE, Export CSV to the same file: the status line says the file is open, the window stays; close Excel, export again: "CSV export complete."
+38. **BUG-1315, CDRG names a locked layer (PR #2110).** Needs the PR installed. Lock the RAINGARDEN layer, CDRG: "Raingarden could not be placed: layer RAINGARDEN is locked..." at once, no point asked. Unlock: CDRG works as before.
 
 ### Trust plan step 5, the record update made visible (TRUST-05, DRAFT card) — 12 November 2026 (Built and unit-tested only; NOT installed; robot and Codex to run on COPIES)
 
