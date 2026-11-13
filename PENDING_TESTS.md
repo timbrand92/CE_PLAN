@@ -2138,3 +2138,13 @@ Test on a COPY (a made-up Structural drawing), AutoCAD 2027, a build that contai
 3. **BUG-1414 (PR 2096), support link:** make the beam's link record unwritable (lock the beam's layer) and place C1 beside it. Right looks like: "A beam was found nearby, but CE could not save the link ...". Wrong: "Support linked". Not known whether a locked layer really makes the write fail: if the normal line still shows, record "not reachable on a copy".
 4. **BUG-1371 (PR 2097), P1 lap:** run P1, read the lap question: it shows 1200 mm. Yes draws a 1200 mm lap as before.
 5. **BUG-1372 (PR 2098), R1 depth:** run R1, pick top and bottom 10 units apart: a line naming the 300 depth used. Pick them 200 apart: no line.
+
+
+## Structural words-only and say-what-it-did drafts, PRs 2102, 2104, 2105, 2106 (DRAFT, built and unit-tested only) — 13 Nov 2026
+
+Test on a COPY, AutoCAD 2027, a build that contains the branch. Nothing here is installed or accepted. No figure changes in any of these.
+
+1. **Help words (PR 2102, BUG-1405, 1395, 1448, 1382):** CEHELP or the ribbon hover for BSETRESET, tool 5, FASTSAVE and BT1 read as: points saved with this drawing; beam offset by 45 or 100 mm on the side you choose; FASTSAVE regenerates and saves (cleans only with the switch); BT1 prompts in order first point, second point, number.
+2. **R1, P1, FJ1 (PR 2104, BUG-1373, 1374):** pick a bay 3 degrees off horizontal: a line says the marker was drawn exactly horizontal and how far off it was. Where auto placement moves the marker: a line says how far. A square bay with nothing in the way: no line.
+3. **AB, BB, BT1 (PR 2105, BUG-1380, 1381):** AB with the second point 0.6 degrees off horizontal: a line says the brace was set square. In a drawing with layer 25CONT purged first: a line says the layer was added.
+4. **Support rotation (PR 2106, BUG-1421):** rotation preview off in Settings, place C1: "Type the rotation angle." with no apology. Preview on: unchanged.

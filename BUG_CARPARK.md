@@ -19981,6 +19981,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
 
+**Note 2026-11-13 (lane trust-core-ribbon):** draft change in pull request 2104 (with BUG-1374): R1, P1 and FJ1 say when they set the bay square and how far off it was; nothing drawn changes. Built and unit-tested only; not seen in AutoCAD. Status unchanged.
+
 **Status:** OPEN
 
 ## BUG-1374 — R1, P1 and FJ1 slide the marker inside the bay to miss text and walls with no line
@@ -19998,6 +20000,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Reference:** Commands\RafterJoistCommands.cs:194-200 (WriteDebug only; 1595-1600 prints only when DebugLogging is on). Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
 
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Note 2026-11-13 (lane trust-core-ribbon):** draft change in pull request 2104: R1, P1 and FJ1 say how far auto placement moved the marker; nothing drawn changes. Built and unit-tested only; not seen in AutoCAD. Status unchanged.
 
 **Status:** OPEN
 
@@ -20107,6 +20111,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
 
+**Note 2026-11-13 (lane trust-core-ribbon):** draft change in pull request 2105 (with BUG-1381): AB, BB and BT1 say when they set a brace square and how far off it was; nothing drawn changes. Built and unit-tested only; not seen in AutoCAD. Status unchanged.
+
 **Status:** OPEN
 
 ## BUG-1381 — AB, BB and BT1 add layer 25CONT to the drawing if it is missing, with no line
@@ -20125,6 +20131,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
 
+**Note 2026-11-13 (lane trust-core-ribbon):** draft change in pull request 2105: AB, BB and BT1 say when they add layer 25CONT; the layer is still added (leaving the drawing on its own layer is a decision for Tim). Built and unit-tested only; not seen in AutoCAD. Status unchanged.
+
 **Status:** OPEN
 
 ## BUG-1382 — BT1 help lists "BT number 1-9" before "Insert point" but the tool asks the points first
@@ -20142,6 +20150,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Reference:** Assets\Config\command-registry.json:2562-2565 against Commands\BracingCommands.cs:271, 288. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
 
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Note 2026-11-13 (lane trust-core-ribbon):** draft change in pull request 2102 (words only): the BT1 Help lists its prompts in the order asked. Built and unit-tested only; not seen in AutoCAD. Status unchanged.
 
 **Status:** OPEN
 
@@ -20377,6 +20387,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
 
+**Note 2026-11-13 (lane trust-core-ribbon):** draft change in pull request 2102 (words only): the Help for beam tool 5 says what it does in drawing words (offset 45 or 100 mm, chosen side). Built and unit-tested only; not seen in AutoCAD. Status unchanged.
+
 **Status:** OPEN
 
 ## BUG-1396 — BDL ends silently with both beam lines already drawn if Esc or Enter is pressed at the text questions
@@ -20566,6 +20578,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Reference:** Assets\Config\command-registry.json:2176-2206 (longDesc at 2183). Related BUG-1077. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
 
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Note 2026-11-13 (lane trust-core-ribbon):** draft change in pull request 2102 (words only): BSETRESET Help says the points are saved with the drawing, no code word. Built and unit-tested only; not seen in AutoCAD. Status unchanged.
 
 **Status:** OPEN
 
@@ -20856,6 +20870,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Reference:** Commands\SupportBlockCommands.cs:770-771 and 842-843. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
 
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Note 2026-11-13 (lane trust-core-ribbon):** draft change in pull request 2106 (words only): no apology line before the angle question when the rotation preview is switched off. Built and unit-tested only; not seen in AutoCAD. Status unchanged.
 
 **Status:** OPEN
 
@@ -21350,6 +21366,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Reference:** Assets\Config\command-registry.json:4138, 4164 and 4168. Related BUG-620. Installed Structural 1.0.126 (commit 8de95c34), read in the code copy C:\CE_WORK\scratch\audit_struc, paths under Modules\Structural unless stated. Source: C:\CE_PLAN\areas\trust-run\STRUCTURAL_NEW_FAULTS_TO_FILE.md.
 
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
+
+**Note 2026-11-13 (lane trust-core-ribbon):** draft change in pull request 2102 (words only): the FASTSAVE Help says it regenerates and saves and cleans only with the also-clean switch; the alias listing on CLEAN and the one-line tooltip are left. Built and unit-tested only; not seen in AutoCAD. Status unchanged.
 
 **Status:** OPEN
 
