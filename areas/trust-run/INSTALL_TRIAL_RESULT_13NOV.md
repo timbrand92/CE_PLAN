@@ -30,3 +30,10 @@
 3. **Cautious habit until it is tested:** with two jobs open in one AutoCAD, do not make CDJOINT the first CE tool you run in the second job.
 4. **Also still open, but not reachable on Tim's PC:** the CE Assistant pipe-size route (that feature is switched off on his PC; closed in draft pull request 2089, which needs a fix first).
 5. **Owed:** one robot run of the CDJOINT sequence on 3.0.90.2 as it stands.
+
+## Correction by the controller, Fri 13 Nov 17:47: the CDJOINT route above is NOT real as described
+
+1. **An independent review read the installed code line and found the fault is not there:** CDJOINT's very first step attaches CE's data to the drawing in front, before it asks anything. So running CDJOINT first in a second job does NOT put that job's slabs into the first job. The controller checked this in the code itself (CDJOINT's first step, and what that step calls).
+2. **The cautious habit in item 3 above is withdrawn.** It is not needed.
+3. **One narrow case is left, not verified:** starting CDJOINT in one job, switching to another job part-way through its questions, running a CE tool there, then coming back to finish. It is not known whether AutoCAD even allows this. The drafted change (pull request 2100) would cover it.
+4. **Pull request 2100:** safe, but FIX FIRST (its description of the fault is wrong; four fixes listed in `areas\trust-run\reviews\pr-2100-cdjoint-route.md`).
