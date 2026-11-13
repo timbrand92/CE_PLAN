@@ -1,16 +1,31 @@
 # Trust run status board
 
-**Rebuilt 2026-11-13 19:00 PC clock by lane trust-struc-mgr-plan, after the review `reviews\status-board-check.md` (FIX FIRST, eight corrections). Counted from GitHub (open draft pull requests whose branch names contain "trust" or "bug-1456") and from the files named at the end. Nothing here is installed or accepted. Rebuilt at every check-in until told otherwise.**
+**Rebuilt 2026-11-13 21:30 PC clock by lane trust-struc-mgr-plan, after the review `reviews\status-board-check.md` (FIX FIRST, eight corrections). Counted from GitHub (open draft pull requests whose branch names contain "trust" or "bug-1456") and from the files named at the end. Only pull requests 2073 and 2083 are installed, as a trial on Tim's PC; nothing is accepted. Rebuilt at every check-in until told otherwise.**
+
+---
+
+# What is installed on your PC (read from the install files at 2026-11-13 21:30)
+
+1. **Civil 3.0.90.2:** this morning's 3.0.90 plus only the two job mix-up fixes, pull requests 2073 and 2083 (build commit `5c89ce30`). Installed 13:46, end state proven at 15:13 (State A, "mix-up fix only", your choice this morning).
+2. **Manager 1.1.89 and Structural 1.0.126:** exactly as this morning, file for file (75 and 2,007 files checked against the morning backup). Your four settings files are byte-identical to this morning.
+3. **Built:** yes, with the normal install-package build; 7 of 832 Civil files differ from 3.0.90 (the Civil program file and its debug file in the three AutoCAD lanes, and the version line).
+4. **Tested:** robot only, in real AutoCAD 2027 on copies: the seven mix-up routes that failed on 3.0.90 this morning, run twice in two separate AutoCAD starts, 20 of 20 PASS; the everyday tools checked work as before; save and reopen keeps new pits and pipes.
+5. **Not tested:** erasing a pit; a change refused because CE held another job's record (proven only in the core console); AutoCAD 2022 to 2026; any real job.
+6. **Installed:** yes, on your PC only. Nothing sent to colleagues, nothing merged into the lines that ship.
+7. **Accepted:** no. Not looked at by Codex, not accepted by you.
+8. **To put 3.0.90 back exactly (one action):** with AutoCAD closed, run `C:\CE_WORK\scratch\trust_install\restore_stateB.ps1`. It checks every file against this morning's backup.
+9. **Not on your PC:** every other trial change below, including the later mix-up doors 2089, 2090 and 2100. The CDJOINT caution added at 16:20 was withdrawn at 17:47 (the route is not real as described).
+10. **Source:** `areas\trust-run\INSTALL_TRIAL_13NOV.md` section 8 (last line 15:20) and `areas\trust-run\INSTALL_TRIAL_RESULT_13NOV.md` (with the controller's 16:20 and 17:47 additions). This lane did not read the installed files itself.
 
 ---
 
 # FOR TIM
 
-1. **Trial changes built as drafts:** 73 open on GitHub (pull requests 2038 to 2110). None merged, none installed.
-2. **Latest review verdict:** 49 fit for the robot to test on copies, 3 to fix first (2053, 2089, 2100), 21 not reviewed yet (2087, 2088, 2091, 2092, 2093, 2094, 2095, 2096, 2097, 2098, 2099, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110).
+1. **Trial changes built as drafts:** 73 open on GitHub (pull requests 2038 to 2110). None merged. Only 2073 and 2083 are installed, as the trial Civil 3.0.90.2 on your PC.
+2. **Latest review verdict:** 50 fit for the robot to test on copies, 3 to fix first (2053, 2089, 2100), 20 not reviewed yet (2087, 2088, 2091, 2092, 2093, 2095, 2096, 2097, 2098, 2099, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110).
 3. **Moved on GitHub since their last review, verdict not re-confirmed:** 10 (2071, 2072, 2076, 2079, 2080, 2081, 2083, 2086, 2089, 2090).
-4. **Any real evidence on the trial builds themselves:** 5 of 73 (2040, 2041, 2045, 2049, 2050), all from the core console; none from a window, the ribbon or a drawing opening in full AutoCAD. For 2073 only the fault it cures has been seen.
-5. **Still owed by every one:** the robot on copies in full AutoCAD, a Codex look where something is seen, and your trial; that waits on question 0 (where trial builds may be seen). Some rows owe more first; each row says.
+4. **Any real evidence on the trial builds themselves:** 7 of 73 (2040, 2041, 2073, 2083, 2045, 2049, 2050). Only 2073 and 2083 have been seen in full AutoCAD (the robot, on copies, on your PC today); the rest are from the core console, none from a window, the ribbon or a drawing opening.
+5. **Still owed by every other one:** the robot on copies in full AutoCAD, a Codex look where something is seen, and your trial; that waits on question 0 (where trial builds may be seen). 2073 and 2083 owe a Codex look and your acceptance. Some rows owe more first; each row says.
 6. **Accepted by you or by Codex:** none.
 
 ---
@@ -50,12 +65,12 @@
 19. **Pull request 2065: CDRUNSOLVE preview says what Apply really writes (BUG-1356).** Verdict: GO (2026-11-13 05:10); reviewed head cb133d67, same on GitHub. Evidence: None. Owed: the robot on copies, then a Codex look where something is seen, then your trial.
 20. **Pull request 2066: The read-only check flags a pit or pipe with a blank link (BUG-1339).** Verdict: GO (2026-11-13 07:03); reviewed head d846f1ed, same on GitHub. Evidence: None. Owed: the robot on copies, then a Codex look where something is seen, then your trial.
 21. **Pull request 2067: Moving the LPD takes the LPD tag off the earlier pipe end (BUG-1300).** Verdict: GO (2026-11-13 05:43); reviewed head 2d825913, same on GitHub. Evidence: None. Owed: the robot on copies, then a Codex look where something is seen, then your trial.
-22. **Pull request 2073: Each drawing keeps its own CE record: Help, Settings or any tool can no longer write one job into another (BUG-1456 cure, no switch).** Verdict: GO (2026-11-13 05:53); reviewed head 1a28c3b3, same on GitHub. Evidence: The fault it cures was seen on the installed build, 6 times in 11 tries; a saved mixed-up drawing reopens with no warning and its Pit Schedule lists the other job's pits; one U straight after Help restores the drawing's own record (EVIDENCE_CROSS_DRAWING.md, parts 1 and 2). The cure itself has never run in AutoCAD. Owed: the core-console check first (CEPROOFCROSSDRAWING, step 1 in PENDING_TESTS.md), then the robot on copies; the last door (a change to the record refused when it belongs to another drawing) is now pull request 2083, GO for testing on copies.
+22. **Pull request 2073: Each drawing keeps its own CE record: Help, Settings or any tool can no longer write one job into another (BUG-1456 cure, no switch).** Verdict: GO (2026-11-13 05:53); reviewed head 1a28c3b3, same on GitHub. Evidence: The fault it cures was seen on the installed build, 6 times in 11 tries; a saved mixed-up drawing reopens with no warning and its Pit Schedule lists the other job's pits; one U straight after Help restores the drawing's own record (EVIDENCE_CROSS_DRAWING.md, parts 1 and 2). The cure itself, at head 1a28c3b3, passed in real AutoCAD on copies on 13 Nov: the seven routes that failed on 3.0.90, 10 of 10 twice as 3.0.90.1, and again with 2083 as 3.0.90.2; now installed on Tim's PC (INSTALL_TRIAL_13NOV.md section 8). Owed: a Codex look and Tim's acceptance; robot evidence only so far.
 23. **Pull request 2075: CDAGI's grade check is right in metre drawings.** Verdict: GO (2026-11-13 06:59); reviewed head 3960801a, same on GitHub. Evidence: None. Owed: the robot on copies, then a Codex look where something is seen, then your trial.
 24. **Pull request 2076: A guard that a cancelled CD writes nothing, on 2064's rule (tests only, built on 2064).** Verdict: GO (2026-11-13 06:59); reviewed head 0e08cc1f, GitHub head f326cc9f: moved since review, GO not yet re-confirmed. Evidence: None. Owed: the robot on copies, then a Codex look where something is seen, then your trial.
 25. **Pull request 2081: Move and Rotate and Copy and Rotate on AutoCAD 2027 say in plain words what they cannot move (BUG-1334).** Verdict: GO (2026-11-13 07:25); reviewed head c78016cf, GitHub head ac12e9b9: moved since review, GO not yet re-confirmed. Evidence: None. Owed: the robot on copies, then a Codex look where something is seen, then your trial.
 26. **Pull request 2082: CDWT by its window keeps the library tank's make, size and lid (BUG-1316).** Verdict: GO (2026-11-13 08:53); reviewed head 570743f3, same on GitHub. Evidence: None. Owed: the robot on copies, then a Codex look where something is seen, then your trial.
-27. **Pull request 2083: Follow-up to the job mix-up (BUG-1456): a change to CE's record is refused when the record belongs to another drawing.** Verdict: GO (2026-11-13 07:32); reviewed head 522e5502, GitHub head 8a6decef: moved since review, GO not yet re-confirmed. Evidence: None. Owed: the robot on copies, then a Codex look where something is seen, then your trial.
+27. **Pull request 2083: Follow-up to the job mix-up (BUG-1456): a change to CE's record is refused when the record belongs to another drawing.** Verdict: GO (2026-11-13 07:32); reviewed head 522e5502, GitHub head 8a6decef: moved since review, GO not yet re-confirmed. Evidence: Passed in real AutoCAD on copies on 13 Nov at head 8a6decef, with 2073, as Civil 3.0.90.2: 20 of 20 mix-up routes, ordinary one-drawing work, two copies in turn, a pit placed, saved and reopened; the refusal itself could not be provoked in AutoCAD and stands on the core-console check CEPROOFCROSSCHANGE; now installed on Tim's PC (INSTALL_TRIAL_13NOV.md section 8). Owed: a Codex look and Tim's acceptance; erasing a pit not tested.
 28. **Pull request 2084: CDSOURCE never gives out a number twice (BUG-1318).** Verdict: GO (2026-11-13 07:34); reviewed head 7cfb9b69, same on GitHub. Evidence: None. Owed: the robot on copies, then a Codex look where something is seen, then your trial.
 29. **Pull request 2085: A CDTAG retag never leaves the old tag showing on the label (BUG-1320).** Verdict: GO (2026-11-13 11:50); reviewed head 9eb5f87b, same on GitHub. Evidence: None. Owed: the robot on copies, then a Codex look where something is seen, then your trial.
 30. **Pull request 2086: A CDTAG retag keeps a connection point you nudged (BUG-1321).** Verdict: GO (2026-11-13 08:53); reviewed head 38ac37ce, GitHub head 12e27bc1: moved since review, GO not yet re-confirmed. Evidence: None. Owed: the robot on copies, then a Codex look where something is seen, then your trial.
@@ -88,7 +103,7 @@
 54. **Pull request 2077: BDL stops with a plain line in a metre, centimetre or inch drawing (BUG-1364).** Verdict: GO (2026-11-13 07:00); reviewed head 35ec2928, same on GitHub. Evidence: None. Owed: the robot on copies, then a Codex look where something is seen, then your trial.
 55. **Pull request 2079: BSET, BSETLIST and BSETRESET report failures truthfully; BSETRESET asks first (BUG-1400, 1401, 1403).** Verdict: GO (2026-11-13 07:00); reviewed head c7b5902f, GitHub head 30280ba5: moved since review, GO not yet re-confirmed. Evidence: None. Owed: the robot on copies, then a Codex look where something is seen, then your trial.
 56. **Pull request 2080: The bracing panel says what the count left out and counted (BUG-1369, 1370).** Verdict: GO (2026-11-13 07:26); reviewed head 159f554f, GitHub head 8db33084: moved since review, GO not yet re-confirmed. Evidence: None. Owed: the robot on copies, then a Codex look where something is seen, then your trial.
-57. **Pull request 2094: CLEAN and FASTSAVE never save a never-saved drawing over its template (BUG-1457, HIGH).** Verdict: not reviewed; GitHub head 7a94d8e8, not reviewed yet. Evidence: None. Owed: a review first.
+57. **Pull request 2094: CLEAN and FASTSAVE never save a never-saved drawing over its template (BUG-1457, HIGH).** Verdict: GO (2026-11-13 19:47); reviewed head 7a94d8e8, same on GitHub. Evidence: None. Owed: the robot on copies, then a Codex look where something is seen, then your trial.
 58. **Pull request 2095: BDL stops first on a layout tab or in REFEDIT, and says what is drawn when it ends early (BUG-1396, 1397).** Verdict: not reviewed; GitHub head 3a5dc194, not reviewed yet. Evidence: None. Owed: a review first.
 59. **Pull request 2096: A support is not said to be linked to a beam when the link was not saved (BUG-1414).** Verdict: not reviewed; GitHub head e4369378, not reviewed yet. Evidence: None. Owed: a review first.
 60. **Pull request 2097: P1's purlin lap question names the lap; no figure changed (BUG-1371).** Verdict: not reviewed; GitHub head 4e2753f4, not reviewed yet. Evidence: None. Owed: a review first.
@@ -128,7 +143,7 @@
 
 ## Where these come from
 
-1. **The list and the GitHub heads:** `gh pr list --state open --draft` on the plugin repository at 2026-11-13 19:00, branches containing "trust" or "bug-1456".
+1. **The list and the GitHub heads:** `gh pr list --state open --draft` on the plugin repository at 2026-11-13 21:30, branches containing "trust" or "bug-1456".
 2. **Verdicts, times and reviewed heads:** the latest line per pull request in `areas\trust-run\trust-review.md`, including "re-reviewed at" heads and the 06:21 re-read of 2038, 2043, 2047 and 2051 (GO holds at their new heads).
 3. **What each row owes beyond the robot:** the review files in `areas\trust-run\reviews\` and `reviews\status-board-check.md`.
 4. **Evidence:** `areas\trust-run\EVIDENCE_BRANCHES.md`, `EVIDENCE_READER.md`, `EVIDENCE_CROSS_DRAWING.md`, `EVIDENCE_STALE_BUGS.md`. Fixes seen on the installed build (BUG-650, BUG-968, BUG-290) are not trial changes; they are on the morning page.
