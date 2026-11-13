@@ -1,5 +1,13 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+### BUG-1456 cure + change door INSTALLED ON TIM'S PC as Civil 3.0.90.2 — 13 November 2026 (trial install, Tim's 'today only'; robot-tested in real AutoCAD on copies; NOT Codex-looked; NOT Tim-accepted)
+
+Civil 3.0.90.2 = 3.0.90 + PR 2073 + PR 2083 (build 5c89ce30). Results: `areas\trust-run\INSTALL_TRIAL_RESULT_13NOV.md`. Robot: the seen mix-up sequences (S1, S2, S3, R3, C3, R5, F) 10/10 twice; one-drawing work, two copies in turn, PIT placed and saved: pass; no `[BUG-1456]` line in ordinary work.
+
+1. **Codex look (next):** in AutoCAD on copies: job A then CDDIAG, open job B, Help then Settings: job B's Pit Schedule shows B's own pits; and one ordinary day of PIT, CD, Edit Pit, Edit Pipe, Pit Schedule edit, erase a pit, U, save, reopen with no refusal line in CE's log.
+2. **Not tested by the robot:** erase a pit; the refusal itself in real AutoCAD; AutoCAD 2022 to 2026.
+3. **To put 3.0.90 back:** AutoCAD closed, run `C:\CE_WORK\scratch\trust_install\restore_stateB.ps1`.
+
 ### BUG-1456 fourth door, a copy of another drawing's record is never written by a tool's own step — 13 November 2026 (Built and unit-tested only; NOT installed; no switch; robot and Codex to run on COPIES)
 
 PR 2089 (DRAFT, never merged by the run), branch `claude/bug-1456c-snapshot-write-door`, on the change door (PR 2083). The refusal is in CE's log only: `[BUG-1456] CE did not write its record into this drawing: the record CE is holding belongs to another drawing. Nothing was written here.` Read CE's log after every case.
