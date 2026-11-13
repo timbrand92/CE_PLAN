@@ -282,3 +282,12 @@ The plugin does not own the drawings, so most do not apply (15.9). Stated, not s
 4. **The readers' findings** were spot-checked on ten lines (marked "Checked" above and listed in the desk log). The rest is their reading.
 5. **Structural and Manager** have only the 6 Nov audit behind them; they follow Civil and have no step cards yet.
 6. **The held builds (C-79c, C-80, S-46)** were not re-read for step 4.
+
+## 10. What is installed on Tim's PC (added Fri 13 Nov 2026, afternoon)
+
+1. **Civil 3.0.90.2** since 13:46 on 13 Nov: Civil 3.0.90 plus the two reviewed changes that cure the job mix-up (BUG-1456; pull requests 2073 and 2083) and nothing else. Tim's decisions 14 and 15. Manager 1.1.89 and Structural 1.0.126 are untouched.
+2. **Four states, kept apart:** Built yes. Tested yes: the seen sequences passed 10 of 10 twice in real AutoCAD on copies, where 7 failed on 3.0.90. Installed yes, on Tim's PC only. Accepted NO: robot evidence only, no Codex look, not Tim's word; BUG-1456 stays open.
+3. **Not on his PC:** every other draft in this plan, including the line that spots a drawing already holding another job's data (it sits on the opening line, which Tim has not approved).
+4. **Way back:** estore_stateB.ps1 in C:\CE_WORK\scratch\trust_install with AutoCAD closed; the morning's 2,922 files are kept in BEFORE_13NOV. Record: reas\trust-run\INSTALL_TRIAL_RESULT_13NOV.md.
+5. **Colleagues:** nothing sent. They still have the fault. That is Tim's decision.
+6. **Also seen on the installed build and NOT fixed on his PC:** BUG-1457, CLEAN and FASTSAVE save into the template file in a never-saved drawing.
