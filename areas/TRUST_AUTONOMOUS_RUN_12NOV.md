@@ -47,6 +47,12 @@
 4. **trust-acad-evidence:** the probes in `trust-plan.md` section 5 that need AutoCAD, on made-up and existing test copies, on the installed build. Later, evidence for the builders' branches where that can be done without installing.
 5. **trust-struc-mgr-plan:** the Structural and Manager part of the plan, written from the 6 Nov audit and the tick list. Planning only.
 
+## 3c. LIFTED FOR FRIDAY 13 NOV ONLY (Tim, about 08:50 that day)
+
+Tim: "howd you go i forgot to mention im not at my desk all day so you can go hard do whatever you need to do".
+
+INTERPRETATION: for Friday 13 Nov the working-hours rule in 3b does not apply: builds, test runs, the core console and the robot's own AutoCAD on copies may run all day. It returns on the next working day unless Tim says otherwise. It does NOT by itself cover installing on his PC, merging or anything to colleagues; the controller is asking him about installs directly.
+
 ## 3b. Tim's working hours: nothing heavy on his PC (added Fri 13 Nov 07:40 PC clock)
 
 RULES 1.8: big builds and automated testing go in the free windows. Tim drafts on this PC on weekdays from 8:30am to 2:00pm and 3:00pm to 5:30pm, and builds and test runs have slowed his AutoCAD before.

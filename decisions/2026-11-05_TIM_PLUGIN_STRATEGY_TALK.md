@@ -121,3 +121,12 @@ Also 12 Nov, typed by Tim: old LISP tools and block files are "on my work pc"; a
 Tim: "you can test, get evidence, fix, build, anything else you deem necessary"; "you can create side sessions to do seperate things, i need you to use all weekly usage before reset then complete everything before continuing to work but managing usage based on a smooth week of usage 12-13% per day"; "i cant respond after this message so please dont get stuck".
 
 INTERPRETATION: the HOLD is lifted for building, testing, fixing and evidence. It is NOT lifted for installing on Tim's PC, anything to colleagues, or merging into the lines that ship; he named none of those. Scope, rules and status: areas\TRUST_AUTONOMOUS_RUN_12NOV.md.
+
+## Decisions 14 and 15 (Fri 13 Nov 2026, about 09:00 PC clock): trial installs today, and what stays on Tim's PC
+
+Tim typed: "howd you go i forgot to mention im not at my desk all day so you can go hard do whatever you need to do".
+
+14. **Trial builds on Tim's PC today.** Asked through the question interface whether the robot may install trial builds on his PC today to see the fixes working in real AutoCAD on test copies. Tim chose: "Yes, today only (Recommended)".
+15. **What is on his PC when he next sits down, if the job mix-up fix (BUG-1456) proves out in real AutoCAD today.** Tim chose: "Mix-up fix only (Recommended)": today's version plus only the mix-up changes, nothing else.
+
+INTERPRETATION: installs on Tim's PC are allowed on Fri 13 Nov only; the working-hours rule is lifted for that day only; nothing to colleagues and no merge into the lines that ship. If the fix is not fully proven, his PC goes back to exactly what it had. Runbook and limits: areas\trust-run\INSTALL_TRIAL_13NOV.md.
