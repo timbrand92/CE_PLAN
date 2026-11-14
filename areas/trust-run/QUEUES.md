@@ -334,3 +334,11 @@ Controller's reading (mine): with his standing approval for trial installs, draf
 Tim: "i want you to work autonomously so dont get bogged down by waiting for me, just queue stuff for me and continue loops as necessary"
 
 In force: (1) the controller checks every two hours, not twice a day, and acts on each check; lanes are never left idle. (2) Everything that is Tim's to decide goes to `areas\trust-run\FOR_TIM_QUEUE.md` with a recommended answer used as a labelled default. (3) Unchanged and still only on his word: merging into shipped lines, anything to colleagues, a new screen without a mock-up. Still no new drafts.
+
+## THE FINISH LINE FOR COLLEAGUES (Tim, ask chat, Sun 15 Nov 2026 01:57 PC clock)
+
+Recorded in full, in his words, in `areas\trust-run\TIM_INTERVIEW_15NOV.md` (8.1, 9.1, 10.1). The controller now works to this:
+
+1. **Ready for colleagues = all three:** the ten tools accepted; five clean working days on Tim's PC; one real council stormwater job done start to finish on CE alone with nothing fixed by hand. Stricter than the 17 Oct wording, and newer.
+2. **CE never, by itself:** changes a level or size, renumbers pits, moves or deletes his labels, changes layers or colours. Every batch's review and robot list checks the batch against these four.
+3. **What matters most:** nothing wrong reaches council.
