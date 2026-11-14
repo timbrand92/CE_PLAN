@@ -878,3 +878,13 @@ As batch 7, section 6, with the folder `C:\CE_WORK\robot\b14h_switch`. The CE lo
 ### 9. Stop rules
 
 As section 5 at the top. If a pass fails, batch 8 is put back with `restore_batch14h.ps1`, and batch 5 stays.
+
+## TRIAL 2027-ONLY BUNDLE INSTALLED (controller, Sun 15 Nov 2026 07:32 PC clock)
+
+On Tim's queue item 10 answer (ask chat, 02:32: "Take them out of the build", the check on his own PC first) and his standing trial approval. A trial: it is put back after its short list.
+
+1. **What:** the same Civil 3.0.90.7+9b977125 build with the 2027 set only (no Win64 Legacy, no Win64 Net8, PackageContents trimmed to the 2027 entries), 298 files. Structural and Manager untouched (still three-set).
+2. **Before:** no acad or accoreconsole running; trial manifest read by the controller `398732E2...`, PackageContents `3675778F...`, 298 files, Modern folder only; install script read by the controller.
+3. **Ran:** `install_trial_modernonly.ps1`: 298 candidate, 298 live, bad 0, extra 0; no Legacy, no Net8; Modern reads 3.0.90.7+9b977125; PackageContents equals the trial's; CE_SHARED identical to Manager's Modern; four settings files unchanged; "TRIAL INSTALL VERIFIED".
+4. **Backup of the three-set build:** `CE_CVL_SUITE_PRE_9b977125_20261115-073054.backup`. Put-back: `restore_trial_modernonly.ps1` (not rehearsed).
+5. **Not yet done:** AutoCAD has not been started on it.
