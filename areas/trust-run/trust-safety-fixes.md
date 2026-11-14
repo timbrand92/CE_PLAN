@@ -116,3 +116,14 @@ Chat: CE_ACAD / trust plan / fix / 01 safety fixes. Card TRUST-04. Civil cut fro
   - **Not run:** AutoCAD, the core console, the whole Civil suite. Not in any batch.
   - **Note for trust-foundations:** their worktree still has the branch at the old head `dde7825e`. Pull before touching 2064.
   - **Known limit, unchanged:** Edit Pipe's refused-Save-then-Cancel keeps the update; the batch editors and the source tool take the update as installed.
+- 2026-11-15 00:50 (controller's order after batch 2 went in at 23:41): **(1) Pit Schedule drafts, read-only GO on final heads.**
+  - **PR 2039 (BUG-1274):** records met at `d8d7ac0e` (GO). Then `fdf93a25`: the three wording settings say their default, because the settings guard failed when the merged batch was tested. net48 0 errors; 999 related tests pass.
+  - **PR 2107 (BUG-1342):** GO at `9f8a73e4`. Low point left as today: a partial file on a drop part-way through.
+  - Both stay drafts, auto-merge off.
+
+  **(2) Batch 3 PREPARED, NOT INSTALLED:** Civil 3.0.90.5 (`3c620efe`, detached) = 3.0.90.4 + 2039 + 2107.
+  - **Payload:** `C:\ce_rc_scratch\b14civ3`, 832 files, 7 differ from the installed 3.0.90.4. Modern DLL `0921DE7F...`, manifest SHA-256 `8C64207B...`.
+  - **Tests:** 1,122 of 1,125 related tests pass on the merged code.
+  - **Install:** `install_batch14c.ps1`; put back `restore_batch14c.ps1` (both NOT RUN). Runbook: `INSTALL_BATCH_14NOV.md`, section BATCH 3. The controller installs.
+
+  **(3) The 2064 switch: three lines sent to the controller.** No code.

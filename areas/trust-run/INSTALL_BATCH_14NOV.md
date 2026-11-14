@@ -119,3 +119,45 @@ On Tim's standing approval of about 23:25 ("yes you have my approval to do it wh
 3. **Live Modern DLL SHA-256 read back by the controller:** `68615B68902026892CA33FEEF91738F62725108FA3641BA07D469C4BC11ABE3D`.
 4. **Backup kept:** `CE_CVL_SUITE_PRE_11c0093c_20261114-234011.backup` in ApplicationPlugins. Put-back: `restore_batch14b.ps1` (not rehearsed).
 5. **Not yet done:** nothing has run in AutoCAD on 3.0.90.4. Robot list is item 7 above. Not accepted.
+
+## BATCH 3 (PREPARED, NOT INSTALLED): Civil 3.0.90.5 = installed 3.0.90.4 + the two Pit Schedule fixes
+
+Written Sun 15 Nov 2026 00:45 by lane trust-safety-fixes, on the controller's order ("Prepare batch 3 = installed 3.0.90.4 plus the PITSCHEDULE fixes (not 2064), same method as batch 2 ... I install"). **The controller installs** (Tim's standing trial approval, 14 Nov 23:25), outside his hours, AutoCAD closed.
+
+1. **What changes on his PC: Civil only.** 3.0.90.4 (`dadac7e7`, installed 23:41) becomes **3.0.90.5**: the same plus two Pit Schedule fixes. Structural 1.0.126.1 and Manager 1.1.89 are untouched. 2064 is NOT in it.
+   - **PR 2039 (BUG-1274) at `fdf93a25`:** the Pit Schedule window's top line says which pits it leaves out and why. For plastic pits not numbered and scheduled it names numbered pits and counts unnumbered ones, never showing an internal code. Pits switched off and pits To be removed get their own sentence. The schedule's own rows are unchanged. Display only; nothing in the drawing changes. Three wording strings on Settings; no off switch. Read-only GO at `d8d7ac0e`. The only change since is the "Default:" note on those three settings, found by the settings guard while preparing this batch. Squash-merge only, if ever merged.
+   - **PR 2107 (BUG-1342) at `9f8a73e4`:** Export CSV with the file open somewhere else no longer fails silently or with a raw error.
+     - **File held open:** CE says so and names Excel only when Windows reports the file as held open.
+     - **Read-only file or folder:** its own line.
+     - **Anything else** (a full disk, a dropped network or OneDrive folder): Windows' own reason.
+     - **The user's old file** is left untouched when the open fails.
+     - **Review:** read-only re-confirm GO at `9f8a73e4`. Known low point, unchanged from today: a disk or network drop part-way through writing can leave a partial file.
+2. **Build commit `3c620efe`** (DETACHED, never pushed) in staging worktree `C:\CE_WORK\build\wtB14c`, kept until the install.
+   - It is `dadac7e7` + a merge of 2039 at fdf93a25 + a merge of 2107 at 9f8a73e4 + "Version: Civil 3.0.90.5". Both merges met a REGRESSION_LOG conflict only, both sides kept.
+   - **Product files changed against 3.0.90.4:** `PitScheduleLeftOutNotice.cs` (new), `PitScheduleViewModel.Data.cs`, `PitScheduleViewModel.Schedule.cs`, `UserSettings.cs` (three wording strings), plus the two version lines. No native, shared, Manager or Structural file.
+3. **Tests on the merged code (`3c620efe`, Release, net10):** 1,122 of 1,125 related tests pass, 3 skipped. The set covers the Pit Schedule, the CSV export, CDRUNSOLVE design flows, run solve, proposal plans, the settings guard and settings defaults.
+4. **Payload:** `C:\ce_rc_scratch\b14civ3\CE_CVL_SUITE.bundle`, 832 files.
+   - **The build:** `build_installer.ps1` exit 0; Legacy, Net8 and Modern lanes verified; shared config verified (9 files). Every dotnet call passes `-p:SkipDevBundle=true`; nothing under ApplicationPlugins was written.
+   - **Staging-only fixes:** as batch 2 (toolset override, and the installed transform module in the ignored bin folder).
+   - **DLL `3.0.90.5+3c620efeb9f386b20a61077b9030d54d599ebcf7` SHA-256:**
+     - Legacy `971313BAE73F2953963235AD8029954C58B3B5447CA0DEFC17D28F047D927244`
+     - Net8 `B665804C24329539DD9FCB4B22E441BC7194CBF1C689D97F83F82A7B7C941029`
+     - Modern `0921DE7F77C6A2F38986100A23336B1ACDAFE5163C08FB5974F89B70C2E41A11`
+   - **Manifest** `C:\CE_WORK\scratch\trust_install\b14civ3_manifest.txt`, 832 rows, SHA-256 `8C64207B5400DAB112C2B40F386CF61972780D262BC81C66953CE61C963E06F3`.
+   - **Stamp check:** CE_SHARED and CE.AI.Core x3 have 0 bytes different outside the stamp zones; the installed bytes were put in; CE_SHARED is identical to Manager x3. The three natives are the installed bytes.
+   - **Against the installed 3.0.90.4 payload (`b14civ2`): 7 files differ** (CE_CVL_SUITE.dll and .pdb x3, PackageContents.xml), 0 added, 0 removed. Read-only check at 00:44: live Civil equals the `b14civ2` manifest, 832 of 832, bad 0, reading 3.0.90.4+dadac7e7.
+5. **Install (one step):**
+   1. AutoCAD closed (checked twice). Before running, check that live Civil equals the `b14civ2` manifest.
+   2. Run `C:\CE_WORK\scratch\trust_install\install_batch14c.ps1`. It is a copy of `install_batch14b.ps1`, Civil only, NOT RUN; it parses clean.
+   3. It refuses unless live Civil reads `3.0.90.4+dadac7e7`. It renames live Civil to `CE_CVL_SUITE_PRE_dadac7e7_<time>.backup`, copies the candidate, reads every file back by SHA-256, checks 3.0.90.5 in all three lanes and CE_SHARED identical to Manager, and checks the settings files are unchanged. Log: `install_batch14c.log`.
+6. **After install, on scratch copies:**
+   1. **First start:** "CE_CVL_SUITE v3.0.90.5 Started", then the BUG-1456 smoke list.
+   2. **PITSCHEDULE, everyday case (robot):** two concrete pits plus three plastic pits placed with today's PIT (no number). The top line reads "3 plastic pits are not in this schedule: none of them has a number. Open PIT on each and press Number and schedule this one anyway to add it."; no internal code (such as 2A3F) appears; the table shows the 2 concrete pits only; closing the window leaves the drawing unchanged (no save prompt).
+   3. **PITSCHEDULE, numbered pits P3, P4, P5 (robot):** the line names P3 to P5; after PIT on P4 with Number and schedule this one anyway, P4 is in the table and the line names P3 and P5.
+   4. **Export CSV (Codex or Tim: Export is on the robot's never-press list):** with the target CSV open in Excel, CE says the file is open in another program, and the file is unchanged. With a read-only CSV: the read-only line, file unchanged. A normal export writes the file as before.
+   5. **CDRUNSOLVE design flows (batch 2's list):** once, as a regression check.
+7. **Put back (one action, AutoCAD closed):** `C:\CE_WORK\scratch\trust_install\restore_batch14c.ps1` (NOT RUN; it parses clean).
+   - It renames the 3.0.90.5 bundle aside as `CE_CVL_SUITE_BATCH14C_REMOVED_<time>.removed` and renames `CE_CVL_SUITE_PRE_dadac7e7_<time>.backup` back. If that backup is missing, it copies `C:\ce_rc_scratch\b14civ2\CE_CVL_SUITE.bundle`.
+   - It then checks every Civil file against `b14civ2_manifest.txt` (832), the three lane versions, CE_SHARED against Manager, and the settings files.
+   - **Further back:** to 3.0.90.3, `restore_batch14b.ps1`; to the 13 Nov state, `restore_batch14.ps1`.
+8. **Stop rules:** as section 5 above. If a Pit Schedule pass fails, batch 3 is put back with `restore_batch14c.ps1`; batch 2 stays.
