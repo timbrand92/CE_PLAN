@@ -312,3 +312,13 @@ Controller's reading (mine, not his words), in force from now:
 3. **Still only on Tim's word, each time, unless he gives a standing word:** installing on his PC; merging into shipped lines; anything to colleagues. Asked of him 14 Nov: a standing yes for trial installs when AutoCAD is closed and he is away.
 4. **While an install waits, the tool in hand moves on.** Every one of the ten is run by the robot and Codex on the build already installed, on scratch copies, outside his hours; fixes go on existing drafts; the next batch is built and reviewed so an install is one step.
 5. **Still no new drafts** (prove, don't draft).
+
+## THREE ANSWERS FROM TIM (Sat 14 Nov 2026, about 23:25 PC clock)
+
+Tim: "1. yes 2. yes 3. yes you have my approval to do it whenever you want to"
+
+Answering the three questions put to him at 23:18 (controller's reading of which question each number answers):
+
+1. **CDRUNSOLVE design flow = the Q typed in Pipe Edit, for now.** ANSWERED yes. No longer a controller default.
+2. **Where the robot cannot make a pick, a Codex PASS (with screenshot) plus a before-and-after check of CE's record counts as accepted.** ANSWERED yes. Written "FIXED (Codex-accepted, record-checked, build, date)". Engineering-judgement items still need Tim.
+3. **Trial installs on his PC: standing approval.** ANSWERED "yes you have my approval to do it whenever you want to". Controller's reading (mine): covers trial batches of the ten-tool work on his PC, with the controller choosing the time. Kept by the controller as its own care, not as Tim's conditions: AutoCAD closed and not his (re-read autocad.json), outside his weekday hours, backup first, SHA-256 check after, put-back script ready, a line to Tim after each install. It does NOT cover merging into shipped lines or anything to colleagues.
