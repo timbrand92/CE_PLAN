@@ -1013,3 +1013,10 @@ Typed in the ask chat, exactly:
 1. **What this says (his words):** yes to the whole-job, whole-product interview, "at some point"; he expects a long interview; he wants to be guided in how to teach the ask chat.
 2. **My reading, not his words:** "at some point" is not "now". The time is his to pick; asked at 14.2.
 3. **My proposed way for him to teach, not yet agreed by him:** three short sittings rather than one long one. (a) Tell: he talks or types through one real Civil job, then one Structural job, against the seven prompts in `ASK_TIM_NEXT_SITTING.md` part 3, with no choices put in his mouth. (b) Show: he points at one finished sheet and says what each part is for and who reads it (which needs his word on queue item 14 first, or a sheet he picks himself). (c) Correct: I write back what I understood as one page and one picture, and he marks what is wrong. Nothing from it becomes a decision until he says so.
+
+### 14.2 Four answers, 09:52
+
+1. **Robot's two more buttons (queue 16):** he typed "it can do whatever you need it to". Recorded under "Answered" in the queue with my reading: yes to the two asked about, on scratch copies; the wider guard is not taken as lifted.
+2. **Outlook archive (queue 17):** clicked "Yes, free it up (Recommended)". This time only.
+3. **CE Structural tab (queue 15b):** clicked "A: both floor panels (Recommended)".
+4. **When the whole-job interview starts.** Asked: "The full-picture interview (you talk me through one whole Civil job, then one Structural job). When do you want the first sitting?" He did not click; he typed: "monday please". Choices passed over: "Now, 20 minutes, Civil (Recommended)", "Later today", "Short pieces through the week". My reading (mine): Monday 16 Nov 2026; no time given. His 17 Oct rule put decision questions at Monday 08:40, so I will be ready from then and wait for him to start it.
