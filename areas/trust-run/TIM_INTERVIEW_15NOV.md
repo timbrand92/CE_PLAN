@@ -1036,3 +1036,7 @@ About 10:08 he typed: "send me open questions here". Full records are in the que
 2. **May CE act by itself?** "Keep the four 'never' rules for now (Recommended)". **Supersedes 13.6 as the rule in force;** 9.1 stands again. The four clashes in 13.6 no longer need settling before anything is built; they become questions for each tool's picture.
 3. **Real finished jobs from the Projects folder?** "Yes, any finished job" (passing over "Only jobs I name (Recommended)"). Confirms Q2.
 4. **Design flow box (queue 1):** "Not tried yet". Still open.
+
+### 14.5 "yes you should", about 10:10
+
+Asked at the end of my 10:07 message: "shall I draw the New Pipe window and the four clash pictures now, so they are ready for Monday? Yes, or not now." After the 10:09 answers he typed: "yes you should". My reading (mine): yes, draw the pictures owed. Since his 10:09 answer keeps the four "never" rules, the four clash pictures are no longer needed first; drawn instead, at 10:11: the New Pipe window on one page, where a proposed pipe direction is ticked (A in the Check this drawing list, B in Edit Pipe), and where "Number and schedule this one anyway" goes in the one-page Edit Pit window (A main page, B behind More). File: `04_REFERENCE\mockups\NEW_PIPE_DIRECTION_TICK_EDIT_PIT_15NOV.html`. Pictures only; the New Pipe "after" is drawn from the audit's reading of the code, not from the window seen on screen.

@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>New Pipe, direction tick, Edit Pit button: mock-ups 15 Nov 2026</title>
+<style>
+:root{--bg:#f4f4f2;--card:#ffffff;--line:#d9d8d2;--text:#1c1c1a;--soft:#5f5e5a;--mute:#8a8983;--accent:#1E5AA8;--accentbg:#e6eef8;--amber:#b86e00;--amberbg:#fbeed6;--green:#2f6b12;--greenbg:#e8f2dc;--field:#fafaf8;--note:#eeeeea;--btn:#ffffff}
+@media (prefers-color-scheme: dark){:root{--bg:#1b1b1a;--card:#262624;--line:#3c3c39;--text:#f1efe8;--soft:#c3c1b8;--mute:#96958e;--accent:#8ab4ea;--accentbg:#1d3350;--amber:#f0b04a;--amberbg:#3d2c0c;--green:#a6d37c;--greenbg:#1f3310;--field:#1f1f1e;--note:#2c2c2a;--btn:#0d1b2e}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Segoe UI,Arial,sans-serif;padding:20px 16px 40px}
+.wrap{max-width:1180px;margin:0 auto}
+h1{font-size:20px;font-weight:600;margin:0 0 4px}
+h2{font-size:17px;font-weight:600;margin:34px 0 4px}
+.sub{font-size:14px;color:var(--soft);margin:0 0 12px}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
+@media (max-width:860px){.two{grid-template-columns:minmax(0,1fr)}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+.lab{font-size:12px;font-weight:700;letter-spacing:.04em;color:var(--mute);margin:0 0 8px;text-transform:uppercase}
+.ttl{font-size:16px;font-weight:600;margin:0 0 12px}
+.f{display:grid;grid-template-columns:110px minmax(0,1fr);gap:8px 12px;align-items:center;font-size:14px}
+.f label{color:var(--soft)}
+.in{background:var(--field);border:1px solid var(--line);border-radius:8px;padding:7px 10px;font-size:14px}
+.in small{color:var(--mute);font-size:11px;margin-left:8px}
+.ch{display:flex;gap:6px;flex-wrap:wrap}
+.c{padding:6px 12px;border-radius:8px;border:1px solid var(--line);font-size:14px;background:var(--field)}
+.c.on{background:var(--accentbg);color:var(--accent);border-color:var(--accent);font-weight:600}
+.more{margin-top:12px;font-size:13px;color:var(--accent)}
+.btns{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap}
+.btn{padding:8px 16px;border-radius:8px;border:1px solid var(--line);font-size:14px;background:var(--card);color:var(--text)}
+.btn.pri{background:var(--accent);border-color:var(--accent);color:var(--btn);font-weight:600}
+.btn.sm{padding:4px 10px;font-size:13px}
+.big{font-size:28px;font-weight:700;line-height:1.15}
+.small{font-size:13px;color:var(--soft)}
+.sum{font-family:Consolas,monospace;font-size:14px;margin-top:8px;color:var(--soft)}
+.row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:8px 0;border-top:1px solid var(--line);font-size:14px}
+.row .v{color:var(--soft)}
+.pill{display:inline-block;font-size:12px;font-weight:700;padding:2px 10px;border-radius:999px}
+.g{background:var(--greenbg);color:var(--green)}
+.a{background:var(--amberbg);color:var(--amber)}
+.old{font-size:13px;color:var(--soft);line-height:1.5}
+.old div{border:1px dashed var(--line);border-radius:8px;padding:6px 10px;margin-top:6px}
+.box{margin-top:12px;background:var(--note);border-radius:12px;padding:12px 14px;font-size:14px;color:var(--soft)}
+.box b{color:var(--text)}
+.opt{display:inline-block;font-size:13px;font-weight:700;background:var(--accent);color:var(--btn);border-radius:6px;padding:2px 10px;margin-right:8px}
+svg{display:block;width:100%;height:auto}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Three pictures for Tim's OK</h1>
+<p class="sub">Drawn Sun 15 Nov 2026 by the ask chat. Pictures only; nothing is built from them. Levels and sizes are made-up examples.</p>
+
+<h2>1. New Pipe window, brought down to one page</h2>
+<p class="sub">You picked New Pipe as the first window to redraw. Left: what opens today. Right: the proposal.</p>
+<div class="two">
+  <div class="card">
+    <p class="lab">Before: today</p>
+    <div class="old">
+      59 boxes and buttons, five sections all open at once, five text sizes, no answer shown.
+      <div>PIPE BASICS</div>
+      <div>TEXT &amp; ARROW</div>
+      <div>SCHEDULE &amp; AUTOMATION</div>
+      <div>GRADE</div>
+      <div>FLOW / INVERTS</div>
+      <div>Quick placement (the only part folded away)</div>
+    </div>
+  </div>
+  <div class="card">
+    <p class="lab">After: proposed</p>
+    <p class="ttl">New pipe: P4 to P5</p>
+    <div class="card" style="background:var(--note);border:0">
+      <div class="big">150 dia UPVC at 1 in 100</div>
+      <div class="sum">18.250 start &minus; (12.4 m &divide; 100) = 18.126 end</div>
+      <div class="small" style="margin-top:6px">Length 12.4 m, fall 0.124 m <span class="pill g" style="margin-left:8px">Ready to draw</span></div>
+    </div>
+    <div class="f" style="margin-top:14px">
+      <label>Size</label><div class="ch"><span class="c">100</span><span class="c on">150</span><span class="c">225</span><span class="c">Other&hellip;</span></div>
+      <label>Material</label><div class="ch"><span class="c on">UPVC</span><span class="c">RCP</span><span class="c">Other&hellip;</span></div>
+      <label>Grade</label><div class="in">1 in 100 <small>office minimum, from Settings</small></div>
+      <label>Start level</label><div class="in">18.250 <small>read from pit P4</small></div>
+      <label>End level</label><div class="in">18.126 <small>worked out from the grade</small></div>
+    </div>
+    <div class="more">More&hellip; (label text and arrow, schedule, design flow, rising main)</div>
+    <div class="btns"><span class="btn pri">Draw pipe</span><span class="btn">Cancel</span></div>
+  </div>
+</div>
+<div class="box"><b>What changes:</b> the answer and its sum sit at the top; five things on the page instead of 59; everything else is behind More&hellip;; each value says where it came from. Same look as Edit Pipe.</div>
+
+<h2>2. Where you tick a pipe direction CE has only proposed</h2>
+<p class="sub">From your answer on a pipe into an unlabelled pit: "Both Unknown, drawn order proposed". CE has nowhere to show that tick today. Two places it could go.</p>
+<div class="two">
+  <div class="card">
+    <p class="ttl"><span class="opt">A</span>In the Check this drawing list</p>
+    <div class="row"><span>Pipe P6 to P7</span><span class="v">150 dia UPVC</span><span class="pill g">Sure</span></div>
+    <div class="row"><span>Pipe P7 to pit ?<br><span class="small">Flows towards pit ? (from the order it was drawn)</span></span><span class="pill a">Proposed</span><span><span class="btn sm pri">Correct</span> <span class="btn sm">Reverse</span></span></div>
+    <div class="row"><span>Pipe P8 to P9</span><span class="v">100 dia UPVC</span><span class="pill g">Sure</span></div>
+    <p class="small" style="margin-top:10px">All proposed directions in one list; click a row to zoom to the pipe; tick them one after another.</p>
+  </div>
+  <div class="card">
+    <p class="ttl"><span class="opt">B</span>In Edit Pipe, on that pipe</p>
+    <svg viewBox="0 0 520 90" role="img" aria-label="Pipe from P7 to an unnumbered pit with a flow arrow">
+      <circle cx="60" cy="45" r="16" fill="none" stroke="currentColor" stroke-width="2"/><text x="60" y="50" text-anchor="middle" font-size="13" fill="currentColor">P7</text>
+      <line x1="76" y1="45" x2="424" y2="45" stroke="currentColor" stroke-width="2" stroke-dasharray="8 6"/>
+      <polygon points="262,37 282,45 262,53" fill="#b86e00"/>
+      <circle cx="440" cy="45" r="16" fill="none" stroke="currentColor" stroke-width="2"/><text x="440" y="50" text-anchor="middle" font-size="13" fill="currentColor">?</text>
+    </svg>
+    <div class="row"><span>Flow direction<br><span class="small">From the order it was drawn</span></span><span class="pill a">Proposed</span><span><span class="btn sm pri">Correct</span> <span class="btn sm">Reverse</span></span></div>
+    <p class="small" style="margin-top:10px">You see it only when you open that pipe; nothing lists the others still waiting.</p>
+  </div>
+</div>
+<div class="box"><b>Either way:</b> until you tick it, the pipe stays "Proposed" in amber and is never shown as a fact. Reverse swaps the arrow and marks it Sure.</div>
+
+<h2>3. Edit Pit: where "Number and schedule this one anyway" goes</h2>
+<p class="sub">The button that numbers one plastic pit and puts it in the Pit Schedule, while keeping it plastic. It is missing from the one-page Edit Pit window you use.</p>
+<div class="two">
+  <div class="card">
+    <p class="ttl"><span class="opt">A</span>On the main page, beside the pit type</p>
+    <div class="f">
+      <label>Pit type</label><div class="ch"><span class="c">Grated pit</span><span class="c">Junction pit</span><span class="c on">Plastic pit (PP)</span></div>
+      <label>Pit number</label><div class="in">none <small>plastic pits are not numbered</small></div>
+      <label></label><div><span class="btn sm">Number and schedule this one anyway</span></div>
+      <label>Cover level</label><div class="in">19.000</div>
+    </div>
+    <div class="more">More&hellip;</div>
+    <div class="btns"><span class="btn pri">Save</span><span class="btn">Cancel</span></div>
+    <p class="small" style="margin-top:10px">Always in view when the pit is plastic; one more button on the page.</p>
+  </div>
+  <div class="card">
+    <p class="ttl"><span class="opt">B</span>Behind More&hellip;, with the schedule tick</p>
+    <div class="f">
+      <label>Pit type</label><div class="ch"><span class="c">Grated pit</span><span class="c">Junction pit</span><span class="c on">Plastic pit (PP)</span></div>
+      <label>Cover level</label><div class="in">19.000</div>
+    </div>
+    <div class="card" style="margin-top:12px;background:var(--note);border:0">
+      <p class="lab">More&hellip; (opened)</p>
+      <div class="row" style="border-top:0"><span>Included in pit schedule</span><span class="v">No</span></div>
+      <div class="row"><span>Pit number</span><span class="v">none</span></div>
+      <div><span class="btn sm">Number and schedule this one anyway</span></div>
+    </div>
+    <div class="btns"><span class="btn pri">Save</span><span class="btn">Cancel</span></div>
+    <p class="small" style="margin-top:10px">Main page stays shorter; one extra click on the rare pit that needs it.</p>
+  </div>
+</div>
+</div>
+</body>
+</html>
