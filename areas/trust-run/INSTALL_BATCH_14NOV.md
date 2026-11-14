@@ -71,3 +71,41 @@ Tim's answer, in his words: **"you do what you need to, to keep things moving"**
 - 2026-11-14 14:17: first start on a copy (AutoCAD 14:15 to 14:17): "CE_CVL_SUITE v3.0.90.3 Started", "Standalone CE Civil ribbon built: CE (9 panels)", CE Civil, Manager and Structural menu groups loaded, Structural "CETOOLS v1.0.1 initialized successfully", CDHELP opened and closed; no ERROR, load failure or mismatch in the Civil or Structural log.
 - 2026-11-14 15:13: **BUG-1456 mix-up sequences on the batch: pass 1 10 PASS / 0 FAIL (14:17 to 14:49), pass 2 10 PASS / 0 FAIL (14:50 to 15:12), two separate AutoCAD starts, settings same at the end of each.** Smoke list (CDCHECKCURRENT, PITSCHEDULE open/close, CDHELP, CDS, CDEDIT Esc, PIT window, CDSYNC, CD pipe, save-copy, reopen): same record sizes and counts as on 3.0.90.2; pipe 50 kept after save and reopen. Next: CDRUNSOLVE A/B/Enter/Esc, CDLPD with Continue pressed, CLEAN/FASTSAVE on template copies (started 15:13).
 - 2026-11-14 15:55: **ROBOT PASSES DONE; BATCH KEPT** (no pass failed, no crash). CDRUNSOLVE split A, B, Enter, Esc SEEN PASS with and without the LPD; CLEAN/FASTSAVE 5 of 5 SEEN PASS (template copy unchanged each time; saved .dwg saved); CDLPD NOT RUN (Continue pressed on scratch copies per Tim's word, but the robot's click tools refuse because CDLPD's pick question is not in the command-line log; a person or Codex must do it). Logs clean (no [BUG-1456], no ERROR, no load problem). End state proven 15:52: Civil 3.0.90.3 (832 = manifest) and Structural 1.0.126.1 (2,007 = manifest), Manager and ProgramData = BEFORE_14NOV, settings identical, no acad.exe. Result: `INSTALL_BATCH_RESULT_14NOV.md`. Undo: `restore_batch14.ps1`.
+
+## BATCH 2 (PREPARED, NOT INSTALLED): Civil 3.0.90.4 = today's batch + PR 2092 at its final head
+
+Written Sat 14 Nov 2026 23:45 by lane trust-safety-fixes, on the controller's order of 23:2x ("get the second trial batch READY so an install is one step. Do NOT install; that still needs Tim's own word"). **Installing waits for Tim's own yes for batch 2, relayed by the controller.** One owner installs (trust-acad-evidence), outside his hours, AutoCAD closed.
+
+1. **What changes on his PC: Civil only.** 3.0.90.3 (`11c0093c`, installed 14:15) becomes **3.0.90.4**: the same plus PR 2092's design flows. CDRUNSOLVE reads each pipe's design flow (Q) typed in Pipe Edit as that pipe's own flow, never added up twice. No Q, some Q missing, a Q CE cannot use, a Q that falls going down, or a run that loops back to a pit: nothing changes, and it says why in plain words. This is the controller's DRAFT default, Tim's to change.
+   - **Structural 1.0.126.1 and Manager 1.1.89: untouched.**
+   - **Not in batch 2:** 2099's review-fix heads, 2064, 2049 and everything else.
+2. **2092 at its final head `36640997`.** It was reviewed read-only by one cheap-model reviewer on 382999f5: no defects. Two small points were fixed on 2092 (a tiny negative Q reads "0.00", and a test for pit names that differ only in capitals). Release build net48, net10 and the proof project 0 errors; 270 of 270 related tests; each fix's broken twin fails.
+3. **Build commit `dadac7e7`** (DETACHED, no branch, never pushed), in staging worktree `C:\CE_WORK\build\wtB14b`, which is kept until the install.
+   - It is `11c0093c` + a merge of 2092 at `36640997` (only REGRESSION_LOG conflicted, both sides kept) + "Version: Civil 3.0.90.4".
+   - **Product files changed against 3.0.90.3:** four. `RunSolveCommand.cs` and `ProposalApplyService.PlanBuilders.cs`, plus the two version lines (`PackageContents.xml`, `CE_CVL_SUITE.csproj`). No native, shared, Manager or Structural file.
+4. **Payload:** `C:\ce_rc_scratch\b14civ2\CE_CVL_SUITE.bundle`, 832 files.
+   - **The build:** `build_installer.ps1` exit 0; Legacy, Net8 and Modern lanes verified; shared config verified (9 files). Every dotnet call passes `-p:SkipDevBundle=true`, and nothing under ApplicationPlugins was written.
+   - **Staging-only fixes:** the toolset override (`Directory.Build.rsp`, `/p:VCToolsVersion=14.51.36231`), and the INSTALLED `CE_TRANSFORM_2027.arx` copied into the ignored bin folder, which the net10 plugin build needs before the native steps (first attempt failed without it, as payload 116 found).
+   - **DLL `3.0.90.4+dadac7e7f1b5864ccbe45b983e9e78d2cee1b38c` SHA-256:**
+     - Legacy `8FCDD603E6BD41008886CB13BB332FAAC2D63384B2EABF1444CEDBC6227FE469`
+     - Net8 `4F60F9F76031162772E265282B357CFE7482047FA3C06D5D51544C4592E94DA5`
+     - Modern `68615B68902026892CA33FEEF91738F62725108FA3641BA07D469C4BC11ABE3D`
+   - **Manifest** `C:\CE_WORK\scratch\trust_install\b14civ2_manifest.txt`, 832 rows, SHA-256 `95A6F775354013AD52CB5E4AE243878884A324C4C5134EFC880650C4DDDF971F`.
+   - **Stamp check:** CE_SHARED and CE.AI.Core x3 have 0 bytes different outside the stamp zones; the installed bytes were put in; CE_SHARED is identical to Manager x3. The three natives are the installed bytes.
+   - **Against the installed 3.0.90.3 payload (`b14civ`): 7 files differ** (CE_CVL_SUITE.dll and .pdb x3, PackageContents.xml), 0 added, 0 removed. Read-only check at 23:38: live Civil equals the `b14civ` manifest, 832 of 832, bad 0.
+5. **Already proven on these sources (core console, by trust-acad-evidence, 18:10, local combo `1bc17a6a` = `11c0093c` + 2092 at 382999f5):** RUNSOLVE-FLOW-01, RUNSOLVE-SPLIT-01, BUG-1456-CROSS-01 and -02 all PASS. RUNSOLVE-FLOW-01 FAILS on d686e787, as it should. The two later commits (`37a33b26`, `36640997`) change only the "-0.00" words, one test and one log line. **Not yet run on the dadac7e7 payload itself.**
+6. **Install (one step, ONLY on Tim's yes for batch 2):**
+   1. AutoCAD closed (checked twice). Before running, check that live Civil equals the `b14civ` manifest; Structural and Manager equal their 15:52 end state.
+   2. Run `C:\CE_WORK\scratch\trust_install\install_batch14b.ps1`. It is a copy of `install_batch14.ps1`, Civil only, and NOT RUN; it parses clean.
+   3. It refuses unless live Civil reads `3.0.90.3+11c0093c`. It renames live Civil to `CE_CVL_SUITE_PRE_11c0093c_<time>.backup`, copies the candidate, reads every file back by SHA-256, checks 3.0.90.4 in all three lanes and CE_SHARED identical to Manager, and checks that the settings files are unchanged. Log: `install_batch14b.log`.
+7. **The robot after install (on scratch copies):** first start ("CE_CVL_SUITE v3.0.90.4 Started"), then the BUG-1456 smoke list.
+   - **CDRUNSOLVE on the standard copy with Q typed in Pipe Edit** on a run: levels proposed in the preview, each row saying "Design flow x.xx L/s, typed in Pipe Edit"; Esc and No change nothing; Yes then one U puts it back.
+   - **With one Q blank:** the refusal names that pipe and nothing changes.
+   - **No Q anywhere:** the refusal says to type Q in Pipe Edit (CDEDIT).
+   - **The split cases from batch 1** again, once.
+8. **Put back (one action, AutoCAD closed):** `C:\CE_WORK\scratch\trust_install\restore_batch14b.ps1` (NOT RUN; it parses clean).
+   - It renames the 3.0.90.4 bundle aside as `CE_CVL_SUITE_BATCH14B_REMOVED_<time>.removed` and renames `CE_CVL_SUITE_PRE_11c0093c_<time>.backup` back. If that backup is missing, it copies `C:\ce_rc_scratch\b14civ\CE_CVL_SUITE.bundle`.
+   - It then checks every Civil file against `b14civ_manifest.txt` (832), the three lane versions, CE_SHARED against Manager, and the settings against `SETTINGS_14NOV_before.txt`.
+   - Not rehearsed: AutoCAD was open at 23:3x (not this lane's). Its file check is the same code as the 23:38 live check (832 of 832).
+   - **To go all the way back to the 13 Nov state** (Civil 3.0.90.2, Structural 1.0.126): `restore_batch14.ps1`, as before.
+9. **Stop rules:** as section 5 above. If any CDRUNSOLVE pass fails, batch 2 is put back with `restore_batch14b.ps1`; batch 1 stays.
