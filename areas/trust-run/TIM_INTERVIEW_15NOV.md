@@ -295,7 +295,39 @@ Numbers are that file's Q numbers. That file itself is not edited by the ask cha
 - **Choice text he saw:** "'Unsaved work since 10:42 is not in the backup. Carry on?' You choose. CE never saves for you."
 - **Not chosen:** "Just say it in a line, no question"; "Save first, then apply".
 
-**Older questions answered so far (this file, 15 Nov):** Q5 to Q15 and Q17 to Q24. **Not asked yet:** Q0 to Q4, Q16, Q25 to Q87, and the two added at the end of that file (the template one is now answered by queue item 6; the robot pressing CDLPD's "Continue in drawing" is not).
+**Q32. Remembered last-used values between drawings.**
+
+- **Tim, Sun 15 Nov 2026 02:16 PC clock, clicked:** "Never a level; sizes may be (Recommended)".
+- **Choice text he saw:** "opening a new job, the cover level box is blank, but the pipe size box still shows the 150 you used last. A carried level is a wrong value shown as fact."
+- **Not chosen:** "Nothing remembered"; "Everything, as today".
+
+**Q36. Overflow (OF) and front overflow (FO) splitting the pipe they sit on.**
+
+- **Tim, Sun 15 Nov 2026 02:16 PC clock, clicked:** "Keep the split, say it (Recommended)".
+- **Choice text he saw:** "placing FO on the run prints 'FO split pipe P4 to P5 in two', and one U takes back both the symbol and the split."
+- **Not chosen:** "Never split"; "Ask each time".
+- **Ask chat's note (mine):** this confirms the split is intended, which the tool notes could not find written down.
+
+**Q46. Is the Pit Schedule Excel fault a blocker for the first colleague release?**
+
+- **Tim, Sun 15 Nov 2026 02:16 PC clock, clicked:** "Yes, a blocker until seen working (Recommended)".
+- **Choice text he saw:** "no colleague release until Export Excel opens a file with the same rows as the schedule window. The schedule is what goes to council."
+- **Not chosen:** "Ship with CSV only and a note".
+
+**Q31. Finished features that are switched off: do any come on in the first colleague release? NOT ANSWERED AS ASKED; he gave a wider ruling instead.**
+
+- **Tim, Sun 15 Nov 2026 02:16 PC clock, typed instead of clicking a choice:** "lets get the entirety of civil and manager working as we intend only then can we release to colleagues"
+- **Choices he was shown and did not pick:** "None now; each joins later (Recommended)"; "Turn on the ones I use"; "Turn on all ten".
+- **What his words say, read plainly (mine):** nothing goes to colleagues until the whole of Civil and Manager works as intended.
+- **What this may change, flagged, NOT decided by the ask chat:**
+  1. **The 5 Nov small-core decision** (colleagues get a small core, Civil first; `decisions\2026-11-05_TIM_PLUGIN_STRATEGY_TALK.md`, as `areas\V3_TRUST_PLAN_06NOV.md` line 5 records it). "The entirety of civil and manager" reads wider than a small core. Whether it replaces the small core, or means "the whole of the small core, plus Manager", is not known.
+  2. **His own 8.1 answer of 01:57 today** (ready = the ten accepted, five clean days, one real job). His 02:16 words are newer and may add to it or replace it.
+  3. **Which switches colleagues get (the question actually asked):** unanswered. One reading is that it falls away: if everything works as intended before release, the features are on because they are intended. That is a reading, not his answer.
+  4. **Structural** is not named in his words; his 17 Oct ruling already holds Structural to his own PC until ready.
+- **Does not change (mine):** the run's present work. The ten are still proven one at a time; nothing was going to colleagues yet.
+- **Asked next:** what "the entirety" covers, and whether it replaces the small core and 8.1.
+
+**Older questions answered so far (this file, 15 Nov):** Q5 to Q15, Q17 to Q24, Q32, Q36, Q46. **Q31 asked, not answered as asked.** **Not asked yet:** Q0 to Q4, Q16, Q25 to Q30, Q33 to Q35, Q37 to Q45, Q47 to Q87, and the two added at the end of that file (the template one is now answered by queue item 6; the robot pressing CDLPD's "Continue in drawing" is not).
 
 ---
 
