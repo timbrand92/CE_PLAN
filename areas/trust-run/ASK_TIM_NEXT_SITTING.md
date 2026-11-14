@@ -76,3 +76,12 @@ You asked "do you understand what a job takes from start to finish?" Honest answ
 3. **Check the record before asking.** Tonight one question was asked that the 17 Oct record had already answered, and one was asked with the wrong list. Both are written up in the interview file.
 4. **Messages to the controller** are capped at 20 between Tim's own messages; put anything undelivered in the shared notes folder.
 5. **The ask chat does not open** `C:\CE_DrawingIntelligence` or the office Projects folder.
+
+## Update Sun 15 Nov 2026 10:16 (ask chat): what the morning sitting closed
+
+Records: `FOR_TIM_QUEUE.md` "Answered" and `TIM_INTERVIEW_15NOV.md` section 14.
+
+1. **Closed:** part 1 (queue 12, 13, 14, answered in the ask chat at his request); part 2 (queue 15, all three pictures); 2a items 1 and 3 (Pit Schedule line: quiet grey count; first window: New Pipe, picture OK'd); part 5 items 2, 6 and 7 (direction tick: both places; Edit Pit button: behind More…); queue 16 and 17.
+2. **Part 4 (four clashes) no longer needed first:** he kept the four "never" rules, so each becomes a question on that tool's own picture.
+3. **Part 3 (whole job in his words): "monday please".** Monday 16 Nov, Civil first.
+4. **Still open:** queue 1 (Design flow box, "Not tried yet"); 2a item 2 (ribbon builder's fuller picture, not yet shown to him; I have only text-checked it); 2a item 4 (type once findings); part 5 items 3, 4, 5.
