@@ -63,3 +63,18 @@
 2. Run M3's driver log: 12 record readings, 8 name `DWG-A_PASS8.dwg` (drawing B, at the start and after M-03 Help, M-04 Settings, M-05 tab switch then Help) and 4 name `CLDTP_MIX14_A.dwg` (drawing A, at M-01 and M-06); none of B's readings names A's file.
 3. Desk read of B's saved copy (my own AutoCAD, 17:00): DBMOD 0, 1,285 objects, record 37,921 characters, path `DWG-A_PASS8.dwg`, 2 pits, 46 pipes, version 2.2.
 4. The first attempt (run M1, 16:32) did not start: my launcher text still said "one test copy" and "no Settings window"; fixed.
+
+---
+
+# CLEAN and FASTSAVE (BUG-1457), Codex look (Sat 14 Nov 17:05 to 17:24 PC clock, runs C1 and C2)
+
+**FOR TIM**
+
+1. **The never-saved cases could NOT be reached by Codex.** The driver refuses NEW (it is on its never-type list) and refuses to open a .dwt; typed by hand, NEW brings up AutoCAD's suggestion list, and Codex's rules forbid pressing Enter while that list shows. The other way in (Ctrl+N) can start a drawing from YOUR office template, which this test must never touch, so I did not ask for it. Result: NOT TESTED by Codex; the robot's SEEN PASS (15:45) stands alone, so BUG-1457 is NOT Codex-accepted.
+2. **A normal saved drawing: SEEN by Codex, twice.** CLEAN on a saved .dwg copy cleaned it and saved it as before ("6 steps done, 0 failed, drawing saved"; the file changed).
+3. **Nothing of yours touched:** the three template copies and your settings files were unchanged at the end of both runs.
+
+**DETAIL**
+
+1. Reports `CODEX_VERIFY_CLN14_C1_20261114_1707.md` (C-01, C-02 BLOCKED: driver refused NEW; C-03 BLOCKED: "only .dwg files can be opened"; C-04 PASS) and `CODEX_VERIFY_CLN14_C2_20261114_1716.md` (C-01, C-02 BLOCKED: suggestion list after the hand-typed NEW; C-03 dropped by the desk; C-04 PASS, D 31,825 to 33,371 bytes). Evidence `LOOKS\CLN14_C1_...` and `LOOKS\CLN14_C2_...`. No FAIL.
+2. To let Codex see the never-saved case, one of these would be needed: the driver allowed to start a NEW drawing from a named template copy, or AutoCAD's suggestion list switched off for the test (a setting change, not allowed). For the controller and Tim.
