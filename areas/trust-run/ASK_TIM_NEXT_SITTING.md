@@ -64,6 +64,7 @@ You asked "do you understand what a job takes from start to finish?" Honest answ
 3. **Yours to name:** the first colleague; the machine for the Roll Back proof.
 4. **Older questions not yet asked** (defaults in use): Q0, Q4, Q34, Q37, Q38, Q41, Q44, Q45, Q58, Q63, Q68, Q74 to Q77, plus the unasked parts of Q39, Q60, Q64, Q72 and Q78. Several are now overtaken by tonight's answers and will be struck off first, with the reason, rather than asked.
 5. **Held for the evidence study, not for your memory:** Q16, Q73, Q80, Q81, Q82.
+6. **Q11 needs a screen before it can be built (added 15 Nov 06:40 by lane trust-safety-fixes, on the controller's word):** his answer "Both Unknown, drawn order proposed" says the pipe into an unlabelled pit shows "direction proposed from drawing order" for him to tick. Nothing in CE can show a tick for a pipe direction yet, so by his mock-up rule this needs a picture he OKs first. Asked of him: where he expects to tick it (Check this drawing's list, or Edit Pipe), drawn as a mock-up. Until then 2049 leaves the direction as installed (drawn order), with no tick.
 
 ---
 
