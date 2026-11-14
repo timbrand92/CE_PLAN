@@ -46,3 +46,20 @@
 2. **Codex's two FAIL lines (L-07, L-08) are my brief's mistake, not the plugin's:** the brief told Codex to expect the outlet to name handle 10F608, read by a point pick (nentselp) on the pipe; that object is not a CE pipe. CE's own record (my read of the same drawing earlier today, `reads\BL_0.record.txt`) gives pipe P2 to P1 as id and entity handle **109835**, which is exactly what CDLPD stored (R1 "PipeHandle":"109835") before and after save and reopen. Desk verdict: L-07 PASS, L-08 PASS.
 3. Step results as checked by me: L-00 PASS, L-01 PASS, L-02 PASS (Continue in drawing pressed by Codex), L-03 PASS (screenshot LPD14-17 shows the refusal line), L-04 DIFFERENT (plain LINE: AutoCAD's pick filter wording, prompt stays; unchanged by the fix), L-05 PASS, L-06 SEEN (pipe-layer polyline accepted), L-07 PASS, L-08 PASS (screenshot LPD14-34 shows the LPD note at P2).
 4. The first attempt (run L1, 15:57 to 16:09) was blocked by my brief: it sent a bare CDLPD without -Force and the driver refused it; Codex correctly did not add -Force on its own. That AutoCAD was closed by the driver's quit under the look's lock (settings unchanged).
+
+---
+
+# Two jobs mixed up (BUG-1456), Codex look (Sat 14 Nov 16:34 to 17:05 PC clock, runs M2 and M3)
+
+**FOR TIM**
+
+1. **Codex saw no mixing.** In drawing B (the second test job), Help first, CD Settings, and Help again after switching tabs to drawing A and back: every reading of CE's record in B still named B's own file and B's own first pit; drawing A kept its own record. Two separate runs, same answer.
+2. **My own check agrees:** I re-read drawing B as Codex saved it at the end: 2 pits, 46 pipes, its own file name, 37,921 characters, exactly as before the test.
+3. **But Codex did not mark it PASS:** its four key steps are NOT TESTED (EVIDENCE) because my brief asked for a screenshot of each reading's reply, and Codex cannot photograph its own command replies (it runs them out of sight; the replies are in its log). So by the rule in force BUG-1456 is NOT Codex-accepted: robot PASS (20 of 20) plus Codex "seen in the log, not screenshotted". The controller decides whether a logged driver reading counts as evidence for readings.
+
+**DETAIL**
+
+1. Reports `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_MIX14_M2_20261114_1635.md` (PASS 3, DIFFERENT 1, NOT TESTED 4) and `CODEX_VERIFY_MIX14_M3_20261114_1651.md` (PASS 1, SEEN 3, NOT TESTED 4); evidence folders `LOOKS\MIX14_M2_20261114_1635\` and `LOOKS\MIX14_M3_20261114_1651\`. No FAIL in either.
+2. Run M3's driver log: 12 record readings, 8 name `DWG-A_PASS8.dwg` (drawing B, at the start and after M-03 Help, M-04 Settings, M-05 tab switch then Help) and 4 name `CLDTP_MIX14_A.dwg` (drawing A, at M-01 and M-06); none of B's readings names A's file.
+3. Desk read of B's saved copy (my own AutoCAD, 17:00): DBMOD 0, 1,285 objects, record 37,921 characters, path `DWG-A_PASS8.dwg`, 2 pits, 46 pipes, version 2.2.
+4. The first attempt (run M1, 16:32) did not start: my launcher text still said "one test copy" and "no Settings window"; fixed.
