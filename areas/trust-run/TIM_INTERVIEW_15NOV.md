@@ -661,7 +661,34 @@ Numbers are that file's Q numbers. That file itself is not edited by the ask cha
 - **Not chosen:** "Take the first row, as today"; "Match the floor by itself".
 - **Not asked from Q60:** the timber stud pack part (DS1 naming a timber size from the schedule but drawing 90 x 90).
 
-**Older questions answered so far (this file, 15 Nov):** Q1, Q2 (permission, not the chosen set), Q3, Q5 to Q15, Q17 to Q33, Q35, Q36, Q46 to Q52, Q54 to Q57, Q59, Q60 (mark twice), Q61, Q65, Q66 (all but Rule 15), Q69, Q71, Q78 (truss part), Q83. **Q53 open by his choice ("I'll tell you later"): not the 17 Oct pilot.** **Held back for the evidence study (12.2):** Q16, Q73, Q80 to Q82. **Not asked yet:** Q0 to Q4, Q33 to Q35, Q37 to Q45, Q47 to Q56, Q58 to Q72, Q74 to Q79, Q83 to Q87, and the two added at the end of that file (the template one is now answered by queue item 6; the robot pressing CDLPD's "Continue in drawing" is not).
+**Q70. Old beam links converted when a Structural drawing opens.**
+
+- **Tim, Sun 15 Nov 2026 02:39 PC clock, clicked:** "Move it out of opening (Recommended)".
+- **Choice text he saw:** "an old Structural job you open only to print no longer asks 'save changes?' when you close it. The conversion happens when you first use a beam tool, and says so in one line."
+- **Not chosen:** "Keep it on opening, say so".
+- **Ask chat's note (mine):** "when you first use a beam tool" was my example of where it moves to; the older file only says "move it out of opening, as Civil step 8 does". Where it moves to is a design point for the builders, to be shown to him.
+
+**Q62. SBEAM, which crashed AutoCAD on 5 Nov.**
+
+- **Tim, Sun 15 Nov 2026 02:39 PC clock, typed instead of clicking a choice:** "fix before release"
+- **Choices he was shown and did not pick:** "Typed only until proven (Recommended)"; "On the tab with a warning".
+- **Ask chat's reading (mine):** the SBEAM crash is to be fixed, meaning reproduced on a copy and shown not to happen, before Structural is released to colleagues. That makes it a release blocker for Structural, in the same way Q46 is for Civil. He did not say where the button sits in the meantime; since nothing Structural reaches colleagues before its own release (Q57), that only matters on his own PC and was not asked.
+- **Related, on record, not re-asked:** his 18 and 20 Oct design decisions that CEMEMBER replaces SBEAM. Whether "fix" means fixing SBEAM itself or finishing its replacement is not answered by these three words.
+
+**Q72. CE's record and the drawn label disagree** (the pit-number case).
+
+- **Tim, Sun 15 Nov 2026 02:39 PC clock, clicked:** "Neither: Unknown, show both (Recommended)".
+- **Choice text he saw:** "'Unknown: record says P3, label says P4' until you pick. Same answer you gave for the schedule against the label."
+- **Not chosen:** "The label wins"; "The record wins".
+- **Not asked from Q72:** the other three parts of the older question (oldest block names with nothing of CE's on them are Proposed; the same CE tag on two blocks makes both Proposed; a pit scaled by hand is Unknown in size). The second of these matches his Q5 answer ("tag found once").
+
+**Q84. Start-up checks on the tools that write.**
+
+- **Tim, Sun 15 Nov 2026 02:39 PC clock, clicked:** "Add it to the three that write (Recommended)".
+- **Choice text he saw:** "CDTWL on a read-only drawing says so before asking you anything, instead of failing after you have answered its questions." The three: CDRAINFALL, CDTWL, CDRULES.
+- **Not chosen:** "Add it to all seven"; "Leave them as built".
+
+**Older questions answered so far (this file, 15 Nov):** Q1, Q2 (permission, not the chosen set), Q3, Q5 to Q15, Q17 to Q33, Q35, Q36, Q46 to Q52, Q54 to Q57, Q59, Q60 (mark twice), Q61, Q62 (his words: "fix before release"), Q65, Q66 (all but Rule 15), Q69 to Q71, Q72 (pit-number case), Q78 (truss part), Q83, Q84. **Q53 open by his choice ("I'll tell you later"): not the 17 Oct pilot.** **Held back for the evidence study (12.2):** Q16, Q73, Q80 to Q82. **Not asked yet:** Q0 to Q4, Q33 to Q35, Q37 to Q45, Q47 to Q56, Q58 to Q72, Q74 to Q79, Q83 to Q87, and the two added at the end of that file (the template one is now answered by queue item 6; the robot pressing CDLPD's "Continue in drawing" is not).
 
 ---
 
