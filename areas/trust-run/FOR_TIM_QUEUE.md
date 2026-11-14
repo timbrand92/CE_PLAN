@@ -52,6 +52,10 @@
    - **15b. CE Structural tab in your order** (Start, Roof, Upper floors, Ground, Footings, Check, Sheet), using the 32 tools the 12 Nov sort keeps. Found while drawing it: today's framing tools are the same on every floor, so Upper floors and Ground hold the same five buttons twice, and Footings has no ready tool yet. **A: keep both floor panels, so it reads roof down** (recommended: it matches the order you asked for) / **B: one "Floors and ground" panel, each button once.**
    - **15c. Dashboard, one row per PC** (coded names, three CE versions, AutoCAD year, office setup yes or no, "4 of 5 on the approved CE"). **OK as shown** / **change it** (your words).
 
+16. **Done by default, tell me if you object: the test robot may now press two more buttons, on scratch copies only.** It could not press Save in Edit Pit (the button was renamed "Edit pit, Save") or type in the Design flow box (a separate "More options" window), and that was stopping your tools being proven. Allowed by the controller on 15 Nov 04:39 under your 14 Nov "you do what you need to, to keep things moving": exactly those two controls, never on a drawing outside the scratch test folders. Export, plot and everything else stay refused.
+   - **Fine** (in use). Example: the robot can now edit a pit on a test copy, save, and check one Undo puts it back.
+   - **No, take it back.** Example: those steps go back to Codex only, which is slower and has failed twice on the Design flow box.
+
 ## Older, still open (asked before 15 Nov, defaults in use)
 
 8. **Ribbon in job order** (Start, Sources, Network, Levels, Check, Sheet). Default: not built into any batch until you have seen a mock-up.
