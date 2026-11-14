@@ -352,3 +352,12 @@ Tim, typed: "lets get the entirety of civil and manager working as we intend onl
 3. **Manager:** everything in the Manager plan (sending, taking back, the dashboard of every PC, the office setup check, the you-are-behind notice).
 4. **On top:** five clean working days on his PC and one real council stormwater job start to finish on CE alone (may overlap).
 5. **Controller's reading (mine):** the ten stay the ORDER OF WORK and the first number reported. After the ten, the same method (fix, install, robot and Codex, accept) carries on through the rest of the Civil ribbon and Manager. "Prove, don't draft" still holds: fixes on existing drafts; a new draft only where a ribbon tool has a seen fault and no draft exists, and that widening is put to Tim before it starts. Not asked: Structural. Not answered: which switched-off features come on.
+
+## AUTOCAD 2027 ONLY FOR NOW (Tim, ask chat, Sun 15 Nov 2026 02:27 to 02:28 PC clock)
+
+Tim typed "autocad 2027 only for now", then clicked "Stop work on older years" (2022 to 2024). His words and the ask chat's three points of care: `areas\trust-run\TIM_INTERVIEW_15NOV.md` section 11 (Q56 and its follow-up). Relayed to the controller by the ask chat.
+
+**Controller's reading (mine), in force for the trust run:**
+1. **No work is spent on 2022 to 2024:** no fixes for them, no tests on them, no proof asked of them. Proof is on AutoCAD 2027 only. Colleagues on older years keep the CE they have.
+2. **The batch build is NOT changed tonight.** The existing installer build makes all three sets of files (Legacy, Net8, Modern) in one go, and the install scripts check all three and that CE_SHARED matches Manager. Taking two sets out means changing a build script, which needs Tim's explicit approval under the repo's own rules, and what a bundle with those sets missing or stale does on his PC is unchecked. So the three sets keep being produced by the same script, at no extra effort, until that is looked at.
+3. **Not changed by anyone:** the plugin repo's `AGENTS.md` and `START_HERE` 1b still say both builds are required. That text is now older than Tim's ruling; whether to change it is his call. In FOR_TIM_QUEUE as a new item.

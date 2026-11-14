@@ -23,6 +23,11 @@
    - **ANSWERED, see "Answered" below:** as now.
 (Items 2, 3 and 5 were answered on Sun 15 Nov and are under "Answered" below. Numbers are kept, not re-used.)
 
+10. **Older AutoCAD years (2022 to 2024): how far does "stop work" go?** You said stop; I have stopped all fixing, testing and proving for them. The one open point is the build itself.
+   - **Keep making the older-year files in each batch, untested** (recommended, in use). Example: tonight's batches still carry all three sets, exactly as before, so nothing about your bundle changes; no time is spent on them.
+   - **Take them out of the build.** Example: a batch carries the 2027 files only; that means changing the build script and the install checks, and first checking what your own PC does with a bundle that has them missing.
+   - Either way the repo's written rules still say "both builds required"; say if you want that text changed.
+
 ## Older, still open (asked before 15 Nov, defaults in use)
 
 8. **Ribbon in job order** (Start, Sources, Network, Levels, Check, Sheet). Default: not built into any batch until you have seen a mock-up.
