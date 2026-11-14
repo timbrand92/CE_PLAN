@@ -281,3 +281,17 @@
    - **Evidence class:** robot-style readings (record and drawing before/after). Codex saw each step live but its screenshot saver kept the baseline image, so Codex claims no visual PASS ("NOT TESTED: EVIDENCE").
    - **So: CDRUNSOLVE Apply is undone by one U (record and drawing). The 06:57 FAIL is withdrawn.** Small point still open: a CDRUNSOLVE run that applies nothing counts as its own undo step.
    - Typing try not run (my RSQ18 brief left the step out); the Design flow box stays untested.
+
+# 2027-ONLY TRIAL (Civil 3.0.90.7, Modern set only, installed by the controller 07:32; robot 07:33 to 07:39)
+
+Transcript `C:\CE_WORK\scratch\trust_install\b2027.out`. Live Civil lanes: Modern only. Two separate AutoCAD 2027 starts, scratch copies; each closed by the driver, the 4 settings files the same.
+
+1. **"CE_CVL_SUITE v3.0.90.7 Started": PASS, both starts** (CE log 07:33:19.240 and 07:38:10.103).
+2. **Ribbon: PASS, both starts:** "Standalone CE Civil ribbon built: CE (9 panels)." (9 panels, as on the three-set batches). Screenshots `C:\Lisp Files\_TEST_COPIES_20260923\robot_shots\session_20261115_072831\B2027_start_1.png`, `C:\Lisp Files\_TEST_COPIES_20260923\robot_shots\session_20261115_073755\B2027_start_2.png`.
+3. **CE logs: PASS:** 0 lines with unable to load, FileNotFound, missing file, mismatch, BadImageFormat, ERROR, FATAL or Exception since each start.
+4. **Command line: OPEN QUESTION, both starts:** "Menu item failed to load: CE_CVL_SUITE_MENU:CE CVL" and "Menu item failed to load: CE_SUITE_MANAGER_MENU:CE Manager". Not known whether the three-set build prints the same: none of tonight's earlier transcripts kept that part of the command line, and no AutoCAD log of it was found. The Manager menu is in Manager's own untouched bundle, which suggests it is not caused by the trim, but that is a reading, not proof. **Check needed:** one three-set start after the put-back, reading the same lines and AutoCAD's menu-group list (2 minutes). (Other command-line lines were the drawing's missing backgrounds, "Background not found: XW2626-Title Block" etc., which are the test drawing's own.)
+5. **Manager and Structural loading:** no load-failure line in their logs; my log filter did not catch their own "loaded" lines, so not separately proven beyond "no error".
+6. **Opening line on a Civil copy: PASS, both starts:** "CE: needs checking. 22 pipes not linked. Type CDCHECKCURRENT to see them." and "CE: pit blocks were updated when this drawing opened."
+7. **Short mix-up smoke (3 sequences): PASS:** CDHELP first in a blank drawing: no CE record; CDS in the same blank drawing: no CE record; back in the Civil copy: its record byte-identical to before.
+8. **Pit Schedule window opens: PASS** (screenshot `C:\Lisp Files\_TEST_COPIES_20260923\robot_shots\session_20261115_072831\B2027_pitschedule.png`), closed cleanly.
+9. **CDCHECKCURRENT runs: PASS:** "[CE] Drawing check complete. 27 items need checking. Nothing has been fixed automatically."
