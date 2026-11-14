@@ -215,6 +215,35 @@ Numbers are that file's Q numbers. That file itself is not edited by the ask cha
 - **Not chosen:** "Everything at once"; "Everything one by one".
 - **Ask chat's note (mine):** "nothing pre-ticked" here is about sizes, levels and pit numbers. In 2.2 the downpipe example showed proposals ticked for him to untick; whether proposed downpipes start ticked is still not asked, so the two do not conflict yet, but it needs one question before any proposal list is designed.
 
+**Q13. A bare line on a pipe layer, in Check this drawing on an old job.** (He was reminded of his queue item 2 answer of 01:47 today.)
+
+- **Tim, Sun 15 Nov 2026 02:07 PC clock, clicked:** "Listed as possible pipes, I tick (Recommended)".
+- **Choice text he saw:** "a hand-drawn job shows '22 possible pipes'; each becomes a CE pipe with size Unknown only when you tick it. Nothing enters the record by layer alone."
+- **Not chosen:** "Ignored". (The older file's third choice, "a pipe with Unknown size straight away", was not offered again because his queue item 2 answer had already ruled it out.)
+- **Ask chat's note (mine):** this settles the two drafts that disagree, as the older file described them: the reader's "possible pipe, Proposed" (pull request 2040) is his answer; the step 6 draft that adds the line to the record with Unknown size (pull request 2049) is not.
+
+**Q14. A pipe's drawn width used as its size.**
+
+- **Tim, Sun 15 Nov 2026 02:07 PC clock, clicked:** "Proposed if it matches a listed size (Recommended)".
+- **Choice text he saw:** "a 0.225 wide line in a metre drawing proposes '225, from drawn width' for you to tick. A width that matches no standard size stays Unknown."
+- **Not chosen:** "Never use the width"; "Treat it as sure".
+- **Not asked:** the 0.5 mm match figure in the older file; that is a number and belongs on the Settings page under his settings-first rule.
+
+**Q15. A drawing whose units were never set** (today: treated as millimetres).
+
+- **Tim, Sun 15 Nov 2026 02:07 PC clock, clicked:** "Ask once, keep in the drawing (Recommended)".
+- **Choice text he saw:** "on the first check of an old LISP job CE asks 'Is this drawing in millimetres or metres?' and never asks again for that drawing."
+- **Not chosen:** "Assume mm and say so"; "Work it out from the drawing".
+- **Ask chat's note (mine):** this sits beside queue item 3 (reaches follow the drawing's units, kept on today). Item 3 covers drawings whose units ARE set; this covers drawings where they are not. The older file says the reader draft (pull request 2040) assumes millimetres; his answer replaces that default.
+
+**Q5. What makes an item "Sure" in Check this drawing.**
+
+- **Tim, Sun 15 Nov 2026 02:07 PC clock, clicked:** "Tag found once, values agree (Recommended)".
+- **Choice text he saw:** "pit P3 copied in from last year's job, with a different label, shows as Proposed, not Sure. Sure needs CE's tag used once in the drawing and stored values matching the drawn label."
+- **Not chosen:** "The tag alone". ("Tag" was my plain word for what the older file calls CE's stored identity.)
+
+**Older questions answered so far (this file, 15 Nov):** Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14, Q15. **Not asked yet:** Q0 to Q4, Q16 to Q87, and the two added at the end of that file (the template one is now answered by queue item 6; the robot pressing CDLPD's "Continue in drawing" is not).
+
 ---
 
 ## Still to ask in the interview (not decisions)
