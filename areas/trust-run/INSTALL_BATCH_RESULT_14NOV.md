@@ -226,3 +226,18 @@
 2. **A real loop in CE's records** (two pipes P10 and P9; CDREVERSEFLOW with Yes turned the second round: "End values swapped and arrow reversed"; record then holds 11C651 P10->P9 and 11C67E P9->P10): CDRENUMBER again "nothing to renumber", **no loop line**. Record and drawing unchanged.
 3. **Reading (mine, not proven):** the two new lines are written just before the Yes/No question; when nothing needs renumbering no question is asked, so they never appear. The runbook expects them to name the pit and the pipes. A case where renumbering IS needed was not built tonight. Sent to the controller.
 4. My first two runs of this did not count (my script's function name "Ren" is PowerShell's own Rename-Item, so it waited; and my Enter answered No to CDREVERSEFLOW's question).
+
+## Item 5a: batch 5 CDLPD (BUG-1298), the re-look: Codex OVERALL PASS + record read (05:40 to 06:01)
+
+1. **Codex look LPD15 run L3 on 3.0.90.7: OVERALL PASS, 8 PASS + 1 SEEN, 0 FAIL.** Report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_LPD15_L3_20261115_0540.md`; screenshots `C:\Lisp Files\_TEST_COPIES_20260923\LOOKS\LPD15_L3_20261115_0540\screenshots\`.
+   - **L-03 plain polyline refused: PASS** ("[CE] That line is not a CE pipe, so it cannot be the LPD pipe. Nothing was changed. ..."; record unchanged). LPD15-18-plain-polyline-picked.png, LPD15-19-L03-record-unchanged.png.
+   - **L-06 bare polyline on STORMWATER PIPE (Tim's rule, 15 Nov): PASS, refused with the same line**, record unchanged. LPD15-35-L06-picked.png, LPD15-36-L06-unchanged.png.
+   - **L-07 CE pipe 109835 taken: PASS** ("LPD set."; R1 PipeHandle 109835). LPD15-41-L07-picked.png to LPD15-43-L07-record-109835.png.
+   - **L-08 still 109835 after save and reopen: PASS.** LPD15-44-L08-saved.png, LPD15-45-L08-reopened.png.
+   - L-04 (plain LINE) recorded only: older wording "Select a pipe, pit, or any block (kerb outlet, connection point, etc.)." and the question repeats; nothing changed. L-05 Esc: PASS.
+   - (A first start at 05:38 was NOT STARTED: Explorer was minimised and Codex's screen check refused; I opened an Explorer window on the test folder and reran.)
+2. **Before-and-after CE record read (robot, 05:58 to 06:01, scratch copies, never saved, both hashes unchanged):**
+   - BEFORE (copy of the fixture, SHA-256 34BBE37C...): `C:\CE_WORK\scratch\trustprobe\reads\LPD15CHK_BEFORE.record.txt`: outlet on pipe 109500, COUNCIL STUB.
+   - AFTER (copy of Codex's saved copy, SHA-256 03FBE1BD..., saved 05:53): `C:\CE_WORK\scratch\trustprobe\reads\LPD15CHK_AFTER.record.txt`: outlet on pipe 109835 (CE's pipe P2 to P1), downstream end, pit 109601, KERB & CHANNEL, invert 16.98.
+   - Transcript `C:\CE_WORK\scratch\trust_install\lpd15_check.out`. The driver's quit closed the drawings but AutoCAD stayed open with none; I ended it (my own launch at 05:58:19, nothing open); settings the same.
+3. **For the controller to write:** Codex PASS with screenshots + record read, on the installed build, with Tim's pipe-layer rule met. I have not changed the carpark entry.
