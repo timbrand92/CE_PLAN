@@ -384,7 +384,33 @@ Numbers are that file's Q numbers. That file itself is not edited by the ask cha
 - **Choice text he saw:** "their label height goes back to the office value when they press Apply on the update, and their old file is kept beside it in case it is needed."
 - **Not chosen:** "Kept unless they choose".
 
-**Older questions answered so far (this file, 15 Nov):** Q5 to Q15, Q17 to Q24, Q29 to Q32, Q36, Q46, Q57. **Held back for the evidence study (12.2):** Q16, Q73, Q80 to Q82. **Not asked yet:** Q0 to Q4, Q25 to Q28, Q33 to Q35, Q37 to Q45, Q47 to Q56, Q58 to Q72, Q74 to Q79, Q83 to Q87, and the two added at the end of that file (the template one is now answered by queue item 6; the robot pressing CDLPD's "Continue in drawing" is not).
+**Q25. Which tools stop changing CE's record now.**
+
+- **Tim, Sun 15 Nov 2026 02:22 PC clock, clicked:** "Those four stop changing it now (Recommended)".
+- **Choice text he saw:** "opening CE Health changes nothing in the drawing, so closing afterwards never asks 'save changes?'. Everyday tools like PIT keep updating the record, with a line saying so." The four named in the question: CE Health, CDGRAPH, CDDIAG, the dashboard.
+- **Not chosen:** "Every tool stops now".
+
+**Q26. CDRECOVERINVERTS's hidden first step.**
+
+- **Tim, Sun 15 Nov 2026 02:22 PC clock, clicked:** "Remove the hidden step (Recommended)".
+- **Choice text he saw:** "a pipe with no size is skipped with 'size not known' instead of having its inverts recovered from a made-up 100 dia. Matches your 'Unknown everywhere' answer tonight."
+- **Not chosen:** "Keep it".
+
+**Q27. What the record line says.**
+
+- **Tim, Sun 15 Nov 2026 02:22 PC clock, clicked:** "One line, guesses counted (Recommended)".
+- **Choice text he saw:** "'CE updated its record (PIT): 1 pit added, 1 pipe size filled in as 100.' On the command line, no window, no sound. The guesses are what you most need to see."
+- **Not chosen:** "One line, adds and removes only"; "A small window".
+- **Ask chat's note (mine):** the example wording was an illustration, not approved wording. Once Q9 is built (no size is ever filled in as 100) the "filled in" part of the line has nothing left to count for sizes; until then it tells him about each guess.
+
+**Q28. The Pit Schedule writing a drawn pipe size back into the record when it opens.**
+
+- **Tim, Sun 15 Nov 2026 02:22 PC clock, clicked:** "Say it in a line (Recommended)".
+- **Choice text he saw:** "opening the schedule prints 'CE updated its record (Pit Schedule): 2 pipe sizes read from the drawing.' The write still happens, but never silently."
+- **Not chosen:** "Stop the write-back" (shown to him as "closest to 'CE never changes a size by itself'"); "Leave it silent".
+- **Ask chat's note (mine):** he chose to keep the write-back with a line even with the stricter choice in front of him. So 9.1 ("CE never changes a level or size by itself, without showing you first") is read as: a size read off the drawing into CE's record, and said in a line, counts as shown. It does not cover changing what is drawn.
+
+**Older questions answered so far (this file, 15 Nov):** Q5 to Q15, Q17 to Q32, Q36, Q46, Q57. **Held back for the evidence study (12.2):** Q16, Q73, Q80 to Q82. **Not asked yet:** Q0 to Q4, Q33 to Q35, Q37 to Q45, Q47 to Q56, Q58 to Q72, Q74 to Q79, Q83 to Q87, and the two added at the end of that file (the template one is now answered by queue item 6; the robot pressing CDLPD's "Continue in drawing" is not).
 
 ---
 
