@@ -850,6 +850,27 @@ Rule: a mock-up OK is approval of the picture. It is not a go-ahead to build, an
 4. **Not decided:** which chat does the study, and how many patterns make a batch. The ask chat does not start it; the controller has been told his words.
 5. **Effect on the older questions (mine):** Q16, Q73 and Q80 to Q82 ask him for distances and text patterns from memory. They are better answered by the study with pictures of real cases than asked cold, so the ask chat holds them back unless he wants them now.
 
+**12.3 Tim's direction for the whole product. HIS WORDS, typed Sun 15 Nov 2026 03:27 PC clock, unedited:**
+
+> i want to type or input things once and that is saved everywhere and i want to make the way we do the design of this plugin smarter, more efficient and well designed, considering all aspects of design and drawing standards whilst presenting a well considered and consistent platform that is easy to use for all levels of ability and experience
+> the issue i have now with the plugin is it feels complex and feels like it was built by ai with no considerarion for how its used by humans, the logic to things is over complicated and rough for the end user so they dont know what to use and when its fomplex. think about this make it a key focus in the plan and think about and interview me as to what the final product in its entirety should be with manager, strucutral and civil. i want you to do your best first and then interview me. consider how we have lots of commands that could just run automatically but considered well. understand how the whole process of desigm and drafting works and what the best way to help automate and improve the quality, speed and process of it all
+> how many questions left?
+> tell me when were done with questions so i can go to bed
+> https://griffinwooldridge.com/ai-for-designers
+
+**What he asked for, listed (ask chat's reading, mine):**
+
+1. **Type once, saved everywhere.** A value entered in one place is never asked for again anywhere else.
+2. **A key focus in the plan:** the plugin must stop feeling complex and "built by ai with no consideration for how its used by humans". Users must know what to use and when.
+3. **One consistent platform** across Manager, Structural and Civil, easy for every level of ability and experience, respecting design and drawing standards.
+4. **Fewer commands to run by hand:** many could "just run automatically but considered well".
+5. **Understand the whole design and drafting process** first, then automate to lift quality, speed and process.
+6. **Method:** the ask chat does its best first, then interviews him.
+
+**The page he linked** (read 03:28; it is a sign-up page for a guide that is not out yet): its argument is that AI output looks generic "because the model is working blind", and that the fix is not the prompt but giving the model real references, the design rules, and a way to check its own work. Ask chat's reading (mine) of why he sent it: the same three things for CE: his real drawings as references (the evidence study, 12.2), his screen rules and the Design Guidebook as the rules, and looking at the real screen before calling anything done. I did not join the waitlist or enter anything on the page.
+
+**The ask chat's best-first draft** is `areas\trust-run\FINAL_PRODUCT_DRAFT_15NOV.md`. It is a DRAFT for the controller to fold into the one plan on Tim's word; it is not a second plan and nothing in it is decided until he says so. His answers to the interview on it are in section 13 below.
+
 ---
 
 ## Still to ask in the interview (not decisions)
