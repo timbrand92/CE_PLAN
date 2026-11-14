@@ -1027,3 +1027,12 @@ Typed in the ask chat, exactly:
 2. **Dashboard row picture (queue 15c):** "OK as shown (Recommended)". Picture OK only.
 3. **Pit Schedule plastic-pit line (queue 4):** "Quiet grey count (Recommended)". Full record in the queue under "Answered".
 4. **Which of the ten tools' windows is redrawn first.** Asked: "Of the ten tools' windows, which should be redrawn first to your screen rules? The audit found none of 11 windows meets them; New Pipe and CDCALC are furthest off." He clicked: "New Pipe (CD) (Recommended)". Choice text he saw: "it is used on every job, many times a day, and Edit Pipe already has the simpler look to copy. Mock-up first for your OK." Not chosen: "CDCALC"; "Place a pit (PIT)"; "Leave windows until Monday". My reading (mine): an order for mock-ups, not a build; the New Pipe mock-up is owed to him before anything is built.
+
+### 14.4 The three held items, asked here at his request, 10:09
+
+About 10:08 he typed: "send me open questions here". Full records are in the queue under "Answered" (items 12, 13, 14).
+
+1. **Build the simpler layout now?** "Picture first, build after my OK (Recommended)". **Supersedes 13.4.**
+2. **May CE act by itself?** "Keep the four 'never' rules for now (Recommended)". **Supersedes 13.6 as the rule in force;** 9.1 stands again. The four clashes in 13.6 no longer need settling before anything is built; they become questions for each tool's picture.
+3. **Real finished jobs from the Projects folder?** "Yes, any finished job" (passing over "Only jobs I name (Recommended)"). Confirms Q2.
+4. **Design flow box (queue 1):** "Not tried yet". Still open.
