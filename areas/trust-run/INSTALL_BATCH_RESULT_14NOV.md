@@ -78,3 +78,17 @@
 
 1. Reports `CODEX_VERIFY_CLN14_C1_20261114_1707.md` (C-01, C-02 BLOCKED: driver refused NEW; C-03 BLOCKED: "only .dwg files can be opened"; C-04 PASS) and `CODEX_VERIFY_CLN14_C2_20261114_1716.md` (C-01, C-02 BLOCKED: suggestion list after the hand-typed NEW; C-03 dropped by the desk; C-04 PASS, D 31,825 to 33,371 bytes). Evidence `LOOKS\CLN14_C1_...` and `LOOKS\CLN14_C2_...`. No FAIL.
 2. To let Codex see the never-saved case, one of these would be needed: the driver allowed to start a NEW drawing from a named template copy, or AutoCAD's suggestion list switched off for the test (a setting change, not allowed). For the controller and Tim.
+
+---
+
+# CDRUNSOLVE at a split (BUG-1355), Codex look (Sat 14 Nov 17:25 to 17:43 PC clock, runs S1 and S2)
+
+**FOR TIM**
+
+1. **Codex saw the new question and every answer behave as designed:** "2 pipes leave pit P10. Which way does the run go? A = to P9, 225 mm, B = to P4, 225 mm. Enter stops the run at P10; Esc cancels and changes nothing." (screenshot checked by me); A went P10 to P9; B went P10, P4, P3, P2, P1, C1, STUB; Enter: "no way was chosen"; Esc: "Cancelled - drawing unchanged."
+2. **But not a Codex PASS:** Codex's screenshot tool saved repeated, stale images for the A, B and Enter results, so Codex marked those NOT TESTED (EVIDENCE); the Esc step it marked BLOCKED because my brief described one question more than CDRUNSOLVE actually asks. Codex also noted "the record differs from START": that is my brief's mistake (START was read before the two test pipes were drawn), not a fault. So BUG-1355 is NOT Codex-accepted; the robot's SEEN PASS (15:16 to 15:37) stands alone.
+3. **As agreed with the controller:** a Codex PASS here could only ever accept the route (BUG-1355), not the tool CDRUNSOLVE, which stays not accepted because on this build it cannot write levels (every pit's design flow is 0).
+
+**DETAIL**
+
+1. Reports `CODEX_VERIFY_RSV14_S1_20261114_1726.md` (blocked at CD: my brief lacked the Enter for "Select point 3 (or Enter for straight pipe)") and `CODEX_VERIFY_RSV14_S2_20261114_1734.md` (S-00 SEEN, S-01 SEEN: both pipes drawn, objects 1,054 to 1,062; S-02 to S-04 NOT TESTED; S-05 BLOCKED but "Cancelled - drawing unchanged." seen). Screenshot hashes in `LOOKS\RSV14_S2_20261114_1734\exports\savercheck.txt` show the repeated images. No FAIL.
