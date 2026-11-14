@@ -13319,7 +13319,9 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1920 (B-096, on the #1897 branch): cove
 
 **Reference:** CODEX_SWEEP_S08 S08-02; `Modules/Drainage/Rules/PitRenumberPlanner.cs:91-104, :142; PitRenumberNetworkBuilder.cs:102-129`. Installed Civil 3.0.70. Opus check 23 Oct: VERIFIED. Existing: none (grep for renumber with loop/cycle/stack: only this report). Fix kind: code (on-path guard; report the loop in plain words, no hard block). Protected: no. Lane: Codex or Sonnet; base claude/rel-20261022m. Test: PitRenumberPlanner.Compute with edges P10<-{P12,P13}, P12<-P11, P11<-P12; expect it returns (a finite list or a loop message), no StackOverflow
 
-**Status:** OPEN
+**Evidence (14 Nov 2026):** robot PASS on the installed Civil 3.0.90.3+11c0093c (17:58 PC clock, `C:\CE_WORK\scratch\trust_install\robot968.ps1`: two pipes P10 to P9 and P9 to P10, CDRENUMBER, C1, list "P9 -> P8, P10 -> P9", N, "Renumber cancelled - nothing changed.", same AutoCAD process, record unchanged); Codex PASS on the same build (`C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_REN14_N2_20261114_1753.md`, screenshot `LOOKS\REN14_N2_20261114_1753\screenshots\REN14-06-save-no.png` shows the list question, the cancel line and AutoCAD still open). Tim 14 Nov ("yes"): robot PASS plus Codex PASS counts as accepted. Earlier robot pass on 3.0.90 (13 Nov, EVIDENCE_STALE_BUGS.md).
+
+**Status:** FIXED - 2026-11-14 (Codex-accepted, Civil 3.0.90.3, robot R968 + Codex REN14 N2)
 
 ## BUG-969
 

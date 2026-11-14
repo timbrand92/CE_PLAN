@@ -92,3 +92,23 @@
 **DETAIL**
 
 1. Reports `CODEX_VERIFY_RSV14_S1_20261114_1726.md` (blocked at CD: my brief lacked the Enter for "Select point 3 (or Enter for straight pipe)") and `CODEX_VERIFY_RSV14_S2_20261114_1734.md` (S-00 SEEN, S-01 SEEN: both pipes drawn, objects 1,054 to 1,062; S-02 to S-04 NOT TESTED; S-05 BLOCKED but "Cancelled - drawing unchanged." seen). Screenshot hashes in `LOOKS\RSV14_S2_20261114_1734\exports\savercheck.txt` show the repeated images. No FAIL.
+
+---
+
+# CDRENUMBER (BUG-968), Codex look and robot (Sat 14 Nov 17:44 to 17:59 PC clock)
+
+**FOR TIM**
+
+1. **ACCEPTED: BUG-968 is now "FIXED (Codex-accepted, Civil 3.0.90.3, 14 Nov 2026)" in the bug carpark.** With two pipes running opposite ways between pits P10 and P9, CDRENUMBER asked for the main outlet, listed "P9 -> P8, P10 -> P9", and on No said "Renumber cancelled - nothing changed." AutoCAD stayed open (it used to close itself here). Seen by Codex (screenshot) and by the robot (log), both on the build on your PC now.
+
+**DETAIL**
+
+1. Codex: run N1 (17:44) blocked when its hand-typed answer went into the drawing as a paste (my brief); run N2 (17:53) `CODEX_VERIFY_REN14_N2_20261114_1753.md` PASS 3 of 3; screenshot `LOOKS\REN14_N2_20261114_1753\screenshots\REN14-06-save-no.png` checked by me (both arrows, the Apply question answered N, the cancel line, AutoCAD open); driver log "P9 -> P8, P10 -> P9; Renumber cancelled - nothing changed."
+2. Robot (17:58, installed 3.0.90.3+11c0093c): the same steps; same AutoCAD process before and after; CE's record unchanged (604,424 characters, 11 pits, 51 pipes).
+
+# Codex looks, the count (14 Nov, Codex weekly usage 0% to 4%, cap 30%)
+
+1. **Accepted (robot PASS + Codex PASS on 3.0.90.3):** BUG-968 (CDRENUMBER).
+2. **Codex saw it working, but not counted as a Codex PASS (evidence rule):** BUG-1456 mix-up (readings in the log, no screenshot of each reading), BUG-1355 CDRUNSOLVE route (stale screenshots), BUG-1298 CDLPD (Codex PASS, but no robot PASS: the robot cannot click the line).
+3. **Not reached by Codex:** BUG-1457 never-saved CLEAN/FASTSAVE (NEW cannot be started by the driver or by hand); the saved-drawing case was seen.
+4. **My brief mistakes, fixed as they showed:** a missing -Force (LPD L1), wrong scope lines (MIX M1), a wrong expected handle (LPD L2), a missing Enter after CD (RSV S1), a hand-typed answer (REN N1). None was a plugin fault. No Codex FAIL against the plugin in any run.
