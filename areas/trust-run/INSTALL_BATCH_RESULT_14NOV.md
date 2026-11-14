@@ -42,7 +42,7 @@
 
 **DETAIL**
 
-1. Report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_LPD14_L2_20261114_1618.md`, evidence `LOOKS\LPD14_L2_20261114_1618\` (37 screenshots, driver call log). Build read by Codex at start and end: Civil 3.0.90.3+11c0093c, Manager 1.1.89, Structural 1.0.126.1. Settings unchanged; AutoCAD closed; lock released.
+1. Report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_LPD14_L2_20261114_1618.md`, evidence `C:\Lisp Files\_TEST_COPIES_20260923\LOOKS\LPD14_L2_20261114_1618\` (37 screenshots, driver call log). Build read by Codex at start and end: Civil 3.0.90.3+11c0093c, Manager 1.1.89, Structural 1.0.126.1. Settings unchanged; AutoCAD closed; lock released.
 2. **Codex's two FAIL lines (L-07, L-08) are my brief's mistake, not the plugin's:** the brief told Codex to expect the outlet to name handle 10F608, read by a point pick (nentselp) on the pipe; that object is not a CE pipe. CE's own record (my read of the same drawing earlier today, `reads\BL_0.record.txt`) gives pipe P2 to P1 as id and entity handle **109835**, which is exactly what CDLPD stored (R1 "PipeHandle":"109835") before and after save and reopen. Desk verdict: L-07 PASS, L-08 PASS.
 3. Step results as checked by me: L-00 PASS, L-01 PASS, L-02 PASS (Continue in drawing pressed by Codex), L-03 PASS (screenshot LPD14-17 shows the refusal line), L-04 DIFFERENT (plain LINE: AutoCAD's pick filter wording, prompt stays; unchanged by the fix), L-05 PASS, L-06 SEEN (pipe-layer polyline accepted), L-07 PASS, L-08 PASS (screenshot LPD14-34 shows the LPD note at P2).
 4. The first attempt (run L1, 15:57 to 16:09) was blocked by my brief: it sent a bare CDLPD without -Force and the driver refused it; Codex correctly did not add -Force on its own. That AutoCAD was closed by the driver's quit under the look's lock (settings unchanged).
@@ -59,7 +59,7 @@
 
 **DETAIL**
 
-1. Reports `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_MIX14_M2_20261114_1635.md` (PASS 3, DIFFERENT 1, NOT TESTED 4) and `CODEX_VERIFY_MIX14_M3_20261114_1651.md` (PASS 1, SEEN 3, NOT TESTED 4); evidence folders `LOOKS\MIX14_M2_20261114_1635\` and `LOOKS\MIX14_M3_20261114_1651\`. No FAIL in either.
+1. Reports `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_MIX14_M2_20261114_1635.md` (PASS 3, DIFFERENT 1, NOT TESTED 4) and `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_MIX14_M3_20261114_1651.md` (PASS 1, SEEN 3, NOT TESTED 4); evidence folders `C:\Lisp Files\_TEST_COPIES_20260923\LOOKS\MIX14_M2_20261114_1635\` and `C:\Lisp Files\_TEST_COPIES_20260923\LOOKS\MIX14_M3_20261114_1651\`. No FAIL in either.
 2. Run M3's driver log: 12 record readings, 8 name `DWG-A_PASS8.dwg` (drawing B, at the start and after M-03 Help, M-04 Settings, M-05 tab switch then Help) and 4 name `CLDTP_MIX14_A.dwg` (drawing A, at M-01 and M-06); none of B's readings names A's file.
 3. Desk read of B's saved copy (my own AutoCAD, 17:00): DBMOD 0, 1,285 objects, record 37,921 characters, path `DWG-A_PASS8.dwg`, 2 pits, 46 pipes, version 2.2.
 4. The first attempt (run M1, 16:32) did not start: my launcher text still said "one test copy" and "no Settings window"; fixed.
@@ -76,7 +76,7 @@
 
 **DETAIL**
 
-1. Reports `CODEX_VERIFY_CLN14_C1_20261114_1707.md` (C-01, C-02 BLOCKED: driver refused NEW; C-03 BLOCKED: "only .dwg files can be opened"; C-04 PASS) and `CODEX_VERIFY_CLN14_C2_20261114_1716.md` (C-01, C-02 BLOCKED: suggestion list after the hand-typed NEW; C-03 dropped by the desk; C-04 PASS, D 31,825 to 33,371 bytes). Evidence `LOOKS\CLN14_C1_...` and `LOOKS\CLN14_C2_...`. No FAIL.
+1. Reports `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_CLN14_C1_20261114_1707.md` (C-01, C-02 BLOCKED: driver refused NEW; C-03 BLOCKED: "only .dwg files can be opened"; C-04 PASS) and `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_CLN14_C2_20261114_1716.md` (C-01, C-02 BLOCKED: suggestion list after the hand-typed NEW; C-03 dropped by the desk; C-04 PASS, D 31,825 to 33,371 bytes). Evidence `C:\Lisp Files\_TEST_COPIES_20260923\LOOKS\CLN14_C1_...` and `C:\Lisp Files\_TEST_COPIES_20260923\LOOKS\CLN14_C2_...`. No FAIL.
 2. To let Codex see the never-saved case, one of these would be needed: the driver allowed to start a NEW drawing from a named template copy, or AutoCAD's suggestion list switched off for the test (a setting change, not allowed). For the controller and Tim.
 
 ---
@@ -91,7 +91,7 @@
 
 **DETAIL**
 
-1. Reports `CODEX_VERIFY_RSV14_S1_20261114_1726.md` (blocked at CD: my brief lacked the Enter for "Select point 3 (or Enter for straight pipe)") and `CODEX_VERIFY_RSV14_S2_20261114_1734.md` (S-00 SEEN, S-01 SEEN: both pipes drawn, objects 1,054 to 1,062; S-02 to S-04 NOT TESTED; S-05 BLOCKED but "Cancelled - drawing unchanged." seen). Screenshot hashes in `LOOKS\RSV14_S2_20261114_1734\exports\savercheck.txt` show the repeated images. No FAIL.
+1. Reports `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_RSV14_S1_20261114_1726.md` (blocked at CD: my brief lacked the Enter for "Select point 3 (or Enter for straight pipe)") and `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_RSV14_S2_20261114_1734.md` (S-00 SEEN, S-01 SEEN: both pipes drawn, objects 1,054 to 1,062; S-02 to S-04 NOT TESTED; S-05 BLOCKED but "Cancelled - drawing unchanged." seen). Screenshot hashes in `C:\Lisp Files\_TEST_COPIES_20260923\LOOKS\RSV14_S2_20261114_1734\exports\savercheck.txt` show the repeated images. No FAIL.
 
 ---
 
@@ -103,7 +103,7 @@
 
 **DETAIL**
 
-1. Codex: run N1 (17:44) blocked when its hand-typed answer went into the drawing as a paste (my brief); run N2 (17:53) `CODEX_VERIFY_REN14_N2_20261114_1753.md` PASS 3 of 3; screenshot `LOOKS\REN14_N2_20261114_1753\screenshots\REN14-06-save-no.png` checked by me (both arrows, the Apply question answered N, the cancel line, AutoCAD open); driver log "P9 -> P8, P10 -> P9; Renumber cancelled - nothing changed."
+1. Codex: run N1 (17:44) blocked when its hand-typed answer went into the drawing as a paste (my brief); run N2 (17:53) `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_REN14_N2_20261114_1753.md` PASS 3 of 3; screenshot `C:\Lisp Files\_TEST_COPIES_20260923\LOOKS\REN14_N2_20261114_1753\screenshots\REN14-06-save-no.png` checked by me (both arrows, the Apply question answered N, the cancel line, AutoCAD open); driver log "P9 -> P8, P10 -> P9; Renumber cancelled - nothing changed."
 2. Robot (17:58, installed 3.0.90.3+11c0093c): the same steps; same AutoCAD process before and after; CE's record unchanged (604,424 characters, 11 pits, 51 pipes).
 
 # Codex looks, the count (14 Nov, Codex weekly usage 0% to 4%, cap 30%)
