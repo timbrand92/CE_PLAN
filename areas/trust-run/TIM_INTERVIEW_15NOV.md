@@ -944,7 +944,15 @@ Before these he was shown, in the chat: the problem in numbers (145 Civil comman
 - **Not chosen as first:** "The one Check door"; "The ribbon in job order"; "The automatic housekeeping". They are not rejected, only later.
 - **Next step that is owed before any build (his screen rule):** a mock-up of the New Job window, and the list of every place each job value is asked for today.
 
-**End of the sitting, 03:31.** Tim asked to be told when the questions were done; he was told.
+**13.9 Tim's question back to the ask chat. Sun 15 Nov 2026, about 03:33 PC clock, typed:** "do you understand what a job takes from start to finish?"
+
+- **The ask chat's honest answer, as given to him:** only partly, and only from documents.
+- **What I know, from the plan files:** the seven drafting stages of a Civil stormwater job as the 14 Nov draft lists them (start the drawing, mark sources, lay the network, set levels, check, put it on the sheet, markup comes back), and his roof-down order for Structural.
+- **What I do not know, and nobody has written down that I have found:** what happens before the drawing starts (what arrives from the architect, surveyor and council, and in what state); where the engineering decisions are made as against the drafting; who in the office does which part and who checks whose work; what goes to council and what comes back; how revisions and re-issues run after approval; how a Structural job runs end to end; where the time and the mistakes really go.
+- **Why it matters (mine):** his 03:27 direction asks for a product built around how the work is done by people. The draft of 03:30 is built around the drafting steps only. Until the whole job is written down in his words, "simple for people" is being designed against a partial picture.
+- **Owed:** one sitting where he describes a real job from first phone call to final issue, in his own words (typed or spoken), with no choices put in his mouth. Not tonight; he asked to go to bed.
+
+**End of the sitting, about 03:33.** Tim asked to be told when the questions were done; he was told.
 
 ---
 
