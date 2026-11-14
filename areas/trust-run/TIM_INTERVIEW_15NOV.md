@@ -438,7 +438,35 @@ Numbers are that file's Q numbers. That file itself is not edited by the ask cha
 - **Not chosen:** "Everyone the same day"; "One at a time, two days apart".
 - **Ask chat's note (mine):** the first colleague is described, not named (older Q53 is not asked). The older file's "at most one release a week" was not put to him.
 
-**Older questions answered so far (this file, 15 Nov):** Q5 to Q15, Q17 to Q32, Q36, Q46, Q49 to Q52, Q57. **Held back for the evidence study (12.2):** Q16, Q73, Q80 to Q82. **Not asked yet:** Q0 to Q4, Q33 to Q35, Q37 to Q45, Q47 to Q56, Q58 to Q72, Q74 to Q79, Q83 to Q87, and the two added at the end of that file (the template one is now answered by queue item 6; the robot pressing CDLPD's "Continue in drawing" is not).
+**Q51 follow-up. May the robot press Roll Back once, away from his PC and colleagues' PCs?**
+
+- **Tim, Sun 15 Nov 2026 02:25 PC clock, clicked:** "Yes, robot proves it once (Recommended)". He was told first, plainly: the button has never been pressed, it is hidden today, and an unpressed button is not known to work.
+- **Choice text he saw:** "on a spare Windows login the robot installs CE version A, then B, presses Roll Back, and checks file by file that A is back. Nothing from you; you get one line saying it worked or what broke."
+- **Not chosen:** "No, first press is a real one"; "Yes, and by hand too".
+- **Ask chat's reading (mine):** this resolves the tension flagged under Q51: no rehearsal by Tim, but the button is seen working once by the robot before a real release depends on it. He did not ask for the by-hand way to be proven. Where the "spare Windows login" is (which PC) was not asked; it must not be his own login or a colleague's.
+
+**Q49 follow-up. May the release chat take a bad release back by itself?**
+
+- **Tim, Sun 15 Nov 2026 02:25 PC clock, clicked:** "By itself, then tells me (Recommended)".
+- **Choice text he saw:** "a colleague's CE fails to load at 8:45; the chat rolls that PC back within minutes and you get a line: 'rolled back, here is why'. Nobody waits on you to keep working."
+- **Not chosen:** "Asks me first"; "By itself only for load failures".
+- **Ask chat's note (mine):** this is a standing word for taking a release BACK. It is not a word for sending one; sending anything to colleagues still needs him each time, as the controller's own standing rules say.
+
+**Q53. Who is the first colleague.** *(Ask chat's mistake: this was already on record and should not have been asked cold.)*
+
+- **Already on record:** Tim, 17 Oct 2026, `decisions\2026-10-17_V3_ALIGNMENT_RESET.md` line 224: "lets issue to max on monday 9th novermber"; line 228 records the pilot colleague as "Max" from 8 Oct.
+- **Tim, Sun 15 Nov 2026 02:25 PC clock, clicked:** "I will name them". Choice text he saw: "you tell me who (type a first name or role under Other); no name goes in any plan file, only a code." No name was given in this sitting.
+- **Not chosen:** "The one who drafts drainage most (Recommended)"; "The most careful one".
+- **State:** OPEN. Whether it is still the colleague named on 17 Oct is asked next. The date in that ruling is superseded by 8.3 (a condition, not a date).
+
+**Q54. Seeing what each colleague's PC runs.**
+
+- **Tim, Sun 15 Nov 2026 02:25 PC clock, clicked:** "One row per PC, coded names (Recommended)".
+- **Choice text he saw:** "the dashboard reads 'PC-03: Civil 3.0.89, Manager 1.1.89, AutoCAD 2027, office setup yes'. Names are codes in the office folder; the key to who is who stays on your PC only."
+- **Not chosen:** "Real names on the dashboard"; "Only on their own PC".
+- **Ask chat's note (mine):** a dashboard row is a screen: mock-up and his OK before it is built.
+
+**Older questions answered so far (this file, 15 Nov):** Q5 to Q15, Q17 to Q32, Q36, Q46, Q49 to Q52, Q54, Q57. **Q53 open (he will name them).** **Held back for the evidence study (12.2):** Q16, Q73, Q80 to Q82. **Not asked yet:** Q0 to Q4, Q33 to Q35, Q37 to Q45, Q47 to Q56, Q58 to Q72, Q74 to Q79, Q83 to Q87, and the two added at the end of that file (the template one is now answered by queue item 6; the robot pressing CDLPD's "Continue in drawing" is not).
 
 ---
 
