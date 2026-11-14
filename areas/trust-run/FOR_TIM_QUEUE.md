@@ -33,6 +33,7 @@
    - **It is doing the right thing: it shows the warnings and I decide** (assumed; matches your item 9 answer). Example: you see red cover lines and choose a bigger pipe yourself.
    - **It should not offer that at all.** Example: where every option breaks cover, CDRUNSOLVE says so and proposes nothing.
    - **It should try the next pipe size up before proposing.** Example: it offers 150 dia at a flatter grade as a second row for you to tick.
+   - **NOT ASKED AGAIN (ask chat, Sun 15 Nov 2026 02:41 PC clock): this is the same case as item 9**, with the same evidence file, the same run, the same figures and the same three choices. Tim answered item 9 at 01:59 today, after being shown that case: "As now: show red, I decide (Recommended)"; he passed over both "Try a bigger pipe first" and "Never propose negative cover". See item 9 under "Answered". If item 11 was meant to ask something item 9 did not, say what and I will put it to him.
 
 ## Older, still open (asked before 15 Nov, defaults in use)
 

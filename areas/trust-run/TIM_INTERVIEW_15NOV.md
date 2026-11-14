@@ -688,7 +688,36 @@ Numbers are that file's Q numbers. That file itself is not edited by the ask cha
 - **Choice text he saw:** "CDTWL on a read-only drawing says so before asking you anything, instead of failing after you have answered its questions." The three: CDRAINFALL, CDTWL, CDRULES.
 - **Not chosen:** "Add it to all seven"; "Leave them as built".
 
-**Older questions answered so far (this file, 15 Nov):** Q1, Q2 (permission, not the chosen set), Q3, Q5 to Q15, Q17 to Q33, Q35, Q36, Q46 to Q52, Q54 to Q57, Q59, Q60 (mark twice), Q61, Q62 (his words: "fix before release"), Q65, Q66 (all but Rule 15), Q69 to Q71, Q72 (pit-number case), Q78 (truss part), Q83, Q84. **Q53 open by his choice ("I'll tell you later"): not the 17 Oct pilot.** **Held back for the evidence study (12.2):** Q16, Q73, Q80 to Q82. **Not asked yet:** Q0 to Q4, Q33 to Q35, Q37 to Q45, Q47 to Q56, Q58 to Q72, Q74 to Q79, Q83 to Q87, and the two added at the end of that file (the template one is now answered by queue item 6; the robot pressing CDLPD's "Continue in drawing" is not).
+**Q62 follow-up. SBEAM or CEMEMBER: which has to be working before Structural goes to colleagues?**
+
+- **Tim, Sun 15 Nov 2026 02:41 PC clock, typed instead of clicking a choice:** "cemember replaces it but make sure the ui window is built for it as per plan"
+- **Choices he was shown and did not pick:** "Fix SBEAM's crash now; CEMEMBER later (Recommended)"; "CEMEMBER replaces it before release"; "Both".
+- **Ask chat's reading (mine):** CEMEMBER replaces SBEAM, and CEMEMBER's window must be built as the plan describes it; a CEMEMBER without its planned window does not satisfy him. Together with 02:39 ("fix before release") I read: Structural reaches colleagues with CEMEMBER in place of SBEAM, window included. That is closest to the choice "CEMEMBER replaces it before release", but he typed his own words instead of clicking it, so the "before release" part is my joining of his two answers, not one sentence of his.
+- **Standing rules that bear on it (not his words tonight):** a new window needs a mock-up and his OK first (his 15 Nov screen rules); by ruling B of 15 Sep, Codex builds windows; and his 18 Oct note says the draft section list stays out of the repository until he has reviewed it. "As per plan" points at the recorded CEMEMBER design decisions of 18 and 20 Oct; I have not re-read them tonight and am not restating them from memory.
+- **Not answered:** whether the 5 Nov SBEAM crash still needs reproducing and fixing in the meantime on his own PC. By this answer SBEAM is being replaced, not repaired, for colleagues.
+
+**Q85. CDGRAPH's pipe count.**
+
+- **Tim, Sun 15 Nov 2026 02:41 PC clock, clicked:** "Recorded pipes, stray line named (Recommended)".
+- **Choice text he saw:** "CDGRAPH says '49 pipes' and adds '1 line on a pipe layer is not in the record', pointing at it. Matches your ruling tonight that a bare line is not a CE pipe."
+- **Not chosen:** "Drawn pipes".
+
+**Q86. "One U undoes it" on CDSYNC and CDREBUILD. NOT ANSWERED; he said something else.**
+
+- **Tim, Sun 15 Nov 2026 02:41 PC clock, typed instead of clicking a choice:** "these tools are confusing"
+- **Choices he was shown and did not pick:** "Keep on CDSYNC; drop on CDREBUILD until seen (Recommended)"; "Keep both, as I ruled on 25 Sep"; "Prove CDREBUILD's now".
+- **Ask chat's reading (mine):** not an answer about the wording. It is a statement about CDSYNC and CDREBUILD themselves, and it agrees with his Q17 answer of 02:12 (both removed once Check this drawing can do their job). I take it as: do not spend his attention on the fine print of two tools he finds confusing and has already said should go. The 25 Sep wording therefore stays as it is, by default and not by a new ruling, until the tools are retired.
+- **Worth more than the question (mine):** "confusing" from the person who uses them is a finding about the tools. Recorded for whoever designs Check this drawing: the repair door must not be confusing in the same way. What exactly confuses him was not asked; asked next.
+
+**Q67. Clicking a pit lights up what it is linked to: where first.**
+
+- **Tim, Sun 15 Nov 2026 02:41 PC clock, clicked:** "In the Check this drawing window (Recommended)".
+- **Choice text he saw:** "in the check window, picking P4 highlights its two pipes and its downpipe on the plan. It reuses what the window has already read."
+- **Not chosen:** "In the Inspector, no window open"; "Both from the start".
+
+**Queue item 11** (added by the controller at about 02:40): the same CDRUNSOLVE negative-cover case as item 9, which he answered at 01:59. Not asked again; marked in `FOR_TIM_QUEUE.md`.
+
+**Older questions answered so far (this file, 15 Nov):** Q1, Q2 (permission, not the chosen set), Q3, Q5 to Q15, Q17 to Q33, Q35, Q36, Q46 to Q52, Q54 to Q57, Q59, Q60 (mark twice), Q61, Q62 (his words), Q65, Q66 (all but Rule 15), Q67, Q69 to Q71, Q72 (pit-number case), Q78 (truss part), Q83 to Q85. **Q86 asked, not answered ("these tools are confusing").** **Q53 open by his choice ("I'll tell you later"): not the 17 Oct pilot.** **Held back for the evidence study (12.2):** Q16, Q73, Q80 to Q82. **Not asked yet:** Q0 to Q4, Q33 to Q35, Q37 to Q45, Q47 to Q56, Q58 to Q72, Q74 to Q79, Q83 to Q87, and the two added at the end of that file (the template one is now answered by queue item 6; the robot pressing CDLPD's "Continue in drawing" is not).
 
 ---
 
