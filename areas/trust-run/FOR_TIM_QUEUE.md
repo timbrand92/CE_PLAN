@@ -15,6 +15,11 @@
    - **Change it to:** your words.
    - Not asked yet by the ask chat: waiting for the real AutoCAD screenshot.
 
+9. **CDRUNSOLVE proposed levels that put pipe tops above the lids.** Seen on 3.0.90.4 in real AutoCAD (design flows 8, 8, 15, 22, 22 L/s set by the test on the standard drawing's run P4 to the stub, not typed). The preview raised P2 to P1 from 17.08 to 19.30 ("DN100 at 1:9, 2.80 m/s") and showed its own red lines: "COVER: pipe from 'P2' upstream obvert cover -488 mm < minimum 300 mm" (and -889 mm at P3). Nothing is applied until you press Apply. Evidence: `C:\CE_WORK\scratch\trust_install\rsq5_preview.tree.txt`.
+   - **As now: the warnings show in the preview and you decide** (assumed for now). Example: you see the red COVER lines and press Cancel, or change pipe sizes first.
+   - **CE should try a bigger pipe before steepening past cover.** Example: it proposes DN150 at a flatter grade instead of DN100 at 1:9.
+   - **Never propose a level with negative cover.** Example: it says "cannot keep cover on this run" and proposes nothing.
+   - Raised by trust-acad-evidence, Sun 15 Nov 2026 ~01:58 PC clock. Not asked yet.
 (Items 2, 3 and 5 were answered on Sun 15 Nov and are under "Answered" below. Numbers are kept, not re-used.)
 
 ## Older, still open (asked before 15 Nov, defaults in use)
