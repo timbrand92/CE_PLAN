@@ -80,6 +80,12 @@ Queue answers (the controller's numbered items) are in `FOR_TIM_QUEUE.md`, not h
 - **Not chosen:** "List them, plot carries on (Recommended)"; "Only stop for serious ones".
 - **Ask chat's reading (mine):** at plot time he wants to be stopped long enough to choose, for every open warning, not only serious ones. This is not a hard block under his no-hard-blocks rule, because "Plot anyway" is always there. It is a new small window, so his screen rule applies: a mock-up and his OK before anything is built. NOT asked: whether the same list shows when the Pit Schedule is placed.
 
+**5.3 Do you also want a quiet status line that is always there? OPEN, NOT A DECISION.**
+
+- **Tim, Sun 15 Nov 2026 01:59 PC clock, typed instead of clicking a choice:** "think about this more".
+- **Choices he was shown and did not pick:** "Yes, quiet, never pops up (Recommended)" (one line always reading '14 pits, 13 pipes, 2 Unknown, 1 warning'); "No, only at schedule and plot"; "Only when something is Unknown".
+- **Ask chat's reading (mine):** not an answer. Either he wants time to think, or he wants the idea thought through better before he is asked again. Either way the next step is mine: bring it back with a picture of where the line would sit and what it would say on a clean drawing and on one with problems, then ask again. Until then nobody may treat the status line as wanted or as unwanted by Tim.
+
 ## 6. Getting it on the sheet
 
 **6.1 The Pit Schedule is placed, then a pipe changes on the plan. What should the schedule do?**
@@ -88,6 +94,13 @@ Queue answers (the controller's numbered items) are in `FOR_TIM_QUEUE.md`, not h
 - **Choice text he saw:** "you change P4 to P5 from 150 to 225 and the schedule row changes by itself, with one line saying it did."
 - **Not chosen:** "Mark it out of date (Recommended)" (changes only on Refresh); "Warn only at plot".
 - **Ask chat's reading (mine):** he wants the schedule on the sheet to follow the plan without a Refresh click, and to be told in one line when it has. This differs from the controller's draft in `areas\TRUST_ONE_DRAFTER_CIVIL_DAY_14NOV.md` section 2 item 3 ("marked 'out of date' until refreshed"); Tim's answer is newer. NOT asked: the same question for the long section and the calculations; what happens to a schedule he has edited by hand. New behaviour, not a fix: a later idea, nothing to build now.
+
+**6.2 Should the long section and the calculations also update themselves?**
+
+- **Tim, Sun 15 Nov 2026 01:59 PC clock, clicked:** "Yes, all follow the plan (Recommended)".
+- **Choice text he saw:** "you change P4 to P5 to 225; the schedule row, the long section pipe and the calc line all change, with one line saying '3 items updated'. They can never disagree."
+- **Not chosen:** "Schedule only"; "Schedule and long section".
+- **Ask chat's reading (mine):** the plan is the one source; schedule, long section and calculations all follow it by themselves and CE says so in one line. Still not asked: a schedule he has edited by hand. New behaviour, a later idea, nothing to build now.
 
 ## 7. Markup coming back
 
@@ -106,6 +119,12 @@ Queue answers (the controller's numbered items) are in `FOR_TIM_QUEUE.md`, not h
 - **Choice text he saw:** "the ten proven, five clean days, and one real job start to finish, before the first colleague gets it."
 - **The two parts, as he saw them in the other choices:** (a) "all ten tools accepted in AutoCAD, then five working days of your own drafting with no lost work, no crash and no wrong value"; (b) "you take one council stormwater job from blank drawing to submission using only CE, and nothing had to be fixed by hand."
 - **Ask chat's reading (mine):** three conditions, all needed before the first colleague: the ten accepted; five clean working days on his own PC; one real council stormwater job done start to finish on CE alone with nothing fixed by hand. The third is new and is stricter than the earlier "Robot-accepted plus 5 working days" wording of 17 Oct (ruling D); his 15 Nov answer is newer. NOT asked: whether the five days and the real job may overlap, and who judges "nothing had to be fixed by hand".
+
+**8.2 Can the five clean days and the one real job happen at the same time?**
+
+- **Tim, Sun 15 Nov 2026 01:59 PC clock, clicked:** "Yes, they can overlap (Recommended)".
+- **Choice text he saw:** "you draft one real council job on CE during a normal week; if the week is clean and the job needed no hand fixes, both boxes are ticked on Friday."
+- **Not chosen:** "No, days first, then the job".
 
 ## 9. What CE must never do by itself
 
@@ -128,7 +147,6 @@ Queue answers (the controller's numbered items) are in `FOR_TIM_QUEUE.md`, not h
 ## Still to ask in the interview (not decisions)
 
 1. **Starting a job:** what else belongs in the New Job window; whether New Job attaches the architect's xref.
-2. **Checking:** whether he still wants the always-there status line; whether the plot-time list also shows when the Pit Schedule is placed.
-3. **Sheet:** whether the long section and calculations also update themselves; a schedule he has edited by hand.
-4. **Ready for colleagues:** whether the five clean days and the one real job may overlap.
-5. **Then the older questions** in `areas\TRUST_QUESTIONS_FOR_TIM.md`, merged and most useful first.
+2. **Checking:** the always-there status line (5.3, he said "think about this more": bring a picture, then ask again); whether the plot-time list also shows when the Pit Schedule is placed.
+3. **Sheet:** a schedule he has edited by hand.
+4. **Then the older questions** in `areas\TRUST_QUESTIONS_FOR_TIM.md`, merged and most useful first.
