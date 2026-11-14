@@ -13323,6 +13323,8 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1920 (B-096, on the #1897 branch): cove
 
 **Status:** FIXED - 2026-11-14 (Codex-accepted, Civil 3.0.90.3, robot R968 + Codex REN14 N2)
 
+**Controller note (14 Nov 2026, 18:25):** screenshot REN14-06 seen by the controller: two opposite arrows between P10 and P9, the renumber list question, "Renumber cancelled - nothing changed.", AutoCAD still open. What is accepted is the crash (AutoCAD no longer closes). NOT met and not accepted: the expected "plain message naming the loop"; CDRENUMBER offered a renumber list and said nothing about the two pipes running opposite ways. Both looks answered N; applying the renumber on this drawing was not tried.
+
 ## BUG-969
 
 **Command / Area:** CDNEWDWG (Civil records, schedules and sheets), ledger F-159.
