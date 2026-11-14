@@ -163,6 +163,8 @@ Starts from his own typed words of 02:16 (section 11, Q31): "lets get the entire
 
 ## 9. What CE must never do by itself
 
+**SUPERSEDED IN PART the same night: all four ticked lines of 9.1 below were replaced at 03:31 by 13.5 and 13.6 (CE does more by itself, marked and easy to override; what he changes by hand stays his). 9.1 is kept as he gave it at 01:57. The three already-ruled points in the bracket still stand.**
+
 **9.1 Which of these must CE never do by itself, without showing you first?** (He was told these are already ruled: it never saves for him, never unlocks a layer, never changes a drawing just by opening it.)
 
 - **Tim, Sun 15 Nov 2026 01:57 PC clock, ticked all four:** "Change a level or size", "Renumber pits", "Move or delete my labels", "Change layers or colours".
@@ -906,6 +908,43 @@ Before these he was shown, in the chat: the problem in numbers (145 Civil comman
 - **What this is (mine):** his word lifting "prove, don't draft" (his rule of 14 Nov) FOR THIS WORK: the simpler, human-first design of the whole product. The ten continue alongside; he did not choose to stop them.
 - **What it does not lift (standing rules he did not touch tonight):** a new or changed screen still needs a mock-up and his OK first (his 15 Nov screen rules; he used that rule four times tonight); nothing merges into shipped lines or goes to colleagues without his word; installs on his PC stay under his existing standing approval for trial batches; the five trust rules are still the gate (Q65, tonight).
 - **Not decided:** what is built first. Asked next.
+
+**13.5 "More automatic, easy to override" against the "never by itself" list: levels and sizes.** He was shown his 01:57 answer and his 03:30 words side by side first.
+
+- **Tim, Sun 15 Nov 2026 03:31 PC clock, clicked:** "CE fills them in, marked, I can overtype (Recommended)".
+- **Choice text he saw:** "you join a pipe to P4 and CE writes the invert it works out, shown as 'worked out' in the pit window. Type over it and yours sticks for good; CE never changes a value you typed. One U takes any of it back."
+- **Not chosen:** "Keep preview then Apply for all levels"; "Fully automatic, re-solves as I draft".
+- **Supersedes, kept on record:** the "Change a level or size" line of 9.1 (01:57 tonight), from 03:31. New rule in his click: CE may fill in a level or size by itself, always marked as worked out; a value he typed is never changed by CE.
+- **Not settled (mine):** 4.1 (01:53: preview first, then Apply, when he asks CE to solve a run) and 7.1 (moving a pit offers the level preview). He passed over "re-solves as I draft", so I read: CE fills a BLANK level when it can; it does not re-work levels already there without the preview. That reading needs his confirmation before anything is built on it.
+
+**13.6 The same for pit numbers, his labels and his layers.**
+
+- **Tim, Sun 15 Nov 2026 03:31 PC clock, clicked:** "All automatic, all overridable". **This was NOT the recommended choice** (recommended was "No, those stay mine").
+- **Choice text he saw:** "CE renumbers, tidies labels clear of each other and sets layers as it goes; anything you then change by hand is left alone afterwards."
+- **Not chosen:** "No, those stay mine (Recommended)"; "Numbers automatic too".
+- **Supersedes, kept on record:** the "Renumber pits", "Move or delete my labels" and "Change layers or colours" lines of 9.1 (01:57 tonight), from 03:31. So all four lines of 9.1 are now superseded by 13.5 and 13.6. The three things he was told were already ruled stay: CE never saves for him, never unlocks a layer, never changes a drawing just by opening it.
+- **The one rule that replaces 9.1, as his two clicks put it (my wording):** CE does it by itself; what CE did is visible and easy to change; **whatever he changes by hand is his from then on and CE leaves it alone.**
+- **Tensions I am flagging, NOT resolving (each needs a question before a build):**
+  1. **Q11 (02:06 tonight):** a pit with no number stays Unknown "and is never given a number until you give one". Automatic renumbering would give it one. Which holds for a pit that has never had a number?
+  2. **Renumbering after the schedule is on the sheet or the job has been issued:** pit numbers on a council submission changing by themselves is the kind of thing that "reaches council". Not asked.
+  3. **How CE remembers "this one is mine":** the standing record already has "Manual/Pinned" as a state. Whether a hand-changed number, label or layer shows a mark, and how he hands it back to CE, was not asked.
+  4. **"Sets layers as it goes"** against the native protection rule: CE still never unlocks, thaws or edits a locked layer or an xref's layers. He was not asked to change that and did not.
+
+**13.7 The Structural tab in the same shape as Civil.**
+
+- **Tim, Sun 15 Nov 2026 03:31 PC clock, clicked:** "Start, Roof, Upper floors, Ground, Footings, Check, Sheet (Recommended)".
+- **Choice text he saw:** "a colleague starts at the left with the job details, works roof down as you do, runs the bracing and schedule checks, then sets up the sheets. Same idea as the Civil tab you OK'd."
+- **Not chosen:** "By kind of member instead"; "Show me a mock-up before I answer".
+- **State:** the panel names and order are his. Which tool sits in which panel has not been drawn or shown; a mock-up file like the Civil one is owed before it is built. This replaces the older draft panels (Roof, Floors, Bracing, Tools) in older Q63, which was not asked.
+
+**13.8 What is built first.**
+
+- **Tim, Sun 15 Nov 2026 03:31 PC clock, clicked:** "Type once: the New Job record (Recommended)".
+- **Choice text he saw:** "one New Job window takes the job details, council and sheet size once; the title block, rainfall, rules and calcs all read it. It removes the double entry you ticked and everything else builds on it."
+- **Not chosen as first:** "The one Check door"; "The ribbon in job order"; "The automatic housekeeping". They are not rejected, only later.
+- **Next step that is owed before any build (his screen rule):** a mock-up of the New Job window, and the list of every place each job value is asked for today.
+
+**End of the sitting, 03:31.** Tim asked to be told when the questions were done; he was told.
 
 ---
 
