@@ -241,3 +241,11 @@
    - AFTER (copy of Codex's saved copy, SHA-256 03FBE1BD..., saved 05:53): `C:\CE_WORK\scratch\trustprobe\reads\LPD15CHK_AFTER.record.txt`: outlet on pipe 109835 (CE's pipe P2 to P1), downstream end, pit 109601, KERB & CHANNEL, invert 16.98.
    - Transcript `C:\CE_WORK\scratch\trust_install\lpd15_check.out`. The driver's quit closed the drawings but AutoCAD stayed open with none; I ended it (my own launch at 05:58:19, nothing open); settings the same.
 3. **For the controller to write:** Codex PASS with screenshots + record read, on the installed build, with Tim's pipe-layer rule met. I have not changed the carpark entry.
+
+## Item 3b: Pit Schedule, numbered plastic pits (Codex look PSN15 N1, 06:05 to 06:24): line PASS; its instruction points at a button drafters cannot reach
+
+1. Report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_PSN15_N1_20261115_0606.md`; screenshots `C:\Lisp Files\_TEST_COPIES_20260923\LOOKS\PSN15_N1_20261115_0606\screenshots\`. OVERALL BLOCKED (N-04).
+2. **N-02 PASS:** three pits P1 to P3 turned plastic in Edit Pit (350 x 350, "Edit pit, Save"; "Pit updated." x3).
+3. **N-03 PASS:** "3 plastic pits are not in this schedule: P1 to P3. Open PIT on each and press Number and schedule this one anyway to add it. | Drawing check: 6 data issues may affect this schedule"; no internal code; 0 rows listed. PSN15-10-schedule-three.jpg, PSN15-10-schedule-full.jpg.
+4. **N-04 BLOCKED, and a finding:** "Number and schedule this one anyway" is NOT in Edit Pit or its More options window (Drawing & Schedule shows a grey "Included in pit schedule" and "Plastic pit: no label block and excluded from schedule"). PSN15-11-missing-override-0.jpg, PSN15-11-missing-override-3.jpg. By reading: the button exists only in the older Pit dialog (`PitDialog.xaml:353`), not in the New Pit / Edit Pit windows drafters use now. **So the schedule's new line tells the drafter to press a button they cannot find.** For Tim (queue item 4, the wording) and the fix lane.
+5. N-01 (placing the three pits) NOT TESTED for evidence only: the pits were made (R2 = 3) but the saved screenshots repeated an earlier capture.
