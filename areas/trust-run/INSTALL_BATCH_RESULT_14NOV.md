@@ -112,3 +112,18 @@
 2. **Codex saw it working, but not counted as a Codex PASS (evidence rule):** BUG-1456 mix-up (readings in the log, no screenshot of each reading), BUG-1355 CDRUNSOLVE route (stale screenshots), BUG-1298 CDLPD (Codex PASS, but no robot PASS: the robot cannot click the line).
 3. **Not reached by Codex:** BUG-1457 never-saved CLEAN/FASTSAVE (NEW cannot be started by the driver or by hand); the saved-drawing case was seen.
 4. **My brief mistakes, fixed as they showed:** a missing -Force (LPD L1), wrong scope lines (MIX M1), a wrong expected handle (LPD L2), a missing Enter after CD (RSV S1), a hand-typed answer (REN N1). None was a plugin fault. No Codex FAIL against the plugin in any run.
+
+---
+
+# Next batch candidate: 2092 at 382999f5 (core console only, Sat 14 Nov 18:05 to 18:14 PC clock; NOT installed)
+
+**FOR TIM**
+
+1. **What it adds:** CDRUNSOLVE reads the flow (Q) typed for each pipe in Edit Pipe, so a run can finally be sized and given levels (today every pit's flow is 0 and nothing can be solved). Reading Q per pipe is the controller's DRAFT default, not yet your answer.
+2. **What the core console shows:** with each pipe's Q in CE's records, CE's solver now sizes each pipe for its own flow (never adding a flow twice) and proposes levels that say where each flow came from: **PASS**. The same check on today's installed line **FAILS** as expected (every flow 0, nothing proposed). The split question still works, and the two job mix-up checks still pass, when 382999f5 is put on top of what is on your PC now.
+3. **NOT covered until a trial install (which needs your own yes for a new batch):** typing Q in Edit Pipe and CDRUNSOLVE picking it up in a real drawing; levels actually written on the pipes and pits; one Undo putting them back; a typed Q surviving save and reopen. Nothing was installed.
+
+**DETAIL**
+
+1. Branch `claude/trust04-b1355-runsolve-branch` at `382999f5`, built in my own folder (Civil net10 Release, SkipDevBundle, 0 errors), DLL `3.0.90+382999f5`, SHA-256 `06A398DD67B854D972F4167BE9CDC4545A3532CB41EAA55FAF145E20637FF8EC`. RUNSOLVE-FLOW-01 (`CEPROOFRUNFLOW`): PASS on 382999f5; FAIL on d686e787 ("the run inputs do not carry each pipe's Q (every pit 0 is the fault on 3.0.90.3) ... joining flow P4 0.0, P3 0.0, P2 0.0, P1 0.0"). RUNSOLVE-SPLIT-01: PASS on 382999f5. BUG-1456-CROSS-01/02 do not exist on that branch alone (it is cut from 3.0.90): RUN NOT STARTED there, as expected.
+2. **The combination that a next batch would install:** today's batch commit `11c0093c` (3.0.90.3) + 382999f5, merged locally only (commit `1bc17a6a`, never pushed; REGRESSION_LOG kept both sides; product files changed against 3.0.90.3: `RunSolveCommand.cs` and `ProposalApplyService.PlanBuilders.cs`), DLL `3.0.90.3+1bc17a6a`, SHA-256 `C21BB3F54D746C04E33DF46C292F1D72AB3F2D42F94AA3A3BD8612C0AE8525D5`: RUNSOLVE-FLOW-01 PASS, RUNSOLVE-SPLIT-01 PASS, BUG-1456-CROSS-01 PASS, BUG-1456-CROSS-02 PASS.
