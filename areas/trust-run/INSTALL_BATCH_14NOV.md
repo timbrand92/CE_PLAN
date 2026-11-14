@@ -593,7 +593,7 @@ On Tim's standing trial approval. Installed by the controller, after the evidenc
 5. **Backups kept, newest last:** `CE_CVL_SUITE_PRE_dadac7e7_20261115-014806.backup` (3.0.90.4), `CE_CVL_SUITE_PRE_3c620efe_20261115-031354.backup` (3.0.90.5), `CE_CVL_SUITE_PRE_35cdad78_20261115-031503.backup` (3.0.90.6). Put-back, one step each: `restore_batch14e.ps1`, then `restore_batch14d.ps1`, then `restore_batch14c.ps1`. None rehearsed.
 6. **Not yet done:** nothing has run in AutoCAD on 3.0.90.6 or 3.0.90.7. Not accepted. Batch 3's numbered-pits case and Export CSV were not run before this install.
 
-## BATCH 6 (PREPARED, NOT INSTALLED): Civil 3.0.90.8 = batch 5 (3.0.90.7) + draft 2049 (Unknown instead of made-up values) with Q13 and Q14, switch OFF
+## SUPERSEDED BY BATCH 7, NEVER INSTALLED (15 Nov 06:20): BATCH 6, Civil 3.0.90.8. Do not install anything from this section; its folder `b14civ6` stays until batch 7 is installed, then it can go. The original heading was: BATCH 6 (PREPARED, NOT INSTALLED): Civil 3.0.90.8 = batch 5 (3.0.90.7) + draft 2049 (Unknown instead of made-up values) with Q13 and Q14, switch OFF
 
 Written Sun 15 Nov 2026 by lane trust-safety-fixes, on the controller's order ("2049 is your next job, on that existing draft, as batch 6"). Its own folder and version. **Install only on the three-set batch 5:** the script refuses unless live Civil reads `3.0.90.7+9b977125` AND still has its Legacy and Net8 sets, so the 2027-only trial must be put back first. The controller installs.
 
@@ -692,3 +692,101 @@ As batch 4, section 4, with the folder `C:\CE_WORK\robot\b14f_switch`.
 ### 9. Stop rules
 
 As section 5 at the top. If a pass fails, batch 6 is put back with `restore_batch14f.ps1`, and batch 5 stays.
+
+## BATCH 7 (PREPARED, NOT INSTALLED; SUPERSEDES BATCH 6): Civil 3.0.90.9 = batch 5 (3.0.90.7) + draft 2049 (Unknown instead of made-up values, with Q8, Q13 and Q14) + 2092's flow-box words + 2093's CDRENUMBER fix, switch OFF
+
+Written Sun 15 Nov 2026 by lane trust-safety-fixes, on the controller's order ("build batch 7 now, and make it SUPERSEDE batch 6 so only one of them is ever installed and tested"). One build, one version, one folder. **Install only on the three-set batch 5:** the script refuses unless live Civil reads `3.0.90.7+9b977125` and still has its Legacy and Net8 sets, so the 2027-only trial must be put back first. A live batch 6 is refused too, though batch 6 was never installed. The controller installs.
+
+### 1. What is in it (each on its draft at a final head with a read-only GO)
+
+1. **PR 2049 (TRUST-06) at `2e23413f`:** everything in batch 6 (Q13 possible pipes, Q14 width never a size, Q9, Q10, Q12), plus:
+   - **Q8, "Unknown, show both":** with the switch on, a pit number label or a CL or IL text within reach of two or more pits is given to none of them.
+     - **Command line:** said once ("1 label is within reach of more than one pit: CE gave it to none (CDCHECKCURRENT lists it).").
+     - **CDCHECKCURRENT:** lists "Unknown: 'IL 9.10' could be P2 or P3 (invert level)" until the value is typed into one pit.
+     - **One matching rule:** the record update and CDUPGRADE now share it. With the switch off it equals the installed matching on 500 random layouts.
+   - **Batch build fix:** the record-touch guard in this batch's tests caught CDUPGRADE editing pits taken from CE's record outside the record service. The note is now set as each pit is built, and the pruning lives in the record service. Nothing was added to the guard's reviewed list.
+2. **PR 2092 (CDRUNSOLVE) at `263e604d`:** the three no-flow lines now say where the box is: "Type each pipe's Design flow (Q) in Pipe Edit (CDEDIT: click More…, then the Levels & Flow tab), then run CDRUNSOLVE again." Words only; no window change.
+3. **PR 2093 (CDRENUMBER) at `644cb90e`:** fixes what was seen in AutoCAD on batch 5 (`INSTALL_BATCH_RESULT_14NOV.md`, item 5b).
+   - **The not-joined line and the loop line** are said every time, including when nothing needs renumbering (then no question is asked).
+   - **The loop finder** looks at the whole drawing, not only from the outlet.
+   - **"Nothing to renumber" is never said alone:** when pits were left out or a loop was found, the last line is "The pits joined to this outlet already read downhill to uphill - nothing to renumber. Nothing was changed."
+   - **Unchanged:** with neither condition, the output is exactly as installed; the numbering and the question are as before.
+   - **Why the batch 5 tests missed it:** they checked each line's words and the source order, never the command's path when nothing needs renumbering, and never a loop cut off from the outlet. The new tests run the real network builder on exactly cases (a) and (b).
+
+### 2. The switch, and what is still not met
+
+1. **`trust.showUnknownInsteadOfGuess` ships OFF** (controller's rule: ON only if 2049 meets the answers).
+   - **Met now:** Q8, Q9, Q10, Q12, Q13 and Q14.
+   - **Q11 not met:** the pipe's direction proposed from drawn order. That needs a screen, so it is left and noted for the ask chat.
+   - **Q7 only partly met:** "?" in lists and a warning before a schedule is placed. The words-only part is the next step on 2049.
+2. **Note for Tim (not a bug):** where pits sit close together, more labels may show as Unknown under Q8. That follows his words as given.
+
+### 3. How it was put together
+
+1. **Build stack** (local, detached, never pushed) in `C:\CE_WORK\build\wtB14g`. It starts from the batch 6 merge `1ebb6c4c` (batch 5 + 2049 at `f5fd98ea`), then merges 2049 at `2e23413f`, 2092 at `263e604d` and 2093 at `644cb90e`.
+   - **Conflicts:** REGRESSION_LOG only, both sides kept.
+   - **One comment line** the batch 6 merge had dropped in `TrustSettings.cs` is restored.
+   - **Build commit `b50778b9`,** "Version: Civil 3.0.90.9".
+2. **Every product file equals its draft** (checked file by file for the 2049, 2092 and 2093 files).
+3. **Product files changed against 3.0.90.7:** 26, all in `Modules/Drainage` plus the version lines. List: `C:\CE_WORK\scratch\trust_install\b14civ7_files_changed.txt`. No native, shared, Manager or Structural file.
+4. **Whole Civil test run on the merged code (Release, net10):** **22,742 passed, 0 failed, 32 skipped** (7 min 54 s).
+   - **An earlier build of this batch was thrown away unreported:** it lacked 2093, and its run had found the record-touch guard point above. That folder was deleted; this is the only `b14civ7`.
+
+### 4. Against Tim's four "never by itself" rules
+
+1. **No ON-by-default setting is added beyond batch 6's.** `trust.reachesFollowDrawingUnits` (ON) is the same point to weigh as in batch 6, section 4 item 2. It narrows the label and level-text reach on metre drawings, can only read fewer texts, and writes nothing to the drawing.
+2. **Q8 (switch OFF by default):** it only gives labels to fewer pits. It writes nothing to the drawing, and the note is in CE's record only.
+3. **CDRUNSOLVE:** words only.
+4. **CDRENUMBER:** more lines before the question. It still renumbers only after the drafter's Yes; when nothing needs renumbering it asks nothing and changes nothing.
+
+### 5. Payload
+
+1. **Payload:** `C:\ce_rc_scratch\b14civ7\CE_CVL_SUITE.bundle`, 832 files. `build_installer.ps1` exit 0; three sets (Legacy, Net8, Modern) verified; shared config verified; every dotnet call passes `-p:SkipDevBundle=true -nr:false --disable-build-servers`; nothing under ApplicationPlugins was written.
+2. **DLL `3.0.90.9+b50778b9646d94d83cf947a658213542597de65b` SHA-256:**
+   - Legacy `31FD0B3C12E1568455330A1789DFA735497A9A32EE8F36BC65003FD8D7C452A7`
+   - Net8 `DB2357E6E96E82DE876B1C3D9B7F525262D648C40F9DC73D3484E9C839B1FFA0`
+   - Modern `EA934066DED68F5858A314EA41472DD765F66A6F90BC33C7A2380CED49E199EA`
+3. **`PackageContents.xml`:** `0D9060DDE0C46031F3229AF85BC3007B82975C39AC7FF8B3D2E7794CDA5CA7B8`, `AppVersion="3.0.90.9"`.
+4. **Manifest** `C:\CE_WORK\scratch\trust_install\b14civ7_manifest.txt`, 832 rows, SHA-256 `E23AC3BE922E674019A1BD9DE3E21E7E18C9CA81FB2CC5E61A3E32E8C212F70B`.
+5. **Stamp check:** CE_SHARED and CE.AI.Core x3 have 0 bytes different outside the stamp zones. The installed bytes were put in, and CE_SHARED is identical to Manager x3. The natives are the installed bytes.
+6. **Against batch 5 (`b14civ5`):** 7 files differ (CE_CVL_SUITE.dll and .pdb x3, PackageContents.xml), 0 added, 0 removed.
+
+### 6. Turning the switch on for ONE scratch session
+
+As batch 6, section 6, with the folder `C:\CE_WORK\robot\b14g_switch`.
+
+1. **Edit the COPY only:** in its `"trust"` group set `"showUnknownInsteadOfGuess": true`.
+2. **Start AutoCAD through a `.cmd`** that sets `CE_LOG_DIR_OVERRIDE=C:\CE_WORK\robot\b14g_switch`, handed to Explorer.
+3. **Check it took:** the CE log must say "Settings initialized from: C:\CE_WORK\robot\b14g_switch\settings\CD_Settings.json". If it does not, stop.
+4. **Never touch** Tim's own `%APPDATA%\TIM_CE_CADTOOLS\CD_Settings.json`. Hash it before and after.
+
+### 7. Robot and Codex list (scratch copies)
+
+1. **First start, switch OFF (as shipped):** "CE_CVL_SUITE v3.0.90.9 Started". Then batch 5's list items 2 to 4 once, and the BUG-1456 smoke list once. Everything as on 3.0.90.7, except items 6 and 7 below.
+2. **Switch ON (section 6), the controller's list:**
+   - **A bare pipe-layer line is a possible pipe and is not added.** Draw a plain polyline on STORMWATER PIPE, then run Edit Pit on a pit it touches. The command line has "1 line on a pipe layer was not added to CE's record: it is a possible pipe (CDCHECKCURRENT lists it)." once. CE's stored record does not gain the line. CDCHECKCURRENT lists it under "Possible pipe: a line on a pipe layer is not in the CE record".
+   - **A label near two pits is Unknown, showing both.** Use a copy whose record is missing, with a pit label (or an "IL 9.10" text) placed halfway between two unnumbered pit blocks, both within reach. Run any command that updates the record, or CDUPGRADE. Neither pit takes that number or level. The command line says "1 label is within reach of more than one pit: CE gave it to none (CDCHECKCURRENT lists it).", and CDCHECKCURRENT lists "Unknown: '<label>' could be ... or ...". A label near one pit only is still read.
+   - **A drawn width is never a size.** On a metre drawing (`INSUNITS` 6), a 0.225 wide bare line keeps its size Unknown, never 225 and never 100.
+   - **A worked-out invert is kept and marked.** A pit with a blank IL joined to pipes that have inverts gets the lowest pipe invert. CDCHECKCURRENT says "1 pit invert level was worked out from the pipes" (evidence "Worked out by CE"). It is never turned into Unknown.
+   - **Edit Pit Cancel changes nothing.** Edit Pit on an unlabelled pit shows Unknown (never a CE number, 350 x 350, Class C or grated pit). Then Cancel: CE's stored record is byte-identical before and after, and DBMOD stays 0.
+   - **Pit Schedule and CDCHECKCURRENT** show Unknown or list the pit, never 100 dia UPVC or 350 x 350.
+3. **Switch either way:**
+   - **CDRUNSOLVE on a run with no design flow:** the line ends "... in Pipe Edit (CDEDIT: click More…, then the Levels & Flow tab), then run CDRUNSOLVE again." Nothing changed.
+   - **CDRENUMBER, case (a):** the standard copy plus a lone pit P8. Before the end it says "Not joined to this outlet by pipes: P8. CDRENUMBER does not number them from this outlet. Check them." The last line is "The pits joined to this outlet already read downhill to uphill - nothing to renumber. Nothing was changed." There is no question and the drawing is unchanged.
+   - **CDRENUMBER, case (b):** P10 to P9 and P9 to P10 after CDREVERSEFLOW Yes. It names "The pipe records loop back on themselves: P10 to P9 and P9 to P10. ..." and the not-joined pits if any, with the same last line. Nothing changed.
+   - **CDRENUMBER with a real renumber:** as batch 5's list. The lines come before "[Yes/No]", and No changes nothing.
+4. **Q28 on the PITSCHEDULE list** (as batch 4, known gaps item 2).
+5. **Then close AutoCAD and restart without the variable:** the switch is off again; Tim's file is unchanged.
+
+### 8. Install and put back
+
+1. **Install (after batch 5; trial put back if it was used):** `C:\CE_WORK\scratch\trust_install\install_batch14g.ps1`. NOT RUN; it parses clean.
+   - It refuses unless live Civil reads `3.0.90.7+9b977125` with its Legacy and Net8 sets present.
+   - It keeps `CE_CVL_SUITE_PRE_9b977125_<time>.backup`.
+   - It reads every file back, checks 3.0.90.9 and CE_SHARED against Manager, and checks the settings are unchanged. Log: `install_batch14g.log`.
+2. **Put back:** `restore_batch14g.ps1`, back to 3.0.90.7, checked against `b14civ5_manifest.txt`. NOT RUN; it parses clean. Further back: `restore_batch14e.ps1`, then `restore_batch14d.ps1`.
+3. **After batch 7 is installed and verified,** `C:\ce_rc_scratch\b14civ6` (batch 6, never installed) can be deleted.
+
+### 9. Stop rules
+
+As section 5 at the top. If a pass fails, batch 7 is put back with `restore_batch14g.ps1`, and batch 5 stays.
