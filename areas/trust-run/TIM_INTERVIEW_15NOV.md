@@ -553,7 +553,24 @@ Numbers are that file's Q numbers. That file itself is not edited by the ask cha
 - **Supersedes, kept on record:** his 29 Sep and 20 Oct 2026 requests for percentages in every message, from 15 Nov 2026 02:30.
 - **Ask chat's notes (mine):** the first count follows 8.3 (ribbon tools, not "tools in the core" as the older file worded it); "47" is the example figure with the same caution as in 8.3. The other two parts of the older Q66 (keep Rule 15, AutoCAD never idle; replace the 17 Oct "switch on once Codex passes" ruling with the trust gate) were NOT asked.
 
-**Older questions answered so far (this file, 15 Nov):** Q5 to Q15, Q17 to Q33, Q35, Q36, Q46, Q48 to Q52, Q54 to Q57, Q83, and Q66 in part. **Q65 asked wrongly, to be asked again.** **Q53 open by his choice ("I'll tell you later"): not the 17 Oct pilot.** **Held back for the evidence study (12.2):** Q16, Q73, Q80 to Q82. **Not asked yet:** Q0 to Q4, Q33 to Q35, Q37 to Q45, Q47 to Q56, Q58 to Q72, Q74 to Q79, Q83 to Q87, and the two added at the end of that file (the template one is now answered by queue item 6; the robot pressing CDLPD's "Continue in drawing" is not).
+**Q65, asked again with the right five rules.** He was shown the five as written in `areas\TRUST_RULES_CHECKLIST_12NOV.md`: 1. nothing changes a drawing without showing you first; 2. everyone runs the same thing; 3. guesses are never shown as facts; 4. you have used it on real drawings; 5. the tool has its note. He was told plainly that the first ask had listed the wrong five.
+
+- **Tim, Sun 15 Nov 2026 02:32 PC clock, clicked:** "Yes; exceptions signed by me (Recommended)".
+- **Choice text he saw:** "a tool that still fills in a guessed 100 dia as if it were fact stays off the ribbon until fixed, unless you sign that tool off by name."
+- **Not chosen:** "Yes, with no exceptions"; "I want to change the rules".
+- **State:** Q65 ANSWERED. The five trust rules are the gate; any exception is signed by him, by tool name.
+
+**Rule 4 of the five ("you have used it on real drawings"): what it means now.** (New question from the ask chat, because he has ruled that he no longer tests tool by tool.)
+
+- **Tim, Sun 15 Nov 2026 02:32 PC clock, clicked:** "Robot on copies of real jobs is enough". **This was NOT the recommended choice** (recommended was "The clean week and real job cover it").
+- **Choice text he saw:** "rule 4 is ticked when the robot has run the tool on copies of your past real drawings, with no step by you at all."
+- **Not chosen:** "The clean week and real job cover it (Recommended)"; "I use each tool myself once".
+- **Ask chat's reading (mine):** rule 4 no longer needs his own hands on each tool; the robot running the tool on copies of his past real drawings ticks it. This changes "who can tick what" in the checklist file (it gives rule 4 lines 4 and 5 to Tim); that file's owner should reconcile it, I have not edited it. His five clean days and one real job (8.1, 8.3) still stand as a separate condition for release; he was not asked to drop them and did not.
+- **Private-data care (mine, binding on whoever does it):** past real drawings are client data. Copies stay on his PC outside every repository; no client name, address or job number goes into any file, log, screenshot name or commit. The standing DATA-01 rule says office project folders are read "only when Tim names the job"; WHICH past jobs the robot may copy has not been asked (older Q2 is still open) and must be his choice.
+
+**Queue item 10 (older-year files out of the build; rule text to match):** answered in the same sitting, recorded in `FOR_TIM_QUEUE.md` under "Answered".
+
+**Older questions answered so far (this file, 15 Nov):** Q5 to Q15, Q17 to Q33, Q35, Q36, Q46, Q48 to Q52, Q54 to Q57, Q65, Q83, and Q66 in part. **Q53 open by his choice ("I'll tell you later"): not the 17 Oct pilot.** **Held back for the evidence study (12.2):** Q16, Q73, Q80 to Q82. **Not asked yet:** Q0 to Q4, Q33 to Q35, Q37 to Q45, Q47 to Q56, Q58 to Q72, Q74 to Q79, Q83 to Q87, and the two added at the end of that file (the template one is now answered by queue item 6; the robot pressing CDLPD's "Continue in drawing" is not).
 
 ---
 
