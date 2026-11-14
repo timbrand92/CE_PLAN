@@ -715,9 +715,41 @@ Numbers are that file's Q numbers. That file itself is not edited by the ask cha
 - **Choice text he saw:** "in the check window, picking P4 highlights its two pipes and its downpipe on the plan. It reuses what the window has already read."
 - **Not chosen:** "In the Inspector, no window open"; "Both from the start".
 
+**Q86 follow-up. What is confusing about CDSYNC and CDREBUILD.**
+
+- **Tim, Sun 15 Nov 2026 02:44 PC clock, ticked all four:** "I can't tell which one to use", "I can't see what it changed", "I don't know when I need it", "The names mean nothing".
+- **Examples he saw:** something looks wrong and it is not clear which of the two fixes it; a line scrolls past and he cannot tell which pits or pipes are different afterwards; nothing tells him the drawing needs it; "sync" and "rebuild" are software words that do not say what happens to the drawing.
+- **What this gives the designers of Check this drawing (mine, as four tests the new door must pass, each from one tick of his):**
+  1. **One door, not two:** he never has to choose between repair tools.
+  2. **It shows what changed:** which pits and pipes, before anything is written (already his Q19 and 4.1 answers: ticked items, preview, Apply).
+  3. **The drawing tells him when it is needed:** the status line he approved (5.3) and the "needs checking" line (Q18).
+  4. **A plain name:** no "sync", no "rebuild". "Check this drawing" is the working name on record; whether he likes that name was not asked.
+- **Not a decision:** these four are my turning of his ticks into tests. They are his ticks, my wording.
+
+**Q62, second follow-up. Does Structural wait for CEMEMBER and its window before going to colleagues?**
+
+- **Tim, Sun 15 Nov 2026 02:44 PC clock, clicked:** "Yes, Structural waits for it (Recommended)".
+- **Choice text he saw:** "colleagues never get SBEAM again; the Structural release happens only once CEMEMBER and its window are built to the plan, proven, and you have OK'd the window mock-up."
+- **Not chosen:** "No, CEMEMBER can follow later".
+- **State:** this confirms the reading under the first follow-up. CEMEMBER with its planned window, proven, and the window mock-up OK'd by him, is a condition of the Structural release to colleagues. SBEAM does not go to colleagues again.
+
+**Q87. The new pit warning wording for a blank cover level.**
+
+- **Tim, Sun 15 Nov 2026 02:44 PC clock, clicked:** "I see the wording first (Recommended)".
+- **Choice text he saw:** "a real AutoCAD screenshot of the warning is put in your queue, like the Pit Schedule line, and it counts only on your OK. Matches your rule that wording you see needs your eye."
+- **Not chosen:** "Codex reads it, that is enough".
+- **Ask chat's note (mine):** this is the opposite of the older file's recommendation ("accept, Codex reads it"), which was written before his 15 Nov screen rules. He did not object to the behaviour (place the pit and warn, no hard block); only the wording waits on him. Owed to Tim: the screenshot, in the queue.
+
+**Q42. Preset pit size commands.**
+
+- **Tim, Sun 15 Nov 2026 02:44 PC clock, clicked:** "I never use them".
+- **Choice text he saw:** "they can go from the ribbon and be left out of the tools that must be proven."
+- **Not chosen:** "Typed only, no buttons (Recommended)"; "Buttons on the ribbon".
+- **Ask chat's reading (mine):** no preset pit buttons on the ribbon, and they are not among the ribbon tools that must be proven before release (8.3). He was not asked whether the typed commands should be removed altogether; under the standing rule a command is retired only with his explicit approval, so they stay typed until he says otherwise.
+
 **Queue item 11** (added by the controller at about 02:40): the same CDRUNSOLVE negative-cover case as item 9, which he answered at 01:59. Not asked again; marked in `FOR_TIM_QUEUE.md`.
 
-**Older questions answered so far (this file, 15 Nov):** Q1, Q2 (permission, not the chosen set), Q3, Q5 to Q15, Q17 to Q33, Q35, Q36, Q46 to Q52, Q54 to Q57, Q59, Q60 (mark twice), Q61, Q62 (his words), Q65, Q66 (all but Rule 15), Q67, Q69 to Q71, Q72 (pit-number case), Q78 (truss part), Q83 to Q85. **Q86 asked, not answered ("these tools are confusing").** **Q53 open by his choice ("I'll tell you later"): not the 17 Oct pilot.** **Held back for the evidence study (12.2):** Q16, Q73, Q80 to Q82. **Not asked yet:** Q0 to Q4, Q33 to Q35, Q37 to Q45, Q47 to Q56, Q58 to Q72, Q74 to Q79, Q83 to Q87, and the two added at the end of that file (the template one is now answered by queue item 6; the robot pressing CDLPD's "Continue in drawing" is not).
+**Older questions answered so far (this file, 15 Nov):** Q1, Q2 (permission, not the chosen set), Q3, Q5 to Q15, Q17 to Q33, Q35, Q36, Q46 to Q52, Q54 to Q57, Q59, Q60 (mark twice), Q61, Q62 (his words), Q65, Q66 (all but Rule 15), Q67, Q69 to Q71, Q72 (pit-number case), Q78 (truss part), Q83 to Q85, Q87, and Q42. **Q86 asked, not answered as asked ("these tools are confusing"; his four reasons are recorded).** **Count: 62 of the 87 have an answer in whole or in part; 5 held for the evidence study.** **Q53 open by his choice ("I'll tell you later"): not the 17 Oct pilot.** **Held back for the evidence study (12.2):** Q16, Q73, Q80 to Q82. **Not asked yet:** Q0 to Q4, Q33 to Q35, Q37 to Q45, Q47 to Q56, Q58 to Q72, Q74 to Q79, Q83 to Q87, and the two added at the end of that file (the template one is now answered by queue item 6; the robot pressing CDLPD's "Continue in drawing" is not).
 
 ---
 
