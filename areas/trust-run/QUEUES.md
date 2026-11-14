@@ -363,3 +363,15 @@ Tim typed "autocad 2027 only for now", then clicked "Stop work on older years" (
 3. **Not changed by anyone:** the plugin repo's `AGENTS.md` and `START_HERE` 1b still say both builds are required. That text is now older than Tim's ruling; whether to change it is his call. In FOR_TIM_QUEUE as a new item.
 
 **Update, Sun 15 Nov 2026 02:32 (Tim, queue item 10, ask chat):** he clicked "Take them out of the build" and "Yes, match what I said" for the rule text; his chosen option says the check of what his own PC does with a bundle missing the older-year files comes first. So point 2 above (build unchanged) was the controller's default and is now replaced by his answer, in this order: (1) read-only plan `areas\trust-run\BUILD_2027_ONLY_PLAN.md` (fix lane, after batch 5); (2) trial on his PC with put-back, seen in AutoCAD 2027; (3) only then a 2027-only batch, the build change and the rule-text change as one draft pull request made on his order. Until step 2 passes, batches keep all three sets. Also from the same batch: the five trust rules are the gate, exceptions signed by him by tool name; rule 4 "used on real drawings" = robot on copies of real jobs is enough; WHICH past jobs may be copied is not answered, is client data, and is his to name (the Projects folder stays unopened).
+
+## REAL FINISHED JOBS MAY BE COPIED (Tim, to the controller directly, Sun 15 Nov 2026, about 10:30 PC clock)
+
+The controller asked him in its own chat: "may I copy finished jobs from the office Projects folder?" with the conditions listed. Tim: "yes". (He had already chosen "Yes, any finished job" three times in the ask chat; the controller held it until he said it here, because it lifts his own earlier word never to open that folder.)
+
+**What it covers, and only this:**
+1. **Copies only**, made onto his PC under `C:\CE_WORK\realjobs\`, outside every repo and outside OneDrive. Nothing is ever written back to the Projects folder; it is opened to read and copy only.
+2. **Coded names** (JOB_A, JOB_B ...). No client name, address or job number in any file name, folder name, log, note, screenshot name, commit or message. The key that says which job is which code stays in one file on his PC beside the copies, never in a repo, never in CE_PLAN.
+3. **Finished jobs only**, never live ones.
+4. **Used for:** the robot and Codex running CE tools on the copies, and the reading-only study of how old drawings are made (Civil and Structural). Running Structural tools on the copies was not asked.
+5. **Care the controller adds (its own, not Tim's words):** the copied drawings still carry the client's title block inside them, so screenshots of them stay on his PC and are not put in CE_PLAN or any repo unless cropped clear of the title block; findings are written as patterns, never with a client's details.
+6. **Not covered:** `C:\CE_DrawingIntelligence` stays unopened; live jobs; sending anything anywhere.
