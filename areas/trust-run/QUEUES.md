@@ -276,3 +276,11 @@ Rule text: `areas\TRUST_AUTONOMOUS_RUN_12NOV.md`, last section. No lane starts a
 **Install rule:** nothing goes onto Tim's PC as it is proven. The controller gathers what the robot has SEEN working on scratch copies into ONE batch, shows Tim the list, and installs only on his yes for that batch (backup first, outside his hours).
 
 Why this ten and what each must meet: `areas\TRUST_ONE_DRAFTER_CIVIL_DAY_14NOV.md`.
+
+## ACCEPTANCE FOR THE TEN, ANSWERED BY TIM (Sat 14 Nov 2026, about 16:05 PC clock)
+
+The controller asked: "shall I count robot PASS plus Codex PASS as accepted for the ten, as per your 20 Oct rule?" Choices: Yes (recommended) / No, I want to see each one myself.
+
+Tim's answer, in his word: **"yes"**.
+
+What this means (RULES.md 13.3 as amended 20 Oct, unchanged): a tool of the ten, or a safety fix beside them, is written "FIXED (Codex-accepted, build, date)" only when a robot PASS and a Codex PASS in real AutoCAD both exist on the installed build, each with its screenshot or log. A robot PASS alone is still "seen working", not accepted. Items needing engineering judgement still need Tim's word. Tim spot-checks by exception.
