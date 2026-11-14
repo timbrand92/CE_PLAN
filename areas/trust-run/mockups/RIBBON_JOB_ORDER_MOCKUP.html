@@ -92,10 +92,11 @@
   </div>
 
   <h2>After: the ribbon in job order</h2>
-  <p class="note">One tab, "CE Civil". It reads left to right in the order a job goes: Start, Sources, Network, Levels, Check, Sheet. Your ten everyday tools are the big blue buttons, numbered in job order. Everything else is one click away under "More".</p>
+  <p class="note">One tab, "CE Civil". It reads left to right in the order a job goes: Start, Sources, Network, Levels, Check, Sheet. Your ten everyday tools are the blue buttons, numbered in job order. Everything else is one click away under "More". Redrawn on Sun 15 Nov to follow your own answers: Edit sits in Network beside Pit and Pipe; Move + Rotate and Copy + Rotate are on the CE Tools tab (every drawing); Pit Schedule and Floor Waste are off the ribbon until seen fixed; the preset pit sizes are gone (you never use them).</p>
   <div class="card open-room"><div class="ribbon" id="after"></div>
+    <div id="extra"></div>
     <div class="legend">
-      <span><span class="sw acc">PT</span>one of your ten, big button</span>
+      <span><span class="sw acc">PT</span>one of your ten</span>
       <span><span class="sw num">3</span>its place in your ten (job order)</span>
       <span><span class="sw held">FW</span>held back until its fix is proved</span>
       <span>"More" opens the list of the rest of that panel</span>
@@ -154,6 +155,7 @@ var D = {
   CDCALC: "Open the drainage calculations window.",
   CDDEST: "List where each downpipe's water ends up.",
   CDINSPECTOR: "Show what CE knows about the pit, pipe or source you select.",
+  CDCHECKDWG: "Check a drawing file you have brought in. (Your answer: on the ribbon. Which panel and the exact job are still to confirm.)",
   CDRENUMBER: "Renumber pits from the outlet uphill.",
   PITSCHEDULE: "Open the Pit Schedule window, listing the drawing's pits.",
   MR: "Move the objects you select, then turn them, in one go.",
@@ -179,15 +181,15 @@ var AFTER = [
     small: [b("OF", "Overflow", "OF"), b("FO", "Front overflow", "FO"), b("GIO", "Gross inlet", "GI"), b("CDTG", "Trench grate", "TG"), b("CDTAG", "Source tag", "TA")],
     more: ["More sources", [b("CDSTRIP", "Strip drain", "SD"), b("CDRG", "Raingarden", "RG"), b("CDWT", "Water tank", "WT"), b("CDSOURCE", "Other source", "GS"), b("CDFW", "Floor waste", "FW", 0, 1)]] },
   { t: "Network", big: [b("PIT", "Pit", "PT", 1), b("CD", "Pipe", "PI", 1)],
-    small: [b("CDLPD", "Legal point of discharge", "LP"), b("PP", "Plastic pit 350", "PP"), b("IO", "Inspection opening", "IO")],
+    small: [b("CDEDIT", "Edit pit or pipe", "ED"), b("CDLPD", "Legal point of discharge", "LP"), b("PP", "Plastic pit 350", "PP"), b("IO", "Inspection opening", "IO")],
     more: ["More network", [b("CDAGI", "AGI drain", "AG"), b("CDSYSTEM", "Pipe system", "PY")]] },
-  { t: "Levels", big: [b("CDRUNSOLVE", "Solve run", "SR", 1), b("CDEDIT", "Edit", "ED", 1)],
-    small: [b("CDSL", "Spot level", "LV"), b("CDTWL", "Top water level", "TW"), b("CDREVERSEFLOW", "Reverse flow", "RF")], more: null },
+  { t: "Levels", big: [b("CDRUNSOLVE", "Solve run", "SR", 1), b("CDSL", "Spot level", "LV", 1)],
+    small: [b("CDTWL", "Top water level", "TW"), b("CDREVERSEFLOW", "Reverse flow", "RF")], more: null },
   { t: "Check", big: [b("CDCHECKCURRENT", "Check this drawing", "CK", 1), b("CDRULES", "Rule check", "RC", 1)],
-    small: [b("CDCALC", "Calculations", "CA"), b("CDDEST", "Downpipe destinations", "WD"), b("CDINSPECTOR", "Inspector", "CP")], more: null },
-  { t: "Sheet", big: [b("CDRENUMBER", "Renumber pits", "RN", 1), b("PITSCHEDULE", "Pit Schedule", "PS", 1)],
-    small: [b("MR", "Move + Rotate", "MR"), b("CR", "Copy + Rotate", "CR"), b("CDPROFILE", "Long section", "PF")],
-    more: ["Tidy the labels", [b("CDTIDYLABELS", "Tidy labels", "TL"), b("CDPITCOVERFLIP", "Flip cover text", "FC"), b("CDTEXTSEG", "Move pipe text", "TS"), b("CDMA", "Move arrow", "MA"), b("CDANNOTATIONEDIT", "Edit label", "EA")]] }
+    small: [b("CDCALC", "Calculations", "CA"), b("CDDEST", "Downpipe destinations", "WD"), b("CDINSPECTOR", "Inspector", "CP"), b("CDCHECKDWG", "Check a drawing file", "CF")], more: null },
+  { t: "Sheet", big: [b("CDRENUMBER", "Renumber pits", "RN", 1), b("CDPROFILE", "Long section", "PF", 1)],
+    small: [b("CDTIDYLABELS", "Tidy labels", "TL")],
+    more: ["More labels", [b("CDPITCOVERFLIP", "Flip cover text", "FC"), b("CDTEXTSEG", "Move pipe text", "TS"), b("CDMA", "Move arrow", "MA"), b("CDANNOTATIONEDIT", "Edit label", "EA")]] }
 ];
 
 // ------------------------------------------------------------------ BEFORE: today's one-tab "CE" layout (build 3.0.90), panel by panel
@@ -263,7 +265,7 @@ function ribbonShell(tabName) {
   var tabs = document.createElement("div"); tabs.className = "tabs";
   ["Home", "Insert", "Annotate", "Structural"].forEach(function (n) { var d = document.createElement("div"); d.textContent = n; tabs.appendChild(d); });
   var on = document.createElement("div"); on.className = "on"; on.textContent = tabName; tabs.appendChild(on);
-  var d2 = document.createElement("div"); d2.textContent = "CE Tools"; tabs.appendChild(d2);
+  if (tabName !== "CE Tools") { var d2 = document.createElement("div"); d2.textContent = "CE Tools"; tabs.appendChild(d2); }
   var strip = document.createElement("div"); strip.className = "strip";
   r.appendChild(tabs); r.appendChild(strip); return { root: r, strip: strip };
 }
@@ -280,6 +282,23 @@ function ribbonShell(tabName) {
     sh.strip.appendChild(panel(p.t, nodes));
   });
   document.getElementById("after").appendChild(sh.root);
+})();
+
+(function drawExtra() {
+  var host = document.getElementById("extra");
+  var h = document.createElement("p"); h.className = "note"; h.style.margin = "16px 0 6px";
+  h.textContent = "Two more things from your answers. Left: the CE Tools tab, which shows on every drawing, now carries Move + Rotate and Copy + Rotate. Right: held off the ribbon until seen fixed (they can still be typed).";
+  host.appendChild(h);
+  var row = document.createElement("div"); row.style.display = "flex"; row.style.gap = "16px"; row.style.flexWrap = "wrap";
+  var sh = ribbonShell("CE Tools");
+  sh.root.style.zoom = 0.9;
+  sh.strip.appendChild(panel("Move and copy", [btn(b("MR", "Move + Rotate", "MR", 1), true), btn(b("CR", "Copy + Rotate", "CR", 1), true)]));
+  row.appendChild(sh.root);
+  var held = document.createElement("div"); held.className = "ribbon"; held.style.alignSelf = "flex-end";
+  var hs = document.createElement("div"); hs.className = "strip"; hs.style.borderRadius = "10px";
+  hs.appendChild(panel("Off the ribbon until seen fixed", [btn(b("PITSCHEDULE", "Pit Schedule", "PS", 1, 1), true), btn(b("CDFW", "Floor Waste", "FW", 1, 1), true)]));
+  held.appendChild(hs); row.appendChild(held);
+  host.appendChild(row);
 })();
 
 (function drawBefore() {
@@ -321,13 +340,13 @@ function ribbonShell(tabName) {
     [1, "Pit", "PIT", "Network", "Today: Draw panel. Now: first big button of Network."],
     [2, "Pipe", "CD", "Network", "Today: Draw panel. Now: second big button of Network."],
     [3, "Legal point of discharge", "CDLPD", "Network", "Today: Design panel. Now: Network, right under the pipe, because it ends the network."],
-    [4, "Edit", "CDEDIT", "Levels", "Today: Edit panel. Now: big button in Levels (it fixes one pit or pipe)."],
-    [5, "Solve run", "CDRUNSOLVE", "Levels", "Today: one of ten small buttons in Review. Now: big button in Levels."],
+    [4, "Edit", "CDEDIT", "Network", "Today: Edit panel. Now: Network, beside Pit and Pipe (your answer)."],
+    [5, "Solve run", "CDRUNSOLVE", "Levels", "Today: one of ten small buttons in Review. Now: first big button in Levels."],
     [6, "Renumber pits", "CDRENUMBER", "Sheet", "Today: no button (type it). Now: big button in Sheet."],
-    [7, "Pit Schedule", "PITSCHEDULE", "Sheet", "Today: Review panel. Now: big button in Sheet. Its fixes are still being proved."],
+    [7, "Pit Schedule", "PITSCHEDULE", "(off the ribbon)", "Today: Review panel. Now: off the ribbon until its fixes are seen working (your answer); type PITSCHEDULE meanwhile."],
     [8, "Rule check, with Calculations", "CDRULES + CDCALC", "Check", "Today: Rule check has no button; Calculations is in Review. Now: both in Check, side by side."],
     [9, "Check this drawing", "CDCHECKCURRENT", "Check", "Today: Review panel. Now: first big button of Check."],
-    [10, "Move + Rotate", "MR", "Sheet", "Today: not on the CE tab. Now: Sheet, next to Copy + Rotate (markup comes back here)."]
+    [10, "Move + Rotate", "MR", "CE Tools tab", "Today: not on the CE tab. Now: the CE Tools tab, which shows on every drawing, beside Copy + Rotate (your answer)."]
   ];
   var t = document.getElementById("tenTable");
   t.innerHTML = "<tr><th>#</th><th>Tool</th><th>Typed as</th><th>Panel</th><th>What moved</th></tr>" +
