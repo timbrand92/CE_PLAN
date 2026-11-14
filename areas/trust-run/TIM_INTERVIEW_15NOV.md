@@ -466,7 +466,34 @@ Numbers are that file's Q numbers. That file itself is not edited by the ask cha
 - **Not chosen:** "Real names on the dashboard"; "Only on their own PC".
 - **Ask chat's note (mine):** a dashboard row is a screen: mock-up and his OK before it is built.
 
-**Older questions answered so far (this file, 15 Nov):** Q5 to Q15, Q17 to Q32, Q36, Q46, Q49 to Q52, Q54, Q57. **Q53 open (he will name them).** **Held back for the evidence study (12.2):** Q16, Q73, Q80 to Q82. **Not asked yet:** Q0 to Q4, Q33 to Q35, Q37 to Q45, Q47 to Q56, Q58 to Q72, Q74 to Q79, Q83 to Q87, and the two added at the end of that file (the template one is now answered by queue item 6; the robot pressing CDLPD's "Continue in drawing" is not).
+**Q53, asked again: is the first colleague still the pilot named on 17 Oct?**
+
+- **Tim, Sun 15 Nov 2026 02:27 PC clock, clicked:** "Someone else".
+- **Choice text he saw:** "you have another person in mind now; type a first name or role under Other and I record it as a code only." He clicked the choice and typed no name.
+- **Not chosen:** "Yes, still Max (Recommended)"; "Decide nearer the time".
+- **State:** the 17 Oct 2026 naming of the pilot colleague is superseded from 15 Nov 2026 02:27, kept on record. WHO the first colleague is: OPEN, his to name. Nobody may assume a person.
+
+**Q55. What counts as "office setup: yes".**
+
+- **Tim, Sun 15 Nov 2026 02:27 PC clock, clicked:** "Office values match; personal ignored (Recommended)".
+- **Choice text he saw:** "a colleague who moved a window or has different recent choices still shows 'yes'. One who changed the pipe label height shows 'no, 1 value differs'."
+- **Not chosen:** "Every value, personal ones too".
+
+**Q56, first half. How a colleague finds out a newer CE is approved.**
+
+- **Tim, Sun 15 Nov 2026 02:27 PC clock, clicked:** "CE_VERSION says so, all years (Recommended)".
+- **Choice text he saw:** "a colleague on AutoCAD 2024 types CE_VERSION and reads 'A newer CE is approved; ask Tim'. Nothing pops up while they draft."
+- **Not chosen:** "A line when AutoCAD starts"; "Only on the dashboard, for me".
+- **Ask chat's note (mine):** "ask Tim" in the example was written before he handed releases to the release chat (Q49); the wording of that line is not approved and needs his eye.
+
+**Q56, second half. Do colleagues on AutoCAD 2022 to 2024 get the first release with those on 2027?**
+
+- **Tim, Sun 15 Nov 2026 02:27 PC clock, typed instead of clicking a choice:** "autocad 2027 only for now"
+- **Choices he was shown and did not pick:** "2027 first; older years after (Recommended)"; "All years in the same release".
+- **Ask chat's reading (mine):** the first colleague release goes to AutoCAD 2027 PCs only. "For now" leaves the older years open: he did not say when, or whether, 2022 to 2024 colleagues follow.
+- **What I am NOT reading into it:** that work on the older years stops. The 15 Sep 2026 position on record (2022 to 2024 users are in scope; every batch builds and loads for them too) is not withdrawn by these five words. Whether proving the ribbon tools on an older year may wait until after the 2027 release is a real question and is not answered.
+
+**Older questions answered so far (this file, 15 Nov):** Q5 to Q15, Q17 to Q32, Q36, Q46, Q49 to Q52, Q54 to Q57. **Q53 open: not the 17 Oct pilot; he has not said who.** **Held back for the evidence study (12.2):** Q16, Q73, Q80 to Q82. **Not asked yet:** Q0 to Q4, Q33 to Q35, Q37 to Q45, Q47 to Q56, Q58 to Q72, Q74 to Q79, Q83 to Q87, and the two added at the end of that file (the template one is now answered by queue item 6; the robot pressing CDLPD's "Continue in drawing" is not).
 
 ---
 
