@@ -292,3 +292,11 @@ Found: on Civil 3.0.90.3 CDRUNSOLVE never writes a level, because every pit is h
 The controller asked what CDRUNSOLVE should do about design flows: 1. take each pipe's flow from CDCALC's results (recommended; says "run CDCALC first" when there are none); 2. solve levels on fall and cover only; 3. leave it for now.
 
 Tim's answer, in his words: **"do as you recommend"**. So: option 1. CDRUNSOLVE reads the flows CDCALC already worked out (one place for the sum, never its own copy), and when there are none it changes nothing and says to run CDCALC first. Unknown stays Unknown: no flow is ever made up. Built on the existing draft 2092, no new draft; goes in the next batch, which needs Tim's own yes to install.
+
+### Correction, Sat 14 Nov 2026 about 16:35: option 1 cannot be built as worded
+
+The builder stopped at step 1: CDCALC saves catchments with a flow each and one site total, but no catchment is tied to a pit or pipe, so there is no per-pipe flow for CDRUNSOLVE to read (controller checked: no pit or pipe id in `CalculationWorkspaceData`). The only per-pipe design flow in the CE record is the Q the drafter types in Pipe Edit (`PipeData.DesignFlowLps`).
+
+**Controller's DRAFT default, NOT Tim's answer** (built under his 9 Oct rule that builds do not wait on him, and his 14 Nov "you do what you need to, to keep things moving"): CDRUNSOLVE reads the Q each pipe already has from Pipe Edit. No Q on any pipe: nothing changes, it says to enter the design flow in Pipe Edit. Q on only some: names the pipes without one, nothing changes. Tim's answer replaces this the moment he gives one.
+
+Logged as a later idea, not built: CDCALC gains a "drains to pit" link on each catchment so flows can come from CDCALC, which is what Tim's option 1 meant. That is new CDCALC work, not a fix.
