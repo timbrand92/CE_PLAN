@@ -28,3 +28,21 @@
 4. **Logs over the whole run (14:17 to 15:48):** Civil 2,685 lines: four "v3.0.90.3 Started", no "[BUG-1456]" line, no ERROR, no load failure or mismatch. Structural 434 lines: no ERROR, FATAL or exception.
 5. **AutoCAD:** every AutoCAD was started by me. One (15:13) was ended by me after my script left CDLPD's window open and the driver no longer owned it (scratch copies only, settings checked unchanged); not a crash. The last one was closed at 15:48 by the driver's quit (settings same). No acad.exe is running.
 6. **Cleanup:** staging worktrees, drive letter R: and the toolset override removed; local build branches `batch-14nov-civil` and `batch-14nov-struc` kept, never pushed; candidates `C:\ce_rc_scratch\b14civ` and `b14struc` kept; backups `BEFORE_14NOV` and the two `_PRE_..._20261114-141346.backup` folders kept.
+
+---
+
+# CDLPD, Codex look (Sat 14 Nov 16:15 to 16:30 PC clock; Tim: "get codex to do it")
+
+**FOR TIM**
+
+1. **CDLPD now refuses a plain line as the outlet pipe: SEEN by Codex.** A plain polyline on layer 0 clicked as the pipe gave "[CE] That line is not a CE pipe, so it cannot be the LPD pipe. Nothing was changed. Run CDLPD again and pick a CE pipe, a pit or a block, or choose to pick a point." No marker, CE's stored outlet unchanged (screenshot checked by me).
+2. **A real CE pipe is still taken, and it survives save and reopen: SEEN by Codex.** Clicking pipe P2 to P1 set the outlet on it ("LPD" note at the P2 end on the screenshot); after save and reopen CE's stored outlet still names that pipe.
+3. **Also seen:** a plain LINE (not a polyline) is refused by AutoCAD's own pick filter with "Select a pipe, pit, or any block (kerb outlet, connection point, etc.)." and the question stays open (Esc ends it; nothing changed). An older-style polyline on the CE pipe layer IS accepted as the outlet pipe, as designed. Esc at the pick changes nothing.
+4. **Acceptance:** this is a Codex PASS only. The robot could not click the line (it pressed Continue but its click tools refuse at that question), so there is no robot PASS beside it: by RULES 13.3 BUG-1298 stays OPEN, not Codex-accepted.
+
+**DETAIL**
+
+1. Report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_LPD14_L2_20261114_1618.md`, evidence `LOOKS\LPD14_L2_20261114_1618\` (37 screenshots, driver call log). Build read by Codex at start and end: Civil 3.0.90.3+11c0093c, Manager 1.1.89, Structural 1.0.126.1. Settings unchanged; AutoCAD closed; lock released.
+2. **Codex's two FAIL lines (L-07, L-08) are my brief's mistake, not the plugin's:** the brief told Codex to expect the outlet to name handle 10F608, read by a point pick (nentselp) on the pipe; that object is not a CE pipe. CE's own record (my read of the same drawing earlier today, `reads\BL_0.record.txt`) gives pipe P2 to P1 as id and entity handle **109835**, which is exactly what CDLPD stored (R1 "PipeHandle":"109835") before and after save and reopen. Desk verdict: L-07 PASS, L-08 PASS.
+3. Step results as checked by me: L-00 PASS, L-01 PASS, L-02 PASS (Continue in drawing pressed by Codex), L-03 PASS (screenshot LPD14-17 shows the refusal line), L-04 DIFFERENT (plain LINE: AutoCAD's pick filter wording, prompt stays; unchanged by the fix), L-05 PASS, L-06 SEEN (pipe-layer polyline accepted), L-07 PASS, L-08 PASS (screenshot LPD14-34 shows the LPD note at P2).
+4. The first attempt (run L1, 15:57 to 16:09) was blocked by my brief: it sent a bare CDLPD without -Force and the driver refused it; Codex correctly did not add -Force on its own. That AutoCAD was closed by the driver's quit under the look's lock (settings unchanged).
