@@ -284,3 +284,11 @@ The controller asked: "shall I count robot PASS plus Codex PASS as accepted for 
 Tim's answer, in his word: **"yes"**.
 
 What this means (RULES.md 13.3 as amended 20 Oct, unchanged): a tool of the ten, or a safety fix beside them, is written "FIXED (Codex-accepted, build, date)" only when a robot PASS and a Codex PASS in real AutoCAD both exist on the installed build, each with its screenshot or log. A robot PASS alone is still "seen working", not accepted. Items needing engineering judgement still need Tim's word. Tim spot-checks by exception.
+
+## CDRUNSOLVE DESIGN FLOWS, ANSWERED BY TIM (Sat 14 Nov 2026, about 16:20 PC clock)
+
+Found: on Civil 3.0.90.3 CDRUNSOLVE never writes a level, because every pit is handed a design flow of 0 (`ProposalApplyService.PlanBuilders.cs` line 789 at 11c0093c; the robot saw "none of them has a design flow yet").
+
+The controller asked what CDRUNSOLVE should do about design flows: 1. take each pipe's flow from CDCALC's results (recommended; says "run CDCALC first" when there are none); 2. solve levels on fall and cover only; 3. leave it for now.
+
+Tim's answer, in his words: **"do as you recommend"**. So: option 1. CDRUNSOLVE reads the flows CDCALC already worked out (one place for the sum, never its own copy), and when there are none it changes nothing and says to run CDCALC first. Unknown stays Unknown: no flow is ever made up. Built on the existing draft 2092, no new draft; goes in the next batch, which needs Tim's own yes to install.
