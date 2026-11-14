@@ -46,6 +46,11 @@
    - **Only jobs I name.** Example: you give three job folders; nothing else is opened.
    - **Not yet** (in use). Example: the robot stays on the scratch test copies.
 
+15. **Three more pictures for your OK** (ask chat, drawn overnight Sun 15 Nov 2026 about 03:35 after "im going to bed, keep things moving"). File: `C:\CE_PLAN\04_REFERENCE\mockups\NEW_JOB_STRUCTURAL_TAB_DASHBOARD_15NOV.html`. Pictures only; nothing is built from them. The ask chat could not view the rendered file itself.
+   - **15a. New Job, "type once".** One window: job folder, job number, address, client, council, Civil / Structural / Both, sheet size, drawn by, each pre-filled where CE already knows it, with a card showing the 7 places that then read it. Found while drawing it: a New Job window already exists (typed CDNEWDWG) and already fills the title block from a job record; "type once" would build on that, not start from nothing. **OK as shown** / **change it** (your words).
+   - **15b. CE Structural tab in your order** (Start, Roof, Upper floors, Ground, Footings, Check, Sheet), using the 32 tools the 12 Nov sort keeps. Found while drawing it: today's framing tools are the same on every floor, so Upper floors and Ground hold the same five buttons twice, and Footings has no ready tool yet. **A: keep both floor panels, so it reads roof down** (recommended: it matches the order you asked for) / **B: one "Floors and ground" panel, each button once.**
+   - **15c. Dashboard, one row per PC** (coded names, three CE versions, AutoCAD year, office setup yes or no, "4 of 5 on the approved CE"). **OK as shown** / **change it** (your words).
+
 ## Older, still open (asked before 15 Nov, defaults in use)
 
 8. **Ribbon in job order** (Start, Sources, Network, Levels, Check, Sheet). Default: not built into any batch until you have seen a mock-up.

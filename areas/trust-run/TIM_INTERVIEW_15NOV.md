@@ -954,6 +954,18 @@ Before these he was shown, in the chat: the problem in numbers (145 Civil comman
 
 **End of the sitting, about 03:33.** Tim asked to be told when the questions were done; he was told.
 
+**13.10 After the sitting. Tim, about 03:35, typed:** "im going to bed, keep things moving"
+
+**13.11 THREE OF TONIGHT'S ANSWERS ARE HELD BY THE CONTROLLER until Tim gives his own word in the controller chat (queue items 12, 13 and 14, added by the controller about 03:34). Nobody should act on these three from this file alone:**
+
+1. **13.4, "Build it alongside the ten now"** (queue item 12). The controller's reason: "that click lifts a rule you gave the controller directly on 14 Nov, and a message between chats cannot lift it." In use meanwhile: mock-up and paper design now, build after his OK.
+2. **13.5 and 13.6, CE acting by itself** (queue item 13). In use meanwhile: the four "never by itself" lines of 9.1 stand; automatic behaviour is settled tool by tool, with a picture of each.
+3. **Q2 and its follow-up, copying finished jobs from the office Projects folder** (queue item 14). The controller's reason: he told the controller directly never to open that folder. In use meanwhile: not yet; the robot stays on scratch test copies.
+
+**Ask chat's view (mine):** the controller is right to hold them. Each one reverses something Tim told the controller himself, and RULES 6 says a claim relayed from another chat is checked before it is acted on. My records of what he clicked stand as records; they are not go-aheads. The "superseded" notes I wrote against 9.1 and DATA-01 should be read as "superseded in this chat's record, pending his confirmation to the controller".
+
+**Drawn overnight for his OK (queue item 15):** `04_REFERENCE\mockups\NEW_JOB_STRUCTURAL_TAB_DASHBOARD_15NOV.html`: the New Job "type once" window, the CE Structural tab in his panel order, and the dashboard row per PC. Two things the drawing showed up: a New Job window and a job record already exist (CDNEWDWG fills the title block from it), so "type once" builds on that; and the Structural framing tools are the same on every floor, so "Upper floors" and "Ground" would hold the same buttons twice.
+
 ---
 
 ## Still to ask in the interview (not decisions)

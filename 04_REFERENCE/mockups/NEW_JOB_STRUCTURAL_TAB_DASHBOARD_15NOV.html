@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>New Job, Structural tab, dashboard row: mock-ups 15 Nov 2026</title>
+<style>
+:root{--bg:#f4f4f2;--card:#ffffff;--line:#d9d8d2;--text:#1c1c1a;--soft:#5f5e5a;--mute:#8a8983;--accent:#1E5AA8;--accentbg:#e6eef8;--amber:#b86e00;--amberbg:#fbeed6;--green:#2f6b12;--greenbg:#e8f2dc;--field:#fafaf8;--note:#eeeeea;--btn:#ffffff}
+@media (prefers-color-scheme: dark){:root{--bg:#1b1b1a;--card:#262624;--line:#3c3c39;--text:#f1efe8;--soft:#c3c1b8;--mute:#96958e;--accent:#8ab4ea;--accentbg:#1d3350;--amber:#f0b04a;--amberbg:#3d2c0c;--green:#a6d37c;--greenbg:#1f3310;--field:#1f1f1e;--note:#2c2c2a;--btn:#0d1b2e}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Segoe UI,Arial,sans-serif;padding:20px 16px 40px}
+.wrap{max-width:1180px;margin:0 auto}
+h1{font-size:20px;font-weight:600;margin:0 0 4px}
+h2{font-size:17px;font-weight:600;margin:30px 0 4px}
+.sub{font-size:14px;color:var(--soft);margin:0 0 12px}
+.two{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,0.9fr);gap:14px}
+@media (max-width:860px){.two{grid-template-columns:minmax(0,1fr)}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+.ttl{font-size:16px;font-weight:600;margin:0 0 12px}
+.f{display:grid;grid-template-columns:130px minmax(0,1fr);gap:8px 12px;align-items:center;font-size:14px}
+.f label{color:var(--soft)}
+.in{background:var(--field);border:1px solid var(--line);border-radius:8px;padding:7px 10px;font-size:14px}
+.in.pre{color:var(--text)}
+.in small{color:var(--mute);font-size:11px;margin-left:8px}
+.more{margin-top:12px;font-size:13px;color:var(--accent)}
+.btns{display:flex;gap:8px;margin-top:16px}
+.btn{padding:8px 16px;border-radius:8px;border:1px solid var(--line);font-size:14px;background:var(--card);color:var(--text)}
+.btn.pri{background:var(--accent);border-color:var(--accent);color:var(--btn);font-weight:600}
+.big{font-size:30px;font-weight:700;line-height:1.1}
+.small{font-size:13px;color:var(--soft)}
+.row{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-top:1px solid var(--line);font-size:14px}
+.row .v{color:var(--soft);text-align:right}
+.tabs{display:flex;gap:8px;margin:0 0 10px;flex-wrap:wrap}
+.tab{padding:6px 16px;border-radius:8px;border:1px solid var(--line);font-size:14px;color:var(--soft);background:var(--card)}
+.tab.on{background:var(--accentbg);color:var(--accent);border-color:var(--accent);font-weight:600}
+.rb{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px}
+@media (max-width:1050px){.rb{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (max-width:560px){.rb{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.pn{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}
+.hd{display:flex;align-items:baseline;gap:8px;margin:0 0 8px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+.no{font-size:26px;font-weight:700;line-height:1}
+.nm{font-size:14px;font-weight:600}
+.tl{font-size:14px;line-height:1.3;padding:4px 0}
+.tl span{display:block;color:var(--mute);font-family:Consolas,monospace;font-size:11px}
+.tl.lt{color:var(--mute)}
+.note{font-size:12px;color:var(--mute);margin:10px 0 0}
+.box{margin-top:12px;background:var(--note);border-radius:12px;padding:12px 14px;font-size:14px;color:var(--soft)}
+.box b{color:var(--text)}
+.pc{display:grid;grid-template-columns:90px repeat(4,minmax(0,1fr)) 150px;gap:8px;align-items:center;padding:10px 0;border-top:1px solid var(--line);font-size:14px}
+.pc.h{border-top:0;color:var(--mute);font-size:12px;padding:0 0 6px}
+.pc .n{font-weight:700}
+.pill{display:inline-block;font-size:12px;font-weight:700;padding:2px 10px;border-radius:999px}
+.g{background:var(--greenbg);color:var(--green)}
+.a{background:var(--amberbg);color:var(--amber)}
+@media (max-width:760px){.pc{grid-template-columns:repeat(2,minmax(0,1fr))}.pc.h{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Three more mock-ups for Tim's OK</h1>
+<p class="sub">Pictures only. Nothing is built from these. Drawn overnight, Sun 15 Nov 2026. Names, numbers and versions are made up.</p>
+
+<h2>1. New Job: type once</h2>
+<p class="sub">You fill this in once. The right-hand card shows everything that then reads it. A New Job window already exists today (typed CDNEWDWG); this is how it could look with "type once" as its job.</p>
+<div class="two">
+<div class="card">
+<div class="ttl">New job</div>
+<div class="f">
+<label>Job folder</label><div class="in pre">Job 0000, Example Street<small>from where you are</small></div>
+<label>Job number</label><div class="in pre">0000<small>from the job record</small></div>
+<label>Site address</label><div class="in pre">1 Example Street, Suburb<small>from the job record</small></div>
+<label>Client</label><div class="in pre">Example Client<small>from the job record</small></div>
+<label>Council</label><div class="in pre">Example City Council<small>from the suburb</small></div>
+<label>Drawing</label><div class="in">Civil &nbsp;|&nbsp; Structural &nbsp;|&nbsp; Both</div>
+<label>Sheet size</label><div class="in pre">A3<small>last time</small></div>
+<label>Drawn by</label><div class="in pre">TB<small>this PC</small></div>
+</div>
+<div class="more">More: revision, levels datum, architect's plan to attach</div>
+<div class="btns"><div class="btn pri">Create and open</div><div class="btn">Cancel</div></div>
+</div>
+<div class="card">
+<div class="small">Typed once, used in</div>
+<div class="big">7 places</div>
+<div class="row"><div>Title block on every sheet</div><div class="v">job number, address, client, drawn by</div></div>
+<div class="row"><div>Council rules</div><div class="v">council</div></div>
+<div class="row"><div>Rainfall</div><div class="v">council</div></div>
+<div class="row"><div>Calculations sheet</div><div class="v">job number, address, council</div></div>
+<div class="row"><div>Pit schedule heading</div><div class="v">job number</div></div>
+<div class="row"><div>Structural drawing, same job</div><div class="v">all of it</div></div>
+<div class="row"><div>Revision on every sheet</div><div class="v">revision</div></div>
+<div class="small" style="margin-top:10px">Grey notes show where each value came from. Anything pre-filled can be typed over.</div>
+</div>
+</div>
+
+<h2>2. CE Structural tab in your order</h2>
+<p class="sub">Your panels: Start, Roof, Upper floors, Ground, Footings, Check, Sheet. The tools are the 32 the 12 Nov sort keeps. Grey tools are not ready yet.</p>
+<div class="tabs"><div class="tab">CE Drainage</div><div class="tab on">CE Structural</div><div class="tab">CE Tools</div></div>
+<div class="rb">
+<div class="pn"><div class="hd"><div class="no">1</div><div class="nm">Start</div></div>
+<div class="tl">New job<span>same window as Civil</span></div>
+<div class="tl">Inside of building<span>BSET</span></div>
+<div class="tl">My settings<span>CESETTINGS</span></div></div>
+<div class="pn"><div class="hd"><div class="no">2</div><div class="nm">Roof</div></div>
+<div class="tl">Rafters<span>R1</span></div>
+<div class="tl">Purlins<span>P1</span></div>
+<div class="tl">Bracing truss<span>BT1</span></div></div>
+<div class="pn"><div class="hd"><div class="no">3</div><div class="nm">Upper floors</div></div>
+<div class="tl">Beam<span>1, 2, 4, 5, BDL</span></div>
+<div class="tl">Joists<span>FJ1</span></div>
+<div class="tl">Stud pack<span>DS, DS1, TS1</span></div>
+<div class="tl">Column<span>C1, C2</span></div>
+<div class="tl">Change a support<span>SDS, SDS1, STS1, SC1, SC2</span></div>
+<div class="tl">Bracing A or B<span>AB, BB, ABS</span></div></div>
+<div class="pn"><div class="hd"><div class="no">4</div><div class="nm">Ground</div></div>
+<div class="tl">Beam<span>same button</span></div>
+<div class="tl">Stud pack<span>same button</span></div>
+<div class="tl">Column<span>same button</span></div>
+<div class="tl">Change a support<span>same button</span></div>
+<div class="tl">Bracing A or B<span>same button</span></div></div>
+<div class="pn"><div class="hd"><div class="no">5</div><div class="nm">Footings</div></div>
+<div class="tl lt">Footing tools<span>not in the 32 yet</span></div>
+<div class="tl lt">Tie-downs<span>not in the 32 yet</span></div></div>
+<div class="pn"><div class="hd"><div class="no">6</div><div class="nm">Check</div></div>
+<div class="tl">Bracing: needed against provided<span>CSBRACINGPANEL</span></div>
+<div class="tl lt">Check this drawing<span>not built for Structural</span></div></div>
+<div class="pn"><div class="hd"><div class="no">7</div><div class="nm">Sheet</div></div>
+<div class="tl">Make schedules<span>STRSCHEDCREATE</span></div>
+<div class="tl">Member (replaces beam tool)<span>CEMEMBER, window to come</span></div>
+<div class="tl">Clean and save<span>CLEAN</span></div></div>
+</div>
+<div class="box"><b>One thing this picture shows up:</b> today's framing tools are the same on every floor, so Upper floors and Ground hold the same five buttons twice. Two ways to deal with it: <b>A</b> keep both panels as drawn, so the tab still reads roof down; or <b>B</b> one panel called "Floors and ground" with each button once, so the tab is shorter. Also: schedules refresh by themselves under your "keeps in step" answer, so Refresh and Sync have no button here.</div>
+
+<h2>3. Dashboard: one row per PC</h2>
+<p class="sub">Your screen in Manager, not a drafter's. Names are codes; the key to who is who stays on your PC.</p>
+<div class="card">
+<div class="small">Office PCs on the approved CE</div>
+<div class="big">4 of 5</div>
+<div style="margin-top:12px">
+<div class="pc h"><div>PC</div><div>Civil</div><div>Structural</div><div>Manager</div><div>AutoCAD</div><div>Office setup</div></div>
+<div class="pc"><div class="n">PC-01</div><div>3.1.0</div><div>1.1.0</div><div>1.2.0</div><div>2027</div><div><span class="pill g">Yes</span></div></div>
+<div class="pc"><div class="n">PC-02</div><div>3.1.0</div><div>1.1.0</div><div>1.2.0</div><div>2027</div><div><span class="pill g">Yes</span></div></div>
+<div class="pc"><div class="n">PC-03</div><div>3.0.9</div><div>1.1.0</div><div>1.2.0</div><div>2027</div><div><span class="pill a">Behind: Civil</span></div></div>
+<div class="pc"><div class="n">PC-04</div><div>3.1.0</div><div>1.1.0</div><div>1.2.0</div><div>2027</div><div><span class="pill a">No: 1 value differs</span></div></div>
+<div class="pc"><div class="n">PC-05</div><div>3.1.0</div><div>1.1.0</div><div>1.2.0</div><div>2027</div><div><span class="pill g">Yes</span></div></div>
+</div>
+<div class="btns"><div class="btn pri">Send approved CE to PC-03</div><div class="btn">Take last release back</div></div>
+</div>
+<p class="note">Colours: green = good, amber = needs you, each with a word. Blue is the one accent, on the main button and the selected tab only.</p>
+</div>
+</body>
+</html>
