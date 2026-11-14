@@ -570,7 +570,43 @@ Numbers are that file's Q numbers. That file itself is not edited by the ask cha
 
 **Queue item 10 (older-year files out of the build; rule text to match):** answered in the same sitting, recorded in `FOR_TIM_QUEUE.md` under "Answered".
 
-**Older questions answered so far (this file, 15 Nov):** Q5 to Q15, Q17 to Q33, Q35, Q36, Q46, Q48 to Q52, Q54 to Q57, Q65, Q83, and Q66 in part. **Q53 open by his choice ("I'll tell you later"): not the 17 Oct pilot.** **Held back for the evidence study (12.2):** Q16, Q73, Q80 to Q82. **Not asked yet:** Q0 to Q4, Q33 to Q35, Q37 to Q45, Q47 to Q56, Q58 to Q72, Q74 to Q79, Q83 to Q87, and the two added at the end of that file (the template one is now answered by queue item 6; the robot pressing CDLPD's "Continue in drawing" is not).
+**Q2. Which past real jobs the robot may copy and run the tools on.** (Asked in a new form because of his rule 4 answer and the evidence study. He was told: copies stay on his PC only; no client name, address or job number in any plan file.)
+
+- **Tim, Sun 15 Nov 2026 02:34 PC clock, clicked:** "Any finished council stormwater job". **This was NOT the recommended choice** (recommended was "I pick from a list by type").
+- **Choice text he saw:** "the robot may copy any completed stormwater job from the office folder without asking each time, still never writing a name or address anywhere."
+- **Not chosen:** "I pick from a list by type (Recommended)"; "The robot picks, I approve the list".
+- **What this is (mine):** a standing word. It widens the DATA-01 rule in `START_HERE.md` ("office project folders ... are read for evidence studies only, when Tim names the job") for one class of job: finished council stormwater jobs may be copied by the robot without his naming each one. DATA-01 is otherwise unchanged and its text is kept.
+- **Limits that come from his own click and the standing rules (mine to state, binding on whoever acts):**
+  1. **Copies only, on his PC, outside every repository and outside OneDrive.** The originals are never opened for editing.
+  2. **No client name, address or job number** in any plan file, log, commit, branch, folder name or screenshot name. Jobs are known by a code.
+  3. **Finished council stormwater jobs only.** Not live jobs, not other Civil work, and NOT Structural jobs: he was not asked about those. The evidence study's Structural half (12.1, "both structurally and civil") therefore has no job permission yet.
+  4. **The ask chat itself still does not open the office Projects folder**; its brief forbids it.
+- **Not decided:** the test set of "about 10, messy ones included" from the older file. His answer gives permission, not a chosen set; without his pick nobody knows which jobs were trouble.
+
+**Q1. How many Unknowns one test job may have before CE's reading of it has failed.**
+
+- **Tim, Sun 15 Nov 2026 02:34 PC clock, clicked:** "At most 10% of items". **This was NOT the recommended choice** (recommended was "No number; only ones I agree with").
+- **Choice text he saw:** "40 pipes may have up to 4 Unknown sizes; a fifth fails the job."
+- **Not chosen:** "No number; only ones I agree with (Recommended)"; "At most 5 per job".
+- **Ask chat's reading (mine):** a measurable pass line: more than 10% of items Unknown fails that job's reading. Under his settings-first rule the 10% is a number that belongs on the Settings page, not fixed in a tool. His standing "zero wrong values" ruling for the test jobs is untouched: a wrong value still fails outright; this limit is only about Unknowns.
+- **A caution I owe him (mine):** the recommended choice warned that a fixed number can be met by hiding hard items, and the reverse also holds: a truly bare hand-drawn job, where more than 10% of values are simply not on the drawing, will fail through no fault of CE. If that shows up on the first jobs it should come back to him with the count, not be worked around.
+- **Not asked:** what "items" counts (pits, pipes, or each value on them). The example counted pipes.
+
+**Q47. Anything missing from the safety list.**
+
+- **Tim, Sun 15 Nov 2026 02:34 PC clock, clicked:** "Nothing to add (Recommended)".
+- **What he was shown as "on it now":** two jobs mixed up, CLEAN saving over a template, floor waste Cancel clearing inverts, plastic pits left off the schedule silently, the Excel export.
+- **Honest limit (mine):** those five were my summary from the files I had read (the day draft and older Q39 and Q46). I did not read the safety list in card TRUST-04 itself, so I cannot say my five are the whole list. His click means: of what he was shown, nothing is missing from his side. It is not his sign-off of the full TRUST-04 list.
+
+**Q66, remaining part. Does the trust gate replace the 17 Oct "switch on once Codex passes" ruling?**
+
+- **Tim, Sun 15 Nov 2026 02:34 PC clock, clicked:** "Yes, the trust gate decides (Recommended)".
+- **Choice text he saw:** "a tool comes on only when all five trust rules are ticked for it; a single Codex pass on its own is no longer enough to switch it on."
+- **Not chosen:** "Keep the Codex switch-on" (on his own PC a tool still comes on when Codex passes it).
+- **Supersedes, kept on record:** the 17 Oct 2026 ruling (RULINGS B) that a tool switches ON by default once Codex passes it in AutoCAD, from 15 Nov 2026 02:34. Applies to his own PC as well, since he passed over the choice that kept it there.
+- **Still not asked from Q66:** whether Rule 15 (AutoCAD never idle when he is away) stays. It stays in force until he says otherwise.
+
+**Older questions answered so far (this file, 15 Nov):** Q1, Q2 (permission, not the chosen set), Q5 to Q15, Q17 to Q33, Q35, Q36, Q46 to Q52, Q54 to Q57, Q65, Q66 (all but Rule 15), Q83. **Q53 open by his choice ("I'll tell you later"): not the 17 Oct pilot.** **Held back for the evidence study (12.2):** Q16, Q73, Q80 to Q82. **Not asked yet:** Q0 to Q4, Q33 to Q35, Q37 to Q45, Q47 to Q56, Q58 to Q72, Q74 to Q79, Q83 to Q87, and the two added at the end of that file (the template one is now answered by queue item 6; the robot pressing CDLPD's "Continue in drawing" is not).
 
 ---
 
