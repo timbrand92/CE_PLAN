@@ -1001,3 +1001,15 @@ Before these he was shown, in the chat: the problem in numbers (145 Civil comman
 2a. **Reading values from the Pit Schedule (his idea, 02:02; pinned down 02:04 in section 11):** left over: a blank invert with both a schedule value and a pipe to work it out from.
 3. **Sheet:** a schedule he has edited by hand.
 4. **Then the older questions** in `areas\TRUST_QUESTIONS_FOR_TIM.md`, merged and most useful first.
+
+## 14. Morning sitting, Sun 15 Nov 2026 (from 09:40 PC clock)
+
+### 14.1 Tim's words on waking, 09:40
+
+Typed in the ask chat, exactly:
+
+> "yes lets do the full pixture stuff at some point please, you will need to interview the heck out of me and then you need to guide me through how i need to teach you. i woke up what do i need to look at and hows peogress"
+
+1. **What this says (his words):** yes to the whole-job, whole-product interview, "at some point"; he expects a long interview; he wants to be guided in how to teach the ask chat.
+2. **My reading, not his words:** "at some point" is not "now". The time is his to pick; asked at 14.2.
+3. **My proposed way for him to teach, not yet agreed by him:** three short sittings rather than one long one. (a) Tell: he talks or types through one real Civil job, then one Structural job, against the seven prompts in `ASK_TIM_NEXT_SITTING.md` part 3, with no choices put in his mouth. (b) Show: he points at one finished sheet and says what each part is for and who reads it (which needs his word on queue item 14 first, or a sheet he picks himself). (c) Correct: I write back what I understood as one page and one picture, and he marks what is wrong. Nothing from it becomes a decision until he says so.
