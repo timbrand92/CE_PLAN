@@ -80,11 +80,16 @@ Queue answers (the controller's numbered items) are in `FOR_TIM_QUEUE.md`, not h
 - **Not chosen:** "List them, plot carries on (Recommended)"; "Only stop for serious ones".
 - **Ask chat's reading (mine):** at plot time he wants to be stopped long enough to choose, for every open warning, not only serious ones. This is not a hard block under his no-hard-blocks rule, because "Plot anyway" is always there. It is a new small window, so his screen rule applies: a mock-up and his OK before anything is built. NOT asked: whether the same list shows when the Pit Schedule is placed.
 
-**5.3 Do you also want a quiet status line that is always there? OPEN, NOT A DECISION.**
+**5.3 Do you also want a quiet status line that is always there? ANSWERED 02:02, see the second entry below. (First asked 01:59: open.)**
 
 - **Tim, Sun 15 Nov 2026 01:59 PC clock, typed instead of clicking a choice:** "think about this more".
 - **Choices he was shown and did not pick:** "Yes, quiet, never pops up (Recommended)" (one line always reading '14 pits, 13 pipes, 2 Unknown, 1 warning'); "No, only at schedule and plot"; "Only when something is Unknown".
-- **Ask chat's reading (mine):** not an answer. Either he wants time to think, or he wants the idea thought through better before he is asked again. Either way the next step is mine: bring it back with a picture of where the line would sit and what it would say on a clean drawing and on one with problems, then ask again. Until then nobody may treat the status line as wanted or as unwanted by Tim.
+- **Ask chat's reading (mine):** not an answer. Either he wants time to think, or he wants the idea thought through better before he is asked again. Either way the next step is mine: bring it back with a picture of where the line would sit and what it would say on a clean drawing and on one with problems, then ask again. Until then nobody may treat the status line as wanted or as unwanted by Tim. *(Superseded Sun 15 Nov 2026 02:02 by his answer below.)*
+- **Asked again with a picture. Tim, Sun 15 Nov 2026 02:02 PC clock, clicked:** "Yes, as pictured (Recommended)".
+- **The picture he saw:** clean drawing: "CE  14 pits  13 pipes   OK". Drawing that needs him: "CE  14 pits  13 pipes   2 Unknown   1 warning   Schedule updated 10:42", amber word plus number, click it to see the list. He was told: it only reads the drawing, never pops up, never changes anything, sits in one fixed place.
+- **Choice text he saw:** "on a clean job it reads 'CE 14 pits 13 pipes OK' and you never think about it; with a missing pipe size it shows '1 Unknown' in amber until you fix it. A proper mock-up comes before any build."
+- **Not chosen:** "Only when something needs me"; "No line"; "Ask me later".
+- **Ask chat's reading (mine):** he wants the always-there line, shown on clean drawings too. Where on the screen it sits was not asked. It is a screen element: a proper mock-up and his OK before any build.
 
 ## 6. Getting it on the sheet
 
@@ -144,9 +149,38 @@ Queue answers (the controller's numbered items) are in `FOR_TIM_QUEUE.md`, not h
 
 ---
 
+## 11. Older questions from `areas\TRUST_QUESTIONS_FOR_TIM.md`
+
+Numbers are that file's Q numbers. That file itself is not edited by the ask chat; answers live here.
+
+**Q9. A pipe with no size or material** (today: 100 and UPVC filled in; CDPROPAGATE assumes 225).
+
+- **Tim, Sun 15 Nov 2026 02:02 PC clock, clicked:** "Unknown everywhere (Recommended)".
+- **Choice text he saw:** "a line on the pipe layer with no text reads 'size Unknown'; Edit Pipe opens with the boxes blank; CDPROPAGATE stops at it and asks for the size instead of assuming 225."
+- **Not chosen:** "Keep 100 UPVC, marked assumed"; "Keep today's fill-ins".
+- **Added by Tim in the same sitting (his words, typed under Q12):** "same as last question and apply to first as well". Ask chat's reading (mine): "first" is this question, so his schedule idea under Q10 below applies to pipe size and material too. Engineering judgement, his own word.
+
+**Q10. A pit CE did not place, with no lid class or pit type** (today: "Class C" and "grated pit" from the settings of whoever opens the drawing). **NOT YET A DECISION.**
+
+- **Tim, Sun 15 Nov 2026 02:02 PC clock, typed instead of clicking a choice:** "can you get this information from schedule its always formatted the same way?"
+- **Choices he was shown and did not pick:** "Unknown (Recommended)"; "Keep Class C, grated pit".
+- **Ask chat's reading (mine):** a question back, carrying an idea: where the drawing has a Pit Schedule, CE should read the lid class and pit type from it, because the office schedule always has the same layout. He did not say what happens when there is no schedule.
+- **Honest state, told to Tim:** not known whether CE can read a drawn Pit Schedule today. `areas\trust-run\trust-reader.md` does not mention reading one; the code was not checked by the ask chat. One caution, mine: a schedule CE itself placed earlier may carry CE's own fill-ins (100 UPVC, Class C), so reading it back could turn an old guess into a "known" value. Older Q3 raised the same caution for the test answer sheets.
+
+**Q12. A pit with a blank invert** (today: silently takes the lowest connected pipe invert). **NOT YET A DECISION.**
+
+- **Tim, Sun 15 Nov 2026 02:02 PC clock, typed instead of clicking a choice:** "same as last question and apply to first as well".
+- **Choices he was shown and did not pick:** "Keep it, marked worked out (Recommended)"; "Unknown until I confirm".
+- **Ask chat's reading (mine):** read the invert from the Pit Schedule too. What happens with no schedule (keep "worked out from the pipes", or Unknown) is not answered.
+
+**Q11** (pit with no number; pipe with no proven flow direction): not asked yet.
+
+---
+
 ## Still to ask in the interview (not decisions)
 
 1. **Starting a job:** what else belongs in the New Job window; whether New Job attaches the architect's xref.
-2. **Checking:** the always-there status line (5.3, he said "think about this more": bring a picture, then ask again); whether the plot-time list also shows when the Pit Schedule is placed.
+2. **Checking:** where the status line sits on the screen (mock-up owed); whether the plot-time list also shows when the Pit Schedule is placed.
+2a. **Reading values from the Pit Schedule (his idea, 02:02):** how a schedule value is treated, what happens with no schedule, and what wins when schedule and plan label disagree.
 3. **Sheet:** a schedule he has edited by hand.
 4. **Then the older questions** in `areas\TRUST_QUESTIONS_FOR_TIM.md`, merged and most useful first.
