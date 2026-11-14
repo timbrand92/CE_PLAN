@@ -127,3 +127,23 @@ Chat: CE_ACAD / trust plan / fix / 01 safety fixes. Card TRUST-04. Civil cut fro
   - **Install:** `install_batch14c.ps1`; put back `restore_batch14c.ps1` (both NOT RUN). Runbook: `INSTALL_BATCH_14NOV.md`, section BATCH 3. The controller installs.
 
   **(3) The 2064 switch: three lines sent to the controller.** No code.
+- 2026-11-15 01:35 **Batch 3 WIDENED, PREPARED, NOT INSTALLED** (controller's order after Tim's "why cant we make the fixes then test?"). Civil 3.0.90.5 = installed 3.0.90.4 plus these, each read-only GO on its final head:
+  - **Mix-up layers:** 2100 (4a4d7c33), carrying 2089 (7707d158) and 2090 (2e604481).
+  - **2064 with the CDEDIT hold** (1635af0a, switch OFF), carrying 2041, 2045, 2049 and 2050.
+  - **Step 0 reader:** 2040 (ebf7a21a).
+  - **Pit Schedule:** 2039 (fdf93a25) and 2107 (9f8a73e4).
+  - **2092 test fix:** 47b1f45e (the keyword guard now exercises the split letters A to Z; pushed).
+
+  How it was built:
+  - **Build commit:** `b0184cea` (detached, never pushed).
+  - **One code conflict:** Pit Schedule, 2039 with 2049. Resolved as both; reviewed GO.
+  - **One line not on any draft:** `PrepareRecordForReadOnlyTool` on the change-door accepted list, with its pinned count 8 to 9. Reviewed GO; it is for 2045's owner to confirm at merge.
+  - **Whole Civil test run:** 22,691 passed, 0 failed, 32 skipped.
+
+  The payload:
+  - **Where:** `C:\ce_rc_scratch\b14civ3`, 832 files, 11 differ from 3.0.90.4. Modern DLL `6B3ED775...`, manifest `2E552145...`.
+  - **Scripts:** `install_batch14c.ps1` and `restore_batch14c.ps1` (NOT RUN).
+  - **Runbook:** `INSTALL_BATCH_14NOV.md`, section BATCH 3, WIDENED. It includes the switch-on steps through `CE_LOG_DIR_OVERRIDE` (Tim's files untouched) and the robot list per item.
+  - **On by default in this stack:** the opening line, read-only tools not updating the record, the record-change line, and reaches that follow the drawing's units.
+
+  Left out, and why: 2078, 2038, and steps 2, 7 and 8 (not on the list, or the ribbon and settings rule). Nothing on the list was dropped.

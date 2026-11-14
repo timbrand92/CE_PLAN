@@ -120,7 +120,7 @@ On Tim's standing approval of about 23:25 ("yes you have my approval to do it wh
 4. **Backup kept:** `CE_CVL_SUITE_PRE_11c0093c_20261114-234011.backup` in ApplicationPlugins. Put-back: `restore_batch14b.ps1` (not rehearsed).
 5. **Not yet done:** nothing has run in AutoCAD on 3.0.90.4. Robot list is item 7 above. Not accepted.
 
-## BATCH 3 (PREPARED, NOT INSTALLED): Civil 3.0.90.5 = installed 3.0.90.4 + the two Pit Schedule fixes
+## BATCH 3, NARROW (SUPERSEDED 15 Nov 01:30 by BATCH 3, WIDENED below; payload deleted, never installed): Civil 3.0.90.5 = installed 3.0.90.4 + the two Pit Schedule fixes
 
 Written Sun 15 Nov 2026 00:45 by lane trust-safety-fixes, on the controller's order ("Prepare batch 3 = installed 3.0.90.4 plus the PITSCHEDULE fixes (not 2064), same method as batch 2 ... I install"). **The controller installs** (Tim's standing trial approval, 14 Nov 23:25), outside his hours, AutoCAD closed.
 
@@ -161,3 +161,108 @@ Written Sun 15 Nov 2026 00:45 by lane trust-safety-fixes, on the controller's or
    - It then checks every Civil file against `b14civ2_manifest.txt` (832), the three lane versions, CE_SHARED against Manager, and the settings files.
    - **Further back:** to 3.0.90.3, `restore_batch14b.ps1`; to the 13 Nov state, `restore_batch14.ps1`.
 8. **Stop rules:** as section 5 above. If a Pit Schedule pass fails, batch 3 is put back with `restore_batch14c.ps1`; batch 2 stays.
+
+## BATCH 3, WIDENED (PREPARED, NOT INSTALLED): Civil 3.0.90.5 = installed 3.0.90.4 + the mix-up layers + the Pit Schedule fixes + 2064 with the CDEDIT hold + the step 0, 1 and 5 drafts
+
+Written Sun 15 Nov 2026 by lane trust-safety-fixes, on the controller's order after Tim's "why cant we make the fixes then test?" (15 Nov 00:2x). **This replaces the narrower BATCH 3 section above**: same version number, same payload folder, same install and put-back scripts. The narrow payload was deleted, never installed. **The controller installs** (Tim's standing trial approval), outside his hours, AutoCAD closed.
+
+### 1. What is in it (each at a final head with a read-only GO on that head)
+
+1. **Mix-up layers (BUG-1456), Civil, no switch:**
+   - **2089 at `7707d158`** (fourth door: a refused copy of another drawing's record is never written; the batch edit is refused before it starts when the record is another drawing's).
+   - **2090 at `2e604481`** (a refusal is also said on the command line, paced, never throws).
+   - **2100 at `4a4d7c33`** (the guard on routines outside the record service: CDJOINT and the slab list go through the same check).
+   - **Review:** read-only re-review 15 Nov. 2089 GO (both FIX FIRST items closed), 2090 GO kept, 2100 GO (all four items closed). The optional item left: CDJOINT and CDSLABEREGEN still print "complete" after a refusal line.
+   - **Brought in with them:** 2100 contains 2089 and 2090; 2083 is already installed.
+2. **Pit Schedule:** **2039 at `fdf93a25`** (BUG-1274 left-out line; GO, the last change was notes only) and **2107 at `9f8a73e4`** (BUG-1342 Export CSV; GO).
+3. **2064 at `1635af0a`** (a cancelled command writes nothing, with the CDEDIT hold). **Its switch ships OFF**; how the robot turns it on is section 4. GO (second look) on the CDEDIT hold.
+   - **It brings in the drafts it is stacked on, each GO on its current head:**
+     - **2041 at `31f426ab`:** step 1, the opening line.
+     - **2045 at `d0cf644c`:** step 5, record changes made visible.
+     - **2049 at `98d81717`:** step 6, Unknown instead of made-up values.
+     - **2050 at `03af5393`:** the headless proof checks, test tooling only.
+4. **Step 0, the read-only reader: 2040 at `ebf7a21a`** (GO; command CETRUSTREAD, its switch `diag.trustReaderCommand` ships OFF). The one small fix still owed (an LPD-only copy reads "format not stated") is not in it.
+5. **Also in, test only:** **2092 at `47b1f45e`.** The whole Civil test run found that the keyword guard could not read CDRUNSOLVE's split letters (from batch 1). The guard now exercises A to Z. No change to what CE does.
+
+### 2. What is NOT in it, and why
+
+1. **2078** (BUG-1456 opening line for another drawing's data, GO): not on the controller's list. It also carries 2041.
+2. **2038** (ribbon) and the settings-for-everyone drafts: left out by the controller's rule (they change what Tim sees every day).
+3. **2058, 2051 and the other steps 2, 7 and 8 drafts:** not on the list.
+4. **Nothing on the list was dropped.** Every item merged and built, and the whole Civil test run passes (section 3).
+
+### 3. How it was put together
+
+1. **Build stack** (local, detached, never pushed), on `dadac7e7` (installed 3.0.90.4): merges of 2100, 2064, 2040, 2107, 2039 and 2092, then one line in the change-door guard list and its pinned count (8 to 9), then "Version: Civil 3.0.90.5". **Build commit `b0184cea`**, staging worktree `C:\CE_WORK\build\wtB14c`, kept until the install.
+2. **Conflicts:** only in test tooling or the change log (both sides kept), except one code conflict.
+   - **The one code conflict:** `PitScheduleViewModel.Data.cs`, between 2039 and 2049, resolved as both: BUG-1274's one rule (the installed three checks, same answer for every pit) AND TRUST-06's "known enough" check, which is always true with its switch off.
+   - **Review:** reviewed read-only, GO. With the switch on, a pit kept off for being Unknown is not named by the left-out line (CDCHECKCURRENT lists it). That is acceptable for now.
+3. **The one added line (not on any draft):** `RecordOwnerRule.AskForASaveWithoutTheChangeCheck` now names `PrepareRecordForReadOnlyTool`.
+   - **Why:** 2045 gathered the read-only tools' old update calls into one routine before the BUG-1456 change door existed, so the door's guard test flagged it. Every route through it attaches CE's record to this drawing first, or binds it without writing.
+   - **The count:** the guard test pins the list's length ("a new name here is a decision, not a convenience"), so its count goes from 8 to 9 with a comment. Every name still needs a reason and must be a real routine.
+   - **Review:** read-only, GO. Both branches bind the record to this drawing before anything is written. A refusal placed first would have broken the read-only tools in a second drawing.
+   - **For later:** whoever merges 2045 after the change door needs this line and the count; it is theirs to confirm.
+4. **Whole Civil test run on the merged code** (`Drainage.Tests`, Release, net10): **22,691 passed, 0 failed, 32 skipped** (7 min 27 s).
+   - **First run of the stack:** 6 failed. Five were the change-door guard (fixed by the line above). One was the keyword guard (fixed on 2092). The second run then failed only the pinned count, which the third run fixed.
+5. **Settings that are ON by default in this stack (Tim will see these):**
+   - `trust.sayDrawingStateOnOpen`: one line when a Civil drawing opens ("CE: N pits, N pipes, all linked." or "needs checking").
+   - `trust.readOnlyToolsNeverUpdateRecord`: CDGRAPH, CDDIAG and CDDASHBOARD no longer update CE's record.
+   - `trust.sayWhatRecordUpdateChanged`: one line whenever CE's record update really changes something.
+   - `trust.reachesFollowDrawingUnits`: reaches follow the drawing's units. A millimetre job is unchanged; a metre drawing changes.
+   - **OFF by default:** `trust.showUnknownInsteadOfGuess`, `trust.cancelledCommandWritesNothing` and `diag.trustReaderCommand`.
+
+### 4. Turning a switch on for ONE scratch session, without touching Tim's settings files
+
+CE reads its Civil settings from `%APPDATA%\TIM_CE_CADTOOLS\CD_Settings.json`, unless the variable `CE_LOG_DIR_OVERRIDE` is set for the AutoCAD process. Then it reads `<that folder>\settings\CD_Settings.json` and writes its logs under that folder. This is the same redirect the test project uses (`SettingsService.ResolveSettingsFolder`, `LogFolderRedirect`).
+
+1. **Make the scratch folder:** for example `C:\CE_WORK\robot\b14c_switch\settings\`. Copy Tim's `CD_Settings.json` into it (a read of his file, never a write).
+2. **Edit the COPY only:** in its `"trust"` group set `"cancelledCommandWritesNothing": true` (and for CETRUSTREAD, in `"diag"` set `"trustReaderCommand": true`). Hash Tim's real file before and after; it must not change.
+3. **Start that AutoCAD with the variable:**
+   - **The catch:** an Explorer hand-off does NOT pass a variable set in the robot's own shell.
+   - **What works:** use a small `.cmd` in the scratch folder that does `set CE_LOG_DIR_OVERRIDE=C:\CE_WORK\robot\b14c_switch` and then starts `acad.exe` on the scratch copy, and hand that `.cmd` to Explorer.
+   - **Check it took:** the CE log for that session appears under `C:\CE_WORK\robot\b14c_switch\` and says "Settings initialized from: C:\CE_WORK\robot\b14c_switch\settings\CD_Settings.json".
+   - **If the log is still in the usual place:** the switch is NOT on; stop.
+4. **Off again:** close that AutoCAD. The next AutoCAD started the normal way (no variable) reads Tim's own file, where the switch is off. Nothing to undo in his files; the scratch folder can be kept for the next run.
+5. **Never:** edit `%APPDATA%\TIM_CE_CADTOOLS\CD_Settings.json`, or set the variable for the whole Windows session.
+
+### 5. Payload
+
+1. **Payload:** `C:\ce_rc_scratch\b14civ3\CE_CVL_SUITE.bundle`, 832 files.
+   - **The build:** `build_installer.ps1` exit 0; Legacy, Net8 and Modern lanes verified; shared config verified (9 files). Every dotnet call passes `-p:SkipDevBundle=true`; nothing under ApplicationPlugins was written.
+   - **Staging-only fixes:** toolset override and the installed transform module.
+2. **DLL `3.0.90.5+b0184cea76f6bcfcf2542eea003286983c790a9e` SHA-256:**
+   - Legacy `AA74DC2A91B4611134917174AFFE45B18934A737CF99027E0DE1244959A74938`
+   - Net8 `083B11948B318233145A29A6304FA3C839D21ACDE2C70EB61A049603E7CA8DE6`
+   - Modern `6B3ED7751B13C99207BCB653651F62874591A1AFC57FC91B21D9D86767542DAE`
+3. **Manifest** `C:\CE_WORK\scratch\trust_install\b14civ3_manifest.txt`, 832 rows, SHA-256 `2E5521456F983D9B516951A22807C2DF925418AB3954A144A1DCEEC7FDDA9C27`.
+4. **Stamp check:** CE_SHARED and CE.AI.Core x3 have 0 bytes different outside the stamp zones; the installed bytes were put in; CE_SHARED is identical to Manager x3. The three natives are the installed bytes.
+5. **Against the installed 3.0.90.4 payload (`b14civ2`): 11 files differ** (CE_CVL_SUITE.dll and .pdb x3; PackageContents.xml; command-registry.json x4, which adds the typed command CETRUSTREAD), 0 added, 0 removed.
+6. **Product files changed against 3.0.90.4:** listed in `C:\CE_WORK\scratch\trust_install\b14civ3_files_changed.txt` (all in `Modules/Drainage`, plus the version lines). No native, shared, Manager or Structural file.
+
+### 6. Install and put back
+
+1. **Install:** `C:\CE_WORK\scratch\trust_install\install_batch14c.ps1`, unchanged from the narrow section. It refuses unless live Civil reads `3.0.90.4+dadac7e7`, keeps `CE_CVL_SUITE_PRE_dadac7e7_<time>.backup`, reads every file back, checks 3.0.90.5 in all three lanes and CE_SHARED against Manager, and checks the settings are unchanged. NOT RUN; it parses clean.
+2. **Put back:** `restore_batch14c.ps1`, back to 3.0.90.4, checked against `b14civ2_manifest.txt`. NOT RUN; it parses clean. Further back: `restore_batch14b.ps1` (3.0.90.3), `restore_batch14.ps1` (13 Nov state).
+
+### 7. Robot list per item (scratch copies only; the controller orders the runs)
+
+1. **First start:** "CE_CVL_SUITE v3.0.90.5 Started"; the opening line on a Civil copy (`PENDING_TESTS.md`, step 1 section, cases 1 to 4); no line on a Structural or blank drawing.
+2. **Mix-up layers:**
+   - The BUG-1456 smoke list (20 sequences) as for batch 1.
+   - `PENDING_TESTS.md` "BUG-1456 fourth door" cases 2 to 6 and "change door" cases 2 to 4, 9, 10, 12. Row 11 only as rewritten 14 Nov.
+   - The refusal line must NEVER appear in ordinary one-drawing work.
+3. **Pit Schedule:** the everyday case (three unnumbered plastic pits, line says none has a number, no internal code), and the numbered P3 to P5 case. Export CSV with the file open in Excel or read-only is for Codex (Export is on the robot's never-press list).
+4. **Step 5 (on by default):** `PENDING_TESTS.md` step 5 cases 1 to 4. CDGRAPH and CDDIAG leave the stored record identical; Edit Pit on a copy with one stray polyline says one "CE updated its record (...)" line.
+5. **Step 6 (Unknown switch off):** a millimetre job behaves as on 3.0.90.4. The metre-drawing reach change is for a Codex look.
+6. **2064, switch OFF (as shipped):** PIT, CD and CDEDIT each with Esc behave as on 3.0.90.4.
+7. **2064, switch ON (section 4, one scratch session):**
+   - **Cancel:** a plain polyline on the pipe layer, CDEDIT on a pit, Cancel. CE's stored record is byte-identical before and after, and the drawing is not marked changed (DBMOD 0).
+   - **Save:** the same with Save. The pit edit and the new pipe are both in the record, and one U takes both back.
+   - **Esc and switch-on cases:** PIT and CD with Esc as in `PENDING_TESTS.md` "queue item 7" section.
+   - **Then:** close and restart without the variable.
+8. **Step 0 reader (switch ON in the scratch session):** CETRUSTREAD on the six EVIDENCE_READER copies (`PENDING_TESTS.md` step 0 section, cases 1 and 2); the drawing is never marked changed.
+9. **CDRUNSOLVE design flows:** once, as a regression check.
+
+### 8. Stop rules
+
+As section 5 at the top. If any pass fails, batch 3 is put back with `restore_batch14c.ps1`; batch 2 (3.0.90.4) stays. If one item alone fails, the controller decides whether to rebuild without it. I can rebuild the stack without any one draft in about 30 minutes.
