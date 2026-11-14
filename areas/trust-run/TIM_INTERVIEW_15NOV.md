@@ -523,7 +523,37 @@ Numbers are that file's Q numbers. That file itself is not edited by the ask cha
 - **Choice text he saw:** "'1 text on locked layer TITLE left as it was. Saved.' CE never unlocks a layer, and one locked title block does not stop the clean-up."
 - **Not chosen:** "Stop CLEAN and say why".
 
-**Older questions answered so far (this file, 15 Nov):** Q5 to Q15, Q17 to Q33, Q36, Q46, Q48 to Q52, Q54 to Q57. **Q53 open by his choice ("I'll tell you later"): not the 17 Oct pilot.** **Held back for the evidence study (12.2):** Q16, Q73, Q80 to Q82. **Not asked yet:** Q0 to Q4, Q33 to Q35, Q37 to Q45, Q47 to Q56, Q58 to Q72, Q74 to Q79, Q83 to Q87, and the two added at the end of that file (the template one is now answered by queue item 6; the robot pressing CDLPD's "Continue in drawing" is not).
+**Q83. Esc and Enter at a tool's question.**
+
+- **Tim, Sun 15 Nov 2026 02:30 PC clock, clicked:** "Esc cancels, Enter skips (Recommended)".
+- **Choice text he saw:** "pressing Esc at the tank's detention question ends the tank command with nothing drawn, like Esc everywhere else in AutoCAD. Enter still skips that one question and carries on (your 14 Sep ruling)."
+- **Not chosen:** "Esc skips, as today".
+- **Ask chat's note (mine):** Q22 stands beside this as his one stated exception: Esc at the LPD question lets the tool carry on with a warning.
+
+**Q35. Plastic pits left off the schedule: how loud the note is.**
+
+- **Tim, Sun 15 Nov 2026 02:30 PC clock, clicked:** "Numbered loud, unnumbered quiet (Recommended)".
+- **Choice text he saw:** "'6 numbered pits are not scheduled: P3 to P8' in amber; '4 unnumbered plastic pits' as a plain grey count. A loud line that shows on every job gets ignored."
+- **Not chosen:** "All in the attention colour" (he was told: "This is how the current draft is built").
+- **Ask chat's note (mine):** this bears on queue item 4 (the Pit Schedule's new top line, "3 plastic pits are not in this schedule: none of them has a number…"): by this answer a line about UNNUMBERED plastic pits should be the quiet count, not the attention colour. The wording of the line is still his to see with the screenshot. The older file's third part (pits marked To be removed are not counted as left out) was not put to him.
+
+**Q65. The five trust rules as the gate. ASKED WRONGLY BY THE ASK CHAT; HIS CLICK IS NOT A VALID ANSWER TO Q65.**
+
+- **Tim, Sun 15 Nov 2026 02:30 PC clock, clicked:** "Yes; exceptions signed by me (Recommended)".
+- **What he was shown:** "a tool counts as proven only when it passes all five trust rules (right drawing, protections respected, one U, nothing on Cancel, says what changed)".
+- **The mistake (mine):** that bracket is NOT the five trust rules. It is the "one door for every change" list from `areas\TRUST_ONE_DRAFTER_CIVIL_DAY_14NOV.md` section 4 item 6. The five trust rules, as written in `areas\TRUST_RULES_CHECKLIST_12NOV.md`, are: 1. nothing changes a drawing without showing you first; 2. everyone runs the same thing; 3. guesses are never shown as facts; 4. you have used it on real drawings; 5. the tool has its note. I checked the file only after he had clicked.
+- **What his click does show:** he agrees that the five "one door" points are a gate for a tool, with exceptions signed by him by name. That much is his.
+- **State of Q65 itself:** NOT ANSWERED. Asked again with the right five.
+
+**Q66, the percentages part only. What a status message leads with.**
+
+- **Tim, Sun 15 Nov 2026 02:30 PC clock, clicked:** "Three plain counts (Recommended)".
+- **Choice text he saw:** "'Ribbon tools accepted: 12 of 47. Days since lost work or a crash: 9. Open problems: 0.' A percentage hid how little was proven."
+- **Not chosen:** "Keep the percentages" (shown to him as what he asked for on 29 Sep and 20 Oct); "Both".
+- **Supersedes, kept on record:** his 29 Sep and 20 Oct 2026 requests for percentages in every message, from 15 Nov 2026 02:30.
+- **Ask chat's notes (mine):** the first count follows 8.3 (ribbon tools, not "tools in the core" as the older file worded it); "47" is the example figure with the same caution as in 8.3. The other two parts of the older Q66 (keep Rule 15, AutoCAD never idle; replace the 17 Oct "switch on once Codex passes" ruling with the trust gate) were NOT asked.
+
+**Older questions answered so far (this file, 15 Nov):** Q5 to Q15, Q17 to Q33, Q35, Q36, Q46, Q48 to Q52, Q54 to Q57, Q83, and Q66 in part. **Q65 asked wrongly, to be asked again.** **Q53 open by his choice ("I'll tell you later"): not the 17 Oct pilot.** **Held back for the evidence study (12.2):** Q16, Q73, Q80 to Q82. **Not asked yet:** Q0 to Q4, Q33 to Q35, Q37 to Q45, Q47 to Q56, Q58 to Q72, Q74 to Q79, Q83 to Q87, and the two added at the end of that file (the template one is now answered by queue item 6; the robot pressing CDLPD's "Continue in drawing" is not).
 
 ---
 
