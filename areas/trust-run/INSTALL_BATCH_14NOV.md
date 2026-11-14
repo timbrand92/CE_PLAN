@@ -120,7 +120,9 @@ On Tim's standing approval of about 23:25 ("yes you have my approval to do it wh
 4. **Backup kept:** `CE_CVL_SUITE_PRE_11c0093c_20261114-234011.backup` in ApplicationPlugins. Put-back: `restore_batch14b.ps1` (not rehearsed).
 5. **Not yet done:** nothing has run in AutoCAD on 3.0.90.4. Robot list is item 7 above. Not accepted.
 
-## BATCH 3, NARROW (SUPERSEDED 15 Nov 01:30 by BATCH 3, WIDENED below; payload deleted, never installed): Civil 3.0.90.5 = installed 3.0.90.4 + the two Pit Schedule fixes
+## BATCH 3 (PREPARED, NOT INSTALLED; THIS IS BATCH 3): Civil 3.0.90.5 = installed 3.0.90.4 + the two Pit Schedule fixes
+
+**Correction, 15 Nov 01:45:** this payload was overwritten at 01:20 by the widened build below, which wrongly reused this folder and version number. It was rebuilt from the same build commit `3c620efe` at 01:37, and it matches every figure in this section exactly: manifest SHA-256 `8C64207B...` and DLLs Legacy `971313BA...`, Net8 `B665804C...`, Modern `0921DE7F...` (stamp check 0 bytes outside the stamp zones; 7 files differ from 3.0.90.4). The controller's earlier read of `b0184cea` in this folder was the widened build.
 
 Written Sun 15 Nov 2026 00:45 by lane trust-safety-fixes, on the controller's order ("Prepare batch 3 = installed 3.0.90.4 plus the PITSCHEDULE fixes (not 2064), same method as batch 2 ... I install"). **The controller installs** (Tim's standing trial approval, 14 Nov 23:25), outside his hours, AutoCAD closed.
 
@@ -162,7 +164,7 @@ Written Sun 15 Nov 2026 00:45 by lane trust-safety-fixes, on the controller's or
    - **Further back:** to 3.0.90.3, `restore_batch14b.ps1`; to the 13 Nov state, `restore_batch14.ps1`.
 8. **Stop rules:** as section 5 above. If a Pit Schedule pass fails, batch 3 is put back with `restore_batch14c.ps1`; batch 2 stays.
 
-## BATCH 3, WIDENED (PREPARED, NOT INSTALLED): Civil 3.0.90.5 = installed 3.0.90.4 + the mix-up layers + the Pit Schedule fixes + 2064 with the CDEDIT hold + the step 0, 1 and 5 drafts
+## WITHDRAWN 15 Nov 01:45, NEVER INSTALLED (became batch 4, rebuilt separately as 3.0.90.6 in b14civ4): the 'widened batch 3' build `b0184cea`. Its payload is moved to `C:\ce_rc_scratch14civ3_widened_WITHDRAWN` and its manifest to `b14civ3w_WITHDRAWN_manifest.txt`. Do NOT install anything from this section. The original heading was: Civil 3.0.90.5 = installed 3.0.90.4 + the mix-up layers + the Pit Schedule fixes + 2064 with the CDEDIT hold + the step 0, 1 and 5 drafts
 
 Written Sun 15 Nov 2026 by lane trust-safety-fixes, on the controller's order after Tim's "why cant we make the fixes then test?" (15 Nov 00:2x). **This replaces the narrower BATCH 3 section above**: same version number, same payload folder, same install and put-back scripts. The narrow payload was deleted, never installed. **The controller installs** (Tim's standing trial approval), outside his hours, AutoCAD closed.
 
