@@ -56,6 +56,12 @@
    - **Fine** (in use). Example: the robot can now edit a pit on a test copy, save, and check one Undo puts it back.
    - **No, take it back.** Example: those steps go back to Codex only, which is slower and has failed twice on the Design flow box.
 
+17. **Your Outlook archive has downloaded itself onto C: again (18.93 GB). Free it up?** Read by the controller at 04:41 Sun 15 Nov: the whole file is on disk (last changed 12:17am), and C: fell from 36.4 GB free at 11:18pm to about 26 GB. It is not the batch builds (about 1 GB). On 1 Nov you said "free up pst" and that gave the space back in minutes. The controller's notes say to ask you before touching that file each time, so it has NOT been touched. C: is still well above the 8 GB floor, so nothing is at risk tonight.
+   - **Yes, free it up** (recommended). Example: the archive goes back to being online-only; about 19 GB returns; Outlook downloads it again only if something opens it.
+   - **Yes, and always: free it whenever it comes back, without asking.** Example: the controller does this at any check where C: has dropped and the file is fully on disk.
+   - **Leave it.** Example: C: stays near 26 GB free.
+   - Also for your information: Codex's own history file is 15.9 GB. Not touched; yours to decide whether it is ever trimmed.
+
 ## Older, still open (asked before 15 Nov, defaults in use)
 
 8. **Ribbon in job order** (Start, Sources, Network, Levels, Check, Sheet). Default: not built into any batch until you have seen a mock-up.
