@@ -147,3 +147,8 @@ Chat: CE_ACAD / trust plan / fix / 01 safety fixes. Card TRUST-04. Civil cut fro
   - **On by default in this stack:** the opening line, read-only tools not updating the record, the record-change line, and reaches that follow the drawing's units.
 
   Left out, and why: 2078, 2038, and steps 2, 7 and 8 (not on the list, or the ribbon and settings rule). Nothing on the list was dropped.
+- 2026-11-15 02:15 **(1) Batch 3 folder put right.** My widened build had overwritten `b14civ3` under the same version number. Rebuilt from `3c620efe`, it matches its reported figures byte for byte (manifest `8C64207B...`, Modern `0921DE7F...`). The widened build is WITHDRAWN, never installed. **(2) Narrow CDEDIT switch on 2064 at `19569d86`** (`trust.cdeditCancelWritesNothing`, OFF): the hold, plus PITEDIT and PIPEEDIT off the forced-write list. 557 related tests pass; two broken twins are caught; read-only GO. **(3) Batch 4 PREPARED, NOT INSTALLED:** Civil 3.0.90.6 (`35cdad78`, detached) in `C:\ce_rc_scratch\b14civ4`, on top of batch 3.
+  - **Contents:** 2100 (with 2089, 2090), 2045 (with 2041), 2040, the CDEDIT commits lifted from 2064 (not its big switch, 2049 or 2050), the 2092 test fix, and the change-door list line with count 9.
+  - **Tests:** the whole Civil test run passes, 22,647 passed and 0 failed.
+  - **Payload:** Modern `57F6FCCF...`, manifest `F6B9D2A5...`; 11 files differ from 3.0.90.5.
+  - **Scripts:** `install_batch14d.ps1` and `restore_batch14d.ps1` (NOT RUN). Runbook: `INSTALL_BATCH_14NOV.md`, section BATCH 4.
