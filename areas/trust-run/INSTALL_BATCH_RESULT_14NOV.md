@@ -187,3 +187,42 @@
 6. **CDRUNSOLVE once on 3.0.90.5 (regression check, robot, 03:09 to 03:12): SEEN PASS**, same as batch 2: design flows set by the test (copy CLDTP_RSQ5), preview 'Whole-run solve — 5 pipe(s), 6 pit(s)', 9 changes; closing it (No) = 'Cancelled - drawing unchanged.', all five flows still in CE's record. Transcript `C:\CE_WORK\scratch\trust_install\b3_rsq_robot.out`.
 7. **Export CSV (Codex look PSX15): NOT RUN on 3.0.90.5.** Started 03:12, stopped by me at 03:13 before it opened AutoCAD, for the controller's batch 4 and 5 installs. Brief `C:\Lisp Files\_CODEX_RUNNER\verifyPSX15_full.txt` reruns on 3.0.90.7.
 8. **Batch 3 where it stands (03:14):** PASS: first start; smoke 10 of 10; Pit Schedule everyday case (screenshot for Tim above); CDRUNSOLVE once. FAIL: none. NOT RUN / NOT TESTED: Pit Schedule numbered P3 to P5 (new robot route ready: ordinary pits P3 to P5 turned plastic in Edit Pit, script `C:\CE_WORK\scratch\trust_install\b3_ps_numbered.ps1`; "Number and schedule this one anyway" on P4 needs Codex); Export CSV (Codex). Both carry over to the combined list on 3.0.90.7.
+
+# BATCHES 3 TO 5 ON 3.0.90.7 (Civil 3.0.90.7+9b977125; batches 4 and 5 installed by the controller 03:15 and 03:16; robot from 03:17 PC clock)
+
+## Item 1: first start, opening line, read-only tools (03:17 to 03:30, transcript `C:\CE_WORK\scratch\trust_install\b5_open.out`)
+
+1. **First start: SEEN PASS.** Log: "2026-11-15 03:17:45.237 [INFO] CE_CVL_SUITE v3.0.90.7 Started".
+2. **Opening line on the standard Civil copy: SEEN PASS** (the "needs checking" form, because this copy has pipes CE cannot link): "CE: needs checking. 22 pipes not linked. Type CDCHECKCURRENT to see them." then "CE: pit blocks were updated when this drawing opened." **Screenshot for Tim:** `C:\Lisp Files\_TEST_COPIES_20260923\robot_shots\session_20261115_031154\B5_OPENLINE_civil.png`.
+3. **Same copy with one bare polyline on the pipe layer, saved and reopened: SEEN PASS:** "CE: needs checking. 22 pipes not linked, 1 line on a pipe layer not in the CE record. Type CDCHECKCURRENT to see them." Screenshot `C:\Lisp Files\_TEST_COPIES_20260923\robot_shots\session_20261115_031154\B5_OPENLINE_stray.png`. CDCHECKCURRENT: "Drawing check complete. 28 items need checking. Nothing has been fixed automatically."
+4. **CDGRAPH, CDDIAG, CDDASHBOARD leave CE's record, the drawing and DBMOD unchanged: SEEN PASS, each** (record and drawing fingerprint identical before and after; DBMOD 1 before and after).
+5. **Record-change line (step 5): SEEN:** CDEDIT on pit P10 then Cancel, after the bare line: "CE updated its record (CDEDIT): 1 pipe added. Guessed, not read from the drawing: 1 pipe size (100), 1 pipe material." **Against Tim's rule (flagged to the controller):** CE took the bare line into its record as a pipe with a made-up size by itself, on a cancelled edit (hold switch OFF, as shipped; the drawing itself did not change). This is the shipped behaviour Q13 names; the batch 4 hold switch is meant to stop it (tested next, switch ON).
+6. **Blank drawing: SEEN PASS** (no CE line; log "[OpenLine] quiet (not a Civil drawing)").
+7. **Structural drawing: NOT TESTED** (no Structural test copy found in the test folders). The copy named CLDTP_NONCIVIL holds a CE pit: "CE: 1 pit, 0 pipes, all linked." and "CE: pit blocks were updated when this drawing opened." So it is not a fair non-Civil drawing.
+8. AutoCAD closed by the driver, the 4 settings files the same.
+
+## Item 2: mix-up smoke on 3.0.90.7: SEEN PASS, 10 of 10 (03:31 to 04:16)
+
+1. Transcript `C:\CE_WORK\scratch\trust_install\b5_seq.out`; AutoCAD closed by the driver, the 4 settings files the same. No refusal line in this ordinary work.
+2. The ten 'nothing disturbed' readings are byte-size identical to batch 3's.
+
+## Item 3a: Pit Schedule, numbered plastic pits: NOT TESTED by the robot (04:16 to 04:40)
+
+1. **Route tried:** 3 ordinary pits on a blank scratch copy (`CLDTP_B3PS3.dwg`; CE numbered them P1, P2, P3 itself, my typed numbers were not taken), then each opened in Edit Pit and set to 350 x 350 (the Pit number box goes grey: plastic).
+2. **Blocked:** the robot cannot save Edit Pit on this build. The button is now named "Edit pit, Save" (id C2.PlaceCommand); the driver's pinned list only excuses the old name "Save pit and close", and refuses any other control containing "Save" ("refused by the whole-word deny list"). Nothing was saved; the Edit Pit window was left open.
+3. **AutoCAD:** my script was stopped; the driver then refused to close that AutoCAD (the re-taken lock no longer named it), so I ended it myself: my own process (started 04:16:53 by my launch), scratch copy, nothing saved; the 4 settings files identical before and after (CD_Settings ACD64E79A33B...).
+4. **Goes to Codex:** numbered plastic pits, the Pit Schedule line naming them, and "Number and schedule this one anyway". Transcripts `C:\CE_WORK\scratch\trust_install\b5_ps_numbered.out`, `C:\CE_WORK\scratch\trust_install\b5_ps_numbered2.out`.
+5. **Same reason affects:** batch 4's "Save then one U" with the hold switch on (Edit Pit Save): Codex.
+
+## Item 4: batch 4's CDEDIT hold with the switch ON (one scratch session): BLOCKED (04:38 to 04:49)
+
+1. **Set-up:** a copy of Tim's CD_Settings.json at `C:\ce_rc_scratch\b14d_switch\settings\CD_Settings.json` with `"trust": {"cdeditCancelWritesNothing": true}` (his own file only read; its SHA-256 unchanged, ACD64E79A33B...). Script `C:\CE_WORK\scratch\trust_install\b5_hold.ps1`.
+2. **Blocked:** the driver's `launch -Env CE_LOG_DIR_OVERRIDE=C:\ce_rc_scratch\b14d_switch` started AutoCAD (04:38:49) but no drawing opened (window title "Autodesk AutoCAD 2027", no drawing name) and the launch call did not return in 10 minutes; no CE log appeared in the scratch folder, so the switch was not proven on. Nothing was tested. I ended that AutoCAD (my own launch, no drawing open) and the stuck driver call; the 4 settings files the same.
+3. **Still owed:** Edit Pit and Edit Pipe Cancel and Esc with the switch on (including the bare pipe-layer line case: the record must stay identical), and Save then one U (Edit Pit Save is Codex-only now). Needs a working switch-on start: either the driver's -Env route fixed (it is marked "THIS COPY ONLY until Opus has reviewed it") or the runbook's own route (a .cmd that sets the variable and starts acad.exe, handed to Explorer), which the driver cannot then drive (it only drives an AutoCAD it launched). Not mine to change the driver.
+
+## Item 5b: batch 5 CDRENUMBER display lines: DIFFERENT (not shown), robot 05:26 to 05:37 (transcript `C:\CE_WORK\scratch\trust_install\b5_ren.out`)
+
+1. **Lone pit P8 not joined to the outlet** (standard copy + one pit at 100000,-90000): CDRENUMBER asked "More than one pit discharges outside the network - its main outlet is not obvious: Which pit is the main outlet? ... [C1/X1] <C1>", then "Pit numbers already read downhill to uphill - nothing to renumber." **P8 was not named.** Drawing unchanged; CE's record gained only an identity link on one pipe (pipe 11362F "from AGI" got a fromSpineKey), no level, size, number, label, layer or colour.
+2. **A real loop in CE's records** (two pipes P10 and P9; CDREVERSEFLOW with Yes turned the second round: "End values swapped and arrow reversed"; record then holds 11C651 P10->P9 and 11C67E P9->P10): CDRENUMBER again "nothing to renumber", **no loop line**. Record and drawing unchanged.
+3. **Reading (mine, not proven):** the two new lines are written just before the Yes/No question; when nothing needs renumbering no question is asked, so they never appear. The runbook expects them to name the pit and the pipes. A case where renumbering IS needed was not built tonight. Sent to the controller.
+4. My first two runs of this did not count (my script's function name "Ren" is PowerShell's own Rename-Item, so it waited; and my Enter answered No to CDREVERSEFLOW's question).
