@@ -109,3 +109,13 @@ Written Sat 14 Nov 2026 23:45 by lane trust-safety-fixes, on the controller's or
    - Not rehearsed: AutoCAD was open at 23:3x (not this lane's). Its file check is the same code as the 23:38 live check (832 of 832).
    - **To go all the way back to the 13 Nov state** (Civil 3.0.90.2, Structural 1.0.126): `restore_batch14.ps1`, as before.
 9. **Stop rules:** as section 5 above. If any CDRUNSOLVE pass fails, batch 2 is put back with `restore_batch14b.ps1`; batch 1 stays.
+
+## BATCH 2 INSTALLED (controller, Sat 14 Nov 2026 23:41 PC clock)
+
+On Tim's standing approval of about 23:25 ("yes you have my approval to do it whenever you want to", then "yes standing"). Installed by the controller, not by a lane.
+
+1. **Before:** no acad or accoreconsole running (checked by the controller at 23:40, and twice by the script); autocad.json mode auto, a Saturday. Payload DLL hashes read by the controller and equal to item 4 above.
+2. **Ran:** `C:\CE_WORK\scratch\trust_install\install_batch14b.ps1`. Log `install_batch14b.log`: 832 candidate files, 832 live, bad 0, extra 0; Legacy, Net8, Modern all `3.0.90.4+dadac7e7`; CE_SHARED identical to Manager x3; four settings files unchanged; "INSTALL VERIFIED". (Shell exit 1 is robocopy's "files copied" code.)
+3. **Live Modern DLL SHA-256 read back by the controller:** `68615B68902026892CA33FEEF91738F62725108FA3641BA07D469C4BC11ABE3D`.
+4. **Backup kept:** `CE_CVL_SUITE_PRE_11c0093c_20261114-234011.backup` in ApplicationPlugins. Put-back: `restore_batch14b.ps1` (not rehearsed).
+5. **Not yet done:** nothing has run in AutoCAD on 3.0.90.4. Robot list is item 7 above. Not accepted.
