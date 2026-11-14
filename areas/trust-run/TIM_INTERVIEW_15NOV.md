@@ -269,7 +269,44 @@ Numbers are that file's Q numbers. That file itself is not edited by the ask cha
 - **Ask chat's reading (mine):** he wants to SEE on the plan that CE knows the LPD. What the marker looks like, its size, its layer name, and whether it plots were not asked. It is something drawn that he will see, so his screen rule applies: a picture and his OK before it is built. The other half of the older Q24 (CDRENUMBER with no outlet pipe asks for the LPD instead of stopping) was in both of the older file's choices and matches his Q21 answer above; my wording put that sentence only under the choice he did not pick, so I am reading it from Q21, not from this click.
 - **Note for the builders (mine):** the older file says the TRUST-07 test cases were written for "no extra marker". His answer is newer.
 
-**Older questions answered so far (this file, 15 Nov):** Q5 to Q15, Q21, Q22, Q23, Q24. **Not asked yet:** Q0 to Q4, Q16 to Q20, Q25 to Q87, and the two added at the end of that file (the template one is now answered by queue item 6; the robot pressing CDLPD's "Continue in drawing" is not).
+**Q17. CDSYNC and CDREBUILD once Check this drawing exists.**
+
+- **Tim, Sun 15 Nov 2026 02:12 PC clock, clicked:** "Removed once the new door exists". **This was NOT the recommended choice** (recommended was "Typed for me; pointer for colleagues").
+- **Choice text he saw:** "typing CDSYNC says 'use Check this drawing' and does nothing else."
+- **Not chosen:** "Typed for me; pointer for colleagues (Recommended)"; "Unchanged for everyone".
+- **Supersedes:** his 25 Sep 2026 ruling UX-REP-01, which kept both as direct typed commands (as the older questions file describes it). The 25 Sep ruling is kept on record, superseded on this point from 15 Nov 2026.
+- **Ask chat's reading (mine):** one door for repairs. "Once the new door exists" means nothing is removed today: CDSYNC and CDREBUILD stay exactly as they are until Check this drawing can do their job and has been accepted. Retiring a command is covered by the standing rule "Retired only with Tim's explicit approval"; this click is that approval in principle, and the moment of removal should still be shown to him.
+
+**Q18. An everyday tool on a drawing that "needs checking".**
+
+- **Tim, Sun 15 Nov 2026 02:12 PC clock, clicked:** "Carry on, say it once (Recommended)".
+- **Choice text he saw:** "PIT places the pit and prints 'This drawing needs checking (3 pipes not linked)' once. It never blocks you."
+- **Not chosen:** "Ask first each time"; "Say nothing; status line shows it".
+
+**Q19. What one Apply may change in Check this drawing.**
+
+- **Tim, Sun 15 Nov 2026 02:12 PC clock, clicked:** "Only ticked items; upgrade separate (Recommended)".
+- **Choice text he saw:** "you tick 30 links and press Apply: one step, one U. Upgrading an old drawing's pipes is always its own Apply, so one U takes back exactly one kind of change."
+- **Not chosen:** "Everything ticked, in one go".
+
+**Q20. Unsaved work before Apply.**
+
+- **Tim, Sun 15 Nov 2026 02:12 PC clock, clicked:** "Warn and allow (Recommended)".
+- **Choice text he saw:** "'Unsaved work since 10:42 is not in the backup. Carry on?' You choose. CE never saves for you."
+- **Not chosen:** "Just say it in a line, no question"; "Save first, then apply".
+
+**Older questions answered so far (this file, 15 Nov):** Q5 to Q15 and Q17 to Q24. **Not asked yet:** Q0 to Q4, Q16, Q25 to Q87, and the two added at the end of that file (the template one is now answered by queue item 6; the robot pressing CDLPD's "Continue in drawing" is not).
+
+---
+
+## 12. Tim's own ideas raised in this chat (his words; not decisions, not builds)
+
+**12.1 Teach CE and Claude what old drawings are made of, from the evidence model.**
+
+- **Tim, Sun 15 Nov 2026 02:12 PC clock, typed while answering the old-drawing questions:** "can we not through the evidence model teach the plugin and or claude what old drawings are made up of and how they work? both structurally and civil"
+- **What the record shows (checked by the ask chat, 02:13):** the evidence model exists as a design, `03_DRAWING_INTELLIGENCE\EV-03_EVIDENCE_MODEL.md`, and covers Civil and Structural; it is written to learn "the whole local arrangement, not an isolated block", and it says "Frequency alone can never promote a drafting pattern into an engineering rule". The trust run's drawing reader does not use it: `areas\trust-run\trust-reader.md` and `OLD_BLOCKS_FOUND.md` never mention the evidence model, and the older questions file says the reader's distances and text patterns came from CE's own starting figures, the old blocks found on 13 Nov and made-up jobs.
+- **Not known (not checked):** how much of the real evidence has been gathered and cleared for use; the ask chat is not allowed to open `C:\CE_DrawingIntelligence`.
+- **Ask chat's reading (mine):** he is asking why CE's rules for reading old drawings are being guessed and put to him one by one (Q13 to Q16, Q72, Q73, Q80 to Q82) when his own past drawings could show what the office actually drew. That is the purpose the evidence model was designed for. Whether to do it, when, and how a learnt pattern becomes a rule are his to decide and are asked next.
 
 ---
 
