@@ -879,6 +879,56 @@ As batch 7, section 6, with the folder `C:\CE_WORK\robot\b14h_switch`. The CE lo
 
 As section 5 at the top. If a pass fails, batch 8 is put back with `restore_batch14h.ps1`, and batch 5 stays.
 
+### 10. Fixtures for 2049 (added 15 Nov 09:35 by lane trust-safety-fixes, on the controller's order)
+
+Four scratch test drawings for the 2049 checks the evidence lane could not run.
+
+**How they were made:**
+- **Tool:** the core console in the isolated profile (09:30, about 16 s in all, under the shared lock "Claude-trustfixtures", released after), with batch 8's own Civil (3.0.90.10).
+- **Method:** each drawing was made from AutoCAD's metric template with CE's own routines (pit and label blocks by `BlockService.InsertBlock`, pipe link data by `LinkService.RegisterPipe`). CE's record was written by CE's own writer (`ProjectDataService.SaveToDrawing`), or removed where the check needs it missing. Each saved file was then read back.
+- **Nothing live touched:** Tim's live CE log, telemetry, settings file and the installed plug-in were checked untouched.
+- **Never in a repo.** Folder: `C:\CE_WORK\scratch\fixtures2049\out\` (read-back: `fixtures-report.txt`). Probe and runner: `C:\CE_WORK\scratch\fixtures2049\`.
+- **Open COPIES, as with every scratch drawing.** "Record update" below means any command that updates CE's record. For example, Edit Pit (CDEDIT) on a pit then Cancel, or PITSCHEDULE. Read-only tools such as CDCHECKCURRENT do not update it.
+
+1. **`FIX2049_1_Q8_label_between_two_pits.dwg`** (millimetres, no CE record).
+   - **Contents:** pits at 0,0 and 1500,0; label P4 at 600,300 (600 from the first pit, about 960 from the second, both within reach); text "IL 9.10" at 600,-300. The control: a pit at 10000,0 with label P7 and "IL 8.50" near it only.
+   - **Switch ON:**
+     - After the record update, the record line includes "1 label is within reach of more than one pit: CE gave it to none (CDCHECKCURRENT lists it)."
+     - The two near pits get no number; the far pit is P7.
+     - CDCHECKCURRENT lists "Unknown: 'P4' could be an unnumbered pit or an unnumbered pit", plus a "number is not known" item for each near pit.
+     - Then CDUPGRADE: neither near pit reads IL 9.10. CDCHECKCURRENT adds "Unknown: 'IL 9.10' could be ... (invert level)". The far pit reads IL 8.50.
+   - **Switch OFF (as installed):**
+     - The nearer pit (0,0) takes P4, and the other gets a CE number, counted as guessed.
+     - CDUPGRADE gives IL 9.10 to both near pits.
+2. **`FIX2049_2_Q14_metre_drawing.dwg`** (INSUNITS metres, no CE record).
+   - **Contents:**
+     - A pit at 0,0 with label P5 2 m away (2,0).
+     - A pit at 100,0 with label P6 30 m away (130,0). Both pit and label blocks are at scale 0.001, as a metre drawing has them.
+     - A bare line on STORMWATER PIPE drawn 0.225 wide (10,-10 to 40,-10), drawn by hand.
+     - A line on STORMWATER PIPE 0.225 wide (10,-20 to 40,-20) that CE made (CE pipe link data, size 0) but whose record is missing.
+   - **Reaches (switch "reaches follow the drawing's units" ON, the default):** P5 is matched to its pit (2 m is inside the pit's width plus 2 m). P6 at 30 m is not.
+     - **Show Unknown ON:** the pit at 100,0 has no number.
+     - **Show Unknown OFF:** it gets a CE number.
+     - **With the units switch OFF:** both labels are read, because the reach is read as 2,600 units.
+   - **Show Unknown ON:**
+     - The bare line is not added: the line "1 line on a pipe layer was not added to CE's record: it is a possible pipe ..." appears, and CDCHECKCURRENT lists "Possible pipe ...".
+     - The CE-made line is recovered with its size Unknown (blank): never 225, never 100.
+   - **Show Unknown OFF:** both lines are added as installed. Neither size may read 225.
+3. **`FIX2049_3_Q12_worked_out_invert.dwg`** (millimetres, CE record present).
+   - **Contents:** P1 (0,0) has no invert in the record. Pipes P2 to P1 (ends 9.800) and P3 to P1 (ends 9.750), both 225, linked to the pits.
+   - **Switch ON:** after the record update, P1's invert reads 9.750. CDCHECKCURRENT lists "1 pit invert level was worked out from the pipes" (evidence "Worked out by CE"). It is never Unknown.
+   - **Switch OFF:** P1's invert reads 9.750 as installed, with no "worked out" item.
+4. **`FIX2049_4_Q7_pipes_with_no_size.dwg`** (millimetres, CE record present).
+   - **Contents:** P1 at 0,0 with three pipes into it from P2, P3 and P4. All three are recorded with no size, and their CE link data holds size 0. Every pit has a number, 600 x 600 and levels, so all four are on the schedule.
+   - **Switch ON:**
+     - **The window:** in the Pit Schedule, every pipe-size cell for those three pipes shows "?".
+     - **Placing:** Place schedule says "3 pipes have no size; the schedule will show ?." before the insertion point is asked, and the placed table shows "?".
+     - **After placing:** PITEDIT then Cancel leaves the "?". MOVE on the table gives no "is not a number" line and leaves the record as it was.
+     - **CDCHECKCURRENT:** "Unknown: 3 pipes have no size in CE's record".
+   - **Switch OFF (as installed):** blank size cells, no line before placing, no CDCHECKCURRENT item. If CE's record update fills a size in, the record line counts it as guessed.
+
+**One note from making them:** CE's draw-order step at the end of the core console command logged "eLockViolation". That was after each drawing was saved, so the files are unaffected; it is a headless-only effect.
+
 ## TRIAL 2027-ONLY BUNDLE INSTALLED (controller, Sun 15 Nov 2026 07:32 PC clock)
 
 On Tim's queue item 10 answer (ask chat, 02:32: "Take them out of the build", the check on his own PC first) and his standing trial approval. A trial: it is put back after its short list.
