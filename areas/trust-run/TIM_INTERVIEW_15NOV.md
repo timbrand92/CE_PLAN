@@ -189,7 +189,31 @@ Numbers are that file's Q numbers. That file itself is not edited by the ask cha
 5. **Not decided, not asked:** whether a blank invert that has BOTH a schedule value and a pipe to work it out from shows the schedule proposal, the worked-out value, or both; what CE does when its own worked-out invert disagrees with the schedule.
 6. **Not known:** whether CE can read a drawn Pit Schedule today (see the honest state under Q10). Reading one is new work, so under "prove, don't draft" it is a later idea. The parts that need no schedule reading (Unknown instead of 100, UPVC, 225, Class C and grated pit; a worked-out invert marked as worked out) are his word now, and match the existing step 6 draft (pull request 2049) as its questions described it.
 
-**Q11** (pit with no number; pipe with no proven flow direction): not asked yet.
+**Q11. A pit with no number, and a pipe with no proven flow direction** (today: next free number; drawn order decides upstream).
+
+- **Tim, Sun 15 Nov 2026 02:06 PC clock, clicked:** "Both Unknown, drawn order proposed (Recommended)".
+- **Choice text he saw:** "an unlabelled pit shows '?' and is never given a number until you give one; the pipe into it shows 'direction proposed from drawing order' for you to tick."
+- **Not chosen:** "Number Unknown, keep drawn order"; "Keep today's behaviour". Engineering judgement, his own word.
+
+**Q8. A label between two pits, both within reach** (today: the nearer one).
+
+- **Tim, Sun 15 Nov 2026 02:06 PC clock, clicked:** "Unknown, show both (Recommended)".
+- **Choice text he saw:** "an invert label halfway between P2 and P3 reads 'Unknown: could be P2 or P3' until you pick. 'Nearer' is how labels ended up on the wrong pit."
+- **Not chosen:** "The nearer one"; "Nearer, but as Proposed".
+
+**Q7. Where Unknown shows.**
+
+- **Tim, Sun 15 Nov 2026 02:06 PC clock, clicked:** "Not on the plan; '?' in windows (Recommended)".
+- **Choice text he saw:** "a pipe with no size has no size label on the plan; the schedule window and check list show '?'. Before a schedule is placed CE warns '3 pipes have no size; the schedule will show ?' and lets you carry on."
+- **Not chosen:** "A visible '?' on the plan too".
+- **Ask chat's reading (mine):** the status line he approved (5.3) is where an Unknown is visible while drafting; nothing with "?" is drawn on the plan itself.
+
+**Q6. What may be ticked all at once in Check this drawing on an old job.**
+
+- **Tim, Sun 15 Nov 2026 02:06 PC clock, clicked:** "Links together; values one by one (Recommended)".
+- **Choice text he saw:** "30 proposed pipe-to-pit links ticked in one click; 12 proposed sizes, levels and pit numbers ticked one at a time, nothing pre-ticked. A wrong size or level is what reaches council."
+- **Not chosen:** "Everything at once"; "Everything one by one".
+- **Ask chat's note (mine):** "nothing pre-ticked" here is about sizes, levels and pit numbers. In 2.2 the downpipe example showed proposals ticked for him to untick; whether proposed downpipes start ticked is still not asked, so the two do not conflict yet, but it needs one question before any proposal list is designed.
 
 ---
 
