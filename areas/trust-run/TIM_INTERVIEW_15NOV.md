@@ -493,7 +493,37 @@ Numbers are that file's Q numbers. That file itself is not edited by the ask cha
 - **Ask chat's reading (mine):** the first colleague release goes to AutoCAD 2027 PCs only. "For now" leaves the older years open: he did not say when, or whether, 2022 to 2024 colleagues follow.
 - **What I am NOT reading into it:** that work on the older years stops. The 15 Sep 2026 position on record (2022 to 2024 users are in scope; every batch builds and loads for them too) is not withdrawn by these five words. Whether proving the ribbon tools on an older year may wait until after the 2027 release is a real question and is not answered.
 
-**Older questions answered so far (this file, 15 Nov):** Q5 to Q15, Q17 to Q32, Q36, Q46, Q49 to Q52, Q54 to Q57. **Q53 open: not the 17 Oct pilot; he has not said who.** **Held back for the evidence study (12.2):** Q16, Q73, Q80 to Q82. **Not asked yet:** Q0 to Q4, Q33 to Q35, Q37 to Q45, Q47 to Q56, Q58 to Q72, Q74 to Q79, Q83 to Q87, and the two added at the end of that file (the template one is now answered by queue item 6; the robot pressing CDLPD's "Continue in drawing" is not).
+**Q56 follow-up. What "autocad 2027 only for now" means for the work on AutoCAD 2022 to 2024. A RULING THAT CHANGES SCOPE.**
+
+- **Tim, Sun 15 Nov 2026 02:28 PC clock, clicked:** "Stop work on older years". **This was NOT the recommended choice** (recommended was "Keep building for them; prove on 2027 only").
+- **Choice text he saw:** "nothing is built or checked for 2022 to 2024 until you say; colleagues on those years stay on the CE they have."
+- **Not chosen:** "Keep building for them; prove on 2027 only (Recommended)" (he was shown its reason: "so nothing has to be redone later"); "Prove on both, release 2027 first".
+- **Supersedes, kept on record:** the 15 Sep 2026 position that AutoCAD 2022 to 2024 users are in scope and every batch must build and load for them too. Superseded from Sun 15 Nov 2026 02:28 "until you say" (the words of the choice he clicked).
+- **Ask chat's reading (mine):** all effort goes to AutoCAD 2027. Colleagues on older years keep the CE they have now and are not part of the first release.
+- **Points of care for whoever acts on this (mine, not Tim's, and not asked of him because they are not his kind of question):**
+  1. The plugin repository's own procedure (`AGENTS.md`, "verify net48 + net10.0-windows are 0-error") and the test list rule in `START_HERE.md` 1b ("2027 and 2024/net48") still say both. Those texts now disagree with his word and need reconciling by their owners; I have changed neither.
+  2. He was told the cost only in one phrase (later rework). If stopping the older-year build can break something he has on his own PC today, that is a fact to check and bring back to him, not to assume either way. I have not checked.
+  3. "Until you say" means this comes back as a question after the 2027 release, not never.
+
+**Q53, third ask. Who the first colleague is.**
+
+- **Tim, Sun 15 Nov 2026 02:28 PC clock, clicked:** "I'll tell you later (Recommended)".
+- **Choice text he saw:** "it stays open; I ask again when the release is close, and nobody assumes a person meanwhile."
+- **State:** OPEN by his choice. Not the 17 Oct pilot. To be asked again when the release is close. From his 02:28 answer above, it will be someone on AutoCAD 2027.
+
+**Q33. Where Manager's own switches live.**
+
+- **Tim, Sun 15 Nov 2026 02:28 PC clock, clicked:** "In the office setup (Recommended)".
+- **Choice text he saw:** "a colleague cannot switch Roll Back on for themselves; Manager behaves the same on every PC because the office setup carries its switches."
+- **Not chosen:** "Leave them per PC".
+
+**Q48. CLEAN meets an object on a locked layer.**
+
+- **Tim, Sun 15 Nov 2026 02:28 PC clock, clicked:** "Skip it, list it, carry on (Recommended)".
+- **Choice text he saw:** "'1 text on locked layer TITLE left as it was. Saved.' CE never unlocks a layer, and one locked title block does not stop the clean-up."
+- **Not chosen:** "Stop CLEAN and say why".
+
+**Older questions answered so far (this file, 15 Nov):** Q5 to Q15, Q17 to Q33, Q36, Q46, Q48 to Q52, Q54 to Q57. **Q53 open by his choice ("I'll tell you later"): not the 17 Oct pilot.** **Held back for the evidence study (12.2):** Q16, Q73, Q80 to Q82. **Not asked yet:** Q0 to Q4, Q33 to Q35, Q37 to Q45, Q47 to Q56, Q58 to Q72, Q74 to Q79, Q83 to Q87, and the two added at the end of that file (the template one is now answered by queue item 6; the robot pressing CDLPD's "Continue in drawing" is not).
 
 ---
 
