@@ -131,6 +131,36 @@ Queue answers (the controller's numbered items) are in `FOR_TIM_QUEUE.md`, not h
 - **Choice text he saw:** "you draft one real council job on CE during a normal week; if the week is clean and the job needed no hand fixes, both boxes are ticked on Friday."
 - **Not chosen:** "No, days first, then the job".
 
+**8.3 "The entirety of Civil and Manager", pinned down. THE CURRENT ANSWER FOR "READY FOR COLLEAGUES". Tim, Sun 15 Nov 2026 02:18 PC clock.**
+
+Starts from his own typed words of 02:16 (section 11, Q31): "lets get the entirety of civil and manager working as we intend only then can we release to colleagues". He was shown the 5 Nov small-core decision and his 8.1 answer beside those words, then asked four questions.
+
+1. **How much of Civil?** Tim clicked: "Every tool on the Civil ribbon (Recommended)". Choice text he saw: "all 47 core tools colleagues can click, not just the ten, each seen working in AutoCAD. Typed-only repair tools and unfinished ideas do not hold it up." Not chosen: "Everything Civil, typed tools too"; "The ten, done properly".
+2. **Does this replace the 5 Nov "small core first" decision for colleagues?** Tim clicked: "Yes, no small-core release (Recommended)". Choice text he saw: "colleagues keep the CE they have now until the whole of Civil and Manager is ready, then get it in one release." Not chosen: "No, small core still goes first".
+3. **What does "working as we intend" mean for Manager?** Tim clicked: "Everything in the Manager plan". **This was NOT the recommended choice** (recommended was "Send, see, and take back"). Choice text he saw: "sending, taking back, the dashboard of every PC, the office setup check and the 'you are behind' notice are all working before the first release." Not chosen: "Send, see, and take back (Recommended)"; "Send only".
+4. **Are five clean days and one real job still part of "ready"?** Tim clicked: "Yes, on top of this (Recommended)". Choice text he saw: "once the whole of Civil and Manager works, you still do a clean working week and one real council job on it before the first colleague." Not chosen: "No, working as intended is enough".
+
+**"Ready for colleagues" now reads (ask chat's summary, mine; every line rests on a click above):**
+
+1. **Every tool on the Civil ribbon** seen working in AutoCAD and accepted, not only the ten.
+2. **Everything in the Manager plan** working: sending, taking back, the dashboard of every PC, the office setup check, the "you are behind" notice.
+3. **Then** five clean working days on his PC and one real council stormwater job start to finish on CE (these two may overlap, 8.2).
+4. **Only then** the first colleague, in one release. Until then colleagues keep the CE they have.
+
+**Superseded by this, kept on record:**
+
+1. **The colleague-release half of the 5 Nov 2026 small-core decision** ("colleagues get a small core, Civil first"), superseded 15 Nov 2026 02:18. Ask chat's reading (mine): the small core as the ORDER OF WORK is not touched; the ten are still proven first, one at a time. Only the release of a small core to colleagues is replaced.
+2. **8.1 as the whole definition of ready** (01:57 today): it is now item 3 of the list above, not the full list.
+3. **Any dated colleague release still on record** (for example the 9 Nov date in the 17 and 20 Oct rulings): his words set a condition, not a date.
+
+**Points of care (mine, not Tim's):**
+
+1. **"47"** in the choice text is the count of core tool notes in `04_REFERENCE\core-tool-notes\`. I did not check that it equals the number of buttons on the Civil ribbon. His click was on "Every tool on the Civil ribbon"; the ribbon is the measure, the number is not.
+2. **Which tools are on the ribbon** is itself not settled: older Q37 to Q44 and queue item 8 (ribbon mock-up) are open. A tool taken off the ribbon would leave this list; that must be his choice each time, never a way to shorten the list.
+3. **"Everything in the Manager plan"** was described to him by five named parts. The Manager plan file may hold more; anything beyond those five should be shown to him, not assumed in or out.
+4. **Structural** was not asked. His 17 Oct ruling holds it to his own PC until ready.
+5. **Q31's actual question** (which switched-off features come on) is still unanswered. Asked next.
+
 ## 9. What CE must never do by itself
 
 **9.1 Which of these must CE never do by itself, without showing you first?** (He was told these are already ruled: it never saves for him, never unlocks a layer, never changes a drawing just by opening it.)
