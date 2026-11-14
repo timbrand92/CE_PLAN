@@ -1020,3 +1020,10 @@ Typed in the ask chat, exactly:
 2. **Outlook archive (queue 17):** clicked "Yes, free it up (Recommended)". This time only.
 3. **CE Structural tab (queue 15b):** clicked "A: both floor panels (Recommended)".
 4. **When the whole-job interview starts.** Asked: "The full-picture interview (you talk me through one whole Civil job, then one Structural job). When do you want the first sitting?" He did not click; he typed: "monday please". Choices passed over: "Now, 20 minutes, Civil (Recommended)", "Later today", "Short pieces through the week". My reading (mine): Monday 16 Nov 2026; no time given. His 17 Oct rule put decision questions at Monday 08:40, so I will be ready from then and wait for him to start it.
+
+### 14.3 Four more answers, 10:07
+
+1. **New Job picture (queue 15a):** "OK as shown (Recommended)". Picture OK only.
+2. **Dashboard row picture (queue 15c):** "OK as shown (Recommended)". Picture OK only.
+3. **Pit Schedule plastic-pit line (queue 4):** "Quiet grey count (Recommended)". Full record in the queue under "Answered".
+4. **Which of the ten tools' windows is redrawn first.** Asked: "Of the ten tools' windows, which should be redrawn first to your screen rules? The audit found none of 11 windows meets them; New Pipe and CDCALC are furthest off." He clicked: "New Pipe (CD) (Recommended)". Choice text he saw: "it is used on every job, many times a day, and Edit Pipe already has the simpler look to copy. Mock-up first for your OK." Not chosen: "CDCALC"; "Place a pit (PIT)"; "Leave windows until Monday". My reading (mine): an order for mock-ups, not a build; the New Pipe mock-up is owed to him before anything is built.
