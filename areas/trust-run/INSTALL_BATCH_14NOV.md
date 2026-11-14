@@ -469,3 +469,38 @@ Nothing else. Batches 3 and 4 are underneath (install order: 3, then 4, then 5).
 ### 8. Stop rules
 
 As section 5 at the top. If a pass fails, batch 5 is put back with `restore_batch14e.ps1`; batch 4 stays.
+
+## Notes added 15 Nov 03:30 for batches 4 and 5 (Tim's answers, TIM_INTERVIEW_15NOV.md section 11)
+
+### Batch 4 against Q25, Q27 and Q28 (no code change; gaps noted)
+
+1. **Q25** (CE Health, CDGRAPH, CDDIAG and the dashboard stop changing CE's record now): **met by `trust.readOnlyToolsNeverUpdateRecord` (ON).**
+   - **CDGRAPH and CDDIAG:** go through the read-only door, `PrepareRecordForReadOnlyTool` (`LinkCommands.cs:474` and `:2231`; `DiagnosticsCommand.cs:35`).
+   - **The dashboard:** the same door (`DashboardCommands.cs:32`).
+   - **CE Health:** Civil's own health routine (`HealthCheckCommand.cs:38`) goes through the same door. On a PC where Manager hosts the plugins, Manager's CEHEALTH runs instead. It reads plugin state only, and the 13 Nov probe found Civil's record unchanged after it.
+2. **Q27** (one command-line line per record change, every guess counted, no window): **mostly met.**
+   - **Already true:** the line is one command-line line ("CE updated its record (TOOL): ...", no window). It counts these guesses: pipe sizes filled in as 100, pipe materials, lid classes, pit numbers, and pits given CE's own code in place of a number (`RecordUpdateSummaryRule.cs:344-353`).
+   - **Gap:** a pit type filled in as "GRATED PIT" is not counted among the guesses. Later work; no change for batch 4.
+3. **Q28** (the Pit Schedule's write-back of a drawn pipe size STAYS, said in a line): batch 4 does not remove the write-back.
+   - **Already said:** the schedule's relink is counted and said (`PitScheduleViewModel.Data.cs:1078` and `:3024`).
+   - **Not checked by reading:** whether the on-open size write-back itself prints a line. If it does not, that is later work.
+
+### Batch 5 and draft 2049 (Unknown instead of made-up values): LEFT OUT
+
+**Reason, one line:** Tim's Q13 says a bare pipe-layer line enters CE's record only on his tick. Under 2049's switch, CE's record update still adds the line by itself, only with its size blank. Stopping that is new work in the record update, not a trim of 2049.
+
+1. **Against his answers, line by line:**
+   - **Q9 (no size or material = Unknown, never 100, UPVC or 225):** met, with its switch on.
+   - **Q10 (lid class and pit type Unknown, never Class C or grated pit):** met, with its switch on.
+   - **Q12 (a blank invert stays worked out from the lowest connected pipe, marked as worked out):** met. The worked-out level is kept beside the invert, and CDCHECKCURRENT says "Worked out by CE"; it is never turned into Unknown.
+   - **Q11:** an unlabelled pit is never given a number, which is met. The pipe's direction is "proposed from drawn order" for his tick, which is not met (no proposal yet).
+   - **Q8 (a label within reach of two pits is Unknown, showing both):** not met; the nearer pit still wins.
+   - **Q7 (Unknown not drawn on the plan, "?" in windows and lists, a warning before a schedule is placed):** only partly met. 2049 keeps an unknown pit off the placed schedule, rather than showing "?" with a warning.
+   - **Q13:** not met (above).
+   - **Q14 (a drawn width only proposes a size):** not met. 2049's second setting `trust.reachesFollowDrawingUnits` ships ON and reads a 0.225 wide line in a metre drawing as 225.
+2. **Not built (later ideas, as ordered):** reading missing values from a Pit Schedule drawn on the sheet, offered as Proposed (Q9, Q10, Q12 follow-ups); Q6 tick rules; Q15 units asked once.
+3. **So batch 5 stays as prepared:** Civil 3.0.90.7+9b977125, CDLPD and CDRENUMBER only. `trust.showUnknownInsteadOfGuess` is not in it at all.
+4. **What would let 2049 go in later:**
+   - **(a)** a separate, reviewed change to the record update so a bare line is not added by itself (listed as a possible pipe instead, as the reader 2040 already proposes).
+   - **(b)** the Q8 "both pits" label rule.
+   - **(c)** `reachesFollowDrawingUnits` split from the width-as-size reading, or shipped off.

@@ -156,3 +156,4 @@ Chat: CE_ACAD / trust plan / fix / 01 safety fixes. Card TRUST-04. Civil cut fro
   - **Tests:** the whole Civil test run passes, 22,663 passed and 0 failed.
   - **Payload:** Modern `1111E937...`, manifest `24BD504C...`; 7 files differ from 3.0.90.6.
   - **Scripts:** `install_batch14e.ps1` and `restore_batch14e.ps1` (NOT RUN). Runbook: section BATCH 5.
+- 2026-11-15 03:30 Draft 2049 checked against Tim's Q7 to Q14: LEFT OUT of batch 5. Q13 is not met: CE's record update still adds a bare pipe-layer line by itself (with its size blank), and stopping that is record-update work, not a trim. Q8 and Q14 are not met either. Q9, Q10 and Q12 are met. Batch 5 is unchanged (3.0.90.7+9b977125). Batch 4 notes for Q25, Q27 and Q28 are written (CE Health covered; pit type not counted as a guess; the schedule's on-open write-back line not checked). Details: INSTALL_BATCH_14NOV.md, the notes section after BATCH 5.
