@@ -810,6 +810,23 @@ Numbers are that file's Q numbers. That file itself is not edited by the ask cha
 
 ---
 
+## 11a. Mock-ups shown and his choices (Sun 15 Nov 2026)
+
+Rule: a mock-up OK is approval of the picture. It is not a go-ahead to build, and the real thing in AutoCAD still needs his eye when it exists.
+
+**The ribbon in job order:** file `04_REFERENCE\mockups\RIBBON_JOB_ORDER_15NOV.html`. OK'd 03:20. Full record in `FOR_TIM_QUEUE.md`, item 8, under "Answered".
+
+**Three more, one file:** `04_REFERENCE\mockups\STATUS_LINE_LPD_MARKER_PLOT_LIST_15NOV.html`. He did not pick "Can't see it" on either question that offered it, and chose between lettered pictures, so I take it that the file showed. I could not view the rendered file myself.
+
+1. **Where the status line sits** (follows 5.3). Tim, Sun 15 Nov 2026 03:25 PC clock, clicked: "B: top left of the drawing". **This was NOT the recommended choice** (recommended was "C: bottom left, above the command line"). Choice text he saw: "always in view at the top, near the view controls; it sits over the drawing but never plots." Not chosen: C; "A: right end of the CE Drainage tab". What the picture showed: a small pill at the top left of the drawing area reading "CE 14 pits 13 pipes OK" (green word) on a clean drawing, and "CE 14 pits 13 pipes 2 Unknown 1 warning Schedule updated 10:42" (amber words) on one that needs him.
+2. **The marker at the confirmed LPD** (follows Q24). Tim, 03:25, clicked: "A: ring with a dot (Recommended)". Choice text he saw: "a small ring sits exactly on the discharge point beside your own LPD callout; it marks the point without adding words to the plan." Not chosen: "B: triangle pointing out"; "C: boxed 'LPD' tag"; "None of these". Not asked: its size, colour and layer name. The blue in the picture was for the picture only; under his colour rule a marker colour would need a meaning, or it takes the layer's colour.
+3. **Does the LPD marker print?** Tim, 03:25, clicked: "No, screen only (Recommended)". Choice text he saw: "you see it while drafting so you know CE has the LPD, but the council print shows only your own LPD callout." Not chosen: "Yes, it plots".
+4. **The list when plotting with open warnings** (follows 5.2). Tim, 03:25, clicked: "Yes, OK as shown (Recommended)". What the picture showed: a small card, "Before you plot", the big figure "2 warnings", one row per warning with an amber "Needs you" pill, the item, the figure found in bold and the figure required ("P4 cover 280 under 300 mm"; "P6 to P7 fall 0.8% under 1%"), "Click a row to zoom to it", and two buttons: "Show me" (the main, blue one) and "Plot anyway". Not chosen: "Right idea, change it"; "Can't see it".
+
+**Still owed as pictures (not yet drawn):** the dashboard row per PC (Q54); the New Job window (1.1); the CEMEMBER window (which has its own recorded design and is Codex's to build).
+
+---
+
 ## 12. Tim's own ideas raised in this chat (his words; not decisions, not builds)
 
 **12.1 Teach CE and Claude what old drawings are made of, from the evidence model.**

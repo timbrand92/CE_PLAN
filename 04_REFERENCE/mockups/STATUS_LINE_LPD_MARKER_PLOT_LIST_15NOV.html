@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Status line, LPD marker, plot list: mock-ups 15 Nov 2026</title>
+<style>
+:root{--bg:#f4f4f2;--card:#ffffff;--line:#d9d8d2;--text:#1c1c1a;--soft:#5f5e5a;--mute:#8a8983;--accent:#1E5AA8;--accentbg:#e6eef8;--dwg:#20252b;--dwgline:#7d8894;--amber:#b86e00;--amberbg:#fbeed6;--green:#2f6b12;--greenbg:#e8f2dc;--bar:#e9e8e3}
+@media (prefers-color-scheme: dark){:root{--bg:#1b1b1a;--card:#262624;--line:#3c3c39;--text:#f1efe8;--soft:#c3c1b8;--mute:#96958e;--accent:#8ab4ea;--accentbg:#1d3350;--dwg:#14181c;--dwgline:#6d7884;--amber:#f0b04a;--amberbg:#3d2c0c;--green:#a6d37c;--greenbg:#1f3310;--bar:#30302d}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Segoe UI,Arial,sans-serif;padding:20px 16px 40px}
+.wrap{max-width:1100px;margin:0 auto}
+h1{font-size:20px;font-weight:600;margin:0 0 4px}
+h2{font-size:17px;font-weight:600;margin:28px 0 4px}
+.sub{font-size:14px;color:var(--soft);margin:0 0 12px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:860px){.grid{grid-template-columns:minmax(0,1fr)}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}
+.lab{display:flex;align-items:baseline;gap:8px;margin:0 0 8px}
+.let{font-size:24px;font-weight:700;line-height:1}
+.nm{font-size:15px;font-weight:600}
+.note{font-size:12px;color:var(--mute);margin:8px 0 0}
+.acad{border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.rib{background:var(--bar);height:34px;display:flex;align-items:center;gap:6px;padding:0 8px;font-size:11px;color:var(--soft)}
+.rib .t{padding:2px 8px;border-radius:5px;border:1px solid var(--line);background:var(--card)}
+.rib .t.on{color:var(--accent);border-color:var(--accent);background:var(--accentbg);font-weight:600}
+.dw{background:var(--dwg);height:150px;position:relative}
+.cmd{background:var(--bar);height:26px;display:flex;align-items:center;padding:0 8px;font-size:11px;color:var(--mute);font-family:Consolas,monospace}
+.st{font-size:12px;display:inline-flex;gap:10px;align-items:center;padding:3px 10px;border-radius:6px;background:var(--card);border:1px solid var(--line);color:var(--text);white-space:nowrap}
+.st b{font-weight:700}
+.am{color:var(--amber);font-weight:700}
+.ok{color:var(--green);font-weight:700}
+.pos-tl{position:absolute;left:8px;top:8px}
+.pos-bl{position:absolute;left:8px;bottom:8px}
+.ex{display:flex;flex-direction:column;gap:8px;margin-top:10px}
+.win{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;max-width:520px}
+.big{font-size:30px;font-weight:700;line-height:1.1}
+.small{font-size:13px;color:var(--soft)}
+.row{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-top:1px solid var(--line);font-size:14px}
+.row .v{font-variant-numeric:tabular-nums;white-space:nowrap}
+.pill{display:inline-block;font-size:12px;font-weight:700;padding:2px 8px;border-radius:999px;background:var(--amberbg);color:var(--amber)}
+.btns{display:flex;gap:8px;margin-top:14px}
+.btn{padding:8px 16px;border-radius:8px;border:1px solid var(--line);font-size:14px;background:var(--card);color:var(--text)}
+.btn.pri{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
+@media (prefers-color-scheme: dark){.btn.pri{color:#0d1b2e}}
+svg text{font-family:Segoe UI,Arial,sans-serif}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Three mock-ups for Tim's OK</h1>
+<p class="sub">Pictures only. Nothing is built from these. Sun 15 Nov 2026.</p>
+
+<h2>1. Where the status line sits</h2>
+<p class="sub">It only reads the drawing. It never pops up and never changes anything. Pick A, B or C.</p>
+<div class="grid">
+<div class="card"><div class="lab"><div class="let">A</div><div class="nm">Right end of the CE Drainage tab</div></div>
+<div class="acad"><div class="rib"><span class="t on">CE Drainage</span><span class="t">Start</span><span class="t">Sources</span><span style="margin-left:auto" class="st">CE <b>14</b> pits <b>13</b> pipes <span class="ok">OK</span></span></div><div class="dw"></div><div class="cmd">Command:</div></div>
+<p class="note">Seen only while the CE Drainage tab is showing.</p></div>
+<div class="card"><div class="lab"><div class="let">B</div><div class="nm">Top left of the drawing</div></div>
+<div class="acad"><div class="rib"><span class="t on">CE Drainage</span><span class="t">Start</span><span class="t">Sources</span></div><div class="dw"><span class="st pos-tl">CE <b>14</b> pits <b>13</b> pipes <span class="ok">OK</span></span></div><div class="cmd">Command:</div></div>
+<p class="note">Always in view, on any tab. Sits over the drawing; never plots.</p></div>
+<div class="card"><div class="lab"><div class="let">C</div><div class="nm">Bottom left, above the command line</div></div>
+<div class="acad"><div class="rib"><span class="t on">CE Drainage</span><span class="t">Start</span><span class="t">Sources</span></div><div class="dw"><span class="st pos-bl">CE <b>14</b> pits <b>13</b> pipes <span class="ok">OK</span></span></div><div class="cmd">Command:</div></div>
+<p class="note">Always in view, near where CE's messages already appear.</p></div>
+</div>
+<div class="ex">
+<div><span class="small">Clean drawing: </span><span class="st">CE <b>14</b> pits <b>13</b> pipes <span class="ok">OK</span></span></div>
+<div><span class="small">Needs you: </span><span class="st">CE <b>14</b> pits <b>13</b> pipes <span class="am">2 Unknown</span> <span class="am">1 warning</span> Schedule updated 10:42</span></div>
+</div>
+
+<h2>2. The marker at the legal point of discharge</h2>
+<p class="sub">A small CE symbol at the confirmed LPD, on its own layer, beside the LPD callout you already draw. Pick A, B or C.</p>
+<div class="grid">
+<div class="card"><div class="lab"><div class="let">A</div><div class="nm">Ring with a dot</div></div>
+<svg viewBox="0 0 300 150" width="100%" role="img" aria-label="Pipe ending at a ring with a dot"><rect width="300" height="150" rx="8" fill="var(--dwg)"/><line x1="20" y1="40" x2="190" y2="96" stroke="var(--dwgline)" stroke-width="3"/><circle cx="190" cy="96" r="12" fill="none" stroke="#4fb0ff" stroke-width="2"/><circle cx="190" cy="96" r="3" fill="#4fb0ff"/><text x="210" y="92" fill="#d8dde3" font-size="12">LPD</text><text x="210" y="108" fill="#d8dde3" font-size="11">IL 9.45</text></svg>
+<p class="note">Smallest. Reads as "this exact point".</p></div>
+<div class="card"><div class="lab"><div class="let">B</div><div class="nm">Triangle pointing out of the site</div></div>
+<svg viewBox="0 0 300 150" width="100%" role="img" aria-label="Pipe ending at a triangle pointing in the flow direction"><rect width="300" height="150" rx="8" fill="var(--dwg)"/><line x1="20" y1="40" x2="184" y2="94" stroke="var(--dwgline)" stroke-width="3"/><polygon points="204,101 181,104 187,85" fill="none" stroke="#4fb0ff" stroke-width="2"/><text x="214" y="96" fill="#d8dde3" font-size="12">LPD</text><text x="214" y="112" fill="#d8dde3" font-size="11">IL 9.45</text></svg>
+<p class="note">Shows which way the water leaves.</p></div>
+<div class="card"><div class="lab"><div class="let">C</div><div class="nm">Small square tag reading "LPD"</div></div>
+<svg viewBox="0 0 300 150" width="100%" role="img" aria-label="Pipe ending at a small boxed tag reading LPD"><rect width="300" height="150" rx="8" fill="var(--dwg)"/><line x1="20" y1="40" x2="186" y2="95" stroke="var(--dwgline)" stroke-width="3"/><rect x="186" y="84" width="38" height="22" fill="none" stroke="#4fb0ff" stroke-width="2"/><text x="205" y="100" fill="#4fb0ff" font-size="12" text-anchor="middle">LPD</text><text x="234" y="100" fill="#d8dde3" font-size="11">IL 9.45</text></svg>
+<p class="note">Says what it is in words. Could replace your own "LPD" text.</p></div>
+</div>
+
+<h2>3. The list when you plot with open warnings</h2>
+<p class="sub">Shown only if the check finds something as you plot. "Plot anyway" is always there.</p>
+<div class="win">
+<div class="small">Before you plot</div>
+<div class="big">2 warnings</div>
+<div class="row"><div><span class="pill">Needs you</span>&nbsp; P4 cover</div><div class="v"><b>280</b> under 300 mm</div></div>
+<div class="row"><div><span class="pill">Needs you</span>&nbsp; P6 to P7 fall</div><div class="v"><b>0.8%</b> under 1%</div></div>
+<div class="small" style="margin-top:8px">Click a row to zoom to it.</div>
+<div class="btns"><div class="btn pri">Show me</div><div class="btn">Plot anyway</div></div>
+</div>
+<p class="note" style="margin-top:14px">Colours: green = good, amber = needs you, each with a word. Blue is the one accent, on the main button only. Figures and pit names are made up.</p>
+</div>
+</body>
+</html>
