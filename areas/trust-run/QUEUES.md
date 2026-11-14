@@ -342,3 +342,13 @@ Recorded in full, in his words, in `areas\trust-run\TIM_INTERVIEW_15NOV.md` (8.1
 1. **Ready for colleagues = all three:** the ten tools accepted; five clean working days on Tim's PC; one real council stormwater job done start to finish on CE alone with nothing fixed by hand. Stricter than the 17 Oct wording, and newer.
 2. **CE never, by itself:** changes a level or size, renumbers pits, moves or deletes his labels, changes layers or colours. Every batch's review and robot list checks the batch against these four.
 3. **What matters most:** nothing wrong reaches council.
+
+## THE FINISH LINE FOR COLLEAGUES, WIDENED (Tim, ask chat, Sun 15 Nov 2026 02:16 to 02:18 PC clock)
+
+Tim, typed: "lets get the entirety of civil and manager working as we intend only then can we release to colleagues". His four clicks pinning it down are in `areas\trust-run\TIM_INTERVIEW_15NOV.md` section 8.3, which is the current answer. This replaces the 01:57 section above where they differ, and supersedes the colleague-release half of the 5 Nov small-core decision. Relayed to the controller by the ask chat; the controller adopts it because it only makes release stricter and enables no action.
+
+1. **Civil:** every tool on the Civil ribbon seen working in AutoCAD, not only the ten.
+2. **No small-core release.** Colleagues keep the CE they have until the whole is ready, then one release.
+3. **Manager:** everything in the Manager plan (sending, taking back, the dashboard of every PC, the office setup check, the you-are-behind notice).
+4. **On top:** five clean working days on his PC and one real council stormwater job start to finish on CE alone (may overlap).
+5. **Controller's reading (mine):** the ten stay the ORDER OF WORK and the first number reported. After the ten, the same method (fix, install, robot and Codex, accept) carries on through the rest of the Civil ribbon and Manager. "Prove, don't draft" still holds: fixes on existing drafts; a new draft only where a ribbon tool has a seen fault and no draft exists, and that widening is put to Tim before it starts. Not asked: Structural. Not answered: which switched-off features come on.
