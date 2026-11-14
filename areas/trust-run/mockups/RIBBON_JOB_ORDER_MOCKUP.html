@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ribbon in job order: mock-up</title>
+<style>
+  :root {
+    --bg: #f4f5f7; --card: #ffffff; --ink: #1c2330; --muted: #5d6677; --line: #d5d9e0;
+    --ribbon: #eceef2; --ribbon-edge: #c9cfd9; --btn: #ffffff; --btn-hover: #e4ebf6;
+    --accent: #1E5AA8; --accent-ink: #ffffff; --tip-bg: #1c2330; --tip-ink: #ffffff;
+    --held: #8a93a3; --badge-bg: #ffffff; --badge-ink: #1c2330; --badge-line: #8a93a3;
+  }
+  :root[data-theme="dark"] {
+    --bg: #14181f; --card: #1d232c; --ink: #e9edf3; --muted: #a2abbb; --line: #333c49;
+    --ribbon: #262d38; --ribbon-edge: #3b4554; --btn: #2d3643; --btn-hover: #38475c;
+    --accent: #6FA3E6; --accent-ink: #0f1722; --tip-bg: #f1f4f9; --tip-ink: #14181f;
+    --held: #7f899b; --badge-bg: #1d232c; --badge-ink: #e9edf3; --badge-line: #7f899b;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+         font: 15px/1.45 "Segoe UI", system-ui, -apple-system, Arial, sans-serif; }
+  .wrap { max-width: 1800px; margin: 0 auto; padding: 20px 16px 48px; }
+  .banner { display: flex; gap: 12px; align-items: center; justify-content: space-between; flex-wrap: wrap;
+            background: var(--card); border: 2px dashed var(--ink); border-radius: 14px; padding: 12px 16px; margin-bottom: 20px; }
+  .banner b.big { font-size: 20px; letter-spacing: .5px; }
+  .banner span { color: var(--muted); }
+  button.mode { background: var(--accent); color: var(--accent-ink); border: 0; border-radius: 10px; padding: 8px 14px; font: inherit; font-weight: 600; cursor: pointer; }
+  h2 { font-size: 18px; margin: 28px 0 4px; }
+  p.note { color: var(--muted); margin: 0 0 10px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 14px; overflow-x: auto; }
+  .card.open-room { overflow: visible; padding-bottom: 150px; }   /* room for the More lists to open downwards */
+  .card.scroll-room { padding-bottom: 170px; }
+
+  /* the ribbon */
+  .ribbon { width: max-content; }
+  .tabs { display: flex; gap: 2px; font-size: 13px; }
+  .tabs div { padding: 6px 14px; border-radius: 8px 8px 0 0; color: var(--muted); background: transparent; }
+  .tabs div.on { background: var(--ribbon); color: var(--ink); font-weight: 700; border: 1px solid var(--ribbon-edge); border-bottom: 0; }
+  .tabs div.on::after { content: ""; display: block; height: 3px; margin: 4px -14px -6px; background: var(--accent); }
+  .strip { display: flex; background: var(--ribbon); border: 1px solid var(--ribbon-edge); border-radius: 0 10px 10px 10px; padding: 8px 6px 0; }
+  .panel { display: flex; flex-direction: column; padding: 0 6px; border-right: 1px solid var(--ribbon-edge); }
+  .panel:last-child { border-right: 0; }
+  .body { display: flex; gap: 4px; align-items: stretch; min-height: 92px; }
+  .title { text-align: center; font-size: 12px; color: var(--muted); padding: 5px 4px 6px; white-space: nowrap; }
+  .col { display: flex; flex-direction: column; gap: 2px; justify-content: flex-start; }
+  .btn { position: relative; display: flex; align-items: center; gap: 6px; background: transparent; color: var(--ink); border: 1px solid transparent;
+         border-radius: 8px; font: 12px/1.15 inherit; cursor: pointer; padding: 3px 7px; text-align: left; }
+  .btn:hover, .btn:focus-visible { background: var(--btn-hover); border-color: var(--ribbon-edge); outline: 0; }
+  .btn .ico { flex: none; width: 22px; height: 22px; border-radius: 6px; background: var(--btn); border: 1px solid var(--ribbon-edge);
+              display: grid; place-items: center; font-size: 9px; font-weight: 700; color: var(--muted); }
+  .col > .btn, .col > .more > .btn { width: 142px; min-height: 26px; }
+  .btn:not(.big) .lbl { line-height: 1.12; }
+  .btn.big { flex-direction: column; justify-content: flex-start; width: 70px; min-height: 86px; padding: 6px 3px; text-align: center; gap: 4px; }
+  .btn.big .ico { width: 40px; height: 40px; font-size: 13px; border-radius: 10px; }
+  .btn.ten .ico { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+  .btn.held { color: var(--held); }
+  .btn.held .ico { border-style: dashed; background: transparent; }
+  .btn.held .lbl::after { content: " (held back)"; font-size: 10px; }
+  .badge { position: absolute; top: 2px; right: 3px; min-width: 16px; height: 16px; border-radius: 8px; padding: 0 4px; font-size: 10px; font-weight: 700;
+           background: var(--badge-bg); color: var(--badge-ink); border: 1px solid var(--badge-line); display: grid; place-items: center; }
+  .btn:not(.big) .badge { position: static; margin-left: auto; }
+  .more { position: relative; }
+  .more > .btn { font-weight: 600; }
+  .more > .btn .car { margin-left: auto; font-size: 10px; color: var(--muted); }
+  .list { display: none; position: absolute; z-index: 20; left: 0; top: 100%; min-width: 230px; background: var(--card); border: 1px solid var(--ribbon-edge);
+          border-radius: 10px; padding: 4px; box-shadow: 0 8px 22px rgba(0,0,0,.25); }
+  .more.open .list { display: block; }
+  .list .btn { width: 100%; }
+  .legend { display: flex; gap: 18px; flex-wrap: wrap; color: var(--muted); font-size: 13px; margin-top: 10px; align-items: center; }
+  .legend .sw { display: inline-grid; place-items: center; width: 18px; height: 18px; border-radius: 5px; margin-right: 6px; vertical-align: middle; font-size: 9px; font-weight: 700; }
+  .sw.acc { background: var(--accent); color: var(--accent-ink); }
+  .sw.held { border: 1px dashed var(--held); }
+  .sw.num { border: 1px solid var(--badge-line); border-radius: 9px; color: var(--ink); }
+  #tip { position: fixed; z-index: 99; pointer-events: none; max-width: 300px; background: var(--tip-bg); color: var(--tip-ink); border-radius: 10px;
+         padding: 8px 11px; font-size: 13px; box-shadow: 0 6px 18px rgba(0,0,0,.3); display: none; }
+  #tip b { display: block; margin-bottom: 2px; }
+  #tip small { display: block; opacity: .75; margin-top: 4px; }
+  .two { display: grid; grid-template-columns: 1fr; gap: 6px; }
+  table.ten { border-collapse: collapse; width: 100%; font-size: 14px; }
+  table.ten td, table.ten th { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  table.ten td:first-child { width: 36px; font-weight: 700; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="banner">
+    <div><b class="big">MOCK-UP, NOT BUILT</b><br>
+    <span>A picture only. Nothing here exists in AutoCAD yet, and nothing is built until you say OK. Hover over any button to read what it does.</span></div>
+    <button class="mode" id="mode" type="button">Switch to dark</button>
+  </div>
+
+  <h2>After: the ribbon in job order</h2>
+  <p class="note">One tab, "CE Civil". It reads left to right in the order a job goes: Start, Sources, Network, Levels, Check, Sheet. Your ten everyday tools are the big blue buttons, numbered in job order. Everything else is one click away under "More".</p>
+  <div class="card open-room"><div class="ribbon" id="after"></div>
+    <div class="legend">
+      <span><span class="sw acc">PT</span>one of your ten, big button</span>
+      <span><span class="sw num">3</span>its place in your ten (job order)</span>
+      <span><span class="sw held">FW</span>held back until its fix is proved</span>
+      <span>"More" opens the list of the rest of that panel</span>
+    </div>
+  </div>
+
+  <h2>Before: today's ribbon</h2>
+  <p class="note">The "CE" tab as it is today (build 3.0.90), drawn the same way. Same buttons, same order, nothing added. Your ten are marked so you can see where they hide now. It is wider than the screen, so scroll sideways: that is part of the problem.</p>
+  <div class="card scroll-room"><div class="ribbon" id="before"></div></div>
+
+  <h2>Your ten, where they sit</h2>
+  <div class="card"><table class="ten" id="tenTable"></table></div>
+
+  <p class="note" style="margin-top:18px">Plain-word buttons, one accent colour, big buttons only for the ten. Hover or tab to a button for its one-line description and the command you can still type.</p>
+</div>
+
+<div id="tip"></div>
+
+<script>
+// ------------------------------------------------------------------ plain descriptions (from the core tool notes)
+var D = {
+  CDNEWDWG: "Start a new job drawing from the office template.",
+  CDDESIGN: "Set the job's council, land use and areas, and work out the design.",
+  CDRAINFALL: "Set this job's rainfall curve, or go back to the office one.",
+  CDRULEBOOK: "See and set this job's rule values, such as minimum cover.",
+  CDS: "Open Civil Settings: your drafting and engineering values.",
+  CDMANAGER: "Set layer colours and draw order.",
+  CEBLOCKS: "Open the office blocks palette.",
+  CDHELP: "Open the CE help guide at the tool you used last.",
+  CDFEEDBACK: "Report a problem or an idea.",
+  DP: "Place a downpipe and give it the next free number.",
+  OF: "Place an overflow and number it.",
+  FO: "Place a front overflow and number it.",
+  GIO: "Place a gross inlet and tag it.",
+  CDTG: "Draw a trench grate between two points, with a callout.",
+  CDTAG: "Tag a block as a source, or change or remove its tag.",
+  CDSTRIP: "Draw a strip drain with floor wastes and fall arrows.",
+  CDRG: "Draw a raingarden outline, hatch it and label it.",
+  CDWT: "Place a water tank, or tag a block already in the drawing as the tank.",
+  CDSOURCE: "Place a named source such as a roof drain or an air-conditioner.",
+  CDFW: "Place a floor waste. Held back until its fix is proved.",
+  PIT: "Place a pit with its number and cover level.",
+  CD: "Draw a stormwater pipe. The window asks for size, material, grade and levels.",
+  CDLPD: "Mark the legal point of discharge at the end of a pipe already drawn.",
+  PP: "Place a 350 x 350 plastic pit quickly.",
+  IO: "Place an inspection opening and number it.",
+  CDAGI: "Draw an agricultural drain along the points you pick.",
+  CDSYSTEM: "Say which system the selected pipes belong to.",
+  CDRUNSOLVE: "Work out pipe inverts down a run and preview the changes first.",
+  CDEDIT: "Open the right editor for the pit, pipe or source you pick.",
+  CDSL: "Place a spot level with the level you type.",
+  CDTWL: "Check that a detention volume fits below a top water level.",
+  CDREVERSEFLOW: "Turn one pipe around and flip its flow arrow.",
+  CDCHECKCURRENT: "List what CE can read in this drawing. Nothing is changed.",
+  CDRULES: "Check pits and pipes against the council and office rules.",
+  CDCALC: "Open the drainage calculations window.",
+  CDDEST: "List where each downpipe's water ends up.",
+  CDINSPECTOR: "Show what CE knows about the pit, pipe or source you select.",
+  CDRENUMBER: "Renumber pits from the outlet uphill.",
+  PITSCHEDULE: "Open the Pit Schedule window, listing the drawing's pits.",
+  MR: "Move the objects you select, then turn them, in one go.",
+  CR: "Copy the objects you select, then turn the copy.",
+  CDPROFILE: "Build a long section along a route from a pit you pick.",
+  CDTIDYLABELS: "Slide pipe labels, levels and arrows clear of other text.",
+  CDPITCOVERFLIP: "Move a pit's cover-level text to another corner.",
+  CDTEXTSEG: "Move a pipe's label to another leg of the same pipe.",
+  CDMA: "Move a flow arrow to a new point.",
+  CDANNOTATIONEDIT: "Move, turn, mirror or flip one label or block."
+};
+// Tim's ten, in his job order (QUEUES.md, "The ten, answered by Tim")
+var TEN = { PIT: 1, CD: 2, CDLPD: 3, CDEDIT: 4, CDRUNSOLVE: 5, CDRENUMBER: 6, PITSCHEDULE: 7, CDRULES: 8, CDCALC: 8, CDCHECKCURRENT: 9, MR: 10 };
+
+// ------------------------------------------------------------------ AFTER: six panels in job order
+// b(command, words, code, size)  size: 'big' or '' ; held = held back
+function b(c, w, k, big, held) { return { c: c, w: w, k: k, big: !!big, held: !!held }; }
+var AFTER = [
+  { t: "Start", big: [b("CDNEWDWG", "New Job", "NJ", 1)],
+    small: [b("CDDESIGN", "Design setup", "DE"), b("CDRAINFALL", "Rainfall", "RA"), b("CDRULEBOOK", "Job rules", "RB")],
+    more: ["Help and office", [b("CDS", "Settings", "ST"), b("CDMANAGER", "Layer standards", "LS"), b("CEBLOCKS", "Office blocks", "BK"), b("CDHELP", "Help", "HC"), b("CDFEEDBACK", "Report a problem", "FB")]] },
+  { t: "Sources", big: [b("DP", "Downpipe", "DP", 1)],
+    small: [b("OF", "Overflow", "OF"), b("FO", "Front overflow", "FO"), b("GIO", "Gross inlet", "GI"), b("CDTG", "Trench grate", "TG"), b("CDTAG", "Source tag", "TA")],
+    more: ["More sources", [b("CDSTRIP", "Strip drain", "SD"), b("CDRG", "Raingarden", "RG"), b("CDWT", "Water tank", "WT"), b("CDSOURCE", "Other source", "GS"), b("CDFW", "Floor waste", "FW", 0, 1)]] },
+  { t: "Network", big: [b("PIT", "Pit", "PT", 1), b("CD", "Pipe", "PI", 1)],
+    small: [b("CDLPD", "Legal point of discharge", "LP"), b("PP", "Plastic pit 350", "PP"), b("IO", "Inspection opening", "IO")],
+    more: ["More network", [b("CDAGI", "AGI drain", "AG"), b("CDSYSTEM", "Pipe system", "PY")]] },
+  { t: "Levels", big: [b("CDRUNSOLVE", "Solve run", "SR", 1), b("CDEDIT", "Edit", "ED", 1)],
+    small: [b("CDSL", "Spot level", "LV"), b("CDTWL", "Top water level", "TW"), b("CDREVERSEFLOW", "Reverse flow", "RF")], more: null },
+  { t: "Check", big: [b("CDCHECKCURRENT", "Check this drawing", "CK", 1), b("CDRULES", "Rule check", "RC", 1)],
+    small: [b("CDCALC", "Calculations", "CA"), b("CDDEST", "Downpipe destinations", "WD"), b("CDINSPECTOR", "Inspector", "CP")], more: null },
+  { t: "Sheet", big: [b("CDRENUMBER", "Renumber pits", "RN", 1), b("PITSCHEDULE", "Pit Schedule", "PS", 1)],
+    small: [b("MR", "Move + Rotate", "MR"), b("CR", "Copy + Rotate", "CR"), b("CDPROFILE", "Long section", "PF")],
+    more: ["Tidy the labels", [b("CDTIDYLABELS", "Tidy labels", "TL"), b("CDPITCOVERFLIP", "Flip cover text", "FC"), b("CDTEXTSEG", "Move pipe text", "TS"), b("CDMA", "Move arrow", "MA"), b("CDANNOTATIONEDIT", "Edit label", "EA")]] }
+];
+
+// ------------------------------------------------------------------ BEFORE: today's one-tab "CE" layout (build 3.0.90), panel by panel
+function s(c, w, k, big, kids) { return { c: c, w: w, k: k, big: !!big, kids: kids || null }; }
+var BEFORE = [
+  { t: "CE", items: [s("CESTARTHERE", "Start Here", "SH"), s("CEASK", "Ask CE", "AK", 1), s("CDHELP", "Help Centre", "HC"), s("CEBLOCKS", "CE Blocks", "BK"), s("CDDISCIPLINE", "Civil", "DC")] },
+  { t: "Draw", items: [s("CD", "Pipe", "PI", 1), s("PIT", "Pit", "PT", 1, ["PP", "CDPIT350", "CDPIT450", "CDPIT600", "CDPIT900", "CDPIT1200"]),
+      s("CDWT", "Water Tank", "WT"), s("CDSL", "Spot Level", "LV"), s("CDFALL", "Fall", "FA"), s("CDFALLSUGGEST", "Suggest Fall", "SF")] },
+  { t: "Sources", items: [s("DP", "Downpipe", "DP", 1), s("IO", "Inspection Opening", "IO"), s("OF", "Overflow", "OF"), s("FO", "Front Overflow", "FO"),
+      s("", "More sources", "MS", 0, ["GIO", "CDTG", "CDFW", "CDSTRIP", "CDAGI", "CDPERIMETER", "CDRG", "CDSOURCE", "CDTAG"])] },
+  { t: "Edit", items: [s("CDEDIT", "Edit", "ED", 1), s("CDINSPECTOR", "CE Inspector", "CP"), s("CDREPAIR", "Repair & Upgrade", "RU"), s("CDANNOTATIONEDIT", "Edit Annotation", "EA"), s("CDTIDYLABELS", "Tidy labels", "TL")] },
+  { t: "Design", items: [s("CDDESIGN", "Design setup", "DE"), s("CDRAINFALL", "Rainfall", "RF"), s("CDLPD", "Legal point of discharge", "LP")] },
+  { t: "Review", items: [s("CDDASHBOARD", "Project Review", "RV", 1), s("CDCHECK", "Checks", "CK"), s("CDCHECKCURRENT", "Check Current Drawing", "CD"), s("PITSCHEDULE", "Pit Schedule", "PS"),
+      s("CDCALC", "Calculations", "CA"), s("CDTWL", "Top Water Level", "TW"), s("CDDEST", "Downpipe Destinations", "WD"), s("CDPROFILE", "Profile", "PF"), s("CDHUB", "Civil Hub", "PO"), s("CDRUNSOLVE", "Solve Run", "SR")] },
+  { t: "Site", items: [s("CDSLAB", "Slab System", "SB", 1, ["CDSLAB", "CDSLABIMPORT", "CDSLABEDIT", "CDSLABEREGEN"]), s("CDSPOON", "Spoon Drain", "SP"), s("CDPAVE", "Pavement Area", "PV"),
+      s("CDCATCHMENT", "Catchment Overlay", "CM"), s("CDKERB", "Kerb", "KB"), s("CDSPOONDRAIN", "Spoon Drain Run", "SD"), s("", "Joints", "JT", 0, ["CDJOINT", "CDCJ", "CDSC"]), s("", "Tree Zones", "TZ", 0, ["CDTPZ", "CDSRZ"])] },
+  { t: "Import", items: [s("CDSURVEY", "Import", "IM", 1, ["CDSURVEY", "CDCHECKDWG", "CDIMPORTXCIVIL", "CDIMPORTLANDXML", "CDIMPORTCOMPARE"]), s("CDEXPORTENTITIES", "Export", "EX")] },
+  { t: "Settings", items: [s("CDS", "Settings", "ST", 1), s("CDMANAGER", "Layer Standards", "LS"), s("CDPARTS", "Parts Catalogue", "PC"), s("CDFEEDBACK", "Feedback", "FB"), s("CDDIAG", "Data Diagnostics", "DD")] }
+];
+
+// ------------------------------------------------------------------ drawing
+var tip = document.getElementById("tip");
+function showTip(el, c, w, extra) {
+  var d = D[c] || "On today's ribbon. Not one of the 47 core tools, so no plain description is written for it in this mock-up.";
+  var ten = TEN[c] ? '<small>One of your ten: number ' + TEN[c] + '.</small>' : '';
+  tip.innerHTML = '<b>' + w + '</b>' + d + (c ? '<small>You can still type: ' + c + '</small>' : '') + ten + (extra ? '<small>' + extra + '</small>' : '');
+  tip.style.display = "block";
+  var r = el.getBoundingClientRect();
+  var x = Math.min(window.innerWidth - 320, Math.max(8, r.left));
+  var y = r.bottom + 8; if (y + 120 > window.innerHeight) y = r.top - 110;
+  tip.style.left = x + "px"; tip.style.top = y + "px";
+}
+function hideTip() { tip.style.display = "none"; }
+
+function btn(o, forceTen, listMode) {
+  var e = document.createElement("button");
+  e.type = "button";
+  var isTen = forceTen && TEN[o.c];
+  e.className = "btn" + (o.big ? " big" : "") + (isTen ? " ten" : "") + (o.held ? " held" : "");
+  var ico = document.createElement("span"); ico.className = "ico"; ico.textContent = o.k;
+  var lbl = document.createElement("span"); lbl.className = "lbl"; lbl.textContent = o.w;
+  e.appendChild(ico); e.appendChild(lbl);
+  if (TEN[o.c] && forceTen !== false) { var bd = document.createElement("span"); bd.className = "badge"; bd.textContent = TEN[o.c]; e.appendChild(bd); }
+  var extra = o.held ? "Held back: it can lose data until its fix is proved in AutoCAD." : (o.c === "PITSCHEDULE" ? "Its fixes are still being proved before this goes live." : "");
+  e.addEventListener("mouseenter", function () { showTip(e, o.c, o.w, extra); });
+  e.addEventListener("focus", function () { showTip(e, o.c, o.w, extra); });
+  e.addEventListener("mouseleave", hideTip); e.addEventListener("blur", hideTip);
+  return e;
+}
+function moreBox(title, items, forceTen) {
+  var m = document.createElement("div"); m.className = "more";
+  var h = document.createElement("button"); h.type = "button"; h.className = "btn";
+  h.innerHTML = '<span class="ico">&hellip;</span><span class="lbl">' + title + '</span><span class="car">&#9662;</span>';
+  var l = document.createElement("div"); l.className = "list";
+  items.forEach(function (o) { l.appendChild(btn(o, forceTen, true)); });
+  h.addEventListener("click", function (ev) {
+    ev.stopPropagation();
+    var was = m.classList.contains("open");
+    document.querySelectorAll(".more.open").forEach(function (x) { x.classList.remove("open"); });
+    if (!was) m.classList.add("open");
+  });
+  m.appendChild(h); m.appendChild(l); return m;
+}
+function panel(title, bodyNodes) {
+  var p = document.createElement("div"); p.className = "panel";
+  var bdy = document.createElement("div"); bdy.className = "body";
+  bodyNodes.forEach(function (n) { bdy.appendChild(n); });
+  var t = document.createElement("div"); t.className = "title"; t.textContent = title;
+  p.appendChild(bdy); p.appendChild(t); return p;
+}
+function ribbonShell(tabName) {
+  var r = document.createElement("div");
+  var tabs = document.createElement("div"); tabs.className = "tabs";
+  ["Home", "Insert", "Annotate", "Structural"].forEach(function (n) { var d = document.createElement("div"); d.textContent = n; tabs.appendChild(d); });
+  var on = document.createElement("div"); on.className = "on"; on.textContent = tabName; tabs.appendChild(on);
+  var d2 = document.createElement("div"); d2.textContent = "CE Tools"; tabs.appendChild(d2);
+  var strip = document.createElement("div"); strip.className = "strip";
+  r.appendChild(tabs); r.appendChild(strip); return { root: r, strip: strip };
+}
+
+(function drawAfter() {
+  var sh = ribbonShell("CE Civil");
+  AFTER.forEach(function (p) {
+    var nodes = [];
+    p.big.forEach(function (o) { nodes.push(btn(o, true)); });
+    var col = document.createElement("div"); col.className = "col";
+    p.small.forEach(function (o) { col.appendChild(btn(o, true)); });
+    if (p.more) col.appendChild(moreBox(p.more[0], p.more[1], true));
+    nodes.push(col);
+    sh.strip.appendChild(panel(p.t, nodes));
+  });
+  document.getElementById("after").appendChild(sh.root);
+})();
+
+(function drawBefore() {
+  var sh = ribbonShell("CE");
+  BEFORE.forEach(function (p) {
+    var nodes = [], bigs = [], smalls = [];
+    p.items.forEach(function (o) {
+      var kids = o.kids;
+      var node;
+      if (kids && !o.c) { node = moreBox(o.w, kids.map(function (k) { return { c: k, w: k, k: k.slice(0, 2), big: false }; }), false); }
+      else {
+        node = btn({ c: o.c, w: o.w, k: o.k, big: o.big }, true);
+        if (kids && o.big) {
+          var wrap = document.createElement("div"); wrap.className = "more"; wrap.style.display = "flex";
+          wrap.appendChild(node);
+          var l = document.createElement("div"); l.className = "list";
+          kids.forEach(function (k) { l.appendChild(btn({ c: k, w: k, k: k.slice(0, 2), big: false }, false)); });
+          node.addEventListener("click", function (ev) { ev.stopPropagation(); var was = wrap.classList.contains("open"); document.querySelectorAll(".more.open").forEach(function (x) { x.classList.remove("open"); }); if (!was) wrap.classList.add("open"); });
+          wrap.appendChild(l); node = wrap;
+        }
+      }
+      (o.big ? bigs : smalls).push(node);
+    });
+    bigs.forEach(function (n) { nodes.push(n); });
+    // small buttons in columns of three
+    for (var i = 0; i < smalls.length; i += 3) {
+      var col = document.createElement("div"); col.className = "col";
+      smalls.slice(i, i + 3).forEach(function (n) { col.appendChild(n); });
+      nodes.push(col);
+    }
+    sh.strip.appendChild(panel(p.t, nodes));
+  });
+  document.getElementById("before").appendChild(sh.root);
+})();
+
+// the table of the ten
+(function () {
+  var rows = [
+    [1, "Pit", "PIT", "Network", "Today: Draw panel. Now: first big button of Network."],
+    [2, "Pipe", "CD", "Network", "Today: Draw panel. Now: second big button of Network."],
+    [3, "Legal point of discharge", "CDLPD", "Network", "Today: Design panel. Now: Network, right under the pipe, because it ends the network."],
+    [4, "Edit", "CDEDIT", "Levels", "Today: Edit panel. Now: big button in Levels (it fixes one pit or pipe)."],
+    [5, "Solve run", "CDRUNSOLVE", "Levels", "Today: one of ten small buttons in Review. Now: big button in Levels."],
+    [6, "Renumber pits", "CDRENUMBER", "Sheet", "Today: no button (type it). Now: big button in Sheet."],
+    [7, "Pit Schedule", "PITSCHEDULE", "Sheet", "Today: Review panel. Now: big button in Sheet. Its fixes are still being proved."],
+    [8, "Rule check, with Calculations", "CDRULES + CDCALC", "Check", "Today: Rule check has no button; Calculations is in Review. Now: both in Check, side by side."],
+    [9, "Check this drawing", "CDCHECKCURRENT", "Check", "Today: Review panel. Now: first big button of Check."],
+    [10, "Move + Rotate", "MR", "Sheet", "Today: not on the CE tab. Now: Sheet, next to Copy + Rotate (markup comes back here)."]
+  ];
+  var t = document.getElementById("tenTable");
+  t.innerHTML = "<tr><th>#</th><th>Tool</th><th>Typed as</th><th>Panel</th><th>What moved</th></tr>" +
+    rows.map(function (r) { return "<tr><td>" + r[0] + "</td><td>" + r[1] + "</td><td>" + r[2] + "</td><td>" + r[3] + "</td><td>" + r[4] + "</td></tr>"; }).join("");
+})();
+
+// scale each ribbon down (never up) so the whole tab is in view; a real ribbon is the screen width
+function fit() {
+  document.querySelectorAll(".card > .ribbon").forEach(function (r) {
+    r.style.zoom = 1;
+    var avail = r.parentElement.clientWidth - 30, w = r.scrollWidth;
+    r.style.zoom = Math.max(0.8, Math.min(1, avail / w));   // never smaller than 80 percent: today's ribbon is wider than a screen, which is part of the point
+  });
+}
+window.addEventListener("resize", fit); fit();
+
+// close open lists on any click elsewhere
+document.addEventListener("click", function () { document.querySelectorAll(".more.open").forEach(function (x) { x.classList.remove("open"); }); });
+
+// dark / light
+(function () {
+  var root = document.documentElement, btnMode = document.getElementById("mode");
+  var dark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+  function apply() { root.setAttribute("data-theme", dark ? "dark" : "light"); btnMode.textContent = dark ? "Switch to light" : "Switch to dark"; }
+  btnMode.addEventListener("click", function () { dark = !dark; apply(); });
+  apply();
+})();
+</script>
+</body>
+</html>
