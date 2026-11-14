@@ -308,6 +308,20 @@ Numbers are that file's Q numbers. That file itself is not edited by the ask cha
 - **Not known (not checked):** how much of the real evidence has been gathered and cleared for use; the ask chat is not allowed to open `C:\CE_DrawingIntelligence`.
 - **Ask chat's reading (mine):** he is asking why CE's rules for reading old drawings are being guessed and put to him one by one (Q13 to Q16, Q72, Q73, Q80 to Q82) when his own past drawings could show what the office actually drew. That is the purpose the evidence model was designed for. Whether to do it, when, and how a learnt pattern becomes a rule are his to decide and are asked next.
 
+**12.2 Three follow-ups on 12.1. Tim, Sun 15 Nov 2026 02:13 PC clock.** Before answering he was told: the evidence model is a written design; the trust run's reader rules were written by hand and do not use it; how much real evidence is gathered and cleared is not known to this chat; and a common pattern never becomes an engineering rule without his word. He was shown a five-box picture: past drawings, the evidence model finds patterns, patterns shown to him in a batch, then on his tick into the office setup and into notes Claude reads.
+
+1. **Who should learn from the old drawings?** Tim clicked: "Both CE and Claude (Recommended)". Choice text he saw: "CE reads an old job and proposes 'IL text 2.2 m along the pipe belongs to this pipe end' because your old jobs show that. Claude reads the same patterns before changing a tool, so it stops guessing how the office drew." Not chosen: "CE only"; "Claude only, for now".
+2. **How does a pattern become a rule CE uses?** Tim clicked: "Shown to me in batches, I tick (Recommended)". Choice text he saw: "'On 40 of 46 old jobs the invert text sits within 2.5 m of the pipe end. Use 2.5 m?' with a picture of three real cases. Nothing is used until you tick it." Not chosen: "Used as Proposed straight away"; "Only for things I named".
+3. **When?** Tim clicked: "Now, reading only, beside the ten (Recommended)". Choice text he saw: "a side chat studies the evidence and writes up patterns while the ten tools are still being proven; no tool changes until the ten are done and you have ticked the patterns." Not chosen: "After the ten are proven"; "Now, and build it into the reader".
+
+**What this is (ask chat's reading, mine):**
+
+1. **Approved by Tim:** a reading-only study of the evidence, starting now, beside the ten, for Civil and Structural (his 12.1 words: "both structurally and civil"), writing up patterns for him to tick in batches.
+2. **Not approved:** any change to a tool, the reader or the office setup from those patterns before the ten are done and he has ticked the pattern. "Prove, don't draft" is unchanged.
+3. **Still binding on whoever does the study:** the private-data rules (no client name, address or job number in any repository; the evidence folder's own privacy classes), and the evidence model's own line that frequency alone never makes an engineering rule.
+4. **Not decided:** which chat does the study, and how many patterns make a batch. The ask chat does not start it; the controller has been told his words.
+5. **Effect on the older questions (mine):** Q16, Q73 and Q80 to Q82 ask him for distances and text patterns from memory. They are better answered by the study with pictures of real cases than asked cold, so the ask chat holds them back unless he wants them now.
+
 ---
 
 ## Still to ask in the interview (not decisions)
