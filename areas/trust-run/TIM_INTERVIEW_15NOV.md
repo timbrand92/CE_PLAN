@@ -873,6 +873,42 @@ Rule: a mock-up OK is approval of the picture. It is not a go-ahead to build, an
 
 ---
 
+## 13. Interview on the whole-product draft (`FINAL_PRODUCT_DRAFT_15NOV.md`)
+
+Before these he was shown, in the chat: the problem in numbers (145 Civil commands, 47 buttons, 35 checks and repairs, about 7 things a drafter does), the one-job-record picture, the seven rules, a before and after (145 commands to know about; about 43 buttons in 6 panels, about 10 needed on a simple job, 1 Check door), and what the ask chat does not know yet.
+
+**13.1 Do the seven rules describe the product you want?**
+
+- **Tim, Sun 15 Nov 2026 03:30 PC clock, clicked:** "Yes, make them the plan's focus (Recommended)".
+- **Choice text he saw:** "before any tool is kept or built, it is checked against the seven: does it ask for something already typed? Does its name say what it does? A tool that fails does not get a button."
+- **Not chosen:** "Mostly; something is missing"; "Not quite right".
+- **The seven as he saw them:** 1. Type once (council, job details, rainfall, datum, sheet size and revision go in at New Job; nothing asks again). 2. The ribbon is the method (left to right is the job, for Civil and, roof down, for Structural). 3. Few buttons, plain names (named for the thing, never for the software). 4. CE does its own housekeeping, and says so in one line. 5. One place to look, one place to fix. 6. Never guesses, never surprises. 7. Same look, words and behaviour across Civil, Structural and Manager.
+- **State:** his word that the seven are the plan's focus. Folding them into the one plan is the controller's to do; this file is the record, not the plan.
+
+**13.2 Which things do you enter more than once today?**
+
+- **Tim, Sun 15 Nov 2026 03:30 PC clock, ticked all four:** "Job details for the title block", "Council and rainfall", "Levels and sizes", "The same across Civil and Structural".
+- **Examples he saw:** job number, site address, client, drawn by and revision typed on each sheet, then again in the schedule heading or the calcs; the council picked for the rules, again for rainfall, again in the calculations; a pit's cover level in the pit window, then typed again on a label, in the schedule or the long section; on a job with both, the address, job number and revision entered once in the drainage drawing and again in the structural one.
+- **Ask chat's reading (mine):** all four kinds of double entry are real for him. He added nothing under Other. These were my examples of where it might happen; the exact places each value is asked for today have not been listed from the tools and should be, so "type once" can be checked off place by place.
+
+**13.3 Which test decides what CE does by itself?**
+
+- **Tim, Sun 15 Nov 2026 03:30 PC clock, typed instead of clicking a choice:** "more automatic but with ability for overridding easily"
+- **Choices he was shown and did not pick:** "Changes nothing I drew, undoable, says so (Recommended)"; "More automatic: also propose and apply levels" (CE works out an invert when a pipe joins a pit and writes it, with a line and one U); "Less automatic: always ask".
+- **Ask chat's reading (mine):** he wants CE to do more by itself than my draft's cautious test allowed, and wants overriding a result to be easy. His wording is closest to the second choice, with easy override added.
+- **A tension I am flagging, NOT resolving:** at 01:57 tonight (9.1) he ticked that CE must never, by itself and without showing him first, change a level or size, renumber pits, move or delete his labels, or change layers or colours; and at 01:53 (4.1) he chose preview first, then Apply, for solved levels. "More automatic" may reach into those. Which of the two wins for levels, sizes and pit numbers is asked next. Until he answers, 9.1 stands as written.
+
+**13.4 How this fits with "prove, don't draft".**
+
+- **Tim, Sun 15 Nov 2026 03:30 PC clock, clicked:** "Build it alongside the ten now". **This was NOT the recommended choice** (recommended was "Design it now on paper; build after the ten").
+- **Choice text he saw:** "'prove, don't draft' is lifted for this work and builders start on the simpler layout straight away."
+- **Not chosen:** "Design it now on paper; build after the ten (Recommended)"; "Stop the ten; redesign first".
+- **What this is (mine):** his word lifting "prove, don't draft" (his rule of 14 Nov) FOR THIS WORK: the simpler, human-first design of the whole product. The ten continue alongside; he did not choose to stop them.
+- **What it does not lift (standing rules he did not touch tonight):** a new or changed screen still needs a mock-up and his OK first (his 15 Nov screen rules; he used that rule four times tonight); nothing merges into shipped lines or goes to colleagues without his word; installs on his PC stay under his existing standing approval for trial batches; the five trust rules are still the gate (Q65, tonight).
+- **Not decided:** what is built first. Asked next.
+
+---
+
 ## Still to ask in the interview (not decisions)
 
 1. **Starting a job:** what else belongs in the New Job window; whether New Job attaches the architect's xref.
