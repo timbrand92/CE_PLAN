@@ -40,6 +40,13 @@ Queue answers (the controller's numbered items) are in `FOR_TIM_QUEUE.md`, not h
 - **Not chosen:** "I place each one (Recommended)" (CE keeps a count, never guesses a position); "CE proposes, I tick" (CE finds the architect's DP symbols and places only the ones he ticks).
 - **Ask chat's reading (mine):** he wants CE to find downpipes on the architect's plan where their symbols are clear and offer them, with placing by hand always available. Not yet asked, so NOT decided: whether a proposed downpipe needs his tick before it is placed (the "CE proposes, I tick" choice described ticking; the one he picked did not say), and what counts as a "clear" symbol. This is new work, not a fix, so under "prove, don't draft" it is an idea for later, not something to build now.
 
+**2.2 When CE proposes downpipes from the architect's symbols, what happens next?**
+
+- **Tim, Sun 15 Nov 2026 01:55 PC clock, clicked:** "Nothing placed until I tick (Recommended)".
+- **Choice text he saw:** "12 ghost downpipes show on the plan with a list; you untick the 2 that are really vent pipes and press Apply. 10 are placed, one U takes them back."
+- **Not chosen:** "Place all, I delete extras"; "Tick all in one click".
+- **Ask chat's reading (mine):** this settles the open point in 2.1: a proposed downpipe is never placed without his tick. The example had the proposals shown ticked for him to untick; whether they start ticked or unticked was not asked as its own question. Still a later idea, not something to build now.
+
 ## 3. Laying the network
 
 **3.1 How do you want to draw pits and pipes?**
@@ -59,15 +66,30 @@ Queue answers (the controller's numbered items) are in `FOR_TIM_QUEUE.md`, not h
 
 ## 5. Checking
 
-Not asked yet.
+**5.1 When should CE check the drawing against the council rules?**
+
+- **Tim, Sun 15 Nov 2026 01:55 PC clock, clicked:** "Before schedule or plot". **This was NOT the recommended choice** (recommended was "When I ask, plus a quiet line").
+- **Choice text he saw:** "you draft undisturbed; when you place the Pit Schedule or plot, CE runs the check first and lists anything open."
+- **Not chosen:** "When I ask, plus a quiet line (Recommended)" (a status line always showing counts, full check only on a click); "Live, as I draw" (a pipe turns amber as soon as it breaks a rule).
+- **Ask chat's reading (mine):** he wants to draft without being interrupted, and the check to run by itself at the two moments the drawing leaves his hands. NOT asked, so NOT decided: whether he still wants the always-there status line (area 1 of `areas\TRUST_ONE_DRAFTER_CIVIL_DAY_14NOV.md`); whether an open warning at plot time stops the plot (his no-hard-blocks rule says it should warn and carry on); whether Check stays available on a click as well. CE running a check at plot time is new behaviour, not a fix: a later idea, nothing to build now.
 
 ## 6. Getting it on the sheet
 
-Not asked yet.
+**6.1 The Pit Schedule is placed, then a pipe changes on the plan. What should the schedule do?**
+
+- **Tim, Sun 15 Nov 2026 01:55 PC clock, clicked:** "Update itself". **This was NOT the recommended choice** (recommended was "Mark it out of date").
+- **Choice text he saw:** "you change P4 to P5 from 150 to 225 and the schedule row changes by itself, with one line saying it did."
+- **Not chosen:** "Mark it out of date (Recommended)" (changes only on Refresh); "Warn only at plot".
+- **Ask chat's reading (mine):** he wants the schedule on the sheet to follow the plan without a Refresh click, and to be told in one line when it has. This differs from the controller's draft in `areas\TRUST_ONE_DRAFTER_CIVIL_DAY_14NOV.md` section 2 item 3 ("marked 'out of date' until refreshed"); Tim's answer is newer. NOT asked: the same question for the long section and the calculations; what happens to a schedule he has edited by hand. New behaviour, not a fix: a later idea, nothing to build now.
 
 ## 7. Markup coming back
 
-Not asked yet.
+**7.1 You move pit P4 by 2 m with MR. What should happen to its pipes and levels?**
+
+- **Tim, Sun 15 Nov 2026 01:55 PC clock, clicked:** "Pipes follow, ask about levels". **This was NOT the recommended choice** (recommended was "Pipes follow, levels kept, flagged").
+- **Choice text he saw:** "the pipes stretch, then CE offers the solve preview for that run: Apply to update the levels or Esc to keep them."
+- **Not chosen:** "Pipes follow, levels kept, flagged (Recommended)"; "Pipes follow, levels re-solved" (CE re-solves by itself and says which levels changed).
+- **Ask chat's reading (mine):** pipes always stay joined to a moved pit; levels are never changed silently and never left silently stale: CE offers the same preview as 4.1 and he chooses. Consistent with 4.1 (preview first, then Apply). MR offering the solve preview is new behaviour: a later idea; MR's proof in the ten is unchanged by this.
 
 ## 8. What "ready for colleagues" means
 
