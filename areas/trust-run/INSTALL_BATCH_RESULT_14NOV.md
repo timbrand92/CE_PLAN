@@ -267,3 +267,17 @@
 6. **Y-05 save and reopen: BLOCKED** (nothing left to apply after the failed Undo). **Y-06 typing try: BLOCKED** (CDEDIT asked an older-pipe-label question first; Edit Pipe cancelled without saving; the box was not reached).
 7. **For Tim (queue item 9):** Apply wrote levels the preview had warned about: "COVER: pipe from 'P4' upstream obvert cover -1226 mm", "pit 'P4' depth -1126 mm < minimum 300 mm" and others. Nothing hidden, but these levels went into the drawing on one press.
 8. Not known: whether 3.0.90.4 behaves the same (Apply had never been pressed before tonight).
+
+## Item 6b: the Undo question (controller, 15 Nov ~07:00: RSQ16's U came after a second CDRUNSOLVE run, so it may have undone that run, not the Apply)
+
+1. **The controller is right about RSQ16:** its order was Apply, then a second CDRUNSOLVE ("nothing to apply"), then U; the U echoed CDRUNSOLVE. So RSQ16's Y-04 does NOT show that Apply cannot be undone. **RSQ16 Y-04 FAIL is withdrawn; it is NOT TESTED.**
+2. **Codex re-run RSQ17 U1 (07:00 to 07:17): inconclusive again, my brief's fault.** It ordered a ZOOM after Apply, and the first U echoed ZOOM. Then each U took back the second "nothing to apply" run (echo CDRUNSOLVE) and REDO redid it. Report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_RSQ17_U1_20261115_0701.md`; record reads `C:\Lisp Files\_TEST_COPIES_20260923\LOOKS\RSQ17_records\` (RU_0 P4 to P3 from 17.40; RU_1 to RU_4 and RU_8 from 19.99).
+3. **Learned anyway:** (a) a CDRUNSOLVE run that applies nothing still counts as its own undo step (U echoes CDRUNSOLVE and nothing changes): a small point against "one Undo per change", for the controller to weigh; (b) the applied levels and design flows survive save and reopen (P4 IL 19.99 after reopen; CE then says nothing to apply).
+4. **U-06 typing try:** blocked again: the older-pipe-label question came first; the driver refused the typed answer (BUSY) and a hand answer turned into PASTECLIP (cancelled). The Design flow box was not reached.
+5. **Clean re-run RSQ18 started 07:2x:** zoom only before the command, Apply, then U at once with nothing between.
+6. **Clean re-run RSQ18 U1 (07:17 to 07:29): APPLY THEN ONE U PUTS IT BACK, seen in the readings.** Report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_RSQ18_U1_20261115_0718.md`; readings `C:\Lisp Files\_TEST_COPIES_20260923\LOOKS\RSQ18_records\`.
+   - RU_0 (before): P4 to P3 from 17.40 to 17.30. RU_1 (after Apply): 19.99 to 19.70, and the drawing carries the label "IL 19.99". RU_2 (after ONE U, which echoed CDRUNSOLVE): **CE's record AND the drawing fingerprint byte-identical to RU_0** (checked by me; no "IL 19.99" text left). Then CDRUNSOLVE offered the same 9 changes again (Codex saw it; Cancel).
+   - RU_8: Apply again, save and reopen: 19.99 kept; CE then said nothing to apply.
+   - **Evidence class:** robot-style readings (record and drawing before/after). Codex saw each step live but its screenshot saver kept the baseline image, so Codex claims no visual PASS ("NOT TESTED: EVIDENCE").
+   - **So: CDRUNSOLVE Apply is undone by one U (record and drawing). The 06:57 FAIL is withdrawn.** Small point still open: a CDRUNSOLVE run that applies nothing counts as its own undo step.
+   - Typing try not run (my RSQ18 brief left the step out); the Design flow box stays untested.
