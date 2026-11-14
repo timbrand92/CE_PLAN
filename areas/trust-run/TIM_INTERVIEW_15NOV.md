@@ -747,9 +747,37 @@ Numbers are that file's Q numbers. That file itself is not edited by the ask cha
 - **Not chosen:** "Typed only, no buttons (Recommended)"; "Buttons on the ribbon".
 - **Ask chat's reading (mine):** no preset pit buttons on the ribbon, and they are not among the ribbon tools that must be proven before release (8.3). He was not asked whether the typed commands should be removed altogether; under the standing rule a command is retired only with his explicit approval, so they stay typed until he says otherwise.
 
+**Which machine the robot may use to prove Roll Back once** (follows the Q51 follow-up; touches older Q0).
+
+- **Tim, Sun 15 Nov 2026 03:09 PC clock, clicked:** "Ask me later".
+- **Choices he was shown and did not pick:** "The spare work PC (Recommended)" (about 30 minutes of his, once); "A second login on my PC" (out of hours, his own login and CE never touched).
+- **State:** OPEN by his choice. The Roll Back proof he approved at 02:25 has no machine yet and waits for one. Nobody may pick a machine for him; in particular a second login on his own PC was offered and NOT chosen.
+
+**Q43. CDCHECKDWG, PITDELETE and CDBREAK.**
+
+- **Tim, Sun 15 Nov 2026 03:09 PC clock, clicked:** "CDCHECKDWG on the ribbon; other two typed". **This was NOT the recommended choice** (recommended was "All three typed only").
+- **Choice text he saw:** "you use the consultant drawing check on real jobs, so it gets a button; pit delete and pipe break stay typed."
+- **Not chosen:** "All three typed only (Recommended)"; "All three on the ribbon".
+- **Ask chat's reading (mine):** CDCHECKDWG is a ribbon tool, so under 8.3 it is one of the tools that must be seen working before the release. PITDELETE and CDBREAK stay typed and do not hold the release up.
+
+**Q40. Which CE tools show on every drawing.**
+
+- **Tim, Sun 15 Nov 2026 03:09 PC clock, clicked:** "CE Tools tab plus CLEAN, levels, text (Recommended)".
+- **Choice text he saw:** "on a Structural drawing you still have CE Blocks, Move + Rotate, Copy + Rotate, CLEAN, level marks and the text tools, because none of them carries drainage meaning."
+- **Not chosen:** "Only the CE Tools tab as it is"; "I will list them".
+- **Ask chat's note (mine):** which commands "the text tools" and "level marks" are, by name, was not listed to him; the list should be shown on the ribbon mock-up.
+
+**Q64, the footings part. Footings when Structural goes to colleagues.**
+
+- **Tim, Sun 15 Nov 2026 03:09 PC clock, clicked:** "Footings included". **This was NOT the recommended choice** (recommended was "Not in the first Structural release").
+- **Choice text he saw:** "Structural waits until the footing tools are proven too, so a colleague can take a job from roof to footings on CE."
+- **Not chosen:** "Not in the first Structural release (Recommended)".
+- **Ask chat's reading (mine):** consistent with his Civil ruling (8.3): the whole thing working before colleagues get it. The Structural release now has at least these conditions from tonight: after Civil and Manager (Q57); CEMEMBER and its window in place of SBEAM; footing tools proven.
+- **Not asked from Q64:** tie-downs, wind class and soil report, the hatch button, sheets and issue.
+
 **Queue item 11** (added by the controller at about 02:40): the same CDRUNSOLVE negative-cover case as item 9, which he answered at 01:59. Not asked again; marked in `FOR_TIM_QUEUE.md`.
 
-**Older questions answered so far (this file, 15 Nov):** Q1, Q2 (permission, not the chosen set), Q3, Q5 to Q15, Q17 to Q33, Q35, Q36, Q46 to Q52, Q54 to Q57, Q59, Q60 (mark twice), Q61, Q62 (his words), Q65, Q66 (all but Rule 15), Q67, Q69 to Q71, Q72 (pit-number case), Q78 (truss part), Q83 to Q85, Q87, and Q42. **Q86 asked, not answered as asked ("these tools are confusing"; his four reasons are recorded).** **Count: 62 of the 87 have an answer in whole or in part; 5 held for the evidence study.** **Q53 open by his choice ("I'll tell you later"): not the 17 Oct pilot.** **Held back for the evidence study (12.2):** Q16, Q73, Q80 to Q82. **Not asked yet:** Q0 to Q4, Q33 to Q35, Q37 to Q45, Q47 to Q56, Q58 to Q72, Q74 to Q79, Q83 to Q87, and the two added at the end of that file (the template one is now answered by queue item 6; the robot pressing CDLPD's "Continue in drawing" is not).
+**Older questions answered so far (this file, 15 Nov):** Q1, Q2 (permission, not the chosen set), Q3, Q5 to Q15, Q17 to Q33, Q35, Q36, Q46 to Q52, Q54 to Q57, Q59, Q60 (mark twice), Q61, Q62 (his words), Q65, Q66 (all but Rule 15), Q67, Q69 to Q71, Q72 (pit-number case), Q78 (truss part), Q83 to Q85, Q87, Q40, Q42, Q43, Q64 (footings part). **Q86 asked, not answered as asked ("these tools are confusing"; his four reasons are recorded).** **Count: 65 of the 87 have an answer in whole or in part; 5 held for the evidence study.** **Q53 open by his choice ("I'll tell you later"): not the 17 Oct pilot.** **Held back for the evidence study (12.2):** Q16, Q73, Q80 to Q82. **Not asked yet:** Q0 to Q4, Q33 to Q35, Q37 to Q45, Q47 to Q56, Q58 to Q72, Q74 to Q79, Q83 to Q87, and the two added at the end of that file (the template one is now answered by queue item 6; the robot pressing CDLPD's "Continue in drawing" is not).
 
 ---
 
