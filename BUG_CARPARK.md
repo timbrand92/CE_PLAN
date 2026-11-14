@@ -18585,6 +18585,13 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 
 **Evidence:** Found by reading the installed code on 13 Nov 2026. Not yet seen in AutoCAD.
 
+**Controller's check, Sun 15 Nov 2026 00:35 (fix installed in Civil 3.0.90.3 and 3.0.90.4; NOT yet accepted):**
+1. **Seen by the controller in Codex's screenshots** (`C:\Lisp Files\_TEST_COPIES_20260923\LOOKS\LPD14_L2_20261114_1618\screenshots\`): the plain polyline pick (`LPD14-17`, `LPD14-18`) and the CE pipe P2 to P1 carrying the LPD note (`LPD14-34`).
+2. **CE's record read by the controller:** before, LPD on pipe 109500, COUNCIL STUB (`C:\CE_WORK\scratch\trustprobe\reads\LPDCHK_BEFORE.record.txt`); after, LPD on pipe 109835, pit 109768, KERB & CHANNEL, invert 17.08 (`LPDCHK_AFTER.record.txt`).
+3. **Why it is not written FIXED:** Codex's own report (`CODEX_VERIFY_LPD14_L2_20261114_1618.md`) says "No overall acceptance": steps L-07 and L-08 are marked FAIL because the brief gave the wrong expected pipe handle (10F608; the real one is 109835). The behaviour was right, the verdict was not a PASS. One short Codex re-look with the right handle, on 3.0.90.4, is ordered.
+4. **Seen and not judged (L-06):** a plain polyline drawn on the pipe layer, with no pipe in CE's record, WAS accepted as the LPD pipe. Whether a bare pipe-layer line should count as a CE pipe is the same question as Edit Pit's made-up "100 dia UPVC"; kept here, no new entry.
+5. **Different wording (L-04):** a plain LINE is refused with "Select a pipe, pit, or any block (kerb outlet, connection point, etc.)", not the "not a CE pipe" line.
+
 **Status:** OPEN
 
 ## BUG-1299 — CDLPD: an old LPD note on a locked layer stays and a second note is added on top
