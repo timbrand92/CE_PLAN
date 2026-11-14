@@ -18592,7 +18592,14 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 4. **Seen and not judged (L-06):** a plain polyline drawn on the pipe layer, with no pipe in CE's record, WAS accepted as the LPD pipe. Whether a bare pipe-layer line should count as a CE pipe is the same question as Edit Pit's made-up "100 dia UPVC"; kept here, no new entry.
 5. **Different wording (L-04):** a plain LINE is refused with "Select a pipe, pit, or any block (kerb outlet, connection point, etc.)", not the "not a CE pipe" line.
 
-**Status:** OPEN
+**Controller's check, Sun 15 Nov 2026 05:50 (accepted):**
+1. **Codex, real AutoCAD 2027, Civil 3.0.90.7, run LPD15 L3:** "OVERALL: PASS", 8 PASS, 1 SEEN, 0 FAIL. Plain polyline refused (L-03), bare polyline on the pipe layer refused (L-06, Tim's answer of 15 Nov: only recorded pipes), recorded pipe 109835 accepted (L-07), still 109835 after save and reopen (L-08). Report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_LPD15_L3_20261115_0540.md`.
+2. **Screenshots seen by the controller:** `LPD15-35-L06-picked.png` (the bare lines, no LPD note placed) and `LPD15-42-L07-label.png` (LPD note at P1 on the recorded pipe), in `C:\Lisp Files\_TEST_COPIES_20260923\LOOKS\LPD15_L3_20261115_0540\screenshots\`.
+3. **CE's record read by the controller:** before, LPD on pipe 109500, COUNCIL STUB (`C:\CE_WORK\scratch\trustprobe\reads\LPD15CHK_BEFORE.record.txt`); after, pipe 109835, pit 109601, KERB & CHANNEL, invert 16.98 (`LPD15CHK_AFTER.record.txt`).
+4. **Accepted on Tim's rule of 14 Nov** ("2. yes": where the robot cannot make a pick, a Codex PASS with screenshot plus a before-and-after check of CE's record counts). No robot PASS exists for the pick, by that rule's design.
+5. **Not covered by this acceptance:** the L-04 wording for a plain LINE ("Select a pipe, pit, or any block ..."), recorded only; the record's format number going 2.2 to 2.3 when the window is used; BUG-1299 (old note on a locked layer). CDLPD as a tool is not accepted until those are looked at.
+
+**Status:** FIXED - 2026-11-15 (Codex-accepted, record-checked, Civil 3.0.90.7, Codex LPD15 L3)
 
 ## BUG-1299 — CDLPD: an old LPD note on a locked layer stays and a second note is added on top
 
