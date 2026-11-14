@@ -635,7 +635,33 @@ Numbers are that file's Q numbers. That file itself is not edited by the ask cha
 - **Choice text he saw:** "a brace pasted from an older job with its tag cleared stops being counted as type A; the bracing panel turns amber, not green, until you give it a type. Same rule as Unknown everywhere in Civil."
 - **Not chosen:** "Keep counting it as type A".
 
-**Older questions answered so far (this file, 15 Nov):** Q1, Q2 (permission, not the chosen set), Q3, Q5 to Q15, Q17 to Q33, Q35, Q36, Q46 to Q52, Q54 to Q57, Q59, Q65, Q66 (all but Rule 15), Q69, Q83. **Q53 open by his choice ("I'll tell you later"): not the 17 Oct pilot.** **Held back for the evidence study (12.2):** Q16, Q73, Q80 to Q82. **Not asked yet:** Q0 to Q4, Q33 to Q35, Q37 to Q45, Q47 to Q56, Q58 to Q72, Q74 to Q79, Q83 to Q87, and the two added at the end of that file (the template one is now answered by queue item 6; the robot pressing CDLPD's "Continue in drawing" is not).
+**Q78, the truss part. Should the truss rule be a Settings value?**
+
+- **Tim, Sun 15 Nov 2026 02:38 PC clock, clicked:** "Yes, on Settings, set to 'count' (Recommended)".
+- **Choice text he saw:** "Settings has 'Bracing trusses (BT) count toward wall bracing: Yes'. If the office ever decides otherwise the value changes and nothing is rebuilt. Matches your settings-first rule."
+- **Not chosen:** "Fixed in the tool".
+- **Not asked from Q78:** whether the two schedule-row fixes (BUG-497, BUG-498) go in with no off switch. The older file recommended no switch, as fixes to a wrong result.
+
+**Q61. Where the required bracing figures are kept.**
+
+- **Tim, Sun 15 Nov 2026 02:38 PC clock, clicked:** "In the drawing (Recommended)".
+- **Choice text he saw:** "opening job B shows job B's required bracing, not job A's, and the same drawing shows the same figures on any PC."
+- **Not chosen:** "Keep on the PC".
+
+**Q71. Which way is north-south on the bracing panel.**
+
+- **Tim, Sun 15 Nov 2026 02:38 PC clock, clicked:** "Ask once, keep in the drawing (Recommended)".
+- **Choice text he saw:** "you pick one wall line once per drawing; a house drawn at 30 degrees to fit an A3 sheet then gets the same totals as the same house drawn square."
+- **Not chosen:** "Use the drawing's axes, say so".
+
+**Q60, the mark-twice part. A support mark that appears twice in the member schedule with different sizes.**
+
+- **Tim, Sun 15 Nov 2026 02:38 PC clock, clicked:** "Ask, showing both sizes (Recommended)".
+- **Choice text he saw:** "'C1 is 89 SHS on GROUND and 75 SHS on FIRST. Which?' Every size on the plan is then one you saw or chose."
+- **Not chosen:** "Take the first row, as today"; "Match the floor by itself".
+- **Not asked from Q60:** the timber stud pack part (DS1 naming a timber size from the schedule but drawing 90 x 90).
+
+**Older questions answered so far (this file, 15 Nov):** Q1, Q2 (permission, not the chosen set), Q3, Q5 to Q15, Q17 to Q33, Q35, Q36, Q46 to Q52, Q54 to Q57, Q59, Q60 (mark twice), Q61, Q65, Q66 (all but Rule 15), Q69, Q71, Q78 (truss part), Q83. **Q53 open by his choice ("I'll tell you later"): not the 17 Oct pilot.** **Held back for the evidence study (12.2):** Q16, Q73, Q80 to Q82. **Not asked yet:** Q0 to Q4, Q33 to Q35, Q37 to Q45, Q47 to Q56, Q58 to Q72, Q74 to Q79, Q83 to Q87, and the two added at the end of that file (the template one is now answered by queue item 6; the robot pressing CDLPD's "Continue in drawing" is not).
 
 ---
 
