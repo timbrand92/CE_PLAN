@@ -410,7 +410,35 @@ Numbers are that file's Q numbers. That file itself is not edited by the ask cha
 - **Not chosen:** "Stop the write-back" (shown to him as "closest to 'CE never changes a size by itself'"); "Leave it silent".
 - **Ask chat's note (mine):** he chose to keep the write-back with a line even with the stricter choice in front of him. So 9.1 ("CE never changes a level or size by itself, without showing you first") is read as: a size read off the drawing into CE's record, and said in a line, counts as shown. It does not cover changing what is drawn.
 
-**Older questions answered so far (this file, 15 Nov):** Q5 to Q15, Q17 to Q32, Q36, Q46, Q57. **Held back for the evidence study (12.2):** Q16, Q73, Q80 to Q82. **Not asked yet:** Q0 to Q4, Q33 to Q35, Q37 to Q45, Q47 to Q56, Q58 to Q72, Q74 to Q79, Q83 to Q87, and the two added at the end of that file (the template one is now answered by queue item 6; the robot pressing CDLPD's "Continue in drawing" is not).
+**Q49. Who looks after each release.**
+
+- **Tim, Sun 15 Nov 2026 02:24 PC clock, clicked:** "The release chat, I am told". **This was NOT the recommended choice** (recommended was "Me, for the first three").
+- **Choice text he saw:** "the chat sends, watches and takes back by its own checks, and gives you one line a day on how it is going."
+- **Not chosen:** "Me, for the first three (Recommended)"; "Someone else in the office".
+- **Ask chat's reading (mine):** the release chat sends, watches and may take a release back by its own checks; he gets one line a day. Not asked: who a colleague's report goes to first (see Q50), and whether the chat may take a release back without asking him. The choice text said "by its own checks", which I read as yes; worth confirming before the first release, since it acts on colleagues' PCs.
+
+**Q50. How a colleague reports a problem.**
+
+- **Tim, Sun 15 Nov 2026 02:24 PC clock, typed instead of clicking a choice:** "all of above"
+- **The three choices he was shown:** "A message to me with the support zip (Recommended)" (Teams or in person: drawing name, what they did, the CESUPPORT zip); "CE's own feedback button" (one button sends the drawing name, what they typed and the zip without leaving AutoCAD; he was told "It does not send yet, so it would have to be built and proven first"); "An email address" (they email a CE support address with the zip).
+- **Ask chat's reading (mine):** all three routes are open to a colleague. The message route exists today. The feedback button sending is new work. The email address does not exist yet as far as the record shows; which address was not asked. Under 8.3 ("Everything in the Manager plan" working before release) it is not settled whether the feedback button must work before the first release; not asked.
+
+**Q51. How going back a version is first proven.**
+
+- **Tim, Sun 15 Nov 2026 02:24 PC clock, clicked:** "Trust the Roll Back button". **This was NOT the recommended choice** (recommended was "Rehearsed on a spare login first").
+- **Choice text he saw:** "no rehearsal; the button is switched on and first used when a release goes wrong."
+- **Not chosen:** "Rehearsed on a spare login first (Recommended)"; "Rehearsed on my PC out of hours".
+- **Ask chat's reading (mine):** he does not want a rehearsal exercise; Manager's own Roll Back button is the way back, not renaming folders by hand.
+- **A tension I am flagging, not resolving:** at 02:18 (8.3) he chose that "taking back" must be WORKING before the first release. The older questions file says going back has never been tried and the button is hidden and admin-only. A button that has never been pressed is not known to work. Whether the robot may press it once on a spare login or scratch set-up, so that "working" is seen without any rehearsal by Tim, is asked next.
+
+**Q52. How the one full release reaches the office.**
+
+- **Tim, Sun 15 Nov 2026 02:24 PC clock, clicked:** "One colleague, two clean days, then all (Recommended)".
+- **Choice text he saw:** "the colleague who drafts drainage most gets it first; after two clean days everyone else moves on the same day, so two people never work one job on different CE versions for long."
+- **Not chosen:** "Everyone the same day"; "One at a time, two days apart".
+- **Ask chat's note (mine):** the first colleague is described, not named (older Q53 is not asked). The older file's "at most one release a week" was not put to him.
+
+**Older questions answered so far (this file, 15 Nov):** Q5 to Q15, Q17 to Q32, Q36, Q46, Q49 to Q52, Q57. **Held back for the evidence study (12.2):** Q16, Q73, Q80 to Q82. **Not asked yet:** Q0 to Q4, Q33 to Q35, Q37 to Q45, Q47 to Q56, Q58 to Q72, Q74 to Q79, Q83 to Q87, and the two added at the end of that file (the template one is now answered by queue item 6; the robot pressing CDLPD's "Continue in drawing" is not).
 
 ---
 
