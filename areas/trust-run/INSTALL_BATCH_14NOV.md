@@ -504,3 +504,9 @@ As section 5 at the top. If a pass fails, batch 5 is put back with `restore_batc
    - **(a)** a separate, reviewed change to the record update so a bare line is not added by itself (listed as a possible pipe instead, as the reader 2040 already proposes).
    - **(b)** the Q8 "both pits" label rule.
    - **(c)** `reachesFollowDrawingUnits` split from the width-as-size reading, or shipped off.
+
+### Batch 4: known gaps (added 15 Nov 04:00, no code now)
+
+1. **Q27:** the record-change line does not count a pit type filled in as "GRATED PIT" among its guesses. It counts sizes, materials, lid classes, pit numbers and stand-in codes only.
+2. **Q28:** whether the Pit Schedule's on-open write-back of a drawn pipe size prints a line is UNCHECKED. Tim wants it said in a line.
+   - **Added to the PITSCHEDULE robot list (batch 4, section 7, and every later batch):** open the Pit Schedule on a copy where a pipe's drawn size differs from CE's record. Read the command line for a "CE updated its record (...)" line naming the size read from the drawing, then read CE's record. Line present: PASS. Size written with no line: FAIL, to log as a gap.
