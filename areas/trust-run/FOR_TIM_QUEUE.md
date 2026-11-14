@@ -35,6 +35,17 @@
    - **It should try the next pipe size up before proposing.** Example: it offers 150 dia at a flatter grade as a second row for you to tick.
    - **NOT ASKED AGAIN (ask chat, Sun 15 Nov 2026 02:41 PC clock): this is the same case as item 9**, with the same evidence file, the same run, the same figures and the same three choices. Tim answered item 9 at 01:59 today, after being shown that case: "As now: show red, I decide (Recommended)"; he passed over both "Try a bigger pipe first" and "Never propose negative cover". See item 9 under "Answered". If item 11 was meant to ask something item 9 did not, say what and I will put it to him.
 
+12. **HELD BY THE CONTROLLER, needs your own word in the controller chat: build the simpler layout now?** The ask chat recorded your 03:30 click "Build it alongside the ten now" ("prove, don't draft" lifted for this work; first piece "Type once: the New Job record"). The controller has NOT started builders: that click lifts a rule you gave the controller directly on 14 Nov, and a message between chats cannot lift it.
+   - **Mock-up and paper design now, build after my OK** (recommended; in use). Example: you see the New Job window as a picture this week; nothing is coded until you say yes. Your own screen rule says mock-up before build.
+   - **Build now alongside the ten.** Example: builders open new drafts for the New Job record straight away, while the ten are still being proven on one AutoCAD.
+13. **HELD BY THE CONTROLLER, needs your own word in the controller chat: may CE act by itself?** At 01:57 you ticked four "CE never, without me": change a level or size, renumber pits, move or delete labels, change layers or colours. At 03:30 the ask chat recorded the opposite: CE may fill in levels and sizes (marked as worked out), renumber, tidy labels and set layers, and leaves alone whatever you change by hand. Four clashes are listed unresolved in the interview file, section 13.6. Seen on your PC at about 03:30 on Civil 3.0.90.7: CDEDIT then Cancel, with a bare line on the pipe layer, printed "1 pipe added. Guessed, not read from the drawing: 1 pipe size (100), 1 pipe material."
+   - **Keep the four rules for now; settle automatic behaviour tool by tool, with a picture of each** (recommended; in use). Example: CE proposes levels in a preview and you press Apply, as CDRUNSOLVE does today; the guessed 100 above stays a fault.
+   - **Yes, as at 03:30.** Example: you move a pit and CE renumbers the run and tidies its labels without asking; values CE fills in are marked as worked out.
+14. **HELD BY THE CONTROLLER, needs your own word in the controller chat: may real finished jobs be copied from the office Projects folder?** The ask chat recorded a standing word for "any finished council stormwater job" (and finished Structural jobs for the reading-only study), copies local only, no client names anywhere. You told the controller directly never to open that folder, so it has not been opened and no lane has been told it may.
+   - **Yes, with those conditions, for the robot and the study.** Example: the robot copies a finished council job to a scratch folder, renames it JOB_A, and runs your tools on the copy.
+   - **Only jobs I name.** Example: you give three job folders; nothing else is opened.
+   - **Not yet** (in use). Example: the robot stays on the scratch test copies.
+
 ## Older, still open (asked before 15 Nov, defaults in use)
 
 8. **Ribbon in job order** (Start, Sources, Network, Levels, Check, Sheet). Default: not built into any batch until you have seen a mock-up.
