@@ -592,3 +592,103 @@ On Tim's standing trial approval. Installed by the controller, after the evidenc
 4. **Live now:** `3.0.90.7+9b977125`, Modern SHA-256 `1111E937330B398458B613D3D54B873620B5A39259C2C06086B6F96FD36F835B`, read back by the controller.
 5. **Backups kept, newest last:** `CE_CVL_SUITE_PRE_dadac7e7_20261115-014806.backup` (3.0.90.4), `CE_CVL_SUITE_PRE_3c620efe_20261115-031354.backup` (3.0.90.5), `CE_CVL_SUITE_PRE_35cdad78_20261115-031503.backup` (3.0.90.6). Put-back, one step each: `restore_batch14e.ps1`, then `restore_batch14d.ps1`, then `restore_batch14c.ps1`. None rehearsed.
 6. **Not yet done:** nothing has run in AutoCAD on 3.0.90.6 or 3.0.90.7. Not accepted. Batch 3's numbered-pits case and Export CSV were not run before this install.
+
+## BATCH 6 (PREPARED, NOT INSTALLED): Civil 3.0.90.8 = batch 5 (3.0.90.7) + draft 2049 (Unknown instead of made-up values) with Q13 and Q14, switch OFF
+
+Written Sun 15 Nov 2026 by lane trust-safety-fixes, on the controller's order ("2049 is your next job, on that existing draft, as batch 6"). Its own folder and version. **Install only on the three-set batch 5:** the script refuses unless live Civil reads `3.0.90.7+9b977125` AND still has its Legacy and Net8 sets, so the 2027-only trial must be put back first. The controller installs.
+
+### 1. What is in it
+
+1. **PR 2049 (TRUST-06) at `f5fd98ea`.** Draft, auto-merge off. Each step was reviewed read-only, the review's findings were fixed, and the fixes were checked again.
+2. **Q13 (Tim: "Listed as possible pipes, I tick"), met.** With `trust.showUnknownInsteadOfGuess` on:
+   - **Not added by itself:** a line drawn by hand on a pipe layer is not added to CE's record. It gets no size, no CE identity and no links to pits.
+   - **Where the gates are:** CE's record update, the relink's record step and its three callers, CDSYNC, CDUPGRADE and the dangling-pipe link step.
+   - **Named in the record-change line:** "N lines on a pipe layer were not added to CE's record: they are possible pipes (CDCHECKCURRENT lists them)". It is said once for each new set of lines, not at every command.
+   - **Named in CDCHECKCURRENT:** under the heading "Possible pipe: a line on a pipe layer is not in the CE record".
+   - **No new window** (mock-up rule). There is no tick screen yet, so a line stays listed until that screen exists.
+   - **Still recovered:** a pipe CE made, known by its CE pipe data, its CE link data (older pipes) or its Civil pipe identity.
+   - **Switch off:** everything works as installed.
+3. **Q14 (a drawn width only proposes a size), met by splitting the two.**
+   - **`trust.reachesFollowDrawingUnits` (ON) now only changes reaches** (pit to its label, pit to its level text, restoring typed values by position).
+   - **A drawn width is never stored as a size:** with the switch on it is left blank (Unknown).
+   - **With the switch off the width reads exactly as installed.** On a metre drawing that means 0.225 as it stands, then the relink's old "at least 100" rule. The old converter is kept unused for a later proposal list.
+4. **Q9 and Q10 (no size, material, lid class or pit type made up): met, with the switch on. Q12 (a blank invert stays worked out from the lowest connected pipe): met, the switch does not change it.**
+
+### 2. Not in it, and why the switch ships OFF
+
+1. **Q8 (a label within reach of two pits is Unknown, showing both): NOT met.** The nearer pit still wins. This is larger than a small change: it touches the record update's label matching, CDUPGRADE's label matching, CDUPGRADE's level-text matching (one text can be taken by two pits) and a CDCHECKCURRENT entry. **Handed over as the next step on 2049, separately.**
+2. **Q11 (the pipe's direction proposed from drawn order for his tick): not met** (no proposal yet). An unlabelled pit is never given a number, which is met.
+3. **Q7 ("?" in windows and lists, a warning before a schedule is placed): partly met.** An Unknown pit is kept off the placed schedule rather than shown with a "?" and a warning.
+4. **So `trust.showUnknownInsteadOfGuess` ships OFF** (controller's rule: ON only if 2049 meets the answers and the whole test run passes). Q8 is the point not met. The robot turns it on for one scratch session only (section 6).
+5. **Not built (later ideas, as ordered):** reading missing values from a drawn Pit Schedule; Q6 tick rules; Q15 units asked once; the tick screen.
+
+### 3. How it was put together
+
+1. **Build stack** (local, detached, never pushed) in `C:\CE_WORK\build\wtB14f`, on `9b977125` (batch 5): a merge of 2049 at `f5fd98ea` as `1ebb6c4c`.
+   - **TrustSettings:** both sides kept.
+   - **REGRESSION_LOG:** both sides kept.
+   - **`PitScheduleViewModel.Data.cs`:** batch 5's one left-out rule (BUG-1274), then 2049's Unknown check after it, unchanged.
+   - **Build commit `62458eda`,** "Version: Civil 3.0.90.8".
+2. **Product files changed against 3.0.90.7:** 22, all in `Modules/Drainage` plus the version lines. List: `C:\CE_WORK\scratch\trust_install\b14civ6_files_changed.txt`. No native, shared, Manager or Structural file.
+3. **Whole Civil test run on the merged code (Release, net10):** **22,715 passed, 0 failed, 32 skipped** (7 min 39 s).
+4. **Staging-only slip, harmless:** in the build stack's `TrustSettings.cs` the merge dropped one `/// <summary>` comment line above `showUnknownInsteadOfGuess`. It is a code comment only, with no effect in AutoCAD. The draft 2049 itself is correct.
+
+### 4. Against Tim's four "never by itself" rules (read in `wtB14f` at `62458eda`)
+
+1. **`trust.showUnknownInsteadOfGuess` (OFF):** when on it only REMOVES fill-ins and additions. It never changes a level, size, number, label, layer or colour.
+2. **`trust.reachesFollowDrawingUnits` (ON), the one point to weigh:**
+   - **What it changes:** only in drawings whose units are metres (or another non-millimetre unit), how far from a pit CE looks for that pit's number label and level text when it reads the drawing (`ProjectDataService.Recovery.cs:352`, `LinkCommands.cs:1987` and `:2029`). It also changes how far CE looks when it restores typed values by position (`:844`).
+   - **The effect:** today on a metre drawing the label reach is about 2,600 m (a 600 pit plus 2000, read as metres), so almost any text is in reach. With the switch on it is 2.6 m. It can only make CE read FEWER texts, never more.
+   - **Writes nothing to the drawing:** it changes no level, label, layer or colour.
+   - **The catch:** on a metre drawing, a level CE reads from Tim's own text into its record can differ from the installed build. That happens when the only text in reach before was too far away to belong to that pit.
+   - **Not changed:** millimetre drawings and drawings with no units set.
+   - **If the controller counts this as touching the levels rule:** switch it off in the settings, or hold batch 6. I can rebuild without it in about 30 minutes.
+3. **No other ON setting is added.** The batch 5 and earlier switches are unchanged.
+
+### 5. Payload
+
+1. **Payload:** `C:\ce_rc_scratch\b14civ6\CE_CVL_SUITE.bundle`, 832 files. `build_installer.ps1` exit 0; three sets (Legacy, Net8, Modern) verified; shared config verified; every dotnet call passes `-p:SkipDevBundle=true -nr:false --disable-build-servers`; nothing under ApplicationPlugins was written.
+2. **DLL `3.0.90.8+62458eda4117a09839c56d1ec79bf85dc01cc08c` SHA-256:**
+   - Legacy `58FE74C52335E7E6BBE73A9C1BF0C221E941EAB6997DE4CA99DBB92BD21BC417`
+   - Net8 `DB2863E9EE8F6AB5463F2D5B09C2F1A8076FAF85848710BF1B071442304C4476`
+   - Modern `44B634BD16DC38784C9D07A9EFA1A689305C04E2175257981D1A8268FF8EF573`
+3. **`PackageContents.xml`:** `43808E90A2BB7D1F159F3C44BE0F41C95376F7E12AFEA11854C6B695B47CAC7D`, `AppVersion="3.0.90.8"`.
+4. **Manifest** `C:\CE_WORK\scratch\trust_install\b14civ6_manifest.txt`, 832 rows, SHA-256 `7FB134D91E26BDE9D1B70759B1014A05D4C14B77BE605B4B2F9CCF81D699854B`.
+5. **Stamp check:** CE_SHARED and CE.AI.Core x3 have 0 bytes different outside the stamp zones. The installed bytes were put in, and CE_SHARED is identical to Manager x3. The natives are the installed bytes.
+6. **Against batch 5 (`b14civ5`):** 7 files differ (CE_CVL_SUITE.dll and .pdb x3, PackageContents.xml), 0 added, 0 removed.
+
+### 6. Turning the switch on for ONE scratch session
+
+As batch 4, section 4, with the folder `C:\CE_WORK\robot\b14f_switch`.
+
+1. **Edit the COPY only:** in the copy of `CD_Settings.json`, in its `"trust"` group, set `"showUnknownInsteadOfGuess": true`.
+2. **Start AutoCAD through a `.cmd`** that sets `CE_LOG_DIR_OVERRIDE=C:\CE_WORK\robot\b14f_switch`, handed to Explorer.
+3. **Check it took:** the CE log must say "Settings initialized from: C:\CE_WORK\robot\b14f_switch\settings\CD_Settings.json". If it does not, stop.
+4. **Never touch** Tim's own `%APPDATA%\TIM_CE_CADTOOLS\CD_Settings.json`. Hash it before and after; it must not change.
+
+### 7. Robot and Codex list (scratch copies)
+
+1. **First start, switch OFF (as shipped):** "CE_CVL_SUITE v3.0.90.8 Started". Then batch 5's list items 2 to 4 once, and the BUG-1456 smoke list once. Everything as on 3.0.90.7.
+2. **Switch ON (section 6), the controller's 2049 list:**
+   - **Edit Pit on a bare pipe-layer line:** draw a plain polyline on STORMWATER PIPE, then Edit Pit on a pit it touches. The pipe shows Unknown size and material, never 100 dia or UPVC. The command line has the possible-pipe line once ("1 line on a pipe layer was not added to CE's record ..."). CE's stored record does not gain the line.
+   - **Edit Pit on an unlabelled pit:** a pit symbol with no number label shows Unknown, never a CE number, 350 x 350, Class C or grated pit.
+   - **Cancel changes nothing:** CE's stored record is byte-identical before and after, and DBMOD stays 0.
+   - **Pit Schedule:** the unlabelled pit and the bare line show as Unknown, or are left out and listed. Never 100 dia UPVC, never 350 x 350.
+   - **CDCHECKCURRENT:** it lists the bare line under "Possible pipe: a line on a pipe layer is not in the CE record", and the unknown pit as Unknown.
+   - **A CE-made pipe still comes back:** on a copy whose CE record is missing or lost (as the recovery cases in `PENDING_TESTS.md` make one), a pipe drawn with CE's own command is recovered; the bare line is not.
+   - **Said once:** run CDCHECKCURRENT and Edit Pit again. The possible-pipe line is not repeated until another bare line is drawn.
+   - **Metre drawing (`INSUNITS` 6) with a 0.225 wide bare line:** the size stays Unknown, never 225 and never 100.
+3. **Q28 on the PITSCHEDULE list (as batch 4, known gaps item 2).**
+4. **Then close AutoCAD and restart without the variable:** the switch is off again; Tim's file is unchanged.
+
+### 8. Install and put back
+
+1. **Install (after batch 5, trial put back if it was used):** `C:\CE_WORK\scratch\trust_install\install_batch14f.ps1`. NOT RUN; it parses clean.
+   - It refuses unless live Civil reads `3.0.90.7+9b977125` with its Legacy and Net8 sets present.
+   - It keeps `CE_CVL_SUITE_PRE_9b977125_<time>.backup`.
+   - It reads every file back, checks 3.0.90.8 and CE_SHARED against Manager, and checks the settings are unchanged. Log: `install_batch14f.log`.
+2. **Put back:** `restore_batch14f.ps1`, back to 3.0.90.7, checked against `b14civ5_manifest.txt`. NOT RUN; it parses clean. Further back: `restore_batch14e.ps1`, then `restore_batch14d.ps1`.
+
+### 9. Stop rules
+
+As section 5 at the top. If a pass fails, batch 6 is put back with `restore_batch14f.ps1`, and batch 5 stays.
