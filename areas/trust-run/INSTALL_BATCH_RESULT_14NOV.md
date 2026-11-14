@@ -249,3 +249,21 @@
 3. **N-03 PASS:** "3 plastic pits are not in this schedule: P1 to P3. Open PIT on each and press Number and schedule this one anyway to add it. | Drawing check: 6 data issues may affect this schedule"; no internal code; 0 rows listed. PSN15-10-schedule-three.jpg, PSN15-10-schedule-full.jpg.
 4. **N-04 BLOCKED, and a finding:** "Number and schedule this one anyway" is NOT in Edit Pit or its More options window (Drawing & Schedule shows a grey "Included in pit schedule" and "Plastic pit: no label block and excluded from schedule"). PSN15-11-missing-override-0.jpg, PSN15-11-missing-override-3.jpg. By reading: the button exists only in the older Pit dialog (`PitDialog.xaml:353`), not in the New Pit / Edit Pit windows drafters use now. **So the schedule's new line tells the drafter to press a button they cannot find.** For Tim (queue item 4, the wording) and the fix lane.
 5. N-01 (placing the three pits) NOT TESTED for evidence only: the pits were made (R2 = 3) but the saved screenshots repeated an earlier capture.
+
+## Item 3c: Export CSV (BUG-1342), Codex look PSX15
+
+1. **First run X1 (06:29 to 06:35): BLOCKED at X-01, nothing tested.** Report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_PSX15_X1_20261115_0629.md`. Codex's typing did not reach the Windows Save As box (the same as the More options box), and the driver's dialog-path refused a file that does not exist yet ("REFUSED: the file does not exist"). Save As cancelled; drawing and settings unchanged.
+2. **Second run from 06:37:** the desk made both test CSV files first (one PLACEHOLDER line each, SHA-256 3DF839C5AE9E...), so dialog-path accepts them and Codex only clicks Save and Yes; RIGHT now = the placeholder is replaced by the schedule.
+3. **Second run X1 (06:36 to 06:42): BLOCKED at X-01 again, nothing tested.** Report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_PSX15_X1_20261115_0636.md`. With the Pit Schedule window open (it holds AutoCAD), the driver's calls time out ("HARD TIMEOUT"), so dialog-path cannot fill the Save As box; Codex's own typing does not reach it either. Placeholders untouched; AutoCAD and Excel closed; settings the same. Seen: "Will be placed: 27 rows · All sets · All systems", "Drawing check: 95 data issues may affect this schedule".
+4. **Export CSV stays NOT TESTED** (no product fault seen). It needs a person (one minute: export, then export again with the file open in Excel), or a driver way to fill a Save As box while a CE window is open, or a Codex input route that reaches Windows boxes.
+
+## Item 6: CDRUNSOLVE with design flows set by the test (not typed), Codex look RSQ16 Y1 (06:43 to 06:57): FAIL at one Undo
+
+1. Report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_RSQ16_Y1_20261115_0646.md`; screenshots `C:\Lisp Files\_TEST_COPIES_20260923\LOOKS\RSQ16_Y1_20261115_0646\screenshots\`. Copy `CLDTP_RSQ16.dwg` (flows 8, 8, 15, 22, 22 L/s written by the desk, "set by test").
+2. **Y-01 Esc in the preview: PASS** ("Cancelled - drawing unchanged", object count 1054). RSQ16-06-preview.png, RSQ16-07-preview-closeup.png, RSQ16-08-after-esc.png.
+3. **Y-02 Apply (Yes): PASS** ("Applied 5 change(s)"; P4 level 17.40 to 19.99). RSQ16-12-apply-preview.png, RSQ16-13-applied.png, RSQ16-15-solved-p4.png.
+4. **Y-03 run again: PASS** ("every invert already matches the solved design - nothing to apply"). RSQ16-16-already-solved.png.
+5. **Y-04 ONE UNDO: FAIL.** One U echoed CDRUNSOLVE, but P4 still showed 19.99 and the next CDRUNSOLVE opened no preview and still said every invert already matches: **the applied levels were not taken back by one U.** RSQ16-17-one-undo.png, RSQ16-18-undo-levels.png, RSQ16-19-undo-p4.png, RSQ16-20-undo-no-preview.png. Sent to the controller at once; not put back by me.
+6. **Y-05 save and reopen: BLOCKED** (nothing left to apply after the failed Undo). **Y-06 typing try: BLOCKED** (CDEDIT asked an older-pipe-label question first; Edit Pipe cancelled without saving; the box was not reached).
+7. **For Tim (queue item 9):** Apply wrote levels the preview had warned about: "COVER: pipe from 'P4' upstream obvert cover -1226 mm", "pit 'P4' depth -1126 mm < minimum 300 mm" and others. Nothing hidden, but these levels went into the drawing on one press.
+8. Not known: whether 3.0.90.4 behaves the same (Apply had never been pressed before tonight).
