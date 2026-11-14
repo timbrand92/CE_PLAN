@@ -173,6 +173,22 @@ Numbers are that file's Q numbers. That file itself is not edited by the ask cha
 - **Choices he was shown and did not pick:** "Keep it, marked worked out (Recommended)"; "Unknown until I confirm".
 - **Ask chat's reading (mine):** read the invert from the Pit Schedule too. What happens with no schedule (keep "worked out from the pipes", or Unknown) is not answered.
 
+**Tim's schedule idea, pinned down. Four follow-ups, Sun 15 Nov 2026 02:04 PC clock.** Before answering he was shown a five-box flow picture and this caution: "a schedule that CE itself placed earlier may already carry CE's old fill-ins (100 UPVC, Class C). Reading those back would turn an old guess into a 'known' value."
+
+1. **A value read from the Pit Schedule on the drawing: how sure is it?** Tim clicked: "Proposed, I tick it (Recommended)". Choice text he saw: "P3 has no lid class; CE shows 'Class D, proposed from the Pit Schedule' and it becomes P3's value when you tick it. An old CE guess sitting in a schedule can never slip through as fact." Not chosen: "Taken as fact"; "Fact, unless CE made the schedule".
+2. **No Pit Schedule, or the pit is not in it: lid class, pit type and pipe size?** Tim clicked: "Unknown (Recommended)". Choice text he saw: "a hand-drawn pit on a job with no schedule shows lid '?' until you set it, the same on every PC. No Class C, no 100 UPVC made up." Not chosen: "Today's fill-ins, marked assumed".
+3. **No Pit Schedule, and a pit has a blank invert?** Tim clicked: "Worked out from pipes, marked (Recommended)". Choice text he saw: "P5 shows 'IL 1.20 (worked out from pipe P5 to P6)'. The lowest connected pipe invert is used, but you can always see it was not typed." Not chosen: "Unknown until I confirm".
+4. **The Pit Schedule and the plan label disagree: which wins?** Tim clicked: "Neither: Unknown, show both (Recommended)". Choice text he saw: "'P4 invert: schedule says 9.60, plan label says 9.45. Which?' Nothing is used until you pick." Not chosen: "The plan label wins"; "The schedule wins".
+
+**What this settles (ask chat's summary, mine; each line rests on the clicks above):**
+
+1. **Q9, pipe size and material:** Unknown everywhere, never 100, UPVC or 225. Where a Pit Schedule on the drawing gives the value, it is offered as Proposed for his tick.
+2. **Q10, lid class and pit type of a pit CE did not place:** ANSWERED. Proposed from the Pit Schedule where it lists the pit, for his tick; otherwise Unknown. Never Class C or grated pit from a person's settings.
+3. **Q12, blank pit invert:** ANSWERED. Proposed from the Pit Schedule where it lists the pit; with no schedule, worked out from the lowest connected pipe and marked as worked out.
+4. **Schedule against plan label:** Unknown showing both, until he picks. Same shape as older Q72's recommendation (record against label), which itself is still not asked.
+5. **Not decided, not asked:** whether a blank invert that has BOTH a schedule value and a pipe to work it out from shows the schedule proposal, the worked-out value, or both; what CE does when its own worked-out invert disagrees with the schedule.
+6. **Not known:** whether CE can read a drawn Pit Schedule today (see the honest state under Q10). Reading one is new work, so under "prove, don't draft" it is a later idea. The parts that need no schedule reading (Unknown instead of 100, UPVC, 225, Class C and grated pit; a worked-out invert marked as worked out) are his word now, and match the existing step 6 draft (pull request 2049) as its questions described it.
+
 **Q11** (pit with no number; pipe with no proven flow direction): not asked yet.
 
 ---
@@ -181,6 +197,6 @@ Numbers are that file's Q numbers. That file itself is not edited by the ask cha
 
 1. **Starting a job:** what else belongs in the New Job window; whether New Job attaches the architect's xref.
 2. **Checking:** where the status line sits on the screen (mock-up owed); whether the plot-time list also shows when the Pit Schedule is placed.
-2a. **Reading values from the Pit Schedule (his idea, 02:02):** how a schedule value is treated, what happens with no schedule, and what wins when schedule and plan label disagree.
+2a. **Reading values from the Pit Schedule (his idea, 02:02; pinned down 02:04 in section 11):** left over: a blank invert with both a schedule value and a pipe to work it out from.
 3. **Sheet:** a schedule he has edited by hand.
 4. **Then the older questions** in `areas\TRUST_QUESTIONS_FOR_TIM.md`, merged and most useful first.
