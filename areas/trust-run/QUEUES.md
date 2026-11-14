@@ -300,3 +300,15 @@ The builder stopped at step 1: CDCALC saves catchments with a flow each and one 
 **Controller's DRAFT default, NOT Tim's answer** (built under his 9 Oct rule that builds do not wait on him, and his 14 Nov "you do what you need to, to keep things moving"): CDRUNSOLVE reads the Q each pipe already has from Pipe Edit. No Q on any pipe: nothing changes, it says to enter the design flow in Pipe Edit. Q on only some: names the pipes without one, nothing changes. Tim's answer replaces this the moment he gives one.
 
 Logged as a later idea, not built: CDCALC gains a "drains to pit" link on each catchment so flows can come from CDCALC, which is what Tim's option 1 meant. That is new CDCALC work, not a fix.
+
+## NO WAITING ON TIM (his word, Sat 14 Nov 2026, 23:2x PC clock)
+
+Tim: "yourloops shouldnt rely on me answering things to keep moving sometimes i wont be around then what"
+
+Controller's reading (mine, not his words), in force from now:
+
+1. **An open question never stops the run.** Each question is asked once with a recommended answer. If Tim has not answered by the next check, the recommended answer is used as a DRAFT default, labelled as the controller's, and his later answer replaces it.
+2. **Defaults now in use:** (a) CDRUNSOLVE design flow = the Q typed in Pipe Edit. (b) Where the robot cannot make a pick, a Codex PASS with screenshot plus a before-and-after check of CE's record is written "PROVISIONAL (awaiting Tim)" and shown as its own count; it is NOT written FIXED and not added to "accepted" until Tim says so.
+3. **Still only on Tim's word, each time, unless he gives a standing word:** installing on his PC; merging into shipped lines; anything to colleagues. Asked of him 14 Nov: a standing yes for trial installs when AutoCAD is closed and he is away.
+4. **While an install waits, the tool in hand moves on.** Every one of the ten is run by the robot and Codex on the build already installed, on scratch copies, outside his hours; fixes go on existing drafts; the next batch is built and reviewed so an install is one step.
+5. **Still no new drafts** (prove, don't draft).
