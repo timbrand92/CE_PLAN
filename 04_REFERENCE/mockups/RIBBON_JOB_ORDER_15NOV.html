@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CE Drainage ribbon in job order: mock-up 15 Nov 2026</title>
+<style>
+:root{--bg:#f4f4f2;--card:#ffffff;--line:#d9d8d2;--text:#1c1c1a;--soft:#5f5e5a;--mute:#8a8983;--accent:#1E5AA8;--accentbg:#e6eef8;--note:#eeeeea}
+@media (prefers-color-scheme: dark){:root{--bg:#1b1b1a;--card:#262624;--line:#3c3c39;--text:#f1efe8;--soft:#c3c1b8;--mute:#96958e;--accent:#8ab4ea;--accentbg:#1d3350;--note:#2c2c2a}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Segoe UI,Arial,sans-serif;padding:20px 16px 32px}
+.wrap{max-width:1180px;margin:0 auto}
+h1{font-size:20px;font-weight:600;margin:0 0 4px}
+.sub{font-size:14px;color:var(--soft);margin:0 0 16px}
+.tabs{display:flex;gap:8px;margin:0 0 12px;flex-wrap:wrap}
+.tab{padding:6px 16px;border-radius:8px;border:1px solid var(--line);font-size:14px;color:var(--soft);background:var(--card)}
+.tab.on{background:var(--accentbg);color:var(--accent);border-color:var(--accent);font-weight:600}
+.arrow{font-size:13px;color:var(--mute);margin:0 0 8px}
+.rb{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}
+@media (max-width:1000px){.rb{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:560px){.rb{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.pn{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}
+.hd{display:flex;align-items:baseline;gap:8px;margin:0 0 8px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+.no{font-size:26px;font-weight:700;line-height:1}
+.nm{font-size:15px;font-weight:600}
+.ct{font-size:12px;color:var(--mute);margin-left:auto;white-space:nowrap}
+.tl{font-size:14px;line-height:1.3;padding:4px 0}
+.tl span{display:block;color:var(--mute);font-family:Consolas,monospace;font-size:11px}
+.ev{margin-top:12px;background:var(--note);border-radius:12px;padding:12px 14px;font-size:14px;color:var(--soft)}
+.ev b{color:var(--text)}
+.sum{margin-top:12px;display:grid;grid-template-columns:auto auto;gap:2px 16px;width:max-content;font-size:14px}
+.sum .r{text-align:right;font-variant-numeric:tabular-nums}
+.sum .tot{border-top:1px solid var(--text);border-bottom:3px double var(--text);font-weight:700}
+.foot{margin-top:14px;font-size:12px;color:var(--mute)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>CE Drainage ribbon in job order</h1>
+<p class="sub">Mock-up only, for Tim's OK. Nothing is built from this. Sun 15 Nov 2026.</p>
+<div class="tabs"><div class="tab on">CE Drainage</div><div class="tab">CE Structural</div><div class="tab">CE Tools</div></div>
+<p class="arrow">Left to right = the order of a job &rarr;</p>
+<div class="rb">
+<div class="pn"><div class="hd"><div class="no">1</div><div class="nm">Start</div><div class="ct">5</div></div>
+<div class="tl">New job<span>CDNEWDWG</span></div>
+<div class="tl">Council rules<span>CDRULEBOOK</span></div>
+<div class="tl">Rainfall<span>CDRAINFALL</span></div>
+<div class="tl">Design inputs<span>CDDESIGN</span></div>
+<div class="tl">My settings<span>CDS</span></div></div>
+<div class="pn"><div class="hd"><div class="no">2</div><div class="nm">Sources</div><div class="ct">11</div></div>
+<div class="tl">Downpipe<span>DP</span></div>
+<div class="tl">Overflow<span>OF</span></div>
+<div class="tl">Front overflow<span>FO</span></div>
+<div class="tl">Gross inlet<span>GIO</span></div>
+<div class="tl">Floor waste<span>CDFW</span></div>
+<div class="tl">Trench grate<span>CDTG</span></div>
+<div class="tl">Strip drain<span>CDSTRIP</span></div>
+<div class="tl">Raingarden<span>CDRG</span></div>
+<div class="tl">Water tank<span>CDWT</span></div>
+<div class="tl">Other source<span>CDSOURCE</span></div>
+<div class="tl">Tag a source<span>CDTAG</span></div></div>
+<div class="pn"><div class="hd"><div class="no">3</div><div class="nm">Network</div><div class="ct">8</div></div>
+<div class="tl">Pit<span>PIT</span></div>
+<div class="tl">Plastic pit<span>PP</span></div>
+<div class="tl">Inspection opening<span>IO</span></div>
+<div class="tl">Pipe<span>CD</span></div>
+<div class="tl">Edit pit or pipe<span>CDEDIT</span></div>
+<div class="tl">AGI drain<span>CDAGI</span></div>
+<div class="tl">Pipe system<span>CDSYSTEM</span></div>
+<div class="tl">Legal point of discharge<span>CDLPD</span></div></div>
+<div class="pn"><div class="hd"><div class="no">4</div><div class="nm">Levels</div><div class="ct">4</div></div>
+<div class="tl">Spot level<span>CDSL</span></div>
+<div class="tl">Top water level<span>CDTWL</span></div>
+<div class="tl">Solve a run<span>CDRUNSOLVE</span></div>
+<div class="tl">Reverse flow<span>CDREVERSEFLOW</span></div></div>
+<div class="pn"><div class="hd"><div class="no">5</div><div class="nm">Check</div><div class="ct">6</div></div>
+<div class="tl">Calculations<span>CDCALC</span></div>
+<div class="tl">Council check<span>CDRULES</span></div>
+<div class="tl">Where downpipes go<span>CDDEST</span></div>
+<div class="tl">Check this drawing<span>new, not built</span></div>
+<div class="tl">Inspector<span>CDINSPECTOR</span></div>
+<div class="tl">Check consultant drawing<span>CDCHECKDWG</span></div></div>
+<div class="pn"><div class="hd"><div class="no">6</div><div class="nm">Sheet</div><div class="ct">9</div></div>
+<div class="tl">Renumber pits<span>CDRENUMBER</span></div>
+<div class="tl">Pit schedule<span>PITSCHEDULE</span></div>
+<div class="tl">Long section<span>CDPROFILE</span></div>
+<div class="tl">Tidy labels<span>CDTIDYLABELS</span></div>
+<div class="tl">Move a label<span>CDANNOTATIONEDIT</span></div>
+<div class="tl">Move flow arrow<span>CDMA</span></div>
+<div class="tl">Move pipe text<span>CDTEXTSEG</span></div>
+<div class="tl">Flip cover text<span>CDPITCOVERFLIP</span></div>
+<div class="tl">Layer colours<span>CDMANAGER</span></div></div>
+</div>
+<div class="ev"><b>CE Tools tab, on every drawing:</b> Move + rotate (MR), Copy + rotate (CR), CE blocks, CLEAN, level marks, text tools, Help, Report a problem</div>
+<div class="sum">
+<div>Start</div><div class="r">5</div>
+<div>Sources</div><div class="r">+ 11</div>
+<div>Network</div><div class="r">+ 8</div>
+<div>Levels</div><div class="r">+ 4</div>
+<div>Check</div><div class="r">+ 6</div>
+<div>Sheet</div><div class="r">+ 9</div>
+<div class="tot">Tools on CE Drainage</div><div class="r tot">43</div>
+</div>
+<p class="foot">Source: the 47 tools kept on the ribbon in areas\CIVIL_COMMAND_SORT_06NOV.md, plus CDCHECKDWG and with Edit beside Pit and Pipe (Tim, 15 Nov), with the CE Design tab folded into this one tab. Floor waste and Pit schedule stay off the ribbon until their fixes are seen working (Tim, 15 Nov). Placement of each tool is the ask chat's first guess, for Tim to change.</p>
+</div>
+</body>
+</html>

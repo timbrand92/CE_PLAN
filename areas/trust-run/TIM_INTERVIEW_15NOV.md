@@ -775,9 +775,36 @@ Numbers are that file's Q numbers. That file itself is not edited by the ask cha
 - **Ask chat's reading (mine):** consistent with his Civil ruling (8.3): the whole thing working before colleagues get it. The Structural release now has at least these conditions from tonight: after Civil and Manager (Q57); CEMEMBER and its window in place of SBEAM; footing tools proven.
 - **Not asked from Q64:** tie-downs, wind class and soil report, the hatch button, sheets and issue.
 
+**Queue item 8, the ribbon mock-up: first showing FAILED. NOT ANSWERED.**
+
+- **What happened:** at about 03:15 the ask chat showed a mock-up of the CE Drainage tab in job order as an in-chat picture and asked whether the layout was right.
+- **Tim, Sun 15 Nov 2026 03:18 PC clock, typed:** "cant see it"
+- **State:** queue item 8 is still open. The picture did not reach him; my fault for not checking it had. The same mock-up is now a file, `04_REFERENCE\mockups\RIBBON_JOB_ORDER_15NOV.html`, sent to him, and the question is asked again.
+
+**One tab or two (CE Design folded into CE Drainage). GIVEN WITHOUT SEEING THE PICTURE; to be confirmed with the mock-up.**
+
+- **Tim, Sun 15 Nov 2026 03:18 PC clock, clicked:** "One tab, as pictured (Recommended)".
+- **Choice text he saw:** "Calculations and Council check sit under Check, and Solve a run under Levels, on the same tab as pits and pipes; you never switch tabs mid-job."
+- **Not chosen:** "Keep CE Design separate".
+- **Care (mine):** the choice said "as pictured" and he could not see the picture. The words of the choice describe the idea fully, so I read it as agreement to one tab in principle; it is not approval of the layout. It touches older Q44 (tab order), which listed CE Design as its own tab.
+
+**Where Edit pit or pipe (CDEDIT) sits.**
+
+- **Tim, Sun 15 Nov 2026 03:18 PC clock, clicked:** "Network, beside Pit and Pipe". **This was NOT the recommended choice** (recommended was "Levels, plus the pop-up tab on pick").
+- **Choice text he saw:** "Edit sits right next to the two tools whose objects it edits."
+- **Not chosen:** "Levels, plus the pop-up tab on pick (Recommended)"; "First button on the tab".
+- **Not asked:** whether the pop-up tab when a pit or pipe is picked stays (older Q44). The mock-up file has been changed to put Edit in Network.
+
+**Q39. Buttons with an open fault that can lose or hide a value (Floor waste, Pit schedule).**
+
+- **Tim, Sun 15 Nov 2026 03:18 PC clock, clicked:** "Off the ribbon until seen fixed (Recommended)".
+- **Choice text he saw:** "on your own PC you type PITSCHEDULE meanwhile; each button comes back when its fix has been seen working. Colleagues never see either unfixed, because nothing goes out until everything works."
+- **Not chosen:** "On the ribbon with a note".
+- **Not asked from Q39:** cosmetic faults (such as the FO symbol reading "OF") staying on with a note.
+
 **Queue item 11** (added by the controller at about 02:40): the same CDRUNSOLVE negative-cover case as item 9, which he answered at 01:59. Not asked again; marked in `FOR_TIM_QUEUE.md`.
 
-**Older questions answered so far (this file, 15 Nov):** Q1, Q2 (permission, not the chosen set), Q3, Q5 to Q15, Q17 to Q33, Q35, Q36, Q46 to Q52, Q54 to Q57, Q59, Q60 (mark twice), Q61, Q62 (his words), Q65, Q66 (all but Rule 15), Q67, Q69 to Q71, Q72 (pit-number case), Q78 (truss part), Q83 to Q85, Q87, Q40, Q42, Q43, Q64 (footings part). **Q86 asked, not answered as asked ("these tools are confusing"; his four reasons are recorded).** **Count: 65 of the 87 have an answer in whole or in part; 5 held for the evidence study.** **Q53 open by his choice ("I'll tell you later"): not the 17 Oct pilot.** **Held back for the evidence study (12.2):** Q16, Q73, Q80 to Q82. **Not asked yet:** Q0 to Q4, Q33 to Q35, Q37 to Q45, Q47 to Q56, Q58 to Q72, Q74 to Q79, Q83 to Q87, and the two added at the end of that file (the template one is now answered by queue item 6; the robot pressing CDLPD's "Continue in drawing" is not).
+**Older questions answered so far (this file, 15 Nov):** Q1, Q2 (permission, not the chosen set), Q3, Q5 to Q15, Q17 to Q33, Q35, Q36, Q46 to Q52, Q54 to Q57, Q59, Q60 (mark twice), Q61, Q62 (his words), Q65, Q66 (all but Rule 15), Q67, Q69 to Q71, Q72 (pit-number case), Q78 (truss part), Q83 to Q85, Q87, Q39 (data faults part), Q40, Q42, Q43, Q64 (footings part). **Q86 asked, not answered as asked ("these tools are confusing"; his four reasons are recorded).** **Count: 66 of the 87 have an answer in whole or in part; 5 held for the evidence study.** **Q53 open by his choice ("I'll tell you later"): not the 17 Oct pilot.** **Held back for the evidence study (12.2):** Q16, Q73, Q80 to Q82. **Not asked yet:** Q0 to Q4, Q33 to Q35, Q37 to Q45, Q47 to Q56, Q58 to Q72, Q74 to Q79, Q83 to Q87, and the two added at the end of that file (the template one is now answered by queue item 6; the robot pressing CDLPD's "Continue in drawing" is not).
 
 ---
 
