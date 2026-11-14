@@ -29,6 +29,11 @@
    - Either way the repo's written rules still say "both builds required"; say if you want that text changed.
    - **ANSWERED, see "Answered" below:** take them out of the build; change the rule text to match. NOT the recommended default that was in use.
 
+11. **CDRUNSOLVE: is this a sensible proposal?** (Engineering, yours alone.) Seen in real AutoCAD on Civil 3.0.90.4, flows set by the test on the standard drawing's run P4 to the stub (8, 8, 15, 22, 22 L/s). The preview proposed a 100 dia run at 1 in 9, 2.80 m/s, levels climbing from the stub (for example P2 to P1 upstream 17.08 to 19.30), and showed red COVER warnings of about -488, -889 and -518 mm: pipe tops above the lids. Nothing was applied. Preview text: `C:\CE_WORK\scratch	rust_installsq5_preview.tree.txt`.
+   - **It is doing the right thing: it shows the warnings and I decide** (assumed; matches your item 9 answer). Example: you see red cover lines and choose a bigger pipe yourself.
+   - **It should not offer that at all.** Example: where every option breaks cover, CDRUNSOLVE says so and proposes nothing.
+   - **It should try the next pipe size up before proposing.** Example: it offers 150 dia at a flatter grade as a second row for you to tick.
+
 ## Older, still open (asked before 15 Nov, defaults in use)
 
 8. **Ribbon in job order** (Start, Sources, Network, Levels, Check, Sheet). Default: not built into any batch until you have seen a mock-up.
