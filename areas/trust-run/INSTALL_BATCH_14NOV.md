@@ -510,3 +510,74 @@ As section 5 at the top. If a pass fails, batch 5 is put back with `restore_batc
 1. **Q27:** the record-change line does not count a pit type filled in as "GRATED PIT" among its guesses. It counts sizes, materials, lid classes, pit numbers and stand-in codes only.
 2. **Q28:** whether the Pit Schedule's on-open write-back of a drawn pipe size prints a line is UNCHECKED. Tim wants it said in a line.
    - **Added to the PITSCHEDULE robot list (batch 4, section 7, and every later batch):** open the Pit Schedule on a copy where a pipe's drawn size differs from CE's record. Read the command line for a "CE updated its record (...)" line naming the size read from the drawing, then read CE's record. Line present: PASS. Size written with no line: FAIL, to log as a gap.
+
+## TRIAL: 2027-ONLY BUNDLE (PREPARED, NOT INSTALLED)
+
+Written Sun 15 Nov 2026 04:20 by lane trust-safety-fixes, on the controller's order: prove what Tim's PC does with a Civil bundle missing the older-year sets BEFORE any script change (Tim, queue item 10, 02:32: the check comes first). Made by hand from the batch 5 payload. No repo file, build script or rule text was changed. Plan: `BUILD_2027_ONLY_PLAN.md`.
+
+**Runs only after batch 5's own robot list has passed on the three-set build.** Then the only difference in the trial is the missing sets.
+
+### 1. The payload
+
+1. **Folder:** `C:\ce_rc_scratch\b14civ5_MODERNONLY\CE_CVL_SUITE.bundle`, 298 files. The name says MODERNONLY so it can never be taken for `b14civ5`.
+2. **Made from batch 5** (`b14civ5`, 3.0.90.7+9b977125, checked against its manifest first, bad 0). The version string is unchanged (`3.0.90.7+9b977125` in the Modern DLL; `AppVersion="3.0.90.7"`).
+3. **Removed in the copy:** `Contents\Win64\Legacy` (268 files) and `Contents\Win64\Net8` (266 files).
+4. **`PackageContents.xml` trimmed:**
+   - **Removed:** exactly the two `<Components>` blocks whose module is `./Contents/Win64/Legacy/...` (R24.1 to R24.9) and `./Contents/Win64/Net8/...` (R25.0 to R25.9). That is 116 lines with their command lists; nothing added.
+   - **Left, all 2027:** Modern net10 build (R26.0 to R27.0), native action grips (R26.0 to R26.9), CE object enabler (R26.0 to R26.9). It parses as XML, and no `/Win64/Legacy/` or `/Win64/Net8/` path remains.
+   - **Header comment:** kept as it was. It still describes the older blocks in words.
+5. **Every other file equals batch 5 byte for byte** (0 differ), including the shared config at `Contents\Assets\Config`. That config came from the net48 build in batch 5; the planned switch would take it from net10, built from the same tracked files.
+6. **Hashes:**
+   - **Manifest:** `C:\CE_WORK\scratch\trust_install\b14civ5_MODERNONLY_manifest.txt`, 298 rows, SHA-256 `398732E280F8610744D7DD3375B22B7FA22B2C5623FEB3D192047AC429B8B7D9`.
+   - **Modern `CE_CVL_SUITE.dll`:** `1111E937330B398458B613D3D54B873620B5A39259C2C06086B6F96FD36F835B` (the same as batch 5).
+   - **`PackageContents.xml`:** `3675778F60725DF313B126D0A159AD5C4B8C359E32C3C938137EADA885608179`.
+   - **CE_SHARED:** the Modern copy is identical to Manager's Modern copy.
+7. **How it was made:** `make_modernonly.ps1` (scratchpad, throwaway). A first try trimmed too much, because the header comment mentions `<Components>`. The parse check caught it, and that copy was deleted before anything else was done.
+
+### 2. Beside it: Manager and Structural (both still three-set, untouched)
+
+1. **Manager 1.1.89:** its own bundle with Legacy, Net8 and Modern. In AutoCAD 2027 only its Modern set loads.
+   - **CE_SHARED:** one assembly identity (first loaded wins). Civil's Modern CE_SHARED is byte-identical to Manager's Modern, so which loads first makes no difference. The install script checks this.
+   - **Reading Civil's bundle:** Manager's plugin list (`CePluginRegistryService`) picks the entry for the running lane, which in 2027 is the Modern entry, still present. So Civil's version should show as before.
+2. **Structural 1.0.126.1:** its own three-set bundle, no shared file with Civil's lanes; in 2027 its Modern set loads as today. Not touched.
+3. **AutoCAD 2022 to 2026:** not tested (Tim's ruling). By reading, an older AutoCAD would find no Civil entry for itself in the trimmed file and would load no Civil, rather than fail on a missing file.
+
+### 3. Install (one step; AutoCAD closed, outside Tim's hours, after batch 5 passed)
+
+1. Run `C:\CE_WORK\scratch\trust_install\install_trial_modernonly.ps1` (NOT RUN; it parses clean). It:
+   - refuses unless the trial manifest's hash is the reported one;
+   - refuses unless live Civil reads `3.0.90.7+9b977125` with all three sets present;
+   - hashes and copies the settings files aside;
+   - renames live Civil to `CE_CVL_SUITE_PRE_9b977125_<time>.backup` and copies the trial in.
+2. **Then it reads back:**
+   - every file against the candidate (bad 0, extra 0);
+   - no `Win64\Legacy` or `Win64\Net8` left;
+   - Modern version `3.0.90.7+9b977125`;
+   - `PackageContents.xml` equals the trial's, and names no older set;
+   - CE_SHARED identical to Manager's Modern;
+   - settings unchanged.
+   - Log: `install_trial_modernonly.log`.
+
+### 4. What the evidence lane checks (two AutoCAD 2027 starts, scratch copies)
+
+1. **First start:**
+   - "CE_CVL_SUITE v3.0.90.7 Started" in the CE log.
+   - "Standalone CE Civil ribbon built" with the same panel count as on the three-set batch 5.
+   - CE Civil, Manager and Structural menu groups load.
+   - No "unable to load", missing-file, version-mismatch or bundle error line in the CE logs or AutoCAD's text window.
+   - Manager's plugin list shows Civil 3.0.90.7.
+2. **Smoke list:** the BUG-1456 smoke list once; PIT placed, saved, reopened; CDHELP; CDS; CDEDIT with Esc; Pit Schedule opened; CDLPD opened (batch 5's own change); CDRENUMBER to its question, then No.
+3. **Second start:** close AutoCAD and start it again, with the same first-start checks (bundle loading is also remembered between starts).
+4. **PASS means:** every check as on the three-set batch 5 and nothing new in the logs. Then the controller decides whether to keep it or put it back, and only then does the `-ModernOnly` switch go into one draft pull request on Tim's order.
+
+### 5. Put back (one action, AutoCAD closed)
+
+1. Run `C:\CE_WORK\scratch\trust_install\restore_trial_modernonly.ps1` (NOT RUN; it parses clean).
+   - It renames the 2027-only bundle aside as `CE_CVL_SUITE_MODERNONLY_REMOVED_<time>.removed` and renames `CE_CVL_SUITE_PRE_9b977125_<time>.backup` back. If that backup is missing, it copies `C:\ce_rc_scratch\b14civ5\CE_CVL_SUITE.bundle`.
+   - It then checks every file against `b14civ5_manifest.txt` (832), all three lane versions, CE_SHARED against Manager in all three lanes, and the settings files.
+2. **Further back:** `restore_batch14e.ps1` (3.0.90.6), then the earlier ones.
+
+### 6. Stop rules
+
+1. Any load error, a missing ribbon panel or command, Manager showing Civil wrong, or settings changed: put back at once.
+2. Any doubt about the PC's state: put back.
