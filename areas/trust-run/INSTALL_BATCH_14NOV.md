@@ -377,3 +377,28 @@ CE reads its Civil settings from `%APPDATA%\TIM_CE_CADTOOLS\CD_Settings.json`, u
 ### 8. Stop rules
 
 As section 5 at the top. If any pass fails, batch 4 is put back with `restore_batch14d.ps1`; batch 3 stays. I can rebuild the stack without any one item in about 30 minutes.
+
+### 9. Batch 4 against Tim's four "never by itself" rules (added 15 Nov 02:40; ask chat 01:57: CE never, without him, changes a level or size, renumbers pits, moves or deletes his labels, changes layers or colours)
+
+All lines below are read in batch 4's build code, `C:\CE_WORK\build\wtB14d` at `35cdad78`.
+
+**Answer: none of the settings ON by default in batch 4 touches any of the four rules. No hold is needed on these grounds.**
+
+1. **`trust.reachesFollowDrawingUnits` is NOT in batch 4.** No source file in the build mentions it. It came with 2049 (step 6), which is not in this batch. It was only in the withdrawn widened build.
+2. **`trust.sayDrawingStateOnOpen` (ON):** could only touch the four by writing while it checks.
+   - **It reads and prints.** `DrawingStateLineOnOpenService.cs:144-160` builds the line and calls `Editor.WriteMessage`. The check is `CurrentDrawingCheckService.cs:510-531` (`ReadForOpenLine`), which opens the drawing through a read-only `StartOpenCloseTransaction` and the same observation CDCHECKCURRENT uses.
+   - **Guard:** `DrawingStateLineRule.cs:92-101` reads the drawing's changed counter before and after the check and logs a warning if it moved.
+   - **Writes nothing:** no level, size, pit number, label, layer or colour.
+3. **`trust.openCheckMaxObjects` (50000, a number):** only decides whether the opening check runs at all (`CurrentDrawingCheckService.cs:516`). Above the limit it reads one thing (is there a record) and says "large drawing, not checked". It writes nothing.
+4. **`trust.readOnlyToolsNeverUpdateRecord` (ON):** this switch REMOVES writing.
+   - **What it does:** with it on, CDGRAPH, CDDIAG, the Civil health routine and CDDASHBOARD no longer run CE's record update, which is the update that can fill in a made-up pipe size.
+   - **Instead:** they bind the record without writing and read only (`ProjectDataService.ReadOnlyTools.cs:42-77`; the bind that writes nothing is line 66, `BindToDrawingForRightClick`).
+   - **The lists:** CDGRAPH and the dashboard list only the pipes the record holds (`LinkService.RepairAudit.Analysis.cs:31-35` and `284-295`).
+   - **Writes nothing:** no level, size, number, label, layer or colour.
+5. **`trust.sayWhatRecordUpdateChanged` (ON):** words only. It decides whether the "CE updated its record: ..." line is printed (`ProjectDataService.ReadOnlyTools.cs:201-202`). The update it describes runs exactly as on 3.0.90.5 whether this switch is on or off. It changes nothing in the drawing.
+6. **Changes with no switch, for completeness:**
+   - **The mix-up layers 2089, 2090 and 2100:** they only refuse a write of one drawing's record into another, and say so on the command line. In one-drawing work they allow everything as before.
+   - **`LayerService.cs:45`:** a new read-only list of the pipe layer names, used by the opening check. It does not create or change any layer or colour.
+   - **`PitBlockMigrationService.cs:190`:** only tells the opening line that pit symbols were updated. The symbol update on opening is the installed behaviour, unchanged by this batch. It does not touch layers, colours, labels or levels.
+7. **OFF by default and untouched unless switched on for a scratch session:** `trust.cdeditCancelWritesNothing` (it only holds and puts back CE's own record; it never changes a level or label by itself) and `diag.trustReaderCommand` (reads only).
+8. **Not proven by reading:** that no other routine reached by these tools writes indirectly. The robot list (section 7) checks DBMOD and the stored record before and after for CDGRAPH, CDDIAG and the opening line.
