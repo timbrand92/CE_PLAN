@@ -1,5 +1,13 @@
 # PENDING TESTS — what is built and waiting for Tim in AutoCAD
 
+### Batch 14 Nov INSTALLED ON TIM'S PC: Civil 3.0.90.3 (CDRUNSOLVE split, CDLPD pipe only) and Structural 1.0.126.1 (CLEAN/FASTSAVE never save a never-saved drawing or a template) (robot-tested in real AutoCAD on copies; NOT Codex-looked; NOT Tim-accepted)
+
+Result: `areas\trust-run\INSTALL_BATCH_RESULT_14NOV.md`. Robot SEEN PASS: CDRUNSOLVE A/B/Enter/Esc with and without an LPD; CLEAN/FASTSAVE 5 of 5 on template copies; the 20 BUG-1456 checks again; smoke. NOT RUN by the robot: CDLPD.
+
+1. **For a person or Codex:** CDLPD, Continue in drawing, click a plain line on layer 0: "That line is not a CE pipe ... Nothing was changed", no marker, no LPD stored; click a CE pipe: the LPD is set as before; an older polyline on a CE pipe layer is accepted.
+2. **CDRUNSOLVE with design flows** so a solve actually writes levels down the chosen leg (not seen: the test pipes had no design flow).
+3. **To put back Friday's state:** AutoCAD closed, run `C:\CE_WORK\scratch\trust_install\restore_batch14.ps1`.
+
 ### BUG-1456 cure + change door INSTALLED ON TIM'S PC as Civil 3.0.90.2 — 13 November 2026 (trial install, Tim's 'today only'; robot-tested in real AutoCAD on copies; NOT Codex-looked; NOT Tim-accepted)
 
 Civil 3.0.90.2 = 3.0.90 + PR 2073 + PR 2083 (build 5c89ce30). Results: `areas\trust-run\INSTALL_TRIAL_RESULT_13NOV.md`. Robot: the seen mix-up sequences (S1, S2, S3, R3, C3, R5, F) 10/10 twice; one-drawing work, two copies in turn, PIT placed and saved: pass; no `[BUG-1456]` line in ordinary work.
@@ -2145,7 +2153,7 @@ Test on a COPY (a made-up Structural drawing), AutoCAD 2027, a build that contai
 
 1. **BUG-1457 (PR 2094), CLEAN over a template:** use a scratch COPY of a template, never the office template. New drawing from the copy, do not save, run CLEAN. Right looks like: one plain line ("This drawing has never been saved ... Save the drawing with a name first."), the template copy unchanged (same size and date), nothing cleaned. FASTSAVE the same. After Save As with a name, CLEAN cleans and saves as before.
 2. **BUG-1396, BUG-1397 (PR 2095), BDL:** on a layout tab type BDL: a plain stop line, nothing drawn. In Model space pick two points, answer side and distance, press Esc at "Enter BEAM text": the line says both lines are on the drawing; U removes them.
-3. **BUG-1414 (PR 2096), support link:** make the beam's link record unwritable (lock the beam's layer) and place C1 beside it. Right looks like: "A beam was found nearby, but CE could not save the link ...". Wrong: "Support linked". Not known whether a locked layer really makes the write fail: if the normal line still shows, record "not reachable on a copy".
+3. **BUG-1414 (PR 2096), support link (corrected 14 Nov after review):** a beam CE DREW already holds its link record and a locked layer does not stop that, so use a beam CE has never linked: draw a plain LINE on layer BEAM, lock BEAM, place C1 at one end. Right looks like: "A beam was found nearby, but its layer BEAM is locked, so CE could not save the link ... Unlock BEAM, then run BEAMLINKMIGRATE." Controls: the same on the installed 1.0.126 prints "Support linked to nearby beam." (the fault); a CE-drawn beam with BEAM locked prints "Support linked" and BEAMLINKDEBUG lists the C1 attachment (so that is true); an unlocked beam: "Support linked", moving the beam carries C1. After unlocking BEAM, BEAMLINKMIGRATE on the plain line links C1 and counts it; with a locked beam it says how many could not be saved.
 4. **BUG-1371 (PR 2097), P1 lap:** run P1, read the lap question: it shows 1200 mm. Yes draws a 1200 mm lap as before.
 5. **BUG-1372 (PR 2098), R1 depth:** run R1, pick top and bottom 10 units apart: a line naming the 300 depth used. Pick them 200 apart: no line.
 
