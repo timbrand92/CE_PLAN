@@ -357,7 +357,34 @@ Numbers are that file's Q numbers. That file itself is not edited by the ask cha
 - **Does not change (mine):** the run's present work. The ten are still proven one at a time; nothing was going to colleagues yet.
 - **Asked next:** what "the entirety" covers, and whether it replaces the small core and 8.1.
 
-**Older questions answered so far (this file, 15 Nov):** Q5 to Q15, Q17 to Q24, Q32, Q36, Q46. **Q31 asked, not answered as asked.** **Not asked yet:** Q0 to Q4, Q16, Q25 to Q30, Q33 to Q35, Q37 to Q45, Q47 to Q87, and the two added at the end of that file (the template one is now answered by queue item 6; the robot pressing CDLPD's "Continue in drawing" is not).
+**Q31, asked again after 8.3: which switched-on features do colleagues get in the one full release?**
+
+- **Tim, Sun 15 Nov 2026 02:20 PC clock, clicked:** "My exact switches, once proven (Recommended)".
+- **Choice text he saw:** "a colleague's Pit Schedule comes out in natural order, the same as yours, because each switched-on feature was seen working as part of 'every tool works as intended'. Matches your rule that colleagues get your exact setup."
+- **Not chosen:** "Everything off, turned on later".
+- **Ask chat's note (mine):** the older file's recommendation ("none now; my trial switches left out of the office setup") was written for a small first release and is replaced by this. "Once proven" is the condition: a switch he runs that has not been seen working does not go out switched on.
+
+**Q57. When Structural reaches colleagues.**
+
+- **Tim, Sun 15 Nov 2026 02:20 PC clock, clicked:** "After Civil and Manager, its own release (Recommended)".
+- **Choice text he saw:** "a wrong column size after the Structural release is clearly a Structural fault, not a Civil one, because the two never changed on the same day."
+- **Not chosen:** "Same rule, same release"; "Decide later".
+- **Not asked:** whether Structural's own release needs the same "every ribbon tool works" test as Civil (8.3).
+
+**Q29. Which values become the office setup.**
+
+- **Tim, Sun 15 Nov 2026 02:20 PC clock, clicked:** "Only the ones that differ (Recommended)".
+- **Choice text he saw:** "you see a list of about 30 values where your PC differs from what colleagues start with today, each in plain words, such as 'pipe label height 2.5, colleagues have 2.0'."
+- **Not chosen:** "None, take my PC as it is"; "All 570".
+- **Owed to Tim:** that list of differences, in plain words. "About 30" and the label heights in the example were illustrations, not counted figures.
+
+**Q30. A colleague's own changes at a release.**
+
+- **Tim, Sun 15 Nov 2026 02:20 PC clock, clicked:** "Replaced after Apply, old kept (Recommended)".
+- **Choice text he saw:** "their label height goes back to the office value when they press Apply on the update, and their old file is kept beside it in case it is needed."
+- **Not chosen:** "Kept unless they choose".
+
+**Older questions answered so far (this file, 15 Nov):** Q5 to Q15, Q17 to Q24, Q29 to Q32, Q36, Q46, Q57. **Held back for the evidence study (12.2):** Q16, Q73, Q80 to Q82. **Not asked yet:** Q0 to Q4, Q25 to Q28, Q33 to Q35, Q37 to Q45, Q47 to Q56, Q58 to Q72, Q74 to Q79, Q83 to Q87, and the two added at the end of that file (the template one is now answered by queue item 6; the robot pressing CDLPD's "Continue in drawing" is not).
 
 ---
 
