@@ -829,6 +829,32 @@ Rule: a mock-up OK is approval of the picture. It is not a go-ahead to build, an
 
 ---
 
+## 11b. Older questions never asked: which ones tonight's answers have overtaken
+
+**Ask chat's sorting, mine, written about 03:45 Sun 15 Nov after the sitting. None of this is Tim's words. "Overtaken" means I will not ask it as written, because an answer of his already covers it; the answer it rests on is named so anyone can check. If the sorting is wrong, the question goes back on the list.**
+
+**Overtaken, not to be asked as written (7):**
+
+1. **Q0, where trial builds may be seen.** Rests on: his 14 Nov standing approval for trial installs on his own PC (queue file, "Answered"). What is left of it is one machine for the Roll Back proof, which he left open at 03:09 ("Ask me later").
+2. **Q4, which steps need his own three-day trial.** Rests on: 8.3 (five clean days and one real job on the whole thing), the rule 4 answer (robot on copies of real jobs) and Q65 (the trust gate). Step-by-step trials by him are no longer the method.
+3. **Q37, New Job at the left end of the tab.** Rests on: the ribbon mock-up he OK'd at 03:20, where "New job" is the first tool in panel 1, Start.
+4. **Q38, where spot levels, the long section, downpipe destinations, CDRENUMBER and CDEDIT sit.** Rests on: the same mock-up (Spot level in Levels; Long section and Renumber pits in Sheet; Where downpipes go in Check) and his own choice of Network for Edit (03:18).
+5. **Q45, one small safety build or several.** Rests on: his 14 Nov answer "One batch, ask me once" and his standing approval for trial installs.
+6. **Q41, Structural during the Civil work.** Rests on: Q57 (Structural after Civil and Manager, its own release) and 8.3 (colleagues keep the CE they have until the one release).
+7. **Q63, the Structural tab layout, the panels part.** Rests on: 13.7 (Start, Roof, Upper floors, Ground, Footings, Check, Sheet). The other parts (one Beam button; what is held off the tab; the tab's name) are on the Structural mock-up in queue item 15.
+
+**Partly answered, one piece left (1):**
+
+1. **Q44.** Tab order and one Check button are on the mock-up he OK'd. Left: whether the pop-up tab stays when a pit, pipe or source is picked.
+
+**Still open, each a small default already in use (8):** Q34 (the opening line's eight small defaults), Q58 (the Structural core list), Q68 (when the "changed without telling" fault starts to count), Q74 (how the robot marks a reading), Q75 (what the read-only copy takes from CE's record), Q76 (where the LPD confirmation is kept), Q77 (the read-only Check this drawing list and its typed name), and the robot pressing CDLPD's "Continue in drawing" on scratch copies (added to that file 14 Nov).
+
+**Ask chat's view on those eight (mine):** Q74 to Q77 are about how the builders and the robot work, not about what a drafter sees. Under his 03:27 direction (too complex, built without thought for people) they are poor uses of his attention; I would put them to him only if one turns out to change something he can see.
+
+**Running count for the 87:** 66 answered in whole or in part; 7 overtaken; 5 held for the evidence study; 1 partly answered (Q44); 8 open with defaults in use. 66 + 7 + 5 + 1 + 8 = 87.
+
+---
+
 ## 12. Tim's own ideas raised in this chat (his words; not decisions, not builds)
 
 **12.1 Teach CE and Claude what old drawings are made of, from the evidence model.**
