@@ -242,7 +242,34 @@ Numbers are that file's Q numbers. That file itself is not edited by the ask cha
 - **Choice text he saw:** "pit P3 copied in from last year's job, with a different label, shows as Proposed, not Sure. Sure needs CE's tag used once in the drawing and stored values matching the drawn label."
 - **Not chosen:** "The tag alone". ("Tag" was my plain word for what the older file calls CE's stored identity.)
 
-**Older questions answered so far (this file, 15 Nov):** Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14, Q15. **Not asked yet:** Q0 to Q4, Q16 to Q87, and the two added at the end of that file (the template one is now answered by queue item 6; the robot pressing CDLPD's "Continue in drawing" is not).
+**Q21. A tool needs the LPD and none is drawn yet.**
+
+- **Tim, Sun 15 Nov 2026 02:09 PC clock, clicked:** "Ask me to place or pick it (Recommended)".
+- **Choice text he saw:** "CDRENUMBER on a new job asks 'Pick the LPD'. CE never offers the lowest pit as a stand-in, because a stand-in is a guess shown as fact."
+- **Not chosen:** "Offer the lowest pit as a proposal".
+
+**Q22. Esc at the LPD question.**
+
+- **Tim, Sun 15 Nov 2026 02:09 PC clock, clicked:** "Carry on with a warning (Recommended)".
+- **Choice text he saw:** "the Pit Schedule is still made, in today's order, with one line 'LPD not confirmed, order may differ'. Nothing stops."
+- **Not chosen:** "Stop the tool".
+- **Ask chat's note (mine):** older Q83 (Esc cancels at CDWT's and CDAGI's questions) is a different case and is not answered by this; here Esc at the LPD question lets the tool carry on.
+
+**Q23. A job with two networks and two discharge points.**
+
+- **Tim, Sun 15 Nov 2026 02:09 PC clock, clicked:** "One per network (Recommended)".
+- **Choice text he saw:** "front and rear networks each number and solve from their own LPD, matching two council connections. CE tells them apart by which pits and pipes drain to each."
+- **Not chosen:** "One per drawing".
+
+**Q24. An extra marker drawn at the confirmed LPD.**
+
+- **Tim, Sun 15 Nov 2026 02:09 PC clock, clicked:** "Yes, draw a small marker too". **This was NOT the recommended choice** (recommended was "No, my LPD callout is enough").
+- **Choice text he saw:** "a small CE symbol sits at the confirmed LPD on its own layer, so anyone can see CE knows it."
+- **Not chosen:** "No, my LPD callout is enough (Recommended)" (CE adds nothing more to the plan).
+- **Ask chat's reading (mine):** he wants to SEE on the plan that CE knows the LPD. What the marker looks like, its size, its layer name, and whether it plots were not asked. It is something drawn that he will see, so his screen rule applies: a picture and his OK before it is built. The other half of the older Q24 (CDRENUMBER with no outlet pipe asks for the LPD instead of stopping) was in both of the older file's choices and matches his Q21 answer above; my wording put that sentence only under the choice he did not pick, so I am reading it from Q21, not from this click.
+- **Note for the builders (mine):** the older file says the TRUST-07 test cases were written for "no extra marker". His answer is newer.
+
+**Older questions answered so far (this file, 15 Nov):** Q5 to Q15, Q21, Q22, Q23, Q24. **Not asked yet:** Q0 to Q4, Q16 to Q20, Q25 to Q87, and the two added at the end of that file (the template one is now answered by queue item 6; the robot pressing CDLPD's "Continue in drawing" is not).
 
 ---
 
