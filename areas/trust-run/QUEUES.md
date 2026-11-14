@@ -328,3 +328,9 @@ Answering the three questions put to him at 23:18 (controller's reading of which
 Tim, asked whether all the foundation fixes were made: "why cant we make the fixes then test?"
 
 Controller's reading (mine): with his standing approval for trial installs, drafted and reviewed fixes no longer wait tool by tool. They go onto his PC in trial batches and are tested in real AutoCAD by the robot and Codex; a batch that fails is put back. Batch 3 widened to: the mix-up layers (2089, 2090, 2100), the PITSCHEDULE fixes, 2064 with the Edit Cancel hold (switch off as shipped), and the reviewed-GO foundation drafts of steps 0, 1 and 5. Ribbon and same-settings-for-everyone stay out. Still no new drafts, no merge into shipped lines, nothing to colleagues. The count Tim sees stays "accepted of 10".
+
+## WORK AUTONOMOUSLY, QUEUE FOR TIM (Tim, Sun 15 Nov 2026, about 01:40 PC clock)
+
+Tim: "i want you to work autonomously so dont get bogged down by waiting for me, just queue stuff for me and continue loops as necessary"
+
+In force: (1) the controller checks every two hours, not twice a day, and acts on each check; lanes are never left idle. (2) Everything that is Tim's to decide goes to `areas\trust-run\FOR_TIM_QUEUE.md` with a recommended answer used as a labelled default. (3) Unchanged and still only on his word: merging into shipped lines, anything to colleagues, a new screen without a mock-up. Still no new drafts.
