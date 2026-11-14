@@ -152,3 +152,7 @@ Chat: CE_ACAD / trust plan / fix / 01 safety fixes. Card TRUST-04. Civil cut fro
   - **Tests:** the whole Civil test run passes, 22,647 passed and 0 failed.
   - **Payload:** Modern `57F6FCCF...`, manifest `F6B9D2A5...`; 11 files differ from 3.0.90.5.
   - **Scripts:** `install_batch14d.ps1` and `restore_batch14d.ps1` (NOT RUN). Runbook: `INSTALL_BATCH_14NOV.md`, section BATCH 4.
+- 2026-11-15 03:05 **(1) Batch 4 checked against Tim's four never-by-itself rules:** no setting ON by default touches any of them. `trust.reachesFollowDrawingUnits` is not in batch 4. Each ON setting has its file and line in `INSTALL_BATCH_14NOV.md`, batch 4 section 9. **(2) CDLPD, draft 2099 at `28dd045c`:** only a pipe CE has a record of (Tim, 01:47). The bare pipe-layer line from L-06 is refused with the plain line, both routes, and the record is bound first; read-only GO. **(3) CDRENUMBER, draft 2093 at `a8fca9cc`:** the loop line names the pipes as recorded and points to CDREVERSEFLOW; the not-joined line is corrected for own marks; read-only GO. In Codex's 14 Nov run the records held no loop (by reading). **(4) Batch 5 PREPARED, NOT INSTALLED:** Civil 3.0.90.7 (`9b977125`) in `C:\ce_rc_scratch\b14civ5`, on top of batch 4.
+  - **Tests:** the whole Civil test run passes, 22,663 passed and 0 failed.
+  - **Payload:** Modern `1111E937...`, manifest `24BD504C...`; 7 files differ from 3.0.90.6.
+  - **Scripts:** `install_batch14e.ps1` and `restore_batch14e.ps1` (NOT RUN). Runbook: section BATCH 5.

@@ -402,3 +402,70 @@ All lines below are read in batch 4's build code, `C:\CE_WORK\build\wtB14d` at `
    - **`PitBlockMigrationService.cs:190`:** only tells the opening line that pit symbols were updated. The symbol update on opening is the installed behaviour, unchanged by this batch. It does not touch layers, colours, labels or levels.
 7. **OFF by default and untouched unless switched on for a scratch session:** `trust.cdeditCancelWritesNothing` (it only holds and puts back CE's own record; it never changes a level or label by itself) and `diag.trustReaderCommand` (reads only).
 8. **Not proven by reading:** that no other routine reached by these tools writes indirectly. The robot list (section 7) checks DBMOD and the stored record before and after for CDGRAPH, CDDIAG and the opening line.
+
+## BATCH 5 (PREPARED, NOT INSTALLED): Civil 3.0.90.7 = batch 4 (3.0.90.6) + CDLPD only recorded pipes + CDRENUMBER names unreached pits and loop pipes
+
+Written Sun 15 Nov 2026 by lane trust-safety-fixes, on the controller's order ("These go into batch 5 (3.0.90.7, its own folder b14civ5)"). Its own folder and version. **Install only after batch 4** (the script refuses unless live Civil reads 3.0.90.6+35cdad78). The controller installs.
+
+### 1. What is in it (each at a final head with a read-only GO on that head)
+
+1. **PR 2099 (CDLPD, BUG-1298) at `28dd045c`** (GO).
+   - **The ruling:** Tim, 15 Nov 01:47: "No, only recorded pipes".
+   - **Both routes, one rule:** clicking a line and picking a point near a pipe end both accept a line only when CE's record holds a pipe with that line's handle. A plain polyline on a pipe layer is refused with the same plain line as any other non-CE line (the L-06 case). A line CE turned into a pipe object on opening without recording it is refused too. A recorded pipe still works.
+   - **Record first:** CDLPD binds CE's record to this drawing before either route asks it.
+   - **Side effect:** the downpipe on-pipe-end check asks the same routine, so a downpipe on the end of a bare line is no longer said to be on a pipe end (a warning-only check).
+2. **PR 2093 (CDRENUMBER) at `a8fca9cc`** (GO). Display lines only, both before the Yes/No question; nothing about the numbering changes.
+   - **(a) BUG-1306:** the pits not joined to the outlet by pipes are named. A plain P number goes after the main network in its old order, and a mark of its own (such as EP1) is kept.
+   - **(b) BUG-968, the open half:** when CE's pipe records loop back on themselves, the line names the pipes as recorded ("P10 to P9 and P9 to P10") as well as the pits, and points to CDREVERSEFLOW.
+   - **Finding:** in Codex's 14 Nov run no loop line appeared, so by reading (not proven) CE's records held no loop there. The second pipe was most likely recorded running the same way as the first.
+
+### 2. Not in it
+
+Nothing else. Batches 3 and 4 are underneath (install order: 3, then 4, then 5).
+
+### 3. How it was put together
+
+1. **Build stack** (local, detached, never pushed) in `C:\CE_WORK\build\wtB14e`, on `35cdad78` (batch 4): merges of 2099 and 2093 (REGRESSION_LOG conflicts only, both sides kept). **Build commit `9b977125`**, "Version: Civil 3.0.90.7".
+2. **Product files changed against 3.0.90.6:** `LpdCommand.cs`, `LpdService.cs`, `PitRenumberCommand.cs`, `PitRenumberPlanner.cs` and the two version lines. List: `C:\CE_WORK\scratch\trust_install\b14civ5_files_changed.txt`.
+3. **Whole Civil test run on the merged code:** **22,663 passed, 0 failed, 32 skipped** (8 min 29 s).
+
+### 4. Against Tim's four "never by itself" rules
+
+1. **No ON-by-default setting is added in batch 5.**
+2. **CDLPD only refuses more lines.** It never changes a level, size, number, label, layer or colour by itself. Storing an LPD is the drafter's own act, after the picks.
+3. **CDRENUMBER renumbers only after the drafter's Yes, exactly as before.** The two new lines are words before the question (`PitRenumberCommand.cs`, the `UnreachedLine` and `LoopLine` writes come before the `[Yes/No]` prompt; pinned by source-order tests).
+
+### 5. Payload
+
+1. **Payload:** `C:\ce_rc_scratch\b14civ5\CE_CVL_SUITE.bundle`, 832 files. `build_installer.ps1` exit 0; three lanes verified; shared config verified; every dotnet call passes `-p:SkipDevBundle=true`.
+2. **DLL `3.0.90.7+9b977125e86d583230181171077402953bef1310` SHA-256:**
+   - Legacy `564225633F66D110F60839F3137CBCC43176727308E720E0F9E7FD2029248671`
+   - Net8 `5CF02DDCBF502BA17642566F178E4AAB0AB55080E5AF7F508C868E92A3D9A077`
+   - Modern `1111E937330B398458B613D3D54B873620B5A39259C2C06086B6F96FD36F835B`
+3. **Manifest** `C:\CE_WORK\scratch\trust_install\b14civ5_manifest.txt`, SHA-256 `24BD504CE12463ACA95C8225CC6FFE645DC146A27807709D2CC998D169778A24`.
+4. **Stamp check:** clean (0 bytes outside the stamp zones); the installed CE_SHARED and CE.AI.Core bytes were put in; CE_SHARED is identical to Manager x3. Natives are the installed bytes.
+5. **Against batch 4 (`b14civ4`):** 7 files differ (CE_CVL_SUITE.dll and .pdb x3, PackageContents.xml), 0 added, 0 removed.
+
+### 6. Install and put back
+
+1. **Install (after batch 4):** `C:\CE_WORK\scratch\trust_install\install_batch14e.ps1`. It refuses unless live Civil reads `3.0.90.6+35cdad78`, and keeps `CE_CVL_SUITE_PRE_35cdad78_<time>.backup`. Log: `install_batch14e.log`. NOT RUN; it parses clean.
+2. **Put back:** `restore_batch14e.ps1`, back to 3.0.90.6, checked against `b14civ4_manifest.txt`. NOT RUN; it parses clean.
+
+### 7. Robot and Codex list (scratch copies)
+
+1. **First start:** "CE_CVL_SUITE v3.0.90.7 Started".
+2. **CDLPD, the L-06 case:**
+   - A plain polyline on STORMWATER PIPE clicked as the pipe: the plain refusal line, no marker, no LPD stored, drawing unchanged.
+   - A recorded CE pipe: the LPD is stored as before, and is still there after save and reopen.
+   - The pick-a-point route near a bare line's end: no pipe end found, nothing stored.
+   - The robot's click tools may not reach CDLPD's pick; if so it is for Codex, as on 14 Nov.
+3. **Downpipe on a recorded pipe end:** still said to be on it.
+4. **CDRENUMBER:**
+   - A copy with a pit not joined to the outlet: the "Not joined" line names it before the question.
+   - A copy whose records really hold two opposite pipes (make one by turning a pipe round with CDREVERSEFLOW): the loop line names both pipes before the question.
+   - No: nothing changes.
+5. **Regression:** batch 4's list items 1 and 2, once.
+
+### 8. Stop rules
+
+As section 5 at the top. If a pass fails, batch 5 is put back with `restore_batch14e.ps1`; batch 4 stays.
