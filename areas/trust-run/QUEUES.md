@@ -322,3 +322,9 @@ Answering the three questions put to him at 23:18 (controller's reading of which
 1. **CDRUNSOLVE design flow = the Q typed in Pipe Edit, for now.** ANSWERED yes. No longer a controller default.
 2. **Where the robot cannot make a pick, a Codex PASS (with screenshot) plus a before-and-after check of CE's record counts as accepted.** ANSWERED yes. Written "FIXED (Codex-accepted, record-checked, build, date)". Engineering-judgement items still need Tim.
 3. **Trial installs on his PC: standing approval.** ANSWERED "yes you have my approval to do it whenever you want to". Controller's reading (mine): covers trial batches of the ten-tool work on his PC, with the controller choosing the time. Kept by the controller as its own care, not as Tim's conditions: AutoCAD closed and not his (re-read autocad.json), outside his weekday hours, backup first, SHA-256 check after, put-back script ready, a line to Tim after each install. It does NOT cover merging into shipped lines or anything to colleagues.
+
+## FIX THEN TEST (Tim, Sun 15 Nov 2026, about 00:20 PC clock)
+
+Tim, asked whether all the foundation fixes were made: "why cant we make the fixes then test?"
+
+Controller's reading (mine): with his standing approval for trial installs, drafted and reviewed fixes no longer wait tool by tool. They go onto his PC in trial batches and are tested in real AutoCAD by the robot and Codex; a batch that fails is put back. Batch 3 widened to: the mix-up layers (2089, 2090, 2100), the PITSCHEDULE fixes, 2064 with the Edit Cancel hold (switch off as shipped), and the reviewed-GO foundation drafts of steps 0, 1 and 5. Ribbon and same-settings-for-everyone stay out. Still no new drafts, no merge into shipped lines, nothing to colleagues. The count Tim sees stays "accepted of 10".
