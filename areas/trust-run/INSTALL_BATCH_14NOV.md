@@ -268,3 +268,14 @@ CE reads its Civil settings from `%APPDATA%\TIM_CE_CADTOOLS\CD_Settings.json`, u
 ### 8. Stop rules
 
 As section 5 at the top. If any pass fails, batch 3 is put back with `restore_batch14c.ps1`; batch 2 (3.0.90.4) stays. If one item alone fails, the controller decides whether to rebuild without it. I can rebuild the stack without any one draft in about 30 minutes.
+
+## BATCH 3 (NARROW) INSTALLED (controller, Sun 15 Nov 2026 01:49 PC clock)
+
+On Tim's standing trial approval. Installed by the controller.
+
+1. **What:** Civil 3.0.90.4 became `3.0.90.5+3c620efe` = the two Pit Schedule fixes (2039 at `fdf93a25`, 2107 at `9f8a73e4`). The widened `b0184cea` build was withdrawn and never installed; it returns as batch 4 = 3.0.90.6.
+2. **Before:** no acad or accoreconsole running; payload read by the controller at 01:39 and 01:48, equal to the narrow section (Modern `0921DE7F...`, manifest `8C64207B...`). An earlier try at 01:33 aborted on the script's AutoCAD check and changed nothing.
+3. **Ran:** `install_batch14c.ps1`. 832 candidate files, 832 live, bad 0, extra 0; all three lanes 3.0.90.5; CE_SHARED identical to Manager x3; four settings files unchanged; "INSTALL VERIFIED".
+4. **Live Modern DLL SHA-256 read back by the controller:** `0921DE7F77C6A2F38986100A23336B1ACDAFE5163C08FB5974F89B70C2E41A11`.
+5. **Backup kept:** `CE_CVL_SUITE_PRE_dadac7e7_20261115-014806.backup`. Put-back: `restore_batch14c.ps1` (not rehearsed).
+6. **Not yet done:** nothing has run in AutoCAD on 3.0.90.5. Not accepted.
