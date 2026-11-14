@@ -581,3 +581,14 @@ Written Sun 15 Nov 2026 04:20 by lane trust-safety-fixes, on the controller's or
 
 1. Any load error, a missing ribbon panel or command, Manager showing Civil wrong, or settings changed: put back at once.
 2. Any doubt about the PC's state: put back.
+
+## BATCHES 4 AND 5 INSTALLED BACK TO BACK (controller, Sun 15 Nov 2026 03:15 and 03:16 PC clock)
+
+On Tim's standing trial approval. Installed by the controller, after the evidence lane reported batch 3 with no FAIL and its AutoCAD closed (03:14).
+
+1. **Why back to back:** testing, not fixing, was the hold-up (one AutoCAD). One combined robot and Codex list now runs on 3.0.90.7. If anything fails, the controller steps back one batch at a time with the restore scripts to find which batch caused it.
+2. **Before:** no acad or accoreconsole running; autocad.json mode auto, a Sunday. Payloads read by the controller: batch 4 Modern `57F6FCCF...`, manifest `F6B9D2A5...`; batch 5 Modern `1111E937...`, manifest `24BD504C...`; both equal to their runbook sections. Batch 4's never-by-itself write-up (section 9) read by the controller first.
+3. **Ran:** `install_batch14d.ps1` (03:15, "INSTALL VERIFIED: batch 4 (Civil 3.0.90.6)"), then, only after confirming live read `3.0.90.6+35cdad78` and the log said verified, `install_batch14e.ps1` (03:16, "INSTALL VERIFIED: batch 5 (Civil 3.0.90.7)"). Each: every file matches its candidate, CE_SHARED identical to Manager, settings unchanged.
+4. **Live now:** `3.0.90.7+9b977125`, Modern SHA-256 `1111E937330B398458B613D3D54B873620B5A39259C2C06086B6F96FD36F835B`, read back by the controller.
+5. **Backups kept, newest last:** `CE_CVL_SUITE_PRE_dadac7e7_20261115-014806.backup` (3.0.90.4), `CE_CVL_SUITE_PRE_3c620efe_20261115-031354.backup` (3.0.90.5), `CE_CVL_SUITE_PRE_35cdad78_20261115-031503.backup` (3.0.90.6). Put-back, one step each: `restore_batch14e.ps1`, then `restore_batch14d.ps1`, then `restore_batch14c.ps1`. None rehearsed.
+6. **Not yet done:** nothing has run in AutoCAD on 3.0.90.6 or 3.0.90.7. Not accepted. Batch 3's numbered-pits case and Export CSV were not run before this install.
