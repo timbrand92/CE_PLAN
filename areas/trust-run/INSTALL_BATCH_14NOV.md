@@ -58,3 +58,11 @@ With AutoCAD closed: `C:\CE_WORK\scratch\trust_install\restore_batch14.ps1`. It 
 - 2026-11-14 01:25: runbook written by trust-acad-evidence on the controller's order of about 01:12. Branches staged (local only): Civil `11c0093c`, Structural `3c805169`. Payload builds running. Nothing installed.
 - 2026-11-14 01:40: Civil payload built and checked (7 files differ from 3.0.90.2, three core-console checks PASS). Structural rebuilt at 2094's head 2205dfde (9 files differ from 1.0.126, all explained). Second review 01:22: 2092 and 2099 BATCH-READY; 2094 NOT YET at 226edc6c, now at 2205dfde awaiting the reviewer's word. Runbook item 4.2 reworded (A/B, Enter and Esc tested for real after install). Nothing installed; nothing under ApplicationPlugins touched.
 - 2026-11-14 02:00: reviewer's third look (01:38): PR 2094 at 2205dfde BATCH-READY. All three fixes are now BATCH-READY; both payloads (Civil b14civ, Structural b14struc at d4edbc19) stand. The install waits only for Tim's yes to the list. Nothing installed.
+
+## Tim's word, Sat 14 Nov 2026 about 14:10 (PC clock)
+
+The controller asked Tim twice (01:39 and 08:18): "Install the batch of three key fixes on your PC as a trial?" with choices Yes / Civil only / Not yet, and "may the robot press CDLPD's Continue in drawing button on scratch copies?".
+
+Tim's answer, in his words: **"you do what you need to, to keep things moving"**.
+
+**Controller's reading (an interpretation, not Tim's words):** yes to this one batch as a trial (Civil 3.0.90.3 and Structural 1.0.126.1, Manager untouched), and yes to the robot pressing CDLPD's "Continue in drawing" on scratch copies only. It is NOT read as: permission for any later install, any merge, anything to colleagues, or any other change to the robot's press list. Kept only if every pass is good; otherwise put back with `restore_batch14.ps1`. If Tim meant something narrower, the put-back script returns the PC to Civil 3.0.90.2 / Structural 1.0.126.
