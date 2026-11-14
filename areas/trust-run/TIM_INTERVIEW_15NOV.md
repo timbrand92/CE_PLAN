@@ -606,7 +606,36 @@ Numbers are that file's Q numbers. That file itself is not edited by the ask cha
 - **Supersedes, kept on record:** the 17 Oct 2026 ruling (RULINGS B) that a tool switches ON by default once Codex passes it in AutoCAD, from 15 Nov 2026 02:34. Applies to his own PC as well, since he passed over the choice that kept it there.
 - **Still not asked from Q66:** whether Rule 15 (AutoCAD never idle when he is away) stays. It stays in force until he says otherwise.
 
-**Older questions answered so far (this file, 15 Nov):** Q1, Q2 (permission, not the chosen set), Q5 to Q15, Q17 to Q33, Q35, Q36, Q46 to Q52, Q54 to Q57, Q65, Q66 (all but Rule 15), Q83. **Q53 open by his choice ("I'll tell you later"): not the 17 Oct pilot.** **Held back for the evidence study (12.2):** Q16, Q73, Q80 to Q82. **Not asked yet:** Q0 to Q4, Q33 to Q35, Q37 to Q45, Q47 to Q56, Q58 to Q72, Q74 to Q79, Q83 to Q87, and the two added at the end of that file (the template one is now answered by queue item 6; the robot pressing CDLPD's "Continue in drawing" is not).
+**Q2 follow-up. May the robot also copy finished Structural jobs for the evidence study?** (He was told: same limits, copies on his PC only, no names or addresses anywhere.)
+
+- **Tim, Sun 15 Nov 2026 02:36 PC clock, clicked:** "Yes, any finished Structural job (Recommended)".
+- **Choice text he saw:** "the study reads copies of completed framing and bracing plans to learn how beams, columns and brace tags were drawn in past years. Same standing word as for stormwater jobs."
+- **Not chosen:** "Civil only for now"; "Only Structural jobs I name".
+- **What this is (mine):** the same standing word as Q2, extended to finished Structural jobs, for the evidence study. The same four limits apply word for word (copies only, on his PC, outside every repository and OneDrive; no client name, address or job number anywhere; finished jobs only; the ask chat does not open the folder). The question was framed for the evidence study; whether the robot may also RUN Structural tools on those copies was not asked.
+
+**Q3. Where the "right answer" for each test job comes from.**
+
+- **Tim, Sun 15 Nov 2026 02:36 PC clock, clicked:** "Both; differences flagged". **This was NOT the recommended choice** (recommended was "Plan labels, not the old schedule").
+- **Choice text he saw:** "the robot reads the plan label and the schedule row; where they differ, the job shows 'P4: label 9.45, schedule 9.60' for you. Fits your idea of reading the schedule."
+- **Not chosen:** "Plan labels, not the old schedule (Recommended)"; "The old Pit Schedule".
+- **Ask chat's reading (mine):** consistent with his schedule idea (Q10 and Q12 follow-ups, 02:04): the schedule is a source, and a disagreement with the plan label is shown to him, never settled by the robot. Where label and schedule agree, that value is the answer. Where they differ, the answer for that value is his to give; until then the robot cannot mark CE right or wrong on it.
+- **Not asked:** the older file's third source, a print he marks up by hand.
+
+**Q59. BT1 roof bracing trusses in the wall bracing totals. ENGINEERING JUDGEMENT, HIS OWN WORD. No recommendation was given.**
+
+- **Tim, Sun 15 Nov 2026 02:36 PC clock, clicked:** "Count them".
+- **Choice text he saw:** "the same wall reads 6700 provided, because the office's own layer name files these trusses with wall bracing. The panel says in one line what it counted." (The case: one 2700 type A brace plus one 4000 BT1 truss, both north-south.)
+- **Not chosen:** "Leave them out" (2700 provided); "Show both figures".
+- **This reverses a draft:** the older file says the draft under card TRUST-04 (draft pull request 2047) leaves the trusses OUT, with no line saying so, "until you answer". He has answered: they count, and the panel says in one line what it counted. That draft now disagrees with his word.
+- **Follows from this, not asked:** older Q78 recommended making the truss rule a Settings value ("Bracing trusses (BT) count toward wall bracing"), set to whatever he answered here. By his answer its value would be yes. Q78 itself is still not asked.
+
+**Q69. A brace with a blank type tag.** (Engineering, his own word.)
+
+- **Tim, Sun 15 Nov 2026 02:36 PC clock, clicked:** "Type '?', panel amber (Recommended)".
+- **Choice text he saw:** "a brace pasted from an older job with its tag cleared stops being counted as type A; the bracing panel turns amber, not green, until you give it a type. Same rule as Unknown everywhere in Civil."
+- **Not chosen:** "Keep counting it as type A".
+
+**Older questions answered so far (this file, 15 Nov):** Q1, Q2 (permission, not the chosen set), Q3, Q5 to Q15, Q17 to Q33, Q35, Q36, Q46 to Q52, Q54 to Q57, Q59, Q65, Q66 (all but Rule 15), Q69, Q83. **Q53 open by his choice ("I'll tell you later"): not the 17 Oct pilot.** **Held back for the evidence study (12.2):** Q16, Q73, Q80 to Q82. **Not asked yet:** Q0 to Q4, Q33 to Q35, Q37 to Q45, Q47 to Q56, Q58 to Q72, Q74 to Q79, Q83 to Q87, and the two added at the end of that file (the template one is now answered by queue item 6; the robot pressing CDLPD's "Continue in drawing" is not).
 
 ---
 
