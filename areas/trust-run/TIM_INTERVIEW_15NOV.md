@@ -779,7 +779,9 @@ Numbers are that file's Q numbers. That file itself is not edited by the ask cha
 
 - **What happened:** at about 03:15 the ask chat showed a mock-up of the CE Drainage tab in job order as an in-chat picture and asked whether the layout was right.
 - **Tim, Sun 15 Nov 2026 03:18 PC clock, typed:** "cant see it"
-- **State:** queue item 8 is still open. The picture did not reach him; my fault for not checking it had. The same mock-up is now a file, `04_REFERENCE\mockups\RIBBON_JOB_ORDER_15NOV.html`, sent to him, and the question is asked again.
+- **State at 03:18:** queue item 8 still open. The picture did not reach him; my fault for not checking it had. The same mock-up became a file, `04_REFERENCE\mockups\RIBBON_JOB_ORDER_15NOV.html`, sent to him, and the question was asked again.
+- **Asked again. Tim, Sun 15 Nov 2026 03:20 PC clock:** he confirmed he could see it ("Yes, the file") and clicked "Yes, OK as shown (Recommended)". Queue item 8 is ANSWERED; the full record, with what is and is not approved, is in `FOR_TIM_QUEUE.md` under "Answered". This also confirms "one tab" below, now given with the picture seen.
+- **Honest limit:** I could not view the rendered file myself (the Browser pane does not allow a screenshot of a local file). His "Yes, the file" is the only evidence that it rendered as written.
 
 **One tab or two (CE Design folded into CE Drainage). GIVEN WITHOUT SEEING THE PICTURE; to be confirmed with the mock-up.**
 
