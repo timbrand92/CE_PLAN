@@ -87,6 +87,10 @@
    - **I will press it myself.** Example: on a scratch copy with the switch on, type CD, pick two pits, press Esc once: the page should close and nothing is drawn. About 2 minutes; the test chat sets the copy up for you.
    - **Update 23:24 Sun 15 Nov:** both test-chat routes failed (Codex's click greys the page before any key; the test chat's own keyboard tool would need an access prompt from you, so it was not used). Your 2 minutes is now the only way to see Esc and Enter on this page. Nothing else waits on it.
 
+24. **CDLPD: you pick a pipe near its middle. Which end gets the LPD note?** Found 04:32 Mon 16 Nov (Codex LPD16 and LPD17, Civil 3.0.90.13, pictures opened by the controller). Today CE takes the pipe end nearest your click. On the test job's pipe P2 to P1 (falls to P1, IL 17.08 down to IL 16.98) a click just right of the middle put the note at P1, "AT APPROX IL16.98m"; a click just left of the middle put it at P2, the top end, "CONNECT TO KERB & CHANNEL AT APPROX IL17.08m", with the FALL arrows pointing away from it. Nothing warns you. Default in use: nothing changed in the tool yet; CDLPD is not counted; the fix chat prepares the recommended answer on an existing draft, not installed until it has been seen in AutoCAD.
+   - **Always the downstream end when CE knows the fall** (recommended). Example: click anywhere on P2 to P1 and the note goes at P1 with IL 16.98. Only a pipe with no recorded direction or levels falls back to the end nearest the click, and the command line says so.
+   - **Keep nearest the click, but say which end.** Example: the click left of the middle still puts the note at P2, and the command line reads "LPD set at P2 (upstream end, IL 17.08)" so you can see it and undo.
+
 ## Older, still open (asked before 15 Nov, defaults in use)
 
 8. **Ribbon in job order** (Start, Sources, Network, Levels, Check, Sheet). Default: not built into any batch until you have seen a mock-up.
