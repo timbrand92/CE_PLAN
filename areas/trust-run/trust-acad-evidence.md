@@ -83,3 +83,16 @@
     - New Pipe page Esc and Enter (Tim's check);
     - CDRULES growth (fix lane).
   - No AutoCAD running, lock free, settings unchanged. Waiting for the controller's next order; nothing starts after 07:30.
+- 2026-11-16 05:16: **Driver press list, one more name, on the controller's ruling of about 05:20 under Tim's queue item 16** (queue item 26; the controller reads the button that opens More options as inside Tim's yes to its Design flow box). Script `C:\CE_WORK\scratch\trust_install\item26_more.ps1`, output `item26_more.out`. Backups `*.pre_item26_20261116_051601` beside each file.
+  - The controller's words said "More..."; the button's name to the driver is **"Edit pipe, More"** (id PipeEditWorkshopDialog.More; "More..." is only its label on screen). This is the same one button, one entry.
+  - BEFORE (Edit Pipe press): `"press": ["Save pipe and close", "Edit pipe, Save", "Cancel without saving", "Cancel", "Close", "OK", "Inspect drawing and retain pending edits"],`
+  - AFTER: `"press": ["Save pipe and close", "Edit pipe, Save", "Edit pipe, More", "Cancel without saving", "Cancel", "Close", "OK", "Inspect drawing and retain pending edits"],`
+  - No wildcard; never_buttons unchanged (checked); deny_exceptions unchanged ("More" is on no never or deny list).
+  - Pins re-set in the same change:
+    - v2 allow-list `B09E747D37FE4C4BE2A0011279AABE92971035D99B3581EE800C2ED5274165DB` -> `1B1A6447B96F706E372327B31FA860E4D91354B92CF0FF45F2DA06793E33460A` (in acad_driver_witness_v2.ps1);
+    - v3 V2ExpectedSha `CF7D3280C7B6` -> `82482496C918`; V2AllowExpectedSha `B09E747D37FE` -> `1B1A6447B96F`;
+    - case_runner header text the same.
+  - All three scripts parse with 0 errors; v3-status OK.
+  - Not added: any Proposal Preview press (Apply or Cancel); that is Tim's queue item 26.
+  - Read-only review: running (result below).
+  - **Review (cheap read-only reviewer, 05:21): PASS on all five checks.** Only the one name was added to Edit Pipe (allow-list line 31). The v2 pin (line 2371) matches the new allow-list hash; v3 lines 42-43 match the new v2 script and allow-list prefixes; case_runner line 368 carries the same text. A press of "Edit pipe, More" still passes the never and deny checks (2408-2423) and Assert-UiWrite (1336-1345, called at 2602): AutoCAD launched by the driver or named in the lock, and the active drawing a test copy.
