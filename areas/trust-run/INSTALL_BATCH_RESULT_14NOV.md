@@ -623,3 +623,17 @@ Real-AutoCAD screenshots copied to `04_REFERENCE/mockups/NEW_PIPE_ONE_PAGE_15NOV
      - **Finding for the controller and Tim (engineering, not judged by me):** a drafter who clicks the upstream half of the outlet pipe gets the legal point of discharge at the upstream pit.
    - **L-03 one U PASS (LPD17-23):** the echo was CDLPD; the new callout is gone; R1 is exactly the START reading (the original COUNCIL STUB LPD, PipeHandle 109500); count 1054.
    - Settings unchanged; last-used pit unchanged; nothing saved.
+15. **RSQ20 drawing probe (robot, 04:43 to 04:48, read-only):** the batch 11 Pit Schedule copy (P1 and P2 covers 20.00; pipe P1 to P2, 100 dia, at 19.20 / 19.10) has room.
+    - A test flow of 10 L/s was written by the core console into a separate copy, `CLDTP_RSQ20P.dwg`; no levels were invented.
+    - CDRUNSOLVE from P1: "Whole-run solve - 1 pipe(s), 2 pit(s)", "1 change(s) to apply": P1 Upstream IL 19.20 -> 19.32; Downstream 19.10 kept.
+    - Reason: "Whole-run solve: DN100 at 1:45, 1.27 m/s. Material: UPVC; Manning n 0.010. Design flow 10.00 L/s, from set by test."
+    - Under the table: "Anchored on P2 (connection pit) at IL 19.10; run ends at the connection - council assets untouched."
+    - **No cover or re-validation line** (screenshot `C:\Lisp Files\_TEST_COPIES_20260923\robot_shots\session_20261116_042935\RSQ20P_preview.png`, opened by me).
+    - Closing the preview gave "[CDRUNSOLVE] Cancelled - drawing unchanged." But CE's record read differed before and after; not explained yet.
+    - Ended on the reset pit; last-used pit ordinary.
+16. **Codex RSQ20 Q1 (05:01 to 05:12, 3.0.90.13, clean copy `CLDTP_RSQ20.dwg`, no flow): OVERALL BLOCKED at Q-01 (typing the flow); Q-02 to Q-06 NOT TESTED.** Report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_RSQ20_Q1_20261116_0502.md`.
+    - **Pictures checked by me:** 15 PNGs, 15 distinct. I opened RSQ20-11.
+    - Edit Pipe opened; More..., then the Levels & Flow tab, showed: "Flow: P1 → P2 (from connected levels)", "Hydraulic direction uses level fall of 0.10 m: P1 is higher than P2. Source: Invert levels.", a blank "Design flow ... L/s" box, and "Proposed: 1 in 100 — US 19.20 / DS 19.10 · vel 0.85 m/s ✓ · cover ✓".
+    - **Typing 10 into Design flow left it blank, twice.** RSQ20-11 shows the "Creative Engineering | More options" title grey (not the active window) while the box looks selected: the same keyboard-route problem as on the New Pipe page, Codex's tool, not CE.
+    - Back, then Cancel; nothing saved; drawing and settings unchanged; the record read worked (RQ_0 written); last-used pit ordinary.
+    - **Robot route closed too:** the driver's list allows setting "Design flow (L/s)" and pressing "Back" in More options (Tim's item 16), but NOT pressing "More..." in Edit Pipe, so the robot cannot open that window. Question sent to the controller.
