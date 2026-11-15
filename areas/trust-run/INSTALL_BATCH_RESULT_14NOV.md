@@ -422,3 +422,12 @@ Transcript `C:\CE_WORK\scratch\trust_install\b2027.out`. Live Civil lanes: Moder
 4. **Noted:** starting size read 100 in the robot run and 225 in the Codex run on the same copy; fix lane asked which source wins.
 5. **Batch 9 stays installed:** the fault is behind `trust.newPipeOnePage`, which is off, so everyday CD is today's window. New Pipe one page is NOT counted and is not to be switched on.
 Real-AutoCAD screenshots copied to `04_REFERENCE/mockups/NEW_PIPE_ONE_PAGE_15NOV_real_autocad_page.png` and `_drawn.png` (test drawing only).
+9. **225 vs 100 on the New Pipe page (controller's item 5), explained:**
+   - CE keeps a last size per job folder ("lastChoiceByJob") in its last-used file `CD_RecentValues.json`.
+   - **Robot run, 17:39:** the copy was in `C:\CE_WORK\scratch\trustprobe\TRUST_VERIFY`. That folder's last size was 100, saved at 16:51 by my batch 9 CD test (switch off, P10 to P9, then one U).
+   - **Codex run, 17:54:** the copy was in `C:\Lisp Files\_TEST_COPIES_20260923`. That folder's last size was 225, saved at 11:27 by an earlier Codex run.
+   - Neither drawing had a pipe P10 to P9 before CD, and the drawing was the same standard test copy both times. So the folder's last size decided the page.
+   - **Finding, sent to the controller at 18:12:** that file is Tim's real `%APPDATA%\TIM_CE_CADTOOLS\CD_RecentValues.json`. It is not among the four settings files the driver fingerprints, so robot and Codex runs write to it unseen.
+     - Its pit part now reads 350 x 350, plastic true, from my plastic-pit run at 17:24.
+     - The switch-on session also read it: the scratch copy CE made at 18:00 carries Tim's history.
+     - Not touched by me; waiting for the controller's word.
