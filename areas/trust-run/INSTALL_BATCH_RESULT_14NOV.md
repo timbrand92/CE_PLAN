@@ -554,3 +554,13 @@ Real-AutoCAD screenshots copied to `04_REFERENCE/mockups/NEW_PIPE_ONE_PAGE_15NOV
    - Seen: E-00 P10 CL 19.45, count 1054. E-01: Cancel closed the window, nothing changed (DIFFERENT, on the name only). E-02 Esc PASS ("*Cancel*").
    - E-03 to E-05 were not done; nothing saved; last-used pit unchanged.
    - The rerun (E2) names the buttons as they now read.
+6. **Codex TRN16 N1, CDRENUMBER (01:57 to 02:10, 3.0.90.13, copy `CLDTP_TRN16.dwg` of the untouched TRN15 fixture): OVERALL BLOCKED (PASS 3, DIFFERENT 1, BLOCKED 1, NOT TESTED 1).** Report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_TRN16_N1_20261116_0158.md`.
+   - **Pictures checked by me:** 37 PNGs, 27 distinct. The repeats are Codex's close-up crops of the same window part and the readings after closing. I opened TRN16-16, -19 and -26.
+   - N-01 DIFFERENT, on a name only: the left pit read P1 and the right P3. The Edit Pit button now reads "Cancel" (tooltip "Close without applying this edit.") where the brief said "Cancel without saving".
+   - N-02 No: BLOCKED. Count 12 and the left pit still P1, but a driver call timed out while Codex had already moved on (its own procedure). No clean PASS.
+   - **N-03 Yes PASS (TRN16-16):** "Renumbered 2 pit(s)"; Edit Pit on the left pit reads "Edit Pit P3", with the preview label "P3 → P2".
+   - **N-04 one U PASS (TRN16-19):** after the Edit Pit reading's own step, the U echoes CDRENUMBER ("Command: U" / "CDRENUMBER"); the left pit is back to P1.
+   - **N-05 Yes again, save and reopen PASS (TRN16-26):** the left pit reads P3 after reopening.
+   - Settings unchanged; last-used pit unchanged (no pit was saved).
+   - **For the controller:** CDRENUMBER's Yes, one Undo and save/reopen are seen in real pictures on 3.0.90.13. "No changes nothing" has Codex's words and an unchanged count, but no clean step. The robot saw No change nothing, with record readings, on 3.0.90.10.
+7. Reruns from 02:22: TPS17 S2 (Pit Schedule plain job on the untouched blank-level drawing), then TCE17 E2 (Edit Pit with today's button names).
