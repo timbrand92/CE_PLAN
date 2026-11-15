@@ -228,3 +228,23 @@ Not run yet: CD, CDEDIT, PITSCHEDULE, CDRULES with CDCALC, CDCHECKCURRENT, MR, C
    - Settings unchanged; AutoCAD closed by Codex.
    - **Tim's last-used pit:** before, ordinary (D0E30F0F2371). **After: hash 3A12557F5F92, GRATED PIT 350 x 350, plastic True, label True, schedule True.** Edit Pit's Save on a plastic pit writes the last-used pit too. Put back by the robot's reset pit at the end of the 19:37 session.
    - **For the controller:** the button does what Tim's choice B says: it numbers and schedules ONE plastic pit, the pit stays plastic, and one U takes it back. M-03 needs a clean picture for a full PASS; M-05 repeated the same press-and-save and passed.
+
+### Pit Schedule inlet question (controller, 19:00): answered by robot, 19:37 to 20:47
+
+1. **Fixture:** copies of the TPS16 drawing: P1, P2, pipe P1 to P2, one plastic pit. Transcripts `C:\CE_WORK\scratch\trust_install\b9_psdata.out` and `b9_pslevels3.out`; screenshots `C:\Lisp Files\_TEST_COPIES_20260923\robot_shots\session_20261115_192426\` and `...\session_20261115_194554\`.
+2. **CE's record for the pipe, no levels:** id 4F4, from P1, to P2, diameter 100, flowMode "flow", autoCalcDirection "upToDown", both invert levels blank, both "set end level" switches off. When CD drew it, it said "Inserted flow arrow. Direction: nominated drawing order (levels Unknown)."
+3. **Pit Schedule, no levels** (`B9_PSDATA_nolevels.png`):
+   - P1 and P2 each show only DIA (Outlet) 100; FROM, inlet and both IL columns are empty; PIT DEPTH empty.
+   - Banner: "Drawing check: 6 data issues may affect this schedule".
+   - The 6 issues' words are on the Source or Changes tab, which the robot may not press, so they are NOT READ.
+   - CDCHECKCURRENT printed only "CE: 3 pits, 1 pipe, all linked." and "[CE] Drawing check complete. 1 item need checking. Nothing has been fixed automatically." Its item's words were not printed to the command line.
+4. **Both levels typed** (Edit Pipe: ticked "Set first end level" and "Set second end level", Upstream 19.20, Downstream 19.10, "Edit pipe, Save"):
+   - CE asked "CE - Recalculate downstream inverts?" ("The downstream invert on pipe 4F4 changed from to 19.10. Recalculate downstream pipe inverts at each pipe's current grade? You will see a preview of every affected pipe before anything is applied.").
+   - No was answered: "[CDEDIT-CASCADE] Downstream cascade skipped." "Pipe updated." Record: fromInvert 19.20, toInvert 19.10, both switches on.
+5. **Pit Schedule with levels** (`B9_PSL_schedule.png`):
+   - **P1:** DIA (Outlet) 100, IL (Outlet) 19.20, depth 0.80.
+   - **P2:** FROM P1, DIA (Inlet) 100, IL (Inlet) 19.10, **no outlet**, depth 0.90.
+   - Banner: "Drawing check: 4 data issues may affect this schedule" (was 6).
+6. **Reading (plain):** with both levels the schedule shows the pipe the right way round. With no levels, CE showed the pipe as an outlet at BOTH pits and as no one's inlet, although its record says from P1 to P2 and the drawn arrow points P1 to P2. That fits "CE does not decide flow direction without levels". The window itself gives no words saying so on the Rows tab, and the 6 issue words could not be read by the robot. For the controller to judge: counted as CE declining to guess, or a fault (an outlet shown at the downstream pit).
+7. The earlier runs (b9_pslevels 1 and 2) stopped at the message box: my call named the box with a plain "-" where the real title has a longer dash. Run 3 used the allow-list's own pattern and got past it.
+8. Every session ended on the ordinary reset pit. END reading 20:47: GRATED PIT 450 x 450, lid C, plastic False, label True, schedule True (hash 8773CFBE6CDD; the hash moved from D0E30F0F2371 because Edit Pipe also writes its last-used pipe values). Settings unchanged.
