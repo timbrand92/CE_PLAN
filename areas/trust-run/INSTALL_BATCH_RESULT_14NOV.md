@@ -518,3 +518,13 @@ Real-AutoCAD screenshots copied to `04_REFERENCE/mockups/NEW_PIPE_ONE_PAGE_15NOV
 2. **Lane's own reads, not re-checked by the controller:** one Ctrl+S gave a plain _qsave; robot reopen at 23:16 found pipe 11C508 P10 to P9, 225 UPVC in the record.
 3. **Still NOT SEEN:** Esc (three ways) and Enter on the one page itself, and one U after Draw pipe on 3.0.90.12. No tool on this PC can give that page the keyboard without Tim's access prompt. These wait for Tim's 2-minute check (queue item 23, now the only route).
 4. New Pipe one page stays switched off and not counted. Batch 10 stays.
+
+## BATCH 11 INSTALLED (trial, Tim's PC), Mon 16 Nov 2026 00:13
+
+1. **What:** Civil 3.0.90.13+1b939430 (batch 10's sources + draft 2039 at 86c8d666: Pit Schedule, a blank-level pipe follows the recorded direction). Manager 1.1.89 and Structural 1.0.126.1 untouched.
+2. **Before install (controller's own reads, 00:11):** payload 832 files; Legacy AFA7C979..., Net8 C6FAA3B1..., Modern FEEF943E..., manifest 56B084C6...: all equal to the runbook. No acad or accoreconsole process; lock absent; autocad.json mode auto; Monday 00:11, outside Tim's hours. Test lane reported its own AutoCAD closed at 00:10.
+3. **Install:** `install_batch14k.ps1`, log line "INSTALL VERIFIED": 832 of 832 match, CE_SHARED identical to Manager x3, the 4 settings files unchanged.
+4. **Read back by the controller:** live Modern DLL SHA-256 `FEEF943E4970F981021D6205B00394E2CE407DC9EA08D336DA30302CC80A5CF1`, product version 3.0.90.13+1b939430cbd6de88a4a96935fe20ffaea00c4b1a.
+5. **Put-back:** `restore_batch14k.ps1` (to 3.0.90.12); backup `CE_CVL_SUITE_PRE_af50b86a_20261116-001152.backup`.
+6. **Switches:** both trust switches stay OFF in Tim's settings.
+7. **Next:** test lane runs runbook BATCH 11's list, then the Edit Pit Codex look TCE17, all before Mon 08:30.
