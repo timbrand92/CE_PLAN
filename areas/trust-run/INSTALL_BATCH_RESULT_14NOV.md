@@ -372,3 +372,18 @@ Transcript `C:\CE_WORK\scratch\trust_install\b2027.out`. Live Civil lanes: Moder
    - CDEDIT asked "This drawing isn't tagged yet. Is this a Civil drainage drawing?" and took the pick point as the answer ("Invalid option keyword."). The script was wrong, not CE.
    - The driver's quit was then refused (a command was still active). My own AutoCAD (pid 135600, scratch copy, nothing saved) was ended by me after checking Tim's settings fingerprints (unchanged).
    - Retry from 17:12: tag first (CDEDIT, Yes, Esc), then Edit Pipe on the CE-made line, so Edit Pipe does the record update.
+5. **Q11 with the switch off, retry: SEEN PASS** (17:12 to 17:17, copy `CLDTP_B9Q11B.dwg` of `FIX2049_2_Q14_metre_drawing.dwg`; transcript `C:\CE_WORK\scratch\trust_install\b9_q11off.out`; screenshots `C:\Lisp Files\_TEST_COPIES_20260923\robot_shots\session_20261115_165255\`).
+   - CDEDIT asked to tag the drawing; Yes gave "[CE] Drawing tagged Civil - civil drainage tools are enabled here." Esc at the selection question.
+   - Edit Pipe on the CE-made line (25,-20) did the record update: "CE updated its record (CDEDIT): 2 pits added, 2 pipes added. Guessed, not read from the drawing: 2 pipe materials, 2 lid classes, 1 pit number."
+   - The window's heading read "Flow: Unresolved start → Unresolved end". There was **no Flow direction row and no "Proposed"**. Screenshot `B9_Q11off_editpipe.png`. Cancel without saving.
+   - Record after: 2 pipes, both size '0' (never 225), and the word "Proposed" appears nowhere.
+   - CDCHECKCURRENT: "[CE] Drawing check complete. 3 items need checking. Nothing has been fixed automatically." There was no "Proposed" line and no "pit ?" line.
+   - Closed by the driver; settings the same.
+   - **Seen, for the controller:** both recovered pipes have no start or end pit in the record (the heading says "Unresolved start → Unresolved end"). The fixture's lines start 10 m from the nearest pit, so this may be expected; it is noted only.
+6. **Pit Schedule grey count (2039): SEEN PASS** (17:17 to 17:26, blank copy `CLDTP_B9PS.dwg` with 1 ordinary pit P1 and 3 plastic pits 350 x 350, whose Pit number box was greyed; transcript `C:\CE_WORK\scratch\trust_install\b9_ps.out`).
+   - Under the table: "3 plastic pits not listed (no number)". "1 row listed". No 350 plastic pit is in the table. No "Number and schedule" words in the window.
+   - Banner: "Will be placed: 1 row · All sets · All systems"; "Drawing check: 7 data issues may affect this schedule".
+   - Open and Close changed nothing (CE's record and drawing identical).
+   - Screenshot `C:\Lisp Files\_TEST_COPIES_20260923\robot_shots\session_20261115_171721\B9_PITSCHEDULE_greycount.png`.
+   - **Not seen by robot:** the full sentence on hover. A tooltip is not in the window's readable text. That needs Codex's mouse.
+   - The singular "1 plastic pit not listed" was not tried.
