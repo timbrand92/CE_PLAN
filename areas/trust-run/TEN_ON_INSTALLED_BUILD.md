@@ -307,3 +307,8 @@ Count stays 4 of ten.
 4. **Save and reopen (TPS17-28):** the table is there with the same rows.
 Close with nothing placed (S-01, count 7 to 7) is Codex's read, not opened by the controller.
 **Count: 5 of ten** (PIT, CD, MR, CDCHECKCURRENT, PITSCHEDULE). Carried with it: the blank-level rule is the DRAFT default of queue item 22 (Tim may change it); the banner still reads "6 data issues"; draft 2039 is not merged and nothing is marked FIXED.
+
+**CDEDIT COUNTED (controller), Mon 16 Nov 2026 03:04.** Under Tim's 15 Nov rule ("codex alone is fine"). Two Codex looks, both checked by the controller:
+1. **Edit Pit, Civil 3.0.90.13:** Codex TCE17 E2, report `CODEX_VERIFY_TCE17_E2_20261116_0249.md`, OVERALL PASS, E-01 to E-05 PASS, all SURE. Controller hashed all 121 pictures (71 distinct; Codex keeps three captures per action) and opened four: Esc at the pick prompt, "Select a pit, pipe, source or CE text to edit: *Cancel*", P10 still CL 19.45 (TCE17-40); Save, "Pit updated.", P10 reads CL 19.95 (TCE17-70); one U, "Command: U" then "CDEDIT", P10 back to CL 19.45 (TCE17-75); after save and reopen P10 reads CL 19.95 (TCE17-E05-cover-detail, Codex's crop of its reopen picture; the full reopen picture was not opened by the controller). Cancel in the window (E-01) is Codex's read.
+2. **Edit Pipe, Civil 3.0.90.12:** Codex TCE16 E2, checked 15 Nov 23:51. Batch 11 (3.0.90.13) changed only the Pit Schedule builder (draft 2039), so that look is taken as standing; it was not repeated on 3.0.90.13.
+**Count: 6 of ten** (PIT, CD, MR, CDCHECKCURRENT, PITSCHEDULE, CDEDIT). Not looked at: More..., the other Edit Pit boxes, engineering correctness. Nothing merged, nothing marked FIXED.
