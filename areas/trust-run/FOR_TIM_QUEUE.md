@@ -74,6 +74,10 @@
    - **Yes, fix the robot's start route** (recommended). Example: the robot itself can test New Pipe on one page end to end, including save and reopen, without Codex.
    - **Leave it.** Example: every switch-on check stays with Codex, slower, about 15 minutes a run.
 
+21. **Test runs have been writing to your real "last used" memory for PIT and CD. Keep the tests out of it?** Found 18:12 Sun 15 Nov by the test chat, confirmed by the controller's own read. CE remembers your last pit and pipe answers in one file on your PC. The robot and Codex use CE on test copies, so their answers land in the same memory; it has held test folders since 30 Sep. Today a test of plastic pits left it reading: 350 x 350 pit, plastic ticked, pit label off, not in schedule. Nothing in any drawing is affected. Default in use: the last thing every test session does is place one ordinary pit (grated, 450 x 450, class C, plastic off, label on, in schedule) on a scratch copy, so your next PIT opens ordinary; the file is never edited by hand; the robot's code is not changed.
+   - **Yes, give the tests their own memory and have the robot watch yours** (recommended). Example: after a night of tests your PIT window opens exactly as you left it on Friday. Needs a change to the robot and its start-up, same owner as items 18 and 20.
+   - **Leave it; the "end on an ordinary pit" habit is enough.** Example: your PIT opens as a 450 x 450 grated pit after a test night, whatever you used last; your recent pipe sizes and levels lists still pick up test values.
+
 ## Older, still open (asked before 15 Nov, defaults in use)
 
 8. **Ribbon in job order** (Start, Sources, Network, Levels, Check, Sheet). Default: not built into any batch until you have seen a mock-up.
