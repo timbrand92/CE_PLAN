@@ -62,3 +62,18 @@ Not run yet: CD, CDEDIT, PITSCHEDULE, CDRULES with CDCALC, CDCHECKCURRENT, MR, C
 5. **PIT: robot PASS 5 of 5 + Codex PASS 5 of 5 on Civil 3.0.90.10, each with logs and screenshots.** For the controller to write; I have not marked anything.
 
 **Controller's check, PIT on Civil 3.0.90.10, Sun 15 Nov 2026 10:40:** robot log read (`C:\CE_WORK\scratch\trust_install\ten_pit_b8.out`: P-1 to P-5 PASS, settings unchanged); Codex report read (`CODEX_VERIFY_TPIT14_T1_20261115_1014.md`: PASS 5, FAIL 0); screenshot `TPIT14-29-reopened-pit.png` seen (the placed pit present after save and reopen). **PIT's everyday job (Cancel, Esc, place, one Undo, save and reopen) is proven by robot and Codex.** NOT yet written as the tool accepted: Tim's five-rule gate (15 Nov) also wants it used on a copy of a real job (copies being made), and PIT's known open points are not looked at (blank cover level: place and warn, wording owed to Tim; a plastic pit cannot be numbered in the one-page window, fix being built to his picture).
+
+### 2. CD (draw a pipe)
+
+1. **Robot (10:30 to 10:39, copy `CLDTP_TEN_CD.dwg`; log `C:\CE_WORK\scratch\trust_install\ten_cd_b8.out`; readings TC_0 to TC_6):** C-1 Cancel (New Pipe window closed, nothing drawn) PASS: pipes 49 / objects 1034 unchanged. C-3 draw P10 to P9 (Start Pipe) PASS: pipes 49 to 50. C-4 one U PASS: back to 49 / 1034, CE's record back too. C-5 draw again, save, reopen PASS: 50 pipes after reopening, DBMOD 0.
+2. **C-2 Esc redone (10:39 to 10:43, copy `CLDTP_TEN_CDE.dwg`; log `C:\CE_WORK\scratch\trust_install\ten_cd_esc.out`): PASS.** The first run's Esc step was not a test (the driver refuses a bare CD; it needs -ExpectPrompt). Redone: "Specify first point or [Existing line] [Existing]: *Cancel*" then "[CE] CD command cancelled."; drawing and CE's record identical.
+3. **CD robot: 5 PASS of 5.** Settings files the same each time.
+4. **Codex look TCD14 T1 (10:43 to 10:58): every CD step SEEN working, but T-01 to T-04 NOT TESTED (EVIDENCE).** Report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_TCD14_T1_20261115_1044.md`. Codex saw: Cancel (R2 30 / R3 1054 unchanged), Esc ("*Cancel*", unchanged), draw (R2 31 / R3 1057), **one U echoed CD and the pipe was gone (back to 30 / 1054)**, save and reopen (31 / 1057, fresh screenshot TCD14-15-fresh-screenshot-0.jpg: T-05 PASS). But its saver kept the T-00 image for T-01 to T-04, so no visual PASS for those. Rerun planned.
+
+### 3. CDEDIT (edit a pit or pipe)
+
+1. **Robot (10:59 to 11:08, copy `CLDTP_TEN_CDEDIT.dwg`; log `C:\CE_WORK\scratch\trust_install\ten_cdedit.out`; screenshots `C:\Lisp Files\_TEST_COPIES_20260923\robot_shots\session_20261115_105626\`):**
+   - E-1 Edit Pit on P10, Cancel without saving: PASS (CE's record identical apart from the known format/path stamp; drawing identical). TEN_CDEDIT_pit_cancel.png.
+   - E-2 Esc at "Select a pit, pipe, source or CE text to edit:": PASS ("*Cancel*"; record and drawing identical).
+   - E-3 Edit Pipe on a pipe just drawn with CD (heading "Flow: P10 → P9"), Cancel without saving: PASS (record byte-identical, drawing identical). TEN_CDEDIT_pipe_cancel.png.
+   - **NOT done by the robot:** Save, one U after Save, save and reopen ("Edit pit, Save" refused by the driver; Tim's question 16). Codex look TCE14.
