@@ -58,3 +58,28 @@
   - My CDEDIT Save run (14:54-15:08) is VOID. The set-up pipe's Start Pipe press was refused, CD was left waiting at a prompt, and every later step was refused.
   - My own AutoCAD (pid 171784, scratch copy CLDTP_TEN_CESAVE.dwg, nothing saved) was ended by me after the driver's quit was refused. Tim's settings fingerprints were unchanged (ACD64E79A33B, 622A246F7D3B, 50AA09900E3E). Lock released.
   - The rerun script `ten_cdedit_save.ps1` now stops at once if the set-up pipe is not finished. It runs after the study lane's 12-minute gap.
+- 2026-11-16 04:12: night work done on batches 9 to 11 (Civil 3.0.90.11 to 3.0.90.13). Results in INSTALL_BATCH_RESULT_14NOV.md (BATCH 9, 10, 11) and TEN_ON_INSTALLED_BUILD.md.
+  - Codex looks with pictures hashed and opened by me:
+    - TPS17 Pit Schedule PASS;
+    - TCE17 Edit Pit PASS (TCE16 E2 Edit Pipe PASS on 3.0.90.12);
+    - TRN16 and TRN17 CDRENUMBER (Yes, U, save/reopen, No, Esc);
+    - LPD16 CDLPD PASS;
+    - RSQ19 CDRUNSOLVE Apply/U/save-reopen PASS.
+  - Robot:
+    - smoke 10/10 on each batch;
+    - Pit Schedule blank-level fix seen;
+    - the CDRULES record grows by one full 429-finding set per run (with the fix lane);
+    - New Pipe one page: pipe survives Ctrl+S and reopen; Esc and Enter left for Tim's 2-minute check.
+  - Tim's last-used pit file (`CD_RecentValues.json`) was put back to ordinary through PIT, and every session after that ended on the reset pit. END reading 04:07: GRATED 450 x 450, plastic False, label True, schedule True.
+  - Lessons kept:
+    - hash every Codex picture before passing a claim on (NP17 and TCE16 E1 were stale);
+    - a picture rule that lets repeats stand only when nothing changed;
+    - button names changed on 3.0.90.13 ("Cancel", "Save", "Cover (m AHD)");
+    - never copy a fixture from a copy Codex saved;
+    - msgbox-answer needs the allow-list title with "?" for the dash;
+    - leave the 12-minute gap BEFORE a chain's first look.
+  - Open:
+    - typing Q through More... (needs a Codex brief with a written typing step);
+    - New Pipe page Esc and Enter (Tim's check);
+    - CDRULES growth (fix lane).
+  - No AutoCAD running, lock free, settings unchanged. Waiting for the controller's next order; nothing starts after 07:30.
