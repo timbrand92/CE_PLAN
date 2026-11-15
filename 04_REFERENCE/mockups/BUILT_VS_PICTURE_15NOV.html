@@ -89,6 +89,39 @@ ol{margin:10px 0 0;padding-left:20px;font-size:14px;line-height:1.5}
 <li><b>Window title:</b> it names the far end as the window does today. For a pit with no number that may be CE's code for the block, not "pit ?" (not changed: a separate screen change).</li>
 <li><b>Dark theme:</b> <a href="Q11_PIPE_DIRECTION_15NOV_render_built_editpipe_dark.png">render</a>.</li>
 </ol></div>
+
+<h2>5. New Pipe window on one page (new draft for this one screen, switch off by default)</h2>
+<p class="sub">Picture OK'd "OK as shown"; Tim said "build New Pipe" (controller, 15 Nov). Render values are the picture's: 150 UPVC, office minimum 1 in 100, start 18.250 typed, 12.4 m.</p>
+<div class="two">
+  <div class="card">
+    <p class="lab">Picture (after)</p>
+    <p style="font-size:16px;font-weight:600;margin:0 0 12px">New pipe: P4 to P5</p>
+    <div style="background:var(--note);border-radius:12px;padding:16px">
+      <div style="font-size:28px;font-weight:700;line-height:1.15">150 dia UPVC at 1 in 100</div>
+      <div style="font-family:Consolas,monospace;font-size:14px;margin-top:8px;color:var(--soft)">18.250 start &minus; (12.4 m &divide; 100) = 18.126 end</div>
+      <div class="small" style="margin-top:6px">Length 12.4 m, fall 0.124 m <span class="pill" style="background:var(--greenbg);color:var(--green);margin-left:8px">Ready to draw</span></div>
+    </div>
+    <div class="row"><span>Size</span><span class="small">100 &nbsp;<b>150</b>&nbsp; 225 &nbsp;Other&hellip;</span></div>
+    <div class="row"><span>Material</span><span class="small"><b>UPVC</b>&nbsp; RCP &nbsp;Other&hellip;</span></div>
+    <div class="row"><span>Grade</span><span class="small">1 in 100 &middot; office minimum, from Settings</span></div>
+    <div class="row"><span>Start level</span><span class="small">18.250 &middot; read from pit P4</span></div>
+    <div class="row"><span>End level</span><span class="small">18.126 &middot; worked out from the grade</span></div>
+    <div style="margin-top:12px;font-size:13px;color:var(--accent)">More&hellip; (label text and arrow, schedule, design flow, rising main)</div>
+    <div style="margin-top:12px"><span class="btn pri">Draw pipe</span> <span class="btn">Cancel</span></div>
+  </div>
+  <div class="card"><p class="lab">Built (light)</p><img src="NEW_PIPE_ONE_PAGE_15NOV_render_built_light.png" alt="Render of the built one-page New Pipe window, light theme"></div>
+</div>
+<div class="box"><b>Differences:</b>
+<ol id="newpipe-diffs">
+<li><b>End level 18.12, not 18.126:</b> CE rounds a worked-out fall up to the next whole 10 mm (an existing CE rule, not new), so 12.4 m at 1 in 100 falls 0.130 m and CD writes 18.12. The page shows what CD will really write, and the sum says so: "= 18.126, kept as 18.12 end".</li>
+<li><b>More&hellip;</b> opens today's full New Pipe window on the same answers (all its sections), not a fold-down list on the page. Cancel there comes back to this page.</li>
+<li><b>The sum is one line, as pictured.</b> Tim's card rule (figures in a column, a line above the result, a double line under it) is not used here: the picture wins. For Tim to choose.</li>
+<li><b>Dark theme accent is gold</b> (the chosen size and material, Draw pipe, More&hellip;): CE's dark theme uses gold, the picture used blue. Light theme is CE blue. Not changed: it is the theme for every CE window (<a href="NEW_PIPE_ONE_PAGE_15NOV_render_built_dark.png">dark render</a>).</li>
+<li><b>Material buttons come from the office list:</b> the render shows UPVC and "UPVC SN8" (the list on this build), not RCP. Sizes and materials always come from this pipe, the last pipes and the office list.</li>
+<li><b>Grade box:</b> "1 in" sits in front of the box, not inside it. When CE works the grade out from two typed levels (or a Detention pipe), no grade is shown and the note says "worked out from your two levels".</li>
+<li><b>Before the route is picked</b> (draw-first off): the title is just "New pipe" and the length reads "worked out when you pick the route".</li>
+<li><b>A simple pipe</b> (no text, levels or schedule) keeps today's window.</li>
+</ol></div>
 </div>
 </body>
 </html>
