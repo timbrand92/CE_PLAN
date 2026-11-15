@@ -1069,3 +1069,92 @@ As batch 7, section 6, with the folder `C:\CE_WORK\robot\b14i_switch`.
 ### 9. Stop rules
 
 As section 5 at the top. If a pass fails, batch 9 is put back with `restore_batch14i.ps1`, and batch 8 stays.
+
+## BATCH 10 (PREPARED, NOT INSTALLED): Civil 3.0.90.12 = batch 9's sources + 2111 at 568f63b1 (New Pipe one page: Esc and More… fixes from NP16), switches OFF
+
+Written Sun 15 Nov 2026 by lane trust-safety-fixes, on the controller's order after Codex's NP16 P1 run. That run was on Civil 3.0.90.11 in real AutoCAD with the switch on (`C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_NP16_P1_20261115_1754.md`). The order was the controller's, inside Tim's "build New Pipe" and his standing trial approval. One build, one version, one folder. **Install only on batch 9:** the script refuses unless live Civil reads `3.0.90.11+249b9f8d` with all three sets. The controller installs. No merge, nothing to colleagues.
+
+### 1. What is in it
+
+1. **Everything in batch 9** (section BATCH 9, item 1), unchanged.
+2. **PR 2111 at `568f63b1`** (one commit on top of batch 9's `43436c90`):
+   - **Esc (NP16 P-02 FAIL):** one Esc now closes the page exactly as Cancel does, wherever the keyboard is on the page.
+     - **Cause:** AutoCAD's command line, where CD was typed, kept the keyboard. AutoCAD 2027's command line takes key messages before the page while it holds the keyboard.
+     - **Fix:** the page takes the keyboard when it opens and when it comes back to the front (draws nothing), and an Esc meant for the page is caught first.
+     - **The same fix:** Enter (Draw pipe) now reaches the page too. An open size or material list closes first, as in every Windows list.
+   - **More… (NP16-18):** opens the window CD shows today with the switch off, chosen and sized by CD's own step: the tabbed New Pipe window, or the older one fitted to the screen if the tabbed one does not fit. Batch 9 had opened the older window at its own smaller size, with the level boxes out of sight.
+3. **Starting size (NP16 check, nothing changed):** the robot run opened `C:\CE_WORK\scratch\trustprobe\TRUST_VERIFY\CLDTP_B9NP.dwg` and Codex opened `C:\Lisp Files\_TEST_COPIES_20260923\CLDTP_NP16.dwg`. They are not the same drawing copy: two folders, so two jobs.
+   - A new pipe starts from the size last drawn in this job (the drawing's folder). With no pipe yet, it starts from the office default, 100.
+   - The settings copy remembers a 225 drawn in `_TEST_COPIES_20260923` on 29 Sep. No pipe was drawn between the runs. Same rule as today's window.
+
+### 2. The switches
+
+1. **As shipped:** `trust.showUnknownInsteadOfGuess` OFF, `trust.newPipeOnePage` OFF; every other switch as batch 9.
+2. **Look:** unchanged from batch 9. No new render.
+
+### 3. How it was put together
+
+1. **Build stack** (local, detached, never pushed) in `C:\CE_WORK\build\wtB14g`: batch 9's stack `471c6402` (before its version commit), then a merge of 2111 at `568f63b1` (`158752be`). The only conflict was `REGRESSION_LOG.md`, with both sides kept. The three product and test files equal the draft byte for byte.
+2. **Build commit `af50b86a`,** "Version: Civil 3.0.90.12".
+3. **Product files changed against batch 9 (`249b9f8d`):** 4: `NewPipeOnePageWindow.cs`, `DialogService.cs`, and the two version lines. List: `C:\CE_WORK\scratch\trust_install\b14civ10_files_changed.txt`.
+4. **Whole Civil test run on the merged code (Release, net10):** **22,812 passed, 0 failed, 32 skipped** (7 min 8 s).
+5. **The new tests:**
+   - A real Esc key message sent to the shown page, 6 cases. The 3 cases with AutoCAD's kind of key-taking command line in front failed on the batch 9 page.
+   - The page has the keyboard as soon as it is drawn.
+   - More… goes through CD's own window step.
+   - All three sets build with 0 errors on the draft.
+
+### 4. Against Tim's four "never by itself" rules
+
+Unchanged from batch 9. The page only collects answers; Esc only cancels; More… shows today's window on the same answers.
+
+### 5. Payload
+
+1. **Payload:** `C:\ce_rc_scratch\b14civ10\CE_CVL_SUITE.bundle`, 832 files. `build_installer.ps1` exit 0. Every dotnet call passes `-p:SkipDevBundle=true -nr:false --disable-build-servers`. Nothing under ApplicationPlugins was written.
+2. **DLL `3.0.90.12+af50b86a40ab144485f4c04f1031dc5960f9144f` SHA-256:**
+   - Legacy `C0549D4BA220507156016E5F7E8960F521B1082917AC176055C7915E656AEAB6`
+   - Net8 `5367C10C5FECBE5DE022962EFAE77706A91FC2D132AD8A8D17C45011C9714AD3`
+   - Modern `3043D73A8D2C89D7369635CEF417B3940D22319BBBFA3A8F8DE12B32560002E4`
+3. **`PackageContents.xml`:** `5E7ED47D1DA84D5C1EA8F8DC832112985C5738A452DD941CBD9CC959264022C2`, `AppVersion="3.0.90.12"`.
+4. **Manifest** `C:\CE_WORK\scratch\trust_install\b14civ10_manifest.txt`, 832 rows, SHA-256 `D0B3F1A97B88021F05387C58846554F179B0C2B1C94910F4F7D1CA8B936F3FC4`.
+5. **Stamp check:** CE_SHARED and CE.AI.Core x3 have 0 bytes different outside the stamp zones. The installed bytes were put in, and CE_SHARED is identical to Manager x3. The natives are the installed bytes.
+6. **Against batch 9 (`b14civ9`, live):** 7 files differ, 0 added, 0 removed: CE_CVL_SUITE.dll and .pdb x3, and PackageContents.xml.
+
+### 6. Turning the switch on for ONE scratch session
+
+As batch 9, section 6 (folder `C:\CE_WORK\robot\b14i_switch`, `"newPipeOnePage": true` in the COPY's `"trust"` group, the log line "Settings initialized from: …" must show the copy, Tim's own settings hashed before and after).
+
+### 7. ONE robot and Codex list for batch 10 (scratch copies)
+
+1. **First start, switches OFF (as shipped):**
+   - The log reads "CE_CVL_SUITE v3.0.90.12 Started".
+   - Run the BUG-1456 smoke list once.
+   - **CD:** opens today's New Pipe window, unchanged. Draw one pipe P to P; one U takes it back.
+2. **Switch session with `newPipeOnePage` ON:**
+   - **Opens:** CD, pick a route from one pit to another. The one-page window opens with its title bar active (not grey), with nothing clicked.
+   - **Esc, nothing clicked:** press Esc once, straight after it opens. The page closes, the command line says "[CE] CD command cancelled.", and nothing is drawn.
+   - **Esc in a level box:** run CD again, click in the Start level box, press Esc once. Same result.
+   - **Esc on a size button:** run CD again, click a size button, press Esc once. Same result; the size pressed is not drawn.
+   - **Enter:** run CD again, nothing clicked, press Enter once. The pipe is drawn as Draw pipe draws it, then today's next-pipe prompt shows; Esc there stops CD. One U takes the pipe, its label and arrow back.
+   - **More…:** opens the same window CD opens with the switch off, at the same size, with its level boxes in sight.
+     - Cancel there comes back to the page, answers kept.
+     - Esc on the page then closes it.
+     - Draw there draws the pipe.
+   - **Save and reopen (not yet seen in NP16):** draw a pipe, save once without the command-line suggestion box showing, close and reopen the copy. The pipe, its label and its record row are still there.
+   - **Starting size (optional):** in a drawing whose folder has no pipe yet, the page starts at 100. In `C:\Lisp Files\_TEST_COPIES_20260923` it starts at 225, that job's last pipe.
+3. **Batch 9's other items carry over unchanged** (section BATCH 9, item 7: the Pit Schedule grey count, the Edit Pit More… button, Q11 on the fixture), for any not yet passed.
+4. **Then close AutoCAD and restart without the variable.**
+
+### 8. Install and put back
+
+1. **Install (on batch 9):** `C:\CE_WORK\scratch\trust_install\install_batch14j.ps1`. NOT RUN.
+   - **What it checks:** it refuses unless live Civil reads `3.0.90.11+249b9f8d` with all three sets. It also checks the candidate against `b14civ10_manifest.txt` and CE_SHARED against the live Manager.
+   - **What it does:** keeps `CE_CVL_SUITE_PRE_249b9f8d_<time>.backup`, then reads every file back. It checks 3.0.90.12, CE_SHARED and the settings. Log: `install_batch14j.log`.
+   - **`-CheckOnly`:** changes nothing. Run here: at 18:33: "CHECKS PASSED: nothing was renamed, copied or changed". Live reads 3.0.90.11+249b9f8d with all three sets; the candidate against its manifest is 832 rows, bad 0, extra 0; the candidate CE_SHARED is identical to the live Manager x3; 4 settings files were read.
+2. **Put back:** `restore_batch14j.ps1`, back to 3.0.90.11, checked against `b14civ9_manifest.txt`. NOT RUN.
+   - **`-CheckOnly`** was run here at 18:29 against today's live batch 9: "PUT-BACK VERIFIED: Civil equals the 3.0.90.11 payload file for file" (832, bad 0, extra 0; CE_SHARED identical x3; settings unchanged).
+   - **Further back:** `restore_batch14i.ps1` (to 3.0.90.10).
+
+### 9. Stop rules
+
+As section 5 at the top. If a pass fails, batch 10 is put back with `restore_batch14j.ps1`, and batch 9 stays.
