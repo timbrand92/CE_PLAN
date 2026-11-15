@@ -352,3 +352,23 @@ Transcript `C:\CE_WORK\scratch\trust_install\b2027.out`. Live Civil lanes: Moder
 3. **Read back by the controller:** live Modern SHA-256 107F9BD7F9198737FCA0685404A3B4071D76A00D0A0CE26376707989FF1FDC74, version 3.0.90.11+249b9f8d.
 4. **In it:** batch 8 + Pit Schedule grey count and Edit Pit button behind More (2039 at 102bb87f) + Q11 Proposed direction (2049 at f9d35d0c) + New Pipe on one page (2111 at 43436c90). Switches off: trust.showUnknownInsteadOfGuess, trust.newPipeOnePage.
 5. **Put-back:** restore_batch14i.ps1. **Not yet tested in AutoCAD.**
+
+## BATCH 9 ON 3.0.90.11: the robot list (trust-acad-evidence, from 16:14)
+
+1. **Mix-up smoke (BUG-1456): SEEN PASS, 10 of 10** (16:14 to 16:48).
+   - All ten "nothing disturbed" readings passed.
+   - Transcript `C:\CE_WORK\scratch\trust_install\b9_seq.out`.
+   - AutoCAD was closed by the driver; the 4 settings files were the same.
+2. **First start, switches off: SEEN PASS** (16:48 to 16:52, copy `CLDTP_B9A.dwg`; transcript `C:\CE_WORK\scratch\trust_install\b9_a.out`; screenshots `C:\Lisp Files\_TEST_COPIES_20260923\robot_shots\session_20261115_164852\`).
+   - The log reads "CE_CVL_SUITE v3.0.90.11 Started".
+   - Opening line: "CE: needs checking. 22 pipes not linked. Type CDCHECKCURRENT to see them." then "CE: pit blocks were updated when this drawing opened." This is the same as on 3.0.90.10.
+3. **New Pipe with the switch off: SEEN PASS** (same run).
+   - CD P10 to P9 opened today's "New Pipe" window: it has "New pipe, Start Pipe" and no "Draw pipe". Screenshot `B9_NEWPIPE_off.png`.
+   - Start Pipe drew the pipe: the record went from 27 to 28 pipes, with "Inserted flow arrow. Direction: nominated drawing order (levels Unknown)." and "[CE] Pipe placed." Screenshot `B9_CD_drawn.png`.
+   - One U echoed CD and put the record back to 27 pipes. Record and drawing were identical to before CD (record identical apart from the known stamp).
+4. **Q11 with the switch off, first try: NOT TESTED** (copy of FIX2049_2, `CLDTP_B9Q11.dwg`).
+   - PITSCHEDULE did not update the record on this untagged drawing. It printed "CE: 2 pit blocks found, no CE record. Nothing has been changed by this check." and the record stayed empty.
+   - CDCHECKCURRENT then showed no "Proposed", but nothing had been added, so this proves nothing.
+   - CDEDIT asked "This drawing isn't tagged yet. Is this a Civil drainage drawing?" and took the pick point as the answer ("Invalid option keyword."). The script was wrong, not CE.
+   - The driver's quit was then refused (a command was still active). My own AutoCAD (pid 135600, scratch copy, nothing saved) was ended by me after checking Tim's settings fingerprints (unchanged).
+   - Retry from 17:12: tag first (CDEDIT, Yes, Esc), then Edit Pipe on the CE-made line, so Edit Pipe does the record update.
