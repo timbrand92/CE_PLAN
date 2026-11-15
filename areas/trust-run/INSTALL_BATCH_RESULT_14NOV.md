@@ -648,3 +648,10 @@ Real-AutoCAD screenshots copied to `04_REFERENCE/mockups/NEW_PIPE_ONE_PAGE_15NOV
     - "Edit pipe, More" opened More options. Pressing "Levels & Flow" failed: "no button named or with id 'Levels & Flow'". The driver's press only searches controls of type Button (Find-V2Buttons), and the tab is a TabItem. A driver code change would be needed; not allowed. So the Design flow box could not be reached.
     - **My error in the same run:** I pressed "Cancel" in Edit Pipe; on 3.0.90.13 its button is "Cancel without saving". Edit Pipe stayed open, the record could not be read while it was open, and the controller's side question got no readings. Nothing saved; settings unchanged; last-used pit ordinary (83D0D081BFB9).
     - The side question reruns alone at 06:08 with the right button name.
+19. **Side question (controller): does opening Edit Pipe leave pit inverts written though nothing is saved? (robot, 06:08 to 06:13, clean copy `CLDTP_R21SIDE.dwg` of the batch 11 Pit Schedule drawing; transcript `C:\CE_WORK\scratch\trust_install\b11_r21side.out`)**
+    - **Before opening Edit Pipe:** CE's record has P1 CL 20.00, invert blank; P2 CL 20.00, invert blank; pipe 4F4 fromInvert 19.20, toInvert 19.10; record 4,790 characters.
+    - **Opening Edit Pipe on P1 to P2:** the command line printed "CE updated its record (CDEDIT): 2 pit invert levels filled in." The record cannot be read while the window is open.
+    - **After "Cancel without saving":** the record has **P1 invert 19.200 and P2 invert 19.100**; the pipe is unchanged; record 4,804 characters. So the two pit inverts **stayed written although nothing was saved**: they were written when Edit Pipe opened, not by Save.
+    - **After one U:** the echo was CDEDIT. P1 and P2 inverts are blank again; record 4,790 characters, as before opening.
+    - Ended on the ordinary reset pit; settings unchanged; last-used pit ordinary.
+    - For the controller to judge (not judged by me).
