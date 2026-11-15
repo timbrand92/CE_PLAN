@@ -100,6 +100,7 @@
    - **Yes, those two, scratch copies only** (recommended). Example: the robot types 10 L/s in Edit Pipe, runs CDRUNSOLVE, presses Apply, then checks one Undo puts every level back, with no Codex time used.
    - **No, leave Apply to Codex.** Example: each CDRUNSOLVE proof stays a two-part run, robot for typing and Codex for Apply, about 15 minutes longer each time.
    - **Also undo the "More..." press** if you did not mean it: say so and the backup is put back.
+   - **Update 05:57 Mon 16 Nov:** the robot still cannot type the flow. The Design flow box sits on the "Levels & Flow" tab of More options, and the robot's code can only press buttons, not tabs; changing its code is not done without your word. The tab name the controller allowed at 05:33 did nothing and has been ordered back out; "Edit pipe, More" stays until you answer. So typing Q in Pipe Edit, then CDRUNSOLVE, joins your own short check with item 23 (New Pipe Esc and Enter): about 3 minutes in all on a scratch copy the test chat sets up. Or say "change the robot so it can press tabs" and it is done in the robot's code with a backup and a review.
 
 ## Older, still open (asked before 15 Nov, defaults in use)
 
