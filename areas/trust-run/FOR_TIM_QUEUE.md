@@ -85,6 +85,7 @@
 23. **New Pipe one-page window: the Esc key cannot be pressed by Codex. Two minutes of your hands, or leave it to the test chat?** Found 22:19 Sun 15 Nov (Codex NP17, Civil 3.0.90.12). Codex's tool moves the keyboard to AutoCAD's main window before it sends a key, so the page's title goes grey and Esc never reaches the page. That is the tool, not CE: the fix chat's own real-key test passes. Default in use: the test chat tries a title-bar click first, then its own keyboard tool on a scratch copy; the window stays switched off and is not counted until Esc is seen closing it.
    - **Leave it to the test chat** (recommended). Example: you see a screenshot pair, page open then page gone after Esc, taken on a scratch copy.
    - **I will press it myself.** Example: on a scratch copy with the switch on, type CD, pick two pits, press Esc once: the page should close and nothing is drawn. About 2 minutes; the test chat sets the copy up for you.
+   - **Update 23:24 Sun 15 Nov:** both test-chat routes failed (Codex's click greys the page before any key; the test chat's own keyboard tool would need an access prompt from you, so it was not used). Your 2 minutes is now the only way to see Esc and Enter on this page. Nothing else waits on it.
 
 ## Older, still open (asked before 15 Nov, defaults in use)
 

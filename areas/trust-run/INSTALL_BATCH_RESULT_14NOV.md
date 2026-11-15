@@ -512,3 +512,9 @@ Real-AutoCAD screenshots copied to `04_REFERENCE/mockups/NEW_PIPE_ONE_PAGE_15NOV
    - Seen with real pictures or record: the page opens (robot); More... opens CD's own full window with the level boxes in sight (NP18-32); drawing from it gives pipe, label and arrow (NP18-61, -74); one Ctrl+S save, then reopen keeps the pipe and its record row (robot).
    - Cancel and one U were seen on 3.0.90.11 (NP16).
    - **Not seen:** Esc (three ways) and Enter on the page. Codex's tool cannot give the page the keyboard, so these go to the controller's 2-minute check for Tim.
+
+**Controller's check of NP18 (New Pipe one page, Civil 3.0.90.12), Sun 15 Nov 2026 23:24:** lane's hash count 43 distinct of 78; NP18-32 and NP18-61 opened by the controller (hashes 3860BF7AEE and 82D7A5B682, different from each other).
+1. **Seen by the controller:** More... opens today's full "New Pipe" window, with the First Point P10 and Last Point P9 level boxes in sight, the amber note "Both invert levels are blank: they are saved blank (Unknown) and no fall or grade is worked out", and Cancel / Start Pipe in sight (NP18-32). The NP16 clipping is fixed. Drawing from it: command line reads "Inserted flow arrow. Direction: nominated drawing order (levels Unknown)." and "[CE] Pipe placed." (NP18-61).
+2. **Lane's own reads, not re-checked by the controller:** one Ctrl+S gave a plain _qsave; robot reopen at 23:16 found pipe 11C508 P10 to P9, 225 UPVC in the record.
+3. **Still NOT SEEN:** Esc (three ways) and Enter on the one page itself, and one U after Draw pipe on 3.0.90.12. No tool on this PC can give that page the keyboard without Tim's access prompt. These wait for Tim's 2-minute check (queue item 23, now the only route).
+4. New Pipe one page stays switched off and not counted. Batch 10 stays.
