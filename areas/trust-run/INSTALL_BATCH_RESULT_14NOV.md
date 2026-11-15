@@ -501,3 +501,14 @@ Real-AutoCAD screenshots copied to `04_REFERENCE/mockups/NEW_PIPE_ONE_PAGE_15NOV
    - Settings unchanged; last-used pit ordinary before and after (869C18283A4A).
    - The robot reopens the saved copy in a normal session at 23:01 (next item).
    - **Real Esc and Enter on the page:** neither Codex route works, and this session holds no computer-tool access. So it goes to (b), the controller's 2-minute check for Tim. No more Codex New Pipe key looks tonight.
+7. **Reopen of Codex's saved NP18 copy in a normal session, switch off: SEEN PASS** (23:16 to 23:23; robot; transcript `C:\CE_WORK\scratch\trust_install\b10_np18_reopen2.out`; screenshot `C:\Lisp Files\_TEST_COPIES_20260923\robot_shots\session_20261115_224733\B10_NP_reopened_2.png`).
+   - The copy `CLDTP_NP18.dwg` was saved at 22:44 by Codex's one Ctrl+S (SHA-256 20889A0C9182; the fixture was 34BBE37C2EA4).
+   - CE's record after reopening holds the pipe drawn through the one-page New Pipe and its full window: **11C508 P10->P9, 225, UPVC**. Record path CLDTP_NP18.dwg; pipes 49 to 50.
+   - Drawing objects 1057 = 1054 + 3 (pipe, label, arrow).
+   - So a pipe drawn with the switch on survives save and reopen.
+   - An earlier try at 23:01 is void: my script opened the wrong copy (its drawing-name line was misplaced), and nothing was saved.
+   - Every session ended on the ordinary reset pit; last-used pit unchanged (869C18283A4A: GRATED 450 x 450, plastic False, label True, schedule True). Settings unchanged.
+8. **New Pipe on one page, batch 10, where it stands:**
+   - Seen with real pictures or record: the page opens (robot); More... opens CD's own full window with the level boxes in sight (NP18-32); drawing from it gives pipe, label and arrow (NP18-61, -74); one Ctrl+S save, then reopen keeps the pipe and its record row (robot).
+   - Cancel and one U were seen on 3.0.90.11 (NP16).
+   - **Not seen:** Esc (three ways) and Enter on the page. Codex's tool cannot give the page the keyboard, so these go to the controller's 2-minute check for Tim.
