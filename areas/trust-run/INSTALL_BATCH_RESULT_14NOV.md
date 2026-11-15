@@ -528,3 +528,21 @@ Real-AutoCAD screenshots copied to `04_REFERENCE/mockups/NEW_PIPE_ONE_PAGE_15NOV
 5. **Put-back:** `restore_batch14k.ps1` (to 3.0.90.12); backup `CE_CVL_SUITE_PRE_af50b86a_20261116-001152.backup`.
 6. **Switches:** both trust switches stay OFF in Tim's settings.
 7. **Next:** test lane runs runbook BATCH 11's list, then the Edit Pit Codex look TCE17, all before Mon 08:30.
+
+## BATCH 11 ON 3.0.90.13 (installed by the controller 00:13, Mon 16 Nov): the robot list (trust-acad-evidence)
+
+1. **Mix-up smoke (BUG-1456): SEEN PASS, 10 of 10** (00:22 to 00:57).
+   - Transcript `C:\CE_WORK\scratch\trust_install\b11_seq.out`.
+   - Settings the same; last-used pit ordinary before and after.
+2. **Pit Schedule, blank-level fix: SEEN PASS** (00:57 to 01:07; copy `CLDTP_B11PS.dwg` of the TPS16 fixture: P1, P2, pipe P1 to P2, one plastic pit; transcript `b11_ps.out`; screenshots `C:\Lisp Files\_TEST_COPIES_20260923\robot_shots\session_20261116_005744\`, both opened by me).
+   - **Pipe with NO levels** (record: 4F4 from P1 to P2, both inverts blank), `B11_PS_nolevels.png`:
+     - **P1:** DIA (Outlet) 100.
+     - **P2:** FROM P1, DIA (Inlet) 100, IL blank, **no outlet**.
+     - "2 rows listed"; "1 plastic pit not listed (no number)"; "Drawing check: 6 data issues may affect this schedule".
+     - On 3.0.90.11 the same drawing showed an outlet at BOTH pits and no inlet; that is now fixed.
+   - **Both levels typed** (Edit Pipe, ticks on, Upstream 19.20, Downstream 19.10, Save; "CE - Recalculate downstream inverts?" answered No, "[CDEDIT-CASCADE] Downstream cascade skipped.", "Pipe updated."), `B11_PS_levels.png`:
+     - **P1:** outlet 100, IL 19.20, depth 0.80.
+     - **P2:** FROM P1, inlet 100, IL 19.10, no outlet, depth 0.90.
+     - "Drawing check: 4 data issues...".
+   - Ended on the ordinary reset pit; last-used pit END GRATED 450 x 450, lid C, plastic False, label True, schedule True. Settings unchanged.
+3. Next: Codex looks TPS17 (Pit Schedule plain job on the blank-level fixture), TCE17 (Edit Pit) and TRN16 (CDRENUMBER), one after another from 01:19, each with the picture check. Every picture is hashed and the ones behind each claim opened before reporting.
