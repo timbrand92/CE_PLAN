@@ -1246,3 +1246,100 @@ The schedule only reads. No level, size, number, label or layer is written or gu
 ### 8. Stop rules
 
 As section 5 at the top. If a pass fails, batch 11 is put back with `restore_batch14k.ps1`, and batch 10 stays.
+
+## BATCH 12 (PREPARED, NOT INSTALLED): Civil 3.0.90.14 = batch 11's sources + 2087 at ffee327e (CDRULES keeps the last five full checks, queue item 25) + 2099 at f7f082d3 (CDLPD downstream end, queue item 24) + 2093 at 9eae8ed9 (CDRENUMBER [Yes/No] once), switches OFF
+
+Written Mon 16 Nov 2026 by lane trust-safety-fixes on the controller's order after batch 11 went live (00:13). The order came from the controller, inside Tim's standing trial approval. Queue items 24 and 25 are DRAFT defaults that Tim may change. One build, one version, one folder. **Install only on batch 11:** the script refuses unless live Civil reads `3.0.90.13+1b939430` with all three sets. The controller installs. No merge, nothing to colleagues.
+
+### 1. What is in it
+
+1. **Everything in batch 11** (section BATCH 11, item 1), unchanged.
+2. **PR 2087 at `ffee327e`** (BUG-1358, queue item 25): CDRULES stops growing the drawing.
+   - **Seen:** on 3.0.90.12, every Problems run added a full set of 429 findings to CE's record in the drawing. The record went 593k to 1,184k to 1,774k to 2,364k characters, about +154 KB of file per run, and nothing was ever removed.
+   - **Now:** when CDRULES records a check, only the newest full checks are kept, in the same single write. How many is the Settings value `checks.rulesRunsKept`, DRAFT 5.
+   - **CD's warnings:** CD's one-line pit warnings sit in the same list. They carry no fingerprint, so they are never trimmed and do not count towards the five.
+   - **Source:** CDRULES Source still lists the kept checks.
+   - **Already-large drawings** shrink at their next CDRULES run.
+3. **PR 2099 at `f7f082d3`** (queue item 24, on top of BUG-1298 already in batch 11): CDLPD takes the downstream end.
+   - **Seen:** Codex LPD16/17 on 3.0.90.13, pipe P2 to P1 (falls to P1). A click just left of the middle put the LPD at P2, "AT APPROX IL17.08m"; just right of the middle put it at P1, IL 16.98.
+   - **Now:** a clicked pipe whose fall CE knows gives its downstream end wherever it is clicked.
+     - **Both levels known and different:** the lower end.
+     - **Otherwise the recorded direction:** the To end.
+     - **Fall not known:** the end nearest the click, as before, and the command line says so.
+   - **Every route** now ends with one line naming the end and the level, e.g. "LPD set at P1 (downstream end, IL 16.98)."
+   - **Unchanged:** the pick-a-point, pick-a-pit and pick-a-block routes still choose their end the same way. Checked: none of them has the fault.
+4. **PR 2093 at `9eae8ed9`** (wording only): the CDRENUMBER Apply question showed "[Yes/No] [Yes/No]". It now shows "[Yes/No] <No>:" once. Choices, default and what Yes does are unchanged.
+
+### 2. The switches
+
+1. **As shipped:** `trust.showUnknownInsteadOfGuess` OFF, `trust.newPipeOnePage` OFF; every other switch as batch 11.
+2. **New Settings value:** `checks.rulesRunsKept` = 5 (DRAFT).
+3. **Look:** no window changes. Command-line words change in CDLPD (the last line) and CDRENUMBER (the question).
+
+### 3. How it was put together
+
+1. **Build stack** (local, detached, never pushed) in `C:\CE_WORK\build\wtB14g`: batch 11's sources `0775db30` (before its version commit), then merges of 2087 at `ffee327e` (`d7196bde`), 2099 at `f7f082d3` (`0290d3f6`) and 2093 at `9eae8ed9` (`8a738776`).
+   - **Conflicts:** the only one was `REGRESSION_LOG.md` each time, with both sides kept.
+   - **Draft files:** the rule, command and test files of the three drafts are byte for byte the drafts' own.
+2. **Build commit `27b5f584`,** "Version: Civil 3.0.90.14".
+3. **Product files changed against batch 11 (`1b939430`):** 8: `LpdCommand.cs`, `LpdPipeEndRule.cs`, `PitRenumberCommand.cs`, `RulebookRunTrimRule.cs`, `ProjectDataService.RulebookDrawing.cs`, `UserSettings.cs` and the two version lines. List: `C:\CE_WORK\scratch\trust_install\b14civ12_files_changed.txt`.
+4. **Whole Civil test run on the merged code (Release, net10):** **22,848 passed, 0 failed, 32 skipped** (7 min 29 s): batch 11's 22,820 plus the 28 tests the three drafts add (18 CDLPD, 9 CDRULES trim, 1 CDRENUMBER).
+5. **The drafts' own runs (Release):**
+   - **2099:** whole Civil 22,200 passed, 0 failed. Its 18 new CDLPD tests: 14 failed on today's behaviour, the LPD17 case among them.
+   - **2093:** whole Civil 22,189 passed, 0 failed. Its new test failed on the old question.
+   - **2087:** 314 related tests pass (3 skipped). Its 3 new tests failed on the earlier trim.
+   - **Other sets:** net48 and net8 build with 0 errors on 2099 and 2093.
+
+### 4. Against Tim's four "never by itself" rules
+
+1. **CDRULES:** trims only its own past check records; no level, size, number, label or layer is touched.
+2. **CDLPD:** changes which pipe end a click on a pipe gives. It still only places the LPD marker and note the user asked for, and writes no level or size.
+3. **CDRENUMBER:** wording only.
+
+### 5. Payload
+
+1. **Payload:** `C:\ce_rc_scratch\b14civ12\CE_CVL_SUITE.bundle`, 832 files. `build_installer.ps1` exit 0. Every dotnet call passes `-p:SkipDevBundle=true -nr:false --disable-build-servers`. Nothing under ApplicationPlugins was written.
+2. **DLL `3.0.90.14+27b5f584d3f312b7b0834e54f61acc96a5701b10` SHA-256:**
+   - Legacy `913007C07D862516DC591824C3193AC85DB0650D8ABC97FD507CD887CAAE668E`
+   - Net8 `2FEAB422B69253E5FCC161BD9D30803BC474D685CB46674A0325C1084B15529B`
+   - Modern `B8FC5C59DF9F6DA83DC248BE7C66A87AEE456B6407AB8DF1FAA2635152DF5878`
+3. **`PackageContents.xml`:** `24400523B78B59BF9357757322FD97A248E0C7A12F238FF87C3AD15674B71C22`, `AppVersion="3.0.90.14"`.
+4. **Manifest** `C:\CE_WORK\scratch\trust_install\b14civ12_manifest.txt`, 832 rows, SHA-256 `49F8256EB2FF34CA3A9C7ABBE3353EABBC151A59BFAE3B53ECEB8835F6C535A2`.
+5. **Stamp check:** CE_SHARED and CE.AI.Core x3 have 0 bytes different outside the stamp zones. The installed bytes were put in, and CE_SHARED is identical to Manager x3. The natives are the installed bytes.
+6. **Against batch 11 (`b14civ11`, live):** 7 files differ, 0 added, 0 removed: CE_CVL_SUITE.dll and .pdb x3, and PackageContents.xml.
+
+### 6. ONE robot and Codex list for batch 12 (scratch copies, switches OFF)
+
+1. **First start:**
+   - The log reads "CE_CVL_SUITE v3.0.90.14 Started".
+   - Run the BUG-1456 smoke list once.
+2. **CDRULES six times** (a fresh copy of the test job used for the 429-finding run):
+   - **First make one CD pit warning:** draw one pipe with CD from a pit that has no levels, so CD prints "[CE] ...; enter pit levels manually.". That records one CD warning (1 finding) in CE's record. Save.
+   - Run CDRULES Problems six times. After each run save, and note the drawing file size and CE's record length.
+   - **Right:** size and record grow for the first five runs, then level off. Runs 5 and 6 are about the same size, and the sixth is not about +154 KB on the fifth.
+   - CDRULES Source lists the five newest full checks (several hundred findings each), newest first, plus the CD warning as an entry with 1 finding.
+3. **CDLPD** (a copy of the LPD16/17 job, pipe P2 to P1, IL 17.08 to 16.98):
+   - CDLPD, pick the pipe just LEFT of its middle (nearer P2), place the note.
+     - **Right:** marker and note at P1, "AT APPROX IL16.98m".
+     - **Right:** the command line reads "LPD set at P1 (downstream end, IL 16.98)."
+   - U once: the LPD is gone.
+   - Repeat clicking just RIGHT of the middle: the same, at P1.
+4. **CDRENUMBER** (a copy with pits to renumber):
+   - At the Apply question: the choices show once, "[Yes/No] <No>:".
+   - Answer No: "Renumber cancelled - nothing changed."
+5. **Batch 11's items carry over unchanged** (section BATCH 11, item 6: Pit Schedule blank-level pipe, levels typed, TPS16 plain job), for any not yet passed.
+6. **Then close AutoCAD.**
+
+### 7. Install and put back
+
+1. **Install (on batch 11):** `C:\CE_WORK\scratch\trust_install\install_batch14l.ps1`. NOT RUN.
+   - **What it checks:** it refuses unless live Civil reads `3.0.90.13+1b939430` with all three sets. It also checks the candidate against `b14civ12_manifest.txt` and CE_SHARED against the live Manager.
+   - **What it does:** keeps `CE_CVL_SUITE_PRE_1b939430_<time>.backup`, then reads every file back. It checks 3.0.90.14, CE_SHARED and the settings. Log: `install_batch14l.log`.
+   - **`-CheckOnly`:** changes nothing. Run here: at 05:21: "CHECKS PASSED: nothing was renamed, copied or changed". Live reads 3.0.90.13+1b939430 with all three sets; the candidate against its manifest is 832 rows, bad 0, extra 0; the candidate CE_SHARED is identical to the live Manager x3; 4 settings files were read; 0 AutoCAD running.
+2. **Put back:** `restore_batch14l.ps1`, back to 3.0.90.13, checked against `b14civ11_manifest.txt`. NOT RUN.
+   - **`-CheckOnly`** was run here: at 05:21 against today's live batch 11: "PUT-BACK VERIFIED: Civil equals the 3.0.90.13 payload file for file" (832, bad 0, extra 0; CE_SHARED identical x3; settings unchanged).
+   - **Further back:** `restore_batch14k.ps1` (to 3.0.90.12).
+
+### 8. Stop rules
+
+As section 5 at the top. If a pass fails, batch 12 is put back with `restore_batch14l.ps1`, and batch 11 stays.
