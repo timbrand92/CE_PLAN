@@ -584,3 +584,12 @@ Real-AutoCAD screenshots copied to `04_REFERENCE/mockups/NEW_PIPE_ONE_PAGE_15NOV
    - Settings unchanged.
    - Last-used pit after: GRATED 450 x 450, lid C, plastic False, label True, schedule True (hash CDE6732638AE; Edit Pit's Save of P10 wrote P10's ordinary values).
    - **For the controller:** Edit Pit's whole job is now seen by Codex on 3.0.90.13 with real pictures. With Edit Pipe's TCE16 E2 on 3.0.90.12, both halves of CDEDIT are seen.
+10. **Codex TRN17 N1, CDRENUMBER No and Esc (03:15 to 03:25, 3.0.90.13, copy `CLDTP_TRN17.dwg` of the untouched TRN15 fixture): OVERALL PASS, N-01 to N-03 all PASS, all SURE.** Report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_TRN17_N1_20261116_0316.md`.
+   - **Pictures checked by me:** 20 PNGs, 17 distinct. The repeats are the identical "Edit Pit P1" close-up, read three times while nothing changed, and the same view after Cancel. I opened TRN17-06, -12 and -14.
+   - **N-01 before:** "Edit Pit P1" for the left pit; count 12.
+   - **N-02 No PASS (TRN17-06):** the command line reads "Renumber downhill to uphill:", "P3 -> P1", "P1 -> P3", "2 pit(s) will be renumbered. Apply? [Yes/No] [Yes/No] <No>: N", "Renumber cancelled - nothing changed."; count 12; the left pit still P1.
+   - **N-03 Esc at the question PASS:** the Apply question was pending, and one Esc cancelled it. Count 12; the left pit still P1 (TRN17-14 close-up: "Edit Pit P1"). In TRN17-12 the command line after the Esc is already empty, so the "*Cancel*" words rest on Codex's driver log (`exports\driver_calls.txt`).
+   - Small wording note for Tim's eye (not judged): the question shows "[Yes/No]" twice ("Apply? [Yes/No] [Yes/No] <No>").
+   - Nothing saved; settings unchanged; last-used pit unchanged (CDE6732638AE, ordinary).
+   - **For the controller:** with TRN16 (Yes, one U, save/reopen, in real pictures), CDRENUMBER's whole job is now seen on 3.0.90.13.
+11. **Last-used pit at 03:25 (END of tonight's Codex looks):** GRATED PIT 450 x 450, lid C, plastic False, label True, schedule True. This is the reading Tim's first real PIT on Monday depends on.
