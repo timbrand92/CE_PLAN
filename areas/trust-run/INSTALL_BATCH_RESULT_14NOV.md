@@ -387,3 +387,16 @@ Transcript `C:\CE_WORK\scratch\trust_install\b2027.out`. Live Civil lanes: Moder
    - Screenshot `C:\Lisp Files\_TEST_COPIES_20260923\robot_shots\session_20261115_171721\B9_PITSCHEDULE_greycount.png`.
    - **Not seen by robot:** the full sentence on hover. A tooltip is not in the window's readable text. That needs Codex's mouse.
    - The singular "1 plastic pit not listed" was not tried.
+7. **New Pipe on one page, switch ON, robot part (17:38 to 17:41; .cmd route, folder `C:\CE_WORK\robot\b14i_switch`, scratch settings `{"newPipeOnePage":true}`; copy `CLDTP_B9NP.dwg`; transcript `C:\CE_WORK\scratch\trust_install\b9_sw_np.out`): SEEN, the page opens.**
+   - Switch check: the session log says "Settings initialized from: C:\CE_WORK\robot\b14i_switch\settings\CD_Settings.json" and "CE_CVL_SUITE v3.0.90.11 Started".
+   - **CD P10 to P9 opened the one-page window** (title "New pipe"). Its words:
+     - heading "New pipe: P10 to P9";
+     - answer card "100 dia UPVC at 1 in 100", "Length 9.142 m", status word "Check first", and the note "Both invert levels are blank: they are saved blank (Unknown) and no fall or grade is worked out.";
+     - Size 100 / 300 / 450 / Other..., Material UPVC / STORMPRO / Other...;
+     - Grade "1 in 100", "office minimum, from Settings"; Start level and End level empty, each "type it";
+     - "More... (label text and arrow, schedule, design flow, rising main)", Draw pipe, Cancel.
+   - **Real screenshot for Tim:** `C:\Lisp Files\_TEST_COPIES_20260923\robot_shots\session_20261115_172646\B9_NEWPIPE_ONEPAGE_for_Tim.png` (sent to Tim; not put in any repo). The whole-AutoCAD picture is beside it.
+   - Esc: NOT TESTED by robot. The driver refuses esc-prompt in an AutoCAD it did not launch, as expected.
+   - The record and drawing read "not the same" while the window was still open: the command line had "[CE] Pipe end moved to the inside wall of P10". So this is not a Cancel result, and nothing is judged on it.
+   - Closed by the driver's quit (no save); settings same; Tim's CD_Settings.json unchanged.
+   - Cancel, Esc, Draw pipe, one U, More... and back, and the save go to Codex NP16 (the controller's option b). The reopen check follows by robot.
