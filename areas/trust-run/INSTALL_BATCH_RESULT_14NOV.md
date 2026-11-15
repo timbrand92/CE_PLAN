@@ -637,3 +637,10 @@ Real-AutoCAD screenshots copied to `04_REFERENCE/mockups/NEW_PIPE_ONE_PAGE_15NOV
     - **Typing 10 into Design flow left it blank, twice.** RSQ20-11 shows the "Creative Engineering | More options" title grey (not the active window) while the box looks selected: the same keyboard-route problem as on the New Pipe page, Codex's tool, not CE.
     - Back, then Cancel; nothing saved; drawing and settings unchanged; the record read worked (RQ_0 written); last-used pit ordinary.
     - **Robot route closed too:** the driver's list allows setting "Design flow (L/s)" and pressing "Back" in More options (Tim's item 16), but NOT pressing "More..." in Edit Pipe, so the robot cannot open that window. Question sent to the controller.
+17. **Robot typing the flow Tim's way (05:24 to 05:34, 3.0.90.13, clean copy `CLDTP_RSQ21.dwg` of the batch 11 Pit Schedule drawing): STOPPED, needs one more allowed press.** Transcript `C:\CE_WORK\scratch\trust_install\b11_typeq.out`.
+    - The new "Edit pipe, More" press worked: "Creative Engineering | More options" opened.
+    - It opens on its **Pipe** tab. The Design flow box is on the **Levels & Flow** tab, which the robot may not press, so the box could not be set ("no control named 'Design flow (L/s)'"). Screenshot `C:\Lisp Files\_TEST_COPIES_20260923\robot_shots\session_20261116_051033\RSQ21_moreoptions_q10.png`.
+    - Back; Edit Pipe closed without saving; nothing saved.
+    - Seen in passing: opening Edit Pipe on this drawing printed "CE updated its record (CDEDIT): 2 pit invert levels filled in." (the pits had no inverts of their own; CE filled them from the pipe ends).
+    - The reset pit could not be typed (Edit Pipe was still closing). Last-used pit was already ordinary and unchanged: GRATED 450 x 450, plastic False, label True, schedule True. Settings unchanged.
+    - Asked the controller (05:31) whether "Levels & Flow" may be added to More options' press list by exact name. Without it, RSQ21 cannot start.
