@@ -108,6 +108,17 @@ Not run yet: CD, CDEDIT, PITSCHEDULE, CDRULES with CDCALC, CDCHECKCURRENT, MR, C
    - Closed with no save. The driver says "the 4 settings files have the same SHA-256 as at the start of the pass". The driver also listed one log it could not read (`Drawing1_1194d4fde.log`): a note only, not a CE message.
    - An earlier try (14:54 to 15:08) is void, not a fail. The driver change of 14:50 had stopped v3 from pressing Start Pipe, so the set-up never finished (see the lane file, 15:12).
    - **For the controller to weigh:** the robot has now seen Save plus one Undo, with CE's record either side, for both Edit Pit and Edit Pipe, and Edit Pipe Save holding through save and reopen. Codex has seen Edit Pit's whole job (TCE14) but not Edit Pipe Save. A Codex look at Edit Pipe Save, one U, save and reopen (TCE16) comes next if you want it for the count.
+5. **Codex look TCE16 E1 (15:50 to 16:02, Civil 3.0.90.10, copy `CLDTP_TCE16.dwg`): OVERALL NOT TESTED: EVIDENCE.** Codex's screenshot saver kept saving an old picture, so no step counts toward acceptance. Report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_TCE16_E1_20261115_1550.md`; screenshots in `C:\Lisp Files\_TEST_COPIES_20260923\LOOKS\` under TCE16.
+   - What Codex saw on screen, written as observations only, matched the robot at every step:
+     - E-01 Cancel: the heading read "Flow: P10 → P9", diameter 150; nothing changed (object count 1057).
+     - E-02 Esc: "*Cancel*"; nothing changed.
+     - E-03 Save at 225: "Pipe updated.", and the pipe text became "225 DIA. UPVC PIPE AT 1 IN 100". No question appeared.
+     - E-04 one U: echoed CDEDIT; the text went back to 150; Edit Pipe showed 150.
+     - E-05 Save again, save and reopen: 225 held.
+   - Settings were unchanged and the installed versions were the same at start and end.
+   - **Finding for Tim (human use):** while the diameter box already showed 225, the pipe picture inside the Edit Pipe window still showed the old "150" label. After Save the drawing was right. Whether that preview should refresh as you type is a question for him.
+   - Also seen: the "What CE Found" panel opened at start-up describing an empty Drawing1. The reopened drawing printed "CE: needs checking. 22 pipes not linked. Type CDCHECKCURRENT to see them." (This is the standard test drawing's older pipes.)
+   - Needs a rerun with a working screenshot saver for the count. It runs on 3.0.90.11 after batch 9 goes in, if the controller wants it.
 7. **Codex look TPS15 S1 first run (12:33 to 12:47): open/Close PASS, Esc while placing PASS; placing BLOCKED.** Report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_TPS15_S1_20261115_1234.md`. S-01: "2 rows listed", Close, R3 2 = START (TPS15-04 to -06). S-02: Place schedule, Esc at the insertion point, back to the window, Close: no table, R3 2 (TPS15-07 to -12). S-03 and S-05: at the insertion point the Pit Schedule window still holds AutoCAD, so the driver refused to type the point (BUSY) and hand typing became PASTECLIP. Rerun from 12:4x answering the point with one mouse click in the drawing.
 8. **Codex look TPS15 S1 rerun (12:48 to 13:00): place, one U, save and reopen PASS.** Report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_TPS15_S1_20261115_1249.md`; screenshots `C:\Lisp Files\_TEST_COPIES_20260923\LOOKS\TPS15_S1_20261115_1249\screenshots\`.
    - S-01 open/Close PASS ("2 rows listed", count 2; TPS15-04 to -06).
