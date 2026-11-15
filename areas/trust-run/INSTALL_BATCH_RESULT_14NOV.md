@@ -546,3 +546,11 @@ Real-AutoCAD screenshots copied to `04_REFERENCE/mockups/NEW_PIPE_ONE_PAGE_15NOV
      - "Drawing check: 4 data issues...".
    - Ended on the ordinary reset pit; last-used pit END GRATED 450 x 450, lid C, plastic False, label True, schedule True. Settings unchanged.
 3. Next: Codex looks TPS17 (Pit Schedule plain job on the blank-level fixture), TCE17 (Edit Pit) and TRN16 (CDRENUMBER), one after another from 01:19, each with the picture check. Every picture is hashed and the ones behind each claim opened before reporting.
+4. **Codex TPS17 S1 (01:19 to 01:24): BLOCKED on my fixture.** Report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_TPS17_S1_20261116_0120.md`.
+   - I copied the TPS17 drawing from `CLDTP_TPS16.dwg`, which Codex's own TPS16 run had saved WITH a placed schedule. Codex found the schedule already there and rightly stopped. Nothing saved; settings unchanged.
+   - The rerun (S2) uses the robot's untouched original `C:\CE_WORK\scratch\trustprobe\TRUST_VERIFY\CLDTP_PSPIPE.dwg`.
+5. **Codex TCE17 E1 (01:36 to 01:45): BLOCKED on my brief's button names.** Report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_TCE17_E1_20261116_0137.md`.
+   - On 3.0.90.13 the Edit Pit window's controls read **"Cover (m AHD)", "Cancel" and "Save"**. The brief still used the 3.0.90.10 names ("Pit cover level (m AHD)", "Cancel without saving", "Edit pit, Save"), and Codex rightly would not substitute.
+   - Seen: E-00 P10 CL 19.45, count 1054. E-01: Cancel closed the window, nothing changed (DIFFERENT, on the name only). E-02 Esc PASS ("*Cancel*").
+   - E-03 to E-05 were not done; nothing saved; last-used pit unchanged.
+   - The rerun (E2) names the buttons as they now read.
