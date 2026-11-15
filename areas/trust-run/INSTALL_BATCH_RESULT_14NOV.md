@@ -414,3 +414,11 @@ Transcript `C:\CE_WORK\scratch\trust_install\b2027.out`. Live Civil lanes: Moder
    - Page words in this run: "225 dia UPVC at 1 in 100", "Length 9.142 m", "Check first", the blank-inverts note. My robot run at 17:39 on a fresh copy of the same drawing, with the same settings copy, showed "100 dia UPVC". The size the page starts with differed between the two runs; noted, not judged.
    - Settings unchanged; installed versions unchanged; AutoCAD closed by Codex.
    - Next: the save rerun waits for the controller's word on Ctrl+S once instead of typing QSAVE.
+
+**Controller's check, batch 9 New Pipe on one page (Codex NP16, Civil 3.0.90.11, switch on), Sun 15 Nov 2026 18:10:** report `CODEX_VERIFY_NP16_P1_20261115_1754.md` read (OVERALL FAIL: PASS 2, FAIL 1, BLOCKED 3); screenshots NP16-10, NP16-12-page-detail, NP16-15 and NP16-18 seen by the controller.
+1. **FAIL, Esc:** one keyboard Esc left the New pipe page open; Cancel then closed it and nothing was drawn. Sent to the fix lane for draft 2111 (batch 10).
+2. **Seen working:** Cancel; Draw pipe (pipe, label "225 DIA. UPVC PIPE AT 1 IN 100 MIN." and arrow between P10 and P9); one U takes all three back; More... then Cancel comes back with the answers kept.
+3. **Not yet seen:** save and reopen (QSAVE stopped by AutoCAD's suggestion list; controller allowed one Ctrl+S on the scratch copy for the rerun); the level boxes in the full window behind More... (below the visible part; mouse-wheel scroll allowed in the rerun).
+4. **Noted:** starting size read 100 in the robot run and 225 in the Codex run on the same copy; fix lane asked which source wins.
+5. **Batch 9 stays installed:** the fault is behind `trust.newPipeOnePage`, which is off, so everyday CD is today's window. New Pipe one page is NOT counted and is not to be switched on.
+Real-AutoCAD screenshots copied to `04_REFERENCE/mockups/NEW_PIPE_ONE_PAGE_15NOV_real_autocad_page.png` and `_drawn.png` (test drawing only).
