@@ -250,3 +250,11 @@ Not run yet: CD, CDEDIT, PITSCHEDULE, CDRULES with CDCALC, CDCHECKCURRENT, MR, C
 8. Every session ended on the ordinary reset pit. END reading 20:47: GRATED PIT 450 x 450, lid C, plastic False, label True, schedule True (hash 8773CFBE6CDD; the hash moved from D0E30F0F2371 because Edit Pipe also writes its last-used pipe values). Settings unchanged.
 
 **Controller's call, PITSCHEDULE inlet question, Sun 15 Nov 2026 20:49:** STILL HELD, not counted. With levels typed (19.20 to 19.10) the table is right: P1 outlet 100, P2 "FROM P1" inlet 100, no outlet (lane's screenshot B9_PSL_schedule.png). With levels blank, CE's own record already says the pipe runs P1 to P2 and CD's arrow points that way, yet the table gives P2 an outlet of 100 and no inlet. That is not declining to guess: it states an outlet that does not exist. Sent to the fix lane to find why and fix on existing draft 2039 only; queued for Tim as item 22 with the default "follow the drawn direction, level boxes blank". Count stays 4 of ten.
+
+### 3. CDEDIT: Codex rerun TCE16 E2 on 3.0.90.12 (22:30 to 22:32): BLOCKED before start
+
+1. Report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_TCE16_E2_20261115_2231.md`.
+   - Codex said its screen tool this time had no way to save screenshots to files, so it did not open AutoCAD; every step is NOT TESTED.
+   - Nothing was changed. The lock was released, and Tim's last-used pit was ordinary before and after.
+   - Its TPS16 and TEM16 runs earlier tonight saved screenshot files fine, so this is the tool session, not the job.
+   - The brief now points to how those runs saved. The rerun follows NP18. CDEDIT stays held.
