@@ -63,6 +63,10 @@
    - **Leave it.** Example: C: stays near 26 GB free.
    - Also for your information: Codex's own history file is 15.9 GB. Not touched; yours to decide whether it is ever trimmed.
 
+18. **The test robot has an older, looser way of clicking that could reach buttons like Export in a CE window. Close that gap?** Found at 14:53 Sun 15 Nov by the read-only review of the two buttons you allowed in item 16. It is an old gap, not made by item 16, and nothing has gone wrong through it. The robot's newer route presses only named buttons. Its older click-and-type route treats every "Creative Engineering" window as open, with only a list of forbidden words to stop it. It still only works in an AutoCAD the robot started, on a test copy. Default in use until you answer: the test chats do not use the older route on any CE window; the robot's own code is not changed.
+   - **Yes, close it: the older route obeys the same named-button list** (recommended). Example: a test script that tried to click Export in Pit Schedule by the old route is refused, the same as by the new route. Some old test scripts may need a button added by name before they run again.
+   - **Leave it, the "do not use" rule is enough.** Example: nothing changes in the robot; the guard depends on the test chats keeping to the rule.
+
 ## Older, still open (asked before 15 Nov, defaults in use)
 
 8. **Ribbon in job order** (Start, Sources, Network, Levels, Check, Sheet). Default: not built into any batch until you have seen a mock-up.
