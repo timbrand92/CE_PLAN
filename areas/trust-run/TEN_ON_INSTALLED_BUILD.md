@@ -89,3 +89,9 @@ Not run yet: CD, CDEDIT, PITSCHEDULE, CDRULES with CDCALC, CDCHECKCURRENT, MR, C
    - **E-04 one U PASS** (echoed CDEDIT; P10 back to CL 19.45; Edit Pit showed 19.45; TCE14-08, -09).
    - **E-05 save and reopen PASS** (CL 19.95 after reopening; TCE14-10, -11).
 3. **CDEDIT: robot PASS (Cancel pit, Esc, Cancel pipe) + Codex PASS (Cancel, Esc, Save, one U, save and reopen) on Civil 3.0.90.10.** For the controller to write. (Edit Pipe Save was not tried; Edit Pit's was.)
+
+### 4. PITSCHEDULE
+
+1. **Robot first run (11:46 to 11:57): NOT a test.** The driver's window close failed at once (window still loading), the modal Pit Schedule then blocked every later step, and I ended that AutoCAD (my own, scratch copy, settings the same). Log `C:\CE_WORK\scratch\trust_install\ten_ps.out`.
+2. **Robot retry (11:58 to 12:02, copy `CLDTP_TEN_PS2.dwg`; log `C:\CE_WORK\scratch\trust_install\ten_ps2.out`): open and Close PASS, twice** (window's own Close button after 12 s; CE's record and drawing identical before and after). Screenshot of the window: `C:\Lisp Files\_TEST_COPIES_20260923\robot_shots\session_20261115_114351\TEN_PS_window.png` ("Will be placed: 27 rows · All sets · All systems", "Drawing check: 95 data issues may affect this schedule", "27 rows listed").
+3. **Seen:** on the standard test drawing "Continue to Place / update" is greyed out (both opens). So placing, one U and save/reopen could not be done by the robot; Codex look TPS14 (it can open the Placement tab and see what it needs).
