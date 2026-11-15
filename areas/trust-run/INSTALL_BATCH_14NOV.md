@@ -955,3 +955,117 @@ On Tim's standing trial approval. Batches 6 and 7 were superseded and never inst
 4. **Live Modern DLL SHA-256 read back by the controller:** `1D59E3B16F879EE09F6581F13963D37ECC97844E122D1AD1090AFD6749C0FE79`.
 5. **Backup:** `CE_CVL_SUITE_PRE_9b977125_20261115-074708.backup` (3.0.90.7). Put-back `restore_batch14h.ps1` (not run; the settings-loop bug found at 07:44 is being corrected in it).
 6. **Not yet done:** nothing has run in AutoCAD on 3.0.90.10. Not accepted.
+
+## BATCH 9 (PREPARED, NOT INSTALLED): Civil 3.0.90.11 = batch 8's sources + 2039 at 102bb87f + 2049 at f9d35d0c + 2111 at 43436c90, switches OFF
+
+Written Sun 15 Nov 2026 by lane trust-safety-fixes, on the controller's order of 15:15: "build BATCH 9 as one trial payload under his standing trial approval, same method as batch 8". One build, one version, one folder. **Install only on batch 8:** the script refuses unless live Civil reads `3.0.90.10+fcf465a9` with all three sets. The controller installs. No merge, nothing to colleagues.
+
+### 1. What is in it
+
+1. **Everything in batch 8** (section BATCH 8, item 1), unchanged.
+2. **PR 2039 at `102bb87f`** (Tim's picture OKs of 15 Nov):
+   - **Pit Schedule:** the unnumbered plastic pits left out become one quiet grey count under the table, "3 plastic pits not listed (no number)" (singular "1 plastic pit not listed (no number)"), with the full sentence on hover. Tim: "OK as shown" and "OK as written", 10:21.
+   - **Edit Pit:** "Number and schedule this one anyway" is behind More…, beside "Included in pit schedule" (his choice B). The Pit Schedule's plastic line can name that route again.
+3. **PR 2049 at `f9d35d0c`, Q11** (his picture 2, "Both", 10:16): with `trust.showUnknownInsteadOfGuess` on, a pipe the record update adds to a pit with no number gets a Proposed flow direction.
+   - **Check this drawing:** the pipe is listed as "Pipe P7 to pit ?" with an amber "Proposed", Correct and Reverse. The buttons run the new hidden CDPIPEDIRECTION, one Undo.
+   - **Edit Pipe:** a Flow direction row; the press is held until Save.
+   - **Switch off:** nothing.
+4. **PR 2111 at `43436c90`, New Pipe on one page** (Tim: "build New Pipe"). With `trust.newPipeOnePage` on, CD opens the one-page window:
+   - the answer card with its sum and a status word;
+   - size, material, grade, start and end level, each saying where it came from;
+   - More…, which opens today's full window;
+   - Draw pipe and Cancel.
+
+   It fills the same New Pipe answers; CD draws as before. **Switch off:** today's window.
+
+### 2. The switches
+
+1. **As shipped:** `trust.showUnknownInsteadOfGuess` OFF, `trust.newPipeOnePage` OFF; every other switch as batch 8.
+2. **Picture differences** are listed in `04_REFERENCE/mockups/BUILT_VS_PICTURE_15NOV.html`. One to watch: CE rounds a worked-out fall up to the next 10 mm, so the New Pipe page's sum shows "= 18.126, kept as 18.12 end".
+
+### 3. How it was put together
+
+1. **Build stack** (local, detached, never pushed) in `C:\CE_WORK\build\wtB14g`: batch 8's stack `75c75f23` (before its version commit), then merges of 2039 at `102bb87f` (`a66d3ae5`) and 2111 at `43436c90` (`45468827`; it carries 2049 at `f9d35d0c`).
+   - **Conflicts:**
+     - `PitScheduleViewModel.Data.cs`: two different methods added at the same place; both kept.
+     - `CrossModuleGuardTests.cs`: Civil command count, batch 8's 148 (CETRUSTREAD) plus CDPIPEDIRECTION = 149.
+     - `REGRESSION_LOG.md`: both sides kept.
+   - **One build-stack change (`471c6402`, never pushed):** Q11's two record routines (`MarkProposedDirections`, `MarkPipeDirectionSure`) now ask batch 8's BUG-1456 change door first ("never change another drawing's record"), as every routine that changes the record does. The door exists only in batch 8's code, so this lives in the stack. It goes into 2049 when 2049 is brought up to batch 8.
+   - **Build commit `249b9f8d`,** "Version: Civil 3.0.90.11".
+   - **The first build of the stack (15:16) was thrown away.** Its whole-suite run failed 9 of 22,835 tests. All 9 were real faults in the drafts that the narrower runs had missed. They are now fixed and pushed on the drafts:
+     - **2049 (`f9d35d0c`):** Edit Pipe accepted the record hold before its "no changes" exit when only Correct or Reverse was pressed. CDPIPEDIRECTION's keywords were not written as plain words, so the keyword guards could not read them.
+     - **2039 (`102bb87f`):** the window-inventory test still recorded the missing Edit Pit button. Tim's choice B reverses that expectation, and the test says so.
+     - **Stack:** the change door (above).
+2. **Every draft file equals its draft**, except files batch 8 also changed. Those were checked by reading: the only differences are batch 8's own lines (Q7's "?" in the Pit Schedule, the CDEDIT hold, the TRUST-06 schedule check).
+3. **Product files changed against batch 8 (`fcf465a9`):** 30, all in `Modules/Drainage` (including its tests) plus the version lines. List: `C:\CE_WORK\scratch\trust_install\b14civ9_files_changed.txt`.
+4. **Whole Civil test run on the merged code (Release, net10):** **22,804 passed, 0 failed, 32 skipped** (6 min 16 s), on the second build.
+
+### 4. Against Tim's four "never by itself" rules
+
+1. **Grey count and Edit Pit button:** words and one button. The button numbers and schedules one plastic pit only when the drafter presses it (his choice B).
+2. **Q11:** nothing is written until Correct or Reverse is pressed. Reverse turns the pipe round with CDREVERSEFLOW's own step; locked layers, Xrefs and REFEDIT refuse as before.
+3. **New Pipe page:** it only collects answers. It never writes a level, size, number, label, layer or colour; CD does the drawing exactly as today.
+
+### 5. Payload
+
+1. **Payload:** `C:\ce_rc_scratch\b14civ9\CE_CVL_SUITE.bundle`, 832 files. `build_installer.ps1` exit 0; every dotnet call passes `-p:SkipDevBundle=true -nr:false --disable-build-servers`; nothing under ApplicationPlugins was written.
+2. **DLL `3.0.90.11+249b9f8d67fd939f527fae1e4a61d97a225cc1f4` SHA-256:**
+   - Legacy `5CDED12E6A080D0A9A0381ADF41D6FAC6A2EC79EF4433D4406061FDFF9664B99`
+   - Net8 `13BDAB7CA94B89C0505CD92B9DF458003D47773CB34EA9245D14EBD82B6CE40D`
+   - Modern `107F9BD7F9198737FCA0685404A3B4071D76A00D0A0CE26376707989FF1FDC74`
+3. **`PackageContents.xml`:** `351CA810B8CB8905C5D20705FE0131679283DDDD9D502407E6FBEE64CE5A965D`, `AppVersion="3.0.90.11"`.
+4. **Manifest** `C:\CE_WORK\scratch\trust_install\b14civ9_manifest.txt`, 832 rows, SHA-256 `F27979CD707AC9AA3F38A9C55753C9AECD2177DDDB29C47EBEA0C8945B7CCB1F`.
+5. **Stamp check:** CE_SHARED and CE.AI.Core x3 have 0 bytes different outside the stamp zones. The installed bytes were put in, and CE_SHARED is identical to Manager x3. The natives are the installed bytes.
+6. **Against batch 8 (`b14civ8`, live):** 11 files differ, 0 added, 0 removed. They are CE_CVL_SUITE.dll and .pdb x3, `command-registry.json` x4 (the hidden CDPIPEDIRECTION entry) and PackageContents.xml.
+
+### 6. Turning a switch on for ONE scratch session
+
+As batch 7, section 6, with the folder `C:\CE_WORK\robot\b14i_switch`.
+1. **Edit the COPY only:** in its `"trust"` group, set `"newPipeOnePage": true` for the New Pipe items. For Q11, also set `"showUnknownInsteadOfGuess": true`.
+2. **Start AutoCAD** through a `.cmd` that sets `CE_LOG_DIR_OVERRIDE=C:\CE_WORK\robot\b14i_switch`, handed to Explorer.
+3. **Check it took:** the CE log must say "Settings initialized from: C:\CE_WORK\robot\b14i_switch\settings\CD_Settings.json". If it does not, stop.
+4. **Tim's own settings:** never touch `%APPDATA%\TIM_CE_CADTOOLS\CD_Settings.json`. Hash it before and after.
+
+### 7. ONE robot and Codex list for batch 9 (scratch copies)
+
+1. **First start, switches OFF (as shipped):**
+   - The log reads "CE_CVL_SUITE v3.0.90.11 Started".
+   - Run the BUG-1456 smoke list once.
+   - **New Pipe, switch off:** CD opens today's New Pipe window, unchanged (same window as 3.0.90.10). Draw one pipe P to P; one U takes it back.
+   - **Pit Schedule grey count (2039):** use the 4 Nov copy with unnumbered plastic pits. Under the table: "N plastic pits not listed (no number)" in quiet grey (singular "1 plastic pit not listed (no number)"). The full sentence shows on hover. No plastic pit is added to the table.
+   - **Edit Pit More… button (2039):**
+     - On a plastic pit, open Edit Pit (CDEDIT) and click More… On the Drawing & Schedule tab, "Number and schedule this one anyway" sits beside "Included in pit schedule".
+     - Cancel: nothing changes.
+     - Press it, then Save: that one pit gets a number and joins the Pit Schedule, and it stays plastic. One U puts it back.
+   - **Q11 with the switch off:** on the fixture below, Check this drawing shows no "Proposed" item, and Edit Pipe shows no Flow direction row.
+2. **Switch session with `newPipeOnePage` ON (section 6):**
+   - **Opens:** CD, pick a route from one pit to another. The one-page New Pipe window opens. The title reads "New pipe: P.. to P..", and the answer card shows size, material, grade, the sum and a status word.
+   - **Cancel:** nothing drawn; the command line says CD was cancelled. Esc does the same.
+   - **Draw P to P:** press Draw pipe. The pipe is drawn as CD draws it today: same layer, label, arrow and record row. Its levels match the page: the end level shown "worked out from the grade" is the one written.
+   - **One U:** a single U takes the whole pipe back.
+   - **Save and reopen:** draw a pipe, save, close and reopen the copy. The pipe, its label and its record row are still there.
+   - **More…:** opens today's full New Pipe window with the same size, material and levels. Cancel there comes back to the one page, answers kept. Draw pipe there draws the pipe.
+   - **Both levels typed:** the answer shows no "at 1 in" grade, the grade box cannot be typed in, and the note reads "worked out from your two levels".
+3. **Switch session with `showUnknownInsteadOfGuess` ON, Q11 on the fixture:**
+   - **Setup:** on a copy of `C:\CE_WORK\scratch\fixtures2049\out\FIX2049_2_Q14_metre_drawing.dwg`, or any copy where the record update adds a pipe that runs to an unnumbered pit, run a command that updates the record (Edit Pit then Cancel).
+   - **Check this drawing (CDCHECKCURRENT):** "Pipe P.. to pit ?" with an amber "Proposed", plus Correct and Reverse.
+   - **Correct:** the item goes, and the command line says "...direction marked Sure. Ctrl+Z once puts it back."
+   - **Reverse** (on another such pipe): the pipe turns round with its arrow, and the command line ends "turned round and marked Sure."
+   - **One U** puts it back.
+   - **Edit Pipe on a Proposed pipe:** the Flow direction row shows. Press Reverse, then Cancel: nothing changes. Press Reverse, then Save: the pipe turns round.
+   - **While another command is running,** the list's buttons type nothing.
+4. **Then close AutoCAD and restart without the variable.**
+
+### 8. Install and put back
+
+1. **Install (on batch 8):** `C:\CE_WORK\scratch\trust_install\install_batch14i.ps1`. NOT RUN.
+   - **What it checks:** it refuses unless live Civil reads `3.0.90.10+fcf465a9` with all three sets. It also checks the candidate against `b14civ9_manifest.txt` and CE_SHARED against the live Manager.
+   - **What it does:** keeps `CE_CVL_SUITE_PRE_fcf465a9_<time>.backup`, then reads every file back. It checks 3.0.90.11, CE_SHARED and the settings. Log: `install_batch14i.log`.
+   - **`-CheckOnly`:** changes nothing. Run here: at 15:50: "CHECKS PASSED: nothing was renamed, copied or changed". Live reads 3.0.90.10+fcf465a9 with all three sets; the candidate against its manifest is 832 rows, bad 0, extra 0; the candidate CE_SHARED is identical to the live Manager x3; 4 settings files were read.
+2. **Put back:** `restore_batch14i.ps1`, back to 3.0.90.10, checked against `b14civ8_manifest.txt`. NOT RUN.
+   - **`-CheckOnly`** was run here at 15:17 against today's live batch 8: "PUT-BACK VERIFIED: Civil equals the 3.0.90.10 payload file for file" (832, bad 0, extra 0; CE_SHARED identical x3; settings unchanged).
+   - **Further back:** `restore_batch14h.ps1`.
+
+### 9. Stop rules
+
+As section 5 at the top. If a pass fails, batch 9 is put back with `restore_batch14i.ps1`, and batch 8 stays.
