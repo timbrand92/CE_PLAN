@@ -82,6 +82,10 @@
    - **Follow the direction the pipe was drawn; leave the level boxes blank** (recommended). Example: P1 row shows outlet 100 with IL blank; P2 row shows "FROM P1", inlet 100 with IL blank, no outlet.
    - **Show no pipe on either pit until levels are typed.** Example: P1 and P2 rows show size, cover level and lid only, with a grey line "1 pipe not listed (no levels)".
 
+23. **New Pipe one-page window: the Esc key cannot be pressed by Codex. Two minutes of your hands, or leave it to the test chat?** Found 22:19 Sun 15 Nov (Codex NP17, Civil 3.0.90.12). Codex's tool moves the keyboard to AutoCAD's main window before it sends a key, so the page's title goes grey and Esc never reaches the page. That is the tool, not CE: the fix chat's own real-key test passes. Default in use: the test chat tries a title-bar click first, then its own keyboard tool on a scratch copy; the window stays switched off and is not counted until Esc is seen closing it.
+   - **Leave it to the test chat** (recommended). Example: you see a screenshot pair, page open then page gone after Esc, taken on a scratch copy.
+   - **I will press it myself.** Example: on a scratch copy with the switch on, type CD, pick two pits, press Esc once: the page should close and nothing is drawn. About 2 minutes; the test chat sets the copy up for you.
+
 ## Older, still open (asked before 15 Nov, defaults in use)
 
 8. **Ribbon in job order** (Start, Sources, Network, Levels, Check, Sheet). Default: not built into any batch until you have seen a mock-up.
