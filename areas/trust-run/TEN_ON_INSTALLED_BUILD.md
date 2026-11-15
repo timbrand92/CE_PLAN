@@ -299,3 +299,11 @@ Not run yet: CD, CDEDIT, PITSCHEDULE, CDRULES with CDCALC, CDCHECKCURRENT, MR, C
 2. **Why it is still HELD, not counted:** Codex itself marked the No step BLOCKED (its Edit Pit reading call timed out and later calls were sent before the timeout was collected), and Esc at the Yes/No prompt was not in the look at all. Tim's rule needs Codex's own pass of the whole job. One short rerun ordered: No (clean), Esc at the Yes/No prompt, each with the left pit read afterwards.
 3. **Name only:** Edit Pit's left button reads "Cancel" (tooltip "Close without applying this edit"); briefs updated by the lane.
 Count stays 4 of ten.
+
+**PITSCHEDULE COUNTED (controller), Civil 3.0.90.13, Mon 16 Nov 2026 02:59.** Under Tim's 15 Nov rule ("codex alone is fine"): Codex TPS17 S2, report `CODEX_VERIFY_TPS17_S2_20261116_0223.md`, OVERALL PASS, S-01 to S-05 PASS, all SURE (Codex notes administrative omissions only: no start log counts). Controller hashed all 32 pictures (28 distinct; the repeats are the same window state) and opened four:
+1. **Esc while placing (TPS17-12):** command line "Specify schedule insertion point: *Cancel*", the Placement page back, no table.
+2. **Placed table (TPS17-19):** STORMWATER PIT SCHEDULE; P1 450 x 450, outlet DIA 100, cover 20.00; P2 450 x 450, inlet FROM P1 DIA 100, cover 20.00, no outlet; level cells blank. The plastic pit with no number is not listed.
+3. **One U (TPS17-20):** "Command: U" then "PITSCHEDULE"; the whole table gone.
+4. **Save and reopen (TPS17-28):** the table is there with the same rows.
+Close with nothing placed (S-01, count 7 to 7) is Codex's read, not opened by the controller.
+**Count: 5 of ten** (PIT, CD, MR, CDCHECKCURRENT, PITSCHEDULE). Carried with it: the blank-level rule is the DRAFT default of queue item 22 (Tim may change it); the banner still reads "6 data issues"; draft 2039 is not merged and nothing is marked FIXED.
