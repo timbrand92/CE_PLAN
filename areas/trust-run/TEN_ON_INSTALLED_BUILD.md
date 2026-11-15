@@ -157,3 +157,16 @@ Not run yet: CD, CDEDIT, PITSCHEDULE, CDRULES with CDCALC, CDCHECKCURRENT, MR, C
 2. **CDCHECKCURRENT: counted ACCEPTED** (a look-only tool: ran, said "27 items need checking. Nothing has been fixed automatically.", drawing and CE's record identical before and after by robot; Codex PASS in the same clean run).
 3. **CDRULES with CDCALC: everyday job seen, HELD, not counted.** Problems and Values passed in TCM14; Esc and CDCALC open/close passed only in the blocked TRC14 run; CDCALC was opened and closed, nothing calculated or placed; and CDRULES adds about 1.8 MB of rule results to CE's record while saying "Drawing geometry unchanged" (true, but the record grows: to be looked at against the look-only rule). Wanted: one clean Codex run covering Esc, Problems, Values, CDCALC doing a calculation, save and reopen.
 **Count on 3.0.90.10: PIT, CD, MR, CDCHECKCURRENT accepted = 4 of Tim's ten.** Held: CDEDIT (Edit Pipe Save), PITSCHEDULE (one clean run with a pipe), CDRULES with CDCALC (above). Still to run on this build: CDLPD, CDRUNSOLVE; CDRENUMBER robot 4 of 4, Codex look running.
+5. Codex look TRN15 second run (14:39): NOT STARTED (Explorer minimised; Codex's screen check refused). Third run (14:43 to 14:47): BLOCKED at N-00 ("FrameArrived timed out: timed out waiting on channel", twice; Codex's own screen tool). Reports `CODEX_VERIFY_TRN15_N1_20261115_1439.md`, `..._1443.md`. Nothing tested, AutoCAD closed, settings the same. **CDRENUMBER: robot PASS 4 of 4 (No, Yes, one U, save/reopen) with log and screenshots; Codex witness still owed.**
+
+## THE TEN ON 3.0.90.10, WHERE THEY STAND (Sun 15 Nov 14:48 PC clock)
+
+1. **PIT:** robot 5/5 + Codex 5/5 PASS. Ready for the controller to write.
+2. **CD:** robot 5/5 + Codex 5/5 PASS. Ready.
+3. **CDEDIT:** robot (Cancel pit, Esc, Cancel pipe) + Codex OVERALL PASS (Cancel, Esc, Save, one U, save/reopen). Ready.
+4. **PITSCHEDULE:** robot open/Close x2 + Codex PASS on open/Close, Esc while placing, place, one U, save/reopen (blank fixture with two pits). For the controller to weigh (robot cannot press "Place schedule"; on the standard test drawing placing is greyed out because of an older unlinked schedule).
+5. **CDRULES with CDCALC:** robot PASS (Esc, all four answers, CDCALC open/close; drawing unchanged) + Codex PASS (Esc and CDCALC, then Problems and Values). Ready. For Tim's eye: CDRULES stores about 1.8 MB of results in CE's record.
+6. **CDCHECKCURRENT:** robot PASS + Codex PASS. Ready.
+7. **MR:** robot 5/5 (Esc, move in drawing and record, one U, save/reopen) + Codex PASS. Ready.
+8. **CDRENUMBER (real renumber):** robot 4/4 PASS; Codex witness NOT TESTED (Codex screen tool failures x3). Lines for unreached pits and loops: PASS on batch 8 (earlier section).
+9. **CDRUNSOLVE:** skipped from the ten on the controller's order; its Apply then one U was shown to work (RSQ18, readings), typing Q not yet tested.
