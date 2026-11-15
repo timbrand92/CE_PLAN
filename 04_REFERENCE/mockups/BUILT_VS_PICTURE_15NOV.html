@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Built vs picture, 15 Nov</title>
+<style>
+:root{--bg:#f4f4f2;--card:#ffffff;--line:#d9d8d2;--text:#1c1c1a;--soft:#5f5e5a;--mute:#8a8983;--accent:#1E5AA8;--accentbg:#e6eef8;--amber:#b86e00;--amberbg:#fbeed6;--green:#2f6b12;--greenbg:#e8f2dc;--note:#eeeeea;--btn:#ffffff;--field:#fafaf8}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#1b1b1a;--card:#262624;--line:#3c3c39;--text:#f1efe8;--soft:#c3c1b8;--mute:#96958e;--accent:#8ab4ea;--accentbg:#1d3350;--amber:#f0b04a;--amberbg:#3d2c0c;--green:#a6d37c;--greenbg:#1f3310;--note:#2c2c2a;--btn:#0d1b2e;--field:#1f1f1e}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Segoe UI,Arial,sans-serif;padding:20px 16px 40px}
+.wrap{max-width:1180px;margin:0 auto}
+h1{font-size:20px;font-weight:600;margin:0 0 4px}
+h2{font-size:17px;font-weight:600;margin:32px 0 4px}
+.sub{font-size:14px;color:var(--soft);margin:0 0 12px}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
+@media (max-width:860px){.two{grid-template-columns:minmax(0,1fr)}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;min-width:0}
+.lab{font-size:12px;font-weight:700;letter-spacing:.04em;color:var(--mute);margin:0 0 8px;text-transform:uppercase}
+img{display:block;max-width:100%;height:auto;border:1px solid var(--line);border-radius:8px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:8px 0;border-top:1px solid var(--line);font-size:14px}
+.small{font-size:13px;color:var(--soft)}
+.pill{display:inline-block;font-size:12px;font-weight:700;padding:2px 10px;border-radius:999px}
+.a{background:var(--amberbg);color:var(--amber)}
+.btn{padding:4px 10px;border-radius:8px;border:1px solid var(--line);font-size:13px;background:var(--card);color:var(--text)}
+.btn.pri{background:var(--accent);border-color:var(--accent);color:var(--btn);font-weight:600}
+ol{margin:10px 0 0;padding-left:20px;font-size:14px;line-height:1.5}
+.box{margin-top:12px;background:var(--note);border-radius:12px;padding:12px 14px;font-size:14px;color:var(--soft)}
+.box b{color:var(--text)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>What was built, beside the picture Tim OK'd</h1>
+<p class="sub">Sun 15 Nov 2026, trust-safety-fixes lane. The renders are the real built windows drawn off-screen from the code (synthetic values, not AutoCAD). Nothing here is installed; batch 9 waits for the controller.</p>
+
+<h2>1. Pit Schedule: quiet grey count (draft 2039)</h2>
+<p class="sub">Picture OK'd 10:21 ("OK as shown", "OK as written").</p>
+<div class="two">
+  <div class="card"><p class="lab">Picture</p><img src="PITSCHEDULE_QUIET_PLASTIC_COUNT_15NOV_after.png" alt="Picture: grey count under the Pit Schedule table"></div>
+  <div class="card"><p class="lab">Built</p><img src="PITSCHEDULE_QUIET_PLASTIC_COUNT_15NOV_render_built.png" alt="Render of the built Pit Schedule window"></div>
+</div>
+<div class="box"><b>Differences:</b> none in look or words. "3 plastic pits not listed (no number)"; one pit reads "1 plastic pit not listed (no number)".</div>
+
+<h2>2. Edit Pit: "Number and schedule this one anyway" behind More... (draft 2039, Tim's choice B)</h2>
+<div class="two">
+  <div class="card">
+    <p class="lab">Picture (B, More... opened)</p>
+    <div class="row" style="border-top:0"><span>Included in pit schedule</span><span class="small">No</span></div>
+    <div class="row"><span>Pit number</span><span class="small">none</span></div>
+    <div style="margin-top:8px"><span class="btn">Number and schedule this one anyway</span></div>
+  </div>
+  <div class="card"><p class="lab">Built (More..., Drawing &amp; Schedule tab)</p><img src="EDITPIT_NUMBER_AND_SCHEDULE_15NOV_render_built_more.png" alt="Render of Edit Pit More window with the button"></div>
+</div>
+<div class="box"><b>Differences:</b>
+<ol>
+<li><b>Schedule tick:</b> shown as the greyed "Included in pit schedule" toggle with "Plastic pit: no label block and excluded from schedule." instead of the word "No".</li>
+<li><b>Pit number:</b> no "Pit number: none" row on this tab; the number lives on the main page (render beside it: EDITPIT_NUMBER_AND_SCHEDULE_15NOV_render_built_mainpage.png).</li>
+</ol></div>
+
+<h2>3. Proposed flow direction, A: in the Check this drawing list (draft 2049, Q11)</h2>
+<div class="two">
+  <div class="card">
+    <p class="lab">Picture (A)</p>
+    <div class="row"><span>Pipe P6 to P7</span><span class="small">150 dia UPVC</span><span class="pill" style="background:var(--greenbg);color:var(--green)">Sure</span></div>
+    <div class="row"><span>Pipe P7 to pit ?<br><span class="small">Flows towards pit ? (from the order it was drawn)</span></span><span class="pill a">Proposed</span><span><span class="btn pri">Correct</span> <span class="btn">Reverse</span></span></div>
+  </div>
+  <div class="card"><p class="lab">Built (What CE Found, Items tab)</p><img src="Q11_PIPE_DIRECTION_15NOV_render_built_checklist_light.png" alt="Render of the Check this drawing list with a Proposed row"></div>
+</div>
+<div class="box"><b>Differences:</b>
+<ol>
+<li><b>No "Sure" rows:</b> the list holds only items that need checking, so pipes already sure are not listed.</li>
+<li><b>Long second line:</b> it is cut with "..." in the row at the palette's smallest width; the full words are in the panel below the list.</li>
+<li><b>Colour:</b> the amber is the theme's warning colour, a tint behind the word "Proposed" (dark theme: <a href="Q11_PIPE_DIRECTION_15NOV_render_built_checklist_dark.png">render</a>).</li>
+</ol></div>
+
+<h2>4. Proposed flow direction, B: in Edit Pipe (draft 2049, Q11)</h2>
+<div class="two">
+  <div class="card">
+    <p class="lab">Picture (B)</p>
+    <div class="row"><span>Flow direction<br><span class="small">From the order it was drawn</span></span><span class="pill a">Proposed</span><span><span class="btn pri">Correct</span> <span class="btn">Reverse</span></span></div>
+  </div>
+  <div class="card"><p class="lab">Built (one-page Edit Pipe)</p><img src="Q11_PIPE_DIRECTION_15NOV_render_built_editpipe_light.png" alt="Render of Edit Pipe with the Flow direction row"></div>
+</div>
+<div class="box"><b>Differences:</b>
+<ol>
+<li><b>No small sketch:</b> the picture's pipe sketch is not added; the window's plan preview already shows the pipe and arrow.</li>
+<li><b>After a press:</b> the grey line changes to what Save will do ("Reverse: turned round and marked Sure when you press Save.").</li>
+<li><b>Window title:</b> it names the far end as the window does today. For a pit with no number that may be CE's code for the block, not "pit ?" (not changed: a separate screen change).</li>
+<li><b>Dark theme:</b> <a href="Q11_PIPE_DIRECTION_15NOV_render_built_editpipe_dark.png">render</a>.</li>
+</ol></div>
+</div>
+</body>
+</html>
