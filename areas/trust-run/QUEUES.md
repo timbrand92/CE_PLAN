@@ -375,3 +375,14 @@ The controller asked him in its own chat: "may I copy finished jobs from the off
 4. **Used for:** the robot and Codex running CE tools on the copies, and the reading-only study of how old drawings are made (Civil and Structural). Running Structural tools on the copies was not asked.
 5. **Care the controller adds (its own, not Tim's words):** the copied drawings still carry the client's title block inside them, so screenshots of them stay on his PC and are not put in CE_PLAN or any repo unless cropped clear of the title block; findings are written as patterns, never with a client's details.
 6. **Not covered:** `C:\CE_DrawingIntelligence` stays unopened; live jobs; sending anything anywhere.
+
+## CODEX ALONE IS FINE (Tim, to the controller directly, Sun 15 Nov 2026, about 14:37 PC clock)
+
+The controller had asked: "Should a tool count as accepted on robot plus Codex alone, or only after the real-job run? I am holding to the real-job run." Tim: "codex alone is fine".
+
+**The controller's reading (its own words, not Tim's):**
+1. A tool is counted **accepted** when Codex has seen its whole everyday job pass in real AutoCAD on the installed build (Cancel, Esc, do the job, one Undo, save and reopen), with screenshots and a report the controller has checked itself. A robot pass is welcome but not required. The real-job copy run is not required for the count.
+2. **Not changed:** the finish line for colleagues still wants one real council stormwater job on CE alone, five clean working days, the whole Civil ribbon and Manager. Real-job copy runs carry on as tests. Faults (BUG_CARPARK) keep their own rule.
+3. **Care the controller keeps:** a tool with a part of its everyday job not yet seen (for example Edit Pipe Save inside CDEDIT) is not counted until that part is seen. If Tim meant something narrower or wider he will say so; the count is easy to take back.
+
+**Counted on this reading, Civil 3.0.90.10:** PIT (Codex TPIT14 5 of 5, robot 5 of 5), CD (Codex TCD14 5 of 5, robot 5 of 5). **Held:** CDEDIT (Edit Pipe Save not tried), PITSCHEDULE (every step passed but over two runs, on a two-pit drawing with no pipes; one clean run on a drawing with pipes wanted first).
