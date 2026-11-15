@@ -19710,6 +19710,7 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Status:** OPEN
 
 - Note (trust-safety-fixes, Fri 13 Nov 2026, TRUST-04; nothing installed or accepted): draft PR #2087: only the newest runs kept (Settings checks.rulesRunsKept, DRAFT 5); the in-memory warning path left to trust-foundations. Not seen in AutoCAD.
+- Note (trust plan controller, Mon 16 Nov 2026 04:33; status stays OPEN): SEEN IN REAL AUTOCAD on Civil 3.0.90.12 by the test lane's robot (recorded 16 Nov 00:11 in `areas/trust-run/TEN_ON_INSTALLED_BUILD.md`): each Problems run appended a full set of 429 findings, about 590k characters, to CE's record, never trimmed; the record went from about 593k to about 2,364k characters over three runs and the drawing from 1,080,181 to 1,541,666 bytes (about +154 KB per run). The size effect is no longer from the code only. Draft PR #2087 (tip 9891fbd8, still draft, auto-merge off) is not installed; ordered into the next trial batch.
 
 ## BUG-1359 — CDSYSTEM: the count is pipes changed, not pipes picked, and '0 pipe(s) recorded' can print
 

@@ -91,6 +91,11 @@
    - **Always the downstream end when CE knows the fall** (recommended). Example: click anywhere on P2 to P1 and the note goes at P1 with IL 16.98. Only a pipe with no recorded direction or levels falls back to the end nearest the click, and the command line says so.
    - **Keep nearest the click, but say which end.** Example: the click left of the middle still puts the note at P2, and the command line reads "LPD set at P2 (upstream end, IL 17.08)" so you can see it and undo.
 
+25. **CDRULES keeps every past check inside the drawing. How many should it keep?** Found Mon 16 Nov 00:11 in real AutoCAD (BUG-1358): each Problems run on the test job added its whole list of 429 findings to the drawing, about 154 KB a run; three runs took the file from 1,080 KB to 1,542 KB, and every CE command then reads and saves that extra weight. Keeping past checks is deliberate (CDRULES Source lets you pick an earlier check); how many was never decided. Default in use: the last 5 full checks are kept and the one-line pit warnings from CD are left alone; a fix already drafted (PR 2087) goes in the next trial batch on your PC, not merged.
+   - **Keep the last 5 checks, a Settings value** (recommended). Example: run CDRULES twenty times on a job and the drawing stays about the size it was after the fifth; Source still offers the last five checks.
+   - **Keep only the last check.** Example: the drawing never carries more than one list of findings; Source can only show the check you just ran.
+   - **Keep them all, as today.** Example: twenty runs on the test job add about 3 MB to the drawing.
+
 ## Older, still open (asked before 15 Nov, defaults in use)
 
 8. **Ribbon in job order** (Start, Sources, Network, Levels, Check, Sheet). Default: not built into any batch until you have seen a mock-up.
