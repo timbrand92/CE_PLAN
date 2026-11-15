@@ -189,3 +189,20 @@ Not run yet: CD, CDEDIT, PITSCHEDULE, CDRULES with CDCALC, CDCHECKCURRENT, MR, C
 7. **MR:** robot 5/5 (Esc, move in drawing and record, one U, save/reopen) + Codex PASS. Ready.
 8. **CDRENUMBER (real renumber):** robot 4/4 PASS; Codex witness NOT TESTED (Codex screen tool failures x3). Lines for unreached pits and loops: PASS on batch 8 (earlier section).
 9. **CDRUNSOLVE:** skipped from the ten on the controller's order; its Apply then one U was shown to work (RSQ18, readings), typing Q not yet tested.
+
+## THE REST OF THE TEN ON CIVIL 3.0.90.11 (batch 9, installed 15 Nov 16:03)
+
+### 4. PITSCHEDULE: one clean Codex run with a pipe (TPS16)
+
+1. **Codex look TPS16 S1 (18:44 to 18:59, Civil 3.0.90.11, copy `CLDTP_TPS16.dwg`).** Report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_TPS16_S1_20261115_1858.md`; screenshots in `C:\Lisp Files\_TEST_COPIES_20260923\LOOKS\` under TPS16.
+   - **Fixture:** ordinary pits P1 and P2 joined by a CE pipe, plus one unnumbered plastic pit (made by the robot, `ps_prep2.ps1`).
+   - **Result:** OVERALL NOT TESTED only because of the hover sentence. **S-02 to S-05 all PASS in one run**, every result SURE, and the screenshot saver checked (no repeats).
+   - **S-01 open and Close:** "2 rows listed" and the grey line "1 plastic pit not listed (no number)", the singular form. Count stayed 7. The hover sentence was NOT TESTED: Codex's screen tool has no hover action. I added the hover to this brief for batch 9; it is not part of the plain job.
+   - **S-02 Esc while placing PASS:** one Esc at the insertion point. The window came back, then Close. No table; count 7.
+   - **S-03 place PASS:** one mouse click near x 40000, y 25000 placed the table above-right of the pits; count 7 to 18.
+   - **S-04 one U PASS:** echoed PITSCHEDULE; the table was gone and the count back to 7.
+   - **S-05 place again, save and reopen PASS:** the table was still there after reopening; count 18.
+   - Settings unchanged; versions unchanged; AutoCAD closed by Codex. Tim's last-used pit read ordinary before and after (hash D0E30F0F2371, plastic False, label True, schedule True).
+   - **For the controller to weigh:**
+     - Pit Schedule's plain job (open, Close, Esc while placing, place, one Undo, save and reopen) is now proven by Codex in ONE run on a drawing with a pipe.
+     - Still open: the hover sentence (needs a person or a hover-capable tool), "Update existing schedule", and the older unlinked schedule on the standard drawing.
