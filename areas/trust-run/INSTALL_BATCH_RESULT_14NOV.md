@@ -470,3 +470,13 @@ Real-AutoCAD screenshots copied to `04_REFERENCE/mockups/NEW_PIPE_ONE_PAGE_15NOV
    - The keys and buttons go to Codex NP17 (Esc three ways, Enter, Cancel, More..., Ctrl+S). The driver refuses keys in a .cmd-started AutoCAD, as expected.
    - The driver's quit could not close it while the page was open. My own switch-on AutoCAD (pid 165336) was ended by the script, which ends only the process it started.
    - Tim's CD_Settings.json unchanged; last-used pit unchanged.
+4. **Codex look NP17 P1 (22:05 to 22:17; New Pipe one page, switch on, batch 10; copy `CLDTP_NP17.dwg`): OVERALL BLOCKED (0 PASS, 0 FAIL, 4 BLOCKED, 3 NOT TESTED, 2 SEEN).** Report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_NP17_P1_20261115_2206.md`; screenshots `C:\Lisp Files\_TEST_COPIES_20260923\LOOKS\` under NP17.
+   - P-00: the switch was confirmed on; count 1103.
+   - **P-01 Esc, nothing clicked: BLOCKED.** The page opened with its title bar active. When Codex's screen tool sent Esc, the page's title went grey and the page stayed open. Codex cannot tell whether the key ever reached the page: its own key-sending seems to move the keyboard to AutoCAD's main window first. Cancel recovered; count 1103.
+   - **P-02 Esc in the Start level box: BLOCKED,** the same way (caret seen in the box, then the title went grey after Esc).
+   - P-03 (Esc on a size button), P-04 (Enter draws) and P-05 (one U): NOT TESTED; Codex stopped them because of the same key problem.
+   - **P-06 More...: SEEN.** It opens the full New Pipe window **with both level boxes in sight** (225 mm UPVC, levels blank/Unknown). Cancel comes back to the page with the answers kept. The NP16 clipping is gone. The Esc that followed: the same key problem.
+   - **P-07 draw from More...: SEEN.** Start Pipe drew the pipe, label and arrow (+3); Esc stopped the next-pipe prompt.
+   - **P-08 save: BLOCKED (on the brief).** The "click once on empty drawing" started AutoCAD's window selection ("Specify opposite corner..."). Codex pressed Esc and, by the rule, did NOT press Ctrl+S. Nothing saved, so no reopen check.
+   - Settings unchanged; last-used pit ordinary before and after; AutoCAD closed by Codex.
+   - **Reading:** no CE fault was found. The Esc fix cannot be judged with Codex's key-sending, which takes the keyboard away from the page. A real key press is needed: a person, or a tool that types into the window that has the keyboard without first activating AutoCAD.
