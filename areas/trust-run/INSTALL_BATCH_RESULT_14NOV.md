@@ -604,3 +604,13 @@ Real-AutoCAD screenshots copied to `04_REFERENCE/mockups/NEW_PIPE_ONE_PAGE_15NOV
    - **L-08 save and reopen PASS:** the marker and callout persist, and R1 still names 109835.
    - Settings unchanged; last-used pit unchanged.
    - **Note:** this look started at 03:27, only 3 minutes after the previous AutoCAD closed (inside the study lane's 12-minute gap). My chain started it at once; I stopped the chain, but Codex had already begun, so it was left to finish. I wrote its END line in the runner log myself.
+13. **Codex RSQ19 U1, CDRUNSOLVE Apply / one Undo / save and reopen (03:55 to 04:07, 3.0.90.13, copy `CLDTP_RSQ19.dwg`, design flows set by test on the run P4 to the stub): OVERALL PASS (U-00 to U-05), all SURE.** Report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_RSQ19_U1_20261116_0356.md`.
+   - **Checked by me:** 77 PNGs, 55 distinct; the four P4 close-ups and the preview and U pictures are each unique. I opened the close-ups for applied, undo and reopened.
+   - **CE record files compared by me** (`C:\Lisp Files\_TEST_COPIES_20260923\LOOKS\RSQ19_records\`): RU_1 differs from RU_0 (the Apply changed it), RU_2 = RU_0 byte for byte, and RU_8 = RU_1.
+   - **U-01 Apply PASS:** the preview showed 9 changes; after Apply, P4's outlet label reads **IL 19.99**, and the record P4 to P3 goes from 17.40/17.30 to 19.99/19.70.
+   - **U-02 one U PASS:** the first command after Apply was U, which echoed CDRUNSOLVE; P4 reads IL 17.40 again; the record is identical to before.
+   - U-03: the same 9 changes were offered again; Cancel closed it.
+   - **U-05 Apply, save and reopen PASS:** IL 19.99 after reopening; the record equals the applied one; the next run says "every invert already matches the solved design - nothing to apply".
+   - **Seen in the picture (for Tim, already his queue item 9):** after Apply, P4's outlet invert **IL 19.99 is above its cover CL 18.86**. CDRUNSOLVE proposes and applies a negative-cover level on this test run.
+   - **Typing a design flow (Q) through More... was NOT TESTED:** my RSQ19 brief, built from RSQ18's, has no U-06 typing step. The robot cannot open "More..." in Edit Pipe (not on its press list), so typing Q stays open for a Codex look with a written-out typing step.
+   - Settings unchanged; last-used pit unchanged (ordinary).
