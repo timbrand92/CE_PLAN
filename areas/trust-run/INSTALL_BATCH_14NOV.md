@@ -1158,3 +1158,91 @@ As batch 9, section 6 (folder `C:\CE_WORK\robot\b14i_switch`, `"newPipeOnePage":
 ### 9. Stop rules
 
 As section 5 at the top. If a pass fails, batch 10 is put back with `restore_batch14j.ps1`, and batch 9 stays.
+
+## BATCH 11 (PREPARED, NOT INSTALLED): Civil 3.0.90.13 = batch 10's sources + 2039 at 86c8d666 (Pit Schedule, queue item 22: blank levels follow the pipe's recorded direction), switches OFF
+
+Written Sun 15 Nov 2026 by lane trust-safety-fixes on the controller's order of 22:41, which came after batch 10's first results (smoke 10/10, CD with the switch off PASS, More… clipping fixed, no CE fault). The order was the controller's, inside Tim's standing trial approval; queue item 22 is a DRAFT default that Tim may change. One build, one version, one folder. **Install only on batch 10:** the script refuses unless live Civil reads `3.0.90.12+af50b86a` with all three sets. The controller installs. No merge, nothing to colleagues.
+
+### 1. What is in it
+
+1. **Everything in batch 10** (section BATCH 10, item 1), unchanged.
+2. **PR 2039 at `86c8d666`** (one commit on top of batch 9's `102bb87f`, already in the stack): Pit Schedule, queue item 22.
+   - **Seen:** Codex TPS16 and robot B9_PSL on 3.0.90.11 (`TEN_ON_INSTALLED_BUILD.md`, "Pit Schedule inlet question"). One pipe drawn P1 to P2 with levels blank, so the record says from P1 to P2. The placed table showed outlet dia 100 on both pits and no inlet on either.
+   - **Cause:** the outlet chooser's last fallback (`PitScheduleBuilder.SelectOutletPipe`, no levels at all) took the first connected pipe, whatever its record said. For P2 that was the pipe arriving from P1.
+   - **Now:** with no levels, a pipe the record says arrives at a pit is never that pit's outlet.
+     - **P2:** FROM P1, inlet 100, IL blank, no outlet.
+     - **P1:** the outlet, IL blank.
+     - **Nothing is guessed:** blank levels stay blank.
+   - **Not changed:** pits where levels can be read, pipes recorded as leaving, exact outlet choices, pump pits, and the legal point of discharge pit.
+
+### 2. The switches
+
+1. **As shipped:** `trust.showUnknownInsteadOfGuess` OFF, `trust.newPipeOnePage` OFF; every other switch as batch 10.
+2. **Look:** the Pit Schedule window and table look the same. Only which column a blank-level pipe fills changes. No new render.
+
+### 3. How it was put together
+
+1. **Build stack** (local, detached, never pushed) in `C:\CE_WORK\build\wtB14g`: batch 10's sources `158752be` (before its version commit), then a merge of 2039 at `86c8d666` (`0775db30`). The only conflict was `REGRESSION_LOG.md`, with both sides kept. The change to `PitScheduleBuilder.cs` is line for line the draft's, and the new test file equals the draft byte for byte.
+2. **Build commit `1b939430`,** "Version: Civil 3.0.90.13".
+3. **Product files changed against batch 10 (`af50b86a`):** 3: `PitScheduleBuilder.cs` and the two version lines. List: `C:\CE_WORK\scratch\trust_install\b14civ11_files_changed.txt`.
+4. **Whole Civil test run on the merged code (Release, net10):** **22,820 passed, 0 failed, 32 skipped** (6 min 47 s): batch 10's 22,812 plus the 8 new tests.
+5. **The new tests** (`PitScheduleBlankLevelsDirectionTests`, 8):
+   - **Blank levels:** P2 has no outlet, the pipe as its inlet, FROM "P1" and a blank level. P1 has the outlet.
+   - **Levels typed:** as today.
+   - **Several pipes:** two pipes arriving give no outlet; a pipe recorded as leaving is still the outlet.
+   - **On the old code:** 3 failed, as in the field.
+   - **Other sets:** net48 and net8 build with 0 errors on the draft.
+
+### 4. Against Tim's four "never by itself" rules
+
+The schedule only reads. No level, size, number, label or layer is written or guessed; blank levels stay blank.
+
+### 5. Payload
+
+1. **Payload:** `C:\ce_rc_scratch\b14civ11\CE_CVL_SUITE.bundle`, 832 files. `build_installer.ps1` exit 0. Every dotnet call passes `-p:SkipDevBundle=true -nr:false --disable-build-servers`. Nothing under ApplicationPlugins was written.
+2. **DLL `3.0.90.13+1b939430cbd6de88a4a96935fe20ffaea00c4b1a` SHA-256:**
+   - Legacy `AFA7C979378C737C580E63DA43E40DB272216CCED5DC09592F5E3B4F4F9BBC3C`
+   - Net8 `C6FAA3B12AEBC97FE177954F75B8FFEF83D8BF6CE1B67482D95B846DB70CE14F`
+   - Modern `FEEF943E4970F981021D6205B00394E2CE407DC9EA08D336DA30302CC80A5CF1`
+3. **`PackageContents.xml`:** `E5A0F50C933F9042465CF749374E0923ED2099D9949C40323C9890134655709D`, `AppVersion="3.0.90.13"`.
+4. **Manifest** `C:\CE_WORK\scratch\trust_install\b14civ11_manifest.txt`, 832 rows, SHA-256 `56B084C67C1B2DD589D23A4E7B1351D2AB7AD1C17B23307F39BCB6E1C0FF9FD3`.
+5. **Stamp check:** CE_SHARED and CE.AI.Core x3 have 0 bytes different outside the stamp zones. The installed bytes were put in, and CE_SHARED is identical to Manager x3. The natives are the installed bytes.
+6. **Against batch 10 (`b14civ10`, live):** 7 files differ, 0 added, 0 removed: CE_CVL_SUITE.dll and .pdb x3, and PackageContents.xml.
+
+### 6. ONE robot and Codex list for batch 11 (scratch copies, switches OFF)
+
+1. **First start:**
+   - The log reads "CE_CVL_SUITE v3.0.90.13 Started".
+   - Run the BUG-1456 smoke list once.
+2. **Pit Schedule, blank-level pipe** (a copy of the TPS16 drawing: P1, P2, one pipe drawn by CD from P1 to P2 with both levels blank, one unnumbered plastic pit):
+   - Run PITSCHEDULE and place the table.
+   - **P2:** FROM P1, DIA (Inlet) 100, IL (Inlet) blank, no outlet.
+   - **P1:** DIA (Outlet) 100, IL (Outlet) blank, no FROM or inlet.
+   - The same in the window's rows before placing.
+3. **Then levels typed** (Edit Pipe on the same copy: tick "Set first end level" and "Set second end level", Upstream 19.20, Downstream 19.10, Save; answer No to the downstream recalculation):
+   - Run PITSCHEDULE again (new table or "Update existing schedule").
+   - **P2:** FROM P1, inlet 100, IL (Inlet) 19.10, no outlet, depth 0.90.
+   - **P1:** outlet 100, IL (Outlet) 19.20, depth 0.80.
+4. **Then the TPS16 plain job** on a fresh copy, as Codex TPS16 S1 ran it:
+   - Open, and the grey line "1 plastic pit not listed (no number)".
+   - Close.
+   - Esc while placing (the window comes back).
+   - Place.
+   - One U takes the table back.
+   - Place again, save, close and reopen: the table is still there.
+5. **Batch 10's items carry over unchanged** (section BATCH 10, item 7: Esc three ways and Enter with the switch on, More… sizing, save and reopen), for any not yet passed.
+6. **Then close AutoCAD.**
+
+### 7. Install and put back
+
+1. **Install (on batch 10):** `C:\CE_WORK\scratch\trust_install\install_batch14k.ps1`. NOT RUN.
+   - **What it checks:** it refuses unless live Civil reads `3.0.90.12+af50b86a` with all three sets. It also checks the candidate against `b14civ11_manifest.txt` and CE_SHARED against the live Manager.
+   - **What it does:** keeps `CE_CVL_SUITE_PRE_af50b86a_<time>.backup`, then reads every file back. It checks 3.0.90.13, CE_SHARED and the settings. Log: `install_batch14k.log`.
+   - **`-CheckOnly`:** changes nothing. Run here: at 22:54: "CHECKS PASSED: nothing was renamed, copied or changed". Live reads 3.0.90.12+af50b86a with all three sets; the candidate against its manifest is 832 rows, bad 0, extra 0; the candidate CE_SHARED is identical to the live Manager x3; 4 settings files were read.
+2. **Put back:** `restore_batch14k.ps1`, back to 3.0.90.12, checked against `b14civ10_manifest.txt`. NOT RUN.
+   - **`-CheckOnly`** was run here: at 22:54 against today's live batch 10: "PUT-BACK VERIFIED: Civil equals the 3.0.90.12 payload file for file" (832, bad 0, extra 0; CE_SHARED identical x3; settings unchanged).
+   - **Further back:** `restore_batch14j.ps1` (to 3.0.90.11).
+
+### 8. Stop rules
+
+As section 5 at the top. If a pass fails, batch 11 is put back with `restore_batch14k.ps1`, and batch 10 stays.
