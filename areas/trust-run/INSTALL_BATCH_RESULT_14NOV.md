@@ -431,3 +431,12 @@ Real-AutoCAD screenshots copied to `04_REFERENCE/mockups/NEW_PIPE_ONE_PAGE_15NOV
      - Its pit part now reads 350 x 350, plastic true, from my plastic-pit run at 17:24.
      - The switch-on session also read it: the scratch copy CE made at 18:00 carries Tim's history.
      - Not touched by me; waiting for the controller's word.
+10. **Tim's last-used pit put back the normal way (controller's ruling of 18:15).** Done at 18:28 to 18:31, as the last CE action of the fixture session below. PIT placed one ordinary pit with the PIT window on the scratch copy (not saved): plan 450 x 450, cover 20.00; the Pit type box already read GRATED PIT. Readings of Tim's last-used pit file, pit lines only (the file holds one real job entry, never quoted):
+    - START (18:19): hash 8DFEED43B091; GRATED PIT 350 x 350; lid C; plastic True; label False; schedule False.
+    - After the reset pit: hash D0E30F0F2371; GRATED PIT 450 x 450; lid C; **plastic False; label True; schedule True**.
+    - END, after AutoCAD closed (18:31): the same, hash D0E30F0F2371.
+    - From now on: each robot session ends with this reset pit, and the pit lines are read at START and END of each robot and Codex run.
+11. **Fixture for the clean Pit Schedule and Edit Pit More... looks (18:19 to 18:31; transcript `C:\CE_WORK\scratch\trust_install\ps_prep2.out`):**
+    - The blank copy holds ordinary pits P1 (x 10000) and P2 (x 20000), a CE pipe P1 to P2, and one unnumbered plastic pit 350 x 350 at x 30000. CE's record: pits P1, P2; pipe P1->P2; one 350 x 350 pit.
+    - Saved, then copied to `C:\Lisp Files\_TEST_COPIES_20260923\CLDTP_TPS16.dwg` and `CLDTP_TEM16.dwg` (62,055 bytes, SHA-256 84473E60A760...).
+    - Settings the same.
