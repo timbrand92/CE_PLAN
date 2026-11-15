@@ -450,3 +450,23 @@ Real-AutoCAD screenshots copied to `04_REFERENCE/mockups/NEW_PIPE_ONE_PAGE_15NOV
 5. **Put-back:** `restore_batch14j.ps1` (to 3.0.90.11); backup folder `CE_CVL_SUITE_PRE_249b9f8d_20261115-204805.backup`.
 6. **Switches:** `trust.newPipeOnePage` and `trust.showUnknownInsteadOfGuess` stay OFF in Tim's settings; everyday CD is today's window.
 7. **Next:** test lane runs runbook BATCH 10 section 7 (smoke, then New Pipe one page with the switch on in the scratch settings copy only).
+
+## BATCH 10 ON 3.0.90.12 (installed by the controller 20:49): the robot list (trust-acad-evidence, from 20:59)
+
+1. **Mix-up smoke (BUG-1456): SEEN PASS, 10 of 10** (20:59 to 21:39).
+   - Transcript `C:\CE_WORK\scratch\trust_install\b10_seq.out`.
+   - Settings the same.
+   - Last-used pit before and after: GRATED 450 x 450, plastic False, label True, schedule True.
+2. **First start and CD with the switch off: SEEN PASS** (21:39 to 21:46, copy `CLDTP_B10A.dwg`; transcript `b10_a.out`; screenshots `C:\Lisp Files\_TEST_COPIES_20260923\robot_shots\session_20261115_213947\`).
+   - The log reads "CE_CVL_SUITE v3.0.90.12 Started". The opening line is the same as on 3.0.90.11.
+   - CD opened today's "New Pipe" window (Start Pipe, no Draw pipe).
+   - The pipe was drawn: 27 to 28 in the record.
+   - One U echoed CD and put the record back to 27. Record and drawing were identical to before.
+   - The session ended on the ordinary reset pit. Last-used pit END: GRATED 450 x 450, lid C, plastic False, label True, schedule True.
+3. **New Pipe one page, switch ON, robot part: SEEN, the page opens** (21:46 to 21:53, .cmd route; transcript `b10_sw_np.out`).
+   - The session log says "Settings initialized from: C:\CE_WORK\robot\b14i_switch\settings\CD_Settings.json" and "v3.0.90.12 Started".
+   - CD P10 to P9 opened the "New pipe" page.
+   - Screenshot for Tim: `C:\Lisp Files\_TEST_COPIES_20260923\robot_shots\session_20261115_214636\B10_NEWPIPE_ONEPAGE_for_Tim.png`.
+   - The keys and buttons go to Codex NP17 (Esc three ways, Enter, Cancel, More..., Ctrl+S). The driver refuses keys in a .cmd-started AutoCAD, as expected.
+   - The driver's quit could not close it while the page was open. My own switch-on AutoCAD (pid 165336) was ended by the script, which ends only the process it started.
+   - Tim's CD_Settings.json unchanged; last-used pit unchanged.
