@@ -119,3 +119,18 @@ Not run yet: CD, CDEDIT, PITSCHEDULE, CDRULES with CDCALC, CDCHECKCURRENT, MR, C
    - **Drawing unchanged by all four answers: PASS.** **CE's record changed, as CDRULES says ("results recorded in the project"): its stored record grew from about 247,000 to about 2,040,000 characters** in one session of four runs. No level, size, number, label, layer or colour changed. For the controller and Tim: the drawing file grows by roughly 1.8 MB of rule results; whether it keeps growing with each run is not checked.
    - **CDCALC: opens "Creative Engineering | Calculations (CDCALC)"** ("Calculations", "Review drainage inputs, check the results and prepare the computation ...", Detention / Storage sections); closing it changes nothing (record identical apart from the format/path stamp, drawing identical): **PASS.** TEN_CDCALC.png.
    - pReview's lines contain "→" (written "\U+2192" in AutoCAD's own log); how it looks on screen is not captured (the command line is out of the screenshots).
+2. **Codex look TRC14 R1 (13:12 to 13:22): CDRULES Esc PASS, CDCALC open/close PASS; Problems/Values NOT TESTED (evidence); my brief's mistake ran CLEAN.** Report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_TRC14_R1_20261115_1313.md`.
+   - R-01 PASS ("<Problems>: *Cancel*", count 1054). R-04 PASS (Calculations window opened and closed; count 1054; TRC14-06, -07).
+   - R-02, R-03 NOT TESTED (EVIDENCE): Problems and Values ran (their words are in Codex's driver log `C:\Lisp Files\_TEST_COPIES_20260923\LOOKS\TRC14_R1_20261115_1313\exports\driver_calls.txt`), but the screenshots show no command line.
+   - **My brief allowed F2 to show the command-line history; on this PC F2 runs CE's CLEAN.** CLEAN ran and saved the scratch test copy `CLDTP_TRC14.dwg` ("Done in 1.1 s: 6 steps done, 0 failed, drawing saved."; layers 662 to 659, blocks 189 to 183, text styles 53 to 52). Only that scratch copy; settings files unchanged; nothing else touched. Never F2 in a brief again.
+   - R-05 DIFFERENT for that reason (count 1054 kept after save and reopen).
+
+### 6. CDCHECKCURRENT and 7. MR (move and rotate)
+
+1. **Robot (13:23 to 13:31, copy `CLDTP_TEN_CCMR.dwg`; log `C:\CE_WORK\scratch\trust_install\ten_cc_mr.out`; screenshots `C:\Lisp Files\_TEST_COPIES_20260923\robot_shots\session_20261115_132123\`):**
+   - **CDCHECKCURRENT: PASS:** "[CE] Drawing check complete. 27 items need checking. Nothing has been fixed automatically."; CE's record and drawing identical before and after. TEN_CDCHECKCURRENT.png.
+   - **MR Esc: PASS:** "Select objects: *Cancel*"; record and drawing identical.
+   - **MR move: PASS:** P10 picked, base at its centre, to 1 m east, rotation 0: "1 found ... Move Rotate complete."; P10 moved in the drawing (PIT BLOCK 3 at 55436.26,-69493.57) AND in CE's record (55436.3, -69493.6). TEN_MR_moved.png.
+   - **MR one U: PASS:** the U echoed MR (after one U for my ZOOM); P10 back at 54436.3 in both; record and drawing byte-identical to the start.
+   - **MR move again, save, reopen: PASS:** 55436.3 kept in both after reopening.
+   - The driver's quit then closed the drawing but AutoCAD stayed open with no drawing (CE's 'What CE Found' panel showing), as at 05:58; I ended it (my own start, nothing open); settings files the same.
