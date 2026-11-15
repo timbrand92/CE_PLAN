@@ -67,6 +67,13 @@
    - **Yes, close it: the older route obeys the same named-button list** (recommended). Example: a test script that tried to click Export in Pit Schedule by the old route is refused, the same as by the new route. Some old test scripts may need a button added by name before they run again.
    - **Leave it, the "do not use" rule is enough.** Example: nothing changes in the robot; the guard depends on the test chats keeping to the rule.
 
+19. **New Pipe on one page: two look choices** (built on draft 2111, installed in batch 9 with its switch off; render beside your picture in `04_REFERENCE/mockups/BUILT_VS_PICTURE_15NOV.html`, section 5). Defaults in use: both first answers.
+   - **The sum: keep the one line as you drew it** (recommended; in use). Example: "18.250 start - (12.4 m / 100) = 18.126, kept as 18.12 end" on one line under the big answer. **Or the column sum from your card rule.** Example: 18.250, minus 0.130, a line, 18.12, a double line under it; the card grows about three lines taller.
+   - **Dark theme: leave gold for now, change every CE window to blue together in a later batch** (recommended; in use). Example: New Pipe in dark shows gold on the chosen size and on Draw pipe, the same as every other CE window today. **Or make New Pipe blue in dark now.** Example: New Pipe is blue while Edit Pit beside it is still gold.
+20. **The robot cannot start AutoCAD with a test switch turned on; fix the robot?** Its own start-with-a-switch route stops at "Customization file load failed", so switch-on sessions are started another way and the robot then refuses to press, save or reopen in them. Default in use: Codex works those windows by mouse on a scratch copy; the robot's code is not changed. (Same owner as item 18.)
+   - **Yes, fix the robot's start route** (recommended). Example: the robot itself can test New Pipe on one page end to end, including save and reopen, without Codex.
+   - **Leave it.** Example: every switch-on check stays with Codex, slower, about 15 minutes a run.
+
 ## Older, still open (asked before 15 Nov, defaults in use)
 
 8. **Ribbon in job order** (Start, Sources, Network, Levels, Check, Sheet). Default: not built into any batch until you have seen a mock-up.
