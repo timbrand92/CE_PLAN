@@ -564,3 +564,13 @@ Real-AutoCAD screenshots copied to `04_REFERENCE/mockups/NEW_PIPE_ONE_PAGE_15NOV
    - Settings unchanged; last-used pit unchanged (no pit was saved).
    - **For the controller:** CDRENUMBER's Yes, one Undo and save/reopen are seen in real pictures on 3.0.90.13. "No changes nothing" has Codex's words and an unchanged count, but no clean step. The robot saw No change nothing, with record readings, on 3.0.90.10.
 7. Reruns from 02:22: TPS17 S2 (Pit Schedule plain job on the untouched blank-level drawing), then TCE17 E2 (Edit Pit with today's button names).
+8. **Codex TPS17 S2, Pit Schedule plain job on the blank-level drawing (02:22 to 02:36, 3.0.90.13, copy `CLDTP_TPS17.dwg` of the robot's untouched `CLDTP_PSPIPE.dwg`): OVERALL PASS, S-01 to S-05 all PASS, all SURE.** Report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_TPS17_S2_20261116_0223.md`.
+   - **Pictures checked by me:** 32 PNGs, 28 distinct. The repeats are the same window state seen again: 08 = 07, the count after Close; 15 = 09, and 16 = 10 = 23, the Placement tab on each opening. I opened TPS17-19, -20 and -28.
+   - **S-01 open and Close PASS:** 2 rows. P1 FROM blank, inlet blank, outlet 100. **P2 FROM P1, inlet 100, outlet blank.** Count 7 kept.
+   - **S-02 Esc while placing PASS:** no table; count 7.
+   - **S-03 place PASS (TPS17-19):** the STORMWATER PIT SCHEDULE table in the drawing shows **P1 outlet DIA 100; P2 inlet FROM P1, DIA 100**, cover 20.00, Class C Grated Lid; count 7 to 19.
+   - **S-04 one U PASS (TPS17-20):** the command line "Command: U" / "PITSCHEDULE"; the table is gone; count 7.
+   - **S-05 place again, save and reopen PASS (TPS17-28):** the table is there after reopening, the same rows; count 19.
+   - Settings and installed builds unchanged; last-used pit unchanged (no pit saved).
+   - Codex noted procedure gaps of its own (log copies before launch were missed; saver checks were done at the end), not product faults.
+   - **For the controller:** Pit Schedule's plain job now has one clean Codex PASS run on 3.0.90.13. The blank-level fix shows in both the window and the placed table.
