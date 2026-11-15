@@ -593,3 +593,14 @@ Real-AutoCAD screenshots copied to `04_REFERENCE/mockups/NEW_PIPE_ONE_PAGE_15NOV
    - Nothing saved; settings unchanged; last-used pit unchanged (CDE6732638AE, ordinary).
    - **For the controller:** with TRN16 (Yes, one U, save/reopen, in real pictures), CDRENUMBER's whole job is now seen on 3.0.90.13.
 11. **Last-used pit at 03:25 (END of tonight's Codex looks):** GRATED PIT 450 x 450, lid C, plastic False, label True, schedule True. This is the reading Tim's first real PIT on Monday depends on.
+12. **Codex LPD16 L1, CDLPD (03:27 to 03:43, 3.0.90.13, copy `CLDTP_LPD16_COPY.dwg` of the standard drawing): OVERALL PASS (L-00, -01, -02, -03, -05, -07, -08 PASS; L-04 and L-06 SEEN, record-only), all SURE.** Report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_LPD16_L1_20261116_0328.md`.
+   - **Pictures checked by me:** 133 PNGs, 90 distinct. Every claim picture is unique except LPD16-03, whose two readings after the refusal repeat it (nothing changes). I opened LPD16-03 and -07.
+   - **L-02:** the "Legal point of discharge" window was seen whole, and "Continue in drawing" opened the pick question.
+   - **L-03 refuses a plain polyline PASS:** "[CE] That line is not a CE pipe, so it cannot be the LPD pipe. Nothing was changed. Run CDLPD again and pick a CE pipe, a pit or a block, or choose to pick a point." The stored LPD (R1) was exactly as at START. The command line is not in LPD16-03, so the words rest on Codex's driver log.
+   - L-04 (an ordinary LINE): different wording, "Select a pipe, pit, or any block (kerb outlet, connection point, etc.)", and the question repeated. Record only.
+   - **L-05 Esc PASS:** "Select pipe/pit/block for LPD or press Enter to pick point: *Cancel*"; nothing drawn; R1 unchanged.
+   - L-06 (a bare polyline on STORMWATER PIPE): the same refusal as L-03. Record only.
+   - **L-07 takes the CE pipe PASS (LPD16-07):** the pipe P2 to P1 was picked; "Specify LPD label location <LPD point>:", Return, "LPD set."; the marker and callout appear at P1. R1 names PipeHandle 109835 (KERB & CHANNEL, IL 16.98).
+   - **L-08 save and reopen PASS:** the marker and callout persist, and R1 still names 109835.
+   - Settings unchanged; last-used pit unchanged.
+   - **Note:** this look started at 03:27, only 3 minutes after the previous AutoCAD closed (inside the study lane's 12-minute gap). My chain started it at once; I stopped the chain, but Codex had already begun, so it was left to finish. I wrote its END line in the runner log myself.
