@@ -1,106 +1,106 @@
 # Trust run status board
 
-**Rebuilt 2026-11-14 18:32 PC clock by lane trust-struc-mgr-plan, once a day at 6:00pm under Tim's rule of Sat 14 Nov, "Prove, don't draft". The ten tools are Tim's own, named Sat 14 Nov 00:28 ("Yes, use that ten"), in `areas\trust-run\QUEUES.md`. Accepted means a robot PASS plus a Codex PASS in real AutoCAD on the installed build (Tim's "yes", 14 Nov about 16:05). Counted from GitHub and the files named at the end; never estimated.**
+**Rebuilt 2026-11-15 18:33 PC clock by lane trust-struc-mgr-plan, once a day at 6:00pm under Tim's rule of Sat 14 Nov, "Prove, don't draft". The ten tools are Tim's own, named Sat 14 Nov 00:28 ("Yes, use that ten"), in `areas\trust-run\QUEUES.md`. Accepted means Codex has seen the tool's whole everyday job pass in real AutoCAD on the installed build (Cancel, Esc, the job, one Undo, save and reopen), checked by the controller (Tim, Sun 15 Nov about 14:37: "codex alone is fine"). Counted from GitHub and the files named at the end; never estimated.**
 
 ---
 
-# Tools accepted on Tim's PC: 0 of 10
+# Tools accepted on Tim's PC: 4 of 10
 
 # Tools in a colleague's hands: 0
 
-**On Tim's PC now:** Civil 3.0.90.3, Structural 1.0.126.1, Manager 1.1.89 (installed 14 Nov 14:15). To put back Friday's Civil 3.0.90.2 and Structural 1.0.126, with AutoCAD closed: `C:\CE_WORK\scratch\trust_install\restore_batch14.ps1`. **Faults accepted:** 1, BUG-968 (the Renumber crash, tool 6), which is not a whole tool.
+**On Tim's PC now:** Civil 3.0.90.11 (trial batch 9, installed Sun 15 Nov 16:03 under the standing trial approval), Structural 1.0.126.1, Manager 1.1.89. To put back Civil 3.0.90.10, with AutoCAD closed: `C:\CE_WORK\scratch\trust_install\restore_batch14i.ps1`. **Accepted so far:** PIT, CD, CDCHECKCURRENT and MR, each on Civil 3.0.90.10. **Faults accepted:** 2, BUG-968 (the Renumber crash) and BUG-1298 (CDLPD taking a plain line).
 
 ---
 
 ## The ten tools, in order
 
 1. **PIT (place a pit).**
-   1. **Built:** as a draft only, not in an install package (2052, blank cover level, found by its title).
-   2. **Seen in AutoCAD:** the PIT window opened only as part of the smoke check on Civil 3.0.90.3, 14 Nov, where it behaved as on the build before (`areas\trust-run\INSTALL_BATCH_RESULT_14NOV.md`, detail 3.3); no fix for it has been seen.
-   3. **Installed:** only the build that was there before; no fix for it is installed.
-   4. **Accepted:** no.
+   1. **Built:** the everyday job is in your installed Civil; draft 2052 (blank cover level, found by its title) is not installed.
+   2. **Seen in AutoCAD:** yes: robot 5 of 5 and Codex 5 of 5 on Civil 3.0.90.10, 15 Nov (Cancel, Esc, place, one Undo, save and reopen); the controller saw the reopened pit on screen (`areas\trust-run\TEN_ON_INSTALLED_BUILD.md`, section 1). On 3.0.90.11 only the smoke check has run.
+   3. **Installed:** yes, Civil 3.0.90.11, on your PC since Sun 15 Nov 16:03.
+   4. **Accepted:** yes.
    5. **Drafts and latest review:** 2052: GO (2026-11-13 05:43); reviewed head 6b1865f6, same on GitHub.
-   6. **Still owed:** QUEUES.md names no fault or fix for it yet; it waits its turn in the order.
+   6. **Still owed:** nothing for the count. Open points: the blank cover level wording (yours), and a plastic pit cannot be numbered in the one-page window (being built to your picture).
 2. **CD (draw a pipe).**
-   1. **Built:** as a draft only, not in an install package (found by their titles; 2053 and 2076 are tests only).
-   2. **Seen in AutoCAD:** a pipe was drawn only as part of the smoke check on Civil 3.0.90.3, 14 Nov, where it behaved as on the build before (`areas\trust-run\INSTALL_BATCH_RESULT_14NOV.md`, detail 3.3); no fix for it has been seen; a drawn pipe was still in CE's record after save and reopen.
-   3. **Installed:** only the build that was there before; no fix for it is installed.
+   1. **Built:** the everyday job is in your installed Civil. New Pipe on one page (2111, your "build New Pipe") is in 3.0.90.11 behind a switch that is off.
+   2. **Seen in AutoCAD:** yes: robot 5 of 5 and Codex 5 of 5 on Civil 3.0.90.10, 15 Nov (Cancel, Esc, draw, one Undo, save and reopen; `areas\trust-run\TEN_ON_INSTALLED_BUILD.md`, section 2). On 3.0.90.11 with the switch off the robot drew a pipe and one Undo put it back. The one-page window with the switch on: Codex NP16 18:07, Cancel, draw and one Undo PASS, **Esc FAIL** (the page stays open) (`areas\trust-run\INSTALL_BATCH_RESULT_14NOV.md`, batch 9).
+   3. **Installed:** yes, Civil 3.0.90.11, on your PC since Sun 15 Nov 16:03 (the one-page window switched off).
+   4. **Accepted:** yes.
+   5. **Drafts and latest review:** 2111: not reviewed; GitHub head 568f63b1, not reviewed yet; 2059: GO (2026-11-13 05:43); reviewed head 0218bca8, same on GitHub; 2053: FIX FIRST (2026-11-13 03:14); reviewed head 9ffbeccb, same on GitHub; 2076: GO (2026-11-13 06:59); reviewed head 0e08cc1f, GitHub head f326cc9f: moved since review, GO not yet re-confirmed.
+   6. **Still owed:** nothing for the count. For the one-page window: the Esc fix (sent to the fix lane for batch 10), then save and reopen with it, and which starting size wins (100 in one run, 225 in another). 2059, 2053 and 2076 are not installed.
+3. **CDLPD (legal point of discharge).**
+   1. **Built:** yes, the "only a CE pipe" fix (2099 at `28dd045c`) in your installed Civil since 3.0.90.7.
+   2. **Seen in AutoCAD:** the fix yes: Codex LPD15 L3 OVERALL PASS with a before-and-after record read on 3.0.90.7, a plain line and a bare pipe-layer line both refused, a CE pipe taken and kept after save and reopen (`areas\trust-run\INSTALL_BATCH_RESULT_14NOV.md`, item 5a). The whole everyday job not yet run on 3.0.90.10 or 3.0.90.11.
+   3. **Installed:** yes, Civil 3.0.90.11, on your PC since Sun 15 Nov 16:03.
    4. **Accepted:** no.
-   5. **Drafts and latest review:** 2059: GO (2026-11-13 05:43); reviewed head 0218bca8, same on GitHub; 2053: FIX FIRST (2026-11-13 03:14); reviewed head 9ffbeccb, same on GitHub; 2076: GO (2026-11-13 06:59); reviewed head 0e08cc1f, GitHub head f326cc9f: moved since review, GO not yet re-confirmed.
-   6. **Still owed:** QUEUES.md names no fault or fix for it yet; it waits its turn in the order.
-3. **CDLPD (legal point of discharge): a plain line taken as the LPD pipe (BUG-1298).**
-   1. **Built:** yes, in Civil 3.0.90.3 (pull request 2099 at `9c3f088e`).
-   2. **Seen in AutoCAD:** by Codex only, 14 Nov 16:15 to 16:30: a plain polyline on layer 0 is refused with "That line is not a CE pipe ... Nothing was changed"; a CE pipe is still taken and survives save and reopen. The robot could not click the line at that question, so there is no robot PASS (`areas\trust-run\INSTALL_BATCH_RESULT_14NOV.md`, CDLPD Codex look).
-   3. **Installed:** yes, Civil 3.0.90.3 on your PC since 14 Nov 14:15.
+   5. **Drafts and latest review:** 2099: BATCH-READY (2026-11-14 01:22); reviewed head 9c3f088e, GitHub head 28dd045c: moved since review, BATCH-READY not yet re-confirmed; 2061: GO (2026-11-13 05:10); reviewed head 7386e906, same on GitHub; 2067: GO (2026-11-13 05:43); reviewed head 2d825913, same on GitHub; 2101: not reviewed; GitHub head dc5b17ea, not reviewed yet.
+   6. **Still owed:** its fault BUG-1298 is accepted ("FIXED (Codex-accepted, record-checked, Civil 3.0.90.7)"); the tool is not: its wording, the record format number and BUG-1299 (controller, 15 Nov 06:06), and its everyday-job run on the installed build. 2061, 2067 and 2101 are not installed.
+4. **CDEDIT (edit a pit or pipe).**
+   1. **Built:** yes: Edit Pit and Edit Pipe in your installed Civil, with the Cancel hold from 2064 and the Unknown-not-guessed values from 2049, both behind switches that are off.
+   2. **Seen in AutoCAD:** Edit Pit: Codex TCE14 OVERALL PASS on 3.0.90.10 (Cancel, Esc, Save, one Undo, save and reopen). Robot 15 Nov 15:21 to 15:37: Edit Pit Save then one Undo and Edit Pipe Save then one Undo, with CE's record read either side, all PASS, and Edit Pipe's Save held through save and reopen. Codex on Edit Pipe Save (TCE16): NOT TESTED, stale screenshots (`areas\trust-run\TEN_ON_INSTALLED_BUILD.md`, section 3).
+   3. **Installed:** yes, Civil 3.0.90.11, on your PC since Sun 15 Nov 16:03 (the two switches off).
    4. **Accepted:** no.
-   5. **Drafts and latest review:** 2099: BATCH-READY (2026-11-14 01:22); reviewed head 9c3f088e, same on GitHub; 2061: GO (2026-11-13 05:10); reviewed head 7386e906, same on GitHub; 2067: GO (2026-11-13 05:43); reviewed head 2d825913, same on GitHub; 2101: not reviewed; GitHub head dc5b17ea, not reviewed yet.
-   6. **Still owed:** BUG-1298 stays open: a robot PASS beside the Codex PASS, or your ruling on whether a Codex PASS alone counts where the robot cannot pick (waiting on you, controller check 18:21). 2061, 2067 and 2101 are other CDLPD drafts, not installed.
-4. **CDEDIT (edit a pit or pipe): changes CE's record on Cancel and makes up values.**
-   1. **Built:** as a draft only, not in an install package.
-   2. **Seen in AutoCAD:** the fault yes, in AutoCAD on copies (`areas\TRUST_PROBES_13NOV.md`); the fixes no. Edit then Esc only as part of the smoke check on Civil 3.0.90.3, 14 Nov, where it behaved as on the build before (`areas\trust-run\INSTALL_BATCH_RESULT_14NOV.md`, detail 3.3); no fix for it has been seen.
-   3. **Installed:** no fix installed.
+   5. **Drafts and latest review:** 2064: GO (2026-11-13 11:50); reviewed head dde7825e, GitHub head 19569d86: moved since review, GO not yet re-confirmed; 2049: GO (2026-11-13 03:45); reviewed head 98d81717, GitHub head f9d35d0c: moved since review, GO not yet re-confirmed; 2056: GO (2026-11-13 05:43); reviewed head 40e891f0, same on GitHub.
+   6. **Still owed:** held by the controller: Codex has not yet seen Edit Pipe Save with working screenshots. For your eye: Edit Pipe's little pipe picture keeps the old size until Save. With the switch off as shipped, a cancelled edit can still add a bare pipe-layer line to CE's record with a guessed size (seen on 3.0.90.7); with it on, it is not added. 2056 is not installed.
+5. **CDRUNSOLVE (solve inverts down a run).**
+   1. **Built:** yes, in your installed Civil (2092 at `263e604d`): the A/B question at a split, the design flow (Q) read from Edit Pipe (your "yes", 14 Nov 23:25), and the message saying where the Q box is (More..., Levels & Flow).
+   2. **Seen in AutoCAD:** the split question and the no-Q message: robot, on 3.0.90.4 and 3.0.90.10. With flows written into a scratch copy by the test: the preview, Esc, Apply, and one Undo putting CE's record and the drawing back, seen in record readings (RSQ18); Codex saw it but its screenshots were stale. Typing Q in Edit Pipe: not seen (neither robot nor Codex can reach that box) (`areas\trust-run\INSTALL_BATCH_RESULT_14NOV.md`, items 5, 6 and 6b). Left out of the run of the ten on the controller's order.
+   3. **Installed:** yes, Civil 3.0.90.11, on your PC since Sun 15 Nov 16:03.
    4. **Accepted:** no.
-   5. **Drafts and latest review:** 2064: GO (2026-11-13 11:50); reviewed head dde7825e, same on GitHub; 2049: GO (2026-11-13 03:45); reviewed head 98d81717, same on GitHub; 2056: GO (2026-11-13 05:43); reviewed head 40e891f0, same on GitHub.
-   6. **Still owed:** the robot on copies with each draft (2056, Edit Pipe and locked layers, found by its title).
-5. **CDRUNSOLVE (solve inverts down a run): the wrong pipe followed at a split (BUG-1355), and no levels written.**
-   1. **Built:** the split question yes, in Civil 3.0.90.3 (pull request 2092 at `d686e787`). Reading each pipe's design flow (Q) from Edit Pipe: built on 2092 at `382999f5` only, not installed; core console PASS (`areas\trust-run\INSTALL_BATCH_RESULT_14NOV.md`, next batch candidate).
-   2. **Seen in AutoCAD:** the split question yes: the robot, 14 Nov 15:16 to 15:37, A, B, Enter and Esc each behaved as designed, with and without an LPD, record unchanged. Codex saw the same but its screenshots were stale, so no Codex PASS. Levels written: no, because on this build every pit has a design flow of 0.
-   3. **Installed:** the split question yes, Civil 3.0.90.3 since 14 Nov 14:15; the flow reading no.
+   5. **Drafts and latest review:** 2092: BATCH-READY (2026-11-14 01:22); reviewed head d686e787, GitHub head 263e604d: moved since review, BATCH-READY not yet re-confirmed; 2065: GO (2026-11-13 05:10); reviewed head cb133d67, same on GitHub.
+   6. **Still owed:** Q typed in Edit Pipe seen working; Codex screenshots of Apply and one Undo; your engineering look at the levels Apply wrote while the preview warned of negative cover (queue item 9). Noted: a run that applies nothing still counts as its own Undo step. 2065 is not installed.
+6. **CDRENUMBER.**
+   1. **Built:** yes: the crash fix in your installed Civil, and 2093 (it names pits not joined to the outlet and loop pipes even when nothing needs renumbering) since 3.0.90.10.
+   2. **Seen in AutoCAD:** a real renumber: robot 4 of 4 on 3.0.90.10 (No, Yes, one Undo, save and reopen; numbers changed only after Yes). The not-joined and loop lines: robot on 3.0.90.10. Codex witness of the real renumber: NOT TESTED, its screen tool failed three times (`areas\trust-run\TEN_ON_INSTALLED_BUILD.md`, section 8; `areas\trust-run\INSTALL_BATCH_RESULT_14NOV.md`, batch 8).
+   3. **Installed:** yes, Civil 3.0.90.11, on your PC since Sun 15 Nov 16:03.
    4. **Accepted:** no.
-   5. **Drafts and latest review:** 2092: BATCH-READY (2026-11-14 01:22); reviewed head d686e787, GitHub head 382999f5: moved since review, BATCH-READY not yet re-confirmed; 2065: GO (2026-11-13 05:10); reviewed head cb133d67, same on GitHub.
-   6. **Still owed:** your yes for a next install batch; your answer on where Q comes from (reading Q from Edit Pipe is the controller's DRAFT default, not your answer); 2092 re-reviewed at its new head; then the robot and Codex on a real run that writes levels. 2065 (the preview says what Apply writes) is not installed.
-6. **CDRENUMBER: AutoCAD closing when two pipes run opposite ways (BUG-968).**
-   1. **Built:** yes, already in your installed Civil.
-   2. **Seen in AutoCAD:** yes: Codex (screenshot) and the robot (log), 14 Nov 17:44 to 17:59, on Civil 3.0.90.3: AutoCAD stayed open and "Renumber cancelled - nothing changed." (`areas\trust-run\INSTALL_BATCH_RESULT_14NOV.md`, CDRENUMBER).
-   3. **Installed:** yes, part of Civil 3.0.90.3.
+   5. **Drafts and latest review:** 2093: not reviewed; GitHub head 644cb90e, not reviewed yet.
+   6. **Still owed:** a Codex look at the real renumber. Its crash fault BUG-968 is accepted ("FIXED (Codex-accepted, Civil 3.0.90.3, 14 Nov 2026)").
+7. **PITSCHEDULE.**
+   1. **Built:** yes: the left-out plastic pits words and grey count (2039 at `102bb87f`) and the Export CSV guard (2107) in your installed Civil.
+   2. **Seen in AutoCAD:** Codex over two runs on a blank copy with two pits: open and Close, Esc while placing, place, one Undo, save and reopen, each PASS once; robot open and Close. On 3.0.90.11 the robot saw "3 plastic pits not listed (no number)" and "1 row listed". Export CSV: NOT TESTED (the Save As box cannot be reached) (`areas\trust-run\TEN_ON_INSTALLED_BUILD.md`, section 4; `areas\trust-run\INSTALL_BATCH_RESULT_14NOV.md`, batch 9).
+   3. **Installed:** yes, Civil 3.0.90.11, on your PC since Sun 15 Nov 16:03.
    4. **Accepted:** no.
-   5. **Drafts and latest review:** 2093: not reviewed; GitHub head d0806ac9, not reviewed yet.
-   6. **Still owed:** the crash fault is accepted: BUG-968 "FIXED (Codex-accepted, Civil 3.0.90.3, 14 Nov 2026)", the first fault accepted under your 16:05 "yes". The tool is not: the plain message naming the two opposite pipes was not shown, and applying a renumber on that drawing was not tried (controller note, 18:25, in `BUG_CARPARK.md`). 2093 (names pits not joined to the outlet) is not installed.
-7. **PITSCHEDULE: plastic pits left out (BUG-1274) and Export CSV with the file open (BUG-1342).**
-   1. **Built:** as a draft only, not in an install package.
-   2. **Seen in AutoCAD:** the fixes no; BUG-1274 was found on a real council-issue drawing (4 Nov). The window opened and closed only as part of the smoke check on Civil 3.0.90.3, 14 Nov, where it behaved as on the build before (`areas\trust-run\INSTALL_BATCH_RESULT_14NOV.md`, detail 3.3); no fix for it has been seen.
-   3. **Installed:** no fix installed.
-   4. **Accepted:** no.
-   5. **Drafts and latest review:** 2039: GO (2026-11-13 01:28); reviewed head fd9bcce5, same on GitHub; 2107: GO (2026-11-13 23:53); reviewed head 320dcdcb, GitHub head 9f8a73e4: moved since review, GO not yet re-confirmed.
-   6. **Still owed:** the robot on copies.
-8. **CDRULES with CDCALC (check against the rulebook, with calculations).**
-   1. **Built:** as a draft only, not in an install package (2087, CDRULES keeps only its newest runs, found by its title).
-   2. **Seen in AutoCAD:** no.
-   3. **Installed:** no fix installed.
+   5. **Drafts and latest review:** 2039: GO (2026-11-13 01:28); reviewed head fd9bcce5, GitHub head 102bb87f: moved since review, GO not yet re-confirmed; 2107: GO (2026-11-13 23:53); reviewed head 320dcdcb, GitHub head 9f8a73e4: moved since review, GO not yet re-confirmed.
+   6. **Still owed:** held by the controller: one clean run on a drawing with pipes, a record reading either side, "Update existing schedule" tried, and why placing is greyed out on a drawing holding an older unlinked schedule.
+8. **CDRULES with CDCALC.**
+   1. **Built:** no fix for it is installed; the installed tool was run as it is.
+   2. **Seen in AutoCAD:** CDRULES: robot Esc and all four answers, drawing unchanged; Codex TCM14 Problems and Values PASS. CDCALC: opened and closed, nothing changed, robot and Codex; nothing calculated. The Codex run with Esc and CDCALC (TRC14) was blocked by a brief mistake that ran CLEAN on the scratch copy (`areas\trust-run\TEN_ON_INSTALLED_BUILD.md`, section 5).
+   3. **Installed:** only the build that was there before.
    4. **Accepted:** no.
    5. **Drafts and latest review:** 2087: not reviewed; GitHub head 9891fbd8, not reviewed yet.
-   6. **Still owed:** QUEUES.md names no fault or fix for it yet; it waits its turn in the order.
-9. **CDCHECKCURRENT (check this drawing, as the status line).**
-   1. **Built:** as a draft only, not in an install package (2066, a blank link flagged, found by its title).
-   2. **Seen in AutoCAD:** it ran only as part of the smoke check on Civil 3.0.90.3, 14 Nov, where it behaved as on the build before (`areas\trust-run\INSTALL_BATCH_RESULT_14NOV.md`, detail 3.3); no fix for it has been seen.
-   3. **Installed:** no fix installed.
-   4. **Accepted:** no.
+   6. **Still owed:** held by the controller: one clean Codex run (Esc, Problems, Values, CDCALC doing a calculation, save and reopen); a look at CDRULES adding about 1.8 MB of results to CE's record against the look-only rule. 2087 (keeps only its newest runs) is not reviewed and not installed.
+9. **CDCHECKCURRENT (check this drawing).**
+   1. **Built:** the installed tool; 2066 (flags a blank link, found by its title) is not installed.
+   2. **Seen in AutoCAD:** yes: robot and Codex TCM14 on Civil 3.0.90.10, "27 items need checking. Nothing has been fixed automatically.", drawing and CE's record unchanged (`areas\trust-run\TEN_ON_INSTALLED_BUILD.md`, section 6).
+   3. **Installed:** yes, Civil 3.0.90.11, on your PC since Sun 15 Nov 16:03.
+   4. **Accepted:** yes.
    5. **Drafts and latest review:** 2066: GO (2026-11-13 07:03); reviewed head d846f1ed, same on GitHub.
-   6. **Still owed:** QUEUES.md names no fault or fix for it yet; it waits its turn in the order.
+   6. **Still owed:** nothing for the count.
 10. **MR (move and rotate).**
-   1. **Built:** as a draft only, not in an install package (found by their titles).
-   2. **Seen in AutoCAD:** no; your words of 5 Nov were "so far cr/mr work but not on all objects".
-   3. **Installed:** no fix installed.
-   4. **Accepted:** no.
+   1. **Built:** the installed tool; 2081 (says what it cannot move on 2027) and 2062 (start-up checks) are not installed.
+   2. **Seen in AutoCAD:** yes: robot 5 of 5 (the pit moved in the drawing and in CE's record, and came back with one Undo) and Codex TCM14 on Civil 3.0.90.10; the controller saw the Undo on screen (`areas\trust-run\TEN_ON_INSTALLED_BUILD.md`, section 7).
+   3. **Installed:** yes, Civil 3.0.90.11, on your PC since Sun 15 Nov 16:03.
+   4. **Accepted:** yes.
    5. **Drafts and latest review:** 2081: GO (2026-11-13 07:25); reviewed head c78016cf, GitHub head ac12e9b9: moved since review, GO not yet re-confirmed; 2062: GO (2026-11-13 06:20); reviewed head 620fe976, same on GitHub.
-   6. **Still owed:** QUEUES.md names no fault or fix for it yet; it waits its turn in the order.
+   6. **Still owed:** nothing for the count. Your words of 5 Nov, "so far cr/mr work but not on all objects", are what 2081 is about.
 
 ## Safety fixes beside the ten (first, because they can lose work)
 
 1. **Two jobs mixed up: Help and Settings writing one job into another (BUG-1456).**
-   1. **Built:** yes, 2073 and 2083 in Civil 3.0.90.2 and again in 3.0.90.3.
-   2. **Seen in AutoCAD:** the robot: 20 of 20 on 3.0.90.2 (13 Nov) and 20 of 20 again on 3.0.90.3 (14 Nov). Codex, 14 Nov 16:34 to 17:05, saw no mixing in two runs, but four steps are NOT TESTED because it cannot screenshot its own readings (`areas\trust-run\INSTALL_BATCH_RESULT_14NOV.md`).
-   3. **Installed:** yes, Civil 3.0.90.3.
+   1. **Built:** yes: 2073 and 2083 since Civil 3.0.90.2, and the further layers 2100, 2089 and 2090 since 3.0.90.6.
+   2. **Seen in AutoCAD:** the robot's ten-check smoke passed 10 of 10 on every batch, the latest on 3.0.90.11 (15 Nov 16:14 to 16:48). Codex, 14 Nov, saw no mixing, but four steps are NOT TESTED because it cannot screenshot its own readings (`areas\trust-run\INSTALL_BATCH_RESULT_14NOV.md`).
+   3. **Installed:** yes, Civil 3.0.90.11, on your PC since Sun 15 Nov 16:03.
    4. **Accepted:** no.
-   5. **Drafts and latest review:** 2073: GO (2026-11-13 05:53); reviewed head 1a28c3b3, same on GitHub; 2083: GO (2026-11-13 07:32); reviewed head 522e5502, GitHub head 8a6decef: moved since review, GO not yet re-confirmed; 2078: GO (2026-11-13 07:37); reviewed head e1bdc16e, same on GitHub; 2089: FIX FIRST (2026-11-13 11:50); reviewed head e938d0d4, GitHub head 7707d158: moved since review, its FIX FIRST list not yet re-confirmed; 2090: GO (2026-11-13 11:50); reviewed head 39e489e9, GitHub head 2e604481: moved since review, GO not yet re-confirmed; 2100: FIX FIRST (2026-11-13 17:46); reviewed head 364ccc4e, GitHub head 4a4d7c33: moved since review, its FIX FIRST list not yet re-confirmed.
-   6. **Still owed:** the controller's ruling on whether a logged reading counts as Codex evidence. The later doors 2078, 2089, 2090 and 2100 are not installed.
+   5. **Drafts and latest review:** 2073: GO (2026-11-13 05:53); reviewed head 1a28c3b3, same on GitHub; 2083: GO (2026-11-13 07:32); reviewed head 522e5502, GitHub head 8a6decef: moved since review, GO not yet re-confirmed; 2100: FIX FIRST (2026-11-13 17:46); reviewed head 364ccc4e, GitHub head 4a4d7c33: moved since review, its FIX FIRST list not yet re-confirmed; 2089: FIX FIRST (2026-11-13 11:50); reviewed head e938d0d4, GitHub head 7707d158: moved since review, its FIX FIRST list not yet re-confirmed; 2090: GO (2026-11-13 11:50); reviewed head 39e489e9, GitHub head 2e604481: moved since review, GO not yet re-confirmed; 2078: GO (2026-11-13 07:37); reviewed head e1bdc16e, same on GitHub.
+   6. **Still owed:** Codex screenshots retaken (not started, `areas\trust-run\TEN_ON_INSTALLED_BUILD.md`). 2078 is not installed.
 2. **CLEAN and FASTSAVE saving over a template (BUG-1457, Structural).**
-   1. **Built:** yes, in Structural 1.0.126.1 (pull request 2094 at `2205dfde`).
-   2. **Seen in AutoCAD:** the robot, 14 Nov 15:45: 5 of 5 on template copies (never-saved refused, template opened left unsaved, saved drawing cleaned and saved). Codex saw the saved-drawing case twice but could not reach the never-saved case: the driver refuses NEW (`areas\trust-run\INSTALL_BATCH_RESULT_14NOV.md`).
-   3. **Installed:** yes, Structural 1.0.126.1 on your PC since 14 Nov 14:15.
+   1. **Built:** yes, in Structural 1.0.126.1 (2094 at `2205dfde`).
+   2. **Seen in AutoCAD:** the robot, 14 Nov: 5 of 5 on template copies. Codex saw the saved-drawing case twice but could not reach a never-saved drawing (the driver refuses NEW) (`areas\trust-run\INSTALL_BATCH_RESULT_14NOV.md`).
+   3. **Installed:** yes, Structural 1.0.126.1 since 14 Nov 14:15.
    4. **Accepted:** no.
    5. **Drafts and latest review:** 2094: BATCH-READY (2026-11-14 01:38); reviewed head 2205dfde, same on GitHub.
-   6. **Still owed:** a way for Codex to reach a never-saved drawing (the driver allowed NEW from a named template copy); your choice on a template opened on purpose (built: cleaned, not saved).
+   6. **Still owed:** a way for Codex to reach a never-saved drawing; Codex screenshots retaken (not started).
 
 ---
 
@@ -108,7 +108,7 @@
 
 Under Tim's rule these stay as drafts; nothing is closed or deleted, and a draft comes back only when its tool comes up.
 
-1. **Parked drafts:** 46 of the 73 open on GitHub (pull requests 2038 to 2110). None merged, none installed.
+1. **Parked drafts:** 46 of the 74 open on GitHub (pull requests 2038 to 2111). None merged. 3 of them are inside the trial build on Tim's PC (2040, 2041, 2045); the rest are not installed.
 2. **Their latest review:** 32 GO, 1 FIX FIRST, 13 not reviewed.
 3. **Moved on GitHub since their last review:** 6.
 
@@ -195,9 +195,9 @@ Under Tim's rule these stay as drafts; nothing is closed or deleted, and a draft
 
 ## Where these come from
 
-1. **The list and the GitHub heads:** `gh pr list --state open --draft` on the plugin repository at 2026-11-14 18:32, branches containing "trust" or "bug-1456".
-2. **Verdicts, times and reviewed heads:** the latest line per pull request in `areas\trust-run\trust-review.md`, including "re-reviewed at" heads and the 06:21 re-read of 2038, 2043, 2047 and 2051 (GO holds at their new heads).
+1. **The list and the GitHub heads:** `gh pr list --state open --draft` on the plugin repository at 2026-11-15 18:33, branches containing "trust" or "bug-1456".
+2. **Verdicts, times and reviewed heads:** the latest line per pull request in `areas\trust-run\trust-review.md`, including "re-reviewed at" heads and the 06:21 re-read of 2038, 2043, 2047 and 2051 (GO holds at their new heads). The reviews done for the 15 Nov trial batches are written only in `areas\trust-run\INSTALL_BATCH_14NOV.md` (for example 2100, 2089 and 2090 GO at their batch 4 heads), not in trust-review.md, so a verdict shown here for a draft installed on 15 Nov can be older than its batch review.
 3. **What each row owes beyond the robot:** the review files in `areas\trust-run\reviews\` and `reviews\status-board-check.md`.
 4. **Evidence:** `areas\trust-run\EVIDENCE_BRANCHES.md`, `EVIDENCE_READER.md`, `EVIDENCE_CROSS_DRAWING.md`, `EVIDENCE_STALE_BUGS.md`. Fixes seen on the installed build (BUG-650, BUG-968, BUG-290) are not trial changes; they are on the morning page.
 5. **Plain names and plan steps:** this lane, from the pull request titles and the review lines.
-6. **The ten tools and the rule:** `areas\trust-run\QUEUES.md` (Tim's ten, his acceptance answer, the CDRUNSOLVE flow note) and `areas\TRUST_AUTONOMOUS_RUN_12NOV.md`, last sections; what is installed and seen: `areas\trust-run\INSTALL_BATCH_RESULT_14NOV.md` (with `INSTALL_TRIAL_RESULT_13NOV.md` for 3.0.90.2); what is accepted: `BUG_CARPARK.md` (BUG-968 and the controller note of 18:25) and the controller check of 18:21 in `areas\release-v3-colleagues-DESK_LOG.md`. A tool's drafts are those QUEUES.md names, then open drafts whose title names that command (this lane's match by title).
+6. **The ten tools and the rule:** `areas\trust-run\QUEUES.md` (Tim's ten, his standing trial approval, CODEX ALONE IS FINE) and `areas\TRUST_AUTONOMOUS_RUN_12NOV.md`, last sections; what each trial batch holds: `areas\trust-run\INSTALL_BATCH_14NOV.md`; what was seen: `areas\trust-run\TEN_ON_INSTALLED_BUILD.md` (with the controller's checks in it) and `INSTALL_BATCH_RESULT_14NOV.md`; faults accepted: `BUG_CARPARK.md` (BUG-968, BUG-1298); the controller's lines of 15 Nov in `areas\release-v3-colleagues-DESK_LOG.md`. A tool's drafts are those the files name, then open drafts whose title names that command (this lane's match by title).

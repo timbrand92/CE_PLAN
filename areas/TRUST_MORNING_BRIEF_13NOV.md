@@ -24,8 +24,8 @@
 
 ## What ran overnight
 
-1. **Builders:** 73 trial changes built as drafts (counted on GitHub at 18:32), none merged, none set to merge by itself; only 2073, 2083, 2092 and 2099 installed (Civil 3.0.90.3) and 2094 (Structural 1.0.126.1), on your PC since Sat 14 Nov 14:15 (see the status board).
-2. **Reviewer:** 53 are fit for the robot to test, 4 need fixing first (2053, 2089, 2096, 2100), 16 are not reviewed yet; 14 have changed since their last review and wait to be re-checked.
+1. **Builders:** 74 trial changes built as drafts (counted on GitHub at 18:33), none merged, none set to merge by itself; 17 of them are inside the trial builds on your PC (Civil 3.0.90.11 since Sun 15 Nov 16:03, Structural 1.0.126.1), under your standing trial approval; tools accepted 4 of 10 (see the status board).
+2. **Reviewer:** 53 are fit for the robot to test, 4 need fixing first (2053, 2089, 2096, 2100), 17 are not reviewed yet; 18 have changed since their last review and wait to be re-checked.
 3. **AutoCAD robot:** tested on copies outside your hours, then closed AutoCAD.
 4. **Code readers:** wrote a one-page note for each of your 47 Civil and 32 Structural core tools, and filed 177 new faults.
 5. **Planning:** your questions gathered in one file: 87, the first one matters most.
@@ -65,7 +65,7 @@
 ## Where these numbers come from
 
 0. **BUG-1456, 6 in 11, both ways, the two habits, 17 rows against 1, 82 against 48, one U, tab switch, only Help and Settings, ISAVEBAK 0, the _PRE_C7_ copy:** `areas\trust-run\EVIDENCE_CROSS_DRAWING.md` (parts 1 to 3) and the BUG-1456 entry at the end of `BUG_CARPARK.md`; GO for pull request 2073 (05:53) and the note that 2064 no longer carries the cure (06:21), from `areas\trust-run\trust-review.md`; the check that comes first: `PENDING_TESTS.md` (CEPROOFCROSSDRAWING).
-1. **73 trial changes, 53, 4, 16 and 14:** GitHub's open draft pull requests with "trust" or "bug-1456" in the branch name (2038 to 2110, counted at 18:32), with the latest verdict per pull request in `areas\trust-run\trust-review.md`; the list, with each one's head, is `areas\trust-run\STATUS_BOARD.md`.
+1. **74 trial changes, 53, 4, 17 and 18:** GitHub's open draft pull requests with "trust" or "bug-1456" in the branch name (2038 to 2111, counted at 18:33), with the latest verdict per pull request in `areas\trust-run\trust-review.md`; the list, with each one's head, is `areas\trust-run\STATUS_BOARD.md`.
 2. **47 and 32 tool notes:** the files in `04_REFERENCE\core-tool-notes\` (47 plus a README) and `04_REFERENCE\core-tool-notes\structural\` (32).
 3. **177 new faults:** bug numbers BUG-1280 to BUG-1456 in `BUG_CARPARK.md`, counted by this lane at 06:27.
 4. **87 questions:** `areas\TRUST_QUESTIONS_FOR_TIM.md`.
