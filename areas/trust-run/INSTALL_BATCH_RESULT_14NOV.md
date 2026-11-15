@@ -440,3 +440,13 @@ Real-AutoCAD screenshots copied to `04_REFERENCE/mockups/NEW_PIPE_ONE_PAGE_15NOV
     - The blank copy holds ordinary pits P1 (x 10000) and P2 (x 20000), a CE pipe P1 to P2, and one unnumbered plastic pit 350 x 350 at x 30000. CE's record: pits P1, P2; pipe P1->P2; one 350 x 350 pit.
     - Saved, then copied to `C:\Lisp Files\_TEST_COPIES_20260923\CLDTP_TPS16.dwg` and `CLDTP_TEM16.dwg` (62,055 bytes, SHA-256 84473E60A760...).
     - Settings the same.
+
+## BATCH 10 INSTALLED (trial, Tim's PC), Sun 15 Nov 2026 20:49
+
+1. **What:** Civil 3.0.90.12+af50b86a (batch 9's sources + draft 2111 at 568f63b1: New Pipe one page Esc fix, More... opens today's CD window). Manager 1.1.89 and Structural 1.0.126.1 untouched.
+2. **Before install (controller's own reads):** payload 832 files; Legacy C0549D4B..., Net8 5367C10C..., Modern 3043D73A..., manifest D0B3F1A9...: all equal to the runbook. No acad or accoreconsole process; lock absent; autocad.json mode auto, Sunday evening (outside Tim's hours). Test lane reported its own AutoCAD closed at 20:47.
+3. **Install:** `install_batch14j.ps1`, log line "INSTALL VERIFIED": 832 of 832 files match, CE_SHARED identical to Manager x3, the 4 settings files unchanged. (The script's exit code read 1 from robocopy's "files copied" code; the verify lines are the result.)
+4. **Read back by the controller:** live Modern DLL SHA-256 `3043D73A8D2C89D7369635CEF417B3940D22319BBBFA3A8F8DE12B32560002E4`, product version 3.0.90.12+af50b86a40ab144485f4c04f1031dc5960f9144f.
+5. **Put-back:** `restore_batch14j.ps1` (to 3.0.90.11); backup folder `CE_CVL_SUITE_PRE_249b9f8d_20261115-204805.backup`.
+6. **Switches:** `trust.newPipeOnePage` and `trust.showUnknownInsteadOfGuess` stay OFF in Tim's settings; everyday CD is today's window.
+7. **Next:** test lane runs runbook BATCH 10 section 7 (smoke, then New Pipe one page with the switch on in the scratch settings copy only).

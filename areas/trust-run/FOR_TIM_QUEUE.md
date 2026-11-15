@@ -78,6 +78,10 @@
    - **Yes, give the tests their own memory and have the robot watch yours** (recommended). Example: after a night of tests your PIT window opens exactly as you left it on Friday. Needs a change to the robot and its start-up, same owner as items 18 and 20.
    - **Leave it; the "end on an ordinary pit" habit is enough.** Example: your PIT opens as a 450 x 450 grated pit after a test night, whatever you used last; your recent pipe sizes and levels lists still pick up test values.
 
+22. **Pit Schedule: a pipe drawn P1 to P2 with no levels typed yet. What should the table show at P2?** Found 20:49 Sun 15 Nov (Codex run TPS16 and the robot's repeat, Civil 3.0.90.11). Today the table shows an outlet of 100 on BOTH pits and no inlet on either, although CD drew the arrow P1 to P2. With levels typed (19.20 to 19.10) the table is right. Default in use: the first choice; the fix chat is finding the cause on the existing draft; Pit Schedule is not counted until it is seen right.
+   - **Follow the direction the pipe was drawn; leave the level boxes blank** (recommended). Example: P1 row shows outlet 100 with IL blank; P2 row shows "FROM P1", inlet 100 with IL blank, no outlet.
+   - **Show no pipe on either pit until levels are typed.** Example: P1 and P2 rows show size, cover level and lid only, with a grey line "1 pipe not listed (no levels)".
+
 ## Older, still open (asked before 15 Nov, defaults in use)
 
 8. **Ribbon in job order** (Start, Sources, Network, Levels, Check, Sheet). Default: not built into any batch until you have seen a mock-up.
