@@ -574,3 +574,13 @@ Real-AutoCAD screenshots copied to `04_REFERENCE/mockups/NEW_PIPE_ONE_PAGE_15NOV
    - Settings and installed builds unchanged; last-used pit unchanged (no pit saved).
    - Codex noted procedure gaps of its own (log copies before launch were missed; saver checks were done at the end), not product faults.
    - **For the controller:** Pit Schedule's plain job now has one clean Codex PASS run on 3.0.90.13. The blank-level fix shows in both the window and the placed table.
+9. **Codex TCE17 E2, Edit Pit whole job (02:48 to 03:03, 3.0.90.13, copy `CLDTP_TCE17.dwg` of the standard drawing): OVERALL PASS, E-01 to E-05 all PASS, all SURE.** Report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_TCE17_E2_20261116_0249.md`.
+   - **Pictures checked by me:** 121 PNGs, 71 distinct. Codex took three captures per action, and two of them often repeat a fixed view. Every picture named for a claim is unique, except the E-01 and E-02 close-ups, which both show CL 19.45 because nothing changed. I opened the E-03, E-04 and E-05 cover close-ups and TCE17-75.
+   - **E-01 Cancel PASS:** Edit Pit showed "Cover (m AHD)" 19.45; Cancel; P10 still CL 19.45; count 1054.
+   - **E-02 Esc PASS:** "*Cancel*"; count 1054.
+   - **E-03 Save PASS (E03 close-up):** cover typed 19.95, Save, "Pit updated."; P10 reads **CL 19.95**. No label question.
+   - **E-04 one U PASS (TCE17-75, E04 close-up):** the command line "Command: U" / "CDEDIT"; P10 reads **CL 19.45**; Edit Pit again showed 19.45.
+   - **E-05 save and reopen PASS (E05 close-up):** 19.95 saved again, save-copy once, reopen-copy once; P10 reads **CL 19.95** after reopening.
+   - Settings unchanged.
+   - Last-used pit after: GRATED 450 x 450, lid C, plastic False, label True, schedule True (hash CDE6732638AE; Edit Pit's Save of P10 wrote P10's ordinary values).
+   - **For the controller:** Edit Pit's whole job is now seen by Codex on 3.0.90.13 with real pictures. With Edit Pipe's TCE16 E2 on 3.0.90.12, both halves of CDEDIT are seen.
