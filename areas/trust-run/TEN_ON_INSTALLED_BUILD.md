@@ -139,3 +139,14 @@ Not run yet: CD, CDEDIT, PITSCHEDULE, CDRULES with CDCALC, CDCHECKCURRENT, MR, C
    - M-02 CDRULES Problems and Values PASS ("Drawing geometry unchanged; results recorded in the project." / "Nothing was changed."; R3 1054; TCM14-04, -05).
    - M-03 MR Esc PASS ("Select objects: *Cancel*"; TCM14-06, -07). M-04 MR move PASS ("1 found", "Move Rotate complete."; P10 1 m right; TCM14-08-moved.png). **M-05 one U PASS** (echoed MR; P10 back; TCM14-09-undo.png). M-06 move again, save, reopen PASS (TCM14-10 to -13).
 3. **Summary:** CDCHECKCURRENT: robot PASS + Codex PASS. MR: robot PASS 5 of 5 + Codex PASS. CDRULES with CDCALC: robot PASS (Esc, all four answers, CDCALC open/close) + Codex PASS (Esc and CDCALC in TRC14; Problems and Values in TCM14). For the controller to write. (CDRULES stores its results in CE's record, about 1.8 MB: for Tim's eye.)
+
+### 8. CDRENUMBER (a real renumber, applied with Yes)
+
+1. First robot run (13:45 to 13:56): NOT a test (my script's function was named Ren, which PowerShell runs as Rename-Item, so CDRENUMBER never ran; the U took back my last pipe). Rerun from 13:5x.
+2. Second robot run (13:56 to 14:07): with no pipe leaving the network, CDRENUMBER refused clearly and changed nothing: 'CDRENUMBER numbers the pits from the outlet, but no pipe leaves any pit to open ground or an outfall, so it cannot tell which pit is the outlet. Draw the last pipe from the downstream pit out to an open end ...' (TEN_REN_no.png; record and drawing identical). Rerun with an outlet pipe from P3 to an open end.
+3. **Robot with an outlet pipe (14:08 to 14:20, blank scratch copy: pits P1 @10000, P2 @20000, P3 @30000, pipes P1→P2→P3 and P3 to an open end; log `C:\CE_WORK\scratch\trust_install\ten_ren3.out`; screenshots `C:\Lisp Files\_TEST_COPIES_20260923\robot_shots\session_20261115_140754\`): 4 PASS of 4.**
+   - **No: PASS:** "Renumber downhill to uphill: / P3 -> P1 / P1 -> P3 / 2 pit(s) will be renumbered. Apply? [Yes/No] <No>: N" then "Renumber cancelled - nothing changed."; record and drawing identical (TEN_REN_no.png).
+   - **Yes: PASS:** "Renumbered 2 pit(s) downhill to uphill. One Undo restores the old numbers."; CE's record now P3 @10000, P2 @20000, P1 @30000 and the pipes P3→P2, P2→P1 (TEN_REN_yes.png).
+   - **One U: PASS:** echoed CDRENUMBER; record and drawing byte-identical to the start.
+   - **Yes again, save, reopen: PASS:** the new numbers kept after reopening.
+   - Renumbering happened only after the drafter's Yes (Tim's rule).
