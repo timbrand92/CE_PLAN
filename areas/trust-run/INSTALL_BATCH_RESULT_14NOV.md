@@ -400,3 +400,17 @@ Transcript `C:\CE_WORK\scratch\trust_install\b2027.out`. Live Civil lanes: Moder
    - The record and drawing read "not the same" while the window was still open: the command line had "[CE] Pipe end moved to the inside wall of P10". So this is not a Cancel result, and nothing is judged on it.
    - Closed by the driver's quit (no save); settings same; Tim's CD_Settings.json unchanged.
    - Cancel, Esc, Draw pipe, one U, More... and back, and the save go to Codex NP16 (the controller's option b). The reopen check follows by robot.
+8. **Codex look NP16 P1 (17:53 to 18:07; New Pipe one page with the switch on, .cmd start by Codex; copy `CLDTP_NP16.dwg`): OVERALL FAIL (PASS 2, FAIL 1, BLOCKED 3).** Report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_NP16_P1_20261115_1754.md`; screenshots `C:\Lisp Files\_TEST_COPIES_20260923\LOOKS\` under NP16.
+   - P-00 PASS: the switch was confirmed on (scratch settings path in the session log).
+   - **P-01 Cancel PASS:** the page closed, "[CE] CD command cancelled.", nothing drawn, count 1103 = START.
+   - **P-02 Esc FAIL:** one keyboard Esc with the page active left the "New pipe" page open. Cancel then closed it; nothing drawn. The runbook expects Esc to do the same as Cancel. **Reported to the controller at once.**
+   - P-03 Draw pipe BLOCKED (on the brief, not CE): the pipe, its label "225 DIA. UPVC PIPE AT 1 IN 100 MIN." and the flow arrow were drawn (+3 objects). CD then went on to "[CE] Pipe placed. Pick the next pipe's first point, or press Esc to stop." That is today's CD behaviour, also seen with the switch off, but the brief did not name it. Esc twice stopped CD with the pipe kept.
+   - **P-04 one U PASS:** echoed CD; pipe, label and arrow all went together; count back to 1103.
+   - P-05 More... BLOCKED:
+     - The full window opened showing 225 mm UPVC, but its level boxes were below the cut-off visible part, so the levels could not be compared.
+     - Cancel there came back to the page with the answers kept.
+     - Draw pipe drew again (+3).
+   - P-06 save BLOCKED: typing QSAVE brought up AutoCAD's suggestion list, and the shared rules forbid Enter while it shows. **Nothing saved**, so the robot reopen check cannot run yet.
+   - Page words in this run: "225 dia UPVC at 1 in 100", "Length 9.142 m", "Check first", the blank-inverts note. My robot run at 17:39 on a fresh copy of the same drawing, with the same settings copy, showed "100 dia UPVC". The size the page starts with differed between the two runs; noted, not judged.
+   - Settings unchanged; installed versions unchanged; AutoCAD closed by Codex.
+   - Next: the save rerun waits for the controller's word on Ctrl+S once instead of typing QSAVE.
