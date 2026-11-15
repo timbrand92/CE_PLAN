@@ -258,3 +258,18 @@ Not run yet: CD, CDEDIT, PITSCHEDULE, CDRULES with CDCALC, CDCHECKCURRENT, MR, C
    - Nothing was changed. The lock was released, and Tim's last-used pit was ordinary before and after.
    - Its TPS16 and TEM16 runs earlier tonight saved screenshot files fine, so this is the tool session, not the job.
    - The brief now points to how those runs saved. The rerun follows NP18. CDEDIT stays held.
+
+### 3. CDEDIT: Codex rerun TCE16 E2 on 3.0.90.12 (23:36 to 23:49): every step seen in real pictures; Codex's OVERALL says NOT TESTED on one picture rule
+
+1. Report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_TCE16_E2_20261115_2337.md`; screenshots `C:\Lisp Files\_TEST_COPIES_20260923\LOOKS\TCE16_E2_20261115_2337\screenshots\`.
+   - **Pictures checked by me:** 31 PNGs, 28 distinct. The only repeats are TCE16-07 and -08 (the same as -06: the reading and recapture after Cancel, when nothing changes) and -13 (= -05, the same window title).
+   - I opened TCE16-06, -18, -19 and -30 myself.
+   - **E-00:** the pipe P10 to P9 reads "150 DIA. UPVC PIPE AT 1 IN 100"; count 1057.
+   - **E-01 Cancel:** Edit Pipe showed "Flow: P10 → P9", 150. After Cancel the drawing still reads 150 (TCE16-06, a fresh picture); count 1057. Codex marked it NOT TESTED only because its two later readings repeated TCE16-06. That is my new picture rule being too strict for a step where nothing changes; the controller to weigh it.
+   - **E-02 Esc PASS:** "Select a pit, pipe, source or CE text to edit: *Cancel*"; count 1057.
+   - **E-03 Save PASS (TCE16-18):** diameter 225, Save, "Pipe updated."; the drawing reads "225 DIA. UPVC PIPE AT 1 IN 100". No question appeared.
+   - **E-04 one U PASS (TCE16-19):** the command line shows "Command: U" then "CDEDIT"; the drawing reads 150 again; Edit Pipe showed 150.
+   - **E-05 save and reopen PASS (TCE16-30):** 225 again, Save, save-copy once, reopen-copy once; it reads 225 after reopening.
+   - Settings unchanged.
+   - Last-used pit lines still ordinary (GRATED 450 x 450, plastic False, label True, schedule True). The file hash moved to EB73DAABF9EE because Edit Pipe writes its last-used pipe values.
+   - **For the controller:** Edit Pipe's whole job (Cancel, Esc, Save, one Undo, save and reopen) is now seen by Codex with real pictures in one run on 3.0.90.12. The robot showed the same with record readings on 3.0.90.10. Edit Pit's whole job: Codex TCE14 on 3.0.90.10 plus the robot record readings.
