@@ -83,3 +83,9 @@ Not run yet: CD, CDEDIT, PITSCHEDULE, CDRULES with CDCALC, CDCHECKCURRENT, MR, C
 7. **CD: robot PASS 5 of 5 + Codex PASS 5 of 5 on Civil 3.0.90.10, each with logs and screenshots.** For the controller to write.
 
 **Controller's check, CD on Civil 3.0.90.10, Sun 15 Nov 2026 11:32:** robot log read (`C:\CE_WORK\scratch\trust_install\ten_cd_b8.out`: C-1 to C-5 PASS) and Codex report read (`CODEX_VERIFY_TCD14_T1_20261115_1119.md`: T-00 to T-05 PASS, the U echoed CD and the counts returned to the start). No screenshot viewed by the controller for CD. **CD's everyday job (Cancel, Esc, draw a pipe between two pits, one Undo, save and reopen) is proven by robot and Codex.** Not yet counted as the tool accepted: not run on a real-job copy; New Pipe's known points (59 controls, to be redrawn to Tim's picture later) are look, not behaviour.
+2. **Codex look TCE14 E1 (11:32 to 11:45): OVERALL PASS.** Report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_TCE14_E1_20261115_1133.md`; screenshots `C:\Lisp Files\_TEST_COPIES_20260923\LOOKS\TCE14_E1_20261115_1133\screenshots\`.
+   - E-01 Cancel PASS (Edit Pit showed 19.45; P10 stayed CL 19.45; R3 1054; TCE14-02, -03). E-02 Esc PASS ("Select a pit, pipe, source or CE text to edit: *Cancel*"; TCE14-04, -05).
+   - **E-03 Save PASS** (cover 19.95, "Pit updated.", P10 reads CL 19.95; no label question; TCE14-06, -07).
+   - **E-04 one U PASS** (echoed CDEDIT; P10 back to CL 19.45; Edit Pit showed 19.45; TCE14-08, -09).
+   - **E-05 save and reopen PASS** (CL 19.95 after reopening; TCE14-10, -11).
+3. **CDEDIT: robot PASS (Cancel pit, Esc, Cancel pipe) + Codex PASS (Cancel, Esc, Save, one U, save and reopen) on Civil 3.0.90.10.** For the controller to write. (Edit Pipe Save was not tried; Edit Pit's was.)
