@@ -96,6 +96,11 @@
    - **Keep only the last check.** Example: the drawing never carries more than one list of findings; Source can only show the check you just ran.
    - **Keep them all, as today.** Example: twenty runs on the test job add about 3 MB to the drawing.
 
+26. **May the test robot also press Apply and Cancel in the CDRUNSOLVE preview, on scratch copies only?** Found 05:15 Mon 16 Nov. Your item 16 answer ("it can do whatever you need it to") was to a question about two things: Save in Edit Pit and typing in the Design flow box in Edit Pipe's More options. The robot still could not reach that box, because the "More..." button that opens it was left off its list. The controller has read "More..." in Edit Pipe as part of what you already said yes to (it is the only way to the box you allowed) and the test chat is adding that one name, with a backup. Apply and Cancel in the solve preview were NOT in your question, so they are not added. Default in use: the robot types the flow; Codex presses Apply and Cancel, as it did last night.
+   - **Yes, those two, scratch copies only** (recommended). Example: the robot types 10 L/s in Edit Pipe, runs CDRUNSOLVE, presses Apply, then checks one Undo puts every level back, with no Codex time used.
+   - **No, leave Apply to Codex.** Example: each CDRUNSOLVE proof stays a two-part run, robot for typing and Codex for Apply, about 15 minutes longer each time.
+   - **Also undo the "More..." press** if you did not mean it: say so and the backup is put back.
+
 ## Older, still open (asked before 15 Nov, defaults in use)
 
 8. **Ribbon in job order** (Start, Sources, Network, Levels, Check, Sheet). Default: not built into any batch until you have seen a mock-up.
