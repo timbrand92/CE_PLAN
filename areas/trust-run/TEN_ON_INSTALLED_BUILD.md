@@ -208,3 +208,23 @@ Not run yet: CD, CDEDIT, PITSCHEDULE, CDRULES with CDCALC, CDCHECKCURRENT, MR, C
      - Still open: the hover sentence (needs a person or a hover-capable tool), "Update existing schedule", and the older unlinked schedule on the standard drawing.
 
 **Controller check, PITSCHEDULE on Civil 3.0.90.11, Sun 15 Nov 2026 19:05:** Codex report `CODEX_VERIFY_TPS16_S1_20261115_1858.md` read; screenshots TPS16-22 and TPS16-04-detail seen by the controller. Esc, place, one U, place again, save and reopen all PASS in one clean run on a fixture with two pits, a pipe and one plastic pit; the grey line "1 plastic pit not listed (no number)" seen in real AutoCAD. **HELD, not counted:** the placed table shows outlet dia 100 on both P1 and P2 and no inlet on either, though the one pipe runs P1 to P2 (levels blank; header says 6 data issues). Test lane asked to read the record and repeat with levels typed; counted only if that is CE declining to guess, sent to the fix lane if it is a fault. Count stays 4 of ten.
+
+### Edit Pit More... "Number and schedule this one anyway" (batch 9, 2039): Codex look TEM16
+
+1. **Codex look TEM16 M1 (19:11 to 19:25, Civil 3.0.90.11, copy `CLDTP_TEM16.dwg`): PASS 4, NOT TESTED 1, FAIL 0.** Report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_TEM16_M1_20261115_1912.md`; screenshots in `C:\Lisp Files\_TEST_COPIES_20260923\LOOKS\` under TEM16.
+   - **M-01 button, then Cancel PASS:**
+     - Edit Pit on the plastic pit showed the Pit number box greyed.
+     - More, then the Drawing & Schedule tab, shows "Included in pit schedule" and "Number and schedule this one anyway".
+     - Back, then Cancel: nothing changed (count 7, no number).
+   - **M-02 Esc PASS:** "Select a pit, pipe, source or CE text to edit: *Cancel*"; count 7.
+   - **M-03 press and Save NOT TESTED (evidence only):**
+     - The button gave the pit P3, enabled the number box and showed "Manual plastic pit: numbered and included in schedule.".
+     - Save went through after one point click.
+     - The P3 on plan was partly hidden by the crosshair, and the last picture repeated, so the step is not counted.
+   - **M-04 one U PASS:** echoed CDEDIT; the number label went; count back to 7. Edit Pit again showed the pit unnumbered and plastic.
+   - **M-05 again, schedule, save and reopen PASS:**
+     - The schedule showed a P3 row "350 x 350", cover "20.00", "3 rows listed", and no plastic-pits line.
+     - After save and reopen, P3 was still on the same small pit, with its PP cover text.
+   - Settings unchanged; AutoCAD closed by Codex.
+   - **Tim's last-used pit:** before, ordinary (D0E30F0F2371). **After: hash 3A12557F5F92, GRATED PIT 350 x 350, plastic True, label True, schedule True.** Edit Pit's Save on a plastic pit writes the last-used pit too. Put back by the robot's reset pit at the end of the 19:37 session.
+   - **For the controller:** the button does what Tim's choice B says: it numbers and schedules ONE plastic pit, the pit stays plastic, and one U takes it back. M-03 needs a clean picture for a full PASS; M-05 repeated the same press-and-save and passed.
