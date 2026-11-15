@@ -1,5 +1,8 @@
 # Queue for Tim: things that are yours to decide
 
+**TRUST RUN PAUSED, Mon 16 Nov 2026 10:06.** Tim's words, as relayed to the controller by a fork of its chat (not typed in the controller's chat; he has been asked to confirm there): "Pause it", in answer to "What should the current trust run do while you plan from zero?" (new planning prompt: areas/ZERO_PLAN_PROMPT_16NOV.md). Done: two-hourly controller timer deleted; batch 12 (Civil 3.0.90.14) NOT installed, his PC stays on Civil 3.0.90.13; trust.cdeditCancelWritesNothing stays OFF; TCE18 cancelled; all lanes told to hold. Nothing deleted: payloads, drafts, evidence and the FOR_TIM check folder stay where they are. Count at the pause: 6 of ten. Nothing below is waiting on him while paused.
+
+
 **Started Sun 15 Nov 2026 by the controller (CE_ACAD / trust plan / plan / 01), on Tim's word: "i want you to work autonomously so dont get bogged down by waiting for me, just queue stuff for me and continue loops as necessary".**
 
 **How this works:** nothing here stops the run. Each item has a recommended answer, which is in use as the controller's default until you answer. Answer any item by its number, in any chat. Newest at the bottom. Answered items move to the end with your words.
