@@ -275,3 +275,21 @@ Not run yet: CD, CDEDIT, PITSCHEDULE, CDRULES with CDCALC, CDCHECKCURRENT, MR, C
    - **For the controller:** Edit Pipe's whole job (Cancel, Esc, Save, one Undo, save and reopen) is now seen by Codex with real pictures in one run on 3.0.90.12. The robot showed the same with record readings on 3.0.90.10. Edit Pit's whole job: Codex TCE14 on 3.0.90.10 plus the robot record readings.
 
 **Controller's check, CDEDIT Edit Pipe on Civil 3.0.90.12, Sun 15 Nov 2026 23:51:** Codex report `CODEX_VERIFY_TCE16_E2_20261115_2337.md` read in full (E-02 to E-05 PASS; E-01 marked NOT TESTED by Codex only because two later readings after Cancel repeated the fresh Cancel picture TCE16-06); TCE16-19 opened by the controller: command line "Command: U" then "CDEDIT", pipe text back to "150 DIA. UPVC PIPE AT 1 IN 100". Edit Pipe's whole job (Cancel, Esc, Save, one U, save and reopen) taken as SEEN on the installed build. **CDEDIT still HELD, not counted:** Edit Pit's whole job by Codex was TCE14 on 3.0.90.10, and batch 9 changed the Edit Pit window; one short Codex Edit Pit look on 3.0.90.12 ordered. Count stays 4 of ten until it passes.
+
+### 5. CDRULES: what the 1.8 MB is, and does it grow on each run? (robot, Civil 3.0.90.12, Mon 16 Nov 00:01 to 00:10)
+
+1. **Run:** copy `CLDTP_B10R.dwg` of the standard test drawing; transcript `C:\CE_WORK\scratch\trust_install\b10_rules.out`. CE's record was read after each run.
+   - Start: 593,403 characters, holding 628 stored rule findings ("RuleId") and 2 rulebook-version entries. This copy already carries earlier CDRULES runs.
+   - After Problems run 1: 1,183,634 characters; 1,057 findings; 3 versions.
+   - After Problems run 2: 1,773,865 characters; 1,486 findings; 4 versions.
+   - After Values: no change ("Nothing was changed.").
+   - After Problems run 3: 2,364,096 characters; 1,915 findings; 5 versions.
+   - After save and reopen: the same.
+2. **What it is:** every Problems run appends one complete new set of **429 rule findings** (about 590,000 characters) plus a rulebook-version entry. Each finding carries its evidence, including a full copy of the pit or pipe values it looked at ("Observed pit" with id, handle, cover level and position).
+   - Earlier sets are never removed. So **the record grows by the same amount on every run, without limit**, and "results recorded in the project" means one more full copy each time.
+   - The command line says each time: "[CE] Full list saved: ...\logs\cdrules-...txt. Drawing geometry unchanged; results recorded in the project."
+   - No level, size, number, label, layer or colour changed.
+3. **Drawing file:** 1,080,181 bytes before; **1,541,666 bytes** after the three runs and a save (+461 KB, about +154 KB per run on disk).
+4. **CDCALC:** the "Creative Engineering | Calculations (CDCALC)" window has tabs Detention, Storage, Pipes and pits, Additional storage, Discharge, Drawing output, Older longitudinal, Profiles and more, plus a "Use Boyd's value (2.08 m³)" button. It shows the figures as soon as it opens ("Check these figures: they differ f..."), so there is no separate Calculate button. Screenshot `C:\Lisp Files\_TEST_COPIES_20260923\robot_shots\session_20261115_234822\B10_CDCALC.png`. Closing it changed nothing.
+5. Ended on the ordinary reset pit; last-used pit END GRATED 450 x 450, plastic False, label True, schedule True. Settings unchanged. AutoCAD closed 00:10; lock released.
+6. **For the controller (a finding, not judged by me):** on a real job run many times, CE's stored record and the drawing file would keep growing by one full findings set per run.
