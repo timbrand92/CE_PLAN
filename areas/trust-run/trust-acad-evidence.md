@@ -96,3 +96,9 @@
   - Not added: any Proposal Preview press (Apply or Cancel); that is Tim's queue item 26.
   - Read-only review: running (result below).
   - **Review (cheap read-only reviewer, 05:21): PASS on all five checks.** Only the one name was added to Edit Pipe (allow-list line 31). The v2 pin (line 2371) matches the new allow-list hash; v3 lines 42-43 match the new v2 script and allow-list prefixes; case_runner line 368 carries the same text. A press of "Edit pipe, More" still passes the never and deny checks (2408-2423) and Assert-UiWrite (1336-1345, called at 2602): AutoCAD launched by the driver or named in the lock, and the active drawing a test copy.
+- 2026-11-16 05:36: **Second and LAST name under the controller's reading of item 16** (the controller's words: "This is the LAST name ... if the box still cannot be set after this, stop and it goes to Tim"). The "Levels & Flow" tab on the More options window. Script `C:\CE_WORK\scratch\trust_install\item26b_tab.ps1`, output `item26b_tab.out`, backups `*.pre_item26b_20261116_053639`.
+  - BEFORE (More options press): `"press": ["Back"],`
+  - AFTER: `"press": ["Back", "Levels & Flow"],` (a tab switch, pressed through the driver's SelectionItem route; it writes nothing).
+  - Pins: v2 allow-list `1B1A6447B96F...460A` -> `624CBDF70DA707365130F56A63558FD26A0DC842C88F3116C15732F4A0B5177A`; v3 V2ExpectedSha `82482496C918` -> `FA824F49D515`; V2AllowExpectedSha `1B1A6447B96F` -> `624CBDF70DA7`; case_runner header the same.
+  - 0 parse errors in all three scripts; never_buttons unchanged; v3-status OK.
+  - **Review (cheap read-only reviewer, 05:39): PASS on all five checks.** Only allow-list line 44 changed; the pin (2371) and v3 lines 42-43 match; case_runner line 368 only; the guards still apply (allow-list check 2594, Assert-UiWrite 2602).
