@@ -21568,3 +21568,21 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Note 2026-11-13 (lane trust-core-ribbon):** draft fix in pull request 2094: CLEAN and FASTSAVE stop first, with one plain line, in a never-saved drawing or one whose file is a template; the managed save, both CLEAN save stages and the sheet sync write refuse a template. Built and unit-tested only; the fault was seen in AutoCAD, the fix has not been. Status unchanged.
 
 **Status:** OPEN. Seen on the installed build, 13 Nov 2026, on a template copy; Tim's real template untouched (same hash).
+
+## BUG-1458 — PIT: Esc at the first point still leaves CE's record update in the drawing (blank pit inverts filled from the pipes)
+
+**Command / Area:** PIT (New Pit). MEDIUM. UNEXPECTED STORED-DATA CHANGE.
+
+**Symptom:** Before PIT asks for the insertion point, it brings CE's whole record up to date with the drawing (`EnsureDrawingDataCurrent`). That update is not held. Its last step fills every blank pit invert from the lowest connected pipe end, and it is saved into the drawing at once. Pressing Esc at "pick the insertion point" ends PIT with "PIT command cancelled.", but the filled pit inverts (and anything else the update changed) stay in CE's record. Only U takes them back. This is the same kind of fault as CDEDIT's (queue item 27, batch 11 item 19: "CE updated its record (CDEDIT): 2 pit invert levels filled in." stayed after Cancel) and as BUG-1285 (CDTG, CDSL, CDWT).
+
+**Expected behaviour:** Esc at PIT's first prompt (or Cancel in its window) leaves CE's record byte-equal to before and prints no "CE updated its record" line. Any update PIT needs is written only with a placed pit, in the same single Undo. This is the same hold Edit Pipe, CDRUNSOLVE and CDPROPAGATE use (BUG-373, BUG-290), and CDEDIT with trust.cdeditCancelWritesNothing on. Whether a pit invert should be filled from the pipes at all is Tim's call (queue item 27): it is a level CE writes by itself.
+
+**Steps to confirm in AutoCAD:** (1) On a copy: pits P1 and P2 with cover levels and no inverts, one pipe P1 to P2 with levels 19.20 and 19.10. Save and note CE's record length. (2) Type PIT and press Esc at the insertion point. (3) Save and read CE's record. Right = record identical, P1 and P2 inverts still blank, no "CE updated its record" line. Wrong = P1 19.200 and P2 19.100 filled in, record longer.
+
+**Test that catches it:** Source guard: PIT's record update before its first prompt runs under a record-write hold, which is accepted only when a pit is placed. Fixture: a record with blank pit inverts and known pipe ends; open the hold, run the update, cancel; the in-memory record equals the copy taken before.
+
+**Reference:** Modules\Drainage\Commands\PitCommand.cs:111 (`EnsureDrawingDataCurrent` before `AskPitInsertionPoint` at :115, unheld); Services\ProjectDataService.cs `EnsureDrawingDataCurrent` (ends with `DeriveMissingPitInvertsFromPipes`, BUG-605); Services\ProjectDataService.RecordWriteHold.cs (the hold). Found by reading Civil 3.0.90.13 sources (batch 11 stack 1b939430) on 16 Nov 2026 while tracing queue item 27 for the controller. Related: queue item 27, BUG-1285, BUG-373, BUG-290, BUG-650. Not fixed (controller, 16 Nov: "note it in the carpark as its own bug ... Do not fix yet").
+
+**Evidence:** Found by reading the code on 16 Nov 2026 (lane trust-safety-fixes). Not yet seen in AutoCAD for PIT; the same update was seen filling pit inverts on CDEDIT's open (batch 11 item 19, robot, 3.0.90.13).
+
+**Status:** OPEN
