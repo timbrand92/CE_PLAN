@@ -102,3 +102,8 @@
   - Pins: v2 allow-list `1B1A6447B96F...460A` -> `624CBDF70DA707365130F56A63558FD26A0DC842C88F3116C15732F4A0B5177A`; v3 V2ExpectedSha `82482496C918` -> `FA824F49D515`; V2AllowExpectedSha `1B1A6447B96F` -> `624CBDF70DA7`; case_runner header the same.
   - 0 parse errors in all three scripts; never_buttons unchanged; v3-status OK.
   - **Review (cheap read-only reviewer, 05:39): PASS on all five checks.** Only allow-list line 44 changed; the pin (2371) and v3 lines 42-43 match; case_runner line 368 only; the guards still apply (allow-list check 2594, Assert-UiWrite 2602).
+- 2026-11-16 05:57: **"Levels & Flow" taken back OUT** (the controller: a safety list should not carry dead names; the driver's press only finds Buttons, and the tab is a TabItem). The pre-tab backups `*.pre_item26b_20261116_053639` were restored for all four files. The state just before the restore is kept as `*.pre_item26c_20261116_055750`.
+  - More options press is back to `"press": ["Back"],`. Edit Pipe keeps "Edit pipe, More" until Tim answers.
+  - Pins back to the item-26 values: allow-list `1B1A6447B96F706E372327B31FA860E4D91354B92CF0FF45F2DA06793E33460A` (v2 pin line matches); v3 V2ExpectedSha `82482496C918`, V2AllowExpectedSha `1B1A6447B96F`; case_runner the same.
+  - 0 parse errors in all three scripts; v3-status OK.
+  - Typing Q is Tim's own check now (no driver code change).
