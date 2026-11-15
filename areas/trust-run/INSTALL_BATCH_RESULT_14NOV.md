@@ -614,3 +614,12 @@ Real-AutoCAD screenshots copied to `04_REFERENCE/mockups/NEW_PIPE_ONE_PAGE_15NOV
    - **Seen in the picture (for Tim, already his queue item 9):** after Apply, P4's outlet invert **IL 19.99 is above its cover CL 18.86**. CDRUNSOLVE proposes and applies a negative-cover level on this test run.
    - **Typing a design flow (Q) through More... was NOT TESTED:** my RSQ19 brief, built from RSQ18's, has no U-06 typing step. The robot cannot open "More..." in Edit Pipe (not on its press list), so typing Q stays open for a Codex look with a written-out typing step.
    - Settings unchanged; last-used pit unchanged (ordinary).
+14. **Codex LPD17 L1, CDLPD Cancel and one U (04:19 to 04:30, 3.0.90.13, copy `CLDTP_LPD17_COPY.dwg`): OVERALL BLOCKED (L-01 on my brief's button name), L-02 DIFFERENT, L-03 PASS.** Report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_LPD17_L1_20261116_0420.md`.
+   - **Pictures checked by me:** 28 PNGs, 24 distinct. The repeats: the window title view (13 = 14 = 15 = 09) and the 10-second recapture of "LPD set." (19 = 18). I opened LPD17-18 and -23.
+   - **L-01 Cancel: BLOCKED on the brief.** The Legal point of discharge window has a **"Close"** button, not "Cancel". Codex rightly did not substitute; it pressed Esc on the window instead. The stored LPD (R1) and count (1054) were unchanged, but Close itself was not pressed.
+   - **L-02 set the LPD on pipe P2 to P1: DIFFERENT (LPD17-18).** "LPD set.", and R1 names PipeHandle 109835, but **EndIndex 0, PitHandle 109768 (P2), InvertLevel 17.08**. The marker and callout "CONNECT TO KERB & CHANNEL AT APPROX IL17.08m TO COUNCIL SATISFACTION..." are at **P2**, the upstream end; the FALL arrows on the drawing point to P1.
+     - In LPD16 (03:27), the same "middle of the pipe" click gave EndIndex 1, P1, IL 16.98.
+     - So CDLPD seems to take the pipe end nearest the click, not the downstream end.
+     - **Finding for the controller and Tim (engineering, not judged by me):** a drafter who clicks the upstream half of the outlet pipe gets the legal point of discharge at the upstream pit.
+   - **L-03 one U PASS (LPD17-23):** the echo was CDLPD; the new callout is gone; R1 is exactly the START reading (the original COUNCIL STUB LPD, PipeHandle 109500); count 1054.
+   - Settings unchanged; last-used pit unchanged; nothing saved.
