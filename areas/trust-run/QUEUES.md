@@ -386,3 +386,13 @@ The controller had asked: "Should a tool count as accepted on robot plus Codex a
 3. **Care the controller keeps:** a tool with a part of its everyday job not yet seen (for example Edit Pipe Save inside CDEDIT) is not counted until that part is seen. If Tim meant something narrower or wider he will say so; the count is easy to take back.
 
 **Counted on this reading, Civil 3.0.90.10:** PIT (Codex TPIT14 5 of 5, robot 5 of 5), CD (Codex TCD14 5 of 5, robot 5 of 5). **Held:** CDEDIT (Edit Pipe Save not tried), PITSCHEDULE (every step passed but over two runs, on a two-pit drawing with no pipes; one clean run on a drawing with pipes wanted first).
+
+## BUILD NEW PIPE (Tim, to the controller directly, Sun 15 Nov 2026, about 14:37 PC clock)
+
+The controller had written: "New Pipe one-page window: you OK'd the picture. Say 'build New Pipe' if you want it built." Tim: "build New Pipe".
+
+**What it covers (controller's reading):**
+1. Build the New Pipe one-page window to the picture he OK'd on 15 Nov (`04_REFERENCE/mockups/NEW_PIPE_DIRECTION_TICK_EDIT_PIT_15NOV.html`, "OK as shown"), following his UI rules file. This is his order for one new draft for this one screen; prove-don't-draft stays for everything else.
+2. The present New Pipe window stays as the working path until the new one has been seen working in AutoCAD; the new one sits behind a switch.
+3. Before any install: a real render of the built window beside the picture, differences listed, shown to Tim. It then goes onto his PC in a trial batch under the standing trial approval and is tested (Cancel, Esc, draw, one Undo, save and reopen).
+4. **Not covered:** merging into shipped lines, colleagues, any other new screen.
