@@ -54,6 +54,19 @@
 6. **Blocks**: many are smart blocks with a built-in mask (downpipe, floor waste, inspection opening, strip drain label). About 50 blocks have machine-made names (pasted in from other drawings).
 7. **Placeholders in the template**: blank forms such as "IL _____", "FFL __.__", "____ lt water tank" sit in the drawing ready to be copied and filled in.
 
+## Seen as a picture (added 16 Nov 2026, afternoon)
+
+The issued "for council approval" PDF of the same job was turned into pictures and read. Headless plotting of the drawing itself did not work on this PC (the headless engine found no plotters), so the issued PDF was used instead. What the picture added to the lists above:
+
+1. **Sheet layout.** Plan top-left, about half the sheet. General notes column and full civil legend on the right. Pit schedule and detention criteria box directly under the plan. Details across the bottom. Council notes, charged-system notes and a tank installation picture bottom-right beside the title block. A row of coloured warning / read-with boxes along the top edge. Approval stamp box ("For council approval, not for construction") above the title block.
+2. **Colour carries meaning on the issued sheet**: new drain pipes blue dashed, charged pipes red dashed, suspended pipes magenta, building footprint light blue, driveway slab grey, tree zones green hatch, architect's background grey. The sheet says "print in full colour".
+3. **Pit schedule columns**: pit no., pit size, inlet (from, dia, invert level), outlet (dia, invert level), cover level, depth to outlet, type of lid and remarks. One pit can take two rows when it has two inlets. Three standing notes under it.
+4. **Detention criteria box rows**: permitted site discharge (l/s), head (mm), orifice diameter (mm), top water level, volume required, then each storage (each water tank) and a total.
+5. **Plan labels**: pipe note on each run (size, material, class, grade, e.g. "150 dia. UPVC SN8 pipe at 1 in 100"), flow arrows, pit tag in a circle, cover level and invert levels in red at each pit, "PP" plastic pits with cover levels, downpipe tags, tank note (total / detention / reuse litres), roof-to-tank areas box, floor levels, finished ground levels, "match existing levels", bench mark box, crossover notes, connection note to the council pipe with an approximate invert level, title boundary lengths and bearings, street name.
+6. **Details seen**: orifice pit detail drawn with this job's own numbers (cover level, top water level, baffle height, orifice size, inlet and outlet inverts, chamber sizes); junction pit; pipe bedding under pavement and grass; trench beside footing with angle-of-repose values; services penetration through footing; flexible service pipe through footing; water tank detail with this job's litres and tank size; charged system diagram; driveway slab note, re-entrant bars, lap splice, sawcut.
+7. **The same fact, counted on this one sheet**: the control pit's inlet invert appears 5 times (plan, schedule twice, detail twice); its outlet invert 3 times; its cover level 3 times; orifice size, head and top water level twice each; each tank's litres 3 to 4 times. Depth to outlet in the schedule is cover level minus outlet invert, worked by hand.
+8. **Assumptions are written as notes**: the connection note says "approx" invert to council's satisfaction, builder to confirm; the council notes say the invert at the discharge point is assumed.
+
 ## First observations for planning (mine, to be tested with Tim)
 
 1. **Levels are loose text.** An invert level is typed text beside a pit; nothing ties it to the pit or the pipe. If a level changes, every text is found and retyped by hand. This fits "drawing does not match" being a common cause of rework.
