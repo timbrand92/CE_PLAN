@@ -655,3 +655,17 @@ Real-AutoCAD screenshots copied to `04_REFERENCE/mockups/NEW_PIPE_ONE_PAGE_15NOV
     - **After one U:** the echo was CDEDIT. P1 and P2 inverts are blank again; record 4,790 characters, as before opening.
     - Ended on the ordinary reset pit; settings unchanged; last-used pit ordinary.
     - For the controller to judge (not judged by me).
+20. **Codex RSQ21 Q1, CDRUNSOLVE steps b to d on the room-checked drawing, flow SET BY TEST (06:26 to 06:37, 3.0.90.13, copy `CLDTP_RSQ21.dwg` of `CLDTP_RSQ20P.dwg`): Codex's OVERALL DIFFERENT (2 PASS, 4 DIFFERENT, all SURE); with the path stamp aside, every step is seen working.** Report `C:\Lisp Files\_TEST_COPIES_20260923\CODEX_VERIFY_RSQ21_Q1_20261116_0626.md`. **Typing the flow Tim's way: NOT TESTED** (neither Codex nor the robot can reach the box); it is Tim's own check.
+    - **Pictures checked by me:** 59 PNGs, 48 distinct; the claim pictures (-20, -28, -30, -42) are unique. I opened RSQ21-20 and -30.
+    - **Records compared by me** (`C:\Lisp Files\_TEST_COPIES_20260923\LOOKS\RSQ21_records\`):
+      - RQ_0 is empty: the first read failed right after launch.
+      - RQ_1 to RQ_2 (Esc at the first pick) differ ONLY in "drawingPath": the record's path stamp moved from the copy's old folder to `_TEST_COPIES` on CE's first record touch. This is the known stamp that our compare rule ignores, and it also explains the record difference I saw around Cancel in the 04:43 probe.
+      - RQ_3 (after Cancel) = RQ_2; RQ_5 (after one U) = RQ_2 = RQ_3, byte for byte; RQ_6 (after save and reopen) = RQ_4, byte for byte.
+      - Apply (RQ_2 to RQ_4) changed exactly: pipe fromInvert 19.20 -> 19.32, and P1 / P2 pit invertLevel "" -> "19.200" / "19.100". The command line: "CE updated its record (CDRUNSOLVE): 2 pit invert levels filled in." One U took all three back.
+    - **Q-01:** the record carries designFlowLps 10.0, source "set by test".
+    - **Q-02 Esc at the first pick:** seen; "*Cancel*"; IL 19.20 / 19.10 kept.
+    - **Q-03 preview, then Cancel (RSQ21-20):** "Whole-run solve — 1 pipe(s), 2 pit(s)", "1 change(s) to apply (1 already at the proposed value)": P1 → P2 Upstream IL 19.20 → 19.32. Reason: "Whole-run solve: DN100 at 1:45, 1.27 m/s. Material: UPVC; Manning n 0.010. Design flow 10.00 L/s, from set by test." Below: "Anchored on P2 (connection pit) at IL 19.10; run ends at the connection — council assets untouched." and "Design flows used: P1 to P2 10.00 L/s, from set by test." **No negative-cover or re-validation line.** Cancel: "[CDRUNSOLVE] Cancelled - drawing unchanged."
+    - **Q-04 Apply PASS:** IL 19.32 on screen; "[CDRUNSOLVE] Applied 1 change(s) from 'Whole-run solve - 1 pipe(s), 2 pit(s)'. ... Min grade: 1:45." The record reader printed an error after writing RQ_4 (its file is complete).
+    - **Q-05 one U (RSQ21-30):** "Command: U" / "CDRUNSOLVE"; the drawing shows IL 19.20 and 19.10 again; record equal to before Apply.
+    - **Q-06 Apply again, save and reopen PASS:** 19.32 kept; RQ_6 = RQ_4.
+    - Settings unchanged; last-used pit ordinary.
