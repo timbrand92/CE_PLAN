@@ -116,6 +116,14 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-070** (16 Nov 2026, evening) "approve those new pit and pipe windows, all other windows should match". The Pit and Pipe windows (version 3 of `pictures\pit_window_full_size.html` and `pictures\pipe_window_full_size.html`, as sent to him working) are approved, and they are the pattern every other window must match. Written up as `design\UI_PLAN.md`. At the time, thirteen tightening fixes from the separate UI critic were being applied (version 4); they keep the approved look. The content of each window (which choices, their order and words) has not been gone through line by line.
 
+**D-071** (16 Nov 2026, evening) Job tracking, how it is done today and where it should live. Asked how jobs are tracked today, Tim ticked "In my head / asking around", "Emails and folders" and "Another program", and wrote: "im building a creative engineering job manager program and ideally we build this in". Read as: job tracking belongs in the office's Job Manager program (the Job Manager website inside the CE_PM project, per `C:\TimOS\ROUTER.md`), not as a second, separate tracker inside the AutoCAD plugin. The plugin's part is to hand that program what only the drawing knows (stage reached, what was issued and when, time on the drawing, assumed values still open) and to show it back in the Manager window. How the two join has not been designed and the Job Manager's own plan has not been read by this chat: Stage 4.
+
+**D-072** (16 Nov 2026, evening) Time on a job: "count by itself but you have ability to check". Time is counted automatically; the person can check (and correct) it.
+
+**D-073** (16 Nov 2026, evening) Who sees hours: "Everyone sees job totals; only you see who".
+
+**D-074** (16 Nov 2026, evening) Waiting on something that is not a value in the drawing: "A short note on the job in the Manager". Assumed values in the drawing still flag themselves.
+
 ## How levels are designed
 
 **D-016** (16 Nov 2026) [8v] Moving a pit has no single rule for levels: "IT DEPENDS ON THE DESIGN NO? SO INVERTS MIGHT HAVE TO CHANGE UPSTREAM OR WE MIGHT NEED TO UPDATE INVERTS TO SUIT OR GRADE".

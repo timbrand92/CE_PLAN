@@ -9,7 +9,7 @@
 :root{
  --font:"Segoe UI Variable Text","Segoe UI",system-ui,-apple-system,Arial,sans-serif;
  --page:#10141b;--model:#141922;--rib:#1d2430;--rib2:#252d3b;--ribt:#b6bfcd;--cmdbg:#1a212c;
- --win:#1c2331;--card:#232c3b;--prev:#1a212d;--bd:#333e50;--bd2:#2b3544;
+ --win:#1c2331;--card:#242e3e;--prev:#1a212d;--bd:#44516a;--bdw:#333e50;--bd2:#2b3544;--neu:#33405a;
  --t1:#eef2f8;--t2:#b3bccb;--t3:#8f9aad;
  --acc:#5AA2F0;--accbtn:#1E5AA8;--accbg:rgba(90,162,240,.16);
  --ok:#6fdba6;--okbg:rgba(76,195,138,.15);--warn:#f2bd62;--warnbg:rgba(240,178,74,.15);--bad:#ff9c94;--badbg:rgba(255,122,112,.16);
@@ -18,8 +18,8 @@
  --shadow:0 8px 32px rgba(3,8,20,.35);--sh2:0 1px 2px rgba(3,8,20,.25);
 }
 html[data-theme="light"]{
- --page:#eef1f6;--model:#f2f0e9;--rib:#e4e8ef;--rib2:#f3f5f9;--ribt:#3a4558;--cmdbg:#e4e8ef;
- --win:#f5f7fb;--card:#ffffff;--prev:#fbfaf5;--bd:#d9dfe9;--bd2:#e6eaf1;
+ --page:#eef1f6;--model:#e9edf2;--rib:#e4e8ef;--rib2:#f3f5f9;--ribt:#3a4558;--cmdbg:#e4e8ef;
+ --win:#f5f7fb;--card:#ffffff;--prev:#F3F5F8;--bd:#d3dae5;--bdw:#d3dae5;--bd2:#e6eaf1;--neu:#e6eaf1;
  --t1:#172033;--t2:#455168;--t3:#66728a;
  --acc:#1E5AA8;--accbtn:#1E5AA8;--accbg:rgba(30,90,168,.10);
  --ok:#17623a;--okbg:#e2f3e9;--warn:#7a5200;--warnbg:#fcefcf;--bad:#a3231b;--badbg:#fde5e3;
@@ -40,15 +40,15 @@ html,body{margin:0;background:var(--page);color:var(--t1);font-family:var(--font
 #design{position:absolute;left:0;top:0;width:1920px;height:1080px;transform-origin:0 0;background:var(--model);overflow:hidden;font-family:var(--font)}
 
 /* AutoCAD screen */
-#ribbon{position:absolute;left:0;top:0;width:1920px;height:90px;background:var(--rib);border-bottom:1px solid var(--bd)}
+#ribbon{position:absolute;left:0;top:0;width:100%;height:90px;background:var(--rib);border-bottom:1px solid var(--bd)}
 #ribbon .tabs{display:flex;gap:8px;padding:8px 16px 0}
 #ribbon .tab{padding:8px 16px;font-size:14px;color:var(--ribt);border-radius:8px 8px 0 0}
 #ribbon .tab.on{background:var(--rib2);color:var(--t1);font-weight:600}
 #ribbon .panels{position:absolute;left:0;top:40px;right:0;bottom:0;background:var(--rib2);display:flex;gap:16px;padding:8px 16px}
 #ribbon .pn{width:152px;border-right:1px solid var(--bd);display:flex;gap:8px;align-items:flex-start;padding-right:16px}
 #ribbon .ic{width:32px;height:32px;border:1px solid var(--bd);border-radius:8px}
-#model{position:absolute;left:0;top:90px;width:1920px;height:934px;display:block;background:var(--model)}
-#cmd{position:absolute;left:0;top:1024px;width:1920px;height:56px;background:var(--cmdbg);border-top:1px solid var(--bd);color:var(--t2);font:14px Consolas,"Courier New",monospace;padding:16px}
+#model{position:absolute;left:0;top:90px;width:100%;height:calc(100% - 146px);display:block;background:var(--model)}
+#cmd{position:absolute;left:0;bottom:0;width:100%;height:56px;background:var(--cmdbg);border-top:1px solid var(--bd);color:var(--t2);font:14px Consolas,"Courier New",monospace;padding:16px}
 .t{font-family:Consolas,"Courier New",monospace;fill:var(--txt)}
 .t.cl{fill:var(--cl)}.t.il{fill:var(--il)}.t.pl{fill:var(--pl)}.t.pp{fill:var(--cl)}
 
@@ -56,7 +56,7 @@ html,body{margin:0;background:var(--page);color:var(--t1);font-family:var(--font
 #inspbar.on{opacity:1;visibility:visible;transition:opacity 320ms ease-out,visibility 0s}
 
 /* window */
-#win{position:absolute;left:192px;top:108px;width:1536px;height:864px;background:var(--win);border:1px solid var(--bd);border-radius:12px;box-shadow:var(--shadow);display:flex;flex-direction:column;color:var(--t1);font-size:14px;line-height:20px;overflow:hidden;z-index:3;opacity:1;transform:none;transition:opacity 320ms ease-out,transform 320ms ease-out,visibility 0s}
+#win{position:absolute;left:10%;top:10%;width:80%;height:80%;background:var(--win);border:1px solid var(--bdw);border-radius:12px;box-shadow:var(--shadow);display:flex;flex-direction:column;color:var(--t1);font-size:14px;line-height:20px;overflow:hidden;z-index:3;opacity:1;transform:none;transition:opacity 320ms ease-out,transform 320ms ease-out,visibility 0s}
 #win.hid{opacity:0;transform:scale(.985);visibility:hidden;pointer-events:none;transition:opacity 220ms ease-out,transform 220ms ease-out,visibility 0s linear 220ms}
 #win.instant,#inspbar.instant{transition:none!important}
 #tb{height:40px;flex:none;display:flex;align-items:center;justify-content:space-between;padding:0 8px 0 24px;font-weight:600;font-size:14px;border-bottom:1px solid var(--bd2)}
@@ -68,24 +68,24 @@ html,body{margin:0;background:var(--page);color:var(--t1);font-family:var(--font
 
 /* parts: card */
 .card{background:var(--card);border:1px solid var(--bd);border-radius:12px;box-shadow:var(--sh2);padding:16px;display:flex;flex-direction:column;gap:8px;min-width:0}
-.lab{font-size:14px;color:var(--t2);font-weight:400}
-.lab i{font-style:normal;color:var(--t3);margin-right:8px}
-.ans{font-size:28px;line-height:32px;color:var(--t1);display:flex;align-items:baseline;gap:8px;min-height:40px}
+.lab{font-size:14px;color:var(--t1);font-weight:500}
+.lab i{font-style:normal;color:inherit;margin-right:8px}
+.ans{font-size:32px;line-height:40px;color:var(--t1);display:flex;align-items:baseline;gap:8px;min-height:40px}
 .ans .num{font-weight:600}
 .ans .unit{font-weight:400;color:var(--t2);font-size:16px}
 .note{font-size:13px;line-height:16px;color:var(--t3);margin-top:auto}
 
 /* parts: fields */
-.field{display:grid;grid-template-columns:72px 1fr;align-items:center;gap:8px;min-height:32px}
+.field{display:grid;grid-template-columns:72px 1fr;align-items:center;gap:8px;min-height:40px}
 .field>label{color:var(--t2)}
 .dd{position:relative;display:block;min-width:0}
 .dd select{appearance:none;-webkit-appearance:none;width:100%;height:32px;padding:0 32px 0 8px;font:400 14px var(--font);color:var(--t1);background:transparent;border:1px solid var(--bd);border-radius:8px;cursor:pointer;outline:0}
 .dd:after{content:"";position:absolute;right:12px;top:10px;width:6px;height:6px;border-right:2px solid var(--t3);border-bottom:2px solid var(--t3);transform:rotate(45deg);pointer-events:none}
 .dd select:focus-visible,.nb:focus-visible,.btn:focus-visible{box-shadow:0 0 0 2px var(--acc)}
 .dd select option{background:var(--card);color:var(--t1)}
-.dd.big select{height:40px;font:600 28px var(--font);padding:0 40px 0 8px;border-color:transparent;background:var(--accbg);color:var(--t1)}
-.dd.big:after{top:13px;right:16px}
-.dd.big.reg select{font-weight:400}
+.dd.big{display:inline-block}
+.dd.big select{field-sizing:content;width:auto;height:40px;font:600 32px var(--font);padding:0 24px 0 0;border:0;background:transparent;color:var(--t1)}
+.dd.big:after{top:15px;right:4px;width:5px;height:5px}
 .nb{font:400 14px var(--font);color:var(--t1);height:32px;width:100%;padding:0 8px;background:transparent;border:1px solid var(--bd);border-radius:8px;outline:0;min-width:0}
 .nb.r{text-align:right}
 .nb[readonly]{border-color:transparent;background:transparent}
@@ -99,25 +99,25 @@ input[type=number]::-webkit-inner-spin-button{display:none}
 .tick+.tick{margin-top:0}
 
 /* parts: sum */
-.sum{display:grid;grid-template-columns:16px 1fr 96px 88px;column-gap:8px;align-items:center}
+.sum{display:grid;grid-template-columns:16px 1fr 80px 80px;column-gap:8px;align-items:center}
 .sum>div{min-height:32px;display:flex;align-items:center}
 .sum .sg{justify-content:center;color:var(--t2)}
-.sum .sf{justify-content:flex-end;font-variant-numeric:tabular-nums}
-.sum .sf .nb,.sum .sf .dd{width:100%}
-.sum .sf .dd select{padding:0 32px 0 8px}
+.sum .sf{justify-content:flex-end;font-variant-numeric:tabular-nums;padding-right:9px}
+.sum .sf .nb{width:80px;margin-right:-9px;height:32px}
+.sum .sc .dd select{height:28px;font:400 13px var(--font);color:var(--t3);padding:0 20px 0 8px;border-color:var(--bd2)}
+.sum .sc .dd:after{top:9px;right:8px;width:5px;height:5px}
 .sum .sc{font-size:13px;color:var(--t3)}
-.sum .res.sf{font-weight:600;font-size:16px;border-top:1px solid var(--t2);border-bottom:3px double var(--t2);padding-right:9px}
+.sum .res.sf{font-weight:600;font-size:16px;border-top:1px solid var(--t2);border-bottom:3px double var(--t2);}
 .sum .res.sl{font-weight:400;color:var(--t1)}
-.sf .nb.r{padding-right:8px}
 
 /* parts: status pill */
-.pill{display:flex;gap:8px;align-items:flex-start;padding:8px 16px;border-radius:8px;min-height:48px;font-size:14px;line-height:20px;transition:background 300ms ease-out,color 300ms ease-out}
-.pill svg{flex:none;margin-top:1px}
-.pill b{font-weight:600}
+.pill{display:flex;align-items:center;padding:8px 8px 8px 16px;border-radius:8px;border-left:4px solid currentColor;min-height:40px;font-size:14px;line-height:20px;white-space:nowrap;transition:background 300ms ease-out,color 300ms ease-out}
+.pill b{font-weight:600;margin-right:4px}
 .pill.ok{background:var(--okbg);color:var(--ok)}
 .pill.warn{background:var(--warnbg);color:var(--warn)}
 .pill.bad{background:var(--badbg);color:var(--bad)}
 .mini{display:inline-flex;align-items:center;font-size:13px;line-height:16px;font-weight:600;padding:0 8px;border-radius:8px;height:24px}
+.mini.neutral{background:var(--neu);color:var(--t2)}
 .mini.warn{background:var(--warnbg);color:var(--warn)}
 .mini.bad{background:var(--badbg);color:var(--bad)}
 .mini.ok{background:var(--okbg);color:var(--ok)}
@@ -150,15 +150,16 @@ input[type=number]::-webkit-inner-spin-button{display:none}
 <style id="layout">
 .top{flex:1;display:flex;gap:16px;min-height:0}
 .prev{flex:none;height:100%;aspect-ratio:1/1}
-#cards{flex:1;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr auto;gap:16px;min-width:0}
-#tally,#side{display:block;width:100%}
+#cards{flex:1;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr auto;gap:16px;min-width:0;min-height:0}
+#tally{display:block;width:100%;flex:none}
+#side{display:block;width:100%;flex:1;min-height:0}
 .pipeln{display:flex;align-items:center;gap:8px;min-height:32px}
 .pipeln svg{flex:none;color:var(--t2)}
 .pipeln span.k{color:var(--t2);width:32px}
-.ticks{display:flex;flex-direction:column}
-.field{min-height:36px}
-.sum>div{min-height:36px}
-.ans{min-height:44px}
+.rowflex{display:flex;gap:16px;align-items:center;justify-content:space-between}
+.tickrow{display:flex;gap:24px}
+.tickrow .tick{min-height:32px}
+#lp{display:block;width:100%}
 </style>
 </head>
 <body>
@@ -189,36 +190,39 @@ input[type=number]::-webkit-inner-spin-button{display:none}
           <div id="cards">
             <section class="card">
               <div class="lab"><i>1</i>Pit</div>
-              <div class="ans"><div class="dd big" style="width:240px"><select id="size"><option>350 x 350</option><option selected>450 x 450</option><option>600 x 600</option><option>600 x 900</option><option>900 x 900</option></select></div></div>
+              <div class="ans"><div class="dd big"><select id="size"><option>350 x 350</option><option selected>450 x 450</option><option>600 x 600</option><option>600 x 900</option><option>900 x 900</option></select></div></div>
               <div class="field"><label for="num">Number</label><input class="nb" type="text" id="num" value="P3" maxlength="8"></div>
               <div class="field"><label for="kind">Kind</label><div class="dd"><select id="kind"><option selected>Junction pit</option><option>Grated pit</option><option>Plastic pit</option><option>Orifice pit</option><option>Silt pit</option></select></div></div>
               <div class="field"><label for="lid">Lid</label><div class="dd"><select id="lid"><option selected>Grated</option><option>Solid</option></select></div></div>
               <label class="tick"><input type="checkbox" id="det"><span class="box"></span>Holds detention water</label>
-              <svg id="tally" viewBox="0 0 368 104" height="104"></svg>
+              <svg id="tally" viewBox="0 0 368 88" height="88"></svg>
               <div class="note">The five sizes are drawn to the same scale.</div>
             </section>
             <section class="card">
               <div class="lab"><i>2</i>Levels</div>
               <div class="ans"><span class="num" id="a2">0.62</span><span class="unit">m deep</span></div>
+              <div id="st1" class="pill ok"></div>
               <div class="sum">
                 <div class="sg"></div><div class="sl">Cover level</div><div class="sf"><input class="nb r" type="number" id="cover" value="5.75" step="0.01"></div><div class="sc">measured</div>
-                <div class="sg">−</div><div class="sl">Outlet invert</div><div class="sf" style="padding-right:9px">5.13</div><div class="sc">from P2 pipe</div>
+                <div class="sg">−</div><div class="sl">Outlet invert</div><div class="sf">5.13</div><div class="sc">from P2 pipe</div>
                 <div class="sg">=</div><div class="sl res">Depth</div><div class="sf res" id="dep">0.62</div><div class="sc">worked out</div>
               </div>
-              <svg id="side" viewBox="0 0 368 160" height="160"></svg>
-              <div id="st1" class="pill ok"></div>
+              <svg id="side" viewBox="0 0 368 150" preserveAspectRatio="xMidYMid meet"></svg>
             </section>
             <section class="card">
               <div class="lab"><i>3</i>Pipes joined</div>
-              <div class="pipeln"><svg width="20" height="20" viewBox="0 0 20 20"><path d="M3 10H15M11 5.5L15.5 10L11 14.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="k">In</span><span>from P4 · 150 dia · IL 5.15</span></div>
-              <div class="pipeln"><svg width="20" height="20" viewBox="0 0 20 20"><path d="M3 10H15M11 5.5L15.5 10L11 14.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="k">Out</span><span>to P2 · 150 dia · IL 5.13</span></div>
+              <div class="rowflex"><div>
+                <div class="pipeln"><svg width="20" height="20" viewBox="0 0 20 20"><path d="M3 10H15M11 5.5L15.5 10L11 14.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="k">In</span><span>from P4 · 150 dia · IL 5.15</span></div>
+                <div class="pipeln"><svg width="20" height="20" viewBox="0 0 20 20"><path d="M3 10H15M11 5.5L15.5 10L11 14.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="k">Out</span><span>to P2 · 150 dia · IL 5.13</span></div></div>
+                <svg id="sk" viewBox="0 0 120 64" width="120" height="64"></svg></div>
               <div class="note">Change a pipe by double-clicking the pipe.</div>
             </section>
             <section class="card">
               <div class="lab"><i>4</i>Shown on the drawing</div>
-              <div class="ticks"><label class="tick"><input type="checkbox" id="tag" checked><span class="box"></span><span id="taglbl">Tag P3</span></label>
+              <div class="tickrow"><label class="tick"><input type="checkbox" id="tag" checked><span class="box"></span><span id="taglbl">Tag P3</span></label>
               <label class="tick"><input type="checkbox" id="clt" checked><span class="box"></span>Cover level text</label></div>
               <div class="field"><label for="turn">Turned</label><div class="dd"><select id="turn"><option selected>Square to the sheet</option><option>In line with the outlet pipe</option></select></div></div>
+              <svg id="lp" viewBox="0 0 368 56" height="56"></svg>
             </section>
           </div>
         </div>
@@ -240,7 +244,7 @@ function tween(from,to,ms,step){var t0=null;function f(t){if(t0===null)t0=t;var 
 var AMBER='<svg width="20" height="20" viewBox="0 0 20 20"><path d="M10 2.5L18.5 17.5H1.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M10 8V12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="10" cy="14.6" r="1" fill="currentColor"/></svg>';
 var GREEN='<svg width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M6 10.3L8.8 13L14 7.4" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 var RED='<svg width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M7 7L13 13M13 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>';
-function pill(box,kind,word,text){var h=(kind==='ok'?GREEN:kind==='warn'?AMBER:RED)+'<span><b>'+word+'</b> '+text+'</span>';if(box.dataset.h===h)return;box.dataset.h=h;box.className='pill '+kind;box.innerHTML=h;}
+function pill(box,kind,word,text){var h='<span><b>'+word+'</b>'+text+'</span>';if(box.dataset.h===kind+h)return;box.dataset.h=kind+h;box.className='pill '+kind;box.innerHTML=h;}
 function mini(kind,word){return '<span class="mini '+kind+'">'+word+'</span>';}
 function f2(n){return n.toFixed(2);}
 function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');}
@@ -249,12 +253,13 @@ function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');}
 var RES=1080;
 function setTheme(t){document.documentElement.setAttribute('data-theme',t);$('thDark').className=t==='dark'?'on':'';$('thLight').className=t==='light'?'on':'';}
 function fit(){
-  var W=RES===1440?2560:1920,H=RES===1440?1440:1080,k=H/1080;
+  var W=RES===1440?2560:1920,H=RES===1440?1440:1080,k=RES===1440?1.25:1;
   var avail=document.documentElement.clientWidth-32,s=Math.min(1,avail/W);
   var st=$('stage');st.style.width=W+'px';st.style.height=H+'px';st.style.transform='scale('+s+')';
-  $('design').style.transform='scale('+k+')';
+  var d=$('design');d.style.width=(W/k)+'px';d.style.height=(H/k)+'px';d.style.transform='scale('+k+')';
   $('wrap').style.height=Math.round(H*s)+'px';
   $('r1080').className=RES===1080?'on':'';$('r1440').className=RES===1440?'on':'';
+  if(window.__redraw)window.__redraw();
 }
 function inspect(on,instant){
   var w=$('win'),b=$('inspbar');
@@ -280,7 +285,7 @@ function wireCommon(){
 (function(){
 var SIZES={'350 x 350':[.35,.35,.45],'450 x 450':[.45,.45,.60],'600 x 600':[.6,.6,.90],'600 x 900':[.6,.9,1.20],'900 x 900':[.9,.9,null]};
 var ORDER=['350 x 350','450 x 450','600 x 600','600 x 900','900 x 900'];
-var BASE_IL=5.13,CX=16,CY=4,cur=null,last=null;
+var BASE_IL=5.13,CX=16,CY=4,cur=null;
 function S(){var st={num:$('num').value,kind:$('kind').value,size:$('size').value,lid:$('lid').value,cover:parseFloat($('cover').value),tag:$('tag').checked,clt:$('clt').checked};
   st.w=cur?cur.w:SIZES[st.size][0];st.h=cur?cur.h:SIZES[st.size][1];return st;}
 
@@ -309,10 +314,11 @@ function scene(svg,vb,ppm,ts,st,ghost,zoom){
   pit(CX,CY,w,h,true);
   if(st.kind==='Grated pit'){var n=Math.max(3,Math.round(w/.09)),i;for(i=1;i<n;i++){var gx=lx+w*i/n;el(g,'line',{x1:gx,x2:gx,y1:top+.04,y2:bot-.04,stroke:'var(--acc)','stroke-opacity':.7,'stroke-width':px(1)});}}
   arrowV(23.65,8);
-  if(zoom){var yy=CY+.2+ts,l1=18*.6*ts,l2=11*.6*ts;
-    arrowH(CX-1.1,CY-.28,.45);arrowH(CX+1.1,CY-.28,.45);
-    T(lx-.2,yy,'150 DIA. UPVC PIPE','pl','end',{textLength:l1,lengthAdjust:'spacingAndGlyphs'});T(lx-.2,yy+ts*1.3,'AT 1 IN 100','pl','end',{textLength:l2,lengthAdjust:'spacingAndGlyphs'});
-    T(rx+.2,yy,'150 DIA. UPVC PIPE','pl','start',{textLength:l1,lengthAdjust:'spacingAndGlyphs'});T(rx+.2,yy+ts*1.3,'AT 1 IN 100','pl','start',{textLength:l2,lengthAdjust:'spacingAndGlyphs'});
+  if(zoom){var yy=CY+.2+ts,u=ts*1.3;
+    arrowH(CX-.95,CY-.28,.4);arrowH(CX+.95,CY-.28,.4);
+    [['150 DIA.',8],['UPVC PIPE',9],['AT 1 IN 100',11]].forEach(function(p,i){
+      T(lx-.2,yy+u*i,p[0],'pl','end',{textLength:p[1]*.6*ts,lengthAdjust:'spacingAndGlyphs'});
+      T(rx+.2,yy+u*i,p[0],'pl','start',{textLength:p[1]*.6*ts,lengthAdjust:'spacingAndGlyphs'});});
   } else {arrowH(12,CY-.32);arrowH(20,CY-.32);
     T(12,CY+.2+ts+.08,LBL,'pl','middle',{textLength:LL,lengthAdjust:'spacingAndGlyphs'});T(20,CY+.2+ts+.08,LBL,'pl','middle',{textLength:LL,lengthAdjust:'spacingAndGlyphs'});}
   T(24.2+ts+.02,8,LBL,'pl','middle',{textLength:LL,lengthAdjust:'spacingAndGlyphs',transform:'rotate(-90 '+(24.2+ts+.02)+' 8)'});
@@ -327,19 +333,18 @@ function scene(svg,vb,ppm,ts,st,ghost,zoom){
   if(moved)[lx,rx].forEach(function(x){el(g,'circle',{cx:x,cy:CY,r:Math.min(.22,w*.45),fill:'none',stroke:'var(--amber)','stroke-width':px(3)});});
 }
 
-function tally(st){var s=$('tally');s.innerHTML='';var x=6,base=76,k=80;
+function tally(st){var s=$('tally');s.innerHTML='';var x=6,base=62,k=64;
   ORDER.forEach(function(n){var d=SIZES[n],ww=d[0]*k,hh=d[1]*k,sel=n===st.size;
     el(s,'rect',{x:x,y:base-hh,width:ww,height:hh,rx:3,fill:sel?'var(--acc)':'none',stroke:sel?'var(--acc)':'var(--t3)','stroke-width':1.4});
-    el(s,'text',{x:x+ww/2,y:98,'text-anchor':'middle',class:'stx'+(sel?'2':'')},n.replace(' x ','x').split('x')[0]+(d[0]!==d[1]?'x'+d[1]*1000:''));
-    x+=ww+31;});}
+    el(s,'text',{x:x+ww/2,y:82,'text-anchor':'middle',class:'stx'+(sel?'2':'')},d[0]*1000+(d[0]!==d[1]?'x'+d[1]*1000:''));
+    x+=ww+42;});}
 function sideView(st){var s=$('side');s.innerHTML='';
-  var cl=st.cover,dep=cl-BASE_IL;if(isNaN(cl)){return;}
-  var top=28,sc=(160-top-16)/(cl-4.96),y=function(l){return top+(cl-l)*sc;};
+  var cl=st.cover,dep=cl-BASE_IL;if(isNaN(cl))return;
+  var top=26,sc=(150-top-14)/(cl-4.96),y=function(l){return top+(cl-l)*sc;};
   var cx=184,hw=34+st.w*60,x0=cx-hw,x1=cx+hw,yb=y(4.96);
   el(s,'line',{x1:8,x2:360,y1:top,y2:top,stroke:'var(--t2)','stroke-width':1.4});
   el(s,'text',{x:8,y:top-8,class:'stx2'},'CL '+f2(cl));
-  el(s,'rect',{x:x0,y:top,width:x1-x0,height:yb-top,fill:'var(--accbg)',stroke:'var(--acc)','stroke-width':2});
-  el(s,'rect',{x:x0+1,y:top-1,width:x1-x0-2,height:3,fill:'var(--card)'});
+  el(s,'rect',{x:x0,y:top,width:x1-x0,height:yb-top,fill:'none',stroke:'var(--pit)','stroke-width':2});
   [[5.15,8,x0],[5.13,x1,360]].forEach(function(p){var yi=y(p[0]),yo=y(p[0]+.15);
     el(s,'rect',{x:Math.min(p[1],p[2]),y:yo,width:Math.abs(p[2]-p[1]),height:yi-yo,fill:'var(--card)'});
     el(s,'line',{x1:p[1],x2:p[2],y1:yo,y2:yo,stroke:'var(--pipe)','stroke-width':1.6});el(s,'line',{x1:p[1],x2:p[2],y1:yi,y2:yi,stroke:'var(--pipe)','stroke-width':1.6});});
@@ -350,22 +355,34 @@ function sideView(st){var s=$('side');s.innerHTML='';
   el(s,'path',{d:'M'+(dx-4)+' '+(y2-10)+'L'+dx+' '+(y2-3)+'L'+(dx+4)+' '+(y2-10),fill:'none',stroke:'var(--t1)','stroke-width':1.4});
   var ty=(top+y2)/2+5;el(s,'rect',{x:dx+6,y:ty-15,width:42,height:20,rx:4,fill:'var(--card)'});
   el(s,'text',{x:dx+10,y:ty,style:'font:600 13px var(--font);fill:var(--t1)'},f2(dep));}
+function sketch(){var s=$('sk');s.innerHTML='';
+  el(s,'line',{x1:4,x2:40,y1:32,y2:32,stroke:'var(--pipe)','stroke-width':3});el(s,'line',{x1:80,x2:116,y1:32,y2:32,stroke:'var(--pipe)','stroke-width':3});
+  el(s,'rect',{x:40,y:14,width:40,height:36,rx:3,fill:'none',stroke:'var(--pit)','stroke-width':2});
+  el(s,'path',{d:'M14 20L26 20M22 16L26 20L22 24',fill:'none',stroke:'var(--t1)','stroke-width':1.6,'stroke-linecap':'round','stroke-linejoin':'round',transform:'translate(0 12)'});
+  el(s,'path',{d:'M90 20L102 20M98 16L102 20L98 24',fill:'none',stroke:'var(--t1)','stroke-width':1.6,'stroke-linecap':'round','stroke-linejoin':'round',transform:'translate(0 12)'});
+  el(s,'text',{x:4,y:56,class:'stx'},'In');el(s,'text',{x:116,y:56,'text-anchor':'end',class:'stx'},'Out');}
+function labelPreview(st){var s=$('lp');s.innerHTML='';var f='font:13px Consolas,monospace;';
+  el(s,'line',{x1:96,x2:144,y1:28,y2:28,stroke:'var(--pipe)','stroke-width':3});el(s,'line',{x1:224,x2:272,y1:28,y2:28,stroke:'var(--pipe)','stroke-width':3});
+  el(s,'rect',{x:144,y:14,width:80,height:28,rx:3,fill:'none',stroke:'var(--pit)','stroke-width':2});
+  if(st.tag)el(s,'text',{x:184,y:10,'text-anchor':'middle',style:f+'font-weight:600;fill:var(--txt)'},st.num);
+  if(st.clt)el(s,'text',{x:184,y:56,'text-anchor':'middle',style:f+'fill:var(--cl)'},'CL '+(isNaN(st.cover)?'':f2(st.cover)));}
 function draw(st){
-  scene($('prev'),'14.4 2.4 3.2 3.2',202,0.08,st,true,true);
+  var pw=$('prev').clientWidth||650;
+  scene($('prev'),'14.8 2.85 2.4 2.4',pw/2.4,0.075,st,true,true);
   scene($('model'),'1 0.7 30 14.59',64,0.35,st,true,false);}
 function render(){
   var st0=S(),t=SIZES[st0.size],cl=st0.cover,dep=cl-BASE_IL;
   $('ttl').textContent='Pit · '+st0.num;$('taglbl').textContent='Tag '+st0.num;
   roll($('a2'),isNaN(dep)?'':f2(dep));roll($('dep'),isNaN(dep)?'':f2(dep));
-  var lim=t[2],ds=isNaN(dep)?'':f2(dep),b=$('st1');
+  var lim=t[2],b=$('st1');
   if(lim===null)pill(b,'ok','Suits:',st0.size+' is good for deeper pits.');
-  else if(!isNaN(dep)&&dep>lim+1e-9)pill(b,'warn','Needs a look:',st0.size+' is good to '+f2(lim)+' deep; this pit is '+ds+'.');
+  else if(!isNaN(dep)&&dep>lim+1e-9)pill(b,'warn','Needs a look:',st0.size+' is good to '+f2(lim)+' deep.');
   else pill(b,'ok','Suits:',st0.size+' is good to '+f2(lim)+' deep.');
   var h='<span class="h">What else changes</span>';
   if(st0.size==='450 x 450')h+='<span class="none">Nothing else changes.</span>';
-  else h+='<span class="ln">'+mini('warn','Moves')+'Pipe from P4: end moves to the new wall.</span><span class="ln">'+mini('warn','Moves')+'Pipe to P2: end moves to the new wall.</span><span class="ln">'+mini('warn','Changes')+'Pit schedule: row '+esc(st0.num)+' becomes '+st0.size+'.</span>';
+  else h+='<span class="ln">'+mini('neutral','Moves')+'Pipe from P4: end moves to the new wall.</span><span class="ln">'+mini('neutral','Moves')+'Pipe to P2: end moves to the new wall.</span><span class="ln">'+mini('neutral','Changes')+'Pit schedule: row '+esc(st0.num)+' becomes '+st0.size+'.</span>';
   $('else').innerHTML=h;
-  tally(st0);
+  tally(st0);sketch();labelPreview(st0);
   var target={w:t[0],h:t[1]};
   if(cur===null||RM){cur=target;draw(S());}
   else if(cur.w!==target.w||cur.h!==target.h){var from={w:cur.w,h:cur.h};tween(from,target,300,function(o){cur=o;draw(S());});}
@@ -375,6 +392,7 @@ function render(){
 ['num','kind','size','lid','det','cover','tag','clt','turn'].forEach(function(i){$(i).addEventListener('input',render);$(i).addEventListener('change',render);});
 var q=wireCommon();
 var sv=(q.get('size')||'').replace('x',' x ');if(SIZES[sv])$('size').value=sv;
+window.__redraw=function(){if(cur)draw(S());};
 render();fit();
 if(q.get('inspect')==='1')inspect(true,true);
 })();
