@@ -460,7 +460,7 @@ function drawSched(parent,tx,ty,k,live){
   Ln(g,0,yH,tw,yH,1.6);
   for(i=1;i<rs.length;i++)Ln(g,0,yH+i*ROW,tw,yH+i*ROW,.8);
   for(i=1;i<cs.length;i++){var full=!cs[i].g||cs[i].g!==cs[i-1].g;Ln(g,x[i],full?yT:yT+GH,x[i],yB,full?1:.8);}
-  ['Inlet','Outlet'].forEach(function(gn){var a=-1,b=-1;cs.forEach(function(c,ci){if(c.g===gn){if(a<0)a=ci;b=ci;}});
+  ['INLET','OUTLET'].forEach(function(gn){var a=-1,b=-1;cs.forEach(function(c,ci){if(c.g===gn){if(a<0)a=ci;b=ci;}});
     if(a<0)return;T(g,(x[a]+x[b+1])/2,yT+GH/2,gn,'sh');Ln(g,x[a],yT+GH,x[b+1],yT+GH,.8);});
   /* headings */
   cs.forEach(function(c,ci){var y0=c.g?yT+GH:yT,mid=(y0+yH)/2,ls=wrap(c.h,c.w-8);

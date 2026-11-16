@@ -216,6 +216,8 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-120** (16 Nov 2026, night) Asked whether the ban on a chat making AutoCAD profiles, force-closing AutoCAD or touching licensing should be a standing rule for ALL chats on his PC: "Yes, add it to my rules". The rule text is to be drafted and shown to him before it goes into `C:\TimOS\RULES.md`.
 
+**D-121** (16 Nov 2026, night) Rule 1.9 wording put to Tim in full: "Yes, add it as written". Added to `C:\TimOS\RULES.md` as 1.9 "Hands off AutoCAD's profile and licence", after 1.8; nothing else in that file changed.
+
 **Open after this sitting (asked once on 16 Nov, Tim sent D-079 instead of answering; not to be re-asked in the same form):** where a pipe stops at a pit (gap check Pit item 1); whether a schedule cell can be typed over (item 3); which pit kinds are in the first release and whether a turned pit is in the window (item 9); which pits count as storage (item 10).
 
 ## How levels are designed
