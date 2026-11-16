@@ -230,6 +230,10 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-127** (16 Nov 2026, night) Start building: "Yes, start it now": a new chat builds only the part that needs no AutoCAD (the brain: facts, holds, sums, the office list of standards) and its tests, while the AutoCAD trials carry on; it never starts AutoCAD and never touches the installed plugin. Where the new plugin lives: "A new private repository of its own": the folder `C:\CE_CIVIL` with its own private GitHub repository under Tim's account, nothing shared with the old plugin's repository.
 
+**D-128** (16 Nov 2026, night) First hands-on test by Tim, the Pipe window mock-up: closing the padlock on Downstream invert, typing 5.14 (grade becomes 1 in 89) and "Work uphill": "Yes, all three worked". On whether "padlock = held, open = worked out" reads at a glance for a drafter meeting it cold: "Yes, it is clear".
+
+**D-129** (16 Nov 2026, night) Levels along a run. Asked whether the four test steps worked: "i cant test can you try". Whether it is how he would design levels on a tight site: "Yes: fix what is fixed, see where it fails". The preview: "Long section AND the plan". The planning chat then clicked the page itself (served locally, real events): typing 5.15 into Connection invert fails the run (0.20 m cover at P4, short by 0.10): works; "Flatten all grades to 1 in 200": works (still short by 0.05 at the connection; the chat had earlier told Tim "short by 0.01 at P3", which is the P3 figure, not the worst one); "Work downhill from the top": works; clicking a level in the long section to hold it gives NO visible feedback: a fault. Being fixed, with the plan added beside the long section.
+
 **Open after this sitting (asked once on 16 Nov, Tim sent D-079 instead of answering; not to be re-asked in the same form):** where a pipe stops at a pit (gap check Pit item 1); whether a schedule cell can be typed over (item 3); which pit kinds are in the first release and whether a turned pit is in the window (item 9); which pits count as storage (item 10).
 
 ## How levels are designed
