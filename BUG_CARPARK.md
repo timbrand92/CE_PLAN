@@ -21602,8 +21602,28 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 
 **Test that catches it:** Bug1459ProxyPictureSavedTests (source guards: the pipe object declares saveAs and saves worldDraw for every save type). Headless proof: open with no CE and EXPLODE the view-only object; real linework must appear (C:\CE_WORK\scratch\proxy13\px13_run.ps1).
 
-**Reference:** Modules\Drainage.NativeObjects2027\CeCvlPipeObject.h/.cpp (saveAs). Draft PR 2112 (claude/trust-bug1459-proxy-picture); build branch claude/trust-proxy-picture-saveas 157e53e3; batch 13 (Civil 3.0.90.15, prepared, not installed). Runbook: areas\trust-run\INSTALL_BATCH_14NOV.md, BATCH 13.
+**Reference:** Modules\Drainage.NativeObjects2027\CeCvlPipeObject.h/.cpp (saveAs). Draft PR 2112 (claude/trust-bug1459-proxy-picture); build branch claude/trust-proxy-picture-saveas; batch 13 (Civil 3.0.90.15+2c8b7b1a, prepared, not installed). Also proven: a pipe drawn by the Civil plugin the CD way (harness UX-MIX-01, 16 Nov 14:22) explodes without CE into the band and two walls. Runbook: areas\trust-run\INSTALL_BATCH_14NOV.md, BATCH 13.
 
 **Evidence:** Headless (AutoCAD 2027 core console, 16 Nov 13:14, lane trust-safety-fixes). Saved by the batch 11 enabler, EXPLODE without CE left 0 entities: fresh single+twin, and the robot's 3.0.90.13 drawing. Saved by the batch 13 enabler: 9 polylines for single+twin, and 3 for the robot's drawing after one SAVEAS or QSAVE. Not yet seen in GUI AutoCAD or on a PC without CE.
+
+**Status:** OPEN (fix built in batch 13, not installed)
+
+## BUG-1460 — EXPLODE of a CE pipe erases its label, invert texts and flow arrow
+
+**Command / Area:** EXPLODE / BURST of a CE pipe (CE's erase clean-up at command end). MEDIUM. DRAWING CONTENT LOST ON A NORMAL AUTOCAD COMMAND.
+
+**Symptom:** Tim, 16 Nov 2026 (relayed by the controller): "CURRENTLY I EXPLODE AND IT REMOVES ALL TEXT, ARROW AND JUST KEEPS TWO POLYLINES AND THEN THE CENTEAL POLYLINE WHICH IS NOT EXACTLY EHAT I ASKED FOR", and "INVERTS STAY AS WELL YEAH?".
+
+**Cause:** at the end of every command that erases a CE pipe, LinkService.Compound.cs CascadeErasePipeCompound erases everything on the pipe's own list with it: the pipe label, the first-point and last-point invert texts, the flow arrow and any supplementary text. EXPLODE erases the pipe (AutoCAD puts its pieces in its place), so it was treated as a deleted pipe. Pit-owned texts sit on the pit's own list and were never affected.
+
+**Expected behaviour (Tim's choice A, confirmed):** EXPLODE of a CE pipe leaves the wall lines, the centre band as drawn, the pipe label, the invert texts and the flow arrow, all as ordinary objects. Nothing else changes. ERASE unchanged; one U restores everything.
+
+**Steps to confirm in AutoCAD:** (1) Scratch copy: EXPLODE one CE pipe. Right = label, both ILs and arrow stay; pits and their texts untouched. (2) U once: pipe back whole. (3) ERASE another pipe: its label, ILs and arrow go with it.
+
+**Test that catches it:** Bug1460ExplodeKeepsPipeAnnotationTests (19). Headless harness checks XK-01, XK-U-01 and XK-ERASE-01 (Modules\Drainage.HeadlessProof\ExplodeKeepChecks.cs).
+
+**Reference:** Modules\Drainage\Services\LinkService.Compound.cs (CascadeErasePipeCompound, ReleaseFromErasedPipe); LinkService.Utilities.cs (ProcessPendingErasures); ExplodeKeepsPipeAnnotationPolicy.cs; Settings linking.explodeKeepsPipeAnnotation (default on). Draft PR 2112; batch 13 (Civil 3.0.90.15+2c8b7b1a, prepared, not installed).
+
+**Evidence:** Headless harness on the batch 13 payload, 16 Nov 14:20-14:22: XK-01 PASS (label "225 DIA. UPVC PIPE AT 1 IN 100", "IL 10.00", "IL 9.80" and arrow TIM_CVL_ARROW kept and unlinked; band and 2 walls from the explode; nothing else erased), XK-U-01 PASS, XK-ERASE-01 PASS. Not yet seen in GUI AutoCAD.
 
 **Status:** OPEN (fix built in batch 13, not installed)

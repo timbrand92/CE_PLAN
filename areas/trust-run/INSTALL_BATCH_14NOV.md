@@ -1344,19 +1344,29 @@ Written Mon 16 Nov 2026 by lane trust-safety-fixes on the controller's order aft
 
 As section 5 at the top. If a pass fails, batch 12 is put back with `restore_batch14l.ps1`, and batch 11 stays.
 
-## BATCH 13 (PREPARED, NOT INSTALLED): Civil 3.0.90.15 = batch 11's sources + BUG-1459 at 157e53e3 (a CE pipe shows in AutoCAD without CE). Batch 12 is NOT in it
+## BATCH 13 (PREPARED, NOT INSTALLED): Civil 3.0.90.15 = batch 11's sources + BUG-1459 (a CE pipe shows in AutoCAD without CE) + BUG-1460 (EXPLODE keeps the pipe's label, invert texts and arrow), at 7591123b. Batch 12 is NOT in it
 
-Written Mon 16 Nov 2026 by lane trust-safety-fixes. Tim's direct job, relayed by the controller at 10:45: "can we quickly upload a new version of this plugin for projects that used the current or close to current version that use the new pipe type and it doesnt show for people who dont have the plugin". The trust run stays paused for everything else. One build, one version, one folder. **Install only on batch 11:** the script refuses unless live Civil reads `3.0.90.13+1b939430` with all three sets. The controller installs. No merge, nothing to colleagues.
+Written Mon 16 Nov 2026 by lane trust-safety-fixes. Tim's direct job, relayed by the controller at 10:45: "can we quickly upload a new version of this plugin for projects that used the current or close to current version that use the new pipe type and it doesnt show for people who dont have the plugin". Then, in the same quick version (Tim: "DONT SEND ME PARTS JUST GET IT ALL DONE"): "CURRENTLY I EXPLODE AND IT REMOVES ALL TEXT, ARROW AND JUST KEEPS TWO POLYLINES AND THEN THE CENTEAL POLYLINE WHICH IS NOT EXACTLY EHAT I ASKED FOR", "INVERTS STAY AS WELL YEAH?" and choice A. The trust run stays paused for everything else. One build, one version, one folder. **Install only on batch 11:** the script refuses unless live Civil reads `3.0.90.13+1b939430` with all three sets. The controller installs. No merge, nothing to colleagues.
 
 ### 1. What is in it
 
 1. **Everything in batch 11** (section BATCH 11, item 1), unchanged. Batch 12's three drafts are NOT in it.
-2. **BUG-1459, the pipe picture for AutoCAD without CE** (draft PR 2112; build branch `claude/trust-proxy-picture-saveas` at `157e53e3`).
+2. **BUG-1459, the pipe picture for AutoCAD without CE** (draft PR 2112; build branch `claude/trust-proxy-picture-saveas`).
    - **Seen:** a drawing saved by 3.0.90.13, opened in AutoCAD 2027 with no CE: the pipe is a view-only object (ACAD_PROXY_ENTITY), PROXYGRAPHICS 1, PROXYSHOW 1, and EXPLODE of it leaves nothing. The picture saved for people without CE was empty.
    - **Cause:** CE's pipe object is built on AutoCAD's lightweight polyline. AutoCAD asks each object for that picture when it saves. The polyline does not answer, and the ObjectARX reference says a class built on it must answer itself, or "no graphics will be saved as proxies". CE's pipe object never did.
    - **Now:** the pipe object answers with exactly what it draws on screen: the dashed band (one per barrel) and the magenta walls. Single and twin pipes alike (one class).
    - **Unchanged:** what CE users see, the pipe's data, every command, every window.
-3. **The only product file that changes:** the CE object enabler `CE_CVL_OBJECTS_2027.dbx`, plus the two version lines. The three `CE_CVL_SUITE.dll` differ from batch 11 only in the version stamp (about 147 bytes each).
+3. **BUG-1460, EXPLODE keeps what was drawn for the pipe** (same draft PR and branch).
+   - **Where they went:** at the end of every command that erases a CE pipe, CE's erase clean-up (`LinkService.Compound.cs`, `CascadeErasePipeCompound`) erased everything on the pipe's own list with it. That list is the pipe label, the first-point and last-point invert texts, the flow arrow and any supplementary text. EXPLODE erases the pipe (AutoCAD puts the pieces in its place), so all of them went.
+   - **Now:** after EXPLODE or BURST each of them stays where it was, as an ordinary AutoCAD object. Only its link to the exploded pipe is removed, so CE no longer moves, re-words or erases it.
+   - **Unchanged:** ERASE of a pipe takes them away as before. One U brings the pipe back with all of them linked again.
+   - **Pits:** a pit and the texts a pit owns (its own list) are never touched by a pipe's explode.
+   - **Protected items:** an item on a locked layer, in an Xref or under REFEDIT is left exactly as it is (never unlocked).
+   - **Settings:** `linking.explodeKeepsPipeAnnotation`, default ON. OFF gives the old behaviour.
+4. **Product files that change:**
+   - **Picture fix:** the CE object enabler `CE_CVL_OBJECTS_2027.dbx`.
+   - **EXPLODE change:** `CE_CVL_SUITE.dll` x3 (`LinkService.Compound.cs`, `LinkService.Utilities.cs`, the new `ExplodeKeepsPipeAnnotationPolicy.cs` and the switch in `UserSettings.cs`).
+   - **Also:** the two version lines.
 
 ### 2. Existing projects
 
@@ -1364,7 +1374,7 @@ Written Mon 16 Nov 2026 by lane trust-safety-fixes. Tim's direct job, relayed by
 2. **To fix one:** open it in AutoCAD with batch 13, then save it. Proven headless: a plain QSAVE (incremental save, ISAVEPERCENT 50) is enough, and so is SAVEAS.
 3. **What a colleague without CE then sees:** the pipe as drawn on Tim's screen, view only. It can be moved, erased or exploded into plain polylines, but not edited as a CE pipe.
 
-### 3. The headless proof (AutoCAD 2027 core console, 16 Nov 13:14; Tim's AutoCAD untouched)
+### 3. The headless proof of the picture (AutoCAD 2027 core console, 16 Nov 13:14 and 14:22; Tim's AutoCAD never touched)
 
 1. **Method:** each drawing is saved with ONLY the CE object enabler loaded (no Civil plugin). Then a copy is opened with NO CE, and every view-only CE object is EXPLODEd. A picture that is there explodes into real linework; an empty one leaves nothing. Scripts and results: `C:\CE_WORK\scratch\proxy13\` (`px13_run.ps1`, `px13.lsp`, `report.txt`, `runs\`).
 2. **Fresh pipes** (one single 225 mm, 3 points; one twin 375 mm, 2 points), drawn through the enabler's own `CeCvlObjects_CreatePipe`. That is the same call CD makes (`CeCvlObjectsBridge.cs:121`).
@@ -1379,40 +1389,65 @@ Written Mon 16 Nov 2026 by lane trust-safety-fixes. Tim's direct job, relayed by
    - **Opened with the NEW enabler, QSAVE (ISAVEPERCENT 50):** the same **3**.
 4. **Every no-CE run** printed "CE modules loaded: none", PROXYGRAPHICS 1 and PROXYSHOW 1.
 5. **Saved format:** `AC1032`, the 2018 format, which AutoCAD and AutoCAD LT 2018 to 2027 open.
-6. **Not run:** the full-plugin harness check UX-MIX-01 (a pipe drawn by the Civil plugin the CD way). The harness refuses to start while AutoCAD is open, so it is BLOCKED until AutoCAD is closed. It is covered by item 2: the same object, made by the same call.
+6. **A pipe drawn by the Civil plugin the CD way** (harness UX-MIX-01 on the batch 13 payload, 14:22; Tim's AutoCAD was closed):
+   - **PASS:** PROXYGRAPHICS is turned on, and the saved copy carries the picture.
+   - **Opened with NO CE:** EXPLODE gives **3** polylines on STORMWATER PIPE: the band 225 wide, and two magenta Continuous walls.
+   - **The pipe's label, both invert texts and the arrow** are ordinary MTEXT and a block in that drawing already, so they show without CE as they always did.
+
+### 3A. What EXPLODE gives, object by object (Tim: "is there a way we can get it so its explodable to real objects")
+
+1. **(a) The view-only pipe, with NO CE loaded (batch 13):** only LWPOLYLINEs, all on the pipe's own layer. No LINE, no 3D polyline, no loose segments.
+   - **Single pipe:** the band (an LWPOLYLINE as wide as the pipe, colour and linetype ByLayer, so dashed on the pipe's layer as drawn) and 2 walls (LWPOLYLINE, width 0, colour 6 magenta, linetype Continuous).
+   - **Twin pipe:** 2 bands as wide as the pipe, and 4 walls as above.
+2. **(b) The CE pipe object, with the enabler loaded (its own explode, unchanged):** also only LWPOLYLINEs on the pipe's layer.
+   - **Single pipe:** the band (as above) and 2 walls (width 0, colour 6), but with linetype **ByLayer**.
+   - **Twin pipe:** a thin centreline down the gap (width 0, ByLayer; it is never drawn on screen), 2 bands and 4 walls (colour 6, ByLayer).
+3. **The two differences** (not changed: they touch linetype, and Tim said "Nothing else changes"):
+   - **Wall linetype:** on the robot's job the STORMWATER PIPE layer is DASHED. So (b)'s walls come out DASHED after EXPLODE, while on screen and in (a) they are solid. A one-line change in the pipe object's explode (walls Continuous) would match the screen. It is Tim's call.
+   - **The twin's gap centreline:** (b) adds it; (a) does not.
+   - **(a) needs no change:** it already explodes into the same ordinary objects as (b), minus the two differences.
+4. **With CE loaded, after BUG-1460** (harness XK-01 on the batch 13 payload, 14:20): EXPLODE of a pipe drawn the CD way left:
+   - **From the pipe object's own explode:** the band (LWPOLYLINE, 225 wide, STORMWATER PIPE) and 2 walls (LWPOLYLINE, colour 6, ByLayer).
+   - **Kept:** the pipe label ("225 DIA. UPVC PIPE AT 1 IN 100", MTEXT, 25TEXT), "IL 10.00" and "IL 9.80" (MTEXT, 20TEXT) and the flow arrow (block TIM_CVL_ARROW, layer ARROW). All four are unlinked from CE. Nothing else was erased, the pits included.
+   - **XK-U-01 PASS:** one U brought the pipe back with all 4 linked again, and the exploded pieces went.
+   - **XK-ERASE-01 PASS:** ERASE of the pipe still takes all 4 with it.
 
 ### 4. How it was put together
 
 1. **Fix branch** `claude/trust-proxy-picture-saveas` from batch 11's sources `0775db30`:
    - `6f9a3fb0`: the fix, its 3 tests and the log entry.
    - `157e53e3`: a path in the text corrected.
-2. **Build commit `53c7d1ba`,** "Version: Civil 3.0.90.15" (detached, never pushed).
-3. **Toolchain held at batch 11's.** Visual Studio and the .NET SDK (11.0.100) updated on this PC this morning at 09:01. A first build on the new SDK changed about 7 million bytes in every CE_CVL_SUITE.dll; it was discarded. The kept build pins SDK 10.0.303 (an untracked `global.json`, as batch 11 used).
+2. **Fix commits on the branch:** `bcfcc380` and `7591123b` (BUG-1460). Draft PR 2112 carries the same four commits, cherry-picked onto `claude/rel-20261108a`.
+3. **Build commit `2c8b7b1a`,** "Version: Civil 3.0.90.15" (detached, never pushed). It replaces the picture-only build `53c7d1ba` (same version, never installed, deleted).
+4. **Toolchain held at batch 11's.** Visual Studio and the .NET SDK (11.0.100) updated on this PC this morning at 09:01. A first build on the new SDK changed about 7 million bytes in every CE_CVL_SUITE.dll; it was discarded. The kept build pins SDK 10.0.303 (an untracked `global.json`, as batch 11 used).
    - **MSVC 14.51** is gone, so the enabler is built with **14.52.37025**. It is the one file meant to change.
    - **Grip and transform modules:** the installed bytes.
-4. **Product files changed against batch 11 (`1b939430`):** 4: `CeCvlPipeObject.h`, `CeCvlPipeObject.cpp` and the two version lines. List: `C:\CE_WORK\scratch\trust_install\b14civ13_files_changed.txt`.
-5. **Tests:**
-   - **Whole Civil test run (Release, net10, SDK 10.0.303):** **22,822 passed, 0 failed, 32 skipped** (6 min 16 s), the 3 new tests among them.
+5. **Product files changed against batch 11 (`1b939430`):** 8: `CeCvlPipeObject.h`, `CeCvlPipeObject.cpp`, `LinkService.Compound.cs`, `LinkService.Utilities.cs`, `ExplodeKeepsPipeAnnotationPolicy.cs` (new), `UserSettings.cs` and the two version lines. List: `C:\CE_WORK\scratch\trust_install\b14civ13_files_changed.txt`.
+6. **Tests:**
+   - **Whole Civil test run (Release, net10, SDK 10.0.303):** **22,841 passed, 0 failed, 32 skipped** (6 min 40 s), the 22 new tests (3 + 19) among them.
    - **`Bug1459ProxyPictureSavedTests` (3):** the two pipe-object guards failed on batch 11's source and pass on the fix.
-6. **Every dotnet call** passes `-p:SkipDevBundle=true -nr:false --disable-build-servers`, with -m:2 at below-normal priority (Tim at his desk). Nothing under ApplicationPlugins was written.
+   - **`Bug1460ExplodeKeepsPipeAnnotationTests` (19).**
+   - **Reviewed hook list:** `RedoSafeReviewedHooks.baseline.txt` gains the three writes of the new step at command end. They sit inside EXPLODE's own Undo step, as the erase they replace did.
+7. **Every dotnet call** passes `-p:SkipDevBundle=true -nr:false --disable-build-servers`, with -m:2 at below-normal priority (Tim at his desk). Nothing under ApplicationPlugins was written.
 
 ### 5. Against Tim's four "never by itself" rules
 
-1. **None touched.** The change only adds the saved picture. No level, size, number, label, layer or colour is written by it. The picture carries the pipe's own layer and the walls' magenta, as on screen.
+1. **None touched.** The picture fix only adds the saved picture; it carries the pipe's own layer and the walls' magenta, as on screen. The EXPLODE change only stops CE erasing the label, invert texts and arrow, and removes their link. No level, size, number, label wording, layer or colour is written by either.
 
 ### 6. Payload
 
 1. **Payload:** `C:\ce_rc_scratch\b14civ13\CE_CVL_SUITE.bundle`, 832 files. `build_installer.ps1` exit 0.
-2. **DLL `3.0.90.15+53c7d1ba7877c8631e9df8f14c5926a262515fac` SHA-256:**
-   - Legacy `91E3D1BC75BFB3BFC2787FF1F610CA13D82C4C98BF30E0CE3C8C6FB2C0192780`
-   - Net8 `A1142BB0AE675C4FD4A6C9D6236F7D3AD9A11CE24605182BCCD4F0863372296C`
-   - Modern `D79C13BA8211FFA21A1354D1BE5FBC935E5C7A7DFA02F06EF56BBC3EF5FD15ED`
+2. **DLL `3.0.90.15+2c8b7b1a654f4f680707c8e30bcbad726041d004` SHA-256:**
+   - Legacy `6754E5BAFD87FB6E0C7B02F8C466211090738A94DC1B66B7099585A1420759DE`
+   - Net8 `1DA362082D9AE8CE4DEF2ACE22DA36DE0275E233E5B5D69DE26D9810DE29BBE1`
+   - Modern `8900451572DDD6156837A9F49371223C346DC362E925536A2046E59EEC5024CC`
 3. **`CE_CVL_OBJECTS_2027.dbx`:** `250891E644979C9DDFF06D5C00C177809025485A431324598C7D54DBE5A0501F` (batch 11: `CD4276B3326B460BF5BB744BCC1DF934EF101E9FA32AA43815701A5B3CE08734`).
 4. **`PackageContents.xml`:** `6B6B6B5267B9A3171B6A556A1EE983944BCEB4D1EBEF38979339B39C54419858`, `AppVersion="3.0.90.15"`.
-5. **Manifest** `C:\CE_WORK\scratch\trust_install\b14civ13_manifest.txt`, 832 rows, SHA-256 `6AE61AE14B58FCD370579D189B031A5DBBDDEBC11C61F49A0F25A6D38CBAF417`.
+5. **Manifest** `C:\CE_WORK\scratch\trust_install\b14civ13_manifest.txt`, 832 rows, SHA-256 `A58ABFE8D349C08D08120643E994DA3CE4A6D3E4211229E52A161EA124941530`.
 6. **CE_SHARED and CE.AI.Core x3:** the installed bytes were put in, and CE_SHARED is identical to Manager x3.
-   - **Stamp check:** Net8 and Modern differ only inside the stamp zones. Legacy CE_SHARED showed 54 bytes outside them (values shifted by one in table rows).
+   - **Stamp check (picture-only build, same SDK):** Net8 and Modern differ only inside the stamp zones. Legacy CE_SHARED showed 54 bytes outside them (values shifted by one in table rows).
    - **Not shipped:** those built bytes are not in the payload; the installed ones are.
+   - **This build:** CE_SHARED x3 again differs from the installed bytes only at stamp level (about 120 bytes).
 7. **Against batch 11 (`b14civ11`, live):** 8 files differ, 0 added, 0 removed: `CE_CVL_OBJECTS_2027.dbx`, CE_CVL_SUITE.dll and .pdb x3, and `PackageContents.xml`.
 
 ### 7. ONE robot and Codex list for batch 13 (scratch copies)
@@ -1423,23 +1458,27 @@ Written Mon 16 Nov 2026 by lane trust-safety-fixes. Tim's direct job, relayed by
    - Open the copy in AutoCAD with CE not loaded (or a PC without CE).
    - **Right:** both pipes show as on Tim's screen: the dashed band and the magenta walls.
 3. **An old drawing:** open a copy of a drawing saved by 3.0.90.13 with batch 13 and QSAVE it. Opened without CE, the pipe now shows.
-4. **Nothing else changed for CE users:** CD, CDEDIT, grips, TRIM/BREAK and Undo on a pipe behave as on batch 11.
-5. **Then close AutoCAD.**
+4. **EXPLODE with CE loaded:** EXPLODE one pipe of a scratch copy.
+   - **Right:** the label, both invert texts and the arrow stay where they were, beside the walls and band.
+   - **Pits:** the pits and their texts are untouched.
+   - **Undo:** U once brings the pipe back whole.
+   - **ERASE:** ERASE of another pipe still takes its label, invert texts and arrow.
+5. **Nothing else changed for CE users:** CD, CDEDIT, grips, TRIM/BREAK and Undo on a pipe behave as on batch 11.
+6. **Then close AutoCAD.**
 
 ### 8. Install and put back
 
 1. **Install (on batch 11):** `C:\CE_WORK\scratch\trust_install\install_batch14m.ps1`. NOT RUN.
    - **What it checks:** the same checks as batch 12's script, against `b14civ13_manifest.txt`. It refuses unless live Civil reads `3.0.90.13+1b939430` with all three sets.
    - **What it does:** keeps `CE_CVL_SUITE_PRE_1b939430_<time>.backup`. Log: `install_batch14m.log`.
-   - **`-CheckOnly`** was run at 13:47:
+   - **`-CheckOnly`** was run at 14:20 on this payload:
      - The live build reads 3.0.90.13+1b939430 with all three sets.
      - The candidate against its manifest: 832 rows, bad 0, extra 0.
      - CE_SHARED is identical to Manager x3, and 4 settings files were read.
      - Result: "CHECKS PASSED: nothing was renamed, copied or changed".
-     - It also noted 1 AutoCAD running; a real install needs 0.
 2. **Put back:** `restore_batch14m.ps1`, back to 3.0.90.13, checked against `b14civ11_manifest.txt`. NOT RUN.
-   - **`-CheckOnly`** was run at 13:48: "PUT-BACK VERIFIED: Civil equals the 3.0.90.13 payload file for file".
-3. **Batch 12 later:** batch 12 was built without BUG-1459. If batch 12 is wanted after batch 13, it needs a rebuild with BUG-1459 merged in. Its script also refuses anything but 3.0.90.13 live.
+   - **`-CheckOnly`** was run at 14:20: "PUT-BACK VERIFIED: Civil equals the 3.0.90.13 payload file for file".
+3. **Batch 12 later:** batch 12 was built without BUG-1459 and BUG-1460. If batch 12 is wanted after batch 13, it needs a rebuild with them merged in. Its script also refuses anything but 3.0.90.13 live.
 
 ### 9. Stop rules
 
