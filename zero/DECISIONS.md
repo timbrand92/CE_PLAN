@@ -84,6 +84,10 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-054** (16 Nov 2026, evening) Names that sit on AutoCAD's own short names: "Keep IO, rename C and RC".
 
+**D-055** (16 Nov 2026, evening) Naming rule confirmed. Asked "each plugin tool gets a plain full word plus a one to three letter short name, the way AutoCAD's own commands work?", Tim picked "Yes, that is it". The short name is built from the first letters of the word and sits in one office list the office can edit. This settles D-052 and replaces the three options on `pictures\pick_a_naming_rule.html`.
+
+**D-056** (16 Nov 2026, evening) "Only placing has a name". Changing a thing (size, flip a tag) has no typed name: click the thing and use its tab, grips or Properties.
+
 ## How levels are designed
 
 **D-016** (16 Nov 2026) [8v] Moving a pit has no single rule for levels: "IT DEPENDS ON THE DESIGN NO? SO INVERTS MIGHT HAVE TO CHANGE UPSTREAM OR WE MIGHT NEED TO UPDATE INVERTS TO SUIT OR GRADE".
