@@ -98,6 +98,8 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-061** (16 Nov 2026, evening) Editing a drawn thing: "Properties, and double-click opens the window". Click it and change it in AutoCAD's Properties (D-048), or double-click it to get the same small window it was placed with.
 
+**D-062** (16 Nov 2026, evening) The model for the small window: Tim sent a screenshot of AutoCAD's own Hatch Edit window, with no words (kept as `evidence\TIM_HATCH_EDIT_WINDOW_16NOV.png`). It follows D-058 ("IT SHOUDL WORK SIMILAR TO HATCHES"). What the picture shows, as the planning chat reads it: one fixed window, not a ribbon tab and not a side palette; a few boxed groups each with a plain title (Type and pattern, Angle and scale, Hatch origin, Boundaries, Options); drop-down lists for the choices with a swatch showing the result; buttons that send you to the drawing to pick and bring you back (Add: Pick points, Add: Select objects); Inherit Properties (copy the settings from one already drawn); Preview, OK, Cancel, Help along the bottom. Every plugin window is to be built on this pattern. Tim has not yet confirmed that reading in words.
+
 ## How levels are designed
 
 **D-016** (16 Nov 2026) [8v] Moving a pit has no single rule for levels: "IT DEPENDS ON THE DESIGN NO? SO INVERTS MIGHT HAVE TO CHANGE UPSTREAM OR WE MIGHT NEED TO UPDATE INVERTS TO SUIT OR GRADE".
