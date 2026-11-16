@@ -211,6 +211,10 @@ input[type=number]::-webkit-inner-spin-button{display:none}
 .nb:disabled{opacity:.5}
 .nb::placeholder{color:var(--t3)}
 #cards{grid-template-rows:1fr 1fr}
+#model{opacity:0;transition:opacity 220ms ease-out}
+#design.insp #model{opacity:1}
+#lp{margin-top:8px;overflow:visible}
+.grey1{color:var(--t3);font-size:14px;line-height:20px}
 </style>
 </head>
 <body>
@@ -249,7 +253,7 @@ input[type=number]::-webkit-inner-spin-button{display:none}
             </section>
             <section class="card">
               <div class="lab"><i>2</i>Where it sits</div>
-              <div class="ans"><span class="num">On pipe to P4</span></div>
+              <div class="ans" id="a2"><span class="num">0.80</span><span class="unit">m along the pipe</span></div>
               <div class="sum" id="sumW"></div>
               <svg id="skw" class="sk" viewBox="0 0 368 96" height="96"></svg>
               <div class="note">Goes exactly where you click. Slide it along by its grip.</div>
@@ -260,7 +264,7 @@ input[type=number]::-webkit-inner-spin-button{display:none}
               <div id="roof"><div class="sum" id="sumR"></div>
               <div class="field"><label for="drains">Drains to</label><div class="dd"><select id="drains"><option selected>Tank WT1</option><option>Pit P4 direct</option></select></div></div></div>
               <svg id="rbar" class="sk" viewBox="0 0 368 50" height="50"></svg>
-              <div class="note">Used by the detention sums.</div>
+              <div class="note" id="n3">Used by the detention sums.</div>
             </section>
             <section class="card">
               <div class="lab"><i>4</i>Shown on the drawing</div>
@@ -268,7 +272,7 @@ input[type=number]::-webkit-inner-spin-button{display:none}
               <label class="tick"><input type="checkbox" id="tlet" checked><span class="box"></span><span id="tletl">Letters DP</span></label>
               <label class="tick"><input type="checkbox" id="tnum"><span class="box"></span>Number</label></div>
               <div class="field"><label for="side">Text side</label><div class="dd"><select id="side"><option selected>Right</option><option>Left</option><option>Above</option><option>Below</option></select></div></div>
-              <svg id="lp" class="sk" viewBox="0 0 368 108" height="108"></svg>
+              <svg id="lp" class="sk" viewBox="0 0 368 60" height="60"></svg>
               <div class="note">This is how the text will read.</div>
             </section>
           </div>
@@ -311,7 +315,7 @@ function fit(){
 function inspect(on,instant){
   var w=$('win'),b=$('inspbar');
   if(instant){w.classList.add('instant');b.classList.add('instant');}
-  w.classList.toggle('hid',on);b.classList.toggle('on',on);
+  w.classList.toggle('hid',on);b.classList.toggle('on',on);$('design').classList.toggle('insp',on);
   if(instant){void w.offsetWidth;w.classList.remove('instant');b.classList.remove('instant');}
 }
 function wireCommon(){
@@ -376,10 +380,10 @@ var PIPE_LEN=12.0;
 var st={kind:'DP',num:'DP3',sizeN:100,along:0,alongRaw:null,alongSrc:'measured',alongHeld:true,alongTouched:false,area:42,areaRaw:null,areaSrc:'measured',areaHeld:true};
 function kinfo(k){for(var i=0;i<KINDS.length;i++)if(KINDS[i][0]===k)return KINDS[i];return KINDS[0];}
 function hexPts(cx,cy,r){var p=[],i;for(i=0;i<6;i++){var a=Math.PI/3*i+Math.PI/6;p.push((cx+r*Math.cos(a)).toFixed(3)+','+(cy+r*Math.sin(a)).toFixed(3));}return p.join(' ');}
-function chipSym(k){var s='<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">';
-  if(k==='DP'||k==='IO')s+='<circle cx="12" cy="12" r="7" fill="currentColor" fill-opacity=".45"/>';
-  else if(k==='GIO')s+='<circle cx="12" cy="12" r="10.5"/><polygon points="'+hexPts(12,12,5.6)+'" stroke-width="1.2"/>';
-  else if(k==='FW')s+='<circle cx="12" cy="12" r="7"/><polygon points="'+hexPts(12,12,3.8)+'" stroke-width="1.2"/>';
+function chipSym(k){var s='<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true">';
+  if(k==='DP'||k==='IO')s+='<circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="3"/>';
+  else if(k==='GIO')s+='<circle cx="12" cy="12" r="10.5"/><polygon points="'+hexPts(12,12,5.6)+'"/>';
+  else if(k==='FW')s+='<circle cx="12" cy="12" r="7"/><polygon points="'+hexPts(12,12,3.8)+'"/>';
   else s+='<circle cx="12" cy="12" r="7"/>';
   return s+'</svg>';}
 function sym(g,kind,cx,cy,r,sw,col){var R=kind==='GIO'?r*1.5:r;
@@ -410,14 +414,14 @@ function buildR(){
   $('sumR').innerHTML=nrow({label:'Roof area<small>m²</small>',k:'area',input:true,val:dispR(),chip:st.areaHeld?st.areaSrc:'worked out',lock:st.areaHeld?'closed':'open'});}
 
 function scene(svg,mode){
-  var zoom=mode==='zoom',pw=svg.clientWidth||650,ppm=zoom?pw/4:64,ts=zoom?.1:.35;
+  var Z=1.45,vw=4/Z,zoom=mode==='zoom',pw=svg.clientWidth||650,ppm=zoom?pw/vw:64,ts=zoom?.1:.35,tsl=zoom?.08:ts;
   svg.innerHTML='';
   var px=function(n){return (n/ppm).toFixed(4);};
   var g=el(svg,'g',{});
-  var xs=zoom?1.0:9.8,Y0=zoom?0:7.5,ix=xs+st.along,x0=zoom?Math.max(.2,ix-1.8):1;
-  if(zoom)svg.setAttribute('viewBox',x0+' -2 4 4');else svg.setAttribute('viewBox','1 0.7 30 14.59');
+  var xs=zoom?1.0:9.8,Y0=zoom?0:7.5,ix=xs+st.along,x0=zoom?Math.max(.3,ix-.7):1;
+  if(zoom)svg.setAttribute('viewBox',x0+' '+(-vw/2)+' '+vw+' '+vw);else svg.setAttribute('viewBox','1 0.7 30 14.59');
   var C={fill:'none',stroke:'var(--ctx)','stroke-width':px(1)};
-  var PW=zoom?.05:.075,xe=zoom?x0+4.2:21.775,bg=zoom?'var(--prev)':'var(--model)';
+  var PW=zoom?.05:.075,xe=zoom?x0+vw+.2:21.775,bg=zoom?'var(--prev)':'var(--model)';
   function T(x,y,str,cls,anchor,ex){return el(g,'text',Object.assign({x:x,y:y,'font-size':ts,'text-anchor':anchor||'start',class:'t '+(cls||'')},ex||{}),str);}
   function arrowH(x,y,k){k=k||1;el(g,'polygon',{points:(x-.14*k)+','+(y-.09*k)+' '+(x+.14*k)+','+y+' '+(x-.14*k)+','+(y+.09*k),fill:'var(--pipe)'});}
   function pit(cx,cy){el(g,'rect',{x:cx-.345,y:cy-.345,width:.69,height:.69,fill:'none',stroke:'var(--pitd)','stroke-width':px(1.2),'stroke-dasharray':px(6)+' '+px(4)});
@@ -431,16 +435,16 @@ function scene(svg,mode){
     [-1,1].forEach(function(s){el(g,'line',{x1:22+s*PW,x2:22+s*PW,y1:7.725,y2:12.975,stroke:'var(--pipe)','stroke-width':px(1.5)});});
     T(22.5,7.2,'P4','','start');T(22.5,8.4,'CL 5.83','cl','start');T(22.5,13.0,'P2','','start');
   } else {
-    if(x0<.4){[.45,.53].forEach(function(x){el(g,'line',{x1:x,x2:x,y1:-1.7,y2:1.45,stroke:'var(--ctx)','stroke-width':px(1.4)});});
-      el(g,'text',{x:.38,y:-1.0,'font-size':.1,'text-anchor':'middle',fill:'var(--t3)',class:'t',transform:'rotate(-90 .38 -1.0)'},'HOUSE WALL');}
+    if(x0<.4){[.45,.53].forEach(function(x){el(g,'line',{x1:x,x2:x,y1:-1.05,y2:1.05,stroke:'var(--ctx)','stroke-width':px(1.4)});});
+      el(g,'text',{x:.38,y:-.55,'font-size':.07,'text-anchor':'middle',fill:'var(--t3)',class:'t',transform:'rotate(-90 .38 -.55)'},'HOUSE WALL');}
   }
   [-1,1].forEach(function(s){el(g,'line',{x1:xs,x2:xe,y1:Y0+s*PW,y2:Y0+s*PW,stroke:'var(--pipe)','stroke-width':px(1.5)});});
-  var size=st.sizeN,lblx=zoom?x0+3.05:15.9,LL=(zoom?1.65:5.8),LBL=size+' DIA. UPVC PIPE AT 1 IN 100';
-  var ly=Y0+PW+.1+ts;
-  T(lblx,ly,LBL,'pl','middle',{textLength:LL,lengthAdjust:'spacingAndGlyphs'});
-  arrowH(zoom?x0+3.15:15.9,Y0-PW-(zoom?.1:.3),zoom?.45:1);
-  if(zoom)T(x0+3.95,Y0-PW-.08,'to P4','il','end',{'font-size':.085});
-  if(size!==100){var pad=zoom?.07:.15;el(g,'rect',{x:lblx-LL/2-pad,y:ly-ts-pad*.6,width:LL+pad*2,height:ts+pad*1.5,rx:zoom?.05:.12,fill:'none',stroke:'var(--amber)','stroke-width':px(3)});}
+  var size=st.sizeN,lblx=zoom?x0+vw*.58:15.9,LL=(zoom?1.3:5.8),LBL=size+' DIA. UPVC PIPE AT 1 IN 100';
+  var Rz=zoom?(st.kind==='GIO'?.21:.14):0,ly=Y0+(zoom?Math.max(PW+.1,Rz+.08):PW+.1)+tsl;
+  T(lblx,ly,LBL,'pl','middle',{textLength:LL,lengthAdjust:'spacingAndGlyphs','font-size':tsl});
+  arrowH(zoom?x0+vw*.78:15.9,Y0-PW-(zoom?.1:.3),zoom?.3:1);
+  if(zoom)T(x0+vw-.08,Y0-PW-.08,'to P4','il','end',{'font-size':.065});
+  if(size!==100){var pad=zoom?.07:.15;el(g,'rect',{x:lblx-LL/2-pad,y:ly-tsl-pad*.6,width:LL+pad*2,height:tsl+pad*1.5,rx:zoom?.05:.12,fill:'none',stroke:'var(--amber)','stroke-width':px(3)});}
   var r=zoom?.14:.42,sw=px(2.4),cxx=Math.min(ix,xe-.5),R=sym(g,st.kind,cxx,Y0,r,sw,'var(--acc)');
   textBlock(g,lines(),$('side').value,cxx,Y0,R,ts,bg);
 }
@@ -460,7 +464,7 @@ function skw(){var s=$('skw');s.innerHTML='';var x1=20,x2=340,L=x2-x1,px_=x1+Mat
   if(st.along>0.01){el(s,'line',{x1:x1,x2:px_-rr-2,y1:20,y2:20,stroke:'var(--t2)','stroke-width':1.2});
     el(s,'text',{x:(x1+px_)/2,y:16,'text-anchor':'middle',class:'stx2'},f2(st.along)+' m');}
 }
-function lp(){var s=$('lp');s.innerHTML='';var cx=184,cy=54;
+function lp(){var s=$('lp');s.innerHTML='';var cx=184,cy=30;
   [-4,4].forEach(function(d){el(s,'line',{x1:20,x2:348,y1:cy+d,y2:cy+d,stroke:'var(--pipe)','stroke-width':1.6});});
   var R=sym(s,st.kind,cx,cy,9,2,'var(--acc)');
   textBlock(s,lines(),$('side').value,cx,cy,R,13,'var(--card)');
@@ -480,10 +484,13 @@ function renderInner(){
   $('ttl').textContent='Inlet · '+(dp?'Downpipe '+st.num:ki[2]);
   $('tletl').textContent='Letters '+k;
   var tn=$('tnum');tn.disabled=!dp;if(!dp)tn.checked=false;tn.parentNode.classList.toggle('dis',!dp);
+  var a2=$('a2');
+  if(st.along<0.005)a2.innerHTML='<span class="num">At the upstream end</span>';
+  else a2.innerHTML='<span class="num">'+f2(st.along)+'</span><span class="unit">m along the pipe</span>';
   var a3=$('ans3');
   if(dp){a3.className='ans';a3.innerHTML='<span class="num">'+esc(r2(st.area))+'</span><span class="unit">m² roof</span>';}
-  else{a3.className='ans grey';a3.textContent='Not needed for this kind.';}
-  $('sumR').classList.toggle('off',!dp);$('roof').querySelector('.field').classList.toggle('off',!dp);$('drains').disabled=!dp;
+  else{a3.className='grey1';a3.textContent='Not needed for a '+k+'.';}
+  $('roof').style.display=dp?'':'none';$('rbar').style.display=dp?'':'none';$('n3').style.display=dp?'':'none';$('drains').disabled=!dp;
   var h='<span class="h">What else changes</span>',n=0;
   if(k!=='DP'){h+='<span class="ln">'+mini('neutral','Changes')+'legend shows '+k+'.</span>';n++;}
   if(st.sizeN!==100){h+='<span class="ln">'+mini('neutral','Changes')+'pipe to P4 label reads '+st.sizeN+' DIA.</span>';n++;

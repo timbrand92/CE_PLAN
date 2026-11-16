@@ -220,7 +220,6 @@ input[type=number]::-webkit-inner-spin-button{display:none}
 .ttl{fill:var(--txt);font:600 20px var(--font)}
 .nt{fill:var(--txt);font:12px var(--font)}
 .unk3{fill:var(--t3);font:11px var(--font)}
-#sketch{display:block;width:100%;height:64px;margin-top:auto}
 .top{flex:1;display:flex;gap:16px;min-height:0}
 .prev{flex:none;height:100%;width:54%;min-height:0}
 #cards{flex:1;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;min-width:0;min-height:0}
@@ -228,6 +227,12 @@ input[type=number]::-webkit-inner-spin-button{display:none}
 .tkcol .tick{min-height:28px}
 .chips{gap:4px;margin-top:4px}
 .tkcol.two .tick.span{grid-column:1/-1}
+#model{opacity:0;transition:opacity 220ms ease-out}
+#design.insp #model{opacity:1}
+.g1{font-size:16px;color:var(--t3);font-weight:400}
+.stx11{font:11px var(--font);fill:var(--t3)}
+#cstrip{display:block;width:100%;height:24px;flex:none}
+.card .note{margin-top:auto}
 </style>
 </head>
 <body>
@@ -258,28 +263,26 @@ input[type=number]::-webkit-inner-spin-button{display:none}
         </div>
         <div id="cards">
           <section class="card">
-            <div class="lab"><i>1</i>Rows</div>
-            <div class="ans"><span class="num" id="a1">16</span><span class="unit" id="a1u">rows</span></div>
+            <div class="lab lh"><span><i>1</i>Rows</span><span class="mb"><button type="button" class="mchip on" id="oOut">Outlet first</button><button type="button" class="mchip" id="oUp">Upstream first</button></span></div>
+            <div class="ans"><span class="num" id="a1">P0 to P11</span><span class="unit" id="a1u">outlet first</span></div>
             <div class="tkcol">
               <label class="tick dis"><input type="checkbox" checked disabled><span class="box"></span><span id="lblNum">Numbered pits (4)</span></label>
               <label class="tick"><input type="checkbox" id="tCouncil" checked><span class="box"></span>Existing council pit</label>
               <label class="tick dis"><input type="checkbox" disabled><span class="box"></span>Pump well<span class="held1 rgt">none on this job</span></label>
               <label class="tick"><input type="checkbox" id="tPlastic" checked><span class="box"></span><span id="lblPl">Plastic pit P4</span></label>
             </div>
-            <div class="chips">
-              <button type="button" class="mchip col on" id="oOut">P1 at the outlet, working upstream</button>
-              <button type="button" class="mchip col" id="oUp">Upstream first</button>
-            </div>
+            <div class="note" id="n1">16 rows · 12 pits</div>
           </section>
           <section class="card">
             <div class="lab"><i>2</i>Columns</div>
             <div class="ans"><span class="num" id="a2">10</span><span class="unit">columns shown</span></div>
+            <svg id="cstrip" viewBox="0 0 300 24" aria-label="The column headings shown"></svg>
             <div class="tkcol two" id="colTicks"></div>
             <div class="note">Headings are the office's own.</div>
           </section>
           <section class="card">
             <div class="lab lh"><span><i>3</i>A cell typed over</span><span class="held1" id="selline">P3 · Pit size</span></div>
-            <div class="ans"><span class="num" id="a3">0</span><span class="unit">held</span></div>
+            <div class="ans"><span class="num" id="a3">0</span><span class="unit" id="a3u">held</span><span class="g1" id="a3g">Nothing typed over</span></div>
             <div class="sum w" id="sumC3"></div>
             <div id="st3" class="pill ok"></div>
             <button type="button" class="btn full" id="follow">Let it follow the pit</button>
@@ -291,7 +294,7 @@ input[type=number]::-webkit-inner-spin-button{display:none}
             <div class="held1" id="drawn">250 in the drawing at 1:100.</div>
             <label class="tick"><input type="checkbox" id="tNotes" checked><span class="box"></span>Standing notes under the schedule</label>
             <div class="held1">3 standing notes, the office's wording.</div>
-            <svg id="sketch" viewBox="0 0 326 64" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" aria-label="Sketch of the sheet with the schedule spot"></svg>
+            <div class="held1">You pick the spot on the sheet after OK.</div>
           </section>
         </div>
         </div>
@@ -333,7 +336,7 @@ function fit(){
 function inspect(on,instant){
   var w=$('win'),b=$('inspbar');
   if(instant){w.classList.add('instant');b.classList.add('instant');}
-  w.classList.toggle('hid',on);b.classList.toggle('on',on);
+  w.classList.toggle('hid',on);b.classList.toggle('on',on);$('design').classList.toggle('insp',on);
   if(instant){void w.offsetWidth;w.classList.remove('instant');b.classList.remove('instant');}
 }
 function wireCommon(){
@@ -517,7 +520,7 @@ function plan(){
   drawSched(g,x,y,k,false);
 }
 function sketch(){
-  var s=$('sketch');s.innerHTML='';
+  var s=$('sketch');if(!s)return;s.innerHTML='';
   el(s,'rect',{x:.5,y:.5,width:325,height:63,rx:6,fill:'none',stroke:'var(--bd)'});
   el(s,'rect',{x:10,y:8,width:118,height:48,rx:4,fill:'none',stroke:'var(--bd2)'});
   el(s,'rect',{x:244,y:6,width:72,height:10,rx:2,fill:'none',stroke:'var(--bd2)'});
@@ -530,15 +533,23 @@ var NF={};
 function fixSel(){var rs=rowsVis(),cs=colsVis();
   if(rs.indexOf(S.sel.r)<0)S.sel.r=rs[0];
   if(!S.cols[S.sel.c]&&cs.length)S.sel.c=cs[0].k;}
+var ABBR={no:'No',size:'Size',from:'Fr',din:'Ø',ilin:'IL',dout:'Ø',ilout:'IL',cl:'CL',dep:'Dep',rem:'Remarks'};
+function colStrip(){var s=$('cstrip');s.innerHTML='';var cs=colsVis(),tw=0,x=0,W=s.clientWidth||300,H=24;s.setAttribute('viewBox','0 0 '+W+' '+H);cs.forEach(function(c){tw+=c.w;});
+  cs.forEach(function(c){var w=c.w/tw*W,t=ABBR[c.k]||'';
+    el(s,'rect',{x:x+.5,y:.5,width:Math.max(1,w-1),height:H-1,rx:3,fill:'none',stroke:'var(--bd)','stroke-width':1});
+    if(t.length*6<w-4)el(s,'text',{x:x+w/2,y:H/2,'text-anchor':'middle','dominant-baseline':'central',class:'stx11'},t);
+    x+=w;});}
 function card3(){
   var r=S.sel.r,c=S.sel.c,key=r+c,held=S.H[key]!==undefined,n=Object.keys(S.H).length,col=colOf(c);
   roll($('a3'),String(n));
+  $('a3').style.display=n?'':'none';$('a3u').style.display=n?'':'none';$('a3g').style.display=n?'none':'';
   $('selline').textContent=rname(r)+' · '+col.cn;
   var h=nrow({label:'Pit says',val:pitVal(r,c),chip:r==='EX'?'council pit':'from '+ROWS[r].pit,lock:'open',off:true});
   h+=nrow({label:'Typed over',k:'typed',input:true,val:held?S.H[key]:'',chip:held?'typed over':'not typed',lock:held?'closed':'open'});
   $('sumC3').innerHTML=h;
   var inp=$('sumC3').querySelector('input');if(inp)inp.placeholder='Type to hold';
   var box=$('st3');
+  box.style.display=held?'':'none';
   if(!held)pill(box,'ok','Suits:','follows '+(r==='EX'?'the council pit.':ROWS[r].pit+'.'));
   else if(S.H[key]===pitVal(r,c))pill(box,'ok','Suits:','held, and matches the pit.');
   else pill(box,'warn','Check:','the pit says '+says(r,c)+'.');
@@ -558,11 +569,13 @@ function strip(){
 function render(){keepFocus(function(){
   fixSel();
   var nr=rowsVis().length,nc=colsVis().length,np=groupsVis().length;
-  roll($('a1'),String(nr));$('a1u').textContent=(nr===1?'row':'rows')+' \u00b7 '+np+(np===1?' pit':' pits');
+  var gv=groupsVis(),fa=gv.length?gv[0].pit:'',la=gv.length?gv[gv.length-1].pit:'';
+  roll($('a1'),gv.length>1?fa+' to '+la:fa);$('a1u').textContent=S.order==='up'?'upstream first':'outlet first';
+  $('n1').textContent=nr+(nr===1?' row':' rows')+' \u00b7 '+np+(np===1?' pit':' pits');
   roll($('a2'),String(nc));
   $('oOut').classList.toggle('on',S.order==='out');$('oUp').classList.toggle('on',S.order==='up');
   $('drawn').textContent=(Math.round(250*parseInt(S.scale.split(':')[1],10)/100))+' in the drawing at '+S.scale+'.';
-  card3();strip();section();plan();
+  card3();colStrip();strip();section();plan();
 });}
 
 /* ---------- build the static parts ---------- */

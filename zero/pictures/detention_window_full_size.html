@@ -201,25 +201,22 @@ input[type=number]::-webkit-inner-spin-button{display:none}
 .held1{color:var(--t2);font-size:13px;line-height:16px}
 </style>
 <style id="det">
-:root{--c1:#5AA2F0;--c2:#3CC4B2;--c3:#A08AF0;--det:#3d7bff}
-html[data-theme="light"]{--c1:#2F6FC4;--c2:#13877A;--c3:#6E4FCC;--det:#0b4fb3}
+:root{--c1:#5AA2F0;--c2:#3CC4B2;--c3:#A08AF0;--det:#3d7bff;--a1:#A08AF0;--a2:#E57AAE;--a3:#A3AAB6}
+html[data-theme="light"]{--c1:#2F6FC4;--c2:#13877A;--c3:#6E4FCC;--det:#0b4fb3;--a1:#6E4FCC;--a2:#B8467F;--a3:#5F6672}
 #cards{grid-template-columns:296px 400px 364px 1fr;gap:0 16px}
 #cards .card{padding:12px 16px;gap:4px}
 #tiles{flex:none;display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.tile{background:var(--card);border:1px solid var(--bd);border-left:8px solid currentColor;border-radius:12px;box-shadow:var(--sh2);padding:4px 16px 8px;display:grid;grid-template-columns:1fr auto;column-gap:16px;row-gap:0;align-items:center;min-width:0}
-.tile.ok{color:var(--ok);background:linear-gradient(0deg,var(--okbg),var(--okbg)),var(--card)}
-.tile.bad{color:var(--bad);background:linear-gradient(0deg,var(--badbg),var(--badbg)),var(--card)}
-.tile .tl{grid-column:1;font-size:14px;font-weight:600;color:var(--t1);line-height:20px;padding-top:4px}
-.tile .tn{grid-column:1;grid-row:2;display:flex;align-items:baseline;gap:8px;color:var(--t1);line-height:44px;white-space:nowrap}
-.tile .tn b{font-size:40px;font-weight:700}
+.tile{background:var(--card);border:1px solid var(--bd);border-radius:12px;box-shadow:var(--sh2);padding:8px 16px 12px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.tile .tl{font-size:14px;font-weight:500;color:var(--t1);line-height:20px}
+.tile .tn{display:flex;align-items:baseline;gap:8px;color:var(--t1);white-space:nowrap;font-size:32px;line-height:40px}
+.tile .tn b{font-weight:600}
 .tile .tn .u{font-size:16px;color:var(--t2)}
-.tile .tn .of{font-size:18px;color:var(--t2)}
-.tile .tp{grid-column:2;grid-row:1/3;align-self:center}
-.tile .tp .pill{font-size:15px;font-weight:600;background:var(--card);padding:8px 16px;white-space:nowrap}
-.tile .tp .pill b{margin-right:6px}
-.tile .bar{grid-column:1/3;height:8px;border-radius:4px;background:var(--bd2);position:relative;margin-top:2px}
-.tile .bar i{position:absolute;left:0;top:0;bottom:0;border-radius:4px;background:currentColor;transition:width 300ms ease-out}
-.tile .bar u{position:absolute;top:-4px;bottom:-4px;width:2px;background:var(--t1);text-decoration:none}
+.tile .tn .of{font-size:14px;color:var(--t2)}
+.tile .pill{align-self:flex-start;min-height:32px;padding:4px 16px 4px 12px}
+.tile .bar{height:4px;border-radius:2px;background:var(--bd2);position:relative;margin-top:8px}
+.tile .bar i{position:absolute;left:0;top:0;bottom:0;border-radius:2px;background:var(--ok);transition:width 300ms ease-out}
+.tile.bad .bar i{background:var(--bad)}
+.tile .bar u{position:absolute;top:-4px;bottom:-4px;width:2px;background:var(--t2);text-decoration:none}
 .two2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .sum.s1{grid-template-columns:16px minmax(0,1fr) 56px 72px}
 .sum.s3{grid-template-columns:16px minmax(0,1fr) 48px 88px}
@@ -270,6 +267,24 @@ html[data-theme="light"]{--c1:#2F6FC4;--c2:#13877A;--c3:#6E4FCC;--det:#0b4fb3}
 #cards .card .ans{min-height:40px}
 .prev{min-height:96px}
 #n1:empty{display:none}
+.note:empty{display:none}
+#model{opacity:0;transition:opacity 220ms ease-out}
+#design.insp #model{opacity:1}
+.sum2{grid-template-columns:70px 56px 40px 48px minmax(0,1fr);column-gap:8px}
+.sum2 .fg .nb{width:56px;padding:0 8px;margin:0}
+.sum2 .fg .nb.rd{padding:0 8px}
+.sum2 .fg{padding-right:0}
+.sum2 .fg.nt,.sum2 .nt{font-size:13px;color:var(--t3);justify-content:flex-end;white-space:nowrap}
+.sum2 .fg.ef{padding-right:1px}
+.sum2 .rs{border-top:1px solid var(--t2);border-bottom:3px double var(--t2);font-weight:600;font-size:16px}
+.sum2 .sc{justify-content:flex-end;gap:0}
+.abar{display:flex;height:32px;border-radius:8px;overflow:hidden;gap:2px}
+.abar span{display:flex;align-items:center;justify-content:center;font-size:13px;line-height:16px;color:var(--t1);white-space:nowrap;overflow:hidden;border:1px solid;min-width:0}
+.mchip+.mchip{margin-left:0}
+.res1.sf{font-weight:600;font-size:16px;border-top:1px solid var(--t2)}
+.sum .sl.cmp{grid-column:1/5;color:var(--t2);flex-direction:row;align-items:baseline;justify-content:flex-start;min-height:24px;padding-left:24px}
+.sum .sl.cmp b{font-weight:600;color:var(--t1);margin:0 4px}
+.skrow{display:flex;justify-content:flex-end;align-items:center}
 </style>
 </head>
 <body>
@@ -302,28 +317,26 @@ html[data-theme="light"]{--c1:#2F6FC4;--c2:#13877A;--c3:#6E4FCC;--det:#0b4fb3}
         </div>
         <div id="cards">
           <section class="card">
-            <div class="lab"><i>1</i>What is fixed</div>
-            <div class="ans"><span class="num" id="a1">5</span><span class="unit">held</span></div>
-            <div class="two2"><button type="button" class="bigchip on" id="mB">Boyd's</button><button type="button" class="bigchip" id="mO">OSD4W / Swinburne</button></div>
+            <div class="lab lh"><span><i>1</i>What is fixed</span><span class="mb"><button type="button" class="mchip on" id="mB">Boyd's</button><button type="button" class="mchip" id="mO">OSD4W</button></span></div>
+            <div class="ans"><span class="num" id="a1">6.00</span><span class="unit">l/s permitted</span></div>
             <div class="sum s1" id="sumC1"></div>
             <div class="note" id="n1">Hold what is fixed. The rest is worked out.</div>
           </section>
           <section class="card">
             <div class="lab"><i>2</i>Areas</div>
             <div class="ans"><span class="num" id="a2">0.70</span><span class="unit">runoff coefficient</span></div>
+            <div class="abar" id="abar"></div>
             <div class="sum2" id="sumC2"></div>
-            <div class="note" id="n2">Change an area and every figure follows. The garden is what is left of the site.</div>
+            <div class="note" id="n2">Garden is what is left of the site.</div>
           </section>
           <section class="card">
             <div class="lab"><i>3</i>Storage</div>
-            <div class="ans"><span class="num" id="a3">1.64</span><span class="unit">m³ storage</span></div>
             <div class="sum s3" id="sumC3"></div>
           </section>
           <section class="card">
             <div class="lab"><i>4</i>Discharge</div>
-            <div class="ansrow"><div class="ans"><span class="num" id="a4">5.84</span><span class="unit">l/s</span></div><svg class="skt" id="skt" width="140" height="64" viewBox="0 0 140 64"></svg></div>
+            <div class="skrow"><svg class="skt" id="skt" width="140" height="64" viewBox="0 0 140 64"></svg></div>
             <div class="sum s4" id="sumC4"></div>
-            <div class="note" id="n4"></div>
           </section>
         </div>
         <div id="else"></div>
@@ -364,7 +377,7 @@ function fit(){
 function inspect(on,instant){
   var w=$('win'),b=$('inspbar');
   if(instant){w.classList.add('instant');b.classList.add('instant');}
-  w.classList.toggle('hid',on);b.classList.toggle('on',on);
+  w.classList.toggle('hid',on);b.classList.toggle('on',on);$('design').classList.toggle('insp',on);
   if(instant){void w.offsetWidth;w.classList.remove('instant');b.classList.remove('instant');}
 }
 function wireCommon(){
@@ -464,7 +477,7 @@ function chipSel(k,sel,opts){return '<div class="dd"><select data-s="'+k+'">'+op
 function SRC(k,withWorked,site){var o=[['measured','measured'],['typed','typed'],['given',site?'given · council letter':'given']];if(withWorked)o.unshift(['worked','worked out']);return o;}
 function lk(k,closed,off,title){return '<button type="button" class="lk" '+(k&&!off?'data-k="'+k+'" ':'')+(off?'disabled ':'')+'title="'+title+'" aria-label="'+(closed?'Held':'Worked out')+'">'+(closed?LOCKC:LOCKO)+'</button>';}
 function srow(o){ // sum row for cards 1,3,4
-  var res=o.res?' res':'',dim=o.dim?' dim':'';
+  var res=o.res?' res':(o.res1?' res1':''),dim=o.dim?' dim':'';
   var cell;
   if(o.html)cell='<div class="sf'+res+dim+'">'+o.html+'</div>';
   else if(o.input)cell='<div class="sf'+res+'"><input class="nb r'+(o.plain?' plain':'')+'" data-k="'+o.k+'" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="'+esc(o.val)+'"></div>';
@@ -472,7 +485,7 @@ function srow(o){ // sum row for cards 1,3,4
   var chip=o.chipHtml||('<span>'+o.chip+'</span>');
   var closed=o.lock==='closed';
   var ttl=o.off?(closed?'Held':'Worked out'):closed?'Held. Click to let it be worked out.':'Worked out. Click to hold it.';
-  return '<div class="sg'+dim+'">'+(o.sign||'')+'</div><div class="sl'+(o.res?' res':'')+(o.stack?' stk':'')+dim+'">'+(o.stack||!o.small?o.label+(o.small?'<small>'+o.small+'</small>':''):'<span>'+o.label+'<span class="u">'+o.small+'</span></span>')+'</div>'+cell+'<div class="sc'+dim+'">'+(o.sub?'<span></span>':chip)+lk(o.k,closed,o.off,ttl)+'</div>'+(o.sub?'<div class="span2">'+o.sub+'</div>':'');}
+  return '<div class="sg'+dim+'">'+(o.sign||'')+'</div><div class="sl'+(o.res?' res':'')+(o.stack?' stk':'')+dim+'">'+(o.stack||!o.small?o.label+(o.small?'<small>'+o.small+'</small>':''):'<span>'+o.label+'<span class="u">'+o.small+'</span></span>')+'</div>'+cell+'<div class="sc'+dim+'">'+(o.sub?'<span></span>':(o.nochip?'':chip))+(o.nolock?'':lk(o.k,closed,o.off,ttl))+'</div>'+(o.sub?'<div class="span2">'+o.sub+'</div>':'');}
 function pickIcon(){return '<button type="button" class="pk" data-pick="1" title="Picked off the drawing. Click to pick again." aria-label="Pick off the drawing"><svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="3.6" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M7 .8V3.6M7 10.4V13.2M.8 7H3.6M10.4 7H13.2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>';}
 function disp(k,v){return P.raw[k]!==undefined?P.raw[k]:v;}
 
@@ -482,17 +495,12 @@ function ring(g,x,y,w,h,col){el(g,'rect',{x:x-4,y:y-4,width:w+8,height:h+8,rx:6,
 function band(c){
   var svg=$('band'),W=svg.clientWidth||1488,H=svg.clientHeight||170;
   svg.innerHTML='';svg.setAttribute('viewBox','0 0 '+W+' '+H);
-  var defs=el(svg,'defs',{});
-  [['pa','M-2 8L8 -2M0 10L10 0'],['pb','M5 0V10M0 5H10'],['pc','M2 2h1M7 7h1M2 7h1M7 2h1']].forEach(function(d,i){
-    var p=el(defs,'pattern',{id:d[0],width:10,height:10,patternUnits:'userSpaceOnUse'});
-    el(p,'rect',{width:10,height:10,style:'fill:var(--c'+(i+1)+');fill-opacity:.16'});
-    el(p,'path',{d:d[1],style:'stroke:var(--c'+(i+1)+');stroke-width:1.4;fill:none;stroke-opacity:.8'});});
   var g=el(svg,'g',{}),mono='font:13px var(--font);';
   var L=16,R=150,T=38,B=10,x0=L,x1=W-R,y0=T,y1=H-B,pw=x1-x0,ph=y1-y0;
   function tx(x,y,s,anc,fill,w){return el(g,'text',{x:x,y:y,'text-anchor':anc||'start',style:mono+(w?'font-weight:600;':'')+'fill:'+(fill||'var(--t1)')},s);}
   var order=[2,0,1],names=['Roof','Paving','Garden'],pat=['pa','pb','pc'],cx0=x0,xs={};
   order.forEach(function(i){var w=pw*c.A[i]/c.Atot;xs[i]=[cx0,w];
-    el(g,'rect',{x:cx0,y:y0,width:w,height:ph,fill:'url(#'+pat[i]+')',style:'stroke:var(--c'+(i+1)+');stroke-width:1.4'});
+    el(g,'rect',{x:cx0,y:y0,width:w,height:ph,fill:'none',style:'fill:var(--a'+(i+1)+');fill-opacity:.2;stroke:var(--a'+(i+1)+');stroke-width:1.4'});
     var lw=Math.min(w-12,150);
     el(g,'rect',{x:cx0+w/2-lw/2,y:y0+6,width:lw,height:24,rx:6,fill:'var(--prev)','fill-opacity':.88});
     tx(cx0+w/2,y0+23,names[i]+' '+f1(c.A[i])+' m²','middle','var(--t1)',true);
@@ -501,12 +509,11 @@ function band(c){
   var ch=changed(c);
   ch.areas.forEach(function(i){ring(g,xs[i][0]+2,y0+2,xs[i][1]-4,ph-4,'var(--amber)');});
   /* storage */
-  var py=y1-42;
-  var rx=xs[0][0],tx0=rx+14,tw=104,ty=y0+40,th=26;
+  var py=Math.round(y0+Math.max(64,ph*.66));
+  var rx=xs[0][0],tx0=rx+14,tw=104,th=26,ty=py-th/2;
   /* pipe run */
-  var ox=x1-46,pa=tx0+tw/2;
+  var ox=x1-46,pa=tx0+tw;
   [-2.5,2.5].forEach(function(o){el(g,'line',{x1:pa,x2:ox,y1:py+o,y2:py+o,style:'stroke:var(--det);stroke-width:2'});});
-  el(g,'line',{x1:pa,x2:pa,y1:ty+th,y2:py,style:'stroke:var(--det);stroke-width:2'});
   tx((pa+(ox-pa)*.35),py+20,'Detention pipe '+P.pdia+' dia, '+P.plen+' m','middle','var(--t1)',true);
   /* tank */
   el(g,'rect',{x:tx0,y:ty,width:tw,height:th,rx:8,style:'fill:var(--card);stroke:var(--t1);stroke-width:1.6'});
@@ -520,7 +527,7 @@ function band(c){
   /* orifice pit */
   el(g,'rect',{x:ox-14,y:py-14,width:28,height:28,rx:3,style:'fill:var(--card);stroke:var(--pit);stroke-width:2.4'});
   tx(ox,py-21,'Orifice pit','middle','var(--t1)',true);
-  tx(ox,py+30,P.orif+' mm · '+f2(c.flow)+' l/s','middle',c.over>0?'var(--bad)':'var(--t1)',false);
+  tx(ox,py+25,P.orif+' mm · '+f2(c.flow)+' l/s','middle',c.over>0?'var(--bad)':'var(--t1)',false);
   if(ch.orif)ring(g,ox-14,py-14,28,28,'var(--amber)');
   if(c.over>0)ring(g,ox-14,py-14,28,28,'var(--bad)');
   el(g,'line',{x1:ox+14,x2:x1+44,y1:py,y2:py,style:'stroke:var(--det);stroke-width:2'});
@@ -581,7 +588,7 @@ function plan(c){
 function tile(box,kind,label,big,unit,of,word,text,have,need){
   var mx=Math.max(have,need)*1.12||1;
   box.className='tile '+kind;
-  box.innerHTML='<div class="tl">'+label+'</div><div class="tn"><b>'+big+'</b><span class="u">'+unit+'</span><span class="of">of '+of+'</span></div><div class="tp"><div class="pill '+kind+'"><b>'+word+'</b>'+(text?' '+text:'')+'</div></div><div class="bar"><i style="width:'+Math.min(100,have/mx*100).toFixed(1)+'%"></i><u style="left:'+(need/mx*100).toFixed(1)+'%"></u></div>';}
+  box.innerHTML='<div class="tl">'+label+'</div><div class="tn"><b>'+big+'</b><span class="u">'+unit+'</span><span class="of">of '+of+'</span></div><div class="pill '+kind+'"><b>'+word+'</b>'+(text?' '+text:'')+'</div><div class="bar"><i style="width:'+Math.min(100,have/mx*100).toFixed(1)+'%"></i><u style="left:'+(need/mx*100).toFixed(1)+'%"></u></div>';}
 function render(){keepFocus(inner);}
 function inner(){
   var c=calc(P),osd=P.method==='osd',j;
@@ -604,39 +611,38 @@ function inner(){
     n=5;
   }
   c1+=srow({label:'Tank room',small:'m³',k:'room',input:true,val:disp('room',f2(P.room)),chip:'given',lock:'closed',off:true});
-  $('sumC1').innerHTML=c1;roll($('a1'),String(n));
+  $('sumC1').innerHTML=c1;roll($('a1'),f2(c.perm));
   $('n1').textContent=osd?'Times 10 and 5 min. Storms 1 in 2 and 1 in 10.':'Hold what is fixed. The rest is worked out.';
   /* card 2 */
-  var h='<div class="h hl"></div><div class="h">Area m²</div><div class="h" style="grid-column:3/6;justify-content:center;overflow:visible"><span class="mini neutral">office list</span></div><div class="h">Effective</div><div class="h" style="justify-content:flex-start;padding-left:8px">Area from</div>';
-  var nm=['Roof','Paving','Garden'],ks=['roof','pave','gard'];
+  var nm=['Roof','Paving','Garden'],ks=['roof','pave','gard'],h='',bar='';
   for(j=0;j<3;j++){var k=ks[j],isG=j===2,worked=isG&&P.src.gard==='worked';
     var val=isG?(worked?f1(c.A[2]):disp('gardVal',f1(P.gardVal))):disp(k,f1(P[k]));
-    h+='<div class="sl">'+nm[j]+(P.src[k]==='measured'?pickIcon().replace('data-pick="1"','data-pick="'+k+'"'):'')+'</div>'+
+    h+='<div class="sl">'+nm[j]+'</div>'+
        '<div class="fg">'+(worked?'<span class="nb rd" style="display:inline-block;line-height:30px;text-align:right">'+val+'</span>':'<input class="nb r" data-k="'+(isG?'gardVal':k)+'" type="text" inputmode="decimal" autocomplete="off" value="'+esc(val)+'">')+'</div>'+
-       '<div class="sg">×</div><div class="fg">'+f2(c.C[j])+'</div><div class="sg">=</div><div class="fg">'+f1(c.E[j])+'</div>'+
-       '<div class="sc">'+chipSel(k,P.src[k],SRC(k,isG,false))+lk(isG?'gard':null,!worked,!isG,isG?(worked?'Worked out. Click to hold it.':'Held. Click to let it be worked out.'):'Held')+'</div>';}
-  h+='<div class="sl tot" style="padding-top:0">Total</div><div class="fg tot">'+f1(c.Atot)+'</div><div class="sg tot"></div><div class="fg tot"></div><div class="sg tot"></div><div class="fg tot">'+f1(c.Etot)+'</div><div></div>';
-  h+='<div class="sl" style="grid-column:1/5;display:block">Coefficient <small style="font-size:13px;color:var(--t3);margin-left:4px">'+f1(c.Etot)+' ÷ '+f1(P.site)+'</small></div><div class="sg" style="font-weight:600">=</div><div class="fg rs">'+f2(c.coef)+'</div><div class="sc"><span style="font-size:13px;color:var(--t3)">worked out</span>'+lk(null,false,true,'Worked out')+'</div>';
-  $('sumC2').innerHTML=h;roll($('a2'),f2(c.coef));
+       '<div class="fg nt">× '+f2(c.C[j])+'</div><div class="fg ef">'+f1(c.E[j])+'</div>'+
+       '<div class="sc">'+chipSel(k,P.src[k],SRC(k,isG,false))+lk(isG?'gard':null,!worked,!isG,isG?(worked?'Worked out. Click to hold it.':'Held. Click to let it be worked out.'):'Held')+'</div>';
+    bar+='<span style="flex:'+Math.max(c.A[j],0.0001)+' 1 0;background:color-mix(in srgb,var(--a'+(j+1)+') 24%,transparent);border-color:var(--a'+(j+1)+')">'+(c.A[j]/c.Atot>.12?nm[j]+' '+f1(c.A[j]):'')+'</span>';}
+  h+='<div class="sl" style="min-height:32px">Total</div><div class="fg" style="border-top:1px solid var(--t2)">'+f1(c.Atot)+'</div><div class="fg nt"></div><div class="fg ef" style="border-top:1px solid var(--t2)">'+f1(c.Etot)+'</div><div></div>';
+  h+='<div class="sl" style="font-weight:600">Coefficient</div><div></div><div class="fg nt">÷ '+f1(P.site)+'</div><div class="fg ef rs">'+f2(c.coef)+'</div><div></div>';
+  $('sumC2').innerHTML=h;$('abar').innerHTML=bar;roll($('a2'),f2(c.coef));
   /* card 3 */
   var c3='';
   c3+=srow({label:'Tank WT1',small:'detention share',stack:true,k:'tank',input:P.tankHeld,val:P.tankHeld?disp('tank',f2(c.tank)):f2(c.tank),plain:!P.tankHeld,chip:P.tankHeld?'chosen':'worked out',lock:P.tankHeld?'closed':'open'});
-  c3+=srow({sign:'+',label:'Pipes',small:P.pdia+' × '+P.plen+' m',val:f2(c.pipe),chip:'worked out',lock:'open',off:true});
+  c3+=srow({sign:'+',label:'Pipes',small:P.pdia+' × '+P.plen+' m',val:f2(c.pipe),nochip:true,nolock:true,lock:'open',off:true});
   PITS.forEach(function(p){var on=P.pit[p.id];
-    c3+='<div class="sg'+(on?'':' dim')+'">'+(on?'+':'')+'</div><div class="sl'+(on?'':' dim')+'"><label class="tick" title="'+p.id+' holds detention water"><input type="checkbox" data-pit="'+p.id+'"'+(on?' checked':'')+'><span class="box"></span><span class="tt">'+p.id+'<small>holds detention water</small></span></label></div><div class="sf'+(on?'':' dim')+'">'+f2(c.pv[p.id])+'</div><div class="sc'+(on?'':' dim')+'"><span>worked out</span>'+lk(null,false,true,'Worked out')+'</div>';});
-  c3+=srow({sign:'=',label:'Storage',val:f2(c.store),res:true,chip:'worked out',lock:'open',off:true});
-  c3+=srow({label:'Needed',small:osd?'from OSD4W':c.gov+' min storm',val:f2(c.need),chip:osd?'typed':'worked out',lock:osd?'closed':'open',off:true});
-  $('sumC3').innerHTML=c3;roll($('a3'),f2(c.store));
+    c3+='<div class="sg'+(on?'':' dim')+'">'+(on?'+':'')+'</div><div class="sl'+(on?'':' dim')+'"><label class="tick" title="'+p.id+' holds detention water"><input type="checkbox" data-pit="'+p.id+'"'+(on?' checked':'')+'><span class="box"></span><span class="tt">'+p.id+' holds water</span></label></div><div class="sf'+(on?'':' dim')+'">'+f2(c.pv[p.id])+'</div><div class="sc"></div>';});
+  c3+='<div class="sl cmp">Needed<b>'+f2(c.need)+' m³</b>'+(osd?'from OSD4W':c.gov+' min storm')+'</div>';
+  c3+=srow({sign:'=',label:'Storage',val:f2(c.store),res:true,nochip:true,nolock:true,lock:'open',off:true});
+  $('sumC3').innerHTML=c3;
   /* card 4 */
   var cb='<div class="combo"><input class="cin" data-k="orif" type="text" inputmode="decimal" autocomplete="off" value="'+esc(disp('orif',String(P.orif)))+'"><button type="button" class="cbtn" aria-label="List"></button><ul class="clist" hidden>'+[55,63,65,67,69,77,79,80].map(function(v){return '<li>'+v+'</li>';}).join('')+'</ul></div>';
   var c4='';
   c4+=srow({label:'Orifice',small:'mm',html:cb,chip:'chosen',lock:'closed',off:true});
   c4+=srow({label:'Plate',small:'mm',k:'plate',input:true,val:disp('plate',String(P.plate)),chip:'chosen',lock:'closed',off:true});
   c4+=srow({sign:'−',label:'Half orifice',val:(P.orif/2).toFixed(1),chip:'worked out',lock:'open',off:true});
-  c4+=srow({sign:'=',label:'Head',small:'mm',val:c.head.toFixed(1),res:true,chip:'worked out',lock:'open',off:true});
+  c4+=srow({sign:'=',label:'Head',small:'mm',val:c.head.toFixed(1),res1:true,chip:'worked out',lock:'open',off:true});
   c4+=srow({label:'Flow',small:'l/s',val:f2(c.flow),res:true,chip:'worked out',lock:'open',off:true});
-  $('sumC4').innerHTML=c4;roll($('a4'),f2(c.flow));
-  $('n4').textContent='Flow = 0.6 × '+fi(c.area)+' mm² × √(2 × 9.81 × '+(c.head/1000).toFixed(4)+' m). Permitted '+f2(c.perm)+' l/s.';
+  $('sumC4').innerHTML=c4;
   sketch(c);
   /* strip */
   var chg=changed(c),s='<span class="h">What else changes</span>',cnt=0;
