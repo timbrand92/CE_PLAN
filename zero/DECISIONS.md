@@ -186,6 +186,12 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-105** (16 Nov 2026, night) Pits as detention storage: "Only pits I tick". Volume = plan size times water depth, the depth worked out from the top water level.
 
+**D-106** (16 Nov 2026, night) The Detention window's answer: "Both, side by side". Two answers of equal weight: storage against what is needed, and discharge against what is permitted.
+
+**D-107** (16 Nov 2026, night) Site areas: "Picked off the drawing, or typed". An area picked from a closed outline stays linked and updates if the outline changes; or it is simply typed. Each shows where it came from.
+
+**D-108** (16 Nov 2026, night) Adds to D-107: "site areas might be able to come from council documents". A site area has three possible sources: measured off the drawing, typed, or given in a council document. In foundation terms this is one more source on the same fact, not a new piece of screen. Whether the plugin reads the figure out of the document itself or the person types it and marks it "given" is not said; the first release marks it "given".
+
 **Open after this sitting (asked once on 16 Nov, Tim sent D-079 instead of answering; not to be re-asked in the same form):** where a pipe stops at a pit (gap check Pit item 1); whether a schedule cell can be typed over (item 3); which pit kinds are in the first release and whether a turned pit is in the window (item 9); which pits count as storage (item 10).
 
 ## How levels are designed
