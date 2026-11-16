@@ -76,6 +76,8 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-050** (16 Nov 2026) On the "How you do it" page (five short picture stories): "WHAT IF I DONT WANT TO PUT SAWCUTS OR GIO NEEDS TO GO SOMEWHERE ALONG THE PIPE. THE REST LOOKS GREAT". Read as: (1) the short picture-story format works and is to be used from now on; (2) nothing optional is ever forced: a slab does not require saw cuts; (3) an inlet such as a GIO goes exactly where the drafter clicks along the pipe and can be slid along afterwards. The planning chat's answer, given to Tim the same day: saw cuts are only drawn if the drafter draws them; a GIO sits where it is clicked on the pipe, slides along the pipe by its grip, and can also be placed off a pipe.
 
+**D-051** (16 Nov 2026, evening) Ribbon: Tim picked "B: short CE tab + pop-ups" from the page `pictures\pick_a_ribbon.html`. One short CE Civil tab always in the row; a tab for the picked thing (Pit, Pipe, Inlet, Tank) appears when it is selected and goes when it is let go, the way AutoCAD's own Hatch tab does. Which buttons sit on the short tab is not yet settled (button names on the page were placeholders).
+
 ## How levels are designed
 
 **D-016** (16 Nov 2026) [8v] Moving a pit has no single rule for levels: "IT DEPENDS ON THE DESIGN NO? SO INVERTS MIGHT HAVE TO CHANGE UPSTREAM OR WE MIGHT NEED TO UPDATE INVERTS TO SUIT OR GRADE".
