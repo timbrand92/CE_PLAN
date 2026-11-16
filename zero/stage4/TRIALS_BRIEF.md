@@ -13,6 +13,20 @@
 5. **PowerShell** longer than two or three lines goes in a .ps1 file. Existing helpers: the headless engine notes in memory "accoreconsole plugin probe"; the driver at `C:\Lisp Files\_ACAD_DRIVER` for typing commands into a real AutoCAD; Autodesk skills `acad-dotnet` and `autocad-net-api`.
 6. **Honesty.** Each trial ends PASS, FAIL, BLOCKED or NOT TESTED with what was actually seen. A trial run only in the headless engine says so; it is not a pass for the full program unless trial 10 has shown the two agree.
 
+## Added limits after the licence incident of 16 Nov 2026 (PARKING_LOT P-08). These override anything above.
+
+Tim restarted the trials the same night ("start the trials now, i checked license and it should be fine now or you can use codex as well through cli", D-116). They run only under these rules:
+
+1. **Never make, copy, rename or delete an AutoCAD profile, and never start AutoCAD with a profile switch (/p).** AutoCAD is started plainly, so it uses Tim's own current profile, and that profile's settings are not changed. Do not set SECURELOAD or any other system variable that is saved in the profile or registry; load the trial plugin by a way that needs no such change (a trusted folder already trusted, or ask Tim).
+2. **Never force-close AutoCAD or the headless engine** (no taskkill, no Stop-Process, no kill timers). Close only by a normal QUIT typed into it. If one is stuck on a prompt or a window, leave it exactly as it is, stop, and report; Tim closes it.
+3. **Never touch licensing or sign-in:** no Autodesk service, licensing file, helper, product key or sign-in window. If a licence or sign-in window appears, do nothing to it, stop, and report.
+4. **One AutoCAD at a time, and none while Tim's is open.** Before every start, list the running acad.exe and accoreconsole.exe processes; if any is running that the trial did not start, do not start another: wait and report.
+5. **Do not use the headless engine's isolate option** and do not write to the registry at all.
+6. **The leftovers from the first run stay untouched** (the "ZeroTrial" profile, the SECURELOAD value in the unnamed profile, `C:\CE_WORK\trials\zero\isolate`): Tim is looking at them himself. Do not use, change or delete them.
+7. **Look before trusting a start:** after starting the full AutoCAD, take a picture of the screen and check for any window other than the drawing before sending anything to it.
+8. Trials that can be proven without AutoCAD go first (trial 11). Trials that cannot run inside these rules are reported BLOCKED with the reason; they are not worked around.
+9. Tim also allows Codex through its command line as the driver for real-AutoCAD steps, under the same rules.
+
 ## The trials, in running order
 
 1. **Trial 11, any direction (no AutoCAD; start here).** Facts with value, source and hold; sums as relations; a branched run of pits and pipes. Hold different sets and work out the rest, uphill and downhill; over-held sets reported with which facts and by how much; time for a run of 200 pipes. Pass: every case in the three mock-ups (`pictures\pipe_window_full_size.html`, `pit_window_full_size.html`, `run_levels_window_full_size.html`) reproduces, plus a branched case, predictably and in well under a second.

@@ -216,12 +216,18 @@ input[type=number]::-webkit-inner-spin-button{display:none}
 .btn:disabled{opacity:.5;cursor:default}
 .btn:disabled:hover{background:transparent}
 .sc1{font:14px var(--font);fill:var(--txt);font-variant-numeric:tabular-nums}
-.sh{font:600 14px var(--font);fill:var(--txt)}
-.unk{fill:var(--t3);font:20px var(--font)}
-.unk2{fill:var(--t3);font:12px var(--font)}
+.sh{font:600 13px var(--font);fill:var(--txt)}
+.ttl{fill:var(--txt);font:600 20px var(--font)}
+.nt{fill:var(--txt);font:12px var(--font)}
 .unk3{fill:var(--t3);font:11px var(--font)}
 #sketch{display:block;width:100%;height:64px;margin-top:auto}
-.sum .sc .lk{margin-left:8px}
+.top{flex:1;display:flex;gap:16px;min-height:0}
+.prev{flex:none;height:100%;width:54%;min-height:0}
+#cards{flex:1;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;min-width:0;min-height:0}
+.sum.w{grid-template-columns:72px 1fr 92px}
+.tkcol .tick{min-height:28px}
+.chips{gap:4px;margin-top:4px}
+.tkcol.two .tick.span{grid-column:1/-1}
 </style>
 </head>
 <body>
@@ -243,21 +249,22 @@ input[type=number]::-webkit-inner-spin-button{display:none}
     <div id="win">
       <div id="tb"><span id="ttl">Pit schedule · this sheet</span><span class="x" id="xbtn"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 2L12 12M12 2L2 12" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></span></div>
       <div id="body">
+        <div class="top">
         <div class="prev" id="prevbox">
           <svg id="band" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"></svg>
-          <div class="cap">Preview · the schedule as it will print on the sheet</div>
+          <div class="cap">Preview · as it will print</div>
+          <div class="cap2" id="scalenote">Rows drawn 2 times closer than on the sheet</div>
           <div class="key r"><span>Closed padlock: typed over</span><span><i style="border:2px solid var(--amber);border-radius:4px"></i>Changed</span><span><i style="border:2px solid var(--acc);border-radius:4px"></i>Selected cell</span></div>
-          <div class="scalenote" id="scalenote">Rows drawn 2 times closer than on the sheet</div>
         </div>
         <div id="cards">
           <section class="card">
             <div class="lab"><i>1</i>Rows</div>
-            <div class="ans"><span class="num" id="a1">5</span><span class="unit" id="a1u">rows</span></div>
+            <div class="ans"><span class="num" id="a1">16</span><span class="unit" id="a1u">rows</span></div>
             <div class="tkcol">
-              <label class="tick dis"><input type="checkbox" checked disabled><span class="box"></span>Numbered pits (4)</label>
+              <label class="tick dis"><input type="checkbox" checked disabled><span class="box"></span><span id="lblNum">Numbered pits (4)</span></label>
               <label class="tick"><input type="checkbox" id="tCouncil" checked><span class="box"></span>Existing council pit</label>
               <label class="tick dis"><input type="checkbox" disabled><span class="box"></span>Pump well<span class="held1 rgt">none on this job</span></label>
-              <label class="tick"><input type="checkbox" id="tPlastic" checked><span class="box"></span>Plastic pit P4</label>
+              <label class="tick"><input type="checkbox" id="tPlastic" checked><span class="box"></span><span id="lblPl">Plastic pit P4</span></label>
             </div>
             <div class="chips">
               <button type="button" class="mchip col on" id="oOut">P1 at the outlet, working upstream</button>
@@ -271,9 +278,8 @@ input[type=number]::-webkit-inner-spin-button{display:none}
             <div class="note">Headings are the office's own.</div>
           </section>
           <section class="card">
-            <div class="lab"><i>3</i>A cell typed over</div>
+            <div class="lab lh"><span><i>3</i>A cell typed over</span><span class="held1" id="selline">P3 · Pit size</span></div>
             <div class="ans"><span class="num" id="a3">0</span><span class="unit">held</span></div>
-            <div class="held1" id="selline">P3 · Pit size</div>
             <div class="sum w" id="sumC3"></div>
             <div id="st3" class="pill ok"></div>
             <button type="button" class="btn full" id="follow">Let it follow the pit</button>
@@ -284,9 +290,10 @@ input[type=number]::-webkit-inner-spin-button{display:none}
             <div class="sum w" id="sumC4"></div>
             <div class="held1" id="drawn">250 in the drawing at 1:100.</div>
             <label class="tick"><input type="checkbox" id="tNotes" checked><span class="box"></span>Standing notes under the schedule</label>
-            <div class="held1">3 notes. Wording: Unknown.</div>
+            <div class="held1">3 standing notes, the office's wording.</div>
             <svg id="sketch" viewBox="0 0 326 64" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" aria-label="Sketch of the sheet with the schedule spot"></svg>
           </section>
+        </div>
         </div>
         <div id="else"></div>
       </div>
@@ -372,43 +379,69 @@ function wireSum(box,onInput,onChange,onLock){
 }
 
 (function(){
-/* The office's columns, in the order they print (E-040 and TABLES_AND_BOXES 1.4). Widths are a first draft. */
+/* The office's columns, in the order they print. Headings are the issued sheets' wording. */
 var COLS=[
- {k:'no',h:'Pit no.',w:56,tick:'Pit no.',cn:'Pit no.'},
- {k:'size',h:'Pit size',w:130,tick:'Pit size',cn:'Pit size'},
- {k:'from',h:'From',w:60,g:'Inlet',tick:'Inlet from',cn:'Inlet from'},
- {k:'din',h:'Dia',w:48,g:'Inlet',tick:'Inlet dia',cn:'Inlet dia'},
- {k:'ilin',h:'Invert level',w:70,g:'Inlet',tick:'Inlet invert level',cn:'Inlet invert level'},
- {k:'dout',h:'Dia',w:48,g:'Outlet',tick:'Outlet dia',cn:'Outlet dia'},
- {k:'ilout',h:'Invert level',w:70,g:'Outlet',tick:'Outlet invert level',cn:'Outlet invert level'},
- {k:'cl',h:'Cover level',w:70,tick:'Cover level',cn:'Cover level'},
- {k:'dep',h:'Depth to outlet',w:72,tick:'Depth to outlet',cn:'Depth to outlet'},
- {k:'rem',h:'Type of lid and remarks',w:262,tick:'Type of lid and remarks',cn:'Type of lid and remarks'}
+ {k:'no',h:'PIT No.',w:56,tick:'Pit no.',cn:'Pit no.'},
+ {k:'size',h:'PIT SIZE',w:120,tick:'Pit size',cn:'Pit size'},
+ {k:'from',h:'FROM',w:60,g:'INLET',tick:'From',cn:'Inlet from'},
+ {k:'din',h:'DIA',w:48,g:'INLET',tick:'Inlet dia',cn:'Inlet dia'},
+ {k:'ilin',h:'INVERT LEVEL',w:70,g:'INLET',tick:'Inlet level',cn:'Inlet invert level'},
+ {k:'dout',h:'DIA',w:48,g:'OUTLET',tick:'Outlet dia',cn:'Outlet dia'},
+ {k:'ilout',h:'INVERT LEVEL',w:70,g:'OUTLET',tick:'Outlet level',cn:'Outlet invert level'},
+ {k:'cl',h:'COVER LEVEL',w:70,tick:'Cover level',cn:'Cover level'},
+ {k:'dep',h:'DEPTH TO OUTLET',w:84,tick:'Depth to outlet',cn:'Depth to outlet'},
+ {k:'rem',h:'TYPE OF LID AND REMARKS',w:190,tick:'Lid and remarks',cn:'Type of lid and remarks'}
 ];
-var PITS={
- P1:{no:'P1',size:'1 / 600 x 1200',from:'P2',din:'150',ilin:'5.02',dout:'150',ilout:'5.00',cl:'5.62',dep:'0.62',rem:'Class D Solid Lid With Step Irons'},
- P2:{no:'P2',size:'1 / 600 x 600',from:'P3',din:'150',ilin:'5.10',dout:'150',ilout:'5.08',cl:'5.70',dep:'0.62',rem:'Class D Grated Lid With Step Irons'},
- P3:{no:'P3',size:'1 / 450 x 450',from:'P4',din:'150',ilin:'5.20',dout:'150',ilout:'5.18',cl:'5.75',dep:'0.57',rem:'Class B Grate'},
- P4:{no:'P4',size:'1 / 450 x 450',from:'DP',din:'100',ilin:'5.30',dout:'150',ilout:'5.28',cl:'5.83',dep:'0.55',rem:'Plastic Pit Class A Grate'},
- EX:{no:'ExP',size:'1 / 900 x 900',from:'P1',din:'150',ilin:'4.95',dout:'–',ilout:'–',cl:'5.55',dep:'–',rem:'Existing council pit'}
-};
+var NOTES=['- CONFIRM ALL LEVELS PRIOR TO THE COMMENCEMENT OF WORK.',
+ '- ALL STORMWATER PIPE SUB BRANCHES SHALL BE MIN. SAME SIZE DOWNPIPES GRADED AT 1:100 MIN.',
+ '- ALL GRATED COVERS TO BE HEEL SAFE UNLESS NOTED OTHERWISE. ALL COVERS TO BE PROFILED AND POSITIONED TO SUIT EXISTING SURFACE LEVELS, PAVING LAYOUTS, SPOON DRAINS, KERB CHANNELS AND OTHER FEATURES AS DETAILED ON ARCHITECTURAL DRAWINGS.'];
+var q0=new URLSearchParams(location.search);
+var JOB=q0.get('rows')==='short'?'short':'long';
+var ROWS={},GROUPS=[],PLASTIC=JOB==='short'?'P4':'P7';
+function f2s(n){return (Math.round(n*100)/100).toFixed(2);}
+(function buildJob(){
+ function add(pit,id,v){ROWS[id]={pit:pit,v:v};return id;}
+ if(JOB==='short'){
+  var T=[['P1','1 / 600 x 1200','P2','150','5.02','150','5.00','5.62','0.62','Class C Lid + Grate'],
+   ['P2','1 / 600 x 600','P3','150','5.10','150','5.08','5.70','0.62','Class C Grate'],
+   ['P3','1 / 450 x 450','P4','150','5.20','150','5.18','5.75','0.57','Class A Grate'],
+   ['P4','1 / 450 x 450','DP','100','5.30','150','5.28','5.83','0.55','Class A Grate']];
+  T.forEach(function(t){add(t[0],t[0],{no:t[0],size:t[1],from:t[2],din:t[3],ilin:t[4],dout:t[5],ilout:t[6],cl:t[7],dep:t[8],rem:t[9]});GROUPS.push({pit:t[0],rows:[t[0]]});});
+ }else{
+  var extra={P1:['AGI','P1b'],P4:['DP','P4b'],P9:['TG','P9b']},rem=['Class A Grate','Class C Grate','Class A Lid','Class C Lid + Grate'];
+  for(var n=0;n<=11;n++){var O=5.00+0.07*n,CL=5.62+0.06*n,id='P'+n,dep=Math.round((CL-O)*100)/100;
+   var size=n===1?'1 / 600 x 1200':(dep>0.605?'1 / 600 x 600':'1 / 450 x 450');
+   var odia=n<=1?'225':'150';
+   var from=n<11?'P'+(n+1):'DP',din=n<11?(n+1<=1?'225':'150'):'100';
+   var r=(n===1)?'Class C Lid + Grate':(n===7?'Class A Grate':rem[n%4]);
+   add(id,id,{no:id,size:size,from:from,din:din,ilin:f2s(O+0.02),dout:odia,ilout:f2s(O),cl:f2s(CL),dep:f2s(dep),rem:r});
+   var g={pit:id,rows:[id]};
+   if(extra[id]){add(id,extra[id][1],{no:'',size:'',from:extra[id][0],din:'100',ilin:f2s(O+0.04),dout:'',ilout:'',cl:'',dep:'',rem:''});g.rows.push(extra[id][1]);}
+   GROUPS.push(g);}
+ }
+ add('EX','EX',{no:'ExP',size:'1 / 900 x 900',from:JOB==='short'?'P1':'P0',din:'225',ilin:'4.95',dout:'\u2013',ilout:'\u2013',cl:'5.55',dep:'\u2013',rem:'Existing council pit'});
+})();
 var S={plastic:true,council:true,order:'out',cols:{},H:{},sel:{r:'P3',c:'size'},scale:'1:100',notes:true};
 COLS.forEach(function(c){S.cols[c.k]=true;});
 function colOf(k){for(var i=0;i<COLS.length;i++)if(COLS[i].k===k)return COLS[i];return null;}
-function rowsVis(){var a=['P1','P2','P3','P4'];if(!S.plastic)a=a.filter(function(i){return i!=='P4';});if(S.order==='up')a.reverse();if(S.council)a.push('EX');return a;}
+function groupsVis(){var g=GROUPS.filter(function(x){return S.plastic||x.pit!==PLASTIC;});if(S.order==='up')g=g.slice().reverse();return g;}
+function rowsVis(){var a=[];groupsVis().forEach(function(g){a=a.concat(g.rows);});if(S.council)a.push('EX');return a;}
 function colsVis(){return COLS.filter(function(c){return S.cols[c.k];});}
-function pitVal(r,c){return PITS[r][c];}
+function pitVal(r,c){return ROWS[r].v[c];}
 function val(r,c){var k=r+c;return S.H[k]!==undefined?S.H[k]:pitVal(r,c);}
-function says(r,c){var v=pitVal(r,c);return c==='size'?v.replace(/^\d+\s*\/\s*/,''):v;}
-function rname(r){return r==='EX'?'Council pit':r;}
-function rnameS(r){return r==='EX'?'The council pit':r;}
+function says(r,c){var v=pitVal(r,c);if(v==='')return 'nothing';return c==='size'?v.replace(/^\d+\s*\/\s*/,''):v;}
+function rname(r){return r==='EX'?'Council pit':ROWS[r].pit+(ROWS[r].v.no===''?' (second inlet)':'');}
+function rnameS(r){return r==='EX'?'The council pit':rname(r);}
 function isChanged(r,c){var k=r+c;return S.H[k]!==undefined&&S.H[k]!==pitVal(r,c);}
 
 /* ---------- the schedule as drawn on the sheet ---------- */
-var FS=14,ROW=27,GH=20,SH=36,TH=32,NH=14;
+var FS=14,ROW=27,GH=20,SH=36,TH=32,NH=15;
+function wrapN(s,maxw){var cw=7.3,words=s.split(' '),lines=[],cur='';
+  words.forEach(function(w){var t=cur?cur+' '+w:w;if(t.length*cw>maxw&&cur){lines.push(cur);cur=w;}else cur=t;});lines.push(cur);return lines;}
+function noteLines(tw){var o=[];NOTES.forEach(function(n){wrapN(n,tw).forEach(function(l,i){o.push(i?'  '+l:l);});});return o;}
 function measure(){var cs=colsVis(),n=rowsVis().length,tw=0;cs.forEach(function(c){tw+=c.w;});var anyG=cs.some(function(c){return c.g;});
-  return {tw:tw,w:Math.max(tw,330),h:TH+(anyG?GH+SH:SH)+n*ROW+(S.notes?8+3*NH:0),anyG:anyG};}
-function wrap(s,maxw){var cw=FS*0.52,words=s.split(' '),lines=[],cur='';
+  return {tw:tw,w:Math.max(tw,330),h:TH+(anyG?GH+SH:SH)+n*ROW+(S.notes?8+noteLines(Math.max(tw,330)).length*NH:0),anyG:anyG};}
+function wrap(s,maxw){var cw=13*0.66,words=s.split(' '),lines=[],cur='';
   words.forEach(function(w){var t=cur?cur+' '+w:w;if(t.length*cw>maxw&&cur){lines.push(cur);cur=w;}else cur=t;});lines.push(cur);return lines;}
 function T(g,x,y,s,cls,anc){return el(g,'text',{x:x,y:y,'text-anchor':anc||'middle',class:cls||'sc1','dominant-baseline':'central'},s);}
 function Ln(g,x1,y1,x2,y2,w){return el(g,'line',{x1:x1,y1:y1,x2:x2,y2:y2,stroke:'var(--txt)','stroke-width':w||1});}
@@ -420,7 +453,7 @@ function drawSched(parent,tx,ty,k,live){
   var cs=colsVis(),rs=rowsVis(),m=measure(),g=el(parent,'g',{transform:'translate('+tx+' '+ty+') scale('+k+')'});
   var yT=TH,yH=yT+(m.anyG?GH+SH:SH),yB=yH+rs.length*ROW,x=[0],i,j,tw=m.tw;
   cs.forEach(function(c){x.push(x[x.length-1]+c.w);});
-  T(g,0,TH-13,'Unknown','unk','start');T(g,86,TH-11,'title wording not recorded','unk3','start');
+  T(g,0,TH-13,'STORMWATER PIT SCHEDULE','ttl','start');
   if(!cs.length)return g;
   /* ruled lines */
   el(g,'rect',{x:0,y:yT,width:tw,height:yB-yT,fill:'none',stroke:'var(--txt)','stroke-width':1.6});
@@ -442,29 +475,29 @@ function drawSched(parent,tx,ty,k,live){
       if(live)el(g,'rect',{x:x[ci],y:y,width:c.w,height:ROW,fill:'transparent','data-c':key,'data-r':r,'data-k':c.k,style:'cursor:pointer'});
     });});
   /* standing notes (wording not recorded) */
-  if(S.notes)for(j=0;j<3;j++)T(g,0,yB+8+j*NH+NH/2,'Note '+(j+1)+': Unknown','unk2','start');
+  if(S.notes)noteLines(Math.max(tw,330)).forEach(function(l,j){T(g,0,yB+8+j*NH+NH/2,l,'nt','start');});
   return g;
 }
 function section(){
   var svg=$('band'),W=svg.clientWidth||1488,H=svg.clientHeight||300;
   svg.innerHTML='';svg.setAttribute('viewBox','0 0 '+W+' '+H);
-  var m=measure(),aw=W-48,ah=H-30-6,k=Math.min(1.18,aw/m.w,ah/m.h),w=m.w*k,h=m.h*k;
-  drawSched(svg,(W-w)/2,30+Math.max(0,(ah-h)/2),k,true);
+  var m=measure(),aw=W-32,ah=H-52-6,k=Math.min(1.18,aw/m.w,ah/m.h),w=m.w*k,h=m.h*k;
+  drawSched(svg,(W-w)/2,56,k,true);
 }
 function plan(){
   var svg=$('model');svg.innerHTML='';svg.setAttribute('viewBox','0 0 1920 934');
   var g=el(svg,'g',{});
   el(g,'rect',{x:60,y:30,width:1800,height:874,fill:'none',stroke:'var(--ctx)','stroke-width':2});
-  el(g,'rect',{x:230,y:70,width:900,height:470,fill:'none',stroke:'var(--ctx)','stroke-width':1.5});
-  var X=[330,590,850,850],Y=[200,200,200,420],N=['P4','P3','P2','P1'],CLs=['5.83','5.75','5.70','5.62'],j;
-  for(j=0;j<2;j++)[-6,6].forEach(function(q){el(g,'line',{x1:X[j]+20,x2:X[j+1]-20,y1:Y[j]+q,y2:Y[j+1]+q,stroke:'var(--pipe)','stroke-width':2});});
-  [-6,6].forEach(function(q){el(g,'line',{x1:X[2]+q,x2:X[3]+q,y1:Y[2]+20,y2:Y[3]-20,stroke:'var(--pipe)','stroke-width':2});});
-  for(j=0;j<4;j++){el(g,'rect',{x:X[j]-20,y:Y[j]-20,width:40,height:40,fill:'none',stroke:'var(--pit)','stroke-width':2.5});
-    var rt=j>=2;
-    el(g,'text',{x:rt?X[j]+34:X[j],y:rt?Y[j]-4:Y[j]-34,'font-size':22,'text-anchor':rt?'start':'middle',class:'t','font-weight':600},N[j]);
-    el(g,'text',{x:rt?X[j]+34:X[j],y:rt?Y[j]+22:Y[j]+50,'font-size':20,'text-anchor':rt?'start':'middle',class:'t cl'},'CL '+CLs[j]);}
-  el(g,'text',{x:850,y:500,'font-size':20,'text-anchor':'middle',class:'t'},'To the council pit');
-  el(g,'rect',{x:1440,y:70,width:260,height:150,fill:'none',stroke:'var(--ctx)','stroke-width':1.5});
+  el(g,'rect',{x:230,y:70,width:520,height:800,fill:'none',stroke:'var(--ctx)','stroke-width':1.5});
+  var gs=groupsVis().slice().reverse(),n=gs.length,xs=[300,490,680],cols=3,pts=[],j;
+  for(j=0;j<n;j++){var rw=Math.floor(j/cols),cc=j%cols;if(rw%2)cc=cols-1-cc;pts.push([xs[cc],130+rw*(n>6?200:170)]);}
+  for(j=0;j<n-1;j++)[-5,5].forEach(function(q){var a=pts[j],b=pts[j+1],h=Math.abs(a[1]-b[1])<1;
+    el(g,'line',{x1:a[0]+(h?(b[0]>a[0]?18:-18):q),x2:b[0]+(h?(b[0]>a[0]?-18:18):q),y1:a[1]+(h?q:18),y2:b[1]+(h?q:-18),stroke:'var(--pipe)','stroke-width':2});});
+  for(j=0;j<n;j++){var p=pts[j];
+    el(g,'rect',{x:p[0]-16,y:p[1]-16,width:32,height:32,fill:'none',stroke:'var(--pit)','stroke-width':2.5});
+    var cc2=pts[j][0]===xs[0]?0:(pts[j][0]===xs[2]?2:1);el(g,'text',{x:cc2===0?p[0]-26:(cc2===2?p[0]+26:p[0]),y:cc2===1?p[1]-26:p[1]+7,'font-size':20,'text-anchor':cc2===0?'end':(cc2===2?'start':'middle'),class:'t','font-weight':600},gs[j].pit);}
+  el(g,'text',{x:490,y:850,'font-size':20,'text-anchor':'middle',class:'t'},'To the council pit');
+  el(g,'rect',{x:1440,y:70,width:260,height:110,fill:'none',stroke:'var(--ctx)','stroke-width':1.5});
   var m=measure(),k=1.1,w=m.w*k,h=m.h*k,x=1690-w,y=860-h;
   el(g,'rect',{x:x-12,y:y-12,width:w+24,height:h+24,rx:6,fill:'none',stroke:'var(--acc)','stroke-width':2,'stroke-dasharray':'8 6'});
   drawSched(g,x,y,k,false);
@@ -487,12 +520,12 @@ function card3(){
   var r=S.sel.r,c=S.sel.c,key=r+c,held=S.H[key]!==undefined,n=Object.keys(S.H).length,col=colOf(c);
   roll($('a3'),String(n));
   $('selline').textContent=rname(r)+' · '+col.cn;
-  var h=nrow({label:'Pit says',val:pitVal(r,c),chip:r==='EX'?'council pit':'from '+r,lock:'open',off:true});
+  var h=nrow({label:'Pit says',val:pitVal(r,c),chip:r==='EX'?'council pit':'from '+ROWS[r].pit,lock:'open',off:true});
   h+=nrow({label:'Typed over',k:'typed',input:true,val:held?S.H[key]:'',chip:held?'typed over':'not typed',lock:held?'closed':'open'});
   $('sumC3').innerHTML=h;
   var inp=$('sumC3').querySelector('input');if(inp)inp.placeholder='Type to hold';
   var box=$('st3');
-  if(!held)pill(box,'ok','Suits:','follows '+(r==='EX'?'the council pit.':r+'.'));
+  if(!held)pill(box,'ok','Suits:','follows '+(r==='EX'?'the council pit.':ROWS[r].pit+'.'));
   else if(S.H[key]===pitVal(r,c))pill(box,'ok','Suits:','held, and matches the pit.');
   else pill(box,'warn','Check:','the pit says '+says(r,c)+'.');
   $('follow').disabled=!held;
@@ -509,8 +542,8 @@ function strip(){
 }
 function render(){keepFocus(function(){
   fixSel();
-  var nr=rowsVis().length,nc=colsVis().length;
-  roll($('a1'),String(nr));$('a1u').textContent=nr===1?'row':'rows';
+  var nr=rowsVis().length,nc=colsVis().length,np=groupsVis().length;
+  roll($('a1'),String(nr));$('a1u').textContent=(nr===1?'row':'rows')+' \u00b7 '+np+(np===1?' pit':' pits');
   roll($('a2'),String(nc));
   $('oOut').classList.toggle('on',S.order==='out');$('oUp').classList.toggle('on',S.order==='up');
   $('drawn').textContent=(Math.round(250*parseInt(S.scale.split(':')[1],10)/100))+' in the drawing at '+S.scale+'.';
@@ -518,9 +551,10 @@ function render(){keepFocus(function(){
 });}
 
 /* ---------- build the static parts ---------- */
-var ct='';COLS.forEach(function(c){ct+='<label class="tick"><input type="checkbox" data-col="'+c.k+'" checked><span class="box"></span>'+c.tick+'</label>';});
+var ct='';COLS.forEach(function(c){ct+='<label class="tick'+(c.k==='rem'?' span':'')+'"><input type="checkbox" data-col="'+c.k+'" checked><span class="box"></span>'+c.tick+'</label>';});
 $('colTicks').innerHTML=ct;
 $('sumC4').innerHTML=nrow({label:'Text height',val:'2.5 mm',chip:'office list',lock:'closed',off:true});
+$('lblNum').textContent='Numbered pits ('+GROUPS.length+')';$('lblPl').textContent='Plastic pit '+PLASTIC;
 sketch();
 /* ---------- events ---------- */
 $('colTicks').addEventListener('change',function(e){var k=e.target.dataset&&e.target.dataset.col;if(!k)return;
@@ -541,7 +575,7 @@ window.__redraw=function(){section();plan();};
 var q=wireCommon();
 if(q.get('rows')==='nocouncil'){S.council=false;$('tCouncil').checked=false;}
 var hv=q.get('hold');
-if(hv)hv.split('|').forEach(function(p){var m=/^(P[1-4]|EX)(no|size|from|din|ilin|dout|ilout|cl|dep|rem):(.*)$/.exec(p);
+if(hv)hv.split('|').forEach(function(p){var m=/^(P\d+b?|EX)(no|size|from|din|ilin|dout|ilout|cl|dep|rem):(.*)$/.exec(p);
   if(m&&m[3]!==''){S.H[m[1]+m[2]]=m[3];if(!S.heldFirst){S.heldFirst=true;S.sel={r:m[1],c:m[2]};}}});
 render();fit();
 if(q.get('inspect')==='1')inspect(true,true);

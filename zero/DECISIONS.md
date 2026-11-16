@@ -204,6 +204,10 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-114** (16 Nov 2026, night) Detention window: "Tick: right track" (he was told it is the busiest window and that OSD4W shows only two typed results because its inputs are not in the reference). A long pit schedule on the sheet: "It runs long; I make room": one block that grows downward; the plugin only warns that it may not fit.
 
+**D-115** (16 Nov 2026, night) The plan: "Approve as the plan". `stage6\THE_PLAN.md` draft 1 is the plan the build works to: trials, foundation, window frame, one tool at a time (Pit, Pipe, Levels along a run, Inlets, Tank, Detention, Pit schedule), one real job, colleagues; no dates until the trials are done.
+
+**D-116** (16 Nov 2026, night) Trials after the licence incident (P-08): "start the trials now, i checked license and it should be fine now or you can use codex as well through cli". The trials restart tonight. Codex through its command line is allowed as the driver. The planning chat added limits to `stage4\TRIALS_BRIEF.md` before restarting: no profiles, no force-closing, no licensing or sign-in, one AutoCAD at a time and none while Tim's is open, no registry writes, leftovers untouched. (His earlier answer "Leave everything, I will look tomorrow" about the leftovers still stands.)
+
 **Open after this sitting (asked once on 16 Nov, Tim sent D-079 instead of answering; not to be re-asked in the same form):** where a pipe stops at a pit (gap check Pit item 1); whether a schedule cell can be typed over (item 3); which pit kinds are in the first release and whether a turned pit is in the window (item 9); which pits count as storage (item 10).
 
 ## How levels are designed
