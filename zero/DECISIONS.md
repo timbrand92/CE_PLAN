@@ -198,6 +198,8 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-111** (16 Nov 2026, night) Inlet window (`pictures\inlet_window_full_size.html`): "Tick: right track, same as the others". Not a final acceptance; symbols are to be the office's own blocks when built. On the three leftovers of the stopped trial chat (the ZeroTrial profile, the load-safety setting in the unnamed profile, the trial folder): "Leave everything, I will look tomorrow". Nothing more is to be touched; the trials stay stopped (PARKING_LOT P-08).
 
+**D-112** (16 Nov 2026, night) Pit schedule window: "tick but what happens for schedules that are 16 rows deep?" Ticked as right track; the long-schedule case is open (how it is handled today was asked next). On the unknown title and standing notes: "Read it off an issued job". Earlier the same night, unprompted, on the Inlet window: "yep happy witht hat window".
+
 **Open after this sitting (asked once on 16 Nov, Tim sent D-079 instead of answering; not to be re-asked in the same form):** where a pipe stops at a pit (gap check Pit item 1); whether a schedule cell can be typed over (item 3); which pit kinds are in the first release and whether a turned pit is in the window (item 9); which pits count as storage (item 10).
 
 ## How levels are designed
