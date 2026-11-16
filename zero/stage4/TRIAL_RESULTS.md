@@ -10,7 +10,7 @@
 3. **Trial 1, joins:** PASS for the commands tested (soft pointer wins; end-of-command mover works, close-hook mover fails). Xref bind not tested.
 4. **Trial 3, no plugin:** PASS (plot identical, plain edit, plugin reports the change). LT and Tim's drawing not tested.
 5. **Trial 2, grips:** NOT TESTED yet.
-6. **Trial 4, speed:** NOT TESTED yet.
+6. **Trial 4, speed:** PASS for command and mover cost (about 40 ms per move on 2500 objects); mouse-drag feel not measured.
 7. **Trial 5, Properties:** NOT TESTED yet.
 8. **Trial 6, window, live preview and Inspect:** NOT TESTED yet.
 9. **Trial 7, ribbon tab, tips and typed names:** NOT TESTED yet.
@@ -114,6 +114,21 @@ un4-headless\events.log`, `run5-full\events.log`, `dialog1.png`, the comparison 
 4. **The plugin reports what changed on return.** Reading the edited file, the plugin compared each thing with its stored position stamp and reported, in order: **pit P3 changed** (was 100,100, now 105,103), **label P3-label changed** (text P3 to P3A), **the three pipes unchanged**. It cannot say the pipes now fail to meet the pit unless it also checks the joins (trial 1 showed that check works), so the report should combine both. Evidence: `evidence\zt_default.log` (T3 lines, copied into `t3\`).
 5. **Not tested:** AutoCAD LT; a drawing saved down to an old format and edited in LT; Tim's live drawing P-04; paper-space sheets, viewports, Xrefs and dynamic blocks; the stamp's cost on a big drawing; an outsider who changes something and changes it back (no change reported, correctly).
 6. **What it means for the build approach.** "No special object types" holds for looks, plotting and plain editing here. The position stamp works and is cheap, but it must be paired with the join check, because plain AutoCAD can move a pit and leave its pipes behind. The stamp lives in the extension dictionary, which survives save and reopen (trial 1); it is lost when a pipe is exploded, so a stamp can also say "this thing no longer exists".
+
+---
+
+## Trial 4. Speed
+
+**Verdict: PASS for command and mover cost; the part Tim cares most about, how a drag FEELS with the mouse, was NOT measured.** Run Mon 16 Nov 2026 22:39, real AutoCAD 2027, Tim's profile (his CE plugins loaded).
+
+1. **What was done.** A made-up sheet of 500 pits, each with three joined pipes and a label: 2500 objects, every one carrying a note, joins and record (built in 273 ms by the plugin). One pit was moved 7 times with the real MOVE command, timed from inside the plugin, three ways: no overrule at all; my overrule switched on (filtered to objects carrying the note) with no mover; and the mover on (pipe ends follow, route 1 from trial 1).
+2. **What was measured (per MOVE of one pit on the 2500-object sheet).**
+   1. **No overrule:** median 32.1 ms (slowest 50.6).
+   2. **Overrule on, filtered by the note, no mover:** median 32.3 ms (slowest 37.1). The filter costs nothing measurable.
+   3. **Mover on:** median 40.4 ms (slowest 53.3): about 8 ms more, to find and move 3 pipe ends by scanning all 2500 objects. The "something changed" event fired 1 time per move without the mover and 4 times with it (the pit and the three pipes).
+3. **What this means in drafting terms.** A move of one pit with its three pipes on a 500-pit sheet takes about 40 thousandths of a second including the mover. That is not a speed problem. The mover scans the whole sheet each time; a lookup list of which pipes join which pit would make it independent of sheet size. Not needed yet.
+4. **Not measured, and this matters.** (a) A mouse drag with the live ghost image: it needs a person or an input robot, and under the rules I did not drive the mouse. The drag copies the pit repeatedly on screen and the pipe ends are only moved when the command ends, so during the drag the pipes would not follow; whether that looks acceptable is for Tim to judge on a screen. (b) Sheets of 5000 pits. (c) The cost of the preview snapshot (trial 6). (d) The overrule with no filter. (e) The first-open self-check on a large sheet (reading 2500 stamps and joins): not timed.
+5. **Evidence:** `evidence\t4_speed.log`. **Build meaning:** neither the overrule nor the mover is a speed risk at this size; the open question is the look of a drag, which needs Tim's eyes or a Codex screen look.
 
 ---
 
