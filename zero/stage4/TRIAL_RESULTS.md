@@ -11,7 +11,7 @@
 4. **Trial 3, no plugin:** PASS (plot identical, plain edit, plugin reports the change). LT and Tim's drawing not tested.
 5. **Trial 2, grips:** NOT TESTED yet.
 6. **Trial 4, speed:** PASS for command and mover cost (about 40 ms per move on 2500 objects); mouse-drag feel not measured.
-7. **Trial 5, Properties:** NOT TESTED yet.
+7. **Trial 5, Properties:** BLOCKED for the palette (needs the Properties palette opened, a saved interface setting); the .NET property list works at code level.
 8. **Trial 6, window, live preview and Inspect:** NOT TESTED yet.
 9. **Trial 7, ribbon tab, tips and typed names:** NOT TESTED yet.
 10. **Trial 8, double-click:** NOT TESTED yet.
@@ -129,6 +129,24 @@ un4-headless\events.log`, `run5-full\events.log`, `dialog1.png`, the comparison 
 3. **What this means in drafting terms.** A move of one pit with its three pipes on a 500-pit sheet takes about 40 thousandths of a second including the mover. That is not a speed problem. The mover scans the whole sheet each time; a lookup list of which pipes join which pit would make it independent of sheet size. Not needed yet.
 4. **Not measured, and this matters.** (a) A mouse drag with the live ghost image: it needs a person or an input robot, and under the rules I did not drive the mouse. The drag copies the pit repeatedly on screen and the pipe ends are only moved when the command ends, so during the drag the pipes would not follow; whether that looks acceptable is for Tim to judge on a screen. (b) Sheets of 5000 pits. (c) The cost of the preview snapshot (trial 6). (d) The overrule with no filter. (e) The first-open self-check on a large sheet (reading 2500 stamps and joins): not timed.
 5. **Evidence:** `evidence\t4_speed.log`. **Build meaning:** neither the overrule nor the mover is a speed risk at this size; the open question is the look of a drag, which needs Tim's eyes or a Codex screen look.
+
+---
+
+## Trial 5. Properties palette
+
+**Verdict: BLOCKED for the real question (does AutoCAD's own Properties palette show the rows). The .NET route itself WORKS at the code level.** Run Mon 16 Nov 2026 22:40 to 22:45.
+
+1. **What was done.** A property provider written in plain C# using AutoCAD 2027's own .NET property list (the "type descriptor" in the database file) was added to the polyline, block reference and base entity classes. It returns a heading "CE Pipe" with two rows only for objects that carry the plugin's note: "CE Material" (editable text) and "CE Fall (m)" (read-only number).
+2. **What was seen (code level, real AutoCAD 2027).**
+   1. **Adding the provider raised no error** on any of the three classes.
+   2. **Asked for an object's property list, AutoCAD's own machinery returned my rows** for the pipe polyline (93 properties in all, ours among them) and the pit block (90), and **none for a plain polyline with no note** (89, ours 0). So the list varies per object, as the design needs.
+   3. **Editable row writes back:** setting "CE Material" to HDPE then reading it gave HDPE. (My provider stored it in memory only; writing it into the drawing's own note was not part of this test.)
+   4. **My rows came back twice** because I added the provider to both the polyline class and its parent class; adding it once is enough. A detail, not a fault.
+3. **Why BLOCKED.** The Properties palette in Tim's AutoCAD is collapsed (zero size) in his profile, and showing it changes a saved interface setting, which the rules forbid. Without it on screen I could not see whether the palette asks my provider for rows. No log line shows the palette asked, which is consistent with it being closed, not with it ignoring us.
+4. **What Tim would need to allow, in one line:** let me open the Properties palette in a test AutoCAD (it would be left open or closed again by a normal command, a saved interface setting either way), or open it himself, select the pipe in `dwg\t1_seed.dwg`, and look for a "CE Pipe" heading. The test command is ready and takes one minute.
+5. **Quick Properties and roll-over tips: NOT TESTED** (same reason).
+6. **Fallbacks, if the palette does not read the list (not built, not decided):** a side palette of our own that follows the selection and shows the same cards (cannot be AutoCAD's own Properties palette); or a small C++ helper for the palette alone (touches the "no hand-built C++" line). Both need Tim's ruling.
+7. **Evidence:** `evidence\t5\t5_td.log`. **Build meaning so far:** the plugin can already supply a per-object list of facts in AutoCAD's own property form; whether the Properties palette shows it is the one open fact. The plan must not promise "facts in AutoCAD's own Properties" until that is seen.
 
 ---
 
