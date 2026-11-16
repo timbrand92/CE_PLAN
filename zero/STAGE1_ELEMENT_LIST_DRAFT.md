@@ -67,6 +67,27 @@ The issued "for council approval" PDF of the same job was turned into pictures a
 7. **The same fact, counted on this one sheet**: the control pit's inlet invert appears 5 times (plan, schedule twice, detail twice); its outlet invert 3 times; its cover level 3 times; orifice size, head and top water level twice each; each tank's litres 3 to 4 times. Depth to outlet in the schedule is cover level minus outlet invert, worked by hand.
 8. **Assumptions are written as notes**: the connection note says "approx" invert to council's satisfaction, builder to confirm; the council notes say the invert at the discharge point is assumed.
 
+## Across three civil jobs (added 16 Nov 2026, afternoon)
+
+Issued PDFs of all three civil copies were read as pictures (overview of every sheet; close reading of JOB_C only so far). The three are different kinds of job, which is useful:
+
+1. **JOB_C, two units, flat suburban lot.** Detention in two water tanks only, one orifice pit, two pits in the schedule, one sheet. Issued for council approval.
+2. **JOB_B, two units, flat suburban lot.** Detention in pipes and pits and tanks together: twin 225 detention pipes at 1 in 200, a 300 detention pipe, eight pits, two pairs of tanks. Also a raingarden, a trench grate, permeable paving, a tree protection zone and a neighbour's footing near the boundary. One sheet. Construction issue.
+3. **JOB_A, single house on a large sloping rural lot.** No detention. Twelve pits, long runs, a soakage pit of modular units discharging overflow to a dam, a fire-fighting tank, a reuse tank, existing agricultural drains, silt pits, a sleeper retaining wall, survey contours. The site is too big for one view, so the plan is cut into three part plans with match lines and a 1:500 key plan. Two sheets: plan, then details and notes. Construction issue.
+
+**What stays the same on all three (the fixed frame):** title block and revision list, issue stamp box, top row of warning boxes, general notes, civil works legend (identical on all), disclaimer box, before-you-dig block, charged system notes and tank installation picture, pit schedule with the same columns and the same three standing notes, pipe bedding detail, junction pit detail, services penetration and flexible pipe details, plan title and scale, the same pipe colours and label wording.
+
+**What changes with the job (the moving parts):**
+1. **How storage is made up.** The detention criteria box lists every storage by name: each pit, each detention pipe by size and length, each tank, then a total against the volume required (JOB_B: 6.36 provided against 5.35 required). JOB_A has no criteria box at all.
+2. **Which details appear.** Orifice pit detail only with detention; raingarden section and filter layer specification only with a raingarden; soakage detail only with soakage; agricultural drain trench detail only with those drains; a second, deeper junction pit detail (900 to 1200) only when a pit is that deep; tank detail drawn to the job's own tank size, litres and orifice.
+3. **Which notes appear.** Council's own notes block (JOB_C); tree protection note; neighbour's footing note; retaining wall note; soakage assumptions note.
+4. **How the plan is cut.** One view at 1:100, or part plans with match lines and a key plan.
+5. **How many sheets.** One when it fits; plan plus a details sheet when it does not.
+6. **Pit schedule length and shape.** 2 rows to 20-odd rows; a pit with several inlets takes several rows; remarks carry lid class and silt pit levels.
+7. **Issue stage.** Preliminary, for council approval, construction issue: the stamp box, revision row and (it appears) the same drawing reissued at each stage. One job's folder shows the run: set-up, mark-ups, preliminary P1, P2, revision A for council, council approval, construction.
+
+**Elements seen on these two that JOB_C did not have:** detention pipes (twin and single, labelled with size, grade and metres of detention), raingarden symbol with area and section, permeable paving area, trench grate with class, surcharge / overflow pipes with grated caps, soakage unit grid, fire tank, existing agricultural drains, silt pits, part-plan match lines and labels, key plan, retaining wall line with note, contours and spot levels from survey, neighbour's footing hatch with note, bearings and distances on boundaries.
+
 ## First observations for planning (mine, to be tested with Tim)
 
 1. **Levels are loose text.** An invert level is typed text beside a pit; nothing ties it to the pit or the pipe. If a level changes, every text is found and retyped by hand. This fits "drawing does not match" being a common cause of rework.
