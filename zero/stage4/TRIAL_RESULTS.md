@@ -7,7 +7,7 @@
 
 1. **Trial 11, any direction:** PASS (pure code, no AutoCAD).
 2. **Trial 10, headless predicts full:** PASS for the scripted commands tried (see below). Run under the old limits, before the licence incident. Not repeatable under the new limits.
-3. **Trial 1, joins:** BLOCKED at 21:25 Mon 16 Nov. Trial plugin built and a 284-line scripted test written, but the AutoCAD I started plainly stopped at a message window (see below) and the new rules say to leave it and report.
+3. **Trial 1, joins:** BLOCKED part-way (22:20 Mon 16 Nov): joins read back correctly after set-up, then AutoCAD stopped responding at the first COPY. Left open for Tim to close.
 4. **Trial 3, no plugin:** NOT TESTED yet.
 5. **Trial 2, grips:** NOT TESTED yet.
 6. **Trial 4, speed:** NOT TESTED yet.
@@ -76,13 +76,14 @@ un4-headless\events.log`, `run5-full\events.log`, `dialog1.png`, the comparison 
 
 ## Trial 1 (joins): where it stopped
 
-**Verdict so far: BLOCKED (not a FAIL of the idea; nothing about joins has been measured yet).**
+**Verdict so far: BLOCKED part-way. One real result (the joins read back correctly after setup); everything after that is unmeasured because AutoCAD stopped responding to the script.**
 
-1. **What was ready.** The trial plugin with joins stored three ways (handle in extended data, soft pointer, hard pointer), the facts stored three ways (note, record on the object, shelf in the drawing), two ways of moving joined pipe ends (after the command, and a hook when the pit closes), a cross-drawing copy test, save-in-three-formats and read-back, and a 284-line script covering copy, mirror, rotate, stretch, explode, block, wblock, insert, clipboard, undo, redo, xref bind, purge and audit.
-2. **What happened.** At 21:24 I started AutoCAD plainly (no profile switch, no settings, no flags) on a made-up drawing. It stopped at a message window: "Customization file load failed. File not found: acad". It is the same message the first-run AutoCAD gave under the unnamed profile, so it is NOT caused by a profile choice. Picture: `evidence	1\dialog_start.png`.
-3. **What I did about it.** Nothing. Under the added rules a stuck AutoCAD is left exactly as it is and Tim closes it. That AutoCAD (acad.exe, started by me) is still open with that message showing.
-4. **What I think it is (not verified).** AutoCAD started from my tool session cannot find its main menu file, probably because something in the environment it inherits from my session differs from a normal start from Explorer. The office's older note says AutoCAD must be launched by an Explorer hand-off for a real profile. I have not tested that and will not until told.
-5. **What I would need from Tim:** close that AutoCAD window, and say whether I may launch AutoCAD through Explorer (opening the made-up drawing by double-click style hand-off) rather than directly.
+1. **How it was run.** At 22:06 I handed a made-up drawing (`dwg	1_seed.dwg`) to Explorer (the double-click hand-off Tim approved), so AutoCAD opened under Tim's own current profile with no switches. Before typing anything I listed the process's windows: only the drawing and AutoCAD's own palettes plus Tim's installed CE palettes (CE Inspector, CE Blocks). No dialog, no licence or sign-in window. **Tim's installed CE plugins were loaded in that AutoCAD** (the ribbon and status line showed CE CVL SUITE, CE STRUC SUITE and CE MANAGER). I typed only my own trial commands. NETLOAD of the trial plugin was accepted with no prompt and no setting change (Tim's own SECURELOAD already reads 0; I changed nothing). Commands were sent by COM from a script, and read one variable (COPYMODE = 0, i.e. copy repeats until Enter, in Tim's profile).
+2. **What was seen (the one result).** A pit block with three pipes and a label, each carrying a hidden note, with every pipe joined to its pit three ways and every object's facts stored three ways: read back straight after set-up, **all three join forms resolved to the pit that sits at the pipe's end** (handle in extended data, soft pointer, hard pointer), and every object showed all three fact homes (note, record on the object, shelf in the drawing). Evidence: `evidence\zt_default.log`, lines 6 to 11. That proves the reading code, not survival through any command.
+3. **Where it stopped.** The script's first command on that structure, COPY of everything, did not finish. AutoCAD stayed busy for more than 5 minutes (about one core of CPU, "Responding" True), no window appeared, and the log did not grow. I do not know why. Possible causes (none checked): one of Tim's installed CE plugins reacting to the copied polylines or blocks; my own overrule or event handler; the way the COPY prompts were scripted with COPYMODE 0. A plain COPY ran fine in the earlier headless and full runs (trial 10) with the same handler code, so the CE plugins are the first suspect, but that is a guess.
+4. **What I did.** Nothing further. Under rule 1.9 and the added limits a stuck AutoCAD is left exactly as it is and reported; Tim closes it. That AutoCAD (acad.exe started 22:06:39 by the Explorer hand-off) is still open.
+5. **Not measured at all:** survival through copy, mirror, rotate, stretch, explode, block, wblock, insert, clipboard, xref bind, purge, audit, save and reopen; the two ways of moving joined ends; one-undo-step.
+6. **What I need from Tim:** close that AutoCAD; say whether I may try again with Tim's CE plugins out of the way. I cannot unload them myself without changing his settings, which I may not do. A way that needs no change from him is to run the join tests in the headless engine, but that needs the isolate option (forbidden) or his OK to load his CE bundle into it.
 
 ---
 
