@@ -2,6 +2,16 @@
 
 **Written:** Mon 16 Nov 2026, late afternoon, by the chat "CE_ACAD / zero plan / 01" (Claude Fable 5.2, high thinking). Update it whenever the state changes.
 
+## UPDATE, Mon 16 Nov 2026 evening (this section is the newest; where it differs from below, it wins)
+
+1. **Usage:** Fable weekly meter 93% used with 3 days 20 hours left; all-models 69%. This chat's context 85%. Today's helpers used most of it. Next chat: run on Opus 5.5 at high thinking (the run config's stated downgrade), use helpers sparingly, one at a time.
+2. **Tim's latest rulings (D-039 to D-050):** pictures are illustrations, the real thing uses the office's own blocks; AG drains have no inverts; every pipe kind puts each part in the same standard spot; job tracking wanted in the Manager (all four kinds); short typed names, refreshed on ONE strategy; ribbon options to be shown before choosing; one element's facts show in AutoCAD's Properties; pages and screens must NOT be a mass of lines, tables and numbers; start from how the drafter does it today; nothing hidden behind a right-click; nothing optional is forced; how old jobs are taken up must be designed.
+3. **The format Tim accepted (D-050):** short picture stories, a TODAY row over a WITH THE PLUGIN row, one picture and one sentence of at most 12 words per frame, no tables or sums. Model page: `pictures\how_you_do_it.html`. Use this for everything shown to him from now on.
+4. **Pages made today:** `how_we_design_and_draw_civil.html` (study), `new_plugin_concept_v2.html`, `new_plugin_elements.html`, `new_plugin_ui_and_automation.html` (all three too dense for Tim; kept as working references), `new_plugin_native_feel.html` (held, not sent: dense; contains three ribbon options, a 32-name list that does NOT follow one strategy, Properties and job tracking mock-ups), `how_you_do_it.html` (accepted format).
+5. **Owed to Tim next, each as a short picture-story page:** (a) the three ribbon options (research in `reference\research\R-001_FEELING_NATIVE_IN_AUTOCAD.md`; Option B, a small CE Civil tab plus tabs that appear on selection, is Autodesk's own pattern); (b) ONE naming strategy and the list that follows, checked against AutoCAD 2027's 241 short names (three of today's names clash: C, IO, RC; Tim's PC runs a hand-made alias file); (c) job tracking in the Manager.
+6. **Then:** the 52 owner decisions in `design\CONCEPT_GAP_CHECK.md` as clickable batches by tool; the ten gaps in that file (sheet set-up and background, fills that only print right through the sheet viewport, the fixed frame's home, slabs, CE tools); a second pass of the reference library to add `evidence\STUDY_D_GAPS_CLOSED.md` and D-031 to D-050; then Stage 3 (parts bin), Stage 4 (the four trials in `design\BUILD_APPROACH_DRAFT.md`), Stage 5, Stage 6.
+7. **Nothing is running** in the background as of this note.
+
 ## Where we are
 
 1. **Stage 1 (how we design and draw), civil:** studied and explained (`pictures\how_we_design_and_draw_civil.html`). Tim has not said "approve"; he moved on to the design.
