@@ -99,14 +99,14 @@ input[type=number]::-webkit-inner-spin-button{display:none}
 .tick+.tick{margin-top:0}
 
 /* parts: sum */
-.sum{display:grid;grid-template-columns:16px 1fr 80px 80px;column-gap:8px;align-items:center}
+.sum{display:grid;grid-template-columns:16px 1fr 72px 96px;column-gap:8px;align-items:center}
 .sum>div{min-height:32px;display:flex;align-items:center}
 .sum .sg{justify-content:center;color:var(--t2)}
 .sum .sf{justify-content:flex-end;font-variant-numeric:tabular-nums;padding-right:9px}
-.sum .sf .nb{width:80px;margin-right:-9px;height:32px}
+.sum .sf .nb{width:72px;margin-right:-9px;height:32px}
 .sum .sc .dd select{height:28px;font:400 13px var(--font);color:var(--t3);padding:0 20px 0 8px;border-color:var(--bd2)}
 .sum .sc .dd:after{top:9px;right:8px;width:5px;height:5px}
-.sum .sc{font-size:13px;color:var(--t3)}
+.sum .sc{font-size:13px;color:var(--t3);justify-content:space-between;white-space:nowrap}
 .sum .res.sf{font-weight:600;font-size:16px;border-top:1px solid var(--t2);border-bottom:3px double var(--t2);}
 .sum .res.sl{font-weight:400;color:var(--t1)}
 
@@ -166,6 +166,22 @@ input[type=number]::-webkit-inner-spin-button{display:none}
 .sum .sc.two{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;line-height:15px}
 .sum .sc.two a{color:var(--t2);text-decoration:underline;cursor:pointer;font-size:13px}
 .sum .sl small{font-size:13px;color:var(--t3);margin-left:4px}
+.nb.plain{border-color:transparent}
+.nb.plain:focus{border-color:var(--bd)}
+.sum .sf.res .nb{font-weight:600;font-size:16px;border-color:transparent;border-radius:0}
+.sum .sf.res.held{border-bottom:1px solid var(--t2)}
+.sum .sf.res.held .nb{border-color:var(--bd);border-radius:8px}
+.lk{width:24px;height:24px;border:0;border-radius:8px;background:transparent;color:var(--t2);cursor:pointer;display:flex;align-items:center;justify-content:center;flex:none;padding:0}
+.lk:hover:not(:disabled){background:var(--accbg)}
+.lk:disabled{opacity:.4;cursor:default}
+.lk:focus-visible{box-shadow:0 0 0 2px var(--acc)}
+.dim{opacity:.6}
+.mchip{font:400 13px var(--font);height:24px;padding:0 8px;border:1px solid var(--bd);border-radius:8px;background:transparent;color:var(--t2);cursor:pointer}
+.mchip.on{background:var(--accbtn);border-color:var(--accbtn);color:#fff;font-weight:600}
+.lh{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.lh .mb{display:flex;gap:8px}
+.prev .key.col{flex-direction:column;gap:4px;flex-wrap:nowrap}
+.prev .key .hl{color:var(--t2)}
 @media (prefers-reduced-motion:reduce){*{transition-duration:0s!important;animation-duration:0s!important}}
 
 </style>
@@ -207,7 +223,7 @@ input[type=number]::-webkit-inner-spin-button{display:none}
           <div class="prev" id="prevbox">
             <svg id="prev" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet"></svg>
             <div class="cap">Preview</div>
-            <div class="key"><span><i style="background:var(--acc)"></i>The pit you are changing</span><span><i style="border:2px solid var(--amber);border-radius:50%"></i>A pipe end that moves</span><span><i style="border:1px dashed var(--t3)"></i>The pit as it was</span></div>
+            <div class="key col"><div style="display:flex;gap:16px;flex-wrap:wrap"><span><i style="background:var(--acc)"></i>The pit you are changing</span><span><i style="border:2px solid var(--amber);border-radius:50%"></i>A pipe end that moves</span><span><i style="border:1px dashed var(--t3)"></i>The pit as it was</span></div><div class="hl">Hold what is fixed. The rest is worked out.</div></div>
           </div>
           <div id="cards">
             <section class="card">
@@ -224,11 +240,7 @@ input[type=number]::-webkit-inner-spin-button{display:none}
               <div class="lab"><i>2</i>Levels</div>
               <div class="ans"><span class="num" id="a2">0.62</span><span class="unit">m deep</span></div>
               <div id="st1" class="pill ok"></div>
-              <div class="sum">
-                <div class="sg"></div><div class="sl">Cover level</div><div class="sf"><input class="nb r" type="number" id="cover" value="5.75" step="0.01"></div><div class="sc">measured</div>
-                <div class="sg">−</div><div class="sl">Outlet invert</div><div class="sf">5.13</div><div class="sc">from P2 pipe</div>
-                <div class="sg">=</div><div class="sl res">Depth</div><div class="sf res" id="dep">0.62</div><div class="sc">worked out</div>
-              </div>
+              <div class="sum" id="sumP"></div>
               <svg id="side" viewBox="0 0 368 150" preserveAspectRatio="xMidYMid meet"></svg>
             </section>
             <section class="card">
@@ -312,11 +324,49 @@ function initCombos(){
   document.addEventListener('click',function(){document.querySelectorAll('.clist').forEach(function(u){u.hidden=true;});});
 }
 
+var LOCK_C='<svg width="16" height="16" viewBox="0 0 16 16"><rect x="3" y="7" width="10" height="7" rx="2" fill="currentColor"/><path d="M5.2 7V5.2a2.8 2.8 0 0 1 5.6 0V7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>';
+var LOCK_O='<svg width="16" height="16" viewBox="0 0 16 16"><rect x="3" y="7" width="10" height="7" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M5.2 7V5.2a2.8 2.8 0 0 1 5.4-1" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>';
+function r2(x){return Math.round(x*100)/100;}
+function parseNum(t){var m=/^\s*(-?\d+(?:\.\d+)?)\s*$/.exec(t||'');return m?parseFloat(m[1]):null;}
+function nrow(o){
+  var res=o.res?' res'+(o.res==='held'?' held':''):'',dim=o.off?' dim':'';
+  var cell=o.input?'<div class="sf'+res+'"><input class="nb r'+(o.plain?' plain':'')+'" data-k="'+o.k+'" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="'+esc(o.val)+'"'+(o.list?' list="'+o.list+'"':'')+'></div>':'<div class="sf'+res+dim+'">'+esc(o.val)+'</div>';
+  var closed=o.lock==='closed';
+  var lk='<button type="button" class="lk" '+(o.k&&!o.off?'data-k="'+o.k+'" ':'')+(o.off?'disabled ':'')+'title="'+(o.off?'Fixed':closed?'Held. Click to let it be worked out.':'Worked out. Click to hold it.')+'" aria-label="'+(closed?'Held':'Worked out')+'">'+(closed?LOCK_C:LOCK_O)+'</button>';
+  return '<div class="sg">'+(o.sign||'')+'</div><div class="sl'+(o.res==='worked'?' res':'')+dim+'">'+o.label+'</div>'+cell+'<div class="sc"><span>'+o.chip+'</span>'+lk+'</div>';
+}
+function keepFocus(fn){var a=document.activeElement,k=a&&a.dataset&&a.dataset.k,ss=a&&a.selectionStart,se=a&&a.selectionEnd;fn();
+  if(k){var n=document.querySelector('input[data-k="'+k+'"]');if(n){n.focus();try{n.setSelectionRange(ss,se);}catch(e){}}}}
+function wireSum(box,onInput,onChange,onLock){
+  box.addEventListener('input',function(e){var k=e.target.dataset&&e.target.dataset.k;if(k&&e.target.tagName==='INPUT')onInput(k,e.target.value);});
+  box.addEventListener('change',function(e){var k=e.target.dataset&&e.target.dataset.k;if(k&&e.target.tagName==='INPUT')onChange(k);});
+  box.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('button.lk');if(b&&!b.disabled&&b.dataset.k)onLock(b.dataset.k);});
+}
+
 (function(){
 var SIZES={'350 x 350':[.35,.35,.45],'450 x 450':[.45,.45,.60],'600 x 600':[.6,.6,.90],'600 x 900':[.6,.9,1.20],'900 x 900':[.9,.9,null]};
 var ORDER=['350 x 350','450 x 450','600 x 600','600 x 900','900 x 900'];
 var BASE_IL=5.13,CX=16,CY=4,cur=null;
-function S(){var st={num:$('num').value,kind:$('kind').value,size:$('size').value,lid:$('lid').value,cover:parseFloat($('cover').value),tag:$('tag').checked,clt:$('clt').checked};
+var PF={cover:{v:5.75,raw:null,src:'measured'},depth:{v:0.62,raw:null,src:'chosen'}},PH=['cover'],pnote=null;
+function calcP(){var w=PH.indexOf('cover')>=0?'depth':'cover',cover,depth;
+  if(w==='depth'){cover=PF.cover.v;depth=r2(cover-BASE_IL);}else{depth=PF.depth.v;cover=r2(depth+BASE_IL);}
+  return {w:w,cover:cover,depth:depth};}
+function dispP(k){var f=PF[k];return f.raw!==null?f.raw:f2(f.v);}
+function buildPit(){var c=calcP(),h;
+  if(c.w==='depth')h=nrow({label:'Cover level',k:'cover',input:true,val:dispP('cover'),chip:PF.cover.src,lock:'closed'})
+    +nrow({sign:'\u2212',label:'Outlet invert',val:'5.13',chip:'from P2 pipe',lock:'open',off:true})
+    +nrow({sign:'=',label:'Depth',k:'depth',input:true,plain:true,val:f2(c.depth),res:'worked',chip:'worked out',lock:'open'});
+  else h=nrow({label:'Outlet invert',val:'5.13',chip:'from P2 pipe',lock:'open',off:true})
+    +nrow({sign:'+',label:'Depth',k:'depth',input:true,val:dispP('depth'),chip:PF.depth.src,lock:'closed'})
+    +nrow({sign:'=',label:'Cover level',k:'cover',input:true,plain:true,val:f2(c.cover),res:'worked',chip:'worked out',lock:'open'});
+  $('sumP').innerHTML=h;}
+function pSwap(toHold){var c=calcP();if(toHold==='depth'){PF.depth.v=c.depth;PF.depth.src='chosen';PH=['depth'];pnote='cover';}else{PF.cover.v=c.cover;PF.cover.src='chosen';PH=['cover'];pnote='depth';}}
+function pInput(k,str){var f=PF[k],x=parseNum(str);f.raw=str;if(x===null)return render();
+  if(PH.indexOf(k)<0){var c=calcP();pSwap(k);}
+  PF[k].v=r2(x);PF[k].raw=str;render();}
+function pChange(k){PF[k].raw=null;render();}
+function pLock(k){if(PH.indexOf(k)>=0)pSwap(k==='cover'?'depth':'cover');else pSwap(k);render();}
+function S(){var st={num:$('num').value,kind:$('kind').value,size:$('size').value,lid:$('lid').value,cover:calcP().cover,tag:$('tag').checked,clt:$('clt').checked};
   st.w=cur?cur.w:SIZES[st.size][0];st.h=cur?cur.h:SIZES[st.size][1];return st;}
 
 function scene(svg,vb,ppm,ts,st,ghost,zoom){
@@ -400,16 +450,18 @@ function draw(st){
   var pw=$('prev').clientWidth||650;
   scene($('prev'),'14.8 2.85 2.4 2.4',pw/2.4,0.075,st,true,true);
   scene($('model'),'1 0.7 30 14.59',64,0.35,st,true,false);}
-function render(){
-  var st0=S(),t=SIZES[st0.size],cl=st0.cover,dep=cl-BASE_IL;
+function render(){keepFocus(renderInner);}
+function renderInner(){
+  var cc=calcP(),st0=S(),t=SIZES[st0.size],cl=cc.cover,dep=cc.depth;buildPit();
   $('ttl').textContent='Pit · '+st0.num;$('taglbl').textContent='Tag '+st0.num;
-  roll($('a2'),isNaN(dep)?'':f2(dep));roll($('dep'),isNaN(dep)?'':f2(dep));
+  roll($('a2'),f2(dep));
   var lim=t[2],b=$('st1');
   if(lim===null)pill(b,'ok','Suits:',st0.size+' is good for deeper pits.');
   else if(!isNaN(dep)&&dep>lim+1e-9)pill(b,'warn','Needs a look:',st0.size+' is good to '+f2(lim)+' deep.');
   else pill(b,'ok','Suits:',st0.size+' is good to '+f2(lim)+' deep.');
   var h='<span class="h">What else changes</span>';
-  if(st0.size==='450 x 450')h+='<span class="none">Nothing else changes.</span>';
+  var nn=0;if(pnote){h+='<span class="ln">'+mini('neutral','Now worked out')+(pnote==='cover'?'Cover level':'Depth')+' is now worked out: '+f2(pnote==='cover'?cc.cover:cc.depth)+'.</span>';nn++;}
+  if(st0.size==='450 x 450'){if(!nn)h+='<span class="none">Nothing else changes.</span>';}
   else h+='<span class="ln">'+mini('neutral','Moves')+'Pipe from P4: end moves to the new wall.</span><span class="ln">'+mini('neutral','Moves')+'Pipe to P2: end moves to the new wall.</span><span class="ln">'+mini('neutral','Changes')+'Pit schedule: row '+esc(st0.num)+' becomes '+st0.size+'.</span>';
   $('else').innerHTML=h;
   tally(st0);sketch();labelPreview(st0);
@@ -419,7 +471,8 @@ function render(){
   else draw(S());
   sideView(S());
 }
-['num','kind','size','lid','det','cover','tag','clt','turn'].forEach(function(i){$(i).addEventListener('input',render);$(i).addEventListener('change',render);});
+['num','kind','size','lid','det','tag','clt','turn'].forEach(function(i){$(i).addEventListener('input',render);$(i).addEventListener('change',render);});
+wireSum($('sumP'),pInput,pChange,pLock);
 var q=wireCommon();
 var sv=(q.get('size')||'').replace('x',' x ');if(SIZES[sv])$('size').value=sv;
 window.__redraw=function(){if(cur)draw(S());};

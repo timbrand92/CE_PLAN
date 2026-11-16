@@ -99,14 +99,14 @@ input[type=number]::-webkit-inner-spin-button{display:none}
 .tick+.tick{margin-top:0}
 
 /* parts: sum */
-.sum{display:grid;grid-template-columns:16px 1fr 80px 80px;column-gap:8px;align-items:center}
+.sum{display:grid;grid-template-columns:16px 1fr 72px 96px;column-gap:8px;align-items:center}
 .sum>div{min-height:32px;display:flex;align-items:center}
 .sum .sg{justify-content:center;color:var(--t2)}
 .sum .sf{justify-content:flex-end;font-variant-numeric:tabular-nums;padding-right:9px}
-.sum .sf .nb{width:80px;margin-right:-9px;height:32px}
+.sum .sf .nb{width:72px;margin-right:-9px;height:32px}
 .sum .sc .dd select{height:28px;font:400 13px var(--font);color:var(--t3);padding:0 20px 0 8px;border-color:var(--bd2)}
 .sum .sc .dd:after{top:9px;right:8px;width:5px;height:5px}
-.sum .sc{font-size:13px;color:var(--t3)}
+.sum .sc{font-size:13px;color:var(--t3);justify-content:space-between;white-space:nowrap}
 .sum .res.sf{font-weight:600;font-size:16px;border-top:1px solid var(--t2);border-bottom:3px double var(--t2);}
 .sum .res.sl{font-weight:400;color:var(--t1)}
 
@@ -166,6 +166,22 @@ input[type=number]::-webkit-inner-spin-button{display:none}
 .sum .sc.two{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;line-height:15px}
 .sum .sc.two a{color:var(--t2);text-decoration:underline;cursor:pointer;font-size:13px}
 .sum .sl small{font-size:13px;color:var(--t3);margin-left:4px}
+.nb.plain{border-color:transparent}
+.nb.plain:focus{border-color:var(--bd)}
+.sum .sf.res .nb{font-weight:600;font-size:16px;border-color:transparent;border-radius:0}
+.sum .sf.res.held{border-bottom:1px solid var(--t2)}
+.sum .sf.res.held .nb{border-color:var(--bd);border-radius:8px}
+.lk{width:24px;height:24px;border:0;border-radius:8px;background:transparent;color:var(--t2);cursor:pointer;display:flex;align-items:center;justify-content:center;flex:none;padding:0}
+.lk:hover:not(:disabled){background:var(--accbg)}
+.lk:disabled{opacity:.4;cursor:default}
+.lk:focus-visible{box-shadow:0 0 0 2px var(--acc)}
+.dim{opacity:.6}
+.mchip{font:400 13px var(--font);height:24px;padding:0 8px;border:1px solid var(--bd);border-radius:8px;background:transparent;color:var(--t2);cursor:pointer}
+.mchip.on{background:var(--accbtn);border-color:var(--accbtn);color:#fff;font-weight:600}
+.lh{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.lh .mb{display:flex;gap:8px}
+.prev .key.col{flex-direction:column;gap:4px;flex-wrap:nowrap}
+.prev .key .hl{color:var(--t2)}
 @media (prefers-reduced-motion:reduce){*{transition-duration:0s!important;animation-duration:0s!important}}
 
 </style>
@@ -199,7 +215,7 @@ input[type=number]::-webkit-inner-spin-button{display:none}
       <div id="body">
         <div class="prev" id="prevbox">
           <svg id="band" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet"></svg>
-          <div class="cap">Preview</div>
+          <div class="cap">Preview</div><div class="cap" style="top:28px;color:var(--t2)">Hold what is fixed. The rest is worked out.</div>
           <div class="key" style="left:auto;bottom:auto;top:8px"><span><i style="background:var(--acc)"></i>The pipe you are changing</span><span><i style="border:2px solid var(--amber);border-radius:4px"></i>A level that moves</span></div>
         </div>
         <div id="cards">
@@ -213,25 +229,18 @@ input[type=number]::-webkit-inner-spin-button{display:none}
           </section>
           <section class="card">
             <div class="lab"><i>2</i>Fall</div>
-            <div class="ans"><span class="num" id="a2">0.08</span><span class="unit">m fall</span></div>
+            <div class="ans"><span class="num" id="a2">0.08</span><span class="unit" id="a2u">m fall</span></div>
             <div id="gst" class="pill warn" style="display:none"></div>
-            <div class="sum">
-              <div class="sg"></div><div class="sl">Length</div><div class="sf">8.00</div><div class="sc">measured</div>
-              <div class="sg">÷</div><div class="sl" id="glab">Grade</div><div class="sf" id="gnum">100</div><div class="sc"><div class="combo small"><input class="cin" id="grade" type="text" value="1 in 100" autocomplete="off" spellcheck="false"><button type="button" class="cbtn" tabindex="-1" aria-label="Open the list"></button><ul class="clist" hidden><li>1 in 200</li><li>1 in 100</li><li>1 in 80</li><li>1 in 60</li></ul></div></div>
-              <div class="sg">=</div><div class="sl res">Fall</div><div class="sf res" id="fall">0.08</div><div class="sc">worked out</div>
-            </div>
+            <div id="sumA"></div>
             <svg id="slope" viewBox="0 0 328 120" height="120"></svg>
-            <div class="note">Fall is the length divided by the grade.</div>
+            <div class="note" id="noteA">Fall is the length divided by the grade.</div>
+            <datalist id="glist"><option value="200"></option><option value="100"></option><option value="80"></option><option value="60"></option></datalist>
           </section>
           <section class="card">
-            <div class="lab"><i>3</i>Levels</div>
-            <div class="ans"><span class="num" id="a3">IL 5.15</span><span class="unit">at P3</span></div>
+            <div class="lab lh"><span><i>3</i>Levels</span><span class="mb"><button type="button" class="mchip" id="bDown">Work downhill</button><button type="button" class="mchip" id="bUp">Work uphill</button></span></div>
+            <div class="ans"><span class="num" id="a3">IL 5.15</span><span class="unit" id="a3u">at P3</span></div>
             <div id="st1" class="pill ok"></div>
-            <div class="sum">
-              <div class="sg"></div><div class="sl">Upstream invert</div><div class="sf"><input class="nb r" type="number" id="up" value="5.23" step="0.01"></div><div class="sc">chosen</div>
-              <div class="sg">−</div><div class="sl">Fall</div><div class="sf" id="fall2">0.08</div><div class="sc">from card 2</div>
-              <div class="sg">=</div><div class="sl res">Downstream invert</div><div class="sf res typable"><input class="nb r resin" type="number" id="down" value="5.15" step="0.01"></div><div class="sc two" id="dchip">worked out</div>
-            </div>
+            <div class="sum" id="sumB"></div>
             <svg id="run" viewBox="0 0 328 88" height="88"></svg>
           </section>
           <section class="card">
@@ -308,18 +317,56 @@ function initCombos(){
   document.addEventListener('click',function(){document.querySelectorAll('.clist').forEach(function(u){u.hidden=true;});});
 }
 
+var LOCK_C='<svg width="16" height="16" viewBox="0 0 16 16"><rect x="3" y="7" width="10" height="7" rx="2" fill="currentColor"/><path d="M5.2 7V5.2a2.8 2.8 0 0 1 5.6 0V7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>';
+var LOCK_O='<svg width="16" height="16" viewBox="0 0 16 16"><rect x="3" y="7" width="10" height="7" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M5.2 7V5.2a2.8 2.8 0 0 1 5.4-1" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>';
+function r2(x){return Math.round(x*100)/100;}
+function parseNum(t){var m=/^\s*(-?\d+(?:\.\d+)?)\s*$/.exec(t||'');return m?parseFloat(m[1]):null;}
+function nrow(o){
+  var res=o.res?' res'+(o.res==='held'?' held':''):'',dim=o.off?' dim':'';
+  var cell=o.input?'<div class="sf'+res+'"><input class="nb r'+(o.plain?' plain':'')+'" data-k="'+o.k+'" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="'+esc(o.val)+'"'+(o.list?' list="'+o.list+'"':'')+'></div>':'<div class="sf'+res+dim+'">'+esc(o.val)+'</div>';
+  var closed=o.lock==='closed';
+  var lk='<button type="button" class="lk" '+(o.k&&!o.off?'data-k="'+o.k+'" ':'')+(o.off?'disabled ':'')+'title="'+(o.off?'Fixed':closed?'Held. Click to let it be worked out.':'Worked out. Click to hold it.')+'" aria-label="'+(closed?'Held':'Worked out')+'">'+(closed?LOCK_C:LOCK_O)+'</button>';
+  return '<div class="sg">'+(o.sign||'')+'</div><div class="sl'+(o.res==='worked'?' res':'')+dim+'">'+o.label+'</div>'+cell+'<div class="sc"><span>'+o.chip+'</span>'+lk+'</div>';
+}
+function keepFocus(fn){var a=document.activeElement,k=a&&a.dataset&&a.dataset.k,ss=a&&a.selectionStart,se=a&&a.selectionEnd;fn();
+  if(k){var n=document.querySelector('input[data-k="'+k+'"]');if(n){n.focus();try{n.setSelectionRange(ss,se);}catch(e){}}}}
+function wireSum(box,onInput,onChange,onLock){
+  box.addEventListener('input',function(e){var k=e.target.dataset&&e.target.dataset.k;if(k&&e.target.tagName==='INPUT')onInput(k,e.target.value);});
+  box.addEventListener('change',function(e){var k=e.target.dataset&&e.target.dataset.k;if(k&&e.target.tagName==='INPUT')onChange(k);});
+  box.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('button.lk');if(b&&!b.disabled&&b.dataset.k)onLock(b.dataset.k);});
+}
+
 (function(){
 var CY=4,XA=8,XB=16,LEN=8.0,CL4=5.83,CL3=5.75,OUT=5.13,cur=null;
-var GR=100,SZ=150,ov=null;
+var SZ=150;
 function sizeVal(){var v=parseFloat($('size').value);if(v>0)SZ=v;return SZ;}
 function parseGrade(t){var m=/^\s*(?:1\s*in\s*)?(\d+(?:\.\d+)?)\s*$/i.exec(t||'');if(!m)return null;var n=parseFloat(m[1]);return n>0?n:null;}
-function matU(){var m=($('mat').value||'').trim();return m;}
-function S(){var pg=parseGrade($('grade').value);if(ov===null&&pg!==null)GR=pg;var sz=cur!==null?cur:sizeVal(),up=parseFloat($('up').value),dia=sizeVal()/1000;
-  var fall,down,gr=GR;
-  if(ov!==null){down=ov;fall=up-down;if(fall>1e-9){gr=Math.round(LEN/fall);}}
-  else{fall=LEN/GR;down=up-fall;}
-  return {sz:sz,gr:gr,up:up,fall:fall,down:down,dia:dia,ov:ov!==null,flat:fall<=1e-9,cov:Math.min(CL4-up-dia,CL3-down-dia),mat:matU(),lab:$('lab').checked,arr:$('arr').checked,ils:$('ils').checked,side:$('side').value==='Above the pipe'?-1:1};}
-function changed(st){return st.ov||st.gr!==100||Math.abs(st.up-5.23)>1e-9;}
+function matU(){return ($('mat').value||'').trim();}
+var F={up:{v:5.23,raw:null,src:'chosen'},down:{v:5.15,raw:null,src:'chosen'},grade:{v:100,raw:null,src:'chosen'}},H=['up','grade'],note=null;
+var NAMES={up:'Upstream invert',down:'Downstream invert',grade:'Grade'};
+function worked(){return ['up','down','grade'].filter(function(k){return H.indexOf(k)<0;})[0];}
+function calc(){var w=worked(),U=F.up.v,D=F.down.v,G=F.grade.v,fall,Gd;
+  if(w==='down'){fall=r2(LEN/G);D=r2(U-fall);Gd=G;}
+  else if(w==='up'){fall=r2(LEN/G);U=r2(D+fall);Gd=G;}
+  else{fall=r2(U-D);Gd=fall>1e-9?Math.round(LEN/fall):null;}
+  return {w:w,U:U,D:D,fall:fall,G:Gd};}
+function cur_(k,c){return k==='up'?c.U:k==='down'?c.D:c.G;}
+function fmtK(k,v){return k==='grade'?(v===null?'\u2014':String(v)):f2(v);}
+function dispK(k,c){if(H.indexOf(k)>=0){var f=F[k];return f.raw!==null?f.raw:fmtK(k,f.v);}return fmtK(k,cur_(k,c));}
+function holdK(k,val){var c=calc();if(H.indexOf(k)>=0){F[k].v=val;return;}
+  F[k].v=val;F[k].src='chosen';H.push(k);if(H.length>2){note=H.shift();}else note=null;}
+function releaseK(k){var c=calc(),w=c.w;F[w].v=cur_(w,c);F[w].src='chosen';F[w].raw=null;H=H.filter(function(x){return x!==k;});H.push(w);note=k;}
+function onInput(k,str){var x=k==='grade'?parseGrade(str):parseNum(str);F[k].raw=str;if(x===null)return render();
+  var c=calc();
+  if(H.indexOf(k)<0)holdK(k,k==='grade'?x:r2(x));else F[k].v=k==='grade'?x:r2(x);
+  F[k].raw=str;render();}
+function onChange(k){F[k].raw=null;render();}
+function onLock(k){var c=calc();if(H.indexOf(k)>=0)releaseK(k);else{F[k].raw=null;holdK(k,cur_(k,c));}render();}
+function shortcut(dir){var c=calc();F.grade.v=c.G===null?F.grade.v:c.G;F.grade.raw=null;
+  if(dir==='down'){F.up.v=c.U;F.up.raw=null;H=['up','grade'];}else{F.down.v=c.D;F.down.raw=null;H=['down','grade'];}note=null;render();}
+function S(){var c=calc(),sz=cur!==null?cur:sizeVal(),dia=sizeVal()/1000;
+  return {sz:sz,gr:c.G===null?'\u2014':c.G,up:c.U,down:c.D,fall:c.fall,dia:dia,w:c.w,hUp:H.indexOf('up')>=0,hDown:H.indexOf('down')>=0,flat:c.fall<=1e-9,cov:Math.min(CL4-c.U-dia,CL3-c.D-dia),mat:matU(),lab:$('lab').checked,arr:$('arr').checked,ils:$('ils').checked,side:$('side').value==='Above the pipe'?-1:1};}
+function changed(st){return Math.abs(st.down-5.15)>1e-9||Math.abs(st.up-5.23)>1e-9;}
 function wrong(st){return st.down<OUT-1e-9;}
 
 function scene(svg,vb,ppm,ts,st,full){
@@ -352,7 +399,10 @@ function scene(svg,vb,ppm,ts,st,full){
   if(st.arr)arrow(mid,CY+sd*(w2+.45*s));
   if(st.lab){var yy=sd<0?CY-w2-1.6*s:CY+w2+2.5*s;T(mid-.4,yy,txt,'pl','middle',{textLength:Math.min(txt.length*.55*s,6.4),lengthAdjust:'spacingAndGlyphs'});}
   if(st.ils){var yb=CY-w2-.45*s,iw=7*.6*s;
-    T(XA+.225+.15,yb,'IL '+f2(st.up),'il','start');T(XB-.225-.15,yb,'IL '+f2(st.down),'il','end');T(XB+.225+.15,yb,'IL 5.13','il','start');
+    T(XA+.225+.15,yb,'IL '+f2(st.up),'il','start');T(XB-.225-.15,yb,'IL '+f2(st.down),'il','end');if(!full){var lw=4.2*s;
+      function lockI(x,y){var k=s*.55;el(g,'rect',{x:x,y:y-k*.55,width:k*.8,height:k*.55,rx:k*.1,fill:'var(--t2)'});el(g,'path',{d:'M'+(x+k*.15)+' '+(y-k*.55)+'V'+(y-k*.85)+'a'+(k*.25)+' '+(k*.25)+' 0 0 1 '+(k*.5)+' 0V'+(y-k*.55),fill:'none',stroke:'var(--t2)','stroke-width':px(1.5)});}
+      if(st.hUp)lockI(XA+.225+.15+lw+.06,yb);
+      if(st.hDown)lockI(XB-.225-.15-lw-.06-s*.45,yb);}T(XB+.225+.15,yb,'IL 5.13','il','start');
     if(changed(st)){var ex=XB-.225-.15,pd=.12*u;el(g,'rect',{x:ex-iw-pd,y:yb-s*.85,width:iw+2*pd,height:s*1.15,rx:s*.2,fill:'none',stroke:'var(--amber)','stroke-width':px(3)});}}
 }
 function tally(){var s=$('tally');s.innerHTML='';var sel=sizeVal(),x=16,k=56/300;
@@ -379,8 +429,7 @@ function runView(st){var s=$('run');s.innerHTML='';
   var yp=ya+(yb-ya)*((x-xa)/(xb-xa))-d/2;
   el(s,'line',{x1:x,x2:x,y1:yg+2,y2:yp-2,stroke:'var(--t1)','stroke-width':1.4});
   el(s,'path',{d:'M'+(x-3.5)+' '+(yg+8)+'L'+x+' '+(yg+2)+'L'+(x+3.5)+' '+(yg+8)+'M'+(x-3.5)+' '+(yp-8)+'L'+x+' '+(yp-2)+'L'+(x+3.5)+' '+(yp-8),fill:'none',stroke:'var(--t1)','stroke-width':1.4});
-  el(s,'text',{x:x+8,y:(yg+yp)/2+5,style:'font:600 13px var(--font);fill:var(--t1)'},f2(st.cov));
-  el(s,'text',{x:xa-16,y:y(5.0)+16,'text-anchor':'start',class:'stx'},'P4');el(s,'text',{x:xb+12,y:y(5.0)+16,'text-anchor':'end',class:'stx'},'P3');}
+  el(s,'text',{x:x+8,y:(yg+yp)/2+5,style:'font:600 13px var(--font);fill:var(--t1)'},f2(st.cov));}
 function sample(st){var s=$('sample');s.innerHTML='';
   var y=56,hw=Math.max(3,st.dia*40);
   el(s,'rect',{x:20,y:y-18,width:34,height:36,fill:'none',stroke:'var(--pit)','stroke-width':1.4,rx:2});el(s,'rect',{x:274,y:y-18,width:34,height:36,fill:'none',stroke:'var(--pit)','stroke-width':1.4,rx:2});
@@ -389,24 +438,54 @@ function sample(st){var s=$('sample');s.innerHTML='';
   if(st.ils){var iy=sd<0?y+hw+18:y-hw-6;el(s,'text',{x:58,y:iy,class:'stx'},'IL '+f2(st.up));el(s,'text',{x:270,y:iy,'text-anchor':'end',class:'stx'},'IL '+f2(st.down));}
   if(st.arr)el(s,'path',{d:'M150 '+(y+sd*(hw+8))+'L162 '+(y+sd*(hw+8)-0)+'L156 '+(y+sd*(hw+8)-5)+'M162 '+(y+sd*(hw+8))+'L156 '+(y+sd*(hw+8)+5),fill:'none',stroke:'var(--t2)','stroke-width':1.6});
   if(st.lab)el(s,'text',{x:164,y:ly+(sd<0?-6:6),'text-anchor':'middle',style:'font:13px Consolas,monospace;fill:var(--pl)',textLength:Math.min((sizeVal()+' DIA. '+(st.mat?st.mat.toUpperCase()+' ':'')+'PIPE AT 1 IN '+st.gr).length*7.8,250),lengthAdjust:'spacingAndGlyphs'},sizeVal()+' DIA. '+(st.mat?st.mat.toUpperCase()+' ':'')+'PIPE AT 1 IN '+st.gr);}
-function draw(st){var bw=$('band').clientWidth||1488,bh=$('band').clientHeight||280,vh=10.6*bh/bw;scene($('band'),'7 '+(4.05-vh/2)+' 10.6 '+vh,bw/10.6,0.15,st,false);scene($('model'),'1 0.7 30 14.59',64,0.35,st,true);}
-function render(){
-  var st0=S(),sizeNow=sizeVal();
-  roll($('a2'),f2(st0.fall));roll($('fall'),f2(st0.fall));roll($('fall2'),f2(st0.fall));roll($('gnum'),String(st0.gr));
-  var gin=$('grade'),gc=gin.parentNode;if(st0.ov){gin.value='1 in '+st0.gr;gin.readOnly=true;gc.classList.add('grey');$('glab').innerHTML='Grade<small>worked out</small>';}else{gin.readOnly=false;gc.classList.remove('grey');$('glab').textContent='Grade';}
-  var dn=$('down');if(!st0.ov){dn.value=f2(st0.down);}
-  $('dchip').innerHTML=st0.ov?'typed over<a id="putback">Put back</a>':'worked out';var pb=$('putback');if(pb)pb.addEventListener('click',function(){ov=null;render();});$('a1m').textContent=st0.mat||'—';var gb=$('gst');if(!st0.ov&&parseGrade($('grade').value)===null){gb.style.display='flex';pill(gb,'warn','Needs a look:','type a grade such as 1 in 75.');}else gb.style.display='none';
-  roll($('a3'),'IL '+f2(st0.down));
+function draw(st){var bw=$('band').clientWidth||1488,bh=$('band').clientHeight||280,vh=10.6*bh/bw;scene($('band'),'7 '+(3.92-vh/2)+' 10.6 '+vh,bw/10.6,0.15,st,false);scene($('model'),'1 0.7 30 14.59',64,0.35,st,true);}
+function render(){keepFocus(renderInner);}
+function renderInner(){
+  var c=calc(),st0=S(),sizeNow=sizeVal(),w=c.w,gl=NAMES.grade;
+  var A='',B='';
+  var upSrc=H.indexOf('up')>=0?F.up.src:'worked out',dnSrc=H.indexOf('down')>=0?F.down.src:'worked out',grSrc=H.indexOf('grade')>=0?F.grade.src:'worked out';
+  var lenRow=nrow({label:'Length',val:'8.00',chip:'measured',lock:'closed',off:true});
+  var gradeLab='Grade <small>1 in</small>';
+  if(w!=='grade'){
+    A='<div class="sum">'+lenRow+nrow({sign:'\u00f7',label:gradeLab,k:'grade',input:true,list:'glist',val:dispK('grade',c),chip:grSrc,lock:'closed'})
+      +nrow({sign:'=',label:'Fall',val:f2(c.fall),res:'worked',chip:'worked out',lock:'open',off:true})+'</div>';
+  } else {
+    A='<div class="sum">'+nrow({label:'Upstream invert',val:f2(c.U),chip:upSrc,lock:'closed',off:true})+nrow({sign:'\u2212',label:'Downstream invert',val:f2(c.D),chip:dnSrc,lock:'closed',off:true})
+      +nrow({sign:'=',label:'Fall',val:f2(c.fall),res:'worked',chip:'worked out',lock:'open',off:true})+'</div>'
+      +'<div class="sum" style="margin-top:8px">'+lenRow+nrow({sign:'\u00f7',label:'Fall',val:f2(c.fall),chip:'from above',lock:'open',off:true})
+      +nrow({sign:'=',label:gradeLab,k:'grade',input:true,plain:true,list:'glist',val:dispK('grade',c),res:'worked',chip:'worked out',lock:'open'})+'</div>';
+  }
+  if(w==='down'){
+    B=nrow({label:'Upstream invert',k:'up',input:true,val:dispK('up',c),chip:upSrc,lock:'closed'})+nrow({sign:'\u2212',label:'Fall',val:f2(c.fall),chip:'from Fall card',lock:'open',off:true})
+      +nrow({sign:'=',label:'Downstream invert',k:'down',input:true,plain:true,val:dispK('down',c),res:'worked',chip:'worked out',lock:'open'});
+  } else if(w==='up'){
+    B=nrow({label:'Downstream invert',k:'down',input:true,val:dispK('down',c),chip:dnSrc,lock:'closed'})+nrow({sign:'+',label:'Fall',val:f2(c.fall),chip:'from Fall card',lock:'open',off:true})
+      +nrow({sign:'=',label:'Upstream invert',k:'up',input:true,plain:true,val:dispK('up',c),res:'worked',chip:'worked out',lock:'open'});
+  } else {
+    B=nrow({label:'Upstream invert',k:'up',input:true,val:dispK('up',c),chip:upSrc,lock:'closed'})+nrow({sign:'\u2212',label:'Fall',val:f2(c.fall),chip:'from Fall card',lock:'open',off:true})
+      +nrow({sign:'=',label:'Downstream invert',k:'down',input:true,val:dispK('down',c),res:'held',chip:dnSrc,lock:'closed'});
+  }
+  $('sumA').innerHTML=A;$('sumB').innerHTML=B;
+  $('slope').style.display=(w==='grade')?'none':'block';
+  $('noteA').textContent=(w==='grade')?'Grade is the length divided by the fall.':'Fall is the length divided by the grade.';
+  if(w==='grade'){roll($('a2'),c.G===null?'\u2014':'1 in '+c.G);$('a2u').textContent='grade';}else{roll($('a2'),f2(c.fall));$('a2u').textContent='m fall';}
+  if(w==='up'){roll($('a3'),'IL '+f2(c.U));$('a3u').textContent='at P4';}else{roll($('a3'),'IL '+f2(c.D));$('a3u').textContent='at P3';}
+  $('bDown').classList.toggle('on',w==='down');$('bUp').classList.toggle('on',w==='up');
+  $('a1m').textContent=st0.mat||'\u2014';
+  var gb=$('gst'),gbad=H.indexOf('grade')>=0&&F.grade.raw!==null&&parseGrade(F.grade.raw)===null;
+  if(gbad){gb.style.display='flex';pill(gb,'warn','Needs a look:','type a grade such as 1 in 75.');}else gb.style.display='none';
   var b=$('st1'),bad=wrong(st0);
-  if(st0.flat)pill(b,'bad','Wrong:','downstream '+f2(st0.down)+' is not below upstream '+f2(st0.up)+'.');
-  else if(bad)pill(b,'bad','Wrong:','arrives at '+f2(st0.down)+', outlet is '+f2(OUT)+'.');
+  if(st0.flat)pill(b,'bad','Wrong:','downstream '+f2(c.D)+' is not below upstream '+f2(c.U)+'.');
+  else if(bad)pill(b,'bad','Wrong:','arrives at '+f2(c.D)+', outlet is '+f2(OUT)+'.');
   else if(st0.cov<0.30-1e-9)pill(b,'warn','Needs a look:','cover '+f2(st0.cov)+', needs 0.30.');
   else pill(b,'ok','Suits:','cover '+f2(st0.cov)+', needs 0.30.');
   var h='<span class="h">What else changes</span>',n=0;
+  if(note){var nv=note==='grade'?(c.G===null?'\u2014':'1 in '+c.G):f2(note==='up'?c.U:c.D);h+='<span class="ln">'+mini('neutral','Now worked out')+NAMES[note]+' is now worked out: '+nv+'.</span>';n++;}
   if(sizeNow!==150){h+='<span class="ln">'+mini('neutral','Changes')+'Pit schedule: rows P4 and P3 show '+sizeNow+' dia.</span>';n++;}
-  if(changed(st0)){h+='<span class="ln">'+mini('neutral','Moves')+'Invert at P3 becomes '+f2(st0.down)+'.</span><span class="ln">'+mini('warn','Check')+'Pipe from P3 to P2: check its upstream invert.</span>';n++;}
-  if(st0.flat){h+='<span class="ln">'+mini('bad','Wrong')+'Downstream '+f2(st0.down)+' is not below upstream '+f2(st0.up)+'.</span>';n++;}
-  if(bad&&!st0.flat){h+='<span class="ln">'+mini('bad','Wrong')+'Arrives at '+f2(st0.down)+', outlet is '+f2(OUT)+'.</span>';n++;}
+  if(Math.abs(c.U-5.23)>1e-9){h+='<span class="ln">'+mini('neutral','Moves')+'Invert at P4 becomes '+f2(c.U)+'.</span>';n++;}
+  if(Math.abs(c.D-5.15)>1e-9){h+='<span class="ln">'+mini('neutral','Moves')+'Invert at P3 becomes '+f2(c.D)+'.</span><span class="ln">'+mini('warn','Check')+'Pipe from P3 to P2: check its upstream invert.</span>';n++;}
+  if(st0.flat){h+='<span class="ln">'+mini('bad','Wrong')+'Downstream '+f2(c.D)+' is not below upstream '+f2(c.U)+'.</span>';n++;}
+  else if(bad){h+='<span class="ln">'+mini('bad','Wrong')+'Arrives at '+f2(c.D)+', outlet is '+f2(OUT)+'.</span>';n++;}
   if(!n)h+='<span class="none">Nothing else changes.</span>';
   $('else').innerHTML=h;
   tally();slope(st0);runView(st0);sample(st0);
@@ -414,19 +493,20 @@ function render(){
   else if(cur!==sizeNow){tween({v:cur},{v:sizeNow},300,function(o){cur=o.v;draw(S());runView(S());});}
   else draw(S());
 }
-['kind','size','mat','grade','up','lab','arr','ils','side','down'].forEach(function(i){$(i).addEventListener('input',render);$(i).addEventListener('change',render);});
+['kind','size','mat','lab','arr','ils','side'].forEach(function(i){$(i).addEventListener('input',render);$(i).addEventListener('change',render);});
 window.__redraw=function(){if(cur!==null){draw(S());runView(S());}};
-function comboOld(c){var inp=c.querySelector('input'),ul=c.querySelector('ul');
-  c.querySelector('button').addEventListener('click',function(e){e.stopPropagation();var o=ul.hidden;document.querySelectorAll('.clist').forEach(function(u){u.hidden=true;});ul.hidden=!o;});
-  ul.addEventListener('click',function(e){if(e.target.tagName==='LI'){inp.value=e.target.textContent;ul.hidden=true;inp.dispatchEvent(new Event('input',{bubbles:true}));}});
-  inp.addEventListener('blur',function(){if(inp.id==='grade'){var g=parseGrade(inp.value);if(g!==null)inp.value='1 in '+g;}});}
-$('grade').addEventListener('blur',function(){var g=parseGrade(this.value);if(g!==null&&!this.readOnly)this.value='1 in '+g;});
-$('down').addEventListener('input',function(){var v=parseFloat(this.value);if(!isNaN(v))ov=v;else if(this.value==='')ov=null;});
+wireSum($('sumA'),onInput,onChange,onLock);wireSum($('sumB'),onInput,onChange,onLock);
+$('bDown').addEventListener('click',function(){shortcut('down');});$('bUp').addEventListener('click',function(){shortcut('up');});
 var q=wireCommon();
 if(q.get('material'))$('mat').value=q.get('material');
 if(parseFloat(q.get('size'))>0)$('size').value=q.get('size');
-if(q.get('down')&&!isNaN(parseFloat(q.get('down')))){ov=parseFloat(q.get('down'));$('down').value=q.get('down');}
-if(q.get('grade')){var pgq=parseGrade(q.get('grade'));$('grade').value=pgq!==null?'1 in '+pgq:q.get('grade');}
+(function(){var hs=(q.get('hold')||'').split(',').filter(function(x){return x==='up'||x==='down'||x==='grade';});
+  if(q.get('up')!==null&&parseNum(q.get('up'))!==null)F.up.v=r2(parseNum(q.get('up')));
+  if(q.get('down')!==null&&parseNum(q.get('down'))!==null)F.down.v=r2(parseNum(q.get('down')));
+  if(q.get('grade')!==null&&parseGrade(q.get('grade'))!==null)F.grade.v=parseGrade(q.get('grade'));
+  if(hs.length===2&&hs[0]!==hs[1])H=hs;
+  else if(q.get('down')!==null&&q.get('hold')===null)H=['down','grade'];
+})();
 render();fit();
 if(q.get('inspect')==='1')inspect(true,true);
 })();
