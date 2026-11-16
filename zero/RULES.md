@@ -210,6 +210,8 @@ Note from Tim's prompt of 16 Nov 2026: "replaced for this planning chat by "Star
 
 **R-67** (Tim, 16 Nov 2026, his words) "for now lets focus on civil/ce tools/manager and then structural will only become part of it once everything is working".
 
+**R-68** (Tim, 16 Nov 2026, his words) "the plan, building, testing, context and weekly usage must all be managed by you. that doesnt mean slowing work down, it measn use the correct models and thinking for the correct usage. can you lead me through the plan so we come back with something meaningful and use compaction and side sessions to manage context as well. i have 3 fable resets so i will use that this week to continue working." How the chat applies it (the chat's reading, Tim's to correct): the lead chat (strongest model, high thinking) interviews Tim, decides, and checks; reviews and critiques go to Opus; drawing a page or filing notes from a tight written brief goes to Sonnet; scans, counts and inventories go to Haiku; every helper is started with its model named; the lead chat saves state to `STATE.md` and asks for compaction before its context fills; side sessions are used for self-contained pieces (this lifts hard limit 5 "one chat"). Never Haiku for AutoCAD or C# logic (C:\TimOS\RULES.md model routing rule).
+
 ---
 
 ## Hard limits for the planning chat (Tim's words, 16 Nov 2026)
