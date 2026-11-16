@@ -1,0 +1,21 @@
+label,from_what,standard_clear_distance,measured_range,side_rule,rotation_rule,source,status
+Pipe label (template samples),pipe edge to nearest edge of text,73 to 74,73 to 74 on every parked sample (text edge 123 from the centreline of a 100 pipe),one sample above and one below each pipe,parallel to the pipe,STUDY_A section 7 item 5,template
+Pipe label (JOB_A; 8 labels),pipe edge to nearest edge of text,73 to 74 (template),76; 76; 76; 80; 83; 95; 130; 152,no fixed side,within 0.2 degrees of the pipe,STUDY_A section 7 item 6.1,measured
+Pipe label (JOB_B; 16 labels),pipe edge to nearest edge of text,73 to 74 (template),60; 62; 76; 78; 78; 80; 81; 92; 95; 98; 107; 138; 141; 157; 171; and one at 761,no fixed side,within 0.2 degrees of the pipe,STUDY_A section 7 item 6.2,measured
+Pipe label (JOB_C; 8 labels),pipe edge to nearest edge of text,73 to 74 (template),73; 109; 115; 117; 155; 183; 196; and one at 1129,no fixed side,within 0.2 degrees of the pipe,STUDY_A section 7 item 6.3,measured
+Pipe label (reading of the three jobs),pipe edge to nearest edge of text,about 75 to 100,110 to 200 when something is in the way,above on 36 and below on 23 of 59 parallel labels,turned to read left-to-right or bottom-to-top,STUDY_A section 7 items 6.4; 7; 8,measured
+Pipe label (August 2026 study),pipe (centreline or edge not stated),about 139 off a 150 pipe in clear space,about 406 when crowded; about 592 off a 525 pipe,keep the offset; centre along the run; shift only to clear another drawn item; keep manual moves,parallel to the run; turned to stay readable,DIGEST section 1 item 3,conflict
+Pipe label position along the run,start of run to middle of text,roughly centred,0.41 to 0.72 of the run (JOB_B; JOB_C),nudged to miss things,not applicable,STUDY_A section 7 item 9,measured
+Pipe label not parallel (short or crowded run),the run,not stated,400 to 2000 away; 2 or 3 per job,with a pointer leader; top-left justified two-line label,horizontal,STUDY_A section 7 item 10,measured
+Invert level text,pipe edge to text,not stated,22 to 88 clear (median 49 to 54 in all three jobs); 170 to 900 along from the pipe end,either side of the pipe,parallel to its pipe,STUDY_A section 7 item 11,measured
+Cover level text,pit insertion point,not stated,560 to 1290 (JOB_C),not related to a pipe,+45 or -45 degrees,STUDY_A section 7 item 12,measured
+Pit tag,pit insertion point,not stated,850 to 1540 (JOB_B; JOB_C),any side; nothing connecting them,not stated,STUDY_A section 6 item 12,measured
+Flow arrow,pipe centreline,not stated,150 to 990 (typically 170 to 390); 750 long; arrowhead 300,either side; 8 of 13 in the first or last quarter of the run (JOB_C); may sit on the other side from the text,parallel to the pipe; 7 of 13 with the drawn direction and 6 against,STUDY_A section 6 item 7 and DIGEST section 1 item 4,measured
+Pipe end at a 350 pit,pit insertion point,175,175 (the pit edge),not applicable,not applicable,STUDY_A section 7 item 4,measured
+Pipe end at larger pits,pit insertion point,not stated,43 to 400,not applicable,not applicable,STUDY_A section 7 item 4,measured
+Pipe end at a downpipe,downpipe point,0,0,not applicable,not applicable,STUDY_A section 7 item 4,measured
+Pointer leader length,note to object,not stated,600 to 6750; 2 or 3 points,not applicable,not applicable,STUDY_A section 4 item 7,measured
+Pit schedule row spacing,row to row,1500,1500,not applicable,not applicable,STUDY_A section 6 item 40,template
+Revision row spacing (paper space),row to row,not stated,4 to 5,not applicable,not applicable,STUDY_A section 6 item 45,measured
+Second sheet frame,first sheet frame,100000,100000 to the right,not applicable,not applicable,STUDY_A section 1 item 5,template
+Site and ground background attachments,one attachment to the other,50000,50000 apart in Y (JOB_B; JOB_C),not applicable,not applicable,STUDY_A section 1 item 14.2,measured

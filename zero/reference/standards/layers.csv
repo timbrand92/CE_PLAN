@@ -1,0 +1,119 @@
+name,colour,linetype,plots,used_for,in_master,in_template,seen_on_jobs,source,status
+18CONT,6,not stated,yes,pen-and-kind layer: general line work at that pen,not stated,not stated,not stated,STUDY_A section 2 naming family 1,measured
+18HIDDEN,6,not stated,yes,pen-and-kind layer: general line work at that pen,not stated,not stated,not stated,STUDY_A section 2 naming family 1,measured
+18HIDDEN2,6,not stated,yes,pen-and-kind layer: general line work at that pen,not stated,not stated,not stated,STUDY_A section 2 naming family 1,measured
+25HIDDEN,7,not stated,yes,pen-and-kind layer: general line work at that pen,not stated,not stated,not stated,STUDY_A section 2 naming family 1,measured
+70DASHED,4,not stated,yes,pen-and-kind layer: general line work at that pen,not stated,not stated,not stated,STUDY_A section 2 naming family 1,measured
+70HIDDEN,4,not stated,yes,pen-and-kind layer: general line work at that pen,not stated,not stated,not stated,STUDY_A section 2 naming family 1,measured
+9CONT,9,not stated,yes,pen-and-kind layer: general line work at that pen,not stated,not stated,not stated,STUDY_A section 2 naming family 1,measured
+18TEXT,6,not stated,yes,invert levels on JOB_A and JOB_B (each forced to colour 1); small FLOW and placeholder texts,not stated,not stated,JOB_A; JOB_B,STUDY_A section 2 civil layer 25,measured
+20TEXT,10,not stated,yes,invert levels on JOB_C; the level attribute of the finished-ground-level block,not stated,not stated,JOB_C,STUDY_A section 2 civil layer 24,measured
+25TEXT,7,not stated,yes,all ordinary notes; pipe labels; cover levels; schedule cell text,not stated,not stated,JOB_A; JOB_B; JOB_C,STUDY_A section 2 civil layer 26,measured
+35TEXT,2,not stated,yes,dwelling and garage names; pit tag attribute; schedule headings,not stated,not stated,JOB_A; JOB_B; JOB_C,STUDY_A section 2 civil layer 27,measured
+50TEXT,3,not stated,yes,big headings inside blocks (500 high),not stated,not stated,not stated,STUDY_A section 2 civil layer 28,measured
+TEXT TITLE,4,not stated,yes,the plan title and scale line,no,yes,not stated,STUDY_A section 2 civil layer 29 and Standard versus invented item 1,template
+25DIMS,7,not stated,yes,every leader (flow arrows; pointer leaders); every dimension; some blocks,not stated,not stated,JOB_A; JOB_B; JOB_C,STUDY_A section 2 civil layer 30,measured
+25CONT,7,not stated,yes,general line work,not stated,not stated,not stated,STUDY_A section 2 civil layer 31,measured
+35CONT,2,not stated,yes,general line work; note shadow-box frames (width 150); tank outline,not stated,not stated,not stated,STUDY_A section 2 civil layer 31,measured
+50CONT,3,not stated,yes,building outline (polyline of global width 70); pit tag circle mask,not stated,not stated,not stated,STUDY_A section 2 civil layer 31,measured
+70CONT,4,not stated,yes,general line work,not stated,not stated,not stated,STUDY_A section 2 civil layer 31,measured
+STORMWATER PIPE,150,DASHED,yes,fat centre polyline of every new gravity pipe (prints blue),not stated,not stated,JOB_A; JOB_B; JOB_C,STUDY_A section 2 civil layer 1,measured
+STORMWATER CHARGED PIPE,10,DASHED,yes,fat centre polyline of every charged pipe roof to tank (prints red),not stated,not stated,JOB_A; JOB_B; JOB_C,STUDY_A section 2 civil layer 2,measured
+STORMWATER SUSPENDED PIPE,211,DASHED,yes,suspended pipes (prints magenta); only inside the legend on the three jobs,no,yes,legend only,STUDY_A section 2 civil layer 3,template
+STORMWATER PIPE CHARGED TO RAINGARDEN,not stated,not stated,yes,in the template only; not used on the three jobs,no,yes,none,STUDY_A section 2 civil layer 4,template
+STORMWATER RISING MAIN,not stated,not stated,not stated,rising main; in the master only,yes,no,none,STUDY_A section 2 civil layer 5,master
+DRAINAGE,6,Continuous,yes,double-line multiline that draws the two pipe walls; the box round the detention criteria,not stated,not stated,JOB_A; JOB_B; JOB_C,STUDY_A section 2 civil layer 6,measured
+DRAINAGE UNDER SLAB,6,HIDDEN,yes,in blocks only,no,yes,in blocks,STUDY_A section 2 civil layer 7,template
+EX STORMWATER,9,HIDDEN,yes,walls (multiline) and stub lines of existing drains (prints grey),not stated,not stated,JOB_C,STUDY_A section 2 civil layer 8,measured
+EX DRAIN HATCH,61,PHANTOM,yes,fat centre polyline of an existing drain (width 225 on JOB_C; object linetype scale 0.4),not stated,not stated,JOB_C,STUDY_A section 2 civil layer 9,measured
+EX PIT,9,not stated,yes,existing pit drawn as loose lines (450 square with a cross; 675 dashed outer square),not stated,not stated,not stated,STUDY_A section 2 civil layer 10,measured
+EXISTING DRAIN,2,not stated,yes,in blocks only,not stated,not stated,in blocks,STUDY_A section 2 civil layer 11,measured
+STORMWATER,9,not stated,yes,layer that pit blocks; pit tags; small symbol blocks and the top warning boxes are inserted on,not stated,not stated,JOB_A; JOB_B; JOB_C,STUDY_A section 2 civil layer 12,measured
+STORMWATER PIT,2,not stated,yes,inside the pit block: the cross lines (forced to colour 9) and the masks,not stated,not stated,in blocks,STUDY_A section 2 civil layer 13,measured
+PITS HIDDEN,7,HIDDEN,yes,inside the pit block: the pit outline,not stated,not stated,in blocks,STUDY_A section 2 civil layer 14,measured
+GRATED TRENCH,9,not stated,yes,inside the pit block: the grate hatch; also legend lines,not stated,not stated,in blocks,STUDY_A section 2 civil layer 15,measured
+TRENCH GRATE,9,not stated,yes,trench grate block and its hatch,not stated,not stated,not stated,STUDY_A section 2 civil layer 16,measured
+DOWNPIPES,2,not stated,yes,downpipe / overflow / inspection opening circles; downpipe inserts on JOB_C,not stated,not stated,JOB_C,STUDY_A section 2 civil layer 17,measured
+DOWNPIPES HATCH,10,not stated,yes,solid red fill of the downpipe circle,not stated,not stated,not stated,STUDY_A section 2 civil layer 17,measured
+DOWNPIPE TXT,7,not stated,yes,the DP attribute,no,yes,not stated,STUDY_A section 2 civil layer 17 and Standard versus invented item 1,template
+DOWN PIPES,not stated,not stated,not stated,a second spelling of DOWNPIPES; in neither standard,no,no,JOB_B,STUDY_A section 2 Standard versus invented item 3,measured
+FLOOR WASTE,7,not stated,yes,floor waste circle and honeycomb hatch,not stated,not stated,not stated,STUDY_A section 2 civil layer 18,measured
+SPOON DRAIN,10 in jobs and template; 1 in master,not stated,yes,spoon drain multiline and SD label,yes (colour 1),yes (colour 10),parked only,STUDY_A section 2 civil layer 19 and Standard versus invented item 2,conflict
+AGI DRAIN,2,AG_LINE,yes,agricultural drain as plain lines (8 lines in JOB_A),not stated,not stated,JOB_A; JOB_B,STUDY_A section 2 civil layer 20,measured
+OVERLAND FLOW,34,not stated,yes,overland flow arrow block and its label (own colour at 30%),no,yes,parked on JOB_C,STUDY_A section 2 civil layer 21,template
+FLOOR LEVEL,7,not stated,yes,FFL texts,no,yes,JOB_C,STUDY_A section 2 civil layer 22,template
+PAVEMENT LEVELS,7,not stated,yes,legend only on these jobs,no,yes,legend only,STUDY_A section 2 civil layer 23,template
+SAWCUT,2,DASHDOT2,yes,saw cut lines (plain lines) and the saw-cut tag block,no,yes,not stated,STUDY_A section 2 civil layer 32,template
+CONSTRUCTION JOINT,3,PHANTOM_CJ in JOB_C and template; CENTER2 in JOB_A and JOB_B; PHANTOM in master,yes,construction joint lines,yes (PHANTOM),yes (PHANTOM_CJ),JOB_A; JOB_B; JOB_C,STUDY_A section 2 civil layer 33,conflict
+SLAB CJ,not stated,not stated,yes,pavement joint content; mostly inside blocks,no,yes,in blocks,STUDY_A section 2 civil layer 34,template
+SLAB SC,not stated,not stated,yes,pavement joint content; mostly inside blocks,not stated,not stated,in blocks,STUDY_A section 2 civil layer 34,measured
+SLAB PERIMETER,not stated,not stated,yes,pavement joint content; mostly inside blocks,not stated,not stated,in blocks,STUDY_A section 2 civil layer 34,measured
+SLAB STEP,not stated,not stated,yes,pavement joint content; mostly inside blocks,not stated,not stated,in blocks,STUDY_A section 2 civil layer 34,measured
+25TEXT - JOINT TEXT,not stated,not stated,yes,pavement joint content; mostly inside blocks,not stated,not stated,in blocks,STUDY_A section 2 civil layer 34,measured
+HATCH 21,49 in the jobs; 21 in the template,not stated,yes,solid fill of the driveway slab (prints pale grey),not stated,yes (colour 21),JOB_C,STUDY_A section 2 civil layer 35,conflict
+HATCH 141,149 in JOB_C,not stated,yes,solid fill of the building footprint (prints light blue),not stated,not stated,JOB_C,STUDY_A section 2 civil layer 35,measured
+HATCH 51,250,not stated,yes,fill of note boxes (prints yellow on the issued sheet; not explained by the plot style table),not stated,not stated,JOB_C,STUDY_A section 2 civil layer 35 and section 10 item 3,measured
+HATCH 11,11,not stated,yes,earth and concrete patterns in details; green heading text of the criteria box (forced to colour 3),not stated,not stated,JOB_C,STUDY_A section 2 civil layer 35,measured
+HATCH WATER,150,not stated,yes,tank fill,not stated,not stated,not stated,STUDY_A section 2 civil layer 35,measured
+HATCH EARTH,11,not stated,yes,earth hatch,not stated,not stated,not stated,STUDY_A section 2 civil layer 35,measured
+HATCH 150,not stated,not stated,yes,ANSI31 scale 50 permeable paving hatch,not stated,not stated,JOB_B,STUDY_A section 6 item 33,measured
+HATCHOUTLINE,215,not stated,no,boundary polylines of hatches,not stated,not stated,not stated,STUDY_A section 2 civil layer 36,measured
+BATTER,253,not stated,yes,batter lines and fills,not stated,not stated,not stated,STUDY_A section 2 civil layer 37,measured
+RETAINING WALL,1,not stated,yes,wall as a fat polyline plus multiline,not stated,not stated,not stated,STUDY_A section 2 civil layer 38,measured
+SLEEPER RETAINING WALL,1,not stated,yes,wall as a fat polyline plus multiline,not stated,not stated,not stated,STUDY_A section 2 civil layer 38,measured
+TPZ,2,HIDDEN,yes,tree protection zone arcs/lines and the TPZ / SRZ texts (SRZ forced to colour 233),not stated,not stated,JOB_B,STUDY_A section 2 civil layer 39,measured
+TREE,65 in JOB_C and template; 73 in JOB_A/B and master,not stated,yes,tree symbol (pasted architect block at scale 160); lineweight 0.00,yes (colour 73),yes (colour 65),JOB_A; JOB_B; JOB_C,STUDY_A section 2 civil layer 39 and Standard versus invented item 2,conflict
+TREE EXISTING,53,not stated,yes,existing trees; lineweight 0.20,not stated,not stated,not stated,STUDY_A section 2 civil layer 39,measured
+SEWER,9,SEWER,yes,existing sewer as plain lines with object linetype scale 0.1,not stated,not stated,not stated,STUDY_A section 2 civil layer 40,measured
+WATER,9,WATER,yes,existing water as plain lines with object linetype scale 0.1,not stated,not stated,not stated,STUDY_A section 2 civil layer 40,measured
+GAS,9,GAS_LINE,yes,existing gas as plain lines with object linetype scale 2.0,not stated,not stated,not stated,STUDY_A section 2 civil layer 40,measured
+TELSTRA,9,TELSTRA,yes,existing telecom as plain lines with object linetype scale 0.1,not stated,not stated,not stated,STUDY_A section 2 civil layer 40,measured
+ELEC OVERHEAD,251,ELECTRICITY,yes,existing overhead power as plain lines,not stated,not stated,not stated,STUDY_A section 2 civil layer 40,measured
+BYDA,7,not stated,yes,the before-you-dig block,not stated,not stated,not stated,STUDY_A section 2 civil layer 41,measured
+KERB & CHANNEL,7,not stated,yes,legend only,no,yes,legend only,STUDY_A section 2 civil layer 42,template
+BOUNDARY,2,DASHDOT,yes,exists in the job file but empty; content arrives through the background,not stated,not stated,empty,STUDY_A section 2 civil layer 43,measured
+EASEMENT,6,DASHED,yes,exists in the job file but empty; content arrives through the background,not stated,not stated,empty,STUDY_A section 2 civil layer 43,measured
+FENCE,11,not stated,yes,exists in the job file but empty,not stated,not stated,empty,STUDY_A section 2 civil layer 43,measured
+DRIVEWAY,254,not stated,yes,exists in the job file but empty,not stated,not stated,empty,STUDY_A section 2 civil layer 43,measured
+SURVEY,253,not stated,yes,exists in the job file but empty,not stated,not stated,empty,STUDY_A section 2 civil layer 43,measured
+LANDSCAPING,not stated,not stated,yes,exists in the job file but empty,not stated,not stated,empty,STUDY_A section 2 civil layer 43,measured
+SCHEDULE,7,not stated,yes,ruled lines of the pit schedule block,not stated,not stated,JOB_A; JOB_B; JOB_C,STUDY_A section 2 civil layer 44,measured
+Section Marks,not stated,not stated,yes,section mark blocks,no,yes,parked on JOB_C,STUDY_A section 2 civil layer 45,template
+Section Scale,not stated,not stated,yes,detail title blocks,no,yes,parked on JOB_C,STUDY_A section 2 civil layer 45,template
+SECTION TAG,not stated,not stated,yes,section mark and detail title blocks,not stated,not stated,not stated,STUDY_A section 2 civil layer 45,measured
+BLOCKS,7,not stated,yes,catch-all layer that detail blocks; note blocks; the legend; the schedule and the border are inserted on,not stated,not stated,JOB_A; JOB_B; JOB_C,STUDY_A section 2 civil layer 46,measured
+XREF,7,not stated,yes,background attachments,not stated,not stated,JOB_A; JOB_B; JOB_C,STUDY_A section 2 civil layer 47,measured
+WIPEOUT,255,DOT in jobs and template; DOTX2 in master,yes,masks,yes (DOTX2),yes (DOT),not stated,STUDY_A section 2 civil layer 48 and Standard versus invented item 2,conflict
+GUIDELINES,75,not stated,no,helper geometry inside blocks,not stated,not stated,in blocks,STUDY_A section 2 civil layer 49,measured
+DEFPOINTS,129 in template; 5 in master,not stated,no,sheet frame; viewport edge; sheet number text; helper circles,yes (colour 5),yes (colour 129),JOB_A; JOB_B; JOB_C,STUDY_A section 2 civil layer 49 and Standard versus invented item 2,conflict
+CLOUD,10 in jobs and template; 12 in master,not stated,yes,revision clouds; empty in these jobs,yes (colour 12),yes (colour 10),empty,STUDY_A section 2 civil layer 50,conflict
+0-TITLE,not stated,not stated,yes,title block border and ruling lines,no,yes,JOB_A; JOB_B; JOB_C,STUDY_A section 2 naming family 4 and Standard versus invented item 1,template
+0-TITLE BLOCK,not stated,not stated,yes,title block border and ruling lines,no,yes,JOB_A; JOB_B; JOB_C,STUDY_A section 2 naming family 4 and Standard versus invented item 1,template
+0-TITLE TEXT,not stated,not stated,yes,drawing title in paper space,no,yes,JOB_A; JOB_B; JOB_C,STUDY_A section 2 naming family 4 and Standard versus invented item 1,template
+0-TITLE REVISION,not stated,not stated,yes,revision row texts in paper space,no,yes,JOB_A; JOB_B; JOB_C,STUDY_A section 2 naming family 4 and Standard versus invented item 1,template
+0-SCALE BAR,not stated,not stated,yes,scale bar,no,yes,JOB_A; JOB_B; JOB_C,STUDY_A section 2 naming family 4 and Standard versus invented item 1,template
+0-NORTH,not stated,not stated,yes,north point,no,yes,JOB_A; JOB_B; JOB_C,STUDY_A section 2 naming family 4 and Standard versus invented item 1,template
+0-STAMP-PRELIMINARY,not stated,not stated,yes,preliminary issue stamp text,no,yes,JOB_A; JOB_B; JOB_C,STUDY_A section 2 naming family 4 and Standard versus invented item 1,template
+0-STAMP-TENDER,not stated,not stated,yes,tender stamp text,no,yes,JOB_A; JOB_B; JOB_C,STUDY_A section 2 naming family 4 and Standard versus invented item 1,template
+0-STAMP-APPROVAL,not stated,not stated,yes,for council approval stamp text,no,yes,JOB_A; JOB_B; JOB_C,STUDY_A section 2 naming family 4 and Standard versus invented item 1,template
+0-STAMP-CONSTRUCTION,not stated,not stated,yes,construction stamp text,no,yes,JOB_A; JOB_B; JOB_C,STUDY_A section 2 naming family 4 and Standard versus invented item 1,template
+25CENTER2,not stated,not stated,not stated,on a job but in neither standard; arrives with pasted blocks,no,no,JOB_A,STUDY_A section 2 Standard versus invented item 3,measured
+AREA OF INTEREST HATCH,not stated,not stated,not stated,on a job but in neither standard; arrives with pasted blocks,no,no,JOB_A; JOB_B,STUDY_A section 2 Standard versus invented item 3,measured
+BATTER SYMBOL,not stated,not stated,not stated,on a job but in neither standard; arrives with pasted blocks,no,no,JOB_A; JOB_B,STUDY_A section 2 Standard versus invented item 3,measured
+CONCRETE HATCH,not stated,not stated,not stated,on a job but in neither standard; arrives with pasted blocks,no,no,JOB_A; JOB_B,STUDY_A section 2 Standard versus invented item 3,measured
+HATCH 14,not stated,not stated,not stated,on a job but in neither standard; arrives with pasted blocks,no,no,JOB_A; JOB_B,STUDY_A section 2 Standard versus invented item 3,measured
+HATCH 240,not stated,not stated,not stated,on a job but in neither standard; arrives with pasted blocks,no,no,JOB_A; JOB_B,STUDY_A section 2 Standard versus invented item 3,measured
+HATCH DECK,not stated,not stated,not stated,on a job but in neither standard; arrives with pasted blocks,no,no,JOB_A; JOB_B,STUDY_A section 2 Standard versus invented item 3,measured
+LOADBEARING,not stated,not stated,not stated,on a job but in neither standard; arrives with pasted blocks,no,no,JOB_A; JOB_B,STUDY_A section 2 Standard versus invented item 3,measured
+WALL BLOCK,not stated,not stated,not stated,on a job but in neither standard; arrives with pasted blocks,no,no,JOB_A; JOB_B,STUDY_A section 2 Standard versus invented item 3,measured
+WALLS EXISTING HATCH,not stated,not stated,not stated,on a job but in neither standard; arrives with pasted blocks,no,no,JOB_A; JOB_B,STUDY_A section 2 Standard versus invented item 3,measured
+WATER TANK,not stated,not stated,not stated,on a job but in neither standard; arrives with pasted blocks,no,no,JOB_A,STUDY_A section 2 Standard versus invented item 3,measured
+RED,not stated,not stated,not stated,on a job but in neither standard; arrives with pasted blocks,no,no,JOB_A; JOB_B; JOB_C,STUDY_A section 2 Standard versus invented item 3,measured
+GREEN,not stated,not stated,not stated,on a job but in neither standard; arrives with pasted blocks,no,no,JOB_A; JOB_B; JOB_C,STUDY_A section 2 Standard versus invented item 3,measured
+BEAMS,not stated,not stated,not stated,on a job but in neither standard; arrives with pasted blocks,no,no,JOB_A; JOB_B; JOB_C,STUDY_A section 2 Standard versus invented item 3,measured
+TITLEBLOCKTEXT2,not stated,not stated,not stated,on a job but in neither standard; arrives with pasted blocks,no,no,JOB_A; JOB_B; JOB_C,STUDY_A section 2 Standard versus invented item 3,measured
+Layer 1,not stated,not stated,not stated,on a job but in neither standard; arrives with pasted blocks,no,no,JOB_A; JOB_B; JOB_C,STUDY_A section 2 Standard versus invented item 3,measured
+c-signs,not stated,not stated,not stated,on a job but in neither standard; arrives with pasted blocks,no,no,JOB_A; JOB_B; JOB_C,STUDY_A section 2 Standard versus invented item 3,measured
+$n$A-ARCH BACKGROUND (five layers $0$ to $4$),not stated,not stated,not stated,left behind when a reference was bound and pasted,no,no,JOB_B,STUDY_A section 2 Standard versus invented item 3,measured
+A-ARCH BACKGROUND (inside the background file),11,not stated,yes,architecture in the cleaned background (black at 70% screen; 0.09 pen),not applicable,not applicable,background of JOB_A; JOB_C,STUDY_A section 1 item 14.4,measured
+A-TITLE BOUNDARY (inside the background file),2,DASHDOT2,yes,title boundary in the cleaned background,not applicable,not applicable,background,STUDY_A section 1 item 14.6,measured

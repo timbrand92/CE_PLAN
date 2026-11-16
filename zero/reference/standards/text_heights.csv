@@ -1,0 +1,43 @@
+purpose,model_height,paper_mm,object_kind,layer,justification,mask,source,status
+Pipe label,250,2.5,MTEXT,25TEXT,top centre (some top left when broken onto two lines),on,STUDY_A section 3 items 3.1; 5; 6,measured
+Invert level (JOB_C),180,1.8,MTEXT (four plain TEXT with no mask),20TEXT,bottom left,on,STUDY_A section 3 items 3.2; 5; 6 and section 6 item 14,conflict
+Invert level (JOB_A and JOB_B),180,1.8,MTEXT,18TEXT with colour forced to 1,top left,on,STUDY_A section 3 items 3.2; 5; 6 and section 6 item 14,conflict
+Pit cover level,200,2.0,MTEXT,25TEXT,varies (top left; bottom right; top right; middle right),on,STUDY_A section 3 items 3.3; 5; 6,measured
+PP plastic pit tag,200,2.0,MTEXT,25TEXT,varies,on,STUDY_A section 3 item 3.3,measured
+Pit tag (P1; P2),350,3.5,block attribute (tag FB),35TEXT,not stated,circle is a wipeout,STUDY_A section 3 item 3.4,measured
+SPS placeholder in pit tag,300,3.0,block attribute,35TEXT,not stated,not stated,STUDY_A section 3 item 3.4,measured
+Downpipe tag DP,250,2.5,block attribute (tag DP),DOWNPIPE TXT,not stated,on,STUDY_A section 3 items 3.5; 6,measured
+IO / FW / OF / F/A / T/B letters,250,2.5,fixed MTEXT in block,not stated,not stated,on,STUDY_A section 3 items 3.5; 6,measured
+GIO / GSP / GOF letters,200,2.0,fixed MTEXT in block,not stated,not stated,on,STUDY_A section 3 item 3.5,measured
+Finished ground level (FGL) block attribute,200,2.0,block attribute (tag LEVEL),20TEXT,not stated,not stated,STUDY_A section 3 item 3.6,measured
+RL level tag attribute,250,2.5,block attribute,not stated,not stated,not stated,STUDY_A section 6 item 29,measured
+Fall arrow text (FALL SYMBOL attributes),200,2.0,block attribute,not stated,not stated,not stated,STUDY_A section 3 item 3.6,measured
+Fall arrow text (older Fall block),250,2.5,fixed TEXT in block,not stated,not stated,not stated,STUDY_A section 6 item 27,measured
+Floor level,250,2.5,MTEXT underlined,FLOOR LEVEL,bottom centre,off,STUDY_A section 3 items 3.7; 5; 6,measured
+Dwelling / garage names,350,3.5,plain TEXT,35TEXT,middle,not stated,STUDY_A section 3 item 3.8,measured
+General notes and leader notes,250,2.5,MTEXT,25TEXT,not stated,on for most plan notes,STUDY_A section 3 items 3.9; 6,measured
+Tank note,250,2.5,MTEXT,25TEXT,not stated,on,STUDY_A section 6 item 20,measured
+Pit schedule cell text,250,2.5,MTEXT,25TEXT,middle centre (remarks middle left),off,STUDY_A section 3 items 3.10; 5; 6,measured
+Pit schedule column headings,250,2.5,MTEXT,35TEXT,not stated,off,STUDY_A section 3 item 3.10,measured
+Pit schedule title,500,5.0,MTEXT,not stated,not stated,off,STUDY_A section 3 item 3.10,measured
+Pit schedule small note,180,1.8,MTEXT,not stated,not stated,off,STUDY_A section 3 item 3.10,measured
+Criteria box heading,350,3.5,MTEXT,HATCH 11 with colour forced to 3,not stated,off,STUDY_A section 3 item 3.11,measured
+Criteria box body,250,2.5,MTEXT with tab characters,25TEXT,not stated,off,STUDY_A section 3 item 3.11,measured
+Plan title,700,7.0,MTEXT (title plus scale line at a smaller inline height),TEXT TITLE,not stated,off,STUDY_A section 3 item 3.12,measured
+Tree zone tags TPZ / SRZ,280,2.8,plain TEXT,TPZ,not stated,not stated,STUDY_A section 3 item 3.13,measured
+Warning box text,240 to 300 (section 3); 250 to 300 (section 6),2.4 to 3.0,MTEXT in block,not stated,not stated,not stated,STUDY_A section 3 item 3.13 and section 6 item 37,conflict
+Disclaimer,280,2.8,MTEXT in block,not stated,not stated,not stated,STUDY_A section 3 item 3.13,measured
+Notes blocks,250 or 280,2.5 or 2.8,MTEXT in block,not stated,not stated,not stated,STUDY_A section 6 item 38,measured
+Detail titles inside blocks,500,5.0,MTEXT in block,50TEXT,not stated,not stated,STUDY_A section 6 item 35,measured
+Legend texts,250 / 200 / 180,2.5 / 2.0 / 1.8,texts in block,not stated,not stated,not stated,STUDY_A section 6 item 39,measured
+Overland flow label,180,1.8,MTEXT,not stated,not stated,not stated,STUDY_A section 6 item 26,measured
+Spoon drain SD label,180,1.8,text in block,not stated,not stated,not stated,STUDY_A section 6 item 23,measured
+Saw cut SC text,250,2.5,MTEXT rotated 90,not stated,not stated,on,STUDY_A section 6 item 34,measured
+Sheet number above the model frame,5000,50,text,DEFPOINTS,not stated,not stated,STUDY_A section 1 item 4,template
+Dimension and leader text (style value),250,2.5,dimension style,25DIMS,above the line; aligned,not stated,STUDY_A section 4 item 2,measured
+Title block texts (paper space),1.5; 2.0; 2.5; 3.0; 4.0,1.5; 2.0; 2.5; 3.0; 4.0,plain TEXT in block,0-TITLE layers,not stated,not stated,STUDY_A section 3 item 3.14,template
+Drawing title (paper space),4.0,4.0,MTEXT,0-TITLE TEXT,not stated,not stated,STUDY_A section 6 item 44,measured
+Scale line (paper space),3.0,3.0,plain TEXT,not stated,not stated,not stated,STUDY_A section 6 item 44,measured
+Revision row text (paper space),1.5,1.5,plain TEXT (six per row),0-TITLE REVISION,not stated,not stated,STUDY_A section 6 item 45,measured
+Current revision letter (paper space),4.0,4.0,plain TEXT,not stated,not stated,not stated,STUDY_A section 6 item 45,measured
+Scale bar text (paper space),2.5,2.5,text in title block,0-SCALE BAR,not stated,not stated,STUDY_A section 6 item 36,template

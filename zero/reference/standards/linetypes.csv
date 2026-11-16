@@ -1,0 +1,25 @@
+name,pattern,used_for,object_scale,source,status
+DASHED,dash 0.5; gap 0.25 (500 dash and 250 gap on the plan at LTSCALE 1000),new pipes; charged pipes; easement,1,STUDY_A section 5 item 1,measured
+HIDDEN,0.25 / 0.125,pit outline; existing drain walls; tree zone; existing pit lines,1,STUDY_A section 5 item 2,measured
+HIDDEN2,0.125 / 0.0625,not stated,1,STUDY_A section 5 item 2,measured
+DASHDOT,0.5; gap 0.25; dot; gap 0.25,boundary layer,1,STUDY_A section 5 item 3,measured
+DASHDOT2,half of DASHDOT,saw cuts; title boundary,1,STUDY_A section 5 item 3,measured
+CENTER,1.25; 0.25; 0.25; 0.25,not stated,1,STUDY_A section 5 item 4,measured
+CENTER2,half of CENTER,construction joints on JOB_A and JOB_B,1,STUDY_A section 5 item 4,measured
+PHANTOM,1.25; 0.25; 0.25; 0.25; 0.25; 0.25,existing drain centre band (object scale 0.4); construction joint in the master,0.4 on the existing drain,STUDY_A section 5 item 5,measured
+PHANTOM2,half of PHANTOM,not stated,1,STUDY_A section 5 item 5,measured
+PHANTOM_CJ,0.3175; 0.0635; 0.0635; 0.0635; 0.0635; 0.0635 (an office variant),construction joints in JOB_C and the template,1,STUDY_A section 5 item 5,template
+DOT,not stated,wipeout layer in jobs and template,not stated,STUDY_A section 5 item 6,measured
+DOT2,not stated,not stated,not stated,STUDY_A section 5 item 6,measured
+DOTX2,not stated,wipeout layer in the master,not stated,STUDY_A section 5 item 6,master
+SEWER,dash 15; gap 1; letter S (text scale 2.5; style STANDARD); gap 3.2; pattern length 19.2,existing sewer,0.1,STUDY_A section 5 item 7,measured
+WATER,as SEWER with letter W; pattern length 19.5,existing water,0.1,STUDY_A section 5 item 8,measured
+TELSTRA,as SEWER with letter T; pattern length 19.0,existing telecom,0.1,STUDY_A section 5 item 8,measured
+ELECTRICITY,dash 12.7; gap 5.08; letter E (scale 2.54); gap 5.08; pattern 22.86,existing overhead power,not stated,STUDY_A section 5 item 9,measured
+GAS_LINE,dash 0.5; gap 0.2; text GAS (scale 0.1); gap 0.25; pattern 0.95,existing gas,2.0,STUDY_A section 5 item 10,measured
+AG_LINE,dash 0.5; gap 0.4; text AG (scale 0.25); gap 0.35; pattern 1.25,agricultural drain,0.7 on the placeholder,STUDY_A section 5 item 11,measured
+Multiline style CLOSED-ENDS,two lines at +0.5 and -0.5; capped ends; scale = pipe diameter,pipe walls (current style in the jobs; JOB_B and JOB_C),scale = pipe diameter,STUDY_A section 5 item 12,measured
+Multiline style STANDARD,two lines at +0.5 and -0.5; open ends,pipe walls,scale = pipe diameter,STUDY_A section 5 item 12,measured
+Multiline style STANDARD1,two lines at +0.5 and -0.5; open ends,pipe walls on JOB_A,scale = pipe diameter,STUDY_A section 5 item 12,measured
+Multiline style CLOSED,not stated,spoon drain (scale 100),scale 100,STUDY_A section 5 item 12 and section 6 item 23,measured
+Drawing settings,LTSCALE 1000; PSLTSCALE 0; MSLTSCALE 0; CELTSCALE 1,all linetypes,not applicable,STUDY_A section 1 item 13,measured

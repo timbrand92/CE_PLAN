@@ -1,0 +1,36 @@
+colour_number,prints_as,pen_mm,screening,source,status
+1,black,0.18,100%,STUDY_A section 2 plot style table (current office table),measured
+2,black,0.35,100%,STUDY_A section 2 plot style table (current office table),measured
+3,black,0.5,100%,STUDY_A section 2 plot style table (current office table),measured
+4,black,0.40 in the current table; 0.70 in the older A1 Residential Structures table,100%,STUDY_A section 2 plot style table (current office table),conflict
+1,black (older A1 Residential Structures table),0.25,100%,STUDY_A section 2 plot style table item 4,conflict
+5,black,1.0,100%,STUDY_A section 2 plot style table (current office table),measured
+6,black,0.13,100%,STUDY_A section 2 plot style table (current office table),measured
+7,black,0.25,100%,STUDY_A section 2 plot style table (current office table),measured
+8,black,0.1,100%,STUDY_A section 2 plot style table (current office table),measured
+9,black (prints light grey),0.1,40%,STUDY_A section 2 plot style table (current office table),measured
+10,own colour (red),0.18,90%,STUDY_A section 2 plot style table (current office table),measured
+11,black,0.09,70%,STUDY_A section 2 plot style table (current office table),measured
+150,own colour (blue),0.25,100%,STUDY_A section 2 plot style table (current office table),measured
+211,own colour (magenta),object lineweight,100%,STUDY_A section 2 plot style table (current office table),measured
+250,black (light grey fill),0.15,25%,STUDY_A section 2 plot style table (current office table),measured
+251,own colour,0.15,45%,STUDY_A section 2 plot style table (current office table),measured
+252,own colour,0.15,90%,STUDY_A section 2 plot style table (current office table),measured
+253,own colour,0.18,100%,STUDY_A section 2 plot style table (current office table),measured
+21,black,not stated,20%,STUDY_A section 2 plot style table (current office table),measured
+41,black,not stated,10%,STUDY_A section 2 plot style table (current office table),measured
+61,black,not stated,50%,STUDY_A section 2 plot style table (current office table),measured
+171,black,not stated,80%,STUDY_A section 2 plot style table (current office table),measured
+14,own colour (pale tint for fills),not stated,20 to 25%,STUDY_A section 2 plot style table (current office table),measured
+49,own colour (pale tint for fills),not stated,20 to 25%,STUDY_A section 2 plot style table (current office table),measured
+74,own colour (pale tint for fills),not stated,20 to 25%,STUDY_A section 2 plot style table (current office table),measured
+138,own colour (pale tint for fills),not stated,20 to 25%,STUDY_A section 2 plot style table (current office table),measured
+141,own colour (pale tint for fills),not stated,20 to 25%,STUDY_A section 2 plot style table (current office table),measured
+201,own colour (pale tint for fills),not stated,20 to 25%,STUDY_A section 2 plot style table (current office table),measured
+242,own colour (pale tint for fills),not stated,20 to 25%,STUDY_A section 2 plot style table (current office table),measured
+34,own colour,not stated,30%,STUDY_A section 2 plot style table (current office table),measured
+47,own colour,0.1,80%,STUDY_A section 2 plot style table (current office table),measured
+73,own colour,0.1,20%,STUDY_A section 2 plot style table (current office table),measured
+130,black or grey (listed as printing black or grey; pen not stated),not stated,not stated,STUDY_A section 2 plot style table item 18,measured
+131,black or grey (listed as printing black or grey; pen not stated),not stated,not stated,STUDY_A section 2 plot style table item 18,measured
+all others (187 of 255),own colour,object lineweight,100%,STUDY_A section 2 plot style table (current office table),measured

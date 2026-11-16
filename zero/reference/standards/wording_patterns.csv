@@ -1,0 +1,32 @@
+item,pattern,real_examples,source,status
+Pipe label,<dia> DIA. <material> [<class>] PIPE AT 1 IN <grade>,100 DIA. UPVC PIPE AT 1 IN 100 | 150 DIA. UPVC SN8 PIPE AT 1 IN 100 | 100 DIA. SEWER CLASS PIPE AT 1 IN 100 | ... AT 1 IN 100 MIN.,STUDY_A section 6 item 6,measured
+Charged pipe label,<dia> DIA. <material> PIPE CHARGED TO WATER TANK,100 DIA. UPVC PIPE CHARGED TO WATER TANK | 150 DIA. UPVC CHARGED PIPE TO WT | ...CHARGED TO WATER TANK or SUSPENDED UNDER ...,STUDY_A section 6 items 3 and 6,measured
+Detention pipe label,<n> x <dia> DIA. <brand> PIPES AT 1 IN <grade> / <length>m DETENTION,2 x 225 DIA. STORMPRO PIPES AT 1 IN 200 | 9m DETENTION,STUDY_A section 6 item 4,measured
+Existing drain label,<dia> DIA COUNCIL STORMWATER PIPE,225 DIA COUNCIL STORMWATER PIPE,STUDY_A section 6 item 5,measured
+Riser and dropper note,<dia> dia. riser to water tank / <dia> dia. dropper from water tank,100 dia. riser to water tank | 100 dia. dropper from water tank,STAGE1_ELEMENT_LIST_DRAFT On the plan item 2,measured
+Invert level,IL <level to 2 decimals>,IL 5.13,STUDY_A section 6 item 14,measured
+Cover level,CL <level to 2 decimals>,CL 5.35,STUDY_A section 6 item 13,measured
+Plastic pit cover level,PP / CL <level>,PP | CL 5.65,STUDY_A section 6 item 13,measured
+Pit tag,P<n>,P1 | P2 | SPS (pump station placeholder),STUDY_A section 6 item 12,measured
+Symbol letters,fixed letters per symbol,DP | IO | GIO | FW | OF | GOF | GSP | F/A | T/B | WT | SD | SC | CJ | TJ,STUDY_A section 6 items 15 to 19; 23; 34,measured
+Floor level,FFL <level>,FFL 6.05 | FFL 6.35,STUDY_A section 6 item 28,measured
+Finished ground level,FGL <level>,FGL 6.15,STUDY_A section 6 item 29,measured
+Tank note,<total> lt WATER TANK / <detention> lt FOR DETENTION / <reuse> lt TO BE USED FOR TOILET FLUSHING AND WATER REUSE,3000 lt WATER TANK | 1000 lt FOR DETENTION | 2000 lt TO BE USED FOR TOILET FLUSHING AND WATER REUSE,STUDY_A section 6 item 20,measured
+Roof-to-tank areas line,ROOF <n> DISCHARGE TO WATER TANK <n> = <area>m2,ROOF 1 DISCHARGE TO WATER TANK 1 = 164m2,STUDY_A section 6 item 21,measured
+Criteria box heading,ON SITE DETENTION CRITERIA,ON SITE DETENTION CRITERIA,STUDY_A section 6 item 41,measured
+Criteria box lines,<NAME> <tab> <value><unit>,PERMITTED SITE DISCHARGE 6.00 l/s | HEAD ... 380mm | DIA. OF ORIFICE ... 69mm | TWL ... 5.20m,STUDY_A section 6 item 41,measured
+Connection note,"connect to council pit at approx IL <level> to council satisfaction, builder to confirm","connect to council pit at approx IL 1.14 to council satisfaction, builder to confirm",STUDY_B section 1a item 5,measured
+Existing level note,MATCH EXISTING LEVELS,MATCH EXISTING LEVELS,STUDY_A section 6 item 30,measured
+Crossover note (typed over a dimension),NEW CROSSOVER TO COUNCIL REQUIREMENTS,NEW CROSSOVER TO COUNCIL REQUIREMENTS,STUDY_A section 4 item 8,measured
+Existing service size note,EX. <dia> DIA. <service> MAIN,EX. 750 DIA. SEWER MAIN,STUDY_A section 6 item 32,measured
+Trench grate note,<width> wide trench with class <class> grate,300 wide trench with class C grate,STAGE1_ELEMENT_LIST_DRAFT On the plan item 8,measured
+Part plan title,PART PLAN <n> / SCALE 1 : 100,PART PLAN n / SCALE 1 : 100,STUDY_A section 1 item 11,measured
+Detail title block text,SECTION / SCALE 1:20,SECTION | SCALE 1:20,STUDY_A section 6 item 35,template
+Preliminary stamp,PRELIMINARY ISSUE / NOT TO BE USED FOR PRICING PURPOSES / NOTE: DRAWING TO BE PRINTED IN FULL COLOUR,as pattern,STUDY_A section 6 item 46,template
+Council approval stamp,FOR COUNCIL APPROVAL / NOT TO BE USED FOR CONSTRUCTION PURPOSES ...,as pattern,STUDY_A section 6 item 46,template
+Revision descriptions,<issue description>,PRELIMINARY ISSUE | FOR COUNCIL APPROVAL,STUDY_A section 6 item 45,measured
+Title block scale line,"<plan scale>, <detail scale>","1:100, 1:20",STUDY_A section 6 item 44,measured
+Sheet title,<sheet title>,Stormwater drainage and pavement plan and details | basement stormwater drainage plan,STAGE1_ELEMENT_LIST_DRAFT The sheet item 1; STUDY_B section 1l item 1,measured
+Title block fixed labels,fixed,DRAWING No: | REVISION: | DATE: | APPROVED: | DESIGNED: | DRAWN: | ORIGINAL SIZE: | SCALE: | TITLE: | PROJECT: | CLIENT: | JOB NO: | REVISION DESCRIPTION | No. | APPROVED | DRAWN | CHECKED | DATE,STUDY_A section 6 item 43,template
+Parked placeholders (copy-and-fill blanks),blank forms,IL _____ | CL _____ | CL ____ | NGL ___ | P__.__ | RL__.__ | 00.00 | P00.00 | FFL __.__ | ____ lt water tank | Dwelling 1 | Unit 1 | Townhouse 1 | Garage,STUDY_A section 8 item 1; STAGE1_ELEMENT_LIST_DRAFT House standards item 7,template
+Pump notes,fixed notes,"fully tanked pump pit, no groundwater into the pump system | basement to be fully tanked watertight",STUDY_B section 1g item 6 and 1l item 3,measured

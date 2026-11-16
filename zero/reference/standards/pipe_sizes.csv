@@ -1,0 +1,18 @@
+nominal,material_class,where_used,real_inside_outside_if_known,source,status
+100,UPVC,ordinary gravity pipes at 1 in 100; minimum underground pipe (guidebook),not stated,STUDY_A section 6 items 1 and 6; STUDY_B section 3 item 2,measured
+100,UPVC charged,charged pipes from downpipes to tanks,not stated,STUDY_A section 6 item 2,measured
+100,sewer class,label wording seen; sewer-quality pipe under driveways (council conditions),not stated,STUDY_A section 6 item 6; STUDY_B section 1f item 4,measured
+150,UPVC SN8,under garages with an inspection opening each side; minimum between pits at one council,not stated,STUDY_B section 3 items 2 and 3; STUDY_A section 6 item 6,measured
+150,UPVC charged,one charged pipe on JOB_A,not stated,STUDY_A section 6 item 2,measured
+225,Stormpro (detention pipe brand),detention pipes at 1 in 150; 1 in 190; 1 in 200,226 inside; 259 outside,STUDY_B section 3 items 1 and 5; STUDY_A section 6 item 4,measured
+225,concrete class 2 rubber-ring-jointed,outfall in the road reserve (CIV-05); minimum outfall at one council,not stated,STUDY_B section 1e item 5 and 1k item 1,measured
+225,existing council pipe,existing council drain (JOB_C / CIV-03 sheet),not stated,STUDY_A section 6 item 5,measured
+300,detention pipe (brand not stated),detention pipes (JOB_B; CIV-06; CIV-09),not stated,STUDY_A section 6 item 4; STUDY_B section 1f items 2 and 3,measured
+300,concrete rubber-ring-jointed,connection to the council pit (CIV-04 discharge advice); minimum outfall class 2 at one council; outfall check on CIV-10,not stated,STUDY_B section 1d item 1; section 3 item 2; 1l item 1,measured
+375,detention pipe (material not stated),18 m of detention pipe on CIV-05,not stated,STUDY_B section 1e item 3,measured
+450,Stormpro (detention pipe brand),guidebook mark-up example: 2 x 450 Stormpro 9.5 m for detention,not stated,STAGE1_ENGINEERING_NOTES Added later item 4,measured
+525,not stated,a 525 pipe measured in the August 2026 study,not stated,STAGE1_CIVIL_EVIDENCE_DIGEST section 1 item 3,measured
+50,rising main,pump rising main (CIV-07 6 m; CIV-12 about 20 m),not stated,STUDY_B section 1g item 5 and 1l item 3,measured
+80,rising main,pump rising main (CIV-10 18 m),not stated,STUDY_B section 1l item 1,measured
+100; 150; 225; 300,template sample pipes,parked sample pipes and master pipe-strip blocks (also 100 charged and rising main descriptions on the palette),not stated,STUDY_A section 7 items 5 and 14; STUDY_C section 2B item 1.2,template
+Manning roughness,0.010 plastic; 0.013 concrete,pipe capacity sum (S-009),not applicable,STAGE1_ENGINEERING_NOTES chain of sums item 7,measured

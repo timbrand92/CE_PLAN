@@ -1,0 +1,53 @@
+block_name,what_it_is,dynamic_states_or_grips,attributes,inserted_on_layer,scale,source,status
+Stormwater Pit,every pit symbol,dynamic; one visibility list with 16 states: 350x350 Grated pit; 350x350 Junction pit; 450x450 Grated Pit; 450x450 junction pit; 600x600 Grated Pit; 600x600 Junction; 600x900 Grated Pit; 600x900 Junction; 750x750 Grated Pit; 900x900 Junction Pit; 900x900 Grated Pit; 600x1200 Detention Pit; SPS Vertical; SPS Horizontal; Enviss Sentinel; Settling Tank,none,STORMWATER,1,STUDY_A section 6 item 8,measured
+PIT BLOCK 3,older pit block; not used on the three jobs,dynamic; visibility list GRATED PIT; SOLID PIT; SPS GRATED PIT; SPS SOLID PIT; DETENTION PIT; stretch distances X_WIDTH; Y_WIDTH; SPS_RADIUS,not stated,not used,not stated,STUDY_A section 6 item 11,master
+PIT LABEL,pit tag (number in a circle); a re-used structural beam tag,not dynamic (none stated),FB (value P1; P2 ...; height 350 on 35TEXT),STORMWATER,1,STUDY_A section 6 item 12,measured
+DOWNPIPE DYNAMIC WITH MASK,downpipe: circle radius 175 with solid red fill,dynamic; a point with a move action for the DP text; two flips,DP (prompt NAME; default DP; height 250; layer DOWNPIPE TXT),DOWNPIPES (JOB_C) or STORMWATER (JOB_A; JOB_B),1,STUDY_A section 6 item 15,measured
+machine-named pipe-end dot,tiny block marking the pipe end at a downpipe: circle radius 75 with solid red fill on layer 0,not dynamic,none,not stated,not stated,STUDY_A section 6 item 15,measured
+INSPECTION OPENING DYNAMIC WITH MASK,inspection opening; fixed letters IO,dynamic; move and flips as the downpipe,none (fixed MTEXT IO),not stated,1,STUDY_A section 6 item 16,measured
+GRATED INSPECTION OPENING DYNAMIC WITH MASK,grated inspection opening: the floor-waste symbol at scale 1.5 with fixed text GIO,dynamic,none (fixed MTEXT GIO),not stated,not stated,STUDY_A section 6 item 16,measured
+FLOOR WASTE DYNAMIC WITH MASK,floor waste: circle radius 100; HONEY hatch scale 5; fixed letters FW,dynamic; move and flip parts,none (fixed MTEXT FW),not stated,1,STUDY_A section 6 item 17,measured
+OVERFLOW,overflow; fixed letters OF,dynamic; same pattern,none,not stated,not stated,STUDY_A section 6 item 18,measured
+GRATED OVERFLOW,grated overflow; fixed letters GOF,dynamic; same pattern,none,not stated,not stated,STUDY_A section 6 item 18,measured
+GRATED SURCHARGE PIPE,grated surcharge pipe; fixed letters GSP,dynamic; same pattern,none,not stated,not stated,STUDY_A section 6 item 18,measured
+FROM ABOVE,pipe from above; fixed letters F/A,dynamic; same pattern,none,not stated,not stated,STUDY_A section 6 item 18,measured
+TO BELOW,pipe to below; fixed letters T/B,dynamic; same pattern,none,not stated,not stated,STUDY_A section 6 item 18,measured
+3000 LITRE TANK,water tank plan outline with gradient fill,not dynamic,WT (default DP; shown value WT; height 250; layer 25TEXT),25DIMS (JOB_C) or BLOCKS (JOB_A; JOB_B),not stated,STUDY_A section 6 item 19,measured
+3500 LITRE TANK,water tank plan outline 2250 x 650 with gradient fill,not dynamic,WT,25DIMS or BLOCKS,not stated,STUDY_A section 6 item 19,measured
+5000 LITRE TANK,water tank plan outline with gradient fill,not dynamic,WT,25DIMS or BLOCKS,not stated,STUDY_A section 6 item 19,measured
+6000 LITRE TANK,water tank plan outline with gradient fill,not dynamic,WT,25DIMS or BLOCKS,not stated,STUDY_A section 6 item 19,measured
+TRENCH GRATE,trench grate: outline; mask; two ANSI31 hatches (scale 31.5),dynamic; two stretch distances (length and width); samples 100; 150; 200; 300 wide by 1600 or 3100 long,none,TRENCH GRATE,not stated,STUDY_A section 6 item 22,template
+200 TRENCH GRATE,a different pasted trench grate block,not stated,not stated,not stated,not stated,STUDY_A section 6 item 22 (JOB_B),measured
+STRIP DRAIN LABEL DYNAMIC,spoon / strip drain label: a leader and the text SD (180 high),dynamic; rotate and flip grips,none,not stated,not stated,STUDY_A section 6 item 23,template
+OVERLAND FLOW PATH,overland flow arrow: one arrow-shaped polyline 1614 x 576 with solid hatch,not dynamic (none stated),none,OVERLAND FLOW,not stated,STUDY_A section 6 item 26,template
+FALL SYMBOL,fall arrow (newer): leader; helper polyline,dynamic; rotate; stretch and flip grips,FALL (default FALL; 200); FALL_GRADE (default blank; 200),25CONT (and a machine-named copy on 25DIMS),X scale -1,STUDY_A section 6 item 27 (JOB_C),measured
+Fall,fall arrow (older): leader and fixed TEXT FALL 250,not dynamic (none stated),none,not stated,0.92,STUDY_A section 6 item 27 (JOB_B; master),measured
+machine-named level tag,finished ground / pavement level tag with a small X tick (two 141-long lines),dynamic; move grips,LEVEL (default P__.__; height 200; layer 20TEXT),not stated,not stated,STUDY_A section 6 item 29,measured
+RL LEVEL / RL___,RL level tag with a filled triangle; parked,not stated,RL__.__ (height 250),parked,not stated,STUDY_A section 6 item 29,template
+saw-cut / joint tag block (name not given),joint tag,not stated,TAG (values SC; CJ; TJ) on layer 25TEXT - JOINT TEXT,parked,not stated,STUDY_A section 6 item 34,template
+TAG SECTION MARK,section mark; drawn at paper size,dynamic; stretch; rotate; two flips,SEC; DWG,parked on JOB_C,100,STUDY_A section 6 item 35,template
+Section Title,detail title; fixed text SECTION and SCALE 1:20; drawn at paper size,not stated,SECTIONMARK; SECTIONSHEETNUMBER,parked on JOB_C,100,STUDY_A section 6 item 35,template
+MOC,not opened; likely a north point (unconfirmed),not stated,not stated,on the plan of JOB_A and JOB_B,0.45 to 0.5,STUDY_A section 6 item 36,measured
+machine-named warning box blocks,top-row warning boxes: solid hatch on HATCH 51; outline; one MTEXT; nested dynamic shadow box,nested shadow box is stretchable,none,STORMWATER,0.967,STUDY_A section 6 item 37,measured
+shadow box (nested),two polylines on 35CONT; one of width 150 forming the drop shadow,dynamic; stretchable,none,inside note and warning blocks,not stated,STUDY_A section 6 item 37,measured
+CVL DISCLAIMER NOTE,disclaimer: one long MTEXT (280) plus a shadow box,not stated,none,BLOCKS,not stated,STUDY_A section 6 item 38,measured
+machine-named general notes and council notes blocks,one long MTEXT (250) plus a shadow box each,not stated,none,BLOCKS,not stated,STUDY_A section 6 item 38 and section 8 item 3,measured
+before-you-dig block (name not given),before-you-dig notice,not stated,not stated,BYDA,0.5,STUDY_A section 6 item 38,measured
+CIVIL LEGEND,full civil legend; 9250 x 30190; 224 objects,not dynamic (none stated),none,BLOCKS,1,STUDY_A section 6 item 39,measured
+Pit Schedle,pit schedule frame (spelt that way); 17200 wide; cell values are loose MTEXTs on top,dynamic; one distance ROW NUMBERS with a stretch and an array action; rows 1500 apart,none,BLOCKS,not stated,STUDY_A section 6 item 40,measured
+SITE INFO AND CALCULATIONS (parked sample),site area box sample,not stated,not stated,parked,not stated,STUDY_A section 6 item 42,template
+R- TITLE SHEET,title block in paper space; 795 x 567; 106 objects; two fields (name masked as in the evidence),not dynamic,NONE (job values are plain TEXT inside the block),"paper space at 0,0",1,STUDY_A section 6 item 43,measured
+Drawing Border,non-plotting sheet frame: two polylines on DEFPOINTS; 795 x 567,not dynamic (none stated),none,BLOCKS,100,STUDY_A section 1 item 4,template
+PIT 900 MAX,standard pit detail drawn 5x; all 4 dimensions typed over,not stated,none stated,BLOCKS,1,STUDY_A section 6 item 47 and section 1 item 9,measured
+PIPE BEDDING R.C & GRASS,pipe bedding detail drawn 5x,not stated,none stated,BLOCKS,1,STUDY_A section 6 item 47,measured
+SLAB ON GROUND 04,slab on ground detail drawn 5x,not stated,none stated,BLOCKS,1,STUDY_A section 6 item 47,measured
+Saw cut,saw cut detail,not stated,none stated,BLOCKS,1,STUDY_A section 6 item 47,measured
+REENTRANT BARS,re-entrant bars detail,not stated,none stated,BLOCKS,1,STUDY_A section 6 item 47,measured
+LAP SPLICE,lap splice detail,not stated,none stated,BLOCKS,5,STUDY_A section 6 item 47,measured
+machine-named job details,orifice pit detail with this job's levels; tank detail with this job's litres (numbers typed inside the block),not stated,none stated,BLOCKS,1,STUDY_A section 6 item 47,measured
+SCABBLE; CJ Detail,structural details that travel with the template,not stated,not stated,parked,not stated,STUDY_A section 8 item 8,template
+LAYERS,structural layer-legend block parked in every civil job,not stated,not stated,parked,not stated,STUDY_A section 8 item 8,template
+100 DIA. PIPE; 150 DIA. PIPE; 225 DIA. PIPE; 300 DIA. PIPE; 100 DIA CHARGED PIPE; 100 PIPE; 100 CHARGED PIPE,ready-made pipe strips: one 8252-long pipe polyline; its multiline; two labels (above and below); four flow-arrow leaders; meant to be inserted; exploded and stretched,not dynamic,none,not stated,not stated,STUDY_A section 7 item 14,master
+RL; RL-BOTTOM; SHADOW BOX W MASK; Section Flag; Section Title Block,extra civil blocks in the master not seen on the jobs,not stated,not stated,not used,not stated,STUDY_A section 9 Between the jobs and MASTER item 3,master
+key plan block (JOB_A),block containing the background reference for the 1:500 key plan,not dynamic,none,inside the 1:100 frame,0.2,STUDY_A section 1 item 10,measured
+architect tree block,pasted architect tree symbol,not stated,not stated,TREE,160,STUDY_A section 6 item 31,measured
