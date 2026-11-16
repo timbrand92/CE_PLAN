@@ -218,6 +218,8 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-121** (16 Nov 2026, night) Rule 1.9 wording put to Tim in full: "Yes, add it as written". Added to `C:\TimOS\RULES.md` as 1.9 "Hands off AutoCAD's profile and licence", after 1.8; nothing else in that file changed.
 
+**D-122** (16 Nov 2026, night) How the trial chat may open AutoCAD: "Yes, after I close the stuck window". After Tim closes the AutoCAD left at the "Customization file load failed. File not found: acad" message, trials may open AutoCAD by the double-click hand-off only (a made-up drawing handed to Windows), under his own profile, changing nothing, one at a time; rule 1.9 applies in full. At 21:58 that AutoCAD was still open (showing its Start tab), so nothing was released yet.
+
 **Open after this sitting (asked once on 16 Nov, Tim sent D-079 instead of answering; not to be re-asked in the same form):** where a pipe stops at a pit (gap check Pit item 1); whether a schedule cell can be typed over (item 3); which pit kinds are in the first release and whether a turned pit is in the window (item 9); which pits count as storage (item 10).
 
 ## How levels are designed
