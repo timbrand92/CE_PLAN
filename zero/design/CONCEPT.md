@@ -100,6 +100,32 @@ Each tool in a release gets its own interview, design record and mock-up before 
 3. No AI features in the first releases; where they come later they read documents into drafts a person places (R-54).
 4. No approval-state tracking beyond the issue stamp and revision row.
 
+## 11. How it reaches the user, and how automation is encouraged (draft, answering D-043)
+
+**Where the user meets it, in order of how often it is used:**
+
+1. **On the drawing itself.** Grips, double-click to edit, right-click for the few things that element can do, a live picture before every click. Most work happens here and it must feel like AutoCAD.
+2. **The typed names and the command line.** CD, PIT, DP and the rest, with options offered as AutoCAD offers them. Nothing needs the mouse to leave the drawing.
+3. **One ribbon tab, about 20 buttons,** plus a short strip that appears only while a pit, pipe, inlet or tank is selected, holding that element's actions.
+4. **One side panel,** docked like AutoCAD's own Properties: Job, Levels, Storage, Checks, Sheet. Checks is the "what needs me" home: ranked, each line saying why it is red or amber, each with its fix beside it.
+5. **A small card on double-click** for one pit, pipe, inlet or tank: one answer at the top, its facts below with where each came from. Replaces today's large edit windows.
+6. **The standards list** (rarely opened; changed by Tim).
+7. **One notice at start-up** when a new version is ready.
+
+**Design and drafting both ways (D-025):** the same drawing and the same tools serve an engineer designing straight in the drawing and a drafter building from a mark-up. The engineer lives in Levels, Storage and Checks; the drafter in the drawing and Sheet. Nothing is a separate mode to switch.
+
+**The automation ladder (the plugin climbs it only as far as each rung allows):**
+
+1. **Carry (always automatic).** Anything that only SHOWS a fact follows the fact: labels, level text, schedule rows, criteria lines, detail numbers, the legal point of discharge note. No question asked; one undo.
+2. **Pre-fill (automatic, visible, changeable).** Size and class from the standards and the last one placed; the next pit number; a cover level picked off the survey; the council's rules when the council is picked.
+3. **Suggest (one click to accept, never applied by itself).** Shown as a ghost on the drawing and a line on Checks with its fix: "P2 is 0.93 deep: make it 600 x 600", "this label clashes: slide it 400 along", "level this run up from the LPD at 1 in 100". Each says why and which rule. "Leave as is" with a short reason is always offered (D-003).
+4. **Do a batch when asked.** "Tidy all labels", "Level the whole network from the LPD", "Build the sheet" (schedule, criteria box, job details, council notes), "Issue". Each shows what it will change first, and is one undo.
+5. **Read a document into a draft (later, R-54).** The council's letter into job facts; the STORM report into tank figures; a survey into cover levels; a revised architect's plan into "what moved". A person confirms every value; nothing read is ever an instruction.
+
+**The line that is never crossed (R-55):** display follows by itself; anything that changes an engineering value, deletes something or sends something out needs a click, shows a preview, and is listed in "what CE did" with Undo.
+
+**How automation is encouraged without nagging:** the faster way is the visible way (the button builds the schedule; nobody is stopped from typing one); every suggestion sits where the eye already is and can be dismissed once; the panel shows the working so the result is trusted; each release measures clicks and typed values against the budget for that task (R-39).
+
 ## 10. What must be proven before this can be promised (Stage 4)
 
 1. The best way in AutoCAD 2027 to make ordinary objects behave as one element with separately movable parts, and what survives copy, mirror, stretch, undo, save and reopen, and an outsider's edit.

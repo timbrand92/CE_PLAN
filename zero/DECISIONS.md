@@ -60,6 +60,8 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-042** (16 Nov 2026) On the two concept pages (concept draft 2 and "Every element, one by one"): "EVERYTHING LOOKS RIGHT BUT I MIGHT HAVE MISSED SOME STUFF". Read as: the direction is right; it is NOT the formal "approve" of R-15, and the chat must itself hunt for what was missed rather than rely on Tim to spot it.
 
+**D-043** (16 Nov 2026) Tim's next question for the design: "NOW YOU KNOW ALL THIS WHAT AND HOW DO WE DELIVER THIS THROUGH THE UI AND UX TO END USERS AND HOW BEST CAN WE ALLOW THE DESIGN ADN DRAFTING PROCESS BUT ALSO ENCOURAGE AUTOMATION OF TASKS". (A question, not a decision. The chat's answer is the page `pictures\new_plugin_ui_and_automation.html` and CONCEPT.md section 11, both drafts until Tim rules.)
+
 ## How levels are designed
 
 **D-016** (16 Nov 2026) [8v] Moving a pit has no single rule for levels: "IT DEPENDS ON THE DESIGN NO? SO INVERTS MIGHT HAVE TO CHANGE UPSTREAM OR WE MIGHT NEED TO UPDATE INVERTS TO SUIT OR GRADE".
