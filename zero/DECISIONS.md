@@ -208,6 +208,14 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-116** (16 Nov 2026, night) Trials after the licence incident (P-08): "start the trials now, i checked license and it should be fine now or you can use codex as well through cli". The trials restart tonight. Codex through its command line is allowed as the driver. The planning chat added limits to `stage4\TRIALS_BRIEF.md` before restarting: no profiles, no force-closing, no licensing or sign-in, one AutoCAD at a time and none while Tim's is open, no registry writes, leftovers untouched. (His earlier answer "Leave everything, I will look tomorrow" about the leftovers still stands.)
 
+**D-117** (16 Nov 2026, night) Stage 1 (how the office designs and draws civil jobs): "Approved as good enough to build on". He corrects it whenever he sees something wrong.
+
+**D-118** (16 Nov 2026, night) Detention pipe layer and blue: "You propose, I approve on a sheet". A layer name in the office's style and two or three blues that print clearly different through the office plot style, shown on a sample sheet for him to pick. Owed.
+
+**D-119** (16 Nov 2026, night) Drawings made with the old plugin's special pipe: "A one-off 'make it ordinary' tool, later". After the first release; one drawing at a time, on a copy first.
+
+**D-120** (16 Nov 2026, night) Asked whether the ban on a chat making AutoCAD profiles, force-closing AutoCAD or touching licensing should be a standing rule for ALL chats on his PC: "Yes, add it to my rules". The rule text is to be drafted and shown to him before it goes into `C:\TimOS\RULES.md`.
+
 **Open after this sitting (asked once on 16 Nov, Tim sent D-079 instead of answering; not to be re-asked in the same form):** where a pipe stops at a pit (gap check Pit item 1); whether a schedule cell can be typed over (item 3); which pit kinds are in the first release and whether a turned pit is in the window (item 9); which pits count as storage (item 10).
 
 ## How levels are designed
