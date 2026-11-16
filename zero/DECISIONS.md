@@ -148,6 +148,8 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-086** (16 Nov 2026, evening) Asked what "design from the other direction" meant (levels from the discharge point upstream; or designing the plugin from the foundation up; or both), Tim: "a mix of all three points you made, this is where were going wrong were getting caught on tangents". Asked whether "hold what is fixed, the rest is worked out" is the right foundation for every number: "Yes, that is the idea". Rulings: (1) levels must work from either end; (2) the plugin is to be designed from its foundation (one set of building blocks) before more windows and details; (3) stop chasing detail tangents; (4) every number has a value, where it came from, and a hold; what is not held is worked out. Written up as `design\FOUNDATION.md`.
 
+**D-087** (16 Nov 2026, evening) On the windows rebuilt on the foundation (version 6, padlock on every number, works uphill or downhill): "thats better, i cant give you full answer until using but were on the right track". The direction is confirmed; it is NOT a final acceptance. A full answer waits until he can use it for real.
+
 **Open after this sitting (asked once on 16 Nov, Tim sent D-079 instead of answering; not to be re-asked in the same form):** where a pipe stops at a pit (gap check Pit item 1); whether a schedule cell can be typed over (item 3); which pit kinds are in the first release and whether a turned pit is in the window (item 9); which pits count as storage (item 10).
 
 ## How levels are designed
