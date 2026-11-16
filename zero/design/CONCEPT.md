@@ -4,6 +4,18 @@
 **Picture version for Tim:** `..\pictures\new_plugin_concept.html`.
 **Built on:** decisions D-001 to D-030, the civil study in `..\evidence\`, and the reference library.
 
+## 0. Draft 2 correction (16 Nov 2026, D-031 to D-035)
+
+Draft 1 drew a pipe run and its pits as one element. Tim corrected this: a pipe is one element, a pit is one element; they work together but are not merged, or it gets "too sticky". Draft 2 therefore has three levels and nothing above them is ever selected as a whole:
+
+1. **Part:** a label, an arrow, a level text, a tag. Drags on its own; remembers a hand-moved position (D-014).
+2. **Element:** one pipe with its parts, or one pit with its parts. Selects, moves, copies and erases as one thing.
+3. **Join:** a pipe end sitting on a pit wall. Made by dropping an end on a pit; broken by pulling it off. Moving a pit carries the joined pipe ends; moving a pipe on its own breaks its joins and flags the loose ends on Checks; copying gives an unjoined copy; erasing a pit leaves its pipes with loose ends flagged. Stretch, mirror, rotate and undo behave as AutoCAD's own.
+
+Also added in draft 2: grips stay as many as today and in the same places (D-033); a pipe drawn from a pit starts exactly on the pit wall in line with the click, with a live preview (D-034); what staff already know stays (typed names CD, PIT, DP, IO, OF, PITSCHEDULE, MR, CR; symbols; layers and colours; wording; sheet layout; AutoCAD's own commands) (D-032); and the page shows the step-by-step use and the foundations (D-035). Picture version: `..\pictures\new_plugin_concept_v2.html`. Where the text below says "one element" for a whole run, read it under this correction.
+
+**Where the facts live (draft 2):** on each pipe and pit (its own number, size, levels and what it is joined to; travels with it when copied); once in the drawing (job facts: council, discharge, areas, storms, assumptions); in the office standards (one shared file); on the PC only personal preferences. Everything seen on the sheet is read from the first three and never typed twice. This is the design intent; how it is stored is Stage 4 (Q-204).
+
 ## 1. The idea in one paragraph
 
 The drawing holds ONE drainage network for the job: pits, pipes, tanks, inlets and the discharge point, each knowing what it connects to and holding its own facts once. Everything on the sheet (pipe labels, level text, pit tags, the pit schedule, the detention criteria box, the numbers inside the orifice pit and tank details, the computations sheet) is a view of that network and re-reads itself when a fact changes. Each visible part can still be dragged on its own. Standards (layers, text sizes, distances, wording, symbols, pit and pipe sizes, council rules) live in one office standards file. What prints is made only of ordinary AutoCAD objects, so a PC with no plugin sees and plots the same sheet.

@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>New plugin concept, draft 2</title>
+<style>
+  :root {
+    --bg:#f3f5f8; --card:#ffffff; --ink:#1a2330; --mid:#4c5766; --soft:#7a8594; --line:#dde2e9;
+    --accent:#1e5aa8; --okc:#1b7f3b; --okb:#e4f3e8; --amc:#a35f00; --amb:#fff3d9; --rdc:#b3261e; --rdb:#fde9e7;
+    --pipe:#2f6fc4; --paper:#fbfcfd;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.5 "Segoe UI", Arial, sans-serif; }
+  main { max-width:1080px; margin:0 auto; padding:24px 16px 64px; }
+  h1 { font-size:28px; font-weight:700; margin:0 0 8px; }
+  h2 { font-size:20px; font-weight:700; margin:40px 0 8px; }
+  .lead { color:var(--mid); margin:0 0 16px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px; margin:16px 0; box-shadow:0 1px 2px rgba(26,35,48,.04); }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:16px; margin:16px 0; }
+  .grid .card { margin:0; }
+  .label { font-size:13px; color:var(--soft); letter-spacing:.02em; margin:0 0 4px; }
+  .answer { font-size:32px; font-weight:700; line-height:1.15; margin:0 0 8px; font-variant-numeric:tabular-nums; }
+  .answer small { font-size:16px; font-weight:400; color:var(--mid); }
+  .note { font-size:13.5px; color:var(--soft); margin:8px 0 0; }
+  p { margin:8px 0; }
+  .pill { display:inline-block; border-radius:10px; padding:1px 10px; font-size:12.5px; font-weight:600; white-space:nowrap; }
+  .ok { background:var(--okb); color:var(--okc); } .am { background:var(--amb); color:var(--amc); } .rd { background:var(--rdb); color:var(--rdc); }
+  /* sums, maths-teacher style */
+  .sum { width:100%; border-collapse:collapse; font-variant-numeric:tabular-nums; font-size:15px; }
+  .sum td { padding:3px 0; vertical-align:top; }
+  .sum td.op { width:20px; color:var(--soft); }
+  .sum td.n { text-align:right; width:76px; padding-left:12px; }
+  .sum tr.total td { border-top:1px solid var(--ink); font-weight:700; padding-top:5px; }
+  .sum tr.final td { border-top:1px solid var(--ink); border-bottom:3px double var(--ink); font-weight:700; padding:5px 0; }
+  .sum td.d { color:var(--mid); }
+  .rows { list-style:none; margin:8px 0 0; padding:0; }
+  .rows li { display:flex; justify-content:space-between; gap:16px; padding:6px 0; border-top:1px solid var(--line); font-size:15px; }
+  .rows li span:last-child { text-align:right; color:var(--mid); }
+  svg { width:100%; height:auto; display:block; }
+  .frame { background:var(--paper); border:1px solid var(--line); border-radius:8px; }
+  .steps { display:grid; grid-template-columns:repeat(auto-fit, minmax(230px, 1fr)); gap:16px; margin:16px 0; }
+  .stepc { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:12px; }
+  .stepc b.t { display:block; font-size:13px; color:var(--soft); margin-bottom:8px; font-weight:600; }
+  .stepc p { font-size:14.5px; margin:8px 0 0; }
+  .two { display:grid; grid-template-columns:1fr 1fr; gap:16px; } @media (max-width:720px){ .two { grid-template-columns:1fr; } }
+  .was, .now { border-radius:8px; padding:12px; border:1px solid var(--line); background:#fff; }
+  .was b.h, .now b.h { display:block; font-size:12.5px; letter-spacing:.05em; text-transform:uppercase; color:var(--soft); margin-bottom:4px; }
+  .honest { background:var(--amb); border:1px solid #ecd49a; border-radius:12px; padding:16px; margin:16px 0; }
+  .honest b { color:var(--amc); }
+  .legendline { font-size:13.5px; color:var(--mid); margin-top:8px; }
+  .k { display:inline-block; width:11px; height:11px; vertical-align:-1px; margin:0 4px 0 12px; }
+</style>
+</head>
+<body>
+<main>
+<h1>The new plugin, draft 2</h1>
+<p class="lead">Redrawn after your correction of 16 Nov. Mock-ups, with realistic made-up numbers. Not approved. How it is built inside AutoCAD is still to be proven in the research stage; I mark where.</p>
+
+<div class="card">
+  <p class="label">Your question: one pipe and two pits that work together, not one glued object?</p>
+  <p class="answer">Yes. Connected, not merged.</p>
+  <p>A <b>pipe</b> is one element. A <b>pit</b> is one element. Each carries its own parts. They are joined at the pit wall, and the join can be made or broken like snapping a line to a point. Nothing ever selects "the whole network".</p>
+</div>
+
+<h2>1. Three levels, so it never gets sticky</h2>
+<div class="card">
+<svg viewBox="0 0 1000 330" role="img" aria-label="A pit element, a pipe element and a second pit element, joined at the pit walls">
+  <rect class="frame" x="0" y="0" width="1000" height="330" fill="#fbfcfd" stroke="#dde2e9"/>
+  <!-- element outlines -->
+  <rect x="30" y="60" width="190" height="230" rx="10" fill="none" stroke="#7a8594" stroke-dasharray="5 5"/>
+  <text x="125" y="48" text-anchor="middle" font-size="14" fill="#4c5766" font-weight="600">PIT P1 (one element)</text>
+  <rect x="246" y="60" width="508" height="230" rx="10" fill="none" stroke="#7a8594" stroke-dasharray="5 5"/>
+  <text x="500" y="48" text-anchor="middle" font-size="14" fill="#4c5766" font-weight="600">PIPE P2 to P1 (one element)</text>
+  <rect x="780" y="60" width="190" height="230" rx="10" fill="none" stroke="#7a8594" stroke-dasharray="5 5"/>
+  <text x="875" y="48" text-anchor="middle" font-size="14" fill="#4c5766" font-weight="600">PIT P2 (one element)</text>
+  <!-- pipe -->
+  <line x1="152" y1="176" x2="848" y2="158" stroke="#2f6fc4" stroke-width="16" stroke-dasharray="46 22"/>
+  <line x1="152" y1="168" x2="848" y2="150" stroke="#1a2330" stroke-width="1.2"/><line x1="152" y1="184" x2="848" y2="166" stroke="#1a2330" stroke-width="1.2"/>
+  <g transform="rotate(-1.5 500 136)"><text x="500" y="140" text-anchor="middle" font-size="16" font-family="Arial Narrow, Arial">150 DIA. UPVC SN8 PIPE AT 1 IN 100</text></g>
+  <g transform="rotate(-1.5 400 205)"><line x1="440" y1="208" x2="372" y2="208" stroke="#1a2330" stroke-width="1.5"/><polygon points="360,208 378,202 378,214" fill="#1a2330"/></g>
+  <text x="262" y="160" font-size="13" fill="#b3261e" font-family="Arial Narrow, Arial">IL 4.84</text>
+  <text x="690" y="146" font-size="13" fill="#b3261e" font-family="Arial Narrow, Arial">IL 5.25</text>
+  <!-- pits -->
+  <rect x="100" y="150" width="52" height="52" fill="#fff" stroke="#1a2330" stroke-width="2" stroke-dasharray="7 4"/>
+  <line x1="100" y1="150" x2="152" y2="202" stroke="#9aa3ad"/><line x1="152" y1="150" x2="100" y2="202" stroke="#9aa3ad"/>
+  <rect x="848" y="130" width="54" height="54" fill="#fff" stroke="#1a2330" stroke-width="2" stroke-dasharray="7 4"/>
+  <g stroke="#9aa3ad"><line x1="858" y1="130" x2="858" y2="184"/><line x1="868" y1="130" x2="868" y2="184"/><line x1="878" y1="130" x2="878" y2="184"/><line x1="888" y1="130" x2="888" y2="184"/></g>
+  <g transform="rotate(-45 78 128)"><text x="50" y="130" font-size="14" font-family="Arial Narrow, Arial">CL 5.35</text></g>
+  <g transform="rotate(-45 930 108)"><text x="905" y="110" font-size="14" font-family="Arial Narrow, Arial">CL 5.78</text></g>
+  <circle cx="125" cy="246" r="19" fill="#fff" stroke="#1a2330" stroke-width="2"/><text x="125" y="252" text-anchor="middle" font-size="15">P1</text>
+  <circle cx="875" cy="232" r="19" fill="#fff" stroke="#1a2330" stroke-width="2"/><text x="875" y="238" text-anchor="middle" font-size="15">P2</text>
+  <!-- joins -->
+  <circle cx="152" cy="176" r="8" fill="#1e5aa8"/><circle cx="848" cy="158" r="8" fill="#1e5aa8"/>
+  <text x="165" y="308" font-size="13" fill="#1e5aa8">join at the pit wall</text><line x1="158" y1="296" x2="153" y2="187" stroke="#1e5aa8"/>
+  <text x="726" y="308" font-size="13" fill="#1e5aa8">join at the pit wall</text><line x1="842" y1="296" x2="847" y2="169" stroke="#1e5aa8"/>
+</svg>
+<ul class="rows">
+  <li><span><b>Part</b> · a label, an arrow, a level text, a tag</span><span>drags on its own; remembers where you put it</span></li>
+  <li><span><b>Element</b> · one pipe, or one pit, with its parts</span><span>selects, moves, copies and erases as one thing</span></li>
+  <li><span><b>Join</b> · a pipe end sitting on a pit wall</span><span>made by dropping the end on a pit; broken by pulling it off</span></li>
+</ul>
+</div>
+
+<div class="card">
+  <p class="label">What each ordinary AutoCAD action does</p>
+  <ul class="rows">
+    <li><span>Click a pipe</span><span>that pipe only. The pits are not selected.</span></li>
+    <li><span>Move a pit</span><span>the pipe ends joined to it follow. Their far ends stay put.</span></li>
+    <li><span>Move a pipe on its own</span><span>it comes off its pits. Each loose end shows <span class="pill am">not joined</span></span></li>
+    <li><span>Drag a pipe end onto another pit</span><span>it joins there, on the wall.</span></li>
+    <li><span>Copy a pit or a pipe</span><span>a plain new one with the next number. Not joined to anything.</span></li>
+    <li><span>Erase a pit</span><span>its pipes stay. Their ends show <span class="pill am">not joined</span></span></li>
+    <li><span>Stretch, mirror, rotate, undo</span><span>as AutoCAD always does.</span></li>
+    <li><span>Move a pit without its pipes</span><span>hold one key while dragging (which key: your call).</span></li>
+  </ul>
+  <p class="note">Nothing here is automatic design. A loose end is a warning on the Checks list, never a block.</p>
+</div>
+
+<h2>2. Grips: the same ones, in the same places</h2>
+<div class="card">
+<svg viewBox="0 0 1000 250" role="img" aria-label="The grips on a pipe and pit: the same as today's separate objects">
+  <rect x="0" y="0" width="1000" height="250" fill="#fbfcfd" stroke="#dde2e9"/>
+  <line x1="152" y1="136" x2="848" y2="118" stroke="#2f6fc4" stroke-width="16" stroke-dasharray="46 22"/>
+  <line x1="152" y1="128" x2="848" y2="110" stroke="#1a2330" stroke-width="1.2"/><line x1="152" y1="144" x2="848" y2="126" stroke="#1a2330" stroke-width="1.2"/>
+  <g transform="rotate(-1.5 500 96)"><text x="500" y="100" text-anchor="middle" font-size="16" font-family="Arial Narrow, Arial">150 DIA. UPVC SN8 PIPE AT 1 IN 100</text></g>
+  <g transform="rotate(-1.5 400 165)"><line x1="440" y1="168" x2="372" y2="168" stroke="#1a2330" stroke-width="1.5"/><polygon points="360,168 378,162 378,174" fill="#1a2330"/></g>
+  <text x="262" y="120" font-size="13" fill="#b3261e" font-family="Arial Narrow, Arial">IL 4.84</text>
+  <text x="690" y="106" font-size="13" fill="#b3261e" font-family="Arial Narrow, Arial">IL 5.25</text>
+  <rect x="100" y="110" width="52" height="52" fill="#fff" stroke="#1a2330" stroke-width="2" stroke-dasharray="7 4"/>
+  <rect x="848" y="90" width="54" height="54" fill="#fff" stroke="#1a2330" stroke-width="2" stroke-dasharray="7 4"/>
+  <g transform="rotate(-45 78 88)"><text x="50" y="90" font-size="14" font-family="Arial Narrow, Arial">CL 5.35</text></g>
+  <circle cx="125" cy="206" r="19" fill="#fff" stroke="#1a2330" stroke-width="2"/><text x="125" y="212" text-anchor="middle" font-size="15">P1</text>
+  <!-- grips: all AutoCAD blue squares -->
+  <g fill="#1e5aa8" stroke="#fff" stroke-width="1.5">
+    <rect x="146" y="130" width="12" height="12"/><rect x="842" y="112" width="12" height="12"/><rect x="494" y="121" width="12" height="12"/>
+    <rect x="362" y="92" width="12" height="12"/>
+    <rect x="434" y="162" width="12" height="12"/><rect x="354" y="164" width="12" height="12"/>
+    <rect x="256" y="122" width="12" height="12"/><rect x="684" y="108" width="12" height="12"/>
+    <rect x="120" y="130" width="12" height="12"/><rect x="869" y="111" width="12" height="12"/>
+    <rect x="44" y="92" width="12" height="12"/><rect x="119" y="200" width="12" height="12"/>
+  </g>
+  <g font-size="12.5" fill="#4c5766">
+    <text x="520" y="150">pipe: each end and the middle</text>
+    <text x="300" y="80">label: its own grip</text>
+    <text x="300" y="196">arrow: both ends</text>
+    <text x="250" y="226">invert text, cover text, tag: one each</text>
+    <text x="770" y="176">pit: its block grip and size grips</text>
+  </g>
+</svg>
+<div class="two" style="margin-top:16px">
+  <div class="was"><b class="h">Today</b><p>Each loose object has its own grips. Drag one and nothing else knows.</p></div>
+  <div class="now"><b class="h">New</b><p>The same grips, where your hands expect them. Drag a pit grip and its joined pipe ends follow. Drag a label grip and only the label moves.</p></div>
+</div>
+</div>
+
+<h2>3. Drawing a pipe from one pit to another</h2>
+<div class="steps">
+  <div class="stepc"><b class="t">1 · Type CD (or press Pipe). Hover a pit.</b>
+    <svg viewBox="0 0 240 150"><rect width="240" height="150" fill="#fbfcfd" stroke="#dde2e9"/>
+      <rect x="40" y="45" width="60" height="60" fill="#fff" stroke="#1e5aa8" stroke-width="3"/>
+      <line x1="40" y1="45" x2="100" y2="105" stroke="#9aa3ad"/><line x1="100" y1="45" x2="40" y2="105" stroke="#9aa3ad"/>
+      <path d="M150 62 l0 22 l6 -5 l5 11 l4 -2 l-5 -11 l8 0 z" fill="#1a2330"/>
+      <text x="120" y="135" font-size="12" fill="#4c5766" text-anchor="middle">the pit lights up</text></svg>
+    <p>The pit under the cursor is outlined so you know it will be the start.</p></div>
+  <div class="stepc"><b class="t">2 · Click anywhere on the pit.</b>
+    <svg viewBox="0 0 240 150"><rect width="240" height="150" fill="#fbfcfd" stroke="#dde2e9"/>
+      <rect x="40" y="45" width="60" height="60" fill="#fff" stroke="#1a2330" stroke-width="2" stroke-dasharray="7 4"/>
+      <line x1="70" y1="88" x2="170" y2="88" stroke="#9aa3ad" stroke-dasharray="3 3"/>
+      <circle cx="84" cy="88" r="3" fill="#1a2330"/><text x="60" y="124" font-size="11" fill="#4c5766">you clicked here</text><line x1="84" y1="92" x2="80" y2="114" stroke="#4c5766"/>
+      <circle cx="100" cy="88" r="7" fill="#1e5aa8"/><text x="112" y="76" font-size="11" fill="#1e5aa8">pipe starts here,</text><text x="112" y="88" font-size="11" fill="#1e5aa8" dy="12"> on the wall</text></svg>
+    <p>The pipe starts exactly on the pit wall, in line with where you clicked.</p></div>
+  <div class="stepc"><b class="t">3 · Move toward the next pit.</b>
+    <svg viewBox="0 0 240 150"><rect width="240" height="150" fill="#fbfcfd" stroke="#dde2e9"/>
+      <rect x="14" y="60" width="40" height="40" fill="#fff" stroke="#1a2330" stroke-width="2" stroke-dasharray="6 3"/>
+      <line x1="54" y1="84" x2="176" y2="70" stroke="#2f6fc4" stroke-width="9" stroke-dasharray="22 10" opacity=".55"/>
+      <rect x="186" y="46" width="40" height="40" fill="#fff" stroke="#1e5aa8" stroke-width="3"/>
+      <rect x="70" y="100" width="130" height="34" rx="6" fill="#1a2330"/><text x="135" y="114" font-size="11" fill="#fff" text-anchor="middle">150 dia · 9.42 m</text><text x="135" y="128" font-size="11" fill="#fff" text-anchor="middle">joins P2 on its wall</text></svg>
+    <p>The pipe follows the cursor at full width. Size, length and where it will join show beside it.</p></div>
+  <div class="stepc"><b class="t">4 · Click the second pit. Done.</b>
+    <svg viewBox="0 0 240 150"><rect width="240" height="150" fill="#fbfcfd" stroke="#dde2e9"/>
+      <rect x="14" y="60" width="40" height="40" fill="#fff" stroke="#1a2330" stroke-width="2" stroke-dasharray="6 3"/>
+      <line x1="54" y1="84" x2="186" y2="68" stroke="#2f6fc4" stroke-width="9" stroke-dasharray="22 10"/>
+      <line x1="54" y1="79" x2="186" y2="63" stroke="#1a2330"/><line x1="54" y1="89" x2="186" y2="73" stroke="#1a2330"/>
+      <rect x="186" y="46" width="40" height="40" fill="#fff" stroke="#1a2330" stroke-width="2" stroke-dasharray="6 3"/>
+      <g transform="rotate(-7 120 58)"><text x="120" y="60" font-size="9.5" text-anchor="middle" font-family="Arial Narrow, Arial">150 DIA. UPVC SN8 PIPE AT 1 IN __</text></g>
+      <text x="58" y="74" font-size="8.5" fill="#b3261e">IL __</text><text x="150" y="60" font-size="8.5" fill="#b3261e">IL __</text>
+      <g transform="rotate(-7 110 104)"><line x1="128" y1="104" x2="100" y2="104" stroke="#1a2330"/><polygon points="94,104 102,101 102,107" fill="#1a2330"/></g></svg>
+    <p>Band, walls, label, arrow and both level texts appear at the standard distances. Levels read "not set" until you set them.</p></div>
+</div>
+<div class="grid">
+  <div class="card"><p class="label">To place a joined pipe with all its parts</p><p class="answer">2 clicks <small>· 0 typed</small></p>
+    <table class="sum"><tr><td class="op"></td><td class="d">click the first pit</td><td class="n">1</td></tr><tr><td class="op">+</td><td class="d">click the second pit</td><td class="n">1</td></tr><tr class="final"><td></td><td>clicks</td><td class="n">2</td></tr></table>
+    <p class="note">Size and class come from the standards and your last pipe. Change them on the pipe afterwards, or type S before the first click.</p></div>
+  <div class="card"><p class="label">Loose objects placed by hand for the same pipe today</p><p class="answer">6</p>
+    <table class="sum"><tr><td class="op"></td><td class="d">band and walls</td><td class="n">2</td></tr><tr><td class="op">+</td><td class="d">label</td><td class="n">1</td></tr><tr><td class="op">+</td><td class="d">flow arrow</td><td class="n">1</td></tr><tr><td class="op">+</td><td class="d">invert texts</td><td class="n">2</td></tr><tr class="final"><td></td><td>objects</td><td class="n">6</td></tr></table>
+    <p class="note">Counted on your finished drawings. Today each is copied from the parked samples and edited.</p></div>
+</div>
+
+<h2>4. What stays exactly as your staff know it</h2>
+<div class="grid">
+  <div class="card"><p class="label">On the drawing</p><p class="answer">No change</p>
+    <ul class="rows"><li><span>Symbols</span><span>same pit, downpipe, IO, tank blocks</span></li><li><span>Layers, colours, plot</span><span>same; blue pipes, red charged</span></li><li><span>Wording</span><span>"150 DIA. UPVC SN8 PIPE AT 1 IN 100"</span></li><li><span>Sheet</span><span>same A1 layout, schedule, boxes, title block</span></li></ul></div>
+  <div class="card"><p class="label">In the hands</p><p class="answer">No change</p>
+    <ul class="rows"><li><span>Typed names</span><span>CD, PIT, DP, IO, OF, PITSCHEDULE, MR, CR</span></li><li><span>Grips</span><span>same places</span></li><li><span>Move, copy, stretch, erase, undo</span><span>AutoCAD's own</span></li><li><span>Double-click</span><span>opens that pipe or pit to edit</span></li></ul>
+    <p class="note">The names kept are the ones your office's own usage record shows being typed most: CD, PITEDIT, CDEDIT, PIPEEDIT, PIT, PITSCHEDULE.</p></div>
+  <div class="card"><p class="label">What does change</p><p class="answer">4 things</p>
+    <ul class="rows"><li><span>Parked samples beside the sheet</span><span>gone; buttons instead</span></li><li><span>A level</span><span>typed once, shown everywhere</span></li><li><span>Schedule, criteria box, detail numbers</span><span>fill themselves</span></li><li><span>One side panel</span><span>job facts, levels, storage, checks</span></li></ul></div>
+</div>
+
+<h2>5. One job, start to issue: what gets easier</h2>
+<div class="card">
+  <p class="label">Values typed onto one real two-unit sheet today</p>
+  <p class="answer">about 70 <small>· for about 25 real facts</small></p>
+  <div class="two">
+    <table class="sum">
+      <tr><td class="op"></td><td class="d">level texts on the plan</td><td class="n">24</td></tr>
+      <tr><td class="op">+</td><td class="d">pit schedule cells</td><td class="n">26</td></tr>
+      <tr><td class="op">+</td><td class="d">criteria box lines</td><td class="n">7</td></tr>
+      <tr><td class="op">+</td><td class="d">orifice pit detail numbers</td><td class="n">8</td></tr>
+      <tr><td class="op">+</td><td class="d">tank notes and detail</td><td class="n">8</td></tr>
+      <tr class="final"><td></td><td>typed today</td><td class="n">73</td></tr>
+    </table>
+    <table class="sum">
+      <tr><td class="op"></td><td class="d">council figures and areas</td><td class="n">6</td></tr>
+      <tr><td class="op">+</td><td class="d">cover levels (picked off survey)</td><td class="n">4</td></tr>
+      <tr><td class="op">+</td><td class="d">connection invert, grades chosen</td><td class="n">3</td></tr>
+      <tr><td class="op">+</td><td class="d">top water level, baffle, orifice</td><td class="n">3</td></tr>
+      <tr><td class="op">+</td><td class="d">tank litres and split</td><td class="n">4</td></tr>
+      <tr class="final"><td></td><td>typed or picked, new</td><td class="n">20</td></tr>
+    </table>
+  </div>
+  <p class="note">Left: my count from the finished drawing and issued sheet (schedule cells measured; the rest counted by eye, so "about"). Right: my design intent, not yet tested.</p>
+</div>
+<div class="steps">
+  <div class="stepc"><b class="t">Start the job</b><p><b>Today:</b> open the template, retype the title block inside its block.</p><p><b>New:</b> pick the job folder; title block fills from the job facts.</p></div>
+  <div class="stepc"><b class="t">Council and areas</b><p><b>Today:</b> typed into a workbook copied from another job.</p><p><b>New:</b> pick the council (its rules come with it); pick roof and paving outlines.</p></div>
+  <div class="stepc"><b class="t">Pits and pipes</b><p><b>Today:</b> copy samples, stretch, retype each label and level.</p><p><b>New:</b> click, click. Parts appear at standard distances.</p></div>
+  <div class="stepc"><b class="t">Levels</b><p><b>Today:</b> worked on paper or in a five-pit workbook, typed on the plan, typed again in the schedule.</p><p><b>New:</b> see the fall you have against the fall you need; choose; apply once.</p></div>
+  <div class="stepc"><b class="t">Detention</b><p><b>Today:</b> Boyd's, storage and orifice in three workbooks; results typed into the box and the detail.</p><p><b>New:</b> storage list builds from the pipes, pits and tanks; orifice sum shown; box and detail read from it.</p></div>
+  <div class="stepc"><b class="t">Council changes one number</b><p><b>Today:</b> find and retype every copy; one missed copy is a mismatch on an issued sheet.</p><p><b>New:</b> change the one fact. Everything reading it follows; anything now failing goes amber or red.</p></div>
+  <div class="stepc"><b class="t">Issue</b><p><b>Today:</b> copy a revision row of six texts, freeze three stamp layers, plot.</p><p><b>New:</b> pick the stage; row, stamp and PDF follow.</p></div>
+</div>
+
+<h2>6. Where the facts live, and why that is sturdier</h2>
+<div class="card">
+<svg viewBox="0 0 1000 300" role="img" aria-label="Where facts live: on each element, once in the drawing, in the office standards, and personal preferences">
+  <rect width="1000" height="300" fill="#fbfcfd" stroke="#dde2e9"/>
+  <g font-size="14">
+    <rect x="24" y="24" width="220" height="110" rx="10" fill="#fff" stroke="#7a8594"/><text x="134" y="50" text-anchor="middle" font-weight="700">On each pipe and pit</text>
+    <text x="134" y="74" text-anchor="middle" fill="#4c5766" font-size="13">its own number, size, levels</text><text x="134" y="92" text-anchor="middle" fill="#4c5766" font-size="13">and what it is joined to</text><text x="134" y="118" text-anchor="middle" fill="#7a8594" font-size="12">travels with it when copied</text>
+    <rect x="270" y="24" width="220" height="110" rx="10" fill="#fff" stroke="#7a8594"/><text x="380" y="50" text-anchor="middle" font-weight="700">Once in the drawing</text>
+    <text x="380" y="74" text-anchor="middle" fill="#4c5766" font-size="13">job facts: council, discharge,</text><text x="380" y="92" text-anchor="middle" fill="#4c5766" font-size="13">areas, storms, assumptions</text><text x="380" y="118" text-anchor="middle" fill="#7a8594" font-size="12">goes wherever the file goes</text>
+    <rect x="516" y="24" width="220" height="110" rx="10" fill="#fff" stroke="#7a8594"/><text x="626" y="50" text-anchor="middle" font-weight="700">Office standards</text>
+    <text x="626" y="74" text-anchor="middle" fill="#4c5766" font-size="13">sizes, distances, wording,</text><text x="626" y="92" text-anchor="middle" fill="#4c5766" font-size="13">symbols, limits, council rules</text><text x="626" y="118" text-anchor="middle" fill="#7a8594" font-size="12">one shared file for everyone</text>
+    <rect x="762" y="24" width="214" height="110" rx="10" fill="#fff" stroke="#7a8594"/><text x="869" y="50" text-anchor="middle" font-weight="700">On your PC</text>
+    <text x="869" y="74" text-anchor="middle" fill="#4c5766" font-size="13">window positions,</text><text x="869" y="92" text-anchor="middle" fill="#4c5766" font-size="13">last-used values</text><text x="869" y="118" text-anchor="middle" fill="#7a8594" font-size="12">nothing a job depends on</text>
+    <g stroke="#1e5aa8" stroke-width="2" fill="none"><path d="M134 134 V176 H500"/><path d="M380 134 V176"/><path d="M626 134 V176 H500 V196"/></g>
+    <polygon points="500,206 493,194 507,194" fill="#1e5aa8"/>
+    <rect x="200" y="208" width="600" height="68" rx="10" fill="#fff" stroke="#1e5aa8" stroke-width="2"/>
+    <text x="500" y="236" text-anchor="middle" font-weight="700">Everything you see is read from those, never typed twice</text>
+    <text x="500" y="258" text-anchor="middle" fill="#4c5766" font-size="13">labels · level text · pit schedule · criteria box · detail numbers · computations · checks</text>
+  </g>
+</svg>
+</div>
+<div class="grid">
+  <div class="card"><p class="label">Sent to someone with no plugin</p>
+    <div class="two"><div class="was"><b class="h">Was</b><p class="answer" style="font-size:26px">Blank</p><p>A pipe could be one special object. In your live case nothing shows without the plugin.</p></div><div class="now"><b class="h">New</b><p class="answer" style="font-size:26px">Identical</p><p>Only ordinary lines, text and blocks. Proven on a clean PC every release.</p></div></div></div>
+  <div class="card"><p class="label">Repair and audit commands</p>
+    <div class="two"><div class="was"><b class="h">Was</b><p class="answer" style="font-size:26px">20</p><p>Records kept apart from the objects could drift from them.</p></div><div class="now"><b class="h">New</b><p class="answer" style="font-size:26px">0</p><p>Facts sit on the element. On open, one check says what no longer matches, in plain words.</p></div></div></div>
+  <div class="card"><p class="label">Settings</p>
+    <div class="two"><div class="was"><b class="h">Was</b><p class="answer" style="font-size:26px">577</p><p>Per PC, in seven folders. Every PC could differ.</p></div><div class="now"><b class="h">New</b><p class="answer" style="font-size:26px">1 file</p><p>Office standards, shared. A handful of personal preferences.</p></div></div></div>
+  <div class="card"><p class="label">Getting a new version</p>
+    <div class="two"><div class="was"><b class="h">Was</b><p class="answer" style="font-size:26px">11 steps</p><p>Three programs, three AutoCAD years, administrator rights.</p></div><div class="now"><b class="h">New</b><p class="answer" style="font-size:26px">1 click</p><p>One package, 2027 only, offered at start, no administrator.</p></div></div></div>
+  <div class="card"><p class="label">Starting kit</p>
+    <div class="two"><div class="was"><b class="h">Was</b><p class="answer" style="font-size:26px">600</p><p>Sample objects parked beside every sheet; about 45 pasted blocks with machine names per job.</p></div><div class="now"><b class="h">New</b><p class="answer" style="font-size:26px">0</p><p>A named library. Nothing parked.</p></div></div></div>
+  <div class="card"><p class="label">Helpers on a colleague's PC</p>
+    <div class="two"><div class="was"><b class="h">Was</b><p class="answer" style="font-size:26px">5 places</p><p>The same helper in up to five places; paths set by hand on each PC; local copies of the pen table.</p></div><div class="now"><b class="h">New</b><p class="answer" style="font-size:26px">1 place</p><p>One set of CE Tools in the one package. One pen table, from the office standards.</p></div></div></div>
+</div>
+<p class="note">"Was" figures come from the study of what is installed and in your office folders on 16 Nov. "New" figures are design targets.</p>
+
+<h2>7. My honest thoughts on the whole thing</h2>
+<div class="grid">
+  <div class="card"><p class="label">What I think is right</p>
+    <ul class="rows"><li><span>Connected, not merged</span><span>your instinct about "sticky" is correct</span></li><li><span>Ordinary objects on the sheet</span><span>the only safe answer to the no-plugin problem</span></li><li><span>The engineer designs</span><span>the plugin shows, checks and carries</span></li><li><span>Small first release</span><span>one real house or units job, start to issue</span></li></ul></div>
+  <div class="card"><p class="label">Where the risk is</p>
+    <ul class="rows"><li><span>Keeping joins alive through every AutoCAD command</span><span><span class="pill am">must be proven</span></span></li><li><span>An outsider edits the drawing, then sends it back</span><span><span class="pill am">must be proven</span></span></li><li><span>Scope creeping back to 145 commands</span><span>one tool at a time, each approved</span></li><li><span>Breaking muscle memory</span><span>keep names, symbols and grips</span></li></ul></div>
+  <div class="card"><p class="label">What I would do next</p>
+    <ul class="rows"><li><span>1</span><span>You correct this draft until it is the plugin you mean</span></li><li><span>2</span><span>Research: prove the joins and the no-plugin promise on small trials</span></li><li><span>3</span><span>Settle the office standards list (about 15 rulings)</span></li><li><span>4</span><span>Design Pit and Pipe first, with you, in full</span></li></ul></div>
+</div>
+<div class="honest"><b>Not yet known.</b> I have not proven how joined, separately movable parts are best made inside AutoCAD 2027. This page shows what the drafter should experience. The research stage has to show it can be built this way before anything here is promised.</div>
+</main>
+</body>
+</html>
