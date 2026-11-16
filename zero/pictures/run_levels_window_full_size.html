@@ -199,6 +199,24 @@ input[type=number]::-webkit-inner-spin-button{display:none}
 .prev .scalenote{position:absolute;right:16px;bottom:8px;font-size:13px;color:var(--t3)}
 .prev .cap2{position:absolute;left:16px;top:28px;font-size:13px;color:var(--t2)}
 .held1{color:var(--t2);font-size:13px;line-height:16px}
+/* two views in one Preview band: long section above, plan below, same left-to-right scale */
+.prev{display:flex;flex-direction:column;min-height:240px}
+.pv{position:relative;min-height:0}
+#pvS{flex:11 1 0}
+#pvP{flex:9 1 0;border-top:1px solid var(--bd2)}
+.pv svg{position:absolute;left:0;top:0}
+.twl{fill:none;stroke:none;pointer-events:none}
+.twl.on{stroke:var(--acc);stroke-width:3;stroke-linejoin:round}
+#band text,#planv text{pointer-events:none}
+[data-hit]{cursor:pointer}
+.mini{white-space:nowrap}
+/* tighter sum rows so the preview can hold both views (owner allowed tightening the cards) */
+#cards .sum{--rh:28px;grid-template-columns:16px 1fr 68px 88px}
+#cards .sum .sf .nb{width:68px}
+#cards .sum>div{min-height:var(--rh)}
+#cards .sum .nb{height:var(--rh)}
+#cards .sum.cmp{--rh:24px}
+#cards .sum .held1{grid-column:1/-1;min-height:0;display:block;padding:4px 0 0 24px}
 </style>
 </head>
 <body>
@@ -221,17 +239,23 @@ input[type=number]::-webkit-inner-spin-button{display:none}
       <div id="tb"><span id="ttl">Levels · P4 to the council connection</span><span class="x" id="xbtn"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 2L12 12M12 2L2 12" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></span></div>
       <div id="body">
         <div class="prev" id="prevbox">
-          <svg id="band" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"></svg>
-          <div class="cap">Preview · long section of the whole run</div>
-          <div class="key r"><span><i style="background:var(--acc)"></i>The run you are working</span><span>Closed padlock: held</span><span>Open padlock: worked out</span><span><i style="border:2px solid var(--amber);border-radius:4px"></i>Changed</span><span><i style="border:2px solid var(--bad);border-radius:4px"></i>Fails a check</span></div>
-          <div class="scalenote" id="scalenote">Heights drawn 4 times taller</div>
+          <div class="pv" id="pvS">
+            <svg id="band" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"></svg>
+            <div class="cap">Long section</div>
+            <div class="scalenote" id="scalenote">Heights drawn 4 times taller</div>
+          </div>
+          <div class="pv" id="pvP">
+            <svg id="planv" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"></svg>
+            <div class="cap">Plan</div>
+            <div class="key r"><span><i style="background:var(--acc)"></i>The run you are working</span><span>Closed padlock or pin: held</span><span>Open padlock: worked out</span><span><i style="border:2px solid var(--amber);border-radius:4px"></i>Changed</span><span><i style="border:2px solid var(--bad);border-radius:4px"></i>Fails a check</span></div>
+          </div>
         </div>
         <div id="cards">
           <section class="card">
             <div class="lab"><i>1</i>What is fixed</div>
             <div class="ans"><span class="num" id="a1">6</span><span class="unit">held</span></div>
             <div class="sum" id="sumC1"></div>
-            <div class="note">Hold what is fixed. The rest is worked out.</div>
+            <div class="note" id="n1">Hold what is fixed. The rest is worked out.</div>
             <datalist id="glist"><option value="200"></option><option value="100"></option><option value="80"></option><option value="60"></option></datalist>
           </section>
           <section class="card">
@@ -375,16 +399,21 @@ function changedKeys(R){var out=[],j;for(j=0;j<4;j++){if(Math.abs(R.up[j]-BASE.u
 function fixedLocked(k){return P.fix[k]!==undefined||(k==='up0'&&P.dir==='down');}
 
 /* ---------- long section ---------- */
-function lockG(g,x,y,closed){var s=1;
-  el(g,'rect',{x:x,y:y-5,width:10,height:7,rx:1.5,fill:closed?'var(--t2)':'none',stroke:'var(--t2)','stroke-width':1.4});
-  el(g,'path',{d:closed?'M'+(x+2.2)+' '+(y-5)+'V'+(y-8)+'a2.8 2.8 0 0 1 5.6 0V'+(y-5):'M'+(x+2.2)+' '+(y-5)+'V'+(y-8)+'a2.8 2.8 0 0 1 5.4-1',fill:'none',stroke:'var(--t2)','stroke-width':1.4,'stroke-linecap':'round'});}
+function lockG(g,x,y,closed,col){col=col||'var(--t2)';
+  el(g,'rect',{x:x,y:y-5,width:10,height:7,rx:1.5,fill:closed?col:'none',stroke:col,'stroke-width':1.4});
+  el(g,'path',{d:closed?'M'+(x+2.2)+' '+(y-5)+'V'+(y-8)+'a2.8 2.8 0 0 1 5.6 0V'+(y-5):'M'+(x+2.2)+' '+(y-5)+'V'+(y-8)+'a2.8 2.8 0 0 1 5.4-1',fill:'none',stroke:col,'stroke-width':1.4,'stroke-linecap':'round'});}
+/* held levels, in run order */
+function heldKeys(){var out=[],j;for(j=0;j<4;j++){if(P.fix['up'+j]!==undefined)out.push('up'+j);if(j<3&&P.fix['dn'+j]!==undefined)out.push('dn'+j);}return out;}
+function heldName(k,cap){var j=+k.slice(2),s=k.charAt(0)==='u'?'invert out of '+NAME[j]:'invert into '+NAME[j+1];return cap?s.charAt(0).toUpperCase()+s.slice(1):s;}
+/* pits (and the connection, key 'c') that fall short of the cover needed, with how much */
+function shortBy(st){var words={};st.ends.forEach(function(e){if(e.cov<P.need-1e-9){var pj=e.side==='up'?e.pi:(e.pi<3?e.pi+1:-1),sb=r2(P.need-e.cov);if(pj>=0)words[pj]=Math.max(words[pj]||0,sb);else words.c=Math.max(words.c||0,sb);}});return words;}
 function section(st){
-  var svg=$('band'),W=svg.clientWidth||1488,H=svg.clientHeight||300;
+  var svg=$('band'),W=svg.clientWidth||1488,H=svg.clientHeight||190;
   svg.innerHTML='';svg.setAttribute('viewBox','0 0 '+W+' '+H);
-  var g=el(svg,'g',{}),R=st.R,j,padL=90,padR=190,xs=(W-padL-padR)/CHC;
+  var g=el(svg,'g',{}),R=st.R,j,padL=90,padR=220,xs=(W-padL-padR)/CHC;
   var cx=function(i){return padL+CH[i]*xs;},xc=padL+CHC*xs;
   var T=Math.max.apply(null,CL)+0.06,lows=R.up.concat(R.dn);lows.push(P.conn);
-  var B=Math.min.apply(null,lows)-0.1,yTop=64,yBot=H-48,vs=(yBot-yTop)/(T-B),y=function(l){return yTop+(T-l)*vs;};
+  var B=Math.min.apply(null,lows)-0.1,yTop=60,yBot=H-30,vs=(yBot-yTop)/(T-B),y=function(l){return yTop+(T-l)*vs;};
   var fx=Math.round(vs/xs);$('scalenote').textContent='Heights drawn '+fx+' times taller';
   var mono='font:13px Consolas,"Courier New",monospace;';
   function tx(x,yy,s,anc,fill,w){return el(g,'text',{x:x,y:yy,'text-anchor':anc||'start',style:mono+(w?'font-weight:600;':'')+'fill:'+(fill||'var(--il)')},s);}
@@ -397,29 +426,29 @@ function section(st){
   var chg=changedKeys(R);
   /* pits */
   for(j=0;j<4;j++){var top=y(CL[j]),bot=y(R.up[j]);
-    el(g,'rect',{x:cx(j)-30,y:top,width:60,height:Math.max(8,bot-top),fill:'var(--card)',stroke:'var(--pit)','stroke-width':1.6});
-    tx(cx(j),H-28,NAME[j],'middle','var(--txt)',true);
-    var s='CL '+f2(CL[j]);tx(cx(j)-8,H-10,s,'middle','var(--cl)');lockG(g,cx(j)-8+s.length*cw/2+4,H-9,true);}
+    el(g,'rect',{x:cx(j)-30,y:top,width:60,height:Math.max(8,bot-top),fill:'var(--card)',stroke:'var(--pit)','stroke-width':1.6,'data-hit':'pit'+j});
+    tx(cx(j)-4,H-8,NAME[j],'end','var(--txt)',true);
+    var s='CL '+f2(CL[j]);tx(cx(j)+4,H-8,s,'start','var(--cl)');lockG(g,cx(j)+4+s.length*cw+4,H-7,true);}
   /* pipes */
   for(j=0;j<4;j++){var x0=cx(j)+30,x1=j<3?cx(j+1)-30:xc,yu=R.up[j],yd=R.dn[j];
-    el(g,'polygon',{points:[x0,y(yu),x1,y(yd),x1,y(yd+DIA),x0,y(yu+DIA)].join(' '),fill:'var(--accbg)',stroke:'var(--acc)','stroke-width':2});
+    el(g,'polygon',{points:[x0,y(yu),x1,y(yd),x1,y(yd+DIA),x0,y(yu+DIA)].join(' '),fill:'var(--accbg)',stroke:'var(--acc)','stroke-width':2,'data-hit':'pipe'+j});
     var pp=st.pipes[j],mx=(x0+x1)/2,my=(y(yu)+y(yd)+y(yu+DIA)+y(yd+DIA))/4+4,glab=pp.label==='uphill'?'uphill':'1 in '+pp.label;
     tx(mx,my,glab,'middle','var(--t1)',true);
     if(pp.flag){var gw=glab.length*cw;ringed(mx-gw/2,my,gw,pp.flag.k==='bad'?'var(--bad)':'var(--amber)');
       tx(mx,my-22,pp.flag.k==='bad'?'Wrong':'Needs a look','middle',pp.flag.k==='bad'?'var(--bad)':'var(--amber)',true);}
     /* up-end text (above) */
     var kU='up'+j,sU='IL '+f2(yu)+' out',tyU=y(yu+DIA)-8,xU=x0+6,heldU=fixedLocked(kU);
-    tx(xU,tyU,sU,'start');lockG(g,xU+sU.length*cw+4,tyU,heldU);
+    tx(xU,tyU,sU,'start');lockG(g,xU+sU.length*cw+4,tyU,heldU,heldU?'var(--acc)':null);
     if(chg.indexOf(kU)>=0)ringed(xU,tyU,sU.length*cw+18,'var(--amber)');
     el(g,'rect',{x:xU+sU.length*cw+2,y:tyU-14,width:16,height:16,fill:'transparent','data-fix':kU,style:'cursor:pointer'});
     /* down-end text (below) */
     if(j<3){var kD='dn'+j,sD='IL '+f2(yd)+' in',tyD=y(yd)+17,xD=x1-6,heldD=fixedLocked(kD);
-      tx(xD,tyD,sD,'end');lockG(g,xD-sD.length*cw-18,tyD,heldD);
+      tx(xD,tyD,sD,'end');lockG(g,xD-sD.length*cw-18,tyD,heldD,heldD?'var(--acc)':null);
       if(chg.indexOf(kD)>=0)ringed(xD-sD.length*cw-18,tyD,sD.length*cw+18,'var(--amber)');
       el(g,'rect',{x:xD-sD.length*cw-20,y:tyD-14,width:16,height:16,fill:'transparent','data-fix':kD,style:'cursor:pointer'});}
   }
   /* failing ends: word above pit */
-  var words={};st.ends.forEach(function(e){if(e.cov<P.need-1e-9){var pj=e.side==='up'?e.pi:(e.pi<3?e.pi+1:-1),sb=r2(P.need-e.cov);if(pj>=0){words[pj]=Math.max(words[pj]||0,sb);}else words.c=Math.max(words.c||0,sb);}});
+  var words=shortBy(st);
   Object.keys(words).forEach(function(k){var xx=k==='c'?xc:cx(+k),yy=(k==='c'?y(P.ground):y(CL[+k]))-22;tx(xx,yy,'Short by '+f2(words[k]),'middle','var(--bad)',true);
     el(g,'rect',{x:xx-52,y:yy-14,width:104,height:19,rx:5,fill:'none',stroke:'var(--bad)','stroke-width':2});});
   /* cover dimension at the shallowest end */
@@ -434,13 +463,69 @@ function section(st){
   /* connection */
   el(g,'line',{x1:xc,x2:xc,y1:y(P.ground),y2:y(R.dn[3]),stroke:'var(--t2)','stroke-width':1.4,'stroke-dasharray':'4 3'});
   var down=P.dir==='down';
-  tx(xc+12,yTop-20,'Council connection','start','var(--txt)',true);
-  var sc=down?'Arrives IL '+f2(R.dn[3]):'IL '+f2(P.conn);tx(xc+12,yTop-2,sc,'start','var(--il)');lockG(g,xc+12+sc.length*cw+4,yTop-1,!down);
-  tx(xc+12,yTop+16,down?'worked out':'given','start','var(--t3)');
-  if(down){tx(xc+12,yTop+32,'needs IL '+f2(P.conn),'start',st.arriveBad?'var(--bad)':'var(--t3)',st.arriveBad);
-    if(st.arriveBad)el(g,'rect',{x:xc+8,y:yTop-17,width:150,height:20,rx:5,fill:'none',stroke:'var(--bad)','stroke-width':2});}
-  else if(Math.abs(P.conn-4.95)>1e-9)el(g,'rect',{x:xc+8,y:yTop-14,width:sc.length*cw+22,height:18,rx:5,fill:'none',stroke:'var(--amber)','stroke-width':2});
+  var cxo=xc+54;
+  tx(cxo,yTop-10,'Council connection','start','var(--txt)',true);
+  var sc=down?'Arrives IL '+f2(R.dn[3]):'IL '+f2(P.conn),ty3=yTop+8;tx(cxo,ty3,sc,'start','var(--il)');lockG(g,cxo+sc.length*cw+4,ty3+1,!down);
+  tx(cxo,yTop+24,down?'worked out':'given','start','var(--t3)');
+  if(down){tx(cxo,yTop+40,'needs IL '+f2(P.conn),'start',st.arriveBad?'var(--bad)':'var(--t3)',st.arriveBad);
+    if(st.arriveBad)el(g,'rect',{x:cxo-4,y:ty3-13,width:sc.length*cw+8+0,height:18,rx:5,fill:'none',stroke:'var(--bad)','stroke-width':2});}
+  else if(Math.abs(P.conn-4.95)>1e-9)el(g,'rect',{x:cxo-4,y:ty3-13,width:sc.length*cw+22,height:18,rx:5,fill:'none',stroke:'var(--amber)','stroke-width':2});
+  /* outlines for the twin of whatever is hovered or picked in the plan */
+  for(j=0;j<4;j++){var pt=y(CL[j]),pb=y(R.up[j]);
+    el(g,'rect',{x:cx(j)-35,y:pt-5,width:70,height:Math.max(8,pb-pt)+10,rx:6,class:'twl','data-tw':'pit'+j,'data-view':'S'});
+    var qx0=cx(j)+30,qx1=j<3?cx(j+1)-30:xc;
+    el(g,'polygon',{points:[qx0,y(R.up[j])+7,qx1,y(R.dn[j])+7,qx1,y(R.dn[j]+DIA)-7,qx0,y(R.up[j]+DIA)-7].join(' '),class:'twl','data-tw':'pipe'+j,'data-view':'S'});}
 }
+
+/* ---------- plan of the same run, under the long section, same left-to-right scale ---------- */
+function planPrev(st){
+  var svg=$('planv'),W=svg.clientWidth||1488,H=svg.clientHeight||150;
+  svg.innerHTML='';svg.setAttribute('viewBox','0 0 '+W+' '+H);
+  var g=el(svg,'g',{}),R=st.R,j,padL=90,padR=220,xs=(W-padL-padR)/CHC,cw=7.8,ho=13,hi=8;
+  var cx=function(i){return padL+CH[i]*xs;},xc=padL+CHC*xs,yr=Math.max(62,Math.round(H*.45));
+  var mono='font:13px Consolas,"Courier New",monospace;';
+  function tx(x,yy,s,anc,fill,w){return el(g,'text',{x:x,y:yy,'text-anchor':anc||'start',style:mono+(w?'font-weight:600;':'')+'fill:'+(fill||'var(--il)')},s);}
+  function ring(x,yy,w,h,col){el(g,'rect',{x:x,y:yy,width:w,height:h,rx:6,fill:'none',stroke:col,'stroke-width':2});}
+  var chg=changedKeys(R),words=shortBy(st);
+  /* context: boundary and house, faint */
+  el(g,'polyline',{points:(padL-40)+','+(H-10)+' '+xc+','+(H-10)+' '+xc+',34',fill:'none',stroke:'var(--ctx)','stroke-width':1.6,'stroke-dasharray':'8 4'});
+  tx(6,H-6,'Boundary','start','var(--t3)');
+  var hx1=cx(1)+60,hx2=cx(2)-60,hy1=yr+34,hy2=H-22;
+  el(g,'rect',{x:hx1,y:hy1,width:hx2-hx1,height:Math.max(16,hy2-hy1),fill:'none',stroke:'var(--ctx)','stroke-width':1.6});
+  tx((hx1+hx2)/2,hy1+Math.max(16,hy2-hy1)/2+4,'House','middle','var(--t3)');
+  /* pipes with flow arrows */
+  for(j=0;j<4;j++){var ax=cx(j)+ho,bx=j<3?cx(j+1)-ho:xc-9,mx=(ax+bx)/2,pp=st.pipes[j],glab=pp.label==='uphill'?'uphill':'1 in '+pp.label;
+    [-3,3].forEach(function(q){el(g,'line',{x1:ax,x2:bx,y1:yr+q,y2:yr+q,stroke:'var(--acc)','stroke-width':1.8});});
+    el(g,'rect',{x:mx-8,y:yr-7,width:16,height:14,fill:'var(--prev)'});
+    el(g,'path',{d:'M'+(mx-6)+' '+(yr-6)+'L'+(mx+6)+' '+yr+'L'+(mx-6)+' '+(yr+6)+'Z',fill:'var(--acc)'});
+    tx(mx,yr-12,glab,'middle','var(--t1)',true);
+    if(pp.flag){var col=pp.flag.k==='bad'?'var(--bad)':'var(--amber)',gw=glab.length*cw;
+      ring(mx-gw/2-4,yr-25,gw+8,18,col);
+      tx(mx,yr+24,pp.flag.k==='bad'?'Wrong':'Needs a look','middle',col,true);}
+    el(g,'rect',{x:ax,y:yr-12,width:Math.max(4,bx-ax),height:24,fill:'transparent','data-hit':'pipe'+j,'data-view':'P'}).style.pointerEvents='all';
+    el(g,'rect',{x:ax,y:yr-18,width:Math.max(4,bx-ax),height:36,rx:6,class:'twl','data-tw':'pipe'+j,'data-view':'P'});}
+  /* pits: inner square, dashed outer square, tag */
+  for(j=0;j<4;j++){var pc=chg.indexOf('up'+j)>=0||(j>0&&chg.indexOf('dn'+(j-1))>=0);
+    el(g,'rect',{x:cx(j)-ho,y:yr-ho,width:2*ho,height:2*ho,fill:'var(--prev)',stroke:'var(--pitd)','stroke-width':1.6,'stroke-dasharray':'4 3','data-hit':'pit'+j,'data-view':'P'});
+    el(g,'rect',{x:cx(j)-hi,y:yr-hi,width:2*hi,height:2*hi,fill:'none',stroke:'var(--pit)','stroke-width':1.8,style:'pointer-events:none'});
+    tx(cx(j),yr-ho-12,NAME[j],'middle','var(--txt)',true);
+    if(pc)ring(cx(j)-ho-4,yr-ho-4,2*ho+8,2*ho+8,'var(--amber)');
+    if(words[j]!==undefined){ring(cx(j)-ho-8,yr-ho-8,2*ho+16,2*ho+16,'var(--bad)');tx(cx(j),yr+ho+22,'Short by '+f2(words[j]),'middle','var(--bad)',true);}
+    el(g,'rect',{x:cx(j)-ho-5,y:yr-ho-5,width:2*ho+10,height:2*ho+10,rx:6,class:'twl','data-tw':'pit'+j,'data-view':'P'});}
+  /* council connection */
+  el(g,'circle',{cx:xc,cy:yr,r:9,fill:'var(--prev)',stroke:'var(--t1)','stroke-width':2});
+  tx(xc+16,yr+5,'Council connection','start','var(--txt)',true);
+  if(words.c!==undefined){ring(xc-15,yr-15,30,30,'var(--bad)');tx(xc+16,yr+26,'Short by '+f2(words.c),'start','var(--bad)',true);}
+  else if(st.arriveBad)ring(xc-15,yr-15,30,30,'var(--bad)');
+  else if(P.dir==='up'&&Math.abs(P.conn-4.95)>1e-9)ring(xc-15,yr-15,30,30,'var(--amber)');
+  /* held levels: a small pin at the pit, on the side the level belongs to */
+  heldKeys().forEach(function(k){var jj=+k.slice(2),up=k.charAt(0)==='u',px=up?cx(jj)+ho+14:cx(jj+1)-ho-14,py=yr-ho-14;
+    el(g,'line',{x1:px,y1:py+3,x2:px,y2:py+13,stroke:'var(--acc)','stroke-width':2,'stroke-linecap':'round'});
+    el(g,'circle',{cx:px,cy:py,r:4.5,fill:'var(--acc)'});});
+}
+var HOV=null,SEL=null;
+function applyTw(){var a=HOV||SEL;
+  document.querySelectorAll('.twl').forEach(function(e){e.classList.toggle('on',!!a&&e.getAttribute('data-tw')===a.id&&e.getAttribute('data-view')!==a.view);});}
 
 /* ---------- plan for Inspect ---------- */
 function plan(st){
@@ -483,8 +568,14 @@ function inner(){
   c1+=nrow({label:'Grade <small>1 in</small>',k:'G',input:true,list:'glist',val:disp('G',String(P.G)),chip:'standard',lock:'closed',off:true});
   c1+=nrow({label:'Drop across a pit',k:'drop',input:true,val:disp('drop',f2(P.drop)),chip:'standard',lock:'closed',off:true});
   c1+=nrow({label:'Cover needed',k:'need',input:true,val:disp('need',f2(P.need)),chip:'standard',lock:'closed',off:true});
+  /* levels held by clicking them in the long section: one row each, typable, padlock closed */
+  var hk=heldKeys(),shown=hk.slice(0,3);
+  shown.forEach(function(k){c1+=nrow({label:heldName(k,true),k:'fx_'+k,input:true,val:disp('fx_'+k,f2(P.fix[k])),chip:'chosen',lock:'closed'});});
+  if(hk.length>3)c1+='<div class="held1">and '+(hk.length-3)+' more held. See the long section.</div>';
   $('sumC1').innerHTML=c1;
-  var nHeld=(down?5:6)+(down?1:0);
+  $('sumC1').classList.toggle('cmp',hk.length>=2);
+  $('n1').style.display=hk.length>=2?'none':'';
+  var nHeld=6+hk.length;
   roll($('a1'),String(nHeld));
   /* card 2 */
   roll($('a2'),down?'Downhill':'Uphill');
@@ -520,6 +611,7 @@ function inner(){
   if(ck.length){var pc=0,tc=0;for(var j=0;j<4;j++){if(ck.indexOf('up'+j)>=0||ck.indexOf('dn'+j)>=0)pc++;}
     var pits=0;for(j=0;j<4;j++){if(ck.indexOf('up'+j)>=0||(j>0&&ck.indexOf('dn'+(j-1))>=0))pits++;}
     h+='<span class="ln">'+mini('neutral','Changes '+ck.length+' inverts.')+'</span><span class="ln">'+mini('neutral','Changes '+pc+' pipe labels.')+'</span><span class="ln">'+mini('neutral','Changes '+pits+' pit schedule rows.')+'</span>';n++;}
+  if(hk.length){h+='<span class="ln">'+mini('neutral','Now held: '+(hk.length<=3?hk.map(function(k){return heldName(k)+', '+f2(P.fix[k]);}).join('; '):hk.length+' levels')+'.')+'</span>';n++;}
   if(upl){h+='<span class="ln">'+mini('bad','Wrong')+upl.flag.t+'</span>';n++;}
   st.pipes.forEach(function(p){if(p.flag&&p.flag.k==='warn'){h+='<span class="ln">'+mini('warn','Check')+p.flag.t+'</span>';n++;}});
   st.issues.forEach(function(i){h+='<span class="ln">'+mini(i.k==='bad'?'bad':'warn',i.k==='bad'?'Wrong':'Check')+i.t.replace(/^(Wrong|Needs a look): /,'')+'</span>';n++;});
@@ -527,20 +619,28 @@ function inner(){
   if(st.arriveBad){h+='<span class="ln">'+mini('bad','Wrong')+'Arrives '+f2(st.arrive)+', connection is '+f2(P.conn)+'.</span>';n++;}
   if(!n)h+='<span class="none">Nothing else changes.</span>';
   $('else').innerHTML=h;
-  section(st);plan(st);
+  section(st);planPrev(st);plan(st);applyTw();
 }
 /* ---------- events ---------- */
 var MAP={conn:'conn',ground:'ground',drop:'drop',need:'need',top:'top'};
-function onInput(k,str){P.raw[k]=str;var x=k==='G'?parseGrade(str):parseNum(str);if(x!==null&&x>0||(x!==null&&k==='top'))P[k]=(k==='G')?x:r2(x);render();}
+function onInput(k,str){if(k.indexOf('fx_')===0){P.raw[k]=str;var xh=parseNum(str);if(xh!==null&&xh>0)P.fix[k.slice(3)]=r2(xh);render();return;}
+  P.raw[k]=str;var x=k==='G'?parseGrade(str):parseNum(str);if(x!==null&&x>0||(x!==null&&k==='top'))P[k]=(k==='G')?x:r2(x);render();}
 function onChange(k){delete P.raw[k];render();}
-function onLock(k){if(k==='conn'||k==='top'){P.dir=P.dir==='up'?'down':'up';P.fix={};P.raw={};}render();}
+function onLock(k){if(k.indexOf('fx_')===0){delete P.fix[k.slice(3)];delete P.raw[k];render();return;}
+  if(k==='conn'||k==='top'){P.dir=P.dir==='up'?'down':'up';P.fix={};P.raw={};}render();}
 wireSum($('sumC1'),onInput,onChange,onLock);wireSum($('sumC2'),onInput,onChange,onLock);
 $('bUp').addEventListener('click',function(){P.dir='up';P.fix={};render();});
 $('bDown').addEventListener('click',function(){P.dir='down';P.fix={};render();});
 $('band').addEventListener('click',function(e){var t=e.target.closest&&e.target.closest('[data-fix]');if(!t)return;var k=t.getAttribute('data-fix');
   if(k==='up0'&&P.dir==='down')return;
-  if(P.fix[k]!==undefined)delete P.fix[k];else{var R=run(P);P.fix[k]=k.charAt(0)==='u'?R.up[+k.slice(2)]:R.dn[+k.slice(2)];}render();});
-window.__redraw=function(){var st=analyse();section(st);plan(st);};
+  if(P.fix[k]!==undefined){delete P.fix[k];delete P.raw['fx_'+k];}else{var R=run(P);delete P.raw['fx_'+k];P.fix[k]=k.charAt(0)==='u'?R.up[+k.slice(2)]:R.dn[+k.slice(2)];}render();});
+/* hover or click a pit or pipe in either view: its twin in the other view is outlined in the accent blue */
+['band','planv'].forEach(function(id){var s=$(id),view=id==='band'?'S':'P';
+  s.addEventListener('mouseover',function(e){var h=e.target.closest&&e.target.closest('[data-hit]');HOV=h?{id:h.getAttribute('data-hit'),view:view}:null;applyTw();});
+  s.addEventListener('mouseleave',function(){HOV=null;applyTw();});
+  s.addEventListener('click',function(e){if(e.target.closest&&e.target.closest('[data-fix]'))return;var h=e.target.closest&&e.target.closest('[data-hit]');
+    if(!h){SEL=null;}else{var id2=h.getAttribute('data-hit');SEL=(SEL&&SEL.id===id2&&SEL.view===view)?null:{id:id2,view:view};}applyTw();});});
+window.__redraw=function(){var st=analyse();section(st);planPrev(st);plan(st);applyTw();};
 var q=wireCommon();
 var v;
 if((v=parseNum(q.get('conn')))!==null)P.conn=r2(v);
