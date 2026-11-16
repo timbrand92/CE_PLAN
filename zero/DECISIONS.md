@@ -62,6 +62,16 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-043** (16 Nov 2026) Tim's next question for the design: "NOW YOU KNOW ALL THIS WHAT AND HOW DO WE DELIVER THIS THROUGH THE UI AND UX TO END USERS AND HOW BEST CAN WE ALLOW THE DESIGN ADN DRAFTING PROCESS BUT ALSO ENCOURAGE AUTOMATION OF TASKS". (A question, not a decision. The chat's answer is the page `pictures\new_plugin_ui_and_automation.html` and CONCEPT.md section 11, both drafts until Tim rules.)
 
+**D-044** (16 Nov 2026) Two points from Tim: "WOULD THERE BE A WAY TO ADD JOB TRACKING FOR THE MANAGER SECTION AND ALSO IM NOT CONVINCED THE DESIGN OF THE PLUGIN IS PERFECT YET, COMMAND NAMES AND RIBBON FEELS SEPARATE AND IT DOESNT FEEL LIKE A GOOD EXTENSION OF AUTOCAD". So: (1) job tracking is wanted in the Manager (what kind: being asked); (2) the concept's command names and ribbon are NOT accepted: they must be redesigned as one system that feels like part of AutoCAD. This qualifies D-042 ("everything looks right").
+
+**D-045** (16 Nov 2026) Job tracking in the Manager covers all four: where each job is up to; what was issued and when; time spent on each job; what each job is waiting on.
+
+**D-046** (16 Nov 2026) Command names: Tim asked for a recommendation and said "I FIND LONG COMMAND NAMES ARE HARD TO REUSE". So short names are what people type; any long plain name is only the label. Not yet decided: the actual list (to be proposed after checking for clashes with AutoCAD's own short names).
+
+**D-047** (16 Nov 2026) Ribbon: "Show me options first" (study how AutoCAD and Civil 3D lay out their own ribbons; show two or three mock-ups to choose from).
+
+**D-048** (16 Nov 2026) One pit's or pipe's facts show in AutoCAD's own Properties palette, under a CE heading, editable there. The CE side panel is for whole-job things (job facts, levels, storage, checks, sheet).
+
 ## How levels are designed
 
 **D-016** (16 Nov 2026) [8v] Moving a pit has no single rule for levels: "IT DEPENDS ON THE DESIGN NO? SO INVERTS MIGHT HAVE TO CHANGE UPSTREAM OR WE MIGHT NEED TO UPDATE INVERTS TO SUIT OR GRADE".
