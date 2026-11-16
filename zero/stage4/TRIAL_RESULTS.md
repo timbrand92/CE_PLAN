@@ -7,7 +7,7 @@
 
 1. **Trial 11, any direction:** PASS (pure code, no AutoCAD).
 2. **Trial 10, headless predicts full:** PASS for the scripted commands tried (see below). Run under the old limits, before the licence incident. Not repeatable under the new limits.
-3. **Trial 1, joins:** BLOCKED part-way (22:20 Mon 16 Nov): joins read back correctly after set-up, then AutoCAD stopped responding at the first COPY. Left open for Tim to close.
+3. **Trial 1, joins:** PASS for the commands tested (soft pointer wins; end-of-command mover works, close-hook mover fails). Xref bind not tested.
 4. **Trial 3, no plugin:** NOT TESTED yet.
 5. **Trial 2, grips:** NOT TESTED yet.
 6. **Trial 4, speed:** NOT TESTED yet.
@@ -74,16 +74,33 @@ un4-headless\events.log`, `run5-full\events.log`, `dialog1.png`, the comparison 
 
 ---
 
-## Trial 1 (joins): where it stopped
+## Trial 1. Joins
 
-**Verdict so far: BLOCKED part-way. One real result (the joins read back correctly after setup); everything after that is unmeasured because AutoCAD stopped responding to the script.**
+**Verdict: PASS for the commands tested (with the exceptions listed). One part (Xref bind) is NOT TESTED.** Run Mon 16 Nov 2026 22:19 to 22:35 in real AutoCAD 2027 under Tim's own profile (his installed CE plugins were loaded in it; I typed no CE command). Every edit was done by a trial command inside the plugin, one step at a time, with a read-back after each; the plugin's own log is the evidence.
 
-1. **How it was run.** At 22:06 I handed a made-up drawing (`dwg	1_seed.dwg`) to Explorer (the double-click hand-off Tim approved), so AutoCAD opened under Tim's own current profile with no switches. Before typing anything I listed the process's windows: only the drawing and AutoCAD's own palettes plus Tim's installed CE palettes (CE Inspector, CE Blocks). No dialog, no licence or sign-in window. **Tim's installed CE plugins were loaded in that AutoCAD** (the ribbon and status line showed CE CVL SUITE, CE STRUC SUITE and CE MANAGER). I typed only my own trial commands. NETLOAD of the trial plugin was accepted with no prompt and no setting change (Tim's own SECURELOAD already reads 0; I changed nothing). Commands were sent by COM from a script, and read one variable (COPYMODE = 0, i.e. copy repeats until Enter, in Tim's profile).
-2. **What was seen (the one result).** A pit block with three pipes and a label, each carrying a hidden note, with every pipe joined to its pit three ways and every object's facts stored three ways: read back straight after set-up, **all three join forms resolved to the pit that sits at the pipe's end** (handle in extended data, soft pointer, hard pointer), and every object showed all three fact homes (note, record on the object, shelf in the drawing). Evidence: `evidence\zt_default.log`, lines 6 to 11. That proves the reading code, not survival through any command.
-3. **Where it stopped.** The script's first command on that structure, COPY of everything, did not finish. AutoCAD stayed busy for more than 5 minutes (about one core of CPU, "Responding" True), no window appeared, and the log did not grow. I do not know why. Possible causes (none checked): one of Tim's installed CE plugins reacting to the copied polylines or blocks; my own overrule or event handler; the way the COPY prompts were scripted with COPYMODE 0. A plain COPY ran fine in the earlier headless and full runs (trial 10) with the same handler code, so the CE plugins are the first suspect, but that is a guess.
-4. **What I did.** Nothing further. Under rule 1.9 and the added limits a stuck AutoCAD is left exactly as it is and reported; Tim closes it. That AutoCAD (acad.exe started 22:06:39 by the Explorer hand-off) is still open.
-5. **Not measured at all:** survival through copy, mirror, rotate, stretch, explode, block, wblock, insert, clipboard, xref bind, purge, audit, save and reopen; the two ways of moving joined ends; one-undo-step.
-6. **What I need from Tim:** close that AutoCAD; say whether I may try again with Tim's CE plugins out of the way. I cannot unload them myself without changing his settings, which I may not do. A way that needs no change from him is to run the join tests in the headless engine, but that needs the isolate option (forbidden) or his OK to load his CE bundle into it.
+1. **Why the first attempt jammed (from my own evidence).** The same COPY, issued from inside the plugin (a plain circle first, then the pit and pipes), ran instantly and correctly, so COPY itself, my plugin and Tim's CE plugins are not the cause. What differed was the first attempt: a 289-line typed script run with SCRIPT, with Tim's COPY mode set to repeat until Enter. I have not proven which of those jammed it, so the cause stays unknown; the method that did not jam is one plugin command per test with a read-back and a check for stray windows before each send. No window or prompt appeared in any of this run apart from the ordinary "Save changes?" question at QUIT (on my made-up drawing). I answered No to it by sending a No press to that one window, and AutoCAD then exited normally, three times.
+2. **What was done.** A pit block with three pipe polylines and a text label, all ordinary objects, each carrying a small hidden note. Every pipe was joined to its pit three ways at once: **A**, the pit's handle in the note on the pipe; **B**, a soft pointer in a record inside the pipe's own extension dictionary; **C**, a hard pointer in the same kind of record. Every object's facts were also kept in three homes: the note, a record on the object, and a shelf in the drawing keyed by the object's handle.
+3. **What happened to the joins (read back after each command).**
+   1. **COPY of pit and pipes together (and MIRROR keeping the originals):** B and C re-pointed correctly to the new pit. **A pointed back at the ORIGINAL pit** (20 drawing units away, or 199 for a mirror): wrong, but detectable.
+   2. **COPY of a pipe alone:** all three still point at the original pit, now far from the pipe's end: wrong, detectable.
+   3. **COPY of the pit alone:** the copy carries its notes but has no pipes, as expected.
+   4. **MIRROR with the originals erased, ROTATE, STRETCH, PASTECLIP, WBLOCK then INSERT then EXPLODE:** all three forms stayed correct. STRETCH needed the pit on screen (a zoom first): off-screen it moved nothing.
+   5. **Copy to another drawing the way the clipboard and WBLOCK do it:** all three correct for the whole set. **For the pipes alone, the pit was dragged into the new drawing as an ownerless orphan** (not in model space) and the joins resolved to it. This is Autodesk's own warning about hard pointers (R-002 A item 8). I could not separate soft from hard in this test, so I cannot say the soft pointer is safe from it.
+   6. **EXPLODE of a pipe:** the resulting line keeps the note and form A but loses the extension dictionary (so B and C and the record). **EXPLODE of the pit:** the pit goes, every pipe join is reported ERASED (clean break, detectable), and the exploded square has no note.
+   7. **BLOCK:** model space emptied into the block; **save and read back in the current format, 2013 and 2000 formats:** every note, record, shelf entry and all three joins intact. **-PURGE of registered applications and AUDIT:** notes survived (the application name was still in use).
+   8. **The shelf keyed by handle** survived only where the object itself was not copied. It was lost by COPY, PASTECLIP, WBLOCK/INSERT and the copy to another drawing. **It is not usable** as a home for facts.
+4. **Moving the joined pipe ends (the two routes).** The plugin watched for a pit changing and moved the pipe ends at the end of the command (route 1), against doing it from the pit's own close step (route 2).
+   1. **Route 1 works with all three join forms.** MOVE of the pit moved the pipe ends with it; ROTATE of the pit turned the ends with it; one typed U put the pit AND all three pipes back together; REDO put them forward together. Erasing the pit left the pipes with their joins reported ERASED; U brought everything back together and REDO erased it again.
+   2. **Route 2 FAILS.** AutoCAD refused the edit of the pipes from inside the pit's close step ("object was open for write" and, on undo, "open for undo"), the pipes did not move, with every join form. Autodesk's rule against editing other objects at that moment is real here.
+   3. **Undo as ONE step** holds for route 1 for MOVE and ROTATE.
+5. **Not done or not proven.** Xref attach and bind (my first attempt reused a block name and tested nothing; not rerun), AutoCAD LT, SCALE, a copy made while the mover is switched on, anything on a drawing with hundreds of pits (trial 4), grip moves (trial 2), what a typed alias or the CE plugins would do to the notes, and whether the first U after a move undoes the move only when other commands run between. Tim's CE plugins were loaded the whole time; I did not isolate them.
+6. **Evidence:** `evidence\t1\t1_steps.log` (first full run of every command) and `evidence\t1\t1_steps_run2.log` (undo and redo runs), `evidence\t1\dialog_start.png`, `quit_dialog.png`. Plugin: `C:\CE_WORK\trials\zero\core\`.
+7. **What it means for the build approach.**
+   1. **Store the join as a soft pointer in the object's own extension dictionary (B)**, with the identity in the small note. It is the only form that stayed right through COPY and MIRROR. A handle in the note (A) goes stale after a copy and must be checked and repaired; a hard pointer (C) risks dragging the pit along as an orphan.
+   2. **Do not use the drawing shelf for facts.** Copies lose it.
+   3. **Keep the "move the joined ends" step at the end of the command, not in the object's close step.** It gives one undo.
+   4. **Plan for self-check on open:** every join read back and reported where it is broken (the erased pit, the copied-alone pipe, the exploded pit) in plain words. The detection worked in every case here.
+   5. **A pipe copied alone, or a pit exploded, breaks its join:** the plugin must say so, not repair silently.
 
 ---
 
