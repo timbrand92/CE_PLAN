@@ -14,7 +14,16 @@
 8. **R-68 (Tim, 16 Nov):** the chat manages plan, usage, context and models. Name the model on every helper: Sonnet draws pages and files notes from a tight brief; Opus reviews and critiques; Haiku scans and counts; the lead chat interviews, decides and checks. Tim has three Fable resets this week and will use them.
 9. **The week's target ("something meaningful"):** (a) Stage 2 settled by Tim: ribbon, one naming strategy, job tracking, the Release 1 tool list and the 52 small decisions; (b) Stage 3 parts-bin report; (c) Stage 4: the four build trials run in a side session when AutoCAD is free, with results; (d) Stage 5 "how we work" on one page; (e) Stage 6: the plan, first tool designed in full (Pit, then Pipe).
 
-## UPDATE 3, Mon 16 Nov 2026 night (newest; wins over everything below)
+## UPDATE 4, Mon 16 Nov 2026 about 10:15 pm (newest; wins over everything below)
+
+1. **Lead from `CHECKLIST.md`**: 16 of 18 done. Tim's standing complaint: "youre not doing a good job of guiding me". One step per reply, N of M shown, everything he must read inside the question, short.
+2. **The plan is approved** (D-115; `stage6\THE_PLAN.md`). Foundation `design\FOUNDATION.md`, UI plan `design\UI_PLAN.md`, how we work `stage5\HOW_WE_WORK.md`. Seven working window mock-ups in `pictures\` (pit, pipe, run levels, inlet, tank, detention, schedule), all ticked "right track"; full verdict only after real use.
+3. **Two side chats are running:** "CE_ACAD / zero plan / trials 01" (real AutoCAD trials, opening AutoCAD by double-click hand-off only; results in `stage4\TRIAL_RESULTS.md`: trial 11 PASS, trial 10 PASS with caveats, trial 1 was blocked then released) and "CE_ACAD / zero build / 01" (builds only the brain, no AutoCAD, in the new repository folder `C:\CE_CIVIL`, D-127).
+4. **Licence incident (PARKING_LOT P-08) and rule 1.9** in the TimOS rulebook: no chat makes or switches AutoCAD profiles, force-closes AutoCAD, or touches licensing, without Tim's yes in words. Leftovers of the first trial run (a ZeroTrial profile, a SECURELOAD value in the unnamed profile, an isolate folder) are untouched; Tim said he will look himself. The rulebook change is not committed in the TimOS folder (other unsaved changes there are not ours).
+5. **Owed to Tim:** a sample sheet proposing the detention layer name and two or three blues (D-118); the AS 3500.3 inspection opening spacing; trial results in a few lines when they land; then his verdict on the windows after use.
+6. **Usage:** read the meter at the start of the next sitting (was Fable weekly 94%, all models 70% earlier tonight; many Sonnet helpers and two side chats since).
+
+## UPDATE 3, Mon 16 Nov 2026 night
 
 1. **Read these three first:** `design\FOUNDATION.md` (seven blocks; "hold what is fixed, the rest is worked out": agreed D-086), `design\UI_PLAN.md` (how every window looks and behaves: Pit and Pipe windows approved D-070), `DECISIONS.md` D-051 to D-087.
 2. **Tim's steer (D-085, D-086):** stop detail tangents; design from the foundation; a new variable must be a new line in a list, never a new piece of screen. Keep interviewing and keep stages moving.

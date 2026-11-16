@@ -26,6 +26,10 @@
 16. Tim uses the windows and gives his verdict (D-087: "i cant give you full answer until using").
 17. (RESTARTED 16 Nov night under the added limits in `stage4\TRIALS_BRIEF.md`, D-116.) Trial results read, and the build approach confirmed or changed (`stage4\TRIAL_RESULTS.md`).
 
+## Started beyond the checklist
+
+1. Building: the brain only, in `C:\CE_CIVIL`, by the chat "CE_ACAD / zero build / 01" (D-127).
+
 ## Parked, not blocking
 
 1. How long a run is before an inspection opening is offered (AS 3500.3 figure not found online).
