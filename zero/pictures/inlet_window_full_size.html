@@ -323,6 +323,16 @@ function wireCommon(){
   window.addEventListener('resize',fit);
   $('insp').addEventListener('click',function(){inspect(true);});
   $('back').addEventListener('click',function(){inspect(false);});
+  /* Match, OK, Cancel and the title-bar X hide the window the same way Inspect does, with their own words. */
+  var ibs=$('inspbar').querySelector('span'),ibs0=ibs.textContent;
+  function away(t){ibs.textContent=t;inspect(true);}
+  function home(){setTimeout(function(){ibs.textContent=ibs0;},400);}
+  $('back').addEventListener('click',home);
+  document.addEventListener('keydown',function(ev){if(ev.key==='Escape'||ev.key==='Enter')home();});
+  if($('match'))$('match').addEventListener('click',function(){away('Pick one in the drawing to match. Your choices are kept.');});
+  $('ok').addEventListener('click',function(){away('OK pressed. AutoCAD would close this window and apply it.');});
+  $('cancel').addEventListener('click',function(){away('Cancel pressed. AutoCAD would close this window, nothing changes.');});
+  $('xbtn').addEventListener('click',function(){away('Closed. AutoCAD would close this window, nothing changes.');});
   document.addEventListener('keydown',function(ev){if($('inspbar').classList.contains('on')&&(ev.key==='Escape'||ev.key==='Enter')){ev.preventDefault();inspect(false);}});
   var q=new URLSearchParams(location.search);
   if(q.get('res')==='1440')RES=1440;
@@ -354,6 +364,10 @@ function wireSum(box,onInput,onChange,onLock){
   box.addEventListener('input',function(e){var k=e.target.dataset&&e.target.dataset.k;if(k&&e.target.tagName==='INPUT')onInput(k,e.target.value);});
   box.addEventListener('change',function(e){var k=e.target.dataset&&e.target.dataset.k;if(k&&e.target.tagName==='INPUT')onChange(k);});
   box.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('button.lk');if(b&&!b.disabled&&b.dataset.k)onLock(b.dataset.k);});
+  /* Enter or leaving a box commits what was typed (a box rebuilt while typing never fires the browser's own change). */
+  box.addEventListener('keydown',function(e){var t=e.target;if(e.key==='Enter'&&t.tagName==='INPUT'&&t.dataset&&t.dataset.k)onChange(t.dataset.k);});
+  box.addEventListener('focusout',function(e){var t=e.target;if(!(t.tagName==='INPUT'&&t.dataset&&t.dataset.k))return;var k=t.dataset.k,wait=e.relatedTarget?400:0;
+    setTimeout(function(){if(t.isConnected&&document.activeElement!==t)onChange(k);},wait);});
 }
 
 (function(){
@@ -492,6 +506,7 @@ wireSum($('sumW'),onW,onWc,onWl);wireSum($('sumR'),onR,onRc,onRl);
 $('chips').addEventListener('click',function(e){var b=e.target.closest('button.chip');if(!b)return;st.kind=b.dataset.kind;
   if(!st.alongTouched)st.along=(st.kind==='IO'||st.kind==='GIO')?.8:0;render();});
 ['num','size','drains','tlet','tnum','side'].forEach(function(i){$(i).addEventListener('input',render);$(i).addEventListener('change',render);});
+$('size').addEventListener('change',function(){if(parseSize(this.value,-1)===-1)this.value=st.sizeN+' dia';render();});
 var q=wireCommon();
 var qk=(q.get('kind')||'').toUpperCase();if(qk){st.kind=kinfo(qk)[0];if(!st.alongTouched)st.along=(st.kind==='IO'||st.kind==='GIO')?.8:0;}
 var qs=parseFloat(q.get('size'));if(qs>0)$('size').value=qs+' dia';
