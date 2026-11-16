@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How we design and draw civil</title>
+<style>
+  :root { --bg:#f5f6f8; --card:#fff; --ink:#1b2430; --soft:#5a6573; --line:#d6dbe2; --blue:#1e5aa8; --pipe:#2f6fd0; --red:#c62828; --ok:#1b7f3b; --amber:#b86a00; --tint:#eef3fa; --warn:#fff6e0; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.5 "Segoe UI", Arial, sans-serif; }
+  main { max-width:1080px; margin:0 auto; padding:24px 16px 56px; }
+  h1 { font-size:28px; margin:0 0 4px; }
+  h2 { font-size:21px; margin:36px 0 6px; padding-top:14px; border-top:2px solid var(--line); }
+  h3 { font-size:15px; margin:0 0 8px; color:var(--blue); text-transform:uppercase; letter-spacing:.03em; }
+  p { margin:6px 0; }
+  .sub { color:var(--soft); margin:0 0 14px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:14px 16px; margin:12px 0; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:12px; }
+  .grid3 { display:grid; grid-template-columns:repeat(auto-fit, minmax(230px, 1fr)); gap:12px; }
+  .flow { display:flex; flex-wrap:wrap; gap:6px; align-items:stretch; margin:10px 0; }
+  .step { flex:1 1 120px; background:var(--tint); border:1px solid #c9d8ee; border-radius:6px; padding:8px 10px; font-size:14px; position:relative; }
+  .step b { display:block; font-size:13px; color:var(--blue); }
+  .big { font-size:30px; font-weight:700; color:var(--amber); font-variant-numeric:tabular-nums; }
+  .num { font-variant-numeric:tabular-nums; font-weight:600; }
+  ol, ul { margin:6px 0; padding-left:22px; }
+  li { margin:3px 0; }
+  .tag { display:inline-block; border-radius:10px; padding:1px 9px; font-size:12.5px; font-weight:600; margin-right:4px; white-space:nowrap; }
+  .t-ok { background:#e2f3e7; color:var(--ok); }
+  .t-amber { background:var(--warn); color:var(--amber); }
+  .t-red { background:#fde7e7; color:var(--red); }
+  .t-grey { background:#e9ecf0; color:#3d4856; }
+  .kind { border-left:4px solid var(--blue); }
+  .kind h3 { text-transform:none; letter-spacing:0; font-size:16px; color:var(--ink); }
+  .small { font-size:14px; color:var(--soft); }
+  .row { display:flex; justify-content:space-between; gap:12px; border-bottom:1px dotted var(--line); padding:3px 0; }
+  .row span:last-child { text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
+  svg { width:100%; height:auto; display:block; }
+  .legend li { margin:5px 0; }
+  .n { display:inline-flex; width:22px; height:22px; border-radius:50%; background:var(--ink); color:#fff; font-size:12.5px; font-weight:700; align-items:center; justify-content:center; margin-right:6px; }
+  .warnbox { background:var(--warn); border:1px solid #ecd28f; border-radius:8px; padding:12px 16px; margin:12px 0; }
+  nav a { margin-right:12px; color:var(--blue); font-size:14px; }
+</style>
+</head>
+<body>
+<main>
+<h1>How we design and draw a civil job</h1>
+<p class="sub">Read from your own files on Mon 16 Nov 2026: 13 real jobs followed from first file to issue, 3 finished drawings taken apart object by object, your master blocks drawing and A1 civil template, 48 office workbooks, the Design Guidebook, and what is installed on your PC. No client details are shown. Where a file could not tell me something, it is in the last section, not guessed.</p>
+<nav><a href="#run">1 The job</a><a href="#design">2 The design</a><a href="#kinds">3 Every job kind</a><a href="#draw">4 The drawing</a><a href="#sheet">5 The sheet</a><a href="#wrong">6 Where it goes wrong</a><a href="#today">7 Tools today</a><a href="#ask">8 Only you can tell me</a></nav>
+
+<h2 id="run">1. How a civil job runs</h2>
+<div class="flow">
+  <div class="step"><b>1 Quote</b>Town planning set, sometimes soil and sustainability reports.</div>
+  <div class="step"><b>2 Files arrive</b>Architect's CAD, survey. Council discharge letter comes via the architect or builder, sometimes years old.</div>
+  <div class="step"><b>3 Set-up</b>Background cleaned into one office file and attached to the A1 civil template. 1 to 5 days after the CAD.</div>
+  <div class="step"><b>4 Design</b>Sums in workbooks or OSD4W. Pits, pipes and tanks tried until the storage passes.</div>
+  <div class="step"><b>5 Mark-up</b>Engineer's pen on an A1 print, or typed red notes over a first draft.</div>
+  <div class="step"><b>6 Draft</b>Copy-and-fill from the samples parked beside the sheet.</div>
+  <div class="step"><b>7 Issue</b>P1, sometimes P2, Rev A for council, Rev B, C ... as council asks, then the same sheet re-stamped for construction.</div>
+</div>
+<div class="grid3">
+  <div class="card"><h3>Fastest seen</h3><p><span class="big">2 days</span></p><p class="small">Two units, tanks only: last documents in to council issue.</p></div>
+  <div class="card"><h3>Slowest seen</h3><p><span class="big">17 months</span></p><p class="small">Units with a new outfall drain in the road: first issue to approval.</p></div>
+  <div class="card"><h3>Most revisions seen</h3><p><span class="big">9</span></p><p class="small">Units redone from Boyd's to OSD4W, then as-built changes.</p></div>
+</div>
+<p class="small">Documents that often arrive after the first issue: endorsed plans, landscape plan, arborist report, services plans, extra survey levels. This is where your "we design on assumptions" comes from.</p>
+
+<h2 id="design">2. How the engineer designs it</h2>
+<p>One document decides almost everything: <b>the council's discharge letter</b> (with the planning permit). It says whether there is detention, which method, which storms, and whether a pump is allowed.</p>
+<div class="card">
+  <h3>The questions, in the order they are answered</h3>
+  <ol>
+    <li><b>Where does it drain to?</b> Kerb, council pit or pipe, easement drain, a new outfall in the road, or soak on site.</li>
+    <li><b>Is the flow restricted?</b> No figure in the letter: no detention sum (plain house). A figure, or a method: the detention chain below.</li>
+    <li><b>Can it fall there by gravity?</b> If not: pump station (and some councils forbid pumping to the kerb).</li>
+    <li><b>Is water quality asked for?</b> STORM report: tank reuse litres, roof area to each tank, raingarden.</li>
+    <li><b>Then the layout:</b> pits, pipes, tanks, levels, tuned until every check passes.</li>
+  </ol>
+</div>
+<div class="card">
+  <h3>The detention chain (house or units)</h3>
+  <div class="flow">
+    <div class="step"><b>Areas</b>Site, impervious (roofs + paving), pervious.</div>
+    <div class="step"><b>Coefficient</b>0.9 impervious, 0.3 or 0.35 pervious, or the council's fixed figure.</div>
+    <div class="step"><b>Permitted discharge</b>Given by council, or coefficient x 1-in-5 rain x area / 3600, or OSD4W.</div>
+    <div class="step"><b>Volume required</b>Boyd's table (largest of 5 to 30 minute storms), or OSD4W, or given by council.</div>
+    <div class="step"><b>Storage provided</b>Each pipe + each pit + each tank's detention share. Must be at least the volume required.</div>
+    <div class="step"><b>Orifice</b>Size tried until flow is just under the permitted discharge.</div>
+  </div>
+  <p class="small">Worked from a real two-unit job: site 650, impervious 376, coefficient 0.65. Council gives 6.00 l/s. Boyd's: 1.66 m³ required. Two tanks at 1.00 = 2.00 m³. Orifice 69 at 380 plate height: 5.84 l/s, under 6.00.</p>
+</div>
+<div class="grid">
+  <div class="card"><h3>For each pit</h3>
+    <div class="row"><span>Depth to outlet</span><span>cover level less outlet invert</span></div>
+    <div class="row"><span>Pit size</span><span>follows depth (table)</span></div>
+    <div class="row"><span>Inlet above outlet</span><span>10 to 20 step</span></div>
+    <div class="row"><span>Detention pit volume</span><span>plan size x (top water less invert)</span></div>
+  </div>
+  <div class="card"><h3>For each pipe</h3>
+    <div class="row"><span>Grade</span><span>length / fall between inverts</span></div>
+    <div class="row"><span>Cover each end</span><span>surface less invert less diameter</span></div>
+    <div class="row"><span>Capacity</span><span>Manning's, full pipe</span></div>
+    <div class="row"><span>Detention pipe volume</span><span>cross-section x length</span></div>
+  </div>
+  <div class="card"><h3>The numbers the engineer tunes</h3>
+    <p class="small">Pipe lengths and sizes, tank split (detention / reuse), top water level, baffle height, orifice. On one job all three landed exactly on that council's limits: 60% underground, 65 orifice, total equal to required.</p>
+  </div>
+</div>
+
+<h2 id="kinds">3. Every civil job kind found, and what makes each different</h2>
+<p class="small">13 real jobs across 9 councils. Each card: what triggers it, the extra sum, what extra lands on the sheet.</p>
+<div class="grid">
+  <div class="card kind"><h3>A. House, no detention</h3><p>Letter gives discharge options and no flow figure. Pits, 100 pipes at 1 in 100, inverts worked back from the council pit, a reuse tank. No criteria box. No sums were in the folder.</p></div>
+  <div class="card kind"><h3>B. House with detention</h3><p>One line in the letter ("restricted to 5 l/s") triggers the whole chain. Seen: 9 m of 225 detention pipe + two pits + 1,000 l of the tank = 1.52 against 1.49.</p></div>
+  <div class="card kind"><h3>C. Two units, tanks only</h3><p>All detention in the tanks, one orifice pit. Smallest detention sheet: two pits in the schedule.</p></div>
+  <div class="card kind"><h3>D. Units with detention pipes</h3><p>Storage is a list by name: each pipe, each pit, each tank. Twin 225 or single 300 pipes at flat grades (1 in 150 to 1 in 200). Share underground must meet the council's minimum.</p></div>
+  <div class="card kind"><h3>E. OSD4W council</h3><p>The program replaces Boyd's with the council's own settings. Everything after is the same. One job was done in Boyd's first (3.27 m³), then redone in OSD4W (4.41 m³).</p></div>
+  <div class="card kind"><h3>F. Council supplies the figures</h3><p>Office emails site and impervious areas; council replies with discharge and storage (3 to 19 days seen). No detention sum by the office, only the storage list and orifice.</p></div>
+  <div class="card kind"><h3>G. Pumped (low site)</h3><p>Pump rate = permitted discharge. Wet well = largest of: 2-hour storm less 30 minutes pumping, 1% of catchment, 3 m³. Seven named levels stacked down the well. Adds a pump box, well section, rising main.</p></div>
+  <div class="card kind"><h3>H. Soakage</h3><p>Soil test gives the soak rate. For every storm from 5 minutes to 7 days: water in less water soaking out. Adds module grid, silt pit, sections. One job's pit grew from 6.9 to 16.2 m³ after council review.</p></div>
+  <div class="card kind"><h3>I. Raingarden / STORM</h3><p>Area comes from the STORM report (1 m² treating 34 to 50 m² of paving). Adds outline, section and filter layers. How the area is chosen is not in the files.</p></div>
+  <div class="card kind"><h3>J. Outfall in the road</h3><p>A second sheet: outfall plan, concrete pipe at 1 in 200, long section (size, grade, flow, velocity, invert, surface, chainage), services crossing section, council standard drawings.</p></div>
+  <div class="card kind"><h3>K. Industrial</h3><p>Coefficient 0.9, 1 in 20 storm, bigger pipes, modular underground tank, class D lids, two or three sheets. Some permits ask for a 25% yearly runoff cut by reuse (month-by-month tank balance).</p></div>
+  <div class="card kind"><h3>L. Basement</h3><p>A separate basement drainage plan, tanked basement, pump station, strip drains and floor wastes, "no groundwater to the kerb". The mark-up seen was mostly levels (about 30 written on).</p></div>
+</div>
+<div class="card"><h3>"Civil site job"</h3><p>Your folders show no separate product. Pavement (driveway slab, joints, saw cuts, mesh) always rides on the "stormwater drainage and pavement plan". Industrial and basement jobs are the same sheet with more pavement and levels. Not found at all: earthworks or retaining wall design drawn by civil.</p></div>
+
+<h2 id="draw">4. How the drafter draws it: one pipe run, taken apart</h2>
+<p>This is a real pipe between two pits as it sits in your finished drawings. Count the separate objects.</p>
+<div class="card">
+<svg viewBox="0 0 1000 330" role="img" aria-label="Anatomy of one pipe run between two pits">
+  <rect width="1000" height="330" fill="#fff"/>
+  <!-- pipe band -->
+  <line x1="165" y1="190" x2="822" y2="170" stroke="#2f6fd0" stroke-width="16" stroke-dasharray="46 22"/>
+  <line x1="165" y1="182" x2="822" y2="162" stroke="#1b2430" stroke-width="1.3"/>
+  <line x1="165" y1="198" x2="822" y2="178" stroke="#1b2430" stroke-width="1.3"/>
+  <!-- pits -->
+  <rect x="112" y="165" width="52" height="52" fill="#fff" stroke="#1b2430" stroke-width="2" stroke-dasharray="7 4"/>
+  <line x1="112" y1="165" x2="164" y2="217" stroke="#888"/><line x1="164" y1="165" x2="112" y2="217" stroke="#888"/>
+  <rect x="822" y="142" width="56" height="56" fill="#fff" stroke="#1b2430" stroke-width="2" stroke-dasharray="7 4"/>
+  <g stroke="#888"><line x1="832" y1="142" x2="832" y2="198"/><line x1="842" y1="142" x2="842" y2="198"/><line x1="852" y1="142" x2="852" y2="198"/><line x1="862" y1="142" x2="862" y2="198"/><line x1="872" y1="142" x2="872" y2="198"/></g>
+  <!-- label -->
+  <g transform="rotate(-1.75 490 150)"><rect x="352" y="134" width="290" height="24" fill="#fff"/><text x="497" y="152" text-anchor="middle" font-size="17" font-family="Arial Narrow, Arial">150 DIA. UPVC SN8 PIPE AT 1 IN 100</text></g>
+  <!-- flow arrow -->
+  <g transform="rotate(-1.75 300 215)"><line x1="345" y1="222" x2="275" y2="222" stroke="#1b2430" stroke-width="1.6"/><polygon points="262,222 282,216 282,228" fill="#1b2430"/></g>
+  <!-- IL texts -->
+  <g transform="rotate(-1.75 200 172)"><text x="176" y="176" font-size="14" fill="#c62828" font-family="Arial Narrow, Arial">IL 4.84</text></g>
+  <g transform="rotate(-1.75 760 155)"><text x="745" y="158" font-size="14" fill="#c62828" font-family="Arial Narrow, Arial">IL 5.25</text></g>
+  <!-- CL texts -->
+  <g transform="rotate(-45 95 150)"><text x="60" y="152" font-size="15" font-family="Arial Narrow, Arial">CL 5.35</text></g>
+  <g transform="rotate(-45 900 128)"><text x="882" y="130" font-size="15" font-family="Arial Narrow, Arial">CL 5.78</text></g>
+  <!-- tags -->
+  <circle cx="150" cy="262" r="20" fill="#fff" stroke="#1b2430" stroke-width="2"/><text x="150" y="268" text-anchor="middle" font-size="16">P1</text>
+  <circle cx="905" cy="235" r="20" fill="#fff" stroke="#1b2430" stroke-width="2"/><text x="905" y="241" text-anchor="middle" font-size="16">P2</text>
+  <!-- callouts -->
+  <g font-size="13" font-weight="700" fill="#fff" text-anchor="middle">
+    <circle cx="560" cy="205" r="11" fill="#1b2430"/><text x="560" y="210">1</text>
+    <circle cx="620" cy="163" r="11" fill="#1b2430"/><text x="620" y="168">2</text>
+    <circle cx="660" cy="128" r="11" fill="#1b2430"/><text x="660" y="133">3</text>
+    <circle cx="365" cy="238" r="11" fill="#1b2430"/><text x="365" y="243">4</text>
+    <circle cx="240" cy="158" r="11" fill="#1b2430"/><text x="240" y="163">5</text>
+    <circle cx="45" cy="118" r="11" fill="#1b2430"/><text x="45" y="123">6</text>
+    <circle cx="138" cy="148" r="11" fill="#1b2430"/><text x="138" y="153">7</text>
+    <circle cx="185" cy="270" r="11" fill="#1b2430"/><text x="185" y="275">8</text>
+  </g>
+</svg>
+<ol class="legend" style="list-style:none;padding-left:0">
+  <li><span class="n">1</span><b>The blue band:</b> a polyline with its width set to the pipe diameter (100, 150, 225, 300), layer STORMWATER PIPE, dashed. Charged pipes are the same on a red layer.</li>
+  <li><span class="n">2</span><b>The two pipe walls:</b> a separate double line (multiline) on layer DRAINAGE, scaled to the diameter, drawn over the band.</li>
+  <li><span class="n">3</span><b>The label:</b> loose masked text, 2.5 mm, turned to the pipe, about 0.75 to 2 mm clear of the pipe edge, either side. Wording: size, material, class, "AT 1 IN" grade.</li>
+  <li><span class="n">4</span><b>The flow arrow:</b> a separate 7.5 mm leader beside the pipe. Half point the way the pipe was drawn, half the other way.</li>
+  <li><span class="n">5</span><b>Invert levels:</b> loose 1.8 mm red text, one at each pipe end, about 0.5 mm clear of the pipe.</li>
+  <li><span class="n">6</span><b>Cover level:</b> loose 2 mm text at 45 degrees near the pit.</li>
+  <li><span class="n">7</span><b>The pit:</b> one block, "Stormwater Pit", with 16 looks (grated, junction, sizes, detention, pump station). It carries no size, number or level. A plastic pit is the small grated look with loose text "PP" beside it.</li>
+  <li><span class="n">8</span><b>The pit tag:</b> a circle block with one typed value (P1). It is a re-used structural beam tag.</li>
+</ol>
+<p><span class="big">13</span> separate objects for this one run with its two pits. <b>Nothing ties any of them together:</b> no link from label to pipe, level to pit, or tag to pit. A detention pipe is just a wider band; only its label says "detention".</p>
+</div>
+
+<div class="grid">
+  <div class="card"><h3>Symbols (small blocks with a movable letter)</h3>
+    <div class="row"><span>Downpipe</span><span>red dot, "DP"</span></div>
+    <div class="row"><span>Inspection opening</span><span>"IO", grated "GIO"</span></div>
+    <div class="row"><span>Floor waste</span><span>"FW"</span></div>
+    <div class="row"><span>Overflow / surcharge</span><span>"OF", "GOF", "GSP"</span></div>
+    <div class="row"><span>From above / to below</span><span>"F/A", "T/B"</span></div>
+    <div class="row"><span>Trench grate</span><span>stretch to length and width</span></div>
+    <div class="row"><span>Water tank</span><span>one block per size, "WT"</span></div>
+    <div class="row"><span>Fall arrow</span><span>two generations in use</span></div>
+  </div>
+  <div class="card"><h3>Drawn by hand each time (no block)</h3>
+    <div class="row"><span>Tank note (litres split)</span><span>3 typed lines</span></div>
+    <div class="row"><span>Floor level "FFL 6.05"</span><span>underlined text</span></div>
+    <div class="row"><span>Raingarden</span><span>outline + fill + notes</span></div>
+    <div class="row"><span>Agricultural drain</span><span>plain line, "AG" linetype</span></div>
+    <div class="row"><span>Tree zones</span><span>arcs + hatch + "TPZ"</span></div>
+    <div class="row"><span>Existing pit</span><span>loose lines</span></div>
+    <div class="row"><span>Existing services</span><span>lettered linetypes</span></div>
+    <div class="row"><span>Saw cuts and joints</span><span>line + "SC" / "CJ"</span></div>
+  </div>
+  <div class="card"><h3>Text sizes on paper (one font: Arial Narrow)</h3>
+    <div class="row"><span>Invert level</span><span>1.8 mm</span></div>
+    <div class="row"><span>Cover level, "PP", fall</span><span>2.0 mm</span></div>
+    <div class="row"><span>Pipe labels, notes, schedule cells</span><span>2.5 mm</span></div>
+    <div class="row"><span>Pit tag, dwelling names</span><span>3.5 mm</span></div>
+    <div class="row"><span>Schedule and detail titles</span><span>5.0 mm</span></div>
+    <div class="row"><span>Plan title</span><span>7.0 mm</span></div>
+  </div>
+</div>
+
+<div class="card"><h3>The tables are not tables</h3>
+  <ol>
+    <li><b>Pit schedule:</b> a block of ruled lines that stretches to add rows, with every cell a separate loose text laid on top (26 loose texts for a two-pit job).</li>
+    <li><b>Detention criteria box:</b> a rectangle, a heading, and one block of text lined up with tabs.</li>
+    <li><b>Title block:</b> no fill-in fields. Job values are edited inside the block. Each revision row is six loose texts, copied up and retyped.</li>
+    <li><b>Issue stamp:</b> four stamps stacked in one spot on four layers; three are frozen.</li>
+    <li><b>Details:</b> drawn five times real size so they read 1:20 through the 1:100 window, with every dimension typed over by hand (measures 750, reads "150"). The orifice pit and tank details carry this job's numbers typed inside the block.</li>
+  </ol>
+</div>
+
+<h2 id="sheet">5. How the sheet is put together</h2>
+<div class="grid">
+<div class="card">
+<svg viewBox="0 0 520 360" role="img" aria-label="Layout of the A1 civil sheet">
+  <rect width="520" height="360" fill="#fff"/>
+  <rect x="10" y="10" width="500" height="340" fill="none" stroke="#1b2430" stroke-width="2"/>
+  <rect x="18" y="18" width="330" height="22" fill="#fff6e0" stroke="#d9b65a"/><text x="183" y="33" text-anchor="middle" font-size="11">warning and read-with boxes</text>
+  <rect x="18" y="46" width="330" height="150" fill="#eef3fa" stroke="#9db7dd"/><text x="183" y="118" text-anchor="middle" font-size="16" font-weight="700">PLAN 1:100</text><text x="183" y="136" text-anchor="middle" font-size="11">over the architect's background</text>
+  <rect x="18" y="202" width="160" height="50" fill="#e2f3e7" stroke="#8fc7a1"/><text x="98" y="231" text-anchor="middle" font-size="12">pit schedule</text>
+  <rect x="184" y="202" width="164" height="50" fill="#e2f3e7" stroke="#8fc7a1"/><text x="266" y="231" text-anchor="middle" font-size="12">detention criteria</text>
+  <rect x="18" y="258" width="330" height="84" fill="#f1f1f1" stroke="#bbb"/><text x="183" y="296" text-anchor="middle" font-size="12">details (drawn 5x, read 1:20)</text><text x="183" y="312" text-anchor="middle" font-size="11">standard + this job's orifice pit and tank</text>
+  <rect x="354" y="18" width="78" height="190" fill="#f1f1f1" stroke="#bbb"/><text x="393" y="110" text-anchor="middle" font-size="11">general</text><text x="393" y="124" text-anchor="middle" font-size="11">notes</text>
+  <rect x="438" y="18" width="64" height="190" fill="#f1f1f1" stroke="#bbb"/><text x="470" y="110" text-anchor="middle" font-size="11">full</text><text x="470" y="124" text-anchor="middle" font-size="11">legend</text>
+  <rect x="354" y="214" width="78" height="128" fill="#f1f1f1" stroke="#bbb"/><text x="393" y="272" text-anchor="middle" font-size="11">council +</text><text x="393" y="286" text-anchor="middle" font-size="11">charged notes</text>
+  <rect x="438" y="214" width="64" height="128" fill="#fff" stroke="#1b2430"/><text x="470" y="272" text-anchor="middle" font-size="11">stamp +</text><text x="470" y="286" text-anchor="middle" font-size="11">title block</text>
+</svg>
+<p class="small">Blue = drawn for this job. Green = typed from the design. Grey = the fixed frame, the same on every job.</p>
+</div>
+<div class="card"><h3>What I measured</h3>
+  <ol>
+    <li><b>Everything is in model space,</b> laid out inside a non-printing frame as if it were a giant A1 sheet 100 times bigger. Same position on every job.</li>
+    <li><b>One locked 1:100 viewport.</b> Paper space holds only the title block.</li>
+    <li><b>A second sheet</b> is a second frame 100 m to the right.</li>
+    <li><b>The background</b> is one office-cleaned file attached two or three times and clipped (site, ground, part plans). Boundary, bearings, bench mark, survey levels and street name print from it; they are not in the job drawing.</li>
+    <li><b>Nothing scales itself.</b> All text is fixed height (250 = 2.5 mm).</li>
+    <li><b>Colour decides the pen.</b> Colours 1 to 9 print black or grey at set thicknesses; almost every other colour prints in colour. That is why the sheet says "print in full colour".</li>
+    <li><b>Layer names by pen:</b> 18, 20, 25, 35, 50, 70 + CONT / TEXT / HIDDEN. With today's pen table the "18" layers print 0.13 mm and the "70" layers 0.40 mm.</li>
+    <li><b>Copy-and-fill is the method.</b> The template parks about 600 sample objects beside the sheet ("IL _____", every symbol, sample pipes with labels). A finished job still carries about 400 of them.</li>
+  </ol>
+</div>
+</div>
+
+<h2 id="wrong">6. Where it goes wrong today (all seen in your real files)</h2>
+<div class="grid">
+  <div class="card"><h3>On issued sheets</h3>
+    <ol>
+      <li>Sheet shows 32.53 l/s and a 100 orifice; the sums say 34.53 and 121.</li>
+      <li>Raingarden 3.5 m² on the sheet; 1.0 m² in the STORM report.</li>
+      <li>Council pipe 225 on the sheet; 375 in the letter.</li>
+      <li>Orifice 55 against 56; tank split differing between plan and detail on one stamped sheet.</li>
+      <li>A schedule with two rows both "P1".</li>
+    </ol>
+  </div>
+  <div class="card"><h3>In the workbooks</h3>
+    <ol>
+      <li>A slipped cell gives 0 l/s and still prints OKAY.</li>
+      <li>A pit labelled 600 x 600 worked as 0.6 x 0.9 (three jobs).</li>
+      <li>The newer detention workbook stops at five pits.</li>
+      <li>"Head" printed on the sheet (380) is the plate height; the sum uses 345.</li>
+      <li>Every job folder is seeded with about 15 stale sum files carrying other jobs' numbers.</li>
+    </ol>
+  </div>
+  <div class="card"><h3>In the office rules</h3>
+    <ol>
+      <li>Pervious coefficient: 0.3 in the guidebook, 0.35 in the Boyd's sheets.</li>
+      <li>Pipe cover: four different minimums across four documents.</li>
+      <li>Step irons: over 900, over 1,000 or over 1,200 deep.</li>
+      <li>Council tabs copied without being changed; one council listed under two methods. One job was designed in Boyd's, then redone in OSD4W.</li>
+    </ol>
+  </div>
+</div>
+<div class="warnbox"><b>My correction.</b> Earlier today I told you a 69 orifice at 380 head gives 5.99 l/s, matching the sheet's 6.00. Your job's own sum uses 345 head and gives 5.84. I used the plate height as the head. The sheet prints the plate height under the word "head", which is how I slipped.</div>
+<div class="card"><h3>The pattern</h3>
+  <p>The design is a small set of facts: <b>the council's figures, the areas, and the network (pits, pipes, tanks with their levels and sizes)</b>. Today those facts are typed into a workbook, written on a mark-up, typed onto the plan, typed again into the schedule, the criteria box and the details, and nothing connects the copies. Every mismatch above is one copy changing without the others.</p>
+</div>
+
+<h2 id="today">7. What your drafters have today, and how it reaches them</h2>
+<div class="grid3">
+  <div class="card"><h3>Typed commands in the plug-ins</h3><p><span class="big">533</span></p><p class="small">145 civil (78 hidden from the ribbon, 20 for repair), 376 structural, 12 Manager.</p></div>
+  <div class="card"><h3>Civil settings</h3><p><span class="big">577</span></p><p class="small">In 49 groups; 250 are on/off switches.</p></div>
+  <div class="card"><h3>Old backups beside the live tools</h3><p><span class="big">119</span></p><p class="small">Folders, 10.2 GB: about one install every day or two for five weeks.</p></div>
+</div>
+<div class="grid">
+  <div class="card"><h3>Three generations of the same helpers, all live</h3>
+    <ol>
+      <li><b>Loose LISP files:</b> 486 typed names, 330 only in superseded copies; the same file kept up to six times.</li>
+      <li><b>Tool palettes:</b> three sets (17 current, 12 "new", 43 old). They only insert blocks.</li>
+      <li><b>Plug-in commands,</b> many with the same typed names (CJ, SSC, Q, LD, CLEAN, XRL, the hatches).</li>
+    </ol>
+    <p class="small">Move + Rotate / Copy + Rotate exists in five places. The general helpers (pens, hatches, dimensions, clean-up, Xref layers) live inside the Structural program, so a civil-only PC does not get them.</p>
+  </div>
+  <div class="card"><h3>Installed on your PC now</h3>
+    <div class="row"><span>CE Civil</span><span>3.0.90.13, 15 Nov</span></div>
+    <div class="row"><span>CE Structural</span><span>1.0.126.1, 14 Nov</span></div>
+    <div class="row"><span>CE Suite Manager</span><span>1.1.89, 2 Nov</span></div>
+    <div class="row"><span>Leftover test pieces</span><span>2 (one loads every start)</span></div>
+    <div class="row"><span>Old Manager, switched off by hand</span><span>1</span></div>
+    <p class="small">The civil version on your PC is marked in its own notes "never for colleagues". The office IT folder is one step behind your PC.</p>
+  </div>
+</div>
+<div class="card"><h3>The path a new version takes to a colleague, as designed today</h3>
+  <div class="flow">
+    <div class="step"><b>1 Build</b>Three programs, each in three copies (2022-24, 2025-26, 2027).</div>
+    <div class="step"><b>2 Prepare</b>Shared part must match exactly in Civil and Manager.</div>
+    <div class="step"><b>3 Evidence</b>Four evidence files + an approval file.</div>
+    <div class="step"><b>4 Sign</b>Only your Windows login can.</div>
+    <div class="step"><b>5 Publish</b>To the OneDrive IT folder.</div>
+    <div class="step"><b>6 Approve</b>In the Manager's admin window.</div>
+    <div class="step"><b>7 Sync</b>Colleague's OneDrive must have it.</div>
+    <div class="step"><b>8 Get ready</b>Colleague presses a button in the Manager.</div>
+    <div class="step"><b>9 Close</b>AutoCAD.</div>
+    <div class="step"><b>10 Install</b>Needs administrator rights.</div>
+    <div class="step"><b>11 Reopen</b>AutoCAD.</div>
+  </div>
+  <p><span class="tag t-red">12 things must agree</span><span class="tag t-amber">4 install routes used in 8 months</span><span class="tag t-amber">7 different civil builds on the shelf</span><span class="tag t-grey">No proof found that this path has ever completed on a colleague's PC</span></p>
+  <p class="small">Also seen: the pilot folder holds unsigned builds while the design says only signed ones may install; all the newest parts work on AutoCAD 2027 only, yet two thirds of each package is copies for 2022 to 2026; a drawing using the one-object pipe cannot be edited on a PC with nothing installed.</p>
+</div>
+
+<h2 id="ask">8. What the files could not tell me (only you can)</h2>
+<p class="small">I am not asking these now. They are the honest edge of what I know; each will come up as a clickable choice when we reach it.</p>
+<div class="grid">
+  <div class="card"><h3>Design</h3>
+    <ol>
+      <li>On a house with no detention, is anything calculated, or is it 100 pipes at 1 in 100 by rule?</li>
+      <li>Who measures the impervious areas, and from what?</li>
+      <li>How is the top water level first chosen?</li>
+      <li>Should the sheet's "head" be the plate height or the head in the sum?</li>
+      <li>Who sizes the 30 mm tank orifice and the tank split? No sum was found.</li>
+      <li>How are pipe capacities checked on real jobs? No pipe table was in any job folder.</li>
+      <li>Which pump workbook version is current?</li>
+      <li>Which cover, step-iron and pit-depth values are the office rule?</li>
+      <li>How is a raingarden's area chosen?</li>
+    </ol>
+  </div>
+  <div class="card"><h3>Running the job</h3>
+    <ol>
+      <li>Who confirms Boyd's or OSD4W with the council before design starts?</li>
+      <li>What must a mark-up carry before drafting starts, and is it always by hand?</li>
+      <li>What is checked, and by whom, between P1 and the council issue?</li>
+      <li>When is a fresh discharge letter asked for?</li>
+      <li>After approval, what is the office's duty when as-built mark-ups arrive?</li>
+      <li>Is there a "civil site job" apart from the stormwater and pavement sheet?</li>
+      <li>Who owns driveway and ramp grades?</li>
+    </ol>
+  </div>
+  <div class="card"><h3>Not seen yet</h3>
+    <ol>
+      <li>Inside the cleaned background file (how boundary, bearings and survey levels are drawn).</li>
+      <li>A3 templates, the council-specific A1 template, long-section examples as drawings.</li>
+      <li>A raingarden job end to end; any earthworks or retaining job.</li>
+      <li>Colleagues' PCs: what they have installed and how their LISP and palettes load.</li>
+      <li>Childcare, school, sports and apartment jobs (they exist; not studied).</li>
+      <li>Structural: parked on your instruction.</li>
+    </ol>
+  </div>
+</div>
+<p class="small">Full detail behind every line here is saved in C:\CE_PLAN\zero\study\ (three files) and the STAGE1 notes beside them.</p>
+</main>
+</body>
+</html>
