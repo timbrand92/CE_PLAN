@@ -152,6 +152,14 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-088** (16 Nov 2026, night) Stage 3 go-ahead: asked "may I start Stage 3 now, the parts-bin read of the OLD plugin? It is read-only", Tim: "Yes, start it in the background". Asked what to bring next for the plugin: "The whole-run levels tool". Stage 3 runs alongside Stage 2 from here; Stage 2 has not had a formal "approve".
 
+**D-089** (16 Nov 2026, night) Who accepts a tool: "Me, or a robot pass if I am busy". Settles P-01.
+
+**D-090** (16 Nov 2026, night) When something new may start: "Never while a tool on the ribbon is broken".
+
+**D-091** (16 Nov 2026, night) Pace: "One tool at a time, each finished before the next".
+
+**D-092** (16 Nov 2026, night) When the real AutoCAD may be used for trials: "anytime between 5:30pm and 8:30am weekdays and all day weekends". Test copies only. Note: the switch file `.timos\autocad.json` (written 5 Nov) still reads in-use and "mayStart: false"; which wins is to be confirmed by Tim before anything starts AutoCAD.
+
 **Open after this sitting (asked once on 16 Nov, Tim sent D-079 instead of answering; not to be re-asked in the same form):** where a pipe stops at a pit (gap check Pit item 1); whether a schedule cell can be typed over (item 3); which pit kinds are in the first release and whether a turned pit is in the window (item 9); which pits count as storage (item 10).
 
 ## How levels are designed
