@@ -114,6 +114,8 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-069** (16 Nov 2026, evening) On the redone look of the two windows (screenshots of the Pit window in dark and the Pipe window in light, version 3): "those screenshots look great". Read as: this look is the direction for the UI plan (dark or light all through, following AutoCAD; one bold answer per card; the working shown as a sum; a small side view in the Levels card; status pills with a word; "What else changes" strip with Moves / Check / Wrong pills). He had seen two screenshots, not yet the working pages or every state; a separate UI critic was still checking.
 
+**D-070** (16 Nov 2026, evening) "approve those new pit and pipe windows, all other windows should match". The Pit and Pipe windows (version 3 of `pictures\pit_window_full_size.html` and `pictures\pipe_window_full_size.html`, as sent to him working) are approved, and they are the pattern every other window must match. Written up as `design\UI_PLAN.md`. At the time, thirteen tightening fixes from the separate UI critic were being applied (version 4); they keep the approved look. The content of each window (which choices, their order and words) has not been gone through line by line.
+
 ## How levels are designed
 
 **D-016** (16 Nov 2026) [8v] Moving a pit has no single rule for levels: "IT DEPENDS ON THE DESIGN NO? SO INVERTS MIGHT HAVE TO CHANGE UPSTREAM OR WE MIGHT NEED TO UPDATE INVERTS TO SUIT OR GRADE".
