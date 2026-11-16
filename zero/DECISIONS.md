@@ -134,6 +134,8 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-079** (16 Nov 2026, evening) Pipe material: "material selection for pipes must be text field as well a drop down". The Material box is a list you can pick from AND type into (a material not on the list can be typed). Straight after: "same with grade": the Grade box is also pick-or-type (any grade, such as 1 in 75, can be typed). Whether other lists (kind, size, lid) also allow typing: not said, to ask.
 
+**D-080** (16 Nov 2026, evening) Asked which other boxes are pick-or-type, Tim ticked "Pipe size" and "Lid" and wrote: "you need ability to override both invert levels as well". So: pipe size and lid can be typed as well as picked; pit size was not ticked, so it stays list only; on a pipe BOTH invert levels (upstream and downstream) can be typed over. The planning chat's working rule for the mock-up (Tim to confirm): when the downstream invert is typed over, the grade is worked out from the two inverts and the length, the value is marked "typed over", and "Put back" returns it to the grade-driven value.
+
 **Open after this sitting (asked once on 16 Nov, Tim sent D-079 instead of answering; not to be re-asked in the same form):** where a pipe stops at a pit (gap check Pit item 1); whether a schedule cell can be typed over (item 3); which pit kinds are in the first release and whether a turned pit is in the window (item 9); which pits count as storage (item 10).
 
 ## How levels are designed
