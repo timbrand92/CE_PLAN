@@ -162,6 +162,14 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-093** (16 Nov 2026, night) Switch file against the new hours: "The hours win". Inside 5:30 pm to 8:30 am on weekdays and all weekend, trials may start AutoCAD on test copies whatever the switch file says, as long as no AutoCAD window of Tim's is already open (the option's own wording). Scope: the zero-plan trials. Asked whether he had clicked through the three windows: "Not yet, carry on".
 
+**D-094** (16 Nov 2026, night) Parts bin, what is left behind: "leave all 5 behind but we need to ensure that people without the plugin are able to use everything as it was intended is that a hard thing to do? or at least eb able to explode it and use it as intended". Left behind: the special one-piece pipe object; the linking code built around it; facts held in several places with repair commands; the settings store where a new value needs new code; the old windows. Condition (restates D-015 and makes it stronger): a person with NO plugin must be able to use the drawing as intended, not only see and plot it: select, move, edit and add to it with plain AutoCAD; at the very least explode and carry on. The planning chat's answer the same evening: with only ordinary objects there is nothing to explode; what such a person loses is the automatic following; on return the plugin's self-check reports what was changed by hand. To be proven in trial 3, which is widened to "edit without the plugin and hand back".
+
+**D-095** (16 Nov 2026, night) Parts bin, what is taken: "Yes, take these": the orifice sums, storage in pipes / pits / tanks, the rainfall data and curve, pipe capacity sums with their known-right answers, the office's own blocks, the pit schedule row rules. Each re-checked against a real job before it is trusted.
+
+**D-096** (16 Nov 2026, night) Old council figures (287 of 410 marked assumed): "Keep only sourced figures; rest start blank". Sourced figures come across with their source; assumed ones are dropped; a council value is filled in the first time a real council letter gives it.
+
+**D-097** (16 Nov 2026, night) First release, beside Pit, Pipe and Levels along a run: Tim ticked "Downpipe and the other inlets", "Tank and detention sums", "Pit schedule". "Title block and issue" was NOT ticked: not in the first release.
+
 **Open after this sitting (asked once on 16 Nov, Tim sent D-079 instead of answering; not to be re-asked in the same form):** where a pipe stops at a pit (gap check Pit item 1); whether a schedule cell can be typed over (item 3); which pit kinds are in the first release and whether a turned pit is in the window (item 9); which pits count as storage (item 10).
 
 ## How levels are designed
