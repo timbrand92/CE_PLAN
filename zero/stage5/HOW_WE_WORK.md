@@ -31,7 +31,7 @@ No status line may merge these. A tool is described by all four, each yes or no.
 
 1. Tim: "anytime between 5:30pm and 8:30am weekdays and all day weekends".
 2. Test copies only, never a live job.
-3. **Conflict to clear with Tim:** the switch file `C:\Users\TimothyBrand\.timos\autocad.json` was last written on 5 Nov 2026 and still reads "in-use", "mayStart: false". The standing rule is that the file is the truth. Until Tim says which wins (his new hours, or the file), nothing starts AutoCAD.
+3. **The hours win over the switch file (D-093).** Inside those hours, trials for the zero plan may start AutoCAD on test copies whatever `C:\Users\TimothyBrand\.timos\autocad.json` says, as long as no AutoCAD window of Tim's is already open. If one is open: do not touch it, do not close it; wait and tell Tim. Outside those hours the switch file rules as before.
 
 ## Not settled
 

@@ -160,6 +160,8 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-092** (16 Nov 2026, night) When the real AutoCAD may be used for trials: "anytime between 5:30pm and 8:30am weekdays and all day weekends". Test copies only. Note: the switch file `.timos\autocad.json` (written 5 Nov) still reads in-use and "mayStart: false"; which wins is to be confirmed by Tim before anything starts AutoCAD.
 
+**D-093** (16 Nov 2026, night) Switch file against the new hours: "The hours win". Inside 5:30 pm to 8:30 am on weekdays and all weekend, trials may start AutoCAD on test copies whatever the switch file says, as long as no AutoCAD window of Tim's is already open (the option's own wording). Scope: the zero-plan trials. Asked whether he had clicked through the three windows: "Not yet, carry on".
+
 **Open after this sitting (asked once on 16 Nov, Tim sent D-079 instead of answering; not to be re-asked in the same form):** where a pipe stops at a pit (gap check Pit item 1); whether a schedule cell can be typed over (item 3); which pit kinds are in the first release and whether a turned pit is in the window (item 9); which pits count as storage (item 10).
 
 ## How levels are designed
