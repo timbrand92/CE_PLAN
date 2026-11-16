@@ -240,6 +240,14 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-132** (16 Nov 2026, night) Levels along a run with the taller long section (4 to 5 times) and the one-line plan: "thats better".
 
+**D-133** (16 Nov 2026, night) Office standard, minimum pipe cover (L-004 conflict): "The standard's table, by situation": each pipe has a 'what is over it' choice and the cover needed follows the table (100 single dwelling no traffic; 300 other sites no pavement; 450 under traffic no pavement; 100 under reinforced pavement; 75 under light pavement); detention pipe keeps 300.
+
+**D-134** (16 Nov 2026, night) Office standard, minimum grade for detention pipes (L-001 conflict): "The stepped list by size": 225 at 1 in 200, 300 at 1 in 250, larger at 1 in 300; a council's own figure overrides it.
+
+**D-135** (16 Nov 2026, night) Office standard, pit size by depth (L-006 conflict, Q-004): "Guidebook table": 350 to 0.45, 450 to 0.60, 600 to 0.90, 600 x 900 to 1.20 with step irons, 900 x 900 deeper than 1.20; a council condition overrides.
+
+**D-136** (16 Nov 2026, night) Office standard, step irons: "1.0 m" (the design checklist's figure; not the 1.2 m printed in the sheet note, which the planning chat had recommended). Note for the build: the guidebook pit table in D-135 says "600 x 900 to 1.20 with step irons"; with step irons needed deeper than 1.0 m the two fit, and the sheet's standing note wording that says 1.2 m is now out of step with the office figure: raise with Tim when notes are built.
+
 **Open after this sitting (asked once on 16 Nov, Tim sent D-079 instead of answering; not to be re-asked in the same form):** where a pipe stops at a pit (gap check Pit item 1); whether a schedule cell can be typed over (item 3); which pit kinds are in the first release and whether a turned pit is in the window (item 9); which pits count as storage (item 10).
 
 ## How levels are designed
