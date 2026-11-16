@@ -2,7 +2,7 @@
 
 **Why this file exists.** Tim, 16 Nov 2026 night: "where to from here youre not doing a good job of guiding me". From here the planning chat leads from this ONE list, one step at a time, and shows "N of M done" in every reply. Update it the moment a step is ticked.
 
-## Done (10)
+## Done (11)
 
 1. Ribbon (D-051).
 2. Naming rule (D-055, D-056).
@@ -14,10 +14,10 @@
 8. First-release list: Pit, Pipe, Levels along a run, inlets, tank and detention, pit schedule (D-097 to D-100).
 9. Trials started in their own chat (`stage4\TRIALS_BRIEF.md`).
 10. Short names for the first-release tools (D-101).
+11. The four leftover pit choices (D-102 to D-105).
 
-## Left, in this order (8)
+## Left, in this order (7)
 
-11. The four leftover pit choices (where a pipe stops at a pit; schedule cell typed over or not; pit kinds on day one; which pits hold water).
 12. Inlets window (downpipe, overflow, FO, IO, GIO, floor waste): working mock-up, Tim's tick.
 13. Tank window: working mock-up, Tim's tick.
 14. Detention window: working mock-up, Tim's tick.

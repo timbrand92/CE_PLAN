@@ -178,6 +178,14 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-101** (16 Nov 2026, night) Short names for the first release: "Good, with DET for detention". PIT = PT; PIPE = CD; DOWNPIPE = DP; OVERFLOW = OF; FO = FO; INSPECTION = IO; GIO = GIO; FLOORWASTE = FW; TANK = TK; LEVELS = LV; DETENTION = DET; SCHEDULE = SH. Each still to be proven free in AutoCAD 2027 by the trials.
 
+**D-102** (16 Nov 2026, night) Where a pipe stops at a pit: "At the inner wall line". The pipe passes the dashed outer line and stops at the solid inner wall. (This differs from how it is drawn today; new sheets will differ from old ones at pit edges.)
+
+**D-103** (16 Nov 2026, night) Pit schedule cells: "Yes, with a padlock like everything else". A cell normally reads the pit; typed over it is held and shows a closed padlock; one click lets it follow the pit again.
+
+**D-104** (16 Nov 2026, night) Pit kinds on day one: junction, grated, plastic; orifice (control) pit; pump pit and bought-in units. Silt pit and soakage pit were not ticked: later.
+
+**D-105** (16 Nov 2026, night) Pits as detention storage: "Only pits I tick". Volume = plan size times water depth, the depth worked out from the top water level.
+
 **Open after this sitting (asked once on 16 Nov, Tim sent D-079 instead of answering; not to be re-asked in the same form):** where a pipe stops at a pit (gap check Pit item 1); whether a schedule cell can be typed over (item 3); which pit kinds are in the first release and whether a turned pit is in the window (item 9); which pits count as storage (item 10).
 
 ## How levels are designed
