@@ -2,6 +2,7 @@
 
 **Made:** Mon 16 Nov 2026, for the zero plan (Stage 4). **Asked by:** the four trials in `design\BUILD_APPROACH_DRAFT.md`, section 9 of `design\UI_PLAN.md`, and the "any direction" limit in `design\FOUNDATION.md`.
 **Builds on:** R-001 (feeling native in AutoCAD). Nothing in R-001 is redone here. Three places where R-002 corrects or adds to R-001 are listed in the closing section.
+**Update 16 Nov 2026 (night):** the trials described below have since been run in part; their verdicts, the facts they showed and the changes to the build approach are in `R-003_TRIAL_FINDINGS.md`. The text below is kept as it was written, before any trial.
 **Status:** research and recommendations. Nothing here is a decision. **Nothing was tried in AutoCAD. AutoCAD was not started.** Every "trial" below is described for later.
 
 ## How to read

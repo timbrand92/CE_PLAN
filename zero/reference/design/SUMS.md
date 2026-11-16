@@ -70,8 +70,9 @@ Evidence: ENG_NOTES "The chain of sums" item 3; STUDY_B section 1g item 3, 1d it
 5. **Worked example from a real job code:** CIV-03 (Kingston copy): effective area 420.45; 1 in 10 rainfall 98.6 / 73.6 / 60.1 / 51.5 / 45.5 / 40.9 mm/h for 5 to 30 minutes. At 5 minutes: inflow 11.52 l/s, volume in 3,455 litres, storage 3,455 x (1 - 6.00 / 11.52) = 1,656 litres. Largest of the column: 1.66 cubic metres. CIV-07: Rev A 2,144 litres; Rev B 2,233 litres. CIV-04 first attempt: 3.27 (later redone in OSD4W: 4.41, S-026).
 6. **Known slips in the office workbooks:** The two methods (Boyd's and OSD4W) can give different answers, so the council's accepted method must be confirmed first; CIV-04 was designed in Boyd's and redone in OSD4W. Boyd's exists in four template versions in every job folder. The workbooks hold earlier jobs' addresses in their cells.
 7. **More worked examples:** CIV-02 (Boyd's sheet): 1 in 10 year storms of 5 to 30 minutes (98.6 down to 40.9 mm/hr) each give inflow, outflow, volume in and storage; the largest storage is 1,492 litres at 5 minutes: "Detention Required 1492 L". CIV-12: storage required 1,125 litres. CIV-09 has NO required-storage page because the council supplied it (storage required 5.35 m3) (STUDY_D section 5.2 item 1, section 5.3 item 1, section 5.5 items 1 and 2)
+8. **Owner's ruling on methods in the first release:** Boyd's method is ticked (D-098)
 
-Evidence: ENG_NOTES "The chain of sums" item 4; STUDY_B section 1c item 3, 1d items 2 and 3, 1g item 3, section 5 items 7 and 11; GUIDEBOOK_NOTES "The job in the guidebook's order" item 3; STUDY_D section 5.2, 5.3, 5.5.
+Evidence: ENG_NOTES "The chain of sums" item 4; STUDY_B section 1c item 3, 1d items 2 and 3, 1g item 3, section 5 items 7 and 11; GUIDEBOOK_NOTES "The job in the guidebook's order" item 3; STUDY_D section 5.2, 5.3, 5.5; D-098.
 
 ## S-004 Storage of a detention pipe
 
@@ -84,8 +85,9 @@ Evidence: ENG_NOTES "The chain of sums" item 4; STUDY_B section 1c item 3, 1d it
 5. **Worked example from a real job code:** CIV-02: 225 pipe 9 m = 0.36. CIV-04 Rev D: 41 m of 225 = 1.63. CIV-05: 18 m of 375 = 1.99. CIV-06: 11.5 m of 225 = 0.46; 24 m of 300 = 1.70. CIV-09: 32 m of 225 = 1.27; 3 m of 300 = 0.21. JOB_B (checked against the sheet): 225 pipe 29.5 m = 1.17 by the sum and 1.17 in the box; 300 pipe 3 m = 0.21 and 0.21.
 6. **Known slips in the office workbooks:** Storage is worked from the nominal, not the internal, pipe diameter (the maker's 225 is 226 inside, 259 outside: S-013). Drawing total against calculation differed by 0.01 to 0.02 cubic metres on real jobs.
 7. **More worked examples:** CIV-02: 9 m of 225 pipe = 0.36 m3. CIV-09: 32 m of 225 (1.27 m3) and 3 m of 300 (0.21) = 1.48 (STUDY_D section 5.2 item 2, section 5.5 item 2)
+8. **Owner's ruling on twin pipes:** A detention pipe with a number-of-pipes box ("2 x 225") has the storage sum count both pipes (D-082)
 
-Evidence: ENG_NOTES "The chain of sums" item 5 and "Checked against the issued sheets" item 3; STUDY_B section 1b item 3, 1d item 5, 1e item 3, 1f items 2 and 3; DIGEST section 3 items 8 and 10; STUDY_D section 5.2, 5.5.
+Evidence: ENG_NOTES "The chain of sums" item 5 and "Checked against the issued sheets" item 3; STUDY_B section 1b item 3, 1d item 5, 1e item 3, 1f items 2 and 3; DIGEST section 3 items 8 and 10; STUDY_D section 5.2, 5.5; D-082.
 
 ## S-005 Storage of a pit
 
@@ -100,8 +102,9 @@ Evidence: ENG_NOTES "The chain of sums" item 5 and "Checked against the issued s
 6. **Known slips in the office workbooks:** In three jobs' storage tables the pit label does not match the numbers typed: a pit labelled 600 x 600 is worked as 0.6 x 0.9, one labelled 450 x 450 as 0.6 x 0.6, one labelled 900 x 900 as 0.6 x 0.9 and one labelled 900 x 600 as 0.9 x 0.9; the volumes follow the typed numbers. Pit water depths are typed as "top water level less a typed number" inside the sum, so a changed invert has to be found inside the formula.
 7. **More worked examples:** CIV-02: pit P1 (0.6 x 0.6, 0.31 deep) 0.11 m3 and pit P2 (0.45 x 0.45, 0.23 deep) 0.05 m3; "IN PIPES AND PITS = 0.52 m3". CIV-09: four pits by plan size and storage depth = 0.88 (two more pits listed at zero depth) (STUDY_D section 5.2 item 2, section 5.5 item 2)
 8. **Pit labels against numbers:** CIV-09 pits labelled 600x600, 900x900, 900x600, 600x600 are worked as 0.6 x 0.9, 0.6 x 0.9, 0.9 x 0.9, 0.6 x 0.9. The drawn state and the typed size can also disagree (see E-008) (STUDY_D section 5.5 item 3, section 3.1 item 4)
+9. **Owner's ruling on which pits count:** "Only pits I tick": a pit counts as storage only when ticked; volume = plan size times water depth, the depth worked out from the top water level (D-105)
 
-Evidence: ENG_NOTES "The chain of sums" item 5, "Checked against the issued sheets" item 3, "Weak points" item 3; STUDY_B section 1b item 3, 1e item 3, 1f item 2, section 5 item 4; STUDY_D section 3.1, 5.2, 5.5.
+Evidence: ENG_NOTES "The chain of sums" item 5, "Checked against the issued sheets" item 3, "Weak points" item 3; STUDY_B section 1b item 3, 1e item 3, 1f item 2, section 5 item 4; STUDY_D section 3.1, 5.2, 5.5; D-105.
 
 ## S-006 Storage total and comparison with the volume required
 
@@ -117,8 +120,9 @@ Evidence: ENG_NOTES "The chain of sums" item 5, "Checked against the issued shee
 5. **Worked example from a real job code:** CIV-03: two tanks at 1.00 = 2.00 against 1.66. CIV-02: 0.11 + 0.05 + 1.00 + 0.36 = 1.52 against 1.49. CIV-04 Rev D: 1.63 + 0.59 + 1.1 + 1.1 = 4.42 against 4.41. CIV-05: 3.85 underground + two tanks at 1.00 = 5.85 against 5.84. CIV-06: 2.62 + 1.75 = 4.37 against 4.37 exactly. CIV-09: total 6.36 (the sheet shows 5.35 required). JOB_B: 6.36 provided against 5.35 required.
 6. **Known slips in the office workbooks:** The detention workbook's example leaves one pipe with minus 50 cover and no warning is carried to the total. Drawing total against calculation differed by 0.01 to 0.02 on real jobs. CIV-06 shows the tank split, pipe lengths and plate height all tuned to land exactly on the council's limits.
 7. **More worked examples:** CIV-02: pipes and pits 0.52 plus a typed line "Water Tank contribution for tanks 2500L or above = 1.00m3": "TOTAL = 1.52m3 > 1.49m3". CIV-09: pipes 1.48, pits 0.88, tanks WT1 and WT2 at 2 m3 each: "TOTAL STORAGE 6.36" against 5.35 required (STUDY_D section 5.2 item 2, section 5.5 item 2)
+8. **Owner's rulings on the answer shown:** One Detention window for the job (D-099); "Both, side by side": storage against what is needed, and discharge against what is permitted, as two answers of equal weight (D-106)
 
-Evidence: ENG_NOTES "The chain of sums" item 5; STUDY_B section 1b item 3, 1c item 4, 1d item 5, 1e item 3, 1f items 2 and 3, section 5 item 5; ELEMENT_LIST "Across three civil jobs" moving part 1; DIGEST section 3 items 4 and 8; STUDY_D section 5.2, 5.5.
+Evidence: ENG_NOTES "The chain of sums" item 5; STUDY_B section 1b item 3, 1c item 4, 1d item 5, 1e item 3, 1f items 2 and 3, section 5 item 5; ELEMENT_LIST "Across three civil jobs" moving part 1; DIGEST section 3 items 4 and 8; STUDY_D section 5.2, 5.5; D-099, D-106.
 
 ## S-007 Orifice size
 
@@ -149,8 +153,9 @@ Evidence: STUDY_B section 1c item 5, 1d item 6, 1e item 4, 1f items 2 and 3, 1k 
 4. **Output and where it is shown on the sheet:** In the pipe label, "... PIPE AT 1 IN 100" (E-006); the pipe-grade row of a long section (E-062).
 5. **Worked example from a real job code:** Labels seen: 1 in 100 (most), 1 in 23 (CIV-03 mark-up), 1 in 150 (CIV-02 detention pipe), 1 in 190 (CIV-11), 1 in 200 (JOB_B twin 225; CIV-05 outfall). The inverts and lengths behind those labels were not listed in the evidence: Unknown.
 6. **Known slips in the office workbooks:** The pipe table asks for each run's inverts, cover levels, length and size again: the same figures as the plan and schedule, retyped.
+7. **Owner's rulings on grade:** The Grade box is pick-or-type (any grade, such as 1 in 75, can be typed) (D-079). When the downstream invert is typed over, the grade is worked out from the two inverts and the length (working rule, owner to confirm) (D-080). The pipe label shows the true grade between the two printed inverts: "What the inverts give: 1 in 59" (D-123)
 
-Evidence: ENG_NOTES "The chain of sums" item 7, "Weak points" item 1, "Added later" item 1; STUDY_B section 1c item 6, section 3 item 1.
+Evidence: ENG_NOTES "The chain of sums" item 7, "Weak points" item 1, "Added later" item 1; STUDY_B section 1c item 6, section 3 item 1; D-079, D-080, D-123.
 
 ## S-009 Pipe capacity by Manning's formula
 
@@ -178,8 +183,9 @@ Evidence: ENG_NOTES "The chain of sums" item 7 and "Weak points" item 2; STUDY_B
 4. **Output and where it is shown on the sheet:** Not printed on the plan. It is a check (the detention workbook prints OK / NOT OK for pipe cover).
 5. **Worked example from a real job code:** No worked job figures for this sum are given in the evidence: Unknown. (The detention workbook's own example leaves one pipe with minus 50 cover.)
 6. **Known slips in the office workbooks:** The minus 50 cover in the workbook example carries no warning to the total. The minimum to compare against has four different values (L-004).
+7. **Settled by Tim, D-133, 16 Nov 2026:** Minimum cover is "The standard's table, by situation": each pipe has a "what is over it" choice and the cover needed follows the table (L-004); detention pipe keeps 300 (D-133)
 
-Evidence: ENG_NOTES "The chain of sums" item 7 and "Added later" item 1; STUDY_B section 5 item 5.
+Evidence: ENG_NOTES "The chain of sums" item 7 and "Added later" item 1; STUDY_B section 5 item 5; D-133.
 
 ## S-011 Depth to outlet (pit schedule)
 
@@ -204,8 +210,9 @@ Evidence: ENG_NOTES "The chain of sums" item 8 and "Checked against the issued s
 4. **Output and where it is shown on the sheet:** "PIT SIZE" column of the schedule (E-040); the pit symbol's look on the plan (E-008).
 5. **Worked example from a real job code:** JOB_C: P1 depth 0.55 and P2 depth 0.53 (the sizes printed for them are not stated in the evidence: Unknown). A second, deeper junction pit detail (900 to 1200) appears only when a pit is that deep.
 6. **Known slips in the office workbooks:** Conflict: two tables (guidebook; detention workbook) give different maximum depths (L-006). One of the copied depth-check sums points at the wrong list cell on rows P3 to P5. Not settled; needs the owner's ruling Q-004.
+7. **Settled by Tim, D-135 and D-136, 16 Nov 2026:** Pit size by depth follows the guidebook table (350 to 0.45, 450 to 0.60, 600 to 0.90, 600 x 900 to 1.20 with step irons, 900 x 900 deeper than 1.20; a council condition overrides), and step irons are needed deeper than 1.0 m (L-006) (D-135, D-136)
 
-Evidence: ENG_NOTES "The chain of sums" item 8 and "Added later" items 1 and 2; STUDY_B section 3 item 6, section 5 item 5; ELEMENT_LIST "Across three civil jobs" moving part 2.
+Evidence: ENG_NOTES "The chain of sums" item 8 and "Added later" items 1 and 2; STUDY_B section 3 item 6, section 5 item 5; ELEMENT_LIST "Across three civil jobs" moving part 2; D-135, D-136.
 
 ## S-013 Detention pipe cover with the maker's real diameters
 
@@ -385,8 +392,9 @@ Evidence: STUDY_B section 1d items 4 and 5, 1f item 2, section 3 item 10.
 6. **Known slips in the office workbooks:** The detention workbook's tank line says "minimum storage for each unit 2,000 litres" with no source. On real jobs: tank splits differing between plan and detail on the same stamped sheet. Each tank's litres are typed 3 to 4 times on one sheet.
 7. **Flat tank credit seen (CIV-02):** A typed line in the Kingston job's sums: "Water Tank contribution for tanks 2500L or above = 1.00m3" (a flat 1.00 m3 credit for any tank of 2,500 litres or more; source not stated on the page). Whether it is an office rule or a council rule: Unknown. See L-010 (STUDY_D section 5.2 item 5, section 7 item 13, Still unknown item 5)
 8. **CIV-09 tanks:** Two 6,000 litre tanks WT1 and WT2 at 2 m3 each in the storage list (STUDY_D section 5.5 item 2)
+9. **Owner's ruling on the split:** "Worked out from the volume needed": the detention part of a tank is what the sums say is needed; re-use takes the rest of the tank (D-100)
 
-Evidence: STUDY_B section 1b item 3, 1c item 4, 1d items 4, 5 and 7, 1f items 2 and 3, 1g item 6, section 3 item 10, section 5 item 5; DIGEST section 3 items 5, 6 and 8; ELEMENT_LIST "Seen as a picture" item 7; INTERVIEW item 8zf; STUDY_D section 5.2, 5.5, 7 item 13.
+Evidence: STUDY_B section 1b item 3, 1c item 4, 1d items 4, 5 and 7, 1f items 2 and 3, 1g item 6, section 3 item 10, section 5 item 5; DIGEST section 3 items 5, 6 and 8; ELEMENT_LIST "Seen as a picture" item 7; INTERVIEW item 8zf; STUDY_D section 5.2, 5.5, 7 item 13; D-100.
 
 ## S-025 Orifice pit invert stepping and the invert calculator
 
@@ -398,8 +406,9 @@ Evidence: STUDY_B section 1b item 3, 1c item 4, 1d items 4, 5 and 7, 1f items 2 
 4. **Output and where it is shown on the sheet:** Invert texts on the plan (E-014), the inlet and outlet invert cells of the schedule (E-040), the levels in the orifice pit detail (E-047).
 5. **Worked example from a real job code:** None with job figures in the evidence: Unknown. (JOB_C control pit: outlet invert 4.80 and orifice centre shown at 4.82.)
 6. **Known slips in the office workbooks:** "Pit numbering to be only from P1 to P5." Everything in the workbook is still typed onto the drawing again. No single rule says which level holds when a pit moves: D-016, D-017 (the critical value governs).
+7. **Owner's ruling on the standard steps:** The drop across a pit and the steps in the orifice pit are an "Office standard, can be typed over" (D-084)
 
-Evidence: ENG_NOTES "Added later" items 1 to 3 and "Checked against the issued sheets" items 1 and 2; STUDY_B section 3 item 7.
+Evidence: ENG_NOTES "Added later" items 1 to 3 and "Checked against the issued sheets" items 1 and 2; STUDY_B section 3 item 7; D-084.
 
 ## S-026 OSD4W result (outside program; the result is typed in)
 
@@ -414,8 +423,9 @@ Evidence: ENG_NOTES "Added later" items 1 to 3 and "Checked against the issued s
 4. **Output and where it is shown on the sheet:** Permitted discharge and volume required in the criteria box (E-041); the OSD4W print in the computations PDF.
 5. **Worked example from a real job code:** CIV-04: site 937; existing 471 at 0.90 and 466 at 0.35; proposed 519 at 0.90 and 418 at 0.30; 10 and 5 minutes; zone Red Hill; outflow 1 in 2, storage 1 in 10; pipe: permitted discharge 7.87 l/s, storage 4.41, critical storm 15.1 minutes. CIV-05: site 707 all at 0.40 existing and 0.80 proposed; zone Melbourne: 5.93 l/s, storage 5.84. CIV-11 first: site 2,281; existing 0.36, proposed 0.77; 10 and 5; 1 in 20 both: 24.02 l/s, storage 18.2. CIV-11 second: whole site at 0.90; time 7; discharge 1 in 10, storage 1 in 20: 34.53 l/s, storage 17.9.
 6. **Known slips in the office workbooks:** Not a workbook. The council guidebook workbook says Boyd's for a council the guidebook lists as OSD4W only (CIV-04 was redone). Councils re-run the sums and quote their own figures.
+7. **Owner's ruling on methods in the first release:** "OSD4W / Swinburne" is ticked, with the result typed in. Not ticked, so not day one: council-supplied figures typed in; the council's own calculator (D-098)
 
-Evidence: STUDY_B section 1d item 3, 1e items 2 and 6, 1k items 2 and 4, section 3 item 17, section 5 item 7; ENG_NOTES "What was read".
+Evidence: STUDY_B section 1d item 3, 1e items 2 and 6, 1k items 2 and 4, section 3 item 17, section 5 item 7; ENG_NOTES "What was read"; D-098.
 
 ## S-027 STORM rating (outside program)
 

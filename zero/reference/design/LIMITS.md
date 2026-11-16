@@ -32,10 +32,12 @@ Items L-001 to L-021 follow STUDY_B section 3 items 1 to 21 in the same order.
 3. **Applies to:** Every gravity pipe (E-001); detention pipes (E-004).
 4. **Source of each value:** 1 in 100: guidebook; sheet general notes. 1 in 200 for 225 and larger: guidebook ("some councils allow"). 225 / 300 / larger at 1 in 200 / 250 / 300: design checklist workbook. 1 in 150: CIV-02. 1 in 190: CIV-11. 1 in 200: JOB_B, CIV-05 outfall.
 5. **Conflict:** Detention pipe grade: guidebook (1 in 200 for 225 and larger) against the design checklist (a stepped list by size).
+   Settled by Tim, D-134, 16 Nov 2026: "The stepped list by size": detention pipes 225 at 1 in 200, 300 at 1 in 250, larger at 1 in 300; a council's own figure overrides it. The design checklist's stepped list wins over the guidebook's single figure (D-134)
 6. **Order of authority per D-022:** Council first where it states a grade; no AS/NZS 3500.3 value is quoted in the evidence; then guidebook.
 7. **Status:** Gravity 1 in 100 not in conflict. Detention grades need the owner's ruling (same kind of ruling as Q-004; not listed there by name).
+   Status now: detention grade settled by D-134 (16 Nov 2026) (D-134)
 
-Evidence: STUDY_B section 3 item 1; GUIDEBOOK_NOTES "Rules of thumb" item 1.
+Evidence: STUDY_B section 3 item 1; GUIDEBOOK_NOTES "Rules of thumb" item 1; D-134.
 
 ## L-002 Minimum pipe size
 
@@ -53,13 +55,14 @@ Evidence: STUDY_B section 3 item 2, section 4 items 7 and 8, section 1e item 5, 
 
 1. **Rule:** A pipe under a garage is a stronger pipe with an inspection opening each side.
 2. **Value or values:** 150 UPVC SN8 with an inspection opening each side.
+   Owner's ruling D-081, inspection opening offer on a branch with no pit: always allowed; an inspection opening is offered, never forced, when the join is at a bend in the main pipe, the main line has none and the run is long. How long: Unknown (to be looked up in the office list or AS 3500.3) (D-081)
 3. **Applies to:** Pipes passing under garages (E-001, E-016).
 4. **Source of each value:** Guidebook checklists; design checklist workbook; Kingston's commonly-asked list ("150 SN8 under garages").
 5. **Conflict:** None recorded.
 6. **Order of authority per D-022:** Council (Kingston asks for it); then guidebook.
 7. **Status:** Not in conflict. Not yet confirmed by the owner as the office rule.
 
-Evidence: STUDY_B section 3 item 3, section 4 item 1; GUIDEBOOK_NOTES "Elements" item 19.
+Evidence: STUDY_B section 3 item 3, section 4 item 1; GUIDEBOOK_NOTES "Elements" item 19; D-081.
 
 ## L-004 Minimum pipe cover
 
@@ -72,10 +75,12 @@ Evidence: STUDY_B section 3 item 3, section 4 item 1; GUIDEBOOK_NOTES "Elements"
 3. **Applies to:** Every buried pipe (S-010, S-013).
 4. **Source of each value:** (1) AS/NZS 3500.3 table, seen as a picture in the guidebook. (2) Guidebook. (3) Design checklist workbook. (4) Frankston ("250 cover").
 5. **Conflict:** These four disagree.
+   Settled by Tim, D-133, 16 Nov 2026: "The standard's table, by situation": each pipe has a "what is over it" choice and the cover needed follows the table: 100 single dwelling no traffic; 300 other sites no pavement; 450 under traffic no pavement; 100 under reinforced pavement; 75 under light pavement; detention pipe keeps 300. The design checklist's 200 and the one council's 250 everywhere are not the office standard; order of authority per D-022 is unchanged (D-133)
 6. **Order of authority per D-022:** Council (250 at Frankston) first; then the AS/NZS 3500.3 table; then the guidebook 300; the design checklist 200 is an office document below those.
 7. **Status:** Needs the owner's ruling Q-004 (pipe cover, four values).
+   Status now: office standard settled by D-133 (16 Nov 2026) (D-133)
 
-Evidence: STUDY_B section 3 item 4, section 4 item 7, section 5 item 9.
+Evidence: STUDY_B section 3 item 4, section 4 item 7, section 5 item 9; D-133.
 
 ## L-005 Detention pipe cover check with the maker's diameters
 
@@ -84,10 +89,11 @@ Evidence: STUDY_B section 3 item 4, section 4 item 7, section 5 item 9.
 3. **Applies to:** Detention pipes of the office's usual brand (E-004); the pits at their ends.
 4. **Source of each value:** Pipe cover workbook (maker's diameters).
 5. **Conflict:** The 300 here is the guidebook thumb rule; see L-004 for the other cover values.
+   Settled by Tim, D-133, 16 Nov 2026: detention pipe keeps 300 cover (D-133)
 6. **Order of authority per D-022:** Follows L-004 for the cover figure; the diameters are supplier facts.
 7. **Status:** The cover figure waits on Q-004. Other sizes' real diameters: Unknown (only the 225 is given).
 
-Evidence: STUDY_B section 3 item 5.
+Evidence: STUDY_B section 3 item 5; D-133.
 
 ## L-006 Pit size by depth
 
@@ -100,10 +106,13 @@ Evidence: STUDY_B section 3 item 5.
 3. **Applies to:** Every pit (E-008); the schedule's pit size column (E-040); S-012.
 4. **Source of each value:** (1) Guidebook. (2) Detention workbook. (3) Sheet note; design checklist workbook; one council's comments (Frankston's list has a "step iron note"). (4) Monash approval letter.
 5. **Conflict:** Two pit tables differ (the workbook lets 900 x 900 and 1,200 x 900 go only to 1.2; the guidebook uses 900 x 900 for deeper than 1,200). Step iron depth has three values (900 / 1,000 / 1,200).
+   Settled by Tim, D-135, 16 Nov 2026: "Guidebook table": 350 to 0.45, 450 to 0.60, 600 to 0.90, 600 x 900 to 1.20 with step irons, 900 x 900 deeper than 1.20; a council condition overrides. The detention workbook list (value 2) is not the office standard (D-135)
+   Settled by Tim, D-136, 16 Nov 2026, step irons: "1.0 m", the design checklist's figure; not the 1.2 m printed in the sheet note, which the planning chat had recommended. With step irons needed deeper than 1.0 m the guidebook row "600 x 900 to 1.20 with step irons" still fits; the sheet's standing note wording that says 1.2 m is now out of step with the office figure and is to be raised with the owner when notes are built (D-136)
 6. **Order of authority per D-022:** Council value first where given; no AS/NZS 3500.3 pit table is quoted in the evidence; then the guidebook; the workbook and sheet note are office documents.
 7. **Status:** Needs the owner's ruling Q-004 (pit size by depth, two tables; step iron depth 900 / 1,000 / 1,200).
+   Status now: pit size by depth and step iron depth settled by D-135 and D-136 (16 Nov 2026) (D-135, D-136)
 
-Evidence: STUDY_B section 3 item 6, section 1f item 4, section 5 item 9; ENG_NOTES "Added later" item 2; GUIDEBOOK_NOTES "Rules of thumb" item 3.
+Evidence: STUDY_B section 3 item 6, section 1f item 4, section 5 item 9; ENG_NOTES "Added later" item 2; GUIDEBOOK_NOTES "Rules of thumb" item 3; D-135, D-136.
 
 ## L-007 Orifice (control) pit build
 

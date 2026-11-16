@@ -2,6 +2,8 @@
 
 **Made:** Mon 16 Nov 2026. **What this is:** what is TRUE about the office's civil work today, filed by topic so it can be looked up and added to. Every fact points back to its evidence. **What this is not:** it holds no decisions and no design. Nothing here is confirmed by the owner unless a D-number is quoted. No new facts were added in the filing and no conflicts were resolved: where two pieces of evidence disagree, both are recorded under "Conflict:".
 
+**Updated Mon 16 Nov 2026 (late night):** the owner's rulings D-052 to D-137 (naming and short names; pit, pipe, detention and pit schedule choices; the four office standards ruled where documents disagreed, D-133 to D-136) were filed into the registers and data files, and the first trial results were summarised in `research\R-003_TRIAL_FINDINGS.md`. Where a ruling settles a recorded conflict, the old lines are kept and marked "Settled by Tim, D-xxx, 16 Nov 2026". Section 2 lists the new next-free numbers. Nothing was renumbered. (D-052 to D-137)
+
 **Scope:** civil, the everyday drafting helpers and the Manager (D-006). AutoCAD 2027 only going forward (D-008). Built to be added to (D-009).
 
 **Updated Mon 16 Nov 2026 (later the same day):** the facts of STUDY_D (the study that closed the gaps in section 9) and the owner's rulings D-031 to D-051 were added to the registers. Section 2 lists the new next-free numbers. Nothing was renumbered; old lines that STUDY_D contradicts are kept and marked "Superseded by STUDY_D" or sit beside a "Conflict:" line.
@@ -25,13 +27,13 @@
 
 ### Standards (data files)
 10. **`standards\README.md`:** what each data file's columns mean and how to add a row.
-11. **`standards\layers.csv`:** 146 layers with colour, linetype, use, and whether in the master and the template.
+11. **`standards\layers.csv`:** 147 layers with colour, linetype, use, and whether in the master and the template (one row added for the detention pipe layer, name Unknown, D-083).
 12. **`standards\text_heights.csv`:** 56 text heights by purpose.
 13. **`standards\pen_colours.csv`:** 36 rows of what each colour prints as.
 14. **`standards\linetypes.csv`:** 24 linetypes and multiline styles.
-15. **`standards\label_offsets.csv`:** 28 measured distances of labels from their objects.
-16. **`standards\wording_patterns.csv`:** 49 label and note wordings with real examples.
-17. **`standards\pit_sizes.csv`:** 32 rows of pit sizes and depth limits (two tables in conflict).
+15. **`standards\label_offsets.csv`:** 29 rows: 28 measured distances of labels from their objects, and one ruled pipe-end rule (D-102).
+16. **`standards\wording_patterns.csv`:** 54 label and note wordings with real examples (five added: the pit schedule title, column headings and three standing notes, D-113).
+17. **`standards\pit_sizes.csv`:** 33 rows of pit sizes and depth limits; the two tables and the step iron depth are marked settled (D-135, D-136), one row added for the council override.
 18. **`standards\pipe_sizes.csv`:** 21 rows of pipe sizes, materials and classes.
 19. **`standards\blocks.csv`:** 60 blocks with states, attributes, layer and scale.
 
@@ -48,8 +50,13 @@
 29. **`councils\C-009_Bass_Coast.md`:** on-site absorption to a council standard drawing.
 
 ### Today
-30. **`today\TOOLS_TODAY.md`:** register T-001 to T-055: every general helper (T-055 is the usage and failure records) and civil command group that exists today, with typed names, where it lives and its duplicates.
+30. **`today\TOOLS_TODAY.md`:** register T-001 to T-056: every general helper (T-055 is the usage and failure records) and civil command group that exists today, with typed names, where it lives and its duplicates; T-056 is the typed names and short names ruled for the new tools (D-052 to D-059, D-101).
 31. **`today\INSTALL_TODAY.md`:** what is installed, the install / update path as steps, the fragility facts, unknowns.
+
+### Research
+32. **`research\R-001_FEELING_NATIVE_IN_AUTOCAD.md`:** what makes a plugin feel like part of AutoCAD.
+33. **`research\R-002_HOW_TO_BUILD_IT.md`:** what Autodesk provides, the traps, and the trials that would prove it (written before any trial was run).
+34. **`research\R-003_TRIAL_FINDINGS.md`:** what the first trials showed in AutoCAD 2027: a verdict for each trial, facts about how AutoCAD behaves, and the changes to the build approach. Points to `stage4\TRIAL_RESULTS.md`; does not copy it.
 
 ## 2. The numbering letters
 
@@ -58,9 +65,10 @@
 3. **L-** rules and limits (`design\LIMITS.md`). Next free: L-028.
 4. **E-** drawing elements (`drafting\ELEMENTS.md`). Next free: E-075.
 5. **C-** councils (`councils\`). Next free: C-010.
-6. **T-** tools of today (`today\TOOLS_TODAY.md`). Next free: T-056.
+6. **T-** tools of today (`today\TOOLS_TODAY.md`). Next free: T-057.
 7. **Used but not owned here:** R- rules, D- decisions, P- parked items, Q- open questions (the files beside this folder).
-8. **Rules for every number:** three digits; never reused; no gaps; a changed item keeps its number and the old words stay, marked superseded with the date. Each register ends with a "Next free number" line: update it and the line above when you add an item. If the two ever differ, the register file is right.
+8. **Research files** are numbered R-001, R-002, R-003 in `research\` (next free: R-004). That is a different series from the R- rules named in item 7.
+9. **Rules for every number:** three digits; never reused; no gaps; a changed item keeps its number and the old words stay, marked superseded with the date. Each register ends with a "Next free number" line: update it and the line above when you add an item. If the two ever differ, the register file is right.
 
 ## 3. Short names of the evidence files (used on every "Evidence:" line)
 
@@ -77,12 +85,14 @@
 11. STUDY_B section 1 is cited by its letter: "section 1c item 3" is job kind c, item 3. STUDY_A section 2 "civil layer 12" is item 12 of the civil layers list.
 12. **STUDY_D** = `evidence\STUDY_D_GAPS_CLOSED.md` (added 16 Nov 2026; cited by section and item, e.g. "STUDY_D section 5.3"). It closes the gaps listed in section 9 below: the cleaned background file, templates and libraries, undecoded items, more job kinds on paper, missing sums, colleagues' PCs. Its "Still unknown" items are cited as "Still unknown item N".
 13. **D-031 to D-051** in `DECISIONS.md` (the owner's rulings of 16 Nov 2026, quoted where used and cited "D-0nn"). Only those that bear on a reference item were filed (elements, tools); the rest are design and stay in `DECISIONS.md`.
+14. **D-052 to D-137** in `DECISIONS.md` (the owner's rulings of 16 Nov 2026, evening to late night, quoted where used and cited "D-0nn" or "D-1nn"). Filed: naming and short names (D-052 to D-059, D-101); pit, pipe and inlet choices (D-075 to D-084, D-102 to D-105, D-123); detention and sites (D-098 to D-100, D-106 to D-108); the pit schedule (D-103, D-109 to D-114); the four office standards (D-133 to D-136). Not filed here, because they are design and live in `DECISIONS.md` and the design files: window and screen rulings (D-058 to D-070, D-111, D-113 as to the window), job tracking (D-071 to D-074), the foundation (D-085 to D-087, D-124, D-125), process and trial permissions (D-088 to D-093, D-116, D-120 to D-122, D-126 to D-132, D-137), the parts-bin and first-release choices (D-094 to D-097, D-115, D-117 to D-119; D-094 and D-119 appear on T-036, D-096 on `councils\README.md`).
+15. **TRIAL_RESULTS** = `stage4\TRIAL_RESULTS.md` (the trial chat's results of 16 Nov 2026; cited by trial number, e.g. "TRIAL_RESULTS trial 1 item 3"). Summarised in `research\R-003_TRIAL_FINDINGS.md`.
 
 ## 4. Rules for anyone adding to the library
 
 1. **Add, do not start a new document.** Find the register the fact belongs to and add an item or a line there.
 2. **Every item ends with "Evidence:"** naming the evidence file and section. A fact with no evidence does not go in.
-3. **Conflicts are recorded, not settled.** Write both under "Conflict:". Only a decision settles one: "Settled by D-0xx: ...".
+3. **Conflicts are recorded, not settled.** Write both under "Conflict:". Only a decision settles one: "Settled by D-0xx: ...". When one is settled, keep the old lines, add "Settled by Tim, D-xxx, <date>" with the ruling, and in the data files set the status to "settled" (a fifth status word, see `standards\README.md`).
 4. **Unknown stays unknown.** Write "Unknown" and the Q-number if `OPEN_QUESTIONS.md` has it.
 5. **Carry the numbers.** Measured values are copied, not rounded or summarised.
 6. **Plain drafting and engineering words.** Markdown files: numbered lists with bold labels, no tables. Data files: CSV.
@@ -131,11 +141,12 @@
    4. Sums for the plain house, the house with detention, the basement house and the rural house; a raingarden job end to end (Q-104). Superseded by STUDY_D section 5.1 to 5.5, 16 Nov 2026.
    5. What colleagues' PCs have installed, which commands are really used, how the old LISP and palettes load (Q-105). Superseded by STUDY_D section 6.1 to 6.5, 16 Nov 2026.
    6. Paper look of pump, soakage, outfall, industrial and basement sheets, and childcare / school / apartment jobs (Q-106). Superseded by STUDY_D section 4.1 to 4.8 (apartments not found; school not opened: section 4.9), 16 Nov 2026.
-3. **Waiting on the owner** (see `OPEN_QUESTIONS.md`): Q-001 to Q-017, in particular the rulings on conflicting office values (Q-004), the pump workbook version (Q-003), how the top water level is first chosen (Q-001), how pipe capacities are checked on bigger jobs (Q-002), and which "civil site" drawings exist (Q-011).
+3. **Waiting on the owner** (see `OPEN_QUESTIONS.md`): Q-001 to Q-017, in particular the rulings on conflicting office values (Q-004), the pump workbook version (Q-003), how the top water level is first chosen (Q-001), how pipe capacities are checked on bigger jobs (Q-002), and which "civil site" drawings exist (Q-011). Settled 16 Nov 2026 by D-133 to D-136 (four of the Q-004 values): pipe cover by situation, detention pipe grade by size, pit size by depth, step irons deeper than 1.0 m.
 4. **Not read in the evidence:** the guidebook's workflow figure (Q-107) and 24 of its 33 pictures; OSD4W and STORM themselves; the workbooks dumped but not read line by line (Manning's, pipe flows, rectangular pipe flows, culverts, rain intensity, pipe loads, road design, head-loss line, overland flow, the supplier's infiltration tank workbook, the older detention workbook, the discharge-letter tracker); three of the six tabs of the water tank sizing workbook; the computations sheet drawing. Superseded by STUDY_D section 2.4 (the computations sheet drawing was read), 16 Nov 2026.
 5. **Councils described but not named** in the evidence: listed in `councils\README.md`.
 6. **Research questions** (Q-201 to Q-206) and **how we work** (Q-301): not reference matter; they belong to later stages.
 7. **Still open after study D** (its 16 "Still unknown" items): sheets not looked at as pictures; apartment and school jobs; how horizontal-title civil sheets are started; the council's own e-mail for CIV-09 and the architect's sustainability report; whether the 1 m3 tank credit and the 2% raingarden area are office rules or council rules; what Civil and Structural versions colleagues run today; whether PC-6 is a person or a test robot; whether "did not close cleanly" records are crashes; how often plain commands, loose LISP and palettes are used; the 2015 instruction documents and four unopened settings packages; the start-up suite's full 17 entries; stretch values of each trench grate and each pit schedule's row count; easement and kerb-and-channel standards in a background file; printed thickness of default-lineweight objects and whether every PC plots with the same table; what differs between councils inside the orifice pit details; the "NEW" palette set tool by tool. (STUDY_D Still unknown items 1 to 16)
 8. **Updated 16 Nov 2026:** STUDY_D and the owner's rulings D-031 to D-051 were filed into the registers above; each added line ends with its evidence. Items that STUDY_D contradicts were not deleted: the old line is marked "Superseded by STUDY_D ..." or a "Conflict:" line sits beside it. (STUDY_D; D-031 to D-051)
+9. **Updated 16 Nov 2026 (late night):** D-052 to D-137 and the trial results were filed; each added line ends with its evidence. Items the rulings settle keep their old lines, marked "Settled by Tim". Still Unknown after this filing: which blue and layer name the detention pipe gets (D-083, D-118); how long a run is "long" for the inspection opening offer (D-081); the new names for the typed names `C` and `RC` (D-054); the detention pipe legend line (D-083); what happens on the sheet when a long pit schedule will not fit, beyond the warning (D-114). (D-052 to D-137; TRIAL_RESULTS)
 
-Evidence: zero-plan `README.md`; `DECISIONS.md` D-006, D-008, D-009; `OPEN_QUESTIONS.md`; STUDY_A section 10; STUDY_B section 0; STUDY_C section 8; ENG_NOTES "What was read"; STUDY_D section 0 to 7 and Still unknown; D-031 to D-051.
+Evidence: zero-plan `README.md`; `DECISIONS.md` D-006, D-008, D-009; `OPEN_QUESTIONS.md`; STUDY_A section 10; STUDY_B section 0; STUDY_C section 8; ENG_NOTES "What was read"; STUDY_D section 0 to 7 and Still unknown; D-031 to D-051; D-052 to D-137; TRIAL_RESULTS.

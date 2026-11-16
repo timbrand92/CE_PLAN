@@ -46,13 +46,20 @@ Evidence: STUDY_A section 7 item 13, section 8 items 1 and 12, section 3 item 1,
 1. **What it is:** A new underground gravity drain between pits, shown as a wide blue dashed band with two thin black edge lines.
 2. **How it is drawn today:** TWO objects on top of each other. (a) A polyline on STORMWATER PIPE (colour 150, prints blue; linetype DASHED by layer), global width = the pipe diameter (100, 150, 225, 300 seen), linetype generation off, almost always 2 points, one polyline per run between pits. (b) A multiline on DRAINAGE (colour 6, prints black 0.13), style CLOSED-ENDS (JOB_B, JOB_C) or STANDARD1 (JOB_A), scale = the same diameter, zero (centre) justification, between the same two points. With LTSCALE 1000 the dash is 500 and the gap 250 (5 mm and 2.5 mm on paper). No hatch, no special linetype.
 3. **Text:** None on the pipe itself. See E-006 (label), E-007 (flow arrow), E-014 (invert levels).
-4. **Standard position / offset as measured:** Pipe ends: at a 350 pit the polyline stops 175 from the pit insertion point (the pit edge); at larger pits 43 to 400; at a downpipe it stops on the downpipe point (0). So pipes run edge to edge, not centre to centre, but not consistently (JOB_C).
+4. **Standard position / offset as measured:** Pipe ends: at a 350 pit the polyline stops 175 from the pit insertion point (the pit edge); at larger pits 43 to 400; at a downpipe it stops on the downpipe point (0). So pipes run edge to edge, not centre to centre, but not consistently (JOB_C). Settled by Tim, D-102, 16 Nov 2026: new pipes stop at the pit's solid inner wall line, not at the measured offsets above (D-102)
 5. **What it relates to but is not tied to today:** The pit at each end; its label; its flow arrow; an invert text at each end; its schedule cells; its multiline (the polyline and its multiline are two unrelated objects). Drawn direction says nothing about flow.
 6. **Facts it would hold in a one-network drawing:** From pit and to pit; diameter; material and class; length; upstream and downstream invert; grade (S-008); whether it is a detention pipe; cover at each end (S-010).
 7. **Appears also in:** Pit schedule (inlet "from / dia / invert", outlet "dia / invert": E-040); legend (sample pipes: E-039); long section rows (E-062).
 8. **Differences seen between jobs:** Multiline on exactly the same end points as the polyline on 11 of 15 pipes in JOB_C and 25 of 33 in JOB_B; none match within 5 mm in JOB_A (the multilines were drawn separately). JOB_A has several widths of 149.9999999999999 (a copied-and-scaled pipe). Multiline style CLOSED-ENDS (JOB_B/C) against STANDARD1 (JOB_A).
+9. **Owner's ruling on pick-or-type boxes:** The Material box is a list to pick from AND type into: "material selection for pipes must be text field as well a drop down"; the Grade box the same: "same with grade". Pipe size and lid can also be typed as well as picked; pit size stays list only; on a pipe BOTH invert levels (upstream and downstream) can be typed over: "you need ability to override both invert levels as well" (D-079, D-080)
+10. **Working rule for the mock-up, owner to confirm:** When the downstream invert is typed over, the grade is worked out from the two inverts and the length, the value is marked "typed over", and "Put back" returns it to the grade-driven value (D-080)
+11. **Owner's ruling on where a pipe stops at a pit:** "At the inner wall line": the pipe passes the dashed outer line and stops at the solid inner wall. This differs from how it is drawn today (item 4); new sheets will differ from old ones at pit edges (D-102)
+12. **Owner's ruling on a branch with no pit:** A branch joining a pipe with no pit is always allowed; an inspection opening is offered, never forced (see E-016) (D-081)
+13. **Owner's ruling on a pit placed on a drawn pipe:** "Split the pipe in two": two pipes joined to the new pit, each with its own label and levels; "What else changes" says so (D-077)
+14. **Owner's ruling on the drop across a pit:** "Office standard, can be typed over" (D-084; S-025)
+15. **Owner's rulings on minimum cover and grade:** Cover follows the standard's table by situation (L-004, D-133); detention pipe grade follows the stepped list by size (L-001, D-134)
 
-Evidence: STUDY_A section 6 item 1, section 7 items 1 to 4 and 13, section 2 civil layers 1 and 6, section 9 item 5.
+Evidence: STUDY_A section 6 item 1, section 7 items 1 to 4 and 13, section 2 civil layers 1 and 6, section 9 item 5; D-077, D-079, D-080, D-081, D-084, D-102, D-123, D-133, D-134.
 
 ## E-002 Charged pipe
 
@@ -91,8 +98,12 @@ Evidence: STUDY_A section 6 item 3, section 2 civil layer 3 and "Standard versus
 6. **Facts it would hold in a one-network drawing:** Everything in E-001, plus: is detention (yes); number of pipes side by side; storage volume (S-004); maker's inside and outside diameters (S-013).
 7. **Appears also in:** Detention criteria box (pipe by size and length: E-041); computations storage list.
 8. **Differences seen between jobs:** Only JOB_B of the three has them (225 and 300 wide). Grades seen across jobs: 1 in 150, 1 in 190, 1 in 200 (L-001).
+9. **Settled by Tim, D-083, 16 Nov 2026, own kind and layer:** Detention is "its own kind with a slightly different blue colour and layer, we will need to update the legend as well". For new sheets item 2 ("No special layer or object") no longer holds. Which blue and which layer name: Unknown (to settle with the standards list; `standards\layers.csv` carries a placeholder row) (D-083)
+10. **Layer and blue to be proposed:** "You propose, I approve on a sheet": a layer name in the office's style and two or three blues that print clearly different through the office plot style, shown on a sample sheet for the owner to pick. Owed (D-118)
+11. **Settled by Tim, D-082, 16 Nov 2026, twin pipes:** "One pipe that says '2 x 225'": one pipe with a number-of-pipes box; it draws two bands and one label, and the storage sum counts both. This replaces item 2's "two polylines side by side" for new sheets (D-082)
+12. **Owner's rulings on grade and cover:** Minimum grade 225 at 1 in 200, 300 at 1 in 250, larger at 1 in 300 (D-134); cover over a detention pipe stays 300 (D-133)
 
-Evidence: STUDY_A section 6 item 4, section 9 item 10; STUDY_B section 1d item 7; ELEMENT_LIST "Across three civil jobs".
+Evidence: STUDY_A section 6 item 4, section 9 item 10; STUDY_B section 1d item 7; ELEMENT_LIST "Across three civil jobs"; D-082, D-083, D-118, D-133, D-134.
 
 ## E-005 Existing drain
 
@@ -126,8 +137,9 @@ Evidence: STUDY_A section 6 item 5, section 2 civil layers 8 and 9; STUDY_B sect
 6. **Facts it would hold in a one-network drawing:** None of its own: it reads the pipe's diameter, material, class and grade. It keeps only its hand-moved position (D-014).
 7. **Appears also in:** Legend sample pipes carry labels; master pipe-strip blocks hold a label above and below.
 8. **Differences seen between jobs:** Gaps as listed above; wording carries "MIN." on some.
+9. **Owner's ruling on the grade printed:** "What the inverts give: 1 in 59": the label always shows the true grade between the two printed inverts, so a checker working from the sheet gets the same figure. A typed grade is the aim; the printed grade is worked out from the rounded levels (D-123)
 
-Evidence: STUDY_A section 6 item 6, section 7 items 5 to 10 and 13, section 3 items 3.1, 5 and 6; DIGEST section 1 item 3; DECISIONS D-012, D-014.
+Evidence: STUDY_A section 6 item 6, section 7 items 5 to 10 and 13, section 3 items 3.1, 5 and 6; DIGEST section 1 item 3; DECISIONS D-012, D-014; D-123.
 
 ## E-007 Flow arrow
 
@@ -159,8 +171,16 @@ Evidence: STUDY_A section 6 item 7, section 4 items 4 to 7, section 7 item 14; D
 12. **Owner's ruling on what a pit shows:** A pit shows its inner wall line and its outer dashed / hidden line: "THE PIT AND THE PIT WALL YOURE SHOWING JUST THE INTERNAL PIT WALL LINE AND NOT THE OUTER DASHED/HIDDEN LINE" (D-039)
 13. **Owner's ruling on grips:** "WITH THE GRIPS THERE NEEDS TO BE AS MANY AS THERE ARE NOW FOR THE INDIVIDUAL ELEMENTS WITHIN THE OVERALL ELEMENT" (D-033)
 14. **Owner's ruling on joining:** A pipe is an element and a pit is an element; they work together but are not one: "I MEANT MORE THAT THOISE 13 ELEMENTS BECOME ONE PIPE AND TWO PITS THAT WORK TOGETHER BUT ARENT ONE FULL ELEMENT, DOES THAT MAKE MORE SENSE? OTHERWISE IT MIGHT GET TOO STICKY?" Where a pipe starts: "I WANT EVERYTHING TO INTERACT AND PLAY NICE TOGETHER, SAY AN END USER WANTS TO DRAW A PIPE FROM ONE PIT TO ANOTHER AND THEY SELECT SOMEWHWERE ON THE PIT I WANT IT TO VISUALLY SHOW IT COMING FROM EXACTLY ON THE PIT WALL IN LINE WITH WHERE THEY CLICKED" (D-031, D-034)
+15. **Owner's ruling on pit numbers:** "P1 at the outlet, Renumber button": new pits take the next free number; a Renumber button re-runs them from the outlet working upstream when asked (D-075)
+16. **Owner's ruling on plastic pits in the schedule:** "My choice per pit": a tick box "In the schedule" on each plastic pit, starting ticked (D-076)
+17. **Owner's ruling on a pit placed on a drawn pipe:** "Split the pipe in two" (D-077; E-001)
+18. **Owner's ruling on cover levels:** "Locked on every pit": once typed, only the person can change a cover level; working out levels along a run never touches it (D-078)
+19. **Owner's ruling on where a pipe stops:** "At the inner wall line": the solid inner wall, past the dashed outer line (D-102)
+20. **Owner's ruling on pit kinds on day one:** Junction, grated, plastic; orifice (control) pit; pump pit and bought-in units. Silt pit and soakage pit were not ticked: later (D-104)
+21. **Owner's ruling on pits as detention storage:** "Only pits I tick": volume = plan size times water depth, the depth worked out from the top water level (D-105; S-005)
+22. **Owner's rulings on pit size by depth and step irons:** Guidebook table (D-135); step irons deeper than 1.0 m (D-136); see L-006
 
-Evidence: STUDY_A section 6 item 8, section 2 civil layers 12 to 15, section 9 item 7, section 10 item 2; MODEL_NOTES "What it teaches" item 3; STUDY_C section 2D item 7; STUDY_D section 3.1 and section 7 item 5; D-031, D-033, D-034, D-039.
+Evidence: STUDY_A section 6 item 8, section 2 civil layers 12 to 15, section 9 item 7, section 10 item 2; MODEL_NOTES "What it teaches" item 3; STUDY_C section 2D item 7; STUDY_D section 3.1 and section 7 item 5; D-031, D-033, D-034, D-039; D-075, D-076, D-077, D-078, D-102, D-104, D-105, D-135, D-136.
 
 ## E-009 Junction pit, grated pit and plastic pit
 
@@ -172,8 +192,9 @@ Evidence: STUDY_A section 6 item 8, section 2 civil layers 12 to 15, section 9 i
 6. **Facts it would hold in a one-network drawing:** Type (junction, grated, plastic) as one fact of the pit in E-008.
 7. **Appears also in:** Pit schedule; junction pit detail; legend; "PP" tags on the LABELS CIVIL palette.
 8. **Differences seen between jobs:** None recorded.
+9. **Owner's ruling on plastic pits:** A plastic pit is one of the day-one pit kinds (D-104); each has an "In the schedule" tick box, starting ticked: "My choice per pit" (D-076)
 
-Evidence: STUDY_A section 6 item 9, section 3 item 3.3; STUDY_B section 4 item 1; STUDY_C section 2B.
+Evidence: STUDY_A section 6 item 9, section 3 item 3.3; STUDY_B section 4 item 1; STUDY_C section 2B; D-076, D-104.
 
 ## E-010 Orifice / control pit
 
@@ -186,8 +207,9 @@ Evidence: STUDY_A section 6 item 9, section 3 item 3.3; STUDY_B section 4 item 1
 7. **Appears also in:** Criteria box (E-041); orifice pit detail (E-047); pit schedule.
 8. **Differences seen between jobs:** JOB_A has none (no detention). One council uses a single chamber with a plate (L-007).
 9. **Control pit state name:** The orifice / control pit is the state named "600x1200 Detention Pit" (JOB_C P1, one pit on JOB_B). The pit schedule on JOB_C types its size as 600 x 600 (STUDY_D section 3.1 items 1, 2 and 4)
+10. **Owner's rulings on the orifice pit:** The orifice (control) pit is one of the day-one pit kinds (D-104). The drop across a pit and the steps in the orifice pit are an "Office standard, can be typed over" (D-084; S-025)
 
-Evidence: STUDY_A section 6 item 10; STUDY_B section 3 item 7; ELEMENT_LIST "Seen as a picture" items 6 and 7; STUDY_D section 3.1.
+Evidence: STUDY_A section 6 item 10; STUDY_B section 3 item 7; ELEMENT_LIST "Seen as a picture" items 6 and 7; STUDY_D section 3.1; D-084, D-104.
 
 ## E-011 Older pit block
 
@@ -213,8 +235,9 @@ Evidence: STUDY_A section 6 item 11, section 9 "Between the jobs and MASTER" ite
 7. **Appears also in:** Pit schedule; criteria box storage lines by pit name; detail titles ("P1 pit detail").
 8. **Differences seen between jobs:** None recorded. A real job once had a schedule with two rows both "P1".
 9. **Owner's ruling on flip and move:** The pit label can be moved and flipped (D-037, quoted under the facts true of every element) (D-037)
+10. **Owner's ruling on numbering:** "P1 at the outlet, Renumber button": see E-008 (D-075)
 
-Evidence: STUDY_A section 6 item 12, section 3 item 3.4, section 8 item 8; MODEL_NOTES "What it teaches" item 3; DIGEST section 3 item 8; D-037.
+Evidence: STUDY_A section 6 item 12, section 3 item 3.4, section 8 item 8; MODEL_NOTES "What it teaches" item 3; DIGEST section 3 item 8; D-037; D-075.
 
 ## E-013 Cover level
 
@@ -227,8 +250,9 @@ Evidence: STUDY_A section 6 item 12, section 3 item 3.4, section 8 item 8; MODEL
 7. **Appears also in:** Pit schedule (E-040); orifice pit detail. On JOB_C the control pit's cover level appears 3 times.
 8. **Differences seen between jobs:** One plain TEXT on 18TEXT colour 10 on JOB_B. Conflict (colour): the Stage 1 picture reading says "cover level and invert levels in red at each pit"; STUDY_A puts cover levels on 25TEXT (colour 7, prints black) and only invert levels on a red layer. Not settled.
 9. **Owner's ruling on flip and move:** Cover level text can be flipped and moved (D-037, quoted under the facts true of every element) (D-037)
+10. **Owner's ruling on locking:** "Locked on every pit": once typed, only the person can change a cover level; working out levels along a run never touches it (D-078)
 
-Evidence: STUDY_A section 6 item 13, section 3 items 3.3, 5 and 6, section 7 item 12, section 8 item 1; ELEMENT_LIST "Seen as a picture" items 5 and 7; D-037.
+Evidence: STUDY_A section 6 item 13, section 3 items 3.3, 5 and 6, section 7 item 12, section 8 item 1; ELEMENT_LIST "Seen as a picture" items 5 and 7; D-037; D-078.
 
 ## E-014 Invert level
 
@@ -241,8 +265,9 @@ Evidence: STUDY_A section 6 item 13, section 3 items 3.3, 5 and 6, section 7 ite
 7. **Appears also in:** Pit schedule; orifice pit detail; long section. On JOB_C the control pit's inlet invert appears 5 times (plan, schedule twice, detail twice) and its outlet invert 3 times. About 30 invert texts on that job.
 8. **Differences seen between jobs:** Layer, colour and justification differ between JOB_C and JOB_A/B as above.
 9. **Owner's rulings on invert text:** "AGI DRAINS DONT HAVE INVERT LEVELS." (D-040). Invert text sits in the same spot on every pipe and slides to avoid a clash (D-041, quoted under the facts true of every element). It can be moved perpendicular or parallel to the line by grip (D-037) (D-037, D-040, D-041)
+10. **Owner's rulings on typing over:** Both invert levels of a pipe can be typed over (D-080). The grade in the pipe label is worked out from the two printed inverts (D-123; E-006)
 
-Evidence: STUDY_A section 6 item 14, section 7 item 11, section 3 items 3.2 and 5, section 9 item 3; ELEMENT_LIST "On the plan" item 4 and "Seen as a picture" item 7; D-037, D-040, D-041.
+Evidence: STUDY_A section 6 item 14, section 7 item 11, section 3 items 3.2 and 5, section 9 item 3; ELEMENT_LIST "On the plan" item 4 and "Seen as a picture" item 7; D-037, D-040, D-041; D-080, D-123.
 
 ## E-015 Downpipe
 
@@ -268,8 +293,10 @@ Evidence: STUDY_A section 6 item 15, section 2 civil layer 17 and "Standard vers
 7. **Appears also in:** Legend; tool palette; plug-in bundle block.
 8. **Differences seen between jobs:** None recorded.
 9. **Owner's ruling on where an inlet goes:** A GIO goes exactly where the drafter clicks along the pipe and can be slid along afterwards; it can also be placed off a pipe (D-050, quoted under the facts true of every element) (D-050)
+10. **Owner's ruling on the inspection opening offer:** The owner proposed: "allow it and offer an io if its a bend point in main pipe and theres no io on the main line and the run is long or is this over complicating it?" Filed ruling: a branch joining a pipe with no pit is always allowed; an inspection opening is OFFERED (never forced) when the join is at a bend in the main pipe, the main line has no inspection opening, and the run is long. How long is "long": Unknown (to come from the office list or AS 3500.3, to be looked up). It stays one quiet offer line with its numbers in the office list (D-081)
+11. **Owner's ruling on the typed name:** IO is kept: "Keep IO, rename C and RC" (D-054)
 
-Evidence: STUDY_A section 6 item 16, section 3 item 3.5; STUDY_B section 3 items 3 and 14; GUIDEBOOK_NOTES "Elements" item 18; D-050.
+Evidence: STUDY_A section 6 item 16, section 3 item 3.5; STUDY_B section 3 items 3 and 14; GUIDEBOOK_NOTES "Elements" item 18; D-050; D-054, D-081.
 
 ## E-017 Floor waste
 
@@ -604,8 +631,9 @@ Evidence: STUDY_A section 6 item 38, section 8 item 3; ELEMENT_LIST "Seen as a p
 7. **Appears also in:** Every sheet.
 8. **Differences seen between jobs:** Identical on all three jobs; not edited per job.
 9. **Legend moved:** CIV-08 sheet 1: the CIVIL WORKS LEGEND sits at the bottom left; CIV-11: legend and general notes top right; CIV-15: legend top right. Pavement legend swatches: see E-073 (STUDY_D section 4.2 item 1, 4.4 item 1, 4.8 item 1)
+10. **Owner's ruling on the legend:** Detention pipe is its own kind, on its own layer, in a slightly different blue, and "we will need to update the legend as well": the legend gains a line for it. The line itself is not yet drawn: Unknown (D-083)
 
-Evidence: STUDY_A section 6 item 39; DIGEST section 1 item 11; STUDY_D section 4.2, 4.4, 4.8.
+Evidence: STUDY_A section 6 item 39; DIGEST section 1 item 11; STUDY_D section 4.2, 4.4, 4.8; D-083.
 
 ## E-040 Pit schedule
 
@@ -618,8 +646,13 @@ Evidence: STUDY_A section 6 item 39; DIGEST section 1 item 11; STUDY_D section 4
 7. **Appears also in:** See `drafting\TABLES_AND_BOXES.md` for columns and build.
 8. **Differences seen between jobs:** 2 rows (JOB_C: 26 loose cells for 2 pits) to 20-odd rows; a pit with several inlets takes several rows with the repeated cells left empty; remarks carry lid class and silt pit levels.
 9. **Rows seen in more recent jobs:** CIV-11: 8 pits over about 20 rows (each inlet its own row: from P6, DP, AGI, TG, WT2, ACO), lids "Class D Solid Lid With Step Irons" and "Class D Grated Lid With Step Irons", a twin pit "1 / 900 x 900 + 1 / 900 x 900"; a yellow "PIT SCHEDULE NOTE" ("PITS P1 / P2 / ... ARE ALL TO HAVE [make] LITTER BASKET"). CIV-10: a pit "JP1" ("New Junction Pit to Council Standard ..."); the pump well as a row ("SPS / 1500 DIA x 2750") with inlets from "HLs", remarks "SUMP PIT PIT IL ...", "SILT PIT PIT IL ...", "PUMP AS PER MANUFACTURER'S SPECIFICATIONS". CIV-12: kept as its own workbook and PDF (5 pits plus the well) with the same columns as the sheet. CIV-08 remarks: "Silt Pit IL 4.13 Class B Grate", "Plastic Pit Class A Grate" (STUDY_D section 4.4 item 5, 4.5 item 6, 5.3 item 5, 4.2 item 6)
+10. **Owner's ruling on how it is placed:** "Placed once, then follows the pits": type SH, pick where it goes; it draws in the office's layout (ordinary lines and text) and then updates itself whenever a pit or pipe changes (D-109)
+11. **Owner's ruling on typed-over cells:** "Yes, with a padlock like everything else": a cell normally reads the pit; typed over it is held and shows a closed padlock; one click lets it follow the pit again (D-103)
+12. **Owner's ruling on rows besides the numbered pits:** The existing council pit connected to; a pump well; plastic pits that are ticked (D-110, D-076)
+13. **Wording read off three issued sheets:** Title, column headings and three standing notes, identical on all three: see `drafting\TABLES_AND_BOXES.md` section 1 items 14 to 16 and `standards\wording_patterns.csv`. A pit with several inlets takes one schedule row per inlet (16 rows for 12 pits on one job) (D-113)
+14. **Owner's ruling on a long schedule:** "It runs long; I make room": one block that grows downward; the plugin only warns that it may not fit (D-114). What happens on the sheet when a long schedule will not fit its spot beyond that warning: not asked again (D-114)
 
-Evidence: STUDY_A section 6 item 40, section 3 item 3.10; ELEMENT_LIST "Seen as a picture" item 3 and "Across three civil jobs" moving part 6; DIGEST section 1 item 6; STUDY_D section 4.2 to 4.5, 5.3.
+Evidence: STUDY_A section 6 item 40, section 3 item 3.10; ELEMENT_LIST "Seen as a picture" item 3 and "Across three civil jobs" moving part 6; DIGEST section 1 item 6; STUDY_D section 4.2 to 4.5, 5.3; D-076, D-103, D-109, D-110, D-112, D-113, D-114.
 
 ## E-041 Detention criteria box
 
@@ -632,8 +665,9 @@ Evidence: STUDY_A section 6 item 40, section 3 item 3.10; ELEMENT_LIST "Seen as 
 7. **Appears also in:** See `drafting\TABLES_AND_BOXES.md` for rows.
 8. **Differences seen between jobs:** JOB_C: tanks only. JOB_B: every pit, pipe and tank listed. JOB_A: no box at all.
 9. **Rows on later jobs:** CIV-11: "SITE PERMITTED SITE DISCHARGE", HEAD, DIA. OF ORIFICE, TWL, TOTAL VOLUME REQUIRED, then the modular tank by name, TOTAL. CIV-15: PERMITTED SITE DISCHARGE, HEAD (1230mm), DIA. OF ORIFICE, TWL, VOLUME REQUIRED, "UNDERGROUND WT", TOTAL. CIV-09 (JOB_B): the box lists every storage, 6.36 provided against 5.35 required, with twin 225 detention pipes at 1 in 200 (STUDY_D section 4.4 item 4, 4.8 item 4, 5.5 item 8)
+10. **Owner's rulings on the box and its window:** "One 'Detention' window for the job" holds what is fixed, the volume needed, the storage you have and the orifice, and fills the criteria box on the sheet (D-099). Its answer is "Both, side by side": storage against what is needed, and discharge against what is permitted (D-106). Methods in the first release: Boyd's method and OSD4W / Swinburne (D-098)
 
-Evidence: STUDY_A section 6 item 41, section 3 items 3.11 and 8; ELEMENT_LIST "Seen as a picture" item 4 and "Across three civil jobs" moving part 1; STUDY_D section 4.4, 4.8, 5.5.
+Evidence: STUDY_A section 6 item 41, section 3 items 3.11 and 8; ELEMENT_LIST "Seen as a picture" item 4 and "Across three civil jobs" moving part 1; STUDY_D section 4.4, 4.8, 5.5; D-098, D-099, D-106.
 
 ## E-042 Site / roof area box
 
@@ -645,8 +679,9 @@ Evidence: STUDY_A section 6 item 41, section 3 items 3.11 and 8; ELEMENT_LIST "S
 6. **Facts it would hold in a one-network drawing:** None of its own: site, impervious and pervious areas counted once.
 7. **Appears also in:** Computations.
 8. **Differences seen between jobs:** Used "where a council asks".
+9. **Owner's ruling on where a site area comes from:** "Picked off the drawing, or typed": an area picked from a closed outline stays linked and updates if the outline changes, or it is simply typed; each shows where it came from (D-107). Adds: "site areas might be able to come from council documents": a third source on the same fact; the first release marks such a figure "given" (D-108)
 
-Evidence: STUDY_A section 6 item 42; ELEMENT_LIST "Tables and boxes" item 2; STUDY_B section 2 outputs item 2.
+Evidence: STUDY_A section 6 item 42; ELEMENT_LIST "Tables and boxes" item 2; STUDY_B section 2 outputs item 2; D-107, D-108.
 
 ## E-043 Title block
 
@@ -911,8 +946,9 @@ Evidence: STUDY_B section 1g items 5 and 6, 1l items 1 and 3; STUDY_A section 6 
 9. **Soakage on plan (CIV-08):** Each soakage pit is a grid of small rectangles (one per module) with a label block: "SOAKAGE PIT 1 / 60 DOUBLE SOAKAGE MODULES (5 x 11). INSTALL THE MATRIX WATER TANK IN ACCORDANCE WITH MANUFACTURER'S SPECIFICATIONS. SOAKAGE MODULES ARE TO BE WRAPPED IN GEOTEXTILE FABRIC." (also 30 modules as 3 x 10 and 40 as 4 x 10) (STUDY_D section 4.2 item 2)
 10. **Typical soakage detail:** Section through a silt pit with trash rack, inlet pipe, module block with count, levels, compacted sand and geotextile notes, manufacturer line. The details library holds 20 copies of "TYPICAL ATLANTIS MATRIX WATER TANK DETAIL", pit details P1 and P3 and a standing note "NO GROUNDWATER HAS BEEN ENCOUNTERED WITHIN 1m OF SOAKAGE PITS"; it uses the Stormwater Pit block. Schedule remarks carry silt pit levels ("Silt Pit IL 4.13 Class B Grate") and "Plastic Pit Class A Grate" (STUDY_D section 4.2 items 5 and 6, section 2.3 item 5)
 11. **Soakage pit sized by module count (CIV-13):** Module 0.408 wide x 0.685 long; 14 wide x 13 long gives 5.712 x 8.905 m; storage depth 0.45 m; porosity 0.95 (module heights listed beside: double 880, single 450). Infiltration area 81.0 m2, perimeter 29.2 m, volume 22.9 m3. A small separate drawing "soakage.dwg" sits in the folder (STUDY_D section 5.4 items 2 and 5)
+12. **Owner's ruling on day-one pit kinds:** Silt pit and soakage pit were not ticked as day-one pit kinds: later (D-104)
 
-Evidence: STUDY_B section 1h items 2 to 7, section 3 item 16; ELEMENT_LIST "Across three civil jobs" item 3 and moving parts 2 and 6; STUDY_D section 2.3 item 5, 4.2, 5.4.
+Evidence: STUDY_B section 1h items 2 to 7, section 3 item 16; ELEMENT_LIST "Across three civil jobs" item 3 and moving parts 2 and 6; STUDY_D section 2.3 item 5, 4.2, 5.4; D-104.
 
 ## E-061 Roof hatch and roof-area legend
 

@@ -59,7 +59,8 @@ Evidence: STUDY_B section 3 items 7, 8, 10, 11, 12, 15, 17, 18 and 20, section 1
 4. **Old confirmed rule from the August study:** go by the job's own discharge advice and permit, never by suburb.
 5. **Order of authority:** council, then AS/NZS 3500.3, then the office guidebook (D-022). Disagreement may not stand silently: the user picks the right number or writes a short reason (D-003).
 6. **The Bayside template is a finished job:** The Bayside "template" in the office template folder is a finished two-unit job with its design still in it (8 pits, 24 downpipes, 241 layers); anyone starting from it inherits its content (STUDY_D section 2.1 item 2, section 7 item 1)
+7. **Owner's ruling on old council figures:** Of the old council figures, 287 of 410 were marked assumed. "Keep only sourced figures; rest start blank": sourced figures come across with their source; assumed ones are dropped; a council value is filled in the first time a real council letter gives it (D-096)
 
-Evidence: STUDY_B section 5 items 7 and 8; DIGEST section 5 item 1; DECISIONS D-003, D-022; STUDY_D section 2.1, 7.
+Evidence: STUDY_B section 5 items 7 and 8; DIGEST section 5 item 1; DECISIONS D-003, D-022; STUDY_D section 2.1, 7; D-096.
 
 Next free number: C-010

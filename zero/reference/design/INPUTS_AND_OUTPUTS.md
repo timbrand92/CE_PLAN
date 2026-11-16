@@ -188,7 +188,8 @@ Evidence: STUDY_B section 2 inputs item 11.
 ### Group 12: measured off the drawing
 
 **Input 47. Site area; roof and paving areas.** Used by: S-001, S-002, S-022; E-021, E-042.
-Evidence: ENG_NOTES "Where every number comes from" item 3.
+Owner's rulings on where an area comes from: "Picked off the drawing, or typed" (D-107); a council document is a third source, marked "given" in the first release (D-108).
+Evidence: ENG_NOTES "Where every number comes from" item 3; D-107, D-108.
 
 **Input 48. Pipe lengths.** Used by: S-004, S-008; E-004.
 Evidence: ENG_NOTES "Where every number comes from" item 3.

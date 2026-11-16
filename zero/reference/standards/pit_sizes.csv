@@ -1,19 +1,19 @@
 size,max_depth,source,conflict,status
-350 x 350,450,office guidebook table (STUDY_B section 3 item 6),not in the detention workbook list,conflict
-450 x 450,600,office guidebook table (STUDY_B section 3 item 6),same as the detention workbook (0.6),conflict
-600 x 600,900,office guidebook table (STUDY_B section 3 item 6),same as the detention workbook (0.9),conflict
-600 x 900,1200 with step irons,office guidebook table (STUDY_B section 3 item 6),same depth as the detention workbook (1.2),conflict
-900 x 900,deeper than 1200,office guidebook table (STUDY_B section 3 item 6),detention workbook says 900 x 900 only to 1.2,conflict
-450 x 450,600,detention workbook list (STAGE1_ENGINEERING_NOTES Added later item 2),see guidebook row,conflict
-600 x 600,900,detention workbook list (STAGE1_ENGINEERING_NOTES Added later item 2),see guidebook row,conflict
-600 x 900,1200,detention workbook list (STAGE1_ENGINEERING_NOTES Added later item 2),see guidebook row,conflict
-900 x 900,1200,detention workbook list (STAGE1_ENGINEERING_NOTES Added later item 2),guidebook uses 900 x 900 for deeper than 1200,conflict
-1200 x 900,1200,detention workbook list (STAGE1_ENGINEERING_NOTES Added later item 2),not in the guidebook table,conflict
+350 x 350,450,office guidebook table (STUDY_B section 3 item 6),"not in the detention workbook list; Settled by Tim, D-135, 16 Nov 2026: the guidebook table is the office standard (a council condition overrides)",settled
+450 x 450,600,office guidebook table (STUDY_B section 3 item 6),"same as the detention workbook (0.6); Settled by Tim, D-135, 16 Nov 2026: the guidebook table is the office standard (a council condition overrides)",settled
+600 x 600,900,office guidebook table (STUDY_B section 3 item 6),"same as the detention workbook (0.9); Settled by Tim, D-135, 16 Nov 2026: the guidebook table is the office standard (a council condition overrides)",settled
+600 x 900,1200 with step irons,office guidebook table (STUDY_B section 3 item 6),"same depth as the detention workbook (1.2); Settled by Tim, D-135, 16 Nov 2026: the guidebook table is the office standard (a council condition overrides)",settled
+900 x 900,deeper than 1200,office guidebook table (STUDY_B section 3 item 6),"detention workbook says 900 x 900 only to 1.2; Settled by Tim, D-135, 16 Nov 2026: the guidebook table is the office standard (a council condition overrides)",settled
+450 x 450,600,detention workbook list (STAGE1_ENGINEERING_NOTES Added later item 2),"see guidebook row; Settled by Tim, D-135, 16 Nov 2026: this workbook list is not the office standard",settled
+600 x 600,900,detention workbook list (STAGE1_ENGINEERING_NOTES Added later item 2),"see guidebook row; Settled by Tim, D-135, 16 Nov 2026: this workbook list is not the office standard",settled
+600 x 900,1200,detention workbook list (STAGE1_ENGINEERING_NOTES Added later item 2),"see guidebook row; Settled by Tim, D-135, 16 Nov 2026: this workbook list is not the office standard",settled
+900 x 900,1200,detention workbook list (STAGE1_ENGINEERING_NOTES Added later item 2),"guidebook uses 900 x 900 for deeper than 1200; Settled by Tim, D-135, 16 Nov 2026: this workbook list is not the office standard",settled
+1200 x 900,1200,detention workbook list (STAGE1_ENGINEERING_NOTES Added later item 2),"not in the guidebook table; Settled by Tim, D-135, 16 Nov 2026: this workbook list is not the office standard",settled
 900 x 600 junction pit on the council drain,1500,Monash approval letter (STUDY_B section 1f item 4),council condition; 900 x 900 if deeper than 1.5 m,measured
 900 x 900 junction pit on the council drain,deeper than 1500,Monash approval letter (STUDY_B section 1f item 4),council condition,measured
-Step irons needed,over 1200,sheet note (STUDY_B section 3 item 6),1000 in the design checklist; 900 in one council's comments,conflict
-Step irons needed,over 1000,design checklist workbook (STUDY_B section 3 item 6),1200 on the sheet note; 900 in one council's comments,conflict
-Step irons needed,over 900,one council's comments (STUDY_B section 3 item 6),1200 on the sheet note; 1000 in the design checklist,conflict
+Step irons needed,over 1200,sheet note (STUDY_B section 3 item 6),"1000 in the design checklist; 900 in one council's comments; Settled by Tim, D-136, 16 Nov 2026: not the office figure; the office figure is 1000 (the sheet note wording is to be raised when notes are built)",settled
+Step irons needed,over 1000,design checklist workbook (STUDY_B section 3 item 6),"1200 on the sheet note; 900 in one council's comments; Settled by Tim, D-136, 16 Nov 2026: ""1.0 m"" is the office figure",settled
+Step irons needed,over 900,one council's comments (STUDY_B section 3 item 6),"1200 on the sheet note; 1000 in the design checklist; Settled by Tim, D-136, 16 Nov 2026: not the office figure",settled
 Orifice pit chamber (each of two),not a depth limit: at least 600 x 600 each,office guidebook (STUDY_B section 3 item 7),one council uses a single chamber with a plate,measured
 Orifice pit on the plan (JOB_C pit P1),not stated,STUDY_A section 6 item 10,1650 x 900 overall as drawn,measured
 Pit block state 350x350 Grated pit,not stated,STUDY_A section 6 item 8,symbol state only,template
@@ -31,3 +31,4 @@ Pit block state 600x1200 Detention Pit,not stated,STUDY_A section 6 item 8,symbo
 Pits seen in job sums: 600 x 600,water depth 0.39 to 0.52 on CIV-05,STUDY_B section 1e item 3 and 1f item 2,labels and typed sizes differ in three jobs' storage tables,measured
 Pits seen in job sums: 1200 x 900,water depth 0.39 to 0.52 on CIV-05,STUDY_B section 1e item 3,none,measured
 Pits seen in job sums: 600 x 900 (JOB_B pit P1),water depth 0.41,STAGE1_ENGINEERING_NOTES Checked against the issued sheets item 3,none,measured
+Council condition overrides the office pit table,not stated,D-135,applies to every guidebook row above; council value ranks first (D-022),settled

@@ -18,14 +18,22 @@ What each table, box and notes block holds and how it is built today. Re-filed f
 5. **A pit with two or more inlets** uses a second row with the repeated cells left empty.
 6. **What goes in "from":** downpipes, overflows, floor wastes and paved pipes appear as "from" sources, not as pits.
 7. **Remarks** carry lid class and silt pit levels.
-8. **Three standing notes** sit under it (the same on all three jobs; their wording is not quoted in the evidence: Unknown).
+8. **Three standing notes** sit under it (the same on all three jobs; their wording is not quoted in the evidence: Unknown). Superseded by items 14 to 16, 16 Nov 2026: the wording is now read (D-113)
 9. **Depth to outlet** = cover level less outlet invert, worked by hand (S-011). JOB_C: P1 5.35 less 4.80 = 0.55; P2 5.78 less 5.25 = 0.53.
 10. **Length:** 2 rows to 20-odd rows. All pits scheduled, plastic pits included (a council request).
 11. **Outfall sheet:** its own two-row schedule (new side entry pit, existing council pit).
 12. **Other routes to the same schedule today:** a LISP helper brings a civil pit schedule in from a CSV file; the present plug-in has a pit schedule command; a pit schedule workbook exists.
 13. **Rows seen on later jobs:** See E-040: CIV-11 (8 pits over about 20 rows, each inlet its own row, Class D lids, twin pit, litter basket note), CIV-10 (JP1; pump well row "SPS / 1500 DIA x 2750" with inlets from "HLs"), CIV-12 (own workbook and PDF, 5 pits plus the well), CIV-08 (silt pit levels and class in remarks) (STUDY_D section 4.4 item 5, 4.5 item 6, 5.3 item 5, 4.2 item 6)
+14. **Wording read off issued sheets, title:** "STORMWATER PIT SCHEDULE". The owner's instruction was "Read it off an issued job" (D-112); the wording is identical on all three issued sheets read (D-113)
+15. **Wording read off issued sheets, column headings in order:** PIT No. | PIT SIZE | INLET (FROM, DIA, INVERT LEVEL) | OUTLET (DIA, INVERT LEVEL) | COVER LEVEL | DEPTH TO OUTLET | TYPE OF LID AND REMARKS (D-113)
+16. **Wording read off issued sheets, three standing notes (dash bullets):** "CONFIRM ALL LEVELS PRIOR TO THE COMMENCEMENT OF WORK."; "ALL STORMWATER PIPE SUB BRANCHES SHALL BE MIN. SAME SIZE DOWNPIPES GRADED AT 1:100 MIN."; "ALL GRATED COVERS TO BE HEEL SAFE UNLESS NOTED OTHERWISE. ALL COVERS TO BE PROFILED AND POSITIONED TO SUIT EXISTING SURFACE LEVELS, PAVING LAYOUTS, SPOON DRAINS, KERB CHANNELS AND OTHER FEATURES AS DETAILED ON ARCHITECTURAL DRAWINGS." (D-113)
+17. **One row per inlet:** A pit with several inlets takes one schedule row per inlet (16 rows for 12 pits on one job) (D-113)
+18. **Owner's ruling on placing and following:** "Placed once, then follows the pits": type SH, pick where it goes; it draws in the office's layout and updates itself whenever a pit or pipe changes (D-109)
+19. **Owner's ruling on typed-over cells:** "Yes, with a padlock like everything else": a typed-over cell is held and shows a closed padlock; one click lets it follow the pit again (D-103)
+20. **Owner's ruling on extra rows:** Besides the numbered pits: the existing council pit connected to; a pump well; plastic pits that are ticked in the "In the schedule" box (D-110, D-076)
+21. **Owner's ruling on a long schedule:** "It runs long; I make room": one block that grows downward; the plugin only warns that it may not fit. A window whose subject is tall puts its preview on the left at full height with the choices on the right (D-114, D-113)
 
-Evidence: STUDY_A section 6 item 40; ELEMENT_LIST "Seen as a picture" item 3 and "Across three civil jobs"; DIGEST section 1 item 6; STUDY_B section 1e item 5; STUDY_C section 2A item 14, section 3 item 8; GUIDEBOOK_NOTES "Elements" item 2; STUDY_D section 4.2 to 4.5, 5.3.
+Evidence: STUDY_A section 6 item 40; ELEMENT_LIST "Seen as a picture" item 3 and "Across three civil jobs"; DIGEST section 1 item 6; STUDY_B section 1e item 5; STUDY_C section 2A item 14, section 3 item 8; GUIDEBOOK_NOTES "Elements" item 2; STUDY_D section 4.2 to 4.5, 5.3; D-076, D-103, D-109, D-110, D-112, D-113, D-114.
 
 ## 2. Detention criteria box (E-041)
 
@@ -42,8 +50,9 @@ Evidence: STUDY_A section 6 item 40; ELEMENT_LIST "Seen as a picture" item 3 and
 4. **Order of rows, two readings:** the older study lists "permitted discharge, storage required, storage by member, total, top water level and orifice"; the picture reading of JOB_C lists permitted discharge, head, orifice, top water level, volume required, storages, total. Conflict: recorded, not settled.
 5. **Not present** on a job with no detention (JOB_A has no criteria box at all).
 6. **Rows on later jobs:** CIV-11 and CIV-15: see E-041 (HEAD 1230mm on CIV-15; modular tank and "UNDERGROUND WT" lines) (STUDY_D section 4.4 item 4, 4.8 item 4)
+7. **Owner's rulings on the window that fills it:** "One 'Detention' window for the job" fills the criteria box (D-099); its answer is "Both, side by side" (D-106); methods in the first release are Boyd's and OSD4W / Swinburne (D-098)
 
-Evidence: STUDY_A section 6 item 41; ELEMENT_LIST "Seen as a picture" item 4 and "Across three civil jobs" moving part 1; DIGEST section 1 item 7; STUDY_B section 1b item 3, 1c item 7, 1d item 7, 1k item 5; DECISIONS D-023; STUDY_D section 4.4, 4.8.
+Evidence: STUDY_A section 6 item 41; ELEMENT_LIST "Seen as a picture" item 4 and "Across three civil jobs" moving part 1; DIGEST section 1 item 7; STUDY_B section 1b item 3, 1c item 7, 1d item 7, 1k item 5; DECISIONS D-023; STUDY_D section 4.4, 4.8; D-098, D-099, D-106.
 
 ## 3. Roof-area box and site-area box (E-021, E-042)
 
@@ -85,8 +94,9 @@ Evidence: STUDY_B section 1e items 5 and 6, section 3 item 21; DIGEST section 1 
 3. **Items only in the legend on the three jobs:** suspended pipe; PAVEMENT LEVELS; KERB & CHANNEL.
 4. **A second legend:** the structural layer-legend block ("LAYERS") is parked in every civil job.
 5. **Position on later sheets:** CIV-08 sheet 1: the CIVIL WORKS LEGEND moved to the bottom left; CIV-11 and CIV-15: top right. Pavement swatches with specification paragraphs: E-073. The library also holds legends in the tank and raingarden drawings and one civil works legend (same block as every job) (STUDY_D section 4.2 item 1, 4.4 item 1, 4.8 item 1, 2.3 item 11)
+6. **Owner's ruling on a detention pipe line:** Detention pipe becomes its own kind in a slightly different blue, so the legend gains a line for it (D-083)
 
-Evidence: STUDY_A section 6 item 39, section 2 civil layers 3, 23 and 42, section 8 item 8; DIGEST section 1 item 11; STUDY_D section 2.3, 4.2, 4.4, 4.8.
+Evidence: STUDY_A section 6 item 39, section 2 civil layers 3, 23 and 42, section 8 item 8; DIGEST section 1 item 11; STUDY_D section 2.3, 4.2, 4.4, 4.8; D-083.
 
 ## 7. Notes blocks (E-038)
 

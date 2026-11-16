@@ -1,6 +1,6 @@
 # Standards data files
 
-The office's drafting standards as plain data, one row per item, exactly as measured. They are kept as CSV (comma-separated) files because they are meant to become the plugin's one office standards file later (D-013: "this should all be standardised and understood in one place"; D-012: offsets are settings). Re-filed from the evidence on Mon 16 Nov 2026. These are MEASURED values and observed conflicts, not chosen standards: no row here has been ruled on by the owner.
+The office's drafting standards as plain data, one row per item, exactly as measured. They are kept as CSV (comma-separated) files because they are meant to become the plugin's one office standards file later (D-013: "this should all be standardised and understood in one place"; D-012: offsets are settings). Re-filed from the evidence on Mon 16 Nov 2026. These are MEASURED values and observed conflicts, not chosen standards, except the rows marked "settled": the owner ruled on those on 16 Nov 2026 (pit size by depth D-135, step iron depth D-136, detention pipe layer D-083 and D-118, pipe end at a pit D-102, the pit schedule wording D-113).
 
 Open them in Excel or any text editor. Units: model units are millimetres of real ground; "paper_mm" is millimetres on the A1 sheet at 1:100.
 
@@ -12,16 +12,17 @@ Open them in Excel or any text editor. Units: model units are millimetres of rea
 4. Fill "source" with the evidence file and section, and "status" with one of the four words below.
 5. If a new measurement disagrees with an existing row, add a second row and set BOTH rows' status to "conflict". Do not overwrite. The owner rules (D-003, D-022, Q-004).
 
-## The status column (same four words in every file)
+## The status column (same words in every file: four from the start, a fifth added 16 Nov 2026)
 
 1. **measured:** read from a real job drawing, an issued sheet or a job's own sums (JOB_A/B/C, CIV-01..13).
 2. **template:** read from the civil A1 template or its parked sample kit.
 3. **master:** read only from the office master drawing of blocks, layers, schedules and notes.
 4. **conflict:** two sources give different values for the same thing; both are recorded.
+5. **settled:** the owner has ruled (the D-number is in the source or conflict column); the old values stay in the file marked "Settled by Tim". A value still written "Unknown" or "not stated" in a settled row is still open. (D-135, D-136)
 
 ## The files and their columns
 
-1. **`layers.csv`** (146 rows; 28 added 16 Nov 2026 from STUDY_D: the background-file layers and the viewport-override layer): every layer met on a civil sheet.
+1. **`layers.csv`** (147 rows; one added 16 Nov 2026 for the detention pipe layer, name Unknown, D-083; 28 added 16 Nov 2026 from STUDY_D: the background-file layers and the viewport-override layer): every layer met on a civil sheet.
    1. name: the layer name exactly.
    2. colour: AutoCAD colour number (the colour picks the pen).
    3. linetype: the layer's linetype.
@@ -52,7 +53,7 @@ Open them in Excel or any text editor. Units: model units are millimetres of rea
    3. used_for: what it draws.
    4. object_scale: the object linetype scale used with it.
    5. source, status.
-5. **`label_offsets.csv`** (28 rows; 8 added from STUDY_D: background stacking, clips, long-section spacing): how far each label sits from its object.
+5. **`label_offsets.csv`** (29 rows; 8 added from STUDY_D: background stacking, clips, long-section spacing; one ruled row added 16 Nov 2026, pipe end at a pit, D-102): how far each label sits from its object.
    1. label: which label or part.
    2. from_what: what the distance is measured from.
    3. standard_clear_distance: the template's distance where there is one.
@@ -60,12 +61,12 @@ Open them in Excel or any text editor. Units: model units are millimetres of rea
    5. side_rule: which side it sits on.
    6. rotation_rule: how it is turned.
    7. source, status.
-6. **`wording_patterns.csv`** (49 rows; 18 added from STUDY_D): the fixed wording of labels and notes.
+6. **`wording_patterns.csv`** (54 rows; 18 added from STUDY_D; five added 16 Nov 2026: the pit schedule title, headings and three standing notes, D-113): the fixed wording of labels and notes.
    1. item: which label.
    2. pattern: the wording with blanks shown as <...>.
    3. real_examples: real wordings, separated by " | ".
    4. source, status.
-7. **`pit_sizes.csv`** (32 rows): pit sizes and their depth limits.
+7. **`pit_sizes.csv`** (33 rows; the guidebook table and step iron rows marked settled, D-135 and D-136; one council-override row added): pit sizes and their depth limits.
    1. size: plan size.
    2. max_depth: the deepest that size may be, in mm.
    3. source: which document gives it.

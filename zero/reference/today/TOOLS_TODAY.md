@@ -43,8 +43,9 @@ Evidence: STUDY_C section 2A, 2B, section 3, section 7 items 1 to 3, section 8 i
 3. **Where it lives:** Shared drafting folder, `Lisp Files` (a 2015 file and a 2025 rewrite for move/copy+rotate).
 4. **Duplicates:** Move+Rotate / Copy+Rotate exists in five homes: shared LISP, LISP inside the Structural bundle (version 2.2), the Civil program (hidden), a C++ part in the Civil bundle, and the separate trial bundle (T-054). `CPB`, `CR`, `MR` again in the Structural program (T-030).
 5. **Usage in the IT records:** `C` 355 uses (2 PCs; called a structural shortcut in the records), `CPB` 10, `CR` under 8. Counts are runs recorded April to Nov 2026 on 2 PCs unless stated; only commands the plug-ins wrap are recorded (STUDY_D section 6.3)
+6. **Owner's ruling on the typed name C:** "Keep IO, rename C and RC": `C` is renamed because it sits on AutoCAD's own short name for Copy (trial 7 found `C` clashes with the Copy alias in the owner's own alias file). The new name is Unknown (not yet chosen). Old names are gone from day one (D-053, D-054)
 
-Evidence: STUDY_C section 2A item 1, section 2D item 1; STUDY_D section 6.3.
+Evidence: STUDY_C section 2A item 1, section 2D item 1; STUDY_D section 6.3; D-054.
 
 ## T-002 Dimensions and leaders
 
@@ -92,8 +93,9 @@ Evidence: STUDY_C section 2A item 5, section 2C item 4.5.
 3. **Where it lives:** Shared `Lisp Files`.
 4. **Duplicates:** `RC` in the Structural program (T-028).
 5. **Usage in the IT records:** `RC` 9. Counts are runs recorded April to Nov 2026 on 2 PCs unless stated; only commands the plug-ins wrap are recorded (STUDY_D section 6.3)
+6. **Owner's ruling on the typed name RC:** "Keep IO, rename C and RC": `RC` is renamed; the new name is Unknown (D-054)
 
-Evidence: STUDY_C section 2A item 6, section 2C item 4.4; STUDY_D section 6.3.
+Evidence: STUDY_C section 2A item 6, section 2C item 4.4; STUDY_D section 6.3; D-054.
 
 ## T-007 Multilines
 
@@ -371,8 +373,9 @@ Evidence: STUDY_C section 3 item 1.
 3. **Where it lives:** Civil bundle.
 4. **Duplicates:** Pit blocks on the BLOCKS CIVIL palette. The pit block, pit label and pit schedule drawings ship in both the Civil and the Structural bundles; the pit block file differs in size between the two.
 5. **Usage in the IT records:** `PITEDIT` 74, `CDEDIT` 67, `PIPEEDIT` 66 (8 not completed), `PIT` 45 (median 28.6 seconds; 8 not completed), `PITDELETE` under 8. Counts are runs recorded April to Nov 2026 on 2 PCs unless stated; only commands the plug-ins wrap are recorded (STUDY_D section 6.3)
+6. **New typed name for placing a pit:** PIT with short name PT (D-101). Only placing has a name: changing a pit (size, flip a tag) has no typed name; click it and use its tab, grips or Properties (D-056). Today's `CDPIT350` and the other `CDPIT` names, `PITEDIT`, `PITDELETE` and `CDRENUMBER` are among the "Old names are gone" (D-053)
 
-Evidence: STUDY_C section 3 item 2, section 2D items 6 and 7; STUDY_D section 6.3.
+Evidence: STUDY_C section 3 item 2, section 2D items 6 and 7; STUDY_D section 6.3; D-053, D-056, D-101.
 
 ## T-036 Pipes
 
@@ -381,8 +384,10 @@ Evidence: STUDY_C section 3 item 2, section 2D items 6 and 7; STUDY_D section 6.
 3. **Where it lives:** Civil bundle; with two C++ parts for the one-object pipe (grips and the object enabler, 2027 only).
 4. **Duplicates:** `CDD` and the older `CD` in LISP (T-015). A drawing with one-object pipes cannot be edited on a PC with nothing installed (see `INSTALL_TODAY.md`).
 5. **Usage in the IT records:** `CD` 155 (median 20.7 seconds; 14 not completed), `CDLPD` 5. Counts are runs recorded April to Nov 2026 on 2 PCs unless stated; only commands the plug-ins wrap are recorded (STUDY_D section 6.3)
+6. **New typed name for placing a pipe:** PIPE with short name CD, kept as the one exception to "Old names are gone": "LETS FOR NOW JUST KEEP PIPE/CD" (D-057, D-101)
+7. **Owner's ruling on the one-piece pipe object:** The special one-piece pipe object behind these names is left behind: "leave all 5 behind" (D-094). A one-off "make it ordinary" tool for drawings made with it comes after the first release, one drawing at a time, on a copy first (D-119)
 
-Evidence: STUDY_C section 3 item 3, section 2D item 2, section 6 item 8; STUDY_D section 6.3.
+Evidence: STUDY_C section 3 item 3, section 2D item 2, section 6 item 8; STUDY_D section 6.3; D-057, D-094, D-101, D-119.
 
 ## T-037 Levels and falls
 
@@ -401,8 +406,9 @@ Evidence: STUDY_C section 3 item 4, section 2D item 6; STUDY_D section 6.3.
 3. **Where it lives:** Civil bundle.
 4. **Duplicates:** The same blocks on the BLOCKS CIVIL palette.
 5. **Usage in the IT records:** `CDTAG` 64 (7 not completed), `DP` 2, `IO` 2, `TG` 2. Counts are runs recorded April to Nov 2026 on 2 PCs unless stated; only commands the plug-ins wrap are recorded (STUDY_D section 6.3)
+6. **New typed names for the inlets:** DOWNPIPE = DP; OVERFLOW = OF; INSPECTION = IO (kept: "Keep IO, rename C and RC"); GIO = GIO; FLOORWASTE = FW (D-101, D-054). FO stays FO and has no longer name: "Leave it as FO only" (D-059)
 
-Evidence: STUDY_C section 3 item 5, section 2D item 6; STUDY_D section 6.3.
+Evidence: STUDY_C section 3 item 5, section 2D item 6; STUDY_D section 6.3; D-054, D-059, D-101.
 
 ## T-039 Tanks
 
@@ -571,6 +577,18 @@ Evidence: STUDY_C section 1 item 5, section 2D item 1.
 
 Evidence: STUDY_D section 6.1, 6.3 and 6.4, section 7 item 8, Still unknown items 8 and 9.
 
+## T-056 Typed names ruled for the new tools (naming rule and first-release short names)
+
+1. **Typed name(s):** The first-release list: PIT = PT; PIPE = CD; DOWNPIPE = DP; OVERFLOW = OF; FO = FO; INSPECTION = IO; GIO = GIO; FLOORWASTE = FW; TANK = TK; LEVELS = LV; DETENTION = DET; SCHEDULE = SH. Owner: "Good, with DET for detention". Each is still to be proven free in AutoCAD 2027 by the trials (D-101)
+2. **What it does:** Settles how new tools are named. Each tool gets a plain full word plus a one to three letter short name, the way AutoCAD's own commands work; the short name is built from the first letters of the word and sits in one office list the office can edit. Asked "each plugin tool gets a plain full word plus a one to three letter short name, the way AutoCAD's own commands work?", the owner picked "Yes, that is it" (D-055). Before that he rejected all three options offered: "I DONT LIKE ANYTHING, THINK ABOUT HOW REGULAR COMMANDS WORK LIKE BELOW", followed by the office's own short-name list (D-052). The old three options are set aside (D-055)
+3. **Where it lives:** Nowhere yet: these are rulings, nothing is built (D-055, D-101). The office's own short-name list is kept in the zero-plan evidence folder (file name carries a person's name, so it is not written here) (D-052)
+4. **Duplicates:** Names that sit on AutoCAD's own short names: "Keep IO, rename C and RC" (D-054). Trial 7 read the owner's own alias file (77 entries): `C` clashes with his alias for Copy; `CD`, `PIT`, `IO`, `RC` and `CP` did not clash (R-003 trial 7). The new names for `C` and `RC`: Unknown
+5. **Old names:** "Old names are gone": only the new names work from day one (D-053). The one exception is PIPE with short name CD, "LETS FOR NOW JUST KEEP PIPE/CD" (D-057). The draft list of 17 names was in the chat behind a question window and was NOT reviewed by the owner; it stays a draft (D-057)
+6. **Only placing has a name:** "Only placing has a name": changing a thing (a size, flipping a tag) has no typed name; click the thing and use its tab, grips or Properties (D-056). How a tool is then driven: type the short name, a small window opens already filled in with what was used last ("Every time, like Hatch"), and a drawn thing is edited in Properties or by double-click, which opens the same small window (D-058, D-060, D-061)
+7. **FO:** "Leave it as FO only" (D-059)
+
+Evidence: D-052 to D-059, D-101; R-003 trial 7.
+
 ---
 
-Next free number: T-056
+Next free number: T-057
