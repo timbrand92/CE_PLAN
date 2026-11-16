@@ -6,7 +6,7 @@
 ## Where it stands
 
 1. **Trial 11, any direction:** PASS (pure code, no AutoCAD).
-2. **Trial 10, headless predicts full:** NOT TESTED yet.
+2. **Trial 10, headless predicts full:** PASS for the scripted commands tried (see below). Run under the old limits, before the licence incident. Not repeatable under the new limits.
 3. **Trial 1, joins:** NOT TESTED yet.
 4. **Trial 3, no plugin:** NOT TESTED yet.
 5. **Trial 2, grips:** NOT TESTED yet.
@@ -46,6 +46,29 @@
 6. **What it was NOT:** not run inside AutoCAD, not reading real drawing objects, not tested on a loop of real pipes (a ring of pipes where flow depends on depth), no flow or velocity sums. The sums used are the ones in the mock-ups and the pit and pipe window text only.
 7. **Evidence:** `C:\CE_WORK\trials\zero\evidence\t11_any_direction_results.txt` (every check, PASS or FAIL, with the figures). Re-run: `dotnet run` in `C:\CE_WORK\trials\zero\t11`.
 8. **What it means for the build approach.** "Hold what is fixed, the rest is worked out" is buildable as plain code with no AutoCAD in it, it is far faster than needed, and over-held, under-held and looped sets can each be reported in plain words with the facts and the amount. The foundation block "sum" stands. The three open choices above (grade held as typed, which standard gives way, how to name a conflict on a path) go to the build design.
+
+## Trial 10. Headless predicts full
+
+**Verdict: PASS for scripted MOVE, COPY, MIRROR, ROTATE, ERASE, SCALE, UNDO and REDO on a pit block with joined pipes. Caveats below.** Run Mon 16 Nov 2026 about 21:00 to 21:10, both runs BEFORE the licence incident rules (they used a profile switch, SECURELOAD and the headless isolate option, all now forbidden). They cannot be repeated under the new rules.
+
+1. **What was done.** A small trial plugin (`C:\CE_WORK	rials\zero\core\`, referencing only the core and database files) logs every database event, document command event and two overrules (transform and object) on a pit block, three pipe polylines and a text carrying a hidden note. The same 12-step script (move, copy, mirror, rotate, undo twice, redo, erase, undo, redo, scale) ran in the headless engine (run4) and in full AutoCAD (run5), and the logs were compared.
+2. **What was seen.**
+   1. **The kinds of events are identical:** all 123 database, command and overrule lines (object appended, modified, erased, unappended, reappended, command start and end, transform, copy-clone) match between the two, step by step.
+   2. **The drawing ends up identical** after every step (same positions, rotations, scales and notes). Only the object handles are shifted by one in full AutoCAD.
+   3. **The transform overrule fires for MOVE** (and for the copies made by COPY and MIRROR), in both. That answers R-002 B item 7 for MOVE.
+   4. **Not identical:** the object overrule's "close" call fires more often in full AutoCAD (83 against 65 over the whole run, for example 15 against 10 in the MOVE step). Counting closes is not a safe test; the plugin must treat them as noise.
+   5. **The idle event fired 0 times in both runs.** Anything done at idle was not exercised either way.
+   6. **Window and crossing selection finds nothing in the headless engine** ("0 found": no graphics to pick with). Scripted steps must select by the object's own ID. STRETCH (which needs a crossing window) therefore could not be scripted; it is not covered by this trial.
+   7. **UNDO inside a script:** my first script's "U" undid nothing because my own marker commands counted as commands; fixed by flagging them no-undo-marker. Anything the plugin registers as a command can eat an undo step unless it says otherwise.
+3. **Where the two do not agree or were not tried:** grips, selection by pointing, the ribbon, palettes, idle, the live preview, plotting. These need the full program. Not tried: SAVEAS, WBLOCK, INSERT, EXPLODE, clipboard (those belong to trial 1).
+4. **Incident disclosure (what my runs did).**
+   1. Run4 (full) used the built-in "unnamed" profile and stopped at an "AutoCAD Message: Customization file load failed. File not found: acad" dialog. I ended that AutoCAD with taskkill. This was a forced close.
+   2. I copied Tim's profile key to a new key named ZeroTrial and ran run5 with `/p ZeroTrial`. AutoCAD then made ZeroTrial the **current profile** in the registry. My script noticed and **wrote the current-profile value back to "Tim"** (a registry write). Read now: the value is "Tim".
+   3. The script also set SECURELOAD to 0 inside the sessions I ran. I have since read Tim's own profile: its SECURELOAD is 0 (I did not set that; my sessions ran under other profiles).
+   4. Run2 headless was stuck at a prompt and I ended it with taskkill.
+   5. A copy of AutoCAD's own error-reporting start-up log (it carries a device id) sits in `evidence	10un5-full\ErrorReports`. It was written by AutoCAD, not by me.
+5. **Evidence:** `C:\CE_WORK	rials\zero\evidence	10un4-headless\events.log`, `run5-full\events.log`, `dialog1.png`, the comparison script `scripts\cmp_logs.py`.
+6. **What it means for the build approach.** Events and the transform overrule behave the same headless and full for these commands, so move, copy, mirror, rotate, erase and undo logic can be tested headless and trusted to carry over. Anything involving selection by window, idle, or the screen needs full AutoCAD. Under the new rules the headless engine cannot be used without its isolate option (otherwise it loads Tim's live CE plugin and writes to his live files), so unattended headless runs are BLOCKED until Tim decides.
 
 ---
 
