@@ -52,6 +52,12 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-038** (16 Nov 2026) Every situation must be thought through: "HAVE YOU THOUGHT ABOUT ALL SITUATIONS AND SCENARIOS WHAT HAPPENS IF A PIPE IS PLACED ANYWHERE, ARE YOU FINE WITH THAT, WHAT HAPPENS IF A CHARGED PIPE RUNS FROM DOWNPIPE TO WATER TANK ONLY". Tim also asked for both pages to be sent together when the elements page is done.
 
+**D-039** (16 Nov 2026) The concept pictures are illustrations, not one-to-one. The real thing uses the office's own blocks and layouts exactly as drawn today. Tim's two examples: "WATER TANK TEXT HAS AN ARROW BACK TO WATER TANK ISNT SHOWN IN YOURS BUT THATS HOW WE DISPLAY IT" and "THE PIT AND THE PIT WALL YOURE SHOWING JUST THE INTERNAL PIT WALL LINE AND NOT THE OUTER DASHED/HIDDEN LINE". So: the tank note has a leader arrow back to the tank (a part of the tank element); a pit shows its inner wall line and its outer dashed / hidden line.
+
+**D-040** (16 Nov 2026) "AGI DRAINS DONT HAVE INVERT LEVELS."
+
+**D-041** (16 Nov 2026) All pipes behave alike: "ALL PIPES ACT IN THE SAME OR SIMILAR WAYS LIKE INVERT LELVEL IS ALWAYS PLACED IN THE SAME SPOT ON THE PIPE UNLESS THERES CLASHES IN WHICH CASE IT SLIDES UP AND DOWN TO SUIT". (One standard spot for each part on every pipe kind; a clash is solved by sliding the part along the pipe.)
+
 ## How levels are designed
 
 **D-016** (16 Nov 2026) [8v] Moving a pit has no single rule for levels: "IT DEPENDS ON THE DESIGN NO? SO INVERTS MIGHT HAVE TO CHANGE UPSTREAM OR WE MIGHT NEED TO UPDATE INVERTS TO SUIT OR GRADE".
