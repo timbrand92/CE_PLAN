@@ -21586,3 +21586,24 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Evidence:** Found by reading the code on 16 Nov 2026 (lane trust-safety-fixes). Not yet seen in AutoCAD for PIT; the same update was seen filling pit inverts on CDEDIT's open (batch 11 item 19, robot, 3.0.90.13).
 
 **Status:** OPEN
+
+
+## BUG-1459 — A CE pipe shows nothing in AutoCAD without CE (the picture saved in the drawing is empty)
+
+**Command / Area:** CE pipe object (CE_CVL_OBJECTS_2027.dbx), every drawing with a CE pipe sent to someone without CE. HIGH. DRAWING SENT OUT LOOKS INCOMPLETE.
+
+**Symptom:** Tim, 16 Nov 2026 (relayed by the controller): "projects that used the current or close to current version that use the new pipe type and it doesnt show for people who dont have the plugin". Measured headless on a drawing saved by Civil 3.0.90.13 and opened with no CE: the pipe is a view-only object (ACAD_PROXY_ENTITY), PROXYGRAPHICS 1, PROXYSHOW 1, and EXPLODE of it leaves nothing. CE's ProxyGraphicsGuard only sets PROXYGRAPHICS; nothing ever checked the picture itself.
+
+**Cause:** CeCvlPipeObject derives from AcDbPolyline. The ObjectARX reference for AcDbPolyline::saveAs says a class derived from it must provide its own saveAs, "If such classes do not provide their own implementation of saveAs(), then no graphics will be saved as proxies." It had none. Single and twin pipes alike (one class). The older CeCvlPipe (AcDbCurve) uses AutoCAD's default and never had the gap.
+
+**Expected behaviour:** a drawing saved with CE opens without CE showing each pipe as on screen (dashed band per barrel and magenta walls), view only.
+
+**Steps to confirm in AutoCAD:** (1) In a scratch copy draw a pipe and a twin pipe with CD, save, close. (2) Open it with CE not loaded. Right = both pipes show. Wrong = nothing where the pipes are. (3) A drawing saved by 3.0.90.13: open with the fixed version, QSAVE, open without CE: the pipe shows.
+
+**Test that catches it:** Bug1459ProxyPictureSavedTests (source guards: the pipe object declares saveAs and saves worldDraw for every save type). Headless proof: open with no CE and EXPLODE the view-only object; real linework must appear (C:\CE_WORK\scratch\proxy13\px13_run.ps1).
+
+**Reference:** Modules\Drainage.NativeObjects2027\CeCvlPipeObject.h/.cpp (saveAs). Draft PR 2112 (claude/trust-bug1459-proxy-picture); build branch claude/trust-proxy-picture-saveas 157e53e3; batch 13 (Civil 3.0.90.15, prepared, not installed). Runbook: areas\trust-run\INSTALL_BATCH_14NOV.md, BATCH 13.
+
+**Evidence:** Headless (AutoCAD 2027 core console, 16 Nov 13:14, lane trust-safety-fixes). Saved by the batch 11 enabler, EXPLODE without CE left 0 entities: fresh single+twin, and the robot's 3.0.90.13 drawing. Saved by the batch 13 enabler: 9 polylines for single+twin, and 3 for the robot's drawing after one SAVEAS or QSAVE. Not yet seen in GUI AutoCAD or on a PC without CE.
+
+**Status:** OPEN (fix built in batch 13, not installed)
