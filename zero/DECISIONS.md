@@ -112,6 +112,8 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-068** (16 Nov 2026, evening) On the two full-size mock-ups (`pictures\pit_window_full_size.html`, `pictures\pipe_window_full_size.html`): "approve both but visually they are pretty average, look at our rules". Read as: the structure of both windows is approved (80% window; square preview for the Pit style, wide preview for the Pipe style; numbered choices in decision order; "What else changes" strip; Inspect and Match on the left, Cancel and OK on the right; live preview; both screen sizes). The look is NOT approved: it must be redone to `UI_UX_RULES.md` (Apple-like finish, one accent, cards that read like a maths teacher's working with one bold answer and the sum shown, colour for status only with a word, dark and light both designed, spacing scale, a separate UI critic before it is shown).
 
+**D-069** (16 Nov 2026, evening) On the redone look of the two windows (screenshots of the Pit window in dark and the Pipe window in light, version 3): "those screenshots look great". Read as: this look is the direction for the UI plan (dark or light all through, following AutoCAD; one bold answer per card; the working shown as a sum; a small side view in the Levels card; status pills with a word; "What else changes" strip with Moves / Check / Wrong pills). He had seen two screenshots, not yet the working pages or every state; a separate UI critic was still checking.
+
 ## How levels are designed
 
 **D-016** (16 Nov 2026) [8v] Moving a pit has no single rule for levels: "IT DEPENDS ON THE DESIGN NO? SO INVERTS MIGHT HAVE TO CHANGE UPSTREAM OR WE MIGHT NEED TO UPDATE INVERTS TO SUIT OR GRADE".
