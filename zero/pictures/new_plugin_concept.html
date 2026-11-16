@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>New plugin concept</title>
+<style>
+  :root { --bg:#f5f6f8; --card:#fff; --ink:#1b2430; --soft:#5a6573; --line:#d6dbe2; --blue:#1e5aa8; --tint:#eef3fa; --ok:#1b7f3b; --okbg:#e2f3e7; --amber:#b86a00; --amberbg:#fff6e0; --red:#c62828; --redbg:#fde7e7; --panel:#2b3038; --panel2:#363c46; --ptext:#e8ebef; --gold:#e3b341; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.5 "Segoe UI", Arial, sans-serif; }
+  main { max-width:1080px; margin:0 auto; padding:24px 16px 56px; }
+  h1 { font-size:28px; margin:0 0 4px; }
+  h2 { font-size:21px; margin:36px 0 6px; padding-top:14px; border-top:2px solid var(--line); }
+  h3 { font-size:15px; margin:0 0 8px; color:var(--blue); text-transform:uppercase; letter-spacing:.03em; }
+  .sub { color:var(--soft); margin:0 0 14px; }
+  .small { font-size:14px; color:var(--soft); }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:14px 16px; margin:12px 0; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:12px; }
+  .grid3 { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:12px; }
+  ol, ul { margin:6px 0; padding-left:22px; } li { margin:3px 0; }
+  .tag { display:inline-block; border-radius:10px; padding:1px 9px; font-size:12.5px; font-weight:600; white-space:nowrap; }
+  .ok { background:var(--okbg); color:var(--ok); } .am { background:var(--amberbg); color:var(--amber); } .rd { background:var(--redbg); color:var(--red); } .gy { background:#e9ecf0; color:#3d4856; }
+  .big { font-size:30px; font-weight:700; font-variant-numeric:tabular-nums; }
+  .row { display:flex; justify-content:space-between; gap:12px; border-bottom:1px dotted var(--line); padding:4px 0; }
+  .row span:last-child { text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
+  svg { width:100%; height:auto; display:block; }
+  /* AutoCAD-like mock-ups */
+  .ribbon { background:var(--panel); border-radius:8px; padding:8px 8px 4px; overflow-x:auto; }
+  .tabs { display:flex; gap:14px; font-size:13px; color:#aab2bd; padding:0 6px 6px; }
+  .tabs b { color:var(--gold); border-bottom:2px solid var(--gold); padding-bottom:2px; }
+  .panels { display:flex; gap:6px; min-width:900px; }
+  .rp { background:var(--panel2); border-radius:6px; padding:8px 8px 4px; flex:1; }
+  .rp .btns { display:flex; gap:6px; flex-wrap:wrap; }
+  .rb { background:#454c58; color:var(--ptext); border-radius:5px; padding:7px 9px; font-size:12.5px; min-width:58px; text-align:center; }
+  .rb.main { background:#51607a; font-weight:600; }
+  .rp .name { color:#9aa3af; font-size:11.5px; text-align:center; margin-top:5px; }
+  .pal { background:var(--panel); color:var(--ptext); border-radius:8px; padding:12px 14px; font-size:14px; }
+  .pal h4 { margin:0 0 8px; font-size:14px; color:var(--gold); font-weight:600; }
+  .pal .ptabs { display:flex; gap:10px; font-size:12.5px; color:#9aa3af; margin-bottom:10px; border-bottom:1px solid #454c58; padding-bottom:6px; }
+  .pal .ptabs b { color:#fff; }
+  .f { display:flex; justify-content:space-between; gap:10px; padding:4px 0; border-bottom:1px solid #3a414c; }
+  .f span:last-child { text-align:right; font-variant-numeric:tabular-nums; }
+  .f .src { color:#9aa3af; font-size:12px; margin-left:6px; }
+  .pill { border-radius:9px; padding:0 8px; font-size:12px; font-weight:600; margin-left:6px; }
+  .p-ok { background:#1f5a34; color:#c9f2d5; } .p-am { background:#6b4a00; color:#ffe2a0; } .p-rd { background:#7a1f1f; color:#ffd0d0; }
+  .pal .bigline { font-size:22px; font-weight:700; margin:6px 0 2px; }
+  .bar { height:22px; border-radius:5px; background:#454c58; position:relative; overflow:hidden; margin:8px 0 4px; }
+  .bar i { position:absolute; left:0; top:0; bottom:0; background:#4d8fe0; }
+  .bar u { position:absolute; top:0; bottom:0; border-left:2px dashed #ffe2a0; }
+  .two { display:grid; grid-template-columns:1fr 1fr; gap:12px; } @media (max-width:700px){ .two { grid-template-columns:1fr; } }
+  .ba { border:1px solid var(--line); border-radius:8px; padding:10px 12px; background:#fff; }
+  .ba b.h { display:block; font-size:12.5px; letter-spacing:.04em; text-transform:uppercase; color:var(--soft); margin-bottom:4px; }
+  .warn { background:var(--amberbg); border:1px solid #ecd28f; border-radius:8px; padding:12px 16px; margin:12px 0; }
+  .step { background:var(--tint); border:1px solid #c9d8ee; border-radius:6px; padding:8px 10px; font-size:14px; }
+  .step b { display:block; color:var(--blue); font-size:13px; }
+  .flow { display:grid; grid-template-columns:repeat(auto-fit, minmax(150px, 1fr)); gap:6px; margin:10px 0; }
+</style>
+</head>
+<body>
+<main>
+<h1>The new plugin, designed from scratch</h1>
+<p class="sub">My interpretation, drawn from your decisions of 16 Nov and the civil study. Draft 1, not approved. Pictures are mock-ups with made-up but realistic numbers. How it is built inside is not decided here; that is the research stage.</p>
+
+<div class="card">
+  <h3>The idea</h3>
+  <p style="font-size:18px;margin:4px 0">The drawing holds <b>one drainage network</b>. Every label, level, schedule row, criteria line and detail number is a <b>view of it</b>. Each part still drags on its own. Standards live in <b>one place</b>. What prints is <b>ordinary AutoCAD</b>.</p>
+</div>
+
+<h2>1. One element, parts still editable</h2>
+<div class="two">
+  <div class="ba"><b class="h">Today</b>
+    <p><span class="big" style="color:var(--amber)">13</span> loose objects for one pipe run and its two pits. Move the pit and the label, levels, tag and schedule stay behind.</p>
+  </div>
+  <div class="ba"><b class="h">New</b>
+    <p><span class="big" style="color:var(--ok)">1</span> element. Click any part and the run lights up. Drag the pit and everything tied to it comes along. Drag just the label and only the label moves.</p>
+  </div>
+</div>
+<div class="card">
+<svg viewBox="0 0 1000 300" role="img" aria-label="A selected pipe run showing its grips">
+  <rect width="1000" height="300" fill="#22262d"/>
+  <line x1="165" y1="170" x2="822" y2="150" stroke="#4d8fe0" stroke-width="16" stroke-dasharray="46 22"/>
+  <line x1="165" y1="162" x2="822" y2="142" stroke="#e8ebef" stroke-width="1.2"/><line x1="165" y1="178" x2="822" y2="158" stroke="#e8ebef" stroke-width="1.2"/>
+  <rect x="112" y="145" width="52" height="52" fill="#22262d" stroke="#e8ebef" stroke-width="2" stroke-dasharray="7 4"/>
+  <line x1="112" y1="145" x2="164" y2="197" stroke="#888"/><line x1="164" y1="145" x2="112" y2="197" stroke="#888"/>
+  <rect x="822" y="122" width="56" height="56" fill="#22262d" stroke="#e8ebef" stroke-width="2" stroke-dasharray="7 4"/>
+  <g transform="rotate(-1.75 490 130)"><text x="497" y="132" text-anchor="middle" font-size="17" fill="#fff" font-family="Arial Narrow, Arial">150 DIA. UPVC SN8 PIPE AT 1 IN 100</text></g>
+  <g transform="rotate(-1.75 300 195)"><line x1="345" y1="202" x2="275" y2="202" stroke="#e8ebef" stroke-width="1.6"/><polygon points="262,202 282,196 282,208" fill="#e8ebef"/></g>
+  <g transform="rotate(-1.75 200 152)"><text x="176" y="156" font-size="14" fill="#ff8a80" font-family="Arial Narrow, Arial">IL 4.84</text></g>
+  <g transform="rotate(-1.75 760 135)"><text x="745" y="138" font-size="14" fill="#ff8a80" font-family="Arial Narrow, Arial">IL 5.25</text></g>
+  <g transform="rotate(-45 95 130)"><text x="60" y="132" font-size="15" fill="#fff" font-family="Arial Narrow, Arial">CL 5.35</text></g>
+  <circle cx="150" cy="242" r="20" fill="#22262d" stroke="#e8ebef" stroke-width="2"/><text x="150" y="248" text-anchor="middle" font-size="16" fill="#fff">P1</text>
+  <circle cx="905" cy="215" r="20" fill="#22262d" stroke="#e8ebef" stroke-width="2"/><text x="905" y="221" text-anchor="middle" font-size="16" fill="#fff">P2</text>
+  <!-- grips -->
+  <g fill="#4d8fe0" stroke="#fff"><rect x="131" y="164" width="12" height="12"/><rect x="844" y="144" width="12" height="12"/><rect x="487" y="155" width="12" height="12"/></g>
+  <g fill="#e3b341" stroke="#fff"><rect x="491" y="110" width="11" height="11"/><rect x="303" y="207" width="11" height="11"/><rect x="170" y="132" width="11" height="11"/><rect x="742" y="116" width="11" height="11"/><rect x="48" y="96" width="11" height="11"/><rect x="144" y="266" width="11" height="11"/></g>
+  <g font-size="12.5" fill="#cfd6df">
+    <text x="524" y="186">blue grips: move a pit, or bend the pipe</text>
+    <text x="560" y="112">gold grips: slide one label, arrow, level or tag</text>
+    <text x="330" y="236">flow arrow always points downhill, from the levels</text>
+  </g>
+</svg>
+<p class="small">Label distance from the pipe comes from the standards (0.75 mm on paper). A label you slid for a clash stays put and shows a small mark; "reset to standard" puts it back.</p>
+</div>
+
+<h2>2. The whole surface: one tab, one panel</h2>
+<div class="ribbon">
+  <div class="tabs"><span>Home</span><span>Insert</span><span>Annotate</span><b>CE Civil</b><span>CE Tools</span></div>
+  <div class="panels">
+    <div class="rp"><div class="btns"><div class="rb main">Job</div><div class="rb">Council</div><div class="rb">Areas</div></div><div class="name">Job</div></div>
+    <div class="rp" style="flex:2"><div class="btns"><div class="rb main">Pit</div><div class="rb main">Pipe</div><div class="rb">Downpipe ▾</div><div class="rb">Tank</div><div class="rb">Line drain ▾</div><div class="rb">Discharge point</div></div><div class="name">Network</div></div>
+    <div class="rp"><div class="btns"><div class="rb main">Levels</div><div class="rb">Level tag ▾</div><div class="rb">Fall</div></div><div class="name">Levels</div></div>
+    <div class="rp" style="flex:1.6"><div class="btns"><div class="rb">Schedule</div><div class="rb">Criteria</div><div class="rb">Details ▾</div><div class="rb">Notes ▾</div><div class="rb main">Issue</div></div><div class="name">Sheet</div></div>
+    <div class="rp"><div class="btns"><div class="rb main">Checks</div><div class="rb">Standards</div><div class="rb">Help</div></div><div class="name">Check</div></div>
+  </div>
+</div>
+<div class="grid3">
+  <div class="card"><h3>Buttons</h3><p><span class="big" style="color:var(--ok)">about 20</span></p><p class="small">Against 145 civil commands today, 78 of them hidden.</p></div>
+  <div class="card"><h3>Typing to place a pipe</h3><p><span class="big" style="color:var(--ok)">2 picks</span></p><p class="small">From pit, to pit. Size, class, label, arrow and level texts come from the standards and last-used.</p></div>
+  <div class="card"><h3>Repair tools on the ribbon</h3><p><span class="big" style="color:var(--ok)">0</span></p><p class="small">If the network needs repair commands in daily use, the design has failed.</p></div>
+</div>
+
+<h2>3. The side panel: type once, see the sum</h2>
+<div class="grid">
+  <div class="pal">
+    <div class="ptabs"><b>Job</b><span>Network</span><span>Levels</span><span>Storage</span><span>Checks</span><span>Sheet</span></div>
+    <h4>Job facts · two units</h4>
+    <div class="f"><span>Council</span><span>Kingston<span class="src">picked</span></span></div>
+    <div class="f"><span>Discharge to</span><span>Council pipe, front<span class="src">letter</span></span></div>
+    <div class="f"><span>Connection invert</span><span>4.75<span class="pill p-am">assumed</span></span></div>
+    <div class="f"><span>Permitted discharge</span><span>6.00 l/s<span class="src">letter</span></span></div>
+    <div class="f"><span>Method</span><span>Boyd's, council copy<span class="src">council rule</span></span></div>
+    <div class="f"><span>Site area</span><span>650.3 m²<span class="src">measured</span></span></div>
+    <div class="f"><span>Impervious</span><span>375.6 m²<span class="src">measured</span></span></div>
+    <div class="f"><span>Roof to tank 1 / tank 2</span><span>164 / 164 m²<span class="src">STORM report</span></span></div>
+    <p style="color:#9aa3af;font-size:12.5px;margin:8px 0 0">Amber "assumed" prints the "approx ... builder to confirm" note on the plan by itself, and stays on the Checks list until confirmed.</p>
+  </div>
+  <div class="pal">
+    <div class="ptabs"><span>Job</span><span>Network</span><span>Levels</span><b>Storage</b><span>Checks</span><span>Sheet</span></div>
+    <h4>Detention</h4>
+    <div class="bigline">2.00 m³ provided <span class="pill p-ok">OK</span></div>
+    <div style="color:#9aa3af;font-size:13px">1.66 m³ required · Boyd's, 5 minute storm governs</div>
+    <div style="margin-top:10px">
+      <div class="f"><span>Tank WT1, detention share</span><span>1.00</span></div>
+      <div class="f"><span>Tank WT2, detention share</span><span>1.00</span></div>
+      <div class="f"><span>Pipes and pits</span><span>0.00</span></div>
+      <div class="f"><span><b>Total</b></span><span><b>2.00</b></span></div>
+    </div>
+    <h4 style="margin-top:12px">Orifice</h4>
+    <div class="bigline">69 mm → 5.84 l/s <span class="pill p-ok">under 6.00</span></div>
+    <div style="color:#9aa3af;font-size:13px">0.6 × area × √(2 × 9.81 × 0.3455). Baffle 380, head to centre 345.5.</div>
+    <p style="color:#9aa3af;font-size:12.5px;margin:8px 0 0">The criteria box on the sheet, the orifice pit detail and the computations PDF all print from these lines.</p>
+  </div>
+</div>
+
+<h2>4. Levels: the plugin shows the room, you decide</h2>
+<p>You told me there is no single rule: it depends which end is critical. So the levels view shows the fall you have against the fall you need, and never moves a level by itself.</p>
+<div class="grid">
+  <div class="pal">
+    <div class="ptabs"><span>Job</span><span>Network</span><b>Levels</b><span>Storage</span><span>Checks</span><span>Sheet</span></div>
+    <h4>Run: rear pit P4 → P3 → P1 → council pipe</h4>
+    <div class="bigline">180 mm spare <span class="pill p-ok">works</span></div>
+    <div class="bar"><i style="width:78%"></i><u style="left:100%"></u></div>
+    <div class="f"><span>Fall available</span><span>0.82 m</span></div>
+    <div class="f"><span style="color:#9aa3af">top of run 5.57 (cover 6.02 less 300 cover less 150 pipe) less connection 4.75</span><span></span></div>
+    <div class="f"><span>Fall needed</span><span>0.64 m</span></div>
+    <div class="f"><span style="color:#9aa3af">58 m at 1 in 100, plus 3 pit drops of 20</span><span></span></div>
+    <div class="f"><span>Critical end</span><span>Outlet (connection is high)</span></div>
+    <div style="margin-top:10px;display:flex;gap:6px;flex-wrap:wrap">
+      <span class="pill p-ok" style="margin:0">🔒 connection invert</span><span class="pill p-ok" style="margin:0">🔒 cover levels</span><span class="pill p-ok" style="margin:0">🔒 top water level</span>
+    </div>
+    <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+      <div class="rb main">Level up from outlet…</div><div class="rb">Level down from top…</div><div class="rb">Set one invert</div>
+    </div>
+  </div>
+  <div class="card">
+    <h3>You drag pit P3 half a metre to miss a footing</h3>
+    <ol>
+      <li><b>While dragging:</b> pipes stretch, labels ride along, the bar above moves live.</li>
+      <li><b>On release:</b> inverts are untouched. Labels re-read the true grade ("1 IN 96"). Anything now under a limit goes amber on the plan and on Checks.</li>
+      <li><b>If you want to re-level:</b> press "Level up from outlet" or "Level down from top", pick the grade. A preview lists every invert that would change, old and new.</li>
+      <li><b>Apply:</b> one click. Plan text, schedule, storage list and details follow. One Ctrl+Z puts it all back.</li>
+    </ol>
+    <p class="small">Locked by default, from your answer: connection invert, cover levels, top water level and orifice. Tank outlet is free unless you lock it.</p>
+  </div>
+</div>
+
+<h2>5. Checks: one list, plain words</h2>
+<div class="pal">
+  <div class="ptabs"><span>Job</span><span>Network</span><span>Levels</span><span>Storage</span><b>Checks</b><span>Sheet</span></div>
+  <div class="f"><span>Storage 2.00 m³ against 1.66 required</span><span><span class="pill p-ok">OK</span></span></div>
+  <div class="f"><span>Orifice 5.84 l/s against 6.00 permitted</span><span><span class="pill p-ok">OK</span></span></div>
+  <div class="f"><span>Top water level 5.20 below every pit cover (lowest 5.35)</span><span><span class="pill p-ok">OK</span></span></div>
+  <div class="f"><span>Pipe P3 → P1 grade 1 in 112 (minimum 1 in 100, AS 3500.3)</span><span><span class="pill p-rd">Too flat</span></span></div>
+  <div class="f"><span>Pit P2 is 0.93 deep; a 450 × 450 pit is good to 0.60 (office table)</span><span><span class="pill p-rd">Pit too small</span></span></div>
+  <div class="f"><span>Connection invert 4.75 is assumed</span><span><span class="pill p-am">Needs you</span></span></div>
+  <div class="f"><span>Pit P4 is 0.8 m from the crossover splay (Kingston asks 1.0 m)</span><span><span class="pill p-am">Needs you</span></span></div>
+  <p style="color:#9aa3af;font-size:12.5px;margin:8px 0 0">Click a line to zoom to it. Each limit says where it came from: council, then AS 3500.3, then office. Checks warn; they never block drawing. Issue asks for no red.</p>
+</div>
+
+<h2>6. One place for standards</h2>
+<div class="grid">
+  <div class="card"><h3>Drafting</h3>
+    <div class="row"><span>Pipe label height</span><span>2.5 mm</span></div>
+    <div class="row"><span>Pipe label clear of pipe</span><span>0.75 mm</span></div>
+    <div class="row"><span>Invert text height / clear</span><span>1.8 mm / 0.5 mm</span></div>
+    <div class="row"><span>Cover level text</span><span>2.0 mm at 45°</span></div>
+    <div class="row"><span>Pipe label wording</span><span>{dia} DIA. {material} {class} PIPE AT 1 IN {grade}</span></div>
+    <div class="row"><span>Gravity pipe layer</span><span>STORMWATER PIPE, blue dashed</span></div>
+    <p class="small">Starting values are the ones I measured on your three finished jobs and your template.</p>
+  </div>
+  <div class="card"><h3>Engineering</h3>
+    <div class="row"><span>Minimum grade, gravity</span><span>1 in 100</span></div>
+    <div class="row"><span>Pit 450 × 450 good to</span><span>0.60 deep</span></div>
+    <div class="row"><span>Pit 600 × 600 good to</span><span>0.90 deep</span></div>
+    <div class="row"><span>Tank orifice</span><span>30 mm</span></div>
+    <div class="row"><span>Orifice coefficient</span><span>0.6</span></div>
+    <div class="row"><span>Pervious coefficient</span><span>0.30 or 0.35: you settle once</span></div>
+  </div>
+  <div class="card"><h3>Council (one dated set each)</h3>
+    <div class="row"><span>Method</span><span>Boyd's / OSD4W / council gives</span></div>
+    <div class="row"><span>Storms</span><span>1 in 5 out, 1 in 10 stored</span></div>
+    <div class="row"><span>Minimum orifice</span><span>50 / 65 / 90</span></div>
+    <div class="row"><span>Share underground</span><span>50% / 60% / all</span></div>
+    <div class="row"><span>Tank credit rule</span><span>per council</span></div>
+    <div class="row"><span>Notes and details required</span><span>placed by name</span></div>
+  </div>
+</div>
+<p class="small">Everyone in the office reads the same standards. A change is made once, by you. A job can carry a marked exception. Adding a council is adding a set of rows, not new programming.</p>
+
+<h2>7. The sheet fills itself</h2>
+<div class="grid">
+  <div class="card"><h3>Read from the network</h3>
+    <ol><li>Pit schedule (a pit with two inlets gets its two rows).</li><li>Detention criteria box.</li><li>Roof-to-tank areas box.</li><li>The job's orifice pit detail: cover, top water level, baffle, orifice, inverts.</li><li>Tank detail: litres, split, 30 orifice.</li><li>Computations PDF.</li></ol>
+  </div>
+  <div class="card"><h3>Read from the job facts</h3>
+    <ol><li>Title block, drawing register, revision rows.</li><li>Issue stamp for the stage picked at Issue.</li><li>Council notes block for that council.</li><li>"Assumed, builder to confirm" wording where a fact is still assumed.</li></ol>
+  </div>
+  <div class="card"><h3>Placed by name from the office library</h3>
+    <ol><li>Standard details (pipe bedding, junction pit, penetrations).</li><li>General notes, legend, disclaimer, warning boxes.</li></ol>
+    <p class="small">The parked kit of 600 samples beside the sheet goes away.</p>
+  </div>
+</div>
+
+<h2>8. With no plugin: the hard promise</h2>
+<div class="warn"><b>Your live case is the test.</b> Today a drawing made with the present plugin shows nothing to people without it. In this design everything that prints is an ordinary AutoCAD object (polyline, text, block), exactly what your hand-drawn sheets are made of now. The tie between parts is hidden data that an outsider's AutoCAD simply ignores.</div>
+<div class="grid3">
+  <div class="card"><h3>Proof, every release</h3><p class="small">Open the sheet on a PC with nothing installed. Plot it. Compare with the office plot. Must be identical.</p></div>
+  <div class="card"><h3>If an outsider edits it</h3><p class="small">They can; it is ordinary linework to them. When it comes back, the plugin says what no longer matches. How much of the tie survives is a research question.</p></div>
+  <div class="card"><h3>Honest limit</h3><p class="small">I have not yet proven how best to do this inside AutoCAD 2027. It is the first thing the research stage must settle, with your live drawing as a case.</p></div>
+</div>
+
+<h2>9. CE Tools and the Manager</h2>
+<div class="grid">
+  <div class="card"><h3>CE Tools: each helper exists once</h3>
+    <p>Move + Rotate, Copy + Rotate, leader, dimensions, hatch by pen, layer by pen, revision cloud, clean and purge, background tidy, copy as block.</p>
+    <p class="small">Today: 486 old typed names, three sets of palettes, the same helper in up to five places, and the general ones only inside Structural. Habit names stay (MR, CR, Q, LD).</p>
+  </div>
+  <div class="card"><h3>Manager: three jobs only</h3>
+    <ol><li><b>What is installed:</b> one version number for everything.</li><li><b>Update:</b> offered when AutoCAD starts. One click. No administrator. One click to go back.</li><li><b>Report a fault.</b></li></ol>
+    <p class="small">Today: 11 steps and 12 things that must agree. Your side: release to named people first, then everyone.</p>
+  </div>
+</div>
+<div class="card"><h3>From the core</h3>
+  <div class="row"><span>AutoCAD versions</span><span>2027 only</span></div>
+  <div class="row"><span>Packages to install</span><span>1 (civil, CE tools and Manager together)</span></div>
+  <div class="row"><span>Version numbers to keep in step</span><span>1</span></div>
+  <div class="row"><span>Administrator rights</span><span>none</span></div>
+  <div class="row"><span>Settings folders per user</span><span>1, plus the shared office standards</span></div>
+  <div class="row"><span>Old copies left in AutoCAD's folders</span><span>0</span></div>
+</div>
+
+<h2>10. Built to be added to</h2>
+<p>Every kind of thing is described the same six ways, so a new kind is added without touching the old ones.</p>
+<div class="flow">
+  <div class="step"><b>1 Facts it holds</b>Each with a source and a status.</div>
+  <div class="step"><b>2 Parts it shows</b>Ordinary objects at standard positions.</div>
+  <div class="step"><b>3 What it connects to</b>From, to, feeds, overflows to.</div>
+  <div class="step"><b>4 Sums it feeds</b>Storage, schedule, checks.</div>
+  <div class="step"><b>5 Where else it appears</b>Schedule, boxes, details.</div>
+  <div class="step"><b>6 Its checks</b>With the limit's source.</div>
+</div>
+<p class="small">Five statuses for a fact, and no more: given, measured, chosen, worked out, assumed.</p>
+
+<h2>11. Order of building (no dates)</h2>
+<div class="flow">
+  <div class="step"><b>Release 1</b>One real house or units job, start to issue: job facts, pits, pipes, symbols, tanks, levels, checks, schedule, title and issue, the no-plugin proof, one-click update, CE Tools.</div>
+  <div class="step"><b>Release 2</b>Detention complete: Boyd's inside, storage list, orifice, criteria box, the job's details, computations.</div>
+  <div class="step"><b>Then one kind at a time</b>Pumped, soakage, raingarden, outfall with long section, industrial, basement, civil site drawings, adopt an old drawing. You rank them.</div>
+  <div class="step"><b>Then structural</b>Once all of this works.</div>
+</div>
+<p class="small">Each tool gets its own interview, design record and mock-up before anything is built. Nothing here is automatic design: it shows, checks and carries; the engineer designs.</p>
+</main>
+</body>
+</html>

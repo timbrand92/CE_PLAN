@@ -202,6 +202,16 @@ Note from Tim's prompt of 16 Nov 2026: "replaced for this planning chat by "Star
 
 ---
 
+## Rules added after the first paste
+
+**R-65** (Tim, 16 Nov 2026, his words) "YOU NEED TO ORGANISE IT IN A SCALABLE AND CAN BUILT UPON WAY SO THAT WE HAVE CLEAR INSTRUCTIONS AND REFERENCES FOR FUTURE TASKS THIS IS A STRICT RULE ALWAYS BUILD FOR SCALABILITY AND ABILITY TO BE BUILT UPON". Applies to findings, plans, standards, data and the plugin itself.
+
+**R-66** (Tim, 16 Nov 2026, his words) "we will be going with autocad 2027 build only for this".
+
+**R-67** (Tim, 16 Nov 2026, his words) "for now lets focus on civil/ce tools/manager and then structural will only become part of it once everything is working".
+
+---
+
 ## Hard limits for the planning chat (Tim's words, 16 Nov 2026)
 
 These apply to the chat "CE_ACAD / zero plan / 01" only. They are not R-numbered because they end when planning ends.
