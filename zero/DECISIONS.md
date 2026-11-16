@@ -78,6 +78,12 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-051** (16 Nov 2026, evening) Ribbon: Tim picked "B: short CE tab + pop-ups" from the page `pictures\pick_a_ribbon.html`. One short CE Civil tab always in the row; a tab for the picked thing (Pit, Pipe, Inlet, Tank) appears when it is selected and goes when it is let go, the way AutoCAD's own Hatch tab does. Which buttons sit on the short tab is not yet settled (button names on the page were placeholders).
 
+**D-052** (16 Nov 2026, evening) Naming rule: Tim rejected all three options on `pictures\pick_a_naming_rule.html`. His words: "I DONT LIKE ANYTHING, THINK ABOUT HOW REGULAR COMMANDS WORK LIKE BELOW", followed by the office's own short-name list (kept exactly in `evidence\TIM_ALIAS_LIST_16NOV.md`: A Arc, C Copy, Ch Chamfer, Ci Circle, M Move, Pl Pline, T Trim and so on). The planning chat's reading, to be confirmed by Tim: plugin names should work the way AutoCAD's do, a plain full word plus a one to three letter short name on the first-letter pattern, kept in the office's own list. Not yet confirmed.
+
+**D-053** (16 Nov 2026, evening) Old typed names: "Old names are gone". Only the new names work from day one.
+
+**D-054** (16 Nov 2026, evening) Names that sit on AutoCAD's own short names: "Keep IO, rename C and RC".
+
 ## How levels are designed
 
 **D-016** (16 Nov 2026) [8v] Moving a pit has no single rule for levels: "IT DEPENDS ON THE DESIGN NO? SO INVERTS MIGHT HAVE TO CHANGE UPSTREAM OR WE MIGHT NEED TO UPDATE INVERTS TO SUIT OR GRADE".
