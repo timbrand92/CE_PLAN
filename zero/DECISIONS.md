@@ -124,6 +124,14 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-074** (16 Nov 2026, evening) Waiting on something that is not a value in the drawing: "A short note on the job in the Manager". Assumed values in the drawing still flag themselves.
 
+**D-075** (16 Nov 2026, evening) Pit numbers: "P1 at the outlet, Renumber button". New pits take the next free number; a Renumber button re-runs them from the outlet working upstream when asked. (Gap check Pit item 4.)
+
+**D-076** (16 Nov 2026, evening) Plastic pits in the schedule: "My choice per pit". A tick box "In the schedule" on each plastic pit, starting ticked. (Pit item 5.)
+
+**D-077** (16 Nov 2026, evening) A pit placed on a drawn pipe: "Split the pipe in two". Two pipes joined to the new pit, each with its own label and levels; "What else changes" says so. (Pit item 6.)
+
+**D-078** (16 Nov 2026, evening) Cover levels: "Locked on every pit". Once typed, only the person can change a cover level; working out levels along a run never touches it. (Pit item 2; follows D-018.)
+
 ## How levels are designed
 
 **D-016** (16 Nov 2026) [8v] Moving a pit has no single rule for levels: "IT DEPENDS ON THE DESIGN NO? SO INVERTS MIGHT HAVE TO CHANGE UPSTREAM OR WE MIGHT NEED TO UPDATE INVERTS TO SUIT OR GRADE".
