@@ -23,7 +23,8 @@
 
 1. **Style 1, square preview:** a thing at one spot. Preview on the left, cards beside it. Pit, downpipe, overflow, FO, IO, GIO, floor waste, tank.
 2. **Style 2, wide preview:** a thing that runs along a line. Preview as a band across the top, cards in a row beneath. Pipe of every kind, AG drain, trench grate, spoon drain, strip drain.
-3. Which style a later tool uses is decided on that logic: one spot, or along a line. (Sorting by the planning chat on Tim's "THINK ABOUT IT LOGICALLY"; his to correct.) Windows that are neither (job facts, pit schedule, checks, issue, Manager) keep the same frame, cards, strip and button bar; their preview shape is decided when each is designed, with Tim.
+3. **The preview's shape follows the shape of the thing shown (D-113).** A tall subject, such as the pit schedule, uses the left-hand full-height preview with the choices on the right, so a 16-row schedule is readable.
+4. Which style a later tool uses is decided on that logic: one spot, or along a line. (Sorting by the planning chat on Tim's "THINK ABOUT IT LOGICALLY"; his to correct.) Windows that are neither (job facts, pit schedule, checks, issue, Manager) keep the same frame, cards, strip and button bar; their preview shape is decided when each is designed, with Tim.
 
 ## 4. What a card is
 
