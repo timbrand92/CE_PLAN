@@ -3,53 +3,134 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
 <title>New plugin concept, draft 2</title>
 <style>
   :root {
-    --bg:#f3f5f8; --card:#ffffff; --ink:#1a2330; --mid:#4c5766; --soft:#7a8594; --line:#dde2e9;
-    --accent:#1e5aa8; --okc:#1b7f3b; --okb:#e4f3e8; --amc:#a35f00; --amb:#fff3d9; --rdc:#b3261e; --rdb:#fde9e7;
-    --pipe:#2f6fc4; --paper:#fbfcfd;
+    --bg:#f3f5f8; --card:#ffffff; --tint:#f1f4f8; --ink:#1a2330; --mid:#4c5766; --soft:#66717f; --line:#dde2e9;
+    --accent:#1e5aa8; --onaccent:#ffffff;
+    --okc:#1b7f3b; --okb:#e4f3e8; --amc:#8f5300; --amb:#fff3d9; --amline:#ecd49a; --rdc:#b3261e; --rdb:#fde9e7; --ntc:#4c5766; --ntb:#e8ecf1;
+    --pipe:#2f6fc4; --paper:#f5f7fa; --pitfill:#ffffff; --hatch:#9aa3ad; --lvl:#b3261e; --tipbg:#1a2330; --tipfg:#ffffff;
   }
+  /* DARK-THEME-START */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg:#141a22; --card:#1e2631; --tint:#283241; --ink:#e7ecf3; --mid:#b9c2ce; --soft:#97a3b2; --line:#35414f;
+      --accent:#5aa2f0; --onaccent:#0f1722;
+      --okc:#7bd598; --okb:#1c3a29; --amc:#f2bd5e; --amb:#3e3013; --amline:#6a5320; --rdc:#f59a92; --rdb:#4a2421; --ntc:#c6ced9; --ntb:#333f4e;
+      --pipe:#5aa2f0; --paper:#2a3340; --pitfill:#2a3340; --hatch:#8793a1; --lvl:#ff9389; --tipbg:#e7ecf3; --tipfg:#141a22;
+    }
+  }
+  /* DARK-THEME-END */
   * { box-sizing:border-box; }
+  /* Three text sizes (20, 16, 13) plus the big answer (28). */
   body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.5 "Segoe UI", Arial, sans-serif; }
-  main { max-width:1080px; margin:0 auto; padding:24px 16px 64px; }
+  main { max-width:1080px; margin:0 auto; padding:24px 16px 24px; }
   h1 { font-size:28px; font-weight:700; margin:0 0 8px; }
-  h2 { font-size:20px; font-weight:700; margin:40px 0 8px; }
+  h2 { font-size:20px; font-weight:600; margin:40px 0 8px; }
+  b { font-weight:700; }
   .lead { color:var(--mid); margin:0 0 16px; }
-  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px; margin:16px 0; box-shadow:0 1px 2px rgba(26,35,48,.04); }
-  .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:16px; margin:16px 0; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px; margin:16px 0; box-shadow:0 1px 2px rgba(26,35,48,.04); min-width:0; }
+  .grid { display:grid; grid-template-columns:1fr; gap:16px; margin:16px 0; }
   .grid .card { margin:0; }
   .label { font-size:13px; color:var(--soft); letter-spacing:.02em; margin:0 0 4px; }
-  .answer { font-size:32px; font-weight:700; line-height:1.15; margin:0 0 8px; font-variant-numeric:tabular-nums; }
+  .answer { font-size:28px; font-weight:700; line-height:1.2; margin:0 0 8px; font-variant-numeric:tabular-nums; }
   .answer small { font-size:16px; font-weight:400; color:var(--mid); }
-  .note { font-size:13.5px; color:var(--soft); margin:8px 0 0; }
+  .answer.sm { font-size:20px; }
+  .note { font-size:13px; color:var(--soft); margin:8px 0 0; }
   p { margin:8px 0; }
-  .pill { display:inline-block; border-radius:10px; padding:1px 10px; font-size:12.5px; font-weight:600; white-space:nowrap; }
-  .ok { background:var(--okb); color:var(--okc); } .am { background:var(--amb); color:var(--amc); } .rd { background:var(--rdb); color:var(--rdc); }
+  .lbl { color:var(--soft); }
+  .pill { display:inline-block; border-radius:10px; padding:1px 10px; font-size:13px; font-weight:400; white-space:nowrap; }
+  .ok { background:var(--okb); color:var(--okc); } .am { background:var(--amb); color:var(--amc); } .rd { background:var(--rdb); color:var(--rdc); } .nt { background:var(--ntb); color:var(--ntc); }
   /* sums, maths-teacher style */
-  .sum { width:100%; border-collapse:collapse; font-variant-numeric:tabular-nums; font-size:15px; }
+  .sum { width:100%; border-collapse:collapse; font-variant-numeric:tabular-nums; font-size:16px; }
   .sum td { padding:3px 0; vertical-align:top; }
   .sum td.op { width:20px; color:var(--soft); }
-  .sum td.n { text-align:right; width:76px; padding-left:12px; }
-  .sum tr.total td { border-top:1px solid var(--ink); font-weight:700; padding-top:5px; }
-  .sum tr.final td { border-top:1px solid var(--ink); border-bottom:3px double var(--ink); font-weight:700; padding:5px 0; }
+  .sum td.n { text-align:right; width:64px; padding-left:8px; white-space:nowrap; }
+  .sum tr.total td { border-top:1px solid var(--ink); padding-top:5px; }
+  .sum tr.final td { border-top:1px solid var(--ink); border-bottom:3px double var(--ink); padding:5px 0; }
+  .sum tr.total td.n, .sum tr.final td.n { font-weight:700; }
+  .sum tr.head td { font-size:13px; color:var(--soft); }
   .sum td.d { color:var(--mid); }
   .rows { list-style:none; margin:8px 0 0; padding:0; }
-  .rows li { display:flex; justify-content:space-between; gap:16px; padding:6px 0; border-top:1px solid var(--line); font-size:15px; }
-  .rows li span:last-child { text-align:right; color:var(--mid); }
+  .rows li { display:flex; justify-content:space-between; gap:16px; padding:6px 0; border-top:1px solid var(--line); font-size:16px; }
+  .rows li > span:last-child { text-align:right; color:var(--mid); }
+  .rows li > span.pill { align-self:flex-start; }
   svg { width:100%; height:auto; display:block; }
-  .frame { background:var(--paper); border:1px solid var(--line); border-radius:8px; }
-  .steps { display:grid; grid-template-columns:repeat(auto-fit, minmax(230px, 1fr)); gap:16px; margin:16px 0; }
-  .stepc { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:12px; }
-  .stepc b.t { display:block; font-size:13px; color:var(--soft); margin-bottom:8px; font-weight:600; }
-  .stepc p { font-size:14.5px; margin:8px 0 0; }
+  svg.pic, .frame { background:var(--paper); border-radius:8px; }
+  svg text { fill:var(--ink); }
+  .steps { display:grid; grid-template-columns:1fr; gap:16px; margin:16px 0; }
+  .stepc { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px; min-width:0; display:flex; flex-direction:column; gap:8px; }
+  .stepc b.t { display:block; font-size:13px; color:var(--soft); font-weight:400; }
+  .stepc p { margin:0; }
   .two { display:grid; grid-template-columns:1fr 1fr; gap:16px; } @media (max-width:720px){ .two { grid-template-columns:1fr; } }
-  .was, .now { border-radius:8px; padding:12px; border:1px solid var(--line); background:#fff; }
-  .was b.h, .now b.h { display:block; font-size:12.5px; letter-spacing:.05em; text-transform:uppercase; color:var(--soft); margin-bottom:4px; }
-  .honest { background:var(--amb); border:1px solid #ecd49a; border-radius:12px; padding:16px; margin:16px 0; }
-  .honest b { color:var(--amc); }
-  .legendline { font-size:13.5px; color:var(--mid); margin-top:8px; }
+  .was, .now { border-radius:8px; padding:8px 12px; border:0; background:var(--tint); min-width:0; }
+  .was b.h, .now b.h { display:block; font-size:13px; font-weight:400; color:var(--soft); margin-bottom:4px; }
+  .was p, .now p { margin:4px 0; }
+  .fig { font-size:16px; font-variant-numeric:tabular-nums; color:var(--mid); }
+  .fig b { font-size:20px; color:var(--ink); }
+  .honest { background:var(--amb); border:1px solid var(--amline); border-radius:12px; padding:16px; margin:16px 0 0; }
+  .honest .pill { border:1px solid var(--amline); margin-right:4px; }
+  .legendline { font-size:13px; color:var(--mid); margin-top:8px; }
   .k { display:inline-block; width:11px; height:11px; vertical-align:-1px; margin:0 4px 0 12px; }
+  /* small parts added in the fix round */
+  .bar { height:8px; border-radius:4px; background:var(--ntb); margin:4px 0 8px; }
+  .bar i { display:block; height:8px; border-radius:4px; background:var(--soft); }
+  .chip { display:inline-block; min-width:40px; text-align:center; padding:1px 6px; margin:0 4px 4px 0; border-radius:6px; background:var(--card); border:1px solid var(--line); font-variant-numeric:tabular-nums; }
+  .chip.bad { border-color:var(--rdc); color:var(--rdc); }
+  .tabs { display:flex; flex-wrap:wrap; gap:8px; margin:0 0 16px; }
+  .tab { font-size:13px; padding:2px 12px; border-radius:10px; background:var(--tint); color:var(--mid); }
+  .tab.on { background:var(--accent); color:var(--onaccent); }
+  .btn { display:inline-block; margin-top:8px; padding:6px 16px; border-radius:8px; background:var(--accent); color:var(--onaccent); }
+  .sk3 { display:grid; grid-template-columns:1fr; gap:16px; margin:8px 0 16px; }
+  .sk3 figure { margin:0; min-width:0; }
+  .mini { max-width:420px; }
+  .hint { display:none; }
+  .wide-only { display:block; } .narrow-only { display:none; }
+  /* drawing pictures: every colour comes from the theme */
+  .dl { stroke:var(--ink); fill:none; } .df { fill:var(--ink); }
+  .dpit { fill:var(--pitfill); stroke:var(--ink); stroke-width:2; stroke-dasharray:7 4; }
+  .dsel { fill:var(--pitfill); stroke:var(--accent); stroke-width:3; }
+  .dh { stroke:var(--hatch); fill:none; } .dghost { stroke:var(--soft); fill:none; stroke-dasharray:3 3; }
+  .dt { font-family:"Arial Narrow", Arial, sans-serif; }
+  svg text.dlv { fill:var(--lvl); font-family:"Arial Narrow", Arial, sans-serif; }
+  .dpipe { stroke:var(--pipe); fill:none; }
+  svg text.dcap { fill:var(--mid); } svg text.dsoft { fill:var(--soft); }
+  .dlead { stroke:var(--mid); stroke-width:1; fill:none; }
+  .dgrip { fill:var(--accent); stroke:var(--paper); stroke-width:1.5; }
+  .djoin { fill:var(--mid); } .dhot { fill:var(--accent); }
+  .dout { fill:none; stroke:var(--soft); stroke-dasharray:5 5; }
+  .dbox { fill:var(--card); stroke:var(--soft); } .dbus { stroke:var(--mid); stroke-width:2; fill:none; } .dbusf { fill:var(--mid); }
+  .dtip { fill:var(--tipbg); } svg text.dtipt { fill:var(--tipfg); }
+  .dam { fill:var(--amb); stroke:var(--amline); } svg text.damt { fill:var(--amc); }
+  .was svg, .now svg { max-width:240px; } .was svg.sheet, .now svg.sheet { max-width:150px; margin:4px 0; }
+  .g3 .two { grid-template-columns:1fr; gap:8px; }
+  .g3 .rows li:not(:has(> .pill)) { flex-direction:column; gap:2px; }
+  .g3 .rows li:not(:has(> .pill)) > span:last-child { text-align:left; }
+  @media (min-width:721px) {
+    .grid { grid-template-columns:1fr 1fr; }
+    .g3 > .card { display:flex; flex-direction:column; }
+    .g3 > .card > .two { flex:1; grid-auto-rows:1fr; }
+    .steps { grid-template-columns:1fr 1fr; }
+    .sk3 { grid-template-columns:repeat(3, 1fr); }
+    .grid.g3 > .card:last-child:nth-child(odd), .steps > :last-child:nth-child(odd) { grid-column:1 / -1; }
+  }
+  @media (min-width:1000px) {
+    .grid.g3 { grid-template-columns:repeat(3, 1fr); }
+    .grid.g3 > .card:last-child:nth-child(odd) { grid-column:auto; }
+    .steps.five { grid-template-columns:repeat(6, 1fr); }
+    .steps.five > .stepc { grid-column:span 2; }
+    .steps.five > .stepc:nth-child(n+4) { grid-column:span 3; }
+    .steps.stages { grid-template-columns:repeat(3, 1fr); }
+    .steps.stages > :last-child:nth-child(odd) { grid-column:auto; }
+    .steps.stages > .span2 { grid-column:span 2; }
+  }
+  @media (max-width:720px) {
+    .wide-only { display:none; } .narrow-only { display:block; }
+    .rows li { flex-direction:column; gap:2px; }
+    .rows li > span:last-child { text-align:left; }
+    .pill { white-space:normal; }
+  }
 </style>
 </head>
 <body>
@@ -60,50 +141,128 @@
 <div class="card">
   <p class="label">Your question: one pipe and two pits that work together, not one glued object?</p>
   <p class="answer">Yes. Connected, not merged.</p>
-  <p>A <b>pipe</b> is one element. A <b>pit</b> is one element. Each carries its own parts. They are joined at the pit wall, and the join can be made or broken like snapping a line to a point. Nothing ever selects "the whole network".</p>
+  <svg class="pic mini" viewBox="0 0 360 76" role="img" aria-label="Pit, pipe, pit: three elements joined at two points">
+    <line class="dpipe" x1="66" y1="37" x2="294" y2="33" stroke-width="8" stroke-dasharray="22 10"/>
+    <rect class="dpit" x="40" y="24" width="26" height="26"/><line class="dh" x1="40" y1="24" x2="66" y2="50"/><line class="dh" x1="66" y1="24" x2="40" y2="50"/>
+    <rect class="dpit" x="294" y="20" width="26" height="26"/><g class="dh"><line x1="301" y1="20" x2="301" y2="46"/><line x1="307" y1="20" x2="307" y2="46"/><line x1="313" y1="20" x2="313" y2="46"/></g>
+    <circle class="djoin" cx="66" cy="37" r="4.5"/><circle class="djoin" cx="294" cy="33" r="4.5"/>
+    <g font-size="12" text-anchor="middle"><text class="dcap" x="53" y="68">1 pit</text><text class="dcap" x="180" y="68">1 pipe</text><text class="dcap" x="307" y="68">1 pit</text>
+    <text class="dsoft" x="92" y="20">join</text><text class="dsoft" x="268" y="16">join</text></g>
+  </svg>
+  <p>A pipe is one element. A pit is one element. Each carries its own parts. They are joined at the pit wall, and the join can be made or broken like snapping a line to a point. Nothing ever selects "the whole network".</p>
 </div>
 
 <h2>1. Three levels, so it never gets sticky</h2>
 <div class="card">
-<svg viewBox="0 0 1000 330" role="img" aria-label="A pit element, a pipe element and a second pit element, joined at the pit walls">
-  <rect class="frame" x="0" y="0" width="1000" height="330" fill="#fbfcfd" stroke="#dde2e9"/>
-  <!-- element outlines -->
-  <rect x="30" y="60" width="190" height="230" rx="10" fill="none" stroke="#7a8594" stroke-dasharray="5 5"/>
-  <text x="125" y="48" text-anchor="middle" font-size="14" fill="#4c5766" font-weight="600">PIT P1 (one element)</text>
-  <rect x="246" y="60" width="508" height="230" rx="10" fill="none" stroke="#7a8594" stroke-dasharray="5 5"/>
-  <text x="500" y="48" text-anchor="middle" font-size="14" fill="#4c5766" font-weight="600">PIPE P2 to P1 (one element)</text>
-  <rect x="780" y="60" width="190" height="230" rx="10" fill="none" stroke="#7a8594" stroke-dasharray="5 5"/>
-  <text x="875" y="48" text-anchor="middle" font-size="14" fill="#4c5766" font-weight="600">PIT P2 (one element)</text>
-  <!-- pipe -->
-  <line x1="152" y1="176" x2="848" y2="158" stroke="#2f6fc4" stroke-width="16" stroke-dasharray="46 22"/>
-  <line x1="152" y1="168" x2="848" y2="150" stroke="#1a2330" stroke-width="1.2"/><line x1="152" y1="184" x2="848" y2="166" stroke="#1a2330" stroke-width="1.2"/>
-  <g transform="rotate(-1.5 500 136)"><text x="500" y="140" text-anchor="middle" font-size="16" font-family="Arial Narrow, Arial">150 DIA. UPVC SN8 PIPE AT 1 IN 100</text></g>
-  <g transform="rotate(-1.5 400 205)"><line x1="440" y1="208" x2="372" y2="208" stroke="#1a2330" stroke-width="1.5"/><polygon points="360,208 378,202 378,214" fill="#1a2330"/></g>
-  <text x="262" y="160" font-size="13" fill="#b3261e" font-family="Arial Narrow, Arial">IL 4.84</text>
-  <text x="690" y="146" font-size="13" fill="#b3261e" font-family="Arial Narrow, Arial">IL 5.25</text>
-  <!-- pits -->
-  <rect x="100" y="150" width="52" height="52" fill="#fff" stroke="#1a2330" stroke-width="2" stroke-dasharray="7 4"/>
-  <line x1="100" y1="150" x2="152" y2="202" stroke="#9aa3ad"/><line x1="152" y1="150" x2="100" y2="202" stroke="#9aa3ad"/>
-  <rect x="848" y="130" width="54" height="54" fill="#fff" stroke="#1a2330" stroke-width="2" stroke-dasharray="7 4"/>
-  <g stroke="#9aa3ad"><line x1="858" y1="130" x2="858" y2="184"/><line x1="868" y1="130" x2="868" y2="184"/><line x1="878" y1="130" x2="878" y2="184"/><line x1="888" y1="130" x2="888" y2="184"/></g>
-  <g transform="rotate(-45 78 128)"><text x="50" y="130" font-size="14" font-family="Arial Narrow, Arial">CL 5.35</text></g>
-  <g transform="rotate(-45 930 108)"><text x="905" y="110" font-size="14" font-family="Arial Narrow, Arial">CL 5.78</text></g>
-  <circle cx="125" cy="246" r="19" fill="#fff" stroke="#1a2330" stroke-width="2"/><text x="125" y="252" text-anchor="middle" font-size="15">P1</text>
-  <circle cx="875" cy="232" r="19" fill="#fff" stroke="#1a2330" stroke-width="2"/><text x="875" y="238" text-anchor="middle" font-size="15">P2</text>
-  <!-- joins -->
-  <circle cx="152" cy="176" r="8" fill="#1e5aa8"/><circle cx="848" cy="158" r="8" fill="#1e5aa8"/>
-  <text x="165" y="308" font-size="13" fill="#1e5aa8">join at the pit wall</text><line x1="158" y1="296" x2="153" y2="187" stroke="#1e5aa8"/>
-  <text x="726" y="308" font-size="13" fill="#1e5aa8">join at the pit wall</text><line x1="842" y1="296" x2="847" y2="169" stroke="#1e5aa8"/>
+<svg class="pic wide-only" viewBox="0 0 1000 330" role="img" aria-label="A pit element, a pipe element and a second pit element, joined at the pit walls">
+  <rect class="dout" x="30" y="60" width="190" height="230" rx="10"/>
+  <text class="dcap" x="125" y="48" text-anchor="middle" font-size="14">PIT P1 (one element)</text>
+  <rect class="dout" x="246" y="60" width="508" height="230" rx="10"/>
+  <text class="dcap" x="500" y="48" text-anchor="middle" font-size="14">PIPE P2 to P1 (one element)</text>
+  <rect class="dout" x="780" y="60" width="190" height="230" rx="10"/>
+  <text class="dcap" x="875" y="48" text-anchor="middle" font-size="14">PIT P2 (one element)</text>
+  <line class="dpipe" x1="152" y1="176" x2="848" y2="158" stroke-width="16" stroke-dasharray="46 22"/>
+  <line class="dl" x1="152" y1="168" x2="848" y2="150" stroke-width="1.2"/><line class="dl" x1="152" y1="184" x2="848" y2="166" stroke-width="1.2"/>
+  <g transform="rotate(-1.5 500 136)"><text class="dt" x="500" y="140" text-anchor="middle" font-size="16" textLength="250" lengthAdjust="spacingAndGlyphs">150 DIA. UPVC SN8 PIPE AT 1 IN 100</text></g>
+  <g transform="rotate(-1.5 400 205)"><line class="dl" x1="440" y1="208" x2="372" y2="208" stroke-width="1.5"/><polygon class="df" points="360,208 378,202 378,214"/></g>
+  <text class="dlv" x="262" y="160" font-size="13">IL 4.84</text>
+  <text class="dlv" x="690" y="146" font-size="13">IL 4.93</text>
+  <rect class="dpit" x="100" y="150" width="52" height="52"/>
+  <line class="dh" x1="100" y1="150" x2="152" y2="202"/><line class="dh" x1="152" y1="150" x2="100" y2="202"/>
+  <rect class="dpit" x="848" y="130" width="54" height="54"/>
+  <g class="dh"><line x1="858" y1="130" x2="858" y2="184"/><line x1="868" y1="130" x2="868" y2="184"/><line x1="878" y1="130" x2="878" y2="184"/><line x1="888" y1="130" x2="888" y2="184"/></g>
+  <g transform="rotate(-45 78 128)"><text class="dt" x="50" y="130" font-size="14">CL 5.35</text></g>
+  <g transform="rotate(-45 930 108)"><text class="dt" x="905" y="110" font-size="14">CL 5.78</text></g>
+  <circle class="dpit" stroke-dasharray="none" cx="125" cy="246" r="19"/><text x="125" y="251" text-anchor="middle" font-size="15">P1</text>
+  <circle class="dpit" stroke-dasharray="none" cx="875" cy="232" r="19"/><text x="875" y="237" text-anchor="middle" font-size="15">P2</text>
+  <circle class="djoin" cx="152" cy="176" r="8"/><circle class="djoin" cx="848" cy="158" r="8"/>
+  <text class="dcap" x="165" y="312" font-size="13">join at the pit wall</text><line class="dlead" x1="160" y1="300" x2="153" y2="187"/>
+  <text class="dcap" x="835" y="312" font-size="13" text-anchor="end">join at the pit wall</text><line class="dlead" x1="840" y1="300" x2="847" y2="169"/>
+</svg>
+<svg class="pic narrow-only" viewBox="0 0 360 256" role="img" aria-label="A pit element, a pipe element and a second pit element, joined at the pit walls">
+  <rect class="dout" x="4" y="44" width="84" height="178" rx="8"/><rect class="dout" x="94" y="44" width="172" height="178" rx="8"/><rect class="dout" x="272" y="44" width="84" height="178" rx="8"/>
+  <g font-size="12" text-anchor="middle"><text class="dcap" x="46" y="20">PIT P1</text><text class="dsoft" x="46" y="36">one element</text>
+  <text class="dcap" x="180" y="20">PIPE P2 to P1</text><text class="dsoft" x="180" y="36">one element</text>
+  <text class="dcap" x="314" y="20">PIT P2</text><text class="dsoft" x="314" y="36">one element</text></g>
+  <line class="dpipe" x1="64" y1="146" x2="296" y2="134" stroke-width="11" stroke-dasharray="30 14"/>
+  <line class="dl" x1="64" y1="140.5" x2="296" y2="128.5"/><line class="dl" x1="64" y1="151.5" x2="296" y2="139.5"/>
+  <g transform="rotate(-2.96 180 120)"><text class="dt" x="180" y="123" text-anchor="middle" font-size="11.5" textLength="174" lengthAdjust="spacingAndGlyphs">150 DIA. UPVC SN8 PIPE AT 1 IN 100</text></g>
+  <text class="dlv" x="102" y="172" font-size="11.5">IL 4.84</text><text class="dlv" x="214" y="163" font-size="11.5">IL 4.93</text>
+  <line class="dl" x1="196" y1="164" x2="166" y2="165.5" stroke-width="1.3"/><polygon class="df" points="157,166 167,161.5 167.5,169.5"/>
+  <rect class="dpit" x="28" y="128" width="36" height="36"/><line class="dh" x1="28" y1="128" x2="64" y2="164"/><line class="dh" x1="64" y1="128" x2="28" y2="164"/>
+  <rect class="dpit" x="296" y="116" width="36" height="36"/><g class="dh"><line x1="305" y1="116" x2="305" y2="152"/><line x1="314" y1="116" x2="314" y2="152"/><line x1="323" y1="116" x2="323" y2="152"/></g>
+  <g transform="rotate(-45 12 122)"><text class="dt" x="12" y="122" font-size="12">CL 5.35</text></g>
+  <g transform="rotate(-45 302 108)"><text class="dt" x="302" y="108" font-size="12">CL 5.78</text></g>
+  <circle class="dpit" stroke-dasharray="none" cx="46" cy="198" r="14"/><text x="46" y="202" text-anchor="middle" font-size="12">P1</text>
+  <circle class="dpit" stroke-dasharray="none" cx="322" cy="188" r="14"/><text x="322" y="192" text-anchor="middle" font-size="12">P2</text>
+  <circle class="djoin" cx="64" cy="146" r="5.5"/><circle class="djoin" cx="296" cy="134" r="5.5"/>
+  <text class="dcap" x="60" y="246" font-size="12">join at the pit wall</text><line class="dlead" x1="68" y1="234" x2="65" y2="153"/>
+  <text class="dcap" x="300" y="246" font-size="12" text-anchor="end">join at the pit wall</text><line class="dlead" x1="294" y1="234" x2="295.5" y2="141"/>
 </svg>
 <ul class="rows">
-  <li><span><b>Part</b> · a label, an arrow, a level text, a tag</span><span>drags on its own; remembers where you put it</span></li>
-  <li><span><b>Element</b> · one pipe, or one pit, with its parts</span><span>selects, moves, copies and erases as one thing</span></li>
-  <li><span><b>Join</b> · a pipe end sitting on a pit wall</span><span>made by dropping the end on a pit; broken by pulling it off</span></li>
+  <li><span><span class="lbl">Part ·</span> a label, an arrow, a level text, a tag</span><span>drags on its own; remembers where you put it</span></li>
+  <li><span><span class="lbl">Element ·</span> one pipe, or one pit, with its parts</span><span>selects, moves, copies and erases as one thing</span></li>
+  <li><span><span class="lbl">Join ·</span> a pipe end sitting on a pit wall</span><span>made by dropping the end on a pit; broken by pulling it off</span></li>
 </ul>
 </div>
 
 <div class="card">
   <p class="label">What each ordinary AutoCAD action does</p>
+  <div class="sk3">
+    <figure>
+      <svg class="pic" viewBox="0 0 320 168" role="img" aria-label="Move a pit: the joined pipe end follows, the far end stays">
+        <line class="dh" x1="160" y1="8" x2="160" y2="160"/>
+        <text class="dsoft" x="10" y="18" font-size="11.5">Before</text><text class="dsoft" x="170" y="18" font-size="11.5">After</text>
+        <line class="dpipe" x1="46" y1="87" x2="112" y2="57" stroke-width="7" stroke-dasharray="14 7"/>
+        <rect class="dpit" x="20" y="74" width="26" height="26"/><line class="dh" x1="20" y1="74" x2="46" y2="100"/><line class="dh" x1="46" y1="74" x2="20" y2="100"/>
+        <rect class="dpit" x="112" y="44" width="26" height="26"/><g class="dh"><line x1="119" y1="44" x2="119" y2="70"/><line x1="125" y1="44" x2="125" y2="70"/><line x1="131" y1="44" x2="131" y2="70"/></g>
+        <circle class="djoin" cx="46" cy="87" r="3.5"/><circle class="djoin" cx="112" cy="57" r="3.5"/>
+        <rect class="dghost" x="180" y="74" width="26" height="26"/>
+        <line class="dlead" x1="171" y1="86" x2="171" y2="120"/><polygon class="dbusf" points="171,128 167,118 175,118"/>
+        <line class="dpipe" x1="206" y1="127" x2="272" y2="57" stroke-width="7" stroke-dasharray="14 7"/>
+        <rect class="dpit" x="180" y="114" width="26" height="26"/><line class="dh" x1="180" y1="114" x2="206" y2="140"/><line class="dh" x1="206" y1="114" x2="180" y2="140"/>
+        <rect class="dpit" x="272" y="44" width="26" height="26"/><g class="dh"><line x1="279" y1="44" x2="279" y2="70"/><line x1="285" y1="44" x2="285" y2="70"/><line x1="291" y1="44" x2="291" y2="70"/></g>
+        <circle class="djoin" cx="206" cy="127" r="3.5"/><circle class="djoin" cx="272" cy="57" r="3.5"/>
+      </svg>
+      <p class="note">Move a pit: its joined pipe end follows. The far end stays put.</p>
+    </figure>
+    <figure>
+      <svg class="pic" viewBox="0 0 320 168" role="img" aria-label="Move a pipe on its own: both ends show not joined">
+        <line class="dh" x1="160" y1="8" x2="160" y2="160"/>
+        <text class="dsoft" x="10" y="18" font-size="11.5">Before</text><text class="dsoft" x="170" y="18" font-size="11.5">After</text>
+        <line class="dpipe" x1="46" y1="87" x2="112" y2="57" stroke-width="7" stroke-dasharray="14 7"/>
+        <rect class="dpit" x="20" y="74" width="26" height="26"/><line class="dh" x1="20" y1="74" x2="46" y2="100"/><line class="dh" x1="46" y1="74" x2="20" y2="100"/>
+        <rect class="dpit" x="112" y="44" width="26" height="26"/><g class="dh"><line x1="119" y1="44" x2="119" y2="70"/><line x1="125" y1="44" x2="125" y2="70"/><line x1="131" y1="44" x2="131" y2="70"/></g>
+        <circle class="djoin" cx="46" cy="87" r="3.5"/><circle class="djoin" cx="112" cy="57" r="3.5"/>
+        <rect class="dpit" x="180" y="74" width="26" height="26"/><line class="dh" x1="180" y1="74" x2="206" y2="100"/><line class="dh" x1="206" y1="74" x2="180" y2="100"/>
+        <rect class="dpit" x="272" y="44" width="26" height="26"/><g class="dh"><line x1="279" y1="44" x2="279" y2="70"/><line x1="285" y1="44" x2="285" y2="70"/><line x1="291" y1="44" x2="291" y2="70"/></g>
+        <line class="dghost" x1="206" y1="87" x2="272" y2="57"/>
+        <line class="dpipe" x1="210" y1="134" x2="276" y2="104" stroke-width="7" stroke-dasharray="14 7"/>
+        <rect class="dam" x="172" y="144" width="68" height="18" rx="9"/><text class="damt" x="206" y="157" font-size="11.5" text-anchor="middle">not joined</text>
+        <rect class="dam" x="246" y="78" width="68" height="18" rx="9"/><text class="damt" x="280" y="91" font-size="11.5" text-anchor="middle">not joined</text>
+      </svg>
+      <p class="note">Move a pipe on its own: it comes off its pits. Each loose end shows the amber "not joined".</p>
+    </figure>
+    <figure>
+      <svg class="pic" viewBox="0 0 320 168" role="img" aria-label="Drag a pipe end onto another pit: it joins on the wall">
+        <line class="dh" x1="160" y1="8" x2="160" y2="160"/>
+        <text class="dsoft" x="10" y="18" font-size="11.5">Before</text><text class="dsoft" x="170" y="18" font-size="11.5">After</text>
+        <line class="dpipe" x1="46" y1="97" x2="112" y2="47" stroke-width="7" stroke-dasharray="14 7"/>
+        <rect class="dpit" x="20" y="84" width="26" height="26"/><line class="dh" x1="20" y1="84" x2="46" y2="110"/><line class="dh" x1="46" y1="84" x2="20" y2="110"/>
+        <rect class="dpit" x="112" y="34" width="26" height="26"/><g class="dh"><line x1="119" y1="34" x2="119" y2="60"/><line x1="125" y1="34" x2="125" y2="60"/><line x1="131" y1="34" x2="131" y2="60"/></g>
+        <rect class="dpit" x="112" y="112" width="26" height="26"/><line class="dh" x1="112" y1="112" x2="138" y2="138"/><line class="dh" x1="138" y1="112" x2="112" y2="138"/>
+        <circle class="djoin" cx="46" cy="97" r="3.5"/>
+        <rect class="dgrip" x="107" y="42" width="10" height="10"/>
+        <line class="dlead" x1="100" y1="66" x2="100" y2="112" stroke-dasharray="3 3"/><polygon class="dbusf" points="100,120 96,110 104,110"/>
+        <line class="dpipe" x1="206" y1="97" x2="272" y2="125" stroke-width="7" stroke-dasharray="14 7"/>
+        <rect class="dpit" x="180" y="84" width="26" height="26"/><line class="dh" x1="180" y1="84" x2="206" y2="110"/><line class="dh" x1="206" y1="84" x2="180" y2="110"/>
+        <rect class="dpit" x="272" y="34" width="26" height="26"/><g class="dh"><line x1="279" y1="34" x2="279" y2="60"/><line x1="285" y1="34" x2="285" y2="60"/><line x1="291" y1="34" x2="291" y2="60"/></g>
+        <rect class="dpit" x="272" y="112" width="26" height="26"/><line class="dh" x1="272" y1="112" x2="298" y2="138"/><line class="dh" x1="298" y1="112" x2="272" y2="138"/>
+        <circle class="djoin" cx="206" cy="97" r="3.5"/><circle class="djoin" cx="272" cy="125" r="3.5"/>
+      </svg>
+      <p class="note">Drag a pipe end onto another pit: it joins there, on the wall.</p>
+    </figure>
+  </div>
   <ul class="rows">
     <li><span>Click a pipe</span><span>that pipe only. The pits are not selected.</span></li>
     <li><span>Move a pit</span><span>the pipe ends joined to it follow. Their far ends stay put.</span></li>
@@ -119,33 +278,69 @@
 
 <h2>2. Grips: the same ones, in the same places</h2>
 <div class="card">
-<svg viewBox="0 0 1000 250" role="img" aria-label="The grips on a pipe and pit: the same as today's separate objects">
-  <rect x="0" y="0" width="1000" height="250" fill="#fbfcfd" stroke="#dde2e9"/>
-  <line x1="152" y1="136" x2="848" y2="118" stroke="#2f6fc4" stroke-width="16" stroke-dasharray="46 22"/>
-  <line x1="152" y1="128" x2="848" y2="110" stroke="#1a2330" stroke-width="1.2"/><line x1="152" y1="144" x2="848" y2="126" stroke="#1a2330" stroke-width="1.2"/>
-  <g transform="rotate(-1.5 500 96)"><text x="500" y="100" text-anchor="middle" font-size="16" font-family="Arial Narrow, Arial">150 DIA. UPVC SN8 PIPE AT 1 IN 100</text></g>
-  <g transform="rotate(-1.5 400 165)"><line x1="440" y1="168" x2="372" y2="168" stroke="#1a2330" stroke-width="1.5"/><polygon points="360,168 378,162 378,174" fill="#1a2330"/></g>
-  <text x="262" y="120" font-size="13" fill="#b3261e" font-family="Arial Narrow, Arial">IL 4.84</text>
-  <text x="690" y="106" font-size="13" fill="#b3261e" font-family="Arial Narrow, Arial">IL 5.25</text>
-  <rect x="100" y="110" width="52" height="52" fill="#fff" stroke="#1a2330" stroke-width="2" stroke-dasharray="7 4"/>
-  <rect x="848" y="90" width="54" height="54" fill="#fff" stroke="#1a2330" stroke-width="2" stroke-dasharray="7 4"/>
-  <g transform="rotate(-45 78 88)"><text x="50" y="90" font-size="14" font-family="Arial Narrow, Arial">CL 5.35</text></g>
-  <circle cx="125" cy="206" r="19" fill="#fff" stroke="#1a2330" stroke-width="2"/><text x="125" y="212" text-anchor="middle" font-size="15">P1</text>
-  <!-- grips: all AutoCAD blue squares -->
-  <g fill="#1e5aa8" stroke="#fff" stroke-width="1.5">
-    <rect x="146" y="130" width="12" height="12"/><rect x="842" y="112" width="12" height="12"/><rect x="494" y="121" width="12" height="12"/>
-    <rect x="362" y="92" width="12" height="12"/>
-    <rect x="434" y="162" width="12" height="12"/><rect x="354" y="164" width="12" height="12"/>
-    <rect x="256" y="122" width="12" height="12"/><rect x="684" y="108" width="12" height="12"/>
-    <rect x="120" y="130" width="12" height="12"/><rect x="869" y="111" width="12" height="12"/>
-    <rect x="44" y="92" width="12" height="12"/><rect x="119" y="200" width="12" height="12"/>
+<svg class="pic wide-only" viewBox="0 0 1000 300" role="img" aria-label="The grips on a pipe and two pits: the same as today's separate objects">
+  <line class="dpipe" x1="152" y1="166" x2="848" y2="147" stroke-width="16" stroke-dasharray="46 22"/>
+  <line class="dl" x1="152" y1="158" x2="848" y2="139" stroke-width="1.2"/><line class="dl" x1="152" y1="174" x2="848" y2="155" stroke-width="1.2"/>
+  <g transform="rotate(-1.56 500 128)"><text class="dt" x="500" y="132" text-anchor="middle" font-size="16" textLength="246" lengthAdjust="spacingAndGlyphs">150 DIA. UPVC SN8 PIPE AT 1 IN 100</text></g>
+  <g transform="rotate(-1.56 400 196)"><line class="dl" x1="440" y1="196" x2="372" y2="196" stroke-width="1.5"/><polygon class="df" points="360,196 378,190 378,202"/></g>
+  <text class="dlv" x="262" y="150" font-size="13">IL 4.84</text>
+  <text class="dlv" x="690" y="138" font-size="13">IL 4.93</text>
+  <rect class="dpit" x="100" y="140" width="52" height="52"/>
+  <line class="dh" x1="100" y1="140" x2="152" y2="192"/><line class="dh" x1="152" y1="140" x2="100" y2="192"/>
+  <rect class="dpit" x="848" y="120" width="54" height="54"/>
+  <g class="dh"><line x1="858.8" y1="120" x2="858.8" y2="174"/><line x1="869.6" y1="120" x2="869.6" y2="174"/><line x1="880.4" y1="120" x2="880.4" y2="174"/><line x1="891.2" y1="120" x2="891.2" y2="174"/></g>
+  <g transform="rotate(-45 56 118)"><text class="dt" x="56" y="118" font-size="14">CL 5.35</text></g>
+  <g transform="rotate(-45 914 96)"><text class="dt" x="914" y="96" font-size="14">CL 5.78</text></g>
+  <circle class="dpit" stroke-dasharray="none" cx="126" cy="240" r="19"/><text x="126" y="245" text-anchor="middle" font-size="15">P1</text>
+  <circle class="dpit" stroke-dasharray="none" cx="875" cy="246" r="19"/><text x="875" y="251" text-anchor="middle" font-size="15">P2</text>
+  <g class="dgrip">
+    <rect x="146" y="160" width="12" height="12"/><rect x="494" y="150.5" width="12" height="12"/><rect x="842" y="141" width="12" height="12"/>
+    <rect x="356" y="124" width="12" height="12"/>
+    <rect x="434" y="189" width="12" height="12"/><rect x="360" y="191" width="12" height="12"/>
+    <rect x="244" y="139" width="12" height="12"/><rect x="672" y="127" width="12" height="12"/>
+    <rect x="120" y="160" width="12" height="12"/><rect x="869" y="141" width="12" height="12"/>
+    <rect x="39" y="123" width="12" height="12"/><rect x="897" y="101" width="12" height="12"/>
+    <rect x="120" y="259" width="12" height="12"/><rect x="869" y="265" width="12" height="12"/>
   </g>
-  <g font-size="12.5" fill="#4c5766">
-    <text x="520" y="150">pipe: each end and the middle</text>
-    <text x="300" y="80">label: its own grip</text>
-    <text x="300" y="196">arrow: both ends</text>
-    <text x="250" y="226">invert text, cover text, tag: one each</text>
-    <text x="770" y="176">pit: its block grip and size grips</text>
+  <g font-size="13">
+    <text class="dcap" x="10" y="58">cover text: one each</text><line class="dlead" x1="40" y1="64" x2="44" y2="121"/>
+    <text class="dcap" x="176" y="92">invert text: one each</text><line class="dlead" x1="250" y1="98" x2="250" y2="137"/>
+    <text class="dcap" x="330" y="92">label: its own grip</text><line class="dlead" x1="352" y1="98" x2="361" y2="122"/>
+    <text class="dcap" x="520" y="226">pipe: each end and the middle</text><line class="dlead" x1="540" y1="213" x2="504" y2="165"/>
+    <text class="dcap" x="330" y="244">arrow: both ends</text><line class="dlead" x1="372" y1="231" x2="367" y2="205"/>
+    <text class="dcap" x="160" y="276">tag: one each</text><line class="dlead" x1="156" y1="271" x2="134" y2="266"/>
+    <text class="dcap" x="724" y="200">pit: its block grip</text><line class="dlead" x1="836" y1="194" x2="868" y2="154"/>
+  </g>
+</svg>
+<svg class="pic narrow-only" viewBox="0 0 360 244" role="img" aria-label="The grips on a pipe and two pits: the same as today's separate objects">
+  <line class="dpipe" x1="64" y1="116" x2="296" y2="104" stroke-width="11" stroke-dasharray="30 14"/>
+  <line class="dl" x1="64" y1="110.5" x2="296" y2="98.5"/><line class="dl" x1="64" y1="121.5" x2="296" y2="109.5"/>
+  <g transform="rotate(-2.96 180 90)"><text class="dt" x="180" y="93" text-anchor="middle" font-size="11.5" textLength="174" lengthAdjust="spacingAndGlyphs">150 DIA. UPVC SN8 PIPE AT 1 IN 100</text></g>
+  <text class="dlv" x="84" y="140" font-size="11.5">IL 4.84</text><text class="dlv" x="250" y="130" font-size="11.5">IL 4.93</text>
+  <line class="dl" x1="165" y1="136" x2="138" y2="137.4" stroke-width="1.3"/><polygon class="df" points="130,137.8 139,133.5 139.4,141.5"/>
+  <rect class="dpit" x="28" y="98" width="36" height="36"/><line class="dh" x1="28" y1="98" x2="64" y2="134"/><line class="dh" x1="64" y1="98" x2="28" y2="134"/>
+  <rect class="dpit" x="296" y="86" width="36" height="36"/><g class="dh"><line x1="305" y1="86" x2="305" y2="122"/><line x1="314" y1="86" x2="314" y2="122"/><line x1="323" y1="86" x2="323" y2="122"/></g>
+  <g transform="rotate(-45 18 84)"><text class="dt" x="18" y="84" font-size="12">CL 5.35</text></g>
+  <g transform="rotate(-45 310 68)"><text class="dt" x="310" y="68" font-size="12">CL 5.78</text></g>
+  <circle class="dpit" stroke-dasharray="none" cx="46" cy="164" r="13"/><text x="46" y="168" text-anchor="middle" font-size="11.5">P1</text>
+  <circle class="dpit" stroke-dasharray="none" cx="341" cy="152" r="13"/><text x="341" y="156" text-anchor="middle" font-size="11.5">P2</text>
+  <g class="dgrip">
+    <rect x="59" y="111" width="10" height="10"/><rect x="175" y="105" width="10" height="10"/><rect x="291" y="99" width="10" height="10"/>
+    <rect x="77" y="90" width="10" height="10"/>
+    <rect x="160" y="131" width="10" height="10"/><rect x="129" y="132.6" width="10" height="10"/>
+    <rect x="70" y="131" width="10" height="10"/><rect x="236" y="121" width="10" height="10"/>
+    <rect x="41" y="111" width="10" height="10"/><rect x="313" y="99" width="10" height="10"/>
+    <rect x="4" y="88" width="10" height="10"/><rect x="296" y="72" width="10" height="10"/>
+    <rect x="41" y="172" width="10" height="10"/><rect x="336" y="160" width="10" height="10"/>
+  </g>
+  <g font-size="11.5">
+    <text class="dcap" x="4" y="22">cover text: one each</text><line class="dlead" x1="9" y1="27" x2="9" y2="87"/>
+    <text class="dcap" x="72" y="48">label: its own grip</text><line class="dlead" x1="82" y1="53" x2="82" y2="89"/>
+    <text class="dcap" x="170" y="192" text-anchor="end">arrow: both ends</text><line class="dlead" x1="134" y1="181" x2="134" y2="144"/>
+    <text class="dcap" x="194" y="192">invert text: 1 each</text><line class="dlead" x1="241" y1="181" x2="241" y2="132"/>
+    <text class="dcap" x="180" y="214" text-anchor="middle">pipe: each end and the middle</text><line class="dlead" x1="180" y1="203" x2="180" y2="116"/>
+    <text class="dcap" x="4" y="236">tag: one each</text><line class="dlead" x1="46" y1="225" x2="46" y2="183"/>
+    <text class="dcap" x="356" y="236" text-anchor="end">pit: its block grip</text><line class="dlead" x1="318" y1="225" x2="318" y2="110"/>
   </g>
 </svg>
 <div class="two" style="margin-top:16px">
@@ -153,55 +348,83 @@
   <div class="now"><b class="h">New</b><p>The same grips, where your hands expect them. Drag a pit grip and its joined pipe ends follow. Drag a label grip and only the label moves.</p></div>
 </div>
 </div>
+<div class="card">
+  <p class="label">Grips in the picture above: today's loose objects against the new pipe and pits</p>
+  <p class="answer">14 grips <small>· today 14, new 14</small></p>
+  <table class="sum">
+    <tr class="head"><td class="op"></td><td></td><td class="n">today</td><td class="n">new</td></tr>
+    <tr><td class="op"></td><td class="d">pipe: each end and the middle</td><td class="n">3</td><td class="n">3</td></tr>
+    <tr><td class="op">+</td><td class="d">label</td><td class="n">1</td><td class="n">1</td></tr>
+    <tr><td class="op">+</td><td class="d">flow arrow: both ends</td><td class="n">2</td><td class="n">2</td></tr>
+    <tr><td class="op">+</td><td class="d">invert texts: one each</td><td class="n">2</td><td class="n">2</td></tr>
+    <tr><td class="op">+</td><td class="d">pits: block grip, one each</td><td class="n">2</td><td class="n">2</td></tr>
+    <tr><td class="op">+</td><td class="d">cover texts: one each</td><td class="n">2</td><td class="n">2</td></tr>
+    <tr><td class="op">+</td><td class="d">tags: one each</td><td class="n">2</td><td class="n">2</td></tr>
+    <tr class="final"><td></td><td>grips</td><td class="n">14</td><td class="n">14</td></tr>
+  </table>
+  <p class="note">Counted from the picture above, which is a mock-up. A pit's size grips are not drawn; they stay as they are today.</p>
+</div>
 
 <h2>3. Drawing a pipe from one pit to another</h2>
-<div class="steps">
+<div class="steps five">
   <div class="stepc"><b class="t">1 · Type CD (or press Pipe). Hover a pit.</b>
-    <svg viewBox="0 0 240 150"><rect width="240" height="150" fill="#fbfcfd" stroke="#dde2e9"/>
-      <rect x="40" y="45" width="60" height="60" fill="#fff" stroke="#1e5aa8" stroke-width="3"/>
-      <line x1="40" y1="45" x2="100" y2="105" stroke="#9aa3ad"/><line x1="100" y1="45" x2="40" y2="105" stroke="#9aa3ad"/>
-      <path d="M150 62 l0 22 l6 -5 l5 11 l4 -2 l-5 -11 l8 0 z" fill="#1a2330"/>
-      <text x="120" y="135" font-size="12" fill="#4c5766" text-anchor="middle">the pit lights up</text></svg>
+    <svg class="pic" viewBox="0 0 300 150" role="img" aria-label="Step 1: the pit under the cursor lights up">
+      <rect class="dsel" x="16" y="66" width="36" height="36"/><line class="dh" x1="16" y1="66" x2="52" y2="102"/><line class="dh" x1="52" y1="66" x2="16" y2="102"/>
+      <rect class="dpit" x="248" y="40" width="36" height="36"/><g class="dh"><line x1="257" y1="40" x2="257" y2="76"/><line x1="266" y1="40" x2="266" y2="76"/><line x1="275" y1="40" x2="275" y2="76"/></g>
+      <path class="df" d="M60 88 l0 20 l5.5 -4.5 l4.5 10 l4 -1.8 l-4.5 -10 l7 0 z"/>
+      <text class="dcap" x="16" y="134" font-size="11.5">the pit lights up</text></svg>
     <p>The pit under the cursor is outlined so you know it will be the start.</p></div>
   <div class="stepc"><b class="t">2 · Click anywhere on the pit.</b>
-    <svg viewBox="0 0 240 150"><rect width="240" height="150" fill="#fbfcfd" stroke="#dde2e9"/>
-      <rect x="40" y="45" width="60" height="60" fill="#fff" stroke="#1a2330" stroke-width="2" stroke-dasharray="7 4"/>
-      <line x1="70" y1="88" x2="170" y2="88" stroke="#9aa3ad" stroke-dasharray="3 3"/>
-      <circle cx="84" cy="88" r="3" fill="#1a2330"/><text x="60" y="124" font-size="11" fill="#4c5766">you clicked here</text><line x1="84" y1="92" x2="80" y2="114" stroke="#4c5766"/>
-      <circle cx="100" cy="88" r="7" fill="#1e5aa8"/><text x="112" y="76" font-size="11" fill="#1e5aa8">pipe starts here,</text><text x="112" y="88" font-size="11" fill="#1e5aa8" dy="12"> on the wall</text></svg>
+    <svg class="pic" viewBox="0 0 300 150" role="img" aria-label="Step 2: the pipe starts on the pit wall in line with the click">
+      <rect class="dpit" x="16" y="66" width="36" height="36"/><line class="dh" x1="16" y1="66" x2="52" y2="102"/><line class="dh" x1="52" y1="66" x2="16" y2="102"/>
+      <rect class="dpit" x="248" y="40" width="36" height="36"/><g class="dh"><line x1="257" y1="40" x2="257" y2="76"/><line x1="266" y1="40" x2="266" y2="76"/><line x1="275" y1="40" x2="275" y2="76"/></g>
+      <line class="dghost" x1="40" y1="90" x2="120" y2="90"/>
+      <circle class="df" cx="40" cy="90" r="3"/><circle class="dhot" cx="52" cy="90" r="6"/>
+      <text class="dcap" x="6" y="142" font-size="11.5">you clicked here</text><line class="dlead" x1="36" y1="130" x2="40" y2="95"/>
+      <text class="dcap" x="110" y="116" font-size="11.5">pipe starts here,</text><text class="dcap" x="110" y="130" font-size="11.5">on the wall</text><line class="dlead" x1="106" y1="114" x2="58" y2="94"/></svg>
     <p>The pipe starts exactly on the pit wall, in line with where you clicked.</p></div>
   <div class="stepc"><b class="t">3 · Move toward the next pit.</b>
-    <svg viewBox="0 0 240 150"><rect width="240" height="150" fill="#fbfcfd" stroke="#dde2e9"/>
-      <rect x="14" y="60" width="40" height="40" fill="#fff" stroke="#1a2330" stroke-width="2" stroke-dasharray="6 3"/>
-      <line x1="54" y1="84" x2="176" y2="70" stroke="#2f6fc4" stroke-width="9" stroke-dasharray="22 10" opacity=".55"/>
-      <rect x="186" y="46" width="40" height="40" fill="#fff" stroke="#1e5aa8" stroke-width="3"/>
-      <rect x="70" y="100" width="130" height="34" rx="6" fill="#1a2330"/><text x="135" y="114" font-size="11" fill="#fff" text-anchor="middle">150 dia · 9.42 m</text><text x="135" y="128" font-size="11" fill="#fff" text-anchor="middle">joins P2 on its wall</text></svg>
+    <svg class="pic" viewBox="0 0 300 150" role="img" aria-label="Step 3: the pipe follows the cursor and shows its size and length">
+      <line class="dpipe" x1="52" y1="90" x2="248" y2="62" stroke-width="9" stroke-dasharray="22 10" opacity=".55"/>
+      <rect class="dpit" x="16" y="66" width="36" height="36"/><line class="dh" x1="16" y1="66" x2="52" y2="102"/><line class="dh" x1="52" y1="66" x2="16" y2="102"/>
+      <rect class="dsel" x="248" y="40" width="36" height="36"/><g class="dh"><line x1="257" y1="40" x2="257" y2="76"/><line x1="266" y1="40" x2="266" y2="76"/><line x1="275" y1="40" x2="275" y2="76"/></g>
+      <rect class="dtip" x="100" y="100" width="150" height="40" rx="6"/><text class="dtipt" x="175" y="116" font-size="11.5" text-anchor="middle">150 dia · 9.42 m</text><text class="dtipt" x="175" y="132" font-size="11.5" text-anchor="middle">joins P2 on its wall</text></svg>
     <p>The pipe follows the cursor at full width. Size, length and where it will join show beside it.</p></div>
   <div class="stepc"><b class="t">4 · Click the second pit. Done.</b>
-    <svg viewBox="0 0 240 150"><rect width="240" height="150" fill="#fbfcfd" stroke="#dde2e9"/>
-      <rect x="14" y="60" width="40" height="40" fill="#fff" stroke="#1a2330" stroke-width="2" stroke-dasharray="6 3"/>
-      <line x1="54" y1="84" x2="186" y2="68" stroke="#2f6fc4" stroke-width="9" stroke-dasharray="22 10"/>
-      <line x1="54" y1="79" x2="186" y2="63" stroke="#1a2330"/><line x1="54" y1="89" x2="186" y2="73" stroke="#1a2330"/>
-      <rect x="186" y="46" width="40" height="40" fill="#fff" stroke="#1a2330" stroke-width="2" stroke-dasharray="6 3"/>
-      <g transform="rotate(-7 120 58)"><text x="120" y="60" font-size="9.5" text-anchor="middle" font-family="Arial Narrow, Arial">150 DIA. UPVC SN8 PIPE AT 1 IN __</text></g>
-      <text x="58" y="74" font-size="8.5" fill="#b3261e">IL __</text><text x="150" y="60" font-size="8.5" fill="#b3261e">IL __</text>
-      <g transform="rotate(-7 110 104)"><line x1="128" y1="104" x2="100" y2="104" stroke="#1a2330"/><polygon points="94,104 102,101 102,107" fill="#1a2330"/></g></svg>
+    <svg class="pic" viewBox="0 0 300 150" role="img" aria-label="Step 4: the finished pipe with its label, arrow and two level texts">
+      <line class="dpipe" x1="52" y1="90" x2="248" y2="62" stroke-width="9" stroke-dasharray="22 10"/>
+      <line class="dl" x1="52" y1="85.5" x2="248" y2="57.5"/><line class="dl" x1="52" y1="94.5" x2="248" y2="66.5"/>
+      <rect class="dpit" x="16" y="66" width="36" height="36"/><line class="dh" x1="16" y1="66" x2="52" y2="102"/><line class="dh" x1="52" y1="66" x2="16" y2="102"/>
+      <rect class="dpit" x="248" y="40" width="36" height="36"/><g class="dh"><line x1="257" y1="40" x2="257" y2="76"/><line x1="266" y1="40" x2="266" y2="76"/><line x1="275" y1="40" x2="275" y2="76"/></g>
+      <g transform="rotate(-8.13 150 64)"><text class="dt" x="150" y="65" font-size="10.5" text-anchor="middle" textLength="152" lengthAdjust="spacingAndGlyphs">150 DIA. UPVC SN8 PIPE AT 1 IN __</text></g>
+      <text class="dlv" x="60" y="114" font-size="10.5">IL __</text><text class="dlv" x="212" y="88" font-size="10.5">IL __</text>
+      <g transform="rotate(-8.13 150 100)"><line class="dl" x1="168" y1="100" x2="140" y2="100"/><polygon class="df" points="132,100 141,96.5 141,103.5"/></g></svg>
     <p>Band, walls, label, arrow and both level texts appear at the standard distances. Levels read "not set" until you set them.</p></div>
+  <div class="stepc"><b class="t">Same rule, another wall · Click near the top of a pit.</b>
+    <svg class="pic" viewBox="0 0 300 150" role="img" aria-label="Second example: a click near the top of a pit starts the pipe on the top wall, in line with the click">
+      <line class="dpipe" x1="52" y1="100" x2="110" y2="46" stroke-width="9" stroke-dasharray="22 10" opacity=".55"/>
+      <rect class="dpit" x="30" y="100" width="36" height="36"/><line class="dh" x1="30" y1="100" x2="66" y2="136"/><line class="dh" x1="66" y1="100" x2="30" y2="136"/>
+      <rect class="dsel" x="96" y="10" width="36" height="36"/><g class="dh"><line x1="105" y1="10" x2="105" y2="46"/><line x1="114" y1="10" x2="114" y2="46"/><line x1="123" y1="10" x2="123" y2="46"/></g>
+      <line class="dghost" x1="52" y1="110" x2="52" y2="62"/>
+      <circle class="df" cx="52" cy="110" r="3"/><circle class="dhot" cx="52" cy="100" r="6"/>
+      <text class="dcap" x="150" y="80" font-size="11.5">pipe starts on the top wall,</text><text class="dcap" x="150" y="94" font-size="11.5">in line with your click</text><line class="dlead" x1="146" y1="84" x2="60" y2="98"/>
+      <text class="dcap" x="150" y="126" font-size="11.5">you clicked here</text><line class="dlead" x1="146" y1="122" x2="57" y2="111"/></svg>
+    <p>Click near the top of a pit and the pipe starts on the top wall, in line with the click. The same goes for every wall.</p></div>
 </div>
 <div class="grid">
-  <div class="card"><p class="label">To place a joined pipe with all its parts</p><p class="answer">2 clicks <small>· 0 typed</small></p>
+  <div class="card"><p class="label">New: clicks to place a joined pipe with all 6 of its parts</p><p class="answer">2 clicks <small>· 0 typed</small></p>
     <table class="sum"><tr><td class="op"></td><td class="d">click the first pit</td><td class="n">1</td></tr><tr><td class="op">+</td><td class="d">click the second pit</td><td class="n">1</td></tr><tr class="final"><td></td><td>clicks</td><td class="n">2</td></tr></table>
     <p class="note">Size and class come from the standards and your last pipe. Change them on the pipe afterwards, or type S before the first click.</p></div>
-  <div class="card"><p class="label">Loose objects placed by hand for the same pipe today</p><p class="answer">6</p>
+  <div class="card"><p class="label">Today: objects placed one at a time, by hand, for the same pipe</p><p class="answer">6 objects</p>
     <table class="sum"><tr><td class="op"></td><td class="d">band and walls</td><td class="n">2</td></tr><tr><td class="op">+</td><td class="d">label</td><td class="n">1</td></tr><tr><td class="op">+</td><td class="d">flow arrow</td><td class="n">1</td></tr><tr><td class="op">+</td><td class="d">invert texts</td><td class="n">2</td></tr><tr class="final"><td></td><td>objects</td><td class="n">6</td></tr></table>
     <p class="note">Counted on your finished drawings. Today each is copied from the parked samples and edited.</p></div>
 </div>
 
 <h2>4. What stays exactly as your staff know it</h2>
-<div class="grid">
-  <div class="card"><p class="label">On the drawing</p><p class="answer">No change</p>
+<div class="grid g3">
+  <div class="card"><p class="label">On the drawing: no change</p><p class="answer">4 of 4 <small>the same</small></p>
     <ul class="rows"><li><span>Symbols</span><span>same pit, downpipe, IO, tank blocks</span></li><li><span>Layers, colours, plot</span><span>same; blue pipes, red charged</span></li><li><span>Wording</span><span>"150 DIA. UPVC SN8 PIPE AT 1 IN 100"</span></li><li><span>Sheet</span><span>same A1 layout, schedule, boxes, title block</span></li></ul></div>
-  <div class="card"><p class="label">In the hands</p><p class="answer">No change</p>
+  <div class="card"><p class="label">In the hands: no change</p><p class="answer">4 of 4 <small>the same</small></p>
     <ul class="rows"><li><span>Typed names</span><span>CD, PIT, DP, IO, OF, PITSCHEDULE, MR, CR</span></li><li><span>Grips</span><span>same places</span></li><li><span>Move, copy, stretch, erase, undo</span><span>AutoCAD's own</span></li><li><span>Double-click</span><span>opens that pipe or pit to edit</span></li></ul>
     <p class="note">The names kept are the ones your office's own usage record shows being typed most: CD, PITEDIT, CDEDIT, PIPEEDIT, PIT, PITSCHEDULE.</p></div>
   <div class="card"><p class="label">What does change</p><p class="answer">4 things</p>
@@ -209,10 +432,11 @@
 </div>
 
 <h2>5. One job, start to issue: what gets easier</h2>
-<div class="card">
-  <p class="label">Values typed onto one real two-unit sheet today</p>
-  <p class="answer">about 70 <small>· for about 25 real facts</small></p>
-  <div class="two">
+<div class="grid">
+  <div class="card">
+    <p class="label">Today: values typed onto one real two-unit sheet</p>
+    <p class="answer">73 typed</p>
+    <div class="bar"><i style="width:100%"></i></div>
     <table class="sum">
       <tr><td class="op"></td><td class="d">level texts on the plan</td><td class="n">24</td></tr>
       <tr><td class="op">+</td><td class="d">pit schedule cells</td><td class="n">26</td></tr>
@@ -221,6 +445,12 @@
       <tr><td class="op">+</td><td class="d">tank notes and detail</td><td class="n">8</td></tr>
       <tr class="final"><td></td><td>typed today</td><td class="n">73</td></tr>
     </table>
+    <p class="note">My count from the finished drawing and issued sheet. The 26 schedule cells are measured; the rest are counted by eye.</p>
+  </div>
+  <div class="card">
+    <p class="label">New: values typed or picked for the same sheet</p>
+    <p class="answer">20 typed or picked</p>
+    <div class="bar"><i style="width:27.4%"></i></div>
     <table class="sum">
       <tr><td class="op"></td><td class="d">council figures and areas</td><td class="n">6</td></tr>
       <tr><td class="op">+</td><td class="d">cover levels (picked off survey)</td><td class="n">4</td></tr>
@@ -229,66 +459,159 @@
       <tr><td class="op">+</td><td class="d">tank litres and split</td><td class="n">4</td></tr>
       <tr class="final"><td></td><td>typed or picked, new</td><td class="n">20</td></tr>
     </table>
+    <p class="note"><span class="pill nt">design intent</span> My intent, not yet tested. The bar is drawn to the same scale as the 73.</p>
   </div>
-  <p class="note">Left: my count from the finished drawing and issued sheet (schedule cells measured; the rest counted by eye, so "about"). Right: my design intent, not yet tested.</p>
 </div>
-<div class="steps">
-  <div class="stepc"><b class="t">Start the job</b><p><b>Today:</b> open the template, retype the title block inside its block.</p><p><b>New:</b> pick the job folder; title block fills from the job facts.</p></div>
-  <div class="stepc"><b class="t">Council and areas</b><p><b>Today:</b> typed into a workbook copied from another job.</p><p><b>New:</b> pick the council (its rules come with it); pick roof and paving outlines.</p></div>
-  <div class="stepc"><b class="t">Pits and pipes</b><p><b>Today:</b> copy samples, stretch, retype each label and level.</p><p><b>New:</b> click, click. Parts appear at standard distances.</p></div>
-  <div class="stepc"><b class="t">Levels</b><p><b>Today:</b> worked on paper or in a five-pit workbook, typed on the plan, typed again in the schedule.</p><p><b>New:</b> see the fall you have against the fall you need; choose; apply once.</p></div>
-  <div class="stepc"><b class="t">Detention</b><p><b>Today:</b> Boyd's, storage and orifice in three workbooks; results typed into the box and the detail.</p><p><b>New:</b> storage list builds from the pipes, pits and tanks; orifice sum shown; box and detail read from it.</p></div>
-  <div class="stepc"><b class="t">Council changes one number</b><p><b>Today:</b> find and retype every copy; one missed copy is a mismatch on an issued sheet.</p><p><b>New:</b> change the one fact. Everything reading it follows; anything now failing goes amber or red.</p></div>
-  <div class="stepc"><b class="t">Issue</b><p><b>Today:</b> copy a revision row of six texts, freeze three stamp layers, plot.</p><p><b>New:</b> pick the stage; row, stamp and PDF follow.</p></div>
+<div class="steps stages">
+  <div class="stepc"><b class="t">Start the job</b>
+    <div class="was"><b class="h">Today</b>
+      <svg viewBox="0 0 240 50" role="img" aria-label="Title block lines each typed by hand"><rect class="dl" x="1" y="1" width="238" height="48"/><line class="dl" x1="1" y1="17" x2="239" y2="17"/><line class="dl" x1="1" y1="33" x2="239" y2="33"/>
+        <g font-size="11"><text x="8" y="13">Two units (made-up job)</text><text x="8" y="29">Stormwater plan</text><text x="8" y="45">C01 · Rev A</text>
+        <g text-anchor="end"><text class="dsoft" x="232" y="13">typed</text><text class="dsoft" x="232" y="29">typed</text><text class="dsoft" x="232" y="45">typed</text></g></g></svg>
+      <p>Open the template, retype the title block inside its block.</p></div>
+    <div class="now"><b class="h">New · design intent</b><p class="fig"><b>1</b> pick</p><p>Pick the job folder; title block fills from the job facts.</p></div></div>
+  <div class="stepc"><b class="t">Council and areas</b>
+    <div class="was"><b class="h">Today</b><p class="fig"><b>1</b> workbook copied</p><p>Typed into a workbook copied from another job.</p></div>
+    <div class="now"><b class="h">New · design intent</b><p class="fig"><b>6</b> typed or picked</p><p>Pick the council (its rules come with it); pick roof and paving outlines.</p></div></div>
+  <div class="stepc"><b class="t">Pits and pipes</b>
+    <div class="was"><b class="h">Today</b><p class="fig"><b>6</b> objects per pipe</p><p>Copy samples, stretch, retype each label and level.</p></div>
+    <div class="now"><b class="h">New · design intent</b><p class="fig"><b>2</b> clicks per pipe</p><p>Click, click. Parts appear at standard distances.</p></div></div>
+  <div class="stepc"><b class="t">Levels</b>
+    <div class="was"><b class="h">Today</b><p class="fig"><b>50</b> typed · 24 on the plan + 26 in the schedule</p><p>Worked on paper or in a five-pit workbook, typed on the plan, typed again in the schedule.</p></div>
+    <div class="now"><b class="h">New · design intent</b><p class="fig"><b>7</b> typed or picked, once · 4 covers + 3 invert and grades</p><p>See the fall you have against the fall you need; choose; apply once.</p></div></div>
+  <div class="stepc"><b class="t">Detention</b>
+    <div class="was"><b class="h">Today</b><p class="fig"><b>23</b> retyped · 7 box + 8 orifice + 8 tank</p><p>Boyd's, storage and orifice in three workbooks; results typed into the box and the detail.</p></div>
+    <div class="now"><b class="h">New · design intent</b><p class="fig"><b>7</b> typed or picked · 3 water levels + 4 tank</p><p>Storage list builds from the pipes, pits and tanks; orifice sum shown; box and detail read from it.</p></div></div>
+  <div class="stepc"><b class="t">Council changes one number</b>
+    <div class="was"><b class="h">Today · example, 4.2 becomes 3.8</b><p><span class="chip">3.8</span><span class="chip">3.8</span><span class="chip">3.8</span><span class="chip bad">4.2</span> <span class="pill rd">one missed</span></p><p>Find and retype every copy; one missed copy is a mismatch on an issued sheet.</p></div>
+    <div class="now"><b class="h">New · design intent</b><p class="fig"><b>1</b> change</p><p><span class="chip">3.8</span><span class="chip">3.8</span><span class="chip">3.8</span><span class="chip">3.8</span> <span class="pill ok">all match</span></p><p>Change the one fact. Everything reading it follows; anything now failing goes amber or red.</p></div></div>
+  <div class="stepc"><b class="t">Issue</b>
+    <div class="was"><b class="h">Today</b><p class="fig"><b>6</b> texts copied · 3 stamp layers frozen</p><p>Copy a revision row of six texts, freeze three stamp layers, plot.</p></div>
+    <div class="now"><b class="h">New · design intent</b><p class="fig"><b>1</b> pick</p><p>Pick the stage; row, stamp and PDF follow.</p></div></div>
+  <div class="stepc span2"><b class="t">Mock-up · the side panel during the job, on Levels (made-up numbers)</b>
+    <div class="tabs"><span class="tab">Job facts</span><span class="tab on">Levels</span><span class="tab">Storage</span><span class="tab">Checks</span></div>
+    <p class="label">Run P2 to P1 to the street connection: fall to spare</p>
+    <p class="answer">0.09 m <small>to spare</small> <span class="pill ok">enough fall</span></p>
+    <div class="two">
+      <div>
+        <p class="note" style="margin:0">fall you have · 0.31 m</p><div class="bar"><i style="width:100%"></i></div>
+        <p class="note" style="margin:0">fall you need · 0.22 m</p><div class="bar"><i style="width:71%"></i></div>
+        <span class="btn">Apply once</span>
+      </div>
+      <table class="sum">
+        <tr><td class="op"></td><td class="d">invert at P2, top of the run</td><td class="n">4.93</td></tr>
+        <tr><td class="op">−</td><td class="d">connection invert at the street</td><td class="n">4.62</td></tr>
+        <tr class="total"><td></td><td>fall you have</td><td class="n">0.31</td></tr>
+        <tr><td class="op">−</td><td class="d">fall you need: 22.02 m at 1 in 100</td><td class="n">0.22</td></tr>
+        <tr class="final"><td></td><td>to spare, m</td><td class="n">0.09</td></tr>
+      </table>
+    </div>
+    <p class="note">22.02 m is the 9.42 m pipe plus a 12.60 m pipe from P1 to the street. A mock-up to react to, not a finished window.</p></div>
 </div>
 
 <h2>6. Where the facts live, and why that is sturdier</h2>
 <div class="card">
-<svg viewBox="0 0 1000 300" role="img" aria-label="Where facts live: on each element, once in the drawing, in the office standards, and personal preferences">
-  <rect width="1000" height="300" fill="#fbfcfd" stroke="#dde2e9"/>
+<svg class="pic wide-only" viewBox="0 0 1000 300" role="img" aria-label="Where facts live: on each element, once in the drawing, in the office standards, and personal preferences">
   <g font-size="14">
-    <rect x="24" y="24" width="220" height="110" rx="10" fill="#fff" stroke="#7a8594"/><text x="134" y="50" text-anchor="middle" font-weight="700">On each pipe and pit</text>
-    <text x="134" y="74" text-anchor="middle" fill="#4c5766" font-size="13">its own number, size, levels</text><text x="134" y="92" text-anchor="middle" fill="#4c5766" font-size="13">and what it is joined to</text><text x="134" y="118" text-anchor="middle" fill="#7a8594" font-size="12">travels with it when copied</text>
-    <rect x="270" y="24" width="220" height="110" rx="10" fill="#fff" stroke="#7a8594"/><text x="380" y="50" text-anchor="middle" font-weight="700">Once in the drawing</text>
-    <text x="380" y="74" text-anchor="middle" fill="#4c5766" font-size="13">job facts: council, discharge,</text><text x="380" y="92" text-anchor="middle" fill="#4c5766" font-size="13">areas, storms, assumptions</text><text x="380" y="118" text-anchor="middle" fill="#7a8594" font-size="12">goes wherever the file goes</text>
-    <rect x="516" y="24" width="220" height="110" rx="10" fill="#fff" stroke="#7a8594"/><text x="626" y="50" text-anchor="middle" font-weight="700">Office standards</text>
-    <text x="626" y="74" text-anchor="middle" fill="#4c5766" font-size="13">sizes, distances, wording,</text><text x="626" y="92" text-anchor="middle" fill="#4c5766" font-size="13">symbols, limits, council rules</text><text x="626" y="118" text-anchor="middle" fill="#7a8594" font-size="12">one shared file for everyone</text>
-    <rect x="762" y="24" width="214" height="110" rx="10" fill="#fff" stroke="#7a8594"/><text x="869" y="50" text-anchor="middle" font-weight="700">On your PC</text>
-    <text x="869" y="74" text-anchor="middle" fill="#4c5766" font-size="13">window positions,</text><text x="869" y="92" text-anchor="middle" fill="#4c5766" font-size="13">last-used values</text><text x="869" y="118" text-anchor="middle" fill="#7a8594" font-size="12">nothing a job depends on</text>
-    <g stroke="#1e5aa8" stroke-width="2" fill="none"><path d="M134 134 V176 H500"/><path d="M380 134 V176"/><path d="M626 134 V176 H500 V196"/></g>
-    <polygon points="500,206 493,194 507,194" fill="#1e5aa8"/>
-    <rect x="200" y="208" width="600" height="68" rx="10" fill="#fff" stroke="#1e5aa8" stroke-width="2"/>
-    <text x="500" y="236" text-anchor="middle" font-weight="700">Everything you see is read from those, never typed twice</text>
-    <text x="500" y="258" text-anchor="middle" fill="#4c5766" font-size="13">labels · level text · pit schedule · criteria box · detail numbers · computations · checks</text>
+    <rect class="dbox" x="24" y="24" width="220" height="110" rx="8"/><text x="134" y="50" text-anchor="middle">On each pipe and pit</text>
+    <text class="dcap" x="134" y="74" text-anchor="middle" font-size="13">its own number, size, levels</text><text class="dcap" x="134" y="92" text-anchor="middle" font-size="13">and what it is joined to</text><text class="dsoft" x="134" y="118" text-anchor="middle" font-size="13">travels with it when copied</text>
+    <rect class="dbox" x="270" y="24" width="220" height="110" rx="8"/><text x="380" y="50" text-anchor="middle">Once in the drawing</text>
+    <text class="dcap" x="380" y="74" text-anchor="middle" font-size="13">job facts: council, discharge,</text><text class="dcap" x="380" y="92" text-anchor="middle" font-size="13">areas, storms, assumptions</text><text class="dsoft" x="380" y="118" text-anchor="middle" font-size="13">goes wherever the file goes</text>
+    <rect class="dbox" x="516" y="24" width="220" height="110" rx="8"/><text x="626" y="50" text-anchor="middle">Office standards</text>
+    <text class="dcap" x="626" y="74" text-anchor="middle" font-size="13">sizes, distances, wording,</text><text class="dcap" x="626" y="92" text-anchor="middle" font-size="13">symbols, limits, council rules</text><text class="dsoft" x="626" y="118" text-anchor="middle" font-size="13">one shared file for everyone</text>
+    <rect class="dbox" x="762" y="24" width="214" height="110" rx="8"/><text x="869" y="50" text-anchor="middle">On your PC</text>
+    <text class="dcap" x="869" y="74" text-anchor="middle" font-size="13">window positions,</text><text class="dcap" x="869" y="92" text-anchor="middle" font-size="13">last-used values</text><text class="dsoft" x="869" y="118" text-anchor="middle" font-size="13">nothing a job depends on</text>
+    <g class="dbus"><path d="M134 134 V176 H500"/><path d="M380 134 V176"/><path d="M626 134 V176 H500 V196"/></g>
+    <polygon class="dbusf" points="500,207 493,194 507,194"/>
+    <rect class="dbox" x="200" y="208" width="600" height="68" rx="8" stroke-width="1.5"/>
+    <text x="500" y="236" text-anchor="middle">Everything you see is read from those, never typed twice</text>
+    <text class="dcap" x="500" y="258" text-anchor="middle" font-size="13">labels · level text · pit schedule · criteria box · detail numbers · computations · checks</text>
+  </g>
+</svg>
+<svg class="pic narrow-only" viewBox="0 0 360 512" role="img" aria-label="Where facts live: on each element, once in the drawing, in the office standards, and personal preferences">
+  <g font-size="12">
+    <rect class="dbox" x="8" y="8" width="300" height="86" rx="8"/><text x="20" y="30" font-size="13.5">On each pipe and pit</text>
+    <text class="dcap" x="20" y="48">its own number, size, levels</text><text class="dcap" x="20" y="64">and what it is joined to</text><text class="dsoft" x="20" y="82">travels with it when copied</text>
+    <rect class="dbox" x="8" y="104" width="300" height="86" rx="8"/><text x="20" y="126" font-size="13.5">Once in the drawing</text>
+    <text class="dcap" x="20" y="144">job facts: council, discharge,</text><text class="dcap" x="20" y="160">areas, storms, assumptions</text><text class="dsoft" x="20" y="178">goes wherever the file goes</text>
+    <rect class="dbox" x="8" y="200" width="300" height="86" rx="8"/><text x="20" y="222" font-size="13.5">Office standards</text>
+    <text class="dcap" x="20" y="240">sizes, distances, wording,</text><text class="dcap" x="20" y="256">symbols, limits, council rules</text><text class="dsoft" x="20" y="274">one shared file for everyone</text>
+    <g class="dbus"><path d="M308 51 H334 V309"/><path d="M308 147 H334"/><path d="M308 243 H334"/></g>
+    <polygon class="dbusf" points="334,320 327,307 341,307"/>
+    <rect class="dbox" x="8" y="320" width="344" height="92" rx="8" stroke-width="1.5"/>
+    <text x="180" y="344" text-anchor="middle" font-size="13.5">Everything you see is read from those,</text><text x="180" y="362" text-anchor="middle" font-size="13.5">never typed twice</text>
+    <text class="dcap" x="180" y="384" text-anchor="middle">labels · level text · pit schedule · criteria box</text><text class="dcap" x="180" y="400" text-anchor="middle">detail numbers · computations · checks</text>
+    <rect class="dbox" x="8" y="428" width="344" height="76" rx="8"/><text x="20" y="450" font-size="13.5">On your PC</text>
+    <text class="dcap" x="20" y="468">window positions, last-used values</text><text class="dsoft" x="20" y="486">nothing a job depends on</text>
   </g>
 </svg>
 </div>
-<div class="grid">
+<div class="card">
+  <p class="label">Example · what one pipe carries (mock-up, made-up numbers)</p>
+  <p class="answer">9 facts <small>· 2 still assumed</small></p>
+  <div class="two">
+    <ul class="rows" style="margin-top:0">
+      <li><span><span class="lbl">Number ·</span> 3</span><span class="pill nt">worked out</span></li>
+      <li><span><span class="lbl">From ·</span> pit P2</span><span class="pill nt">chosen</span></li>
+      <li><span><span class="lbl">To ·</span> pit P1</span><span class="pill nt">chosen</span></li>
+      <li><span><span class="lbl">Size ·</span> 150 dia</span><span class="pill am">assumed</span></li>
+      <li><span><span class="lbl">Class ·</span> UPVC SN8</span><span class="pill am">assumed</span></li>
+      <li><span><span class="lbl">Length ·</span> 9.42 m</span><span class="pill nt">measured</span></li>
+      <li><span><span class="lbl">Invert at the P2 end ·</span> 4.934, drawn as IL 4.93</span><span class="pill nt">chosen</span></li>
+      <li><span><span class="lbl">Invert at the P1 end ·</span> 4.840, drawn as IL 4.84</span><span class="pill nt">chosen</span></li>
+      <li><span><span class="lbl">Grade ·</span> 1 in 100</span><span class="pill nt">worked out</span></li>
+    </ul>
+    <div>
+      <table class="sum">
+        <tr><td class="op"></td><td class="d">chosen</td><td class="n">4</td></tr>
+        <tr><td class="op">+</td><td class="d">measured</td><td class="n">1</td></tr>
+        <tr><td class="op">+</td><td class="d">worked out</td><td class="n">2</td></tr>
+        <tr><td class="op">+</td><td class="d">assumed (amber: still needs you)</td><td class="n">2</td></tr>
+        <tr class="final"><td></td><td>facts on the pipe</td><td class="n">9</td></tr>
+      </table>
+      <p class="label" style="margin-top:24px">How the grade is worked out</p>
+      <table class="sum">
+        <tr><td class="op"></td><td class="d">invert at the P2 end</td><td class="n">4.934</td></tr>
+        <tr><td class="op">−</td><td class="d">invert at the P1 end</td><td class="n">4.840</td></tr>
+        <tr class="total"><td></td><td>fall, m</td><td class="n">0.094</td></tr>
+        <tr><td class="op"></td><td class="d">length measured, m</td><td class="n">9.42</td></tr>
+        <tr><td class="op">÷</td><td class="d">fall, m</td><td class="n">0.094</td></tr>
+        <tr class="final"><td></td><td>grade, 1 in</td><td class="n">100</td></tr>
+      </table>
+    </div>
+  </div>
+  <p class="note">Size and class come from the standards and your last pipe, so they read "assumed" until you confirm them.</p>
+</div>
+<div class="grid g3">
   <div class="card"><p class="label">Sent to someone with no plugin</p>
-    <div class="two"><div class="was"><b class="h">Was</b><p class="answer" style="font-size:26px">Blank</p><p>A pipe could be one special object. In your live case nothing shows without the plugin.</p></div><div class="now"><b class="h">New</b><p class="answer" style="font-size:26px">Identical</p><p>Only ordinary lines, text and blocks. Proven on a clean PC every release.</p></div></div></div>
-  <div class="card"><p class="label">Repair and audit commands</p>
-    <div class="two"><div class="was"><b class="h">Was</b><p class="answer" style="font-size:26px">20</p><p>Records kept apart from the objects could drift from them.</p></div><div class="now"><b class="h">New</b><p class="answer" style="font-size:26px">0</p><p>Facts sit on the element. On open, one check says what no longer matches, in plain words.</p></div></div></div>
+    <div class="two"><div class="was"><b class="h">Was</b><p class="answer sm">Blank</p>
+      <svg class="sheet" viewBox="0 0 120 44" role="img" aria-label="An empty sheet"><rect class="dl" x="1" y="1" width="118" height="42" rx="3"/></svg>
+      <p>A pipe could be one special object. In your live case nothing shows without the plugin.</p></div><div class="now"><b class="h">New</b><p class="answer sm">Identical</p>
+      <svg class="sheet" viewBox="0 0 120 44" role="img" aria-label="The same sheet with its pipe and pits"><rect class="dl" x="1" y="1" width="118" height="42" rx="3"/><line class="dpipe" x1="32" y1="24" x2="88" y2="20" stroke-width="5" stroke-dasharray="10 5"/><rect class="dl" x="18" y="17" width="14" height="14"/><rect class="dl" x="88" y="13" width="14" height="14"/></svg>
+      <p>Only ordinary lines, text and blocks. Proven on a clean PC every version.</p></div></div></div>
+  <div class="card"><p class="label">Repair and checking commands</p>
+    <div class="two"><div class="was"><b class="h">Was</b><p class="answer sm">20 <small>repair commands</small></p><p>Records kept apart from the objects could drift from them.</p></div><div class="now"><b class="h">New</b><p class="answer sm">0 <small>repair commands</small></p><p>Facts sit on the element. On open, one check says what no longer matches, in plain words.</p></div></div></div>
   <div class="card"><p class="label">Settings</p>
-    <div class="two"><div class="was"><b class="h">Was</b><p class="answer" style="font-size:26px">577</p><p>Per PC, in seven folders. Every PC could differ.</p></div><div class="now"><b class="h">New</b><p class="answer" style="font-size:26px">1 file</p><p>Office standards, shared. A handful of personal preferences.</p></div></div></div>
+    <div class="two"><div class="was"><b class="h">Was</b><p class="answer sm">577 <small>settings</small></p><p>Per PC, in seven folders. Every PC could differ.</p></div><div class="now"><b class="h">New</b><p class="answer sm">1 <small>file</small></p><p>Office standards, shared. A handful of personal preferences.</p></div></div></div>
   <div class="card"><p class="label">Getting a new version</p>
-    <div class="two"><div class="was"><b class="h">Was</b><p class="answer" style="font-size:26px">11 steps</p><p>Three programs, three AutoCAD years, administrator rights.</p></div><div class="now"><b class="h">New</b><p class="answer" style="font-size:26px">1 click</p><p>One package, 2027 only, offered at start, no administrator.</p></div></div></div>
+    <div class="two"><div class="was"><b class="h">Was</b><p class="answer sm">11 <small>steps</small></p><p>Three programs, three AutoCAD years, IT's password needed.</p></div><div class="now"><b class="h">New</b><p class="answer sm">1 <small>click</small></p><p>One install, 2027 only, offered at start, without IT's password.</p></div></div></div>
   <div class="card"><p class="label">Starting kit</p>
-    <div class="two"><div class="was"><b class="h">Was</b><p class="answer" style="font-size:26px">600</p><p>Sample objects parked beside every sheet; about 45 pasted blocks with machine names per job.</p></div><div class="now"><b class="h">New</b><p class="answer" style="font-size:26px">0</p><p>A named library. Nothing parked.</p></div></div></div>
+    <div class="two"><div class="was"><b class="h">Was</b><p class="answer sm">600 <small>parked samples</small></p><p>Sample objects parked beside every sheet; about 45 pasted blocks with random names per job.</p></div><div class="now"><b class="h">New</b><p class="answer sm">0 <small>parked samples</small></p><p>A named set of standard details. Nothing parked.</p></div></div></div>
   <div class="card"><p class="label">Helpers on a colleague's PC</p>
-    <div class="two"><div class="was"><b class="h">Was</b><p class="answer" style="font-size:26px">5 places</p><p>The same helper in up to five places; paths set by hand on each PC; local copies of the pen table.</p></div><div class="now"><b class="h">New</b><p class="answer" style="font-size:26px">1 place</p><p>One set of CE Tools in the one package. One pen table, from the office standards.</p></div></div></div>
+    <div class="two"><div class="was"><b class="h">Was</b><p class="answer sm">5 <small>places</small></p><p>The same helper in up to five places; folder locations set by hand on each PC; local copies of the pen table.</p></div><div class="now"><b class="h">New</b><p class="answer sm">1 <small>place</small></p><p>One set of CE Tools in the one install. One pen table, from the office standards.</p></div></div></div>
 </div>
 <p class="note">"Was" figures come from the study of what is installed and in your office folders on 16 Nov. "New" figures are design targets.</p>
 
 <h2>7. My honest thoughts on the whole thing</h2>
-<div class="grid">
-  <div class="card"><p class="label">What I think is right</p>
-    <ul class="rows"><li><span>Connected, not merged</span><span>your instinct about "sticky" is correct</span></li><li><span>Ordinary objects on the sheet</span><span>the only safe answer to the no-plugin problem</span></li><li><span>The engineer designs</span><span>the plugin shows, checks and carries</span></li><li><span>Small first release</span><span>one real house or units job, start to issue</span></li></ul></div>
-  <div class="card"><p class="label">Where the risk is</p>
-    <ul class="rows"><li><span>Keeping joins alive through every AutoCAD command</span><span><span class="pill am">must be proven</span></span></li><li><span>An outsider edits the drawing, then sends it back</span><span><span class="pill am">must be proven</span></span></li><li><span>Scope creeping back to 145 commands</span><span>one tool at a time, each approved</span></li><li><span>Breaking muscle memory</span><span>keep names, symbols and grips</span></li></ul></div>
-  <div class="card"><p class="label">What I would do next</p>
-    <ul class="rows"><li><span>1</span><span>You correct this draft until it is the plugin you mean</span></li><li><span>2</span><span>Research: prove the joins and the no-plugin promise on small trials</span></li><li><span>3</span><span>Settle the office standards list (about 15 rulings)</span></li><li><span>4</span><span>Design Pit and Pipe first, with you, in full</span></li></ul></div>
+<div class="grid g3">
+  <div class="card"><p class="label">What I think is right</p><p class="answer">4 <small>to keep</small></p>
+    <ul class="rows"><li><span>Connected, not merged<br><span class="lbl">your instinct about "sticky" is correct</span></span><span class="pill ok">keep</span></li><li><span>Ordinary objects on the sheet<br><span class="lbl">the only safe answer to the no-plugin problem</span></span><span class="pill ok">keep</span></li><li><span>The engineer designs<br><span class="lbl">the plugin shows, checks and carries</span></span><span class="pill ok">keep</span></li><li><span>Small first version<br><span class="lbl">one real house or units job, start to issue</span></span><span class="pill ok">keep</span></li></ul></div>
+  <div class="card"><p class="label">Where the risk is</p><p class="answer">2 of 4 <small>must be proven</small></p>
+    <ul class="rows"><li><span>Keeping joins alive through every AutoCAD command</span><span class="pill am">must be proven</span></li><li><span>An outsider edits the drawing, then sends it back</span><span class="pill am">must be proven</span></li><li><span>The job growing back to 145 commands<br><span class="lbl">one tool at a time, each approved</span></span><span class="pill nt">has a rule</span></li><li><span>Breaking muscle memory<br><span class="lbl">keep names, symbols and grips</span></span><span class="pill nt">has a rule</span></li></ul></div>
+  <div class="card"><p class="label">What I would do next</p><p class="answer">0 of 4 <small>steps done</small></p>
+    <ul class="rows"><li><span><span class="lbl">1 ·</span> You correct this draft until it is the plugin you mean</span><span class="pill am">waiting on you</span></li><li><span><span class="lbl">2 ·</span> Research: prove the joins and the no-plugin promise on small trials</span><span class="pill nt">not started</span></li><li><span><span class="lbl">3 ·</span> Settle the office standards list (about 15 rulings)</span><span class="pill nt">not started</span></li><li><span><span class="lbl">4 ·</span> Design Pit and Pipe first, with you, in full</span><span class="pill nt">not started</span></li></ul></div>
 </div>
-<div class="honest"><b>Not yet known.</b> I have not proven how joined, separately movable parts are best made inside AutoCAD 2027. This page shows what the drafter should experience. The research stage has to show it can be built this way before anything here is promised.</div>
+<div class="honest"><span class="pill am">not yet known</span> I have not proven how joined, separately movable parts are best made inside AutoCAD 2027. This page shows what the drafter should experience. The research stage has to show it can be built this way before anything here is promised.</div>
 </main>
 </body>
 </html>
