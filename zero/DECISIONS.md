@@ -150,6 +150,8 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-087** (16 Nov 2026, evening) On the windows rebuilt on the foundation (version 6, padlock on every number, works uphill or downhill): "thats better, i cant give you full answer until using but were on the right track". The direction is confirmed; it is NOT a final acceptance. A full answer waits until he can use it for real.
 
+**D-088** (16 Nov 2026, night) Stage 3 go-ahead: asked "may I start Stage 3 now, the parts-bin read of the OLD plugin? It is read-only", Tim: "Yes, start it in the background". Asked what to bring next for the plugin: "The whole-run levels tool". Stage 3 runs alongside Stage 2 from here; Stage 2 has not had a formal "approve".
+
 **Open after this sitting (asked once on 16 Nov, Tim sent D-079 instead of answering; not to be re-asked in the same form):** where a pipe stops at a pit (gap check Pit item 1); whether a schedule cell can be typed over (item 3); which pit kinds are in the first release and whether a turned pit is in the window (item 9); which pits count as storage (item 10).
 
 ## How levels are designed
