@@ -2,7 +2,7 @@
 
 **Why this file exists.** Tim, 16 Nov 2026 night: "where to from here youre not doing a good job of guiding me". From here the planning chat leads from this ONE list, one step at a time, and shows "N of M done" in every reply. Update it the moment a step is ticked.
 
-## Done (11)
+## Done (12)
 
 1. Ribbon (D-051).
 2. Naming rule (D-055, D-056).
@@ -15,15 +15,15 @@
 9. Trials started in their own chat (`stage4\TRIALS_BRIEF.md`).
 10. Short names for the first-release tools (D-101).
 11. The four leftover pit choices (D-102 to D-105).
+12. Inlets window: right track, same as the others (D-111; `pictures\inlet_window_full_size.html`).
 
-## Left, in this order (7)
+## Left, in this order (6)
 
-12. Inlets window (downpipe, overflow, FO, IO, GIO, floor waste): working mock-up, Tim's tick.
 13. Tank window: working mock-up, Tim's tick.
 14. Detention window: working mock-up, Tim's tick.
 15. Pit schedule: working mock-up, Tim's tick.
 16. Tim uses the windows and gives his verdict (D-087: "i cant give you full answer until using").
-17. Trial results read, and the build approach confirmed or changed (`stage4\TRIAL_RESULTS.md`).
+17. (ON HOLD after the licence incident, PARKING_LOT P-08: no AutoCAD until Tim agrees how.) Trial results read, and the build approach confirmed or changed (`stage4\TRIAL_RESULTS.md`).
 18. The plan (Stage 6) written and approved; the build chat's opening brief written.
 
 ## Parked, not blocking

@@ -196,6 +196,8 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-110** (16 Nov 2026, night) Schedule rows besides the numbered pits: the existing council pit connected to; a pump well; plastic pits that are ticked (D-076).
 
+**D-111** (16 Nov 2026, night) Inlet window (`pictures\inlet_window_full_size.html`): "Tick: right track, same as the others". Not a final acceptance; symbols are to be the office's own blocks when built. On the three leftovers of the stopped trial chat (the ZeroTrial profile, the load-safety setting in the unnamed profile, the trial folder): "Leave everything, I will look tomorrow". Nothing more is to be touched; the trials stay stopped (PARKING_LOT P-08).
+
 **Open after this sitting (asked once on 16 Nov, Tim sent D-079 instead of answering; not to be re-asked in the same form):** where a pipe stops at a pit (gap check Pit item 1); whether a schedule cell can be typed over (item 3); which pit kinds are in the first release and whether a turned pit is in the window (item 9); which pits count as storage (item 10).
 
 ## How levels are designed
