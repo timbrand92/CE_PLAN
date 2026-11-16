@@ -238,6 +238,8 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-131** (16 Nov 2026, night) Levels along a run with the plan under the long section and the hold feedback: "need more height on vertical otherwise great". The long section is to be drawn taller (about 5 times) with a slimmer plan strip.
 
+**D-132** (16 Nov 2026, night) Levels along a run with the taller long section (4 to 5 times) and the one-line plan: "thats better".
+
 **Open after this sitting (asked once on 16 Nov, Tim sent D-079 instead of answering; not to be re-asked in the same form):** where a pipe stops at a pit (gap check Pit item 1); whether a schedule cell can be typed over (item 3); which pit kinds are in the first release and whether a turned pit is in the window (item 9); which pits count as storage (item 10).
 
 ## How levels are designed
