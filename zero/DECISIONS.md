@@ -226,6 +226,8 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-125** (16 Nov 2026, night) Reporting a clash of held values: "Name the stretch and the amount" (for example "Out by 0.06 between P4 and P1"), with the held values on that stretch listed and marked; no single pipe is blamed.
 
+**D-126** (16 Nov 2026, about 10:05 pm) Tim: "can you force close autocad for some reason i cant". On that yes in words (rule 1.9), the planning chat closed the trial's stuck AutoCAD (the only AutoCAD running, started 9:24 pm, showing its Start tab): a normal close was tried first and did not work in 15 seconds, so it was force-closed. No AutoCAD was left running. The trial chat was then released to open AutoCAD by the double-click hand-off only (D-122).
+
 **Open after this sitting (asked once on 16 Nov, Tim sent D-079 instead of answering; not to be re-asked in the same form):** where a pipe stops at a pit (gap check Pit item 1); whether a schedule cell can be typed over (item 3); which pit kinds are in the first release and whether a turned pit is in the window (item 9); which pits count as storage (item 10).
 
 ## How levels are designed
