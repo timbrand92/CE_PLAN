@@ -9,13 +9,13 @@
 2. **Trial 10, headless predicts full:** PASS for the scripted commands tried (see below). Run under the old limits, before the licence incident. Not repeatable under the new limits.
 3. **Trial 1, joins:** PASS for the commands tested (soft pointer wins; end-of-command mover works, close-hook mover fails). Xref bind not tested.
 4. **Trial 3, no plugin:** PASS (plot identical, plain edit, plugin reports the change). LT and Tim's drawing not tested.
-5. **Trial 2, grips:** NOT TESTED yet.
+5. **Trial 2, grips:** NOT TESTED (needs a real mouse).
 6. **Trial 4, speed:** PASS for command and mover cost (about 40 ms per move on 2500 objects); mouse-drag feel not measured.
 7. **Trial 5, Properties:** BLOCKED for the palette (needs the Properties palette opened, a saved interface setting); the .NET property list works at code level.
 8. **Trial 6, window, live preview and Inspect:** PASS at 1920 x 1080 (21 ms redraw, Inspect returns with values); 2560 x 1440 simulated only; mouse pan/zoom during Inspect not tested.
 9. **Trial 7, ribbon tab, tips and typed names:** PARTIAL (tab logic and alias check work in code; on-screen look, tip rendering, rules-file route not tested).
-10. **Trial 8, double-click:** NOT TESTED yet.
-11. **Trial 9, update and rollback:** NOT TESTED yet.
+10. **Trial 8, double-click:** NOT TESTED (needs a real mouse).
+11. **Trial 9, update and rollback:** PASS for the file mechanics (outside AutoCAD); AutoCAD side BLOCKED (bundle folder and registry).
 
 ---
 
@@ -179,10 +179,59 @@ un4-headless\events.log`, `run5-full\events.log`, `dialog1.png`, the comparison 
 
 ---
 
+## Trial 9. Update and rollback
+
+**Verdict: PASS for the file mechanics, run outside AutoCAD. BLOCKED for the AutoCAD side (bundle folder, trust, load, lock).** Run Mon 16 Nov 2026 about 23:05. No bundle was made and nothing was put in any ApplicationPlugins folder.
+
+1. **Why only half.** The brief allows one per-user bundle `CE_TRIAL_ZERO.bundle`, but AutoCAD's bundle loader can write its own registrations (including to the registry) when it sees a new bundle, and the added limits after the licence incident forbid any registry write and any change to saved settings. I did not take that risk without Tim's word. **What Tim would need to allow:** one trial bundle in his per-user plugins folder, with a normal AutoCAD start, and AutoCAD's own registrations staying.
+2. **What was done instead.** A small program (`C:\CE_WORK\trials\zero\t9\`) acting as the fixed loader, under a made-up folder with versioned subfolders, a one-line pointer file, a hash check and a "last good" note. Stand-in files hold the place of the plugin file.
+3. **What was seen.**
+   1. **Not an administrator** (elevated: no), and every step worked: copying, staging and flipping all happen in the user's own area.
+   2. **A file held open by a running program cannot be overwritten or deleted** (both refused), so an update must go to a NEW folder, never over the running one. This used a plain file lock; a real plugin file loaded by AutoCAD was not tested.
+   3. **Stage 1.1 beside the running 1.0, check its hash, flip the pointer:** the running version is untouched; the next start ran 1.1.
+   4. **A deliberately broken 1.2:** the next start refused it (hash mismatch), fell back to 1.1, marked 1.2 bad and could say so in one line.
+   5. **Rollback by hand is one pointer change** (back to 1.0, next start ran 1.0).
+4. **Not tested.** AutoCAD loading from the per-user folder; the trust prompt or signing; stricter secure-load settings; LoadOnAppearance (no restart); a second AutoCAD open during an update; whether AutoCAD holds the plugin file or the menu file open.
+5. **Evidence:** `evidence\t9_mechanics.txt`.
+6. **What it means for the build approach.** The loader, versioned folders and pointer-file shape works as designed for the file side and needs no administrator rights. Whether AutoCAD accepts it, and what it prompts, is still unknown.
+
+---
+
+## Trial 2. Grips
+
+**Verdict: NOT TESTED.** Grips appear only when a person picks an object with the mouse and drags a grip. Under the rules I did not drive the mouse, and AutoCAD cannot be asked to run a grip drag from code. Codex, the real-AutoCAD driver Tim allowed, could do this. What I would need: Tim's word to hand this one trial to a Codex run. It would answer R-002 C: does the plugin's note survive on the drag copy, does a custom grip with a menu work, do the built-in grips stay on ordinary objects.
+
+---
+
+## Trial 8. Double-click
+
+**Verdict: NOT TESTED.** Same reason: a double-click is a mouse action. It would settle whether a replacement double-click can open the trial window only for note-carrying objects and leave every other object's double-click exactly as plain AutoCAD does it (R-002 H). Needs Codex or Tim.
+
+---
+
 ## What must change in the build approach
 
-*(to be completed when the trials are done; so far nothing has had to change from trial 11)*
+1. **Store each join as a soft pointer in the object's own extension dictionary** (trial 1). A handle written into the note goes stale after a copy; a hard pointer can drag the pit along into another drawing as an orphan. Keep identity and the short facts in the note; check every join when the drawing is opened and say plainly which are broken.
+2. **Do not use the drawing-wide shelf keyed by handle** for facts (trial 1): copies lose it.
+3. **Move the joined pipe ends at the end of the command, not from the object's own close step** (trial 1). The first works with one undo; the second is refused by AutoCAD. This is what makes "moving a pit moves its pipes" a single undo step.
+4. **Add the position stamp and pair it with the join check** (trial 3). Plain AutoCAD can move a pit and leave its pipes; the stamp says what moved, the join check says what no longer meets.
+5. **The sums engine is plain code with no AutoCAD in it and is far faster than needed** (trial 11). Three choices went to Tim (grade held as typed, which standard gives way, how a conflict on a path is named); his rulings are in FOUNDATION.md.
+6. **The preview can be a real AutoCAD picture of real objects**, redrawn in about 21 to 39 ms (trial 6), so no second drawing path is needed. Inspect through the supported call works and keeps the typed values.
+7. **"Facts in AutoCAD's own Properties palette" is not proven** (trial 5). The code route supplies the rows; whether the palette shows them needs the palette opened. Do not promise it yet.
+8. **Give the short name "C" a different name or ask Tim** (trial 7): it is his alias for Copy.
+9. **Do not rely on headless runs for anything about selection, idle or the screen**, and under the licence rules the headless engine cannot be used at all without Tim's decision (trial 10). Everything the trials showed about commands and events can be re-checked in full AutoCAD with the one-step-and-read-back method.
+10. **Method for any further full-AutoCAD trial:** one plugin command per test, read back after each, check for stray windows before every send, never type a long script. The first long typed script jammed AutoCAD; this method ran about 60 steps without a jam.
+11. **Nothing in these trials made the approach fail.** The "ordinary objects with hidden notes" foundation held for looks, plotting, plain editing, copy, mirror, rotate, stretch, save and reopen in three file formats, with the exceptions listed under trial 1.
 
 ## What was not tested and why
 
-*(to be completed when the trials are done)*
+1. **Trial 2 (grips) and trial 8 (double-click):** need a real mouse; I may not drive it; a Codex run or Tim is needed.
+2. **Trial 5, Properties palette:** needs the palette opened, a saved interface setting.
+3. **Trial 9, AutoCAD side:** needs a bundle folder and AutoCAD's own registrations (registry), forbidden without Tim's word.
+4. **Trial 6:** a real 2560 x 1440 window (the screen here is 1920 x 1080), the dark theme, a person panning and zooming while the window is hidden, typed key presses.
+5. **Trial 7:** how the tab and the tip look on screen, the rules-file route, workspace switch, restart.
+6. **Trial 1:** Xref bind (first attempt tested nothing), SCALE, AutoCAD LT, a copy while the mover is on, hundreds of pits for the join self-check.
+7. **Trial 3:** AutoCAD LT; Tim's live drawing; paper space, viewports, dynamic blocks.
+8. **Trial 4:** how a mouse drag with the ghost image feels; sheets of 5000 pits.
+9. **Trial 10:** anything the headless engine cannot do (selection, idle, screen); further headless runs are blocked by the licence rules.
+10. **Everywhere:** Tim's own CE plugins were loaded in every full-AutoCAD run after the incident (his profile, hand-off start). I typed no CE command and did not isolate them, so any interaction between them and the trial plugin is unmeasured. Nothing from the trials was installed. The leftovers from the first run (the ZeroTrial profile, the SECURELOAD value in the unnamed profile, the isolate folder) were not touched.
