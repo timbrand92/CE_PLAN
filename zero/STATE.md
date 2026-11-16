@@ -14,7 +14,18 @@
 8. **R-68 (Tim, 16 Nov):** the chat manages plan, usage, context and models. Name the model on every helper: Sonnet draws pages and files notes from a tight brief; Opus reviews and critiques; Haiku scans and counts; the lead chat interviews, decides and checks. Tim has three Fable resets this week and will use them.
 9. **The week's target ("something meaningful"):** (a) Stage 2 settled by Tim: ribbon, one naming strategy, job tracking, the Release 1 tool list and the 52 small decisions; (b) Stage 3 parts-bin report; (c) Stage 4: the four build trials run in a side session when AutoCAD is free, with results; (d) Stage 5 "how we work" on one page; (e) Stage 6: the plan, first tool designed in full (Pit, then Pipe).
 
-## UPDATE 4, Mon 16 Nov 2026 about 10:15 pm (newest; wins over everything below)
+## UPDATE 5, overnight Mon 16 to Tue 17 Nov 2026 (newest; wins over everything below)
+
+1. **Tim went to bed** saying "keep things moving" (D-137). First thing when he is back: a short morning summary, then his ten DRAFT items as clickable batches (they are listed at the top of the build chat's `BUILD_LOG.md` in the new repository folder `C:\CE_CIVIL`).
+2. **Checklist: 17 of 18.** Only step 16 is left (Tim's own verdict after using the windows).
+3. **The brain is built, all 5 pieces** (facts, sums, things and joins, office list, checks): 393 automatic checks, each piece reviewed by a separate reviewer, saved to the private repository `timbrand92/CE_CIVIL`. Nothing installed, nothing accepted. The build chat is now building a stand-alone window test bench (Pit and Pipe on the real brain, no AutoCAD); that goes beyond D-127 on the planning chat's overnight instruction and is DRAFT for Tim to confirm.
+4. **Trials finished:** nothing made the approach fail; see `stage4\TRIAL_RESULTS.md` and plan section 6a. Not proven: grips and double-click (need a real mouse and Tim present), Properties palette, ribbon look, update inside AutoCAD. NOTHING starts AutoCAD without Tim there.
+5. **All seven window mock-ups** have been driven by real clicks (one by Tim) and the four newer ones have had a separate UI critic with fixes applied. The lead looked at only some states of each.
+6. **Reference library** updated to D-136 and the trial findings (`reference\research\R-003_TRIAL_FINDINGS.md`).
+7. **Owed:** detention layer name and blues on a sample sheet (D-118); AS 3500.3 inspection opening spacing; new names for C and RC; the sheet note that says step irons at 1.2 m is now out of step with the office figure 1.0 m (D-136); the rulebook change (rule 1.9) is not committed in the TimOS folder; leftovers of the first trial run still on the PC for Tim to look at (P-08).
+8. **Usage after Tim's reset (16 Nov late):** Fable weekly 0%, all models 27%. This chat's context was 58% at that point: save state and ask for /compact before 85%.
+
+## UPDATE 4, Mon 16 Nov 2026 about 10:15 pm
 
 1. **Lead from `CHECKLIST.md`**: 16 of 18 done. Tim's standing complaint: "youre not doing a good job of guiding me". One step per reply, N of M shown, everything he must read inside the question, short.
 2. **The plan is approved** (D-115; `stage6\THE_PLAN.md`). Foundation `design\FOUNDATION.md`, UI plan `design\UI_PLAN.md`, how we work `stage5\HOW_WE_WORK.md`. Seven working window mock-ups in `pictures\` (pit, pipe, run levels, inlet, tank, detention, schedule), all ticked "right track"; full verdict only after real use.
