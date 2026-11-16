@@ -201,9 +201,11 @@ input[type=number]::-webkit-inner-spin-button{display:none}
 .held1{color:var(--t2);font-size:13px;line-height:16px}
 /* two views in one Preview band: long section above, plan below, same left-to-right scale */
 .prev{display:flex;flex-direction:column;min-height:240px}
+.prev .cap{top:4px}
+.prev .key.r{top:4px}
 .pv{position:relative;min-height:0}
-#pvS{flex:11 1 0}
-#pvP{flex:9 1 0;border-top:1px solid var(--bd2)}
+#pvS{flex:1 1 0}
+#pvP{flex:0 0 76px;border-top:1px solid var(--bd2)}
 .pv svg{position:absolute;left:0;top:0}
 .twl{fill:none;stroke:none;pointer-events:none}
 .twl.on{stroke:var(--acc);stroke-width:3;stroke-linejoin:round}
@@ -211,7 +213,8 @@ input[type=number]::-webkit-inner-spin-button{display:none}
 [data-hit]{cursor:pointer}
 .mini{white-space:nowrap}
 /* tighter sum rows so the preview can hold both views (owner allowed tightening the cards) */
-#cards .sum{--rh:28px;grid-template-columns:16px 1fr 68px 88px}
+#cards .ans{min-height:36px;line-height:36px}
+#cards .sum{--rh:26px;grid-template-columns:16px 1fr 68px 88px}
 #cards .sum .sf .nb{width:68px}
 #cards .sum>div{min-height:var(--rh)}
 #cards .sum .nb{height:var(--rh)}
@@ -413,7 +416,7 @@ function section(st){
   var g=el(svg,'g',{}),R=st.R,j,padL=90,padR=220,xs=(W-padL-padR)/CHC;
   var cx=function(i){return padL+CH[i]*xs;},xc=padL+CHC*xs;
   var T=Math.max.apply(null,CL)+0.06,lows=R.up.concat(R.dn);lows.push(P.conn);
-  var B=Math.min.apply(null,lows)-0.1,yTop=60,yBot=H-30,vs=(yBot-yTop)/(T-B),y=function(l){return yTop+(T-l)*vs;};
+  var B=Math.min.apply(null,lows)-0.1,yTop=50,yBot=H-26,vs=(yBot-yTop)/(T-B),y=function(l){return yTop+(T-l)*vs;};
   var fx=Math.round(vs/xs);$('scalenote').textContent='Heights drawn '+fx+' times taller';
   var mono='font:13px Consolas,"Courier New",monospace;';
   function tx(x,yy,s,anc,fill,w){return el(g,'text',{x:x,y:yy,'text-anchor':anc||'start',style:mono+(w?'font-weight:600;':'')+'fill:'+(fill||'var(--il)')},s);}
@@ -481,18 +484,15 @@ function section(st){
 function planPrev(st){
   var svg=$('planv'),W=svg.clientWidth||1488,H=svg.clientHeight||150;
   svg.innerHTML='';svg.setAttribute('viewBox','0 0 '+W+' '+H);
-  var g=el(svg,'g',{}),R=st.R,j,padL=90,padR=220,xs=(W-padL-padR)/CHC,cw=7.8,ho=13,hi=8;
-  var cx=function(i){return padL+CH[i]*xs;},xc=padL+CHC*xs,yr=Math.max(62,Math.round(H*.45));
+  var g=el(svg,'g',{}),R=st.R,j,padL=90,padR=220,xs=(W-padL-padR)/CHC,cw=7.8,ho=10,hi=6;
+  var cx=function(i){return padL+CH[i]*xs;},xc=padL+CHC*xs,yr=Math.round(H*.68);
   var mono='font:13px Consolas,"Courier New",monospace;';
   function tx(x,yy,s,anc,fill,w){return el(g,'text',{x:x,y:yy,'text-anchor':anc||'start',style:mono+(w?'font-weight:600;':'')+'fill:'+(fill||'var(--il)')},s);}
   function ring(x,yy,w,h,col){el(g,'rect',{x:x,y:yy,width:w,height:h,rx:6,fill:'none',stroke:col,'stroke-width':2});}
   var chg=changedKeys(R),words=shortBy(st);
-  /* context: boundary and house, faint */
-  el(g,'polyline',{points:(padL-40)+','+(H-10)+' '+xc+','+(H-10)+' '+xc+',34',fill:'none',stroke:'var(--ctx)','stroke-width':1.6,'stroke-dasharray':'8 4'});
-  tx(6,H-6,'Boundary','start','var(--t3)');
-  var hx1=cx(1)+60,hx2=cx(2)-60,hy1=yr+34,hy2=H-22;
-  el(g,'rect',{x:hx1,y:hy1,width:hx2-hx1,height:Math.max(16,hy2-hy1),fill:'none',stroke:'var(--ctx)','stroke-width':1.6});
-  tx((hx1+hx2)/2,hy1+Math.max(16,hy2-hy1)/2+4,'House','middle','var(--t3)');
+  /* context: property boundary, faint and tight (house dropped to save height) */
+  el(g,'polyline',{points:(padL-40)+','+(H-8)+' '+xc+','+(H-8)+' '+xc+','+(yr+14),fill:'none',stroke:'var(--ctx)','stroke-width':1.4,'stroke-dasharray':'8 4'});
+  tx(6,H-5,'Boundary','start','var(--t3)');
   /* pipes with flow arrows */
   for(j=0;j<4;j++){var ax=cx(j)+ho,bx=j<3?cx(j+1)-ho:xc-9,mx=(ax+bx)/2,pp=st.pipes[j],glab=pp.label==='uphill'?'uphill':'1 in '+pp.label;
     [-3,3].forEach(function(q){el(g,'line',{x1:ax,x2:bx,y1:yr+q,y2:yr+q,stroke:'var(--acc)','stroke-width':1.8});});
@@ -500,26 +500,25 @@ function planPrev(st){
     el(g,'path',{d:'M'+(mx-6)+' '+(yr-6)+'L'+(mx+6)+' '+yr+'L'+(mx-6)+' '+(yr+6)+'Z',fill:'var(--acc)'});
     tx(mx,yr-12,glab,'middle','var(--t1)',true);
     if(pp.flag){var col=pp.flag.k==='bad'?'var(--bad)':'var(--amber)',gw=glab.length*cw;
-      ring(mx-gw/2-4,yr-25,gw+8,18,col);
-      tx(mx,yr+24,pp.flag.k==='bad'?'Wrong':'Needs a look','middle',col,true);}
+      ring(mx-gw/2-4,yr-25,gw+8,18,col);}
     el(g,'rect',{x:ax,y:yr-12,width:Math.max(4,bx-ax),height:24,fill:'transparent','data-hit':'pipe'+j,'data-view':'P'}).style.pointerEvents='all';
     el(g,'rect',{x:ax,y:yr-18,width:Math.max(4,bx-ax),height:36,rx:6,class:'twl','data-tw':'pipe'+j,'data-view':'P'});}
   /* pits: inner square, dashed outer square, tag */
   for(j=0;j<4;j++){var pc=chg.indexOf('up'+j)>=0||(j>0&&chg.indexOf('dn'+(j-1))>=0);
     el(g,'rect',{x:cx(j)-ho,y:yr-ho,width:2*ho,height:2*ho,fill:'var(--prev)',stroke:'var(--pitd)','stroke-width':1.6,'stroke-dasharray':'4 3','data-hit':'pit'+j,'data-view':'P'});
     el(g,'rect',{x:cx(j)-hi,y:yr-hi,width:2*hi,height:2*hi,fill:'none',stroke:'var(--pit)','stroke-width':1.8,style:'pointer-events:none'});
-    tx(cx(j),yr-ho-12,NAME[j],'middle','var(--txt)',true);
-    if(pc)ring(cx(j)-ho-4,yr-ho-4,2*ho+8,2*ho+8,'var(--amber)');
-    if(words[j]!==undefined){ring(cx(j)-ho-8,yr-ho-8,2*ho+16,2*ho+16,'var(--bad)');tx(cx(j),yr+ho+22,'Short by '+f2(words[j]),'middle','var(--bad)',true);}
+    tx(cx(j),yr-ho-11,NAME[j],'middle','var(--txt)',true);
+    if(pc)ring(cx(j)-ho-1,yr-ho-1,2*ho+2,2*ho+2,'var(--amber)');
+    if(words[j]!==undefined)ring(cx(j)-ho-4,yr-ho-4,2*ho+8,2*ho+8,'var(--bad)');
     el(g,'rect',{x:cx(j)-ho-5,y:yr-ho-5,width:2*ho+10,height:2*ho+10,rx:6,class:'twl','data-tw':'pit'+j,'data-view':'P'});}
   /* council connection */
   el(g,'circle',{cx:xc,cy:yr,r:9,fill:'var(--prev)',stroke:'var(--t1)','stroke-width':2});
   tx(xc+16,yr+5,'Council connection','start','var(--txt)',true);
-  if(words.c!==undefined){ring(xc-15,yr-15,30,30,'var(--bad)');tx(xc+16,yr+26,'Short by '+f2(words.c),'start','var(--bad)',true);}
+  if(words.c!==undefined)ring(xc-15,yr-15,30,30,'var(--bad)');
   else if(st.arriveBad)ring(xc-15,yr-15,30,30,'var(--bad)');
   else if(P.dir==='up'&&Math.abs(P.conn-4.95)>1e-9)ring(xc-15,yr-15,30,30,'var(--amber)');
   /* held levels: a small pin at the pit, on the side the level belongs to */
-  heldKeys().forEach(function(k){var jj=+k.slice(2),up=k.charAt(0)==='u',px=up?cx(jj)+ho+14:cx(jj+1)-ho-14,py=yr-ho-14;
+  heldKeys().forEach(function(k){var jj=+k.slice(2),up=k.charAt(0)==='u',px=up?cx(jj)+ho+12:cx(jj+1)-ho-12,py=yr-ho-8;
     el(g,'line',{x1:px,y1:py+3,x2:px,y2:py+13,stroke:'var(--acc)','stroke-width':2,'stroke-linecap':'round'});
     el(g,'circle',{cx:px,cy:py,r:4.5,fill:'var(--acc)'});});
 }
