@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Making it feel like AutoCAD</title>
+<!--
+Made-up job as on "Every element, one by one": two units, Job 26-014. Pipe P2 to P1: 12.00 m, 150 UPVC SN8, 5.13 to 5.01, 1 in 100.
+Pit P2: junction 450 x 450, CL 5.75, in 5.15 (P3) and 5.20 (DP), out 5.13, depth 0.62. LPD invert 4.91 assumed.
+Job tracking jobs are made up and coded; no addresses, no names. Research and sources: zero/reference/research/R-001_FEELING_NATIVE_IN_AUTOCAD.md
+-->
+<style>
+  :root {
+    --bg:#f3f5f8; --card:#ffffff; --tint:#f1f4f8; --ink:#1a2330; --mid:#4c5766; --soft:#66717f; --line:#dde2e9;
+    --accent:#1e5aa8; --onaccent:#ffffff;
+    --okc:#1b7f3b; --okb:#e4f3e8; --amc:#8f5300; --amb:#fff3d9; --amline:#ecd49a; --rdc:#b3261e; --rdb:#fde9e7; --ntc:#4c5766; --ntb:#e8ecf1;
+    --pipe:#2f6fc4; --paper:#f5f7fa; --pitfill:#ffffff; --hatch:#9aa3ad; --lvl:#b3261e; --tipbg:#1a2330; --tipfg:#ffffff;
+    --chg:#d9372c; --grip:#0d3a78; --gripline:#ffffff;
+    --s1:#2F6FC4; --s2:#13877A; --s3:#6E4FCC; --s4:#B8467F; --s5:#5F6672; --onseries:#ffffff;
+  }
+  /* DARK-THEME-START */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg:#141a22; --card:#1e2631; --tint:#283241; --ink:#e7ecf3; --mid:#b9c2ce; --soft:#97a3b2; --line:#35414f;
+      --accent:#5aa2f0; --onaccent:#0f1722;
+      --okc:#7bd598; --okb:#1c3a29; --amc:#f2bd5e; --amb:#3e3013; --amline:#6a5320; --rdc:#f59a92; --rdb:#4a2421; --ntc:#c6ced9; --ntb:#333f4e;
+      --pipe:#5aa2f0; --paper:#2a3340; --pitfill:#2a3340; --hatch:#8793a1; --lvl:#ff9389; --tipbg:#e7ecf3; --tipfg:#141a22;
+      --chg:#ff6f61; --grip:#ffffff; --gripline:#0f1722;
+      --s1:#5AA2F0; --s2:#3CC4B2; --s3:#A08AF0; --s4:#E57AAE; --s5:#A3AAB6; --onseries:#0f1722;
+    }
+  }
+  /* DARK-THEME-END */
+  * { box-sizing:border-box; }
+  /* Three text sizes (20, 16, 13) plus the big answer (28). */
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.5 "Segoe UI", Arial, sans-serif; }
+  main { max-width:1080px; margin:0 auto; padding:24px 16px 24px; }
+  h1 { font-size:28px; font-weight:700; margin:0 0 8px; }
+  h2 { font-size:20px; font-weight:600; margin:40px 0 8px; }
+  h3 { font-size:16px; font-weight:600; margin:0 0 8px; }
+  b { font-weight:700; }
+  .lead { color:var(--mid); margin:0 0 16px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px; margin:16px 0; box-shadow:0 1px 2px rgba(26,35,48,.04); min-width:0; }
+  .grid { display:grid; grid-template-columns:1fr; gap:16px; margin:16px 0; }
+  .grid .card { margin:0; }
+  .label { font-size:13px; color:var(--soft); letter-spacing:.02em; margin:0 0 4px; }
+  .answer { font-size:28px; font-weight:700; line-height:1.2; margin:0 0 8px; font-variant-numeric:tabular-nums; }
+  .answer small { font-size:16px; font-weight:400; color:var(--mid); }
+  .answer.sm { font-size:20px; }
+  .note { font-size:13px; color:var(--soft); margin:8px 0 0; }
+  .quote { font-size:16px; color:var(--mid); margin:0 0 8px; }
+  p { margin:8px 0; }
+  .lbl { color:var(--soft); }
+  .pill { display:inline-block; border-radius:10px; padding:1px 10px; font-size:13px; font-weight:400; white-space:nowrap; }
+  .ok { background:var(--okb); color:var(--okc); } .am { background:var(--amb); color:var(--amc); } .rd { background:var(--rdb); color:var(--rdc); } .nt { background:var(--ntb); color:var(--ntc); }
+  .rec { background:var(--accent); color:var(--onaccent); }
+  .sum { width:100%; max-width:420px; border-collapse:collapse; font-variant-numeric:tabular-nums; font-size:16px; }
+  .sum td { padding:3px 0; vertical-align:top; }
+  .sum td.op { width:20px; color:var(--soft); }
+  .sum td.n { text-align:right; width:72px; padding-left:8px; white-space:nowrap; }
+  .sum tr.total td { border-top:1px solid var(--ink); padding-top:5px; }
+  .sum tr.final td { border-top:1px solid var(--ink); border-bottom:3px double var(--ink); padding:5px 0; }
+  .sum tr.total td.n, .sum tr.final td.n { font-weight:700; }
+  .sum td.d { color:var(--mid); }
+  .rows { list-style:none; margin:8px 0 0; padding:0; }
+  .rows li { display:flex; justify-content:space-between; gap:16px; padding:6px 0; border-top:1px solid var(--line); font-size:16px; }
+  .rows li > span:last-child { text-align:right; color:var(--mid); }
+  svg { width:100%; height:auto; display:block; }
+  svg.pic { background:var(--paper); border-radius:8px; max-width:420px; }
+  svg text { fill:var(--ink); font-family:"Segoe UI", Arial, sans-serif; }
+  .two { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .ba { display:grid; grid-template-columns:1fr; gap:8px; margin:8px 0 0; }
+  .ba > div { border-radius:8px; padding:8px 12px; background:var(--tint); min-width:0; }
+  .ba b.h { display:block; font-size:13px; font-weight:400; color:var(--soft); }
+  .src { font-size:13px; color:var(--soft); margin:8px 0 0; }
+  .honest { background:var(--amb); border:1px solid var(--amline); border-radius:12px; padding:16px; margin:16px 0 0; }
+  .honest .pill { border:1px solid var(--amline); margin:0 4px 4px 0; white-space:normal; }
+  /* drawing pictures */
+  .dl { stroke:var(--ink); fill:none; } .df { fill:var(--ink); }
+  .dpit { fill:var(--pitfill); stroke:var(--ink); stroke-width:1.6; }
+  .dpito { fill:none; stroke:var(--ink); stroke-width:1; stroke-dasharray:5 3; }
+  .dh { stroke:var(--hatch); fill:none; } .dghost { stroke:var(--soft); fill:none; stroke-dasharray:3 3; }
+  .dt { font-family:"Arial Narrow", Arial, sans-serif; }
+  svg text.dlv { fill:var(--lvl); font-family:"Arial Narrow", Arial, sans-serif; }
+  svg text.dcap { fill:var(--mid); } svg text.dsoft { fill:var(--soft); }
+  .dlead { stroke:var(--mid); stroke-width:1; fill:none; }
+  .dgrip { fill:var(--grip); stroke:var(--gripline); stroke-width:1.5; }
+  .dbusf { fill:var(--mid); }
+  .dam { fill:var(--amb); stroke:var(--amline); } svg text.damt { fill:var(--amc); }
+  .dbox { fill:var(--card); stroke:var(--soft); }
+  .dsel { fill:var(--accent); } svg text.dselt { fill:var(--onaccent); }
+  .dtab { fill:var(--tint); stroke:var(--line); }
+  /* the ribbon, drawn */
+  .rb { border:1px solid var(--line); border-radius:8px; background:var(--tint); overflow:hidden; margin:8px 0 0; }
+  .rbtabs { display:flex; flex-wrap:wrap; gap:0; padding:4px 8px 0; border-bottom:1px solid var(--line); }
+  .rbtab { font-size:13px; padding:4px 10px; color:var(--mid); border-radius:8px 8px 0 0; white-space:nowrap; }
+  .rbtab.on { background:var(--accent); color:var(--onaccent); }
+  .rbtab.ce { color:var(--ink); font-weight:600; }
+  .rbtab.on.ce { color:var(--onaccent); }
+  .rbbody { display:flex; flex-wrap:wrap; gap:4px; padding:8px; align-items:stretch; }
+  .rbp { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:8px 8px 4px; display:flex; flex-direction:column; justify-content:space-between; min-width:0; }
+  .rbp .bs { display:flex; flex-wrap:wrap; gap:4px 5px; }
+  .rbp .pn { font-size:13px; color:var(--soft); text-align:center; margin-top:4px; white-space:nowrap; }
+  .rbp.own { opacity:.55; }
+  .rbp.own .ph { width:40px; height:44px; border-radius:6px; background:repeating-linear-gradient(90deg, var(--ntb) 0 12px, transparent 12px 16px); }
+  .rbp.empty .bs { align-items:center; justify-content:center; min-height:58px; font-size:13px; color:var(--soft); padding:0 8px; }
+  .rbb { width:min-content; min-width:56px; display:flex; flex-direction:column; align-items:center; gap:2px; font-size:13px; line-height:1.2; text-align:center; color:var(--ink); padding:2px 0; }
+  .rbb svg { width:26px; height:26px; }
+  .rbb .ic { stroke:var(--ink); fill:none; stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; }
+  .rbb .icb { stroke:var(--pipe); fill:none; stroke-width:4; stroke-dasharray:5 3; }
+  .rbb.hot { outline:2px solid var(--accent); outline-offset:1px; border-radius:6px; }
+  .rbb small { font-size:13px; color:var(--soft); }
+  .rbcap { font-size:13px; color:var(--soft); margin:16px 0 0; }
+  .elsewhere { display:flex; flex-wrap:wrap; gap:8px; margin:8px 0 0; font-size:13px; color:var(--mid); }
+  .elsewhere span { background:var(--tint); border-radius:8px; padding:4px 10px; }
+  .tally { display:grid; grid-template-columns:repeat(4, 1fr); gap:8px; margin:16px 0 0; }
+  .tally > div { background:var(--tint); border-radius:8px; padding:8px 12px; min-width:0; }
+  .tally .k { font-size:13px; color:var(--soft); display:block; }
+  .tally .v { font-size:20px; font-weight:700; font-variant-numeric:tabular-nums; }
+  .tally .v small { font-size:13px; font-weight:400; color:var(--mid); }
+  .tally.blk .v small { display:block; }
+  .opt { border:1px solid var(--line); }
+  .opt.pick { border:2px solid var(--accent); }
+  /* names list */
+  .names { list-style:none; margin:8px 0 0; padding:0; }
+  .names li { display:grid; grid-template-columns:64px 1fr auto auto; gap:4px 12px; align-items:center; padding:6px 0; border-top:1px solid var(--line); }
+  .names li .p2.am { grid-column:2 / -1; justify-self:start; white-space:normal; }
+  .names .nm { font-weight:700; font-size:16px; letter-spacing:.03em; }
+  .names .pl { color:var(--mid); }
+  .names .pl small { font-size:13px; color:var(--soft); }
+  /* palette mock-ups */
+  .pal { border:1px solid var(--line); border-radius:8px; overflow:hidden; max-width:420px; background:var(--card); margin:8px 0; }
+  .pal .ph { background:var(--tint); padding:6px 12px; font-size:13px; color:var(--mid); display:flex; justify-content:space-between; }
+  .pal .sel { margin:8px 12px; padding:4px 10px; border:1px solid var(--line); border-radius:6px; font-size:13px; display:flex; justify-content:space-between; }
+  .pal .sec { background:var(--tint); padding:4px 12px; font-size:13px; color:var(--mid); border-top:1px solid var(--line); }
+  .pal .sec.ce { color:var(--ink); font-weight:600; }
+  .pal .r { display:grid; grid-template-columns:44% 1fr; gap:8px; padding:4px 12px; border-top:1px solid var(--line); font-size:13px; align-items:center; }
+  .pal .r .k { color:var(--mid); }
+  .pal .r .v { display:flex; flex-wrap:wrap; gap:4px 8px; align-items:center; justify-content:space-between; font-variant-numeric:tabular-nums; }
+  .pal .r .v b { font-size:13px; }
+  .pal .r.dim .k, .pal .r.dim .v { color:var(--soft); }
+  .menu { border:1px solid var(--line); border-radius:8px; background:var(--card); box-shadow:0 2px 6px rgba(26,35,48,.10); font-size:13px; max-width:260px; overflow:hidden; }
+  .menu div { padding:4px 12px; border-top:1px solid var(--line); }
+  .menu div:first-child { border-top:0; }
+  .menu .own { color:var(--soft); }
+  .menu .hd { background:var(--tint); color:var(--mid); }
+  .menu .pk { background:var(--accent); color:var(--onaccent); }
+  .doors { display:grid; grid-template-columns:1fr; gap:16px; margin:8px 0 0; }
+  .doors figure { margin:0; min-width:0; }
+  .doors figcaption { font-size:13px; color:var(--soft); margin:0 0 4px; }
+  /* job tracking */
+  .jobs { list-style:none; margin:8px 0 0; padding:0; }
+  .jobs li { display:grid; grid-template-columns:1fr auto; gap:4px 12px; padding:8px 0; border-top:1px solid var(--line); align-items:center; }
+  .jobs .j { min-width:0; }
+  .jobs .j small { display:block; font-size:13px; color:var(--soft); }
+  .jobs .d { text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
+  .jobs .d b { font-size:16px; }
+  .jobs .d small { font-size:13px; color:var(--soft); }
+  .stages { display:grid; grid-template-columns:repeat(5, 1fr); gap:4px; margin:8px 0; }
+  .stages div { background:var(--tint); border-radius:8px; padding:6px 4px; text-align:center; font-size:13px; color:var(--mid); min-width:0; }
+  .stages b { display:block; font-size:20px; color:var(--ink); }
+  .hrs { margin:12px 0 0; }
+  .hrs .t { display:flex; justify-content:space-between; gap:8px; font-size:16px; }
+  .hrs .t span:last-child { white-space:nowrap; font-variant-numeric:tabular-nums; color:var(--mid); }
+  .track { display:flex; height:24px; border-radius:6px; background:var(--ntb); overflow:hidden; margin:4px 0; position:relative; }
+  .track i { display:flex; align-items:center; justify-content:center; font-style:normal; font-size:13px; color:var(--onseries); font-variant-numeric:tabular-nums; min-width:0; }
+  .track i.s1 { background:var(--s1); } .track i.s2 { background:var(--s2); } .track i.s3 { background:var(--s3); }
+  .track i.over { background:var(--rdb); color:var(--rdc); border-left:2px solid var(--rdc); }
+  .key { font-size:13px; color:var(--mid); }
+  .key u { text-decoration:none; display:inline-block; width:10px; height:10px; border-radius:2px; margin:0 4px 0 0; vertical-align:-1px; }
+  .key span { margin-right:12px; white-space:nowrap; }
+  .tl { list-style:none; margin:8px 0 0; padding:0; }
+  .tl li { display:grid; grid-template-columns:56px 1fr auto; gap:4px 12px; padding:8px 0; border-top:1px solid var(--line); align-items:baseline; }
+  .tl .rv { font-weight:700; }
+  .tl small { display:block; font-size:13px; color:var(--soft); }
+  .tl .dt2 { text-align:right; white-space:nowrap; font-variant-numeric:tabular-nums; color:var(--mid); }
+  .chips { display:flex; flex-wrap:wrap; gap:8px; margin:8px 0; }
+  .chip { display:inline-block; padding:2px 10px; border-radius:8px; background:var(--tint); border:1px solid var(--line); font-size:13px; }
+  .chip b { font-size:16px; }
+  .choice { list-style:none; margin:8px 0 0; padding:0; }
+  .choice li { border-top:1px solid var(--line); padding:8px 0; }
+  .choice li .o { display:flex; gap:8px; align-items:flex-start; }
+  .choice li .o .btn { flex:none; }
+  .choice li .o .pill { margin-left:4px; }
+  .choice li small { display:block; font-size:13px; color:var(--soft); }
+  .btn { display:inline-block; padding:2px 12px; border-radius:8px; background:var(--tint); color:var(--ink); font-size:16px; }
+  .btn.main { background:var(--accent); color:var(--onaccent); }
+  @media (min-width:721px) {
+    .grid { grid-template-columns:1fr 1fr; }
+    .grid.one { grid-template-columns:1fr; }
+    .doors { grid-template-columns:repeat(3, 1fr); }
+    .ba { grid-template-columns:1fr 1fr; }
+    .twocol { display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:start; }
+  }
+  @media (max-width:720px) {
+    .rows li { flex-direction:column; gap:2px; }
+    .rows li > span:last-child { text-align:left; }
+    .pill { white-space:normal; }
+    .tally { grid-template-columns:1fr 1fr; }
+    .names li { grid-template-columns:56px auto 1fr; }
+    .names li .pl { grid-column:2 / -1; }
+    .names li .pill { justify-self:start; }
+    .names li .p1 { grid-column:2; }
+    .names li .p2 { grid-column:3; }
+    .names li .p2.am { grid-column:2 / -1; }
+    .tally .v small { display:block; }
+    .two { grid-template-columns:1fr; }
+    .tl li { grid-template-columns:44px 1fr; }
+    .tl .dt2 { grid-column:2; text-align:left; }
+    .stages { grid-template-columns:repeat(3, 1fr); }
+  }
+</style>
+</head>
+<body>
+<main>
+<h1>Making it feel like AutoCAD</h1>
+<p class="lead">Mock-ups and research, on the same made-up two-unit job as the other pages (Job 26-014). Nothing here is approved. How any of it is built inside AutoCAD is still to be proven; I mark where. Research note with every source: <span class="lbl">zero\reference\research\R-001_FEELING_NATIVE_IN_AUTOCAD.md</span></p>
+
+<div class="card">
+  <p class="label">Your words, 16 Nov</p>
+  <p class="quote">"COMMAND NAMES AND RIBBON FEELS SEPARATE AND IT DOESNT FEEL LIKE A GOOD EXTENSION OF AUTOCAD"</p>
+  <p class="answer">Put each thing where AutoCAD already puts its own.</p>
+  <div class="tally blk">
+    <div><span class="k">Buttons for a pipe</span><span class="v">a tab <small>that appears when you pick the pipe</small></span></div>
+    <div><span class="k">One pipe's numbers</span><span class="v">Properties <small>under a CE heading</small></span></div>
+    <div><span class="k">Typed names</span><span class="v">2 to 4 letters <small>the letters already on the drawing</small></span></div>
+    <div><span class="k">Quick changes</span><span class="v">grip and right-click <small>menus</small></span></div>
+  </div>
+  <p class="note">4 places, all AutoCAD's own. New CE windows opened to change one pit or pipe: <b>0</b>.</p>
+</div>
+
+<h2>1. What well-made tools do</h2>
+<p class="lead">Four tools studied on Autodesk's own help pages and in AutoCAD 2027's own files on your PC. Borrow the idea, never the look.</p>
+<div class="grid">
+<div class="card">
+  <p class="label">AutoCAD's own hatch · tabs that come and go</p>
+  <p class="answer">35 <small>triggers in AutoCAD 2027</small></p>
+  <svg class="pic" viewBox="0 0 360 170" role="img" aria-label="Pick a hatch and a Hatch Editor tab appears at the end of the ribbon">
+    <rect class="dtab" x="10" y="10" width="340" height="52" rx="6"/>
+    <g font-size="12"><text class="dsoft" x="20" y="27">Home</text><text class="dsoft" x="62" y="27">Insert</text><text class="dsoft" x="104" y="27">Annotate</text><text class="dsoft" x="166" y="27">View</text><text class="dsoft" x="200" y="27">...</text></g>
+    <rect class="dsel" x="232" y="13" width="92" height="20" rx="5"/><text class="dselt" x="278" y="27" font-size="12" text-anchor="middle">Hatch Editor</text>
+    <g class="dbox"><rect x="18" y="38" width="62" height="18" rx="3"/><rect x="84" y="38" width="62" height="18" rx="3"/><rect x="150" y="38" width="62" height="18" rx="3"/><rect x="216" y="38" width="62" height="18" rx="3"/><rect x="282" y="38" width="60" height="18" rx="3"/></g>
+    <g font-size="11.5" text-anchor="middle"><text class="dcap" x="49" y="51">Boundaries</text><text class="dcap" x="115" y="51">Pattern</text><text class="dcap" x="181" y="51">Properties</text><text class="dcap" x="247" y="51">Origin</text><text class="dcap" x="312" y="51">Options</text></g>
+    <rect class="dpit" x="120" y="96" width="120" height="56"/>
+    <g class="dh"><line x1="120" y1="124" x2="148" y2="96"/><line x1="120" y1="152" x2="176" y2="96"/><line x1="148" y1="152" x2="204" y2="96"/><line x1="176" y1="152" x2="232" y2="96"/><line x1="204" y1="152" x2="240" y2="116"/><line x1="232" y1="152" x2="240" y2="144"/></g>
+    <rect class="dgrip" x="175" y="119" width="10" height="10"/>
+    <line class="dlead" x1="246" y1="100" x2="274" y2="42"/><polygon class="dbusf" points="277,35 277,46 269,42"/>
+    <text class="dcap" x="22" y="118" font-size="12">1 pick the hatch</text><text class="dcap" x="252" y="118" font-size="12">2 its tab appears</text>
+    <text class="dsoft" x="252" y="134" font-size="12">let go: it leaves</text>
+  </svg>
+  <div class="ba">
+    <div><b class="h">Borrow</b>The tab appears when you pick the thing and goes when you let go. Panels run left to right in the order you work.</div>
+    <div><b class="h">Avoid</b>Its Properties panel holds 13 controls. Too many for a tab you only glance at.</div>
+  </div>
+  <p class="src">Source: Autodesk help, "Hatch Creation Ribbon Contextual Tab" (AutoCAD 2026) and "About Customizing Ribbon Contextual Tab States"; the 35 counted in AutoCAD 2027's own menu file on your PC. How sure: high.</p>
+</div>
+<div class="card">
+  <p class="label">Civil 3D pipe networks · connected, not merged</p>
+  <p class="answer">5 <small>places to edit one pipe. Too many.</small></p>
+  <svg class="pic" viewBox="0 0 360 170" role="img" aria-label="Move a pit and the pipe end follows; the far end stays"><line class="dh" x1="180" y1="10" x2="180" y2="160"/><text class="dsoft" x="12" y="22" font-size="12">Before</text><text class="dsoft" x="192" y="22" font-size="12">After</text><line x1="52" y1="90" x2="128" y2="58" stroke="var(--ink)" stroke-width="9.2"/><line x1="52" y1="90" x2="128" y2="58" stroke="var(--pitfill)" stroke-width="7"/><line x1="52" y1="90" x2="128" y2="58" stroke="var(--pipe)" stroke-width="7" stroke-dasharray="15 8"/><rect class="dpito" x="18" y="71" width="38" height="38"/><rect class="dpit" x="22" y="75" width="30" height="30"/><line class="dh" x1="22" y1="75" x2="52" y2="105"/><line class="dh" x1="52" y1="75" x2="22" y2="105"/><rect class="dpito" x="124" y="39" width="38" height="38"/><rect class="dpit" x="128" y="43" width="30" height="30"/><g class="dh"><line x1="135.5" y1="43" x2="135.5" y2="73"/><line x1="143.0" y1="43" x2="143.0" y2="73"/><line x1="150.5" y1="43" x2="150.5" y2="73"/></g><rect class="dghost" x="202" y="75" width="30" height="30"/><line class="dlead" x1="217" y1="108" x2="217" y2="118"/><polygon class="dbusf" points="217,124 213,116 221,116"/><line x1="232" y1="140" x2="308" y2="58" stroke="var(--ink)" stroke-width="9.2"/><line x1="232" y1="140" x2="308" y2="58" stroke="var(--pitfill)" stroke-width="7"/><line x1="232" y1="140" x2="308" y2="58" stroke="var(--pipe)" stroke-width="7" stroke-dasharray="15 8"/><rect class="dpito" x="198" y="121" width="38" height="38"/><rect class="dpit" x="202" y="125" width="30" height="30"/><line class="dh" x1="202" y1="125" x2="232" y2="155"/><line class="dh" x1="232" y1="125" x2="202" y2="155"/><rect class="dpito" x="304" y="39" width="38" height="38"/><rect class="dpit" x="308" y="43" width="30" height="30"/><g class="dh"><line x1="315.5" y1="43" x2="315.5" y2="73"/><line x1="323.0" y1="43" x2="323.0" y2="73"/><line x1="330.5" y1="43" x2="330.5" y2="73"/></g><circle cx="232" cy="140" r="4" style="fill:var(--mid)"/><circle cx="308" cy="58" r="4" style="fill:var(--mid)"/><text class="dcap" x="244" y="158" font-size="12">pipe end follows</text><text class="dcap" x="352" y="26" font-size="12" text-anchor="end">far end stays</text></svg>
+  <div class="ba">
+    <div><b class="h">Borrow</b>A pit carries its pipe ends and keeps their levels. A pipe moved alone comes off. A mark shows beside the grip when an end is about to join. A size grip offers only real sizes.</div>
+    <div><b class="h">Avoid</b>One pipe editable in 5 places (grips, a floating toolbar, a properties window, a table, a tree), and lists to set up before the first pipe.</div>
+  </div>
+  <p class="src">Source: Autodesk help, Civil 3D 2024 and 2027: "About Editing Pipe Networks Using Grips", "About Grip Editing Structures", "Network Layout Tools", "About the Part Catalog and Parts Lists". How sure: high for how it behaves; low for what small offices say (forum pages would not open).</p>
+</div>
+<div class="card">
+  <p class="label">AutoCAD's own dimensions · it warns when something comes loose</p>
+  <p class="answer">2 <small>fixes, on the badge itself</small></p>
+  <svg class="pic" viewBox="0 0 360 170" role="img" aria-label="A dimension that has lost its object shows a small badge; clicking it offers two fixes">
+    <line class="dl" x1="40" y1="120" x2="200" y2="120" stroke-width="1.6" stroke-dasharray="4 4"/>
+    <line class="dl" x1="40" y1="112" x2="40" y2="62"/><line class="dl" x1="200" y1="112" x2="200" y2="62"/>
+    <line class="dl" x1="40" y1="72" x2="200" y2="72"/><polygon class="df" points="40,72 50,68 50,76"/><polygon class="df" points="200,72 190,68 190,76"/>
+    <text class="dt" x="120" y="64" font-size="13" text-anchor="middle">12000</text>
+    <text class="dsoft" x="120" y="140" font-size="12" text-anchor="middle">the line it measured was erased</text>
+    <rect class="dam" x="204" y="46" width="22" height="22" rx="4"/><text class="damt" x="215" y="62" font-size="15" text-anchor="middle" font-weight="700">!</text>
+    <rect class="dbox" x="236" y="40" width="112" height="52" rx="6"/>
+    <text x="246" y="60" font-size="12.5">Re-attach</text><line class="dlead" x1="236" y1="67" x2="348" y2="67"/><text x="246" y="84" font-size="12.5">Erase</text>
+  </svg>
+  <div class="ba">
+    <div><b class="h">Borrow</b>A small badge on the thing that came loose, with its fixes one click away. This is our amber "not joined", done AutoCAD's way.</div>
+    <div><b class="h">Avoid</b>It sits behind a status-bar switch that many people never turn on. Ours shows by itself.</div>
+  </div>
+  <p class="src">Source: Autodesk help, "To Work with the Annotation Monitor" (AutoCAD 2026); "About Arrays" (2022) for grip menus. How sure: high.</p>
+</div>
+<div class="card">
+  <p class="label">AutoCAD Plant 3D piping · keep drawing from the open end</p>
+  <p class="answer">1 <small>click on the "+" to carry on</small></p>
+  <svg class="pic" viewBox="0 0 360 170" role="img" aria-label="A plus grip on the open end of a pipe continues the run; a second grip swaps the part from a short list"><line x1="60" y1="110" x2="220" y2="78" stroke="var(--ink)" stroke-width="10.2"/><line x1="60" y1="110" x2="220" y2="78" stroke="var(--pitfill)" stroke-width="8"/><line x1="60" y1="110" x2="220" y2="78" stroke="var(--pipe)" stroke-width="8" stroke-dasharray="18 9"/><rect class="dpito" x="26" y="91" width="38" height="38"/><rect class="dpit" x="30" y="95" width="30" height="30"/><line class="dh" x1="30" y1="95" x2="60" y2="125"/><line class="dh" x1="60" y1="95" x2="30" y2="125"/><circle class="dgrip" cx="232" cy="75.5" r="9"/><path d="M227 75.5h10M232 70.5v10" stroke="var(--gripline)" stroke-width="2"/><line class="dghost" x1="244" y1="73" x2="330" y2="56"/><text class="dcap" x="214" y="104" font-size="12">+ grip: carry on from here</text><rect class="dgrip" x="135" y="89" width="10" height="10"/><line class="dlead" x1="140" y1="88" x2="140" y2="52"/><rect class="dbox" x="86" y="14" width="110" height="38" rx="6"/><text x="96" y="30" font-size="12.5">100 UPVC</text><text x="96" y="46" font-size="12.5">150 UPVC SN8</text><text class="dcap" x="204" y="30" font-size="12">swap from a</text><text class="dcap" x="204" y="45" font-size="12">short list</text><text class="dsoft" x="18" y="156" font-size="12">drawn in our symbols, not theirs</text></svg>
+  <div class="ba">
+    <div><b class="h">Borrow</b>A "+" grip on every open pipe end. A swap grip that offers only parts that fit.</div>
+    <div><b class="h">Avoid</b>A catalogue and a spec to set up before the first pipe. Far more than a house drain needs.</div>
+  </div>
+  <p class="src">Source: Autodesk help, Plant 3D 2026 "Pipe Routing" topics (continuation grip, substituting parts), read partly as search extracts. How sure: medium.</p>
+</div>
+</div>
+<h2>2. Three ways the ribbon could sit</h2>
+<p class="lead">The same moment on Job 26-014: pipe P2 to P1 is selected (150 UPVC SN8, 12.00 m), and you want to flip its label off the driveway hatch. Each option shows the ribbon with nothing selected, then with the pipe selected. Small grey letters under a button are its typed name. The ring marks the button for the task.</p>
+<div class="card opt">
+  <p class="label">Option A · lives where AutoCAD's own tools live <span class="pill am">to be proven</span></p>
+  <p class="answer">Best at never leaving Home.</p>
+  <p class="rbcap">Nothing selected · Home tab</p><div class="rb" role="img" aria-label="Option A, nothing selected: CE panels inside the Home tab"><div class="rbtabs"><span class="rbtab on">Home</span><span class="rbtab">Insert</span><span class="rbtab">Annotate</span><span class="rbtab">Parametric</span><span class="rbtab">View</span><span class="rbtab">Manage</span><span class="rbtab">Output</span><span class="rbtab">Add-ins</span><span class="rbtab">Collaborate</span></div><div class="rbbody"><div class="rbp own"><div class="bs"><div class="ph"></div></div><div class="pn">Draw</div></div><div class="rbp own"><div class="bs"><div class="ph"></div></div><div class="pn">Modify</div></div><div class="rbp own"><div class="bs"><div class="ph"></div></div><div class="pn">Annotation</div></div><div class="rbp own"><div class="bs"><div class="ph"></div></div><div class="pn">Layers</div></div><div class="rbp"><div class="bs"><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><rect class="ic" x="6" y="6" width="14" height="14"/><rect class="ic" x="3" y="3" width="20" height="20" stroke-dasharray="3 2" stroke-width="1"/></svg><span>Pit</span><small>PIT</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><line class="icb" x1="3" y1="17" x2="23" y2="9"/><line class="ic" x1="3" y1="13.5" x2="23" y2="5.5" stroke-width="1"/><line class="ic" x1="3" y1="20.5" x2="23" y2="12.5" stroke-width="1"/></svg><span>Pipe</span><small>CD</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><circle class="ic" cx="13" cy="13" r="8"/><line class="ic" x1="13" y1="5" x2="13" y2="21"/><line class="ic" x1="5" y1="13" x2="21" y2="13"/></svg><span>Inlet</span><small>DP IO OF</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><rect class="ic" x="3" y="7" width="20" height="12" rx="6"/><path class="ic" d="M8 13h10" stroke-width="1"/></svg><span>Tank</span><small>WT</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M3 10h20M3 16h20M7 10v6M11 10v6M15 10v6M19 10v6" stroke-width="1.2"/></svg><span>Line drain</span><small>TG AG SD</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M4 6v14M4 13h14M14 9l5 4-5 4"/><path class="ic" d="M22 5v16"/></svg><span>Discharge point</span><small>LPD</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M6 9h14l-7 9z"/><path class="ic" d="M4 21h18" stroke-width="1"/></svg><span>Level tag</span><small>RL</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M4 8l16 9M20 17l-6-1M20 17l-2-6"/></svg><span>Fall</span><small>FALL</small></div></div><div class="pn">CE Drainage</div></div><div class="rbp"><div class="bs"><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><rect class="ic" x="3" y="4" width="20" height="18" rx="2"/><path class="ic" d="M15 4v18M17.5 9h3M17.5 13h3M17.5 17h3" stroke-width="1.2"/></svg><span>CE panel</span><small>CE</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M4 8l2 2 4-4M4 17l2 2 4-4M13 8h9M13 17h9"/></svg><span>Checks</span></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M5 21l9-9M14 12a4.5 4.5 0 1 0 5-6l-3 3-2-2 3-3"/></svg><span>CE tools</span><small>MR CR Q</small></div></div><div class="pn">CE Job</div></div></div></div><div class="elsewhere"><span>On <b>Annotate</b>: CE Sheet · Pit schedule, Sheet items, Tidy labels</span><span>On <b>Output</b>: CE Issue · Issue</span><span>Block, Properties, Groups, Clipboard: folded away to make room</span></div>  <p class="rbcap">Pipe P2 to P1 selected · a Pipe tab appears</p><div class="rb" role="img" aria-label="Option A, pipe selected: the Pipe tab"><div class="rbtabs"><span class="rbtab">Home</span><span class="rbtab">Insert</span><span class="rbtab">Annotate</span><span class="rbtab">Parametric</span><span class="rbtab">View</span><span class="rbtab">Manage</span><span class="rbtab">Output</span><span class="rbtab">Add-ins</span><span class="rbtab">Collaborate</span><span class="rbtab ce on">Pipe</span></div><div class="rbbody"><div class="rbp"><div class="bs"><div class="rbb hot"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M4 13h18" stroke-dasharray="3 2" stroke-width="1"/><path class="ic" d="M7 9h12V5zM7 17h12v4z"/></svg><span>Flip label side</span></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M3 13h20M7 9l-4 4 4 4M19 9l4 4-4 4"/></svg><span>Slide label</span></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M6 13a7.5 7.5 0 1 1 2.5 5.6M6 13V7M6 13h6"/></svg><span>Reset label</span></div></div><div class="pn">Label</div></div><div class="rbp"><div class="bs"><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M4 9h17M17 5l4 4-4 4M22 17H5M9 13l-4 4 4 4"/></svg><span>Reverse flow</span></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M3 13h7M16 13h7"/><rect class="ic" x="10" y="10" width="6" height="6"/></svg><span>Split at a pit</span></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M5 5l6 6M11 11l8 8 3-3-8-8z"/></svg><span>Match to others</span></div></div><div class="pn">Pipe</div></div><div class="rbp"><div class="bs"><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M3 7l20 10"/><path class="ic" d="M3 21h20" stroke-width="1"/><path class="ic" d="M3 7v14M23 17v4" stroke-width="1"/></svg><span>Level this run</span></div></div><div class="pn">Levels</div></div><div class="rbp"><div class="bs"><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><rect class="ic" x="3" y="8" width="9" height="10"/><path class="ic" d="M12 13h11"/><circle cx="12" cy="13" r="2.4" style="fill:var(--ink)"/></svg><span>Join end</span></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><rect class="ic" x="3" y="8" width="9" height="10"/><path class="ic" d="M16 13h7M13.5 9.5l2 2M13.5 16.5l2-2"/></svg><span>Free end</span></div></div><div class="pn">Ends</div></div><div class="rbp"><div class="bs"><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><rect class="ic" x="5" y="3" width="16" height="20" rx="2"/><path class="ic" d="M8 8h3M13 8h5M8 13h3M13 13h5M8 18h3M13 18h5" stroke-width="1.2"/></svg><span>Properties</span></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><circle class="ic" cx="11" cy="11" r="6.5"/><path class="ic" d="M16 16l6 6"/></svg><span>Its checks</span></div></div><div class="pn">Go to</div></div></div></div><div class="tally"><div><span class="k">CE buttons showing, nothing selected</span><span class="v">11 <small>on Home, 4 more on 2 other tabs</small></span></div><div><span class="k">CE buttons showing, pipe selected</span><span class="v">11</span></div><div><span class="k">Clicks to "flip label side"</span><span class="v">1</span></div><div><span class="k">Clicks to "pit schedule"</span><span class="v">2 <small>Annotate, then the button</small></span></div></div>
+  <ul class="rows">
+    <li><span>Downside</span><span>Home already holds 8 or more AutoCAD panels. Ours push 4 of them into fold-away buttons on a normal screen.</span></li>
+    <li><span>Downside</span><span>CE tools end up on 3 different tabs. That is the "feels separate" problem again, just spread out.</span></li>
+    <li><span>Not proven</span><span>Autodesk's help says an add-on's panel can merge into a tab of the same name, but its only worked example is the Add-ins tab. Whether ours stays in Home after a workspace change or an AutoCAD update: not found.</span></li>
+    <li><span>Autodesk's own rule for add-ons</span><span>"Multiple panels: create a dedicated tab named after your plug-in." This option goes against it.</span></li>
+  </ul>
+</div>
+<div class="card opt pick">
+  <p class="label">Option B · a small CE Civil tab, plus tabs that appear <span class="pill rec">Recommended</span></p>
+  <p class="answer">Best at the right buttons arriving by themselves.</p>
+  <p class="rbcap">Nothing selected · CE Civil tab</p><div class="rb" role="img" aria-label="Option B, nothing selected: the short CE Civil tab"><div class="rbtabs"><span class="rbtab">Home</span><span class="rbtab">Insert</span><span class="rbtab">Annotate</span><span class="rbtab">Parametric</span><span class="rbtab">View</span><span class="rbtab">Manage</span><span class="rbtab">Output</span><span class="rbtab">Add-ins</span><span class="rbtab">Collaborate</span><span class="rbtab ce on">CE Civil</span></div><div class="rbbody"><div class="rbp"><div class="bs"><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><rect class="ic" x="6" y="6" width="14" height="14"/><rect class="ic" x="3" y="3" width="20" height="20" stroke-dasharray="3 2" stroke-width="1"/></svg><span>Pit</span><small>PIT</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><line class="icb" x1="3" y1="17" x2="23" y2="9"/><line class="ic" x1="3" y1="13.5" x2="23" y2="5.5" stroke-width="1"/><line class="ic" x1="3" y1="20.5" x2="23" y2="12.5" stroke-width="1"/></svg><span>Pipe</span><small>CD</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><circle class="ic" cx="13" cy="13" r="8"/><line class="ic" x1="13" y1="5" x2="13" y2="21"/><line class="ic" x1="5" y1="13" x2="21" y2="13"/></svg><span>Inlet</span><small>DP IO OF</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><rect class="ic" x="3" y="7" width="20" height="12" rx="6"/><path class="ic" d="M8 13h10" stroke-width="1"/></svg><span>Tank</span><small>WT</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M3 10h20M3 16h20M7 10v6M11 10v6M15 10v6M19 10v6" stroke-width="1.2"/></svg><span>Line drain</span><small>TG AG SD</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M4 6v14M4 13h14M14 9l5 4-5 4"/><path class="ic" d="M22 5v16"/></svg><span>Discharge point</span><small>LPD</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M6 9h14l-7 9z"/><path class="ic" d="M4 21h18" stroke-width="1"/></svg><span>Level tag</span><small>RL</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M4 8l16 9M20 17l-6-1M20 17l-2-6"/></svg><span>Fall</span><small>FALL</small></div></div><div class="pn">Place</div></div><div class="rbp"><div class="bs"><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><rect class="ic" x="3" y="4" width="20" height="18" rx="2"/><path class="ic" d="M15 4v18M17.5 9h3M17.5 13h3M17.5 17h3" stroke-width="1.2"/></svg><span>CE panel</span><small>CE</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M4 8l2 2 4-4M4 17l2 2 4-4M13 8h9M13 17h9"/></svg><span>Checks</span></div></div><div class="pn">Job</div></div><div class="rbp"><div class="bs"><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><rect class="ic" x="3" y="5" width="20" height="16"/><path class="ic" d="M3 10h20M3 15.5h20M10 5v16M17 5v16" stroke-width="1"/></svg><span>Pit schedule</span><small>PSC</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><rect class="ic" x="5" y="3" width="16" height="20"/><path class="ic" d="M8 8h10M8 12h10M8 16h6" stroke-width="1.2"/></svg><span>Sheet items</span></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M4 7h10M4 13h16M4 19h7M19 5v6M16 8h6"/></svg><span>Tidy labels</span><small>TL</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><rect class="ic" x="4" y="3" width="13" height="18"/><path class="ic" d="M13 13h10M19 9l4 4-4 4"/></svg><span>Issue</span><small>ISS</small></div></div><div class="pn">Sheet</div></div><div class="rbp"><div class="bs"><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M5 21l9-9M14 12a4.5 4.5 0 1 0 5-6l-3 3-2-2 3-3"/></svg><span>CE tools</span><small>MR CR Q</small></div></div><div class="pn">Tools</div></div></div></div>  <p class="rbcap">Pipe P2 to P1 selected · a Pipe tab appears, wherever you were (Pit, Inlet and Tank tabs work the same way)</p><div class="rb" role="img" aria-label="Option B, pipe selected: the Pipe tab"><div class="rbtabs"><span class="rbtab">Home</span><span class="rbtab">Insert</span><span class="rbtab">Annotate</span><span class="rbtab">Parametric</span><span class="rbtab">View</span><span class="rbtab">Manage</span><span class="rbtab">Output</span><span class="rbtab">Add-ins</span><span class="rbtab">Collaborate</span><span class="rbtab ce">CE Civil</span><span class="rbtab ce on">Pipe</span></div><div class="rbbody"><div class="rbp"><div class="bs"><div class="rbb hot"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M4 13h18" stroke-dasharray="3 2" stroke-width="1"/><path class="ic" d="M7 9h12V5zM7 17h12v4z"/></svg><span>Flip label side</span></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M3 13h20M7 9l-4 4 4 4M19 9l4 4-4 4"/></svg><span>Slide label</span></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M6 13a7.5 7.5 0 1 1 2.5 5.6M6 13V7M6 13h6"/></svg><span>Reset label</span></div></div><div class="pn">Label</div></div><div class="rbp"><div class="bs"><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M4 9h17M17 5l4 4-4 4M22 17H5M9 13l-4 4 4 4"/></svg><span>Reverse flow</span></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M3 13h7M16 13h7"/><rect class="ic" x="10" y="10" width="6" height="6"/></svg><span>Split at a pit</span></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M5 5l6 6M11 11l8 8 3-3-8-8z"/></svg><span>Match to others</span></div></div><div class="pn">Pipe</div></div><div class="rbp"><div class="bs"><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M3 7l20 10"/><path class="ic" d="M3 21h20" stroke-width="1"/><path class="ic" d="M3 7v14M23 17v4" stroke-width="1"/></svg><span>Level this run</span></div></div><div class="pn">Levels</div></div><div class="rbp"><div class="bs"><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><rect class="ic" x="3" y="8" width="9" height="10"/><path class="ic" d="M12 13h11"/><circle cx="12" cy="13" r="2.4" style="fill:var(--ink)"/></svg><span>Join end</span></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><rect class="ic" x="3" y="8" width="9" height="10"/><path class="ic" d="M16 13h7M13.5 9.5l2 2M13.5 16.5l2-2"/></svg><span>Free end</span></div></div><div class="pn">Ends</div></div><div class="rbp"><div class="bs"><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><rect class="ic" x="5" y="3" width="16" height="20" rx="2"/><path class="ic" d="M8 8h3M13 8h5M8 13h3M13 13h5M8 18h3M13 18h5" stroke-width="1.2"/></svg><span>Properties</span></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><circle class="ic" cx="11" cy="11" r="6.5"/><path class="ic" d="M16 16l6 6"/></svg><span>Its checks</span></div></div><div class="pn">Go to</div></div></div></div><div class="tally"><div><span class="k">CE buttons showing, nothing selected</span><span class="v">15</span></div><div><span class="k">CE buttons showing, pipe selected</span><span class="v">11</span></div><div><span class="k">Clicks to "flip label side"</span><span class="v">1 <small>from any tab</small></span></div><div><span class="k">Clicks to "pit schedule"</span><span class="v">1 <small>on CE Civil; 2 from Home</small></span></div></div>
+  <p><b>Why:</b> it is how AutoCAD treats its own hatches, tables and Xrefs, so nothing has to be learnt. On Job 26-014 you are on Home stretching a wall line, you click pipe P2 to P1, and Flip label side is already in front of you: <b>1</b> click. In Option C it is <b>2</b>.</p>
+  <ul class="rows">
+    <li><span>Downside</span><span>To place things with the mouse you switch to the CE Civil tab. (Typing PIT or CD needs no tab at all.)</span></li>
+    <li><span>Downside</span><span>The ribbon changes when you click a pipe. Some people dislike a ribbon that moves. Whether it jumps to the front is a setting: see Choices.</span></li>
+    <li><span>Grows well</span><span>A new kind of element later (a pump station) adds one tab that appears, not more always-on buttons.</span></li>
+    <li><span>Already half true</span><span>Today's Civil plugin shows a tab for a pipe, a pit and a source "as coded". What you see on screen was not checked.</span></li>
+  </ul>
+</div>
+<div class="card opt">
+  <p class="label">Option C · one CE tab, always there (the earlier concept)</p>
+  <p class="answer">Best at everything in one known place.</p>
+  <p class="rbcap">Nothing selected · CE tab</p><div class="rb" role="img" aria-label="Option C, nothing selected: one CE tab with everything"><div class="rbtabs"><span class="rbtab">Home</span><span class="rbtab">Insert</span><span class="rbtab">Annotate</span><span class="rbtab">Parametric</span><span class="rbtab">View</span><span class="rbtab">Manage</span><span class="rbtab">Output</span><span class="rbtab">Add-ins</span><span class="rbtab">Collaborate</span><span class="rbtab ce on">CE</span></div><div class="rbbody"><div class="rbp"><div class="bs"><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><rect class="ic" x="6" y="6" width="14" height="14"/><rect class="ic" x="3" y="3" width="20" height="20" stroke-dasharray="3 2" stroke-width="1"/></svg><span>Pit</span><small>PIT</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><line class="icb" x1="3" y1="17" x2="23" y2="9"/><line class="ic" x1="3" y1="13.5" x2="23" y2="5.5" stroke-width="1"/><line class="ic" x1="3" y1="20.5" x2="23" y2="12.5" stroke-width="1"/></svg><span>Pipe</span><small>CD</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><circle class="ic" cx="13" cy="13" r="8"/><line class="ic" x1="13" y1="5" x2="13" y2="21"/><line class="ic" x1="5" y1="13" x2="21" y2="13"/></svg><span>Inlet</span><small>DP IO OF</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><rect class="ic" x="3" y="7" width="20" height="12" rx="6"/><path class="ic" d="M8 13h10" stroke-width="1"/></svg><span>Tank</span><small>WT</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M3 10h20M3 16h20M7 10v6M11 10v6M15 10v6M19 10v6" stroke-width="1.2"/></svg><span>Line drain</span><small>TG AG SD</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M4 6v14M4 13h14M14 9l5 4-5 4"/><path class="ic" d="M22 5v16"/></svg><span>Discharge point</span><small>LPD</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M6 9h14l-7 9z"/><path class="ic" d="M4 21h18" stroke-width="1"/></svg><span>Level tag</span><small>RL</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M4 8l16 9M20 17l-6-1M20 17l-2-6"/></svg><span>Fall</span><small>FALL</small></div></div><div class="pn">Place</div></div><div class="rbp"><div class="bs"><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><rect class="ic" x="3" y="4" width="20" height="18" rx="2"/><path class="ic" d="M15 4v18M17.5 9h3M17.5 13h3M17.5 17h3" stroke-width="1.2"/></svg><span>CE panel</span><small>CE</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M4 8l2 2 4-4M4 17l2 2 4-4M13 8h9M13 17h9"/></svg><span>Checks</span></div></div><div class="pn">Job</div></div><div class="rbp"><div class="bs"><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><rect class="ic" x="3" y="5" width="20" height="16"/><path class="ic" d="M3 10h20M3 15.5h20M10 5v16M17 5v16" stroke-width="1"/></svg><span>Pit schedule</span><small>PSC</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><rect class="ic" x="5" y="3" width="16" height="20"/><path class="ic" d="M8 8h10M8 12h10M8 16h6" stroke-width="1.2"/></svg><span>Sheet items</span></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M4 7h10M4 13h16M4 19h7M19 5v6M16 8h6"/></svg><span>Tidy labels</span><small>TL</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><rect class="ic" x="4" y="3" width="13" height="18"/><path class="ic" d="M13 13h10M19 9l4 4-4 4"/></svg><span>Issue</span><small>ISS</small></div></div><div class="pn">Sheet</div></div><div class="rbp"><div class="bs"><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M4 13h12M12 9l4 4-4 4M19 6a8 8 0 0 1 0 14"/></svg><span>Move + rotate</span><small>MR</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M4 13h12M12 9l4 4-4 4M19 6a8 8 0 0 1 0 14"/></svg><span>Copy + rotate</span><small>CR</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M4 20L16 8h7M4 20l1-5M4 20l5-1"/></svg><span>Leader</span><small>Q</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M4 6v14M22 6v14M4 13h18M7 10l-3 3 3 3M19 10l3 3-3 3"/></svg><span>Dimension</span><small>LD AD</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M7 19a4 4 0 0 1 0-8 5 5 0 0 1 9.5-1.5A4.5 4.5 0 0 1 19 19z"/></svg><span>Rev cloud</span><small>RC</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M6 8h14l-1.5 14h-11zM4 8h18M10 8V5h6v3"/></svg><span>Clean</span></div></div><div class="pn">Tools</div></div><div class="rbp empty"><div class="bs">pick a pit or pipe</div><div class="pn">Selected</div></div></div></div>  <p class="rbcap">Pipe P2 to P1 selected · the last panel fills in (5 more actions behind its arrow)</p><div class="rb" role="img" aria-label="Option C, pipe selected: the same tab with a Selected panel filled in"><div class="rbtabs"><span class="rbtab">Home</span><span class="rbtab">Insert</span><span class="rbtab">Annotate</span><span class="rbtab">Parametric</span><span class="rbtab">View</span><span class="rbtab">Manage</span><span class="rbtab">Output</span><span class="rbtab">Add-ins</span><span class="rbtab">Collaborate</span><span class="rbtab ce on">CE</span></div><div class="rbbody"><div class="rbp"><div class="bs"><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><rect class="ic" x="6" y="6" width="14" height="14"/><rect class="ic" x="3" y="3" width="20" height="20" stroke-dasharray="3 2" stroke-width="1"/></svg><span>Pit</span><small>PIT</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><line class="icb" x1="3" y1="17" x2="23" y2="9"/><line class="ic" x1="3" y1="13.5" x2="23" y2="5.5" stroke-width="1"/><line class="ic" x1="3" y1="20.5" x2="23" y2="12.5" stroke-width="1"/></svg><span>Pipe</span><small>CD</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><circle class="ic" cx="13" cy="13" r="8"/><line class="ic" x1="13" y1="5" x2="13" y2="21"/><line class="ic" x1="5" y1="13" x2="21" y2="13"/></svg><span>Inlet</span><small>DP IO OF</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><rect class="ic" x="3" y="7" width="20" height="12" rx="6"/><path class="ic" d="M8 13h10" stroke-width="1"/></svg><span>Tank</span><small>WT</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M3 10h20M3 16h20M7 10v6M11 10v6M15 10v6M19 10v6" stroke-width="1.2"/></svg><span>Line drain</span><small>TG AG SD</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M4 6v14M4 13h14M14 9l5 4-5 4"/><path class="ic" d="M22 5v16"/></svg><span>Discharge point</span><small>LPD</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M6 9h14l-7 9z"/><path class="ic" d="M4 21h18" stroke-width="1"/></svg><span>Level tag</span><small>RL</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M4 8l16 9M20 17l-6-1M20 17l-2-6"/></svg><span>Fall</span><small>FALL</small></div></div><div class="pn">Place</div></div><div class="rbp"><div class="bs"><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><rect class="ic" x="3" y="4" width="20" height="18" rx="2"/><path class="ic" d="M15 4v18M17.5 9h3M17.5 13h3M17.5 17h3" stroke-width="1.2"/></svg><span>CE panel</span><small>CE</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M4 8l2 2 4-4M4 17l2 2 4-4M13 8h9M13 17h9"/></svg><span>Checks</span></div></div><div class="pn">Job</div></div><div class="rbp"><div class="bs"><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><rect class="ic" x="3" y="5" width="20" height="16"/><path class="ic" d="M3 10h20M3 15.5h20M10 5v16M17 5v16" stroke-width="1"/></svg><span>Pit schedule</span><small>PSC</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><rect class="ic" x="5" y="3" width="16" height="20"/><path class="ic" d="M8 8h10M8 12h10M8 16h6" stroke-width="1.2"/></svg><span>Sheet items</span></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M4 7h10M4 13h16M4 19h7M19 5v6M16 8h6"/></svg><span>Tidy labels</span><small>TL</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><rect class="ic" x="4" y="3" width="13" height="18"/><path class="ic" d="M13 13h10M19 9l4 4-4 4"/></svg><span>Issue</span><small>ISS</small></div></div><div class="pn">Sheet</div></div><div class="rbp"><div class="bs"><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M4 13h12M12 9l4 4-4 4M19 6a8 8 0 0 1 0 14"/></svg><span>Move + rotate</span><small>MR</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M4 13h12M12 9l4 4-4 4M19 6a8 8 0 0 1 0 14"/></svg><span>Copy + rotate</span><small>CR</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M4 20L16 8h7M4 20l1-5M4 20l5-1"/></svg><span>Leader</span><small>Q</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M4 6v14M22 6v14M4 13h18M7 10l-3 3 3 3M19 10l3 3-3 3"/></svg><span>Dimension</span><small>LD AD</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M7 19a4 4 0 0 1 0-8 5 5 0 0 1 9.5-1.5A4.5 4.5 0 0 1 19 19z"/></svg><span>Rev cloud</span><small>RC</small></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M6 8h14l-1.5 14h-11zM4 8h18M10 8V5h6v3"/></svg><span>Clean</span></div></div><div class="pn">Tools</div></div><div class="rbp"><div class="bs"><div class="rbb hot"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M4 13h18" stroke-dasharray="3 2" stroke-width="1"/><path class="ic" d="M7 9h12V5zM7 17h12v4z"/></svg><span>Flip label side</span></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M3 13h20M7 9l-4 4 4 4M19 9l4 4-4 4"/></svg><span>Slide label</span></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M6 13a7.5 7.5 0 1 1 2.5 5.6M6 13V7M6 13h6"/></svg><span>Reset label</span></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M4 9h17M17 5l4 4-4 4M22 17H5M9 13l-4 4 4 4"/></svg><span>Reverse flow</span></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M3 13h7M16 13h7"/><rect class="ic" x="10" y="10" width="6" height="6"/></svg><span>Split at a pit</span></div><div class="rbb"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="ic" d="M5 5l6 6M11 11l8 8 3-3-8-8z"/></svg><span>Match to others</span></div></div><div class="pn">Selected: Pipe  ▾</div></div></div></div><div class="tally"><div><span class="k">CE buttons showing, nothing selected</span><span class="v">20</span></div><div><span class="k">CE buttons showing, pipe selected</span><span class="v">26 <small>20 + 6</small></span></div><div><span class="k">Clicks to "flip label side"</span><span class="v">1 <small>on the CE tab; 2 from Home</small></span></div><div><span class="k">Clicks to "pit schedule"</span><span class="v">1 <small>on the CE tab; 2 from Home</small></span></div></div>
+  <ul class="rows">
+    <li><span>Downside</span><span>You live on the CE tab and lose Draw, Modify and Layers, or you live on Home and every CE action costs an extra click.</span></li>
+    <li><span>Downside</span><span>26 buttons do not fit one row on a normal screen (as drawn here). AutoCAD would fold panels away.</span></li>
+    <li><span>Downside</span><span>It gets wider with every release. Today's CE tab has 9 panels as coded.</span></li>
+    <li><span>Upside</span><span>Nothing moves. The same button is always in the same spot.</span></li>
+  </ul>
+</div>
+<div class="card">
+  <p class="label">The same task without the ribbon, in every option</p>
+  <p class="answer">1 <small>click: rest on the label's grip, pick "Flip side"</small></p>
+  <div class="chips"><span class="chip"><b>1</b> grip menu</span><span class="chip"><b>2</b> right-click, Flip label side</span><span class="chip"><b>1</b> Pipe tab (Option B)</span><span class="chip"><b>0</b> new names to type</span></div>
+  <p class="note">One action, one name, three doors, all AutoCAD's own. The ribbon choice above decides only the third door.</p>
+</div>
+<h2>3. Short names you can keep in your fingers</h2>
+<p class="lead">You said long names are hard to reuse. So the short name is what you type; the plain name is only the label on the button and in its tip. Checked against all 241 one- to four-letter short names in AutoCAD 2027's own list on your PC.</p>
+<div class="card">
+  <p class="label">New names a drafter must learn, Release 1 and 2</p>
+  <p class="answer">13</p>
+  <table class="sum">
+    <tr><td class="op"></td><td class="d">Names in the whole list</td><td class="n">32</td></tr>
+    <tr><td class="op">−</td><td class="d">Names hands already know</td><td class="n">19</td></tr>
+    <tr class="final"><td class="op">=</td><td>New names</td><td class="n">13</td></tr>
+  </table>
+  <div class="chips"><span class="chip"><b>29</b> clear of AutoCAD</span><span class="chip"><b>3</b> kept names sit on an AutoCAD short name</span><span class="chip"><b>0</b> edit names</span></div>
+  <ul class="rows">
+    <li><span>The one pattern</span><span>The letters already written on the drawing or said in the office. DP, IO, OF and PP already work this way; FW, WT and LPD just follow.</span></li>
+    <li><span>Editing</span><span>Double-click the pit or pipe. PITEDIT, PIPEEDIT and CDEDIT keep working and open the same thing.</span></li>
+    <li><span>Old long names</span><span>PITSCHEDULE, CDFW, CDWT, CDLPD and the rest keep working through the changeover.</span></li>
+    <li><span>Plain words</span><span>Typing PIPE or SCHEDULE offers CD or PSC in AutoCAD's own suggestion list.</span></li>
+  </ul>
+</div>
+<div class="grid">
+<div class="card">
+  <p class="label">On the drawing</p>
+  <p class="answer">7 <small>new of 16</small></p>
+  <ul class="names"><li><span class="nm">PIT</span><span class="pl">Pit</span><span class="pill nt p1">hands know it</span><span class="pill ok p2">clear</span></li><li><span class="nm">PP</span><span class="pl">Plastic pit 350</span><span class="pill nt p1">hands know it</span><span class="pill ok p2">clear</span></li><li><span class="nm">CD</span><span class="pl">Pipe</span><span class="pill nt p1">hands know it</span><span class="pill ok p2">clear</span></li><li><span class="nm">DP</span><span class="pl">Downpipe</span><span class="pill nt p1">hands know it</span><span class="pill ok p2">clear</span></li><li><span class="nm">IO</span><span class="pl">Inspection opening</span><span class="pill nt p1">hands know it</span><span class="pill am p2">clashes with AutoCAD's IO = INSERTOBJ</span></li><li><span class="nm">GIO</span><span class="pl">Grated inspection opening</span><span class="pill nt p1">hands know it</span><span class="pill ok p2">clear</span></li><li><span class="nm">OF</span><span class="pl">Overflow</span><span class="pill nt p1">hands know it</span><span class="pill ok p2">clear</span></li><li><span class="nm">FO</span><span class="pl">Front overflow</span><span class="pill nt p1">hands know it</span><span class="pill ok p2">clear</span></li><li><span class="nm">TG</span><span class="pl">Trench grate <small>· old name comes back; CDTG still works</small></span><span class="pill nt p1">hands know it</span><span class="pill ok p2">clear</span></li><li><span class="nm">FW</span><span class="pl">Floor waste <small>· was CDFW</small></span><span class="pill nt p1">new</span><span class="pill ok p2">clear</span></li><li><span class="nm">WT</span><span class="pl">Water tank <small>· was CDWT; the tag on the drawing</small></span><span class="pill nt p1">new</span><span class="pill ok p2">clear</span></li><li><span class="nm">LPD</span><span class="pl">Legal point of discharge <small>· was CDLPD</small></span><span class="pill nt p1">new</span><span class="pill ok p2">clear</span></li><li><span class="nm">AG</span><span class="pl">Ag drain <small>· was CDAGI</small></span><span class="pill nt p1">new</span><span class="pill ok p2">clear</span></li><li><span class="nm">SD</span><span class="pl">Spoon drain <small>· was CDSPOON</small></span><span class="pill nt p1">new</span><span class="pill ok p2">clear</span></li><li><span class="nm">RL</span><span class="pl">Level tag <small>· was CDSL</small></span><span class="pill nt p1">new</span><span class="pill ok p2">clear</span></li><li><span class="nm">FALL</span><span class="pl">Fall arrow <small>· was CDFALL</small></span><span class="pill nt p1">new</span><span class="pill ok p2">clear</span></li></ul>
+</div>
+<div>
+<div class="card" style="margin-top:0">
+  <p class="label">Whole job and sheet</p>
+  <p class="answer">6 <small>new of 6</small></p>
+  <ul class="names"><li><span class="nm">CE</span><span class="pl">The CE panel: Job, Levels, Storage, Checks, Sheet</span><span class="pill nt p1">new</span><span class="pill ok p2">clear</span></li><li><span class="nm">PSC</span><span class="pl">Pit schedule <small>· PS is AutoCAD's paper space, so one more letter</small></span><span class="pill nt p1">new</span><span class="pill ok p2">clear</span></li><li><span class="nm">TL</span><span class="pl">Tidy labels</span><span class="pill nt p1">new</span><span class="pill ok p2">clear</span></li><li><span class="nm">ISS</span><span class="pl">Issue</span><span class="pill nt p1">new</span><span class="pill ok p2">clear</span></li><li><span class="nm">CB</span><span class="pl">Criteria box <small>· Release 2</small></span><span class="pill nt p1">new</span><span class="pill ok p2">clear</span></li><li><span class="nm">CS</span><span class="pl">Computations sheet <small>· Release 2</small></span><span class="pill nt p1">new</span><span class="pill ok p2">clear</span></li></ul>
+</div>
+<div class="card" style="margin-bottom:0">
+  <p class="label">CE tools</p>
+  <p class="answer">0 <small>new of 10</small></p>
+  <ul class="names"><li><span class="nm">MR</span><span class="pl">Move + rotate</span><span class="pill nt p1">hands know it</span><span class="pill ok p2">clear</span></li><li><span class="nm">CR</span><span class="pl">Copy + rotate</span><span class="pill nt p1">hands know it</span><span class="pill ok p2">clear</span></li><li><span class="nm">C</span><span class="pl">Copy, many</span><span class="pill nt p1">hands know it</span><span class="pill am p2">clashes with AutoCAD's C = CIRCLE</span></li><li><span class="nm">Q</span><span class="pl">Leader with arrow</span><span class="pill nt p1">hands know it</span><span class="pill ok p2">clear</span></li><li><span class="nm">QD</span><span class="pl">Leader with dot</span><span class="pill nt p1">hands know it</span><span class="pill ok p2">clear</span></li><li><span class="nm">LD</span><span class="pl">Linear dimension</span><span class="pill nt p1">hands know it</span><span class="pill ok p2">clear</span></li><li><span class="nm">AD</span><span class="pl">Aligned dimension</span><span class="pill nt p1">hands know it</span><span class="pill ok p2">clear</span></li><li><span class="nm">RC</span><span class="pl">Revision cloud</span><span class="pill nt p1">hands know it</span><span class="pill am p2">clashes with AutoCAD's RC = RENDERCROP</span></li><li><span class="nm">CJ</span><span class="pl">Construction joint</span><span class="pill nt p1">hands know it</span><span class="pill ok p2">clear</span></li><li><span class="nm">SSC</span><span class="pl">Saw cut</span><span class="pill nt p1">hands know it</span><span class="pill ok p2">clear</span></li></ul>
+</div>
+</div>
+</div>
+<div class="card">
+  <p class="label">The 3 kept names that sit on an AutoCAD short name</p>
+  <p class="answer">A plugin name wins. AutoCAD says nothing.</p>
+  <div class="chips"><span class="chip"><b>C</b> ours: copy, many · AutoCAD's: circle</span><span class="chip"><b>IO</b> ours: inspection opening · AutoCAD's: insert a linked file</span><span class="chip"><b>RC</b> ours: revision cloud · AutoCAD's: crop a render</span></div>
+  <p>AutoCAD looks for a plugin's name before its own short names, so ours quietly replaces AutoCAD's on that PC. That is already how the office works today, and your own PC already has C set to Copy by hand. The rule from here: <b>0</b> new names may do this. Keep or rename these 3: your call, in Choices.</p>
+  <p class="note">Not used because AutoCAD owns them: PS (paper space), RA, AR, ST, SP, TB, LS, CHK, REN, RP, DS. Each new name still needs typing once in AutoCAD 2027 before it is promised: to be proven.</p>
+  <p class="src">Source: AutoCAD 2027's own short-name file on your PC (417 entries, 241 of one to four letters); Autodesk help, "About File Organization: Command Search Procedure" (2025). How sure: high.</p>
+</div>
+<h2>4. One pipe in AutoCAD's own Properties</h2>
+<p class="lead">Your decision: one pit's or pipe's numbers sit in AutoCAD's Properties palette under a CE heading, and can be changed there. The CE side panel is only for whole-job things. Autodesk's own guide for add-on makers describes this ("displays the dynamic properties along with the object's static properties"); how it is done in 2027 is to be proven.</p>
+<div class="grid">
+<div class="card">
+  <p class="label">Pipe P2 to P1 selected · grade</p>
+  <p class="answer">1 in 100</p>
+  <div class="pal" role="img" aria-label="AutoCAD Properties palette with pipe P2 to P1 selected, showing a CE Pipe section"><div class="ph"><span>Properties</span><span>AutoCAD's own palette</span></div><div class="sel"><span>CE Pipe (1)</span><span>▾</span></div><div class="sec">General</div><div class="r dim"><span class="k">Color</span><span class="v"><span>ByLayer</span></span></div><div class="r dim"><span class="k">Layer</span><span class="v"><span>office pipe layer</span></span></div><div class="r dim"><span class="k">Linetype</span><span class="v"><span>ByLayer</span></span></div><div class="sec ce">CE Pipe</div><div class="r"><span class="k">Size</span><span class="v"><span>150 ▾</span><span class="pill nt">chosen</span></span></div><div class="r"><span class="k">Material and class</span><span class="v"><span>UPVC SN8 ▾</span><span class="pill nt">chosen</span></span></div><div class="r"><span class="k">From</span><span class="v"><span>P2</span><span class="pill ok">joined</span></span></div><div class="r"><span class="k">To</span><span class="v"><span>P1</span><span class="pill ok">joined</span></span></div><div class="r"><span class="k">Length</span><span class="v"><span>12.00 m</span><span class="pill nt">measured</span></span></div><div class="r"><span class="k">Upstream invert</span><span class="v"><span>5.13</span><span class="pill nt">chosen</span></span></div><div class="r"><span class="k">Downstream invert</span><span class="v"><span>5.01</span><span class="pill nt">chosen</span></span></div><div class="r"><span class="k">Grade</span><span class="v"><span><b>1 in 100</b></span><span class="pill nt">worked out</span></span></div><div class="r"><span class="k">Label side</span><span class="v"><span>Above ▾</span></span></div><div class="r"><span class="k">Detention</span><span class="v"><span>No ▾</span></span></div></div>
+  <table class="sum">
+    <tr><td class="op"></td><td class="d">Upstream invert</td><td class="n">5.13</td></tr>
+    <tr><td class="op">−</td><td class="d">Downstream invert</td><td class="n">5.01</td></tr>
+    <tr class="total"><td class="op">=</td><td class="d">Fall</td><td class="n">0.12</td></tr>
+    <tr><td class="op"></td><td class="d">Length measured</td><td class="n">12.00</td></tr>
+    <tr><td class="op">÷</td><td class="d">Fall</td><td class="n">0.12</td></tr>
+    <tr class="final"><td class="op">=</td><td>Grade, 1 in</td><td class="n">100</td></tr>
+  </table>
+  <p class="note">Rows with ▾ or a plain number can be changed here. "Worked out" rows follow by themselves. The label on the plan re-reads at once.</p>
+</div>
+<div class="card">
+  <p class="label">Pit P2 selected · depth</p>
+  <p class="answer">0.62 <small>m deep</small></p>
+  <div class="pal" role="img" aria-label="AutoCAD Properties palette with pit P2 selected, showing a CE Pit section"><div class="ph"><span>Properties</span><span>AutoCAD's own palette</span></div><div class="sel"><span>CE Pit (1)</span><span>▾</span></div><div class="sec">General</div><div class="r dim"><span class="k">Color</span><span class="v"><span>ByLayer</span></span></div><div class="r dim"><span class="k">Layer</span><span class="v"><span>office pit layer</span></span></div><div class="r dim"><span class="k">Linetype</span><span class="v"><span>ByLayer</span></span></div><div class="sec ce">CE Pit</div><div class="r"><span class="k">Number</span><span class="v"><span>P2</span></span></div><div class="r"><span class="k">Type</span><span class="v"><span>Junction pit ▾</span><span class="pill nt">chosen</span></span></div><div class="r"><span class="k">Size</span><span class="v"><span>450 x 450 ▾</span><span class="pill nt">chosen</span></span></div><div class="r"><span class="k">Cover level</span><span class="v"><span>5.75</span><span class="pill nt">given</span></span></div><div class="r"><span class="k">In, from P3 (150)</span><span class="v"><span>5.15</span><span class="pill ok">joined</span></span></div><div class="r"><span class="k">In, from DP (100)</span><span class="v"><span>5.20</span><span class="pill ok">joined</span></span></div><div class="r"><span class="k">Out, to P1 (150)</span><span class="v"><span>5.13</span><span class="pill ok">joined</span></span></div><div class="r"><span class="k">Depth</span><span class="v"><span><b>0.62</b></span><span class="pill nt">worked out</span></span></div><div class="r"><span class="k">Cover text corner</span><span class="v"><span>Top left ▾</span></span></div></div>
+  <table class="sum">
+    <tr><td class="op"></td><td class="d">Cover level</td><td class="n">5.75</td></tr>
+    <tr><td class="op">−</td><td class="d">Lowest invert (out, to P1)</td><td class="n">5.13</td></tr>
+    <tr class="final"><td class="op">=</td><td>Depth</td><td class="n">0.62</td></tr>
+  </table>
+  <p class="note">Select 3 pits together and the same heading shows what they share, as AutoCAD does for 3 circles.</p>
+</div>
+</div>
+<div class="card">
+  <p class="label">The same pipe, three quicker doors</p>
+  <p class="answer">3 <small>doors, all AutoCAD's own. Windows opened: 0.</small></p>
+  <svg class="pic" viewBox="0 0 360 110" style="max-width:520px" role="img" aria-label="Pipe P2 to P1 with its label grip, between pits P2 and P1"><line x1="62" y1="74" x2="298" y2="62" stroke="var(--ink)" stroke-width="11.2"/><line x1="62" y1="74" x2="298" y2="62" stroke="var(--pitfill)" stroke-width="9"/><line x1="62" y1="74" x2="298" y2="62" stroke="var(--pipe)" stroke-width="9" stroke-dasharray="20 10"/><rect class="dpito" x="28" y="55" width="38" height="38"/><rect class="dpit" x="32" y="59" width="30" height="30"/><line class="dh" x1="32" y1="59" x2="62" y2="89"/><line class="dh" x1="62" y1="59" x2="32" y2="89"/><rect class="dpito" x="294" y="43" width="38" height="38"/><rect class="dpit" x="298" y="47" width="30" height="30"/><line class="dh" x1="298" y1="47" x2="328" y2="77"/><line class="dh" x1="328" y1="47" x2="298" y2="77"/><g transform="rotate(-2.9 180 52)"><text class="dt" x="180" y="52" font-size="12.5" text-anchor="middle">150 DIA. UPVC SN8 PIPE AT 1 IN 100</text></g><rect class="dgrip" x="69.0" y="45.0" width="10" height="10"/><rect class="dgrip" x="57.0" y="69.0" width="10" height="10"/><rect class="dgrip" x="293.0" y="57.0" width="10" height="10"/><rect class="dgrip" x="175.0" y="63.0" width="10" height="10"/><text class="dlv" x="70" y="96" font-size="12">IL 5.01</text><text class="dlv" x="236" y="86" font-size="12">IL 5.13</text><line class="dl" x1="150" y1="88" x2="118" y2="89.6" stroke-width="1.3"/><polygon class="df" points="110,90 119,85.6 119.4,93.6"/><text class="dcap" x="47" y="106" font-size="12" text-anchor="middle">P1</text><text class="dcap" x="313" y="98" font-size="12" text-anchor="middle">P2</text></svg>
+  <div class="doors">
+    <figure><figcaption>Rest on the label's grip: its own short menu</figcaption><div class="menu"><div class="hd">Label grip</div><div>Move along pipe</div><div>Move off pipe</div><div class="pk">Flip side</div><div>Reset to standard</div></div></figure>
+    <figure><figcaption>Double-click: the small card by the cursor (Quick Properties)</figcaption><div class="pal" style="max-width:260px;margin:0"><div class="ph"><span>CE Pipe</span><span>P2 to P1</span></div><div class="r"><span class="k">Size</span><span class="v"><span>150 ▾</span></span></div><div class="r"><span class="k">Class</span><span class="v"><span>UPVC SN8 ▾</span></span></div><div class="r"><span class="k">Up invert</span><span class="v"><span>5.13</span></span></div><div class="r"><span class="k">Down invert</span><span class="v"><span>5.01</span></span></div><div class="r"><span class="k">Grade</span><span class="v"><span><b>1 in 100</b></span></span></div></div></figure>
+    <figure><figcaption>Right-click: our few lines on top of AutoCAD's usual menu</figcaption><div class="menu"><div class="hd">CE Pipe</div><div>Flip label side</div><div>Reverse flow</div><div>Level this run</div><div>Go to its checks</div><div class="own">Move · Copy · Rotate · Erase</div><div class="own">Properties</div></div></figure>
+  </div>
+  <p class="note">Flow arrow points downhill, from P2 (5.13) to P1 (5.01). Whether an add-on's numbers can show in Quick Properties and in the roll-over tip the way they can in Properties: not stated on the pages read; to be proven.</p>
+  <p class="src">Source: Autodesk help, "About Creating Shortcut Menus", "About Customizing Double Click Actions" (2025), "About Customizing Quick Properties", "About Arrays" (grip menus). In AutoCAD 2027, 33 of 52 double-click actions open Quick Properties (counted in its menu file on your PC). How sure: high.</p>
+</div>
+<h2>5. Job tracking in the Manager</h2>
+<p class="lead">All four kinds you asked for. Made-up jobs, coded, no addresses. Today is Mon 16 Nov 2026. The aim is that nobody types a thing twice: every line below is read from something the job already holds.</p>
+<div class="grid">
+<div class="card">
+  <p class="label">(a) Where each job is up to</p>
+  <p class="answer">3 <small>jobs need you</small></p>
+  <div class="stages"><div><b>1</b>set-up</div><div><b>2</b>preliminary</div><div><b>1</b>at council</div><div><b>1</b>approved</div><div><b>1</b>construction</div></div>
+  <table class="sum">
+    <tr><td class="op"></td><td class="d">Jobs open</td><td class="n">6</td></tr>
+    <tr><td class="op">−</td><td class="d">On track</td><td class="n">3</td></tr>
+    <tr class="final"><td class="op">=</td><td>Need you</td><td class="n">3</td></tr>
+  </table>
+  <ul class="jobs"><li><span class="j">House, Job 26-009 <span class="pill nt">at council</span> <span class="pill rd">late</span><small>Council reply was due Fri 13 Nov: 3 days late</small></span><span class="d"><b>23</b> <small>days</small></span></li><li><span class="j">Two units, Job 26-014 <span class="pill nt">preliminary</span> <span class="pill am">needs you</span><small>Discharge letter asked 12 days ago; LPD invert still assumed</small></span><span class="d"><b>12</b> <small>days</small></span></li><li><span class="j">Three units, Job 26-011 <span class="pill nt">approved</span> <span class="pill am">needs you</span><small>Waiting on the architect's revised ground floor</small></span><span class="d"><b>4</b> <small>days</small></span></li><li><span class="j">Factory extension, Job 26-006 <span class="pill nt">construction</span> <span class="pill ok">on track</span><small>Construction set issued Thu 5 Nov</small></span><span class="d"><b>11</b> <small>days</small></span></li><li><span class="j">House, Job 26-019 <span class="pill nt">preliminary</span> <span class="pill ok">on track</span><small>Being drawn</small></span><span class="d"><b>3</b> <small>days</small></span></li><li><span class="j">House, Job 26-017 <span class="pill nt">set-up</span> <span class="pill ok">on track</span><small>Job facts being filled in</small></span><span class="d"><b>1</b> <small>day</small></span></li></ul>
+  <p class="note">Days = days in that stage. Sorted with the ones that need you on top.</p>
+</div>
+<div class="card">
+  <p class="label">(b) What was issued and when · Factory extension, Job 26-006</p>
+  <p class="answer">5 <small>issues in 114 days</small></p>
+  <ul class="tl"><li><span class="rv">P1</span><span>Preliminary<small>to architect</small></span><span class="dt2">Tue 14 Jul 2026<small>first issue</small></span></li><li><span class="rv">P2</span><span>Preliminary<small>to architect and client</small></span><span class="dt2">Tue 28 Jul 2026<small>14 days after the one before</small></span></li><li><span class="rv">A</span><span>For council approval<small>to council</small></span><span class="dt2">Tue 11 Aug 2026<small>14 days after the one before</small></span></li><li><span class="rv">B</span><span>Council comments answered<small>to council</small></span><span class="dt2">Tue 8 Sep 2026<small>28 days after the one before</small></span></li><li><span class="rv">C</span><span>Construction issue<small>to builder and client</small></span><span class="dt2">Thu 5 Nov 2026<small>58 days after the one before</small></span></li></ul>
+  <table class="sum">
+    <tr><td class="op"></td><td class="d">P1 to P2</td><td class="n">14</td></tr>
+    <tr><td class="op">+</td><td class="d">P2 to A</td><td class="n">14</td></tr>
+    <tr><td class="op">+</td><td class="d">A to B</td><td class="n">28</td></tr>
+    <tr><td class="op">+</td><td class="d">B to C</td><td class="n">58</td></tr>
+    <tr class="final"><td class="op">=</td><td>Days, first issue to construction</td><td class="n">114</td></tr>
+  </table>
+  <p class="note">Read from the drawing's own revision rows and the Issue step. Nothing typed into the Manager.</p>
+</div>
+<div class="card">
+  <p class="label">(c) Time on each job, against its allowance</p>
+  <p class="answer">1 <small>of 6 jobs is over its hours</small></p>
+  <div class="hrs"><div class="t"><span>Factory extension, Job 26-006</span><span><b>20.5</b> of 24 h</span></div><div class="track"><i class="s1" style="width:25.00%">6.0</i><i class="s2" style="width:37.50%">9.0</i><i class="s3" style="width:22.92%">5.5</i></div><div class="key"><span><u style="background:var(--s1)"></u>Engineer 6.0</span><span><u style="background:var(--s2)"></u>Drafter A 9.0</span><span><u style="background:var(--s3)"></u>Drafter B 5.5</span><span class="pill ok">3.5 h left</span></div></div><div class="hrs"><div class="t"><span>Three units, Job 26-011</span><span><b>11.5</b> of 14 h</span></div><div class="track"><i class="s1" style="width:21.43%">3.0</i><i class="s2" style="width:46.43%">6.5</i><i class="s3" style="width:14.29%">2.0</i></div><div class="key"><span><u style="background:var(--s1)"></u>Engineer 3.0</span><span><u style="background:var(--s2)"></u>Drafter A 6.5</span><span><u style="background:var(--s3)"></u>Drafter B 2.0</span><span class="pill ok">2.5 h left</span></div></div><div class="hrs"><div class="t"><span>Two units, Job 26-014</span><span><b>6.5</b> of 10 h</span></div><div class="track"><i class="s1" style="width:25.00%">2.5</i><i class="s2" style="width:40.00%">4.0</i></div><div class="key"><span><u style="background:var(--s1)"></u>Engineer 2.5</span><span><u style="background:var(--s2)"></u>Drafter A 4.0</span><span class="pill ok">3.5 h left</span></div></div><div class="hrs"><div class="t"><span>House, Job 26-009</span><span><b>4.5</b> of 4 h</span></div><div class="track"><i class="s1" style="width:22.22%">1.0</i><i class="s3" style="width:66.67%">3.0</i><i class="over" style="width:11.11%"></i></div><div class="key"><span><u style="background:var(--s1)"></u>Engineer 1.0</span><span><u style="background:var(--s3)"></u>Drafter B 3.5</span><span class="pill rd">0.5 h over</span></div></div><div class="hrs"><div class="t"><span>House, Job 26-019</span><span><b>2.0</b> of 4 h</span></div><div class="track"><i class="s1" style="width:12.50%"></i><i class="s3" style="width:37.50%">1.5</i></div><div class="key"><span><u style="background:var(--s1)"></u>Engineer 0.5</span><span><u style="background:var(--s3)"></u>Drafter B 1.5</span><span class="pill ok">2.0 h left</span></div></div><div class="hrs"><div class="t"><span>House, Job 26-017</span><span><b>0.5</b> of 4 h</span></div><div class="track"><i class="s2" style="width:12.50%"></i></div><div class="key"><span><u style="background:var(--s2)"></u>Drafter A 0.5</span><span class="pill ok">3.5 h left</span></div></div>
+  <table class="sum" style="margin-top:16px">
+    <tr><td class="op"></td><td class="d"><u style="display:inline-block;width:10px;height:10px;border-radius:2px;background:var(--s1);margin-right:6px"></u>Engineer</td><td class="n">13.0</td></tr><tr><td class="op">+</td><td class="d"><u style="display:inline-block;width:10px;height:10px;border-radius:2px;background:var(--s2);margin-right:6px"></u>Drafter A</td><td class="n">20.0</td></tr><tr><td class="op">+</td><td class="d"><u style="display:inline-block;width:10px;height:10px;border-radius:2px;background:var(--s3);margin-right:6px"></u>Drafter B</td><td class="n">12.5</td></tr>
+    <tr class="final"><td class="op">=</td><td>Hours on these 6 jobs</td><td class="n">45.5</td></tr>
+  </table>
+  <p class="note">Each bar is as long as that job's allowance. Total allowed on the 6 jobs: 60 h. People are shown by role here; whose hours each person can see is your ruling.</p>
+</div>
+<div class="card">
+  <p class="label">(d) Waiting on</p>
+  <p class="answer">4 <small>things are holding 3 jobs</small></p>
+  <div class="chips"><span class="chip"><b>1</b> late</span><span class="chip"><b>3</b> need you</span></div>
+  <ul class="jobs"><li><span class="j">Council reply <span class="pill rd">late</span><small>House, Job 26-009 · Due Fri 13 Nov. 3 days late.</small></span><span class="d"><small>Engineer to chase</small></span></li><li><span class="j">Discharge point letter from council <span class="pill am">needs you</span><small>Two units, Job 26-014 · Asked 12 days ago. This council usually takes 10.</small></span><span class="d"><small>Engineer</small></span></li><li><span class="j">LPD invert 4.91 is assumed <span class="pill am">needs you</span><small>Two units, Job 26-014 · On the drawing as "to be confirmed". Cannot go for approval like this.</small></span><span class="d"><small>Engineer</small></span></li><li><span class="j">Architect's revised ground floor <span class="pill am">needs you</span><small>Three units, Job 26-011 · Asked 3 days ago. Construction issue cannot start.</small></span><span class="d"><small>Drafter A</small></span></li></ul>
+  <p class="note">An assumption on a job's Checks list shows here by itself and leaves by itself when someone confirms it.</p>
+</div>
+</div>
+<div class="card">
+  <p class="label">Where each fact comes from</p>
+  <p class="answer">0 <small>facts typed twice</small></p>
+  <ul class="rows">
+    <li><span>Stage, and days in it</span><span>the last Issue step on the job (preliminary, for council approval, construction) and its date</span></li>
+    <li><span>Issue list</span><span>the drawing's revision rows, plus who it went to, picked once at the Issue step</span></li>
+    <li><span>Waiting on: assumptions</span><span>each assumed value on Checks (worked out; nothing typed)</span></li>
+    <li><span>Waiting on: letters and replies</span><span>typed once, when asked for <span class="pill am">your ruling: in the Manager or in the drawing</span></span></li>
+    <li><span>Hours</span><span>counted while the job's drawing is open and being worked on <span class="pill am">your ruling: automatic or not</span></span></li>
+    <li><span>Hours allowance</span><span>not held anywhere today <span class="pill am">your ruling: where it comes from</span></span></li>
+  </ul>
+  <p class="note">What I would borrow from AutoCAD itself: facts owned once by the job and shown by fields (Sheet Set Manager); a dated log that writes itself (Activity Insights); time counted by the drawing (the TIME command). What I would avoid: AutoCAD's own total counts every minute a drawing is open, lunch included, and its log lives on one PC unless everyone points at one shared folder.</p>
+  <p class="src">Source: Autodesk help, "To Create Custom Properties for Sheet Sets and Sheets" (2027), "About Activity Insights" (2026), "TIME (Command)". No built-in AutoCAD list of issues was found. How sure: high for what AutoCAD records; medium that it has no issue list.</p>
+</div>
+<h2>6. Choices for you</h2>
+<p class="lead">Six questions. One recommended each, with what it would mean on a real job.</p>
+<div class="grid">
+<div class="card">
+  <p class="label">Choice 1</p>
+  <p class="answer sm">Where the ribbon sits</p>
+  <div class="chips"><span class="chip"><b>11</b> A · on Home</span><span class="chip"><b>15</b> B · small tab</span><span class="chip"><b>20</b> C · one big tab</span></div>
+  <ul class="choice"><li><div class="o"><span class="btn">A</span><span>In AutoCAD's own tabs, plus a Pipe tab</span></div><small>You never leave Home, but Block and Properties fold away to make room. To be proven.</small></li><li><div class="o"><span class="btn main">B</span><span>A small CE Civil tab, plus Pit / Pipe / Inlet / Tank tabs that appear <span class="pill rec">Recommended</span></span></div><small>Click pipe P2 to P1 from any tab: Flip label side is in front of you. 1 click.</small></li><li><div class="o"><span class="btn">C</span><span>One CE tab, always there</span></div><small>Everything in one place, but 2 clicks from Home for every CE action.</small></li></ul>
+</div>
+<div class="card">
+  <p class="label">Choice 2</p>
+  <p class="answer sm">The 3 kept names that sit on AutoCAD's</p>
+  <div class="chips"><span class="chip"><b>C</b> circle</span><span class="chip"><b>IO</b> insert a linked file</span><span class="chip"><b>RC</b> crop a render</span></div>
+  <ul class="choice"><li><div class="o"><span class="btn main">A</span><span>Keep C, IO and RC as they are <span class="pill rec">Recommended</span></span></div><small>A drafter types IO for an inspection opening on Monday exactly as on Friday. A new starter is told once that C is copy here.</small></li><li><div class="o"><span class="btn">B</span><span>Rename the 3 (for example CC, INS, RCL)</span></div><small>Clean, but 3 of the most-typed names change under everyone's fingers. C was typed 355 times in April.</small></li></ul>
+</div>
+<div class="card">
+  <p class="label">Choice 3</p>
+  <p class="answer sm">The pattern for new short names</p>
+  <div class="chips"><span class="chip"><b>FW</b> letters on the drawing</span><span class="chip"><b>CEFW</b> CE in front</span><span class="chip"><b>CDFW</b> as today</span></div>
+  <ul class="choice"><li><div class="o"><span class="btn main">A</span><span>The letters on the drawing: FW, WT, LPD, AG <span class="pill rec">Recommended</span></span></div><small>You see "WT" on the tank and type WT. 2 or 3 keys.</small></li><li><div class="o"><span class="btn">B</span><span>CE in front of everything: CEFW, CEWT</span></div><small>Never clashes with anything, and typing CE lists them all, but 4 keys every time.</small></li><li><div class="o"><span class="btn">C</span><span>Keep today's CD names: CDFW, CDWT</span></div><small>Nothing to relearn for the few who use them. They were typed 2 times each in April.</small></li></ul>
+</div>
+<div class="card">
+  <p class="label">Choice 4</p>
+  <p class="answer sm">How hours are recorded</p>
+  <table class="sum"><tr><td class="op"></td><td class="d">Drawing open, Job 26-014, one day</td><td class="n">6.0 h</td></tr><tr><td class="op">−</td><td class="d">Open but untouched (lunch, other jobs)</td><td class="n">3.5 h</td></tr><tr class="final"><td class="op">=</td><td>Counted as worked</td><td class="n">2.5 h</td></tr></table>
+  <ul class="choice"><li><div class="o"><span class="btn main">A</span><span>By itself, while the drawing is being worked on; pauses when untouched <span class="pill rec">Recommended</span></span></div><small>Nobody fills in a timesheet for drafting. The 3.5 h the drawing sat open over lunch is not counted.</small></li><li><div class="o"><span class="btn">B</span><span>A start / stop button</span></div><small>Exact when remembered. Forgotten on a busy day, which is when it matters.</small></li><li><div class="o"><span class="btn">C</span><span>Typed at the end of the day</span></div><small>Covers phone calls and site visits too, but it is typing, and it is a guess.</small></li></ul>
+</div>
+<div class="card">
+  <p class="label">Choice 5</p>
+  <p class="answer sm">When you click a pipe</p>
+  <div class="chips"><span class="chip">click pipe</span><span class="chip"><b>→</b> Pipe tab in front</span><span class="chip">or stays behind until clicked</span></div>
+  <ul class="choice"><li><div class="o"><span class="btn main">A</span><span>The Pipe tab comes to the front by itself, as Hatch Editor does <span class="pill rec">Recommended</span></span></div><small>Click the pipe, the buttons are there. Let go, you are back where you were.</small></li><li><div class="o"><span class="btn">B</span><span>It appears but stays behind until you click it</span></div><small>The ribbon never jumps while you are just moving or copying a pipe. Flip label side becomes 2 clicks.</small></li></ul>
+</div>
+<div class="card">
+  <p class="label">Choice 6</p>
+  <p class="answer sm">Who sees what in job tracking</p>
+  <div class="chips"><span class="chip"><b>6</b> jobs</span><span class="chip"><b>3</b> people</span><span class="chip"><b>45.5</b> hours</span></div>
+  <ul class="choice"><li><div class="o"><span class="btn main">A</span><span>Everyone sees every job's stage, issues and waiting list; only you see hours <span class="pill rec">Recommended</span></span></div><small>A drafter can see Job 26-009 is late at council. Nobody compares hours across the room.</small></li><li><div class="o"><span class="btn">B</span><span>Everyone sees everything</span></div><small>Simplest. Hours per person are on show.</small></li><li><div class="o"><span class="btn">C</span><span>Each person sees only their own jobs</span></div><small>Quiet, but nobody can cover a job when someone is away.</small></li></ul>
+</div>
+</div>
+<div class="honest">
+  <p class="label" style="color:var(--amc)">Not yet known</p>
+  <p class="answer sm" style="color:var(--amc)">How any of this is built is still to be proven.</p>
+  <p><span class="pill am">CE panels inside Home or Annotate: on paper only</span><span class="pill am">our own tab that appears on selection: shown possible in 2011, not checked in 2027</span><span class="pill am">CE heading in Properties: official mechanism exists, not tried</span><span class="pill am">our numbers in Quick Properties and roll-over tips: not found</span><span class="pill am">whether the Pipe tab jumps to the front: a setting, not confirmed</span><span class="pill am">each new short name typed in AutoCAD 2027: not done</span><span class="pill am">hours counted only while working: idea from an Autodesk tool, not tried</span></p>
+  <p class="note" style="color:var(--amc)">Also thin: what small offices say about Civil 3D (the forum pages would not open), and Autodesk gives no written rule for when to use which kind of button. Nothing on this page was tried in AutoCAD; AutoCAD was not started. Every source, with how sure, is in the research note R-001.</p>
+</div>
+</main>
+</body>
+</html>
