@@ -17,7 +17,7 @@ colour_number,prints_as,pen_mm,screening,source,status
 251,own colour,0.15,45%,STUDY_A section 2 plot style table (current office table),measured
 252,own colour,0.15,90%,STUDY_A section 2 plot style table (current office table),measured
 253,own colour,0.18,100%,STUDY_A section 2 plot style table (current office table),measured
-21,black,not stated,20%,STUDY_A section 2 plot style table (current office table),measured
+21,black,not stated,20%,STUDY_A section 2 plot style table (current office table),"measured; confirmed by STUDY_D section 3.2 item 3: black at 20% (driveway prints 204, 204, 204)"
 41,black,not stated,10%,STUDY_A section 2 plot style table (current office table),measured
 61,black,not stated,50%,STUDY_A section 2 plot style table (current office table),measured
 171,black,not stated,80%,STUDY_A section 2 plot style table (current office table),measured
@@ -25,7 +25,7 @@ colour_number,prints_as,pen_mm,screening,source,status
 49,own colour (pale tint for fills),not stated,20 to 25%,STUDY_A section 2 plot style table (current office table),measured
 74,own colour (pale tint for fills),not stated,20 to 25%,STUDY_A section 2 plot style table (current office table),measured
 138,own colour (pale tint for fills),not stated,20 to 25%,STUDY_A section 2 plot style table (current office table),measured
-141,own colour (pale tint for fills),not stated,20 to 25%,STUDY_A section 2 plot style table (current office table),measured
+141,own colour (pale tint for fills),not stated,20 to 25%,STUDY_A section 2 plot style table (current office table),"measured; confirmed by STUDY_D section 3.2 item 3: own colour, light blue, at 25% (footprint prints 223, 247, 255)"
 201,own colour (pale tint for fills),not stated,20 to 25%,STUDY_A section 2 plot style table (current office table),measured
 242,own colour (pale tint for fills),not stated,20 to 25%,STUDY_A section 2 plot style table (current office table),measured
 34,own colour,not stated,30%,STUDY_A section 2 plot style table (current office table),measured
@@ -34,3 +34,4 @@ colour_number,prints_as,pen_mm,screening,source,status
 130,black or grey (listed as printing black or grey; pen not stated),not stated,not stated,STUDY_A section 2 plot style table item 18,measured
 131,black or grey (listed as printing black or grey; pen not stated),not stated,not stated,STUDY_A section 2 plot style table item 18,measured
 all others (187 of 255),own colour,object lineweight,100%,STUDY_A section 2 plot style table (current office table),measured
+51,own colour (pale yellow),not stated,25%,"STUDY_D section 3.2 item 3 (note boxes print 255, 255, 223)",measured

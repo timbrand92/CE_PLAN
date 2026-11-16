@@ -48,9 +48,10 @@ Evidence: STUDY_B section 1 "Common path"; ELEMENT_LIST "Across three civil jobs
 7. **Checks:** Grade (L-001), cover (L-004), pit size by depth (L-006), clearances (L-013). Owner's list before issue: levels and falls; plan matches the numbers; against council's rules; drafting look-over.
 8. **Example job code and its key numbers:** CIV-01 (Kingston): connection at approx IL 1.14; 3,000 litre underground reuse tank; 100 pipes at 1 in 100.
 9. **Seen dates:** Discharge letter 20 Jun 2023; services plans 5 Jul; mark-ups 6 to 7 Jul; P1 11 Jul; Rev A 30 Nov 2023.
-10. **Unknowns:** What changed between P1 and Rev A (not compared). Whether downpipe numbers are checked. The sums for a plain house are waiting on study D (Q-104). One guidebook council asks for detention on a single house once the site is 65% impervious (then the job becomes K-002); the council is not named.
+10. **Unknowns:** What changed between P1 and Rev A (not compared). Whether downpipe numbers are checked. The sums for a plain house are waiting on study D (Q-104). One guidebook council asks for detention on a single house once the site is 65% impervious (then the job becomes K-002); the council is not named. Superseded by STUDY_D section 5.1, 16 Nov 2026.
+11. **What the folder really contains (CIV-01):** No calculation of the drainage. Only the eight blank template workbooks every job is seeded with, the council's discharge letter, the before-you-dig replies, two scanned hand mark-ups and one small PDF: an upper-floor plan with part of the roof hatched and "57m2 OF ROOF CATCHMENT AREA TO WATERTANK SHOWN HATCHED". No pipe check, no downpipe count, no computations PDF, and nothing sent to council as sums. So on a house with no detention the pipes are by rule (100 dia. at 1 in 100) and the only number worked is a roof area to the tank. The principal should still confirm (STUDY_D section 5.1 items 1 to 3)
 
-Evidence: STUDY_B section 1a, 1b item 7, section 6 item 1; INTERVIEW items 8c, 8zb; DECISIONS D-019.
+Evidence: STUDY_B section 1a, 1b item 7, section 6 item 1; INTERVIEW items 8c, 8zb; DECISIONS D-019; STUDY_D section 5.1.
 
 ## K-002 House with detention
 
@@ -63,9 +64,10 @@ Evidence: STUDY_B section 1a, 1b item 7, section 6 item 1; INTERVIEW items 8c, 8
 7. **Checks:** Storage total at least the volume required (S-006); orifice flow under the permitted discharge (S-007); top water level below every cover (L-011); detention pipe grade (L-001); cover (L-004, L-005).
 8. **Example job code and its key numbers:** CIV-02 (Kingston): permitted discharge 5.0 l/s; orifice 67 mm; top water level 1.31; volume required 1.49; pit P1 0.11, pit P2 0.05, tank 1.00 (of a 3,000 litre slimline: 2,000 reuse, 1,000 detention), a 225 Stormpro pipe 9 m long at 1 in 150 (0.36); total 1.52; roof catchment to tank 118.6 square metres; connection at approx IL 0.96.
 9. **Seen dates:** Letter 23 Aug 2023 (issued to the building designer); Rev B for council submission 20 Jan 2025. Earlier issues not read.
-10. **Unknowns:** The computations file was not on disk (results are from the sheet). How the top water level is first chosen (Q-001). Sums for a house with detention are waiting on study D (Q-104).
+10. **Unknowns:** The computations file was not on disk (results are from the sheet). How the top water level is first chosen (Q-001). Sums for a house with detention are waiting on study D (Q-104). Superseded by STUDY_D section 5.2, 16 Nov 2026.
+11. **Sums read in full (CIV-02, Kingston):** Three pages: (1) required storage on Boyd's sheet (see S-003: 1,492 litres); (2) storage provided: 9 m of 225 pipe 0.36 m3, pits 0.11 and 0.05, tank contribution 1.00 m3 (L-010), total 1.52 m3 > 1.49 m3; (3) orifice 67 mm (S-007). The computations are a Word document of pasted spreadsheet pictures with three typed lines, printed to PDF. What went to council: the sheet, this PDF and a declaration form (STUDY_D section 5.2 items 1 to 5)
 
-Evidence: STUDY_B section 1b items 1 to 5 and 7.
+Evidence: STUDY_B section 1b items 1 to 5 and 7; STUDY_D section 5.2.
 
 ## K-003 Units, detention in tanks only
 
@@ -124,8 +126,10 @@ Evidence: STUDY_B section 1d, 1e items 1 and 2, section 5 item 7, section 6 item
 8. **Example job code and its key numbers:** CIV-06 (Monash): permitted discharge 5.27 l/s and storage 4.37; 2.62 underground + two tanks at 0.875; orifice 65 mm at plate height 390: 5.27 l/s exactly. CIV-09 (Bayside): 7.48 l/s; total 6.36 (sheet shows 5.35 required); orifice 77 mm at plate height 410: 7.4 l/s. CIV-10 (Bayside): 8.52 l/s and storage 9.72.
 9. **Seen dates:** CIV-06: P1 26 May 2025; Rev A to council 29 Jul; resubmitted Rev B 13 Aug; approved 15 Aug 2025; then a planning amendment: Rev C 23 Apr 2026, Rev D 19 May, approved again 21 May 2026. CIV-09: documents 23 Feb 2024; set-up 4 Mar; P1 14 Mar; council figures 2 Apr (19 days after P1); P2 3 Apr; Rev A to council 8 Apr; approved 18 Apr; construction issue 4 Jun 2024.
 10. **Unknowns:** CIV-09 is only partly read (files would not download). What P1 was designed on before the council's figures arrived is not shown (design often starts on assumptions: D-030).
+11. **Paper look (CIV-06):** Nothing new in kind: the standard sheet with "ORIFICE PIT P1 DETAIL", "WATER TANK DETAIL", "TYPICAL TRENCH ADJACENT TO FOOTING DETAIL" and the detention criteria box. The council's figures only change the numbers. Read by text only (STUDY_D section 4.6 item 1)
+12. **What the council supplied (CIV-09):** The discharge letter says discharge must not exceed the pre-development peak and tells the applicant to e-mail the council for the "storage volume and permissible site discharge". A separate e-mail reply ("PSD and SSR parameters") supplied them; permissible site discharge 7.48 l/s, storage required 5.35 m3. The e-mail itself was not opened. There is NO required-storage page in the office's sums (STUDY_D section 5.5 items 1 and 2, Still unknown item 4)
 
-Evidence: STUDY_B section 1f, section 0 item 5.
+Evidence: STUDY_B section 1f, section 0 item 5; STUDY_D section 4.6, 5.5.
 
 ## K-007 Pumped system (low site)
 
@@ -138,9 +142,10 @@ Evidence: STUDY_B section 1f, section 0 item 5.
 7. **Checks:** L-015 (pumps); L-023 (groundwater); wet well at least the largest of the three figures; council's gravity-at-kerb rule.
 8. **Example job code and its key numbers:** CIV-07 (Glen Eira): site 746, impervious 414, coefficient 0.66; permitted discharge 7.90 l/s (Rev B), storage 2,233 litres; effective catchment 472.2; 2 hour runoff 17.09; pumped in 30 minutes 14.22; wet well 4.72; discharge invert 38.99, inlet 38.32, static rise 0.67, rising main 6 m of 50 dia, cover 39.18, 2,000 dia fibreglass well, total depth 2.86; tanks of 3,000 (1,000 detention, 2,000 reuse).
 9. **Seen dates:** Discharge report 26 Feb 2024; STORM 24 Apr; sums 29 Apr; Rev B 30 Apr; council "no objection" letter 1 May 2024.
-10. **Unknowns:** Which pump workbook version is current, and when a well under 3 cubic metres is acceptable (Q-003). Why the rainfall changed between Rev A and Rev B. The paper look of pump sheets is waiting on study D (Q-106).
+10. **Unknowns:** Which pump workbook version is current, and when a well under 3 cubic metres is acceptable (Q-003). Why the rainfall changed between Rev A and Rev B. The paper look of pump sheets is waiting on study D (Q-106). Superseded by STUDY_D section 4.1, 16 Nov 2026.
+11. **Paper look (CIV-07):** See E-059: pump box, pump station detail, pump notes, plan symbols. One sheet, vertical title, for council approval, 1:100 and 1:20 (STUDY_D section 4.1 items 1 to 6)
 
-Evidence: STUDY_B section 1g, section 3 item 15, section 5 item 6; DIGEST section 2 item 1.
+Evidence: STUDY_B section 1g, section 3 item 15, section 5 item 6; DIGEST section 2 item 1; STUDY_D section 4.1.
 
 ## K-008 Soakage (soak on site)
 
@@ -154,8 +159,9 @@ Evidence: STUDY_B section 1g, section 3 item 15, section 5 item 6; DIGEST sectio
 8. **Example job code and its key numbers:** CIV-08 (Frankston, four units): soil 259 mm/h and 124 mm/h; pit 1 catchment 647, effective 426.5; factor 0.5; 2.448 x 7.535 x 0.88 = 16.2; worst storm 90 minutes, 15.37 needed against 15.42 provided; empties in 4.4 hours; pits 16.2, 9.8 and 7.4; 60, 40 and 30 double modules. CIV-13 (Bass Coast, rural house; sheet read as JOB_A in the Stage 1 element list): on-site absorption through a tank and a soakage line or pit to the council's standard drawing; no detention; its sums were not on disk.
 9. **Seen dates:** CIV-08: letter Dec 2021; quote documents Feb 2023; CADs 27 Jul 2023; set-up 31 Jul; soil test 10 Aug; P1 29 Aug; P2 15 Sep; sums and STORM 2 Oct; Rev A to council 3 Oct 2023; Rev B 25 Jan 2024; Rev C 23 Apr 2024. Nine months and three submissions.
 10. **Unknowns:** Whether the 1 in 100 storm with the moderating factor is the starting point for every council (Q-013). Sums for the rural house (Q-104). Paper look of soakage sheets (Q-106).
+11. **Paper look (CIV-08) and sums (CIV-13):** CIV-08, two sheets: sheet 1 plan across the top, pit schedule below, legend moved to the bottom left, three soakage details and the tank detail in the middle, general notes lower right; sheet 2 "PAVEMENT PLAN AND DETAILS" with "DRIVEWAY DETAIL" and "PERMEABLE PAVING DETAIL"; a "PERMEABLE DRIVEWAY" area labelled in pink. CIV-13 (Bass Coast): soakage workbook read cell by cell (S-016, S-017): module count 14 x 13, emptying time 608 hours, overflow to a dam; also a pit schedule workbook and PDF, and a small drawing "soakage.dwg" (STUDY_D section 4.2 items 1, 7, section 5.4 items 1 to 5)
 
-Evidence: STUDY_B section 1h, 1b item 6, section 3 item 16, section 4 item 9; ELEMENT_LIST "Across three civil jobs" item 3.
+Evidence: STUDY_B section 1h, 1b item 6, section 3 item 16, section 4 item 9; ELEMENT_LIST "Across three civil jobs" item 3; STUDY_D section 4.2, 5.4.
 
 ## K-009 Raingarden / STORM report job
 
@@ -168,9 +174,10 @@ Evidence: STUDY_B section 1h, 1b item 6, section 3 item 16, section 4 item 9; EL
 7. **Checks:** Sheet against the report: Frankston sent back "raingarden too small for its catchment".
 8. **Example job code and its key numbers:** CIV-08: 34 of driveway to a raingarden of 1.0 square metre in the report; the final sheet labels 3.5 square metres. CIV-09: a 1.0 square metre raingarden (100 mm ponding) treating 49.8 of paving; two 6,000 litre tanks; rating over 100%. JOB_B: raingarden shape drawn by hand, no block.
 9. **Seen dates:** CIV-08 STORM report 2 Oct 2023. CIV-09: see K-006.
-10. **Unknowns:** How a raingarden's area is chosen and what fixes its position (Q-005). A raingarden job read end to end was not achieved (Q-104). Which of CIV-08's two raingarden areas is right.
+10. **Unknowns:** How a raingarden's area is chosen and what fixes its position (Q-005). A raingarden job read end to end was not achieved (Q-104). Which of CIV-08's two raingarden areas is right. Superseded by STUDY_D section 5.5, 16 Nov 2026.
+11. **End to end (CIV-09 = JOB_B):** Council gave the figures (7.48 l/s, 5.35 m3). Sums sent to council: two pages (storage list and orifice; then the STORM report); total storage 6.36 against 5.35. STORM report by the office dated 13 Mar 2024: rating 103% (S-027). The report is redone after the layout is drawn. Other files: three dated versions of the detention workbook (one prefixed with a second person's initials), an older orifice workbook, and the architect's sustainability report (not read) (STUDY_D section 5.5 items 2, 4, 5, 7 and 9)
 
-Evidence: STUDY_B section 1h items 6 and 7, 1f item 3, "Kinds not found" item 1, section 3 item 18, section 4 item 7; STUDY_A section 6 item 25; DIGEST section 2 item 6.
+Evidence: STUDY_B section 1h items 6 and 7, 1f item 3, "Kinds not found" item 1, section 3 item 18, section 4 item 7; STUDY_A section 6 item 25; DIGEST section 2 item 6; STUDY_D section 5.5.
 
 ## K-010 Outfall drain in the road reserve, with a long section
 
@@ -183,9 +190,10 @@ Evidence: STUDY_B section 1h items 6 and 7, 1f item 3, "Kinds not found" item 1,
 7. **Checks:** L-002 (outfall minimum size and class), L-013 (clearances), L-021 (scales and datum), L-022 (pipe class in the road).
 8. **Example job code and its key numbers:** CIV-05 (Darebin): 225 class 2 rubber-ring-jointed concrete pipe at 1 in 200; design flow 31.75 l/s; velocity 0.8 m/s; datum RL 44.00; horizontal 1:250, vertical 1:25. Site sums: 5.93 l/s, storage 5.84; 18 m of 375 pipe = 1.99; pits 1.86; two tanks at 1.00; total 5.85; orifice 63 mm at plate height 520 (5.79 l/s).
 9. **Seen dates:** 2022 letter; P1 May 2024; Rev A to council 5 Dec 2024; amended letter and outfall added Feb 2025; Rev C 16 Sep 2025; approved Rev E 8 Oct; construction 10 Oct 2025; a further "outfall drain services clash" issue 3 Mar 2026. About 17 months from P1 to approval.
-10. **Unknowns:** Long-section examples and their fixed row set are waiting on study D (Q-102, Q-106). The OSD4W run is dated 26 Nov 2024 but uses the settings of the amended letter of Feb 2025; the evidence does not explain the order.
+10. **Unknowns:** Long-section examples and their fixed row set are waiting on study D (Q-102, Q-106). The OSD4W run is dated 26 Nov 2024 but uses the settings of the amended letter of Feb 2025; the evidence does not explain the order. Superseded by STUDY_D section 2.6 and 4.3, 16 Nov 2026.
+11. **Paper look (CIV-05, sheet 2):** "OUTFALL DRAINAGE PLAN AND DETAILS", scale "AS SHOWN", construction issue at revision E, with its own plan, locality plan, short pit schedule, long section, section A-A and council notes (see E-062) (STUDY_D section 4.3, section 2.6 items 15 and 16)
 
-Evidence: STUDY_B section 1e, section 3 items 2 and 21; DIGEST section 1 item 8, section 2 item 7; INTERVIEW item 8b.
+Evidence: STUDY_B section 1e, section 3 items 2 and 21; DIGEST section 1 item 8, section 2 item 7; INTERVIEW item 8b; STUDY_D section 2.6, 4.3.
 
 ## K-011 Industrial / warehouse
 
@@ -199,8 +207,9 @@ Evidence: STUDY_B section 1e, section 3 items 2 and 21; DIGEST section 1 item 8,
 8. **Example job code and its key numbers:** CIV-11 (Greater Dandenong): site 2,281; first sums 24.02 l/s, storage 18.2, orifice 101 mm at head 1.28; second sums 34.53 l/s, storage 17.9, orifice 121 mm. Rev D sheet: 32.53 l/s, orifice 100 mm, top water level 24.11, total required 17.90, modular tank 18.2.
 9. **Seen dates:** Discharge letter 7 Feb 2026; set-up 3 Mar; P1 2 Apr; mark-up for council 5 May; Rev A lodged 11 May; queries 21 and 28 May; Rev B 9 Jun; Rev C 7 Jul; third assessment 8 Jul; Rev D 13 Jul; approved plan 14 Jul 2026. Four council rounds in nine weeks.
 10. **Unknowns:** The sheet's discharge (32.53) and orifice (100) do not match the computations of 8 Jun (34.53 and 121); which is right is not shown. Where the outlet stub check is kept and whether the 25% is argued by letter each time (Q-014). Paper look of industrial sheets (Q-106).
+11. **Paper look (CIV-11, three sheets):** Horizontal title strip along the bottom, "for council approval" revision D. Sheet 1: plan two-thirds of the sheet, legend and general notes top right, pit schedule right, criteria box and slab legend under the plan title. New on plan: boundary sides labelled "SITE 35670 (350 deg 37'20")"; car park slab with every space, kerb lines and accessible bays; a grid of red pavement levels (E-071); suspended pipes; tanks RWT1 to RWT3; a modular underground detention tank; a proprietary treatment device; LPD and OG pit tags. Sheet 2: "P6 CONTROL PIT DETAIL", spoon drain, kerb, joint and slab specification details. Sheet 3: almost no text (a picture sheet); not read closely (STUDY_D section 4.4 items 1 to 6)
 
-Evidence: STUDY_B section 1k, section 5 item 10; DIGEST section 2 item 9.
+Evidence: STUDY_B section 1k, section 5 item 10; DIGEST section 2 item 9; STUDY_D section 4.4.
 
 ## K-012 Basement job
 
@@ -213,9 +222,11 @@ Evidence: STUDY_B section 1k, section 5 item 10; DIGEST section 2 item 9.
 7. **Checks:** L-015, L-023; the council's guideline (Bayside: pump designs must follow it).
 8. **Example job code and its key numbers:** CIV-10 (Bayside, units, three civil sheets): council figures 8.52 l/s and 9.72; site 1,147, impervious 890, effective 878.1; 2 hour runoff 31.79; wet well 16.45 in a rectangular well 9.6 m x 1.5 m; static rise 3.11; 18 m rising main of 80 dia; cover 16.65; total depth 2.35; orifice 80 mm at plate height 430: 8.34 l/s; outfall check 300 dia, 68.39 l/s at 0.97 m/s; 696 of roof to a 15,400 litre tank. CIV-12 (Glen Eira, single house): dual 2.5 l/s pumps, 3.00 static rise, about 20 m of 50 dia rising main, minimum 3.00 wet well.
 9. **Seen dates:** CIV-12: issue path preliminary, tender, construction (Rev C, 11 Feb 2026); no council approval stage seen. CIV-10 dates not listed in the evidence.
-10. **Unknowns:** CIV-12's sums were not on disk; sums for the basement house are waiting on study D (Q-104). Who owns driveway and ramp grades and their limits (Q-012). Retaining walls and earthworks were not found as civil sums. Paper look of basement sheets (Q-106).
+10. **Unknowns:** CIV-12's sums were not on disk; sums for the basement house are waiting on study D (Q-104). Who owns driveway and ramp grades and their limits (Q-012). Retaining walls and earthworks were not found as civil sums. Paper look of basement sheets (Q-106). Superseded by STUDY_D section 5.3 and 4.5 (sums read in full; basement sheets seen as pictures for CIV-10 only), 16 Nov 2026.
+11. **Paper look and sums (CIV-10, CIV-12):** A separate basement-level sheet ("BASEMENT STORMWATER DRAINAGE PLAN" CIV-10; "BASEMENT DRAINAGE PLAN" CIV-12), then "GROUND FLOOR STORMWATER DRAINAGE PLAN" and an outfall sheet (CIV-10). New items: E-068 and E-074; pump sums S-014, S-015 and the combined outlet check S-028; shared drainage notes L-027. CIV-12 pit schedule kept as its own workbook and PDF (STUDY_D section 4.5 items 1 to 6, section 5.3)
+12. **Conflict (CIV-12 pump figures):** The earlier study's CIV-12 figures (static rise 3.00; about 20 m of 50 dia rising main; minimum 3.00 wet well) against the sums read in full (static rise 3.14; 18 m of 50 dia rising main; 3.00 m3 wet well selected). Both kept (STUDY_D section 5.3 item 3)
 
-Evidence: STUDY_B section 1l; DIGEST section 2 item 2.
+Evidence: STUDY_B section 1l; DIGEST section 2 item 2; STUDY_D section 4.5, 5.3.
 
 ## K-013 Other kinds seen but not studied, and the "civil site job"
 
@@ -228,10 +239,42 @@ Evidence: STUDY_B section 1l; DIGEST section 2 item 2.
 7. **Checks:** Unknown.
 8. **Example job code and its key numbers:** None coded.
 9. **Seen dates:** None.
-10. **Unknowns:** "Civil site job": Conflict: the files do NOT show a separate job type (every civil job read is one drawing set titled "stormwater drainage and pavement plan and details"; from the files a "civil site job" is the same sheet with more pavement and levels on it), against the owner's answer that a civil site job apart from the stormwater and pavement sheet exists "sometimes". Settled by D-029 as to existence ("sometimes"); which kinds is still open (Q-011). Childcare / school / apartment jobs are waiting on study D (Q-106). The office's own categories (job records sheet): residential or commercial; single dwelling, two unit, multi unit; basement, tanked basement, no basement; gravity, pump or infiltration; discharge to council pit, pipe connection, kerb and channel, or soak on site; site sloping to the front or to the back. The owner's end goal is to support all job types and situations (D-005).
+10. **Unknowns:** "Civil site job": Conflict: the files do NOT show a separate job type (every civil job read is one drawing set titled "stormwater drainage and pavement plan and details"; from the files a "civil site job" is the same sheet with more pavement and levels on it), against the owner's answer that a civil site job apart from the stormwater and pavement sheet exists "sometimes". Settled by D-029 as to existence ("sometimes"); which kinds is still open (Q-011). Childcare / school / apartment jobs are waiting on study D (Q-106). The office's own categories (job records sheet): residential or commercial; single dwelling, two unit, multi unit; basement, tanked basement, no basement; gravity, pump or infiltration; discharge to council pit, pipe connection, kerb and channel, or soak on site; site sloping to the front or to the back. The owner's end goal is to support all job types and situations (D-005). Superseded by STUDY_D section 4.7, 4.8 and 4.9 (childcare read by text, sports pavilion seen; no apartment folder found; school not opened), 16 Nov 2026.
+11. **Earthworks drawn by civil (found):** The earlier "fill / earthworks" kind is confirmed on a public building job: CIV-15 sheet 3 is a cut and fill plan with named bench zones and no volumes (E-067). First issued alone at tender stage (STUDY_D section 4.8 item 6, section 7 item 6)
+12. **Apartments:** Not found: no folder from 2023 to 2026 in the job index is named as apartments; the nearest kind is CIV-10 (units over a shared basement). A school was not opened once a sports job was found (STUDY_D section 4.9 item 1, Still unknown item 2)
 
-Evidence: STUDY_B section 1m, "Kinds not found" items 2 and 3; DIGEST section 2 items 8, 10 and 11; INTERVIEW item 8zk.
+Evidence: STUDY_B section 1m, "Kinds not found" items 2 and 3; DIGEST section 2 items 8, 10 and 11; INTERVIEW item 8zk; STUDY_D section 4.8, 4.9, 7 item 6.
+
+## K-014 Public pavilion job led by pavements (CIV-15)
+
+1. **Trigger:** A public building client (the council is the client); sports pavilion with paths, access pavement, tree zones and an underground tank for detention.
+2. **Inputs needed:** Survey contours and levels; arborist requirements for tree protection zones; architect's building; structural drawings for slabs; pavement design vehicle. Who supplies the design vehicle statement: Unknown.
+3. **Decisions in order:** Unknown (sheets read as pictures; sums not read).
+4. **Sums used:** Detention criteria box rows (permitted site discharge, head 1230mm, orifice, top water level, volume required, underground water tank, total). Pavement and earthworks levels. Sums file: Unknown.
+5. **What the drafter is handed:** Unknown.
+6. **What lands on the sheet:** Three sheets, vertical title strip, "AS SHOWN" scale. Sheet 1 "STORMWATER DRAINAGE AND PAVEMENT PLAN": plan fills the sheet, legend top right, pit schedule and criteria box bottom centre inside the plan area; pavement legend with four coloured specification swatches (E-073); tree zones (E-031); retaining wall note; grid of levels (E-071); a small second plan "STRATCO SHED SLAB / SCALE 1:100 - LOCATED OFF PLAN"; red clouds. Sheet 2: asphalt, silt pit, construction joint and kerb ramp details plus the standard set. Sheet 3 "SITE CUT AND FILL PLAN" at 1:100 (E-067).
+7. **Checks:** Unknown.
+8. **Example job code and its key numbers:** CIV-15. Head 1230mm; underground tank 15,000 litre.
+9. **Seen dates:** Issue stages P1 to P3, T1 to T4, then A (E-046). Dates: Unknown.
+10. **Unknowns:** Sums; who owns the crossfall and grade limits (L-025); sheet 2 looked at as a picture for text only.
+
+Evidence: STUDY_D section 4.8 items 1 to 7.
+
+## K-015 Staged job (CIV-14, childcare centre)
+
+1. **Trigger:** A project built in stages; each stage has its own plan sheet.
+2. **Inputs needed:** Unknown.
+3. **Decisions in order:** Unknown.
+4. **Sums used:** Unknown; a pump station (1800 dia.) with the same pump boxes as K-007 appears on sheet 3.
+5. **What the drafter is handed:** Unknown.
+6. **What lands on the sheet:** Three sheets. Sheet titles "STAGE 1 - STORMWATER DRAINAGE AND PAVEMENT PLAN" and "STAGE 2 - ..."; a legend line "DENOTES EXTENT OF STAGE 1 WORKS" (E-069). New labels: "ROOF CATCHMENT TO RAINGARDEN", "TO VEGETABLE RAINGARDEN", "RAINGARDEN DETAIL", "PROPOSED RAMP" with a pavement level, "150 HIGH KERB", "KERB & CHANNEL TO ...", "INVERT OF CONCRETE KERB", "TYPICAL EXTERNAL PAVING DETAIL", retaining wall notes.
+7. **Checks:** Unknown.
+8. **Example job code and its key numbers:** CIV-14. No numbers read.
+9. **Seen dates:** Issued through revision E as "CVL ... STAGE 1 & 2". Dates: Unknown.
+10. **Unknowns:** Everything except the sheet text; the job was read by text only, not as pictures.
+
+Evidence: STUDY_D section 4.7 items 1 and 2.
 
 ---
 
-Next free number: K-014
+Next free number: K-016

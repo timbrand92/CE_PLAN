@@ -138,8 +138,9 @@ Evidence: STUDY_B section 3 item 8, section 4 items 2 and 4, sections 1b to 1l (
 5. **Conflict:** 0.6 against 0.8 (one old sheet); 9.81 against 9.8; and what "HEAD" means on the sheet.
 6. **Order of authority per D-022:** No council or AS/NZS 3500.3 value is quoted in the evidence; these are office workbooks.
 7. **Status:** "HEAD" on the sheet: Settled by D-023 (the criteria box keeps printing the baffle height; the sum keeps using the head to the orifice centre). Coefficient 0.6 against 0.8: not settled by a decision and not listed in Q-004.
+8. **More values seen:** CIV-02 sums use coefficient 0.6 and gravity 9.81; the CIV-09 orifice sheet prints "= 2.6 Ao root h" with gravity 9.8 (the existing conflict on this item) (STUDY_D section 5.2 item 3, section 5.5 item 2)
 
-Evidence: STUDY_B section 3 item 9, section 5 items 2 and 3; DIGEST section 3 item 10.
+Evidence: STUDY_B section 3 item 9, section 5 items 2 and 3; DIGEST section 3 item 10; STUDY_D section 5.2, 5.5.
 
 ## L-010 Share of detention underground, and what a tank may count
 
@@ -154,8 +155,9 @@ Evidence: STUDY_B section 3 item 9, section 5 items 2 and 3; DIGEST section 3 it
 5. **Conflict:** None between documents recorded; values differ by council. The workbook's 2,000 litre line has no source.
 6. **Order of authority per D-022:** Council.
 7. **Status:** Council data. Tank orifice and split: Settled by D-024.
+8. **Another value (flat credit):** A flat 1.00 m3 detention credit for any tank of 2,500 litres or more, typed in a Kingston job's sums (CIV-02). Source not stated on the page. Whether it is an office rule or a council rule: Unknown. It differs from the other tank rules listed under item 2 (500 litres of every 2,000; a third; "dispensation"). Not settled (STUDY_D section 5.2 item 5, section 7 item 13, Still unknown item 5)
 
-Evidence: STUDY_B section 3 item 10, section 4 items 1 to 7, section 5 item 5; GUIDEBOOK_NOTES "Rules of thumb" item 5; DIGEST section 5 item 2.
+Evidence: STUDY_B section 3 item 10, section 4 items 1 to 7, section 5 item 5; GUIDEBOOK_NOTES "Rules of thumb" item 5; DIGEST section 5 item 2; STUDY_D section 5.2, 7 item 13.
 
 ## L-011 Top water level and ponding
 
@@ -231,8 +233,9 @@ Evidence: STUDY_B section 3 item 14; GUIDEBOOK_NOTES "Rules of thumb" item 7; DI
 5. **Conflict:** The "small pumps" tab allows a wet well below the standard's 3 cubic metres. Workbook versions differ on static rise and bottom level (S-015).
 6. **Order of authority per D-022:** Council first (gravity-only rules); then AS/NZS 3500.3 section 8; the "small pumps" rule of thumb is an office document below the standard.
 7. **Status:** Needs the owner's ruling Q-003.
+8. **More values seen:** CIV-12: "DETENTION = 3m3 (minimum as per AS 3500.3)" checked against the pump wet well volume; "1% catchment" 1.32 m3 on a 132 m2 basement catchment. CIV-07 box: "SOLID CLASS C LID" and "PUMP & WET WELL TO COMPLY WITH AS3500.3". Large-type box on CIV-07: "NOTE: FULLY TANKED PUMP PIT. COUNCIL DOES NOT ACCEPT SUB-SURFACE WATER AND GROUNDWATER INTO THE PUMP SYSTEM" (STUDY_D section 5.3 items 2 and 3, section 4.1 items 2 and 4)
 
-Evidence: STUDY_B section 3 item 15, section 1g items 1, 4 and 5, 1e item 1, section 5 item 6.
+Evidence: STUDY_B section 3 item 15, section 1g items 1, 4 and 5, 1e item 1, section 5 item 6; STUDY_D section 4.1, 5.3.
 
 ## L-016 Soakage
 
@@ -243,8 +246,9 @@ Evidence: STUDY_B section 3 item 15, section 1g items 1, 4 and 5, 1e item 1, sec
 5. **Conflict:** Storm to size for: 1 in 10 (CIV-08 Rev A) against 1 in 100 (Rev B and C, after the council asked).
 6. **Order of authority per D-022:** Council (and the Melbourne Water chapter it points to) first; then guidebook and checklist.
 7. **Status:** Whether 1 in 100 with the moderating factor is the starting point for every council: Unknown (Q-013).
+8. **More values seen (CIV-13 and CIV-08):** CIV-13: moderating factor 2 on the 1 in 10 year storm; soil permeability 0.325 mm/hr from the percolation report; storage depth 0.45 m; porosity 0.95; the emptying time came out at 608 hours and nothing on the sheet flags it. CIV-08 standing note: "NO GROUNDWATER HAS BEEN ENCOUNTERED WITHIN 1m OF SOAKAGE PITS" (STUDY_D section 5.4 items 1, 2 and 4, section 2.3 item 5)
 
-Evidence: STUDY_B section 3 item 16, section 1h items 3 to 5.
+Evidence: STUDY_B section 3 item 16, section 1h items 3 to 5; STUDY_D section 2.3 item 5, 5.4.
 
 ## L-017 Storm events, coefficients and times
 
@@ -273,8 +277,9 @@ Evidence: STUDY_B section 3 item 17, section 4 items 1 to 8, section 5 item 1, s
 5. **Conflict:** None recorded.
 6. **Order of authority per D-022:** Council / planning permit.
 7. **Status:** Council data.
+8. **Values seen:** CIV-09: overall "STORM Rating 103%" (100 is the pass mark); tank treatment 111.8% and 119.6%, raingarden 128.15% (STUDY_D section 5.5 item 5)
 
-Evidence: STUDY_B section 3 item 18, section 4 items 5 and 6.
+Evidence: STUDY_B section 3 item 18, section 4 items 5 and 6; STUDY_D section 5.5.
 
 ## L-019 Lid load classes
 
@@ -285,8 +290,9 @@ Evidence: STUDY_B section 3 item 18, section 4 items 5 and 6.
 5. **Conflict:** None recorded.
 6. **Order of authority per D-022:** Council first where it asks; then guidebook.
 7. **Status:** Not in conflict.
+8. **More classes seen on sheets:** "Class B Grate" on a silt pit and "Class A Grate" on a plastic pit (CIV-08); "Class D Solid Lid With Step Irons" and "Class D Grated Lid With Step Irons" (CIV-11); "300(W) TRENCH WITH CLASS C GRATE" across a basement ramp and "600 x 600 WITH CLASS C GRATE" sump pits (CIV-10); "SOLID CLASS C LID" on the CIV-07 pump box; grated class C trafficable cover on the pump station detail; "SOLID CLASS B LID" in the older template pump placeholder (STUDY_D section 4.2 item 6, 4.4 item 5, 4.5 item 2, 4.1 items 2 and 3, 2.1 item 3)
 
-Evidence: STUDY_B section 3 item 19, section 4 item 7, section 1k item 5; ELEMENT_LIST "On the plan" item 8.
+Evidence: STUDY_B section 3 item 19, section 4 item 7, section 1k item 5; ELEMENT_LIST "On the plan" item 8; STUDY_D section 2.1, 4.1 to 4.5.
 
 ## L-020 Driveway pavement where a council asks
 
@@ -297,8 +303,9 @@ Evidence: STUDY_B section 3 item 19, section 4 item 7, section 1k item 5; ELEMEN
 5. **Conflict:** None recorded.
 6. **Order of authority per D-022:** Council.
 7. **Status:** Council data. Who owns driveway and ramp grades and their limits: Unknown (Q-012).
+8. **More values seen:** Details library build-ups: light / medium duty asphalt pavement (180, 280, 290, 475 thick). CIV-15 legend: 130mm asphalt footpath; 125mm and 150mm thick RC infill slab; 140mm asphalt access pavement with the design vehicle statement "PAVEMENT DESIGNED FOR ONCE PER YEAR ACCESS BY ... RIGID TRUCK WITH A MAXIMUM WEIGHT OF 14 TONNE, CRANE TRUCK ... 18-20 TONNE". CIV-11: 150mm thick RC carpark slab and 150mm thick R.C spoon drain. Spoon drain in concrete pavement: minimum grade 1:100 and 1:200 versions in the details. Whether these come from a council or the office: Unknown (STUDY_D section 2.3 item 1, section 4.8 item 2, section 4.4 item 3)
 
-Evidence: STUDY_B section 3 item 20, section 4 item 7; GUIDEBOOK_NOTES "Elements" item 9.
+Evidence: STUDY_B section 3 item 20, section 4 item 7; GUIDEBOOK_NOTES "Elements" item 9; STUDY_D section 2.3, 4.4, 4.8.
 
 ## L-021 Long section scales and datum
 
@@ -309,8 +316,9 @@ Evidence: STUDY_B section 3 item 20, section 4 item 7; GUIDEBOOK_NOTES "Elements
 5. **Conflict:** None between documents; scales differ between the two long sections of the older study.
 6. **Order of authority per D-022:** Council.
 7. **Status:** Council data. Long sections are drawn only when the council asks (D-030).
+8. **More values seen:** Seven worked long sections are drawn at horizontal 1:100 with vertical 1:50 and one at 1:200 / 1:100, against 1:250 / 1:25 on the issued CIV-05 sheet. Datum text seen: "DATUM LEVEL R.L. 125.00m", "DATUM LEVEL AHD 35.00m", "DATUM LEVEL R.L. 12m AHD" (the datum line is a drawing reference, not always the national datum). Conflict recorded; not settled (STUDY_D section 2.6 items 2 and 3)
 
-Evidence: STUDY_B section 3 item 21, section 1e item 5; GUIDEBOOK_NOTES "Elements" item 21; DIGEST section 1 item 8.
+Evidence: STUDY_B section 3 item 21, section 1e item 5; GUIDEBOOK_NOTES "Elements" item 21; DIGEST section 1 item 8; STUDY_D section 2.6.
 
 ## L-022 Pipe class under driveways and in the road
 
@@ -333,8 +341,9 @@ Evidence: STUDY_B section 1f item 4, 1e item 6, 1d item 1, section 4 item 1; STU
 5. **Conflict:** None recorded. (CIV-07's sheet lists both "no groundwater into the pump system" and "agricultural drain connected"; the older study says pumping is limited to basements, ramps and agricultural drains.)
 6. **Order of authority per D-022:** Council (Bayside guideline) first; then guidebook.
 7. **Status:** Not ruled on.
+8. **More wording seen:** "BASEMENT TO BE FULLY TANKED WATERTIGHT" (CIV-10 basement sheet); "COUNCIL DOES NOT ACCEPT SUB-SURFACE WATER AND GROUNDWATER INTO THE PUMP SYSTEM" (CIV-07) (STUDY_D section 4.5 item 3, section 4.1 item 4)
 
-Evidence: STUDY_B section 1g item 6, 1l items 1 and 3, section 3 item 15, section 4 items 1 and 5; DIGEST section 3 item 7.
+Evidence: STUDY_B section 1g item 6, 1l items 1 and 3, section 3 item 15, section 4 items 1 and 5; DIGEST section 3 item 7; STUDY_D section 4.1, 4.5.
 
 ## L-024 Tank orifice
 
@@ -348,6 +357,42 @@ Evidence: STUDY_B section 1g item 6, 1l items 1 and 3, section 3 item 15, sectio
 
 Evidence: STUDY_B section 6 item 5, section 1b item 4, 1c item 6, 1d item 7; DIGEST section 3 item 6; INTERVIEW item 8zf.
 
+## L-025 Crossfall and path grade on a pavement plan
+
+1. **Rule:** A sheet note limits the crossfall of paved areas.
+2. **Value or values:** "CROSSFALLS SHALL BE NO STEEPER THAN 1:40" (CIV-15). Path grades are written as "1:22 14%" (as printed). Kerb ramps are detailed ("KERB RAMP DETAILS"); DDA bays "RE-LINE DDA PARKING BAYS".
+3. **Applies to:** Pavement and car-park plans (E-071, E-073).
+4. **Source of each value:** Sheet notes on CIV-15 (sports pavilion; council is the client).
+5. **Conflict:** None recorded. L-020 has a council crossfall of 1 in 30 for a driveway slab; different pavement.
+6. **Order of authority per D-022:** Council (the client on CIV-15); then AS/NZS 3500.3 where it applies; then the guidebook. Which of these the 1:40 comes from: Unknown.
+7. **Status:** Not confirmed by the owner. Who owns driveway and ramp grades and their limits: Unknown (Q-012).
+
+Evidence: STUDY_D section 4.8 item 3.
+
+## L-026 Overland flow break in a kerb, and batter slope
+
+1. **Rule:** Sheet notes give a break in the kerb for the overland flow path and a limit on batter slope.
+2. **Value or values:** "PROVIDE 500 WIDE BREAK IN KERB TO ALLOW FOR OVERLAND FLOW PATH AT 1% AEP" and "MAX. 1:4 BATTER" (CIV-11, industrial).
+3. **Applies to:** Overland flow arrow (E-026); batter (E-054).
+4. **Source of each value:** Sheet notes on CIV-11.
+5. **Conflict:** None recorded.
+6. **Order of authority per D-022:** Council first; then the guidebook. Which the notes come from: Unknown.
+7. **Status:** Not confirmed by the owner.
+
+Evidence: STUDY_D section 4.4 item 2.
+
+## L-027 Shared drainage assets between owners
+
+1. **Rule:** Drainage and reuse assets shared by several dwellings need common property or easements and an agreement between the owners for maintenance.
+2. **Value or values:** Note wording on the Bayside template job: "SHARED DRAINAGE ASSET" (shared drains need common property or easements and an agreement between owners); basement jobs: "AN AGREEMENT SHALL BE MADE AMONG DWELLING OWNERS FOR THE MAINTENANCE OF THE SHARED DRAINAGE AND RAINWATER RE-USE ASSETS..." and "WATER FROM FLOOR WASTES AND STRIP DRAINS MUST BE COLLECTED AND TREATED PRIOR RE-USE".
+3. **Applies to:** Notes blocks (E-038); unit and basement jobs (K-003, K-012).
+4. **Source of each value:** The Bayside job-as-template; CIV-10 and CIV-12 sheets.
+5. **Conflict:** None recorded.
+6. **Order of authority per D-022:** Council first. Whether this is a Bayside rule or the office's standing note: Unknown.
+7. **Status:** Not confirmed by the owner.
+
+Evidence: STUDY_D section 2.1 item 2, section 4.5 item 3.
+
 ---
 
-Next free number: L-025
+Next free number: L-028

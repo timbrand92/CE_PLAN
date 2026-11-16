@@ -48,6 +48,8 @@ What the office's files show about this council's stormwater requirements. Re-fi
 
 1. **CIV-07** (K-007, pumped): 7.90 l/s; storage 2,233 litres; wet well 4.72; static rise 0.67; "no objection" 1 May 2024.
 2. **CIV-12** (K-012, house with basement): dual 2.5 l/s pumps; minimum 3.00 wet well; preliminary, tender, construction; no council approval stage seen.
+3. **CIV-12 sums read in full:** Site 919 m2; permissible discharge taken from the EXISTING site: 16.13 l/s at 94.3 mm/hr; storage required 1,125 litres; combined check 10.49 + 2.5 pump = 12.99 l/s < 16.13 (S-028); outlet 150 dia. at 1 in 100 carries 19.80 l/s; pump wet well 3.00 m3 selected; static rise 3.14 m, rising main 18 m of 50 dia. (K-012 conflict) (STUDY_D section 5.3 items 1 to 3)
+4. **CIV-07 paper look:** Pump box "DUAL 7.90 l/s ALTERNATING PUMPS" etc. and the large-type note that the council does not accept sub-surface water and groundwater into the pump system (E-059) (STUDY_D section 4.1 items 2 and 4)
 
 ## 9. Conflicts between office documents about this council
 
@@ -56,4 +58,4 @@ What the office's files show about this council's stormwater requirements. Re-fi
 
 ## 10. Evidence
 
-Evidence: STUDY_B section 1g, 1l item 3, section 4 item 6.
+Evidence: STUDY_B section 1g, 1l item 3, section 4 item 6; STUDY_D section 4.1, 5.3.

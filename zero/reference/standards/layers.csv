@@ -50,9 +50,9 @@ SLAB SC,not stated,not stated,yes,pavement joint content; mostly inside blocks,n
 SLAB PERIMETER,not stated,not stated,yes,pavement joint content; mostly inside blocks,not stated,not stated,in blocks,STUDY_A section 2 civil layer 34,measured
 SLAB STEP,not stated,not stated,yes,pavement joint content; mostly inside blocks,not stated,not stated,in blocks,STUDY_A section 2 civil layer 34,measured
 25TEXT - JOINT TEXT,not stated,not stated,yes,pavement joint content; mostly inside blocks,not stated,not stated,in blocks,STUDY_A section 2 civil layer 34,measured
-HATCH 21,49 in the jobs; 21 in the template,not stated,yes,solid fill of the driveway slab (prints pale grey),not stated,yes (colour 21),JOB_C,STUDY_A section 2 civil layer 35,conflict
-HATCH 141,149 in JOB_C,not stated,yes,solid fill of the building footprint (prints light blue),not stated,not stated,JOB_C,STUDY_A section 2 civil layer 35,measured
-HATCH 51,250,not stated,yes,fill of note boxes (prints yellow on the issued sheet; not explained by the plot style table),not stated,not stated,JOB_C,STUDY_A section 2 civil layer 35 and section 10 item 3,measured
+HATCH 21,49 in the jobs; 21 in the template,not stated,yes,solid fill of the driveway slab (prints pale grey),not stated,yes (colour 21),JOB_C,STUDY_A section 2 civil layer 35,"conflict; used_for superseded by STUDY_D section 3.2, 16 Nov 2026: viewport colour override HATCH 21 -> colour 21 (black at 20%) in the viewport; 49 in model space"
+HATCH 141,149 in JOB_C,not stated,yes,solid fill of the building footprint (prints light blue),not stated,not stated,JOB_C,STUDY_A section 2 civil layer 35,"measured; confirmed by STUDY_D section 3.2: viewport override to colour 141 (own colour, light blue, at 25%); 149 in model space"
+HATCH 51,250,not stated,yes,fill of note boxes (prints yellow on the issued sheet; not explained by the plot style table),not stated,not stated,JOB_C,STUDY_A section 2 civil layer 35 and section 10 item 3,"measured; used_for superseded by STUDY_D section 3.2, 16 Nov 2026: prints yellow because of a viewport colour override (HATCH 51 -> colour 51 in the viewport; colour 51 = own colour at 25%)"
 HATCH 11,11,not stated,yes,earth and concrete patterns in details; green heading text of the criteria box (forced to colour 3),not stated,not stated,JOB_C,STUDY_A section 2 civil layer 35,measured
 HATCH WATER,150,not stated,yes,tank fill,not stated,not stated,not stated,STUDY_A section 2 civil layer 35,measured
 HATCH EARTH,11,not stated,yes,earth hatch,not stated,not stated,not stated,STUDY_A section 2 civil layer 35,measured
@@ -117,3 +117,31 @@ c-signs,not stated,not stated,not stated,on a job but in neither standard; arriv
 $n$A-ARCH BACKGROUND (five layers $0$ to $4$),not stated,not stated,not stated,left behind when a reference was bound and pasted,no,no,JOB_B,STUDY_A section 2 Standard versus invented item 3,measured
 A-ARCH BACKGROUND (inside the background file),11,not stated,yes,architecture in the cleaned background (black at 70% screen; 0.09 pen),not applicable,not applicable,background of JOB_A; JOB_C,STUDY_A section 1 item 14.4,measured
 A-TITLE BOUNDARY (inside the background file),2,DASHDOT2,yes,title boundary in the cleaned background,not applicable,not applicable,background,STUDY_A section 1 item 14.6,measured
+A-WALL (inside the background file),47,not stated,yes,"architect's walls, plain LINEs and ARCs, all exploded (873 objects in JOB_C)",not stated,not stated,background,STUDY_D section 1.2 item 11,measured
+A-WALL HATCH (inside the background file),11,not stated,yes,"wall fill hatches (pattern, not solid)",not stated,not stated,background,STUDY_D section 1.2 item 11,measured
+A-WINDOW & DOOR (inside the background file),9 in the jobs; 253 in the blank background template,not stated,yes,"windows and doors as LINEs and ARCs (1,183 objects in JOB_C)",not stated,yes (253),background,"STUDY_D section 1.2 item 13, section 1.4 item 2",conflict
+A-STAIRS UP (inside the background file),9,not stated,yes,stairs up,not stated,yes,background,STUDY_D section 1.2 item 14,measured
+A-STAIRS DOWN (inside the background file),9,HIDDEN2,yes,stairs down,not stated,yes,background,STUDY_D section 1.2 item 14,measured
+A-STEP (inside the background file),9,not stated,yes,steps,not stated,yes,background,STUDY_D section 1.2 item 14,measured
+A-DWAFTWALL (inside the background file),9,not stated,yes,"dwarf walls; spelt A-DWAFTWALL in the jobs, A-DWARFWALL in today's template",not stated,yes (as A-DWARFWALL),background,STUDY_D section 1.2 item 14,conflict
+A-DECK (inside the background file),49,not stated,yes,decks,not stated,yes,not stated,STUDY_D section 1.4 item 2,template
+A-ROOF OUTLINE and A-ROOF LOWER OUTLINE (inside the background file),55,not stated,yes,"roof outline (LINEs, ARCs, SPLINEs), fall arrows as tiny solid hatches, TEXT height 240",not stated,yes,background,STUDY_D section 1.2 item 12,measured
+A-ROOF HATCH and A-ROOF LOWER HATCH (inside the background file),41,not stated,yes,roof fill patterns,not stated,yes,background,STUDY_D section 1.2 item 12,measured
+A-FENCE (inside the background file),47,not stated,yes,fences,not stated,yes,background,STUDY_D section 1.2 item 14,measured
+A-FENCE HATCH (inside the background file),not stated,not stated,yes,fence hatch,not stated,yes,not stated,STUDY_D section 1.4 item 2,template
+A-BALUSTRADE (inside the background file),47,not stated,yes,balustrades,not stated,yes,background,STUDY_D section 1.2 item 14,measured
+A-EXISTING WALL (inside the background file),61,not stated,yes,existing walls (sample in the blank background template),not stated,yes,not stated,STUDY_D section 1.4 item 2,template
+A-EXISTING WALL HATCH (inside the background file),250,not stated,yes,existing wall hatch,not stated,yes,not stated,STUDY_D section 1.4 item 2,template
+A-EXISTING STAIRS (inside the background file),not stated,not stated,yes,existing stairs,not stated,yes,not stated,STUDY_D section 1.4 item 2,template
+A-DEMOLISH (inside the background file),10,DOT2,yes,demolition,not stated,yes,not stated,STUDY_D section 1.4 item 2,template
+A-EASEMENT (inside the background file),2,DASHDOT2,yes,"easement sample in the blank background template; no job drew one (the job layer EASEMENT is colour 6, DASHED)",not stated,yes,sample only,"STUDY_D section 1.2 item 3, section 1.4 item 2",conflict
+A-SURVEY (inside the background file),11 in the template; 253 or 11 in the jobs; JOB_A objects forced to 250,not stated,yes,"survey lines, kerb and channel, footpath, crossover, spot level text",not stated,yes,background,"STUDY_D section 1.2 items 6 and 8, section 1.3 item 4",conflict
+A-LANDSCAPE (inside the background file),73,not stated,yes,tree canopies in JOB_B (22 CIRCLEs and 529 LINEs),not stated,yes,JOB_B background,STUDY_D section 1.2 item 16,measured
+DRIVEWAY (inside the background file),254,not stated,yes,driveway lines and closed polylines,not stated,yes,background,STUDY_D section 1.2 item 15,measured
+CONTOURS AND LEVELS (inside the background file),45,CENTER2 in the template; the lettered SEWER type in JOB_C (an accident of the clean-up),yes,"contours (42 LINEs in JOB_C, object linetype scale 0.5) and spot level text height 200",not stated,yes,JOB_C background,"STUDY_D section 1.2 items 6 and 7, section 1.4 item 2",measured
+"CONTOURS (inside the background file, JOB_A)",34,imported dashed on some,yes,123 polylines; majors forced to colour 33; labels MTEXT height 500,not stated,not stated,JOB_A background,STUDY_D section 1.2 item 7,measured
+"G-ANNO-TEXT (inside the background file, JOB_A)",2,not stated,yes,boundary bearing and length MTEXT height 250,not stated,not stated,JOB_A background,STUDY_D section 1.2 item 2,measured
+"HATCH 70 (inside the background file, JOB_C)",not stated,not stated,yes,"green tree-zone hatch (ANSI31, scale 100) seen on paper",not stated,not stated,JOB_C background,STUDY_D section 1.2 item 16,measured
+HATCH 74,117 in model space; 74 in the viewport colour override,not stated,yes,"fill carrying a viewport colour override (colour 74 = own colour, pale tint, 20 to 25%)",not stated,not stated,JOB_C,STUDY_D section 3.2 item 2,measured
+25CONT / 35CONT / 25TEXT / 35TEXT / 50TEXT in long sections,not stated,not stated,yes,"older long-section examples: surface lines on 25CONT, pipe lines and pits on 35CONT, value text on 25TEXT, row titles and datum text on 35TEXT, title text 50TEXT; three newer examples use a layer SCHED",not stated,not stated,long-section examples,STUDY_D section 2.6 item 1,measured
+GUIDELINES (registration lines in the background),not stated,not stated,no,"registration helper lines at X 22,198 and 47,198; Y -7,643, -57,643, -107,643, same in all three backgrounds",not stated,not stated,JOB_A; JOB_B; JOB_C backgrounds,STUDY_D section 1.1 item 3,measured

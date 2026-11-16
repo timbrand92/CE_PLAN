@@ -12,7 +12,11 @@ nominal,material_class,where_used,real_inside_outside_if_known,source,status
 375,detention pipe (material not stated),18 m of detention pipe on CIV-05,not stated,STUDY_B section 1e item 3,measured
 450,Stormpro (detention pipe brand),guidebook mark-up example: 2 x 450 Stormpro 9.5 m for detention,not stated,STAGE1_ENGINEERING_NOTES Added later item 4,measured
 525,not stated,a 525 pipe measured in the August 2026 study,not stated,STAGE1_CIVIL_EVIDENCE_DIGEST section 1 item 3,measured
-50,rising main,pump rising main (CIV-07 6 m; CIV-12 about 20 m),not stated,STUDY_B section 1g item 5 and 1l item 3,measured
+50,rising main,pump rising main (CIV-07 6 m; CIV-12 about 20 m),not stated,STUDY_B section 1g item 5 and 1l item 3,"measured; where_used superseded in part by STUDY_D section 4.1 item 2 and 5.3 item 3, 16 Nov 2026: CIV-07 box prints 5m (earlier study 6 m); CIV-12 sums give 18 m (earlier study about 20 m)"
 80,rising main,pump rising main (CIV-10 18 m),not stated,STUDY_B section 1l item 1,measured
 100; 150; 225; 300,template sample pipes,parked sample pipes and master pipe-strip blocks (also 100 charged and rising main descriptions on the palette),not stated,STUDY_A section 7 items 5 and 14; STUDY_C section 2B item 1.2,template
 Manning roughness,0.010 plastic; 0.013 concrete,pipe capacity sum (S-009),not applicable,STAGE1_ENGINEERING_NOTES chain of sums item 7,measured
+150,gravity outlet at 1 in 100 (CIV-12),"outlet pipe capacity check: 19.80 l/s at 1.12 m/s, Manning roughness 0.01 as printed",not stated,STUDY_D section 5.3 item 2,measured
+225,"pipe, 9 m of detention pipe (CIV-02); 225 DIA. RC CLASS 2 RJJ PIPE on a long section (spelt RJJ as printed)",storage 0.36 m3; long-section pipe size text,not stated,"STUDY_D section 5.2 item 2, section 2.6 item 7",measured
+50,rising main (CIV-12),18 m of 50 dia. rising main; static rise 3.14 m,not stated,STUDY_D section 5.3 item 3,conflict
+150,UPVC suspended pipe at 1 in 100 min. (CIV-11),"""150 DIA. UPVC SUSPENDED PIPE AT 1 IN 100 MIN."" inside a building",not stated,STUDY_D section 4.4 item 2,measured

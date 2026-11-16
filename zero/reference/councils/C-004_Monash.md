@@ -27,6 +27,7 @@ What the office's files show about this council's stormwater requirements. Re-fi
 ## 4. Pipes, pits and details required
 
 1. **From the approval letter (construction conditions):** a 900 x 600 junction pit on the council drain (900 x 900 if deeper than 1.5 m); sewer-quality pipe under driveways; saw-cut and dowel rules.
+2. **Orifice pit details library:** A MONASH heading sits in the CE Civil ORIFICE PITS Details drawing. What differs from the other councils' orifice details: Unknown (STUDY_D section 2.3 item 2, Still unknown item 15)
 
 ## 5. Notes blocks and forms
 
@@ -52,4 +53,4 @@ What the office's files show about this council's stormwater requirements. Re-fi
 
 ## 10. Evidence
 
-Evidence: STUDY_B section 1f, section 4 item 4, section 3 items 8 and 10.
+Evidence: STUDY_B section 1f, section 4 item 4, section 3 items 8 and 10; STUDY_D section 2.3 item 2.

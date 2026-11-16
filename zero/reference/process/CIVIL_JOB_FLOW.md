@@ -25,8 +25,9 @@ The steps of a civil (stormwater and pavement) job as the office files and the o
 12. **Council rounds (Rev B, C ...)** as the council asks.
 13. **Approval,** then the same drawing re-stamped "construction issue".
 14. **After construction issue:** further issues when clashes or "as built mark-ups" arrive.
+15. **Making the cleaned background (detail of step 4):** Start from the office background template; paste the architect's site plan, ground floor and upper floor each at its 50,000 station; explode everything; move objects onto the office A- layers by kind; delete the architect's dimensions, room names, notes, tags and title block; keep the surveyor's text; add office content (boundary text, bench mark box, tree zones, existing drain). See E-056 (STUDY_D section 1.3 item 3)
 
-Evidence: STUDY_B section 1 "Common path"; GUIDEBOOK_NOTES "The job in the guidebook's order"; INTERVIEW items 2, 8zg; DECISIONS D-025.
+Evidence: STUDY_B section 1 "Common path"; GUIDEBOOK_NOTES "The job in the guidebook's order"; INTERVIEW items 2, 8zg; DECISIONS D-025; STUDY_D section 1.3.
 
 ## 2. What arrives, and when
 
@@ -78,8 +79,10 @@ Evidence: INTERVIEW items 3, 4, 8c, 8i, 8zc, 8zg; STUDY_B section 1 "Common path
 8. **Variation:** preliminary, tender, construction with no council stage seen (CIV-12).
 9. **Sheets in a typical set (the owner):** drainage layout plan; notes and details; computations. Pipe long sections only when the council asks.
 10. **Stamp and revision row mechanics:** see `drafting\TITLE_BLOCK_AND_ISSUE.md`.
+11. **Tender stage on a public job:** CIV-15 (council is the client): P1 to P3 (preliminary), T1 to T4 (tender, rows reading "TENDER ISSUE"), then A (construction). A cut and fill plan was first issued alone at tender stage (STUDY_D section 4.8 items 6 and 7)
+12. **Staged jobs:** CIV-14 was issued through revision E as "CVL ... STAGE 1 & 2" with the stage 1 and stage 2 plans on separate sheets (STUDY_D section 4.7 item 1)
 
-Evidence: STUDY_B section 1 "Common path" item 3, section 1l item 3; INTERVIEW items 8 and 8b; ELEMENT_LIST "Across three civil jobs" moving part 7.
+Evidence: STUDY_B section 1 "Common path" item 3, section 1l item 3; INTERVIEW items 8 and 8b; ELEMENT_LIST "Across three civil jobs" moving part 7; STUDY_D section 4.7, 4.8.
 
 ## 6. What goes to council
 
@@ -91,8 +94,11 @@ Evidence: STUDY_B section 1 "Common path" item 3, section 1l item 3; INTERVIEW i
 6. **How:** each council has its own way in (online portal or email), forms, fees and a list of things it commonly asks for: see `reference\councils\`.
 7. **What the council checks:** council letters say the council checks only against its discharge conditions and that the building surveyor approves the system.
 8. **What comes back:** a "no objection" letter (Glen Eira); an approval letter that is itself a list of construction conditions (Monash); two letters, one for storage and discharge and one for the outfall (Darebin); amendment letters with numbered lists.
+9. **What went with a house with detention (CIV-02):** The sheet, the computations PDF (a Word document of pasted spreadsheet pictures with three typed lines) and a declaration form (STUDY_D section 5.2 item 4)
+10. **What the council gives back by e-mail (CIV-09):** A separate e-mail reply ("PSD and SSR parameters") supplied the permissible site discharge (7.48 l/s) and storage required (5.35 m3); the e-mail itself was not opened (STUDY_D section 5.5 item 1)
+11. **A plain house sends no sums (CIV-01):** Nothing was sent to council as sums; the folder holds only blank template workbooks, the discharge letter, before-you-dig replies, two scanned hand mark-ups and one small PDF (STUDY_D section 5.1 items 1 and 2)
 
-Evidence: STUDY_B section 1 "Common path" items 4 and 5, section 1e item 7, 1f item 4, 1g item 7, section 2 outputs item 4; GUIDEBOOK_NOTES "The job in the guidebook's order" item 7.
+Evidence: STUDY_B section 1 "Common path" items 4 and 5, section 1e item 7, 1f item 4, 1g item 7, section 2 outputs item 4; GUIDEBOOK_NOTES "The job in the guidebook's order" item 7; STUDY_D section 5.1, 5.2, 5.5.
 
 ## 7. Elapsed times seen (calendar time, not office hours)
 
@@ -125,8 +131,11 @@ Evidence: STUDY_B section 1a item 6, 1c item 8, 1d item 8, 1e item 8, 1f items 5
 11. **CIV-11, Greater Dandenong, K-011:** letter 7 Feb 2026; set-up 3 Mar; P1 2 Apr; mark-up for council 5 May; Rev A 11 May; queries 21 and 28 May; Rev B 9 Jun; Rev C 7 Jul; third assessment 8 Jul; Rev D 13 Jul; approved plan 14 Jul 2026.
 12. **CIV-12, Glen Eira, K-012:** Rev C construction 11 Feb 2026.
 13. **CIV-13, Bass Coast, K-008:** dates not listed in the evidence.
+14. **CIV-09, STORM report:** STORM report by the office dated 13 Mar 2024 (see K-009) (STUDY_D section 5.5 item 4)
+15. **CIV-14, childcare centre, K-015:** Issued through revision E as stage 1 and 2; dates: Unknown (STUDY_D section 4.7 item 1)
+16. **CIV-15, sports pavilion, K-014:** Issue stages P1 to P3, T1 to T4, then A; dates: Unknown (STUDY_D section 4.8 item 7)
 
-Evidence: STUDY_B sections 1a to 1l (the "Dates" item of each).
+Evidence: STUDY_B sections 1a to 1l (the "Dates" item of each); STUDY_D section 4.7, 4.8, 5.5.
 
 ## 9. Known gaps in this picture
 
@@ -135,5 +144,8 @@ Evidence: STUDY_B sections 1a to 1l (the "Dates" item of each).
 3. Emails were only partly readable (files would not download part-way through the study).
 4. What is checked between P1 and the council issue (Q-008); what a mark-up must carry (Q-007); when a fresh discharge letter is asked for (Q-009); the duty after as-built mark-ups (Q-010).
 5. Stage 1's civil explanation has not been approved by the owner (Q-016).
+6. **Sheets not looked at as pictures:** CIV-05 p1, CIV-06, CIV-08 p2, CIV-10 p2 and p3, CIV-11 p2 and p3, CIV-12 p1 and p2, CIV-14 p1 to p3, CIV-15 p2 were read from extracted text only (STUDY_D Still unknown item 1)
+7. **Apartment and school jobs:** No apartment folder found for 2023 to 2026; a school was not opened once a sports job was found (STUDY_D Still unknown item 2)
+8. **Council e-mail and sustainability report for CIV-09:** Not opened (a message file and a long report) (STUDY_D Still unknown item 4)
 
-Evidence: STUDY_B section 0 items 2 and 5, "Kinds not found" item 3, section 6; OPEN_QUESTIONS Q-007 to Q-010, Q-016, Q-107.
+Evidence: STUDY_B section 0 items 2 and 5, "Kinds not found" item 3, section 6; OPEN_QUESTIONS Q-007 to Q-010, Q-016, Q-107; STUDY_D Still unknown items 1, 2 and 4.

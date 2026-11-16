@@ -39,6 +39,7 @@ What the office's files show about this council's stormwater requirements. Re-fi
 
 1. **Signed checklist and certification.**
 2. **Council notes block** on the outfall sheet; three council standard drawings pasted on (side entry pit, bedding and backfill, property connection).
+3. **Outfall sheet content (CIV-05 sheet 2):** A yellow NOTES box of eight council conditions plus three council standard drawings pasted as pictures; an "OUTFALL DRAIN NOTES" block (reinstatement of footpath, kerb and nature strip to council satisfaction); the sheet's own plan, locality plan, short pit schedule and a section A-A at 1:20 with clearances to crossing services (E-062) (STUDY_D section 2.6 items 15 and 16)
 
 ## 6. How to submit and fees
 
@@ -54,6 +55,7 @@ What the office's files show about this council's stormwater requirements. Re-fi
 ## 8. Jobs seen (codes)
 
 1. **CIV-05** (K-005, K-010): OSD4W 5.93 l/s, storage 5.84; 18 m of 375 pipe; orifice 63 mm; outfall sheet C02; about 17 months from P1 to approval; two approval letters on 8 Oct 2025.
+2. **CIV-05 paper look:** Sheet 2 "OUTFALL DRAINAGE PLAN AND DETAILS", scale "AS SHOWN", construction issue at revision E, ten revision rows; existing council pit tagged "ExP", new side entry pit "SEP"; connection note "CONNECT TO NEW SIDE ENTRY PIT AT APPROX IL ... TO COUNCIL SATISFACTION"; sheet 1 adds "CONNECTION TO NEW COUNCIL SIDE ENTRY PIT DETAIL" and "WT1 / WT2 WATER TANK DETAIL" (STUDY_D section 4.3 items 1 and 2)
 
 ## 9. Conflicts between office documents about this council
 
@@ -62,4 +64,4 @@ What the office's files show about this council's stormwater requirements. Re-fi
 
 ## 10. Evidence
 
-Evidence: STUDY_B section 1e, section 4 item 3, section 3 items 13 and 21.
+Evidence: STUDY_B section 1e, section 4 item 3, section 3 items 13 and 21; STUDY_D section 2.6, 4.3.

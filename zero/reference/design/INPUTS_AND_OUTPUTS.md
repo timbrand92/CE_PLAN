@@ -196,7 +196,16 @@ Evidence: ENG_NOTES "Where every number comes from" item 3.
 **Input 49. Which pipe joins which pit.** Used by: E-040 ("from" cells); S-022 (running total down the line).
 Evidence: ENG_NOTES "Where every number comes from" item 3.
 
-Next free input number: Input 50
+**Input 50. Bench levels for cut and fill zones; site cut and fill extents.** Chosen by the engineer (earthworks drawn by civil on a public building job). Used by: E-067. Who supplies the starting levels: Unknown. (STUDY_D section 4.8 item 6)
+Evidence: STUDY_D section 4.8 item 6.
+
+**Input 51. Design vehicle for an access pavement.** Stated on the sheet legend ("once per year access by ... rigid truck ... 14 tonne, crane truck ... 18-20 tonne"). Who supplies it: Unknown. Used by: E-073; L-020. (STUDY_D section 4.8 item 2)
+Evidence: STUDY_D section 4.8 item 2.
+
+**Input 52. Percolation report soil permeability.** 0.325 mm/hr on CIV-13, from the percolation report in the job's folder. Group 7 (soil report / tester). Used by: S-016, S-017; E-060. (STUDY_D section 5.4 item 1)
+Evidence: STUDY_D section 5.4 item 1.
+
+Next free input number: Input 53
 
 ---
 
@@ -297,7 +306,13 @@ Evidence: STUDY_B section 2 outputs item 4.
 **Output 29. STORM report; discharge letter; council declaration or checklist; sometimes pump specifications and the permeability report.** Not drawn by the office.
 Evidence: STUDY_B section 2 outputs item 4.
 
-Next free output number: Output 30
+**Output 30. Cut and fill plan.** Element: E-067. From: bench levels (Input 50) and survey levels. No volumes stated. (STUDY_D section 4.8 item 6)
+Evidence: STUDY_D section 4.8 item 6.
+
+**Output 31. Pavement specification legend.** Element: E-073. From: the pavement design (Input 51). (STUDY_D section 4.8 item 2)
+Evidence: STUDY_D section 4.8 item 2.
+
+Next free output number: Output 32
 
 ---
 

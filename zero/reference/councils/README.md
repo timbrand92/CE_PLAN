@@ -45,10 +45,11 @@ The guidebook notes and the studies describe several councils by their rule but 
 15. **A second council with pre-development 0.35** (besides Glen Eira). Not named. (L-017)
 16. **A council with at least 27 different note blocks** depending on the job's conditions. Not named.
 17. **Two councils** for which a blank design / drafting / submission checklist workbook exists. Not named.
-18. **Five councils** with a tab each in the council comments and notes database; five council tabs of the council compliance workbook were read. Their names are not listed in the evidence beyond the nine above.
+18. **Five councils** with a tab each in the council comments and notes database; five council tabs of the council compliance workbook were read. Their names are not listed in the evidence beyond the nine above. Superseded by STUDY_D section 2.3 item 2 (the orifice pit details name eight councils; five have no file here), 16 Nov 2026.
 19. **Councils in the guidebook's council map** (a picture that was looked at): names not recorded in the evidence.
+20. **Councils named in the details library with no file:** Boroondara and Knox (headings and standing lines in the orifice pit details), Manningham (note block parked in the A1 template; "TO BAYSIDE / GLEN EIRA / MANNINGHAM COUNCIL'S REQUIREMENTS"), Maribyrnong (MARIBYRNONG NOTES heading in CE Civil Details) and Casey (commercial note block parked in the A1 template). Not given files: the evidence names them but holds no rules for them (STUDY_D section 2.1 item 1, section 2.3 items 1 and 2)
 
-Evidence: STUDY_B section 3 items 7, 8, 10, 11, 12, 15, 17, 18 and 20, section 1 "Common path" item 5, section 1b item 7, section 0 items 2 and 3; GUIDEBOOK_NOTES "The job in the guidebook's order" item 2; DIGEST section 5; MODEL_NOTES "What it teaches" item 8; ENG_NOTES "Added later" item 5.
+Evidence: STUDY_B section 3 items 7, 8, 10, 11, 12, 15, 17, 18 and 20, section 1 "Common path" item 5, section 1b item 7, section 0 items 2 and 3; GUIDEBOOK_NOTES "The job in the guidebook's order" item 2; DIGEST section 5; MODEL_NOTES "What it teaches" item 8; ENG_NOTES "Added later" item 5; STUDY_D section 2.1, 2.3.
 
 ## Known faults in the office's own council documents (read before trusting a council value)
 
@@ -57,7 +58,8 @@ Evidence: STUDY_B section 3 items 7, 8, 10, 11, 12, 15, 17, 18 and 20, section 1
 3. **Guidebook table 1** runs two council names together and lists one council under both "council supplies" and "OSD4W".
 4. **Old confirmed rule from the August study:** go by the job's own discharge advice and permit, never by suburb.
 5. **Order of authority:** council, then AS/NZS 3500.3, then the office guidebook (D-022). Disagreement may not stand silently: the user picks the right number or writes a short reason (D-003).
+6. **The Bayside template is a finished job:** The Bayside "template" in the office template folder is a finished two-unit job with its design still in it (8 pits, 24 downpipes, 241 layers); anyone starting from it inherits its content (STUDY_D section 2.1 item 2, section 7 item 1)
 
-Evidence: STUDY_B section 5 items 7 and 8; DIGEST section 5 item 1; DECISIONS D-003, D-022.
+Evidence: STUDY_B section 5 items 7 and 8; DIGEST section 5 item 1; DECISIONS D-003, D-022; STUDY_D section 2.1, 7.
 
 Next free number: C-010

@@ -88,6 +88,12 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-056** (16 Nov 2026, evening) "Only placing has a name". Changing a thing (size, flip a tag) has no typed name: click the thing and use its tab, grips or Properties.
 
+**D-057** (16 Nov 2026, evening) On the draft list of 17 names: "I CANT SEE LIST, LETS FOR NOW JUST KEEP PIPE/CD". The list was in the chat behind the question window, so Tim has NOT reviewed it; it stays a draft. For now a pipe is PIPE with short name CD (this keeps today's CD, an exception to D-053 for this one name).
+
+**D-058** (16 Nov 2026, evening) How a tool is driven. Asked how the kinds of pipe should be typed: "IN THE WINDOW WE SELECT THESE THINGS, SO IT SHOUDL WORK SIMILAR TO HATCHES. WE CAN HAVE SMALL COMMANDS RUN IN THE COMMAND LINE BUT THEN WHEN YOURE USING HATCH IT SHOWS A POP UP WINDOW TO SELECT AND MODIFY. I LIKE THAT BETTER THAN TOO MUCH IN THE RIBBON OR ON THE COMMAND LINE. DOES THAT MAKE SENSE?" And straight after: "THE COMMANDS NEED TO WORK SIMILAR TO HOW AUTOCAD DOES, ALL PLACEMENT USES A COMMAND AND THEN PROPRTIES OR SOMETHING LIKE THAT EDITS IT OR SOMETHING LIKE THAT". Read as: (1) every placement starts with a short typed command; (2) the choices for it (kind, size and so on) are made in a small pop-up window, the way Hatch does it, not in a long row of ribbon buttons or command-line prompts; (3) editing afterwards is through Properties or a like window. Effect on D-051: the short CE Civil tab stays; the tab that appears on selection must stay light.
+
+**D-059** (16 Nov 2026, evening) FO: "Leave it as FO only". It has no longer name.
+
 ## How levels are designed
 
 **D-016** (16 Nov 2026) [8v] Moving a pit has no single rule for levels: "IT DEPENDS ON THE DESIGN NO? SO INVERTS MIGHT HAVE TO CHANGE UPSTREAM OR WE MIGHT NEED TO UPDATE INVERTS TO SUIT OR GRADE".

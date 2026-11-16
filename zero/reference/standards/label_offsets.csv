@@ -19,3 +19,11 @@ Pit schedule row spacing,row to row,1500,1500,not applicable,not applicable,STUD
 Revision row spacing (paper space),row to row,not stated,4 to 5,not applicable,not applicable,STUDY_A section 6 item 45,measured
 Second sheet frame,first sheet frame,100000,100000 to the right,not applicable,not applicable,STUDY_A section 1 item 5,template
 Site and ground background attachments,one attachment to the other,50000,50000 apart in Y (JOB_B; JOB_C),not applicable,not applicable,STUDY_A section 1 item 14.2,measured
+Background plans stacked in one file,plan to plan,"50,000 in Y","all three jobs (and the second attachment inserted 50,000 higher)",not applicable,not applicable,STUDY_D section 1.1 items 1 and 2,measured
+Registration marks in the background,origin,"X 22,198 and 47,198; Y -7,643, -57,643, -107,643","same in JOB_A, JOB_B, JOB_C",not applicable,not applicable,STUDY_D section 1.1 item 3,measured
+Clip rectangle of a background attachment (JOB_C),sheet frame corner,"left edge X 106,313; top edge Y -153,227","58,518 wide x 25,872 high (site) and 58,518 x 26,566 (ground); both moved 2,630 right after clipping",not applicable,not applicable,STUDY_D section 3.5 item 1,measured
+Long section row lines,row line to row line,"1,500 (15 mm on paper)","all rows; line length 30,506 on the measured example",not applicable,not applicable,STUDY_D section 2.6 item 4,measured
+Long section pipe walls,invert line to obvert line,diameter x vertical exaggeration,450 for a 225 pipe at 1:50,not applicable,not applicable,STUDY_D section 2.6 item 8,measured
+Long section pit bar,surface to invert,polyline width 300,one bar per pit,not applicable,tag rotated 90 above,STUDY_D section 2.6 item 10,measured
+Long section footpath / crossover / kerb line,surface line to second line,200 below (pavement thickness at twice size),short end ticks,below the surface line,not applicable,STUDY_D section 2.6 item 9,measured
+Long section in-between vertical line,bottom of the table,"6,000 long (bottom four rows only), then again from the datum up to the surface",at pits and ends the line runs from the bottom of the table up to the surface,not applicable,not applicable,STUDY_D section 2.6 item 6,measured

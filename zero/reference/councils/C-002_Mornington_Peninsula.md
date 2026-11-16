@@ -29,6 +29,7 @@ What the office's files show about this council's stormwater requirements. Re-fi
 
 1. **Orifice pit, tank and pavement** to council standard drawings.
 2. **Connection on CIV-04:** to the council pit near the common boundary through a 300 rubber-ring-jointed concrete pipe; approximate council pit and pipe sizes "to be verified on site".
+3. **Orifice pit details library:** A MORNINGTON (PENINSULA) heading sits in the CE Civil ORIFICE PITS Details drawing; standing line "REFER ALSO TO COUNCIL STANDARD DRAWING" names standard drawings for Mornington Peninsula, Knox and two others. What differs from the other councils' orifice details: Unknown (STUDY_D section 2.3 item 2, Still unknown item 15)
 
 ## 5. Notes blocks and forms
 
@@ -55,4 +56,4 @@ What the office's files show about this council's stormwater requirements. Re-fi
 
 ## 10. Evidence
 
-Evidence: STUDY_B section 1d, section 4 item 2, section 5 item 7, section 3 items 8 and 10.
+Evidence: STUDY_B section 1d, section 4 item 2, section 5 item 7, section 3 items 8 and 10; STUDY_D section 2.3 item 2.

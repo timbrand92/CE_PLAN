@@ -41,3 +41,17 @@ Scale line (paper space),3.0,3.0,plain TEXT,not stated,not stated,not stated,STU
 Revision row text (paper space),1.5,1.5,plain TEXT (six per row),0-TITLE REVISION,not stated,not stated,STUDY_A section 6 item 45,measured
 Current revision letter (paper space),4.0,4.0,plain TEXT,not stated,not stated,not stated,STUDY_A section 6 item 45,measured
 Scale bar text (paper space),2.5,2.5,text in title block,0-SCALE BAR,not stated,not stated,STUDY_A section 6 item 36,template
+Background: boundary length and bearing (JOB_C),250,2.5 (calculated at 1:100),"TEXT, style ISO, one per side, rotated 0 or 90",A-TITLE BOUNDARY,not stated,not stated,STUDY_D section 1.2 item 2,measured
+Background: boundary length and bearing (JOB_B),450,4.5 (calculated at 1:100),"TEXT, length and bearing as two texts, surveyor's fonts",A-TITLE BOUNDARY,not stated,not stated,STUDY_D section 1.2 item 2,conflict
+Background: boundary length and bearing (JOB_A),250,2.5 (calculated at 1:100),MTEXT,G-ANNO-TEXT,not stated,not stated,STUDY_D section 1.2 item 2,conflict
+Background: street name,400,4.0 (calculated at 1:100),"MTEXT (JOB_C) or TEXT rotated 90 (JOB_B), letter-spaced",A-ARCH BACKGROUND (JOB_C); A-TITLE BOUNDARY (JOB_B),not stated,not stated,STUDY_D section 1.2 item 4,measured
+Background: bench mark box text,300 (JOB_C); 220 to 250 (JOB_B),"3.0 (JOB_C, calculated)",TEXT inside a closed polyline,A-ARCH BACKGROUND (JOB_C),not stated,not stated,STUDY_D section 1.2 item 5,measured
+Background: survey spot level,200 (JOB_C); 220 (JOB_B); 300 (JOB_A),"2.0 (JOB_C, calculated)","TEXT (JOB_C, JOB_B); MTEXT (JOB_A)","CONTOURS AND LEVELS (JOB_C); A-SURVEY (JOB_B, JOB_A)",not stated,not stated,STUDY_D section 1.2 item 6,measured
+Background: contour label,200 (JOB_C); 500 (JOB_A),"2.0 (JOB_C, calculated)",TEXT (JOB_C); MTEXT (JOB_A),CONTOURS AND LEVELS (JOB_C); CONTOURS (JOB_A),not stated,not stated,STUDY_D section 1.2 item 7,measured
+Background: neighbours' labels and house numbers,400 labels; 700 house numbers,4.0 and 7.0 (calculated),MTEXT,"SURVEY (JOB_C); A-ARCH BACKGROUND (JOB_B, 300)",not stated,not stated,STUDY_D section 1.2 item 10,measured
+Background: roof fall text; crossover text; sewer text,240; 300 (JOB_C) or 180 (JOB_B); 250 (JOB_A),not stated,TEXT / MTEXT,A-ROOF OUTLINE; SURVEY; SEWER,not stated,not stated,"STUDY_D section 1.2 items 8, 9 and 12",measured
+Long section: row titles and datum text,350,3.5 (calculated),"TEXT, left-justified",35TEXT,left,not stated,STUDY_D section 2.6 items 3 and 5,measured
+"Long section: level, chainage and pit text",250,2.5 (calculated),"TEXT rotated 90 degrees, two decimals",25TEXT,just right of the vertical line,not stated,STUDY_D section 2.6 items 7 and 10,measured
+Long section: title and scale lines,500 underlined; 250 for the two scale lines,5.0 and 2.5 (calculated),TEXT,not stated,not stated,not stated,STUDY_D section 2.6 item 14,measured
+"Long section: surface labels (CROSSOVER, FOOTPATH, NATURE STRIP)",180 to 250,not stated,TEXT or MTEXT,not stated,not stated,not stated,STUDY_D section 2.6 item 9,measured
+Details library headings and background-template name texts,"3,000 to 6,000 (library headings); 250 (one name text per layer in the blank background template)",not applicable,TEXT / MTEXT,not stated,not stated,not stated,"STUDY_D section 2.3 intro, 1.4 item 2",measured

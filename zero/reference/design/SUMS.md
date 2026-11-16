@@ -38,8 +38,10 @@ Short names of evidence files are listed in `reference\README.md`.
 4. **Output and where it is shown on the sheet:** Not on the plan itself. It is on the computations PDF and feeds S-002, S-003, S-014, S-016. Site areas are boxed on the sheet only "where a council asks".
 5. **Worked example from a real job code:** CIV-03: site 650.3; impervious 375.6; pervious 274.7; (375.6 x 0.9 + 274.7 x 0.35) / 650.3 = 0.65; effective area 420.45. CIV-07 (pump sum): 414 x 0.9 + 332 x 0.3 = 472.2. CIV-07 (Boyd's): site 746, impervious 414, coefficient 0.66. CIV-04 (OSD4W): existing 471 at 0.90 and 466 at 0.35 (weighted 0.63); proposed 519 at 0.90 and 418 at 0.30 (weighted 0.63).
 6. **Known slips in the office workbooks:** Conflict: pervious 0.3 (guidebook, pump and soakage workbooks) against 0.35 (Boyd's masters and job sums). CIV-04 uses both in one run (0.35 existing, 0.30 proposed). Not settled; needs the owner's ruling Q-004. The Kingston tab in the copy of the main workbook read first is headings only (no sums).
+7. **More worked examples:** CIV-02 (Kingston): catchment 561 m2; impervious 305, pervious 256; runoff coefficient 0.65; effective area 364.1 m2. CIV-12 (Glen Eira): site 919 m2; existing impervious 568; proposed 577 ("pool area not considered"); coefficient 0.70. CIV-13 (Bass Coast): impervious 365 m2 x 0.9 = 328.5, taken as catchment 329 m2 with coefficient 1; pervious 0. CIV-12 pump catchment: 132 m2, coefficient 1 (STUDY_D section 5.2 item 1, section 5.3 items 1 and 3, section 5.4 item 1)
+8. **Plain house:** CIV-01 holds no calculation of the drainage: the folder has only the eight blank template workbooks every job is seeded with (all still at their 2014 to 2021 template dates), the council's discharge letter, the before-you-dig replies, two scanned hand mark-ups and one small PDF. The only number worked is a roof area to the tank (57 m2) (STUDY_D section 5.1 items 1 and 2)
 
-Evidence: ENG_NOTES "The chain of sums" items 1 and 2; STUDY_B section 1c item 3, 1d item 3, 1g items 3 and 4, section 3 item 17, section 5 item 1.
+Evidence: ENG_NOTES "The chain of sums" items 1 and 2; STUDY_B section 1c item 3, 1d item 3, 1g items 3 and 4, section 3 item 17, section 5 item 1; STUDY_D section 5.1 to 5.4.
 
 ## S-002 Permitted site discharge by the rational method
 
@@ -52,8 +54,9 @@ Evidence: ENG_NOTES "The chain of sums" items 1 and 2; STUDY_B section 1c item 3
 4. **Output and where it is shown on the sheet:** First row of the detention criteria box, "PERMITTED SITE DISCHARGE ... l/s" (E-041). Also the pump rate on a pumped job (S-014).
 5. **Worked example from a real job code:** CIV-07: site 746, coefficient 0.66; Rev A used 113 mm/h (5 minute, 1 in 5): 8.20 l/s. Rev B, one day later, used 95.3 mm/h: 7.90 l/s. CIV-04 first attempt (Boyd's): 6.17 l/s. Given figures, no sum: CIV-02 5 l/s; CIV-03 6 l/s; CIV-06 5.27; CIV-09 7.48; CIV-10 8.52.
 6. **Known slips in the office workbooks:** CIV-07's rainfall changed between Rev A and Rev B with no reason shown. Every job's civil folder is seeded with about 15 blank or stale sum files (Boyd's in four versions), so file names cannot tell which sums a job really used.
+7. **More worked examples:** CIV-02: "1:5 PSD" at 83 mm/hr gives 5.17 l/s; restricted outflow taken as 5.00 l/s. CIV-12: the permissible discharge is taken from the EXISTING site: 16.13 l/s at the 5-minute 1 in 5 intensity 94.3 mm/hr, coefficient 0.70. CIV-09: the council's e-mail reply ("PSD and SSR parameters") supplied 7.48 l/s; the e-mail itself was not opened (STUDY_D section 5.2 item 1, section 5.3 item 1, section 5.5 item 1)
 
-Evidence: ENG_NOTES "The chain of sums" item 3; STUDY_B section 1g item 3, 1d item 2, section 5 item 11.
+Evidence: ENG_NOTES "The chain of sums" item 3; STUDY_B section 1g item 3, 1d item 2, section 5 item 11; STUDY_D section 5.2, 5.3, 5.5.
 
 ## S-003 Detention volume required by Boyd's method
 
@@ -66,8 +69,9 @@ Evidence: ENG_NOTES "The chain of sums" item 3; STUDY_B section 1g item 3, 1d it
 4. **Output and where it is shown on the sheet:** "VOLUME REQUIRED" row of the detention criteria box (E-041); the Boyd's page of the computations PDF.
 5. **Worked example from a real job code:** CIV-03 (Kingston copy): effective area 420.45; 1 in 10 rainfall 98.6 / 73.6 / 60.1 / 51.5 / 45.5 / 40.9 mm/h for 5 to 30 minutes. At 5 minutes: inflow 11.52 l/s, volume in 3,455 litres, storage 3,455 x (1 - 6.00 / 11.52) = 1,656 litres. Largest of the column: 1.66 cubic metres. CIV-07: Rev A 2,144 litres; Rev B 2,233 litres. CIV-04 first attempt: 3.27 (later redone in OSD4W: 4.41, S-026).
 6. **Known slips in the office workbooks:** The two methods (Boyd's and OSD4W) can give different answers, so the council's accepted method must be confirmed first; CIV-04 was designed in Boyd's and redone in OSD4W. Boyd's exists in four template versions in every job folder. The workbooks hold earlier jobs' addresses in their cells.
+7. **More worked examples:** CIV-02 (Boyd's sheet): 1 in 10 year storms of 5 to 30 minutes (98.6 down to 40.9 mm/hr) each give inflow, outflow, volume in and storage; the largest storage is 1,492 litres at 5 minutes: "Detention Required 1492 L". CIV-12: storage required 1,125 litres. CIV-09 has NO required-storage page because the council supplied it (storage required 5.35 m3) (STUDY_D section 5.2 item 1, section 5.3 item 1, section 5.5 items 1 and 2)
 
-Evidence: ENG_NOTES "The chain of sums" item 4; STUDY_B section 1c item 3, 1d items 2 and 3, 1g item 3, section 5 items 7 and 11; GUIDEBOOK_NOTES "The job in the guidebook's order" item 3.
+Evidence: ENG_NOTES "The chain of sums" item 4; STUDY_B section 1c item 3, 1d items 2 and 3, 1g item 3, section 5 items 7 and 11; GUIDEBOOK_NOTES "The job in the guidebook's order" item 3; STUDY_D section 5.2, 5.3, 5.5.
 
 ## S-004 Storage of a detention pipe
 
@@ -79,8 +83,9 @@ Evidence: ENG_NOTES "The chain of sums" item 4; STUDY_B section 1c item 3, 1d it
 4. **Output and where it is shown on the sheet:** A named line in the detention criteria box (pipe by size and length). The plan label carries the metres as a second line, e.g. "9m DETENTION" (E-004).
 5. **Worked example from a real job code:** CIV-02: 225 pipe 9 m = 0.36. CIV-04 Rev D: 41 m of 225 = 1.63. CIV-05: 18 m of 375 = 1.99. CIV-06: 11.5 m of 225 = 0.46; 24 m of 300 = 1.70. CIV-09: 32 m of 225 = 1.27; 3 m of 300 = 0.21. JOB_B (checked against the sheet): 225 pipe 29.5 m = 1.17 by the sum and 1.17 in the box; 300 pipe 3 m = 0.21 and 0.21.
 6. **Known slips in the office workbooks:** Storage is worked from the nominal, not the internal, pipe diameter (the maker's 225 is 226 inside, 259 outside: S-013). Drawing total against calculation differed by 0.01 to 0.02 cubic metres on real jobs.
+7. **More worked examples:** CIV-02: 9 m of 225 pipe = 0.36 m3. CIV-09: 32 m of 225 (1.27 m3) and 3 m of 300 (0.21) = 1.48 (STUDY_D section 5.2 item 2, section 5.5 item 2)
 
-Evidence: ENG_NOTES "The chain of sums" item 5 and "Checked against the issued sheets" item 3; STUDY_B section 1b item 3, 1d item 5, 1e item 3, 1f items 2 and 3; DIGEST section 3 items 8 and 10.
+Evidence: ENG_NOTES "The chain of sums" item 5 and "Checked against the issued sheets" item 3; STUDY_B section 1b item 3, 1d item 5, 1e item 3, 1f items 2 and 3; DIGEST section 3 items 8 and 10; STUDY_D section 5.2, 5.5.
 
 ## S-005 Storage of a pit
 
@@ -93,8 +98,10 @@ Evidence: ENG_NOTES "The chain of sums" item 5 and "Checked against the issued s
 4. **Output and where it is shown on the sheet:** A named line per pit in the detention criteria box (E-041).
 5. **Worked example from a real job code:** JOB_B: pit P1, 600 x 900, water depth 0.41 = 0.22 by the sum and 0.22 in the box. CIV-02: pit P1 0.11, pit P2 0.05. CIV-05: three 1200 x 900 pits and two 600 x 600 pits, each plan area x water depth (0.39 to 0.52) = 1.86 in total. CIV-06: four 600 x 600 pits 0.46. CIV-04 Rev D: four pits 0.59. CIV-09: four pits 0.88.
 6. **Known slips in the office workbooks:** In three jobs' storage tables the pit label does not match the numbers typed: a pit labelled 600 x 600 is worked as 0.6 x 0.9, one labelled 450 x 450 as 0.6 x 0.6, one labelled 900 x 900 as 0.6 x 0.9 and one labelled 900 x 600 as 0.9 x 0.9; the volumes follow the typed numbers. Pit water depths are typed as "top water level less a typed number" inside the sum, so a changed invert has to be found inside the formula.
+7. **More worked examples:** CIV-02: pit P1 (0.6 x 0.6, 0.31 deep) 0.11 m3 and pit P2 (0.45 x 0.45, 0.23 deep) 0.05 m3; "IN PIPES AND PITS = 0.52 m3". CIV-09: four pits by plan size and storage depth = 0.88 (two more pits listed at zero depth) (STUDY_D section 5.2 item 2, section 5.5 item 2)
+8. **Pit labels against numbers:** CIV-09 pits labelled 600x600, 900x900, 900x600, 600x600 are worked as 0.6 x 0.9, 0.6 x 0.9, 0.9 x 0.9, 0.6 x 0.9. The drawn state and the typed size can also disagree (see E-008) (STUDY_D section 5.5 item 3, section 3.1 item 4)
 
-Evidence: ENG_NOTES "The chain of sums" item 5, "Checked against the issued sheets" item 3, "Weak points" item 3; STUDY_B section 1b item 3, 1e item 3, 1f item 2, section 5 item 4.
+Evidence: ENG_NOTES "The chain of sums" item 5, "Checked against the issued sheets" item 3, "Weak points" item 3; STUDY_B section 1b item 3, 1e item 3, 1f item 2, section 5 item 4; STUDY_D section 3.1, 5.2, 5.5.
 
 ## S-006 Storage total and comparison with the volume required
 
@@ -109,8 +116,9 @@ Evidence: ENG_NOTES "The chain of sums" item 5, "Checked against the issued shee
 4. **Output and where it is shown on the sheet:** The last rows of the detention criteria box: each storage by name, then the total, against the volume required (E-041). The storage list page of the computations PDF.
 5. **Worked example from a real job code:** CIV-03: two tanks at 1.00 = 2.00 against 1.66. CIV-02: 0.11 + 0.05 + 1.00 + 0.36 = 1.52 against 1.49. CIV-04 Rev D: 1.63 + 0.59 + 1.1 + 1.1 = 4.42 against 4.41. CIV-05: 3.85 underground + two tanks at 1.00 = 5.85 against 5.84. CIV-06: 2.62 + 1.75 = 4.37 against 4.37 exactly. CIV-09: total 6.36 (the sheet shows 5.35 required). JOB_B: 6.36 provided against 5.35 required.
 6. **Known slips in the office workbooks:** The detention workbook's example leaves one pipe with minus 50 cover and no warning is carried to the total. Drawing total against calculation differed by 0.01 to 0.02 on real jobs. CIV-06 shows the tank split, pipe lengths and plate height all tuned to land exactly on the council's limits.
+7. **More worked examples:** CIV-02: pipes and pits 0.52 plus a typed line "Water Tank contribution for tanks 2500L or above = 1.00m3": "TOTAL = 1.52m3 > 1.49m3". CIV-09: pipes 1.48, pits 0.88, tanks WT1 and WT2 at 2 m3 each: "TOTAL STORAGE 6.36" against 5.35 required (STUDY_D section 5.2 item 2, section 5.5 item 2)
 
-Evidence: ENG_NOTES "The chain of sums" item 5; STUDY_B section 1b item 3, 1c item 4, 1d item 5, 1e item 3, 1f items 2 and 3, section 5 item 5; ELEMENT_LIST "Across three civil jobs" moving part 1; DIGEST section 3 items 4 and 8.
+Evidence: ENG_NOTES "The chain of sums" item 5; STUDY_B section 1b item 3, 1c item 4, 1d item 5, 1e item 3, 1f items 2 and 3, section 5 item 5; ELEMENT_LIST "Across three civil jobs" moving part 1; DIGEST section 3 items 4 and 8; STUDY_D section 5.2, 5.5.
 
 ## S-007 Orifice size
 
@@ -127,8 +135,9 @@ Evidence: ENG_NOTES "The chain of sums" item 5; STUDY_B section 1b item 3, 1c it
    1. Conflict (constant): the older orifice sheet writes "2.6 x area x root head" with gravity 9.8 (0.6 x root 19.6 is 2.66); the newer sheet uses 9.81 properly. A second older copy saved under one council's name uses coefficient 0.8 and 3.54 and still holds an earlier job's address and a 45 l/s example. Not settled by a decision.
    2. Conflict (head): ENG_NOTES checked JOB_C with head 0.38 and got 5.99 l/s; the job's own sum uses 0.3455 and gives 5.84 (STUDY_B corrects the earlier note). Settled by D-023 as to what prints and what the sum uses.
    3. On real jobs: orifice 55 against 56, and 40 against 38 or 39, between drawing and calculation. CIV-11: the sheet (100 mm, 32.53 l/s) does not match the latest sums (121 mm, 34.53 l/s); which is right is not shown.
+7. **More worked examples:** CIV-02: coefficient 0.6, gravity 9.81; 67 mm at plate height 310 mm, head 0.2765 m (plate height less half the orifice); 4.93 l/s < 5.00; "Adopt 67 mm diameter orifice". CIV-09: 77 mm at plate height 410 mm, head 0.3715 m; 7.4 l/s < 7.48; this older sheet prints "= 2.6 Ao root h" with gravity 9.8 (STUDY_D section 5.2 item 3, section 5.5 item 2)
 
-Evidence: STUDY_B section 1c item 5, 1d item 6, 1e item 4, 1f items 2 and 3, 1k items 2, 4 and 5, 1l item 1, section 3 item 9, section 5 items 2 and 3; ENG_NOTES "The chain of sums" item 6 and "Checked against the issued sheets" item 1; DIGEST section 3 items 8 and 10.
+Evidence: STUDY_B section 1c item 5, 1d item 6, 1e item 4, 1f items 2 and 3, 1k items 2, 4 and 5, 1l item 1, section 3 item 9, section 5 items 2 and 3; ENG_NOTES "The chain of sums" item 6 and "Checked against the issued sheets" item 1; DIGEST section 3 items 8 and 10; STUDY_D section 5.2 item 3, 5.5 item 2.
 
 ## S-008 Pipe grade
 
@@ -154,8 +163,9 @@ Evidence: ENG_NOTES "The chain of sums" item 7, "Weak points" item 1, "Added lat
 4. **Output and where it is shown on the sheet:** Not on a house or units sheet. On an outfall long section as the rows "pipe design flow" and "velocity" (E-062).
 5. **Worked example from a real job code:** CIV-10 outfall pipe check: 300 dia, 68.39 l/s at 0.97 m/s. CIV-05 long section: 225 class 2 concrete at 1 in 200, design flow 31.75 l/s, velocity 0.8 m/s.
 6. **Known slips in the office workbooks:** In the filled example of the second rational-method tab, one row's flow sum points at an empty rainfall cell, so that run shows 0 l/s and still prints OKAY; later blank rows point at other wrong cells. Settled by D-019 for the plain house only: pipe capacity is not checked there. How capacities are checked on detention or bigger jobs: Unknown (Q-002); no pipe table was in any job folder read.
+7. **Pipe capacity check on a gravity outlet (CIV-12):** A real pipe capacity check exists on one job, one line long: outlet pipe 150 dia. at 1 in 100, roughness 0.01 (as printed), gives 19.80 l/s at 1.12 m/s; "12.99 < 19.80, therefore OK". Nothing is checked on a plain house (CIV-01), where pipes are by rule (100 dia. at 1 in 100) (STUDY_D section 5.3 item 2, section 5.1 item 3, section 7 item 12)
 
-Evidence: ENG_NOTES "The chain of sums" item 7 and "Weak points" item 2; STUDY_B section 1e item 5, 1l item 1, section 6 item 8, section 0 item 3.
+Evidence: ENG_NOTES "The chain of sums" item 7 and "Weak points" item 2; STUDY_B section 1e item 5, 1l item 1, section 6 item 8, section 0 item 3; STUDY_D section 5.1, 5.3, 7 item 12.
 
 ## S-010 Pipe cover at each end
 
@@ -222,8 +232,10 @@ Evidence: STUDY_B section 3 item 5, section 0 item 3; DIGEST section 3 item 10.
 4. **Output and where it is shown on the sheet:** "Minimum wet well" in the pump specification box (E-059), with pump rate, static rise and rising main.
 5. **Worked example from a real job code:** CIV-07: 472.2 x 18.1 / 1000 x 2 = 17.09; pump rate 7.90 l/s; pumped in 30 minutes 14.22; extra storage 2.87; 1% of catchment 4.72; wet well 4.72. CIV-10: site 1,147, impervious 890, effective 878.1; 2 hour runoff 31.79; pump rate 8.52; pumped 15.34; extra 16.45; 1% rule 11.47; wet well 16.45 (rectangular well 9.6 m x 1.5 m). CIV-12: dual 2.5 l/s pumps, minimum 3.00 wet well (the standard's floor); sums not on disk.
 6. **Known slips in the office workbooks:** A "small pumps" tab lets the wet well be typed below the standard's 3 cubic metres (1.5 to 3 by a rule of thumb written beside it). Page 2 headers still carry other jobs' numbers. Which version is current, and when under 3 is acceptable: Unknown (Q-003). On real jobs: pump pit size differing between documents.
+7. **Worked example CIV-12:** Basement catchment 132 m2, coefficient 1; 1 in 10, 2-hour rain 18.1 mm/hr; volume 4.78 m3; pump 2.50 l/s; pumped in 30 minutes 4.50 m3; extra storage 0.28 m3; "1% catchment" 1.32 m3; "therefore select 3.00 m3 wet well". Page 2 also states "DETENTION = 3m3 (minimum as per AS 3500.3)" against the pump wet well volume (STUDY_D section 5.3 items 2 and 3)
+8. **Errors on the CIV-12 pump pages:** The later pump print carries another job's number in its page-2 header; one line reads "12.99 L/d" (STUDY_D section 5.3 item 4)
 
-Evidence: STUDY_B section 1g item 4, 1l items 1 and 3, section 3 item 15, section 5 item 6; DIGEST section 3 item 8.
+Evidence: STUDY_B section 1g item 4, 1l items 1 and 3, section 3 item 15, section 5 item 6; DIGEST section 3 item 8; STUDY_D section 5.3.
 
 ## S-015 Pump level stack (the named levels in the well)
 
@@ -238,8 +250,10 @@ Evidence: STUDY_B section 1g item 4, 1l items 1 and 3, section 3 item 15, sectio
 4. **Output and where it is shown on the sheet:** Pump station section with the level names (seven named levels); static rise, rising main length and size in the pump specification box (E-059).
 5. **Worked example from a real job code:** CIV-07: discharge invert 38.99, inlet at pump pit 38.32, static rise 0.67, rising main 6 m of 50 dia, cover 39.18, 2,000 dia fibreglass well; detention band 2.23; all pumps stop 36.72; bottom 36.32; total depth 2.86. CIV-10: static rise 3.11; 18 m rising main of 80 dia; cover 16.65; total depth 2.35; the 9.72 of detention sits in the same well above the pump band. CIV-12: 3.00 static rise, about 20 m of 50 dia rising main.
 6. **Known slips in the office workbooks:** Conflict: one version sets top working level 100 below the inlet and takes static rise from it; another takes static rise from the inlet level itself. Bottom level is 400 below pump stop in one tab and 300 in another. Not settled: Q-003. On real jobs: rising main 50 against 80 and 4 m against 50 m between documents.
+7. **Worked example CIV-12:** Discharge invert 31.6, inlet at pump pit 28.46, static rise 3.14 m, rising main 18 m of 50 dia, cover 28.97. Level ladder: high level alarm 28.56, top working level 28.36, pump 2 start 28.26, pump 1 start 26.76, all pumps stop 26.66, bottom 26.26, total depth 2.71 m, 1,500 dia. well (STUDY_D section 5.3 item 3)
+8. **Conflict (CIV-12 figures):** JOB_KINDS K-012 (from the earlier study, sums not on disk) gives CIV-12 static rise 3.00 and about 20 m of 50 dia rising main; the sums read in full give static rise 3.14 and 18 m. Both kept; not settled (STUDY_D section 5.3 item 3)
 
-Evidence: STUDY_B section 1g item 5, 1l items 1 and 3, section 5 item 6; DIGEST section 3 item 8.
+Evidence: STUDY_B section 1g item 5, 1l items 1 and 3, section 5 item 6; DIGEST section 3 item 8; STUDY_D section 5.3.
 
 ## S-016 Soakage balance (storage needed against storage provided, per pit, per storm length)
 
@@ -255,8 +269,9 @@ Evidence: STUDY_B section 1g item 5, 1l items 1 and 3, section 5 item 6; DIGEST 
 4. **Output and where it is shown on the sheet:** The soakage pit title with its module count and grid, and its typical section (E-060); the soakage page of the computations.
 5. **Worked example from a real job code:** CIV-08 pit 1, final: catchment 647 (387.3 impervious, 259.7 pervious), effective 426.5; soil 259 mm/h; factor 0.5; modules 6 wide x 11 long, double height: 2.448 x 7.535 x 0.88 deep = 16.2 gross; 1 in 100 rainfall; worst storm 90 minutes needs 15.37 against 15.42 provided (1.003: only just OK). History: Rev A (1 in 10, factor 1) pit 1 was 6.9; Rev C pit 1 16.2, pit 2 9.8, pit 3 7.4; the pits on the sheet went to 60, 40 and 30 double modules.
 6. **Known slips in the office workbooks:** None recorded for the soakage workbook itself. The council asked to "double check the computations for the soakage pits", which led to the change of storm and factor.
+7. **Worked example CIV-13 (check table):** Inputs: catchment 329 m2, coefficient 1, soil permeability 0.325 mm/hr (from the percolation report in the job's folder), moderating factor 2, 1 in 10 year. Module 0.408 wide x 0.685 long; 14 x 13 modules gives 5.712 x 8.905 m; storage depth 0.45 m; porosity 0.95; infiltration area 81.0 m2, perimeter 29.2 m, volume 22.9 m3. Check table: for each storm from 5 minutes up: intensity, volume in, volume out by soakage during the storm, storage needed, storage provided as a ratio, "OK" or "Inadequate". At 5 minutes: 3.04 m3 in, 0.005 out, ratio 11.4 (STUDY_D section 5.4 items 1 to 3)
 
-Evidence: STUDY_B section 1h items 1 to 5, section 2 inputs item 10, section 3 item 16.
+Evidence: STUDY_B section 1h items 1 to 5, section 2 inputs item 10, section 3 item 16; STUDY_D section 5.4.
 
 ## S-017 Emptying time of a soakage pit
 
@@ -268,8 +283,9 @@ Evidence: STUDY_B section 1h items 1 to 5, section 2 inputs item 10, section 3 i
 4. **Output and where it is shown on the sheet:** Computations only; not seen on the sheet.
 5. **Worked example from a real job code:** CIV-08 pit 1: empties in 4.4 hours.
 6. **Known slips in the office workbooks:** None recorded. No limit for the emptying time is given in the evidence: Unknown.
+7. **Worked example CIV-13:** Emptying time worked out as 608 hours (25 days). Nothing on the sheet flags it; this job's overflow goes to a dam (Stage 1 notes). Still no limit for the emptying time in the evidence: Unknown (STUDY_D section 5.4 item 4, section 7 item 14)
 
-Evidence: STUDY_B section 1h items 3 and 4.
+Evidence: STUDY_B section 1h items 3 and 4; STUDY_D section 5.4, 7 item 14.
 
 ## S-018 Charged line head check
 
@@ -324,8 +340,9 @@ Evidence: STUDY_B section 1l item 4, section 6 item 18.
 4. **Output and where it is shown on the sheet:** Long section on the outfall sheet (E-062), rows: pipe size, pipe grade, pipe design flow, velocity, invert depth, invert level, surface level, chainage, datum.
 5. **Worked example from a real job code:** CIV-05: 225 class 2 rubber-ring-jointed concrete pipe at 1 in 200; design flow 31.75 l/s; velocity 0.8 m/s; datum RL 44.00; horizontal 1:250, vertical 1:25.
 6. **Known slips in the office workbooks:** None recorded. Across the 30-job August study only 2 jobs had a long section; "rows and scales differed; no fixed row set recorded".
+7. **Structure of the rows on worked examples:** Nine worked long sections: the fullest example's rows, top to bottom, are DATUM LEVEL, PIPE SIZE, PIPE GRADE, Vp - PIPE VELOCITY PART FULL, Qf - PIPE FLOWING FULL, INVERT DEPTH, INVERT LEVEL, SURFACE LEVEL, CHAINAGE; variants carry PIPE CAPACITY or units in the titles (see E-062). Row lines are 1,500 apart; the exaggeration is 2 (1:100 horizontal, 1:50 vertical) on seven examples (STUDY_D section 2.6 items 2, 4 and 5)
 
-Evidence: STUDY_B section 1e item 5, section 3 item 21; DIGEST section 1 item 8.
+Evidence: STUDY_B section 1e item 5, section 3 item 21; DIGEST section 1 item 8; STUDY_D section 2.6.
 
 ## S-022 Pipe design flow (rational method, running total down the line)
 
@@ -337,8 +354,9 @@ Evidence: STUDY_B section 1e item 5, section 3 item 21; DIGEST section 1 item 8.
 4. **Output and where it is shown on the sheet:** "Pipe design flow" row of a long section (E-062). Not on a house or units plan.
 5. **Worked example from a real job code:** CIV-05 outfall: 31.75 l/s. CIV-10 outfall check: 68.39 l/s.
 6. **Known slips in the office workbooks:** The slipped rainfall cell that gives 0 l/s and a false OKAY (S-009). Settled by D-019 for the plain house: not worked there. For other jobs: Unknown (Q-002).
+7. **Plain house:** On a house with no detention the pipes are by rule (100 dia. at 1 in 100); no running total of flow is worked (CIV-01). The principal should still confirm (STUDY_D section 5.1 item 3)
 
-Evidence: ENG_NOTES "The chain of sums" item 7 and "Weak points" item 2; STUDY_B section 1e item 5, 1l item 1.
+Evidence: ENG_NOTES "The chain of sums" item 7 and "Weak points" item 2; STUDY_B section 1e item 5, 1l item 1; STUDY_D section 5.1.
 
 ## S-023 Share of detention underground
 
@@ -365,8 +383,10 @@ Evidence: STUDY_B section 1d items 4 and 5, 1f item 2, section 3 item 10.
 4. **Output and where it is shown on the sheet:** The tank note on the plan (E-020: total / detention / reuse litres), the tank line in the criteria box (E-041), the tank detail with its litres and 30 mm orifice (E-047).
 5. **Worked example from a real job code:** CIV-02: 3,000 litre slimline, 2,000 reuse, 1,000 detention. CIV-03: each tank 1.00 detention. CIV-04: Rev B two tanks at 1.5; Rev D "1100 lt for detention". CIV-06: two tanks at 0.875. CIV-07: 3,000 (1,000 detention, 2,000 reuse). CIV-09: two 6,000 litre tanks, 2.00 detention each.
 6. **Known slips in the office workbooks:** The detention workbook's tank line says "minimum storage for each unit 2,000 litres" with no source. On real jobs: tank splits differing between plan and detail on the same stamped sheet. Each tank's litres are typed 3 to 4 times on one sheet.
+7. **Flat tank credit seen (CIV-02):** A typed line in the Kingston job's sums: "Water Tank contribution for tanks 2500L or above = 1.00m3" (a flat 1.00 m3 credit for any tank of 2,500 litres or more; source not stated on the page). Whether it is an office rule or a council rule: Unknown. See L-010 (STUDY_D section 5.2 item 5, section 7 item 13, Still unknown item 5)
+8. **CIV-09 tanks:** Two 6,000 litre tanks WT1 and WT2 at 2 m3 each in the storage list (STUDY_D section 5.5 item 2)
 
-Evidence: STUDY_B section 1b item 3, 1c item 4, 1d items 4, 5 and 7, 1f items 2 and 3, 1g item 6, section 3 item 10, section 5 item 5; DIGEST section 3 items 5, 6 and 8; ELEMENT_LIST "Seen as a picture" item 7; INTERVIEW item 8zf.
+Evidence: STUDY_B section 1b item 3, 1c item 4, 1d items 4, 5 and 7, 1f items 2 and 3, 1g item 6, section 3 item 10, section 5 item 5; DIGEST section 3 items 5, 6 and 8; ELEMENT_LIST "Seen as a picture" item 7; INTERVIEW item 8zf; STUDY_D section 5.2, 5.5, 7 item 13.
 
 ## S-025 Orifice pit invert stepping and the invert calculator
 
@@ -403,13 +423,30 @@ Evidence: STUDY_B section 1d item 3, 1e items 2 and 6, 1k items 2 and 4, section
 2. **Inputs:**
    1. Roof area to each tank, tank litres, reuse (toilets, laundry, irrigation), bedrooms or occupants.
    2. Raingarden area and type; paved areas treated and left untreated.
-3. **The sum in words and as a formula:** Worked inside the STORM calculator, usually by the sustainability consultant; the office reads the report. STORM itself was not read. How a raingarden's area is chosen: Unknown (Q-005).
+3. **The sum in words and as a formula:** Worked inside the STORM calculator, usually by the sustainability consultant; the office reads the report. STORM itself was not read. How a raingarden's area is chosen: Unknown (Q-005). Superseded by STUDY_D section 5.5 item 6 (answered in part: no separate sizing sum exists; the owner's rule is still Unknown), 16 Nov 2026.
 4. **Output and where it is shown on the sheet:** Tank note (E-020), roof-to-tank areas box (E-021), raingarden with its area (E-025). The STORM report is sent beside the drawing; the computations PDF ends with a "WSUD" page.
 5. **Worked example from a real job code:** CIV-08: each dwelling's roof (125 to 140) to a 3,000 litre tank; 34 of driveway to a raingarden of 1.0 square metre; 136 of driveway untreated; rating at least 100%. CIV-09: two 6,000 litre tanks, a 1.0 square metre raingarden (100 mm ponding) treating 49.8 of paving; rating over 100%. CIV-10: 696 of roof to a 15,400 litre tank.
 6. **Known slips in the office workbooks:** Not a workbook. CIV-08: the final sheet labels a 3.5 square metre raingarden against 1.0 in the report; the sheet and the report differ.
+7. **Worked example CIV-09 (STORM report by the office, 13 Mar 2024):** Inputs: municipality and rainfall station (Bayside), development type "Residential - Multiunit", site 1,031 m2, one row per impervious area: "Roof 1 to RWT" 243 m2 -> rainwater tank 6,000 L, 5 bedrooms; "Roof 2 to RWT" 184 m2 -> tank 6,000 L, 4 bedrooms; "Balcony to storm" 10.5 m2, "Roof 2 to storm" 15.2 m2, "Driveway 1" 35 m2 -> no treatment; "Roof 1 to storm" 49.8 m2 -> "Raingarden 100mm", area 1.00 m2. Outputs: treatment 111.8% and 119.6% for the two tanks (tank supply reliability 97.9%), 128.15% for the raingarden, 0 for untreated rows; overall "STORM Rating 103%" (100 is the pass mark) (STUDY_D section 5.5 items 4 and 5)
+8. **What changed between the architect's report and the office's:** The office split the roof into what really reaches each tank and what goes straight to the drain, split the tank into two of 6,000 L, and moved the raingarden from the driveway to a piece of roof. The architect's earlier report (May 2023) had 1.00 m2 for 61.76 m2 of driveway and paths (1.6%) with one 12,000 L tank on 506 m2 of roof, scoring 101%. The inputs follow the drainage layout, so the report is redone after the layout is drawn. CIV-08's sheet says "3.5m2 raingarden, min. 1m2 required to treat driveway" (STUDY_D section 5.5 items 6 and 7)
 
-Evidence: STUDY_B section 1h item 6, 1f item 3, 1l item 1, section 2 inputs item 8, section 3 item 18, section 5 item 10; GUIDEBOOK_NOTES "The job in the guidebook's order" item 5; INTERVIEW items 8a and 8f.
+Evidence: STUDY_B section 1h item 6, 1f item 3, 1l item 1, section 2 inputs item 8, section 3 item 18, section 5 item 10; GUIDEBOOK_NOTES "The job in the guidebook's order" item 5; INTERVIEW items 8a and 8f; STUDY_D section 5.5.
+
+## S-028 Combined outlet check with a pump (permissible discharge against site flow plus pump flow)
+
+1. **Purpose:** Show that the flow leaving the site by gravity and by pump together stays under the permissible site discharge, and that the outlet pipe can carry it.
+2. **Inputs:**
+   1. Permissible site discharge, l/s (S-002; on CIV-12 taken from the existing site).
+   2. Flow from the other impervious areas at the 1 in 5 intensity (areas, coefficient, intensity).
+   3. Pump flow rate, l/s (S-014).
+   4. Outlet pipe size and grade; roughness (S-009).
+3. **The sum in words and as a formula:** As typed on CIV-12 page 2: "1 in 5 ARI flow from other impervious areas 445 x 0.9 x 94.3 / 3600 = 10.49 l/s"; "Pump flow rate (basement) = 2.5 l/s"; "Total 12.99 l/s < 16.13 l/s (permissible site discharge), therefore OK". Then the outlet pipe: 150 dia. at 1 in 100 gives 19.80 l/s at 1.12 m/s (S-009); "12.99 < 19.80, therefore OK". Then the 3 m3 minimum detention (AS 3500.3) against the pump wet well volume (S-014), therefore OK.
+4. **Output and where it is shown on the sheet:** Computations only (three lines of text on page 2); not on the sheet.
+5. **Worked example from a real job code:** CIV-12 (Glen Eira): 10.49 + 2.5 = 12.99 l/s against 16.13 l/s permissible; pipe 19.80 l/s.
+6. **Known slips in the office workbooks:** One line on the later pump print reads "12.99 L/d" (units slip). Whether this three-line argument is an office method or a one-off for this council: Unknown.
+
+Evidence: STUDY_D section 5.3 items 2 and 4, section 7 item 12.
 
 ---
 
-Next free number: S-028
+Next free number: S-029

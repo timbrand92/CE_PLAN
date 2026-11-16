@@ -28,6 +28,7 @@ What the office's files show about this council's stormwater requirements. Re-fi
 2. **Underground share:** Not stated in the evidence for this council.
 3. **Minimum orifice:** Not stated in the evidence for this council. Seen: 67 mm (CIV-02), 69 mm (CIV-03).
 4. **Tank orifice:** 30 mm on both jobs (office standard, D-024).
+5. **Flat tank credit seen on CIV-02:** A typed line in the sums: "Water Tank contribution for tanks 2500L or above = 1.00m3" (a flat 1.00 m3 credit). Source not stated on the page; whether it is an office rule or a council rule: Unknown (L-010) (STUDY_D section 5.2 item 5, section 7 item 13)
 
 ## 4. Pipes, pits and details required
 
@@ -39,6 +40,7 @@ What the office's files show about this council's stormwater requirements. Re-fi
 
 1. **Notes block:** the council's standard drainage notes block on the sheet.
 2. **Forms:** signed drainage declaration; planning permit date; endorsed plans.
+3. **Kingston is the only council with its own notes drawing:** CE Civil KINGSTON COUNCIL NOTES (Sep 2026): three layouts ("Kingston Council Sheet 1 to 3") and six model-space headings (SHEET 1 to 6) with 27 numbered tiles: the council's standard drawings pasted as blocks (39 machine-named blocks), on an old A3 title sheet. A KINGSTON NOTES heading also sits inside CE Civil Details (STUDY_D section 2.3 items 1 and 8)
 
 ## 6. How to submit and fees
 
@@ -54,6 +56,8 @@ What the office's files show about this council's stormwater requirements. Re-fi
 1. **CIV-01** (K-001, plain house): letter 20 Jun 2023; connection to council pit at approx IL 1.14.
 2. **CIV-02** (K-002, house with detention): 5.0 l/s; orifice 67; top water level 1.31; required 1.49; provided 1.52.
 3. **CIV-03** (K-003, two units, tanks only): 6 L/s; required 1.66; two tanks at 1.00; orifice 69 at plate height 380. 21 days from quote documents to council issue.
+4. **CIV-01 folder (K-001):** No calculation of the drainage: eight blank template workbooks, the discharge letter, before-you-dig replies, two scanned hand mark-ups and a small PDF ("57m2 OF ROOF CATCHMENT AREA TO WATERTANK SHOWN HATCHED") (STUDY_D section 5.1 items 1 and 2)
+5. **CIV-02 sums read in full (K-002):** Catchment 561 m2, coefficient 0.65; Boyd's storage required 1,492 litres at 5 minutes; storage provided 1.52 m3 (pipe 0.36, pits 0.11 + 0.05, tank 1.00); orifice 67 mm at plate height 310 mm, 4.93 l/s against 5.00. The pages went to council with a declaration form (STUDY_D section 5.2 items 1 to 4)
 
 ## 9. Conflicts between office documents about this council
 
@@ -63,4 +67,4 @@ What the office's files show about this council's stormwater requirements. Re-fi
 
 ## 10. Evidence
 
-Evidence: STUDY_B section 1a, 1b, 1c, section 4 item 1, section 5 item 10; ENG_NOTES "Weak points" item 5.
+Evidence: STUDY_B section 1a, 1b, 1c, section 4 item 1, section 5 item 10; ENG_NOTES "Weak points" item 5; STUDY_D section 2.3 items 1 and 8, section 5.1, section 5.2.

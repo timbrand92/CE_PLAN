@@ -130,16 +130,20 @@ Evidence: STUDY_C sections 5B, 5C, 5D, section 4 "What it does behind the scenes
 25. Tool palettes exist in three sets (17 current, 12 "NEW", 43 old), and two of the "NEW" civil palettes are identical.
 
 What the August notes add about the old plug-in: too many pieces (99 commands, 18 buttons on one panel, about 133 settings in one place, background behaviour hard to predict); parked template blanks read as live design; tanks and agricultural drains stored as pits.
+26. **Loose LISP is loaded from private copies:** Each PC's start-up suite lists LISP files one by one pointing at a personal folder, an old lettered network drive and `C:\Lisp Files`: a fix to a shared LISP file does not reach a PC that loads a private copy. Nothing auto-loads the shared folder (no acaddoc.lsp or acad.lsp) (STUDY_D section 6.5 items 4 and 5)
+27. **Palettes and plot style table are local copies:** The palette path is the PC's own local folder; the plot style table is a local copy in the PC's plot styles folder, not read from the shared folder, so PCs can plot with different versions. Templates: no office template is set for "new drawing"; jobs are started by copying the template drawing. Menus: the stock menu plus the bought-in structural toolkit's menu; no office menu on the colleague's PC (STUDY_D section 6.5 items 7 to 10)
+28. **Trusted locations grow at each install:** On this PC the trusted-locations setting lists the same Civil plug-in folder at least 15 times over (it is appended at each install) (STUDY_D section 6.5 item 11)
+29. **Reporting gaps:** Usage records exist for April (1,442), then almost nothing May to September (66), then October (624) and November (505). No record shows any PC other than this one running a Civil newer than April's (STUDY_D section 6.1 item 2, section 6.2 item 8)
 
-Evidence: STUDY_C section 7; DIGEST section 7.
+Evidence: STUDY_C section 7; DIGEST section 7; STUDY_D section 6.1, 6.2, 6.5.
 
 ## 7. Unknowns
 
-1. What a colleague's PC has today (only the owner's PC was read; 9 machine records exist but were not opened): Q-105.
+1. What a colleague's PC has today (only the owner's PC was read; 9 machine records exist but were not opened): Q-105. Superseded by STUDY_D section 6.2 (seven PCs identified from the machine, usage and failure records), 16 Nov 2026.
 2. Whether any colleague has been updated by the signed route from start to finish.
 3. How `CE V3 PILOT` is meant to be used, and by whom.
 4. How the owner's PC's bundles are replaced day to day.
-5. How the loose LISP files and tool palettes are loaded on each colleague's PC, and which colleagues still use them: Q-105.
+5. How the loose LISP files and tool palettes are loaded on each colleague's PC, and which colleagues still use them: Q-105. Superseded by STUDY_D section 6.5 (mechanism read; which colleagues use them: still Unknown), 16 Nov 2026.
 6. Which tool answers when a typed name exists in both a loaded LISP file and a plug-in.
 7. How the Copy/Move+Rotate C++ part is loaded, since the bundle's start-up list does not name it.
 8. What the ribbon and windows really look like on screen today.
@@ -152,3 +156,21 @@ Evidence: STUDY_C section 7; DIGEST section 7.
 15. Which everyday helpers are really used: Q-015. How to install and update with no administrator rights and no manual OneDrive step: Q-203.
 
 Evidence: STUDY_C section 8; OPEN_QUESTIONS Q-015, Q-105, Q-201, Q-203.
+
+
+## 8. What colleagues' PCs report (read 16 Nov 2026 from the IT folder records)
+
+Seven distinct PC names appear. PC-2 is the PC the study ran on. Names were deliberately not interpreted.
+
+1. **PC-1:** AutoCAD 2022 in April (one record from AutoCAD 2027 in October). Last reported Civil 1.1.0.0 and Structural 1.0.91 (machine record) on 30 Apr 2026; Manager 1.0.0 on 5 Oct 2026. 746 usage records, 745 of them in April. A real drafting PC in April. (STUDY_D section 6.2 item 1)
+2. **PC-2 (the owner's PC):** AutoCAD 2022 in April, AutoCAD 2027 later. Civil 1.1.0.0 and Structural 1.0.79 on 28 Apr 2026; Manager 1.1.34 on 7 Oct 2026. 786 usage records; 941 of the 1,029 failure records. (STUDY_D section 6.2 item 2)
+3. **PC-3:** AutoCAD 2026. Manager 1.0.0, last seen 26 Aug 2026. 11 failure records, no usage records. (STUDY_D section 6.2 item 3)
+4. **PC-4:** AutoCAD 2027. Manager 1.1.1, last seen 24 Sep 2026. No usage or failure records. (STUDY_D section 6.2 item 4)
+5. **PC-5:** AutoCAD 2026. Manager 1.0.0, last seen 21 Apr 2026. Nothing else. (STUDY_D section 6.2 item 5)
+6. **PC-6:** AutoCAD 2027. Manager 1.1.89, last seen 16 Nov 2026. 1,103 usage records in October and November, 985 of them one command (the block library window), plus version and health checks. Looks like an automated test PC or account, not a drafter: Unknown which. (STUDY_D section 6.2 item 6)
+7. **PC-7:** AutoCAD 2027. Manager 1.1.89, last seen 15 Nov 2026. Two usage records (a health check and a version check). (STUDY_D section 6.2 item 7)
+8. **Reading:** AutoCAD 2022, 2026 and 2027 are all in the records. Only two PCs ever reported Civil or Structural through this channel, both at the April versions (Civil 1.1.0.0). No record shows any PC other than this one running a Civil newer than April's. What Civil and Structural versions the colleagues run today cannot be told from these records. Civil was loaded from the per-user plug-in folder on both April PCs. (STUDY_D section 6.2 items 8 and 9)
+9. **Conflict (versions):** Section 1 gives this PC's installed versions (Civil 3.0.90.13, Manager 1.1.89) and section 5 item 9 gives the newest in the IT folder; the records give older versions for the same PC (Civil 1.1.0.0, Structural 1.0.79, Manager 1.1.34). Not reconciled. (STUDY_D section 6.2 items 2 and 8)
+10. **Unknown:** What Civil and Structural versions colleagues run today; whether PC-6 is a person or a test robot and which PCs belong to which colleague; whether "did not close cleanly" records are crashes or ordinary shut-downs; how often colleagues use plain AutoCAD commands, loose LISP tools and palettes (not recorded); the start-up suite's full 17 entries (only those visible in the package text were read); the 2015 instruction documents and the other four settings packages (not opened). (STUDY_D Still unknown items 6 to 11)
+
+Evidence: STUDY_D section 6.1 to 6.5, Still unknown items 6 to 11.

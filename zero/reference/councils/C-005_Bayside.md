@@ -32,6 +32,7 @@ What the office's files show about this council's stormwater requirements. Re-fi
 
 1. **STORM 100%.**
 2. Forms: Not stated in the evidence.
+3. **Bayside notes live inside a job:** The only Bayside content in the template folder is a finished two-unit job saved as a template ("CIVIL TEMPLATES\BAYSIDE COUNCIL", Feb 2026), carrying a "SHARED DRAINAGE ASSET" note (shared drains need common property or easements and an agreement between owners), detention pipes labelled with metres of detention, tank notes with concrete pad level and a pump specification placeholder (L-027). The orifice pit details drawing carries "TO BAYSIDE / GLEN EIRA / MANNINGHAM COUNCIL'S REQUIREMENTS" (STUDY_D section 2.1 item 2, section 2.3 item 2)
 
 ## 6. How to submit and fees
 
@@ -46,6 +47,8 @@ What the office's files show about this council's stormwater requirements. Re-fi
 
 1. **CIV-09** (K-006, K-009; only partly read): 7.48 l/s; total 6.36 (sheet shows 5.35 required); two 6,000 litre tanks; 1.0 square metre raingarden; approved 18 Apr 2024.
 2. **CIV-10** (K-006, K-007, K-012, units with basement): 8.52 l/s and storage 9.72; wet well 16.45; three civil sheets.
+3. **CIV-09 end to end:** The council's e-mail reply ("PSD and SSR parameters") gave 7.48 l/s and 5.35 m3 storage; the office's sums show total storage 6.36 and orifice 77 mm at plate height 410 mm; STORM report 13 Mar 2024 rating 103% (two 6,000 L tanks, raingarden 1.00 m2 treating 49.8 m2). No required-storage page (STUDY_D section 5.5 items 1 to 5)
+4. **CIV-10 paper look:** Three civil sheets with a separate basement-level sheet, horizontal title strip, construction issue revision C; two pit schedule rows ringed with a red cloud; strip drains, floor wastes, ramp trench, pump station and in-basement rainwater tank (E-068) (STUDY_D section 4.5 items 1 to 5)
 
 ## 9. Conflicts between office documents about this council
 
@@ -53,4 +56,4 @@ What the office's files show about this council's stormwater requirements. Re-fi
 
 ## 10. Evidence
 
-Evidence: STUDY_B section 1f, 1l items 1 and 2, section 4 item 5, section 0 item 5.
+Evidence: STUDY_B section 1f, 1l items 1 and 2, section 4 item 5, section 0 item 5; STUDY_D section 2.1 item 2, 2.3 item 2, 4.5, 5.5.

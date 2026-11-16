@@ -21,8 +21,9 @@ What is in the title block, how revisions and the issue stamp are done today, an
 8. **Text heights (paper space):** 1.5, 2.0, 2.5, 3.0, 4.0.
 9. **Sheet layers:** 0-TITLE, 0-TITLE BLOCK, 0-TITLE TEXT, 0-TITLE REVISION, 0-SCALE BAR, 0-NORTH, 0-STAMP-PRELIMINARY, 0-STAMP-TENDER, 0-STAMP-APPROVAL, 0-STAMP-CONSTRUCTION. All are in the civil template and not in the master.
 10. **Stray styles:** three "x-sheet$0$..." text styles used only by labels inside the title block came from a bound reference.
+11. **Two orientations:** Vertical title strip on CIV-05, 07, 08, 14, 15; horizontal strip along the bottom on CIV-10 and CIV-11 (with the revision list at its left on CIV-11). The civil template folder only has the vertical one: how horizontal civil sheets are made is Unknown. The structural horizontal title block (Sep 2026) has separate revision-letter texts for structural and civil and five stamp layers including two preliminary stamps ("checked" and "not checked" by a named person) (STUDY_D section 2.1 items 6 and 7, section 4.4 item 1)
 
-Evidence: STUDY_A section 6 item 43, section 1 item 8, section 2 naming family 4 and "Standard versus invented" item 1, section 3 items 2 and 3.14, section 6 item 36.
+Evidence: STUDY_A section 6 item 43, section 1 item 8, section 2 naming family 4 and "Standard versus invented" item 1, section 3 items 2 and 3.14, section 6 item 36; STUDY_D section 2.1, 4.4.
 
 ## 2. Drawing title and scale line (E-044)
 
@@ -50,8 +51,9 @@ Evidence: STUDY_A section 1 items 4 to 6, section 6 item 43; STUDY_B section 1e 
 5. **Current revision letter:** a separate loose TEXT (4.0) in the corner.
 6. **Descriptions seen:** "PRELIMINARY ISSUE", "FOR COUNCIL APPROVAL".
 7. **Revision names seen across jobs:** P1, P2 (preliminary); Rev A, B, C, D, E; later H and I (CIV-04, after as-built mark-ups).
+8. **More revision names:** CIV-15: P1 to P3, T1 to T4 (rows reading "TENDER ISSUE"), then A. CIV-05 sheet 2 revision list has ten rows (STUDY_D section 4.8 item 7, section 4.3 item 1)
 
-Evidence: STUDY_A section 6 item 45; STUDY_B section 1 "Common path" items 3 and 5, section 1d item 8.
+Evidence: STUDY_A section 6 item 45; STUDY_B section 1 "Common path" items 3 and 5, section 1d item 8; STUDY_D section 4.3, 4.8.
 
 ## 5. Issue stamp wording and stages (E-046)
 
@@ -62,8 +64,9 @@ Evidence: STUDY_A section 6 item 45; STUDY_B section 1 "Common path" items 3 and
 5. **Stage 4, layer 0-STAMP-CONSTRUCTION:** wording not quoted in the evidence: Unknown.
 6. **Seen:** JOB_C has APPROVAL thawed and the other three frozen. JOB_A and JOB_B are construction issue.
 7. **Where:** the approval stamp box sits above the title block.
+8. **Tender stamp in use:** The tender stamp layer is in use on CIV-15 (tender issue rows). Its wording is still not quoted in the evidence: Unknown (STUDY_D section 4.8 item 7)
 
-Evidence: STUDY_A section 6 item 46; ELEMENT_LIST "Seen as a picture" item 1 and "Across three civil jobs".
+Evidence: STUDY_A section 6 item 46; ELEMENT_LIST "Seen as a picture" item 1 and "Across three civil jobs"; STUDY_D section 4.8 item 7.
 
 ## 6. Issue sequence
 
@@ -75,5 +78,6 @@ Evidence: STUDY_A section 6 item 46; ELEMENT_LIST "Seen as a picture" item 1 and
 6. **After approval:** revisions can run on after "as built mark-ups" arrive (CIV-04 to Rev I). The office's duty then: Unknown (Q-010). Whether an approval stamp covers later changes was one of the old study's biggest groups of open questions.
 7. **How it is plotted and sent today:** no civil command for issuing exists in the present plug-in; the only plot-to-PDF command found is in the structural program.
 8. **Full process:** see `process\CIVIL_JOB_FLOW.md`.
+9. **Public job:** Preliminary (P1 to P3), tender (T1 to T4), then A (construction); a cut and fill plan can be issued alone at tender stage (STUDY_D section 4.8 items 6 and 7)
 
-Evidence: STUDY_B section 1 "Common path" items 3 and 5, section 1c item 8, 1d item 8, 1l item 3, section 6 items 14 and 19; DIGEST section 6 item 1; STUDY_C section 3 item 13.
+Evidence: STUDY_B section 1 "Common path" items 3 and 5, section 1c item 8, 1d item 8, 1l item 3, section 6 items 14 and 19; DIGEST section 6 item 1; STUDY_C section 3 item 13; STUDY_D section 4.8.

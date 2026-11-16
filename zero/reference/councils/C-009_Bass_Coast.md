@@ -40,7 +40,8 @@ What the office's files show about this council's stormwater requirements. Re-fi
 
 ## 8. Jobs seen (codes)
 
-1. **CIV-13** (K-008, rural single house): its sums were not on disk.
+1. **CIV-13** (K-008, rural single house): its sums were not on disk. Superseded by STUDY_D section 5.4 (soakage workbook read cell by cell), 16 Nov 2026.
+2. **CIV-13 soakage sums read:** Impervious 365 m2 x 0.9 = 328.5, catchment 329 m2 coefficient 1; soil permeability 0.325 mm/hr (percolation report); moderating factor 2; 1 in 10 year; pit of 14 x 13 modules (5.712 x 8.905 m), storage depth 0.45 m, porosity 0.95, volume 22.9 m3; check table OK at 5 minutes (ratio 11.4); emptying time 608 hours (25 days) not flagged on the sheet; overflow to a dam (STUDY_D section 5.4 items 1 to 4)
 
 ## 9. Conflicts between office documents about this council
 
@@ -48,4 +49,4 @@ What the office's files show about this council's stormwater requirements. Re-fi
 
 ## 10. Evidence
 
-Evidence: STUDY_B section 1b item 6, section 4 item 9; ELEMENT_LIST "Across three civil jobs" item 3.
+Evidence: STUDY_B section 1b item 6, section 4 item 9; ELEMENT_LIST "Across three civil jobs" item 3; STUDY_D section 5.4.

@@ -21,7 +21,7 @@ Open them in Excel or any text editor. Units: model units are millimetres of rea
 
 ## The files and their columns
 
-1. **`layers.csv`** (118 rows): every layer met on a civil sheet.
+1. **`layers.csv`** (146 rows; 28 added 16 Nov 2026 from STUDY_D: the background-file layers and the viewport-override layer): every layer met on a civil sheet.
    1. name: the layer name exactly.
    2. colour: AutoCAD colour number (the colour picks the pen).
    3. linetype: the layer's linetype.
@@ -31,7 +31,7 @@ Open them in Excel or any text editor. Units: model units are millimetres of rea
    7. in_template: is it in the civil A1 template (yes / no / not stated).
    8. seen_on_jobs: which coded jobs used it.
    9. source, status.
-2. **`text_heights.csv`** (42 rows): the height of every kind of text.
+2. **`text_heights.csv`** (56 rows; 14 added from STUDY_D: background and long-section text): the height of every kind of text.
    1. purpose: what the text is.
    2. model_height: height in model units.
    3. paper_mm: height on paper.
@@ -40,7 +40,7 @@ Open them in Excel or any text editor. Units: model units are millimetres of rea
    6. justification: where the text is anchored.
    7. mask: background mask on or off.
    8. source, status.
-3. **`pen_colours.csv`** (35 rows): what the office plot style table does with each colour.
+3. **`pen_colours.csv`** (36 rows; colour 51 added from STUDY_D): what the office plot style table does with each colour.
    1. colour_number: AutoCAD colour number.
    2. prints_as: black, grey or its own colour.
    3. pen_mm: printed line thickness.
@@ -52,7 +52,7 @@ Open them in Excel or any text editor. Units: model units are millimetres of rea
    3. used_for: what it draws.
    4. object_scale: the object linetype scale used with it.
    5. source, status.
-5. **`label_offsets.csv`** (20 rows): how far each label sits from its object.
+5. **`label_offsets.csv`** (28 rows; 8 added from STUDY_D: background stacking, clips, long-section spacing): how far each label sits from its object.
    1. label: which label or part.
    2. from_what: what the distance is measured from.
    3. standard_clear_distance: the template's distance where there is one.
@@ -60,7 +60,7 @@ Open them in Excel or any text editor. Units: model units are millimetres of rea
    5. side_rule: which side it sits on.
    6. rotation_rule: how it is turned.
    7. source, status.
-6. **`wording_patterns.csv`** (31 rows): the fixed wording of labels and notes.
+6. **`wording_patterns.csv`** (49 rows; 18 added from STUDY_D): the fixed wording of labels and notes.
    1. item: which label.
    2. pattern: the wording with blanks shown as <...>.
    3. real_examples: real wordings, separated by " | ".
@@ -71,13 +71,13 @@ Open them in Excel or any text editor. Units: model units are millimetres of rea
    3. source: which document gives it.
    4. conflict: what another document says.
    5. status.
-8. **`pipe_sizes.csv`** (17 rows): pipe sizes, materials and classes seen.
+8. **`pipe_sizes.csv`** (21 rows; 4 added from STUDY_D): pipe sizes, materials and classes seen.
    1. nominal: nominal diameter in mm.
    2. material_class: material and class.
    3. where_used: what it is used for.
    4. real_inside_outside_if_known: the maker's real diameters.
    5. source, status.
-9. **`blocks.csv`** (52 rows): every block met on a civil sheet.
+9. **`blocks.csv`** (60 rows; 8 added from STUDY_D, including the identified MOC block): every block met on a civil sheet.
    1. block_name: the block's name (machine-named blocks are described).
    2. what_it_is: drafting words.
    3. dynamic_states_or_grips: visibility states and grips.
@@ -93,13 +93,17 @@ Open them in Excel or any text editor. Units: model units are millimetres of rea
 3. **Pens:** colour 4 prints 0.40 in the current table and 0.70 in an older one.
 4. **Offsets:** pipe label distance: 73 to 74 clear of the pipe edge in the template against "about 139 off a 150 pipe" in the August study.
 5. **Pit sizes:** two depth tables; three step iron depths (Q-004).
+6. **Layers (study D):** A-WINDOW & DOOR colour 9 in the jobs / 253 in the blank background template; A-EASEMENT (colour 2, DASHDOT2 in the template) against EASEMENT (colour 6, DASHED) in the jobs; A-DWAFTWALL (jobs) against A-DWARFWALL (template); A-SURVEY colour 11 / 253 / forced 250 depending on the job (STUDY_D section 1.2, 1.4)
+7. **Text (study D):** Boundary length and bearing text height 250 (JOB_C, JOB_A) against 450 (JOB_B); no fixed height (STUDY_D section 1.2 item 2)
+8. **Pipes (study D):** Rising main length: CIV-07 5m on the sheet box against 6 m (earlier study); CIV-12 18 m (sums) against about 20 m (earlier study) (STUDY_D section 4.1 item 2, section 5.3 item 3)
+9. **Trench grate stretch distances:** Read as zero in the parked samples (study D) against stretched parked samples (study A); see E-022 (STUDY_D section 3.1 item 5)
 
 ## Not in these files yet
 
 1. Engineering standards that are rules rather than drafting data (grades, cover, coefficients, orifice): see `design\LIMITS.md`.
 2. Council rules: see `reference\councils\`.
-3. Symbols and text inside the background drawing; A3 and council-specific templates; true colours of fills; draw order (Q-101, Q-102, Q-103: waiting on study D).
+3. Symbols and text inside the background drawing; A3 and council-specific templates; true colours of fills; draw order (Q-101, Q-102, Q-103: waiting on study D). Superseded by STUDY_D section 1.2, 2.1 to 2.3, 3.2, 3.4 (all four were measured; added as rows 16 Nov 2026), 16 Nov 2026.
 4. Real diameters of detention pipe sizes other than 225.
 5. Lid classes as a data file (four classes are in L-019).
 
-Evidence: STUDY_A sections 1 to 7 and 9; STUDY_B section 3; DIGEST section 1; DECISIONS D-003, D-012, D-013, D-022.
+Evidence: STUDY_A sections 1 to 7 and 9; STUDY_B section 3; DIGEST section 1; DECISIONS D-003, D-012, D-013, D-022; STUDY_D section 1.2, 1.4, 2.1 to 2.6, 3.1 to 3.5, 4.1, 5.3.
