@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pipe window, full size</title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;background:#f3f5f8;color:#1d2530;font-family:"Segoe UI",system-ui,Arial,sans-serif}
+.page{padding:12px 16px 14px}
+.res{display:flex;gap:8px;margin:0 0 8px}
+.res button{font:600 15px "Segoe UI",system-ui,sans-serif;padding:6px 16px;border:1px solid #8b95a3;background:#fff;color:#1d2530;border-radius:3px;cursor:pointer}
+.res button.on{background:#2c3440;color:#fff;border-color:#2c3440}
+.line{margin:0 0 10px;font-size:15px;color:#2c3440}
+.foot{margin:10px 0 0;font-size:12px;color:#7b8594}
+#wrap{position:relative;width:100%;overflow:hidden}
+#stage{position:absolute;left:0;top:0;transform-origin:0 0;background:#21252b;overflow:hidden}
+#design{position:absolute;left:0;top:0;width:1920px;height:1080px;transform-origin:0 0;background:#21252b;overflow:hidden;font-family:"Segoe UI",system-ui,Arial,sans-serif}
+
+/* AutoCAD screen */
+#ribbon{position:absolute;left:0;top:0;width:1920px;height:90px;background:#2f343c;border-bottom:1px solid #151820}
+#ribbon .tabs{display:flex;gap:2px;padding:6px 10px 0}
+#ribbon .tab{padding:6px 18px;font-size:15px;color:#c8ccd2;border-radius:3px 3px 0 0}
+#ribbon .tab.on{background:#3b414b;color:#fff}
+#ribbon .panels{position:absolute;left:0;top:38px;right:0;bottom:0;background:#3b414b;display:flex;gap:10px;padding:8px 12px}
+#ribbon .pn{width:150px;border-right:1px solid #565d68;display:flex;gap:6px;align-items:flex-start;padding-right:10px}
+#ribbon .ic{width:30px;height:30px;border:1px solid #6a717d;border-radius:3px;margin-top:2px}
+#model{position:absolute;left:0;top:90px;width:1920px;height:934px;display:block;background:#21252b}
+#cmd{position:absolute;left:0;top:1024px;width:1920px;height:56px;background:#2b3037;border-top:1px solid #151820;color:#d6dae0;font:15px Consolas,"Courier New",monospace;padding:16px 16px}
+.t{font-family:Consolas,"Courier New",monospace;fill:#e9e9e9}
+.t.cl{fill:#ffd84a}.t.il{fill:#d8d8d8}.t.pl{fill:#9fe8b6}.t.pp{fill:#ffd84a}
+
+#inspbar{position:absolute;left:50%;top:104px;transform:translateX(-50%);display:none;align-items:center;gap:18px;background:#14181e;border:1px solid #6a717d;color:#fff;padding:10px 14px 10px 20px;font-size:17px;white-space:nowrap;z-index:5}
+#inspbar button{font:600 15px "Segoe UI",sans-serif;padding:6px 16px;background:#e9ecf0;color:#1d2530;border:1px solid #aab1bb;border-radius:3px;cursor:pointer}
+#inspbar button:active,.btn:active{transform:translateY(1px);background:#d3d8df}
+
+/* the window: designed 1536 x 864 = 80% of the 1920 x 1080 screen */
+#win{position:absolute;left:192px;top:108px;width:1536px;height:864px;background:#f0f0f0;border:1px solid #5b626d;display:flex;flex-direction:column;color:#1d2530;font-size:14px;overflow:hidden;z-index:3}
+#tb{height:34px;flex:none;background:#fff;border-bottom:1px solid #c3c8d0;display:flex;align-items:center;justify-content:space-between;padding-left:14px;font-size:15px}
+#tb .x{width:46px;height:34px;display:flex;align-items:center;justify-content:center;cursor:pointer}
+#tb .x:active{background:#d3d8df}
+#body{flex:1;display:flex;flex-direction:column;min-height:0}
+.top{flex:1;display:flex;min-height:0}
+#left{flex:none;width:672px;display:flex;flex-direction:column;padding:12px 8px 0 14px}
+#right{flex:1;padding:12px 14px 0 8px;display:flex;gap:12px;min-width:0}
+.col{flex:1;display:flex;flex-direction:column;gap:9px;min-width:0}
+.phead{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.phead b{font-size:15px}
+.legend{font-size:13px;color:#4a5361;display:flex;gap:16px;align-items:center}
+.legend i{display:inline-block;width:14px;height:14px;vertical-align:-2px;margin-right:5px}
+#prev{flex:none;background:#21252b;border:1px solid #5b626d;display:block;width:650px;height:650px}
+#else{flex:none;min-height:56px;margin:8px 14px 10px;background:#fff;border:1px solid #c3c8d0;padding:8px 14px;display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+#else b{font-size:15px}
+#else .ln{display:flex;align-items:center;gap:10px;font-size:14px;line-height:26px}
+#else .ln:before{content:"";width:10px;height:10px;background:#d98e00;flex:none}
+#else .none{font-size:14px;line-height:26px;color:#4a5361}
+.grp{background:#fff;border:1px solid #c3c8d0;padding:9px 14px 10px}
+.grp h3{margin:0 0 7px;font-size:15px;font-weight:700}
+.row{display:grid;grid-template-columns:116px 1fr;align-items:center;min-height:32px}
+.row label{color:#2c3440}
+input[type=text],input[type=number],select{font:14px "Segoe UI",system-ui,sans-serif;height:28px;padding:2px 6px;border:1px solid #8b95a3;background:#fff;color:#1d2530;border-radius:2px;width:100%}
+input[readonly]{background:#f0f0f0}
+.chiprow{display:flex;gap:10px;align-items:center}
+.chiprow input{width:110px}
+.chip{font-size:13px;color:#4a5361;background:#e6e9ee;border-radius:9px;padding:1px 10px}
+.chk{display:flex;align-items:center;gap:8px;min-height:30px}
+.chk input{width:16px;height:16px;margin:0}
+#status{display:flex;gap:9px;align-items:flex-start;margin-top:6px;padding:7px 10px;min-height:64px;font-size:14px;line-height:19px;border:1px solid}
+#status.ok{background:#e8f4ec;border-color:#9cc9aa;color:#17542a}
+#status.warn{background:#fff3d4;border-color:#e3b64a;color:#6b4300}
+#status svg{flex:none;margin-top:1px}
+.pl2{line-height:30px}
+.note{font-size:13px;color:#5b6573;margin-top:2px}
+#bar{height:56px;flex:none;border-top:1px solid #c3c8d0;display:flex;justify-content:space-between;align-items:center;padding:0 14px;background:#f0f0f0}
+#bar div{display:flex;gap:10px}
+.btn{font:14px "Segoe UI",system-ui,sans-serif;min-width:104px;height:34px;padding:0 18px;border:1px solid #8b95a3;background:#fff;color:#1d2530;border-radius:3px;cursor:pointer}
+.btn.ok{background:#1E5AA8;border-color:#154682;color:#fff;font-weight:600}
+.btn.ok:active{background:#154682}
+
+#band{flex:none;margin:6px 14px 0;height:410px;background:#21252b;border:1px solid #5b626d;display:block;width:1506px}
+#bhead{margin:10px 14px 0;display:flex;justify-content:space-between;align-items:baseline}
+#bhead b{font-size:15px}
+#groups{flex:1;display:flex;gap:12px;padding:10px 14px 0;min-height:0}
+#groups .grp{flex:1;min-width:0;align-self:flex-start}
+#groups .row{grid-template-columns:168px 1fr}
+.chiprow input{width:76px}
+.chip{white-space:nowrap;padding:1px 8px}
+#status{min-height:58px}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="res"><button id="r1080" class="on">1920 x 1080</button><button id="r1440">2560 x 1440</button></div>
+  <p class="line">This is the real size and content. Change the Size box, then press Inspect.</p>
+  <div id="wrap"><div id="stage"><div id="design">
+    <div id="ribbon">
+      <div class="tabs"><div class="tab on">Home</div><div class="tab">Annotate</div><div class="tab">View</div><div class="tab">CE Civil</div></div>
+      <div class="panels"><div class="pn"><div class="ic"></div><div class="ic"></div><div class="ic"></div></div><div class="pn"><div class="ic"></div><div class="ic"></div></div><div class="pn"><div class="ic"></div><div class="ic"></div><div class="ic"></div></div><div class="pn"><div class="ic"></div></div></div>
+    </div>
+    <svg id="model" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet"></svg>
+    <div id="cmd">Command: CD</div>
+    <div id="inspbar"><span>Pipe window hidden. Your choices are kept.</span><button id="back">Back to the window</button></div>
+
+    <div id="win">
+      <div id="tb"><span id="ttl">Pipe · P4 to P3</span><span class="x" id="xbtn"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 2L12 12M12 2L2 12" stroke="#1d2530" stroke-width="1.5" fill="none"/></svg></span></div>
+      <div id="body">
+        <div id="bhead"><b>Preview</b>
+          <span class="legend"><span><i style="background:#4da3ff"></i>The pipe you are changing</span><span><i style="border:3px solid #ffb000;border-radius:3px"></i>A level that moves</span></span></div>
+        <svg id="band" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet"></svg>
+        <div id="groups">
+          <div class="grp"><h3>1 · Pipe</h3>
+            <div class="row"><label for="kind">Kind</label><select id="kind"><option selected>New stormwater</option><option>Charged</option><option>Suspended</option><option>Detention</option></select></div>
+            <div class="row"><label for="size">Size</label><select id="size"><option>100</option><option selected>150</option><option>225</option><option>300</option></select></div>
+            <div class="row"><label for="mat">Material</label><select id="mat"><option selected>uPVC</option><option>Concrete</option></select></div>
+          </div>
+          <div class="grp"><h3>2 · Fall</h3>
+            <div class="row"><label for="grade">Grade</label><select id="grade"><option value="100" selected>1 in 100</option><option value="80">1 in 80</option><option value="60">1 in 60</option><option value="200">1 in 200</option></select></div>
+            <div class="row"><label for="len">Length</label><div class="chiprow"><input type="text" id="len" value="8.0 m" readonly><span class="chip">measured</span></div></div>
+            <div class="row"><label for="fall">Fall</label><div class="chiprow"><input type="text" id="fall" value="0.08" readonly><span class="chip">worked out</span></div></div>
+          </div>
+          <div class="grp"><h3>3 · Levels</h3>
+            <div class="row"><label for="up">Upstream invert at P4</label><div class="chiprow"><input type="number" id="up" value="5.23" step="0.01"><span class="chip">chosen</span></div></div>
+            <div class="row"><label for="down">Downstream invert at P3</label><div class="chiprow"><input type="text" id="down" value="5.15" readonly><span class="chip">worked out</span></div></div>
+            <div class="row"><label for="cov">Cover at shallowest point</label><div class="chiprow"><input type="text" id="cov" value="0.45" readonly><span class="chip">worked out</span></div></div>
+            <div id="status" class="ok"></div>
+          </div>
+          <div class="grp"><h3>4 · Shown on the drawing</h3>
+            <div class="chk"><input type="checkbox" id="lab" checked><label for="lab">Label</label></div>
+            <div class="chk"><input type="checkbox" id="arr" checked><label for="arr">Flow arrow</label></div>
+            <div class="chk"><input type="checkbox" id="ils" checked><label for="ils">Invert at each end</label></div>
+            <div class="row"><label for="side">Label side</label><select id="side"><option selected>Above the pipe</option><option>Below the pipe</option></select></div>
+          </div>
+        </div>
+        <div id="else"></div>
+      </div>
+      <div id="bar"><div><button class="btn" id="insp">Inspect</button><button class="btn" id="match">Match a pipe</button></div><div><button class="btn" id="cancel">Cancel</button><button class="btn ok" id="ok">OK</button></div></div>
+    </div>
+  </div></div></div>
+  <p class="foot">Made-up job and values. The words are a first draft for Tim to correct.</p>
+</div>
+<script>
+(function(){
+var NS='http://www.w3.org/2000/svg';
+function el(p,n,a,t){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);if(t!=null)e.textContent=t;p.appendChild(e);return e;}
+function $(i){return document.getElementById(i);}
+var CY=4,XA=8,XB=16,LEN=8.0,CL4=5.83,CL3=5.75;
+function f2(n){return n.toFixed(2);}
+function S(){var sz=parseInt($('size').value,10),gr=parseInt($('grade').value,10),up=parseFloat($('up').value);
+  var fall=LEN/gr,down=up-fall,dia=sz/1000;
+  var cov=Math.min(CL4-up-dia,CL3-down-dia);
+  return {sz:sz,gr:gr,up:up,fall:fall,down:down,cov:cov,mat:$('mat').value,lab:$('lab').checked,arr:$('arr').checked,ils:$('ils').checked,side:$('side').value==='Above the pipe'?-1:1};}
+function changedLevels(st){return st.gr!==100||Math.abs(st.up-5.23)>1e-9;}
+
+function scene(svg,vb,ppm,ts,st,full){
+  svg.innerHTML='';svg.setAttribute('viewBox',vb);
+  var px=function(n){return (n/ppm).toFixed(4);};
+  var g=el(svg,'g',{}),s=ts,w2=st.sz/2000,u=s/.35;
+  if(full){var C={fill:'none',stroke:'#555b64','stroke-width':px(1)};
+    el(g,'polygon',Object.assign({points:'2,0.8 30,0.8 30,15 2,15'},C));
+    el(g,'rect',Object.assign({x:11,y:7.6,width:9,height:5.6},C));
+    el(g,'text',{x:15.5,y:10.6,'font-size':.5,'text-anchor':'middle',fill:'#6b727c','font-family':'Consolas,Courier New,monospace'},'HOUSE');}
+  function pit(cx,cy){el(g,'rect',{x:cx-.345,y:cy-.345,width:.69,height:.69,fill:'none',stroke:'#009aa8','stroke-width':px(1.2),'stroke-dasharray':px(6)+' '+px(4)});
+    el(g,'rect',{x:cx-.225,y:cy-.225,width:.45,height:.45,fill:'none',stroke:'#00e5ff','stroke-width':px(1.8)});}
+  function T(x,y,str,cls,anchor,extra){return el(g,'text',Object.assign({x:x,y:y,'font-size':s,'text-anchor':anchor||'start',class:'t '+(cls||'')},extra||{}),str);}
+  function pipe(x1,x2,y,col,hw){[-1,1].forEach(function(k){el(g,'line',{x1:x1,x2:x2,y1:y+k*hw,y2:y+k*hw,stroke:col,'stroke-width':px(1.8)});});}
+  function pipeV(x,y1,y2){[-1,1].forEach(function(k){el(g,'line',{x1:x+k*.075,x2:x+k*.075,y1:y1,y2:y2,stroke:'#35e06b','stroke-width':px(1.6)});});}
+  function arrow(x,y){var k=Math.min(1,u*1.5);el(g,'polygon',{points:(x-.14*k)+','+(y-.09*k)+' '+(x+.14*k)+','+y+' '+(x-.14*k)+','+(y+.09*k),fill:'#4da3ff'});}
+  pit(XA,CY);pit(XB,CY);pit(24,CY);pit(24,12);
+  pipe(XB+.225,23.775,CY,'#35e06b',.075);pipeV(24,4.225,11.775);
+  pipe(XA+.225,XB-.225,CY,'#4da3ff',w2);
+  var ty=CY-.345-.12*u-.04;
+  T(XA,ty,'P4','','middle',{'font-weight':'bold'});T(XB,ty,'P3','','middle',{'font-weight':'bold'});
+  T(XA,CY+.345+s+.08,'CL 5.83','cl','middle');T(XB,CY+.345+s+.08,'CL 5.75','cl','middle');
+  if(full){T(24,CY-.5,'P2','','middle',{'font-weight':'bold'});T(24.5,CY+.1,'CL 5.70','cl','start');T(24.5,12,'P1','','start',{'font-weight':'bold'});T(24.5,12.4,'CL 5.62','cl','start');
+    T(24.2+s,8,'150 DIA. UPVC PIPE AT 1 IN 100','pl','middle',{textLength:16*s,lengthAdjust:'spacingAndGlyphs',transform:'rotate(-90 '+(24.2+s)+' 8)'});}
+  var mid=(XA+XB)/2,txt=st.sz+' DIA. '+(st.mat==='Concrete'?'CONC':'UPVC')+' PIPE AT 1 IN '+st.gr,sd=st.side;
+  if(st.arr)arrow(mid,CY+sd*(w2+.45*s));
+  if(st.lab){var yy=sd<0?CY-w2-1.6*s:CY+w2+2.5*s;T(mid-.4,yy,txt,'pl','middle',{textLength:txt.length*.55*s,lengthAdjust:'spacingAndGlyphs'});}
+  if(st.ils){var yb=CY-w2-.45*s,iw=7*.6*s;
+    T(XA+.225+.15,yb,'IL '+f2(st.up),'il','start');
+    T(XB-.225-.15,yb,'IL '+f2(st.down),'il','end');
+    T(XB+.225+.15,yb,'IL 5.13','il','start');
+    if(changedLevels(st)){var ex=XB-.225-.15,pd=.12*u;el(g,'rect',{x:ex-iw-pd,y:yb-s*.85,width:iw+2*pd,height:s*1.15,rx:s*.2,fill:'none',stroke:'#ffb000','stroke-width':px(3)});}}
+}
+var AMBER='<svg width="20" height="20" viewBox="0 0 20 20"><path d="M10 2L19 18H1Z" fill="#d98e00"/><path d="M10 7.5V12.5" stroke="#fff" stroke-width="2"/><circle cx="10" cy="15" r="1.2" fill="#fff"/></svg>';
+var GREEN='<svg width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="9" fill="#1c7a3c"/><path d="M5.5 10.3L8.8 13.6L14.6 6.8" stroke="#fff" stroke-width="2" fill="none"/></svg>';
+function render(){
+  var st=S();
+  $('fall').value=f2(st.fall);$('down').value=f2(st.down);$('cov').value=f2(st.cov);
+  var b=$('status');
+  if(st.cov>=0.30-1e-9){b.className='ok';b.innerHTML=GREEN+'<span>Cover '+f2(st.cov)+' is at least the 0.30 needed here.</span>';}
+  else{b.className='warn';b.innerHTML=AMBER+'<span>Cover '+f2(st.cov)+' is less than the 0.30 needed here. Check the levels.</span>';}
+  var h='<b>What else changes</b>',n=0;
+  if(st.sz!==150){h+='<div class="ln" style="--m:#d98e00">Pit schedule: rows P4 and P3 show '+st.sz+' dia.</div>';n++;}
+  if(changedLevels(st)){h+='<div class="ln">Invert at P3 becomes '+f2(st.down)+'.</div><div class="ln">Pipe from P3 to P2: check its upstream invert.</div>';n++;}
+  if(!n)h+='<div class="none">Nothing else changes.</div>';
+  $('else').innerHTML=h;
+  scene($('band'),'7.0 2.53 10.6 2.94',139.6,0.17,st,false);
+  scene($('model'),'1 0.7 30 14.59',64,0.35,st,true);
+}
+['kind','size','mat','grade','up','lab','arr','ils','side'].forEach(function(i){$(i).addEventListener('input',render);$(i).addEventListener('change',render);});
+function inspect(on){$('win').style.display=on?'none':'flex';$('inspbar').style.display=on?'flex':'none';}
+$('insp').addEventListener('click',function(){inspect(true);});
+$('back').addEventListener('click',function(){inspect(false);});
+document.addEventListener('keydown',function(ev){if($('inspbar').style.display==='flex'&&(ev.key==='Escape'||ev.key==='Enter')){ev.preventDefault();inspect(false);}});
+var RES=1080;
+function fit(){
+  var W=RES===1440?2560:1920,H=RES===1440?1440:1080,k=H/1080;
+  var avail=document.documentElement.clientWidth-32,s=Math.min(1,avail/W);
+  var st=$('stage');st.style.width=W+'px';st.style.height=H+'px';st.style.transform='scale('+s+')';
+  $('design').style.transform='scale('+k+')';
+  $('wrap').style.height=Math.round(H*s)+'px';
+  $('r1080').className=RES===1080?'on':'';$('r1440').className=RES===1440?'on':'';
+}
+$('r1080').addEventListener('click',function(){RES=1080;fit();});
+$('r1440').addEventListener('click',function(){RES=1440;fit();});
+window.addEventListener('resize',fit);
+var q=new URLSearchParams(location.search);
+if(q.get('res')==='1440')RES=1440;
+if(['100','150','225','300'].indexOf(q.get('size'))>=0)$('size').value=q.get('size');
+if(['80','60','100','200'].indexOf(q.get('grade'))>=0)$('grade').value=q.get('grade');
+render();fit();
+if(q.get('inspect')==='1')inspect(true);
+})();
+</script>
+</body>
+</html>
