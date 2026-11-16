@@ -13,7 +13,7 @@
 6. **Trial 4, speed:** PASS for command and mover cost (about 40 ms per move on 2500 objects); mouse-drag feel not measured.
 7. **Trial 5, Properties:** BLOCKED for the palette (needs the Properties palette opened, a saved interface setting); the .NET property list works at code level.
 8. **Trial 6, window, live preview and Inspect:** PASS at 1920 x 1080 (21 ms redraw, Inspect returns with values); 2560 x 1440 simulated only; mouse pan/zoom during Inspect not tested.
-9. **Trial 7, ribbon tab, tips and typed names:** NOT TESTED yet.
+9. **Trial 7, ribbon tab, tips and typed names:** PARTIAL (tab logic and alias check work in code; on-screen look, tip rendering, rules-file route not tested).
 10. **Trial 8, double-click:** NOT TESTED yet.
 11. **Trial 9, update and rollback:** NOT TESTED yet.
 
@@ -161,6 +161,21 @@ un4-headless\events.log`, `run5-full\events.log`, `dialog1.png`, the comparison 
 5. **Not tested.** (a) A person panning, zooming and window-picking while the window is hidden: I changed the view by command only, not by mouse, so "the drawing can be panned and zoomed" is shown only for command-driven view changes. (b) Dark theme and following AutoCAD's colours. (c) Preview of the real pit block and its dynamic properties (I drew plain polylines as drawables, not a block copy in a scratch drawing as the September note proved). (d) Typed key presses queueing: the 20 changes were made by code, not typed. (e) AutoCAD's other screens (laptop and desktop pair).
 6. **Evidence:** `evidence\t6\t6_run2.log`, `window_1920x1080.png`, `window_2560x1440.png`. Code: `core\Win.cs`.
 7. **What it means for the build approach.** The preview can be a real AutoCAD picture of real objects, redrawn in tens of milliseconds, with no second drawing path. Inspect by the supported call works and keeps the typed values. The remaining unknown is the user's own mouse pan and zoom during Inspect; it needs a person or a screen driver.
+
+---
+
+## Trial 7. Ribbon tab on selection, tips, typed names
+
+**Verdict: PARTIAL. The tab showing and hiding by selection, and the alias clash check, work in code. How the tab and the tip LOOK on screen, the rules-file route, workspace switches and restarts were NOT TESTED.** Run Mon 16 Nov 2026 22:49 to 22:55, real AutoCAD 2027, Tim's profile. Everything was added to the ribbon at run time by the plugin; nothing was written to his menu files, workspace or settings.
+
+1. **What was done.** The plugin added a ribbon tab "ZERO TRIAL" (hidden at first) with one button "Pipe" whose tip carries the title, a sentence and the Command text "CD". A listener on selection changes showed the tab only when exactly one note-carrying pipe is selected. Separately the plugin read the user's alias file (read only, never written) and compared a list of short names a tool might ship with.
+2. **Tab on selection (read back from the ribbon object after each change).** One note-carrying pipe selected: tab **visible**. Selection cleared: **hidden**. One pit selected: hidden. Two pipes selected: hidden. The ribbon accepted the new tab (tab count went up) with no error, and the front tab stayed "Plug-ins" (the new tab did not steal the front).
+3. **Limits of that result.** The selection was made by my code inside a command, and AutoCAD clears it when the next command starts, so I only saw the tab show for that moment. I could not take a screen picture (AutoCAD opened as a 300 x 300 window when handed the drawing by Explorer, and a picture of it shows nothing useful). So **I did not see the tab on screen, did not see how long it stays, and did not test a real mouse selection.**
+4. **Tip with the typed name.** The tip object accepted the Command text "CD". **How AutoCAD draws that text in the tip is not known**: nothing was seen on screen.
+5. **Typed names clash check: works.** The plugin found and read the user's alias file (77 entries, file path not recorded) and reported: **"C" clashes with the user's alias for Copy**; "CD", "PIT", "IO", "RC" and "CP" do not clash. The file was not changed. This check read only the user-profile alias file; whether AutoCAD merges a second file, and what wins when a plugin command and an alias share letters, was not tested (R-002 G describes it from Autodesk's page).
+6. **Not tested.** The rules-file route (needs a bundle folder, forbidden outside trial 9), contextual tab merged or "without focus", workspace switch with the tab showing, restart, selection of many objects speed, the tab appearing after a real pick, tips on screen, built-in command names clashing.
+7. **Evidence:** `evidence\t7\t7.log`.
+8. **What it means for the build approach.** A tab that shows and hides from selection can be done in plain code with no menu-file changes, but this trial did not see it work on screen. The alias check can be written exactly as planned. The "C" clash is real in Tim's own alias file: the plan must give "C" a different short name or ask him.
 
 ---
 
