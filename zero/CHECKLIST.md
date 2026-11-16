@@ -2,7 +2,7 @@
 
 **Why this file exists.** Tim, 16 Nov 2026 night: "where to from here youre not doing a good job of guiding me". From here the planning chat leads from this ONE list, one step at a time, and shows "N of M done" in every reply. Update it the moment a step is ticked.
 
-## Done (14)
+## Done (15)
 
 1. Ribbon (D-051).
 2. Naming rule (D-055, D-056).
@@ -18,10 +18,10 @@
 12. Inlets window: right track, same as the others (D-111; `pictures\inlet_window_full_size.html`).
 15. Pit schedule window ticked (D-112; `pictures\schedule_window_full_size.html`); open: what a 16-row schedule does, and the real title and notes wording.
 13. Tank window ticked (D-113; `pictures\tank_window_full_size.html`).
+14. Detention window ticked (D-114; `pictures\detention_window_full_size.html`).
 
-## Left, in this order (4)
+## Left, in this order (3)
 
-14. Detention window: working mock-up, Tim's tick.
 16. Tim uses the windows and gives his verdict (D-087: "i cant give you full answer until using").
 17. (ON HOLD after the licence incident, PARKING_LOT P-08: no AutoCAD until Tim agrees how.) Trial results read, and the build approach confirmed or changed (`stage4\TRIAL_RESULTS.md`).
 18. The plan (Stage 6) written and approved; the build chat's opening brief written.
