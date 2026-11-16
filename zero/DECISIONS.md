@@ -192,6 +192,10 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-108** (16 Nov 2026, night) Adds to D-107: "site areas might be able to come from council documents". A site area has three possible sources: measured off the drawing, typed, or given in a council document. In foundation terms this is one more source on the same fact, not a new piece of screen. Whether the plugin reads the figure out of the document itself or the person types it and marks it "given" is not said; the first release marks it "given".
 
+**D-109** (16 Nov 2026, night) Pit schedule: "Placed once, then follows the pits". Type SH, pick where it goes; it draws in the office's layout and then updates itself whenever a pit or pipe changes; a typed-over cell is held (D-103); ordinary lines and text.
+
+**D-110** (16 Nov 2026, night) Schedule rows besides the numbered pits: the existing council pit connected to; a pump well; plastic pits that are ticked (D-076).
+
 **Open after this sitting (asked once on 16 Nov, Tim sent D-079 instead of answering; not to be re-asked in the same form):** where a pipe stops at a pit (gap check Pit item 1); whether a schedule cell can be typed over (item 3); which pit kinds are in the first release and whether a turned pit is in the window (item 9); which pits count as storage (item 10).
 
 ## How levels are designed
