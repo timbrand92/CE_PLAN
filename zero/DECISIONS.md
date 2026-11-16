@@ -132,6 +132,10 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-078** (16 Nov 2026, evening) Cover levels: "Locked on every pit". Once typed, only the person can change a cover level; working out levels along a run never touches it. (Pit item 2; follows D-018.)
 
+**D-079** (16 Nov 2026, evening) Pipe material: "material selection for pipes must be text field as well a drop down". The Material box is a list you can pick from AND type into (a material not on the list can be typed). Straight after: "same with grade": the Grade box is also pick-or-type (any grade, such as 1 in 75, can be typed). Whether other lists (kind, size, lid) also allow typing: not said, to ask.
+
+**Open after this sitting (asked once on 16 Nov, Tim sent D-079 instead of answering; not to be re-asked in the same form):** where a pipe stops at a pit (gap check Pit item 1); whether a schedule cell can be typed over (item 3); which pit kinds are in the first release and whether a turned pit is in the window (item 9); which pits count as storage (item 10).
+
 ## How levels are designed
 
 **D-016** (16 Nov 2026) [8v] Moving a pit has no single rule for levels: "IT DEPENDS ON THE DESIGN NO? SO INVERTS MIGHT HAVE TO CHANGE UPSTREAM OR WE MIGHT NEED TO UPDATE INVERTS TO SUIT OR GRADE".
