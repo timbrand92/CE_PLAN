@@ -56,6 +56,12 @@ No dates are given until the trials are done.
 7. None of the windows has been used for real work, and their padlock clicks and typing were never tested by anyone but Tim.
 If a trial fails, the build approach changes before any tool is built.
 
+## 6a. What the trials of 16 Nov 2026 showed (read the trial results file for detail)
+
+1. **Proven:** sums in any direction (plain code, far faster than needed); joins on ordinary objects through move, copy, mirror, rotate, stretch, save and reopen; a sheet with no plugin looks and plots identical, edits plainly, and the change is reported on return; a real AutoCAD picture as the live preview in about 21 to 39 ms, with Inspect keeping the typed values; speed about 40 ms per move on 2500 objects.
+2. **Build approach changes:** a join is kept as a soft pointer on the object itself; joined pipe ends are moved at the end of the command (one undo step); a position stamp is kept with each note; no drawing-wide shelf of facts keyed by handle.
+3. **Still not proven:** grips and double-click (need a real mouse); facts in AutoCAD's own Properties palette; the ribbon tab and tips on screen; the AutoCAD side of update and rollback; AutoCAD LT; a 2560 x 1440 window on a real screen; Tim's installed plugins were loaded during the trials and any interaction is unmeasured.
+
 ## 7. Open items carried into the build (none blocks the start)
 
 1. How long a run is before an inspection opening is offered (AS 3500.3 figure not found online).
