@@ -111,7 +111,7 @@ input[type=number]::-webkit-inner-spin-button{display:none}
 .sum .res.sl{font-weight:400;color:var(--t1)}
 
 /* parts: status pill */
-.pill{display:flex;align-items:center;padding:8px 8px 8px 16px;border-radius:8px;border-left:4px solid currentColor;min-height:40px;font-size:14px;line-height:20px;white-space:nowrap;transition:background 300ms ease-out,color 300ms ease-out}
+.pill{display:flex;align-items:center;padding:8px 8px 8px 16px;border-radius:8px;border-left:4px solid currentColor;min-height:40px;font-size:14px;line-height:20px;transition:background 300ms ease-out,color 300ms ease-out}
 .pill b{font-weight:600;margin-right:4px}
 .pill.ok{background:var(--okbg);color:var(--ok)}
 .pill.warn{background:var(--warnbg);color:var(--warn)}
@@ -144,6 +144,28 @@ input[type=number]::-webkit-inner-spin-button{display:none}
 .prev .key i{display:inline-block;width:12px;height:12px;border-radius:4px;margin-right:8px;vertical-align:-1px}
 .stx{font:13px var(--font);fill:var(--t3)}
 .stx2{font:13px var(--font);fill:var(--t2)}
+.combo{position:relative;display:block;min-width:0}
+.cin{width:100%;height:32px;padding:0 32px 0 8px;font:400 14px var(--font);color:var(--t1);background:transparent;border:1px solid var(--bd);border-radius:8px;outline:0}
+.cin:focus-visible{box-shadow:0 0 0 2px var(--acc)}
+.cbtn{position:absolute;right:0;top:0;width:32px;height:100%;border:0;background:transparent;cursor:pointer}
+.cbtn:after{content:"";position:absolute;right:12px;top:10px;width:6px;height:6px;border-right:2px solid var(--t3);border-bottom:2px solid var(--t3);transform:rotate(45deg)}
+.clist{position:absolute;left:0;right:0;top:36px;z-index:20;margin:0;padding:8px;list-style:none;background:var(--card);border:1px solid var(--bd);border-radius:12px;box-shadow:var(--shadow);font-size:14px;color:var(--t1)}
+.clist li{padding:4px 8px;border-radius:8px;cursor:pointer;line-height:24px}
+.clist li:hover{background:var(--accbg)}
+.combo.small .cin{height:28px;font-size:13px;color:var(--t3);border-color:var(--bd2);padding:0 20px 0 8px}
+.combo.small .cbtn:after{top:9px;right:8px;width:5px;height:5px}
+.combo.small .clist{left:auto;right:0;width:104px}
+.combo.big{display:inline-block}
+.combo.big .cin{field-sizing:content;width:auto;min-width:56px;max-width:140px;height:40px;font:600 32px var(--font);padding:0 24px 0 0;border:0;background:transparent;text-overflow:ellipsis}
+.combo.big .cbtn{width:20px;height:40px}
+.combo.big .cbtn:after{top:15px;right:4px;width:5px;height:5px}
+.combo.big .clist{top:44px;left:0;right:auto;width:120px}
+.combo.grey .cin{color:var(--t3);background:var(--bd2);cursor:default}
+.sum .sf.res .nb.resin{border:0;border-top:1px solid var(--t2);border-bottom:3px double var(--t2);border-radius:0;font-weight:600;font-size:16px;margin-right:-9px;height:32px}
+.sum .sf.res.typable{border:0}
+.sum .sc.two{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;line-height:15px}
+.sum .sc.two a{color:var(--t2);text-decoration:underline;cursor:pointer;font-size:13px}
+.sum .sl small{font-size:13px;color:var(--t3);margin-left:4px}
 @media (prefers-reduced-motion:reduce){*{transition-duration:0s!important;animation-duration:0s!important}}
 
 </style>
@@ -193,7 +215,7 @@ input[type=number]::-webkit-inner-spin-button{display:none}
               <div class="ans"><div class="dd big"><select id="size"><option>350 x 350</option><option selected>450 x 450</option><option>600 x 600</option><option>600 x 900</option><option>900 x 900</option></select></div></div>
               <div class="field"><label for="num">Number</label><input class="nb" type="text" id="num" value="P3" maxlength="8"></div>
               <div class="field"><label for="kind">Kind</label><div class="dd"><select id="kind"><option selected>Junction pit</option><option>Grated pit</option><option>Plastic pit</option><option>Orifice pit</option><option>Silt pit</option></select></div></div>
-              <div class="field"><label for="lid">Lid</label><div class="dd"><select id="lid"><option selected>Grated</option><option>Solid</option></select></div></div>
+              <div class="field"><label for="lid">Lid</label><div class="combo"><input class="cin" id="lid" type="text" value="Grated" autocomplete="off" spellcheck="false"><button type="button" class="cbtn" tabindex="-1" aria-label="Open the list"></button><ul class="clist" hidden><li>Grated</li><li>Solid</li></ul></div></div>
               <label class="tick"><input type="checkbox" id="det"><span class="box"></span>Holds detention water</label>
               <svg id="tally" viewBox="0 0 368 88" height="88"></svg>
               <div class="note">The five sizes are drawn to the same scale.</div>
@@ -268,6 +290,7 @@ function inspect(on,instant){
   if(instant){void w.offsetWidth;w.classList.remove('instant');b.classList.remove('instant');}
 }
 function wireCommon(){
+  initCombos();
   $('r1080').addEventListener('click',function(){RES=1080;fit();});
   $('r1440').addEventListener('click',function(){RES=1440;fit();});
   $('thDark').addEventListener('click',function(){setTheme('dark');});
@@ -280,6 +303,13 @@ function wireCommon(){
   if(q.get('res')==='1440')RES=1440;
   setTheme(q.get('theme')==='light'?'light':'dark');
   return q;
+}
+
+function initCombos(){
+  document.querySelectorAll('.combo').forEach(function(cb){var inp=cb.querySelector('input'),ul=cb.querySelector('ul');
+    cb.querySelector('button').addEventListener('click',function(e){e.stopPropagation();if(inp.readOnly)return;var o=ul.hidden;document.querySelectorAll('.clist').forEach(function(u){u.hidden=true;});ul.hidden=!o;});
+    ul.addEventListener('click',function(e){if(e.target.tagName==='LI'){inp.value=e.target.textContent;ul.hidden=true;inp.dispatchEvent(new Event('input',{bubbles:true}));inp.dispatchEvent(new Event('change',{bubbles:true}));}});});
+  document.addEventListener('click',function(){document.querySelectorAll('.clist').forEach(function(u){u.hidden=true;});});
 }
 
 (function(){

@@ -111,7 +111,7 @@ input[type=number]::-webkit-inner-spin-button{display:none}
 .sum .res.sl{font-weight:400;color:var(--t1)}
 
 /* parts: status pill */
-.pill{display:flex;align-items:center;padding:8px 8px 8px 16px;border-radius:8px;border-left:4px solid currentColor;min-height:40px;font-size:14px;line-height:20px;white-space:nowrap;transition:background 300ms ease-out,color 300ms ease-out}
+.pill{display:flex;align-items:center;padding:8px 8px 8px 16px;border-radius:8px;border-left:4px solid currentColor;min-height:40px;font-size:14px;line-height:20px;transition:background 300ms ease-out,color 300ms ease-out}
 .pill b{font-weight:600;margin-right:4px}
 .pill.ok{background:var(--okbg);color:var(--ok)}
 .pill.warn{background:var(--warnbg);color:var(--warn)}
@@ -144,6 +144,28 @@ input[type=number]::-webkit-inner-spin-button{display:none}
 .prev .key i{display:inline-block;width:12px;height:12px;border-radius:4px;margin-right:8px;vertical-align:-1px}
 .stx{font:13px var(--font);fill:var(--t3)}
 .stx2{font:13px var(--font);fill:var(--t2)}
+.combo{position:relative;display:block;min-width:0}
+.cin{width:100%;height:32px;padding:0 32px 0 8px;font:400 14px var(--font);color:var(--t1);background:transparent;border:1px solid var(--bd);border-radius:8px;outline:0}
+.cin:focus-visible{box-shadow:0 0 0 2px var(--acc)}
+.cbtn{position:absolute;right:0;top:0;width:32px;height:100%;border:0;background:transparent;cursor:pointer}
+.cbtn:after{content:"";position:absolute;right:12px;top:10px;width:6px;height:6px;border-right:2px solid var(--t3);border-bottom:2px solid var(--t3);transform:rotate(45deg)}
+.clist{position:absolute;left:0;right:0;top:36px;z-index:20;margin:0;padding:8px;list-style:none;background:var(--card);border:1px solid var(--bd);border-radius:12px;box-shadow:var(--shadow);font-size:14px;color:var(--t1)}
+.clist li{padding:4px 8px;border-radius:8px;cursor:pointer;line-height:24px}
+.clist li:hover{background:var(--accbg)}
+.combo.small .cin{height:28px;font-size:13px;color:var(--t3);border-color:var(--bd2);padding:0 20px 0 8px}
+.combo.small .cbtn:after{top:9px;right:8px;width:5px;height:5px}
+.combo.small .clist{left:auto;right:0;width:104px}
+.combo.big{display:inline-block}
+.combo.big .cin{field-sizing:content;width:auto;min-width:56px;max-width:140px;height:40px;font:600 32px var(--font);padding:0 24px 0 0;border:0;background:transparent;text-overflow:ellipsis}
+.combo.big .cbtn{width:20px;height:40px}
+.combo.big .cbtn:after{top:15px;right:4px;width:5px;height:5px}
+.combo.big .clist{top:44px;left:0;right:auto;width:120px}
+.combo.grey .cin{color:var(--t3);background:var(--bd2);cursor:default}
+.sum .sf.res .nb.resin{border:0;border-top:1px solid var(--t2);border-bottom:3px double var(--t2);border-radius:0;font-weight:600;font-size:16px;margin-right:-9px;height:32px}
+.sum .sf.res.typable{border:0}
+.sum .sc.two{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;line-height:15px}
+.sum .sc.two a{color:var(--t2);text-decoration:underline;cursor:pointer;font-size:13px}
+.sum .sl small{font-size:13px;color:var(--t3);margin-left:4px}
 @media (prefers-reduced-motion:reduce){*{transition-duration:0s!important;animation-duration:0s!important}}
 
 </style>
@@ -152,6 +174,8 @@ input[type=number]::-webkit-inner-spin-button{display:none}
 #cards{flex:none;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;align-items:stretch}
 #tally,#slope,#run,#sample{display:block;width:100%}
 #tally{margin-top:8px}
+#a1m{min-width:0;max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
 </style>
 </head>
 <body>
@@ -181,18 +205,19 @@ input[type=number]::-webkit-inner-spin-button{display:none}
         <div id="cards">
           <section class="card">
             <div class="lab"><i>1</i>Pipe</div>
-            <div class="ans"><div class="dd big"><select id="size"><option>100</option><option selected>150</option><option>225</option><option>300</option></select></div><span id="a1m">uPVC</span></div>
+            <div class="ans"><div class="combo big"><input class="cin" id="size" type="text" value="150" inputmode="numeric" autocomplete="off"><button type="button" class="cbtn" tabindex="-1" aria-label="Open the list"></button><ul class="clist" hidden><li>100</li><li>150</li><li>225</li><li>300</li></ul></div><span id="a1m">uPVC</span></div>
             <div class="field"><label for="kind">Kind</label><div class="dd"><select id="kind"><option selected>New stormwater</option><option>Charged</option><option>Suspended</option><option>Detention</option></select></div></div>
-            <div class="field"><label for="mat">Material</label><div class="dd"><select id="mat"><option selected>uPVC</option><option>Concrete</option></select></div></div>
+            <div class="field"><label for="mat">Material</label><div class="combo"><input class="cin" id="mat" type="text" value="uPVC" autocomplete="off" spellcheck="false"><button type="button" class="cbtn" tabindex="-1" aria-label="Open the list"></button><ul class="clist" hidden><li>uPVC</li><li>Concrete</li><li>FRC</li><li>HDPE</li></ul></div></div>
             <svg id="tally" viewBox="0 0 328 80" height="80"></svg>
             <div class="note">Pipe sizes in dia (mm), drawn to the same scale.</div>
           </section>
           <section class="card">
             <div class="lab"><i>2</i>Fall</div>
             <div class="ans"><span class="num" id="a2">0.08</span><span class="unit">m fall</span></div>
+            <div id="gst" class="pill warn" style="display:none"></div>
             <div class="sum">
               <div class="sg"></div><div class="sl">Length</div><div class="sf">8.00</div><div class="sc">measured</div>
-              <div class="sg">÷</div><div class="sl">Grade</div><div class="sf" id="gnum">100</div><div class="sc"><div class="dd"><select id="grade"><option value="100" selected>1 in 100</option><option value="80">1 in 80</option><option value="60">1 in 60</option><option value="200">1 in 200</option></select></div></div>
+              <div class="sg">÷</div><div class="sl" id="glab">Grade</div><div class="sf" id="gnum">100</div><div class="sc"><div class="combo small"><input class="cin" id="grade" type="text" value="1 in 100" autocomplete="off" spellcheck="false"><button type="button" class="cbtn" tabindex="-1" aria-label="Open the list"></button><ul class="clist" hidden><li>1 in 200</li><li>1 in 100</li><li>1 in 80</li><li>1 in 60</li></ul></div></div>
               <div class="sg">=</div><div class="sl res">Fall</div><div class="sf res" id="fall">0.08</div><div class="sc">worked out</div>
             </div>
             <svg id="slope" viewBox="0 0 328 120" height="120"></svg>
@@ -205,7 +230,7 @@ input[type=number]::-webkit-inner-spin-button{display:none}
             <div class="sum">
               <div class="sg"></div><div class="sl">Upstream invert</div><div class="sf"><input class="nb r" type="number" id="up" value="5.23" step="0.01"></div><div class="sc">chosen</div>
               <div class="sg">−</div><div class="sl">Fall</div><div class="sf" id="fall2">0.08</div><div class="sc">from card 2</div>
-              <div class="sg">=</div><div class="sl res">Downstream invert</div><div class="sf res" id="down">5.15</div><div class="sc">worked out</div>
+              <div class="sg">=</div><div class="sl res">Downstream invert</div><div class="sf res typable"><input class="nb r resin" type="number" id="down" value="5.15" step="0.01"></div><div class="sc two" id="dchip">worked out</div>
             </div>
             <svg id="run" viewBox="0 0 328 88" height="88"></svg>
           </section>
@@ -261,6 +286,7 @@ function inspect(on,instant){
   if(instant){void w.offsetWidth;w.classList.remove('instant');b.classList.remove('instant');}
 }
 function wireCommon(){
+  initCombos();
   $('r1080').addEventListener('click',function(){RES=1080;fit();});
   $('r1440').addEventListener('click',function(){RES=1440;fit();});
   $('thDark').addEventListener('click',function(){setTheme('dark');});
@@ -275,12 +301,25 @@ function wireCommon(){
   return q;
 }
 
+function initCombos(){
+  document.querySelectorAll('.combo').forEach(function(cb){var inp=cb.querySelector('input'),ul=cb.querySelector('ul');
+    cb.querySelector('button').addEventListener('click',function(e){e.stopPropagation();if(inp.readOnly)return;var o=ul.hidden;document.querySelectorAll('.clist').forEach(function(u){u.hidden=true;});ul.hidden=!o;});
+    ul.addEventListener('click',function(e){if(e.target.tagName==='LI'){inp.value=e.target.textContent;ul.hidden=true;inp.dispatchEvent(new Event('input',{bubbles:true}));inp.dispatchEvent(new Event('change',{bubbles:true}));}});});
+  document.addEventListener('click',function(){document.querySelectorAll('.clist').forEach(function(u){u.hidden=true;});});
+}
+
 (function(){
 var CY=4,XA=8,XB=16,LEN=8.0,CL4=5.83,CL3=5.75,OUT=5.13,cur=null;
-function S(){var sz=cur!==null?cur:parseInt($('size').value,10),gr=parseInt($('grade').value,10),up=parseFloat($('up').value);
-  var fall=LEN/gr,down=up-fall,dia=parseInt($('size').value,10)/1000;
-  return {sz:sz,gr:gr,up:up,fall:fall,down:down,dia:dia,cov:Math.min(CL4-up-dia,CL3-down-dia),mat:$('mat').value,lab:$('lab').checked,arr:$('arr').checked,ils:$('ils').checked,side:$('side').value==='Above the pipe'?-1:1};}
-function changed(st){return st.gr!==100||Math.abs(st.up-5.23)>1e-9;}
+var GR=100,SZ=150,ov=null;
+function sizeVal(){var v=parseFloat($('size').value);if(v>0)SZ=v;return SZ;}
+function parseGrade(t){var m=/^\s*(?:1\s*in\s*)?(\d+(?:\.\d+)?)\s*$/i.exec(t||'');if(!m)return null;var n=parseFloat(m[1]);return n>0?n:null;}
+function matU(){var m=($('mat').value||'').trim();return m;}
+function S(){var pg=parseGrade($('grade').value);if(ov===null&&pg!==null)GR=pg;var sz=cur!==null?cur:sizeVal(),up=parseFloat($('up').value),dia=sizeVal()/1000;
+  var fall,down,gr=GR;
+  if(ov!==null){down=ov;fall=up-down;if(fall>1e-9){gr=Math.round(LEN/fall);}}
+  else{fall=LEN/GR;down=up-fall;}
+  return {sz:sz,gr:gr,up:up,fall:fall,down:down,dia:dia,ov:ov!==null,flat:fall<=1e-9,cov:Math.min(CL4-up-dia,CL3-down-dia),mat:matU(),lab:$('lab').checked,arr:$('arr').checked,ils:$('ils').checked,side:$('side').value==='Above the pipe'?-1:1};}
+function changed(st){return st.ov||st.gr!==100||Math.abs(st.up-5.23)>1e-9;}
 function wrong(st){return st.down<OUT-1e-9;}
 
 function scene(svg,vb,ppm,ts,st,full){
@@ -309,14 +348,14 @@ function scene(svg,vb,ppm,ts,st,full){
     el(g,'polygon',{points:'19.86,3.68 20.14,3.77 19.86,3.86',fill:bad?'var(--amber)':'var(--pipe)'});
     T(20,CY+.2+s+.08,'150 DIA. UPVC PIPE AT 1 IN 100','pl','middle',{textLength:16*s,lengthAdjust:'spacingAndGlyphs'});
     if(bad){el(g,'rect',{x:19.3,y:3.05,width:1.4,height:.5,rx:.1,fill:'var(--warnbg)',stroke:'var(--amber)','stroke-width':px(1.5)});T(20,3.42,'Check','',  'middle',{'font-weight':'600',style:'fill:var(--warn)'});}}
-  var mid=(XA+XB)/2,txt=$('size').value+' DIA. '+(st.mat==='Concrete'?'CONC':'UPVC')+' PIPE AT 1 IN '+st.gr,sd=st.side;
+  var mid=(XA+XB)/2,txt=sizeVal()+' DIA. '+(st.mat?st.mat.toUpperCase()+' ':'')+'PIPE AT 1 IN '+st.gr,sd=st.side;
   if(st.arr)arrow(mid,CY+sd*(w2+.45*s));
-  if(st.lab){var yy=sd<0?CY-w2-1.6*s:CY+w2+2.5*s;T(mid-.4,yy,txt,'pl','middle',{textLength:txt.length*.55*s,lengthAdjust:'spacingAndGlyphs'});}
+  if(st.lab){var yy=sd<0?CY-w2-1.6*s:CY+w2+2.5*s;T(mid-.4,yy,txt,'pl','middle',{textLength:Math.min(txt.length*.55*s,6.4),lengthAdjust:'spacingAndGlyphs'});}
   if(st.ils){var yb=CY-w2-.45*s,iw=7*.6*s;
     T(XA+.225+.15,yb,'IL '+f2(st.up),'il','start');T(XB-.225-.15,yb,'IL '+f2(st.down),'il','end');T(XB+.225+.15,yb,'IL 5.13','il','start');
     if(changed(st)){var ex=XB-.225-.15,pd=.12*u;el(g,'rect',{x:ex-iw-pd,y:yb-s*.85,width:iw+2*pd,height:s*1.15,rx:s*.2,fill:'none',stroke:'var(--amber)','stroke-width':px(3)});}}
 }
-function tally(){var s=$('tally');s.innerHTML='';var sel=parseInt($('size').value,10),x=16,k=56/300;
+function tally(){var s=$('tally');s.innerHTML='';var sel=sizeVal(),x=16,k=56/300;
   [100,150,225,300].forEach(function(d){var r=d*k/2;
     el(s,'circle',{cx:x+22,cy:30,r:r,fill:d===sel?'var(--acc)':'none',stroke:d===sel?'var(--acc)':'var(--t3)','stroke-width':1.4});
     el(s,'text',{x:x+22,y:72,'text-anchor':'middle',class:'stx'+(d===sel?'2':'')},d);x+=76;});}
@@ -349,20 +388,25 @@ function sample(st){var s=$('sample');s.innerHTML='';
   var sd=st.side,ly=sd<0?y-hw-16:y+hw+26;
   if(st.ils){var iy=sd<0?y+hw+18:y-hw-6;el(s,'text',{x:58,y:iy,class:'stx'},'IL '+f2(st.up));el(s,'text',{x:270,y:iy,'text-anchor':'end',class:'stx'},'IL '+f2(st.down));}
   if(st.arr)el(s,'path',{d:'M150 '+(y+sd*(hw+8))+'L162 '+(y+sd*(hw+8)-0)+'L156 '+(y+sd*(hw+8)-5)+'M162 '+(y+sd*(hw+8))+'L156 '+(y+sd*(hw+8)+5),fill:'none',stroke:'var(--t2)','stroke-width':1.6});
-  if(st.lab)el(s,'text',{x:164,y:ly+(sd<0?-6:6),'text-anchor':'middle',style:'font:13px Consolas,monospace;fill:var(--pl)'},$('size').value+' DIA. '+(st.mat==='Concrete'?'CONC':'UPVC')+' PIPE AT 1 IN '+st.gr);}
+  if(st.lab)el(s,'text',{x:164,y:ly+(sd<0?-6:6),'text-anchor':'middle',style:'font:13px Consolas,monospace;fill:var(--pl)',textLength:Math.min((sizeVal()+' DIA. '+(st.mat?st.mat.toUpperCase()+' ':'')+'PIPE AT 1 IN '+st.gr).length*7.8,250),lengthAdjust:'spacingAndGlyphs'},sizeVal()+' DIA. '+(st.mat?st.mat.toUpperCase()+' ':'')+'PIPE AT 1 IN '+st.gr);}
 function draw(st){var bw=$('band').clientWidth||1488,bh=$('band').clientHeight||280,vh=10.6*bh/bw;scene($('band'),'7 '+(4.05-vh/2)+' 10.6 '+vh,bw/10.6,0.15,st,false);scene($('model'),'1 0.7 30 14.59',64,0.35,st,true);}
 function render(){
-  var st0=S(),sizeNow=parseInt($('size').value,10);
-  roll($('a2'),f2(st0.fall));roll($('fall'),f2(st0.fall));roll($('fall2'),f2(st0.fall));roll($('gnum'),String(st0.gr));$('a1m').textContent=st0.mat;
-  roll($('a3'),'IL '+f2(st0.down));roll($('down'),f2(st0.down));
+  var st0=S(),sizeNow=sizeVal();
+  roll($('a2'),f2(st0.fall));roll($('fall'),f2(st0.fall));roll($('fall2'),f2(st0.fall));roll($('gnum'),String(st0.gr));
+  var gin=$('grade'),gc=gin.parentNode;if(st0.ov){gin.value='1 in '+st0.gr;gin.readOnly=true;gc.classList.add('grey');$('glab').innerHTML='Grade<small>worked out</small>';}else{gin.readOnly=false;gc.classList.remove('grey');$('glab').textContent='Grade';}
+  var dn=$('down');if(!st0.ov){dn.value=f2(st0.down);}
+  $('dchip').innerHTML=st0.ov?'typed over<a id="putback">Put back</a>':'worked out';var pb=$('putback');if(pb)pb.addEventListener('click',function(){ov=null;render();});$('a1m').textContent=st0.mat||'—';var gb=$('gst');if(!st0.ov&&parseGrade($('grade').value)===null){gb.style.display='flex';pill(gb,'warn','Needs a look:','type a grade such as 1 in 75.');}else gb.style.display='none';
+  roll($('a3'),'IL '+f2(st0.down));
   var b=$('st1'),bad=wrong(st0);
-  if(bad)pill(b,'bad','Wrong:','arrives at '+f2(st0.down)+', outlet is '+f2(OUT)+'.');
+  if(st0.flat)pill(b,'bad','Wrong:','downstream '+f2(st0.down)+' is not below upstream '+f2(st0.up)+'.');
+  else if(bad)pill(b,'bad','Wrong:','arrives at '+f2(st0.down)+', outlet is '+f2(OUT)+'.');
   else if(st0.cov<0.30-1e-9)pill(b,'warn','Needs a look:','cover '+f2(st0.cov)+', needs 0.30.');
   else pill(b,'ok','Suits:','cover '+f2(st0.cov)+', needs 0.30.');
   var h='<span class="h">What else changes</span>',n=0;
   if(sizeNow!==150){h+='<span class="ln">'+mini('neutral','Changes')+'Pit schedule: rows P4 and P3 show '+sizeNow+' dia.</span>';n++;}
   if(changed(st0)){h+='<span class="ln">'+mini('neutral','Moves')+'Invert at P3 becomes '+f2(st0.down)+'.</span><span class="ln">'+mini('warn','Check')+'Pipe from P3 to P2: check its upstream invert.</span>';n++;}
-  if(bad){h+='<span class="ln">'+mini('bad','Wrong')+'Arrives at '+f2(st0.down)+', outlet is '+f2(OUT)+'.</span>';n++;}
+  if(st0.flat){h+='<span class="ln">'+mini('bad','Wrong')+'Downstream '+f2(st0.down)+' is not below upstream '+f2(st0.up)+'.</span>';n++;}
+  if(bad&&!st0.flat){h+='<span class="ln">'+mini('bad','Wrong')+'Arrives at '+f2(st0.down)+', outlet is '+f2(OUT)+'.</span>';n++;}
   if(!n)h+='<span class="none">Nothing else changes.</span>';
   $('else').innerHTML=h;
   tally();slope(st0);runView(st0);sample(st0);
@@ -370,11 +414,19 @@ function render(){
   else if(cur!==sizeNow){tween({v:cur},{v:sizeNow},300,function(o){cur=o.v;draw(S());runView(S());});}
   else draw(S());
 }
-['kind','size','mat','grade','up','lab','arr','ils','side'].forEach(function(i){$(i).addEventListener('input',render);$(i).addEventListener('change',render);});
+['kind','size','mat','grade','up','lab','arr','ils','side','down'].forEach(function(i){$(i).addEventListener('input',render);$(i).addEventListener('change',render);});
 window.__redraw=function(){if(cur!==null){draw(S());runView(S());}};
+function comboOld(c){var inp=c.querySelector('input'),ul=c.querySelector('ul');
+  c.querySelector('button').addEventListener('click',function(e){e.stopPropagation();var o=ul.hidden;document.querySelectorAll('.clist').forEach(function(u){u.hidden=true;});ul.hidden=!o;});
+  ul.addEventListener('click',function(e){if(e.target.tagName==='LI'){inp.value=e.target.textContent;ul.hidden=true;inp.dispatchEvent(new Event('input',{bubbles:true}));}});
+  inp.addEventListener('blur',function(){if(inp.id==='grade'){var g=parseGrade(inp.value);if(g!==null)inp.value='1 in '+g;}});}
+$('grade').addEventListener('blur',function(){var g=parseGrade(this.value);if(g!==null&&!this.readOnly)this.value='1 in '+g;});
+$('down').addEventListener('input',function(){var v=parseFloat(this.value);if(!isNaN(v))ov=v;else if(this.value==='')ov=null;});
 var q=wireCommon();
-if(['100','150','225','300'].indexOf(q.get('size'))>=0)$('size').value=q.get('size');
-if(['80','60','100','200'].indexOf(q.get('grade'))>=0)$('grade').value=q.get('grade');
+if(q.get('material'))$('mat').value=q.get('material');
+if(parseFloat(q.get('size'))>0)$('size').value=q.get('size');
+if(q.get('down')&&!isNaN(parseFloat(q.get('down')))){ov=parseFloat(q.get('down'));$('down').value=q.get('down');}
+if(q.get('grade')){var pgq=parseGrade(q.get('grade'));$('grade').value=pgq!==null?'1 in '+pgq:q.get('grade');}
 render();fit();
 if(q.get('inspect')==='1')inspect(true,true);
 })();

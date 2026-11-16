@@ -136,6 +136,14 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-080** (16 Nov 2026, evening) Asked which other boxes are pick-or-type, Tim ticked "Pipe size" and "Lid" and wrote: "you need ability to override both invert levels as well". So: pipe size and lid can be typed as well as picked; pit size was not ticked, so it stays list only; on a pipe BOTH invert levels (upstream and downstream) can be typed over. The planning chat's working rule for the mock-up (Tim to confirm): when the downstream invert is typed over, the grade is worked out from the two inverts and the length, the value is marked "typed over", and "Put back" returns it to the grade-driven value.
 
+**D-081** (16 Nov 2026, evening) A branch joining a pipe with no pit: "allow it and offer an io if its a bend point in main pipe and theres no io on the main line and the run is long or is this over complicating it?" The branch is always allowed. An inspection opening is OFFERED (never forced) when the join is at a bend in the main pipe, the main line has no inspection opening, and the run is long. How long is "long": not said; to come from the office list or AS 3500.3, to be looked up. The planning chat's answer to "is this over complicating it?": no, provided it stays one quiet offer line and its numbers live in the office list. (Gap check Pipe item 19.)
+
+**D-082** (16 Nov 2026, evening) Twin detention pipes: "One pipe that says '2 x 225'". One pipe with a number-of-pipes box; draws two bands, one label; the storage sum counts both. (Pipe item 16.)
+
+**D-083** (16 Nov 2026, evening) Marking detention: "its own kind with a slightly different blue colour and layer, we will need to update the legend as well". Detention is its own kind of pipe, on its own layer, in a slightly different blue, and the legend gains a line for it. Which blue and what layer name: not said, to settle with the standards list. (Pipe item 17.)
+
+**D-084** (16 Nov 2026, evening) The drop across a pit and the steps in the orifice pit: "Office standard, can be typed over". (Pipe item 23.)
+
 **Open after this sitting (asked once on 16 Nov, Tim sent D-079 instead of answering; not to be re-asked in the same form):** where a pipe stops at a pit (gap check Pit item 1); whether a schedule cell can be typed over (item 3); which pit kinds are in the first release and whether a turned pit is in the window (item 9); which pits count as storage (item 10).
 
 ## How levels are designed
