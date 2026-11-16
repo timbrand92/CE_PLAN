@@ -228,6 +228,8 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-126** (16 Nov 2026, about 10:05 pm) Tim: "can you force close autocad for some reason i cant". On that yes in words (rule 1.9), the planning chat closed the trial's stuck AutoCAD (the only AutoCAD running, started 9:24 pm, showing its Start tab): a normal close was tried first and did not work in 15 seconds, so it was force-closed. No AutoCAD was left running. The trial chat was then released to open AutoCAD by the double-click hand-off only (D-122).
 
+**D-127** (16 Nov 2026, night) Start building: "Yes, start it now": a new chat builds only the part that needs no AutoCAD (the brain: facts, holds, sums, the office list of standards) and its tests, while the AutoCAD trials carry on; it never starts AutoCAD and never touches the installed plugin. Where the new plugin lives: "A new private repository of its own": the folder `C:\CE_CIVIL` with its own private GitHub repository under Tim's account, nothing shared with the old plugin's repository.
+
 **Open after this sitting (asked once on 16 Nov, Tim sent D-079 instead of answering; not to be re-asked in the same form):** where a pipe stops at a pit (gap check Pit item 1); whether a schedule cell can be typed over (item 3); which pit kinds are in the first release and whether a turned pit is in the window (item 9); which pits count as storage (item 10).
 
 ## How levels are designed
