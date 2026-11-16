@@ -236,6 +236,8 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-130** (16 Nov 2026, about 10:40 pm) The trial chat's test AutoCAD (t1_seed, opened 10:06 pm by hand-off) jammed part-way through trial 1 and was left open. Tim: "Close it for me": normal close tried, not complete in 15 seconds, force-closed on his word; no AutoCAD left running. On how the trials carry on after three jams (the planning chat recommended stopping for the night and using Codex tomorrow): "Keep trying tonight". The trial chat was told to continue under rule 1.9 with a changed method: short steps, state read back after each, never keys sent blind.
 
+**D-131** (16 Nov 2026, night) Levels along a run with the plan under the long section and the hold feedback: "need more height on vertical otherwise great". The long section is to be drawn taller (about 5 times) with a slimmer plan strip.
+
 **Open after this sitting (asked once on 16 Nov, Tim sent D-079 instead of answering; not to be re-asked in the same form):** where a pipe stops at a pit (gap check Pit item 1); whether a schedule cell can be typed over (item 3); which pit kinds are in the first release and whether a turned pit is in the window (item 9); which pits count as storage (item 10).
 
 ## How levels are designed
