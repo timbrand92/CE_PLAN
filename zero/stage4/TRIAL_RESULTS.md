@@ -7,7 +7,7 @@
 
 1. **Trial 11, any direction:** PASS (pure code, no AutoCAD).
 2. **Trial 10, headless predicts full:** PASS for the scripted commands tried (see below). Run under the old limits, before the licence incident. Not repeatable under the new limits.
-3. **Trial 1, joins:** NOT TESTED yet.
+3. **Trial 1, joins:** BLOCKED at 21:25 Mon 16 Nov. Trial plugin built and a 284-line scripted test written, but the AutoCAD I started plainly stopped at a message window (see below) and the new rules say to leave it and report.
 4. **Trial 3, no plugin:** NOT TESTED yet.
 5. **Trial 2, grips:** NOT TESTED yet.
 6. **Trial 4, speed:** NOT TESTED yet.
@@ -66,9 +66,23 @@
    2. I copied Tim's profile key to a new key named ZeroTrial and ran run5 with `/p ZeroTrial`. AutoCAD then made ZeroTrial the **current profile** in the registry. My script noticed and **wrote the current-profile value back to "Tim"** (a registry write). Read now: the value is "Tim".
    3. The script also set SECURELOAD to 0 inside the sessions I ran. I have since read Tim's own profile: its SECURELOAD is 0 (I did not set that; my sessions ran under other profiles).
    4. Run2 headless was stuck at a prompt and I ended it with taskkill.
-   5. A copy of AutoCAD's own error-reporting start-up log (it carries a device id) sits in `evidence	10un5-full\ErrorReports`. It was written by AutoCAD, not by me.
-5. **Evidence:** `C:\CE_WORK	rials\zero\evidence	10un4-headless\events.log`, `run5-full\events.log`, `dialog1.png`, the comparison script `scripts\cmp_logs.py`.
+   5. A copy of AutoCAD's own error-reporting start-up log (it carries a device id) sits in `evidence	10
+un5-full\ErrorReports`. It was written by AutoCAD, not by me.
+5. **Evidence:** `C:\CE_WORK	rials\zero\evidence	10
+un4-headless\events.log`, `run5-full\events.log`, `dialog1.png`, the comparison script `scripts\cmp_logs.py`.
 6. **What it means for the build approach.** Events and the transform overrule behave the same headless and full for these commands, so move, copy, mirror, rotate, erase and undo logic can be tested headless and trusted to carry over. Anything involving selection by window, idle, or the screen needs full AutoCAD. Under the new rules the headless engine cannot be used without its isolate option (otherwise it loads Tim's live CE plugin and writes to his live files), so unattended headless runs are BLOCKED until Tim decides.
+
+---
+
+## Trial 1 (joins): where it stopped
+
+**Verdict so far: BLOCKED (not a FAIL of the idea; nothing about joins has been measured yet).**
+
+1. **What was ready.** The trial plugin with joins stored three ways (handle in extended data, soft pointer, hard pointer), the facts stored three ways (note, record on the object, shelf in the drawing), two ways of moving joined pipe ends (after the command, and a hook when the pit closes), a cross-drawing copy test, save-in-three-formats and read-back, and a 284-line script covering copy, mirror, rotate, stretch, explode, block, wblock, insert, clipboard, undo, redo, xref bind, purge and audit.
+2. **What happened.** At 21:24 I started AutoCAD plainly (no profile switch, no settings, no flags) on a made-up drawing. It stopped at a message window: "Customization file load failed. File not found: acad". It is the same message the first-run AutoCAD gave under the unnamed profile, so it is NOT caused by a profile choice. Picture: `evidence	1\dialog_start.png`.
+3. **What I did about it.** Nothing. Under the added rules a stuck AutoCAD is left exactly as it is and Tim closes it. That AutoCAD (acad.exe, started by me) is still open with that message showing.
+4. **What I think it is (not verified).** AutoCAD started from my tool session cannot find its main menu file, probably because something in the environment it inherits from my session differs from a normal start from Explorer. The office's older note says AutoCAD must be launched by an Explorer hand-off for a real profile. I have not tested that and will not until told.
+5. **What I would need from Tim:** close that AutoCAD window, and say whether I may launch AutoCAD through Explorer (opening the made-up drawing by double-click style hand-off) rather than directly.
 
 ---
 
