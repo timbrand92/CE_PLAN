@@ -220,6 +220,12 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-122** (16 Nov 2026, night) How the trial chat may open AutoCAD: "Yes, after I close the stuck window". After Tim closes the AutoCAD left at the "Customization file load failed. File not found: acad" message, trials may open AutoCAD by the double-click hand-off only (a made-up drawing handed to Windows), under his own profile, changing nothing, one at a time; rule 1.9 applies in full. At 21:58 that AutoCAD was still open (showing its Start tab), so nothing was released yet.
 
+**D-123** (16 Nov 2026, night) A typed grade against rounded inverts: "What the inverts give: 1 in 59". The pipe label always shows the true grade between the two printed inverts, so a checker working from the sheet gets the same figure. (So a typed grade is the aim, and the printed grade is worked out from the rounded levels.)
+
+**D-124** (16 Nov 2026, night) When held values do not fit and an office standard would have to give way: "Nothing: tell me, I decide". The plugin never bends a standard by itself; it says how far out and shows what could be changed.
+
+**D-125** (16 Nov 2026, night) Reporting a clash of held values: "Name the stretch and the amount" (for example "Out by 0.06 between P4 and P1"), with the held values on that stretch listed and marked; no single pipe is blamed.
+
 **Open after this sitting (asked once on 16 Nov, Tim sent D-079 instead of answering; not to be re-asked in the same form):** where a pipe stops at a pit (gap check Pit item 1); whether a schedule cell can be typed over (item 3); which pit kinds are in the first release and whether a turned pit is in the window (item 9); which pits count as storage (item 10).
 
 ## How levels are designed

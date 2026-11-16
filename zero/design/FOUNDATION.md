@@ -27,6 +27,12 @@
 2. **A whole run:** hold what is truly fixed on this site (the connection invert, cover levels, top water level and orifice: D-018) and let the rest be worked out up or down the run. Where it cannot be made to work, the check says where and by how much (too little cover at P4 by 0.06).
 3. **Assumptions:** an assumed fact is just a fact whose source is "assumed". When the real value arrives it is typed once and everything worked out from it follows (D-002, D-030).
 
+## Rulings from the first trial (D-123 to D-125)
+
+1. **A printed grade is what the printed inverts give.** A typed grade is the aim; levels round to the sheet's precision; the label shows the true grade between the two printed inverts.
+2. **The plugin never bends a standard by itself.** When held values do not fit, it says how far out and shows what could be changed; the person decides.
+3. **A clash is reported by stretch and amount** ("Out by 0.06 between P4 and P1"), listing the held values on that stretch; no single pipe is blamed.
+
 ## How a new thing is added later (the scalability test)
 
 1. Write its list of facts (name, unit, where it normally comes from, whether it is normally held).
