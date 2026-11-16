@@ -94,6 +94,10 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-059** (16 Nov 2026, evening) FO: "Leave it as FO only". It has no longer name.
 
+**D-060** (16 Nov 2026, evening) When the small window appears: "Every time, like Hatch". Type the command (CD for a pipe), the small window opens already filled in with what was used last, change something or not, then draw.
+
+**D-061** (16 Nov 2026, evening) Editing a drawn thing: "Properties, and double-click opens the window". Click it and change it in AutoCAD's Properties (D-048), or double-click it to get the same small window it was placed with.
+
 ## How levels are designed
 
 **D-016** (16 Nov 2026) [8v] Moving a pit has no single rule for levels: "IT DEPENDS ON THE DESIGN NO? SO INVERTS MIGHT HAVE TO CHANGE UPSTREAM OR WE MIGHT NEED TO UPDATE INVERTS TO SUIT OR GRADE".

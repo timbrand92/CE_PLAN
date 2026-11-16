@@ -14,6 +14,16 @@
 8. **R-68 (Tim, 16 Nov):** the chat manages plan, usage, context and models. Name the model on every helper: Sonnet draws pages and files notes from a tight brief; Opus reviews and critiques; Haiku scans and counts; the lead chat interviews, decides and checks. Tim has three Fable resets this week and will use them.
 9. **The week's target ("something meaningful"):** (a) Stage 2 settled by Tim: ribbon, one naming strategy, job tracking, the Release 1 tool list and the 52 small decisions; (b) Stage 3 parts-bin report; (c) Stage 4: the four build trials run in a side session when AutoCAD is free, with results; (d) Stage 5 "how we work" on one page; (e) Stage 6: the plan, first tool designed in full (Pit, then Pipe).
 
+## UPDATE 2, Mon 16 Nov 2026 late evening (newest; wins over everything below and above)
+
+1. **Settled by Tim tonight (D-051 to D-061):** ribbon B (short CE Civil tab, light tab on selection); naming = a plain full word plus a one to three letter short name, AutoCAD's way, in one office list; only placing has a typed name; old names gone; keep IO, rename C and RC; pipe is PIPE / CD for now; FO stays FO; every placement = short command, then a small pop-up window like Hatch that opens every time filled with the last choices; editing = Properties, and double-click reopens the same window. P-04 (blank drawing) = keep as a test case for trial 3.
+2. **Draft name list** is in `design\NAMING_DRAFT.md`. Tim has NOT reviewed it (the question window hid the chat text). Show it to him as a page or inside a question, never as chat text beside a question.
+3. **Tim's own short-name list** is in `evidence\TIM_ALIAS_LIST_16NOV.md`; every new name is checked against it AND AutoCAD's 241.
+4. **Reference library second pass done** (study D and D-031 to D-051 filed; E-067 to E-074, S-028, L-025 to L-027, K-014, K-015, T-055 added; nine corrections marked Superseded). Not re-read by the lead chat. Not placed: D-035, D-036, D-038, D-042, D-043, and D-049's general principles.
+5. **Running:** a Sonnet helper drawing `pictures\job_tracking.html`. When it reports: look at the photographs, commit, send, then ask Tim (inside the questions) the four rulings from R-001 item 12: is time recorded automatically; who can see whose hours; where the hours allowance comes from; where "waiting on" items are typed. Also ask how jobs are tracked today (unknown).
+6. **After that:** the 52 owner decisions in `design\CONCEPT_GAP_CHECK.md` by tool, Pit and Pipe first, re-read in the light of D-058 to D-061 (small window, Properties, double-click); then Stage 3.
+7. **Usage at 16 Nov late evening:** Fable weekly 94%, all models 70%, reset Fri 20 Nov about 1 pm Melbourne. Context 20%.
+
 ## Where we are
 
 1. **Stage 1 (how we design and draw), civil:** studied and explained (`pictures\how_we_design_and_draw_civil.html`). Tim has not said "approve"; he moved on to the design.
