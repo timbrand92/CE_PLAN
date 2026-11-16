@@ -8,7 +8,7 @@
 1. **Trial 11, any direction:** PASS (pure code, no AutoCAD).
 2. **Trial 10, headless predicts full:** PASS for the scripted commands tried (see below). Run under the old limits, before the licence incident. Not repeatable under the new limits.
 3. **Trial 1, joins:** PASS for the commands tested (soft pointer wins; end-of-command mover works, close-hook mover fails). Xref bind not tested.
-4. **Trial 3, no plugin:** NOT TESTED yet.
+4. **Trial 3, no plugin:** PASS (plot identical, plain edit, plugin reports the change). LT and Tim's drawing not tested.
 5. **Trial 2, grips:** NOT TESTED yet.
 6. **Trial 4, speed:** NOT TESTED yet.
 7. **Trial 5, Properties:** NOT TESTED yet.
@@ -101,6 +101,19 @@ un4-headless\events.log`, `run5-full\events.log`, `dialog1.png`, the comparison 
    3. **Keep the "move the joined ends" step at the end of the command, not in the object's close step.** It gives one undo.
    4. **Plan for self-check on open:** every join read back and reported where it is broken (the erased pit, the copied-alone pipe, the exploded pit) in plain words. The detection worked in every case here.
    5. **A pipe copied alone, or a pit exploded, breaks its join:** the plugin must say so, not repair silently.
+
+---
+
+## Trial 3. No plugin (D-015, D-094)
+
+**Verdict: PASS for the sheet, plot, edit and report-back cases below. AutoCAD LT: NOT TESTED (no LT copy). Tim's live drawing: NOT TESTED (no copy supplied). The test AutoCAD that "had nothing loaded" still had Tim's own CE plugins loaded, only my trial plugin was absent.** Run Mon 16 Nov 2026 22:34 to 22:45.
+
+1. **What was done.** A sheet (a pit block, three pipes, a label, all ordinary objects with hidden notes) was built by the trial plugin, given a position stamp for each thing (kept in the object's own extension dictionary), and saved as `dwg\t3_sheet.dwg`. It was then opened in an AutoCAD where my trial plugin was NOT loaded, plotted to PDF through AutoCAD's own PDF printer, edited with plain AutoCAD commands only (the pit moved 5 right and 3 up, the label changed from P3 to P3A), and saved as `t3_edited.dwg`. Finally the plugin was loaded and asked what had changed.
+2. **Looks and plots the same.** The same saved sheet, plotted once with the plugin loaded and once without: the two PDFs render to **identical pixels** (150 dpi, 2482 x 1755), with identical drawing operations and text. The files differ only in bytes that are timestamps. Picture: `evidence\t3\with_plugin_b.png`. (My first comparison showed a size difference; that was a stale-extents effect from plotting in the same session that built the drawing, not the plugin, and I redid it properly.)
+3. **Editable with plain commands, nothing to explode.** In the no-plugin session the pit moved (Move on the block) and the label text changed with ordinary AutoCAD calls; nothing was locked, nothing needed exploding. Note: plain AutoCAD moved only the pit; the pipe ends stayed where they were (nothing was watching), so the join was left visibly broken on the drawing.
+4. **The plugin reports what changed on return.** Reading the edited file, the plugin compared each thing with its stored position stamp and reported, in order: **pit P3 changed** (was 100,100, now 105,103), **label P3-label changed** (text P3 to P3A), **the three pipes unchanged**. It cannot say the pipes now fail to meet the pit unless it also checks the joins (trial 1 showed that check works), so the report should combine both. Evidence: `evidence\zt_default.log` (T3 lines, copied into `t3\`).
+5. **Not tested:** AutoCAD LT; a drawing saved down to an old format and edited in LT; Tim's live drawing P-04; paper-space sheets, viewports, Xrefs and dynamic blocks; the stamp's cost on a big drawing; an outsider who changes something and changes it back (no change reported, correctly).
+6. **What it means for the build approach.** "No special object types" holds for looks, plotting and plain editing here. The position stamp works and is cheap, but it must be paired with the join check, because plain AutoCAD can move a pit and leave its pipes behind. The stamp lives in the extension dictionary, which survives save and reopen (trial 1); it is lost when a pipe is exploded, so a stamp can also say "this thing no longer exists".
 
 ---
 
