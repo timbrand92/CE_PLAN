@@ -12,7 +12,7 @@
 5. **Trial 2, grips:** NOT TESTED yet.
 6. **Trial 4, speed:** PASS for command and mover cost (about 40 ms per move on 2500 objects); mouse-drag feel not measured.
 7. **Trial 5, Properties:** BLOCKED for the palette (needs the Properties palette opened, a saved interface setting); the .NET property list works at code level.
-8. **Trial 6, window, live preview and Inspect:** NOT TESTED yet.
+8. **Trial 6, window, live preview and Inspect:** PASS at 1920 x 1080 (21 ms redraw, Inspect returns with values); 2560 x 1440 simulated only; mouse pan/zoom during Inspect not tested.
 9. **Trial 7, ribbon tab, tips and typed names:** NOT TESTED yet.
 10. **Trial 8, double-click:** NOT TESTED yet.
 11. **Trial 9, update and rollback:** NOT TESTED yet.
@@ -147,6 +147,20 @@ un4-headless\events.log`, `run5-full\events.log`, `dialog1.png`, the comparison 
 5. **Quick Properties and roll-over tips: NOT TESTED** (same reason).
 6. **Fallbacks, if the palette does not read the list (not built, not decided):** a side palette of our own that follows the selection and shows the same cards (cannot be AutoCAD's own Properties palette); or a small C++ helper for the palette alone (touches the "no hand-built C++" line). Both need Tim's ruling.
 7. **Evidence:** `evidence\t5\t5_td.log`. **Build meaning so far:** the plugin can already supply a per-object list of facts in AutoCAD's own property form; whether the Properties palette shows it is the one open fact. The plan must not promise "facts in AutoCAD's own Properties" until that is seen.
+
+---
+
+## Trial 6. Window, live preview and Inspect
+
+**Verdict: PASS for the 1920 x 1080 case (a real 80% window, a live preview of real AutoCAD drawing geometry that redraws in about 21 ms, Inspect hides and returns with the typed value kept). PARTIAL for 2560 x 1440 (preview size simulated, window not shown at that size). Not tested with a person panning and zooming by mouse, and not in the dark theme.** Run Mon 16 Nov 2026 22:44 to 22:52, real AutoCAD 2027, Tim's profile.
+
+1. **What was done.** A window written in plain C# (WPF) opened through AutoCAD's own modal-window call, sized 80% of the screen width and height, with a number box ("Pipe length"), an Inspect button, an OK button and a preview. The preview is a picture taken by AutoCAD's off-screen drawing (an off-screen device and view, a snapshot of it, shown as an ordinary image) of a pit square and a thick pipe line, redrawn every time the number changes. The test changed the number 20 times in a row and timed each redraw, saved a picture of the window, then pressed Inspect.
+2. **What was seen at 1920 x 1080 (the real screen of this PC).** The window came out 1536 x 864, exactly 80% by 80%. The preview filled 1152 x 744 of it. **The 20 redraws took a median of 21 ms** (slowest 24 ms). The picture of the window (`evidence\t6\window_1920x1080.png`) shows a blue pit square and the pipe line, crisp, the right way up, with the number box, "20 redraws, median 21.3 ms", Inspect and OK on the right. White drawing background only; matching AutoCAD's theme colours was not attempted.
+3. **Inspect.** Pressing Inspect used AutoCAD's supported "start user interaction" call. While it ran, Windows reported the window **not visible** (the window toolkit's own "is visible" flag still said yes, so do not trust that one). While the window was hidden the plugin changed the drawing view (a ZOOM window) with no error. When the call ended the window was **visible again with the typed number unchanged**. This ran once per window; a second Inspect in the same window was not tried.
+4. **At 2560 x 1440: simulated only.** This PC's screen is 1920 x 1080, so a real 2560 x 1440 window cannot be shown. I asked for 80% of 2560 x 1440 and the window came out 1536 x 864 (the real screen's limit), while the preview was rendered at the larger size, 1664 x 1032: **median 39 ms** (slowest 48 ms). So the cost grows with picture size (about 21 ms for 1152 x 744, 39 ms for 1664 x 1032), still well inside a typing pace, but the larger window itself was not seen.
+5. **Not tested.** (a) A person panning, zooming and window-picking while the window is hidden: I changed the view by command only, not by mouse, so "the drawing can be panned and zoomed" is shown only for command-driven view changes. (b) Dark theme and following AutoCAD's colours. (c) Preview of the real pit block and its dynamic properties (I drew plain polylines as drawables, not a block copy in a scratch drawing as the September note proved). (d) Typed key presses queueing: the 20 changes were made by code, not typed. (e) AutoCAD's other screens (laptop and desktop pair).
+6. **Evidence:** `evidence\t6\t6_run2.log`, `window_1920x1080.png`, `window_2560x1440.png`. Code: `core\Win.cs`.
+7. **What it means for the build approach.** The preview can be a real AutoCAD picture of real objects, redrawn in tens of milliseconds, with no second drawing path. Inspect by the supported call works and keeps the typed values. The remaining unknown is the user's own mouse pan and zoom during Inspect; it needs a person or a screen driver.
 
 ---
 
