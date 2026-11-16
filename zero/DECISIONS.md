@@ -176,6 +176,8 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-100** (16 Nov 2026, night) Tank split between re-use and detention: "Worked out from the volume needed". The detention part is what the sums say is needed; re-use takes the rest of the tank. (This is the foundation at work: the split is a worked-out fact unless held.)
 
+**D-101** (16 Nov 2026, night) Short names for the first release: "Good, with DET for detention". PIT = PT; PIPE = CD; DOWNPIPE = DP; OVERFLOW = OF; FO = FO; INSPECTION = IO; GIO = GIO; FLOORWASTE = FW; TANK = TK; LEVELS = LV; DETENTION = DET; SCHEDULE = SH. Each still to be proven free in AutoCAD 2027 by the trials.
+
 **Open after this sitting (asked once on 16 Nov, Tim sent D-079 instead of answering; not to be re-asked in the same form):** where a pipe stops at a pit (gap check Pit item 1); whether a schedule cell can be typed over (item 3); which pit kinds are in the first release and whether a turned pit is in the window (item 9); which pits count as storage (item 10).
 
 ## How levels are designed
