@@ -170,6 +170,12 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-097** (16 Nov 2026, night) First release, beside Pit, Pipe and Levels along a run: Tim ticked "Downpipe and the other inlets", "Tank and detention sums", "Pit schedule". "Title block and issue" was NOT ticked: not in the first release.
 
+**D-098** (16 Nov 2026, night) Detention methods in the first release: Tim ticked "Boyd's method" and "OSD4W / Swinburne". Not ticked, so not day one: council-supplied figures typed in; the council's own calculator.
+
+**D-099** (16 Nov 2026, night) Where detention lives: "One 'Detention' window for the job". Same window family: what is fixed, the volume needed, the storage you have (tank share, pipes and pits that hold water), the orifice; one answer; it fills the criteria box on the sheet.
+
+**D-100** (16 Nov 2026, night) Tank split between re-use and detention: "Worked out from the volume needed". The detention part is what the sums say is needed; re-use takes the rest of the tank. (This is the foundation at work: the split is a worked-out fact unless held.)
+
 **Open after this sitting (asked once on 16 Nov, Tim sent D-079 instead of answering; not to be re-asked in the same form):** where a pipe stops at a pit (gap check Pit item 1); whether a schedule cell can be typed over (item 3); which pit kinds are in the first release and whether a turned pit is in the window (item 9); which pits count as storage (item 10).
 
 ## How levels are designed
