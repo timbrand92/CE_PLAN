@@ -340,6 +340,14 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-184** (18 Nov 2026; asked as 8 of 18) A pit added mid-run after the sheet has been issued (the three ways offered: the next free number such as P13; a letter such as P3A; renumber everything): "OPTION TO DO ALL 3". The drafter chooses each time among the three. Which one is offered first: not said.
 
+**D-185** (18 Nov 2026, early afternoon; asked as 9 of 18) Retyping a pit tag (P3 retyped as P7): "Yes, it renames the pit". The schedule row, pipe names and system strip follow; a duplicate number shows amber on both. Levels and grades are never changed by editing their text.
+
+**D-186** (18 Nov 2026; asked as 10 of 18) Placing many of the same thing (12 downpipes): "Keep clicking, Enter to finish". One window, then pick after pick, each numbered in turn.
+
+**D-187** (18 Nov 2026; asked as 11 of 18) A "changed since last issue" list with a "Mark as issued" button: "Yes, but later". Not in the first release.
+
+**D-188** (18 Nov 2026; asked as 12 of 18) Plotting with open items (assumed, not joined): "One quiet line, never a stop". One command-line line with the count; plotting carries on.
+
 **D-167** (18 Nov 2026, morning) The new preview, as drawn on `pictures\pick_a_ce_scheme.html` (the drawing as AutoCAD shows it, from the office layers, colours, text and arrow; "where on the plan" as a small site locator in the corner; "where in the system" as a strip under the preview with the run as a chain and this object lit; the thing being changed highlighted the same way in all three): "YES THE PREVIEW IS WHAT I MEANT". It applies to every window (D-070: consistent across all windows). Not yet proven: how the locator is produced inside AutoCAD. The drawn details not taken from a real sheet (pit inner wall line, pit tag circle, which side the flow arrow sits) are still to be checked against how the office draws.
 
 **D-156** (17 Nov 2026, evening; SUPERSEDES the colour in D-153) Tim, after seeing the sample sheet again: "lets go with a for the detention". Read by the planning chat as option A on `pictures\pick_a_detention_blue.html`: deeper blue, AutoCAD colour 160. Layer STORMWATER DETENTION PIPE and DASHED unchanged. Pen width, legend and label wording still unknown; still not seen on a real plot.
