@@ -76,3 +76,11 @@ If a trial fails, the build approach changes before any tool is built.
 ## 8. How building starts
 
 In a NEW chat, never the planning chat. Its opening brief is `stage6\BUILD_CHAT_BRIEF.md`. The planning chat stays the place where Tim's decisions are recorded.
+
+## 9. Speed (added 18 Nov 2026, D-165)
+
+Speed is a requirement, checked like a sum: see `stage6\PERFORMANCE.md` (time limits for everything a drafter feels, measured every night; the smart ways the build keeps it fast; the PC protected in work hours).
+
+## 10. The loops (added 18 Nov 2026, D-158 to D-160)
+
+How the work keeps moving without Tim: see `stage6\LOOPS.md`.
