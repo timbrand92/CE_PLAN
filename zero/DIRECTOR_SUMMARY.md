@@ -2,7 +2,7 @@
 
 **Why this file exists.** Tim, 17 Nov 2026: "i need a way to understand wht we have planned, what we have built, how close we are to finishing or getting a ready version for me to test and bugs and anythign else thats important if i was a director looking to get summaries. i need this everytime i ask how things are going and also you need to keep me on track with planning, building annd beyond". The planning chat updates this page before every progress answer and always uses these seven headings in this order.
 
-**Last updated:** Wed 18 Nov 2026, 2:30 am.
+**Last updated:** Wed 18 Nov 2026, 5:00 am.
 
 ## 1. Headline
 
@@ -16,8 +16,8 @@ Done: ribbon, names, the look of every window, the foundation, the first-release
 
 1. **The brain** (facts, sums, joins, office standards, checks): built 5 of 5 pieces; 488 automatic checks pass; each piece reviewed by something that did not build it. Your rulings D-140 to D-156 are in.
 2. **The seven windows on a test bench, outside AutoCAD:** built 7 of 7; 147 checks and 880 click steps by the build chat's own scripts pass. An independent look at every opening screen found every figure right and 10 faults of wording and layout; those are fixed and in review, with two layout faults sent back.
-3. **Independent click and typing trial of the windows:** DONE once (18 Nov, 2:25 am). It found wrong figures (section 5). The windows are NOT ready for Tim until those are fixed and the trial is run again.
-4. **The AutoCAD part** (drawing the pits and pipes, the ribbon, the typed commands): built 0 of 7 tools. Starts with the foundation.
+3. **Independent click and typing trial of the windows:** run twice (18 Nov, 2:25 am and 5:00 am). Second run: most faults confirmed fixed; SIX windows ready for Tim with cautions; LEVELS ALONG A RUN NOT READY (it bends a held grade instead of saying "out by"). Wrong figures remain in Levels, Pipe (green Suits while over-held) and Tank (levels worked from the list size when a size is typed). With the build chat to fix; then a third run.
+4. **The AutoCAD part:** the foundation code is written and tested against a pretend drawing (85 checks); its first run inside AutoCAD is set for before 8:30 am on 18 Nov. Tools built in AutoCAD: 0 of 7.
 5. **Installed: 0. Accepted by you: 0.**
 
 ## 4. How close to a version you can test (estimates, not promises)
