@@ -28,12 +28,15 @@
 
 ## Started beyond the checklist
 
-1. Building: the brain only, in `C:\CE_CIVIL`, by the chat "CE_ACAD / zero build / 01" (D-127).
+1. Building: the brain, in `C:\CE_CIVIL`, by the chat "CE_ACAD / zero build / 01" (D-127): 5 of 5 pieces built and tested.
+2. Window bench (no AutoCAD): Pit and Pipe built; the other five windows set going 17 Nov (D-138).
+3. The build chat's 12 draft calls: all answered 17 Nov (D-140 to D-151), plus slab thickness (D-152) and the grade label (D-154, supersedes D-123 for the label).
+4. Mouse trials (grips, double-click) set going 17 Nov on test copies (D-139, today only).
 
 ## Parked, not blocking
 
 1. How long a run is before an inspection opening is offered (AS 3500.3 figure not found online).
-2. Detention layer name and its blue (D-083).
+2. Detention blue: SETTLED 17 Nov, colour 152, layer STORMWATER DETENTION PIPE (D-153). Still open: its printed pen width, the legend and label wording, and a look on a real plot.
 3. How the plugin joins the Job Manager program.
 4. Old drawings made with the special pipe object.
 5. Title block and issue (after the first release).

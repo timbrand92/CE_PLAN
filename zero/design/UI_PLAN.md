@@ -31,7 +31,7 @@
 1. **Order inside a card:** short title, then ONE biggest bold answer, then the working, then a small grey note.
 2. **The working is shown as a sum:** the sign in its own column, figures on one right edge, a line above the result, a double line under it.
 3. **Every card shows its answer as a picture too** (a side view, a sketch, a preview of the label).
-4. **Each value says where it came from** with a small grey chip: given, measured, chosen, worked out, assumed.
+4. **Each value says where it came from** with a small grey chip: given, measured, chosen, worked out, assumed, standard, typed over (D-150: "typed over" is a standard that has been typed over, shown with the standard's figure beside it).
 5. **Only values that can be typed have a box.**
 6. **Three text levels only:** title, answer, row text and notes.
 

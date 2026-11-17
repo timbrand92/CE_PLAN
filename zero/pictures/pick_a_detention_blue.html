@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<title>Pick the detention pipe blue</title>
+<style>
+*{box-sizing:border-box}
+:root{--font:"Segoe UI Variable Text","Segoe UI",system-ui,Arial,sans-serif;--page:#10141b;--card:#1c2331;--bd:#44516a;--t1:#eef2f8;--t2:#b3bccb;--t3:#8f9aad;--acc:#1E5AA8;--accl:#5AA2F0}
+html,body{margin:0;background:var(--page);color:var(--t1);font-family:var(--font)}
+body{width:1920px;height:1080px;overflow:hidden;padding:14px 40px 0}
+h1{margin:0;font-size:38px;font-weight:700;letter-spacing:.2px}
+.sub{margin:2px 0 8px;font-size:20px;color:var(--t2)}
+.layers{display:flex;gap:20px;align-items:stretch;margin-bottom:14px}
+.lay{flex:1;background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:6px 16px;font-size:18px;color:var(--t2)}
+.lay b{display:block;font-size:27px;color:var(--t1);letter-spacing:.5px;margin-top:2px}
+.lay.new{border:2px solid var(--accl)}
+.lay.new b{color:#fff}
+.cols{display:flex;gap:24px}
+.opt{flex:1;background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:8px 16px 10px;height:690px}
+.hd{display:flex;align-items:baseline;gap:18px;margin-bottom:2px}
+.let{font-size:64px;font-weight:800;line-height:.95;color:#fff;background:var(--acc);border-radius:12px;width:76px;height:76px;display:flex;align-items:center;justify-content:center}
+.hd .nm{font-size:30px;font-weight:700}
+.hd .sw{font-size:20px;color:var(--t2)}
+.hdwrap{display:flex;align-items:center;gap:16px;margin-bottom:4px}
+.cap{font-size:19px;color:var(--t2);margin:6px 0 3px;font-weight:600}
+svg{display:block;width:100%;height:auto;border-radius:6px;border:1px solid #3a465c}
+.txt{font-size:19px;line-height:1.28;color:var(--t1);margin-top:8px}
+.txt p{margin:0 0 6px}
+.txt b{color:#fff}
+.strip{position:absolute;left:40px;right:40px;bottom:10px;height:152px;border-top:2px solid var(--bd);padding-top:8px;display:flex;gap:28px;font-size:17px;line-height:1.25;color:var(--t2)}
+.strip h2{margin:0 0 2px;font-size:20px;color:var(--t1)}
+.strip div{flex:1}
+.strip .unk b{color:#fff}
+</style>
+</head>
+<body>
+<h1>Pick the detention pipe blue</h1>
+<div class="sub">Pick one of three blues for the detention pipe, so it reads as its own kind of pipe next to an ordinary new stormwater pipe, on screen and on the printed sheet.</div>
+
+<div class="layers">
+  <div class="lay new">Proposed new layer<b>STORMWATER DETENTION PIPE</b>linetype DASHED, plots: yes (same as the ordinary pipe)</div>
+  <div class="lay">Existing layer it sits beside<b>STORMWATER PIPE</b>colour 150, linetype DASHED, prints blue at 0.25 mm</div>
+  <div class="lay">Office layer style (as found)<b style="font-size:24px">STORMWATER + kind of pipe</b>capitals and spaces, e.g. STORMWATER CHARGED PIPE</div>
+</div>
+
+<div class="cols" id="cols"></div>
+
+<div class="strip">
+  <div><h2>Known (from the office files)</h2>
+  The ordinary new pipe is on STORMWATER PIPE, colour 150, DASHED. The plot style prints 150 in its own blue, 0.25 mm, 100%. Colours 140, 152 and 160 have no row in the plot style table, so they take "all others: own colour, 100%". None of the three is used on any office layer. Rulings D-083 and D-118: own kind, own layer, a slightly different blue, picked from a sheet.</div>
+  <div><h2>Assumed (mine, please check)</h2>
+  The screen colours (0, 64, 255 and so on) are AutoCAD's standard colour table, which is not in the office files. I assumed paper prints the same blue the screen shows. The dark screen, the plan piece and both legend wordings are made up for this picture.</div>
+  <div class="unk"><h2>UNKNOWN</h2>
+  <b>1.</b> Printed pen thickness of colours 140, 152, 160 ("object lineweight", Q-103). <b>2.</b> Whether every PC plots with the same copy of the plot style table. <b>3.</b> The office wording of the detention legend line (not drawn anywhere yet). <b>4.</b> The wording of this detention label: the office pattern is "2 x 225 DIA. STORMPRO PIPES AT 1 IN 200 / 9m DETENTION".</div>
+</div>
+
+<script>
+var ORD={n:150,hex:'#0080FF'};
+var OPTS=[
+ {L:'A',n:160,hex:'#0040FF',rgb:'0, 64, 255',name:'Deeper blue',
+  p1:'<b>Colour:</b> AutoCAD colour 160, a stronger blue leaning towards violet. <b>Pen:</b> prints in its own blue; thickness UNKNOWN (ordinary pipe 0.25 mm).',
+  p3:'<b>Against the ordinary pipe:</b> close. Tells apart side by side, weak on its own. On paper it is the same: a shade only.'},
+ {L:'B',n:152,hex:'#0053A6',rgb:'0, 83, 166',name:'Dark steel blue',
+  p1:'<b>Colour:</b> AutoCAD colour 152, the same blue as 150 but about a third darker. <b>Pen:</b> prints in its own blue; thickness UNKNOWN (ordinary pipe 0.25 mm).',
+  p3:'<b>Against the ordinary pipe:</b> clear on paper, clearly darker. On screen it is dimmer against a black background, but still readable.'},
+ {L:'C',n:140,hex:'#00BFFF',rgb:'0, 191, 255',name:'Sky blue',
+  p1:'<b>Colour:</b> AutoCAD colour 140, a lighter blue leaning towards cyan. <b>Pen:</b> prints in its own blue; thickness UNKNOWN (ordinary pipe 0.25 mm).',
+  p3:'<b>Against the ordinary pipe:</b> clear on screen. On paper it is lighter and thinner looking, and sits near the pale 141 tint used for building footprints.'}
+];
+
+function draw(mode,c){
+  var scr=(mode==='screen');
+  var bg=scr?'#1e2228':'#ffffff';
+  var txt=scr?'#ffffff':'#000000';
+  var pitc=scr?'#c0c0c0':'#9a9a9a';
+  var wall=scr?'#ff00ff':'#000000';
+  var s='<svg viewBox="0 0 560 150" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI,Arial,sans-serif">';
+  s+='<rect width="560" height="150" fill="'+bg+'"/>';
+  var y=46;
+  // pipes: bands then wall lines
+  function pipe(x1,x2,w,col){
+    s+='<line x1="'+x1+'" y1="'+y+'" x2="'+x2+'" y2="'+y+'" stroke="'+col+'" stroke-width="'+w+'" stroke-dasharray="10 5"/>';
+    s+='<line x1="'+x1+'" y1="'+(y-w/2)+'" x2="'+x2+'" y2="'+(y-w/2)+'" stroke="'+wall+'" stroke-width="1"/>';
+    s+='<line x1="'+x1+'" y1="'+(y+w/2)+'" x2="'+x2+'" y2="'+(y+w/2)+'" stroke="'+wall+'" stroke-width="1"/>';
+  }
+  pipe(42,210,10,ORD.hex);
+  pipe(234,512,17,c.hex);
+  function pit(cx){
+    s+='<rect x="'+(cx-12)+'" y="'+(y-12)+'" width="24" height="24" fill="'+bg+'" stroke="'+pitc+'" stroke-width="1.5"/>';
+    s+='<line x1="'+(cx-12)+'" y1="'+(y-12)+'" x2="'+(cx+12)+'" y2="'+(y+12)+'" stroke="'+pitc+'"/>';
+    s+='<line x1="'+(cx+12)+'" y1="'+(y-12)+'" x2="'+(cx-12)+'" y2="'+(y+12)+'" stroke="'+pitc+'"/>';
+  }
+  pit(30);pit(222);pit(524);
+  s+='<g fill="'+txt+'" font-size="13" text-anchor="middle">';
+  s+='<text x="126" y="31">150 DIA uPVC @ 1 IN 100</text>';
+  s+='<text x="373" y="26">300 DIA DETENTION PIPE @ 1 IN 250</text>';
+  s+='<text x="30" y="76" font-size="12">PIT 1</text><text x="222" y="76" font-size="12">PIT 2</text>';
+  s+='<text x="520" y="76" font-size="12">ORIFICE PIT</text></g>';
+  // legend
+  s+='<g fill="'+txt+'" font-size="14">';
+  s+='<text x="12" y="99" font-weight="700" font-size="12">LEGEND</text>';
+  function leg(ly,w,col,t){
+    s+='<line x1="12" y1="'+ly+'" x2="70" y2="'+ly+'" stroke="'+col+'" stroke-width="'+w+'" stroke-dasharray="10 5"/>';
+    s+='<line x1="12" y1="'+(ly-w/2)+'" x2="70" y2="'+(ly-w/2)+'" stroke="'+wall+'"/>';
+    s+='<line x1="12" y1="'+(ly+w/2)+'" x2="70" y2="'+(ly+w/2)+'" stroke="'+wall+'"/>';
+    s+='<text x="84" y="'+(ly+5)+'">'+t+'</text>';
+  }
+  leg(116,10,ORD.hex,'NEW STORMWATER PIPE');
+  leg(138,17,c.hex,'NEW STORMWATER DETENTION PIPE');
+  s+='</g></svg>';
+  return s;
+}
+
+var h='';
+OPTS.forEach(function(c){
+  h+='<div class="opt"><div class="hdwrap"><div class="let">'+c.L+'</div><div><div class="nm" style="font-size:30px;font-weight:700">'+c.name+'</div><div class="sw" style="font-size:20px;color:#b3bccb">Colour '+c.n+' &nbsp;(screen '+c.rgb+')</div></div></div>';
+  h+='<div class="cap">On screen in AutoCAD</div>'+draw('screen',c);
+  h+='<div class="cap">Printed on paper (office plot style)</div>'+draw('paper',c);
+  h+='<div class="txt"><p>'+c.p1+'</p><p>'+c.p3+'</p></div></div>';
+});
+document.getElementById('cols').innerHTML=h;
+</script>
+</body>
+</html>

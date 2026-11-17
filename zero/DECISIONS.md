@@ -220,7 +220,7 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-122** (16 Nov 2026, night) How the trial chat may open AutoCAD: "Yes, after I close the stuck window". After Tim closes the AutoCAD left at the "Customization file load failed. File not found: acad" message, trials may open AutoCAD by the double-click hand-off only (a made-up drawing handed to Windows), under his own profile, changing nothing, one at a time; rule 1.9 applies in full. At 21:58 that AutoCAD was still open (showing its Start tab), so nothing was released yet.
 
-**D-123** (16 Nov 2026, night) A typed grade against rounded inverts: "What the inverts give: 1 in 59". The pipe label always shows the true grade between the two printed inverts, so a checker working from the sheet gets the same figure. (So a typed grade is the aim, and the printed grade is worked out from the rounded levels.)
+**D-123** (16 Nov 2026, night) A typed grade against rounded inverts: "What the inverts give: 1 in 59". The pipe label always shows the true grade between the two printed inverts, so a checker working from the sheet gets the same figure. (So a typed grade is the aim, and the printed grade is worked out from the rounded levels.) **SUPERSEDED for the label on 17 Nov 2026 by D-154: the label prints the grade as typed.**
 
 **D-124** (16 Nov 2026, night) When held values do not fit and an office standard would have to give way: "Nothing: tell me, I decide". The plugin never bends a standard by itself; it says how far out and shows what could be changed.
 
@@ -253,6 +253,36 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 **D-138** (17 Nov 2026, morning) Tim, out of the office all day: "for your reference im out of the office all day, what can you do whilst i am gone and where are we at?" Asked whether the build chat should carry on with the other five windows (Levels, Inlets, Tank, Detention, Schedule) on the same test bench, having gone one step past his "only the brain" ruling overnight: "Yes, carry on". This also confirms the Pit and Pipe bench of D-137. Still no AutoCAD in the bench, nothing installed.
 
 **D-139** (17 Nov 2026, morning) Asked whether the trial chat may use AutoCAD on his PC today, on test copies only, for the two mouse trials (grips and double-click) with the Codex robot, rule 1.9 in force (no profiles, no licence, no force-close): "Yes, test copies only". This yes is for today (17 Nov) only. If AutoCAD jams or a licence or sign-in window shows, the trial stops and leaves it for Tim; nothing is force-closed.
+
+**D-140** (17 Nov 2026, morning; build chat draft 1) Cover less than the minimum, in every window: "Red: Wrong". It never blocks.
+
+**D-141** (17 Nov 2026, morning; build chat draft 2) Office standard drop across a pit (invert in to invert out): "0.02". Can be typed over on a pit (D-084).
+
+**D-142** (17 Nov 2026, morning; build chat draft 3) An ordinary gravity pipe flatter than 1 in 200 is flagged amber: "Yes, flag flatter than 1 in 200". Detention pipes keep their own stepped list (D-134).
+
+**D-143** (17 Nov 2026, morning; build chat draft 4) The grade a new gravity pipe starts with: "Yes, 1 in 100". Can be typed over.
+
+**D-144** (17 Nov 2026, morning; draft 5) A council's own cover figure against the standard's table: "Take the larger of the two". Both are minimums and both apply. (Narrows "council beats AS 3500.3" for cover: a council figure never lowers the standard's minimum.)
+
+**D-145** (17 Nov 2026, morning; draft 6) A detention pipe under a driveway: "The larger: 0.45". Detention is the kind of pipe, the driveway is what is over it; both apply and the larger governs.
+
+**D-146** (17 Nov 2026, morning; draft 7) Cover under paving (the 0.10 and 0.075 figures) is measured from: "Underside of the pavement". Needs a slab thickness as an office standard that can be typed over; the figure is not yet given. The planning chat told Tim it believes AS 3500.3 measures these from the underside but had NOT checked the printed standard: still to be checked.
+
+**D-147** (17 Nov 2026, morning; draft 8) A detention pipe smaller than 225: "1 in 200, flagged amber" (Needs a look: detention pipe smaller than 225).
+
+**D-148** (17 Nov 2026, morning; draft 9) The two council figures not yet entered (one council's junction pit on the council drain; one council's step irons deeper than 0.9 m): "Enter only if the source is on file". With a council document behind it in the reference it goes in showing its source; without one it stays blank.
+
+**D-149** (17 Nov 2026, morning; draft 10) Step irons needed on a pit deeper than 1.0 m shows: "Keep amber: Needs a look". No fourth kind of status.
+
+**D-150** (17 Nov 2026, morning; draft 11) Source word for a standard that has been typed over: "Yes, add 'typed over'". Source words are now: given, measured, chosen, worked out, assumed, standard, typed over.
+
+**D-151** (17 Nov 2026, morning; draft 12) On the 2560 x 1440 screen: "Yes, drawings grow". Cards and text keep a comfortable size; the preview and sketches take the extra room.
+
+**D-152** (17 Nov 2026, morning) Slab thickness for D-146: "By what is over it". A short editable list by what is over the pipe. The planning chat's starting figures (path 0.10, driveway 0.125, crossover 0.15) are its own guesses, NOT Tim's: DRAFT until he corrects them.
+
+**D-153** (17 Nov 2026, morning; settles D-083 and D-118) Detention pipe blue, picked from the sample sheet `pictures\pick_a_detention_blue.html`: "B: dark steel blue, colour 152". Layer name proposed on the same sheet, STORMWATER DETENTION PIPE, linetype DASHED like the ordinary pipe: shown to Tim with the pick and not objected to; not separately ruled. Still unknown: the printed pen width of colour 152 (reference open question Q-103), and the office wording of the legend line and the label. Tim picked from a screen picture, not a real plot.
+
+**D-154** (17 Nov 2026, morning; SUPERSEDES D-123 for the label) Shown what D-123 gives in practice (1 in 75 typed, inverts rounded to two decimals, label prints "1 IN 73"), asked if that is what he wants on the sheet: "Print what I typed: 1 IN 75". The label prints the design grade as typed. The inverts are still rounded to two decimals, so a checker working from the printed inverts may get a slightly different grade.
 
 **Open after this sitting (asked once on 16 Nov, Tim sent D-079 instead of answering; not to be re-asked in the same form):** where a pipe stops at a pit (gap check Pit item 1); whether a schedule cell can be typed over (item 3); which pit kinds are in the first release and whether a turned pit is in the window (item 9); which pits count as storage (item 10).
 
