@@ -29,7 +29,7 @@ Things you place:
 7. **Grated inspection opening:** short GIO (already what is written on the drawing). Full word: to ask.
 8. **Trench grate:** TRENCHGRATE, short TG.
 9. **Floor waste:** FLOORWASTE, short FW.
-10. **Tank:** TANK, short TK. (WT is the office's wall tool; TA is Text Align.)
+10. **Tank:** TANK, short WT, for water tank (D-170, 18 Nov 2026; was TK). WT is also the office wall tool "Wall-t" in the alias list: that alias is the owner's to move.
 11. **AG drain:** AGDRAIN, short AG.
 12. **Slab:** SLAB, short SB. (S, SA, SC, SS, ST and SL are taken.)
 
