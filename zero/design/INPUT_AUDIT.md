@@ -337,3 +337,7 @@ Each input: what it is today; where it could come from (A to F); what would have
 21. **Held with no box: title.** Already D (the office's "STORMWATER PIT SCHEDULE", D-113). Sure: high.
 
 **Totals on screen:** Pit 10, Pipe 11, Levels 6, Inlet 9, Tank 13, Detention 14, Schedule 17: **80 boxes, picks and ticks**, of which 27 are display choices and 53 are design figures. Plus at least 7 held figures with no box at all (what is over each pipe, storm, rain zone, top water level, the schedule's kind, lid and arrival levels).
+
+## Correction, 18 Nov 2026 (Tim, D-178)
+
+Cover levels are NOT read from the survey. Tim: the survey is often pre-demolition and levels change significantly before the pits go in; the cover level is set by the engineer from the internal house levels and the surrounding new and old pavement levels. So in change 5 ("read the drawing") the cover level is not taken from the nearest level text. It stays the engineer's figure. Whether the plug-in can help him set it (for example by showing the house floor level and nearby pavement levels beside the box) is a question still to ask him; nothing is offered until he says how he works it out.
