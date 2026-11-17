@@ -1,6 +1,6 @@
 # The loops that carry the plan (draft 1, for Tim to approve)
 
-**Why this file exists.** Tim, 18 Nov 2026: "the plan needs to create the best possible loops for the overall plan." A loop is work that keeps going round by itself until it is right, and only stops for Tim when it truly needs him. Written by the planning chat. **Status: draft.** Loops 1, 4, 5 and 6 are running now. Loops 2 and 3 need Tim's yes (section 3).
+**Why this file exists.** Tim, 18 Nov 2026: "the plan needs to create the best possible loops for the overall plan." A loop is work that keeps going round by itself until it is right, and only stops for Tim when it truly needs him. Written by the planning chat. **Status:** the three things asked in section 3 were answered yes on 18 Nov 2026 (D-158 to D-160). Loops 1, 2, 4, 5 and 6 run; loop 3 starts when the first tool passes loop 2. Tim has not read this page line by line.
 
 ## 1. The six loops
 
