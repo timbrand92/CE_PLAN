@@ -16,9 +16,9 @@
 
 1. [x] Build chat saves its five clean-ups and clears its DRAFT list (check `C:\CE_CIVIL` git log and BUILD_LOG.md). If idle and not done, nudge it.
 2. [x] (done 18 Nov 02:25 on the third try: all seven windows driven by real clicks, 635 of 646 steps; wrong figures found, see DIRECTOR_SUMMARY section 5) The planning chat tries all seven bench windows itself by real clicks and typing (Tim: "can you try them all first and then tell me how to try"). Write what was found, window by window: works / odd / broken.
-3. [~] (list sent to the build chat 18 Nov 02:25; re-try after its fixes) Send every fault found to the build chat as one list; it fixes with a separate review; re-try the fixed windows.
-4. [~] (drafted 18 Nov 05:20, stage6TRY_THE_WINDOWS.md; finalise and send after a clean trial) Write the "try the windows" pack for Tim: one double-click, a ten-minute list, what to look for (`stage6\TRY_THE_WINDOWS.md`), and send it to him.
-5. [ ] Refresh `DIRECTOR_SUMMARY.md` and `STATE.md` so the morning answer is ready.
+3. [x] (done 18 Nov 06:30: two rounds of faults fixed; third independent run found no wrong figure) Send every fault found to the build chat as one list; it fixes with a separate review; re-try the fixed windows.
+4. [x] (final 18 Nov 06:30, sent to Tim) Write the "try the windows" pack for Tim: one double-click, a ten-minute list, what to look for (`stage6\TRY_THE_WINDOWS.md`), and send it to him.
+5. [x] (18 Nov 06:35) Refresh `DIRECTOR_SUMMARY.md` and `STATE.md` so the morning answer is ready.
 6. [x] (18 Nov: junction pit sourced from an approval letter, enter; step irons 0.9 not sourced well enough, left blank; build chat told) Check the reference files for a council document behind the two council figures of D-148; tell the build chat the result.
 
 ## Waiting on Tim (the loop does not start these)
@@ -32,7 +32,7 @@
 
 The limit "Nothing starts AutoCAD. No trials." above now reads: AutoCAD may be started ONLY on test copies, ONLY inside Tim's hours (5:30 pm to 8:30 am weekdays, all weekend), ONLY when none of Tim's own AutoCAD windows is open, by the normal double-click route. Rule 1.9 in full, with its one exception (D-160).
 
-7. [ ] Build chat: the AutoCAD foundation (hidden note on ordinary objects, join as a soft pointer on the object, position stamp, self-check on open, the no-plugin proof), built and reviewed, then tested in AutoCAD on a test copy at night. Follow the method and findings in `stage4\TRIAL_RESULTS.md`.
+7. [x] (18 Nov: 24 of 25 in real AutoCAD; explode-from-code gap open) Build chat: the AutoCAD foundation (hidden note on ordinary objects, join as a soft pointer on the object, position stamp, self-check on open, the no-plugin proof), built and reviewed, then tested in AutoCAD on a test copy at night. Follow the method and findings in `stage4\TRIAL_RESULTS.md`.
 8. [ ] Build chat: the Pit tool in AutoCAD (typed command PIT / PT, the window, draws ordinary objects), through the tool loop and the night loop in `stage6\LOOPS.md`.
 9. [ ] Build chat: the Pipe tool in AutoCAD (PIPE / CD), same loops. Ordinary AutoCAD grips only until the grip crash of 17 Nov is understood.
 10. [ ] After each of 7 to 9: refresh `DIRECTOR_SUMMARY.md`. When Pit and Pipe both pass the night loop, tell Tim there is something he can try in AutoCAD and ask his yes to load it.
