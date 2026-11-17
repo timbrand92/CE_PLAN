@@ -288,6 +288,12 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-157** (17 Nov 2026, evening) The test AutoCAD left open after D-155: Tim "close" (a normal close was asked and it did not go in 30 seconds, left as it was), then, told it had not closed and that forcing needs his word under rule 1.9: "force close". Done: that one AutoCAD (t2_mouse, made-up drawing) was ended; no AutoCAD and no error window is running. This word covered that one window only.
 
+**D-158** (18 Nov 2026, just after midnight) Tim: "the plan needs to create the best possible loops for the overall plan. also how long until releases?" The six loops are written in `stage6\LOOPS.md`. Asked whether the build chat may start the AutoCAD part (the foundation, then Pit, then Pipe; nothing installed without his yes): "Yes, start it".
+
+**D-159** (18 Nov 2026) A standing yes for AutoCAD testing: AutoCAD may be started on TEST COPIES every night inside his hours (5:30 pm to 8:30 am weekdays, all weekend) without asking each day; never one of his drawings, never while his own AutoCAD is open: "Yes, every night in my hours". (Replaces the day-by-day yes of D-139 and the "nothing while asleep" of D-137.)
+
+**D-160** (18 Nov 2026) One named exception to rule 1.9: a robot may close (normal close, then force) a TEST AutoCAD that it started itself that night on a test copy when it jams or crashes; never one of Tim's; licence and sign-in windows still stop everything: "Yes, add that exception". Written into `C:\TimOS\RULES.md` rule 1.9 the same night.
+
 **D-156** (17 Nov 2026, evening; SUPERSEDES the colour in D-153) Tim, after seeing the sample sheet again: "lets go with a for the detention". Read by the planning chat as option A on `pictures\pick_a_detention_blue.html`: deeper blue, AutoCAD colour 160. Layer STORMWATER DETENTION PIPE and DASHED unchanged. Pen width, legend and label wording still unknown; still not seen on a real plot.
 
 **Open after this sitting (asked once on 16 Nov, Tim sent D-079 instead of answering; not to be re-asked in the same form):** where a pipe stops at a pit (gap check Pit item 1); whether a schedule cell can be typed over (item 3); which pit kinds are in the first release and whether a turned pit is in the window (item 9); which pits count as storage (item 10).
