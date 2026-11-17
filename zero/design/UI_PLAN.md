@@ -67,3 +67,11 @@
 1. Whether the choices, their order and their words in the Pit and Pipe windows are right in drafting terms (Tim approved the windows; the content has not been gone through line by line).
 2. The ribbon tab that appears on selection (D-051) now only needs a button or two; which ones is open.
 3. How the preview is produced inside AutoCAD is a Stage 4 trial.
+
+## Added 18 Nov 2026 (Tim's rulings D-162 to D-167, after using the bench windows)
+
+1. **One colour scheme only** (D-166). No light and dark versions; this replaces "dark or light all through". The window background is a grey like AutoCAD's own. The brand shows in the type (wide squared capitals) and the CE mark.
+2. **Colour draws the eye, by normal UI convention** (D-164): the next action (OK), the box in use, the thing being changed, what just changed, the one answer per card, selected choice, held against worked out. Status keeps its own three colours with the word and they are used for nothing else.
+3. **The button and highlight colour is unlike any colour in the drawing on screen** (D-166): chosen from a gap away from every office layer colour and the status colours. Which colour: not yet picked.
+4. **The preview, in every window** (D-162, D-167): (a) the drawing as AutoCAD shows it, real layers, colours, linetypes, text and arrow, changing as you type; (b) "where on the plan": a small site locator in a corner; (c) "where in the system": a strip under the preview showing the run as a chain with this object lit; (d) the thing being changed highlighted the same way in all three. Nothing made up is shown as if it were the drawing: on the bench, stand-in scenery is labelled as stand-in.
+5. **The Levels tool is to be renamed** (D-162): long section or pipe section; word and short name not yet picked.
