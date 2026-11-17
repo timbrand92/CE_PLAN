@@ -24,7 +24,7 @@ A new CE civil drainage plugin for AutoCAD 2027, built from a blank page, with t
 2. **Pipe** (PIPE / CD): new stormwater, charged, suspended, detention (own kind, layer and blue, with a legend line); twin as one pipe.
 3. **Levels along a run** (LEVELS / LV): from either end.
 4. **Inlets** (DOWNPIPE / DP, OVERFLOW / OF, FO, INSPECTION / IO, GIO, FLOORWASTE / FW).
-5. **Tank** (TANK / TK), its note and leader.
+5. **Tank** (TANK / WT), its note and leader.
 6. **Detention** (DETENTION / DET): Boyd's and OSD4W / Swinburne; two answers; fills the criteria box.
 7. **Pit schedule** (SCHEDULE / SH): placed once, then follows the pits.
 Underneath all of them: the foundation, the office list of standards, a self-check when a drawing opens, the ribbon (short CE Civil tab plus a light tab on selection), and one-click update.
