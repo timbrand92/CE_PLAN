@@ -348,6 +348,14 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-188** (18 Nov 2026; asked as 12 of 18) Plotting with open items (assumed, not joined): "One quiet line, never a stop". One command-line line with the count; plotting carries on.
 
+**D-189** (18 Nov 2026, early afternoon; asked as 13 of 18) Pipes with bends in the first release: "Bends on every kind of pipe". Any pipe, gravity included, can be drawn with bends; the inspection opening offer at a bend stands (D-079 area).
+
+**D-190** (18 Nov 2026; asked as 14 of 18) Existing pipes and pits: "The council pit you connect to; the rest by hand". An existing council pit or kerb outlet that the new system connects into is a proper outlet a run can reach; other existing drains stay hand-drawn in the first release.
+
+**D-191** (18 Nov 2026; asked as 15 of 18; a fact about practice) How drafters start a new job: "From the office template". A clean start each time. The plug-in still treats job facts found in a copied drawing as assumed until confirmed, but that case is rare.
+
+**D-192** (18 Nov 2026; asked as 16 of 18) A plain line on a stormwater layer drawn by someone with no plug-in: "One line on opening, with a 'take it up' click". Never automatic.
+
 **D-167** (18 Nov 2026, morning) The new preview, as drawn on `pictures\pick_a_ce_scheme.html` (the drawing as AutoCAD shows it, from the office layers, colours, text and arrow; "where on the plan" as a small site locator in the corner; "where in the system" as a strip under the preview with the run as a chain and this object lit; the thing being changed highlighted the same way in all three): "YES THE PREVIEW IS WHAT I MEANT". It applies to every window (D-070: consistent across all windows). Not yet proven: how the locator is produced inside AutoCAD. The drawn details not taken from a real sheet (pit inner wall line, pit tag circle, which side the flow arrow sits) are still to be checked against how the office draws.
 
 **D-156** (17 Nov 2026, evening; SUPERSEDES the colour in D-153) Tim, after seeing the sample sheet again: "lets go with a for the detention". Read by the planning chat as option A on `pictures\pick_a_detention_blue.html`: deeper blue, AutoCAD colour 160. Layer STORMWATER DETENTION PIPE and DASHED unchanged. Pen width, legend and label wording still unknown; still not seen on a real plot.
