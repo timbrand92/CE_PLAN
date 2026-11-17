@@ -75,3 +75,17 @@
 3. **The button and highlight colour is unlike any colour in the drawing on screen** (D-166): chosen from a gap away from every office layer colour and the status colours. Which colour: not yet picked.
 4. **The preview, in every window** (D-162, D-167): (a) the drawing as AutoCAD shows it, real layers, colours, linetypes, text and arrow, changing as you type; (b) "where on the plan": a small site locator in a corner; (c) "where in the system": a strip under the preview showing the run as a chain with this object lit; (d) the thing being changed highlighted the same way in all three. Nothing made up is shown as if it were the drawing: on the bench, stand-in scenery is labelled as stand-in.
 5. **The Levels tool is to be renamed** (D-162): long section or pipe section; word and short name not yet picked.
+
+## The colour scheme, picked 18 Nov 2026 (D-168: "B, ROSE", from `pictures\pick_a_ce_scheme_2.html`)
+
+One scheme, everywhere. Values as drawn on the sheet Tim picked from:
+1. **Window:** #3B4453 (AutoCAD 2027's own panel grey, read from its dark theme file).
+2. **Cards:** #454F61 (AutoCAD's menu and preview grey).
+3. **Input wells and hairlines:** #2E3440.
+4. **Text:** #F5F5F5 main, #D9D9D9 second, #C7CFDB notes.
+5. **Accent, rose:** #FF70B3, with dark text #10131A on it. Used for: OK (solid), the box in use, the thing being changed (plan, locator, chain), selected choice, ticked boxes, held padlock, the "changed" chip, the underline of the one answer per card. Nothing else.
+6. **Keyboard focus:** a white ring (never AutoCAD's blue).
+7. **Status, with the word, used for nothing else:** Suits #3EDC9B, Needs a look #FBBF24, Wrong #FF7A7A.
+8. **Inside the preview:** the drawing's own colours on AutoCAD's model background (assumed #212830; the office's own background is not known).
+9. **Buttons:** OK solid rose; Cancel, Inspect and Match outlined and quiet; states normal, hover, pressed, keyboard focus, disabled as on the sheet.
+10. Why rose: it was measured against all 36 colours the office layers use on screen and the status colours; its nearest neighbours are the red tones (28 degrees of hue away). Watch in use: rose beside red "Wrong" and red invert text.
