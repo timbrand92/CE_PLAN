@@ -36,7 +36,7 @@
 ## Parked, not blocking
 
 1. How long a run is before an inspection opening is offered (AS 3500.3 figure not found online).
-2. Detention blue: SETTLED 17 Nov, colour 152, layer STORMWATER DETENTION PIPE (D-153). Still open: its printed pen width, the legend and label wording, and a look on a real plot.
+2. Detention blue: SETTLED 17 Nov, colour 160 (option A), layer STORMWATER DETENTION PIPE (D-153, D-156). Still open: its printed pen width, the legend and label wording, and a look on a real plot.
 3. How the plugin joins the Job Manager program.
 4. Old drawings made with the special pipe object.
 5. Title block and issue (after the first release).
