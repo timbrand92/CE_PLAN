@@ -19,7 +19,7 @@
 3. [ ] Send every fault found to the build chat as one list; it fixes with a separate review; re-try the fixed windows.
 4. [ ] Write the "try the windows" pack for Tim: one double-click, a ten-minute list, what to look for (`stage6\TRY_THE_WINDOWS.md`), and send it to him.
 5. [ ] Refresh `DIRECTOR_SUMMARY.md` and `STATE.md` so the morning answer is ready.
-6. [ ] Check the reference files for a council document behind the two council figures of D-148; tell the build chat the result.
+6. [x] (18 Nov: junction pit sourced from an approval letter, enter; step irons 0.9 not sourced well enough, left blank; build chat told) Check the reference files for a council document behind the two council figures of D-148; tell the build chat the result.
 
 ## Waiting on Tim (the loop does not start these)
 
