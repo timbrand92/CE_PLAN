@@ -72,9 +72,9 @@
    2. I copied Tim's profile key to a new key named ZeroTrial and ran run5 with `/p ZeroTrial`. AutoCAD then made ZeroTrial the **current profile** in the registry. My script noticed and **wrote the current-profile value back to "Tim"** (a registry write). Read now: the value is "Tim".
    3. The script also set SECURELOAD to 0 inside the sessions I ran. I have since read Tim's own profile: its SECURELOAD is 0 (I did not set that; my sessions ran under other profiles).
    4. Run2 headless was stuck at a prompt and I ended it with taskkill.
-   5. A copy of AutoCAD's own error-reporting start-up log (it carries a device id) sits in `evidence	10
+   5. A copy of AutoCAD's own error-reporting start-up log (it carries a device id) sits in `evidence\t10
 un5-full\ErrorReports`. It was written by AutoCAD, not by me.
-5. **Evidence:** `C:\CE_WORK\trials\zero\evidence	10
+5. **Evidence:** `C:\CE_WORK\trials\zero\evidence\t10
 un4-headless\events.log`, `run5-full\events.log`, `dialog1.png`, the comparison script `scripts\cmp_logs.py`.
 6. **What it means for the build approach.** Events and the transform overrule behave the same headless and full for these commands, so move, copy, mirror, rotate, erase and undo logic can be tested headless and trusted to carry over. Anything involving selection by window, idle, or the screen needs full AutoCAD. Under the new rules the headless engine cannot be used without its isolate option (otherwise it loads Tim's live CE plugin and writes to his live files), so unattended headless runs are BLOCKED until Tim decides.
 
@@ -211,7 +211,7 @@ un4-headless\events.log`, `run5-full\events.log`, `dialog1.png`, the comparison 
 2. **Click on the extra grip:** the grip went red, no menu appeared, the log showed "OnHotGrip", and then AutoCAD showed its Error Report and closed unexpectedly (`t2b.png`, `t2b_2.png`). The robot stopped and touched nothing.
 3. **NOT TESTED:** the menu items, built-in grips on a plain polyline (2c), the grip-drag copy carrying the note (2d, the robot also has no held-Ctrl click) and a plain stretch plus undo (2e). Hover tooltip not tested (no mouse-move-only action).
 4. **Build meaning:** a custom grip on an ordinary object is NOT proven and can crash AutoCAD when done as in this trial. Do not promise slide-along or flip grips. A safe retry would try the grip without the right-click menu setting, and the Autodesk sample for custom grips; it needs Tim's go and a fresh AutoCAD.
-5. **Evidence:** `evidence	2a.png`, `t2b.png`, `t2b_2.png`, `zt_default.log`, `codex	2_t8_report.md`.
+5. **Evidence:** `evidence\t2a.png`, `t2b.png`, `t2b_2.png`, `zt_default.log`, `codex\t2_t8_report.md`.
 
 ---
 
@@ -222,7 +222,7 @@ un4-headless\events.log`, `run5-full\events.log`, `dialog1.png`, the comparison 
 1. **Seen on the trial polyline:** my watcher fired ("noted=True") and the stand-in trial command ran, but **AutoCAD's own PEDIT also started** (`Select polyline or [Multiple]:`, `t8a.png`). The event cannot cancel the normal action, so a plain double-click on a noted object would open both the trial window and PEDIT.
 2. **Seen on a plain polyline and a plain line:** the watcher logged "noted=False" and nothing of mine ran. AutoCAD behaved as normal: PEDIT options for the polyline (`t8b.png`), Quick Properties for the line (`t8c.png`). So other objects are left alone.
 3. **Build meaning:** double-click can be recognised for note-carrying objects only, but to take over the double-click it needs a different route (cancel the native command from the handler, or the customisation double-click action, which is a saved setting). Not proven either way.
-4. **Evidence:** `evidence	8a.png`, `t8b.png`, `t8c.png`, `zt_default.log`.
+4. **Evidence:** `evidence\t8a.png`, `t8b.png`, `t8c.png`, `zt_default.log`.
 
 ---
 
