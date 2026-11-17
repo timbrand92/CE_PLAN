@@ -2,15 +2,15 @@
 
 **Why this file exists.** Tim, 17 Nov 2026: "i need a way to understand wht we have planned, what we have built, how close we are to finishing or getting a ready version for me to test and bugs and anythign else thats important if i was a director looking to get summaries. i need this everytime i ask how things are going and also you need to keep me on track with planning, building annd beyond". The planning chat updates this page before every progress answer and always uses these seven headings in this order.
 
-**Last updated:** Wed 18 Nov 2026, 8:35 am.
+**Last updated:** Wed 18 Nov 2026, about 11:30 am.
 
 ## 1. Headline
 
-The seven windows are ready for you to try, outside AutoCAD. The AutoCAD part has started and its foundation passed 24 of 25 checks inside real AutoCAD overnight. There is no version to draft with yet.
+Planning is finished: you have used all seven windows and called them good, with changes. Pit and Pipe tools are built for AutoCAD and get their first real AutoCAD run tonight. There is no version to draft with yet.
 
-## 2. Planned: 17 of 18 steps
+## 2. Planned: 18 of 18 steps
 
-Done: ribbon, names, the look of every window, the foundation, the first-release list (7 tools), how we work, the plan, the six loops (`stage6\LOOPS.md`), the research on testing faster (`reference\research\R-004`). Left: step 16, your verdict after using the windows (`stage6\TRY_THE_WINDOWS.md`, ten minutes).
+All done, 18 Nov. Your verdict on the windows (D-162 to D-169) added: one colour scheme on AutoCAD's grey with a rose accent; a preview that shows the real drawing, where on the plan and where in the system; Levels to be renamed; the Schedule's Columns card and scale choice out; speed as a requirement; and cut the typing by using the whole system (an input audit is being written).
 
 ## 3. Built (four separate facts)
 
@@ -54,4 +54,4 @@ Done: ribbon, names, the look of every window, the foundation, the first-release
 
 ## 7. Next step (one only)
 
-You: try the seven windows with `stage6\TRY_THE_WINDOWS.md`.
+You: the short name for Tank (WT is already your alias for Wall-t). Then the input audit comes to you.
