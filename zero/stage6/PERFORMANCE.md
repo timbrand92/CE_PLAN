@@ -13,7 +13,7 @@ Speed is a requirement, checked like a sum. Every tool has a time limit for each
 3. **A window opens:** within 0.3 of a second of the command.
 4. **Typing in a window:** every figure and the preview follow within 0.1 of a second.
 5. **Moving a pit with its pipes:** within 0.1 of a second on a 2,500-object drawing.
-6. **Idle:** when you are not using a CE tool, the plug-in does nothing at all. No timers, no watching every command.
+6. **Idle:** in a drawing with no CE objects, the plug-in does nothing at all: no timers, nothing listening. In a drawing that has CE pits and pipes there is ONE honest exception: for a pipe to follow a pit moved with plain AutoCAD MOVE, the plug-in must notice the move. It notices only objects that carry our note, starts only when a CE tool is first used in that drawing, and its cost on an ordinary command is measured every night (limit, DRAFT: no more than 5 thousandths of a second added to a plain command on a 2,500-object drawing).
 7. **Plotting, saving, panning and zooming:** no measurable change with the plug-in loaded.
 
 ## 3. What is already measured
