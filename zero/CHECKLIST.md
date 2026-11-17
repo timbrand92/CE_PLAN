@@ -22,9 +22,9 @@
 18. The plan approved (D-115; `stage6\THE_PLAN.md`); build chat brief drafted (`stage6\BUILD_CHAT_BRIEF.md`).
 17. Trial results read (16 Nov night): PASS 6, PARTIAL 1, BLOCKED 1, NOT TESTED 2 (grips and double-click need a real mouse), plus trial 9 part pass. Nothing made the approach fail. Changes to the build approach are listed at the end of the trial results file.
 
-## Left, in this order (1)
+## Left, in this order (0): all 18 steps done 18 Nov 2026
 
-16. Tim uses the windows and gives his verdict (D-087: "i cant give you full answer until using").
+16. DONE 18 Nov 2026: Tim used all seven bench windows and gave his verdict (D-162 to D-169): all seven good, with changes recorded (one colour scheme on AutoCAD grey with a rose accent; the new preview; Levels to be renamed; Tank short name; the Schedule Columns card and on-sheet scale out; cut typing by using the whole system).
 
 ## Started beyond the checklist
 
