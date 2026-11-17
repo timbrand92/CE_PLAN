@@ -14,8 +14,8 @@
 
 ## Queue
 
-1. [ ] Build chat saves its five clean-ups and clears its DRAFT list (check `C:\CE_CIVIL` git log and BUILD_LOG.md). If idle and not done, nudge it.
-2. [ ] The planning chat tries all seven bench windows itself by real clicks and typing (Tim: "can you try them all first and then tell me how to try"). Write what was found, window by window: works / odd / broken.
+1. [x] Build chat saves its five clean-ups and clears its DRAFT list (check `C:\CE_CIVIL` git log and BUILD_LOG.md). If idle and not done, nudge it.
+2. [~] (started 18 Nov 00:10, an independent Opus tester is driving the windows by real clicks) The planning chat tries all seven bench windows itself by real clicks and typing (Tim: "can you try them all first and then tell me how to try"). Write what was found, window by window: works / odd / broken.
 3. [ ] Send every fault found to the build chat as one list; it fixes with a separate review; re-try the fixed windows.
 4. [ ] Write the "try the windows" pack for Tim: one double-click, a ten-minute list, what to look for (`stage6\TRY_THE_WINDOWS.md`), and send it to him.
 5. [ ] Refresh `DIRECTOR_SUMMARY.md` and `STATE.md` so the morning answer is ready.
