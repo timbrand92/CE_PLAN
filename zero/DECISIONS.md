@@ -294,6 +294,8 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-160** (18 Nov 2026) One named exception to rule 1.9: a robot may close (normal close, then force) a TEST AutoCAD that it started itself that night on a test copy when it jams or crashes; never one of Tim's; licence and sign-in windows still stop everything: "Yes, add that exception". Written into `C:\TimOS\RULES.md` rule 1.9 the same night.
 
+**D-161** (18 Nov 2026, 9 am) Testing faster (research R-004). Told that the free gains already cut a full AutoCAD test pass from about 16 minutes to about 2 minutes 20 seconds, and asked what to do with the three options that need him (the no-screen engine, Autodesk's cloud engine, a second machine): "Look into the no-screen engine". The option as offered: the planning chat writes up exactly what it touches for him to approve first; NOTHING IS RUN. The cloud engine and a second machine stay parked.
+
 **D-156** (17 Nov 2026, evening; SUPERSEDES the colour in D-153) Tim, after seeing the sample sheet again: "lets go with a for the detention". Read by the planning chat as option A on `pictures\pick_a_detention_blue.html`: deeper blue, AutoCAD colour 160. Layer STORMWATER DETENTION PIPE and DASHED unchanged. Pen width, legend and label wording still unknown; still not seen on a real plot.
 
 **Open after this sitting (asked once on 16 Nov, Tim sent D-079 instead of answering; not to be re-asked in the same form):** where a pipe stops at a pit (gap check Pit item 1); whether a schedule cell can be typed over (item 3); which pit kinds are in the first release and whether a turned pit is in the window (item 9); which pits count as storage (item 10).
