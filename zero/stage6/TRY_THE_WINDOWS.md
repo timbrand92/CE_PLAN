@@ -34,6 +34,8 @@ Then try to break one. A comma instead of a point, or letters: it refuses in pla
 
 ## Known cautions (so you do not report them twice)
 
+**Update 7:20 am:** after the third trial the build chat fixed cautions 1 to 7 (commit 8c3dc05; its own reviewer passed them, 1,240 of 1,240 click steps). The independent tester has NOT re-checked those fixes, so they stay listed: if you still see one, say so.
+
 1. **Levels, when over-held:** trust the "out by" words, not the long section. The drawing still puts the whole gap on one pipe, which your ruling D-125 says not to do. Being fixed.
 2. **Levels:** card 1 has a small scroll bar and card 4's list of held figures is cut off. Your rule is no scrolling inside a window. Being fixed.
 3. **Pit:** typing "350" alone is refused; "350 x 350" works. Being fixed.
