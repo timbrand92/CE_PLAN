@@ -3,18 +3,24 @@
 **Run by:** the trial chat, from Mon 16 Nov 2026 20:46 Melbourne. **Brief:** `TRIALS_BRIEF.md`. **Code and evidence:** `C:\CE_WORK\trials\zero\` (nothing in this repository except this file).
 **Rule for this file:** it is updated after each trial, so a stopped run still leaves a true record. A trial that has not been run says NOT TESTED.
 
+## STOPPED 17 Nov 2026 about 18:54: AutoCAD is OPEN with a crash window. Tim must close it.
+
+1. **What is open:** the trial's AutoCAD 2027 (acad.exe) is still running with the made-up copy `t2_mouse.dwg`, and an **"AutoCAD Error Report"** window ("A software problem has caused AutoCAD to close unexpectedly") is on top of it (cer_dialog.exe). Nobody touched it. Nothing was saved. No force-close, no profile, licence or settings change this session.
+2. **Why:** the Codex robot clicked the trial's extra grip (trial 2) and AutoCAD crashed. Cause not proven; the likely suspect is my custom grip returning a failure value from its click handler, but I did not test that.
+3. **What Tim does:** press Close on the error window (do not send the report unless he wants to), then answer No to any save prompt. The test copy is under `C:\CE_WORK	rials\zero\dwg\`, so nothing of his is at risk. I will not retry, and trial 5 was not started.
+
 ## Where it stands
 
 1. **Trial 11, any direction:** PASS (pure code, no AutoCAD).
 2. **Trial 10, headless predicts full:** PASS for the scripted commands tried (see below). Run under the old limits, before the licence incident. Not repeatable under the new limits.
 3. **Trial 1, joins:** PASS for the commands tested (soft pointer wins; end-of-command mover works, close-hook mover fails). Xref bind not tested.
 4. **Trial 3, no plugin:** PASS (plot identical, plain edit, plugin reports the change). LT and Tim's drawing not tested.
-5. **Trial 2, grips:** NOT TESTED (needs a real mouse).
+5. **Trial 2, grips:** FAIL for the custom grip (clicking it crashed AutoCAD, 17 Nov). Built-in grips on a plain polyline, the grip-drag copy and the menu were NOT TESTED.
 6. **Trial 4, speed:** PASS for command and mover cost (about 40 ms per move on 2500 objects); mouse-drag feel not measured.
 7. **Trial 5, Properties:** BLOCKED for the palette (needs the Properties palette opened, a saved interface setting); the .NET property list works at code level.
 8. **Trial 6, window, live preview and Inspect:** PASS at 1920 x 1080 (21 ms redraw, Inspect returns with values); 2560 x 1440 simulated only; mouse pan/zoom during Inspect not tested.
 9. **Trial 7, ribbon tab, tips and typed names:** PARTIAL (tab logic and alias check work in code; on-screen look, tip rendering, rules-file route not tested).
-10. **Trial 8, double-click:** NOT TESTED (needs a real mouse).
+10. **Trial 8, double-click:** PARTIAL (noted objects detected, others untouched; AutoCAD's own PEDIT also runs).
 11. **Trial 9, update and rollback:** PASS for the file mechanics (outside AutoCAD); AutoCAD side BLOCKED (bundle folder and registry).
 
 ---
@@ -197,15 +203,26 @@ un4-headless\events.log`, `run5-full\events.log`, `dialog1.png`, the comparison 
 
 ---
 
-## Trial 2. Grips
+## Trial 2. Grips (run 17 Nov 2026 by the Codex robot, real mouse)
 
-**Verdict: NOT TESTED.** Grips appear only when a person picks an object with the mouse and drags a grip. Under the rules I did not drive the mouse, and AutoCAD cannot be asked to run a grip drag from code. Codex, the real-AutoCAD driver Tim allowed, could do this. What I would need: Tim's word to hand this one trial to a Codex run. It would answer R-002 C: does the plugin's note survive on the drag copy, does a custom grip with a menu work, do the built-in grips stay on ordinary objects.
+**Verdict: FAIL for the custom grip. Rest NOT TESTED.**
+
+1. **Seen:** selecting the trial polyline (the one carrying a hidden note) made my plugin add an extra grip (log: "built-in + custom, now 4 grips"). Screenshot `t2a.png` shows end squares and a middle grip; the robot could not tell the extra grip apart by eye.
+2. **Click on the extra grip:** the grip went red, no menu appeared, the log showed "OnHotGrip", and then AutoCAD showed its Error Report and closed unexpectedly (`t2b.png`, `t2b_2.png`). The robot stopped and touched nothing.
+3. **NOT TESTED:** the menu items, built-in grips on a plain polyline (2c), the grip-drag copy carrying the note (2d, the robot also has no held-Ctrl click) and a plain stretch plus undo (2e). Hover tooltip not tested (no mouse-move-only action).
+4. **Build meaning:** a custom grip on an ordinary object is NOT proven and can crash AutoCAD when done as in this trial. Do not promise slide-along or flip grips. A safe retry would try the grip without the right-click menu setting, and the Autodesk sample for custom grips; it needs Tim's go and a fresh AutoCAD.
+5. **Evidence:** `evidence	2a.png`, `t2b.png`, `t2b_2.png`, `zt_default.log`, `codex	2_t8_report.md`.
 
 ---
 
-## Trial 8. Double-click
+## Trial 8. Double-click (run 17 Nov 2026 by the Codex robot, real mouse)
 
-**Verdict: NOT TESTED.** Same reason: a double-click is a mouse action. It would settle whether a replacement double-click can open the trial window only for note-carrying objects and leave every other object's double-click exactly as plain AutoCAD does it (R-002 H). Needs Codex or Tim.
+**Verdict: PARTIAL. Detection PASS; replacing AutoCAD's own double-click FAIL as built.**
+
+1. **Seen on the trial polyline:** my watcher fired ("noted=True") and the stand-in trial command ran, but **AutoCAD's own PEDIT also started** (`Select polyline or [Multiple]:`, `t8a.png`). The event cannot cancel the normal action, so a plain double-click on a noted object would open both the trial window and PEDIT.
+2. **Seen on a plain polyline and a plain line:** the watcher logged "noted=False" and nothing of mine ran. AutoCAD behaved as normal: PEDIT options for the polyline (`t8b.png`), Quick Properties for the line (`t8c.png`). So other objects are left alone.
+3. **Build meaning:** double-click can be recognised for note-carrying objects only, but to take over the double-click it needs a different route (cancel the native command from the handler, or the customisation double-click action, which is a saved setting). Not proven either way.
+4. **Evidence:** `evidence	8a.png`, `t8b.png`, `t8c.png`, `zt_default.log`.
 
 ---
 
