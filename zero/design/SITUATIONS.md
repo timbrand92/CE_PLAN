@@ -962,3 +962,25 @@ Each situation gives: **Story** (the real-world case); **Today's design** (what 
 2. TOOLS_TODAY, ELEMENTS, JOB_KINDS, SUMS and LIMITS were searched, not read end to end.
 3. The office facts used here (mm, 1:100, model space, nothing annotative, revision rows, existing drains, charged lines) come from the measured reference. They are not yet confirmed by Tim (reference README).
 4. Where the reference says nothing, the item is marked UNKNOWN and asked, never filled.
+
+## Tim's answers, 18 Nov 2026 (rulings D-177 to D-195 in `DECISIONS.md`; his words are there)
+
+1. Assumed prints "APPROX." in front, with one standing note (D-177).
+2. Not known prints "TBC" (D-178). Cover levels are the engineer's, from house and pavement levels, never the survey (D-178); help with them is only ever a suggestion, the engineer has the final say (D-195).
+3. Mirror or copied units: sizes and grades copy; levels copy marked assumed; next free numbers (D-179).
+4. The drawing keeps the standard values it was designed with; a line on opening offers to switch (D-180).
+5. Tags and level texts go with a moved pit; a hand-moved label keeps its offset from the pit in both directions (D-181).
+6. A typed-over pipe label is kept, flagged, one click to follow again (D-182).
+7. Two systems: one number series, street system first (D-183).
+8. A pit added after issue: the drafter chooses among next free number, a letter, or renumber all (D-184).
+9. Retyping a pit tag renames the pit (D-185).
+10. Placing many: keep clicking, Enter to finish (D-186).
+11. "Changed since last issue": yes, but later (D-187).
+12. Plotting with open items: one quiet line, never a stop (D-188).
+13. Bends on every kind of pipe (D-189).
+14. Existing: the council pit or outlet you connect to is a proper outlet; other existing drains by hand (D-190).
+15. New jobs start from the office template (D-191).
+16. A hand-drawn line on a stormwater layer: one line on opening with a "take it up" click (D-192).
+17. Some laptops are used for drafting: small screens put cards into tabs (D-193).
+18. Plans are drawn 1:1 in the model; the layout scales them to 1:100 (D-194).
+The 18 general rules above ("Rules this adds to the foundation") have NOT been put to Tim one by one; where one goes further than his answers it is still a proposal.
