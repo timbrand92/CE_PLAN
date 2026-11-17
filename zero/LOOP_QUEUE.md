@@ -33,6 +33,6 @@
 The limit "Nothing starts AutoCAD. No trials." above now reads: AutoCAD may be started ONLY on test copies, ONLY inside Tim's hours (5:30 pm to 8:30 am weekdays, all weekend), ONLY when none of Tim's own AutoCAD windows is open, by the normal double-click route. Rule 1.9 in full, with its one exception (D-160).
 
 7. [x] (18 Nov: 24 of 25 in real AutoCAD; explode-from-code gap open) Build chat: the AutoCAD foundation (hidden note on ordinary objects, join as a soft pointer on the object, position stamp, self-check on open, the no-plugin proof), built and reviewed, then tested in AutoCAD on a test copy at night. Follow the method and findings in `stage4\TRIAL_RESULTS.md`.
-8. [ ] Build chat: the Pit tool in AutoCAD (typed command PIT / PT, the window, draws ordinary objects), through the tool loop and the night loop in `stage6\LOOPS.md`.
+8. [~] (18 Nov 08:30: built and reviewed on the pretend drawing; first AutoCAD run tonight) Build chat: the Pit tool in AutoCAD (typed command PIT / PT, the window, draws ordinary objects), through the tool loop and the night loop in `stage6\LOOPS.md`.
 9. [ ] Build chat: the Pipe tool in AutoCAD (PIPE / CD), same loops. Ordinary AutoCAD grips only until the grip crash of 17 Nov is understood.
 10. [ ] After each of 7 to 9: refresh `DIRECTOR_SUMMARY.md`. When Pit and Pipe both pass the night loop, tell Tim there is something he can try in AutoCAD and ask his yes to load it.

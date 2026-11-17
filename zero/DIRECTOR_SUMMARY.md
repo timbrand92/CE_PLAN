@@ -2,7 +2,7 @@
 
 **Why this file exists.** Tim, 17 Nov 2026: "i need a way to understand wht we have planned, what we have built, how close we are to finishing or getting a ready version for me to test and bugs and anythign else thats important if i was a director looking to get summaries. i need this everytime i ask how things are going and also you need to keep me on track with planning, building annd beyond". The planning chat updates this page before every progress answer and always uses these seven headings in this order.
 
-**Last updated:** Wed 18 Nov 2026, 6:35 am.
+**Last updated:** Wed 18 Nov 2026, 8:35 am.
 
 ## 1. Headline
 
@@ -18,7 +18,7 @@ Done: ribbon, names, the look of every window, the foundation, the first-release
 2. **The seven windows on a test bench, outside AutoCAD:** built 7 of 7; 241 checks and 1,170 click steps pass on the builder's side.
 3. **Independent trial of the windows:** three full runs overnight by a tester that did not build them, real mouse and keyboard. Run 1 found wrong figures (commas, impossible figures shown green). Run 2 found more (Levels bent a held grade). Run 3: no wrong figure found, 155 of 155 steps, all seven ready for you, five with a named caution.
 4. **The AutoCAD foundation** (hidden notes on ordinary objects, joins, self-check): written; 87 checks on a pretend drawing; two runs inside real AutoCAD 2027 on a test copy: 23 of 25, then 24 of 25. One gap left: exploding a pipe from code loses its note.
-5. **Tools built in AutoCAD: 0 of 7.** Pit is next, then Pipe.
+5. **Tools for AutoCAD:** the Pit tool (PIT / PT) is BUILT and reviewed against a pretend drawing (18 Nov, 8:30 am) but has NOT run in AutoCAD; its first AutoCAD run is tonight after 5:30 pm. Pipe is being built now. Tools proven in AutoCAD: 0 of 7.
 6. **Installed: 0. Accepted by you: 0.**
 
 ## 4. How close to a version you can test (estimates, not promises)
@@ -47,9 +47,10 @@ Done: ribbon, names, the look of every window, the foundation, the first-release
 4. Slab thicknesses (path 0.10, driveway 0.125, crossover 0.15) are the planning chat's guesses: correct them.
 5. Upper limits for the "Needs a look" lines (how deep, how big, how flat is silly): the build chat's figures are DRAFT.
 6. Detention blue (colour 160) on a real plot; AS 3500.3 underside-of-pavement check; one council's step irons wording.
-7. A new outside library used for tests only (reads saved drawings): DRAFT for your yes.
-8. Parked from the testing research: the no-screen engine, Autodesk's cloud engine, a second machine.
-9. The other leftovers of the first trial run.
+7. Ten small DRAFT calls on the Pit tool (the office block as the symbol, label positions and others): to come to you as one clickable batch.
+8. A new outside library used for tests only (reads saved drawings): DRAFT for your yes.
+9. Parked from the testing research: the no-screen engine, Autodesk's cloud engine, a second machine.
+10. The other leftovers of the first trial run.
 
 ## 7. Next step (one only)
 
