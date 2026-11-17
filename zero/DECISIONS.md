@@ -284,6 +284,8 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-154** (17 Nov 2026, morning; SUPERSEDES D-123 for the label) Shown what D-123 gives in practice (1 in 75 typed, inverts rounded to two decimals, label prints "1 IN 73"), asked if that is what he wants on the sheet: "Print what I typed: 1 IN 75". The label prints the design grade as typed. The inverts are still rounded to two decimals, so a checker working from the printed inverts may get a slightly different grade.
 
+**D-155** (17 Nov 2026, evening) The grip trial crashed the test AutoCAD (custom grip clicked by the Codex robot; cause not proven), leaving an "AutoCAD Error Report" window on the made-up drawing t2_mouse. Asked what to do with it: "Close it for me" (the option offered: press Close on the error window only, no report sent; if AutoCAD does not go, leave it; no more trials today). Done about 21:25: the error window closed normally; AutoCAD itself stayed open and responding on t2_mouse and was left as it is for Tim. Trials stay stopped. Trial 2: FAIL for the custom grip. Trial 8: PARTIAL. Trial 5: not started.
+
 **Open after this sitting (asked once on 16 Nov, Tim sent D-079 instead of answering; not to be re-asked in the same form):** where a pipe stops at a pit (gap check Pit item 1); whether a schedule cell can be typed over (item 3); which pit kinds are in the first release and whether a turned pit is in the window (item 9); which pits count as storage (item 10).
 
 ## How levels are designed
