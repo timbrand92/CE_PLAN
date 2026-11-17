@@ -312,6 +312,14 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-170** (18 Nov 2026, late morning) Told that WT is already in his own alias list as "Wall-t" and asked which should have it: "TANK IS WT FOR WATER TANK". The Tank tool is TANK / WT (replaces TK in D-101). What happens to his "Wall-t" alias: he did not say; it stays his to move. The plug-in does not edit his alias file.
 
+**D-171** (18 Nov 2026, midday; the input audit `design\INPUT_AUDIT.md`: 85 figures typed today on a two-unit job, 20 possible, 31 if the drawing cannot be read) Asked whether to go ahead with the five changes (1 numbers, kinds and office defaults fill themselves; 2 one fact held in one place; 3 head, orifice and pit size worked out; 4 one Job window typed once per job; 5 read the drawing: downpipe joins, hatched roof and paving, the boundary, then cover levels): "YES ALL FIVE IN THAT ORDER, THE THING WITH CONTEXT AND REAL WORLD EXAMPLES WHEN WORKING THROUGH IT WITH ME". So: all five, in that order; and when the planning chat works a design question through with him it gives the context and a real-world example each time.
+
+**D-172** (18 Nov 2026, midday) Orifice pit: is the top of the baffle (plate) always at the top water level of the storage: "Yes, baffle top = top water level". So plate height = top water level less the orifice invert; head = that less half the orifice; neither is typed.
+
+**D-173** (18 Nov 2026, midday) Orifice size put on the drawing: "Round down to a whole mm" (never over the permitted discharge).
+
+**D-174** (18 Nov 2026, midday) The size a new pipe opens at: "100 everywhere" (can always be changed; a council figure would raise it).
+
 **D-167** (18 Nov 2026, morning) The new preview, as drawn on `pictures\pick_a_ce_scheme.html` (the drawing as AutoCAD shows it, from the office layers, colours, text and arrow; "where on the plan" as a small site locator in the corner; "where in the system" as a strip under the preview with the run as a chain and this object lit; the thing being changed highlighted the same way in all three): "YES THE PREVIEW IS WHAT I MEANT". It applies to every window (D-070: consistent across all windows). Not yet proven: how the locator is produced inside AutoCAD. The drawn details not taken from a real sheet (pit inner wall line, pit tag circle, which side the flow arrow sits) are still to be checked against how the office draws.
 
 **D-156** (17 Nov 2026, evening; SUPERSEDES the colour in D-153) Tim, after seeing the sample sheet again: "lets go with a for the detention". Read by the planning chat as option A on `pictures\pick_a_detention_blue.html`: deeper blue, AutoCAD colour 160. Layer STORMWATER DETENTION PIPE and DASHED unchanged. Pen width, legend and label wording still unknown; still not seen on a real plot.
