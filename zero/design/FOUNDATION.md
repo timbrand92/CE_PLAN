@@ -51,3 +51,14 @@ Nothing else. No new screen design, no new typed-over rule, no new place where a
 
 1. Sums that work in any direction are simple for one pipe and one pit. Along a branched run with many held values it is a harder problem; whether it stays quick and predictable must be proven in Stage 4 before it is promised.
 2. The Pit and Pipe mock-ups approved on 16 Nov show the approved LOOK. They were built before this page and work in one direction with typed-over as a special case; they are being rebuilt on the hold idea.
+
+## Added 18 Nov 2026: unfinished is normal (D-175, D-176)
+
+The office designs while it draws. A thing does not have to belong to a finished system to exist.
+1. **A loose thing is allowed and is not an error.** A pipe with an open end, a pit with no pipes, a run that does not yet reach an outlet.
+2. **What it cannot know reads "not known yet".** Never a guess, never a zero.
+3. **Part-way is quiet.** "Not joined yet" shows in grey, not as a status colour. Status colours are for things that are decided and wrong or doubtful.
+4. **Joining fills in.** When an end is brought to a pit or pipe it joins, what can now be worked out is, and "What else changes" says what filled in.
+5. **Sums wait for what they need** and say what is missing ("Cannot work out yet: P1 is not joined to the council connection").
+6. **One list of what is unfinished,** on demand and before issue.
+7. Other real-use situations are settled the same way before a tool is built: `design\SITUATIONS.md`.
