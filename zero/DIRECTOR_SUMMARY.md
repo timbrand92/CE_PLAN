@@ -2,7 +2,7 @@
 
 **Why this file exists.** Tim, 17 Nov 2026: "i need a way to understand wht we have planned, what we have built, how close we are to finishing or getting a ready version for me to test and bugs and anythign else thats important if i was a director looking to get summaries. i need this everytime i ask how things are going and also you need to keep me on track with planning, building annd beyond". The planning chat updates this page before every progress answer and always uses these seven headings in this order.
 
-**Last updated:** Wed 18 Nov 2026, 1:20 am.
+**Last updated:** Wed 18 Nov 2026, 2:30 am.
 
 ## 1. Headline
 
@@ -16,7 +16,7 @@ Done: ribbon, names, the look of every window, the foundation, the first-release
 
 1. **The brain** (facts, sums, joins, office standards, checks): built 5 of 5 pieces; 488 automatic checks pass; each piece reviewed by something that did not build it. Your rulings D-140 to D-156 are in.
 2. **The seven windows on a test bench, outside AutoCAD:** built 7 of 7; 147 checks and 880 click steps by the build chat's own scripts pass. An independent look at every opening screen found every figure right and 10 faults of wording and layout; those are fixed and in review, with two layout faults sent back.
-3. **Independent click and typing trial of the windows:** NOT DONE YET. Blocked first by a window in front of the bench (now solved), now waiting for the fixes to be saved.
+3. **Independent click and typing trial of the windows:** DONE once (18 Nov, 2:25 am). It found wrong figures (section 5). The windows are NOT ready for Tim until those are fixed and the trial is run again.
 4. **The AutoCAD part** (drawing the pits and pipes, the ribbon, the typed commands): built 0 of 7 tools. Starts with the foundation.
 5. **Installed: 0. Accepted by you: 0.**
 
@@ -35,7 +35,8 @@ Done: ribbon, names, the look of every window, the foundation, the first-release
 2. **Double-click:** opens our window, but AutoCAD's own polyline edit also runs. Not solved.
 3. **Not proven:** facts in AutoCAD's Properties palette; the ribbon on screen; update inside AutoCAD; the 2560 x 1440 screen for real; the new one-start test method inside AutoCAD 2027; reading our hidden notes from a saved drawing without AutoCAD.
 4. **Leftovers from the first trial run** (the extra profile and a changed setting) are still on your PC for you to look at.
-5. No wrong figure has been found in the brain or the windows. No person has used them yet.
+5. **Wrong figures found in the windows** by the independent click and typing trial (18 Nov, 2:25 am; all seven windows, 635 of 646 real click steps): a number typed with a comma quietly becomes another number in five windows ("0,8" deep becomes 0.00 and shows green); impossible figures (a negative depth, paving bigger than the site) show green "Suits"; a typed-over schedule cover level does not change the depth; a typed tank size does not change its litres; the window X and Escape do nothing; some warnings are missing (step irons, small detention pipe). The sums themselves were right wherever a sensible figure was typed. All sent to the build chat to fix before Tim tries the windows.
+6. No person has used the windows yet.
 
 ## 6. Waiting on Tim
 
@@ -50,4 +51,4 @@ Done: ribbon, names, the look of every window, the foundation, the first-release
 
 ## 7. Next step (one only)
 
-The planning chat's independent click and typing trial of the seven windows, then your ten-minute list to try them.
+The build chat fixes the wrong figures the trial found; the trial is run again; then your ten-minute list to try the windows.
