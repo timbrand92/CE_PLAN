@@ -7,7 +7,7 @@
 
 1. **What is open:** the trial's AutoCAD 2027 (acad.exe) is still running with the made-up copy `t2_mouse.dwg`, and an **"AutoCAD Error Report"** window ("A software problem has caused AutoCAD to close unexpectedly") is on top of it (cer_dialog.exe). Nobody touched it. Nothing was saved. No force-close, no profile, licence or settings change this session.
 2. **Why:** the Codex robot clicked the trial's extra grip (trial 2) and AutoCAD crashed. Cause not proven; the likely suspect is my custom grip returning a failure value from its click handler, but I did not test that.
-3. **What Tim does:** press Close on the error window (do not send the report unless he wants to), then answer No to any save prompt. The test copy is under `C:\CE_WORK	rials\zero\dwg\`, so nothing of his is at risk. I will not retry, and trial 5 was not started.
+3. **What Tim does:** press Close on the error window (do not send the report unless he wants to), then answer No to any save prompt. The test copy is under `C:\CE_WORK\trials\zero\dwg\`, so nothing of his is at risk. I will not retry, and trial 5 was not started.
 
 ## Where it stands
 
@@ -57,7 +57,7 @@
 
 **Verdict: PASS for scripted MOVE, COPY, MIRROR, ROTATE, ERASE, SCALE, UNDO and REDO on a pit block with joined pipes. Caveats below.** Run Mon 16 Nov 2026 about 21:00 to 21:10, both runs BEFORE the licence incident rules (they used a profile switch, SECURELOAD and the headless isolate option, all now forbidden). They cannot be repeated under the new rules.
 
-1. **What was done.** A small trial plugin (`C:\CE_WORK	rials\zero\core\`, referencing only the core and database files) logs every database event, document command event and two overrules (transform and object) on a pit block, three pipe polylines and a text carrying a hidden note. The same 12-step script (move, copy, mirror, rotate, undo twice, redo, erase, undo, redo, scale) ran in the headless engine (run4) and in full AutoCAD (run5), and the logs were compared.
+1. **What was done.** A small trial plugin (`C:\CE_WORK\trials\zero\core\`, referencing only the core and database files) logs every database event, document command event and two overrules (transform and object) on a pit block, three pipe polylines and a text carrying a hidden note. The same 12-step script (move, copy, mirror, rotate, undo twice, redo, erase, undo, redo, scale) ran in the headless engine (run4) and in full AutoCAD (run5), and the logs were compared.
 2. **What was seen.**
    1. **The kinds of events are identical:** all 123 database, command and overrule lines (object appended, modified, erased, unappended, reappended, command start and end, transform, copy-clone) match between the two, step by step.
    2. **The drawing ends up identical** after every step (same positions, rotations, scales and notes). Only the object handles are shifted by one in full AutoCAD.
@@ -74,7 +74,7 @@
    4. Run2 headless was stuck at a prompt and I ended it with taskkill.
    5. A copy of AutoCAD's own error-reporting start-up log (it carries a device id) sits in `evidence	10
 un5-full\ErrorReports`. It was written by AutoCAD, not by me.
-5. **Evidence:** `C:\CE_WORK	rials\zero\evidence	10
+5. **Evidence:** `C:\CE_WORK\trials\zero\evidence	10
 un4-headless\events.log`, `run5-full\events.log`, `dialog1.png`, the comparison script `scripts\cmp_logs.py`.
 6. **What it means for the build approach.** Events and the transform overrule behave the same headless and full for these commands, so move, copy, mirror, rotate, erase and undo logic can be tested headless and trusted to carry over. Anything involving selection by window, idle, or the screen needs full AutoCAD. Under the new rules the headless engine cannot be used without its isolate option (otherwise it loads Tim's live CE plugin and writes to his live files), so unattended headless runs are BLOCKED until Tim decides.
 
