@@ -332,6 +332,14 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-180** (18 Nov 2026; question 4) The same drawing on another PC or after the office list changes: "The drawing keeps what it was designed with". The drawing remembers its own standard values; on opening, one line says what has changed in the office list and offers to switch; nothing changes unless a person says so.
 
+**D-181** (18 Nov 2026, early afternoon; `design\SITUATIONS.md` question 7 in that file, asked as 5 of 18) A pit moved with plain MOVE, its number tag and cover level text: "THEY GO WITH THE PIT AND A HAND MOVED LABEL KEEPS ITS OFFSET FROM PIT IN BOTH DIRECTIONS AND MOVES WITH IT MAINTAINING THE SAME OFFSET".
+
+**D-182** (18 Nov 2026; asked as 6 of 18) A pipe label typed over by hand, then the pipe changes: "Keep my wording, flag it, one click to follow again". Same as a typed-over schedule cell (D-103): the wording stays, it goes on the unfinished list as no longer matching, one click lets it follow the pipe again.
+
+**D-183** (18 Nov 2026; asked as 7 of 18) Two separate systems on one site, pit numbers: "One series, street system first". No pit number is used twice on a sheet; each system is numbered from its own outlet, the street outlet first.
+
+**D-184** (18 Nov 2026; asked as 8 of 18) A pit added mid-run after the sheet has been issued (the three ways offered: the next free number such as P13; a letter such as P3A; renumber everything): "OPTION TO DO ALL 3". The drafter chooses each time among the three. Which one is offered first: not said.
+
 **D-167** (18 Nov 2026, morning) The new preview, as drawn on `pictures\pick_a_ce_scheme.html` (the drawing as AutoCAD shows it, from the office layers, colours, text and arrow; "where on the plan" as a small site locator in the corner; "where in the system" as a strip under the preview with the run as a chain and this object lit; the thing being changed highlighted the same way in all three): "YES THE PREVIEW IS WHAT I MEANT". It applies to every window (D-070: consistent across all windows). Not yet proven: how the locator is produced inside AutoCAD. The drawn details not taken from a real sheet (pit inner wall line, pit tag circle, which side the flow arrow sits) are still to be checked against how the office draws.
 
 **D-156** (17 Nov 2026, evening; SUPERSEDES the colour in D-153) Tim, after seeing the sample sheet again: "lets go with a for the detention". Read by the planning chat as option A on `pictures\pick_a_detention_blue.html`: deeper blue, AutoCAD colour 160. Layer STORMWATER DETENTION PIPE and DASHED unchanged. Pen width, legend and label wording still unknown; still not seen on a real plot.
