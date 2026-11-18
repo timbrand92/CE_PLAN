@@ -14,7 +14,16 @@
 8. **R-68 (Tim, 16 Nov):** the chat manages plan, usage, context and models. Name the model on every helper: Sonnet draws pages and files notes from a tight brief; Opus reviews and critiques; Haiku scans and counts; the lead chat interviews, decides and checks. Tim has three Fable resets this week and will use them.
 9. **The week's target ("something meaningful"):** (a) Stage 2 settled by Tim: ribbon, one naming strategy, job tracking, the Release 1 tool list and the 52 small decisions; (b) Stage 3 parts-bin report; (c) Stage 4: the four build trials run in a side session when AutoCAD is free, with results; (d) Stage 5 "how we work" on one page; (e) Stage 6: the plan, first tool designed in full (Pit, then Pipe).
 
-## UPDATE 9, Thu 19 Nov 2026, about 3:20 am (NEWEST; written because the weekly allowance hit 98 per cent and this chat's context was 94 per cent full; if the chat has compacted, start here)
+## UPDATE 10, SAFE POINT, Thu 19 Nov 2026, about 7:55 am (NEWEST; written just before Tim compacts the chat; read this, then UPDATE 9 below, which still holds)
+
+1. **Tim reset the allowance, but only 26 per cent must last until Fri 20 Nov midday (D-307).** Codex (72 per cent of its own week left) does the building, fixing, testing and reviewing; Claude chats are a thin layer; no Claude helpers unless he asks; replies short. The Team account stays on his hold of 5 Nov. No AutoCAD from 8:30 am to 5:30 pm; passes tonight.
+2. **Codex must follow the rules and decisions (D-308):** `CODEX_STANDING_BRIEF.md` heads every Codex job; the build chat checks each result against the rulings before merging.
+3. **Timer:** job 5792a558, every two hours at :17 (session-only: check with CronList after the compact and recreate with the prompt in board item 117's spirit if it is gone).
+4. **Morning answer given** (director's summary refreshed 7:50 am; `MORNING_19NOV.md` rewritten). Tim has NOT yet gone through his choices: when he says "ask me", put `MORNING_19NOV.md` batches 1 to 4 through the question tool, four at a time, context and example inside each.
+5. **In flight in the build chat (`local_34a6b867-5626-4366-bb06-77113c97d920`):** Codex on the Detention window (branch codex/detention, second astra review) and the drawing-safety fixes (codex/e-fixes, held off main after review 8, to restart fresh). Trials chat stopped. Interview chat done (10 layer questions).
+6. **Owed by the planning chat, cheap first:** apply `BOARD_REV2_CHECK.md` and adopt the board draft; file D-298 to D-308 into the `rulings\` pages; night list items 29 to 31.
+
+## UPDATE 9, Thu 19 Nov 2026, about 3:20 am (superseded in part by UPDATE 10; written because the weekly allowance hit 98 per cent and this chat's context was 94 per cent full; if the chat has compacted, start here)
 
 1. **Usage:** weekly allowance, all models, 98 per cent at 3:20 am; Tim said he will reset it on 19 Nov. Until then: no new Claude helpers, tiny turns, Codex does the building and reviewing (its own allowance; CLI updated to 0.170.0; `gpt-6.2-sol` builds and tests, `gpt-6.2-astra` reviews; never full machine access). The half-hourly timer was replaced by a sparse one (job 65506929, 5:17 and 7:17 am); put "17,47 * * * *" back after his reset.
 2. **Read first:** `BOARD.md` section 12 items 95 to the end; `DECISIONS.md` D-298 to D-306; `MORNING_19NOV.md` (out of date: see 4); `DIRECTOR_SUMMARY.md` (last refreshed 7:49 pm on 18 Nov: refresh before the morning answer).
