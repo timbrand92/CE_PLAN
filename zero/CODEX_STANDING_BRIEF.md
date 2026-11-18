@@ -23,7 +23,7 @@
 
 1. **A failing test first,** then the fix; the test stays as a permanent check.
 2. **Never change a sum, a check, a limit or a printed wording to make a test pass.** If a test and a ruling disagree, the ruling wins and you say so.
-3. **Figures:** every check compares exact figures; rounding is for display only and never decides "Suits"; the one rounding inside a sum is Boyd's inflow, to two places, as the office sheet does. A missing value reads exactly "Not known" on a window and "TBC" on the sheet: never 0, never a guess. A bad input reads Wrong and what depends on it reads "Cannot check yet".
+3. **Figures:** a check on a level or a cover passes within the job's tolerance, a setting in the Job window that opens at 5 mm (D-318, D-321); outside it the check says how short. A grade passes when it meets the required figure at two decimal places. Rounding for display never decides "Suits" by itself; the one rounding inside a sum is Boyd's inflow, to two places, as the office sheet does. A missing value reads exactly "Not known" on a window and "TBC" on the sheet: never 0, never a guess. A bad input reads Wrong and what depends on it reads "Cannot check yet".
 4. **Nothing pretends to work:** no button or box that does nothing; no confident figure from a refused input.
 5. **Drawing safety:** test the layer lock, xref and reference-edit before any edit and say so in words; one undo per command; a grip click never returns the failure value; a copy by any route gets its own identity and, for a pit, the next free number.
 6. **Words:** plain English a drafter would use, Australian spelling, metric; no build wording on any screen.
