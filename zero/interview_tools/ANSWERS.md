@@ -119,4 +119,34 @@
 
 **TA-047 Message instead of ticking the hatch pictures.** "theres lots of overlapping here and we normally discuss them based on what they do and the layer theyre on, can you please look into this using old project evidence as well, some hatches have served multiple functions like the hatch 74 is used for subfloor framing on first floor typically and its also used on suspedned slabs as the band beam hatch". So the hatch list is to be sorted by what each hatch does and its layer, checked against old project evidence. Fact about practice: HATCH 74 = subfloor framing on a first floor, and the band beam hatch on suspended slabs.
 
-Next free number: TA-048
+**TA-048 Message.** "also check what layer each hatch is on in the old jobs". Answered by `interview_tools\HATCHES_BY_FUNCTION.md` (HF- by function, HL- by layer, 218 drawings from 21 old jobs).
+
+## Batch 18 (hatch overlaps from the old-job evidence)
+
+**TA-049 HATCH 74.** "All three on HATCH 74": first floor over, band beam and rain garden all stay on HATCH 74, each a separate choice in the list.
+
+**TA-050 Set-down.** "HATCH 51 set-down"; HATCH 238 kept for bathtub and extra-load areas.
+
+**TA-051 Existing to be retained.** "HATCH 201 only"; WALLS EXISTING HATCH, EXISTING WALL HATCH and EXISTING DETAIL retired from the list.
+
+**TA-052 Sections.** "HATCH 21 conc, EARTH earth": concrete in section on HATCH 21, earth on HATCH EARTH; HATCH 11 keeps only "load bearing wall over".
+
+## Batch 19 (more hatch overlaps)
+
+**TA-053 Walls.** "Over, under, brick, block". Four choices kept:
+1. **Wall over:** HATCH 11 - LOAD BEARING WALL OVER.
+2. **Wall under:** HATCH 231 - LOAD BEARING WALL UNDER.
+3. **Brick and block:** WALL HATCH.
+4. **Retaining block:** BLOCKWORK WALL.
+
+LOADBEARING WALL, LOADBEARING HATCH and BLOCK RETAINING WALL are retired from the list.
+
+**TA-054 HATCH 141.** "Roof trusses only".
+
+**TA-055 Two names for one thing.** "Keep HATCH TIMBER / WATER"; TIMBER HATCH and WATER HATCH retired from the list.
+
+**TA-056 Layers in old jobs but not in the master (HATCH 155, 70, 221, 45, SAND, FILL, PT, HATCH-SLAB INFILL).** "Show me each first".
+
+**TA-057 Message.** "make sure you look at the scale as well". Answered in `interview_tools\HATCHES_BY_FUNCTION.md` section "Scale": old jobs mostly use HATCH 21 AR-CONC at 3 (master samples 1 to 2), EARTH at 40, brick and block at 110, timber at 1000, stud wall at 800.
+
+Next free number: TA-058

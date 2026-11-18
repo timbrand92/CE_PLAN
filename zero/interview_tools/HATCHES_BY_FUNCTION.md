@@ -135,6 +135,47 @@ Office-style layers only, seen in 2 or more of the 21 old jobs. Patterns are sho
 9. **Water:** HATCH WATER (7 jobs) and WATER HATCH (3 jobs).
 10. **Layers in old jobs but not in the master's hatch samples:** HATCH 155, HATCH 70, HATCH 221, HATCH 45, HATCH SAND, HATCH FILL, HATCH PT, HATCH-SLAB INFILL. Keep or retire?
 
+## Scale (Tim: "make sure you look at the scale as well")
+
+The pattern scale is the number that sets how big the pattern is drawn. Below: the scales old jobs used most (with how many hatches), against the master drawing's samples. Solid hatches have no scale.
+
+1. **Same in old jobs and the master (safe to fix in the list):**
+   - **HATCH 11 - LOAD BEARING WALL OVER, ANSI31:** 50 (112 hatches).
+   - **HATCH 231 - LOAD BEARING WALL UNDER, DOTS:** 20 (93).
+   - **HATCH 47, ANSI31:** 60 (21).
+   - **HATCH 6, DOTS:** 80 (16); 60 a few times.
+   - **HATCH 150, ANSI31:** 50 (13).
+   - **HATCH 253, ANSI37:** 100 (7).
+2. **Different, and this matters:**
+   - **HATCH 21 concrete in section (AR-CONC):** old jobs mostly use 3 (552 hatches), then 5 (407), 4 (277) and 2.5 (273). The master samples use 1 to 2. This is probably Tim's "wrong scale" (TA-003): taken from the master at 1 to 2, it comes out two to three times too fine.
+   - **HATCH 11 concrete (AR-CONC):** old jobs 4 (141), 2 (69), 2.5 and 5. It is now retired to HATCH 21 (TA-052).
+   - **HATCH EARTH, EARTH:** old jobs 40 by far (1,757), then 35 and 30. The master has 8, 35 and 40.
+   - **WALL HATCH brick and block (JIS_LC_8A):** old jobs 110 (121), then 100. The master has 19.8, 22, 100 and 110.
+   - **HATCH TIMBER, WOODFACE:** old jobs 1000 (77), then 800, 654.5 and 640. The master has 200 and 654.5.
+   - **HATCH STUD WALL, WOODFACE:** old jobs 800 (41), then 1000. The master has 160 and 800.
+   - **HATCH SAND, DOTS:** 40 and 50.
+   - **Plain HATCH 231, DOTS:** 10 (181) and 20 (134).
+3. **Why one hatch shows several scales:** most likely the same hatch drawn for different sheet scales, because plans are drawn full size with a 1:100 viewport (D-194) and sections and details sit in 1:20 or 1:10 viewports. Which viewport each hatch sat in was NOT read, so this is not proven.
+4. **Proposal for OFFICEHATCH / OH:**
+   - **Scale in the list:** each line holds its scale for a 1:100 plan, and its scale for a 1:20 detail where it is used there.
+   - **Window:** the tool picks the scale from the viewport or the drawing's sheet scale, so "wrong scale" cannot happen.
+   - **Starting figures:** the most-used scale in old jobs, not the master's sample, for Tim to confirm.
+
+## Layers in old jobs but not in the master (HX-, picture `pictures\hatches_extra_layers.png`)
+
+1. **HX-01 HATCH 155, SOLID, pen 155.** 104 hatches, 4 jobs; no legend found beside it.
+2. **HX-02 HATCH 70, ANSI31 at 100, pen 70.** 15 hatches, 4 jobs; no legend found.
+3. **HX-03 HATCH 221, AR-CONC at 4, pen 11.** 8 hatches, 2 jobs; no legend found.
+4. **HX-04 HATCH 221, INSUL, pen 11.** 2 hatches, 1 job (insulation).
+5. **HX-05 HATCH 45, ANSI33 at 40, pen 45.** 14 hatches, 2 jobs; legends nearby mention an AGI drain and the title boundary.
+6. **HX-06 HATCH 45, AR-RROOF, pen 45.** 10 hatches, 1 job; legends nearby mention screenings or scoria and a blockwall.
+7. **HX-07 HATCH 45, SOLID, pen 45.** 3 hatches, 1 job; "DENOTES SLEEPER RETAINING WALL ALONG BOUNDARY".
+8. **HX-08 HATCH SAND, DOTS at 40 to 50, pen 9.** 66 hatches, 4 jobs (sand in sections).
+9. **HX-09 HATCH SAND, AR-SAND at 5, pen 9.** 9 hatches, 2 jobs.
+10. **HX-10 HATCH FILL, ANSI33 at 35, pen 45.** 10 hatches, 2 jobs (fill behind a retaining wall, by its nearby label).
+11. **HX-11 HATCH PT, SOLID, pen 254.** 7 hatches, 2 jobs; "DENOTES POST TENSION SLAB BY OTHERS". The master uses HATCH PANTONE for the same legend.
+12. **HX-12 HATCH-SLAB INFILL, SOLID, pen 150.** 20 hatches, 2 jobs; no legend found.
+
 ## What was not done
 
 1. The DWG files in the evidence store (387) were not read, only the 218 DXF copies.
