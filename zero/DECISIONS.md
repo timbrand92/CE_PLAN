@@ -692,6 +692,8 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-335** (19 Nov 2026, about 9:30 am; how a tank is drawn true to size, settles D-316) "presets fill, typing wins but the tanks need to be rounded in the same way as real life. look at kingspan and other local manufacturers". Picking a volume fills the sizes from makers' figures; typing over them wins; the volume is always the stated figure. The outline is drawn with its real rounded ends and corners as the makers' tanks have, not as a plain rectangle. Owed: real size charts and end shapes from the maker he named and other local makers, checked at source, then the true outlines redrawn for his look.
 
+**D-336** (19 Nov 2026, about 9:40 am; the plan shape of a slimline tank, completes D-335; picture `pictures\tank_true_size.html`) "Yes, full round ends for all". Steel and poly slimline tanks are both drawn in plan with fully rounded ends (end radius half the width). Sizes come from the makers' figures in `reference\research\R-015` (checked at source for four sellers; the maker he named could not be opened at its own site, so its sizes are from sellers' pages). A real 3,500 L slimline exists (poly, 2380 x 870 x 2150 high). No maker's drawing confirmed the shape: it rests on his word from site.
+
 ## Not decided (asked or raised, no decision yet)
 
 1. Whether Stage 1's civil explanation is approved (Tim moved on to the design without saying "approve"). **Settled by D-117.**
