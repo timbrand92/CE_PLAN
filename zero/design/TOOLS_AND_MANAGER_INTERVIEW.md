@@ -1,6 +1,6 @@
 # Tools and Manager interview
 
-**Revision:** 1 (Wed 18 Nov 2026, afternoon, Melbourne time)
+**Revision:** 2 (Wed 18 Nov 2026, late afternoon, Melbourne time). Revision 1 had answers A-01 to A-17 only; revision 2 adds section 8a. Tim's answers are numbered TA- in `interview_tools\ANSWERS.md` (A-01 to A-17 there are TA-001 to TA-017).
 **Written by:** the interview side session started by the planning chat 'CE_ACAD / zero plan / 01'.
 **Status:** Tim's answers, in his words, plus proposals. **Nothing here is a decision until the planning chat files it in `DECISIONS.md`.** Nothing was built, no code was changed, AutoCAD was not opened.
 **IDs in this file:** shared tools ST-01 onwards, Manager items MG-01 onwards, future ideas FI-01 onwards, open questions TQ-01 onwards, clashes with earlier decisions CX-01 onwards. Never reuse or renumber; a later revision adds new numbers.
@@ -199,6 +199,40 @@ These go into the plan's idea file with the planning chat's own numbers; this fi
 **CX-04** A-17 asks for revision numbers and ID numbers on all bugs, ideas "AND ANYTHING ELSE": a standing rule for the plan's files, to be filed as a decision.
 
 ---
+
+## 8a. Revision 2 additions (18 Nov 2026, late afternoon; answers TA-018 to TA-042 in `interview_tools\ANSWERS.md`)
+
+Names checked against the acad.pgp copy and Tim's alias list; full words still need the night run's one-type check.
+
+1. **Settled:** tabs CE Civil · CE Tools · CE Structural, the structural one hidden until it has tools (TA-018, TA-019). CLEAN / CN (TA-020). Arrow leader QL; Tim keeps his own Q (TA-021). BREAKLINE / BL; Tim moves his own Bl alias (TA-023). REVBOX keeps its snap question (TA-024). Blocks palette BLOCKS / BLK (TA-037).
+2. **Upgrades:**
+   - **ST-01 CLEAN:** also audit, zero stray Z heights, set drawing units, then save (TA-035).
+   - **ST-02 dims:** add the arc dimension; dimension size follows the viewport, and already-drawn dimensions update too (TA-039).
+   - **ST-03 / ST-04 MR, CR, CPB:** no changes (TA-036).
+   - **ST-05 Divide:** kept (TA-022). It follows bends and arcs, the cross is sized for the sheet, and it previews the marks and reports the spacing as text (TA-032).
+   - **ST-07 REVBOX:** can cloud any picked shape (TA-040).
+   - **ST-08 BREAKLINE:** trims the lines it crosses (TA-040).
+   - **ST-09 joints:**
+     - **Dashes:** right at 1:100.
+     - **Bends:** the line can have bends.
+     - **Label:** full words, placed like 25T / 25B depending on what is around (TA-025, TA-033).
+3. **New shared tools (to be named by the same rule):**
+   - **ST-11 Text 25 and 18 set:** names kept, plus a TEXT window (TA-028, TA-034).
+   - **ST-12 Pen quick-set** (TA-029).
+   - **ST-13 Xref copy and paste** (TA-029).
+   - **ST-14 Put on office layer (new)** (TA-029).
+   - **ST-15 Viewport scale set and lock (new)** (TA-029).
+   - **ST-16 Find and replace across layouts (new)** (TA-030).
+   - **ST-17 Area label and length label (new):** each label updates itself (TA-031, TA-041).
+   - **ST-18 Small office symbols** placed from the blocks palette: scabble, wipeout, cut tube (TA-031).
+4. **Not wanted:**
+   - **Marks:** CL, LM, SM, FFL tags.
+   - **Multileaders and multilines:** MLL / MLR; CML / SML.
+   - **Output:** plot to PDF; Excel into schedule; north point and scale bar.
+   - **Finding:** command search.
+   - **End offsets and numbering** on Divide.
+5. **Master drawing blocks:** look through all 279 machine-named blocks (and the rest) on a copy, say what each is, then Tim decides which to keep and how to order them; "we might not need all blocks" (TA-038, TA-042).
+6. **Still held:** TQ-06 hatch name and TQ-12 hatch list wait for research R-006 (D-199).
 
 ## 9. What was not done
 

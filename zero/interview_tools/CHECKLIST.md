@@ -1,9 +1,9 @@
 # Tools interview: checklist and working notes
 
-**Revision:** 2 (Wed 18 Nov 2026, afternoon, Melbourne time). Revision 1 used T-numbers for answers; now TA-numbers (D-205).
+**Revision:** 3 (Wed 18 Nov 2026, late afternoon, Melbourne time). Revision 1 used T-numbers for answers; now TA-numbers (D-205).
 **Reports to:** the planning chat (D-198). Planning only; nothing is built.
-**Progress:** 16 of 28 questions answered (16 asked in 9 batches, all answered; 12 still to ask). One message from Tim was also recorded (TA-017).
-**Next batch:** prepared below; asked only when Tim comes to this chat (planning chat ruling 7).
+**Progress:** 40 of 42 questions answered. The first list of 28 has 26 done and 2 held (TQ-06, TQ-12, waiting for R-006). Tim asked for 14 more (upgrades for every tool, missed commands), all answered in batches 13 to 16. Answers TA-001 to TA-042.
+**Batches 10 to 16:** asked 18 Nov 2026 late afternoon, when Tim said "ASK THE NEXT QUESTIONS NOW".
 
 ## Read before asking
 
@@ -35,18 +35,31 @@
 
 ## Still to ask (12)
 
-17. [ ] TQ-01 Names for the three tabs (batch 10)
-18. [ ] TQ-02 Does the structural tab show before structural is unparked (batch 10)
-19. [ ] TQ-03 A short name for CLEAN (batch 10)
-20. [ ] TQ-04 Q against "q, *mltim" in his alias list: first ask what his q does today (batch 10)
-21. [ ] TQ-05 DIV and DIVX: first ask what his Div does today (batch 11)
+17. [x] TQ-01 Names for the three tabs (TA-018)
+18. [x] TQ-02 Structural tab hidden until it has tools (TA-019)
+19. [x] TQ-03 CLEAN plus CN (TA-020)
+20. [x] TQ-04 Tim keeps his Q; leader is QL (TA-021)
+21. [x] TQ-05 Divide kept, with upgrades (TA-022, TA-032)
 22. [ ] TQ-06 Name for the hatch window (held until R-006)
-23. [ ] TQ-07 Revision box: still ask about object snap first (batch 11)
-24. [ ] TQ-08 Break line name: first ask what his Bl does today (batch 11)
-25. [ ] TQ-09 What "learn from where joints are placed" means (batch 11)
-26. [ ] TQ-10 Renaming the 279 machine-named blocks in the master drawing (on a copy) (batch 12)
-27. [ ] TQ-11 Typed name for the blocks palette (batch 12)
+23. [x] TQ-07 Revision box keeps the snap question (TA-024)
+24. [x] TQ-08 BREAKLINE / BL (TA-023)
+25. [x] TQ-09 Joints: what is wrong (TA-025, TA-033)
+26. [x] TQ-10 Master drawing blocks: look through them on a copy (TA-038, TA-042)
+27. [x] TQ-11 BLOCKS / BLK (TA-037)
 28. [ ] TQ-12 Which hatches go in the office list (held until R-006)
+
+## Added at Tim's request (TA-026, TA-027): 14, all answered
+
+29. [x] to 32. Other commands for CE Tools, four groups (TA-028 to TA-031)
+33. [x] to 35. Upgrades: divide, joint line, text set (TA-032 to TA-034)
+36. [x] to 39. Upgrades: CLEAN, MR / CR / CPB; blocks name; master blocks (TA-035 to TA-038)
+40. [x] to 42. Upgrades: dims, REVBOX and BREAKLINE; live labels (TA-039 to TA-041)
+
+## Next pieces of work (for the planning chat to assign)
+
+1. **Look through every block in the master drawing** (on a copy, read only): what each of the 453 is, which look unused or duplicated, and a proposed order and grouping, for Tim to decide (TA-038, TA-042).
+2. **Names for the new tools ST-11 to ST-17**, checked in both lists, put to Tim in one batch.
+3. **Hatch window name and hatch list** once R-006 lands.
 
 ## Name check results (AutoCAD's acad.pgp copy and Tim's alias list)
 

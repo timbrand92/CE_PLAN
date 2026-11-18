@@ -67,6 +67,44 @@
 
 ## Batch 12 (DIV upgrades, joint line faults, text tools, missed commands)
 
-**TA-027** Batch 12 was not answered by clicking: Tim sent a message instead. The message is recorded as his answer when it arrives.
+**TA-027** Batch 12 was not answered by clicking; Tim sent this message instead, recorded as his answer: "ARE THERE ANY OTHER COMMANDS THAT CAN BE ADDED TO TOOLS". So batch 12 is not re-asked in that form; batch 13 answered his question.
 
-Next free number: TA-028
+## Batch 13 (other commands that could join CE Tools; old ones and NEW ideas marked)
+
+**TA-028 Text and marks.** Ticked "Text 25 and 18 set" only. Not ticked: marks (CL, LM, SM, FFL tags), multileaders MLL / MLR, multilines CML / SML.
+
+**TA-029 Layers, Xrefs and viewports.** Ticked all four: "Pen quick-set", "Xref copy and paste", "NEW: put on office layer", "NEW: viewport scale".
+
+**TA-030 Output and sheets.** Ticked "NEW: find and replace" only. Not ticked: plot to PDF, Excel into schedule, north point and scale bar.
+
+**TA-031 Finding and measuring.** Ticked "NEW: area label", "NEW: length label", "Small office symbols". Not ticked: command search (old CEPALETTE).
+
+## Batch 14 (upgrades: divide, joints, text set)
+
+**TA-032 Divide upgrades.** "Follow bends, visible cross", "Preview and spacing text". Not ticked: end offsets, numbering each one.
+
+**TA-033 Joint line faults.** "Dashes wrong at 1:100", "Needs bends", "Label words". Not ticked: layer or linetype wrong. (With TA-025: text placed like 25T / 25B depending on what is around.)
+
+**TA-034 Text 25 and 18 set.** "Keep names, add window": 25T, 25B and the rest stay; a TEXT window (size, side, angle, remembers last) is added.
+
+## Batch 15 (upgrades: CLEAN, MR / CR / CPB; blocks palette name; master drawing blocks)
+
+**TA-035 CLEAN / CN upgrades.** "Fix common faults" (also audit, zero stray Z heights, set the drawing units, then save). Not ticked: one-line report, safe purge, ticks remembered.
+
+**TA-036 MR / CR / CPB upgrades.** "Fine as they are": one copy of each, no changes.
+
+**TA-037 Blocks palette name (TQ-11).** "BLOCKS / BLK".
+
+**TA-038 Machine-named blocks in the master drawing (TQ-10).** "yes on a copy, you need to look throught hem all see what they are and then we can decide and order and organise them all".
+
+## Batch 16 (upgrades: dims, revision box and break line; live area and length labels)
+
+**TA-039 Dims and leaders upgrades.** "Fine, plus arc dim only", and typed: "scale follows viewport, but it only works on creation it doesnt update already created dims". Read as: dimension size should follow the viewport, including dimensions already drawn, not only new ones.
+
+**TA-040 REVBOX and BREAKLINE upgrades.** "Cloud any shape" (REVBOX can also cloud round a picked polyline), "Break line trims" (BREAKLINE trims the lines it crosses).
+
+**TA-041 Area and length labels.** "Yes, update by itself" (an AutoCAD field, so it still works on a PC without the plug-in).
+
+**TA-042 Message during batch 16, on the master drawing blocks.** "we might not need all blocks". With TA-038: look through them all, then decide which to keep, order and organise them.
+
+Next free number: TA-043
