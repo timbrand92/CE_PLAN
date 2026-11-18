@@ -10,7 +10,7 @@
 
 ## 1. At a glance
 
-1. **Waiting on Tim:** 38 (2 block building now, 23 needed before a named tool, 13 can wait)
+1. **Waiting on Tim:** 37 (1 blocks building now: W-002 council minimum runoff figures for two councils; 23 needed before a named tool; 13 can wait). W-001 closed by D-228. Updated 18 Nov 1:40 pm.
 2. **Being built now:** 3 under way, 6 queued behind them
 3. **Open problems in the new plug-in:** 28
 4. **Promises the planning chat owes Tim:** 16 (13 owed by the planning chat, 1 by the interview chat, 2 by the clean-up chat)
@@ -27,7 +27,7 @@ Blockers first. "One click" means a clickable choice is enough. "At the PC" mean
 
 ### Blocks building now
 
-1. **W-001 PIT BLOCK 3 as it is?** Ask: confirm the Pit tool uses PIT BLOCK 3 exactly as it is (wipeout edge stays as the inner wall, plastic pit is the same block at 350 x 350, no new states), or name the edits you will make. Context: you said PIT BLOCK 3 is the one; the planning chat's answer to your three questions was never confirmed in words; the build chat cannot finish the Pit tool's block reading. From: D-215, D-224, R-009. Waiting: since 18 Nov. Blocks: BLOCKS BUILDING NOW (Pit tool). Answer: one click.
+1. **W-001 CLOSED 18 Nov 2026 by D-228 ("Yes: PIT BLOCK 3 exactly as it is"). PIT BLOCK 3 as it is?** Ask: confirm the Pit tool uses PIT BLOCK 3 exactly as it is (wipeout edge stays as the inner wall, plastic pit is the same block at 350 x 350, no new states), or name the edits you will make. Context: you said PIT BLOCK 3 is the one; the planning chat's answer to your three questions was never confirmed in words; the build chat cannot finish the Pit tool's block reading. From: D-215, D-224, R-009. Waiting: since 18 Nov. Blocks: BLOCKS BUILDING NOW (Pit tool). Answer: one click.
 2. **W-002 Council minimum runoff figures.** Ask: confirm the minimum runoff figure for Darebin 0.80, Maribyrnong 0.75 and Boroondara 0.65, each with its council document. Context: the old plug-in undersized tanks by about a quarter before 30 Oct; the new plug-in has no floor yet and the build chat is writing it now. Maribyrnong and Boroondara are not in the reference. From: OQ-05 (OBSTACLE_COURSE), R-008. Waiting: since 18 Nov. Blocks: BLOCKS BUILDING NOW (rainfall and council-C fix in progress). Answer: needs a document from him for two councils; one click for Darebin.
 
 ### Needed before a named tool
@@ -50,7 +50,7 @@ Blockers first. "One click" means a clickable choice is enough. "At the PC" mean
 18. **W-018 Move your own aliases.** Ask: move your alias Wall-t (so WT is TANK) and your alias Bl (so BL is BREAKLINE) in your own alias file. Context: the plug-in never edits your alias file. From: D-170, TA-023. Waiting: since 18 Nov. Blocks: needed before the Tank and break line tools are installed. Answer: at the PC.
 19. **W-019 Typed names still to pick.** Ask: full words for FO and GIO; names for the Outlet tool, the legal point of discharge tool (D-222), the trench grate, AG drain and perimeter drain (D-223), the Job window, and the shared tools ST-11 to ST-18. Context: the rule is a plain word plus a short name checked in both lists. From: NAMING_DRAFT, D-222, D-223, interview file 8a. Waiting: since 16 Nov. Blocks: needed before those tools are installed. Answer: one click per batch, brought by the interview chat (O-009).
 20. **W-020 Base scales for the hatch tool.** Ask: confirm the base scale for each office hatch at DIMSCALE 100 (for example concrete 5, wall over 50, wall under 20). Context: the old jobs set the figures; DIMSCALE leads (TA-062). From: D-227, TA-058, TA-061, HATCHES_BY_FUNCTION. Waiting: since 18 Nov. Blocks: needed before the hatch tool OFFICEHATCH / OH. Answer: one click.
-21. **W-021 The office blocks.** Ask: decide blocks 3 to 10 of the blocks review: pipe label blocks kept or dropped; the 104 "ask Tim" blocks named or dropped; the 65 notes as a notes library; left and right pairs; the whole-sheet block BK-450; the 33 leftovers; structural blocks kept out of the palette; and may the 279 machine-named blocks be renamed on a copy, who owns edits to the master drawing. Context: you said "we might not need all blocks". From: BLOCKS_REVIEW decisions 3 to 10, TQ-10, D-211. Waiting: since 18 Nov. Blocks: needed before the Blocks palette BLOCKS / BLK. Answer: one click per batch.
+21. **W-021 MOSTLY CLOSED 18 Nov 2026 by D-229 (ten block decisions). Still with Tim: ticking the picture sheets of the 104 unknown blocks; whether machine-named blocks may be renamed. The office blocks.** Ask: decide blocks 3 to 10 of the blocks review: pipe label blocks kept or dropped; the 104 "ask Tim" blocks named or dropped; the 65 notes as a notes library; left and right pairs; the whole-sheet block BK-450; the 33 leftovers; structural blocks kept out of the palette; and may the 279 machine-named blocks be renamed on a copy, who owns edits to the master drawing. Context: you said "we might not need all blocks". From: BLOCKS_REVIEW decisions 3 to 10, TQ-10, D-211. Waiting: since 18 Nov. Blocks: needed before the Blocks palette BLOCKS / BLK. Answer: one click per batch.
 22. **W-022 Which buttons on the three ribbon tabs.** Ask: which buttons sit on CE Civil, CE Tools and on the light tab that appears when something is picked. Context: tab names are ruled (D-208); buttons never settled. From: D-051, D-200, UI_PLAN 9.2. Waiting: since 16 Nov. Blocks: needed before the ribbon is built. Answer: one click per tab.
 23. **W-023 What a fault report may carry.** Ask: approve only the CE version, commands typed, message shown, a coded drawing name and object counts; never a path, login, PC name, client or job name; you see the whole report first. Context: 20 old bugs leaked such details. From: OQ-08. Waiting: since 18 Nov. Blocks: needed before the Manager's fault report. Answer: one click.
 24. **W-024 An office layer already in the drawing with another colour.** Ask: leave it and say once with a one-click fix, or set it to the list. Recommended leave. From: OQ-07. Waiting: since 18 Nov. Blocks: needed before the first tool is installed. Answer: one click.
@@ -329,3 +329,14 @@ Items that left the lists above, with the decision that closed them.
 12. **Long section check expected a branch to be refused** (CELEV2): updated to D-175 and passed in pass 2.
 13. **Tool names and tab names** TQ-01 to TQ-05, TQ-07, TQ-08, TQ-11: answered TA-018 to TA-024, TA-037.
 14. **Pit schedule on a long sheet** ("what happens beyond the warning"): closed by D-114 ("It runs long; I make room"); the reference README still lists it unknown.
+
+## 12. Added since revision 1 (18 Nov 2026, 1:45 pm, by the planning chat)
+
+1. **W-039 Three pairs of rulings that pull against each other** (found by the rulings pages, `rulings\INDEX.md`): tank re-use from the STORM report (D-024) against detention worked out and re-use the rest (D-100); a new pipe opening with whatever was used last (D-060) against starting at 1 in 100 and 100 dia (D-143, D-174); whole-job facts in a CE side panel (D-048) against a Job window (D-099, D-171). Needed before Tank, Pipe and the Job window respectively. To be put to Tim one at a time with a part-drawn job as the example.
+2. **W-040 The function plan tick sheet** (`design\FUNCTION_PLAN_TICK_SHEET.md`, FP-001 to FP-077; five ASK items). Sent to Tim 18 Nov. Agreed unless he says otherwise; not yet answered.
+3. **W-041 The four hatch layers of unknown meaning** (HATCH 155, 70, 221, SLAB INFILL; D-227). Can wait.
+4. **W-042 PIT and CD already exist as commands in his AutoCAD** is W-003; the SH short name may clash with an AutoCAD shell command (function plan); the next AutoCAD pass reads which answers.
+5. **O-017 Owed by the planning chat:** the easiest, most AutoCAD-like way to use the plug-in, from old-job evidence (D-230; `design\EASY_AND_AUTOCAD_LIKE.md`, being written).
+6. **O-018 Owed by the planning chat:** re-score the obstacle course and refresh the director's summary after pass 2 (section 10 items 5 and 15).
+7. **Live risk kept in front of Tim (D-230):** BUG-866 in the installed plug-in; re-raised to him 18 Nov afternoon; closes when he says "seen".
+8. Highest decision is now D-230. The rulings pages run to D-229.
