@@ -293,4 +293,24 @@ Answer given in chat (planning chat's reading, not Tim's words): his button is a
 
 **TA-101 How long fault reports (with drawings) are kept.** "90 days", then the report and its drawing copy are deleted, and Tim is told first.
 
-Next free number: TA-102
+## Batch 29 to 31 (OFFICEHATCH / OH in detail; `interview_tools\OFFICEHATCH_SPEC.md`, mock-ups `pictures\pick_an_oh_window.html`)
+
+**TA-102 What OH opens (small window or the full CE window).** "SHOW BOTH TRIES AT IT". Both were drawn as mock-ups.
+
+**TA-103 How the list is laid out.** "Grouped + search".
+
+**TA-104 Picking the area.** "Click inside, keep going": like HATCH, Enter to finish; "select outline" also offered.
+
+**TA-105 Changing a hatch already drawn.** "AutoCAD's own edit": double-click opens AutoCAD's normal Hatch Edit, not the OH window. This is an exception to D-061 (double-click opens the same small window) for hatches only.
+
+**TA-106 After seeing both mock-ups.** "FULL WINDOW LOOKS GOOD BUT CAN WE MAKE MORE HATCHES VISIBLE AT ONE TIME? I DONT WANT TO SCROLL TOO MUCH". B was redrawn with every hatch as a real sample, 8 across, grouped, no scrolling.
+
+**TA-107 The revised full window.** "Yes, that's it".
+
+**TA-108 Legend line.** "Offer it, once per sheet": the first time a hatch is used on a sheet, "What else changes" offers its legend line; one tick, never forced.
+
+**TA-109 Draw order.** "Always behind": every OH hatch goes behind the linework and text.
+
+**TA-110 Existing hatches when DIMSCALE changes.** "Only new ones": hatches already drawn keep their scale. Note: this differs from his dimension ruling, where existing dimensions update (D-210).
+
+Next free number: TA-111
