@@ -333,4 +333,18 @@ Answer given in chat (planning chat's reading, not Tim's words): his button is a
 
 **TA-119 Text kind.** "Multiline always" for OT; 25T and the rest keep single-line as today.
 
-Next free number: TA-120
+## Batch 33 and 34 (CONSTRUCTIONJOINT / CJ, SAWCUT / SSC; `interview_tools\JOINTS_SPEC.md`)
+
+**TA-120 Label words.** "CJ / SC plus legend": keep the short labels; a legend line ("SC DENOTES SAW CUT") offered once per sheet.
+
+**TA-121 Layers.** "SLAB CJ / SLAB SC" (PHANTOM and DASHDOT2), lines and labels on them.
+
+**TA-122 Dashes.** "Follow DIMSCALE": each joint line gets its own linetype scale from DIMSCALE.
+
+**TA-123 Articulation joint.** "Add as third joint": ARTICULATIONJOINT / AJ (AJ free in both lists).
+
+**TA-124 Drawing several.** "Keep drawing, Enter ends".
+
+**TA-125 The CJ / SC swap.** "NEW COMMAND NAME BUT KEEP". Then: "JOINTSWAP / JS" (JS free in both lists).
+
+Next free number: TA-126
