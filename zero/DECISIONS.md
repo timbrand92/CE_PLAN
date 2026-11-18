@@ -536,6 +536,12 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-257** (18 Nov 2026, 3:45 pm) A pit switched between grated and solid cover after it is drawn: "Yes, everything follows (Recommended)". The pit on the plan, the schedule row, the lid class check and the storage tick in Detention all change from the one edit.
 
+**D-258** (18 Nov 2026, 3:50 pm; DQ-001; NOT the recommended answer) PIT and CD while the old plug-in is still loaded: "New tools take PIT and CD now". The new Pit and Pipe tools answer to PIT and CD straight away (PT and PIPE as well); the old ones stop answering to those names when both are loaded. Not proven: how AutoCAD chooses when two plug-ins register the same name; the build must make the new one win and prove it in the night run, or say plainly that it cannot.
+
+**D-259** (18 Nov 2026, 3:50 pm; DQ-007) The two pump pit kinds in the Pit window: "SPS grated, SPS solid (Recommended)".
+
+**D-260** (18 Nov 2026, 3:50 pm; NOT Tim's words: the planning chat's calls on build questions DQ-002 to DQ-012, each taken from a ruling he already gave, told to him in chat the same day; any of them is his to overturn) DQ-002 grated pit uses the block's grated look, junction pit the solid look with the cross: yes. DQ-003 closed by D-251. DQ-004 plain text for numbers, levels and labels is allowed in tests only; before Tim drafts with a tool the pit number is the office's circled tag and the levels and labels are masked as the office draws them (D-039). DQ-005 a missing layer is made with the office colour and said in one line; an existing layer is never changed (D-191). DQ-006 orifice and pump pits as a marked stand-in outline for now; the real looks from PIT BLOCK 3 before first real use (D-104, D-228). DQ-008 plastic pit cover text as the office draws it, PP over CL on two lines, before first real use (D-039). DQ-009 number starts 900 above and cover level 700 below the pit centre as starting figures, then stay where the drafter puts them (D-012, D-181). DQ-010 closed by D-256; the end keeps its angle from the pit centre; an end placed by hand or not on the old wall is left and said. DQ-011 and DQ-012 a marked stand-in outline, nominal 450 square, when the block or the size is missing; the size itself stays unknown (D-175, D-235).
+
 ## Not decided (asked or raised, no decision yet)
 
 1. Whether Stage 1's civil explanation is approved (Tim moved on to the design without saying "approve"). **Settled by D-117.**
