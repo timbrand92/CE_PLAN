@@ -646,6 +646,14 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-312** (19 Nov 2026, 7:56 am; pipe labels in tight spaces) "Always the full label". The tool writes the full label every time; he moves it by hand where it clashes. The standing-note idea is not taken.
 
+**D-313** (19 Nov 2026, about 8:00 am; confirms the reading of D-309) "Both: top strip and beside". The Long section (levels) window and the Pipe window get the wide preview across the top, as Detention has; Pit and Pipe also keep a small picture beside the inputs it shows. D-296 (preview at the left) no longer holds for Long section and Pipe.
+
+**D-314** (19 Nov 2026, about 8:00 am; detention pipe cover under a driveway, D-145 against D-287) "not sure need more research". NOT decided. Research owed by the planning chat before it is asked again: what the plumbing standard and the councils' own documents say for cover over a pipe under a driveway.
+
+**D-315** (19 Nov 2026, about 8:00 am; garden runoff 0.30 or 0.35 for the office method) "not sure need more research". NOT decided; D-283 (0.35) stands for now. Research owed: where the office sheet's figure comes from and what the councils' documents give.
+
+**D-316** (19 Nov 2026, about 8:00 am; the 3,500 L tank outline) "we have in the past not shown water tanks to scale we need to create a block or water tank that is correct to size". So neither old outline is taken: tanks are to be drawn true to size. Research owed: real makers' sizes for the common tank volumes, then a proposal for a true-size tank block (or a tank drawn by the tool from its sizes) for his look. The "Slimline" naming question is still open.
+
 ## Not decided (asked or raised, no decision yet)
 
 1. Whether Stage 1's civil explanation is approved (Tim moved on to the design without saying "approve"). **Settled by D-117.**
