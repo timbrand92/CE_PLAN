@@ -224,4 +224,41 @@ LOADBEARING WALL, LOADBEARING HATCH and BLOCK RETAINING WALL are retired from th
 
 Learnt: the planning chat's guesses for 417, 420, 425, 430, 432, 433, 443, 451 and 453 were wrong (it had read the PFC and angle sections as post brackets, the Dincel block as a panel with openings, the dowel bar as a sand bed). The office names blocks plainly, with no "SYMBOL -" or "MARK -" prefix.
 
-Next free number: TA-077
+## Batch 24 and 25 (CLEAN / CN step by step; `interview_tools\CLEAN_STEPS.md`)
+
+**TA-077 Purge (CL-01).** "Purge, keep office ones": purge everything unused except the office layers, blocks and styles the CE tools use.
+
+**TA-078 Text style (CL-03).** "Yes, as today": all text and multiline text to STANDARD, Arial Narrow.
+
+**TA-079 Hatch default (CL-04).** "Stop resetting it": CN no longer sets SOLID on HATCH 21; OFFICEHATCH remembers the last pick.
+
+**TA-080 Report.** "One line"; full detail to the log only.
+
+**TA-081 Xrefs (CL-02).** "Yes, XREF colour 7".
+
+**TA-082 Zero Z (CL-08).** "WE NEED TO FLATTEN EVERYTHING BUT CAN WE USE MY EXISTING TOOL. I WILL SEND IN CHAT". He then sent a screenshot of his own toolbar button "3D to 2D Command" (on his TIM toolbar) with the macro `^C^C_UCS;;_move;_all;;0,0,1e99;;_move;_all;;0,0,-1e99;;` and asked: "IS THAT A GOOD WAY TO DO IT?"
+
+**TA-083 Audit (CL-07).** "Every CN".
+
+**TA-084 Units (CL-09).** "Set mm, say so".
+
+Answer given in chat (planning chat's reading, not Tim's words): his button is a good, proven way to flatten. It moves everything up by 1e99 and back down, so every height rounds to 0, sloping lines included. Its gaps:
+1. **Locked and frozen layers:** objects on them are skipped by MOVE.
+2. **Inside blocks:** the lines inside a block keep their heights.
+3. **No report:** it never says what it flattened.
+
+**TA-085 Flatten inside blocks?** "INSIDE BLOCKS AND XREFS".
+
+**TA-086 Xrefs, after being told an Xref's lines live in the other file (opening and saving it changes it for everyone, and a reloaded new version is 3D again).** "Flatten the Xref file". So CN flattens:
+1. **This drawing,** including locked and frozen layers, which are put back after.
+2. **Inside blocks.**
+3. **Each Xref's own file,** opened and saved by CN, with a backup copy first (as offered).
+
+**For the build (planning chat's note):** this is the only CLEAN step that changes files other than the one open. It needs:
+- a backup of each Xref file first;
+- a check that the file is not read-only or open by someone else;
+- a mention in the one-line report of each Xref file it changed.
+
+**TA-087 FASTSAVE.** "Drop it, CN only": one command; its speed is measured every night against the PERFORMANCE.md limits.
+
+Next free number: TA-088
