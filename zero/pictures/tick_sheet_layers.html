@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Layers: 10 questions</title>
+<style>
+  html { background:#2B2D30; }
+  body { margin:0; background:#2B2D30; color:#E6E8EB; font-family:"Segoe UI", Arial, sans-serif; font-size:14px; line-height:1.5; }
+  .page { max-width:860px; margin:0 auto; padding:32px 24px 48px; }
+  h1 { font-size:24px; font-weight:600; margin:0 0 16px; color:#F4F5F7; }
+  .lead { margin:0 0 8px; }
+  .count { font-size:24px; margin:0 0 32px; color:#F4F5F7; }
+  .card { background:#383B40; border:1px solid #4A4D53; border-radius:8px; padding:24px; margin:0 0 24px; box-shadow:0 2px 8px rgba(0,0,0,.3); }
+  .num { font-size:12px; color:#A9AEB6; margin:0 0 8px; }
+  .label { font-size:14px; font-weight:700; margin:0 0 8px; color:#F4F5F7; }
+  .means { margin:0 0 8px; }
+  .note { font-size:12px; color:#A9AEB6; margin:0 0 24px; }
+  .choices { display:flex; flex-direction:column; gap:16px; margin:0 0 24px; }
+  .choice { display:flex; align-items:center; gap:16px; background:#232528; border:1px solid #4A4D53; border-radius:8px; padding:8px 16px; cursor:pointer; min-height:44px; }
+  .choice input { width:28px; height:28px; margin:0; accent-color:#FF70B3; cursor:pointer; flex:none; }
+  .choice:has(input:checked) { border-color:#FF70B3; }
+  .rec { font-size:12px; color:#FF70B3; white-space:nowrap; }
+  .write { display:flex; align-items:center; gap:8px; font-size:14px; }
+  .write input { flex:1; min-width:120px; background:#4A4D55; color:#F4F5F7; border:1px solid #8A8E96; border-radius:8px; padding:8px 16px; font:inherit; }
+  .foot { font-size:14px; margin:32px 0 0; padding-top:24px; border-top:1px solid #4A4D53; }
+  @media print { .card { break-inside:avoid; } }
+</style>
+</head>
+<body>
+<div class="page">
+  <h1>Layers: 10 questions</h1>
+  <p class="lead">Tick only the ones you would change; an untouched card means the recommended answer stands</p>
+  <p class="count">10 items</p>
+
+  <section class="card">
+    <p class="num">1 of 10 (Q-L1)</p>
+    <p class="label">Stormwater linework on three layers</p>
+    <p class="means">STORMWATER (lines, 10 jobs), DRAINAGE (pipe walls as multilines, 9 jobs) and EX DRAIN HATCH (existing drain outline, 11 jobs). Example: a hand-drawn AG line to a soakage trench.</p>
+    <p class="note">The new PIPE tool draws on STORMWATER PIPE and its own kinds.</p>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="q1" checked> Keep STORMWATER for hand-drawn drainage lines, keep EX DRAIN HATCH for existing drains, retire DRAINAGE <span class="rec">Recommended</span></label>
+      <label class="choice"><input type="radio" name="q1"> Keep all three layers as they are</label>
+    </div>
+    <label class="write">Change to: <input type="text" name="w1"></label>
+  </section>
+
+  <section class="card">
+    <p class="num">2 of 10 (Q-L2)</p>
+    <p class="label">Services named twice</p>
+    <p class="means">WATER (9 jobs) and WATER LINE (none); ELEC OVERHEAD (8 jobs) and ELECTRICAL OVERHEAD (none).</p>
+    <p class="note">The new CIVIL LINETYPES block would move from WATER LINE to WATER.</p>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="q2" checked> Keep WATER and ELEC OVERHEAD, retire the unused twins <span class="rec">Recommended</span></label>
+      <label class="choice"><input type="radio" name="q2"> Keep all four layers as they are</label>
+    </div>
+    <label class="write">Change to: <input type="text" name="w2"></label>
+  </section>
+
+  <section class="card">
+    <p class="num">3 of 10 (Q-L3)</p>
+    <p class="label">TITLE TEXT does not print</p>
+    <p class="means">It holds title text (8 jobs, 480 objects) but is set not to print in the master. Example: a sheet title that vanishes on the PDF.</p>
+    <p class="note">The source's proposal is conditional: ask why; if it is a mistake, set it to print.</p>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="q3" checked> Ask why first; if it is a mistake, set it to print <span class="rec">Recommended</span></label>
+      <label class="choice"><input type="radio" name="q3"> Leave it set not to print</label>
+    </div>
+    <label class="write">Change to: <input type="text" name="w3"></label>
+  </section>
+
+  <section class="card">
+    <p class="num">4 of 10 (Q-L4)</p>
+    <p class="label">Existing walls named twice</p>
+    <p class="means">WALLS EXISTING (11 jobs) and EXISTING WALL (4 jobs).</p>
+    <p class="note">This matches retiring its hatch (TA-051).</p>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="q4" checked> Keep WALLS EXISTING (the "WALLS ..." family name), retire EXISTING WALL <span class="rec">Recommended</span></label>
+      <label class="choice"><input type="radio" name="q4"> Keep both layers as they are</label>
+    </div>
+    <label class="write">Change to: <input type="text" name="w4"></label>
+  </section>
+
+  <section class="card">
+    <p class="num">5 of 10 (Q-L5)</p>
+    <p class="label">Section and grid extras</p>
+    <p class="means">SECTION TAG (12 jobs) beside SECTION MARK, and 9GRID (fine centre line, 10 jobs) beside GRID.</p>
+    <p class="note">The section tag is the bubble on a detail and the mark is the cut on a plan; 9GRID is a light grid, GRID the main one. The source marks this "to confirm".</p>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="q5" checked> Keep both pairs, each with its own use <span class="rec">Recommended</span></label>
+      <label class="choice"><input type="radio" name="q5"> Merge a pair into one layer</label>
+    </div>
+    <label class="write">Change to: <input type="text" name="w5"></label>
+  </section>
+
+  <section class="card">
+    <p class="num">6 of 10 (Q-L6)</p>
+    <p class="label">Slab edge named twice</p>
+    <p class="means">SLAB PERIMETER (14 jobs, 2,686 objects) and SLAB OUTLINE (7 jobs, 20 objects).</p>
+    <p class="note">&nbsp;</p>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="q6" checked> Keep SLAB PERIMETER, retire SLAB OUTLINE from the list <span class="rec">Recommended</span></label>
+      <label class="choice"><input type="radio" name="q6"> Keep both layers as they are</label>
+    </div>
+    <label class="write">Change to: <input type="text" name="w6"></label>
+  </section>
+
+  <section class="card">
+    <p class="num">7 of 10 (Q-L7)</p>
+    <p class="label">Construction joints on two layers</p>
+    <p class="means">CONSTRUCTION JOINT (palette blocks, 12 jobs) and SLAB CJ, which the joints tool uses (TA-121).</p>
+    <p class="note">Old drawings keep their own layer.</p>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="q7" checked> The joints tool draws on SLAB CJ only; retire CONSTRUCTION JOINT from the list <span class="rec">Recommended</span></label>
+      <label class="choice"><input type="radio" name="q7"> Keep both layers as they are</label>
+    </div>
+    <label class="write">Change to: <input type="text" name="w7"></label>
+  </section>
+
+  <section class="card">
+    <p class="num">8 of 10 (Q-L8)</p>
+    <p class="label">Bored pier fill named twice</p>
+    <p class="means">BORED PIER HATCH (7 jobs) and HATCH BORED PIER (9 jobs), both solid, colour 47.</p>
+    <p class="note">Keeping the "HATCH ..." family name is as TA-055.</p>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="q8" checked> Keep HATCH BORED PIER, retire BORED PIER HATCH <span class="rec">Recommended</span></label>
+      <label class="choice"><input type="radio" name="q8"> Keep both layers as they are</label>
+    </div>
+    <label class="write">Change to: <input type="text" name="w8"></label>
+  </section>
+
+  <section class="card">
+    <p class="num">9 of 10 (Q-L9)</p>
+    <p class="label">Roof bracing named twice</p>
+    <p class="means">BRACING ROOF (11 jobs) and ROOF BRACING (9 jobs), both DASHDOT2, colour 6.</p>
+    <p class="note">ROOF BRACING sits next to ROOF LOWER and ROOF UPPER.</p>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="q9" checked> Keep ROOF BRACING, retire BRACING ROOF <span class="rec">Recommended</span></label>
+      <label class="choice"><input type="radio" name="q9"> Keep both layers as they are</label>
+    </div>
+    <label class="write">Change to: <input type="text" name="w9"></label>
+  </section>
+
+  <section class="card">
+    <p class="num">10 of 10 (Q-L10)</p>
+    <p class="label">Band beam hatch</p>
+    <p class="means">HATCH 74 - BANDBEAM (7 jobs) beside HATCH 74 (band beam, first floor over, rain garden, TA-049) and BANDBEAM (the hidden outline).</p>
+    <p class="note">&nbsp;</p>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="q10" checked> Band beam hatch goes on HATCH 74 as ruled; retire HATCH 74 - BANDBEAM; BANDBEAM stays for the outline <span class="rec">Recommended</span></label>
+      <label class="choice"><input type="radio" name="q10"> Keep all three layers as they are</label>
+    </div>
+    <label class="write">Change to: <input type="text" name="w10"></label>
+  </section>
+
+  <p class="foot">Tell the planning chat the numbers you changed.</p>
+</div>
+</body>
+</html>

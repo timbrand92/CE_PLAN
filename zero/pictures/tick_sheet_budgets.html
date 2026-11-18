@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How quick each everyday task must be: 19 budgets</title>
+<style>
+  html { background:#2B2D30; }
+  body { margin:0; background:#2B2D30; color:#E6E8EB; font-family:"Segoe UI", Arial, sans-serif; font-size:14px; line-height:1.5; }
+  .page { max-width:860px; margin:0 auto; padding:32px 24px 48px; }
+  h1 { font-size:24px; font-weight:600; margin:0 0 16px; color:#F4F5F7; }
+  .lead { margin:0 0 8px; }
+  .count { font-size:24px; margin:0 0 16px; color:#F4F5F7; }
+  .key { font-size:12px; color:#A9AEB6; margin:0 0 32px; }
+  .card { background:#383B40; border:1px solid #4A4D53; border-radius:8px; padding:24px; margin:0 0 24px; box-shadow:0 2px 8px rgba(0,0,0,.3); }
+  .num { font-size:12px; color:#A9AEB6; margin:0 0 8px; }
+  .label { font-size:14px; font-weight:700; margin:0 0 8px; color:#F4F5F7; }
+  .means { margin:0 0 16px; }
+  .budget { font-size:24px; color:#F4F5F7; margin:0 0 8px; }
+  .limit { font-size:12px; color:#A9AEB6; margin:0 0 24px; }
+  .choices { display:flex; flex-wrap:wrap; gap:16px; margin:0 0 16px; }
+  .choice { display:flex; align-items:center; gap:8px; background:#232528; border:1px solid #4A4D53; border-radius:8px; padding:8px 16px; cursor:pointer; min-height:44px; }
+  .choice input { width:28px; height:28px; margin:0; accent-color:#FF70B3; cursor:pointer; flex:none; }
+  .choice:has(input:checked) { border-color:#FF70B3; }
+  .rec { font-size:12px; color:#FF70B3; }
+  .write { display:flex; align-items:center; gap:8px; font-size:14px; }
+  .write input { flex:1; min-width:120px; background:#4A4D55; color:#F4F5F7; border:1px solid #8A8E96; border-radius:8px; padding:8px 16px; font:inherit; }
+  .foot { font-size:14px; margin:32px 0 0; padding-top:24px; border-top:1px solid #4A4D53; }
+  @media print { .card { break-inside:avoid; } }
+</style>
+</head>
+<body>
+<div class="page">
+  <h1>How quick each everyday task must be: 19 budgets</h1>
+  <p class="lead">Tick only the ones you would change; an untouched card means the recommended answer stands</p>
+  <p class="count">19 items</p>
+  <p class="key">A pick is one click in the drawing. A click is one click in a window, or an Enter or Esc to finish. Typed is a figure you type. Scrolls are 0 for every task. The limit is the looser number; over the limit is not finished.</p>
+
+  <section class="card">
+    <p class="num">1 of 19</p>
+    <p class="label">Place a pit like the last one</p>
+    <p class="means">Drop in a pit the same as the one before, like the next 450 x 450 pit on a run of matching pits.</p>
+    <p class="budget">PIT, 1 pick, 2 clicks, 0 typed</p>
+    <p class="limit">Limit: 1 pick, 3 clicks, 0 typed</p>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="c1" checked> Right <span class="rec">Recommended</span></label>
+      <label class="choice"><input type="radio" name="c1"> Too slow, tighten</label>
+      <label class="choice"><input type="radio" name="c1"> Too tight, loosen</label>
+    </div>
+    <label class="write">Change to: <input type="text" name="w1"></label>
+  </section>
+
+  <section class="card">
+    <p class="num">2 of 19</p>
+    <p class="label">Place a pit that differs in one thing</p>
+    <p class="means">Same pit as before with one change, like the size going from 450 to 600.</p>
+    <p class="budget">PIT, 1 pick, 3 clicks, 0 typed</p>
+    <p class="limit">Limit: 1 pick, 4 clicks, 1 typed</p>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="c2" checked> Right <span class="rec">Recommended</span></label>
+      <label class="choice"><input type="radio" name="c2"> Too slow, tighten</label>
+      <label class="choice"><input type="radio" name="c2"> Too tight, loosen</label>
+    </div>
+    <label class="write">Change to: <input type="text" name="w2"></label>
+  </section>
+
+  <section class="card">
+    <p class="num">3 of 19</p>
+    <p class="label">Place a plastic pit (PP)</p>
+    <p class="means">Drop in a plastic pit that opens already as 350 x 350.</p>
+    <p class="budget">PP, 1 pick, 2 clicks, 0 typed</p>
+    <p class="limit">Limit: 1 pick, 3 clicks, 0 typed</p>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="c3" checked> Right <span class="rec">Recommended</span></label>
+      <label class="choice"><input type="radio" name="c3"> Too slow, tighten</label>
+      <label class="choice"><input type="radio" name="c3"> Too tight, loosen</label>
+    </div>
+    <label class="write">Change to: <input type="text" name="w3"></label>
+  </section>
+
+  <section class="card">
+    <p class="num">4 of 19</p>
+    <p class="label">Draw a pipe from pit to pit like the last one</p>
+    <p class="means">One pipe from a pit wall to the next pit wall, same size and grade as the pipe before (say 1 in 100).</p>
+    <p class="budget">CD, 2 picks, 2 clicks, 0 typed</p>
+    <p class="limit">Limit: 3 picks, 3 clicks, 0 typed</p>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="c4" checked> Right <span class="rec">Recommended</span></label>
+      <label class="choice"><input type="radio" name="c4"> Too slow, tighten</label>
+      <label class="choice"><input type="radio" name="c4"> Too tight, loosen</label>
+    </div>
+    <label class="write">Change to: <input type="text" name="w4"></label>
+  </section>
+
+  <section class="card">
+    <p class="num">5 of 19</p>
+    <p class="label">Draw a run of five pipes through four pits with one bend</p>
+    <p class="means">Five pipes drawn in one go, click to click like a polyline, with four pits in the middle and one bend. If you meant something else, the picks change by one per end point.</p>
+    <p class="budget">CD, 7 picks, 2 clicks, 0 typed</p>
+    <p class="limit">Limit: 8 picks, 4 clicks, 0 typed</p>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="c5" checked> Right <span class="rec">Recommended</span></label>
+      <label class="choice"><input type="radio" name="c5"> Too slow, tighten</label>
+      <label class="choice"><input type="radio" name="c5"> Too tight, loosen</label>
+    </div>
+    <label class="write">Change to: <input type="text" name="w5"></label>
+  </section>
+
+  <section class="card">
+    <p class="num">6 of 19</p>
+    <p class="label">Change one pipe's grade</p>
+    <p class="means">Double-click a pipe and change its grade from 1 in 100 to something else.</p>
+    <p class="budget">No command, 1 pick, 2 clicks, 0 typed</p>
+    <p class="limit">Limit: 1 pick, 3 clicks, 1 typed</p>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="c6" checked> Right <span class="rec">Recommended</span></label>
+      <label class="choice"><input type="radio" name="c6"> Too slow, tighten</label>
+      <label class="choice"><input type="radio" name="c6"> Too tight, loosen</label>
+    </div>
+    <label class="write">Change to: <input type="text" name="w6"></label>
+  </section>
+
+  <section class="card">
+    <p class="num">7 of 19</p>
+    <p class="label">Hold an invert at one end</p>
+    <p class="means">Fix the invert level at one end of a pipe so it stays put when the grade changes.</p>
+    <p class="budget">No command, 1 pick, 1 click, 1 typed</p>
+    <p class="limit">Limit: 1 pick, 2 clicks, 1 typed</p>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="c7" checked> Right <span class="rec">Recommended</span></label>
+      <label class="choice"><input type="radio" name="c7"> Too slow, tighten</label>
+      <label class="choice"><input type="radio" name="c7"> Too tight, loosen</label>
+    </div>
+    <label class="write">Change to: <input type="text" name="w7"></label>
+  </section>
+
+  <section class="card">
+    <p class="num">8 of 19</p>
+    <p class="label">Move a pit with its pipes (plain MOVE)</p>
+    <p class="means">Pick up a pit and put it down elsewhere; its tag, cover text and joined pipes come with it.</p>
+    <p class="budget">MOVE, 3 picks, 0 clicks, 0 typed</p>
+    <p class="limit">Limit: 4 picks, 1 click, 0 typed</p>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="c8" checked> Right <span class="rec">Recommended</span></label>
+      <label class="choice"><input type="radio" name="c8"> Too slow, tighten</label>
+      <label class="choice"><input type="radio" name="c8"> Too tight, loosen</label>
+    </div>
+    <label class="write">Change to: <input type="text" name="w8"></label>
+  </section>
+
+  <section class="card">
+    <p class="num">9 of 19</p>
+    <p class="label">Resize a pit by its grip</p>
+    <p class="means">Select a pit, drag its grip to a new size, and the pipe ends follow the new wall.</p>
+    <p class="budget">No command, 3 picks, 0 clicks, 0 typed</p>
+    <p class="limit">Limit: 4 picks, 0 clicks, 1 typed</p>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="c9" checked> Right <span class="rec">Recommended</span></label>
+      <label class="choice"><input type="radio" name="c9"> Too slow, tighten</label>
+      <label class="choice"><input type="radio" name="c9"> Too tight, loosen</label>
+    </div>
+    <label class="write">Change to: <input type="text" name="w9"></label>
+  </section>
+
+  <section class="card">
+    <p class="num">10 of 19</p>
+    <p class="label">Place six downpipes</p>
+    <p class="means">Click six downpipe spots in a row on a roof plan, then Enter to finish.</p>
+    <p class="budget">DP, 6 picks, 2 clicks, 0 typed</p>
+    <p class="limit">Limit: 6 picks, 3 clicks, 0 typed</p>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="c10" checked> Right <span class="rec">Recommended</span></label>
+      <label class="choice"><input type="radio" name="c10"> Too slow, tighten</label>
+      <label class="choice"><input type="radio" name="c10"> Too tight, loosen</label>
+    </div>
+    <label class="write">Change to: <input type="text" name="w10"></label>
+  </section>
+
+  <section class="card">
+    <p class="num">11 of 19</p>
+    <p class="label">Place the LPD at the end of a system</p>
+    <p class="means">Mark the legal point of discharge at the end of the last pipe, with its tag and note.</p>
+    <p class="budget">LPD, 1 pick, 2 clicks, 0 typed</p>
+    <p class="limit">Limit: 2 picks, 3 clicks, 1 typed</p>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="c11" checked> Right <span class="rec">Recommended</span></label>
+      <label class="choice"><input type="radio" name="c11"> Too slow, tighten</label>
+      <label class="choice"><input type="radio" name="c11"> Too tight, loosen</label>
+    </div>
+    <label class="write">Change to: <input type="text" name="w11"></label>
+  </section>
+
+  <section class="card">
+    <p class="num">12 of 19</p>
+    <p class="label">Place a tank with its re-use figure</p>
+    <p class="means">Place a water tank and give its re-use litres, like a 2,000 litre re-use tank.</p>
+    <p class="budget">WT, 2 picks, 2 clicks, 1 typed</p>
+    <p class="limit">Limit: 2 picks, 4 clicks, 2 typed</p>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="c12" checked> Right <span class="rec">Recommended</span></label>
+      <label class="choice"><input type="radio" name="c12"> Too slow, tighten</label>
+      <label class="choice"><input type="radio" name="c12"> Too tight, loosen</label>
+    </div>
+    <label class="write">Change to: <input type="text" name="w12"></label>
+  </section>
+
+  <section class="card">
+    <p class="num">13 of 19</p>
+    <p class="label">Check detention on a finished job</p>
+    <p class="means">Open the detention window on a finished job, read the answer (Suits, Short or Needs a look), and close it.</p>
+    <p class="budget">DET, 0 picks, 1 click, 0 typed</p>
+    <p class="limit">Limit: 0 picks, 2 clicks, 0 typed</p>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="c13" checked> Right <span class="rec">Recommended</span></label>
+      <label class="choice"><input type="radio" name="c13"> Too slow, tighten</label>
+      <label class="choice"><input type="radio" name="c13"> Too tight, loosen</label>
+    </div>
+    <label class="write">Change to: <input type="text" name="w13"></label>
+  </section>
+
+  <section class="card">
+    <p class="num">14 of 19</p>
+    <p class="label">Fix "storage short" by changing one thing</p>
+    <p class="means">The window says storage is short; you accept the suggested next tank size up and it flips to Suits.</p>
+    <p class="budget">DET, 0 picks, 2 clicks, 0 typed</p>
+    <p class="limit">Limit: 0 picks, 3 clicks, 1 typed</p>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="c14" checked> Right <span class="rec">Recommended</span></label>
+      <label class="choice"><input type="radio" name="c14"> Too slow, tighten</label>
+      <label class="choice"><input type="radio" name="c14"> Too tight, loosen</label>
+    </div>
+    <label class="write">Change to: <input type="text" name="w14"></label>
+  </section>
+
+  <section class="card">
+    <p class="num">15 of 19</p>
+    <p class="label">Place the pit schedule</p>
+    <p class="means">Click the top-left corner where the pit schedule goes; it draws once and then follows the pits.</p>
+    <p class="budget">SH, 1 pick, 0 clicks, 0 typed</p>
+    <p class="limit">Limit: 1 pick, 1 click, 0 typed</p>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="c15" checked> Right <span class="rec">Recommended</span></label>
+      <label class="choice"><input type="radio" name="c15"> Too slow, tighten</label>
+      <label class="choice"><input type="radio" name="c15"> Too tight, loosen</label>
+    </div>
+    <label class="write">Change to: <input type="text" name="w15"></label>
+  </section>
+
+  <section class="card">
+    <p class="num">16 of 19</p>
+    <p class="label">Set up a new job (first drawing)</p>
+    <p class="means">Fill in the job sheet on a fresh drawing: site outline, paving hatch, council, kind of development, discharge point. The command name is not yet ruled, and the rainfall table is outside this budget. Expected to land at the limit first time.</p>
+    <p class="budget">One command, 2 picks, 7 clicks, 3 typed</p>
+    <p class="limit">Limit: 4 picks, 10 clicks, 5 typed</p>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="c16" checked> Right <span class="rec">Recommended</span></label>
+      <label class="choice"><input type="radio" name="c16"> Too slow, tighten</label>
+      <label class="choice"><input type="radio" name="c16"> Too tight, loosen</label>
+    </div>
+    <label class="write">Change to: <input type="text" name="w16"></label>
+  </section>
+
+  <section class="card">
+    <p class="num">17 of 19</p>
+    <p class="label">Find and fix the one thing wrong on the Unfinished list</p>
+    <p class="means">Open the list of unfinished items, jump to the one missing figure, and type it. The command name is not yet ruled.</p>
+    <p class="budget">One command, 0 picks, 2 clicks, 1 typed</p>
+    <p class="limit">Limit: 1 pick, 3 clicks, 1 typed</p>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="c17" checked> Right <span class="rec">Recommended</span></label>
+      <label class="choice"><input type="radio" name="c17"> Too slow, tighten</label>
+      <label class="choice"><input type="radio" name="c17"> Too tight, loosen</label>
+    </div>
+    <label class="write">Change to: <input type="text" name="w17"></label>
+  </section>
+
+  <section class="card">
+    <p class="num">18 of 19</p>
+    <p class="label">Edit any object (double-click route)</p>
+    <p class="means">Double-click a pit or pipe, change one choice, and OK. This route is not yet proven, so it is the first to test.</p>
+    <p class="budget">No command, 1 pick, 2 clicks, 0 typed</p>
+    <p class="limit">Limit: 1 pick, 3 clicks, 1 typed</p>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="c18" checked> Right <span class="rec">Recommended</span></label>
+      <label class="choice"><input type="radio" name="c18"> Too slow, tighten</label>
+      <label class="choice"><input type="radio" name="c18"> Too tight, loosen</label>
+    </div>
+    <label class="write">Change to: <input type="text" name="w18"></label>
+  </section>
+
+  <section class="card">
+    <p class="num">19 of 19</p>
+    <p class="label">Undo any of the above</p>
+    <p class="means">One U puts the whole task back, with every tag, label and schedule row it made. Where a run of pipes steps back one pipe at a time is your call (the limit becomes five).</p>
+    <p class="budget">U once, 0 picks, 0 clicks, 0 typed</p>
+    <p class="limit">Limit: one U per step, only where a ruling says steps</p>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="c19" checked> Right <span class="rec">Recommended</span></label>
+      <label class="choice"><input type="radio" name="c19"> Too slow, tighten</label>
+      <label class="choice"><input type="radio" name="c19"> Too tight, loosen</label>
+    </div>
+    <label class="write">Change to: <input type="text" name="w19"></label>
+  </section>
+
+  <p class="foot">Tell the planning chat the numbers you changed.</p>
+</div>
+</body>
+</html>
