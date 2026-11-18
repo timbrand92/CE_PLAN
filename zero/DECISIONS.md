@@ -654,6 +654,14 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-316** (19 Nov 2026, about 8:00 am; the 3,500 L tank outline) "we have in the past not shown water tanks to scale we need to create a block or water tank that is correct to size". So neither old outline is taken: tanks are to be drawn true to size. Research owed: real makers' sizes for the common tank volumes, then a proposal for a true-size tank block (or a tank drawn by the tool from its sizes) for his look. The "Slimline" naming question is still open.
 
+**D-317** (19 Nov 2026, 8:08 am; how the end of a system is drawn) "both need new symbols". The council pit and the kerb outlet each get a new symbol; the planning chat's proposal (PIT BLOCK 3 on EXISTING DRAIN, and a bare pipe end on the kerb line) is not taken. Owed: symbol options drawn for his look.
+
+**D-318** (19 Nov 2026, 8:08 am; checks and rounding) "Allow a small tolerance". A check may pass within a small tolerance; the planning chat's draft call (exact figures only) is overturned. The size of the tolerance is NOT yet given: asked next.
+
+**D-319** (19 Nov 2026, 8:08 am; a worked-out figure that can be held) "dashed until held but what happens if you want to use that number ?". Dashed until held is agreed. His question (how to hold the worked-out number as it stands, without retyping it) is NOT yet answered by a ruling: asked next.
+
+**D-320** (19 Nov 2026, 8:08 am; a part on a frozen or off layer) "Offer to turn it on". The window says the layer is off or frozen and offers a button to turn it on; nothing changes unless he presses it. The planning chat's draft call (never offer) is overturned.
+
 ## Not decided (asked or raised, no decision yet)
 
 1. Whether Stage 1's civil explanation is approved (Tim moved on to the design without saying "approve"). **Settled by D-117.**
