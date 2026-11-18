@@ -92,7 +92,7 @@ One change at a time from the working pattern, on MText unless said, a picture e
 
 ### Pipe-label blocks, no mouse (18 Nov, fourth test AutoCAD, 16:26 to 16:29, test copy `g_master2.dwg`, closed with No to saving)
 
-1. **What the office's label block is.** PT300 LABEL has a flip, two angles and an X/Y position, **no attributes**; its words ("PT300") are plain text fixed inside the block, one block per pipe size (PT250 to PT600). **So the label's words cannot be typed over with a plain edit; this clashes with D-182 (typed-over label text) unless the new plug-in uses a block with an attribute, or keeps the words as separate text.** Not yet ruled.
+1. **What the office's label block is (D-290 later closed this: those blocks are not the pipe description).** PT300 LABEL has a flip, two angles and an X/Y position, **no attributes**; its words ("PT300") are plain text fixed inside the block, one block per pipe size (PT250 to PT600). **So the label's words cannot be typed over with a plain edit; this clashes with D-182 (typed-over label text) unless the new plug-in uses a block with an attribute, or keeps the words as separate text.** Not yet ruled.
 2. **Flip with text:** setting the flip value moved the whole label below its line and the words stayed upright: the exploded text was not mirrored and not turned (`K ONE explode (flipped)` in `evidence\zt_run4_labels.log`). The extents went from 0 to 476 up to minus 476 to 0.
 3. **Explode:** a label explodes to one polyline, one text and two lines in both states: it becomes plain objects and loses its grips (as expected; consequence not tested in a drawing).
 4. **Hidden block definitions:** 60 labels inserted and not flipped added none; **60 flipped added 60 hidden definitions** (335 to 395); flipping every second one added 30. The master drawing already carries 335. Each flipped or stretched dynamic block costs one hidden definition. PURGE behaviour not tested.
@@ -129,7 +129,7 @@ Each line: what to do, what counts as a pass. Items 1 to 9 need the real mouse (
 12. **Our grip beside the old CE grips on the same MText or block:** which draws on top, which is picked.
 13. **net48 (AutoCAD 2022 to 2024):** the same drawn shapes and the same flags. Pass: paint and click the same.
 14. **Other settings:** GRIPSIZE 10 or 12, a white drawing background, a high-resolution screen. Pass: glyph size and colour still readable (test changes the setting only on a made-up copy of a profile if Tim allows it, otherwise not tested).
-15. **Label block with a typed-over words question:** a label block with an attribute versus separate text; pass: plain double-click edits the words and a flip keeps them readable and attached.
+15. **CLOSED (D-290, 18 Nov): label block with an attribute is dropped.** The PT250 to PT600 LABEL blocks are not the pipe description; the description stays text the Pipe tool writes, so typed-over wording is the text's own words, and flip and slide are our own drawn grips on that text. For the robot run test items 5 to 10 on MASKED MTEXT beside a polyline.
 16. **Hidden definitions:** PURGE after flipping 60 labels. Pass: the 60 hidden definitions go or stay, and the drawing size is measured.
 17. **Copy, paste into another drawing, WBLOCK, xref attach, MATCHPROP of a flipped label.** Pass: flip state travels and nothing breaks.
 18. **Pipe-label with the old Civil build:** NOT to be run (the planning chat parked the September cause, 18 Nov).
