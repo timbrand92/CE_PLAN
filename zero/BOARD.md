@@ -340,3 +340,4 @@ Items that left the lists above, with the decision that closed them.
 6. **O-018 Owed by the planning chat:** re-score the obstacle course and refresh the director's summary after pass 2 (section 10 items 5 and 15).
 7. **Live risk kept in front of Tim (D-230):** BUG-866 in the installed plug-in; re-raised to him 18 Nov afternoon; closes when he says "seen".
 8. Highest decision is now D-230. The rulings pages run to D-229.
+9. **Closed 18 Nov 2 pm by D-231:** the login and PC name in two committed result files in CE_CIVIL's git history: Tim: "Leave the history alone". Standing condition (K-023, parked): before CE_CIVIL is ever shared with anyone else, clean its history first.
