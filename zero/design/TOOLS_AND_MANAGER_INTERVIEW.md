@@ -1,6 +1,6 @@
 # Tools and Manager interview
 
-**Revision:** 2 (Wed 18 Nov 2026, late afternoon, Melbourne time). Revision 1 had answers A-01 to A-17 only; revision 2 adds section 8a. Tim's answers are numbered TA- in `interview_tools\ANSWERS.md` (A-01 to A-17 there are TA-001 to TA-017).
+**Revision:** 3 (Wed 18 Nov 2026, late afternoon, Melbourne time). Revision 3 marks the answered TQ items, the settled CX items and the superseded tab names (board check, D-226), and adds TQ-13. Revision 2: Revision 1 had answers A-01 to A-17 only; revision 2 adds section 8a. Tim's answers are numbered TA- in `interview_tools\ANSWERS.md` (A-01 to A-17 there are TA-001 to TA-017).
 **Written by:** the interview side session started by the planning chat 'CE_ACAD / zero plan / 01'.
 **Status:** Tim's answers, in his words, plus proposals. **Nothing here is a decision until the planning chat files it in `DECISIONS.md`.** Nothing was built, no code was changed, AutoCAD was not opened.
 **IDs in this file:** shared tools ST-01 onwards, Manager items MG-01 onwards, future ideas FI-01 onwards, open questions TQ-01 onwards, clashes with earlier decisions CX-01 onwards. Never reuse or renumber; a later revision adds new numbers.
@@ -158,8 +158,8 @@ Every name below is checked against Tim's alias list only. **None is checked aga
 ## 5. Ribbon: three tabs (A-16)
 
 1. **Tim's words:** "THREE TABS CE CIVIL, CE TOOLS&MANAGER & CE STRUCTURAL (BETTER NAMES FOR ALL)".
-2. **Proposal for the names (TQ-01):** CE Civil, CE Draft, CE Structural; or CE Drainage, CE Tools, CE Structural. The Manager would be one button at the end of the middle tab.
-3. **The CE Structural tab** is empty until structural is unparked (D-006), unless Tim says otherwise (TQ-02).
+2. **Proposal for the names (TQ-01), SUPERSEDED by D-208:** the names are CE Civil, CE Tools, CE Structural (TA-018). The Manager would be one button at the end of the CE Tools tab. (Proposed earlier: CE Civil, CE Draft, CE Structural; or CE Drainage, CE Tools, CE Structural.)
+3. **The CE Structural tab, SUPERSEDED by D-208:** hidden until it has tools (TA-019). (Written earlier: empty until structural is unparked.)
 
 ---
 
@@ -176,27 +176,28 @@ These go into the plan's idea file with the planning chat's own numbers; this fi
 
 ## 7. Open questions for Tim
 
-**TQ-01** Names for the three tabs (section 5).
-**TQ-02** Does the CE Structural tab appear in the first release, empty or with only the shared tools, or stay hidden until structural is unparked?
-**TQ-03** Does CLEAN get a short name, or stay CLEAN only?
-**TQ-04** Q clashes with "q, *mltim" in his alias list. Keep Q (his alias would have to move) or a new short name such as QL?
-**TQ-05** DIV and DIVX: retire them for AutoCAD's own DIVIDE and MEASURE, or keep under new names?
-**TQ-06** Plain word and short name for the hatch window (it must not take H or HE, which are his alias list's Hatch and Hatchedit).
-**TQ-07** Should the revision box still ask about object snap first?
-**TQ-08** BREAKLINE / BK for the break line, or another?
-**TQ-09** What "learn from how and where they are placed" should mean for joint labels in the first release.
-**TQ-10** May the master drawing's 279 machine-named blocks be renamed (on a copy first) so the palette and tools can point at them safely? Who owns that drawing's edits?
-**TQ-11** Typed name for the blocks palette.
-**TQ-12** Which hatches go in the office list: every pattern in the master drawing, or a short list Tim names?
+**TQ-01** Names for the three tabs (section 5). **ANSWERED:** CE Civil, CE Tools, CE Structural (TA-018, D-208).
+**TQ-02** Does the CE Structural tab appear in the first release, empty or with only the shared tools, or stay hidden until structural is unparked? **ANSWERED:** hidden until it has tools (TA-019, D-208).
+**TQ-03** Does CLEAN get a short name, or stay CLEAN only? **ANSWERED:** CLEAN plus CN (TA-020, D-208).
+**TQ-04** Q clashes with "q, *mltim" in his alias list. Keep Q (his alias would have to move) or a new short name such as QL? **ANSWERED:** Tim keeps his Q; the CE leader is QL (TA-021, D-208).
+**TQ-05** DIV and DIVX: retire them for AutoCAD's own DIVIDE and MEASURE, or keep under new names? **ANSWERED:** kept, with upgrades (follow bends, visible cross, preview and spacing text) (TA-022, TA-032, D-208, D-209).
+**TQ-06** Plain word and short name for the hatch window (it must not take H or HE, which are his alias list's Hatch and Hatchedit). **ANSWERED:** OFFICEHATCH / OH, every hatch linked to its outline (TA-044, TA-046, D-214).
+**TQ-07** Should the revision box still ask about object snap first? **ANSWERED:** keep the question (TA-024, D-208).
+**TQ-08** BREAKLINE / BK for the break line, or another? **ANSWERED:** BREAKLINE / BL; Tim moves his own Bl alias (TA-023, D-208).
+**TQ-09** What "learn from how and where they are placed" should mean for joint labels in the first release. **ANSWERED IN PART:** what is wrong today and what the first release does: dashes right at 1:100, bends, full-word labels placed like 25T / 25B depending on what is around (TA-025, TA-033, D-209). **Left:** a label that learns from past placements is later work (FI-04); nothing waits on Tim for the first release.
+**TQ-10** May the master drawing's 279 machine-named blocks be renamed (on a copy first) so the palette and tools can point at them safely? Who owns that drawing's edits? **CLOSED by D-229:** yes, on a copy first; all 453 blocks reviewed in `design\BLOCKS_REVIEW.md`; exact copies merged on a copy; 37 blocks chosen for the palette (TA-038, TA-042, TA-064 to TA-075). **Left:** proper names for the 18 machine-named blocks Tim added (TQ-13). Who edits the master drawing was not asked.
+**TQ-11** Typed name for the blocks palette. **ANSWERED:** BLOCKS / BLK (TA-037, D-208).
+**TQ-12** Which hatches go in the office list: every pattern in the master drawing, or a short list Tim names? **ANSWERED:** a list sorted by what each hatch does, with layer, pattern and base scale (DIMSCALE 100 / LTSCALE 1000, DIMSCALE leads) (TA-045 to TA-063, D-227, `interview_tools\HATCHES_BY_FUNCTION.md`).
+**TQ-13** (new, 18 Nov 2026) Proper names for the 18 machine-named blocks Tim added to the palette: BK-081, 413, 414, 416, 417, 420, 425, 430, 432, 433, 434, 436, 438, 443, 446, 451, 452, 453 (TA-075). Open; to be put to Tim on a picture sheet with proposed names.
 
 ---
 
 ## 8. Clashes with earlier decisions (for the planning chat to settle with Tim; nothing changed here)
 
-**CX-01** A-16 (three tabs) differs from D-051 (one short CE Civil tab plus pop-up tabs). The pop-up tabs could stay as they are; the "one tab" part changes.
-**CX-02** A-15 (all shared tools in the first issue release) differs from what `design\NAMES_C_AND_RC_PROPOSAL.md` says ("CE everyday helpers are out, D-097 to D-100"). D-097 did not list helpers either way, so this adds to the first release; it also adds to D-091 "one tool at a time" pacing.
-**CX-03** D-006 parks structural; the shared tools are used on structural sheets too. Read as: shared tools are in, structural-only tools stay parked.
-**CX-04** A-17 asks for revision numbers and ID numbers on all bugs, ideas "AND ANYTHING ELSE": a standing rule for the plan's files, to be filed as a decision.
+**CX-01** A-16 (three tabs) differs from D-051 (one short CE Civil tab plus pop-up tabs). The pop-up tabs could stay as they are; the "one tab" part changes. **SETTLED:** three tabs, the light tab on selection stays (D-200, D-208).
+**CX-02** A-15 (all shared tools in the first issue release) differs from what `design\NAMES_C_AND_RC_PROPOSAL.md` says ("CE everyday helpers are out, D-097 to D-100"). D-097 did not list helpers either way, so this adds to the first release; it also adds to D-091 "one tool at a time" pacing. **SETTLED:** all 18 shared tools are in the first release, each tested before release (D-201, D-209, D-214).
+**CX-03** D-006 parks structural; the shared tools are used on structural sheets too. Read as: shared tools are in, structural-only tools stay parked. **STANDS:** structural stays parked (D-006).
+**CX-04** A-17 asks for revision numbers and ID numbers on all bugs, ideas "AND ANYTHING ELSE": a standing rule for the plan's files, to be filed as a decision. **SETTLED:** D-205.
 
 ---
 
@@ -232,7 +233,7 @@ Names checked against the acad.pgp copy and Tim's alias list; full words still n
    - **Finding:** command search.
    - **End offsets and numbering** on Divide.
 5. **Master drawing blocks:** look through all 279 machine-named blocks (and the rest) on a copy, say what each is, then Tim decides which to keep and how to order them; "we might not need all blocks" (TA-038, TA-042).
-6. **Still held:** TQ-06 hatch name and TQ-12 hatch list wait for research R-006 (D-199).
+6. **No longer held (was: "TQ-06 hatch name and TQ-12 hatch list wait for research R-006"):** after R-006 both were answered. TQ-06 is OFFICEHATCH / OH (TA-044, D-214). TQ-12 is the hatch list by function in `interview_tools\HATCHES_BY_FUNCTION.md` (TA-045 to TA-063, D-227).
 
 ## 9. What was not done
 

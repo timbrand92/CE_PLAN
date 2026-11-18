@@ -1,8 +1,8 @@
 # Tools interview: checklist and working notes
 
-**Revision:** 3 (Wed 18 Nov 2026, late afternoon, Melbourne time). Revision 1 used T-numbers for answers; now TA-numbers (D-205).
+**Revision:** 4 (Wed 18 Nov 2026, late afternoon, Melbourne time). Revision 4: TQ-06 and TQ-12 answered, batches 17 to 23 added, TQ-13 opened. Revision 1 used T-numbers for answers; now TA-numbers (D-205).
 **Reports to:** the planning chat (D-198). Planning only; nothing is built.
-**Progress:** 40 of 42 questions answered. The first list of 28 has 26 done and 2 held (TQ-06, TQ-12, waiting for R-006). Tim asked for 14 more (upgrades for every tool, missed commands), all answered in batches 13 to 16. Answers TA-001 to TA-042.
+**Progress:** the first list of 28 is answered, 28 of 28 (TQ-06 and TQ-12 after R-006). Tim asked for 14 more (upgrades for every tool, missed commands), all answered in batches 13 to 16. Batches 17 to 23 covered release size, the hatch list and scales, and the ten block decisions. Answers TA-001 to TA-075. **Open:** TQ-13, names for the 18 blocks Tim added to the palette.
 **Batches 10 to 16:** asked 18 Nov 2026 late afternoon, when Tim said "ASK THE NEXT QUESTIONS NOW".
 
 ## Read before asking
@@ -40,13 +40,14 @@
 19. [x] TQ-03 CLEAN plus CN (TA-020)
 20. [x] TQ-04 Tim keeps his Q; leader is QL (TA-021)
 21. [x] TQ-05 Divide kept, with upgrades (TA-022, TA-032)
-22. [ ] TQ-06 Name for the hatch window (held until R-006)
+22. [x] TQ-06 OFFICEHATCH / OH (TA-044, D-214)
 23. [x] TQ-07 Revision box keeps the snap question (TA-024)
 24. [x] TQ-08 BREAKLINE / BL (TA-023)
 25. [x] TQ-09 Joints: what is wrong (TA-025, TA-033)
 26. [x] TQ-10 Master drawing blocks: look through them on a copy (TA-038, TA-042)
 27. [x] TQ-11 BLOCKS / BLK (TA-037)
-28. [ ] TQ-12 Which hatches go in the office list (held until R-006)
+28. [x] TQ-12 Hatch list by function, layer, pattern and base scale (TA-045 to TA-063, D-227)
+29a. [ ] TQ-13 Names for the 18 machine-named blocks Tim added (TA-075); open
 
 ## Added at Tim's request (TA-026, TA-027): 14, all answered
 

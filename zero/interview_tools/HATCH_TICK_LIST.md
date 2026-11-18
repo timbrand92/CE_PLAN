@@ -1,5 +1,7 @@
 # Hatch tick list (for the OFFICEHATCH / OH list)
 
+**SUPERSEDED 18 Nov 2026 by HATCHES_BY_FUNCTION.md (D-227); Tim did not tick this list.**
+
 **Revision:** 1 (Wed 18 Nov 2026, Melbourne time). Asked for in TA-045: "give me a list of strucutral and civil hatches and then a visual and i will tick off what is and isnt needed".
 **IDs:** HT-01 to HT-58, never reused. **Pictures:** `pictures\hatches_civil.png`, `pictures\hatches_structural.png`, `pictures\hatches_other.png`. Each sample is a 3 m square drawn with the hatch's own pattern and pen colour from the master drawing; at 1:100 that is 30 mm on the sheet.
 **Source:** every area hatch in the office master drawing (DXF copy, read only), one per layer and pattern. Left out: hatches that are only part of a symbol (downpipe fill, floor waste, trench grate, bored pier, cast-in plate, Before You Dig panel).
