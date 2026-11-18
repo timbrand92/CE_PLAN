@@ -2,52 +2,52 @@
 
 **Why this file exists.** Tim, 17 Nov 2026: "i need a way to understand wht we have planned, what we have built, how close we are to finishing or getting a ready version for me to test and bugs and anythign else thats important if i was a director looking to get summaries. i need this everytime i ask how things are going and also you need to keep me on track with planning, building annd beyond". The planning chat updates this page before every progress answer and always uses these seven headings in this order.
 
-**Last updated:** Wed 18 Nov 2026, 4:58 pm by the clock. Everything open across every chat is on `BOARD.md`; decisions run to D-290 in `DECISIONS.md` (the `rulings\` pages run to D-229 and are behind).
+**Last updated:** Wed 18 Nov 2026, 6:00 pm by the clock. Everything open across every chat is on `BOARD.md`; decisions run to D-297 in `DECISIONS.md`; the `rulings\` pages now run to D-297 too.
 
 ## 1. Headline
 
-The plug-in is now planned as 11 windows and one list in place of 146 scattered commands, and Tim's 31 screen design rules are the standard for every window. Against those rules 0 of 8 screen groups pass today; one fixed mock-up is being made for his look. Four tools run in real AutoCAD on test copies. There is no version to draft with yet.
+The look of every window is now approved, the 18 wrong-figure faults on the test windows are fixed, and grips, drag and double-click are proven in AutoCAD. Nothing is installed and there is no version to draft with yet. Five small choices wait on Tim.
 
 ## 2. Planned
 
-1. **The whole plug-in as a few tools (D-246, D-281):** shown to Tim as a picture and as the artifact "CE Civil Final Program": ribbon in job order, where each old calculation command lands, how it grows. He said it "LOOKS GREAT".
-2. **One tool fewer:** Outlet and the legal point of discharge are one tool, LPD (D-274). Civil tab: 11 windows, 17 short names.
-3. **Build calls:** 103 of 104 small calls closed on 18 Nov (D-258 to D-288), most from his earlier rulings; one left for him (slab thickness under paving).
-4. **Screen rules (D-286):** 31 rules, his words, in `design\SCREEN_RULES_18NOV.md`. Process: audit, one mock-up of the worst offender for his look, then fix by risk with no rebuilds.
-5. **Other rulings today:** function plan questions all answered; CLEAN, Office hatch and the Manager settled in detail; statistics are in the first release; one "what is over it" list of ten presets for cover and lid class (D-287); storage totalled in full as the issued jobs do (D-289).
+1. **The whole plug-in:** 11 civil windows and one Unfinished list in place of 146 scattered commands; 18 everyday tools; one Manager window with statistics. Shown as a picture and as the artifact "CE Civil Final Program".
+2. **Build calls:** 104 of 104 closed.
+3. **Screens:** Tim's 31 screen rules are the standard (D-286). The window style is APPROVED from the Detention mock-up (D-295): dark, rose button, one answer band, three numbered steps, inputs in boxes. The preview's size and form is open (D-297); three options are with him.
+4. **Settled today in the tools interview:** CLEAN, Office hatch, Office text, Office layer, slab joints, the Manager.
+5. **Records:** rulings pages to D-297, checked by a second reader.
 
 ## 3. Built (four separate facts)
 
-1. **The brain:** built; 586 automatic checks pass.
-2. **Seven windows on a test bench:** built and working, 291 checks; they fail the new screen rules on look and layout and hold 18 known wrong-figure or pretend-to-work faults, now being fixed first.
-3. **AutoCAD foundation, Pit, Pipe, Long section, Outlet (to become LPD):** five passes in real AutoCAD on 18 Nov; the last 100 of 103 with every speed limit met. The seven ruling fixes and lid class are built and reviewed but NOT yet run in AutoCAD.
-4. **Grips:** our own grip shapes paint on AutoCAD 2027, show only on our objects, hover words work, a click is safe. Tim tested them with his own mouse.
+1. **The brain:** 598 automatic checks pass. Boyd's now matches the office sheet (1.66 on the measured job).
+2. **Seven windows on a test bench:** 313 checks pass; the 18 wrong-figure and pretend-to-work faults are fixed and reviewed. They still wear the OLD look.
+3. **AutoCAD tools (foundation, Pit, Pipe, Long section, Outlet):** last full pass 100 of 103 with every speed limit met. Today's fixes are NOT yet run in AutoCAD; that pass is tonight.
+4. **Grips and editing, proven in AutoCAD on test copies:** our own grip shapes; hover words; click; drag with one undo; flip and slide on a masked label; double-click opening our window on our objects only; nothing on a locked layer.
 5. **Installed: 0. Accepted by Tim: 0.**
 
 ## 4. How close to a version you can test (no guessed dates)
 
-1. **Windows to click, outside AutoCAD:** now, but they are about to change look.
-2. **Pit and Pipe to draft with in AutoCAD:** not before the approved look, bends, metre drawings, locked layers, the live on-cursor preview and the office's masked text are built and through the gate. No date given.
+1. **Windows to click, outside AutoCAD:** now, with correct figures and the old look.
+2. **Pit and Pipe to draft with in AutoCAD:** not before the approved look, bends, metre drawings, locked layers, the live preview, masked text and the day's rulings are built and through the gate.
 3. **The whole first release:** a measured figure once two or three tools have been through the gate.
 4. **Colleagues:** after one real job carried through by Tim.
 
 ## 5. Problems and bugs
 
-1. **Screens: 0 of 8 groups meet the rules** (37 marks meet, 127 fail, 60 not checked). Ten failures repeat on every window; they are fixed once, in the shared parts.
-2. **18 wrong-figure or pretend-to-work faults on the bench windows** (N-039 to N-056): fixed first, each with a test; none is in anything Tim drafts with.
-3. **The first fixed mock-up failed its separate check** and was not shown; corrected version in hand.
-4. **Planning chat's own mistakes today:** said the windows used a rose accent (they use blue); read "0.06 spare" wrongly; called the office PT label block the pipe label; wrote several times from memory instead of the clock. Each corrected on the board.
-5. **Grips:** the 17 Nov crash is explained and ruled out (a grip click must never return the failure value). Drag, hover menu, double-click and locked layers are not tested yet.
-6. **Not built yet:** bends, metre drawings, locked layers and xrefs, live preview on the cursor, pipe edge lines, turning a pit, the LPD merge.
-7. **Not proven:** the new tools taking the names PIT and CD while the old plug-in is loaded (D-258); our facts as rows in AutoCAD's Properties palette.
+1. **Not run in AutoCAD yet:** the seven ruling fixes, lid class, and the 18 wrong-figure fixes.
+2. **Not built:** the approved look on any real window; bends; metre drawings; the LPD merge; turning a pit; pipe edge lines; text heights that follow DIMSCALE; the live preview on the cursor.
+3. **Not proven:** the new tools taking the names PIT and CD while the old plug-in is loaded; our facts as rows in AutoCAD's Properties; the window docked beside the drawing with AutoCAD lighting up the system (preview option C).
+4. **Grips left to test:** hover menu, Ctrl-copy. Double-click leaves "_pedit, *Cancel*" in the command history each time.
+5. **Planning chat's mistakes today,** each corrected on the board: removed his "q" alias against his earlier ruling; said the windows used rose when they used blue; misread "0.06 spare"; called an office label block the pipe label; wrote times from memory.
 
 ## 6. Waiting on Tim
 
-1. **His look at the corrected Detention mock-up** (sets the style for every window), with the accent (CE off-white or rose) and the grey (lighter, mid, dark).
-2. **Slab thickness** used for cover under paving (100 path, 125 driveway, 150 crossover proposed).
-3. **Grip testing chat:** double-click and undo test now, or tonight.
-4. **Still open from earlier:** council minimum runoff documents for two councils; the picture of a shorter pipe label for tight spaces (owed to him, not from him).
+1. **His "q" alias:** put it back or leave it removed.
+2. **The preview:** option A, B or C.
+3. **Pipe labels in tight spaces:** which of the four ways.
+4. **Double-click:** is the brief "_pedit, *Cancel*" line in the command history acceptable.
+5. **Detention pipe under a driveway:** 0.45 cover (his 17 Nov ruling) or 300 everywhere (today's preset list).
+6. **Smaller, when convenient:** PT always opening at 450 x 450 or with the last size used; whether a schedule depth worked from a level below 0.00 is marked on the printed sheet; council minimum runoff documents for two councils.
 
 ## 7. Next step (one only)
 
-The corrected Detention mock-up, checked by a separate checker, then to Tim.
+Tonight's AutoCAD pass of today's fixes; in the morning, Tim's five choices through the question tool.
