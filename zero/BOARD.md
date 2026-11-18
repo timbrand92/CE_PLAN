@@ -1,5 +1,7 @@
 # The board (revision 1)
 
+**READ THIS FIRST (18 Nov 2026, 9:50 pm).** Sections 1 to 11 below are the morning's revision 1 and are STALE. The current lists are: (1) `BOARD_REV2_DRAFT.md`, which folds section 12 items 1 to 79 into clean lists (a draft: its counts and its 26 "Not sure" entries are not yet checked by the planning chat); (2) section 12 items 80 onward in this file, which are newer than the draft; (3) `MORNING_19NOV.md`, Tim's choices in asking order; (4) `DIRECTOR_SUMMARY.md`. Decisions run to D-297; the `rulings\` pages run to D-297.
+
 **Made:** Wed 18 Nov 2026, 1:30 pm Melbourne time. Built by a helper of the planning chat "CE_ACAD / zero plan / 01" from every document and side chat named in section 9. Highest decision at the time of reading: D-227.
 
 **What this page is.** The one page that shows everything open, waiting, draft, parked, promised or unproven, across every chat. The planning chat keeps it current at every timed wake-up and before every progress answer (D-226, R-71). Tim never has to edit it, track it or remember it. How it is kept: `BOARD_HOW_IT_IS_KEPT.md`. The current ruling on any subject, without the history: the folder `C:\CE_PLAN\zero\rulings\` (written separately).
