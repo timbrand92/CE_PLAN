@@ -56,6 +56,12 @@
 10. **The 51 exact copies: "Merge all 51"**, on a copy of the master first, replacing it only on Tim's word.
 11. **Pairs: "One dynamic block each"**, when structural is unparked.
 
+12. **The palette after seeing it (TA-074, TA-075):**
+    - **Removed:** the pit and inlet blocks, the strip drain label, the trench grate, Section Flag and SCREW PILES. The CE tools place these or they are not needed.
+    - **Added:** 18 of the 54 unknown blocks: BK-081, 413, 414, 416, 417, 420, 425, 430, 432, 433, 434, 436, 438, 443, 446, 451, 452, 453.
+    - **Result:** 37 blocks. Picture of the earlier 32: `pictures/blocks_palette_now.png`.
+    - **Next:** proper names for the 18 added blocks, which are all machine-named.
+
 Nothing has been changed in the master drawing.
 
 ## The ten things Tim most needs to decide

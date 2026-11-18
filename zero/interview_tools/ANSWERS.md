@@ -187,4 +187,19 @@ LOADBEARING WALL, LOADBEARING HATCH and BLOCK RETAINING WALL are retired from th
 
 **TA-073 The 51 exact copies.** "Merge all 51", on a copy of the master first, replacing the master only on Tim's word.
 
-Next free number: TA-074
+**TA-074 Ticking the 54 unknown blocks.** "the issue i have is i dont know what we do have so its hard for me to know what to get rid of and what not to". So a picture of what the palette would hold after his decisions (32 blocks) was drawn first: `pictures\blocks_palette_now.png`.
+
+**TA-075 The palette, after seeing what it would hold.** "remove bk-22, 91, 410, 25, 9,13,14,15,16,18,19,24,23,20 as they are not needed and or covered in the plugin. add bk413, 81, 414, 416, 420, 417, 425, 430, 432, 433, 436, 434, 443, 453, 452, 451, 438, 446".
+1. **Removed from the palette** (the CE tools place them, or not needed): BK-020 PIT BLOCK 3, BK-022 Stormwater Pit, the inlet set (BK-009, 013, 014, 015, 016, 018, 019, 024), BK-023 strip drain label, BK-025 trench grate, BK-091 Section Flag, BK-410 SCREW PILES. PIT BLOCK 3 is still the block the PIT tool draws (TA-064).
+2. **Added from the 54 unknown blocks (all machine-named, each needs a proper name):**
+   - **BK-081:** TPZ / SRZ / gas pipe legend.
+   - **BK-413 and BK-414:** retaining wall details.
+   - **BK-416:** RL / RB schedule.
+   - **BK-436:** block wall schedule.
+   - **BK-438:** strip and pad footing schedule.
+   - **BK-434:** large shaded area.
+   - **BK-446:** concrete pier hatch.
+   - **Small symbols:** BK-417, 420, 425, 430, 432, 433, 443, 451, 452, 453.
+3. **Result:** the palette holds 37 blocks: 19 of the earlier 32 plus these 18.
+
+Next free number: TA-076
