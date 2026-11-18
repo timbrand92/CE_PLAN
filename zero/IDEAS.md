@@ -29,4 +29,6 @@
 
 ---
 
-**Next number:** ID-019.
+19. **ID-019 A details library and a job library that are easy to search.** Tim, 18 Nov 2026, 3:38 pm: "AT SOME POINT CREATING A DETAILS LIBRARY AND A JOB LIBRARY TO EASILY SEARCH FOR STUFF WOULD BE GREAT". Planning chat's reading (mine): (a) details: find a standard detail by what it is (for example the orifice pit detail for a given council, D-253) and drop it in from the Blocks palette; (b) jobs: find a past job by its kind, council and what it contained, to copy how it was done; client names and addresses stay out of anything a chat writes. **Links:** D-253, the Blocks palette (BLOCKS_REVIEW), the old-job evidence folders. **Status:** parked, "at some point"; a named slot after the first release unless Tim brings it forward.
+
+**Next number:** ID-020.
