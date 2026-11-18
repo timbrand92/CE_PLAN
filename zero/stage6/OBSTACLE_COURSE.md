@@ -158,7 +158,7 @@
    5. **OC-01.5:** a PC with a comma as its decimal setting reads "5.13" and stores 5.13 (BUG-1164).
 4. **Where tested:** no AutoCAD for OC-01.1 and OC-01.5 (the brain runs one job in two unit settings); fake drawing for OC-01.4; AutoCAD at night for OC-01.2 to OC-01.4. **Already covering part:** CEPIT3, CEPIPE3 and CELEV2 read the units and refuse anything but millimetres in words (passed at midday on 18 Nov). That is honest, but it is a refusal, not a pass of OC-01.1.
 5. **Shared part:** SP-02 Units and scale.
-6. **Ruling:** D-194 (model 1:1, layout 1:100). **Not yet ruled:** what happens in a metre drawing. Question OQ-02.
+6. **Ruling:** D-194 (model 1:1, layout 1:100). **Not yet ruled:** what happens in a metre drawing. Question OQ-02. (RULED 18 Nov 2026, D-217: work in both millimetre and metre drawings.)
 
 ### OC-02 Plain words
 
@@ -199,7 +199,7 @@
    5. **OC-04.5:** an assumed figure prints "APPROX." in front, with the one standing note (D-177).
 4. **Where tested:** no AutoCAD for the figures (the brain keeps unknown as empty, never 0; its hard limit 5); the bench for the window words; AutoCAD at night for the printed TBC and APPROX. **Already covering part:** brain tests (an empty value never reads as 0, entry of 16 Nov).
 5. **Shared parts:** SP-03 A level, SP-07 Status words.
-6. **Ruling:** RULES 12.2; D-176, D-177, D-178. **Not yet ruled:** whether "Cannot check yet" is quiet grey or amber. Question OQ-06.
+6. **Ruling:** RULES 12.2; D-176, D-177, D-178. **Not yet ruled:** whether "Cannot check yet" is quiet grey or amber. Question OQ-06. (RULED 18 Nov 2026, D-219: grey.)
 
 ### OC-05 One value, one place
 
@@ -562,7 +562,7 @@ The obstacle lines could become a list file the night run reads, so a new line a
 
 ### E2. Obstacle by obstacle
 
-1. **OC-01 Units:** Pit FAIL, Pipe FAIL, Long section FAIL (each refuses a metre drawing in words, which the pass rule does not allow; becomes PASS for that line if Tim rules refusal, OQ-02); bench NOT TESTED.
+1. **OC-01 Units:** Pit FAIL, Pipe FAIL, Long section FAIL (each refuses a metre drawing in words, which the pass rule does not allow; becomes PASS for that line if Tim rules refusal, OQ-02; NOTE 18 Nov 2026: Tim ruled the other way, D-217, so refusing stays a FAIL until the tools work in metres); bench NOT TESTED.
 2. **OC-02 Plain words:** UNKNOWN for all four (no words scan exists yet).
 3. **OC-03 Honest closing line:** Pit UNKNOWN, Pipe UNKNOWN, Long section UNKNOWN (parts pass: CELEV5 says what it put back), bench UNKNOWN.
 4. **OC-04 Unknown stays unknown:** FAIL for all four: the windows still say "unknown" and show "Cannot check yet" in amber, and TBC and APPROX. are not printed (BUILD_LOG entry 27 items 5 and 7; rework list item 3). Parts pass: the brain never turns unknown into 0.
@@ -616,11 +616,11 @@ The obstacle lines could become a list file the night run reads, so a new line a
 
 ## G. Questions for Tim
 
-1. **OQ-01 Is this the gate?**
+1. **OQ-01 Is this the gate?** **ANSWERED 18 Nov 2026 by D-216:** Tim: "yes this is the gate" (and asked for a plain explanation of how it works).
    1. **Context:** this course decides when a tool may be called built and tested. Today the builders decide that from their own tests.
    2. **Example:** the Pit tool passed 10 of 13 of its own checks at midday, but on this course it has no full pass yet, because nobody has tried a locked layer, undo or a metre drawing.
    3. **Recommended:** yes. Every tool goes through all 27 obstacles; "does not apply" only from the reviewer; NOT TESTED never counts.
-2. **OQ-02 A drawing set up in metres: work in it, or refuse?**
+2. **OQ-02 A drawing set up in metres: work in it, or refuse?** **ANSWERED 18 Nov 2026 by D-217:** Tim: work in both; the recommendation below is now a ruling (metre drawings must work; refusing is not acceptable).
    1. **Context:** the Pit, Pipe and Long section tools refuse any drawing not in millimetres today, in plain words. 45 old bugs came from metre drawings handled badly.
    2. **Example:** a consultant's background arrives in metres and the drafter types PT. Refusing means re-setting the drawing first; working means the pit is drawn 0.9 wide instead of 900 and labels plot the same.
    3. **Recommended:** work properly in metres, and say once "This drawing is in metres; CE is working in metres." That keeps your "no hard blocks" rule, and OC-01 tests both.
@@ -628,7 +628,7 @@ The obstacle lines could become a list file the night run reads, so a new line a
    1. **Context:** the midday run measured 0.21 seconds on a 2,500-object drawing, twice the draft limit. Most of it is finding which pipes point at the pit.
    2. **Example:** you drag a pit across the plan with MOVE: at 0.21 s you may feel a slight catch as the pipes catch up; at 0.1 s you would not.
    3. **Recommended:** keep 0.1 and have the build chat add the lookup list it has already named as the fix; nothing new starts until it passes.
-4. **OQ-04 A detention job with no site rainfall entered: what happens?**
+4. **OQ-04 A detention job with no site rainfall entered: what happens?** **ANSWERED 18 Nov 2026 by D-218:** Tim chose no storage figure by default ("no figure"), and the drafter may type his own estimate for now (his words: "no figure also could we put our own estimate for now?"). This is a variant of option B, not the recommended A.
    1. **Context:** the Detention window today uses one Kingston job's rainfall for every site, silently (R-008). On the Glen Eira example that is 30 per cent short.
    2. **Example:** the drafter sizes a tank before looking up the Bureau figures. Option A: storage shows amber "rainfall is the office sample", prints APPROX. and goes on the Unfinished list. Option B: no storage figure until rainfall is entered.
    3. **Recommended:** A. It keeps the drafter moving, never hides the guess, and APPROX. on the sheet stops it going out unnoticed.
@@ -636,7 +636,7 @@ The obstacle lines could become a list file the night run reads, so a new line a
    1. **Context:** the old bug (BUG-1095) undersized tanks by about a quarter on Darebin, Maribyrnong and Boroondara jobs. The new plug-in has no council floor yet. This is an engineering figure, so it needs your word.
    2. **Example:** a 600 m² Darebin lot works out at C 0.70; with the floor it is 0.80 and storage goes from 2.84 to 3.75 m³.
    3. **Recommended:** enter the floor for those three councils from the council documents already on file (reference C-003 and the others), each with its source and page, as list lines; you confirm each figure once.
-6. **OQ-06 "Cannot check yet": quiet grey or amber?**
+6. **OQ-06 "Cannot check yet": quiet grey or amber?** **ANSWERED 18 Nov 2026 by D-219:** Tim: "Grey, like 'not known yet'"; amber and red stay for decided figures.
    1. **Context:** you ruled loose pipes quiet (D-176). Checks that cannot run yet still show amber "Needs a look" in the windows.
    2. **Example:** a new pit before the cover level is known: amber on every card looks like a problem; grey says "not yet" without nagging.
    3. **Recommended:** grey, with the words; amber and red only for decided figures that are doubtful or wrong (SITUATIONS rule 13).

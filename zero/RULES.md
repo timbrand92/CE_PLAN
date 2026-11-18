@@ -56,7 +56,7 @@ AutoCAD plugin — how we build (paste at the start of the plugin project's firs
 
 **R-17** Parking lot. Anything I raise mid-task goes into the parking lot (owned by you, with enough context to pick up cold). Say "noted — we'll come back to it" and carry on. Bring items back unprompted when the current task is confirmed.
 
-**R-18** Four separate facts, never merged: Built · Tested · Installed · Tim-accepted. Only my word makes it accepted.
+**R-18** Four separate facts, never merged: Built · Tested · Installed · Tim-accepted. Only my word makes it accepted. (see D-089, 16 Nov 2026: Tim, or a robot pass when he is busy)
 
 ---
 
@@ -72,7 +72,7 @@ AutoCAD plugin — how we build (paste at the start of the plugin project's firs
 
 **R-23** Never report a check you didn't see.
 
-**R-24** Windows need my eyes to be accepted. Tools that can drive the AutoCAD screen may be used, but never claim a test that didn't run.
+**R-24** Windows need my eyes to be accepted. Tools that can drive the AutoCAD screen may be used, but never claim a test that didn't run. (see D-089, 16 Nov 2026: Tim, or a robot pass when he is busy)
 
 ---
 
@@ -94,7 +94,7 @@ AutoCAD plugin — how we build (paste at the start of the plugin project's firs
 
 ## PART 5 — BUGS — NEVER FORGOTTEN, NEVER BACK
 
-**R-31** When I report one, capture: what I did · what I expected · what happened · a test that catches it · exact steps for me to confirm the fix in AutoCAD ("open a 375 pipe and check the window shows 375"). Every bug in the bug register (B-numbers) with a current status. Never marked fixed until I confirm it in AutoCAD. Clear the bug pile before new building. Ideas (I-), tests (T-), rules (R-) all numbered; IDs never reused.
+**R-31** When I report one, capture: what I did · what I expected · what happened · a test that catches it · exact steps for me to confirm the fix in AutoCAD ("open a 375 pipe and check the window shows 375"). Every bug in the bug register (B-numbers) with a current status. Never marked fixed until I confirm it in AutoCAD. (see D-089, 16 Nov 2026: Tim, or a robot pass when he is busy) Clear the bug pile before new building. Ideas (I-), tests (T-), rules (R-) all numbered; IDs never reused.
 
 ---
 
@@ -236,7 +236,7 @@ These apply to the chat "CE_ACAD / zero plan / 01" only. They are not R-numbered
 
 ## Rulings (where these rules and C:\TimOS\RULES.md disagree)
 
-Nothing ruled yet. Open disagreements found on 16 Nov 2026, each waiting for Tim's answer:
+Nothing ruled yet. Open disagreements found on 16 Nov 2026, each waiting for Tim's answer (item 1 has since been ANSWERED by D-089, 16 Nov 2026; item 2 was treated as settled):
 
-1. **Who accepts.** R-18, R-24 and R-31 say only Tim's word accepts, windows need his eyes, and a bug is never marked fixed until he confirms it in AutoCAD. `C:\TimOS\RULES.md` 4.5, 5.7 and the 13.3 amendments (27 Sep, 20 Oct, 24 Oct, 1 Nov 2026) allow "Codex-accepted" and "Claude-accepted" without Tim. Asked 16 Nov 2026. Answer: not yet given.
+1. **Who accepts.** R-18, R-24 and R-31 say only Tim's word accepts, windows need his eyes, and a bug is never marked fixed until he confirms it in AutoCAD. `C:\TimOS\RULES.md` 4.5, 5.7 and the 13.3 amendments (27 Sep, 20 Oct, 24 Oct, 1 Nov 2026) allow "Codex-accepted" and "Claude-accepted" without Tim. Asked 16 Nov 2026. Answer: not yet given. **ANSWERED 16 Nov 2026 by D-089: "Me, or a robot pass if I am busy".**
 2. **Tables.** R-03 lists tables as something Tim thinks in. `C:\TimOS\RULES.md` 2.2 and Tim's 16 Nov prompt ("No tables; numbered lists with bold labels") say no tables. Treated as settled by the 16 Nov prompt, the newest of the three: no tables.

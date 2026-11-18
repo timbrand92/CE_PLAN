@@ -7,7 +7,7 @@
 3. **One office list** holds the short names, the same kind of list the office keeps today (`evidence\TIM_ALIAS_LIST_16NOV.md`), so the office can change one.
 4. **Only placing a thing or opening a sheet job has a typed name.** Changing a thing is done by clicking it (tab, grips, Properties).
 5. **Old names are gone** from day one.
-6. **IO stays; C and RC are renamed.**
+6. **IO stays; C and RC are renamed.** SETTLED 18 Nov 2026 by D-203: C is retired (use Copy); the revision cloud is REVBOX / RV.
 7. Every ribbon button shows its short name in its tip (R-001 Borrow).
 
 ## How a new name is checked
@@ -21,7 +21,7 @@
 Things you place:
 
 1. **Pit:** PIT, short PT.
-2. **Pipe:** PIPE, short PI. (One name; the kind of pipe is its first choice. Not yet ruled.)
+2. **Pipe:** PIPE, short CD (was shown here as PI, corrected 18 Nov 2026: PIPE is CD, D-101 and D-057). (One name; the kind of pipe is its first choice.)
 3. **Downpipe:** DOWNPIPE, short DP.
 4. **Overflow:** OVERFLOW, short OF.
 5. **FO:** short FO. Full word: Unknown (what the office calls it in full has not been asked).
@@ -36,12 +36,12 @@ Things you place:
 Sheet jobs:
 
 13. **Job:** JOB (already three letters; J is Join).
-14. **Levels:** LEVELS, short LV.
+14. **Long section:** LONGSECTION, short LG (was Levels, LEVELS / LV; changed 18 Nov 2026, D-196).
 15. **Pit schedule:** SCHEDULE, short SH.
 16. **Check:** CHECK, short CK. (CH is Chamfer; CHK is AutoCAD's.)
 17. **Issue:** ISSUE, short IS.
 
-Everyday helpers (CE tools): not yet listed. C and RC need new names (D-054). Q, MR, CR, QD, LD, AD and the rest to be gone through with Tim when CE tools are designed.
+Everyday helpers (CE tools): not yet listed. C and RC need new names (D-054; SETTLED 18 Nov 2026 by D-203: C retired, revision cloud REVBOX / RV). Q, MR, CR, QD, LD, AD and the rest to be gone through with Tim when CE tools are designed.
 
 ## Still open
 

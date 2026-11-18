@@ -27,12 +27,12 @@ Every kind of knowledge has ONE home, and every item in it has a number that is 
 
 1. **R-** rules. **D-** decisions. **P-** parked items. **Q-** open questions.
 2. **K-** job kinds. **S-** sums. **L-** rules and limits. **E-** drawing elements. **C-** councils. **T-** tools of today.
-3. Later, when building starts (R-31): **B-** bugs, **I-** ideas, **TS-** tests.
+3. Registers for the NEW plug-in, created 18 Nov 2026 (R-31, D-205): **NB-** bugs in the new plug-in only (`NEW_BUGS.md`, was promised as B-), **ID-** ideas (`IDEAS.md`, was promised as I-), and tests (`TESTS.md`, a pointer to the obstacle course `stage6\OBSTACLE_COURSE.md`; was promised as TS-). The old plug-in's bugs stay BUG- in `C:\CE_PLAN\BUG_CARPARK.md`.
 4. A number is never reused. A changed item keeps its number; the old words stay, marked superseded with the date.
 
 ## The stages (from Tim's prompt of 16 Nov 2026) and where each stands
 
-1. **Stage 1, how we design and draw:** civil studied in depth (13 jobs, 3 drawings taken apart, workbooks, guidebook, templates); explained to Tim in `pictures\how_we_design_and_draw_civil.html`. Tim has not yet said "approved". Structural: two sets read, then parked (P-05).
+1. **Stage 1, how we design and draw:** civil studied in depth (13 jobs, 3 drawings taken apart, workbooks, guidebook, templates); explained to Tim in `pictures\how_we_design_and_draw_civil.html`. Tim has not yet said "approved". **CLOSED 16 Nov 2026 by D-117:** "Approved as good enough to build on". Structural: two sets read, then parked (P-05).
 2. **Stage 2, what the plugin should do:** started on Tim's word of 16 Nov ("i want to see what your interpretation of the new plugin would be like"): see `design\CONCEPT.md`. Not approved.
 3. **Stage 3, parts bin:** not started. One early look at what is installed and at the old evidence notes, on Tim's word.
 4. **Stage 4, research:** not started.

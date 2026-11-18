@@ -37,11 +37,11 @@
 
 ## 5. Colour
 
-1. **One accent blue** (CE deep blue #1E5AA8 on light, a lighter shade on dark): only the OK button, the selected choice, ticked boxes, and the thing being changed in the preview. Never for data.
+1. **One accent blue** (CE deep blue #1E5AA8 on light, a lighter shade on dark): only the OK button, the selected choice, ticked boxes, and the thing being changed in the preview. Never for data. (SUPERSEDED 18 Nov 2026 by D-166 and D-168: one scheme on AutoCAD grey, rose accent; see the end of this file)
 2. **Status colours, always with a word:** green "Suits", amber "Needs a look" or "Check", red "Wrong". Nothing else is coloured.
 3. **Warnings never block OK.** They sit straight under the card's answer, in one short line that says what is wrong.
 4. **In "What else changes":** "Moves" and "Changes" are grey; "Check" is amber; "Wrong" is red.
-5. **Theme:** the window follows AutoCAD. Dark all through or light all through; never a black panel beside white.
+5. **Theme:** the window follows AutoCAD. Dark all through or light all through; never a black panel beside white. (SUPERSEDED 18 Nov 2026 by D-166 and D-168: one scheme on AutoCAD grey, rose accent; see the end of this file)
 
 ## 6. Finish
 
@@ -58,7 +58,7 @@
 
 ## 8. Before any window is shown to Tim
 
-1. A full-size, working mock-up with realistic made-up content, at both screen sizes and both themes (D-065).
+1. A full-size, working mock-up with realistic made-up content, at both screen sizes and both themes (D-065). (Both themes SUPERSEDED 18 Nov 2026 by D-166: one scheme only.)
 2. Looked at by the lead chat, and checked by a separate UI critic against the seven questions in `UI_UX_RULES.md`.
 3. Tim is the only one who says it is accepted.
 
@@ -72,9 +72,9 @@
 
 1. **One colour scheme only** (D-166). No light and dark versions; this replaces "dark or light all through". The window background is a grey like AutoCAD's own. The brand shows in the type (wide squared capitals) and the CE mark.
 2. **Colour draws the eye, by normal UI convention** (D-164): the next action (OK), the box in use, the thing being changed, what just changed, the one answer per card, selected choice, held against worked out. Status keeps its own three colours with the word and they are used for nothing else.
-3. **The button and highlight colour is unlike any colour in the drawing on screen** (D-166): chosen from a gap away from every office layer colour and the status colours. Which colour: not yet picked.
+3. **The button and highlight colour is unlike any colour in the drawing on screen** (D-166): chosen from a gap away from every office layer colour and the status colours. Which colour: picked, rose #FF70B3 (D-168); see the section "The colour scheme, picked 18 Nov 2026" below.
 4. **The preview, in every window** (D-162, D-167): (a) the drawing as AutoCAD shows it, real layers, colours, linetypes, text and arrow, changing as you type; (b) "where on the plan": a small site locator in a corner; (c) "where in the system": a strip under the preview showing the run as a chain with this object lit; (d) the thing being changed highlighted the same way in all three. Nothing made up is shown as if it were the drawing: on the bench, stand-in scenery is labelled as stand-in.
-5. **The Levels tool is to be renamed** (D-162): long section or pipe section; word and short name not yet picked.
+5. **The Levels tool is to be renamed** (D-162): long section or pipe section; the word and short name are picked: LONGSECTION / LG (D-196).
 
 ## The colour scheme, picked 18 Nov 2026 (D-168: "B, ROSE", from `pictures\pick_a_ce_scheme_2.html`)
 

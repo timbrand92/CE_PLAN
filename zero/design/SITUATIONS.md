@@ -969,10 +969,10 @@ Each situation gives: **Story** (the real-world case); **Today's design** (what 
 2. Not known prints "TBC" (D-178). Cover levels are the engineer's, from house and pavement levels, never the survey (D-178); help with them is only ever a suggestion, the engineer has the final say (D-195).
 3. Mirror or copied units: sizes and grades copy; levels copy marked assumed; next free numbers (D-179).
 4. The drawing keeps the standard values it was designed with; a line on opening offers to switch (D-180).
-5. Tags and level texts go with a moved pit; a hand-moved label keeps its offset from the pit in both directions (D-181).
-6. A typed-over pipe label is kept, flagged, one click to follow again (D-182).
-7. Two systems: one number series, street system first (D-183).
-8. A pit added after issue: the drafter chooses among next free number, a letter, or renumber all (D-184).
+5. Tags and level texts go with a moved pit; a hand-moved label keeps its offset from the pit in both directions (D-181). (This file's question 7; asked as 5 of 18.)
+6. A typed-over pipe label is kept, flagged, one click to follow again (D-182). (This file's question 8; asked as 6 of 18.)
+7. Two systems: one number series, street system first (D-183). (This file's question 5; asked as 7 of 18.)
+8. A pit added after issue: the drafter chooses among next free number, a letter, or renumber all (D-184). (This file's question 6; asked as 8 of 18.)
 9. Retyping a pit tag renames the pit (D-185).
 10. Placing many: keep clicking, Enter to finish (D-186).
 11. "Changed since last issue": yes, but later (D-187).

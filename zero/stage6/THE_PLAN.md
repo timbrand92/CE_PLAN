@@ -1,6 +1,6 @@
 # Stage 6: the plan (draft 1, for Tim to approve)
 
-**Written:** Mon 16 Nov 2026 night, by the planning chat "CE_ACAD / zero plan / 01". **Status: draft. Not approved.** It is built only from what Tim has decided (`DECISIONS.md` D-001 to D-114) and the documents named below. Where something is not proven it says so.
+**Written:** Mon 16 Nov 2026 night, by the planning chat "CE_ACAD / zero plan / 01". **Status: draft. Not approved.** (Approved 16 Nov 2026, D-115; changed since: see section 3 note, sections 9 and 10, and DECISIONS D-162 onward.) It is built only from what Tim has decided (`DECISIONS.md` D-001 to D-114) and the documents named below. Where something is not proven it says so.
 
 ## 1. What is being built, in one paragraph
 
@@ -27,16 +27,16 @@ A new CE civil drainage plugin for AutoCAD 2027, built from a blank page, with t
 5. **Tank** (TANK / WT), its note and leader.
 6. **Detention** (DETENTION / DET): Boyd's and OSD4W / Swinburne; two answers; fills the criteria box.
 7. **Pit schedule** (SCHEDULE / SH): placed once, then follows the pits.
-Underneath all of them: the foundation, the office list of standards, a self-check when a drawing opens, the ribbon (short CE Civil tab plus a light tab on selection), and one-click update.
-**Not in the first release:** title block and issue; silt and soakage pits; typed-in council figures and council calculators; job tracking hand-over to the Job Manager; CE everyday helpers; Manager changes; taking up old drawings; anything structural.
+Underneath all of them: the foundation, the office list of standards, a self-check when a drawing opens, the ribbon (three tabs, CE Civil, CE Tools, CE Structural (hidden until it has tools), plus a light tab on selection (D-200, D-208); was a short CE Civil tab, changed 18 Nov 2026), and one-click update.
+**SUPERSEDED IN PART by the note below (18 Nov 2026):** **Not in the first release:** title block and issue; silt and soakage pits; typed-in council figures and council calculators; job tracking hand-over to the Job Manager; CE everyday helpers; Manager changes; taking up old drawings; anything structural.
 **Changed 18 Nov 2026 (D-200, D-201, D-204):** the shared everyday tools (CLEAN first, then dims and leaders with an arc dimension, MR and CR, CPB, DIV, one hatch window, REVBOX, break line, construction joint and sawcut, a blocks palette) and a small Manager (updates and version, health and fault report, office lists, job link, one admin page) ARE now in the first release; the ribbon is three tabs with a light tab on selection. An Outlet tool is added (D-190). Still not in the first release: structural-only tools, title block and issue, silt and soakage pits, council calculators, taking up old drawings, the "changed since last issue" list (D-187), statistics and wider admin control (D-205).
 
 ## 4. The order of work
 
-1. **Stage A, the trials.** ON HOLD (PARKING_LOT P-08). Nothing starts AutoCAD until Tim agrees how. Trial 11 (sums in any direction, no AutoCAD) may run at any time. The brief must be rewritten first to forbid making profiles, force-closing AutoCAD, and running where a licence window can appear.
+1. **Stage A, the trials.** ON HOLD (PARKING_LOT P-08). Nothing starts AutoCAD until Tim agrees how. (CHANGED: trials restarted D-116; AutoCAD on test copies every night in Tim's hours D-159; one exception to rule 1.9 for a test AutoCAD the robot started, D-160; today-only daytime approvals D-207, D-212) Trial 11 (sums in any direction, no AutoCAD) may run at any time. The brief must be rewritten first to forbid making profiles, force-closing AutoCAD, and running where a licence window can appear.
 2. **Stage B, the foundation.** Facts with value, source and hold; sums that work in any direction; joins; the office list; the hidden note on ordinary objects; the self-check on open; the no-plugin proof. No tool on the ribbon yet.
 3. **Stage C, the window frame and shared parts** from the UI plan, proven with the Pit window.
-4. **Stage D, one tool at a time,** each through mock-up, build, test by something that did not build it, install once, accept: Pit, Pipe, Levels along a run, Inlets, Tank, Detention, Pit schedule.
+4. **Stage D, one tool at a time,** each through mock-up, build, test by something that did not build it, install once, accept: Pit, Pipe, Levels along a run (now LONGSECTION / LG, D-196), Inlets, Tank, Detention, Pit schedule.
 5. **Stage E, one real job** (a house or two-unit job) carried from blank drawing to issue by Tim. Then colleagues.
 No dates are given until the trials are done.
 
@@ -66,13 +66,13 @@ If a trial fails, the build approach changes before any tool is built.
 ## 7. Open items carried into the build (none blocks the start)
 
 1. How long a run is before an inspection opening is offered (AS 3500.3 figure not found online).
-2. Detention layer name and its blue.
+2. Detention layer name and its blue. (SETTLED 17 Nov 2026 by D-153 and D-156: colour 160, layer STORMWATER DETENTION PIPE; pen width and wording still open.)
 3. OSD4W inputs (not in the reference).
 4. Tank sizes, diameters and heights for the office list; how FO and OF are drawn.
 5. A pipe now stops at the pit's inner wall line (D-102): new sheets differ from old at pit edges.
 6. How the plugin hands job facts to the Job Manager program.
 7. Old drawings made with the special pipe object.
-8. Stage 1 (how the office designs and draws) never had a formal "approve".
+8. Stage 1 (how the office designs and draws) never had a formal "approve". **CLOSED 16 Nov 2026 by D-117:** "Approved as good enough to build on".
 
 ## 8. How building starts
 

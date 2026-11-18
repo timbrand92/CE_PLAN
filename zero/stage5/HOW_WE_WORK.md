@@ -37,4 +37,11 @@ No status line may merge these. A tool is described by all four, each yes or no.
 
 1. Which chat builds, and how the build chat is named and briefed (Stage 6).
 2. The usage budget per tool.
-3. What the robot pass must contain to count as accepted (which everyday actions, on which test drawings).
+3. What the robot pass must contain to count as accepted (which everyday actions, on which test drawings). (Who accepts is SETTLED 16 Nov 2026 by D-089: "Me, or a robot pass if I am busy". Only the contents of the robot pass are still open here; left for the planning chat to say whether the obstacle course, D-216, settles that.)
+
+## Hours: three statements that differ (added 18 Nov 2026, resolves nothing; ON THE BOARD for Tim)
+
+1. **Zero plan (D-092, D-093):** AutoCAD free for test copies 5:30 pm to 8:30 am weekdays and all weekend; restated as a standing nightly yes in D-159.
+2. **`C:\TimOS\RULES.md` 1.8:** AutoCAD free also 2:00 to 3:00 pm weekdays (in use 8:30 am to 2:00 pm and 3:00 pm to 5:30 pm), Melbourne time.
+3. **`AGENTS.md` in the plug-in repository:** Tim's workday is 8:40 am to 5:30 pm Australia/Sydney time.
+This is on the board (section 10 item 13) for Tim to rule; no rule above has been changed. One-off daytime windows were given today by D-207 and D-212.

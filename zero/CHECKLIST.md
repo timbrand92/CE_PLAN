@@ -11,9 +11,9 @@
 5. Job tracking: lives in the office Job Manager, fed by the plugin (D-071 to D-074).
 6. Parts bin verdicts (D-094 to D-096; `stage3\PARTS_BIN_REPORT.md`).
 7. How we work (D-089 to D-093; `stage5\HOW_WE_WORK.md`).
-8. First-release list: Pit, Pipe, Levels along a run, inlets, tank and detention, pit schedule (D-097 to D-100).
+8. First-release list: Pit, Pipe, Long section (LONGSECTION / LG; was Levels along a run, renamed D-196), inlets, tank (TANK / WT, D-170) and detention, pit schedule (D-097 to D-100).
 9. Trials started in their own chat (`stage4\TRIALS_BRIEF.md`).
-10. Short names for the first-release tools (D-101).
+10. Short names for the first-release tools (D-101; since changed: TANK is TANK / WT, D-170; the Levels tool is LONGSECTION / LG, D-196; PIPE is CD, D-101).
 11. The four leftover pit choices (D-102 to D-105).
 12. Inlets window: right track, same as the others (D-111; `pictures\inlet_window_full_size.html`).
 15. Pit schedule window ticked (D-112; `pictures\schedule_window_full_size.html`); open: what a 16-row schedule does, and the real title and notes wording.
@@ -24,7 +24,7 @@
 
 ## Left, in this order (0): all 18 steps done 18 Nov 2026
 
-16. DONE 18 Nov 2026: Tim used all seven bench windows and gave his verdict (D-162 to D-169): all seven good, with changes recorded (one colour scheme on AutoCAD grey with a rose accent; the new preview; Levels to be renamed; Tank short name; the Schedule Columns card and on-sheet scale out; cut typing by using the whole system).
+16. DONE 18 Nov 2026: Tim used all seven bench windows and gave his verdict (D-162 to D-169): all seven good, with changes recorded (one colour scheme on AutoCAD grey with a rose accent; the new preview; Levels to be renamed (done: LONGSECTION / LG, D-196); Tank short name (WT, D-170); the Schedule Columns card and on-sheet scale out; cut typing by using the whole system).
 
 ## Started beyond the checklist
 
@@ -40,4 +40,4 @@
 3. How the plugin joins the Job Manager program.
 4. Old drawings made with the special pipe object.
 5. Title block and issue (after the first release).
-6. Stage 1 never had a formal "approve".
+6. Stage 1 never had a formal "approve". **CLOSED 16 Nov 2026 by D-117:** "Approved as good enough to build on".

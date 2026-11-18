@@ -6,6 +6,8 @@
 
 ## Limits (Tim's rules; no exceptions)
 
+(CHANGED: trials restarted D-116; AutoCAD on test copies every night in Tim's hours D-159; one exception to rule 1.9 for a test AutoCAD the robot started, D-160; today-only daytime approvals D-207, D-212. The limits below are the 16 Nov wording from before D-159 and D-160; where they differ, those decisions and `C:\TimOS\RULES.md` 1.9 win.)
+
 1. **Where the code lives:** a new folder `C:\CE_WORK\trials\zero\` only. Not in the plugin repository, not in `C:\CE_PLAN`. No branches, no pull requests, nothing committed anywhere except the results file named below.
 2. **Nothing installed.** The trial plugin is loaded by hand into a trial AutoCAD (NETLOAD or a script) and never copied into any ApplicationPlugins folder, except trial 9, which uses a per-user bundle named `CE_TRIAL_ZERO.bundle` and removes it afterwards. The installed CE plugins are never touched, replaced or rebuilt. Never build the existing plugin solution.
 3. **AutoCAD hours (D-092, D-093):** 5:30 pm to 8:30 am on weekdays and all weekend. Inside those hours a trial may start its own AutoCAD whatever the switch file says, provided none of Tim's AutoCAD windows is open. If one is open: leave it alone, never close it, wait, and say so. Outside those hours do pure-code work only (trial 11) or stop.

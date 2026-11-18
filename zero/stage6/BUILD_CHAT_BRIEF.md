@@ -17,7 +17,7 @@ Read before doing anything: `C:\TimOS\RULES.md`; then in `C:\CE_PLAN\zero\`: `ST
 Hard limits:
 1. The plan in `stage6\THE_PLAN.md` is the plan. If it disagrees with a decision in `DECISIONS.md`, the decision wins; say so.
 2. The old plugin is a parts bin only (plan section 5). Never build, change or reinstall it. The new plugin lives in its own new repository or folder, agreed with Tim before the first file is written.
-3. AutoCAD: P-08 applies. Nothing starts the full AutoCAD or the headless engine until Tim has agreed, in words, how. Never make or change an AutoCAD profile, never force-close AutoCAD, never touch licensing or sign-in. Test copies only.
+3. AutoCAD: P-08 applies. (CHANGED: trials restarted D-116; AutoCAD on test copies every night in Tim's hours D-159; one exception to rule 1.9 for a test AutoCAD the robot started, D-160; today-only daytime approvals D-207, D-212) Nothing starts the full AutoCAD or the headless engine until Tim has agreed, in words, how. Never make or change an AutoCAD profile, never force-close AutoCAD, never touch licensing or sign-in. Test copies only.
 4. "Done" is four separate facts: built, tested by something that did not build it, installed once, accepted (Tim, or a full robot pass when he is busy, marked "robot-accepted"). Never merge them in a status line.
 5. One tool at a time. Nothing new while a tool on the ribbon is broken.
 6. The scalability test on every change: a new variable, thing or council rule is a new line in a list. If it needs a new piece of screen or a special case, stop and fix the foundation.

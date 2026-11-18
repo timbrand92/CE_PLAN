@@ -1,6 +1,8 @@
 # New names for C and RC: a proposal (not decided)
 
-**Written:** Tue 17 Nov 2026 by the planning chat. **Status: proposal only. Tim has not ruled.** Owed since D-054 ("Keep IO, rename C and RC"). Neither helper is in the first release (CE everyday helpers are out, D-097 to D-100), so nothing waits on this.
+**SETTLED 18 Nov 2026 by D-203** (interview answers TA-005, TA-008): C is retired, use Copy ("Retire it, use Copy"); the revision cloud is REVBOX / RV. The text below is kept as written and is history.
+
+**Written:** Tue 17 Nov 2026 by the planning chat. **Status: proposal only. Tim has not ruled.** (Out of date: ruled, see the line above.) Owed since D-054 ("Keep IO, rename C and RC"). Neither helper is in the first release (CE everyday helpers are out, D-097 to D-100), so nothing waits on this.
 
 ## 1. C (copy, repeating)
 
