@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<title>Detention window, fixed (mock-up)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --page:#161718;
+  --win:#4E5158; --card:#62656E; --well:#40434A; --line:#7C8089;
+  --t-answer:#FFFFFF; --t-body:#F0F1F3; --t-note:#E2E4E8;
+  --sv0:#B9BCC3; --sv1:#E6E8EB; --sv2:#F0F1F3; --sv3:#E2E4E8;
+  --green:#7BE0AE; --amber:#F5C660; --red:#FF8A93;
+  --ink:#10131A;
+  --fill:#A9ADB5;
+  --c1:#5AA2F0; --c2:#3CC4B2; --c3:#A08AF0;
+  --acc:#F4F1E9; --acc-ink:#171817;
+  --r:8px;
+  --sans:'IBM Plex Sans','Segoe UI',system-ui,sans-serif;
+  --mono:'IBM Plex Mono',Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--page);color:var(--t-body);font-family:var(--sans);font-size:14px;line-height:24px;padding:32px;min-width:1600px}
+.pagetitle{font-size:14px;margin-bottom:16px}
+.switches{display:flex;gap:32px;margin-top:24px;align-items:center;flex-wrap:wrap;color:#B8BBC1}
+.switch{display:flex;gap:8px;align-items:center;font-size:12px}
+.switch button{font:inherit;font-size:12px;height:32px;padding:0 16px;border-radius:var(--r);background:transparent;color:#D5D8DC;border:1px solid #55585E;cursor:pointer}
+.switch button.on{border-color:#fff;color:#fff}
+
+.win{width:1536px;height:864px;background:var(--win);border:1px solid var(--line);border-radius:var(--r);box-shadow:0 24px 48px rgba(0,0,0,.45);display:flex;flex-direction:column;overflow:hidden}
+.titlebar{height:40px;flex:none;display:flex;align-items:center;justify-content:space-between;padding:0 16px;border-bottom:1px solid var(--line);color:var(--t-answer)}
+.titlebar .x{color:var(--t-note);font-size:16px}
+.body{flex:1;min-height:0;padding:16px;display:flex;flex-direction:column;gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.note{font-size:12px;line-height:16px;color:var(--t-note)}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.fig{font-family:var(--mono);font-variant-numeric:tabular-nums;font-weight:400}
+.strong{font-weight:600}
+
+/* plan strip */
+.plan{height:84px;flex:none;padding:8px 16px}
+.plan svg{display:block;margin-top:0}
+.sd{stroke:var(--sv0);fill:none;stroke-width:1}
+.sm{stroke:var(--sv1);fill:none;stroke-width:1}
+.sh{stroke:var(--sv1);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.sk{stroke:var(--sv3);fill:none;stroke-width:1;stroke-dasharray:4 4}
+.tb{fill:var(--sv2);stroke:none;font-family:var(--sans);font-size:12px}
+.tn{fill:var(--sv3);stroke:none;font-family:var(--sans);font-size:12px}
+.tm{fill:var(--sv2);stroke:none;font-family:var(--mono);font-size:12px}
+
+/* status band */
+.band{flex:none;height:56px;border-radius:var(--r);display:flex;align-items:center;justify-content:space-between;padding:0 16px;color:var(--ink);box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.band.green{background:var(--green)} .band.red{background:var(--red)} .band.amber{background:var(--amber)}
+.band .left{display:flex;align-items:center;gap:16px;white-space:nowrap}
+.band .main{font-size:24px;line-height:32px}
+.band .sub{font-size:14px}
+.band .right{display:flex;align-items:center;gap:8px;white-space:nowrap;font-size:14px}
+
+.pill{display:inline-flex;align-items:center;height:24px;padding:0 8px;border-radius:var(--r);font-size:12px;line-height:24px;white-space:nowrap;color:var(--ink);border:1px solid rgba(16,19,26,.55)}
+.pill.green{background:var(--green)} .pill.amber{background:var(--amber)} .pill.red{background:var(--red)}
+.pill.changed{background:transparent;color:var(--t-body);border-color:var(--t-body)}
+
+/* cards */
+.cards{flex:1;min-height:0;display:grid;grid-template-columns:332px 348px 356px 1fr;gap:16px}
+.cards .card{padding:16px;display:flex;flex-direction:column;min-height:0}
+.chead{height:24px;flex:none;display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.cans{height:32px;flex:none;display:flex;align-items:baseline;gap:8px;margin-bottom:8px;white-space:nowrap}
+.cans .big{font-size:24px;line-height:32px;color:var(--t-answer)}
+.cans .big.nk{font-weight:400;font-family:var(--sans)}
+.pic{height:72px;flex:none;margin-bottom:8px;display:flex;flex-direction:column;justify-content:center}
+.work{flex:none}
+.foot{margin-top:auto}
+
+.sum{display:grid;grid-template-columns:16px 1fr auto;column-gap:8px;align-items:center}
+.sum > div{height:32px;line-height:32px}
+.sum .s{text-align:center;font-family:var(--mono)}
+.sum .l{white-space:nowrap;display:flex;align-items:center;gap:8px}
+.sum .l small{font-size:12px;color:var(--t-note)}
+.sum .v{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums;min-width:56px}
+.sum .v.nk{font-family:var(--sans)}
+.sum .line{border-top:1px solid var(--t-body)}
+.sum .dbl{border-bottom:3px double var(--t-body);height:36px}
+.sum .sub{height:16px;line-height:16px;font-size:12px;color:var(--t-note);grid-column:2 / 4}
+.sum .off{opacity:.65}
+.cb{width:16px;height:16px;border:1.5px solid var(--t-body);border-radius:4px;display:inline-flex;align-items:center;justify-content:center;flex:none}
+.cb.on{background:#EEF0F2;border-color:#EEF0F2}
+.cb svg{display:block}
+
+.sum5{display:grid;grid-template-columns:16px 1fr 52px 52px 52px;column-gap:8px;align-items:center}
+.sum5 > div{height:32px;line-height:32px;text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums}
+.sum5 .s{text-align:center}
+.sum5 .l{text-align:left;font-family:var(--sans);display:flex;align-items:center;gap:8px;white-space:nowrap}
+.sum5 .l small{font-size:12px;color:var(--t-note)}
+.sum5 .x{white-space:nowrap}
+.sum5 .line{border-top:1px solid var(--t-body)}
+.sum5 .dbl{border-bottom:3px double var(--t-body);height:36px}
+
+.abar{display:flex;height:32px}
+.abar div{display:flex;align-items:center;padding:0 8px;color:var(--ink);font-size:12px;white-space:nowrap;overflow:hidden;gap:8px}
+.abar div:first-child{border-radius:8px 0 0 8px}
+.abar div:last-child{border-radius:0 8px 8px 0}
+
+.sbar{display:flex;height:32px;border-radius:var(--r);background:var(--well);border:1px solid var(--line);overflow:hidden;position:relative}
+.sbar .fill{background:var(--fill);color:var(--ink);display:flex;align-items:center;justify-content:space-between;padding:0 16px 0 8px;font-size:12px;white-space:nowrap;flex:none}
+.sbar .cap{display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--ink);white-space:nowrap;flex:1}
+.sbar .cap.red{background:repeating-linear-gradient(135deg,#FF8A93 0 6px,#F0707A 6px 12px)}
+.sbar .cap.amber{background:repeating-linear-gradient(135deg,#F5C660 0 6px,#E5B24C 6px 12px);flex:none;width:136px}
+.sbar .mk{position:absolute;top:0;bottom:0;width:2px;background:var(--ink)}
+
+.fixed{display:grid;grid-template-columns:1fr 72px 64px 16px;column-gap:8px;align-items:center}
+.fixed > div,.fixed > svg{height:32px}
+.fixed .l{line-height:32px;white-space:nowrap;display:flex;align-items:center;gap:8px}
+.fixed .f{height:24px;margin:4px 0;background:var(--well);border:1px solid var(--line);border-radius:var(--r);text-align:right;padding:0 8px;font-family:var(--mono);font-variant-numeric:tabular-nums;line-height:22px}
+.fixed .src{white-space:nowrap;font-size:12px;line-height:32px;color:var(--t-note)}
+.fixed svg{display:block;color:var(--t-body);margin:8px 0;height:16px}
+.tally{display:flex;gap:8px;align-items:center}
+.mark{width:16px;height:16px;border-radius:50%;background:var(--t-body);border:1.5px solid var(--t-body)}
+.mark.o{background:transparent}
+
+.rain{flex:none;height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;gap:32px}
+.rain .lab{display:flex;flex-direction:column;width:200px}
+.wells{display:flex;gap:8px}
+.well{display:flex;flex-direction:column;width:80px}
+.well .f{height:32px;background:var(--well);border:1px solid var(--line);border-radius:var(--r);text-align:right;padding:0 8px;font-family:var(--mono);font-variant-numeric:tabular-nums;line-height:30px;white-space:nowrap}
+.well .f.unk{font-family:var(--sans);text-align:center;padding:0;border-color:var(--amber);box-shadow:0 0 0 1px var(--amber)}
+.method{display:flex;align-items:center;gap:8px}
+.mbtn{height:40px;padding:0 16px;border-radius:var(--r);border:1px solid var(--line);background:var(--well);color:var(--t-body);font:inherit;cursor:pointer;white-space:nowrap}
+.mbtn.sel{background:var(--acc);border-color:var(--acc);color:var(--acc-ink)}
+
+.bottom{height:64px;flex:none;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;padding:0 16px}
+.bottom .right{display:flex;gap:8px}
+.btn{height:40px;padding:0 24px;border-radius:var(--r);border:1px solid var(--line);background:transparent;color:var(--t-body);font:inherit}
+.btn.quiet{color:var(--t-note)}
+.btn.ok{background:var(--acc);border-color:var(--acc);color:var(--acc-ink)}
+
+.below{width:1536px;margin-top:32px;color:#D5D8DC}
+.below h2{font-size:14px;font-weight:600;color:#fff;margin-bottom:8px}
+.below ol{padding-left:32px}
+.below li{margin-bottom:8px}
+.below li b{font-weight:600;color:#fff}
+.below p{margin-top:16px;color:#B8BBC1}
+</style>
+</head>
+<body>
+
+<div class="pagetitle">Detention window, fixed to your screen rules (mock-up, made-up job)</div>
+
+<div class="win">
+  <div class="titlebar"><span>Detention · this job</span><span class="x">&#x2715;</span></div>
+  <div class="body">
+    <div class="card plan" id="plan"></div>
+    <div id="band"></div>
+    <div class="cards">
+      <div class="card" id="cStorage"></div>
+      <div class="card" id="cDischarge"></div>
+      <div class="card" id="cAreas"></div>
+      <div class="card" id="cFixed"></div>
+    </div>
+    <div class="card rain">
+      <div class="lab"><span>Site rainfall 1 in 10</span><span class="note" id="rainsrc"></span></div>
+      <div class="wells" id="wells"></div>
+      <div class="method">
+        <span class="note">Method</span>
+        <button class="mbtn sel" id="m1">Office method (Boyd's)</button>
+        <button class="mbtn" id="m2">Council tool (OSD4W)</button>
+      </div>
+    </div>
+  </div>
+  <div class="bottom">
+    <button class="btn quiet">Inspect</button>
+    <div class="right"><button class="btn">Cancel</button><button class="btn ok">OK</button></div>
+  </div>
+</div>
+
+<div class="switches">
+  <div class="switch">Accent:
+    <button id="a1">Rose</button><button id="a2" class="on">CE paper</button></div>
+  <div class="switch">Ground:
+    <button id="g1" class="on">Lighter</button><button id="g2">Mid</button><button id="g3">Dark</button></div>
+  <div class="switch">State:
+    <button id="s1" class="on">Suits</button><button id="s2">Short by 0.44 m³</button><button id="s3">Rainfall not known</button></div>
+</div>
+
+<div class="below">
+  <h2>What changed and which rule</h2>
+  <ol>
+    <li><b>One status band across the top is the biggest thing on the window.</b> Solid green "Suits", red "Short" or amber "Needs a look", with the answer in it; discharge sits at its right (rules 7, 12, 14).</li>
+    <li><b>Three text sizes only:</b> 24 for answers, 14 for body, 12 for notes. Bold is used only on the band's figures, each card's answer and its final figure (rule 10).</li>
+    <li><b>Each card reads label, answer, picture, working, grey note</b> in the same order, and the answer is the same figure as the double-lined result (rules 8, 11).</li>
+    <li><b>Storage is no longer circular.</b> Tank 1.00 + pipes + P1 + P2 gives what is provided; take off what is needed; what is left is the spare. P3 is ticked off and not added (rules 9, 23).</li>
+    <li><b>The short state comes from a change you can see:</b> detention cut from 1,000 L to 500 L, marked "Changed" in grey, and the sum follows (rules 23, 26).</li>
+    <li><b>The orifice is now worked out and rounded down, not chosen from a list.</b> Flow has its own row with its formula, with the double line under 5.84 (rule 9).</li>
+    <li><b>The coefficient shows 0.698 in full</b> and a note that it is shown as 0.70 elsewhere; each area has its own source word (rules 9, 20).</li>
+    <li><b>The plan strip now carries the job:</b> areas to scale, tank, pipes, P1 to P3 and the orifice pit with their figures, in quiet lines (rules 11, 25).</li>
+    <li><b>One neutral grey scheme, lighter as asked.</b> Status colour is always a solid fill with its word and dark text; the only other colours are the Areas bar's fixed chart order (rules 5, 13, 14, 17).</li>
+    <li><b>Accent only on OK and the selected method</b>, in off-white by default so it never reads as a warning; Rose is the alternative to compare (rules 15, 16).</li>
+    <li><b>Missing values read "Not known"</b> everywhere, rainfall boxes get an amber outline, and OK still works (rule 24).</li>
+    <li><b>Plain words first, formal word in brackets.</b> Gaps are 8, 16, 24 or 32 px, one 8 px corner, rows 32 px apart (rules 27, 29).</li>
+  </ol>
+  <p>Not shown here, to be written and tested: click budget, undo, motion (rules 18, 21, 28). Budgets, undo and motion are not shown.</p>
+</div>
+
+<script>
+(function(){
+  var q = new URLSearchParams(location.search);
+  var state = q.get('state')==='short'?'short':(q.get('state')==='notknown'?'notknown':'suits');
+  var accent = q.get('accent')==='rose'?'rose':'paper';
+  var ground = q.get('ground')==='mid'?'mid':(q.get('ground')==='dark'?'dark':'lighter');
+
+  var grounds={
+    lighter:{win:'#4E5158',card:'#62656E',well:'#40434A',line:'#7C8089',a:'#FFFFFF',b:'#F0F1F3',n:'#E2E4E8',sv:['#B9BCC3','#E6E8EB','#F0F1F3','#E2E4E8']},
+    mid:{win:'#3F4247',card:'#50535A',well:'#313338',line:'#6A6D75',a:'#FFFFFF',b:'#E6E8EB',n:'#CBCED3',sv:['#9EA2AA','#D5D8DC','#E6E8EB','#CBCED3']},
+    dark:{win:'#2B2D30',card:'#3A3C40',well:'#232426',line:'#505358',a:'#F7F8F9',b:'#DADCE0',n:'#B4B8BE',sv:['#80848C','#C8CBD0','#DADCE0','#B4B8BE']}
+  };
+
+  var lock=function(open){return '<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="10" height="7" rx="2"/>'+(open?'<path d="M5.5 7V5a2.5 2.5 0 0 1 4.8-1"/>':'<path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2"/>')+'</svg>';};
+  var tick='<svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#10131A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 L5 9 L10 3"/></svg>';
+
+  var rain=[['5 min','98.6'],['10 min','73.6'],['15 min','60.1'],['20 min','51.5'],['25 min','45.5'],['30 min','40.9']];
+
+  function plan(tank){
+    return '<div class="note" style="height:16px">Plan sketch, not to scale</div>'+
+    '<svg width="1470" height="52" viewBox="0 0 1470 52">'+
+      '<rect class="sd" x="0.5" y="0.5" width="563" height="16" rx="8"/>'+
+      '<rect class="sd" x="564.5" y="0.5" width="367" height="16" rx="8"/>'+
+      '<rect class="sd" x="932.5" y="0.5" width="537" height="16" rx="8"/>'+
+      '<text class="tn" x="16" y="13">Roof 230 m²</text>'+
+      '<text class="tn" x="580" y="13">Paving 150 m²</text>'+
+      '<text class="tn" x="948" y="13">Garden 220 m²</text>'+
+      '<rect class="sm" x="16.5" y="28.5" width="104" height="22" rx="8"/>'+
+      '<text class="tb" x="68" y="44" text-anchor="middle">Tank '+tank+' m³</text>'+
+      '<path class="sk" d="M121 40 H830"/>'+
+      '<text class="tn" x="190" y="35">Detention pipe 0.56 m³</text>'+
+      '<rect class="sm" x="380.5" y="34.5" width="12" height="12" rx="2"/><text class="tn" x="400" y="51">P1 0.08 m³</text>'+
+      '<rect class="sm" x="560.5" y="34.5" width="12" height="12" rx="2"/><text class="tn" x="580" y="51">P2 0.06 m³</text>'+
+      '<rect class="sk" x="720.5" y="34.5" width="12" height="12" rx="2"/><text class="tn" x="740" y="51">P3 not used</text>'+
+      '<rect class="sm" x="830.5" y="32.5" width="16" height="16" rx="2"/>'+
+      '<text class="tb" x="856" y="45">Orifice pit, 69 mm, 5.84 L/s</text>'+
+      '<path class="sm" d="M1040 40 H1100 M1093 35 L1100 40 L1093 45"/>'+
+      '<text class="tn" x="1110" y="45">to council</text>'+
+    '</svg>';
+  }
+
+  function render(){
+    var short=state==='short', unk=state==='notknown';
+    var tank = short?'0.50':'1.00';
+    var provided = short?'1.20':'1.70';
+    var needed = unk?null:'1.64';
+    var result = unk?null:(short?'0.44':'0.06');
+
+    document.getElementById('plan').innerHTML = plan(tank);
+
+    // band
+    var bandCls = short?'red':(unk?'amber':'green');
+    var word = short?'Short':(unk?'Needs a look':'Suits');
+    var main = short?'Storage short by <b class="strong fig">0.44</b> m³':(unk?'Storage: Not known':'Storage suits: <b class="strong fig">0.06</b> m³ spare');
+    var sub = short?'<b class="fig" style="font-weight:600">1.20</b> provided, <b class="fig" style="font-weight:600">1.64</b> needed':(unk?'Site rainfall not entered: type the six figures below':'<b class="fig" style="font-weight:600">1.70</b> provided, <b class="fig" style="font-weight:600">1.64</b> needed');
+    document.getElementById('band').innerHTML =
+      '<div class="band '+bandCls+'"><div class="left"><span class="pill" style="background:transparent">'+word+'</span><span class="main">'+main+'</span><span class="sub">'+sub+'</span></div>'+
+      '<div class="right">Discharge <b class="fig" style="font-weight:600">5.84</b> L/s of <b class="fig" style="font-weight:600">6.00</b> allowed <span class="pill green">Suits</span></div></div>';
+
+    // storage
+    var pill = short?'<span class="pill red">Short</span>':(unk?'<span class="pill amber">Needs a look</span>':'<span class="pill green">Suits</span>');
+    var ans = short?'<span class="big fig strong">0.44</span><span>m³ short</span>':(unk?'<span class="big nk">Not known</span><span>storage spare</span>':'<span class="big fig strong">0.06</span><span>m³ spare</span>');
+    var bar;
+    if(short) bar='<div class="sbar"><div class="fill" style="width:73.2%"><span>Provided 1.20</span></div><div class="cap red">Short 0.44</div></div><div class="note" style="margin-top:8px">Whole bar is the 1.64 needed</div>';
+    else if(unk) bar='<div class="sbar"><div class="fill" style="flex:1"><span>Provided 1.70</span></div><div class="cap amber">Needed: Not known</div></div><div class="note" style="margin-top:8px">Needed cannot be drawn yet</div>';
+    else bar='<div class="sbar"><div class="fill" style="width:100%"><span>Provided 1.70</span><span>Spare 0.06</span></div><div class="mk" style="left:96.5%"></div></div><div class="note" style="margin-top:8px">Dark line marks the 1.64 needed</div>';
+    var nkv='v nk', numv='v';
+    document.getElementById('cStorage').innerHTML =
+      '<div class="chead"><span>Storage</span>'+pill+'</div>'+
+      '<div class="cans">'+ans+'</div>'+
+      '<div class="pic">'+bar+'</div>'+
+      '<div class="work"><div class="sum">'+
+        '<div class="s"></div><div class="l">Tank WT1 <small>room for detention</small></div><div class="v">'+tank+'</div>'+
+        '<div class="s">+</div><div class="l">Pipes <small>225 dia, 14.00 m</small></div><div class="v">0.56</div>'+
+        '<div class="s">+</div><div class="l"><span class="cb on">'+tick+'</span>P1 holds water</div><div class="v">0.08</div>'+
+        '<div class="s">+</div><div class="l"><span class="cb on">'+tick+'</span>P2 holds water</div><div class="v">0.06</div>'+
+        '<div class="s off">+</div><div class="l off"><span class="cb"></span>P3 holds water <small>not added</small></div><div class="v off">0.04</div>'+
+        '<div class="s">=</div><div class="l">Provided</div><div class="v line">'+provided+'</div>'+
+        '<div class="s">&minus;</div><div class="l">'+(unk?'Needed':'Needed, 5 minute storm')+'</div><div class="'+(unk?nkv:numv)+'">'+(unk?'Not known':needed)+'</div>'+
+        '<div class="s">=</div><div class="l">'+(short?'Short by':'Spare')+'</div><div class="'+(unk?nkv:numv)+' line dbl'+(unk?'':' strong')+'">'+(unk?'Not known':result)+'</div>'+
+      '</div></div>'+
+      '<div class="note foot">Storm length that needs the most storage.</div>';
+
+    // discharge
+    var sk='<svg width="100%" height="72" viewBox="0 0 316 72">'+
+      '<path class="sh" d="M16 6 V66 H170"/>'+
+      '<path class="sk" d="M16 6 H170"/>'+
+      '<text class="tn" x="24" y="22">Top water level (plate)</text>'+
+      '<path class="sh" d="M170 6 V50 M170 62 V66"/>'+
+      '<path class="sh" d="M156 10 V56 M152 14 L156 7 L160 14 M152 52 L156 59 L160 52"/>'+
+      '<path class="sk" d="M156 56 H170"/>'+
+      '<text class="tm" x="64" y="44">Head 345.5</text>'+
+      '<text class="tm" x="180" y="18">Plate 380</text>'+
+      '<path class="sh" d="M174 56 H264 M256 51 L264 56 L256 61"/>'+
+      '<text class="tm" x="190" y="48">Hole 69</text>'+
+      '<text class="tn" x="272" y="60">Flow</text>'+
+      '</svg>';
+    document.getElementById('cDischarge').innerHTML =
+      '<div class="chead"><span>Discharge</span><span class="pill green">Suits</span></div>'+
+      '<div class="cans"><span class="big fig strong">5.84</span><span>L/s of 6.00 allowed</span></div>'+
+      '<div class="pic">'+sk+'</div>'+
+      '<div class="work"><div class="sum">'+
+        '<div class="s"></div><div class="l">Hole size (orifice)</div><div class="v">69</div>'+
+        '<div class="s"></div><div class="l">Plate</div><div class="v">380.0</div>'+
+        '<div class="s">&minus;</div><div class="l">Half the hole</div><div class="v">34.5</div>'+
+        '<div class="s">=</div><div class="l">Water height above the hole (head)</div><div class="v line">345.5</div>'+
+        '<div class="sub">Flow = 0.6 &times; hole area &times; &radic;(2 &times; 9.81 &times; head)</div>'+
+        '<div class="s">=</div><div class="l">Flow, L/s</div><div class="v line dbl strong">5.84</div>'+
+      '</div></div>'+
+      '<div class="note foot">Hole, plate and head in mm. Orifice sum, factor 0.6.</div>';
+
+    // areas
+    function r5(s,l,src,a,x,e,cls){return '<div class="s">'+s+'</div><div class="l">'+l+(src?'<small>'+src+'</small>':'')+'</div><div class="'+(cls||'')+'">'+a+'</div><div class="x">'+x+'</div><div class="'+(cls||'')+'">'+e+'</div>';}
+    document.getElementById('cAreas').innerHTML =
+      '<div class="chead"><span>Areas</span></div>'+
+      '<div class="cans"><span class="big fig strong">0.698</span><span>share of rain that runs off</span></div>'+
+      '<div class="pic"><div class="abar">'+
+        '<div style="width:38.3%;background:var(--c1)">Roof<span class="fig">230</span></div>'+
+        '<div style="width:25%;background:var(--c2)">Paving<span class="fig">150</span></div>'+
+        '<div style="width:36.7%;background:var(--c3)">Garden<span class="fig">220</span></div></div></div>'+
+      '<div class="work"><div class="sum5">'+
+        r5('','Roof','measured','230.00','&times; 0.90','207.00')+
+        r5('+','Paving','measured','150.00','&times; 0.90','135.00')+
+        r5('+','Garden','worked out','220.00','&times; 0.35','77.00')+
+        '<div class="s"></div><div class="l">Total</div><div class="line">600.00</div><div class="x"></div><div class="line">419.00</div>'+
+        '<div class="s">&divide;</div><div class="l">Site area</div><div></div><div class="x"></div><div>600.00</div>'+
+        '<div class="s">=</div><div class="l">Share that runs off</div><div></div><div class="x"></div><div class="line dbl strong">0.698</div>'+
+      '</div></div>'+
+      '<div class="note foot">Runoff coefficient. Shown as 0.70 elsewhere.</div>';
+
+    // fixed
+    function fr(l,v,src,locked,extra){return '<div class="l">'+l+(extra||'')+'</div><div class="f">'+v+'</div><div class="src">'+src+'</div>'+lock(!locked);}
+    document.getElementById('cFixed').innerHTML =
+      '<div class="chead"><span>What is fixed</span></div>'+
+      '<div class="cans"><span class="big fig strong">5</span><span>held,</span><span class="big fig strong">1</span><span>worked out</span></div>'+
+      '<div class="pic"><div class="tally"><span class="mark"></span><span class="mark"></span><span class="mark"></span><span class="mark"></span><span class="mark"></span><span class="mark o"></span></div>'+
+        '<div class="note" style="margin-top:8px">Filled = held, outline = worked out</div></div>'+
+      '<div class="work"><div class="fixed">'+
+        fr('Site area, m²','600.00','given',true)+
+        fr('Allowed discharge, L/s','6.00','given',true)+
+        fr('Storm, 1 in','10','given',true)+
+        fr('Tank, L','5,000','chosen',true)+
+        fr('Detention, L',short?'500':'1,000','chosen',true,short?'<span class="pill changed">Changed</span>':'')+
+        fr('Room in tank for detention, m³',tank,'worked out',false)+
+      '</div></div>'+
+      '<div class="note foot">Hold what is fixed. The rest is worked out.</div>';
+
+    // rainfall
+    document.getElementById('wells').innerHTML = rain.map(function(r){
+      return '<div class="well"><span class="note">'+r[0]+'</span><div class="f'+(unk?' unk':'')+'">'+(unk?'Not known':r[1])+'</div></div>';
+    }).join('');
+    document.getElementById('rainsrc').textContent = unk?'mm/h · Not known':'mm/h · given';
+
+    ['s1','s2','s3'].forEach(function(id,i){document.getElementById(id).className=(['suits','short','notknown'][i]===state)?'on':'';});
+  }
+
+  function applyGround(){
+    var g=grounds[ground],r=document.documentElement.style;
+    r.setProperty('--win',g.win);r.setProperty('--card',g.card);r.setProperty('--well',g.well);r.setProperty('--line',g.line);
+    r.setProperty('--t-answer',g.a);r.setProperty('--t-body',g.b);r.setProperty('--t-note',g.n);
+    g.sv.forEach(function(c,i){r.setProperty('--sv'+i,c);});
+    ['g1','g2','g3'].forEach(function(id,i){document.getElementById(id).className=(['lighter','mid','dark'][i]===ground)?'on':'';});
+  }
+  function applyAccent(){
+    var r=document.documentElement.style;
+    if(accent==='rose'){r.setProperty('--acc','#FF70B3');r.setProperty('--acc-ink','#10131A');}
+    else{r.setProperty('--acc','#F4F1E9');r.setProperty('--acc-ink','#171817');}
+    document.getElementById('a1').className=accent==='rose'?'on':'';
+    document.getElementById('a2').className=accent==='paper'?'on':'';
+  }
+  var methods=['m1','m2'];
+  methods.forEach(function(id){document.getElementById(id).addEventListener('click',function(){
+    methods.forEach(function(o){document.getElementById(o).className='mbtn'+(o===id?' sel':'');});
+  });});
+  ['s1','s2','s3'].forEach(function(id,i){document.getElementById(id).onclick=function(){state=['suits','short','notknown'][i];render();};});
+  ['g1','g2','g3'].forEach(function(id,i){document.getElementById(id).onclick=function(){ground=['lighter','mid','dark'][i];applyGround();};});
+  document.getElementById('a1').onclick=function(){accent='rose';applyAccent();};
+  document.getElementById('a2').onclick=function(){accent='paper';applyAccent();};
+  render();applyGround();applyAccent();
+})();
+</script>
+</body>
+</html>
