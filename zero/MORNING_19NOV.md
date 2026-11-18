@@ -31,7 +31,7 @@
 
 ## What ran overnight (fill in before he reads)
 
-1. Build chat: batches A and B built, reviewed, committed and run in AutoCAD (pass 8: 100 of 105); speed regression found and its cause fixed on the bench (48,323 list reads down to 4), to be confirmed by a pass; round 43 (tank sizes from his blocks, "Not known" sweep) in review.
+1. Build chat: batches A and B and round 43 built, reviewed, committed and run in AutoCAD (pass 9 at 8:57 pm: 102 of 105, the one failure the known explode gap); the speed regression pass 8 found is fixed and proven (54 ms against a limit of 100); tank sizes now come from his own tank blocks; "Not known" wording swept.
 2. Trials chat: flip, slide, hover menu, locked layer, 60-label speed proven; drag and double-click takeover proven with his own mouse; preview option C proven as above.
 3. Interview chat: CLEAN, Office hatch, Office text, Office layer, slab joints, Manager settled; 189 layers sorted.
 4. Planning chat: rulings pages to D-297 with a second reader's fixes; board revision 2 draft; the pictures above.
