@@ -117,4 +117,6 @@
 
 **TA-046 Hatches linked to their outline.** "Always linked": every hatch the new tool makes is associative; his AutoCAD settings are put back after.
 
-Next free number: TA-047
+**TA-047 Message instead of ticking the hatch pictures.** "theres lots of overlapping here and we normally discuss them based on what they do and the layer theyre on, can you please look into this using old project evidence as well, some hatches have served multiple functions like the hatch 74 is used for subfloor framing on first floor typically and its also used on suspedned slabs as the band beam hatch". So the hatch list is to be sorted by what each hatch does and its layer, checked against old project evidence. Fact about practice: HATCH 74 = subfloor framing on a first floor, and the band beam hatch on suspended slabs.
+
+Next free number: TA-048
