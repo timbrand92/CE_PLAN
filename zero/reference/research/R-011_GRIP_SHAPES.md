@@ -119,7 +119,12 @@ Log: `evidence\zt_run6_dblclick.log`. Tim's words in capitals.
 2. **AutoCAD's own action still runs: FAIL for replacing it.** On the noted pipe line "OPENS PEDIT" and on the plain one "SAME THING" (PEDIT); on the noted text "MTEDIT ASKS TO SELECT AN MTEXT OBJECT". Our line "OUR WINDOW WOULD OPEN HERE" came first and AutoCAD's own editor command followed at once: "THAT'S WHERE IT LANDS YOU AS END USER".
 3. **Trying to stop it by clearing the pick: FAIL.** With suppression on (clearing the implied selection before AutoCAD acts), the native command still started, now with no object, and asked "Select polyline or [Multiple]" or "Select an MTEXT object"; Tim had to cancel it. **So clearing the pick is worse than nothing.**
 4. **Drag the orange circle: nothing moved (cause found).** The click log shows AutoCAD treated the grip as a click button (trigger grip on), so no drag started. A draggable grip needs the trigger flag off plus a move method; both are now in the test code, not yet run. Tim's U after the drag undid the earlier PEDIT, so undo of a drag is not tested.
-5. **Next to try (built, not run):** veto AutoCAD's own PEDIT, MTEDIT, TEXTEDIT and DDEDIT for two seconds after a double-click on a noted object only (through the document lock-mode event), and run the drag with the trigger flag off.
+5. **Second round, 17:19 to 17:33 (three more test AutoCADs, `g_tim3` to `g_tim5`, Tim at the mouse, all closed normally):**
+   1. **Draggable grip: PASS.** With the trigger flag off, the grip answering Ok (stay hot) and a move method, Tim dragged the orange circle and "MOVES THE LINE ANYWHERE"; **one U put it back in one step** (the command line says "Grip Edit"). The first try failed because the click answered GripHotToWarm, which sends the grip straight back to warm: a draggable grip must answer Ok. The test moves the whole line; slide-along-the-pipe only is not yet built.
+   2. **Vetoing AutoCAD's own editor by the lock-mode event: FAIL alone.** The veto ran (log "VETOED native PEDIT / MTEDIT") but PEDIT and MTEDIT still started.
+   3. **Cancel on command start: never fired** (no log line), so it is not a route.
+   4. **Veto plus a queued double Escape from inside the veto: WORKS, with a visible flash.** On the noted pipe line and on the noted masked text Tim saw our line "OUR WINDOW WOULD OPEN HERE", then `_pedit` or `_mtedit`, then `*Cancel*` twice **without pressing anything**. The native editor does not stay open. The plain line and plain text "WORK AS NORMAL". Residue: AutoCAD's command history shows `_pedit` and `*Cancel*` after every double-click on a noted object, and the double Escape could cancel something else if the user is mid-command (not tested).
+   5. **What a build can say:** double-click can be taken over for noted objects only, with the native editor cancelled straight after it starts; the clean route (the double-click action in AutoCAD's own customisation) changes a saved setting and is not used.
 
 ## Test list for later (Tim, 18 Nov: "get a nice list going for testing later")
 
@@ -131,9 +136,9 @@ Each line: what to do, what counts as a pass. Items 1 to 9 need the real mouse (
 4. **DONE by Tim (CRASH confirmed). Failure return value, last:** same click with the Failure return. Expected to crash AutoCAD (the 17 Nov cause). Pass for the diagnosis: it crashes; then close under the D-160 exception and never repeat.
 5. **Hover menu on text:** one grip with the multi-function interface (Slide, Offset, Flip) on MText, first as Primary then as Secondary, with GRIPS at its current 2 and GRIPMULTIFUNCTIONAL 3 (do not change either). Pass: menu shows, each item runs.
 6. **Native menu survives:** hover a vertex grip of a plain polyline with our interface loaded. Pass: Stretch, Add Vertex, Remove Vertex, Convert to Arc still show.
-7. **Drag our grip:** drag a slide grip along a pipe. Pass: moves along only, one undo step.
+7. **PARTLY DONE by Tim (PASS for drag and one undo; moves anywhere). Drag our grip:** still to test: slide along the pipe only.
 8. **Grip-drag copy (Ctrl) of a noted object:** pass if the copy keeps the note or is told to be a plain copy as designed.
-9. **Double-click:** the replacement trial 8 route. Pass: our window opens for noted objects, plain objects behave as AutoCAD (PEDIT, Quick Properties).
+9. **DONE by Tim (PASS with a flash). Double-click:** see the second round above.
 10. **Many grips:** 200 noted pipes selected at once (GRIPOBJLIMIT 100 hides grips above 100): measure the time and say what a drafter sees.
 11. **Locked layer, xref, REFEDIT:** grips of ours on those objects. Pass: AutoCAD's own protection wins, no edit.
 12. **Our grip beside the old CE grips on the same MText or block:** which draws on top, which is picked.
