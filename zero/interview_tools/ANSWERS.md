@@ -261,4 +261,22 @@ Answer given in chat (planning chat's reading, not Tim's words): his button is a
 
 **TA-087 FASTSAVE.** "Drop it, CN only": one command; its speed is measured every night against the PERFORMANCE.md limits.
 
-Next free number: TA-088
+## Batch 26 and 27 (the Manager in detail; `interview_tools\MANAGER_SPEC.md`)
+
+**TA-088 Name.** "MANAGER / MG" (MG free in AutoCAD's list and his), plus a button at the end of the CE Tools tab.
+
+**TA-089 Who decides a new version reaches the office.** "You approve first": Tim sees it first and presses "approve for everyone" on his admin page; only then are colleagues offered it.
+
+**TA-090 How the update offer looks.** "Small window": at AutoCAD start, a small window with "Install now" and "Later".
+
+**TA-091 What changed.** "3 lines, plain words": the first time AutoCAD opens on a new version, up to three plain lines, with a link to the full list.
+
+**TA-092 Fault report.** "Include the drawing": the report always carries the drawing, as well as the CE log, the version and what the person was doing.
+
+**TA-093 Office list changes reach colleagues.** "Next AutoCAD start"; an open drawing says one line and offers to switch (D-180).
+
+**TA-094 Which job a drawing belongs to.** "From the folder": read the job number from the drawing's folder or file name by the office naming pattern; ask once if it cannot tell.
+
+**TA-095 Admin page, beyond versions, faults and "approve for everyone".** "Who is on an old version", "Go back for everyone", "Office list changes".
+
+Next free number: TA-096
