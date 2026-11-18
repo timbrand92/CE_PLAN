@@ -51,3 +51,16 @@ Items 8 and 9 above are built on the pretend drawing (Pit, Pipe) and so is the L
 ## Standing job at EVERY wake-up, before the queue (added 18 Nov 2026, D-226, R-71)
 
 Tim: "in future i dont want to be the one managing anything apart from what is in chat". So at every wake-up, first: (1) read `BOARD.md`; (2) add anything new from Tim's answers and the side chats' reports since the last wake-up, with the next ID in its list; (3) move answered items to "closed this week" with the decision number; (4) if something waiting on Tim blocks building and has not been put to him today, put it to him as one clickable question with context and a real example; (5) once a night run the checks in `BOARD_HOW_IT_IS_KEPT.md` and fix what fails before new work; (6) commit by file name and push. Then the queue.
+
+## Added 18 Nov 2026, 5:20 pm (after D-246 to D-294)
+
+Done since the list above: item 15 (the build chat's draft calls: 104 of 104 closed, D-258 to D-293); from item 16, tank re-use against detention (D-278). Items 11 to 14 and 17 stay with the build chat in its own order, AFTER its fix-first list.
+
+18. [~] The ONE mock-up for Tim's look (screen rules D-286, his changes D-294): `pictures\detention_fixed_mockup.html` version 4, with the separate checker; then to Tim. Nothing is restyled until he says yes.
+19. [ ] Build chat, fix first (screen rule 3): the wrong-figure and pretend-to-work list N-039 to N-056, each confirmed, then fixed with a fail-first test. Planning chat: read each report, update the board.
+20. [ ] Tonight after 5:30 pm, no acad running, PC idle: build chat's pass with round 39; trials chat's grip tests (hover menu, drag with one undo, Ctrl-copy, many grips, locked layer) and the second double-click fix. Planning chat in the morning: results in the director's summary.
+21. [ ] Planning chat, once Tim approves the style: write the shared-parts brief (card, field, pill, button, status band, preview panel, three-step layout; inputs boxed, worked-out plain; one-line why) from the approved mock-up into `design\UI_PLAN.md`, send to the build and interview chats.
+22. [ ] Planning chat: bring `rulings\` up to D-294 (they stop at D-229) and re-run the board's record check (section 10).
+23. [ ] Planning chat: owed pictures: a shorter pipe label for tight spaces (D-268); what the Blocks palette holds for a kerb symbol and an existing-pit look (D-275).
+24. [ ] Planning chat: still to put to Tim one at a time on a part-drawn job: what a new pipe opens with is settled (D-263); side panel against Job window (D-048 against D-099, D-171); how the top water level is first chosen; whether the orifice pit is always the last pit.
+25. [ ] Housekeeping: compact the memory index file (it is near its size limit); correct board times written from memory.
