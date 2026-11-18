@@ -41,7 +41,7 @@ body{background:var(--page);color:var(--t-body);font-family:var(--sans);font-siz
 .strong{font-weight:600}
 
 /* plan strip */
-.plan{height:84px;flex:none;padding:8px 16px}
+.plan{height:76px;flex:none;padding:8px 16px}
 .plan svg{display:block;margin-top:0}
 .sd{stroke:var(--sv0);fill:none;stroke-width:1}
 .sm{stroke:var(--sv1);fill:none;stroke-width:1}
@@ -52,7 +52,7 @@ body{background:var(--page);color:var(--t-body);font-family:var(--sans);font-siz
 .tm{fill:var(--sv2);stroke:none;font-family:var(--mono);font-size:12px}
 
 /* status band */
-.band{flex:none;height:56px;border-radius:var(--r);display:flex;align-items:center;justify-content:space-between;padding:0 16px;color:var(--ink);box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.band{flex:none;height:48px;border-radius:var(--r);display:flex;align-items:center;justify-content:space-between;padding:0 16px;color:var(--ink);box-shadow:0 2px 8px rgba(0,0,0,.25)}
 .band.green{background:var(--green)} .band.red{background:var(--red)} .band.amber{background:var(--amber)}
 .band .left{display:flex;align-items:center;gap:16px;white-space:nowrap}
 .band .main{font-size:24px;line-height:32px}
@@ -64,13 +64,13 @@ body{background:var(--page);color:var(--t-body);font-family:var(--sans);font-siz
 .pill.changed{background:transparent;color:var(--t-body);border-color:var(--t-body)}
 
 /* cards */
-.cards{flex:1;min-height:0;display:grid;grid-template-columns:332px 348px 356px 1fr;gap:16px}
+.cards{flex:1;min-height:0;display:grid;grid-template-columns:324px 380px 356px 1fr;gap:16px}
 .cards .card{padding:16px;display:flex;flex-direction:column;min-height:0}
 .chead{height:24px;flex:none;display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
 .cans{height:32px;flex:none;display:flex;align-items:baseline;gap:8px;margin-bottom:8px;white-space:nowrap}
 .cans .big{font-size:24px;line-height:32px;color:var(--t-answer)}
 .cans .big.nk{font-weight:400;font-family:var(--sans)}
-.pic{height:72px;flex:none;margin-bottom:8px;display:flex;flex-direction:column;justify-content:center}
+.pic{height:64px;flex:none;margin-bottom:8px;display:flex;flex-direction:column;justify-content:center}
 .work{flex:none}
 .foot{margin-top:auto}
 
@@ -82,9 +82,11 @@ body{background:var(--page);color:var(--t-body);font-family:var(--sans);font-siz
 .sum .v{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums;min-width:56px}
 .sum .v.nk{font-family:var(--sans)}
 .sum .line{border-top:1px solid var(--t-body)}
-.sum .dbl{border-bottom:3px double var(--t-body);height:36px}
+.sum .dbl{border-bottom:3px double var(--t-body);height:32px;line-height:28px}
 .sum .sub{height:16px;line-height:16px;font-size:12px;color:var(--t-note);grid-column:2 / 4}
-.sum .off{opacity:.65}
+.sum .off{color:var(--t-note)}
+.sum .off small{color:var(--t-note)}
+.sum .off .cb{border-color:var(--t-note)}
 .cb{width:16px;height:16px;border:1.5px solid var(--t-body);border-radius:4px;display:inline-flex;align-items:center;justify-content:center;flex:none}
 .cb.on{background:#EEF0F2;border-color:#EEF0F2}
 .cb svg{display:block}
@@ -96,7 +98,7 @@ body{background:var(--page);color:var(--t-body);font-family:var(--sans);font-siz
 .sum5 .l small{font-size:12px;color:var(--t-note)}
 .sum5 .x{white-space:nowrap}
 .sum5 .line{border-top:1px solid var(--t-body)}
-.sum5 .dbl{border-bottom:3px double var(--t-body);height:36px}
+.sum5 .dbl{border-bottom:3px double var(--t-body);height:32px;line-height:28px}
 
 .abar{display:flex;height:32px}
 .abar div{display:flex;align-items:center;padding:0 8px;color:var(--ink);font-size:12px;white-space:nowrap;overflow:hidden;gap:8px}
@@ -120,7 +122,7 @@ body{background:var(--page);color:var(--t-body);font-family:var(--sans);font-siz
 .mark{width:16px;height:16px;border-radius:50%;background:var(--t-body);border:1.5px solid var(--t-body)}
 .mark.o{background:transparent}
 
-.rain{flex:none;height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;gap:32px}
+.rain{flex:none;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;gap:32px}
 .rain .lab{display:flex;flex-direction:column;width:200px}
 .wells{display:flex;gap:8px}
 .well{display:flex;flex-direction:column;width:80px}
@@ -170,7 +172,7 @@ body{background:var(--page);color:var(--t-body);font-family:var(--sans);font-siz
     </div>
   </div>
   <div class="bottom">
-    <button class="btn quiet">Inspect</button>
+    <button class="btn quiet">Show the working</button>
     <div class="right"><button class="btn">Cancel</button><button class="btn ok">OK</button></div>
   </div>
 </div>
@@ -222,25 +224,25 @@ body{background:var(--page);color:var(--t-body);font-family:var(--sans);font-siz
   var rain=[['5 min','98.6'],['10 min','73.6'],['15 min','60.1'],['20 min','51.5'],['25 min','45.5'],['30 min','40.9']];
 
   function plan(tank){
-    return '<div class="note" style="height:16px">Plan sketch, not to scale</div>'+
-    '<svg width="1470" height="52" viewBox="0 0 1470 52">'+
-      '<rect class="sd" x="0.5" y="0.5" width="563" height="16" rx="8"/>'+
-      '<rect class="sd" x="564.5" y="0.5" width="367" height="16" rx="8"/>'+
-      '<rect class="sd" x="932.5" y="0.5" width="537" height="16" rx="8"/>'+
-      '<text class="tn" x="16" y="13">Roof 230 m²</text>'+
-      '<text class="tn" x="580" y="13">Paving 150 m²</text>'+
-      '<text class="tn" x="948" y="13">Garden 220 m²</text>'+
-      '<rect class="sm" x="16.5" y="28.5" width="104" height="22" rx="8"/>'+
-      '<text class="tb" x="68" y="44" text-anchor="middle">Tank '+tank+' m³</text>'+
-      '<path class="sk" d="M121 40 H830"/>'+
-      '<text class="tn" x="190" y="35">Detention pipe 0.56 m³</text>'+
-      '<rect class="sm" x="380.5" y="34.5" width="12" height="12" rx="2"/><text class="tn" x="400" y="51">P1 0.08 m³</text>'+
-      '<rect class="sm" x="560.5" y="34.5" width="12" height="12" rx="2"/><text class="tn" x="580" y="51">P2 0.06 m³</text>'+
-      '<rect class="sk" x="720.5" y="34.5" width="12" height="12" rx="2"/><text class="tn" x="740" y="51">P3 not used</text>'+
-      '<rect class="sm" x="830.5" y="32.5" width="16" height="16" rx="2"/>'+
-      '<text class="tb" x="856" y="45">Orifice pit, 69 mm, 5.84 L/s</text>'+
-      '<path class="sm" d="M1040 40 H1100 M1093 35 L1100 40 L1093 45"/>'+
-      '<text class="tn" x="1110" y="45">to council</text>'+
+    return '<svg width="1470" height="60" viewBox="0 0 1470 60">'+
+      '<rect class="sd" x="0.5" y="0.5" width="563" height="24" rx="8"/>'+
+      '<rect class="sd" x="564.5" y="0.5" width="367" height="24" rx="8"/>'+
+      '<rect class="sd" x="932.5" y="0.5" width="537" height="24" rx="8"/>'+
+      '<text class="tn" x="16" y="17">Roof 230 m²</text>'+
+      '<text class="tn" x="580" y="17">Paving 150 m²</text>'+
+      '<text class="tn" x="948" y="17">Garden 220 m²</text>'+
+      '<text class="tn" x="1470" y="55" text-anchor="end">Areas to scale, pipes not to scale</text>'+
+      '<rect class="sm" x="16.5" y="35.5" width="104" height="22" rx="8"/>'+
+      '<text class="tb" x="68" y="51" text-anchor="middle">Tank '+tank+' m³</text>'+
+      '<path class="sk" d="M121 47 H830"/>'+
+      '<text class="tn" x="190" y="42">Detention pipe 0.56 m³</text>'+
+      '<rect class="sm" x="380.5" y="41.5" width="12" height="12" rx="2"/><text class="tn" x="400" y="57">P1 0.08 m³</text>'+
+      '<rect class="sm" x="560.5" y="41.5" width="12" height="12" rx="2"/><text class="tn" x="580" y="57">P2 0.06 m³</text>'+
+      '<rect class="sk" x="720.5" y="41.5" width="12" height="12" rx="2"/><text class="tn" x="740" y="57">P3 not used</text>'+
+      '<rect class="sm" x="830.5" y="39.5" width="16" height="16" rx="2"/>'+
+      '<text class="tb" x="856" y="52">Orifice pit, 69 mm, 5.84 L/s</text>'+
+      '<path class="sm" d="M1040 47 H1100 M1093 42 L1100 47 L1093 52"/>'+
+      '<text class="tn" x="1110" y="52">to council</text>'+
     '</svg>';
   }
 
@@ -280,32 +282,38 @@ body{background:var(--page);color:var(--t-body);font-family:var(--sans);font-siz
         '<div class="s">+</div><div class="l"><span class="cb on">'+tick+'</span>P1 holds water</div><div class="v">0.08</div>'+
         '<div class="s">+</div><div class="l"><span class="cb on">'+tick+'</span>P2 holds water</div><div class="v">0.06</div>'+
         '<div class="s off">+</div><div class="l off"><span class="cb"></span>P3 holds water <small>not added</small></div><div class="v off">0.04</div>'+
-        '<div class="s">=</div><div class="l">Provided</div><div class="v line">'+provided+'</div>'+
-        '<div class="s">&minus;</div><div class="l">'+(unk?'Needed':'Needed, 5 minute storm')+'</div><div class="'+(unk?nkv:numv)+'">'+(unk?'Not known':needed)+'</div>'+
-        '<div class="s">=</div><div class="l">'+(short?'Short by':'Spare')+'</div><div class="'+(unk?nkv:numv)+' line dbl'+(unk?'':' strong')+'">'+(unk?'Not known':result)+'</div>'+
+        (short?
+          '<div class="s">=</div><div class="l">Provided</div><div class="v line">'+provided+'</div>'+
+          '<div class="s"></div><div class="l">Needed, 5 minute storm</div><div class="v">'+needed+'</div>'+
+          '<div class="s">&minus;</div><div class="l">Provided</div><div class="v">'+provided+'</div>'+
+          '<div class="s">=</div><div class="l">Short by</div><div class="v line dbl strong">'+result+'</div>'
+        :
+          '<div class="s">=</div><div class="l">Provided</div><div class="v line">'+provided+'</div>'+
+          '<div class="s">&minus;</div><div class="l">'+(unk?'Needed':'Needed, 5 minute storm')+'</div><div class="'+(unk?nkv:numv)+'">'+(unk?'Not known':needed)+'</div>'+
+          '<div class="s">=</div><div class="l">Spare</div><div class="'+(unk?nkv:numv)+' line dbl'+(unk?'':' strong')+'">'+(unk?'Not known':result)+'</div>')+
       '</div></div>'+
       '<div class="note foot">Storm length that needs the most storage.</div>';
 
     // discharge
-    var sk='<svg width="100%" height="72" viewBox="0 0 316 72">'+
-      '<path class="sh" d="M16 6 V66 H170"/>'+
-      '<path class="sk" d="M16 6 H170"/>'+
-      '<text class="tn" x="24" y="22">Top water level (plate)</text>'+
-      '<path class="sh" d="M170 6 V50 M170 62 V66"/>'+
-      '<path class="sh" d="M156 10 V56 M152 14 L156 7 L160 14 M152 52 L156 59 L160 52"/>'+
-      '<path class="sk" d="M156 56 H170"/>'+
-      '<text class="tm" x="64" y="44">Head 345.5</text>'+
-      '<text class="tm" x="180" y="18">Plate 380</text>'+
-      '<path class="sh" d="M174 56 H264 M256 51 L264 56 L256 61"/>'+
-      '<text class="tm" x="190" y="48">Hole 69</text>'+
-      '<text class="tn" x="272" y="60">Flow</text>'+
+    var sk='<svg width="100%" height="64" viewBox="0 0 340 64">'+
+      '<path class="sh" d="M16 4 V58 H170"/>'+
+      '<path class="sk" d="M16 4 H170"/>'+
+      '<text class="tn" x="24" y="19">Top water level (plate)</text>'+
+      '<path class="sh" d="M170 4 V44 M170 54 V58"/>'+
+      '<path class="sh" d="M156 8 V50 M152 12 L156 5 L160 12 M152 46 L156 53 L160 46"/>'+
+      '<path class="sk" d="M156 50 H170"/>'+
+      '<text class="tm" x="64" y="40">Head 345.5</text>'+
+      '<text class="tm" x="180" y="15">Plate 380.0</text>'+
+      '<path class="sh" d="M174 50 H264 M256 45 L264 50 L256 55"/>'+
+      '<text class="tm" x="190" y="42">Hole 69</text>'+
+      '<text class="tn" x="272" y="54">Flow</text>'+
       '</svg>';
     document.getElementById('cDischarge').innerHTML =
       '<div class="chead"><span>Discharge</span><span class="pill green">Suits</span></div>'+
       '<div class="cans"><span class="big fig strong">5.84</span><span>L/s of 6.00 allowed</span></div>'+
       '<div class="pic">'+sk+'</div>'+
       '<div class="work"><div class="sum">'+
-        '<div class="s"></div><div class="l">Hole size (orifice)</div><div class="v">69</div>'+
+        '<div class="s"></div><div class="l">Hole size (orifice) <small>worked out, rounded down</small></div><div class="v">69</div>'+
         '<div class="s"></div><div class="l">Plate</div><div class="v">380.0</div>'+
         '<div class="s">&minus;</div><div class="l">Half the hole</div><div class="v">34.5</div>'+
         '<div class="s">=</div><div class="l">Water height above the hole (head)</div><div class="v line">345.5</div>'+
@@ -337,7 +345,7 @@ body{background:var(--page);color:var(--t-body);font-family:var(--sans);font-siz
     function fr(l,v,src,locked,extra){return '<div class="l">'+l+(extra||'')+'</div><div class="f">'+v+'</div><div class="src">'+src+'</div>'+lock(!locked);}
     document.getElementById('cFixed').innerHTML =
       '<div class="chead"><span>What is fixed</span></div>'+
-      '<div class="cans"><span class="big fig strong">5</span><span>held,</span><span class="big fig strong">1</span><span>worked out</span></div>'+
+      '<div class="cans"><span class="big fig strong">5</span><span>of 6 held</span></div>'+
       '<div class="pic"><div class="tally"><span class="mark"></span><span class="mark"></span><span class="mark"></span><span class="mark"></span><span class="mark"></span><span class="mark o"></span></div>'+
         '<div class="note" style="margin-top:8px">Filled = held, outline = worked out</div></div>'+
       '<div class="work"><div class="fixed">'+
