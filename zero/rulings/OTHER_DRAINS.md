@@ -1,6 +1,6 @@
 # Current rulings: Other drains (AG, perimeter, strip, charged, suspended, trench grate, spoon)
 
-Current rulings as of 18 Nov 2026, 1:20 pm (Melbourne), from decisions D-001 to D-225. If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
+Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to D-297. If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
 
 ## What is decided now
 
@@ -11,7 +11,14 @@ Current rulings as of 18 Nov 2026, 1:20 pm (Melbourne), from decisions D-001 to 
 5. **Charged and suspended pipes are kinds of the Pipe tool** in the first release (THE_PLAN section 3, from D-097 to D-110).
 6. **A charged pipe that runs from a downpipe to a water tank only** is a situation the design must cover (D-038).
 7. **Bends on every kind of pipe** (D-189).
-8. **Wide, along-a-line window style** for pipe of every kind, AG drain, trench grate, spoon drain and strip drain (D-067; the planning chat's sorting, Tim may correct).
+8. **Wide, along-a-line window style** for pipe of every kind, AG drain, trench grate, spoon drain and strip drain (D-067; the planning chat's sorting, Tim may correct). **Superseded by D-296 (18 Nov):** the preview sits at the left in every window, so the wide style no longer decides where it sits (item 12).
+
+### Added 18 Nov 2026, D-230 to D-297
+
+9. **The trench grate keeps TG (D-233):** "Keep TG; it takes over when the old plugin goes". Until the old plug-in is removed the new tool is tested under its full word TRENCHGRATE (TG is the old plug-in's trench grate command today).
+10. **The strip drain label and the trench grate block are out of the Blocks palette (D-232):** Tim: "covered in the plugin"; they stay in the master drawing as spares.
+11. **Label words and the cover check by pipe kind (D-268, D-269):** charged, suspended and detention each have an office wording (PIPE item 35); a charged line gets the ordinary cover check, a suspended pipe shows "no cover check: suspended" in grey.
+12. **The preview of every window, these included, sits at the left (D-296);** its size and form are OPEN under D-297.
 
 ## Changed along the way
 
@@ -20,14 +27,16 @@ Current rulings as of 18 Nov 2026, 1:20 pm (Melbourne), from decisions D-001 to 
 ## Still open on this subject
 
 1. **How AG and perimeter drains are built:** as a kind of Pipe with no inverts (FM-017 recommendation) or otherwise; typed name AGDRAIN / AG is a draft (NAMING_DRAFT). Waits on: Tim.
-2. **Trench grate: inlet or kind of pipe, and its name** (see INLETS). Waits on: Tim.
+2. **Trench grate: inlet or kind of pipe, and its name** (see INLETS). Waits on: Tim. **Name answered by D-233 (18 Nov):** TG.
 3. **Spoon drain and kerb:** recommended park (FM-057, FM-058). Waits on: Tim.
 4. **Charged line ends:** downpipe, tank and AG ends must be proper ends so charged lines are not shown as loose (SITUATIONS B11, stops a job). Waits on: the build chat.
-5. **Label wording for each pipe kind** (SITUATIONS, DRAFTS_pipe 8). Waits on: Tim.
+5. **Label wording for each pipe kind** (SITUATIONS, DRAFTS_pipe 8). Waits on: Tim. **Answered in part by D-268** for charged, suspended and detention; wording for AG, perimeter and trench grate is not given.
 6. **Raingarden and source kinds:** recommended park and "other inlet" kind (FM-034, FM-033). Waits on: Tim.
 7. **Later kinds (raingarden, spoon drain, pump, soakage pit) get names by the same rule when designed** (NAMING_DRAFT). Waits on: the planning chat (later).
 
 ## Where the detail lives
+
+Added 18 Nov 2026: `DECISIONS.md` D-232, D-233, D-268, D-269, D-296, D-297.
 
 1. `DECISIONS.md` D-038, D-040, D-041, D-067, D-189, D-223.
 2. `design\FUNCTION_MAP.md` FM-016, FM-017, FM-032 to FM-034, FM-057, FM-058.

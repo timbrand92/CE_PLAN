@@ -1,6 +1,6 @@
 # Current rulings: The job and the office (how the office works, the Job window, the Job Manager)
 
-Current rulings as of 18 Nov 2026, 1:20 pm (Melbourne), from decisions D-001 to D-225. If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
+Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to D-297. If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
 
 ## What is decided now
 
@@ -23,12 +23,17 @@ Current rulings as of 18 Nov 2026, 1:20 pm (Melbourne), from decisions D-001 to 
 
 ### The Job window
 
-15. **One Job window, typed once per job,** is change 4 of the five input changes (D-171).
+15. **One Job window, typed once per job,** is change 4 of the five input changes (D-171). **Contents added 18 Nov:** the site's rainfall figures with their source (D-249) and the slab thickness per kind of paving (D-293).
 16. **New jobs first:** old hand-drawn drawings still open and plot; a tool to adopt them comes later (D-027); job facts found in a copied drawing are treated as assumed until confirmed (D-191).
 
 ### The Job Manager
 
 17. **Job tracking belongs in the office's Job Manager program;** the plug-in hands it what only the drawing knows and shows it back in the Manager window (D-071; see MANAGER).
+
+### Added 18 Nov 2026, D-230 to D-297
+
+18. **How a site's rainfall figures reach the office (D-249):** "A mix, depends on council". Some councils state the intensities to use, otherwise the Bureau's table. The Job window takes either: figures given by the council (held with the council, source recorded) or the Bureau table pasted or typed for the site; each figure marked with where it came from.
+19. **Slab thickness is set in the Job window, per kind of paving (D-293):** "should read from the plans and then you can set it in each jobs"; no office preset; typed over on a pipe where it differs; until it is set, cover under paving reads "Not known" (see LEVELS_AND_STANDARDS item 24).
 
 ## Changed along the way
 
@@ -38,7 +43,7 @@ Current rulings as of 18 Nov 2026, 1:20 pm (Melbourne), from decisions D-001 to 
 
 ## Still open on this subject
 
-1. **The Job window's typed name (JOB is a draft) and contents** (INPUT_AUDIT section 3; FM-048; D-055). Waits on: Tim.
+1. **The Job window's typed name (JOB is a draft) and contents** (INPUT_AUDIT section 3; FM-048; D-055). Waits on: Tim. Contents so far include rainfall source (D-249) and slab thickness per paving (D-293); the rest is not gone through.
 2. **Where job facts are stored** so later tools read one place (Q-204). Waits on: the build chat.
 3. **Which "civil site" drawings the office sometimes does** (D-029, Q-011). Waits on: Tim.
 4. **How existing projects are taken up** beyond "start from the template" (D-049 item 7; SITUATIONS A7). Waits on: the planning chat.
@@ -52,6 +57,8 @@ Current rulings as of 18 Nov 2026, 1:20 pm (Melbourne), from decisions D-001 to 
 12. **Older-format picture of the guidebook workflow figure** needs a reader or Tim to export it (Q-107). Waits on: Tim.
 
 ## Where the detail lives
+
+Added 18 Nov 2026: `DECISIONS.md` D-249, D-293.
 
 1. `DECISIONS.md` sections "How people work" and "About today's practice"; D-020, D-025 to D-027, D-029, D-030, D-032, D-071, D-113, D-117, D-171, D-175, D-178, D-191, D-193, D-194, D-215, D-217.
 2. `reference\process\CIVIL_JOB_FLOW.md`; `reference\design\JOB_KINDS.md`; `evidence\STAGE1_INTERVIEW.md`.

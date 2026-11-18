@@ -1,6 +1,6 @@
 # Current rulings: Drawing and sheets (1:1, units, layouts, layers, colours, blocks, templates, the no-plug-in rule)
 
-Current rulings as of 18 Nov 2026, 1:40 pm (Melbourne), from decisions D-001 to D-229. If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
+Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to D-297. If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
 
 ## What is decided now
 
@@ -37,6 +37,15 @@ Current rulings as of 18 Nov 2026, 1:40 pm (Melbourne), from decisions D-001 to 
 20. **Plotting with open items:** one quiet command-line line, never a stop (D-188).
 21. **The pit schedule is placed once, grows downward, and the plug-in only warns when it may not fit** (D-109, D-114).
 
+### Added 18 Nov 2026, D-230 to D-297
+
+22. **The Blocks palette is 37 blocks (D-232):** Tim: "i dont know what we do have so its hard for me to know what to get rid of", so the interview chat drew what the palette would hold and he edited it: out came the pit and inlet blocks, the strip drain label and the trench grate ("covered in the plugin"), Section Flag and SCREW PILES; in went 18 of the 54 unknown blocks; the rest stay in the master drawing as spares. The four hatch layers of unknown meaning (HATCH 155, 70, 221, SLAB INFILL): "Not sure either"; they are kept and marked unknown. The 37 hatch sample squares in the master are a legend sample set, not the hatch list; the hatch tool reads the function list of D-227.
+23. **One orifice pit detail per council in the library (D-253, not the recommended answer):** "The pits really differ by council"; Detention fills the job's figures into the detail that belongs to the job's council.
+24. **Anything shown only on screen goes on one CE no-plot layer (D-275):** a small CE marker set not to plot, named in the office list, used for every on-screen-only CE mark (the first use is the end of a system).
+25. **Layers made by the tools (D-260 DQ-005; planning chat's call from his rulings; his to overturn):** a missing layer is made with the office colour and said in one line; an existing layer is never changed (D-191).
+26. **The long-section sheet layer and rows (D-276 DQ-039, DQ-040; planning chat's call from his rulings; his to overturn):** one SCHED layer as the three newest examples, to be checked against the office template when built; the rows of the issued council sheet are pipe size, pipe grade, design flow and velocity, invert depth, invert level, surface level and chainage, under a datum line.
+27. **A pipe is drawn as a band plus two thin edge lines (D-264):** the edge lines move with the pipe as one thing; how that is done with ordinary AutoCAD objects, so the no-plug-in rule still holds (D-094), is the build's to prove.
+
 ## Changed along the way
 
 1. **"Looks and plots identical" (D-015) was made stronger by D-094 (16 Nov):** usable with plain AutoCAD, not only visible.
@@ -46,7 +55,7 @@ Current rulings as of 18 Nov 2026, 1:40 pm (Melbourne), from decisions D-001 to 
 ## Still open on this subject
 
 1. **How metre drawings are handled in practice** (D-217; OBSTACLE_COURSE OC-01; R-007 lesson 1, about 44 old bugs). Waits on: the build chat.
-2. **An existing layer with a different colour: leave it and say once, or reset to the list** (OBSTACLE_COURSE OQ-07, OC-20). Waits on: Tim.
+2. **An existing layer with a different colour: leave it and say once, or reset to the list** (OBSTACLE_COURSE OQ-07, OC-20). Waits on: Tim. **Answered by D-260 DQ-005 (18 Nov; planning chat's call from his rulings; his to overturn):** an existing layer is never changed; a missing one is made with the office colour and said in one line.
 3. **Pen width of the new layers and of colour 160 through the office plot style; seen on a real plot** (D-156, Q-103, SITUATIONS). Waits on: Tim.
 4. **Layer name STORMWATER DETENTION PIPE not separately ruled** (D-153). Waits on: Tim.
 5. **Title block and issue: no tool in the first release,** and CDNEWDWG recommended park (D-097; FM-065). Waits on: Tim (later).
@@ -60,8 +69,14 @@ Current rulings as of 18 Nov 2026, 1:40 pm (Melbourne), from decisions D-001 to 
 13. **Model-space text height assumptions in SITUATIONS H1 and H2 need re-checking against D-194** (SITUATIONS document conflicts). Waits on: the build chat.
 14. **"Plan scale" job fact:** recommended in SITUATIONS Q18; D-194 gives a different model; whether the fact still exists is not said. Waits on: Tim.
 15. **Old jobs that start from SAVEAS of the last job:** D-191 says from the template; handling of leftover pits and facts from another drawing is recommended, not confirmed (SITUATIONS A7, Q15). Waits on: Tim.
+16. **Proper names for the 18 machine-named blocks Tim added to the palette** (D-232, TQ-13). Waits on: Tim.
+17. **The name of the CE no-plot layer** and whether the office template already has one (D-275). Waits on: the build chat.
+
+**Closed (D-230 to D-297):** the existing-layer question in the build (taken by D-260 DQ-005, the planning chat's call); what the Blocks palette holds (D-232, 37 blocks).
 
 ## Where the detail lives
+
+Added 18 Nov 2026: `DECISIONS.md` D-232, D-253, D-260, D-264, D-275, D-276.
 
 1. `DECISIONS.md` D-013, D-015, D-030, D-039, D-083, D-094, D-097, D-102, D-109, D-114, D-153, D-156, D-169, D-187, D-188, D-191, D-192, D-194, D-197, D-205, D-215, D-217, D-224, D-228, D-229.
 2. `reference\drafting\SHEET_SETUP.md`, `TITLE_BLOCK_AND_ISSUE.md`, `ELEMENTS.md`.

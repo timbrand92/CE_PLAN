@@ -1,14 +1,14 @@
 # Current rulings: Index
 
-Current rulings as of 18 Nov 2026, 1:40 pm (Melbourne), from decisions D-001 to D-229. If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
+Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to D-297. If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
 
 **What this folder is.** One page per subject saying what is decided NOW, what was changed along the way, and what is still open. The history stays in `DECISIONS.md`. Written read-only from DECISIONS.md, RULES.md, UI_UX_RULES.md, the design, stage, interview and research files, and `C:\TimOS\RULES.md` rule 1.9. Nothing here is a new ruling.
 
-**The pages (25):** AUTOCAD_RULES, CHAT_AND_TIM, DETENTION, DIRECTION (added), DRAWING_AND_SHEETS, EDITING_AND_GRIPS (added), FIRST_RELEASE, FOUNDATION, HOW_WE_WORK, INLETS, JOB_AND_OFFICE, LABELS_AND_TEXT, LEVELS_AND_STANDARDS, LONG_SECTION, MANAGER, OLD_PLUGIN, OTHER_DRAINS, OUTLET_AND_LPD, PIPE, PIT, PIT_SCHEDULE, RIBBON_AND_NAMES, SHARED_TOOLS, TANK, WINDOWS.
+**The pages (26):** AUTOCAD_RULES, CHAT_AND_TIM, DETENTION, DIRECTION (added), DRAWING_AND_SHEETS, EDITING_AND_GRIPS (added), FIRST_RELEASE, FOUNDATION, HOW_WE_WORK, INLETS, JOB_AND_OFFICE, LABELS_AND_TEXT, LEVELS_AND_STANDARDS, LONG_SECTION, MANAGER, OLD_PLUGIN, OTHER_DRAINS, OUTLET_AND_LPD, PIPE, PIT, PIT_SCHEDULE, RIBBON_AND_NAMES, SCREENS_AND_STYLE (added 18 Nov, 5:30 pm), SHARED_TOOLS, TANK, WINDOWS.
 
 ## (a) Every decision and where it is placed
 
-**Count: 229 decisions, D-001 to D-229, each listed once below; no number is missing or used twice in DECISIONS.md (checked 18 Nov 2026, 1:17 pm for D-001 to D-225; D-226 to D-229 added at 1:40 pm).** D-016 to D-030 sit at the end of DECISIONS.md and D-156 and D-167 sit out of order; all are included. A decision may be placed on several pages; "superseded by" or "settled by" is shown where so. Every page a decision is cited on is listed.
+**Count: 297 decisions, D-001 to D-297, each listed once below; no number is missing or used twice in DECISIONS.md (checked 18 Nov 2026, 1:17 pm for D-001 to D-225; D-226 to D-229 added at 1:40 pm; D-230 to D-297 each read in DECISIONS.md and placed at about 5:30 pm).** D-230 to D-297 sit near the end of DECISIONS.md above "Not decided"; D-156 and D-167 sit out of order among them. D-016 to D-030 sit at the end of DECISIONS.md and D-156 and D-167 sit out of order; all are included. A decision may be placed on several pages; "superseded by" or "settled by" is shown where so. Every page a decision is cited on is listed.
 
 1. **D-001:** DIRECTION, OLD_PLUGIN.
 2. **D-002:** DIRECTION, FOUNDATION.
@@ -33,7 +33,7 @@ Current rulings as of 18 Nov 2026, 1:40 pm (Melbourne), from decisions D-001 to 
 21. **D-021:** DETENTION, FOUNDATION.
 22. **D-022:** DETENTION, FOUNDATION, LEVELS_AND_STANDARDS.
 23. **D-023:** DETENTION, LABELS_AND_TEXT.
-24. **D-024:** DETENTION, TANK.
+24. **D-024:** DETENTION, TANK; settled against D-100 by D-278 (the planning chat's call from the old jobs; his to overturn).
 25. **D-025:** JOB_AND_OFFICE.
 26. **D-026:** FIRST_RELEASE, JOB_AND_OFFICE.
 27. **D-027:** DIRECTION, FIRST_RELEASE, JOB_AND_OFFICE; reopened by D-049 item 7; partly answered by D-191 and D-119.
@@ -69,17 +69,17 @@ Current rulings as of 18 Nov 2026, 1:40 pm (Melbourne), from decisions D-001 to 
 57. **D-057:** CHAT_AND_TIM, PIPE, RIBBON_AND_NAMES.
 58. **D-058:** PIPE, RIBBON_AND_NAMES, WINDOWS.
 59. **D-059:** INLETS, RIBBON_AND_NAMES.
-60. **D-060:** PIPE, WINDOWS.
+60. **D-060:** PIPE, WINDOWS; refined by D-234; settled against D-143 and D-174 by D-263.
 61. **D-061:** EDITING_AND_GRIPS, PIPE, WINDOWS.
 62. **D-062:** WINDOWS; superseded by D-063.
 63. **D-063:** WINDOWS.
 64. **D-064:** WINDOWS.
 65. **D-065:** CHAT_AND_TIM, WINDOWS.
 66. **D-066:** WINDOWS.
-67. **D-067:** INLETS, OTHER_DRAINS, PIPE, PIT, TANK, WINDOWS.
+67. **D-067:** INLETS, OTHER_DRAINS, PIPE, PIT, TANK, WINDOWS; where the preview sits superseded by D-296 (size and form open under D-297).
 68. **D-068:** PIPE, PIT, WINDOWS.
 69. **D-069:** PIT, WINDOWS; "dark or light all through" superseded by D-166; rest stands.
-70. **D-070:** DIRECTION, PIPE, PIT, WINDOWS; theme superseded by D-166, accent by D-168; approval stands.
+70. **D-070:** DIRECTION, PIPE, PIT, WINDOWS; theme superseded by D-166, accent by D-168; approval stands; the look is replaced by the approved style, D-295.
 71. **D-071:** JOB_AND_OFFICE, MANAGER.
 72. **D-072:** MANAGER.
 73. **D-073:** MANAGER.
@@ -89,7 +89,7 @@ Current rulings as of 18 Nov 2026, 1:40 pm (Melbourne), from decisions D-001 to 
 77. **D-077:** EDITING_AND_GRIPS, PIT.
 78. **D-078:** LEVELS_AND_STANDARDS, PIT.
 79. **D-079:** FOUNDATION, PIPE.
-80. **D-080:** FOUNDATION, PIPE, PIT; the planning chat's working rule superseded by D-086; Tim's ruling stands.
+80. **D-080:** FOUNDATION, PIPE, PIT; the planning chat's working rule superseded by D-086; Tim's ruling stands; the list-only reading for pit size superseded by D-272.
 81. **D-081:** INLETS, LEVELS_AND_STANDARDS, PIPE.
 82. **D-082:** DETENTION, LABELS_AND_TEXT, PIPE.
 83. **D-083:** DRAWING_AND_SHEETS, PIPE; blue and layer settled by D-118, D-153, D-156.
@@ -109,8 +109,8 @@ Current rulings as of 18 Nov 2026, 1:40 pm (Melbourne), from decisions D-001 to 
 97. **D-097:** DETENTION, DRAWING_AND_SHEETS, FIRST_RELEASE, INLETS, OTHER_DRAINS, PIT_SCHEDULE, TANK.
 98. **D-098:** DETENTION, FIRST_RELEASE.
 99. **D-099:** DETENTION, WINDOWS.
-100. **D-100:** DETENTION, FOUNDATION, TANK.
-101. **D-101:** DETENTION, INLETS, LONG_SECTION, PIPE, PIT, PIT_SCHEDULE, RIBBON_AND_NAMES, TANK; TK superseded by D-170 (WT); LEVELS / LV superseded by D-196 (LONGSECTION / LG); rest stands.
+100. **D-100:** DETENTION, FOUNDATION, TANK; the worked-out tank split superseded by D-278 (survives only as a next-size-up suggestion).
+101. **D-101:** DETENTION, INLETS, LONG_SECTION, PIPE, PIT, PIT_SCHEDULE, RIBBON_AND_NAMES, TANK; TK superseded by D-170 (WT); LEVELS / LV superseded by D-196 (LONGSECTION / LG); SH superseded by D-233 (SCH); rest stands.
 102. **D-102:** DRAWING_AND_SHEETS, PIPE.
 103. **D-103:** FOUNDATION, PIT_SCHEDULE.
 104. **D-104:** FIRST_RELEASE, PIT.
@@ -142,9 +142,9 @@ Current rulings as of 18 Nov 2026, 1:40 pm (Melbourne), from decisions D-001 to 
 130. **D-130:** AUTOCAD_RULES.
 131. **D-131:** LONG_SECTION.
 132. **D-132:** LONG_SECTION.
-133. **D-133:** LEVELS_AND_STANDARDS, PIPE.
+133. **D-133:** LEVELS_AND_STANDARDS, PIPE; carried into the ten presets of D-287.
 134. **D-134:** LEVELS_AND_STANDARDS, PIPE.
-135. **D-135:** LEVELS_AND_STANDARDS, PIT.
+135. **D-135:** LEVELS_AND_STANDARDS, PIT; size from depth changed by D-235; the list-only reading for pit size superseded by D-272.
 136. **D-136:** LEVELS_AND_STANDARDS, PIT, PIT_SCHEDULE.
 137. **D-137:** AUTOCAD_RULES, CHAT_AND_TIM, FIRST_RELEASE, HOW_WE_WORK; item 4 ("nothing starts AutoCAD overnight") superseded by D-159; rest done.
 138. **D-138:** CHAT_AND_TIM, FIRST_RELEASE, HOW_WE_WORK.
@@ -152,7 +152,7 @@ Current rulings as of 18 Nov 2026, 1:40 pm (Melbourne), from decisions D-001 to 
 140. **D-140:** LEVELS_AND_STANDARDS, LONG_SECTION, PIPE, WINDOWS.
 141. **D-141:** LEVELS_AND_STANDARDS, PIT.
 142. **D-142:** LEVELS_AND_STANDARDS, PIPE.
-143. **D-143:** LEVELS_AND_STANDARDS, PIPE.
+143. **D-143:** LEVELS_AND_STANDARDS, PIPE; settled against D-060 by D-263.
 144. **D-144:** FOUNDATION, LEVELS_AND_STANDARDS.
 145. **D-145:** LEVELS_AND_STANDARDS, PIPE.
 146. **D-146:** LEVELS_AND_STANDARDS.
@@ -161,7 +161,7 @@ Current rulings as of 18 Nov 2026, 1:40 pm (Melbourne), from decisions D-001 to 
 149. **D-149:** LEVELS_AND_STANDARDS, PIT, WINDOWS.
 150. **D-150:** FOUNDATION, LEVELS_AND_STANDARDS.
 151. **D-151:** WINDOWS.
-152. **D-152:** LEVELS_AND_STANDARDS.
+152. **D-152:** LEVELS_AND_STANDARDS; the draft figures replaced by D-293 (which does not name it).
 153. **D-153:** DRAWING_AND_SHEETS, LABELS_AND_TEXT, PIPE; colour superseded by D-156; layer name not separately ruled.
 154. **D-154:** FOUNDATION, LABELS_AND_TEXT, PIPE.
 155. **D-155:** AUTOCAD_RULES, EDITING_AND_GRIPS.
@@ -177,13 +177,13 @@ Current rulings as of 18 Nov 2026, 1:40 pm (Melbourne), from decisions D-001 to 
 165. **D-165:** DIRECTION, HOW_WE_WORK.
 166. **D-166:** WINDOWS; accent "not yet picked" settled by D-168.
 167. **D-167:** WINDOWS.
-168. **D-168:** WINDOWS.
+168. **D-168:** WINDOWS; colour values superseded by D-295, the rose accent stands (D-292).
 169. **D-169:** DETENTION, DIRECTION, DRAWING_AND_SHEETS, FOUNDATION, INLETS, PIT_SCHEDULE, RIBBON_AND_NAMES, TANK.
-170. **D-170:** CHAT_AND_TIM, RIBBON_AND_NAMES, TANK.
+170. **D-170:** CHAT_AND_TIM, RIBBON_AND_NAMES, TANK; the alias-file rule set aside for one job by D-250 and D-251.
 171. **D-171:** CHAT_AND_TIM, DETENTION, DIRECTION, FIRST_RELEASE, FOUNDATION, INLETS, JOB_AND_OFFICE, WINDOWS.
 172. **D-172:** DETENTION.
 173. **D-173:** DETENTION.
-174. **D-174:** LEVELS_AND_STANDARDS, PIPE.
+174. **D-174:** LEVELS_AND_STANDARDS, PIPE; settled against D-060 by D-263.
 175. **D-175:** CHAT_AND_TIM, DETENTION, FOUNDATION, JOB_AND_OFFICE, LONG_SECTION, PIPE.
 176. **D-176:** DETENTION, DIRECTION, FOUNDATION, OUTLET_AND_LPD, PIPE, PIT, WINDOWS.
 177. **D-177:** FOUNDATION, LABELS_AND_TEXT, OUTLET_AND_LPD.
@@ -199,7 +199,7 @@ Current rulings as of 18 Nov 2026, 1:40 pm (Melbourne), from decisions D-001 to 
 187. **D-187:** DRAWING_AND_SHEETS, FIRST_RELEASE.
 188. **D-188:** DRAWING_AND_SHEETS, FOUNDATION.
 189. **D-189:** FIRST_RELEASE, OTHER_DRAINS, PIPE.
-190. **D-190:** FIRST_RELEASE, OUTLET_AND_LPD.
+190. **D-190:** FIRST_RELEASE, OUTLET_AND_LPD; the separate Outlet tool superseded by D-274 (the council pit or kerb as a proper outlet stands).
 191. **D-191:** DIRECTION, DRAWING_AND_SHEETS, FOUNDATION, JOB_AND_OFFICE.
 192. **D-192:** DRAWING_AND_SHEETS, FOUNDATION.
 193. **D-193:** JOB_AND_OFFICE, WINDOWS.
@@ -217,7 +217,7 @@ Current rulings as of 18 Nov 2026, 1:40 pm (Melbourne), from decisions D-001 to 
 205. **D-205:** DRAWING_AND_SHEETS, FIRST_RELEASE, HOW_WE_WORK, MANAGER, SHARED_TOOLS.
 206. **D-206:** OLD_PLUGIN.
 207. **D-207:** AUTOCAD_RULES, OLD_PLUGIN.
-208. **D-208:** CHAT_AND_TIM, FIRST_RELEASE, MANAGER, RIBBON_AND_NAMES, SHARED_TOOLS.
+208. **D-208:** CHAT_AND_TIM, FIRST_RELEASE, MANAGER, RIBBON_AND_NAMES, SHARED_TOOLS; the alias-file rule set aside for one job by D-250 and D-251.
 209. **D-209:** DRAWING_AND_SHEETS, FIRST_RELEASE, SHARED_TOOLS; the planning chat's reading confirmed by D-214.
 210. **D-210:** DRAWING_AND_SHEETS, RIBBON_AND_NAMES, SHARED_TOOLS.
 211. **D-211:** SHARED_TOOLS.
@@ -231,7 +231,7 @@ Current rulings as of 18 Nov 2026, 1:40 pm (Melbourne), from decisions D-001 to 
 219. **D-219:** FOUNDATION, WINDOWS.
 220. **D-220:** CHAT_AND_TIM, DETENTION, DIRECTION, FIRST_RELEASE.
 221. **D-221:** EDITING_AND_GRIPS, PIT, PIT_SCHEDULE.
-222. **D-222:** FIRST_RELEASE, OUTLET_AND_LPD.
+222. **D-222:** FIRST_RELEASE, OUTLET_AND_LPD; superseded by D-274.
 223. **D-223:** FIRST_RELEASE, INLETS, OTHER_DRAINS, PIPE.
 224. **D-224:** CHAT_AND_TIM, DRAWING_AND_SHEETS, PIT; its pit block proposal confirmed by D-228.
 225. **D-225:** HOW_WE_WORK.
@@ -239,12 +239,83 @@ Current rulings as of 18 Nov 2026, 1:40 pm (Melbourne), from decisions D-001 to 
 227. **D-227:** SHARED_TOOLS; replaces the hatch tick sheet HT-01 to HT-58 (TA-045).
 228. **D-228:** PIT, DRAWING_AND_SHEETS.
 229. **D-229:** SHARED_TOOLS, INLETS, PIPE, PIT, DRAWING_AND_SHEETS.
+230. **D-230:** DIRECTION, CHAT_AND_TIM; an instruction (the easiest AutoCAD-like way, from old-job evidence) and a duty to put missed messages in front of him again.
+231. **D-231:** HOW_WE_WORK.
+232. **D-232:** SHARED_TOOLS, DRAWING_AND_SHEETS, INLETS, OTHER_DRAINS, CHAT_AND_TIM.
+233. **D-233:** PIT_SCHEDULE, RIBBON_AND_NAMES, INLETS, OTHER_DRAINS, FIRST_RELEASE; SH in D-101 superseded (now SCH).
+234. **D-234:** WINDOWS, PIPE, DIRECTION; refines D-060; refined by D-263.
+235. **D-235:** PIT, LEVELS_AND_STANDARDS, DIRECTION; possible conflict with D-263 (list b).
+236. **D-236:** PIPE, LABELS_AND_TEXT, FOUNDATION; reading confirmed by D-238.
+237. **D-237:** PIPE, EDITING_AND_GRIPS.
+238. **D-238:** PIPE, LABELS_AND_TEXT, FOUNDATION.
+239. **D-239:** PIPE, FOUNDATION, DIRECTION.
+240. **D-240:** PIT, LEVELS_AND_STANDARDS, CHAT_AND_TIM.
+241. **D-241:** WINDOWS, CHAT_AND_TIM; not a ruling (a request to explain).
+242. **D-242:** PIT, LEVELS_AND_STANDARDS; carried into D-287.
+243. **D-243:** PIT, LEVELS_AND_STANDARDS; carried into D-287.
+244. **D-244:** EDITING_AND_GRIPS.
+245. **D-245:** OLD_PLUGIN, DETENTION; qualified by D-246.
+246. **D-246:** OLD_PLUGIN, DIRECTION, DETENTION, FIRST_RELEASE, CHAT_AND_TIM.
+247. **D-247:** PIT, DETENTION.
+248. **D-248:** LABELS_AND_TEXT, FOUNDATION, SHARED_TOOLS.
+249. **D-249:** DETENTION, JOB_AND_OFFICE.
+250. **D-250:** RIBBON_AND_NAMES, TANK, AUTOCAD_RULES, CHAT_AND_TIM, SHARED_TOOLS; sets aside "his alias file is never edited by a chat" for these eleven aliases only; possible conflict with D-208 on Q (list b).
+251. **D-251:** RIBBON_AND_NAMES, PIT, AUTOCAD_RULES, CHAT_AND_TIM.
+252. **D-252:** PIT.
+253. **D-253:** PIT, DETENTION, DRAWING_AND_SHEETS.
+254. **D-254:** AUTOCAD_RULES; superseded by D-255.
+255. **D-255:** AUTOCAD_RULES; supersedes D-254.
+256. **D-256:** PIT, PIPE, EDITING_AND_GRIPS.
+257. **D-257:** PIT, PIT_SCHEDULE.
+258. **D-258:** PIT, RIBBON_AND_NAMES, AUTOCAD_RULES, FIRST_RELEASE; unproven how AutoCAD chooses.
+259. **D-259:** PIT.
+260. **D-260:** PIT, PIPE, LABELS_AND_TEXT, DRAWING_AND_SHEETS, CHAT_AND_TIM; NOT Tim's words (planning chat's calls).
+261. **D-261:** PIT, PIPE, WINDOWS, SCREENS_AND_STYLE, CHAT_AND_TIM; NOT Tim's words; DQ-022 corrected by D-290; DQ-019 wording against D-286 (list b).
+262. **D-262:** PIT, EDITING_AND_GRIPS.
+263. **D-263:** WINDOWS, PIPE, PIT, INLETS, TANK; refines D-234; settles D-060 against D-143 and D-174.
+264. **D-264:** PIPE, DRAWING_AND_SHEETS.
+265. **D-265:** PIPE, LABELS_AND_TEXT.
+266. **D-266:** PIT, PIPE, EDITING_AND_GRIPS; closed in part by D-267.
+267. **D-267:** PIT, PIPE, LABELS_AND_TEXT, EDITING_AND_GRIPS.
+268. **D-268:** PIPE, LABELS_AND_TEXT, OTHER_DRAINS, CHAT_AND_TIM; a tight-space form owed.
+269. **D-269:** PIPE, LEVELS_AND_STANDARDS, OTHER_DRAINS.
+270. **D-270:** PIT, PIPE.
+271. **D-271:** LONG_SECTION, PIPE, LABELS_AND_TEXT, WINDOWS, FOUNDATION, CHAT_AND_TIM; NOT Tim's words.
+272. **D-272:** PIT, LEVELS_AND_STANDARDS; supersedes the list-only reading of D-080 and D-135 for pit size.
+273. **D-273:** OUTLET_AND_LPD, FIRST_RELEASE.
+274. **D-274:** OUTLET_AND_LPD, FIRST_RELEASE, RIBBON_AND_NAMES; supersedes D-222 and D-190's separate Outlet tool.
+275. **D-275:** OUTLET_AND_LPD, LABELS_AND_TEXT, FOUNDATION, DRAWING_AND_SHEETS.
+276. **D-276:** LONG_SECTION, DRAWING_AND_SHEETS, LEVELS_AND_STANDARDS, CHAT_AND_TIM; NOT Tim's words.
+277. **D-277:** PIPE, LABELS_AND_TEXT, LONG_SECTION, LEVELS_AND_STANDARDS, INLETS, WINDOWS, CHAT_AND_TIM; NOT Tim's words.
+278. **D-278:** TANK, DETENTION, FOUNDATION; settles D-024 against D-100 (the planning chat's call from the old jobs; his to overturn).
+279. **D-279:** INLETS.
+280. **D-280:** LEVELS_AND_STANDARDS, LONG_SECTION.
+281. **D-281:** OLD_PLUGIN, DIRECTION, DETENTION, CHAT_AND_TIM; an instruction (an artifact page is owed).
+282. **D-282:** TANK, DETENTION, LABELS_AND_TEXT, CHAT_AND_TIM; NOT Tim's words.
+283. **D-283:** DETENTION, LEVELS_AND_STANDARDS.
+284. **D-284:** DETENTION.
+285. **D-285:** DETENTION, TANK, CHAT_AND_TIM; NOT Tim's words.
+286. **D-286:** WINDOWS, SCREENS_AND_STYLE, CHAT_AND_TIM, HOW_WE_WORK, FOUNDATION, DIRECTION, FIRST_RELEASE.
+287. **D-287:** LEVELS_AND_STANDARDS, PIT, PIPE; carries D-133, D-242 and D-243.
+288. **D-288:** PIT_SCHEDULE, INLETS, HOW_WE_WORK, LEVELS_AND_STANDARDS, WINDOWS, FOUNDATION, EDITING_AND_GRIPS, CHAT_AND_TIM; NOT Tim's words.
+289. **D-289:** TANK, DETENTION, CHAT_AND_TIM; NOT Tim's words; follows D-278 and D-285.
+290. **D-290:** PIPE, LABELS_AND_TEXT, CHAT_AND_TIM; NOT Tim's words; corrects D-261 (DQ-022).
+291. **D-291:** SCREENS_AND_STYLE (WINDOWS detail line); closed by D-295.
+292. **D-292:** SCREENS_AND_STYLE, WINDOWS; the grey part replaced by D-294, the rose stands.
+293. **D-293:** LEVELS_AND_STANDARDS, JOB_AND_OFFICE, CHAT_AND_TIM; replaces D-152's draft figures (D-293 does not name it).
+294. **D-294:** SCREENS_AND_STYLE, WINDOWS; replaces "lighter grey" in D-292.
+295. **D-295:** SCREENS_AND_STYLE, WINDOWS, HOW_WE_WORK, FOUNDATION, DIRECTION, FIRST_RELEASE, PIT, PIPE, INLETS, TANK; replaces the look parts of the UI rulings and the colour values of D-168 except the rose; qualified by D-297.
+296. **D-296:** WINDOWS, SCREENS_AND_STYLE, PIT, PIPE, INLETS, TANK, OTHER_DRAINS, LONG_SECTION, PIT_SCHEDULE, FIRST_RELEASE; replaces D-067's two-style rule for where the preview sits; qualified by D-297.
+297. **D-297:** WINDOWS, SCREENS_AND_STYLE, PIT, PIPE, INLETS, TANK, OTHER_DRAINS, LONG_SECTION, PIT_SCHEDULE, FIRST_RELEASE, CHAT_AND_TIM; the preview's size and form are OPEN.
 
 ## (b) Conflicts found (two live decisions, neither marks the other superseded; not chosen here)
 
-1. **CONFLICT, tank re-use (D-024 against D-100):** D-024 says re-use volume comes from the STORM or sustainability report and the rest of the tank is detention; D-100 says the detention part is worked out from the volume needed and re-use takes the rest. The input audit names this itself (INPUT_AUDIT question 4, section 2 item 5) and recommends "both, as one sum". Pages: TANK, DETENTION. Waits on Tim.
-2. **CONFLICT, the figures a new pipe opens with (D-060 against D-143 and D-174):** D-060 says the window opens filled in with what was used last; D-143 says a new gravity pipe starts at 1 in 100 and D-174 says a new pipe opens at 100 everywhere. Page: PIPE. Waits on Tim.
+1. **CONFLICT, tank re-use (D-024 against D-100):** D-024 says re-use volume comes from the STORM or sustainability report and the rest of the tank is detention; D-100 says the detention part is worked out from the volume needed and re-use takes the rest. The input audit names this itself (INPUT_AUDIT question 4, section 2 item 5) and recommends "both, as one sum". Pages: TANK, DETENTION. Waits on Tim. **SETTLED by D-278 (18 Nov; the planning chat's call from the old jobs; his to overturn):** D-024 stands and D-100 survives only as a next-size-up suggestion.
+2. **CONFLICT, the figures a new pipe opens with (D-060 against D-143 and D-174):** D-060 says the window opens filled in with what was used last; D-143 says a new gravity pipe starts at 1 in 100 and D-174 says a new pipe opens at 100 everywhere. Page: PIPE. Waits on Tim. **SETTLED by D-263 (18 Nov):** a pipe from nothing opens at the office default (100 dia at 1 in 100); a pipe drawn off another opens with the size it continues.
 3. **POSSIBLE CONFLICT, where whole-job things live (D-048 against D-099 and D-171):** D-048 puts job facts, levels, storage, checks and sheet in a CE side panel; D-099 makes one Detention window for the job and D-171 one Job window typed once per job. They may be compatible, but nobody has said so. Page: WINDOWS. Waits on Tim.
+4. **POSSIBLE CONFLICT, what the Pit tool opens at (D-235 against D-263):** D-235 says PIT opens at 450 x 450 and PP at 350 x 350; D-263 says pits open with the last used choices, kept between AutoCAD sessions. They agree on first use and may differ after; neither marks the other. Page: PIT. Waits on Tim.
+5. **POSSIBLE CONFLICT, the words for a missing value (D-261 DQ-019 against D-286 rule 24 and the approved style, D-295):** "unknown" in small boxes and "not known yet" in words (the planning chat's call; his to overturn) against exactly "Not known" on a window and "TBC" on the sheet. D-286 says its rules win over earlier UI rulings but names no decision. Pages: WINDOWS, SCREENS_AND_STYLE. Waits on Tim.
+6. **POSSIBLE CONFLICT, Tim's Q alias (D-208 against D-250):** D-208 says the CE arrow leader is QL and Tim keeps his own Q alias; D-250 lists "q" among the eleven aliases removed from his alias file. Neither says whether they are the same alias. Page: SHARED_TOOLS. Waits on Tim.
 
 **Conflicts inside documents (not between decisions), listed so builders do not follow stale text:**
 
@@ -277,35 +348,46 @@ Current rulings as of 18 Nov 2026, 1:40 pm (Melbourne), from decisions D-001 to 
 12. **D-049** carries eight rulings across many subjects; placed mainly on DIRECTION, with parts on WINDOWS, RIBBON_AND_NAMES, LABELS_AND_TEXT, JOB_AND_OFFICE and CHAT_AND_TIM.
 13. **Tim's words of 18 Nov "build the board" and "in future i dont want to be the one managing anything apart from what is in chat"** are now filed as D-226; closed on CHAT_AND_TIM.
 14. **TA-047 to TA-060 (hatch list, overlaps, scale, extra layers)** are now filed as D-227 (hatches, TA-047 to TA-063) and the block answers TA-064 to TA-073 as D-229; placed on SHARED_TOOLS.
+15. **D-230 and D-281 are instructions, not rulings** (an easiest-way proposal and an artifact page are owed); **D-241 is a request to explain, not a ruling.** Placed where they bear, with what is owed.
+16. **D-250's last sentence is the planning chat's reading** (a yes to edit that one file for those eleven names, dated copy first); whether the alias file counts as a "saved AutoCAD setting" under rule 1.9 is not said. Placed on RIBBON_AND_NAMES and AUTOCAD_RULES as ruled for these twelve aliases (D-250, D-251) only.
+17. **D-278 is the planning chat's call from the old jobs, given after Tim asked it to look at past jobs;** treated as his to overturn. With two or more tanks, how one typed re-use figure is shared is not said (D-278 against D-285 DQ-073). Placed on TANK and DETENTION.
+18. **D-293 does not name D-152,** but says there is no office preset and thickness comes from each job's plans; read as replacing D-152's draft figures. Its "read from the plans" reading (an engineer takes it from the drawings) is the planning chat's.
+19. **D-282 DQ-063 (tank orifice sizes 20 to 50 offered, 30 first) and D-285 DQ-076 (no orifice pick list)** are read as two different orifices (the tank's and the control pit's); neither says so.
+20. **D-254 was a yes that was never carried out;** D-255 supersedes it by leaving SECURELOAD at 0 (the planning chat's call; his to overturn).
+21. **D-273 ticks "soak on site" as a kind of system end** while D-104 keeps silt and soakage pits later; read as the end only, with the soakage sums staying later.
+22. **D-245 (advice seen) and D-246 (he does not use the old commands)** were given a few hours apart; D-246 is read as qualifying how much the BUG-866 risk matters, not as withdrawing D-245.
+23. **D-292's "Lighter grey" was replaced by D-294 within minutes;** D-294 says so. **D-295 and D-296 were qualified at once by D-297** (the preview panel is open); the pages keep both.
+24. **D-290 and D-261 DQ-022:** the label-block call was corrected by the planning chat itself and told to him; it is not a ruling from him.
 
 ## (d) Count per page
 
 Live rulings are the numbered lines under "What is decided now"; superseded lines are under "Changed along the way"; open items are under "Still open on this subject". The same open item can appear on more than one page (for example the tank re-use conflict is on TANK and DETENTION), so the totals count each page's copy.
 
-1. **AUTOCAD_RULES:** 12 live rulings, 4 superseded lines, 7 open items.
-2. **CHAT_AND_TIM:** 21 live, 2 superseded, 5 open.
-3. **DETENTION:** 23 live, 2 superseded, 19 open.
-4. **DIRECTION:** 21 live, 4 superseded, 7 open.
-5. **DRAWING_AND_SHEETS:** 21 live, 3 superseded, 15 open.
-6. **EDITING_AND_GRIPS:** 14 live, 0 superseded (the one line there says nothing was replaced), 8 open.
-7. **FIRST_RELEASE:** 26 live, 3 superseded, 10 open.
-8. **FOUNDATION:** 27 live, 5 superseded, 14 open.
-9. **HOW_WE_WORK:** 18 live, 2 superseded, 14 open.
-10. **INLETS:** 12 live, 1 superseded, 11 open.
-11. **JOB_AND_OFFICE:** 17 live, 3 superseded, 12 open.
-12. **LABELS_AND_TEXT:** 16 live, 1 superseded, 9 open.
-13. **LEVELS_AND_STANDARDS:** 21 live, 5 superseded, 10 open.
-14. **LONG_SECTION:** 14 live, 3 superseded, 9 open.
+1. **AUTOCAD_RULES:** 16 live rulings, 5 superseded lines, 8 open items.
+2. **CHAT_AND_TIM:** 27 live, 2 superseded, 6 open.
+3. **DETENTION:** 32 live, 5 superseded, 21 open.
+4. **DIRECTION:** 25 live, 4 superseded, 8 open.
+5. **DRAWING_AND_SHEETS:** 27 live, 3 superseded, 17 open.
+6. **EDITING_AND_GRIPS:** 19 live, 1 superseded (D-199 made specific by D-244; the older line there says nothing was replaced), 9 open.
+7. **FIRST_RELEASE:** 31 live, 4 superseded, 10 open.
+8. **FOUNDATION:** 33 live, 6 superseded, 14 open.
+9. **HOW_WE_WORK:** 21 live, 2 superseded, 14 open.
+10. **INLETS:** 17 live, 3 superseded, 12 open.
+11. **JOB_AND_OFFICE:** 19 live, 3 superseded, 12 open.
+12. **LABELS_AND_TEXT:** 25 live, 3 superseded, 10 open.
+13. **LEVELS_AND_STANDARDS:** 29 live, 8 superseded, 12 open.
+14. **LONG_SECTION:** 18 live, 5 superseded, 11 open.
 15. **MANAGER:** 10 live, 3 superseded, 12 open.
-16. **OLD_PLUGIN:** 11 live, 0 superseded (the one line there says none), 9 open.
-17. **OTHER_DRAINS:** 8 live, 1 superseded, 7 open.
-18. **OUTLET_AND_LPD:** 9 live, 1 superseded, 8 open.
-19. **PIPE:** 27 live, 5 superseded, 18 open.
-20. **PIT:** 27 live, 4 superseded, 18 open.
-21. **PIT_SCHEDULE:** 15 live, 2 superseded, 10 open.
-22. **RIBBON_AND_NAMES:** 15 live, 8 superseded, 10 open.
-23. **SHARED_TOOLS:** 27 live, 6 superseded, 19 open.
-24. **TANK:** 9 live, 2 superseded, 10 open.
-25. **WINDOWS:** 23 live, 5 superseded, 17 open.
+16. **OLD_PLUGIN:** 14 live, 0 superseded (the lines there say nothing was superseded), 10 open.
+17. **OTHER_DRAINS:** 12 live, 1 superseded, 7 open.
+18. **OUTLET_AND_LPD:** 12 live, 2 superseded, 10 open.
+19. **PIPE:** 42 live, 9 superseded, 22 open.
+20. **PIT:** 41 live, 9 superseded, 23 open.
+21. **PIT_SCHEDULE:** 19 live, 3 superseded, 11 open.
+22. **RIBBON_AND_NAMES:** 21 live, 11 superseded, 12 open.
+23. **SHARED_TOOLS:** 30 live, 6 superseded, 21 open.
+24. **TANK:** 15 live, 6 superseded, 12 open.
+25. **WINDOWS:** 30 live, 10 superseded, 22 open.
+26. **SCREENS_AND_STYLE (added 18 Nov, 5:30 pm):** 16 live, 5 superseded, 9 open.
 
-**Totals:** 444 live ruling lines, 75 superseded lines, 288 open items (page copies). Open items by who they wait on, by the first party named: Tim 167; the build chat 50; the planning chat 39; a test 32. Items closed by D-226 to D-229 are kept on each page in a "Closed" line.
+**Totals (18 Nov, 5:30 pm):** 601 live ruling lines, 119 superseded lines, 334 open items (page copies), across 26 pages. Open items by who they wait on, by the first party named: Tim 167; the build chat 50; the planning chat 39; a test 32; that split was counted at 1:40 pm for D-001 to D-229 and was not recounted after the D-230 to D-297 update. Items closed by D-226 to D-229 are kept on each page in a "Closed" line, and items closed by D-230 to D-297 in a "Closed (D-230 to D-297)" line where any closed. The new lines are under "Added 18 Nov 2026, D-230 to D-297" on each page.

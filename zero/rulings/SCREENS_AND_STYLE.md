@@ -1,0 +1,60 @@
+# Current rulings: Screens and style (the 31 screen rules, the approved window style, the preview)
+
+Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to D-297. If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
+
+(Added subject: these decisions replace the look parts of the older window rulings and did not fit one named page. WINDOWS keeps the older window rulings, each marked where this page replaces it.)
+
+## What is decided now
+
+### Tim's screen design rules
+
+1. **Every screen, page and window in this project matches his 31 screen design rules (D-286):** "Every screen, page and window in this project is to match these." They are kept word for word in `design\SCREEN_RULES_18NOV.md` and are replaced by the TimOS screen-design guide when that lands.
+2. **The process (his rules 1 to 3):** change nothing yet; list every screen in groups marked meets / fails / not checked with a count "N of M"; show him ONE mock-up of the worst offender fixed, his look approves the style; then fix by risk (a wrong figure or anything pretending to work first), the rest when each screen is next touched, no rebuilds (D-286).
+3. **Where the rules disagree with an earlier UI ruling, the rules win** (the rose accent on padlocks and step marks of D-168; the light and dark versions on the bench against "ONE colour scheme only" inside AutoCAD; cards of words; UI_PLAN), and each disagreement is listed in the audit (D-286).
+4. **A separate checker, never the chat that built the screen, looks at every screen before Tim sees it** (his rule 31, D-286); once the style is approved a separate checker's look is enough for other windows in that style (D-295).
+5. **Replies to him end Completed / Not completed / Next,** answer first, plain words, FOR TIM above a line (D-286).
+6. **The rules in short, as Tim wrote them (D-286):** every card reads like a maths teacher's working (one answer, one biggest bold number; label, answer, working, a small grey note; the working shown as a sum with a line above the result and a double line under the final answer; three text levels; every card shows its answer as a picture, a card of words alone is a fail); colour means something or it is not used and always comes with a word; status only green good, amber needs me, red late, over or wrong; brand colour for main buttons and the selected item, never for data; inside AutoCAD the button accent is unlike any colour the drawing shows; every field has a source in the order worked out, captured automatically, read by AI, pre-filled, typed as a last resort; undo instead of "Are you sure?"; nothing pretends to work; a missing value shows "Not known" or "TBC", never 0, never a guess; a preview shows the real thing and updates as he types; the software suggests and the person decides; spacing on the scale 8, 16, 24, 32; every word is one a tradie or a regular person understands; realistic made-up content in every mock-up.
+
+### The approved window style
+
+7. **The style is approved (D-295):** version 4 of the Detention mock-up (`pictures\detention_fixed_mockup.html`), asked "Is this the style for every window?": "Yes, this is the style". It is written up in `design\STYLE_APPROVED_18NOV.md`; where that page and the mock-up disagree the mock-up wins. It replaces the look parts of `design\UI_PLAN.md` and the colour values of D-168, except the rose accent, which stands.
+8. **What every window is made of, in this order:** the title bar; the drawing (preview) at the LEFT, full height; the answer band at the top of the right side, one answer in plain words with its figure on a solid status fill; step 1 "What you type" (every input and nothing else); step 2 "What the drawing gives" (plain text, no boxes, each figure with its source word); step 3 "The answers" (each with its figure, a picture, the working as a sum, one grey note); a bottom bar with Cancel and OK at the right, OK the only accent-filled button (D-295, STYLE_APPROVED section 1). A small tool keeps the same order with fewer rows; a window with nothing to work out still has the drawing, the band and step 1.
+9. **The preview sits at the left in every window (D-296):** "Left side, as shown (Recommended)", including Pipe and Long section. This replaces the two-style ruling of D-067 for where the preview sits.
+10. **Inputs against worked-out figures (the rule Tim asked for):** an input is a box (lighter fill, light border, bright figure, its unit inside in lighter grey) and all inputs are together in step 1; a worked-out or read-off figure is plain text with no box; an input that still needs the drafter has a 2 px amber border and a small amber "Needs you" tag; an input the drafter changed carries a grey outlined "Changed" tag; a figure shown in two places says so in a grey note; a missing value reads exactly "Not known" on a window and "TBC" on the sheet (STYLE_APPROVED section 2).
+11. **Colour: one dark scheme (D-294, D-295):** window #2B2D30, cards #383B40, wells #232528, input boxes #4A4D55, borders #4A4D53 (input border #8A8E96), preview ground #16181B, neutral greys with no blue cast; no light version. Status only, always with its word, as a solid fill with dark text #10131A: green Suits; amber Needs a look and Needs you; orange-red #FF6B4A Short and Wrong (kept clear of the rose). The accent is rose #FF70B3 with dark text, on OK and the one selected choice button only (D-292, D-295); ticks, padlocks and icons are grey-white. Chart colours only where three or more parts must be told apart, in the fixed order of his rule 17, labels on the bar, no legend.
+12. **Type and spacing:** one font family for words and figures with tabular numerals and no slashed zero or typewriter font (IBM Plex Sans on the mock-up; the font shipped inside AutoCAD is the build's to prove, Segoe UI as the fallback); three sizes only, 24 answer, 14 body, 12 note; bold only on the band's figures, each answer figure and each double-lined final figure; sums with signs in their own narrow column, figures right-aligned, rows 32 apart, and a sum must add up exactly as printed; gaps 8, 16, 24, 32 and one 8 px corner; plain words first with the formal word in brackets ("Hole size (orifice)", "Council pit (LPD)") (STYLE_APPROVED section 4).
+
+### What Tim said about the look, in order
+
+13. **The third mock-up (D-291):** "Right direction, changes needed". Not approved as the style; the one window was fixed and shown again before any other window changed.
+14. **What "changes needed" meant (D-294):** "it should draw your eye to what you need to input and what is critical. also if i was to look at these windows for the first time i wouldnt know where to look and why its all there?also what happened to the previews . i actually think i like the dark background the best", and "The number font looks odd". So: the eye goes first to what the drafter must TYPE and what is CRITICAL; a first-time reader can tell where to start, in what order and why each part is there; the preview comes back (the drawing as AutoCAD shows it, with where on the plan and where in the system, D-167); the dark ground is preferred; figures in an ordinary font.
+15. **Grey and button colour (D-292):** "Lighter grey, rose button". The accent stays rose, his D-168 pick confirmed over the CE off-white. Planning chat's note, not his words: the checker found rose close to the red warning, so the red status colour is kept clearly apart from rose and the two are never both fills side by side without their words.
+16. **Preview content stands (D-167):** the drawing as AutoCAD shows it from the office layers, colours, text and arrow; a small site locator in the corner; a strip under it with the run as a chain and this object lit; the thing being changed highlighted the same way in all three.
+
+## Changed along the way
+
+1. **"Lighter grey" (D-292, 5:05 pm) was replaced by the dark ground (D-294, 5:10 pm, 18 Nov);** the rose button stands.
+2. **The colour values of D-168 were replaced by the approved style's values (D-295), except the rose accent;** rose is now OK and the one selected choice only, not ticks, padlocks, the "changed" chip or the answer underline.
+3. **The two preview styles of D-067 were replaced for where the preview sits by "left side" (D-296).**
+4. **The Pit and Pipe windows as the pattern every window matches (D-070) were replaced for the look by the approved Detention style (D-295);** their structure stands and they are restyled when next touched (D-286 rule 3).
+5. **The look parts of `design\UI_PLAN.md` are replaced by `design\STYLE_APPROVED_18NOV.md` (D-295);** UI_PLAN's section 5 was already stale (blue accent, follows AutoCAD's theme).
+
+## Still open on this subject
+
+1. **THE PREVIEW PANEL IS OPEN (D-297):** "IM NOT CONVINCED THAT WINDOW WILL SHOW THE PREVIEW WELL ENOUGH". The style stands approved for everything except the preview panel: how big it is and how it shows a real job well enough. STYLE_APPROVED's "about a quarter of the window" is NOT a ruling. Pictures of the same window with the preview done other ways (bigger; enlarging on a click; the window standing beside the real drawing, which zooms to and lights up the system) are owed for his choice, and no window's preview is built to the 380 px panel until he rules. Waits on: the planning chat, then Tim.
+2. **The audit of every screen** in groups (meets / fails / not checked, "N of M") and the list of each disagreement with an earlier UI ruling (D-286 rules 1 and 3). Waits on: the planning chat.
+3. **Click budgets, undo and motion (his rules 18, 21 and 28):** to be written and tested per tool (STYLE_APPROVED section 5). Waits on: the build chat.
+4. **How a window looks at 1080 and 1440 and over real model space:** the mock-up was checked at one size, 1536 by 864. Waits on: a test.
+5. **The plain names of the two detention methods** ("Office method (Boyd's)", "Council tool (OSD4W)") are the planning chat's and not confirmed by Tim. Waits on: Tim.
+6. **Small faults the builder listed on the mock-up** (the spare label close to the needed marker, empty space at the right of step 2, two close labels in the drawing, 4 px chips in the chain) are to be fixed when the real window is built, not copied. Waits on: the build chat.
+7. **The font shipped inside AutoCAD** is the build's to prove (STYLE_APPROVED section 4). Waits on: a test.
+8. **POSSIBLE CONFLICT: the wording of a missing value.** D-261 DQ-019 (planning chat's call from his rulings; his to overturn) says "unknown" in small boxes and "not known yet" in words; D-286 rule 24 and the approved style say exactly "Not known" on a window and "TBC" on the sheet. D-286 says its rules win over earlier UI rulings but names no decision superseded. Waits on: Tim.
+9. **The TimOS screen-design guide** replaces his interim rules when it lands (D-286). Waits on: Tim.
+
+**Closed:** whether the Detention mock-up is the style for every window (closed by D-295, except the preview panel, open under D-297); where the preview sits (closed by D-296); what was wrong with the layout and colours (answered by D-286 and D-294); whether the third mock-up was approved (D-291, no; D-295, yes for the fourth).
+
+## Where the detail lives
+
+1. `DECISIONS.md` D-167, D-168, D-286, D-291 to D-297.
+2. `design\SCREEN_RULES_18NOV.md`; `design\STYLE_APPROVED_18NOV.md`; `design\UI_PLAN.md` (look parts replaced).
+3. `pictures\detention_fixed_mockup.html` (version 4) and `pictures\detention_fixed_suits.png`, `detention_fixed_short.png`, `detention_fixed_notknown.png`.

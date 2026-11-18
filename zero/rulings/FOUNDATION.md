@@ -1,6 +1,6 @@
 # Current rulings: Foundation (facts, sums, joins, standards, checks, unfinished, assumed, copies, what a drawing remembers)
 
-Current rulings as of 18 Nov 2026, 1:20 pm (Melbourne), from decisions D-001 to D-225. If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
+Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to D-297. If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
 
 ## What is decided now
 
@@ -10,7 +10,7 @@ Current rulings as of 18 Nov 2026, 1:20 pm (Melbourne), from decisions D-001 to 
 2. **Type it once, carried throughout** (D-002); **disagreeing sources are never left standing:** the user picks the correct number or adds a short note (D-003).
 3. **Source words:** given, measured, chosen, worked out, assumed, standard, typed over (D-150, which added "typed over" for a standard that has been typed over).
 4. **A site area can come from the drawing, be typed, or be given in a council document:** one more source on the same fact, not a new piece of screen (D-108, D-107).
-5. **Worked-out facts:** for example the tank split is worked out unless held (D-100).
+5. **Worked-out facts:** for example the tank split is worked out unless held (D-100). **The tank example superseded by D-278 (18 Nov; planning chat's call from his rulings; his to overturn):** re-use is typed from the report and detention is tank less re-use; the idea that worked-out facts are worked out unless held stands.
 6. **The plug-in never bends a standard by itself;** it says how far out and what could be changed (D-124), and reports a clash by stretch and amount without blaming one pipe (D-125).
 7. **The sums live inside the plug-in** and every view prints from the same numbers (D-021).
 
@@ -52,6 +52,15 @@ Current rulings as of 18 Nov 2026, 1:20 pm (Melbourne), from decisions D-001 to 
 26. **Only ordinary AutoCAD linework, text and the office's own blocks;** the special one-piece pipe object, the linking code around it, facts held in several places with repair commands, the settings store where a new value needs new code, and the old windows are left behind (D-094).
 27. **Build approach from the trials:** a join is kept as a soft pointer on the object itself; joined pipe ends are moved at the end of the command (one undo step); a position stamp is kept with each note; no drawing-wide shelf of facts keyed by handle (THE_PLAN section 6a, from trial results; not a Tim decision).
 
+### Added 18 Nov 2026, D-230 to D-297
+
+28. **A pipe may have inverts at both ends, one end or neither (D-236, D-238):** the foundation already allowed it; the label ends "MIN." when both inverts are not given (see PIPE items 29 and 30).
+29. **Material follows the size as a "standard" (D-239):** by an office list, shown as "standard", and when typed over it shows "typed over" with the standard's figure beside it (D-150).
+30. **A missing value (D-286 rule 24; D-295):** reads exactly "Not known" on a window and "TBC" on the sheet; never 0, never a guess; unfinished is normal, warn and do not block.
+31. **The software suggests, the person decides (D-286 rules 20, 21 and 26):** every field has a source in this order: worked out, captured automatically, read by AI from an email, PDF, photo or voice, pre-filled, typed only as a last resort; undo instead of "Are you sure?"; never overwrite a value he typed or locked, show both.
+32. **A held figure is never let go silently (D-271 DQ-036, D-288 DQ-100; planning chat's call from his rulings; his to overturn):** a typed grade is never let go; a level that disagrees shows "Out by" and changes nothing (D-124, D-125); a figure the drafter holds is not changed without a word on screen.
+33. **A system with no end is listed first in the Unfinished list (D-275),** with the same end lit in the system strip.
+
 ## Changed along the way
 
 1. **D-011 "one big element" became separate elements working together (D-031, 16 Nov).**
@@ -59,13 +68,14 @@ Current rulings as of 18 Nov 2026, 1:20 pm (Melbourne), from decisions D-001 to 
 3. **FOUNDATION.md "Rulings from the first trial" item 1 still says a printed grade is what the printed inverts give (D-123); for the label this was replaced by D-154 (17 Nov):** print the grade as typed. FOUNDATION.md is stale on this line.
 4. **Read cover levels off the drawing (D-171 change 5, INPUT_AUDIT) was withdrawn by D-178 (18 Nov).**
 5. **The amber-or-grey question for "cannot check yet" (SITUATIONS, OQ-06) was settled grey by D-219 (18 Nov).**
+6. **"The tank split is worked out unless held" (D-100, the example under item 5) was replaced by "re-use typed, detention is tank less re-use" (D-278, 18 Nov; planning chat's call from his rulings; his to overturn).**
 
 ## Still open on this subject
 
 1. **FOUNDATION.md beyond the hold idea is "proposed":** the seven blocks (fact, sum, thing, join, standard, check, view) are the planning chat's write-up; only the hold idea is agreed (FOUNDATION.md status, D-086). Waits on: Tim.
 2. **SITUATIONS rules 1 to 18 "have NOT been put to Tim one by one";** where a rule goes beyond his answers it is only a proposal (SITUATIONS "Rules this adds to the foundation"). Waits on: Tim.
 3. **Where the network, job facts and office standards are stored** so later tools read one place, and keeping job facts out of pasted objects (Q-204; SITUATIONS C14). Waits on: the build chat.
-4. **The standing note wording for APPROX.:** not yet given (D-177). Waits on: Tim.
+4. **The standing note wording for APPROX.:** not yet given (D-177). Waits on: Tim. **Closed by D-248 (18 Nov):** "Yes, that wording (Recommended)" (see LABELS_AND_TEXT item 20).
 5. **How many layers of the old evidence model are needed** (PARKING_LOT P-02). Waits on: the planning chat.
 6. **Whether sums in any direction stay quick and predictable on a branched run inside AutoCAD** (FOUNDATION honest limits; THE_PLAN section 6 item 4). Waits on: a test.
 7. **A "junction on a pipe" join is missing from the joins list** (SITUATIONS B6). Waits on: the build chat.
@@ -74,10 +84,12 @@ Current rulings as of 18 Nov 2026, 1:20 pm (Melbourne), from decisions D-001 to 
 10. **Exploding a pipe loses its note** (CETEST FAIL, midday 18 Nov); EXPLODE awaits a supervised check (SITUATIONS C10). Waits on: the build chat.
 11. **The live drawing that shows nothing without the plug-in is kept as a test case;** where the file is has not been given (PARKING_LOT P-04, Q-017). Waits on: Tim.
 12. **Proof that a sheet edited with no plug-in comes back and is reported correctly:** PASS in trial 3; AutoCAD LT and a live drawing not tested (THE_PLAN section 6a). Waits on: a test.
-13. **R-36 lists "read from a schedule or PDF by Claude" as a source;** D-150's list has no such word. Waits on: Tim.
+13. **R-36 lists "read from a schedule or PDF by Claude" as a source;** D-150's list has no such word. Waits on: Tim. D-286 rule 20 also lists "read by AI from an email, PDF, photo or voice" in an order of sources; how that order and the D-150 words fit together is not said.
 14. **Following stays on from open (SITUATIONS J6) against PERFORMANCE 2.6 "starts only when a CE tool is first used"** (SITUATIONS document conflicts). Waits on: Tim.
 
 ## Where the detail lives
+
+Added 18 Nov 2026: `DECISIONS.md` D-236, D-238, D-239, D-248, D-271, D-275, D-278, D-286, D-288, D-295; `design\SCREEN_RULES_18NOV.md`.
 
 1. `design\FOUNDATION.md`; `DECISIONS.md` D-002, D-003, D-012, D-013, D-021, D-022, D-030, D-085, D-086, D-094, D-100, D-107, D-108, D-124, D-125, D-150, D-171, D-175 to D-180, D-182, D-185, D-188, D-191, D-192, D-213, D-219.
 2. `design\SITUATIONS.md`; `design\INPUT_AUDIT.md`; `reference\design\SUMS.md`.

@@ -1,6 +1,6 @@
 # Current rulings: Shared everyday tools (ST-01 to ST-18, CLEAN first)
 
-Current rulings as of 18 Nov 2026, 1:40 pm (Melbourne), from decisions D-001 to D-229. If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
+Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to D-297. If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
 
 Answers marked TA-xxx are Tim's words in `interview_tools\ANSWERS.md`; the hatch answers TA-047 to TA-063 are filed as D-227 and the block answers TA-064 to TA-073 as D-229.
 
@@ -28,7 +28,7 @@ Answers marked TA-xxx are Tim's words in `interview_tools\ANSWERS.md`; the hatch
 15. **ST-07 REVBOX / RV, revision box:** keeps its object-snap question and can cloud any shape (D-203, D-208, D-210).
 16. **ST-08 BREAKLINE / BL:** trims the lines it crosses; Tim moves his own BL alias (D-208, D-210).
 17. **ST-09 CONSTRUCTIONJOINT / CJ and SAWCUT / SSC:** dashes right at 1:100, bends allowed, a full-word label placed like the 25T / 25B text depending on what is around (D-203, D-210, TA-025, TA-033).
-18. **ST-10 BLOCKS / BLK, the blocks palette:** built from one office block list taken from the master drawing (D-208); all 453 blocks are looked through read-only first and "we might not need all blocks" (D-211).
+18. **ST-10 BLOCKS / BLK, the blocks palette:** built from one office block list taken from the master drawing (D-208); all 453 blocks are looked through read-only first and "we might not need all blocks" (D-211). **Palette set by D-232 (18 Nov):** 37 blocks (item 28).
 19. **Tim's ten block decisions:** the office pit is PIT BLOCK 3 (BK-020); inlet symbols are the WITH MASK set; pipe description label blocks are dropped; left / right and top / bottom pairs become one dynamic block each when structural is unparked; the 104 blocks of unknown purpose go on picture sheets for him to tick; the 65 notes held as blocks stay outside the palette, in the master drawing only; BK-450 is dropped; all 33 drop-candidates are dropped; the 181 structural blocks wait for a structural palette with the CE Structural tab; all 51 exact copies are merged on a copy of the master first, the master replaced only on his word (D-229).
 20. **Nothing in the office master drawing is changed by any chat until Tim says so** (D-229).
 21. **ST-11 Text 25 and 18 set:** names kept (25T, 25B and the rest), plus a TEXT window for size, side, angle, remembering the last (D-209, TA-034).
@@ -42,6 +42,12 @@ Answers marked TA-xxx are Tim's words in `interview_tools\ANSWERS.md`; the hatch
 26. **Not wanted:** CL, LM, SM and FFL tags; MLL / MLR and CML / SML; plot to PDF; Excel into schedule; north point and scale bar; command search; end offsets and numbering on Divide (TA-028, TA-030, TA-031, TA-032).
 27. **The office master drawing "should have blocks, hatches and more"** (D-205).
 
+### Added 18 Nov 2026, D-230 to D-297
+
+28. **The Blocks palette holds 37 blocks (D-232):** Tim: "i dont know what we do have so its hard for me to know what to get rid of", so the interview chat drew what the palette would hold and he edited it: out came the pit and inlet blocks, the strip drain label and the trench grate ("covered in the plugin"), Section Flag and SCREW PILES; in went 18 of the 54 unknown blocks. The rest stay in the master drawing as spares. Proper names for the 18 machine-named blocks he added are still open (TQ-13).
+29. **The four hatch layers of unknown meaning (HATCH 155, 70, 221, SLAB INFILL) (D-232):** "Not sure either"; they are kept and marked unknown. The 37 hatch sample squares in the master are a legend sample set, not the hatch list; the hatch tool reads the function list of D-227.
+30. **The APPROX. standing note is a notes block on the Blocks palette (D-248):** the Unfinished list reminds the drafter to place it when anything prints APPROX. (wording on LABELS_AND_TEXT item 20).
+
 ## Changed along the way
 
 1. **"CE everyday helpers are not in the first release" (THE_PLAN section 3, 16 Nov) was replaced by D-201 (18 Nov),** widened by D-209 and confirmed by D-214.
@@ -53,7 +59,7 @@ Answers marked TA-xxx are Tim's words in `interview_tools\ANSWERS.md`; the hatch
 
 ## Still open on this subject
 
-1. **What HATCH 155, 70, 221 and SLAB INFILL each mean:** kept with meaning unknown (D-227, TA-060). Waits on: Tim.
+1. **What HATCH 155, 70, 221 and SLAB INFILL each mean:** kept with meaning unknown (D-227, TA-060). Waits on: Tim. Asked again, "Not sure either" (D-232); kept and marked unknown.
 2. **Hatch starting scales from old jobs are unproven:** which viewport each hatch sat in was not read (HATCHES_BY_FUNCTION "Scale"). Waits on: a test.
 3. **"Hatches need work before going out"** is not specified further; H2A becomes a button or goes (TA-001; interview ST-06). Waits on: Tim.
 4. **OFFICEHATCH full word still to be typed once in AutoCAD** (TA-044). Waits on: a test.
@@ -66,16 +72,22 @@ Answers marked TA-xxx are Tim's words in `interview_tools\ANSWERS.md`; the hatch
 11. **What "learn from how and where they are placed" means for joint labels** (TQ-09; FI-04 later; FM-056). Waits on: Tim.
 12. **Whether the 279 machine-named blocks may be renamed on a copy** (TQ-10); D-229 settles that the master changes only on Tim's word but does not mention renaming. Waits on: Tim.
 13. **Picture sheets of the 104 blocks of unknown purpose for Tim to tick** (D-229, "Picture sheets, I tick"). Waits on: the planning chat.
-14. **Whether the 37-square hatch sample set in the master drawing is the office hatch list:** it was BLOCKS_REVIEW question 4 and is not among the ten answers in D-229; D-227 makes the function list the hatch list. Waits on: the planning chat.
+14. **Whether the 37-square hatch sample set in the master drawing is the office hatch list:** it was BLOCKS_REVIEW question 4 and is not among the ten answers in D-229; D-227 makes the function list the hatch list. Waits on: the planning chat. **Answered by D-232 (18 Nov):** the 37 squares are a legend sample set, not the hatch list.
 15. **Dynamic block states and which blocks carry attributes the tools must fill:** not read; the DWG and A1 template not opened (BLOCKS_REVIEW, interview section 9). Waits on: the build chat.
 16. **Undecided function-map lines in this area:** DSET / DSET1 (FM-076), CEHATCHCHANGE and batch (FM-085), CJSS swap button (FM-089), MD (FM-082), TP retire (FM-103), 3DF2L (FM-104), automatic saw-cut grid (FM-055), CIVILEXCELMTEXT retire (FM-098). Waits on: Tim.
 17. **COPYMODE on office PCs not checked;** if not 0, Tim sets it himself (NAMES_C_AND_RC_PROPOSAL; rule 1.9). Waits on: Tim.
 18. **The hatch fault in his working AutoCAD:** R-006 judges it probably plain AutoCAD and gives a two-minute check (Associative, PICKSTYLE, GRIPS, GRIPMULTIFUNCTIONAL, HPBOUND). Waits on: Tim.
-19. **What his alias q (mltim) is:** not said (TA-021); definitions of several alias targets not found (FM-177). Waits on: Tim.
+19. **What his alias q (mltim) is:** not said (TA-021); definitions of several alias targets not found (FM-177). Waits on: Tim. D-250 (18 Nov) removed eleven of his aliases that call commands found in no CE code, among them q and MLL (see RIBBON_AND_NAMES item 19).
+20. **POSSIBLE CONFLICT: Tim's Q.** D-208 says the CE arrow leader is QL and Tim keeps his own Q alias; D-250 lists "q" among the eleven aliases removed from his alias file. Neither says whether they are the same alias. Waits on: Tim.
+21. **Proper names for the 18 machine-named blocks he added to the palette** (D-232, TQ-13). Waits on: Tim.
+
+**Closed (D-230 to D-297):** what the Blocks palette holds (D-232, 37 blocks); whether the 37-square hatch sample set is the office hatch list (D-232, no).
 
 **Closed:** filing the hatch answers as D-numbers (closed by D-227); the hatch tick list HT-01 to HT-58 (closed by D-227, replaced by the function list); who owns edits to the master drawing (closed by D-229, nothing changes until Tim says so); the block questions on the pit block, inlet symbols, pipe description labels, left / right pairs, the 65 notes, BK-450, the 33 drop-candidates, the 181 structural blocks and the 51 copies (closed by D-229, and by D-228 for the pit block).
 
 ## Where the detail lives
+
+Added 18 Nov 2026: `DECISIONS.md` D-208, D-232, D-248, D-250.
 
 1. `DECISIONS.md` D-199, D-201 to D-205, D-208 to D-211, D-214, D-227 to D-229.
 2. `interview_tools\ANSWERS.md` TA-001 to TA-073; `design\TOOLS_AND_MANAGER_INTERVIEW.md` revision 2.

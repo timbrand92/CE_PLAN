@@ -1,6 +1,6 @@
 # Current rulings: AutoCAD rules (rule 1.9 and its exception, when AutoCAD may be started, test copies, old plug-in beside the new, SECURELOAD)
 
-Current rulings as of 18 Nov 2026, 1:20 pm (Melbourne), from decisions D-001 to D-225. If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
+Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to D-297. If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
 
 ## What is decided now
 
@@ -26,7 +26,14 @@ Current rulings as of 18 Nov 2026, 1:20 pm (Melbourne), from decisions D-001 to 
 
 ### The leftovers of the 16 Nov incident
 
-12. **"Leave everything, I will look tomorrow":** the ZeroTrial profile, the load-safety setting (SECURELOAD) left at 0 in the unnamed profile, and the trial folder are not to be touched (D-111, restated in D-116).
+12. **"Leave everything, I will look tomorrow":** the ZeroTrial profile, the load-safety setting (SECURELOAD) left at 0 in the unnamed profile, and the trial folder are not to be touched (D-111, restated in D-116). **SECURELOAD part: D-254 ("You set it to 1 for me") was superseded by D-255,** which leaves it at 0 everywhere (items 13 and 14).
+
+### Added 18 Nov 2026, D-230 to D-297
+
+13. **SECURELOAD stays 0 everywhere; nothing is changed (D-255, which supersedes D-254):** told it reads 0 in three profiles including the one named after him, Tim said: "WHAT DOES IT DO, IM HAPPY TO MAKE IT WHATEVER YOU NEED MOST? I THINK THERES SOME TESTING GOING ON AT THE MOMENT". The planning chat's call under that answer (planning chat's call from his rulings; his to overturn): leave it at 0 everywhere. Why: it is most likely his own long-standing setting, the night tests load the test plug-in without a prompt at 0, and at 1 his own LISP folders would start asking. It is to be looked at again before colleagues get the plug-in (their PCs should run at 1 with the CE folder trusted). In the same answer the AutoCAD running at 3:35 pm is "Not mine": it is the trials chat's fresh test copy.
+14. **Before D-255: "You set it to 1 for me" (D-254)** was his yes in words for that one setting. **Superseded by D-255:** it was never done (an AutoCAD was running, and the read-only look found 0 in three profiles), and the call became "leave it at 0".
+15. **The old plug-in and the new one together (D-258, not the recommended answer):** "New tools take PIT and CD now". The new Pit and Pipe tools answer to PIT and CD (PT and PIPE as well) straight away and the old ones stop answering to those names when both are loaded; how AutoCAD chooses when two plug-ins register the same name is not proven, so the build must make the new one win and prove it in the night run, or say plainly that it cannot.
+16. **His alias file was edited once at his word (D-250, D-251):** twelve named aliases removed, dated copy beside it, nothing else touched (see RIBBON_AND_NAMES item 19); his words are the yes in the conversation that rule 1.9 asks for, and the plug-in still never edits the file. (This is the planning chat's reading, not stated in D-250 or D-251; whether the alias file counts as a "saved AutoCAD setting" under rule 1.9 is not said.)
 
 ## Changed along the way
 
@@ -34,18 +41,24 @@ Current rulings as of 18 Nov 2026, 1:20 pm (Melbourne), from decisions D-001 to 
 2. **"If AutoCAD jams the trial stops and leaves it for Tim; nothing is force-closed" (D-139) was replaced for test AutoCADs the robot started by the named exception (D-160, 18 Nov).**
 3. **The switch file `.timos\autocad.json` (mayStart false) no longer rules the zero-plan trials inside the hours (D-093, 16 Nov).**
 4. **"No trial starts AutoCAD until Tim agrees how" (PARKING_LOT P-08; THE_PLAN section 4 "ON HOLD") was settled by D-116, D-122 and then D-159.**
+5. **"You set it to 1 for me" (D-254, SECURELOAD) was superseded by "leave it at 0" (D-255, 18 Nov; planning chat's call from his rulings; his to overturn).**
 
 ## Still open on this subject
 
-1. **The leftovers: the ZeroTrial profile, SECURELOAD at 0 in the unnamed profile, and the isolate folder** have waited on Tim since 16 Nov ("I will look tomorrow") (D-111, D-116, PARKING_LOT P-08). Waits on: Tim.
+1. **The leftovers: the ZeroTrial profile, SECURELOAD at 0 in the unnamed profile, and the isolate folder** have waited on Tim since 16 Nov ("I will look tomorrow") (D-111, D-116, PARKING_LOT P-08). Waits on: Tim. D-255 leaves SECURELOAD at 0 everywhere for now; the ZeroTrial profile and the isolate folder are not mentioned.
 2. **UNCLEAR: whether the night runs must still open AutoCAD by the double-click hand-off only (D-122) or may start it "the normal way" (LOOPS loop 2);** D-159 does not say. Waits on: Tim.
 3. **The cause of the 16 Nov licence error is not proven** (PARKING_LOT P-08); recorded so no cause is assumed. Waits on: Tim (to close the item).
 4. **The headless engine stays BLOCKED for unattended runs** until Tim decides; R-005 recommends not using it yet (R-003, R-005, D-161). Waits on: Tim.
-5. **The old plug-in beside the new one:** Tim's installed plug-ins were loaded during every trial and any interaction is unmeasured (THE_PLAN section 6a); old and new on one PC, and which owns CD, stops a job (SITUATIONS I4); PIT and CD may already answer before CE loads (OQ-09); compare native behaviour with the old plug-ins loaded (OQ-10). Waits on: the build chat.
+5. **The old plug-in beside the new one:** Tim's installed plug-ins were loaded during every trial and any interaction is unmeasured (THE_PLAN section 6a); old and new on one PC, and which owns CD, stops a job (SITUATIONS I4); PIT and CD may already answer before CE loads (OQ-09); compare native behaviour with the old plug-ins loaded (OQ-10). Waits on: the build chat. **PIT and CD part answered by D-258 (18 Nov):** the new tools take them; not proven.
 6. **The Properties palette trial is blocked because showing the palette changes a saved interface setting** (trial 5), which rule 1.9 forbids without Tim's word. Waits on: Tim.
 7. **TimOS rule 1.8 also lists 2:00 to 3:00 pm as a free window;** D-092 and D-159 do not include it for AutoCAD tests. Waits on: Tim (only if a midday test window is wanted).
+8. **SECURELOAD is to be looked at again before colleagues get the plug-in** (their PCs should run at 1 with the CE folder trusted) (D-255). Waits on: the planning chat, then Tim.
+
+**Closed (D-230 to D-297):** whether to set SECURELOAD to 1 (D-254 superseded by D-255, left at 0); whether the AutoCAD running at 3:35 pm was Tim's (D-255, "Not mine", the trials chat's test copy).
 
 ## Where the detail lives
+
+Added 18 Nov 2026: `DECISIONS.md` D-250, D-251, D-254, D-255, D-258.
 
 1. `C:\TimOS\RULES.md` rule 1.8 and rule 1.9 with its exception.
 2. `DECISIONS.md` D-092, D-093, D-111, D-116, D-120 to D-122, D-126, D-127, D-130, D-137, D-139, D-155, D-157, D-159, D-160, D-197, D-207, D-212.

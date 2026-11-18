@@ -1,6 +1,6 @@
 # Current rulings: Detention (rainfall, runoff, orifice, head, top water level, storage)
 
-Current rulings as of 18 Nov 2026, 1:20 pm (Melbourne), from decisions D-001 to D-225. If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
+Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to D-297. If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
 
 ## What is decided now
 
@@ -26,7 +26,7 @@ Current rulings as of 18 Nov 2026, 1:20 pm (Melbourne), from decisions D-001 to 
 
 ### Storage
 
-15. **Tank split worked out from the volume needed;** re-use takes the rest (D-100). (CONFLICT with D-024, see Still open.)
+15. **Tank split worked out from the volume needed;** re-use takes the rest (D-100). (CONFLICT with D-024, see Still open.) **Superseded by D-278 (18 Nov; planning chat's call from his rulings; his to overturn):** re-use is typed from the report and detention is tank less re-use (item 30).
 16. **Pits count as storage only when ticked;** volume = plan size times water depth, the depth worked out from the top water level (D-105).
 17. **Twin detention pipes count both pipes** in the storage sum (D-082).
 18. **Head, orifice, storage and flows run only on a run that reaches the outlet,** and otherwise say what is missing (D-176).
@@ -39,20 +39,35 @@ Current rulings as of 18 Nov 2026, 1:20 pm (Melbourne), from decisions D-001 to 
 22. **Old council figures:** only sourced figures come across, with their source; assumed ones are dropped and filled in from the first real council letter (D-096); a council figure without a document on file stays blank (D-148).
 23. **When rules disagree:** council, then AS 3500.3, then the office guidebook (D-022).
 
+### Added 18 Nov 2026, D-230 to D-297
+
+24. **Pervious runoff coefficient (D-283):** the Detention window opens with "0.35 Boyd's, 0.30 OSD4W (Recommended)", shown with its source and typed over per job.
+25. **Rounding in Boyd's (D-284, not the recommended answer; changes the build):** "Match the office sheet (round first)". The inflow is rounded to two places before the volume is worked, as the office Boyd's sheet does, so the plug-in gives the sheet's figure (1.66 on the measured job, not 1.65).
+26. **How a site's rainfall figures arrive (D-249):** "A mix, depends on council". Some councils state the intensities to use, otherwise the Bureau's table. The Job window takes either: figures given by the council (held with the council, source recorded) or the Bureau table pasted or typed for the site; each figure marked with where it came from.
+27. **An orifice pit detail per council (D-253, not the recommended answer):** "The pits really differ by council", so Detention fills this job's figures into the orifice pit detail that belongs to the job's council (see PIT item 36).
+28. **Pump well sums are on the pump pit, not here (D-247):** "On the pump pit (Recommended)"; they print in the same council computations PDF as the detention sums (FP-013 stands).
+29. **The old rainfall, design and calculation commands fold into a window or a tool (D-246, D-245, D-281):** Tim is not using the old plug-in's CDRAINFALL, CDDESIGN, CDCALC "and all that other jazz" and cannot trust even its main tools; the scattered commands built at different times are to be CONSOLIDATED into a window or a tool, scalable and able to be built upon. On the BUG-866 rainfall risk he answered "Seen, I will follow that" (D-245), and it stays on the board until the old plug-in is fixed or replaced. How CDRAINFALL and the others come into the main plan is owed as a published artifact page (D-281).
+30. **Tank litres and the one storage total (D-278, D-285 DQ-073, D-289; planning chat's call from his rulings; his to overturn):** re-use is typed once from the report and detention is tank less re-use; every store enters at its full room and the total is compared with the volume needed once, "provided, needed, spare" or "Short" with the amount; the Detention window suggests the next tank size up when short and the engineer decides (TANK items 10 to 12).
+31. **Build calls on the sums (D-282; planning chat's call from his rulings; his to overturn):** DQ-067 commas in the windows, none on the sheet; DQ-069 "3.5 per cent"; DQ-072 orifice coefficient 0.6 with gravity 9.81, and the older sheet's "2.6 x area x root head" is the same sum rounded (0.6 x root of 2 x 9.8 = 2.66), so the two do not disagree, the 0.8 on one old copy is not used.
+32. **More build calls on the sums (D-285; planning chat's call from his rulings; his to overturn):** DQ-074 a pit's plan size for storage is the size the pit is drawn at, a typed figure stands; DQ-075 garden is what is left of the site after roofs and paving, a typed garden stands with an amber note when the areas do not add to the site; DQ-076 CHANGES the build: no orifice pick list, the orifice is worked out from the permitted discharge and head and rounded down to a whole mm (D-172), and can be typed over; DQ-077 no tolerance on the discharge check; DQ-079 no pipe size box in Detention, detention pipes are drawn with the Pipe tool and read off the drawing, each listed with its size and length (one fact in one place, D-171); DQ-080 a rainfall typed as your own estimate is assumed: amber, APPROX., on the Unfinished list, never green (D-218, D-177); DQ-081 all six storm durations before any storage figure; DQ-082 a council with no minimum runoff on file shows one grey line "no council minimum on file", never amber, never silent; DQ-083 when the council minimum governs it shows amber with both figures; DQ-084 the larger of the worked-out C and the council minimum governs.
+
 ## Changed along the way
 
 1. **OBSTACLE_COURSE OQ-04 recommended option A (amber and APPROX. when no rainfall is entered); Tim chose no figure by default, with his own estimate allowed (D-218, 18 Nov).**
 2. **INPUT_AUDIT question 1 (is the baffle top at the top water level) was answered yes by D-172 and question 3 (orifice rounding) by D-173 (18 Nov);** the document still lists them as open.
+3. **Tank split worked out from the volume needed (D-100) was replaced by "re-use typed from the report, detention is the rest" (D-278, 18 Nov; planning chat's call from his rulings; his to overturn).**
+4. **The built Boyd's inflow (1.65, unrounded) was replaced by "round first" so it matches the office sheet's 1.66 (D-284, 18 Nov).**
+5. **The orifice pick list in the build was replaced by an orifice worked out and rounded down (D-285 DQ-076, 18 Nov; planning chat's call from his rulings; his to overturn).**
 
 ## Still open on this subject
 
-1. **CONFLICT: tank re-use from the STORM or sustainability report (D-024) against worked out from the volume needed (D-100).** Neither marks the other. Waits on: Tim.
+1. **CONFLICT: tank re-use from the STORM or sustainability report (D-024) against worked out from the volume needed (D-100).** Neither marks the other. Waits on: Tim. **Settled by D-278 (18 Nov; planning chat's call from his rulings; his to overturn):** D-024 stands; D-100 survives only as the next-size-up suggestion.
 2. **How the top water level is first chosen** (Q-001; INPUT_AUDIT question 2); the four "work it out from the system" questions were not answered and must not be re-asked in the same form (D-175). Waits on: the planning chat (to find a new way to ask).
 3. **Whether the orifice pit is always the last pit before the council connection** (INPUT_AUDIT question 6; item 15 says nothing ties the orifice pit to P1). Waits on: Tim.
-4. **A typed rainfall estimate:** the planning chat's reading, not yet put back to Tim, is that it is marked assumed, prints APPROX., stays on the unfinished list until the site's table replaces it, and the plug-in never supplies a curve of its own (D-218). Waits on: Tim.
-5. **How each site's Bureau rainfall table arrives, and whether one table per job is right** (INPUT_AUDIT question 5, section 1 item 8; FM-050). Waits on: Tim.
+4. **A typed rainfall estimate:** the planning chat's reading, not yet put back to Tim, is that it is marked assumed, prints APPROX., stays on the unfinished list until the site's table replaces it, and the plug-in never supplies a curve of its own (D-218). Waits on: Tim. **Taken in part by D-285 DQ-080 (planning chat's call from his rulings; his to overturn):** assumed, amber, APPROX., on the Unfinished list, never green (item 32).
+5. **How each site's Bureau rainfall table arrives, and whether one table per job is right** (INPUT_AUDIT question 5, section 1 item 8; FM-050). Waits on: Tim. **Answered in part by D-249:** a mix, depends on council; whether one table per job is right is not said.
 6. **OSD4W inputs are not in the reference;** the window shows only two typed results (D-114; THE_PLAN section 7 item 3); where the OSD4W rainfall zone and times come from when the letter is silent (Q-006). Waits on: Tim.
-7. **Pervious coefficient 0.30 or 0.35** (Q-004; INPUT_AUDIT section 1 item 9). Waits on: Tim.
+7. **Pervious coefficient 0.30 or 0.35** (Q-004; INPUT_AUDIT section 1 item 9). Waits on: Tim. **Settled by D-283:** 0.35 for Boyd's, 0.30 for OSD4W.
 8. **Council minimum C:** which councils and which documents; engineering judgement, needs Tim's word (OBSTACLE_COURSE OQ-05, OC-24). Waits on: Tim.
 9. **Council minimum orifice for most councils** (INPUT_AUDIT section 9, L-008). Waits on: Tim.
 10. **Orifice invert step of +0.020 is not yet in the brain** (INPUT_AUDIT section 1 item 17, S-025). Waits on: the build chat.
@@ -65,8 +80,14 @@ Current rulings as of 18 Nov 2026, 1:20 pm (Melbourne), from decisions D-001 to 
 17. **Whether a detention pipe must sit fully below the top water level to count full volume** (INPUT_AUDIT section 9). Waits on: Tim.
 18. **Selecting several pipes and making them detention** (SITUATIONS E8). Waits on: the build chat.
 19. **Full verdict on the Detention window waits on real use** (D-087, D-114). Waits on: Tim.
+20. **The plan of how every old calculation command lands in the new plug-in** (D-246, D-281): `design\FUNCTION_PLAN.md` proposes 31 tools and must be re-read against "few tools, each a window, the old scattered commands folded inside" and shown as the drafter's picture, with the artifact page owed. Waits on: the planning chat.
+21. **With two or more tanks, how one typed re-use figure is shared:** see TANK Still open item 11. Waits on: Tim.
+
+**Closed (D-230 to D-297):** the pervious coefficient (D-283); where the pump well sums sit (D-247); how a site's rainfall figures arrive, in part (D-249); the conflict on tank re-use (D-278; planning chat's call from his rulings; his to overturn); Boyd's rounding (D-284); which tank litres are typed (D-278).
 
 ## Where the detail lives
+
+Added 18 Nov 2026: `DECISIONS.md` D-245 to D-247, D-249, D-253, D-278, D-281 to D-285, D-289.
 
 1. `DECISIONS.md` D-018, D-020 to D-024, D-095 to D-100, D-105 to D-108, D-114, D-148, D-169, D-171 to D-173, D-176, D-218.
 2. `design\INPUT_AUDIT.md` sections 1, 2, 5, 9; `reference\design\SUMS.md`; `reference\councils\`.

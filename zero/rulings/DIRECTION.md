@@ -1,6 +1,6 @@
 # Current rulings: Direction and scope of the whole plan
 
-Current rulings as of 18 Nov 2026, 1:20 pm (Melbourne), from decisions D-001 to D-225. If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
+Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to D-297. If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
 
 ## What is decided now
 
@@ -31,6 +31,13 @@ Current rulings as of 18 Nov 2026, 1:20 pm (Melbourne), from decisions D-001 to 
 20. **Windows on the foundation:** "thats better, i cant give you full answer until using but were on the right track" (D-087).
 21. **Speed is part of the plan** (D-165; detail on HOW_WE_WORK).
 
+### Added 18 Nov 2026, D-230 to D-297
+
+22. **The easiest, most AutoCAD-like way to use the plug-in, worked out from the old jobs (D-230):** Tim: "now you have this all understood, what is the best and easiest way to make the plugin for an end user experience that is easy and autocad like in how it can used. do you get what i mean. also use old projects data and evidence to form your decisions." The planning chat works it out from the old jobs' drawings and the usage records and brings it as a proposal (`design\EASY_AND_AUTOCAD_LIKE.md`; old-job copies read only, counts only, no job names); the answers it produced are D-234 to D-239.
+23. **Few tools, each a window, with the old scattered commands folded inside (D-246):** Tim: "THERES TOO MANY COMMANDS THAT SHOULD BE CONSOLIDATED INTO A WINDOW OR A TOOL THAT ARE STREWN EVERYWHERE EBCAUSE THEY WERE ALL BUILT AT DIFFERENT TIMES, THIS PLUGIN SHOULD BE SCALABLE AND SHOULD BE ABLE TO BE BUILT UPON AND IT WE NEED TO PLAN HOW ALL THE EXISTING STUFF WILL WORK FOR AN END USER." He is not using the old rainfall, design and calculation commands (see OLD_PLUGIN).
+24. **Every screen matches his 31 screen design rules and the approved window style (D-286, D-295):** see SCREENS_AND_STYLE.
+25. **Missed messages are put in front of him again (D-230):** the planning chat makes sure anything he may have missed in the day's messages is put in front of him again (see CHAT_AND_TIM).
+
 ## Changed along the way
 
 1. **"One big element" (D-011, 16 Nov) was replaced the same day by D-031:** a pipe and its two pits work together but are not one element.
@@ -47,8 +54,11 @@ Current rulings as of 18 Nov 2026, 1:20 pm (Melbourne), from decisions D-001 to 
 5. **How many layers of the old evidence model are needed:** PARKING_LOT P-02, open since 16 Nov. Waits on: the planning chat.
 6. **Structural:** parked; four structural questions put on 16 Nov were never answered (PARKING_LOT P-05). Waits on: Tim (later).
 7. **Coverage proof under R-69:** no plan or stage is complete until everything that exists today has a decided fate and coverage is stated as "N of M"; the function map shows 67 names with no decided fate (D-220, R-69). Waits on: the planning chat.
+8. **The function plan re-read against "few tools, each a window" (D-246):** `design\FUNCTION_PLAN.md` proposes 31 tools and gives every old command a fate; it is to be shown as the drafter's picture, with the artifact page of D-281 showing where each old calculation command lands. Waits on: the planning chat.
 
 ## Where the detail lives
+
+Added 18 Nov 2026: `DECISIONS.md` D-230, D-234 to D-239, D-246, D-281, D-286, D-295; `design\EASY_AND_AUTOCAD_LIKE.md`; `design\FUNCTION_PLAN.md`.
 
 1. `DECISIONS.md`, sections "Direction" and "The one element".
 2. `RULES.md` R-65 to R-71.

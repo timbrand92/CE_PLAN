@@ -1,6 +1,6 @@
 # Current rulings: How we work (built, tested, installed, accepted; the gate; loops; speed; testing that learns)
 
-Current rulings as of 18 Nov 2026, 1:40 pm (Melbourne), from decisions D-001 to D-229. If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
+Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to D-297. If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
 
 ## What is decided now
 
@@ -37,8 +37,14 @@ Current rulings as of 18 Nov 2026, 1:40 pm (Melbourne), from decisions D-001 to 
 
 ### Speed
 
-17. **Speed is part of the plan:** time limits for each thing a drafter feels, measured every night, over the limit is a fault (D-165); the limits themselves are DRAFT.
+17. **Speed is part of the plan:** time limits for each thing a drafter feels, measured every night, over the limit is a fault (D-165); the limits themselves are DRAFT. **Taken as built by D-288 DQ-089 to DQ-091 (18 Nov; planning chat's call from his rulings; his to overturn), item 21.**
 18. **Testing faster:** the free gains cut a full AutoCAD test pass from about 16 minutes to about 2 minutes 20 seconds; the no-screen engine is to be looked into and written up for approval with nothing run; the cloud engine and a second machine stay parked (D-161).
+
+### Added 18 Nov 2026, D-230 to D-297
+
+19. **A separate checker looks at every screen before Tim does (D-286 rule 31; D-295):** never the chat that built it; once the style is approved a separate checker's look is enough for other windows in that style.
+20. **Test result files held a login name, a PC name and folder paths (D-231):** two test result files committed that day to the private CE_CIVIL repository held his Windows login name, PC name and folder paths (no client details, no keys). The working copies were cleaned and a scrubber added; the old copies remain in git history. Asked whether to rewrite history, Tim answered "Leave the history alone". Condition recorded with it: if the repository is ever shared with anyone else, the history is cleaned first.
+21. **Build calls on speed and the outside library (D-288; planning chat's call from his rulings; his to overturn):** DQ-089 to DQ-091 the speed limits as built (1 second at start and on opening a 500-object drawing; window open 0.3 s; typing and preview 0.1 s; pit move 0.1 s on 2,500 objects; 5 thousandths of a second on a plain command), as in `stage6\PERFORMANCE.md`; DQ-102 the outside library is allowed in the automatic tests only, read only, never inside the installed plug-in.
 
 ## Changed along the way
 
@@ -50,7 +56,7 @@ Current rulings as of 18 Nov 2026, 1:40 pm (Melbourne), from decisions D-001 to 
 1. **R-71 in RULES.md still reads "not yet approved" for the board,** although D-226 approved it. Waits on: the planning chat.
 2. **A plain explanation of how the gate works and "short term suffering for long term gain"** (D-216, OQ-01). Waits on: the planning chat.
 3. **OBSTACLE_COURSE OQ-03, keep the 0.1 s limit for moving a pit;** measured 208 ms against 100 ms, one FAULT (OBSTACLE_COURSE). Waits on: Tim.
-4. **Time limits in PERFORMANCE section 2 are DRAFT,** including the 5 thousandths of a second idle limit (D-165). Waits on: Tim.
+4. **Time limits in PERFORMANCE section 2 are DRAFT,** including the 5 thousandths of a second idle limit (D-165). Waits on: Tim. D-288 takes them as built, as the planning chat's call; Tim has not ruled on the figures.
 5. **Not measured yet:** AutoCAD start with the plug-in, a drawing open on a big real job, a window opening inside AutoCAD, the plug-in beside Tim's other plug-ins (PERFORMANCE section 3). Waits on: a test.
 6. **What the robot pass must contain to count as accepted** (HOW_WE_WORK "Not settled" item 3). Waits on: Tim.
 7. **The usage budget per tool** (HOW_WE_WORK "Not settled" item 2). Waits on: the planning chat.
@@ -65,6 +71,8 @@ Current rulings as of 18 Nov 2026, 1:40 pm (Melbourne), from decisions D-001 to 
 **Closed:** whether the board is approved (closed by D-226, "build the board").
 
 ## Where the detail lives
+
+Added 18 Nov 2026: `DECISIONS.md` D-231, D-286, D-288, D-295.
 
 1. `stage5\HOW_WE_WORK.md`; `stage6\LOOPS.md`; `stage6\PERFORMANCE.md`; `stage6\OBSTACLE_COURSE.md`.
 2. `DECISIONS.md` D-089 to D-091, D-127, D-137, D-138, D-158, D-161, D-165, D-198, D-205, D-213, D-214, D-216, D-225, D-226.

@@ -1,6 +1,6 @@
 # Current rulings: The old plug-in (parts bin, carpark, sweep, what gets fixed there, wrong-figure bugs)
 
-Current rulings as of 18 Nov 2026, 1:20 pm (Melbourne), from decisions D-001 to D-225. If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
+Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to D-297. If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
 
 ## What is decided now
 
@@ -24,23 +24,33 @@ Current rulings as of 18 Nov 2026, 1:20 pm (Melbourne), from decisions D-001 to 
 
 11. **Both were checked read-only** (D-207). **BUG-866 (rainfall note) is real and not fixed in the installed build;** **BUG-1095 (council minimum C) was real in older builds and is fixed since Civil 3.0.87;** the new plug-in's data would repeat both unless designed against them (D-212, R-008).
 
+### Added 18 Nov 2026, D-230 to D-297
+
+12. **The rainfall risk in the installed plug-in (D-245):** told of BUG-866 and the advice (load the site's rainfall with CDRAINFALL before CDDESIGN; do not issue a storage figure beside "This job has no rainfall curve of its own"; re-run Darebin, Maribyrnong and Boroondara jobs sized before 30 October), Tim answered "Seen, I will follow that". It is no longer raised to him and stays on the board until the old plug-in is fixed or replaced.
+13. **He is not using the old rainfall, design and calculation commands (D-246):** Tim: "AN ISSUE I HAVE IS THAT II THINK YOURE STILL THINKING IM USING CDRAINFALL AND ALL THAT OTHER JAZZ, AT THE MOMENT I CAN EVEN TRUST THE MAIN TOOLS". He does not use CDRAINFALL, CDDESIGN, CDCALC and the like and does not trust even the main tools, so the live risk to issued sheets is smaller than the BUG-866 advice presented, though the fault in the installed code is real (R-008). The old commands are too many, scattered and built at different times, and in the new plug-in they are CONSOLIDATED into a window or a tool, scalable and able to be built upon.
+14. **How CDRAINFALL and the other old calculation commands come into the main plan is owed (D-281):** "HOW WILL CDRAINFALL AND ALL THOSE OTHER COMMANDS COME INTO THE MAIN PLAN AND BE INCORPORATED PROPERLY? CAN YOU EXPLAIN THROUGH AN ARTIFACT WHAT THE FINAL PROGRSAM WILL LOOK LIKE WITH SCALABILITY AND ABILIT TO BE BUILT UPON": a published artifact page showing the final program, where each old calculation command lands, and how it is built to grow.
+
 ## Changed along the way
 
 1. **Nothing on this page has been superseded.** The carpark's rule in `C:\Lisp Files\CLAUDE.md` still applies to the old plug-in.
+2. **The planning chat's BUG-866 advice assumed Tim ran CDRAINFALL and CDDESIGN; D-246 (18 Nov) corrected that:** he does not use them. Nothing was superseded; the advice stands for anyone who does.
 
 ## Still open on this subject
 
 1. **Freeze the carpark as the old plug-in's list, fix there only what stops daily work, and start the new plug-in with an empty short list:** proposed with the sweep; Tim approved the sweep and did not rule separately on the freeze (D-206). Waits on: Tim.
 2. **Sort the ideas inbox the same way:** proposed, not ruled (D-206). Waits on: Tim.
 3. **The 15 bugs that stop daily work now in the installed plug-in:** what happens to them is not decided (R-007 pile D). Waits on: Tim.
-4. **BUG-866 is real and the fix is not installed;** R-008 says load the site's own rainfall or work storage in CDCALC Boyd's tab with the site's figures meanwhile (R-008). Waits on: Tim.
+4. **BUG-866 is real and the fix is not installed;** R-008 says load the site's own rainfall or work storage in CDCALC Boyd's tab with the site's figures meanwhile (R-008). Waits on: Tim. **Seen by Tim, D-245 ("Seen, I will follow that"); no longer raised to him;** he does not use the old rainfall commands (D-246).
 5. **BUG-1095 fixed since 3.0.87 but not yet proven in AutoCAD;** jobs of three councils sized before 30 Oct 2026 should be re-run (R-008). Waits on: Tim.
 6. **BUG-1461 hatch fault:** R-006's two-minute check (Associative, PICKSTYLE, GRIPS, GRIPMULTIFUNCTIONAL, HPBOUND) has not been done (R-006). Waits on: Tim.
 7. **The sweep sorted from cut-short text once, mostly medium confidence; nobody re-checked it** (R-007). Waits on: the planning chat.
 8. **Old drawings made with the special pipe (D-119) and the live drawing that shows nothing without the plug-in (P-04)** wait for later; the file location for P-04 has not been given. Waits on: Tim.
-9. **Keep the old CDCALC side by side for the computations sheet until a new one exists** (FUNCTION_MAP FM-047 recommendation). Waits on: Tim.
+9. **Keep the old CDCALC side by side for the computations sheet until a new one exists** (FUNCTION_MAP FM-047 recommendation). Waits on: Tim. Tim said he does not trust or use CDCALC (D-246); whether that changes the recommendation is not said.
+10. **The plan of how every old command lands for the end user** (D-246): `design\FUNCTION_PLAN.md` gives every old command a fate but proposes 31 tools; it must be re-read against "few tools, each a window, the old scattered commands folded inside" and shown as the drafter's picture, with the artifact page of D-281. Waits on: the planning chat.
 
 ## Where the detail lives
+
+Added 18 Nov 2026: `DECISIONS.md` D-245, D-246, D-281; `reference\research\R-008_TWO_WRONG_FIGURE_BUGS.md`.
 
 1. `DECISIONS.md` D-001, D-053, D-088, D-094 to D-096, D-119, D-199, D-206, D-207, D-212, D-213, D-216.
 2. `stage3\PARTS_BIN_REPORT.md`; `reference\research\R-007_BUG_SWEEP.md`; `reference\research\R-008_TWO_WRONG_FIGURE_BUGS.md`.
