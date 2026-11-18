@@ -2,7 +2,7 @@
 
 **Why this file exists.** Tim, 17 Nov 2026: "i need a way to understand wht we have planned, what we have built, how close we are to finishing or getting a ready version for me to test and bugs and anythign else thats important if i was a director looking to get summaries. i need this everytime i ask how things are going and also you need to keep me on track with planning, building annd beyond". The planning chat updates this page before every progress answer and always uses these seven headings in this order.
 
-**Last updated:** Wed 18 Nov 2026, mid afternoon.
+**Last updated:** Wed 18 Nov 2026, 12:30 pm.
 
 ## 1. Headline
 
@@ -24,7 +24,8 @@ Planning is finished and today you tested it against real use. Your verdict on t
 1. **The brain:** built, 549 automatic checks pass, each piece reviewed separately.
 2. **Seven windows on a test bench:** built; three independent trials by real mouse; the last found no wrong figure. You have used all seven and called them good, with changes now queued (scheme, preview, schedule cards).
 3. **AutoCAD foundation:** two runs in real AutoCAD on a test copy: 24 of 25.
-4. **Tools for AutoCAD, built and reviewed on a pretend drawing:** 3 of 7 (Pit, Pipe, Long section). Proven in AutoCAD: 0 of 7.
+4. **Tools for AutoCAD:** Pit, Pipe, Long section and an Outlet tool are built. **First run inside real AutoCAD 2027, 18 Nov 12:16 to 12:22 pm, on a test copy:** foundation 32 of 34 checks pass; Pit 10 of 13; Pipe 16 of 16 (including join, part, re-join and the outlet); Long section 9 of 10. The whole run took 5 min 41 s. Real fault found: the Pit tool cannot yet read the office's own dynamic pit block in two cases (it trips on the block's own hidden data). Not accepted, not installed.
+4a. **Speed, first real figures (limits in brackets):** plug-in start 0.1 s (1 s); self-check on opening a 500-object drawing 0.04 s (1 s); Pit window opens in 0.28 s the first time and 0.05 s after (0.3 s); Pipe window 0.02 s; Long section window 0.1 s; a typed figure follows in 0.02 s or less (0.1 s); idle adds nothing measurable. ONE OVER THE LIMIT: moving a pit with its pipes on a 2,500-object drawing takes 0.21 s the first time in a session (limit 0.1 s) and 0.05 s after.
 5. **Rework found today, before any of it reached AutoCAD:** joining a pipe end later; a real outlet; bends; pipe ends that follow a pit's wall; a pit in a blank drawing; grey for not known; labels that move with the pit.
 6. **Installed: 0. Accepted by you: 0.**
 
@@ -43,7 +44,8 @@ Planning is finished and today you tested it against real use. Your verdict on t
 3. **Exploding a pipe from code loses its hidden note.** Needs a typed check with you.
 4. **Grip trial crashed AutoCAD; double-click also runs AutoCAD's own polyline edit.** Not solved.
 5. **SECURELOAD reads 0 in your normal AutoCAD profile** (default 1), left by the first trial run. Your call.
-6. **Not proven:** facts in the Properties palette; the ribbon on screen; update inside AutoCAD; the corner locator inside AutoCAD; the Boyd's "storage needed" figure by hand.
+6. **Name clash found in AutoCAD:** PIT and CD are already commands in your AutoCAD (the installed old plug-in). The new and old plug-ins cannot both own those names; how you move from one to the other is a decision still to make.
+6a. **Not proven:** facts in the Properties palette; the ribbon on screen; update inside AutoCAD; the corner locator inside AutoCAD; the Boyd's "storage needed" figure by hand.
 7. **Speed:** not yet measured in AutoCAD. Tonight's run is the baseline.
 
 ## 6. Waiting on Tim
@@ -60,4 +62,4 @@ Planning is finished and today you tested it against real use. Your verdict on t
 
 ## 7. Next step (one only)
 
-Tonight after 5:30 pm, once your AutoCAD is closed: the first AutoCAD run of Pit and Pipe, with speed measured. You get the result in the morning.
+The build chat fixes the Pit tool's reading of the office pit block and re-runs the Pit checks at the next AutoCAD window (tonight after 5:30 pm, or sooner if you free AutoCAD again).
