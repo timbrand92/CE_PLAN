@@ -530,6 +530,8 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-254** (18 Nov 2026, 3:35 pm) SECURELOAD: "You set it to 1 for me". His yes in words for that one setting. NOT DONE YET: an AutoCAD was running when he answered, and the read-only look found the value 0 in three profiles (the unnamed one, one named after him and the trial one), so "left by the first trial" is not proven: the profile named after him also holds 0. Put back to him before anything is changed.
 
+**D-255** (18 Nov 2026, 3:42 pm; supersedes D-254) SECURELOAD, after being told it reads 0 in three profiles including the one named after him: "WHAT DOES IT DO, IM HAPPY TO MAKE IT WHATEVER YOU NEED MOST? I THINK THERES SOME TESTING GOING ON AT THE MOMENT". Planning chat's call under that answer (mine, told to him): leave it at 0 everywhere; nothing is changed. Why: it is most likely his own long-standing setting, the night tests load the test plug-in without a prompt at 0, and at 1 his own LISP folders would start asking. To be looked at again before colleagues get the plug-in (their PCs should run at 1 with the CE folder trusted). Same answer: the AutoCAD running at 3:35 pm is "Not mine": it is the trials chat's fresh test copy.
+
 ## Not decided (asked or raised, no decision yet)
 
 1. Whether Stage 1's civil explanation is approved (Tim moved on to the design without saying "approve"). **Settled by D-117.**
