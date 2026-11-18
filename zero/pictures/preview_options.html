@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<title>Preview options for the Detention window</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --page:#161718;
+  --win:#2B2D30; --card:#383B40; --well:#232528; --line:#4A4D53;
+  --field:#4A4D55; --fieldline:#8A8E96;
+  --t-answer:#F3F4F5; --t-body:#D2D5DA; --t-note:#A9AEB6;
+  --unit:#C8CBD0; --sv0:#80848C; --sv1:#C8CBD0; --sv2:#DADCE0; --sv3:#B4B8BE;
+  --green:#7BE0AE; --amber:#F5C660; --red:#FF6B4A;
+  --ink:#10131A;
+  --fill:#A9ADB5;
+  --c1:#5AA2F0; --c2:#3CC4B2; --c3:#A08AF0;
+  --acc:#FF70B3; --acc-ink:#10131A;
+  --r:8px;
+  --sans:'IBM Plex Sans','Segoe UI',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--page);color:var(--t-body);font-family:var(--sans);font-size:14px;line-height:24px;padding:32px 24px;min-width:1750px;font-variant-numeric:tabular-nums}
+.pagetitle{font-size:14px;margin-bottom:16px}
+.switches{display:flex;gap:32px;margin-top:24px;align-items:center;flex-wrap:wrap;color:#B8BBC1}
+.switch{display:flex;gap:8px;align-items:center;font-size:12px}
+.switch button{font:inherit;font-size:12px;height:32px;padding:0 16px;border-radius:var(--r);background:transparent;color:#D5D8DC;border:1px solid #55585E;cursor:pointer}
+.switch button.on{border-color:#fff;color:#fff}
+
+.win{width:1536px;height:864px;background:var(--win);border:1px solid var(--line);border-radius:var(--r);box-shadow:0 24px 48px rgba(0,0,0,.5);display:flex;flex-direction:column;overflow:hidden}
+.titlebar{height:32px;flex:none;display:flex;align-items:center;justify-content:space-between;padding:0 16px;border-bottom:1px solid var(--line);color:var(--t-answer)}
+.titlebar .x{color:var(--t-note);font-size:14px}
+.body{flex:1;min-height:0;padding:16px;display:flex;gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.note{font-size:12px;line-height:16px;color:var(--t-note)}
+.fig{font-weight:400}
+.strong{font-weight:600}
+
+/* preview */
+.preview{width:380px;flex:none;padding:16px 8px;display:flex;flex-direction:column;gap:8px}
+.preview .phead{padding:0 8px}
+.preview .phead .t{color:var(--t-answer);display:block;height:24px}
+.preview .phead .note{display:block;height:32px}
+.preview .foot{padding:0 8px}
+.preview svg{display:block;flex:none}
+.chain{display:flex;align-items:center;gap:2px;font-size:12px;line-height:16px;color:var(--t-note);flex:none;white-space:nowrap}
+.chip{border:1px solid var(--line);border-radius:var(--r);padding:4px;color:var(--t-note);white-space:nowrap}
+.chip.lit{background:var(--t-answer);border-color:var(--t-answer);color:var(--ink)}
+
+.right{flex:1;min-width:0;display:flex;flex-direction:column;gap:16px}
+
+/* band */
+.band{flex:none;height:40px;border-radius:var(--r);display:flex;align-items:center;justify-content:space-between;padding:0 16px;color:var(--ink);box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.band.green{background:var(--green)} .band.red{background:var(--red)} .band.amber{background:var(--amber)}
+.band .left{display:flex;align-items:center;gap:16px;white-space:nowrap}
+.band .main{font-size:24px;line-height:32px}
+.band .sub{font-size:14px}
+.band .right2{display:flex;align-items:center;gap:8px;white-space:nowrap;font-size:14px}
+
+.pill{display:inline-flex;align-items:center;height:24px;padding:0 8px;border-radius:var(--r);font-size:12px;line-height:24px;white-space:nowrap;color:var(--ink);border:1px solid rgba(16,19,26,.55)}
+.pill.green{background:var(--green)} .pill.amber{background:var(--amber)} .pill.red{background:var(--red)}
+.pill.changed{background:transparent;color:var(--t-body);border-color:var(--t-body)}
+
+/* steps */
+.step{padding:16px 16px 8px;flex:none}
+.step.grow{flex:1;min-height:0}
+.shead{display:flex;align-items:center;gap:8px;height:24px;margin-bottom:8px;white-space:nowrap}
+.shead.tall{height:32px}
+.shead .n{width:24px;height:24px;border:1px solid var(--t-body);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:12px;color:var(--t-answer);flex:none}
+.shead .t{color:var(--t-answer);margin-right:8px}
+.shead .sp{flex:1}
+
+/* inputs: boxed and bright */
+.row1{display:flex;align-items:flex-start;gap:24px}
+.rowb{margin-top:8px;align-items:flex-end}
+.fields{display:flex;gap:8px}
+.fld{display:flex;flex-direction:column}
+.fld > .note{height:16px}
+.inp{height:32px;display:flex;align-items:center;justify-content:flex-end;gap:4px;padding:0 8px;background:var(--field);border:1px solid var(--fieldline);border-radius:var(--r);color:var(--t-answer);font-size:14px;white-space:nowrap}
+.inp .u{font-size:12px;color:var(--unit)}
+.inp.needs{border:2px solid var(--amber);padding:0 7px}
+.inp.nk{font-size:12px;justify-content:center;padding:0 8px}
+.inp.nk.needs{padding:0 6px}
+.inp.tick{gap:8px;justify-content:flex-start}
+.inp .cb2{width:16px;height:16px;border:1.5px solid var(--t-answer);border-radius:4px;display:inline-flex;align-items:center;justify-content:center;flex:none}
+.inp .cb2.on{background:#EEF0F2;border-color:#EEF0F2}
+.pair{display:flex;flex-direction:column}
+.pair .pr{display:flex;gap:8px}
+.grp{display:flex;flex-direction:column}
+.grp > .note{height:16px}
+.grp .gb{display:flex;gap:8px}
+.rain{display:flex;gap:8px;align-items:flex-end}
+.gl{width:88px;height:48px;display:flex;flex-direction:column;justify-content:center;gap:4px}
+.mbtn{height:32px;padding:0 16px;border-radius:var(--r);border:1px solid var(--fieldline);background:var(--field);color:var(--t-answer);font:inherit;cursor:pointer;white-space:nowrap}
+.mbtn.sel{background:var(--acc);border-color:var(--acc);color:var(--acc-ink)}
+.methods{display:flex;gap:8px}
+
+/* worked-out sums: plain, no boxes */
+.cols{display:flex;gap:24px;align-items:flex-start}
+.cols > div{min-width:0}
+.sum{display:grid;grid-template-columns:16px 1fr auto;column-gap:8px;align-items:center}
+.sum > div{height:32px;line-height:32px}
+.sum .s{text-align:center}
+.sum .l{white-space:nowrap;display:flex;align-items:center;gap:8px}
+.sum .l small{font-size:12px;color:var(--t-note)}
+.sum .v{text-align:right;min-width:56px}
+.sum .v.nk{color:var(--t-note)}
+.sum .line{border-top:1px solid var(--t-body)}
+.sum .dbl{border-bottom:3px double var(--t-body);height:32px;line-height:28px}
+.sum .off{color:var(--t-note)}
+.sum .off .cb{border-color:var(--t-note)}
+.cb{width:16px;height:16px;border:1.5px solid var(--t-body);border-radius:4px;display:inline-flex;align-items:center;justify-content:center;flex:none}
+.cb.on{background:#EEF0F2;border-color:#EEF0F2}
+.cb svg{display:block}
+
+.sum5{display:grid;grid-template-columns:16px 1fr 56px 64px 56px;column-gap:8px;align-items:center}
+.sum5 > div{height:32px;line-height:32px;text-align:right}
+.sum5 .s{text-align:center}
+.sum5 .l{text-align:left;display:flex;align-items:center;gap:8px;white-space:nowrap}
+.sum5 .l small{font-size:12px;color:var(--t-note)}
+.sum5 .x{white-space:nowrap}
+.sum5 .line{border-top:1px solid var(--t-body)}
+.sum5 .dbl{border-bottom:3px double var(--t-body);height:32px;line-height:28px}
+
+.abar{display:flex;height:24px;width:320px}
+.abar div{display:flex;align-items:center;padding:0 8px;color:var(--ink);font-size:12px;white-space:nowrap;overflow:hidden;gap:8px}
+.abar div:first-child{border-radius:8px 0 0 8px}
+.abar div:last-child{border-radius:0 8px 8px 0}
+
+.ans{height:32px;display:flex;align-items:baseline;gap:8px;margin-bottom:0;white-space:nowrap}
+.ans .big{font-size:24px;line-height:32px;color:var(--t-answer)}
+.ans .big.nk{color:var(--t-note);font-weight:400}
+.ans .pill{align-self:center;margin-left:auto}
+
+.sbar{display:flex;height:32px;border-radius:var(--r);background:var(--well);border:1px solid var(--line);overflow:hidden;position:relative;margin-bottom:8px}
+.sbar .fill{background:var(--fill);color:var(--ink);display:flex;align-items:center;justify-content:space-between;padding:0 24px 0 8px;font-size:12px;white-space:nowrap;flex:none}
+.sbar .cap{display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--ink);white-space:nowrap;flex:1}
+.sbar .cap.red{background:repeating-linear-gradient(135deg,#FF6B4A 0 6px,#E85A3C 6px 12px)}
+.sbar .cap.amber{background:repeating-linear-gradient(135deg,#F5C660 0 6px,#E5B24C 6px 12px);flex:none;width:136px}
+.sbar .mk{position:absolute;top:0;bottom:0;width:2px;background:var(--ink)}
+
+.sk{stroke:var(--sv3);fill:none;stroke-width:1;stroke-dasharray:4 4}
+.sh{stroke:var(--sv1);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.tb{fill:var(--sv2);stroke:none;font-family:var(--sans);font-size:12px}
+.tn{fill:var(--sv3);stroke:none;font-family:var(--sans);font-size:12px}
+
+.bottom{height:48px;flex:none;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;padding:0 16px}
+.bottom .btns{display:flex;gap:8px}
+.btn{height:32px;padding:0 24px;border-radius:var(--r);border:1px solid var(--line);background:transparent;color:var(--t-body);font:inherit}
+.btn.quiet{color:var(--t-note)}
+.btn.ok{background:var(--acc);border-color:var(--acc);color:var(--acc-ink)}
+
+.below{width:1536px;margin-top:32px;color:#D5D8DC}
+.below h2{font-size:14px;font-weight:600;color:#fff;margin-bottom:8px}
+.below ol{padding-left:32px}
+.below li{margin-bottom:8px}
+.below li b{font-weight:600;color:#fff}
+.below p{margin-top:16px;color:#B8BBC1}
+
+.opt{margin-bottom:64px}
+.opt h1{font-size:24px;line-height:32px;font-weight:600;color:#fff;margin-bottom:8px}
+.opt .d{color:#D5D8DC;margin-bottom:16px;max-width:1500px}
+.opt .nb{color:#B8BBC1;font-size:12px;line-height:16px;margin-top:16px;max-width:1500px}
+.chev{height:24px;padding:0 8px;border:1px solid var(--fieldline);border-radius:var(--r);background:transparent;color:var(--t-body);font:inherit;font-size:12px;cursor:pointer;white-space:nowrap}
+.whyl{height:16px;margin:0 0 8px 0}
+.gb.col{flex-direction:column}
+.win.dock{width:560px;height:868px;border-radius:0;box-shadow:none}
+.win.dock .right{gap:8px}
+.win.dock .body{padding:8px}
+.win.dock .step{padding:8px}
+.win.dock .band{padding:0 8px}
+.win.dock .band{height:60px;flex-direction:column;align-items:stretch;justify-content:center;gap:0}
+.band.two .row{display:flex;align-items:center;justify-content:space-between;white-space:nowrap}
+.acad{width:1700px;height:900px;background:#101214;border:1px solid #2F3237;display:flex;flex-direction:column}
+.acad .abar2{height:32px;flex:none;background:#25282C;border-bottom:1px solid #2F3237;display:flex;align-items:center;padding:0 16px;color:#8E939B;font-size:12px}
+.acad .acadrow{display:flex;flex:1;min-height:0}
+.acad .model{width:1140px;height:868px;flex:none;position:relative}
+.acad .model svg{display:block}
+.cost{margin-top:32px;color:#D5D8DC;max-width:1500px}
+.cost h2{font-size:14px;font-weight:600;color:#fff;margin-bottom:8px}
+.cost ol{padding-left:32px}
+.cost li{margin-bottom:8px}
+.cost li b{font-weight:600;color:#fff}
+</style>
+</head>
+<body>
+
+<section class="opt" id="opta">
+  <h1>Option A: as approved, preview at the left (a quarter of the window)</h1>
+  <div class="d">The approved layout with a 380 px preview. On a busier site the drawing labels shrink to 9 px and some sit close together; this is honest about how small they get.</div>
+  <div id="winA"></div>
+  <div class="nb">Preview site is a made-up two-unit lot to show a busier drawing; figures as before.</div>
+</section>
+
+<section class="opt" id="optb">
+  <h1>Option B: preview half the window, steps beside it</h1>
+  <div class="d">A 720 px preview with readable 12 px labels. The steps get narrower, so step 2 folds to its two results (Show sum) and the discharge sketch is dropped; the band loses its small "1.70 provided, 1.64 needed" line.</div>
+  <div id="winB"></div>
+  <div class="nb">Preview site is a made-up two-unit lot to show a busier drawing; figures as before.</div>
+</section>
+
+<section class="opt" id="optc">
+  <h1>Option C: no preview in the window, the window sits beside the real drawing</h1>
+  <div class="d">A mock AutoCAD screen: the system drawn large on the left, the parts counted as storage glowing with a thin white outline and small tags with their figures; the window docked at the right, 560 px wide. Step 2 and the discharge working fold to their results.</div>
+  <div class="acad" id="acadC"></div>
+  <div class="nb">AutoCAD itself zooms to the system and lights it up; nothing is redrawn inside the window. Not proven yet in AutoCAD.<br>Preview site is a made-up two-unit lot to show a busier drawing; figures as before.</div>
+</section>
+
+<div class="cost" id="cost">
+  <h2>What each costs</h2>
+  <ol>
+    <li><b>A: smallest drawing, most room for figures.</b> Everything in the window stays as approved, but on a busy site the drawing labels get very small and start to crowd.</li>
+    <li><b>B: readable drawing, figures narrower and one sum folded.</b> The labels are a normal size, but the inputs wrap to three rows, step 2 needs one click to show its working, and the discharge sketch goes.</li>
+    <li><b>C: biggest and truest drawing, window narrower.</b> It depends on AutoCAD doing the zoom and the highlight itself, which is not proven yet, and the window covers less of the drawing than a floating one but still some of the right side.</li>
+  </ol>
+</div>
+
+<script>
+(function(){
+  var q=new URLSearchParams(location.search);
+  var only=q.get('only');
+  if(only){['a','b','c'].forEach(function(o){if(o!==only){document.getElementById('opt'+o).style.display='none';}});document.getElementById('cost').style.display='none';}
+
+  var tick='<svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#10131A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 L5 9 L10 3"/></svg>';
+  var rain=[['5 min','98.6'],['10 min','73.6'],['15 min','60.1'],['20 min','51.5'],['25 min','45.5'],['30 min','40.9']];
+
+  /* ---------- the made-up two-unit lot, 18.00 x 45.00 ---------- */
+  function tw(t,fs){return t.length*fs*0.62;}
+  function site(o){
+    var k=o.k,ox=o.ox,oy=o.oy,fs=o.fs,W=o.W,H=o.H,m=o.mode;
+    var X=function(v){return ox+v*k;},Y=function(v){return oy+v*k;};
+    var s=Math.max(12,Math.round(k*1.4)),h=s/2,lh=fs+3,C='#C8CBD0';
+    var f=[];
+    function tx(x,y,t,anc,tr,col){f.push('<text x="'+x+'" y="'+y+'" fill="'+(col||C)+'" font-size="'+fs+'" font-family="IBM Plex Sans, Segoe UI, sans-serif" letter-spacing="0.3"'+(anc?' text-anchor="'+anc+'"':'')+(tr?' transform="'+tr+'"':'')+'>'+t+'</text>');}
+    function ln(x1,y1,x2,y2,c,w,d){f.push('<path d="M'+x1+' '+y1+' L'+x2+' '+y2+'" stroke="'+(c||'#8A8F96')+'" stroke-width="'+(w||0.8)+'"'+(d?' stroke-dasharray="'+d+'"':'')+' fill="none"/>');}
+    function rc(x,y,w,hh,st,sw,fill,rx,d){f.push('<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+hh+'" rx="'+(rx||0)+'" fill="'+(fill||'none')+'" stroke="'+st+'" stroke-width="'+sw+'"'+(d?' stroke-dasharray="'+d+'"':'')+'/>');}
+    function pit(cx,cy,dim,ring){
+      var c=dim?'#5E636B':'#E8EAED';
+      if(ring){rc(cx-h-4,cy-h-4,s+8,s+8,'#F3F4F5',1,null,3);}
+      rc(cx-h,cy-h,s,s,c,1,'#16181B');
+      ln(cx-h,cy-h,cx+h,cy+h,'#5E636B',0.6);ln(cx+h,cy-h,cx-h,cy+h,'#5E636B',0.6);
+    }
+    f.push('<svg width="'+W+'" height="'+H+'" viewBox="0 0 '+W+' '+H+'">');
+    f.push('<defs><filter id="glow'+o.id+'" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4"/></filter></defs>');
+    f.push('<rect x="0" y="0" width="'+W+'" height="'+H+'" rx="8" fill="#16181B"/>');
+    if(m!=='a'){
+      rc(X(-18),Y(-1),18*k,47*k,'#2E3238',1,'#181A1D',0,'6 4');
+      rc(X(18),Y(-1),18*k,47*k,'#2E3238',1,'#181A1D',0,'6 4');
+    }
+    // dimensions
+    ln(X(0),oy-14,X(18),oy-14,'#8A8F96',1);ln(X(0),oy-19,X(0),oy-9,'#8A8F96',1);ln(X(18),oy-19,X(18),oy-9,'#8A8F96',1);
+    tx(X(9),oy-20,'18.00','middle');
+    ln(ox-14,Y(0),ox-14,Y(45),'#8A8F96',1);ln(ox-19,Y(0),ox-9,Y(0),'#8A8F96',1);ln(ox-19,Y(45),ox-9,Y(45),'#8A8F96',1);
+    tx(0,0,'45.00','middle','translate('+(ox-20)+' '+Y(22.5)+') rotate(-90)');
+    // boundary, driveway, houses
+    rc(X(0),Y(0),18*k,45*k,'#E8EAED',1);
+    rc(X(0),Y(0),3.5*k,45*k,'#9AA0A8',1);
+    tx(0,0,'SHARED DRIVEWAY','middle','translate('+(X(1.75)+fs*0.35)+' '+Y(22.5)+') rotate(-90)');
+    rc(X(4.5),Y(2),9.5*k,11*k,'#9AA0A8',1.2);ln(X(4.5),Y(7.5),X(14),Y(7.5),'#5E636B',1);
+    tx(X(9.25),Y(7.5)-4,'UNIT 1','middle');
+    rc(X(4.5),Y(16),9.5*k,11*k,'#9AA0A8',1.2);ln(X(4.5),Y(21.5),X(14),Y(21.5),'#5E636B',1);
+    tx(X(9.25),Y(21.5)-4,'UNIT 2','middle');
+    tx(X(4.8),Y(43.8),'GARDEN');
+    // kerb
+    ln(0,Y(47),W,Y(47),'#8A8F96',1);ln(0,Y(47)+4,W,Y(47)+4,'#5E636B',1);
+    tx(10,Y(47)+fs+8,'KERB');
+    // pipe: halo (counted) + detention pipe
+    var pw=Math.max(3,k*0.35);
+    if(m==='c'){f.push('<path d="M'+X(16)+' '+(Y(21)+1.4*k)+' V'+(Y(32.5)+h)+'" stroke="#F3F4F5" stroke-width="'+(pw+8)+'" stroke-linecap="round" opacity="0.5" filter="url(#glow'+o.id+')"/>');}
+    f.push('<path d="M'+X(16)+' '+(Y(21)+1.4*k)+' V'+(Y(32.5)+h+3)+'" stroke="#F3F4F5" stroke-width="'+(pw+6)+'" stroke-linecap="round" opacity="0.3"/>');
+    f.push('<path d="M'+X(16)+' '+(Y(21)+1.4*k)+' V'+(Y(40)-h)+'" stroke="#4A90E2" stroke-width="'+pw+'" stroke-dasharray="'+(pw*2.4)+' '+(pw)+'" fill="none"/>');
+    // tank
+    if(m==='c'){f.push('<circle cx="'+X(16)+'" cy="'+Y(21)+'" r="'+(1.4*k+6)+'" fill="none" stroke="#F3F4F5" stroke-width="3" opacity="0.5" filter="url(#glow'+o.id+')"/>');}
+    f.push('<circle cx="'+X(16)+'" cy="'+Y(21)+'" r="'+(1.4*k+5)+'" fill="none" stroke="#F3F4F5" stroke-width="1"/>');
+    f.push('<circle cx="'+X(16)+'" cy="'+Y(21)+'" r="'+(1.4*k)+'" fill="#16181B" stroke="#E8EAED" stroke-width="1.2"/>');
+    // P1 P2 counted, P3 P4 not used, orifice
+    pit(X(16),Y(27.5),false,true);pit(X(16),Y(32.5),false,true);
+    ln(X(9)+h,Y(35),X(16)-h-4,Y(35),'#5E636B',1.5,'5 4');pit(X(9),Y(35),true,false);
+    tx(X(9),Y(35)+h+fs+2,'P3 NOT USED','middle');
+    ln(X(9)+h,Y(29.5),X(16)-h-4,Y(29.5),'#5E636B',1.5,'5 4');pit(X(9),Y(29.5),true,false);
+    tx(X(9),Y(29.5)+h+fs+2,'P4 NOT USED','middle');
+    rc(X(16)-h,Y(40)-h,s,s,'#E8EAED',1.2,'#16181B');f.push('<circle cx="'+X(16)+'" cy="'+Y(40)+'" r="'+(s*0.17)+'" fill="none" stroke="#E8EAED"/>');
+    // outlet to council pit
+    f.push('<path d="M'+X(16)+' '+(Y(40)+h)+' V'+(Y(47)-h*0.8)+'" stroke="#4A90E2" stroke-width="2" fill="none"/>');
+    f.push('<path d="M'+(X(16)-4)+' '+Y(43)+' L'+(X(16)+4)+' '+Y(43)+' L'+X(16)+' '+(Y(43)+8)+' Z" fill="#4A90E2"/>');
+    var cs=s*0.8;rc(X(16)-cs/2,Y(47)-cs/2,cs,cs,'#E8EAED',1.2,'#16181B');
+    // right-margin labels
+    var x0=X(18)+(m==='a'?12:20);
+    function lead(yv,x1){ln(x1,Y(yv),x0-4,Y(yv),'#8A8F96',0.8);}
+    function rlab(yv,lines){var y0=Y(yv)-(lines.length-1)*lh/2+fs*0.35;lines.forEach(function(t,i){tx(x0,y0+i*lh,t);});}
+    function tag(yv,label,x1){var r=fs>=12?12:9;lead(yv,x1);f.push('<circle cx="'+(x0+r)+'" cy="'+Y(yv)+'" r="'+r+'" fill="#16181B" stroke="#E8EAED"/>');tx(x0+r,Y(yv)+fs*0.35,label,'middle');return x0+2*r;}
+    function box(x,yv,t){var w=tw(t,fs)+16,hh=fs+12;rc(x,Y(yv)-hh/2,w,hh,'#F3F4F5',1,'#1B1E22',8);tx(x+8,Y(yv)+fs*0.35,t,null,null,'#F3F4F5');return x+w;}
+    var tl=['WT1 5000 L'];
+    lead(21,X(16)+1.4*k+5);rlab(21,tl);
+    if(m==='c'){box(x0+tw(tl[0],fs)+16,21,'WT1 1.00 m³');lead(24.5,X(16)+pw/2+3);box(x0,24.5,'Pipe 0.56 m³');}
+    var e1=tag(27.5,'P1',X(16)+h+4);if(m==='c')box(e1+8,27.5,'P1 0.08');
+    var e2=tag(32.5,'P2',X(16)+h+4);if(m==='c')box(e2+8,32.5,'P2 0.06');
+    lead(36.5,X(16)+pw/2+2);
+    rlab(36.5,m==='a'?['225 DIA.','STORMPRO PIPE','AT 1 IN 200']:['225 DIA. STORMPRO PIPE','AT 1 IN 200']);
+    lead(40,X(16)+h);
+    var ol=m==='a'?['ORIFICE PIT','69 DIA.']:['ORIFICE PIT','69 DIA.'];
+    rlab(40,ol);
+    if(m==='c'){box(x0+tw('ORIFICE PIT',fs)+20,40,'Orifice pit 69 mm, 5.84 L/s');}
+    tx(x0,Y(44)+fs*0.35,'5.84 L/S');
+    lead(47,X(16)+cs/2);tx(x0,Y(47)-6,'COUNCIL PIT (LPD)');
+    if(o.extra)f.push(o.extra);
+    f.push('</svg>');
+    return f.join('');
+  }
+
+  var SITE_A=site({id:'A',W:348,H:556,k:10,ox:50,oy:46,fs:9,mode:'a'});
+  var SITE_B=site({id:'B',W:704,H:574,k:11,ox:200,oy:36,fs:12,mode:'b'});
+  var SITE_C=site({id:'C',W:1140,H:868,k:16.5,ox:300,oy:50,fs:12,mode:'c',
+    extra:'<path d="M1090 840 V810 M1090 840 H1120" stroke="#C8CBD0" stroke-width="1.5"/><text x="1126" y="844" fill="#8A8F96" font-size="12" font-family="IBM Plex Sans, Segoe UI, sans-serif">X</text><text x="1084" y="800" fill="#8A8F96" font-size="12" font-family="IBM Plex Sans, Segoe UI, sans-serif">Y</text>'});
+
+  /* ---------- window pieces ---------- */
+  function band(L){
+    var main='Storage suits: <b class="strong">0.06</b> m³ spare';
+    var dis='Discharge <b class="strong">5.84</b> L/s of <b class="strong">6.00</b> allowed <span class="pill green">Suits</span>';
+    if(L==='a') return '<div class="band green"><div class="left"><span class="pill" style="background:transparent">Suits</span><span class="main">'+main+'</span><span class="sub">1.70 provided, 1.64 needed</span></div><div class="right2">'+dis+'</div></div>';
+    if(L==='b') return '<div class="band green"><div class="left"><span class="pill" style="background:transparent">Suits</span><span class="main">'+main+'</span></div><div class="right2">'+dis+'</div></div>';
+    return '<div class="band green two"><div class="row"><div class="left"><span class="pill" style="background:transparent">Suits</span><span class="main">'+main+'</span></div></div><div class="row sub"><span>1.70 provided, 1.64 needed</span><span class="right2">'+dis+'</span></div></div>';
+  }
+  function inp(label,val,unit,w,extra){return '<div class="fld" style="width:'+w+'px"><span class="note">'+label+'</span><div class="inp">'+(extra||'')+'<span>'+val+'</span>'+(unit?'<span class="u">'+unit+'</span>':'')+'</div></div>';}
+  function tk(lbl,on){return '<div class="inp tick" style="width:56px"><span class="cb2'+(on?' on':'')+'">'+(on?tick:'')+'</span><span>'+lbl+'</span></div>';}
+  function step1(L){
+    var wA=L==='c'?[96,112,72,88,120]:[96,112,72,88,128];
+    var fields=inp('Site area','600.00','m²',wA[0])+inp('Allowed discharge','6.00','L/s',wA[1])+inp('Storm, 1 in','10','',wA[2])+
+      '<div class="pair"><div class="pr">'+inp('Tank size','5,000','L',wA[3])+inp('Detention share','1,000','L',wA[4])+'</div>'+(L==='c'?'':'<span class="note">Same figures as on tank WT1; change either place</span>')+'</div>';
+    var pits='<div class="grp"><span class="note">Pits that hold water</span><div class="gb">'+tk('P1',true)+tk('P2',true)+tk('P3',false)+'</div></div>';
+    var method='<div class="grp"><span class="note">Method</span><div class="gb'+(L==='c'?' col':'')+'"><button class="mbtn sel">Office method (Boyd\'s)</button><button class="mbtn">Council tool (OSD4W)</button></div></div>';
+    var ww=L==='c'?60:80;
+    var wells=rain.map(function(r){return '<div class="fld" style="width:'+ww+'px"><span class="note">'+r[0]+'</span><div class="inp"><span>'+r[1]+'</span></div></div>';}).join('');
+    var rainH='<div class="rain"><div class="gl"><span>Site rainfall</span><span class="note">1 in 10, mm/h</span></div>'+wells+'</div>';
+    var why='The few figures only you can give. Everything else is worked out.';
+    var head=L==='c'?
+      '<div class="shead"><span class="n">1</span><span class="t">What you type</span><span class="sp"></span><span class="note">Nothing needs you</span></div><div class="note whyl">'+why+'</div>':
+      '<div class="shead"><span class="n">1</span><span class="t">What you type</span><span class="note">'+why+'</span><span class="sp"></span><span class="note">Nothing needs you</span></div>';
+    var rows;
+    if(L==='a') rows='<div class="row1"><div class="fields">'+fields+'</div>'+pits+'</div><div class="row1 rowb">'+rainH+method+'</div>';
+    else if(L==='b') rows='<div class="row1"><div class="fields">'+fields+'</div></div><div class="row1 rowb">'+rainH+'</div><div class="row1 rowb">'+pits+method+'</div>';
+    else rows='<div class="row1"><div class="fields">'+fields+'</div></div><div class="note" style="text-align:right">Same figures as on tank WT1; change either place</div><div class="row1 rowb">'+rainH+'</div><div class="row1 rowb">'+pits+method+'</div>';
+    return '<div class="card step">'+head+rows+'</div>';
+  }
+  function r5(s,l,src,a,x,e){return '<div class="s">'+s+'</div><div class="l">'+l+(src?'<small>'+src+'</small>':'')+'</div><div>'+a+'</div><div class="x">'+x+'</div><div>'+e+'</div>';}
+  function step2(L){
+    var abar=function(w){return '<div class="abar" style="width:'+w+'px"><div style="width:38.3%;background:var(--c1)">Roof<span>230</span></div><div style="width:25%;background:var(--c2)">Paving<span>150</span></div><div style="width:36.7%;background:var(--c3)">Garden<span>220</span></div></div>';};
+    var why='Read off what you drew. Change the drawing, not this window.';
+    if(L==='a'){
+      return '<div class="card step"><div class="shead"><span class="n">2</span><span class="t">What the drawing gives</span><span class="note">'+why+'</span><span class="sp"></span>'+abar(320)+'</div>'+
+      '<div class="cols"><div style="width:432px"><div class="sum5">'+
+        r5('','Roof','measured','230.00','&times; 0.90','207.00')+r5('+','Paving','measured','150.00','&times; 0.90','135.00')+r5('+','Garden','worked out','220.00','&times; 0.35','77.00')+
+        '<div class="s"></div><div class="l">Total</div><div class="line">600.00</div><div class="x"></div><div class="line">419.00</div>'+
+        '<div class="s">=</div><div class="l">Share that runs off <small>419.00 &divide; 600.00</small></div><div></div><div class="x"></div><div class="line dbl strong">0.698</div>'+
+      '</div><div class="note" style="margin-top:0">Runoff coefficient. Shown as 0.70 elsewhere.</div></div>'+
+      '<div style="width:400px"><div class="sum">'+
+        '<div class="s"></div><div class="l">Tank WT1 <small>room for detention</small></div><div class="v">1.00</div>'+
+        '<div class="s">+</div><div class="l">Pipes <small>225 dia, 14.00 m</small></div><div class="v">0.56</div>'+
+        '<div class="s">+</div><div class="l">P1 holds water</div><div class="v">0.08</div>'+
+        '<div class="s">+</div><div class="l">P2 holds water</div><div class="v">0.06</div>'+
+        '<div class="s">=</div><div class="l">Provided</div><div class="v line dbl strong">1.70</div>'+
+      '</div><div class="note" style="margin-top:0">P3 not used (0.04 m³ not counted)</div></div></div></div>';
+    }
+    var res1='<div class="sum"><div class="s">=</div><div class="l">Share that runs off</div><div class="v dbl strong">0.698</div></div>';
+    var res2='<div class="sum"><div class="s">=</div><div class="l">Provided</div><div class="v dbl strong">1.70</div></div>';
+    if(L==='b'){
+      return '<div class="card step"><div class="shead"><span class="n">2</span><span class="t">What the drawing gives</span><span class="note">'+why+'</span><span class="sp"></span><button class="chev">Show sum &#9662;</button></div>'+
+        '<div class="cols"><div style="width:340px">'+abar(340)+'<div style="margin-top:8px">'+res1+'</div></div><div style="width:340px"><div style="height:32px"></div>'+res2+'</div></div></div>';
+    }
+    return '<div class="card step"><div class="shead"><span class="n">2</span><span class="t">What the drawing gives</span><span class="sp"></span><button class="chev">Show sum &#9662;</button></div><div class="note whyl">'+why+'</div>'+
+      '<div class="cols" style="gap:16px"><div style="width:256px">'+res1+'</div><div style="width:256px">'+res2+'</div></div></div>';
+  }
+  function stor(L,note){
+    return '<div class="ans"><span class="big strong">0.06</span><span>m³ spare</span><span class="pill green">Suits</span></div>'+
+      '<div class="sbar"><div class="fill" style="width:100%"><span>Provided 1.70</span><span>Spare 0.06</span></div><div class="mk" style="left:96.5%"></div></div>'+
+      '<div class="sum"><div class="s"></div><div class="l">Provided</div><div class="v">1.70</div><div class="s">&minus;</div><div class="l">Needed, 5 minute storm</div><div class="v">1.64</div><div class="s">=</div><div class="l">Spare</div><div class="v line dbl strong">0.06</div></div>'+
+      (note?'<div class="note" style="margin-top:0">Storm length that needs the most storage.</div>':'');
+  }
+  var SK='<svg width="226" height="144" viewBox="0 0 240 144"><path class="sh" d="M10 8 V132 H120"/><path class="sk" d="M10 8 H120"/><text class="tn" x="16" y="26">Top water</text><text class="tn" x="16" y="42">level (plate)</text><path class="sh" d="M120 8 V102 M120 114 V132"/><path class="sh" d="M102 12 V108 M98 16 L102 9 L106 16 M98 104 L102 111 L106 104"/><path class="sk" d="M102 108 H120"/><text class="tb" x="14" y="76">Head 345.5</text><text class="tb" x="128" y="24">Plate 380.0</text><path class="sh" d="M124 108 H206 M198 103 L206 108 L198 113"/><text class="tb" x="134" y="98">Hole 69</text><text class="tn" x="180" y="126">Flow</text></svg>';
+  function disch(L){
+    var head='<div class="ans"><span class="big strong">5.84</span><span>L/s of 6.00 allowed</span>'+(L==='c'?'<button class="chev" style="margin-left:auto">Show sum &#9662;</button>':'<span class="pill green">Suits</span>')+'</div>';
+    var full='<div class="sum">'+
+      '<div class="s"></div><div class="l">Hole size (orifice) <small>worked out, rounded down</small></div><div class="v">69</div>'+
+      '<div class="s"></div><div class="l">Plate</div><div class="v">380.0</div>'+
+      '<div class="s">&minus;</div><div class="l">Half the hole</div><div class="v">34.5</div>'+
+      '<div class="s">=</div><div class="l">Water height above the hole (head)</div><div class="v line">345.5</div>'+
+      '<div class="s">=</div><div class="l">Flow, L/s <small>0.6 &times; hole area &times; &radic;(2 &times; 9.81 &times; head)</small></div><div class="v line dbl strong">5.84</div></div>';
+    if(L==='c') return head+'<div class="sum"><div class="s">=</div><div class="l">Flow, L/s</div><div class="v dbl strong">5.84</div></div>';
+    return head+full;
+  }
+  function step3(L){
+    var why='Does the site hold the storm, and does it let out no more than allowed?';
+    var head=L==='c'?'<div class="shead"><span class="n">3</span><span class="t">The answers</span></div><div class="note whyl">'+why+'</div>':'<div class="shead"><span class="n">3</span><span class="t">The answers</span><span class="note">'+why+'</span></div>';
+    if(L==='a') return '<div class="card step grow">'+head+'<div class="cols"><div style="width:420px">'+stor(L,true)+'</div><div style="flex:1;display:flex;gap:24px"><div style="width:392px">'+disch(L)+'</div><div style="padding-top:16px">'+SK+'<div class="note">Hole, plate and head in mm.</div></div></div></div></div>';
+    if(L==='b') return '<div class="card step grow">'+head+'<div class="cols"><div style="width:300px">'+stor(L,true)+'</div><div style="width:392px">'+disch(L)+'</div></div></div>';
+    return '<div class="card step grow">'+head+'<div style="width:100%">'+stor(L,false)+'</div><div style="width:100%;margin-top:8px">'+disch(L)+'</div></div>';
+  }
+  var bottom='<div class="bottom"><button class="btn quiet">Print the working</button><div class="btns"><button class="btn">Cancel</button><button class="btn ok">OK</button></div></div>';
+  function pvPanel(svg){
+    return '<div class="phead"><span class="t">The drawing</span><span class="note">What this window is reading. Outlined in white: counted as storage.</span></div>'+svg+
+      '<div class="chain"><span class="chip">WT1</span>&rarr;<span class="chip">Pipe</span>&rarr;<span class="chip">P1</span>&rarr;<span class="chip">P2</span>&rarr;<span class="chip lit">Orifice pit</span>&rarr;<span class="chip">Council pit (LPD)</span></div>'+
+      '<div class="note foot">Lit: where this window\'s answer applies (the orifice pit)</div>'+
+      '<div class="note foot">Preview: the drawing as AutoCAD shows it. Made-up site.</div>';
+  }
+  function win(L,pw,pv){
+    var right='<div class="right">'+band(L)+step1(L)+step2(L)+step3(L)+'</div>';
+    return '<div class="win"><div class="titlebar"><span>Detention · this job</span><span class="x">&#x2715;</span></div><div class="body"><div class="card preview" style="width:'+pw+'px">'+pv+'</div>'+right+'</div>'+bottom+'</div>';
+  }
+  document.getElementById('winA').innerHTML=win('a',380,pvPanel(SITE_A));
+  document.getElementById('winB').innerHTML=win('b',720,pvPanel(SITE_B));
+  document.getElementById('acadC').innerHTML=
+    '<div class="abar2">AutoCAD (mock): model space</div><div class="acadrow"><div class="model">'+SITE_C+'</div>'+
+    '<div class="win dock"><div class="body"><div class="right">'+band('c')+step1('c')+step2('c')+step3('c')+'</div></div>'+bottom+'</div></div>';
+})();
+</script>
+</body>
+</html>
