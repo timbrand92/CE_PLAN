@@ -662,6 +662,14 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-320** (19 Nov 2026, 8:08 am; a part on a frozen or off layer) "Offer to turn it on". The window says the layer is off or frozen and offers a button to turn it on; nothing changes unless he presses it. The planning chat's draft call (never offer) is overturned.
 
+**D-321** (19 Nov 2026, about 8:12 am; size of the tolerance in D-318) "A setting, opens at 5 mm". The tolerance on levels and cover is a setting an engineer can change per job, in the Job window, opening at 5 mm. Planning chat's call for grades until he says otherwise: a grade passes when it meets the required figure at two decimal places.
+
+**D-322** (19 Nov 2026, about 8:12 am; using a worked-out figure, answering his own question in D-319) "if you want it and the invert is selected to be added to pipe you shouldnt need to do anything". Planning chat's reading: a worked-out figure is used as it stands with no extra step; if the invert is switched on to be shown on the pipe, OK writes it. Holding is only for when he wants it fixed against later changes, and that is done by typing over it; no pin is needed.
+
+**D-323** (19 Nov 2026, about 8:12 am; pit opening size) "Yes, size resets (Recommended)". PT always opens at 450 x 450 and PP at 350 x 350; kind, lid and the rest open with last used (D-263).
+
+**D-324** (19 Nov 2026, about 8:12 am; undo while drawing pipes) "Yes, as described (Recommended)". While the pipe command is running, undo takes back the last pipe only; after Enter, one undo takes back the whole run.
+
 ## Not decided (asked or raised, no decision yet)
 
 1. Whether Stage 1's civil explanation is approved (Tim moved on to the design without saying "approve"). **Settled by D-117.**
