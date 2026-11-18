@@ -1,6 +1,6 @@
 # The Manager (MANAGER / MG): what it does, from Tim's answers
 
-**Revision:** 1 (Wed 18 Nov 2026, afternoon, Melbourne time). IDs: MS-01 onwards, never reused. Builds on MG-01 to MG-06 in `design\TOOLS_AND_MANAGER_INTERVIEW.md`.
+**Revision:** 2 (Wed 18 Nov 2026, afternoon, Melbourne time; revision 2 adds statistics, MS-12). IDs: MS-01 onwards, never reused. Builds on MG-01 to MG-06 in `design\TOOLS_AND_MANAGER_INTERVIEW.md`.
 **Sources:** TA-011 to TA-013, TA-088 to TA-095 in `interview_tools\ANSWERS.md`. Earlier rulings: D-028 (one-click update and back), D-071 to D-074 (job link), D-180 (a drawing keeps its own values), D-204.
 **Status:** planning only. Nothing is built. In the first release with the 18 shared tools (D-201).
 
@@ -48,7 +48,14 @@
    - "approve for everyone";
    - "go back for everyone" (all PCs to the last good version);
    - a list of what Tim changed in the office lists, and when.
-2. **Later, not the first release:** statistics and fuller admin control (FI-01, FI-02).
+2. **MS-12 Statistics, IN the first release** (Tim: "CAN YOU ADD STATISTICS TO THIS RELEASE?", TA-096 to TA-098):
+   - how many times each tool was used;
+   - how long each tool takes, from typing it to OK;
+   - which tools fail or are cancelled most;
+   - drawing time per job (from the job link).
+
+   Totals are shown to everyone; per person only on Tim's admin page (as D-073). The old plug-in's "one record per command run" idea is the starting point. Its gap must not come back: it only counted commands it wrapped (parts bin item 29).
+3. **Later, not the first release:** fuller admin control (FI-02).
 
 ## Still open
 

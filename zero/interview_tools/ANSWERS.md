@@ -279,4 +279,10 @@ Answer given in chat (planning chat's reading, not Tim's words): his button is a
 
 **TA-095 Admin page, beyond versions, faults and "approve for everyone".** "Who is on an old version", "Go back for everyone", "Office list changes".
 
-Next free number: TA-096
+**TA-096 Message.** "CAN YOU ADD STATISTICS TO THIS RELEASE?" This brings statistics (future idea FI-01) into the first release, on Tim's admin page.
+
+**TA-097 Which statistics.** All four ticked: "Tool use counts", "Time a tool takes", "Faults per tool", "Time per job".
+
+**TA-098 Who is shown.** "Same as job hours": totals for everyone; per person only on Tim's admin page (as D-073).
+
+Next free number: TA-099
