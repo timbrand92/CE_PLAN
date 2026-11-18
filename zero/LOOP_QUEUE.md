@@ -36,3 +36,14 @@ The limit "Nothing starts AutoCAD. No trials." above now reads: AutoCAD may be s
 8. [~] (18 Nov 08:30: built and reviewed on the pretend drawing; first AutoCAD run tonight) Build chat: the Pit tool in AutoCAD (typed command PIT / PT, the window, draws ordinary objects), through the tool loop and the night loop in `stage6\LOOPS.md`.
 9. [ ] Build chat: the Pipe tool in AutoCAD (PIPE / CD), same loops. Ordinary AutoCAD grips only until the grip crash of 17 Nov is understood.
 10. [ ] After each of 7 to 9: refresh `DIRECTOR_SUMMARY.md`. When Pit and Pipe both pass the night loop, tell Tim there is something he can try in AutoCAD and ask his yes to load it.
+
+## Added 18 Nov 2026 afternoon (after Tim's rulings D-162 to D-196)
+
+Items 8 and 9 above are built on the pretend drawing (Pit, Pipe) and so is the Long section tool; none has run in AutoCAD. The queue from here, build chat unless said:
+11. [ ] The eight gaps from `design\SITUATIONS.md` (join later; a real outlet; end kinds; ends follow the pit wall; a pit in a blank drawing; grey for not known; following and labels that move with the pit; the standards a drawing was designed with) and bends on every pipe (D-189). Before any new tool.
+12. [ ] Speed timing in the night run (D-165), then tonight's first AutoCAD run of Pit and Pipe after 5:30 pm with no acad running: CETEST, CEPIT1 to 6, CEPIPE1 to 6. Planning chat: read the result, update the director's summary, tell Tim in the morning.
+13. [ ] Window work on the bench: the rose scheme (D-168), the new preview (D-167), the Schedule Columns card and scale out (D-169), LONGSECTION / LG (D-196), TANK / WT (D-170), tabs on small screens (D-193). Then a separate UI critic, then the independent tester re-tries all seven by real clicks at night.
+14. [ ] Typing cuts 1 to 3 of `design\INPUT_AUDIT.md` (defaults fill themselves; one fact in one place; head, orifice and pit size worked out). Cuts 4 and 5 wait for Tim's answers.
+15. [ ] Planning chat: put the build chat's collected DRAFT calls (Pit, Pipe, Long section) to Tim as clickable batches, each with context and a real-job example, once item 11 has settled which are still live.
+16. [ ] Planning chat: bring back, one at a time on a part-drawn job, how the top water level is first chosen; whether the orifice pit is always the last pit; tank re-use against detention.
+17. [ ] Then the Inlets tool (after `SITUATIONS.md` has been read against it), Tank, Detention, Schedule.
