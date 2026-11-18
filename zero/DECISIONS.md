@@ -678,6 +678,8 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-328** (19 Nov 2026, about 8:16 am; the 19 budgets and the 10 layer questions) "As pictures and tick sheets later today". One page each with the recommended answer ticked; he changes only the ones he disagrees with.
 
+**D-329** (19 Nov 2026, about 8:20 am; the Team account, lifting his hold of 5 Nov) "and i have 50% usage remaining on team account until saturday midday so we can leverage that as well. i wouldnt mind something checking what codex is doing and it can also do work of its own". So: the Team account is in use again until Sat 21 Nov midday. One Team checker (Opus) reads every Codex result against the rulings, separate from Codex's own review; Team Sonnet builders may do work of their own, on their own branches, never the same files as a running Codex job. Login tested 8:19 am: works; the sign-in ends between 24 and 27 Nov and he will need to sign in again before then.
+
 ## Not decided (asked or raised, no decision yet)
 
 1. Whether Stage 1's civil explanation is approved (Tim moved on to the design without saying "approve"). **Settled by D-117.**
