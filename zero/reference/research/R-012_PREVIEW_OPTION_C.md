@@ -42,6 +42,41 @@ The palette docked at the right edge with the drawing still usable and fully dra
 ### C. A real mouse click on OK and Cancel: NOT PROVEN
 With AutoCAD in front and the palette docked, three mouse clicks and one press and release on OK and Cancel only focused the button (it showed its focus outline, `q_palette_dock.png`); the plug-in's click handler did not run. Pressing the space bar on the focused OK did run it (log `Q C the OK button was clicked`). So the buttons work from the keyboard; whether Tim's own mouse clicks work was not tested, and my mouse tool may not reach this kind of window.
 
+## Third night run (18 Nov 23:15 to 23:45): zoom arithmetic, profile files, panel and events
+
+Test copy `p_2500.dwg` (2,500 objects), one test AutoCAD at a time, all closed normally with No to saving. Pictures in `C:\CE_WORK\trials\zero\evidence\r011\`; logs `zt_run22_cal.log`, `zt_run23_item3.log`; snapshots of the registry and profile files in `C:\CE_WORK\trials\zero\evidence\profile_snap\`.
+
+**Morning line for Tim (third night run): answer first.** The zoom arithmetic is fixed for the lights and tags (they land centred, to within 2 pixels, on three different sets, in 1 to 7 ms, with the drawing still unmarked), but **the drawing's own picture does not follow that view change**, so the real pipes do not line up with the lit outlines: the graphics-layer route cannot show the system on its own. The ordinary zoom (which marks the drawing) lines up correctly. With a narrow docked panel open, the lit pipes and tags stay correct through pan, zoom and REGEN and vanish on Escape, on closing the panel, on switching drawing tab and on closing the drawing, with no leftovers. Docking did not change the registry (0 lines) and the profile file holds no entry for my window.
+**Completed:** items 2 and 3 (PROVEN as below), item 1 arithmetic. **Not completed:** getting the drawing's own picture to follow the graphics-layer zoom (NOT PROVEN, probably not possible this way); the 1-byte change in one profile file (cause not known).
+**Next:** use AutoCAD's own zoom (and accept the save prompt), or move the view by another supported route, or keep the preview inside the window (option B); read the profile file content before and after a docked session.
+
+### Item 1. Zoom arithmetic on the graphics route (three sets)
+
+1. **What was wrong and what fixed it:** the earlier code took the proportions and orientation of the view from the editor's view record, which does not match the live graphics view. Taking them from the graphics view itself (its own up direction, back distance and field proportions) and reading the view back after each change fixed the lights.
+2. **Result, three sets (A a block of 20 pipes near x 1200, B 20 near x 120, C 25 near x 2300):** two marks placed at the intended centre and 100 units to the right landed on the middle of the drawing area within 0.5 to 2 pixels of the centre, and at the intended scale within 2 per cent after at most two corrections (set B needed 1.02 times and a 2 unit shift; A and C needed none). 1 to 7 ms. DBMOD stayed 0 throughout. Pictures `r_A_0.png`, `r_B_0.png` to `r_B_2.png`, `r_C_0.png`.
+3. **The catch: the drawing's own picture did not follow.** In all three pictures the real pipes and labels shown are a different part of the drawing (for example "PIPE 785" to "PIPE 635" for set A, "PIPE 1245" to "PIPE 1395" for set C) and the lit outlines are not beside the marks. The graphics-layer change moved only the temporary graphics; the drawing itself drew from another view. **So "the chosen set lands centred with a margin on the real drawing through this route": NOT PROVEN.** Using AutoCAD's ordinary zoom the lit outlines and pipes line up (`i3_1_panel_lit.png`) but that marks the drawing as changed.
+4. **Closing:** with the graphics-layer change and the lit set alive, AutoCAD still closed with no "Save changes?" prompt (earlier run).
+
+### Item 2. Where AutoCAD keeps the dock state, read only
+
+1. **Where I looked:** the whole registry tree `HKCU\Software\Autodesk\AutoCAD\R26.0` (exported to a file in my folder, 1,311 lines) and the profile and support files under both AutoCAD 2027 folders of the user profile (64,676 files, sizes and times). Nothing was written to either.
+2. **Three snapshots:** before anything (S0), after a plain control session with the plug-ins loaded and no window (S1), after the session with the docked windows, the lit sets, the tab switch, the drawing close and the double-click tests (S2).
+3. **Registry: PROVEN UNCHANGED.** S0 to S1 and S1 to S2 both differ by **0 lines**.
+4. **Profile files:** in both sessions AutoCAD itself rewrote the same five files at exit (the start-up file, `acad.CUIX` and its backup, `FixedProfile.aws`, `Profiles\tim\profile.aws`) and one recent-blocks file. So **a plain session with no window of mine also rewrites them.** `profile.aws` (a text file, the profile's own settings) changed by one byte after the docked session (88,333 to 88,332 bytes; the plain session had changed it too). I did not keep a copy of its text, so **whether that byte is the window's doing is NOT PROVEN**. A text search of the current `profile.aws` for my windows' names found nothing, and a search of the registry snapshot found nothing, so **the window's dock position is not stored under its name in either place: PROVEN for names, NOT PROVEN for any other form.**
+5. **What changed in the profile, plainly:** nothing that I wrote; AutoCAD's own exit rewrite. If Tim wants certainty, the next run should keep a copy of the text of `profile.aws` before and after.
+6. **A slip, disclosed:** while looking for AutoCAD's text window I pressed the F2 key; in Tim's workspace it started AutoCAD's CLEAN command ("CLEAN Nested items = Off Orphaned data = Off") on the test copy. I pressed Escape at once and the command line showed "*Cancel*"; no command was left running. The drawing's changed flag read 4 afterwards (a drawing variable); the registry snapshot taken after shows no change.
+
+### Item 3. Narrow docked panel and the events: PROVEN
+
+A panel was docked at the right (AutoCAD's smallest allowed width, 279 pixels, not the 180 asked for), 20 pipes lit with blue outlines and 20 cyan tags (`i3_1_panel_lit.png`, the drawing still usable and aligned beside the panel, zoomed with AutoCAD's ordinary zoom). Counting the cyan tag pixels in pictures:
+
+1. **Pan: stays** (2,087 then 2,095 pixels). **Zoom in 1.3 times: stays** (1,671). **REGEN: stays** (1,671). Pictures `i3_2_after_pan.png` to `i3_4_after_regen.png`. (The blue outline count by colour failed because AutoCAD draws the highlight in a lighter blue; the tag counts and the log are the evidence.)
+2. **Escape key: removed.** Log "cleared 40 temporary graphics because: the Escape key was pressed"; the tag pixels went to 0 (`i3_5_after_escape.png`).
+3. **Closing the panel: removed** (log "because: the panel was closed", pixels 0, `i3_7_panel_closed.png`). The panel was closed by the same property the close button sets (hidden), not by clicking its close button.
+4. **Switching drawing tab: removed.** A second drawing was opened into the same AutoCAD; log "because: the drawing tab was switched away"; after switching back the picture was clean (`i3_8_after_tab_switch.png`).
+5. **Closing the drawing: removed.** Log "because: the drawing was closed; temporary graphics alive = 0" and the other drawing showed none.
+6. **No leftovers in any case:** the plug-in's own count of temporary graphics read 0 each time.
+
 ## What I could not do
 
 1. Dock the window at the right edge (the dock setting stayed "None"); the docking settings of AutoCAD's palette were not explored.
