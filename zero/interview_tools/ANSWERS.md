@@ -285,4 +285,12 @@ Answer given in chat (planning chat's reading, not Tim's words): his button is a
 
 **TA-098 Who is shown.** "Same as job hours": totals for everyone; per person only on Tim's admin page (as D-073).
 
-Next free number: TA-099
+## Batch 28 (the three open Manager details)
+
+**TA-099 How a PC knows Tim is the administrator.** "Your Windows sign-in": a short admin list in the office IT folder names his Windows sign-in; only he can change it.
+
+**TA-100 "Go back for everyone" while a colleague has AutoCAD open.** "Small window now": their AutoCAD shows the small window at once ("Go back: Now / At next start"); nothing closes their drawing.
+
+**TA-101 How long fault reports (with drawings) are kept.** "90 days", then the report and its drawing copy are deleted, and Tim is told first.
+
+Next free number: TA-102

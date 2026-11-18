@@ -1,6 +1,6 @@
 # The Manager (MANAGER / MG): what it does, from Tim's answers
 
-**Revision:** 2 (Wed 18 Nov 2026, afternoon, Melbourne time; revision 2 adds statistics, MS-12). IDs: MS-01 onwards, never reused. Builds on MG-01 to MG-06 in `design\TOOLS_AND_MANAGER_INTERVIEW.md`.
+**Revision:** 3 (Wed 18 Nov 2026, afternoon, Melbourne time; revision 2 added statistics, MS-12; revision 3 settles the three open items, MS-13 to MS-15). IDs: MS-01 onwards, never reused. Builds on MG-01 to MG-06 in `design\TOOLS_AND_MANAGER_INTERVIEW.md`.
 **Sources:** TA-011 to TA-013, TA-088 to TA-095 in `interview_tools\ANSWERS.md`. Earlier rulings: D-028 (one-click update and back), D-071 to D-074 (job link), D-180 (a drawing keeps its own values), D-204.
 **Status:** planning only. Nothing is built. In the first release with the 18 shared tools (D-201).
 
@@ -57,8 +57,12 @@
    Totals are shown to everyone; per person only on Tim's admin page (as D-073). The old plug-in's "one record per command run" idea is the starting point. Its gap must not come back: it only counted commands it wrapped (parts bin item 29).
 3. **Later, not the first release:** fuller admin control (FI-02).
 
+## Settled 18 Nov 2026 (were open in revision 2)
+
+1. **MS-13 Who is the administrator:** a short admin list in the office IT folder names Tim's Windows sign-in; only he can change it (TA-099).
+2. **MS-14 "Go back for everyone" while AutoCAD is open:** the small window shows at once ("Go back: Now / At next start"); nothing closes the colleague's drawing (TA-100).
+3. **MS-15 Fault reports and their drawings:** kept 90 days, then deleted, with Tim told first (TA-101).
+
 ## Still open
 
-1. **How a colleague's PC knows Tim is the administrator.** The old Manager kept a policy file in the office IT folder.
-2. **How "go back for everyone" behaves for a colleague with AutoCAD open:** offered at their next start, or the same small window?
-3. **How long the office IT folder keeps fault reports and drawings.**
+Nothing.
