@@ -46,3 +46,13 @@ Then try to break one. A comma instead of a point, or letters: it refuses in pla
 8. **Not in these windows by design, yours to decide:** a "what is over it" box in Pipe (so cover under a driveway cannot be tried yet), and a pipe size box in Detention.
 9. **Pipe length cannot be typed:** in AutoCAD it comes from what you draw.
 10. **Not checked by anyone:** the Boyd's "storage needed" figure (the tester had no rainfall table to check it by hand), and the tab order through the boxes.
+
+## Changed 18 Nov 2026 afternoon: the Detention window (rainfall and council minimum runoff)
+
+Not driven by the independent click tester yet. Not accepted.
+1. **Six small boxes on the Storage tile** are the made-up job's own site rainfall, marked "given". The plug-in has no rainfall of its own.
+2. **Empty all six:** storage reads unknown and card 3 says "Cannot work out yet: site rainfall not entered".
+3. **Type your own estimate** (try 112, 85, 69.4, 51.5, 45.5, 40.9): the boxes go amber, read "assumed", and a line says "Rainfall assumed (APPROX.): replace it with the site's Bureau table". Storage never goes green on an estimate. Pick "given" under each box to make it the site's table.
+4. **Council minimum runoff cannot be tried in the window yet** (there is no council box). A picture shows it: `C:\CE_CIVIL\bench\shots\bench_detention_1080_dark_D19_council_min_c.png` (Darebin, C 0.80, "Council minimum C governs").
+5. **Known cautions on these new parts:** with no rainfall the Tank row's "unknown spare" is cut off; the Storage tile names the wrong reason; card 2 shows "419 / 600 = 0.80" when the council minimum governs; no APPROX. sits beside the needed figure; a non-number in a rainfall box goes amber with no words; you empty a box to let it go (no padlock). All with the build chat.
+6. **Earlier caution 10 is out of date:** the Boyd's storage needed has now been checked by hand on two worked cases (2.65 m3 and 2.29 m3). Tab order is still unchecked.
