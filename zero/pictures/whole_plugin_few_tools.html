@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en-AU"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The whole plug-in as a few tools (draft for Tim, 18 Nov 2026)</title>
+<style>
+:root{--win:#3B4453;--card:#454F61;--well:#2E3440;--t1:#F5F5F5;--t2:#D9D9D9;--t3:#C7CFDB;--rose:#FF70B3;--ink:#10131A;--ok:#3EDC9B;--amber:#FBBF24;--red:#FF7A7A}
+*{box-sizing:border-box}
+body{margin:0;background:var(--win);color:var(--t1);font:15px/1.45 "Segoe UI",Arial,sans-serif}
+.wrap{max-width:1500px;margin:0 auto;padding:16px}
+h1{font-size:26px;margin:0 0 4px}
+h2{font-size:19px;margin:26px 0 8px;border-left:5px solid var(--rose);padding-left:10px}
+p{margin:6px 0;color:var(--t2)}
+.draft{display:inline-block;background:var(--amber);color:var(--ink);font-weight:700;padding:2px 10px;border-radius:4px;font-size:13px}
+.big{display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:center;margin:14px 0}
+.num{background:var(--well);border-radius:8px;padding:14px;text-align:center}
+.num b{display:block;font-size:44px;line-height:1}
+.num.after b{color:var(--ok)}
+.num.before b{color:var(--red)}
+.arrow{font-size:40px;color:var(--rose);font-weight:700}
+.ribbon{background:var(--well);border-radius:8px;padding:10px;display:grid;grid-template-columns:.7fr 2.6fr 1.3fr 1fr;gap:8px}
+.tabs{display:flex;gap:6px;margin-bottom:6px;flex-wrap:wrap}
+.tab{padding:4px 14px;border-radius:6px 6px 0 0;background:var(--card);color:var(--t3);font-weight:600}
+.tab.on{background:var(--well);color:var(--t1);border-bottom:3px solid var(--rose)}
+.panel{background:var(--card);border-radius:6px;padding:8px 8px 4px;display:flex;flex-direction:column}
+.btns{display:flex;flex-wrap:wrap;gap:6px;flex:1}
+.btn{background:var(--win);border:1px solid #5b6679;border-radius:6px;padding:6px 9px;text-align:center;min-width:64px}
+.btn b{display:block;font-size:14px}
+.btn span{font-size:12px;color:var(--rose);font-weight:700}
+.pname{text-align:center;font-size:12px;color:var(--t3);margin-top:6px;letter-spacing:.5px}
+.step{display:inline-block;background:var(--rose);color:var(--ink);font-weight:800;border-radius:50%;width:22px;height:22px;text-align:center;line-height:22px;font-size:13px;margin-right:6px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.card{background:var(--card);border-radius:8px;padding:10px 12px}
+.card h3{margin:0 0 2px;font-size:16px}
+.card h3 small{color:var(--rose);font-weight:700;font-size:13px;margin-left:6px}
+.card .does{color:var(--t2);font-size:13.5px;margin:4px 0 8px}
+.lab{font-size:11.5px;color:var(--t3);letter-spacing:.5px;text-transform:uppercase;margin:6px 0 3px}
+.old{display:inline-block;background:var(--well);color:#aab3c2;text-decoration:line-through;text-decoration-color:var(--red);border-radius:4px;padding:1px 6px;margin:2px 2px 0 0;font:12px Consolas,monospace}
+.in{display:inline-block;background:var(--well);color:var(--t1);border-left:3px solid var(--ok);border-radius:4px;padding:1px 7px;margin:2px 2px 0 0;font-size:12.5px}
+.wide{grid-column:span 2}
+.calc{display:grid;grid-template-columns:1fr auto 1.25fr;gap:14px;align-items:stretch}
+.box{background:var(--well);border-radius:8px;padding:12px}
+.box h3{margin:0 0 6px;font-size:15px}
+.flow{display:flex;align-items:stretch;gap:6px;flex-wrap:wrap}
+.f{background:var(--card);border-radius:6px;padding:8px 10px;flex:1;min-width:150px}
+.f b{display:block}
+.f small{color:var(--t2)}
+.fa{align-self:center;color:var(--rose);font-weight:800;font-size:22px}
+.mess{display:flex;flex-wrap:wrap;gap:5px}
+.mess .old{font-size:13px;padding:4px 8px}
+.grow{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.later{display:inline-block;border:1px dashed #8b96a8;color:var(--t3);border-radius:6px;padding:3px 9px;margin:3px 3px 0 0;font-size:13px}
+.note{background:var(--well);border-left:4px solid var(--amber);padding:8px 12px;border-radius:4px;margin-top:10px}
+@media(max-width:1000px){.grid{grid-template-columns:1fr 1fr}.ribbon{grid-template-columns:1fr 1fr}.calc,.big,.grow{grid-template-columns:1fr}.arrow,.fa{text-align:center}}
+@media(max-width:560px){.grid,.ribbon{grid-template-columns:1fr}.wide{grid-column:auto}}
+</style></head><body><div class="wrap">
+
+<h1>The whole plug-in as a few tools</h1>
+<p><span class="draft">DRAFT for Tim to edit</span> &nbsp; Wed 18 Nov 2026. Your instruction D-246: too many commands, built at different times, strewn everywhere. This page is how a drafter would meet the new one. Nothing here is built differently yet; tell me what to move.</p>
+
+<div class="big">
+ <div class="num before"><b>146</b>typed civil commands today<br><small>about 20 of them only repair or audit the others; the pavement and site ones are parked (section 5)</small></div>
+ <div class="arrow">&rarr;</div>
+ <div class="num after"><b>12 windows, 1 list</b>18 short names on one tab<br><small>no edit commands, no repair commands, no calculation suite</small></div>
+</div>
+
+<h2>1. What you see on the ribbon, in the order a job runs</h2>
+<div class="tabs"><span class="tab on">CE Civil</span><span class="tab">CE Tools</span><span class="tab" style="opacity:.5">CE Structural (hidden until it has tools)</span></div>
+<div class="ribbon">
+ <div class="panel"><div class="btns"><div class="btn"><b>Job</b><span>once per job</span></div></div><div class="pname"><span class="step">1</span>SET UP</div></div>
+ <div class="panel"><div class="btns">
+  <div class="btn"><b>Pit</b><span>PT &middot; PP</span></div><div class="btn"><b>Pipe</b><span>CD</span></div><div class="btn"><b>Outlet</b><span>OUTLET</span></div><div class="btn"><b>Legal point</b><span>LPD</span></div>
+  <div class="btn"><b>Inlets</b><span>DP OF FO IO GIO FW</span></div><div class="btn"><b>Trench grate</b><span>TG</span></div><div class="btn"><b>Ag drain</b><span>AG</span></div></div><div class="pname"><span class="step">2</span>DRAW</div></div>
+ <div class="panel"><div class="btns"><div class="btn"><b>Long section</b><span>LG</span></div><div class="btn"><b>Tank</b><span>WT</span></div><div class="btn"><b>Detention</b><span>DET</span></div></div><div class="pname"><span class="step">3</span>DESIGN</div></div>
+ <div class="panel"><div class="btns"><div class="btn"><b>Schedule</b><span>SCH</span></div><div class="btn"><b>Unfinished</b><span>always there</span></div></div><div class="pname"><span class="step">4</span>SHEET AND CHECK</div></div>
+</div>
+<p><b>Three rules that replace most of the old commands.</b> (1) Every tool is one small window that opens filled in with last time's choices, then pick after pick. (2) To change anything, double-click it: the same window opens. There are no separate edit commands. (3) A figure is typed once; every label, box, schedule and computation that shows it follows.</p>
+
+<h2>2. The calculations: one flow instead of a suite</h2>
+<div class="calc">
+ <div class="box"><h3 style="color:var(--red)">Today (you do not use or trust it)</h3>
+  <div class="mess"><span class="old">CDDESIGN</span><span class="old">CDSETUP</span><span class="old">CDRAINFALL</span><span class="old">CDRULEBOOK</span><span class="old">CDCALC: Boyd's tab</span><span class="old">CDCALC: orifice tab</span><span class="old">CDCALC: detention tab</span><span class="old">CDCALC: charged line tab</span><span class="old">CDCALC: pump tab</span><span class="old">CDTWL</span><span class="old">CDCHECK</span><span class="old">CDDASHBOARD</span></div>
+  <p>Then, in practice: the office spreadsheet, figures retyped into the criteria box, the orifice pit detail, the tank note and a Word file of pasted pictures.</p></div>
+ <div class="arrow">&rarr;</div>
+ <div class="box"><h3 style="color:var(--ok)">New: three places, one set of figures</h3>
+  <div class="flow">
+   <div class="f"><b><span class="step">1</span>Job</b><small>Council, site rainfall (pasted or your estimate), permitted discharge. Typed once.</small></div><div class="fa">&rarr;</div>
+   <div class="f"><b><span class="step">2</span>The drawing</b><small>Areas, pipes, pits and tanks are read off what you drew. Nothing retyped.</small></div><div class="fa">&rarr;</div>
+   <div class="f"><b><span class="step">3</span>Detention</b><small>Two answers side by side: Storage and Discharge. Head, orifice, top water level limits worked out.</small></div>
+  </div>
+  <div class="lab">Comes out of Detention, all from the same figures</div>
+  <span class="in">Detention criteria box</span><span class="in">Orifice pit detail filled in</span><span class="in">Tank note and detail</span><span class="in">Computations PDF for council (one button)</span><span class="in">Pump well box, when the job has a pump pit</span>
+ </div>
+</div>
+<div class="note"><b>One thing I would like your eye on:</b> the pump well sums. The plan puts them on the pump pit's own window (you set the pump where the pump is) and prints them in the same computations PDF. If you would rather find the pump inside Detention with the other sums, say "pump in Detention".</div>
+
+<h2>3. Each tool: what you do there, and the old commands it swallows</h2>
+<div class="grid">
+ <div class="card"><h3>Job <small>once per job</small></h3><div class="does">Council, rainfall, discharge allowed, what the drawing was designed with. Everything else reads it.</div><div class="lab">Replaces</div><span class="old">CDDESIGN</span><span class="old">CDSETUP</span><span class="old">CDRAINFALL</span><span class="old">CDRULEBOOK</span></div>
+ <div class="card"><h3>Pit <small>PT, PP</small></h3><div class="does">Kind, size, cover, lid class from what is over it. PT opens 450 x 450, PP opens 350 x 350 plastic. Numbers itself; erase takes its tag and row. A pump pit shows its pump sums here.</div><div class="lab">Replaces</div><span class="old">PIT</span><span class="old">PP</span><span class="old">CDPIT350 to 1200 (5)</span><span class="old">PITEDIT</span><span class="old">PITDELETE</span><span class="old">CDPITCOVERFLIP</span><span class="old">CDRENUMBER</span></div>
+ <div class="card wide"><h3>Pipe <small>CD</small></h3><div class="does">Carries on like PLINE, with bends and junctions. Hold what is fixed (grade, either invert, or none), the rest is worked out. Every kind is a line in a list: stormwater, charged, detention, rising main. Joins itself to pits; direction comes from the outlet.</div><div class="lab">Replaces</div><span class="old">CD</span><span class="old">CDEDIT</span><span class="old">PIPEEDIT</span><span class="old">CDBREAK</span><span class="old">CDREVERSEFLOW</span><span class="old">CDPIPEDIRECTION</span><span class="old">CDCONFIRM</span><span class="old">CDPIPEOVERRIDE</span><span class="old">CDPIPEOVERRIDECLEAR</span><span class="old">PIPEPITLINK</span><span class="old">LINKPIPEPIT</span><span class="old">PIPEPITUNLINK</span><span class="old">CLEARPIPEPITLINK</span><span class="old">CDANNOTATIONEDIT</span><span class="old">CDMA</span><span class="old">CDTEXTSEG</span><span class="old">CDTIDYLABELS</span><span class="old">CDPIPEOBJ</span><span class="old">CDC7UPGRADE</span><span class="old">CDD</span><span class="old">CDD3</span><span class="old">CDDE</span><span class="old">CDDA</span><span class="old">MFA</span></div>
+ <div class="card"><h3>Outlet and Legal point <small>OUTLET, LPD</small></h3><div class="does">The council pit, kerb or easement you connect to, and the LPD tag and note in office wording. Each outlet starts its own system; nobody types which system a pipe is in.</div><div class="lab">Replaces</div><span class="old">CDLPD</span><span class="old">CDLPDRESET</span><span class="old">CDSYSTEM</span></div>
+ <div class="card"><h3>Inlets <small>DP OF FO IO GIO FW</small></h3><div class="does">Six short names, one window. Keep clicking, Enter to finish. Tags itself; shows where each one drains to.</div><div class="lab">Replaces</div><span class="old">DP</span><span class="old">OF</span><span class="old">FO</span><span class="old">IO</span><span class="old">GIO</span><span class="old">CDFW</span><span class="old">CDSOURCE</span><span class="old">CDTAG</span><span class="old">CDFIXTAGS</span><span class="old">CDDEST</span><span class="old">CDSOURCECHANGETYPE</span></div>
+ <div class="card"><h3>Trench grate, Ag drain <small>TG, AG</small></h3><div class="does">Two small tools on the Pipe window's style. Ag drain has two kinds: agricultural and perimeter.</div><div class="lab">Replaces</div><span class="old">CDTG</span><span class="old">TG</span><span class="old">CDAGI</span><span class="old">CDPERIMETER</span></div>
+ <div class="card"><h3>Long section <small>LG</small></h3><div class="does">Levels along a whole run, worked uphill or downhill, "out by" said in words. One button draws it on the sheet when council asks.</div><div class="lab">Replaces</div><span class="old">CDRUNSOLVE</span><span class="old">CDPROFILE</span><span class="old">CDPROPAGATE</span><span class="old">CDRECOVERINVERTS</span></div>
+ <div class="card"><h3>Tank <small>WT</small></h3><div class="does">Size from a list or typed, litres split, roof area picked off the drawing, riser and dropper, the note and the detail.</div><div class="lab">Replaces</div><span class="old">CDWT</span><span class="old">hand-typed roof area box</span><span class="old">retyped tank detail</span></div>
+ <div class="card"><h3>Detention <small>DET</small></h3><div class="does">Storage needed against storage provided, the orifice, the limits on top water level, and the council computations. See section 2.</div><div class="lab">Replaces</div><span class="old">CDCALC (4 tabs)</span><span class="old">CDTWL</span><span class="old">office spreadsheet</span><span class="old">Word computations</span></div>
+ <div class="card"><h3>Schedule <small>SCH</small></h3><div class="does">Placed once, then follows the pits. Type over a cell to hold it; padlock to let it follow again.</div><div class="lab">Replaces</div><span class="old">PITSCHEDULE</span><span class="old">CIVILEXCELMTEXT</span></div>
+ <div class="card" style="grid-column:1/-1"><h3>Unfinished <small>one list, always there, never a stop</small></h3><div class="does">Everything not known yet, not joined yet, assumed, or wrong, in one place, with a click to jump to it. Accept a finding with a short note and it stays listed as accepted. This is the only "check" there is.</div><div class="lab">Replaces</div><span class="old">CDCHECK</span><span class="old">CDCHECKCURRENT</span><span class="old">CDCHECKS</span><span class="old">CDDASHBOARD</span><span class="old">CDHUB</span><span class="old">CDRULES</span><span class="old">CDCHECKIGNORE</span><span class="old">CDCHECKIGNOREAPPLY</span><span class="old">CDINSPECTOR</span>
+  <div class="lab">Gone and not replaced, because one fact is held once and the drawing checks itself on opening</div><span class="old">CDREPAIR</span><span class="old">CDSYNC</span><span class="old">CDREBUILD</span><span class="old">CDREBUILDLINKS</span><span class="old">CDLINKDANGLINGPIPES</span><span class="old">CDFIXPIPEENDS</span><span class="old">CDFIXFLATPIPES</span><span class="old">CDREFRESHBLOCKS</span><span class="old">CDREFRESHLINKS</span><span class="old">CDAUDIT and 7 more</span><span class="old">CDFOCUS</span></div>
+</div>
+
+<h2>4. The other tab: CE Tools (the everyday drafting tools, civil and structural alike)</h2>
+<div class="box">
+ <span class="in">CLEAN</span><span class="in">Dimensions and leaders</span><span class="in">Move-rotate, Copy-rotate</span><span class="in">Copy to base point</span><span class="in">Divide</span><span class="in">Office hatch (one window for all 40 hatch commands)</span><span class="in">Rev box</span><span class="in">Break line</span><span class="in">Construction joint, Saw cut</span><span class="in">Blocks palette (legend, notes, details, fall arrow, spot level)</span><span class="in">Text 25 / 18</span><span class="in">Pen quick-set</span><span class="in">Xref copy and paste</span><span class="in">Put on office layer</span><span class="in">Viewport scale</span><span class="in">Find and replace</span><span class="in">Area and length labels</span><span class="in">Small office symbols</span>
+ <p style="margin-top:8px">18 tools. Plus <b>one Manager window</b> for updates, fault report, office lists and the job link, in place of today's 12 Manager commands and 577 settings.</p>
+</div>
+
+<h2>5. How it grows without becoming strewn again</h2>
+<div class="grow">
+ <div class="box"><h3>A new variable is a line in a list</h3><p>A new council, pit kind, pipe material, lid class or check goes into an office list. No new command, no new window.</p></div>
+ <div class="box"><h3>A new tool uses the same parts</h3><p>Same window, same preview, same padlocks, same colours, and it must pass the same 27-test gate before it reaches the ribbon.</p></div>
+ <div class="box"><h3>A new group gets a named slot, not loose commands</h3><span class="later">Pavement and site (slab falls, kerb, spoon and strip drains)</span><span class="later">Soakage</span><span class="later">Title block and issue</span><span class="later">Taking up old drawings</span><span class="later">CE Structural</span><p>Each is parked with a named hand method until it is built.</p></div>
+</div>
+
+<p style="margin-top:18px;color:var(--t3)">Not settled, shown honestly: how a selected pit's or pipe's own facts show without opening the window (being researched); the typed name for the Job window; grip shapes (tests tonight). Sources: design\FUNCTION_MAP.md, design\FUNCTION_PLAN.md, D-001 to D-246.</p>
+</div></body></html>
