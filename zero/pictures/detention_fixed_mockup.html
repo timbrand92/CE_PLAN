@@ -2,138 +2,140 @@
 <html lang="en-AU">
 <head>
 <meta charset="utf-8">
-<title>Detention window, fixed (mock-up)</title>
+<title>Detention window, fixed (mock-up, version 4)</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
 <style>
 :root{
   --page:#161718;
-  --win:#4E5158; --card:#62656E; --well:#40434A; --line:#7C8089;
-  --t-answer:#FFFFFF; --t-body:#F0F1F3; --t-note:#E2E4E8;
-  --sv0:#B9BCC3; --sv1:#E6E8EB; --sv2:#F0F1F3; --sv3:#E2E4E8;
-  --green:#7BE0AE; --amber:#F5C660; --red:#FF8A93;
+  --win:#2B2D30; --card:#383B40; --well:#232528; --line:#4A4D53;
+  --field:#4A4D55; --fieldline:#8A8E96;
+  --t-answer:#F3F4F5; --t-body:#D2D5DA; --t-note:#A9AEB6;
+  --sv0:#80848C; --sv1:#C8CBD0; --sv2:#DADCE0; --sv3:#B4B8BE;
+  --green:#7BE0AE; --amber:#F5C660; --red:#FF6B4A;
   --ink:#10131A;
   --fill:#A9ADB5;
   --c1:#5AA2F0; --c2:#3CC4B2; --c3:#A08AF0;
-  --acc:#F4F1E9; --acc-ink:#171817;
+  --acc:#FF70B3; --acc-ink:#10131A;
   --r:8px;
   --sans:'IBM Plex Sans','Segoe UI',system-ui,sans-serif;
-  --mono:'IBM Plex Mono',Consolas,monospace;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--page);color:var(--t-body);font-family:var(--sans);font-size:14px;line-height:24px;padding:32px;min-width:1600px}
+body{background:var(--page);color:var(--t-body);font-family:var(--sans);font-size:14px;line-height:24px;padding:32px;min-width:1600px;font-variant-numeric:tabular-nums}
 .pagetitle{font-size:14px;margin-bottom:16px}
 .switches{display:flex;gap:32px;margin-top:24px;align-items:center;flex-wrap:wrap;color:#B8BBC1}
 .switch{display:flex;gap:8px;align-items:center;font-size:12px}
 .switch button{font:inherit;font-size:12px;height:32px;padding:0 16px;border-radius:var(--r);background:transparent;color:#D5D8DC;border:1px solid #55585E;cursor:pointer}
 .switch button.on{border-color:#fff;color:#fff}
 
-.win{width:1536px;height:864px;background:var(--win);border:1px solid var(--line);border-radius:var(--r);box-shadow:0 24px 48px rgba(0,0,0,.45);display:flex;flex-direction:column;overflow:hidden}
-.titlebar{height:40px;flex:none;display:flex;align-items:center;justify-content:space-between;padding:0 16px;border-bottom:1px solid var(--line);color:var(--t-answer)}
-.titlebar .x{color:var(--t-note);font-size:16px}
-.body{flex:1;min-height:0;padding:16px;display:flex;flex-direction:column;gap:16px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.win{width:1536px;height:864px;background:var(--win);border:1px solid var(--line);border-radius:var(--r);box-shadow:0 24px 48px rgba(0,0,0,.5);display:flex;flex-direction:column;overflow:hidden}
+.titlebar{height:32px;flex:none;display:flex;align-items:center;justify-content:space-between;padding:0 16px;border-bottom:1px solid var(--line);color:var(--t-answer)}
+.titlebar .x{color:var(--t-note);font-size:14px}
+.body{flex:1;min-height:0;padding:16px;display:flex;gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:0 2px 8px rgba(0,0,0,.3)}
 .note{font-size:12px;line-height:16px;color:var(--t-note)}
-.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
-.fig{font-family:var(--mono);font-variant-numeric:tabular-nums;font-weight:400}
+.fig{font-weight:400}
 .strong{font-weight:600}
 
-/* plan strip */
-.plan{height:76px;flex:none;padding:8px 16px}
-.plan svg{display:block;margin-top:0}
-.sd{stroke:var(--sv0);fill:none;stroke-width:1}
-.sm{stroke:var(--sv1);fill:none;stroke-width:1}
-.sh{stroke:var(--sv1);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
-.sk{stroke:var(--sv3);fill:none;stroke-width:1;stroke-dasharray:4 4}
-.tb{fill:var(--sv2);stroke:none;font-family:var(--sans);font-size:12px}
-.tn{fill:var(--sv3);stroke:none;font-family:var(--sans);font-size:12px}
-.tm{fill:var(--sv2);stroke:none;font-family:var(--mono);font-size:12px}
+/* preview */
+.preview{width:380px;flex:none;padding:16px;display:flex;flex-direction:column;gap:8px}
+.preview svg{display:block;flex:none}
+.chain{display:flex;align-items:center;gap:4px;font-size:12px;line-height:16px;color:var(--t-note);flex:none}
+.chip{border:1px solid var(--line);border-radius:var(--r);padding:4px 8px;color:var(--t-note);white-space:nowrap}
+.chip.lit{background:var(--t-answer);border-color:var(--t-answer);color:var(--ink)}
 
-/* status band */
-.band{flex:none;height:48px;border-radius:var(--r);display:flex;align-items:center;justify-content:space-between;padding:0 16px;color:var(--ink);box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.right{flex:1;min-width:0;display:flex;flex-direction:column;gap:16px}
+
+/* band */
+.band{flex:none;height:40px;border-radius:var(--r);display:flex;align-items:center;justify-content:space-between;padding:0 16px;color:var(--ink);box-shadow:0 2px 8px rgba(0,0,0,.3)}
 .band.green{background:var(--green)} .band.red{background:var(--red)} .band.amber{background:var(--amber)}
 .band .left{display:flex;align-items:center;gap:16px;white-space:nowrap}
 .band .main{font-size:24px;line-height:32px}
 .band .sub{font-size:14px}
-.band .right{display:flex;align-items:center;gap:8px;white-space:nowrap;font-size:14px}
+.band .right2{display:flex;align-items:center;gap:8px;white-space:nowrap;font-size:14px}
 
 .pill{display:inline-flex;align-items:center;height:24px;padding:0 8px;border-radius:var(--r);font-size:12px;line-height:24px;white-space:nowrap;color:var(--ink);border:1px solid rgba(16,19,26,.55)}
 .pill.green{background:var(--green)} .pill.amber{background:var(--amber)} .pill.red{background:var(--red)}
 .pill.changed{background:transparent;color:var(--t-body);border-color:var(--t-body)}
 
-/* cards */
-.cards{flex:1;min-height:0;display:grid;grid-template-columns:324px 380px 356px 1fr;gap:16px}
-.cards .card{padding:16px;display:flex;flex-direction:column;min-height:0}
-.chead{height:24px;flex:none;display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
-.cans{height:32px;flex:none;display:flex;align-items:baseline;gap:8px;margin-bottom:8px;white-space:nowrap}
-.cans .big{font-size:24px;line-height:32px;color:var(--t-answer)}
-.cans .big.nk{font-weight:400;font-family:var(--sans)}
-.pic{height:64px;flex:none;margin-bottom:8px;display:flex;flex-direction:column;justify-content:center}
-.work{flex:none}
-.foot{margin-top:auto}
+/* steps */
+.step{padding:16px;flex:none}
+.step.grow{flex:1;min-height:0}
+.shead{display:flex;align-items:center;gap:8px;height:24px;margin-bottom:8px;white-space:nowrap}
+.shead.tall{height:32px}
+.shead .n{width:24px;height:24px;border:1px solid var(--t-body);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:12px;color:var(--t-answer);flex:none}
+.shead .t{color:var(--t-answer);margin-right:8px}
+.shead .sp{flex:1}
 
+/* inputs: boxed and bright */
+.row1{display:flex;align-items:flex-end;gap:24px}
+.fields{display:flex;gap:8px}
+.fld{display:flex;flex-direction:column}
+.fld > .note{height:16px}
+.inp{height:32px;display:flex;align-items:center;justify-content:flex-end;gap:4px;padding:0 8px;background:var(--field);border:1px solid var(--fieldline);border-radius:var(--r);color:var(--t-answer);font-size:14px;white-space:nowrap}
+.inp .u{font-size:12px;color:var(--t-note)}
+.inp.needs{border:2px solid var(--amber);padding:0 7px}
+.inp.nk{font-size:12px;justify-content:center;padding:0}
+.inp.nk.needs{padding:0}
+.rain{display:flex;gap:8px;align-items:flex-end}
+.gl{width:88px;height:48px;display:flex;flex-direction:column;justify-content:center;gap:4px}
+.mbtn{height:32px;padding:0 16px;border-radius:var(--r);border:1px solid var(--fieldline);background:var(--field);color:var(--t-answer);font:inherit;cursor:pointer;white-space:nowrap}
+.mbtn.sel{background:var(--acc);border-color:var(--acc);color:var(--acc-ink)}
+.methods{display:flex;gap:8px}
+
+/* worked-out sums: plain, no boxes */
+.cols{display:flex;gap:24px;align-items:flex-start}
+.cols > div{min-width:0}
 .sum{display:grid;grid-template-columns:16px 1fr auto;column-gap:8px;align-items:center}
 .sum > div{height:32px;line-height:32px}
-.sum .s{text-align:center;font-family:var(--mono)}
+.sum .s{text-align:center}
 .sum .l{white-space:nowrap;display:flex;align-items:center;gap:8px}
 .sum .l small{font-size:12px;color:var(--t-note)}
-.sum .v{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums;min-width:56px}
-.sum .v.nk{font-family:var(--sans)}
+.sum .v{text-align:right;min-width:56px}
+.sum .v.nk{color:var(--t-note)}
 .sum .line{border-top:1px solid var(--t-body)}
 .sum .dbl{border-bottom:3px double var(--t-body);height:32px;line-height:28px}
-.sum .sub{height:16px;line-height:16px;font-size:12px;color:var(--t-note);grid-column:2 / 4}
 .sum .off{color:var(--t-note)}
-.sum .off small{color:var(--t-note)}
 .sum .off .cb{border-color:var(--t-note)}
 .cb{width:16px;height:16px;border:1.5px solid var(--t-body);border-radius:4px;display:inline-flex;align-items:center;justify-content:center;flex:none}
 .cb.on{background:#EEF0F2;border-color:#EEF0F2}
 .cb svg{display:block}
 
-.sum5{display:grid;grid-template-columns:16px 1fr 52px 52px 52px;column-gap:8px;align-items:center}
-.sum5 > div{height:32px;line-height:32px;text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums}
+.sum5{display:grid;grid-template-columns:16px 1fr 56px 64px 56px;column-gap:8px;align-items:center}
+.sum5 > div{height:32px;line-height:32px;text-align:right}
 .sum5 .s{text-align:center}
-.sum5 .l{text-align:left;font-family:var(--sans);display:flex;align-items:center;gap:8px;white-space:nowrap}
+.sum5 .l{text-align:left;display:flex;align-items:center;gap:8px;white-space:nowrap}
 .sum5 .l small{font-size:12px;color:var(--t-note)}
 .sum5 .x{white-space:nowrap}
 .sum5 .line{border-top:1px solid var(--t-body)}
 .sum5 .dbl{border-bottom:3px double var(--t-body);height:32px;line-height:28px}
 
-.abar{display:flex;height:32px}
+.abar{display:flex;height:24px;width:320px}
 .abar div{display:flex;align-items:center;padding:0 8px;color:var(--ink);font-size:12px;white-space:nowrap;overflow:hidden;gap:8px}
 .abar div:first-child{border-radius:8px 0 0 8px}
 .abar div:last-child{border-radius:0 8px 8px 0}
 
-.sbar{display:flex;height:32px;border-radius:var(--r);background:var(--well);border:1px solid var(--line);overflow:hidden;position:relative}
-.sbar .fill{background:var(--fill);color:var(--ink);display:flex;align-items:center;justify-content:space-between;padding:0 16px 0 8px;font-size:12px;white-space:nowrap;flex:none}
+.ans{height:32px;display:flex;align-items:baseline;gap:8px;margin-bottom:8px;white-space:nowrap}
+.ans .big{font-size:24px;line-height:32px;color:var(--t-answer)}
+.ans .big.nk{color:var(--t-note);font-weight:400}
+.ans .pill{align-self:center;margin-left:auto}
+
+.sbar{display:flex;height:32px;border-radius:var(--r);background:var(--well);border:1px solid var(--line);overflow:hidden;position:relative;margin-bottom:8px}
+.sbar .fill{background:var(--fill);color:var(--ink);display:flex;align-items:center;justify-content:space-between;padding:0 24px 0 8px;font-size:12px;white-space:nowrap;flex:none}
 .sbar .cap{display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--ink);white-space:nowrap;flex:1}
-.sbar .cap.red{background:repeating-linear-gradient(135deg,#FF8A93 0 6px,#F0707A 6px 12px)}
+.sbar .cap.red{background:repeating-linear-gradient(135deg,#FF6B4A 0 6px,#E85A3C 6px 12px)}
 .sbar .cap.amber{background:repeating-linear-gradient(135deg,#F5C660 0 6px,#E5B24C 6px 12px);flex:none;width:136px}
 .sbar .mk{position:absolute;top:0;bottom:0;width:2px;background:var(--ink)}
 
-.fixed{display:grid;grid-template-columns:1fr 72px 64px 16px;column-gap:8px;align-items:center}
-.fixed > div,.fixed > svg{height:32px}
-.fixed .l{line-height:32px;white-space:nowrap;display:flex;align-items:center;gap:8px}
-.fixed .f{height:24px;margin:4px 0;background:var(--well);border:1px solid var(--line);border-radius:var(--r);text-align:right;padding:0 8px;font-family:var(--mono);font-variant-numeric:tabular-nums;line-height:22px}
-.fixed .src{white-space:nowrap;font-size:12px;line-height:32px;color:var(--t-note)}
-.fixed svg{display:block;color:var(--t-body);margin:8px 0;height:16px}
-.tally{display:flex;gap:8px;align-items:center}
-.mark{width:16px;height:16px;border-radius:50%;background:var(--t-body);border:1.5px solid var(--t-body)}
-.mark.o{background:transparent}
+.sk{stroke:var(--sv3);fill:none;stroke-width:1;stroke-dasharray:4 4}
+.sh{stroke:var(--sv1);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.tb{fill:var(--sv2);stroke:none;font-family:var(--sans);font-size:12px}
+.tn{fill:var(--sv3);stroke:none;font-family:var(--sans);font-size:12px}
 
-.rain{flex:none;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;gap:32px}
-.rain .lab{display:flex;flex-direction:column;width:200px}
-.wells{display:flex;gap:8px}
-.well{display:flex;flex-direction:column;width:80px}
-.well .f{height:32px;background:var(--well);border:1px solid var(--line);border-radius:var(--r);text-align:right;padding:0 8px;font-family:var(--mono);font-variant-numeric:tabular-nums;line-height:30px;white-space:nowrap}
-.well .f.unk{font-family:var(--sans);text-align:center;padding:0;border-color:var(--amber);box-shadow:0 0 0 1px var(--amber)}
-.method{display:flex;align-items:center;gap:8px}
-.mbtn{height:40px;padding:0 16px;border-radius:var(--r);border:1px solid var(--line);background:var(--well);color:var(--t-body);font:inherit;cursor:pointer;white-space:nowrap}
-.mbtn.sel{background:var(--acc);border-color:var(--acc);color:var(--acc-ink)}
-
-.bottom{height:64px;flex:none;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;padding:0 16px}
-.bottom .right{display:flex;gap:8px}
+.bottom{height:56px;flex:none;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;padding:0 16px}
+.bottom .btns{display:flex;gap:8px}
 .btn{height:40px;padding:0 24px;border-radius:var(--r);border:1px solid var(--line);background:transparent;color:var(--t-body);font:inherit}
 .btn.quiet{color:var(--t-note)}
 .btn.ok{background:var(--acc);border-color:var(--acc);color:var(--acc-ink)}
@@ -153,35 +155,25 @@ body{background:var(--page);color:var(--t-body);font-family:var(--sans);font-siz
 <div class="win">
   <div class="titlebar"><span>Detention · this job</span><span class="x">&#x2715;</span></div>
   <div class="body">
-    <div class="card plan" id="plan"></div>
-    <div id="band"></div>
-    <div class="cards">
-      <div class="card" id="cStorage"></div>
-      <div class="card" id="cDischarge"></div>
-      <div class="card" id="cAreas"></div>
-      <div class="card" id="cFixed"></div>
-    </div>
-    <div class="card rain">
-      <div class="lab"><span>Site rainfall 1 in 10</span><span class="note" id="rainsrc"></span></div>
-      <div class="wells" id="wells"></div>
-      <div class="method">
-        <span class="note">Method</span>
-        <button class="mbtn sel" id="m1">Office method (Boyd's)</button>
-        <button class="mbtn" id="m2">Council tool (OSD4W)</button>
-      </div>
+    <div class="card preview" id="preview"></div>
+    <div class="right">
+      <div id="band"></div>
+      <div class="card step" id="s1c"></div>
+      <div class="card step" id="s2c"></div>
+      <div class="card step grow" id="s3c"></div>
     </div>
   </div>
   <div class="bottom">
     <button class="btn quiet">Show the working</button>
-    <div class="right"><button class="btn">Cancel</button><button class="btn ok">OK</button></div>
+    <div class="btns"><button class="btn">Cancel</button><button class="btn ok">OK</button></div>
   </div>
 </div>
 
 <div class="switches">
   <div class="switch">Accent:
-    <button id="a1">Rose</button><button id="a2" class="on">CE paper</button></div>
+    <button id="a1" class="on">Rose</button><button id="a2">CE paper</button></div>
   <div class="switch">Ground:
-    <button id="g1" class="on">Lighter</button><button id="g2">Mid</button><button id="g3">Dark</button></div>
+    <button id="g1">Lighter</button><button id="g2">Mid</button><button id="g3" class="on">Dark</button></div>
   <div class="switch">State:
     <button id="s1" class="on">Suits</button><button id="s2">Short by 0.44 m³</button><button id="s3">Rainfall not known</button></div>
 </div>
@@ -189,18 +181,18 @@ body{background:var(--page);color:var(--t-body);font-family:var(--sans);font-siz
 <div class="below">
   <h2>What changed and which rule</h2>
   <ol>
-    <li><b>One status band across the top is the biggest thing on the window.</b> Solid green "Suits", red "Short" or amber "Needs a look", with the answer in it; discharge sits at its right (rules 7, 12, 14).</li>
-    <li><b>Three text sizes only:</b> 24 for answers, 14 for body, 12 for notes. Bold is used only on the band's figures, each card's answer and its final figure (rule 10).</li>
-    <li><b>Each card reads label, answer, picture, working, grey note</b> in the same order, and the answer is the same figure as the double-lined result (rules 8, 11).</li>
-    <li><b>Storage is no longer circular.</b> Tank 1.00 + pipes + P1 + P2 gives what is provided; take off what is needed; what is left is the spare. P3 is ticked off and not added (rules 9, 23).</li>
-    <li><b>The short state comes from a change you can see:</b> detention cut from 1,000 L to 500 L, marked "Changed" in grey, and the sum follows (rules 23, 26).</li>
-    <li><b>The orifice is now worked out and rounded down, not chosen from a list.</b> Flow has its own row with its formula, with the double line under 5.84 (rule 9).</li>
-    <li><b>The coefficient shows 0.698 in full</b> and a note that it is shown as 0.70 elsewhere; each area has its own source word (rules 9, 20).</li>
-    <li><b>The plan strip now carries the job:</b> areas to scale, tank, pipes, P1 to P3 and the orifice pit with their figures, in quiet lines (rules 11, 25).</li>
-    <li><b>One neutral grey scheme, lighter as asked.</b> Status colour is always a solid fill with its word and dark text; the only other colours are the Areas bar's fixed chart order (rules 5, 13, 14, 17).</li>
-    <li><b>Accent only on OK and the selected method</b>, in off-white by default so it never reads as a warning; Rose is the alternative to compare (rules 15, 16).</li>
-    <li><b>Missing values read "Not known"</b> everywhere, rainfall boxes get an amber outline, and OK still works (rule 24).</li>
-    <li><b>Plain words first, formal word in brackets.</b> Gaps are 8, 16, 24 or 32 px, one 8 px corner, rows 32 px apart (rules 27, 29).</li>
+    <li><b>Where to look first.</b> The coloured band at the top is the answer: green Suits, orange-red Short, amber Needs a look. Under it, three numbered steps read top to bottom, each with one line saying why it is there (rules 7, 12, 22).</li>
+    <li><b>Inputs are boxed, worked-out figures are plain.</b> Step 1 holds only the figures you type, in lighter boxes with bright figures. Everything else is plain text with no box, so you can see at a glance what is yours to change (rules 8, 13, 20).</li>
+    <li><b>Anything that still needs you is marked twice:</b> an amber outline with a "Needs you" tag, and a line in the band naming it. When nothing needs you, step 1 says so (rules 14, 24, 26).</li>
+    <li><b>A figure you changed is marked "Changed",</b> and the band says what it was before (Detention share was 1,000 L) (rule 26).</li>
+    <li><b>The preview is back, on the left.</b> It is the drawing as AutoCAD shows it, with the parts counted as storage outlined, and a one-line chain showing where the orifice pit sits in the system (rule 25).</li>
+    <li><b>Step 2 is read off the drawing:</b> the areas and the storage items. Change the drawing, not this window (rules 9, 11, 23).</li>
+    <li><b>Step 3 is the answers:</b> storage and discharge, each with its answer and a double-lined result. Storage is Provided less Needed; when short it reads Needed less Provided, so the sign is always right (rules 8, 9).</li>
+    <li><b>Dark ground, rose button.</b> One scheme; the rose is on OK and the selected method only, and the red is now orange-red so rose never looks like a warning (rules 5, 14, 15, 16).</li>
+    <li><b>Ordinary figures.</b> One font for words and numbers, the same height and weight, no slashed zeros (rule 10).</li>
+    <li><b>Three text sizes only</b> (24, 14, 12), and bold only on answers and final figures. Gaps are 8, 16, 24 or 32 px, one 8 px corner (rules 10, 27).</li>
+    <li><b>Plain words first, formal word in brackets;</b> a missing value always reads "Not known" and OK still works (rules 24, 29).</li>
+    <li><b>The orifice is worked out and rounded down, not chosen from a list.</b> The coefficient shows 0.698 in full.</li>
   </ol>
   <p>Not shown here, to be written and tested: click budget, undo, motion (rules 18, 21, 28). Budgets, undo and motion are not shown.</p>
 </div>
@@ -209,40 +201,66 @@ body{background:var(--page);color:var(--t-body);font-family:var(--sans);font-siz
 (function(){
   var q = new URLSearchParams(location.search);
   var state = q.get('state')==='short'?'short':(q.get('state')==='notknown'?'notknown':'suits');
-  var accent = q.get('accent')==='rose'?'rose':'paper';
-  var ground = q.get('ground')==='mid'?'mid':(q.get('ground')==='dark'?'dark':'lighter');
+  var accent = q.get('accent')==='paper'?'paper':'rose';
+  var ground = q.get('ground')==='mid'?'mid':(q.get('ground')==='lighter'?'lighter':'dark');
 
   var grounds={
-    lighter:{win:'#4E5158',card:'#62656E',well:'#40434A',line:'#7C8089',a:'#FFFFFF',b:'#F0F1F3',n:'#E2E4E8',sv:['#B9BCC3','#E6E8EB','#F0F1F3','#E2E4E8']},
-    mid:{win:'#3F4247',card:'#50535A',well:'#313338',line:'#6A6D75',a:'#FFFFFF',b:'#E6E8EB',n:'#CBCED3',sv:['#9EA2AA','#D5D8DC','#E6E8EB','#CBCED3']},
-    dark:{win:'#2B2D30',card:'#3A3C40',well:'#232426',line:'#505358',a:'#F7F8F9',b:'#DADCE0',n:'#B4B8BE',sv:['#80848C','#C8CBD0','#DADCE0','#B4B8BE']}
+    lighter:{win:'#4E5158',card:'#62656E',well:'#40434A',line:'#7C8089',field:'#787B85',fl:'#D5D8DC',a:'#FFFFFF',b:'#F0F1F3',n:'#E2E4E8',sv:['#B9BCC3','#E6E8EB','#F0F1F3','#E2E4E8']},
+    mid:{win:'#3F4247',card:'#50535A',well:'#313338',line:'#6A6D75',field:'#62656D',fl:'#B9BCC3',a:'#FFFFFF',b:'#E6E8EB',n:'#CBCED3',sv:['#9EA2AA','#D5D8DC','#E6E8EB','#CBCED3']},
+    dark:{win:'#2B2D30',card:'#383B40',well:'#232528',line:'#4A4D53',field:'#4A4D55',fl:'#8A8E96',a:'#F3F4F5',b:'#D2D5DA',n:'#A9AEB6',sv:['#80848C','#C8CBD0','#DADCE0','#B4B8BE']}
   };
 
-  var lock=function(open){return '<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="10" height="7" rx="2"/>'+(open?'<path d="M5.5 7V5a2.5 2.5 0 0 1 4.8-1"/>':'<path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2"/>')+'</svg>';};
   var tick='<svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#10131A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 L5 9 L10 3"/></svg>';
-
   var rain=[['5 min','98.6'],['10 min','73.6'],['15 min','60.1'],['20 min','51.5'],['25 min','45.5'],['30 min','40.9']];
 
-  function plan(tank){
-    return '<svg width="1470" height="60" viewBox="0 0 1470 60">'+
-      '<rect class="sd" x="0.5" y="0.5" width="563" height="24" rx="8"/>'+
-      '<rect class="sd" x="564.5" y="0.5" width="367" height="24" rx="8"/>'+
-      '<rect class="sd" x="932.5" y="0.5" width="537" height="24" rx="8"/>'+
-      '<text class="tn" x="16" y="17">Roof 230 m²</text>'+
-      '<text class="tn" x="580" y="17">Paving 150 m²</text>'+
-      '<text class="tn" x="948" y="17">Garden 220 m²</text>'+
-      '<text class="tn" x="1470" y="55" text-anchor="end">Areas to scale, pipes not to scale</text>'+
-      '<rect class="sm" x="16.5" y="35.5" width="104" height="22" rx="8"/>'+
-      '<text class="tb" x="68" y="51" text-anchor="middle">Tank '+tank+' m³</text>'+
-      '<path class="sk" d="M121 47 H830"/>'+
-      '<text class="tn" x="190" y="42">Detention pipe 0.56 m³</text>'+
-      '<rect class="sm" x="380.5" y="41.5" width="12" height="12" rx="2"/><text class="tn" x="400" y="57">P1 0.08 m³</text>'+
-      '<rect class="sm" x="560.5" y="41.5" width="12" height="12" rx="2"/><text class="tn" x="580" y="57">P2 0.06 m³</text>'+
-      '<rect class="sk" x="720.5" y="41.5" width="12" height="12" rx="2"/><text class="tn" x="740" y="57">P3 not used</text>'+
-      '<rect class="sm" x="830.5" y="39.5" width="16" height="16" rx="2"/>'+
-      '<text class="tb" x="856" y="52">Orifice pit, 69 mm, 5.84 L/s</text>'+
-      '<path class="sm" d="M1040 47 H1100 M1093 42 L1100 47 L1093 52"/>'+
-      '<text class="tn" x="1110" y="52">to council</text>'+
+  function previewSvg(){
+    var T='font-family="IBM Plex Sans, Segoe UI, sans-serif" letter-spacing="0.5"';
+    return '<svg width="348" height="610" viewBox="0 0 348 610">'+
+    '<rect x="0" y="0" width="348" height="610" rx="8" fill="#16181B"/>'+
+    '<text x="16" y="28" fill="#E8EAED" font-size="10" '+T+'>SITE PLAN</text>'+
+    '<circle cx="318" cy="26" r="10" fill="none" stroke="#8A8F96"/><path d="M318 14 V22" stroke="#8A8F96"/><text x="318" y="31" text-anchor="middle" fill="#8A8F96" font-size="9" '+T+'>N</text>'+
+    // boundary
+    '<rect x="24" y="48" width="300" height="480" fill="none" stroke="#E8EAED" stroke-width="1"/>'+
+    '<text x="174" y="43" text-anchor="middle" fill="#8A8F96" font-size="9" '+T+'>15.00</text>'+
+    // house
+    '<rect x="44" y="72" width="170" height="150" fill="none" stroke="#9AA0A8" stroke-width="1.2"/>'+
+    '<path d="M44 140 H214" stroke="#5E636B"/>'+
+    '<text x="129" y="152" text-anchor="middle" fill="#8A8F96" font-size="10" '+T+'>HOUSE</text>'+
+    // driveway
+    '<path d="M44 528 V290 H108 V528" fill="none" stroke="#7C8189" stroke-width="1"/>'+
+    '<text transform="translate(80 420) rotate(-90)" text-anchor="middle" fill="#6E737B" font-size="9" '+T+'>DRIVEWAY</text>'+
+    // kerb
+    '<path d="M0 566 H348" stroke="#8A8F96" stroke-width="1"/><path d="M0 570 H348" stroke="#5E636B" stroke-width="1"/>'+
+    '<text x="16" y="590" fill="#6E737B" font-size="9" '+T+'>KERB</text>'+
+    // pipe halo (counted as storage)
+    '<path d="M270 150 V358" stroke="#F3F4F5" stroke-width="11" opacity="0.3" stroke-linecap="round"/>'+
+    // detention pipe
+    '<path d="M270 150 V482" stroke="#4A90E2" stroke-width="5" stroke-dasharray="12 5"/>'+
+    '<text transform="translate(247 320) rotate(-90)" text-anchor="middle" fill="#E8EAED" font-size="9" '+T+'>225 DIA. STORMPRO PIPE AT 1 IN 200</text>'+
+    // tank + halo
+    '<circle cx="270" cy="128" r="28" fill="none" stroke="#F3F4F5" stroke-width="1" opacity="0.9"/>'+
+    '<circle cx="270" cy="128" r="22" fill="#16181B" stroke="#E8EAED" stroke-width="1.2"/>'+
+    '<path d="M270 100 V90" stroke="#E8EAED" stroke-width="0.8"/>'+
+    '<text x="270" y="82" text-anchor="middle" fill="#E8EAED" font-size="9" '+T+'>WT1 5000 L</text>'+
+    // P1 and P2
+    '<rect x="260" y="230" width="20" height="20" rx="3" fill="none" stroke="#F3F4F5" stroke-width="1"/>'+
+    '<rect x="263" y="233" width="14" height="14" fill="#16181B" stroke="#E8EAED"/><path d="M263 233 L277 247 M277 233 L263 247" stroke="#5E636B" stroke-width="0.6"/>'+
+    '<path d="M280 240 H292" stroke="#E8EAED" stroke-width="0.8"/><circle cx="301" cy="240" r="9" fill="none" stroke="#E8EAED"/><text x="301" y="243.5" text-anchor="middle" fill="#E8EAED" font-size="9" '+T+'>P1</text>'+
+    '<rect x="260" y="350" width="20" height="20" rx="3" fill="none" stroke="#F3F4F5" stroke-width="1"/>'+
+    '<rect x="263" y="353" width="14" height="14" fill="#16181B" stroke="#E8EAED"/><path d="M263 353 L277 367 M277 353 L263 367" stroke="#5E636B" stroke-width="0.6"/>'+
+    '<path d="M280 360 H292" stroke="#E8EAED" stroke-width="0.8"/><circle cx="301" cy="360" r="9" fill="none" stroke="#E8EAED"/><text x="301" y="363.5" text-anchor="middle" fill="#E8EAED" font-size="9" '+T+'>P2</text>'+
+    // P3 dimmed
+    '<path d="M262 360 H208" stroke="#5E636B" stroke-width="1.5" stroke-dasharray="5 4"/>'+
+    '<rect x="192" y="353" width="14" height="14" fill="#16181B" stroke="#5E636B"/>'+
+    '<text x="199" y="384" text-anchor="middle" fill="#5E636B" font-size="9" '+T+'>P3 NOT USED</text>'+
+    // orifice pit
+    '<rect x="260" y="482" width="20" height="20" fill="#16181B" stroke="#E8EAED" stroke-width="1.2"/><circle cx="270" cy="492" r="3" fill="none" stroke="#E8EAED"/>'+
+    '<text x="252" y="488" text-anchor="end" fill="#E8EAED" font-size="9" '+T+'>ORIFICE PIT</text><text x="252" y="500" text-anchor="end" fill="#E8EAED" font-size="9" '+T+'>69 DIA.</text>'+
+    // pipe to LPD with flow arrow
+    '<path d="M270 502 V562" stroke="#4A90E2" stroke-width="2"/><path d="M265 548 L270 558 L275 548 Z" fill="#4A90E2"/>'+
+    '<text x="284" y="548" fill="#E8EAED" font-size="9" '+T+'>5.84 L/S</text>'+
+    '<circle cx="270" cy="568" r="5" fill="none" stroke="#E8EAED"/>'+
+    '<text x="282" y="590" fill="#E8EAED" font-size="9" '+T+'>LPD</text>'+
     '</svg>';
   }
 
@@ -250,126 +268,125 @@ body{background:var(--page);color:var(--t-body);font-family:var(--sans);font-siz
     var short=state==='short', unk=state==='notknown';
     var tank = short?'0.50':'1.00';
     var provided = short?'1.20':'1.70';
-    var needed = unk?null:'1.64';
-    var result = unk?null:(short?'0.44':'0.06');
 
-    document.getElementById('plan').innerHTML = plan(tank);
+    // preview
+    document.getElementById('preview').innerHTML = previewSvg()+
+      '<div class="chain"><span class="chip">WT1</span>&rarr;<span class="chip">Pipe</span>&rarr;<span class="chip">P1</span>&rarr;<span class="chip">P2</span>&rarr;<span class="chip lit">Orifice pit</span>&rarr;<span class="chip">LPD</span></div>'+
+      '<div class="note">Preview: the drawing as AutoCAD shows it. Made-up site.<br>White outline: counted as storage.</div>';
 
     // band
     var bandCls = short?'red':(unk?'amber':'green');
     var word = short?'Short':(unk?'Needs a look':'Suits');
-    var main = short?'Storage short by <b class="strong fig">0.44</b> m³':(unk?'Storage: Not known':'Storage suits: <b class="strong fig">0.06</b> m³ spare');
-    var sub = short?'<b class="fig" style="font-weight:600">1.20</b> provided, <b class="fig" style="font-weight:600">1.64</b> needed':(unk?'Site rainfall not entered: type the six figures below':'<b class="fig" style="font-weight:600">1.70</b> provided, <b class="fig" style="font-weight:600">1.64</b> needed');
+    var main = short?'Storage short by <b class="strong">0.44</b> m³':(unk?'Storage: Not known':'Storage suits: <b class="strong">0.06</b> m³ spare');
+    var sub = short?'1.20 provided, 1.64 needed. Detention share was 1,000 L':(unk?'1 figure needs you: site rainfall':'1.70 provided, 1.64 needed');
     document.getElementById('band').innerHTML =
       '<div class="band '+bandCls+'"><div class="left"><span class="pill" style="background:transparent">'+word+'</span><span class="main">'+main+'</span><span class="sub">'+sub+'</span></div>'+
-      '<div class="right">Discharge <b class="fig" style="font-weight:600">5.84</b> L/s of <b class="fig" style="font-weight:600">6.00</b> allowed <span class="pill green">Suits</span></div></div>';
+      '<div class="right2">Discharge <b class="strong">5.84</b> L/s of <b class="strong">6.00</b> allowed <span class="pill green">Suits</span></div></div>';
 
-    // storage
-    var pill = short?'<span class="pill red">Short</span>':(unk?'<span class="pill amber">Needs a look</span>':'<span class="pill green">Suits</span>');
-    var ans = short?'<span class="big fig strong">0.44</span><span>m³ short</span>':(unk?'<span class="big nk">Not known</span><span>storage spare</span>':'<span class="big fig strong">0.06</span><span>m³ spare</span>');
-    var bar;
-    if(short) bar='<div class="sbar"><div class="fill" style="width:73.2%"><span>Provided 1.20</span></div><div class="cap red">Short 0.44</div></div><div class="note" style="margin-top:8px">Whole bar is the 1.64 needed</div>';
-    else if(unk) bar='<div class="sbar"><div class="fill" style="flex:1"><span>Provided 1.70</span></div><div class="cap amber">Needed: Not known</div></div><div class="note" style="margin-top:8px">Needed cannot be drawn yet</div>';
-    else bar='<div class="sbar"><div class="fill" style="width:100%"><span>Provided 1.70</span><span>Spare 0.06</span></div><div class="mk" style="left:96.5%"></div></div><div class="note" style="margin-top:8px">Dark line marks the 1.64 needed</div>';
-    var nkv='v nk', numv='v';
-    document.getElementById('cStorage').innerHTML =
-      '<div class="chead"><span>Storage</span>'+pill+'</div>'+
-      '<div class="cans">'+ans+'</div>'+
-      '<div class="pic">'+bar+'</div>'+
-      '<div class="work"><div class="sum">'+
-        '<div class="s"></div><div class="l">Tank WT1 <small>room for detention</small></div><div class="v">'+tank+'</div>'+
-        '<div class="s">+</div><div class="l">Pipes <small>225 dia, 14.00 m</small></div><div class="v">0.56</div>'+
-        '<div class="s">+</div><div class="l"><span class="cb on">'+tick+'</span>P1 holds water</div><div class="v">0.08</div>'+
-        '<div class="s">+</div><div class="l"><span class="cb on">'+tick+'</span>P2 holds water</div><div class="v">0.06</div>'+
-        '<div class="s off">+</div><div class="l off"><span class="cb"></span>P3 holds water <small>not added</small></div><div class="v off">0.04</div>'+
-        (short?
-          '<div class="s">=</div><div class="l">Provided</div><div class="v line">'+provided+'</div>'+
-          '<div class="s"></div><div class="l">Needed, 5 minute storm</div><div class="v">'+needed+'</div>'+
-          '<div class="s">&minus;</div><div class="l">Provided</div><div class="v">'+provided+'</div>'+
-          '<div class="s">=</div><div class="l">Short by</div><div class="v line dbl strong">'+result+'</div>'
-        :
-          '<div class="s">=</div><div class="l">Provided</div><div class="v line">'+provided+'</div>'+
-          '<div class="s">&minus;</div><div class="l">'+(unk?'Needed':'Needed, 5 minute storm')+'</div><div class="'+(unk?nkv:numv)+'">'+(unk?'Not known':needed)+'</div>'+
-          '<div class="s">=</div><div class="l">Spare</div><div class="'+(unk?nkv:numv)+' line dbl'+(unk?'':' strong')+'">'+(unk?'Not known':result)+'</div>')+
-      '</div></div>'+
-      '<div class="note foot">Storm length that needs the most storage.</div>';
-
-    // discharge
-    var sk='<svg width="100%" height="64" viewBox="0 0 340 64">'+
-      '<path class="sh" d="M16 4 V58 H170"/>'+
-      '<path class="sk" d="M16 4 H170"/>'+
-      '<text class="tn" x="24" y="19">Top water level (plate)</text>'+
-      '<path class="sh" d="M170 4 V44 M170 54 V58"/>'+
-      '<path class="sh" d="M156 8 V50 M152 12 L156 5 L160 12 M152 46 L156 53 L160 46"/>'+
-      '<path class="sk" d="M156 50 H170"/>'+
-      '<text class="tm" x="64" y="40">Head 345.5</text>'+
-      '<text class="tm" x="180" y="15">Plate 380.0</text>'+
-      '<path class="sh" d="M174 50 H264 M256 45 L264 50 L256 55"/>'+
-      '<text class="tm" x="190" y="42">Hole 69</text>'+
-      '<text class="tn" x="272" y="54">Flow</text>'+
-      '</svg>';
-    document.getElementById('cDischarge').innerHTML =
-      '<div class="chead"><span>Discharge</span><span class="pill green">Suits</span></div>'+
-      '<div class="cans"><span class="big fig strong">5.84</span><span>L/s of 6.00 allowed</span></div>'+
-      '<div class="pic">'+sk+'</div>'+
-      '<div class="work"><div class="sum">'+
-        '<div class="s"></div><div class="l">Hole size (orifice) <small>worked out, rounded down</small></div><div class="v">69</div>'+
-        '<div class="s"></div><div class="l">Plate</div><div class="v">380.0</div>'+
-        '<div class="s">&minus;</div><div class="l">Half the hole</div><div class="v">34.5</div>'+
-        '<div class="s">=</div><div class="l">Water height above the hole (head)</div><div class="v line">345.5</div>'+
-        '<div class="sub">Flow = 0.6 &times; hole area &times; &radic;(2 &times; 9.81 &times; head)</div>'+
-        '<div class="s">=</div><div class="l">Flow, L/s</div><div class="v line dbl strong">5.84</div>'+
-      '</div></div>'+
-      '<div class="note foot">Hole, plate and head in mm. Orifice sum, factor 0.6.</div>';
-
-    // areas
-    function r5(s,l,src,a,x,e,cls){return '<div class="s">'+s+'</div><div class="l">'+l+(src?'<small>'+src+'</small>':'')+'</div><div class="'+(cls||'')+'">'+a+'</div><div class="x">'+x+'</div><div class="'+(cls||'')+'">'+e+'</div>';}
-    document.getElementById('cAreas').innerHTML =
-      '<div class="chead"><span>Areas</span></div>'+
-      '<div class="cans"><span class="big fig strong">0.698</span><span>share of rain that runs off</span></div>'+
-      '<div class="pic"><div class="abar">'+
-        '<div style="width:38.3%;background:var(--c1)">Roof<span class="fig">230</span></div>'+
-        '<div style="width:25%;background:var(--c2)">Paving<span class="fig">150</span></div>'+
-        '<div style="width:36.7%;background:var(--c3)">Garden<span class="fig">220</span></div></div></div>'+
-      '<div class="work"><div class="sum5">'+
-        r5('','Roof','measured','230.00','&times; 0.90','207.00')+
-        r5('+','Paving','measured','150.00','&times; 0.90','135.00')+
-        r5('+','Garden','worked out','220.00','&times; 0.35','77.00')+
-        '<div class="s"></div><div class="l">Total</div><div class="line">600.00</div><div class="x"></div><div class="line">419.00</div>'+
-        '<div class="s">&divide;</div><div class="l">Site area</div><div></div><div class="x"></div><div>600.00</div>'+
-        '<div class="s">=</div><div class="l">Share that runs off</div><div></div><div class="x"></div><div class="line dbl strong">0.698</div>'+
-      '</div></div>'+
-      '<div class="note foot">Runoff coefficient. Shown as 0.70 elsewhere.</div>';
-
-    // fixed
-    function fr(l,v,src,locked,extra){return '<div class="l">'+l+(extra||'')+'</div><div class="f">'+v+'</div><div class="src">'+src+'</div>'+lock(!locked);}
-    document.getElementById('cFixed').innerHTML =
-      '<div class="chead"><span>What is fixed</span></div>'+
-      '<div class="cans"><span class="big fig strong">5</span><span>of 6 held</span></div>'+
-      '<div class="pic"><div class="tally"><span class="mark"></span><span class="mark"></span><span class="mark"></span><span class="mark"></span><span class="mark"></span><span class="mark o"></span></div>'+
-        '<div class="note" style="margin-top:8px">Filled = held, outline = worked out</div></div>'+
-      '<div class="work"><div class="fixed">'+
-        fr('Site area, m²','600.00','given',true)+
-        fr('Allowed discharge, L/s','6.00','given',true)+
-        fr('Storm, 1 in','10','given',true)+
-        fr('Tank, L','5,000','chosen',true)+
-        fr('Detention, L',short?'500':'1,000','chosen',true,short?'<span class="pill changed">Changed</span>':'')+
-        fr('Room in tank for detention, m³',tank,'worked out',false)+
-      '</div></div>'+
-      '<div class="note foot">Hold what is fixed. The rest is worked out.</div>';
-
-    // rainfall
-    document.getElementById('wells').innerHTML = rain.map(function(r){
-      return '<div class="well"><span class="note">'+r[0]+'</span><div class="f'+(unk?' unk':'')+'">'+(unk?'Not known':r[1])+'</div></div>';
+    // step 1
+    function inp(label,val,unit,w,extra,cls){return '<div class="fld" style="width:'+w+'px"><span class="note">'+label+'</span><div class="inp '+(cls||'')+'">'+(extra||'')+'<span>'+val+'</span>'+(unit?'<span class="u">'+unit+'</span>':'')+'</div></div>';}
+    var detExtra = short?'<span class="pill changed" style="margin-right:auto">Changed</span>':'';
+    var rainWells = rain.map(function(r){
+      return '<div class="fld" style="width:64px"><span class="note">'+r[0]+'</span><div class="inp'+(unk?' nk needs':'')+'">'+(unk?'Not known':'<span>'+r[1]+'</span>')+'</div></div>';
     }).join('');
-    document.getElementById('rainsrc').textContent = unk?'mm/h · Not known':'mm/h · given';
+    var needsRight = unk?'<span class="pill amber">1 figure needs you</span>':'<span class="note">Nothing needs you</span>';
+    document.getElementById('s1c').innerHTML =
+      '<div class="shead tall"><span class="n">1</span><span class="t">What you type</span><span class="note">The few figures only you can give. Everything else is worked out.</span><span class="sp"></span>'+needsRight+
+        '<span class="methods" style="margin-left:16px"><button class="mbtn sel" id="m1">Office method (Boyd\'s)</button><button class="mbtn" id="m2">Council tool (OSD4W)</button></span></div>'+
+      '<div class="row1"><div class="fields">'+
+        inp('Site area','600.00','m²',96)+
+        inp('Allowed discharge','6.00','L/s',112)+
+        inp('Storm, 1 in','10','',72)+
+        inp('Tank size','5,000','L',88)+
+        inp('Detention share',short?'500':'1,000','L',128,detExtra)+
+      '</div><div class="rain"><div class="gl"><span>Site rainfall</span>'+(unk?'<span class="pill amber">Needs you</span>':'<span class="note">1 in 10, mm/h</span>')+'</div>'+rainWells+'</div></div>';
+
+    // step 2
+    function r5(s,l,src,a,x,e){return '<div class="s">'+s+'</div><div class="l">'+l+(src?'<small>'+src+'</small>':'')+'</div><div>'+a+'</div><div class="x">'+x+'</div><div>'+e+'</div>';}
+    document.getElementById('s2c').innerHTML =
+      '<div class="shead"><span class="n">2</span><span class="t">What the drawing gives</span><span class="note">Read off what you drew. Change the drawing, not this window.</span><span class="sp"></span>'+
+        '<div class="abar"><div style="width:38.3%;background:var(--c1)">Roof<span>230</span></div><div style="width:25%;background:var(--c2)">Paving<span>150</span></div><div style="width:36.7%;background:var(--c3)">Garden<span>220</span></div></div></div>'+
+      '<div class="cols">'+
+        '<div style="width:432px"><div class="sum5">'+
+          r5('','Roof','measured','230.00','&times; 0.90','207.00')+
+          r5('+','Paving','measured','150.00','&times; 0.90','135.00')+
+          r5('+','Garden','worked out','220.00','&times; 0.35','77.00')+
+          '<div class="s"></div><div class="l">Total</div><div class="line">600.00</div><div class="x"></div><div class="line">419.00</div>'+
+          '<div class="s">=</div><div class="l">Share that runs off <small>419.00 &divide; 600.00</small></div><div></div><div class="x"></div><div class="line dbl strong">0.698</div>'+
+        '</div></div>'+
+        '<div style="width:400px"><div class="sum">'+
+          '<div class="s"></div><div class="l">Tank WT1 <small>room for detention</small></div><div class="v">'+tank+'</div>'+
+          '<div class="s">+</div><div class="l">Pipes <small>225 dia, 14.00 m</small></div><div class="v">0.56</div>'+
+          '<div class="s">+</div><div class="l"><span class="cb on">'+tick+'</span>P1 holds water</div><div class="v">0.08</div>'+
+          '<div class="s">+</div><div class="l"><span class="cb on">'+tick+'</span>P2 holds water</div><div class="v">0.06</div>'+
+          '<div class="s off">+</div><div class="l off"><span class="cb"></span>P3 holds water <small>not added</small></div><div class="v off">0.04</div>'+
+          '<div class="s">=</div><div class="l">Provided</div><div class="v line">'+provided+'</div>'+
+        '</div></div>'+
+      '</div>';
+
+    // step 3
+    var pill = short?'<span class="pill red">Short</span>':(unk?'<span class="pill amber">Needs a look</span>':'<span class="pill green">Suits</span>');
+    var ans = short?'<span class="big strong">0.44</span><span>m³ short</span>':(unk?'<span class="big nk">Not known</span><span>storage spare</span>':'<span class="big strong">0.06</span><span>m³ spare</span>');
+    var bar;
+    if(short) bar='<div class="sbar"><div class="fill" style="width:73.2%"><span>Provided 1.20</span></div><div class="cap red">Short 0.44</div></div>';
+    else if(unk) bar='<div class="sbar"><div class="fill" style="flex:1"><span>Provided 1.70</span></div><div class="cap amber">Needed: Not known</div></div>';
+    else bar='<div class="sbar"><div class="fill" style="width:100%"><span>Provided 1.70</span><span>Spare 0.06</span></div><div class="mk" style="left:96.5%"></div></div>';
+    var srows;
+    if(short) srows=
+      '<div class="s"></div><div class="l">Needed, 5 minute storm</div><div class="v">1.64</div>'+
+      '<div class="s">&minus;</div><div class="l">Provided</div><div class="v">1.20</div>'+
+      '<div class="s">=</div><div class="l">Short by</div><div class="v line dbl strong">0.44</div>';
+    else if(unk) srows=
+      '<div class="s"></div><div class="l">Provided</div><div class="v">1.70</div>'+
+      '<div class="s">&minus;</div><div class="l">Needed</div><div class="v nk">Not known</div>'+
+      '<div class="s">=</div><div class="l">Spare</div><div class="v line dbl nk">Not known</div>';
+    else srows=
+      '<div class="s"></div><div class="l">Provided</div><div class="v">1.70</div>'+
+      '<div class="s">&minus;</div><div class="l">Needed, 5 minute storm</div><div class="v">1.64</div>'+
+      '<div class="s">=</div><div class="l">Spare</div><div class="v line dbl strong">0.06</div>';
+
+    var sk='<svg width="226" height="144" viewBox="0 0 240 144">'+
+      '<path class="sh" d="M10 8 V132 H120"/>'+
+      '<path class="sk" d="M10 8 H120"/>'+
+      '<text class="tn" x="16" y="26">Top water</text><text class="tn" x="16" y="42">level (plate)</text>'+
+      '<path class="sh" d="M120 8 V102 M120 114 V132"/>'+
+      '<path class="sh" d="M102 12 V108 M98 16 L102 9 L106 16 M98 104 L102 111 L106 104"/>'+
+      '<path class="sk" d="M102 108 H120"/>'+
+      '<text class="tb" x="14" y="76">Head 345.5</text>'+
+      '<text class="tb" x="128" y="24">Plate 380.0</text>'+
+      '<path class="sh" d="M124 108 H206 M198 103 L206 108 L198 113"/>'+
+      '<text class="tb" x="134" y="98">Hole 69</text>'+
+      '<text class="tn" x="180" y="126">Flow</text>'+
+      '</svg>';
+
+    document.getElementById('s3c').innerHTML =
+      '<div class="shead"><span class="n">3</span><span class="t">The answers</span><span class="note">Does the site hold the storm, and does it let out no more than allowed?</span></div>'+
+      '<div class="cols">'+
+        '<div style="width:420px"><div class="ans">'+ans+pill+'</div>'+bar+'<div class="sum">'+srows+'</div><div class="note" style="margin-top:8px">Storm length that needs the most storage.</div></div>'+
+        '<div style="flex:1;display:flex;gap:24px"><div style="width:392px"><div class="ans"><span class="big strong">5.84</span><span>L/s of 6.00 allowed</span><span class="pill green">Suits</span></div><div class="sum">'+
+          '<div class="s"></div><div class="l">Hole size (orifice) <small>worked out, rounded down</small></div><div class="v">69</div>'+
+          '<div class="s"></div><div class="l">Plate</div><div class="v">380.0</div>'+
+          '<div class="s">&minus;</div><div class="l">Half the hole</div><div class="v">34.5</div>'+
+          '<div class="s">=</div><div class="l">Water height above the hole (head)</div><div class="v line">345.5</div>'+
+          '<div class="s">=</div><div class="l">Flow, L/s <small>0.6 &times; hole area &times; &radic;(2 &times; 9.81 &times; head)</small></div><div class="v line dbl strong">5.84</div>'+
+        '</div></div>'+
+        '<div style="padding-top:40px">'+sk+'<div class="note">Hole, plate and head in mm.</div></div></div>'+
+      '</div>';
 
     ['s1','s2','s3'].forEach(function(id,i){document.getElementById(id).className=(['suits','short','notknown'][i]===state)?'on':'';});
+    wireMethods();
   }
 
+  function wireMethods(){
+    var methods=['m1','m2'];
+    methods.forEach(function(id){document.getElementById(id).addEventListener('click',function(){
+      methods.forEach(function(o){document.getElementById(o).className='mbtn'+(o===id?' sel':'');});
+    });});
+  }
   function applyGround(){
     var g=grounds[ground],r=document.documentElement.style;
     r.setProperty('--win',g.win);r.setProperty('--card',g.card);r.setProperty('--well',g.well);r.setProperty('--line',g.line);
+    r.setProperty('--field',g.field);r.setProperty('--fieldline',g.fl);
     r.setProperty('--t-answer',g.a);r.setProperty('--t-body',g.b);r.setProperty('--t-note',g.n);
     g.sv.forEach(function(c,i){r.setProperty('--sv'+i,c);});
     ['g1','g2','g3'].forEach(function(id,i){document.getElementById(id).className=(['lighter','mid','dark'][i]===ground)?'on':'';});
@@ -381,10 +398,6 @@ body{background:var(--page);color:var(--t-body);font-family:var(--sans);font-siz
     document.getElementById('a1').className=accent==='rose'?'on':'';
     document.getElementById('a2').className=accent==='paper'?'on':'';
   }
-  var methods=['m1','m2'];
-  methods.forEach(function(id){document.getElementById(id).addEventListener('click',function(){
-    methods.forEach(function(o){document.getElementById(o).className='mbtn'+(o===id?' sel':'');});
-  });});
   ['s1','s2','s3'].forEach(function(id,i){document.getElementById(id).onclick=function(){state=['suits','short','notknown'][i];render();};});
   ['g1','g2','g3'].forEach(function(id,i){document.getElementById(id).onclick=function(){ground=['lighter','mid','dark'][i];applyGround();};});
   document.getElementById('a1').onclick=function(){accent='rose';applyAccent();};
