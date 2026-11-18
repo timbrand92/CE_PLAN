@@ -1,5 +1,87 @@
 # R-015 — Real plan sizes of rainwater tanks sold in Victoria
 
+## Makers' sizes and shapes, checked 19 Nov 2026
+
+Public web only (Melbourne, 19 Nov 2026). Sizes in mm, written length x width x height. Round tanks are diameter x height. "Checked at source" means I opened the maker's or seller's own page or document and read the figure there. "Not checked at source" means a search summary only, or I was blocked. No client data used.
+
+### ANSWER FIRST
+
+1. **Plan shape: I could not confirm any slimline plan shape at source.** No maker page or sheet I could read states "rounded ends" or a corner radius. The Tankworld sheets are drawings, but I could not view the drawing part. So every slimline shape below is "not checked at source".
+2. **A 3,500 L slimline does exist, with a checked size.** Rotoplus 3,500 L Super Shortbase Slimline: 2380 x 870 x 2150 (ASC Water Tanks product page, which also lists the volume as 3,500 L).
+3. **Steel slimline is made to order.** The Tank Factory page says all its steel tanks are made to order, the listed sizes are the best-value ones, and made-to-measure tanks are available by contacting them with the dimensions wanted. It publishes no rule for length, width or height limits.
+4. **The stated litres are lower than the box volume.** Steel: about 90 to 93 percent of length x width x height. Poly: the Rotoplus 3,500 L comes to about 79 percent. So never work litres out from the box (my own arithmetic, not a maker figure).
+
+### Makers checked at source
+
+1. **The Tank Factory** (online seller of Duraplas poly tanks and Kingspan Aquaplate steel tanks): pages "Slimline Steel Water Tanks", "Slimline Water Tanks" (poly), "Round Steel Water Tanks" and "Round Water Tanks" (poly), all opened. Sizes are labelled "nominal". Its 3,000 L slimline steel product page says the tank is supplied "by Kingspan-Tankworks".
+2. **Tankworld** (Sunbury, Victoria; poly): the product specification sheets for the 3,000 L SLR Slimline and 5,000 L SLR Slimline, opened and read.
+3. **Rotoplas / Rotoplus** (poly): the "Rotoplas Rainwater Tanks Catalogue 2019" slimline page (opened, an older catalogue), and ASC Water Tanks' product pages for the Rotoplus 3,500 L slimline (opened).
+4. **ASC Water Tanks** (Melbourne seller of Rotoplus and Kingspan): product page for the 5,000 L Kingspan Steel Slimline Tank, opened.
+5. **Kingspan itself: NOT checked at source.** Kingspan's own website stopped my reader with a "human verification" page and I did not try to get round it. Its "Made to Measure Water Tanks" brochure came back as an error. What I have for Kingspan is from the Tank Factory and ASC pages above, plus a search summary of the brochure.
+6. **Polymaster and Bushman: NOT checked at source this time.** Both blocked my reader. The earlier figures in the old sections below stay "not checked".
+
+### Slimline steel (fixed models listed; all made to order)
+
+1. **The Tank Factory slimline steel page (checked at source, nominal sizes).**
+   - 1,000 L: 1300 x 550 x 1560.
+   - 1,500 L: 1900 x 550 x 1560.
+   - 2,000 L: 1700 x 700 x 1860, or "skinny" 2500 x 550 x 1560.
+   - 2,500 L: 2200 x 800 x 1560.
+   - 3,000 L: 2200 x 800 x 1860, or "skinny" 2500 x 700 x 1860, or "squat" 2500 x 850 x 1560. (Also a "Modline" 3,000 L, 2000 x 800 x 2020.)
+   - 4,000 L: 2900 x 800 x 1860 ("skinny"), or 2400 x 1000 x 1860.
+   - 5,000 L: 2600 x 1150 x 1860, or 3200 x 900 x 1860 ("skinny"), or 3100 x 1150 x 1560 ("squat"), or 2400 x 1150 x 2020 ("tall"). (Also Modline 5,000 L: 2300 x 1150 x 2020 and 3200 x 800 x 2020.)
+   - 6,000 L: 2900 x 1150 x 2020. 7,000 L: 3300 x 1150 x 2020.
+   - Plan shape: not stated on the page. **Not checked at source.**
+2. **Kingspan 5,000 L Steel Slimline, ASC page (checked at source):** 3200 x 900 x 1860. Same as the Tank Factory "skinny" 5,000 L, so the two sellers agree.
+3. **Kingspan 3,000 L slimline, search summary of Kingspan's own brochure (not checked at source):** 2200 x 800 x 1860, 65 kg. It agrees with the Tank Factory figure.
+4. **Other Kingspan 3,000 L figures seen in search summaries (not checked at source):** 2500 x 700 x 1860 (a New Zealand listing; matches a Tank Factory row) and a hardware-store listing "850 x 1560 x 2700" whose order is not labelled, so I have not used it.
+5. **Made-to-order rule (what the maker says):** all steel tanks are made to order; listed sizes are the best value; made-to-measure slimline and Modline tanks are available by contacting the Tank Factory with preferred dimensions (checked at source). Kingspan's brochure title says "Made to Measure" (not checked at source). **No width limits, height limits or volume rule are published.**
+6. **What the listed models show (my reading, not a maker rule):** widths seen 550 to 1150. Heights seen 1560, 1860 and 2020 only. Stated litres come to about 90 to 93 percent of length x width x height. For a made-to-order tank, ask the maker for the rated litres of the exact size.
+
+### Slimline poly
+
+1. **The Tank Factory slimline poly page (Duraplas, checked at source, nominal sizes).**
+   - 450 L: 1170 x 600 x 920. 650 L: 1350 x 600 x 1250. 1,180 L: 1350 x 600 x 2130. 1,650 L: 2660 x 700 x 1250.
+   - 2,000 L: 2250 x 625 x 1930.
+   - 3,000 L: 2660 x 700 x 2130 (upright), or 3040 x 760 x 1865 (squat).
+   - 4,000 L: 2600 x 920 x 2170 (upright), or 3090 x 955 x 1890 (squat).
+   - 5,000 L: 3080 x 940 x 2170 (upright), or 3160 x 1160 x 1850 (squat).
+   - Plan shape: not stated. **Not checked at source.**
+2. **Tankworld 3,000 L SLR Slimline sheet (checked at source):** 2560 x 740, inlet height 2150, total height 2220. "Dimensions can vary slightly due to shrinkage; all dimensions are approximate."
+3. **Tankworld 5,000 L SLR Slimline sheet (checked at source):** 3180 x 1080, total height 2060. Same wording on shrinkage.
+4. **Rotoplus 3,500 L Super Shortbase Slimline, ASC page (checked at source):** 2380 x 870 x 2150. A Rotoplus data sheet is linked there; I did not open it. **This is the only 3,500 L slimline with a size I checked.**
+5. **Rotoplas Rainwater Tanks Catalogue 2019, slimline page (checked at source, older catalogue):** 1,500 L 1460 x 680 x 2050; 2,000 L smooth 2175 x 625 x 2015; 2,000 L corrugated 2400 x 650 x 1800; 3,000 L smooth 3100 x 680 x 2000. "All sizes approximate due to shrinkage."
+6. **Not checked at source:** Polymaster (3,000 L 2570 x 790 x 2050; 5,000 L 3290 x 1020 x 2010) and the other Rotoplus sizes seen on ASC listings (1,000 L 1900 x 390 x 1800; 2,000 L 2400 x 565 x 2000; 4,000 L 2750 x 850 x 2200; 5,000 L 2900 x 1000 x 2100). Search summaries only.
+7. **Fixed models.** Poly slimline tanks are moulded, so these are fixed models, not made to order.
+
+### Round tanks (plan shape is a circle, so the shape is certain)
+
+1. **The Tank Factory round steel page (checked at source, nominal):** 2,000 L 1200 dia x 1860; 3,000 L 1500 x 1860; 4,000 L 1700 x 1860; 5,000 L 1900 x 1860; 10,000 L 2700 x 1860.
+2. **The Tank Factory round poly page (Duraplas, checked at source, nominal, diameter x height):**
+   - 1,200 L: 1070 x 1555. 1,800 L: 1560 x 1220. 2,720 L: 1430 x 2000.
+   - 3,000 L: 1600 x 1850. 3,900 L: 2170 x 1400. 4,100 L: 2170 x 1495.
+   - 4,500 L: 1830 x 2050. 5,000 L: 2175 x 1750, or 1800 x 2470.
+   - 5,675 L: 2020 x 2000. 9,000 L: 2530 x 2020. 10,000 L: 2510 x 2350.
+3. **Round tanks are fixed models.** The round steel tanks are listed as fixed sizes on that page.
+4. **Not read:** the round pages of the Rotoplas catalogue, Tankworld round sheets, Kingspan round tanks.
+
+### Plan shape: what the picture does about it
+
+1. **No maker states the slimline plan shape in anything I could read.** The Tank Factory pages and the ASC page give only length, width and height.
+2. **One seller's wording (search summary, not a maker, not checked at source):** a steel slimline seller's page says the "rounded ends" of a slimline tank give a sleek look. It gives no radius.
+3. **So the picture uses fully rounded ends (end radius half the width) as a stand-in and says so under each tank.** It is not a checked shape. Ask each maker for a plan drawing before the block is final.
+
+## Makers' sizes and shapes: What I could not confirm
+
+1. **The plan shape of any slimline tank**, rounded ends or rounded corners, and any corner radius. No maker figure found.
+2. **Kingspan's own size chart and Made to Measure brochure** (blocked at the maker's site).
+3. **Polymaster, Bushman, Pioneer, Fielders and Lysaght** sizes at source (blocked or not found).
+4. **How far steel makers will stretch a made-to-order tank** (widths, heights, maximum length, litres for a given length).
+5. **The Rotoplus data sheet** linked from the ASC 3,500 L page (not opened), and the Tankworld drawings (I read the text, not the picture).
+6. **Round 1,000 to 3,500 L steel from Kingspan itself, and round 2,500 L and 3,500 L from any maker** (the Tank Factory has 2,720 L and 3,000 L poly only).
+
+---
+
 ## Checked at source, 19 Nov 2026
 
 Checked against the makers' drawings in the office Tanks folder and HB 230-2008 (Rainwater Tank Design and Installation Handbook, office copy).
