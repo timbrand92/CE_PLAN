@@ -1,6 +1,6 @@
 # Current rulings: How we work (built, tested, installed, accepted; the gate; loops; speed; testing that learns)
 
-Current rulings as of 18 Nov 2026, 1:20 pm (Melbourne), from decisions D-001 to D-225. If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
+Current rulings as of 18 Nov 2026, 1:40 pm (Melbourne), from decisions D-001 to D-229. If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
 
 ## What is decided now
 
@@ -33,11 +33,12 @@ Current rulings as of 18 Nov 2026, 1:20 pm (Melbourne), from decisions D-001 to 
 
 14. **Every bug, idea and other item carries an ID number that is never reused, and documents carry a revision number** (D-205).
 15. **Every item lives in exactly one home, and the current ruling on any subject can be read in one place** (R-71; this folder is that place).
+16. **The board is built, and Tim manages only what is put to him in chat;** keeping the record, lists, side chats, order of work and follow-ups is the planning chat's job, run without faults (D-226).
 
 ### Speed
 
-16. **Speed is part of the plan:** time limits for each thing a drafter feels, measured every night, over the limit is a fault (D-165); the limits themselves are DRAFT.
-17. **Testing faster:** the free gains cut a full AutoCAD test pass from about 16 minutes to about 2 minutes 20 seconds; the no-screen engine is to be looked into and written up for approval with nothing run; the cloud engine and a second machine stay parked (D-161).
+17. **Speed is part of the plan:** time limits for each thing a drafter feels, measured every night, over the limit is a fault (D-165); the limits themselves are DRAFT.
+18. **Testing faster:** the free gains cut a full AutoCAD test pass from about 16 minutes to about 2 minutes 20 seconds; the no-screen engine is to be looked into and written up for approval with nothing run; the cloud engine and a second machine stay parked (D-161).
 
 ## Changed along the way
 
@@ -46,7 +47,7 @@ Current rulings as of 18 Nov 2026, 1:20 pm (Melbourne), from decisions D-001 to 
 
 ## Still open on this subject
 
-1. **The board (`BOARD.md`) of what waits on Tim, what is being built and what is open across every chat:** proposed 18 Nov, "build the board" approved per the brief for this folder, but R-71 still reads "not yet approved". Waits on: the planning chat.
+1. **R-71 in RULES.md still reads "not yet approved" for the board,** although D-226 approved it. Waits on: the planning chat.
 2. **A plain explanation of how the gate works and "short term suffering for long term gain"** (D-216, OQ-01). Waits on: the planning chat.
 3. **OBSTACLE_COURSE OQ-03, keep the 0.1 s limit for moving a pit;** measured 208 ms against 100 ms, one FAULT (OBSTACLE_COURSE). Waits on: Tim.
 4. **Time limits in PERFORMANCE section 2 are DRAFT,** including the 5 thousandths of a second idle limit (D-165). Waits on: Tim.
@@ -61,8 +62,10 @@ Current rulings as of 18 Nov 2026, 1:20 pm (Melbourne), from decisions D-001 to 
 13. **RULES.md Rulings item 1 still records "who accepts" as unanswered** although D-089 answered it. Waits on: the planning chat.
 14. **Decision loop:** Tim's calls taken at the recommended answer, marked DRAFT, and given to him once a day as one batch of at most 12 (LOOPS loop 4); no batch record yet. Waits on: the planning chat.
 
+**Closed:** whether the board is approved (closed by D-226, "build the board").
+
 ## Where the detail lives
 
 1. `stage5\HOW_WE_WORK.md`; `stage6\LOOPS.md`; `stage6\PERFORMANCE.md`; `stage6\OBSTACLE_COURSE.md`.
-2. `DECISIONS.md` D-089 to D-091, D-127, D-137, D-138, D-158, D-161, D-165, D-198, D-205, D-213, D-214, D-216, D-225.
+2. `DECISIONS.md` D-089 to D-091, D-127, D-137, D-138, D-158, D-161, D-165, D-198, D-205, D-213, D-214, D-216, D-225, D-226.
 3. `RULES.md` R-16 to R-31, R-68 to R-71; `reference\research\R-004_TESTING_FASTER.md`, `R-005_NO_SCREEN_ENGINE.md`.

@@ -1,6 +1,6 @@
 # Current rulings: Pipe
 
-Current rulings as of 18 Nov 2026, 1:20 pm (Melbourne), from decisions D-001 to D-225. If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
+Current rulings as of 18 Nov 2026, 1:40 pm (Melbourne), from decisions D-001 to D-229. If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
 
 ## What is decided now
 
@@ -41,12 +41,13 @@ Current rulings as of 18 Nov 2026, 1:20 pm (Melbourne), from decisions D-001 to 
 
 22. **The label prints the design grade as typed** ("1 IN 75"); inverts are still rounded to two decimals (D-154, which replaced D-123 for the label).
 23. **A label moved by hand stays where it was put** when the pipe changes; the wording updates (D-014).
-24. **A pipe label typed over by hand keeps the wording,** goes on the unfinished list as no longer matching, and one click lets it follow the pipe again (D-182).
-25. **Placing:** type CD, the window opens every time already filled in, then draw (D-060, D-058); editing through Properties or double-click (D-061).
+24. **The Pipe tool writes its own label;** the office's pipe description label blocks are dropped (D-229, "Drop them").
+25. **A pipe label typed over by hand keeps the wording,** goes on the unfinished list as no longer matching, and one click lets it follow the pipe again (D-182).
+26. **Placing:** type CD, the window opens every time already filled in, then draw (D-060, D-058); editing through Properties or double-click (D-061).
 
 ### The Pipe window
 
-26. **Approved structure and look,** wide (horizontal) preview style (D-067, D-068, D-070); hands-on test: closing the padlock on the downstream invert, typing 5.14 and "Work uphill" all worked, and "padlock = held, open = worked out" reads clearly (D-128); on the bench "PIPE LOOKS GOOD" (D-162).
+27. **Approved structure and look,** wide (horizontal) preview style (D-067, D-068, D-070); hands-on test: closing the padlock on the downstream invert, typing 5.14 and "Work uphill" all worked, and "padlock = held, open = worked out" reads clearly (D-128); on the bench "PIPE LOOKS GOOD" (D-162).
 
 ## Changed along the way
 
@@ -79,6 +80,6 @@ Current rulings as of 18 Nov 2026, 1:20 pm (Melbourne), from decisions D-001 to 
 
 ## Where the detail lives
 
-1. `DECISIONS.md` D-014, D-034, D-041, D-057, D-079 to D-083, D-102, D-123, D-128, D-133, D-134, D-140, D-142 to D-147, D-153, D-154, D-156, D-174, D-176, D-182, D-189.
+1. `DECISIONS.md` D-014, D-034, D-041, D-057, D-079 to D-083, D-102, D-123, D-128, D-133, D-134, D-140, D-142 to D-147, D-153, D-154, D-156, D-174, D-176, D-182, D-189, D-229.
 2. `pictures\pipe_window_full_size.html`; `pictures\pick_a_detention_blue.html`.
 3. `design\SITUATIONS.md` section B; `reference\design\LIMITS.md`; `reference\design\SUMS.md`.

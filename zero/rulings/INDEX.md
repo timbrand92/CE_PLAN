@@ -1,6 +1,6 @@
 # Current rulings: Index
 
-Current rulings as of 18 Nov 2026, 1:20 pm (Melbourne), from decisions D-001 to D-225. If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
+Current rulings as of 18 Nov 2026, 1:40 pm (Melbourne), from decisions D-001 to D-229. If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
 
 **What this folder is.** One page per subject saying what is decided NOW, what was changed along the way, and what is still open. The history stays in `DECISIONS.md`. Written read-only from DECISIONS.md, RULES.md, UI_UX_RULES.md, the design, stage, interview and research files, and `C:\TimOS\RULES.md` rule 1.9. Nothing here is a new ruling.
 
@@ -8,7 +8,7 @@ Current rulings as of 18 Nov 2026, 1:20 pm (Melbourne), from decisions D-001 to 
 
 ## (a) Every decision and where it is placed
 
-**Count: 225 decisions, D-001 to D-225, each listed once below; no number is missing or used twice in DECISIONS.md (checked 18 Nov 2026, 1:17 pm).** D-016 to D-030 sit at the end of DECISIONS.md and D-156 and D-167 sit out of order; all are included. A decision may be placed on several pages; "superseded by" or "settled by" is shown where so. Every page a decision is cited on is listed.
+**Count: 229 decisions, D-001 to D-229, each listed once below; no number is missing or used twice in DECISIONS.md (checked 18 Nov 2026, 1:17 pm for D-001 to D-225; D-226 to D-229 added at 1:40 pm).** D-016 to D-030 sit at the end of DECISIONS.md and D-156 and D-167 sit out of order; all are included. A decision may be placed on several pages; "superseded by" or "settled by" is shown where so. Every page a decision is cited on is listed.
 
 1. **D-001:** DIRECTION, OLD_PLUGIN.
 2. **D-002:** DIRECTION, FOUNDATION.
@@ -224,7 +224,7 @@ Current rulings as of 18 Nov 2026, 1:20 pm (Melbourne), from decisions D-001 to 
 212. **D-212:** AUTOCAD_RULES, DETENTION, FOUNDATION, OLD_PLUGIN.
 213. **D-213:** FOUNDATION, HOW_WE_WORK, OLD_PLUGIN.
 214. **D-214:** CHAT_AND_TIM, FIRST_RELEASE, HOW_WE_WORK, MANAGER, RIBBON_AND_NAMES, SHARED_TOOLS.
-215. **D-215:** DRAWING_AND_SHEETS, JOB_AND_OFFICE, PIT.
+215. **D-215:** DRAWING_AND_SHEETS, JOB_AND_OFFICE, PIT; settled by D-228.
 216. **D-216:** CHAT_AND_TIM, FIRST_RELEASE, HOW_WE_WORK, OLD_PLUGIN.
 217. **D-217:** DRAWING_AND_SHEETS, JOB_AND_OFFICE, LABELS_AND_TEXT.
 218. **D-218:** DETENTION.
@@ -233,8 +233,12 @@ Current rulings as of 18 Nov 2026, 1:20 pm (Melbourne), from decisions D-001 to 
 221. **D-221:** EDITING_AND_GRIPS, PIT, PIT_SCHEDULE.
 222. **D-222:** FIRST_RELEASE, OUTLET_AND_LPD.
 223. **D-223:** FIRST_RELEASE, INLETS, OTHER_DRAINS, PIPE.
-224. **D-224:** CHAT_AND_TIM, DRAWING_AND_SHEETS, PIT.
+224. **D-224:** CHAT_AND_TIM, DRAWING_AND_SHEETS, PIT; its pit block proposal confirmed by D-228.
 225. **D-225:** HOW_WE_WORK.
+226. **D-226:** CHAT_AND_TIM, HOW_WE_WORK.
+227. **D-227:** SHARED_TOOLS; replaces the hatch tick sheet HT-01 to HT-58 (TA-045).
+228. **D-228:** PIT, DRAWING_AND_SHEETS.
+229. **D-229:** SHARED_TOOLS, INLETS, PIPE, PIT, DRAWING_AND_SHEETS.
 
 ## (b) Conflicts found (two live decisions, neither marks the other superseded; not chosen here)
 
@@ -248,7 +252,7 @@ Current rulings as of 18 Nov 2026, 1:20 pm (Melbourne), from decisions D-001 to 
 2. **UI_PLAN.md section 5** still says accent blue #1E5AA8 and a window that follows AutoCAD's dark or light theme; D-166 and D-168 replaced both (the "Added 18 Nov" section of the same file is right).
 3. **THE_PLAN.md** header says "draft. Not approved" (approved by D-115); section 4 says trials ON HOLD (D-116, D-159); section 7 item 8 says Stage 1 never approved (D-117).
 4. **RULES.md "Rulings" item 1** says "who accepts" is not yet answered; D-089 answered it.
-5. **DECISIONS.md "Not decided" list at the end:** item 1 (Stage 1) was answered by D-117 and item 2 (who accepts) by D-089. **"Open after this sitting":** answered by D-102, D-103, D-104 and D-105, except whether a turned pit is in the Pit window, which is still open.
+5. **DECISIONS.md "Not decided" list at the end** now marks item 1 settled by D-117 and item 2 by D-089 (updated after the first reading). **"Open after this sitting":** answered by D-102, D-103, D-104 and D-105, except whether a turned pit is in the Pit window, which is still open.
 6. **SITUATIONS.md A5, C1, E4, E6 and INPUT_AUDIT.md change 5, section 4 item 9, section 6 counts** still assume cover levels can come from the survey or drawing; D-178 says never.
 7. **SITUATIONS.md** says "About 70 situations" (there are 95) and "Nothing here is decided" (18 answers are recorded at its foot); its B8 and Rule 2 predate D-189 (bends on every pipe) and E10 predates D-187 (later).
 8. **NAMING_DRAFT.md** still shows PIPE / PI, LEVELS / LV and TANK as draft; D-057, D-196 and D-170 replaced them. **NAMES_C_AND_RC_PROPOSAL.md** still says Tim has not ruled on C; D-203 retired it.
@@ -269,25 +273,25 @@ Current rulings as of 18 Nov 2026, 1:20 pm (Melbourne), from decisions D-001 to 
 8. **D-043, D-163 and D-175** are recorded as questions or facts, not decisions; placed where they bear, with what later settled them.
 9. **D-045 against D-071:** D-071 is read as changing where job tracking lives (inside the Job Manager program, not a tracker in the plug-in); D-071 does not say it supersedes D-045.
 10. **D-212's first part is a question, not a ruling;** its answer (D-213) is the planning chat's, and Tim's "yes, write both" approved writing two documents, not their content.
-11. **D-224 item 3:** Tim questioned three block edits; the planning chat answered none is needed and proposed PIT BLOCK 3 used as it is; not confirmed in words.
+11. **D-224 item 3:** Tim questioned three block edits; the planning chat answered none is needed and proposed PIT BLOCK 3 used as it is. Now confirmed in words by D-228.
 12. **D-049** carries eight rulings across many subjects; placed mainly on DIRECTION, with parts on WINDOWS, RIBBON_AND_NAMES, LABELS_AND_TEXT, JOB_AND_OFFICE and CHAT_AND_TIM.
-13. **Tim's words of 18 Nov "build the board" and "in future i dont want to be the one managing anything apart from what is in chat"** are quoted in the brief for this folder but are not in DECISIONS.md as a D-number. Listed as open on CHAT_AND_TIM.
-14. **TA-047 to TA-060 (hatch list, overlaps, scale, extra layers)** are Tim's answers in `interview_tools\ANSWERS.md` with no D-number yet. Placed on SHARED_TOOLS, marked as such.
+13. **Tim's words of 18 Nov "build the board" and "in future i dont want to be the one managing anything apart from what is in chat"** are now filed as D-226; closed on CHAT_AND_TIM.
+14. **TA-047 to TA-060 (hatch list, overlaps, scale, extra layers)** are now filed as D-227 (hatches, TA-047 to TA-063) and the block answers TA-064 to TA-073 as D-229; placed on SHARED_TOOLS.
 
 ## (d) Count per page
 
 Live rulings are the numbered lines under "What is decided now"; superseded lines are under "Changed along the way"; open items are under "Still open on this subject". The same open item can appear on more than one page (for example the tank re-use conflict is on TANK and DETENTION), so the totals count each page's copy.
 
 1. **AUTOCAD_RULES:** 12 live rulings, 4 superseded lines, 7 open items.
-2. **CHAT_AND_TIM:** 20 live, 2 superseded, 7 open.
+2. **CHAT_AND_TIM:** 21 live, 2 superseded, 5 open.
 3. **DETENTION:** 23 live, 2 superseded, 19 open.
 4. **DIRECTION:** 21 live, 4 superseded, 7 open.
-5. **DRAWING_AND_SHEETS:** 20 live, 3 superseded, 15 open.
+5. **DRAWING_AND_SHEETS:** 21 live, 3 superseded, 15 open.
 6. **EDITING_AND_GRIPS:** 14 live, 0 superseded (the one line there says nothing was replaced), 8 open.
 7. **FIRST_RELEASE:** 26 live, 3 superseded, 10 open.
 8. **FOUNDATION:** 27 live, 5 superseded, 14 open.
-9. **HOW_WE_WORK:** 17 live, 2 superseded, 14 open.
-10. **INLETS:** 11 live, 1 superseded, 12 open.
+9. **HOW_WE_WORK:** 18 live, 2 superseded, 14 open.
+10. **INLETS:** 12 live, 1 superseded, 11 open.
 11. **JOB_AND_OFFICE:** 17 live, 3 superseded, 12 open.
 12. **LABELS_AND_TEXT:** 16 live, 1 superseded, 9 open.
 13. **LEVELS_AND_STANDARDS:** 21 live, 5 superseded, 10 open.
@@ -296,12 +300,12 @@ Live rulings are the numbered lines under "What is decided now"; superseded line
 16. **OLD_PLUGIN:** 11 live, 0 superseded (the one line there says none), 9 open.
 17. **OTHER_DRAINS:** 8 live, 1 superseded, 7 open.
 18. **OUTLET_AND_LPD:** 9 live, 1 superseded, 8 open.
-19. **PIPE:** 26 live, 5 superseded, 18 open.
-20. **PIT:** 27 live, 4 superseded, 20 open.
+19. **PIPE:** 27 live, 5 superseded, 18 open.
+20. **PIT:** 27 live, 4 superseded, 18 open.
 21. **PIT_SCHEDULE:** 15 live, 2 superseded, 10 open.
 22. **RIBBON_AND_NAMES:** 15 live, 8 superseded, 10 open.
-23. **SHARED_TOOLS:** 25 live, 5 superseded, 20 open.
+23. **SHARED_TOOLS:** 27 live, 6 superseded, 19 open.
 24. **TANK:** 9 live, 2 superseded, 10 open.
 25. **WINDOWS:** 23 live, 5 superseded, 17 open.
 
-**Totals:** 437 live ruling lines, 74 superseded lines, 294 open items (page copies). Open items by who they wait on, by the first party named: Tim 171; the build chat 51; the planning chat 40; a test 32.
+**Totals:** 444 live ruling lines, 75 superseded lines, 288 open items (page copies). Open items by who they wait on, by the first party named: Tim 167; the build chat 50; the planning chat 39; a test 32. Items closed by D-226 to D-229 are kept on each page in a "Closed" line.

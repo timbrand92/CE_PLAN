@@ -1,6 +1,6 @@
 # Current rulings: Drawing and sheets (1:1, units, layouts, layers, colours, blocks, templates, the no-plug-in rule)
 
-Current rulings as of 18 Nov 2026, 1:20 pm (Melbourne), from decisions D-001 to D-225. If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
+Current rulings as of 18 Nov 2026, 1:40 pm (Melbourne), from decisions D-001 to D-229. If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
 
 ## What is decided now
 
@@ -22,19 +22,20 @@ Current rulings as of 18 Nov 2026, 1:20 pm (Melbourne), from decisions D-001 to 
 8. **Drafters start a new job from the office template,** a clean start each time (D-191).
 9. **The real tools use the office's own blocks and layouts exactly as drawn today** (D-039), and standards live in one place (D-013).
 10. **The office master drawing of typical blocks, layers, schedules and notes "should have blocks, hatches and more"** (D-205).
-11. **The office pit Tim means is PIT BLOCK 3** (D-215); the inner wall is the wipeout's edge and the plug-in prompts the drafter to change the wipeout frame setting if it is not right, never changing it itself (D-224).
-12. **Detention pipes go on their own layer in a slightly different blue, with a legend line** (D-083): colour 160 (D-156); layer STORMWATER DETENTION PIPE, DASHED, not separately ruled (D-153).
-13. **A pipe stops at the pit's inner wall line,** so new sheets differ from old ones at pit edges (D-102).
-14. **Night tests use a copy of the office drawing template;** the office template folder is read only (D-197).
-15. **A plain line on a stormwater layer drawn with no plug-in:** one line on opening with a "take it up" click (D-192).
+11. **New pits use PIT BLOCK 3 exactly as it is,** and the old "Stormwater Pit" stays readable on old drawings (D-228, settling D-215); the inner wall is the wipeout's edge and the plug-in prompts the drafter to change the wipeout frame setting if it is not right, never changing it itself (D-224).
+12. **The office master drawing:** nothing in it is changed by any chat until Tim says so; the 51 exact copies are merged on a copy of the master first and the master is replaced only on his word; the 65 notes held as blocks stay in the master drawing, outside the palette; BK-450 (a whole sheet as one block) and the 33 drop-candidates are dropped; pipe description label blocks are dropped; the 181 structural blocks wait for the CE Structural tab; left / right and top / bottom pairs become one dynamic block each when structural is unparked; the 104 blocks of unknown purpose go on picture sheets for Tim to tick (D-229).
+13. **Detention pipes go on their own layer in a slightly different blue, with a legend line** (D-083): colour 160 (D-156); layer STORMWATER DETENTION PIPE, DASHED, not separately ruled (D-153).
+14. **A pipe stops at the pit's inner wall line,** so new sheets differ from old ones at pit edges (D-102).
+15. **Night tests use a copy of the office drawing template;** the office template folder is read only (D-197).
+16. **A plain line on a stormwater layer drawn with no plug-in:** one line on opening with a "take it up" click (D-192).
 
 ### Sheets and output
 
-16. **Today's sheets:** layout plan, notes and details, computations; long sections only when council asks (D-030).
-17. **Title block and issue are not in the first release** (D-097).
-18. **"Changed since last issue" with a "Mark as issued" button: "Yes, but later"** (D-187).
-19. **Plotting with open items:** one quiet command-line line, never a stop (D-188).
-20. **The pit schedule is placed once, grows downward, and the plug-in only warns when it may not fit** (D-109, D-114).
+17. **Today's sheets:** layout plan, notes and details, computations; long sections only when council asks (D-030).
+18. **Title block and issue are not in the first release** (D-097).
+19. **"Changed since last issue" with a "Mark as issued" button: "Yes, but later"** (D-187).
+20. **Plotting with open items:** one quiet command-line line, never a stop (D-188).
+21. **The pit schedule is placed once, grows downward, and the plug-in only warns when it may not fit** (D-109, D-114).
 
 ## Changed along the way
 
@@ -62,6 +63,6 @@ Current rulings as of 18 Nov 2026, 1:20 pm (Melbourne), from decisions D-001 to 
 
 ## Where the detail lives
 
-1. `DECISIONS.md` D-013, D-015, D-030, D-039, D-083, D-094, D-097, D-102, D-109, D-114, D-153, D-156, D-169, D-187, D-188, D-191, D-192, D-194, D-197, D-205, D-215, D-217, D-224.
+1. `DECISIONS.md` D-013, D-015, D-030, D-039, D-083, D-094, D-097, D-102, D-109, D-114, D-153, D-156, D-169, D-187, D-188, D-191, D-192, D-194, D-197, D-205, D-215, D-217, D-224, D-228, D-229.
 2. `reference\drafting\SHEET_SETUP.md`, `TITLE_BLOCK_AND_ISSUE.md`, `ELEMENTS.md`.
 3. `design\BLOCKS_REVIEW.md`; `reference\research\R-009_PIT_BLOCK.md`; `stage4\TRIAL_RESULTS.md` trial 3.

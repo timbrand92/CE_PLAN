@@ -1,6 +1,6 @@
 # Current rulings: Chat and Tim (how to talk to him, what he manages, questions, summaries)
 
-Current rulings as of 18 Nov 2026, 1:20 pm (Melbourne), from decisions D-001 to D-225. If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
+Current rulings as of 18 Nov 2026, 1:40 pm (Melbourne), from decisions D-001 to D-229. If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
 
 ## What is decided now
 
@@ -13,28 +13,29 @@ Current rulings as of 18 Nov 2026, 1:20 pm (Melbourne), from decisions D-001 to 
 5. **The planner brings Tim a finished proposal to correct, never a string of single questions for work the planner should have done** (R-69, from D-220).
 6. **When Tim is away the chat keeps things moving,** taking his calls at the recommended default marked DRAFT (D-137, D-138).
 7. **One board and one place per subject so nothing is lost:** R-71 (from D-224's question); this folder holds the current rulings.
+8. **"build the board", and from now on Tim manages nothing except what is put to him in chat:** "in future i dont want to be the one managing anything apart from what is in chat, that should all be done by you or anyone else or anything else. you need to ensure this is handled from now on with no issues"; keeping the record, the lists, the side chats, the order of work and the follow-ups is the planning chat's job, and it is to run without faults (D-226).
 
 ### How to explain
 
-8. **Short picture stories ("how you do it") are the format from now on** (D-050).
-9. **Every tool is explained as how you do it, starting from how it is done today; never a mass of lines, tables and numbers; information must be easy to read** (D-049).
-10. **When working a design question through with Tim, give the context and a real-world example each time** (D-171).
-11. **Mock-ups are full size and show the true content of the window** (D-065).
-12. **Drawing terms, answer first, a real drawing example, clickable choices with one recommended, own mistakes plainly, never guess** (R-03 to R-10; `UI_UX_RULES.md` "How to work with me").
-13. **No tables; numbered lists with bold labels** (RULES.md Rulings item 2, treated as settled by Tim's 16 Nov prompt).
+9. **Short picture stories ("how you do it") are the format from now on** (D-050).
+10. **Every tool is explained as how you do it, starting from how it is done today; never a mass of lines, tables and numbers; information must be easy to read** (D-049).
+11. **When working a design question through with Tim, give the context and a real-world example each time** (D-171).
+12. **Mock-ups are full size and show the true content of the window** (D-065).
+13. **Drawing terms, answer first, a real drawing example, clickable choices with one recommended, own mistakes plainly, never guess** (R-03 to R-10; `UI_UX_RULES.md` "How to work with me").
+14. **No tables; numbered lists with bold labels** (RULES.md Rulings item 2, treated as settled by Tim's 16 Nov prompt).
 
 ### Questions
 
-14. **Anything that is Tim's call is taken at the recommended answer, marked DRAFT and collected into one daily batch of at most 12 clickable questions,** each with a real-job example (LOOPS loop 4, under D-158).
-15. **A question Tim answered with something else is not re-asked in the same form** (D-175; DECISIONS "Open after this sitting").
-16. **Text behind the question window is not seen by Tim:** a list he must review goes in the question or a sent file (D-057, where he "CANT SEE LIST").
-17. **Ask once, with the cost, for big scope calls** (D-214, "asked once, with the cost").
+15. **Anything that is Tim's call is taken at the recommended answer, marked DRAFT and collected into one daily batch of at most 12 clickable questions,** each with a real-job example (LOOPS loop 4, under D-158).
+16. **A question Tim answered with something else is not re-asked in the same form** (D-175; DECISIONS "Open after this sitting").
+17. **Text behind the question window is not seen by Tim:** a list he must review goes in the question or a sent file (D-057, where he "CANT SEE LIST").
+18. **Ask once, with the cost, for big scope calls** (D-214, "asked once, with the cost").
 
 ### What Tim does himself
 
-18. **Tim accepts a tool, or a robot pass does when he is busy** (D-089).
-19. **Tim may test by hand when he can** (D-128), and may ask the chat to try instead ("i cant test can you try", D-129).
-20. **Tim owns his own alias file** (D-170, D-208).
+19. **Tim accepts a tool, or a robot pass does when he is busy** (D-089).
+20. **Tim may test by hand when he can** (D-128), and may ask the chat to try instead ("i cant test can you try", D-129).
+21. **Tim owns his own alias file** (D-170, D-208).
 
 ## Changed along the way
 
@@ -43,16 +44,16 @@ Current rulings as of 18 Nov 2026, 1:20 pm (Melbourne), from decisions D-001 to 
 
 ## Still open on this subject
 
-1. **Tim's words of 18 Nov, "build the board" and "in future i dont want to be the one managing anything apart from what is in chat ... you need to ensure this is handled from now on with no issues", are not yet recorded as a D-number in DECISIONS.md.** Waits on: the planning chat.
-2. **`BOARD.md` is proposed, not yet written up as approved in R-71** (R-71). Waits on: the planning chat.
-3. **Keeping this rulings folder current after every new decision:** no owner or trigger is written down yet. Waits on: the planning chat.
-4. **The director's summary must show the testing trend** (R-70) **and the slowest measured thing** (PERFORMANCE section 6). Waits on: the planning chat.
-5. **The plain explanation Tim asked for on how the gate works** (D-216). Waits on: the planning chat.
-6. **A one-sitting proposal for every undecided function-map line** (D-220). Waits on: the planning chat.
-7. **Who accepts: RULES.md still lists it as an open disagreement with TimOS** (RULES.md Rulings item 1; answered by D-089). Waits on: the planning chat.
+1. **Build `BOARD.md` and `BOARD_HOW_IT_IS_KEPT.md`, including the nightly check that nothing has gone stale;** being built (D-226); R-71 still reads "not yet approved". Waits on: the planning chat.
+2. **The director's summary must show the testing trend** (R-70) **and the slowest measured thing** (PERFORMANCE section 6). Waits on: the planning chat.
+3. **The plain explanation Tim asked for on how the gate works** (D-216). Waits on: the planning chat.
+4. **A one-sitting proposal for every undecided function-map line** (D-220). Waits on: the planning chat.
+5. **Who accepts: RULES.md still lists it as an open disagreement with TimOS** (RULES.md Rulings item 1; answered by D-089). Waits on: the planning chat.
+
+**Closed:** Tim's 18 Nov words not recorded as a D-number (closed by D-226); whether the board is approved (closed by D-226, "build the board"); who keeps this rulings folder current (closed by D-226: the planning chat).
 
 ## Where the detail lives
 
 1. `RULES.md` R-03 to R-10, R-17, R-57, R-58, R-68 to R-71; `UI_UX_RULES.md`.
-2. `DECISIONS.md` D-005, D-042, D-049, D-050, D-057, D-065, D-085, D-086, D-137, D-138, D-171, D-175, D-220, D-224.
+2. `DECISIONS.md` D-005, D-042, D-049, D-050, D-057, D-065, D-085, D-086, D-137, D-138, D-171, D-175, D-220, D-224, D-226.
 3. `stage6\LOOPS.md`; `DIRECTOR_SUMMARY.md`; `C:\TimOS\RULES.md`.
