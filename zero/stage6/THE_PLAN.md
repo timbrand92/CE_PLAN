@@ -29,6 +29,7 @@ A new CE civil drainage plugin for AutoCAD 2027, built from a blank page, with t
 7. **Pit schedule** (SCHEDULE / SH): placed once, then follows the pits.
 Underneath all of them: the foundation, the office list of standards, a self-check when a drawing opens, the ribbon (short CE Civil tab plus a light tab on selection), and one-click update.
 **Not in the first release:** title block and issue; silt and soakage pits; typed-in council figures and council calculators; job tracking hand-over to the Job Manager; CE everyday helpers; Manager changes; taking up old drawings; anything structural.
+**Changed 18 Nov 2026 (D-200, D-201, D-204):** the shared everyday tools (CLEAN first, then dims and leaders with an arc dimension, MR and CR, CPB, DIV, one hatch window, REVBOX, break line, construction joint and sawcut, a blocks palette) and a small Manager (updates and version, health and fault report, office lists, job link, one admin page) ARE now in the first release; the ribbon is three tabs with a light tab on selection. An Outlet tool is added (D-190). Still not in the first release: structural-only tools, title block and issue, silt and soakage pits, council calculators, taking up old drawings, the "changed since last issue" list (D-187), statistics and wider admin control (D-205).
 
 ## 4. The order of work
 
