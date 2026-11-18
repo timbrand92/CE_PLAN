@@ -359,4 +359,26 @@ Answer given in chat (planning chat's reading, not Tim's words): his button is a
 
 **TA-130 The list behind OL.** "Same as hatches": sort the master drawing's 189 layers by what they are for using the old jobs, show the overlaps, Tim settles them.
 
-Next free number: TA-131
+## Batch 37 to 39 (the 10 layer questions, `interview_tools\LAYERS_BY_FUNCTION.md`, 19 Nov 2026)
+
+**TA-131 Q-L1 Stormwater.** "Keep 2, retire DRAINAGE": STORMWATER for hand-drawn lines and EX DRAIN HATCH for existing drains are kept; DRAINAGE is retired.
+
+**TA-132 Q-L2 Services.** "Keep WATER, ELEC OVERHEAD": WATER LINE and ELECTRICAL OVERHEAD are retired; the CIVIL LINETYPES block moves to WATER.
+
+**TA-133 Q-L3 TITLE TEXT not printing.** "Mistake, make it print".
+
+**TA-134 Q-L4 Existing walls.** "Keep WALLS EXISTING"; EXISTING WALL is retired.
+
+**TA-135 Q-L5 Section and grid.** "keep section mark and 9grid". Read as: SECTION MARK and 9GRID are kept; SECTION TAG (12 jobs) and GRID (18 jobs) are retired from the list. GRID was the more used grid layer, so this is to confirm with Tim if the build finds GRID in use.
+
+**TA-136 Q-L6 Slab edge.** "Keep SLAB PERIMETER"; SLAB OUTLINE is retired.
+
+**TA-137 Q-L7 Construction joint layer.** "SLAB CJ only"; CONSTRUCTION JOINT is retired; old drawings keep theirs.
+
+**TA-138 Q-L8 Bored pier fill.** "Keep HATCH BORED PIER"; BORED PIER HATCH is retired.
+
+**TA-139 Q-L9 Roof bracing.** "Keep ROOF BRACING"; BRACING ROOF is retired.
+
+**TA-140 Q-L10 Band beam.** "Hatch on HATCH 74"; HATCH 74 - BANDBEAM is retired; BANDBEAM stays for the outline.
+
+Next free number: TA-141

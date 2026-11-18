@@ -1,6 +1,6 @@
 # Office layers by what they are for (the list behind OFFICELAYER / OL)
 
-**Revision:** 1 (Wed 18 Nov 2026, evening, Melbourne time). IDs: LY-001 to LY-189 for layers, Q-L1 onwards for questions; never reused.
+**Revision:** 2 (Thu 19 Nov 2026, Melbourne time). Revision 2 adds Tim's answers to the 10 questions (TA-131 to TA-140). IDs: LY-001 to LY-189 for layers, Q-L1 onwards for questions; never reused.
 **Asked for by Tim:** "Same as hatches" (TA-130): sort the master drawing's layers by what each is for, using the old jobs, and show him only the overlaps and unknowns.
 **How it was read (read only):**
 1. **Master drawing:** the copy of its DXF at `C:\CE_WORK\scratch\blocks_review\master_copy.dxf`. Each layer's colour, linetype and print setting, and what sits on it.
@@ -62,6 +62,23 @@ Only master layer names, counts and job counts are written here. Names of blocks
    - **Proposal:** keep ROOF BRACING, next to ROOF LOWER and ROOF UPPER, and retire BRACING ROOF.
 10. **Q-L10 Band beam:** HATCH 74 - BANDBEAM (7 jobs) beside HATCH 74 (band beam, first floor over, rain garden, TA-049) and BANDBEAM (the hidden outline).
     - **Proposal:** the band beam hatch goes on HATCH 74 as ruled, and HATCH 74 - BANDBEAM is retired. BANDBEAM stays for the outline.
+
+## Tim's answers (19 Nov 2026, TA-131 to TA-140)
+
+1. **Q-L1:** keep STORMWATER and EX DRAIN HATCH; retire DRAINAGE.
+2. **Q-L2:** keep WATER and ELEC OVERHEAD; retire WATER LINE and ELECTRICAL OVERHEAD. CIVIL LINETYPES (BK-081) moves to WATER.
+3. **Q-L3:** TITLE TEXT not printing is a mistake; make it print.
+4. **Q-L4:** keep WALLS EXISTING; retire EXISTING WALL.
+5. **Q-L5:** "keep section mark and 9grid". SECTION TAG and GRID are retired. GRID was used on 18 old jobs, so the build checks with Tim before relying on this.
+6. **Q-L6:** keep SLAB PERIMETER; retire SLAB OUTLINE.
+7. **Q-L7:** SLAB CJ only; retire CONSTRUCTION JOINT.
+8. **Q-L8:** keep HATCH BORED PIER; retire BORED PIER HATCH.
+9. **Q-L9:** keep ROOF BRACING; retire BRACING ROOF.
+10. **Q-L10:** the band beam hatch goes on HATCH 74; retire HATCH 74 - BANDBEAM. BANDBEAM stays for the outline.
+
+**Result:**
+- **Retired from the list:** 13 layers by these answers, plus the 4 drop-candidates if Tim agrees (not asked). Old drawings keep every layer they have.
+- **Kept:** the rest form the OL list.
 
 ## Every layer
 
