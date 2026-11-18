@@ -176,7 +176,7 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-100** (16 Nov 2026, night) Tank split between re-use and detention: "Worked out from the volume needed". The detention part is what the sums say is needed; re-use takes the rest of the tank. (This is the foundation at work: the split is a worked-out fact unless held.)
 
-**D-101** (16 Nov 2026, night) Short names for the first release: "Good, with DET for detention". PIT = PT; PIPE = CD; DOWNPIPE = DP; OVERFLOW = OF; FO = FO; INSPECTION = IO; GIO = GIO; FLOORWASTE = FW; TANK = TK; LEVELS = LV; DETENTION = DET; SCHEDULE = SH. Each still to be proven free in AutoCAD 2027 by the trials.
+**D-101** (16 Nov 2026, night) Short names for the first release: "Good, with DET for detention". PIT = PT; PIPE = CD; DOWNPIPE = DP; OVERFLOW = OF; FO = FO; INSPECTION = IO; GIO = GIO; FLOORWASTE = FW; TANK = TK; LEVELS = LV; DETENTION = DET; SCHEDULE = SH. Each still to be proven free in AutoCAD 2027 by the trials. **SUPERSEDED in part on 18 Nov 2026 by D-170 and D-196: TANK is WT, LEVELS is LONGSECTION / LG.**
 
 **D-102** (16 Nov 2026, night) Where a pipe stops at a pit: "At the inner wall line". The pipe passes the dashed outer line and stops at the solid inner wall. (This differs from how it is drawn today; new sheets will differ from old ones at pit edges.)
 
@@ -432,6 +432,8 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-228** (18 Nov 2026, afternoon; board item W-001; confirms the proposal in D-224 and settles D-215) Which pit block the new Pit tool places: "Yes: PIT BLOCK 3 exactly as it is". New pits use his PIT BLOCK 3 unchanged (five kinds by visibility, size by its two stretches, the five sizes 350, 450, 600, 900, 1200 per side; no renamed parameters, no 50 mm step, no extra inner wall line; plastic pits are the same block at 350 x 350). The old 16-state "Stormwater Pit" stays readable on old drawings. A size the block will not take is reported to the drafter, who decides.
 
+**D-229** (18 Nov 2026, afternoon; tools interview TA-064 to TA-073; the office blocks, `design\BLOCKS_REVIEW.md` revision 2) His ten block decisions: the office pit is "PIT BLOCK 3 (BK-020)" (the same answer as D-228); the inlet symbols are "The WITH MASK set" (the dynamic masked downpipe, IO, GIO, overflow, grated overflow, floor waste, from above and to below; the older floor waste blocks leave the palette); pipe description label blocks: "Drop them" (the Pipe tool writes its own label); left / right and top / bottom pairs: "One dynamic block each", when structural is unparked; the 104 blocks of unknown purpose: "Picture sheets, I tick"; the 65 notes held as blocks stay "Outside the palette", in the master drawing only; BK-450, a whole sheet held as one block: "Drop it"; the 33 drop-candidates: "Drop all 33"; the 181 structural blocks: "Not yet", they join a structural palette when the CE Structural tab arrives; the 51 exact copies: "Merge all 51", on a copy of the master first, the master replaced only on his word. Nothing in the office master drawing is changed by any chat until he says so.
+
 **D-167** (18 Nov 2026, morning) The new preview, as drawn on `pictures\pick_a_ce_scheme.html` (the drawing as AutoCAD shows it, from the office layers, colours, text and arrow; "where on the plan" as a small site locator in the corner; "where in the system" as a strip under the preview with the run as a chain and this object lit; the thing being changed highlighted the same way in all three): "YES THE PREVIEW IS WHAT I MEANT". It applies to every window (D-070: consistent across all windows). Not yet proven: how the locator is produced inside AutoCAD. The drawn details not taken from a real sheet (pit inner wall line, pit tag circle, which side the flow arrow sits) are still to be checked against how the office draws.
 
 **D-156** (17 Nov 2026, evening; SUPERSEDES the colour in D-153) Tim, after seeing the sample sheet again: "lets go with a for the detention". Read by the planning chat as option A on `pictures\pick_a_detention_blue.html`: deeper blue, AutoCAD colour 160. Layer STORMWATER DETENTION PIPE and DASHED unchanged. Pen width, legend and label wording still unknown; still not seen on a real plot.
@@ -478,6 +480,6 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 ## Not decided (asked or raised, no decision yet)
 
-1. Whether Stage 1's civil explanation is approved (Tim moved on to the design without saying "approve").
-2. Who accepts work (P-01).
+1. Whether Stage 1's civil explanation is approved (Tim moved on to the design without saying "approve"). **Settled by D-117.**
+2. Who accepts work (P-01). **Settled by D-089.**
 3. Everything in Stages 3 to 6.
