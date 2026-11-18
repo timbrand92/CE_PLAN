@@ -201,7 +201,7 @@ body{padding:32px 24px;min-width:1560px}
 <div class="below">
   <h2>What changed in version 5</h2>
   <ol>
-    <li><b>The drawing now runs across the top,</b> about a third of the window, with the site turned so its 45.00 side is horizontal and the kerb at the right end. Numbered markers on the drawing match a key of small tags with the figures; the white-outlined tags are the parts counted as storage.</li>
+    <li><b>The drawing now runs across the top,</b> about a third of the window, with the site turned so its 45.00 side is horizontal and the kerb at the right end. The band shows the system zoomed in across the full width, with the figure tags on the drawing itself (white outline = counted as storage) and a small locator at the top right showing where on the lot it sits.</li>
     <li><b>Below it are the status band, then step 1 across the full width, then step 2 and step 3 side by side.</b> Every sum is whole; nothing folds and nothing scrolls.</li>
     <li><b>Dark and rose are fixed,</b> so the Ground and Accent switches are gone. The only switch left is the state.</li>
   </ol>
@@ -217,73 +217,53 @@ body{padding:32px 24px;min-width:1560px}
 
   /* ---------- the drawing band: the made-up two-unit lot turned so 45.00 runs across ---------- */
   function drawing(tank){
-    var W=1500,H=238,k=9.5,L=760,T=44,fs=12,C='#C8CBD0',y0=T+2*k,s=14,h=s/2,pw=4;
-    var X=function(u){return L+u*k;},Y=function(v){return T+v*k;};
-    var f=[];
+    var W=1500,H=238,fs=12,C='#C8CBD0',WH='#F3F4F5',CTX='#4B4F56',BL='#4A90E2',DK='#16181B',y0=118,f=[];
     function tx(x,y,t,anc,tr,col){f.push('<text x="'+x+'" y="'+y+'" fill="'+(col||C)+'" font-size="'+fs+'" font-family="IBM Plex Sans, Segoe UI, sans-serif" letter-spacing="0.3"'+(anc?' text-anchor="'+anc+'"':'')+(tr?' transform="'+tr+'"':'')+'>'+t+'</text>');}
     function ln(x1,y1,x2,y2,c,w,d){f.push('<path d="M'+x1+' '+y1+' L'+x2+' '+y2+'" stroke="'+(c||'#8A8F96')+'" stroke-width="'+(w||1)+'"'+(d?' stroke-dasharray="'+d+'"':'')+' fill="none"/>');}
     function rc(x,y,w,hh,st,sw,fill,rx,d){f.push('<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+hh+'" rx="'+(rx||0)+'" fill="'+(fill||'none')+'" stroke="'+st+'" stroke-width="'+sw+'"'+(d?' stroke-dasharray="'+d+'"':'')+'/>');}
-    function pit(cx,cy,dim,ring){
-      var c=dim?'#5E636B':'#E8EAED';
-      if(ring){rc(cx-h-4,cy-h-4,s+8,s+8,'#F3F4F5',1,null,3);}
-      rc(cx-h,cy-h,s,s,c,1,'#16181B');
-      ln(cx-h,cy-h,cx+h,cy+h,'#5E636B',0.6);ln(cx+h,cy-h,cx-h,cy+h,'#5E636B',0.6);
-    }
+    function tag(cx,y,t,ty,counted){var w=Math.round(t.length*6.8+18);ln(cx,y+22,cx,ty,counted?WH:'#8A8F96',0.8);rc(cx-w/2,y,w,22,counted?WH:'#8A8F96',1,'#1B1E22',6);tx(cx,y+15,t,'middle',null,WH);}
+    function pit(cx,id){rc(cx-20,98,40,40,WH,1,DK);ln(cx-20,98,cx+20,138,'#5E636B',0.6);ln(cx+20,98,cx-20,138,'#5E636B',0.6);f.push('<circle cx="'+cx+'" cy="'+y0+'" r="13" fill="'+DK+'" stroke="'+WH+'" stroke-width="1"/>');tx(cx,y0+4,id,'middle',null,WH);}
+    function dim(cx,lab){ln(cx,128,cx,143,'#5E636B',1.5,'4 3');rc(cx-13,143,26,26,'#5E636B',1,DK);ln(cx-13,143,cx+13,169,'#5E636B',0.6);ln(cx+13,143,cx-13,169,'#5E636B',0.6);tx(cx,188,lab,'middle',null,'#9AA0A8');}
     f.push('<svg width="'+W+'" height="'+H+'" viewBox="0 0 '+W+' '+H+'">');
-    // dimensions: 18.00 down the left, 45.00 along the bottom
-    ln(L-14,T,L-14,T+18*k,'#8A8F96');ln(L-19,T,L-9,T,'#8A8F96');ln(L-19,T+18*k,L-9,T+18*k,'#8A8F96');
-    tx(0,0,'18.00','middle','translate('+(L-20)+' '+(T+9*k)+') rotate(-90)');
-    ln(L,T+18*k+5,L+45*k,T+18*k+5,'#8A8F96');ln(L,T+18*k+1,L,T+18*k+9,'#8A8F96');ln(L+45*k,T+18*k+1,L+45*k,T+18*k+9,'#8A8F96');
-    tx(L+22.5*k,T+18*k+19,'45.00','middle');
-    // boundary, shared driveway, two units
-    rc(L,T,45*k,18*k,'#E8EAED',1);
-    rc(L,Y(14.5),45*k,3.5*k,'#9AA0A8',1);
-    tx(X(22.5),Y(16.25)+4,'SHARED DRIVEWAY','middle');
-    rc(X(2),Y(4),11*k,9.5*k,'#9AA0A8',1.2);tx(X(7.5),Y(8.75)+4,'UNIT 1','middle');
-    rc(X(16),Y(4),11*k,9.5*k,'#9AA0A8',1.2);tx(X(21.5),Y(8.75)+4,'UNIT 2','middle');
-    tx(X(41),Y(11),'GARDEN');
-    // kerb at the right end
-    ln(X(47),0,X(47),H,'#8A8F96');ln(X(47)+4,0,X(47)+4,H,'#5E636B');
-    tx(0,0,'KERB','middle','translate('+(X(47)+18)+' 150) rotate(-90)');
-    // detention pipe: halo (counted as storage) + dashed blue
-    f.push('<path d="M'+(X(21)+1.4*k)+' '+y0+' H'+(X(32.5)+h+2)+'" stroke="#F3F4F5" stroke-width="'+(pw+6)+'" stroke-linecap="round" opacity="0.3"/>');
-    f.push('<path d="M'+(X(21)+1.4*k)+' '+y0+' H'+(X(40)-h)+'" stroke="#4A90E2" stroke-width="'+pw+'" stroke-dasharray="9 3" fill="none"/>');
+    // faint context: boundary, part of UNIT 2, shared driveway edge, kerb
+    ln(0,66,1296,66,CTX,1);
+    ln(740,200,1180,200,CTX,1.2);ln(740,200,740,H,CTX,1.2);ln(1180,200,1180,H,CTX,1.2);
+    tx(960,220,'UNIT 2','middle',null,'#7F848C');
+    ln(700,234,1296,234,CTX,1,'8 4');
+    ln(1296,0,1296,H,'#8A8F96',1);ln(1302,0,1302,H,'#5E636B',1);
+    tx(0,0,'KERB','middle','translate(1320 190) rotate(-90)',WH);
+    // detention pipe: thin white outline (counted) with wide dashed blue run
+    rc(156,108,860,20,WH,1);
+    f.push('<path d="M156 '+y0+' H1016" stroke="'+BL+'" stroke-width="8" stroke-dasharray="14 5" fill="none"/>');
+    tx(176,100,'225 DIA. STORMPRO PIPE AT 1 IN 200',null,null,WH);
+    // not used branches (dimmed)
+    dim(650,'P4 NOT USED');dim(880,'P3 NOT USED');
+    // counted pits
+    pit(540,'P1');pit(760,'P2');
+    // orifice pit, thin outlet pipe, flow arrow, council pit at the kerb
+    rc(1016,104,28,28,C,1.2,DK);f.push('<circle cx="1030" cy="'+y0+'" r="3" fill="none" stroke="'+C+'"/>');
+    tx(1030,156,'ORIFICE PIT 69 DIA.','middle',null,WH);
+    f.push('<path d="M1044 '+y0+' H1286" stroke="'+BL+'" stroke-width="2.5" fill="none"/>');
+    f.push('<path d="M1170 113 L1180 '+y0+' L1170 123 Z" fill="'+BL+'"/>');
+    tx(1160,106,'5.84 L/S','middle',null,WH);
+    rc(1286,108,20,20,C,1.2,DK);
+    tx(1316,122,'COUNCIL PIT (LPD)',null,null,WH);
     // tank WT1
-    f.push('<circle cx="'+X(21)+'" cy="'+y0+'" r="'+(1.4*k+5)+'" fill="none" stroke="#F3F4F5" stroke-width="1"/>');
-    f.push('<circle cx="'+X(21)+'" cy="'+y0+'" r="'+(1.4*k)+'" fill="#16181B" stroke="#E8EAED" stroke-width="1.2"/>');
-    // P1 P2 counted
-    pit(X(27.5),y0,false,true);pit(X(32.5),y0,false,true);
-    // P3 P4 not used (dim)
-    ln(X(30.5),y0+h+2,X(30.5),Y(9)-h,'#5E636B',1.5,'4 3');pit(X(30.5),Y(9),true,false);
-    tx(X(28.2),Y(9)+h+17,'P4 NOT USED');
-    ln(X(37),y0+2,X(37),Y(9)-h,'#5E636B',1.5,'4 3');pit(X(37),Y(9),true,false);
-    tx(X(37),Y(9)+h+35,'P3 NOT USED','middle');
-    // orifice pit, outlet to council pit
-    rc(X(40)-h,y0-h,s,s,'#E8EAED',1.2,'#16181B');f.push('<circle cx="'+X(40)+'" cy="'+y0+'" r="2" fill="none" stroke="#E8EAED"/>');
-    f.push('<path d="M'+(X(40)+h)+' '+y0+' H'+(X(47)-h)+'" stroke="#4A90E2" stroke-width="2" fill="none"/>');
-    f.push('<path d="M'+X(44)+' '+(y0-4)+' L'+(X(44)+8)+' '+y0+' L'+X(44)+' '+(y0+4)+' Z" fill="#4A90E2"/>');
-    tx(X(41.5),y0-12,'5.84 L/S');
-    rc(X(47)-h,y0-h,s,s,'#E8EAED',1.2,'#16181B');
-    tx(X(47)+14,y0+4,'COUNCIL PIT (LPD)');
-    // numbered markers on the drawing
-    var mk=[[1,X(21),y0-1.4*k-5],[2,X(24),y0-pw],[3,X(27.5),y0-h-4],[4,X(32.5),y0-h-4],[5,X(40),y0-h],[6,X(47),y0-h]];
-    mk.forEach(function(m){
-      ln(m[1],32,m[1],m[2],'#8A8F96',0.8);
-      f.push('<circle cx="'+m[1]+'" cy="22" r="10" fill="#16181B" stroke="'+(m[0]<=4?'#F3F4F5':'#8A8F96')+'" stroke-width="1"/>');
-      tx(m[1],26,m[0],'middle');
-    });
-    // key: small figure tags (white outline = counted as storage)
-    var lines=['WT1 5000 L &middot; '+tank+' m³','Pipe 0.56 m³ &middot; 225 DIA. STORMPRO PIPE AT 1 IN 200','P1 0.08 m³','P2 0.06 m³','Orifice pit 69 mm, 5.84 L/s','Council pit (LPD)'];
-    lines.forEach(function(t,i){
-      var y=58+24*i;
-      rc(272,y,390,22,i<4?'#F3F4F5':'#5E636B',1,'#1B1E22',8);
-      f.push('<circle cx="285" cy="'+(y+11)+'" r="8" fill="none" stroke="'+(i<4?'#F3F4F5':'#8A8F96')+'"/>');
-      tx(285,y+15,i+1,'middle');
-      tx(302,y+15,t,null,null,'#F3F4F5');
-    });
-    // north point (the site is turned: north points left)
-    ln(1450,40,1410,40,'#C8CBD0',1.2);f.push('<path d="M1418 35 L1410 40 L1418 45" stroke="#C8CBD0" stroke-width="1.2" fill="none"/>');
-    tx(1400,44,'N','end');
+    f.push('<circle cx="110" cy="'+y0+'" r="46" fill="'+DK+'" stroke="'+WH+'" stroke-width="1.2"/>');
+    tx(110,y0+4,'WT1 5000 L','middle',null,WH);
+    // figure tags on the drawing (white outline = counted as storage)
+    tag(110,178,'WT1 '+tank+' m³',164,true);
+    tag(540,56,'P1 0.08 m³',98,true);
+    tag(760,56,'P2 0.06 m³',98,true);
+    tag(900,56,'Pipe 0.56 m³',108,true);
+    tag(1030,56,'69 mm, 5.84 L/s',104,false);
+    // locator: the whole lot, tiny, with the part shown
+    rc(1334,8,150,70,'#5E636B',1,'#1B1E22',4);
+    rc(1342,14,90,36,'#8A8F96',1);
+    rc(1366,15,64,16,WH,1.2);
+    ln(1472,28,1446,28,C,1.2);f.push('<path d="M1452 24 L1446 28 L1452 32" stroke="'+C+'" stroke-width="1.2" fill="none"/>');
+    tx(1459,22,'N','middle');
+    tx(1342,70,'Where on the plan');
     f.push('</svg>');
     return f.join('');
   }
