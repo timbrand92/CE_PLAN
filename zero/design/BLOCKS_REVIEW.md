@@ -1,6 +1,6 @@
 # Blocks review: the office master drawing
 
-**Revision:** 1 (Wed 18 Nov 2026, early afternoon, Melbourne time)
+**Revision:** 2 (Wed 18 Nov 2026, afternoon, Melbourne time). Revision 2 adds Tim's ten decisions (section below the summary).
 **Written by:** the tools interview side chat, for the planning chat (D-211). Planning only.
 **Asked for by Tim:** "you need to look throught hem all see what they are and then we can decide and order and organise them all" (TA-038) and "we might not need all blocks" (TA-042).
 **IDs:** BK-001 to BK-453, never reused. Nothing here is decided: every keep, merge or drop is a proposal for Tim.
@@ -41,6 +41,22 @@
    - **Drop-candidate:** 33.
 5. **Used or not:** every block but one is placed at least once in the master drawing, because the master is itself a sample sheet. So "placed in the master" does not mean "used on jobs". How often each block is used on real jobs: unknown.
 6. **Not read:** the names of each dynamic block's states (visibility list). The DXF reader used cannot list them, so "dynamic" is shown without its states.
+
+## Tim's decisions (18 Nov 2026, answers TA-064 to TA-073 in `interview_tools\ANSWERS.md`)
+
+1. **Office pit: "PIT BLOCK 3 (BK-020)".** Stormwater Pit (BK-022) and the old PIT BLOCK 2 retire from the palette. This changes the night tests' pit (D-197), for the planning chat to carry to the build.
+2. **Inlets: "The WITH MASK set".** BK-012 FLOOR WASTE, its copy BK-034 and BK-027 retire.
+3. **Pipe description labels: "Drop them".**
+4. **Hatch sample squares:** settled by the hatch work in `interview_tools\HATCHES_BY_FUNCTION.md` (TA-047 to TA-063).
+5. **The unknown machine-named blocks: "Picture sheets, I tick".** 54 remain once pairs, hatch samples, the whole sheet and the structural blocks are taken out. Sheets: `pictureslocks_to_tick_1.png` to `_3.png`.
+6. **Notes held as blocks: "Outside the palette".**
+7. **BK-450, the whole sheet held as one block: "Drop it".**
+8. **The 33 drop-candidates: "Drop all 33".**
+9. **Structural blocks: "Not yet".** They join a structural palette with the CE Structural tab.
+10. **The 51 exact copies: "Merge all 51"**, on a copy of the master first, replacing it only on Tim's word.
+11. **Pairs: "One dynamic block each"**, when structural is unparked.
+
+Nothing has been changed in the master drawing.
 
 ## The ten things Tim most needs to decide
 

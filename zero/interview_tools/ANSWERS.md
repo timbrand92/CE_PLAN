@@ -165,4 +165,26 @@ LOADBEARING WALL, LOADBEARING HATCH and BLOCK RETAINING WALL are retired from th
 
 **TA-063 Meaning of HATCH 155, HATCH 70, HATCH 221, HATCH-SLAB INFILL.** "Not sure either": kept in the list, meaning marked unknown.
 
-Next free number: TA-064
+## Batch 22 and 23 (the ten block decisions, `design\BLOCKS_REVIEW.md`; picture `pictures\blocks_pits_inlets.png`)
+
+**TA-064 Office pit.** "PIT BLOCK 3 (BK-020)". Note: the night tests and the new Pit tool's DRAFT use "Stormwater Pit" (D-197); this answer changes that, for the planning chat to carry to the build.
+
+**TA-065 Inlet set.** "The WITH MASK set": the DYNAMIC WITH MASK downpipe, IO, GIO, overflow, grated overflow, floor waste, from above and to below. BK-012 FLOOR WASTE, its copy BK-034 and BK-027 retire from the palette.
+
+**TA-066 Pipe description labels.** "Drop them" (the Pipe tool writes its own label).
+
+**TA-067 Left / right and top / bottom pairs.** "One dynamic block each" (when structural is unparked).
+
+**TA-068 The 104 blocks whose purpose is unknown.** "Picture sheets, I tick".
+
+**TA-069 The 65 notes held as blocks.** "Outside the palette": they stay in the master drawing only.
+
+**TA-070 BK-450, a whole sheet held as one block.** "Drop it".
+
+**TA-071 The 33 drop-candidates.** "Drop all 33".
+
+**TA-072 The 181 structural blocks.** "Not yet": they stay in the master and join a structural palette when the CE Structural tab arrives.
+
+**TA-073 The 51 exact copies.** "Merge all 51", on a copy of the master first, replacing the master only on Tim's word.
+
+Next free number: TA-074
