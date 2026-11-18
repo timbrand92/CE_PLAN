@@ -78,6 +78,18 @@ Method: the trial plugin loaded on a made-up copy; commands through AutoCAD's CO
 
 While the plain-polyline picture was being taken a "Customize User Interface" window opened on the test AutoCAD, with Tim's floating "TIM" toolbar beside it (`evidence\r011\cui_window.png`, `tim_window.png`), and AutoCAD refused further commands from the trial. The PC reported keyboard or mouse input 0.1 seconds earlier, so **a person is using the PC and very likely this AutoCAD.** I opened nothing of the kind and typed no command that opens it. I stopped sending anything and have not touched either window. The test AutoCAD (opened by me at 15:18 on `g_master.dwg`) is still open with the window in front of it.
 
+### Why September painted nothing: five differences tried, none reproduces it (18 Nov, third test AutoCAD, 16:20 to 16:24, test copy `g_vars2.dwg`)
+
+One change at a time from the working pattern, on MText unless said, a picture each (`evidence\r011\j_all.png`, `j_nofilter.png`):
+
+1. **Grip drawing rotated 30 degrees** (like the pipe-along axes): painted.
+2. **Smaller glyph** (1.3 x the grip size, September's size): painted, small.
+3. **September style: open lines only, no fill, no colour set (AutoCAD's grip colour variables):** painted as a thin blue arrow outline.
+4. **Four grips stacked close together:** all four painted, overlapping.
+5. **No filter on the overrule (the September setting), on MText and on a block reference:** painted.
+
+**So the September failure is not explained by any of these.** What the 18 Nov runs did not copy is the old Civil plug-in's own code (its other overrules, its grip file, its build). Tim's CE plugins were loaded in every one of these runs and did not stop the drawing. **Do not rely on September's conclusion; the next step if it matters is to put the new test grip into the old plug-in build and compare, which needs Tim's say-so and a build chat.**
+
 ### What happened with the window, found out later the same afternoon
 
 1. Tim's answer to the planning chat ("Not me, close it") released the first test AutoCAD (process 64900, started 15:18:19 on `g_master.dwg`). I confirmed its start time and title, asked the Customize User Interface window to close (the X button), and AutoCAD answered with its "Unsaved Changes" prompt: **the editor held changes nobody had saved, so something or someone had changed a toolbar or command in it** (picture `evidence\r011\cui_unsaved.png`). I pressed "Discard the unsaved changes and exit" (not "Always discard") and then typed QUIT; AutoCAD closed with no save prompt. The customisation file `acad.CUIX` was last written at 15:18:46, which is AutoCAD's own start-up write, so nothing of the change was saved. Nothing was force-closed.
