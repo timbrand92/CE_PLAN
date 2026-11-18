@@ -35,7 +35,7 @@ Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to 
 
 19. **Tim accepts a tool, or a robot pass does when he is busy** (D-089).
 20. **Tim may test by hand when he can** (D-128), and may ask the chat to try instead ("i cant test can you try", D-129).
-21. **Tim owns his own alias file** (D-170, D-208). **Changed for one job by D-250 and D-251 (18 Nov):** at his word twelve named aliases were removed from it with a dated copy kept; nothing else in it is touched and the plug-in never edits it.
+21. **Tim owns his own alias file** (D-170, D-208). **Changed for one job by D-250 and D-251 (18 Nov):** the eleven aliases and the second spelling SERIAL were removed from his AutoCAD 2027 alias file on 18 Nov on his words (D-250; done, board item 20), a dated copy beside the file; Pp removed the same way (D-251); nothing else in it is touched and the plug-in never edits it.
 
 ### Added 18 Nov 2026, D-230 to D-297
 

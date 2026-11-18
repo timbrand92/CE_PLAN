@@ -27,7 +27,7 @@ Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to 
 
 ## Still open on this subject
 
-1. **Typed names for the Outlet tool and the LPD tool:** none given (D-190, D-222). Waits on: Tim. **Answered by D-274 (18 Nov):** LEGALPOINT / LPD; OUTLET as a name goes. Still to be typed once in AutoCAD 2027 to prove it is free.
+1. **Typed names for the Outlet tool and the LPD tool:** none given (D-190, D-222). Waits on: Tim. **Answered by D-274 (18 Nov):** LEGALPOINT / LPD; OUTLET as a name goes. Proving it free by typing it once in AutoCAD 2027 is the standing open item on RIBBON_AND_NAMES, not part of D-274.
 2. **What the Outlet tool holds and how its window looks:** not designed; no decision beyond D-190. Waits on: the planning chat. **Now the LPD tool's window (D-274):** pick the end of the last pipe and the kind; its window is still not designed.
 3. **System found from the joins, never typed (FM-014), and the destination shown in the system strip and unfinished list (FM-038):** recommended, not decided. Waits on: Tim. **Taken in part by D-275:** the end reads by kind and is lit in the system strip and listed first in the Unfinished list when a system has no end.
 4. **Council moves the discharge point:** recomputing flow direction (SITUATIONS E2). Waits on: the build chat.

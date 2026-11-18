@@ -35,7 +35,7 @@ Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to 
 18. **Layer STORMWATER DETENTION PIPE, linetype DASHED** like the ordinary pipe: shown to Tim with the colour pick and not objected to, but not separately ruled (D-153, D-156).
 19. **Twin detention pipes:** one pipe that says "2 x 225", with a number-of-pipes box, two bands drawn, one label, and the storage sum counting both (D-082).
 20. **Minimum grade for detention pipes:** 225 at 1 in 200, 300 at 1 in 250, larger at 1 in 300; a council figure overrides (D-134); a detention pipe smaller than 225 gets 1 in 200 flagged amber (D-147).
-21. **Detention pipe cover:** keeps 300 (D-133), and under a driveway the larger figure, 0.45, governs (D-145).
+21. **Detention pipe cover:** keeps 300 (D-133), and under a driveway the larger figure, 0.45, governs (D-145). **POSSIBLE CONFLICT: detention pipe under a driveway.** D-145 says the larger, 0.45; D-287's presets say detention keeps 300 everywhere (driveway lines 100). Neither marks the other. Waits on: Tim.
 
 ### Label and editing
 
@@ -52,7 +52,7 @@ Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to 
 ### Added 18 Nov 2026, D-230 to D-297
 
 28. **Drawing a run of pipes (D-237):** "Like PLINE and LINE: it carries on". Click to click; a click between ends is a bend; reaching a pit ends that pipe and starts the next from it; clicking on an existing pipe makes a junction; Enter finishes; one undo steps back one pipe.
-29. **A pipe may have an invert level at both ends, at one end only, or at neither (D-236):** "MIN WAS SHOWN AT TIMES BECAUSE WE DESIGNED PIPES WITH INVERT LEVEL ON ONE END ONLY SHOW WE SHOW THE GRADE LIKE THIS. WE NEED THE ABILITY TO ONLY INSERT ONE INVERT LEVEL OR NONE AS WELL."
+29. **A pipe may have an invert level at both ends, at one end only, or at neither (D-236):** "MIN WAS SHOWN AT TIMES BECAUSE WE DESIGNED PIPES WITH INVERT LEVEL ON ONE END ONLY SHOW WE SHOW THE GRADE LIKE THIS. WE NEED THE ABILITY TO ONLY INSERT ONE INVERT LEVEL OR NONE AS WELL, YOU KNOW THIS RIGHT?"
 30. **When "MIN." prints (D-238):** "MIN. whenever both inverts are NOT given". One invert or none: the label ends "AT 1 IN 100 MIN." and the grade is a minimum; both inverts given: the grade is exact and no MIN. is printed. Automatic; it can still be ticked on or off on any pipe.
 31. **Material follows the size (D-239):** "Follow the size: 150 becomes UPVC SN8". The material follows the size by an office list, shown as "standard", and can be typed over.
 32. **What the window opens with (D-234, refined and settled by D-263):** the window opens when the short name is typed, filled in, then each click places and numbers one and Enter finishes, one window per run, not per object (D-234: "When I type the name; then pick after pick"). Tim on pipes (D-263): "IF I DRAW ONE SINGULAR 375 DIA. AND THE REST IS STILL 100 DIA. THEN I THINK IT WOULD BE EASIER TO START FROM THE DEFAUL EACH TIME OR YOU DONT THINK SO?" and then, on the proposal, "Smart: pipe follows what it joins (Recommended)". A pipe drawn off an existing pipe or pit opens with the size of the pipe it continues (never smaller downstream); a pipe starting from nothing opens on the office default (100 dia at 1 in 100); a setting lets anyone switch any tool to "always office default" or "always last used". This settles D-060 against D-143 and D-174.

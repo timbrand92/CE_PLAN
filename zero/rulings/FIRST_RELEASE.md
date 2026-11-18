@@ -46,7 +46,7 @@ Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to 
 
 27. **One LPD tool for the end of a system (D-274):** ONE tool, LEGALPOINT / LPD, replaces the separate Outlet tool and the small LPD label tool; the civil tab is now 11 windows (see OUTLET_AND_LPD).
 28. **Kinds of system end in the first version (D-273):** kerb and council pit; easement drain or council pipe; existing system on site; soak on site (the soakage sums stay later, D-104).
-29. **The new Pit and Pipe tools take PIT and CD from the start, and the trench grate keeps TG (D-258, D-233):** while the old plug-in is loaded the old ones stop answering to those names; not proven how AutoCAD chooses, so the build must make the new one win and prove it, or say plainly that it cannot.
+29. **The new Pit and Pipe tools take PIT and CD from the start (D-258):** while the old plug-in is loaded the old ones stop answering to those names; not proven how AutoCAD chooses, so the build must make the new one win and prove it, or say plainly that it cannot. **The trench grate keeps TG, but only once the old plug-in goes; until then it is tested as TRENCHGRATE (D-233).**
 30. **The old scattered commands are consolidated into few tools, each a window (D-246):** the plan of how everything that exists today works for the end user is owed, shown as the drafter's picture (see DIRECTION and OLD_PLUGIN).
 31. **Every window in the first release is built to the approved style and screen rules (D-286, D-295), preview at the left (D-296), preview size and form open (D-297):** see SCREENS_AND_STYLE.
 

@@ -314,8 +314,9 @@ Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to 
 2. **CONFLICT, the figures a new pipe opens with (D-060 against D-143 and D-174):** D-060 says the window opens filled in with what was used last; D-143 says a new gravity pipe starts at 1 in 100 and D-174 says a new pipe opens at 100 everywhere. Page: PIPE. Waits on Tim. **SETTLED by D-263 (18 Nov):** a pipe from nothing opens at the office default (100 dia at 1 in 100); a pipe drawn off another opens with the size it continues.
 3. **POSSIBLE CONFLICT, where whole-job things live (D-048 against D-099 and D-171):** D-048 puts job facts, levels, storage, checks and sheet in a CE side panel; D-099 makes one Detention window for the job and D-171 one Job window typed once per job. They may be compatible, but nobody has said so. Page: WINDOWS. Waits on Tim.
 4. **POSSIBLE CONFLICT, what the Pit tool opens at (D-235 against D-263):** D-235 says PIT opens at 450 x 450 and PP at 350 x 350; D-263 says pits open with the last used choices, kept between AutoCAD sessions. They agree on first use and may differ after; neither marks the other. Page: PIT. Waits on Tim.
-5. **POSSIBLE CONFLICT, the words for a missing value (D-261 DQ-019 against D-286 rule 24 and the approved style, D-295):** "unknown" in small boxes and "not known yet" in words (the planning chat's call; his to overturn) against exactly "Not known" on a window and "TBC" on the sheet. D-286 says its rules win over earlier UI rulings but names no decision. Pages: WINDOWS, SCREENS_AND_STYLE. Waits on Tim.
+5. **POSSIBLE CONFLICT, the words for a missing value (D-261 DQ-019 against D-286 rule 24 and the approved style, D-295):** "unknown" in small boxes and "not known yet" in words against exactly "Not known" on a window and "TBC" on the sheet. Planning chat's reading (board item 68; his to overturn): D-286 rule 24 and the approved style win: a window says exactly 'Not known', the sheet 'TBC'; 'unknown' and 'not known yet' are brought into line when each window is next touched. Pages: WINDOWS, SCREENS_AND_STYLE. Waits on Tim.
 6. **POSSIBLE CONFLICT, Tim's Q alias (D-208 against D-250):** D-208 says the CE arrow leader is QL and Tim keeps his own Q alias; D-250 lists "q" among the eleven aliases removed from his alias file. Neither says whether they are the same alias. Page: SHARED_TOOLS. Waits on Tim.
+7. **POSSIBLE CONFLICT: detention pipe under a driveway.** D-145 says the larger, 0.45; D-287's presets say detention keeps 300 (driveway lines 100). Neither marks the other. Pages: LEVELS_AND_STANDARDS, PIPE. Waits on: Tim.
 
 **Conflicts inside documents (not between decisions), listed so builders do not follow stale text:**
 
@@ -384,10 +385,10 @@ Live rulings are the numbered lines under "What is decided now"; superseded line
 19. **PIPE:** 42 live, 9 superseded, 22 open.
 20. **PIT:** 41 live, 9 superseded, 23 open.
 21. **PIT_SCHEDULE:** 19 live, 3 superseded, 11 open.
-22. **RIBBON_AND_NAMES:** 21 live, 11 superseded, 12 open.
+22. **RIBBON_AND_NAMES:** 21 live, 11 superseded, 13 open.
 23. **SHARED_TOOLS:** 30 live, 6 superseded, 21 open.
 24. **TANK:** 15 live, 6 superseded, 12 open.
 25. **WINDOWS:** 30 live, 10 superseded, 22 open.
-26. **SCREENS_AND_STYLE (added 18 Nov, 5:30 pm):** 16 live, 5 superseded, 9 open.
+26. **SCREENS_AND_STYLE (added 18 Nov, 5:30 pm):** 16 live, 5 superseded, 10 open.
 
-**Totals (18 Nov, 5:30 pm):** 601 live ruling lines, 119 superseded lines, 334 open items (page copies), across 26 pages. Open items by who they wait on, by the first party named: Tim 167; the build chat 50; the planning chat 39; a test 32; that split was counted at 1:40 pm for D-001 to D-229 and was not recounted after the D-230 to D-297 update. Items closed by D-226 to D-229 are kept on each page in a "Closed" line, and items closed by D-230 to D-297 in a "Closed (D-230 to D-297)" line where any closed. The new lines are under "Added 18 Nov 2026, D-230 to D-297" on each page.
+**Totals (18 Nov, 5:30 pm):** 601 live ruling lines, 119 superseded lines, 336 open items (page copies), across 26 pages. Open items by who they wait on, by the first party named: Tim 167; the build chat 50; the planning chat 39; a test 32; that split was counted at 1:40 pm for D-001 to D-229 and was not recounted after the D-230 to D-297 update. Items closed by D-226 to D-229 are kept on each page in a "Closed" line, and items closed by D-230 to D-297 in a "Closed (D-230 to D-297)" line where any closed. The new lines are under "Added 18 Nov 2026, D-230 to D-297" on each page.

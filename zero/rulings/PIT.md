@@ -80,13 +80,13 @@ Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to 
 
 ## Still open on this subject
 
-1. **Whether a turned (rotated) pit is part of the Pit window:** asked once on 16 Nov and never answered (DECISIONS "Open after this sitting", gap check Pit item 9). Waits on: Tim.
+1. **Whether a turned (rotated) pit is part of the Pit window:** asked once on 16 Nov and never answered (DECISIONS "Open after this sitting", gap check Pit item 9). Waits on: Tim. **Closed by D-266 (18 Nov):** yes, with a live preview (item 38).
 2. **Which of the three numbering choices is offered first after issue** (D-184). Waits on: Tim.
 3. **"Next free number" means the lowest unused or the highest plus one:** D-075 against DRAFTS_pit 5, not asked (SITUATIONS B9). Waits on: Tim.
 4. **Form of the cover level help:** click two trusted levels and work between them, or click one level and type a fall; not picked, both may be drawn for him (D-195). Waits on: the planning chat, then Tim.
-5. **Rule for pit kind and lid:** grated where surface water collects, lid class by what is over it (INPUT_AUDIT question 9, L-019). Waits on: Tim.
-6. **Pit size when the depth is not known:** proposal to draw at the last-used size marked assumed (SITUATIONS A2, F5). Waits on: Tim.
-7. **Pump pit:** which pump workbook version is current, and when a wet well under 3 m³ is acceptable (OPEN_QUESTIONS Q-003). Waits on: Tim.
+5. **Rule for pit kind and lid:** grated where surface water collects, lid class by what is over it (INPUT_AUDIT question 9, L-019). Waits on: Tim. **Lid part answered by D-240 and D-287 (ten presets, engineer can change); the pit-kind rule is still open.**
+6. **Pit size when the depth is not known:** proposal to draw at the last-used size marked assumed (SITUATIONS A2, F5). Waits on: Tim. **Answered by D-235:** PIT opens at 450 x 450, PP at 350 x 350; after first use see item 19 (D-263).
+7. **Pump pit:** which pump workbook version is current, and when a wet well under 3 m³ is acceptable (OPEN_QUESTIONS Q-003). Waits on: Tim. **Closed by D-252:** the newest office sums; a wet well under 3 m3 only if typed over, shown amber 'Needs a look'.
 8. **Silt and soakage pits:** later (D-104); soakage storm starting point not known (Q-013). Waits on: Tim (later).
 9. **Which half keeps which held invert when a pit splits a pipe** (SITUATIONS B7). Waits on: the build chat.
 10. **A pit dropped on a free pipe end joins it:** SITUATIONS B1 says yes, which reverses DRAFTS_pipe 11.2 "cannot be joined later"; D-176 supports joining. Waits on: the build chat.
@@ -98,13 +98,13 @@ Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to 
 16. **Pit window content:** the choices, their order and words have not been gone through line by line (D-070, UI_PLAN section 9 item 1). Waits on: Tim.
 17. **Full verdict on the Pit window** waits on real use (D-087). Waits on: Tim.
 18. **CEPIT3 and CEPIT5 failed in the midday run;** a fix is built and waits for the next run (OBSTACLE_COURSE part E). Waits on: a test.
-19. **POSSIBLE CONFLICT: what the Pit tool opens at.** D-235 says PIT opens at 450 x 450; D-263 (later) says pits open with the last used choices. They agree on the first use and may disagree after; neither marks the other. Waits on: Tim.
+19. **POSSIBLE CONFLICT: what the Pit tool opens at.** D-235 says PIT opens at 450 x 450; D-263 (later) says pits open with the last used choices. They agree on the first use and may disagree after; neither marks the other. Planning chat's reading (board item 68; his to overturn): the typed name sets the SIZE preset (PT 450 x 450, PP 350 x 350); kind, lid and the rest open with last used. Waits on: Tim.
 20. **Which plug-in wins the names PIT and CD when both are loaded** is not proven (D-258). Waits on: a test.
 21. **Orifice and pump pits are a stand-in outline until the real looks from PIT BLOCK 3 are built;** the pit number as the office's circled tag and the masked levels and labels come before first real use (D-260). Waits on: the build chat.
 22. **The 0.9 m above and 0.7 m below starting offsets for the number and cover text** are the planning chat's starting figures (D-260). Waits on: Tim (to overturn only).
 23. **How the number and cover level text read when a pit is turned** was answered (D-267); the Pipe tool's matching on-cursor preview is designed, not built (D-267). Waits on: the build chat.
 
-**Closed (D-230 to D-297):** whether a turned pit is in the Pit window (closed by D-266); the lid class rule by what is over the pit, open item 5 above (closed by D-287 as ten presets, engineer can change); pump pit workbook version and when a wet well under 3 m3 is acceptable, open item 7 above (closed by D-252, "the newest office sums", amber "Needs a look" unless typed over); the name of a single copied pit (closed by D-262).
+**Closed (D-230 to D-297):** whether a turned pit is in the Pit window (closed by D-266); the lid part of open item 5 above (answered by D-240 and D-287, ten presets, engineer can change; the pit-kind rule is still open); pump pit workbook version and when a wet well under 3 m3 is acceptable, open item 7 above (closed by D-252, "the newest office sums", amber "Needs a look" unless typed over); the name of a single copied pit (closed by D-262).
 
 **Closed:** which block the new Pit tool uses, and the proposal "not yet confirmed by Tim in words" (closed by D-228, PIT BLOCK 3 exactly as it is); the night tests using the wrong pit block "Stormwater Pit" (closed by D-228; new pits use PIT BLOCK 3, "Stormwater Pit" stays readable on old drawings).
 
