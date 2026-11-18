@@ -43,4 +43,30 @@
 > "THIS SHOULD HAVE BLOCKS, HATCHES AND MORE"
 > "ALSO I WANT TO BUILD STATISTICS, ADMIN CONTROL AND A BETTER OVCERALL SYSTEM THIS CAN COME LATER BUT ADD TO FUTURE IDEAS. PLEASE MAKE SURE WE ALWAYS HAVE REVISION NUMBERS, ID NUMBERS FOR ALL BUGS, IDEAS AND ANYTHING ELSE"
 
-Next free number: TA-018
+## Batch 10 (18 Nov 2026, afternoon; names checked against the acad.pgp copy and his alias list inside each question)
+
+**TA-018 Tab names (TQ-01).** "CE Civil/Tools/Structural": the three tabs are CE Civil, CE Tools, CE Structural.
+
+**TA-019 Structural tab before structural is built (TQ-02).** "Hidden until it has tools".
+
+**TA-020 Short name for CLEAN (TQ-03).** "CLEAN plus CN" (CN free in both lists).
+
+**TA-021 His Q (TQ-04).** "Keep my Q; leader is QL": his alias q (mltim) stays; the CE arrow leader becomes QL (free in both lists). What mltim is: not said.
+
+## Batch 11
+
+**TA-022 DIV and DIVX (TQ-05).** "OUR DIVIDE IS SIMILAR BUT HAS UPGRADES, RESEARCH WHAT THEY ARE AND EXPLAIN HOW IT COULD BE EVEN BETTER". (Researched in the old code and put back to him in batch 12.)
+
+**TA-023 Break line (TQ-08).** "WE USE BREAKLINE / BL, I WILL CHNAGE ALIASES". So BREAKLINE / BL; Tim moves his own "Bl, *Block" alias himself. Still to check: BREAKLINE as an Express Tools command name.
+
+**TA-024 Revision box and object snap (TQ-07).** "Keep the question".
+
+**TA-025 Joint labels (TQ-09).** "EXPLAIN HOW IT WORKS NOW AND THEN ILL EXPLAIN WHATS WRONG. LINETYPE AND REGULAR LINE NEEDS TO WORK PROPERLY AND THEN THE TEXT NEEDS TO BE PLACED SIMILAR TO 25T OR 25B DEPENDING ON WHATS AROUND."
+
+**TA-026 Message during batch 11.** "WE HAVE THE OPPORTUNINITY NOW TO UPGRADE, IMPROVE AND ADD EXTRA FUNCTIONALITY TO ALL OF THESE COMMANDS RIGHT NOW, CAN YOU INTERVIEW ME ABOUT THIS ALSO BEFORE BUILDING. ALSO WE HAVE MISSED TEXT COMMANDS AND OTHER THINGS LIKE THAT"
+
+## Batch 12 (DIV upgrades, joint line faults, text tools, missed commands)
+
+**TA-027** Batch 12 was not answered by clicking: Tim sent a message instead. The message is recorded as his answer when it arrives.
+
+Next free number: TA-028
