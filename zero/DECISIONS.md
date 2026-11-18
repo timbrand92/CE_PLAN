@@ -670,6 +670,14 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-324** (19 Nov 2026, about 8:12 am; undo while drawing pipes) "Yes, as described (Recommended)". While the pipe command is running, undo takes back the last pipe only; after Enter, one undo takes back the whole run.
 
+**D-325** (19 Nov 2026, about 8:16 am; the supervised check of PIT, PP, CD and a typed EXPLODE) "i can do it snytime today when im in the office". He will do it today, at the PC, on a test copy. Owed: the planning chat has the test copy and a short step sheet ready and tells him when.
+
+**D-326** (19 Nov 2026, about 8:16 am; Codex with full access to drive the mouse in AutoCAD) "yes whenever it needs it and it doesnt interfere with my work". Allowed. Planning chat's reading (his to widen): only on test copies, only in a test AutoCAD the robot started, never while his own AutoCAD is open or he is using the PC (a robot driving the mouse takes the mouse from him), so in practice outside his hours or when he says he is away; rule 1.9 in full in every such brief; a licence or sign-in window stops everything; no PIT, PP or CD typed and no function keys until the supervised check (D-325) is done.
+
+**D-327** (19 Nov 2026, about 8:16 am; one council's detention conditions) "Yes, as that council's check (Recommended)". When that council is picked in the Job window, the tool checks at least 60 per cent of storage underground and an orifice no smaller than 65 mm.
+
+**D-328** (19 Nov 2026, about 8:16 am; the 19 budgets and the 10 layer questions) "As pictures and tick sheets later today". One page each with the recommended answer ticked; he changes only the ones he disagrees with.
+
 ## Not decided (asked or raised, no decision yet)
 
 1. Whether Stage 1's civil explanation is approved (Tim moved on to the design without saying "approve"). **Settled by D-117.**
