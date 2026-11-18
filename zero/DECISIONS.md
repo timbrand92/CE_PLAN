@@ -616,6 +616,14 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-297** (18 Nov 2026, 5:30 pm by the clock; qualifies D-295 and D-296, given a moment after them) "IM NOT CONVINCED THAT WINDOW WILL SHOW THE PREVIEW WELL ENOUGH". So the style stands approved for everything EXCEPT the preview panel: how big it is, and how it shows a real job well enough, is OPEN. Owed: pictures of the same window with the preview done other ways (bigger; enlarging on a click; or the window standing beside the real drawing, which zooms to and lights up the system), for his choice. No window's preview is built to the 380 px panel until he rules.
 
+**D-298** (18 Nov 2026, about 11:15 pm; changes D-296 at least for the Detention window; on the preview question left open by D-297) "i think the horizontal preview on top of the detention stuff is better". The preview across the TOP of the window, above the figures, is preferred to the preview down the left side. Whether that holds for every window or for Detention and other long things only, how tall it is, and how it sits with option C (the window docked beside the real drawing), is being asked.
+
+**D-299** (18 Nov 2026, 11:44 pm by the clock; settles D-298 and narrows D-296) Where the preview sits across the windows: "Top for Detention only". The Detention window has its preview across the top; every other window keeps the preview at the left (D-296).
+
+**D-300** (18 Nov 2026, 11:44 pm; closes the size part of D-297 for the Detention window) How big the top preview is: "About a third of the window (Recommended)": a proper drawing band about 280 high across the full width, then the answer band and the three steps tightened to fit; nothing scrolls. (The size of the LEFT preview on the other windows is not ruled by this.)
+
+**D-301** (18 Nov 2026, 11:44 pm; closes the A, B or C choice of D-297) How option C fits: "Both: top preview in the window, and the real drawing lights up (Recommended)". The window keeps its own preview AND AutoCAD's own drawing lights up the same parts (temporary outlines and tags, nothing saved, the view put back), so it works whether or not the drawing is zoomed to the system. Planning chat's reading (mine): this "both" applies to every window, each with its own preview where D-299 puts it. Still to prove before it is built: an accurate zoom, a click with his own mouse, and that docking or lighting up saves nothing into his profile (R-012).
+
 ## Not decided (asked or raised, no decision yet)
 
 1. Whether Stage 1's civil explanation is approved (Tim moved on to the design without saying "approve"). **Settled by D-117.**

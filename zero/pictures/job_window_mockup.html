@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<title>Job window, first drawing (mock-up)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --page:#161718;
+  --win:#2B2D30; --card:#383B40; --well:#232528; --line:#4A4D53;
+  --field:#4A4D55; --fieldline:#8A8E96;
+  --t-answer:#F3F4F5; --t-body:#D2D5DA; --t-note:#A9AEB6; --unit:#C8CBD0;
+  --green:#7BE0AE; --amber:#F5C660; --red:#FF6B4A; --ink:#10131A;
+  --acc:#FF70B3; --acc-ink:#10131A;
+  --r:8px;
+  --sans:'IBM Plex Sans','Segoe UI',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--page);color:var(--t-body);font-family:var(--sans);font-size:14px;line-height:24px;padding:32px;min-width:1600px;font-variant-numeric:tabular-nums}
+.pagetitle{font-size:14px;margin-bottom:16px;color:#fff}
+.intro{width:1536px;margin-bottom:24px;color:#D5D8DC}
+.intro h2{font-size:14px;font-weight:600;color:#fff;margin-bottom:8px}
+.intro ol{padding-left:32px}
+.intro li{margin-bottom:0}
+.intro li b{font-weight:600;color:#fff}
+.switches{display:flex;gap:32px;margin-top:24px;align-items:center;flex-wrap:wrap;color:#B8BBC1}
+.switch{display:flex;gap:8px;align-items:center;font-size:12px}
+.switch button{font:inherit;font-size:12px;height:32px;padding:0 16px;border-radius:var(--r);background:transparent;color:#D5D8DC;border:1px solid #55585E;cursor:pointer}
+.switch button.on{border-color:#fff;color:#fff}
+.below{width:1536px;margin-top:16px;color:#B8BBC1;font-size:12px;line-height:16px}
+
+.win{width:1536px;height:864px;background:var(--win);border:1px solid var(--line);border-radius:var(--r);box-shadow:0 24px 48px rgba(0,0,0,.5);display:flex;flex-direction:column;overflow:hidden}
+.titlebar{height:32px;flex:none;display:flex;align-items:center;justify-content:space-between;padding:0 16px;border-bottom:1px solid var(--line);color:var(--t-answer)}
+.titlebar .x{color:var(--t-note)}
+.body{flex:1;min-height:0;padding:16px;display:flex;gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.note{font-size:12px;line-height:16px;color:var(--t-note)}
+.strong{font-weight:600}
+
+/* left: who reads this */
+.who{width:380px;flex:none;padding:16px 8px;display:flex;flex-direction:column}
+.who .phead{padding:0 8px;margin-bottom:8px}
+.who .phead .t{color:var(--t-answer);display:block;height:24px}
+.who .phead .note{display:block;height:32px}
+.tool{background:var(--well);border:1px solid var(--line);border-radius:var(--r);padding:8px;margin:0 8px}
+.tool .n{display:flex;align-items:center;justify-content:space-between;height:24px;color:var(--t-answer)}
+.tool .f{font-size:12px;line-height:16px;color:var(--t-body)}
+.tool .f .nk{color:var(--t-note)}
+.tool.wait{border:2px solid var(--amber);padding:7px}
+.link{height:16px;display:flex;align-items:center;justify-content:center;color:var(--t-note);font-size:12px;line-height:16px}
+.who .foot{padding:8px 16px 0;margin-top:auto}
+
+.right{flex:1;min-width:0;display:flex;flex-direction:column;gap:8px}
+.band{flex:none;height:40px;border-radius:var(--r);display:flex;align-items:center;justify-content:space-between;padding:0 16px;color:var(--ink);box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.band.green{background:var(--green)} .band.amber{background:var(--amber)}
+.band .left{display:flex;align-items:center;gap:16px;white-space:nowrap}
+.band .main{font-size:24px;line-height:32px}
+.band .sub{font-size:14px}
+.band .right2{font-size:14px;white-space:nowrap}
+.pill{display:inline-flex;align-items:center;height:24px;padding:0 8px;border-radius:var(--r);font-size:12px;line-height:24px;white-space:nowrap;color:var(--ink);border:1px solid rgba(16,19,26,.55)}
+.pill.green{background:var(--green)} .pill.amber{background:var(--amber)}
+
+.step{padding:16px 16px 8px;flex:none}
+.step.grow{flex:1;min-height:0}
+.shead{display:flex;align-items:center;gap:8px;height:24px;margin-bottom:8px;white-space:nowrap}
+.shead .n{width:24px;height:24px;border:1px solid var(--t-body);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:12px;color:var(--t-answer);flex:none}
+.shead .t{color:var(--t-answer);margin-right:8px}
+.shead .sp{flex:1}
+
+.row1{display:flex;align-items:flex-start;gap:24px}
+.rowx{margin-top:8px}
+.fld{display:flex;flex-direction:column}
+.fld > .lab{height:24px;display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:12px;line-height:16px;color:var(--t-note);white-space:nowrap}
+.inp{height:32px;display:flex;align-items:center;justify-content:flex-end;gap:4px;padding:0 8px;background:var(--field);border:1px solid var(--fieldline);border-radius:var(--r);color:var(--t-answer);font-size:14px;white-space:nowrap}
+.inp .u{font-size:12px;color:var(--unit)}
+.inp.needs{border:2px solid var(--amber);padding:0 7px}
+.inp.nk{font-size:12px;justify-content:center}
+.inp.sel{justify-content:space-between}
+.grp{display:flex;flex-direction:column}
+.grp > .lab{height:24px;display:flex;align-items:center;gap:8px;font-size:12px;line-height:16px;color:var(--t-note);white-space:nowrap}
+.gb{display:flex;gap:8px}
+.mbtn{height:32px;padding:0 16px;border-radius:var(--r);border:1px solid var(--fieldline);background:var(--field);color:var(--t-answer);font:inherit;cursor:pointer;white-space:nowrap}
+.mbtn.sel{background:var(--acc);border-color:var(--acc);color:var(--acc-ink)}
+.mbtn.needs{border:2px solid var(--amber);padding:0 15px}
+.rain{display:flex;gap:8px;align-items:flex-end}
+.gl{width:88px;height:56px;display:flex;flex-direction:column;justify-content:center;gap:4px}
+.plain{display:flex;flex-direction:column;justify-content:flex-end;height:56px}
+.plain .l{display:flex;align-items:baseline;gap:8px;height:24px}
+.plain small{font-size:12px;color:var(--t-note)}
+
+.sum{display:grid;grid-template-columns:1fr auto;column-gap:16px;align-items:center}
+.sum > div{height:32px;line-height:32px}
+.sum .l{white-space:nowrap;display:flex;align-items:center;gap:8px}
+.sum .l small{font-size:12px;color:var(--t-note)}
+.sum .v{text-align:right;white-space:nowrap}
+.cols{display:flex;gap:32px;align-items:flex-start}
+.cols > div{min-width:0}
+
+.btn{height:32px;padding:0 24px;border-radius:var(--r);border:1px solid var(--line);background:transparent;color:var(--t-body);font:inherit;white-space:nowrap}
+.btn.quiet{color:var(--t-note)}
+.btn.ok{background:var(--acc);border-color:var(--acc);color:var(--acc-ink)}
+.btn.out{border-color:var(--fieldline);color:var(--t-answer);padding:0 16px}
+.bottom{height:48px;flex:none;border-top:1px solid var(--line);display:flex;justify-content:flex-end;align-items:center;padding:0 16px}
+.bottom .btns{display:flex;gap:8px}
+</style>
+</head>
+<body>
+
+<div class="pagetitle">Job window, first drawing (mock-up, made-up job)</div>
+
+<div class="intro">
+  <h2>What this window is for and what each part feeds</h2>
+  <ol>
+    <li><b>Typed once per job.</b> Step 1 holds the few job figures only you can give. Every tool reads them; change one here and everything follows.</li>
+    <li><b>The panel at the left shows who reads it.</b> Each tool in the chain lists the one or two job figures it takes, and waits (amber outline) if one of them is Not known.</li>
+    <li><b>The office's standing figures are not typed here.</b> Step 2 only shows them, each with its source. You change them in the office list.</li>
+    <li><b>The drawing keeps what it was designed with.</b> Step 3 records the office list of the day, so the job reads the same after the office list changes; you decide when to take up new figures.</li>
+  </ol>
+</div>
+
+<div class="win">
+  <div class="titlebar"><span>Job · this drawing</span><span class="x">&#x2715;</span></div>
+  <div class="body">
+    <div class="card who" id="who"></div>
+    <div class="right">
+      <div id="band"></div>
+      <div class="card step" id="s1c"></div>
+      <div class="card step" id="s2c"></div>
+      <div class="card step grow" id="s3c"></div>
+    </div>
+  </div>
+  <div class="bottom"><div class="btns"><button class="btn">Cancel</button><button class="btn ok">OK</button></div></div>
+</div>
+
+<div class="below">Not shown here, to be written and tested: click budget, undo, motion.</div>
+
+<div class="switches">
+  <div class="switch">State:
+    <button id="b_needs">Needs you (2)</button><button id="b_ok">Nothing needs you</button><button id="b_first">First drawing, nothing typed</button></div>
+</div>
+
+<script>
+(function(){
+  var q=new URLSearchParams(location.search);
+  var state=({needs:1,ok:1,first:1})[q.get('state')]?q.get('state'):'needs';
+
+  var rain=[['5 min','98.6'],['10 min','73.6'],['15 min','60.1'],['20 min','51.5'],['25 min','45.5'],['30 min','40.9']];
+  var chev='<svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#F3F4F5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4.5 L6 8.5 L10 4.5"/></svg>';
+  var NEED='<span class="pill amber">Needs you</span>';
+  var NK='Not known';
+
+  function render(){
+    var first=state==='first', needs=state==='needs', ok=state==='ok';
+    // which figures are missing
+    var m={council:first,disc:first,src:first,s1:first,s2:first,rain:first,
+           slab1:first||needs, slab2:first||needs, slab3:first};
+    function nk(k){return m[k];}
+
+    // left panel
+    function tool(name,fig,wait){
+      return '<div class="tool'+(wait?' wait':'')+'"><div class="n"><span>'+name+'</span>'+(wait?'<span class="pill amber">Waits for you</span>':'')+'</div><div class="f">'+fig+'</div></div>';
+    }
+    function v(k,val){return nk(k)?'<span class="nk">'+NK+'</span>':val;}
+    var arrow='<div class="link" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#A9AEB6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 1 V10 M2.5 6.5 L6 10 L9.5 6.5"/></svg></div>';
+    var tools=[
+      tool('Pit','Drop across a pit 0.02 m &middot; Step irons below 1.0 m',false),
+      tool('Pipe','New pipe 100 dia at 1 in 100 &middot; Slab '+(m.slab1||m.slab2||m.slab3?'<span class="nk">'+NK+'</span>':'100 to 150 mm'),(m.slab1||m.slab2||m.slab3)),
+      tool('Inlets','Runoff 0.80 &middot; Discharge storm, 1 in '+v('s2','5'),m.s2),
+      tool('LPD (council pit)','Permitted discharge '+v('disc','6.00 L/s')+' &middot; Council '+v('council','Glen Eira'),m.disc||m.council),
+      tool('Long section','Scale 1 : 100 &middot; Cover presets (ten lines) &middot; Slab thickness',(m.slab1||m.slab2||m.slab3)),
+      tool('Tank','Storage storm, 1 in '+v('s1','10')+' &middot; Rainfall table '+(m.rain?'<span class="nk">'+NK+'</span>':'18 Nov'),m.s1||m.rain),
+      tool('Detention','Rainfall table &middot; Permitted discharge '+v('disc','6.00 L/s'),m.rain||m.disc),
+      tool('Schedule','Council '+v('council','Glen Eira')+' &middot; Source words (APPROX., TBC)',false)
+    ];
+    document.getElementById('who').innerHTML=
+      '<div class="phead"><span class="t">Who reads this</span><span class="note">Every tool below takes its job figures from this window. Amber: waiting for a figure.</span></div>'+
+      tools.join(arrow)+
+      '<div class="note foot">Made-up job. Tools are listed in the order the water flows.</div>';
+
+    // band
+    var cls=ok?'green':'amber', word=ok?'Ready':'Needs you';
+    var main=ok?'Job set up: nothing needs you':(first?'Job set up: <b class="strong">9</b> figures need you':'Job set up: <b class="strong">2</b> figures still need you');
+    var sub=ok?'Every tool can read it':(first?'You can still draw':'Slab thickness: path, house driveway');
+    document.getElementById('band').innerHTML=
+      '<div class="band '+cls+'"><div class="left"><span class="pill" style="background:transparent">'+word+'</span><span class="main">'+main+'</span><span class="sub">'+sub+'</span></div>'+
+      '<div class="right2">'+(first?'Office list of 18 Nov 2026':'Council Glen Eira &middot; Office list of 18 Nov 2026')+'</div></div>';
+
+    // step 1
+    function fld(label,w,boxCls,boxHtml,needsTag){return '<div class="fld" style="width:'+w+'px"><span class="lab"><span>'+label+'</span>'+(needsTag?NEED:'')+'</span><div class="inp '+(boxCls||'')+'">'+boxHtml+'</div></div>';}
+    function val(k,txt,unit){
+      return nk(k)?['nk needs','<span>'+NK+'</span>']:['',(txt!==''?'<span>'+txt+'</span>':'')+(unit?'<span class="u">'+unit+'</span>':'')];
+    }
+    var c=nk('council')?['sel nk needs','<span>'+NK+'</span>'+chev]:['sel','<span>Glen Eira</span>'+chev];
+    var d=val('disc','6.00','L/s');
+    var sa=val('s1','10',''), sb=val('s2','5','');
+    var rainWells=rain.map(function(r){
+      return '<div class="fld" style="width:72px"><span class="lab">'+r[0]+'</span><div class="inp'+(m.rain?' nk needs':'')+'">'+(m.rain?'<span>'+NK+'</span>':'<span>'+r[1]+'</span>')+'</div></div>';
+    }).join('');
+    function sl(k,label,w,txt){var x=val(k,txt,'mm');return fld(label,w,x[0],x[1],nk(k));}
+    var discSel = m.src ? [0,0] : [1,0];
+    var rainSrc = m.rain ? -1 : 1; // 0 council, 1 bureau, 2 estimate
+
+    document.getElementById('s1c').innerHTML=
+      '<div class="shead"><span class="n">1</span><span class="t">What you type</span><span class="note">Typed once here. Every tool reads it; change it here and everything follows.</span><span class="sp"></span>'+
+        (ok?'<span class="note">Nothing needs you</span>':'<span class="pill amber">'+(first?'9':'2')+' figures need you</span>')+'</div>'+
+      '<div class="row1">'+
+        fld('Council',200,c[0],c[1],m.council)+
+        fld('Permitted discharge',184,d[0],d[1],m.disc)+
+        '<div class="grp"><span class="lab">Where the discharge figure comes from'+(m.src?NEED:'')+'</span><div class="gb">'+
+          '<button class="mbtn'+(discSel[0]?' sel':'')+(m.src?' needs':'')+'">Given by council letter</button>'+
+          '<button class="mbtn'+(discSel[1]?' sel':'')+(m.src?' needs':'')+'">Worked out from the council&rsquo;s rule</button></div></div>'+
+      '</div>'+
+      '<div class="row1 rowx">'+
+        fld('Storage storm, 1 in',208,sa[0],sa[1],m.s1)+
+        fld('Discharge storm, 1 in',208,sb[0],sb[1],m.s2)+
+        '<div class="plain"><div class="l"><span>Drawing units: mm</span><small>from the drawing</small></div><div class="l"><span>Scale: 1 : 100</span><small>from the drawing</small></div></div>'+
+      '</div>'+
+      '<div class="row1 rowx">'+
+        '<div class="rain"><div class="gl"><span>Site rainfall</span>'+(m.rain?NEED:'<span class="note">1 in 10, mm/h</span>')+'</div>'+rainWells+'</div>'+
+        '<div class="grp"><span class="lab">&nbsp;</span><button class="mbtn">Paste from the Bureau table</button></div>'+
+      '</div>'+
+      '<div class="row1 rowx" style="align-items:center">'+
+        '<span class="note" style="width:88px">Figures from</span>'+
+        '<div class="gb">'+
+          '<button class="mbtn'+(rainSrc===0?' sel':'')+'">Council stated</button>'+
+          '<button class="mbtn'+(rainSrc===1?' sel':'')+'">Bureau table pasted 18 Nov</button>'+
+          '<button class="mbtn'+(rainSrc===2?' sel':'')+'">Your estimate (APPROX.)</button></div>'+
+      '</div>'+
+      '<div class="row1 rowx">'+
+        sl('slab1','Slab, path',184,'100')+sl('slab2','Slab, house driveway',184,'125')+sl('slab3','Slab, common driveway',184,'150')+
+        '<div class="plain"><div class="l"><small>Slab thickness under paving is read from the plans, set per job</small></div></div>'+
+      '</div>';
+
+    // step 2
+    function r(l,src,val){return '<div class="l">'+l+'<small>'+src+'</small></div><div class="v">'+val+'</div>';}
+    document.getElementById('s2c').innerHTML=
+      '<div class="shead"><span class="n">2</span><span class="t">What the office list gives</span><span class="note">The council&rsquo;s and the office&rsquo;s standing figures. Change them in the office list, not here.</span></div>'+
+      '<div class="cols">'+
+        '<div style="width:500px"><div class="sum">'+
+          r('Council minimum runoff','council letter on file','0.80')+
+          r('Pervious runoff','office method / council tool','0.35 / 0.30')+
+          r('Drop across a pit','office list','0.02 m')+
+        '</div></div>'+
+        '<div style="width:500px"><div class="sum">'+
+          r('New pipe','office list','100 dia at 1 in 100')+
+          r('Cover and lid class presets','see what is over it','ten lines')+
+          r('Step irons','office list','deeper than 1.0 m')+
+        '</div></div>'+
+      '</div>';
+
+    // step 3
+    var s3;
+    if(first){
+      s3='<div class="cols"><div style="width:500px"><div class="sum"><div class="l">Designed with<small>nothing kept yet</small></div><div class="v nk" style="color:var(--t-note)">Not known</div></div></div>'+
+         '<div style="width:500px;padding-top:4px"><span class="note">When you press OK, this drawing keeps the office list of 18 Nov 2026.</span></div></div>';
+    } else {
+      s3='<div style="display:flex;align-items:center;justify-content:space-between;height:32px"><span style="color:var(--t-answer)">Designed with the office list of 18 Nov 2026</span><span style="display:flex;align-items:center;gap:16px">'+
+        (ok?'<span class="note">Office list unchanged since: nothing to take up</span>':'<span class="note">2 office figures have changed since: show them</span><button class="btn out">Take them up</button>')+'</span></div>'+
+        '<div class="cols">'+
+        '<div style="width:500px"><div class="sum">'+
+          r('Council minimum runoff','','0.80')+r('Pervious runoff, office method','','0.35')+'</div></div>'+
+        '<div style="width:500px"><div class="sum">'+
+          r('Drop across a pit','','0.02 m')+r('New pipe','','100 dia at 1 in 100')+'</div></div>'+
+      '</div>';
+    }
+    var changed = '';
+    document.getElementById('s3c').innerHTML=
+      '<div class="shead"><span class="n">3</span><span class="t">What this job is designed with</span><span class="note">Kept with the drawing, so the job still reads the same after the office list changes.</span></div>'+
+      s3+
+      (changed?'<div style="display:flex;align-items:center;gap:16px;margin-top:8px;height:32px">'+changed+'</div>':'');
+
+    ['needs','ok','first'].forEach(function(k){document.getElementById('b_'+k).className=(k===state)?'on':'';});
+  }
+  ['needs','ok','first'].forEach(function(k){document.getElementById('b_'+k).onclick=function(){state=k;render();};});
+  render();
+})();
+</script>
+</body>
+</html>
