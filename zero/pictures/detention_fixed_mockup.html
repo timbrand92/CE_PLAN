@@ -13,7 +13,7 @@
   --win:#2B2D30; --card:#383B40; --well:#232528; --line:#4A4D53;
   --field:#4A4D55; --fieldline:#8A8E96;
   --t-answer:#F3F4F5; --t-body:#D2D5DA; --t-note:#A9AEB6;
-  --sv0:#80848C; --sv1:#C8CBD0; --sv2:#DADCE0; --sv3:#B4B8BE;
+  --unit:#C8CBD0; --sv0:#80848C; --sv1:#C8CBD0; --sv2:#DADCE0; --sv3:#B4B8BE;
   --green:#7BE0AE; --amber:#F5C660; --red:#FF6B4A;
   --ink:#10131A;
   --fill:#A9ADB5;
@@ -40,10 +40,14 @@ body{background:var(--page);color:var(--t-body);font-family:var(--sans);font-siz
 .strong{font-weight:600}
 
 /* preview */
-.preview{width:380px;flex:none;padding:16px;display:flex;flex-direction:column;gap:8px}
+.preview{width:380px;flex:none;padding:16px 8px;display:flex;flex-direction:column;gap:8px}
+.preview .phead{padding:0 8px}
+.preview .phead .t{color:var(--t-answer);display:block;height:24px}
+.preview .phead .note{display:block;height:32px}
+.preview .foot{padding:0 8px}
 .preview svg{display:block;flex:none}
-.chain{display:flex;align-items:center;gap:4px;font-size:12px;line-height:16px;color:var(--t-note);flex:none}
-.chip{border:1px solid var(--line);border-radius:var(--r);padding:4px 8px;color:var(--t-note);white-space:nowrap}
+.chain{display:flex;align-items:center;gap:2px;font-size:12px;line-height:16px;color:var(--t-note);flex:none;white-space:nowrap}
+.chip{border:1px solid var(--line);border-radius:var(--r);padding:4px;color:var(--t-note);white-space:nowrap}
 .chip.lit{background:var(--t-answer);border-color:var(--t-answer);color:var(--ink)}
 
 .right{flex:1;min-width:0;display:flex;flex-direction:column;gap:16px}
@@ -61,7 +65,7 @@ body{background:var(--page);color:var(--t-body);font-family:var(--sans);font-siz
 .pill.changed{background:transparent;color:var(--t-body);border-color:var(--t-body)}
 
 /* steps */
-.step{padding:16px;flex:none}
+.step{padding:16px 16px 8px;flex:none}
 .step.grow{flex:1;min-height:0}
 .shead{display:flex;align-items:center;gap:8px;height:24px;margin-bottom:8px;white-space:nowrap}
 .shead.tall{height:32px}
@@ -70,15 +74,24 @@ body{background:var(--page);color:var(--t-body);font-family:var(--sans);font-siz
 .shead .sp{flex:1}
 
 /* inputs: boxed and bright */
-.row1{display:flex;align-items:flex-end;gap:24px}
+.row1{display:flex;align-items:flex-start;gap:24px}
+.rowb{margin-top:8px;align-items:flex-end}
 .fields{display:flex;gap:8px}
 .fld{display:flex;flex-direction:column}
 .fld > .note{height:16px}
 .inp{height:32px;display:flex;align-items:center;justify-content:flex-end;gap:4px;padding:0 8px;background:var(--field);border:1px solid var(--fieldline);border-radius:var(--r);color:var(--t-answer);font-size:14px;white-space:nowrap}
-.inp .u{font-size:12px;color:var(--t-note)}
+.inp .u{font-size:12px;color:var(--unit)}
 .inp.needs{border:2px solid var(--amber);padding:0 7px}
-.inp.nk{font-size:12px;justify-content:center;padding:0}
-.inp.nk.needs{padding:0}
+.inp.nk{font-size:12px;justify-content:center;padding:0 8px}
+.inp.nk.needs{padding:0 6px}
+.inp.tick{gap:8px;justify-content:flex-start}
+.inp .cb2{width:16px;height:16px;border:1.5px solid var(--t-answer);border-radius:4px;display:inline-flex;align-items:center;justify-content:center;flex:none}
+.inp .cb2.on{background:#EEF0F2;border-color:#EEF0F2}
+.pair{display:flex;flex-direction:column}
+.pair .pr{display:flex;gap:8px}
+.grp{display:flex;flex-direction:column}
+.grp > .note{height:16px}
+.grp .gb{display:flex;gap:8px}
 .rain{display:flex;gap:8px;align-items:flex-end}
 .gl{width:88px;height:48px;display:flex;flex-direction:column;justify-content:center;gap:4px}
 .mbtn{height:32px;padding:0 16px;border-radius:var(--r);border:1px solid var(--fieldline);background:var(--field);color:var(--t-answer);font:inherit;cursor:pointer;white-space:nowrap}
@@ -117,7 +130,7 @@ body{background:var(--page);color:var(--t-body);font-family:var(--sans);font-siz
 .abar div:first-child{border-radius:8px 0 0 8px}
 .abar div:last-child{border-radius:0 8px 8px 0}
 
-.ans{height:32px;display:flex;align-items:baseline;gap:8px;margin-bottom:8px;white-space:nowrap}
+.ans{height:32px;display:flex;align-items:baseline;gap:8px;margin-bottom:0;white-space:nowrap}
 .ans .big{font-size:24px;line-height:32px;color:var(--t-answer)}
 .ans .big.nk{color:var(--t-note);font-weight:400}
 .ans .pill{align-self:center;margin-left:auto}
@@ -134,9 +147,9 @@ body{background:var(--page);color:var(--t-body);font-family:var(--sans);font-siz
 .tb{fill:var(--sv2);stroke:none;font-family:var(--sans);font-size:12px}
 .tn{fill:var(--sv3);stroke:none;font-family:var(--sans);font-size:12px}
 
-.bottom{height:56px;flex:none;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;padding:0 16px}
+.bottom{height:48px;flex:none;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;padding:0 16px}
 .bottom .btns{display:flex;gap:8px}
-.btn{height:40px;padding:0 24px;border-radius:var(--r);border:1px solid var(--line);background:transparent;color:var(--t-body);font:inherit}
+.btn{height:32px;padding:0 24px;border-radius:var(--r);border:1px solid var(--line);background:transparent;color:var(--t-body);font:inherit}
 .btn.quiet{color:var(--t-note)}
 .btn.ok{background:var(--acc);border-color:var(--acc);color:var(--acc-ink)}
 
@@ -164,7 +177,7 @@ body{background:var(--page);color:var(--t-body);font-family:var(--sans);font-siz
     </div>
   </div>
   <div class="bottom">
-    <button class="btn quiet">Show the working</button>
+    <button class="btn quiet">Print the working</button>
     <div class="btns"><button class="btn">Cancel</button><button class="btn ok">OK</button></div>
   </div>
 </div>
@@ -186,7 +199,7 @@ body{background:var(--page);color:var(--t-body);font-family:var(--sans);font-siz
     <li><b>Anything that still needs you is marked twice:</b> an amber outline with a "Needs you" tag, and a line in the band naming it. When nothing needs you, step 1 says so (rules 14, 24, 26).</li>
     <li><b>A figure you changed is marked "Changed",</b> and the band says what it was before (Detention share was 1,000 L) (rule 26).</li>
     <li><b>The preview is back, on the left.</b> It is the drawing as AutoCAD shows it, with the parts counted as storage outlined, and a one-line chain showing where the orifice pit sits in the system (rule 25).</li>
-    <li><b>Step 2 is read off the drawing:</b> the areas and the storage items. Change the drawing, not this window (rules 9, 11, 23).</li>
+    <li><b>Step 2 is read off the drawing:</b> the areas and the storage items, all plain text. Which pits hold water is now a boxed choice in step 1 (rules 9, 11, 23).</li>
     <li><b>Step 3 is the answers:</b> storage and discharge, each with its answer and a double-lined result. Storage is Provided less Needed; when short it reads Needed less Provided, so the sign is always right (rules 8, 9).</li>
     <li><b>Dark ground, rose button.</b> One scheme; the rose is on OK and the selected method only, and the red is now orange-red so rose never looks like a warning (rules 5, 14, 15, 16).</li>
     <li><b>Ordinary figures.</b> One font for words and numbers, the same height and weight, no slashed zeros (rule 10).</li>
@@ -205,62 +218,52 @@ body{background:var(--page);color:var(--t-body);font-family:var(--sans);font-siz
   var ground = q.get('ground')==='mid'?'mid':(q.get('ground')==='lighter'?'lighter':'dark');
 
   var grounds={
-    lighter:{win:'#4E5158',card:'#62656E',well:'#40434A',line:'#7C8089',field:'#787B85',fl:'#D5D8DC',a:'#FFFFFF',b:'#F0F1F3',n:'#E2E4E8',sv:['#B9BCC3','#E6E8EB','#F0F1F3','#E2E4E8']},
-    mid:{win:'#3F4247',card:'#50535A',well:'#313338',line:'#6A6D75',field:'#62656D',fl:'#B9BCC3',a:'#FFFFFF',b:'#E6E8EB',n:'#CBCED3',sv:['#9EA2AA','#D5D8DC','#E6E8EB','#CBCED3']},
-    dark:{win:'#2B2D30',card:'#383B40',well:'#232528',line:'#4A4D53',field:'#4A4D55',fl:'#8A8E96',a:'#F3F4F5',b:'#D2D5DA',n:'#A9AEB6',sv:['#80848C','#C8CBD0','#DADCE0','#B4B8BE']}
+    lighter:{unit:'#F0F1F3',win:'#4E5158',card:'#62656E',well:'#40434A',line:'#7C8089',field:'#787B85',fl:'#D5D8DC',a:'#FFFFFF',b:'#F0F1F3',n:'#E2E4E8',sv:['#B9BCC3','#E6E8EB','#F0F1F3','#E2E4E8']},
+    mid:{unit:'#E6E8EB',win:'#3F4247',card:'#50535A',well:'#313338',line:'#6A6D75',field:'#62656D',fl:'#B9BCC3',a:'#FFFFFF',b:'#E6E8EB',n:'#CBCED3',sv:['#9EA2AA','#D5D8DC','#E6E8EB','#CBCED3']},
+    dark:{unit:'#C8CBD0',win:'#2B2D30',card:'#383B40',well:'#232528',line:'#4A4D53',field:'#4A4D55',fl:'#8A8E96',a:'#F3F4F5',b:'#D2D5DA',n:'#A9AEB6',sv:['#80848C','#C8CBD0','#DADCE0','#B4B8BE']}
   };
 
   var tick='<svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#10131A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 L5 9 L10 3"/></svg>';
   var rain=[['5 min','98.6'],['10 min','73.6'],['15 min','60.1'],['20 min','51.5'],['25 min','45.5'],['30 min','40.9']];
 
   function previewSvg(){
-    var T='font-family="IBM Plex Sans, Segoe UI, sans-serif" letter-spacing="0.5"';
-    return '<svg width="348" height="610" viewBox="0 0 348 610">'+
-    '<rect x="0" y="0" width="348" height="610" rx="8" fill="#16181B"/>'+
-    '<text x="16" y="28" fill="#E8EAED" font-size="10" '+T+'>SITE PLAN</text>'+
-    '<circle cx="318" cy="26" r="10" fill="none" stroke="#8A8F96"/><path d="M318 14 V22" stroke="#8A8F96"/><text x="318" y="31" text-anchor="middle" fill="#8A8F96" font-size="9" '+T+'>N</text>'+
-    // boundary
-    '<rect x="24" y="48" width="300" height="480" fill="none" stroke="#E8EAED" stroke-width="1"/>'+
-    '<text x="174" y="43" text-anchor="middle" fill="#8A8F96" font-size="9" '+T+'>15.00</text>'+
-    // house
-    '<rect x="44" y="72" width="170" height="150" fill="none" stroke="#9AA0A8" stroke-width="1.2"/>'+
-    '<path d="M44 140 H214" stroke="#5E636B"/>'+
-    '<text x="129" y="152" text-anchor="middle" fill="#8A8F96" font-size="10" '+T+'>HOUSE</text>'+
-    // driveway
-    '<path d="M44 528 V290 H108 V528" fill="none" stroke="#7C8189" stroke-width="1"/>'+
-    '<text transform="translate(80 420) rotate(-90)" text-anchor="middle" fill="#6E737B" font-size="9" '+T+'>DRIVEWAY</text>'+
-    // kerb
-    '<path d="M0 566 H348" stroke="#8A8F96" stroke-width="1"/><path d="M0 570 H348" stroke="#5E636B" stroke-width="1"/>'+
-    '<text x="16" y="590" fill="#6E737B" font-size="9" '+T+'>KERB</text>'+
-    // pipe halo (counted as storage)
-    '<path d="M270 150 V358" stroke="#F3F4F5" stroke-width="11" opacity="0.3" stroke-linecap="round"/>'+
-    // detention pipe
-    '<path d="M270 150 V482" stroke="#4A90E2" stroke-width="5" stroke-dasharray="12 5"/>'+
-    '<text transform="translate(247 320) rotate(-90)" text-anchor="middle" fill="#E8EAED" font-size="9" '+T+'>225 DIA. STORMPRO PIPE AT 1 IN 200</text>'+
-    // tank + halo
-    '<circle cx="270" cy="128" r="28" fill="none" stroke="#F3F4F5" stroke-width="1" opacity="0.9"/>'+
-    '<circle cx="270" cy="128" r="22" fill="#16181B" stroke="#E8EAED" stroke-width="1.2"/>'+
-    '<path d="M270 100 V90" stroke="#E8EAED" stroke-width="0.8"/>'+
-    '<text x="270" y="82" text-anchor="middle" fill="#E8EAED" font-size="9" '+T+'>WT1 5000 L</text>'+
-    // P1 and P2
-    '<rect x="260" y="230" width="20" height="20" rx="3" fill="none" stroke="#F3F4F5" stroke-width="1"/>'+
-    '<rect x="263" y="233" width="14" height="14" fill="#16181B" stroke="#E8EAED"/><path d="M263 233 L277 247 M277 233 L263 247" stroke="#5E636B" stroke-width="0.6"/>'+
-    '<path d="M280 240 H292" stroke="#E8EAED" stroke-width="0.8"/><circle cx="301" cy="240" r="9" fill="none" stroke="#E8EAED"/><text x="301" y="243.5" text-anchor="middle" fill="#E8EAED" font-size="9" '+T+'>P1</text>'+
-    '<rect x="260" y="350" width="20" height="20" rx="3" fill="none" stroke="#F3F4F5" stroke-width="1"/>'+
-    '<rect x="263" y="353" width="14" height="14" fill="#16181B" stroke="#E8EAED"/><path d="M263 353 L277 367 M277 353 L263 367" stroke="#5E636B" stroke-width="0.6"/>'+
-    '<path d="M280 360 H292" stroke="#E8EAED" stroke-width="0.8"/><circle cx="301" cy="360" r="9" fill="none" stroke="#E8EAED"/><text x="301" y="363.5" text-anchor="middle" fill="#E8EAED" font-size="9" '+T+'>P2</text>'+
-    // P3 dimmed
-    '<path d="M262 360 H208" stroke="#5E636B" stroke-width="1.5" stroke-dasharray="5 4"/>'+
-    '<rect x="192" y="353" width="14" height="14" fill="#16181B" stroke="#5E636B"/>'+
-    '<text x="199" y="384" text-anchor="middle" fill="#5E636B" font-size="9" '+T+'>P3 NOT USED</text>'+
-    // orifice pit
-    '<rect x="260" y="482" width="20" height="20" fill="#16181B" stroke="#E8EAED" stroke-width="1.2"/><circle cx="270" cy="492" r="3" fill="none" stroke="#E8EAED"/>'+
-    '<text x="252" y="488" text-anchor="end" fill="#E8EAED" font-size="9" '+T+'>ORIFICE PIT</text><text x="252" y="500" text-anchor="end" fill="#E8EAED" font-size="9" '+T+'>69 DIA.</text>'+
-    // pipe to LPD with flow arrow
-    '<path d="M270 502 V562" stroke="#4A90E2" stroke-width="2"/><path d="M265 548 L270 558 L275 548 Z" fill="#4A90E2"/>'+
-    '<text x="284" y="548" fill="#E8EAED" font-size="9" '+T+'>5.84 L/S</text>'+
-    '<circle cx="270" cy="568" r="5" fill="none" stroke="#E8EAED"/>'+
-    '<text x="282" y="590" fill="#E8EAED" font-size="9" '+T+'>LPD</text>'+
+    var T='font-family="IBM Plex Sans, Segoe UI, sans-serif" letter-spacing="0.4"';
+    var W='#C8CBD0';
+    function tx(x,y,t,extra){return '<text x="'+x+'" y="'+y+'" fill="'+W+'" font-size="12" '+T+' '+(extra||'')+'>'+t+'</text>';}
+    return '<svg width="348" height="556" viewBox="0 0 348 556">'+
+    '<rect x="0" y="0" width="348" height="556" rx="8" fill="#16181B"/>'+
+    '<path d="M36 26 H336 M36 21 V31 M336 21 V31" stroke="#8A8F96" stroke-width="1"/>'+
+    tx(186,18,'20.00','text-anchor="middle"')+
+    '<path d="M24 40 V490 M19 40 H29 M19 490 H29" stroke="#8A8F96" stroke-width="1"/>'+
+    tx(0,0,'30.00','text-anchor="middle" transform="translate(14 265) rotate(-90)"')+
+    '<rect x="36" y="40" width="300" height="450" fill="none" stroke="#E8EAED" stroke-width="1"/>'+
+    '<rect x="36" y="40" width="75" height="450" fill="none" stroke="#9AA0A8" stroke-width="1"/>'+
+    tx(0,0,'PAVING 150 m²','text-anchor="middle" transform="translate(78 265) rotate(-90)"')+
+    '<rect x="114" y="52" width="216" height="240" fill="none" stroke="#9AA0A8" stroke-width="1.2"/>'+
+    tx(222,176,'ROOF 230 m²','text-anchor="middle"')+
+    tx(122,314,'GARDEN 220 m²')+
+    '<path d="M0 520 H348" stroke="#8A8F96"/><path d="M0 524 H348" stroke="#5E636B"/>'+
+    tx(12,544,'KERB')+
+    '<path d="M294 350 V426" stroke="#F3F4F5" stroke-width="11" opacity="0.3" stroke-linecap="round"/>'+
+    '<path d="M294 350 V449" stroke="#4A90E2" stroke-width="5" stroke-dasharray="10 4"/>'+
+    tx(276,392,'225 DIA. STORMPRO','text-anchor="end"')+tx(276,406,'PIPE AT 1 IN 200','text-anchor="end"')+
+    '<circle cx="294" cy="330" r="26" fill="none" stroke="#F3F4F5" stroke-width="1"/>'+
+    '<circle cx="294" cy="330" r="20" fill="#16181B" stroke="#E8EAED" stroke-width="1.2"/>'+
+    '<path d="M274 330 H244" stroke="#E8EAED" stroke-width="0.8"/>'+
+    tx(240,334,'WT1 5000 L','text-anchor="end"')+
+    '<rect x="283" y="365" width="22" height="22" rx="3" fill="none" stroke="#F3F4F5"/><rect x="287" y="369" width="14" height="14" fill="#16181B" stroke="#E8EAED"/><path d="M287 369 L301 383 M301 369 L287 383" stroke="#5E636B" stroke-width="0.6"/>'+
+    '<path d="M305 376 H311" stroke="#E8EAED" stroke-width="0.8"/><circle cx="322" cy="376" r="11" fill="none" stroke="#E8EAED"/>'+tx(322,380,'P1','text-anchor="middle"')+
+    '<rect x="283" y="413" width="22" height="22" rx="3" fill="none" stroke="#F3F4F5"/><rect x="287" y="417" width="14" height="14" fill="#16181B" stroke="#E8EAED"/><path d="M287 417 L301 431 M301 417 L287 431" stroke="#5E636B" stroke-width="0.6"/>'+
+    '<path d="M305 424 H311" stroke="#E8EAED" stroke-width="0.8"/><circle cx="322" cy="424" r="11" fill="none" stroke="#E8EAED"/>'+tx(322,428,'P2','text-anchor="middle"')+
+    '<path d="M187 424 H283" stroke="#5E636B" stroke-width="1.5" stroke-dasharray="5 4"/>'+
+    '<rect x="173" y="417" width="14" height="14" fill="#16181B" stroke="#5E636B"/>'+
+    tx(180,446,'P3 NOT USED','text-anchor="middle"')+
+    '<rect x="285" y="449" width="18" height="18" fill="#16181B" stroke="#E8EAED" stroke-width="1.2"/><circle cx="294" cy="458" r="3" fill="none" stroke="#E8EAED"/>'+
+    tx(276,462,'ORIFICE PIT','text-anchor="end"')+tx(276,476,'69 DIA.','text-anchor="end"')+
+    '<path d="M294 467 V516" stroke="#4A90E2" stroke-width="2"/><path d="M289 492 L294 502 L299 492 Z" fill="#4A90E2"/>'+
+    tx(276,500,'5.84 L/S','text-anchor="end"')+
+    '<rect x="288" y="516" width="12" height="12" fill="#16181B" stroke="#E8EAED"/>'+
+    tx(276,544,'COUNCIL PIT (LPD)','text-anchor="end"')+
     '</svg>';
   }
 
@@ -270,9 +273,11 @@ body{background:var(--page);color:var(--t-body);font-family:var(--sans);font-siz
     var provided = short?'1.20':'1.70';
 
     // preview
-    document.getElementById('preview').innerHTML = previewSvg()+
-      '<div class="chain"><span class="chip">WT1</span>&rarr;<span class="chip">Pipe</span>&rarr;<span class="chip">P1</span>&rarr;<span class="chip">P2</span>&rarr;<span class="chip lit">Orifice pit</span>&rarr;<span class="chip">LPD</span></div>'+
-      '<div class="note">Preview: the drawing as AutoCAD shows it. Made-up site.<br>White outline: counted as storage.</div>';
+    document.getElementById('preview').innerHTML =
+      '<div class="phead"><span class="t">The drawing</span><span class="note">What this window is reading. Outlined in white: counted as storage.</span></div>'+previewSvg()+
+      '<div class="chain"><span class="chip">WT1</span>&rarr;<span class="chip">Pipe</span>&rarr;<span class="chip">P1</span>&rarr;<span class="chip">P2</span>&rarr;<span class="chip lit">Orifice pit</span>&rarr;<span class="chip">Council pit (LPD)</span></div>'+
+      '<div class="note foot">Lit: where this window\'s answer applies (the orifice pit)</div>'+
+      '<div class="note foot">Preview: the drawing as AutoCAD shows it. Made-up site.</div>';
 
     // band
     var bandCls = short?'red':(unk?'amber':'green');
@@ -287,19 +292,25 @@ body{background:var(--page);color:var(--t-body);font-family:var(--sans);font-siz
     function inp(label,val,unit,w,extra,cls){return '<div class="fld" style="width:'+w+'px"><span class="note">'+label+'</span><div class="inp '+(cls||'')+'">'+(extra||'')+'<span>'+val+'</span>'+(unit?'<span class="u">'+unit+'</span>':'')+'</div></div>';}
     var detExtra = short?'<span class="pill changed" style="margin-right:auto">Changed</span>':'';
     var rainWells = rain.map(function(r){
-      return '<div class="fld" style="width:64px"><span class="note">'+r[0]+'</span><div class="inp'+(unk?' nk needs':'')+'">'+(unk?'Not known':'<span>'+r[1]+'</span>')+'</div></div>';
+      return '<div class="fld" style="width:80px"><span class="note">'+r[0]+'</span><div class="inp'+(unk?' nk needs':'')+'">'+(unk?'Not known':'<span>'+r[1]+'</span>')+'</div></div>';
     }).join('');
+    function tk(lbl,on){return '<div class="inp tick" style="width:56px"><span class="cb2'+(on?' on':'')+'">'+(on?tick:'')+'</span><span>'+lbl+'</span></div>';}
     var needsRight = unk?'<span class="pill amber">1 figure needs you</span>':'<span class="note">Nothing needs you</span>';
     document.getElementById('s1c').innerHTML =
-      '<div class="shead tall"><span class="n">1</span><span class="t">What you type</span><span class="note">The few figures only you can give. Everything else is worked out.</span><span class="sp"></span>'+needsRight+
-        '<span class="methods" style="margin-left:16px"><button class="mbtn sel" id="m1">Office method (Boyd\'s)</button><button class="mbtn" id="m2">Council tool (OSD4W)</button></span></div>'+
-      '<div class="row1"><div class="fields">'+
-        inp('Site area','600.00','m²',96)+
-        inp('Allowed discharge','6.00','L/s',112)+
-        inp('Storm, 1 in','10','',72)+
-        inp('Tank size','5,000','L',88)+
-        inp('Detention share',short?'500':'1,000','L',128,detExtra)+
-      '</div><div class="rain"><div class="gl"><span>Site rainfall</span>'+(unk?'<span class="pill amber">Needs you</span>':'<span class="note">1 in 10, mm/h</span>')+'</div>'+rainWells+'</div></div>';
+      '<div class="shead"><span class="n">1</span><span class="t">What you type</span><span class="note">The few figures only you can give. Everything else is worked out.</span><span class="sp"></span>'+needsRight+'</div>'+
+      '<div class="row1">'+
+        '<div class="fields">'+
+          inp('Site area','600.00','m²',96)+
+          inp('Allowed discharge','6.00','L/s',112)+
+          inp('Storm, 1 in','10','',72)+
+          '<div class="pair"><div class="pr">'+inp('Tank size','5,000','L',88)+inp('Detention share',short?'500':'1,000','L',128,detExtra)+'</div><span class="note">Same figures as on tank WT1; change either place</span></div>'+
+        '</div>'+
+        '<div class="grp"><span class="note">Pits that hold water</span><div class="gb">'+tk('P1',true)+tk('P2',true)+tk('P3',false)+'</div></div>'+
+      '</div>'+
+      '<div class="row1 rowb">'+
+        '<div class="rain"><div class="gl"><span>Site rainfall</span>'+(unk?'<span class="pill amber">Needs you</span>':'<span class="note">1 in 10, mm/h</span>')+'</div>'+rainWells+'</div>'+
+        '<div class="grp"><span class="note">Method</span><div class="gb"><button class="mbtn sel" id="m1">Office method (Boyd\'s)</button><button class="mbtn" id="m2">Council tool (OSD4W)</button></div></div>'+
+      '</div>';
 
     // step 2
     function r5(s,l,src,a,x,e){return '<div class="s">'+s+'</div><div class="l">'+l+(src?'<small>'+src+'</small>':'')+'</div><div>'+a+'</div><div class="x">'+x+'</div><div>'+e+'</div>';}
@@ -313,15 +324,14 @@ body{background:var(--page);color:var(--t-body);font-family:var(--sans);font-siz
           r5('+','Garden','worked out','220.00','&times; 0.35','77.00')+
           '<div class="s"></div><div class="l">Total</div><div class="line">600.00</div><div class="x"></div><div class="line">419.00</div>'+
           '<div class="s">=</div><div class="l">Share that runs off <small>419.00 &divide; 600.00</small></div><div></div><div class="x"></div><div class="line dbl strong">0.698</div>'+
-        '</div></div>'+
+        '</div><div class="note" style="margin-top:0">Runoff coefficient. Shown as 0.70 elsewhere.</div></div>'+
         '<div style="width:400px"><div class="sum">'+
           '<div class="s"></div><div class="l">Tank WT1 <small>room for detention</small></div><div class="v">'+tank+'</div>'+
           '<div class="s">+</div><div class="l">Pipes <small>225 dia, 14.00 m</small></div><div class="v">0.56</div>'+
-          '<div class="s">+</div><div class="l"><span class="cb on">'+tick+'</span>P1 holds water</div><div class="v">0.08</div>'+
-          '<div class="s">+</div><div class="l"><span class="cb on">'+tick+'</span>P2 holds water</div><div class="v">0.06</div>'+
-          '<div class="s off">+</div><div class="l off"><span class="cb"></span>P3 holds water <small>not added</small></div><div class="v off">0.04</div>'+
-          '<div class="s">=</div><div class="l">Provided</div><div class="v line">'+provided+'</div>'+
-        '</div></div>'+
+          '<div class="s">+</div><div class="l">P1 holds water</div><div class="v">0.08</div>'+
+          '<div class="s">+</div><div class="l">P2 holds water</div><div class="v">0.06</div>'+
+          '<div class="s">=</div><div class="l">Provided</div><div class="v line dbl strong">'+provided+'</div>'+
+        '</div><div class="note" style="margin-top:0">P3 not used (0.04 m³ not counted)</div></div>'+
       '</div>';
 
     // step 3
@@ -362,7 +372,7 @@ body{background:var(--page);color:var(--t-body);font-family:var(--sans);font-siz
     document.getElementById('s3c').innerHTML =
       '<div class="shead"><span class="n">3</span><span class="t">The answers</span><span class="note">Does the site hold the storm, and does it let out no more than allowed?</span></div>'+
       '<div class="cols">'+
-        '<div style="width:420px"><div class="ans">'+ans+pill+'</div>'+bar+'<div class="sum">'+srows+'</div><div class="note" style="margin-top:8px">Storm length that needs the most storage.</div></div>'+
+        '<div style="width:420px"><div class="ans">'+ans+pill+'</div>'+bar+'<div class="sum">'+srows+'</div><div class="note" style="margin-top:0">Storm length that needs the most storage.</div></div>'+
         '<div style="flex:1;display:flex;gap:24px"><div style="width:392px"><div class="ans"><span class="big strong">5.84</span><span>L/s of 6.00 allowed</span><span class="pill green">Suits</span></div><div class="sum">'+
           '<div class="s"></div><div class="l">Hole size (orifice) <small>worked out, rounded down</small></div><div class="v">69</div>'+
           '<div class="s"></div><div class="l">Plate</div><div class="v">380.0</div>'+
@@ -370,7 +380,7 @@ body{background:var(--page);color:var(--t-body);font-family:var(--sans);font-siz
           '<div class="s">=</div><div class="l">Water height above the hole (head)</div><div class="v line">345.5</div>'+
           '<div class="s">=</div><div class="l">Flow, L/s <small>0.6 &times; hole area &times; &radic;(2 &times; 9.81 &times; head)</small></div><div class="v line dbl strong">5.84</div>'+
         '</div></div>'+
-        '<div style="padding-top:40px">'+sk+'<div class="note">Hole, plate and head in mm.</div></div></div>'+
+        '<div style="padding-top:16px">'+sk+'<div class="note">Hole, plate and head in mm.</div></div></div>'+
       '</div>';
 
     ['s1','s2','s3'].forEach(function(id,i){document.getElementById(id).className=(['suits','short','notknown'][i]===state)?'on':'';});
@@ -386,7 +396,7 @@ body{background:var(--page);color:var(--t-body);font-family:var(--sans);font-siz
   function applyGround(){
     var g=grounds[ground],r=document.documentElement.style;
     r.setProperty('--win',g.win);r.setProperty('--card',g.card);r.setProperty('--well',g.well);r.setProperty('--line',g.line);
-    r.setProperty('--field',g.field);r.setProperty('--fieldline',g.fl);
+    r.setProperty('--unit',g.unit);r.setProperty('--field',g.field);r.setProperty('--fieldline',g.fl);
     r.setProperty('--t-answer',g.a);r.setProperty('--t-body',g.b);r.setProperty('--t-note',g.n);
     g.sv.forEach(function(c,i){r.setProperty('--sv'+i,c);});
     ['g1','g2','g3'].forEach(function(id,i){document.getElementById(id).className=(['lighter','mid','dark'][i]===ground)?'on':'';});
