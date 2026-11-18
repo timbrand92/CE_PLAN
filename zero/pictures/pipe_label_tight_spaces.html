@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pipe labels in tight spaces: four ways</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --page:#1B1C1F; --cad:#16181B; --text:#ECEDEF; --grey:#A9ADB4; --line:#3A3D43; --gold:#E5B84B;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--page);color:var(--text);font-family:"IBM Plex Sans","Segoe UI",Arial,sans-serif;font-size:16px;line-height:1.5}
+  main{max-width:948px;margin:0 auto;padding:32px 24px}
+  h1{font-size:28px;line-height:1.25;margin:0 0 8px;font-weight:600}
+  .why{color:var(--grey);margin:0 0 32px}
+  section.panel{margin:0 0 32px}
+  h2{font-size:18px;margin:0 0 8px;font-weight:600}
+  h2 .rec{color:var(--gold)}
+  svg{display:block;width:100%;height:auto;background:var(--cad);border:1px solid var(--line)}
+  svg text{font-family:"IBM Plex Sans","Segoe UI",Arial,sans-serif;font-size:12px;fill:#fff;letter-spacing:.2px}
+  svg text.dim{fill:#A9ADB4}
+  .notes{margin:8px 0 0;font-size:14px}
+  .notes p{margin:0 0 8px}
+  .notes b{font-weight:600}
+  .good b{color:#7FD08A}
+  .cost b{color:#F29A7A}
+  .do{border-top:1px solid var(--line);padding-top:24px}
+  .do h2{margin-bottom:8px}
+  .do ol{margin:0 0 16px;padding-left:24px}
+  .do li{margin:0 0 8px}
+  .same{color:var(--grey);margin:0}
+</style>
+</head>
+<body>
+<main>
+<h1>Pipe labels in tight spaces: four ways</h1>
+<p class="why">The full label is about 6.8 m long on a 1:100 plan, longer than most of the 4 m pipes it describes. Same bit of plan in all four, drawn as AutoCAD shows it: a 1.5 m side passage between the house wall and the boundary fence.</p>
+
+<div id="panels"></div>
+
+<div class="do">
+<h2>What I would do</h2>
+<ol>
+  <li><b>Standing note by default.</b> One note on the sheet for the ordinary pipes, full labels only on the exceptions.</li>
+  <li><b>Two-line stack as a click.</b> Offered per label, for the tight spots.</li>
+  <li><b>Full one-line label always available.</b> Your office wording, for anyone who wants it on every pipe.</li>
+</ol>
+<p class="same">Your wording is unchanged in all four; only how much of it is drawn changes.</p>
+</div>
+</main>
+
+<script>
+// Scale 40 px per metre: passage 60 px = 1.5 m, pit spacing 160 px = 4 m, full label ~270 px = 6.8 m.
+var NS="http://www.w3.org/2000/svg";
+var WALL=120, FENCE=180, PY=150;           // wall line, fence line, pipe centre line
+var P1=330, P2=490, P3=650, OUT=170, TANK=834, DPX=490;
+var BLUE="#4DA3FF";
+
+function el(n,a,t){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);if(t!==undefined)e.textContent=t;return e}
+
+function base(){
+  var s=el("svg",{viewBox:"0 0 900 360",role:"img"});
+  // hatch on house side of wall
+  for(var x=-10;x<900;x+=10){s.appendChild(el("line",{x1:x,y1:WALL,x2:x+10,y2:WALL-10,stroke:"#6C7077","stroke-width":1}))}
+  s.appendChild(el("line",{x1:0,y1:WALL,x2:900,y2:WALL,stroke:"#A9ADB4","stroke-width":3}));
+  s.appendChild(el("text",{x:20,y:56,class:"dim"},"HOUSE"));
+  s.appendChild(el("text",{x:20,y:FENCE+16,class:"dim"},"1.5 m PASSAGE (WALL TO FENCE)"));
+  s.appendChild(el("line",{x1:0,y1:FENCE,x2:900,y2:FENCE,stroke:"#fff","stroke-width":1}));
+  s.appendChild(el("text",{x:880,y:FENCE+16,class:"dim","text-anchor":"end"},"BOUNDARY FENCE"));
+  // pipes (right to left flow)
+  function pipe(x1,x2){
+    s.appendChild(el("line",{x1:x1,y1:PY,x2:x2,y2:PY,stroke:BLUE,"stroke-width":4,"stroke-dasharray":"10 6"}));
+    var m=(x1+x2)/2;
+    s.appendChild(el("polygon",{points:(m-6)+","+PY+" "+(m+4)+","+(PY-6)+" "+(m+4)+","+(PY+6),fill:BLUE}));
+  }
+  pipe(OUT,P1); pipe(P1,P2); pipe(P2,P3); pipe(P3,TANK-24);
+  s.appendChild(el("line",{x1:OUT,y1:PY-10,x2:OUT,y2:PY+10,stroke:BLUE,"stroke-width":2}));
+  // downpipe stub joining P2
+  s.appendChild(el("line",{x1:DPX,y1:WALL-12,x2:DPX,y2:PY-11,stroke:BLUE,"stroke-width":3,"stroke-dasharray":"6 4"}));
+  s.appendChild(el("circle",{cx:DPX,cy:WALL-26,r:13,fill:"#16181B",stroke:"#fff","stroke-width":1.5}));
+  s.appendChild(el("text",{x:DPX,y:WALL-22,"text-anchor":"middle"},"DP"));
+  // tank
+  s.appendChild(el("circle",{cx:TANK,cy:PY,r:24,fill:"#16181B",stroke:"#fff","stroke-width":1.5}));
+  s.appendChild(el("text",{x:TANK,y:PY+4,"text-anchor":"middle"},"TANK"));
+  // pits and tags
+  [[P1,"P1"],[P2,"P2"],[P3,"P3"]].forEach(function(p){
+    s.appendChild(el("rect",{x:p[0]-11,y:PY-11,width:22,height:22,fill:"#16181B",stroke:"#fff","stroke-width":1.5}));
+    s.appendChild(el("line",{x1:p[0],y1:PY+11,x2:p[0],y2:FENCE+14,stroke:"#6C7077","stroke-width":1}));
+    s.appendChild(el("circle",{cx:p[0],cy:FENCE+25,r:11,fill:"#16181B",stroke:"#fff","stroke-width":1}));
+    s.appendChild(el("text",{x:p[0],y:FENCE+29,"text-anchor":"middle"},p[1]));
+  });
+  return s;
+}
+function label(s,x,y,t,anchor){s.appendChild(el("text",{x:x,y:y,"text-anchor":anchor||"middle"},t))}
+function leader(s,x1,y1,x2,y2){s.appendChild(el("line",{x1:x1,y1:y1,x2:x2,y2:y2,stroke:"#fff","stroke-width":1}))}
+
+var MID={out:(OUT+P1)/2, b:(P1+P2)/2, a:(P2+P3)/2, c:(P3+TANK-24)/2};
+var FULL="100 DIA. UPVC PIPE AT 1 IN 100 MIN.";
+var LY=PY-6;   // single-line baseline just above the pipe
+
+var panels=[
+ {h:"Panel 1. Today: the full label on every pipe",
+  draw:function(){var s=base();
+    label(s,MID.out,LY,FULL);
+    label(s,MID.b,LY,FULL);
+    // two pushed out on leaders
+    leader(s,MID.a,PY+4,MID.a,238); label(s,MID.a,252,FULL);
+    leader(s,MID.c,PY+4,MID.c,270); label(s,MID.c,284,FULL);
+    return s},
+  good:"Nothing to learn. Every pipe says everything.",
+  cost:"Labels pile onto each other and the pits, and two had to be dragged out across the fence on leaders."},
+ {h:"Panel 2. Two-line stack",
+  draw:function(){var s=base();
+    [MID.out,MID.b,MID.a,MID.c].forEach(function(m){
+      label(s,m,LY-14,"100 DIA. UPVC PIPE"); label(s,m,LY,"AT 1 IN 100 MIN.");});
+    return s},
+  good:"Half the length, so it fits between the pits on a 4 m pipe.",
+  cost:"Twice the height, so it crowds a 1.5 m passage and sits hard against the wall."},
+ {h:"Panel 3. Short form",
+  draw:function(){var s=base();
+    [MID.out,MID.b,MID.a,MID.c].forEach(function(m){label(s,m,LY,"100 UPVC 1 IN 100");});
+    label(s,24,262,"LEGEND: 100 UPVC 1 IN 100 = 100 DIA. UPVC PIPE AT 1 IN 100 MIN.","start");
+    return s},
+  good:"One line, about half the length. Fits every pipe on the plan.",
+  cost:"Needs one legend line on the sheet to explain it, and it is no longer your exact office wording."},
+ {h:"Panel 4. One standing note, label only the exceptions", rec:" (recommended)",
+  draw:function(){var s=base();
+    label(s,P1-8,LY,"150 DIA. UPVC SN8 PIPE AT 1 IN 100 MIN.","end");
+    // boxed note
+    s.appendChild(el("rect",{x:24,y:218,width:200,height:68,fill:"none",stroke:"#fff","stroke-width":1.5}));
+    label(s,36,238,"ALL PIPES 100 DIA. UPVC","start");
+    label(s,36,254,"AT 1 IN 100 MIN.","start");
+    label(s,36,270,"UNLESS NOTED OTHERWISE","start");
+    return s},
+  good:"The plan stays clean and the eye goes to what is different. The plug-in knows every pipe's size and grade, so it writes the note and picks the exceptions by itself, and the schedule still lists every pipe.",
+  cost:"A council checker must read the note. A pipe with no label looks unfinished to someone who has not seen the note."}
+];
+
+var host=document.getElementById("panels");
+panels.forEach(function(p){
+  var sec=document.createElement("section"); sec.className="panel";
+  var h=document.createElement("h2"); h.textContent=p.h;
+  if(p.rec){var r=document.createElement("span");r.className="rec";r.textContent=p.rec;h.appendChild(r)}
+  sec.appendChild(h); sec.appendChild(p.draw());
+  var n=document.createElement("div"); n.className="notes";
+  n.innerHTML='<p class="good"><b>Good:</b> </p><p class="cost"><b>Cost:</b> </p>';
+  n.querySelector(".good").appendChild(document.createTextNode(p.good));
+  n.querySelector(".cost").appendChild(document.createTextNode(p.cost));
+  sec.appendChild(n); host.appendChild(sec);
+});
+</script>
+</body>
+</html>
