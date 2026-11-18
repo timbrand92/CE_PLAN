@@ -2,56 +2,62 @@
 
 **Why this file exists.** Tim, 17 Nov 2026: "i need a way to understand wht we have planned, what we have built, how close we are to finishing or getting a ready version for me to test and bugs and anythign else thats important if i was a director looking to get summaries. i need this everytime i ask how things are going and also you need to keep me on track with planning, building annd beyond". The planning chat updates this page before every progress answer and always uses these seven headings in this order.
 
-**Last updated:** Wed 18 Nov 2026, about 11:30 am.
+**Last updated:** Wed 18 Nov 2026, mid afternoon.
 
 ## 1. Headline
 
-Planning is finished: you have used all seven windows and called them good, with changes. Pit and Pipe tools are built for AutoCAD and get their first real AutoCAD run tonight. There is no version to draft with yet.
+Planning is finished and today you tested it against real use. Your verdict on the windows and your answers to the real-use questions changed the design for the better. Three tools are built for AutoCAD but two need rework to match how you really draw. First AutoCAD run of them is tonight. There is no version to draft with yet.
 
-## 2. Planned: 18 of 18 steps
+## 2. Planned: 18 of 18 steps, plus today's rulings (D-162 to D-196)
 
-All done, 18 Nov. Your verdict on the windows (D-162 to D-169) added: one colour scheme on AutoCAD's grey with a rose accent; a preview that shows the real drawing, where on the plan and where in the system; Levels to be renamed; the Schedule's Columns card and scale choice out; speed as a requirement; and cut the typing by using the whole system (an input audit is being written).
+1. **Look:** one colour scheme on AutoCAD's own grey, rose accent, colour drawing the eye; status colours for status only.
+2. **Preview, every window:** the drawing as AutoCAD shows it, where on the plan, where in the system.
+3. **Names:** Tank is TANK / WT. Levels is now LONGSECTION / LG.
+4. **Schedule:** the Columns card and scale choice are out.
+5. **Speed is a requirement,** with time limits measured every night (`stage6\PERFORMANCE.md`).
+6. **Cut the typing:** 85 figures typed on a two-unit job today, 20 to 31 possible; five changes approved in order (`design\INPUT_AUDIT.md`).
+7. **Unfinished is normal:** loose pipes are allowed, quiet, and fill in when joined.
+8. **Real use:** about 70 situations walked through; all 18 questions answered (`design\SITUATIONS.md`). Among them: assumed prints APPROX., not known prints TBC, cover levels are the engineer's and never the survey's, bends on every pipe, a real outlet, labels move with their pit, the drawing keeps the standards it was designed with.
 
 ## 3. Built (four separate facts)
 
-1. **The brain:** built 5 of 5 pieces; 536 automatic checks pass; each piece reviewed by something that did not build it.
-2. **The seven windows on a test bench, outside AutoCAD:** built 7 of 7; 241 checks and 1,170 click steps pass on the builder's side.
-3. **Independent trial of the windows:** three full runs overnight by a tester that did not build them, real mouse and keyboard. Run 1 found wrong figures (commas, impossible figures shown green). Run 2 found more (Levels bent a held grade). Run 3: no wrong figure found, 155 of 155 steps, all seven ready for you, five with a named caution.
-4. **The AutoCAD foundation** (hidden notes on ordinary objects, joins, self-check): written; 87 checks on a pretend drawing; two runs inside real AutoCAD 2027 on a test copy: 23 of 25, then 24 of 25. One gap left: exploding a pipe from code loses its note.
-5. **Tools for AutoCAD:** the Pit tool (PIT / PT) is BUILT and reviewed against a pretend drawing (18 Nov, 8:30 am) but has NOT run in AutoCAD; its first AutoCAD run is tonight after 5:30 pm. Pipe is being built now. Tools proven in AutoCAD: 0 of 7.
+1. **The brain:** built, 549 automatic checks pass, each piece reviewed separately.
+2. **Seven windows on a test bench:** built; three independent trials by real mouse; the last found no wrong figure. You have used all seven and called them good, with changes now queued (scheme, preview, schedule cards).
+3. **AutoCAD foundation:** two runs in real AutoCAD on a test copy: 24 of 25.
+4. **Tools for AutoCAD, built and reviewed on a pretend drawing:** 3 of 7 (Pit, Pipe, Long section). Proven in AutoCAD: 0 of 7.
+5. **Rework found today, before any of it reached AutoCAD:** joining a pipe end later; a real outlet; bends; pipe ends that follow a pit's wall; a pit in a blank drawing; grey for not known; labels that move with the pit.
 6. **Installed: 0. Accepted by you: 0.**
 
 ## 4. How close to a version you can test (estimates, not promises)
 
-1. **Windows to click, outside AutoCAD:** now.
-2. **Pit and Pipe you can draft with in AutoCAD:** about 1 to 2 weeks.
-3. **First release, all seven tools, on your PC:** about 4 to 8 weeks.
+1. **Windows to click, outside AutoCAD:** now (the new scheme and preview are not in them yet).
+2. **Pit and Pipe you can draft with in AutoCAD:** about 2 weeks. Today's rework adds to the earlier 1 to 2 weeks; it does not shorten it.
+3. **First release, all seven tools:** about 5 to 9 weeks.
 4. **Colleagues:** after one real job carried through by you; add 1 to 2 weeks.
-5. Good sign for the estimate: the new test method runs a full AutoCAD pass in about 2 min 20 s (the old way took about 16 min), so each night can fit many passes. The figures tighten after the first AutoCAD night on the Pit tool (tonight).
-6. Stages: A trials mostly done · B foundation: brain yes, AutoCAD side 24 of 25 · C windows done on the bench · D tools in AutoCAD 0 of 7 · E one real job not started.
+5. These tighten after tonight's first AutoCAD run of Pit and Pipe.
 
 ## 5. Problems and bugs
 
-1. **Open in the windows (none a wrong figure):** Levels draws an over-held gap on one pipe; Levels has an inner scroll bar and a cut-off list; "350" alone refused in Pit; small layout and wording items. All listed in `stage6\TRY_THE_WINDOWS.md` and with the build chat.
-2. **Exploding a pipe from code loses its hidden note** (typed EXPLODE kept it in the earlier trial). Needs a typed check with you watching.
-3. **Grip trial crashed AutoCAD** (17 Nov). Cause not proven. Ordinary AutoCAD grips only until understood.
-4. **Double-click** opens our window but AutoCAD's own polyline edit also runs. Not solved.
-5. **SECURELOAD reads 0 in your normal AutoCAD profile** (default 1). Left by the first trial run on 16 Nov. At 0 AutoCAD loads any program without asking. Your call to set it back; our night tests would then need a trusted folder, also your call.
-6. **Not proven:** facts in the Properties palette; the ribbon on screen; update inside AutoCAD; the 2560 x 1440 screen for real; the Boyd's "storage needed" figure by hand.
+1. **The tools as built assumed a tidy finished system.** Found today by you and by the walk-through; rework is under way before any new tool.
+2. **A build mishap today:** a helper script swapped letters through five files. Proven fully undone by a separate reviewer; a rule now forbids bulk find-and-replace.
+3. **Exploding a pipe from code loses its hidden note.** Needs a typed check with you.
+4. **Grip trial crashed AutoCAD; double-click also runs AutoCAD's own polyline edit.** Not solved.
+5. **SECURELOAD reads 0 in your normal AutoCAD profile** (default 1), left by the first trial run. Your call.
+6. **Not proven:** facts in the Properties palette; the ribbon on screen; update inside AutoCAD; the corner locator inside AutoCAD; the Boyd's "storage needed" figure by hand.
+7. **Speed:** not yet measured in AutoCAD. Tonight's run is the baseline.
 
 ## 6. Waiting on Tim
 
-1. **Step 16:** try the seven windows, ten minutes, five answers.
-2. SECURELOAD: set back to 1, or leave.
-3. Two boxes not in the approved mock-ups: "what is over it" in Pipe; pipe size in Detention. Add them?
-4. Slab thicknesses (path 0.10, driveway 0.125, crossover 0.15) are the planning chat's guesses: correct them.
-5. Upper limits for the "Needs a look" lines (how deep, how big, how flat is silly): the build chat's figures are DRAFT.
-6. Detention blue (colour 160) on a real plot; AS 3500.3 underside-of-pavement check; one council's step irons wording.
-7. Ten small DRAFT calls on the Pit tool (the office block as the symbol, label positions and others): to come to you as one clickable batch.
-8. A new outside library used for tests only (reads saved drawings): DRAFT for your yes.
-9. Parked from the testing research: the no-screen engine, Autodesk's cloud engine, a second machine.
-10. The other leftovers of the first trial run.
+1. One office Stormwater Pit saved as `C:\CE_WORK\civil_tests\blocks\pit_seed.dwg`, or say "copy the template".
+2. Three design questions to bring back properly, on a part-drawn job: how the top water level is first chosen; whether the orifice pit is always the last pit; tank re-use against detention.
+3. The small DRAFT calls from the Pit, Pipe and Long section tools (about 30), as clickable batches, after the rework.
+4. SECURELOAD: set back to 1, or leave.
+5. Two boxes not in the mock-ups: "what is over it" in Pipe; pipe size in Detention.
+6. DRAFT figures of mine to correct: slab thicknesses; the speed time limits; upper limits for "Needs a look".
+7. The standing note wording for APPROX.; what form cover-level help takes; laptop screen sizes.
+8. Detention blue on a real plot; the AS 3500.3 underside-of-pavement check; one council's step irons wording.
+9. Parked: the no-screen engine (recommended against for now), the cloud engine, a second machine; the first trial's leftovers.
 
 ## 7. Next step (one only)
 
-You: the short name for Tank (WT is already your alias for Wall-t). Then the input audit comes to you.
+Tonight after 5:30 pm, once your AutoCAD is closed: the first AutoCAD run of Pit and Pipe, with speed measured. You get the result in the morning.

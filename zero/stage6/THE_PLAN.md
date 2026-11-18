@@ -22,7 +22,7 @@ A new CE civil drainage plugin for AutoCAD 2027, built from a blank page, with t
 
 1. **Pit** (PIT / PT): junction, grated, plastic, orifice, pump pit and bought-in units.
 2. **Pipe** (PIPE / CD): new stormwater, charged, suspended, detention (own kind, layer and blue, with a legend line); twin as one pipe.
-3. **Levels along a run** (LEVELS / LV): from either end.
+3. **Long section** (LONGSECTION / LG; was Levels along a run, LEVELS / LV; renamed D-196): from either end.
 4. **Inlets** (DOWNPIPE / DP, OVERFLOW / OF, FO, INSPECTION / IO, GIO, FLOORWASTE / FW).
 5. **Tank** (TANK / WT), its note and leader.
 6. **Detention** (DETENTION / DET): Boyd's and OSD4W / Swinburne; two answers; fills the criteria box.
