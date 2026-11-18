@@ -347,4 +347,16 @@ Answer given in chat (planning chat's reading, not Tim's words): his button is a
 
 **TA-125 The CJ / SC swap.** "NEW COMMAND NAME BUT KEEP". Then: "JOINTSWAP / JS" (JS free in both lists).
 
-Next free number: TA-126
+## Batch 35 and 36 (OFFICELAYER / OL, "put on office layer"; `interview_tools\OFFICELAYER_SPEC.md`)
+
+**TA-126 Name.** "OFFICELAYER / OL" (OL free in both lists).
+
+**TA-127 How you say what it is.** "Pick from a list": office layers by what they are, grouped with search, the most likely suggested first; Tim decides.
+
+**TA-128 What else changes.** "Layer + ByLayer": colour, linetype and lineweight go to ByLayer; linetype scale from DIMSCALE.
+
+**TA-129 Consultant layers.** "Remember, I confirm": OL keeps a list of layer matches (for example A-SITE to BOUNDARY), suggests them next time, and applies them only on Tim's tick.
+
+**TA-130 The list behind OL.** "Same as hatches": sort the master drawing's 189 layers by what they are for using the old jobs, show the overlaps, Tim settles them.
+
+Next free number: TA-131
