@@ -10,7 +10,7 @@
 <style>
 :root{
   --page:#161718;
-  --win:#2B2D30; --card:#383B40; --well:#232528; --line:#4A4D53;
+  --win:#2B2D30; --card:#383B40; --well:#232528; --line:#4A4D53; --fieldline:#8A8E96;
   --t-answer:#F3F4F5; --t-body:#D2D5DA; --t-note:#A9AEB6;
   --green:#7BE0AE; --amber:#F5C660; --red:#FF6B4A; --grey:#9AA0A8; --ink:#10131A;
   --r:8px;
@@ -29,23 +29,23 @@ body{background:var(--page);color:var(--t-body);font-family:var(--sans);font-siz
 .below{width:1700px;margin-top:8px;color:#B8BBC1;font-size:12px;line-height:16px}
 
 .screen{width:1700px;height:900px;background:#0E0F11;border:1px solid #2A2C30;display:flex;flex-direction:column;overflow:hidden}
-.stitle{height:36px;flex:none;background:#1A1B1D;display:flex;align-items:center;padding:0 16px;color:#9A9EA6;font-size:12px;border-bottom:1px solid #2A2C30}
+.stitle{height:36px;flex:none;background:#1A1B1D;display:flex;align-items:center;padding:0 16px;color:#B4B8BE;font-size:12px;border-bottom:1px solid #2A2C30}
 .srow{flex:1;display:flex;min-height:0}
 .model{flex:1;position:relative;min-width:0}
 .model svg{display:block}
 
-.win{width:560px;height:864px;flex:none;background:var(--win);border-left:1px solid var(--line);display:flex;flex-direction:column;box-shadow:-8px 0 24px rgba(0,0,0,.4)}
+.win{width:420px;height:864px;flex:none;background:var(--win);border-left:1px solid var(--line);display:flex;flex-direction:column;box-shadow:-8px 0 24px rgba(0,0,0,.4)}
 .titlebar{height:32px;flex:none;display:flex;align-items:center;justify-content:space-between;padding:0 16px;border-bottom:1px solid var(--line);color:var(--t-answer)}
 .titlebar .x{color:var(--t-note)}
 .body{flex:1;min-height:0;padding:16px;display:flex;flex-direction:column;gap:16px}
-.note{font-size:12px;line-height:16px;color:var(--t-note)}
 .strong{font-weight:600}
 
-.band{flex:none;height:72px;border-radius:var(--r);display:flex;align-items:center;padding:0 16px;gap:16px;color:var(--ink);box-shadow:0 2px 8px rgba(0,0,0,.3)}
-.band.red{background:var(--red)} .band.green{background:var(--green)}
-.band .stack{display:flex;flex-direction:column}
+.band{flex:none;height:96px;border-radius:var(--r);display:flex;flex-direction:column;justify-content:center;padding:0 16px;color:var(--ink);box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.band.red{background:var(--red)} .band.green{background:var(--green)} .band.grey{background:var(--grey)}
+.band .l1{display:flex;align-items:center;gap:8px;height:32px}
 .band .main{font-size:24px;line-height:32px;white-space:nowrap}
 .band .sub{font-size:14px;line-height:24px;white-space:nowrap}
+.band .small{font-size:12px;line-height:16px;white-space:nowrap}
 
 .pill{display:inline-flex;align-items:center;height:24px;padding:0 8px;border-radius:var(--r);font-size:12px;line-height:24px;white-space:nowrap;color:var(--ink);border:1px solid rgba(16,19,26,.55);flex:none}
 .pill.red{background:var(--red)} .pill.amber{background:var(--amber)} .pill.grey{background:var(--grey)}
@@ -59,22 +59,22 @@ body{background:var(--page);color:var(--t-body);font-family:var(--sans);font-siz
 .row .l1{display:flex;align-items:center;gap:8px;height:24px}
 .row .thing{color:var(--t-answer);white-space:nowrap}
 .row .sp{flex:1}
-.row .m{height:24px;line-height:24px;color:var(--t-body)}
-.row.quiet{background:var(--well);box-shadow:none}
-.row.quiet .l1 .m{color:var(--t-body);height:24px;white-space:nowrap}
-.row .lnk{font-size:12px;color:var(--t-body);text-decoration:underline;text-underline-offset:3px;white-space:nowrap}
-.row .lnks{display:flex;gap:16px}
-.empty{height:48px;display:flex;align-items:center;color:var(--t-note)}
+.row .m{line-height:24px;color:var(--t-body)}
+.row.quiet{background:var(--well);box-shadow:none;display:flex;align-items:center;gap:8px;height:40px}
+.row.quiet .t{flex:1;white-space:nowrap;overflow:hidden}
+.row.quiet .t b{font-weight:400;color:var(--t-answer)}
+.sb{height:24px;padding:0 8px;border-radius:var(--r);border:1px solid var(--fieldline);background:transparent;color:var(--t-body);font:inherit;font-size:12px;line-height:22px;white-space:nowrap;cursor:pointer}
+.btns{display:flex;gap:8px}
 .foot{flex:none;height:48px;border-top:1px solid var(--line);display:flex;align-items:center;padding:0 16px;color:var(--t-note);font-size:12px;line-height:16px}
 </style>
 </head>
 <body>
 
-<div class="pagetitle">Unfinished list (mock-up, made-up job): one list, always there, never a stop</div>
+<div class="pagetitle">Unfinished list (mock-up, made-up job: Glen Eira two-unit lot): one list, always there, never a stop</div>
 <div class="intro"><ol>
-  <li><b>One list for the whole job.</b> Everything wrong, waiting on you or not known yet, worst first. The band at the top is the answer.</li>
-  <li><b>Each row says what is the matter in plain words</b> and has a Go to link that takes you to the thing in the drawing. The row under the pointer lights its pipe in model space.</li>
-  <li><b>Nothing here stops you drawing or issuing.</b> Not-known items stay quiet in grey; APPROX. and TBC print on the sheet.</li>
+  <li><b>The band answers one question: is anything wrong?</b> It reports the worst decided item only. Things simply not known yet never turn it red or amber; they stay grey.</li>
+  <li><b>Each row says what is the matter in plain words</b> and has a Go to button. The row under the pointer lights its pipe in model space.</li>
+  <li><b>Nothing here stops you drawing or issuing.</b> APPROX. and TBC print on the sheet.</li>
 </ol></div>
 
 <div class="screen">
@@ -89,95 +89,74 @@ body{background:var(--page);color:var(--t-body);font-family:var(--sans);font-siz
 
 <div class="switches">
   <div class="switch">State:
-    <button id="b_seven">7 not finished</button><button id="b_done">All finished</button></div>
+    <button id="b_wrong">1 wrong</button><button id="b_progress">Drawing in progress</button><button id="b_done">Nothing unfinished</button></div>
 </div>
 
 <script>
 (function(){
   var q=new URLSearchParams(location.search);
-  var state=q.get('state')==='done'?'done':'seven';
-  var seven=state==='seven';
+  var s=q.get('state');
+  var state=(s==='progress'||s==='done')?s:'wrong';
+  var wrong=state==='wrong', prog=state==='progress', done=state==='done';
 
   function model(){
-    var W='#8A8E96';
+    var W='#C8CBD0';
     function tx(x,y,t,a){return '<text x="'+x+'" y="'+y+'" fill="'+W+'" font-size="12" font-family="IBM Plex Sans, Segoe UI, sans-serif" letter-spacing="0.4" '+(a||'')+'>'+t+'</text>';}
     function pit(x,y,l,dx,dy){return '<rect x="'+(x-10)+'" y="'+(y-10)+'" width="20" height="20" fill="#0E0F11" stroke="#D2D5DA" stroke-width="1.2"/><path d="M'+(x-10)+' '+(y-10)+' L'+(x+10)+' '+(y+10)+' M'+(x+10)+' '+(y-10)+' L'+(x-10)+' '+(y+10)+'" stroke="#5E636B" stroke-width="0.7"/>'+tx(x+(dx||16),y+(dy||-14),l);}
-    var s='<svg width="1138" height="862" viewBox="0 0 1138 862">'+
+    return '<svg width="1278" height="862" viewBox="0 0 1278 862">'+
     '<defs><pattern id="h" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0 V12" stroke="#3A3D43" stroke-width="1"/></pattern></defs>'+
-    '<rect width="1138" height="862" fill="#0E0F11"/>'+
-    // boundary
-    '<path d="M60 40 H1060 V800 H60 Z" fill="none" stroke="#4A4D53" stroke-width="1" stroke-dasharray="10 5"/>'+
-    tx(72,62,'BOUNDARY')+
-    // kerb
-    '<path d="M0 820 H1138" stroke="#6B7078"/><path d="M0 826 H1138" stroke="#40434A"/>'+tx(72,848,'KERB')+
-    // house
-    '<rect x="120" y="100" width="340" height="320" fill="none" stroke="#6B7078" stroke-width="1.2"/>'+tx(240,266,'HOUSE 1')+
-    // driveway
-    '<rect x="480" y="500" width="280" height="150" fill="url(#h)" stroke="#6B7078" stroke-width="1"/>'+tx(492,642,'HOUSE DRIVEWAY')+
-    // connected pipes
-    '<g stroke="#4A90E2" stroke-width="2" fill="none" opacity="0.85">'+
-      '<path d="M880 790 V700 V560 H700"/><path d="M540 560 V400"/></g>'+
-    // P4-P3 pipe
-    (seven?'<path d="M540 560 H700" stroke="#F3F4F5" stroke-width="11" stroke-linecap="butt"/><path d="M540 560 H700" stroke="#0E0F11" stroke-width="9"/>':'')+
-    '<path d="M540 560 H700" stroke="#4A90E2" stroke-width="2" opacity="0.85"/>'+
-    // loose pipes (grey)
-    '<path d="M960 300 V470" stroke="#80848C" stroke-width="2" stroke-dasharray="6 4"/><circle cx="960" cy="470" r="5" fill="#0E0F11" stroke="#9A9EA6"/>'+
-    '<rect x="952" y="290" width="16" height="16" fill="#0E0F11" stroke="#D2D5DA"/>'+tx(976,302,'DP7')+tx(976,474,'LOOSE END')+
-    '<path d="M140 720 H400" stroke="#80848C" stroke-width="2" stroke-dasharray="6 4"/><circle cx="140" cy="720" r="5" fill="#0E0F11" stroke="#9A9EA6"/><circle cx="400" cy="720" r="5" fill="#0E0F11" stroke="#9A9EA6"/>'+
-    tx(140,704,'REAR SYSTEM')+tx(140,744,'NO END YET (NO LPD)')+
-    // pits
+    '<rect width="1278" height="862" fill="#0E0F11"/>'+
+    '<path d="M60 40 H1200 V800 H60 Z" fill="none" stroke="#4A4D53" stroke-width="1" stroke-dasharray="10 5"/>'+tx(72,62,'BOUNDARY, GLEN EIRA TWO-UNIT LOT')+
+    '<path d="M0 820 H1278" stroke="#6B7078"/><path d="M0 826 H1278" stroke="#40434A"/>'+tx(72,848,'KERB')+
+    '<rect x="120" y="100" width="340" height="320" fill="none" stroke="#6B7078" stroke-width="1.2"/>'+tx(240,266,'UNIT 1')+
+    '<rect x="760" y="100" width="300" height="200" fill="none" stroke="#6B7078" stroke-width="1.2"/>'+tx(880,206,'UNIT 2')+
+    '<rect x="480" y="500" width="280" height="150" fill="url(#h)" stroke="#6B7078" stroke-width="1"/>'+tx(492,642,'HOUSE DRIVEWAY, 125 SLAB')+
+    '<g stroke="#4A90E2" stroke-width="2" fill="none" opacity="0.9"><path d="M880 790 V700 V560 H700"/><path d="M540 560 V400"/></g>'+
+    (wrong?'<path d="M540 560 H700" stroke="#F3F4F5" stroke-width="11"/><path d="M540 560 H700" stroke="#0E0F11" stroke-width="9"/>':'')+
+    '<path d="M540 560 H700" stroke="#4A90E2" stroke-width="2" opacity="0.9"/>'+
+    '<path d="M1000 330 V470" stroke="#9A9EA6" stroke-width="2" stroke-dasharray="6 4"/><circle cx="1000" cy="470" r="5" fill="#0E0F11" stroke="#C8CBD0"/>'+
+    '<rect x="992" y="322" width="16" height="16" fill="#0E0F11" stroke="#D2D5DA"/>'+tx(1016,336,'DP7')+tx(1016,474,'LOOSE END')+
+    '<path d="M140 720 H400" stroke="#9A9EA6" stroke-width="2" stroke-dasharray="6 4"/><circle cx="140" cy="720" r="5" fill="#0E0F11" stroke="#C8CBD0"/><circle cx="400" cy="720" r="5" fill="#0E0F11" stroke="#C8CBD0"/>'+
+    tx(140,704,'REAR SYSTEM')+tx(140,744,'NO OUTLET YET')+
     pit(540,400,'P5',16,-14)+pit(540,560,'P4',-30,-14)+pit(700,560,'P3',-6,-16)+pit(880,560,'P2',16,-14)+pit(880,700,'P1',16,-14)+
-    '<rect x="871" y="781" width="18" height="18" fill="#0E0F11" stroke="#D2D5DA" stroke-width="1.2"/>'+tx(900,795,'LPD')+
+    '<rect x="871" y="781" width="18" height="18" fill="#0E0F11" stroke="#D2D5DA" stroke-width="1.2"/>'+tx(900,795,'COUNCIL PIT (LPD)')+
     tx(560,462,'100 DIA. AT 1 IN 100')+
-    (seven?'<rect x="540" y="580" width="272" height="24" rx="8" fill="#FF6B4A"/><text x="552" y="596" fill="#10131A" font-size="12" font-family="IBM Plex Sans, Segoe UI, sans-serif">Pipe P4 to P3: cover 0.26, needs 0.30</text>':'')+
+    (wrong?'<rect x="540" y="580" width="272" height="24" rx="8" fill="#FF6B4A"/><text x="552" y="596" fill="#10131A" font-size="12" font-family="IBM Plex Sans, Segoe UI, sans-serif">Pipe P4 to P3: cover 0.08, needs 0.10</text>':'')+
     tx(72,788,'MADE-UP SITE PLAN, FAINT')+
+    (wrong?tx(300,848,'Lit only while the row is under the pointer; nothing is drawn into the drawing'):'')+
     '</svg>';
-    return s;
   }
   document.getElementById('model').innerHTML=model();
 
-  function pillCls(c){return 'pill '+c;}
-  function row(tag,cls,thing,matter,links,opts){
-    opts=opts||{};
-    var lk='<span class="lnks">'+links.map(function(l){return '<span class="lnk">'+l+'</span>';}).join('')+'</span>';
-    if(opts.quiet){
-      return '<div class="row quiet"><div class="l1"><span class="'+pillCls(cls)+'">'+tag+'</span><span class="thing">'+thing+'</span><span class="m">'+matter+'</span><span class="sp"></span>'+lk+'</div></div>';
-    }
-    return '<div class="row'+(opts.lit?' lit':'')+'"><div class="l1"><span class="'+pillCls(cls)+'">'+tag+'</span><span class="thing">'+thing+'</span><span class="sp"></span>'+lk+'</div><div class="m">'+matter+'</div></div>';
+  var GO='<button class="sb">Go to</button>';
+  var ACC='<button class="sb">Accept with a note</button>';
+  function row(tag,cls,thing,matter,btns,lit){
+    return '<div class="row'+(lit?' lit':'')+'"><div class="l1"><span class="pill '+cls+'">'+tag+'</span><span class="thing">'+thing+'</span><span class="sp"></span><span class="btns">'+btns+'</span></div><div class="m">'+matter+'</div></div>';
   }
+  function quiet(thing,matter){return '<div class="row quiet"><span class="t"><b>'+thing+':</b> '+matter+'</span>'+GO+'</div>';}
   function gh(t,c){return '<div class="gh"><span>'+t+'</span><span class="c">'+c+'</span></div>';}
-  var AC='Accept with a note', GO='Go to';
 
-  var list='';
-  var band;
-  if(seven){
-    band='<div class="band red"><span class="pill" style="background:transparent">Wrong</span><div class="stack"><span class="main"><b class="strong">7</b> things are not finished</span><span class="sub"><b class="strong">1</b> wrong, <b class="strong">2</b> need you, <b class="strong">4</b> not known yet</span></div></div>';
-    list+=gh('Wrong','1')+row('Wrong','red','Pipe P4 to P3','cover 0.26 where 0.30 is needed, under a house driveway',[GO,AC],{lit:true});
-    list+=gh('Needs you','2')+
-      row('Needs you','amber','Site rainfall','your estimate, APPROX. until the Bureau table is pasted',[GO,AC])+
-      row('Needs you','amber','Slab thickness, house driveway','Not known',[GO,AC]);
-    list+=gh('Not known yet','4')+
-      row('Not known yet','grey','P5','cover level: prints TBC',[GO],{quiet:true})+
-      row('Not known yet','grey','Pipe from DP7','not joined yet (loose end)',[GO],{quiet:true})+
-      row('Not known yet','grey','Rear system','no end yet (no LPD)',[GO],{quiet:true})+
-      row('Not known yet','grey','P2','lid class: Not known',[GO],{quiet:true});
-    list+=gh('Accepted with a note','2')+
-      row('Accepted','outline','Kerb connection','cover 0.28: accepted, council letter 3 Apr',[GO],{})+
-      '<div class="note" style="height:24px;line-height:16px;padding:0 8px"><span class="lnk" style="text-decoration:underline;text-underline-offset:3px;color:var(--t-body)">1 more accepted: show</span></div>';
+  var band, list='';
+  if(wrong){
+    band='<div class="band red"><div class="l1"><span class="pill" style="background:transparent">Wrong</span><span class="main"><b class="strong">1</b> wrong: pipe P4 to P3</span></div><span class="sub">cover 0.08 where 0.10 is needed</span><span class="small">1 needs you &middot; 5 not known yet</span></div>';
+    list+=gh('Wrong','1')+row('Wrong','red','Pipe P4 to P3','cover 0.08 where 0.10 is needed, under a house driveway (125 slab)',GO+ACC,true);
+    list+=gh('Needs you','1')+row('Needs you','amber','Connection invert 4.95','assumed, APPROX. until the council letter',GO,false);
+  } else if(prog){
+    band='<div class="band grey"><div class="l1"><span class="pill" style="background:transparent">In progress</span><span class="main">Drawing in progress</span></div><span class="sub">nothing wrong, nothing needs you</span><span class="small">5 not known yet</span></div>';
   } else {
-    band='<div class="band green"><span class="pill" style="background:transparent">Done</span><div class="stack"><span class="main">Nothing unfinished</span><span class="sub"><b class="strong">2</b> accepted with a note</span></div></div>';
-    list+='<div class="empty">Nothing to look at. Nothing wrong, nothing waiting on you.</div>';
-    list+=gh('Accepted with a note','2')+
-      row('Accepted','outline','Kerb connection','cover 0.28: accepted, council letter 3 Apr',[GO],{})+
-      row('Accepted','outline','P3','step irons not fitted, pit is 0.90 m deep: accepted',[GO],{});
+    band='<div class="band green"><div class="l1"><span class="pill" style="background:transparent">Done</span><span class="main">Nothing unfinished</span></div><span class="sub"><b class="strong">1</b> accepted with a note</span></div>';
   }
+  if(!done){
+    list+=gh('Not known yet','5')+quiet('P5','cover level: prints TBC')+quiet('P2','lid class: Not known')+quiet('Slab thickness, path','Not known')+quiet('DP7 pipe','loose end, not joined yet')+quiet('Rear system','no outlet yet');
+  }
+  list+=gh('Accepted with a note','1')+row('Accepted','outline','P3','no step irons, pit is 1.15 m deep: accepted, council letter 3 Apr',GO,false);
 
   document.getElementById('win').innerHTML=
     '<div class="titlebar"><span>Unfinished &middot; this job</span><span class="x">&#x2715;</span></div>'+
     '<div class="body">'+band+'<div class="list">'+list+'</div></div>'+
     '<div class="foot">Nothing here stops you drawing or issuing. APPROX. and TBC print on the sheet.</div>';
 
-  ['seven','done'].forEach(function(k){
+  ['wrong','progress','done'].forEach(function(k){
     var b=document.getElementById('b_'+k);
     b.className=(k===state)?'on':'';
     b.onclick=function(){location.search='?state='+k;};
