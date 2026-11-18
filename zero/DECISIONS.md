@@ -680,6 +680,12 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-329** (19 Nov 2026, about 8:20 am; the Team account, lifting his hold of 5 Nov) "and i have 50% usage remaining on team account until saturday midday so we can leverage that as well. i wouldnt mind something checking what codex is doing and it can also do work of its own". So: the Team account is in use again until Sat 21 Nov midday. One Team checker (Opus) reads every Codex result against the rulings, separate from Codex's own review; Team Sonnet builders may do work of their own, on their own branches, never the same files as a running Codex job. Login tested 8:19 am: works; the sign-in ends between 24 and 27 Nov and he will need to sign in again before then.
 
+**D-330** (19 Nov 2026, about 9:10 am; pipe cover under a driveway, settles D-314 and the clash of D-145 with D-287; evidence in `reference\research\R-013`, checked at source) "300 paved, 450 unpaved (Recommended)". Preset to top of pipe: 300 mm under a driveway with concrete or paving, detention pipe or not; 450 mm where vehicles cross with no pavement. The picked council can override; the engineer can always change it. D-145's 0.45 m for a detention pipe under any driveway no longer holds.
+
+**D-331** (19 Nov 2026, about 9:10 am; garden runoff, settles D-315 and refines D-283; evidence in `reference\research\R-014`, checked at source) "Council's figure, else 0.35 (Recommended)". Where the picked council states a figure for garden (mostly 0.30), the tool opens with that and shows where it came from; where the council says nothing, 0.35 for Boyd's as the office sheet has it. Always changeable. Correction recorded: the planning chat's earlier statement that the office sheet needs 0.30 was wrong; the office litres sheet has 0.35 in its formula.
+
+**D-332** (19 Nov 2026, about 9:10 am; the allowed discharge in the office Boyd's sheet, typed 4.70 L/s where its own inputs give 5.75) "Work it out; typed is a hold (Recommended)". The tool works the allowed discharge out from the inputs; an engineer can type over it to hold a council's figure.
+
 ## Not decided (asked or raised, no decision yet)
 
 1. Whether Stage 1's civil explanation is approved (Tim moved on to the design without saying "approve"). **Settled by D-117.**
