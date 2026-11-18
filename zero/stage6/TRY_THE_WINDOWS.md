@@ -72,3 +72,9 @@ Do not judge the LOOK of these windows any more: the approved look is `design\ST
 10. **Schedule:** a typed level below 0.00 is amber "check the datum"; the depth worked from it is ringed amber with a "Check" line. Known: the sheet preview still prints that depth plain (Tim's call whether the sheet gets a mark).
 11. **Pit:** lid class lines on card 1 ("Over it", "Lid class", "Lid on the schedule"); a junction pit reads Solid; pump kinds read "SPS grated" and "SPS solid". The Match button and the Turned box are hidden in the AutoCAD tools until built; the bench still shows them.
 12. **Earlier cautions 4, 5 and 6 on this page are fixed** (pit labels read the right material; the tank counts at its full room; below-zero levels are amber).
+
+## Stale lines above, noted 18 Nov 2026, 8:39 pm (round 43, not yet committed by the build chat; this page is rewritten when the windows are next offered to Tim)
+
+1. **Tank steps:** "Pick 3,000 L, then 10,000 L" and "type your own diameter and height" are out of date. The Tank window now opens as a 5,000 L slimline, 3.10 by 1.02 m; the size list is the office's own tanks, 2,500 to 6,000 L; a size off the list reads Shape "Not known"; the round "out by" case needs Round picked and a diameter and height typed.
+2. **Wording:** every "unknown", "not known" and "unknown spare" on this page now reads "Not known" on the windows (Tim's screen rule 24).
+3. **Detention:** the rainfall line shows once, not twice. **Pit:** "Lid on the schedule" reads "Not known" until a situation or class is given.
