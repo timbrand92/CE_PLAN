@@ -60,7 +60,10 @@
     - **Removed:** the pit and inlet blocks, the strip drain label, the trench grate, Section Flag and SCREW PILES. The CE tools place these or they are not needed.
     - **Added:** 18 of the 54 unknown blocks: BK-081, 413, 414, 416, 417, 420, 425, 430, 432, 433, 434, 436, 438, 443, 446, 451, 452, 453.
     - **Result:** 37 blocks. Picture of the earlier 32: `pictures/blocks_palette_now.png`.
-    - **Next:** proper names for the 18 added blocks, which are all machine-named.
+    - **Names for the 18 added blocks (TA-076):**
+      - **Linetypes and schedules:** BK-081 CIVIL LINETYPES; BK-413 WALL SCHEDULE; BK-414 SLEEPER RETAINING WALL SCHEDULE; BK-416 MEMBER SCHEDULE; BK-436 WALL SCHEDULE 2; BK-438 FOOTING SCHEDULE.
+      - **Steel and fixings:** BK-420 PFC WITH PLATE; BK-425 PFC WITH EQUAL ANGLE; BK-432 PFC WITH UNEQUAL ANGLE; BK-433 T BRACKET; BK-443 BOLT; BK-453 DOWEL BAR.
+      - **The rest:** BK-417 WAFFLE POD SETOUT; BK-430 DINCEL BLOCK; BK-434 SHADOW BOX FILLED; BK-446 BORED PIER; BK-451 WATERSTOP; BK-452 ROUND BREAKLINE.
 
 Nothing has been changed in the master drawing.
 

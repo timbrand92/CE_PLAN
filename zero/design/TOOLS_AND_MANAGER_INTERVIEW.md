@@ -188,7 +188,7 @@ These go into the plan's idea file with the planning chat's own numbers; this fi
 **TQ-10** May the master drawing's 279 machine-named blocks be renamed (on a copy first) so the palette and tools can point at them safely? Who owns that drawing's edits? **CLOSED by D-229:** yes, on a copy first; all 453 blocks reviewed in `design\BLOCKS_REVIEW.md`; exact copies merged on a copy; 37 blocks chosen for the palette (TA-038, TA-042, TA-064 to TA-075). **Left:** proper names for the 18 machine-named blocks Tim added (TQ-13). Who edits the master drawing was not asked.
 **TQ-11** Typed name for the blocks palette. **ANSWERED:** BLOCKS / BLK (TA-037, D-208).
 **TQ-12** Which hatches go in the office list: every pattern in the master drawing, or a short list Tim names? **ANSWERED:** a list sorted by what each hatch does, with layer, pattern and base scale (DIMSCALE 100 / LTSCALE 1000, DIMSCALE leads) (TA-045 to TA-063, D-227, `interview_tools\HATCHES_BY_FUNCTION.md`).
-**TQ-13** (new, 18 Nov 2026) Proper names for the 18 machine-named blocks Tim added to the palette: BK-081, 413, 414, 416, 417, 420, 425, 430, 432, 433, 434, 436, 438, 443, 446, 451, 452, 453 (TA-075). Open; to be put to Tim on a picture sheet with proposed names.
+**TQ-13** (new, 18 Nov 2026) Proper names for the 18 machine-named blocks Tim added to the palette: BK-081, 413, 414, 416, 417, 420, 425, 430, 432, 433, 434, 436, 438, 443, 446, 451, 452, 453 (TA-075). **ANSWERED:** named by Tim (TA-076); the names are in `design\BLOCKS_REVIEW.md` decision 12.
 
 ---
 

@@ -2,7 +2,7 @@
 
 **Revision:** 4 (Wed 18 Nov 2026, late afternoon, Melbourne time). Revision 4: TQ-06 and TQ-12 answered, batches 17 to 23 added, TQ-13 opened. Revision 1 used T-numbers for answers; now TA-numbers (D-205).
 **Reports to:** the planning chat (D-198). Planning only; nothing is built.
-**Progress:** the first list of 28 is answered, 28 of 28 (TQ-06 and TQ-12 after R-006). Tim asked for 14 more (upgrades for every tool, missed commands), all answered in batches 13 to 16. Batches 17 to 23 covered release size, the hatch list and scales, and the ten block decisions. Answers TA-001 to TA-075. **Open:** TQ-13, names for the 18 blocks Tim added to the palette.
+**Progress:** the first list of 28 is answered, 28 of 28 (TQ-06 and TQ-12 after R-006). Tim asked for 14 more (upgrades for every tool, missed commands), all answered in batches 13 to 16. Batches 17 to 23 covered release size, the hatch list and scales, and the ten block decisions. Answers TA-001 to TA-075. **Open:** nothing; TQ-13 answered in TA-076.
 **Batches 10 to 16:** asked 18 Nov 2026 late afternoon, when Tim said "ASK THE NEXT QUESTIONS NOW".
 
 ## Read before asking
@@ -47,7 +47,7 @@
 26. [x] TQ-10 Master drawing blocks: look through them on a copy (TA-038, TA-042)
 27. [x] TQ-11 BLOCKS / BLK (TA-037)
 28. [x] TQ-12 Hatch list by function, layer, pattern and base scale (TA-045 to TA-063, D-227)
-29a. [ ] TQ-13 Names for the 18 machine-named blocks Tim added (TA-075); open
+29a. [x] TQ-13 Names for the 18 blocks Tim added (TA-076)
 
 ## Added at Tim's request (TA-026, TA-027): 14, all answered
 

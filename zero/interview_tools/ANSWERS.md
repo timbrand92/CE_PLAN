@@ -202,4 +202,26 @@ LOADBEARING WALL, LOADBEARING HATCH and BLOCK RETAINING WALL are retired from th
    - **Small symbols:** BK-417, 420, 425, 430, 432, 433, 443, 451, 452, 453.
 3. **Result:** the palette holds 37 blocks: 19 of the earlier 32 plus these 18.
 
-Next free number: TA-076
+**TA-076 Names for the 18 blocks added to the palette (TQ-13; picture `pictures\blocks_added18.png`).** Tim's words: "81 - CIVIL LINETYPES, 413 - WALL SCHEDULE, 414 - SLEEPER RETAINING WALL SCHEDULE, 416 - MEMBER SCHEDULE, 417 - WAFFLE POD SETOUT 420 - PFC WITH PLATE, 425 - PFC WITH EQUAL ANGLE, 430 - DINCEL BLOCK, 432 - PFC WITH WITH UNEQUAL ANGLE, 433 - T BRACKET, 434 - SHADOW BOX FILLED, 436 - WALL SCHEDULE 2, 438 - FOOTING SCHEDULE, 443 - BOLT, 446- BORED PIER, 451 - WATERSTOP, 452 - ROUND BREAKLINE, 453 - DOWEL BAR". So, as block names:
+1. **BK-081:** CIVIL LINETYPES.
+2. **BK-413:** WALL SCHEDULE.
+3. **BK-414:** SLEEPER RETAINING WALL SCHEDULE.
+4. **BK-416:** MEMBER SCHEDULE.
+5. **BK-417:** WAFFLE POD SETOUT.
+6. **BK-420:** PFC WITH PLATE.
+7. **BK-425:** PFC WITH EQUAL ANGLE.
+8. **BK-430:** DINCEL BLOCK.
+9. **BK-432:** PFC WITH UNEQUAL ANGLE ("WITH WITH" in his words read as a typing slip).
+10. **BK-433:** T BRACKET.
+11. **BK-434:** SHADOW BOX FILLED.
+12. **BK-436:** WALL SCHEDULE 2.
+13. **BK-438:** FOOTING SCHEDULE.
+14. **BK-443:** BOLT.
+15. **BK-446:** BORED PIER.
+16. **BK-451:** WATERSTOP.
+17. **BK-452:** ROUND BREAKLINE.
+18. **BK-453:** DOWEL BAR.
+
+Learnt: the planning chat's guesses for 417, 420, 425, 430, 432, 433, 443, 451 and 453 were wrong (it had read the PFC and angle sections as post brackets, the Dincel block as a panel with openings, the dowel bar as a sand bed). The office names blocks plainly, with no "SYMBOL -" or "MARK -" prefix.
+
+Next free number: TA-077
