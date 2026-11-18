@@ -111,6 +111,16 @@ Scene: a noted pipe line with our orange circle grip, a plain pipe line, noted t
 6. **Failure return value: CRASH, confirmed.** After `ZT_T_DANGER` one click on the circle gave "AutoCAD Error Aborting, FATAL ERROR: Unhandled e0434352h Exception" and AutoCAD closed (the log's last line: `CLICK ... answering Failure`; AutoCAD's own crash folder was kept, I read only the dump, I did not send it). **So the 17 Nov crash was this: our grip answering Failure when clicked. Never return Failure from a grip click.** The code e0434352h is the code for an unhandled .NET error. The dump's text mentions a NullReferenceException, the grip tooltip call and `GripOverrule.MoveGripPointsAt`; I did not read a real stack, so the exact line is not known and is not needed: the rule is enough.
 7. **After the crash:** the AutoCAD process had already gone; Autodesk's error report window (`cer_dialog`) was left for Tim to close with Close. Nothing was sent.
 
+### Double-click and drag on masked text and a polyline, Tim at the mouse (18 Nov 17:02 to 17:10, sixth test AutoCAD, `g_tim2.dwg`, closed normally, No to saving)
+
+Log: `evidence\zt_run6_dblclick.log`. Tim's words in capitals.
+
+1. **Double-click recognised: PASS.** My watcher saw each double-click and told noted from plain correctly: noted polyline "noted=True", plain polyline "noted=False", noted masked MText "noted=True", and "nothing picked" when nothing was under the cursor. Our stand-in window command ran only for the noted ones.
+2. **AutoCAD's own action still runs: FAIL for replacing it.** On the noted pipe line "OPENS PEDIT" and on the plain one "SAME THING" (PEDIT); on the noted text "MTEDIT ASKS TO SELECT AN MTEXT OBJECT". Our line "OUR WINDOW WOULD OPEN HERE" came first and AutoCAD's own editor command followed at once: "THAT'S WHERE IT LANDS YOU AS END USER".
+3. **Trying to stop it by clearing the pick: FAIL.** With suppression on (clearing the implied selection before AutoCAD acts), the native command still started, now with no object, and asked "Select polyline or [Multiple]" or "Select an MTEXT object"; Tim had to cancel it. **So clearing the pick is worse than nothing.**
+4. **Drag the orange circle: nothing moved (cause found).** The click log shows AutoCAD treated the grip as a click button (trigger grip on), so no drag started. A draggable grip needs the trigger flag off plus a move method; both are now in the test code, not yet run. Tim's U after the drag undid the earlier PEDIT, so undo of a drag is not tested.
+5. **Next to try (built, not run):** veto AutoCAD's own PEDIT, MTEDIT, TEXTEDIT and DDEDIT for two seconds after a double-click on a noted object only (through the document lock-mode event), and run the drag with the trigger flag off.
+
 ## Test list for later (Tim, 18 Nov: "get a nice list going for testing later")
 
 Each line: what to do, what counts as a pass. Items 1 to 9 need the real mouse (Codex robot, PC idle, test copy, one test AutoCAD, rule 1.9 in full). The rest need no mouse. Done so far is listed in Part 2.
