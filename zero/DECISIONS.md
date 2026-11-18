@@ -532,6 +532,10 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-255** (18 Nov 2026, 3:42 pm; supersedes D-254) SECURELOAD, after being told it reads 0 in three profiles including the one named after him: "WHAT DOES IT DO, IM HAPPY TO MAKE IT WHATEVER YOU NEED MOST? I THINK THERES SOME TESTING GOING ON AT THE MOMENT". Planning chat's call under that answer (mine, told to him): leave it at 0 everywhere; nothing is changed. Why: it is most likely his own long-standing setting, the night tests load the test plug-in without a prompt at 0, and at 1 his own LISP folders would start asking. To be looked at again before colleagues get the plug-in (their PCs should run at 1 with the CE folder trusted). Same answer: the AutoCAD running at 3:35 pm is "Not mine": it is the trials chat's fresh test copy.
 
+**D-256** (18 Nov 2026, 3:45 pm) A pit with joined pipes is made smaller or bigger (by grip, the block's own properties or the window): "Pipe ends follow the wall (Recommended)". Each pipe end moves to the new wall, lengths and labels update, one Undo puts it all back (D-034 carried through).
+
+**D-257** (18 Nov 2026, 3:45 pm) A pit switched between grated and solid cover after it is drawn: "Yes, everything follows (Recommended)". The pit on the plan, the schedule row, the lid class check and the storage tick in Detention all change from the one edit.
+
 ## Not decided (asked or raised, no decision yet)
 
 1. Whether Stage 1's civil explanation is approved (Tim moved on to the design without saying "approve"). **Settled by D-117.**
