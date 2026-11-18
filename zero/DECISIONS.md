@@ -414,6 +414,14 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-219** (18 Nov 2026; OQ-06) A check that cannot run because a figure is missing ("Cannot check yet: cover level at P4 is not known"): "Grey, like 'not known yet'". Amber and red stay for decided figures.
 
+**D-220** (18 Nov 2026, afternoon; the function map `design\FUNCTION_MAP.md`: 648 typed names today, 67 with nothing in the plan saying what happens to them, the largest gap being the computations sheet that only CDCALC makes) Asked what should happen about the computations sheet, Tim did not choose and said: "you were meant to as part of the plan go through all of this stuff ensure we had a plan for it all and how we were going to proceed, it feels like you havent planned properly". The planning chat accepts this: the first-release list was built from what he asked for in interview, and was never checked against a full list of what the office's tools do today. The function map should have been done in Stage 2 or 3 and was only done on 18 Nov. Owed: a proposed plan for EVERY line that is not decided or would be lost, for him to correct in one sitting, not a string of single questions.
+
+**D-221** (18 Nov 2026; function map FM-005) Erasing a pit with plain ERASE: "Tag, text and row go; pipes stay, 'not joined yet'". One undo brings everything back.
+
+**D-222** (18 Nov 2026; FM-018) The legal point of discharge label: "Its own small tool" (not part of the Outlet tool, which the planning chat had recommended).
+
+**D-223** (18 Nov 2026; FM-032, FM-017, FM-016) Which other drains are in the first release: "Trench grate,Ag and perimeter drains". Strip drain was offered and not ticked: parked.
+
 **D-167** (18 Nov 2026, morning) The new preview, as drawn on `pictures\pick_a_ce_scheme.html` (the drawing as AutoCAD shows it, from the office layers, colours, text and arrow; "where on the plan" as a small site locator in the corner; "where in the system" as a strip under the preview with the run as a chain and this object lit; the thing being changed highlighted the same way in all three): "YES THE PREVIEW IS WHAT I MEANT". It applies to every window (D-070: consistent across all windows). Not yet proven: how the locator is produced inside AutoCAD. The drawn details not taken from a real sheet (pit inner wall line, pit tag circle, which side the flow arrow sits) are still to be checked against how the office draws.
 
 **D-156** (17 Nov 2026, evening; SUPERSEDES the colour in D-153) Tim, after seeing the sample sheet again: "lets go with a for the detention". Read by the planning chat as option A on `pictures\pick_a_detention_blue.html`: deeper blue, AutoCAD colour 160. Layer STORMWATER DETENTION PIPE and DASHED unchanged. Pen width, legend and label wording still unknown; still not seen on a real plot.
