@@ -20,7 +20,7 @@ The look of every window is now approved, the 18 wrong-figure faults on the test
 
 1. **The brain:** 598 automatic checks pass. Boyd's now matches the office sheet (1.66 on the measured job).
 2. **Seven windows on a test bench:** 313 checks pass; the 18 wrong-figure and pretend-to-work faults are fixed and reviewed. They still wear the OLD look.
-3. **AutoCAD tools (foundation, Pit, Pipe, Long section, LPD in place of Outlet):** eight passes on 18 Nov. Pass 8 at 7:44 pm: 105 checks, 100 pass, 3 fail, 2 not tested. Today's fixes and both batches of today's rulings (one "what is over it" list, text from DIMSCALE, tank sums, LPD merge, pipe-end join, labels following pipes, copies numbered, layer-lock tests) are built, reviewed and RUN in AutoCAD. One speed limit is broken (see Problems).
+3. **AutoCAD tools (foundation, Pit, Pipe, Long section, LPD in place of Outlet):** nine passes on 18 Nov. Pass 9 at 8:57 pm: 105 checks, 102 pass, 1 fail (the known explode gap), 2 not tested; all 13 speed limits met. Today's fixes and both batches of today's rulings (one "what is over it" list, text from DIMSCALE, tank sums, LPD merge, pipe-end join, labels following pipes, copies numbered, layer-lock tests) are built, reviewed and RUN in AutoCAD. One speed limit is broken (see Problems).
 4. **Grips and editing, proven in AutoCAD on test copies:** our own grip shapes; hover words; click; drag with one undo; flip and slide on a masked label; double-click opening our window on our objects only; nothing on a locked layer.
 5. **Installed: 0. Accepted by Tim: 0.**
 
@@ -33,7 +33,7 @@ The look of every window is now approved, the 18 wrong-figure faults on the test
 
 ## 5. Problems and bugs
 
-1. **Speed regression, found by pass 8:** moving a pit with its pipes on a 2,500-object drawing takes 121 thousandths of a second against a limit of 100 (68 this morning); caused by tonight's pipe-end join; being fixed first. Also the old desk robot from before this plan is still running with a stale "Tim is away" flag (no harm found today; his yes needed to retire it).
+1. **Speed regression found by pass 8 and FIXED, proven by pass 9** (a pit move went from 121 back to 54 thousandths of a second, limit 100). PIT, PP and CD are claimed by both the new and the old plug-in; which one AutoCAD runs needs a supervised check with Tim. Also the old desk robot from before this plan is still running with a stale "Tim is away" flag (no harm found today; his yes needed to retire it).
 2. **Not built:** the approved look on any real window; bends; metre drawings; the LPD merge; turning a pit; pipe edge lines; text heights that follow DIMSCALE; the live preview on the cursor.
 3. **Not proven:** the new tools taking the names PIT and CD while the old plug-in is loaded; our facts as rows in AutoCAD's Properties; the window docked beside the drawing with AutoCAD lighting up the system (preview option C).
 4. **Grips left to test:** hover menu, Ctrl-copy. Double-click leaves "_pedit, *Cancel*" in the command history each time.
