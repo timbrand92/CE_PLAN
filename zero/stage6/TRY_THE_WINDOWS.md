@@ -56,3 +56,19 @@ Not driven by the independent click tester yet. Not accepted.
 4. **Council minimum runoff cannot be tried in the window yet** (there is no council box). A picture shows it: `C:\CE_CIVIL\bench\shots\bench_detention_1080_dark_D19_council_min_c.png` (Darebin, C 0.80, "Council minimum C governs").
 5. **Known cautions on these new parts:** with no rainfall the Tank row's "unknown spare" is cut off; the Storage tile names the wrong reason; card 2 shows "419 / 600 = 0.80" when the council minimum governs; no APPROX. sits beside the needed figure; a non-number in a rainfall box goes amber with no words; you empty a box to let it go (no padlock). All with the build chat.
 6. **Earlier caution 10 is out of date:** the Boyd's storage needed has now been checked by hand on two worked cases (2.65 m3 and 2.29 m3). Tab order is still unchecked.
+
+## Changed 18 Nov 2026 evening (the fix-first round; not yet driven by the independent click tester; not accepted)
+
+Do not judge the LOOK of these windows any more: the approved look is `design\STYLE_APPROVED_18NOV.md` and the windows are brought to it as each is next touched. These lines are about the figures.
+1. **Detention opens at** "Storage 1.70 m3 of 1.64 needed, 0.06 spare" (tank 1.00 + pipes 0.56 + P1 0.08 + P2 0.06). The spare is the site's, shown once; the tank row has no spare of its own. When short it says "Short" with the amount.
+2. **Empty all six rainfall boxes:** Storage reads 1.70 "of Not known needed", and the tile, card 3 and the strip say "Cannot work out yet: site rainfall not entered."
+3. **Type your own rainfall estimate:** "1.70 of APPROX. 2.33 needed, Short 0.63"; card 3 "Needed APPROX. 2.33".
+4. **Council minimum runoff governing:** card 2 shows "419.00 / 600.00 = 0.70" plus "Council C 0.80 governs". Known: at 1080 that extra line pushes the card's bars off; to be moved.
+5. **Boyd's now rounds the inflow first,** as the office sheet does: the measured job gives 1.66.
+6. **Pipe:** a grade of -50 or 0 shows red Wrong; the fall and downstream invert read not known; no "Moves" line. While held levels clash, card 3 lists the two levels with no sum.
+7. **Levels:** grade 1 in 0 says "Cannot draw the long section ... a grade must be above 0." Known: the big answer still shows a cover figure there.
+8. **Inlets:** a 150 inlet on a 100 pipe leaves the label at 100 DIA. and shows amber "Check: 150 inlet on a 100 pipe."
+9. **Tank:** a diameter and height that do not hold the size show amber "cannot say the tank holds the 1,000 L needed ... out by 4,123 L", never green; the note never shows a negative figure.
+10. **Schedule:** a typed level below 0.00 is amber "check the datum"; the depth worked from it is ringed amber with a "Check" line. Known: the sheet preview still prints that depth plain (Tim's call whether the sheet gets a mark).
+11. **Pit:** lid class lines on card 1 ("Over it", "Lid class", "Lid on the schedule"); a junction pit reads Solid; pump kinds read "SPS grated" and "SPS solid". The Match button and the Turned box are hidden in the AutoCAD tools until built; the bench still shows them.
+12. **Earlier cautions 4, 5 and 6 on this page are fixed** (pit labels read the right material; the tank counts at its full room; below-zero levels are amber).
