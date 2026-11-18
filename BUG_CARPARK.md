@@ -21627,3 +21627,23 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Evidence:** Headless harness on the batch 13 payload, 16 Nov 14:20-14:22: XK-01 PASS (label "225 DIA. UPVC PIPE AT 1 IN 100", "IL 10.00", "IL 9.80" and arrow TIM_CVL_ARROW kept and unlinked; band and 2 walls from the explode; nothing else erased), XK-U-01 PASS, XK-ERASE-01 PASS. Not yet seen in GUI AutoCAD.
 
 **Status:** OPEN (fix built in batch 13, not installed)
+
+## BUG-1461
+
+**Title:** Native hatch: some boundary edges cannot be selected by grip, and "recreate boundary" gives separate polylines instead of one joined polyline
+
+**Command / Area:** AutoCAD's own HATCH grips and Recreate Boundary (HATCHEDIT), on Tim's working PC with the CE plug-ins installed. Not a CE command. Lane: 2027.
+
+**Symptom:** (WRONG BEHAVIOUR of a native tool; severity: slows everyday drafting.) Tim, 18 Nov 2026, with a screenshot of a selected hatch with a curved lower edge (square grips at some boundary vertices, one round centre grip, several edges with no grip): "HATCHES ARENT WORKING HOW THEY NATIVELY USED TO WITH THE LATEST UPDATE? SEE HOW I CANT SELECT SOME EDGES, ALSO WHEN I RECREATE BOUNDARY IT CREATES INDIVIDUAL POLYLINES AS OPPOSED TO JOINED ONES. THIS IS SOMETHING WITH THE GRIP ISSUES." Interpretation (intake chat's, not Tim's): he suspects the installed plug-in's grip code. Which "latest update" (a CE install or an AutoCAD update) was not said. Cause NOT known.
+
+**Expected behaviour:** Native hatches behave exactly as plain AutoCAD: every boundary edge and vertex has its grip, and Recreate Boundary gives one joined polyline for a boundary that was one closed loop. Loading a CE plug-in must change nothing about a native hatch, polyline or block.
+
+**Steps to confirm in AutoCAD:** (1) In a new drawing from the office template, draw a closed polyline with one arc segment, hatch it, delete the boundary, select the hatch: every edge and vertex should show a grip. (2) Recreate boundary as a polyline: one closed polyline should result. (3) Repeat on the hatch Tim photographed. A way of telling "the plug-in" from "AutoCAD itself" is being written: see Reference.
+
+**Test that catches it:** none yet. Wanted: hatch boundary grips and Recreate Boundary compared with and without the CE plug-ins loaded, identical.
+
+**Reference:** Zero-plan decision D-199 (`C:\CE_PLAN\zero\DECISIONS.md`); research in progress, `C:\CE_PLAN\zero\reference\research\R-006_HATCH_AND_GRIPS.md` (reads the installed plug-ins' grip and overrule code read-only, and Autodesk's own pages). Installed versions at the time: not read. Related by subject only, not duplicates: the CEHATCH entries (CE's own hatch command).
+
+**Evidence:** Tim's screenshot of 18 Nov 2026 (in the zero-plan chat). No test run.
+
+**Status:** OPEN
