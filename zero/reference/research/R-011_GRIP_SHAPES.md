@@ -99,14 +99,26 @@ One change at a time from the working pattern, on MText unless said, a picture e
 5. **Speed with 60 on a sheet:** insert and flip 60 in 3 ms (not flipped) and 75 to 101 ms (flipped); regen 2 to 4 ms; selecting all 63 took 10 ms. (The count of grip lists asked stayed 0 because AutoCAD asks when it paints; selection with grips shown in `k_60_zoomed.png`: flip arrows point up on flipped labels and down on the others, and every label shows its dot and square.)
 6. **Grip colours in Tim's profile (read only):** GRIPCOLOR 150, GRIPHOVER 11, GRIPHOT 12, GRIPCONTOUR 251, GRIPDYNCOLOR 140, GRIPBLOCK 0, GRIPOBJLIMIT 100, GRIPSIZE 7. Our test shapes used orange (ACI 30); to look like AutoCAD's own they would use the grip colour variables, which the September-style open-line test showed paint in the blue.
 
+### Tim's own mouse test, 18 Nov 16:44 to 16:52 (fifth test AutoCAD, `g_tim.dwg`; Tim clicked, I read the log)
+
+Scene: a noted pipe line with our orange circle grip, a plain pipe line, noted text with our orange flip arrows, plain text. Tim's words in capitals; the log is `evidence\zt_run5_tim_mouse.log`.
+
+1. **Grips look right: PASS.** Noted line: normal grips plus the orange circle. Plain line and plain text: normal grips only ("CORRECT").
+2. **Hover words: PASS.** The tip showed "ZT CIRCLE" on the circle and "ZT FLIP" on the text grip. The log shows AutoCAD calling our hover method each time the cursor rested on the grip.
+3. **Click with the safe return value (GripHotToWarm): PASS.** About ten clicks on the circle and one on the flip arrows: AutoCAD stayed up and nothing happened; the log has a click line for each, answering GripHotToWarm. **This confirms the safe pattern does not crash.**
+4. **Drag the circle: nothing happened (expected, no drag code was written).** Whether U undid anything was not reported.
+5. **Double-click: "opens text editor on both".** Which objects were double-clicked is not clear (the test had no double-click watcher), so **trial 8 stays as it was**: AutoCAD's own double-click ran. Not tested for the noted pipe line.
+6. **Failure return value: CRASH, confirmed.** After `ZT_T_DANGER` one click on the circle gave "AutoCAD Error Aborting, FATAL ERROR: Unhandled e0434352h Exception" and AutoCAD closed (the log's last line: `CLICK ... answering Failure`; AutoCAD's own crash folder was kept, I read only the dump, I did not send it). **So the 17 Nov crash was this: our grip answering Failure when clicked. Never return Failure from a grip click.** The code e0434352h is the code for an unhandled .NET error. The dump's text mentions a NullReferenceException, the grip tooltip call and `GripOverrule.MoveGripPointsAt`; I did not read a real stack, so the exact line is not known and is not needed: the rule is enough.
+7. **After the crash:** the AutoCAD process had already gone; Autodesk's error report window (`cer_dialog`) was left for Tim to close with Close. Nothing was sent.
+
 ## Test list for later (Tim, 18 Nov: "get a nice list going for testing later")
 
 Each line: what to do, what counts as a pass. Items 1 to 9 need the real mouse (Codex robot, PC idle, test copy, one test AutoCAD, rule 1.9 in full). The rest need no mouse. Done so far is listed in Part 2.
 
-1. **Click a drawn grip, safe return value:** select a noted polyline with the orange circle grip, click it once. Pass: AutoCAD stays up, the log says the grip was clicked, nothing else moves.
-2. **Hover words:** rest the cursor on our grip. Pass: the tip text appears and the native grips' tips are unchanged.
+1. **DONE by Tim 18 Nov (PASS). Click a drawn grip, safe return value:** select a noted polyline with the orange circle grip, click it once. Pass: AutoCAD stays up, the log says the grip was clicked, nothing else moves.
+2. **DONE by Tim (PASS). Hover words:** rest the cursor on our grip. Pass: the tip text appears and the native grips' tips are unchanged.
 3. **Hover and hot colours:** hover, then click. Pass: the glyph changes colour (hover is set to 40 in the test).
-4. **Failure return value, last:** same click with the Failure return. Expected to crash AutoCAD (the 17 Nov cause). Pass for the diagnosis: it crashes; then close under the D-160 exception and never repeat.
+4. **DONE by Tim (CRASH confirmed). Failure return value, last:** same click with the Failure return. Expected to crash AutoCAD (the 17 Nov cause). Pass for the diagnosis: it crashes; then close under the D-160 exception and never repeat.
 5. **Hover menu on text:** one grip with the multi-function interface (Slide, Offset, Flip) on MText, first as Primary then as Secondary, with GRIPS at its current 2 and GRIPMULTIFUNCTIONAL 3 (do not change either). Pass: menu shows, each item runs.
 6. **Native menu survives:** hover a vertex grip of a plain polyline with our interface loaded. Pass: Stretch, Add Vertex, Remove Vertex, Convert to Arc still show.
 7. **Drag our grip:** drag a slide grip along a pipe. Pass: moves along only, one undo step.
