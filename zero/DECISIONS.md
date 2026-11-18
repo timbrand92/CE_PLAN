@@ -514,6 +514,14 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-030** (16 Nov 2026) [1 to 8, 8b to 8j] Council stormwater work is mostly single houses and units; under half a day each; one person on small jobs, mark-up and drafter on units; the office applies to council for the discharge point; sheets are layout plan, notes and details, computations; long sections only when council asks; rework comes from architect changes, council sending it back, and the drawing not matching; design often starts on assumptions (discharge point or flow, levels, tanks) and there is no set way of showing what was assumed.
 
+**D-247** (18 Nov 2026, 3:30 pm by the clock; closes the one question on `pictures\whole_plugin_few_tools.html`) Where the pump well sums are found and edited: "On the pump pit (Recommended)". The pump pit's own window shows the wet well volume, pump rate, level ladder and static rise; they print in the same council computations PDF as the detention sums (FP-013 stands).
+
+**D-248** (18 Nov 2026; closes ASK-1 of the function plan, FP-015) The APPROX. standing note: "Yes, that wording (Recommended)". The note reads: "LEVELS MARKED APPROX. ARE ASSUMED AND ARE TO BE CONFIRMED ON SITE BY THE BUILDER PRIOR TO THE COMMENCEMENT OF WORK. NOTIFY THE ENGINEER OF ANY DIFFERENCE." A notes block on the Blocks palette; the Unfinished list reminds the drafter to place it when anything prints APPROX.
+
+**D-249** (18 Nov 2026; closes ASK-2 of the function plan, FP-007) How a site's rainfall figures reach the office today: "A mix, depends on council". Some councils state the intensities to use, otherwise the Bureau's table. So the Job window takes either: figures given by the council (held with the council, source recorded) or the Bureau table pasted or typed for the site; each figure marked with where it came from.
+
+**D-250** (18 Nov 2026; closes ASK-5 of the function plan, FP-053; CHANGES the earlier rule that Tim's alias file is never edited by a chat, for this one job only) Asked what happens to his short commands WL, WT, WX, MLL, q, Dsa, Dss, Ds, Gr, Serial and ET, which call commands not found in any CE code or the shared LISP folder: "EDIT THE ALIAS FILE TO REMOVE THOSE OTHER COMMANDS, WT IS TANK". So: those eleven aliases are removed from his alias file; WT is the Tank tool. Planning chat's reading (mine, not his words): this is a yes to edit that one file for those eleven names only (the second spelling SERIAL of the same alias goes with it), with a dated copy kept beside it first; nothing else in the file is touched, and the plug-in still never edits his alias file by itself.
+
 ## Not decided (asked or raised, no decision yet)
 
 1. Whether Stage 1's civil explanation is approved (Tim moved on to the design without saying "approve"). **Settled by D-117.**

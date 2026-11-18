@@ -2,7 +2,7 @@
 
 **Why this file exists.** Tim, 17 Nov 2026: "i need a way to understand wht we have planned, what we have built, how close we are to finishing or getting a ready version for me to test and bugs and anythign else thats important if i was a director looking to get summaries. i need this everytime i ask how things are going and also you need to keep me on track with planning, building annd beyond". The planning chat updates this page before every progress answer and always uses these seven headings in this order.
 
-**Last updated:** Wed 18 Nov 2026, 3:50 pm. Everything open across every chat is on `BOARD.md`; what is decided now on any subject is in `rulings\` (to D-229; D-230 to D-246 are in `DECISIONS.md`).
+**Last updated:** Wed 18 Nov 2026, 3:35 pm by the clock. Everything open across every chat is on `BOARD.md`; what is decided now on any subject is in `rulings\` (to D-229; D-230 to D-246 are in `DECISIONS.md`).
 
 ## 1. Headline
 
