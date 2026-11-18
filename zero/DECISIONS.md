@@ -522,6 +522,14 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-250** (18 Nov 2026; closes ASK-5 of the function plan, FP-053; CHANGES the earlier rule that Tim's alias file is never edited by a chat, for this one job only) Asked what happens to his short commands WL, WT, WX, MLL, q, Dsa, Dss, Ds, Gr, Serial and ET, which call commands not found in any CE code or the shared LISP folder: "EDIT THE ALIAS FILE TO REMOVE THOSE OTHER COMMANDS, WT IS TANK". So: those eleven aliases are removed from his alias file; WT is the Tank tool. Planning chat's reading (mine, not his words): this is a yes to edit that one file for those eleven names only (the second spelling SERIAL of the same alias goes with it), with a dated copy kept beside it first; nothing else in the file is touched, and the plug-in still never edits his alias file by itself.
 
+**D-251** (18 Nov 2026, 3:35 pm) PP against his Pp alias (Pp ran PEDIT): "Remove my Pp alias; PP is plastic pit (Recommended)". Done: that one line removed from his AutoCAD 2027 alias file, dated copy beside it.
+
+**D-252** (18 Nov 2026, 3:35 pm; closes ASK-3 of the function plan, FP-013) How the pump well's levels are set: "As the newest office sums (Recommended)": static rise from the inlet invert; bottom 400 below all pumps stop; wet well never under 3 m3 unless typed over (amber, "Needs a look").
+
+**D-253** (18 Nov 2026, 3:35 pm; closes ASK-4 of the function plan, FP-010; NOT the recommended answer) What differs between councils' orifice pit details: "The pits really differ by council". So the library keeps one orifice pit detail per council; Detention fills this job's figures into the detail that belongs to the job's council. The single office detail proposed in FP-010 is dropped.
+
+**D-254** (18 Nov 2026, 3:35 pm) SECURELOAD: "You set it to 1 for me". His yes in words for that one setting. NOT DONE YET: an AutoCAD was running when he answered, and the read-only look found the value 0 in three profiles (the unnamed one, one named after him and the trial one), so "left by the first trial" is not proven: the profile named after him also holds 0. Put back to him before anything is changed.
+
 ## Not decided (asked or raised, no decision yet)
 
 1. Whether Stage 1's civil explanation is approved (Tim moved on to the design without saying "approve"). **Settled by D-117.**
