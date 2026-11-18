@@ -2,6 +2,10 @@
 
 Written Wed 18 Nov 2026, about 18:50, by the trials chat. Tested in AutoCAD 2027 on a made-up 2,500-object drawing (`p_2500.dwg`: 2,000 pipes and 500 text labels, in a test folder), one test AutoCAD at a time, Tim's CE plugins loaded as always, closed normally with No to saving. Pictures are in `C:\CE_WORK\trials\zero\evidence\r011\`. No web addresses.
 
+**Morning line for Tim (fourth night run): answer first.** Lighting up the parts where they are, with no view change, works in every case I tried: off the edge of the screen, switched off or frozen layers, a turned UCS, a layout viewport and paper space; it takes 1 to 9 ms on 2,500 objects and never marks the drawing. The "Zoom to it" button (AutoCAD's own zoom with a margin, 40 ms) then marks the drawing as changed, so AutoCAD asks "Save changes?" when it is closed, and AutoCAD's own ZOOM Previous puts the old view back exactly and keeps working. The one-byte profile difference is AutoCAD re-saving its own palette positions: the same thing happens in a plain session, and nothing in the profile mentions my window.
+**Completed:** items 1, 2 and 4 (PROVEN as below; one case NOT TESTED). **Not completed:** paper space with no viewport at all.
+**Next:** build the preview on this plan: light up in place, "Zoom to it" does an ordinary zoom only on request.
+
 **Morning line for Tim (18 Nov, second night run): answer first.** Yes: the system can be lit up with no "Save changes?" prompt. Temporary outlines and tags, and the docked window, do not mark the drawing changed; a view change made through AutoCAD's graphics layer does not mark it either (AutoCAD closed with no prompt every time), whereas the usual zoom and the editor's own view setting do. The window also docks at the right edge with the drawing still usable beside it. **Still open:** the graphics-layer zoom lands in the wrong place (a maths fix, not a blocker), and a real mouse click on the window's OK and Cancel did not fire in my test (the keyboard did).
 **Completed:** A1, A3, A4 and the docking (B) PROVEN; A2 PROVEN that the graphics route does not mark the drawing. **Not completed:** an accurate zoom through the graphics route; the mouse click on OK and Cancel (C); a check that AutoCAD does not remember the window's position in the profile.
 **Next:** fix the zoom position (read the view back after each change and correct it), try the real mouse on the buttons with Tim's own hand or the other robot, and check the palette's saved state.
@@ -41,6 +45,39 @@ The palette docked at the right edge with the drawing still usable and fully dra
 
 ### C. A real mouse click on OK and Cancel: NOT PROVEN
 With AutoCAD in front and the palette docked, three mouse clicks and one press and release on OK and Cancel only focused the button (it showed its focus outline, `q_palette_dock.png`); the plug-in's click handler did not run. Pressing the space bar on the focused OK did run it (log `Q C the OK button was clicked`). So the buttons work from the keyboard; whether Tim's own mouse clicks work was not tested, and my mouse tool may not reach this kind of window.
+
+## Fourth night run (19 Nov 23:50 to 00:20): light-up where it is, "Zoom to it", the profile byte
+
+Test copy `p_2500.dwg` (2,500 objects) with a docked panel; three test AutoCADs one at a time (a plain session, then the main session), closed normally with No to saving. No function keys or shortcuts were used (one stray typed word is disclosed under item 3 in R-011). Pictures in `C:\CE_WORK\trials\zero\evidence\r011\`; logs `zt_run26_item1a.log`, `zt_run27_items123.log`; profile text copies in `evidence\profile_snap\text\`.
+
+**Morning line for Tim (fourth night run): answer first.** Lighting up the parts where they are, with no view change, works in every case I tried: off the edge of the screen, switched off or frozen layers, a turned UCS, a layout viewport and paper space; it takes 1 to 9 ms on 2,500 objects and never marks the drawing. The "Zoom to it" button (AutoCAD's own zoom with a margin, 40 ms) then marks the drawing as changed, so AutoCAD asks "Save changes?" when it is closed, and AutoCAD's own ZOOM Previous puts the old view back exactly and keeps working. The one-byte profile difference is AutoCAD re-saving its own palette positions: the same thing happens in a plain session, and nothing in the profile mentions my window.
+**Completed:** items 1, 2 and 4 (PROVEN as below; one case NOT TESTED). **Not completed:** paper space with no viewport at all.
+**Next:** build the preview on this plan: light up in place, "Zoom to it" does an ordinary zoom only on request.
+
+### Item 1. Light-up with no view change, as it will be used (each case: 20 pipes lit with outlines and tags)
+
+1. **On screen (reference): PROVEN.** 7 ms, the changed flag unchanged. Picture `s1a_onscreen.png`.
+2. **Partly off the edge of the screen: PROVEN.** 2 ms. The outlines and tags are cut cleanly at the edge of the drawing area (a tag reads "L/s" where its start is off the left edge); nothing odd or stray at the edges (`s1b_partly_offscreen.png`).
+3. **Wholly off screen: PROVEN.** 3 ms; nothing visible, no error (`s1c_fully_offscreen.png`).
+4. **A layer frozen or switched off: PROVEN, with a point to decide.** Half the pipes were moved to a layer of their own (the layer change itself is a drawing edit, the flag went 16 to 17 there). With that layer **frozen or off, the real pipes vanish but the light-up still draws their outlines and tags** (`s1e_layer_frozen.png`, `s1f_layer_off.png`; 9 ms and 2 ms): ghost outlines where the hidden pipes are. A build must choose: show them (as tested) or skip hidden layers.
+5. **UCS turned 30 degrees: PROVEN.** The outlines and tags stay on the pipes (world coordinates, not the turned UCS), 1 ms (`s1g_ucs30.png`; the UCS command changed the drawing's flag to 21, not the light-up).
+6. **In a layout viewport with model space active: PROVEN.** In Layout1 with a floating viewport the lit set shows inside the viewport at the right place (cyan tags at the centre of the picture, `s1h3_layout_plain.png`), 2 ms.
+7. **In paper space, with the viewport on the sheet: PROVEN.** Switching to paper space and lighting again, the lit set again shows inside the viewport at the right place (`s1i2_crop.png`), 4 ms; Layout2 with its viewport did the same (screen capture, not saved: the window picture tool stalled on that layout).
+8. **Paper space with no viewport at all: NOT TESTED** (both layouts had a viewport).
+9. **2,500-object drawing:** every case above ran on it; the slowest was 9 ms.
+10. **Side effect to know:** the changed flag in this session was already 16 or more from my own set-up (zoom windows, layer move, UCS), so "the light-up did not change it" is shown by before and after readings on each line of the log (`DBMOD before 29, after 29`).
+
+### Item 2. "Zoom to it"
+
+1. **Zoom to the set with a margin: PROVEN.** AutoCAD's own ZOOM window with a 12 per cent margin round the lit set: 40 ms; the view became centre 1434.5, 859, height 217.76 (picture `i2_after_zoomto.png`).
+2. **Putting the previous view back: PROVEN with AutoCAD's own ZOOM Previous.** After the zoom, ZOOM Previous returned exactly the view before (centre 400, 200, height 200.2528, identical to the reading before the zoom; `i2_after_zoom_previous.png`). A second ZOOM Previous went one step further back to an earlier view (centre 1473.7, 889.6): AutoCAD's own view history still works afterwards.
+3. **What the user sees on close:** the drawing's flag goes up on the first ordinary zoom and AutoCAD asks "Save changes to ...?" with Yes, No and Cancel, the same as after any zoom (pictures `i2_save_prompt_on_close.png` and the earlier `p_quit_prompt.png`; I answered No). **Putting the view back does not clear it** (the flag stays raised, as measured before).
+
+### Item 4. The one-byte profile difference, read only
+
+1. **How:** text copies of `Profiles\tim\profile.aws` in my own folder: before anything (P0, 88,332 bytes), after a plain session with the plug-ins loaded and no window of mine (P1, 88,333), after the main session with the docked panel, lit sets, layouts and tests (P2, 88,334). Nothing was written to the profile.
+2. **What the difference is:** a character-level comparison shows the changes are all in AutoCAD's own palette layout: the dock position numbers of the Tool Palettes and Properties bars (for example `Left="3079518"` becoming `"3079513"`, then `"3081413"`; `Top="283848"` becoming `"284269"`) and the order of a few property-palette entries. The plain session (P0 to P1) makes the same kind of change, and the docked session (P1 to P2) another. The extra byte is a longer or shorter number, not an entry.
+3. **My window:** the word "ZT" appears **0 times** in P2: no entry for my panel in the profile file. **PROVEN: the byte is AutoCAD re-saving its own dock numbers, also in a plain session; the docked panel left no entry.** The registry tree was already shown unchanged (0 lines) the night before.
 
 ## Third night run (18 Nov 23:15 to 23:45): zoom arithmetic, profile files, panel and events
 

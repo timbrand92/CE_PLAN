@@ -1,5 +1,9 @@
 # R-011. Grip shapes: can CE things use AutoCAD's own grip shapes (the arrows and triangles of dynamic blocks)?
 
+**Morning line for Tim (19 Nov, fourth night): answer first.** The clean double-click catch now covers a noted pipe, a noted pit block, and the awkward cases: while another command is running, or with two objects selected, it does nothing and AutoCAD handles the click. It is installed and removed by two plug-in commands, lives only inside the running AutoCAD, and saves nothing anywhere.
+**Completed:** noted polyline, noted block (by its edge), during a command, with two selected, install and remove. **Not completed:** a block double-clicked in its empty middle picks nothing (AutoCAD own pick rule).
+**Next:** build it into the plug-in with the three rules (no command running, one object only, only our own noted objects).
+
 **Morning line for Tim (18 Nov, third night): answer first.** The double-click takeover can be made clean: hooking the double-click message itself means a noted label gets our window and AutoCAD's own editor never starts (no `_mtedit`, no `*Cancel*` in the history), while a plain pipe still opens AutoCAD's own editor. Tried on noted text only. See the new section "Double-click takeover with NO _pedit, *Cancel* in the history".
 **Completed:** noted text clean takeover; plain pipe unaffected. **Not completed:** a noted polyline; a double-click while another command is running; the history window itself was not shown.
 **Next:** try a noted polyline and the in-command case; decide with Tim whether the double-click action list (a customisation file change) is wanted instead.
@@ -163,6 +167,19 @@ Log: `evidence\zt_run10_night.log`. Pictures in `evidence\r011\`. Tim's CE plugi
 3. **No setting, customisation file or double-click action list was read or written.** The hook is a plug-in event and lasts only while the plug-in is loaded.
 4. **Limits, honestly:** only a noted MText and a plain polyline were tried; a noted polyline was not double-clicked; a double-click made while another command is running was not tried (the hook would need to step aside then); the cost of picking at the cursor on every double-click was not measured (it ran only on double-clicks); the history window itself was not displayed (F2 is bound to CLEAN in Tim's workspace), so "no residue" rests on the command line's last text and the empty active-command name, plus the earlier visible `_pedit *Cancel*` for the old route.
 5. **The clean route that was NOT used:** AutoCAD's own double-click action list (set through the customisation file) is the supported way to make a double-click run another command, but changing it writes the customisation file, so it was not touched; Tim would need to say yes.
+
+### Double-click catch on more cases (19 Nov 00:05 to 00:15, test AutoCAD on a copy, panel docked)
+
+**Result first: PROVEN for a noted polyline, a noted block and the "do nothing harmful" cases; one stray typed word disclosed.** The catch was installed and removed on request with two plug-in commands.
+
+1. **Noted polyline (a pipe): PROVEN.** The catch saw "Polyline noted=True", our command ran, and AutoCAD's own editor did not start (no command active, last text was ours).
+2. **Noted block (a pit): PROVEN, with a pick note.** Double-clicking the middle of the pit block's empty square picked nothing ("nothing under the cursor") and AutoCAD treated it as a click on empty space; double-clicking the block's edge: "BlockReference noted=True", our command ran, AutoCAD's own block editor did not start (last text ours, `CMDNAMES` empty). This is AutoCAD's normal pick behaviour (an object is picked by its lines), not a fault of the catch.
+3. **During another running command: PROVEN harmless.** With LINE running, a double-click on the noted pipe: the catch logged "ignored: a command is running (CMDACTIVE 1), AutoCAD handles it" and did nothing; two Escapes cancelled LINE; the drawing still held exactly the three test objects.
+4. **With two objects selected: PROVEN.** Two pipes selected, double-click on the noted pipe away from its grips: "ignored: 2 objects are selected, AutoCAD handles it"; AutoCAD ran its own double-click action for a selection (its quick-properties, shown on the command line as `'_.quickproperties`). (A first try clicked on the pipe's own middle grip, which started AutoCAD's grip stretch: unrelated to the catch.)
+5. **Plain pipe: unchanged.** Earlier run: AutoCAD's own `_pedit` opened.
+6. **How the catch is installed and removed:** `ZT_S_DC` adds one handler to AutoCAD's `Application.PreTranslateMessage` event (an in-memory list of listeners inside the running AutoCAD); `ZT_S_DC_OFF` takes it off (log "handler taken off"). After removal the same double-click on the noted pipe started AutoCAD's own pipe edit again (no catch line in the log and AutoCAD's command was running). Closing AutoCAD also ends it. **Nothing is saved anywhere:** no customisation file, setting, registry value or profile entry is read or written by it (see the profile comparison in R-012).
+7. **Rules for the catch in a build:** do nothing while a command is running; do nothing if more than one object is selected; swallow only a double-click that lands on an object carrying the plug-in's note.
+8. **A slip, disclosed:** a test command line I sent ("ZT_M_DUMP" followed by a word) left its word to be read as a command: AutoCAD started the dimensional-constraint command (`DCLINEAR`, "Specify first constraint point"). I pressed Escape twice; the object list afterwards showed only the three test objects and nothing running. Words in a command string must always be answers to a prompt.
 
 ## Test list for later (Tim, 18 Nov: "get a nice list going for testing later")
 
