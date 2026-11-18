@@ -313,4 +313,24 @@ Answer given in chat (planning chat's reading, not Tim's words): his button is a
 
 **TA-110 Existing hatches when DIMSCALE changes.** "Only new ones": hatches already drawn keep their scale. Note: this differs from his dimension ruling, where existing dimensions update (D-210).
 
-Next free number: TA-111
+## Batch 32 (the TEXT window, in words; no mock-ups until the approved style, D-286)
+
+**TA-111 Name.** "OFFICETEXT / OT" (TEXT is AutoCAD's own command; OT is free in AutoCAD's list and his).
+
+**TA-112 Size.** "All sizes follow DIMSCALE": every size is its sheet height x DIMSCALE. Today 25 already does; 18 is fixed at 180 and does not.
+
+**TA-113 Which sizes.** "LOOK THROUGH EXISTING JOBS AND SEE WHAT THEY DO". Researched: `interview_tools\TEXT_SPEC.md`, evidence section.
+
+**TA-114 Side of a line.** "Pick the clear side": 25T / 25B text goes on the side with less in the way; typing 25T or 25B still forces a side.
+
+**TA-115 Message.** "WILL THE INDIVIDUAL COMMANDS STILL WORK?" Answer given: yes. TA-034 "Keep names, add window" stands: 25T, 25B, 25L, 25R, 25C, 25LC, 25RC, 18T, 18B, 18L and 18R keep working, and OT is the extra window.
+
+**TA-116 Text layer number.** "Yes, layer is the pen": 18TEXT, 25TEXT, 35TEXT, 50TEXT and 70TEXT are pen weights; size is chosen separately.
+
+**TA-117 Sizes offered.** "1.8 2.0 2.5 3.0 3.5 5.0 7.0" (sheet mm, all following DIMSCALE).
+
+**TA-118 Capitals.** "As typed".
+
+**TA-119 Text kind.** "Multiline always" for OT; 25T and the rest keep single-line as today.
+
+Next free number: TA-120
