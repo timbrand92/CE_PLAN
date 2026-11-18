@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<title>Detention window, drawing across the top (mock-up, version 5)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --page:#161718;
+  --win:#2B2D30; --card:#383B40; --well:#232528; --line:#4A4D53;
+  --field:#4A4D55; --fieldline:#8A8E96;
+  --t-answer:#F3F4F5; --t-body:#D2D5DA; --t-note:#A9AEB6;
+  --unit:#C8CBD0; --sv0:#80848C; --sv1:#C8CBD0; --sv2:#DADCE0; --sv3:#B4B8BE;
+  --green:#7BE0AE; --amber:#F5C660; --red:#FF6B4A;
+  --ink:#10131A;
+  --fill:#A9ADB5;
+  --c1:#5AA2F0; --c2:#3CC4B2; --c3:#A08AF0;
+  --acc:#FF70B3; --acc-ink:#10131A;
+  --r:8px;
+  --sans:'IBM Plex Sans','Segoe UI',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--page);color:var(--t-body);font-family:var(--sans);font-size:14px;line-height:24px;padding:32px;min-width:1600px;font-variant-numeric:tabular-nums}
+.pagetitle{font-size:14px;margin-bottom:16px}
+.switches{display:flex;gap:32px;margin-top:24px;align-items:center;flex-wrap:wrap;color:#B8BBC1}
+.switch{display:flex;gap:8px;align-items:center;font-size:12px}
+.switch button{font:inherit;font-size:12px;height:32px;padding:0 16px;border-radius:var(--r);background:transparent;color:#D5D8DC;border:1px solid #55585E;cursor:pointer}
+.switch button.on{border-color:#fff;color:#fff}
+
+.win{width:1536px;height:864px;background:var(--win);border:1px solid var(--line);border-radius:var(--r);box-shadow:0 24px 48px rgba(0,0,0,.5);display:flex;flex-direction:column;overflow:hidden}
+.titlebar{height:32px;flex:none;display:flex;align-items:center;justify-content:space-between;padding:0 16px;border-bottom:1px solid var(--line);color:var(--t-answer)}
+.titlebar .x{color:var(--t-note);font-size:14px}
+.body{flex:1;min-height:0;padding:16px;display:flex;gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.note{font-size:12px;line-height:16px;color:var(--t-note)}
+.fig{font-weight:400}
+.strong{font-weight:600}
+
+/* preview */
+.preview{width:380px;flex:none;padding:16px 8px;display:flex;flex-direction:column;gap:8px}
+.preview .phead{padding:0 8px}
+.preview .phead .t{color:var(--t-answer);display:block;height:24px}
+.preview .phead .note{display:block;height:32px}
+.preview .foot{padding:0 8px}
+.preview svg{display:block;flex:none}
+.chain{display:flex;align-items:center;gap:2px;font-size:12px;line-height:16px;color:var(--t-note);flex:none;white-space:nowrap}
+.chip{border:1px solid var(--line);border-radius:var(--r);padding:4px;color:var(--t-note);white-space:nowrap}
+.chip.lit{background:var(--t-answer);border-color:var(--t-answer);color:var(--ink)}
+
+.right{flex:1;min-width:0;display:flex;flex-direction:column;gap:16px}
+
+/* band */
+.band{flex:none;height:40px;border-radius:var(--r);display:flex;align-items:center;justify-content:space-between;padding:0 16px;color:var(--ink);box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.band.green{background:var(--green)} .band.red{background:var(--red)} .band.amber{background:var(--amber)}
+.band .left{display:flex;align-items:center;gap:16px;white-space:nowrap}
+.band .main{font-size:24px;line-height:32px}
+.band .sub{font-size:14px}
+.band .right2{display:flex;align-items:center;gap:8px;white-space:nowrap;font-size:14px}
+
+.pill{display:inline-flex;align-items:center;height:24px;padding:0 8px;border-radius:var(--r);font-size:12px;line-height:24px;white-space:nowrap;color:var(--ink);border:1px solid rgba(16,19,26,.55)}
+.pill.green{background:var(--green)} .pill.amber{background:var(--amber)} .pill.red{background:var(--red)}
+.pill.changed{background:transparent;color:var(--t-body);border-color:var(--t-body)}
+
+/* steps */
+.step{padding:16px 16px 8px;flex:none}
+.step.grow{flex:1;min-height:0}
+.shead{display:flex;align-items:center;gap:8px;height:24px;margin-bottom:8px;white-space:nowrap}
+.shead.tall{height:32px}
+.shead .n{width:24px;height:24px;border:1px solid var(--t-body);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:12px;color:var(--t-answer);flex:none}
+.shead .t{color:var(--t-answer);margin-right:8px}
+.shead .sp{flex:1}
+
+/* inputs: boxed and bright */
+.row1{display:flex;align-items:flex-start;gap:24px}
+.rowb{margin-top:8px;align-items:flex-end}
+.fields{display:flex;gap:8px}
+.fld{display:flex;flex-direction:column}
+.fld > .note{height:16px}
+.inp{height:32px;display:flex;align-items:center;justify-content:flex-end;gap:4px;padding:0 8px;background:var(--field);border:1px solid var(--fieldline);border-radius:var(--r);color:var(--t-answer);font-size:14px;white-space:nowrap}
+.inp .u{font-size:12px;color:var(--unit)}
+.inp.needs{border:2px solid var(--amber);padding:0 7px}
+.inp.nk{font-size:12px;justify-content:center;padding:0 8px}
+.inp.nk.needs{padding:0 6px}
+.inp.tick{gap:8px;justify-content:flex-start}
+.inp .cb2{width:16px;height:16px;border:1.5px solid var(--t-answer);border-radius:4px;display:inline-flex;align-items:center;justify-content:center;flex:none}
+.inp .cb2.on{background:#EEF0F2;border-color:#EEF0F2}
+.pair{display:flex;flex-direction:column}
+.pair .pr{display:flex;gap:8px}
+.grp{display:flex;flex-direction:column}
+.grp > .note{height:16px}
+.grp .gb{display:flex;gap:8px}
+.rain{display:flex;gap:8px;align-items:flex-end}
+.gl{width:88px;height:48px;display:flex;flex-direction:column;justify-content:center;gap:4px}
+.mbtn{height:32px;padding:0 16px;border-radius:var(--r);border:1px solid var(--fieldline);background:var(--field);color:var(--t-answer);font:inherit;cursor:pointer;white-space:nowrap}
+.mbtn.sel{background:var(--acc);border-color:var(--acc);color:var(--acc-ink)}
+.methods{display:flex;gap:8px}
+
+/* worked-out sums: plain, no boxes */
+.cols{display:flex;gap:24px;align-items:flex-start}
+.cols > div{min-width:0}
+.sum{display:grid;grid-template-columns:16px 1fr auto;column-gap:8px;align-items:center}
+.sum > div{height:32px;line-height:32px}
+.sum .s{text-align:center}
+.sum .l{white-space:nowrap;display:flex;align-items:center;gap:8px}
+.sum .l small{font-size:12px;color:var(--t-note)}
+.sum .v{text-align:right;min-width:56px}
+.sum .v.nk{color:var(--t-note)}
+.sum .line{border-top:1px solid var(--t-body)}
+.sum .dbl{border-bottom:3px double var(--t-body);height:32px;line-height:28px}
+.sum .off{color:var(--t-note)}
+.sum .off .cb{border-color:var(--t-note)}
+.cb{width:16px;height:16px;border:1.5px solid var(--t-body);border-radius:4px;display:inline-flex;align-items:center;justify-content:center;flex:none}
+.cb.on{background:#EEF0F2;border-color:#EEF0F2}
+.cb svg{display:block}
+
+.sum5{display:grid;grid-template-columns:16px 1fr 56px 64px 56px;column-gap:8px;align-items:center}
+.sum5 > div{height:32px;line-height:32px;text-align:right}
+.sum5 .s{text-align:center}
+.sum5 .l{text-align:left;display:flex;align-items:center;gap:8px;white-space:nowrap}
+.sum5 .l small{font-size:12px;color:var(--t-note)}
+.sum5 .x{white-space:nowrap}
+.sum5 .line{border-top:1px solid var(--t-body)}
+.sum5 .dbl{border-bottom:3px double var(--t-body);height:32px;line-height:28px}
+
+.abar{display:flex;height:24px;width:320px}
+.abar div{display:flex;align-items:center;padding:0 8px;color:var(--ink);font-size:12px;white-space:nowrap;overflow:hidden;gap:8px}
+.abar div:first-child{border-radius:8px 0 0 8px}
+.abar div:last-child{border-radius:0 8px 8px 0}
+
+.ans{height:32px;display:flex;align-items:baseline;gap:8px;margin-bottom:0;white-space:nowrap}
+.ans .big{font-size:24px;line-height:32px;color:var(--t-answer)}
+.ans .big.nk{color:var(--t-note);font-weight:400}
+.ans .pill{align-self:center;margin-left:auto}
+
+.sbar{display:flex;height:32px;border-radius:var(--r);background:var(--well);border:1px solid var(--line);overflow:hidden;position:relative;margin-bottom:8px}
+.sbar .fill{background:var(--fill);color:var(--ink);display:flex;align-items:center;justify-content:space-between;padding:0 24px 0 8px;font-size:12px;white-space:nowrap;flex:none}
+.sbar .cap{display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--ink);white-space:nowrap;flex:1}
+.sbar .cap.red{background:repeating-linear-gradient(135deg,#FF6B4A 0 6px,#E85A3C 6px 12px)}
+.sbar .cap.amber{background:repeating-linear-gradient(135deg,#F5C660 0 6px,#E5B24C 6px 12px);flex:none;width:136px}
+.sbar .mk{position:absolute;top:0;bottom:0;width:2px;background:var(--ink)}
+
+.sk{stroke:var(--sv3);fill:none;stroke-width:1;stroke-dasharray:4 4}
+.sh{stroke:var(--sv1);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.tb{fill:var(--sv2);stroke:none;font-family:var(--sans);font-size:12px}
+.tn{fill:var(--sv3);stroke:none;font-family:var(--sans);font-size:12px}
+
+.bottom{height:48px;flex:none;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;padding:0 16px}
+.bottom .btns{display:flex;gap:8px}
+.btn{height:32px;padding:0 24px;border-radius:var(--r);border:1px solid var(--line);background:transparent;color:var(--t-body);font:inherit}
+.btn.quiet{color:var(--t-note)}
+.btn.ok{background:var(--acc);border-color:var(--acc);color:var(--acc-ink)}
+
+.below{width:1536px;margin-top:32px;color:#D5D8DC}
+.below h2{font-size:14px;font-weight:600;color:#fff;margin-bottom:8px}
+.below ol{padding-left:32px}
+.below li{margin-bottom:8px}
+.below li b{font-weight:600;color:#fff}
+.below p{margin-top:16px;color:#B8BBC1}
+
+body{padding:32px 24px;min-width:1560px}
+.body{padding:8px 16px;flex-direction:column;gap:16px}
+.dv{position:relative;height:240px;flex:none;background:#16181B;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.dv svg{position:absolute;left:0;top:0;display:block}
+.dv .dh{position:absolute;left:16px;top:8px}
+.dv .dh .t{color:#F3F4F5;display:block;height:24px}
+.dv .dh .note{display:block;height:16px;color:#C8CBD0}
+.dv .chainrow{position:absolute;left:16px;bottom:8px;display:flex;align-items:center;gap:16px}
+.dv .chainrow .note{color:#C8CBD0}
+.duo{display:flex;gap:16px;flex:none;margin-top:-8px}
+.duo .step{padding:16px 16px 8px}
+.sum5 .span3{grid-column:2 / 5}
+.cap2{font-size:12px;line-height:16px;color:var(--t-note);width:180px}
+</style>
+</head>
+<body>
+
+<div class="pagetitle">Detention window, drawing across the top (mock-up, made-up job)</div>
+
+<div class="win">
+  <div class="titlebar"><span>Detention · this job</span><span class="x">&#x2715;</span></div>
+  <div class="body">
+    <div class="dv" id="dv"></div>
+    <div id="band"></div>
+    <div class="card step" id="s1c"></div>
+    <div class="duo"><div class="card step" id="s2c" style="flex:0 0 676px"></div><div class="card step" id="s3c" style="flex:1"></div></div>
+  </div>
+  <div class="bottom">
+    <button class="btn quiet">Print the working</button>
+    <div class="btns"><button class="btn">Cancel</button><button class="btn ok">OK</button></div>
+  </div>
+</div>
+
+<div class="switches">
+  <div class="switch">State:
+    <button id="s1" class="on">Suits</button><button id="s2">Short by 0.44 m³</button><button id="s3">Rainfall not known</button></div>
+</div>
+
+<div class="below">
+  <h2>What changed in version 5</h2>
+  <ol>
+    <li><b>The drawing now runs across the top,</b> about a third of the window, with the site turned so its 45.00 side is horizontal and the kerb at the right end. Numbered markers on the drawing match a key of small tags with the figures; the white-outlined tags are the parts counted as storage.</li>
+    <li><b>Below it are the status band, then step 1 across the full width, then step 2 and step 3 side by side.</b> Every sum is whole; nothing folds and nothing scrolls.</li>
+    <li><b>Dark and rose are fixed,</b> so the Ground and Accent switches are gone. The only switch left is the state.</li>
+  </ol>
+  <p>Not shown here, to be written and tested: click budget, undo, motion (rules 18, 21, 28). Budgets, undo and motion are not shown.</p>
+</div>
+
+<script>
+(function(){
+  var q=new URLSearchParams(location.search);
+  var state=q.get('state')==='short'?'short':(q.get('state')==='notknown'?'notknown':'suits');
+  var tick='<svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#10131A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 L5 9 L10 3"/></svg>';
+  var rain=[['5 min','98.6'],['10 min','73.6'],['15 min','60.1'],['20 min','51.5'],['25 min','45.5'],['30 min','40.9']];
+
+  /* ---------- the drawing band: the made-up two-unit lot turned so 45.00 runs across ---------- */
+  function drawing(tank){
+    var W=1500,H=238,k=9.5,L=760,T=44,fs=12,C='#C8CBD0',y0=T+2*k,s=14,h=s/2,pw=4;
+    var X=function(u){return L+u*k;},Y=function(v){return T+v*k;};
+    var f=[];
+    function tx(x,y,t,anc,tr,col){f.push('<text x="'+x+'" y="'+y+'" fill="'+(col||C)+'" font-size="'+fs+'" font-family="IBM Plex Sans, Segoe UI, sans-serif" letter-spacing="0.3"'+(anc?' text-anchor="'+anc+'"':'')+(tr?' transform="'+tr+'"':'')+'>'+t+'</text>');}
+    function ln(x1,y1,x2,y2,c,w,d){f.push('<path d="M'+x1+' '+y1+' L'+x2+' '+y2+'" stroke="'+(c||'#8A8F96')+'" stroke-width="'+(w||1)+'"'+(d?' stroke-dasharray="'+d+'"':'')+' fill="none"/>');}
+    function rc(x,y,w,hh,st,sw,fill,rx,d){f.push('<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+hh+'" rx="'+(rx||0)+'" fill="'+(fill||'none')+'" stroke="'+st+'" stroke-width="'+sw+'"'+(d?' stroke-dasharray="'+d+'"':'')+'/>');}
+    function pit(cx,cy,dim,ring){
+      var c=dim?'#5E636B':'#E8EAED';
+      if(ring){rc(cx-h-4,cy-h-4,s+8,s+8,'#F3F4F5',1,null,3);}
+      rc(cx-h,cy-h,s,s,c,1,'#16181B');
+      ln(cx-h,cy-h,cx+h,cy+h,'#5E636B',0.6);ln(cx+h,cy-h,cx-h,cy+h,'#5E636B',0.6);
+    }
+    f.push('<svg width="'+W+'" height="'+H+'" viewBox="0 0 '+W+' '+H+'">');
+    // dimensions: 18.00 down the left, 45.00 along the bottom
+    ln(L-14,T,L-14,T+18*k,'#8A8F96');ln(L-19,T,L-9,T,'#8A8F96');ln(L-19,T+18*k,L-9,T+18*k,'#8A8F96');
+    tx(0,0,'18.00','middle','translate('+(L-20)+' '+(T+9*k)+') rotate(-90)');
+    ln(L,T+18*k+5,L+45*k,T+18*k+5,'#8A8F96');ln(L,T+18*k+1,L,T+18*k+9,'#8A8F96');ln(L+45*k,T+18*k+1,L+45*k,T+18*k+9,'#8A8F96');
+    tx(L+22.5*k,T+18*k+19,'45.00','middle');
+    // boundary, shared driveway, two units
+    rc(L,T,45*k,18*k,'#E8EAED',1);
+    rc(L,Y(14.5),45*k,3.5*k,'#9AA0A8',1);
+    tx(X(22.5),Y(16.25)+4,'SHARED DRIVEWAY','middle');
+    rc(X(2),Y(4),11*k,9.5*k,'#9AA0A8',1.2);tx(X(7.5),Y(8.75)+4,'UNIT 1','middle');
+    rc(X(16),Y(4),11*k,9.5*k,'#9AA0A8',1.2);tx(X(21.5),Y(8.75)+4,'UNIT 2','middle');
+    tx(X(41),Y(11),'GARDEN');
+    // kerb at the right end
+    ln(X(47),0,X(47),H,'#8A8F96');ln(X(47)+4,0,X(47)+4,H,'#5E636B');
+    tx(0,0,'KERB','middle','translate('+(X(47)+18)+' 150) rotate(-90)');
+    // detention pipe: halo (counted as storage) + dashed blue
+    f.push('<path d="M'+(X(21)+1.4*k)+' '+y0+' H'+(X(32.5)+h+2)+'" stroke="#F3F4F5" stroke-width="'+(pw+6)+'" stroke-linecap="round" opacity="0.3"/>');
+    f.push('<path d="M'+(X(21)+1.4*k)+' '+y0+' H'+(X(40)-h)+'" stroke="#4A90E2" stroke-width="'+pw+'" stroke-dasharray="9 3" fill="none"/>');
+    // tank WT1
+    f.push('<circle cx="'+X(21)+'" cy="'+y0+'" r="'+(1.4*k+5)+'" fill="none" stroke="#F3F4F5" stroke-width="1"/>');
+    f.push('<circle cx="'+X(21)+'" cy="'+y0+'" r="'+(1.4*k)+'" fill="#16181B" stroke="#E8EAED" stroke-width="1.2"/>');
+    // P1 P2 counted
+    pit(X(27.5),y0,false,true);pit(X(32.5),y0,false,true);
+    // P3 P4 not used (dim)
+    ln(X(30.5),y0+h+2,X(30.5),Y(9)-h,'#5E636B',1.5,'4 3');pit(X(30.5),Y(9),true,false);
+    tx(X(28.2),Y(9)+h+17,'P4 NOT USED');
+    ln(X(37),y0+2,X(37),Y(9)-h,'#5E636B',1.5,'4 3');pit(X(37),Y(9),true,false);
+    tx(X(37),Y(9)+h+35,'P3 NOT USED','middle');
+    // orifice pit, outlet to council pit
+    rc(X(40)-h,y0-h,s,s,'#E8EAED',1.2,'#16181B');f.push('<circle cx="'+X(40)+'" cy="'+y0+'" r="2" fill="none" stroke="#E8EAED"/>');
+    f.push('<path d="M'+(X(40)+h)+' '+y0+' H'+(X(47)-h)+'" stroke="#4A90E2" stroke-width="2" fill="none"/>');
+    f.push('<path d="M'+X(44)+' '+(y0-4)+' L'+(X(44)+8)+' '+y0+' L'+X(44)+' '+(y0+4)+' Z" fill="#4A90E2"/>');
+    tx(X(41.5),y0-12,'5.84 L/S');
+    rc(X(47)-h,y0-h,s,s,'#E8EAED',1.2,'#16181B');
+    tx(X(47)+14,y0+4,'COUNCIL PIT (LPD)');
+    // numbered markers on the drawing
+    var mk=[[1,X(21),y0-1.4*k-5],[2,X(24),y0-pw],[3,X(27.5),y0-h-4],[4,X(32.5),y0-h-4],[5,X(40),y0-h],[6,X(47),y0-h]];
+    mk.forEach(function(m){
+      ln(m[1],32,m[1],m[2],'#8A8F96',0.8);
+      f.push('<circle cx="'+m[1]+'" cy="22" r="10" fill="#16181B" stroke="'+(m[0]<=4?'#F3F4F5':'#8A8F96')+'" stroke-width="1"/>');
+      tx(m[1],26,m[0],'middle');
+    });
+    // key: small figure tags (white outline = counted as storage)
+    var lines=['WT1 5000 L &middot; '+tank+' m³','Pipe 0.56 m³ &middot; 225 DIA. STORMPRO PIPE AT 1 IN 200','P1 0.08 m³','P2 0.06 m³','Orifice pit 69 mm, 5.84 L/s','Council pit (LPD)'];
+    lines.forEach(function(t,i){
+      var y=58+24*i;
+      rc(272,y,390,22,i<4?'#F3F4F5':'#5E636B',1,'#1B1E22',8);
+      f.push('<circle cx="285" cy="'+(y+11)+'" r="8" fill="none" stroke="'+(i<4?'#F3F4F5':'#8A8F96')+'"/>');
+      tx(285,y+15,i+1,'middle');
+      tx(302,y+15,t,null,null,'#F3F4F5');
+    });
+    // north point (the site is turned: north points left)
+    ln(1450,40,1410,40,'#C8CBD0',1.2);f.push('<path d="M1418 35 L1410 40 L1418 45" stroke="#C8CBD0" stroke-width="1.2" fill="none"/>');
+    tx(1400,44,'N','end');
+    f.push('</svg>');
+    return f.join('');
+  }
+
+  /* ---------- window pieces (version 4 content, new arrangement) ---------- */
+  function inp(label,val,unit,w,extra,cls){return '<div class="fld" style="width:'+w+'px"><span class="note">'+label+'</span><div class="inp '+(cls||'')+'">'+(extra||'')+'<span>'+val+'</span>'+(unit?'<span class="u">'+unit+'</span>':'')+'</div></div>';}
+  function tk(lbl,on){return '<div class="inp tick" style="width:56px"><span class="cb2'+(on?' on':'')+'">'+(on?tick:'')+'</span><span>'+lbl+'</span></div>';}
+  function r5(s,l,src,a,x,e){return '<div class="s">'+s+'</div><div class="l">'+l+(src?'<small>'+src+'</small>':'')+'</div><div>'+a+'</div><div class="x">'+x+'</div><div>'+e+'</div>';}
+
+  function render(){
+    var short=state==='short',unk=state==='notknown';
+    var tank=short?'0.50':'1.00',provided=short?'1.20':'1.70';
+
+    // drawing band
+    document.getElementById('dv').innerHTML=drawing(tank)+
+      '<div class="dh"><span class="t">The drawing</span><span class="note">What this window is reading. Outlined in white: counted as storage.</span></div>'+
+      '<div class="chainrow"><div class="chain"><span class="chip">WT1</span>&rarr;<span class="chip">Pipe</span>&rarr;<span class="chip">P1</span>&rarr;<span class="chip">P2</span>&rarr;<span class="chip lit">Orifice pit</span>&rarr;<span class="chip">Council pit (LPD)</span></div><span class="note">Lit: where this window\'s answer applies (the orifice pit)</span></div>';
+
+    // status band
+    var bandCls=short?'red':(unk?'amber':'green');
+    var word=short?'Short':(unk?'Needs a look':'Suits');
+    var main=short?'Storage short by <b class="strong">0.44</b> m³':(unk?'Storage: Not known':'Storage suits: <b class="strong">0.06</b> m³ spare');
+    var sub=short?'1.20 provided, 1.64 needed. Detention share was 1,000 L':(unk?'1 figure needs you: site rainfall':'1.70 provided, 1.64 needed');
+    document.getElementById('band').innerHTML=
+      '<div class="band '+bandCls+'"><div class="left"><span class="pill" style="background:transparent">'+word+'</span><span class="main">'+main+'</span><span class="sub">'+sub+'</span></div>'+
+      '<div class="right2">Discharge <b class="strong">5.84</b> L/s of <b class="strong">6.00</b> allowed <span class="pill green">Suits</span></div></div>';
+
+    // step 1: two tight rows across the full width
+    var detExtra=short?'<span class="pill changed" style="margin-right:auto">Changed</span>':'';
+    var wells=rain.map(function(r){return '<div class="fld" style="width:80px"><span class="note">'+r[0]+'</span><div class="inp'+(unk?' nk needs':'')+'">'+(unk?'Not known':'<span>'+r[1]+'</span>')+'</div></div>';}).join('');
+    var needsRight=unk?'<span class="pill amber">1 figure needs you</span>':'<span class="note">Nothing needs you</span>';
+    document.getElementById('s1c').innerHTML=
+      '<div class="shead"><span class="n">1</span><span class="t">What you type</span><span class="note">The few figures only you can give. Everything else is worked out.</span><span class="sp"></span>'+needsRight+'</div>'+
+      '<div class="row1"><div class="fields">'+
+        inp('Site area','600.00','m²',96)+inp('Allowed discharge','6.00','L/s',112)+inp('Storm, 1 in','10','',72)+
+        '<div class="pair"><div class="pr">'+inp('Tank size','5,000','L',88)+inp('Detention share',short?'500':'1,000','L',128,detExtra)+'</div><span class="note">Same figures as on tank WT1; change either place</span></div>'+
+      '</div>'+
+      '<div class="grp"><span class="note">Pits that hold water</span><div class="gb">'+tk('P1',true)+tk('P2',true)+tk('P3',false)+'</div></div>'+
+      '<div class="grp"><span class="note">Method</span><div class="gb"><button class="mbtn sel" id="m1">Office method (Boyd\'s)</button><button class="mbtn" id="m2">Council tool (OSD4W)</button></div></div></div>'+
+      '<div class="row1 rowb"><div class="rain"><div class="gl"><span>Site rainfall</span>'+(unk?'<span class="pill amber">Needs you</span>':'<span class="note">1 in 10, mm/h</span>')+'</div>'+wells+'</div></div>';
+
+    // step 2 (left): areas and storage items
+    document.getElementById('s2c').innerHTML=
+      '<div class="shead"><span class="n">2</span><span class="t">What the drawing gives</span><span class="note">Read off what you drew. Change the drawing, not this window.</span></div>'+
+      '<div class="cols">'+
+        '<div style="width:334px"><div class="abar" style="width:334px;margin-bottom:8px"><div style="width:38.3%;background:var(--c1)">Roof<span>230</span></div><div style="width:25%;background:var(--c2)">Paving<span>150</span></div><div style="width:36.7%;background:var(--c3)">Garden<span>220</span></div></div>'+
+        '<div class="sum5">'+
+          r5('','Roof','measured','230.00','&times; 0.90','207.00')+r5('+','Paving','measured','150.00','&times; 0.90','135.00')+r5('+','Garden','worked out','220.00','&times; 0.35','77.00')+
+          '<div class="s"></div><div class="l">Total</div><div class="line">600.00</div><div class="x"></div><div class="line">419.00</div>'+
+          '<div class="s">=</div><div class="l span3">Share that runs off <small>419.00 &divide; 600.00</small></div><div class="line dbl strong">0.698</div>'+
+        '</div><div class="note" style="margin-top:0">Runoff coefficient. Shown as 0.70 elsewhere.</div></div>'+
+        '<div style="width:284px"><div class="sum">'+
+          '<div class="s"></div><div class="l">Tank WT1 <small>room for detention</small></div><div class="v">'+tank+'</div>'+
+          '<div class="s">+</div><div class="l">Pipes <small>225 dia, 14.00 m</small></div><div class="v">0.56</div>'+
+          '<div class="s">+</div><div class="l">P1 holds water</div><div class="v">0.08</div>'+
+          '<div class="s">+</div><div class="l">P2 holds water</div><div class="v">0.06</div>'+
+          '<div class="s">=</div><div class="l">Provided</div><div class="v line dbl strong">'+provided+'</div>'+
+        '</div><div class="note" style="margin-top:0">P3 not used (0.04 m³ not counted)</div></div>'+
+      '</div>';
+
+    // step 3 (right): storage and discharge
+    var pill=short?'<span class="pill red">Short</span>':(unk?'<span class="pill amber">Needs a look</span>':'<span class="pill green">Suits</span>');
+    var ans=short?'<span class="big strong">0.44</span><span>m³ short</span>':(unk?'<span class="big nk">Not known</span>':'<span class="big strong">0.06</span><span>m³ spare</span>');
+    var bar;
+    if(short) bar='<div class="sbar"><div class="fill" style="width:73.2%"><span>Provided 1.20</span></div><div class="cap red">Short 0.44</div></div>';
+    else if(unk) bar='<div class="sbar"><div class="fill" style="flex:1"><span>Provided 1.70</span></div><div class="cap amber" style="width:112px">Needed: Not known</div></div>';
+    else bar='<div class="sbar"><div class="fill" style="width:100%"><span>Provided 1.70</span><span>Spare 0.06</span></div><div class="mk" style="left:96.5%"></div></div>';
+    var srows;
+    if(short) srows='<div class="s"></div><div class="l">Needed, 5 minute storm</div><div class="v">1.64</div><div class="s">&minus;</div><div class="l">Provided</div><div class="v">1.20</div><div class="s">=</div><div class="l">Short by</div><div class="v line dbl strong">0.44</div>';
+    else if(unk) srows='<div class="s"></div><div class="l">Provided</div><div class="v">1.70</div><div class="s">&minus;</div><div class="l">Needed</div><div class="v nk">Not known</div><div class="s">=</div><div class="l">Spare</div><div class="v line dbl nk">Not known</div>';
+    else srows='<div class="s"></div><div class="l">Provided</div><div class="v">1.70</div><div class="s">&minus;</div><div class="l">Needed, 5 minute storm</div><div class="v">1.64</div><div class="s">=</div><div class="l">Spare</div><div class="v line dbl strong">0.06</div>';
+    var sk='<svg width="180" height="128" viewBox="0 0 180 128">'+
+      '<path class="sh" d="M6 6 V120 H92"/><path class="sk" d="M6 6 H92"/>'+
+      '<text class="tn" x="12" y="22">Top water</text><text class="tn" x="12" y="38">level (plate)</text>'+
+      '<path class="sh" d="M92 6 V92 M92 104 V120"/>'+
+      '<path class="sh" d="M80 10 V98 M76 14 L80 7 L84 14 M76 94 L80 101 L84 94"/><path class="sk" d="M80 98 H92"/>'+
+      '<text class="tb" x="8" y="68">Head 345.5</text>'+
+      '<text class="tb" x="100" y="20">Plate 380.0</text>'+
+      '<path class="sh" d="M96 98 H172 M164 93 L172 98 L164 103"/>'+
+      '<text class="tb" x="104" y="88">Hole 69</text><text class="tn" x="140" y="118">Flow</text></svg>';
+    document.getElementById('s3c').innerHTML=
+      '<div class="shead"><span class="n">3</span><span class="t">The answers</span><span class="note">Does the site hold the storm, and does it let out no more than allowed?</span></div>'+
+      '<div class="cols">'+
+        '<div style="width:236px"><div class="ans">'+ans+pill+'</div>'+bar+'<div class="sum">'+srows+'</div></div>'+
+        '<div style="width:313px"><div class="ans"><span class="big strong">5.84</span><span>L/s of 6.00 allowed</span></div><div class="sum">'+
+          '<div class="s"></div><div class="l">Hole size (orifice)</div><div class="v">69</div>'+
+          '<div class="s"></div><div class="l">Plate</div><div class="v">380.0</div>'+
+          '<div class="s">&minus;</div><div class="l">Half the hole</div><div class="v">34.5</div>'+
+          '<div class="s">=</div><div class="l">Water height above the hole (head)</div><div class="v line">345.5</div>'+
+          '<div class="s">=</div><div class="l">Flow, L/s</div><div class="v line dbl strong">5.84</div></div></div>'+
+        '<div style="width:180px">'+sk+'<div class="cap2">Flow = 0.6 &times; hole area &times; &radic;(2 &times; 9.81 &times; head). Hole worked out, rounded down. Sizes in mm.</div></div>'+
+      '</div>';
+
+    ['s1','s2','s3'].forEach(function(id,i){document.getElementById(id).className=(['suits','short','notknown'][i]===state)?'on':'';});
+    var ms=['m1','m2'];ms.forEach(function(id){document.getElementById(id).addEventListener('click',function(){ms.forEach(function(o){document.getElementById(o).className='mbtn'+(o===id?' sel':'');});});});
+  }
+  ['s1','s2','s3'].forEach(function(id,i){document.getElementById(id).onclick=function(){state=['suits','short','notknown'][i];render();};});
+  render();
+})();
+</script>
+</body>
+</html>
