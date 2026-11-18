@@ -1,6 +1,6 @@
 # Hatches by what they do and the layer they are on
 
-**Revision:** 1 (Wed 18 Nov 2026, afternoon, Melbourne time). IDs: HF- for functions, HL- for layers, never reused.
+**Revision:** 2 (Wed 18 Nov 2026, afternoon, Melbourne time). Revision 2 adds the scales, the base scales and the HX- layers. IDs: HF- for functions, HL- for layers, never reused.
 **Asked for by Tim:**
 1. "we normally discuss them based on what they do and the layer theyre on, can you please look into this using old project evidence as well" (TA-047).
 2. "also check what layer each hatch is on in the old jobs".
@@ -160,6 +160,31 @@ The pattern scale is the number that sets how big the pattern is drawn. Below: t
    - **Scale in the list:** each line holds its scale for a 1:100 plan, and its scale for a 1:20 detail where it is used there.
    - **Window:** the tool picks the scale from the viewport or the drawing's sheet scale, so "wrong scale" cannot happen.
    - **Starting figures:** the most-used scale in old jobs, not the master's sample, for Tim to confirm.
+
+## Base scales at DIMSCALE 100 / LTSCALE 1000 (TA-058)
+
+Tim: "always from ltscale and dimscale. but we need to base it from our existing scales at dimscale 100 ltscale 1000".
+
+1. **The office setting is confirmed:** 145 of the 218 old drawings are set to DIMSCALE 100 and LTSCALE 1000. Next most common: 43 drawings at DIMSCALE 1 with LTSCALE 1000, and 15 at 1 and 1.
+2. **Scales used in drawings at DIMSCALE 100 (the proposed base list, for Tim to confirm):**
+   - **HATCH 11 - LOAD BEARING WALL OVER, ANSI31:** 50 (all 112).
+   - **HATCH 231 - LOAD BEARING WALL UNDER, DOTS:** 20 (all 93).
+   - **HATCH 47, ANSI31:** 60.
+   - **HATCH 6, DOTS:** 80.
+   - **HATCH 150, ANSI31:** 50.
+   - **HATCH 253, ANSI37:** 100.
+   - **HATCH 70, ANSI31:** 100.
+   - **HATCH EARTH, EARTH:** 40 (211; also 35 and 30).
+   - **WALL HATCH, JIS_LC_8A:** 110 (44; also 100).
+   - **HATCH TIMBER, WOODFACE:** 1000 (36; also 654.55 and 800).
+   - **HATCH STUD WALL, WOODFACE:** 800 (23; also 1000).
+   - **HATCH SAND, DOTS:** 40.
+   - **HATCH FILL, ANSI33:** 35.
+   - **HATCH 45, ANSI33:** 40.
+   - **HATCH 21 concrete (AR-CONC):** 5, Tim's pick (TA-061), from 5 (165 hatches), 3 (123) and 4 (98).
+   - **NOT settled, plain HATCH 231 DOTS:** 10 (181) and 20 (134).
+3. **Something to note:** drawings at DIMSCALE 1 with LTSCALE 1000 used the same hatch scales as those at DIMSCALE 100. So in practice the hatch scale has not been following DIMSCALE. Following TA-058, the new tool will make it follow.
+4. **The rule the build would use:** hatch scale = base scale x (DIMSCALE / 100). A drawing set for 1:20 (DIMSCALE 20) gets one fifth of the base. When the two disagree, DIMSCALE leads (TA-062).
 
 ## Layers in old jobs but not in the master (HX-, picture `pictures\hatches_extra_layers.png`)
 

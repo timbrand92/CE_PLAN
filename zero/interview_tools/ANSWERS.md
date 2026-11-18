@@ -149,4 +149,20 @@ LOADBEARING WALL, LOADBEARING HATCH and BLOCK RETAINING WALL are retired from th
 
 **TA-057 Message.** "make sure you look at the scale as well". Answered in `interview_tools\HATCHES_BY_FUNCTION.md` section "Scale": old jobs mostly use HATCH 21 AR-CONC at 3 (master samples 1 to 2), EARTH at 40, brick and block at 110, timber at 1000, stud wall at 800.
 
-Next free number: TA-058
+## Batch 20 (hatch scale; post-tensioned slab; extra layers)
+
+**TA-058 Hatch scale.** "always from ltscale and dimscale. but we need to base it from our existing scales at dimscale 100 ltscale 1000". So OFFICEHATCH reads the drawing's DIMSCALE and LTSCALE; each hatch's base scale is the office scale at DIMSCALE 100 / LTSCALE 1000, and changes in proportion.
+
+**TA-059 Post-tensioned slab.** "HATCH PANTONE"; HATCH PT retired from the list.
+
+**TA-060 The other extra layers (HATCH 155, 70, 221, 45, SAND, FILL, HATCH-SLAB INFILL).** "keep them all". What each means is still to be named by Tim (HATCH 155, 70, 221 and HATCH-SLAB INFILL had no legend beside them).
+
+## Batch 21 (base scales)
+
+**TA-061 AR-CONC base scale (HATCH 21, concrete in section).** "5" at DIMSCALE 100 / LTSCALE 1000.
+
+**TA-062 When DIMSCALE and LTSCALE disagree.** "DIMSCALE leads": hatch scale = base x DIMSCALE / 100.
+
+**TA-063 Meaning of HATCH 155, HATCH 70, HATCH 221, HATCH-SLAB INFILL.** "Not sure either": kept in the list, meaning marked unknown.
+
+Next free number: TA-064
