@@ -638,6 +638,14 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-308** (19 Nov 2026, about 7:55 am; a standing instruction) "make sure codex abides by our rules and decisions". Every Codex job carries `CODEX_STANDING_BRIEF.md` at the top, names the rulings it touches, is reviewed against them, and is checked by the build chat before merging; a run that breaks a line is thrown away.
 
+**D-309** (19 Nov 2026, 7:56 am; the six restyled windows) "pit schedule, source, is great but levels needs to have horizontal preview above and so does pipe and then with pit and pipe commands i liked how the visual sat with the area youre affecting it helped to visually show what you were doing". Planning chat's reading, to be confirmed with him: the Pit schedule window is right as drawn; the Long section (levels) window and the Pipe window get the preview across the top, as Detention has (this changes D-296 for those two); and in Pit and Pipe the picture should sit beside the inputs it shows, as an earlier version did. Inlet and Tank not commented on.
+
+**D-310** (19 Nov 2026, 7:56 am; the Job window mock-up) "Yes, build it like this".
+
+**D-311** (19 Nov 2026, 7:56 am; the Unfinished list mock-up) "Yes, build it like this".
+
+**D-312** (19 Nov 2026, 7:56 am; pipe labels in tight spaces) "Always the full label". The tool writes the full label every time; he moves it by hand where it clashes. The standing-note idea is not taken.
+
 ## Not decided (asked or raised, no decision yet)
 
 1. Whether Stage 1's civil explanation is approved (Tim moved on to the design without saying "approve"). **Settled by D-117.**
