@@ -2,7 +2,7 @@
 
 **Why this file exists.** Tim, 17 Nov 2026: "i need a way to understand wht we have planned, what we have built, how close we are to finishing or getting a ready version for me to test and bugs and anythign else thats important if i was a director looking to get summaries. i need this everytime i ask how things are going and also you need to keep me on track with planning, building annd beyond". The planning chat updates this page before every progress answer and always uses these seven headings in this order.
 
-**Last updated:** Wed 18 Nov 2026, 6:00 pm by the clock. Everything open across every chat is on `BOARD.md`; decisions run to D-297 in `DECISIONS.md`; the `rulings\` pages now run to D-297 too.
+**Last updated:** Wed 18 Nov 2026, 7:49 pm by the clock. Everything open across every chat is on `BOARD.md`; decisions run to D-297 in `DECISIONS.md`; the `rulings\` pages now run to D-297 too.
 
 ## 1. Headline
 
@@ -20,7 +20,7 @@ The look of every window is now approved, the 18 wrong-figure faults on the test
 
 1. **The brain:** 598 automatic checks pass. Boyd's now matches the office sheet (1.66 on the measured job).
 2. **Seven windows on a test bench:** 313 checks pass; the 18 wrong-figure and pretend-to-work faults are fixed and reviewed. They still wear the OLD look.
-3. **AutoCAD tools (foundation, Pit, Pipe, Long section, Outlet):** last full pass 100 of 103 with every speed limit met. Today's fixes are NOT yet run in AutoCAD; that pass is tonight.
+3. **AutoCAD tools (foundation, Pit, Pipe, Long section, LPD in place of Outlet):** eight passes on 18 Nov. Pass 8 at 7:44 pm: 105 checks, 100 pass, 3 fail, 2 not tested. Today's fixes and both batches of today's rulings (one "what is over it" list, text from DIMSCALE, tank sums, LPD merge, pipe-end join, labels following pipes, copies numbered, layer-lock tests) are built, reviewed and RUN in AutoCAD. One speed limit is broken (see Problems).
 4. **Grips and editing, proven in AutoCAD on test copies:** our own grip shapes; hover words; click; drag with one undo; flip and slide on a masked label; double-click opening our window on our objects only; nothing on a locked layer.
 5. **Installed: 0. Accepted by Tim: 0.**
 
@@ -33,7 +33,7 @@ The look of every window is now approved, the 18 wrong-figure faults on the test
 
 ## 5. Problems and bugs
 
-1. **Not run in AutoCAD yet:** the seven ruling fixes, lid class, and the 18 wrong-figure fixes.
+1. **Speed regression, found by pass 8:** moving a pit with its pipes on a 2,500-object drawing takes 121 thousandths of a second against a limit of 100 (68 this morning); caused by tonight's pipe-end join; being fixed first. Also the old desk robot from before this plan is still running with a stale "Tim is away" flag (no harm found today; his yes needed to retire it).
 2. **Not built:** the approved look on any real window; bends; metre drawings; the LPD merge; turning a pit; pipe edge lines; text heights that follow DIMSCALE; the live preview on the cursor.
 3. **Not proven:** the new tools taking the names PIT and CD while the old plug-in is loaded; our facts as rows in AutoCAD's Properties; the window docked beside the drawing with AutoCAD lighting up the system (preview option C).
 4. **Grips left to test:** hover menu, Ctrl-copy. Double-click leaves "_pedit, *Cancel*" in the command history each time.
@@ -41,8 +41,9 @@ The look of every window is now approved, the 18 wrong-figure faults on the test
 
 ## 6. Waiting on Tim
 
+0. **Retire the old desk robot:** his yes to stop three old scripts and remove the stale away flag.
 1. **His "q" alias:** put it back or leave it removed.
-2. **The preview:** option A, B or C.
+2. **The preview:** option A, B or C. Option C was tested: it works with a floating window in 10 thousandths of a second; AutoCAD then asks "Save changes?" on closing the drawing, as after any zoom; docking not proven.
 3. **Pipe labels in tight spaces:** which of the four ways.
 4. **Double-click:** is the brief "_pedit, *Cancel*" line in the command history acceptable.
 5. **Detention pipe under a driveway:** 0.45 cover (his 17 Nov ruling) or 300 everywhere (today's preset list).
