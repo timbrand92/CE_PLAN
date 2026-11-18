@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rainwater tanks drawn true to size</title>
+<style>
+  :root{
+    --window:#2B2D30; --card:#383B40; --well:#232528; --tile:#4A4D55; --border:#4A4D53;
+    --text:#E6E8EB; --body:#C8CBD0; --note:#A9AEB6; --rose:#FF70B3; --dark:#10131A;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--window);color:var(--body);
+       font:14px/1.5 "IBM Plex Sans","Segoe UI",Arial,sans-serif;font-weight:400}
+  .wrap{max-width:1120px;margin:0 auto;padding:32px 16px 48px}
+  h1,h2{font-size:24px;line-height:1.3;font-weight:400;color:var(--text);margin:0}
+  h1{margin-bottom:8px}
+  h2{margin:48px 0 8px}
+  p{margin:0 0 8px}
+  .note{font-size:12px;color:var(--note)}
+  .panel{background:#fff;border-radius:8px;margin-top:16px;overflow:hidden}
+  .panel svg{display:block;width:100%;height:auto}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:24px;margin-top:24px}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:24px;
+        box-shadow:0 2px 8px rgba(0,0,0,.35);display:flex;flex-direction:column;gap:16px}
+  .head{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+  .letter{width:56px;height:56px;border-radius:8px;background:var(--tile);color:var(--text);
+          font-size:24px;display:flex;align-items:center;justify-content:center}
+  .title{font-size:14px;color:var(--text);flex:1 1 200px}
+  .rec{background:var(--rose);color:var(--dark);border-radius:8px;padding:4px 8px;font-size:12px}
+  .why{font-size:12px;color:var(--body);margin:0}
+  .card .pic{background:#fff;border-radius:8px}
+  .card .pic svg{display:block;width:100%;height:auto}
+  .line .k{font-size:12px;color:var(--note);display:block}
+  .line .v{font-size:14px;color:var(--text)}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <pattern id="hatch" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#B5B5B5" stroke-width="1"/>
+    </pattern>
+  </defs>
+</svg>
+
+<div class="wrap">
+  <h1>Rainwater tanks drawn true to size</h1>
+  <p>Tim: "we have in the past not shown water tanks to scale we need to create a block or water tank that is correct to size".</p>
+  <p>Everything on this page is drawn to ONE scale. Each white picture has its own 1 m scale bar, and a boundary with a 900 mm side setback strip (the grey hatched band). Each tank is pushed up against the boundary so its width can be compared with the strip.</p>
+  <p class="note">Sizes are the middle of the ranges in research note R-015. Every slimline and steel figure in R-015 is "still not checked" at source (no office drawing for these makers), so each says "typical, confirm with maker". Plan view, long side horizontal. Height is only in the label.</p>
+
+  <!-- ================= 1. SLIMLINE ================= -->
+  <h2>1. Slimline tanks</h2>
+  <p>2,000, 3,000, 3,500 and 5,000 litres. There is no checked size for 3,500 L, so nothing is drawn for it.</p>
+  <div class="panel">
+    <svg viewBox="0 0 1000 256" font-family="'IBM Plex Sans','Segoe UI',Arial,sans-serif" role="img" aria-label="Slimline tanks at 2,000, 3,000, 3,500 (no checked size) and 5,000 litres, to one scale, beside a 900 mm setback strip">
+      <!-- boundary and 900 mm strip: 80 px = 1 m, so 900 mm = 72 px -->
+      <rect x="16" y="40" width="944" height="72" fill="url(#hatch)"/>
+      <line x1="16" y1="40" x2="960" y2="40" stroke="#000" stroke-width="1" stroke-dasharray="14 4 2 4"/>
+      <line x1="16" y1="112" x2="960" y2="112" stroke="#000" stroke-width=".7"/>
+      <text x="16" y="31" font-size="12" fill="#000">BOUNDARY</text>
+      <path d="M966 40H978M966 112H978M972 40V112" stroke="#000" stroke-width=".7" fill="none"/>
+      <text x="990" y="76" font-size="12" fill="#000" text-anchor="middle" transform="rotate(-90 990 76)">900 SETBACK</text>
+
+      <!-- 2,000 L: 2300 x 600 -->
+      <rect x="24" y="40" width="184" height="48" fill="#fff" stroke="#000" stroke-width="1.6"/>
+      <path d="M24 40L208 88M24 88L208 40" stroke="#000" stroke-width=".7"/>
+      <text x="116" y="144" font-size="14" fill="#000" text-anchor="middle">2,000 L SLIMLINE</text>
+      <text x="116" y="162" font-size="12" fill="#000" text-anchor="middle">2300 x 600 x 2000 high</text>
+      <text x="116" y="178" font-size="12" fill="#000" text-anchor="middle">typical, confirm with maker</text>
+
+      <!-- 3,000 L: 2500 x 800 -->
+      <rect x="248" y="40" width="200" height="64" fill="#fff" stroke="#000" stroke-width="1.6"/>
+      <path d="M248 40L448 104M248 104L448 40" stroke="#000" stroke-width=".7"/>
+      <text x="348" y="144" font-size="14" fill="#000" text-anchor="middle">3,000 L SLIMLINE</text>
+      <text x="348" y="162" font-size="12" fill="#000" text-anchor="middle">2500 x 800 x 2100 high</text>
+      <text x="348" y="178" font-size="12" fill="#000" text-anchor="middle">typical, confirm with maker</text>
+
+      <!-- 3,500 L: no checked size -->
+      <text x="572" y="76" font-size="14" fill="#000" text-anchor="middle">No checked size</text>
+      <text x="572" y="94" font-size="12" fill="#000" text-anchor="middle">R-015 has no figure</text>
+      <text x="572" y="144" font-size="14" fill="#000" text-anchor="middle">3,500 L SLIMLINE</text>
+      <text x="572" y="162" font-size="12" fill="#000" text-anchor="middle">nothing drawn</text>
+
+      <!-- 5,000 L: 3100 x 1000 -->
+      <rect x="696" y="40" width="248" height="80" fill="#fff" stroke="#000" stroke-width="1.6"/>
+      <path d="M696 40L944 120M696 120L944 40" stroke="#000" stroke-width=".7"/>
+      <text x="820" y="144" font-size="14" fill="#000" text-anchor="middle">5,000 L SLIMLINE</text>
+      <text x="820" y="162" font-size="12" fill="#000" text-anchor="middle">3100 x 1000 x 2100 high</text>
+      <text x="820" y="178" font-size="12" fill="#000" text-anchor="middle">typical, confirm with maker</text>
+
+      <!-- scale bar, 80 px = 1 m -->
+      <rect x="24" y="214" width="40" height="6" fill="#000" stroke="#000" stroke-width=".7"/>
+      <rect x="64" y="214" width="40" height="6" fill="#fff" stroke="#000" stroke-width=".7"/>
+      <text x="24" y="238" font-size="12" fill="#000" text-anchor="middle">0</text>
+      <text x="64" y="238" font-size="12" fill="#000" text-anchor="middle">0.5</text>
+      <text x="104" y="238" font-size="12" fill="#000" text-anchor="middle">1 m</text>
+      <text x="128" y="224" font-size="12" fill="#000">1 m scale bar</text>
+    </svg>
+  </div>
+  <p class="note" style="margin-top:8px">Where the sizes came from (R-015, section 1): 2,000 L from 2000 to 2400 long, 565 to 625 wide; 3,000 L from 2400 to 3010 long, 650 to 810 wide; 5,000 L from 2900 to 3290 long, 940 to 1080 wide. Some of these figures are search snippets only.</p>
+
+  <!-- ================= 2. ROUND ================= -->
+  <h2>2. Round tanks</h2>
+  <p>2,000, 5,000 and 10,000 litres. Diameter is drawn, height is in the label.</p>
+  <div class="panel">
+    <svg viewBox="0 0 1000 360" font-family="'IBM Plex Sans','Segoe UI',Arial,sans-serif" role="img" aria-label="Round tanks at 2,000, 5,000 and 10,000 litres to one scale, beside a 900 mm setback strip">
+      <rect x="16" y="40" width="944" height="72" fill="url(#hatch)"/>
+      <line x1="16" y1="40" x2="960" y2="40" stroke="#000" stroke-width="1" stroke-dasharray="14 4 2 4"/>
+      <line x1="16" y1="112" x2="960" y2="112" stroke="#000" stroke-width=".7"/>
+      <text x="16" y="31" font-size="12" fill="#000">BOUNDARY</text>
+      <path d="M966 40H978M966 112H978M972 40V112" stroke="#000" stroke-width=".7" fill="none"/>
+      <text x="990" y="76" font-size="12" fill="#000" text-anchor="middle" transform="rotate(-90 990 76)">900 SETBACK</text>
+
+      <!-- 2,000 L round steel: 1200 dia = 96 px -->
+      <circle cx="124" cy="88" r="48" fill="#fff" stroke="#000" stroke-width="1.6"/>
+      <path d="M76 88H172M124 40V136" stroke="#000" stroke-width=".7"/>
+      <text x="124" y="264" font-size="14" fill="#000" text-anchor="middle">2,000 L ROUND, STEEL</text>
+      <text x="124" y="282" font-size="12" fill="#000" text-anchor="middle">1200 dia x 1860 high</text>
+      <text x="124" y="298" font-size="12" fill="#000" text-anchor="middle">typical, confirm with maker</text>
+
+      <!-- 5,000 L round steel: 1900 dia = 152 px -->
+      <circle cx="348" cy="116" r="76" fill="#fff" stroke="#000" stroke-width="1.6"/>
+      <path d="M272 116H424M348 40V192" stroke="#000" stroke-width=".7"/>
+      <text x="348" y="264" font-size="14" fill="#000" text-anchor="middle">5,000 L ROUND, STEEL</text>
+      <text x="348" y="282" font-size="12" fill="#000" text-anchor="middle">1900 dia x 1860 high</text>
+      <text x="348" y="298" font-size="12" fill="#000" text-anchor="middle">typical, confirm with maker</text>
+
+      <!-- 10,000 L round poly: 2500 dia = 200 px -->
+      <circle cx="572" cy="140" r="100" fill="#fff" stroke="#000" stroke-width="1.6"/>
+      <path d="M472 140H672M572 40V240" stroke="#000" stroke-width=".7"/>
+      <text x="572" y="264" font-size="14" fill="#000" text-anchor="middle">10,000 L ROUND, POLY</text>
+      <text x="572" y="282" font-size="12" fill="#000" text-anchor="middle">2500 dia x 2350 high</text>
+      <text x="572" y="298" font-size="12" fill="#000" text-anchor="middle">typical, confirm with maker</text>
+
+      <!-- poly round 2,000 and 5,000: no checked size -->
+      <text x="820" y="150" font-size="14" fill="#000" text-anchor="middle">No checked size</text>
+      <text x="820" y="168" font-size="12" fill="#000" text-anchor="middle">round poly 2,000 and 5,000 L</text>
+
+      <!-- scale bar -->
+      <rect x="24" y="320" width="40" height="6" fill="#000" stroke="#000" stroke-width=".7"/>
+      <rect x="64" y="320" width="40" height="6" fill="#fff" stroke="#000" stroke-width=".7"/>
+      <text x="24" y="344" font-size="12" fill="#000" text-anchor="middle">0</text>
+      <text x="64" y="344" font-size="12" fill="#000" text-anchor="middle">0.5</text>
+      <text x="104" y="344" font-size="12" fill="#000" text-anchor="middle">1 m</text>
+      <text x="128" y="330" font-size="12" fill="#000">1 m scale bar</text>
+    </svg>
+  </div>
+  <p class="note" style="margin-top:8px">The 2,000 and 5,000 L round figures are small round steel tanks (nominal sizes, one maker, R-015 section 3). The 10,000 L figure is round poly, from 2480 to 2600 across and 2100 to 2380 high (some snippets only). R-015 found no round 2,500 or 3,500 L at all.</p>
+
+  <!-- ================= 3. OLD OUTLINES ================= -->
+  <h2>3. The two outlines the office used before</h2>
+  <p>Dashed, with no real tank behind them. On the right, each is laid over a real typical size (solid) from the same top corner.</p>
+  <div class="panel">
+    <svg viewBox="0 0 1000 300" font-family="'IBM Plex Sans','Segoe UI',Arial,sans-serif" role="img" aria-label="The two old tank outlines, 890 by 2400 and 2250 by 650, dashed, to the same scale, and laid over real typical sizes">
+      <rect x="16" y="40" width="944" height="72" fill="url(#hatch)"/>
+      <line x1="16" y1="40" x2="960" y2="40" stroke="#000" stroke-width="1" stroke-dasharray="14 4 2 4"/>
+      <line x1="16" y1="112" x2="960" y2="112" stroke="#000" stroke-width=".7"/>
+      <text x="16" y="31" font-size="12" fill="#000">BOUNDARY</text>
+      <path d="M966 40H978M966 112H978M972 40V112" stroke="#000" stroke-width=".7" fill="none"/>
+      <text x="990" y="76" font-size="12" fill="#000" text-anchor="middle" transform="rotate(-90 990 76)">900 SETBACK</text>
+
+      <!-- old 890 x 2400: 192 x 71.2 px -->
+      <rect x="24" y="40" width="192" height="71.2" fill="#fff" stroke="#000" stroke-width="1.2" stroke-dasharray="7 4"/>
+      <text x="120" y="144" font-size="14" fill="#000" text-anchor="middle">old outline, not to size</text>
+      <text x="120" y="162" font-size="12" fill="#000" text-anchor="middle">890 x 2400</text>
+
+      <!-- old 2250 x 650: 180 x 52 px -->
+      <rect x="248" y="40" width="180" height="52" fill="#fff" stroke="#000" stroke-width="1.2" stroke-dasharray="7 4"/>
+      <text x="338" y="144" font-size="14" fill="#000" text-anchor="middle">old outline, not to size</text>
+      <text x="338" y="162" font-size="12" fill="#000" text-anchor="middle">2250 x 650</text>
+
+      <!-- overlay 1: real 3,000 L slimline (2500 x 800) with old 890 x 2400 -->
+      <rect x="472" y="40" width="200" height="64" fill="#fff" stroke="#000" stroke-width="1.6"/>
+      <rect x="472" y="40" width="192" height="71.2" fill="none" stroke="#000" stroke-width="1.2" stroke-dasharray="7 4"/>
+      <text x="572" y="144" font-size="14" fill="#000" text-anchor="middle">old against new</text>
+      <text x="572" y="162" font-size="12" fill="#000" text-anchor="middle">solid: 3,000 L 2500 x 800</text>
+      <text x="572" y="178" font-size="12" fill="#000" text-anchor="middle">dashed: old 890 x 2400</text>
+
+      <!-- overlay 2: real 2,000 L slimline (2300 x 600) with old 2250 x 650 -->
+      <rect x="696" y="40" width="184" height="48" fill="#fff" stroke="#000" stroke-width="1.6"/>
+      <rect x="696" y="40" width="180" height="52" fill="none" stroke="#000" stroke-width="1.2" stroke-dasharray="7 4"/>
+      <text x="796" y="144" font-size="14" fill="#000" text-anchor="middle">old against new</text>
+      <text x="796" y="162" font-size="12" fill="#000" text-anchor="middle">solid: 2,000 L 2300 x 600</text>
+      <text x="796" y="178" font-size="12" fill="#000" text-anchor="middle">dashed: old 2250 x 650</text>
+
+      <!-- scale bar -->
+      <rect x="24" y="234" width="40" height="6" fill="#000" stroke="#000" stroke-width=".7"/>
+      <rect x="64" y="234" width="40" height="6" fill="#fff" stroke="#000" stroke-width=".7"/>
+      <text x="24" y="258" font-size="12" fill="#000" text-anchor="middle">0</text>
+      <text x="64" y="258" font-size="12" fill="#000" text-anchor="middle">0.5</text>
+      <text x="104" y="258" font-size="12" fill="#000" text-anchor="middle">1 m</text>
+      <text x="128" y="244" font-size="12" fill="#000">1 m scale bar</text>
+    </svg>
+  </div>
+
+  <!-- ================= OPTIONS ================= -->
+  <h2>How should the tool draw a tank?</h2>
+  <p>Three ways. Each card shows the label that would sit beside the tank on the plan. The tank shown is the 3,000 L slimline.</p>
+  <p class="note">The label example Tim gave read "3,500 L ... 2250 x 800 x 2100". R-015 has no checked 3,500 L size, so these cards use the 3,000 L figure instead.</p>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="head"><div class="letter">A</div><div class="title">Pick a maker preset by volume, outline drawn to those sizes</div></div>
+      <div class="pic">
+        <svg viewBox="0 0 520 236" font-family="'IBM Plex Sans','Segoe UI',Arial,sans-serif" role="img" aria-label="Option A label beside a slimline tank">
+          <rect x="24" y="20" width="300" height="96" fill="#fff" stroke="#000" stroke-width="2"/>
+          <path d="M24 20L324 116M24 116L324 20" stroke="#000" stroke-width=".8"/>
+          <text x="24" y="148" font-size="12" fill="#000">3,000 L SLIMLINE TANK</text>
+          <text x="24" y="164" font-size="12" fill="#000">2500 x 800 x 2100 HIGH (CONFIRM WITH MAKER)</text>
+        </svg>
+      </div>
+      <div class="line"><span class="k">What the drafter does</span><span class="v">Picks 3,000 L from a list. Nothing to type.</span></div>
+      <div class="line"><span class="k">Watch out</span><span class="v">If the real tank is a different make, the outline is wrong and there is no way to fix it in the tool.</span></div>
+    </div>
+
+    <div class="card">
+      <div class="head"><div class="letter">B</div><div class="title">Type length and width (or diameter); the tool shows the volume that gives at the typed height</div></div>
+      <div class="pic">
+        <svg viewBox="0 0 520 236" font-family="'IBM Plex Sans','Segoe UI',Arial,sans-serif" role="img" aria-label="Option B label beside a slimline tank">
+          <rect x="24" y="20" width="300" height="96" fill="#fff" stroke="#000" stroke-width="2"/>
+          <path d="M24 20L324 116M24 116L324 20" stroke="#000" stroke-width=".8"/>
+          <text x="24" y="148" font-size="12" fill="#000">SLIMLINE TANK 2500 x 800 x 2100 HIGH</text>
+          <text x="24" y="164" font-size="12" fill="#000">= 4,200 L AT THIS HEIGHT (CONFIRM WITH MAKER)</text>
+        </svg>
+      </div>
+      <div class="line"><span class="k">What the drafter does</span><span class="v">Types the maker's three sizes.</span></div>
+      <div class="line"><span class="k">Watch out</span><span class="v">A plain box gives 4,200 L for a tank the maker rates at 3,000 L, about 40% high. The litres on the label would mislead.</span></div>
+    </div>
+
+    <div class="card">
+      <div class="head"><div class="letter">C</div><div class="title">Both: presets fill the boxes, typing over them wins</div><div class="rec">Recommended</div></div>
+      <p class="why">Why: the preset sizes are only typical (R-015), so the drafter must be able to type the maker's real size on the day. A preset still saves the typing, and it keeps the maker's rated litres on the label.</p>
+      <div class="pic">
+        <svg viewBox="0 0 520 236" font-family="'IBM Plex Sans','Segoe UI',Arial,sans-serif" role="img" aria-label="Option C labels beside a slimline tank: preset, and typed over">
+          <rect x="24" y="12" width="300" height="96" fill="#fff" stroke="#000" stroke-width="2"/>
+          <path d="M24 12L324 108M24 108L324 12" stroke="#000" stroke-width=".8"/>
+          <text x="24" y="136" font-size="12" fill="#000">PRESET FILLS THE BOXES:</text>
+          <text x="24" y="152" font-size="12" fill="#000">3,000 L SLIMLINE TANK</text>
+          <text x="24" y="168" font-size="12" fill="#000">2500 x 800 x 2100 HIGH (CONFIRM WITH MAKER)</text>
+          <text x="24" y="196" font-size="12" fill="#000">TYPED OVER (LENGTH 2600):</text>
+          <text x="24" y="212" font-size="12" fill="#000">SLIMLINE TANK 2600 x 800 x 2100 HIGH</text>
+          <text x="24" y="228" font-size="12" fill="#000">(TYPED, CONFIRM WITH MAKER)</text>
+        </svg>
+      </div>
+      <div class="line"><span class="k">What the drafter does</span><span class="v">Picks 3,000 L, or types straight over any box. Typed sizes win and the litres drop off the label.</span></div>
+      <div class="line"><span class="k">Watch out</span><span class="v">The label must say TYPED when the preset has been changed, so a builder knows the size is not a catalogue figure.</span></div>
+    </div>
+
+  </div>
+
+  <p class="note" style="margin-top:32px">Tank sizes are typical figures from R-015 and are not checked at source. Nothing here is built into the tool.</p>
+</div>
+</body>
+</html>

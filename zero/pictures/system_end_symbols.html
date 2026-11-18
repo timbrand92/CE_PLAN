@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>End of the system: two new symbols</title>
+<style>
+  :root{
+    --window:#2B2D30; --card:#383B40; --well:#232528; --tile:#4A4D55; --border:#4A4D53;
+    --text:#E6E8EB; --body:#C8CBD0; --note:#A9AEB6; --rose:#FF70B3; --dark:#10131A;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--window);color:var(--body);
+       font:14px/1.5 "IBM Plex Sans","Segoe UI",Arial,sans-serif;font-weight:400}
+  .wrap{max-width:1120px;margin:0 auto;padding:32px 16px 48px}
+  h1,h2{font-size:24px;line-height:1.3;font-weight:400;color:var(--text);margin:0}
+  h1{margin-bottom:8px}
+  h2{margin:48px 0 8px}
+  p{margin:0}
+  .note{font-size:12px;color:var(--note)}
+  .lede{margin-bottom:8px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(500px,100%),1fr));gap:24px;margin-top:24px}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:24px;
+        box-shadow:0 2px 8px rgba(0,0,0,.35);display:flex;flex-direction:column;gap:16px}
+  .head{display:flex;align-items:center;gap:16px}
+  .letter{width:56px;height:56px;border-radius:8px;background:var(--tile);color:var(--text);
+          font-size:24px;display:flex;align-items:center;justify-content:center}
+  .rec{background:var(--rose);color:var(--dark);border-radius:8px;padding:4px 8px;font-size:12px}
+  .why{font-size:12px;color:var(--body)}
+  .panels{display:flex;gap:24px;align-items:flex-end;flex-wrap:wrap}
+  .big svg{display:block;width:363px;max-width:100%;height:auto;background:#fff;border-radius:8px}
+  .small .box{background:#fff;border-radius:8px;padding:8px;width:fit-content}
+  .small svg{display:block;width:91px;height:53px}
+  .cap{font-size:12px;color:var(--note);margin-top:8px}
+  .line .k{font-size:12px;color:var(--note);display:block}
+  .line .v{font-size:14px;color:var(--text)}
+  .strip{margin-top:24px;background:var(--well);border:1px solid var(--border);border-radius:8px;padding:16px;
+         font-size:12px;color:var(--body)}
+</style>
+</head>
+<body>
+
+<!-- Symbol drawings. Units are millimetres on paper at 1:100 (1 mm = 100 mm on the ground).
+     Thin line 0.18 mm, medium line 0.35 mm, text 2.5 mm high. Black only. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <style>
+      .t{stroke:#000;stroke-width:.18;fill:none}
+      .m{stroke:#000;stroke-width:.35;fill:none}
+      .d{stroke-dasharray:1.1 .7}
+      .f{fill:#000;stroke:none}
+      .tx{font:2.5px "Segoe UI",Arial,sans-serif;fill:#000}
+    </style>
+
+    <!-- kerb and channel with a gap where a pit sits -->
+    <g id="kerbGap">
+      <path class="t" d="M0 5H3M11 5H24"/>
+      <path class="m" d="M0 6.5H3M11 6.5H24"/>
+      <path class="t" d="M0 9.5H3M11 9.5H24"/>
+    </g>
+    <!-- kerb and channel, unbroken -->
+    <g id="kerbFull">
+      <path class="t" d="M0 5H24"/>
+      <path class="m" d="M0 6.5H24"/>
+      <path class="t" d="M0 9.5H24"/>
+    </g>
+
+    <!-- (a) existing council pit -->
+    <g id="pitA">
+      <use href="#kerbGap"/>
+      <path class="m" d="M7 0V3.25"/>
+      <rect class="m d" x="3" y="3.25" width="8" height="8"/>
+      <path class="t" d="M3 3.25L11 11.25"/>
+      <text class="tx" x="12" y="8.7">ExP</text>
+    </g>
+    <g id="pitB">
+      <use href="#kerbGap"/>
+      <path class="m" d="M7 0V3.25"/>
+      <rect class="m" x="3" y="3.25" width="8" height="8"/>
+      <path class="t" d="M3 3.25L11 11.25M3 11.25L11 3.25"/>
+      <text class="tx" x="12" y="8.7">EX SEP</text>
+    </g>
+    <g id="pitC">
+      <use href="#kerbGap"/>
+      <path class="m" d="M7 0V3.25"/>
+      <rect class="m d" x="3" y="3.25" width="8" height="8"/>
+      <rect class="t d" x="4.2" y="4.45" width="5.6" height="5.6"/>
+      <text class="tx" x="12" y="8.7">ExP</text>
+    </g>
+    <g id="pitD">
+      <use href="#kerbGap"/>
+      <path class="m" d="M7 0V3.25"/>
+      <rect class="m" x="3" y="3.25" width="8" height="8"/>
+      <path class="f" d="M3 3.25L3 11.25L11 11.25Z"/>
+      <text class="tx" x="12" y="8.7">ExP</text>
+    </g>
+
+    <!-- (b) kerb outlet -->
+    <g id="outA">
+      <use href="#kerbFull"/>
+      <path class="m" d="M12 0V6.5"/>
+      <path class="f" d="M10.8 6.5L13.2 6.5L12 8.9Z"/>
+    </g>
+    <g id="outB">
+      <use href="#kerbFull"/>
+      <path class="m" d="M12 0V6.2"/>
+      <rect class="f" x="10" y="6.2" width="4" height=".8"/>
+      <path class="m" d="M12 7V8.6"/>
+      <path class="f" d="M11.2 8.4L12.8 8.4L12 9.4Z"/>
+    </g>
+    <g id="outC">
+      <use href="#kerbFull"/>
+      <path class="m" d="M12 0V6.5"/>
+      <path class="m" d="M10.5 6.5A1.5 1.5 0 0 0 13.5 6.5Z"/>
+    </g>
+    <g id="outD">
+      <use href="#kerbFull"/>
+      <path class="m" d="M12 0V5"/>
+      <rect class="m" x="10.5" y="5" width="3" height="1.5"/>
+      <path class="m" d="M12 6.5V8.6"/>
+      <path class="f" d="M11.2 8.4L12.8 8.4L12 9.4Z"/>
+    </g>
+  </defs>
+</svg>
+
+<div class="wrap">
+  <h1>End of the system: two new symbols</h1>
+  <p class="lede">The office has no symbol for either of these. Each picture is a plan view with the property at the top and the road at the bottom, drawn as it would plot at 1:100: black on white, thin and medium lines only.</p>
+  <p class="note">Big picture: about 4 times plot size. Small picture beside it: true plot size at 1:100 (about 9 mm square for a pit), if your screen is at 100% zoom.</p>
+
+  <!-- ================= (a) EXISTING COUNCIL PIT ================= -->
+  <h2>(a) Existing council pit in the street</h2>
+  <p>The site pipe connects to a pit that is already there, for example a side-entry pit or a junction pit. It must read as existing, not new, and carry a short tag.</p>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="head"><div class="letter">A</div><div class="rec">Recommended</div></div>
+      <p class="why">Why: dashed already says "existing" before anyone reads the tag, it stays clear at 1:100, and it is the simplest block (one dashed line type, no fills).</p>
+      <div class="panels">
+        <div class="big"><svg viewBox="0 0 24 14" role="img" aria-label="Option A: dashed square with a diagonal, tag ExP, site pipe entering from the property side"><use href="#pitA"/></svg></div>
+        <div class="small"><div class="box"><svg viewBox="0 0 24 14" role="img" aria-label="Option A at true plot size"><use href="#pitA"/></svg></div><p class="cap">True plot size, 1:100</p></div>
+      </div>
+      <div class="line"><span class="k">What it says to the builder</span><span class="v">The pipe connects into a pit that already exists. Do not build a pit here.</span></div>
+      <div class="line"><span class="k">Drawn in AutoCAD as</span><span class="v">One block: dashed square with a diagonal, and a tag attribute (ExP or SEP).</span></div>
+    </div>
+
+    <div class="card">
+      <div class="head"><div class="letter">B</div></div>
+      <p class="why">Square with a cross, and the letters EX in the tag.</p>
+      <div class="panels">
+        <div class="big"><svg viewBox="0 0 24 14" role="img" aria-label="Option B: square with a cross, tag EX SEP"><use href="#pitB"/></svg></div>
+        <div class="small"><div class="box"><svg viewBox="0 0 24 14" role="img" aria-label="Option B at true plot size"><use href="#pitB"/></svg></div><p class="cap">True plot size, 1:100</p></div>
+      </div>
+      <div class="line"><span class="k">What it says to the builder</span><span class="v">A pit marked EX is existing. Connect to it; do not build it.</span></div>
+      <div class="line"><span class="k">Drawn in AutoCAD as</span><span class="v">One block: solid square with a cross, and a tag attribute that starts with EX.</span></div>
+    </div>
+
+    <div class="card">
+      <div class="head"><div class="letter">C</div></div>
+      <p class="why">Double dashed outline: a dashed square inside a dashed square.</p>
+      <div class="panels">
+        <div class="big"><svg viewBox="0 0 24 14" role="img" aria-label="Option C: double dashed outline, tag ExP"><use href="#pitC"/></svg></div>
+        <div class="small"><div class="box"><svg viewBox="0 0 24 14" role="img" aria-label="Option C at true plot size"><use href="#pitC"/></svg></div><p class="cap">True plot size, 1:100</p></div>
+      </div>
+      <div class="line"><span class="k">What it says to the builder</span><span class="v">The pipe connects into an existing pit. Nothing new is built here.</span></div>
+      <div class="line"><span class="k">Drawn in AutoCAD as</span><span class="v">One block: two dashed squares, and a tag attribute (ExP or SEP). The gap between them gets crowded at 1:100.</span></div>
+    </div>
+
+    <div class="card">
+      <div class="head"><div class="letter">D</div></div>
+      <p class="why">Half-filled square: one corner to corner half is solid black.</p>
+      <div class="panels">
+        <div class="big"><svg viewBox="0 0 24 14" role="img" aria-label="Option D: half-filled square, tag ExP"><use href="#pitD"/></svg></div>
+        <div class="small"><div class="box"><svg viewBox="0 0 24 14" role="img" aria-label="Option D at true plot size"><use href="#pitD"/></svg></div><p class="cap">True plot size, 1:100</p></div>
+      </div>
+      <div class="line"><span class="k">What it says to the builder</span><span class="v">This pit is already in the street. Connect to it.</span></div>
+      <div class="line"><span class="k">Drawn in AutoCAD as</span><span class="v">One block: square plus a solid half (a hatch), and a tag attribute (ExP or SEP). Reads bold on a busy plan.</span></div>
+    </div>
+
+  </div>
+
+  <div class="strip">Does not plot: a CE marker on a no-plot layer still marks where the system ends (ruled earlier).</div>
+
+  <!-- ================= (b) KERB OUTLET ================= -->
+  <h2>(b) Kerb outlet</h2>
+  <p>The site pipe discharges through the kerb to the channel (a kerb adaptor). Each picture shows the kerb and channel in plan, with the pipe arriving from the property side. The three lines are back of kerb (thin), face of kerb (medium) and the edge of the channel (thin).</p>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="head"><div class="letter">A</div><div class="rec">Recommended</div></div>
+      <p class="why">Why: one solid shape that points at the road, so it shows the flow direction by itself and needs no extra arrow. The easiest block to read at 2.5 mm text size.</p>
+      <div class="panels">
+        <div class="big"><svg viewBox="0 0 24 14" role="img" aria-label="Option A: small filled triangle on the kerb line pointing to the road"><use href="#outA"/></svg></div>
+        <div class="small"><div class="box"><svg viewBox="0 0 24 14" role="img" aria-label="Option A at true plot size"><use href="#outA"/></svg></div><p class="cap">True plot size, 1:100</p></div>
+      </div>
+      <div class="line"><span class="k">What it says to the builder</span><span class="v">The pipe finishes at the kerb here and the water leaves toward the road.</span></div>
+      <div class="line"><span class="k">Drawn in AutoCAD as</span><span class="v">One block: small filled triangle, inserted on the face of the kerb and turned to point at the road.</span></div>
+    </div>
+
+    <div class="card">
+      <div class="head"><div class="letter">B</div></div>
+      <p class="why">Short solid bar across the pipe end, with an arrow to the channel.</p>
+      <div class="panels">
+        <div class="big"><svg viewBox="0 0 24 14" role="img" aria-label="Option B: short solid bar on the kerb face with a flow arrow"><use href="#outB"/></svg></div>
+        <div class="small"><div class="box"><svg viewBox="0 0 24 14" role="img" aria-label="Option B at true plot size"><use href="#outB"/></svg></div><p class="cap">True plot size, 1:100</p></div>
+      </div>
+      <div class="line"><span class="k">What it says to the builder</span><span class="v">The pipe ends at a bar on the kerb face; flow runs out to the channel.</span></div>
+      <div class="line"><span class="k">Drawn in AutoCAD as</span><span class="v">One block: solid bar plus an arrow, inserted on the kerb face and turned to the road.</span></div>
+    </div>
+
+    <div class="card">
+      <div class="head"><div class="letter">C</div></div>
+      <p class="why">Half circle on the kerb, round side toward the road.</p>
+      <div class="panels">
+        <div class="big"><svg viewBox="0 0 24 14" role="img" aria-label="Option C: half circle on the kerb line"><use href="#outC"/></svg></div>
+        <div class="small"><div class="box"><svg viewBox="0 0 24 14" role="img" aria-label="Option C at true plot size"><use href="#outC"/></svg></div><p class="cap">True plot size, 1:100</p></div>
+      </div>
+      <div class="line"><span class="k">What it says to the builder</span><span class="v">The pipe discharges through the kerb at this half circle.</span></div>
+      <div class="line"><span class="k">Drawn in AutoCAD as</span><span class="v">One block: half circle on the kerb face, no arrow. Direction comes only from which way the round side points.</span></div>
+    </div>
+
+    <div class="card">
+      <div class="head"><div class="letter">D</div></div>
+      <p class="why">Small rectangle the width of the kerb, with a flow arrow.</p>
+      <div class="panels">
+        <div class="big"><svg viewBox="0 0 24 14" role="img" aria-label="Option D: small rectangle across the kerb width with a flow arrow"><use href="#outD"/></svg></div>
+        <div class="small"><div class="box"><svg viewBox="0 0 24 14" role="img" aria-label="Option D at true plot size"><use href="#outD"/></svg></div><p class="cap">True plot size, 1:100</p></div>
+      </div>
+      <div class="line"><span class="k">What it says to the builder</span><span class="v">The pipe goes through the kerb at this opening and flows out to the channel.</span></div>
+      <div class="line"><span class="k">Drawn in AutoCAD as</span><span class="v">One block: open rectangle the width of the kerb plus an arrow. Its size depends on the kerb type drawn, so it may need stretching.</span></div>
+    </div>
+
+  </div>
+
+  <div class="strip">Does not plot: a CE marker on a no-plot layer still marks where the system ends (ruled earlier).</div>
+
+  <p class="note" style="margin-top:32px">Tags (ExP, EX SEP) and symbol sizes are drawing proposals for Tim to choose between. Nothing here is built into the tool.</p>
+</div>
+</body>
+</html>
