@@ -1,0 +1,322 @@
+# The board (revision 1)
+
+**Made:** Wed 18 Nov 2026, 1:30 pm Melbourne time. Built by a helper of the planning chat "CE_ACAD / zero plan / 01" from every document and side chat named in section 9. Highest decision at the time of reading: D-227.
+
+**What this page is.** The one page that shows everything open, waiting, draft, parked, promised or unproven, across every chat. The planning chat keeps it current at every timed wake-up and before every progress answer (D-226, R-71). Tim never has to edit it, track it or remember it. How it is kept: `BOARD_HOW_IT_IS_KEPT.md`. The current ruling on any subject, without the history: the folder `C:\CE_PLAN\zero\rulings\` (written separately).
+
+**How to read it.** IDs are never reused. W waits on Tim. O is owed to Tim by a chat. N is an open problem in the new plug-in. U is unproven. K is parked. Built, tested, installed and accepted are four separate facts (RULES 4).
+
+---
+
+## 1. At a glance
+
+1. **Waiting on Tim:** 38 (2 block building now, 23 needed before a named tool, 13 can wait)
+2. **Being built now:** 3 under way, 6 queued behind them
+3. **Open problems in the new plug-in:** 28
+4. **Promises the planning chat owes Tim:** 16 (13 owed by the planning chat, 1 by the interview chat, 2 by the clean-up chat)
+5. **Unproven things:** 30
+6. **Parked for later:** 22
+
+**Installed: 0. Accepted by Tim: 0.** Last AutoCAD run: pass 2, 12:57 to 1:03 pm, 77 checks, 74 pass, 1 fail, 2 not tested.
+
+---
+
+## 2. WAITING ON TIM
+
+Blockers first. "One click" means a clickable choice is enough. "At the PC" means he must do it on his machine. "Document" means he must supply a paper or file.
+
+### Blocks building now
+
+1. **W-001 PIT BLOCK 3 as it is?** Ask: confirm the Pit tool uses PIT BLOCK 3 exactly as it is (wipeout edge stays as the inner wall, plastic pit is the same block at 350 x 350, no new states), or name the edits you will make. Context: you said PIT BLOCK 3 is the one; the planning chat's answer to your three questions was never confirmed in words; the build chat cannot finish the Pit tool's block reading. From: D-215, D-224, R-009. Waiting: since 18 Nov. Blocks: BLOCKS BUILDING NOW (Pit tool). Answer: one click.
+2. **W-002 Council minimum runoff figures.** Ask: confirm the minimum runoff figure for Darebin 0.80, Maribyrnong 0.75 and Boroondara 0.65, each with its council document. Context: the old plug-in undersized tanks by about a quarter before 30 Oct; the new plug-in has no floor yet and the build chat is writing it now. Maribyrnong and Boroondara are not in the reference. From: OQ-05 (OBSTACLE_COURSE), R-008. Waiting: since 18 Nov. Blocks: BLOCKS BUILDING NOW (rainfall and council-C fix in progress). Answer: needs a document from him for two councils; one click for Darebin.
+
+### Needed before a named tool
+
+3. **W-003 PIT and CD already exist in your AutoCAD.** Ask: keep PIT and CD for the new tools and move your own alias, or pick other names. Context: the night run saw both names answer before the new plug-in loads; the old plug-in or your alias file owns them; the build chat is reading which. From: OQ-09, TREND line 1, Director's summary 5.6. Waiting: since 18 Nov. Blocks: needed before the Pit and Pipe tools are installed. Answer: one click, after the build chat reports which it is.
+4. **W-004 How long a run before an inspection opening is offered.** Ask: give the figure or the AS 3500.3 clause. Context: the offer at a bend or branch (D-081, D-189) needs "long" defined; the standard text could not be read online. From: D-081, THE_PLAN 7.1, R-002 L. Waiting: since 16 Nov. Blocks: needed before the Pipe tool is accepted. Answer: needs a document from him.
+5. **W-005 Slab thickness under paving.** Ask: correct or confirm path 0.10, driveway 0.125, crossover 0.15; and whether AS 3500.3 measures cover from the underside of the pavement. Context: these are the planning chat's guesses; cover under paving uses them. From: D-146, D-152, BUILD_LOG DRAFT 1. Waiting: since 17 Nov. Blocks: needed before the Pipe tool is accepted. Answer: one click, or a figure typed.
+6. **W-006 Two boxes not in the mock-ups.** Ask: add "what is over it" to Pipe, and pipe size to Detention? Recommended yes. Context: without them cover under a driveway cannot be tried and the pipe size cannot be set in Detention. From: BUILD_LOG DRAFT 10, Director's summary 6.5, TRY_THE_WINDOWS 8. Waiting: since 17 Nov. Blocks: needed before the Pipe and Detention tools. Answer: one click.
+7. **W-007 The build chat's DRAFT calls.** Ask: answer the DRAFT calls for Pit, Pipe, Long section and Outlet (64 numbered lines) and the seven bench windows (160 lines), as clickable batches of 12 with a real example each. Context: about 176 lines carry the word DRAFT; many repeat one choice; some are already ruled. The director's summary says "about 30": the real count is higher. From: acad\DRAFTS_*.md, bench\DRAFTS_*.md, LOOP_QUEUE 15. Waiting: since 17 Nov. Blocks: needed before any of those tools is accepted. Answer: one click per call, brought by the planning chat (O-003).
+8. **W-008 Which inlet symbols.** Ask: which set of inlet blocks do the Inlet tools place, the "... DYNAMIC WITH MASK" set or the plain floor waste and machine-named downpipe? Context: both sit in the master drawing. From: BLOCKS_REVIEW decision 2. Waiting: since 18 Nov. Blocks: needed before the Inlets tool. Answer: one click.
+9. **W-009 Tank sizes, and how FO and OF are drawn.** Ask: supply the office tank sizes, diameters and heights, and show how FO and OF are drawn. Context: the Tank window runs on sample sizes. From: THE_PLAN 7.4, D-059. Waiting: since 16 Nov. Blocks: needed before the Tank tool. Answer: needs a document from him.
+10. **W-010 Three design questions on a part-drawn job.** Ask: how the top water level is first chosen; whether the orifice pit is always the last pit before the council connection; whether tank re-use comes from the STORM report or is worked out from the volume needed. Context: you said you design while you draw (D-175) so these are to be asked on a half-drawn job with examples, not in the old form. From: Q-001, INPUT_AUDIT questions 2, 4 and 6, D-175, LOOP_QUEUE 16. Waiting: since 16 Nov. Blocks: needed before the Detention tool and typing cut 3. Answer: one click each, brought by the planning chat (O-004).
+11. **W-011 Where each site's rainfall table comes from.** Ask: is it the Bureau table for the site's place, one table per job? Context: the sample table was one Kingston job's and gave wrong storage on other sites; D-218 lets you type your own estimate in the meantime. From: INPUT_AUDIT question 5, OQ-04, R-008. Waiting: since 18 Nov. Blocks: needed before the Detention tool. Answer: one click.
+12. **W-012 How pipe capacity is checked on bigger jobs.** Ask: what the office does when detention or a bigger site needs pipe capacity checked. Context: no pipe table was in any job folder read; D-019 covers the plain house only. From: Q-002. Waiting: since 16 Nov. Blocks: needed before the Detention tool. Answer: at the PC or a document.
+13. **W-013 Pervious runoff coefficient 0.30 or 0.35.** Ask: which one. Context: it changes the storage needed; it is the one office value of Q-004 still unruled. From: Q-004, INPUT_AUDIT risk 5. Waiting: since 16 Nov. Blocks: needed before the Detention tool. Answer: one click.
+14. **W-014 Boyd's or OSD4W, and OSD4W inputs.** Ask: who confirms the method with the council before design, and where the OSD4W rainfall zone and times come from when the letter is silent. Context: the OSD4W window shows two typed results because its inputs are not in the reference. From: Q-006, THE_PLAN 7.3. Waiting: since 16 Nov. Blocks: needed before the Detention tool. Answer: needs a document from him.
+15. **W-015 Detention pipe look.** Ask: the printed pen width, the legend line wording and the label wording; look at colour 160 on screen and on a real plot. Context: layer and colour 160 are ruled; none of this has been seen on a real sheet. From: D-153, D-156, BUILD_LOG DRAFT 3. Waiting: since 17 Nov. Blocks: needed before the Detention tool is accepted. Answer: at the PC (one real plot).
+16. **W-016 Wording of the standing note for APPROX.** Ask: the exact words printed once on a sheet that has assumed figures. Context: assumed figures print "APPROX." in front (D-177); the planning chat proposed "FIGURES MARKED APPROX. ARE ASSUMED AND ARE TO BE CONFIRMED." From: D-177, SITUATIONS question 1. Waiting: since 18 Nov. Blocks: needed before printing is built. Answer: one click on the proposed words.
+17. **W-017 What form cover-level help takes.** Ask: click two trusted levels and work between them, click one level and type a fall, or both. Context: help is only a suggestion and your figure wins (D-195). From: D-195, D-178. Waiting: since 18 Nov. Blocks: needed before any cover-level helper is built. Answer: one click.
+18. **W-018 Move your own aliases.** Ask: move your alias Wall-t (so WT is TANK) and your alias Bl (so BL is BREAKLINE) in your own alias file. Context: the plug-in never edits your alias file. From: D-170, TA-023. Waiting: since 18 Nov. Blocks: needed before the Tank and break line tools are installed. Answer: at the PC.
+19. **W-019 Typed names still to pick.** Ask: full words for FO and GIO; names for the Outlet tool, the legal point of discharge tool (D-222), the trench grate, AG drain and perimeter drain (D-223), the Job window, and the shared tools ST-11 to ST-18. Context: the rule is a plain word plus a short name checked in both lists. From: NAMING_DRAFT, D-222, D-223, interview file 8a. Waiting: since 16 Nov. Blocks: needed before those tools are installed. Answer: one click per batch, brought by the interview chat (O-009).
+20. **W-020 Base scales for the hatch tool.** Ask: confirm the base scale for each office hatch at DIMSCALE 100 (for example concrete 5, wall over 50, wall under 20). Context: the old jobs set the figures; DIMSCALE leads (TA-062). From: D-227, TA-058, TA-061, HATCHES_BY_FUNCTION. Waiting: since 18 Nov. Blocks: needed before the hatch tool OFFICEHATCH / OH. Answer: one click.
+21. **W-021 The office blocks.** Ask: decide blocks 3 to 10 of the blocks review: pipe label blocks kept or dropped; the 104 "ask Tim" blocks named or dropped; the 65 notes as a notes library; left and right pairs; the whole-sheet block BK-450; the 33 leftovers; structural blocks kept out of the palette; and may the 279 machine-named blocks be renamed on a copy, who owns edits to the master drawing. Context: you said "we might not need all blocks". From: BLOCKS_REVIEW decisions 3 to 10, TQ-10, D-211. Waiting: since 18 Nov. Blocks: needed before the Blocks palette BLOCKS / BLK. Answer: one click per batch.
+22. **W-022 Which buttons on the three ribbon tabs.** Ask: which buttons sit on CE Civil, CE Tools and on the light tab that appears when something is picked. Context: tab names are ruled (D-208); buttons never settled. From: D-051, D-200, UI_PLAN 9.2. Waiting: since 16 Nov. Blocks: needed before the ribbon is built. Answer: one click per tab.
+23. **W-023 What a fault report may carry.** Ask: approve only the CE version, commands typed, message shown, a coded drawing name and object counts; never a path, login, PC name, client or job name; you see the whole report first. Context: 20 old bugs leaked such details. From: OQ-08. Waiting: since 18 Nov. Blocks: needed before the Manager's fault report. Answer: one click.
+24. **W-024 An office layer already in the drawing with another colour.** Ask: leave it and say once with a one-click fix, or set it to the list. Recommended leave. From: OQ-07. Waiting: since 18 Nov. Blocks: needed before the first tool is installed. Answer: one click.
+25. **W-025 Test the new plug-in beside your old ones.** Ask: yes to a third night session with old and new plug-ins loaded together, on test copies. From: OQ-10. Waiting: since 18 Nov. Blocks: needed before colleagues get the new plug-in. Answer: one click.
+### Can wait
+
+26. **W-026 The draft speed and upper limits.** Ask: keep 0.1 second for moving a pit with its pipes (it measured 0.21), and rule the other speed limits and the amber upper limits (pit over 6 m, roof over 5,000 m2, flatter than 1 in 500, pipe over 1,050, site over 50,000 m2). From: OQ-03, PERFORMANCE 2, BUILD_LOG DRAFT 9. Waiting: since 18 Nov. Blocks: can wait (the build chat builds to the recommended 0.1 meanwhile). Answer: one click.
+
+27. **W-027 Which numbering option comes first.** Ask: when a pit is added after issue, which of next free number, a letter, or renumber all is offered first. From: D-184. Waiting: since 18 Nov. Blocks: can wait. Answer: one click.
+28. **W-028 Laptop screen sizes.** Ask: which laptops draft, their resolution and Windows scaling. Context: small screens put the cards into tabs. From: D-193, SITUATIONS question 17. Waiting: since 18 Nov. Blocks: can wait (built for 1920 x 1080 at 125 percent meanwhile). Answer: at the PC.
+29. **W-029 Monash step irons wording.** Ask: supply the council's own wording for step irons deeper than 0.9 m. From: D-148, BUILD_LOG DRAFT 4. Waiting: since 17 Nov. Blocks: can wait (left blank). Answer: needs a document from him.
+30. **W-030 Freeze the old bug list.** Ask: freeze the carpark as the old plug-in's list, fix there only what stops work, turn the 14 recurring lessons into standing tests, keep out-of-scope bugs with their tools, start the new plug-in's own list empty, sort the ideas inbox the same way later. Context: you approved the sweep but not these five. From: R-007 section 5, D-206. Waiting: since 18 Nov. Blocks: can wait. Answer: one click.
+31. **W-031 Old wrong-figure bugs: which jobs to re-run.** Ask: list the Darebin, Maribyrnong and Boroondara jobs sized in the old CDDESIGN before 30 Oct 2026, and any detention job issued with "This job has no rainfall curve of its own". Context: live risk, see section 8. From: R-008, D-212. Waiting: since 18 Nov. Blocks: can wait for the build, not for the office. Answer: needs him (his job list).
+32. **W-032 Hatch fault checks.** Ask: do the two-minute read-only checks on your hatch (Associative line, six variable values, a blank drawing test) so the cause can be found. Context: probably plain AutoCAD (about 85 percent), not proven. From: R-006 A3, D-199, D-206. Waiting: since 18 Nov. Blocks: can wait. Answer: at the PC.
+33. **W-033 Leftovers of the first trial run.** Ask: delete the ZeroTrial profile, set SECURELOAD back to 1 in your profile or leave it, delete the isolate folder. Context: you said "I will look tomorrow" on 16 Nov; if SECURELOAD goes to 1 the nightly NETLOAD asks a question until a trusted folder is agreed. From: D-111, P-08, R-005 G, Director's summary 6.4. Waiting: since 16 Nov. Blocks: can wait. Answer: at the PC.
+34. **W-034 Disk clean-up leftovers.** Ask: say which may go: 76 plug-in install backups and the September rollback archive (14.1 GB), Codex data (36.6 GB), the mail archive in use out of OneDrive (18.9 GB), the hibernation file (25.5 GB), CERef (11 GB), Team transcripts, a local AI model, CE_STRUC_SUITE auto-saves. Context: the clean-up chat left these for you. From: SURVEY.md "ASK TIM" 4 to 9. Waiting: since 18 Nov. Blocks: can wait. Answer: one click per item.
+35. **W-035 Client details in local study copies.** Ask: clean the old job details inside the evidence and workbooks now, and delete the study copies in the scratch folders now or when planning ends. Context: local only, nothing in the repository. From: P-06, P-07. Waiting: since 16 Nov. Blocks: can wait. Answer: one click.
+36. **W-036 Questions for the later kinds.** Ask: when each kind is designed: pump workbook version (Q-003), raingarden area (Q-005), what a mark-up carries (Q-007), checks before council issue (Q-008), fresh discharge letters (Q-009), as-built duty (Q-010), other civil site drawings (Q-011), driveway and ramp grades (Q-012), soakage storm (Q-013), industrial stub (Q-014). From: OPEN_QUESTIONS. Waiting: since 16 Nov. Blocks: can wait. Answer: one click each, when the kind is designed.
+37. **W-037 Where is the drawing that showed nothing without the plug-in.** Ask: the file location, for the no-plug-in test case. From: P-04, D-015. Waiting: since 16 Nov. Blocks: can wait. Answer: needs a file from him.
+38. **W-038 Which real job to carry through.** Ask: pick the finished house or two-unit job to run blank-to-issue, and the time for it. Context: colleagues get the new plug-in only after you carry one real job through. From: THE_PLAN stage E, LOOPS 3, Director's summary 4. Waiting: since 16 Nov. Blocks: can wait (until Pit and Pipe pass the night loop). Answer: one click, then his time.
+
+---
+
+## 3. OWED TO TIM BY THE CHATS
+
+1. **O-001 Planning chat: a finished proposal for every undecided function-map line.** 32 lines are still "not decided" (37 less the five he has since ruled) and 17 more are proposed to retire, to be corrected in one sitting, not asked singly. From: D-220, R-69, FUNCTION_MAP sections 2 and 3. Raised 18 Nov.
+2. **O-002 Planning chat: the rulings pages.** The current ruling on each subject in one place. A helper is writing them in `C:\CE_PLAN\zero\rulings\` (ten files exist at 1:30 pm). From: D-226, R-71. Raised 18 Nov.
+3. **O-003 Planning chat: the DRAFT calls as clickable batches** (delivers W-007), once the rework has settled which are still live. From: LOOP_QUEUE 15. Raised 17 Nov.
+4. **O-004 Planning chat: the three design questions on a part-drawn job** (delivers W-010). From: LOOP_QUEUE 16, D-175. Raised 18 Nov.
+5. **O-005 Planning chat: the concept gap check's 52 owner decisions.** Reconcile them against D-075 to D-114 and D-133 to D-136 and bring only what is unanswered, by tool. From: STATE "Then" item 6, CONCEPT_GAP_CHECK section 4. Raised 16 Nov.
+6. **O-006 Planning chat: an answer to the ten gaps of the concept gap check** (sheet set-up and background, viewport colour overrides, the fixed frame's home, slabs, second sheet, horizontal title strip). No closure is recorded. From: CONCEPT_GAP_CHECK section 1. Raised 16 Nov.
+7. **O-007 Planning chat: the 18 general rules of SITUATIONS put to him.** They were not put one by one; where one goes beyond his 18 answers it is still a proposal. From: SITUATIONS last section. Raised 18 Nov.
+8. **O-008 Planning chat: plain explanation of the obstacle course** ("short-term suffering for long-term gain", how professionals use it). He asked; no delivery is recorded. From: D-216. Raised 18 Nov.
+9. **O-009 Interview chat: the names for ST-11 to ST-18 checked in both lists, in one batch** (delivers part of W-019). From: interview_tools CHECKLIST "Next pieces" 2. Raised 18 Nov.
+10. **O-010 Planning chat: read the Job Manager's own plan and design how the plug-in hands it job facts.** Never read. From: D-071, THE_PLAN 7.6. Raised 16 Nov.
+11. **O-011 Planning chat: how you move from the old plug-in to the new one** (PIT and CD name clash, side by side, old names gone). From: Director's summary 5.6, D-053. Raised 18 Nov.
+12. **O-012 Planning chat: bring the stale documents into line** (items in section 10) in the same reply as each decision (RULES 9.7). Raised 18 Nov.
+13. **O-013 Planning chat: file D-138 to D-227 into the reference library.** It was last updated to D-137 and the trial findings; the standards and figures ruled since are in the build chat's code and not confirmed in the reference. From: reference README item 9, R-65. Raised 17 Nov.
+14. **O-014 Planning chat: refresh the director's summary to pass 2** and put the board's counts on it. From: DIRECTOR_SUMMARY section 3. Raised 18 Nov.
+15. **O-015 Clean-up chat: pack the plug-in history store in the 2 to 3 pm break** (a script waits until 2:00 pm; the result goes in LOG.md). From: C: clean-up LOG, approval 6. Raised 18 Nov.
+16. **O-016 Clean-up chat: a note, found in the best way possible, that things must be kept clean in future.** Tim, 12:45 pm: "make a note that we need to keep things clean in future make this found in the best way possible". Not yet done at 1:22 pm. Raised 18 Nov.
+
+---
+
+## 4. BEING BUILT
+
+The order of work as it stands (D-091 one tool at a time; D-090 a fault goes ahead of new work). Evidence of work under way: 19 changed files not yet saved in `C:\CE_CIVIL` at 1:25 pm.
+
+### Under way (3)
+
+1. **Rework from the real-use walk-through and bends** (build chat; queue item 11). Built: gaps 1 to 7 on the fake drawing (join later, outlet, end kinds, ends follow a pit wall, blank drawing, grey for unknown, following); not built: bends on every pipe, TBC and APPROX. printing, labels that keep their offset, numbering rules, the drawing keeping its standards. Tested: pass 2 proved the pit-block reader and the changed long section check. Installed no. Accepted no. Waiting for: nothing from Tim except W-001.
+2. **Rainfall and council minimum C fix** (build chat; uncommitted: the sample rainfall table removed, a new test file). Built: not finished. Tested: no. Installed no. Accepted no. Waiting for: W-002.
+3. **Speed: pit move over its limit** (build chat; queue item 12). Built: measuring built; the lookup list named as the fix, not shown built. Tested: first run 12 pass and 1 fault (0.21 s against 0.1); not in pass 2. Installed no. Accepted no. Waiting for: a re-run at the next night window.
+
+### Built and run in real AutoCAD 2027 on a test copy (nothing installed, nothing accepted)
+
+4. **The brain** (facts, sums, joins, standards, checks). Built yes (549 automatic checks). Tested by separate reviewers, yes. Installed no. Accepted no.
+5. **AutoCAD foundation.** Built yes. Tested: pass 2, CETEST 32 pass, 1 fail, 1 not tested (pass 1: 32 of 34). Installed no. Accepted no. Waiting for: the typed EXPLODE check (N-001).
+6. **Pit tool (PIT / PT).** Built yes. Tested: pass 2, CEPIT1 to 7: 15 pass, 1 not tested (the no-block route). Installed no. Accepted no. Waiting for: W-001, W-003, the rework above.
+7. **Pipe tool (PIPE / CD).** Built yes. Tested: pass 2, CEPIPE1 to 8: 16 of 16. Installed no. Accepted no. Waiting for: bends, W-003, W-005, W-006.
+8. **Outlet tool (OUTLET).** Built yes (name a DRAFT). Tested: inside the pipe checks. Installed no. Accepted no. Waiting for: the council pit outlet design (D-190).
+9. **Long section tool (LONGSECTION / LG).** Built yes. Tested: pass 2, CELEV1 to 7: 11 of 11. Installed no. Accepted no. Waiting for: the long section drawn onto the sheet (not built).
+10. **Seven bench windows** (Pit, Pipe, Long section, Inlets, Tank, Detention, Pit schedule). Built yes. Tested outside AutoCAD by independent click runs (1,240 of 1,240 steps). Installed no (test bench only). Accepted no: you used all seven and called them good, with changes queued. Waiting for: the rework (rose scheme, new preview, Columns card and scale out, TANK / WT, LONGSECTION name, tabs on small screens).
+
+### Queued, not started
+
+11. **Window rework** (queue item 13), then an independent re-try of all seven windows by real clicks at night.
+12. **Typing cuts 1 to 3** (queue item 14): defaults fill themselves, one fact in one place, head, orifice and pit size worked out. Cuts 4 and 5 wait for W-010, W-017.
+13. **Inlets, Tank, Detention, Pit schedule as AutoCAD tools** (queue item 17). None has an AutoCAD part. Waits for W-008 (Inlets), W-009 (Tank), W-010 to W-015 (Detention).
+14. **The 18 shared tools ST-01 to ST-18 and the small Manager** (D-201, D-209, D-214). None built. Each is interviewed for upgrades before building. Waits for W-019 to W-021.
+15. **The three ribbon tabs, the Job window, the self-check wired to run on open, one-click update.** None built. Waits for W-022.
+16. **The obstacle course gate** (D-216: "this is the gate"). Written as a draft; per-tool gate pages not started. Starting score at midday, before pass 2: 3 full passes of 108 places (27 obstacles by Pit, Pipe, Long section and bench): 29 fail, 48 not tested, 12 unknown, 17 await a reviewer. Not re-scored since.
+
+Estimates (Director's summary, not promises): Pit and Pipe to draft with in AutoCAD about 2 weeks; first release of all tools about 5 to 9 weeks; colleagues 1 to 2 weeks after one real job.
+
+---
+
+## 5. OPEN PROBLEMS IN THE NEW PLUG-IN
+
+Each line: the problem, where it is recorded, whether a check exists.
+
+1. **N-001** Exploding a pipe from code loses its hidden note; what typed EXPLODE does is not known. EXPLODE_GAP.md, BUILD_LOG 21. Check: yes (CETEST golden_explode_pipe fails); supervised typed check not run.
+2. **N-002** Moving a pit with its pipes takes 0.21 s against 0.1 s on a 2,500-object drawing. TREND line 1, OBSTACLE_COURSE OQ-03. Check: yes (CESPEED); not re-run in pass 2.
+3. **N-003** Detention would give one Kingston job's rainfall on every site, and has no council minimum runoff. R-008 "would the new plug-in repeat". Check: being written (RainAndCouncilCTests, uncommitted).
+4. **N-004** A pipe cannot be bent: every pipe is two points (D-189). SITUATIONS gap, BUILD_LOG 27. Check: OC-14 fails.
+5. **N-005** Assumed and not-known figures do not print APPROX. and TBC (D-177, D-178); windows still say "unknown" in the figure boxes. BUILD_LOG 30, OC-04. Check: OC-04 fails.
+6. **N-006** A pit's tag and cover text should keep their offset when the pit moves (D-181); pipe labels do not follow a move yet. BUILD_LOG 27, OC-10. Check: OC-10 fails.
+7. **N-007** A typed-over pipe label is not kept and flagged (D-182). BUILD_LOG 27 item 4. Check: none yet.
+8. **N-008** Copies and numbering rules not built: next free numbers and assumed levels (D-179), one series for two systems (D-183), after-issue choices (D-184), retyped tag renames the pit (D-185). OC-09, OC-15. Check: both fail.
+9. **N-009** The drawing does not keep the standard values it was designed with (D-180); needs a new adapter member. UNFINISHED_CHECK part B 8, OC-05. Check: OC-05 fails.
+10. **N-010** The tools refuse a drawing in metres; D-217 says work in both. OC-01. Check: OC-01 fails for Pit, Pipe and Long section.
+11. **N-011** Nothing checks locked layers, xrefs, REFEDIT or paper space (OC-19; native protection rule). Check: none; expected to fail.
+12. **N-012** No log or fault report exists yet (OC-25). Check: not tested.
+13. **N-013** The Pipe tool does not draw the flow arrow, the invert text or the office's edge lines yet; the window's ticks for them are off. BUILD_LOG 25 item 8. Check: none.
+14. **N-014** Joining to another pipe is not built, and a pit dropped on the middle of a pipe does not split it (D-077). UNFINISHED_CHECK "still not so" 1. Check: none.
+15. **N-015** A stand-in outline cannot be swapped for the office block when it arrives; the "Turned" box is kept but not acted on. UNFINISHED_CHECK 3, BUILD_LOG 24. Check: none.
+16. **N-016** The stretch parameters of PIT BLOCK 3 are not read (D-215). BUILD_LOG 30 item 7. Check: none; waits for W-001.
+17. **N-017** Custom grip on an ordinary object crashed AutoCAD (trial 2 FAIL); double-click also runs AutoCAD's own polyline edit (trial 8). TRIAL_RESULTS. Check: the trials; ordinary grips only until understood.
+18. **N-018** The self-check is not wired to run when a drawing opens; only CESELFCHECK runs it. BUILD_LOG 29 item 2, DESIGN_ACAD. Check: none.
+19. **N-019** One undo step for the mover and for each tool is unproven (OC-07). Check: not tested.
+20. **N-020** Placing many in a row (D-186), the plot line (D-188), "take it up" for a hand-drawn pipe (D-192) and tabs on small screens (D-193) are not built. BUILD_LOG 27 "later items". Check: none.
+21. **N-021** The long section is not drawn onto the sheet (FM-021); runs through branches are only said, not drawn. FUNCTION_MAP section 4 A1. Check: none (OC-12 not built).
+22. **N-022** The computations sheet has no tool; CDCALC is the only thing that makes it, so the old plug-in must stay installed beside the new. FUNCTION_MAP 1.7, D-220. Check: none.
+23. **N-023** Small window faults from the fifth tester round: the Inlet preview prints UPVC from its data file; the Inlet text lookup names one window in shared code; the Schedule's red line always says 0.00; one dead line; the focus-ring test reads source text only. BUILD_LOG 23. Check: partly.
+24. **N-024** Pit window opens with a 450 square preview while the size is unknown; the Pit tag and cover text are plain text, not the office's masked text. BUILD_LOG 23, DRAFTS_pit_tool 3. Check: none.
+25. **N-025** The golden recordings are "designed, not yet seen" until the night run re-takes them (17 in all). BUILD_LOG 26 item 6. Check: CETEST re-takes them.
+26. **N-026** The plan has no home for sheet set-up, viewport colour overrides, the fixed frame, slabs or the second sheet. CONCEPT_GAP_CHECK section 1. Check: none.
+27. **N-027** Nineteen changed files are not saved in `C:\CE_CIVIL` (one deleted); BUILD_LOG still labels entries "not committed" that the git log shows saved. Check: git status.
+28. **N-028** The agricultural drain card of the concept pages prints an invert text and feeds the schedule, against D-040. CONCEPT_GAP_CHECK gap 4. Check: none; the concept pages are working references only.
+
+---
+
+## 6. NOT PROVEN
+
+Things stated or planned that nobody has proven. (P- IDs belong to PARKING_LOT, so these start at U-001.)
+
+1. **U-001** Facts shown and edited in AutoCAD's own Properties palette (trial 5 BLOCKED).
+2. **U-002** The ribbon tab and tips on screen, and the rules-file route (trial 7 PARTIAL).
+3. **U-003** Update and rollback from the user folder inside AutoCAD (trial 9 BLOCKED on the AutoCAD side).
+4. **U-004** The corner site locator inside AutoCAD (D-167).
+5. **U-005** Any window painted on screen inside AutoCAD, including 2560 x 1440, laptops at 125 and 150 percent, and dark and light of AutoCAD (OC-17 not tested).
+6. **U-006** The Boyd's "storage needed" figure by hand (director's summary says not proven; build log says worked by calculator on 18 Nov).
+7. **U-007** Speed inside AutoCAD for the window on screen, plotting, saving, panning and zooming, and the whole plug-in load by the clock (PERFORMANCE 2.7).
+8. **U-008** The new plug-in beside your old ones (OQ-10, OC-21).
+9. **U-009** A drawing with no plug-in in AutoCAD LT, paper space, viewports, xrefs, dynamic blocks and your own live drawing (trial 3).
+10. **U-010** Whether AutoCAD LT keeps and returns third-party notes (R-002).
+11. **U-011** Interaction with your installed plug-ins, which were loaded in every full-AutoCAD trial (TRIAL_RESULTS).
+12. **U-012** That each typed name is free in AutoCAD 2027 (THE_PLAN 6.6); BREAKLINE as an Express Tools name; the full words of REVBOX, CLEAN, ARCDIM and others.
+13. **U-013** Sums in any direction on a loop of pipes where flow depends on depth (trial 11 not tested).
+14. **U-014** The join self-check on hundreds of pits and the real cost of reads in AutoCAD (BUILD_LOG 29 item 8).
+15. **U-015** Detention colour 160 on screen and on a real plot (D-156).
+16. **U-016** Hatch trouble: cause (R-006 says plain AutoCAD about 85 percent, not proven).
+17. **U-017** BUG-1095 fixed in the installed old build (read from code; not proven in AutoCAD, R-008).
+18. **U-018** The bug sort of R-007 (597 would happen again, 256 die, 399 out of scope): sorted once from cut-short text, never re-checked; the "fix built" claims on the 15 were not checked.
+19. **U-019** The no-screen engine: whether it shares your licence, runs beside an open AutoCAD, or writes to your profile (R-005 not verified 1 to 10); the 16 Nov licence error cause is unknown.
+20. **U-020** The office facts taken from the reference and not confirmed by Tim: revision rows, existing drains on EX layers, charged lines, nothing annotative (SITUATIONS "did not do" 3).
+21. **U-021** The 16 "still unknown" items of study D (apartment and school jobs, which tank credit is an office rule, what versions colleagues run, and others; reference README item 7).
+22. **U-022** Whether the Structural CLEAN saves (registry text and notes disagree; the plan assumes it does). FUNCTION_MAP 5.4.
+23. **U-023** The usage counts behind the function map (April, two PCs, loose LISP never recorded): "no recorded use" is weak evidence.
+24. **U-024** The office master drawing's dynamic block states and real-job use of each block; the A1 vertical template and the DWG itself were not opened (BLOCKS_REVIEW).
+25. **U-025** PIT BLOCK 3 behaviours read from memory (snap to list, Properties hiding, wipeout setting saved per drawing) (R-009 G).
+26. **U-026** AS 3500.3: the inspection opening spacing and the underside-of-pavement measurement (checked in no printed text).
+27. **U-027** What the aliases behind Wall-l, Wall-t, WX, L2ML, mltim and others are, and what Q (mltim) does (FUNCTION_MAP 5.14, TA-021).
+28. **U-028** Meaning of HATCH 155, HATCH 70, HATCH 221 and HATCH-SLAB INFILL: you said "not sure either" (TA-063). Nobody can say.
+29. **U-029** The Job Manager's own plan: not read (D-071).
+30. **U-030** Custom grip icons on ordinary objects in 2027 (our four tries on 4 Sep painted nothing; R-006).
+
+---
+
+## 7. PARKED FOR LATER
+
+Each says what it waits for.
+
+### Scope parked by Tim
+
+1. **K-001** Structural, and structural-only tools (306 typed names). Waits for civil, CE tools and Manager working (D-006, P-05).
+2. **K-002** Title block and issue; checks between preliminary and council issue (Q-008). Waits for the first release (D-097).
+3. **K-003** "Changed since last issue" list with a Mark as issued button. Waits for later (D-187).
+4. **K-004** Silt pit and soakage pit; typed-in council figures; council calculators. Waits for later kinds (D-098, D-104).
+5. **K-005** Strip drain. Offered and not ticked (D-223).
+6. **K-006** Raingarden, slab design, spoon drain, kerb, paved-area and catchment tools, tree zones, spot levels and fall symbols (FM-034, FM-053, FM-057 to FM-060, FM-024, FM-025). Waits for the function-map proposal (O-001).
+7. **K-007** Taking up old drawings: the one-off make-ordinary tool for the special pipe object (D-119), old hand-drawn jobs (D-027), slab adoption. Waits for after the first release.
+8. **K-008** Imports: another civil package's drawing, LandXML, survey (FM-061, FM-062). Waits for later.
+9. **K-009** Statistics, fuller admin control, a better overall system, joint labels that learn (FI-01 to FI-04, D-205). Come later.
+10. **K-010** Manager pages dropped on purpose (status, settings, help, project, survey intake, drawing repair, usage, machines, policies, canary rollout). By Tim's answers (TA-012, TA-013).
+11. **K-011** Existing drains "to be removed" other than the council pit you connect to. Waits for how the office shows it (D-190, SITUATIONS 14).
+12. **K-012** Cloud engine and a second machine for testing. Parked (D-161).
+13. **K-013** The no-screen engine. Recommended against for now; waits for the no-AutoCAD options to run out (R-004, R-005).
+14. **K-014** Background plotting profile (P-03). Parked; conflicts with rule 1.9 as added later, so needs a fresh yes in words.
+15. **K-015** The real-job loop (loop 3). Starts when the first tool passes the night loop (LOOPS 3).
+16. **K-016** Colleagues' release. After one real job by Tim, then 1 to 2 weeks (Director's summary 4).
+17. **K-017** AutoCAD 2022 to 2026 and AutoCAD LT. Out of scope (D-008, R-66).
+18. **K-018** Plot to PDF, Excel into schedule, north point and scale bar, command search, marks (CL, LM, SM, FFL), multileaders and multilines. Not wanted as shared tools (TA-028 to TA-031); revisit only if raised.
+19. **K-019** Old test evidence: 54 GB kept for now (Tim: "Keep for now"). Waits for the old plan to be fully retired.
+20. **K-020** The 399 old bugs outside the first release (R-007 pile C). Waits for the tools they belong to.
+21. **K-021** The old ideas inbox sort (R-007 proposal 5). Waits for W-030.
+22. **K-022** Whether other structural questions (roof down, sizes, hours per set) are asked. Waits for structural (P-05).
+
+---
+
+## 8. THE OLD PLUG-IN, WHAT TOUCHES TIM NOW
+
+1. **The wrong rainfall figure is still installed (BUG-866).** The installed Civil 3.0.90.15 sizes storage on the office rainfall curve unless the site has its own. On a Glen Eira example storage is 10 to 17 percent short (unsafe); on Kingston about 16 percent over. **Today:** load the site's own rainfall (CDRAINFALL) before CDDESIGN, or work storage in the CDCALC Boyd's tab with the site's Bureau figures. Never issue a storage figure beside "This job has no rainfall curve of its own". Ignore the "7 to 9 percent high" wording. Source: R-008. Who: every detention job in CDDESIGN. Needs: W-031.
+2. **BUG-1095 council minimum runoff** is fixed in the installed build since Civil 3.0.87 (30 Oct) but not proven in AutoCAD. **Today:** on every Darebin, Maribyrnong and Boroondara job check the computations say "council minimum C governs"; re-run any such job sized before 30 Oct (it was about 24 percent short on a Darebin example).
+3. **The hatch fault (BUG-1461, with BUG-1278).** Hatch edges cannot be picked and Recreate boundary makes separate polylines. Probably plain AutoCAD, not CE (about 85 percent), not proven. The new plug-in must never change how native objects behave. See W-032.
+4. **The 15 that stop work now** (R-007 section 4; each needs a look before anyone acts): BUG-1456 Help and Settings overwrite another job's data; BUG-1457 CLEAN and FASTSAVE overwrite the office template; BUG-1276 no backup written for hours; BUG-411 F2 runs CLEAN and rewrites the drawing; BUG-1278 and BUG-1461 hatches; BUG-224 AutoCAD closed after Save As; BUG-1275 AutoCAD closes placing a steel beam section; BUG-866 and BUG-1095 above; BUG-965 schedule refresh changes 2/375 to 375; BUG-561 changing a pit number swaps grated and solid cover; BUG-756 long section top line one size too big; BUG-668 moving a run misplaces callouts (from code, not seen); BUG-1459 pipes vanish for people without CE (fix built, not installed).
+5. **PIT and CD are your AutoCAD's commands today** (the old plug-in, or your alias). See W-003.
+
+---
+
+## 9. WHERE EVERYTHING LIVES
+
+Every kind of ID in use, its home and the highest number used. IDs are never reused (D-205).
+
+1. **D-** decisions. Home: `zero\DECISIONS.md`. Highest D-227. All of D-001 to D-227 exist, none twice; the last pages are out of order (D-016 to D-030, D-156 and D-167 sit after D-226).
+2. **R- (rules).** Tim's rules R-01 to R-71. Home: `zero\RULES.md`. Highest R-71. **CLASH:** see R- research.
+3. **R- (research).** Research notes R-001 to R-009. Home: `zero\reference\research\`. Highest R-009. **CLASH:** same prefix as the rules; only the digit count differs.
+4. **P-** parked items. Home: `zero\PARKING_LOT.md`. Highest P-08.
+5. **Q-** open questions: Q-001 to Q-017 (Tim), Q-101 to Q-107 (files), Q-201 to Q-206 (research), Q-301 (Stage 5). Home: `zero\OPEN_QUESTIONS.md`. Highest in each series as listed. The reference library cites Q- numbers but keeps no list of its own.
+6. **FM-** function map lines. Home: `zero\design\FUNCTION_MAP.md`. Highest FM-184.
+7. **FP-** named in the brief for this board. **Found in no document** in `C:\CE_PLAN` or `C:\CE_CIVIL`. No home, no number.
+8. **OC-** obstacles (with sub-lines OC-nn.m). Home: `zero\stage6\OBSTACLE_COURSE.md`. Highest OC-27; OC-28 is named as next.
+9. **SP-** shared parts. Same file. Highest SP-22.
+10. **OQ-** obstacle course questions. Same file. Highest OQ-10. Four are answered by D-216 to D-219 and the file does not say so.
+11. **ST-** shared tools ST-01 to ST-18; **MG-** Manager MG-01 to MG-06; **TQ-** open tool questions TQ-01 to TQ-12; **CX-** clashes CX-01 to CX-04; **FI-** future ideas FI-01 to FI-04. Home: `zero\design\TOOLS_AND_MANAGER_INTERVIEW.md`. ST-11 to ST-18 exist only as lines in its section 8a.
+12. **TA-** Tim's tool answers. Home: `zero\interview_tools\ANSWERS.md`. Highest TA-063; next TA-064. **Flag:** DECISIONS D-200 to D-205 and the interview file still cite A-01 to A-17, which are TA-001 to TA-017 renumbered (revision 1 used T-001 to T-017).
+13. **BK-** office blocks. Home: `zero\design\BLOCKS_REVIEW.md`. Highest BK-453.
+14. **HT-** hatch ticks HT-01 to HT-58 (`interview_tools\HATCH_TICK_LIST.md`), **superseded by D-227**; **HF-** hatches by function HF-01 to HF-21, **HL-** by layer HL-01 to HL-58, **HX-** extra layers HX-01 to HX-12. Home: `interview_tools\HATCHES_BY_FUNCTION.md`.
+15. **T-** tools of today. Home: `zero\reference\today\TOOLS_TODAY.md`. Highest T-056; next T-057. **Flag:** T- also meant "tests" in the first rules and the first interview answers.
+16. **E-** elements (highest E-075), **S-** sums (S-029), **L-** limits (L-028), **K-** job kinds (K-016): homes under `zero\reference\` (`drafting\ELEMENTS.md`, `design\SUMS.md`, `design\LIMITS.md`, `design\JOB_KINDS.md`). **Flag:** K- is also used on this board for parked items. Rename the board's to avoid it? Left as the brief set it; see section 10.
+17. **C-** councils C-001 to C-009 (next C-010). Home: `zero\reference\councils\`. **Flag:** the old plan's release names such as "C-80" use the same prefix.
+18. **CIV-** coded reference jobs, up to CIV-15; JOB_A, GE-A, GE-B. **No home file**; the keys to the codes stay on Tim's PC only.
+19. **CP-** concept principles CP-01 to CP-12. Home: `zero\design\CONCEPT.md` (a working reference).
+20. **BUG-** the old plug-in's bugs, up to BUG-1461. Home: `C:\CE_PLAN\BUG_CARPARK.md` (not opened here). **Flag:** the new plug-in's own bug list was to start empty (R-007 5.4, D-205); this board's **N-** list is that list from now on.
+21. **W-, O-, N-, U-, K-** (and the closed tail). Home: this file. Highest W-038, O-016, N-028, U-030, K-022.
+22. **Not IDs, but referred to as if they were:** build log entry numbers in `C:\CE_CIVIL\BUILD_LOG.md` (duplicates: 9 twice, 10 three times, 22 twice, 27 twice); numbered DRAFT lines in the DRAFTS files (numbered per file, so not unique); trial numbers 1 to 11 in `stage4\TRIAL_RESULTS.md`; night check names CETEST, CEPIT1 to 7, CEPIPE1 to 8, CELEV1 to 7, CESPEED.
+23. **Promised and never started:** B- bugs, I- ideas, TS- tests (zero README "The numbers" item 3). None exists; D-205 asks for bug and idea IDs.
+24. **Stray:** GB-04 (R-002), IFD-01 (R-008): one-off labels inside their notes.
+
+---
+
+## 10. CHECKS THIS BOARD FAILED TODAY
+
+Problems found while building it. Each is for the planning chat to fix before new work (O-012).
+
+1. **"Who accepts work" is open in five places and settled in two.** Open in PARKING_LOT P-01, OPEN_QUESTIONS Q-301, zero RULES.md "Rulings: nothing ruled yet", DECISIONS "Not decided" item 2 and HOW_WE_WORK "Not settled" 3. Settled by D-089 ("Me, or a robot pass if I am busy") and C:\TimOS\RULES.md 4.5 and the 20 Oct, 24 Oct and 1 Nov amendments. Zero RULES R-18, R-24 and R-31 still say only Tim accepts.
+2. **Stage 1 approval open in five places, closed by D-117.** OPEN_QUESTIONS Q-016, CHECKLIST parked 6, THE_PLAN 7.8, zero README stage table, DECISIONS "Not decided" item 1.
+3. **Stale names.** CHECKLIST item 8 still says "Levels along a run"; D-101 still reads TANK = TK and LEVELS = LV with no superseded mark; TOOLS_TODAY T-056 and NAMING_DRAFT item 14 still show LEVELS / LV and PIPE short PI; NAMES_C_AND_RC_PROPOSAL still says "owed, not ruled" (ruled TA-005, TA-008, D-203); reference README line 9 still lists C and RC as unknown.
+4. **UI_PLAN contradicts itself.** Section 5 says one blue accent and dark or light all through; sections added 18 Nov (D-166, D-168) say one grey scheme and rose, and still say "which colour: not yet picked" and "Levels is to be renamed". The bench screenshots still show blue.
+5. **The director's summary is behind.** Written 12:30, before pass 2: it says Pit 10 of 13 and Long section 9 of 10 (pass 2: Pit 15 pass and 1 not tested, Pipe 16 of 16, Long section 11 of 11); its Waiting item 1 (pit_seed.dwg) was answered by D-197 and CESEED made the file; its next step (fix the pit block reading) is done; "about 30" DRAFT calls is about 176 lines.
+6. **Speed fault status unknown.** Pass 2 ran 77 checks and did not include CESPEED; the 0.21 s fault is neither fixed nor re-measured.
+7. **Questions answered but still shown open.** OPEN_QUESTIONS Q-015 (answered D-201, D-209), Q-017 (P-04 ruled), Q-101 to Q-106 ("study D running", done), Q-201 to Q-206 (research R-001 to R-005 done), Q-004 lists four values settled by D-133 to D-136. OBSTACLE_COURSE OQ-01, OQ-02, OQ-04, OQ-06 answered by D-216 to D-219 but still listed as questions.
+8. **P-08 and the trials hold.** PARKING_LOT P-08, THE_PLAN section 4 Stage A ("on hold") and BUILD_CHAT_BRIEF ("P-08 applies") say no trial starts until Tim agrees; D-116, D-122, D-139, D-159 and D-160 replaced that. TRIALS_BRIEF limits are pre-D-159 wording.
+9. **P-03 against rule 1.9.** P-03 says Tim approved making a separate AutoCAD profile and a script is ready; rule 1.9 (added later) forbids any profile without his yes in words in that conversation. Needs a fresh yes or retire.
+10. **The tools interview file lists everything as open.** Its section 7 lists TQ-01 to TQ-12 and section 8 CX-01 to CX-04 as open; section 8a, ANSWERS and D-200, D-201, D-205, D-208, D-214, D-227 settle TQ-01 to TQ-05, TQ-07, TQ-08, TQ-11, TQ-06 (OFFICEHATCH / OH), TQ-12 and CX-01, CX-02, CX-04. Its CHECKLIST says TQ-06 and TQ-12 are "held for R-006", which has landed. HATCH_TICK_LIST says "Tim's ticks not yet given" and every line "not yet ticked", but D-227 superseded it.
+11. **FUNCTION_MAP is behind the rulings.** FM-005, FM-016, FM-017, FM-018 and FM-032 were ruled by D-221 to D-223 and still read "not decided"; the 67 names on 37 lines is now 32 lines.
+12. **THE_PLAN section 3 contradicts itself.** "Not in the first release: CE everyday helpers; Manager changes" sits directly above the 18 Nov note that brings them in (FUNCTION_MAP 5.12). Section 3 also still says "short CE Civil tab"; D-200 and D-208 made three tabs.
+13. **Hours disagree.** Zero plan: AutoCAD free only 5:30 pm to 8:30 am and weekends (D-092, D-159, LOOP_QUEUE). `C:\TimOS\RULES.md` 1.8 also lists 2:00 to 3:00 pm weekdays as free; the switch file reads in use until 2:00 pm today; D-207 and D-212 gave one-off windows today. AGENTS.md says a workday of 8:40 am to 5:30 pm Sydney; RULES says 8:30 am Melbourne.
+14. **BUILD_LOG is out of date in places.** Its top summary (18 Nov morning) says the Pit and Pipe tools are "not built yet"; entries 24 to 30 are labelled "not committed" though the git log shows them saved; entry numbers repeat (9, 10, 22, 27); TRY_THE_WINDOWS still lists cautions that entry 23 says are stale.
+15. **The obstacle course score (3 of 108) predates pass 2** and has not been re-scored.
+16. **The rain and council-C fix is unrecorded.** R-008 says the new plug-in repeats both bugs; the working tree shows a fix under way (rain table file deleted, new test file) but BUILD_LOG does not mention it. This board counts it as under way on that evidence only.
+17. **IDs that clash or have no home.** R- (rules against research), T- (tools against tests and old interview answers), C- (councils against the old plan's releases), K- (job kinds against this board's parked items), A- (cited, renumbered TA-), FP- (no document), CIV- (no home file). See section 9.
+18. **DRAFT_QUESTIONS.md does not exist.** The brief for this board named it in `C:\CE_CIVIL\acad\`; the DRAFT lists are DRAFTS_*.md. Nothing named DRAFT_QUESTIONS was found anywhere in `C:\CE_CIVIL`.
+19. **The reference library is behind.** Last updated to D-137; decisions D-138 to D-227 (including the figures D-140 to D-156) are not confirmed as filed there (O-013). Its "still unknown" list still includes the detention blue and the C and RC names.
+20. **SITUATIONS numbering mismatch.** DECISIONS records question 7 of the file as "5 of 18" and question 6 as "6 of 18"; the file's own order differs. And the 9 "documents disagree" items there are not marked resolved where the build has since fixed them (joining later).
+21. **DECISIONS is being edited as this is read.** D-227 and TA-061 to TA-063 appeared while the board was built; the board uses D-227 and TA-063 as highest, and counts may be one or two behind by the time it is read.
+22. **A promised register does not exist.** The zero README says B- bugs, I- ideas and TS- tests would be created when building starts; none has been (section 9 item 23).
+23. **Could not classify:** see the list returned with this board (the explode check, the R-005 write-up, the OC-28 reserve, and the three classifications noted there).
+
+---
+
+## 11. CLOSED THIS WEEK (tail; never deleted)
+
+Items that left the lists above, with the decision that closed them.
+
+1. **pit_seed.dwg** (director's summary waiting item 1): closed by D-197 ("COPY THE TEMPLATE"); CESEED made the file; pass 2 used it.
+2. **Who accepts work** (P-01, Q-301): closed by D-089 and RULES 4.5 amendments.
+3. **Stage 1 approval** (Q-016): closed by D-117.
+4. **The live blank-drawing case** (Q-017, P-04): ruled "Keep it as a test case"; file location is W-037.
+5. **Detention blue and layer name**: closed by D-153 and D-156 (pen width, legend and label are W-015).
+6. **Names for C and RC**: closed by D-203 (C retired, REVBOX / RV). Names for the Levels tool: D-196. Tank: D-170. Tab names: D-208.
+7. **Shared everyday tools in the first release** (Q-015, CX-01, CX-02, CX-04): closed by D-200, D-201, D-205, D-209, D-214.
+8. **Hatch list overlaps and ticking** (TQ-12, HT-01 to HT-58): closed by D-227 and TA-049 to TA-063. Base scales are W-020; the four unknown layers are U-028.
+9. **Obstacle course questions** OQ-01, OQ-02, OQ-04, OQ-06: closed by D-216 to D-219.
+10. **Function map lines** FM-005, FM-016, FM-017, FM-018, FM-032: closed by D-221 to D-223 (strip drain parked as K-005).
+11. **Pit tool could not read the office block's dictionaries** (midday CEPIT3, CEPIT5): fixed in code and passed in pass 2 (CEPIT3, CEPIT5, CEPIT7).
+12. **Long section check expected a branch to be refused** (CELEV2): updated to D-175 and passed in pass 2.
+13. **Tool names and tab names** TQ-01 to TQ-05, TQ-07, TQ-08, TQ-11: answered TA-018 to TA-024, TA-037.
+14. **Pit schedule on a long sheet** ("what happens beyond the warning"): closed by D-114 ("It runs long; I make room"); the reference README still lists it unknown.
