@@ -48,7 +48,7 @@
 2. **Inlets: "The WITH MASK set".** BK-012 FLOOR WASTE, its copy BK-034 and BK-027 retire.
 3. **Pipe description labels: "Drop them".**
 4. **Hatch sample squares:** settled by the hatch work in `interview_tools\HATCHES_BY_FUNCTION.md` (TA-047 to TA-063).
-5. **The unknown machine-named blocks: "Picture sheets, I tick".** 54 remain once pairs, hatch samples, the whole sheet and the structural blocks are taken out. Sheets: `pictureslocks_to_tick_1.png` to `_3.png`.
+5. **The unknown machine-named blocks: "Picture sheets, I tick".** 54 remain once pairs, hatch samples, the whole sheet and the structural blocks are taken out. Sheets: `pictures/blocks_to_tick_1.png` to `pictures/blocks_to_tick_3.png`.
 6. **Notes held as blocks: "Outside the palette".**
 7. **BK-450, the whole sheet held as one block: "Drop it".**
 8. **The 33 drop-candidates: "Drop all 33".**
