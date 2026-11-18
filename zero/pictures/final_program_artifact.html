@@ -1,0 +1,166 @@
+<title>CE Civil Final Program</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/* Layout: one column of numbered bands on the plug-in's own window grey; ribbon mock, flow diagrams and card grids inside wells. Single committed look: the ruled CE window scheme (D-168). */
+:root{color-scheme:dark;--win:#3B4453;--card:#454F61;--well:#2E3440;--line:#5b6679;--t1:#F5F5F5;--t2:#D9D9D9;--t3:#C7CFDB;--rose:#FF70B3;--ink:#10131A;--ok:#3EDC9B;--amber:#FBBF24;--red:#FF7A7A;--font:"Segoe UI",system-ui,Arial,sans-serif;--mono:Consolas,"Cascadia Mono",monospace}
+body{background:var(--win);color:var(--t1);font:15px/1.5 var(--font)}
+.wrap{max-width:1180px;margin:0 auto;padding-block:20px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:14px}
+h1{font-size:28px;line-height:1.15;margin:0;text-wrap:balance}
+h2{font-size:19px;margin:18px 0 0;border-left:5px solid var(--rose);padding-left:10px;text-wrap:balance}
+h3{font-size:15px;margin:0}
+p{margin:0;color:var(--t2);max-width:75ch}
+.draft{display:inline-block;background:var(--amber);color:var(--ink);font-weight:700;padding:2px 10px;border-radius:4px;font-size:13px}
+.big{display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:center}
+.num{background:var(--well);border-radius:8px;padding:14px;text-align:center;min-width:0}
+.num b{display:block;font-size:38px;line-height:1.1;font-variant-numeric:tabular-nums}
+.num small{color:var(--t3)}
+.before b{color:var(--red)}.after b{color:var(--ok)}
+.arrow{font-size:36px;color:var(--rose);font-weight:700;text-align:center}
+.tabs{display:flex;gap:6px;flex-wrap:wrap}
+.tab{padding:4px 14px;border-radius:6px 6px 0 0;background:var(--card);color:var(--t3);font-weight:600}
+.tab.on{background:var(--well);color:var(--t1);border-bottom:3px solid var(--rose)}
+.ribbon{background:var(--well);border-radius:0 8px 8px 8px;padding:10px;display:grid;grid-template-columns:.7fr 2.4fr 1.3fr 1.1fr;gap:8px}
+.panel{background:var(--card);border-radius:6px;padding:8px 8px 6px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.btns{display:flex;flex-wrap:wrap;gap:6px;flex:1;align-content:flex-start}
+.btn{background:var(--win);border:1px solid var(--line);border-radius:6px;padding:6px 9px;text-align:center;min-width:62px}
+.btn b{display:block;font-size:14px}
+.btn span{font-size:12px;color:var(--rose);font-weight:700}
+.pname{text-align:center;font-size:12px;color:var(--t3);letter-spacing:.5px}
+.step{display:inline-block;background:var(--rose);color:var(--ink);font-weight:800;border-radius:50%;width:22px;height:22px;text-align:center;line-height:22px;font-size:13px;margin-right:6px}
+.box{background:var(--well);border-radius:8px;padding:12px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.lab{font-size:11.5px;color:var(--t3);letter-spacing:.6px;text-transform:uppercase}
+.old{display:inline-block;background:var(--well);color:#aab3c2;text-decoration:line-through;text-decoration-color:var(--red);border-radius:4px;padding:1px 6px;font:12.5px var(--mono)}
+.card .old,.map .old{background:var(--win)}
+.in{display:inline-block;background:var(--win);color:var(--t1);border-left:3px solid var(--ok);border-radius:4px;padding:1px 7px;font-size:13px}
+.chips{display:flex;flex-wrap:wrap;gap:5px}
+.map{display:grid;grid-template-columns:minmax(0,1.1fr) auto minmax(0,1.6fr);gap:8px 12px;align-items:center}
+.map>div{min-width:0}
+.map .to{background:var(--card);border-radius:6px;padding:7px 10px}
+.map .to b{color:var(--ok)}
+.map .ar{color:var(--rose);font-weight:800;font-size:18px}
+.flow{display:flex;gap:6px;flex-wrap:wrap;align-items:stretch}
+.f{background:var(--card);border-radius:6px;padding:8px 10px;flex:1 1 160px;min-width:0}
+.f b{display:block}.f small{color:var(--t2)}
+.fa{align-self:center;color:var(--rose);font-weight:800;font-size:20px}
+.layers{display:flex;flex-direction:column;gap:6px}
+.layer{display:grid;grid-template-columns:150px 1fr;gap:10px;background:var(--card);border-radius:6px;padding:9px 12px;align-items:center}
+.layer b{font-size:14px}.layer span{color:var(--t2);font-size:13.5px}
+.layer.top{border-left:4px solid var(--rose)}.layer.mid{border-left:4px solid var(--amber)}.layer.base{border-left:4px solid var(--ok)}
+.cost{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1.7fr) auto;gap:6px 12px;align-items:center}
+.cost>div{min-width:0}
+.pill{display:inline-block;border-radius:999px;padding:1px 10px;font-size:12.5px;font-weight:700;color:var(--ink);white-space:nowrap}
+.s{background:var(--ok)}.m{background:var(--amber)}.l{background:var(--rose)}
+.card{background:var(--card);border-radius:8px;padding:10px 12px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.card h3 small{color:var(--rose);font-weight:700;font-size:13px;margin-left:6px}
+.card p{font-size:13.5px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.later{display:inline-block;border:1px dashed #8b96a8;color:var(--t3);border-radius:6px;padding:2px 9px;font-size:13px}
+.note{background:var(--well);border-left:4px solid var(--amber);padding:9px 12px;border-radius:4px}
+.note p{max-width:none}
+@media(max-width:860px){.ribbon,.two,.three,.grid{grid-template-columns:1fr 1fr}.big{grid-template-columns:1fr}.map{grid-template-columns:1fr}.map .ar{display:none}.cost{grid-template-columns:1fr}.layer{grid-template-columns:1fr}}
+@media(max-width:520px){.ribbon,.two,.three,.grid{grid-template-columns:1fr}h1{font-size:23px}}
+</style>
+<div class="wrap">
+
+<h1>The final program: few tools, one set of figures, built to grow</h1>
+<p><span class="draft">DRAFT, 18 Nov 2026</span> &nbsp; The new CE Civil plug-in as a drafter meets it, where each old calculation command ends up, and why adding to it later does not scatter it again. Planned and partly built on a test bench; nothing is installed.</p>
+
+<div class="big">
+ <div class="num before"><b>146</b>typed civil commands today<br><small>built at different times; about 20 exist only to repair the others</small></div>
+ <div class="arrow">&rarr;</div>
+ <div class="num after"><b>11 windows, 1 list</b>17 short names on one tab<br><small>no edit commands, no repair commands, no calculation suite</small></div>
+</div>
+
+<h2>1. What you see: the ribbon in the order a job runs</h2>
+<div>
+<div class="tabs"><span class="tab on">CE Civil</span><span class="tab">CE Tools</span><span class="tab" style="opacity:.55">CE Structural (hidden until it has tools)</span></div>
+<div class="ribbon">
+ <div class="panel"><div class="btns"><div class="btn"><b>Job</b><span>once per job</span></div></div><div class="pname"><span class="step">1</span>SET UP</div></div>
+ <div class="panel"><div class="btns">
+  <div class="btn"><b>Pit</b><span>PT &middot; PP</span></div><div class="btn"><b>Pipe</b><span>CD</span></div><div class="btn"><b>Inlets</b><span>DP OF FO IO GIO FW +3</span></div><div class="btn"><b>Trench grate</b><span>TG</span></div><div class="btn"><b>Ag drain</b><span>AG</span></div><div class="btn"><b>Legal point</b><span>LPD</span></div></div><div class="pname"><span class="step">2</span>DRAW</div></div>
+ <div class="panel"><div class="btns"><div class="btn"><b>Long section</b><span>LG</span></div><div class="btn"><b>Tank</b><span>WT</span></div><div class="btn"><b>Detention</b><span>DET</span></div></div><div class="pname"><span class="step">3</span>DESIGN</div></div>
+ <div class="panel"><div class="btns"><div class="btn"><b>Schedule</b><span>SCH</span></div><div class="btn"><b>Unfinished</b><span>always there</span></div></div><div class="pname"><span class="step">4</span>SHEET AND CHECK</div></div>
+</div>
+</div>
+<div class="three">
+ <div class="box"><h3>One window per tool</h3><p>It opens filled in, shows the object as AutoCAD will draw it, then you pick after pick. A pipe opens with the size of what it joins.</p></div>
+ <div class="box"><h3>No edit commands</h3><p>Double-click a pit or pipe and the same window opens. Grips, MOVE, ROTATE, COPY and ERASE behave as AutoCAD's own, and joined things follow.</p></div>
+ <div class="box"><h3>A figure is typed once</h3><p>Every label, box, schedule row, detail and computation that shows it follows. Hold what is fixed with a padlock; the rest is worked out.</p></div>
+</div>
+
+<h2>2. Where CDRAINFALL and the other calculation commands go</h2>
+<p>None of them survives as a command. Each becomes a card inside the window where you already are when you need it.</p>
+<div class="box map">
+ <div><span class="old">CDRAINFALL</span></div><div class="ar">&rarr;</div><div class="to"><b>Job window, Rainfall card.</b> The council's stated intensities or the Bureau table for the site, pasted or typed once, each figure marked with where it came from. Your own estimate is allowed and prints APPROX. The plug-in has no built-in curve.</div>
+ <div class="chips"><span class="old">CDDESIGN</span><span class="old">CDSETUP</span><span class="old">CDRULEBOOK</span></div><div class="ar">&rarr;</div><div class="to"><b>Job window.</b> Council, permitted discharge, the standards this drawing was designed with. Typed once per job; every tool reads it.</div>
+ <div class="chips"><span class="old">CDCALC: Boyd's</span><span class="old">CDCALC: detention</span><span class="old">CDCALC: orifice</span></div><div class="ar">&rarr;</div><div class="to"><b>Detention window.</b> Storage needed beside storage provided, and the orifice, head and discharge, on one screen. Areas, pipes, pits and tanks are read off the drawing.</div>
+ <div><span class="old">CDTWL</span></div><div class="ar">&rarr;</div><div class="to"><b>Detention window, top water level box.</b> You set the level; it shows the limits it must stay under and where each comes from.</div>
+ <div><span class="old">CDCALC: pump</span></div><div class="ar">&rarr;</div><div class="to"><b>Pit window, on the pump pit (SPS).</b> Wet well, pump rate, level ladder, static rise, and the pump box on the sheet.</div>
+ <div><span class="old">CDCALC: computations sheet</span></div><div class="ar">&rarr;</div><div class="to"><b>One "Computations" button in Detention.</b> The council PDF, printed from the same figures, pump sums included.</div>
+ <div><span class="old">CDCALC: charged line</span></div><div class="ar">&rarr;</div><div class="to"><b>Pipe window, later.</b> The head check on a charged line waits for the office's figures; it gets a named slot, not a command.</div>
+ <div class="chips"><span class="old">CDCHECK</span><span class="old">CDDASHBOARD</span><span class="old">CDHUB</span><span class="old">CDRULES</span></div><div class="ar">&rarr;</div><div class="to"><b>The Unfinished list.</b> One list of what is not known, not joined, assumed or wrong. It never stops you working.</div>
+</div>
+
+<div class="box">
+ <div class="lab">The whole calculation, as one flow</div>
+ <div class="flow">
+  <div class="f"><b><span class="step">1</span>Job</b><small>Council, rainfall, permitted discharge. Typed once.</small></div><div class="fa">&rarr;</div>
+  <div class="f"><b><span class="step">2</span>The drawing</b><small>What you drew is the input. Nothing retyped.</small></div><div class="fa">&rarr;</div>
+  <div class="f"><b><span class="step">3</span>Detention</b><small>Storage and Discharge side by side; says short or spare.</small></div><div class="fa">&rarr;</div>
+  <div class="f"><b><span class="step">4</span>The sheet</b><small>Criteria box, orifice pit detail for the job's council, tank note, computations PDF.</small></div>
+ </div>
+</div>
+
+<h2>3. How it is built so it can be added to</h2>
+<p>The old plug-in grew by adding a command each time. This one has four layers, and a new need lands in exactly one of them.</p>
+<div class="box layers">
+ <div class="layer top"><b>Windows</b><span>All built from the same parts: preview, cards, padlocks, status colours. A new window is assembled, not designed from scratch.</span></div>
+ <div class="layer mid"><b>The brain</b><span>Facts (a value, where it came from, held or not), sums with no fixed direction, checks. Tested without AutoCAD, so it is fast to prove.</span></div>
+ <div class="layer mid"><b>The hands</b><span>Ordinary AutoCAD objects and your own office blocks, each carrying a small hidden note. A drawing still opens and plots on a PC with no plug-in.</span></div>
+ <div class="layer base"><b>Office lists</b><span>Councils, pit kinds and sizes, pipe materials, lid classes, cover table, label wording, layers, hatches. Plain lists the office owns; changes reach colleagues at next start.</span></div>
+</div>
+
+<div class="box">
+ <div class="lab">What adding something costs</div>
+ <div class="cost">
+  <div><b>A new council, or a council changes a figure</b></div><div><p>A line in the council list, with its source document.</p></div><div><span class="pill s">a line in a list</span></div>
+  <div><b>A new pipe material, pit size or lid class</b></div><div><p>A line in that list. It appears in the window's pick list.</p></div><div><span class="pill s">a line in a list</span></div>
+  <div><b>A new check, or a new label wording</b></div><div><p>A line in the checks or wording list; shows in the Unfinished list automatically.</p></div><div><span class="pill s">a line in a list</span></div>
+  <div><b>A new kind of an existing thing</b></div><div><p>Rising main on Pipe, "from above" on Inlets, SPS on Pit: one more kind in the same window.</p></div><div><span class="pill m">a new kind</span></div>
+  <div><b>A new sum</b></div><div><p>Soakage balance, charged line head: a card in the window that owns the thing, reading the same Job figures.</p></div><div><span class="pill m">a new card</span></div>
+  <div><b>A new tool</b></div><div><p>Assembled from the same window parts, then it must pass the same 27-test gate before it reaches the ribbon.</p></div><div><span class="pill l">a new window</span></div>
+  <div><b>A new discipline</b></div><div><p>Its own tab on the same four layers. CE Structural is waiting hidden.</p></div><div><span class="pill l">a new tab</span></div>
+ </div>
+</div>
+
+<div class="two">
+ <div class="box"><h3>What stops it scattering again</h3><p>A new command name is the last resort, not the first. Every fault found becomes a permanent test. The 27-test gate is the same for every tool. Every decision has a number and one home.</p></div>
+ <div class="box"><h3>Named slots already reserved</h3><div class="chips"><span class="later">Pavement and site: slab falls, kerb, spoon and strip drains</span><span class="later">Soakage</span><span class="later">Title block and issue</span><span class="later">Taking up old drawings</span><span class="later">Details library and job library, searchable</span><span class="later">CE Structural</span></div><p>Each has a named hand method until it is built.</p></div>
+</div>
+
+<h2>4. Each tool, and the old commands it swallows</h2>
+<div class="grid">
+ <div class="card"><h3>Job <small>once per job</small></h3><p>Council, rainfall, discharge allowed, standards designed with.</p><div class="chips"><span class="old">CDDESIGN</span><span class="old">CDSETUP</span><span class="old">CDRAINFALL</span><span class="old">CDRULEBOOK</span></div></div>
+ <div class="card"><h3>Pit <small>PT, PP</small></h3><p>Your PIT BLOCK 3, any size it takes. Turn with a live preview. Numbers itself. SPS pits carry the pump sums.</p><div class="chips"><span class="old">PIT</span><span class="old">PP</span><span class="old">CDPIT350 to 1200</span><span class="old">PITEDIT</span><span class="old">PITDELETE</span><span class="old">CDPITCOVERFLIP</span><span class="old">CDRENUMBER</span></div></div>
+ <div class="card"><h3>Pipe <small>CD</small></h3><p>Carries on like PLINE with bends. Band and edge lines as the office draws. Every kind is a line in a list.</p><div class="chips"><span class="old">CD</span><span class="old">CDEDIT</span><span class="old">PIPEEDIT</span><span class="old">CDBREAK</span><span class="old">CDREVERSEFLOW</span><span class="old">7 link and override commands</span><span class="old">4 label-moving commands</span><span class="old">CDD and 4 LISP variants</span></div></div>
+ <div class="card"><h3>Inlets <small>nine kinds, one window</small></h3><p>Downpipe, overflows, inspection openings, floor waste, from above, to below. Keep clicking, Enter to finish.</p><div class="chips"><span class="old">DP</span><span class="old">OF</span><span class="old">FO</span><span class="old">IO</span><span class="old">GIO</span><span class="old">CDFW</span><span class="old">CDSOURCE</span><span class="old">CDTAG</span><span class="old">CDFIXTAGS</span><span class="old">CDDEST</span></div></div>
+ <div class="card"><h3>Trench grate, Ag drain <small>TG, AG</small></h3><p>Two small tools on the Pipe window's style.</p><div class="chips"><span class="old">CDTG</span><span class="old">CDAGI</span><span class="old">CDPERIMETER</span></div></div>
+ <div class="card"><h3>Legal point <small>LPD</small></h3><p>One tool marks the end of the system and places the LPD tag and note. A no-print marker shows each end on screen.</p><div class="chips"><span class="old">CDLPD</span><span class="old">CDLPDRESET</span><span class="old">CDSYSTEM</span><span class="old">a separate Outlet tool</span></div></div>
+ <div class="card"><h3>Long section <small>LG</small></h3><p>Levels along a run, uphill or downhill, "out by" in words. A button draws it on the sheet.</p><div class="chips"><span class="old">CDRUNSOLVE</span><span class="old">CDPROFILE</span><span class="old">CDPROPAGATE</span><span class="old">CDRECOVERINVERTS</span></div></div>
+ <div class="card"><h3>Tank <small>WT</small></h3><p>Re-use from the STORM report, pick the tank, the rest is detention. Roof area picked off the drawing.</p><div class="chips"><span class="old">CDWT</span><span class="old">hand-typed roof area box</span><span class="old">retyped tank detail</span></div></div>
+ <div class="card"><h3>Detention <small>DET</small></h3><p>Storage against discharge, orifice, top water level limits, council computations.</p><div class="chips"><span class="old">CDCALC</span><span class="old">CDTWL</span><span class="old">office spreadsheet</span><span class="old">Word computations</span></div></div>
+ <div class="card"><h3>Schedule <small>SCH</small></h3><p>Placed once, then follows the pits. Type over a cell to hold it.</p><div class="chips"><span class="old">PITSCHEDULE</span><span class="old">CIVILEXCELMTEXT</span></div></div>
+ <div class="card"><h3>Unfinished <small>one list</small></h3><p>The only check there is. Jump to any item; accept one with a short note.</p><div class="chips"><span class="old">CDCHECK and 5 more</span><span class="old">CDCHECKIGNORE</span><span class="old">CDINSPECTOR</span></div></div>
+ <div class="card"><h3>Gone, not replaced</h3><p>One fact held once, and the drawing checks itself on opening, so nothing needs repairing by hand.</p><div class="chips"><span class="old">CDREPAIR</span><span class="old">CDSYNC</span><span class="old">CDREBUILD</span><span class="old">6 more repairs</span><span class="old">8 audits</span><span class="old">CDFOCUS</span></div></div>
+</div>
+
+<h2>5. The other tab and the Manager</h2>
+<div class="two">
+ <div class="box"><h3>CE Tools: 18 everyday tools, civil and structural alike</h3><div class="chips"><span class="in">CLEAN</span><span class="in">Dimensions and leaders</span><span class="in">Move-rotate, Copy-rotate</span><span class="in">Copy to base point</span><span class="in">Divide</span><span class="in">Office hatch: one window for 40 hatch commands</span><span class="in">Rev box</span><span class="in">Break line</span><span class="in">Construction joint, Saw cut</span><span class="in">Blocks palette</span><span class="in">Text 25 / 18</span><span class="in">Pen quick-set</span><span class="in">Xref copy and paste</span><span class="in">Put on office layer</span><span class="in">Viewport scale</span><span class="in">Find and replace</span><span class="in">Area and length labels</span><span class="in">Small office symbols</span></div></div>
+ <div class="box"><h3>Manager (MG): one window</h3><p>Updates you approve before colleagues are offered them, with Install now or Later. Fault report. Office lists. Job link. Statistics: tool use, time per tool, faults per tool, time per job. In place of 12 Manager commands and 577 settings.</p></div>
+</div>
+
+<div class="note"><p><b>Where this stands today.</b> Built and tested on a bench, not installed: the brain, seven windows, and Pit, Pipe and Long section running in AutoCAD on test copies (100 of 103 checks on the last pass). Not built yet: Job window, Inlets, Tank, Detention and Schedule in AutoCAD, the live on-cursor preview, pipe bends, metre drawings. Not settled: how a selected pit's facts show in the Properties palette (being proven), and the typed name for the Job window.</p></div>
+</div>
