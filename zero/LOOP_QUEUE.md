@@ -47,3 +47,7 @@ Items 8 and 9 above are built on the pretend drawing (Pit, Pipe) and so is the L
 15. [ ] Planning chat: put the build chat's collected DRAFT calls (Pit, Pipe, Long section) to Tim as clickable batches, each with context and a real-job example, once item 11 has settled which are still live.
 16. [ ] Planning chat: bring back, one at a time on a part-drawn job, how the top water level is first chosen; whether the orifice pit is always the last pit; tank re-use against detention.
 17. [ ] Then the Inlets tool (after `SITUATIONS.md` has been read against it), Tank, Detention, Schedule.
+
+## Standing job at EVERY wake-up, before the queue (added 18 Nov 2026, D-226, R-71)
+
+Tim: "in future i dont want to be the one managing anything apart from what is in chat". So at every wake-up, first: (1) read `BOARD.md`; (2) add anything new from Tim's answers and the side chats' reports since the last wake-up, with the next ID in its list; (3) move answered items to "closed this week" with the decision number; (4) if something waiting on Tim blocks building and has not been put to him today, put it to him as one clickable question with context and a real example; (5) once a night run the checks in `BOARD_HOW_IT_IS_KEPT.md` and fix what fails before new work; (6) commit by file name and push. Then the queue.
