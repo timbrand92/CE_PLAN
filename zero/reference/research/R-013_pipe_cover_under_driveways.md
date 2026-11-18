@@ -1,5 +1,96 @@
 # R-013 — Pipe cover under residential driveways (Victoria)
 
+## Checked at source, 19 Nov 2026
+
+Checked against the office's own copies: AS/NZS 3500.3:2018 and AS/NZS 3500.3:2003 (office PDFs), the office's AS 2566.1-1998 (scanned, could not be read), and council guideline documents in the office Councils folder. Cover means finished surface to top of pipe unless marked "below underside of pavement".
+
+### Plain answer
+
+1. **The standard supports 450 mm only where the driveway has no pavement** (gravel, unsealed, grass). For a plastic pipe under a reinforced concrete driveway the standard's floor is 100 mm below the underside of the slab; under brick or unreinforced concrete paving for light vehicles it is 75 mm below the underside.
+2. **The standard does not treat a detention or storage pipe differently.** The 2018 OSD clause (7.10) has no cover rule; it sends below-ground OSD to AS 2865 (confined spaces) only. Large-diameter pipe cover is left to the pipe standards (clause 6.2.5 (a) to (f)) and the maker.
+3. **Councils mostly ask 300 mm under a driveway, and several say so for detention pipes in words.** Banyule, Bayside 2026, Manningham, Yarra (2026 and earlier), Maroondah and Monash give 300 mm. Frankston 250 mm, Casey 100 mm below the pavement. Only Yarra 2026 (one note) and Bayside's own table give 450 mm for this case.
+4. **So the 300 mm driveway preset is the figure the council documents support. 0.45 m is a conservative office choice**, backed by the standard only for an unpaved driveway. Watch how "300 mm" is measured: Manningham measures it to the underside of the driveway, not the finished surface.
+5. **How sure:** high for the standard (table read in the PDF's own text order, both editions); medium-high for councils (text read directly, but some tables came out jumbled, noted below).
+
+### AS/NZS 3500.3:2018, clause 6.2.5 and Table 6.2.5 (office copy, page 69 to 70)
+
+Two columns: "ductile iron, galvanized steel" and "plastics" (PVC, PE, PP). Figures in mm.
+
+1. **Not subject to vehicles, no pavement, single dwelling:** iron/steel 100, plastics 100.
+2. **Not subject to vehicles, no pavement, other than single dwelling (covers dual-occupancy and unit sites):** iron/steel 100, plastics 300.
+3. **Not subject to vehicles, brick or unreinforced concrete pavement:** iron/steel 100, plastics 100, both below the underside of the pavement.
+4. **Subject to vehicles, other than roads, no pavement:** iron/steel 300, plastics 450.
+5. **Subject to vehicles, reinforced concrete pavement for heavy vehicles:** iron/steel nil, plastics 100, below the underside of the pavement.
+6. **Subject to vehicles, brick or unreinforced concrete pavement for light vehicles:** iron/steel nil, plastics 75, below the underside of the pavement.
+7. **Roads, sealed:** iron/steel 600, plastics 600.
+8. **Roads, unsealed:** iron/steel 600, plastics 750.
+9. **Construction equipment loading or embankment:** iron/steel 600, plastics 750.
+10. **Agricultural land:** iron/steel 600, plastics 600.
+11. **Way out of the table (clause 6.2.5):** cover may instead follow AS/NZS 2041 (corrugated metal), AS/NZS 2032 (PVC), AS/NZS 2566.2 (flexible pipe), AS/NZS 3725 (concrete and FRC), AS 4060 (clay) or AS/NZS 2033 (PE).
+12. **Under buildings (clause 6.3.6):** at least 25 mm between top of pipe and underside of a reinforced concrete slab, plus protection from damage.
+13. **Appendix K worked example (Melbourne villa units):** within the property 100 mm except under the driveway; under the paved driveway 75 mm below the underside of the pavement; the commentary says roughly 100 mm below a reinforced concrete pavement, "say 200 mm overall".
+14. **Detention pipes:** clause 7.10 (OSD) covers overflow, orifice plates, access, sumps, ladders over 1.2 m deep, and AS 2865. No cover figure, no special rule for storage pipes.
+
+### AS/NZS 3500.3:2003, clause 7.2.6 and Table 7.1 (office copy, page 72)
+
+Columns: "cast iron, ductile iron, galvanized steel" and "other authorized products" (includes PVC).
+
+1. **Not subject to vehicles, no pavement, single dwelling:** iron nil, other 100.
+2. **Not subject to vehicles, no pavement, other than single dwelling:** iron nil, other 300.
+3. **Not subject to vehicles, brick or unreinforced concrete pavement:** iron nil, other 50.
+4. **Subject to vehicles, no pavement:** iron 300, other 450.
+5. **Reinforced concrete pavement, heavy vehicles:** iron nil, other 100.
+6. **Brick or unreinforced concrete pavement, light vehicles:** iron nil, other 75.
+7. **Roads, sealed or unsealed; construction or embankment loading:** iron 300, other 500.
+8. **Footnotes:** pavement values are below the underside of the pavement; one footnote ties values to compliance with the pipe standards; another refers to a 50 mm overlay. The symbols linking footnotes to cells did not survive text extraction, so which cell each applies to is not certain.
+
+### What changed 2003 to 2018 (driveway-relevant)
+
+1. **Unchanged:** plastics 450 (no pavement, vehicles), 100 (reinforced concrete), 75 (light paving), 300 and 100 (untrafficked).
+2. **Changed:** untrafficked brick or unreinforced paving rose from 50 to 100 below underside; roads rose from 500 to 600 (sealed) and 750 (unsealed); iron/steel columns went from nil to 100 for untrafficked ground.
+
+### Councils (office Councils folder, guideline documents only)
+
+1. **Banyule, Stormwater Requirements for New Developments (last amended 30 Sep 2019), section 10.2.2, page 18:** detention pipes to be the greater of AS/NZS 3500.3 clause 6.2.5 or: 450 mm clear cover under easements, 300 mm under driveways and elsewhere. Page 14: 450 mm in easements, 600 mm under roads (general drains).
+2. **Bayside, Developer Drainage Design Guideline 2026 (March 2026), section 5.11 and Table 3** (same wording as the May 2024 draft): any underground pipe under private or shared driveways 300 mm. But Table 3 gives, for light vehicle traffic: RCP 300, uPVC sewer quality 450, uPVC Class 12 nil, cast iron nil; non-vehicle: RCP 150, uPVC sewer 300; drainage easement 450. The text and the table disagree for uPVC sewer quality under a driveway (300 against 450). Table read from the Word file; cell layout is probable, not certain.
+3. **Manningham, OSD Guidelines (March 2021, v001.6), detention pipe checklist page 13, items g and h:** top of pipe to underside of driveway at least 300 mm; if less, extra reinforcement or a higher pipe class.
+4. **Yarra, Drainage Design Guidelines (issued July 2026), Appendix B (8.2):** note 12, minimum 300 mm cover to detention pipes, with extra reinforcement or higher pipe class under a driveway if less. Detention Pipe Details note 3 then says provide 450 mm cover to the detention pipe or follow the service authority's offset policy. The two notes conflict.
+5. **Yarra, earlier Development Engineering Guidelines (v1.2):** minimum 300 mm cover on storage pipes.
+6. **Maroondah, Engineering Development Design Guidelines, Table 9, page 25 (private drains):** 300 mm in garden areas; 300 mm under driveways or buildings with compacted fine crushed rock backfill.
+7. **Monash, Engineering Plan Checklist, item 6.5:** recommends 300 mm cover for all pipes; item 6.6 recommends 100 mm (ideally 150 mm) uPVC under driveways.
+8. **Frankston, On-Site Detention Guidelines (Sept 2021), clause 3.2.1, page 4:** storage pipes rubber ring jointed, minimum cover 250 mm. Design checklist item 4.4 asks for at least 250 mm on all pipes.
+9. **Casey, OSD Design Guidelines and Checklist (Version 1.1, August 2015), checklist 3.2:** pipes beneath driveway pavement absolute minimum 100 mm from bottom of pavement to top of pipe. Clause 1.2.1: below-ground storage 300 mm soil cover in landscaped areas, childproof grate over 1,200 mm deep.
+10. **Brimbank, OSD Guidelines (Word file):** storage pipes under driveways need "adequate cover" for traffic load. No figure.
+11. **Kingston, Civil Design Requirements Part A v4.4 (and the 2001 Road and Drains Design Standards):** desirable minimum cover the greater of the maker's figure or 450 mm. Reads as a council-drain criterion, not driveway OSD.
+12. **Melton 2019 manual 13.11, Whittlesea guidelines (2015), Nillumbik (2013), Greater Geelong IDM 5.30 (16.8.3), Wyndham (2020, defers to VPA 13.11), Boroondara (600 mm over council assets in easements):** public drains, roads and easements only. Nothing on a private driveway or detention pipe.
+13. **Darebin, Maribyrnong, Moonee Valley, Dandenong, Moreland, Mornington Peninsula, Whitehorse:** no private-drain or detention-pipe cover found in the guideline text. Dandenong's design table came out jumbled and was not read. Whitehorse's two drainage policies and dual-occupancy sheet are scanned images with no text.
+
+### Verdict on each earlier claim
+
+1. **"450 mm is the 3500.3 figure for plastic pipe, vehicles, no pavement":** CONFIRMED, 2003 Table 7.1 and 2018 Table 6.2.5.
+2. **"300 mm is the figure for untrafficked ground other than a single dwelling":** CONFIRMED, both editions (plastics).
+3. **"Under reinforced concrete, 100 mm below the slab underside":** CONFIRMED, both editions.
+4. **"Detention pipe not treated differently by 3500.3":** CONFIRMED for 2018 (clause 7.10 has no cover rule).
+5. **"No council I could open says 450 mm for a detention pipe":** WRONG. Yarra 2026 Appendix B (detention pipe note 3) says 450 mm, though its note 12 says 300 mm. Bayside 2026 Table 3 gives 450 for uPVC sewer quality under light traffic. Banyule says 450 for detention pipes under easements.
+6. **"Casey's 450 is a pipe diameter":** CONFIRMED (worked example, a 450 mm pipe beneath the driveway).
+7. **2003 table values in section 1 item 1:** CONFIRMED, all seven rows, including iron/steel 300 for vehicles on unpaved ground.
+8. **Appendix K "100 mm below pavement, say 200 mm overall" and "75 mm below underside":** CONFIRMED in the 2018 edition.
+9. **"2025 table gives 600 mm under a sealed road":** STILL NOT CHECKED for 2025, but the 2018 edition already gives 600 mm (sealed) and 750 mm (unsealed) for plastics. So the change from 500 happened by 2018.
+10. **"2015 and 2018 editions could not be opened":** 2018 now opened. 2015 is STILL NOT CHECKED (not held).
+11. **"Clause allows cover by AS/NZS 2566.1":** CONFIRMED for 2003. The 2018 clause names AS/NZS 2566.2 instead.
+12. **NCC Housing Provisions figures:** STILL NOT CHECKED (not in the permitted folders).
+13. **AS/NZS 2566.1:** STILL NOT CHECKED. The office copy (1998) is a scanned image with no readable text.
+14. **AS/NZS 3500.2 study-guide figures and pipe-maker web figures:** STILL NOT CHECKED.
+15. **Casey 100 mm and 300 mm landscaped soil cover:** CONFIRMED; the guideline is Version 1.1, August 2015.
+16. **Knox 300 mm:** STILL NOT CHECKED (no Knox folder in the office reference set).
+17. **Frankston 250 mm:** CONFIRMED (clause 3.2.1, storage pipes, Sept 2021 edition).
+18. **Maroondah Table 9:** now CONFIRMED as 300 mm (garden, and under driveways or buildings).
+19. **Melton 13.11 "no value seen":** now read: 450 mm elsewhere for concrete pipes, roads the greater of 750 mm or 150 mm below pavement. Public drains only.
+20. **Melbourne Water 850 mm:** STILL NOT CHECKED (the Melbourne Water folder holds only a raingarden leaflet).
+21. **VBA determination:** STILL NOT CHECKED (not a permitted folder).
+22. **Recommendation "preset 450 mm":** the sources lean the other way. Councils ask 300 mm; the standard asks 100 mm below a concrete slab. 450 mm is defensible only as a conservative office choice or for unpaved driveways.
+
+
 Researched 19 Nov 2026 (Melbourne). Public web only. No job data used.
 
 ## ANSWER FIRST

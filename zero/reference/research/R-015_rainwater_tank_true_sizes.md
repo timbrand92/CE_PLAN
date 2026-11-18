@@ -1,5 +1,45 @@
 # R-015 — Real plan sizes of rainwater tanks sold in Victoria
 
+## Checked at source, 19 Nov 2026
+
+Checked against the makers' drawings in the office Tanks folder and HB 230-2008 (Rainwater Tank Design and Installation Handbook, office copy).
+
+### What the office sources hold
+
+1. **All the office's tank drawings are one maker's precast concrete "Universal" tanks (Icon-Septech).** They are round, below-ground tanks (buried, with access openings at the lid). None are slimline or above-ground poly or steel tanks. So none of the earlier figures (Polymaster, Tank Factory, ASC/Rotoplus, Bushman, Tankworld, Kingspan) could be checked against office documents.
+2. **HB 230-2008 gives no tank plan sizes, pad sizes or oversize figures.** Clause 5.15 sets rules for underground rainwater tanks: lid strong enough for people, child-proof lids, overflow protected from stormwater surcharge, hold-down against flotation, drainage to AS/NZS 3500.3. Clause 5.16 says ballast against flotation is roughly the tank volume in kilograms (for example about 5 tonnes for a 5,000 L tank) unless the maker or an engineer says otherwise.
+
+### Real tank dimensions (Icon-Septech Universal concrete tanks, underground)
+
+Sizes in mm. "Body" is the main wall diameter; "base" is the widest point at the foot or the lid overhang. Heights are overall, outside.
+
+1. **2,100 L (drawing 565V2100U, 2010):** body diameter 1335, base 1385, height 2000. Read from drawing text, not from the picture; confirm on the drawing.
+2. **3,800 L (565V3800U, 2010):** diameter 1680, height 2290. Read from drawing text; confirm on the drawing.
+3. **5,000 L, Class A (ICON-4TA-GA010, 2009):** body 1860, base 1905, height 2300; 75 mm walls; Class A, 10 kN, maximum fill over the lid 1.0 m; mass 3,615 kg. (The later 565V5000U sheet shows the base as 1915.)
+4. **10,500 L, Class A (ICON-4TA-GA005 and 565V10500U):** body 2440, base 2500, height 2700; Class A 10 kN, maximum fill 1.0 m; 6,830 kg.
+5. **10,750 L, Class B lid (ICON-4TA-GA004 and 565V10750UB):** base section 3350 diameter, lid 3400 (25 mm overhang all round); base section 1510 high plus 150 lid, about 1660 overall; Class B 80 kN (trafficable), maximum fill 0.6 m; lid 3,215 kg, base 6,385 kg.
+6. **20,000 L, Class B lid (ICON-4TA-GA001 and 565V20000UB):** diameter 3400; tank 2600 high plus 150 lid, about 2750 overall; Class B 80 kN, maximum fill 0.6 m; tank 8,935 kg plus lid 3,215 kg.
+7. **21,500 L in two sections, Class A (565V21500U):** diameter 3350; two 1510 sections, about 3020 high not counting joints; maximum fill 1.0 m.
+8. **32,000 L in three sections, Class A (565V32000U, 2010):** diameter 3350; 1510 + 1350 + 1510, 4370 high not counting joints; maximum fill 1.0 m; sections 5.565 t, 3.545 t and 6.385 t.
+9. **Access openings, all models:** standard 530 x 580; rectangular option 580 x 1055.
+10. **Under-driveway use (maker's project sheets):** 40,000 L as two trafficable Class B tanks and 60,000 L as three, buried under driveways. That points to 20,000 L Class B units. The maker's "Rainsafe" sheet offers Class D (semi-trailer) rating, risers 600 x 600 to 1200 x 1200, and riser heights of 150, 300, 600 and 900.
+
+### Notes for the drawing tool
+
+1. **Class A (10 kN) tanks are not for driveways; Class B (80 kN) lids are.** Under a driveway, use the 10,750 L or 20,000 L Class B models, with no more than 0.6 m of fill over the lid.
+2. **Draw round underground tanks at the widest diameter** (base or lid overhang), for example 3400 for the 20,000 L Class B tank, not the body diameter.
+
+### Verdict on each earlier claim
+
+1. **All slimline poly figures (section 1):** STILL NOT CHECKED. No office drawing for these makers.
+2. **All slimline steel figures (section 2):** STILL NOT CHECKED.
+3. **Round 10,000 L and 22,500 L poly and steel figures (section 3):** STILL NOT CHECKED. The office holds round concrete underground tanks only (nearest: 10,500 L at 2500 x 2700 high; 21,500 L at 3350 x about 3020 high), which are a different product.
+4. **Pad and base figures (section 4):** STILL NOT CHECKED. HB 230 gives no pad thickness or oversize.
+5. **Clearances (section 5):** STILL NOT CHECKED. HB 230 gives none.
+6. **"Sizes are approximate and vary by maker and model":** CONFIRMED in spirit by the office drawings. The same 5,000 L concrete tank shows a 1905 base on one sheet and 1915 on another.
+7. **Recommendation "separate presets by type":** supported. Add a third family, "underground concrete (round)", with the Class A or Class B rating shown, because it matters for driveways.
+
+
 Researched 19 Nov 2026 (Melbourne). Public web only. No job data used.
 Sizes in mm. Slimline sizes are length x width x height. Round sizes are diameter x height.
 
