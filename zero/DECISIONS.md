@@ -686,6 +686,12 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-332** (19 Nov 2026, about 9:10 am; the allowed discharge in the office Boyd's sheet, typed 4.70 L/s where its own inputs give 5.75) "Work it out; typed is a hold (Recommended)". The tool works the allowed discharge out from the inputs; an engineer can type over it to hold a council's figure.
 
+**D-333** (19 Nov 2026, about 9:30 am; existing council pit symbol, from `pictures\system_end_symbols.html`, settles half of D-317) "B, cross and 'EX'". A solid square with a cross, with a tag that starts with EX (for example EX SEP). One block with a tag attribute.
+
+**D-334** (19 Nov 2026, about 9:30 am; kerb outlet symbol, settles the other half of D-317) "C, half circle". A half circle on the kerb, round side toward the road. One block.
+
+**D-335** (19 Nov 2026, about 9:30 am; how a tank is drawn true to size, settles D-316) "presets fill, typing wins but the tanks need to be rounded in the same way as real life. look at kingspan and other local manufacturers". Picking a volume fills the sizes from makers' figures; typing over them wins; the volume is always the stated figure. The outline is drawn with its real rounded ends and corners as the makers' tanks have, not as a plain rectangle. Owed: real size charts and end shapes from the maker he named and other local makers, checked at source, then the true outlines redrawn for his look.
+
 ## Not decided (asked or raised, no decision yet)
 
 1. Whether Stage 1's civil explanation is approved (Tim moved on to the design without saying "approve"). **Settled by D-117.**
