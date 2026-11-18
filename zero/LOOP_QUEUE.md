@@ -64,3 +64,14 @@ Done since the list above: item 15 (the build chat's draft calls: 104 of 104 clo
 23. [x] (pipe label picture sent 18 Nov; kerb and existing-pit symbols looked up 18 Nov 6:50 pm: none exist in the blocks review, board item 77, a question for Tim) Planning chat: owed pictures: a shorter pipe label for tight spaces (D-268); what the Blocks palette holds for a kerb symbol and an existing-pit look (D-275).
 24. [ ] Planning chat: still to put to Tim one at a time on a part-drawn job: what a new pipe opens with is settled (D-263); side panel against Job window (D-048 against D-099, D-171); how the top water level is first chosen; whether the orifice pit is always the last pit.
 25. [ ] Housekeeping: compact the memory index file (it is near its size limit); correct board times written from memory.
+
+## Added 18 Nov 2026, 10:55 pm: THE NIGHT LIST (Tim: "so youre not gonna do anything from now until morning?" The planning chat had gone quiet with work it could do. It does not wait for the side chats; it works this list, one or two helpers at a time, and checks each result before it counts.)
+
+26. [~] Mock-ups in the approved style of the two windows never drawn for Tim: the Job window and the Unfinished list (`pictures\job_window_mockup.html`, `unfinished_list_mockup.html`); then a separate checker; then to Tim in the morning. (Sonnet helper running.)
+27. [~] Check `BOARD_REV2_DRAFT.md` (counts, the 26 "Not sure" entries, items 80 onward) and re-score the 27-test gate from the nine passes (`BOARD_REV2_CHECK.md`, `stage6\OBSTACLE_SCORE_18NOV.md`). (Opus helper running.) Then adopt the board as revision 2.
+28. [ ] Click, pick and typing budgets (Tim's screen rule 18): a proposal for each first-release tool, from the old-job evidence and the approved layout, for him to set: `design\BUDGETS_PROPOSAL.md`.
+29. [ ] The real-use walk-through (as `design\SITUATIONS.md`) for the tools not yet built in AutoCAD: Inlets, Tank, Detention, Schedule, LPD, the Job window: what is drawn first, what is not known, what plain AutoCAD edits do; list only what his rulings do not already settle.
+30. [ ] Mock-ups in the approved style of the remaining windows: Pipe, Long section, Inlets, Tank, Schedule, LPD (preview area as a marked placeholder until D-297), each through a separate checker.
+31. [ ] File D-138 to D-297 into the reference library (it stops at D-137); bring `design\UI_PLAN.md` into line with the approved style or mark its look sections superseded.
+32. [ ] Trials chat (asked 10:55 pm): option C zoom arithmetic; where docking is stored (read only); transients under pan, zoom, regen, tab switch; a double-click route with no "_pedit, *Cancel*".
+33. [ ] By 7:30 am: refresh `DIRECTOR_SUMMARY.md` and `MORNING_19NOV.md` from the night's results.
