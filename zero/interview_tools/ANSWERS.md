@@ -107,4 +107,14 @@
 
 **TA-042 Message during batch 16, on the master drawing blocks.** "we might not need all blocks". With TA-038: look through them all, then decide which to keep, order and organise them.
 
-Next free number: TA-043
+## Batch 17 (first release size; hatch name, list and linking, after R-006)
+
+**TA-043 First release size (asked once, as the planning chat ruled).** "all 18 but we need to make sure they all work and are tested before release. a lot of it already works and has been tested so it shouldnt take as long".
+
+**TA-044 Hatch tool name (TQ-06).** "OFFICEHATCH / OH" (OH free in both lists; the full word still to be typed once in AutoCAD).
+
+**TA-045 Hatch list (TQ-12).** "give me a list of strucutral and civil hatches and then a visual and i will tick off what is and isnt needed".
+
+**TA-046 Hatches linked to their outline.** "Always linked": every hatch the new tool makes is associative; his AutoCAD settings are put back after.
+
+Next free number: TA-047
