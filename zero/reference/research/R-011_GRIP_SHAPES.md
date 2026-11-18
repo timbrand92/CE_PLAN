@@ -90,6 +90,38 @@ One change at a time from the working pattern, on MText unless said, a picture e
 
 **So the September failure is not explained by any of these.** What the 18 Nov runs did not copy is the old Civil plug-in's own code (its other overrules, its grip file, its build). Tim's CE plugins were loaded in every one of these runs and did not stop the drawing. **Do not rely on September's conclusion; the next step if it matters is to put the new test grip into the old plug-in build and compare, which needs Tim's say-so and a build chat.**
 
+### Pipe-label blocks, no mouse (18 Nov, fourth test AutoCAD, 16:26 to 16:29, test copy `g_master2.dwg`, closed with No to saving)
+
+1. **What the office's label block is.** PT300 LABEL has a flip, two angles and an X/Y position, **no attributes**; its words ("PT300") are plain text fixed inside the block, one block per pipe size (PT250 to PT600). **So the label's words cannot be typed over with a plain edit; this clashes with D-182 (typed-over label text) unless the new plug-in uses a block with an attribute, or keeps the words as separate text.** Not yet ruled.
+2. **Flip with text:** setting the flip value moved the whole label below its line and the words stayed upright: the exploded text was not mirrored and not turned (`K ONE explode (flipped)` in `evidence\zt_run4_labels.log`). The extents went from 0 to 476 up to minus 476 to 0.
+3. **Explode:** a label explodes to one polyline, one text and two lines in both states: it becomes plain objects and loses its grips (as expected; consequence not tested in a drawing).
+4. **Hidden block definitions:** 60 labels inserted and not flipped added none; **60 flipped added 60 hidden definitions** (335 to 395); flipping every second one added 30. The master drawing already carries 335. Each flipped or stretched dynamic block costs one hidden definition. PURGE behaviour not tested.
+5. **Speed with 60 on a sheet:** insert and flip 60 in 3 ms (not flipped) and 75 to 101 ms (flipped); regen 2 to 4 ms; selecting all 63 took 10 ms. (The count of grip lists asked stayed 0 because AutoCAD asks when it paints; selection with grips shown in `k_60_zoomed.png`: flip arrows point up on flipped labels and down on the others, and every label shows its dot and square.)
+6. **Grip colours in Tim's profile (read only):** GRIPCOLOR 150, GRIPHOVER 11, GRIPHOT 12, GRIPCONTOUR 251, GRIPDYNCOLOR 140, GRIPBLOCK 0, GRIPOBJLIMIT 100, GRIPSIZE 7. Our test shapes used orange (ACI 30); to look like AutoCAD's own they would use the grip colour variables, which the September-style open-line test showed paint in the blue.
+
+## Test list for later (Tim, 18 Nov: "get a nice list going for testing later")
+
+Each line: what to do, what counts as a pass. Items 1 to 9 need the real mouse (Codex robot, PC idle, test copy, one test AutoCAD, rule 1.9 in full). The rest need no mouse. Done so far is listed in Part 2.
+
+1. **Click a drawn grip, safe return value:** select a noted polyline with the orange circle grip, click it once. Pass: AutoCAD stays up, the log says the grip was clicked, nothing else moves.
+2. **Hover words:** rest the cursor on our grip. Pass: the tip text appears and the native grips' tips are unchanged.
+3. **Hover and hot colours:** hover, then click. Pass: the glyph changes colour (hover is set to 40 in the test).
+4. **Failure return value, last:** same click with the Failure return. Expected to crash AutoCAD (the 17 Nov cause). Pass for the diagnosis: it crashes; then close under the D-160 exception and never repeat.
+5. **Hover menu on text:** one grip with the multi-function interface (Slide, Offset, Flip) on MText, first as Primary then as Secondary, with GRIPS at its current 2 and GRIPMULTIFUNCTIONAL 3 (do not change either). Pass: menu shows, each item runs.
+6. **Native menu survives:** hover a vertex grip of a plain polyline with our interface loaded. Pass: Stretch, Add Vertex, Remove Vertex, Convert to Arc still show.
+7. **Drag our grip:** drag a slide grip along a pipe. Pass: moves along only, one undo step.
+8. **Grip-drag copy (Ctrl) of a noted object:** pass if the copy keeps the note or is told to be a plain copy as designed.
+9. **Double-click:** the replacement trial 8 route. Pass: our window opens for noted objects, plain objects behave as AutoCAD (PEDIT, Quick Properties).
+10. **Many grips:** 200 noted pipes selected at once (GRIPOBJLIMIT 100 hides grips above 100): measure the time and say what a drafter sees.
+11. **Locked layer, xref, REFEDIT:** grips of ours on those objects. Pass: AutoCAD's own protection wins, no edit.
+12. **Our grip beside the old CE grips on the same MText or block:** which draws on top, which is picked.
+13. **net48 (AutoCAD 2022 to 2024):** the same drawn shapes and the same flags. Pass: paint and click the same.
+14. **Other settings:** GRIPSIZE 10 or 12, a white drawing background, a high-resolution screen. Pass: glyph size and colour still readable (test changes the setting only on a made-up copy of a profile if Tim allows it, otherwise not tested).
+15. **Label block with a typed-over words question:** a label block with an attribute versus separate text; pass: plain double-click edits the words and a flip keeps them readable and attached.
+16. **Hidden definitions:** PURGE after flipping 60 labels. Pass: the 60 hidden definitions go or stay, and the drawing size is measured.
+17. **Copy, paste into another drawing, WBLOCK, xref attach, MATCHPROP of a flipped label.** Pass: flip state travels and nothing breaks.
+18. **Pipe-label with the old Civil build:** NOT to be run (the planning chat parked the September cause, 18 Nov).
+
 ### What happened with the window, found out later the same afternoon
 
 1. Tim's answer to the planning chat ("Not me, close it") released the first test AutoCAD (process 64900, started 15:18:19 on `g_master.dwg`). I confirmed its start time and title, asked the Customize User Interface window to close (the X button), and AutoCAD answered with its "Unsaved Changes" prompt: **the editor held changes nobody had saved, so something or someone had changed a toolbar or command in it** (picture `evidence\r011\cui_unsaved.png`). I pressed "Discard the unsaved changes and exit" (not "Always discard") and then typed QUIT; AutoCAD closed with no save prompt. The customisation file `acad.CUIX` was last written at 15:18:46, which is AutoCAD's own start-up write, so nothing of the change was saved. Nothing was force-closed.
