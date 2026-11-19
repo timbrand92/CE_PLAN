@@ -21672,3 +21672,5 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Evidence:** process list and parent chains read on Tim's PC, 19 Nov 2026 11:22 to 11:25. Stop-gap applied on Tim's word ("Yes, AutoCAD first"): the running AutoCAD (pid 206484) was set to Above normal priority, read back as set; it lasts only until that AutoCAD closes. No robot run was stopped. Whether AutoCAD felt faster afterwards: not reported.
 
 **Status:** OPEN
+
+- Note (general chat, Thu 19 Nov 2026, BUG-1462): Tim, same day, after this entry was logged: "somedays i might not be in the foffice so test runs can happen". Interpretation (the logging chat's, not Tim's words): the measure is whether Tim is working at this PC, not the clock alone. On a day he is out of the office, robot builds and test runs may run in work hours. On a day he is in and his AutoCAD is open, they wait or run gently. How a launcher is to know he is away (for example the TIM_AWAY flag in desk_jobs) was not said and not checked.
