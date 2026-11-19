@@ -22,7 +22,9 @@ A house or dual occupancy **with on-site detention**, drained to the legal point
 
 Long section; the Tank window true to size and the office tank list (unless the first job's storage is a tank: asked of Tim); trench grate; ag drain; pump station; the other inlet kinds; all 18 CE Tools; the Manager; budgets; layers; the libraries; the board clean-up.
 
-## 4. The order of work (one thing at a time; each needs its independent check before the next starts)
+## 4. The order of work (the order is for MERGING to the main line; each part needs its independent check before it merges)
+
+**Changed 19 Nov 2026, 4:25 pm.** The first wording, "one thing at a time; each needs its independent check before the next starts", made four Codex jobs stop themselves for an hour. Building may run in parallel on separate branches, as long as no two builders touch the same files (D-342). What is strict is the order parts reach the main line, and that nothing reaches it unchecked.
 
 1. **Drawing safety, by design not by patch.** Ten reviews have each found a new case of one problem: how a copied pit, pipe, inspection opening or symbol knows it is its own part. One careful design look at that single question first, written in plain words, then one rebuild, then both checks, then a real AutoCAD pass on test copies.
 2. **Pit and Pipe through the gate** (`OBSTACLE_COURSE.md`): metre drawings, TBC on the sheet, masked text, edge lines, the preview beside the inputs and across the top for Pipe (D-313).
