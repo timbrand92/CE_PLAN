@@ -14,7 +14,7 @@
 ## 1A. What is being built, and only this (Tim, 19 Nov 2026, D-337, D-338, rule R-72)
 
 1. **One release for one detention job.** The whole scope and the order of work are in `C:\CE_PLAN\zero\stage6\ONE_JOB_RELEASE.md`. Anything not on that page is paused: do not build it, fix it or tidy it. If your task is not on that page, stop and report "OFF THE PLAN".
-2. **Your report starts with four lines:** Release; "Part N of 9: name" and the step; the four counts Built, Checked, Installed, Accepted as given in `C:\CE_PLAN\BOARD.json` (read it, do not edit it); and what your run moved.
+2. **Your report starts with two lines** (rule R-72 as changed 19 Nov). Line 1: "One-job release | Part N of 9: name | Built N, Checked N, Installed N, Accepted N (of 9)", the counts read from `C:\CE_PLAN\BOARD.json` (read it, do not edit it). Line 2: "Now:" and the main message of your report in one plain sentence.
 
 ## 2. Where the rules and decisions are (read before changing anything they cover)
 

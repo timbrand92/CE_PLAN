@@ -241,6 +241,11 @@ These apply to the chat "CE_ACAD / zero plan / 01" only. They are not R-numbered
 4. **This chat since last reply:** what moved, in one line, or "Nothing moved".
 The counts come from one place only, `C:\CE_PLAN\BOARD.json` (which the TimOS bar also reads), re-read each time and never from memory. The planning chat rewrites that file whenever a part changes state, by the clock, and pushes it; no other chat edits it. A reply that lacks the block is not finished.
 
+**R-72 CHANGED 19 Nov 2026, 11:56 am** (Tim: "can you make it slightly more condensed and keep main message within it"). The four-line block above is superseded by a TWO-LINE block; everything else in R-72 stands (where the counts come from, what Built and Checked mean, "OFF THE PLAN", who keeps the board file). Every reply and every helper's report now starts with exactly:
+Line 1: **One-job release | Part N of 9: <name> | Built N, Checked N, Installed N, Accepted N (of 9)**
+Line 2: **Now:** the main message of the reply in one plain sentence (what moved, what failed, or what is needed from Tim).
+The rest of the reply follows below and does not repeat those two lines.
+
 ---
 
 ## Rulings (where these rules and C:\TimOS\RULES.md disagree)
