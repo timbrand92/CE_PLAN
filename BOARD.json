@@ -1,15 +1,15 @@
 {
-  "builtAt": "2026-11-19T15:23:00+11:00",
+  "builtAt": "2026-11-19T15:42:00+11:00",
   "waitingOnTim": {
     "count": 4,
     "oldestAt": "2026-11-19T08:16:00+11:00"
   },
   "built": {
-    "done": 1,
+    "done": 2,
     "of": 9
   },
-  "next": "Drawing safety: rebuild finished, two checks running, AutoCAD proof tonight",
-  "headline": "One-job release (a detention job). Built 1 of 9, checked 1 of 9, installed 0, accepted 0. Part 3 (cover and grade checks, 5 mm tolerance, cover presets) is on the main line and independently checked; not yet run in AutoCAD.",
+  "next": "Drawing safety: fix round after both checks failed; AutoCAD proof tonight",
+  "headline": "One-job release (a detention job). Built 2 of 9, checked 2 of 9, installed 0, accepted 0. In: Part 3 (cover and grade checks) and Part 7 (Job window and Unfinished list), both on the main line and independently checked on the bench; neither yet run in AutoCAD.",
   "plan": [
     {
       "name": "1 Drawing safety (copy, move, erase, undo)",
@@ -37,7 +37,7 @@
     },
     {
       "name": "7 Job window and Unfinished list",
-      "state": "todo"
+      "state": "done"
     },
     {
       "name": "8 Detention",
@@ -50,8 +50,8 @@
   ],
   "closeToTest": "Six windows can be clicked outside AutoCAD. Nothing can be drafted with in AutoCAD yet.",
   "problems": [
-    "Metre drawings held after four rounds; a design page is written, rebuild not started",
-    "Pipe window top preview stopped until Tim approves a mock-up",
-    "Not proven which plug-in answers PIT, PP and CD (Tim's supervised check)"
+    "Drawing-safety rebuild failed both checks on four named faults; fix round running",
+    "Pipe window mock-up failed its check; fix running",
+    "Not proven which plug-in answers PIT, PP and CD (supervised check)"
   ]
 }
