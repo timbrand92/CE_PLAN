@@ -1,15 +1,15 @@
 {
-  "builtAt": "2026-11-19T13:46:00+11:00",
+  "builtAt": "2026-11-19T15:23:00+11:00",
   "waitingOnTim": {
     "count": 4,
     "oldestAt": "2026-11-19T08:16:00+11:00"
   },
   "built": {
-    "done": 0,
+    "done": 1,
     "of": 9
   },
-  "next": "Drawing safety: tonight AutoCAD proves how a copy keeps its links, then one rebuild",
-  "headline": "One-job release (a detention job). 0 of 9 parts whole. Part 3 half in: the 5 mm tolerance is on the main line and checked; cover presets are not. Nothing installed.",
+  "next": "Drawing safety: rebuild finished, two checks running, AutoCAD proof tonight",
+  "headline": "One-job release (a detention job). Built 1 of 9, checked 1 of 9, installed 0, accepted 0. Part 3 (cover and grade checks, 5 mm tolerance, cover presets) is on the main line and independently checked; not yet run in AutoCAD.",
   "plan": [
     {
       "name": "1 Drawing safety (copy, move, erase, undo)",
@@ -21,11 +21,7 @@
     },
     {
       "name": "3 Cover and grade checks, 5 mm tolerance",
-      "state": "todo",
-      "built": {
-        "done": 1,
-        "of": 2
-      }
+      "state": "done"
     },
     {
       "name": "4 Inlets for the first job",
@@ -54,8 +50,8 @@
   ],
   "closeToTest": "Six windows can be clicked outside AutoCAD. Nothing can be drafted with in AutoCAD yet.",
   "problems": [
-    "Metre drawings held after three rounds: a length just under 1.005 m shows as 1.01 m",
-    "Drawing-safety rebuild waits on tonight's AutoCAD proof",
+    "Metre drawings held after four rounds; a design page is written, rebuild not started",
+    "Pipe window top preview stopped until Tim approves a mock-up",
     "Not proven which plug-in answers PIT, PP and CD (Tim's supervised check)"
   ]
 }
