@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-11-19T15:42:00+11:00",
+  "builtAt": "2026-11-19T18:55:00+11:00",
   "waitingOnTim": {
     "count": 4,
     "oldestAt": "2026-11-19T08:16:00+11:00"
@@ -8,7 +8,7 @@
     "done": 2,
     "of": 9
   },
-  "next": "Drawing safety: fix round after both checks failed; AutoCAD proof tonight",
+  "next": "Drawing safety: design proven in real AutoCAD (7 of 7); the rebuild needs both checks to pass, then merges",
   "headline": "One-job release (a detention job). Built 2 of 9, checked 2 of 9, installed 0, accepted 0. In: Part 3 (cover and grade checks) and Part 7 (Job window and Unfinished list), both on the main line and independently checked on the bench; neither yet run in AutoCAD.",
   "plan": [
     {
@@ -50,8 +50,8 @@
   ],
   "closeToTest": "Six windows can be clicked outside AutoCAD. Nothing can be drafted with in AutoCAD yet.",
   "problems": [
-    "Drawing-safety rebuild failed both checks on four named faults; fix round running",
-    "Pipe window mock-up failed its check; fix running",
+    "No Codex build has yet passed both checks tonight; TBC on the sheet is held",
+    "Night pass of the main line stopped early: the busy PC took the front window",
     "Not proven which plug-in answers PIT, PP and CD (supervised check)"
   ]
 }
