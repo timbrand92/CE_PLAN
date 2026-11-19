@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-11-19T18:55:00+11:00",
+  "builtAt": "2026-11-19T21:02:00+11:00",
   "waitingOnTim": {
     "count": 4,
     "oldestAt": "2026-11-19T08:16:00+11:00"
@@ -8,8 +8,8 @@
     "done": 2,
     "of": 9
   },
-  "next": "Drawing safety: design proven in real AutoCAD (7 of 7); the rebuild needs both checks to pass, then merges",
-  "headline": "One-job release (a detention job). Built 2 of 9, checked 2 of 9, installed 0, accepted 0. In: Part 3 (cover and grade checks) and Part 7 (Job window and Unfinished list), both on the main line and independently checked on the bench; neither yet run in AutoCAD.",
+  "next": "Sort the 389 surviving findings with Tim: unsafe edits first, then wrong figures, then rulings not built",
+  "headline": "One-job release (a detention job). Built 2 of 9 on the bench only (Parts 3 and 7); checked 0 of 9: tonight's Codex review found real faults in both, so their checks are reopened. Installed 0, accepted 0.",
   "plan": [
     {
       "name": "1 Drawing safety (copy, move, erase, undo)",
@@ -21,7 +21,11 @@
     },
     {
       "name": "3 Cover and grade checks, 5 mm tolerance",
-      "state": "done"
+      "state": "todo",
+      "built": {
+        "done": 1,
+        "of": 2
+      }
     },
     {
       "name": "4 Inlets for the first job",
@@ -37,7 +41,11 @@
     },
     {
       "name": "7 Job window and Unfinished list",
-      "state": "done"
+      "state": "todo",
+      "built": {
+        "done": 1,
+        "of": 2
+      }
     },
     {
       "name": "8 Detention",
@@ -50,8 +58,8 @@
   ],
   "closeToTest": "Six windows can be clicked outside AutoCAD. Nothing can be drafted with in AutoCAD yet.",
   "problems": [
-    "No Codex build has yet passed both checks tonight; TBC on the sheet is held",
-    "Night pass of the main line stopped early: the busy PC took the front window",
-    "Not proven which plug-in answers PIT, PP and CD (supervised check)"
+    "Night test scripts could close a drawing unsaved or act on a licence window: all AutoCAD testing stopped until fixed",
+    "389 real findings across the nine parts (98 wrong figures, 70 unsafe edits, 97 rulings not built)",
+    "No AutoCAD command exists yet for Inlet, Pit schedule, Job, Unfinished or Detention: bench only"
   ]
 }
