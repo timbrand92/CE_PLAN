@@ -694,6 +694,8 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-336** (19 Nov 2026, about 9:40 am; the plan shape of a slimline tank, completes D-335; picture `pictures\tank_true_size.html`) "Yes, full round ends for all". Steel and poly slimline tanks are both drawn in plan with fully rounded ends (end radius half the width). Sizes come from the makers' figures in `reference\research\R-015` (checked at source for four sellers; the maker he named could not be opened at its own site, so its sizes are from sellers' pages). A real 3,500 L slimline exists (poly, 2380 x 870 x 2150 high). No maker's drawing confirmed the shape: it rests on his word from site.
 
+**D-337** (19 Nov 2026, 11:46 am; the plan is narrowed) "lets focus on a release for everything needed for one job, pause the rest for now and table it under future planning or the carpark and make sure we get back to it later". Asked after the planning chat told him that all five of the morning's independent checks had failed, that nothing had merged, and that the work had spread too wide. So: one release, holding everything one real job needs and nothing else; everything else is paused, not cancelled, and listed in `PARKING_LOT.md` P-09, which the planning chat brings back to him unprompted once that release has carried one real job. What "one job" contains is asked of him next.
+
 ## Not decided (asked or raised, no decision yet)
 
 1. Whether Stage 1's civil explanation is approved (Tim moved on to the design without saying "approve"). **Settled by D-117.**
