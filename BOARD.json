@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-11-20T07:23:00+11:00",
+  "builtAt": "2026-11-20T08:00:00+11:00",
   "waitingOnTim": {
     "count": 4,
     "oldestAt": "2026-11-19T08:16:00+11:00"
@@ -8,8 +8,8 @@
     "done": 2,
     "of": 9
   },
-  "next": "Decide with Tim how to close the held causes: design first, one at a time, Pit and Pipe before the rest",
-  "headline": "One-job release (a detention job). Built 2 of 9 on the bench only; checked 0; installed 0; accepted 0. Overnight: 1 of 25 root causes merged (Job and the design windows now use the same figures); 11 held after two rounds; 13 still finishing.",
+  "next": "Stage 1: one design for the edit doorway (four held drawing causes), then one rebuild",
+  "headline": "One-job release, STAGE 1: Pit and Pipe to draft with in real AutoCAD (Parts 1 to 3). Stage 2 (Parts 4 to 8) waits. Built 2 of 9 on the bench only; checked 0; installed 0; accepted 0. Root causes merged: 1 of 25.",
   "plan": [
     {
       "name": "1 Drawing safety (copy, move, erase, undo)",
@@ -28,19 +28,19 @@
       }
     },
     {
-      "name": "4 Inlets for the first job",
+      "name": "4 Inlets for the first job (Stage 2, waits)",
       "state": "todo"
     },
     {
-      "name": "5 Legal point and the two end symbols",
+      "name": "5 Legal point and the two end symbols (Stage 2, waits)",
       "state": "todo"
     },
     {
-      "name": "6 Pit schedule",
+      "name": "6 Pit schedule (Stage 2, waits)",
       "state": "todo"
     },
     {
-      "name": "7 Job window and Unfinished list",
+      "name": "7 Job window and Unfinished list (Stage 2, waits)",
       "state": "todo",
       "built": {
         "done": 1,
@@ -48,11 +48,11 @@
       }
     },
     {
-      "name": "8 Detention",
+      "name": "8 Detention (Stage 2, waits)",
       "state": "todo"
     },
     {
-      "name": "9 Two clean AutoCAD nights, then Tim's real job",
+      "name": "9 Two clean AutoCAD nights, then Tim's real job (Stage 2, waits)",
       "state": "todo"
     }
   ],

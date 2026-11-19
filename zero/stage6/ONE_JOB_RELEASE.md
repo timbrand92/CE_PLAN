@@ -2,6 +2,14 @@
 
 **Why this page exists.** Tim, 19 Nov 2026, 11:46 am (D-337): "lets focus on a release for everything needed for one job, pause the rest for now and table it under future planning or the carpark and make sure we get back to it later". He then chose what the job is (D-338). This page is the whole scope. Anything not on it is paused in `PARKING_LOT.md` P-09 and is not worked on by any chat, helper or robot. The planning chat keeps this page; the build chat works it top to bottom.
 
+## 0. STAGED, 20 Nov 2026 (D-347): Tim, "stage it"
+
+After a night in which 359 Codex jobs closed 1 of 25 root causes, the release is done in two stages. The scope below is unchanged; only the order is.
+
+1. **STAGE 1, the only thing worked now: Pit and Pipe to draft with in real AutoCAD.** Parts 1 (drawing safety), 2 (Pit and Pipe through the gate) and 3 (cover and grade checks), then the AutoCAD proof, then Tim drafts with them on a test copy. Only the root causes that touch these three parts are worked (`findings_19nov\ROOT_CAUSES.md`), design first where a cause has failed two rounds, one at a time.
+2. **STAGE 2, waits until Tim has drafted with Stage 1:** Parts 4 (inlets), 5 (legal point and end symbols), 6 (pit schedule), 7 (Job window and Unfinished list), 8 (Detention), including their five missing AutoCAD commands, then Part 9. Their branches, findings and design pages are kept as they are; nobody builds on them meanwhile.
+3. **Stage 1 is done when:** every blocking cause that touches Parts 1 to 3 is merged; its owed-in-AutoCAD list has passed on test copies with the night scripts made safe; Tim's supervised check of PIT, PP and CD is done; and Tim has placed pits and pipes himself on a test copy and said so.
+
 ## 1. The job
 
 A house or dual occupancy **with on-site detention**, drained to the legal point. No long section.
