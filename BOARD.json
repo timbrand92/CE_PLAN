@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-11-19T21:02:00+11:00",
+  "builtAt": "2026-11-20T07:23:00+11:00",
   "waitingOnTim": {
     "count": 4,
     "oldestAt": "2026-11-19T08:16:00+11:00"
@@ -8,8 +8,8 @@
     "done": 2,
     "of": 9
   },
-  "next": "Sort the 389 surviving findings with Tim: unsafe edits first, then wrong figures, then rulings not built",
-  "headline": "One-job release (a detention job). Built 2 of 9 on the bench only (Parts 3 and 7); checked 0 of 9: tonight's Codex review found real faults in both, so their checks are reopened. Installed 0, accepted 0.",
+  "next": "Decide with Tim how to close the held causes: design first, one at a time, Pit and Pipe before the rest",
+  "headline": "One-job release (a detention job). Built 2 of 9 on the bench only; checked 0; installed 0; accepted 0. Overnight: 1 of 25 root causes merged (Job and the design windows now use the same figures); 11 held after two rounds; 13 still finishing.",
   "plan": [
     {
       "name": "1 Drawing safety (copy, move, erase, undo)",
@@ -58,8 +58,8 @@
   ],
   "closeToTest": "Six windows can be clicked outside AutoCAD. Nothing can be drafted with in AutoCAD yet.",
   "problems": [
-    "Night test scripts could close a drawing unsaved or act on a licence window: all AutoCAD testing stopped until fixed",
-    "389 real findings across the nine parts (98 wrong figures, 70 unsafe edits, 97 rulings not built)",
-    "No AutoCAD command exists yet for Inlet, Pit schedule, Job, Unfinished or Detention: bench only"
+    "Only 1 of 25 root causes closed overnight; patch rounds are not converging",
+    "AutoCAD testing stopped: the night-script safety fix failed its first check, re-check running",
+    "No AutoCAD command works yet for Inlet, Pit schedule, Job, Unfinished or Detention"
   ]
 }
