@@ -21650,3 +21650,25 @@ Note (CE 05, Sat 31 Oct 2026): DRAFT PR #1927 (B-095, on the #1919 branch): Reca
 **Status:** OPEN
 
 - Note (zero-plan chat, Wed 18 Nov 2026, BUG-1461): an earlier entry, BUG-1278 (5 Nov 2026: hatches cannot be modified since the plug-in, also seen on a second PC), may be the same fault; this entry was added before that one was found. Linked both ways; kept open as its own entry because the symptoms differ (missing edge grips and Recreate Boundary here; greyed-out Associative and Annotative there). Research: zero\reference\research\R-006_HATCH_AND_GRIPS.md.
+
+## BUG-1462 — Team and Codex test runs start inside AutoCAD work hours and slow Tim's PC
+
+**Command / Area:** Not a plugin command. The test robots: the Claude "team" run (`team_run.sh`, working copy `C:\CE_WORK\team_a`) and the Codex review run (`codex exec` in `C:\CE_WORK\codex_test`). MEDIUM. SLOWS TIM'S DRAFTING.
+
+**Symptom:** Tim, Thu 19 Nov 2026, about 11:15am, in a general chat: "compuiter is running slow, how come can you fix?". AutoCAD was open (started 09:28) and lagging.
+
+**Cause (measured 11:20 to 11:25am, read from the running programs, not assumed):** every processor thread was busy (processor utility 112 to 152% over five one-second samples, 20 threads). Five copies of `CeCivil.Bench.exe` were running at once, with their compilers and test hosts. Their parent programs: `team_run.sh opus` started 11:00 (check_detention4), and two `codex exec` runs in `C:\CE_WORK\codex_test` started 11:00 and 11:22 (review_G r4). Memory (17.5 of 64 GB free) and disk were fine. This is inside the in-use window of RULES 1.8 (8:30am to 2:00pm): "Big builds and automated testing go in the free windows."
+
+**Not known:** whether these runs were started under a written exception (for example the release charter or a pilot). Not checked by the logging chat. If one applies, say so here and treat this as a request to make the runs gentler on the PC instead.
+
+**Expected behaviour:** in the in-use windows (weekdays 8:30am to 2:00pm and 3:00pm to 5:30pm) no robot starts a build or a test run that loads the processor while Tim's AutoCAD is open; or, if a written exception allows it, the run is held to a small share of the processor (low priority and a cap on how many run at once) so AutoCAD does not lag.
+
+**Steps to confirm:** on a weekday between 9am and 1pm with Tim's AutoCAD open, open Task Manager, Details tab, sort by CPU. Right = no `CeCivil.Bench.exe`, `testhost.exe` or `VBCSCompiler.exe` near the top, and total CPU well under half. Wrong = several of them at once and CPU near 100%.
+
+**Test that catches it:** none yet. Wanted: the run launchers (`team_run.sh` and the Codex start script) refuse or wait when the clock is inside the in-use window and `acad.exe` is running, and log that they waited.
+
+**Reference:** RULES 1.8 and ROUTER step 6 (`C:\TimOS`); `C:\CE_PLAN\desk_jobs\` (launchers and occupancy log; not read by the logging chat).
+
+**Evidence:** process list and parent chains read on Tim's PC, 19 Nov 2026 11:22 to 11:25. Stop-gap applied on Tim's word ("Yes, AutoCAD first"): the running AutoCAD (pid 206484) was set to Above normal priority, read back as set; it lasts only until that AutoCAD closes. No robot run was stopped. Whether AutoCAD felt faster afterwards: not reported.
+
+**Status:** OPEN
