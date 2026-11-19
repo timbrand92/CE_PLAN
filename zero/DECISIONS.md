@@ -696,6 +696,8 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-337** (19 Nov 2026, 11:46 am; the plan is narrowed) "lets focus on a release for everything needed for one job, pause the rest for now and table it under future planning or the carpark and make sure we get back to it later". Asked after the planning chat told him that all five of the morning's independent checks had failed, that nothing had merged, and that the work had spread too wide. So: one release, holding everything one real job needs and nothing else; everything else is paused, not cancelled, and listed in `PARKING_LOT.md` P-09, which the planning chat brings back to him unprompted once that release has carried one real job. What "one job" contains is asked of him next.
 
+**D-338** (19 Nov 2026, about 11:52 am; what the one-job release holds) First job: "A job with detention". On the sheet (ticked): "Pit schedule,Inlets (downpipes etc.),Legal point and system end"; Long section not ticked, so it is out. Checks (ticked): "Cover and grade checks,Unfinished list,Job window". With Pit, Pipe and drawing safety, which are in regardless, that is nine parts; the scope and order of work are in `stage6\ONE_JOB_RELEASE.md`. Detention is therefore back in scope and comes off the carpark; the Tank window stays paused unless the first job's storage is a tank (to ask).
+
 ## Not decided (asked or raised, no decision yet)
 
 1. Whether Stage 1's civil explanation is approved (Tim moved on to the design without saying "approve"). **Settled by D-117.**

@@ -31,3 +31,4 @@ Things raised mid-task. Owned by the planning chat. Each has enough context to p
 10. **Details library and job library** (Tim, 18 Nov: "AT SOME POINT CREATING A DETAILS LIBRARY AND A JOB LIBRARY TO EASILY SEARCH FOR STUFF WOULD BE GREAT").
 11. **Records owed by the planning chat:** apply `BOARD_REV2_CHECK.md` (47 corrections) and adopt the board draft; file D-298 onward into the `rulings\` pages; night-list items 29 to 31.
 12. **Research gaps:** AS 2566.1 and three council documents are scanned images, unread; the maker Tim named could not be opened at its own site.
+13. **CHANGED 19 Nov, about 11:52 am (D-338):** lines 1 (Detention), 3 (the two symbols), 4 (the sums rulings Detention needs) and 5 (Job window and Unfinished list) are back IN scope of the one-job release and are no longer paused. Added to the paused list: the Long section window (LG).
