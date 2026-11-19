@@ -232,6 +232,15 @@ These apply to the chat "CE_ACAD / zero plan / 01" only. They are not R-numbered
 6. Rules for working with me: C:\TimOS\RULES.md, and "Tim's build rules" at the bottom of this prompt. If they disagree, ask me which wins and record my answer.
 7. Save everything under C:\CE_PLAN\zero\ (new folder, in the CE_PLAN repository). Commit by file name and push after each sitting.
 
+## PART ADDED 19 Nov 2026: WHERE WE ARE, IN EVERY CHAT
+
+**R-72** (Tim, 19 Nov 2026, about 11:55 am: "you need to create a strict rule that every chat shows exactly what part of the plan we are working on and how we are progressing towards it"; the wording below is the planning chat's, his to change.) Every reply to Tim, in every chat on this project, Claude and Codex alike, and every report a helper or robot hands back, STARTS with a "WHERE WE ARE" block of exactly these four lines, before anything else:
+1. **Release:** the release being built (now: "One-job release, a detention job").
+2. **Part:** "Part N of 9: <its name>" from `C:\CE_PLAN\zero\stage6\ONE_JOB_RELEASE.md`, and the step in hand in a few plain words. Work that is not on that page is not done; if a chat finds itself on something else it says "OFF THE PLAN" here and stops.
+3. **Progress:** four counts, never mixed and never a percentage: "Built N of 9, Checked N of 9, Installed N of 9, Accepted by Tim N of 9". A part counts as Built only when it is on the main line; Checked only when something that did not build it passed it; Unknown is written "Not known", never 0.
+4. **This chat since last reply:** what moved, in one line, or "Nothing moved".
+The counts come from one place only, `C:\CE_PLAN\BOARD.json` (which the TimOS bar also reads), re-read each time and never from memory. The planning chat rewrites that file whenever a part changes state, by the clock, and pushes it; no other chat edits it. A reply that lacks the block is not finished.
+
 ---
 
 ## Rulings (where these rules and C:\TimOS\RULES.md disagree)

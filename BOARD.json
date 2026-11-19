@@ -1,0 +1,24 @@
+{
+  "builtAt": "2026-11-19T11:52:00+11:00",
+  "waitingOnTim": { "count": 4, "oldestAt": "2026-11-19T08:16:00+11:00" },
+  "built": { "done": 0, "of": 9 },
+  "next": "Drawing safety: one design look at how a copy becomes its own part, then one rebuild",
+  "headline": "One-job release (a detention job). 0 of 9 parts checked and merged. Nothing installed.",
+  "plan": [
+    { "name": "1 Drawing safety (copy, move, erase, undo)", "state": "now" },
+    { "name": "2 Pit and Pipe through the gate", "state": "todo" },
+    { "name": "3 Cover and grade checks, 5 mm tolerance", "state": "todo" },
+    { "name": "4 Inlets for the first job", "state": "todo" },
+    { "name": "5 Legal point and the two end symbols", "state": "todo" },
+    { "name": "6 Pit schedule", "state": "todo" },
+    { "name": "7 Job window and Unfinished list", "state": "todo" },
+    { "name": "8 Detention", "state": "todo" },
+    { "name": "9 Two clean AutoCAD nights, then Tim's real job", "state": "todo" }
+  ],
+  "closeToTest": "Six windows can be clicked outside AutoCAD. Nothing can be drafted with in AutoCAD yet.",
+  "problems": [
+    "All five independent checks on 19 Nov failed; nothing merged that day",
+    "Drawing safety has failed ten reviews; Detention has failed four",
+    "Not proven which plug-in answers PIT, PP and CD (Tim's supervised check)"
+  ]
+}

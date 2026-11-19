@@ -698,6 +698,8 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-338** (19 Nov 2026, about 11:52 am; what the one-job release holds) First job: "A job with detention". On the sheet (ticked): "Pit schedule,Inlets (downpipes etc.),Legal point and system end"; Long section not ticked, so it is out. Checks (ticked): "Cover and grade checks,Unfinished list,Job window". With Pit, Pipe and drawing safety, which are in regardless, that is nine parts; the scope and order of work are in `stage6\ONE_JOB_RELEASE.md`. Detention is therefore back in scope and comes off the carpark; the Tank window stays paused unless the first job's storage is a tank (to ask).
 
+**D-339** (19 Nov 2026, about 11:55 am; a standing rule) "you need to create a strict rule that every chat shows exactly what part of the plan we are working on and how we are progressing towards it". Written as rule R-72 in `RULES.md` and section 1A of `CODEX_STANDING_BRIEF.md`: every reply and every helper's report starts with a four-line "WHERE WE ARE" block (release; part N of 9 and the step; Built, Checked, Installed, Accepted counts; what moved). The counts live in `C:\CE_PLAN\BOARD.json`, which the TimOS bar reads; the planning chat keeps it. He had also asked why his bar said there was no planning board: that file had never been written (its builder script does not exist yet); written by hand on 19 Nov, 11:52 am.
+
 ## Not decided (asked or raised, no decision yet)
 
 1. Whether Stage 1's civil explanation is approved (Tim moved on to the design without saying "approve"). **Settled by D-117.**

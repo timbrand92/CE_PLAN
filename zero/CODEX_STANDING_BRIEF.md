@@ -11,6 +11,11 @@
 5. **Files:** work only in the folder you are given. Delete nothing except files you created yourself in this run, inside a folder you created in this run. No bulk find-and-replace across files. Do not rewrite git history; do not push; do not merge; commit only on your own branch.
 6. **Stop and report** instead of guessing when a ruling is missing, two rulings disagree, or a limit above would have to bend.
 
+## 1A. What is being built, and only this (Tim, 19 Nov 2026, D-337, D-338, rule R-72)
+
+1. **One release for one detention job.** The whole scope and the order of work are in `C:\CE_PLAN\zero\stage6\ONE_JOB_RELEASE.md`. Anything not on that page is paused: do not build it, fix it or tidy it. If your task is not on that page, stop and report "OFF THE PLAN".
+2. **Your report starts with four lines:** Release; "Part N of 9: name" and the step; the four counts Built, Checked, Installed, Accepted as given in `C:\CE_PLAN\BOARD.json` (read it, do not edit it); and what your run moved.
+
 ## 2. Where the rules and decisions are (read before changing anything they cover)
 
 1. **What is decided now, by subject:** `C:\CE_PLAN\zero\rulings\INDEX.md` and the page for the subject in hand (26 pages, to D-297).
