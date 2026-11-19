@@ -710,6 +710,8 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-344** (19 Nov 2026, 3:40 pm by the clock; units for the first job) "Millimetres". Metre drawings come off the one-job release and go to the carpark (P-09 item 14) with their design page (`C:\CE_CIVIL` branch design/units) and the rounding call D-341. Planning chat's call, his to overturn: in a drawing set to metres the release says plainly that metres are not supported yet and does nothing, rather than drawing wrongly.
 
+**D-345** (19 Nov 2026, about 6:30 pm; the planning chat's DRAFT call so the Detention rebuild does not wait, Tim's to confirm or overturn; asked by Codex) For the one council's "at least 60 per cent of storage underground" check (D-327): storage counts as underground when it is below finished ground: detention pipes, pits, and a tank marked as buried or underground. An above-ground tank and an underdeck tank do not count. The window shows the two totals and the share, so he can see how it was split. To ask him: whether an underdeck tank counts.
+
 ## Not decided (asked or raised, no decision yet)
 
 1. Whether Stage 1's civil explanation is approved (Tim moved on to the design without saying "approve"). **Settled by D-117.**
