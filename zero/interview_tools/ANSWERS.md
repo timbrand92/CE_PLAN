@@ -381,4 +381,6 @@ Answer given in chat (planning chat's reading, not Tim's words): his button is a
 
 **TA-140 Q-L10 Band beam.** "Hatch on HATCH 74"; HATCH 74 - BANDBEAM is retired; BANDBEAM stays for the outline.
 
-Next free number: TA-141
+**TA-141 GRID retirement confirmed (after being told GRID is on 18 old jobs, 9GRID on 10).** "Yes, retire GRID". 9GRID is the office grid layer; GRID is retired from the list; old drawings keep theirs.
+
+Next free number: TA-142

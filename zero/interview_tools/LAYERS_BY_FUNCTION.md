@@ -69,7 +69,7 @@ Only master layer names, counts and job counts are written here. Names of blocks
 2. **Q-L2:** keep WATER and ELEC OVERHEAD; retire WATER LINE and ELECTRICAL OVERHEAD. CIVIL LINETYPES (BK-081) moves to WATER.
 3. **Q-L3:** TITLE TEXT not printing is a mistake; make it print.
 4. **Q-L4:** keep WALLS EXISTING; retire EXISTING WALL.
-5. **Q-L5:** "keep section mark and 9grid". SECTION TAG and GRID are retired. GRID was used on 18 old jobs, so the build checks with Tim before relying on this.
+5. **Q-L5:** "keep section mark and 9grid". SECTION TAG and GRID are retired. Tim confirmed retiring GRID after being told it is on 18 old jobs: "Yes, retire GRID" (TA-141).
 6. **Q-L6:** keep SLAB PERIMETER; retire SLAB OUTLINE.
 7. **Q-L7:** SLAB CJ only; retire CONSTRUCTION JOINT.
 8. **Q-L8:** keep HATCH BORED PIER; retire BORED PIER HATCH.
