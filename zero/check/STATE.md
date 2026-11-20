@@ -52,3 +52,11 @@ The gate between a finished piece of work and the main line of `C:\CE_CIVIL` (de
 6. **Waiting on the control room:** nothing. **Waiting on the build room:** the Pipe mock-up's next small round (three one-line faults plus Inspect and one line about the grey band; when it passes, the page and pictures go straight to Tim's room, one line to the control room); team/a3b-pit-window; the next rounds of team/night-launch and team/acad-pictures2 (reading only); codex/tests-five after its fixes; the amber marker job; then the pipe-size build.
 7. **Answers given today:** 17, of which one pass (`design\PIPE_SIZE.md`: BUILD FROM IT). Nothing has been given MERGE; the main line of `C:\CE_CIVIL` is still 22993fa.
 8. **Messages queued to the build room** (it was mid-turn; they deliver by themselves): the control room's three mock-up rulings; early word on team/held-depth and on team/a6-draw-first.
+
+## 7. UPDATE, Fri 20 Nov 2026, 14:48 by the clock. Read this after section 6.
+
+1. **Section 6 item 3 is DONE:** team/held-depth cea5567 and team/a6-draw-first 73be1d0 both have HOLD verdicts, pushed and sent to all three rooms. Their four worktrees are removed.
+2. **Still running:** the adversarial half on codex/c11-tests ad01f9d (honest half landed: ACCEPT THE LIST for Stage 1, report `c11b_honest_REPORT.md`; points for the answer: the merge gate must run the filter that leaves out the waiting tests; two Stage 1 targets, P3_40 and the detention row of P3_25, lean on Stage 2 work; the shortfall sentence is the product's own wording, for the control room to confirm once); both halves on codex/tests-a7b 893e54c. Worktrees still on disk: `c11b_honest`, `c11b_adv`, `a7b_honest`, `a7b_adv`.
+3. **Waiting on the control room:** three rulings for held depth (a new invert under a held depth; a new depth on a pit holding both; the approved Pit window has no depth box).
+4. **Answers given today:** 19; one pass; no MERGE. Main is a2aa306 (22993fa plus the build room's restart note only).
+

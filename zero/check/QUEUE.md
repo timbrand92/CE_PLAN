@@ -13,12 +13,10 @@
 
 ## 1. Being checked now
 
-Four hand-overs from the build room at 2:12 pm, all started by 2:17 pm; six helpers.
+Two test lists, handed over at 2:27 pm; four helpers.
 
-1. **team/held-depth at cea5567** (the new tip: a held depth kept; the stale cover text on the plan closed; a metre drawing refused for Pit, Pipe and LPD; the earlier findings). Both halves: Team opus honest check, Codex astra adversarial pass.
-2. **team/a6-draw-first at 73be1d0** (Stage 1 item A6: draw first, window second; its first check). Both halves: Team opus honest check, Codex astra adversarial pass.
-3. **design\PIPE_SIZE.md at d94a9e3** (its four wording fixes and D-389): one quick read, Team opus with read-only tools. The answer is BUILD FROM IT or FIX THE PAGE FIRST.
-4. **The Pipe mock-up, version 2, after its fix 6** (two set sizes, five states): the check room took ten pictures at 2:13 pm (`C:\CE_WORK\check\reports\pipe-mockup_pics\fix6`); Team opus re-check.
+1. **codex/c11-tests at ad01f9d** (the C11 list after its hold). Honest half landed 2:41 pm: ACCEPT THE LIST for Stage 1 (all eight held items in; 67 Stage 1 targets, 33 waiting, 25 controls, 1,850 older all passing; the old cheat fails all 42 new or strengthened cases). Adversarial re-pass (Codex astra) still running. No answer until both are in.
+2. **codex/tests-a7b at 893e54c** (the label test list, A7). Both halves still running.
 
 ## 2. Waiting
 
@@ -64,6 +62,9 @@ ight-scripts.md`. Ruled by the control room as D-364 items 1 to 10: the fix (tea
 
 13. **codex/tests-five at b23d46f (tests only): HOLD THE LIST, about 2:10 pm.** The six drawing targets fail for the right reasons, but the new window test class breaks older window tests in a full run; all 17 can be turned green while a hand-edited label is still overwritten and a pipe still misses the wall; a branch test writes its own join; the wall tests use exact equality against D-341. `VERDICTS\codex-tests-five.md`.
 
+14. **team/held-depth at cea5567: HOLD, 2:45 pm.** Four blockers, one cause: a worked-out cover is now drawn on the plan (it goes stale when the pipe under it is regraded, moved or erased; Pit OK overwrites or redraws the drafter's own cover text; a rounding step writes CL 10.51 for 10.500; a depth typed on a lone pit wipes its typed cover). Suite 1,906 passed, 0 failed. Three questions with the control room. One fix round left. `VERDICTS\team-held-depth.md`.
+15. **team/a6-draw-first at 73be1d0: HOLD, 2:45 pm.** Four blockers: one Undo takes back every pit of a PT (D-377 item 7); parts on locked, off or frozen layers are changed; a picked polyline is erased while the pipes take a different path; a run onto a pipe (D-374) joins nothing. Suite 1,917 passed, 0 failed. First verdict. `VERDICTS\team-a6-draw-first.md`.
+
 ## 5. Look log (the check room's own look at the branches, every 20 minutes)
 
 1. **11:05 am:** first look. Six candidates listed; one merge to main found (night-safety2).
@@ -92,3 +93,4 @@ ight-scripts.md`. Ruled by the control room as D-364 items 1 to 10: the fix (tea
 24. **2:30 pm:** two test lists handed over at 2:27 pm. **codex/c11-tests at ad01f9d** (the C11 list after its hold): both halves started (Team opus honest re-check; Codex astra adversarial re-pass, told to cheat it again). **codex/tests-a7b at 893e54c** (the test list for A7: labels, inverts and arrows; 70 failing targets claimed): Team opus honest check started; its adversarial half starts when a Codex helper comes free (three are running). Noted: that commit carries about 14,000 lines of test result files under `.work-a7`, which must come out before the list is accepted. Earlier: honest halves in for team/held-depth cea5567 (HOLD on two points) and team/a6-draw-first 73be1d0 (HOLD on one); early word sent; verdicts wait on the adversarial halves.
 25. **2:33 pm:** D-391 from the control room: the hourly-only look is withdrawn; act at once on a report or a hand-over, a 15-minute look, as many checks side by side as there are hand-overs. The adversarial half on codex/tests-a7b started (eight helpers now). State saved in `STATE.md` beside this page.
 26. **14:40:** save point written to `STATE.md` section 6 (Tim pressed Save and compact). Landed and not yet turned into verdicts: both halves on team/held-depth cea5567 and on team/a6-draw-first 73be1d0. Still running: both halves on codex/c11-tests ad01f9d and on codex/tests-a7b 893e54c.
+27. **14:48:** both HOLD verdicts written, pushed (48a00d9c) and sent: build room (both), control room (one line and three questions), AutoCAD test room (the two owed lists). Four worktrees removed. Main: one new commit a2aa306 at 14:36, the build room's `RESTART_NOTE.md` only, not a merge. The honest half on codex/c11-tests landed: ACCEPT for Stage 1; waiting for its adversarial half.
