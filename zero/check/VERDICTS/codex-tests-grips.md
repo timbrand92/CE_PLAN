@@ -45,3 +45,14 @@ Label slide (3300, 325); label across (200 and 775); inverts (1150, 7650, 750, 7
 ## 6. Binding probes for the grips BUILD (D-431; from the honest half, kept on its report)
 
 The host wiring is wiring only; a turned and an upright marker on sloping text; inverts and the arrow on a sloping pipe; a bend drop nearer the first straight and one onto a third straight; "moved by hand" in the saved record after reopen for slide, across and flip; the full clockwise cover cycle and its wrap; xref and reference-edit refusals told apart by their reason, not shared words; "unreachable" proven against LispFunction, any .lsp and the commands AutoCAD lists; another pit size with the circle radius read from PIT LABEL 2; sheets defined with figures the builder has not seen; "reads its settings from the store".
+
+
+---
+
+# Read-back of the bounded edit: codex/tests-grips at 6036bbf
+
+**Answer: ACCEPT THE LIST.** Written Sat 21 Nov 2026, about 1:36 am, by the check room alone (the control room's standing rule, STATE item 49). The edit: one file (`TextGripAcceptanceTests.cs`), 133 lines in, 27 out; nothing else changed.
+
+1. **Read:** the private `Open` that always threw is gone; the list now loads the grip route once from a documented public entry point the BUILT plug-in must expose (`CeCivil.GripTest.BenchConnection`, its methods listed in the file's own notes), so a correct build can reach all 76 cases by wiring alone; the invert's 200 mm is measured to the visible end of the text nearest the pit, whatever its alignment (a new control row with left, right and centred text); the missing-handle refusal is judged by meaning (the part named, why it cannot move, nothing changed), with "Handle FFFF is absent from this drawing. Nothing changed." accepted and a refusal that says nothing of why rejected.
+2. **One run by the check room** (own worktree, whole solution built, 0 errors, the plug-in included): 106 cases: the 10 controls pass; 76 targets fail because today's product exposes no grip connection, which a grip build supplies; 20 skipped with their reasons (the 18 WAITING rows and the two parked left corners).
+3. **What this means:** the list may go to the main line as one squashed commit. The grips BUILD owes section 6's binding probes; above all, the connection is wiring only and every counter rises inside the built grip code. Nothing about the product is accepted.
