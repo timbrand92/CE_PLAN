@@ -93,3 +93,12 @@ Brain 750, hands 762 passed and 2 skipped, bench 438, saved-drawing reader 19 pa
 ## F. Owed in AutoCAD
 
 Section 7 of the first verdict stands, with sections 8 of the honest report and 4 of the adversarial report: U and Redo once after three pits; the Pipe command's Undo from a pit and from open ground; a guide with its own linetype and widths replaced, then one U bringing the same guide back; the locked-end cover edit; the 10.490 m main and its branch level after save and reopen; erasing a main with a branch on it; Enter, Space and right-click each ending PT; every command during reference editing with nothing picked; nothing may run before the plug-in compiles.
+
+## G. Ruled since (D-410, Tim, about 4:48 pm): the last fix round is built and checked against these
+
+1. **A run through a pit meets the walls where the line crosses them;** a run ended inside a pit meets the middle of the facing wall. So a guide passing a pit off its centre is no longer refused: the pipes keep the guide's own line (first verdict blocker 3 and second verdict blocker 4 are read with this: the exact path is kept, never pulled to a centre).
+2. **A join onto a pipe with no pit gets NO invert level by default;** if he gives one it is the same as the main's, with no drop. Second verdict blocker 2 is read with this: no figure is put there by the tool unless he asks; when it is, it is worked from the main's exact figures.
+3. **A run started from the loose end of a pipe EXTENDS that pipe** (one pipe, not two).
+4. **A click always starts a pipe; P picks a polyline.** A picked polyline's width, layer and colour are ignored; the band is as wide as the pipe size.
+5. **A pipe's length MAY be typed** (the "length used" is the typed one if given, else the drawn one). Nothing in this branch may assume a length is only ever measured.
+6. **The window offers to bump smaller lengths before OK** (pipe size; not this branch's).

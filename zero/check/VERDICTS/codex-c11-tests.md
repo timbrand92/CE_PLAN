@@ -144,3 +144,7 @@ A cheat written against this exact tip still turned all 73 green by keying on th
 ## M. Follow-ups
 
 `FOLLOW_UP\part3-cover-and-grade.md` stands: the two weak controls; the three source-text guards; the Pipe working rows against D-393's three decimals when the window is built; the pipe's running number is echoed from the fixture (the numbering job tests it); a detention row among the Stage 1 controls (`AcceptanceC11ChecksTests.cs:346`); the design page's report section still says 1,975 tests and 67 targets.
+
+## N. Ruled since (D-410, Tim, about 4:48 pm): one more item for the open list
+
+6. **A pipe's length MAY be typed** (overturns D-277 DQ-049; the one reader gives one "length used": the typed length if given, else the drawn one). Any target that assumes a length is only ever measured must be restated: the sums (fall, grade, cover along the pipe) use the length used, and the window says which it is. At least one target with a typed length that differs from the drawn one.
