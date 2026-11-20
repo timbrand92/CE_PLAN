@@ -3,7 +3,7 @@
 **Kept by:** the AutoCAD test room ("CE_ACAD / acad test / 01"). **Started:** Fri 20 Nov 2026, 11:30 am.
 **Rule (D-346, added 20 Nov):** a fix may merge on its bench tests and one honest check; it is "proven" only when its owed list here has passed in AutoCAD, in pictures.
 **States:** OWED (not yet run) · PASS (date, picture) · FAIL (date, picture, what was seen) · SEEN (no ruling yet, put to Tim) · WAITS (its work is not on the main line) · PARKED (off the release).
-**Count on 20 Nov, 1:00 pm:** PASS 0 / FAIL 0 / OWED 14 / WAITS 21 / PARKED 1 (of 36). Two check-room verdicts received, both HOLD: the night scripts on the main line (section F) and the pipe's opening size (section G).
+**Count on 20 Nov, 1:10 pm:** PASS 0 / FAIL 0 / OWED 14 / WAITS 31 / PARKED 1 (of 46). Three check-room verdicts received, all HOLD: the night scripts on the main line (section F), the pipe's opening size (section G) and the windows (section H).
 
 ## A. From `stage6\STAGE1_TIMS_EYES.md` (the everyday run proves these; steps in `EVERYDAY_RUN.md`)
 
@@ -66,6 +66,21 @@ Nothing of this is shown until the fix merges. All seven WAIT. They expand item 
 35. **G-6 An older 375 pipe keeps its width and label when only the label side is changed.** Also record whether opening the drawing, or REGEN alone, changes any width or label (not proven either way on the bench). WAITS.
 36. **G-7 An upstream resize:** record every pipe below, before and after. No ruling yet (U-048): marked SEEN and put to Tim, not PASS or FAIL. WAITS.
 
-**Coming from the check room once written:** the owed list for A1 to A3 (the windows, being checked).
+## H. From the check room's verdict on the windows (team/acad-windows, A1 to A3: HOLD, two blockers; `check\VERDICTS\team-acad-windows.md` section 7)
+
+Nothing of this is shown until the fix merges. All ten WAIT. They expand items A-1 to A-3. As built today the window would not open at all (an error line on the pit and pipe commands).
+
+37. **H-1 The window opens at all and is the approved style.** WAITS.
+38. **H-2 Its size, with nothing cut off.** The night records the width and height in figures beside the picture. WAITS.
+39. **H-3 Centred on AutoCAD, and which monitor it lands on.** Needs the whole-AutoCAD-window picture (`PICTURE_ROUTE.md` condition 8); the plug-in's own picture cannot show it. WAITS.
+40. **H-4 A resize is remembered.** Only with a test settings file in the test folder, never Tim's. Before it runs, the build room must say where the size is kept; if it is anywhere in Tim's own settings, this step is NOT RUN and goes to Tim's hands. WAITS.
+41. **H-5 A damaged size file:** the window still opens at its usual size and says nothing alarming. Test file only, as H-4. WAITS.
+42. **H-6 A pipe with one end not joined shows no second pit in ANY picture** (window preview and drawing). WAITS.
+43. **H-7 Both ends joined:** both pits shown. WAITS.
+44. **H-8 A pit of unknown size is drawn dashed** in the preview. WAITS.
+45. **H-9 Cancel, the X and Escape change nothing** on the drawing. Cancel and X go through the window's own controls from inside the plug-in. Escape is a key: no key is sent by a robot, so it is raised inside the window by the plug-in or left for Tim's hands, and the page says which. WAITS.
+46. **H-10 A picture over a real test drawing, to judge the rose against the drawing's colours** (screen rule 16). In the theme Tim's AutoCAD is set to only: the colour theme is a saved AutoCAD setting and is never changed by a robot (rule 1.9). The other theme stays for Tim's hands unless he says yes in words. WAITS.
+
+**Only AutoCAD can show these, and how far a night picture goes:** screen rule 16 (H-10, one theme); rule 18, clicks and one undo (the typed U after each command is shown; a real click is Tim's); rule 28, motion (a still picture cannot show motion: Tim's hands); AutoCAD's light theme (as H-10).
 
 **Also noted, not counted as owed proofs (they are faults in the checks, asked of the build room):** CEPIT3, CEPIPE3 and CELEV2 still expect an inch drawing to be refused; CELEV1's third check expects "Chosen" where "TypedOver" is right; CETEST lists its run twice, so its lines count twice; the code-route EXPLODE check has failed in every pass since pass 1.
