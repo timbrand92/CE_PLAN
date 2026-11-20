@@ -3,7 +3,7 @@
 **Kept by:** the AutoCAD test room ("CE_ACAD / acad test / 01"). **Started:** Fri 20 Nov 2026, 11:30 am.
 **Rule (D-346, added 20 Nov):** a fix may merge on its bench tests and one honest check; it is "proven" only when its owed list here has passed in AutoCAD, in pictures.
 **States:** OWED (not yet run) · PASS (date, picture) · FAIL (date, picture, what was seen) · SEEN (no ruling yet, put to Tim) · WAITS (its work is not on the main line) · PARKED (off the release).
-**Count on 20 Nov, 1:45 pm:** PASS 0 / FAIL 0 / OWED 14 / WAITS 42 / PARKED 1 (of 57; one item struck). Three check-room verdicts received, all HOLD: the night scripts on the main line (section F), the pipe's opening size (section G) and the windows (section H).
+**Count on 20 Nov, 1:45 pm:** PASS 0 / FAIL 0 / OWED 14 / WAITS 54 / PARKED 1 (of 69; one item struck). Seven check-room verdicts received, all HOLD. Three check-room verdicts received, all HOLD: the night scripts on the main line (section F), the pipe's opening size (section G) and the windows (section H).
 
 ## A. From `stage6\STAGE1_TIMS_EYES.md` (the everyday run proves these; steps in `EVERYDAY_RUN.md`)
 
@@ -103,5 +103,27 @@ Nothing of this is shown until the fix merges. All ten WAIT. They expand items A
 58. **I-9 "TEST SWITCH ON" shows on the command line.** WAITS.
 
 **Picture rule from this verdict:** a copy of AutoCAD's own window shows the file tabs and command-line history of Tim's profile. This room looks at every picture before it leaves the PC; pictures never go into a repository.
+
+## J. From the check room's verdict on draw first, window second (team/a6-draw-first: HOLD; `check\VERDICTS\team-a6-draw-first.md` section 7)
+
+Nothing is shown until it merges. All eight WAIT. They expand item A-8. This room types PT and PIPE only, never PIT, PP or CD.
+
+59. **J-1 PT, three pits, Enter, then U once:** only the last pit goes (one pit per Undo). WAITS.
+60. **J-2 PIPE from open ground with two bends.** WAITS.
+61. **J-3 PIPE through three pits, clicking the ends only.** WAITS.
+62. **J-4 A picked polyline replaced by pipes, and one U brings the polyline back.** WAITS.
+63. **J-5 Each refused polyline** (an arc, closed, on a locked layer, in an xref; D-375): refused with the reason said, nothing drawn. WAITS.
+64. **J-6 Cancel and Escape at each point.** Cancel is typed or pressed through the window's own control; Escape is a key and no key is sent by a robot, so Escape is Tim's hands unless the plug-in raises it itself. WAITS.
+65. **J-7 Every command with the pit, tag, cover and pipe layers locked, off and frozen in turn.** Layer states are changed in the test copy only and it is closed without saving. WAITS.
+66. **J-8 Redo after each Undo.** WAITS.
+
+## K. From the check room's verdict on the held depth (team/held-depth: HOLD; `check\VERDICTS\team-held-depth.md` section 7)
+
+Nothing is shown until it merges. All four WAIT.
+
+67. **K-1 Regrade, move and erase the leaving pipe, reading the pit's cover text each time.** WAITS.
+68. **K-2 Edit and erase the cover text by hand, then Pit OK.** WAITS.
+69. **K-3 A metre drawing is refused, with nothing brought in.** By PT and PIPE from this room; the typed names PP and CD are Tim's hands. WAITS.
+70. **K-4 One Undo for each of the above.** WAITS.
 
 **Also noted, not counted as owed proofs (they are faults in the checks, asked of the build room):** CEPIT3, CEPIPE3 and CELEV2 still expect an inch drawing to be refused; CELEV1's third check expects "Chosen" where "TypedOver" is right; CETEST lists its run twice, so its lines count twice; the code-route EXPLODE check has failed in every pass since pass 1.
