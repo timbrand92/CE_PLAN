@@ -33,3 +33,11 @@ Rename the passing "target" at `:44-56` a CONTROL; a number over 99 and a letter
 ## 5. Owed in AutoCAD
 
 The attribute PIT_LABEL really read and compared on a real PIT LABEL 2; the refusal through the PT command itself; the marker on the real CE NO PLOT layer and that it does not plot; one Undo.
+
+## 6. Ruled since (control room, 8:11 pm, D-428, DRAFT)
+
+1. **Renumber is refused whole,** naming the outside pit that holds the number.
+2. **A pasted pit whose number is in use** takes the next free number, as COPY does.
+3. **A pit on a locked layer counts as in use.**
+4. **A refusal leaves the window open,** the number box red with the reason, every other answer kept.
+The rows that rest on these are marked DRAFT D-428; they came after the round and add no strike.
