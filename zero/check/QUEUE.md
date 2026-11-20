@@ -13,13 +13,11 @@
 
 ## 1. Being checked now
 
-Until 5:30 pm no new helper starts while more than four full suites are running (control room); one in, one out.
+Tim has gone home (5:08 pm): no cap on helpers; AutoCAD stays stopped.
 
-1. **codex/tests-flag at 68fcd50** (fix round). Honest half: all eight reasons closed; one stale report file. Adversarial half running.
-2. **codex/c11-tests at 335ce64** (its last round). Honest half landed (to read); adversarial half running.
-3. **codex/tests-units at df9d533** (fix round). Both halves running.
-4. **codex/tests-a7-clean at 2c426d6** (fix round). Honest half running; adversarial half to start.
-5. **codex/tests-a4c at 1ebb640** (restated to D-404). Briefs ready; both halves to start.
+1. **team/a3b-pit-window at 3ae3e9f** (Stage 1 item A3b: the Pit window to D-386 with D-390's additions; first check). Compile gate passed in the check room's own worktree (0 warnings, 0 errors). Both halves started about 5:35 pm. The check room's own pictures (bench picture mode): at 1000 by 620 with the pit joined to two pipes, step 3 is cut off at the bottom.
+2. **design/shaped-grips at 93eb70c** (`design/SHAPED_GRIPS.md`): one read, Team opus with read-only tools.
+3. **codex/tests-units at df9d533** (fix round): honest half says hold narrowly; adversarial half still running.
 
 ## 2. Waiting
 
@@ -128,3 +126,4 @@ ight-scripts.md`. Ruled by the control room as D-364 items 1 to 10: the fix (tea
 41. **16:52:** look. Main is 578de41: one more commit by the build room at 16:35, its restart note only; no code, no merge. Moving, not handed over (the build room is already on the next rounds): codex/tests-flag 6f5726e, codex/tests-units 365dbee, codex/tests-a7-clean 19324db. Still running here: the adversarial halves on the units list (df9d533) and the A7 list (2c426d6), and both halves on the A4c list (1ebb640). D-411 and D-412 recorded; the C11 list goes forward by one bounded edit read back by reading.
 42. **17:10:** **codex/tests-a7-clean at 2c426d6: HOLD THE LIST, second answer** (ten reasons: seven from rulings filed after the round, three faults of the list; one round left). Its later tips 19324db and 01b22f5 hold the 12 run files again. Tim has gone home (control room, 5:08 pm): the cap on helpers is off; AutoCAD stays stopped. D-413 and D-414 recorded. Running: the adversarial halves on the units list and the A4c list. Nothing else is handed over.
 43. **17:20:** the A4c list answered: HOLD THE LIST (`VERDICTS\codex-tests-a4c.md`); four questions to the control room. D-416: the round count restarts from the decisions record at D-416; each list carries only its own faults. Still running: the adversarial half on the units list. Not handed over, moving: the next rounds of the C11, flag, units and A4c lists, held depth, the Pit window, and new branches codex/doorway and codex/tests-pipesize.
+44. **17:34:** two hand-overs started: team/a3b-pit-window 3ae3e9f (compile gate passed; both halves; worktrees `a3b_honest`, `a3b_adv`; briefs `a3b_*.md`; own pictures in the reports folder under `a3b_pics`) and the shaped-grips design page 93eb70c (one read-only helper; brief `shaped-grips_read.md`). The build room has stripped the run files from codex/tests-a7-clean (tip ffe8175).
