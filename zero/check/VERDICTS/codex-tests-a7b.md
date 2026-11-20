@@ -45,3 +45,11 @@ Each is written out as Tim could answer it in the two reports (honest section 6;
 ## 6. Follow-ups
 
 In the two reports and `FOLLOW_UP\part2-pit-and-pipe.md`: text heights at 1:100 and the arrow's size; the "MIN." tick; mirror, move, a pit dropped mid-pipe, the callout by a grip; text against another pipe, label or pit; a pipe at an angle; the on-screen test `ListControlsTests` flakes by itself (an older fault of the windows, seen with the PC in use); `TESTS_REPORT.md` links to a folder that is not in the commit.
+
+## 7. Ruled since (control room, about 3:10 pm, D-399, with Tim's D-398)
+
+1. **"CL TBC" only** for a cover not known (Tim: "'CL 12.95', and 'CL TBC' when not known").
+2. **Ticks:** each piece of text has its own tick on the part (D-377 item 6); the run window's one "Invert levels" tick sets both ends on every pipe of the run (D-393). Test both.
+3. **Placing:** the cover level on a turned pit is at 45 degrees to the SHEET, off the corner nearest the top right; the pit number stays flat and upright (D-267); the arrow is centred below, between the two levels, else on the label's side; the 900 mm is from the pit centre (D-366); a plastic pit reads "PP" over "CL 5.65" as one two-line text at 45 degrees; the pit number is always the office circle tag.
+4. **The four distances are OFFICE settings** in Stage 1.
+5. **NOT ruled, mark WAITING** (with Tim's room): "above" on a right-to-left or upright pipe; what the 200 mm measures to; which side first beside the pit; where a slid invert ends; an old label whose size cannot be read; a worked grade's decimal places; Reverse with both ends typed; a later pipe through an existing label.

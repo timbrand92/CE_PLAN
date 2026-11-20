@@ -99,3 +99,9 @@ The cover limits at 0, 5 and 10 mm tolerance behave at the limit and 0.1 mm eith
 ## F. Follow-ups
 
 `FOLLOW_UP\part3-cover-and-grade.md`: the two weak controls (council arrival; the rounding-source control) and the three source-text guards still pass with their faults in; the tolerance entry (2.5 refused, 99,999 accepted by the Job window: Stage 2, a draft).
+
+## G. Ruled since (control room, about 3:10 pm, D-399, with Tim's D-398)
+
+1. **`P3_40` and the detention row of `P3_25`:** mark them WAITING.
+2. **The shortfall sentence, a DRAFT:** "Short by 3 mm at P3, Pipe 7 (P4 to P3): cover 297 mm, needs 300 mm." Tim ruled that every pipe has its own running number, never printed, shown as "Pipe 7 (P1 to P2)". The test holds the figures, the place and the pipe; the word order is a draft.
+3. **"MIN." stays** with both ends measured.
