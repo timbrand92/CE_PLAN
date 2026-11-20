@@ -82,3 +82,10 @@ ight_check.md`. When they finish: read the check, send the failed ones back for 
 3. **Research pages R-017 to R-019 are DONE** (filed before this order). The nine clashes (U-127) wait for Monday.
 4. **New for Tim on Monday:** U-159 (his login name in the block drawings), U-160 (web addresses in their class records), plus everything in section 9 point 3 and U-153 to U-158.
 5. **Count:** 195 of 279 closed.
+
+## 11. Update, Fri 20 Nov 2026, about 10:35 pm: pictures passed
+
+1. **The check room's third look PASSES** the single-pipe window (seven states), the CE Settings window and sheets 1, 4 and 5, after one fit edit, which the room made itself (no helper). They may go to Tim on Monday. Verdict: `check/VERDICTS/timroom-night-pictures.md`, "Third look".
+2. **Finish items left as the check room's "your call"**: a column heading 2 px over in the no-level state; sheet 1's last line not a full sentence; the Settings "office value" heading 4 px over its box.
+3. **New for Monday:** U-161, which green and amber the windows use.
+4. **This room is stopped** until Tim speaks (D-434). Count: 195 of 280 closed.
