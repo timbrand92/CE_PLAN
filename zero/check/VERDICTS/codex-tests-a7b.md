@@ -171,3 +171,14 @@ Follow-ups: the sleeve's two clicks belong to the pipe window's list, the words 
 ## 23. Ruled since (control room, 7:23 pm, D-424, DRAFT, in line with D-411)
 
 A WORKED grade shows exact in the window to at most two decimals, trailing noughts dropped, with the grey word "worked out": 0.20 m over 18.92 m is "94.6" in the box and "1 IN 95" on the sheet; 200.04 in the box, "1 IN 200" on the sheet. A typed grade shows as typed in both. Checks use the exact figure. For reason 8 of section 19: the two window rows stay as written and are marked DRAFT D-424; the sheet halves stay firm (D-406 item 2). This ruling came after the round and adds no strike.
+
+## 24. Correction and two more reasons (about 7:50 pm): the adversarial report was not finished when the third answer was written
+
+The third answer was written from the adversarial report as it stood at 7:17 pm; the reviewer was still working and its final report (7:44 pm, same file) adds two reasons and corrects one line of section 18. The check room's mistake: it answered before the helper had finished. The answer is still HOLD THE LIST, still round one of two from the D-416 baseline; the list of reasons is now TEN.
+
+**Correction to section 18:** of the three carried faults, the 9 m grade and the APPROX. wording are closed; **the later-kind refusal is only PARTLY closed** (reason 10 below).
+
+9. **Every pit's circle can print "P7".** Only two comparisons read the PIT_LABEL attribute's value (`Stage1A7DrawingFinishSituations.cs:33`, `Stage1A7PitTextSituations.cs:49`) and both expect P7: a build that writes a constant P7 into every tag, with each pit's real number, block, position and style right, passes; P3 and P12 both print P7. Read each tag's attribute against its own pit, with two different numbers, and again after one is renumbered (D-398 item 5, D-404 item 2).
+10. **Three later pipe kinds can still be drawn while their targets are green** (the carried fault, section 12 reason 9). `Stage1A7RunInvertTests.cs:215-217` finds the offered kinds by the start of their caption and passes silently when it finds none: with the three captions reworded, all five targets passed while the reviewer's own tests picked those kinds and drew a band on STORMWATER CHARGED PIPE, STORMWATER SUSPENDED PIPE and STORMWATER DETENTION PIPE. Read the offered choices through the field itself, try every kind that is not the ordinary pipe by its identity, require the refusal in words and no new object (D-377 item 1).
+
+Proofs: `C:\CE_WORK\check\reports\a7d_adv_proofs\reader-counterexamples.txt`, `offered-kind.log`. The final report also notes the two worked-grade window rows now need the DRAFT D-424 mark (section 23 says the same).
