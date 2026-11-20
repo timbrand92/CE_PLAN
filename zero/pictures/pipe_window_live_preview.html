@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pipe window with live plan</title>
+<style>
+  :root{--win:#2B2D30;--card:#383B40;--well:#232528;--inp:#4A4D55;--bd:#4A4D53;--ibd:#8A8E96;--cad:#16181B;
+        --text:#ECEDEF;--body:#D2D5DA;--grey:#A9AEB6;--unit:#C8CBD0;--amber:#F5C04A;--green:#5ED08F;--rose:#FF70B3;--dark:#10131A}
+  *{box-sizing:border-box}
+  html,body{margin:0;background:#1E1F22;font-family:"Segoe UI",Arial,sans-serif;font-size:14px;color:var(--body);overflow:hidden}
+  body{padding:20px;font-variant-numeric:tabular-nums}
+  body.laptop{--frw:1280px;--frh:720px;--ww:1000px;--wh:620px;--ph:176px;--pad:16px;--gap:8px;--cp:8px 16px;--row:20px;--w1:388px;--w2:212px}
+  body.desktop{--frw:1920px;--frh:1040px;--ww:1240px;--wh:780px;--ph:225px;--pad:16px;--gap:16px;--cp:16px;--row:20px;--w1:470px;--w2:290px}
+
+  .frame{position:relative;width:var(--frw);height:var(--frh);background:#0F1113;border:0;overflow:hidden;box-shadow:0 0 0 2px #3A3D42}
+  .strip{position:absolute;left:0;top:0;right:0;height:24px;background:#26282B;color:var(--grey);font-size:12px;line-height:24px;padding:0 12px;border-bottom:1px solid #34373C}
+  .bg{position:absolute;left:0;top:24px}
+
+  .win{position:absolute;left:50%;top:50%;width:var(--ww);height:var(--wh);transform:translate(-50%,-50%);
+       background:var(--win);border:1px solid var(--bd);border-radius:8px;box-shadow:0 12px 40px rgba(0,0,0,.6);
+       display:flex;flex-direction:column;overflow:hidden}
+  .tb{height:32px;flex:none;display:flex;align-items:center;justify-content:space-between;padding:0 16px;color:var(--text);border-bottom:1px solid #202225}
+  .tb svg{display:block}
+  .wb{flex:1;min-height:0;display:flex;flex-direction:column;gap:var(--gap);padding:var(--pad)}
+
+  .planwrap{flex:none;display:flex;flex-direction:column}
+  .panel{position:relative;height:var(--ph);background:var(--cad);border:1px solid var(--bd);border-radius:8px;overflow:hidden}
+  .panel h2{position:absolute;left:16px;top:8px;margin:0;font-size:14px;font-weight:400;color:var(--text);z-index:2}
+  .panel svg{position:absolute;left:0;top:0;display:block}
+  .lv{font-size:12px;font-weight:400;color:var(--grey);margin-left:16px}
+
+  .band{flex:none;background:var(--green);color:var(--dark);border-radius:8px;display:flex;align-items:center;gap:16px;padding:8px 16px}
+  .desktop .band{padding:12px 16px}
+  .laptop .ans{line-height:1}
+  .laptop .bar{height:48px}
+  .pill{border:1px solid var(--dark);border-radius:8px;padding:2px 8px;font-size:12px;white-space:nowrap}
+  .ans{font-size:24px;font-weight:700;line-height:1.2;white-space:nowrap}
+  .bn{flex:1;text-align:right;font-size:12px;line-height:1.3}
+  .desktop .bn{font-size:14px}
+
+  .cols{flex:1;min-height:0;display:flex;gap:var(--gap)}
+  .card{background:var(--card);border-radius:8px;padding:var(--cp);border:1px solid #2F3236;min-width:0;overflow:hidden}
+  .c1{flex:none;width:var(--w1)}
+  .c2{flex:none;width:var(--w2)}
+  .c3{flex:1}
+  .ch{display:flex;align-items:center;gap:8px;color:var(--text);min-height:22px}
+  .num{width:22px;height:22px;border:1px solid var(--ibd);border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--text);flex:none}
+  .ch .sp{flex:1}
+  .why{font-size:12px;color:var(--grey);margin:8px 0;line-height:16px}
+  .tag{border-radius:8px;padding:1px 8px;font-size:12px;line-height:18px;white-space:nowrap}
+  .tag.out{border:1px solid var(--ibd);color:var(--unit);background:transparent}
+
+  .rows{display:flex;flex-direction:column;gap:8px}
+  .desktop .rows{gap:16px}
+  .r{display:flex;gap:8px;align-items:flex-end}
+  .desktop .r{gap:16px}
+  .f{display:flex;flex-direction:column}
+  .l{font-size:12px;color:var(--grey);line-height:16px}
+  .box{height:30px;background:var(--inp);border:1px solid var(--ibd);border-radius:8px;display:flex;align-items:center;padding:0 8px;color:var(--text);gap:8px;white-space:nowrap}
+  .box .u{margin-left:auto;color:var(--unit)}
+  .box.dis{background:#34373C;border-color:#5A5D63;color:#A0A4AB}
+  .box.dis .u{color:#A0A4AB}
+  .grp{display:flex;align-items:center;gap:8px}
+  .ticks{display:flex;gap:16px;color:var(--body)}
+  .tk{display:flex;align-items:center;gap:8px;line-height:20px;white-space:nowrap}
+  .tb16{width:16px;height:16px;border-radius:4px;background:var(--inp);border:1px solid var(--ibd);display:flex;align-items:center;justify-content:center;flex:none}
+  .tk.off{color:var(--body)}
+  .btn{height:30px;border:1px solid var(--ibd);border-radius:8px;background:transparent;color:var(--text);padding:0 16px;display:flex;align-items:center;font-size:14px;font-family:inherit;white-space:nowrap}
+  .grey{font-size:12px;color:var(--grey);line-height:16px}
+  .sp1{flex:1}
+
+  /* step 2 */
+  table.sum{border-collapse:collapse}
+  .sum td{padding:0;vertical-align:middle;color:var(--text);line-height:var(--row);height:var(--row)}
+  .s2 .sg{width:20px;text-align:center;color:var(--unit)}
+  .s2 .lb{padding-right:8px;color:var(--body)}
+  .s2 .fg{text-align:right;min-width:64px}
+  .s2 tr.res .fg{border-top:1px solid var(--grey)}
+  .s2 tr.res .fg b{font-weight:700;display:inline-block;border-bottom:3px double var(--grey);padding-bottom:1px}
+  .p2{line-height:var(--row);color:var(--body);margin-top:8px}
+  .p2.g{color:var(--grey);margin-top:0}
+  .desktop .p2{margin-top:8px}
+
+  /* step 3 */
+  .t3{table-layout:fixed;width:100%}
+  .t3 th,.t3 td{white-space:nowrap}
+  .t3 th{font-weight:400;font-size:12px;color:var(--grey);text-align:right;padding:0;line-height:14px;vertical-align:bottom}
+  .t3 td{height:var(--row);line-height:var(--row);padding:0;text-align:right;color:var(--text)}
+  .t3 .pn{text-align:left;color:var(--text)}
+  .t3 .sg{text-align:center;color:var(--unit)}
+  .t3 .nt{text-align:left;padding-left:4px;font-size:12px;color:var(--grey)}
+  .t3 td:nth-child(9),.t3 th:nth-child(9){border-left:1px solid var(--bd)}
+  .t3 td.fin{border-top:1px solid var(--grey)}
+  .t3 td.fin b{font-weight:700;display:inline-block;border-bottom:3px double var(--grey);line-height:16px}
+  .t3 .none{font-size:12px;color:var(--grey)}
+  .t3 tr.top td.iv{border-bottom:0}
+  #side{display:block}
+  .s3b{margin-top:0}
+  .s3b .grey{margin-top:0}
+  .desktop .s3b .grey{margin-top:8px}
+
+  .bar{height:56px;flex:none;border-top:1px solid #202225;display:flex;align-items:center;padding:0 16px;gap:8px}
+  .bar .sp{flex:1}
+  .bar .btn{height:32px}
+  .bar .ok{background:var(--rose);color:var(--dark);border-color:var(--rose);min-width:72px;justify-content:center}
+  .bar .cn{min-width:72px;justify-content:center}
+  .bar .note{margin-left:8px}
+
+  .cap{margin:10px 0 0;font-size:14px;color:var(--text);line-height:20px}
+</style>
+</head>
+<body class="laptop">
+<div class="frame" id="frame">
+  <div class="strip">AutoCAD window (made-up)</div>
+  <svg class="bg" id="bg"></svg>
+
+  <div class="win">
+    <div class="tb"><span>Pipe &middot; P6 to P1 &middot; 5 pipes &middot; 31.2 m</span>
+      <svg width="12" height="12" viewBox="0 0 12 12"><path d="M1 1l10 10M11 1L1 11" stroke="#C8CBD0" stroke-width="1.3" fill="none"/></svg></div>
+
+    <div class="wb">
+      <div class="planwrap">
+        <div class="panel" id="panel"><h2>The plan<span class="lv">Live: changes as you type. Made-up plan for this picture.</span></h2></div>
+      </div>
+
+      <div class="band"><span class="pill">Suits</span><span class="ans">Fall 1 in 100 on 5 pipes</span><span class="bn">Depth over pipe: Not known</span></div>
+
+      <div class="cols">
+        <div class="card c1">
+          <div class="ch"><span class="num">1</span><span>What you type</span><span class="sp"></span><span class="tag out">Nothing needs you</span></div>
+          <div class="why">The few figures only you can give. Everything else is worked out.</div>
+          <div class="rows">
+            <div class="r">
+              <div class="f"><span class="l">Size</span><div class="box" style="width:96px">100<span class="u">dia.</span><span class="chev"></span></div></div>
+              <div class="f"><span class="l">Material</span>
+                <div class="grp"><div class="box" style="width:80px">UPVC<span class="u chev"></span></div><span class="grey">standard</span></div></div>
+              <div class="f"><span class="l">Grade</span><div class="box" style="width:104px">1 in 100<span class="u chev"></span></div></div>
+            </div>
+            <div class="r">
+              <div class="f"><span class="l">Level at</span>
+                <div class="grp"><div class="box" style="width:64px">P1<span class="u chev"></span></div>
+                <div class="box" style="width:96px">12.00<span class="u">m</span></div></div></div>
+              <div class="sp1"></div>
+              <span class="grey">Office defaults: no job set yet</span>
+            </div>
+            <div class="ticks">
+              <div class="tk"><span class="tb16"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#ECEDEF" stroke-width="1.6" fill="none"/></svg></span>Label</div>
+              <div class="tk"><span class="tb16"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#ECEDEF" stroke-width="1.6" fill="none"/></svg></span>Invert levels</div>
+              <div class="tk"><span class="tb16"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#ECEDEF" stroke-width="1.6" fill="none"/></svg></span>Arrow</div>
+            </div>
+            <div class="r" style="align-items:center">
+              <div class="tk off"><span class="tb16"></span>Sleeved inside</div>
+              <div class="box dis" style="width:104px">150 UPVC</div>
+              <div class="sp1"></div>
+              <div class="btn">Reverse flow</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card c2 s2">
+          <div class="ch"><span class="num">2</span><span>What the drawing gives</span></div>
+          <div class="why">Read off what you drew. Change the drawing, not this window.</div>
+          <table class="sum" id="t2"></table>
+          <div class="p2">Joined: P6, P5, P4, P3, P2, P1</div>
+          <div class="p2 g">What is over it: Not known</div>
+        </div>
+
+        <div class="card c3">
+          <div class="ch"><span class="num">3</span><span>The answers</span></div>
+          <div class="why">Does every pipe fall enough?</div>
+          <table class="sum t3" id="t3" style="width:100%"></table>
+          <div class="s3b"><svg id="side"></svg><div class="grey" id="n3">Worked from exact figures; the plan shows two decimals.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bar">
+      <div class="btn">Inspect</div><span class="grey note">Steps this window aside so you can look at the drawing. Keeps what you typed.</span>
+      <span class="sp"></span>
+      <div class="btn cn">Cancel</div><div class="btn ok">OK</div>
+    </div>
+  </div>
+</div>
+<p class="cap" id="cap"></p>
+
+<script>
+var NS="http://www.w3.org/2000/svg",CAD="#16181B",BLUE="#3F7BE0",RED="#FF5A5A";
+function el(n,a,t){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);if(t!==undefined)e.textContent=t;return e}
+var q=(location.search.match(/v=(\w+)/)||[])[1]==="desktop"?"desktop":"laptop";
+document.body.className=q;
+document.getElementById("cap").textContent=q==="laptop"?"Laptop size: 1000 x 620 in a 1280 x 720 AutoCAD window":"Desktop size: 1240 x 780 in a 1920 x 1040 AutoCAD window";
+Array.prototype.forEach.call(document.querySelectorAll(".chev"),function(e){e.innerHTML='<svg width="10" height="6" viewBox="0 0 10 6" style="display:block"><path d="M1 1l4 4 4-4" fill="none" stroke="#C8CBD0" stroke-width="1.5"/></svg>'});
+
+/* ---- the figures, kept exact in whole millimetres; only what is printed is rounded ---- */
+var LEN=[620,600,650,630,620];            // pipe j joins P(j+1) and P(j+2), length in cm: P2-P1, P3-P2, P4-P3, P5-P4, P6-P5
+var CLV=[1295,1302,1310,1319,1326,1333];  // made-up cover levels P1..P6 in cm
+var FALLMM=LEN.map(function(c){return c/10});   // 1 in 100 exactly: length / 100 (6.20 m -> 0.062 m = 62 mm)
+var DROPMM=[0,20,20,20,20,0];             // pit drop 0.02 at each pit that has a pipe coming in; P6 is the top, none
+var LV=[12000];                            // exact running level in mm
+for(var k=1;k<6;k++)LV[k]=LV[k-1]+FALLMM[k-1]+DROPMM[k];
+function f3(mm){return (mm/1000).toFixed(3)}
+function f2r(mm){return (Math.floor((mm+5)/10)/100).toFixed(2)}   // round half up to 2 decimals, only for printing
+function m2(c){return (c/100).toFixed(2)}
+function f2(c){return (c/100).toFixed(2)}
+var FALLC=FALLMM.map(function(m){return m/10});
+
+/* step 2 */
+(function(){var t=document.getElementById("t2"),h="";
+  for(var j=4;j>=0;j--){h+='<tr><td class="sg">'+(j===4?'':'+')+'</td><td class="lb">P'+(j+2)+' to P'+(j+1)+'</td><td class="fg">'+m2(LEN[j])+' m</td></tr>'}
+  var tot=LEN.reduce(function(a,b){return a+b},0);
+  h+='<tr class="res"><td class="sg">=</td><td class="lb">measured</td><td class="fg"><b>'+m2(tot)+' m</b></td></tr>';
+  t.innerHTML=h;window.TOT=tot})();
+
+/* step 3: one sum per pit  =  level below + fall of the pipe below + pit drop (exact, 3 decimals); last column is what the plan prints */
+(function(){var t=document.getElementById("t3");
+  var W=[20,44,14,38,14,38,14,46,40,44];
+  var h='<colgroup>'+W.map(function(w){return '<col style="width:'+w+'px">'}).join('')+'</colgroup>';
+  h+='<tr><th style="text-align:left">Pit</th><th>Below</th><th></th><th>Fall</th><th></th><th>Pit<br>drop</th><th></th><th>Level,<br>worked out</th><th>On the<br>plan</th><th></th></tr>';
+  for(var k=0;k<6;k++){
+    var fin=(k===5);
+    if(k===0){h+='<tr><td class="pn">P1</td><td></td><td></td><td></td><td></td><td></td><td class="sg">=</td><td>'+f3(LV[0])+'</td><td>'+f2r(LV[0])+'</td><td class="nt" style="color:var(--text)">typed</td></tr>'}
+    else{h+='<tr><td class="pn">P'+(k+1)+'</td><td>'+f3(LV[k-1])+'</td><td class="sg">+</td><td>'+f3(FALLMM[k-1])+'</td><td class="sg">+</td>'+
+      (DROPMM[k]?'<td>'+f3(DROPMM[k])+'</td>':'<td class="none">none</td>')+'<td class="sg">=</td>'+
+      '<td'+(fin?' class="fin"><b>'+f3(LV[k])+'</b>':'>'+f3(LV[k]))+'</td><td>'+f2r(LV[k])+'</td><td class="nt">1 in 100</td></tr>'}
+  }
+  t.innerHTML=h;
+  /* the sums add up exactly as printed, and every pipe is exactly 1 in 100 */
+  for(var k=1;k<6;k++){if(LV[k]!==LV[k-1]+FALLMM[k-1]+DROPMM[k])throw new Error("sum");if(FALLMM[k-1]*100!==LEN[k-1]*10)throw new Error("grade")}})();
+
+/* side view of the run: falls toward P1, stepping at each pit (steps drawn bigger than real); full width of its card */
+(function(){var s=document.getElementById("side"),W=s.parentNode.clientWidth,H=q==="laptop"?32:52;
+  if(q==="desktop")document.getElementById("n3").textContent+=" The side view falls to P1; it is not to scale.";
+  s.setAttribute("width",W);s.setAttribute("height",H);s.setAttribute("viewBox","0 0 "+W+" "+H);s.style.flex="none";
+  var ch=[0],i;for(i=0;i<5;i++)ch.push(ch[i]+LEN[i]);
+  var x0=12,x1=W-12,base=H-18;
+  function X(c){return x0+(x1-x0)*c/ch[5]}
+  var kf=q==="laptop"?0.15:0.45, st=q==="laptop"?1.5:4, y=base-2;
+  var cur=y;
+  var d="M"+X(0)+" "+cur;
+  for(i=0;i<5;i++){
+    cur-=FALLC[i]*kf;d+=" L"+X(ch[i+1])+" "+cur;
+    if(i<4){cur-=st;d+=" L"+X(ch[i+1])+" "+cur}
+  }
+  s.appendChild(el("path",{d:d,fill:"none",stroke:"#ECEDEF","stroke-width":2,"stroke-linejoin":"round"}));
+  for(i=0;i<6;i++){
+    s.appendChild(el("line",{x1:X(ch[i]),y1:base+1,x2:X(ch[i]),y2:base+3,stroke:"#8A8E96","stroke-width":1}));
+    s.appendChild(el("text",{x:X(ch[i]),y:H-3,"text-anchor":"middle","font-size":12,style:"fill:#C8CBD0;font-family:'Segoe UI',Arial,sans-serif"},"P"+(i+1)))}
+  s.appendChild(el("line",{x1:x0-8,y1:base+1,x2:x1+8,y2:base+1,stroke:"#5A5D63","stroke-width":1}));
+})();
+
+/* faint AutoCAD behind */
+(function(){var f=document.getElementById("frame"),W=f.clientWidth,H=f.clientHeight-24,s=document.getElementById("bg");
+  s.setAttribute("width",W);s.setAttribute("height",H);s.setAttribute("viewBox","0 0 "+W+" "+H);
+  var seed=7;function r(){seed=(seed*16807)%2147483647;return seed/2147483647}
+  for(var i=0;i<46;i++){var x=r()*W,y=r()*H,w=60+r()*260,h=30+r()*160;
+    s.appendChild(el("rect",{x:x,y:y,width:w,height:h,fill:"none",stroke:"#2A2E34","stroke-width":1}));
+    s.appendChild(el("line",{x1:x,y1:y,x2:x+w+r()*200,y2:y+(r()-.5)*260,stroke:"#252930","stroke-width":1}))}
+  for(var j=0;j<14;j++){var yy=r()*H;s.appendChild(el("line",{x1:0,y1:yy,x2:W,y2:yy+(r()-.5)*120,stroke:"#202328","stroke-width":1}))}})();
+
+/* the plan, a piece of a 1:100 stormwater plan, run across the top */
+var NOTES=[];
+(function(){var host=document.getElementById("panel"),W=host.clientWidth,H=host.clientHeight;
+  var s=el("svg",{width:W,height:H,viewBox:"0 0 "+W+" "+H});host.appendChild(s);
+  var fs=12,F="font-family:Arial,'Segoe UI',sans-serif";
+  function line(x1,y1,x2,y2,c,w,d){var a={x1:x1,y1:y1,x2:x2,y2:y2,stroke:c,"stroke-width":w};if(d)a["stroke-dasharray"]=d;s.appendChild(el("line",a))}
+  function txt(x,y,str,fill,anchor,rot,size,ls){var a={x:0,y:0,"font-size":size||fs,"text-anchor":anchor||"middle",style:"fill:"+(fill||"#fff")+";"+F+(ls?";letter-spacing:"+ls+"px":""),dy:"0.35em"};
+    a.transform="translate("+x+" "+y+")"+(rot?" rotate("+rot+")":"");var t=el("text",a,str);s.appendChild(t);return t}
+  var d=el("defs",{});
+  var p=el("pattern",{id:"hatch",width:6,height:6,patternUnits:"userSpaceOnUse",patternTransform:"rotate(45)"});p.appendChild(el("line",{x1:0,y1:0,x2:0,y2:6,stroke:"#9AA0A8","stroke-width":1}));d.appendChild(p);
+  s.appendChild(d);
+
+  // run in mm: five pipes, one gentle change of direction (5 degrees up) after P3
+  var th=5*Math.PI/180,P=[[0,0],[LEN[0]*10,0],[(LEN[0]+LEN[1])*10,0]];
+  for(var i=2;i<5;i++){var L=LEN[i]*10;P.push([P[i][0]+L*Math.cos(th),P[i][1]+L*Math.sin(th)])}
+  var mxL=28,mxR=q==="laptop"?72:64,K=(W-mxL-mxR)/P[5][0];
+  var rise=P[5][1]*K,pr=Math.max(225*K,6.5);
+  var wallY=q==="laptop"?30:34,wallT=q==="laptop"?7:8,wallB=wallY+wallT;
+  var needTop=52,needBot=22+18+6,extra=Math.max(0,(H-(wallB+needTop+rise+needBot))/2);
+  var y6=wallB+needTop+extra,y1=y6+rise,fy=y1+22+extra*0.6;
+  function PX(i){return [mxL+P[i][0]*K, y1-P[i][1]*K]}
+
+  // house wall, hatched, along the top
+  s.appendChild(el("rect",{x:0,y:wallY,width:W,height:wallT,fill:"url(#hatch)"}));
+  line(0,wallY,W,wallY,"#E0E2E5",1.2);line(0,wallB,W,wallB,"#E0E2E5",1.2);
+  txt(W-12,wallY-11,"HOUSE","#C8CBD0","end");
+  // boundary fence along the bottom
+  line(0,fy,W,fy,"#C8CBD0",1.2);
+  for(var fx=10;fx<W;fx+=28)line(fx,fy-3,fx,fy+3,"#C8CBD0",1);
+  txt(12,fy+13,"BOUNDARY FENCE","#C8CBD0","start");
+  txt(W-12,fy+13,"1:100","#C8CBD0","end");
+
+  var EW=3.5,OFF=EW+75*K+4.5,LOFF=OFF+4;   // pipe edge, 75 mm clear, half a text height; the label sits 4 px further out
+  var CLR=8, CLRT=8, LH=12;                        // clear gap kept from any cover level text; line pitch of a stacked label
+  function width(str){var t=txt(0,0,str,"#fff","middle",0,fs);var w=t.getComputedTextLength?t.getComputedTextLength():100;s.removeChild(t);return w}
+  // pipes first (pits sit on top)
+  for(var j=0;j<5;j++){
+    var A=PX(j),B=PX(j+1),dx=B[0]-A[0],dy=B[1]-A[1],Ln=Math.sqrt(dx*dx+dy*dy),ux=dx/Ln,uy=dy/Ln,nx=uy,ny=-ux,ang=Math.atan2(dy,dx)*180/Math.PI;
+    var ax=A[0]+ux*pr,ay=A[1]+uy*pr,bx=B[0]-ux*pr,by=B[1]-uy*pr;
+    line(ax,ay,bx,by,BLUE,3,"9 5");
+    line(ax+nx*EW,ay+ny*EW,bx+nx*EW,by+ny*EW,"#fff",1.6);
+    line(ax-nx*EW,ay-ny*EW,bx-nx*EW,by-ny*EW,"#fff",1.6);
+    var mx=(A[0]+B[0])/2,my=(A[1]+B[1])/2;
+    // (a) label above, turned with the pipe. The cover level text at the left pit leans out at 45 degrees:
+    //     keep the label CLR px clear of it, and clear of the P circle at the right pit
+    function x0min(hh,c){return Math.max(pr+10,hh+c*1.414+10.4)}
+    var s1=Math.max(pr+10,12+4);
+    function put(str,along,h){var px=A[0]+ux*along+nx*h,py=A[1]+uy*along+ny*h;return txt(px,py,str,"#fff","middle",ang,fs)}
+    var L1="100 DIA. UPVC PIPE AT 1 IN 100 MIN.",L2a="100 DIA. UPVC PIPE",L2b="AT 1 IN 100 MIN.";
+    var w1=width(L1),w2=Math.max(width(L2a),width(L2b));
+    var sa=x0min(LOFF+7,CLRT),ava=Ln-sa-s1;                 // one line
+    var sb=x0min(LOFF+LH+7,CLRT),avb=Ln-sb-s1;              // two stacked lines
+    if(w1<=ava){put(L1,sa+(ava-w1)/2+w1/2,LOFF);NOTES.push("pipe "+(j+1)+" one line ("+w1.toFixed(0)+" <= "+ava.toFixed(0)+")")}
+    else if(w2<=avb){var cc=Math.min(Math.max(Ln/2,sb+w2/2),Ln-s1-w2/2);put(L2a,cc,LOFF+LH);put(L2b,cc,LOFF);NOTES.push("pipe "+(j+1)+" stacked ("+w2.toFixed(0)+" <= "+avb.toFixed(0)+")")}
+    else{var sd=x0min(LOFF+7,CLR),bw=Ln-sd-s1,bh=14,bc=sd+bw/2;
+      s.appendChild(el("rect",{x:-bw/2,y:-bh/2,width:bw,height:bh,rx:2,fill:"none",stroke:"#8A8E96","stroke-width":1,"stroke-dasharray":"4 3",transform:"translate("+(A[0]+ux*bc+nx*LOFF)+" "+(A[1]+uy*bc+ny*LOFF)+") rotate("+ang+")"}));
+      NOTES.push("pipe "+(j+1)+" dashed (one line "+w1.toFixed(0)+" > "+ava.toFixed(0)+"; stacked "+w2.toFixed(0)+" > "+avb.toFixed(0)+")")}
+    // (b) red invert levels, opposite side, 200 mm in from each pit; same exact figures as step 3, rounded half up for printing
+    var lo=LV[j],hi=LV[j]+FALLMM[j],ox=-nx*OFF,oy=-ny*OFF,e=200*K;
+    txt(ax+ux*e+ox,ay+uy*e+oy,"IL "+f2r(lo),RED,"start",ang);
+    txt(bx-ux*e+ox,by-uy*e+oy,"IL "+f2r(hi),RED,"end",ang);
+    // (c) flow arrow 750 mm long, opposite side, centred, pointing to P1 (the low pit, on the left)
+    var hl=375*K,cx=mx+ox,cy=my+oy,tx=cx-ux*hl,ty=cy-uy*hl,hx=cx+ux*hl,hy=cy+uy*hl;
+    line(hx,hy,tx+ux*5,ty+uy*5,"#fff",1.4);
+    s.appendChild(el("polygon",{points:[tx,ty,tx+ux*7+nx*3,ty+uy*7+ny*3,tx+ux*7-nx*3,ty+uy*7-ny*3].reduce(function(a,v,i){return a+(i%2?",":(i?" ":""))+v.toFixed(1)},""),fill:"#fff"}));
+  }
+  // pits, numbers flat straight above, cover levels at 45 degrees off the top-right corner
+  for(var i=0;i<6;i++){var c=PX(i);
+    s.appendChild(el("rect",{x:c[0]-pr,y:c[1]-pr,width:2*pr,height:2*pr,fill:CAD,stroke:"#B8BCC4","stroke-width":1.2}));
+    line(c[0]-pr,c[1]-pr,c[0]+pr,c[1]+pr,"#8A8E96",1);line(c[0]-pr,c[1]+pr,c[0]+pr,c[1]-pr,"#8A8E96",1);
+    var co=31,cr=12;
+    s.appendChild(el("circle",{cx:c[0],cy:c[1]-co,r:cr,fill:CAD,stroke:"#E0E2E5","stroke-width":1.2}));
+    txt(c[0],c[1]-co,"P"+(i+1),"#E0E2E5","middle",0,14);
+    txt(c[0]+pr+13,c[1]-pr-9,"CL "+f2(CLV[i]),"#E0E2E5","start",-45)}
+})();
+document.body.setAttribute("data-notes",NOTES.join(" | "));
+
+/* overflow check for the photographer */
+setTimeout(function(){var bad=[];Array.prototype.forEach.call(document.querySelectorAll(".card,.panel"),function(c){if(c.scrollHeight>c.clientHeight+1||c.scrollWidth>c.clientWidth+1)bad.push((c.className)+" "+c.scrollWidth+"x"+c.scrollHeight+" vs "+c.clientWidth+"x"+c.clientHeight)});
+  var w=document.querySelector(".wb"),cols=document.querySelector(".cols");
+  document.body.setAttribute("data-chk",bad.join(" ; ")||"ok");document.body.setAttribute("data-cols",cols.clientHeight+"");
+  /* each step's content height vs its card */
+  var h=[];Array.prototype.forEach.call(document.querySelectorAll(".cols .card"),function(c){var last=c.lastElementChild,r=c.getBoundingClientRect(),lr=last.getBoundingClientRect();h.push(Math.round(lr.bottom-r.top)+"/"+Math.round(r.height))});
+  document.body.setAttribute("data-fill",h.join(","))},50);
+</script>
+</body>
+</html>
