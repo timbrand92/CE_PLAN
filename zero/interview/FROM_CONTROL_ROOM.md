@@ -37,3 +37,6 @@ TR-108 to TR-111 = D-393. TR-114, TR-115 = D-395. TR-117 = D-396. TR-116 = D-397
 
 ## F. Added 3:57 pm: blocks (D-404)
 The list `reference\CURRENT_PLUGIN_BLOCKS.md` shows the current plug-in uses its OWN 18 supplied block drawings (not template, not master). The control room's reading of TR-118, for Tim to confirm in one question: "the new plug-in ships copies of those same 18 drawings; pits are PIT BLOCK 3 with the PIT LABEL 2 circle tag, as you draft with today". Later, when their tools come up (not Stage 1): the downpipe block's letters (fixed text or attribute), the older PIT LABEL with attribute FB, the 3500 litre tank's size.
+
+## G. Added 4:45 pm (D-409)
+The old Pipe mock-up page is retired. The single-pipe picture you owe (U-129) is the only one: draw it in the style of the pictures Tim picked from, with pit numbers in the circle tag 900 mm above the pit, the cover check with its bar, a Wrong state with the amber marker, and both "Cannot check yet" causes. Send it to the check room BEFORE Tim sees it. "Over the pipe" is a read-off in step 2, not a choice in step 1.
