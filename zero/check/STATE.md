@@ -60,3 +60,4 @@ The gate between a finished piece of work and the main line of `C:\CE_CIVIL` (de
 3. **Waiting on the control room:** three rulings for held depth (a new invert under a held depth; a new depth on a pit holding both; the approved Pit window has no depth box).
 4. **Answers given today:** 19; one pass; no MERGE. Main is a2aa306 (22993fa plus the build room's restart note only).
 
+5. **D-392 (control room, about 2:50 pm):** the three held-depth questions are ruled: no held or typed depth in Stage 1; cover typed, invert from the pipes, depth worked out; a new invert moves the depth, never the cover; an older held depth is let go at the first edit with the words of D-387; the plan shows only the typed cover or "TBC". Check the next team/held-depth tip against it. Nothing is waiting on the control room.

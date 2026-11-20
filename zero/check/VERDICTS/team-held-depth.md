@@ -43,3 +43,7 @@ In the two reports and `FOLLOW_UP\part2-pit-and-pipe.md`: a copied pit's cover w
 ## 7. Owed in AutoCAD (after the fix)
 
 The nine steps of the honest report's section on the first tip stand, with: regrade, move and erase the leaving pipe and read the cover text each time; edit and erase the cover text by hand, then Pit OK; a metre drawing refused by PT, PP and CD with nothing brought in; one Undo for each.
+
+## 8. Ruled since (control room, 20 Nov, D-392)
+
+The three questions of section 5 are ruled as D-392: in Stage 1 a pit depth is never held and never typed (the approved window has no depth box); the cover is what he types, the invert comes from the pipes, the depth is always worked out; a new invert moves the depth, never the cover; an older held depth is let go at the first edit with the words of D-387; the cover on the plan is only the typed cover or "TBC", never a worked-out one. The next tip is checked against D-392.
