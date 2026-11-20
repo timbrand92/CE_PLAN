@@ -139,3 +139,7 @@ One warning on the command line is checked on a rebuilt output, not the channel 
 ## 18. For the control room
 
 1. **The marker layer "CE NO PLOT" itself LOCKED:** no marker and words naming the layer (as the list has it), or the marker still drawn as on an off or frozen layer (D-412 item 3 covers only off and frozen)?
+
+## 19. Ruled since (control room, about 6:55 pm, D-422; not a draft: it follows the locked-layer rule)
+
+"CE NO PLOT" found LOCKED: no marker; the tool never writes to or unlocks a locked layer; the command line and the window say the fault in words and name the locked layer; the edit goes ahead. So the list's "locked" row is right as written and counts as a target.
