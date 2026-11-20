@@ -81,3 +81,7 @@ The night robot's safety guards (56 of 89) have never been proven by taking each
 
 ## P. Added 7:52 pm (D-427): FOR TIM ON MONDAY, his choice
 Eight of the 18 block drawings copied from the current plug-in carry his own AutoCAD login name in the drawing's "last saved by" property (among them PIT BLOCK 3, PIT BLOCK 2, TIM_CVL_ARROW, FALL SYMBOL, FALL SYMBOL 2, SOURCE and the pit schedule). No client name, address or job number was found. The copies would go to colleagues with the plug-in and to the private GitHub repository. Ship as is, or blank that property in the copies first? Until he answers the copies stay on his PC only.
+
+## Q. Added 8:42 pm (D-433): section P widened, FOR TIM ON MONDAY
+1. His login name sits in TWO places in 8 of the 18 block drawings: "last saved by" and the drawing's application history. Ship as is, or blank both in the copies?
+2. All 18 block drawings carry web addresses inside the drawing's own class records (301 in all; believed, not yet proven, to be the CAD software's and its add-ons' own maker's address, which the software writes into every drawing it saves). A count-only check is being run. May drawings carrying the software maker's own address ship with the plug-in?
