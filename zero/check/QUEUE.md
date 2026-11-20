@@ -14,15 +14,15 @@
 ## 1. Being checked now
 
 1. **team/acad-windows at 53442d4** (Stage 1 items A1 to A3: approved-style Pit and Pipe windows in AutoCAD, sized to content, the true preview). Handed over 11:19 am as a re-check after the build room's own HOLD (`C:\CE_WORK\scratch	eam\check_aw_REPORT_last.md`). 5 commits behind main, so the suite is also run merged. Fix rounds used: 1 of 2.
-   - **Honest check:** Team helper (opus), `C:\CE_WORK\checkcad-windows_honest`, started 11:21 am.
-   - **Adversarial pass:** Codex gpt-6.2-astra (xhigh), `C:\CE_WORK\checkcad-windows_adv`, started 11:21 am.
+   - **Honest check:** Team helper (opus), finished 11:33 am: HOLD, one new blocker (the window-placing code fails every time, `src/CeCivil.Window/WindowHost.cs:101`, so no Pit or Pipe window would open in AutoCAD). Early word sent to the build room 11:35 am.
+   - **Adversarial pass:** Codex gpt-6.2-astra (xhigh), `C:\CE_WORK\checkcad-windows_adv`, started 11:21 am, still running; the written verdict follows it.
+2. **codex/c11-tests pinned at 11c6041** (tests only for cause C11). Both helpers started 11:33 am: Team opus honest check (`C:\CE_WORK\check\c11-tests_honest`) and Codex astra adversarial pass (`C:\CE_WORK\check\c11-tests_adv`). The question: is the list honest against `design\SUMS_PIPE_AND_PRINT.md` with D-349, D-350 and the D-341 examples.
 
 ## 2. Waiting
 
 Handed over, not yet started (in the control room's order):
 1. **The launcher fix, team/night-launch:** not handed over yet (branch made, no work on it at 11:15 am). No AutoCAD run tonight (D-364 item 10); the first run is when the check room gives MERGE on both halves and the AutoCAD test room says go. Checked against D-364 items 1 to 9 line by line (`VERDICTS
 ight-scripts-on-main.md` sections 4 and 5).
-2. **codex/c11-tests, pinned at 11c6041** (tests only for cause C11; handed over 11:19 am). Claim: 70 target tests failing, 25 controls passing, all 1,850 existing pass. To check: is the list honest against `design\SUMS_PIPE_AND_PRINT.md` with D-349, D-350 and the D-341 examples. The C11 build carries on the same branch, so the check stays on 11c6041.
 3. **Mock-up `zero\pictures\pipe_top_preview_mockup.html`** after its fix 4 (handed over 11:19 am). Against D-313, D-305, all 31 screen rules and the approved style, no scroll at 1200 by 800 in all three states, from a picture the check room takes itself.
 4. **team/office-blocks (A4), already on main: adversarial pass only.** Asked by the control room at 11:50 am by its clock. To try in particular: a drawing that already holds a block of the same name with different contents (the drawing's own must not be silently replaced; there may be no ruling, so report what it does); a locked layer; an xref; the shipped file missing or damaged; a drawing in other units.
 
@@ -53,3 +53,4 @@ ight-scripts.md`. Ruled by the control room as D-364 items 1 to 10: the fix (tea
 2. **11:10 am:** build room answered. One hand-over (team/pipe-default); main moved to 22993fa (office-blocks merged).
 3. **11:15 am:** main unchanged at 22993fa. team/acad-pictures moved to fe116c9; codex/tests-c9 moved to 73134fd; new branches with no work on them yet: team/night-launch (the launcher fix), team/acad-pictures2, codex/tests-a6b. No new hand-over.
 4. **11:24 am:** three hand-overs taken (acad-windows, c11-tests, the Pipe mock-up); first verdict given (night scripts, HOLD).
+5. **11:35 am:** main unchanged at 22993fa. Moved, none handed over yet: team/pipe-default to ad1ac51 (its second fix round), team/night-launch to c984973 (the launcher fix, in work), codex/doorway to 87c6440, team/acad-pictures to 4384464, codex/tests-a6b to 9446c2b.
