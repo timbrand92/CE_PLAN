@@ -13,22 +13,16 @@
 
 ## 1. Being checked now
 
-2. **codex/c11-tests pinned at 11c6041** (tests only for cause C11). Both helpers started 11:33 am: Team opus honest check (`C:\CE_WORK\check\c11-tests_honest`) and Codex astra adversarial pass (`C:\CE_WORK\check\c11-tests_adv`). The question: is the list honest against `design\SUMS_PIPE_AND_PRINT.md` with D-349, D-350 and the D-341 examples.
-
-3. **team\pipe-default at 393b649 (A5), RE-CHECK after its last fix round.** Handed back 11:41 am; main 22993fa is merged into it. Both helpers started 11:44 am: Team opus honest re-check (`C:\CE_WORK\check\pipe-default2_honest`) and Codex astra adversarial re-pass (`C:\CE_WORK\check\pipe-default2_adv`). Checked against the three blockers of `VERDICTS\team-pipe-default.md` and the control room's relayed ruling (an existing pipe shows its drawn width; never 100; if it cannot be read, say so and OK leaves the size alone). Fix rounds used: 2 of 2.
+1. **DESIGN PAGE `design\PIPE_SIZE.md`, branch design/pipe-size at 7c8d90c** (the size a pipe holds and where it is kept; D-372). Asked by the build room at 12:01 pm: read against D-372, D-263 and D-349 before any build. Team opus honest read and Codex astra adversarial read, both started 12:04 pm. Answer will be BUILD FROM IT or FIX THE PAGE FIRST.
 
 ## 2. Waiting
 
-Handed over, not yet started (in the control room's order):
-1. **The launcher fix, team/night-launch:** not handed over yet (branch made, no work on it at 11:15 am). No AutoCAD run tonight (D-364 item 10); the first run is when the check room gives MERGE on both halves and the AutoCAD test room says go. Checked against D-364 items 1 to 9 line by line (`VERDICTS
-ight-scripts-on-main.md` sections 4 and 5).
-3. **Mock-up `zero\pictures\pipe_top_preview_mockup.html`** after its fix 4 (handed over 11:19 am). Against D-313, D-305, all 31 screen rules and the approved style, no scroll at 1200 by 800 in all three states, from a picture the check room takes itself.
-4. **team/office-blocks (A4), already on main: adversarial pass only.** Asked by the control room at 11:50 am by its clock. To try in particular: a drawing that already holds a block of the same name with different contents (the drawing's own must not be silently replaced; there may be no ruling, so report what it does); a locked layer; an xref; the shipped file missing or damaged; a drawing in other units.
-
-Still with the build room, mid-fix:
-5. **team/acad-pictures** (fe116c9 at 11:15 am): build room's own check HOLD, 5 blockers.
-6. **codex/doorway** (725338f, tests only): Codex review HOLD on the list.
-7. **codex/tests-a7** (90bbea2) and **codex/tests-a6b**: tests-only; each comes when its report lands. codex/tests-a6 is ignored (old brief).
+In the control room's order:
+1. **The launcher fix, team/night-launch** (534f96a at 11:55 am, still in work): not handed over. No AutoCAD run until the check room gives MERGE on both halves and the AutoCAD test room says go (D-364 item 10). Checked against D-364 items 1 to 9 line by line.
+2. **team/acad-windows, last fix round:** in work at the build room.
+3. **team/held-depth** (a typed depth lost on OK and reopen): in work at the build room.
+4. **team/office-blocks (A4), already on main: adversarial pass only** (control room, 11:50 am by its clock): a block of the same name already in the drawing; a locked layer; an xref; the shipped file missing or damaged; other units. Not started.
+5. **Still with the build room:** team/acad-pictures (4384464), codex/doorway (87c6440, tests only), codex/tests-a7, codex/tests-a6b.
 
 **Standing order from the control room:** nothing reaches main on one check alone; both halves of D-346 every time. If the build room merges on one, the check room tells the control room at once.
 
@@ -48,6 +42,10 @@ ight-scripts.md`. Ruled by the control room as D-364 items 1 to 10: the fix (tea
 
 3. **team/acad-windows at 53442d4 (A1 to A3): HOLD, 11:50 am.** Two blockers: neither window can open in AutoCAD (`src/CeCivil.Window/WindowHost.cs:101`); the pictures still draw pits, pipes and a pit name that are not on the drawing. To fix in the same round by the control room's ruling: nothing cut off at 1920 by 1080 and above. Last fix round. `VERDICTS\team-acad-windows.md`; follow-ups 16 to 33 in `FOLLOW_UP\part2-pit-and-pipe.md`.
 
+4. **The C11 test list, codex/c11-tests at 11c6041: HOLD THE LIST, 12:10 pm.** Counts true (70 targets fail, 25 controls pass, 1,850 older pass), but all 95 can be turned green on a wrong product. Eight things the Stage 1 list must have first; the list is split into Stage 1 and Stage 2 by the control room. `VERDICTS\codex-c11-tests.md`; `FOLLOW_UP\part3-cover-and-grade.md`.
+5. **team/pipe-default at 393b649 (A5), last fix round: HOLD, and HELD, 12:15 pm.** Both halves agree. Closed: the last typed size no longer carries; a single pipe off a pit; a readable older width kept. Open: a run draws 375, 100, 100, 100; an arriving pipe read from its note not the drawing; a note that disagrees with the drawn pipe wins and OK redraws it; an unreadable width becomes 100; a read-off size recorded as typed. No third patch (D-372): design page, then one build. `VERDICTS\team-pipe-default_HELD.md`.
+6. **Mock-up `zero\pictures\pipe_top_preview_mockup.html`: FAIL, 12:20 pm.** It fits and every sum adds up, but: "short by 45 mm, Short" where the rulings give 50 mm and "Wrong"; a worked-out figure in a box in step 1; the pipe not drawn the office way; the flow arrow inside the pipe (D-369). `VERDICTS\mockup-pipe-top-preview.md`.
+
 ## 5. Look log (the check room's own look at the branches, every 20 minutes)
 
 1. **11:05 am:** first look. Six candidates listed; one merge to main found (night-safety2).
@@ -58,3 +56,4 @@ ight-scripts.md`. Ruled by the control room as D-364 items 1 to 10: the fix (tea
 6. **11:44 am:** team/pipe-default handed back at 393b649; re-check started.
 7. **11:55 am:** main unchanged at 22993fa. Moved or new, none handed over: team/night-launch to 534f96a (the launcher fix, in work); design/pipe-size at 3a41fd0 (new: the design page for the pipe size, D-372); team/held-depth (new, no work yet). Verdicts given since the last look: team/acad-windows HOLD. team/pipe-default at 393b649: honest half says still HOLD; by the control room (D-372) no third patch, a design page first; the held page is written when the adversarial half lands.
 8. **12:04 pm:** two more jobs started. (a) DESIGN PAGE check asked by the build room at 12:01 pm: `design\PIPE_SIZE.md` on branch design/pipe-size at 7c8d90c, read against D-372, D-263 and D-349 before any build: Team opus honest read and Codex astra adversarial read. (b) The Pipe mock-up: the check room took its own pictures of the three states at 11:57 am (`C:\CE_WORK\check\reports\pipe-mockup_pics`) and a Team opus helper is checking it rule by rule. Still running: adversarial passes on the C11 test list and on team/pipe-default at 393b649. Coming next from the build room: team/held-depth and the last team/acad-windows round.
+9. **12:20 pm:** three verdicts written (C11 list, pipe-default held page, Pipe mock-up). Six verdicts given today, none MERGE.
