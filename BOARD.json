@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-11-20T11:19:00+11:00",
+  "builtAt": "2026-11-20T13:19:00+11:00",
   "waitingOnTim": {
     "count": 1,
     "oldestAt": "2026-11-20T11:19:00+11:00"
@@ -8,8 +8,8 @@
     "done": 2,
     "of": 9
   },
-  "next": "Check room verdict on the night scripts; windows in the approved style inside AutoCAD",
-  "headline": "One-job release, STAGE 1: Pit and Pipe to draft with in real AutoCAD. Built 2 of 9 on the bench only; checked 0; installed 0; accepted 0. Measured by what Tim sees in AutoCAD: 1 of 7 basics merged (office blocks ship with the tool), 0 seen in AutoCAD. Unknowns: 11 of 105 closed.",
+  "next": "Check room verdicts on the windows, held depth and night runner; build the Pit window to the approved picture",
+  "headline": "One-job release, STAGE 1: Pit and Pipe to draft with in real AutoCAD. Built 2 of 9 on the bench only; checked 0; installed 0; accepted 0. Seen in AutoCAD: 0 of 7 basics (1 merged: office blocks). Pit window approved by Tim from a picture (D-386). Unknowns: 71 of 125 closed, 26 blockers open.",
   "plan": [
     {
       "name": "1 Drawing safety (copy, move, erase, undo)",
@@ -58,8 +58,8 @@
   ],
   "closeToTest": "Six windows can be clicked outside AutoCAD. Nothing can be drafted with in AutoCAD yet.",
   "problems": [
-    "Tim's own check on 20 Nov: square pits, no pipe drawn, old window layout inside AutoCAD",
-    "Night run tonight is reduced: no pictures until the picture route is built and checked",
-    "61 unknowns that block Stage 1 are open (Tim's room is working them down)"
+    "No AutoCAD proof yet: the night runner is being rebuilt to be safe (seven blockers found)",
+    "Check room: eight verdicts on 20 Nov, none a pass yet",
+    "About 200 questions still open across the Pit and Pipe pages (SPEC_PIT.md, SPEC_PIPE.md)"
   ]
 }
