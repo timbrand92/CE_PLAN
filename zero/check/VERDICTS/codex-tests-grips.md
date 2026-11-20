@@ -26,3 +26,22 @@ Label slide (3300, 325); label across (200 and 775); inverts (1150, 7650, 750, 7
 ## 4. For the control room
 
 1. **The bend drop:** does a label dragged past a bend land ON the next straight's line (offset 0), or keep its sideways offset from the pipe? The page says "projected onto it"; recommended: keep the same offset as on the straight it left.
+
+
+---
+
+# Second answer: codex/tests-grips at 73b56b8 (its last round)
+
+**Answer: HOLD THE LIST, with a one-page open list of three items; under the control room's standing rule (STATE item 49) the list gets ONE bounded edit, read back by the check room alone, then ACCEPT THE LIST.** Written Sat 21 Nov 2026, about 1:12 am. Checked on the bench only.
+
+**Who checked, and how they split.** Honest: one Claude helper on Sonnet: `C:\CE_WORK\check\reports\grips2_honest_REPORT.md`: ACCEPT, with eleven binding probes. Adversarial: Codex gpt-6.2-astra: `C:\CE_WORK\check\reports\grips2_adv_REPORT.md`, proofs in `grips2_adv_proofs\`: HOLD on three. The earlier backwards-arrow build now fails all 16 replay checks. Of the eight reasons of the first answer: cover corners (682.84), marker identity and colour, the downstream arrow, the oblique slide, and the counts CLOSED; the connector, the invert and circle clearance, and protection PARTLY.
+
+## 5. The open list (the bounded edit: these three and nothing else)
+
+1. **76 checks can never be reached by any grip build.** The 75 protection cases and the missing-handle case all call `Open`, which always throws; the fixture is private with no loading or registration path, so a correct external build cannot change the result (a separately built plug-in with the registered test command still failed all 76 at the same line). Give the list one public, documented way to connect the real built grip code (the honest half's probe 1: wiring only, and the counters must rise inside the built code, not in the host).
+2. **The invert's 200 mm is measured to the wrong end:** with the downstream dashed line at x = 7600, text running from 7000 to 7400 is exactly 200 mm clear, but the check rejects it because it reads the left baseline and demands right alignment. Measure the gap to the end of the text nearest the pit, whatever its alignment (D-405 item 4).
+3. **A clear refusal in the drafter's words fails:** "Handle FFFF is absent from this drawing. Nothing changed." is rejected by the missing-handle check. Test the meaning (the part named, refused, nothing changed), not one sentence.
+
+## 6. Binding probes for the grips BUILD (D-431; from the honest half, kept on its report)
+
+The host wiring is wiring only; a turned and an upright marker on sloping text; inverts and the arrow on a sloping pipe; a bend drop nearer the first straight and one onto a third straight; "moved by hand" in the saved record after reopen for slide, across and flip; the full clockwise cover cycle and its wrap; xref and reference-edit refusals told apart by their reason, not shared words; "unreachable" proven against LispFunction, any .lsp and the commands AutoCAD lists; another pit size with the circle radius read from PIT LABEL 2; sheets defined with figures the builder has not seen; "reads its settings from the store".
