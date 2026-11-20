@@ -99,3 +99,31 @@ The page's own note gives the drawing's height wrongly ("200 of 620 and 256 of 7
 2. **This mock-up is also where Tim approves the grey band:** the page says so in one plain line, so Tim's room asks him.
 3. **Inspect at bottom left,** as on the approved Pit window (D-065, D-386).
 4. **When it passes the check room,** the page and both pictures go straight to Tim's room to show him, with one line to the control room: the Pipe window build waits on his approval.
+
+---
+
+# Part five: after fix 7 (saved 4:01 pm): FAIL, and overtaken by what Tim has picked since
+
+**Answer: FAIL on one point; and it should NOT go to Tim as it stands.** Written Fri 20 Nov 2026, about 4:40 pm. From ten pictures the check room took at 4:10 pm (`C:\CE_WORK\check\reports\pipe-mockup_pics\fix7`) and a Team helper's check (Claude Opus 5.5): `C:\CE_WORK\check\reports\pipe-mockup4_REPORT.md`.
+
+## What fix 7 cured (all of the last round)
+
+"Office defaults: no job set yet" shows in every state; "Over the pipe" is a field name above its box, its arrow is back, every text is at least 4.5 to 1 (lowest 4.73); Inspect is at bottom left; the height note is right (192 of 620, 250 of 780). Every sum adds up in all five states; nothing scrolls, is cut off or overlaps at either size; the four older reasons still hold.
+
+## The one reason it fails
+
+**The pit numbers are drawn ON the pits.** Tim ruled the number 900 mm above the pit centre, in the office circle tag (D-363, D-366, D-400: pit centre to circle centre; D-399: always the office circle tag), and the pictures he picked from at 2:52 pm (`pictures\pipe_window_live_*.png`) show it that way, with the cover level at 45 degrees off a corner. It has been on this page since its first version and four checks missed it, the check room's own included.
+
+## Overtaken since the last check (ruled after this page was drawn; not the builder's fault)
+
+1. **The title:** "Pipe · P4 to P3"; ruled: "Pipe 7 (P4 to P3)" (D-398; D-397).
+2. **Step 1:** Tim picked it "right as drawn" on the other picture (D-393): Size, Material marked standard, Grade, level, ticks Label, Invert levels and Arrow, "Sleeved inside" with its size, "Reverse flow". This page has Diameter, Kind, Label side, "Work downhill" and "Work uphill", and lacks standard, Sleeved inside and Reverse flow.
+3. **Step 3:** two decimals; ruled: each row to three decimals with a last column "On the plan" at two (D-393), one row for a single pipe (D-395).
+4. **The grey band:** Tim has already picked a grey band from the other picture (a plain mid grey with dark text). This page's is the darker well colour, and its line "this mock-up is where you approve the GREY band" would ask him again with a different grey.
+5. **The shortfall words and the amber marker** are behind the drafts of D-399 and D-401.
+
+## For the control room
+
+1. **"Over the pipe":** the control room ruled it stays as a quiet choice in step 1 (2:25 pm); Tim then picked step 1 "right as drawn" from a picture that has no such choice (it shows "What is over it: Not known" as a read-off in step 2). Which stands?
+2. **What this page is for now.** In substance it is the SINGLE-PIPE window of D-395 item 2 (a level box at each end, the third worked out and dashed), for which a picture is still owed to Tim. Recommended: redraw it as that owed picture, in line with what he picked (the list in the helper's report, section 5), keeping what the picked pictures do not show: the cover check with its bar and sum, a Wrong state with the marker, both "Cannot check yet" causes.
+3. **Nothing goes to Tim's room from the check room until then.**

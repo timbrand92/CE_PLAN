@@ -13,12 +13,13 @@
 
 ## 1. Being checked now
 
-Two hand-overs from the build room at about 4:05 pm; three helpers.
+Until 5:30 pm no new helper starts while more than four full suites are running (control room); one in, one out.
 
-1. **team/a6-draw-first at 75290d9** (A6 fix round 1: eight commits since the HOLD at 73be1d0). Both halves: Team opus honest check, Codex astra adversarial pass (worktrees `a6r_honest`, `a6r_adv`; briefs `a6r_*.md`).
-2. **The Pipe mock-up after fix 7** (saved 4:01 pm): the check room took ten pictures at 4:10 pm (`C:\CE_WORK\check\reports\pipe-mockup_pics\fix7`); Team opus re-check, also against D-393 and D-395 (what Tim has since picked for the Pipe window). The check room's own look: the three faults of the last round look fixed, Inspect is at bottom left.
-
-Not started: codex/tests-a4c at ef07769 (waits for the blocks list and a restated list).
+1. **codex/tests-flag at 68fcd50** (fix round). Honest half: all eight reasons closed; one stale report file. Adversarial half running.
+2. **codex/c11-tests at 335ce64** (its last round). Honest half landed (to read); adversarial half running.
+3. **codex/tests-units at df9d533** (fix round). Both halves running.
+4. **codex/tests-a7-clean at 2c426d6** (fix round). Honest half running; adversarial half to start.
+5. **codex/tests-a4c at 1ebb640** (restated to D-404). Briefs ready; both halves to start.
 
 ## 2. Waiting
 
@@ -73,6 +74,9 @@ ight-scripts.md`. Ruled by the control room as D-364 items 1 to 10: the fix (tea
 18. **codex/tests-flag at 3189f66 (the flag marker test list): HOLD THE LIST, about 3:32 pm.** Eight reasons (amber never checked and the office layer is grey; the marker can print; it can be anywhere; two pits can still show one number; his own wording lost on open and Cancel; the clear targets expect the whole marker layer empty; the opposite words pass; the bench's window, not the command's). Its own page.
 
 19. **codex/tests-units at fea2222 (the units doorway test list): HOLD THE LIST, about 3:45 pm.** Five reasons (no feet case; no case for changing an existing part in a refused drawing; a refused command can still change the drawing unseen; rows keyed to one pretend drawing and the refusal comes late; the "said once" targets may require the wrong thing). Its own page.
+
+20. **team/a6-draw-first at 75290d9 (fix round 1): HOLD, second verdict, about 4:35 pm.** Five blockers: the AutoCAD plug-in does not compile (new); a junction level worked from rounded figures; a cover-only pit edit moves a pipe on a locked layer; a guide redrawn off its line beside a main; the Pipe command's Undo on open ground. One round left.
+21. **The Pipe mock-up after fix 7: FAIL, about 4:40 pm,** on one point (pit numbers drawn on the pits, not 900 mm above), and overtaken by what Tim picked since (D-393, D-395, D-398): not sent to Tim; put to the control room to be redrawn as the owed single-pipe picture.
 
 ## 5. Look log (the check room's own look at the branches, every 20 minutes)
 
