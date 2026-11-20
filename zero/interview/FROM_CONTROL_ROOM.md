@@ -55,3 +55,9 @@ The old Pipe mock-up page is retired. The single-pipe picture you owe (U-129) is
 1. A level worked out from an APPROX. level: does it print "APPROX." too (draft: yes)?
 2. The words of the standing note for APPROX. figures (draft: "LEVELS MARKED APPROX. ARE ASSUMED AND ARE TO BE CONFIRMED ON SITE BEFORE CONSTRUCTION.").
 3. A bent pipe with two legs exactly the same length: which leg takes the label (draft: the upstream leg)?
+
+## K. Added 5:24 pm: Renumber and pit size (from the Pit window builder), to ask Tim one by one; drafts in brackets
+1. At a fork, which branch does Renumber number first? (draft: the main, the bigger pipe arriving, else the one drawn first; then each branch in the order met going upstream)
+2. Do pits downstream of the clicked pit count as joined for Renumber? (draft: yes, the whole joined system)
+3. The typed command name for Renumber. (draft: none in Stage 1; the button in the Pit window only)
+4. Is a 900 x 600 pit good to 1.20 m deep, like 600 x 900? (draft: yes, the same pit turned)
