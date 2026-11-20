@@ -46,3 +46,13 @@ The two set sizes and where the window opens, on every work area tried; nothing 
 ## 6. Owed in AutoCAD (when a build of this is merged; test copies only)
 
 PT, Renumber, click the lowest pit of one of two runs, OK: only the joined pits change and one U puts every number and the new pit back; the same with the pit layer locked: refused in words, nothing changed or drawn; a pit joined to two drawn pipes in a 1280 by 720 AutoCAD window: the whole of step 3 shows; Match a pit; the plan panel over a real drawing with an architect's xref and circle tags; Inspect, Escape and Cancel; the window's place remembered after a real close; cover 5.755 typed: read the text on the plan; a pit with three pipes out: the depth.
+
+## 7. Ruled since (control room, about 6:30 pm, D-421; all DRAFT for Tim; the fix round is held to these)
+
+1. **Renumber:** at a fork the MAIN first (the bigger pipe arriving; if equal, the first drawn), then each branch in the order met going upstream; only pits JOINED to the clicked one; it never changes a pit on a locked, off or frozen layer or in an xref: one in the way refuses the whole Renumber, naming it; the pit being placed takes part, its final number shown before OK; no typed name, the button only.
+2. **5.755 is kept as typed and exact in every sum;** two places, half up, wherever printed (5.76); sums never from rounded figures; three places never on the plan.
+3. **"P04" is P4.**
+4. **900 by 600 has 600 by 900's limit;** a size pair with no office limit shows grey "Cannot check yet: no office limit for this size", never an invented limit.
+5. **Plastic then back to Junction:** the size he had.
+6. **Off or frozen neighbours** are not shown in the plan panel, and still count for joins and numbers in use. **A pit in an xref is never looked at:** no Match from it, its number not counted.
+7. **"600 by 900", "600x900" and "600 x 900" are all accepted.**
