@@ -42,3 +42,8 @@ The four Stage 1 block names, the attribute PIT_LABEL, the pit's states and the 
 ## 6. Owed in AutoCAD (when the copies are in and a build is merged)
 
 Each of the four blocks placed on a bare plan and read back (name, state, layer, scale 1, Z 0, ByLayer, the tag's attribute, the opening's mask); a plan holding his own changed block of each name, unchanged after a placement; a plotted bend with its mask; Cancel and one Undo after a block was brought in; the three older pit blocks opened and read.
+
+## 7. Ruled since (control room, about 5:26 pm, D-417)
+
+**(A) A HARD LIMIT, not a draft.** The privacy scan of shipped drawings goes BACK and is never removed. The branch team/a4c-blockfiles records each original's name and fingerprint and scans every copy for job names, addresses and numbers BEFORE any commit; that branch is NOT pushed to GitHub, and nothing of it merges, until the scan is clean, the check room has confirmed it on both halves, and the control room has said so in writing. A hit stops the job and goes to the control room for Tim; the file is not edited to hide it. A blank or stand-in drawing under a block's name must FAIL the package check.
+**(B) DRAFT.** (1) The circle tag not found with "Number on plan" ticked: refuse the pit, draw nothing, name the block. (2) A bend with no inspection opening block: refuse the pipe the same way. (3) Layers, the text style and linetypes on a bare drawing: from the 18 where one holds them; the rest listed for Tim, and meanwhile from one small set-up drawing of definitions only, made from the office template. (4) One block in two of the 18 with different contents: the copy in the drawing NAMED for that block; a nested copy is never used; the differences are listed for Tim.
