@@ -76,3 +76,26 @@ The `src` and `bench` diff against main is still empty. **Closed:** the one-clic
 4. **DRAFT label:** mark the extension half of the typed-length test DRAFT.
 
 **Next:** the writer restates or adds these five in the LAST round. After that comes the D-346 hold, or the bounded edit for a list.
+
+---
+
+# Third answer: dcd8c02 (the LAST round)
+
+**Answer: HOLD THE LIST, final. Under the standing rule it gets ONE bounded edit on the five items below. The check room reads it back alone, then ACCEPTS.** Written Sat 21 Nov 2026, about 5:59 am. Both halves ran on Codex under D-440, each in its own folder:
+- **Honest half:** gpt-6.2-sol. Report: `C:\CE_WORK\check\reports\prt3_honest_REPORT.md`. It holds on three.
+- **Adversarial half:** gpt-6.2-astra. Report: `prt3_adv_REPORT.md`, with proofs in `prt3_adv_proofs\`. It holds on three.
+
+The test diff to `src` and `bench` is still empty. **Closed:** all five items of the second answer (E1 now reaches the split; the Run command on a joined run; the 450 mm pit; the second guide; the planner route through PlanRun) and the six closed before. The three archived faulty builds now fail. Every open item is a fault in the list itself.
+
+## The bounded edit (five restatements)
+
+1. **Watch the proposal at the real hand-offs** (both halves). Read the proposal shown in the open window BEFORE OK, and compare it with the one the doorway checks and saves.
+   - **Why:** a click test passed while the window showed 1.00 m for a 10.44 m route, because every observation came after OK.
+   - **Also:** do not demand a named diagnostic feed or a replay of the edit on a pretend drawing. A correct planner working from a read-only snapshot must pass. Files: `Fake/PipeRunObservations.cs:34-113`, `Stage1PipeRunEntryTests.cs:69`.
+2. **Project a native edit from the drawing as it was before the command** (adversarial half). Count the follow-up writes only from the end of the command.
+   - **Why:** a correct 1,000 mm MOVE saved its band at y = 1,000. The observer started after the move and wrongly expected y = 2,000. Files: `Fake/CommandHostCompatibility.cs:136-149`, `Stage1PipeRunEntryTests.cs:260`.
+3. **Drive the real grip route** (honest half). The Grip row must invoke the pipe's grip action and check its result, its proposal and one Undo. Today it inserts the 1,200 mm bend itself and sends a made-up "Grip" command-end. The native look stays owed in AutoCAD. Rulings: D-402 item 5, D-407, D-408. Lines: `Stage1PipeRunEntryTests.cs:241-338`.
+4. **Pick the branch's join-invert tick by its role** (honest half). Today the selector wants exactly one visible tick captioned "invert", so a branch window that also shows the ordinary invert ticks fails before it checks a level. Select the branch or join tick specifically, as the accepted labels list does. Rulings: D-377 item 6, D-413 item 5. Lines: `Stage1PipeRunAcceptanceTests.cs:703-709`.
+5. **The converted band stays open after OK and Redo** (adversarial half). Closing it added a 10 m return segment, and all 239 results still matched the right build. Require it open. Rulings: D-356, D-410. Line: `Stage1PipeRunAcceptanceTests.cs:550`.
+
+**If the read-back fails, the list goes to the control room.**
