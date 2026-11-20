@@ -3,7 +3,7 @@
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), set up by D-353 and `ROOMS.md`. No other chat edits this file.
 **First written:** Fri 20 Nov 2026, 10:45 am (clock read).
 
-**STAGE 1 COUNT: 7 of 98 closed.** Blocks Stage 1: 68 (7 closed, 61 open). Can wait: 30. Updated Fri 20 Nov 2026, 11:00 am: closed U-008, U-009, U-010, U-026, U-029, U-093, U-097; added U-097 and U-098 from his words.
+**STAGE 1 COUNT: 7 of 100 closed.** Blocks Stage 1: 70 (7 closed, 63 open). Can wait: 30. Updated Fri 20 Nov 2026, 11:20 am: U-099 and U-100 added at the control room's request. Filed so far by the control room: TR-001 to TR-008 as D-354 to D-359. **This list is the gate for Stage 1 (D-359; Tim, 20 Nov about 11:00 am, to the control room: "i need every specific down to a tee before we complete this first stage").**
 **STAGE 2 COUNT (waiting): 0 of 20 closed.**
 
 **What counts as an unknown.** A question about how the tool must behave that (a) no ruling answers, or (b) is answered only by a planning chat's call or a DRAFT, or (c) the 25 root causes or Tim's check of 20 Nov (D-351) exposed, or (d) only a test in AutoCAD can answer. Each line says who it waits on: **Tim**, **a picture then Tim** (a mock-up is owed first), or **a test** (nobody should ask Tim; AutoCAD must show it).
@@ -146,6 +146,8 @@
 96. **U-096** The office's screen sizes and Windows scaling, and the model background colour. WINDOWS open 6 and 8. Waits on: Tim. Can wait.
 97. **CLOSED by TR-008 (20 Nov): "Replaced by pipes, bends kept".** **U-097** (added 20 Nov from TR-003) Picking an existing polyline as the run, which the pipe tool replaces with pipes: what it does at each vertex, at a pit it passes, with arcs, and what happens to the old polyline. No ruling. Waits on: Tim. **Blocks Stage 1.**
 98. **U-098** (added 20 Nov from TR-005) "however many bends are required within the standards": what the plumbing standard and the councils allow for bends in a buried stormwater pipe (angles, how many before an inspection opening), so the tool can guide. Joins U-035 and U-041. Waits on: research first, then Tim. **Blocks Stage 1.**
+99. **U-099** (added 20 Nov, D-356) A picked polyline with arcs in it, a closed polyline, and a polyline on a locked layer or inside an xref: what the pipe tool does with each. Waits on: Tim. **Blocks Stage 1.**
+100. **U-100** (added 20 Nov, D-357) How "live on the drawing" looks while he types: the finished look or a ghosted one, what Cancel leaves, whether he can zoom and pan with the window open. Waits on: a picture then Tim. **Blocks Stage 1.**
 
 ---
 
