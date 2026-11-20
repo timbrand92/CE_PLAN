@@ -1,6 +1,6 @@
 # Current rulings: Screens and style (the 31 screen rules, the approved window style, the preview)
 
-Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to D-297. If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
+Current rulings as of 20 Nov 2026 (Melbourne), from decisions D-001 to D-383 (D-298 to D-383 filed 20 Nov 2026). If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
 
 (Added subject: these decisions replace the look parts of the older window rulings and did not fit one named page. WINDOWS keeps the older window rulings, each marked where this page replaces it.)
 
@@ -17,9 +17,9 @@ Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to 
 
 ### The approved window style
 
-7. **The style is approved (D-295):** version 4 of the Detention mock-up (`pictures\detention_fixed_mockup.html`), asked "Is this the style for every window?": "Yes, this is the style". It is written up in `design\STYLE_APPROVED_18NOV.md`; where that page and the mock-up disagree the mock-up wins. **It is approved except the preview panel, whose size and form are OPEN (D-297).** It replaces the look parts of `design\UI_PLAN.md` and the colour values of D-168, except the rose accent, which stands (STYLE_APPROVED).
-8. **What every window is made of, in this order:** the title bar; the drawing (preview) at the LEFT (D-296; its size and form are OPEN under D-297, see Still open item 1), full height; the answer band at the top of the right side, one answer in plain words with its figure on a solid status fill; step 1 "What you type" (every input and nothing else); step 2 "What the drawing gives" (plain text, no boxes, each figure with its source word); step 3 "The answers" (each with its figure, a picture, the working as a sum, one grey note); a bottom bar with Cancel and OK at the right, OK the only accent-filled button (D-295, STYLE_APPROVED section 1). A small tool keeps the same order with fewer rows; a window with nothing to work out still has the drawing, the band and step 1.
-9. **The preview sits at the left in every window (D-296):** "Left side, as shown (Recommended)", including Pipe and Long section. This replaces the two-style ruling of D-067 for where the preview sits.
+7. **The style is approved (D-295):** version 4 of the Detention mock-up (`pictures\detention_fixed_mockup.html`), asked "Is this the style for every window?": "Yes, this is the style". It is written up in `design\STYLE_APPROVED_18NOV.md`; where that page and the mock-up disagree the mock-up wins. **It is approved except the preview panel, whose size and form are OPEN (D-297).** **Preview panel settled for Detention by D-299 to D-301 and D-305 (18 and 19 Nov); placement changed for Long section and Pipe by D-313 (items 17 to 22).** It replaces the look parts of `design\UI_PLAN.md` and the colour values of D-168, except the rose accent, which stands (STYLE_APPROVED).
+8. **What every window is made of, in this order:** the title bar; the drawing (preview) at the LEFT (D-296; its size and form are OPEN under D-297, see Still open item 1) **[changed by D-299 and D-313: across the TOP for Detention, Long section and Pipe]**, full height; the answer band at the top of the right side, one answer in plain words with its figure on a solid status fill; step 1 "What you type" (every input and nothing else); step 2 "What the drawing gives" (plain text, no boxes, each figure with its source word); step 3 "The answers" (each with its figure, a picture, the working as a sum, one grey note); a bottom bar with Cancel and OK at the right, OK the only accent-filled button (D-295, STYLE_APPROVED section 1). A small tool keeps the same order with fewer rows; a window with nothing to work out still has the drawing, the band and step 1.
+9. **The preview sits at the left in every window (D-296):** "Left side, as shown (Recommended)", including Pipe and Long section. This replaces the two-style ruling of D-067 for where the preview sits. **Changed by D-298 and D-299 (18 Nov) for Detention, and by D-313 (19 Nov) for Long section and Pipe:** the preview runs across the top; Pit and Pipe also keep a small picture beside the inputs; every other window keeps the left (items 17 and 21).
 10. **Inputs against worked-out figures (the rule Tim asked for):** an input is a box (lighter fill, light border, bright figure, its unit inside in lighter grey) and all inputs are together in step 1; a worked-out or read-off figure is plain text with no box; an input that still needs the drafter has a 2 px amber border and a small amber "Needs you" tag; an input the drafter changed carries a grey outlined "Changed" tag; a figure shown in two places says so in a grey note; a missing value reads exactly "Not known" on a window and "TBC" on the sheet (STYLE_APPROVED section 2).
 11. **Colour: one dark scheme (D-294, D-295):** window #2B2D30, cards #383B40, wells #232528, input boxes #4A4D55, borders #4A4D53 (input border #8A8E96), preview ground #16181B, neutral greys with no blue cast; no light version. Status only, always with its word, as a solid fill with dark text #10131A: green Suits; amber Needs a look and Needs you; orange-red #FF6B4A Short and Wrong (kept clear of the rose). The accent is rose #FF70B3 with dark text, on OK and the one selected choice button only (D-292, D-295); ticks, padlocks and icons are grey-white. Chart colours only where three or more parts must be told apart, in the fixed order of his rule 17, labels on the bar, no legend.
 12. **Type and spacing:** one font family for words and figures with tabular numerals and no slashed zero or typewriter font (IBM Plex Sans on the mock-up; the font shipped inside AutoCAD is the build's to prove, Segoe UI as the fallback); three sizes only, 24 answer, 14 body, 12 note; bold only on the band's figures, each answer figure and each double-lined final figure; sums with signs in their own narrow column, figures right-aligned, rows 32 apart, and a sum must add up exactly as printed; gaps 8, 16, 24, 32 and one 8 px corner; plain words first with the formal word in brackets ("Hole size (orifice)", "Council pit (LPD)") (STYLE_APPROVED section 4).
@@ -31,6 +31,18 @@ Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to 
 15. **Grey and button colour (D-292):** "Lighter grey, rose button". The accent stays rose, his D-168 pick confirmed over the CE off-white. Planning chat's note, not his words: the checker found rose close to the red warning, so the red status colour is kept clearly apart from rose and the two are never both fills side by side without their words. **The "lighter grey" part is replaced by D-294 (dark ground); the rose stands, on OK and the selected item only.**
 16. **Preview content stands (D-167):** the drawing as AutoCAD shows it from the office layers, colours, text and arrow; a small site locator in the corner; a strip under it with the run as a chain and this object lit; the thing being changed highlighted the same way in all three. Not yet proven: how the locator is produced inside AutoCAD; the drawn details not taken from a real sheet (pit inner wall line, tag circle, flow-arrow side) are still to be checked against how the office draws.
 
+### Added 20 Nov 2026, D-298 to D-383
+
+17. **Top preview for Detention (D-298, D-299):** "i think the horizontal preview on top of the detention stuff is better", then "Top for Detention only": the Detention window has its preview across the top; every other window kept the left (D-296). **"Only" changed by D-313 (19 Nov)** (item 21).
+18. **How big (D-300):** "About a third of the window (Recommended)": a proper drawing band about 280 high across the full width, then the answer band and three steps tightened to fit; nothing scrolls. **Changed by D-305:** the band at 240 high stands as shown. The size of the LEFT preview on other windows is not ruled.
+19. **Window preview and the real drawing (D-301):** "Both: top preview in the window, and the real drawing lights up (Recommended)": AutoCAD's own drawing lights up the same parts (temporary outlines and tags, nothing saved, the view put back), so it works whether or not the drawing is zoomed to the system. Planning chat's reading (his to overturn): "both" applies to every window. Still to prove: an accurate zoom, a click with his own mouse, and that docking or lighting up saves nothing into his profile (R-012).
+20. **The Detention window approved (D-305, 19 Nov):** "detention window appeoved" (`pictures\detention_top_preview_mockup.html`): the top band showing the system zoomed in across the full width with the storage parts outlined and their figures on the drawing, a small "Where on the plan" locator, then the status band, step 1 across, steps 2 and 3 side by side; the band at 240 high stands as shown.
+21. **The six restyled windows (D-309, D-313):** the Pit schedule window "is great"; Long section and Pipe get the wide preview across the top (this changes D-296 for those two); Pit and Pipe also keep a small picture beside the inputs it shows: "Both: top strip and beside". Inlet and Tank not commented on.
+22. **Job window and Unfinished list (D-310, D-311):** "Yes, build it like this".
+23. **Live means the preview panel (D-382, correcting D-357):** "I MEANT THE LIVE DRAWING SHOULD SHOW IN THE PREVIEW IWNDOW IN THE WINDOW ITSELF DOES THAT MAKE SENSE?" The preview panel stays and matters more.
+24. **What AutoCAD showed him (D-351):** the windows inside AutoCAD were very wide with a mostly empty preview, four numbered groups and a blue OK: "not the style he approved". The style approved in D-295 and D-305 is what the build must match.
+25. **Not settled (D-378):** window size, "80% of the autocad open window not screen in entirety or we can do a better system of like one for laptop one slightly bigger for desktop"; the Pit window preview showing the real plan live.
+
 ## Changed along the way
 
 1. **"Lighter grey" (D-292, 5:05 pm) was replaced by the dark ground (D-294, 5:10 pm, 18 Nov);** the rose button stands.
@@ -38,6 +50,10 @@ Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to 
 3. **The two preview styles of D-067 were replaced for where the preview sits by "left side" (D-296).**
 4. **The Pit and Pipe windows as the pattern every window matches (D-070) were replaced for the look by the approved Detention style (D-295);** their structure stands and they are restyled when next touched (D-286 rule 3).
 5. **The look parts of `design\UI_PLAN.md` are replaced by `design\STYLE_APPROVED_18NOV.md` (D-295);** UI_PLAN's section 5 was already stale (blue accent, follows AutoCAD's theme).
+6. **"Left side" everywhere (D-296) was changed to the top for Detention (D-299) and for Long section and Pipe (D-313).**
+7. **"Top for Detention only" (D-299) was widened by D-313 (19 Nov).**
+8. **The top band "about 280 high" (D-300) became 240 high as shown (D-305).**
+9. **"Live on the drawing" (D-357) was corrected to "live in the preview panel" (D-382, 20 Nov).**
 
 ## Still open on this subject
 
@@ -50,12 +66,18 @@ Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to 
 7. **The font shipped inside AutoCAD** is the build's to prove (STYLE_APPROVED section 4). Waits on: a test.
 8. **POSSIBLE CONFLICT: the wording of a missing value.** D-261 DQ-019 (planning chat's call from his rulings; his to overturn) says "unknown" in small boxes and "not known yet" in words; D-286 rule 24 and the approved style say exactly "Not known" on a window and "TBC" on the sheet. Planning chat's reading (board item 68; his to overturn): D-286 rule 24 and the approved style win: a window says exactly 'Not known', the sheet 'TBC'; 'unknown' and 'not known yet' are brought into line when each window is next touched. Waits on: Tim.
 9. **The TimOS screen-design guide** replaces his interim rules when it lands (D-286). Waits on: Tim.
-10. **Three preview options were sent to Tim on 18 Nov evening** (`pictures\preview_options.html`: A a quarter of the window, B half, C the window docked beside the real drawing); his choice is awaited (D-297). Waits on: Tim.
+10. **Three preview options were sent to Tim on 18 Nov evening** (`pictures\preview_options.html`: A a quarter of the window, B half, C the window docked beside the real drawing); his choice is awaited (D-297). Waits on: Tim. **Answered by D-298 to D-301 (18 Nov):** top for Detention, about a third, and "both" (window preview plus the real drawing lighting up).
+11. **The size of the LEFT preview on the windows that keep it** (not ruled by D-300). Waits on: the planning chat, then Tim.
+12. **Window size** against the AutoCAD window or two set sizes, and scrolling (D-378 item 3). Waits on: Tim's room.
+13. **Whether the part also shows on the drawing behind** while the window is open (D-382 against D-301). Waits on: Tim's room.
+14. **The Inlet and Tank restyles** were not commented on (D-309). Waits on: Tim.
+
+**Closed (D-298 to D-383):** the preview panel for Detention (open item 1, settled by D-299, D-300, D-301, D-305; the left preview's size on other windows stays open, item 11); the three preview options (open item 10, answered by D-298 to D-301).
 
 **Closed:** whether the Detention mock-up is the style for every window (closed by D-295, except the preview panel, open under D-297); where the preview sits (closed by D-296); what was wrong with the layout and colours (answered by D-286 and D-294); whether the third mock-up was approved (D-291, no; D-295, yes for the fourth).
 
 ## Where the detail lives
 
-1. `DECISIONS.md` D-167, D-168, D-286, D-291 to D-297.
+1. `DECISIONS.md` D-167, D-168, D-286, D-291 to D-297; added 20 Nov: D-298 to D-301, D-305, D-309 to D-311, D-313, D-351, D-357, D-378, D-382; `pictures\detention_top_preview_mockup.html` and its photographs `detention_top_preview_suits.png`, `_short.png`, `_notknown.png`.
 2. `design\SCREEN_RULES_18NOV.md`; `design\STYLE_APPROVED_18NOV.md`; `design\UI_PLAN.md` (look parts replaced).
 3. `pictures\detention_fixed_mockup.html` (version 4) and `pictures\detention_fixed_suits.png`, `detention_fixed_short.png`, `detention_fixed_notknown.png`.

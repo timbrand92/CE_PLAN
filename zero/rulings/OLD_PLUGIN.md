@@ -1,6 +1,6 @@
 # Current rulings: The old plug-in (parts bin, carpark, sweep, what gets fixed there, wrong-figure bugs)
 
-Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to D-297. If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
+Current rulings as of 20 Nov 2026 (Melbourne), from decisions D-001 to D-383 (D-298 to D-383 filed 20 Nov 2026). If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
 
 ## What is decided now
 
@@ -30,6 +30,13 @@ Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to 
 13. **He is not using the old rainfall, design and calculation commands (D-246):** Tim: "AN ISSUE I HAVE IS THAT II THINK YOURE STILL THINKING IM USING CDRAINFALL AND ALL THAT OTHER JAZZ, AT THE MOMENT I CAN EVEN TRUST THE MAIN TOOLS". He does not use CDRAINFALL, CDDESIGN, CDCALC and the like and does not trust even the main tools, so the live risk to issued sheets is smaller than the BUG-866 advice presented, though the fault in the installed code is real (R-008). The old commands are too many, scattered and built at different times, and in the new plug-in they are CONSOLIDATED into a window or a tool, scalable and able to be built upon.
 14. **How CDRAINFALL and the other old calculation commands come into the main plan is owed (D-281):** "HOW WILL CDRAINFALL AND ALL THOSE OTHER COMMANDS COME INTO THE MAIN PLAN AND BE INCORPORATED PROPERLY? CAN YOU EXPLAIN THROUGH AN ARTIFACT WHAT THE FINAL PROGRSAM WILL LOOK LIKE WITH SCALABILITY AND ABILIT TO BE BUILT UPON": a published artifact page showing the final program, where each old calculation command lands, and how it is built to grow.
 
+### Added 20 Nov 2026, D-298 to D-383
+
+15. **The old desk robot retired, the old plug-in untouched (D-306; planning chat's record of its own use of his yes):** "i think you should be able to if you think you need it to keep work progressing". The old desk robot's two AutoCAD lanes were retired with that system's own stop flags (`desk_jobs\STOP_WATCHDOG.flag`, `STOP_CHAIN.flag`), the two processes stopped, the stale `TIM_AWAY.flag` and `CODEX_AUTOSTART.flag` moved to `desk_jobs\retired_19nov`; the disk guard left running; no scheduled task changed. Undo: delete the two stop flags, move the two flags back, run `start_lanes.ps1`. The installed old plug-in was NOT touched.
+16. **The new plug-in beside the old one in his AutoCAD (D-351):** loaded after the old one, the new plug-in answered PIT, PP and CD. His verdict on what he saw: "its so messed up and wrong, massive regression from previous plugin is this the point or are we testing".
+17. **The old plan's scheduled jobs switched off (D-360):** `ce-holiday-watchdog`, `ce-desk-hourly-check` and `ce-monday-questions` switched off (they can be switched on again) and 36 idle chats they had left archived (they can be brought back), on "do what you recommend" (see ROOMS_AND_HELPERS).
+18. **CDEDIT is to be checked against the old plug-in's names (D-383 item 1).**
+
 ## Changed along the way
 
 1. **Nothing on this page has been superseded.** The carpark's rule in `C:\Lisp Files\CLAUDE.md` still applies to the old plug-in.
@@ -52,6 +59,6 @@ Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to 
 
 Added 18 Nov 2026: `DECISIONS.md` D-245, D-246, D-281; `reference\research\R-008_TWO_WRONG_FIGURE_BUGS.md`.
 
-1. `DECISIONS.md` D-001, D-053, D-088, D-094 to D-096, D-119, D-199, D-206, D-207, D-212, D-213, D-216.
+1. `DECISIONS.md` D-001, D-053, D-088, D-094 to D-096, D-119, D-199, D-206, D-207, D-212, D-213, D-216; added 20 Nov: D-306, D-351, D-360, D-383.
 2. `stage3\PARTS_BIN_REPORT.md`; `reference\research\R-007_BUG_SWEEP.md`; `reference\research\R-008_TWO_WRONG_FIGURE_BUGS.md`.
 3. `C:\CE_PLAN\BUG_CARPARK.md` (the old plug-in's list, outside this folder).

@@ -1,6 +1,8 @@
 # Current rulings: Long section (levels along a run)
 
-Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to D-297. If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
+Current rulings as of 20 Nov 2026 (Melbourne), from decisions D-001 to D-383 (D-298 to D-383 filed 20 Nov 2026). If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
+
+**PAUSED (D-338, 19 Nov):** Long section was not ticked for the one-job release, so the LONGSECTION tool is out of it and parked with the rest (P-09). Levels along a run inside the Pipe tool ARE in Stage 1 (D-359, D-383 item 8).
 
 ## What is decided now
 
@@ -25,14 +27,20 @@ Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to 
 11. **The preview shows the long section AND the plan** (D-129).
 12. **The long section is drawn taller, about 4 to 5 times, with a one-line plan strip:** "thats better" (D-131, D-132).
 13. **The Levels window looks good** (D-162); its first test steps worked when the planning chat clicked them, and the missing feedback when a level is clicked to hold it was a fault being fixed (D-129).
-14. **Brought next after the Pit and Pipe windows:** "The whole-run levels tool" (D-088).
+14. **Brought next after the Pit and Pipe windows:** "The whole-run levels tool" (D-088). **Paused by D-338 (19 Nov):** out of the one-job release.
 
 ### Added 18 Nov 2026, D-230 to D-297
 
-15. **The preview is at the left, like every window (D-296):** "Left side, as shown (Recommended)", including Long section; its size and form are OPEN under D-297. Cover short on a run: the window says how short and lists the ways out, never a number (D-280, see LEVELS_AND_STANDARDS item 25).
+15. **The preview is at the left, like every window (D-296):** "Left side, as shown (Recommended)", including Long section; its size and form are OPEN under D-297. **Superseded by D-309 and D-313 (19 Nov):** "levels needs to have horizontal preview above"; the Long section window gets the wide preview across the top, as Detention has (item 19). Cover short on a run: the window says how short and lists the ways out, never a number (D-280, see LEVELS_AND_STANDARDS item 25).
 16. **How a long section starts and what OK writes (D-271; planning chat's call from his rulings; his to overturn):** DQ-030 a long section is started by picking one pit or pipe of the run; DQ-031 at a fork it follows the main line and says so; DQ-033 OK writes back only held figures that changed; DQ-034 OVERTURNS the built answer: a cover level changed in the Long section window redoes that pit's cover text too (typed once, everything follows, D-171), using the Pit tool's own text rule; DQ-035 held figures reopen held and the window's own list of padlocks starts empty; DQ-036 a typed grade is never let go, and a level that disagrees shows "Out by" and changes nothing (D-124, D-125).
 17. **Drawing it on the sheet (D-276; planning chat's call from his rulings; his to overturn):** DQ-037 the long section is drawn on the sheet from a "Draw on sheet" button in the LONGSECTION window, not a separate command (D-246, FP-006), built last inside that tool; DQ-038 the scale is asked each time with 1:100 across by 1:50 vertical offered first, and printed under the title; DQ-039 the single SCHED layer, as the three newest examples (to be checked against the office template when built); DQ-040 the rows of the issued council sheet are pipe size, pipe grade, design flow and velocity, invert depth, invert level, surface level and chainage, under a datum line; DQ-041 draft words are kept until the wording pass; DQ-048 with all three padlocks closed a different figure shows "Out by" and changes nothing (D-124, D-125).
 18. **Working from the end the drafter types (D-277 DQ-052; planning chat's call from his rulings; his to overturn):** typing a figure at the end the run is not worked from turns the run to work from that figure; DQ-054 a crowded long section preview is drawn less tall, cards are only as tall as their lines, and nothing scrolls.
+
+### Added 20 Nov 2026, D-298 to D-383
+
+19. **Preview across the top (D-309, D-313):** "levels needs to have horizontal preview above", confirmed "Both: top strip and beside": the Long section window has the wide preview across the top; D-296 no longer holds for it.
+20. **Out of the one-job release (D-338):** Long section not ticked; paused, not cancelled.
+21. **Levels along a run in the Pipe tool are in Stage 1 (D-359, D-383 item 8):** "Levels work along the run"; type one level, the rest worked out with the 0.02 drop. Checks pass within the job's tolerance (D-321, D-350).
 
 ## Changed along the way
 
@@ -41,6 +49,8 @@ Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to 
 3. **The planning chat told Tim "short by 0.01 at P3" (16 Nov); the worst figure was short by 0.05 at the connection (D-129).** Recorded so the wrong figure is not reused.
 4. **The built answer "a cover level changed here does not redo the cover text" was overturned by D-271 DQ-034 (18 Nov; planning chat's call from his rulings; his to overturn):** typed once, everything follows (D-171).
 5. **The long section drawn onto the sheet, "only partly covered", got a form by D-276 DQ-037 (18 Nov; planning chat's call from his rulings; his to overturn):** a button inside the LONGSECTION window, built last.
+6. **The preview at the left (D-296) became the top strip (D-313, 19 Nov).**
+7. **"Brought next after Pit and Pipe" (D-088) was paused by D-338 (19 Nov):** out of the one-job release.
 
 ## Still open on this subject
 
@@ -56,9 +66,15 @@ Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to 
 10. **The SCHED layer and the rows of the council sheet** are to be checked against the office template when the "Draw on sheet" button is built (D-276 DQ-039, DQ-040). Waits on: the build chat.
 11. **The long section window has to show repeating rows, not four,** before first real use, since runs past four pits are normal (D-271 DQ-032). Waits on: the build chat.
 
+12. **The LONGSECTION tool returns from the carpark** after the one-job release (D-337, D-338). Waits on: later.
+
+**Closed (D-298 to D-383):** where the Long section preview sits (D-313).
+
 **Closed (D-230 to D-297):** how a long section is started (D-271 DQ-030); the scale of a long section on the sheet (D-276 DQ-038); both taken as the planning chat's calls from his rulings; his to overturn.
 
 ## Where the detail lives
+
+Added 20 Nov 2026: `DECISIONS.md` D-309, D-313, D-338, D-359, D-383.
 
 Added 18 Nov 2026: `DECISIONS.md` D-271, D-276, D-277, D-280, D-296, D-297.
 

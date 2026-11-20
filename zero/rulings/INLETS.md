@@ -1,6 +1,6 @@
 # Current rulings: Inlets (downpipe, overflow, FO, inspection opening, GIO, floor waste, trench grate)
 
-Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to D-297. If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
+Current rulings as of 20 Nov 2026 (Melbourne), from decisions D-001 to D-383 (D-298 to D-383 filed 20 Nov 2026). If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
 
 ## What is decided now
 
@@ -33,6 +33,12 @@ Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to 
 16. **What the Inlet window opens with (D-263):** inlets open with the last used choices, kept between AutoCAD sessions in a small CE file of its own; a setting lets anyone switch the tool to "always office default" or "always last used".
 17. **Build calls on inlets (D-277, D-288; planning chat's call from his rulings; his to overturn):** DQ-056 inlet sizes 90, 100 and 150 offered, any other typed; DQ-057 an inlet bigger than its pipe is "Needs a look"; DQ-058 an inlet typed past the end of its pipe is Wrong, said in words, the typed figure kept; DQ-059 roof area applies to a downpipe only; DQ-086 a downpipe's arriving level at a pit is typed and held, and until typed it reads "Not known".
 
+### Added 20 Nov 2026, D-298 to D-383
+
+18. **In the one-job release, Stage 2 (D-338, D-347):** "Inlets (downpipes etc.)" ticked for the first job; it waits until he has drafted with Stage 1. The trench grate is not in the one-job release (paused, D-337).
+19. **A pipe started from a downpipe (D-373 item 4):** opens at "Office default 100, unless it joins a pipe".
+20. **The Inlet window restyle was not commented on (D-309).** Placing many inlets (D-186) is not changed by D-354, which is for pits and pipes.
+
 ## Changed along the way
 
 1. **TRENCHGRATE / TG as an inlet was only a recommendation (FUNCTION_MAP FM-032); D-223 (18 Nov) put trench grate in the first release.** Whether it is an inlet or a kind of pipe, and its typed name, are still open (D-067 sorted trench grate into the wide, along-a-line style).
@@ -59,6 +65,8 @@ Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to 
 **Closed:** one set of inlet symbols, the "DYNAMIC WITH MASK" set against the plain floor waste and the machine-named downpipe (closed by D-229, "The WITH MASK set").
 
 ## Where the detail lives
+
+Added 20 Nov 2026: `DECISIONS.md` D-309, D-337, D-338, D-347, D-354, D-373.
 
 Added 18 Nov 2026: `DECISIONS.md` D-232, D-233, D-263, D-277, D-279, D-288, D-295 to D-297.
 

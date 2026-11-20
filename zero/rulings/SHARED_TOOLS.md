@@ -1,6 +1,6 @@
 # Current rulings: Shared everyday tools (ST-01 to ST-18, CLEAN first)
 
-Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to D-297. If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
+Current rulings as of 20 Nov 2026 (Melbourne), from decisions D-001 to D-383 (D-298 to D-383 filed 20 Nov 2026). If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
 
 Answers marked TA-xxx are Tim's words in `interview_tools\ANSWERS.md`; the hatch answers TA-047 to TA-063 are filed as D-227 and the block answers TA-064 to TA-073 as D-229.
 
@@ -8,7 +8,7 @@ Answers marked TA-xxx are Tim's words in `interview_tools\ANSWERS.md`; the hatch
 
 ### Whether and when
 
-1. **All 18 shared tools are in the first release, but each must work and be tested before release:** "all 18 but we need to make sure they all work and are tested before release. a lot of it already works and has been tested so it shouldnt take as long" (D-214, confirming D-201 and the planning chat's reading of D-209).
+1. **All 18 shared tools are in the first release, but each must work and be tested before release:** "all 18 but we need to make sure they all work and are tested before release. a lot of it already works and has been tested so it shouldnt take as long" (D-214, confirming D-201 and the planning chat's reading of D-209). **Paused by D-337 (19 Nov):** the shared tools are not in the one-job release; they are listed in `PARKING_LOT.md` P-09 and come back once that release has carried one real job.
 2. **CLEAN comes first in importance;** the rest in any order (D-201).
 3. **D-091 (one tool at a time) still governs the order of building** (D-201, the planning chat's note).
 4. **Every shared tool is gone through before it is built:** how it can be built better, fit the overall code and the database, scale, work as Tim intended and be better organised (D-202), and every one is interviewed for upgrades first (D-209).
@@ -48,6 +48,12 @@ Answers marked TA-xxx are Tim's words in `interview_tools\ANSWERS.md`; the hatch
 29. **The four hatch layers of unknown meaning (HATCH 155, 70, 221, SLAB INFILL) (D-232):** "Not sure either"; they are kept and marked unknown. The 37 hatch sample squares in the master are a legend sample set, not the hatch list; the hatch tool reads the function list of D-227.
 30. **The APPROX. standing note is a notes block on the Blocks palette (D-248):** the Unfinished list reminds the drafter to place it when anything prints APPROX. (wording on LABELS_AND_TEXT item 20).
 
+### Added 20 Nov 2026, D-298 to D-383
+
+31. **Paused (D-337):** "lets focus on a release for everything needed for one job, pause the rest for now and table it under future planning or the carpark and make sure we get back to it later". The 18 shared tools are paused, not cancelled (P-09).
+32. **His q alias is back (D-306, 19 Nov):** one line from the dated copy; D-208 said he keeps it and the removal under D-250 was the planning chat's mistake.
+33. **Office blocks travel with the tool (D-352):** a copy shipped with the plug-in, copied from the office master when a version is released; the master itself still changes only on his word (D-229).
+
 ## Changed along the way
 
 1. **"CE everyday helpers are not in the first release" (THE_PLAN section 3, 16 Nov) was replaced by D-201 (18 Nov),** widened by D-209 and confirmed by D-214.
@@ -78,14 +84,18 @@ Answers marked TA-xxx are Tim's words in `interview_tools\ANSWERS.md`; the hatch
 17. **COPYMODE on office PCs not checked;** if not 0, Tim sets it himself (NAMES_C_AND_RC_PROPOSAL; rule 1.9). Waits on: Tim.
 18. **The hatch fault in his working AutoCAD:** R-006 judges it probably plain AutoCAD and gives a two-minute check (Associative, PICKSTYLE, GRIPS, GRIPMULTIFUNCTIONAL, HPBOUND). Waits on: Tim.
 19. **What his alias q (mltim) is:** not said (TA-021); definitions of several alias targets not found (FM-177). Waits on: Tim. D-250 (18 Nov) removed eleven of his aliases that call commands found in no CE code, among them q and MLL (see RIBBON_AND_NAMES item 19).
-20. **POSSIBLE CONFLICT: Tim's Q.** D-208 says the CE arrow leader is QL and Tim keeps his own Q alias; D-250 lists "q" among the eleven aliases removed from his alias file. Neither says whether they are the same alias. Waits on: Tim.
+20. **POSSIBLE CONFLICT: Tim's Q.** D-208 says the CE arrow leader is QL and Tim keeps his own Q alias; D-250 lists "q" among the eleven aliases removed from his alias file. Neither says whether they are the same alias. Waits on: Tim. **Closed by D-306 (19 Nov):** q put back, the removal recorded as the planning chat's mistake.
 21. **Proper names for the 18 machine-named blocks he added to the palette** (D-232, TQ-13). Waits on: Tim.
+
+**Closed (D-298 to D-383):** the Q alias conflict (open item 20, closed by D-306).
 
 **Closed (D-230 to D-297):** what the Blocks palette holds (D-232, 37 blocks); whether the 37-square hatch sample set is the office hatch list (D-232, no).
 
 **Closed:** filing the hatch answers as D-numbers (closed by D-227); the hatch tick list HT-01 to HT-58 (closed by D-227, replaced by the function list); who owns edits to the master drawing (closed by D-229, nothing changes until Tim says so); the block questions on the pit block, inlet symbols, pipe description labels, left / right pairs, the 65 notes, BK-450, the 33 drop-candidates, the 181 structural blocks and the 51 copies (closed by D-229, and by D-228 for the pit block).
 
 ## Where the detail lives
+
+Added 20 Nov 2026: `DECISIONS.md` D-306, D-337, D-352; `PARKING_LOT.md` P-09.
 
 Added 18 Nov 2026: `DECISIONS.md` D-208, D-232, D-248, D-250.
 

@@ -1,6 +1,6 @@
 # Current rulings: Pit schedule
 
-Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to D-297. If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
+Current rulings as of 20 Nov 2026 (Melbourne), from decisions D-001 to D-383 (D-298 to D-383 filed 20 Nov 2026). If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
 
 ## What is decided now
 
@@ -27,6 +27,12 @@ Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to 
 18. **Build calls on the schedule (D-288; planning chat's call from his rulings; his to overturn):** DQ-085 schedule rows run outlet first, following the flow (pits are numbered from the outlet, D-183); DQ-087 the "runs long" warning starts from 20 rows; DQ-088 a very long schedule preview never shrinks below 0.8 and scrolls inside its own frame (a long list may scroll; the window itself does not).
 19. **The schedule window's preview is at the left, as in every window (D-296):** its size and form are OPEN under D-297.
 
+### Added 20 Nov 2026, D-298 to D-383
+
+20. **The restyled Pit schedule window is right as drawn (D-309):** "pit schedule, source, is great"; it keeps its preview at the left (D-299 put the top preview on Detention only, D-313 added Long section and Pipe).
+21. **In the one-job release, Stage 2 (D-338, D-347):** "Pit schedule" ticked for the first job; it waits until he has drafted with Stage 1.
+22. **Schedule holds are not closed by the edit doorway** and need their own fix in Stage 2 (D-348).
+
 ## Changed along the way
 
 1. **The window with a Columns card and an on-sheet scale choice (bench version) lost both (D-169, 18 Nov).**
@@ -50,6 +56,8 @@ Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to 
 **Closed (D-230 to D-297):** the typed name clash with AutoCAD's shell command (closed by D-233); the order of rows (taken by D-288 DQ-085, planning chat's call from his rulings; his to overturn).
 
 ## Where the detail lives
+
+Added 20 Nov 2026: `DECISIONS.md` D-309, D-338, D-347, D-348.
 
 Added 18 Nov 2026: `DECISIONS.md` D-233, D-257, D-288, D-296, D-297.
 

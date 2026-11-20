@@ -1,6 +1,6 @@
 # Current rulings: Outlet and legal point of discharge
 
-Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to D-297. If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
+Current rulings as of 20 Nov 2026 (Melbourne), from decisions D-001 to D-383 (D-298 to D-383 filed 20 Nov 2026). If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
 
 ## What is decided now
 
@@ -18,12 +18,19 @@ Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to 
 
 10. **ONE tool, LPD (D-274):** after being told that for the drafter the outlet and the legal point of discharge are hardly different, Tim chose "One tool, LPD (Recommended)". ONE tool, LEGALPOINT / LPD: pick the end of the last pipe and choose the kind; it marks the end of the system AND places the LPD tag and note there; where the legal point is back at the boundary (an outfall carrying on down the nature strip) the tag is slid along the pipe to it. OUTLET as a separate tool and typed name goes. The civil tab is now 11 windows. This supersedes D-222's small tool beside an Outlet tool, and D-190's separate Outlet tool.
 11. **Kinds of system end in the first version (D-273):** all four ticked: kerb and council pit; easement drain or council pipe; existing system on site; soak on site (the soakage sums themselves stay later, D-104). With them he asked "HOW IS THIS DIFFERENT TO THE LPD?", which D-274 answers.
-12. **What the end of a system is called and how it is drawn (D-275):** "NO TAG OF ITS OWN NAMED BY KIND BUT WE NEED A NON PRINTABLE WAY TO SHOW WHERE THE FINAL OUTLET IS". No OUT1 tag; in windows and lists it reads by kind ("kerb outlet", "council pit"), numbered only when there are two of a kind. It is drawn "By kind, from office blocks (Recommended)": a council pit with the office pit block as an existing pit, a kerb with the office kerb symbol if the palette has one, a pipe or easement connection simply ending on the council pipe. The non-printing mark is on "A CE no-plot layer (Recommended)": a small CE marker at the end point on one CE layer set not to plot (named in the office list; used for every on-screen-only CE mark), the same end lit in the system strip and listed first in the Unfinished list when a system has no end.
+12. **What the end of a system is called and how it is drawn (D-275):** "NO TAG OF ITS OWN NAMED BY KIND BUT WE NEED A NON PRINTABLE WAY TO SHOW WHERE THE FINAL OUTLET IS". No OUT1 tag; in windows and lists it reads by kind ("kerb outlet", "council pit"), numbered only when there are two of a kind. It is drawn "By kind, from office blocks (Recommended)": a council pit with the office pit block as an existing pit, a kerb with the office kerb symbol if the palette has one, a pipe or easement connection simply ending on the council pipe. **The council pit and kerb symbols superseded by D-317, D-333 and D-334 (19 Nov):** "both need new symbols"; the existing council pit is a solid square with a cross and an EX tag; the kerb outlet a half circle (item 13). The non-printing mark is on "A CE no-plot layer (Recommended)": a small CE marker at the end point on one CE layer set not to plot (named in the office list; used for every on-screen-only CE mark), the same end lit in the system strip and listed first in the Unfinished list when a system has no end.
+
+### Added 20 Nov 2026, D-298 to D-383
+
+13. **New symbols for the end of a system (D-317, D-333, D-334; `pictures\system_end_symbols.html`):** "both need new symbols" (D-317): the planning chat's proposal (PIT BLOCK 3 on EXISTING DRAIN, and a bare pipe end on the kerb line) is not taken. Existing council pit: "B, cross and 'EX'": a solid square with a cross, with a tag that starts with EX (for example EX SEP); one block with a tag attribute (D-333). Kerb outlet: "C, half circle": a half circle on the kerb, round side toward the road; one block (D-334).
+14. **In the one-job release (D-338):** "Legal point and system end" is ticked for the first job; it is in Stage 2 (D-347, see FIRST_RELEASE).
+15. **A pipe started from a legal point (D-373 item 4):** opens at "Office default 100, unless it joins a pipe".
 
 ## Changed along the way
 
 1. **FUNCTION_MAP FM-018 recommended that the Outlet tool carry the LPD label; Tim chose its own small tool (D-222, 18 Nov).**
 2. **A separate Outlet tool (D-190, THE_PLAN change note) beside a small LPD label tool (D-222) became ONE tool, LEGALPOINT / LPD (D-274, 18 Nov).** The council pit or kerb as a proper outlet (D-190) stands.
+3. **The council pit and kerb drawn from office blocks (D-275) became two new symbols (D-317, D-333, D-334, 19 Nov).**
 
 ## Still open on this subject
 
@@ -35,12 +42,16 @@ Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to 
 6. **Connection ground level from "nearest kerb or survey level":** not covered by D-178, which names cover levels only (INPUT_AUDIT section 4). Waits on: Tim.
 7. **When a fresh discharge letter is asked for** (Q-009). Waits on: Tim.
 8. **Existing drains "to be removed": how the office shows them** (SITUATIONS Q14 follow-on). Waits on: Tim.
-9. **The Blocks palette has to be checked for each end symbol** (office pit block as an existing pit, kerb symbol) and what was found shown to Tim (D-275). Waits on: the planning chat.
+9. **The Blocks palette has to be checked for each end symbol** (office pit block as an existing pit, kerb symbol) and what was found shown to Tim (D-275). Waits on: the planning chat. **Closed by D-333 and D-334 (19 Nov):** two new symbols, one block each.
 10. **The name of the CE no-plot layer** for on-screen-only marks is "named in the office list" and is not given (D-275). Waits on: the build chat.
 
 **Closed (D-230 to D-297):** typed names for the Outlet and LPD tools (closed by D-274); whether the Outlet and the LPD are separate tools (closed by D-274, one tool); the kinds of system end for the first version (closed by D-273); how the end is named and shown without printing (closed by D-275).
 
+**Closed (D-298 to D-383):** the end symbols (open item 9, closed by D-333 and D-334).
+
 ## Where the detail lives
+
+Added 20 Nov 2026: `DECISIONS.md` D-317, D-333, D-334, D-338, D-347, D-373; `pictures\system_end_symbols.html`.
 
 Added 18 Nov 2026: `DECISIONS.md` D-273 to D-275.
 

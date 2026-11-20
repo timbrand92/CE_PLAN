@@ -1,10 +1,10 @@
 # Current rulings: Tank
 
-Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to D-297. If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
+Current rulings as of 20 Nov 2026 (Melbourne), from decisions D-001 to D-383 (D-298 to D-383 filed 20 Nov 2026). If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
 
 ## What is decided now
 
-1. **In the first release:** "Tank and detention sums" (D-097).
+1. **In the first release:** "Tank and detention sums" (D-097). **Paused by D-337 and D-338 (19 Nov):** the Tank window stays paused unless the first job's storage is a tank (to ask); Detention is in (item 19).
 2. **Typed name TANK / WT, "WT FOR WATER TANK"** (D-170, D-169, which replaced TK of D-101); what happens to Tim's own "Wall-t" alias on WT is his to move, and the plug-in does not edit his alias file (D-170). **Changed by D-250 (18 Nov):** the eleven aliases (WT among them) and the second spelling SERIAL were removed from his AutoCAD 2027 alias file on 18 Nov on his words (D-250; done, board item 20), a dated copy beside the file; Pp removed the same way (D-251); WT is Tank and the plug-in still never edits the file itself (item 15).
 3. **The tank note has a leader arrow back to the tank,** as a part of the tank element, the way the office shows it (D-039).
 4. **A charged pipe may run from a downpipe to a water tank only;** that situation must be thought through (D-038).
@@ -19,9 +19,18 @@ Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to 
 10. **Which tank litres are typed (D-278; settles D-024 against D-100):** Tim asked: "IF YOU LOOK AT JOBS WE HAVE DONE IN THE PAST WHAT MAKES THE MOST SENSE?" The answer from the old jobs (planning chat's call from the old jobs; his to overturn): every measured job fixes the re-use litres from the STORM or sustainability report and gives the rest of a product-size tank to detention, which is D-024. So re-use is typed once from the report; the tank size is picked; detention fills in as tank less re-use and can be typed lower; the Detention window says whether total storage is short or spare and, if short, suggests the next tank size up and the engineer decides. D-100's "worked out from what the job needs" survives only as that suggestion.
 11. **Two or more tanks (D-285 DQ-073; planning chat's call from his rulings; his to overturn):** each tank holds its own detention (tank less re-use, D-278); no shared remainder. This changes the build.
 12. **How storage provided is totalled (D-289; planning chat's call from his rulings; his to overturn):** every store enters at its full room, the tank at its whole detention (tank less re-use), and the total is compared with the volume needed once, for the site: "1.70 provided, 1.64 needed, 0.06 spare", or "Short" with the amount. The bench capped the tank's share at what the pipes and pits left of the need, and called the tank's unused room "spare"; that goes. Evidence: the measured job's computations list the tank at 1.00 in full with pipe 0.36, P1 0.11 and P2 0.05, total 1.52 against 1.49 required. It follows D-278 and D-285.
-13. **Tank sizes, orifice and depths (D-282; planning chat's call from his rulings; his to overturn):** DQ-061 and DQ-062 (these overturn the built answer) the tank sizes offered are the office's own tank blocks (round and slimline; 2,500, 3,000, 3,500, 5,000 and 6,000 L on file) with the real plan sizes read from the blocks, never the mock-up's list or a rule (the rule draws the 3,500 L slimline 2.69 long where the office block is 2.25); any other size is typed and its shape stays "not known" until given (D-039); DQ-063 tank orifice sizes 20, 25, 30, 40 and 50 offered, 30 first, any figure typed (D-024); DQ-064 re-use depth is tank height times re-use over tank size, and the tank orifice sits at base level plus re-use depth, a negative result shown, never hidden; DQ-065 the detention pipe from a tank starts at the tank's orifice level; DQ-066 the tank note is worded as the office writes it, no comma; DQ-068 a tank smaller than its detention is Wrong and a size with no listed shape is "Needs a look"; DQ-070 while typed shape and size disagree the depth and orifice level read "not known" with words.
+13. **Tank sizes, orifice and depths (D-282; planning chat's call from his rulings; his to overturn):** DQ-061 and DQ-062 (these overturn the built answer) the tank sizes offered are the office's own tank blocks (round and slimline; 2,500, 3,000, 3,500, 5,000 and 6,000 L on file) with the real plan sizes read from the blocks, never the mock-up's list or a rule (the rule draws the 3,500 L slimline 2.69 long where the office block is 2.25) **[DQ-061 and DQ-062 superseded by D-316, D-335 and D-336 (19 Nov): "we have in the past not shown water tanks to scale"; neither old outline is taken; sizes come from makers' figures and tanks are drawn true to size with real rounded ends, items 16 to 18]**; any other size is typed and its shape stays "not known" until given (D-039); DQ-063 tank orifice sizes 20, 25, 30, 40 and 50 offered, 30 first, any figure typed (D-024); DQ-064 re-use depth is tank height times re-use over tank size, and the tank orifice sits at base level plus re-use depth, a negative result shown, never hidden; DQ-065 the detention pipe from a tank starts at the tank's orifice level; DQ-066 the tank note is worded as the office writes it, no comma; DQ-068 a tank smaller than its detention is Wrong and a size with no listed shape is "Needs a look"; DQ-070 while typed shape and size disagree the depth and orifice level read "not known" with words.
 14. **What the Tank window opens with (D-263):** tanks open with the last used choices, kept between AutoCAD sessions in a small CE file of its own; a setting lets anyone switch the tool to "always office default" or "always last used".
 15. **WT is Tank, and his own WT alias is gone (D-250):** asked about eleven of his short commands (WL, WT, WX, MLL, q, Dsa, Dss, Ds, Gr, Serial and ET) that call commands found nowhere in CE code: "EDIT THE ALIAS FILE TO REMOVE THOSE OTHER COMMANDS, WT IS TANK". The eleven aliases and the second spelling SERIAL were removed from his AutoCAD 2027 alias file on 18 Nov on his words (D-250; done, board item 20), a dated copy beside the file; Pp removed the same way (D-251); nothing else in the file is touched and the plug-in still never edits it by itself.
+
+### Added 20 Nov 2026, D-298 to D-383
+
+16. **Tanks drawn true to size (D-316):** on the 3,500 L tank outline: "we have in the past not shown water tanks to scale we need to create a block or water tank that is correct to size". Neither old outline is taken. The "Slimline" naming question is still open.
+17. **How a tank is drawn true to size (D-335):** "presets fill, typing wins but the tanks need to be rounded in the same way as real life. look at kingspan and other local manufacturers". Picking a volume fills the sizes from makers' figures; typing over them wins; the volume is always the stated figure. The outline is drawn with its real rounded ends and corners, not a plain rectangle.
+18. **Slimline plan shape (D-336; picture `pictures\tank_true_size.html`):** "Yes, full round ends for all". Steel and poly slimline tanks are both drawn in plan with fully rounded ends (end radius half the width). Sizes come from the makers' figures in `reference\research\R-015` (checked at source for four sellers; the maker he named could not be opened at its own site, so its sizes are from sellers' pages). A real 3,500 L slimline exists (poly, 2380 x 870 x 2150 high). No maker's drawing confirmed the shape: it rests on his word from site.
+19. **The Tank window in the one-job release (D-338):** stays paused unless the first job's storage is a tank (to ask).
+20. **Is a tank underground storage? (D-345; the planning chat's DRAFT call, Tim's to confirm or overturn):** for one council's 60 per cent check (D-327), a tank marked buried or underground counts; an above-ground tank and an underdeck tank do not. To ask him: whether an underdeck tank counts.
+21. **A pipe started from a tank (D-373 item 4):** opens at "Office default 100, unless it joins a pipe".
 
 ## Changed along the way
 
@@ -31,6 +40,8 @@ Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to 
 4. **The bench cap on the tank's share of storage (board item N-056, audit brief item 13) was replaced by "every store at full room, one comparison" (D-289, 18 Nov; planning chat's call from his rulings; his to overturn).**
 5. **The square preview style (D-067) was replaced for where the preview sits by D-296 (18 Nov).**
 6. **"What happens to the Wall-t alias on WT is his to move" (D-170) was changed by D-250 (18 Nov):** the alias was removed for him.
+7. **Tank sizes and outlines read from the office tank blocks (D-282 DQ-061, DQ-062, planning chat's call) were superseded by true-size tanks from makers' figures with full round ends (D-316, D-335, D-336, 19 Nov).**
+8. **The Tank window in the first release (D-097) was paused by D-337 and D-338 (19 Nov)** unless the first job's storage is a tank.
 
 ## Still open on this subject
 
@@ -45,11 +56,19 @@ Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to 
 9. **Tank, downpipe and AG ends must be proper ends** so a charged line to a tank is not reported "loose" (SITUATIONS B11, stops a job). Waits on: the build chat.
 10. **Full verdict on the Tank window waits on real use** (D-087, D-113). Waits on: Tim.
 11. **With two or more tanks, how one typed re-use figure is shared between them:** D-278 says re-use is typed once; D-285 DQ-073 says each tank holds its own detention (tank less re-use); neither says how the one figure splits. Waits on: Tim.
-12. **Tank sizes not on file** (any size beyond 2,500, 3,000, 3,500, 5,000 and 6,000 L) have no known shape until typed (D-282). Waits on: Tim.
+12. **Tank sizes not on file** (any size beyond 2,500, 3,000, 3,500, 5,000 and 6,000 L) have no known shape until typed (D-282). Waits on: Tim. **Overtaken by D-335 and D-336:** sizes come from makers' figures (R-015).
+13. **The "Slimline" naming question** (D-316). Waits on: Tim.
+14. **The true outlines redrawn for his look** from real size charts and end shapes (D-335). Waits on: the planning chat.
+15. **Whether the first job's storage is a tank** (D-338). Waits on: Tim.
+16. **Whether an underdeck tank counts as underground** (D-345 DRAFT). Waits on: Tim.
+
+**Closed (D-298 to D-383):** tank sizes and plan shapes (open items 2 and 12, D-316, D-335, D-336: makers' figures, true size, full round ends).
 
 **Closed (D-230 to D-297):** the conflict on where the re-use volume comes from (settled by D-278; planning chat's call from the old jobs; his to overturn); which tank litres are typed (D-278); the tank orifice sizes offered (D-282).
 
 ## Where the detail lives
+
+Added 20 Nov 2026: `DECISIONS.md` D-316, D-335, D-336, D-337, D-338, D-345, D-373; `reference\research\R-015`; `pictures\tank_true_size.html`.
 
 Added 18 Nov 2026: `DECISIONS.md` D-250, D-263, D-278, D-282, D-285, D-289, D-295 to D-297.
 

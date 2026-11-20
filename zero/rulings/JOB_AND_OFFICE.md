@@ -1,6 +1,6 @@
 # Current rulings: The job and the office (how the office works, the Job window, the Job Manager)
 
-Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to D-297. If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
+Current rulings as of 20 Nov 2026 (Melbourne), from decisions D-001 to D-383 (D-298 to D-383 filed 20 Nov 2026). If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
 
 ## What is decided now
 
@@ -23,7 +23,7 @@ Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to 
 
 ### The Job window
 
-15. **One Job window, typed once per job,** is change 4 of the five input changes (D-171). **Contents added 18 Nov:** the site's rainfall figures with their source (D-249) and the slab thickness per kind of paving (D-293).
+15. **One Job window, typed once per job,** is change 4 of the five input changes (D-171). **Contents added 18 Nov:** the site's rainfall figures with their source (D-249) and the slab thickness per kind of paving (D-293). **Added 19 and 20 Nov:** the mock-up approved, "Yes, build it like this" (D-310); the check tolerance, opening at 5 mm (D-321); the picked council, which turns on that council's checks and figures (D-327, D-330, D-331); in the one-job release, Stage 2 (D-338, D-347); not in Stage 1, where office defaults apply (D-381 item 2) (items 20 to 23).
 16. **New jobs first:** old hand-drawn drawings still open and plot; a tool to adopt them comes later (D-027); job facts found in a copied drawing are treated as assumed until confirmed (D-191).
 
 ### The Job Manager
@@ -35,6 +35,14 @@ Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to 
 18. **How a site's rainfall figures reach the office (D-249):** "A mix, depends on council". Some councils state the intensities to use, otherwise the Bureau's table. The Job window takes either: figures given by the council (held with the council, source recorded) or the Bureau table pasted or typed for the site; each figure marked with where it came from.
 19. **Slab thickness is set in the Job window, per kind of paving (D-293):** "should read from the plans and then you can set it in each jobs"; no office preset; typed over on a pipe where it differs; until it is set, cover under paving reads "Not known" (see LEVELS_AND_STANDARDS item 24).
 
+### Added 20 Nov 2026, D-298 to D-383
+
+20. **The Job window mock-up (D-310):** "Yes, build it like this".
+21. **Tolerance set per job in the Job window (D-321):** "A setting, opens at 5 mm": the tolerance on levels and cover is a setting an engineer can change per job.
+22. **The picked council drives its own checks and figures (D-327, D-330, D-331):** when one council is picked, the tool checks at least 60 per cent of storage underground and an orifice no smaller than 65 mm (D-327); the picked council can override the driveway cover preset (D-330); the council's own garden runoff figure opens, with its source (D-331).
+23. **In the one-job release (D-338, D-347, D-381):** the Job window is one of the nine parts, in Stage 2; with no Job window in Stage 1 the tools use office defaults (5 mm tolerance, the ten presets, no council, text for 1:100) and each window says so in one grey line.
+24. **The first job is a job with detention, in millimetres (D-338, D-344).**
+
 ## Changed along the way
 
 1. **"New jobs first" (D-027) was reopened by D-049 item 7 (16 Nov):** how existing projects are taken up must be designed; D-191 (18 Nov) then said jobs start from the template, which answers part.
@@ -43,7 +51,7 @@ Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to 
 
 ## Still open on this subject
 
-1. **The Job window's typed name (JOB is a draft) and contents** (INPUT_AUDIT section 3; FM-048; D-055). Waits on: Tim. Contents so far include rainfall source (D-249) and slab thickness per paving (D-293); the rest is not gone through.
+1. **The Job window's typed name (JOB is a draft) and contents** (INPUT_AUDIT section 3; FM-048; D-055). Waits on: Tim. Contents so far include rainfall source (D-249) and slab thickness per paving (D-293); the rest is not gone through. **Mock-up approved by D-310 (19 Nov);** tolerance (D-321) and council (D-327) added; the typed name is still a draft.
 2. **Where job facts are stored** so later tools read one place (Q-204). Waits on: the build chat.
 3. **Which "civil site" drawings the office sometimes does** (D-029, Q-011). Waits on: Tim.
 4. **How existing projects are taken up** beyond "start from the template" (D-049 item 7; SITUATIONS A7). Waits on: the planning chat.
@@ -57,6 +65,8 @@ Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to 
 12. **Older-format picture of the guidebook workflow figure** needs a reader or Tim to export it (Q-107). Waits on: Tim.
 
 ## Where the detail lives
+
+Added 20 Nov 2026: `DECISIONS.md` D-310, D-321, D-327, D-330, D-331, D-338, D-344, D-347, D-381.
 
 Added 18 Nov 2026: `DECISIONS.md` D-249, D-293.
 

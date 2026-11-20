@@ -1,6 +1,6 @@
 # Current rulings: Foundation (facts, sums, joins, standards, checks, unfinished, assumed, copies, what a drawing remembers)
 
-Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to D-297. If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
+Current rulings as of 20 Nov 2026 (Melbourne), from decisions D-001 to D-383 (D-298 to D-383 filed 20 Nov 2026). If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
 
 ## What is decided now
 
@@ -50,7 +50,7 @@ Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to 
 ### Ordinary objects
 
 26. **Only ordinary AutoCAD linework, text and the office's own blocks;** the special one-piece pipe object, the linking code around it, facts held in several places with repair commands, the settings store where a new value needs new code, and the old windows are left behind (D-094).
-27. **Build approach from the trials:** a join is kept as a soft pointer on the object itself; joined pipe ends are moved at the end of the command (one undo step); a position stamp is kept with each note; no drawing-wide shelf of facts keyed by handle (THE_PLAN section 6a, from trial results; not a Tim decision).
+27. **Build approach from the trials:** a join is kept as a soft pointer on the object itself; joined pipe ends are moved at the end of the command (one undo step); a position stamp is kept with each note; no drawing-wide shelf of facts keyed by handle (THE_PLAN section 6a, from trial results; not a Tim decision). **Made specific by the copy identity design that D-340 answered (19 Nov):** every join written on both parts; a part follows its owner only when both agree (design, not Tim's words; item 37).
 
 ### Added 18 Nov 2026, D-230 to D-297
 
@@ -60,6 +60,20 @@ Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to 
 31. **The software suggests, the person decides (D-286 rules 20, 21 and 26):** every field has a source in this order: worked out, captured automatically, read by AI from an email, PDF, photo or voice, pre-filled, typed only as a last resort; undo instead of "Are you sure?"; never overwrite a value he typed or locked, show both.
 32. **A held figure is never let go silently (D-271 DQ-036, D-288 DQ-100; planning chat's call from his rulings; his to overturn):** a typed grade is never let go; a level that disagrees shows "Out by" and changes nothing (D-124, D-125); a figure the drafter holds is not changed without a word on screen.
 33. **A system with no end is listed first in the Unfinished list (D-275),** with the same end lit in the system strip.
+
+### Added 20 Nov 2026, D-298 to D-383
+
+34. **The Unfinished list mock-up (D-311):** "Yes, build it like this". It is in the one-job release, Stage 2 (D-338, D-347).
+35. **Checks pass within a tolerance (D-318, D-321, D-350):** "Allow a small tolerance"; "A setting, opens at 5 mm" per job, in the Job window; a worked figure is checked at its exact figure with the tolerance, printed to two places; a grade passes at two decimal places (planning chat's call in D-321, confirmed by Tim in D-380).
+36. **A worked-out figure (D-319, D-322):** "dashed until held"; it is used as it stands with no extra step, and holding is done by typing over it, no pin (planning chat's reading of "if you want it and the invert is selected to be added to pipe you shouldnt need to do anything").
+37. **Copy identity (D-340):** the design `design\COPY_IDENTITY.md` (every join written on both parts; a part follows its owner only when both agree), with his three calls: two tags claiming one pit, "Leave both, list it"; a tag, label or symbol copied on its own, "Your own plain text"; parts in an array or block, "Say so once". Its first test is unproven and comes first.
+38. **Rounding and "the same point" (D-341; the planning chat's call, confirmed by Tim in D-380):** every length and level is taken to the nearest tenth of a millimetre, then rounded half up for display (1.0049 m shows 1.00, 1.0050 m shows 1.01; a figure that is 1.005 only by the computer's own arithmetic error is not pushed up); two points are the same within a tenth of a millimetre; every pick distance is a real-world size. No test is left failing on purpose.
+39. **One gate for every edit (D-348):** every edit to a pit, pipe, label or join passes one gate that collects the parts by their two-sided joins, checks every part first, writes once as a whole or not at all, and says so once.
+40. **One reader for every pipe (D-349):** one reader measures each pipe from the drawing after every edit, and every window, label, check and schedule reads that one result; twin barrels are kept matched.
+41. **One exact figure, one checker, one printer (D-350).**
+42. **Office set-up travels with the tool (D-352, D-381 item 1):** office blocks, and missing layers, text styles and linetypes, are brought in from the tool's own copy of the office set-up, said once; nothing existing is changed; a plain stand-in is never drawn.
+43. **Moving the whole plan changes nothing (D-381 item 7):** "what about if we move the plan on the page with everything, its shouldnt mess anything up": no join, level, label position, held figure or number changes, and no window opens. Proof in AutoCAD owed.
+44. **Every piece of text has its own tick (D-377 item 6):** text erased by hand stays gone, the same as unticking it on the part.
 
 ## Changed along the way
 
@@ -81,13 +95,18 @@ Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to 
 7. **A "junction on a pipe" join is missing from the joins list** (SITUATIONS B6). Waits on: the build chat.
 8. **"Largest size that still passes" brain ability, the top water level box and a council minimum orifice row** do not exist yet (INPUT_AUDIT section 1). Waits on: the build chat.
 9. **On-open self-check:** wording of the "changed outside the plug-in" list, self-check after RECOVER, a check for a half-made pit after a crash, an unreadable note treated as a plain object (SITUATIONS C15, C17, J4, J5). Waits on: the build chat.
-10. **Exploding a pipe loses its note** (CETEST FAIL, midday 18 Nov); EXPLODE awaits a supervised check (SITUATIONS C10). Waits on: the build chat.
+10. **Exploding a pipe loses its note** (CETEST FAIL, midday 18 Nov); EXPLODE awaits a supervised check (SITUATIONS C10). Waits on: the build chat. **Ruled by D-376 (20 Nov):** "Plain AutoCAD pieces, looks the same"; the tool stops looking after it and says so once; one Undo makes it a pipe again; the supervised check could not test it (D-351) and what EXPLODE leaves is still to be shown.
 11. **The live drawing that shows nothing without the plug-in is kept as a test case;** where the file is has not been given (PARKING_LOT P-04, Q-017). Waits on: Tim.
 12. **Proof that a sheet edited with no plug-in comes back and is reported correctly:** PASS in trial 3; AutoCAD LT and a live drawing not tested (THE_PLAN section 6a). Waits on: a test.
 13. **R-36 lists "read from a schedule or PDF by Claude" as a source;** D-150's list has no such word. Waits on: Tim. D-286 rule 20 also lists "read by AI from an email, PDF, photo or voice" in an order of sources; how that order and the D-150 words fit together is not said.
 14. **Following stays on from open (SITUATIONS J6) against PERFORMANCE 2.6 "starts only when a CE tool is first used"** (SITUATIONS document conflicts). Waits on: Tim.
+15. **The copy identity first test** (what AutoCAD really does to a pointer on each copy route, D-340) and **the moving-the-whole-plan proof** (D-381 item 7). Waits on: a test.
+
+**Closed (D-298 to D-383):** exploding a pipe (open item 10, ruled by D-376; still to be shown in AutoCAD); the rounding of lengths and levels (D-341, confirmed by D-380).
 
 ## Where the detail lives
+
+Added 20 Nov 2026: `DECISIONS.md` D-311, D-318, D-319, D-321, D-322, D-340, D-341, D-348 to D-352, D-376, D-377, D-380, D-381; design pages in `C:\CE_CIVIL` branches design/copy-identity, design/edit-doorway, design/sums-pipe-and-print, design/units.
 
 Added 18 Nov 2026: `DECISIONS.md` D-236, D-238, D-239, D-248, D-271, D-275, D-278, D-286, D-288, D-295; `design\SCREEN_RULES_18NOV.md`.
 

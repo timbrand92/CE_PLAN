@@ -1,6 +1,6 @@
 # Current rulings: How we work (built, tested, installed, accepted; the gate; loops; speed; testing that learns)
 
-Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to D-297. If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
+Current rulings as of 20 Nov 2026 (Melbourne), from decisions D-001 to D-383 (D-298 to D-383 filed 20 Nov 2026). If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
 
 ## What is decided now
 
@@ -12,19 +12,19 @@ Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to 
 
 ### Pace and order
 
-4. **One tool at a time, each finished before the next** (D-091).
+4. **One tool at a time, each finished before the next** (D-091). **For the one-job release, replaced by two stages (D-347, 20 Nov):** Stage 1 Pit, Pipe, drawing safety, cover and grade checks; Stage 2 the rest of the nine parts, once he has drafted with Stage 1 (see FIRST_RELEASE).
 5. **Never start anything new while a tool on the ribbon is broken** (D-090).
 6. **Every shared tool must work and be tested before release** (D-214).
 
 ### The gate
 
-7. **The obstacle course is the gate every tool must go through:** "yes this is the gate" (D-216), written as 27 tests with every one of the 597 recurring old bugs behind one of them (D-213).
+7. **The obstacle course is the gate every tool must go through:** "yes this is the gate" (D-216), written as 27 tests with every one of the 597 recurring old bugs behind one of them (D-213). **How a fix reaches the main line is now the merge gate of D-346 (19 Nov; planning chat's call, Tim's to overturn):** see MERGE_GATE.
 8. **Testing learns:** every fault found by a test or a person becomes a new check; every run records its time, counts and what it caught; slow checks are sped up; the trend shows in the director's summary; this is learning by record and rule, not a trained model (D-225, R-70).
 
 ### Loops and keeping things moving
 
 9. **The six loops** (tool, AutoCAD night, real job, decision, director, keep-moving) are written in `stage6\LOOPS.md` (D-158).
-10. **The build chat may start the AutoCAD part** (the foundation, then Pit, then Pipe), with nothing installed without Tim's yes (D-158).
+10. **The build chat may start the AutoCAD part** (the foundation, then Pit, then Pipe), with nothing installed without Tim's yes (D-158). **Widened by D-304 and D-306 (18 and 19 Nov):** the chats may install the tools the work needs (D-304), and the planning chat may install the new plug-in into his AutoCAD on its own judgement when the work needs it, saying what it did and how to undo it (D-306); see ROOMS_AND_HELPERS.
 11. **While Tim is away, the planning chat keeps things moving:** anything that is Tim's call is taken at the recommended default and marked DRAFT for him (D-137); the bench of seven windows went ahead (D-138).
 12. **Building happens in a new private repository of its own,** `C:\CE_CIVIL` with its own private GitHub repository, nothing shared with the old plug-in's repository (D-127).
 13. **Side chat for the tools interview reports to the planning chat;** its answers go to `interview_tools\ANSWERS.md` and the planning chat folds what matters into DECISIONS.md (D-198).
@@ -46,10 +46,23 @@ Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to 
 20. **Test result files held a login name, a PC name and folder paths (D-231):** two test result files committed that day to the private CE_CIVIL repository held his Windows login name, PC name and folder paths (no client details, no keys). The working copies were cleaned and a scrubber added; the old copies remain in git history. Asked whether to rewrite history, Tim answered "Leave the history alone". Condition recorded with it: if the repository is ever shared with anyone else, the history is cleaned first.
 21. **Build calls on speed and the outside library (D-288; planning chat's call from his rulings; his to overturn):** DQ-089 to DQ-091 the speed limits as built (1 second at start and on opening a 500-object drawing; window open 0.3 s; typing and preview 0.1 s; pit move 0.1 s on 2,500 objects; 5 thousandths of a second on a plain command), as in `stage6\PERFORMANCE.md`; DQ-102 the outside library is allowed in the automatic tests only, read only, never inside the installed plug-in.
 
+### Added 20 Nov 2026, D-298 to D-383
+
+22. **How fixes reach the main line (D-346, added to 20 Nov; planning chat's call, Tim's to overturn):** grouped by root cause, failing tests first, a fix merges on its list green with the whole suite, one honest check and one adversarial pass with no blocker; at most two fix rounds; a proof owed in AutoCAD is not a blocker, "merged" and "proven" are two separate facts. Full text on MERGE_GATE.
+23. **No third patch round; a design page first (D-347 method, D-372 item 4; planning chat's and control room's calls):** a cause that has failed two rounds gets a design page first, as copy identity did (D-340), then one build.
+24. **Codex abides by the rulings (D-308):** "make sure codex abides by our rules and decisions": every Codex job carries `CODEX_STANDING_BRIEF.md` at the top, names the rulings it touches, is reviewed against them, and is checked by the build chat before merging; a run that breaks a line is thrown away. A Team checker (Opus) reads every Codex result against the rulings (D-329).
+25. **Every reply and report starts with "WHERE WE ARE" (D-339, R-72):** see WHERE_WE_ARE.
+26. **The 19 budgets as tick sheets (D-328):** "As pictures and tick sheets later today".
+27. **Rooms, models and usage (D-302, D-303, D-307, D-329, D-342, D-353, D-360):** see ROOMS_AND_HELPERS.
+28. **Night test safety (D-364):** see NIGHT_TEST_SAFETY.
+
 ## Changed along the way
 
 1. **"Who accepts" (RULES.md Rulings item 1, P-01, "Not decided" list in DECISIONS.md) was answered by D-089 (16 Nov);** RULES.md still says "Answer: not yet given".
 2. **"Only the brain" (D-127) was extended to the window frame and seven bench windows (D-137, D-138), then to the AutoCAD part (D-158).**
+3. **"Both reviews must pass with nothing found" was replaced by the merge gate of D-346 (19 Nov; planning chat's call, Tim's to overturn),** which let nothing merge on the night of 19 Nov.
+4. **"One tool at a time" (D-091) was replaced for the one-job release by two stages (D-347, 20 Nov).**
+5. **"Nothing installed without Tim's yes" (D-158) was widened by D-304 and D-306 (18 and 19 Nov).**
 
 ## Still open on this subject
 
@@ -68,9 +81,15 @@ Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to 
 13. **RULES.md Rulings item 1 still records "who accepts" as unanswered** although D-089 answered it. Waits on: the planning chat.
 14. **Decision loop:** Tim's calls taken at the recommended answer, marked DRAFT, and given to him once a day as one batch of at most 12 (LOOPS loop 4); no batch record yet. Waits on: the planning chat.
 
+15. **The 19 budgets as tick sheets** (D-328). Waits on: the planning chat, then Tim.
+
+**Closed (D-298 to D-383):** what the robot pass must contain is now set by the merge gate for the main line (open item 6 in part, D-346; acceptance in AutoCAD is still Tim's or a robot pass under D-089).
+
 **Closed:** whether the board is approved (closed by D-226, "build the board").
 
 ## Where the detail lives
+
+Added 20 Nov 2026: `DECISIONS.md` D-302 to D-304, D-306 to D-308, D-328, D-329, D-339, D-340, D-342, D-346, D-347, D-353, D-360, D-364, D-372; `CODEX_STANDING_BRIEF.md`; `ROOMS.md`.
 
 Added 18 Nov 2026: `DECISIONS.md` D-231, D-286, D-288, D-295.
 

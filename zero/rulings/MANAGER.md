@@ -1,6 +1,6 @@
 # Current rulings: Manager (updates, health, office lists, job link)
 
-Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to D-297 (D-230 to D-297 were read and none bears on the Manager, so nothing here changed). If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
+Current rulings as of 20 Nov 2026 (Melbourne), from decisions D-001 to D-383 (D-230 to D-297 were read and none bears on the Manager; of D-298 to D-383 only D-337 bears on it). If this page and DECISIONS.md disagree, DECISIONS.md wins and this page is stale.
 
 ## What is decided now
 
@@ -10,7 +10,7 @@ Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to 
 2. **One admin page that only Tim sees:** each PC's version, faults this week, and one "approve this update for everyone" button; no canary rollout or policy pages (D-204, TA-013).
 3. **Updates:** a new version is offered when AutoCAD starts and installs with one click, with no administrator rights; going back is one click (D-028).
 4. **Statistics, wider admin control and "a better overall system" are future ideas,** not first release (D-205).
-5. **In the first release as a small Manager** (THE_PLAN section 3 change note of 18 Nov, the planning chat's reading of D-204; D-204 itself does not say "first release").
+5. **In the first release as a small Manager** (THE_PLAN section 3 change note of 18 Nov, the planning chat's reading of D-204; D-204 itself does not say "first release"). **Paused by D-337 (19 Nov):** "lets focus on a release for everything needed for one job, pause the rest for now and table it under future planning or the carpark and make sure we get back to it later"; the Manager is not among the nine parts of the one-job release (D-338) and waits in `PARKING_LOT.md` P-09.
 
 ### Job tracking
 
@@ -25,6 +25,7 @@ Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to 
 1. **Job tracking as a Manager feature inside the plug-in (D-044, D-045, 16 Nov) became a hand-over to the Job Manager program (D-071, 16 Nov evening).** Not marked superseded; the later answer is read as governing where tracking lives.
 2. **"Manager changes" were not in the first release (THE_PLAN section 3, 16 Nov); a small Manager is now in (THE_PLAN change note, 18 Nov, after D-204).**
 3. **The tab "CE TOOLS&MANAGER" (D-200) was named "CE Tools" (D-208, 18 Nov).**
+4. **The small Manager in the first release was paused by D-337 and D-338 (19 Nov).**
 
 ## Still open on this subject
 
@@ -43,6 +44,6 @@ Current rulings as of 18 Nov 2026, 5:30 pm (Melbourne), from decisions D-001 to 
 
 ## Where the detail lives
 
-1. `DECISIONS.md` D-028, D-044, D-045, D-071 to D-074, D-204, D-205.
+1. `DECISIONS.md` D-028, D-044, D-045, D-071 to D-074, D-204, D-205; added 20 Nov: D-337, D-338; `PARKING_LOT.md` P-09.
 2. `design\TOOLS_AND_MANAGER_INTERVIEW.md` (A-11 to A-13, MG-01 to MG-06); `design\FUNCTION_MAP.md` FM-156 to FM-173.
 3. The Job Manager project per `C:\TimOS\ROUTER.md` (not read).
