@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-130.
+**Next number:** TR-134.
 
 ---
 
@@ -333,3 +333,13 @@
 **TR-128** (N-059; which side the number goes when above and below are both taken). He picked: "Right first, then left (Recommended)".
 
 **TR-129** (N-060; what the 900 mm is measured to). He picked: "To the centre of the circle (Recommended)". Pit centre to circle centre, 900 mm, a setting (TR-014). Room's note (mine, from the option text): on a big pit (1200) the circle would overlap the pit at 900, so the tool keeps at least a set clear gap from the pit's edge; the size of that gap was not asked.
+
+## Batch 32, Fri 20 Nov 2026, 15:14 (clock read), through the question window, one line per question; two pictures sent first (`pictures/bends_and_sleeve_1.png`, `pictures/bends_and_sleeve_2.png`; drawn by a Team helper, passed by a separate Team checker). The chat had restarted; he wrote "send questions again" and the same four were re-sent.
+
+**TR-130** (unknown U-107; the label on a pipe with bends; example, one pipe of 12 m running 3 m, a 90 degree turn, 7 m, a 45 degree turn, 2 m). He picked: "A. On the longest straight length (Recommended)". One label per pipe, centred above the longest straight length; the arrow centred on the other side of that same length; invert levels only at the two ends of the whole pipe; text never runs across a bend.
+
+**TR-131** (unknown U-107; a bend right at the pit, so the usual place for the invert level is taken). Offered: A past the bend on the first clear length (recommended); B at the pit on the short length, flagged. He wrote: "a, i love this. these are the kinds of situations we need to clarify and build systems for, now youre getting it". The level slides along past the bend to the first straight length with room, same side (the slide-along rule of TR-013). His words on the METHOD are recorded for every room: this kind of situation, drawn and asked, is what he wants more of.
+
+**TR-132** (unknown U-079; the mask behind text). Offered: masked from day one (recommended); no mask in Stage 1. He wrote: "mask is on from day one but option to not have it as well would be great". Every label, invert level and cover level is masked from day one; AND there is a way to have no mask. Not said: whether that is one office setting, per drawing, or a tick on each piece of text (to ask).
+
+**TR-133** (N-065; what counts as in the way when the tool looks for a clear spot). Offered: only text, pipes and pits (recommended); any line; text, pipes, pits and walls of the building. He picked: "Text, pipes, pits, and walls of the building". Not the recommended answer. A spot is taken by other text, a pipe band, a pit, or a building wall; ordinary linework and hatching do not count. **To flag:** how the tool tells a building wall from other linework in the architect's background (by layer, by an outline he picks once, or not from an xref at all) is not ruled and may not be possible inside an xref (the tool never changes or scans inside xrefs, DRAWING_AND_SHEETS open 7); a proposal is owed.
