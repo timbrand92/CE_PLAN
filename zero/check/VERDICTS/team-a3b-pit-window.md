@@ -86,3 +86,37 @@ An outlet above an inlet on a mixed branch shows only amber, not red; a pit over
 ## 11. Ruled since (control room, about 12:33 am, DRAFT, for Tim to confirm with a picture)
 
 The Pit window stays whole at 1000 by 620 and at 1240 by 780 for ANY number of pipes; it never grows and nothing is cut off (D-386). Step 2 lists the first few pipes, the LOWEST outlet always among them (it sets the depth), then "and N more", which opens the full list in its own panel where a long list may scroll. Round two goes with the pit levels build, after the rounding fix (D-432, D-436).
+
+
+---
+
+# Final verdict: team/a3b-pit-window at 45eaaaf (its LAST fix round)
+
+**Verdict: HOLD, final. Both halves hold it. Two rounds are spent, so under D-346 it goes to the control room with this open list.** Written Sat 21 Nov 2026, about 3:44 am. The checks ran on the bench only. Rounding and depth figures were not counted against this round, as ruled.
+
+**Who checked.**
+- **Honest half:** one Claude helper on Sonnet. Report: `C:\CE_WORK\check\reports\a3b3_honest_REPORT.md`. It holds on (a).
+- **Adversarial half:** Codex gpt-6.2-astra. Report: `C:\CE_WORK\check\reports\a3b3_adv_REPORT.md`, with proofs in `a3b3_adv_proofs\`. It holds on three.
+
+**Closed:**
+- Renumber refuses the whole operation when it clashes with an outside pit (P1, P01, 1 and p1 forms), on visible and locked layers. It also refuses for a protected or xref pit, and it rolls back cleanly after an interrupted write.
+- A cleared cover writes "CL TBC", and a new pit with no cover draws "CL TBC".
+- The 55 earlier suite failures are cleared. The five seen in the honest half's full run were load effects and pass when run alone.
+- The window is whole at 1240 by 780 for every pipe count tried.
+
+## Open list (one page)
+
+1. **Step 3 is cut off at the approved 1000 by 620 size (both halves).** With exactly five pipes at a pit, or with four pipes all arriving, the "= Depth" row and the size labels fall outside the card. The cause is `compact = morePipes.Count > 3` at about line 764 of `src/CeCivil.Window/Parts/Std/StdSteps.cs`. With five pipes and a refused number, none of the depth row shows. Every other count from 1 to 12, and 40, is whole. Ruling: section 11 (DRAFT) and D-346, a cut-off at an approved size.
+2. **Renumber can throw away a valid edit (adversarial half).**
+   - **The case:** with P1 joined upstream of P7, the drafter edits P1's cover from 12.82 to 13.10, chooses Renumber and picks P7 first. The preview accepts the swap (P7 to P1, P1 to P2).
+   - **What goes wrong:** after OK the window closes, but the numbers stay P7 and P1, and the cover stays 12.82. The drafter's edit is silently lost. The cause is the comparison at `PitCommand.cs:105`.
+   - **A second case of the same fault:** P2 edited to P99 leaves P1 and P99, although the preview said the joined pits would follow in order.
+   - **Rulings:** D-421 item 1 and D-428 items 1 and 4.
+3. **Paste can give two pits the same number (adversarial half).** The Pit window accepts and saves P2147483647. Beside an older pit "p1", pasting a P1 from another drawing twice creates two pits both numbered P-2147483648. Ruling: D-428, no duplicate number. The fix needs an upper limit on typed pit numbers, plus a paste that never wraps past it.
+
+**What it needs:** one bounded round on these three items only, or a ruling from the control room. Each item already has its replay ready in the proofs folder.
+
+**Owed in AutoCAD:**
+- One Undo after a connected placement or Renumber.
+- Pasted numbers and "CL TBC" after save and reopen.
+- The native Pipe invert-label position, which stays WAITING (D-399).
