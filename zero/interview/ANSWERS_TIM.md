@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-175.
+**Next number:** TR-179.
 
 ---
 
@@ -447,3 +447,13 @@
 **TR-173** (N-038; a picked polyline's layer and colour). He picked: "The pipe layer, ByLayer; nothing carries over (Recommended)".
 
 **TR-174** (N-039; Cancel after picking a polyline, before OK). He picked: "Exactly as it was, untouched (Recommended)". Nothing happens to the polyline until OK.
+
+## Batch 43, Fri 20 Nov 2026, 16:45 (clock read), through the question window, one line per question. Sources: `stage6/SPEC_PIPE.md` section 12 items 28, 56, 41, 48. Closed without asking, as already answered: N-047 and N-048 (pipe names: TR-119, each pipe has its own number shown with what it joins), N-049 (the title bar: as on the approved picture, TR-109), N-055 (several pipes arriving: TR-100 and TR-104, the lowest).
+
+**TR-175** (N-046; whether a pipe's length can be typed; example, 6.20 m on the plan but about 6.5 m on site). Offered: no, always measured off the drawing (recommended); yes, he can type over it. He picked: "Yes: I can type over it". Not the recommended answer. A length can be typed and held, shown as his, with the drawn length beside it; the levels and grade then follow the typed length. **This OVERTURNS D-277 DQ-049 (planning chat's call: "a pipe's length is never typed, it is measured from the pipe as drawn") and the design D-349 ("one reader measures each pipe from the drawing")**: the drawn length is still read, but a typed length, where he gives one, is what the sums use. Not asked: what the label or any schedule shows, and what happens to a typed length when the pipe is then moved or stretched.
+
+**TR-176** (N-040; how wide the pipe is drawn). He picked: "Yes: the band is as wide as the pipe size (Recommended)". The band and its two edge lines are the nominal size apart; changing the size redraws the band.
+
+**TR-177** (N-051; a size typed for a run with a bigger pipe already arriving part way; example, 150 typed for P5 to P1, a 225 already runs into P3). Offered: all five stay 150 and P3 onward show amber (recommended); the window offers to bump them before OK. He picked: "The window offers to bump them before OK". All five are held at 150 (TR-045); the window says which lengths are smaller than what feeds them and offers one click to make those lengths the bigger size; No leaves them with the amber marker.
+
+**TR-178** (N-056; the levels where a branch joins a pipe with no pit; example, a 100 branch into a 150 main whose invert at the join works out to 12.20). Offered: same as the main, no drop, lower is red (recommended); tops level; 0.02 above the main. He wrote: "BRANCHES DONT NEED INVERT LEVELS MOST OF THE TIME INT HE CASE THEY DO, SAME AS MAIN". Room's reading (mine): at a branch join the tool does not ask for, and by default does not write, an invert level for the branch; where he does give one it opens at the same level as the main at that point, with no 0.02 drop. (This also bears on TR-065, "every known level, both ends": a worked-out level at a branch join is not written unless he asks. To confirm.)
