@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-026.
+**Next number:** TR-030.
 
 ---
 
@@ -69,3 +69,13 @@
 **TR-024** (unknown U-048; the top pipe of a run of 100s is changed to 150). He picked: "Offer once, then flag (Recommended)". The window offers once to make the pipes downstream 150 too; Yes changes them and their labels in the same Undo; No leaves them, each flagged "Needs a look". Closes U-048.
 
 **TR-025** (unknown U-034; a pipe started from a downpipe, a tank outlet or the legal point). He picked: "Office default 100, unless it joins a pipe (Recommended)". Closes U-034 for the opening size (how such an end READS before inlets exist is Stage 2 detail and stays with U-041's neighbours; not asked).
+
+## Batch 7, Fri 20 Nov 2026, 12:07 (clock read), through the question window
+
+**TR-026** (unknown U-036; which pipe kinds the Pipe tool must draw and label in Stage 1; offered as ticks: new stormwater, charged to the tank, detention with twin, suspended). He ticked none and wrote: "what do you recommend? maybe keep it simple but record everything so we can easily incorporate into future systems so everything is scalable and can be built upon". NOT a ruling on the kinds. Room's reading (mine): he wants (1) a recommendation from the room; (2) Stage 1 kept simple; (3) every kind recorded as data from the start so the others come in later without a rebuild (R-32, R-65). Room's recommendation, put back to him for a yes: Stage 1 draws and labels the ordinary pipe and the charged pipe (both a single pipe; they differ only by layer and label wording, which are rows in the office list); detention, twin and suspended come with Stage 2 (they need the barrels rule D-349 and the storage sums); the kind is a row in the office list from day one, so adding a kind is adding a row. U-036 stays open.
+
+**TR-027** (unknowns U-033, U-109; a run that starts or ends on an existing pipe with no pit; example, a 100 from a back downpipe drawn across to the middle of the 100 down the side of the house). Offered: join them and split the old pipe, offering an opening (recommended); join them, old pipe stays one; always put a pit or opening there. He picked: "Join them, old pipe stays one". Not the recommended answer. The new pipe is trimmed to the side of the old one and joined; the old pipe stays ONE pipe with one label; the branch is recorded as joining it part way along; the level at the join is worked out, not typed. Room's note (mine): this differs from a PIT dropped on a pipe, which splits it in two (D-077); both stand. Whether an inspection opening is still offered at the join (D-081) was not asked again and stands as ruled. Closes U-033 and U-109.
+
+**TR-028** (unknown U-099; a picked polyline with an arc; the same answer offered for a closed polyline and one on a locked layer or inside an xref). He picked: "Refuse that polyline, say why (Recommended)". The tool says what is wrong (a curved piece; a closed loop; a locked layer; inside an xref) and changes nothing. Closes U-099.
+
+**TR-029** (unknown U-066; a typed EXPLODE of a pipe; no ruling existed). Offered: plain AutoCAD pieces that look the same (recommended); refuse to explode; explode but keep the knowledge. He picked: "Plain AutoCAD pieces, looks the same (Recommended)". The pipe becomes ordinary polyline, lines and text on the right layers, looking exactly as it did; the tool stops looking after it and says so once on the command line; one Undo makes it a pipe again. Closes U-066 for the ruling. Still owed: the test in AutoCAD of what EXPLODE really leaves (STAGE1_TIMS_EYES line 12), and the same question for a pit (a block: EXPLODE of a block is AutoCAD's own).
