@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The flow arrow, and pipes with less text</title>
+<style>
+  :root{--page:#2B2D30;--card:#383B40;--cad:#16181B;--text:#ECEDEF;--grey:#A9AEB6;--line:#4A4D53;--rose:#FF70B3}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--page);color:var(--text);font-family:"Segoe UI",Arial,sans-serif;font-size:14px;line-height:1.45}
+  main{max-width:980px;margin:0 auto;padding:24px}
+  section.q{background:var(--card);border-radius:8px;padding:24px;margin:0 0 24px}
+  h2{font-size:24px;font-weight:600;margin:0 0 8px}
+  .ctx{color:var(--grey);margin:0 0 16px}
+  h3{font-size:14px;font-weight:600;margin:0 0 8px}
+  .rec{display:inline-block;background:var(--rose);color:#10131A;border-radius:8px;padding:0 8px;margin-left:8px;font-weight:600;font-size:12px}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .opt{margin:0 0 24px}.opt:last-child,.two .opt{margin-bottom:0}
+  svg{display:block;width:100%;height:auto;background:var(--cad);border:1px solid var(--line);border-radius:8px}
+  svg text{font-family:Arial,"Segoe UI",sans-serif}
+  .note{font-size:12px;color:var(--grey);margin:8px 0 0}
+  .made{font-size:12px;color:var(--grey);margin:0}
+</style>
+</head>
+<body>
+<main>
+<div id="host"></div>
+<p class="made" id="made"></p>
+</main>
+<script>
+var NS="http://www.w3.org/2000/svg",BLUE="#3F7BE0",RED="#FF5A5A",CAD="#16181B",K=0.064;
+function el(n,a,t){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);if(t!==undefined)e.textContent=t;return e}
+function svg(w,h){return el("svg",{viewBox:"0 0 "+w+" "+h,role:"img"})}
+function mm(v){return v*K}
+function tw(str,h){return str.length*mm(h)*1.38*0.56}
+function fsz(h){return mm(h)*1.38}
+// real text, masked. x,y = middle of the text
+function txt(s,x,y,str,h,o){o=o||{};var fs=fsz(h),w=tw(str,h);
+  var g=el("g",o.rot?{transform:"rotate("+o.rot+" "+x+" "+y+")"}:{});
+  g.appendChild(el("rect",{x:x-w/2-2,y:y-fs*0.55,width:w+4,height:fs*1.1,fill:CAD}));
+  g.appendChild(el("text",{x:x,y:y+fs*0.35,"font-size":fs,"text-anchor":"middle",style:"fill:"+(o.fill||"#fff")},str));
+  s.appendChild(g)}
+// ghost spot: dashed box the size of the text, with its number
+function ghost(s,x,y,str,h,n,o){o=o||{};var fs=fsz(h),w=tw(str,h);
+  var g=el("g",o.rot?{transform:"rotate("+o.rot+" "+x+" "+y+")"}:{});
+  g.appendChild(el("rect",{x:x-w/2-2,y:y-fs*0.55,width:w+4,height:fs*1.1,fill:"none",stroke:"#A9AEB6","stroke-width":1,"stroke-dasharray":"5 4"}));
+  s.appendChild(g);badge(s,x+(o.bx||0),y+(o.by||0),n)}
+function badge(s,x,y,n){s.appendChild(el("circle",{cx:x,cy:y,r:9,fill:"#ECEDEF"}));
+  s.appendChild(el("text",{x:x,y:y+4,"font-size":12,"font-weight":700,"text-anchor":"middle",style:"fill:#10131A"},n))}
+function pit(s,x,y){var r=mm(225);s.appendChild(el("rect",{x:x-r-4,y:y-r-4,width:2*r+8,height:2*r+8,fill:"none",stroke:"#C8CBD0","stroke-width":1,"stroke-dasharray":"4 3"}));
+  s.appendChild(el("rect",{x:x-r,y:y-r,width:2*r,height:2*r,fill:CAD,stroke:"#fff","stroke-width":1.5}));
+  s.appendChild(el("line",{x1:x-r,y1:y-r,x2:x+r,y2:y+r,stroke:"#8A8E96","stroke-width":1}));
+  s.appendChild(el("line",{x1:x-r,y1:y+r,x2:x+r,y2:y-r,stroke:"#8A8E96","stroke-width":1}))}
+function pipe(s,x1,x2,y){var w=mm(100);
+  s.appendChild(el("line",{x1:x1,y1:y,x2:x2,y2:y,stroke:BLUE,"stroke-width":w,"stroke-dasharray":"32 16"}));
+  s.appendChild(el("line",{x1:x1,y1:y-w/2,x2:x2,y2:y-w/2,stroke:"#C8CBD0","stroke-width":0.8}));
+  s.appendChild(el("line",{x1:x1,y1:y+w/2,x2:x2,y2:y+w/2,stroke:"#C8CBD0","stroke-width":0.8}))}
+function vpipe(s,x,y1,y2){var w=mm(100);
+  s.appendChild(el("line",{x1:x,y1:y1,x2:x,y2:y2,stroke:BLUE,"stroke-width":w,"stroke-dasharray":"32 16"}));
+  s.appendChild(el("line",{x1:x-w/2,y1:y1,x2:x-w/2,y2:y2,stroke:"#C8CBD0","stroke-width":0.8}));
+  s.appendChild(el("line",{x1:x+w/2,y1:y1,x2:x+w/2,y2:y2,stroke:"#C8CBD0","stroke-width":0.8}))}
+function tag(s,x,y,n){s.appendChild(el("circle",{cx:x,cy:y,r:mm(330),fill:CAD,stroke:"#fff","stroke-width":1.5}));
+  s.appendChild(el("text",{x:x,y:y+mm(350)*0.5,"font-size":mm(350)*1.3,"text-anchor":"middle",style:"fill:#fff"},n))}
+function tagGhost(s,x,y,n){s.appendChild(el("circle",{cx:x,cy:y,r:mm(330),fill:"none",stroke:"#A9AEB6","stroke-width":1,"stroke-dasharray":"5 4"}));badge(s,x,y,n)}
+function say(s,x,y,str,a){s.appendChild(el("text",{x:x,y:y,"font-size":13,"text-anchor":a||"start",style:"fill:#C8CBD0"},str))}
+var LBL="100 DIA. UPVC PIPE AT 1 IN 100";
+var offL=mm(50)+mm(75)+fsz(250)*0.55, offI=mm(50)+mm(50)+fsz(180)*0.55;   // centre of text from pipe centre
+
+function brk(s,x,y){s.appendChild(el("rect",{x:x-5,y:y-8,width:12,height:16,fill:CAD}));s.appendChild(el("line",{x1:x-6,y1:y+9,x2:x-1,y2:y-9,stroke:"#C8CBD0","stroke-width":1}));s.appendChild(el("line",{x1:x-1,y1:y+9,x2:x+4,y2:y-9,stroke:"#C8CBD0","stroke-width":1}))}
+
+// flow arrow: 750 mm long, head 300 mm, parallel to the pipe. dir -1 = points left
+function arrow(s,x,y,dir,ghostN){var L=mm(750),H=mm(300),x1=x-dir*L/2,x2=x+dir*L/2,st=ghostN?"#A9AEB6":"#fff";
+  s.appendChild(el("line",{x1:x1,y1:y,x2:x2-dir*H,y2:y,stroke:st,"stroke-width":1.2,"stroke-dasharray":ghostN?"5 4":"none"}));
+  s.appendChild(el("polygon",{points:x2+","+y+" "+(x2-dir*H)+","+(y-4)+" "+(x2-dir*H)+","+(y+4),fill:ghostN?"none":"#fff",stroke:st,"stroke-width":1}));
+  if(ghostN)badge(s,x,y+15,ghostN)}
+var offA=mm(50)+mm(200);                 // arrow line, from pipe centre
+function longRun(s,y){var X2=150,X3=726;pit(s,X2,y);pit(s,X3,y);pipe(s,X2+mm(225),X3-mm(225),y);tag(s,X2,y-mm(900),"P2");tag(s,X3,y-mm(900),"P3");return [X2,X3]}
+function ilL(s,X2,y,str){txt(s,X2+mm(225)+mm(200)+tw(str,180)/2,y+offI,str,180,{fill:RED})}
+function ilR(s,X3,y,str){txt(s,X3-mm(225)-mm(200)-tw(str,180)/2,y+offI,str,180,{fill:RED})}
+function p1(){var s=svg(930,200),y=120,r=longRun(s,y),c=(r[0]+r[1])/2,w=tw(LBL,250);
+  txt(s,c,y-offL,LBL,250);ilL(s,r[0],y,"IL 12.31");ilR(s,r[1],y,"IL 12.40");
+  var ax=(r[0]+mm(225)+c-w/2)/2+8;arrow(s,ax,y-offA,-1);badge(s,ax,y-offA-15,"1");
+  arrow(s,c,y+offA,-1,"2");
+  say(s,c,y+offA+48,"water runs P3 to P2 (12.40 down to 12.31)","middle");return s}
+function p2(){var s=svg(930,200),y=128,X2=300,X3=X2+mm(4000),c=(X2+X3)/2,fs=fsz(250);pit(s,X2,y);pit(s,X3,y);pipe(s,X2+mm(225),X3-mm(225),y);
+  tag(s,X2-mm(900),y,"P2");tag(s,X3+mm(900),y,"P3");
+  txt(s,c,y-offL-fs*1.15,"100 DIA. UPVC PIPE",250);txt(s,c,y-offL,"AT 1 IN 100",250);ilL(s,X2,y,"IL 12.31");ilR(s,X3,y,"IL 12.35");
+  arrow(s,c,y+offA+mm(330),-1);return s}
+function p3(){var s=svg(930,190),y=110,r=longRun(s,y),c=(r[0]+r[1])/2,w=tw(LBL,250);
+  ghostOnly(s,c,y-offL,LBL,250);say(s,c,y-offL-24,"label switched off: its place stays empty","middle");
+  ilL(s,r[0],y,"IL 12.31");var ax=(r[0]+mm(225)+c-w/2)/2;arrow(s,ax,y-offA,-1);
+  var e="IL 12.40",ex=r[1]-mm(225)-mm(200)-tw(e,180)/2;ghostOnly(s,ex,y+offI,e,180);say(s,ex,y+offI+26,"no level shown at P3","middle");return s}
+function p4(){var s=svg(930,170),y=100,r=longRun(s,y),c=(r[0]+r[1])/2,L2=LBL+" MIN.";
+  txt(s,c,y-offL,L2,250);var ax=(r[0]+mm(225)+c-tw(L2,250)/2)/2+8;arrow(s,ax,y-offA,-1);
+  say(s,c,y+offI+26,"no invert levels: the label and the arrow stay where they always are","middle");return s}
+function ghostOnly(s,x,y,str,h){var fs=fsz(h),w=tw(str,h);s.appendChild(el("rect",{x:x-w/2-2,y:y-fs*0.55,width:w+4,height:fs*1.1,fill:"none",stroke:"#5F646C","stroke-width":1,"stroke-dasharray":"5 4"}))}
+var Q=[
+{h:"The flow arrow",ctx:"On your sheets it is a separate arrow 750 mm long beside the pipe, usually near one end of the run, on either side. A proposal for you to correct. Red IL = invert level.",
+ body:function(sec){
+  add(sec,"A. A long pipe",p1(),"Spot 1: on the label's side, between the label and the downstream pit, pointing the way the water runs. Spot 2, if something else already sits there: the other side, in the middle, between the invert levels.");
+  add(sec,"B. A short pipe with a stacked label",p2(),"No room beside the label, so the arrow goes to the other side, below the invert levels.")}},
+{h:"A pipe with less text on it",ctx:"Your question: do the same rules hold with no label, or with one invert level or none? Proposal: yes. Each piece keeps its own spot whether or not the others are shown. Red IL = invert level.",
+ body:function(sec){
+  add(sec,"No label, one invert level",p3(),"The invert level and the arrow sit exactly where they would with a label. Nothing shuffles into the empty places, so every pipe on the sheet reads the same way.");
+  add(sec,"A label, no invert levels",p4(),"With no levels the arrow points the way the pipe was drawn, until a level or the outlet says otherwise. The label ends MIN. as you ruled on 18 Nov.")}}
+];
+function add(parent,h,s,n,rec){var d=document.createElement("div");d.className="opt";var hh=document.createElement("h3");hh.textContent=h;
+  if(rec){var r=document.createElement("span");r.className="rec";r.textContent="Recommended";hh.appendChild(r)}
+  d.appendChild(hh);d.appendChild(s);var p=document.createElement("p");p.className="note";p.textContent=n;d.appendChild(p);parent.appendChild(d)}
+var MADE=["The levels and pit numbers are made up for the picture.","The levels and pit numbers are made up for the picture."];
+var only=(location.search.match(/q=(\d)/)||[])[1],host=document.getElementById("host");
+Q.forEach(function(q,i){if(only&&only!=i+1)return;var sec=document.createElement("section");sec.className="q";
+  sec.innerHTML="<h2></h2><p class='ctx'></p>";sec.querySelector("h2").textContent=q.h;sec.querySelector(".ctx").textContent=q.ctx;q.body(sec);host.appendChild(sec)});
+document.getElementById("made").textContent=MADE[(only||1)-1];
+</script>
+</body>
+</html>
