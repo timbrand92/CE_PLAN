@@ -2,7 +2,25 @@
 
 **Why this page exists.** Tim, 20 Nov 2026: "can you create a plan on how many sessions/side sessions work with you as the control room, then maybe add one for tim interviews and general chat so we dont waste your context. ideally i want to just keep getting interviewed on the plan and how things work so you dont have any unknowns at all. i want to get this right, how will we do so. also in that chat we need something research and thinking outside the box to fix bugs, improve speed of build and testing, improve functionality, improve simplicitiy for end user and anything else". Recorded as D-353. The control room keeps this page.
 
-## 1. The rooms (three live chats, no more)
+## 0. REVISED 20 Nov 2026, 11:05 am: FIVE ROOMS (Tim: "i asked for you to plan out all the side sessions including new ones or logical ones to help you keep on top all the different areas of the building, testing and whatever else and archive what you no longer need making sure everything is saved")
+
+Section 1 below named three rooms. The build room was carrying building, checking and AutoCAD testing at once, and things sat unchecked and unseen. Two rooms are split out of it, so each area has one owner:
+
+1. **CONTROL ROOM** (this chat): the plan, the board, decisions, order of work, what Tim is told.
+2. **TIM'S ROOM** ("CE_ACAD / Tim / interview and ideas"): interviews him down `UNKNOWNS.md`, his general chat, research and fresh thinking. Writes `interview\ANSWERS_TIM.md`.
+3. **BUILD ROOM** ("CE_ACAD / zero build / 01"): builders only (Codex lanes and Team builders), tests first, and the merge to the main line once the check room says MERGE. It no longer checks its own work.
+4. **CHECK ROOM** (new, "CE_ACAD / check / 01"): the gate. Every finished branch gets its independent check here (D-346): an honest check of the acceptance list and one adversarial pass, blockers only, verdict MERGE or HOLD with a plain list. It also checks every mock-up against the 31 screen rules before Tim sees it, and keeps the follow-up list of non-blockers per part. It never builds or fixes.
+5. **AUTOCAD TEST ROOM** (new, "CE_ACAD / acad test / 01"): owns everything that runs in a test AutoCAD at night on test copies: the safe runner, the test drawings made from the office master, the pictures taken inside AutoCAD after each command, the owed-in-AutoCAD lists, and the nightly report with pictures. It is the only room that may start a test AutoCAD, under rule 1.9 in full. It takes over from the build room after shadowing one night.
+
+**How a piece of work moves:** Tim's room (his words) → control room (decision, order) → build room (tests first, build) → check room (MERGE or HOLD) → build room merges → AutoCAD test room (pictures and proof in AutoCAD) → control room looks at the pictures → Tim's own hands.
+
+**Closed, with where their work is saved:**
+1. **Trials chat** ("CE_ACAD / zero plan / trials 01"): retired 19 Nov. Its findings are in `reference\research\R-011` and `R-012` and the board; its trial code is on disk at `C:\CE_WORK\trials\zero` (not in a repository). The chat is left closed, not archived, because it shares this chat's working folder.
+2. **Tools interview chat** ("Interview Tim: Tools, Manager and shared structural commands"): paused with the tools (P-09). All 141 answers pushed (`interview_tools\`, last commit db74320b).
+3. **Old desk robot's hourly chats** ("CE desk hourly check", "CE holiday run watchdog"): about 40 idle chats made by two old hourly scheduled jobs from 30 Sep that are still firing. They belong to the old plan. Asked of Tim on 20 Nov whether to switch the two jobs off and archive the chats.
+4. **TimOS chat:** a separate project; not this plan's to close.
+
+## 1. The rooms (three live chats, no more) (superseded by section 0: now five)
 
 1. **CONTROL ROOM** (this chat, "CE_ACAD / zero plan / 01"). Keeps the plan, the scope page, the board, the board file his bar reads, and the decisions record. Checks every result before it counts. Hands out work in order. Gives Tim the director's summary. Tim comes here for "how are we going" and for rulings that cannot wait. It does not interview at length and it writes no code.
 2. **TIM'S ROOM** (new, "CE_ACAD / Tim / interview and ideas"). Where Tim spends his time. Two jobs:
