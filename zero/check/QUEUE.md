@@ -13,18 +13,21 @@
 
 ## 1. Being checked now
 
-Nothing at 2:10 pm. Every hand-over so far has its answer; no helper is running.
+Four hand-overs from the build room at 2:12 pm, all started by 2:22 pm; six helpers.
+
+1. **team/held-depth at cea5567** (the new tip: a held depth kept; the stale cover text on the plan closed; a metre drawing refused for Pit, Pipe and LPD; the earlier findings). Both halves: Team opus honest check, Codex astra adversarial pass.
+2. **team/a6-draw-first at 73be1d0** (Stage 1 item A6: draw first, window second; its first check). Both halves: Team opus honest check, Codex astra adversarial pass.
+3. **design\PIPE_SIZE.md at d94a9e3** (its four wording fixes and D-389): one quick read, Team opus with read-only tools. The answer is BUILD FROM IT or FIX THE PAGE FIRST.
+4. **The Pipe mock-up, version 2, after its fix 6** (two set sizes, five states): the check room took ten pictures at 2:13 pm (`C:\CE_WORK\check\reports\pipe-mockup_pics\fix6`); Team opus re-check.
 
 ## 2. Waiting
 
-Coming back from the build room:
-1. **design\PIPE_SIZE.md** after its four wording fixes: one quick read of those four.
-2. **The Pipe mock-up** after the four rulings are fixed and the control room has ruled its open points (D-389).
-3. **team/held-depth, new tip** (with the stale cover level and the metre refusal added).
-4. **team/night-launch, next round:** both halves by reading only, against D-364 and D-388.
-5. **The windows:** team/acad-windows is held; what replaces it is the control room's to rule.
+Coming from the build room:
+1. **team/a3b-pit-window** (the Pit window to the picture Tim approved, D-386): still building.
+2. **team/night-launch, next round,** then **team/acad-pictures2, next round:** both halves by reading only, against D-364 and D-388.
+3. **codex/tests-five** after its list fixes (Codex job q0006), and the **C11 list** after its fixes.
 
-Not handed over yet: team/a6-draw-first, codex/doorway, codex/tests-a7b, codex/tests-a6b; the C11 build on codex/c11-tests (the list is held).
+Not handed over yet: codex/doorway, codex/tests-a7b, codex/tests-a6b; the C11 build on codex/c11-tests.
 
 **Standing orders from the control room:** nothing reaches main on one check alone; both halves of D-346 every time; if the build room merges on one, tell the control room at once. No checker or builder runs any script of a night-script branch (D-388). The look is hourly; turns only when a report lands or a branch is handed over (Tim's usage order).
 
@@ -83,3 +86,4 @@ ight-scripts.md`. Ruled by the control room as D-364 items 1 to 10: the fix (tea
 18. **1:42 pm:** the one more read of `design\PIPE_SIZE.md` at 95f65aa: FIX THE PAGE FIRST, four short wording fixes only (the reach of the flag; the words for an unreadable pipe against its label; the levels window still reads the size from the note; a marker set by an OK that changes nothing). 33 of 41 items closed; all eight of the held page answered. Added to `VERDICTS\design-pipe-size.md`. The next read checks those four only.
 19. **1:44 pm:** the two waiting checks started (the picture route by reading only; codex/tests-five). Thirteen answers given today, none MERGE.
 20. **2:10 pm:** main still 22993fa. Fifteen answers given today, none MERGE. Moved, not handed over: team/held-depth cea5567 (new tip), team/a3b-pit-window 68b02ac (the Pit window to D-386), design/pipe-size d94a9e3 (its four fixes), team/a6-draw-first 73be1d0, codex/c11-tests ad01f9d, codex/tests-a7b 893e54c.
+21. **2:22 pm:** four hand-overs taken and started.
