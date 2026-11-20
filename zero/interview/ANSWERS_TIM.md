@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-074.
+**Next number:** TR-078.
 
 ---
 
@@ -189,3 +189,13 @@
 **TR-072** (unknowns U-082 and U-049; where a flag shows in Stage 1, before the Unfinished list exists; example, a label retyped to "AT 1 IN 60 MIN." and the grade later becomes 1 in 80). He picked: "A small amber marker on the plan, never printed (Recommended)". A small amber triangle beside the label or part, on a layer that never plots; hovering says what is wrong ("label says 1 IN 60, pipe is 1 in 80"); the window says the same when the part is opened, with one click to let the label follow again. The same marker serves "text overlaps" (TR-016), "Needs a look" (TR-023, TR-024) and a failed check until the Unfinished list arrives. Closes U-082 and U-049. **To flag:** the name of the CE no-plot layer is still open (D-275).
 
 **TR-073** (the rest of U-066; a typed EXPLODE of a pit). He picked: "Same rule as the pipe (Recommended)". The block becomes its plain lines; the number and cover level stay as plain text where they were; the tool stops looking after that pit; pipes joined to it read "not joined yet"; said once on the command line; one Undo makes it a pit again.
+
+## Batch 19, Fri 20 Nov 2026, 13:13 (clock read), through the question window (four of the control room's questions from the pipe-size design and the held-depth fix)
+
+**TR-074** (unknown U-125; a pit depth typed and held, then a new cover level typed; example, a 600 pit held at 0.90 deep, cover retyped from 10.50 to 10.65). He picked: "The invert stays, depth becomes 1.05 and says so (Recommended)". The outlet invert stays 9.60; the depth is worked out again as 1.05; the window says "Depth was held at 0.90, now 1.05 because the cover level changed". CONFIRMS the draft in the held-depth fix. Closes U-125.
+
+**TR-075** (unknown U-120; how far the one offer to resize downstream reaches; example, the top pipe made 150, two 100s below, then a pit whose outlet is already 225). He picked: "Down to the first pipe already big enough (Recommended)". The offer covers every pipe downstream that is smaller than the new size, in order, stops at the first already as big or bigger, and names them; a pipe whose size he typed is included in the offer but named as his; the same offer is made when a new bigger pipe is joined into a pit whose outlet is smaller. Not separately asked: a fork or a loop below (the room's reading: each branch downstream is followed to its own first big-enough pipe; a loop is walked once). Closes U-120.
+
+**TR-076** (unknown U-121; a size he typed, on a copied pipe). He picked: "Held on the copy too (Recommended)". Closes U-121.
+
+**TR-077** (unknown U-122; whether pipe size ever carries from the last pipe drawn; example, one 375 across the front, then a fresh pipe from a back downpipe). He picked: "100: size never carries (Recommended)". Size comes only from what the new pipe joins, else the office default; material, kind and the rest open as last used (D-263). Closes U-122.
