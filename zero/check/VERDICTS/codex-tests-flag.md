@@ -51,3 +51,49 @@ The marker on the plan at 1:100 and one other scale; hover words against the win
 6. **"p4" and " P4 " are P4** (capitals and spaces ignored).
 7. **Size and place:** the triangle is as tall as the label's text, one text height clear of the label's end, or beside the part if there is no label; settings.
 8. **Agreed:** the marker's own tests are triggered by the failed grade check; targets needing pipe-size or label work are WAITING.
+
+
+---
+
+# Second answer: codex/tests-flag at 68fcd50 (after its first fix round)
+
+**Answer: HOLD THE LIST. Six reasons; three of them exist only because Tim ruled on the marker layer AFTER this round was written (D-407, 4:36 pm). One fix round left.** Written Fri 20 Nov 2026, about 4:50 pm. Checked on the bench only.
+
+**Who checked.** Honest check: Team helper, Claude Opus 5.5: `C:\CE_WORK\check\reports\flagb_honest_REPORT.md` (all eight reasons closed; hold on one stale file). Adversarial pass: Codex gpt-6.2-astra: `C:\CE_WORK\check\reports\flagb_adv_REPORT.md`, proofs in `flagb_adv_proofs\` (the saved cheat now turns NO target green; a new cheat written against this tip turned all 18 green with two triangles on a plotting layer and a faulty pipe unmarked). Graded here.
+
+## 7. Counts seen (the writer's counts are true; the whole solution builds, the AutoCAD plug-in project included)
+
+Pretend drawing 695: 18 targets fail on the original product and with the saved cheat, 1 control passes, 3 waiting tests skipped with their reasons, 673 older pass; brain 750, bench 438 (one known flake passed when run alone), reader 19 and 2 skipped. Only tests changed. The run log is gone from the tip.
+
+## 8. What the round closed
+
+The bench's own window (now the command's factories and the empty-plan guard); 0.1 mm as the same point; every word check exact and taken from the product's own check sentence; the marker's reason and the window compared; a real triangle of the ruled size one text height past its own label; clearing one part's marker leaves the neighbour's and three other objects on the layer; moved, copied, mirrored; locked, off and frozen marker layer; three duplicate pits counted 3, 2, 0; the hand-written label followed through open, Cancel and OK (waiting, for the labels list); the scope is right: the marker's own tests are driven by the failed grade check.
+
+## 9. Reasons to hold
+
+1. **The layer targets now require the opposite of Tim's ruling** (D-407 items 2 and 3, filed after the round). The marker goes on the ONE layer named "CE NO PLOT"; the list forbids that layer and demands a second one (lines 18, 41, 48). A marker layer found set to plot is put back to no-plot by the tool, said once, and the markers keep working; the list demands it be left plotting with no marker drawn (lines 89-118). Restate both; keep a separate plotting layer and a witness line that must stay as they are. The colour waits on question 1.
+2. **A marker can still print, and a faulty part can go unmarked.** Markers are found only as three-point polylines (lines 526-527): the new cheat drew two FOUR-point outlines on the plotting pipe layer and passed; "nothing else was added" is checked in two targets only (73, 112); the pit markers have no greatest distance (one sat 1,000,000 mm away and passed: 545-561); a 13 m pipe with a failed grade got no marker. Take stock of every layer before and after in EVERY target; measure the gap to the part's own tag or label; vary the pipe's length and direction.
+3. **Clearing can erase the drafter's own linework.** Fixing the grade erased an unrelated triangle on the marker layer, one marked as xref content included; the witnesses in lines 224-262 are all circles. Markers are told by their owner, never by their shape (D-348, D-381): add a triangle of his own and one in a reference set, read back after a repair and an erase.
+4. **The two-reason target needs a Detention pipe** (lines 188-214), which is Stage 2 (D-377 item 1; D-399 parks the like check). Use two ordinary Stage 1 reasons, or hand two reasons to the marker's own writer.
+5. **The command line:** one line carrying both reasons FAILS the helper, and the same reason said twice passes (203-204, 583-584). D-407 item 4: the marker and ONE line on the command line. Read the lines the command really gives.
+6. **A stale report file is in the commit:** `TESTS_REPORT.md` (says 11 targets, the grey layer, links the removed log). Take it off the branch.
+
+## 10. To fix in the same round
+
+1. **The typed-duplicate refusal is now a job of its own** (D-409 item 5): move its two rows to that job's list; here keep the duplicate that arrives another way. Test the number on the office circle tag's own attribute (PIT LABEL 2, PIT_LABEL: D-404), not on plain text; add "p4" and " P4 " (D-401 item 6) and a NEW pit.
+2. **The grade reason accepts any name in front of it:** two loose pipes in a drawing with no pits both read "P4 to P3 grade ..."; read the real part's own number (D-398) and joins.
+3. **The waiting crowded-pipe-label case expects the first spot and a marker;** Tim now sends a crowded PIPE label onto a pointer (D-405, D-407 item 6); an invert level, pit number or cover level stays at its first spot with the marker: correct it on the labels list and add the pit case.
+4. **The waiting cases' words** ("no longer matches", "Follow" or "Restore", "150 is smaller than 300") are the writer's own: for the labels and pipe-size lists to confirm before un-skipping.
+5. **Add:** a part with its label ticked off (marker beside the part); a grey "Cannot check yet" part gets no marker (D-219); the layer's name read from the setting, with a second value tried; D-410: a marker when a typed length and the drawn length differ is a DRAFT (waiting).
+6. **Merge as one squashed commit** (the first commit still holds the run log in its history).
+
+## 11. For the control room
+
+1. **The colour of "CE NO PLOT".** D-407 names the one layer; the office data makes it colour 8, grey; D-385 says amber and D-400 says ByLayer. If the drawing already has a grey CE NO PLOT with other things on it, may the tool recolour the layer to amber (everything on it changes colour), or does the marker carry its own amber? And on a bare drawing, is the layer made amber (colour 40)?
+2. **A marker whose ruled spot is taken** (a turned tag, other text in the gap, or no label): which side or spot next?
+3. **The marker layer off or frozen:** is the marker drawn unseen, or not drawn and said in words? (The tests accept either.)
+4. **Does every amber "Needs a look" get the marker,** or only the cases D-385 lists? How wide is the triangle (only its height is ruled)?
+
+## 12. Owed in AutoCAD
+
+Section 5 stands, with: the circle tag's real attribute; ByLayer colour, linetype and lineweight; Z 0 and scale 1; the layer found plotting and put back, said once; a plotted sheet with a witness line.
