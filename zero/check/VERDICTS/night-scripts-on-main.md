@@ -26,7 +26,7 @@ Once a process is recorded, the close-and-force ladder re-checks the recorded id
 
 ## 4. What the launcher fix must show before it gets MERGE (the list the check room will use)
 
-1. **Hours:** a test sets "now" to a given Melbourne time and PC time zone. Weekdays 8:30 am to 2:00 pm and 3:00 pm to 5:30 pm refuse; 2:00 to 3:00 pm, after 5:30 pm, before 8:30 am and weekends pass; another PC time zone gives the same answers; a time that cannot be worked out refuses.
+1. **Hours (as ruled by D-364):** a test sets "now" to a given Melbourne time and PC time zone. No start on a weekday from 8:30 am to 5:30 pm (the 2:00 to 3:00 pm gap is NOT open to a start under D-364); a pass is finished and its test AutoCAD closed by 8:00 am; evenings after 5:30 pm, before 8:00 am and weekends pass; another PC time zone gives the same answers; a time that cannot be worked out refuses.
 2. **Stop flag:** while it exists the launcher, the pass, the command sender and the NETLOAD sender all refuse, each checking straight before it acts.
 3. **Switch file:** missing, empty, damaged, unknown mode or "in-use" refuse; "free" with a past "freeUntil" falls back to hours; the snapshot lines in the file are never trusted.
 4. **Checked again, not once:** hours, flag and switch are read before each step, send, close and force. A test changes the clock or the flag mid-pass and nothing further is sent.
@@ -37,10 +37,14 @@ Once a process is recorded, the close-and-force ladder re-checks the recorded id
 9. **Every new guard has a test that fails when the guard is removed** (shown on a scratch copy).
 10. **Nothing loosened:** the 123 and 4 existing checks pass unchanged.
 
-## 5. Needs a ruling (for the control room; not decided here)
+## 5. Ruled by the control room at about 11:35 am: D-364 (the fix is checked against it line by line)
 
-1. **May a robot still close its own jammed test AutoCAD (D-160) while the stop flag is up, or once Tim's hours have begun?** The switch file's readme says "in his hours do not start or close it".
-2. **What a pass already running does when 8:30 am arrives:** stop sending and leave the test AutoCAD open with a note, or close it.
+1. **Ours:** the launcher counts an AutoCAD as its own only if it created that process itself and recorded its process number at the moment of creation; never by title or start time.
+2. **No start:** between 8:30 am and 5:30 pm on weekdays; while the stop flag exists; unless Tim's switch file can be read and does not say in use (missing or unreadable means IN USE); while any AutoCAD is already running.
+3. **Finished by 8:00 am:** a night pass is finished and its test AutoCAD closed by then.
+4. **Flag goes up or 8:00 am arrives mid-pass:** stop sending at once; ONE normal close without saving of its own test AutoCAD, and only if no licence, sign-in or unknown window is showing; NEVER force in that situation; if it does not close, leave it open with a note for Tim.
+5. **D-160's force** applies only at night, before 8:00 am, with no stop flag up.
+6. **Required by the control room:** deleting any guard makes a test fail.
 
 ## 6. Follow-ups
 
