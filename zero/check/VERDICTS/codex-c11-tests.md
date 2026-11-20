@@ -105,3 +105,4 @@ The cover limits at 0, 5 and 10 mm tolerance behave at the limit and 0.1 mm eith
 1. **`P3_40` and the detention row of `P3_25`:** mark them WAITING.
 2. **The shortfall sentence, a DRAFT:** "Short by 3 mm at P3, Pipe 7 (P4 to P3): cover 297 mm, needs 300 mm." Tim ruled that every pipe has its own running number, never printed, shown as "Pipe 7 (P1 to P2)". The test holds the figures, the place and the pipe; the word order is a draft.
 3. **"MIN." stays** with both ends measured.
+4. **D-405 and D-406 (about 4:32 pm): the shortfall sentence is confirmed by Tim.** It is no longer a draft.

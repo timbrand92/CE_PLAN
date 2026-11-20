@@ -51,3 +51,7 @@ The three questions of section 5 are ruled as D-392: in Stage 1 a pit depth is n
 ## 9. Ruled since (D-402, Tim, about 3:36 pm)
 
 Retyping a cover level text on the plan SETS the pit's level (cover only). Blocker 2 is to be read with this: a hand-edited "CL 7.77" is no longer just kept, it becomes the pit's typed cover; Pit OK must never put the old figure back over it. Text erased by hand still stays gone (D-377 item 6).
+
+## 10. Ruled since (D-405 and D-406, Tim, about 4:32 pm): D-392 is NOT confirmed as written
+
+Tim: "FOR SILT PITS THE DEPTH IS DEEPERE THAN THE LOWEST OUTLET". The depth must be worked as cover less the lowest outlet invert PLUS A SUMP VALUE (0 in Stage 1), and not hard-wired. The fix round is checked against that: depth still never held or typed in Stage 1, but the sum carries the sump figure as a value that can change, and no test or code may assume depth equals cover less invert for every pit.
