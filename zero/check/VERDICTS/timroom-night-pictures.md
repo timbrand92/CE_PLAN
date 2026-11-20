@@ -118,3 +118,28 @@ Section 7 of the helper's report: a typed length; two levels typed with the grad
 5. **Yes:** show Tim the "Within the 5 mm tolerance" state.
 6. **Add a small state for a pipe already drawn, opened again.** No Mask tick on the Arrow (text only); D-419 item 4 is corrected.
 7. **DRAFT:** a changed tolerance or default pipe re-checks drawn pipes at their next edit or when their window opens, never all at once.
+
+
+---
+
+# Third look: the pictures after the second look and D-426
+
+**Answers: the single-pipe window PASS once one fit edit is made (the page's own overflow check must not fire); the CE Settings window PASS; sheets 1, 4 and 5 PASS. Sheets 2 and 3 are gone from the page and the folder. They may go to Tim with the notes in section 15.** Written Fri 20 Nov 2026, about 10:40 pm. Checked on the bench only, from 21 pictures the check room took itself plus five the checker took. Checker: one Claude helper on Sonnet (D-434): `C:\CE_WORK\check\reports\timroom3_check_REPORT.md`.
+
+## 13. What closed
+
+All five faults of the second look: the Wrong example is now 288 mm, "Short by 12 mm at P3, Pipe 7 (P3 to P2): cover 288 mm, needs 300 mm." (P3 to P2 is right for this picture: its own pipe runs P3 to P2); 297 mm is its own green "within the 5 mm tolerance" state with no marker; the top of pipe is invert + 0.100 + 0.005 = invert + 0.105 written out with the grey note (D-426 item 2); the band is #FF6B4A; the marker sits 12 px (one text height) past the label's END; long names fit in every state at both sizes. Every figure in every state adds up (checked by hand). The new "pipe already drawn" state shows Size dashed with "measured" (D-430). "Level above" with minus signs (D-426 item 3). Settings window: marker rows "1.0 x text height"; the two foot lines match D-419 item 8 and D-426 item 7; 936 wide, close to "about 900".
+
+## 14. The one edit before Tim sees it
+
+**Laptop "within" state (and with long names):** step 3's last line ("your word.") touches the card's edge: 0 px clear, against 8 px everywhere else, and the page's own overflow check reports the card 8 px too short (320 by 288 against 320 by 280). Nothing is clipped, but the window's own check fires: give step 3 its 8 px back (a line fewer, or the note shorter).
+
+## 15. Notes for Tim (none is a fault)
+
+1. **The pass green:** this window uses #5ED08F, the green of the pipe-run window he picked (D-393); the Detention reference the style page names uses #7BE0AE. A question for Tim: which green (and which amber) the Pipe windows keep.
+2. **Finish items:** in the no-level state the heading "Level, worked out" is 2 px wider than its column; sheet 1's last line is not a full sentence; the Settings window's "office value" heading runs 4 px over its box; "Cover 297 mm: within" has a lower-case "within" after the colon.
+3. **What the pictures do not show:** text at its real heights (positions on the strip are to scale, text sizes are not); a typed length; Inspect and Settings in use; hover on the marker.
+
+## 16. A fault of the check room's own
+
+The check room's eight desktop pictures were taken at a 1500 by 950 browser size and cut the window's right fifth and foot off. The checker measured the desktop windows from the page and from Tim's room's own full-size copies instead. Desktop pictures next time at 1960 by 1120.
