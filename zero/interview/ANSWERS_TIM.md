@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-066.
+**Next number:** TR-070.
 
 ---
 
@@ -169,3 +169,13 @@
 **TR-064** (unknown U-087; levels along a run; example, a run P6 to P1 with only the outlet invert known). He picked: "Type one level, the rest are worked out (Recommended)". In the run window he types one level anywhere in the run; every other invert is worked out pipe by pipe at the grade shown with the 0.02 drop across each pit (D-141), shown as worked out; typing over any of them holds it and the run re-works around it; cover is checked as it goes. This IS in Stage 1 (TR-004). Closes U-087.
 
 **TR-065** (unknown U-074; which invert levels are written on the plan by default). He picked: "Every known level, both ends (Recommended)". Any invert with a value is written, typed or worked out; an estimate carries APPROX. (D-177); he unticks or deletes what he does not want (TR-039). Room's note (mine): D-238 ("MIN." whenever both inverts are NOT given) was about levels he GIVES; with worked-out levels now written at both ends, whether the label still ends "MIN." when only one level was typed is not said: to ask.
+
+## Batch 17, Fri 20 Nov 2026, 13:00 (clock read), through the question window
+
+**TR-066** (unknown U-046; how he opens a drawn pit or pipe to change it; offered as ticks: double-click; type the name then pick; select then type the name; right-click menu). He ticked "Double-click the part" and wrote: "CDEDIT, EDITS ANY CE OBJECT SELECTING THE RIGHT EDIT WINDOW. CAN WE EDIT IN PROPERTIES OR A CD INSPECTOR WINDOW?". Room's reading (mine): (1) ONE typed command, CDEDIT, edits any CE part: he picks a pit, a pipe (or later any CE part) and the right window opens; (2) double-click on the part also opens its window; (3) the other three ways offered were not ticked; (4) a QUESTION from him, not a ruling: can a part be edited in AutoCAD's Properties, or in an inspector window of our own. Answer owed to him: Properties is not proven (the trial was blocked because showing the palette changes a saved setting, rule 1.9; D-288 plans it pending a night proof); an own side panel is the fallback. **To flag:** CDEDIT is a NEW typed name (D-101 lists PIT / PT and PIPE / CD; an old-plug-in command of that name may exist and must be checked); D-061 said editing is through Properties or double-click. Closes U-046 for the routes.
+
+**TR-067** (unknown U-039; what follows the cursor while he clicks a run, before the window opens). He picked: "The pipe band at its real width (Recommended)". The dashed band at the width it will open with, from the last click to the cursor; bends show as clicked; no label until the window opens. Closes U-039.
+
+**TR-068** (asked: where the window opens on screen, U-094; the question said the part "shows live on the drawing while its window is open"). He did not answer the question and CORRECTED the room: "I MEANT THE LIVE DRAWING SHOULD SHOW IN THE PREVIEW IWNDOW IN THE WINDOW ITSELF DOES THAT MAKE SENSE?". **This corrects the room's reading of TR-003, TR-007 and TR-032, and so D-357.** What he means: the PREVIEW PANEL INSIDE THE WINDOW shows the real drawing (the plan around the part), with the pit or pipe changing live as he types. He was not asking for the part to be painted on the AutoCAD drawing behind the window. The room's mistake: TR-007's options were "Live on the drawing" against "Only on OK", and neither said "live in the window's own preview"; he picked the nearest. Not said, to ask: whether the part should ALSO show on the AutoCAD drawing behind the window (D-301 said both). U-094 is not answered.
+
+**TR-069** (the note left under TR-065; whether a label still ends "MIN." when only one level was typed and the rest are worked out). He picked: "MIN. unless I typed both ends (Recommended)". A pipe carries no MIN. only when he typed both of its inverts; a worked-out level does not count; worked-out levels that are estimates print APPROX. (D-177); MIN. can still be ticked on or off on any pipe (D-238).
