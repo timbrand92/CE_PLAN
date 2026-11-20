@@ -44,3 +44,11 @@ Two drawings open together keep separate values; a reopened drawing keeps its ow
 ## 7. Owed in AutoCAD (after a merge; nothing is run on Tim's PC under D-420)
 
 Save, close, reopen; two drawings; Save As; a file copy; WBLOCK of part and of the whole; INSERT; xref reload; one Undo and one Redo of a save and of a reset; a failed save leaving nothing half-written; a read-only drawing; a newer record opened by an older plug-in; whether a plain read marks the drawing as changed; the real text spots and the plotted sheet. Recipes: `set2_adv_proofs\host-checks.md`.
+
+## 8. Ruled since (control room, 7:38 pm, D-425, DRAFT)
+
+1. **Every distance is more than 0 and no more than 10,000 mm.** Outside that, not a number, or a key written twice: refused with words naming the setting, and the office value is used. A missing or mislabelled office row STOPS the tool, naming the row; a distance is never invented. (Blockers 3 and 4 are fixed to this.)
+2. **His typed 900 stays** when the office value later becomes 837, shown "set in this drawing", until "Back to office values".
+3. **A whole-drawing WBLOCK carries the settings;** a part copy leaves the other drawing's alone.
+4. **His saved HDPE stays when he picks 150:** his setting wins; the size rule applies only while the material is the office's.
+5. **The store is not "built" until Pit and Pipe read every setting on D-419 item 7's list.** (So section 3 and section 4 item 1 are part of this job, not follow-ups.)
