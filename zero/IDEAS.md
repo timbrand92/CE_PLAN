@@ -39,4 +39,8 @@ esearch\R-016_SLEEVED_PIPE.md`; unknown U-111. **Status:** proposed by Tim's roo
 22. **ID-022 The survey read as a guide to the ground level along a pipe,** for the cover check. Tim, 20 Nov 2026 (TR-062): "in future the survey can be read as a guide and provide reference for this". **Status:** later.
 23. **ID-023 What is over a pipe worked out from the plans** (driveway, garden, slab outlines), so it is never set pipe by pipe. Tim, 20 Nov 2026 (TR-063): "it should be done automatically off plans or unkown if not known". **Status:** later; in Stage 1 it reads "Not known" unless he sets it.
 
-**Next number:** ID-024.
+24. **ID-024 The material follows the size from a six-row office list** (100 UPVC; 150 UPVC SN8; 225, 300, 375 Stormpro; "sewer class" offered for a 100 to the legal point or across a driveway; concrete a manual pick). **Source:** research page R-017; unknown N-054. **Status:** proposed by Tim's room; waits on Tim.
+25. **ID-025 An outside-diameter list by size and material** so cover is measured to the top of the pipe (UPVC 110, 160, 250, 315, 400; Stormpro 169, 259, 343, 428). **Source:** research page R-018; unknown U-086. **Status:** proposed; waits on Tim.
+26. **ID-026 Prompts for an inspection opening** at a change of direction over 45 degrees and on a bend in a charged line, with a warning on a 90 degree bend. **Source:** research page R-019; unknowns U-098, U-041. **Status:** proposed; waits on Tim; inlets and openings are Stage 2.
+
+**Next number:** ID-027.
