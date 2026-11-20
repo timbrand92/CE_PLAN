@@ -48,7 +48,11 @@ The CE project manager, Hush, personal finance and the rest have their own plans
 5. He tests in AutoCAD. **You cannot.** A green build is not an AutoCAD result.
 6. Give him a **specific** test list: *"open a 375 pipe and check the Edit Pipe window shows 375"*, never
    *"test pipe editing"*.
-7. **Numbered lists with bold labels. No tables.** Three lines per paragraph.
+7. **Numbered lists with bold labels. Tables allowed, 4 columns at most; questions and decisions stay lists**
+   (RULES 2.2; "no tables" retired 20 Nov 2026, Tim: "Rest agreed", `areas\rules.md`). Three lines per paragraph.
+8. **The rest of how to work with Tim is `C:\TimOS\RULES.md`** (talking 1 to 3, the four words 4, testing 5, git and
+   installs 8, privacy 11). Testing is done by the AI and accepted under RULES 4.5; the lines above are the plugin's
+   own examples of it.
 
 ---
 
