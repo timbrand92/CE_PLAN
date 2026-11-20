@@ -85,3 +85,6 @@ Eight of the 18 block drawings copied from the current plug-in carry his own Aut
 ## Q. Added 8:42 pm (D-433): section P widened, FOR TIM ON MONDAY
 1. His login name sits in TWO places in 8 of the 18 block drawings: "last saved by" and the drawing's application history. Ship as is, or blank both in the copies?
 2. All 18 block drawings carry web addresses inside the drawing's own class records (301 in all; believed, not yet proven, to be the CAD software's and its add-ons' own maker's address, which the software writes into every drawing it saves). A count-only check is being run. May drawings carrying the software maker's own address ship with the plug-in?
+
+## R. Added 8:55 pm (D-434): FOR TIM ON MONDAY
+The Team account hit its usage limit on Friday 20 Nov at 8:47 pm and gives no access until 1 December. Does he want its limit raised? Until then builders run on Codex and checks on Codex plus one Sonnet helper.
