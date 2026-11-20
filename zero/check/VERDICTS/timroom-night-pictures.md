@@ -108,3 +108,13 @@ Every setting D-419 item 7 lists is there (16 rows) and nothing else; the foot l
 ## 11. What Tim should be told the pictures do not show
 
 Section 7 of the helper's report: a typed length; two levels typed with the grade worked out; an existing pipe's size read off the drawing; text at its real heights (positions on the strip are to scale, text sizes are not); the arrow as the office block; grips; hover on the marker; Inspect and Settings in use; how the Settings window opens; what copying a drawing does to its settings.
+
+## 12. Ruled since (control room, 7:41 pm, D-426)
+
+1. **The example was wrong, the form stands.** 297 against 300 is within the tolerance: a pass, no sentence. The example everywhere becomes "Short by 12 mm at P3, Pipe 7 (P4 to P3): cover 288 mm, needs 300 mm."
+2. **DRAFT, the top of a pipe:** invert + nominal inside size + one wall, the wall being half of (the maker's outside size less the nominal size), from R-018. For 100 UPVC, outside 110: the top is 105 above the invert. U-086 stays open for Tim.
+3. **DRAFT:** "Level above" with minus signs when the level is worked down the pipe; "Level below" with plus signs when worked up.
+4. **The Settings window about 900 wide;** the marker rows read "1.0 x text height".
+5. **Yes:** show Tim the "Within the 5 mm tolerance" state.
+6. **Add a small state for a pipe already drawn, opened again.** No Mask tick on the Arrow (text only); D-419 item 4 is corrected.
+7. **DRAFT:** a changed tolerance or default pipe re-checks drawn pipes at their next edit or when their window opens, never all at once.
