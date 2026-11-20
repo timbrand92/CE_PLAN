@@ -88,3 +88,24 @@ A6 and the Pit window still may not take the routine in; the Pit window's own de
 1. **DRAFT:** "Short by less than 1 mm" (reachable only when the tolerance is under 1 mm); never "Short by 0 mm".
 2. **DRAFT:** a worked grade steeper than 1 in 1 prints with as many decimals as show two significant figures ("1 IN 0.4", "1 IN 0.05"); never "1 IN 0.0".
 3. **For the LAST round:** the same fault surviving in the Run window, the schedule and the lid wording means the root is not single yet. The round must end with a source test that NO code outside the one routine rounds or formats a level, depth, fall, grade or shortfall, listing every caller. If it is held again it goes to a design page (D-346), and A6 and the Pit window stay waiting.
+
+
+---
+
+# Final verdict: team/exact-rounding at d5c6a9b (its LAST fix round)
+
+**Verdict: HOLD, final. Both halves hold it. Under section 13 (the control room: "if it is held again it goes to a design page"), the branch now goes to a one-page design of the one rounding routine (D-346); A6 and the Pit window keep waiting.** Written Sat 21 Nov 2026, about 2:27 am. Checked on the bench only.
+
+**Who checked.** Honest: one Claude helper on Sonnet, with probes of its own: `C:\CE_WORK\check\reports\rnd3_honest_REPORT.md` (probes in `rnd3_honest_probes\`): HOLD on one. Adversarial: Codex gpt-6.2-astra: `C:\CE_WORK\check\reports\rnd3_adv_REPORT.md`, proofs in `rnd3_adv_proofs\`: HOLD on four. **Closed:** all six blockers of the second verdict replay clean; the source test is real and its caller list is honest (both halves found the same 89 code callers across 38 files and the same data rows, matching the manifest one for one); the sub-millimetre and steep-grade wordings (DRAFT) work.
+
+## 14. What is still open (for the design page to settle)
+
+1. **Two flatness checks still decide on a rounded grade** (honest half): `src/CeCivil.Brain/data/checks.csv` rows 26 and 28 use `round(printed_grade, 0.01)`: a pipe at 1 in 200.004 (10.0002 m falling 0.050) reads "Suits: ... 1 in 200" where the limit is 1 in 200 and it is flatter (D-411, D-424); the source test lists the line as "reviewed" instead of catching it.
+2. **The Run misses a level clash just over the tolerance:** 1.000 m at 1 in 30 from 10.0000 with the end held at 9.9717 is out by 5.033 mm; at the 5 mm job tolerance no clash is shown (D-350).
+3. **Locking a schedule cell changes the printed figure:** an inlet invert of 1000.005 prints 1000.01; closing the cell's padlock without typing makes it print "1,000.005".
+4. **A tiny positive grade disappears from the plan:** a typed ratio of 0.0000004 stays in the box, but the drawn label ends at "PIPE" and the check calls the grade unknown.
+5. **The source test can be dodged:** a Pit cover truncated by `int.CreateChecked(level * 100m) / 100m` just before `PitTool.cs:352`, a cover rounded through StringWriter and parsed back, a numeric conversion in a PowerShell file under `acad`, and turning the pit-depth sum from exact two-way to two-way all passed it (also BigInteger and Int128 casts, `decimal.Remainder`, `Math.IEEERemainder`, a `(decimal)` cast from a double: honest half).
+
+## 15. What the design page must settle (recommended)
+
+One routine and its contract (exact in, a tenth of a millimetre, half up only at print, one printer for every sheet figure, the window's own exact grade); every check reads exact figures, with no rounding in a data file; how the source test proves "nothing else rounds" by what it forbids rather than by a list of known spellings (for example: every numeric format and conversion outside the routine fails unless on a short reviewed allow-list with a reason, data files included, `acad` included); the schedule's padlock path; the smallest and largest grade the label prints; and its acceptance tests, the cases above among them. The cover's pipe-wall sum stays with the cover job (D-426).
