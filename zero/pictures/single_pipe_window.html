@@ -6,11 +6,11 @@
 <title>Pipe window for one pipe</title>
 <style>
   :root{--win:#2B2D30;--card:#383B40;--well:#232528;--inp:#4A4D55;--bd:#4A4D53;--ibd:#8A8E96;--cad:#16181B;
-        --text:#ECEDEF;--body:#D2D5DA;--grey:#A9AEB6;--unit:#C8CBD0;--amber:#F5C04A;--green:#5ED08F;--rose:#FF70B3;--dark:#10131A}
+        --text:#ECEDEF;--body:#D2D5DA;--grey:#A9AEB6;--unit:#C8CBD0;--amber:#F5C04A;--green:#5ED08F;--red:#F25555;--redtx:#FF8A8A;--rose:#FF70B3;--dark:#10131A}
   *{box-sizing:border-box}
   html,body{margin:0;background:#1E1F22;font-family:"Segoe UI",Arial,sans-serif;font-size:14px;color:var(--body);overflow:hidden}
   body{padding:20px;font-variant-numeric:tabular-nums}
-  body.laptop{--frw:1280px;--frh:720px;--ww:1000px;--wh:620px;--ph:176px;--pad:16px;--gap:8px;--cp:8px 16px;--row:20px;--w1:446px;--w2:212px}
+  body.laptop{--frw:1280px;--frh:720px;--ww:1000px;--wh:620px;--ph:168px;--pad:16px;--gap:8px;--cp:8px 16px;--row:20px;--w1:416px;--w2:212px}
   body.desktop{--frw:1920px;--frh:1040px;--ww:1240px;--wh:780px;--ph:225px;--pad:16px;--gap:16px;--cp:16px;--row:20px;--w1:540px;--w2:250px}
 
   .frame{position:relative;width:var(--frw);height:var(--frh);background:#0F1113;border:0;overflow:hidden;box-shadow:0 0 0 2px #3A3D42}
@@ -31,11 +31,14 @@
   .lv{font-size:12px;font-weight:400;color:var(--grey);margin-left:16px}
 
   .band{flex:none;background:var(--green);color:var(--dark);border-radius:8px;display:flex;align-items:center;gap:16px;padding:8px 16px}
+  .band.gry{background:#8A8E96}
+  .band.red{background:var(--red)}
   .desktop .band{padding:12px 16px}
   .laptop .ans{line-height:1}
   .laptop .bar{height:48px}
   .pill{border:1px solid var(--dark);border-radius:8px;padding:2px 8px;font-size:12px;white-space:nowrap}
   .ans{font-size:24px;font-weight:700;line-height:1.2;white-space:nowrap}
+  .bn{flex:1;text-align:right;font-size:14px;line-height:1.3;white-space:nowrap}
 
   .cols{flex:1;min-height:0;display:flex;gap:var(--gap)}
   .card{background:var(--card);border-radius:8px;padding:var(--cp);border:1px solid #2F3236;min-width:0;overflow:hidden}
@@ -54,25 +57,30 @@
   .r{display:flex;gap:8px;align-items:flex-end}
   .desktop .r{gap:16px}
   .f{display:flex;flex-direction:column}
-  .l{font-size:12px;color:var(--grey);line-height:16px}
+  .l{font-size:12px;color:var(--grey);line-height:16px;white-space:nowrap}
+  .l .src{margin-left:4px}
   .box{height:30px;background:var(--inp);border:1px solid var(--ibd);border-radius:8px;display:flex;align-items:center;padding:0 8px;color:var(--text);gap:8px;white-space:nowrap}
   .box .u{margin-left:auto;color:var(--unit)}
   .box.dis{background:#34373C;border-color:#5A5D63;color:#A0A4AB}
   .box.dis .u{color:#A0A4AB}
   .box.dash{background:transparent;border:1px dashed var(--ibd);color:var(--body)}
+  .box .nk{font-size:12px;color:var(--body)}
   .grp{display:flex;align-items:center;gap:8px;height:30px}
   .val{color:var(--body);white-space:nowrap}
   .lnk{font-size:12px;color:var(--unit);text-decoration:underline;white-space:nowrap}
   .ticks{display:flex;gap:16px;color:var(--body)}
+  .pair{display:flex;gap:8px}
+  .pair .mk{color:var(--unit)}
   .tk{display:flex;align-items:center;gap:8px;line-height:20px;white-space:nowrap}
   .tb16{width:16px;height:16px;border-radius:4px;background:var(--inp);border:1px solid var(--ibd);display:flex;align-items:center;justify-content:center;flex:none}
   .btn{height:30px;border:1px solid var(--ibd);border-radius:8px;background:transparent;color:var(--text);padding:0 16px;display:flex;align-items:center;font-size:14px;font-family:inherit;white-space:nowrap}
-  .grey{font-size:12px;color:var(--grey);line-height:16px;white-space:nowrap}
+  .grey,.src{font-size:12px;color:var(--grey);line-height:16px;white-space:nowrap}
   .sp1{flex:1}
 
   /* step 2 */
   .p2{line-height:var(--row);color:var(--body);margin-top:8px}
   .p2.first{margin-top:0}
+  .p2 .src{margin-left:6px}
 
   /* step 3 */
   table.sum{border-collapse:collapse;table-layout:fixed;width:100%}
@@ -84,14 +92,36 @@
   .sum td.fin b{font-weight:700;display:inline-block;border-bottom:3px double var(--grey);line-height:16px}
   .sum .nt{text-align:left;padding-left:8px;font-size:12px;color:var(--grey);border-left:1px solid var(--bd)}
   .sum .nt span{font-size:14px;color:var(--text);margin-left:4px}
-  .sum tr.two td{padding-top:3px;padding-bottom:3px}
+  .sum tr.two td{padding-top:1px;padding-bottom:1px}
   .sum .n2{line-height:16px;white-space:nowrap}
   .sum .n2:last-child:not(:first-child){color:var(--grey)}
   .sum .n2 span{margin-left:4px}
+  .sum .nkv{font-size:12px}
+  .sum .bad{color:var(--redtx)}
+  table.t3{table-layout:fixed;width:100%;border-collapse:collapse}
+  .t3 th,.t3 td{white-space:nowrap}
+  .t3 th{font-weight:400;font-size:12px;color:var(--grey);text-align:right;padding:0;line-height:14px;vertical-align:bottom}
+  .t3 td{height:var(--row);line-height:var(--row);padding:0;text-align:right;color:var(--text)}
+  .t3 th:nth-child(8),.t3 td:nth-child(8){padding-right:6px}
+  .t3 .pn{text-align:left}
+  .t3 .sg{text-align:center;color:var(--unit)}
+  .t3 .none,.t3 .nk{font-size:12px;color:var(--grey);line-height:14px}
+  .t3 td.fin b.nk{line-height:14px;display:inline-block;vertical-align:middle}
+  .t3 td.fin{border-top:1px solid var(--grey)}
+  .t3 td.fin b{font-weight:700;display:inline-block;border-bottom:3px double var(--grey);line-height:16px}
+  .t3 td.fin b.nk{font-weight:400;color:var(--body);border-bottom:0}
   #side{display:block;margin-bottom:8px}
   .s3b{margin-top:8px}
   .desktop .s3b{margin-top:16px}
   .s3b .grey{margin-top:0;white-space:normal}
+  .cvh{margin-top:4px}
+  .desktop .cvh{margin-top:12px}
+  table.cvt td{height:20px}
+  table.cvt .fg{padding-right:0}
+  table.cvt .sg{width:14px}
+  .cvline{font-size:12px;color:var(--body);line-height:16px;margin-top:4px;white-space:nowrap}
+  .cvline .bad{color:var(--redtx)}
+  #cvbar{display:block;margin-top:2px}
 
   .bar{height:56px;flex:none;border-top:1px solid #202225;display:flex;align-items:center;padding:0 16px;gap:8px}
   .bar .sp{flex:1}
@@ -99,6 +129,7 @@
   .bar .ok{background:var(--rose);color:var(--dark);border-color:var(--rose);min-width:72px;justify-content:center}
   .bar .cn{min-width:72px;justify-content:center}
   .bar .note{margin-left:8px}
+  .bar .quiet{border-color:#5A5D63;color:var(--unit)}
 
   .cap{margin:10px 0 0;font-size:14px;color:var(--text);line-height:20px}
 </style>
@@ -109,7 +140,7 @@
   <svg class="bg" id="bg"></svg>
 
   <div class="win">
-    <div class="tb"><span>Pipe 7 &middot; P3 to P2 &middot; 6.20 m</span>
+    <div class="tb"><span>Pipe 7 (P3 to P2) &middot; 6.20 m</span>
       <svg width="12" height="12" viewBox="0 0 12 12"><path d="M1 1l10 10M11 1L1 11" stroke="#C8CBD0" stroke-width="1.3" fill="none"/></svg></div>
 
     <div class="wb">
@@ -117,30 +148,33 @@
         <div class="panel" id="panel"><h2>The plan<span class="lv">Live: changes as you type. Made-up plan for this picture.</span></h2></div>
       </div>
 
-      <div class="band" id="band"><span class="pill">Suits</span><span class="ans">Fall 1 in 100</span></div>
+      <div class="band" id="band"></div>
 
       <div class="cols">
         <div class="card c1">
-          <div class="ch"><span class="num">1</span><span>What you type</span><span class="sp"></span><span class="tag out">Nothing needs you</span></div>
+          <div class="ch"><span class="num">1</span><span>What you type</span><span class="sp"></span><span class="tag out" id="s1tag">Nothing needs you</span></div>
           <div class="why">The few figures only you can give. Everything else is worked out.</div>
           <div class="rows">
             <div class="r">
-              <div class="f"><span class="l">Size</span><div class="box" style="width:68px">100<span class="u">dia.</span></div></div>
-              <div class="f"><span class="l">Material</span>
-                <div class="grp"><div class="box" style="width:72px">UPVC<span class="u chev"></span></div><span class="grey">office default</span></div></div>
-              <div class="f"><span class="l">Grade</span>
-                <div class="grp"><div class="box" style="width:84px">1 in 100<span class="u chev"></span></div><span class="grey">office default</span></div></div>
+              <div class="f"><span class="l">Size<span class="src">office default</span></span><div class="box" style="width:100px">100<span class="u">mm dia.</span></div></div>
+              <div class="f"><span class="l">Material<span class="src">office default</span></span><div class="box" style="width:72px">UPVC<span class="u chev"></span></div></div>
+              <div class="f"><span class="l">Grade<span class="src">office default</span></span><div class="box" style="width:84px">1 in 100<span class="u chev"></span></div></div>
             </div>
             <div class="r">
-              <div class="f"><span class="l">Level at P3</span><div class="box" id="p3box" style="width:80px"><span id="p3v"></span><span class="u">m</span></div></div>
-              <div class="f"><span class="l">Level at P2</span>
-                <div class="grp"><div class="box dash" style="width:80px"><span id="p2v"></span><span class="u">m</span></div><span class="grey">worked out</span></div></div>
-              <div class="f"><span class="l">Length</span>
-                <div class="grp"><span class="val" id="lenv"></span><span class="grey">measured</span><span class="lnk">type over</span></div></div>
+              <div class="f"><span class="l" id="p3l">Level at P3</span><div class="box" id="p3box" style="width:80px"></div></div>
+              <div class="f"><span class="l"><span id="p2n">Level at P2</span><span class="src" id="p2w">worked out</span></span><div class="box dash" id="p2box" style="width:80px"></div></div>
+              <div class="f"><span class="l">Length<span class="src">measured</span></span>
+                <div class="grp"><span class="val" id="lenv"></span><span class="lnk">type over</span></div></div>
             </div>
             <div class="ticks">
-              <div class="tk"><span class="tb16"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#ECEDEF" stroke-width="1.6" fill="none"/></svg></span>Label</div>
-              <div class="tk"><span class="tb16"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#ECEDEF" stroke-width="1.6" fill="none"/></svg></span>Invert levels</div>
+              <div class="pair">
+                <div class="tk"><span class="tb16"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#ECEDEF" stroke-width="1.6" fill="none"/></svg></span>Label</div>
+                <div class="tk mk"><span class="tb16"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#ECEDEF" stroke-width="1.6" fill="none"/></svg></span>Mask</div>
+              </div>
+              <div class="pair">
+                <div class="tk"><span class="tb16"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#ECEDEF" stroke-width="1.6" fill="none"/></svg></span>Invert levels</div>
+                <div class="tk mk"><span class="tb16"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#ECEDEF" stroke-width="1.6" fill="none"/></svg></span>Mask</div>
+              </div>
               <div class="tk"><span class="tb16"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#ECEDEF" stroke-width="1.6" fill="none"/></svg></span>Arrow</div>
             </div>
             <div class="r" style="align-items:center">
@@ -156,23 +190,26 @@
         <div class="card c2">
           <div class="ch"><span class="num">2</span><span>What the drawing gives</span></div>
           <div class="why">Read off what you drew. Change the drawing, not this window.</div>
-          <div class="p2 first">Leaves: P3 &middot; measured</div>
-          <div class="p2">Runs into: P2 &middot; measured</div>
+          <div class="p2 first">Leaves: <span id="n3a">P3</span><span class="src">measured</span></div>
+          <div class="p2">Runs into: <span id="n2a">P2</span><span class="src">measured</span></div>
           <div class="p2" id="s2len"></div>
-          <div class="p2">Bends: none &middot; measured</div>
+          <div class="p2">Bends: none<span class="src">measured</span></div>
+          <div class="p2" id="s2over" style="display:none">What is over it: paved driveway<span class="src">you set this</span></div>
         </div>
 
         <div class="card c3">
           <div class="ch"><span class="num">3</span><span>The answers</span></div>
-          <div class="why">Does the pipe fall enough?</div>
-          <table class="sum" id="t3"></table>
+          <div class="why" id="why3">Does the pipe fall enough?</div>
+          <table class="t3" id="t3"></table>
+          <div class="grey" id="t3n" style="margin-top:4px;white-space:normal"></div>
+          <div id="cvblock" style="display:none"></div>
           <div class="s3b"><svg id="side"></svg><div class="grey" id="n3">Worked from exact figures; the plan shows two decimals. The side view is not to scale.</div></div>
         </div>
       </div>
     </div>
 
     <div class="bar">
-      <div class="btn">Inspect</div><span class="grey note">Steps this window aside so you can look at the drawing. Keeps what you typed.</span>
+      <div class="btn">Inspect</div><div class="btn quiet">Settings</div><span class="grey note">Steps this window aside so you can look at the drawing. Keeps what you typed.</span>
       <span class="sp"></span>
       <div class="btn cn">Cancel</div><div class="btn ok">OK</div>
     </div>
@@ -181,43 +218,102 @@
 <p class="cap" id="cap"></p>
 
 <script>
-var NS="http://www.w3.org/2000/svg",CAD="#16181B",BLUE="#3F7BE0",RED="#FF5A5A";
+var NS="http://www.w3.org/2000/svg",CAD="#16181B",BLUE="#3F7BE0",RED="#FF5A5A",AMB="#F5C04A";
 function el(n,a,t){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);if(t!==undefined)e.textContent=t;return e}
 var q=(location.search.match(/v=(\w+)/)||[])[1]==="desktop"?"desktop":"laptop";
+var S=(location.search.match(/s=(\w+)/)||[])[1]||"noover";     // noover (default) | cover | wrong | nolevel | nosurface
+if(["noover","cover","wrong","nolevel","nosurface"].indexOf(S)<0)S="noover";
+var LONG=/n=long/.test(location.search);                         // fit test only: four-character pit names
+var NA=LONG?"P12A":"P2",NB=LONG?"P11B":"P3";
 document.body.className=q;
-document.getElementById("cap").textContent=(q==="laptop"?"Laptop size: 1000 x 620 in a 1280 x 720 AutoCAD window":"Desktop size: 1240 x 780 in a 1920 x 1040 AutoCAD window");
+var SN={noover:"what is over it not set (the default view)",cover:"what is over it set, cover suits",wrong:"cover short by 3 mm at "+NB,nolevel:"no level typed",nosurface:"what is over it set, levels known, no cover level at "+NB};
+document.getElementById("cap").textContent=(q==="laptop"?"Laptop size: 1000 x 620 in a 1280 x 720 AutoCAD window":"Desktop size: 1240 x 780 in a 1920 x 1040 AutoCAD window")+" · State: "+SN[S];
 Array.prototype.forEach.call(document.querySelectorAll(".chev"),function(e){e.innerHTML='<svg width="10" height="6" viewBox="0 0 10 6" style="display:block"><path d="M1 1l4 4 4-4" fill="none" stroke="#C8CBD0" stroke-width="1.5"/></svg>'});
 
 /* ---- the figures, exact in whole millimetres; only what is printed is rounded ---- */
-var LENMM=6200;                      // pipe 7, P3 to P2
-var CL2=1302, CL3=1310;              // made-up cover levels in cm (P2, P3)
+var OVER=(S==="cover"||S==="wrong"), NOLEV=(S==="nolevel"), WRONG=(S==="wrong"), NOSURF=(S==="nosurface");
+var LENMM=6200;                      // pipe 7, P3 to P2, pit wall to pit wall
 var UP=12400;                        // level at P3, typed (mm)
 var FALL=LENMM/100;                  // 1 in 100 exactly: 6200 / 100 = 62 mm
 var DOWN=UP-FALL;                    // level at P2, worked out = 12338 mm
+var OUTSZ=110, NEED=300;             // the pipe's outside size, cover needed (mm)
+var CL2=13020, CL3=WRONG?12807:13100;// cover levels at P2 and P3 (mm)
+var TOP3=UP+OUTSZ, TOP2=DOWN+OUTSZ;  // tops of pipe at each end
+var COV3=CL3-TOP3, COV2=CL2-TOP2;    // cover at each end
+var SHALLOW=Math.min(COV3,COV2), SHAL_AT=COV3<=COV2?NB:NA, SHORT=NEED-SHALLOW;
 function f3(mm){return (mm/1000).toFixed(3)}
 function f2r(mm){return (Math.floor((mm+5)/10)/100).toFixed(2)}   // round half up to 2 decimals, only for printing
 function lenTxt(){return (LENMM/1000).toFixed(2)+" m"}
-if(FALL!==62||DOWN!==12338||f2r(DOWN)!=="12.34"||f2r(UP)!=="12.40")throw new Error("sum");
-document.getElementById("p3v").textContent=f2r(UP);
-document.getElementById("p2v").textContent=f2r(DOWN);
-document.getElementById("lenv").textContent=lenTxt();
-document.getElementById("s2len").innerHTML="Length: "+lenTxt()+" &middot; measured";
+if(FALL!==62||DOWN!==12338||f2r(DOWN)!=="12.34"||f2r(UP)!=="12.40"||TOP3!==12510||TOP2!==12448)throw new Error("sum");
+if(!WRONG&&(COV3!==590||COV2!==572))throw new Error("cover sum");
+if(WRONG&&(COV3!==297||SHORT!==3))throw new Error("cover sum wrong");
+var NK="Not known";
 
-/* step 3: one sum */
-(function(){var t=document.getElementById("t3"),w=q==="laptop"?[20,76,52]:[24,100,64];
-  var h='<colgroup>'+w.map(function(x){return '<col style="width:'+x+'px">'}).join('')+'<col></colgroup>';
-  h+='<tr><td class="sg"></td><td class="lb">Level at P3</td><td class="fg">'+f3(UP)+'</td><td class="nt">typed</td></tr>';
-  h+='<tr class="two"><td class="sg">&minus;</td><td class="lb">Fall</td><td class="fg">'+f3(FALL)+'</td><td class="nt"><div class="n2">'+(LENMM/1000).toFixed(2)+' m at 1 in 100</div><div class="n2">worked out</div></td></tr>';
-  h+='<tr class="two"><td class="sg">=</td><td class="lb">Level at P2</td><td class="fg fin"><b>'+f3(DOWN)+'</b></td><td class="nt"><div class="n2">On the plan<span>'+f2r(DOWN)+'</span></div><div class="n2">worked out</div></td></tr>';
-  t.innerHTML=h})();
+/* the band */
+(function(){var b=document.getElementById("band"),h;
+  if(NOLEV){b.className="band gry";h='<span class="pill">Cannot check yet</span><span class="ans">Levels: Not known</span><span class="bn">Type one level to work out the rest</span>'}
+  else if(NOSURF){b.className="band gry";h='<span class="pill">Cannot check yet</span><span class="ans">Cover: Not known</span><span class="bn">No cover level at '+NB+'</span>'}
+  else if(WRONG){b.className="band red";h='<span class="pill">Wrong</span><span class="ans">Short by '+SHORT+' mm at '+SHAL_AT+'</span><span class="bn">Short by '+SHORT+' mm at '+SHAL_AT+', Pipe 7 ('+NB+' to '+NA+'): cover '+SHALLOW+' mm, needs '+NEED+' mm.</span>'}
+  else if(OVER){h='<span class="pill">Suits</span><span class="ans">Fall 1 in 100</span><span class="bn">Cover '+(SHALLOW/1000).toFixed(2)+' m, needs '+(NEED/1000).toFixed(2)+' m</span>'}
+  else{h='<span class="pill">Suits</span><span class="ans">Fall 1 in 100</span>'}
+  b.innerHTML=h})();
+
+/* step 1 level boxes, step 2 */
+document.getElementById("lenv").textContent=lenTxt();
+document.getElementById("s2len").innerHTML="Length: "+lenTxt()+'<span class="src">measured</span>';
+document.getElementById("n3a").textContent=NB;document.getElementById("n2a").textContent=NA;
+document.getElementById("p3l").textContent="Level at "+NB;document.getElementById("p2n").textContent="Level at "+NA;
+(function(){var a=document.getElementById("p3box"),b=document.getElementById("p2box"),w=document.getElementById("p2w");
+  if(NOLEV){a.innerHTML='<span class="nk">'+NK+'</span>';b.innerHTML='<span class="nk">'+NK+'</span>';w.textContent="";
+    document.getElementById("s1tag").textContent="Needs one level"}
+  else{a.innerHTML='<span>'+f2r(UP)+'</span><span class="u">m</span>';b.innerHTML='<span>'+f2r(DOWN)+'</span><span class="u">m</span>'}})();
+if(OVER||NOSURF)document.getElementById("s2over").style.display="";
+if(WRONG)document.getElementById("s1tag").textContent="Cover is short";
+if(NOSURF)document.getElementById("s1tag").textContent="Needs a cover level";
+
+/* step 3: the fall sum */
+/* ONE table row, the run window's columns: Pit, Below, Fall, Pit drop, Level worked out, On the plan.
+   Below is the level at the pit the figure is worked from (P3, typed); the fall is taken off it going down to P2. */
+(function(){var t=document.getElementById("t3"),nt=document.getElementById("t3n");
+  var w=NOLEV?(q==="laptop"?[22,46,12,40,12,30,12,52,44]:[24,62,14,46,14,40,14,66,62]):(q==="laptop"?[20,50,12,40,12,30,12,66,40]:[28,60,16,50,16,44,16,70,52]);
+  var h='<colgroup>'+w.map(function(x){return '<col style="width:'+x+'px">'}).join('')+'</colgroup>';
+  h+='<tr><th style="text-align:left">Pit</th><th>Below</th><th></th><th>Fall</th><th></th><th>Pit<br>drop</th><th></th><th>Level,<br>worked out</th><th>On the<br>plan</th></tr>';
+  var NKT=q==="laptop"?'Not<br>known':NK;          /* two short lines at laptop width so three of them fit in one row */
+  var NKS='<span class="nk">'+NKT+'</span>';
+  h+='<tr><td class="pn">'+NA+'</td><td>'+(NOLEV?NKS:f3(UP))+'</td><td class="sg">&minus;</td><td>'+f3(FALL)+'</td><td class="sg">+</td><td class="none">none</td><td class="sg">=</td>'
+    +'<td class="fin">'+(NOLEV?'<b class="nk">'+NKT+'</b>':'<b>'+f3(DOWN)+'</b>')+'</td><td>'+(NOLEV?NKS:f2r(DOWN))+'</td></tr>';
+  t.innerHTML=h;
+  nt.textContent=NOLEV?'Below is the level at '+NB+': '+NK+'. Fall is '+lenTxt()+' at 1 in 100.':'Below is the level at '+NB+', typed. Fall is '+lenTxt()+' at 1 in 100.';
+  if(NOSURF)nt.innerHTML=nt.textContent+'<br>Cover at '+NA+' is '+f3(COV2)+' m. Cover at '+NB+': '+NK+', no cover level there.'})();
+
+/* step 3: the cover check, at the two ends only, with its bar */
+if(OVER){(function(){var blk=document.getElementById("cvblock");blk.style.display="";
+  var lap=q==="laptop",w=lap?[24,58,14,58,14,58]:[30,70,18,70,18,70];
+  function row(nm,cl,top,cov,bad){return '<tr><td class="lb">'+nm+'</td><td class="fg">'+f3(cl)+'</td><td class="sg">&minus;</td><td class="fg">'+f3(top)+'</td><td class="sg">=</td><td class="fg'+(bad?' bad':'')+'"><b>'+f3(cov)+'</b></td></tr>'}
+  var h='<div class="grey cvh">Cover at the two ends: level &minus; top of pipe</div>';
+  h+='<table class="sum cvt"><colgroup>'+w.map(function(x){return '<col style="width:'+x+'px">'}).join('')+'</colgroup>'
+    +row(NB,CL3,TOP3,COV3,WRONG)+row(NA,CL2,TOP2,COV2,false)+'</table>';
+  h+='<div class="cvline">Shallowest '+f3(SHALLOW)+' m at '+SHAL_AT+(WRONG?', <span class="bad">short by '+SHORT+' mm</span>':' against '+f3(NEED)+' m needed')+'</div>';
+  h+='<svg id="cvbar"></svg>';
+  blk.innerHTML=h;
+  var W=blk.clientWidth,H=30,s=document.getElementById("cvbar");s.setAttribute("width",W);s.setAttribute("height",H);s.setAttribute("viewBox","0 0 "+W+" "+H);
+  var maxv=700,x0=0,x1=W-34,sc=(x1-x0)/maxv, ok=!WRONG, col=ok?"#5ED08F":"#F25555";
+  s.appendChild(el("rect",{x:x0,y:8,width:x1-x0,height:10,rx:3,fill:"#232528",stroke:"#5A5D63","stroke-width":1}));
+  s.appendChild(el("rect",{x:x0,y:8,width:Math.max(2,SHALLOW*sc),height:10,rx:3,fill:col}));
+  s.appendChild(el("line",{x1:NEED*sc,y1:3,x2:NEED*sc,y2:23,stroke:"#ECEDEF","stroke-width":2}));
+  s.appendChild(el("text",{x:NEED*sc+5,y:H-1,"font-size":12,style:"fill:#C8CBD0;font-family:'Segoe UI',Arial,sans-serif"},"needs 0.300"));
+  s.appendChild(el("text",{x:x1+4,y:17,"font-size":12,style:"fill:#C8CBD0;font-family:'Segoe UI',Arial,sans-serif"},ok?"Suits":"Short"));
+  if(lap){document.getElementById("why3").style.display="none";document.querySelector(".s3b").style.marginTop="4px"}else document.getElementById("why3").textContent="Does it fall enough, and is there enough cover?";
+  document.getElementById("side").style.display="none";
+  document.getElementById("n3").textContent="Top of pipe = invert + "+f3(OUTSZ)+" (outside size). Worked from exact figures; the plan shows two decimals."})()}
 
 /* side view: the one pipe, sloping down to P2 on the left (slope drawn bigger than real) */
-(function(){var s=document.getElementById("side"),W=s.parentNode.clientWidth,H=q==="laptop"?40:56;
+(function(){var s=document.getElementById("side");if(s.style.display==="none")return;var W=s.parentNode.clientWidth,H=q==="laptop"?40:56;
   s.setAttribute("width",W);s.setAttribute("height",H);s.setAttribute("viewBox","0 0 "+W+" "+H);
   var x0=40,x1=W-40,base=H-18,rise=q==="laptop"?12:20,yL=base-4,yR=yL-rise;
   s.appendChild(el("line",{x1:x0-28,y1:base+1,x2:x1+28,y2:base+1,stroke:"#5A5D63","stroke-width":1}));
   s.appendChild(el("path",{d:"M"+x0+" "+yL+" L"+x1+" "+yR,fill:"none",stroke:"#ECEDEF","stroke-width":2,"stroke-linecap":"round"}));
-  [[x0,"P2"],[x1,"P3"]].forEach(function(p){
+  [[x0,NA],[x1,NB]].forEach(function(p){
     s.appendChild(el("line",{x1:p[0],y1:base+1,x2:p[0],y2:base+4,stroke:"#8A8E96","stroke-width":1}));
     s.appendChild(el("text",{x:p[0],y:H-3,"text-anchor":"middle","font-size":12,style:"fill:#C8CBD0;font-family:'Segoe UI',Arial,sans-serif"},p[1]))});
 })();
@@ -231,22 +327,24 @@ document.getElementById("s2len").innerHTML="Length: "+lenTxt()+" &middot; measur
     s.appendChild(el("line",{x1:x,y1:y,x2:x+w+r()*200,y2:y+(r()-.5)*260,stroke:"#252930","stroke-width":1}))}
   for(var j=0;j<14;j++){var yy=r()*H;s.appendChild(el("line",{x1:0,y1:yy,x2:W,y2:yy+(r()-.5)*120,stroke:"#202328","stroke-width":1}))}})();
 
-/* the plan, zoomed to the one pipe: P2 (left, lower) to P3 (right, higher) */
+/* the plan, zoomed to the one pipe: P2 (left, lower) to P3 (right, higher).
+   ONE true scale K (px per mm) for every position and distance in the strip. Text SIZES are fixed (12 / 14 px). */
 (function(){var host=document.getElementById("panel"),W=host.clientWidth,H=host.clientHeight;
   var s=el("svg",{width:W,height:H,viewBox:"0 0 "+W+" "+H});host.appendChild(s);
   var fs=12,F="font-family:Arial,'Segoe UI',sans-serif";
   function line(x1,y1,x2,y2,c,w,d){var a={x1:x1,y1:y1,x2:x2,y2:y2,stroke:c,"stroke-width":w};if(d)a["stroke-dasharray"]=d;s.appendChild(el("line",a))}
-  function txt(x,y,str,fill,anchor,size){s.appendChild(el("text",{x:x,y:y,"font-size":size||fs,"text-anchor":anchor||"middle",style:"fill:"+(fill||"#fff")+";"+F,dy:"0.35em"},str))}
+  function txt(x,y,str,fill,anchor,size){var t=el("text",{x:x,y:y,"font-size":size||fs,"text-anchor":anchor||"middle",style:"fill:"+(fill||"#fff")+";"+F,dy:"0.35em"},str);s.appendChild(t);return t}
   function txtr(x,y,str,fill,anchor,rot){s.appendChild(el("text",{x:0,y:0,"font-size":fs,"text-anchor":anchor,style:"fill:"+fill+";"+F,dy:"0.35em",transform:"translate("+x+" "+y+") rotate("+rot+")"},str))}
   var d=el("defs",{});
   var p=el("pattern",{id:"hatch",width:6,height:6,patternUnits:"userSpaceOnUse",patternTransform:"rotate(45)"});p.appendChild(el("line",{x1:0,y1:0,x2:0,y2:6,stroke:"#9AA0A8","stroke-width":1}));d.appendChild(p);
   s.appendChild(d);
 
-  var mg=150,K=(W-2*mg)/LENMM,pr=225*K,EW=50*K;     // px per mm; half pit 225 mm; pipe edge = 100 dia / 2
+  var K=q==="laptop"?0.065:0.1;                       // px per mm
+  var pr=225*K, EW=50*K, DD=(225+100)*K;              // pit half-width; pipe edge = 100 dia / 2; outer dashed line 100 mm outside the wall
+  var CIRC=17, TAGD=900*K;                            // tag circle radius (px); pit centre to circle centre = 900 mm
   var wallY=28,wallT=7,wallB=wallY+wallT;
-  var topNeed=pr+52,botNeed=pr+14+13+6,extra=Math.max(0,(H-(wallB+4+topNeed+botNeed))/2);
-  var py=wallB+4+topNeed+extra,fy=py+pr+14+extra*0.6;
-  var xa=mg,xb=W-mg;                                  // P2 and P3 centres
+  var py=wallB+6+CIRC+TAGD, fy=py+DD+10;
+  var SPAN=(LENMM+450)*K, xa=W/2-SPAN/2, xb=W/2+SPAN/2;   // P2 and P3 centres, 6650 mm apart = 6200 mm wall to wall + 450
 
   // house wall along the top, boundary fence along the bottom
   s.appendChild(el("rect",{x:0,y:wallY,width:W,height:wallT,fill:"url(#hatch)"}));
@@ -254,38 +352,42 @@ document.getElementById("s2len").innerHTML="Length: "+lenTxt()+" &middot; measur
   txt(W-12,wallY-11,"HOUSE","#C8CBD0","end");
   line(0,fy,W,fy,"#C8CBD0",1.2);
   for(var fx=10;fx<W;fx+=28)line(fx,fy-3,fx,fy+3,"#C8CBD0",1);
-  txt(12,fy+13,"BOUNDARY FENCE","#C8CBD0","start");
-  txt(W-12,fy+13,"1:100","#C8CBD0","end");
+  txt(12,fy+12,"BOUNDARY FENCE","#C8CBD0","start");
 
   // neighbouring pipes, faint, running out to the panel edge at each end
   function faint(x1,x2){line(x1,py,x2,py,"#2A4373",3,"9 5");line(x1,py-EW,x2,py-EW,"#5A5D63",1.2);line(x1,py+EW,x2,py+EW,"#5A5D63",1.2)}
   faint(0,xa);faint(xb,W);
 
-  // the one pipe, outlined bright white
+  // the one pipe, outlined bright white, wall to wall
   var ax=xa+pr,bx=xb-pr;
   line(ax,py,bx,py,BLUE,3,"9 5");
   line(ax,py-EW,bx,py-EW,"#fff",2);line(ax,py+EW,bx,py+EW,"#fff",2);
   var OFF=EW+75*K+6;                                   // pipe edge, 75 mm clear, half a text height
   var mx=(xa+xb)/2;
   // (a) label centred above the pipe
-  txt(mx,py-OFF,"100 DIA. UPVC PIPE AT 1 IN 100 MIN.","#fff","middle");
-  // (b) red invert levels below the pipe, 200 mm in from the outer dashed line of each pit
+  var lab=txt(mx,py-OFF,"100 DIA. UPVC PIPE AT 1 IN 100 MIN.","#fff","middle");
+  if(WRONG){var lw=lab.getBBox().width,mh=12,mcx=mx-lw/2-mh-mh/2,mcy=py-OFF;   // amber marker: as wide as tall, as tall as the label text, one text height clear
+    s.appendChild(el("polygon",{points:mcx+","+(mcy-mh/2)+" "+(mcx-mh/2)+","+(mcy+mh/2)+" "+(mcx+mh/2)+","+(mcy+mh/2),fill:AMB,stroke:"#10131A","stroke-width":0.8,id:"amber"}))}
+  // (b) red invert levels below the pipe, 200 mm from the OUTER DASHED LINE of each pit (not shown when no level is typed)
   var e=200*K;
-  txt(ax+e,py+OFF,"IL "+f2r(DOWN),RED,"start");
-  txt(bx-e,py+OFF,"IL "+f2r(UP),RED,"end");
-  // (c) flow arrow below the pipe, centred between the two levels, pointing to P2 (left, low)
+  if(!NOLEV){txt(xa+DD+e,py+OFF,"IL "+f2r(DOWN),RED,"start");
+    txt(xb-DD-e,py+OFF,"IL "+f2r(UP),RED,"end")}
+  // (c) flow arrow below the pipe, centred, 750 mm long, pointing to P2 (left, low)
   var hl=375*K,tx=mx-hl,hx=mx+hl;
   line(hx,py+OFF,tx+5,py+OFF,"#fff",1.4);
   s.appendChild(el("polygon",{points:tx+","+(py+OFF)+" "+(tx+7)+","+(py+OFF-3)+" "+(tx+7)+","+(py+OFF+3),fill:"#fff"}));
 
-  // pits, numbers flat straight above, cover levels at 45 degrees off the top-right corner
-  [[xa,"P2",CL2],[xb,"P3",CL3]].forEach(function(p){var cx=p[0];
+  // pits: wall + diagonals + OUTER DASHED LINE; number in a circle 900 mm straight above the centre;
+  // cover level starts 400 mm clear of the corner of the outer dashed line, at 45 degrees off the top-right corner
+  [[xa,NA,CL2],[xb,NB,CL3]].forEach(function(p,i){var cx=p[0];
+    s.appendChild(el("rect",{x:cx-DD,y:py-DD,width:2*DD,height:2*DD,fill:"none",stroke:"#C8CBD0","stroke-width":1,"stroke-dasharray":"4 3"}));
     s.appendChild(el("rect",{x:cx-pr,y:py-pr,width:2*pr,height:2*pr,fill:CAD,stroke:"#B8BCC4","stroke-width":1.2}));
     line(cx-pr,py-pr,cx+pr,py+pr,"#8A8E96",1);line(cx-pr,py+pr,cx+pr,py-pr,"#8A8E96",1);
-    var co=pr+6+12;
-    s.appendChild(el("circle",{cx:cx,cy:py-co,r:12,fill:CAD,stroke:"#E0E2E5","stroke-width":1.2}));
-    txt(cx,py-co,p[1],"#E0E2E5","middle",14);
-    txtr(cx+pr+13,py-pr-9,"CL "+(p[2]/100).toFixed(2),"#E0E2E5","start",-45)});
+    s.appendChild(el("circle",{cx:cx,cy:py-TAGD,r:CIRC,fill:CAD,stroke:"#E0E2E5","stroke-width":1.2,id:"tag"+i}));
+    var t=txt(cx,py-TAGD,p[1],"#E0E2E5","middle",14),bw=t.getBBox().width,room=2*CIRC-8;      // shrink the letters to fit, never spill
+    if(bw>room)t.setAttribute("font-size",(14*room/bw).toFixed(1));
+    var sx=cx+DD+400*K*Math.SQRT1_2, sy=py-DD-400*K*Math.SQRT1_2;
+    txtr(sx,sy,(NOSURF&&i===1)?"CL TBC":"CL "+f2r(p[2]),"#E0E2E5","start",-45)});
 })();
 
 /* overflow check for the photographer */

@@ -20,6 +20,8 @@
   svg text{font-family:Arial,"Segoe UI",sans-serif}
   .note{font-size:12px;color:var(--grey);margin:8px 0 0}
   .made{font-size:12px;color:var(--grey);margin:0}
+  .top{font-size:12px;color:var(--grey);margin:0 0 16px}
+  .foot{font-size:12px;color:var(--grey);margin:16px 0 0}
 </style>
 </head>
 <body>
@@ -159,15 +161,16 @@ function hoverPanel(which){var s=svg(882,250),y=120,X2=170,X3=690,c=(X2+X3)/2,r=
   arrow(s,c,y+offA,-1,mm(750),mm(300),false);
   [[X2,"CL 13.02"],[X3,"CL 13.10"]].forEach(function(p){var w=tw(p[1],200),rr=EDGE*1.4142+mm(400)+w/2,q=rr*0.7071;txt(s,p[0]+q,y-q,p[1],200,{rot:-45})});
   if(which==="pit"){cursor(s,X3+3,y+3);tip(s,X3+30-340,y+52,"P3 · 450 x 450 mm junction pit · CL 13.10","Double-click to change it",340)}
-  else{cursor(s,X2+150,y+1);tip(s,X2+170,y+52,"Pipe 7 · P3 to P2 · 100 mm dia. UPVC · 1 in 100 · 6.20 m","Double-click to change it",450)}
+  else{cursor(s,X2+150,y+1);tip(s,X2+170,y+52,"Pipe 7 (P3 to P2) · 100 dia. UPVC · 1 in 100 · 6.20 m","Double-click to change it",450)}
   return s}
 
 var Q=[
-{h:"The cover level, lined up from the pit outwards",
+{h:"Which way should the cover level’s words run at each corner?",
+ foot:"Earlier today you ruled the 400 mm is measured to the start of the text; on the left-hand corners options A and B differ on exactly that.",
  ctx:"You said: “the cover level text always needs to be aligned from pit outwards”. Each picture shows one pit with the cover level at all four corners at once, only so you can compare. Badge 1 is top right, then clockwise. It is always at 45 degrees to the sheet.",
  body:function(sec){var two=document.createElement("div");two.className="two";
-  add(two,"A. Always reads the right way up",coverPanel("A"),"On the right-hand corners the words start at the pit; on the left-hand corners they end at the pit. None is ever upside down.",1);
-  add(two,"B. Always begins at the pit",coverPanel("B"),"The words always run away from the pit; on the left-hand corners they read upside down.");
+  add(two,"A. Always reads the right way up",coverPanel("A"),"On the right-hand corners the words start at the pit; on the left-hand corners they end at the pit. None is ever upside down.",1,"On the left-hand corners the 400 mm is measured to the END of the words, not their start.");
+  add(two,"B. Always begins at the pit",coverPanel("B"),"The words always run away from the pit; on the left-hand corners they read upside down.",0,"This is how your words on the grips were first written down: the words always begin at the pit.");
   sec.appendChild(two)}},
 {h:"The flow arrow: what it looks like",
  ctx:"The same pipe each time: 9000 mm long from P3 down to P2, label above, invert levels below, the arrow below the pipe in the middle. Only the arrow changes. The close-up is the same arrow, enlarged.",
@@ -181,10 +184,11 @@ var Q=[
   add(sec,"A. APPROX. on the plan, until you confirm",copiedPanel(true),"The sheet itself says the levels are not confirmed. Confirm a level in its window and APPROX. goes.",1);
   add(sec,"B. Plain levels with the amber marker",copiedPanel(false),"The plan looks finished; only the marker on screen tells you. Nothing on the printed sheet warns anyone.")}},
 {h:"While the Pit window is open: is the new pit also on the drawing behind?",
+ top:"On 18 Nov you picked ‘Both: top preview in the window, and the real drawing lights up’. Today you said the live view belongs in the window’s own panel. Which do you want now?",
  ctx:"You have clicked a spot for a new pit and its window is open. Both pictures are the same moment on the AutoCAD screen: a faint house wall and path, the Pit window floating over part of it. The window here is only a stand-in.",
  body:function(sec){var two=document.createElement("div");two.className="two";
-  add(two,"A. Only in the window until you press OK",screen4(false),"One place to look. The pit lands on the drawing when you press OK; Cancel leaves nothing behind.",1);
-  add(two,"B. In the window and on the drawing behind",screen4(true),"Drag the window aside and the pit is already there. Cancel removes it.");
+  add(two,"A. Only in the window until you press OK",screen4(false),"One place to look. The pit lands on the drawing when you press OK; Cancel leaves nothing behind.",0,"The pit that followed your cursor disappears from the drawing when the window opens, and comes back when you press OK.");
+  add(two,"B. In the window and on the drawing behind",screen4(true),"Drag the window aside and the pit is already there. Cancel removes it.",0,"Shown on the drawing, not saved until OK; Cancel removes it.");
   sec.appendChild(two)}},
 {h:"Hovering over a pit or a pipe",
  ctx:"A proposal for you to correct. Rest the cursor on a part, without clicking, and it lights up and a small tip says what it is. The two pictures are two different moments, one after the other: you have one cursor.",
@@ -192,12 +196,12 @@ var Q=[
   add(sec,"Over a pit",hoverPanel("pit"),"The pit lights and says what it is. A single click selects it, as in plain AutoCAD. Not to scale.");
   add(sec,"Over a pipe",hoverPanel("pipe"),"The pipe lights and says what it is. Double-click opens its window. Not to scale.")}}
 ];
-function add(parent,h,s,n,rec){var d=document.createElement("div");d.className="opt";var hh=document.createElement("h3");hh.textContent=h;
+function add(parent,h,s,n,rec,n2){var d=document.createElement("div");d.className="opt";var hh=document.createElement("h3");hh.textContent=h;
   if(rec){var r=document.createElement("span");r.className="rec";r.textContent="Recommended";hh.appendChild(r)}
-  d.appendChild(hh);d.appendChild(s);var p=document.createElement("p");p.className="note";p.textContent=n;d.appendChild(p);parent.appendChild(d)}
+  d.appendChild(hh);d.appendChild(s);var p=document.createElement("p");p.className="note";p.textContent=n;d.appendChild(p);if(n2){var p2=document.createElement("p");p2.className="note";p2.style.color="#ECEDEF";p2.textContent=n2;d.appendChild(p2)}parent.appendChild(d)}
 var only=(location.search.match(/q=(\d)/)||[])[1],host=document.getElementById("host");
 Q.forEach(function(q,i){if(only&&only!=i+1)return;var sec=document.createElement("section");sec.className="q";
-  sec.innerHTML="<h2></h2><p class='ctx'></p>";sec.querySelector("h2").textContent=q.h;sec.querySelector(".ctx").textContent=q.ctx;q.body(sec);host.appendChild(sec)});
+  sec.innerHTML="<h2></h2><p class='ctx'></p>";sec.querySelector("h2").textContent=q.h;sec.querySelector(".ctx").textContent=q.ctx;if(q.top){var t=document.createElement("p");t.className="top";t.textContent=q.top;sec.appendChild(t)}q.body(sec);if(q.foot){var f=document.createElement("p");f.className="foot";f.textContent=q.foot;sec.appendChild(f)}host.appendChild(sec)});
 </script>
 </body>
 </html>

@@ -15,12 +15,16 @@
   .strip{position:absolute;left:0;top:0;right:0;height:24px;background:#26282B;color:var(--grey);font-size:12px;line-height:24px;padding:0 12px;border-bottom:1px solid #34373C}
   .bg{position:absolute;left:0;top:24px}
 
-  .win{position:absolute;left:50%;top:50%;width:640px;height:600px;transform:translate(-50%,-50%);
+  .win{position:absolute;left:50%;top:50%;width:1200px;transform:translate(-50%,-50%);
        background:var(--win);border:1px solid var(--bd);border-radius:8px;box-shadow:0 12px 40px rgba(0,0,0,.6);
        display:flex;flex-direction:column;overflow:hidden}
   .tb{height:32px;flex:none;display:flex;align-items:center;justify-content:space-between;padding:0 16px;color:var(--text);border-bottom:1px solid #202225}
   .tb svg{display:block}
-  .wb{flex:1;min-height:0;display:flex;flex-direction:column;gap:8px;padding:16px}
+  .wb{display:flex;flex-direction:column;gap:8px;padding:16px}
+  .cols{display:flex;gap:8px;align-items:flex-start}
+  .col{flex:1;min-width:0;display:flex;flex-direction:column;gap:8px}
+  .box.w{width:auto;min-width:120px}
+  .foot{white-space:normal}
 
   .grey{font-size:12px;color:var(--grey);line-height:16px;white-space:nowrap}
   .card{flex:none;background:var(--card);border-radius:8px;padding:8px 12px;border:1px solid #2F3236}
@@ -30,9 +34,9 @@
   .nm{flex:1;min-width:0;color:var(--body);white-space:nowrap}
   .box{flex:none;width:120px;height:24px;background:var(--inp);border:1px solid var(--ibd);border-radius:8px;display:flex;align-items:center;padding:0 8px;color:var(--text);gap:8px;white-space:nowrap}
   .box .u{margin-left:auto;color:var(--unit)}
-  .slot{flex:none;width:72px;display:flex}
+  .slot{flex:none;width:64px;display:flex}
   .tag{border-radius:8px;padding:0 8px;font-size:12px;line-height:18px;white-space:nowrap;border:1px solid var(--ibd);color:var(--unit);background:transparent}
-  .ov{flex:none;width:112px}
+  .ov{flex:none;width:104px}
 
   .bar{height:48px;flex:none;border-top:1px solid #202225;display:flex;align-items:center;padding:0 16px;gap:8px}
   .bar .sp{flex:1}
@@ -61,28 +65,31 @@
     </div>
   </div>
 </div>
-<p class="cap">Settings size: 640 x 600 in a 1280 x 720 AutoCAD window</p>
+<p class="cap" id="cap"></p>
 
 <script>
 var NS="http://www.w3.org/2000/svg";
 function el(n,a){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);return e}
 var CH='<svg width="10" height="6" viewBox="0 0 10 6" style="display:block"><path d="M1 1l4 4 4-4" fill="none" stroke="#C8CBD0" stroke-width="1.5"/></svg>';
 /* [name, value, unit, office value if changed, choice list?] */
+/* every Stage 1 setting (D-419 item 6), in two columns of groups; r[5] = a wide box for a words value */
 var G=[
- ["Pipe text",[["Label, clear of the pipe","75","mm"],["Invert level, from the pit","200","mm"],["Invert level, furthest it may slide","1,000","mm"]]],
+ ["Pipe text",[["Label, clear of the pipe","75","mm"],["Invert level, from the pit's outer line","200","mm"],["Invert level, furthest it may slide","1,000","mm"]]],
  ["Pit text",[["Pit number, from the pit centre","600","mm","900 mm"],["Pit number, least gap to the pit","150","mm"],["Cover level, off the pit corner","400","mm"]]],
- ["Starting figures",[["New pipe size","100","mm dia.",0,1],["New pipe material","UPVC","",0,1],["New pipe grade","1 in 100","",0,1],["Drop across a pit","0.02","m"],["Tolerance on levels and cover","5","mm"]]]
+ ["Starting figures",[["New pipe size","100","mm dia.",0,1],["New pipe material","UPVC","",0,1],["New pipe grade","1 in 100","",0,1],["Drop across a pit","0.02","m"],["Tolerance on levels and cover","5","mm"]]],
+ ["Markers and layers",[["Marker, height","as tall as the text beside it","",0,0,1],["Marker, gap","one text height","",0,0,1],["Layer for marks that never print","CE NO PLOT","",0,0,1],["Impervious outline, layer","50CONT","",0,0,1],["Impervious outline, width","70","mm"]]]
 ];
-var h='<div class="grey">These apply to this drawing only. The office value is shown beside each figure.</div>';
-G.forEach(function(g){
-  h+='<div class="card"><div class="gh">'+g[0]+'</div>';
+function card(g){var s='<div class="card"><div class="gh">'+g[0]+'</div>';
   g[1].forEach(function(r){
-    h+='<div class="row"><span class="nm">'+r[0]+'</span><div class="box">'+r[1]+(r[2]?'<span class="u">'+r[2]+'</span>':'')+(r[4]?'<span class="u">'+CH+'</span>':'')+'</div>'+
-       '<div class="slot">'+(r[3]?'<span class="tag">Changed</span>':'')+'</div><span class="grey ov" style="width:auto;min-width:112px">'+(r[3]?'office value '+r[3]:'office value')+'</span></div>';
+    s+='<div class="row"><span class="nm">'+r[0]+'</span><div class="box'+(r[5]?' w':'')+'">'+r[1]+(r[2]?'<span class="u">'+r[2]+'</span>':'')+(r[4]?'<span class="u">'+CH+'</span>':'')+'</div>'+
+       '<div class="slot">'+(r[3]?'<span class="tag">Changed</span>':'')+'</div><span class="grey ov" style="width:112px">'+(r[3]?'office value '+r[3]:'office value')+'</span></div>';
   });
-  h+='</div>';
-});
+  return s+'</div>'}
+var h='<div class="grey">These apply to this drawing only. The office value is shown beside each figure.</div>';
+h+='<div class="cols"><div class="col">'+card(G[0])+card(G[1])+'</div><div class="col">'+card(G[2])+card(G[3])+'</div></div>';
+h+='<div class="grey foot">A change moves nothing by itself: it applies to new text, and to text the tool places again when its part is next changed. Text you moved by hand is never moved.</div>';
 document.getElementById("wb").innerHTML=h;
+(function(){var w=document.querySelector(".win").getBoundingClientRect();document.getElementById("cap").textContent="Settings size: "+Math.round(w.width)+" x "+Math.round(w.height)+" in a 1280 x 720 AutoCAD window (fitted to its list)"})();
 
 (function(){var f=document.getElementById("frame"),W=f.clientWidth,H=f.clientHeight-24,s=document.getElementById("bg");
   s.setAttribute("width",W);s.setAttribute("height",H);s.setAttribute("viewBox","0 0 "+W+" "+H);
@@ -92,7 +99,9 @@ document.getElementById("wb").innerHTML=h;
     s.appendChild(el("line",{x1:x,y1:y,x2:x+w+r()*200,y2:y+(r()-.5)*260,stroke:"#252930","stroke-width":1}))}
   for(var j=0;j<14;j++){var yy=r()*H;s.appendChild(el("line",{x1:0,y1:yy,x2:W,y2:yy+(r()-.5)*120,stroke:"#202328","stroke-width":1}))}})();
 
-setTimeout(function(){var wb=document.getElementById("wb");document.body.setAttribute("data-chk",(wb.scrollHeight>wb.clientHeight+1)?"overflow "+wb.scrollHeight+" vs "+wb.clientHeight:"ok")},50);
+setTimeout(function(){var w=document.querySelector(".win").getBoundingClientRect(),bad=[];
+  Array.prototype.forEach.call(document.querySelectorAll(".row"),function(r){var nm=r.querySelector(".nm");if(nm.scrollWidth>nm.clientWidth+1)bad.push(nm.textContent)});
+  document.body.setAttribute("data-chk",(w.height>680||bad.length)?"problem "+Math.round(w.height)+" "+bad.join(";"):"ok "+Math.round(w.width)+"x"+Math.round(w.height))},50);
 </script>
 </body>
 </html>
