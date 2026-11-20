@@ -97,3 +97,10 @@ The bench's own window (now the command's factories and the empty-plan guard); 0
 ## 12. Owed in AutoCAD
 
 Section 5 stands, with: the circle tag's real attribute; ByLayer colour, linetype and lineweight; Z 0 and scale 1; the layer found plotting and put back, said once; a plotted sheet with a witness line.
+
+## 13. Ruled since (control room, about 4:51 pm, D-412; all DRAFT for Tim; the list is held to these)
+
+1. **Colour:** "CE NO PLOT" is made grey (colour 8), as the office data says; the tool never recolours a layer; the MARKER CARRIES ITS OWN AMBER (colour 40), the one exception to ByLayer. This replaces D-401 item 1.
+2. **Spot:** one text height clear of the label's end; if taken, the label's other end, then above the end, then below. No label: beside the middle of a pipe, or off the top left corner of a pit. None clear: the first spot anyway. A marker never counts as "in the way" for other text.
+3. **The layer off or frozen:** not changed; the marker is still drawn on it; the command line says the fault and that markers are hidden.
+4. **Which parts:** every amber "Needs a look" and red "Wrong" on a drawn part gets the marker; grey "Cannot check yet" gets none. The triangle is as wide as it is tall (the label's text height).

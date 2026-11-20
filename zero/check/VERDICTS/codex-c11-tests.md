@@ -148,3 +148,9 @@ A cheat written against this exact tip still turned all 73 green by keying on th
 ## N. Ruled since (D-410, Tim, about 4:48 pm): one more item for the open list
 
 6. **A pipe's length MAY be typed** (overturns D-277 DQ-049; the one reader gives one "length used": the typed length if given, else the drawn one). Any target that assumes a length is only ever measured must be restated: the sums (fall, grade, cover along the pipe) use the length used, and the window says which it is. At least one target with a typed length that differs from the drawn one.
+
+## O. Ruled since (control room, about 4:49 pm, D-411): how the list goes forward
+
+1. **The 1 in 200.04 case is NOT ruled; it goes to Tim. DRAFT to close the list:** the check on exact figures says "Needs a look"; the label prints the whole number, half up: "1 IN 200"; the window shows the exact grade beside it ("1 in 200.04"). That test is marked DRAFT.
+2. **No design page.** ONE bounded edit of exactly the open list (section J items 1 to 5, and item 6 in section N from D-410), read back by the check room by reading alone, with no new adversarial pass on the list.
+3. **Condition, binding on the C11 BUILD:** at that build's check the adversarial probes are run against the product with figures the builder has not seen. No MERGE of that build without them.
