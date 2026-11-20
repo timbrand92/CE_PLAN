@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-163.
+**Next number:** TR-167.
 
 ---
 
@@ -417,3 +417,13 @@
 **TR-161** (unknown U-144, the draft D-401 first call: the amber marker's own layer and its name). Offered: "CE NO PLOT" (recommended); "CE MARKERS"; DEFPOINTS. He picked: "'CE NO PLOT' (Recommended)". One CE layer, set not to plot, for everything the tool shows on screen but never prints: the amber markers now, other on-screen-only marks later. This also names the CE no-plot layer left open by D-275.
 
 **TR-162** (unknown U-146, the draft D-401 third call). He picked: "One marker per part, listing every reason (Recommended)".
+
+## Batch 40, Fri 20 Nov 2026, 16:30 (clock read), through the question window, one line per question (the control room's draft calls C3b, C3d, C3e and C4 from `interview/FROM_CONTROL_ROOM.md`)
+
+**TR-163** (unknown U-145, the draft D-401: no marker is drawn while the CE NO PLOT layer is set to plot). Offered: the tool puts its own layer back to no-plot and says so (recommended, differs from the draft); draw no markers while it is set to plot (the draft). He picked: "Put the layer back to no-plot, and say so (Recommended, differs from the draft)". The tool sets its OWN layer back to not plotting the next time it draws a marker and says so once on the command line; the markers keep working and still never print. The draft is NOT taken. (It touches only the tool's own layer; D-260 DQ-005, "an existing layer is never changed", stands for every other layer.)
+
+**TR-164** (unknown U-147, the draft D-401: the command line also says it once). He picked: "Marker and one line on the command line (Recommended)". Confirms the draft.
+
+**TR-165** (unknown U-148, the draft D-401: an erased marker returns at the tool's next check of the part, never on opening). He picked: "Yes: back at the next check of that part (Recommended)". Confirms the draft.
+
+**TR-166** (unknown U-151, the draft D-402a: Stage 1 grips are AutoCAD's ordinary squares with hover words; shaped grips are tried later and shown to him). Offered: yes, plain squares now, shapes after (recommended); no, shaped grips before he drafts. He picked: "No: I want shaped grips before I draft". Not the recommended answer; it OVERTURNS the draft. Grips whose shape shows what they do (TR-139) are part of Stage 1, before he drafts with it. He was told in the question that an earlier trial of a custom grip crashed AutoCAD, so this now needs the grip proof in a test AutoCAD early (EDITING_AND_GRIPS open 2 and 9; R-006, R-011).
