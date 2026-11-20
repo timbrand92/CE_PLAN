@@ -4,28 +4,31 @@
 
 **Words used here.** "Checked on the bench" only. Whether a thing works in AutoCAD is the AutoCAD test room's word, from pictures.
 
-**Opened:** Fri 20 Nov 2026, 11:06 am. Main line of `C:\CE_CIVIL` at that time: 374991c.
+**Opened:** Fri 20 Nov 2026, 11:06 am. Main line of `C:\CE_CIVIL` at 11:10 am: 22993fa.
 
 ## 1. Being checked now
 
-Nothing. No check has been handed over yet.
+1. **team/pipe-default at 741f0f2** (Stage 1 item A5: a pipe opens at the size of what it joins, else 100 dia.; never "Not known"; D-263). Handed over by the build room at 11:07 am as a re-check after its own HOLD (`C:\CE_WORK\scratch\team\check_a5_REPORT_1.md`, one blocker) and fix round 1. The branch is 5 commits behind main, so the suite is also run on the merged result.
+   - **Honest check:** Team helper (opus), worktree `C:\CE_WORK\check\pipe-default_honest`, started 11:10 am.
+   - **Adversarial pass:** Codex gpt-6.2-astra (xhigh), worktree `C:\CE_WORK\check\pipe-default_adv`, started 11:10 am.
+   - **Fix rounds used:** 1 of 2.
 
 ## 2. Waiting (not yet handed to the check room)
 
-Seen by the check room's own look at the branches at 11:05 am. None is started until the build room hands it over with its claim and its acceptance list, and says no check of its own is still running on it.
+The build room's word at 11:07 am: each is mid-fix after its own check and comes over one line each when ready. None is started before that.
 
-1. **team/acad-windows** at 7d3cb97 (moved 10:39 am; 1 commit ahead of main, 2 behind). Claim and acceptance list: not yet given.
-2. **team/office-blocks** at 2487bcf (moved 10:47 am; 2 ahead, 2 behind). Claim and acceptance list: not yet given.
-3. **team/pipe-default** at 741f0f2 (moved 11:02 am; 2 ahead, 2 behind). Claim and acceptance list: not yet given.
-4. **codex/doorway** at 725338f (moved 9:40 am; 4 ahead, 3 behind). Tests only. Acceptance list: not yet given.
-5. **codex/c11-tests** at 11c6041 (moved 11:02 am; 6 ahead, 2 behind). Acceptance list: not yet given.
-6. **Mock-up `zero\pictures\pipe_top_preview_mockup.html`** (saved 10:36 am). To be checked against all 31 screen rules and the approved style, from a picture the check room takes itself.
+1. **team/acad-windows** at 7d3cb97 (Stage 1 items A1 to A3). Build room's own check: HOLD, 1 blocker; fix round running.
+2. **team/acad-pictures** at 8e16800 (the picture tool for tonight). Build room's own check: HOLD, 5 blockers; fix round running.
+3. **codex/doorway** at 725338f (tests only). Codex review: HOLD on the list; a tests-only fix running.
+4. **codex/c11-tests** at 11c6041. The tests job is still running.
+5. **Mock-up `zero\pictures\pipe_top_preview_mockup.html`.** Build room's own check: FAIL narrowly; fix 4 running. To be checked against all 31 screen rules and the approved style, from a picture the check room takes itself.
+6. **codex/tests-a7** at 90bbea2 and **codex/tests-a6b** (not yet made; rewritten to D-354 to D-359): tests-only; each comes when its report lands. codex/tests-a6 used the old brief and is ignored.
 
-## 3. Questions open with the build room
+## 3. Not for the check room (merged before it opened, on the build room's own check)
 
-1. **What is waiting,** with commit, claim and acceptance list for each, and which checks it is still running itself (asked 11:06 am).
-2. **team/night-safety2 (f24fc2d) reached main at 10:57 am** as 374991c. Which independent check passed it, and where is its report? Not known to the check room.
-3. **Other branches that moved this morning** and are not on the list above: codex/tests-a6 (10:44 am), codex/tests-a7 (10:56 am), team/acad-pictures (10:37 am), design/sums-pipe-and-print (10:37 am). Are any of these for the check room?
+1. **team/night-safety2** (f24fc2d), merged 10:57 am. Build room's Team opus check said MERGE: `C:\CE_WORK\scratch\team\check_ns2_REPORT.md` (seen by the check room: the file exists and says MERGE, no blockers).
+2. **team/office-blocks** (2487bcf), merged 11:07 am. Build room's Team opus check said MERGE: `C:\CE_WORK\scratch\team\check_a4_REPORT.md` (seen: exists, says MERGE; it names a missing blocks file as an install blocker).
+3. **Noted for the control room:** each of these two had one independent check. Whether an adversarial pass was also run on them is not known to the check room; D-346 asks for both.
 
 ## 4. Verdicts given
 
@@ -33,4 +36,5 @@ None yet.
 
 ## 5. Look log (the check room's own look at the branches, every 20 minutes)
 
-1. **11:05 am:** first look. Six candidates listed in section 2; one merge to main found (section 3, item 2).
+1. **11:05 am:** first look. Six candidates listed; one merge to main found (night-safety2).
+2. **11:10 am:** build room answered. One hand-over (team/pipe-default); main moved to 22993fa (office-blocks merged).
