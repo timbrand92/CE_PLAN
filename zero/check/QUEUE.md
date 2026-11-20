@@ -13,16 +13,21 @@
 
 ## 1. Being checked now
 
-1. **team/office-blocks (A4), on main at 22993fa: adversarial pass only.** Codex gpt-6.2-astra, started 1:05 pm. The five cases the control room named, and D-381 item 1 (nothing existing is changed).
+Four hand-overs came from the build room at 1:05 pm; each is ahead of main 22993fa and 0 behind.
+
+1. **team/night-launch at a092bf7** (the night-script safety fix: D-364 items 1 to 9 and the seven blockers). Both halves started 1:12 pm: Team opus honest check (`C:\CE_WORK\check\night-launch_honest`; may run only pretend-process tests, after proving they write nowhere real) and Codex astra adversarial pass by reading (`...\night-launch_adv`). No AutoCAD run until MERGE on both halves and the AutoCAD test room says go (D-364 item 10).
+2. **team/acad-windows at b645b43** (A1 to A3, last fix round). Both halves started 1:14 pm: Team opus honest re-check with its own pictures (`...\acad-windows2_honest`) and Codex astra adversarial re-pass (`...\acad-windows2_adv`). Against `VERDICTS\team-acad-windows.md`.
+3. **team/office-blocks (A4), on main at 22993fa: adversarial pass only.** Codex astra, started 1:05 pm.
 
 ## 2. Waiting
 
-In the control room's order:
-1. **The launcher fix, team/night-launch** (534f96a at 11:55 am, still in work): not handed over. No AutoCAD run until the check room gives MERGE on both halves and the AutoCAD test room says go (D-364 item 10). Checked against D-364 items 1 to 9 line by line.
-2. **team/acad-windows, last fix round:** in work at the build room.
-3. **team/held-depth** (a typed depth lost on OK and reopen): in work at the build room.
-4. **team/office-blocks (A4), already on main: adversarial pass only** (control room, 11:50 am by its clock): a block of the same name already in the drawing; a locked layer; an xref; the shipped file missing or damaged; other units. Not started.
-5. **Still with the build room:** team/acad-pictures (4384464), codex/doorway (87c6440, tests only), codex/tests-a7, codex/tests-a6b.
+Handed over, to start as helpers come free (no more than five at once, so the PC stays usable for Tim):
+1. **team/held-depth at 6c9bc07** (a typed depth lost on OK and reopen; one line of data and four tests). Both halves.
+2. **team/acad-pictures2 at b876264** (the picture route for the night run, the 8 conditions of PICTURE_ROUTE.md). Both halves; the AutoCAD test room is to be told the outcome. No picture run until both rooms say go.
+3. **design\PIPE_SIZE.md, corrected page:** one more read when the designer has corrected it against D-373 to D-384.
+
+Not handed over yet:
+4. **team/a6-draw-first** (a second build round before its first check), **codex/doorway**, **codex/tests-a7b**, **codex/tests-a6b**, **codex/tests-five**; the C11 build on **codex/c11-tests** (the list is held: `VERDICTS\codex-c11-tests.md`).
 
 **Standing order from the control room:** nothing reaches main on one check alone; both halves of D-346 every time. If the build room merges on one, the check room tells the control room at once.
 
@@ -62,3 +67,4 @@ ight-scripts.md`. Ruled by the control room as D-364 items 1 to 10: the fix (tea
 9. **12:08 pm:** three verdicts written (C11 list, pipe-default held page, Pipe mock-up). Six verdicts given today, none MERGE.
 10. **12:15 to 1:02 pm:** no turns taken, by the control room's order (the Claude weekly allowance was at 97 per cent until its reset at 1:00 pm). Looks at 12:15, 12:35 and 12:55 pm skipped.
 11. **1:05 pm:** back from the pause. Main unchanged at 22993fa. The answer on the design page given (fix the page first). The adversarial pass on team/office-blocks (A4, on main) started: Codex gpt-6.2-astra, worktree `C:\CE_WORK\check\office-blocks_adv`. Moved while paused, none handed over yet: team/night-launch a092bf7 (the launcher fix), team/acad-windows b645b43, team/held-depth 6c9bc07, team/a6-draw-first 5ebb23b, codex/c11-tests 75e8645 (the build carries on; the list check stays pinned at 11c6041), codex/tests-a6b d706c0c, codex/tests-a7b ed09bcb, codex/tests-five b23d46f, team/acad-pictures2 b876264.
+12. **1:14 pm:** four hand-overs taken; night-launch and acad-windows started (four helpers), office-blocks running (one). held-depth and acad-pictures2 wait for a free helper.
