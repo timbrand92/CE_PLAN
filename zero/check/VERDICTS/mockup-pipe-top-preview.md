@@ -63,3 +63,32 @@ Unchanged from the first check: "Work uphill" swaps nothing; step 2 has no pictu
 3. **"Cover needed" comes from what is over the pipe,** which opens "Not known": grey "Cannot check yet" until he sets it.
 4. **A new pipe's opening size sits in the dashed field as worked out,** solid once typed.
 5. **One wording, "not joined yet";** the strip and any small picture show the same label text, the label as it will be drawn.
+
+---
+
+# Third check: version 2, after fix 6 (Fri 20 Nov 2026, about 2:22 pm)
+
+**Verdict: FAIL, narrowly: three one-line faults; none is a figure.** From ten pictures the check room took itself at 2:13 pm (five states at each set size: `C:\CE_WORK\check\reports\pipe-mockup_pics\fix6\`), re-checked by a Team helper (Claude Opus 5.5) who measured the page: `C:\CE_WORK\check\reports\pipe-mockup3_REPORT.md`. This is the mock-up's third fail; the control room is told.
+
+## What now holds, at both set sizes (1000 by 620 and 1240 by 780) and in all five states
+
+1. **The four reasons of the last fail are fixed,** bar one place (below): a ground level not known is grey, "Cannot check yet", in the band, step 2, step 3, the bar and the drawing tag; the label reads "150 DIA. UPVC SN8 PIPE AT 1 IN 100 MIN."; the label is centred on the pipe (measured) and the Fall tag's leader clears it; the tolerance's source is "office default".
+2. **Every figure adds up** in all five states, and the band, step 3, the bar and the drawing tags agree. A shortfall is measured from the figure needed: 300 less 250, "50 mm short at P4", "Wrong".
+3. **The two new states are honest:** with what is over the pipe not set, cover needed and spare read "Not known" and the check is grey "Cannot check yet", with no figure from a guess; a new pipe's size shows dashed as worked out.
+4. **It fits:** nothing scrolls, Cancel and OK always show; the drawing across the top is 31 and 32 per cent of the height (D-389 item 4).
+
+## Reasons it fails
+
+1. **The "New pipe" state drops the line "Office defaults: no job set yet"** (D-381 item 2: each window says so in one grey line). It is replaced there by "Size not typed yet: shown dashed". Keep the line in every state.
+2. **The words "Over the pipe:" inside its box are under 4.5 to 1** (3.79 to 1: grey on the input fill), against the approved style 3.2. In four of the five states, at both sizes.
+3. **The "Over the pipe" box has lost its drop-down arrow:** the words fill the box and the arrow is squeezed to 1 px, so it reads as a fixed figure, not a choice he may set. One fix cures 2 and 3: put "Over the pipe" above the box as its field name, like Diameter and Kind, with only the choice inside.
+
+## To fix at the same time (do not fail it alone)
+
+The page's own note gives the drawing's height wrongly ("200 of 620 and 256 of 780"; it is 192 and 250): correct it before Tim reads it. At the laptop size with long pit names and two things not known, step 2's units run out of its card and vanish: step 2 needs to wrap or shorten. At the desktop size step 3 has 3 px to spare: one more line anywhere would be cut.
+
+## For the control room (the builder's two calls, and what the Pit window has that this lacks)
+
+1. **"Over the pipe" as a choice in step 1:** D-383 item 7 says it is not asked pipe by pipe but he may set it; a quiet choice that opens "Not known" fits that. Confirm.
+2. **The grey band is not on the approved style page yet** (D-389 item 3 rules it exists; Tim is to be shown it on this mock-up).
+3. **The Pit window Tim approved (D-386) has Inspect at bottom left; this window has none.** The rest of the report's section 7.
