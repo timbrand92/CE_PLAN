@@ -39,3 +39,42 @@ The honest report's section 6 (14 items) and `FOLLOW_UP\night-scripts.md`. The s
 1. **HOLD agreed.**
 2. **The screen copy is dropped.** A missing picture is simply NOT RUN; pictures come only from the plug-in's own window render and AutoCAD's own view picture. The AutoCAD test room strikes the screen copy from condition 8 of `acad_test\PICTURE_ROUTE.md`.
 3. **No test in this branch may show a real window or take focus;** nobody runs its tests until that is so (D-388 item 2).
+
+
+---
+
+# Second verdict: team/acad-pictures2 at 8804441 (the picture route, round 2)
+
+**Verdict: HOLD. Besides the night launcher's seven blockers, which this branch carries (the launcher at 957383a is merged into it), the picture route's OWN part has nine blockers by reading.** Written Fri 20 Nov 2026, about 7:15 pm. Checked BY READING ONLY (D-388, D-420): nothing of this branch was run by the check room or its readers. Both worked from a plain-text copy (every file renamed with `.txt` added): a Team helper with no shell (Claude Opus 5.5): `C:\CE_WORK\check\reports\pic2_honest_REPORT.md`; a Codex reader (gpt-6.2-astra): `C:\CE_WORK\check\reports\pic2_adv_REPORT.md`. The real stop flag was looked at before and after: 114 bytes, 19 Nov 9:02 pm, unchanged. Line numbers below are in the `.txt` copies.
+
+Under D-420 no reading can open the gate: AutoCAD testing stays stopped until the guard-removal proof is made away from Tim's PC. This verdict says what is left to fix by building and reading.
+
+## A. What is sound now
+
+The screen copy and the copy by window handle are gone: code, dead code and tests. Every place the runner reads or writes is fixed in a real run; each run has its own folder. The runner reads the stop flag, Tim's switch, the hours and the deadline before every step, before every send and every half second; the hours have one owner and no 2 to 3 pm window. The switch on and off are confirmed from the run's own log. The night build has its own name and is left out of the released plug-in. The C# tests never show a window. The step file and the runner's log refuse a link.
+
+## B. Blockers in the picture route's own part
+
+1. **A picture can hold real content.** The checks identify the FILE (the test copy by its full path), not what is visible in it. If the test copy shows an external reference, a nested reference, a layout viewport or an attached image, or holds unsaved content, the route centres the view, takes AutoCAD's own view picture and saves it; a centring fault is logged and the picture is taken anyway (`NightSwitch.cs:38-49`; `NightRoute.cs:200-232, 237-251`; `ce_safety.ps1:489-497, 1053-1075`). A fingerprint of the master at launch proves nothing about what it references. What the office master copy really holds is NOT PROVEN BY READING. Hard limit: nothing of a real drawing is ever copied into a file. Require a made-up drawing that is checked to stand alone (no references, no images), and a checked view, before any picture is written.
+2. **A Pit or Pipe window is let through by its title alone.** `ce_safety.ps1:431` passes a window by its marker OR by its class and title (`:30-43, 187-191`): no marker, no step in hand. A window left open after a timed-out step passes the end-of-step and the close checks, and the runner goes on typing. Even the marker arm accepts a step with no run number, writer or deadline. The tests miss it: every pretend CE window has an empty class (`test_pics.ps1:37`), and a launcher test expects the opposite answer (`test_launch_guards.ps1:299-305`). In a picture run only a live, matching run, step and owned window counts.
+3. **Writes that are not safe from links** (D-420 item 5; D-388 item 1). The window marker is written by a fixed name with no link check (`WindowMarker.cs:25-37`); the C# path check compares spelling and never looks at links in the folder chain (`TestFolder.cs:17-31, 46-50`); picture bytes go through a fixed partial name before the image is checked (`Pictures.cs:22-41, 95-99`; `NightRoute.cs:224-231`); the scripts' link helper answers "clear" for a missing entry and looks only at the last name (`ce_safety.ps1:323-332, 341-387, 516-529`); the note writer checks nothing (`:462-468`).
+4. **The new C# test wrapper writes over any file its caller names, and reports PASSED whatever happened** (`run_night_cs_tests.ps1:7-23`): the launcher's blockers 2 and 3 again, in a file this branch adds. Its own scan also contradicts one of its tests (`NoRealDesktopTests.cs:14-17, 85-96`).
+5. **A picture test whose sandbox fails to load reaches the real world** (`test_pics.ps1:12-20`): the launcher's blocker 1 again. In real mode the marker tests list the real desktop's windows, and the runner tests start the real runner, which can clear the real step file and write to the real runner log. D-420 item 4: such a test must STOP.
+6. **Copies with guards removed can be run from the temporary folder** (`test_guard_mutations.ps1:45-49, 60-75`), and no picture script refuses to run from there (D-420 item 5).
+7. **Who may send.** The sending helper accepts a parent whose command line merely CONTAINS the runner's name (`ce_pics_send.ps1:14-36`), and a test expects a different program of that name to be allowed (`test_pics.ps1:501-529`); the inner send does not compare the AutoCAD it reaches with the recorded one. The picture sender also skips the busy-desk check the ordinary sender makes (`ce_cmd.ps1:25-35` against `ce_pics_run.ps1:62-75, 104-124`), and the real plug-in window calls Show and Activate when a recipe changes a field (`WindowHost.cs:65-67, 110-144`): it can ask for the front. Whether Windows grants that is NOT PROVEN BY READING.
+8. **A stop does not reach work already inside AutoCAD, and nothing closes the test AutoCAD.** After the runner halts, the plug-in's own driver keeps its recipe and deadline and can still fill, take pictures and press OK (`WindowDriver.cs:151-163, 195-251`; `NightGuard.cs:40-75`); a "Fatal Error" box is only an unknown window. No part of this route makes the one normal close of D-364 item 4, and the night wrapper never calls the picture runner: a flag raised at 7:55 am leaves a test AutoCAD running into Tim's morning with only a note (`ce_pics_run.ps1:49-54, 91-96, 147-211`).
+9. **One run can remove another run's hand-over.** There is one shared step file; clearing it never checks whose it is (`ce_safety.ps1:335-362`; `ce_pics_run.ps1:145-182`); the marker is deleted on finish even by a driver that never wrote it (`WindowMarker.cs:25-37`).
+
+## C. The proof that is owed
+
+None of the 21 picture guards has been run with the guard removed, and D-420 item 2 keeps that proof off Tim's PC. By reading, three would not be proven even then: `send_parent` and `step_file_confined` would survive removal, and `marker_strict` is caught only because removing it breaks the good case. The link refusals, the sender's own allowed-text check and the test-copy-by-title check have no tag and no test.
+
+## D. The launcher's seven in this branch
+
+Blockers 1 to 3 (the fail-open sandbox; a log written over any file; PASSED on failure) have SPREAD into new files here; 4 to 6 are unchanged; 7 (unproven guards) has grown by 21.
+
+## E. For the control room
+
+1. **A made-up test drawing for pictures.** The route photographs whatever the test copy shows, and the test copy today is a copy of the office master. Should the picture route be allowed to run ONLY on a drawing made by the tool itself for the night (pits and pipes drawn by the tests, no references), never on a copy of an office drawing?
+2. **Who closes the test AutoCAD after a picture run or a stop:** the picture runner itself, through the one safe-close owner, inside the run?
+3. **What AutoCAD's own view picture shows when a window sits over the drawing,** and whether the plug-in's window timers run while its window is open: both NOT PROVEN BY READING; for the AutoCAD test room's first night, after the gate.
