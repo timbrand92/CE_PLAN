@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-095.
+**Next number:** TR-099.
 
 ---
 
@@ -243,3 +243,13 @@
 **TR-093** (N-015; Cancel on one pit's window). He picked: "That pit is dropped; click again (Recommended)". Nothing is drawn for that click; he is back at the click prompt, still in PT; the number is not used up.
 
 **TR-094** (unknown U-051; Escape with the window half filled). He picked: "Same as Cancel; nothing offered back (Recommended)". CONFIRMS the draft call D-288 DQ-097. Closes U-051.
+
+## Batch 24, Fri 20 Nov 2026, 13:38 (clock read), through the question window, one line per question. Sources: `stage6/SPEC_PIT.md` section 10 items 19, 20, 21, 22.
+
+**TR-095** (N-019; picking Plastic in the Pit window). He picked: "Size jumps to 350 x 350 (Recommended)". Choosing Plastic sets 350 x 350 and greys the other sizes; changing Kind back puts 450 x 450 back.
+
+**TR-096** (N-020; how a pit size is given). Offered: pick from the list only (recommended); pick from the list, or type it. He picked: "Pick from the list, or type it". Not the recommended answer. One list (the five usual sizes at the top, the other pairs below) AND he may type "600x900" into the box; a size the block cannot draw is refused in words (D-272).
+
+**TR-097** (N-021; which way round a 600 x 900 pit sits). Offered: first figure across the sheet (recommended); long side along the nearest pipe or wall. He picked neither and wrote: "YOU SHOULD BE ABKLE TO EASILY FLIP WHEN YOU SEE PREVIEW IN WINDOW". Room's reading (mine): what matters to him is a one-click FLIP in the window (swap the two sides, a quarter turn), judged by eye from the live plan panel. Which way it lands first was not said; the room takes "first figure across the sheet" as the starting way until he says otherwise. A Flip control beside Size (or as part of Turn) is NEW on the Pit window he approved in TR-081.
+
+**TR-098** (N-022; what the Lid box opens with now that "what is over it" opens Not known). He picked: "What I used last (Recommended)". If he does set "what is over it", its preset fills the lid, still his to change (D-287).
