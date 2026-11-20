@@ -28,3 +28,9 @@ TR-108 to TR-111 = D-393. TR-114, TR-115 = D-395. TR-117 = D-396. TR-116 = D-397
 2. How a building wall inside the architect's xref, and the green impervious-area line, can count as in the way (U-132).
 3. A picture of the cover level text "lined up from the pit outwards" on the two left corners (TR-140).
 4. Where template and master hold the same block and differ: put each difference to him once the build room's list `reference\CURRENT_PLUGIN_BLOCKS.md` exists.
+
+## E. Added 3:45 pm: units (D-403), draft calls to confirm one by one
+1. A metre, inch or feet drawing is refused before the first click (not on OK).
+2. Every other unit (centimetres and the rest) is refused the same way, naming the unit.
+3. The units change while a Pit or Pipe window is open: OK closes the window, leaves the drawing alone and says why.
+4. A command with no window in an unset drawing says "treated as millimetres" once per command.
