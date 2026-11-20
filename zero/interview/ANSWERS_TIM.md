@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-139.
+**Next number:** TR-143.
 
 ---
 
@@ -357,3 +357,13 @@
 **TR-137** (N-089; a plastic pit stretched bigger by its grip). He picked: "It becomes a junction pit, said once (Recommended)". The kind changes to Junction, the "PP" text changes to a number and cover level, the command line says so once; one Undo puts it back.
 
 **TR-138** (N-092; MIRROR with "erase source: Yes"). He picked: "They keep P1 to P4 (Recommended)". The same pits flipped in place keep their numbers, levels and joins; their text is re-placed to read properly (TR-056).
+
+## Batch 34, Fri 20 Nov 2026, 15:33 (clock read), through the question window, one line per question; four pictures sent first (`pictures/grips_and_levels_window_1.png`, `_2.png`, `_3.png`, `pictures/bends_and_sleeve_3.png`; drawn by Team helpers, checked by a separate Team checker, three failed and were fixed; the fixes had the room's look only, and he was told so)
+
+**TR-139** (unknown U-057; the grips on a pipe: each pipe end, each bend, the middle of a straight length to pull out a new bend, the label with a flip grip, each invert level with a flip grip, the flow arrow with a flip grip). He wrote: "those six but we also need ability to move inverts or label perpendicular away or closer to the pipe, ideally the grips show what they do in a way". Room's reading (mine): the six stand; ADD (1) the label and each invert level can be dragged at right angles to the pipe, nearer or further (D-037 already said perpendicular or parallel); (2) he would like each grip's shape to show what it does (an arrow along the pipe for slide, an arrow across for nearer or further, a flip mark), not six identical squares. Whether AutoCAD 2027 can show other grip shapes on these objects is not proven (R-006, R-011; a trial custom grip crashed AutoCAD): a test, not his to answer.
+
+**TR-140** (unknown U-057; the grips on a pit: centre to move, four wall midpoints to step the size, the number stepping between above, below and beside, the cover level stepping round the four corners). He wrote: "yes but we need ability to move freely if possible, also the cover level text always needs to be aligned from pit outwards if that makes sense and then ability to move label and cover level flip sides and location within the preset locations as well". Room's reading (mine): the four stand; ADD (1) the number and the cover level can also be dragged FREELY to any spot, as well as (2) stepped or flipped between their preset spots; (3) NEW rule for the cover level text: it is always lined up from the pit outwards, read as: the text begins at the end nearest the pit and runs away from the pit along the corner's 45 degree line, on every corner (so on the two left corners it does not run back toward the pit). How that sits with "reads from the bottom or right of the sheet" on the left corners needs a picture. "If possible" on free movement is noted: it depends on the same grip test.
+
+**TR-141** (unknowns U-113, U-053, N-012; the small window when a move changes a pipe's length: two cards, "Keep the levels" picked first, "Keep the grade" with its amber strip for what it does further along). He picked: "Yes, as drawn (Recommended)". It opens after any move, stretch or resize that changes a pipe's length, and after a pit is dropped on a pipe (TR-101); Cancel puts the pit back; one Undo. The control room's question stands for the builders: how this works as one Undo after AutoCAD's own MOVE (R-41, D-348).
+
+**TR-142** (unknowns U-112, U-111; the sleeved length under a slab). He picked: "A. Two clicks on the pipe (Recommended)". He ticks Sleeved, then clicks on the pipe where the sleeve starts and stops; that length is drawn with a second pair of thin lines just outside the pipe and its label says "SLEEVED INSIDE A 150 DIA. UPVC PIPE"; the rest of the pipe keeps the ordinary label. (Research: `reference/research/R-016_SLEEVED_PIPE.md`.)
