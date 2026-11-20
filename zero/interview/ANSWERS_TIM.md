@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-078.
+**Next number:** TR-082.
 
 ---
 
@@ -199,3 +199,13 @@
 **TR-076** (unknown U-121; a size he typed, on a copied pipe). He picked: "Held on the copy too (Recommended)". Closes U-121.
 
 **TR-077** (unknown U-122; whether pipe size ever carries from the last pipe drawn; example, one 375 across the front, then a fresh pipe from a back downpipe). He picked: "100: size never carries (Recommended)". Size comes only from what the new pipe joins, else the office default; material, kind and the rest open as last used (D-263). Closes U-122.
+
+## Batch 20, Fri 20 Nov 2026, 13:17 (clock read), through the question window, with two pictures sent first (`pictures/pit_window_live_laptop.png`, `pictures/pit_window_live_desktop.png`, page `pictures/pit_window_live_preview.html`; drawn by a helper to a written brief, checked by a separate helper against the 31 screen rules and the approved style: every ruling met, polish faults found, the ones that mattered fixed before he saw them; open polish is listed below)
+
+**TR-078** (unknown U-013; the left panel "The plan": a live view of the real drawing around the new pit, about 40 per cent of the window). He picked: "Yes, that is it (Recommended)". Closes U-013. This is the picture of TR-032 and TR-068.
+
+**TR-079** (unknowns U-011, U-096; the window size rule; picture 1 laptop 1000 x 620 in a 1280 x 720 AutoCAD window, picture 2 desktop 1240 x 780 in 1920 x 1040 with the 80 per cent outline drawn for comparison). He picked: "Two set sizes, as drawn (Recommended)". A laptop size and a slightly bigger desktop size, picked by the tool from the size of the AutoCAD window; everything fits with no scrolling on a 1366 x 768 laptop; he can drag it bigger and it remembers. D-065's "80%" is not taken. Closes U-011 and U-096.
+
+**TR-080** (unknown U-110; the Inspect button). He picked: "Keep it, as drawn (Recommended)". Inspect hides the window so he can zoom and pan the whole real drawing, then Enter or Esc brings the window back with everything he typed still there (D-065). Zooming the plan panel itself was offered and not taken. Closes U-110.
+
+**TR-081** (unknown U-012; what is on the Stage 1 Pit window: step 1 Size, Kind, Lid, Number, Cover level, the two ticks, Turn; step 2 pipes in, pipes out, outlet invert; step 3 the depth sum and the five sizes to scale). He picked: "Nothing: it is right as drawn". Closes U-012. Room's note (mine): this approves the CONTENTS as drawn. The checker's open polish, not shown to him as questions and for the build to get right, not copy: gaps off the 8/16/24/32 scale in the mock-up's own page; step 3 has no verdict word and its answer figure is 14 not 24; step 2 figures carry no source word; the words "Made-up plan for this picture" are mock-up wording and must not ship.
