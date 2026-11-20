@@ -113,3 +113,11 @@ Short-pipe words now end "MIN."; whole invert texts read by owner and end, "APPR
 ## 15. Follow-ups
 
 In the two reports and `FOLLOW_UP\part2-pit-and-pipe.md`: the one-sample targets the cheat beat (vary length, size and pit numbers for "MIN.", the later kinds, the new-pipe arrow tick, the stacked label); the sleeve, ByLayer and Z 0 for every object and the pit block's own settings belong to other lists; D-385's hover words; mirror, a moved pipe, a pit dropped mid-pipe, the callout by a grip; the on-screen `ListControlsTests` flake; `TESTS_REPORT.md` links to a folder not in the commit.
+
+## 16. Ruled since (control room, about 5:13 pm, D-416)
+
+1. **The round count restarts.** A reason that exists only because of a ruling filed after the round began does not count toward the two rounds. The baseline from now is the decisions record at D-416 (Tim is away until Monday; the rulings hold still). This list carries forward only its own faults: reasons 8, 9 and 10 of section 12.
+2. **DRAFT: a level worked out from an APPROX. level prints "APPROX." too.** The standing note, DRAFT words: "LEVELS MARKED APPROX. ARE ASSUMED AND ARE TO BE CONFIRMED ON SITE BEFORE CONSTRUCTION." Test that the note exists and that APPROX. carries; mark the exact words DRAFT.
+3. **The pit's outer dashed line is read from PIT BLOCK 3 itself at each size** when the 18 copies are opened; the 100 mm is DRAFT until then; mark the tests that lean on it DRAFT.
+4. **DRAFT: two legs exactly equal: the label goes on the UPSTREAM leg.**
+5. **The 12 run files:** the build room strips them before the next hand-over; the check room does not check a tip that holds them.
