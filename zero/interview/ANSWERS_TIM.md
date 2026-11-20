@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-183.
+**Next number:** TR-187.
 
 ---
 
@@ -467,3 +467,13 @@
 **TR-181** (follow-up to TR-178 against TR-065; whether a worked-out level is written at the join end of a branch). He picked: "No: nothing written at a join unless I tick it (Recommended)". At an end that meets a pipe with no pit, no invert level is written by default, on the branch or the main; the tool still knows and checks it; a tick on that end shows it. This narrows TR-065 (every known level written) to ends at pits and loose ends.
 
 **TR-182** (N-053; whether each figure in the window says where it came from). He picked: "Yes: a small grey word beside each (Recommended)". A figure he typed sits in a solid box with no word; anything else carries a small grey word: "worked out", "measured", "follows P4 to P3", "office default". (The Pit window's step 2, approved in TR-081, gains these words: the checker had noted them missing.)
+
+## Batch 45, Fri 20 Nov 2026, 16:51 (clock read), through the question window, one line per question. Sources: `stage6/SPEC_PIPE.md` section 12 items 59, 60, 61, 78. Closed without asking, as already answered: N-070 (a worked-out grade prints to the whole number, TR-152), N-072 and N-073 (which side is above, text never upside down, TR-150 and TR-056), N-074 (what counts as in the way for pipe text, TR-133 and TR-144 to TR-146), N-075 (the 200 mm is from the pit's outer dashed line, TR-148).
+
+**TR-183** (N-067; what the pipe label is made of). He picked: "Yes: masked text the tool writes (Recommended)". One piece of ordinary masked text on the office text layer, turned with the pipe; he can retype it like any text and his words are kept and flagged (D-182). Confirms the planning chat's call D-290.
+
+**TR-184** (N-068; the ordinary label's words). He picked: "Yes, exactly that pattern (Recommended)": [size] DIA. [material] PIPE AT 1 IN [grade], then MIN. where it applies; capitals; "DIA." and "MIN." with full stops; the material as the office list has it; the wording a line in the office list.
+
+**TR-185** (N-069; what the label prints when the grade is not known, or fails a check). Offered: "AT TBC" when not known and the typed grade when wrong (recommended); leave the grade off when not known. He picked: "Leave the grade off when not known". Not the recommended answer. With no grade yet the label reads "100 DIA. UPVC PIPE" with nothing after it. **This OVERTURNS the planning chat's call D-271 DQ-050** ("while a pipe's grade is not known the label prints TBC in its place") and goes back to what the build first did. A grade he typed that fails a check was in both options as printed as typed; read as standing (the amber marker and the window show it fails).
+
+**TR-186** (N-077; a flow direction he reversed by hand, when the tool's own working later disagrees). He picked: "Yours stays; the tool only offers 'Turn round' (Recommended)". A direction set by hand is held like a typed figure; the tool never turns it back; it shows the amber marker with a one-click "Turn round" offer, and red "Wrong: runs uphill" if typed levels prove it (TR-153). Confirms the room's reading under TR-020.
