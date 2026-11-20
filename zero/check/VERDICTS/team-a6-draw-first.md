@@ -102,3 +102,29 @@ Section 7 of the first verdict stands, with sections 8 of the honest report and 
 4. **A click always starts a pipe; P picks a polyline.** A picked polyline's width, layer and colour are ignored; the band is as wide as the pipe size.
 5. **A pipe's length MAY be typed** (the "length used" is the typed one if given, else the drawn one). Nothing in this branch may assume a length is only ever measured.
 6. **The window offers to bump smaller lengths before OK** (pipe size; not this branch's).
+
+
+---
+
+# Final verdict: team/a6-draw-first at 5d83df2 (its LAST fix round)
+
+**Verdict: HOLD, with the one-page open list below. This was A6's last round (D-346): the branch is HELD and the control room decides what happens next.** Written Sat 21 Nov 2026, about 1:31 am. Checked on the bench only. This tip does NOT contain the rounding branch (D-432), checked.
+
+**Who checked.** Honest: one Claude helper on Sonnet: `C:\CE_WORK\check\reports\a6l_honest_REPORT.md`: HOLD on one blocker. Adversarial: Codex gpt-6.2-astra: `C:\CE_WORK\check\reports\a6l_adv_REPORT.md`, proofs in `a6l_adv_proofs\`: HOLD on six. **Closed:** the plug-in compiles (both selection casts; the old CS0411 errors reproduced at 75290d9 and gone here); a cover-only edit refuses a locked pipe; one Undo on an open-ground run; off and frozen destination layers refused. The whole solution builds; the builder's suite is green apart from timing tests.
+
+## 8. The open list
+
+1. **A branch saves an invert level nobody asked for** (both halves): a branch started or ended on a pipe with no pit gets an invert worked out and written into its note (`up_invert=9.95`; and 9.901 for 9.8946 on another case, rounded to three places before it is stored: `bench/CeCivil.Bench.Core/PipeToolWindow.cs:63-64, 90-99`). D-410 item 4: no invert level is written by default there. The round's own tests B2a and B2b (`Stage1A6LastRoundTests.cs:46-65`) assert the opposite and change with the fix.
+2. **Converting a guide can lose drawing:** a guide started 60 mm to one side of a 150 mm main and drawn perpendicular through it is converted into a pipe that starts ON the main, 60 mm short, and the original guide is gone; reversed, the other end is lost (`PipeSplit.cs:167-168` accepts "somewhere on the path"). The guide is followed exactly or refused and kept (D-410).
+3. **A failed conversion can lose an existing label:** extend a labelled pipe from its loose end with the label turned off in the window; make the final guide erase fail: the guide survives, the pipe goes back to two vertices, and its original label is gone. All or nothing, one Undo (D-348).
+4. **Protected content changed:** erasing a branch whose main is locked (or in an xref, or outside the reference-edit set) removes a stored junction record from that main (D-348).
+5. **The length used cannot be typed:** the Length row has no input box and the page says it cannot be typed (`windows/pipe.csv:45, 51, 56`; `PipeToolWindow.cs:68`): D-410 item 1 lets a length be typed, and D-413 item 4 shows "typed 6.50 m, drawn 6.20 m".
+6. **Two pipes between the same pits are refused** ("already drawn"); a branch that leaves its main and comes back keeps one meeting for two ends; a pipe meeting a pit writes the wall join on the pipe alone (`PipeTool.cs:52`). D-398 item 2 (two pipes, each its own number; also binding probe 1 of the accepted pipe-size list).
+
+## 9. Also found (same family, for whoever owns the fix)
+
+A 450 mm pit at 450 mm offset over a 375 mm pipe still places (the pit-over-pipe test uses the wrong clearance for that size); the D-320 offer for a hidden destination layer is still outstanding.
+
+## 10. For the control room
+
+A6 is the drawing spine Pit and Pipe stand on. Items 1, 5 and 6 are rulings built the wrong way; 2, 3 and 4 lose or change drawing content. Recommended, as for held-depth and the night route: a short design page for the pipe run's edit route (guides, extension, branches, joins and the typed length) before a fresh build, with the round's tests carried over; A6's part B (the D-414 prompt and click budgets) is sound and can be kept.
