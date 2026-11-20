@@ -121,3 +121,49 @@ In the two reports and `FOLLOW_UP\part2-pit-and-pipe.md`: the one-sample targets
 3. **The pit's outer dashed line is read from PIT BLOCK 3 itself at each size** when the 18 copies are opened; the 100 mm is DRAFT until then; mark the tests that lean on it DRAFT.
 4. **DRAFT: two legs exactly equal: the label goes on the UPSTREAM leg.**
 5. **The 12 run files:** the build room strips them before the next hand-over; the check room does not check a tip that holds them.
+
+
+---
+
+# Third answer: codex/tests-a7-clean at de5d082
+
+**Answer: HOLD THE LIST. Eight reasons, all the list's own (none comes from a ruling filed after the D-416 baseline). This is round one of two from that baseline.** Written Fri 20 Nov 2026, about 7:25 pm. Checked on the bench only.
+
+**Who checked, and how they split.** Honest check: Team helper, Claude Opus 5.5: `C:\CE_WORK\check\reports\a7d_honest_REPORT.md`: ACCEPT, with ten small fixes. Adversarial pass: Codex gpt-6.2-astra: `C:\CE_WORK\check\reports\a7d_adv_REPORT.md`, proofs in `a7d_adv_proofs\`: HOLD. The check room read the test lines behind the adversarial pass's reasons 1, 6 and 7 itself and found each as described; a hold needs only one true reason, so the list is held. The honest check is right about everything it looked at: the ten reasons and seven same-round items of the second answer are closed for their named cases.
+
+## 17. Counts seen (the writer's counts are true)
+
+The whole solution builds, the AutoCAD plug-in project included, no warnings. Pretend drawing 868: 696 pass, 164 targets fail (79 marked DRAFT, 85 firm), 8 skipped with reasons (3 waiting on Tim's picture of the left corners, 4 owed in AutoCAD, 1 out of Stage 1). 8 more targets already pass. All 673 older cases pass. Only tests changed. The saved cheat turns 8 of the 164 green and breaks one. A few speed tests and one on-screen list test failed under the heavily loaded PC and pass alone; the branch touches none of that code.
+
+## 18. What the round closed
+
+The three carried faults: the 9 m bent pipe must print 1 in 75; a later pipe kind that is offered must refuse and draw nothing; a level worked from an APPROX. level keeps APPROX. (DRAFT D-416). Also: the arrow is the office block; a label with no clear spot goes on a pointer; a Mask tick per text; the 200 mm from the outer dashed line; the 1,000 mm slide on a straight pipe; 50CONT in the way; an unreadable old size kept with its marker; the whole-number grade on the sheet; Reverse; the later pipe through a label; a retyped invert sets the level; no run files in the tree.
+
+## 19. Reasons to hold
+
+1. **A right build cannot turn the arrow-off target green.** Switching the arrow off must leave no new linework at all (`Stage1A7FlowAndWordingTests.cs:69`; the stock-take at `:378-386` is the one taken before the pipe was drawn, and `:504` counts every line), yet the pipe's own two edge lines on DRAINAGE are required by `Stage1A7DrawingFinishSituations.cs:51`. Keep the two edges, by their own identity and position, and check only that the arrow is gone. The arrow reader at `:527` also lets ANY open zero-width DRAINAGE line through: a second arrow drawn from three lines passes.
+2. **A two-line label can lie across its own pipe and pass.** `Stage1A7PipeTextSituations.cs:35-43` measures the height of one line: top-centred 250 text at 375 from the centre line of a 100 pipe reads 75 clear while its second line reaches 125 past the centre line. Measure the whole text box, for the bent and the short stacked cases (D-361, D-367, D-400).
+3. **At a bend an invert can slide well past the 1,000 mm limit.** `PipeTextSituations.cs:78-86` accepts the first invert anywhere up to 3,500 along the next leg; the straight-pipe limit at `Stage1A7PlacementOrderTests.cs:315` is never asked of a bent pipe. Measure the travel through the bend; the first spot past the setting stays with its marker (D-405 item 5).
+4. **A Mask tick can work the wrong text.** `Stage1A7D406Tests.cs:303-324` accepts any one text changing: Label, upstream and downstream ticks wired to each other's text pass, saved and reopened; the same on the pit number and cover. Each named tick must change the mask on its own named text, the tag's attribute included (D-406 item 6).
+5. **After an edit, wrong levels can stay on the sheet.** Raising the top level by 0.25 is read on pipes one, two and five only (`Stage1A7D413Tests.cs:146-167`): pipe three left at IL 12.36 where it must read 12.61 passes. The whole-run reversal (`:192`) reads no written level. Read all ten texts and every hold on the SAME edited run after reopen. A typed length is never followed by a stretch (`Stage1A7D410Tests.cs:31-41`): a held 6.50 m replaced by the newly drawn 7.20 m prints 12.46 for 12.47 and passes.
+6. **The no-grade target is handed its own answer.** `D413Tests.cs:8-22` writes "100 DIA. UPVC PIPE" into the fixture and reads it back; it is one of the eight targets already green. Start from a saved pipe with a size and material and no grade, open it, press OK, and read its text after reopen (D-413 item 3).
+7. **An edit to one pipe can rewrite its neighbour's label and pass.** With two pipes between the same pits (`D413Tests.cs:201-222`) the first pipe's label is checked by its object, never its words, and neither running number is read. Pick each by its own pipe number through the normal edit route; compare both pipes' words, levels and links after reopen (D-397, D-398 item 2).
+8. **Draft answers are counted as firm.** The two worked-grade rows fail only because the WINDOW shows 95 where the test wants 94.6 (`D406Tests.cs:83-86`): the sheet's whole number is ruled (D-406 item 2), the window's figure is not (D-411 item 1 is a draft, for one case). Two left-corner rows measure 400 mm to an end that D-419 item 9 leaves open (`Stage1A7PitTextSituations.cs:89, 105, 182-199`). The three block sizes the tests assume (the 800 circle, the arrow's outline) are not marked DRAFT as the 100 mm wall is. Keep the ruled halves as targets; mark or park the rest, so that Tim overturning a draft changes only DRAFT rows.
+
+## 20. To fix in the same round
+
+1. **A changed setting is tried through a route the plug-in does not have** (`DrawingFinishSituations.cs:70-93` seeds the pretend drawing's system variables). Restate it against the settings store once that is on the main line; a waiting row until then.
+2. **The marker beside a blocked pit number or a hand-edited cover** is accepted at any size, anywhere near (`PlacementOrderTests.cs:292`; `PitTextSituations.cs:145`): hold it to the text's height and its ruled spot.
+3. **Older tests that now contradict the list are still live** (`PipeWindowFromDrawingTests.cs:212-225` no MIN.; `PipeToolTests.cs:99-102`; `PitToolTests.cs:86`; `FifthPassTests.cs:57-67`): named in the hand-over, as allowed; each must be retired or restated in the same commit as the build that turns its opposite green.
+4. **The eight targets that already pass** are named controls, or made to fail first.
+5. **Position checks to the 5 mm of D-341** (400.02 mm is refused at `PlacementOrderTests.cs:446`).
+6. **Mis-tagged rows:** the two typed-length rows carry DRAFT D-412 though they assert no marker; D-419 items 4 and 8 have no row.
+7. **One squashed commit;** the writer's dated report stays out of the main line's test tree; the root `TESTS_REPORT.md` still describes drawn arrow wings and one office mask switch.
+
+## 21. For the control room
+
+1. **A worked grade in the window:** with a fall of 0.20 m over 18.92 m, does the grade box show 94.6 (with 95 on the sheet) or 95 in both places?
+
+## 22. Follow-ups and owed
+
+Follow-ups: the sleeve's two clicks belong to the pipe window's list, the words stay here; a mirrored run, four exits each fully annotated, a rectangular pit at 90 degrees and far-from-origin cases have no row. Owed in AutoCAD (not a hold): Z 0; one Undo for each joint edit; the real block outlines and text widths; masks and ByLayer on real objects; plotting.
