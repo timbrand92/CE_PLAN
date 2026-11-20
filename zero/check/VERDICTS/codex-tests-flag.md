@@ -149,7 +149,7 @@ One warning on the command line is checked on a rebuilt output, not the channel 
 
 # Final answer: codex/tests-flag at 1b509f5 (its LAST round)
 
-**Answer: HOLD THE LIST, with a one-page open list of four items; the last round from the D-416 baseline (D-346): the control room decides. Recommended: one bounded edit, read back by the check room alone, as D-411 did for C11.** Written Fri 20 Nov 2026, about 11:30 pm. Checked on the bench only.
+**Answer: HOLD THE LIST, with a one-page open list of four items; the last round from the D-416 baseline (D-346): the control room decides. Recommended: one bounded edit, read back by the check room alone, as D-411 did for C11.** Written Fri 20 Nov 2026, about 11:25 pm. Checked on the bench only.
 
 **Who checked, and how they split.** Honest: one Claude helper on Sonnet: `C:\CE_WORK\check\reports\flagd_honest_REPORT.md`: ACCEPT (the saved faulty build now fails all 38). Adversarial: Codex gpt-6.2-astra: `C:\CE_WORK\check\reports\flagd_adv_REPORT.md`, proofs in `flagd_adv_proofs\`: HOLD; five new probes, one of which passed all 19 targets while changing a plotted note. Of the seven reasons of the third answer: the report file CLOSED, six PARTLY.
 

@@ -188,7 +188,7 @@ Proofs: `C:\CE_WORK\check\reports\a7d_adv_proofs\reader-counterexamples.txt`, `o
 
 # Final answer: codex/tests-a7-clean at 16b0b2e (its LAST round)
 
-**Answer: HOLD THE LIST, with a one-page open list of three items; the last round from the D-416 baseline (D-346): the control room decides. Recommended: one bounded edit, read back by the check room alone, as D-411 did for C11.** Written Fri 20 Nov 2026, about 11:30 pm. Checked on the bench only.
+**Answer: HOLD THE LIST, with a one-page open list of three items; the last round from the D-416 baseline (D-346): the control room decides. Recommended: one bounded edit, read back by the check room alone, as D-411 did for C11.** Written Fri 20 Nov 2026, about 11:25 pm. Checked on the bench only.
 
 **Who checked, and how they split.** Honest: one Claude helper on Sonnet: `C:\CE_WORK\check\reports\a7e_honest_REPORT.md`: ACCEPT (a short report; it did not replay the saved faulty build or split DRAFT from firm targets). Adversarial: Codex gpt-6.2-astra: `C:\CE_WORK\check\reports\a7e_adv_REPORT.md`, proofs in `a7e_adv_proofs\`: HOLD on four, each replayed. Of the ten reasons of the third answer and section 24: eight CLOSED (arrow-off with the edges kept; the whole text box; 1,000 mm on bends; each Mask tick on its own text by order; all ten texts after reopen and a stretch; the no-grade pipe from a saved pipe; every circle against its own pit; later kinds tried and refused), the neighbour's pipe PARTLY, drafts marked.
 
