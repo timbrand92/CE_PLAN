@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-171.
+**Next number:** TR-175.
 
 ---
 
@@ -437,3 +437,13 @@
 **TR-169** (N-035; a run ended with a click inside a pit). He picked: "On the wall facing where the run came from (Recommended)". The mirror of TR-059: the middle of the wall facing the last point before the pit, square to it, at the inner wall.
 
 **TR-170** (N-036; Escape, and one click then Enter, while clicking a run). He picked: "Nothing is drawn, with a line saying why (Recommended)". Escape ends with nothing drawn and no window; one click then Enter draws nothing and says a pipe needs two points; no Close option (a run back onto its own start is refused, TR-028).
+
+## Batch 42, Fri 20 Nov 2026, 16:41 (clock read), through the question window, one line per question. Sources: `stage6/SPEC_PIPE.md` section 12 items 16, 23, 24, 26. Before it he wrote "KEEP THE INTERVIEWS GOING".
+
+**TR-171** (N-033; a run that starts on the loose END of a pipe already drawn). Offered: one pipe, the old one carries on with a bend if it turns (recommended); two pipes joined end to end (the specification page's recommendation). He picked: "One pipe: the old one carries on, with a bend if it turns (Recommended)". Continuing from a loose end extends that pipe: one pipe, one label, one number, with a bend where the parts meet if they are not in line. The specification page's recommendation (a pipe-to-pipe join) is NOT taken. (A branch onto the MIDDLE of a pipe is TR-027.)
+
+**TR-172** (N-037; a picked polyline's width). He picked: "No: the width is ignored (Recommended)". The run opens at the biggest pipe arriving, else the office default.
+
+**TR-173** (N-038; a picked polyline's layer and colour). He picked: "The pipe layer, ByLayer; nothing carries over (Recommended)".
+
+**TR-174** (N-039; Cancel after picking a polyline, before OK). He picked: "Exactly as it was, untouched (Recommended)". Nothing happens to the polyline until OK.
