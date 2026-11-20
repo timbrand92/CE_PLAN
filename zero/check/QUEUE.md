@@ -13,13 +13,14 @@
 
 ## 1. Being checked now
 
-Tim has gone home (5:08 pm): no cap on helpers; AutoCAD stays stopped.
+Tim has gone home (5:08 pm): no cap on helpers; AutoCAD stays stopped. Seven helpers running.
 
-1. **team/a3b-pit-window at 3ae3e9f** (the Pit window to D-386 with D-390's additions; first check). Compile gate passed. Both halves running since about 5:34 pm. The check room's own picture shows step 3 cut off at 1000 by 620 with the pit joined.
-2. **The pictures from Tim's room** (the single-pipe window at both sizes, the CE Settings window, five option sheets): own pictures taken 5:44 to 5:54 pm; one Team helper running. Faults go straight to Tim's room; nothing goes to Tim.
-3. **team/night-launch at 957383a** (the round after the HOLD and D-388): both halves BY READING ONLY, from a plain-text copy (every file renamed with .txt added). Started about 6:00 pm.
+1. **team/a3b-pit-window at 3ae3e9f.** Honest half landed: HOLD, four blockers (step 3 cut off at 1000 by 620; Renumber changes pits on locked layers; Renumber renumbers every pit in the drawing; 5.755 less 5.18 printed as 0.58). Adversarial half running.
+2. **team/night-launch at 957383a:** both halves BY READING ONLY, from a plain-text copy.
+3. **codex/tests-flag at bb35cc4** (next round): both halves.
+4. **team/settings-store at d6e718b** (D-414 item 1, the store only; built on the Pit window branch): compile gate passed; both halves.
 
-Not started: codex/tests-units at 65d95d1 (built before the second answer on df9d533 landed; sent back to fold in the remaining reasons first).
+Refused or sent back: codex/tests-pipesize 110c436 (compile gate: it sits on A6 75290d9); codex/tests-units 65d95d1 (built before the second answer landed).
 
 ## 2. Waiting
 
@@ -82,6 +83,10 @@ ight-scripts.md`. Ruled by the control room as D-364 items 1 to 10: the fix (tea
 23. **codex/tests-flag at 68fcd50: HOLD THE LIST, second answer, about 4:50 pm.** Six reasons.
 24. **codex/tests-a7-clean at 2c426d6: HOLD THE LIST, second answer, about 5:10 pm.** Ten reasons.
 25. **codex/tests-a4c at 1ebb640 (office blocks, restated to D-404): HOLD THE LIST, about 5:20 pm.** Eight reasons (the privacy scan deleted and the 18 copies tied to nothing; a numbered pit without the circle tag; the source not tied to the copies and his own block replaceable; the right name with the wrong thing inside; no layer, scale or arrow direction; the arrow required off by an older test; the plastic pit's size and kind; older pits read only after being marked). Its own page.
+
+26. **design/SHAPED_GRIPS.md at 93eb70c: FIX THE PAGE FIRST, about 5:55 pm.** Five short edits. Its own page.
+27. **codex/tests-units at df9d533: HOLD THE LIST, second answer, about 5:57 pm.** Six reasons, all the list's own; its D-416 baseline.
+28. **The night pictures from Tim's room, about 6:10 pm:** PASS the CE Settings window and sheet 5; FAIL the single-pipe window and sheets 1 and 4; sheets 2 and 3 not to be shown. Its own page.
 
 ## 5. Look log (the check room's own look at the branches, every 20 minutes)
 
