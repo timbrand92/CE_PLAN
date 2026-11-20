@@ -85,3 +85,13 @@ No night script deletes, moves or rewrites the stop flag: the wrapper refuses an
 ## 11. What reading could not settle
 
 How long one launch tick takes on Tim's PC; whether a loaded plug-in shows in the process's module list; the real title and owner of a "Fatal Error" box; whether a jammed AutoCAD times out or fails at once; the real answer files' format; whether the 56 guards' tests truly fail without them. All but the last can only be seen in a test AutoCAD after MERGE and the test room's go.
+
+## 12. Ruled since (control room, about 6:27 pm, D-420; adds to D-364 and D-388)
+
+1. **From now NO ONE runs any script, test or wrapper of a night-script branch on Tim's PC, at ANY hour, weekend included.** The Friday runs in his hours are recorded as an incident, no harm found.
+2. **The deletion proof of the 56 guards is NOT run on Tim's PC.** It needs a throwaway Windows place with no AutoCAD, no `C:\CE_WORK\civil_tests` and no `.timos` folder; none exists today; making one is Tim's choice, listed for Monday.
+3. **AutoCAD testing stays STOPPED all weekend:** the gate cannot be met without that proof.
+4. **Meanwhile the seven blockers are fixed and checked BY READING ONLY:** a test that cannot load its sandbox STOPS (fails closed); the test runner writes only inside its own sandbox folder, never a path its caller names, and never reports PASSED when a suite failed; the launcher records its AutoCAD BEFORE starting it; no force after AutoCAD has answered; "never force" cannot be lost on a busy PC.
+5. **Every file the scripts write refuses a link; every script refuses to run from the temporary folder.**
+6. **The close asks AutoCAD nothing after 8:00 am; no manual close runs between 8:30 and 9:00 am on a weekday.**
+7. **What AutoCAD itself writes to Tim's profile and the registry on start and quit** is answered by the AutoCAD test room, by reading and research only, before any first night; it is part of the gate.
