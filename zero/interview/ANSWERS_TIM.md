@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-207.
+**Next number:** TR-211.
 
 ---
 
@@ -527,3 +527,13 @@
 **TR-205** (unknown U-027; the office default pipe). He picked: "Yes: 100 dia. UPVC at 1 in 100 (Recommended)". Each a setting (CE Settings window, TR-202). CONFIRMS the draft call in `stage6/STAGE1_TIMS_EYES.md` line 5 and D-352.
 
 **TR-206** (unknown U-149, the draft D-401: how a pit number may be typed). He picked: "All three are P4 (Recommended)". Capital or small letter, spaces before or after, with or without the P, all mean P4 and it is written "P4"; a letter after the number is kept ("p3a" becomes P3A).
+
+## Batch 51, Fri 20 Nov 2026, 17:05 (clock read), through the question window, one line per question. Sources: unknowns U-150, U-132, U-152, U-095; `stage6/SPEC_PIPE.md` section 12 item 40. Closed without asking: N-052 (how an existing pipe's size is read and what if it cannot be: TR-046, TR-083, TR-084).
+
+**TR-207** (unknown U-150, the draft D-401: the amber marker's size and place). He picked: "Yes: as tall as the text, one text height clear (Recommended)". 250 tall beside a label, 180 beside an invert level; 250 on a pit or pipe with no text nearby.
+
+**TR-208** (N-050; what "arriving at a pit" means). He picked: "Yes: only pipes running into the pit (Recommended)". The pipe leaving is never counted; a pipe whose direction is not known is left out and the window says so.
+
+**TR-209** (unknowns U-132, U-152; building walls inside the architect's xref). Offered: Stage 1 does not look inside the xref, walls come later (recommended); he picks the building outline once per job; it must avoid xref walls before he drafts. He picked: "Stage 1 does not look inside the xref; walls come later (Recommended)". In Stage 1 a label avoids other text, pipes, pits and the 70-wide 50CONT outline, all in his own drawing; a label across an xref wall is left for him to move; looking inside the xref is tried in a test AutoCAD afterwards and brought back to him. Confirms the control room's draft D-400 item 8 for walls.
+
+**TR-210** (unknown U-095; the click budgets, rule R-39). He picked: "Yes: those are the budgets (Recommended)". One pit with a cover level: type PT, 1 click, type the level, Enter. One run of n pipes at the defaults: type CD, n+1 clicks, Enter, then Enter (OK), with no typing. The tool is tested against these counts; anything over is a fault.
