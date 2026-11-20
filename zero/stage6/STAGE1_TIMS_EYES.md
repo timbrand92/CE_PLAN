@@ -15,7 +15,7 @@
 ## A2. Added 20 Nov, about 11:00 am, from Tim's room (D-354 to D-359)
 
 7a. **The order is draw first, window second** (D-354, D-355). PT: click where the pit goes, the Pit window opens for that pit, OK and it goes in, click the next. CD: click a run from anywhere to anywhere with as many bends as needed, or pick a polyline (it is replaced by pipes, D-356), then the window opens knowing the run, OK and the pipes go in; a run through pits splits into one pipe per length. This REPLACES line 6's first wording: clicking before the window is right; what was wrong on 20 Nov is that the window then had no size and drew nothing.
-7b. **Live on the drawing while the window is open** (D-357): the real pit or pipe shows where he clicked and changes as he types; Cancel removes it.
+7b. **Live in the window's own preview panel** (D-382, correcting D-357): the preview panel inside the window shows the real plan around the part, with the pit or pipe changing as he types. He did not ask for the part to be painted on the drawing behind the window; whether it also shows there (D-301) is still to be asked. The preview panel stays.
 7c. **Labels land in the right spot; grips stretch and adjust; levels work along the run** (D-359).
 7d. **Every specific settled** (his words: "i need every specific down to a tee before we complete this first stage"): Stage 1 is not complete while any unknown marked "blocks Stage 1" in `UNKNOWNS.md` is open.
 
