@@ -160,3 +160,22 @@ A cheat written against this exact tip still turned all 73 green by keying on th
 7. **With "what is over it" not set, the window says NOTHING about cover.** The target `D383_Unknown_surface_and_then_short_cover_show_each_ends_visible_check` (`bench/CeCivil.Bench.Tests/AcceptanceC11PrintedWorkingTests.cs:114`) requires a grey "Cannot check yet" cover line at both ends before a surface is picked: restate its first half (no cover line at all, no figure, no guess); its second half (a surface set: "Wrong" in red, on show, at both ends) stands.
 8. **Cover is checked at the TWO ENDS ONLY, plus any surface points he adds; never at a bend by itself.** Any target that demands a cover check at a bend is restated or parked; none was seen in the Stage 1 group at 335ce64, so this is a line for the list, and a thing the read-back looks for.
 Also from D-413, for the wording targets: a grey source word on every figure he did not type; a typed length shows "typed 6.50 m, drawn 6.20 m" (with item 6 above).
+
+
+---
+
+# Read-back of the bounded edit: codex/c11-tests at f282b87 (D-411)
+
+**Answer: ACCEPT THE LIST.** Written Fri 20 Nov 2026, about 11:58 pm, by the check room alone (D-411 item 2: by reading and one run, no new adversarial pass). The edit since 335ce64: four test files and the design page `design\SUMS_PIPE_AND_PRINT.md`, 330 lines in, 69 out, plus run-folder lines in `.gitignore`.
+
+1. **Each open item read:**
+   - **J1:** a worked grade prints the whole number on the label ("... AT 1 IN 200" with "MIN." unless both inverts are typed); 94.5 prints 95 and passes; 200.05 prints 200 and "Needs a look"; the 200.04 case is a WAITING row marked DRAFT D-411 with the window's exact "1 in 200.04". Typed grades as typed.
+   - **J2:** the material is now typed in the fixture (`window.Field("mat").Set(material)`), so the 225 case no longer leans on an office default.
+   - **J3:** the gate is written on the design page: `C11=target&Stage!=2` and `C11=control`, the Stage 2 targets counted apart.
+   - **J4:** the older tests the C11 build must reconcile are listed by name on the design page.
+   - **J5:** P3_35 is a control; the 450 mm requirement is given to Pipe 7 as well as Pipe 12; what is over the pipe comes through the step 2 read-off.
+   - **N6 (D-410):** a typed length, held and used for the worked level and grade after reopen.
+   - **P7 and P8 (D-413):** the grey "Cannot check yet" demanded before a surface is picked is gone; a bend on its own adds no cover check (new target).
+   - **D-426:** 297 mm against 300 mm with the 5 mm tolerance is a pass; 288 mm reads "Short by 12 mm at P3, Pipe 7 (P4 to P3): cover 288 mm, needs 300 mm."; the pipe top is 105 mm above the invert for 100 UPVC, marked DRAFT.
+2. **One run by the check room** (own worktree, whole solution built, 0 errors, the plug-in included): controls 26 of 26 pass; Stage 1 targets 77: 76 fail on what the product does, and 1 passes today (`D413_A_bend_alone_does_not_add_a_cover_check`, since the product does not check at bends): it stands as a guard that a build must not ADD a bend check.
+3. **What this means:** the list may go to the main line as one squashed commit. The C11 BUILD owes D-411 item 3: at its check the adversarial probes are run with figures the builder has not seen; no MERGE of that build without them. Nothing about the product is accepted.
