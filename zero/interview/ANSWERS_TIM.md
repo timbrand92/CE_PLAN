@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-179.
+**Next number:** TR-183.
 
 ---
 
@@ -457,3 +457,13 @@
 **TR-177** (N-051; a size typed for a run with a bigger pipe already arriving part way; example, 150 typed for P5 to P1, a 225 already runs into P3). Offered: all five stay 150 and P3 onward show amber (recommended); the window offers to bump them before OK. He picked: "The window offers to bump them before OK". All five are held at 150 (TR-045); the window says which lengths are smaller than what feeds them and offers one click to make those lengths the bigger size; No leaves them with the amber marker.
 
 **TR-178** (N-056; the levels where a branch joins a pipe with no pit; example, a 100 branch into a 150 main whose invert at the join works out to 12.20). Offered: same as the main, no drop, lower is red (recommended); tops level; 0.02 above the main. He wrote: "BRANCHES DONT NEED INVERT LEVELS MOST OF THE TIME INT HE CASE THEY DO, SAME AS MAIN". Room's reading (mine): at a branch join the tool does not ask for, and by default does not write, an invert level for the branch; where he does give one it opens at the same level as the main at that point, with no 0.02 drop. (This also bears on TR-065, "every known level, both ends": a worked-out level at a branch join is not written unless he asks. To confirm.)
+
+## Batch 44, Fri 20 Nov 2026, 16:49 (clock read), through the question window, one line per question (follow-ups to TR-175 and TR-178, and `stage6/SPEC_PIPE.md` section 12 item 43)
+
+**TR-179** (follow-up to TR-175; what the sums use when a length is typed; example, 6.20 m drawn, 6.50 m typed, 1 in 100, IL 12.00 at the low end). He picked: "From the typed 6.50 m; the window shows both (Recommended)". Where he typed a length the levels and grade use it, and the window shows "typed 6.50 m, drawn 6.20 m"; pipes he did not type use the drawn length.
+
+**TR-180** (follow-up to TR-175; a typed length, then the pipe is moved so the drawn length changes). He picked: "It is kept, with the amber marker (Recommended)". His typed length is never changed by the tool; the pipe gets the amber marker ("length typed 6.50 m, now drawn 7.10 m"); the levels-or-grade window shows both, with one click to go back to the drawn length.
+
+**TR-181** (follow-up to TR-178 against TR-065; whether a worked-out level is written at the join end of a branch). He picked: "No: nothing written at a join unless I tick it (Recommended)". At an end that meets a pipe with no pit, no invert level is written by default, on the branch or the main; the tool still knows and checks it; a tick on that end shows it. This narrows TR-065 (every known level written) to ends at pits and loose ends.
+
+**TR-182** (N-053; whether each figure in the window says where it came from). He picked: "Yes: a small grey word beside each (Recommended)". A figure he typed sits in a solid box with no word; anything else carries a small grey word: "worked out", "measured", "follows P4 to P3", "office default". (The Pit window's step 2, approved in TR-081, gains these words: the checker had noted them missing.)
