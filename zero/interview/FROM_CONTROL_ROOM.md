@@ -88,3 +88,6 @@ Eight of the 18 block drawings copied from the current plug-in carry his own Aut
 
 ## R. Added 8:55 pm (D-434): FOR TIM ON MONDAY
 The Team account hit its usage limit on Friday 20 Nov at 8:47 pm and gives no access until 1 December. Does he want its limit raised? Until then builders run on Codex and checks on Codex plus one Sonnet helper.
+
+## S. Added 8:53 pm (D-435): one more for Tim on Monday, with section Q
+The flow arrow's block drawing (TIM_CVL_ARROW) carries a page set-up that names an office printer model and a local network address (6 places, that drawing only). Ship as is, or clear the page set-up in the copy? The count is in: all 301 web addresses in the block drawings are the CAD software maker's own; none is anyone else's.
