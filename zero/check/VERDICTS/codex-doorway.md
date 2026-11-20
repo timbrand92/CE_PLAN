@@ -20,3 +20,7 @@ The hand-over names MIRROR, whole-plan move, JOIN, FILLET, OFFSET, U while drawi
 ## 3. For the control room (no ruling found)
 
 1. **Is a pipe's number reused once the highest-numbered pipe is erased?** D-398 calls "never reused" the room's reading, not Tim's; D-377 item 2 for pits (highest plus one) would reuse it. Recommended: never reused within a drawing (a number on an issued sheet keeps its meaning).
+
+## 4. Ruled since (control room, about 1:11 am, DRAFT, listed for Tim)
+
+A pipe's number is never reused within a drawing, even when the highest-numbered pipe is erased (it is an identity, never printed); an Undo of the erase brings the same pipe back with its same number. Pits stay as Tim ruled (highest plus one). Reason 3 of section 1 is restated to this and marked DRAFT; it adds no strike.
