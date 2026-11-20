@@ -47,3 +47,12 @@
 2. **`C:\CE_PLAN` is a shared working copy.** Commit by file name only, `git pull --no-rebase` then push, never `add -A`, never force. Other sessions leave their own uncommitted files there; leave them.
 3. **A helper's findings are not checked until this room has read a source itself.** Say which were and were not.
 4. **The mock-ups are pictures.** Nothing in them has been seen working in AutoCAD; say so each time.
+
+## 7. Update, Fri 20 Nov 2026, about 3:40 pm
+
+1. **Answers now run to TR-142.** Next number TR-143. The recorder's last batch file is `b34.json`; pass `"a_total": 152` from now on.
+2. **Settled from pictures since section 4 was written:** the Pipe window (TR-108 to TR-111, TR-120), one length in a run (TR-114), the single-pipe window in words (TR-115, picture still owed), pipe numbers (TR-119), bends (TR-130, TR-131), grips (TR-139, TR-140), the levels-or-grade window (TR-141), the sleeved length (TR-142).
+3. **Control room's questions owed to Tim** are in `interview\FROM_CONTROL_ROOM.md` and on the list as U-133 to U-152 (nine label questions, eleven draft calls). One by one, pictures first where a place on the plan is involved.
+4. **Asked and not yet answered:** which layer the green impervious-area line is on (TR-134, U-132). The old-jobs search found nothing in the folders this room may read (`C:\CE_WORK\scratch	im_room\impervious_findings.md`, a helper's search, not re-read by the room).
+5. **Pictures owed:** the single-pipe window; the cover level "from the pit outwards" on the two left corners (TR-140); "also on the drawing behind the window" both ways (U-100); an inspector panel against Properties (U-052); which side is "above" on a pipe drawn right to left and on an upright pipe (U-133).
+6. **Team sign-in ends between 24 and 27 Nov;** Tim must sign in again before then or the helpers stop.
