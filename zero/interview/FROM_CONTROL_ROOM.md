@@ -68,3 +68,6 @@ The old Pipe mock-up page is retired. The single-pipe picture you owe (U-129) is
 3. Plain squares for pipe ends, bends and the pit centre, shaped grips for text only? (not built on until he answers)
 4. A layout sheet with a viewport open into the model: PT and CD work as normal (draft: yes).
 5. Circle tag block cannot be found with "Number on plan" ticked: pit refused, nothing drawn (draft). Inspection opening block missing at a bend: pipe refused (draft).
+
+## M. Added 6:27 pm (D-420): FOR TIM ON MONDAY, a real choice of his, not a draft
+The night robot's safety guards (56 of 89) have never been proven by taking each one out and seeing the tests fail. That proof must not run on his PC. Where may it run? (a) Windows' own sandbox feature switched on on his PC (a Windows setting he or we would switch on; nothing inside it can see his files); (b) a virtual machine on his PC; (c) GitHub's own Windows machines, run from the private CE_CIVIL repository (nothing on his PC; uses GitHub's free minutes; adds one workflow file to the repository); (d) not at all: his own hands do the AutoCAD checks instead. Until he picks, no robot starts a test AutoCAD.
