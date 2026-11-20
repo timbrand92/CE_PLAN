@@ -770,6 +770,8 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-371** (same sitting, TR-017, typed) The placing rules must also hold for a pipe with no label and with one invert level or none. Not yet asked or designed, and blocking Stage 1: how the label, the invert levels and the arrow sit on a pipe with one or more bends (U-107).
 
+**D-372** (Fri 20 Nov 2026, first given to the build room at about 11:55 am and written here at about 12:40 pm; the control room's call, Tim's to overturn; the size a pipe opens with and holds) (1) A NEW pipe opens with the size of what arrives at its upstream end (the largest arriving), never smaller than what feeds it; joining nothing, the office default 100 dia., a setting (D-263, D-359). On a run of several pipes each pipe hands its size to the next. The last size typed never carries into an unrelated pipe. (2) An EXISTING pipe's size is read from the pipe as drawn (D-349) and shown as worked out from the drawing (the quiet dashed field), never as typed or chosen; if the drawn size cannot be read, the window says so in words, OK leaves the size alone, and 100 is never offered for an existing pipe. (3) A size the drafter types is a hold, shown solid, kept with the pipe. (4) Because the size fault survived two fix rounds (the check room, 20 Nov), no third patch: one short design page on what size a pipe holds and where it is kept, joined to the one-reader design of D-349, then one build.
+
 ## Not decided (asked or raised, no decision yet)
 
 1. Whether Stage 1's civil explanation is approved (Tim moved on to the design without saying "approve"). **Settled by D-117.**
