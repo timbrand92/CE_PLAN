@@ -42,3 +42,37 @@
 4. **The guide Undo case:** it cannot fail on lost width, layer or colour, because the fake drawing restores everything.
 
 **Next:** the writer restates or adds the eight cases above in one round. The check room then reruns them against right and wrong builds.
+
+---
+
+# Second answer: dbc49cf (fix round 1 of 2)
+
+**Answer: HOLD THE LIST. Both halves hold it. The next round is the last.** Written Sat 21 Nov 2026, about 5:14 am. Both halves ran on Codex under D-440, each in its own folder:
+- **Honest half:** gpt-6.2-sol. Report: `C:\CE_WORK\check\reports\prt2_honest_REPORT.md`. It holds on four reasons.
+- **Adversarial half:** gpt-6.2-astra. Report: `prt2_adv_REPORT.md`, with proofs in `prt2_adv_proofs\`. It holds on three.
+
+The `src` and `bench` diff against main is still empty. **Closed:** the one-click Undo, two pits in one window, the guide's bend and width (both archived faulty builds are now caught), the worked branch level against a typed hold, protected-main writes counted by identity, and the crossing guides.
+
+## Reasons to hold (five; each is one restatement or one added case)
+
+1. **The split test stops in set-up** (both halves). E1 (`Stage1A6FixRound1Tests.cs:569`) looks for one "cover" row. The Pit window defines two (`pit.csv` lines 60 and 68) and shows one at a time, so the test throws before it tries the split.
+   - **The fix:** read the visible row. Then check the Keep-the-levels or Keep-the-grade choice, and both halves after reopening (D-377 item 8, D-402 item 7, D-436).
+2. **The Run command has no test of its own** (both halves). The "Run window" row (`Stage1PipeRunEntryTests.cs:100`) clicks three times and opens Pipe. An entry counter saw one Pipe call and no Run call.
+   - **The fix:** seed a joined run and enter it through the Run command (`RunCommand.cs`). Pick one length, return to the whole run, reverse the flow, and edit one length. Check its neighbour and one Undo (D-395, D-413, D-439, page section 1).
+3. **The one-planner test is wrong in both directions** (honest half; the adversarial half also leaves it open).
+   - **It can reject a right build:** six preview rows demand a public `PlanPicture` property of one shape, plus an extra read under PlanRun. A correct planner working from a read-only snapshot could fail them.
+   - **It can pass a wrong one:** a throwaway read could satisfy the trace while a second route makes the proposal. The trace cannot name the proposal that is finally saved.
+   - **The fix:** observe the whole proposal handed to the preview and to the protection check, and compare it with the saved edit (D-348).
+4. **The pit in the inner-wall fixture has two sizes** (honest half). `SeedPit` stamps a 450 by 450 mm note but leaves the block's own distances at 350 mm.
+   - **The effect:** the rows for the two-visit case, the turned pit, EXTEND and STRETCH expect walls at 4,775 and 5,225 mm. A build that follows the drawn wall gives 4,825 and 5,175 mm, and fails.
+   - **The fix:** set and read back both distances, or place the 450 mm pit through the Pit tool (D-228, D-410 items 6 and 7).
+5. **A second guide on the same layer can disappear** (adversarial half; new). A wrong build that erased every polyline on the chosen guide's layer gave exactly the same 238 results as a right one.
+   - **The fix:** add a second guide on that layer, (0,4000) to (10000,4000) mm, 55 mm wide. Require its identity, path and look after OK, Undo and Redo (D-348, D-356, page section 2.7).
+
+## Follow-ups (none holds the list)
+1. **The held level:** the 9.920 m held-level fixture is still missing.
+2. **B2b:** tie its text check to the branch's own text, since the main's far end also prints 9.90.
+3. **The two meetings:** prove the two saved meeting stations are different.
+4. **DRAFT label:** mark the extension half of the typed-length test DRAFT.
+
+**Next:** the writer restates or adds these five in the LAST round. After that comes the D-346 hold, or the bounded edit for a list.
