@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-091.
+**Next number:** TR-095.
 
 ---
 
@@ -233,3 +233,13 @@
 **TR-089** (N-001, N-002; a drawing with no units set; the two specification pages disagreed). He picked: "Treat as millimetres, say so once (Recommended)". Unitless is treated as millimetres with one grey line in each window ("Drawing units not set: treated as millimetres"); inches or feet are refused like metres (TR-047). The Pipe page's recommendation (refuse) is NOT taken.
 
 **TR-090** (N-007; the drawing already holds its own PIT BLOCK 3 that differs from the office master). He picked: "The drawing's own, never overwritten (Recommended)". New pits use the block already in that drawing; the tool never replaces a block in his drawing; if that block cannot do a size or kind the tool needs, it says so once and he decides.
+
+## Batch 23, Fri 20 Nov 2026, 13:36 (clock read), through the question window, one line per question. Sources: `stage6/SPEC_PIT.md` section 10 items 9, 32, 33, 34.
+
+**TR-091** (N-009; what follows the cursor before he clicks a pit). He picked: "The real pit block at 450 (350 for PP) (Recommended)". The office block at the opening size follows the cursor, with its number and "CL TBC" in grey; the window opens after the click.
+
+**TR-092** (N-014; ending the PT command). He picked: "Enter, Space or right-click, as in AutoCAD (Recommended)". At the "click where the pit goes" prompt Enter, Space or a right-click ends the command; Escape also ends it.
+
+**TR-093** (N-015; Cancel on one pit's window). He picked: "That pit is dropped; click again (Recommended)". Nothing is drawn for that click; he is back at the click prompt, still in PT; the number is not used up.
+
+**TR-094** (unknown U-051; Escape with the window half filled). He picked: "Same as Cancel; nothing offered back (Recommended)". CONFIRMS the draft call D-288 DQ-097. Closes U-051.
