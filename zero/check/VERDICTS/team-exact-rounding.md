@@ -82,3 +82,9 @@ The shortfall sentence at zero tolerance can read "Short by 0 mm ... cover 300 m
 ## 12. Order (D-432)
 
 A6 and the Pit window still may not take the routine in; the Pit window's own depth sum (D-436) waits on this branch's MERGE for its printed figures.
+
+## 13. Ruled since (control room, about 12:31 am)
+
+1. **DRAFT:** "Short by less than 1 mm" (reachable only when the tolerance is under 1 mm); never "Short by 0 mm".
+2. **DRAFT:** a worked grade steeper than 1 in 1 prints with as many decimals as show two significant figures ("1 IN 0.4", "1 IN 0.05"); never "1 IN 0.0".
+3. **For the LAST round:** the same fault surviving in the Run window, the schedule and the lid wording means the root is not single yet. The round must end with a source test that NO code outside the one routine rounds or formats a level, depth, fall, grade or shortfall, listing every caller. If it is held again it goes to a design page (D-346), and A6 and the Pit window stay waiting.
