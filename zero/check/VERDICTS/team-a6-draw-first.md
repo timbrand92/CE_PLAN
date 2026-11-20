@@ -42,3 +42,54 @@ The pick-first route is never run by any test: the test host always answers "not
 ## 7. Owed in AutoCAD (for the AutoCAD test room, when a build of this is merged)
 
 The honest report's section 7, in exact steps: PT, three pits, Enter, then U once (right: only the last pit goes); CD from open ground with two bends; CD through three pits clicking the ends; a picked polyline replaced and one U bringing back the same polyline; each refused polyline; Cancel and Escape at each point; every command with the pit, tag, cover and pipe layers locked, off and frozen in turn; Redo after each Undo.
+
+
+---
+
+# Second verdict: team/a6-draw-first at 75290d9 (fix round 1)
+
+**Verdict: HOLD. Five blockers: one new, four where a first-round blocker is only partly closed.** Written Fri 20 Nov 2026, about 4:35 pm, by the check room. Checked on the bench only. One fix round is left (D-346); after that the branch is held with a one-page open list.
+
+**Who checked.** Honest check: Team helper, Claude Opus 5.5: `C:\CE_WORK\check\reports\a6r_honest_REPORT.md` (it took each fix out and the tests failed). Adversarial pass: Codex gpt-6.2-astra: `C:\CE_WORK\check\reports\a6r_adv_REPORT.md`, 112 independent cases, proofs in `a6r_adv_tests\`. The adversarial pass listed eleven blockers; graded again here.
+
+## A. Suite seen
+
+Brain 750, hands 762 passed and 2 skipped, bench 438, saved-drawing reader 19 passed and 2 skipped: 1,969 passed, 0 failed. Brain by itself 750 of 750 in both helpers' runs: the builder's one timing failure did not come back. The two hands skips are honest (the 100 dia. opening size and the first pipe picture, both waiting for the pipe-size build: with the skip off they fail on exactly that). **But `dotnet build` of the whole solution FAILS: see blocker 1.**
+
+## B. What the fix round closed (each test fails when its fix is taken out)
+
+1. **One Undo per pit in PT,** and one for a finished run (the real Undo is owed in AutoCAD).
+2. **Parts on locked, off or frozen layers are checked before a write** for: a pit on a loose pipe end, a resized pit, a run to a pit, a guide locked after it was picked, a guide that is off or frozen.
+3. **A picked guide passing a pit off its centre, or clipping a pit corner, is refused and kept;** a 0.8 mm bend is kept.
+4. **A run onto a pipe is written on both pipes, by hidden identity,** and the level at the junction is worked out (9.95 at the middle of a 10 m main at 1 in 100 from 10.00).
+5. **Same round:** a pit dropped on a pipe's centre line is refused in words; several CE parts picked first open nothing; the held corner stays at the click after a size change; the two lost guards are back. D-390: the size holds within one PT and a fresh PT opens at 450; Cancel or Escape drops one pit; a layout sheet and a read-only drawing are refused before the first click.
+
+## C. Blockers
+
+1. **NEW: the AutoCAD plug-in does not compile at 75290d9** (`src/CeCivil.Acad/PitCommand.cs:72`, `src/CeCivil.Acad/PipeCommand.cs:59`: error CS0411 on `implied.Value.Any(...)`; AutoCAD's selection set is not a plain list, the test host's stand-in is). It built at 9418a6c. Nothing on this branch can be built into AutoCAD, and merging it would break the main line's build. The builder's suite log has no build of the plug-in project. Fix the two lines, build the WHOLE solution, and say so.
+2. **A wrong junction level can reach the plan** (blocker 4, partly open). A 10.490 m main from IL 10.000 at 1 in 100, a branch starting 9.8606 m along: the level is 9.901 (plan 9.90); the branch stores 9.906 (plan 9.91). The sum reads the main window's ROUNDED end figures before working along it (`bench/CeCivil.Bench.Core/PipeToolWindow.cs:90-99`). D-350: sums on exact figures.
+3. **Changing only a pit's cover moves and renames a pipe on a locked layer** (blocker 2, partly open). P1 with a loose pipe end at its centre (an older drawing), the pipe's layer locked: open P1, type a cover, OK: the pipe's end moved 225 mm and its name changed (`src/CeCivil.Hands/Pit/PitTool.cs:352-355, 728-751`: the check gathers the moves of a size change; the write also gathers new joins). Gather the whole edit before anything is written.
+4. **A picked guide is erased and its pipes drawn on another line** (blocker 3, partly open). A guide starting 60 mm off the centre line of a 150 main: OK erased it and moved its first point onto the centre line (`src/CeCivil.Hands/Pipe/PipeSplit.cs:101-114`; `PipeTool.cs:283-297, 383-385`). D-356: the exact path, or refused and kept.
+5. **The Pipe command's Undo throws away the whole run when its ends are on open ground** (blocker 1, partly open). Pits at 0, 5 and 10 m; click from 5 m before the first to 5 m past the last; Undo; finish: three lengths should remain, none was drawn (`src/CeCivil.Hands/Pipe/PipeRun.cs:66-78, 120-128, 155-165`). D-324: the last length only.
+
+## D. To fix in the same round (not blockers alone)
+
+1. **New parts go onto an off or frozen layer** with no word and no offer (`src/CeCivil.Hands/EditGuard.cs:40-46` tests only the lock on the layer a new part goes to). D-320: an offer first; the round's own interim was a refusal in words.
+2. **A pit whose centre is 240 or 280 mm off a 150 pipe's centre line is still drawn over the pipe band, joined to nothing** (`PitTool.cs:374-396`: the refusal looks at the centre line against the INNER wall; D-270 counts the outer wall line).
+3. **A failed last write:** the two new layers stay behind while the words say every pipe was erased; and when the failing pipe's own erase fails, a pipe survives under the same words (`PipeRun.cs:241-271`; `PipeTool.cs:698-709`).
+4. **Junction records:** nothing reads them back. Erase the branch and the main still says a branch starts on it; erase the main and the branch still reports a junction; a branch that leaves a main and returns to it keeps one record, not two; opening a sound branch and pressing OK renamed it "free end to free end (2)". The self-check reads only the older join records (`SelfCheck.cs:149`); the comment at `PipeRun.cs:270` is untrue; test D2 does not guard it. The record also keeps the other pipe's NAME (D-397).
+5. **The four wordings are all still on screen:** "free end" (ruled: "not joined yet"), "hidden note" (`PipeTool.cs:288, 414`; `PipeCommand.cs:89`), "{noun}(s)" (`tools.csv:406`), "HandsException" (`PitCommand.cs:118, 230`; `PipeCommand.cs:165, 247`).
+6. **A refusal inside PT ends the whole PT,** so the held size is lost. Two plain guides picked first are ignored and an unrelated pipe is placed.
+7. **Tests:** H2 passes with the new layers left behind; B6, C4, D6 and D7 pass with or without the fix; Enter, Space and right-click are one pretend answer; the bench Undo is a stand-in for `src/CeCivil.Acad/UndoStep.cs`, which never runs.
+
+## E. Not this branch's (routed, not held against it)
+
+1. **A typed pit number already in use is accepted** ("P1", " p1 "): D-390 item 3, D-401. With the flag marker job, whose list tests it.
+2. **A second pipe between the same two pits is refused because the name is in use:** D-397, D-398 (every pipe its own running number). A job of its own.
+3. **Pit and Pipe still draw in metre, inch and feet drawings:** the units job (D-403).
+4. **A fresh placement during reference editing has no check before it** (`AcadDrawing.cs:398-411`): owed in AutoCAD; with the drawing-safety work.
+5. **A guide changed, bent or erased between the pick and OK is still replaced from the first read:** proven only by changing it from inside the test; whether AutoCAD allows it while a window is open is owed.
+
+## F. Owed in AutoCAD
+
+Section 7 of the first verdict stands, with sections 8 of the honest report and 4 of the adversarial report: U and Redo once after three pits; the Pipe command's Undo from a pit and from open ground; a guide with its own linetype and widths replaced, then one U bringing the same guide back; the locked-end cover edit; the 10.490 m main and its branch level after save and reopen; erasing a main with a branch on it; Enter, Space and right-click each ending PT; every command during reference editing with nothing picked; nothing may run before the plug-in compiles.
