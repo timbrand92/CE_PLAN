@@ -51,3 +51,28 @@ The real band's width on every length of a pipe and after a move; one Undo for e
 4. **Accepting the offered office size makes it his,** held as typed.
 5. **OK without answering the bump offer is No:** the lengths stay, with the marker.
 The rows that rest on these are marked DRAFT D-430; they came after the round and add no strike.
+
+
+---
+
+# Second answer: codex/tests-pipesize-main at c6b1f42
+
+**Answer: HOLD THE LIST, on ONE reason, the list's own; round one of two from its baseline, so one round is left.** Written Fri 20 Nov 2026, about 11:10 pm. Checked on the bench only.
+
+**Who checked, and how they split.** Honest check: one Claude helper on Sonnet (D-434): `C:\CE_WORK\check\reports\ps2_honest_REPORT.md`: ACCEPT, all eleven closed, seven binding probes. Adversarial pass: Codex gpt-6.2-astra: `C:\CE_WORK\check\reports\ps2_adv_REPORT.md`, proofs in `ps2_adv_proofs\`: HOLD, eight closed and three PARTLY. Both saved shortcut builds now fail all 70 runnable targets. The check room read the test helper behind the disputed keyword itself (`PipeSizePartATests.cs:1044-1058`).
+
+## 7. The reason to hold
+
+1. **Two edit cases cannot pass on a right build.** The edit helper, when the pipe is not picked first, sends the keyword "Select" after the command starts (`PipeSizePartATests.cs:1048-1058`, used by A283 and B275), while A594-609 itself proves the ruled prompt rejects "Select" (D-410 items 5 and 9: the prompt offers Polyline). Pick the existing pipe through the ruled prompt (an object pick, or P for a path) and again by preselection; keep the rejected "Select" only as a negative control. Proof: `ps2_adv_proofs\ruled-prompt.patch`, `ReviewProbes.cs.txt`.
+
+## 8. To fix in the same round (the other two PARTLY points; not holds alone)
+
+1. **The marker's own colour** cannot be read on the pretend drawing: a colour NOTE satisfies the amber check on a grey triangle. Keep the colour row WAITING, out of the count, and name the AutoCAD case that proves colour 40 on the marker over the grey layer.
+2. **Every piece of a band:** the taper and first-piece cases are a search of the adapter's source for method names (A827-837), which a build can dodge; say plainly on the row that the real taper is owed in AutoCAD, named.
+3. **The rows that wait on other branches are still counted** (A190 x4, B17, B408 x2, B415, B585, the flow-arrow row, the two end-symbol rows): exclude them from the count by their trait; mark B253 (it needs A6's Polyline prompt).
+4. **The cover sentence at A432** works the top of pipe without the wall: mark it DRAFT D-426 and restate when U-086 closes.
+5. **One squashed commit;** one test host shared with A6.
+
+## 9. What closed
+
+The whole label compared; the 230 mm band keeps 230 with its marker; saved and hand-edited words kept through OK, Levels and Undo; silence about cover where nothing is over it; the loose-end extension (WAITING); clear, reopen and cancel; the wrong pipe of two; the impossible counts out; and the D-430 rows (source words, the older pipe's number, unknown flow, the accepted office size, the unanswered bump).
