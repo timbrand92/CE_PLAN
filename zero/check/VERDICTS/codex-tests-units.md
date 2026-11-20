@@ -36,3 +36,12 @@ Pretend drawing 690 ran: 16 targets fail, the millimetre control passes, 673 old
 ## 5. Owed in AutoCAD (when a build of this is merged)
 
 The real reader: with the native units reader made to answer millimetres for every drawing, all 690 tests still passed, and on the bench a 150 pipe came out 150 m wide; nothing on the bench reads AutoCAD's own setting. So: PT, PP and CD in a real drawing set to metres, to inches and to feet (refused, nothing brought in, the drawing not marked as changed, nothing to Undo); in a drawing with no units set (drawn at true size, the grey line); with the display format changed and the insertion units left at millimetres (drawn as normal); on a layout sheet; in a read-only drawing.
+
+## 6. Ruled since (control room, about 3:45 pm, D-403)
+
+1. **RULED: the grey line shows in EVERY window of a drawing with no units set** (TR-089's record: "one grey line in each window"): once per window, not once per drawing. The two targets at lines 69 and 87 are wrong as written and must be restated.
+2. **DRAFT: a refused-unit drawing is refused BEFORE THE FIRST CLICK** (as the read-only drawing and the layout sheet); nothing drawn, nothing changed, seen or unseen.
+3. **DRAFT: every unit other than millimetres and "not set" is refused the same way,** naming the unit.
+4. **DRAFT: the units change while a window is open:** OK closes it, the drawing is untouched, and the command line says why.
+5. **DRAFT: a command with no window** says "treated as millimetres" once per command on the command line.
+6. **The layout-sheet and read-only refusals go in THIS list,** with the edit of an existing part in a refused drawing.
