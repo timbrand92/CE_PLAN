@@ -122,3 +122,15 @@ Eight of the sixteen settings have no reader in Pit or Pipe (the invert gap 200,
 ## 18. Ruled since (control room, about 2:26 am)
 
 ONE bounded edit of exactly the three items of section 16, with one addition: the edit ends with a source test that NO code outside the store reads, holds or defaults a tolerance, listing every caller. Read back with one run by the check room ("both of you": the check room reads it, and the Codex half re-runs its two routes). DRAFT: a tolerance found in an older pipe's note is NOT used; the drawing's setting governs and the window says so once. An over-limit typed entry is refused with words, never saved as 10,000 (D-425 item 1). If the read-back fails, a one-page design follows, no further edit.
+
+
+---
+
+# Read-back of the bounded edit: team/settings-store-main at fb7f944
+
+**Answer: READ-BACK FAILS. Under section 18 the store now goes to a one-page design ("one tolerance source"), no further edit.** Written Sat 21 Nov 2026, about 3:42 am. Read back by the check room with the Codex reader re-running its routes (gpt-6.2-astra: `C:\CE_WORK\check\reports\setbe_adv_REPORT.md`, proofs in `setbe_adv_proofs\`). The whole solution builds, the plug-in included; the edit's own ten tests pass.
+
+1. **Passes:** (b) a mislabelled office row now STOPS the tool and names it (D-425 item 1); (c) the over-limit Job entry is refused in words and the box keeps 5 mm.
+2. **(a) Levels: the sum is right, the window is not:** with an older pipe note at 17 mm and the drawing at 5 mm, Levels now works 290 against 300 as Wrong and prepares the "older note not used" line once, but the window then stops on "unused pipe 1" before showing either (the same fault on 83d1559: it predates the edit, but the drafter still sees no verdict).
+3. **The new source test misses all three ways tried:** a literal 5 written into the cover rules turned a valid 11 mm Suits into Wrong; a second settings key (`cover_margin_mm`) let Levels announce 5 mm and pass the shortfall at 17 mm; an optional method parameter defaulting to 5 mm made Levels announce 11 and judge at 5. The test passed each altered copy; it catches only a literal in the named tolerance sum. Its caller list also leaves out four uses of the Job edit the store returns (preview, commit, refusal text, save).
+4. **What the design page must settle (recommended):** the store as the ONLY holder of the tolerance, proven by what the source test forbids (any tolerance-like number or key outside the store, in code, data and defaults) rather than by a list; the Levels one-pipe window showing its verdict; the four acceptance cases above.
