@@ -96,7 +96,7 @@ Cite D-386 and D-387 and close the two questions they answer (a typed size is he
 
 ---
 
-# The third read: the page at d94a9e3 (Fri 20 Nov 2026, about 2:25 pm)
+# The third read: the page at d94a9e3 (Fri 20 Nov 2026, about 2:18 pm)
 
 **Answer: BUILD FROM IT.** All four wording fixes are closed in the page's own words, each with a test, and the control room's D-389 items that touch the page (the marker built before pipe size; a typed size against a drawn one; "cover needed"; a new pipe's size dashed until typed) are on it as ruled. Nothing in the last two rounds would make a builder guess, or put a wrong size or a wrong label on the plan. Read by a Team helper (Claude Opus 5.5) with read-only tools, against the 211-line change since the last read and the sections it touches: `C:\CE_WORK\check\reports\design-pipe-size3_REPORT.md`. Checked by reading; nothing is built, tested, installed or accepted by this answer.
 
