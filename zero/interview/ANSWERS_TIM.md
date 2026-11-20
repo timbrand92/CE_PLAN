@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-034.
+**Next number:** TR-038.
 
 ---
 
@@ -89,3 +89,13 @@
 **TR-032** (unknown U-013; whether the left preview panel of the Pit window is still wanted now the real pit shows live on the drawing, D-357). Offered: drop it (recommended); keep it as drawn; keep it but small. He picked none and wrote: "the preview should show what is happening on the plan whilst youre in the window, does that make sense?". Room's reading (mine): the preview panel STAYS, and what it shows is the plan itself around the part he is working on, changing live as he types, because the window covers the drawing while it is open. It is not a made-up sketch of the pit alone. The room's recommendation (drop it) is not taken. A picture of that panel is owed before this is closed.
 
 **TR-033** (unknowns U-011, U-096; the window size rule; he was shown his 16 Nov words, D-065 "80% of screen area", and that the wide window was one of the things he called wrong on 20 Nov). Offered: as small as its content, never scrolls (recommended); small and may scroll; keep 80% of the screen. He wrote: "80% of the autocad open window not screen in entirety or we can do a better system of like one for laptop one slightly bigger for desktop". Room's reading (mine): D-065 is corrected by him: the 80 per cent was of the AutoCAD window, not the whole screen; and he is open to a better way, two set sizes, one for a laptop and a slightly bigger one for a desktop. Not one pick. The room's recommendation (only as big as its content) is not taken. A picture of the two sizes on a laptop and a desktop is owed. Scrolling was not answered.
+
+## Batch 9, Fri 20 Nov 2026, 12:20 (clock read), through the question window
+
+**TR-034** (unknown U-014; "next free number"; example, P1 to P5 on the plan, P3 erased, a new pit placed). He picked: "P6: highest plus one (Recommended)". An erased number is never handed out again by itself; the Renumber button (D-075) closes gaps when asked. Closes U-014.
+
+**TR-035** (unknown U-018; a pit dropped on a loose pipe end). He picked: "Yes, join it and trim (Recommended)". A pit placed on, or within its own outline of, a loose pipe end joins that pipe; the pipe is trimmed to the pit wall and its label updates. Same rule as D-270 for a dragged pipe end. Closes U-018.
+
+**TR-036** (unknown U-053; a pit moved with pipes on it, so a pipe's length changes; example, 10.0 m at 1 in 100 with both levels typed, then the pit moved 2 m further away). Offered: typed levels stay and the grade changes (recommended); the grade always stays; nothing changes, flag it. He picked none and wrote: "window opens to select one or the other and how it will transpire down the system if it exists". Room's reading (mine): when a move changes a pipe's length, a small window opens and he chooses which gives, the levels or the grade; the window shows what each choice does to the rest of the system downstream, where there is one. Not said: whether this window also opens after AutoCAD's own MOVE (which runs with no window of ours), what it opens with, and what happens if he cancels it. A picture is owed: added as U-113. U-053 stays open until that picture is answered. **Possible clash to flag:** R-41 ("No 'Are you sure?'") and the edit doorway D-348 (an AutoCAD MOVE is finished in one go); a window in the middle of a MOVE must be shown to work as one Undo.
+
+**TR-037** (unknown U-054; a pipe moved on its own, away from its pits). He picked: "It comes off, 'not joined yet' (Recommended)". The pipe moves where he puts it, lets go of both pits, reads "not joined yet", and its label and levels go with it; dragging an end back onto a pit joins it again; one Undo puts it back. Closes U-054.
