@@ -1,6 +1,6 @@
 # Verdict: the night scripts as they stand on main (22993fa)
 
-**Verdict: HOLD. Not safe to run tonight as they stand.** Written Fri 20 Nov 2026, 11:24 am, by the check room. Checked on the bench, by reading; nothing here says anything works in AutoCAD.
+**Verdict: HOLD. Not safe to run tonight as they stand. Seven blockers (four from the honest check, three more from the adversarial pass, section 8).** Written Fri 20 Nov 2026, 11:24 am, by the check room; added to at 11:30 am. Checked on the bench, by reading; nothing here says anything works in AutoCAD.
 
 **What was checked.** Everything in `acad\night_scripts` on the main line of `C:\CE_CIVIL` at 22993fa, against rule 1.9 in full, the D-160 exception, Tim's hours, the stop flag and his switch file. Asked by the control room after the AutoCAD test room found gaps.
 
@@ -54,6 +54,14 @@ Kept in `FOLLOW_UP\night-scripts.md` (11 items). The one that matters most for S
 
 That check read the round-2 changes only and its verdict on those changes stands. It was not a check that the scripts as a whole are safe to run, and the four blockers sit in lines that change did not touch.
 
-## 8. Adversarial pass (Codex gpt-6.2-astra)
+## 8. Adversarial pass (Codex gpt-6.2-astra, by reading; landed 11:26 am)
 
-Not yet landed at 11:24 am. To be added here.
+Full report: `C:\CE_WORK\check\reports\night-main_adv_REPORT.md` (12 items it calls blockers, 12 follow-ups). It ran none of the scripts; one proof file of 31 text-and-number comparisons, 31 as expected. It confirms blockers 1 to 4 above. Graded by the check room under D-346 and the control room's instruction, THREE MORE ARE BLOCKERS, so the count is seven:
+
+5. **A damaged record can pass the "is it ours" check.** `ce_safety.ps1:112, 116`: if the record file is readable but its process number or start time is not a number, the comparison errors and the refusal on that line is skipped; the check carries on to "ours". Shown in the proof file for Windows PowerShell. Also: the record's place can be pointed elsewhere by a setting (`:32`), and nothing ties a record to the run that wrote it. Kind: breach of a hard limit (acting on an AutoCAD not shown to be ours). The fix must check every field before trusting any, and refuse on any error.
+6. **The close-without-saving knows the test drawing by its short name only.** `ce_safety.ps1:184-190`: any active drawing called `open_me.dwg`, from any folder, with unsaved work, is closed with saving switched off; so is the real test copy if a person has edited it. `ce_launch.ps1:3, 8` accepts any drawing path. Kind: an edit that could lose drawing content. The fix must know the full path of the test copy before opening and again before any send or close.
+7. **Quit and force take every drawing open in that AutoCAD.** `ce_safety.ps1:301-308, 320-335`: only the active drawing's title is looked at; the quit helper skips the drawing check altogether (`:183-191`). A second drawing opened in the test AutoCAD (a double-click at night lands there) is lost unsaved. Kind: an edit that could lose drawing content. The fix must count the open drawings and refuse an application-wide close, quit or force when any drawing other than the test copy is open.
+
+**Graded follow-up, not blocker (added to `FOLLOW_UP\night-scripts.md` as items 12 to 19):** a licence or sign-in page inside a window with an ordinary title is not seen; a window can appear between the last check and the act; "still running" is treated as "jammed" (a busy PC or lost foreground can end in a force on a healthy test AutoCAD, which D-160 allows only for a jam or crash); no list of allowed commands; record, note and log paths are not confined to the test folders; the shared helpers can be called with fewer checks than the top scripts; a command error is reported as success; a stopped step can leave its sender alive.
+
+**Tests:** the adversarial pass also shows the existing tests can stay green with guards missing, including one assertion that accepts incomplete text (`test_safety.ps1:272`).

@@ -14,4 +14,15 @@ Non-blockers, kept so they are not lost. From the honest check of main at 22993f
 10. **The Melbourne time in the note falls back to the PC's own clock** (`ce_safety.ps1:166`). Harmless in a note; must not be copied into the hours check.
 11. **Retired callers** under `C:\CE_WORK\civil_tests` (five files ending `.ps1.retired`). Two of them (`night_1119b`, `night_1119c`) do not go through the safety script at all and take the active AutoCAD directly. They must never be renamed back. No live caller and no scheduled task was found.
 
+**Added from the adversarial pass (Codex gpt-6.2-astra, `C:\CE_WORK\check\reports\night-main_adv_REPORT.md`), 11:30 am:**
+
+12. **A licence or sign-in page inside a window with an ordinary title is not seen** (for example a browser-style host titled "Welcome"); the window title is read to 255 characters only; a window whose owner cannot be named is treated as blank (`ce_safety.ps1:39-44, 65-86`). Which host a real sign-in screen uses is not proven.
+13. **A window can appear between the last check and the act** (`ce_safety.ps1:320-323, 332-335`); the sender helpers make no licence or stop check of their own (`:180-196`).
+14. **"Still running" is treated as "jammed".** A busy-PC refusal, lost foreground, a failed send or a timeout all go to the close ladder, which can end in a force on a healthy test AutoCAD (`ce_pass.ps1:48-51, 57-60, 74-80`; `ce_safety.ps1:309-335`). D-160 allows a force only for a jam or crash. The normal close's own answer is thrown away (`:323`).
+15. **Record, note and log paths are not confined to the test folders** (`ce_safety.ps1:32, 90-100, 163-167`; `ce_pass.ps1:13, 18, 40`): a wrong setting could clear or append to an unrelated file.
+16. **The shared helpers can be called with fewer checks than the top scripts** (`ce_safety.ps1:175-191, 205-209, 224-253`): the quit path checks only a supplied process number.
+17. **A command error is reported as success** (`ce_safety.ps1:189-200`; `ce_netload.ps1:33-35`): the sender waits for an idle command line and never reads whether the command was known or what the plug-in's own test report said. A night "pass" can therefore be green with nothing proven: matters for the AutoCAD test room's pictures.
+18. **A stopped step can leave its sender alive** (`ce_pass.ps1:21-29`; `ce_safety.ps1:205-219`). Not proven live.
+19. **The NETLOAD path is a shared staging folder** (`ce_netload.ps1:33`); nothing checks it holds the build under test. Two staged plug-in files there differ and neither is shown to be main's build.
+
 **Not checked by anyone yet:** where the plug-in's own test commands save to (`src/CeCivil.Acad/AcadHost.cs:74` and four others); what AutoCAD itself writes to Tim's profile when a test AutoCAD exits.
