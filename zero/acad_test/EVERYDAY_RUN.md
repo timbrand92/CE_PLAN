@@ -14,6 +14,9 @@
 6. **The test drawing** is made fresh each night from `C:\CE_WORK\civil_tests\templates\office_master_copy.dwg` (office blocks and layers). Never a real job. No client names, addresses or job numbers in any drawing, picture or file name.
 7. **Marking:** PASS only when the picture shows every "must be seen" point. FAIL says in words what the picture shows instead. NOT RUN gives the reason. A step is never marked from a log line alone.
 
+8. **A "sent" line proves nothing** (check room, 20 Nov: the sender reports a command as sent even when AutoCAD did not know the word). Every step is marked from its picture and the plug-in's own result file, never from the pass line.
+9. **The build under test is proven, not assumed** (check room, 20 Nov: the staging folder NETLOAD reads holds two differing plug-in files, neither shown to be the main line's). Each night the page gives the commit built, and the file fingerprint (SHA256) of the plug-in file that was loaded beside that of the file just built. If they differ, or the staging folder was not filled by that night's own build, every step is NOT RUN.
+
 ## 1. The steps
 
 Pictures go to `C:\CE_WORK\civil_tests\pictures\<date>\` under the names given. "Window" pictures are of the window as it opens; "drawing" pictures are of the drawing area after the step.
@@ -26,7 +29,7 @@ Pictures go to `C:\CE_WORK\civil_tests\pictures\<date>\` under the names given. 
 
 2. **Load the new plug-in.**
    - **Do:** NETLOAD of the night's build.
-   - **Must be seen:** the command line shows it loaded, with no error text.
+   - **Must be seen:** the command line shows it loaded, with no error text, and the plug-in's own line naming its build, which matches the commit under test (rule 9).
    - **Picture:** `02_loaded.png`.
    - **PASS:** loaded, no error. **FAIL:** any error line or a security box.
 
