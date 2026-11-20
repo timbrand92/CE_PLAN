@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-195.
+**Next number:** TR-199.
 
 ---
 
@@ -497,3 +497,13 @@
 **TR-193** (N-090; a pipe's label after a move turns or lengthens the pipe). He picked: "Placed again by the rules (Recommended)". A label he never moved is placed again by the placing rules; a label he moved by hand keeps its offset, turned with the pipe (D-014, D-181).
 
 **TR-194** (N-093; U while clicking a run). He picked: "It steps back one click, as PLINE does (Recommended)". Nothing is drawn yet, so nothing is undone on the plan. (After OK, one Undo takes back the whole run, D-324.)
+
+## Batch 48, Fri 20 Nov 2026, 16:58 (clock read), through the question window, one line per question. Sources: `stage6/SPEC_PIPE.md` section 12 items 95, 103, 106.
+
+**TR-195** (N-091; TRIM, EXTEND and BREAK on a pipe). He picked: "Read the pipe again and carry on (Recommended)". After any of these the tool measures the pipe as it now is; length, label and levels follow; an end trimmed off a pit lets go ("not joined yet"); an end extended into a pit joins; a pipe cut in two by BREAK becomes two pipes, the second with its own number and label; one Undo.
+
+**TR-196** (N-091; FILLET, JOIN, OFFSET and PEDIT on a pipe). He picked: "Allowed where it makes sense; said once (Recommended)". JOIN of two pipes end to end makes one pipe with a bend; FILLET with radius 0 the same; a rounded fillet is refused (pipes have no curves, TR-028); OFFSET makes a new loose pipe with the same figures, as COPY does (TR-057); a width changed by PEDIT shows "typed 100, now drawn 150" (TR-046); each says what it did on the command line.
+
+**TR-197** (N-097; what the window says about cover when "what is over it" is not known). Offered: grey "Cannot check yet" with the depth as a plain figure (recommended); say nothing about cover; check against the garden figure. He picked: "Say nothing about cover". Not the recommended answer. With nothing set for what is over the pipe, the window does not mention cover at all (it fits TR-063: "a minor feature ... simply a check"). **This changes the Pipe window he approved from the picture:** the band's second answer "Depth over pipe: Not known" and step 2's "What is over it: Not known" line come off when nothing is set. The grey band (TR-111) still stands for other not-known answers, such as levels.
+
+**TR-198** (N-098; whether cover is checked at a bend). Offered: at each end, each bend and each point he adds (recommended); at the two ends only. He picked: "At the two ends only". Not the recommended answer. Cover is checked at the two pipe ends, and at any surface point he adds (TR-062); a bend is not a check point by itself. **To flag:** root cause C9 ("at a bend, 240 mm cover must remain visible even with 300 mm at both pits") and the design D-349 expected a check at each bend; by his word it is not made unless he adds a point there.
