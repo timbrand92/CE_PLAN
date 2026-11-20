@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-159.
+**Next number:** TR-163.
 
 ---
 
@@ -407,3 +407,13 @@
 **TR-157** (unknown U-142, C1, the draft D-392: in Stage 1 a pit's depth is never typed or held; cover is typed, the invert comes from the pipes, depth is worked out). He did not pick an option and wrote: "FOR SILT PITS THE DEPTH IS DEEPERE THAN THE LOWEST OUTLET". NOT a yes to the draft. Room's reading (mine): he is giving the case the draft breaks on: a silt pit has a sump, so its depth is deeper than its lowest outlet and cannot be worked out as cover level minus outlet invert. Silt pits are a later kind (D-104) and are not in the Stage 1 list (TR-052), so for junction, grated and plastic pits the draft may still hold; but depth must not be built as something that can ONLY be cover minus outlet invert, or silt pits will not fit later. U-142 stays open; to put back to him as: for the three Stage 1 kinds depth is worked out; a sump depth below the outlet is a typed figure that comes with the silt pit.
 
 **TR-158** (unknown U-143, C2, the draft D-399: the words when cover is short). He picked: "Yes, that wording (Recommended)": "Short by 3 mm at P3, Pipe 7 (P4 to P3): cover 297 mm, needs 300 mm." The same sentence in the window, on the amber marker's hover and in any list.
+
+## Batch 39, Fri 20 Nov 2026, 16:28 (clock read), through the question window, one line per question
+
+**TR-159** (unknown U-142, the draft D-392, put back after TR-157). He picked: "Yes for these three; a sump comes with the silt pit (Recommended)". For junction, grated and plastic pits the depth is the cover level minus the lowest outlet, worked out and shown, never typed; the tool is built so a pit CAN carry a typed sump depth below its outlet, and that box appears when silt pits are added. Confirms D-392 for the three Stage 1 kinds, with the door left open for silt pits.
+
+**TR-160** (the room's reading of TR-016 against TR-147, put to him). He picked: "Yes: label on a pointer, the others flagged (Recommended)". A PIPE LABEL with no clear spot is set off on a pointer; an invert level, a pit number or a cover level with no clear spot stays in its first spot with the amber marker.
+
+**TR-161** (unknown U-144, the draft D-401 first call: the amber marker's own layer and its name). Offered: "CE NO PLOT" (recommended); "CE MARKERS"; DEFPOINTS. He picked: "'CE NO PLOT' (Recommended)". One CE layer, set not to plot, for everything the tool shows on screen but never prints: the amber markers now, other on-screen-only marks later. This also names the CE no-plot layer left open by D-275.
+
+**TR-162** (unknown U-146, the draft D-401 third call). He picked: "One marker per part, listing every reason (Recommended)".
