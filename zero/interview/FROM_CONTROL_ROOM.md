@@ -74,3 +74,7 @@ The night robot's safety guards (56 of 89) have never been proven by taking each
 
 ## N. Added 6:30 pm (D-421): Pit window drafts to confirm with Tim, one by one
 1. Renumber refused whole when a joined pit is on a locked, off or frozen layer (naming it). 2. The pit being placed takes part in Renumber, its final number shown before OK. 3. A cover typed to three places (5.755) is kept and used exact; the plan shows 5.76. 4. "P04" is P4. 5. A pit size with no depth limit in the office list shows grey "Cannot check yet: no office limit for this size" (and: does he want limits for those 19 size pairs?). 6. Plastic then back to Junction keeps the size he had. 7. Neighbours on off or frozen layers are hidden in the plan panel but still count. 8. "600 by 900" typed as words is accepted.
+
+## O. Added 7:41 pm (D-425, D-426): for Tim on his return
+1. TELL HIM (the control room's error): the shortfall sentence he confirmed used "cover 297 mm, needs 300 mm", which is within the 5 mm tolerance and so a pass. The form stands; the example is now "Short by 12 mm at P3, Pipe 7 (P4 to P3): cover 288 mm, needs 300 mm."
+2. ASK, one by one: top of pipe for the cover check (draft: invert + inside size + one wall; 100 UPVC outside size 110) and the class of 100 UPVC; settings limits (more than 0, at most 10,000 mm); a drawing's own value staying when the office value changes; his saved material winning over the size rule; a changed tolerance re-checking pipes at their next edit.
