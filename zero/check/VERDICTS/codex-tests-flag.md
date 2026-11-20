@@ -1,6 +1,6 @@
 # Answer: the flag marker test list (the amber no-plot marker), codex/tests-flag at 3189f66
 
-**Answer: HOLD THE LIST. Eight reasons.** Written Fri 20 Nov 2026, about 3:40 pm, by the check room. Checked on the bench only. First answer on this list.
+**Answer: HOLD THE LIST. Eight reasons.** Written Fri 20 Nov 2026, about 3:32 pm, by the check room. Checked on the bench only. First answer on this list.
 
 **Who checked.** Honest check: Team helper, Claude Opus 5.5: `C:\CE_WORK\check\reports\flag_honest_REPORT.md`. Adversarial pass: Codex gpt-6.2-astra: `C:\CE_WORK\check\reports\flag_adv_REPORT.md`, proofs in `flag_adv_proofs\` (its first run was cut off by a restart of the check room's chat and run again from its kept proofs). A product cheat turned all 685 tests green with a triangle on a plotting layer and no warning beside an ordinary undersized pipe. They agree; graded here.
 

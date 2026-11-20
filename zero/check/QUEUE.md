@@ -65,7 +65,7 @@ ight-scripts.md`. Ruled by the control room as D-364 items 1 to 10: the fix (tea
 16. **codex/c11-tests at ad01f9d: HOLD THE LIST (second answer), about 3:10 pm.** Four reasons; one fix round left. Second answer at the foot of its page.
 17. **The A7 test list, codex/tests-a7b 893e54c (fix on codex/tests-a7-clean bafd6fb): HOLD THE LIST, about 3:10 pm.** Nine reasons. Its own page.
 
-18. **codex/tests-flag at 3189f66 (the flag marker test list): HOLD THE LIST, about 3:40 pm.** Eight reasons (amber never checked and the office layer is grey; the marker can print; it can be anywhere; two pits can still show one number; his own wording lost on open and Cancel; the clear targets expect the whole marker layer empty; the opposite words pass; the bench's window, not the command's). Its own page.
+18. **codex/tests-flag at 3189f66 (the flag marker test list): HOLD THE LIST, about 3:32 pm.** Eight reasons (amber never checked and the office layer is grey; the marker can print; it can be anywhere; two pits can still show one number; his own wording lost on open and Cancel; the clear targets expect the whole marker layer empty; the opposite words pass; the bench's window, not the command's). Its own page.
 
 ## 5. Look log (the check room's own look at the branches, every 20 minutes)
 
