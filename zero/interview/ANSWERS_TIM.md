@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-135.
+**Next number:** TR-139.
 
 ---
 
@@ -347,3 +347,13 @@
 ## Fri 20 Nov 2026, about 3:15 pm (PC clock), typed in the chat straight after batch 32
 
 **TR-134** His words: "building is in xref and the green line with the hatch is the impervious area, so no clash with green line is ideal, check old jobs". Room's reading (mine): (1) a fact: on his jobs the building is inside the architect's xref; (2) the green line with the hatch on his plans is the impervious area, drawn by the office; (3) a label should ideally not sit on that green line, so it counts as "in the way" (adds to TR-133); (4) an instruction to the room: check old jobs for how this is drawn. Checked so far: the drafting study of three issued jobs (`evidence/STUDY_A_CIVIL_DRAFTING_ANATOMY.md`) does NOT record an impervious-area layer or its green line. A research helper is now looking at the office's issued sheets and legend. Added as U-132.
+
+## Batch 33, Fri 20 Nov 2026, 15:23 (clock read), through the question window, one line per question. Sources: `stage6/SPEC_PIT.md` section 10 items 49, 64, 61, 70.
+
+**TR-135** (N-061; which corner the cover level tries next, and what the 400 mm is measured between). He picked: "Clockwise; 400 mm from the pit's outer corner to the start of the text (Recommended)". Top right, bottom right, bottom left, top left; the 400 mm (a setting, TR-014) is the clear gap from the corner of the pit's outer dashed line to the nearest end of the text.
+
+**TR-136** (N-066; a cover level typed over by hand on the plan; example, "CL 12.95" retyped "CL 13.10"). Offered: the pit's level becomes 13.10 (recommended); his words are kept and flagged, as for a pipe label. He picked: "The pit's level becomes 13.10 (Recommended)". Retyping the text sets the level, the same as typing it in the window (as retyping a pit number renames the pit, D-185); the window then shows it as typed by him. If what he typed is not a level, his words are kept and the amber marker shows. **Note:** this differs from D-185's second half ("levels and grades are never changed by editing their text") for the COVER level; to flag.
+
+**TR-137** (N-089; a plastic pit stretched bigger by its grip). He picked: "It becomes a junction pit, said once (Recommended)". The kind changes to Junction, the "PP" text changes to a number and cover level, the command line says so once; one Undo puts it back.
+
+**TR-138** (N-092; MIRROR with "erase source: Yes"). He picked: "They keep P1 to P4 (Recommended)". The same pits flipped in place keep their numbers, levels and joins; their text is re-placed to read properly (TR-056).
