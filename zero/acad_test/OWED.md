@@ -3,7 +3,7 @@
 **Kept by:** the AutoCAD test room ("CE_ACAD / acad test / 01"). **Started:** Fri 20 Nov 2026, 11:30 am.
 **Rule (D-346, added 20 Nov):** a fix may merge on its bench tests and one honest check; it is "proven" only when its owed list here has passed in AutoCAD, in pictures.
 **States:** OWED (not yet run) · PASS (date, picture) · FAIL (date, picture, what was seen) · SEEN (no ruling yet, put to Tim) · WAITS (its work is not on the main line) · PARKED (off the release).
-**Count on 20 Nov, 1:45 pm:** PASS 0 / FAIL 0 / OWED 14 / WAITS 103 / PARKED 1 (of 118; one item struck). Thirteen check-room verdicts received, all HOLD or held. **First in line when testing is allowed: shaped grips (section FIRST).** Three check-room verdicts received, all HOLD: the night scripts on the main line (section F), the pipe's opening size (section G) and the windows (section H).
+**Count on 20 Nov, 1:45 pm:** PASS 0 / FAIL 0 / OWED 14 / WAITS 105 / PARKED 1 (of 120; one item struck). Thirteen check-room verdicts received, all HOLD or held. **First in line when testing is allowed: shaped grips (section FIRST).** Three check-room verdicts received, all HOLD: the night scripts on the main line (section F), the pipe's opening size (section G) and the windows (section H).
 
 ## FIRST. Shaped grips (D-407, Tim, TR-166: "No: I want shaped grips before I draft"): the first thing proven on the first night testing is allowed
 
@@ -119,6 +119,11 @@ Nothing of this is shown until the fix merges. All ten WAIT. They expand items A
 58. **I-9 "TEST SWITCH ON" shows on the command line.** WAITS.
 
 **Picture rule from this verdict:** a copy of AutoCAD's own window shows the file tabs and command-line history of Tim's profile. This room looks at every picture before it leaves the PC; pictures never go into a repository.
+
+**Added 20 Nov evening (D-423 item 3; check room: NOT PROVEN BY READING, `check\VERDICTS\team-acad-pictures2.md` section E item 3). For AFTER the gate; numbered out of order because they were filed late.**
+
+120. **I-10 What AutoCAD's own view picture shows while a plug-in window sits over the drawing:** the drawing behind it, the window too, or nothing. Shown in the first PT in Cancel mode. WAITS.
+121. **I-11 Whether the plug-in's window timers run while its window is open** (the self-cancel after about 20 seconds depends on it): the window lets go by itself and AutoCAD goes idle. WAITS.
 
 ## J. From the check room's verdict on draw first, window second (team/a6-draw-first: HOLD; `check\VERDICTS\team-a6-draw-first.md` section 7)
 
