@@ -56,3 +56,29 @@ PT, Renumber, click the lowest pit of one of two runs, OK: only the joined pits 
 5. **Plastic then back to Junction:** the size he had.
 6. **Off or frozen neighbours** are not shown in the plan panel, and still count for joins and numbers in use. **A pit in an xref is never looked at:** no Match from it, its number not counted.
 7. **"600 by 900", "600x900" and "600 x 900" are all accepted.**
+
+
+---
+
+# Second verdict: team/a3b-pit-window at fa127bd (fix round one)
+
+**Verdict: HOLD; fix round two (the last) follows, and it is built together with the pit levels page (D-436), which already answers several of these.** Written Sat 21 Nov 2026, about 12:31 am. Checked on the bench only. This tip does NOT contain the rounding branch (D-432), checked.
+
+**Who checked.** Honest: one Claude helper on Sonnet (D-434): `C:\CE_WORK\check\reports\a3b2_honest_REPORT.md`: HOLD on one blocker. Adversarial: Codex gpt-6.2-astra: `C:\CE_WORK\check\reports\a3b2_adv_REPORT.md`, proofs in `a3b2_adv_proofs\`: HOLD. Of the six original blockers: CLOSED the lowest known outlet with its sump, and covers of 1,000 m and over; PARTLY the other four.
+
+## 8. Blockers
+
+1. **The depth is cut off at 1000 by 620 with many pipes** (both halves): four pipes in and four out (or seven pipes, or four in plus a refused number): step 3 loses its outlet and "= Depth" rows and the size pictures; step 2 grows a line per pipe without limit and the cards cannot scroll (`src/CeCivil.Window/Parts/Std/StdSteps.cs:762-775`). The desktop size was whole in all 24 combinations. (A cut-off at an approved size, D-346; the control room may rule how many pipes is ordinary.)
+2. **Clearing an existing pit's cover leaves the old level on the drawing:** clear 12.82 with the tick on and press OK: the record loses the level and the preview says "CL TBC", but the drawing still reads "CL 12.82" (`src/CeCivil.Hands/Pit/PitTool.cs:300`). On a new pit with the cover blank, no "CL TBC" is drawn at all (D-392).
+3. **Renumber can leave a duplicate number:** with separate pits P7 and P01, renumbering from P7 ends with P1 and P01; a bare "1" escapes the check too (D-401 item 6, D-428 item 1).
+4. **Renumber can leave a partial edit:** a write that fails after the checks pass leaves the new pit P99 behind (one Undo, all or nothing: D-348).
+5. **Paste repeats an occupied number:** pasting into a drawing holding an older pit named "p1" or "1" gives a new P1 (D-428 item 2; with P1 or P01 it rightly gives P2).
+6. **Printed working can still be false:** 5.754 over 5.246 prints "5.75 − 5.25 = 0.51", whose printed figures make 0.50 (D-421 item 2; the pit levels page's group 8 names exactly this).
+
+## 9. To fix in the same round
+
+An outlet above an inlet on a mixed branch shows only amber, not red; a pit over its office depth limit reads amber (`checks.csv:63`); a refused cover shows "Not known" where "Cannot check yet" is due; the new pit and its final number are missing from the Renumber preview; at two forks the farther branch numbered before the nearer one (D-421 item 1, draft).
+
+## 10. For the control room
+
+1. **How many pipes is ordinary for the Pit window at laptop size?** Recommended: the window must stay whole at 1000 by 620 for any number of pipes (step 2 lists the first few and says "and N more", or the cards share the space), since a pit with eight pipes is rare but real.
