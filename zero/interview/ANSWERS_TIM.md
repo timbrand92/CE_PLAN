@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-022.
+**Next number:** TR-026.
 
 ---
 
@@ -59,3 +59,13 @@
 **TR-020** (unknown U-032 and U-078; which way the arrow points when the tool cannot tell; example, a pipe clicked from the back downpipe toward the street pit with no levels). Offered: the way I drew it (recommended); against the way I drew it; no arrow until it is known. He wrote: "the way i drew it but with additional ability in edit window to reverse the flow and arrow, but it could also be smart and understand which way the water is flowing and adjust flow and arrow to suit but remember we wont alwys be drawing into the system so it wont always be perfect if you get my drift". Room's reading (mine): (1) flow, and the arrow, follow the way he drew the pipe: first click is the top, last click the bottom; (2) the edit window has a way to reverse the flow, and the arrow turns with it; (3) the tool may work the direction out itself where it can (levels, a joined outlet) and adjust, but he does not rely on it, because a pipe is often drawn before it is joined to a system; so it must never fight a direction he has set. Whether a direction he reversed by hand is then held against the tool's own working is not said (room's proposal: yes, held, as any typed-over figure is). Fits D-271 DQ-028 ("as drawn, not settled", a quiet "Turn round" offer).
 
 **TR-021** (unknown U-106; a pipe with less text; the room's proposal was that each piece keeps its own spot and the label is switched off by a tick). He wrote: "as per my last question or did that not answer this". Room's reading (mine): he means his answer in TR-019, "if pipe label is off then arrow takes the pipe labels system". So the room's proposal ("nothing shuffles into the empty place") is NOT taken for the arrow: with the label off, the arrow moves to the label's spots. The invert levels are not mentioned and are read as staying where they are. The tick that switches the label off was not confirmed in words. The room's miss: this was asked twice.
+
+## Batch 6, Fri 20 Nov 2026, 11:55 (clock read), through the question window (pipe size; four cases raised by the check room, sent by the control room). Before it he typed: "keep the interviews coming".
+
+**TR-022** (unknown U-028; a new pipe leaves pit P4 where a 150 and a 100 both run in). Offered: the biggest pipe arriving (recommended); the last size I drew; always the office default. He wrote: "the biggest arriving, but in some cases like under a garage we normally sleeve a 100dia. in a 150 upvc how do we handle this, check for drawings like this". Room's reading (mine): the window opens at the biggest size arriving at that pit. NEW: the office sleeves a 100 dia. pipe inside a 150 UPVC under a garage; the 150 there is a sleeve, not the flow pipe, so the size rule must not treat it as a 150 feeding a 100. How a sleeved pipe is drawn, labelled and stored is not ruled: added as U-111, with research owed ("check for drawings like this"). Closes U-028.
+
+**TR-023** (unknown U-108; a 150 runs into P4 and he types 100 for the pipe leaving it). He picked: "Draw it, amber 'Needs a look' (Recommended)". Drawn as typed; the window says it is smaller than the 150 running in; never blocked. Closes U-108.
+
+**TR-024** (unknown U-048; the top pipe of a run of 100s is changed to 150). He picked: "Offer once, then flag (Recommended)". The window offers once to make the pipes downstream 150 too; Yes changes them and their labels in the same Undo; No leaves them, each flagged "Needs a look". Closes U-048.
+
+**TR-025** (unknown U-034; a pipe started from a downpipe, a tank outlet or the legal point). He picked: "Office default 100, unless it joins a pipe (Recommended)". Closes U-034 for the opening size (how such an end READS before inlets exist is Stage 2 detail and stays with U-041's neighbours; not asked).
