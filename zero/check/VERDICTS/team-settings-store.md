@@ -134,3 +134,49 @@ ONE bounded edit of exactly the three items of section 16, with one addition: th
 2. **(a) Levels: the sum is right, the window is not:** with an older pipe note at 17 mm and the drawing at 5 mm, Levels now works 290 against 300 as Wrong and prepares the "older note not used" line once, but the window then stops on "unused pipe 1" before showing either (the same fault on 83d1559: it predates the edit, but the drafter still sees no verdict).
 3. **The new source test misses all three ways tried:** a literal 5 written into the cover rules turned a valid 11 mm Suits into Wrong; a second settings key (`cover_margin_mm`) let Levels announce 5 mm and pass the shortfall at 17 mm; an optional method parameter defaulting to 5 mm made Levels announce 11 and judge at 5. The test passed each altered copy; it catches only a literal in the named tolerance sum. Its caller list also leaves out four uses of the Job edit the store returns (preview, commit, refusal text, save).
 4. **What the design page must settle (recommended):** the store as the ONLY holder of the tolerance, proven by what the source test forbids (any tolerance-like number or key outside the store, in code, data and defaults) rather than by a list; the Levels one-pipe window showing its verdict; the four acceptance cases above.
+
+---
+
+# The rebuilt store: team/settings-store2 at 1cf1b53 (from SETTINGS_STORE.md 0ce96da), first round
+
+**Verdict: HOLD. Both halves hold it.** Written Sat 21 Nov 2026, about 9:57 am. Both halves ran on Codex under D-441, with the four outside-reading test classes excluded:
+- **Honest half:** gpt-6.2-sol. Report: `C:\CE_WORK\check\reports\ss2_honest_REPORT.md`, evidence in `ss2_honest_evidence_1cf1b53\`.
+- **Adversarial half:** gpt-6.2-astra. Report: `ss2_adv_REPORT.md`, with proofs in `ss2_adv_proofs\`.
+
+The first launches died on the Codex runner fault (8:07 to 8:17 am) and were relaunched. The adversarial half's whole build stopped at the missing AutoCAD package; the other ten projects compiled.
+
+**What works:**
+- **The ordinary case:** 290 against 300 gives "Wrong, Short by 10 mm" at 5 mm and Suits at 11 mm.
+- **The old 17 mm note:** it is ignored.
+- **The renamed controls:** the six renamed controls are honest successors under named rulings (T7, T12, T13, T14, Job, "CL TBC").
+- **The builder's claim:** the "43 again" claim mostly replays (41 by the same name, plus the renamed ones).
+
+## Blockers
+
+1. **A real clash shows as zero in Pipe** (honest half).
+   - **The case:** at a saved tolerance of 0 mm, held inverts 5.300 and 5.204 over 10 m at 1 in 100 give a 4 mm clash. The solver says 4 mm, but the Pipe headline reads **"Out by 0.00"**.
+   - **The cause:** the window re-formats the metre figure to two places itself, at `bench/CeCivil.Bench.Core/WindowModel.cs:332` and `windows/pipe.csv:35`, instead of using the rounding owner. Rulings: D-350, D-432.
+2. **The source test misses swapped figures** (both halves). Each of these passed it:
+   - a renamed helper using 75 mm after the approved 83 mm placement read (`PipeTool.cs:628`);
+   - 17 mm substituted at the final cover comparison while the checker still returns 5 mm to the window (`Checks.cs:521`); 290 against 300 then wrongly passes;
+   - a second write to the notice turning 5 mm into 17 mm;
+   - one assignment capping the allowance at 17 mm (`Checks.cs:503`): 282 against 300 at a saved 20 mm then reads Wrong while still reporting 20 mm, and all 2,205 branch passes still pass;
+   - a 17 mm record field: 290 against 300 shows Suits while the grey line says 5 mm.
+
+   The test at `SettingsSourceAudit.cs:242, 269` follows only named references in selected methods. Rulings: D-419 item 7, D-439 item 4, D-440 item 2, page cases 2-4 and 7-9.
+3. **A mislabelled office row still works instead of stopping the tool** (adversarial half).
+   - **The case:** swap only the captions of the office diameter and tolerance rows. Typing 150 beside "levels and cover tolerance" then made new pipes 150 mm wide with 150 mm labels, while the tolerance stayed at 5 mm.
+   - **Related:** unrelated text in the tolerance row's ruling and status fields still gives a verdict.
+   - **The cause:** the validator only checks that words exist; the editor shows the captions but saves by the setting's identity. Files: `OfficeSettings.cs:165`, `CeSettingsWindow.cs:81, 114`. Ruling: D-425 item 1.
+4. **Pipe hides the decided cover verdict** (adversarial half).
+   - **At 11 mm:** both cover checks return Suits and the grey line says 11 mm, but no visible Pipe text says Suits. The card keeps up to two adverse results from other checks.
+   - **With cover missing:** neither window shows the required "Cannot check yet" cover answer.
+
+   Files: `pipe.csv:64`, `WindowModel.cs:1938`. Rulings: page cases 1 and 7, D-439, D-440.
+5. **One-pipe Levels treats an ordinary end pit as the council connection** (honest half).
+   - **The case:** in a drawing of two pits and one pipe, the downstream pit is drawn as a council connection, and its worked 5.21 m invert is called "given" in the preview.
+   - **Why it matters:** if the drafter holds that field, OK writes it back as the last pipe's invert. The model makes the last object the connection without checking.
+   - **Rulings:** D-350, D-413, and the page's "real parts and sources". This predates the branch, but the branch's new one-pipe path reaches it.
+6. **A test that passes on main fails here** (both halves). `StyleKitTests.Every_part_and_the_sample_window_keep_their_layout_facts_from_the_tokens` still expects the old "0.12" wording, where the window now correctly shows 120 mm. Restate it to the ruling (D-440), or fix it.
+
+**Next:** each item comes over as a failing test first, in round 1 of 2.
