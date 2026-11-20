@@ -3,7 +3,7 @@
 **Kept by:** the AutoCAD test room ("CE_ACAD / acad test / 01"). **Started:** Fri 20 Nov 2026, 11:30 am.
 **Rule (D-346, added 20 Nov):** a fix may merge on its bench tests and one honest check; it is "proven" only when its owed list here has passed in AutoCAD, in pictures.
 **States:** OWED (not yet run) · PASS (date, picture) · FAIL (date, picture, what was seen) · SEEN (no ruling yet, put to Tim) · WAITS (its work is not on the main line) · PARKED (off the release).
-**Count on 20 Nov, 1:45 pm:** PASS 0 / FAIL 0 / OWED 14 / WAITS 73 / PARKED 1 (of 88; one item struck). Nine check-room verdicts received, all HOLD or held. **First in line when testing is allowed: shaped grips (section FIRST).** Three check-room verdicts received, all HOLD: the night scripts on the main line (section F), the pipe's opening size (section G) and the windows (section H).
+**Count on 20 Nov, 1:45 pm:** PASS 0 / FAIL 0 / OWED 14 / WAITS 81 / PARKED 1 (of 96; one item struck). Nine check-room verdicts received, all HOLD or held. **First in line when testing is allowed: shaped grips (section FIRST).** Three check-room verdicts received, all HOLD: the night scripts on the main line (section F), the pipe's opening size (section G) and the windows (section H).
 
 ## FIRST. Shaped grips (D-407, Tim, TR-166: "No: I want shaped grips before I draft"): the first thing proven on the first night testing is allowed
 
@@ -132,6 +132,17 @@ Nothing is shown until it merges. All eight WAIT. They expand item A-8. This roo
 64. **J-6 Cancel and Escape at each point.** Cancel is typed or pressed through the window's own control; Escape is a key and no key is sent by a robot, so Escape is Tim's hands unless the plug-in raises it itself. WAITS.
 65. **J-7 Every command with the pit, tag, cover and pipe layers locked, off and frozen in turn.** Layer states are changed in the test copy only and it is closed without saving. WAITS.
 66. **J-8 Redo after each Undo.** WAITS.
+
+**Added 20 Nov, about 4:45 pm: second verdict, HOLD again (75290d9 does not compile, so nothing of it can run in AutoCAD).** Eight more, from section F of the verdict; exact steps in `C:\CE_WORK\check\reports\a6r_honest_REPORT.md` section 8 and `a6r_adv_REPORT.md` section 4. All WAIT.
+
+90. **J-9 U once and Redo once after three pits.** WAITS.
+91. **J-10 The Pipe command's Undo,** started from a pit and started from open ground. WAITS.
+92. **J-11 A guide polyline with its own linetype and widths replaced by pipes, then one U brings the same guide back** with that linetype and those widths. WAITS.
+93. **J-12 A cover-only edit of a pit that has a loose pipe end on a locked layer.** WAITS.
+94. **J-13 A 10.490 m main and a branch level, read again after save and reopen** (a saved copy in the test folder). WAITS.
+95. **J-14 Erasing a main that has a branch on it.** WAITS.
+96. **J-15 Enter, Space and right-click each ending PT.** Enter and Space can be typed; a right-click is a mouse act and is Tim's hands. WAITS.
+97. **J-16 Every command during reference editing with nothing picked.** WAITS.
 
 ## K. From the check room's verdict on the held depth (team/held-depth: HOLD; `check\VERDICTS\team-held-depth.md` section 7)
 
