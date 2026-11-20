@@ -12,6 +12,13 @@
 6. **The pipe command never lets him click a run and then draw nothing.** Anything the pipe needs is known, or asked for, before the first click; and what he clicks is drawn.
 7. **Invert levels are written on the plan** at each pipe end when known (D-265), and the pipe label reads as ruled (D-268, D-312), never "unknown DIA".
 
+## A2. Added 20 Nov, about 11:00 am, from Tim's room (D-354 to D-359)
+
+7a. **The order is draw first, window second** (D-354, D-355). PT: click where the pit goes, the Pit window opens for that pit, OK and it goes in, click the next. CD: click a run from anywhere to anywhere with as many bends as needed, or pick a polyline (it is replaced by pipes, D-356), then the window opens knowing the run, OK and the pipes go in; a run through pits splits into one pipe per length. This REPLACES line 6's first wording: clicking before the window is right; what was wrong on 20 Nov is that the window then had no size and drew nothing.
+7b. **Live on the drawing while the window is open** (D-357): the real pit or pipe shows where he clicked and changes as he types; Cancel removes it.
+7c. **Labels land in the right spot; grips stretch and adjust; levels work along the run** (D-359).
+7d. **Every specific settled** (his words: "i need every specific down to a tee before we complete this first stage"): Stage 1 is not complete while any unknown marked "blocks Stage 1" in `UNKNOWNS.md` is open.
+
 ## B. Then the safety and sums work already designed
 
 8. **The edit doorway** (D-348) with the copy rule (D-340): move, copy, erase and undo behave; a locked pipe sends the pit back.
