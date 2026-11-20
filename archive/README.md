@@ -7,3 +7,4 @@
 5. `plugin-docs-july-2026\` — 38 plan, roadmap, handoff and workflow-plan files from the plugin repo's `docs\`, July 2026 era, superseded by V3. Copies; the plugin repo keeps its history.
 6. `lisp-files-root-plans-2026-01\` — the January 2026 plans for rewriting the LISP drainage tools in C#, from `C:\Lisp Files`. Copies.
 7. `previous-plugins\` — the old drainage suite's 94 KB parking lot (4 Jun, may still hold unbuilt ideas), the CE_COMPSHEET structural-toolkit draft (Tim, 19 Sep: dead, archived), and a Claude plan-mode stray from CE2D.
+8. `chat-records-2026-10\` — the ten old holiday desk, Team, release and discussion prompts (25 Sep to 26 Oct 2026), moved out of the plan root and `areas\` on 20 Nov 2026 (Tim: "Rest agreed", `areas\rules.md`). The exact list and what replaced each is in its README.
