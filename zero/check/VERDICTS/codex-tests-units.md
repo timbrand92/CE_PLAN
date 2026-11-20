@@ -45,3 +45,48 @@ The real reader: with the native units reader made to answer millimetres for eve
 4. **DRAFT: the units change while a window is open:** OK closes it, the drawing is untouched, and the command line says why.
 5. **DRAFT: a command with no window** says "treated as millimetres" once per command on the command line.
 6. **The layout-sheet and read-only refusals go in THIS list,** with the edit of an existing part in a refused drawing.
+
+
+---
+
+# Second answer: codex/tests-units at df9d533 (after its fix round)
+
+**Answer: HOLD THE LIST. Six reasons, all the list's own.** Written Fri 20 Nov 2026, about 5:56 pm. Checked on the bench only. Under D-416 the round count restarts from the decisions record at D-416: this answer is the list's baseline; two rounds follow.
+
+**Who checked.** Honest check: Team helper, Claude Opus 5.5: `C:\CE_WORK\check\reports\unitsb_honest_REPORT.md` (hold narrowly, two reasons). Adversarial pass: Codex gpt-6.2-astra: `C:\CE_WORK\check\reports\unitsb_adv_REPORT.md`, proofs in `unitsb_adv_proofs\` (the four saved cheats are all caught now; a new one turned all 104 targets green while an ordinary metre drawing still took a pit, two layers and the office set-up). Graded here.
+
+## 7. Counts seen (the writer's counts are true)
+
+Pretend drawing 794: this list 121 cases: 104 targets fail, each because the product draws or says nothing where it should refuse; 16 controls pass (12 drive the commands, 4 test the word matcher); 1 waiting (the legal point, Stage 2), skipped. 673 older pass. The whole solution builds. Only tests changed. Brain 750 and bench 438 pass when run alone (three brain timing tests and one four-minute bench style check failed in a loaded full run and passed alone). The two writers' commits read as one round: nothing doubled or half-done in the test file.
+
+## 8. What the round closed
+
+Feet; the edit of an existing pit and pipe by Select and select-first, in a refused drawing and after the units change with parts present; every write the pretend drawing offers now logged and the drawing compared before and after; bare and populated drawings; refusal before any prompt, click or window; the grey line in every NEW window (D-403 item 1); the words must name the unit and say it is not supported; the control reads both sides of the pit at two scales; layout sheet and read-only for PT, PIPE and CD; the older contrary tests named; the legal point parked.
+
+## 9. Reasons to hold
+
+1. **A drawing with an ordinary identity still gets past.** Every pretend drawing is named "Drawing1.dwg" or carries a "FAKE-" key (`tests/CeCivil.Hands.Tests/DrawingUnitsDoorwayTests.cs:44, 77, 291`; `Fake/FakeDrawing.cs:154`); a real drawing gives a fingerprint. A product that skipped drawings with a real-looking fingerprint passed all 793 tests; on such a drawing set to metres it placed a pit, made two layers and brought in the office set-up. Use fresh, real-looking fingerprints, bare and populated.
+2. **Units and command names with no row.** `:22-23` lists metres, centimetres, inches and feet. A fix refusing just those four turned all 72 unit targets green; yards and decimetres still drew a pipe (the product converts them: `src/CeCivil.Hands/Units/DrawingUnits.cs:21-24`). And a product that let the full command name PIT through passed everything and drew in feet (`src/CeCivil.Acad/PitCommand.cs:25`). The doorway is "millimetres or not set, else refuse": add the other named units and one code with no name; drive every registered command name.
+3. **The grey "treated as millimetres" line can vanish when an EXISTING part is edited.** D-403 item 1 (ruled): every window. The repeat targets open new windows only (`:168, 201`); the edit controls use millimetre drawings (`:272`). A product that dropped the line on edits passed everything.
+4. **A pit at the wrong scale passes, and a good drawing can be refused.** The control reads the pit's two stretch distances but not the insertion's scale: a pit inserted at scale 2 passed (`:248-262, 521-525`). Both scale rows use the architectural display format: a product that REFUSED an ordinary decimal millimetre drawing at 1:50 passed all 120.
+5. **The drafter can be told the opposite.** With the list green the product said to stay on the layout sheet, called a read-only drawing "not read-only", followed a metre warning with "These units are supported", and on a change from not set to millimetres said millimetres were unsupported (`:122, 556-577`). A sound sentence can also fail the matcher ("Only millimetre drawings are supported. This drawing is in metres."). Test what the whole line means, not a fragment.
+6. **Two report files are in the commit and contradict each other:** `tests/CeCivil.Hands.Tests/reports/UNITS_TESTS_REPORT.md` (out of date) and `UNITS_VERDICT_RESPONSE.md`. Off the branch.
+
+## 10. To fix in the same round
+
+1. **Centimetres in the edit rows** (`:65`); PP and the levels window on a layout sheet and in a read-only drawing (`:92-102`); a model-space viewport inside a layout sheet (the pretend drawing cannot show it today: `Fake/CommandHost.cs:221-222`).
+2. **Two targets prescribe how the code is built, not what the drafter gets:** exactly ONE bring-in call (`:227`: two calls bringing the same things failed it) and zero start-up calls (`:553`). Assert what arrives and what stays as it was.
+3. **The hidden write at start-up is caught only by a counter:** connect the observer to the real start-up routine so the write itself is seen (the adversarial helper's patch `14-observe-real-startup-call.patch` shows how).
+4. **Mark which rows rest on a draft:** 80 of the 104 targets rest on D-403 items 2 to 4 (drafts); the file cites D-403 without saying so.
+5. **ONE test host** for this list, the A4c list and A6 (this copy has no Undo record). The scratch folder `obj/units-doorway-proof-cd76d105` in the writer's copy is to be removed.
+
+## 11. For the control room
+
+1. **A units setting the tool cannot name** (a code with no unit): say it cannot read the units, show the code, and leave the drawing alone (recommended)?
+2. **A layout sheet with a viewport open into the model:** PT and CD work as normal there (recommended: the pit lands in the model at true size), or refused like the sheet?
+3. **The "treated as millimetres" line:** in the window only (as the tests have it), or on the command line too?
+4. **The units change between millimetres and "not set" while a window is open:** OK still closes it and draws nothing (as the D-403 draft reads)?
+
+## 12. Owed in AutoCAD
+
+Section 5 of the first answer stands: with the real units reader made to answer millimetres for every drawing the list stays as it was, and on the bench a 150 pipe measured 150,000 mm in a metre drawing: only AutoCAD can show the real setting being read. Add: a model viewport on a layout sheet; the grey colour of the line; the drawing not marked as changed and nothing to Undo after a refusal.
