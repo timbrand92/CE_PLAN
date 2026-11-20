@@ -174,3 +174,7 @@ The real drawing's changed flag and Undo list after a refusal; the colour of the
 ## 23. For the control room
 
 Recommended: allow ONE bounded edit to the refusal-wording check (item 1 and its twin), handed back with the earlier probe of a correct metre refusal and the code-98 sentence as controls; the check room reads it back by reading and one run, with no further full check. Otherwise the list stays held and the units build has no accepted list to build to.
+
+## 24. Ruled since (control room, about 11:25 pm, as D-411)
+
+ONE bounded edit is allowed to the refusal-word check: a correct metre refusal passes and a sentence saying the opposite fails. The check room reads it back alone (by reading and one run of the list); then the answer is ACCEPT THE LIST, with the six binding probes of section 22 and D-431's whole-drawing test owed by the units build.
