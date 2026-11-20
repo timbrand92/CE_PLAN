@@ -46,3 +46,22 @@ The whole proof of D-408: the night steps as corrected above, and Tim's hands wi
 4. **A hand drag past the rules:** allowed, with the marker.
 5. **Ctrl during a grip drag:** nothing in Stage 1.
 6. **Plain squares for pipe ends, bends and the pit centre:** asked of Tim, not built on; the build starts with the TEXT grips.
+
+---
+
+# Second answer: the page at db13df1 (after its five edits and D-418)
+
+**Answer: FIX THE PAGE FIRST, on two short edits; the check room will read those two back itself, with no new full read.** Written Fri 20 Nov 2026, about 6:40 pm. By reading only. Reader: Team helper, Claude Opus 5.5, read-only tools: `C:\CE_WORK\check\reports\shaped-grips_reread_REPORT.md`.
+
+## 7. The five reasons: all CLOSED
+
+The pit uses PIT BLOCK 3's own two size grips, marked DRAFT and put to Tim with a picture; the pit number steps above, below, right, left and the cover level through its four corners, each with its own list, words and test; the typed test route asks the edit guard and whether the layer is off or frozen before any grip code, refuses in words, with a night step; the edit doorway is said to be not built, a drag grip enters it like AutoCAD's own grip edit, and the grip build WAITS for it; the arrow's flip is a real grip meaning the other side of the pipe, never a reverse of flow. D-418 is followed on all six points. Tim's steps sheet is on the page (seventeen lines); hover words are marked DRAFT; nothing needs a run on this PC (D-420); no second edit path and no silent fall-back was added.
+
+## 8. Two new contradictions, both in the text grips the build starts with
+
+1. **The label slide says two opposite things.** The steps sheet for Tim, item 4: the label "never crosses the bend"; section 4A item 5 and D-418 item 4: a hand drag across a bend is ALLOWED, with the amber marker. Make the steps sheet say the ruled behaviour, and say at the bench test which straight length the label goes onto and that it is marked as moved by hand.
+2. **"Hidden the same way as the pit's".** Section 4 item 8a says that if the arrow block carries a flip grip of its own it would be hidden as the pit's are; but the page now hides no pit grip, and no ruling lets the tool remove a block's own grip. A flip built into the arrow block could also mirror the arrow to point against the flow: a grip that reverses the drawn flow, which D-418 forbids. Replace the line: read TIM_CVL_ARROW on the bench BEFORE the arrow grips are built; if it carries its own flip, stop and put it to the control room.
+
+## 9. Not holding the build (improve when the page is next open)
+
+The night gate should name D-420 items 1, 3 and 7; say the test file loads with no AutoCAD setting touched and that the unsigned-file box stops the night; expected night results written by hand, and "not a real drag" in the night log and morning report; whether a Flip or a Next spot click counts as moved by hand; the 150 mm circle gap on Next spot; 45 degrees to the sheet on a turned pit; the arrow's flip needs its own numbered question for Tim; the text grips also wait on the label placing build and the amber marker; the one allowed write must be written on the doorway's own page too. **A correction:** the first answer said the page cited a "D-364 item 6" that does not exist. It does exist (in the additions to D-364: the test drawing is known by its FULL path). The check room was wrong on that point.
