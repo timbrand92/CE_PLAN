@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-103.
+**Next number:** TR-108.
 
 ---
 
@@ -263,3 +263,17 @@
 **TR-101** (N-012; a pit dropped half way along a pipe with both end levels typed: which half's grade gives). Offered: split evenly (recommended); the upper half keeps 1 in 100; ask in the levels-or-grade window. He picked: "Ask me in the levels-or-grade window". The same small window as TR-036 (a move that changes a pipe's length) opens here too, showing each choice and its effect. Joins U-113 (picture owed). N-012 stays open with U-113.
 
 **TR-102** (N-028; a Match button). Offered: no, last-used already does it (recommended); yes, a quiet "Match a pit" button. He picked: "Yes: a quiet 'Match a pit' button". Not the recommended answer. A quiet button at the bottom left: press it, click a pit on the plan, and the window takes that pit's size, kind and lid. This is NEW on the Pit window he approved in TR-081 (as is the Flip of TR-097).
+
+## Batch 26, Fri 20 Nov 2026, 14:32 (clock read), through the question window, one line per question (follow-ups to TR-097, TR-099, TR-100, and `stage6/SPEC_PIT.md` section 10 item 37)
+
+**TR-103** (follow-up to TR-099; a number used twice that did not come through the window: a tag retyped on the plan, or pasted pits). He picked: "Both show the amber marker (Recommended)". The window refuses a duplicate (TR-099); a duplicate that arrives another way gets the amber marker on both pits ("P4 is used twice") until he changes one. D-185 stands for a tag retyped on the plan.
+
+**TR-104** (follow-up to TR-100, "LOWER OR SAME LEVEL"; the outlet typed at the same level as the lowest pipe in). He picked: "No flag: same level is allowed (Recommended)". The 0.02 drop (D-141) is only the starting figure; an outlet at the same level is accepted quietly; only an outlet typed HIGHER than a pipe coming in shows red "Wrong".
+
+**TR-105** (follow-up to TR-097; where the flip is for a pit that is not square). He picked: "A Flip button beside Size (Recommended)". One click swaps the two sides (600 x 900 becomes 900 x 600), the plan panel shows it at once; greyed for a square pit; Turn stays for any other angle. NEW on the Pit window approved in TR-081 (with Match, TR-102).
+
+**TR-106** (N-016; Renumber in Stage 1, before the outlet tool exists). He picked: "Renumber: click the pit that is P1 (Recommended)". A Renumber button (in the Pit window, and as a typed name) asks him to click the pit at the outlet; that becomes P1 and the rest are numbered upstream along the joined pipes; pits not joined to it keep their order after the joined ones; one Undo. Not said: what the typed name is.
+
+## Fri 20 Nov 2026, 14:32 (clock read), typed in the chat
+
+**TR-107** His words: "IM GOING TO LUNCH CAN YOU KEEP THE PLAN MOVING IN CONTROL ROOM AND I WILL FINISH INTERVIEWS AFTER LUNCH" and then "AUTOCAD IS NOT BEING USED NOR IS COMPUTER". Room's reading (mine): the interviews pause until he is back; the plan is to keep moving through the control room meanwhile; he is telling the rooms that AutoCAD and the PC are free while he is at lunch. This room starts no AutoCAD in any case; his words are passed to the control room exactly as written, for it to act on under its own rules (rule 1.9 unchanged).

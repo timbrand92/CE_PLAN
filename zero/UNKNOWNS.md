@@ -3,8 +3,8 @@
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), set up by D-353 and `ROOMS.md`. No other chat edits this file.
 **First written:** Fri 20 Nov 2026, 10:45 am (clock read).
 
-**STAGE 1 COUNT: 92 of 244 closed.** Updated Fri 20 Nov 2026, 13:40. PART A (U-001 to U-125): 75 of 125 closed, 23 blockers open. PART B (N-001 to N-119, from the two line-by-line pages, held in `interview/FOLD_DRAFT.md` Part 1; at least 14 are one question asked on both pages): 17 of 119 closed, 69 blockers open. **Blockers open in all: 92.** Tim's word on HOW to ask (TR-086): one by one. Filed by the control room so far: up to D-387.
-**PART B CLOSED:** N-003 (TR-087); N-004 (TR-087); N-005 (TR-088); N-006 (TR-088); N-001 (TR-089); N-002 (TR-089); N-007 (TR-090); N-009 (TR-091); N-014 (TR-092); N-015 (TR-093); N-019 (TR-095); N-020 (TR-096); N-021 (TR-097); N-022 (TR-098); N-023 (TR-099); N-024 (TR-100); N-028 (TR-102)
+**STAGE 1 COUNT: 93 of 244 closed.** Updated Fri 20 Nov 2026, 14:32. PART A (U-001 to U-125): 75 of 125 closed, 23 blockers open. PART B (N-001 to N-119, from the two line-by-line pages, held in `interview/FOLD_DRAFT.md` Part 1; at least 14 are one question asked on both pages): 18 of 119 closed, 68 blockers open. **Blockers open in all: 91.** Tim's word on HOW to ask (TR-086): one by one. Filed by the control room so far: up to D-387.
+**PART B CLOSED:** N-003 (TR-087); N-004 (TR-087); N-005 (TR-088); N-006 (TR-088); N-001 (TR-089); N-002 (TR-089); N-007 (TR-090); N-009 (TR-091); N-014 (TR-092); N-015 (TR-093); N-019 (TR-095); N-020 (TR-096); N-021 (TR-097); N-022 (TR-098); N-023 (TR-099); N-024 (TR-100); N-028 (TR-102); N-016 (TR-106)
 **STAGE 2 COUNT (waiting): 0 of 23 closed.**
 
 **What counts as an unknown.** A question about how the tool must behave that (a) no ruling answers, or (b) is answered only by a planning chat's call or a DRAFT, or (c) the 25 root causes or Tim's check of 20 Nov (D-351) exposed, or (d) only a test in AutoCAD can answer. Each line says who it waits on: **Tim**, **a picture then Tim** (a mock-up is owed first), or **a test** (nobody should ask Tim; AutoCAD must show it).
