@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-108.
+**Next number:** TR-112.
 
 ---
 
@@ -277,3 +277,13 @@
 ## Fri 20 Nov 2026, 14:32 (clock read), typed in the chat
 
 **TR-107** His words: "IM GOING TO LUNCH CAN YOU KEEP THE PLAN MOVING IN CONTROL ROOM AND I WILL FINISH INTERVIEWS AFTER LUNCH" and then "AUTOCAD IS NOT BEING USED NOR IS COMPUTER". Room's reading (mine): the interviews pause until he is back; the plan is to keep moving through the control room meanwhile; he is telling the rooms that AutoCAD and the PC are free while he is at lunch. This room starts no AutoCAD in any case; his words are passed to the control room exactly as written, for it to act on under its own rules (rule 1.9 unchanged).
+
+## Batch 27, Fri 20 Nov 2026, 14:43 (clock read), through the question window, after he wrote "IM BACK"; two pictures sent first (`pictures/pipe_window_live_desktop.png`, `pictures/pipe_window_live_laptop.png`, page `pictures/pipe_window_live_preview.html`; drawn by a helper, checked by a separate helper, sent back and fixed; the second check was still running when he saw them, and he was told so)
+
+**TR-108** (unknown U-038; where the live plan sits in the Pipe window, now that the Pit window has it at the left). He picked: "Yes, across the top for Pipe (Recommended)". D-313 stands for Pipe; Pit keeps its panel at the left.
+
+**TR-109** (unknown U-037; step 1 of the Pipe window: Size, Material marked standard, Grade, ONE level with a "Level at" list, ticks Label / Invert levels / Arrow, a "Sleeved inside" tick with its sleeve size, a "Reverse flow" button). He picked: "Yes, right as drawn (Recommended)".
+
+**TR-110** (unknown U-037; step 3: each row level below + fall + pit drop = level to three decimals, with a last column "On the plan" at two decimals). He picked: "Yes: exact working, plan figure beside it (Recommended)". Checks are made on the exact levels (D-350); the plan prints two decimals.
+
+**TR-111** (asked for by the control room, D-389; the band colour when an answer is none of Suits, Needs a look or Wrong; example, a run drawn with no level typed). He picked: "A grey band: 'Cannot check yet' (Recommended)". A fourth, calm band in plain grey with the words "Cannot check yet" and what is not known. Green, amber and red keep their meanings. This ADDS to the approved style (D-295).
