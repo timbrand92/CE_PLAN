@@ -17,13 +17,12 @@
    - **Honest check:** Team helper (opus), `C:\CE_WORK\checkcad-windows_honest`, started 11:21 am.
    - **Adversarial pass:** Codex gpt-6.2-astra (xhigh), `C:\CE_WORK\checkcad-windows_adv`, started 11:21 am.
 2. **team/pipe-default at 741f0f2** (Stage 1 item A5). Honest check finished 11:20 am: HOLD, one blocker (early word sent to the build room 11:22 am). Adversarial pass (Codex astra, started 11:10 am) still running; the written verdict follows it. Fix rounds used: 1 of 2.
-3. **The night scripts on main:** honest check finished, verdict HOLD given (section 4). Adversarial pass (Codex astra, started 11:13 am) still running; its findings are added to the verdict page.
 
 ## 2. Waiting
 
 Handed over, not yet started (in the control room's order):
-1. **The launcher fix, team/night-launch:** not handed over yet (branch made, no work on it at 11:15 am). Tonight's AutoCAD run does not start without the check room's MERGE on it. It is checked against the ten-point list in `VERDICTS
-ight-scripts-on-main.md` section 4.
+1. **The launcher fix, team/night-launch:** not handed over yet (branch made, no work on it at 11:15 am). No AutoCAD run tonight (D-364 item 10); the first run is when the check room gives MERGE on both halves and the AutoCAD test room says go. Checked against D-364 items 1 to 9 line by line (`VERDICTS
+ight-scripts-on-main.md` sections 4 and 5).
 2. **codex/c11-tests, pinned at 11c6041** (tests only for cause C11; handed over 11:19 am). Claim: 70 target tests failing, 25 controls passing, all 1,850 existing pass. To check: is the list honest against `design\SUMS_PIPE_AND_PRINT.md` with D-349, D-350 and the D-341 examples. The C11 build carries on the same branch, so the check stays on 11c6041.
 3. **Mock-up `zero\pictures\pipe_top_preview_mockup.html`** after its fix 4 (handed over 11:19 am). Against D-313, D-305, all 31 screen rules and the approved style, no scroll at 1200 by 800 in all three states, from a picture the check room takes itself.
 4. **team/office-blocks (A4), already on main: adversarial pass only.** Asked by the control room at 11:50 am by its clock. To try in particular: a drawing that already holds a block of the same name with different contents (the drawing's own must not be silently replaced; there may be no ruling, so report what it does); a locked layer; an xref; the shipped file missing or damaged; a drawing in other units.
@@ -43,9 +42,9 @@ Still with the build room, mid-fix:
 
 ## 4. Verdicts given
 
-1. **The night scripts on main (22993fa): HOLD, 11:24 am.** Four blockers, all breaches of a hard limit: nothing reads the clock, the stop flag or Tim's switch file; the launcher adopts an AutoCAD by start time and title rather than by having created it. `VERDICTS
-ight-scripts-on-main.md`; follow-ups in `FOLLOW_UP
-ight-scripts.md`.
+1. **The night scripts on main (22993fa): HOLD, 11:24 am; both halves done by 11:30 am.** Seven blockers: nothing reads the clock, the stop flag or Tim's switch file; the launcher adopts an AutoCAD by start time and title; a damaged record passes "is it ours"; the unsaved close knows the test drawing by short name only; quit and force take every drawing open. `VERDICTS
+ight-scripts-on-main.md`; 19 follow-ups in `FOLLOW_UP
+ight-scripts.md`. Ruled by the control room as D-364 items 1 to 10: the fix (team/night-launch) is checked against items 1 to 9 line by line, and there is NO AutoCAD run tonight (item 10).
 
 ## 5. Look log (the check room's own look at the branches, every 20 minutes)
 

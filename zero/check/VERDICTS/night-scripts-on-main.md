@@ -46,6 +46,15 @@ Once a process is recorded, the close-and-force ladder re-checks the recorded id
 5. **D-160's force** applies only at night, before 8:00 am, with no stop flag up.
 6. **Required by the control room:** deleting any guard makes a test fail.
 
+**D-364 added to at about 11:40 am (items 5 to 10), after the adversarial pass:**
+7. **Damaged record (D-364 item 5):** a damaged or partial record means NOT ours.
+8. **Full path (item 6):** the test drawing is known by its full path only.
+9. **Other drawings open (item 7):** no quit, close-all or force while any other drawing is open in that AutoCAD: stop, leave it, note for Tim.
+10. **"Still running" is not "jammed" (item 8):** a D-160 force only after three minutes on end with no response at all, or a crash; a busy PC or lost front window means stop sending, wait, one normal close, never a force.
+11. **"Sent" is not "done" (item 9):** an unrecognised command is a FAIL in words; green only from what AutoCAD answered.
+12. **No AutoCAD run tonight (item 10):** the fix is not to be rushed; the first run is when the check room gives MERGE on both halves and the AutoCAD test room says go.
+13. **Hours:** D-364 as written stands, the 2:00 to 3:00 pm gap included; stricter than rule 1.8 on purpose.
+
 ## 6. Follow-ups
 
 Kept in `FOLLOW_UP\night-scripts.md` (11 items). The one that matters most for Stage 1: the plug-in's own Pit and Pipe windows are not on the list of known window titles, so any night test that opens one halts the pass. That fails safe, but no Pit or Pipe test can finish until it is dealt with, and the answer must not be "any window of our process is fine".
