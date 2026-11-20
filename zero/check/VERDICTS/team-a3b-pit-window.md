@@ -120,3 +120,38 @@ The Pit window stays whole at 1000 by 620 and at 1240 by 780 for ANY number of p
 - One Undo after a connected placement or Renumber.
 - Pasted numbers and "CL TBC" after save and reopen.
 - The native Pipe invert-label position, which stays WAITING (D-399).
+
+---
+
+# Read-back of the ONE bounded round: team/a3b-pit-window at e8badad
+
+**Answer: READ-BACK FAILS. Both halves say so (honest on item 3; adversarial on all three). It goes back to the control room.** Written Sat 21 Nov 2026, about 5:05 am. Both halves ran on Codex under D-440, each in its own folder:
+- **Honest half:** gpt-6.2-sol. Report: `C:\CE_WORK\check\reports\a3b4_honest_REPORT.md`.
+- **Adversarial half:** gpt-6.2-astra. Report: `a3b4_adv_REPORT.md`, with proofs in `a3b4_adv_proofs\`.
+
+The change stayed within the three items. It touches no depth or rounding sums.
+
+**What is now fixed:** every earlier example passes.
+- **Depth line:** the five-pipe and four-arriving cases are whole at both sizes.
+- **Renumber:** the connected P1 swap and the P2-to-P99 edit finish at P1/P2 with CL 13.10. The upstream, downstream, fork and loop cases keep the edited cover.
+- **Paste numbering:** pasting beside P2147483647 and p1 gives P2 and P3, never a wrapped number.
+
+## Still open
+
+1. **The depth line is still cut off at 1000 by 620** (adversarial half). The case:
+   - three pipes in and two out, with drawing units unset and an already-used number typed: only 11 of 24 units of the Depth row show;
+   - with the units warning alone: 19 of 24 show.
+
+   That is 2 of 404 laptop layouts; all are whole at 1240 by 780. This is a cut-off at an approved size (D-346).
+2. **Renumber can still lose a cover edit** (adversarial half).
+   - **The case:** a separate P8 is edited to P2 with its cover changed from 12.82 to 13.10, then P7 is picked first on a joined P7-P9 run.
+   - **What goes wrong:** the preview accepts it, and OK closes the window before it finds that the run also needs P2. All three pits keep their old numbers, and P8 reopens at CL 12.82.
+   - **The fix:** the clash must be caught while the window is still open (D-421 item 1, D-428).
+   - **A related case:** after a valid pick, a refused second pick (a locked P51) replaces the notice, but OK still renumbers the first run.
+3. **Pit numbers: the limit leaks, and a pasted tag shows the wrong number** (both halves).
+   - **Entries that get past the 1 to 9,999 limit:** P10,000, bare 10,000, P10,001A, P10000AA and P10000.0. Each is saved and printed exactly as typed. The check at `PitTool.cs:211` lets through any input it does not recognise. This is the DRAFT range in D-440 item 3.
+   - **The pasted tag:** pasting P1 together with its number tag beside an existing P1 gives the new pit the record P2, but its tag still reads P1, so the plan shows two P1 tags. Beside P9998 the record reads P9999 and the tag P1. That is a wrong figure on the sheet (D-377 item 2, D-428 item 2).
+
+**What it needs:** a ruling from the control room. Its fix rounds and its one bounded round are all spent. Each case already has its replay in the proofs folder.
+
+**Follow-up (not a blocker):** after the P2-to-P99 edit, the "What else changes" line still promises schedule row P99.
