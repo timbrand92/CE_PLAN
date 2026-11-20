@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-082.
+**Next number:** TR-086.
 
 ---
 
@@ -209,3 +209,13 @@
 **TR-080** (unknown U-110; the Inspect button). He picked: "Keep it, as drawn (Recommended)". Inspect hides the window so he can zoom and pan the whole real drawing, then Enter or Esc brings the window back with everything he typed still there (D-065). Zooming the plan panel itself was offered and not taken. Closes U-110.
 
 **TR-081** (unknown U-012; what is on the Stage 1 Pit window: step 1 Size, Kind, Lid, Number, Cover level, the two ticks, Turn; step 2 pipes in, pipes out, outlet invert; step 3 the depth sum and the five sizes to scale). He picked: "Nothing: it is right as drawn". Closes U-012. Room's note (mine): this approves the CONTENTS as drawn. The checker's open polish, not shown to him as questions and for the build to get right, not copy: gaps off the 8/16/24/32 scale in the mock-up's own page; step 3 has no verdict word and its answer figure is 14 not 24; step 2 figures carry no source word; the words "Made-up plan for this picture" are mock-up wording and must not ship.
+
+## Batch 21, Fri 20 Nov 2026, 13:26 (clock read), through the question window (asked while helpers drew the Pipe window and sorted the two specification pages)
+
+**TR-082** (a clash named by `stage6/SPEC_PIT.md`: D-323, PT always opens at 450 x 450, against placing a row of bigger pits; example, six 600 x 600 pits placed in one go of the PT command). He picked: "600: it keeps the size within one go (Recommended)". Typing PT fresh always starts at 450 x 450 (D-323 stands for that); while he keeps placing in the same go, each next pit opens with the size of the one before. PP the same from 350 x 350 (the room's reading; not asked separately). This NARROWS D-323.
+
+**TR-083** (unknown U-119; the only pipe arriving at a pit cannot be read). He picked: "Office default 100, and say so (Recommended)". Opens at 100 dia. with the words that the pipe into that pit could not be read; never stopped. Closes U-119.
+
+**TR-084** (unknown U-123; a pipe whose drawn width is not an office size; example, 137 wide). He picked: "Show 137, amber 'not an office size' (Recommended)". The window shows what is drawn, amber "Needs a look", and offers the nearest size in one click; the label is left until he chooses; nothing is changed for him. Closes U-123.
+
+**TR-085** (unknown U-124; an old joined pipe with no flow direction on record). He picked: "No arrow until it is known (Recommended)". No arrow, "flow direction not known" in grey, until levels, a joined outlet or his own Reverse click settle it. Closes U-124.
