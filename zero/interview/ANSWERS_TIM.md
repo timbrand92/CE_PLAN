@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-099.
+**Next number:** TR-103.
 
 ---
 
@@ -253,3 +253,13 @@
 **TR-097** (N-021; which way round a 600 x 900 pit sits). Offered: first figure across the sheet (recommended); long side along the nearest pipe or wall. He picked neither and wrote: "YOU SHOULD BE ABKLE TO EASILY FLIP WHEN YOU SEE PREVIEW IN WINDOW". Room's reading (mine): what matters to him is a one-click FLIP in the window (swap the two sides, a quarter turn), judged by eye from the live plan panel. Which way it lands first was not said; the room takes "first figure across the sheet" as the starting way until he says otherwise. A Flip control beside Size (or as part of Turn) is NEW on the Pit window he approved in TR-081.
 
 **TR-098** (N-022; what the Lid box opens with now that "what is over it" opens Not known). He picked: "What I used last (Recommended)". If he does set "what is over it", its preset fills the lid, still his to change (D-287).
+
+## Batch 25, Fri 20 Nov 2026, 13:40 (clock read), through the question window, one line per question. Sources: `stage6/SPEC_PIT.md` section 10 items 25, 26, 14, 29.
+
+**TR-099** (N-023; changing a pit's number in the window; example, P7 retyped as P10 when P10 is in use). Offered: type it, a duplicate shows amber on both (recommended); type it, but a duplicate is refused; numbers only by Renumber. He picked: "Yes, but a duplicate is refused". Not the recommended answer. The number is a box he can type over; a number already in use is not accepted, with words. **Clash to flag:** D-185 (retyping a pit TAG on the plan renames the pit and "a duplicate number shows amber on both") and D-340 (two tags claiming one pit in an older drawing are left and listed). Room's reading (mine): in the WINDOW a duplicate is refused; a duplicate that arrives another way (a tag retyped on the plan, an older drawing, a paste) is still shown amber, because it cannot be refused there. To confirm with him.
+
+**TR-100** (N-024; several pipes run into one pit at different levels, 5.30 and 5.25: what the outlet invert is worked from). Offered: the lowest arriving, less the drop (recommended); the pipe on the main run. He wrote: "LOWER OR SAME LEVEL". Room's reading (mine): the outlet invert is never higher than the lowest pipe coming in: it is lower than it, or at the same level. So the outlet is worked from the lowest arriving invert; the office 0.02 drop (D-141) is the starting figure, and typing the drop down to nothing (same level) is allowed without a flag. An outlet typed HIGHER than an arriving pipe is the thing to flag. To confirm in one line.
+
+**TR-101** (N-012; a pit dropped half way along a pipe with both end levels typed: which half's grade gives). Offered: split evenly (recommended); the upper half keeps 1 in 100; ask in the levels-or-grade window. He picked: "Ask me in the levels-or-grade window". The same small window as TR-036 (a move that changes a pipe's length) opens here too, showing each choice and its effect. Joins U-113 (picture owed). N-012 stays open with U-113.
+
+**TR-102** (N-028; a Match button). Offered: no, last-used already does it (recommended); yes, a quiet "Match a pit" button. He picked: "Yes: a quiet 'Match a pit' button". Not the recommended answer. A quiet button at the bottom left: press it, click a pit on the plan, and the window takes that pit's size, kind and lid. This is NEW on the Pit window he approved in TR-081 (as is the Flip of TR-097).
