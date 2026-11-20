@@ -41,3 +41,26 @@ The attribute PIT_LABEL really read and compared on a real PIT LABEL 2; the refu
 3. **A pit on a locked layer counts as in use.**
 4. **A refusal leaves the window open,** the number box red with the reason, every other answer kept.
 The rows that rest on these are marked DRAFT D-428; they came after the round and add no strike.
+
+
+---
+
+# Second answer: codex/tests-dupnumber-main at f8ec463
+
+**Answer: ACCEPT THE LIST, with two binding probes for the build (D-431).** Written Fri 20 Nov 2026, about 10:00 pm. Checked on the bench only.
+
+**Who checked, and how they split.** Honest check: one Claude helper on Sonnet (D-434): `C:\CE_WORK\check\reports\dup2_honest_REPORT.md`: ACCEPT. Adversarial pass: Codex gpt-6.2-astra: `C:\CE_WORK\check\reports\dup2_adv_REPORT.md`: HOLD on two reasons marked PARTLY. The check room read both disputed tests itself (`DuplicatePitNumberTests.cs:76-92` and `:118-127`) and judges neither to be a reason to hold: one rests on the pretend drawing's single text slot, which the list names as standing for PIT_LABEL (the named attribute is a WAITING row, DN-ATTRIBUTE), and the other is the wording of a WAITING row that the native build must pass anyway. Both become binding probes. Six of the eight reasons CLOSED (four of them as WAITING rows tied to the Pit window branch or the native command), two PARTLY as below; every same-round item closed.
+
+## 9. Counts seen
+
+The whole solution builds, the plug-in included. 26 cases: 6 targets fail (each on a real product fault), 2 controls pass, 18 WAITING with their reason named. Only the one test file changed; no report or run file in the commit. Older speed and on-screen tests failed only under load.
+
+## 10. Binding probes for the build (no merge of the duplicate-number BUILD without them)
+
+1. **The control at `:76-92` on a real circle:** with the neighbour's PIT_LABEL attribute still "P4" and only a loose text changed to "P40", P4 must be REFUSED as in use; the number compared is the attribute (D-404 item 2), never loose text.
+2. **The last duplicate cleared:** three pits with one number marked; correct one: two still marked; correct a second: NO marker left on the survivor, and the command line says so (D-185, D-407 item 4). The WAITING row at `:123` stops at two.
+3. **From the honest half:** a number over 99 refused when in use; the refusal on the command line; the number named as a whole word (P4 not matched by P40); the number box red (D-428 item 4).
+
+## 11. What this means
+
+The list may go to the main line as one squashed commit; its WAITING rows become targets when the Pit window branch and the native marker land. It is the first list accepted tonight. Nothing about the product is accepted: the build that turns these targets green is checked separately, with the probes above.
