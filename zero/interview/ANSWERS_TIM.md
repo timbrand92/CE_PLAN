@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-087.
+**Next number:** TR-091.
 
 ---
 
@@ -223,3 +223,13 @@
 ## Fri 20 Nov 2026, 13:31 (clock read), through the question window: four "confirm these ten" questions (40 plain lines about the Pit tool from `stage6/SPEC_PIT.md` section 10, batched as the control room asked)
 
 **TR-086** To each of the four he picked: "Go through them one by one". NONE of the 40 lines is ruled. Room's reading (mine): he does not want plain lines batched into one yes; every specific is put to him singly, with its own example and recommended answer (it fits his words of the same morning to the control room, "i need every specific down to a tee"). From now on: one question per line, four to a window. The control room's request to batch plain confirmations is not followed, on his word.
+
+## Batch 22, Fri 20 Nov 2026, 13:34 (clock read), through the question window, one line per question (TR-086). Sources: `stage6/SPEC_PIT.md` section 10 items 3, 4, 2, 5 and their twins on the Pipe page.
+
+**TR-087** (N-003, N-004; PT or CD typed on a layout sheet). He picked: "Refuse and say why (Recommended)". Nothing is drawn; the command line says pits (pipes) go on the plan, switch to model space and type the name again.
+
+**TR-088** (N-005, N-006; a drawing open read-only). He picked: "Say so before the first click, draw nothing (Recommended)".
+
+**TR-089** (N-001, N-002; a drawing with no units set; the two specification pages disagreed). He picked: "Treat as millimetres, say so once (Recommended)". Unitless is treated as millimetres with one grey line in each window ("Drawing units not set: treated as millimetres"); inches or feet are refused like metres (TR-047). The Pipe page's recommendation (refuse) is NOT taken.
+
+**TR-090** (N-007; the drawing already holds its own PIT BLOCK 3 that differs from the office master). He picked: "The drawing's own, never overwritten (Recommended)". New pits use the block already in that drawing; the tool never replaces a block in his drawing; if that block cannot do a size or kind the tool needs, it says so once and he decides.
