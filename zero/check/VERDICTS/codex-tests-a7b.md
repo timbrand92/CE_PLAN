@@ -182,3 +182,26 @@ The third answer was written from the adversarial report as it stood at 7:17 pm;
 10. **Three later pipe kinds can still be drawn while their targets are green** (the carried fault, section 12 reason 9). `Stage1A7RunInvertTests.cs:215-217` finds the offered kinds by the start of their caption and passes silently when it finds none: with the three captions reworded, all five targets passed while the reviewer's own tests picked those kinds and drew a band on STORMWATER CHARGED PIPE, STORMWATER SUSPENDED PIPE and STORMWATER DETENTION PIPE. Read the offered choices through the field itself, try every kind that is not the ordinary pipe by its identity, require the refusal in words and no new object (D-377 item 1).
 
 Proofs: `C:\CE_WORK\check\reports\a7d_adv_proofs\reader-counterexamples.txt`, `offered-kind.log`. The final report also notes the two worked-grade window rows now need the DRAFT D-424 mark (section 23 says the same).
+
+
+---
+
+# Final answer: codex/tests-a7-clean at 16b0b2e (its LAST round)
+
+**Answer: HOLD THE LIST, with a one-page open list of three items; the last round from the D-416 baseline (D-346): the control room decides. Recommended: one bounded edit, read back by the check room alone, as D-411 did for C11.** Written Fri 20 Nov 2026, about 11:30 pm. Checked on the bench only.
+
+**Who checked, and how they split.** Honest: one Claude helper on Sonnet: `C:\CE_WORK\check\reports\a7e_honest_REPORT.md`: ACCEPT (a short report; it did not replay the saved faulty build or split DRAFT from firm targets). Adversarial: Codex gpt-6.2-astra: `C:\CE_WORK\check\reports\a7e_adv_REPORT.md`, proofs in `a7e_adv_proofs\`: HOLD on four, each replayed. Of the ten reasons of the third answer and section 24: eight CLOSED (arrow-off with the edges kept; the whole text box; 1,000 mm on bends; each Mask tick on its own text by order; all ten texts after reopen and a stretch; the no-grade pipe from a saved pipe; every circle against its own pit; later kinds tried and refused), the neighbour's pipe PARTLY, drafts marked.
+
+## 25. The open list (each a target a right build cannot pass, or the selection the list was asked to drive)
+
+1. **An ordinary-only pipe kind picker fails.** `Stage1A7RunInvertTests.cs:206-216` demands that the live picker offer at least one later kind; D-377 item 1 allows a Stage 1 window to offer the ordinary pipe only. And a clear refusal ("Charged pipes are unavailable in Stage 1.") fails the wording reader at `:250-266`. Keep a test fixture that offers later kinds and refuses each; test the real window separately, which may offer ordinary only; reading no choices from the populated fixture still fails.
+2. **A Mask tick captioned "Mask" beside "Label" is rejected** (`Stage1A7D406Tests.cs:325-334, 354-364` demand the word "label" in the tick's own caption), yet that is the approved layout (D-419 item 4, DRAFT). Find each tick's text by its stable link to the text, not by caption; keep the five off-and-on and saved-mask checks.
+3. **Two pipes between the same pits still bypass the normal selection** (`Stage1A7D413Tests.cs:305-309` opens the test's own handles and picks a window by title; section 19 reason 7 asked for the normal edit route). Select the 225 pipe through the command's own selection (`src/CeCivil.Acad/PipeCommand.cs:46-65`), change it to 300, and read both pipes after reopen: a build routing the pick to the first pipe would print 300 on the 100 pipe.
+
+## 26. To fix in the same edit (not holds alone)
+
+Positions compared to five decimal places (`Stage1A7PlacementOrderTests.cs:76-77, 52, 59, 199-200, 174-175`): compare by distance within D-341's 0.1 mm, keeping maximum travel and minimum clearance as their own checks.
+
+## 27. Binding probe for the build (D-431)
+
+The kind picker: whichever kinds the window offers, every non-ordinary kind is refused in words with nothing drawn.

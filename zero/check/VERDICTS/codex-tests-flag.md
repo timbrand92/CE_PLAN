@@ -143,3 +143,23 @@ One warning on the command line is checked on a rebuilt output, not the channel 
 ## 19. Ruled since (control room, about 6:55 pm, D-422; not a draft: it follows the locked-layer rule)
 
 "CE NO PLOT" found LOCKED: no marker; the tool never writes to or unlocks a locked layer; the command line and the window say the fault in words and name the locked layer; the edit goes ahead. So the list's "locked" row is right as written and counts as a target.
+
+
+---
+
+# Final answer: codex/tests-flag at 1b509f5 (its LAST round)
+
+**Answer: HOLD THE LIST, with a one-page open list of four items; the last round from the D-416 baseline (D-346): the control room decides. Recommended: one bounded edit, read back by the check room alone, as D-411 did for C11.** Written Fri 20 Nov 2026, about 11:30 pm. Checked on the bench only.
+
+**Who checked, and how they split.** Honest: one Claude helper on Sonnet: `C:\CE_WORK\check\reports\flagd_honest_REPORT.md`: ACCEPT (the saved faulty build now fails all 38). Adversarial: Codex gpt-6.2-astra: `C:\CE_WORK\check\reports\flagd_adv_REPORT.md`, proofs in `flagd_adv_proofs\`: HOLD; five new probes, one of which passed all 19 targets while changing a plotted note. Of the seven reasons of the third answer: the report file CLOSED, six PARTLY.
+
+## 20. The open list
+
+1. **Moving a faulty pipe can still damage a plotted note and pass:** the stock-take of what was already there (`Stage1FlagMarkerTests.cs:1065-1096`) runs on the save case but not on the MOVE case; moving a faulty 13 m pipe replaced an unrelated plotted "REFERENCE" note with a triangle and all 19 targets passed (D-348, D-381). Take stock around every edit the list drives, the move included.
+2. **A correctly coloured marker fails, a fake one passes:** the colour read (`:96-113`) takes group 62 from a PRIVATE record the tool writes; a correct entity with its own colour 40 and no such record reads 256 and fails at `:113`, while a record saying 40 on a grey triangle passes. Read the entity's own colour (D-412).
+3. **The duplicate-number fixture uses the wrong circle:** the old PIT LABEL block, where D-404 item 2 makes it PIT LABEL 2 with the attribute PIT_LABEL. Use the office block.
+4. **A loose pipe's marker can still name pits that do not exist:** the 14 m sloping pipe with two loose ends was marked "P8 to P9" in a probe and the loose-end case did not catch it on that route (`:369, 404`). Check every route the reason is shown on (marker, window, command line) for a loose pipe.
+
+## 21. To fix in the same edit
+
+The command line is reconstructed in the test, not read from the channel the Pipe command writes to (`src/CeCivil.Acad/PipeCommand.cs:111-116`), and the one-fault check matches a substring ("Previous warning cleared" plus the whole fault passes); the marker layer's name is a literal: try a second configured name (D-401, D-407); the locked-layer row (`:494`) stays skipped: under D-422 it counts, which adds no strike here (a later ruling) but the BUILD must un-skip and pass it (binding probe).
