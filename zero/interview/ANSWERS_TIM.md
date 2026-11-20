@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-122.
+**Next number:** TR-126.
 
 ---
 
@@ -313,3 +313,13 @@
 **TR-120** (the Pipe window's size). He picked: "Yes, the same two sizes (Recommended)": laptop 1000 x 620 and desktop 1240 x 780, as the Pit window (TR-079); on a laptop a long run's labels may show as dashed boxes in the plan strip and Inspect shows the real drawing.
 
 **TR-121** (the flow arrow's first spot, put back to him in words after TR-019). He picked: "Yes: below, centred, between the levels (Recommended)". Label centred above; arrow centred below, between the two invert levels; if it cannot go there it goes on the label's side in line with the label; it slides along to clear a clash. Confirms the room's reading of TR-019.
+
+## Batch 30, Fri 20 Nov 2026, 15:05 (clock read), through the question window, one line per question. Sources: `stage6/SPEC_PIT.md` section 10 items 46, 51, 40, 50.
+
+**TR-122** (N-058; the pit number's circle tag). He picked: "Yes, the office circle tag (Recommended)". Every pit number is the office's own circle tag block from the first pit placed; plain text is never used for a pit number.
+
+**TR-123** (N-062; how the cover level reads). He picked: "'CL 12.95', and 'CL TBC' when not known (Recommended)".
+
+**TR-124** (N-063; a plastic pit's text). He picked: "Both lines together at 45 degrees (Recommended)". "PP" over "CL 5.65" stay together as one two-line text turned 45 degrees off the corner.
+
+**TR-125** (N-025; the clash of D-267 with TR-012: a cover level on a turned pit; example, a pit turned 30 degrees to an angled fence). He picked: "45 degrees to the SHEET, off the nearest corner (Recommended)". The cover level keeps its 45 degrees measured against the sheet and starts from whichever corner of the turned pit is nearest top right. D-267 stands for the pit number (reads flat, upright); for the cover level it is replaced by this.
