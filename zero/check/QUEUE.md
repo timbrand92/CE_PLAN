@@ -15,9 +15,11 @@
 
 Tim has gone home (5:08 pm): no cap on helpers; AutoCAD stays stopped.
 
-1. **team/a3b-pit-window at 3ae3e9f** (Stage 1 item A3b: the Pit window to D-386 with D-390's additions; first check). Compile gate passed in the check room's own worktree (0 warnings, 0 errors). Both halves started about 5:35 pm. The check room's own pictures (bench picture mode): at 1000 by 620 with the pit joined to two pipes, step 3 is cut off at the bottom.
-2. **design/shaped-grips at 93eb70c** (`design/SHAPED_GRIPS.md`): one read, Team opus with read-only tools.
-3. **codex/tests-units at df9d533** (fix round): honest half says hold narrowly; adversarial half still running.
+1. **team/a3b-pit-window at 3ae3e9f** (the Pit window to D-386 with D-390's additions; first check). Compile gate passed. Both halves running since about 5:34 pm. The check room's own picture shows step 3 cut off at 1000 by 620 with the pit joined.
+2. **The pictures from Tim's room** (the single-pipe window at both sizes, the CE Settings window, five option sheets): own pictures taken 5:44 to 5:54 pm; one Team helper running. Faults go straight to Tim's room; nothing goes to Tim.
+3. **team/night-launch at 957383a** (the round after the HOLD and D-388): both halves BY READING ONLY, from a plain-text copy (every file renamed with .txt added). Started about 6:05 pm.
+
+Not started: codex/tests-units at 65d95d1 (built before the second answer on df9d533 landed; sent back to fold in the remaining reasons first).
 
 ## 2. Waiting
 
@@ -128,3 +130,4 @@ ight-scripts.md`. Ruled by the control room as D-364 items 1 to 10: the fix (tea
 43. **17:20:** the A4c list answered: HOLD THE LIST (`VERDICTS\codex-tests-a4c.md`); four questions to the control room. D-416: the round count restarts from the decisions record at D-416; each list carries only its own faults. Still running: the adversarial half on the units list. Not handed over, moving: the next rounds of the C11, flag, units and A4c lists, held depth, the Pit window, and new branches codex/doorway and codex/tests-pipesize.
 44. **17:34:** two hand-overs started: team/a3b-pit-window 3ae3e9f (compile gate passed; both halves; worktrees `a3b_honest`, `a3b_adv`; briefs `a3b_*.md`; own pictures in the reports folder under `a3b_pics`) and the shaped-grips design page 93eb70c (one read-only helper; brief `shaped-grips_read.md`). The build room has stripped the run files from codex/tests-a7-clean (tip ffe8175).
 45. **17:56:** two answers. **design/SHAPED_GRIPS.md at 93eb70c: FIX THE PAGE FIRST** (five reasons: two corner arrows where four wall grips were ruled; the number stepped through the cover level's corners; the typed test route can reach locked or hidden parts; it leans on an edit doorway that is not built; a half-promise of an arrow flip; `VERDICTS\design-shaped-grips.md`). **codex/tests-units at df9d533: HOLD THE LIST, second answer** (six reasons, all the list's own; the baseline under D-416). Hand-over from Tim's room (the single-pipe window, the CE Settings window, five option sheets): own pictures taken (the reports folder, `timroom_pics`); one helper running. Running: a3b both halves; the Tim's-room check.
+46. **18:00:** hand-overs: team/night-launch 957383a: both halves started BY READING ONLY (a no-shell Team helper and a Codex reader, on a plain-text copy; the real stop flag checked: 114 bytes, 19 Nov 9:02 pm, unchanged). codex/tests-units 65d95d1: not started, sent back (see section 1). D-417 recorded (the privacy scan of shipped drawings is a hard limit; team/a4c-blockfiles is not pushed and nothing of it merges until the scan is clean and both halves are confirmed).
