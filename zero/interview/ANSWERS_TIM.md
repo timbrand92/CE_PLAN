@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-070.
+**Next number:** TR-074.
 
 ---
 
@@ -179,3 +179,13 @@
 **TR-068** (asked: where the window opens on screen, U-094; the question said the part "shows live on the drawing while its window is open"). He did not answer the question and CORRECTED the room: "I MEANT THE LIVE DRAWING SHOULD SHOW IN THE PREVIEW IWNDOW IN THE WINDOW ITSELF DOES THAT MAKE SENSE?". **This corrects the room's reading of TR-003, TR-007 and TR-032, and so D-357.** What he means: the PREVIEW PANEL INSIDE THE WINDOW shows the real drawing (the plan around the part), with the pit or pipe changing live as he types. He was not asking for the part to be painted on the AutoCAD drawing behind the window. The room's mistake: TR-007's options were "Live on the drawing" against "Only on OK", and neither said "live in the window's own preview"; he picked the nearest. Not said, to ask: whether the part should ALSO show on the AutoCAD drawing behind the window (D-301 said both). U-094 is not answered.
 
 **TR-069** (the note left under TR-065; whether a label still ends "MIN." when only one level was typed and the rest are worked out). He picked: "MIN. unless I typed both ends (Recommended)". A pipe carries no MIN. only when he typed both of its inverts; a worked-out level does not count; worked-out levels that are estimates print APPROX. (D-177); MIN. can still be ticked on or off on any pipe (D-238).
+
+## Batch 18, Fri 20 Nov 2026, 13:07 (clock read), through the question window (asked while a helper drew the Pit window mock-up)
+
+**TR-070** (unknown U-100; whether the new part should ALSO appear on the AutoCAD drawing behind the window before OK). He did not answer and wrote: "IM CONFUSED , WHAT DO YOU MEAN?". NOT a ruling. The room's fault: the question could not be understood without a picture. To be asked again with one picture of each way. U-100 stays open.
+
+**TR-071** (unknown U-094; where the window opens on screen; example, six pits placed one after another). He picked: "Where I left it last time (Recommended)". The first time it opens in the middle of the AutoCAD window; dragged anywhere (the second screen included) it opens there every time after, for that tool; if that screen is gone it comes back to the middle. Closes U-094. (Still for his own hands to try.)
+
+**TR-072** (unknowns U-082 and U-049; where a flag shows in Stage 1, before the Unfinished list exists; example, a label retyped to "AT 1 IN 60 MIN." and the grade later becomes 1 in 80). He picked: "A small amber marker on the plan, never printed (Recommended)". A small amber triangle beside the label or part, on a layer that never plots; hovering says what is wrong ("label says 1 IN 60, pipe is 1 in 80"); the window says the same when the part is opened, with one click to let the label follow again. The same marker serves "text overlaps" (TR-016), "Needs a look" (TR-023, TR-024) and a failed check until the Unfinished list arrives. Closes U-082 and U-049. **To flag:** the name of the CE no-plot layer is still open (D-275).
+
+**TR-073** (the rest of U-066; a typed EXPLODE of a pit). He picked: "Same rule as the pipe (Recommended)". The block becomes its plain lines; the number and cover level stay as plain text where they were; the tool stops looking after that pit; pipes joined to it read "not joined yet"; said once on the command line; one Undo makes it a pit again.
