@@ -886,6 +886,8 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-428** (Fri 20 Nov 2026, 8:11 pm by the clock; the control room's DRAFT calls on duplicate pit numbers, for the check room; Tim's to confirm one by one) (1) Renumber when a pit OUTSIDE the joined ones already holds a number Renumber would give: the whole Renumber is REFUSED and that pit is named; nothing changes (one unit, as D-421 item 1). (2) A pit pasted from another drawing whose number is in use here takes the next free number, as COPY does (D-340, D-377 item 2). (3) A pit on a LOCKED layer counts as in use: its number cannot be given to another. (4) A refused number leaves the window OPEN, the number box red with the reason, and every other answer kept.
 
+**D-429** (Fri 20 Nov 2026, about 8:15 pm; the control room on the settings store's split check) HOLD STANDS. "Nothing calls it yet" does not make a fault harmless: the store's save and reset are the thing being merged, a missing office row already gives a silent built-in distance on the read side today, and D-346 asks whether an edit COULD lose drawing content. DRAFT, for Tim: each changed row has its own small reset as well as the one "Back to office values" button. NOT a draft: a drawing that already holds a same-name entry that is not ours is never written to; saving settings in it is refused with words saying why.
+
 ## Not decided (asked or raised, no decision yet)
 
 1. Whether Stage 1's civil explanation is approved (Tim moved on to the design without saying "approve"). **Settled by D-117.**
