@@ -17,7 +17,6 @@ Four hand-overs came from the build room at 1:05 pm; each is ahead of main 22993
 
 1. **team/night-launch at a092bf7** (the night-script safety fix: D-364 items 1 to 9 and the seven blockers). Both halves started 1:07 pm: Team opus honest check (`C:\CE_WORK\check\night-launch_honest`; may run only pretend-process tests, after proving they write nowhere real) and Codex astra adversarial pass by reading (`...\night-launch_adv`). No AutoCAD run until MERGE on both halves and the AutoCAD test room says go (D-364 item 10).
 2. **team/acad-windows at b645b43** (A1 to A3, last fix round). Both halves started 1:08 pm: Team opus honest re-check with its own pictures (`...\acad-windows2_honest`) and Codex astra adversarial re-pass (`...\acad-windows2_adv`). Against `VERDICTS\team-acad-windows.md`.
-3. **team/office-blocks (A4), on main at 22993fa: adversarial pass only.** Codex astra, started 1:05 pm.
 
 ## 2. Waiting
 
@@ -54,6 +53,8 @@ ight-scripts.md`. Ruled by the control room as D-364 items 1 to 10: the fix (tea
 7. **Design page `design\PIPE_SIZE.md` at 7c8d90c: FIX THE PAGE FIRST, about 1:05 pm.** The core is right and closes every A5 finding, but it goes against rulings made since it was saved (D-373, D-374, D-375, D-379, D-380, D-382, D-344) and leaves ordinary cases undefined. `VERDICTS\design-pipe-size.md`.
 8. **Correction, 1:05 pm:** the Pipe mock-up's second reason to fail (the dashed box in step 1) is withdrawn: it is ruled by D-319. The mock-up still FAILS on three.
 
+9. **team/office-blocks (A4), on main at 22993fa, the adversarial half: WOULD HAVE BEEN HOLD, about 1:30 pm.** The office tag is never used; a blocks file holding definitions only cannot supply the first pit on a blank drawing; the file is not in the build. Faults on main exposed: the plan can keep an old cover level (6.50 in the window, CL 5.75 on the drawing); a metre drawing is not refused. Not a reason to pull it off main. `VERDICTS\team-office-blocks_on-main.md`.
+
 ## 5. Look log (the check room's own look at the branches, every 20 minutes)
 
 1. **11:05 am:** first look. Six candidates listed; one merge to main found (night-safety2).
@@ -70,3 +71,4 @@ ight-scripts.md`. Ruled by the control room as D-364 items 1 to 10: the fix (tea
 12. **1:08 pm:** four hand-overs taken; night-launch and acad-windows started (four helpers), office-blocks running (one). held-depth and acad-pictures2 wait for a free helper.
 13. **1:09 pm:** one more hand-over, waiting for a free helper: **codex/tests-five at b23d46f** (tests only: failing targets for the five smaller Stage 1 Pit and Pipe cases; 6 fake-drawing targets fail and 8 controls pass, 2 window targets fail and 1 control passes; report `C:\CE_WORK\cw_tests-five\TESTS_REPORT.md`; one case has no ruling: a second "P1 to P2" join). Order of the waiting checks: team/held-depth, team/acad-pictures2, codex/tests-five, then the corrected design page and the Pipe mock-up after its fix 5.
 14. **1:20 pm:** team/held-depth at 6c9bc07 started, both halves (Team opus honest check, Codex astra adversarial pass), seven helpers now running. New rulings that bear on the checks in hand: D-385 (a flag is a small amber marker on the plan that never plots: replaces D-384 item 3); D-386 (Tim approved the Stage 1 Pit window from a picture: two set sizes, 1000 by 620 and 1240 by 780, the plan panel about 40 per cent of the width, Inspect kept: this replaces every earlier size call and is NOT what team/acad-windows was built to); D-387 (a held depth and a new cover: the invert stays, the depth is worked out again; how far the downstream offer reaches; a typed size is held on a copy; size never carries). Main unchanged at 22993fa; design/pipe-size moved to 95f65aa (the page is being corrected).
+15. **1:30 pm:** by Tim's usage order through the control room, the look is now once an hour; turns are taken only when a report lands or a branch is handed over. The adversarial half on team/night-launch landed at 1:22 pm: it will be HOLD; a safety word went to all three rooms (one of its tests can start a real AutoCAD; its wrapper deletes the stop flag). The stop flag, the night drawing, the master copy and Tim's switch file were checked untouched at 1:24 and 1:25 pm.

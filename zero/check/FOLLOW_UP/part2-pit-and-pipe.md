@@ -55,3 +55,15 @@ Reports: `C:\CE_WORK\check\reports\acad-windows_honest_REPORT.md` and `acad-wind
 31. **Pipe kinds on the label:** a charged pipe carries a grade ("100 DIA. UPVC PIPE AT 1 IN 100" where the office wording is "... CHARGED TO WATER TANK"); a suspended pipe loses "SUSPENDED" and "MIN."; a detention pipe loses its length and "DETENTION" (`bench/CeCivil.Bench.Core/GradeLabel.cs:30`, `PipeToolWindow.cs:117`; D-268, D-312). Their Stage 1 scope is open (U-036). With item 8 above, one fault: the label formatter writes the ordinary wording for everything.
 32. **Cover not known:** the preview shows "CL TBC" but the Pit tool leaves the cover text off the drawing (`src/CeCivil.Hands/Pit/PitTool.cs:246`); D-178 asks for TBC on the sheet.
 33. **A held depth is lost:** type a depth of 1.20, OK, reopen the pit: depth is "Not known" (the list of figures kept with the pit leaves depth out: `src/CeCivil.Brain/data/tools.csv:36`, `bench/CeCivil.Bench.Core/ToolWindow.cs:137`). A held cover level survives. Screen rule 26.
+
+## From the adversarial pass on A4, the office blocks, on main at 22993fa, Fri 20 Nov 2026
+
+Report: `C:\CE_WORK\check\reports\office-blocks_adv_REPORT.md`. The main points are in the verdict page `team-office-blocks_on-main.md`. Lesser items:
+
+34. **A block swapped between the first look and the import is not re-checked:** the second open checks names only, and an empty list of choices passes (`src/CeCivil.Acad/AcadTemplate.cs:47, 64-91`; `src/CeCivil.Hands/Pit/PitTool.cs:365-373, 595-599`).
+35. **Editing only the cover of a pit scaled differently in X and Y flattens it:** the reader keeps the X scale only and the writer sets all three the same (`src/CeCivil.Acad/AcadDrawing.cs:136-139, 175-176`). Traced in the code.
+36. **D-381 item 1 is not built** (ruled after A4): a bare drawing's missing layers, text styles and linetypes brought in from the tool's own copy and said once. Today layers are made from the tool's own list, a missing linetype falls to the drawing's default, and nothing is said when only the tag or style was brought in.
+37. **Words:** every cause of an unreadable blocks file reads "not in the tool's own folder"; a blank setting shows a program error; the inches message carries the words "DRAFT assumptions, not seen in AutoCAD" (`src/CeCivil.Brain/data/tools.csv:56-68, 313-319, 390`). U-025 is open.
+38. **The privacy scan of the blocks file does not walk paper space** or every dictionary (`tests/CeCivil.DwgRead.Tests/ShippedBlocksFileTests.cs:48-66, 82, 90-101`).
+39. **Tests:** an old night check still expects the stand-in square (`src/CeCivil.Acad/PitChecks.cs:391-423`); `GapFiveTests.cs` lost its checks that a joined pipe and tag follow an older outline pit through a move; no test proves a first import, a tag attribute, a mask, or Undo.
+40. **A copied older outline pit** is copied as an outline and numbered; reopening it for an edit is refused. The night-only stand-in can still make a small square in a test drawing: never to be used as proof of A4.
