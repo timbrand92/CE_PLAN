@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-046.
+**Next number:** TR-050.
 
 ---
 
@@ -119,3 +119,13 @@
 **TR-044** (unknown U-116; changing the size part way along one run). He wrote: "not in stage 1 but it would be cool in later stages to get it to design automatically". The draft stands for Stage 1: one run, one size; two runs, or edit the pipes after. NEW idea for later: the tool sizes the pipes down a run by itself: recorded as idea ID-021. Closes U-116.
 
 **TR-045** (unknown U-117; a size typed for a run of five pipes: which are held). Offered: only the first is held, the rest follow (recommended, the control room's draft call); all five are held. He picked: "All five are held". Not the recommended answer; it OVERTURNS the draft call in D-372. A size typed for a run is held on every pipe in that run; nothing below changes by itself. Room's note (mine): TR-024 (when a pipe is made bigger, offer once to change the pipes downstream, then flag) still stands as his ruling; with all five held the offer asks before touching a held size, and a "No" leaves them flagged. Closes U-117.
+
+## Batch 12, Fri 20 Nov 2026, 12:32 (clock read), through the question window
+
+**TR-046** (unknown U-115; the room's recommendation put back: typed 300, now drawn 375; the window shows the drawn 375 with both figures in words, the label follows the 375, one click puts his 300 back). He picked: "Yes, as you recommend (Recommended)". Closes U-115.
+
+**TR-047** (unknown U-001; a drawing set to metres; the draft call D-344 put to him: the tools say metre drawings are not supported yet and draw nothing). He picked: "Yes, refuse and say why (Recommended)". CONFIRMS D-344. Closes U-001.
+
+**TR-048** (unknown U-002; a drawing without the office set-up; example, an architect's bare drawing with no office layers, text styles or DASHED linetype). He picked: "Bring them in too, say so once (Recommended)". Missing layers, text styles and linetypes are brought in from the tool's own copy of the office set-up, as the blocks are (D-352), with one line on the command line listing what was added; anything already in the drawing is never changed (D-260 DQ-005). Closes U-002.
+
+**TR-049** (unknown U-077; rounding; the draft call D-341 put to him with examples: 10.0049 m shows 10.00, 10.0050 m shows 10.01, a level of 12.345 shows 12.35; two points within a tenth of a millimetre are one point). He picked: "Yes, half up (Recommended)". CONFIRMS D-341. Closes U-077.
