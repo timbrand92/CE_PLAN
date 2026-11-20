@@ -46,3 +46,20 @@ The "What else changes" wording is only partly settled (edit 3).
 2. **Owed on a test copy in AutoCAD:** both window sizes; one Undo for a connected placement and for Renumber; pasted tags and "CL TBC" after save and reopen. The Pipe invert-label position stays WAITING (D-399).
 
 **Next:** the page's writer makes the six edits. Both readers then read it back.
+
+---
+
+# Second answer: the page at 522db21 (the six edits read back)
+
+**Answer: BUILD FROM IT.** Written Sat 21 Nov 2026, about 6:27 am. Read back by the check room alone, by reading only. The change from 3c35330 is one file, 76 lines in and 27 out, with a "Changed since 3c35330" list at the top.
+
+1. **The worst laptop layout is worked line by line.** Every band, card, row, gap, rule, caption and button is given a y-position, a height and a usable width. The check room added them up: they come to 1000 across, 620 down, 576 per card and 984 for the buttons.
+   - **The fullest state:** two in, one out, a pick notice, a refused number and unset units. The working reads 5.754 − 5.246 + 0.000 = 0.508 m. On plan it is CL 5.75 · IL 5.25 · Depth 0.51 m, and 1000.125 prints CL 1000.13. The double rule ends at 552, inside 564.
+2. **The one layout test:** 91 splits × 2 sizes × units × number, which is 728 base states. On top of that it crosses unresolved flow, checks, notices, Renumber states, controls, text lengths and large counts up to 2,147,483,647. It fails on anything missing, cut off or overlapping. The 19 and 11 of 24 cases are kept, and planted faults must fail.
+3. **Renumber:** one planner, keyed by pit identity, drives the preview, the count, "What else changes", the tags and the write. It is rechecked under the drawing lock, and a changed list redisplays and needs a second OK. The real sentence "Pit schedule: row P2 cover level becomes 13.10 and depth 0.70." is tested. Both refusals must write nothing and keep every entry.
+4. **One number reader:** every route listed (typing, paste, legacy records, tags, duplicate checks, generated numbers, scans of the destination drawing, drawing writes, reading back) uses its result directly. A second reader planted in the writer, and one in the destination scan, must each fail. A pasted record and its tag are written together and rolled back together.
+5. **PIT_LEVELS's outlet:** the window takes Pit's selected outlet with its identity, exact values, sources and status. Unresolved flow gives "Not known". The detail list holds every joined pipe.
+6. **The keep-open rule:** the window stays open for number, Renumber and write refusals only. The two units-change drafts (D-403 item 4, D-418 item 10) are kept and tested.
+7. **For Tim:** five DRAFT calls are listed one at a time: the number limit and spelling; the next number; Renumber; the Pipe summary; units changed while the window is open.
+
+**What this means:** one builder takes this page and PIT_LEVELS (7f265eb) on team/a3b-pit-window once the rounding routine MERGES (D-432).

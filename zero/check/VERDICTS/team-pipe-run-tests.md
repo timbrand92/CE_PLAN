@@ -99,3 +99,19 @@ The test diff to `src` and `bench` is still empty. **Closed:** all five items of
 5. **The converted band stays open after OK and Redo** (adversarial half). Closing it added a 10 m return segment, and all 239 results still matched the right build. Require it open. Rulings: D-356, D-410. Line: `Stage1PipeRunAcceptanceTests.cs:550`.
 
 **If the read-back fails, the list goes to the control room.**
+
+---
+
+# Read-back of the ONE bounded edit: 35f9217
+
+**Answer: ACCEPT THE LIST at 35f9217.** Written Sat 21 Nov 2026, about 6:27 am. Read back by the check room alone, as the standing rule allows. The edit is tests only: four files, 152 lines in and 114 out; the `src` and `bench` diff against main is still empty; the build room compiled it with 0 errors.
+
+1. **The proposal at the real hand-offs:** the named diagnostic feed and the pretend-drawing replay are gone. The click, Run and pit tests read the open window's length, width and cover BEFORE OK. The click test expects 10.44 m and 225 mm, and those are compared with the saved band. Every written existing object, and every destination layer, must have passed the protection check before any write.
+2. **Native edits from the drawing before the command:** a `beforeCommand` hook records the drawing before MOVE, STRETCH and the rest, and follow-up writes are counted from `BeginFollowUp`. MOVE now expects every original point at y + 1,000.
+3. **The real grip route:** the made-up "Grip" event is gone. A new test invokes the pipe's grip through the D-408 bench companion (the same `CE_GRIP_TYPED_DLL` route as the accepted text grips list). It checks start, bend (5000,1200) and end, the 150 mm width, the protection checks, and one Undo back to the starting drawing.
+4. **The join tick by role:** the selector now needs a visible, enabled invert tick whose label also says "branch" or "join". Ordinary invert ticks may be on screen too.
+5. **The band stays open:** "The converted band must stay open after OK and Redo" is asserted.
+
+**Binding probes for the pipe-run build (D-431):**
+1. **The doorway's own proposal:** the test proves "the doorway checks what is saved" through the protection checks on every written object. The build's review must also confirm that the preview and the write come from one PlanRun proposal.
+2. **The preview pick:** `ClickPreview` finds the window's single public pick action by its shape. A build with a second such action must say so.
