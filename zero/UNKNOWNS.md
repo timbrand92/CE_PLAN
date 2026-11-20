@@ -3,7 +3,7 @@
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), set up by D-353 and `ROOMS.md`. No other chat edits this file.
 **First written:** Fri 20 Nov 2026, 10:45 am (clock read).
 
-**STAGE 1 COUNT: 95 of 247 closed.** Updated Fri 20 Nov 2026, 14:43. PART A (U-001 to U-128): 77 of 128 closed, 24 blockers open. PART B (N-001 to N-119, from the two line-by-line pages, held in `interview/FOLD_DRAFT.md` Part 1; at least 14 are one question asked on both pages): 18 of 119 closed, 68 blockers open. **Blockers open in all: 92.** Tim's word on HOW to ask (TR-086): one by one. Filed by the control room so far: up to D-391.
+**STAGE 1 COUNT: 95 of 249 closed.** Updated Fri 20 Nov 2026, 14:43. PART A (U-001 to U-130): 77 of 130 closed, 26 blockers open. PART B (N-001 to N-119, from the two line-by-line pages, held in `interview/FOLD_DRAFT.md` Part 1; at least 14 are one question asked on both pages): 18 of 119 closed, 68 blockers open. **Blockers open in all: 94.** Tim's word on HOW to ask (TR-086): one by one. Filed by the control room so far: up to D-391.
 **PART B CLOSED:** N-003 (TR-087); N-004 (TR-087); N-005 (TR-088); N-006 (TR-088); N-001 (TR-089); N-002 (TR-089); N-007 (TR-090); N-009 (TR-091); N-014 (TR-092); N-015 (TR-093); N-019 (TR-095); N-020 (TR-096); N-021 (TR-097); N-022 (TR-098); N-023 (TR-099); N-024 (TR-100); N-028 (TR-102); N-016 (TR-106)
 **STAGE 2 COUNT (waiting): 0 of 23 closed.**
 
@@ -177,6 +177,8 @@
 126. **U-126** (added 20 Nov, control room, from the check room's pass on the office blocks) The circled pit number tag is in the office template copy but not in the office master: may the tool take it from the template copy, and is that the right tag. Waits on: Tim. **Blocks Stage 1.**
 127. **U-127** (added 20 Nov, control room) The nine clashes listed at the foot of `rulings/INDEX.md` (they overlap `interview/FOLD_DRAFT.md` Part 5): each to be put to him, or shown already settled by a TR number. Waits on: the room to sort, then Tim. **Blocks Stage 1.**
 128. **U-128** (added 20 Nov, control room, from the check room) A SECOND pipe drawn between the same two pits (two pipes both "P1 to P2"): what each is called on the plan, in the window and in lists. Its recommendation is in section 5 of the check room's report `tests-five_honest_REPORT.md`. Waits on: Tim. **Blocks Stage 1.**
+129. **U-129** (added 20 Nov from TR-112, his question "what about for a single pipe") The Pipe window for ONE pipe (drawn alone, or one pipe opened to edit): what differs from the run window. Room's proposal, not yet his: the same window; the plan strip zoomed to that pipe; a level box at EACH end with the grade (any two given, the third worked out, D-086); one row of working. Waits on: a picture then Tim. **Blocks Stage 1.**
+130. **U-130** (added 20 Nov from TR-113, his question) In the window for a run of several pipes: can he click ONE length (in the plan strip or a list) and change that length's figures alone. TR-044 said a size change part way along a run is "not in stage 1"; this asks it again from the window's side. Waits on: Tim (a real choice). **Blocks Stage 1.**
 
 ---
 

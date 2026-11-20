@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-112.
+**Next number:** TR-114.
 
 ---
 
@@ -287,3 +287,9 @@
 **TR-110** (unknown U-037; step 3: each row level below + fall + pit drop = level to three decimals, with a last column "On the plan" at two decimals). He picked: "Yes: exact working, plan figure beside it (Recommended)". Checks are made on the exact levels (D-350); the plan prints two decimals.
 
 **TR-111** (asked for by the control room, D-389; the band colour when an answer is none of Suits, Needs a look or Wrong; example, a run drawn with no level typed). He picked: "A grey band: 'Cannot check yet' (Recommended)". A fourth, calm band in plain grey with the words "Cannot check yet" and what is not known. Green, amber and red keep their meanings. This ADDS to the approved style (D-295).
+
+## Fri 20 Nov 2026, about 2:45 pm (PC clock), typed in the chat after seeing the Pipe window pictures
+
+**TR-112** His words: "what about for a single pipe". A QUESTION, not a ruling. The pictures showed the window for a run of five pipes; he asks what the window is for one pipe. Room's answer to him (a proposal, the room's): the same window with the same three steps; the plan strip zoomed to that one pipe; a level box at each end and the grade, any two given and the third worked out (D-086, D-236); one row of working. Added as U-129; a picture is owed.
+
+**TR-113** (typed in the chat a minute later) His words: "in the multiple pipe window are you able to click on one length and change its characterisitics?". A QUESTION, not a ruling. As the mock-up is drawn: no; one window sets one size and grade for the whole run, and a single pipe is changed afterwards by opening that pipe (CDEDIT or double-click, TR-066) or by selecting several (TR-054). In TR-044 he said a size change part way along a run was "not in stage 1". His question suggests he may want it in the run window after all. Added as U-130, to be put to him as a choice.
