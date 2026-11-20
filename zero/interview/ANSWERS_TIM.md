@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-199.
+**Next number:** TR-203.
 
 ---
 
@@ -507,3 +507,13 @@
 **TR-197** (N-097; what the window says about cover when "what is over it" is not known). Offered: grey "Cannot check yet" with the depth as a plain figure (recommended); say nothing about cover; check against the garden figure. He picked: "Say nothing about cover". Not the recommended answer. With nothing set for what is over the pipe, the window does not mention cover at all (it fits TR-063: "a minor feature ... simply a check"). **This changes the Pipe window he approved from the picture:** the band's second answer "Depth over pipe: Not known" and step 2's "What is over it: Not known" line come off when nothing is set. The grey band (TR-111) still stands for other not-known answers, such as levels.
 
 **TR-198** (N-098; whether cover is checked at a bend). Offered: at each end, each bend and each point he adds (recommended); at the two ends only. He picked: "At the two ends only". Not the recommended answer. Cover is checked at the two pipe ends, and at any surface point he adds (TR-062); a bend is not a check point by itself. **To flag:** root cause C9 ("at a bend, 240 mm cover must remain visible even with 300 mm at both pits") and the design D-349 expected a check at each bend; by his word it is not made unless he adds a point there.
+
+## Batch 49, Fri 20 Nov 2026, 16:59 (clock read), through the question window, one line per question. Sources: `stage6/SPEC_PIPE.md` section 12 items 110, 57, 122; `stage6/SPEC_PIT.md` section 10 items 42, 87.
+
+**TR-199** (N-099; the word when a check fails). He picked: "'Wrong', with how short in words (Recommended)". Red "Wrong: 40 mm short at P3" for cover, "Wrong: 1 in 250 is flatter than 1 in 200" for grade; "Short" is kept for storage volumes in Detention; it never blocks (D-140).
+
+**TR-200** (N-113; which layer a pit lands on, put to him as measured on issued sheets). He picked: "Yes: pit and number tag on STORMWATER (Recommended)". The pit block and its circle tag are inserted on layer STORMWATER (the parts inside the blocks keep their own layers); the cover level text on 25TEXT (TR-187).
+
+**TR-201** (N-116; which layers a pipe lands on, as measured on issued sheets). He picked: "Yes: band on STORMWATER PIPE, edge lines on DRAINAGE (Recommended)". Both ByLayer (TR-126); label on 25TEXT, invert levels on 20TEXT (TR-187); the flow arrow on 25DIMS was in the option's words as measured on his sheets and is read as confirmed with it.
+
+**TR-202** (N-118, N-119; where a setting is changed in Stage 1, with no Job window; the two specification pages disagreed). He picked: "A small CE Settings window, saved with the drawing (Recommended)". A plain list of the settings with their office values, opened by a typed name or a button in the Pit and Pipe windows; a change applies to that drawing only and is saved in it; "Back to office values" undoes it; these move into the Job window when it arrives. The Pipe page's recommendation (office values only) is NOT taken. A picture of that window is owed, and its typed name is not said.
