@@ -13,22 +13,22 @@
 
 ## 1. Being checked now
 
-Four hand-overs came from the build room at 1:05 pm; each is ahead of main 22993fa and 0 behind.
-
-1. **team/night-launch at a092bf7** (the night-script safety fix: D-364 items 1 to 9 and the seven blockers). Both halves started 1:07 pm: Team opus honest check (`C:\CE_WORK\check\night-launch_honest`; may run only pretend-process tests, after proving they write nowhere real) and Codex astra adversarial pass by reading (`...\night-launch_adv`). No AutoCAD run until MERGE on both halves and the AutoCAD test room says go (D-364 item 10).
-2. **team/acad-windows at b645b43** (A1 to A3, last fix round). Both halves started 1:08 pm: Team opus honest re-check with its own pictures (`...\acad-windows2_honest`) and Codex astra adversarial re-pass (`...\acad-windows2_adv`). Against `VERDICTS\team-acad-windows.md`.
+1. **team/acad-windows at b645b43** (A1 to A3, last fix round). Honest half landed 1:27 pm: HOLD (the window now opens; one picture still draws pipe stubs on a pit with none; the four-fifths cap cuts off the foot of the Pipe window at 1920 by 1080). Adversarial half (Codex astra) still running; the written verdict follows it.
+2. **team/held-depth at 6c9bc07.** Honest half landed 1:29 pm: MERGE, no blocker, six follow-ups. Adversarial half (Codex astra) still running.
+3. **design\PIPE_SIZE.md, corrected, design/pipe-size at 95f65aa:** the one more read, Team opus, started 1:35 pm.
+4. **Pipe mock-up after its fix 5:** new pictures taken by the check room at 1:34 pm (`C:\CE_WORK\check\reports\pipe-mockup_pics\fix5`); Team opus re-check started 1:35 pm.
 
 ## 2. Waiting
 
-Handed over, to start as helpers come free (no more than five at once, so the PC stays usable for Tim):
-1. **team/held-depth at 6c9bc07** (a typed depth lost on OK and reopen; one line of data and four tests). Both halves.
-2. **team/acad-pictures2 at b876264** (the picture route for the night run, the 8 conditions of PICTURE_ROUTE.md). Both halves; the AutoCAD test room is to be told the outcome. No picture run until both rooms say go.
-3. **design\PIPE_SIZE.md, corrected page:** one more read when the designer has corrected it against D-373 to D-384.
+Handed over, to start as helpers come free:
+1. **team/acad-pictures2 at b876264** (the picture route for the night run). Both halves BY READING ONLY (D-388): it holds night scripts. The AutoCAD test room is told the outcome.
+2. **codex/tests-five at b23d46f** (tests only, the five smaller Stage 1 cases).
 
 Not handed over yet:
-4. **team/a6-draw-first** (a second build round before its first check), **codex/doorway**, **codex/tests-a7b**, **codex/tests-a6b**, **codex/tests-five**; the C11 build on **codex/c11-tests** (the list is held: `VERDICTS\codex-c11-tests.md`).
+3. **team/night-launch, next round** (after the HOLD of 1:35 pm): both halves by reading only, against D-364 and D-388.
+4. **team/a6-draw-first, codex/doorway, codex/tests-a7b, codex/tests-a6b;** the C11 build on codex/c11-tests (the list is held).
 
-**Standing order from the control room:** nothing reaches main on one check alone; both halves of D-346 every time. If the build room merges on one, the check room tells the control room at once.
+**Standing orders from the control room:** nothing reaches main on one check alone; both halves of D-346 every time; if the build room merges on one, tell the control room at once. No checker or builder runs any script of team/night-launch (D-388). The look is hourly; turns only when a report lands or a branch is handed over (Tim's usage order).
 
 ## 3. Not for the check room (merged before it opened, on the build room's own check)
 
@@ -55,6 +55,8 @@ ight-scripts.md`. Ruled by the control room as D-364 items 1 to 10: the fix (tea
 
 9. **team/office-blocks (A4), on main at 22993fa, the adversarial half: WOULD HAVE BEEN HOLD, about 1:30 pm.** The office tag is never used; a blocks file holding definitions only cannot supply the first pit on a blank drawing; the file is not in the build. Faults on main exposed: the plan can keep an old cover level (6.50 in the window, CL 5.75 on the drawing); a metre drawing is not refused. Not a reason to pull it off main. `VERDICTS\team-office-blocks_on-main.md`.
 
+10. **team/night-launch at a092bf7 (the night-script safety fix): HOLD, about 1:35 pm.** By reading (adversarial half; the honest half was stopped on the control room's safety order). The wrapper deletes the stop flag; a test can start a real AutoCAD; a force goes ahead when the open-drawing count cannot be read; nothing owns the 8:00 am deadline; failed checks finish green. Closed: the launcher now creates the process itself; the weekday clock is right. `VERDICTS\team-night-launch.md`.
+
 ## 5. Look log (the check room's own look at the branches, every 20 minutes)
 
 1. **11:05 am:** first look. Six candidates listed; one merge to main found (night-safety2).
@@ -72,3 +74,4 @@ ight-scripts.md`. Ruled by the control room as D-364 items 1 to 10: the fix (tea
 13. **1:09 pm:** one more hand-over, waiting for a free helper: **codex/tests-five at b23d46f** (tests only: failing targets for the five smaller Stage 1 Pit and Pipe cases; 6 fake-drawing targets fail and 8 controls pass, 2 window targets fail and 1 control passes; report `C:\CE_WORK\cw_tests-five\TESTS_REPORT.md`; one case has no ruling: a second "P1 to P2" join). Order of the waiting checks: team/held-depth, team/acad-pictures2, codex/tests-five, then the corrected design page and the Pipe mock-up after its fix 5.
 14. **1:20 pm:** team/held-depth at 6c9bc07 started, both halves (Team opus honest check, Codex astra adversarial pass), seven helpers now running. New rulings that bear on the checks in hand: D-385 (a flag is a small amber marker on the plan that never plots: replaces D-384 item 3); D-386 (Tim approved the Stage 1 Pit window from a picture: two set sizes, 1000 by 620 and 1240 by 780, the plan panel about 40 per cent of the width, Inspect kept: this replaces every earlier size call and is NOT what team/acad-windows was built to); D-387 (a held depth and a new cover: the invert stays, the depth is worked out again; how far the downstream offer reaches; a typed size is held on a copy; size never carries). Main unchanged at 22993fa; design/pipe-size moved to 95f65aa (the page is being corrected).
 15. **1:30 pm:** by Tim's usage order through the control room, the look is now once an hour; turns are taken only when a report lands or a branch is handed over. The adversarial half on team/night-launch landed at 1:22 pm: it will be HOLD; a safety word went to all three rooms (one of its tests can start a real AutoCAD; its wrapper deletes the stop flag). The stop flag, the night drawing, the master copy and Tim's switch file were checked untouched at 1:24 and 1:25 pm.
+16. **1:35 pm:** SAFETY, for the record. The check room's own honest helper on team/night-launch ran that branch's guard-deletion tests in Tim's hours from 1:15 pm. The build room flagged it at about 1:25 pm; the check room wrongly left it running under watch; the control room ordered it stopped at 1:30 pm. Stopped at 1:30 pm, and an orphaned runner it left at 1:31 pm. Nothing real was touched: the stop flag (19 Nov 9:02:20 pm, 114 bytes), the night drawing, the master copy, Tim's switch file and the results folder are unchanged, and no AutoCAD was running. Ruled as D-388.
