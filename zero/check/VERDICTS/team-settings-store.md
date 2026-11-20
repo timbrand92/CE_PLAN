@@ -94,3 +94,8 @@ Eight of the sixteen settings have no reader in Pit or Pipe (the invert gap 200,
 ## 14. To fix in the same round
 
 `10000.0000000000001` saved for a distance is accepted and drawn at 10,000 mm (the number is rounded before the limit is checked): check the typed text against the limit; a part WBLOCK may carry the drawing's settings (the hook fires for every WBLOCK, D-425 item 3): owed in AutoCAD, first on that list.
+
+## 15. Ruled since (control room, about 11:57 pm)
+
+1. **The store may MERGE once its own blockers close** (both halves), and is marked "built" only when the labels, marker and grips builds read the other eight settings; each of those builds owes "reads its settings from the store" as a MERGE condition.
+2. **ONE source for the tolerance: the store.** Nothing else may hold a tolerance (the older Job record included); blocker 1 of section 12 is fixed that way.
