@@ -13,7 +13,7 @@
 
 ## 1. Being checked now
 
-1. **DESIGN PAGE `design\PIPE_SIZE.md`, branch design/pipe-size at 7c8d90c** (the size a pipe holds and where it is kept; D-372). Asked by the build room at 12:01 pm: read against D-372, D-263 and D-349 before any build. Team opus honest read and Codex astra adversarial read, both started 12:04 pm. Answer will be BUILD FROM IT or FIX THE PAGE FIRST.
+Nothing at 1:05 pm. Next to start: the adversarial pass on team/office-blocks (section 2 item 4).
 
 ## 2. Waiting
 
@@ -46,6 +46,9 @@ ight-scripts.md`. Ruled by the control room as D-364 items 1 to 10: the fix (tea
 5. **team/pipe-default at 393b649 (A5), last fix round: HOLD, and HELD, about 12:07 pm.** Both halves agree. Closed: the last typed size no longer carries; a single pipe off a pit; a readable older width kept. Open: a run draws 375, 100, 100, 100; an arriving pipe read from its note not the drawing; a note that disagrees with the drawn pipe wins and OK redraws it; an unreadable width becomes 100; a read-off size recorded as typed. No third patch (D-372): design page, then one build. `VERDICTS\team-pipe-default_HELD.md`.
 6. **Mock-up `zero\pictures\pipe_top_preview_mockup.html`: FAIL, about 12:08 pm.** It fits and every sum adds up, but: "short by 45 mm, Short" where the rulings give 50 mm and "Wrong"; a worked-out figure in a box in step 1; the pipe not drawn the office way; the flow arrow inside the pipe (D-369). `VERDICTS\mockup-pipe-top-preview.md`.
 
+7. **Design page `design\PIPE_SIZE.md` at 7c8d90c: FIX THE PAGE FIRST, about 1:05 pm.** The core is right and closes every A5 finding, but it goes against rulings made since it was saved (D-373, D-374, D-375, D-379, D-380, D-382, D-344) and leaves ordinary cases undefined. `VERDICTS\design-pipe-size.md`.
+8. **Correction, 1:05 pm:** the Pipe mock-up's second reason to fail (the dashed box in step 1) is withdrawn: it is ruled by D-319. The mock-up still FAILS on three.
+
 ## 5. Look log (the check room's own look at the branches, every 20 minutes)
 
 1. **11:05 am:** first look. Six candidates listed; one merge to main found (night-safety2).
@@ -57,3 +60,4 @@ ight-scripts.md`. Ruled by the control room as D-364 items 1 to 10: the fix (tea
 7. **11:55 am:** main unchanged at 22993fa. Moved or new, none handed over: team/night-launch to 534f96a (the launcher fix, in work); design/pipe-size at 3a41fd0 (new: the design page for the pipe size, D-372); team/held-depth (new, no work yet). Verdicts given since the last look: team/acad-windows HOLD. team/pipe-default at 393b649: honest half says still HOLD; by the control room (D-372) no third patch, a design page first; the held page is written when the adversarial half lands.
 8. **12:04 pm:** two more jobs started. (a) DESIGN PAGE check asked by the build room at 12:01 pm: `design\PIPE_SIZE.md` on branch design/pipe-size at 7c8d90c, read against D-372, D-263 and D-349 before any build: Team opus honest read and Codex astra adversarial read. (b) The Pipe mock-up: the check room took its own pictures of the three states at 11:57 am (`C:\CE_WORK\check\reports\pipe-mockup_pics`) and a Team opus helper is checking it rule by rule. Still running: adversarial passes on the C11 test list and on team/pipe-default at 393b649. Coming next from the build room: team/held-depth and the last team/acad-windows round.
 9. **12:08 pm:** three verdicts written (C11 list, pipe-default held page, Pipe mock-up). Six verdicts given today, none MERGE.
+10. **12:15 to 1:02 pm:** no turns taken, by the control room's order (the Claude weekly allowance was at 97 per cent until its reset at 1:00 pm). Looks at 12:15, 12:35 and 12:55 pm skipped.

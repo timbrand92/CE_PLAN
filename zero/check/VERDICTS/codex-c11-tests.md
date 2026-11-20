@@ -43,12 +43,14 @@ Each is a case where, with the list green, a wrong figure or wording could still
 
 Kept in `FOLLOW_UP\part3-cover-and-grade.md`: the source-text checks can be satisfied by a rename; two controls stay green with their sum broken; loose "contains" checks ("6 mm" matches "16 mm"; "over by 999 l/s" passes); a division test passable by always answering 0.08; tests that call private names; the list of 28 older tests misses about 35 older assertions that expect metres with no unit, and `FactTests.WorkedOutRoundingThroughFact`; no case follows one figure through window, label, reopened check and printed working; no bad-input-then-repaired case in the list (older tests cover it).
 
-## 6. No ruling (for the control room and Tim's room)
+## 6. Ruled since (control room, about 12:15 pm by its clock, and D-380)
 
-1. **The tolerance setting has no ruled upper limit and no whole-millimetre rule;** 99,999 mm was accepted. One test demands that an earlier 5 mm survives a typed 2.5 mm.
-2. **A length exactly half way at the first step** (1.00495 m: is it 1004.9 or 1005.0 mm before display?). D-341 does not say.
-3. **A grade given as a percentage** is not ruled for Pipe; the field compares "1 in".
-4. **Schedule depth 0.27 beside printed levels 5.62 and 5.36:** already sent by the control room to Tim's room for when the schedule returns.
+1. **The tolerance setting:** whole millimetres only, 0 to 20 mm; a typed 2.5 or 99,999 is refused with words (the control room's DRAFT call; Tim's room to confirm).
+2. **A length exactly half way at the first step** (1.00495 m) follows half up.
+3. **A grade typed as a percentage is not in Stage 1:** grades are 1 in N. Sent to Tim's room.
+4. **D-341 (rounding), D-344 (metres refused) and grades at two decimal places are Tim's word now** (D-380), no longer drafts.
+5. **A shortfall is measured from the figure needed;** the tolerance only decides pass or fail. A cover shortfall reads "Wrong" and says how short and where (D-140, D-280).
+6. **Schedule depth 0.27 beside printed levels 5.62 and 5.36:** with Tim's room for when the schedule returns.
 
 ## 7. What held up
 
