@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Where the labels land</title>
+<style>
+  :root{--page:#2B2D30;--card:#383B40;--cad:#16181B;--text:#ECEDEF;--grey:#A9AEB6;--line:#4A4D53;--rose:#FF70B3}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--page);color:var(--text);font-family:"Segoe UI",Arial,sans-serif;font-size:14px;line-height:1.45}
+  main{max-width:980px;margin:0 auto;padding:24px}
+  h1{font-size:24px;font-weight:600;margin:0 0 8px}
+  .why{color:var(--grey);margin:0 0 24px}
+  section.q{background:var(--card);border-radius:8px;padding:24px;margin:0 0 32px}
+  h2{font-size:24px;font-weight:600;margin:0 0 8px}
+  .ctx{color:var(--grey);margin:0 0 16px}
+  .opt{margin:0 0 24px}
+  .opt:last-child{margin-bottom:0}
+  h3{font-size:14px;font-weight:600;margin:0 0 8px}
+  .rec{display:inline-block;background:var(--rose);color:#10131A;border-radius:8px;padding:0 8px;margin-left:8px;font-weight:600;font-size:12px}
+  svg{display:block;width:100%;height:auto;background:var(--cad);border:1px solid var(--line);border-radius:8px}
+  svg text{font-family:Arial,"Segoe UI",sans-serif;fill:#fff}
+  .note{font-size:12px;color:var(--grey);margin:8px 0 0}
+  .made{font-size:12px;color:var(--grey);margin:0}
+</style>
+</head>
+<body>
+<main>
+<h1>Where the labels land</h1>
+<p class="why">Each picture is the same made-up bit of plan, drawn as AutoCAD shows it at 1:100: pits P2 and P3, 9 m apart, a 100 dia. pipe between them, beside a house wall. The gaps are the ones measured on three of your issued sheets. Pick one answer for each question.</p>
+<div id="host"></div>
+<p class="made">The house wall, the levels and the pit numbers are made up for the picture.</p>
+</main>
+<script>
+var NS="http://www.w3.org/2000/svg", S=64/1000;            // 64 px per metre
+var BLUE="#3F7BE0", RED="#FF5A5A", CAD="#16181B";
+function mm(v){return v*S}
+function el(n,a,t){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);if(t!==undefined)e.textContent=t;return e}
+function svg(h){return el("svg",{viewBox:"0 0 930 "+h,role:"img"})}
+// text with a mask behind it, as the office draws it. h = height in mm, anchor start|middle|end, rot degrees
+function txt(s,x,y,str,h,o){o=o||{};var fs=mm(h)*1.38,w=str.length*fs*0.56,a=o.anchor||"middle";
+  var x0=a=="middle"?x-w/2:(a=="end"?x-w:x);
+  var g=el("g",o.rot?{transform:"rotate("+o.rot+" "+x+" "+y+")"}:{});
+  g.appendChild(el("rect",{x:x0-2,y:y-fs*0.86,width:w+4,height:fs*1.08,fill:CAD}));
+  g.appendChild(el("text",{x:x,y:y,"font-size":fs,"text-anchor":a,style:"fill:"+(o.fill||"#fff")},str));
+  s.appendChild(g)}
+function wall(s,y){for(var x=-10;x<930;x+=12){s.appendChild(el("line",{x1:x,y1:y,x2:x+12,y2:y-12,stroke:"#5F646C","stroke-width":1}))}
+  s.appendChild(el("line",{x1:0,y1:y,x2:930,y2:y,stroke:"#C8CBD0","stroke-width":2}));
+  s.appendChild(el("text",{x:16,y:y-18,"font-size":12,style:"fill:#A9AEB6"},"HOUSE WALL"))}
+function pit(s,x,y){var r=mm(225);s.appendChild(el("rect",{x:x-r-4,y:y-r-4,width:2*r+8,height:2*r+8,fill:"none",stroke:"#C8CBD0","stroke-width":1,"stroke-dasharray":"4 3"}));
+  s.appendChild(el("rect",{x:x-r,y:y-r,width:2*r,height:2*r,fill:CAD,stroke:"#fff","stroke-width":1.5}));
+  s.appendChild(el("line",{x1:x-r,y1:y-r,x2:x+r,y2:y+r,stroke:"#8A8E96","stroke-width":1}));
+  s.appendChild(el("line",{x1:x-r,y1:y+r,x2:x+r,y2:y-r,stroke:"#8A8E96","stroke-width":1}))}
+function pipe(s,x1,x2,y){var w=mm(100);
+  s.appendChild(el("line",{x1:x1,y1:y,x2:x2,y2:y,stroke:BLUE,"stroke-width":w,"stroke-dasharray":"32 16"}));
+  s.appendChild(el("line",{x1:x1,y1:y-w/2,x2:x2,y2:y-w/2,stroke:"#C8CBD0","stroke-width":0.8}));
+  s.appendChild(el("line",{x1:x1,y1:y+w/2,x2:x2,y2:y+w/2,stroke:"#C8CBD0","stroke-width":0.8}))}
+function tag(s,x,y,n){s.appendChild(el("circle",{cx:x,cy:y,r:mm(330),fill:CAD,stroke:"#fff","stroke-width":1.5}));
+  s.appendChild(el("text",{x:x,y:y+mm(350)*0.5,"font-size":mm(350)*1.3,"text-anchor":"middle"},n))}
+function dimnote(s,x,y,str){s.appendChild(el("text",{x:x,y:y,"font-size":12,style:"fill:#A9AEB6","text-anchor":"middle"},str))}
+var LBL="100 DIA. UPVC PIPE AT 1 IN 100";
+var X2=150,X3=726;                                         // pit centres, 9 m apart
+function run(s,y,x3){x3=x3||X3;pit(s,X2,y);pit(s,x3,y);pipe(s,X2+mm(225),x3-mm(225),y)}
+function labelAt(s,y,side,x){var w=mm(100)/2,g=mm(75),fs=mm(250)*1.38;
+  txt(s,x||(X2+X3)/2,side<0?y-w-g-fs*0.22:y+w+g+fs*0.86,LBL,250)}
+function il(s,xEnd,dir,y,side,str){var w=mm(100)/2,g=mm(50),fs=mm(180)*1.38;
+  txt(s,xEnd+dir*mm(400),side<0?y-w-g-fs*0.22:y+w+g+fs*0.86,str,180,{fill:RED,anchor:dir>0?"start":"end"})}
+function sideTags(s,y){tag(s,X2-mm(900),y,"P2");tag(s,X3+mm(900),y,"P3")}
+function cursor(s,x,y){s.appendChild(el("line",{x1:x-14,y1:y,x2:x+14,y2:y,stroke:"#fff","stroke-width":1}));s.appendChild(el("line",{x1:x,y1:y-14,x2:x,y2:y+14,stroke:"#fff","stroke-width":1}));s.appendChild(el("rect",{x:x-4,y:y-4,width:8,height:8,fill:"none",stroke:"#fff","stroke-width":1}))}
+function stdText(s,y){tag(s,X2-mm(650),y-mm(900),"P2");tag(s,X3+mm(650),y-mm(900),"P3");
+  txt(s,X2-mm(450),y+mm(700),"CL 12.95",200,{anchor:"end"});txt(s,X3+mm(450),y+mm(700),"CL 13.10",200,{anchor:"start"})}
+
+var Q=[
+{h:"1. Which side of the pipe does the label start on?",
+ ctx:"On your sheets 36 labels sit above the pipe and 23 below: no fixed side. The label is centred on the pipe, 75 mm clear of its edge, turned to read from the bottom or the right of the sheet.",
+ o:[
+ {h:"A. Above the pipe, every time",draw:function(){var s=svg(170),y=118;wall(s,92);run(s,y);sideTags(s,y);labelAt(s,y,-1);dimnote(s,(X2+X3)/2,y+36,"wall 400 mm from the pipe: the label lands on the wall line");return s},
+  n:"Always the same, so you know where to look. Beside a wall or another pipe it lands on top of it, as shown, and you drag it clear."},
+ {h:"B. Above, but below when something is in the way",rec:1,draw:function(){var s=svg(170),y=92;wall(s,66);run(s,y);sideTags(s,y);labelAt(s,y,1);dimnote(s,(X2+X3)/2,y+62,"wall within 600 mm: the label starts on the open side");return s},
+  n:"Starts above. If a wall, pipe or pit is within the label's strip, it starts on the open side instead. You can still flip it with one grip."},
+ {h:"C. I choose the side as I draw",draw:function(){var s=svg(170),y=92;wall(s,50);run(s,y);sideTags(s,y);labelAt(s,y,1);cursor(s,X3-90,y+44);dimnote(s,(X2+X3)/2,y+62,"your cursor is below the pipe when you finish, so the label goes below");return s},
+  n:"The label goes on whichever side your cursor is when you finish. Full control, one more thing to think about on every run."}]},
+{h:"2. Where do the invert levels sit?",
+ ctx:"On your sheets: red, 180 mm high, turned with the pipe, about 50 mm clear of the pipe edge, starting 170 to 900 mm along from the pipe end, on either side.",
+ o:[
+ {h:"A. Opposite side to the label, starting 400 mm along from each end",rec:1,draw:function(){var s=svg(190),y=95;run(s,y);labelAt(s,y,-1);il(s,X2+mm(225),1,y,1,"IL 12.31");il(s,X3-mm(225),-1,y,1,"IL 12.40");var a=X2+mm(225),b=a+mm(400),dy=y+40;s.appendChild(el("line",{x1:a,y1:dy,x2:b,y2:dy,stroke:"#A9AEB6","stroke-width":1}));s.appendChild(el("line",{x1:a,y1:dy-5,x2:a,y2:dy+5,stroke:"#A9AEB6","stroke-width":1}));s.appendChild(el("line",{x1:b,y1:dy-5,x2:b,y2:dy+5,stroke:"#A9AEB6","stroke-width":1}));dimnote(s,(a+b)/2,dy+18,"400 mm");return s},
+  n:"Label one side, levels the other: they can never sit on each other, even on a 3 m pipe."},
+ {h:"B. Same side as the label, at the ends",draw:function(){var s=svg(190),y=110;run(s,y);labelAt(s,y,-1);il(s,X2+mm(225),1,y,-1,"IL 12.31");il(s,X3-mm(225),-1,y,-1,"IL 12.40");return s},
+  n:"Everything reads along one side. On a pipe shorter than about 9 m there is no room left between the levels for the label."}]},
+{h:"3. The label is longer than the pipe. What does the tool do?",
+ ctx:"The full label is 6.0 m long on plan. Here the pits are 4 m apart. You ruled on 19 Nov: always the full label, and you move it where it clashes.",
+ o:[
+ {h:"A. Centred on the pipe, runs past the pits, you move it",rec:1,draw:function(){var s=svg(190),y=110,x3=X2+mm(4000);run(s,y,x3);labelAt(s,y,-1,(X2+x3)/2);il(s,X2+mm(225),1,y,1,"IL 12.31");il(s,x3-mm(225),-1,y,1,"IL 12.35");dimnote(s,660,y+4,"always the same spot; one grip pulls it out on a pointer");return s},
+  n:"Predictable. The text masks what is behind it. A grip (the small square you drag) on the label pulls it off to the side with a pointer when you want that."},
+ {h:"B. The tool sets it off to the side on a pointer by itself",draw:function(){var s=svg(190),y=130,x3=X2+mm(4000);run(s,y,x3);il(s,X2+mm(225),1,y,1,"IL 12.31");il(s,x3-mm(225),-1,y,1,"IL 12.35");
+   var mx=(X2+x3)/2;s.appendChild(el("line",{x1:mx,y1:y-6,x2:mx+70,y2:y-64,stroke:"#fff","stroke-width":1}));s.appendChild(el("polygon",{points:mx+","+(y-5)+" "+(mx+3)+","+(y-18)+" "+(mx+12)+","+(y-10),fill:"#fff"}));
+   txt(s,mx+76,y-74,"100 DIA. UPVC PIPE",250,{anchor:"start"});txt(s,mx+76,y-52,"AT 1 IN 100",250,{anchor:"start"});return s},
+  n:"As you do by hand today on short runs: two lines, level with the sheet, with a pointer. The tool has to guess a clear spot and will sometimes guess badly."}]},
+{h:"4. Where do the pit number and cover level sit?",
+ ctx:"On your sheets the cover level is usually turned 45 degrees, 560 to 1290 mm from the pit, and the number circle sits 850 to 1540 mm away on any side. The new tool starts today with the number 900 mm above and the cover level 700 mm below.",
+ o:[
+ {h:"A. As your sheets: number off the top corner, cover level at 45 degrees off the bottom corner",rec:1,draw:function(){var s=svg(230),y=125;run(s,y);labelAt(s,y,-1);il(s,X2+mm(225),1,y,1,"IL 12.31");il(s,X3-mm(225),-1,y,1,"IL 12.40");
+   tag(s,X2-mm(750),y-mm(750),"P2");tag(s,X3+mm(750),y-mm(750),"P3");
+   txt(s,X2-mm(500),y+mm(500),"CL 12.95",200,{anchor:"end",rot:-45});txt(s,X3+mm(500),y+mm(500),"CL 13.10",200,{anchor:"start",rot:45});return s},
+  n:"Looks like the sheets you issue now. Turned text stays clear of pipes that leave the pit square, which most do."},
+ {h:"B. Both read flat: number above, cover level below",draw:function(){var s=svg(230),y=120;run(s,y);labelAt(s,y,-1);il(s,X2+mm(225),1,y,1,"IL 12.31");il(s,X3-mm(225),-1,y,1,"IL 12.40");
+   tag(s,X2,y-mm(900),"P2");tag(s,X3,y-mm(900),"P3");txt(s,X2,y+mm(700)+8,"CL 12.95",200);txt(s,X3,y+mm(700)+8,"CL 13.10",200);return s},
+  n:"Simplest to read. A pipe leaving the pit straight up or down the sheet runs through the number or the cover level, so you move them more often."}]}
+];
+var only=(location.search.match(/q=(\d)/)||[])[1];
+var host=document.getElementById("host");
+Q.forEach(function(q,i){if(only&&only!=i+1)return;
+  var sec=document.createElement("section");sec.className="q";
+  sec.innerHTML="<h2></h2><p class='ctx'></p>";sec.querySelector("h2").textContent=q.h;sec.querySelector(".ctx").textContent=q.ctx;
+  q.o.forEach(function(o){var d=document.createElement("div");d.className="opt";var h=document.createElement("h3");h.textContent=o.h;
+    if(o.rec){var r=document.createElement("span");r.className="rec";r.textContent="Recommended";h.appendChild(r)}
+    d.appendChild(h);d.appendChild(o.draw());var p=document.createElement("p");p.className="note";p.textContent=o.n;d.appendChild(p);sec.appendChild(d)});
+  host.appendChild(sec)});
+if(only){document.querySelector("h1").style.display="none";document.querySelector(".why").style.display="none"}
+</script>
+</body>
+</html>
