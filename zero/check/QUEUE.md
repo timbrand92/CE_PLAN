@@ -13,7 +13,7 @@
 
 ## 1. Being checked now
 
-Four hand-overs from the build room at 2:12 pm, all started by 2:22 pm; six helpers.
+Four hand-overs from the build room at 2:12 pm, all started by 2:17 pm; six helpers.
 
 1. **team/held-depth at cea5567** (the new tip: a held depth kept; the stale cover text on the plan closed; a metre drawing refused for Pit, Pipe and LPD; the earlier findings). Both halves: Team opus honest check, Codex astra adversarial pass.
 2. **team/a6-draw-first at 73be1d0** (Stage 1 item A6: draw first, window second; its first check). Both halves: Team opus honest check, Codex astra adversarial pass.
@@ -86,4 +86,5 @@ ight-scripts.md`. Ruled by the control room as D-364 items 1 to 10: the fix (tea
 18. **1:42 pm:** the one more read of `design\PIPE_SIZE.md` at 95f65aa: FIX THE PAGE FIRST, four short wording fixes only (the reach of the flag; the words for an unreadable pipe against its label; the levels window still reads the size from the note; a marker set by an OK that changes nothing). 33 of 41 items closed; all eight of the held page answered. Added to `VERDICTS\design-pipe-size.md`. The next read checks those four only.
 19. **1:44 pm:** the two waiting checks started (the picture route by reading only; codex/tests-five). Thirteen answers given today, none MERGE.
 20. **2:10 pm:** main still 22993fa. Fifteen answers given today, none MERGE. Moved, not handed over: team/held-depth cea5567 (new tip), team/a3b-pit-window 68b02ac (the Pit window to D-386), design/pipe-size d94a9e3 (its four fixes), team/a6-draw-first 73be1d0, codex/c11-tests ad01f9d, codex/tests-a7b 893e54c.
-21. **2:22 pm:** four hand-overs taken and started.
+21. **2:17 pm:** four hand-overs taken and started.
+22. **2:25 pm:** `design\PIPE_SIZE.md` at d94a9e3: BUILD FROM IT (the third read: all four wording fixes closed; D-389 on the page as ruled; eight small improvements that do not hold the build). A pass of the page, not of code; the build is checked both halves when handed over, and waits its place in the order (after the flag marker job). Added to `VERDICTS\design-pipe-size.md`.

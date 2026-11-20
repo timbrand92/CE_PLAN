@@ -93,3 +93,26 @@ Cite D-386 and D-387 and close the two questions they answer (a typed size is he
 2. **Typed 300, drawn 375, OK without touching the size:** the tool's own label is rewritten to the size as drawn, and the marker stays until he puts his typed size back or accepts the drawn one; the plan never carries a label that disagrees with the pipe. (This settles the improvement noted above; the page must say so.)
 3. **A new pipe's opening size** sits in the dashed field as worked out, solid once typed.
 4. **Once the four wording fixes are in and the check room says BUILD FROM IT,** the build room may build it in its place in the order.
+
+---
+
+# The third read: the page at d94a9e3 (Fri 20 Nov 2026, about 2:25 pm)
+
+**Answer: BUILD FROM IT.** All four wording fixes are closed in the page's own words, each with a test, and the control room's D-389 items that touch the page (the marker built before pipe size; a typed size against a drawn one; "cover needed"; a new pipe's size dashed until typed) are on it as ruled. Nothing in the last two rounds would make a builder guess, or put a wrong size or a wrong label on the plan. Read by a Team helper (Claude Opus 5.5) with read-only tools, against the 211-line change since the last read and the sections it touches: `C:\CE_WORK\check\reports\design-pipe-size3_REPORT.md`. Checked by reading; nothing is built, tested, installed or accepted by this answer.
+
+## What "build from it" means here
+
+1. **It is a pass of the PAGE, not of any code.** The build is checked against D-372 with D-373, D-374, D-375, D-379, D-380, D-382, D-384, D-385, D-387 and D-389, line by line, both halves (D-346), when it is handed over.
+2. **The order stands (D-389 item 1):** held depth, the command order, the amber flag marker as its own job, THEN pipe size. The page itself says this build waits if the marker job is not merged, and never falls back to the command line.
+3. **Its acceptance tests must run on the route the command takes,** as the page now requires.
+
+## The four fixes, closed
+
+1. **The reach of the flag** (page 5.5, 1.6; tests 19 and 36): from the pipe made bigger or drawn new, down to the first pipe already big enough; the same for a new bigger pipe joining a pit with a smaller outlet; each flagged pipe names the pipe that caused it; a held pipe is flagged as his and never touched. Where the walk stops at a fork, a loop or an unreadable pipe is marked DRAFT and put to Tim, as D-387 left it.
+2. **The words for a pipe whose width cannot be read** now match what OK does: "Its width is left as drawn; its label will read TBC for the size on OK." "The tool's own label" is defined (words still exactly what the tool last wrote); a label he has edited is hand-written, never overwritten, and flagged (page 3.3, 4.2; tests 10 and 37).
+3. **The levels window's labels** are named and sent through the one reader (page 3.4; test 25): a pipe drawn 375 whose note says 300 is never labelled "300 DIA." there, and an untyped pipe's label is no longer skipped.
+4. **An OK that changes nothing** writes only two things, both declared and inside the one Undo: the tool's own label brought to the reader's size, and the markers set or cleared. Opening, REGEN and Cancel write nothing (page 5.1, 1.6; tests 22 and 34).
+
+## Eight small improvements for the builder to take as it builds (none holds the build)
+
+The report's section 6: the unreadable-pipe words when the label is hand-written or missing; one phrase in 5.4 to match 5.1; HOW a reach marker is cleared when the size is typed back (clear every marker that names this pipe as the cause, then walk again), and that an OK on a flagged pipe below does not clear a marker set from above; size AND material when a label is rewritten to the drawn size; the fixtures of tests 22 and 25 must be labels the tool wrote; `bench/CeCivil.Bench.Core/ToolWindow.cs:143-145` is the PIT's held size, filed under the wrong window; every writer of a label join keeps the record of its last words; housekeeping.
