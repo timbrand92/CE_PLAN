@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Where text goes when its spot is taken</title>
+<style>
+  :root{--page:#2B2D30;--card:#383B40;--cad:#16181B;--text:#ECEDEF;--grey:#A9AEB6;--line:#4A4D53;--rose:#FF70B3}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--page);color:var(--text);font-family:"Segoe UI",Arial,sans-serif;font-size:14px;line-height:1.45}
+  main{max-width:980px;margin:0 auto;padding:24px}
+  section.q{background:var(--card);border-radius:8px;padding:24px;margin:0 0 24px}
+  h2{font-size:24px;font-weight:600;margin:0 0 8px}
+  .ctx{color:var(--grey);margin:0 0 16px}
+  h3{font-size:14px;font-weight:600;margin:0 0 8px}
+  .rec{display:inline-block;background:var(--rose);color:#10131A;border-radius:8px;padding:0 8px;margin-left:8px;font-weight:600;font-size:12px}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .opt{margin:0 0 24px}.opt:last-child,.two .opt{margin-bottom:0}
+  svg{display:block;width:100%;height:auto;background:var(--cad);border:1px solid var(--line);border-radius:8px}
+  svg text{font-family:Arial,"Segoe UI",sans-serif}
+  .note{font-size:12px;color:var(--grey);margin:8px 0 0}
+  .made{font-size:12px;color:var(--grey);margin:0}
+</style>
+</head>
+<body>
+<main>
+<div id="host"></div>
+<p class="made" id="made"></p>
+</main>
+<script>
+var NS="http://www.w3.org/2000/svg",BLUE="#3F7BE0",RED="#FF5A5A",CAD="#16181B",K=0.064;
+function el(n,a,t){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);if(t!==undefined)e.textContent=t;return e}
+function svg(w,h){return el("svg",{viewBox:"0 0 "+w+" "+h,role:"img"})}
+function mm(v){return v*K}
+function tw(str,h){return str.length*mm(h)*1.38*0.56}
+function fsz(h){return mm(h)*1.38}
+// real text, masked. x,y = middle of the text
+function txt(s,x,y,str,h,o){o=o||{};var fs=fsz(h),w=tw(str,h);
+  var g=el("g",o.rot?{transform:"rotate("+o.rot+" "+x+" "+y+")"}:{});
+  g.appendChild(el("rect",{x:x-w/2-2,y:y-fs*0.55,width:w+4,height:fs*1.1,fill:CAD}));
+  g.appendChild(el("text",{x:x,y:y+fs*0.35,"font-size":fs,"text-anchor":"middle",style:"fill:"+(o.fill||"#fff")},str));
+  s.appendChild(g)}
+// ghost spot: dashed box the size of the text, with its number
+function ghost(s,x,y,str,h,n,o){o=o||{};var fs=fsz(h),w=tw(str,h);
+  var g=el("g",o.rot?{transform:"rotate("+o.rot+" "+x+" "+y+")"}:{});
+  g.appendChild(el("rect",{x:x-w/2-2,y:y-fs*0.55,width:w+4,height:fs*1.1,fill:"none",stroke:"#A9AEB6","stroke-width":1,"stroke-dasharray":"5 4"}));
+  s.appendChild(g);badge(s,x+(o.bx||0),y+(o.by||0),n)}
+function badge(s,x,y,n){s.appendChild(el("circle",{cx:x,cy:y,r:9,fill:"#ECEDEF"}));
+  s.appendChild(el("text",{x:x,y:y+4,"font-size":12,"font-weight":700,"text-anchor":"middle",style:"fill:#10131A"},n))}
+function pit(s,x,y){var r=mm(225);s.appendChild(el("rect",{x:x-r-4,y:y-r-4,width:2*r+8,height:2*r+8,fill:"none",stroke:"#C8CBD0","stroke-width":1,"stroke-dasharray":"4 3"}));
+  s.appendChild(el("rect",{x:x-r,y:y-r,width:2*r,height:2*r,fill:CAD,stroke:"#fff","stroke-width":1.5}));
+  s.appendChild(el("line",{x1:x-r,y1:y-r,x2:x+r,y2:y+r,stroke:"#8A8E96","stroke-width":1}));
+  s.appendChild(el("line",{x1:x-r,y1:y+r,x2:x+r,y2:y-r,stroke:"#8A8E96","stroke-width":1}))}
+function pipe(s,x1,x2,y){var w=mm(100);
+  s.appendChild(el("line",{x1:x1,y1:y,x2:x2,y2:y,stroke:BLUE,"stroke-width":w,"stroke-dasharray":"32 16"}));
+  s.appendChild(el("line",{x1:x1,y1:y-w/2,x2:x2,y2:y-w/2,stroke:"#C8CBD0","stroke-width":0.8}));
+  s.appendChild(el("line",{x1:x1,y1:y+w/2,x2:x2,y2:y+w/2,stroke:"#C8CBD0","stroke-width":0.8}))}
+function vpipe(s,x,y1,y2){var w=mm(100);
+  s.appendChild(el("line",{x1:x,y1:y1,x2:x,y2:y2,stroke:BLUE,"stroke-width":w,"stroke-dasharray":"32 16"}));
+  s.appendChild(el("line",{x1:x-w/2,y1:y1,x2:x-w/2,y2:y2,stroke:"#C8CBD0","stroke-width":0.8}));
+  s.appendChild(el("line",{x1:x+w/2,y1:y1,x2:x+w/2,y2:y2,stroke:"#C8CBD0","stroke-width":0.8}))}
+function tag(s,x,y,n){s.appendChild(el("circle",{cx:x,cy:y,r:mm(330),fill:CAD,stroke:"#fff","stroke-width":1.5}));
+  s.appendChild(el("text",{x:x,y:y+mm(350)*0.5,"font-size":mm(350)*1.3,"text-anchor":"middle",style:"fill:#fff"},n))}
+function tagGhost(s,x,y,n){s.appendChild(el("circle",{cx:x,cy:y,r:mm(330),fill:"none",stroke:"#A9AEB6","stroke-width":1,"stroke-dasharray":"5 4"}));badge(s,x,y,n)}
+function say(s,x,y,str,a){s.appendChild(el("text",{x:x,y:y,"font-size":13,"text-anchor":a||"start",style:"fill:#C8CBD0"},str))}
+var LBL="100 DIA. UPVC PIPE AT 1 IN 100";
+var offL=mm(50)+mm(75)+fsz(250)*0.55, offI=mm(50)+mm(50)+fsz(180)*0.55;   // centre of text from pipe centre
+
+function brk(s,x,y){s.appendChild(el("rect",{x:x-5,y:y-8,width:12,height:16,fill:CAD}));s.appendChild(el("line",{x1:x-6,y1:y+9,x2:x-1,y2:y-9,stroke:"#C8CBD0","stroke-width":1}));s.appendChild(el("line",{x1:x-1,y1:y+9,x2:x+4,y2:y-9,stroke:"#C8CBD0","stroke-width":1}))}
+function labelPanel(){var s=svg(930,320),X2=40,X3=890,c=(X2+X3)/2,w=tw(LBL,250),y=78;
+  pit(s,X2,y);pit(s,X3,y);pipe(s,X2+mm(225),X3-mm(225),y);
+  txt(s,c,y-offL,LBL,250);badge(s,c-w/2-14,y-offL,"1");ghost(s,c,y+offL,LBL,250,"2",{bx:-w/2-14});
+  say(s,c+w/2+16,y-offL+4,"centred, above");say(s,c+w/2+16,y+offL+4,"centred, below");
+  y=232;pit(s,X2,y);pit(s,X3,y);pipe(s,X2+mm(225),X3-mm(225),y);var cx=c-130;vpipe(s,cx,y-64,y+64);
+  say(s,cx+12,y-52,"another pipe crosses here");
+  var x=cx+w/2+40;ghost(s,x,y-offL,LBL,250,"3",{bx:-w/2-14});ghost(s,x,y+offL,LBL,250,"4",{bx:-w/2-14});
+  say(s,x+w/2+12,y-offL+4,"slid along,");say(s,x+w/2+12,y-offL+20,"above");say(s,x+w/2+12,y+offL+4,"slid along,");say(s,x+w/2+12,y+offL+20,"below");return s}
+function invertPanel(){var s=svg(930,170),y=85,X2=60;pit(s,X2,y);pipe(s,X2+mm(225),900,y);brk(s,900,y);
+  var a=X2+mm(225),IL="IL 12.31",w=tw(IL,180),x1=a+mm(200)+w/2,x3=x1+mm(1600);
+  txt(s,x1,y+offI,IL,180,{fill:RED});badge(s,x1+w/2+14,y+offI,"1");
+  ghost(s,x1,y-offI,IL,180,"2",{bx:w/2+14});
+  ghost(s,x3,y+offI,IL,180,"3",{bx:w/2+14});
+  ghost(s,x3,y-offI,IL,180,"4",{bx:w/2+14});
+  txt(s,640,y-offL,LBL,250);
+  var dy=y+offI+24;s.appendChild(el("line",{x1:a,y1:dy,x2:a+mm(200),y2:dy,stroke:"#A9AEB6","stroke-width":1}));
+  s.appendChild(el("line",{x1:a,y1:dy-5,x2:a,y2:dy+5,stroke:"#A9AEB6","stroke-width":1}));s.appendChild(el("line",{x1:a+mm(200),y1:dy-5,x2:a+mm(200),y2:dy+5,stroke:"#A9AEB6","stroke-width":1}));
+  say(s,a+mm(100),dy+18,"200 mm (a setting)","middle");say(s,x3,y+offI+32,"slid further along","middle");return s}
+function numberPanel(){var s=svg(440,250),x=220,y=128;pit(s,x,y);pipe(s,x+mm(225),410,y);brk(s,410,y);
+  var d=mm(900);tag(s,x,y-d,"P2");badge(s,x+mm(330)+14,y-d,"1");tagGhost(s,x,y+d,"2");tagGhost(s,x-d,y,"3");tagGhost(s,x+d,y,"4");s.appendChild(el("line",{x1:x+d-16,y1:y+16,x2:x+d+16,y2:y-16,stroke:"#C8CBD0","stroke-width":1.5}));s.appendChild(el("line",{x1:x+d+14,y1:y-18,x2:x+d+40,y2:y-40,stroke:"#C8CBD0","stroke-width":1}));
+  say(s,12,22,"900 mm from the pit centre");say(s,430,y-62,"4 is skipped here:","end");say(s,430,y-46,"the pipe leaves that side","end");return s}
+function coverPanel(){var s=svg(440,250),x=220,y=128;pit(s,x,y);pipe(s,x+mm(225),410,y);brk(s,410,y);
+  var CL="CL 12.95",w=tw(CL,200),r=mm(318)+mm(400)+w/2,q=r*0.7071;
+  txt(s,x+q,y-q,CL,200,{rot:-45});badge(s,x+q+40,y-q-40,"1");
+  ghost(s,x+q,y+q,CL,200,"2",{rot:45,bx:40,by:40});
+  ghost(s,x-q,y+q,CL,200,"3",{rot:-45,bx:-40,by:40});
+  ghost(s,x-q,y-q,CL,200,"4",{rot:45,bx:-40,by:-40});
+  return s}
+function shortBase(s,y){var X2=300,X3=X2+mm(4000);pit(s,X2,y);pit(s,X3,y);pipe(s,X2+mm(225),X3-mm(225),y);
+  txt(s,X2+mm(225)+mm(200)+tw("IL 12.31",180)/2,y+offI,"IL 12.31",180,{fill:RED});txt(s,X3-mm(225)-mm(200)-tw("IL 12.35",180)/2,y+offI,"IL 12.35",180,{fill:RED});return (X2+X3)/2}
+function stackPanel(){var s=svg(930,190),y=135,c=shortBase(s,y),fs=fsz(250);
+  txt(s,c,y-offL-fs*1.15,"100 DIA. UPVC PIPE",250);txt(s,c,y-offL,"AT 1 IN 100",250);
+  var w2=tw("100 DIA. UPVC PIPE",250),dy=y-offL-fs*1.15-22;s.appendChild(el("line",{x1:c-w2/2,y1:dy,x2:c+w2/2,y2:dy,stroke:"#C8CBD0","stroke-width":1}));s.appendChild(el("line",{x1:c-w2/2,y1:dy-5,x2:c-w2/2,y2:dy+5,stroke:"#C8CBD0","stroke-width":1}));s.appendChild(el("line",{x1:c+w2/2,y1:dy-5,x2:c+w2/2,y2:dy+5,stroke:"#C8CBD0","stroke-width":1}));say(s,c,dy-8,"3.5 m long: fits between pits 4 m apart","middle");return s}
+function calloutPanel(){var s=svg(930,200),y=128,c=shortBase(s,y),fs=fsz(250);
+  s.appendChild(el("line",{x1:c,y1:y-6,x2:c+70,y2:y-58,stroke:"#fff","stroke-width":1}));s.appendChild(el("polygon",{points:c+","+(y-5)+" "+(c+3)+","+(y-18)+" "+(c+12)+","+(y-10),fill:"#fff"}));
+  var w=tw("100 DIA. UPVC PIPE",250);txt(s,c+76+w/2,y-80,"100 DIA. UPVC PIPE",250);txt(s,c+76+tw("AT 1 IN 100",250)/2,y-80+fs*1.15,"AT 1 IN 100",250);
+  say(s,c,y+58,"reads flat on the sheet, with a pointer to its pipe","middle");return s}
+
+var Q=[
+{h:"Where text goes when its spot is taken",ctx:"A proposal for you to correct. Each piece of text tries its spots in the order numbered and takes the first clear one. If none is clear it goes in spot 1 anyway, with its background mask, and you move it. Nothing is ever left off.",
+ body:function(sec){
+  add(sec,"Pipe label",labelPanel(),"Centred above, then centred below. If both are taken, here by a crossing pipe, it slides along to the nearest clear length, above then below. 75 mm clear of the pipe edge every time.");
+  add(sec,"Invert level (IL, drawn red)",invertPanel(),"Opposite side to the label at 200 mm from the pit, then the label's side, then slid further along. Each end decides for itself.");
+  var two=document.createElement("div");two.className="two";
+  add(two,"Pit number",numberPanel(),"Reads flat. Straight above, then below, then beside. A side a pipe leaves from is skipped.");
+  add(two,"Cover level",coverPanel(),"Always at 45 degrees, starting 400 mm off the pit corner. Top right corner first, then round the pit.");sec.appendChild(two)}},
+{h:"A label longer than its pipe: which does the tool do by itself?",ctx:"You liked both. Pits 4 m apart; the full label on one line is 6.0 m long. Whichever the tool does first, you can switch a label to the other with one grip. Red IL = invert level.",
+ body:function(sec){
+  add(sec,"A. Stacked on two lines, centred on the pipe",stackPanel(),"Stays with its pipe, so you never wonder which pipe it belongs to. If two lines still do not fit, it becomes a callout.",1);
+  add(sec,"B. Callout on a pointer, off to the side",calloutPanel(),"As you do by hand today. The tool has to find a clear spot off to the side and will sometimes pick a bad one.")}}
+];
+function add(parent,h,s,n,rec){var d=document.createElement("div");d.className="opt";var hh=document.createElement("h3");hh.textContent=h;
+  if(rec){var r=document.createElement("span");r.className="rec";r.textContent="Recommended";hh.appendChild(r)}
+  d.appendChild(hh);d.appendChild(s);var p=document.createElement("p");p.className="note";p.textContent=n;d.appendChild(p);parent.appendChild(d)}
+var MADE=["The levels and pit numbers are made up for the picture. Solid text is the first spot tried; dashed outlines are the next spots, in the order numbered.","The levels are made up for the picture."];
+var only=(location.search.match(/q=(\d)/)||[])[1],host=document.getElementById("host");
+Q.forEach(function(q,i){if(only&&only!=i+1)return;var sec=document.createElement("section");sec.className="q";
+  sec.innerHTML="<h2></h2><p class='ctx'></p>";sec.querySelector("h2").textContent=q.h;sec.querySelector(".ctx").textContent=q.ctx;q.body(sec);host.appendChild(sec)});
+document.getElementById("made").textContent=MADE[(only||1)-1];
+</script>
+</body>
+</html>
