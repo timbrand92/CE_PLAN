@@ -16,7 +16,7 @@
 Two hand-overs from the build room at about 4:05 pm; three helpers.
 
 1. **team/a6-draw-first at 75290d9** (A6 fix round 1: eight commits since the HOLD at 73be1d0). Both halves: Team opus honest check, Codex astra adversarial pass (worktrees `a6r_honest`, `a6r_adv`; briefs `a6r_*.md`).
-2. **The Pipe mock-up after fix 7** (saved 4:01 pm): the check room took ten pictures at 4:10 pm (`C:\CE_WORK\checkeports\pipe-mockup_picsix7`); Team opus re-check, also against D-393 and D-395 (what Tim has since picked for the Pipe window). The check room's own look: the three faults of the last round look fixed, Inspect is at bottom left.
+2. **The Pipe mock-up after fix 7** (saved 4:01 pm): the check room took ten pictures at 4:10 pm (`C:\CE_WORK\check\reports\pipe-mockup_pics\fix7`); Team opus re-check, also against D-393 and D-395 (what Tim has since picked for the Pipe window). The check room's own look: the three faults of the last round look fixed, Inspect is at bottom left.
 
 Not started: codex/tests-a4c at ef07769 (waits for the blocks list and a restated list).
 
