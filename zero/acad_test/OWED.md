@@ -45,4 +45,15 @@
 
 25. **E-1 Inch and metre pit size on the main line** was never re-run in AutoCAD on main. PARKED: metre drawings are off the release (D-344).
 
+## F. From the check room's verdict on the night scripts (HOLD, 20 Nov 11:24 am; `check\VERDICTS\night-scripts-on-main.md`)
+
+**State of the scripts:** HOLD on the main line (22993fa). No night runs until the launcher fix (team/night-launch) has the check room's MERGE against D-364. These four are added to the count (now 29): OWED 2 / WAITS 2.
+
+26. **F-1 Where the plug-in's own test commands save to** (nobody has checked): after a night, list every file the test AutoCAD wrote outside `C:\CE_WORK\civil_tests\`. OWED (read from disk before and after the first live run; no picture needed, said as such).
+27. **F-2 What AutoCAD writes to Tim's profile when a test AutoCAD exits** (nobody has checked). OWED: looked at by reading only, never by changing anything; what is found goes to the control room and Tim.
+28. **F-3 The launcher counts an AutoCAD as its own only if it created it** (D-364): first live launch shows the recorded process is the one created. WAITS on team/night-launch.
+29. **F-4 The Pit and Pipe windows are expected by identity under the test switch** (`PICTURE_ROUTE.md` conditions 4 and 5): first live PT in Cancel mode. WAITS on team/acad-pictures.
+
+**Coming from the check room once written:** owed lists for A5 (pipe opening size, currently HOLD) and A1 to A3 (the windows, being checked).
+
 **Also noted, not counted as owed proofs (they are faults in the checks, asked of the build room):** CEPIT3, CEPIPE3 and CELEV2 still expect an inch drawing to be refused; CELEV1's third check expects "Chosen" where "TypedOver" is right; CETEST lists its run twice, so its lines count twice; the code-route EXPLODE check has failed in every pass since pass 1.

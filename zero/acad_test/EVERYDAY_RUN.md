@@ -38,7 +38,7 @@ Pictures go to `C:\CE_WORK\civil_tests\pictures\<date>\` under the names given. 
 
 4. **OK: the first pit goes in** (line 4, D-352).
    - **Do:** type a cover level in the window (D-358), OK.
-   - **Must be seen:** the OFFICE pit block, never a plain square; its tag reading P1; its cover text with the level typed; right layers. PT then asks for the next click.
+   - **Must be seen:** the OFFICE pit block, never a plain square; its tag reading P1; its cover text with the level typed; right layers. The number sits flat, straight above, below or beside the pit; the cover level sits at 45 degrees off a corner of the pit (D-363). PT then asks for the next click.
    - **Picture:** `04_pit1_drawn.png`.
    - **PASS:** office block, tag and cover text. **FAIL:** a square outline, a missing tag or text, or "level not known" after a level was typed.
 
@@ -62,7 +62,7 @@ Pictures go to `C:\CE_WORK\civil_tests\pictures\<date>\` under the names given. 
 
 8. **OK: the pipes go in.**
    - **Do:** set a grade and a level, OK.
-   - **Must be seen:** what was clicked is drawn. One pipe per pit-to-pit length; the bend kept inside its pipe. Each pipe has its label as ruled; invert levels are written at each pipe end where known; labels land clear of the pipe and the pits.
+   - **Must be seen:** what was clicked is drawn. One pipe per pit-to-pit length; the bend kept inside its pipe. Each pipe has its label as ruled; invert levels are written at each pipe end where known; labels land clear of the pipe and the pits. The pipe label sits above the pipe, centred, 75 mm clear, and slides along the pipe if something is in the way (D-361). The invert levels sit on the other side of the pipe from the label, 200 mm from the pit (D-362).
    - **Picture:** `11_pipes_drawn.png`.
    - **PASS:** every length drawn and labelled with inverts. **FAIL:** nothing drawn, one long pipe through the pits, missing inverts, or a label on top of a pit.
 
