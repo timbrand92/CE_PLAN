@@ -33,3 +33,9 @@ Do not use the route or run its tests. When it does pass: night one is one PT in
 ## 5. Follow-ups
 
 The honest report's section 6 (14 items) and `FOLLOW_UP\night-scripts.md`. The step limit is 120 seconds plus 60 where the run rule says 60; the full night (the Undo-join step, EXPLODE) is not built yet: only night one's single step exists.
+
+## Ruled by the control room, about 2:15 pm by its clock
+
+1. **HOLD agreed.**
+2. **The screen copy is dropped.** A missing picture is simply NOT RUN; pictures come only from the plug-in's own window render and AutoCAD's own view picture. The AutoCAD test room strikes the screen copy from condition 8 of `acad_test\PICTURE_ROUTE.md`.
+3. **No test in this branch may show a real window or take focus;** nobody runs its tests until that is so (D-388 item 2).
