@@ -167,3 +167,7 @@ The three carried faults: the 9 m bent pipe must print 1 in 75; a later pipe kin
 ## 22. Follow-ups and owed
 
 Follow-ups: the sleeve's two clicks belong to the pipe window's list, the words stay here; a mirrored run, four exits each fully annotated, a rectangular pit at 90 degrees and far-from-origin cases have no row. Owed in AutoCAD (not a hold): Z 0; one Undo for each joint edit; the real block outlines and text widths; masks and ByLayer on real objects; plotting.
+
+## 23. Ruled since (control room, 7:23 pm, D-424, DRAFT, in line with D-411)
+
+A WORKED grade shows exact in the window to at most two decimals, trailing noughts dropped, with the grey word "worked out": 0.20 m over 18.92 m is "94.6" in the box and "1 IN 95" on the sheet; 200.04 in the box, "1 IN 200" on the sheet. A typed grade shows as typed in both. Checks use the exact figure. For reason 8 of section 19: the two window rows stay as written and are marked DRAFT D-424; the sheet halves stay firm (D-406 item 2). This ruling came after the round and adds no strike.
