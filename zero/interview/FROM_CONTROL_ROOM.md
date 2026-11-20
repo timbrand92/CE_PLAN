@@ -40,3 +40,7 @@ The list `reference\CURRENT_PLUGIN_BLOCKS.md` shows the current plug-in uses its
 
 ## G. Added 4:45 pm (D-409)
 The old Pipe mock-up page is retired. The single-pipe picture you owe (U-129) is the only one: draw it in the style of the pictures Tim picked from, with pit numbers in the circle tag 900 mm above the pit, the cover check with its bar, a Wrong state with the amber marker, and both "Cannot check yet" causes. Send it to the check room BEFORE Tim sees it. "Over the pipe" is a read-off in step 2, not a choice in step 1.
+
+## H. Added 4:49 pm (D-410, D-411): to ask Tim, one by one
+1. A worked grade that rounds across a limit. Example: a pipe 20.004 m long falling 100 mm is 1 in 200.04, just flatter than the 1 in 200 limit. The check says "Needs a look"; should the label print "1 IN 200" (rounded as usual; the control room's draft, with the exact grade shown in the window) or never print steeper than it is ("1 IN 201")?
+2. A typed pipe length (TR-175): what the label shows, and what a later move or stretch does to the typed length (draft: kept, with the amber marker).
