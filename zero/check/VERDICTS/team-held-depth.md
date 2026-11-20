@@ -55,3 +55,36 @@ Retyping a cover level text on the plan SETS the pit's level (cover only). Block
 ## 10. Ruled since (D-405 and D-406, Tim, about 4:32 pm): D-392 is NOT confirmed as written
 
 Tim: "FOR SILT PITS THE DEPTH IS DEEPERE THAN THE LOWEST OUTLET". The depth must be worked as cover less the lowest outlet invert PLUS A SUMP VALUE (0 in Stage 1), and not hard-wired. The fix round is checked against that: depth still never held or typed in Stage 1, but the sum carries the sump figure as a value that can change, and no test or code may assume depth equals cover less invert for every pit.
+
+
+---
+
+# Final verdict: team/held-depth at d5154a7 (its LAST fix round)
+
+**Verdict: HOLD, with the one-page open list below. This was the second and last round from the D-416 baseline: under D-346 the branch is now HELD, not sent round again; the control room decides what happens to it.** Written Fri 20 Nov 2026, about 9:15 pm. Checked on the bench only.
+
+**Who checked.** Honest check: one Claude helper on Sonnet (D-434): `C:\CE_WORK\check\reports\hd3_honest_REPORT.md`: HOLD on one blocker (original 2), the other three closed. Adversarial pass: Codex gpt-6.2-astra: `C:\CE_WORK\check\reports\hd3_adv_REPORT.md`, proofs and its own open list in `hd3_adv_proofs\` (`OPEN_LIST.md`, `verified-observations.txt`): HOLD, three of the four originals still reproduce, seven new. The build is clean; the plug-in compiles; the suite is green apart from two speed tests that fail on main too.
+
+## 11. The open list
+
+**This branch's own (the four from cea5567, and what this round added):**
+1. **Original 1, still open: an old worked "CL 6.50" stays on the plan** after the depth is let go (no typed cover; OK twice; the note has no cover; D-392 wants "CL TBC"; nothing is said about the stale text). `PitTool.cs:286`.
+2. **Original 2, still open (both halves): his own cover text is overwritten.** He retypes "CL 7.77"; changing only the pit's kind in the window puts "CL 6.50" back; "CL 7.77 CHECK" loses its words with no marker; and a plain OK leaves the window and the note saying 6.50 while the plan says 7.77 (D-402: the retyped number SETS the cover). `PitTool.cs:155, 279, 290`.
+3. **Original 3, still open: the COVER padlock saves a worked level as his:** on a legacy pit (outlet 9.505, depth 0.995, no typed cover) the cover reads 10.51; clicking the cover's padlock writes 10.51 to the note and the plan (the sum is exactly 10.500). The round tested the depth padlock only. `WindowModel.cs:955, 1276`, `ToolWindow.cs:148`.
+4. **New: the depth comes from the FIRST outlet drawn, not the lowest** (cover 12.00, outlets 10.80 then 10.50: 1.20 shown, 1.50 due; a known first outlet hides an unknown second). D-406 item 8, D-421. `PitTool.cs:699, 705`, `ToolWindow.cs:26`.
+5. **New: the window uses the junction sump for every kind** (a test 0.30 grated sump: 0.62 shown, 0.92 due; deleting the grated row changes nothing). `sums.csv:10-11`, `ToolWindow.cs:85`.
+6. **New: an unusable sump gives a confident depth** (−0.30 or 1,000,000 shows 0.32 or 1,000,000.62). D-425: refused in words. `sums.csv:9-10`, `pit_sumps.csv:5`.
+7. **New: a held depth survives other edits:** a copied or pasted legacy pit keeps 1.23 held; a cover changed through the Run window keeps the old depth with no words. D-387, D-392. `HiddenNotes.cs:148`, `RunToolWindow.cs:139`.
+
+**Found here, but owned by other jobs (they hold THIS branch only if it makes them worse; each goes to its owner):**
+8. **Rounding:** "CL 12.345" printed for 12.345, and depth 0.995 shown 0.99 (the exact-rounding branch, its blockers 2 and 6; D-432's order: no routine before its MERGE).
+9. **Protected layers:** an edit on a pit whose layer or text layer is OFF or FROZEN goes through (locked refuses). D-348; the drawing-safety job.
+10. **Units:** a drawing in feet or centimetres takes the edit; the host asks for the pick and opens the window before the check. D-403; the units doorway (the binding test of D-431).
+
+## 12. What closed this round
+
+Depth is never typed in Stage 1 (the paths are gone, not patched); a lone pit keeps its typed cover; the two rounding cases on the depth padlock; the metre refusal, unset-is-millimetres and the decimal comma kept.
+
+## 13. For the control room
+
+The branch is held. Items 1 to 7 are its own; 4 to 6 overlap the Pit window branch (part B), which also changes depth to the lowest outlet plus a sump. Recommended: fold items 4 to 6 into ONE depth sum owned by one branch (one code path, design rule 1), and let this branch close only 1, 2, 3 and 7.
