@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-042.
+**Next number:** TR-046.
 
 ---
 
@@ -109,3 +109,13 @@
 **TR-040** (unknown U-021; Undo after placing pits one after another; example, P4, P5, P6 placed, Enter, then Ctrl+Z once). He picked: "Just P6: one pit per Undo (Recommended)". Each pit, with its own window and OK, is its own Undo step. Closes U-021. (Pipes stay as D-324: the last pipe during the command, the whole run after Enter.)
 
 **TR-041** (unknown U-017; a pit dropped on the middle of a pipe that has both levels typed; example, IL 12.40 and IL 12.30, 10 m at 1 in 100, new pit P7 half way). He picked: "Worked out, with the 0.02 drop (Recommended)". The typed upstream level stays with the upper half and the typed downstream level with the lower half; the two levels at the new pit are worked out along the old grade with the office 0.02 drop across the pit (D-141), shown as worked out and his to type over; both halves keep the size and material. Room's note (mine): with both outer levels held and a 0.02 drop put in, the two halves can no longer both be exactly 1 in 100; which half's grade gives was not asked (the example figures in the question, "about 12.36 in and 12.34 out", split it evenly). Closes U-017.
+
+## Batch 11, Fri 20 Nov 2026, 12:29 (clock read), through the question window (four pipe-size questions from the control room's design D-372, each with its draft answer as the recommended option)
+
+**TR-042** (unknown U-114; a pipe arriving at the pit whose size cannot be read). He wrote: "the biggest it can read, the other thing i just realised is sometimes youll have detention running into an orifice pit or an sps and the pipe coming out of that will be smaller than the big detenetion pipe hopw is this handled, obviously not stage 1 but to consider later on". Room's reading (mine): the draft stands (open at the biggest size that can be read and say which pipe could not be read). NEW for later, not Stage 1: at an orifice pit or a pump pit the pipe leaving is rightly smaller than the detention pipe arriving, so the smaller-downstream warning must not fire there: added to the Stage 2 list as U-223. Closes U-114.
+
+**TR-043** (unknown U-115; a size he typed no longer matches what is drawn; example, typed 300, drawn width since changed by hand to 375). He picked none and wrote: "what do you reocmmend in this case". NOT a ruling. Room's recommendation, put back to him for a yes: the window shows the drawn 375 (what will print), not held, with the words "typed 300, now drawn 375", and one click puts his 300 back; nothing is changed silently either way (his screen rule 26: show both, never overwrite what he typed). U-115 stays open.
+
+**TR-044** (unknown U-116; changing the size part way along one run). He wrote: "not in stage 1 but it would be cool in later stages to get it to design automatically". The draft stands for Stage 1: one run, one size; two runs, or edit the pipes after. NEW idea for later: the tool sizes the pipes down a run by itself: recorded as idea ID-021. Closes U-116.
+
+**TR-045** (unknown U-117; a size typed for a run of five pipes: which are held). Offered: only the first is held, the rest follow (recommended, the control room's draft call); all five are held. He picked: "All five are held". Not the recommended answer; it OVERTURNS the draft call in D-372. A size typed for a run is held on every pipe in that run; nothing below changes by itself. Room's note (mine): TR-024 (when a pipe is made bigger, offer once to change the pipes downstream, then flag) still stands as his ruling; with all five held the offer asks before touching a held size, and a "No" leaves them flagged. Closes U-117.

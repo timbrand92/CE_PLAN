@@ -31,6 +31,9 @@
 
 19. **ID-019 A details library and a job library that are easy to search.** Tim, 18 Nov 2026, 3:38 pm: "AT SOME POINT CREATING A DETAILS LIBRARY AND A JOB LIBRARY TO EASILY SEARCH FOR STUFF WOULD BE GREAT". Planning chat's reading (mine): (a) details: find a standard detail by what it is (for example the orifice pit detail for a given council, D-253) and drop it in from the Blocks palette; (b) jobs: find a past job by its kind, council and what it contained, to copy how it was done; client names and addresses stay out of anything a chat writes. **Links:** D-253, the Blocks palette (BLOCKS_REVIEW), the old-job evidence folders. **Status:** parked, "at some point"; a named slot after the first release unless Tim brings it forward.
 
-20. **ID-020 A sleeve as a tick on a pipe** ("Sleeved inside 150 DIA. UPVC"), so the label gains the office wording, the pipe is drawn once, and size checks read the inner pipe. **Source:** Tim, TR-022 (20 Nov 2026); research page `referenceesearch\R-016_SLEEVED_PIPE.md`; unknown U-111. **Status:** proposed by Tim's room; waits on Tim and the control room.
+20. **ID-020 A sleeve as a tick on a pipe** ("Sleeved inside 150 DIA. UPVC"), so the label gains the office wording, the pipe is drawn once, and size checks read the inner pipe. **Source:** Tim, TR-022 (20 Nov 2026); research page `reference
+esearch\R-016_SLEEVED_PIPE.md`; unknown U-111. **Status:** proposed by Tim's room; waits on Tim and the control room.
 
-**Next number:** ID-021.
+21. **ID-021 The tool sizes the pipes down a run by itself.** Tim, 20 Nov 2026 (TR-044): "it would be cool in later stages to get it to design automatically". **Source:** `interview/ANSWERS_TIM.md` TR-044. **Status:** later; not Stage 1.
+
+**Next number:** ID-022.
