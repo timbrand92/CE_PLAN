@@ -298,8 +298,7 @@ if(OVER){(function(){var blk=document.getElementById("cvblock");blk.style.displa
   var h='<div class="grey cvh">Cover at the two ends: cover level &minus; top of pipe</div>';
   h+='<table class="sum cvt"><colgroup>'+w.map(function(x){return '<col style="width:'+x+'px">'}).join('')+'</colgroup>'
     +row(NB,CL3,TOP3,COV3,WRONG)+row(NA,CL2,TOP2,COV2,false)+'</table>';
-  h+='<div class="cvline">Shallowest '+SHALLOW+' mm at '+SHAL_AT+(WRONG?', short by '+SHORT+' mm':' against '+NEED+' mm needed')+'</div>';
-  if(WITHIN)h+='<div class="cvline">Cover at '+NB+' '+SHALLOW+' mm: within the '+TOL+' mm tolerance</div>';
+  h+='<div class="cvline">Shallowest '+SHALLOW+' mm at '+SHAL_AT+(WRONG?', short by '+SHORT+' mm':(WITHIN?': within the '+TOL+' mm tolerance':' against '+NEED+' mm needed'))+'</div>';
   h+='<svg id="cvbar"></svg>';
   blk.innerHTML=h;
   var W=blk.clientWidth,H=30,s=document.getElementById("cvbar");s.setAttribute("width",W);s.setAttribute("height",H);s.setAttribute("viewBox","0 0 "+W+" "+H);
