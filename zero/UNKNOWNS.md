@@ -3,7 +3,7 @@
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), set up by D-353 and `ROOMS.md`. No other chat edits this file.
 **First written:** Fri 20 Nov 2026, 10:45 am (clock read).
 
-**STAGE 1 COUNT: 45 of 117 closed.** Blocks Stage 1: 88 (45 closed, 43 open). Can wait: 29. Updated Fri 20 Nov 2026, 12:39: closed U-004, U-005, U-016, U-019, U-085 (TR-050 to TR-053). Filed by the control room so far: TR-001 to TR-021 as D-354 to D-371. Nine lines are marked "Tim's hands" (things the AutoCAD test room cannot show in pictures). Filed so far by the control room: TR-001 to TR-008 as D-354 to D-359. **This list is the gate for Stage 1 (D-359; Tim, 20 Nov about 11:00 am, to the control room: "i need every specific down to a tee before we complete this first stage").**
+**STAGE 1 COUNT: 49 of 118 closed.** Blocks Stage 1: 89 (49 closed, 40 open). Can wait: 29. Updated Fri 20 Nov 2026, 12:45: closed U-047, U-055, U-056, U-062 (TR-054 to TR-057); U-118 added from his words. Filed by the control room so far: TR-001 to TR-021 as D-354 to D-371. Nine lines are marked "Tim's hands" (things the AutoCAD test room cannot show in pictures). Filed so far by the control room: TR-001 to TR-008 as D-354 to D-359. **This list is the gate for Stage 1 (D-359; Tim, 20 Nov about 11:00 am, to the control room: "i need every specific down to a tee before we complete this first stage").**
 **STAGE 2 COUNT (waiting): 0 of 23 closed.**
 
 **What counts as an unknown.** A question about how the tool must behave that (a) no ruling answers, or (b) is answered only by a planning chat's call or a DRAFT, or (c) the 25 root causes or Tim's check of 20 Nov (D-351) exposed, or (d) only a test in AutoCAD can answer. Each line says who it waits on: **Tim**, **a picture then Tim** (a mock-up is owed first), or **a test** (nobody should ask Tim; AutoCAD must show it).
@@ -73,7 +73,7 @@
 ## D. Changing a size or a figure
 
 46. **U-046** How he opens a drawn pit or pipe to change it: double-click, typed name then pick, Properties. Routes not proven; double-click also ran AutoCAD's own PEDIT (D-061, EDITING open 3 and 8). Waits on: Tim, then a test. **Blocks Stage 1.** **Tim's hands** (cannot be shown by the test room's pictures; control room, 20 Nov).
-47. **U-047** Several pipes or pits selected at once: change them all in one go (five pipes to 150), with "Varies" where they differ. EDITING open 7. Waits on: Tim. **Blocks Stage 1.**
+47. **CLOSED by TR-054 (20 Nov): one window, "Varies" where they differ.** **U-047** Several pipes or pits selected at once: change them all in one go (five pipes to 150), with "Varies" where they differ. EDITING open 7. Waits on: Tim. **Blocks Stage 1.**
 48. **CLOSED by TR-024 (20 Nov): offer once to change the pipes downstream, then flag.** **U-048** A pipe made bigger or smaller after it is drawn: what follows (material D-239, label, cover check) and whether a pipe now smaller than the one upstream is flagged. Waits on: Tim. **Blocks Stage 1.** **FRONT OF THE LIST** (asked for by the control room, 20 Nov, from the check room's check of the pipe's opening size). Case to ask: a pipe is resized and the pipes already drawn downstream are now smaller than what feeds them.
 49. **U-049** A pipe label typed over by hand, then the pit is resized or the pipe changed: keep his words, and where is it flagged with no Unfinished list yet. D-182, D-348 note. Waits on: Tim. **Blocks Stage 1.**
 50. **U-050** A resized pit's pipe ends keep their angle from the pit centre; an end placed by hand is left alone and said. Draft call D-260 DQ-010. Waits on: Tim. Can wait.
@@ -84,8 +84,8 @@
 
 53. **U-053** A pit moved with joined pipes: the pipe ends follow; do the typed inverts stay and the grade change, or the grade stay and an invert change. Touches D-086, D-181. Waits on: Tim. **Blocks Stage 1.** NARROWED by TR-036 (20 Nov): "window opens to select one or the other and how it will transpire down the system if it exists": a small window asks which gives (levels or grade) and shows the effect down the run; the picture of that window is owed (U-113).
 54. **CLOSED by TR-037 (20 Nov): "It comes off, 'not joined yet'".** **U-054** A pipe moved on its own, away from its pits: comes off and reads "not joined yet", or goes back. No ruling. Waits on: Tim. **Blocks Stage 1.**
-55. **U-055** STRETCH with a crossing window over part of a system. EDITING open 4. Waits on: Tim. **Blocks Stage 1.**
-56. **U-056** MIRROR for the mirror unit of a dual occupancy: label sides, text readable, numbers. D-179, EDITING open 4, LABELS open 5. Waits on: Tim. **Blocks Stage 1.**
+55. **CLOSED by TR-055 (20 Nov): treated as moving the pits caught; and moving the whole plan with everything must change nothing.** **U-055** STRETCH with a crossing window over part of a system. EDITING open 4. Waits on: Tim. **Blocks Stage 1.**
+56. **CLOSED by TR-056 (20 Nov): text stays readable and is re-placed by the placing rules.** **U-056** MIRROR for the mirror unit of a dual occupancy: label sides, text readable, numbers. D-179, EDITING open 4, LABELS open 5. Waits on: Tim. **Blocks Stage 1.**
 57. **U-057** The grips on a pit and on a pipe: which ones, where, what each does. A trial grip crashed AutoCAD (EDITING open 2 and 9). Waits on: a picture then Tim, then a test. **Blocks Stage 1.** **Tim's hands** (cannot be shown by the test room's pictures; control room, 20 Nov).
 58. **U-058** AutoCAD's MOVE and the tool's follow-up as one Undo. `STATE.md` update 11 item 4. Waits on: a test. **Blocks Stage 1.**
 59. **U-059** How far a pit moves before a "check: pit moved" note. PIT open 14. Waits on: Tim. Can wait.
@@ -94,7 +94,7 @@
 
 ## F. Copying
 
-62. **U-062** A pipe copied on its own: a new loose pipe with its own label, "not joined yet"? Touches D-340, D-176. Waits on: Tim. **Blocks Stage 1.**
+62. **CLOSED by TR-057 (20 Nov): a new loose pipe with the same figures, levels marked assumed.** **U-062** A pipe copied on its own: a new loose pipe with its own label, "not joined yet"? Touches D-340, D-176. Waits on: Tim. **Blocks Stage 1.**
 63. **U-063** A whole system copied to the next unit: levels copy "marked assumed until confirmed" (D-179): how assumed shows on the drawing and in the window. Waits on: a picture then Tim. **Blocks Stage 1.**
 64. **U-064** Paste from another drawing, WBLOCK, copy between drawings. EDITING open 4. Waits on: Tim. Can wait.
 65. **U-065** MATCHPROP or a layer change by hand on a pit or pipe. EDITING open 4. Waits on: Tim. Can wait.
@@ -165,6 +165,7 @@
 115. **CLOSED by TR-046 (20 Nov): "Yes, as you recommend": the drawn size shown, both figures in words, one click to put the typed size back.** **U-115** (added 20 Nov, control room, D-372 draft) A size he typed on a pipe no longer matches what is drawn (someone changed the pipe's width by hand). Draft: show the drawn size, dashed, with the words "typed 300, now drawn 375". Waits on: Tim. **Blocks Stage 1.** ASKED 20 Nov (TR-043): "what do you reocmmend in this case"; the room's recommendation (the drawn size shown, with both figures in words, one click to put the typed size back) is put back to him.
 116. **CLOSED by TR-044 (20 Nov): "not in stage 1 but it would be cool in later stages to get it to design automatically".** **U-116** (added 20 Nov, control room, D-372 draft) Changing the size part way along ONE run (first two pipes 100, the rest 150). Draft: not in Stage 1; he draws two runs, or edits the pipes after. Waits on: Tim. **Blocks Stage 1.**
 117. **CLOSED by TR-045 (20 Nov): "All five are held". OVERTURNS the control room's draft call (only the first held).** **U-117** (added 20 Nov, control room, D-372 draft) A size typed on a run's first pipe is passed down the run as worked out, so only the pipe he typed on is held. Waits on: Tim. **Blocks Stage 1.**
+118. **U-118** (added 20 Nov from TR-055: "what about if we move the plan on the page with everything, its shouldnt mess anything up") The whole plan moved in one go (everything selected, MOVE; or the plan shifted on the sheet): nothing may change: no join lost, no level, label position, held figure or number altered, no window opened, one Undo. RULED by his words; what is still owed is the proof in AutoCAD, including with the background reference moved too. Waits on: a test. **Blocks Stage 1.**
 
 ---
 

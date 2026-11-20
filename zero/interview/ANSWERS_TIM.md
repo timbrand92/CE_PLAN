@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-054.
+**Next number:** TR-058.
 
 ---
 
@@ -139,3 +139,13 @@
 **TR-052** (unknown U-016; which pit kinds the Stage 1 Pit window lists). He picked: "Junction, grated and plastic only (Recommended)". Orifice pit, pump pit and bought-in units are left out of the list until their real looks exist. Closes U-016. (Narrows D-104 and D-260 DQ-006 for Stage 1 only.)
 
 **TR-053** (unknown U-019; when the angle is asked while placing a pit). He picked: "Never asked; Turn button in the window (Recommended)". One click places the pit square to the sheet and the window opens; Turn in the window steps the window aside, he swings the pit live on the drawing, clicks, and the window returns (D-266). The optional second click of D-266 is not used. Closes U-019.
+
+## Batch 14, Fri 20 Nov 2026, 12:45 (clock read), through the question window
+
+**TR-054** (unknown U-047; several pipes or several pits opened together; example, five pipes to 150). He picked: "One window, 'Varies' where they differ (Recommended)". One window for all; a figure the same on all shows normally, one that differs shows "Varies"; what he types is applied to all, what he leaves is untouched on each; one Undo; pits and pipes selected together open nothing and it says so. Closes U-047.
+
+**TR-055** (unknown U-055; STRETCH with a crossing window; example, the house moves 500 mm on the architect's update). Offered: treat it as moving those pits (recommended); only move what the window caught. He wrote: "treat it as moving those pits, also what about if we move the plan on the page with everything, its shouldnt mess anything up". Room's reading (mine): (1) pits inside the crossing window move and every pipe joined to them follows at its end, whether or not that end was inside the window; a pipe end caught without its pit comes off, "not joined yet"; one Undo; a changed pipe length is handled as in TR-036; (2) NEW requirement in his words: moving the whole plan with everything on it must not disturb anything. Read as a ruling: no join, level, label position, held figure or number changes, and no window opens (nothing's length changed). The proof in AutoCAD is owed: added as U-118. Closes U-055.
+
+**TR-056** (unknown U-056; MIRROR for the second unit of a dual occupancy: what happens to the text). He picked: "Text stays readable, re-placed by the rules (Recommended)". Nothing reads backwards or upside down; each mirrored label, invert level, arrow, number and cover level is put where the placing rules (TR-009 to TR-021) put it on its new part; arrows still point with the flow; a label moved by hand on unit 1 is mirrored to the matching spot. D-179 (next free numbers, levels marked assumed) stands. Closes U-056.
+
+**TR-057** (unknown U-062; a pipe copied on its own). He picked: "A new loose pipe, same figures (Recommended)". The copy is its own pipe: same size, material, grade and label words, joined to nothing, "not joined yet"; its levels come across marked assumed; the original is untouched. Closes U-062.
