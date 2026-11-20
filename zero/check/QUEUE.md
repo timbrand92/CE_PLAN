@@ -13,21 +13,22 @@
 
 ## 1. Being checked now
 
-1. **team/held-depth at 6c9bc07:** checked on the OLD tip only (honest half: no blocker; adversarial half still running). The build room is adding two more fixes to the branch (the stale cover level on the plan; the metre refusal), so no verdict is written until the new tip is handed over and checked, both halves.
-3. **design\PIPE_SIZE.md, corrected, design/pipe-size at 95f65aa:** the one more read, Team opus, started 1:35 pm.
-4. **Pipe mock-up after its fix 5:** new pictures taken by the check room at 1:34 pm (`C:\CE_WORK\check\reports\pipe-mockup_pics\fix5`); Team opus re-check started 1:35 pm.
+1. **team/acad-pictures2 at b876264** (the picture route for the night run: a new night module, a window driver, three new night scripts). Both halves BY READING ONLY (D-388), started 1:50 pm: Team opus honest check with no shell at all (read and report tools only), and Codex astra adversarial pass. The AutoCAD test room is told the outcome; no picture run until both rooms say go.
+2. **codex/tests-five at b23d46f** (tests only: the five smaller Stage 1 Pit and Pipe pieces the doorway does not close). Both halves started 1:52 pm.
+3. **team/held-depth at 6c9bc07:** checked on the OLD tip only (honest half: no blocker; adversarial half still running). No verdict until the new tip is handed over.
 
 ## 2. Waiting
 
-Handed over, to start as helpers come free:
-1. **team/acad-pictures2 at b876264** (the picture route for the night run). Both halves BY READING ONLY (D-388): it holds night scripts. The AutoCAD test room is told the outcome.
-2. **codex/tests-five at b23d46f** (tests only, the five smaller Stage 1 cases).
+Coming back from the build room:
+1. **design\PIPE_SIZE.md** after its four wording fixes: one quick read of those four.
+2. **The Pipe mock-up** after the four rulings are fixed and the control room has ruled its open points (D-389).
+3. **team/held-depth, new tip** (with the stale cover level and the metre refusal added).
+4. **team/night-launch, next round:** both halves by reading only, against D-364 and D-388.
+5. **The windows:** team/acad-windows is held; what replaces it is the control room's to rule.
 
-Not handed over yet:
-3. **team/night-launch, next round** (after the HOLD of 1:35 pm): both halves by reading only, against D-364 and D-388.
-4. **team/a6-draw-first, codex/doorway, codex/tests-a7b, codex/tests-a6b;** the C11 build on codex/c11-tests (the list is held).
+Not handed over yet: team/a6-draw-first, codex/doorway, codex/tests-a7b, codex/tests-a6b; the C11 build on codex/c11-tests (the list is held).
 
-**Standing orders from the control room:** nothing reaches main on one check alone; both halves of D-346 every time; if the build room merges on one, tell the control room at once. No checker or builder runs any script of team/night-launch (D-388). The look is hourly; turns only when a report lands or a branch is handed over (Tim's usage order).
+**Standing orders from the control room:** nothing reaches main on one check alone; both halves of D-346 every time; if the build room merges on one, tell the control room at once. No checker or builder runs any script of a night-script branch (D-388). The look is hourly; turns only when a report lands or a branch is handed over (Tim's usage order).
 
 ## 3. Not for the check room (merged before it opened, on the build room's own check)
 
@@ -78,3 +79,4 @@ ight-scripts.md`. Ruled by the control room as D-364 items 1 to 10: the fix (tea
 16. **1:35 pm:** SAFETY, for the record. The check room's own honest helper on team/night-launch ran that branch's guard-deletion tests in Tim's hours from 1:15 pm. The build room flagged it at about 1:25 pm; the check room wrongly left it running under watch; the control room ordered it stopped at 1:30 pm. Stopped at 1:30 pm, and an orphaned runner it left at 1:31 pm. Nothing real was touched: the stop flag (19 Nov 9:02:20 pm, 114 bytes), the night drawing, the master copy, Tim's switch file and the results folder are unchanged, and no AutoCAD was running. Ruled as D-388.
 17. **1:40 pm:** the Pipe mock-up after its fix 5: FAIL again (the three earlier reasons are fixed; four rulings are shown the wrong way: amber for a missing ground level where D-219 says grey; no "MIN." on the label; the label not centred; "Job window" as a source in Stage 1). Added to `VERDICTS\mockup-pipe-top-preview.md`. team/acad-windows held page written at about 1:39 pm.
 18. **1:42 pm:** the one more read of `design\PIPE_SIZE.md` at 95f65aa: FIX THE PAGE FIRST, four short wording fixes only (the reach of the flag; the words for an unreadable pipe against its label; the levels window still reads the size from the note; a marker set by an OK that changes nothing). 33 of 41 items closed; all eight of the held page answered. Added to `VERDICTS\design-pipe-size.md`. The next read checks those four only.
+19. **1:52 pm:** the two waiting checks started (the picture route by reading only; codex/tests-five). Thirteen answers given today, none MERGE.
