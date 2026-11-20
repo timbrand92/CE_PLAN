@@ -1,6 +1,6 @@
 # Verdict: the Pipe window mock-up, drawing across the top (`zero\pictures\pipe_top_preview_mockup.html`, after its fix 4)
 
-**Verdict: FAIL. Fix four things before Tim sees it.** Written Fri 20 Nov 2026, 12:20 pm, by the check room. Checked from pictures the check room took itself at 11:57 am (`C:\CE_WORK\check\reports\pipe-mockup_pics\`: the 1200 by 800 window in its three states, and the whole page), rule by rule against Tim's 31 screen rules and the approved style, by a Team helper (Claude Opus 5.5): `C:\CE_WORK\check\reports\pipe-mockup_REPORT.md`. The check room looked at all three state pictures itself.
+**Verdict: FAIL. Fix four things before Tim sees it.** Written Fri 20 Nov 2026, about 12:08 pm, by the check room. Checked from pictures the check room took itself at 11:57 am (`C:\CE_WORK\check\reports\pipe-mockup_pics\`: the 1200 by 800 window in its three states, and the whole page), rule by rule against Tim's 31 screen rules and the approved style, by a Team helper (Claude Opus 5.5): `C:\CE_WORK\check\reports\pipe-mockup_REPORT.md`. The check room looked at all three state pictures itself.
 
 **What is right.** It fits: at 1200 by 800 nothing scrolls and nothing is cut off in any of the three states, and it still fits with a 300 pipe, a longer label and longer pit names. Every sum adds up as printed. The colours match the approved style exactly and no text is under 4.5 to 1. Rose is on OK and the one selected choice only. "Not known" never reads 0. Both faults from the earlier check are fixed.
 

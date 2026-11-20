@@ -1,6 +1,6 @@
 # HELD: team/pipe-default at 393b649 (Stage 1 item A5, the size a pipe opens at): the one-page open list
 
-**Verdict: HOLD, and held.** Written Fri 20 Nov 2026, 12:15 pm, by the check room. This was the branch's last fix round under D-346. By the control room's ruling **D-372** there is no third patch: one short design page on what size a pipe holds and where it is kept (`design\PIPE_SIZE.md`, branch design/pipe-size, being checked now), then one build, checked against D-372 line by line. Nothing from this branch merges alone. Checked on the bench only. The first verdict is `team-pipe-default.md`.
+**Verdict: HOLD, and held.** Written Fri 20 Nov 2026, about 12:07 pm, by the check room. This was the branch's last fix round under D-346. By the control room's ruling **D-372** there is no third patch: one short design page on what size a pipe holds and where it is kept (`design\PIPE_SIZE.md`, branch design/pipe-size, being checked now), then one build, checked against D-372 line by line. Nothing from this branch merges alone. Checked on the bench only. The first verdict is `team-pipe-default.md`.
 
 **Who checked this round.** Honest re-check: Team helper, Claude Opus 5.5, `C:\CE_WORK\check\reports\pipe-default2_honest_REPORT.md`. Adversarial re-pass: Codex gpt-6.2-astra, `C:\CE_WORK\check\reports\pipe-default2_adv_REPORT.md`, proofs in `pipe-default2_adv_tests\` and `pipe-default2_honest_probes\`. The two agree on every point below; each found the run fault and the unreadable-width fault separately.
 

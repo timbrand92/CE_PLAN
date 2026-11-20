@@ -1,6 +1,6 @@
 # Verdict: the C11 test list, branch codex/c11-tests pinned at 11c6041 (tests only)
 
-**Verdict: HOLD THE LIST.** Written Fri 20 Nov 2026, 12:10 pm, by the check room. This is a verdict on a list of tests, the "definition of done" for root cause C11 (one exact figure, one checker, one printer), not on any build. Checked on the bench.
+**Verdict: HOLD THE LIST.** Written Fri 20 Nov 2026, about 12:06 pm, by the check room. This is a verdict on a list of tests, the "definition of done" for root cause C11 (one exact figure, one checker, one printer), not on any build. Checked on the bench.
 
 **In one line.** The counts are true and most tests are sound, but the adversarial pass turned all 70 failing tests green, with all 25 controls still green, on a product that still labels a too-flat pipe as meeting its limit. A build cannot be accepted against this list until the Stage 1 part is corrected and widened as below.
 
