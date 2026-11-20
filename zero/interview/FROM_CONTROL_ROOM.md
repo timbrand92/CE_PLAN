@@ -44,3 +44,9 @@ The old Pipe mock-up page is retired. The single-pipe picture you owe (U-129) is
 ## H. Added 4:49 pm (D-410, D-411): to ask Tim, one by one
 1. A worked grade that rounds across a limit. Example: a pipe 20.004 m long falling 100 mm is 1 in 200.04, just flatter than the 1 in 200 limit. The check says "Needs a look"; should the label print "1 IN 200" (rounded as usual; the control room's draft, with the exact grade shown in the window) or never print steeper than it is ("1 IN 201")?
 2. A typed pipe length (TR-175): what the label shows, and what a later move or stretch does to the typed length (draft: kept, with the amber marker).
+
+## I. Added 4:51 pm (D-412): amber marker, more draft calls to confirm one by one
+1. Colour: the shared "CE NO PLOT" layer stays grey as the office has it; the marker carries its own amber, the one thing the tool draws that is not ByLayer. (Or: should the layer itself be amber?)
+2. Where the marker goes when its spot is taken, and on a part with no label.
+3. The layer turned off or frozen: marker still drawn on it, command line says markers are hidden.
+4. Every amber "Needs a look" and red "Wrong" gets a marker; grey "Cannot check yet" gets none.
