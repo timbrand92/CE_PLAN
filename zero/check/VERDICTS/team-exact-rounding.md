@@ -51,3 +51,34 @@ A6 and the Pit window are to merge this branch and route through it. Until block
 2. **The long section is not Stage 1:** the small-break wording is noted, not built now.
 3. **DRAFT:** a worked grade steeper than 1 in 1 prints "1 IN 0.4", with one decimal, as the one exception; never "Not known".
 4. **Order:** neither A6 nor the Pit window takes the rounding routine in until it has the check room's MERGE; they wait on it for their own rounding blockers.
+
+
+---
+
+# Second verdict: team/exact-rounding at 4331b19 (fix round one)
+
+**Verdict: HOLD, on six blockers; fix round two (the last) follows.** Written Sat 21 Nov 2026, about 12:27 am. Checked on the bench only.
+
+**Who checked, and how they split.** Honest: one Claude helper on Sonnet (D-434): `C:\CE_WORK\check\reports\rnd2_honest_REPORT.md`: MERGE (it replayed the earlier cases and ran no new probes of its own). Adversarial: Codex gpt-6.2-astra: `C:\CE_WORK\check\reports\rnd2_adv_REPORT.md`, proofs in `rnd2_adv_proofs\`: HOLD; all 90 earlier probe records replayed, then new routes tried. The eight original blockers: four CLOSED (worked inverts checked exact; the fact and the routine agree; no fall rounded before the grade; the 3 mm clash found), four only PARTLY, because the same fault survives on another route (the Run window, the schedule, the lid wording). Each blocker below is a wrong figure on a sheet or a figure lost from the drawing, reproduced on the pretend drawing.
+
+## 9. Blockers
+
+1. **The Run window rounds before it subtracts:** from 10.005, one 1 m pipe at 1 in 30 falls 0.0333; the "Falls and drops" row reads 0.04, and four pipes with three 0.020 drops read 0.20 where the sum is 0.1933 (the preview rightly says "Arrives IL 9.81"). D-393 item 3, D-395.
+2. **The lid wording drops the step irons the depth check asks for:** cover 6.0049 over outlet 5.0000 is 1.0049 deep; the Pit check asks for step irons, but the Pit's lid description and the schedule's printed lid remark both leave out "With Step Irons" (at 1.005 both include it): two callers decide the same thing differently.
+3. **A Run OK makes a high cover unreadable on its next open:** a cover of 1000.005 placed through Pit reads correctly in Run; OK with nothing changed writes "1,000.005" and the next open shows the ground level unknown (D-421).
+4. **An unchanged Run edit rewrites a typed grade label:** Pipe writes "1 IN 83.0"; open the pipe in Run and press OK: the drawing reads "1 IN 83" while the saved grade stays 83.0 (D-154, D-424).
+5. **The boundary case of the first verdict survives on one route:** a measured length of 1.004949999999996 m falling 0.010 is 1 in 100.49, printed "1 IN 100"; the Pipe tool still drew "1 IN 101" (D-341, D-380).
+6. **Typing the same cover back into the schedule changes a printed depth:** cover 5.755 over outlet 5.184 prints 0.57 (0.571); retype the identical 5.755 in the schedule: it stores 5.76 and prints 0.58.
+
+## 10. To fix in the same round
+
+The shortfall sentence at zero tolerance can read "Short by 0 mm ... cover 300 mm, needs 300 mm" for a real 0.47 mm shortfall (and "Short by 1 mm" at 299.5): see question 1; the bend's night check compares the fixture's raw 6.11498 with the two-place 6.12 (`BendChecks.cs:191`): compare at the same precision; the source test catches three of six seeded early roundings (a scaled integer cast, the shared printer used inside a sum, and a held format then parse escape it): say plainly what it guards; the cover sum still subtracts the nominal size alone (302 mm where D-426 item 2's draft gives 297): this belongs to the cover job, mark it.
+
+## 11. For the control room (no ruling found)
+
+1. **A sub-millimetre shortfall:** "Short by less than 1 mm" when rounding a real failure would print zero, with the cover figures to enough places to show it (recommended)?
+2. **A worked grade steeper than 1 in 0.05:** one more decimal where D-432's single place would print "1 IN 0.0" and lose the grade (0.049 prints "1 IN 0.05"), recommended; at 0.94 the label reads "1 IN 0.9" while the flatness message says "1 in 1": say which.
+
+## 12. Order (D-432)
+
+A6 and the Pit window still may not take the routine in; the Pit window's own depth sum (D-436) waits on this branch's MERGE for its printed figures.
