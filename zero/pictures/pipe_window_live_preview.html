@@ -30,6 +30,7 @@
   .panel svg{position:absolute;left:0;top:0;display:block}
   .lv{font-size:12px;font-weight:400;color:var(--grey);margin-left:16px}
 
+  .band.gry{background:#8A8E96}
   .band{flex:none;background:var(--green);color:var(--dark);border-radius:8px;display:flex;align-items:center;gap:16px;padding:8px 16px}
   .desktop .band{padding:12px 16px}
   .laptop .ans{line-height:1}
@@ -90,10 +91,12 @@
   .t3 .pn{text-align:left;color:var(--text)}
   .t3 .sg{text-align:center;color:var(--unit)}
   .t3 .nt{text-align:left;padding-left:4px;font-size:12px;color:var(--grey)}
-  .t3 td:nth-child(9),.t3 th:nth-child(9){border-left:1px solid var(--bd)}
+  .t3 td:nth-child(9){border-left:1px solid var(--bd)}
   .t3 td.fin{border-top:1px solid var(--grey)}
   .t3 td.fin b{font-weight:700;display:inline-block;border-bottom:3px double var(--grey);line-height:16px}
   .t3 .none{font-size:12px;color:var(--grey)}
+  .t3 .nk{font-size:12px;color:var(--grey)}
+  .nkt td:nth-child(8){padding-right:4px}
   .t3 tr.top td.iv{border-bottom:0}
   #side{display:block}
   .s3b{margin-top:0}
@@ -124,7 +127,7 @@
         <div class="panel" id="panel"><h2>The plan<span class="lv">Live: changes as you type. Made-up plan for this picture.</span></h2></div>
       </div>
 
-      <div class="band"><span class="pill">Suits</span><span class="ans">Fall 1 in 100 on 5 pipes</span><span class="bn">Depth over pipe: Not known</span></div>
+      <div class="band" id="band"><span class="pill" id="bpill">Suits</span><span class="ans" id="bans">Fall 1 in 100 on 5 pipes</span><span class="bn" id="bbn">Depth over pipe: Not known</span></div>
 
       <div class="cols">
         <div class="card c1">
@@ -140,7 +143,7 @@
             <div class="r">
               <div class="f"><span class="l">Level at</span>
                 <div class="grp"><div class="box" style="width:64px">P1<span class="u chev"></span></div>
-                <div class="box" style="width:96px">12.00<span class="u">m</span></div></div></div>
+                <div class="box" id="lvbox" style="width:96px">12.00<span class="u">m</span></div></div></div>
               <div class="sp1"></div>
               <span class="grey">Office defaults: no job set yet</span>
             </div>
@@ -189,7 +192,15 @@ var NS="http://www.w3.org/2000/svg",CAD="#16181B",BLUE="#3F7BE0",RED="#FF5A5A";
 function el(n,a,t){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);if(t!==undefined)e.textContent=t;return e}
 var q=(location.search.match(/v=(\w+)/)||[])[1]==="desktop"?"desktop":"laptop";
 document.body.className=q;
-document.getElementById("cap").textContent=q==="laptop"?"Laptop size: 1000 x 620 in a 1280 x 720 AutoCAD window":"Desktop size: 1240 x 780 in a 1920 x 1040 AutoCAD window";
+var NK=/[?&]s=notknown(&|$)/.test(location.search);   // drafter drew the run but typed no level
+document.getElementById("cap").textContent=(q==="laptop"?"Laptop size: 1000 x 620 in a 1280 x 720 AutoCAD window":"Desktop size: 1240 x 780 in a 1920 x 1040 AutoCAD window")+(NK?". Level not typed yet.":"");
+if(NK){
+  document.getElementById("band").className="band gry";
+  document.getElementById("bpill").textContent="Cannot check yet";
+  document.getElementById("bans").textContent="Levels: Not known";
+  document.getElementById("bbn").textContent="Type one level to work out the rest";
+  document.getElementById("lvbox").innerHTML='<span class="u">m</span>';
+}
 Array.prototype.forEach.call(document.querySelectorAll(".chev"),function(e){e.innerHTML='<svg width="10" height="6" viewBox="0 0 10 6" style="display:block"><path d="M1 1l4 4 4-4" fill="none" stroke="#C8CBD0" stroke-width="1.5"/></svg>'});
 
 /* ---- the figures, kept exact in whole millimetres; only what is printed is rounded ---- */
@@ -214,8 +225,22 @@ var FALLC=FALLMM.map(function(m){return m/10});
 
 /* step 3: one sum per pit  =  level below + fall of the pipe below + pit drop (exact, 3 decimals); last column is what the plan prints */
 (function(){var t=document.getElementById("t3");
-  var W=[20,44,14,38,14,38,14,46,40,44];
+  var W=NK?[18,60,14,36,14,36,14,60,64]:[20,44,14,38,14,38,14,46,40,44];
   var h='<colgroup>'+W.map(function(w){return '<col style="width:'+w+'px">'}).join('')+'</colgroup>';
+  if(NK){
+    /* no level typed: every level reads Not known (12 px note size so it fits); falls and drops are still exact */
+    h+='<tr><th style="text-align:left">Pit</th><th>Below</th><th></th><th>Fall</th><th></th><th>Pit<br>drop</th><th></th><th>Level,<br>worked out</th><th>On the<br>plan</th></tr>';
+    t.className+=" nkt";
+    var NKT='<span class="nk">Not known</span>';
+    for(var k=0;k<6;k++){
+      if(k===0)h+='<tr><td class="pn">P1</td><td></td><td></td><td></td><td></td><td></td><td class="sg">=</td><td>'+NKT+'</td><td>'+NKT+'</td></tr>';
+      else h+='<tr><td class="pn">P'+(k+1)+'</td><td>'+NKT+'</td><td class="sg">+</td><td>'+f3(FALLMM[k-1])+'</td><td class="sg">+</td>'+
+        (DROPMM[k]?'<td>'+f3(DROPMM[k])+'</td>':'<td class="none">none</td>')+'<td class="sg">=</td><td>'+NKT+'</td><td>'+NKT+'</td></tr>';
+    }
+    t.innerHTML=h;
+    for(var k=1;k<6;k++){if(FALLMM[k-1]*100!==LEN[k-1]*10)throw new Error("grade")}
+    return;
+  }
   h+='<tr><th style="text-align:left">Pit</th><th>Below</th><th></th><th>Fall</th><th></th><th>Pit<br>drop</th><th></th><th>Level,<br>worked out</th><th>On the<br>plan</th><th></th></tr>';
   for(var k=0;k<6;k++){
     var fin=(k===5);
@@ -242,7 +267,9 @@ var FALLC=FALLMM.map(function(m){return m/10});
     cur-=FALLC[i]*kf;d+=" L"+X(ch[i+1])+" "+cur;
     if(i<4){cur-=st;d+=" L"+X(ch[i+1])+" "+cur}
   }
-  s.appendChild(el("path",{d:d,fill:"none",stroke:"#ECEDEF","stroke-width":2,"stroke-linejoin":"round"}));
+  var pa={d:d,fill:"none",stroke:"#ECEDEF","stroke-width":2,"stroke-linejoin":"round"};
+  if(NK){pa.stroke="#8A8E96";pa["stroke-dasharray"]="5 4";document.getElementById("n3").textContent="Shape only: no level typed yet."}
+  s.appendChild(el("path",pa));
   for(i=0;i<6;i++){
     s.appendChild(el("line",{x1:X(ch[i]),y1:base+1,x2:X(ch[i]),y2:base+3,stroke:"#8A8E96","stroke-width":1}));
     s.appendChild(el("text",{x:X(ch[i]),y:H-3,"text-anchor":"middle","font-size":12,style:"fill:#C8CBD0;font-family:'Segoe UI',Arial,sans-serif"},"P"+(i+1)))}
@@ -317,8 +344,9 @@ var NOTES=[];
       NOTES.push("pipe "+(j+1)+" dashed (one line "+w1.toFixed(0)+" > "+ava.toFixed(0)+"; stacked "+w2.toFixed(0)+" > "+avb.toFixed(0)+")")}
     // (b) red invert levels, opposite side, 200 mm in from each pit; same exact figures as step 3, rounded half up for printing
     var lo=LV[j],hi=LV[j]+FALLMM[j],ox=-nx*OFF,oy=-ny*OFF,e=200*K;
+    if(!NK){
     txt(ax+ux*e+ox,ay+uy*e+oy,"IL "+f2r(lo),RED,"start",ang);
-    txt(bx-ux*e+ox,by-uy*e+oy,"IL "+f2r(hi),RED,"end",ang);
+    txt(bx-ux*e+ox,by-uy*e+oy,"IL "+f2r(hi),RED,"end",ang);}
     // (c) flow arrow 750 mm long, opposite side, centred, pointing to P1 (the low pit, on the left)
     var hl=375*K,cx=mx+ox,cy=my+oy,tx=cx-ux*hl,ty=cy-uy*hl,hx=cx+ux*hl,hy=cy+uy*hl;
     line(hx,hy,tx+ux*5,ty+uy*5,"#fff",1.4);
@@ -341,7 +369,8 @@ setTimeout(function(){var bad=[];Array.prototype.forEach.call(document.querySele
   document.body.setAttribute("data-chk",bad.join(" ; ")||"ok");document.body.setAttribute("data-cols",cols.clientHeight+"");
   /* each step's content height vs its card */
   var h=[];Array.prototype.forEach.call(document.querySelectorAll(".cols .card"),function(c){var last=c.lastElementChild,r=c.getBoundingClientRect(),lr=last.getBoundingClientRect();h.push(Math.round(lr.bottom-r.top)+"/"+Math.round(r.height))});
-  document.body.setAttribute("data-fill",h.join(","))},50);
+  document.body.setAttribute("data-fill",h.join(","));
+  var nk=document.querySelector(".nk");if(nk)document.body.setAttribute("data-nkw",nk.getBoundingClientRect().width.toFixed(1)+" in col "+nk.parentNode.getBoundingClientRect().width.toFixed(1))},50);
 </script>
 </body>
 </html>

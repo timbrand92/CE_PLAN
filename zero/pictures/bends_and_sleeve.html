@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pipes with bends, and a sleeved pipe</title>
+<style>
+  :root{--page:#2B2D30;--card:#383B40;--cad:#16181B;--text:#ECEDEF;--grey:#C8CBD0;--line:#4A4D53;--rose:#FF70B3}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--page);color:var(--text);font-family:"Segoe UI",Arial,sans-serif;font-size:14px;line-height:1.45}
+  main{max-width:980px;margin:0 auto;padding:24px}
+  section.q{background:var(--card);border-radius:8px;padding:24px;margin:0 0 24px}
+  h2{font-size:24px;font-weight:600;margin:0 0 8px}
+  .ctx{color:var(--grey);margin:0 0 16px}
+  h3{font-size:14px;font-weight:600;margin:0 0 8px}
+  .rec{display:inline-block;background:var(--rose);color:#10131A;border-radius:8px;padding:0 8px;margin-left:8px;font-weight:600;font-size:12px}
+  .opt{margin:0 0 24px}.opt:last-child{margin-bottom:0}
+  svg{display:block;width:100%;height:auto;background:var(--cad);border:1px solid var(--line);border-radius:8px}
+  svg text{font-family:Arial,"Segoe UI",sans-serif}
+  .note{font-size:13px;color:var(--grey);margin:8px 0 0}
+  .made{font-size:12px;color:var(--grey);margin:0}
+</style>
+</head>
+<body>
+<main>
+<div id="host"></div>
+<p class="made" id="made"></p>
+</main>
+<script>
+var NS="http://www.w3.org/2000/svg",BLUE="#3F7BE0",RED="#FF5A5A",CAD="#16181B",TEAL="#5FD6C4",AMB="#FFB020",NOTE="#C8CBD0",K=0.064,W=884;
+function el(n,a,t){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);if(t!==undefined)e.textContent=t;return e}
+function svg(h){return el("svg",{viewBox:"0 0 "+W+" "+h,role:"img"})}
+function mm(v){return v*K}
+var CV=document.createElement("canvas").getContext("2d");
+function tw(str,h){CV.font=(mm(h)*1.38)+"px Arial";return CV.measureText(str).width}   // real Arial width
+function rnd(v,st){return Math.round(v/st)*st}
+function fsz(h){return mm(h)*1.38}
+// real text, masked. x,y = middle of the text
+function txt(s,x,y,str,h,o){o=o||{};var fs=fsz(h),w=tw(str,h);
+  var g=el("g",o.rot?{transform:"rotate("+o.rot+" "+x+" "+y+")"}:{});
+  if(!o.nomask)g.appendChild(el("rect",{x:x-w/2-2,y:y-fs*0.55,width:w+4,height:fs*1.1,fill:CAD}));
+  g.appendChild(el("text",{x:x,y:y+fs*0.35,"font-size":fs,"text-anchor":"middle",style:"fill:"+(o.fill||"#fff")},str));
+  s.appendChild(g)}
+// dashed spot the size of the text
+function ghostBox(s,x,y,str,h,o){o=o||{};var fs=fsz(h),w=tw(str,h);
+  var g=el("g",o.rot?{transform:"rotate("+o.rot+" "+x+" "+y+")"}:{});
+  g.appendChild(el("rect",{x:x-w/2-2,y:y-fs*0.55,width:w+4,height:fs*1.1,fill:"none",stroke:"#A9AEB6","stroke-width":1,"stroke-dasharray":"5 4"}));
+  s.appendChild(g)}
+function badge(s,x,y,n){s.appendChild(el("circle",{cx:x,cy:y,r:10,fill:"#ECEDEF"}));
+  s.appendChild(el("text",{x:x,y:y+4.5,"font-size":13,"font-weight":700,"text-anchor":"middle",style:"fill:#10131A"},n))}
+function pit(s,x,y){var r=mm(225);s.appendChild(el("rect",{x:x-r-4,y:y-r-4,width:2*r+8,height:2*r+8,fill:"none",stroke:"#C8CBD0","stroke-width":1,"stroke-dasharray":"4 3"}));
+  s.appendChild(el("rect",{x:x-r,y:y-r,width:2*r,height:2*r,fill:CAD,stroke:"#fff","stroke-width":1.5}));
+  s.appendChild(el("line",{x1:x-r,y1:y-r,x2:x+r,y2:y+r,stroke:"#8A8E96","stroke-width":1}));
+  s.appendChild(el("line",{x1:x-r,y1:y+r,x2:x+r,y2:y-r,stroke:"#8A8E96","stroke-width":1}))}
+function tag(s,x,y,n){s.appendChild(el("circle",{cx:x,cy:y,r:mm(330),fill:CAD,stroke:"#fff","stroke-width":1.5}));
+  s.appendChild(el("text",{x:x,y:y+mm(350)*0.5,"font-size":mm(350)*1.3,"text-anchor":"middle",style:"fill:#fff"},n))}
+function say(s,x,y,str,a,col){s.appendChild(el("text",{x:x,y:y,"font-size":13,"text-anchor":a||"start",style:"fill:"+(col||NOTE)},str))}
+function brk(s,x,y){s.appendChild(el("rect",{x:x-5,y:y-8,width:12,height:16,fill:CAD}));s.appendChild(el("line",{x1:x-6,y1:y+9,x2:x-1,y2:y-9,stroke:"#C8CBD0","stroke-width":1}));s.appendChild(el("line",{x1:x-1,y1:y+9,x2:x+4,y2:y-9,stroke:"#C8CBD0","stroke-width":1}))}
+function ln(s,x1,y1,x2,y2,col,w,dash){var a={x1:x1,y1:y1,x2:x2,y2:y2,stroke:col,"stroke-width":w||1};if(dash)a["stroke-dasharray"]=dash;s.appendChild(el("line",a))}
+function amber(s,x,y){s.appendChild(el("polygon",{points:x+","+(y-10)+" "+(x+10)+","+(y+8)+" "+(x-10)+","+(y+8),fill:AMB}));
+  s.appendChild(el("text",{x:x,y:y+6,"font-size":13,"font-weight":700,"text-anchor":"middle",style:"fill:#10131A"},"!"))}
+
+// mitred pipe band along a bent line: dashed blue centre, thin edge lines, sharp corners
+function unit(a,b){var dx=b[0]-a[0],dy=b[1]-a[1],l=Math.sqrt(dx*dx+dy*dy);return [dx/l,dy/l]}
+function offsetLine(pts,h){var out=[];for(var i=0;i<pts.length;i++){var n1=null,n2=null,d;
+  if(i>0){d=unit(pts[i-1],pts[i]);n1=[-d[1],d[0]]}
+  if(i<pts.length-1){d=unit(pts[i],pts[i+1]);n2=[-d[1],d[0]]}
+  var m;if(n1&&n2){var dot=n1[0]*n2[0]+n1[1]*n2[1];m=[(n1[0]+n2[0])/(1+dot),(n1[1]+n2[1])/(1+dot)]}else m=n1||n2;
+  out.push([pts[i][0]+m[0]*h,pts[i][1]+m[1]*h])}return out}
+function poly(pts){return "M"+pts.map(function(p){return p[0].toFixed(2)+","+p[1].toFixed(2)}).join(" L")}
+function band(s,pts){var w=mm(100);
+  s.appendChild(el("path",{d:poly(pts),fill:"none",stroke:BLUE,"stroke-width":w,"stroke-dasharray":"32 16","stroke-linejoin":"miter","stroke-miterlimit":10}));
+  [1,-1].forEach(function(g){s.appendChild(el("path",{d:poly(offsetLine(pts,g*w/2)),fill:"none",stroke:"#C8CBD0","stroke-width":0.8,"stroke-linejoin":"miter"}))})}
+function sleeveLines(s,pts){[1,-1].forEach(function(g){s.appendChild(el("path",{d:poly(offsetLine(pts,g*mm(75))),fill:"none",stroke:TEAL,"stroke-width":1.4,"stroke-linejoin":"miter"}))})}
+
+// flow arrow: 750 mm long, head 300 mm. ang = way it points (0 east, 90 south)
+function arrowAt(s,x,y,ang){var L=mm(750),H=mm(300);
+  var g=el("g",{transform:"translate("+x+" "+y+") rotate("+ang+")"});
+  g.appendChild(el("line",{x1:-L/2,y1:0,x2:L/2-H,y2:0,stroke:"#fff","stroke-width":1.2}));
+  g.appendChild(el("polygon",{points:(L/2)+",0 "+(L/2-H)+",-4 "+(L/2-H)+",4",fill:"#fff",stroke:"#fff","stroke-width":1}));
+  s.appendChild(g)}
+
+var LBL="100 DIA. UPVC PIPE AT 1 IN 100";
+var fs250=fsz(250);
+var offL=mm(50)+mm(75)+fs250*0.55, offI=mm(50)+mm(50)+fsz(180)*0.55, offA=mm(50)+mm(200);
+var offLs=mm(75)+mm(75)+fs250*0.55;   // label clear of the outer sleeve lines
+var IW=tw("IL 12.31",180), PH=mm(225);
+
+function hdim(s,x1,x2,y,str){var w=str.length*7.2+12;ln(s,x1,y,x2,y,"#A9AEB6",1);
+  ln(s,x1,y-6,x1,y+6,"#A9AEB6",1);ln(s,x2,y-6,x2,y+6,"#A9AEB6",1);
+  s.appendChild(el("rect",{x:(x1+x2)/2-w/2,y:y-10,width:w,height:20,fill:CAD}));say(s,(x1+x2)/2,y+5,str,"middle")}
+
+/* ---------- SECTION 1 : a pipe with bends ---------- */
+function bendsPlan(kind){var s=svg(492),P3=[150,90],B1=[150,282],B2=[598,282],d=mm(2000)*Math.SQRT1_2,P2=[B2[0]+d,B2[1]+d],pts=[P3,B1,B2,P2];
+  // house corner, beside the pipe
+  s.appendChild(el("path",{d:"M420,20 L420,170 L860,170",fill:"none",stroke:"#8A8E96","stroke-width":2}));
+  s.appendChild(el("path",{d:"M428,20 L428,162 L860,162",fill:"none",stroke:"#8A8E96","stroke-width":1}));
+  say(s,640,100,"HOUSE","middle");
+  band(s,pts);pit(s,P3[0],P3[1]);pit(s,P2[0],P2[1]);
+  tag(s,P3[0],P3[1]-mm(900),"P3");tag(s,P2[0],P2[1]-mm(900),"P2");
+  // invert levels at the two ends of the whole pipe, 200 mm from each pit, opposite the label side
+  txt(s,P3[0]+offI,P3[1]+PH+mm(200)+IW/2,"IL 12.40",180,{fill:RED,rot:-90});
+  var r2=Math.SQRT1_2,dd=PH*Math.SQRT2+mm(200)+IW/2;
+  txt(s,P2[0]-r2*dd-r2*offI,P2[1]-r2*dd+r2*offI,"IL 12.31",180,{fill:RED,rot:45});
+  say(s,162,310,"90° turn");say(s,610,266,"45° turn");
+  var lw=tw(LBL,250),sw1=tw("100 DIA. UPVC PIPE",250),mmr=function(px){return Math.round(px/K/100)*100};
+  var a1,a2,bt,btx,ba;
+  if(kind==="A"){txt(s,374,282-offL,LBL,250);arrowAt(s,374,282+offA,0);
+    var c=3000+3500;a1=c-lw/K/2;a2=c+lw/K/2;bt="label: "+mmr(lw)+" mm long, fits inside the 7000 mm length";btx="mid"}
+  else if(kind==="B"){var top=P3[1]+PH+mm(200)+mm(100),yc=top+sw1/2,xn=P3[0]-offL,xf=xn-fs250*1.15;
+    txt(s,xf,yc,"100 DIA. UPVC PIPE",250,{rot:-90});txt(s,xn,yc,"AT 1 IN 100",250,{rot:-90});
+    arrowAt(s,P3[0]+offA+mm(330),(P3[1]+B1[1])/2,90);
+    a1=(top-P3[1])/K;a2=a1+sw1/K;var over=rnd(a2-3000,100);bt="stacked label: "+mmr(sw1)+" mm long, set on a 3000 mm length"+(over>0?": it runs "+over+" mm past the 90° turn":"");btx="start"}
+  else{var cx=P3[0]+mm(6000-3000);txt(s,cx,282-offL,LBL,250);arrowAt(s,cx,282+offA,0);
+    ln(s,cx-6,282,cx+6,282,"#fff",1);ln(s,cx,276,cx,288,"#fff",1);
+    say(s,cx,326,"half-way: 6000 mm along the pipe","middle");
+    a1=6000-lw/K/2;a2=6000+lw/K/2;say(s,162,238,"label starts only "+rnd(a1-3000,10)+" mm past the 90° turn");bt="label: "+mmr(lw)+" mm long, centred on 6000 mm, the half-way point";btx="mid"}
+  // the pipe laid out straight, to show where the label lies along it
+  var bx=60,by=452;say(s,bx,412,"The same pipe laid out straight, 12000 mm in all:");
+  ln(s,bx,by,bx+mm(12000),by,BLUE,8);
+  [0,3000,10000,12000].forEach(function(m){ln(s,bx+mm(m),by-9,bx+mm(m),by+9,"#fff",1.2)});
+  say(s,bx-10,by+5,"P3","end");say(s,bx+mm(12000)+10,by+5,"P2","start");
+  say(s,bx+mm(1500),by+27,"3000 mm","middle");say(s,bx+mm(6500),by+27,"7000 mm","middle");say(s,bx+mm(11000),by+27,"2000 mm","middle");
+  var x1=bx+mm(a1),x2=bx+mm(a2),yb=by-14;
+  ln(s,x1,yb,x2,yb,"#fff",1.5);ln(s,x1,yb-5,x1,yb+5,"#fff",1.5);ln(s,x2,yb-5,x2,yb+5,"#fff",1.5);
+  if(btx==="mid")say(s,(x1+x2)/2,yb-10,bt,"middle");else say(s,bx,yb-10,bt);
+  return s}
+
+/* ---------- SECTION 2 : a bend close to a pit ---------- */
+function nearPit(kind){var s=svg(256),P2=[150,100],Bd=[150,140],E=[662,140];
+  band(s,[P2,Bd,E]);brk(s,E[0],E[1]);pit(s,P2[0],P2[1]);tag(s,P2[0],P2[1]-mm(900),"P2");
+  txt(s,406,Bd[1]-offL,LBL,250);
+  ln(s,122,P2[1]+PH,122,Bd[1],"#A9AEB6",1);ln(s,118,P2[1]+PH,126,P2[1]+PH,"#A9AEB6",1);ln(s,118,Bd[1],126,Bd[1],"#A9AEB6",1);
+  say(s,112,P2[1]+PH+16,"400 mm","end");
+  var ux=P2[0]+offI,uy=P2[1]+PH+mm(200)+IW/2;      // the usual place: 200 mm from the pit, opposite the label
+  if(kind==="A"){ghostBox(s,ux,uy,"IL 12.31",180,{rot:-90});
+    txt(s,P2[0]+mm(50)+mm(400)+IW/2+3,Bd[1]+offI,"IL 12.31",180,{fill:RED});
+    say(s,150,222,"dashed: the usual place, 200 mm from the pit, under the bend");
+    say(s,150,242,"solid: the first straight length with room, past the bend, same side")}
+  else{txt(s,ux,uy,"IL 12.31",180,{fill:RED,rot:-90,nomask:1});
+    amber(s,ux,uy+IW/2+14);say(s,ux+16,uy+IW/2+19,"needs a look: the level overlaps the bend (never printed)");
+    say(s,150,236,"the level stays 200 mm from the pit, on the 400 mm length")}
+  return s}
+
+/* ---------- SECTION 3 : a pipe sleeved under a slab ---------- */
+function slab(s,x1,y1,x2,y2,bold,id){var d=el("defs",{});var p=el("pattern",{id:id,width:10,height:10,patternUnits:"userSpaceOnUse",patternTransform:"rotate(45)"});
+  p.appendChild(el("line",{x1:0,y1:0,x2:0,y2:10,stroke:"#33373D","stroke-width":1}));d.appendChild(p);s.appendChild(d);
+  s.appendChild(el("rect",{x:x1,y:y1,width:x2-x1,height:y2-y1,fill:"url(#"+id+")",stroke:bold?"#fff":"#8A8E96","stroke-width":bold?2.2:1.5}))}
+function closeUp(s,x0,y0){var w=270,h=92,cy=y0+58,sc=6*K,bw=100*sc;
+  s.appendChild(el("rect",{x:x0,y:y0,width:w,height:h,fill:CAD,stroke:"#6B7078","stroke-width":1}));
+  say(s,x0+8,y0+17,"Close-up, not to scale");
+  var bx1=x0+10,bx2=x0+95;ln(s,bx1,cy,bx2,cy,BLUE,bw,"30 14");
+  s.appendChild(el("rect",{x:bx1,y:cy-75*sc,width:bx2-bx1,height:150*sc,fill:TEAL,"fill-opacity":0.4}));ln(s,bx1,cy,bx2,cy,BLUE,bw,"30 14");[-1,1].forEach(function(g){ln(s,bx1,cy+g*bw/2,bx2,cy+g*bw/2,"#C8CBD0",0.9);ln(s,bx1,cy+g*75*sc,bx2,cy+g*75*sc,TEAL,1.4)});
+  var xa=x0+105,xb=x0+119;
+  ln(s,xa,cy-75*sc,xa,cy+75*sc,TEAL,1);ln(s,xa-4,cy-75*sc,xa+4,cy-75*sc,TEAL,1);ln(s,xa-4,cy+75*sc,xa+4,cy+75*sc,TEAL,1);
+  ln(s,xb,cy-bw/2,xb,cy+bw/2,"#C8CBD0",1);ln(s,xb-4,cy-bw/2,xb+4,cy-bw/2,"#C8CBD0",1);ln(s,xb-4,cy+bw/2,xb+4,cy+bw/2,"#C8CBD0",1);
+  say(s,x0+132,cy-22,"150 mm sleeve lines",null,TEAL);say(s,x0+132,cy+22,"100 mm pipe")}
+function sleevePlan(kind){var y=185,X0=50,X1=X0+mm(12000),xp=function(m){return X0+mm(m)},sx1=xp(3500),sx2=xp(8500),cx=(sx1+sx2)/2;
+  var s=svg(kind==="C"?340:352);
+  slab(s,sx1,95,sx2,270,kind==="B","hatch"+kind);
+  txt(s,sx1+12+tw("GARAGE SLAB",250)/2,252,"GARAGE SLAB",250,{fill:NOTE});
+  var a=kind==="C"?X0:sx1,b=kind==="C"?X1:sx2;s.appendChild(el("rect",{x:a,y:y-mm(75),width:b-a,height:2*mm(75),fill:TEAL,"fill-opacity":0.4}));sleeveLines(s,[[a,y],[b,y]]);
+  ln(s,a,y-mm(75)-3,a,y+mm(75)+3,TEAL,1.4);ln(s,b,y-mm(75)-3,b,y+mm(75)+3,TEAL,1.4);
+  band(s,[[X0,y],[X1,y]]);pit(s,X0,y);pit(s,X1,y);tag(s,X0,y-mm(900),"P3");tag(s,X1,y-mm(900),"P2");
+  var ex=kind==="C"?mm(75)-mm(50):0;
+  txt(s,X0+PH+mm(200)+IW/2,y+offI+ex,"IL 12.40",180,{fill:RED});txt(s,X1-PH-mm(200)-IW/2,y+offI+ex,"IL 12.31",180,{fill:RED});
+  arrowAt(s,(X0+X1)/2,y+offA+ex,0);
+  var fs=fs250;
+  if(kind==="C"){var lh=fs*1.15;   // three lines, so the label stays clear of the slab edge lines
+    txt(s,cx,y-offLs-2*lh,"100 DIA. UPVC PIPE",250);txt(s,cx,y-offLs-lh,"SLEEVED INSIDE A 150 DIA.",250);txt(s,cx,y-offLs,"UPVC PIPE AT 1 IN 100",250);
+    hdim(s,X0,X1,300,"sleeved length: 12000 mm, pit to pit");closeUp(s,612,4)}
+  else{txt(s,cx,y-offLs-fs*1.15,"SLEEVED INSIDE A",250);txt(s,cx,y-offLs,"150 DIA. UPVC PIPE",250);
+    // the ordinary label, stacked on two lines, 75 mm above the pipe, on the 3500 mm piece
+    var clearL=sx1-(X0+PH),pc=X0+PH+clearL/2;
+    txt(s,pc,y-offL-fs*1.15,"100 DIA. UPVC",250);txt(s,pc,y-offL,"PIPE AT 1 IN 100",250);
+    [sx1,sx2].forEach(function(x){ln(s,x,y+10,x,310,"#6B7078",1,"3 3")});
+    hdim(s,sx1,sx2,310,"sleeved length: 5000 mm");closeUp(s,612,240);
+    if(kind==="A"){badge(s,sx1,y,"1");badge(s,sx2,y,"2");say(s,sx1-16,y+22,"first click","end");say(s,sx2+16,y+22,"second click")}
+    else{var cxh=sx2-60;ln(s,cxh-9,95,cxh+9,95,"#fff",1.5);ln(s,cxh,78,cxh,104,"#fff",1.5);badge(s,cxh,78,"1");
+      say(s,cxh+18,60,"you pick the slab outline once;");say(s,cxh+18,77,"the sleeve runs where the pipe crosses it");
+      [sx1,sx2].forEach(function(x){s.appendChild(el("polygon",{points:x+","+(y-9)+" "+(x+9)+","+y+" "+x+","+(y+9)+" "+(x-9)+","+y,fill:"none",stroke:TEAL,"stroke-width":1.6}))});
+      say(s,sx1-14,232,"pipe crosses the outline","end");say(s,sx2+14,232,"pipe crosses the outline")}}
+  return s}
+
+var Q=[
+{h:"A pipe with bends: where does the label go?",ctx:"One pipe from pit P3 to pit P2, 12000 mm in all, beside a house corner: 3000 mm, a 90° turn, 7000 mm, a 45° turn, then 2000 mm. Water runs P3 to P2. Red IL = invert level, at the two ends of the pipe only.",
+ body:function(sec){
+  add(sec,"A. On the longest straight length",bendsPlan("A"),"One label per pipe, on the length with the most room. Text never runs across a bend.",1);
+  add(sec,"B. On the first length from the top end",bendsPlan("B"),"Always the same place, but short first lengths force a stacked label or a pointer.");
+  add(sec,"C. In the middle of the whole pipe",bendsPlan("C"),"Closest to the rule for a straight pipe, but the middle can land right beside a bend.")}},
+{h:"A bend close to a pit: the place for the invert level is taken",ctx:"Pit P2, and a pipe that bends after only 400 mm. The usual place for the invert level is 200 mm from the pit, opposite the label, and here the bend is in the way. Red IL = invert level.",
+ body:function(sec){
+  add(sec,"A. Past the bend, on the first clear length",nearPit("A"),"Same as on a straight pipe: the level slides along until it is clear.",1);
+  add(sec,"B. At the pit, on the short length",nearPit("B"),"Always at the pit; flagged because it overlaps.")}},
+{h:"A pipe sleeved under a slab: showing the sleeved length",ctx:"You said: “a tick on the pipe, it would be nice to show visually where that pipe is along the line only under the slab section”. A 100 DIA. pipe runs 12000 mm from P3 to P2; the middle 5000 mm passes under a garage slab. The office label for a sleeve reads “100 DIA. UPVC PIPE SLEEVED INSIDE A 150 DIA. UPVC PIPE AT 1 IN 100”.",
+ body:function(sec){
+  add(sec,"A. Two clicks mark the sleeved length",sleevePlan("A"),"You tick Sleeved, then click where it starts and stops. The plan shows exactly where the sleeve is.",1);
+  add(sec,"B. The slab outline sets it",sleevePlan("B"),"One pick of the slab. If the slab or the pipe moves, the sleeved length follows.");
+  add(sec,"C. The whole pipe is sleeved",sleevePlan("C"),"Simplest. To sleeve only part, you would put a pit or a join at each end of the slab.")}}
+];
+function add(parent,h,s,n,rec){var d=document.createElement("div");d.className="opt";var hh=document.createElement("h3");hh.textContent=h;
+  if(rec){var r=document.createElement("span");r.className="rec";r.textContent="Recommended";hh.appendChild(r)}
+  d.appendChild(hh);d.appendChild(s);var p=document.createElement("p");p.className="note";p.textContent=n;d.appendChild(p);parent.appendChild(d)}
+var only=(location.search.match(/q=(\d)/)||[])[1],host=document.getElementById("host");
+Q.forEach(function(q,i){if(only&&only!=i+1)return;var sec=document.createElement("section");sec.className="q";
+  sec.innerHTML="<h2></h2><p class='ctx'></p>";sec.querySelector("h2").textContent=q.h;sec.querySelector(".ctx").textContent=q.ctx;q.body(sec);host.appendChild(sec)});
+document.getElementById("made").textContent="The levels and pit numbers are made up for the picture.";
+</script>
+</body>
+</html>

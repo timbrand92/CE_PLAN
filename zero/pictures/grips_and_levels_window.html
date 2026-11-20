@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grips on pipes and pits, and the pipe-length window</title>
+<style>
+  :root{--page:#2B2D30;--card:#383B40;--cad:#16181B;--text:#ECEDEF;--body:#D2D5DA;--grey:#A9AEB6;--line:#4A4D53;--rose:#FF70B3;--amber:#F5C04A;--dark:#10131A}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--page);color:var(--text);font-family:"Segoe UI",Arial,sans-serif;font-size:14px;line-height:1.45}
+  main{max-width:980px;margin:0 auto;padding:24px}
+  section.q{background:var(--card);border-radius:8px;padding:24px;margin:0 0 24px}
+  h2{font-size:24px;font-weight:600;margin:0 0 8px}
+  .ctx{color:var(--grey);margin:0 0 16px}
+  .rec{display:inline-block;background:var(--rose);color:var(--dark);border-radius:8px;padding:0 8px;font-weight:600;font-size:12px;line-height:18px;white-space:nowrap}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+  svg.dw{display:block;width:100%;height:auto;background:var(--cad);border:1px solid var(--line);border-radius:8px}
+  svg text{font-family:Arial,"Segoe UI",sans-serif}
+  .note{font-size:12px;color:var(--grey);margin:8px 0 0}
+  .made{font-size:12px;color:var(--grey);margin:0}
+  ol.grips{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:10px}
+  ol.grips li{display:flex;gap:12px;align-items:flex-start;color:var(--body)}
+  ol.grips .b{flex:none;width:20px;height:20px;border-radius:10px;background:#ECEDEF;color:var(--dark);font:700 13px/20px Arial,sans-serif;text-align:center;margin-top:1px}
+  ol.grips b{font-weight:600;color:var(--text)}
+  /* the window */
+  .stage{background:#1E1F22;border-radius:8px;padding:20px;display:flex;justify-content:center;font-variant-numeric:tabular-nums}
+  .win{width:760px;background:#2B2D30;border:1px solid var(--line);border-radius:8px;box-shadow:0 12px 40px rgba(0,0,0,.6);display:flex;flex-direction:column;color:var(--body)}
+  .tb{height:32px;flex:none;display:flex;align-items:center;justify-content:space-between;padding:0 12px 0 16px;color:var(--text);border-bottom:1px solid #202225}
+  .wb{padding:16px;display:flex;flex-direction:column;gap:12px}
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .cd{background:#383B40;border:2px solid #2F3236;border-radius:8px;padding:12px;display:flex;flex-direction:column}
+  .cd.sel{border-color:var(--rose)}
+  .chd{display:flex;align-items:center;gap:8px;color:var(--text);font-size:14px;margin-bottom:8px;min-height:20px}
+  .chd .sp{flex:1}
+  .radio{width:16px;height:16px;border-radius:8px;border:1.5px solid #8A8E96;flex:none}
+  .radio.on{border-color:var(--rose);box-shadow:inset 0 0 0 3px #383B40;background:var(--rose)}
+  .p{margin:8px 0 0;color:var(--body);line-height:24px}
+  .chip{display:inline-block;padding:0 6px;border-radius:8px;border:1px solid #8A8E96;color:var(--text);line-height:18px;white-space:nowrap}
+  .chip.calc{border-style:dashed}
+  .p.g{color:var(--grey)}
+  .strip{background:var(--amber);color:var(--dark);border-radius:8px;padding:8px 12px;margin:12px 0 0;font-weight:600;line-height:20px}
+  .wnote{font-size:12px;color:var(--grey);line-height:16px;margin:0}
+  .bar{height:56px;flex:none;border-top:1px solid #202225;display:flex;align-items:center;justify-content:flex-end;padding:0 16px;gap:8px}
+  .btn{height:32px;min-width:72px;border:1px solid #8A8E96;border-radius:8px;background:transparent;color:var(--text);display:flex;align-items:center;justify-content:center;padding:0 16px;font-size:14px}
+  .btn.ok{background:var(--rose);color:var(--dark);border-color:var(--rose)}
+  p.opt{font-size:12px;color:var(--grey);margin:12px 0 0}
+  p.opt b{font-weight:600;color:var(--body)}
+</style>
+</head>
+<body>
+<main>
+<div id="host"></div>
+<p class="made" id="made">The levels and pit numbers are made up for the picture.</p>
+</main>
+<script>
+var NS="http://www.w3.org/2000/svg",BLUE="#3F7BE0",RED="#FF5A5A",CAD="#16181B",GRIP="#4DA3FF",AMB="#F5C04A",K=0.064;
+function el(n,a,t){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);if(t!==undefined)e.textContent=t;return e}
+function svg(w,h){return el("svg",{viewBox:"0 0 "+w+" "+h,role:"img","class":"dw"})}
+function mm(v){return v*K}
+function tw(str,h){return str.length*mm(h)*1.38*0.56}
+function fsz(h){return mm(h)*1.38}
+function txt(s,x,y,str,h,o){o=o||{};var fs=fsz(h),w=tw(str,h);
+  var g=el("g",o.rot?{transform:"rotate("+o.rot+" "+x+" "+y+")"}:{});
+  g.appendChild(el("rect",{x:x-w/2-2,y:y-fs*0.55,width:w+4,height:fs*1.1,fill:CAD}));
+  g.appendChild(el("text",{x:x,y:y+fs*0.35,"font-size":fs,"text-anchor":"middle",style:"fill:"+(o.fill||"#fff")},str));
+  s.appendChild(g)}
+function badge(s,x,y,n){s.appendChild(el("circle",{cx:x,cy:y,r:10,fill:"#ECEDEF"}));
+  s.appendChild(el("text",{x:x,y:y+4.5,"font-size":13,"font-weight":700,"text-anchor":"middle",style:"fill:#10131A"},n))}
+function pit(s,x,y,r){r=r||mm(225);s.appendChild(el("rect",{x:x-r-4,y:y-r-4,width:2*r+8,height:2*r+8,fill:"none",stroke:"#C8CBD0","stroke-width":1,"stroke-dasharray":"4 3"}));
+  s.appendChild(el("rect",{x:x-r,y:y-r,width:2*r,height:2*r,fill:CAD,stroke:"#fff","stroke-width":1.5}));
+  s.appendChild(el("line",{x1:x-r,y1:y-r,x2:x+r,y2:y+r,stroke:"#8A8E96","stroke-width":1}));
+  s.appendChild(el("line",{x1:x-r,y1:y+r,x2:x+r,y2:y-r,stroke:"#8A8E96","stroke-width":1}))}
+function pipe(s,x1,x2,y){var w=mm(100);
+  s.appendChild(el("line",{x1:x1,y1:y,x2:x2,y2:y,stroke:BLUE,"stroke-width":w,"stroke-dasharray":"32 16"}));
+  s.appendChild(el("line",{x1:x1,y1:y-w/2,x2:x2,y2:y-w/2,stroke:"#C8CBD0","stroke-width":0.8}));
+  s.appendChild(el("line",{x1:x1,y1:y+w/2,x2:x2,y2:y+w/2,stroke:"#C8CBD0","stroke-width":0.8}))}
+// pipe with sharp corners; edges are offset lines meeting at a point
+function offs(p,o){var out=[],n=[],i,d;
+  for(i=0;i<p.length-1;i++){var dx=p[i+1].x-p[i].x,dy=p[i+1].y-p[i].y,l=Math.hypot(dx,dy);n.push({x:-dy/l,y:dx/l})}
+  out.push({x:p[0].x+n[0].x*o,y:p[0].y+n[0].y*o});
+  for(i=1;i<p.length-1;i++){var a=n[i-1],b=n[i],k=o/(1+a.x*b.x+a.y*b.y);out.push({x:p[i].x+(a.x+b.x)*k,y:p[i].y+(a.y+b.y)*k})}
+  var L=n[n.length-1],e=p[p.length-1];out.push({x:e.x+L.x*o,y:e.y+L.y*o});return out}
+function pts(a){return a.map(function(q){return q.x+","+q.y}).join(" ")}
+function pipePoly(s,p,sel){var w=mm(100);
+  if(sel)s.appendChild(el("polyline",{points:pts(p),fill:"none",stroke:GRIP,"stroke-opacity":0.28,"stroke-width":w+10,"stroke-linejoin":"miter"}));
+  s.appendChild(el("polyline",{points:pts(p),fill:"none",stroke:BLUE,"stroke-width":w,"stroke-dasharray":"32 16","stroke-linejoin":"miter"}));
+  [-1,1].forEach(function(sg){s.appendChild(el("polyline",{points:pts(offs(p,sg*w/2)),fill:"none",stroke:"#C8CBD0","stroke-width":0.8,"stroke-linejoin":"miter"}))})}
+function tag(s,x,y,n){s.appendChild(el("circle",{cx:x,cy:y,r:mm(330),fill:CAD,stroke:"#fff","stroke-width":1.5}));
+  s.appendChild(el("text",{x:x,y:y+mm(350)*0.5,"font-size":mm(350)*1.3,"text-anchor":"middle",style:"fill:#fff"},n))}
+function say(s,x,y,str,a,c){s.appendChild(el("text",{x:x,y:y,"font-size":13,"text-anchor":a||"start",style:"fill:"+(c||"#C8CBD0")},str))}
+function brk(s,x,y){s.appendChild(el("rect",{x:x-5,y:y-8,width:12,height:16,fill:CAD}));s.appendChild(el("line",{x1:x-6,y1:y+9,x2:x-1,y2:y-9,stroke:"#C8CBD0","stroke-width":1}));s.appendChild(el("line",{x1:x-1,y1:y+9,x2:x+4,y2:y-9,stroke:"#C8CBD0","stroke-width":1}))}
+function arrow(s,x,y,dir){var L=mm(750),H=mm(300),x1=x-dir*L/2,x2=x+dir*L/2;
+  s.appendChild(el("line",{x1:x1,y1:y,x2:x2-dir*H,y2:y,stroke:"#fff","stroke-width":1.2}));
+  s.appendChild(el("polygon",{points:x2+","+y+" "+(x2-dir*H)+","+(y-4)+" "+(x2-dir*H)+","+(y+4),fill:"#fff",stroke:"#fff","stroke-width":1}))}
+// grips: 10 px solid blue square (with a thin dark ring so it shows on the pipe); flip grip = small blue arrow, apex toward the side it flips to
+function grip(s,x,y){s.appendChild(el("rect",{x:x-6,y:y-6,width:12,height:12,fill:CAD}));s.appendChild(el("rect",{x:x-5,y:y-5,width:10,height:10,fill:GRIP}))}
+function flip(s,x,y,rot){var g=el("g",{transform:"translate("+x+" "+y+") rotate("+(rot||0)+")"});
+  g.appendChild(el("polygon",{points:"0,-7 7,5 -7,5",fill:CAD,stroke:CAD,"stroke-width":3,"stroke-linejoin":"round"}));
+  g.appendChild(el("polygon",{points:"0,-6 6,4 -6,4",fill:GRIP}));s.appendChild(g)}
+function lead(s,x1,y1,x2,y2){s.appendChild(el("line",{x1:x1,y1:y1,x2:x2,y2:y2,stroke:"#A9AEB6","stroke-width":1}))}
+var LBL="100 DIA. UPVC PIPE AT 1 IN 100";
+var offL=mm(50)+mm(75)+fsz(250)*0.55, offI=mm(50)+mm(50)+fsz(180)*0.55, offA=mm(50)+mm(200);
+
+/* ---------- 1: selected pipe ---------- */
+function pipeSel(){var s=svg(930,360),Y=290,r=mm(225);
+  var P2={x:110,y:Y},B={x:600,y:Y},P3={x:870,y:100},E2={x:P2.x+r,y:Y};
+  var ux=B.x-P3.x,uy=B.y-P3.y,ul=Math.hypot(ux,uy);ux/=ul;uy/=ul;
+  var t=r/Math.max(Math.abs(ux),Math.abs(uy)),E3={x:P3.x+ux*t,y:P3.y+uy*t};
+  var dx=-ux,dy=-uy,nx=-dy,ny=dx;                       // dx,dy = travel P2 to P3; n = right-hand side
+  pit(s,P2.x,P2.y);pit(s,P3.x,P3.y);
+  pipePoly(s,[E2,B,E3],true);
+  tag(s,P2.x,P2.y-mm(900),"P2");tag(s,P3.x,P3.y-mm(900),"P3");
+  var c=(E2.x+B.x)/2,w=tw(LBL,250),ly=Y-offL;
+  txt(s,c,ly,LBL,250);
+  var ILa="IL 12.31",wa=tw(ILa,180),xa=E2.x+mm(200)+wa/2,ya=Y+offI;txt(s,xa,ya,ILa,180,{fill:RED});
+  arrow(s,c,Y+offA,-1);
+  var ILb="IL 12.40",wb=tw(ILb,180),dist=mm(200)+wb/2,ang=Math.atan2(dy,dx)*180/Math.PI;
+  var cb={x:E3.x-dx*dist+nx*offI,y:E3.y-dy*dist+ny*offI};txt(s,cb.x,cb.y,ILb,180,{fill:RED,rot:ang});
+  // every badge sits 22 px from its own grip (about 6 px clear of it), on the side away from the pipe where there is room
+  // 1 pipe ends
+  grip(s,E2.x,E2.y);badge(s,E2.x-2,E2.y+23,"1");
+  grip(s,E3.x,E3.y);badge(s,E3.x+nx*22,E3.y+ny*22,"1");
+  // 2 bend: badge outside the corner
+  grip(s,B.x,B.y);badge(s,B.x+6,B.y+22,"2");
+  // 3 middle of each straight length (on the flat run the label is above and the flow arrow below, so the badge sits beside the grip)
+  grip(s,c,Y);badge(s,c+22,Y+1.5,"3");
+  var M={x:(B.x+E3.x)/2,y:(B.y+E3.y)/2};grip(s,M.x,M.y);badge(s,M.x-nx*22,M.y-ny*22,"3");
+  // 4 label: grip, flip arrow (points down = the side it flips to), badge above
+  var gx=c+w/2+16;grip(s,gx,ly);flip(s,gx+22,ly,180);badge(s,gx,ly-22,"4");
+  // 5 invert levels
+  var ex=xa+wa/2+13;grip(s,ex,ya);flip(s,ex+22,ya,0);badge(s,ex,ya+22,"5");
+  var tp={x:cb.x-dx*(wb/2+2),y:cb.y-dy*(wb/2+2)};
+  var g1={x:tp.x-dx*13,y:tp.y-dy*13},g2={x:g1.x-dx*22,y:g1.y-dy*22};
+  grip(s,g1.x,g1.y);flip(s,g2.x,g2.y,Math.atan2(-nx,ny)*180/Math.PI);badge(s,g1.x+nx*22,g1.y+ny*22,"5");
+  // 6 flow arrow: grip at the arrow's head end, well away from the middle grip
+  var fx=c-mm(750)/2-14;grip(s,fx,Y+offA);flip(s,fx-22,Y+offA,0);badge(s,fx,Y+offA+22,"6");
+  return s}
+
+/* ---------- 2: selected pit ---------- */
+function pitSel(){var Z=1.5,s=svg(440,300),g=el("g",{transform:"scale("+Z+")"});s.appendChild(g);
+  var x=87,y=133,h=mm(300);                              // drawing part, shown 1.5 times larger so the squares fit
+  pit(g,x,y,h);pipe(g,x+h,285,y);brk(g,285,y);
+  tag(g,x,y-mm(900),"P2");
+  var CL="CL 12.95",w=tw(CL,200),r=mm(424)+mm(400)+w/2,q=r*0.7071,cx=x+q,cy=y-q;
+  txt(g,cx,cy,CL,200,{rot:-45});
+  var X=x*Z,Y=y*Z,H=h*Z;                                 // grips and badges stay full size
+  say(s,X,Y+H+52,"600 x 600 mm","middle");
+  // 1 centre
+  grip(s,X,Y);lead(s,X-4,Y+5,X-34,Y+42);badge(s,X-40,Y+50,"1");
+  // 2 wall midpoints
+  grip(s,X-H,Y);badge(s,X-H-20,Y,"2");
+  grip(s,X+H,Y);lead(s,X+H+4,Y+5,X+H+14,Y+20);badge(s,X+H+18,Y+28,"2");
+  grip(s,X,Y-H);badge(s,X+20,Y-H-6,"2");
+  grip(s,X,Y+H);badge(s,X+20,Y+H+8,"2");
+  // 3 number (grip on the circle's right edge)
+  var nxp=(x+mm(330))*Z,nyp=(y-mm(900))*Z;grip(s,nxp+5,nyp);badge(s,nxp+25,nyp-8,"3");
+  // 4 cover level (grip at the far end of its text)
+  var d4=w/2*Z+14,gx=cx*Z+d4*0.7071,gy=cy*Z-d4*0.7071;grip(s,gx,gy);badge(s,gx+20,gy-6,"4");
+  return s}
+
+/* ---------- 3: the window ---------- */
+function planStrip(){var W=724,H=110,s=svg(W,H),sc=0.0245,y=72,pr=9;
+  var P4=40,P3=P4+6000*sc,P2=P3+12000*sc,P1=P2+8000*sc,G=P2-10000*sc;
+  s.appendChild(el("text",{x:12,y:20,"font-size":14,style:"fill:#ECEDEF"},"The plan"));
+  function pp(a,b){pipe(s,a+pr,b-pr,y)}
+  pp(P4,P3);pp(P3,P2);pp(P2,P1);
+  [P4,P2,P1].forEach(function(x){pit(s,x,y,pr)});
+  s.appendChild(el("rect",{x:P3-pr-5,y:y-pr-5,width:2*pr+10,height:2*pr+10,fill:"none",stroke:"#fff","stroke-opacity":.3,"stroke-width":3,rx:2}));
+  pit(s,P3,y,pr);
+  s.appendChild(el("rect",{x:G-pr,y:y-pr,width:2*pr,height:2*pr,fill:"none",stroke:"#A9AEB6","stroke-width":1,"stroke-dasharray":"5 4"}));
+  function t(x,n,col,dash){s.appendChild(el("circle",{cx:x,cy:42,r:13,fill:dash?"none":CAD,stroke:col,"stroke-width":dash?1:1.5,"stroke-dasharray":dash?"4 3":"none"}));
+    s.appendChild(el("text",{x:x,y:47,"font-size":13,"text-anchor":"middle",style:"fill:"+col},n))}
+  t(P4,"P4","#fff");t(P3,"P3","#fff");t(P2,"P2","#fff");t(P1,"P1","#fff");t(G,"P3","#A9AEB6",true);
+  say(s,G+19,47,"old place","start","#A9AEB6");say(s,P3-19,47,"moved","end","#fff");
+  // 2000 mm move
+  s.appendChild(el("line",{x1:P3,y1:25,x2:G,y2:25,stroke:"#C8CBD0","stroke-width":1}));
+  [P3,G].forEach(function(x){s.appendChild(el("line",{x1:x,y1:20,x2:x,y2:30,stroke:"#C8CBD0","stroke-width":1}))});
+  say(s,(P3+G)/2,17,"2000 mm","middle");
+  say(s,(P3+P2)/2+30,64,"12000 mm","middle");
+  say(s,P3+pr+6,100,"IL 12.40","start",RED);say(s,P2-pr-6,100,"IL 12.30","end",RED);
+  return s}
+// side view of the pipe: walls, invert line, level and grade boxes (solid = typed, dashed = worked out)
+function profile(o){var W=325,H=104,s=svg(W,H),a=62,b=266,old=b-(b-a)*10/12;
+  function box(x,y,str,calc,col,anc){var w=str.length*7.3+10,x0=anc==="end"?x-w:(anc==="mid"?x-w/2:x);
+    s.appendChild(el("rect",{x:x0,y:y-10,width:w,height:20,rx:8,fill:"none",stroke:"#8A8E96","stroke-width":1,"stroke-dasharray":calc?"4 3":"none"}));
+    s.appendChild(el("text",{x:x0+w/2,y:y+4.5,"font-size":13,"text-anchor":"middle",style:"fill:"+col},str))}
+  var yl=o.leftY,yr=66;
+  s.appendChild(el("line",{x1:old,y1:24,x2:old,y2:90,stroke:"#A9AEB6","stroke-width":1,"stroke-dasharray":"5 4"}));
+  s.appendChild(el("line",{x1:a,y1:24,x2:a,y2:90,stroke:"#C8CBD0","stroke-width":1.5}));
+  s.appendChild(el("line",{x1:b,y1:24,x2:b,y2:90,stroke:"#C8CBD0","stroke-width":1.5}));
+  say(s,a,16,"P3","middle");say(s,b,16,"P2","middle");say(s,old+4,16,"old","middle","#A9AEB6");
+  s.appendChild(el("line",{x1:a,y1:yl,x2:b,y2:yr,stroke:BLUE,"stroke-width":3}));
+  box(a-4,yl,o.left,o.leftCalc,RED,"end");box(b+4,yr,"12.30",false,RED,"start");
+  box((a+b)/2,86,o.grade,o.gradeCalc,"#ECEDEF","mid");
+  return s}
+function chip(str,calc){return '<span class="chip'+(calc?' calc':'')+'">'+str+'</span>'}
+function windowDemo(){var w=document.createElement("div");w.className="stage";
+  w.innerHTML='<div class="win"><div class="tb"><span>Pipe P3 to P2 is now 12.0 m (was 10.0 m)</span>'+
+   '<svg width="12" height="12" viewBox="0 0 12 12"><path d="M1 1l10 10M11 1L1 11" stroke="#C8CBD0" stroke-width="1.3" fill="none"/></svg></div>'+
+   '<div class="wb"><div id="strip"></div><div class="cards">'+
+   '<div class="cd sel"><div class="chd"><span class="radio on"></span><span>Keep the levels</span><span class="sp"></span><span class="rec">Recommended</span></div><div id="p1"></div>'+
+   '<p class="p">'+chip("IL 12.40")+' and '+chip("IL 12.30")+' stay. Grade becomes '+chip("1 in 120",true)+' (was 1 in 100).</p>'+
+   '<p class="p">Downstream: nothing else changes.</p>'+
+   '<p class="p g">Minimum grade for this pipe: Not known</p></div>'+
+   '<div class="cd"><div class="chd"><span class="radio"></span><span>Keep the grade</span></div><div id="p2"></div>'+
+   '<p class="p">Grade stays '+chip("1 in 100")+'. IL at P3 becomes '+chip("12.42",true)+' (was 12.40).</p>'+
+   '<div class="strip">Needs a look: P4 to P3 now arrives 0.02 m lower than the pipe leaving</div></div>'+
+   '</div><p class="wnote">Figures you typed are shown solid; worked-out figures dashed. One Undo puts the pit back.</p></div>'+
+   '<div class="bar"><div class="btn">Cancel</div><div class="btn ok">OK</div></div></div>';
+  w.querySelector("#strip").appendChild(planStrip());
+  w.querySelector("#p1").appendChild(profile({leftY:42,left:"12.40",leftCalc:false,grade:"1 in 120",gradeCalc:true}));
+  w.querySelector("#p2").appendChild(profile({leftY:37.2,left:"12.42",leftCalc:true,grade:"1 in 100",gradeCalc:false}));
+  return w}
+
+function list(items){var o=document.createElement("ol");o.className="grips";
+  items.forEach(function(it,i){var li=document.createElement("li");li.innerHTML='<span class="b">'+(i+1)+'</span><span><b>'+it[0]+'</b> '+it[1]+'</span>';o.appendChild(li)});return o}
+function note(t){var p=document.createElement("p");p.className="note";p.textContent=t;return p}
+
+var Q=[
+{h:"The grips on a selected pipe",ctx:"A proposal for you to correct, not a choice. Pick a pipe and small blue squares appear on it. Drag one to change that part. Each square has a number; the list under the picture says what it does. The label, levels and arrow sit where you ruled.",
+ body:function(sec){sec.appendChild(pipeSel());
+  sec.appendChild(list([
+   ["Pipe end (one at each end):","drag onto a pit to join it; drag off to free it."],
+   ["Bend:","drag to move the bend."],
+   ["Middle of a straight length:","drag to pull out a new bend."],
+   ["Label:","drag to slide it along or across; a second small arrow-shaped grip flips it to the other side of the pipe."],
+   ["Invert level (one at each end):","drag to slide it; a flip grip changes its side."],
+   ["Flow arrow:","drag to slide it; a flip grip changes its side. (Reversing the flow itself is the Reverse button in the window, not a grip.)"]]));
+  sec.appendChild(note("Hovering over a grip shows these words. Nothing is hidden behind a right-click."))}},
+{h:"The grips on a selected pit",ctx:"A proposal for you to correct. A 600 x 600 mm pit is picked; its blue squares are numbered the same way. Drawn 1.5 times larger than the plan so the squares fit.",
+ body:function(sec){var two=document.createElement("div");two.className="two";
+  two.appendChild(pitSel());
+  var r=document.createElement("div");
+  r.appendChild(list([
+   ["Centre:","drag to move the pit; joined pipes follow."],
+   ["Wall midpoints (four):","drag to stretch the pit to the next size (450, 600, 900 or 1200 mm); joined pipe ends follow the wall."],
+   ["Number:","drag to move it; it steps between above, below and beside."],
+   ["Cover level:","drag to step it round the four corners (always at 45 degrees)."]]));
+  r.firstChild.style.marginTop="0";
+  two.appendChild(r);sec.appendChild(two);
+  sec.appendChild(note("A pit turned with ROTATE keeps its text readable."))}},
+{h:"A move changed the length of a pipe: levels or grade?",ctx:"You said: “window opens to select one or the other and how it will transpire down the system if it exists”. A proposal for you to correct: this small window opens after the move, with the first choice picked for you.",
+ body:function(sec){sec.appendChild(windowDemo());
+  var a=document.createElement("p");a.className="opt";a.innerHTML="<b>Keep the levels, on a real job:</b> the levels you set stay put, so nothing downstream moves; the pipe just runs flatter.";sec.appendChild(a);
+  var b=document.createElement("p");b.className="opt";b.style.marginTop="4px";b.innerHTML="<b>Keep the grade, on a real job:</b> the pipe drains as designed, but the P3 level rises 0.02 m, so the pipe coming in from P4 needs a look. The amber strip shows on screen only, never printed.";sec.appendChild(b)}}
+];
+var only=(location.search.match(/q=(\d)/)||[])[1],host=document.getElementById("host");
+Q.forEach(function(q,i){if(only&&only!=i+1)return;var sec=document.createElement("section");sec.className="q";
+  sec.innerHTML="<h2></h2><p class='ctx'></p>";sec.querySelector("h2").textContent=q.h;sec.querySelector(".ctx").textContent=q.ctx;q.body(sec);host.appendChild(sec)});
+</script>
+</body>
+</html>
