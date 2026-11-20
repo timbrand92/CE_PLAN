@@ -34,3 +34,6 @@ TR-108 to TR-111 = D-393. TR-114, TR-115 = D-395. TR-117 = D-396. TR-116 = D-397
 2. Every other unit (centimetres and the rest) is refused the same way, naming the unit.
 3. The units change while a Pit or Pipe window is open: OK closes the window, leaves the drawing alone and says why.
 4. A command with no window in an unset drawing says "treated as millimetres" once per command.
+
+## F. Added 3:57 pm: blocks (D-404)
+The list `reference\CURRENT_PLUGIN_BLOCKS.md` shows the current plug-in uses its OWN 18 supplied block drawings (not template, not master). The control room's reading of TR-118, for Tim to confirm in one question: "the new plug-in ships copies of those same 18 drawings; pits are PIT BLOCK 3 with the PIT LABEL 2 circle tag, as you draft with today". Later, when their tools come up (not Stage 1): the downpipe block's letters (fixed text or attribute), the older PIT LABEL with attribute FB, the 3500 litre tank's size.
