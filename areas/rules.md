@@ -3,8 +3,9 @@
 **rev 1, 20 Nov 2026 (Melbourne).** Written by the chat `CE_ACAD / rules / plan / 01` (Opus, high), from the brief
 `C:\TimOS\overnight\2026-11-19\HELD_PROMPT_CE_ACAD_PLUGIN.md`, released by Tim's "start the projects" on 20 Nov 2026.
 **Rulebook read:** `C:\TimOS\RULES.md` on origin/main, "Rules rev 2 — 20 Nov 2026". `ROUTER.md` on origin/main.
-**Status: LOOK ONLY. Nothing has been changed in any rule file. Nothing changes until Tim says "rest agreed".**
-After "rest agreed": `MASTER_PLAN.md` section B gets one line pointing at this file (not before).
+**Status: AGREED AND DONE, 20 Nov 2026.** Tim: "Rest agreed" (relayed by `TIMOS / setup / plan / 01`; record
+`decisions\2026-11-20_RULES_REV2_SHEET_AGREED.md`). What changed: section "Done after Rest agreed" at the bottom.
+*Superseded 20 Nov 2026: "LOOK ONLY. Nothing has been changed in any rule file. Nothing changes until Tim says "rest agreed"."*
 
 ---
 
@@ -159,3 +160,36 @@ builds, installs or publishes. Undo: `git revert` of this one commit.
 5. Group 15: move the ten old prompts to `archive\chat-records-2026-10\` with a replaced-by line each.
 6. Groups 9 and 11: the two one-line wording tidies.
 7. A fresh read-only checker compares every changed file with this sheet (RULES 5.10).
+
+---
+
+## Done after Rest agreed (20 Nov 2026, `CE_ACAD / rules / plan / 01`)
+
+Each change saved by file name in its own commit, pushed to `main`; leak scan clean on every push. No AutoCAD, nothing
+built or installed, nothing deleted, nothing in `C:\TimOS` touched.
+
+1. **Map line:** `MASTER_PLAN.md` section B item 24, RULES (commit 4ac94cbe).
+2. **Tables wording** to RULES 2.2 in `AGENTS.md`, `START_HERE.md` (6e1b0de6), `zero\rulings\CHAT_AND_TIM.md`
+   (cf608732) and `zero\RULES.md` Rulings item 2 (39df2f87). Old wording kept, marked superseded.
+3. **Pointer to the rulebook** (groups 1 to 6): new item 8 in `START_HERE.md` section 0 (6e1b0de6); the covered rules
+   in `zero\RULES.md` moved to its "Pointed back to RULES.md" section (39df2f87). `AGENTS.md` already pointed.
+4. **`zero\RULES.md` retitled "Plugin build rules"** (39df2f87): all 72 R-numbers kept once each; kept rules word for
+   word; R-01, R-26, R-29 marked superseded; the rulebook wins on any clash; the charter and the 30 Oct install-when-away
+   permission named, unchanged; R-72 (WHERE WE ARE) unchanged.
+5. **Ten old prompts moved** with `git mv` to `archive\chat-records-2026-10\` (9b03e615), contents identical, the
+   exact list and replaced-by lines in its README; `archive\README.md` item 8; the `START_HERE.md` banner pointer to
+   `TIM_DESK.md` now names its new place. The PERCENTAGES block is retired with `DESK_NEW_CHAT_START_PROMPT.md`.
+6. **Two wording tidies:** testing note in the three-deliverables rule of `ENGINEERING_RULEBOOK.md`; Codex models
+   (astra, sol 6.2, D-303) in `MODEL_ROUTING.md` section 5b (9ae725cd).
+7. **Tim's words recorded:** `decisions\2026-11-20_RULES_REV2_SHEET_AGREED.md` (07fc5b87).
+8. **Checked:** a separate read-only checker (Haiku, low) compared the seven commits with this sheet: 8 of 8 checks
+   PASS. It named two `START_HERE.md` edits as not spelt out on the sheet; both fall under "After rest agreed" steps 2
+   and 5 above.
+
+**Not done (left on purpose):** the release chat charter and the 1 Nov pilot (untouched); old history text that still
+names the moved files at their old paths (charter, `BUG_CARPARK.md`, `desk_jobs\README.md`, old reports); the three
+"found outside" items above, which belong to their owning chats (the chat memory line on percentages was marked
+superseded in this chat's own memory).
+
+**Undo:** `git -C C:\CE_PLAN revert 07fc5b87 9ae725cd 9b03e615 39df2f87 cf608732 6e1b0de6 4ac94cbe` (newest first),
+then push. Each commit can also be reverted on its own.
