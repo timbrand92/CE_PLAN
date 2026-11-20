@@ -109,3 +109,7 @@ A6 and the Pit window still may not take the routine in; the Pit window's own de
 ## 15. What the design page must settle (recommended)
 
 One routine and its contract (exact in, a tenth of a millimetre, half up only at print, one printer for every sheet figure, the window's own exact grade); every check reads exact figures, with no rounding in a data file; how the source test proves "nothing else rounds" by what it forbids rather than by a list of known spellings (for example: every numeric format and conversion outside the routine fails unless on a short reviewed allow-list with a reason, data files included, `acad` included); the schedule's padlock path; the smallest and largest grade the label prints; and its acceptance tests, the cases above among them. The cover's pipe-wall sum stays with the cover job (D-426).
+
+## 16. Withdrawn (control room, about 3:08 am)
+
+**The 1 in 200.004 case is WITHDRAWN as a blocker** (section 9's first verdict on it, section 14 item 1 of the final verdict, and the honest half's single blocker at d5c6a9b): under D-380 (Tim confirmed) a grade is compared at two decimal places, so 200.004 passes. The two `checks.csv` flatness rows rounding to 0.01 are right for a grade. The check room was wrong to hold it as settled on the D-411 and D-424 drafts. The other items of section 14 (the 5.03 mm level clash, the padlocked schedule cell, a tiny grade vanishing, the source test dodged) still stand, since they concern levels, printing and the test, not the grade comparison.

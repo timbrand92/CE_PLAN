@@ -16,3 +16,7 @@
 ## 2. For the control room (a clash between rulings, for Tim)
 
 **A pipe at exactly 1 in 200.004 against a 1 in 200 limit: pass or warn?** D-380 (Tim confirmed: "a grade passes at two decimal places") passes it; D-350, D-411 and D-424 (checks on exact figures; D-411 and D-424 drafts) warn. Both readings warn at 200.04, and only 200.004 sits between them. The check room's earlier rounding verdicts listed 200.004 passing as a blocker on the D-411 and D-424 reading; that was wrong to treat as settled. Recommended (both readers lean opposite ways): mark the case DRAFT on the page with both outcomes, and ask Tim; the adversarial reader recommends the exact warning with "1 in 200.004" written in the check so the drafter can see why; the honest reader reads D-380 as deciding it (pass).
+
+## 3. Ruled since (control room, about 3:08 am)
+
+Tim's confirmed ruling wins: **D-380, "a grade passes at two decimal places".** A GRADE is compared with its limit at two decimal places: 1 in 200.004 is 200.00 and PASSES; 1 in 200.04 warns. The D-411 and D-424 drafts stand only where they do not conflict: LEVELS, depths, covers and clashes are checked exact against the tolerance; the window may still show the worked grade ("200.04", "94.6"). The page states this as RULED, not as a draft with two outcomes (it replaces section 2's recommendation). The only point still for Tim is the LABEL at 200.04 (D-411 item 1).
