@@ -40,3 +40,14 @@ Pretend drawing 685 ran: 11 targets fail, the 1 control passes, 673 older pass; 
 ## 5. Owed in AutoCAD (when a marker build is merged)
 
 The marker on the plan at 1:100 and one other scale; hover words against the window's; a plot of the sheet with an ordinary line as witness (the marker absent); save and reopen; copy, move, mirror; Cancel, one Undo and Redo (the danger: Undo takes the marker and leaves the undersized pipe).
+
+## 6. Ruled since (control room, about 3:36 pm, D-401; all DRAFT until Tim confirms them one by one)
+
+1. **Colour and layer:** the marker is ByLayer; the tool makes its OWN no-plot marker layer coloured amber (AutoCAD colour 40); the office grey layer is not used. The layer's name is a setting, still open.
+2. **That layer already exists and is set to plot:** it is never changed; NO marker is drawn; the command line and the window say the fault in words and why there is no marker; the edit is not stopped.
+3. **Two reasons on one part:** one marker listing both.
+4. **The command line** still says it once per command.
+5. **Erased by hand while the fault remains:** it comes back at the tool's next check of that part (an edit of it or of a joined part, or opening its window); never on opening the drawing. An old drawing with two pits of one number: marked at the first edit touching either.
+6. **"p4" and " P4 " are P4** (capitals and spaces ignored).
+7. **Size and place:** the triangle is as tall as the label's text, one text height clear of the label's end, or beside the part if there is no label; settings.
+8. **Agreed:** the marker's own tests are triggered by the failed grade check; targets needing pipe-size or label work are WAITING.
