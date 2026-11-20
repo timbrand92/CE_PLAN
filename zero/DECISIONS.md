@@ -762,6 +762,8 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-368** (same sitting, TR-016) WHEN NO SPOT IS CLEAR: "First spot, and flag it" (not the recommended answer). The text goes in its first spot on its mask and is flagged as overlapping. Where that flag shows in Stage 1 is open (the Unfinished list is Stage 2; unknown U-082).
 
+**D-364 ADDED TO, 20 Nov 2026, about 11:40 am** (control room's call, narrowing; after the check room's second pass raised the blockers on the night scripts to seven): (5) the record of "its own" AutoCAD must be whole and sound to count; a damaged or partial record means NOT its own. (6) The test drawing is known by its FULL path, never its short name; nothing is closed without saving unless it is that exact file in the test folder. (7) No quit, close-all or force is ever made while any other drawing is open in that AutoCAD: stop and leave it with a note. (8) "Still running" is not "jammed": a force under D-160 is allowed only when the test AutoCAD has not responded at all for three minutes on end, or has crashed; a busy PC or a lost front window means stop sending, wait, one normal close, never a force. (9) A command AutoCAD does not recognise is a FAIL in words; "sent" never counts as "done"; a pass reads green only from what AutoCAD answered. (10) NO AUTOCAD RUN ON THE NIGHT OF 20 NOV: with seven blockers the fix is not to be rushed to a 5:30 pm deadline; the first run is whenever the check room gives MERGE on both halves and the AutoCAD test room says go, at night or at the weekend.
+
 ## Not decided (asked or raised, no decision yet)
 
 1. Whether Stage 1's civil explanation is approved (Tim moved on to the design without saying "approve"). **Settled by D-117.**
