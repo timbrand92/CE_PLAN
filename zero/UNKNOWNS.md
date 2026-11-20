@@ -3,7 +3,7 @@
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), set up by D-353 and `ROOMS.md`. No other chat edits this file.
 **First written:** Fri 20 Nov 2026, 10:45 am (clock read).
 
-**STAGE 1 COUNT: 121 of 271 closed.** Updated Fri 20 Nov 2026, 15:33. PART A (U-001 to U-152): 89 of 152 closed, 37 blockers open. PART B (N-001 to N-119, from the two line-by-line pages, held in `interview/FOLD_DRAFT.md` Part 1; at least 14 are one question asked on both pages): 32 of 119 closed, 54 blockers open. **Blockers open in all: 91.** Tim's word on HOW to ask (TR-086): one by one. Filed by the control room so far: up to D-391.
+**STAGE 1 COUNT: 121 of 271 closed.** Updated Fri 20 Nov 2026, 15:52. PART A (U-001 to U-152): 89 of 152 closed, 37 blockers open. PART B (N-001 to N-119, from the two line-by-line pages, held in `interview/FOLD_DRAFT.md` Part 1; at least 14 are one question asked on both pages): 32 of 119 closed, 54 blockers open. **Blockers open in all: 91.** Tim's word on HOW to ask (TR-086): one by one. Filed by the control room so far: up to D-402.
 **PART B CLOSED:** N-003 (TR-087); N-004 (TR-087); N-005 (TR-088); N-006 (TR-088); N-001 (TR-089); N-002 (TR-089); N-007 (TR-090); N-009 (TR-091); N-014 (TR-092); N-015 (TR-093); N-019 (TR-095); N-020 (TR-096); N-021 (TR-097); N-022 (TR-098); N-023 (TR-099); N-024 (TR-100); N-028 (TR-102); N-016 (TR-106); N-058 (TR-122); N-062 (TR-123); N-063 (TR-124); N-025 (TR-125); N-115 (TR-126); N-011 (TR-127); N-059 (TR-128); N-060 (TR-129); N-065 (TR-133); N-061 (TR-135); N-066 (TR-136); N-089 (TR-137); N-092 (TR-138); N-012 (TR-101, TR-141)
 **STAGE 2 COUNT (waiting): 0 of 23 closed.**
 

@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-143.
+**Next number:** TR-147.
 
 ---
 
@@ -367,3 +367,13 @@
 **TR-141** (unknowns U-113, U-053, N-012; the small window when a move changes a pipe's length: two cards, "Keep the levels" picked first, "Keep the grade" with its amber strip for what it does further along). He picked: "Yes, as drawn (Recommended)". It opens after any move, stretch or resize that changes a pipe's length, and after a pit is dropped on a pipe (TR-101); Cancel puts the pit back; one Undo. The control room's question stands for the builders: how this works as one Undo after AutoCAD's own MOVE (R-41, D-348).
 
 **TR-142** (unknowns U-112, U-111; the sleeved length under a slab). He picked: "A. Two clicks on the pipe (Recommended)". He ticks Sleeved, then clicks on the pipe where the sleeve starts and stops; that length is drawn with a second pair of thin lines just outside the pipe and its label says "SLEEVED INSIDE A 150 DIA. UPVC PIPE"; the rest of the pipe keeps the ordinary label. (Research: `reference/research/R-016_SLEEVED_PIPE.md`.)
+
+## Fri 20 Nov 2026, 15:52 (clock read): the green impervious-area line (typed in the chat and through the question window)
+
+**TR-143** After choosing "I will type it", he pointed the room at the office civil template saved as a DXF (in the office Drafting folder, Drawings Templates, A1 Templates, the file CE_A1_C01 - VERTICAL; his pointing at it is the permission to read that one file) and wrote: "its the thick black line on old projects when plotted". What the room read in that file itself: 149 layers; none is named for impervious area; the layers drawn GREEN on screen (colour 3) are 50CONT, 50TEXT, 0-TITLE TEXT, CONSTRUCTION JOINT, GIRDERS, SUPPORT COLUMN and SLAB CJ; colour 3 plots black at 0.50 mm, the thickest pen (`evidence/STUDY_A_CIVIL_DRAFTING_ANATOMY.md` section 2); 50CONT holds outline work (9 polylines, 21 lines, 3 arcs); the template's criteria text has "SITE AREA ___ m2" and "IMPERVIOUS AREAS: DW. 1, DW. 2, CARPORTS, DRIVEWAY ___ m2".
+
+**TR-144** (asked: is the green line a polyline on layer 50CONT). He picked: "Yes: 50CONT is the impervious outline".
+
+**TR-145** (asked: a pipe label whose usual spot lands across that outline; offered: treat it as taken when another spot is clear, no marker if none is (recommended); treat it exactly like text or a pipe). He picked neither and wrote: "IT MIGHT INTERSECT SO WE NEED TO MOVE IT SO IT DOESNT CLASH DOES THAT MAKE SENSE". Room's reading (mine): yes; the outline counts as in the way and the label is MOVED so it does not sit on the line (it tries its other spots in the ruled order, TR-013). What happens when every spot crosses the line was not said (the room's proposal: first spot, with the amber marker, as TR-016 rules for any text with no clear spot).
+
+**TR-146** (typed straight after): "50CONT LAYER 70 WIDTH". Room's reading (mine): the impervious outline is a polyline on layer 50CONT drawn with a width of 70 mm. So the tool can tell it from other 50CONT linework: a polyline on 50CONT, 70 wide. With TR-133: a label's spot is taken by other text, a pipe band, a pit, and a 70-wide 50CONT outline. Still open under U-132: building walls inside the architect's xref.
