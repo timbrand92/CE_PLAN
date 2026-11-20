@@ -97,3 +97,49 @@ Section 5 of the first answer stands: with the real units reader made to answer 
 2. **DRAFT: a layout sheet with a viewport open into the model works as normal.**
 3. **"Treated as millimetres":** in the window only when there is a window; on the command line, once per command, only when there is none.
 4. **DRAFT: the units change between millimetres and "not set" with a window open: OK goes ahead and draws** (the two rows that close the window on that change are restated).
+
+
+
+---
+
+# Third answer: codex/tests-units at bee88b6
+
+**Answer: HOLD THE LIST. Six reasons, all the list's own; a seventh rests only on D-418 and does not count. This was round one of two from the D-416 baseline: ONE round is left.** Written Fri 20 Nov 2026, about 8:30 pm. Checked on the bench only. (65d95d1 was sent back unchecked; this tip carries it.)
+
+**Who checked, and how they split.** Honest check: Team helper, Claude Opus 5.5: `C:\CE_WORK\check\reports\unitsc_honest_REPORT.md`: ACCEPT (all six reasons of the second answer closed; one merge condition: the report file). Adversarial pass: Codex gpt-6.2-astra: `C:\CE_WORK\check\reports\unitsc_adv_REPORT.md`, proofs in `unitsc_adv_proofs\`: HOLD: a deliberately faulty build (a four-file change to the product, the submitted tests untouched) passed all 915 active cases while a metre drawing still took a pit and two new layers; eight cases of its own each then failed on that build. Both finished before this was written. The metre refusal is a hard limit (D-344, D-380): a list that a build can pass while drawing in a metre drawing is not accepted, so the hold stands. The honest half is right that every reason of the second answer is closed for the cases it named; these are further ways past the same doorway.
+
+## 14. Counts seen (the writer's counts are true)
+
+The whole solution builds, the AutoCAD plug-in project included, no warnings. Pretend drawing 1,589: this list 916 cases, 879 targets fail (each on what the product draws or says, none on the test's wiring), 1 waiting (the legal point, Stage 2); 673 older pass. 816 rows are marked DRAFT (D-403). Only tests changed. Speed and style tests failed only under tonight's load.
+
+## 15. What the round closed
+
+A fresh fingerprint for every pretend drawing; every units code 1 to 24 and code 99 against all seven command names; the grey line on edits of existing parts; scale 2 fails and decimal millimetres at 1:50 is not refused; whole-message comparison against a reversal; results checked instead of call counts; the real start-up routine spliced into the test host; DRAFT marks; the D-418 rows (an unnamed code, a layout viewport, the notice's place, millimetres to unset and back).
+
+## 16. Reasons to hold
+
+Line numbers are in `tests/CeCivil.Hands.Tests/DrawingUnitsDoorwayTests.cs`.
+
+1. **A refusal can still write to the drawing and leave an Undo step.** The before-and-after comparison (`:571-589`) sees only objects that survive; the pretend drawing leaves erased objects out (`Fake/FakeDrawing.cs:174`). A refusal that made and erased a circle and closed an Undo group passed. D-344, D-380, D-403 item 2: a refused drawing is left alone. Check the next object number, the write history and the Undo marks the host already records (`Fake/CommandHost.cs:96`); the real drawing's changed flag and Undo list go on the owed list.
+2. **A layout viewport lets a forbidden drawing through.** The viewport rows (`:278`) use only writable millimetre drawings; the read-only and layout rows (`:178`) never have a viewport active. A build that accepts a viewport BEFORE asking units or read-only placed a pit and made two layers in a metre drawing. Each refusal again with a viewport active, before any prompt.
+3. **A run picked BEFORE the command, in metres, reaches the levels window.** The levels names go only by ordinary selection (`:85`); the refused-unit edit rows are the five Pit and Pipe names (`:105`). With a pipe already selected the levels window opened and took OK. Add a preselected run in metres, inches and unset (D-383, D-344).
+4. **A drawing that opens unset and changes to metres while the window is open is drawn in.** Every changed-to-refused row opens in millimetres (`:205-210`); the one unset row changes to millimetres (`:240`). Unset to metres after the pick and before OK placed a pit. The window closes, the command line says why, the drawing is unchanged (D-403 item 4).
+5. **The drawing's name can decide the refusal.** Every pretend drawing's name starts with the same word (`:184, 283, 477`): a guard that looks at the name passes the whole list, and a metre drawing with an ordinary saved path took a pit. Vary folder and name independently of units and contents, and include an unsaved drawing. (This is the second answer's reason 1, half closed: the fingerprint now varies, the name does not.)
+6. **Right words fail and wrong words pass.** The comparisons at `:97`, `:197` and `:752` demand one exact sentence the rulings do not give ("Only millimetre drawings are supported. This drawing is in metres." fails); for an unnamed code `:149-151` accept "Code 98 is supported. Nothing was drawn. Continue in these units." Test the meaning: the unit or code is named, it is refused, nothing was drawn, and no line says the opposite. (The second answer's reason 5 again.)
+7. **(D-418 item 9 only: no strike.)** The unset notice can be echoed on the command line in other words (`:719-734` know a short list of phrases): check which channel carries a units message at all.
+
+## 17. To fix in the same round
+
+1. **The report file out of the commit** (`tests/CeCivil.Hands.Tests/reports/UNITS_TESTS_REPORT.md`: it still says the tip is 1df68ab). Both halves ask this.
+2. **The four D-418 rows that already pass** are named controls (nobody has seen them fail).
+3. **A units change with a window open** is tried for PT, PIPE and CD only: add PP and the levels window.
+4. **Older tests that go under the doorway and still expect conversion** (`PitRollbackAndUnitsTests.cs:130`, `PitSizeUnitsTests.cs:22, 38`, `PipeToolTests.cs:298`): named in the hand-over, to be retired or restated with the build.
+5. **Which space owns a part placed through a viewport** is not proven on the pretend drawing: owed in AutoCAD, by name.
+
+## 18. A note for the control room
+
+This list has now been held three times, each time on a new way past the same doorway found by a faulty build written to pass it. The check room's view: the six reasons above are the last cheap ones (each is a missing combination, not a new idea), and the build of the units doorway will be checked by the same probes whatever the list says. If the next round closes these six, further "a cheat could pass" findings will be put as follow-ups and binding probes for the build, as D-411 did for C11, not as another hold.
+
+## 19. Owed in AutoCAD
+
+The real drawing's changed flag and Undo list after a refusal; the colour of the grey line; model or paper ownership through a viewport; the saved drawing's own fingerprint after reopen.
