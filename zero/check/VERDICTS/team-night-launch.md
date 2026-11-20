@@ -101,7 +101,7 @@ How long one launch tick takes on Tim's PC; whether a loaded plug-in shows in th
 
 # Fourth verdict: team/night-launch at 7afeaf1, by reading only (the last)
 
-**Verdict: HOLD by reading.** Written Fri 20 Nov 2026, about 9:30 pm. Codex adversarial reader (gpt-6.2-astra), plain-text copy, nothing run: `C:\CE_WORK\check\reports\nl3_adv_REPORT.md`. Of the third verdict's seven blockers, one is CLOSED (a missing sandbox no longer selects real mode), five PARTLY, one STILL OPEN (no guard-removal proof for this revision: 111 guard labels, 52 with no matching test); of section 9, two STILL OPEN (a grandchild process can still send or close after its parent's timeout; the wrapper can still say "everything is proven"). Worst by reading: **the closer can still force AutoCAD after its drawing count becomes unreadable, and a helper can act after the deadline.** No honest half (D-437).
+**Verdict: HOLD by reading.** Written Fri 20 Nov 2026, about 9:19 pm. Codex adversarial reader (gpt-6.2-astra), plain-text copy, nothing run: `C:\CE_WORK\check\reports\nl3_adv_REPORT.md`. Of the third verdict's seven blockers, one is CLOSED (a missing sandbox no longer selects real mode), five PARTLY, one STILL OPEN (no guard-removal proof for this revision: 111 guard labels, 52 with no matching test); of section 9, two STILL OPEN (a grandchild process can still send or close after its parent's timeout; the wrapper can still say "everything is proven"). Worst by reading: **the closer can still force AutoCAD after its drawing count becomes unreadable, and a helper can act after the deadline.** No honest half (D-437).
 
 ## 13. Ruled since (control room, 9:19 pm, D-437)
 

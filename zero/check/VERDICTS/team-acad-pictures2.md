@@ -91,7 +91,7 @@ Blockers 1 to 3 (the fail-open sandbox; a log written over any file; PASSED on f
 
 # Third verdict: team/acad-pictures2 at 6ee2897 (the picture route, round 3), by reading only
 
-**Verdict: HOLD, thirteen open blockers by reading.** Written Fri 20 Nov 2026, about 9:25 pm. Read by the Codex adversarial reader (gpt-6.2-astra) from a plain-text copy, nothing run: `C:\CE_WORK\check\reports\pic3_adv_REPORT.md`. The honest half (now one Sonnet helper, D-434) is queued; it is added at the foot when it lands and can only add to this same round. Under D-420 no reading opens the gate. Every one of the nine blockers of the second verdict is now PARTLY closed (none fully); section C is still open; D-423 items 1 and 2 are answered as rulings but only partly built. Line numbers are in the `.txt` copies.
+**Verdict: HOLD, thirteen open blockers by reading.** Written Fri 20 Nov 2026, about 9:17 pm. Read by the Codex adversarial reader (gpt-6.2-astra) from a plain-text copy, nothing run: `C:\CE_WORK\check\reports\pic3_adv_REPORT.md`. The honest half (now one Sonnet helper, D-434) is queued; it is added at the foot when it lands and can only add to this same round. Under D-420 no reading opens the gate. Every one of the nine blockers of the second verdict is now PARTLY closed (none fully); section C is still open; D-423 items 1 and 2 are answered as rulings but only partly built. Line numbers are in the `.txt` copies.
 
 ## G. Open blockers (one line each; detail in the report's section 4)
 

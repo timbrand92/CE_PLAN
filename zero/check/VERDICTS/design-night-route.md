@@ -1,6 +1,6 @@
 # Answer: design\NIGHT_ROUTE.md at 97e529a (the whole night route as one thing, D-437)
 
-**Answer: FIX THE PAGE FIRST, on eighteen short edits. The worst: the page still leaves a route by which a test AutoCAD could be FORCE-closed (rule 1.9 forbids it outright), and it admits block drawings without the release hold on the 18 copies (D-417, D-427, D-433).** Written Fri 20 Nov 2026, about 11:35 pm. By reading only. One reader, as D-437 rules (no Claude helper on the night route): Codex gpt-6.2-astra: `C:\CE_WORK\check\reports\nr_adv_REPORT.md` (every item of the two earlier readings graded ANSWERED, PARTLY or NOT, with the page's sections). Even when fixed, the page is not built until Tim chooses on Monday where the guard-removal proof may run.
+**Answer: FIX THE PAGE FIRST, on eighteen short edits. The worst: the page still leaves a route by which a test AutoCAD could be FORCE-closed (rule 1.9 forbids it outright), and it admits block drawings without the release hold on the 18 copies (D-417, D-427, D-433).** Written Fri 20 Nov 2026, about 10:50 pm. By reading only. One reader, as D-437 rules (no Claude helper on the night route): Codex gpt-6.2-astra: `C:\CE_WORK\check\reports\nr_adv_REPORT.md` (every item of the two earlier readings graded ANSWERED, PARTLY or NOT, with the page's sections). Even when fixed, the page is not built until Tim chooses on Monday where the guard-removal proof may run.
 
 ## 1. The edits (one line each; the report's section 7 has the detail)
 

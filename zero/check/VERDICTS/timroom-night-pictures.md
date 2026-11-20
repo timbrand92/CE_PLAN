@@ -124,7 +124,7 @@ Section 7 of the helper's report: a typed length; two levels typed with the grad
 
 # Third look: the pictures after the second look and D-426
 
-**Answers: the single-pipe window PASS once one fit edit is made (the page's own overflow check must not fire); the CE Settings window PASS; sheets 1, 4 and 5 PASS. Sheets 2 and 3 are gone from the page and the folder. They may go to Tim with the notes in section 15.** Written Fri 20 Nov 2026, about 10:40 pm. Checked on the bench only, from 21 pictures the check room took itself plus five the checker took. Checker: one Claude helper on Sonnet (D-434): `C:\CE_WORK\check\reports\timroom3_check_REPORT.md`.
+**Answers: the single-pipe window PASS once one fit edit is made (the page's own overflow check must not fire); the CE Settings window PASS; sheets 1, 4 and 5 PASS. Sheets 2 and 3 are gone from the page and the folder. They may go to Tim with the notes in section 15.** Written Fri 20 Nov 2026, about 10:24 pm. Checked on the bench only, from 21 pictures the check room took itself plus five the checker took. Checker: one Claude helper on Sonnet (D-434): `C:\CE_WORK\check\reports\timroom3_check_REPORT.md`.
 
 ## 13. What closed
 
@@ -144,4 +144,4 @@ All five faults of the second look: the Wrong example is now 288 mm, "Short by 1
 
 The check room's eight desktop pictures were taken at a 1500 by 950 browser size and cut the window's right fifth and foot off. The checker measured the desktop windows from the page and from Tim's room's own full-size copies instead. Desktop pictures next time at 1960 by 1120.
 
-**The one edit, confirmed (about 11:00 pm):** Tim's room merged the within state's two cover lines into one ("Shallowest 297 mm at P3: within the 5 mm tolerance"). The check room's own picture of the laptop "within" state with long names (`C:\CE_WORK\check\reports\timroom_pics3\sp_laptop_within_long_v2.png`) shows step 3's last line about 25 px clear of the card edge, nothing touching, band green, no marker. (The page's own overflow flag could not be read headless.) **The pictures may go to Tim.**
+**The one edit, confirmed (about 10:40 pm):** Tim's room merged the within state's two cover lines into one ("Shallowest 297 mm at P3: within the 5 mm tolerance"). The check room's own picture of the laptop "within" state with long names (`C:\CE_WORK\check\reports\timroom_pics3\sp_laptop_within_long_v2.png`) shows step 3's last line about 25 px clear of the card edge, nothing touching, band green, no marker. (The page's own overflow flag could not be read headless.) **The pictures may go to Tim.**

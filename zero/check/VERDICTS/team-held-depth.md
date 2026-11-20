@@ -61,7 +61,7 @@ Tim: "FOR SILT PITS THE DEPTH IS DEEPERE THAN THE LOWEST OUTLET". The depth must
 
 # Final verdict: team/held-depth at d5154a7 (its LAST fix round)
 
-**Verdict: HOLD, with the one-page open list below. This was the second and last round from the D-416 baseline: under D-346 the branch is now HELD, not sent round again; the control room decides what happens to it.** Written Fri 20 Nov 2026, about 9:15 pm. Checked on the bench only.
+**Verdict: HOLD, with the one-page open list below. This was the second and last round from the D-416 baseline: under D-346 the branch is now HELD, not sent round again; the control room decides what happens to it.** Written Fri 20 Nov 2026, about 9:03 pm. Checked on the bench only.
 
 **Who checked.** Honest check: one Claude helper on Sonnet (D-434): `C:\CE_WORK\check\reports\hd3_honest_REPORT.md`: HOLD on one blocker (original 2), the other three closed. Adversarial pass: Codex gpt-6.2-astra: `C:\CE_WORK\check\reports\hd3_adv_REPORT.md`, proofs and its own open list in `hd3_adv_proofs\` (`OPEN_LIST.md`, `verified-observations.txt`): HOLD, three of the four originals still reproduce, seven new. The build is clean; the plug-in compiles; the suite is green apart from two speed tests that fail on main too.
 

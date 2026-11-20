@@ -53,7 +53,7 @@ Each of the four blocks placed on a bare plan and read back (name, state, layer,
 
 # Second answer: codex/tests-a4c at 6ce1c19
 
-**Answer: HOLD THE LIST, on two reasons of its own; round one of two from the D-416 baseline. And a privacy HIT for Tim (D-417 item 3): the permanent scan, run on the 18 local copies, flags one drawing.** Written Fri 20 Nov 2026, about 10:10 pm. Checked on the bench only.
+**Answer: HOLD THE LIST, on two reasons of its own; round one of two from the D-416 baseline. And a privacy HIT for Tim (D-417 item 3): the permanent scan, run on the 18 local copies, flags one drawing.** Written Fri 20 Nov 2026, about 9:58 pm. Checked on the bench only.
 
 **Who checked.** Honest check: one Claude helper on Sonnet (D-434): `C:\CE_WORK\check\reports\a4c2_honest_REPORT.md`: ACCEPT, with binding probes. Adversarial pass: Codex gpt-6.2-astra: `C:\CE_WORK\check\reports\a4c2_adv_REPORT.md`, proofs in `a4c2_adv_proofs\`: HOLD. The earlier faulty build now turns NONE of the 22 targets green. The eight reasons of the last answer: five CLOSED, three PARTLY. The hold rests on two points, both the list's own:
 

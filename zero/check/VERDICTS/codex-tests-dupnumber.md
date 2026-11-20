@@ -47,7 +47,7 @@ The rows that rest on these are marked DRAFT D-428; they came after the round an
 
 # Second answer: codex/tests-dupnumber-main at f8ec463
 
-**Answer: ACCEPT THE LIST, with two binding probes for the build (D-431).** Written Fri 20 Nov 2026, about 10:00 pm. Checked on the bench only.
+**Answer: ACCEPT THE LIST, with two binding probes for the build (D-431).** Written Fri 20 Nov 2026, about 9:50 pm. Checked on the bench only.
 
 **Who checked, and how they split.** Honest check: one Claude helper on Sonnet (D-434): `C:\CE_WORK\check\reports\dup2_honest_REPORT.md`: ACCEPT. Adversarial pass: Codex gpt-6.2-astra: `C:\CE_WORK\check\reports\dup2_adv_REPORT.md`: HOLD on two reasons marked PARTLY. The check room read both disputed tests itself (`DuplicatePitNumberTests.cs:76-92` and `:118-127`) and judges neither to be a reason to hold: one rests on the pretend drawing's single text slot, which the list names as standing for PIT_LABEL (the named attribute is a WAITING row, DN-ATTRIBUTE), and the other is the wording of a WAITING row that the native build must pass anyway. Both become binding probes. Six of the eight reasons CLOSED (four of them as WAITING rows tied to the Pit window branch or the native command), two PARTLY as below; every same-round item closed.
 

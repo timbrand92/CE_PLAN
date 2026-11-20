@@ -154,7 +154,7 @@ The real drawing's changed flag and Undo list after a refusal; the colour of the
 
 # Final answer: codex/tests-units at 81db40d (its LAST round)
 
-**Answer: HOLD THE LIST, with a one-page open list of ONE item. This was the last round from the D-416 baseline (D-346): the control room decides; the check room recommends one bounded edit, read back by the check room alone, as D-411 did for C11.** Written Fri 20 Nov 2026, about 11:20 pm. Checked on the bench only.
+**Answer: HOLD THE LIST, with a one-page open list of ONE item. This was the last round from the D-416 baseline (D-346): the control room decides; the check room recommends one bounded edit, read back by the check room alone, as D-411 did for C11.** Written Fri 20 Nov 2026, about 10:47 pm. Checked on the bench only.
 
 **Who checked.** Honest check: one Claude helper on Sonnet (D-434): `C:\CE_WORK\check\reports\unitsd_honest_REPORT.md`: ACCEPT, all six closed, five binding probes. Adversarial pass: Codex gpt-6.2-astra: `C:\CE_WORK\check\reports\unitsd_adv_REPORT.md`, proofs in `unitsd_adv_proofs\`: HOLD on one item. Five of the six reasons of the third answer CLOSED (a refusal that writes; viewports; a preselected run; unset changed to metres; the drawing's name); every same-round item CLOSED. The saved faulty build now fails 929 checks and all eight witnesses.
 
@@ -175,6 +175,6 @@ The real drawing's changed flag and Undo list after a refusal; the colour of the
 
 Recommended: allow ONE bounded edit to the refusal-wording check (item 1 and its twin), handed back with the earlier probe of a correct metre refusal and the code-98 sentence as controls; the check room reads it back by reading and one run, with no further full check. Otherwise the list stays held and the units build has no accepted list to build to.
 
-## 24. Ruled since (control room, about 11:25 pm, as D-411)
+## 24. Ruled since (control room, about 10:48 pm, as D-411)
 
 ONE bounded edit is allowed to the refusal-word check: a correct metre refusal passes and a sentence saying the opposite fails. The check room reads it back alone (by reading and one run of the list); then the answer is ACCEPT THE LIST, with the six binding probes of section 22 and D-431's whole-drawing test owed by the units build.

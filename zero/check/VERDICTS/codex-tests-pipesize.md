@@ -57,7 +57,7 @@ The rows that rest on these are marked DRAFT D-430; they came after the round an
 
 # Second answer: codex/tests-pipesize-main at c6b1f42
 
-**Answer: HOLD THE LIST, on ONE reason, the list's own; round one of two from its baseline, so one round is left.** Written Fri 20 Nov 2026, about 11:10 pm. Checked on the bench only.
+**Answer: HOLD THE LIST, on ONE reason, the list's own; round one of two from its baseline, so one round is left.** Written Fri 20 Nov 2026, about 10:43 pm. Checked on the bench only.
 
 **Who checked, and how they split.** Honest check: one Claude helper on Sonnet (D-434): `C:\CE_WORK\check\reports\ps2_honest_REPORT.md`: ACCEPT, all eleven closed, seven binding probes. Adversarial pass: Codex gpt-6.2-astra: `C:\CE_WORK\check\reports\ps2_adv_REPORT.md`, proofs in `ps2_adv_proofs\`: HOLD, eight closed and three PARTLY. Both saved shortcut builds now fail all 70 runnable targets. The check room read the test helper behind the disputed keyword itself (`PipeSizePartATests.cs:1044-1058`).
 

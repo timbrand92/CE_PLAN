@@ -1,6 +1,6 @@
 # Answer: the text grips test list, codex/tests-grips at d552bae (from design\SHAPED_GRIPS.md 04b4034)
 
-**Answer: HOLD THE LIST. Both halves hold it. First answer on this list: fix round one of two follows.** Written Sat 21 Nov 2026, about 12:05 am. Checked on the bench only.
+**Answer: HOLD THE LIST. Both halves hold it. First answer on this list: fix round one of two follows.** Written Fri 20 Nov 2026, about 11:05 pm. Checked on the bench only.
 
 **Who checked.** Honest check: one Claude helper on Sonnet (D-434): `C:\CE_WORK\check\reports\grips_honest_report.md`. Adversarial pass: Codex gpt-6.2-astra: `C:\CE_WORK\check\reports\grips_adv_REPORT.md`, proofs in `grips_adv_proofs\`: a deliberately wrong build turned ALL 25 targets green, including one that drew the flow arrow pointing UPSTREAM. Counts true: 26 tests, 25 targets fail, 1 control passes; the whole solution builds; only two test files added; nothing older touched.
 
