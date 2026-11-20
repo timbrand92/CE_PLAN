@@ -58,3 +58,10 @@ A run can increase part way (225, 225, 375, 375, 375 with a 375 arriving at the 
 ## 7. What happens next
 
 The designer corrects the page; the check room reads the corrected page once more (one reader is enough if the changes are those above); then the build, checked against D-372 with D-373, D-374, D-375, D-379, D-380 and D-382, line by line, both halves.
+
+## 8. Ruled by the control room at about 1:15 pm by its clock: D-384 (the corrected page is read against it)
+
+1. **The order in the drawing code is written:** held-depth, command order, PIPE SIZE as the first piece of the single reader, labels, C11, the rest of the reader, the doorway. The page's section 7.2 is to follow it.
+2. **The pipe-size build carries the FLAG only** for pipes downstream of a resized pipe; the one offer to change several pipes (D-373) waits for the doorway.
+3. **Until Tim rules where a flag shows in Stage 1:** "Needs a look" shows in the window's band for that part and once on the command line.
+4. **The page is corrected against D-373 to D-383 and read once more by the check room before any build.** The questions in section 6 have gone to Tim's room.
