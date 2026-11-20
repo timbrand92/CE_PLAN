@@ -13,7 +13,6 @@
 
 ## 1. Being checked now
 
-1. **team/acad-pictures2 at b876264** (the picture route for the night run: a new night module, a window driver, three new night scripts). Both halves BY READING ONLY (D-388), started 1:43 pm: Team opus honest check with no shell at all (read and report tools only), and Codex astra adversarial pass. The AutoCAD test room is told the outcome; no picture run until both rooms say go.
 2. **codex/tests-five at b23d46f** (tests only: the five smaller Stage 1 Pit and Pipe pieces the doorway does not close). Both halves started 1:44 pm.
 3. **team/held-depth at 6c9bc07:** checked on the OLD tip only (honest half: no blocker; adversarial half still running). No verdict until the new tip is handed over.
 
@@ -58,6 +57,8 @@ ight-scripts.md`. Ruled by the control room as D-364 items 1 to 10: the fix (tea
 10. **team/night-launch at a092bf7 (the night-script safety fix): HOLD, about 1:35 pm.** By reading (adversarial half; the honest half was stopped on the control room's safety order). The wrapper deletes the stop flag; a test can start a real AutoCAD; a force goes ahead when the open-drawing count cannot be read; nothing owns the 8:00 am deadline; failed checks finish green. Closed: the launcher now creates the process itself; the weekday clock is right. `VERDICTS\team-night-launch.md`.
 
 11. **team/acad-windows at b645b43 (A1 to A3), last fix round: HOLD, and HELD, about 1:45 pm.** Closed: the windows open; most pictures show only what is drawn; Inspect is back. Open: one Pit picture still draws pipe stubs on a pit with none, and the Pipe answer names pits that do not exist; the four-fifths cap cuts off the foot of the Pipe window at 1920 by 1080; and D-386 has replaced the size rule the branch was built to. `VERDICTS\team-acad-windows_HELD.md`.
+
+12. **team/acad-pictures2 at b876264 (the picture route): HOLD, about 1:58 pm.** By reading only, both halves. Sound inside the plug-in; the runner would drive the test AutoCAD in Tim's day, reads the stop flag once and never his switch, can delete the flag through a stray path, has a sender that runs on its own, can save a picture of another program, and its tests reach the real desktop. `VERDICTS\team-acad-pictures2.md`.
 
 ## 5. Look log (the check room's own look at the branches, every 20 minutes)
 
