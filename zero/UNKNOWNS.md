@@ -3,7 +3,7 @@
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), set up by D-353 and `ROOMS.md`. No other chat edits this file.
 **First written:** Fri 20 Nov 2026, 10:45 am (clock read).
 
-**STAGE 1 COUNT: 14 of 105 closed.** Blocks Stage 1: 75 (14 closed, 61 open). Can wait: 30. Updated Fri 20 Nov 2026, 11:26: closed U-015, U-101, U-102 (TR-013 to TR-016). Nine lines are marked "Tim's hands" (things the AutoCAD test room cannot show in pictures). Filed so far by the control room: TR-001 to TR-008 as D-354 to D-359. **This list is the gate for Stage 1 (D-359; Tim, 20 Nov about 11:00 am, to the control room: "i need every specific down to a tee before we complete this first stage").**
+**STAGE 1 COUNT: 14 of 106 closed.** Blocks Stage 1: 76 (14 closed, 62 open). Can wait: 30. Updated Fri 20 Nov 2026, 11:26: closed U-015, U-101, U-102 (TR-013 to TR-016). Nine lines are marked "Tim's hands" (things the AutoCAD test room cannot show in pictures). Filed so far by the control room: TR-001 to TR-008 as D-354 to D-359. **This list is the gate for Stage 1 (D-359; Tim, 20 Nov about 11:00 am, to the control room: "i need every specific down to a tee before we complete this first stage").**
 **STAGE 2 COUNT (waiting): 0 of 20 closed.**
 
 **What counts as an unknown.** A question about how the tool must behave that (a) no ruling answers, or (b) is answered only by a planning chat's call or a DRAFT, or (c) the 25 root causes or Tim's check of 20 Nov (D-351) exposed, or (d) only a test in AutoCAD can answer. Each line says who it waits on: **Tim**, **a picture then Tim** (a mock-up is owed first), or **a test** (nobody should ask Tim; AutoCAD must show it).
@@ -153,6 +153,7 @@
 103. **U-103** (added 20 Nov, control room) A real click and a hover in the window and on the drawing: what lights up under the cursor, what a hover tip says, what a single click on a part does. Waits on: a picture then Tim. **Blocks Stage 1. Tim's hands.**
 104. **U-104** (added 20 Nov, control room) Clicking a run by eye and snapping to a pit: how close a click must be to count as on the pit, what shows that it has caught the pit, and what a near miss does. Touches D-270, D-341. Waits on: Tim. **Blocks Stage 1. Tim's hands.**
 105. **U-105** (added 20 Nov, control room) Dragging and resizing the window: what moves, what stays readable at its smallest, whether it can sit on the second screen. With U-011 and U-094. Waits on: a picture then Tim. **Blocks Stage 1. Tim's hands.**
+106. **U-106** (added 20 Nov from TR-017) A pipe drawn with no text label, and a pipe with one invert level or none: where the remaining text and the arrow go, and how he turns the label off (a tick on the pipe, a setting for the run). Touches D-236, D-312. Waits on: Tim. **Blocks Stage 1.**
 
 ---
 

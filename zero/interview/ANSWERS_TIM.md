@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-017.
+**Next number:** TR-018.
 
 ---
 
@@ -45,3 +45,7 @@
 **TR-015** (unknown U-101; a label longer than its pipe; example, pits 4 m apart, the label 6.0 m on one line and 3.5 m on two). Offered: A stack on two lines first (recommended); B callout first. He wrote: "both ideally, with stack as first option". Room's reading (mine): the tool stacks the label on two lines centred on the pipe first; the callout on a pointer is the second option, used by the tool when two lines still do not fit, and available to him on any label by a grip. Closes U-101.
 
 **TR-016** (unknown U-102; when no spot is clear; example, three pipes meeting at a pit beside a wall). Offered: first spot anyway, he moves it (recommended); first spot, and flag it. He picked: "First spot, and flag it". Not the recommended answer. The text goes in its first spot on its background mask and is flagged as overlapping and needing a move. Room's note (mine): the list it would be flagged on (Unfinished, D-311) is Stage 2; where the flag shows in Stage 1 joins U-082 (where check results are seen). With TR-013, closes U-102.
+
+## Fri 20 Nov 2026, 11:29 (clock read), typed in the chat after batch 4
+
+**TR-017** His words: "all this should apply to pipes that dont need the text label and also to pipes that have 1 invert or zero inverts as well correct? also you havent shown the arrow and what happens with it. then we do polyline and explode then grips. see how many situations there are, its liek gta 6 we need a lot of systems that work together to create a great seemless way of working, weird analogy but its close". Room's reading (mine): (1) the placing rules of TR-009 to TR-016 must hold for a pipe drawn with NO text label, and for a pipe with one invert level or none (D-236): asked as a question, answered by the room as a proposal and put back to him (each piece of text keeps its own spot whether or not the others are shown); "pipes that dont need the text label" confirms a pipe can be drawn without its label, which no ruling states: added as U-106; (2) the flow arrow was missing from the pictures: his to see next (U-078); (3) order of subjects set by him: the arrow, then the polyline cases and the typed EXPLODE, then grips; (4) his standard for the work: many systems that work together seamlessly.
