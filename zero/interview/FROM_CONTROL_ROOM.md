@@ -78,3 +78,6 @@ The night robot's safety guards (56 of 89) have never been proven by taking each
 ## O. Added 7:41 pm (D-425, D-426): for Tim on his return
 1. TELL HIM (the control room's error): the shortfall sentence he confirmed used "cover 297 mm, needs 300 mm", which is within the 5 mm tolerance and so a pass. The form stands; the example is now "Short by 12 mm at P3, Pipe 7 (P4 to P3): cover 288 mm, needs 300 mm."
 2. ASK, one by one: top of pipe for the cover check (draft: invert + inside size + one wall; 100 UPVC outside size 110) and the class of 100 UPVC; settings limits (more than 0, at most 10,000 mm); a drawing's own value staying when the office value changes; his saved material winning over the size rule; a changed tolerance re-checking pipes at their next edit.
+
+## P. Added 7:52 pm (D-427): FOR TIM ON MONDAY, his choice
+Eight of the 18 block drawings copied from the current plug-in carry his own AutoCAD login name in the drawing's "last saved by" property (among them PIT BLOCK 3, PIT BLOCK 2, TIM_CVL_ARROW, FALL SYMBOL, FALL SYMBOL 2, SOURCE and the pit schedule). No client name, address or job number was found. The copies would go to colleagues with the plug-in and to the private GitHub repository. Ship as is, or blank that property in the copies first? Until he answers the copies stay on his PC only.
