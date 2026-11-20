@@ -13,14 +13,15 @@
 
 ## 1. Being checked now
 
-Tim has gone home (5:08 pm): no cap on helpers; AutoCAD stays stopped. Seven helpers running.
+Tim has gone home: no cap on helpers; AutoCAD stays stopped all weekend (D-420). Nine helpers running.
 
-1. **team/a3b-pit-window at 3ae3e9f.** Honest half landed: HOLD, four blockers (step 3 cut off at 1000 by 620; Renumber changes pits on locked layers; Renumber renumbers every pit in the drawing; 5.755 less 5.18 printed as 0.58). Adversarial half running.
-2. **team/night-launch at 957383a:** both halves BY READING ONLY, from a plain-text copy.
-3. **codex/tests-flag at bb35cc4** (next round): both halves.
-4. **team/settings-store at d6e718b** (D-414 item 1, the store only; built on the Pit window branch): compile gate passed; both halves.
+1. **codex/tests-flag at bb35cc4** (next round): honest half landed (to read); adversarial half running.
+2. **team/settings-store at d6e718b** (the settings store; built on the held Pit window branch): both halves running.
+3. **team/acad-pictures2 at 8804441** (the picture route, round 2; the held night launcher is merged into it): both halves BY READING ONLY, from a plain-text copy.
+4. **design/shaped-grips at db13df1** (the page after its five edits and D-418): one re-read, read-only.
+5. **codex/tests-a7-clean at de5d082** (the label list, next round; no run files in the tree): both halves.
 
-Refused or sent back: codex/tests-pipesize 110c436 (compile gate: it sits on A6 75290d9); codex/tests-units 65d95d1 (built before the second answer landed).
+Refused or sent back: codex/tests-pipesize 110c436 (compile gate; being moved onto main); codex/tests-units 65d95d1.
 
 ## 2. Waiting
 
@@ -87,6 +88,9 @@ ight-scripts.md`. Ruled by the control room as D-364 items 1 to 10: the fix (tea
 26. **design/SHAPED_GRIPS.md at 93eb70c: FIX THE PAGE FIRST, about 5:55 pm.** Five short edits. Its own page.
 27. **codex/tests-units at df9d533: HOLD THE LIST, second answer, about 5:57 pm.** Six reasons, all the list's own; its D-416 baseline.
 28. **The night pictures from Tim's room, about 6:10 pm:** PASS the CE Settings window and sheet 5; FAIL the single-pipe window and sheets 1 and 4; sheets 2 and 3 not to be shown. Its own page.
+
+29. **team/night-launch at 957383a: HOLD, third verdict, by reading only, about 6:20 pm.** Seven blockers. D-420 followed.
+30. **team/a3b-pit-window at 3ae3e9f: HOLD, about 6:25 pm.** Six blockers. Its own page.
 
 ## 5. Look log (the check room's own look at the branches, every 20 minutes)
 
