@@ -56,6 +56,7 @@ The required delivery sequence (detail in Part C, section 8):
 21. **REL** — Version 3 to colleagues: which build, who, packaging, install, rollback and colleague notes (Stage 6; opened 23 Sep for Tim's Tuesday 29 Sep target). File: `areas\release-v3-colleagues.md`
 22. **AI** — Claude API and learning inside the plugin, council RFIs first (opened 29 Oct 2026, planned only). File: `areas\claude-api-and-learning.md`
 23. **TRUST** — A plugin you can trust: small core for colleagues, Civil first, eight steps from the opening line to Check this drawing, with the test set, the fixed-rule reader, the release process and the five trust rules (opened 12 Nov 2026 from Tim's 5 to 7 Nov decisions; PROPOSAL, each step needs his approval). File: `areas\trust-plan.md`
+24. **RULES** — The plugin's own rule files brought up to the TimOS rulebook (Rules rev 2): what points back to `C:\TimOS\RULES.md`, what stays the plugin's own, what Tim ruled (opened 20 Nov 2026; Tim: "Rest agreed"). File: `areas\rules.md`
 
 ## C. The control framework (carried from the 15 Sep master control framework, status removed)
 
