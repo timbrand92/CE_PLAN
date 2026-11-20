@@ -58,3 +58,53 @@ It is what D-414 asks: a small plain list, each figure with its office value, a 
 8. **Sheet 1 keeps its own question.**
 9. **The two "Cannot check yet" causes:** no level known at either end; a surface set but no surface level at an end.
 Sheets 2 and 3 are not shown: agreed.
+
+
+
+---
+
+# Second look: the fixed pictures (pages as at 6bf467d5)
+
+**Answers: the single-pipe window FAIL (fix first). The CE Settings window PASS after one small edit. Sheets 1, 4 and 5 PASS. Before any sheet goes to Tim, the withdrawn sheets 2 and 3 must be made unreachable.** Written Fri 20 Nov 2026, about 7:45 pm. Checked on the bench only, from pictures the check room took itself.
+
+**Who checked.** The check room took 14 pictures (`C:\CE_WORK\check\reports\timroom_pics2\`: the single-pipe window in five states at 1000 by 620 and 1240 by 780; the Settings window; sheets 1, 4, 5) and looked at two itself. Full check: Team helper, Claude Opus 5.5, every picture, the pages' code, the rulings to D-423, plus three long-name pictures of its own: `C:\CE_WORK\check\reports\timroom2_check_REPORT.md`. The check room confirmed in the record itself: D-350's words, the red used on the page, and that sheets 2 and 3 are still in the folder.
+
+## 7. The single-pipe window: FAIL, five faults
+
+Of the first look's four faults three are CLOSED (the circle tag 900 mm centre to centre and well over 150 mm clear; the cover level 400 mm off the outer dashed corner and the inverts 200 mm from the dashed line; Size by its source) and the fourth is PARTLY closed (the four states are all drawn, but the Wrong one is faulty). New faults:
+
+1. **The "Wrong" state is not wrong.** It shows red "Wrong, short by 3 mm" for a cover of 297 mm against 300 mm. Tim's own pick D-350: "cover really 297 mm against 300 reads 'Within the 5 mm tolerance'"; the Settings picture in the same set shows the tolerance at 5 mm. Show a shortfall beyond 5 mm (for example about 270 mm of cover, "Short by 30 mm at P3, Pipe 7 (P3 to P2): cover 270 mm, needs 300 mm."), and keep 297 mm as its own state reading "Within the 5 mm tolerance".
+2. **The top of pipe is worked one wall too high.** "Invert + 0.110 (outside size)": the invert is the INSIDE bottom of the pipe, so the top is the invert plus the inside size plus ONE wall (about 0.107 for a 100 UPVC pipe; the office's own cover spreadsheet works it that way, R-018). Every cover figure on the page is about 3 mm low. The figure is also not ruled (U-086 is open): show the sum written out with a grey note that pipe sizes wait on Tim, or wait for a draft ruling.
+3. **The red is not the ruled red.** The band and bar are #F25555; D-295 gives orange-red #FF6B4A for Short and Wrong, a solid fill with dark text. No other picture uses #F25555.
+4. **The amber marker is at the label's START.** D-412 item 2: one text height clear of the END of the label; the other end only if that is taken. The end is clear in the picture. Its size and colour are right.
+5. **Long pit names run into the figures at 1000 by 620.** In the page's own long-name test, "P12A" runs into "12.400" in step 3 in the wrong state (the same column width is used in the default, cover and no-surface states). Four-character names are real (P3A, D-414 item 4). Fine at 1240 by 780.
+
+**To fix in the same go (not fails):** the column word "Below" holds the level at the HIGHER pit when the level is worked down the pipe: "Above" (for the control room to confirm); the grey note about Inspect now follows the Settings button and reads as if it describes Settings; the long-name test leaves the title unchanged, so it never tests the title's fit; "Needs a cover level" in step 1 should say "P3 needs a cover level" (it is typed in the Pit window).
+
+**Right as drawn:** every sum adds up on its own terms (fall 0.062; 12.400 − 0.062 = 12.338, 12.34 on the plan); the default state says nothing about cover (D-413 item 2); the cover check is at the two ends only, with its bar; both "Cannot check yet" states are plain grey, no amber, no guessed figure, "CL TBC" on the plan; nothing scrolls, is cut off or overlaps in the ten pictures. **"CL 12.81" for an exact 12.807 is RIGHT** under D-350 and D-421 item 2 (the exact figure is checked, two places are printed): it is not a question for Tim. Dropping step 3's side view in the laptop cover states is acceptable (the bar is that answer's picture); Tim should be told.
+
+## 8. The CE Settings window: PASS, after one edit
+
+Every setting D-419 item 7 lists is there (16 rows) and nothing else; the foot line matches D-419 item 8; a changed value shows a "Changed" tag and the office value; nothing is cut off. **The one edit first:** the two marker rows hold sentences in boxes ("as tall as the text beside it", "one text height"): show "1.0" with the unit "× text height" in both, so they are real settings. Finish: "Cover level, off the pit's outer line corner". **A point for the control room, not a fail:** at 1200 wide it is not small (wider than the Pipe window at laptop size); printing "office value" once as a column heading and the office figure only on changed rows would bring it to about 900.
+
+## 9. The sheets
+
+1. **Sheet 1 (the cover level from the pit outwards): PASS.** The question is written; the two lines asked for are there and true to TR-135 and TR-140; his words are quoted truly; both options fairly drawn. ("You picked" would be closer than "you ruled".)
+2. **Sheet 4 (the new pit behind the window): PASS.** Neither option recommended; D-301 quoted word for word; the cursor line and "not saved until OK" are there. ("Cancel removes it" appears twice under B.)
+3. **Sheet 5 (hover): PASS.** "Pipe 7 (P3 to P2) · 100 dia. UPVC · 1 in 100 · 6.20 m". (The window says "100 mm dia.", the tip "100 dia.": pick one.)
+4. **Sheets 2 and 3 are withdrawn but still reachable:** `night_sheets.html` with no `?q=` shows all five under "Five more questions for you"; `?q=2` and `?q=3` still open; `night_sheets_2.png` and `night_sheets_3.png` are still in `pictures\`. Take the two sections out of the page and move the two pictures out of the folder, or send Tim the three pictures only.
+
+## 10. For the control room
+
+1. **The top of a pipe for the cover check (U-086, blocks Stage 1):** invert plus inside size plus one wall, from the makers' sizes (R-018); which class for 100 UPVC?
+2. **D-406 item 7's example sentence uses 297 against 300,** which D-350 makes "Within the 5 mm tolerance": the sentence form stands, its example needs a shortfall beyond the tolerance.
+3. **"Above" for the column** when a level is worked down the pipe, with the pit drop's sign "−".
+4. **The Settings window's width** (about 900 rather than 1200) and **"1.0 × text height"** for the marker rows.
+5. **Should Tim be shown the "Within the 5 mm tolerance" state?** Recommended yes: it is his own example and he has not seen it drawn.
+6. **"A pipe already drawn shows what it holds" (D-419 item 1) has no picture.**
+7. **Mask on the arrow:** D-419 item 4's bracket lists Arrow; D-406 item 6 masks text only; the picture gives the arrow no Mask tick (recommended: keep it so).
+8. **A changed tolerance or default pipe:** are pipes already drawn checked again at once, at their next edit, or never? The foot line covers text only. Recommended: at the part's next edit.
+
+## 11. What Tim should be told the pictures do not show
+
+Section 7 of the helper's report: a typed length; two levels typed with the grade worked out; an existing pipe's size read off the drawing; text at its real heights (positions on the strip are to scale, text sizes are not); the arrow as the office block; grips; hover on the marker; Inspect and Settings in use; how the Settings window opens; what copying a drawing does to its settings.
