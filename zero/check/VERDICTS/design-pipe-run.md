@@ -19,3 +19,12 @@ The branch level 10.540 ÷ 100 = 0.1054 fall, IL 10.000 − 0.1054 = 9.8946, pri
 ## 3. For the control room
 
 Edit 2 carries a choice for Tim (the typed length kept on extension, DRAFT). The page is not to be built before the rounding branch's MERGE where it prints figures (D-432), and it hands a pit's levels to the Pit window (D-436).
+
+---
+
+# Second answer: the page at 3d2ddd1 (the seven edits read back)
+
+**Answer: BUILD FROM IT.** Written Sat 21 Nov 2026, about 2:24 am. By reading only, by the check room itself (df49c2c to 3d2ddd1: one file, 49 lines added, 13 removed; a "Changed since df49c2c" list of seven at the top).
+
+1. **All seven edits are in:** `PlanRun` is named the sole owner of the whole pipe edit (drawing, extending, converting a guide, editing one pipe), with a table giving every other route (Pit window, Run, TRIM, EXTEND, BREAK, JOIN, FILLET, OFFSET, PEDIT, STRETCH, MOVE, MIRROR, COPY, EXPLODE, ERASE, grips) and its ruled result, and `PipeTool.Plan` folded in; a typed length kept on extension with the amber marker and one click back to drawn (DRAFT), in acceptance group 5; a typed level at the meeting point stays held on the main and the tick controls the branch invert; self-crossing, repeated-vertex, curved and closed guides refused and kept, the guide's appearance restored on Undo; hidden participants checked as well as destinations, D-422 named; the settings store the only source of the tolerance and the default pipe, 0.1 mm only for matching points, the rounding routine only after its MERGE; the pipe-number rules marked DRAFT and the five D-430 drafts named.
+2. **What this means:** A6's replacement may be built from this page, keeping A6 part B (the D-414 prompt and click budgets, the selection casts) and carrying A6's tests; figures that reach a sheet wait for the rounding branch's MERGE (D-432) and a pit's levels stay with the Pit window (D-436). The DRAFT choices and the questions in section 3 item 5 go to Tim. Checked by reading only: everything is owed on the bench and in AutoCAD.
