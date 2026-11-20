@@ -1,6 +1,6 @@
 # HELD: team/acad-windows at b645b43 (Stage 1 items A1 to A3, the Pit and Pipe windows): the one-page open list
 
-**Verdict: HOLD, and held.** Written Fri 20 Nov 2026, about 1:45 pm, by the check room. This was the branch's last fix round under D-346. Checked on the bench only. The first verdict is `team-acad-windows.md`.
+**Verdict: HOLD, and held.** Written Fri 20 Nov 2026, about 1:39 pm, by the check room. This was the branch's last fix round under D-346. Checked on the bench only. The first verdict is `team-acad-windows.md`.
 
 **Who checked this round.** Honest re-check: Team helper, Claude Opus 5.5, with its own pictures of 15 states at 5 screen sizes: `C:\CE_WORK\check\reports\acad-windows2_honest_REPORT.md`, `acad-windows2_pics\`. Adversarial re-pass: Codex gpt-6.2-astra, 493 cases (335 passed, 158 failed): `C:\CE_WORK\check\reports\acad-windows2_adv_REPORT.md`, `acad-windows2_adv_tests\`. The two agree on every point below.
 
