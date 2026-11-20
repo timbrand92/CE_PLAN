@@ -50,3 +50,8 @@ The old Pipe mock-up page is retired. The single-pipe picture you owe (U-129) is
 2. Where the marker goes when its spot is taken, and on a part with no label.
 3. The layer turned off or frozen: marker still drawn on it, command line says markers are hidden.
 4. Every amber "Needs a look" and red "Wrong" gets a marker; grey "Cannot check yet" gets none.
+
+## J. Added 5:13 pm (D-416): to ask Tim on his return, one by one
+1. A level worked out from an APPROX. level: does it print "APPROX." too (draft: yes)?
+2. The words of the standing note for APPROX. figures (draft: "LEVELS MARKED APPROX. ARE ASSUMED AND ARE TO BE CONFIRMED ON SITE BEFORE CONSTRUCTION.").
+3. A bent pipe with two legs exactly the same length: which leg takes the label (draft: the upstream leg)?
