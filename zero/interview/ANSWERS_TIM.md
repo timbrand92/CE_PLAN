@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-147.
+**Next number:** TR-151.
 
 ---
 
@@ -377,3 +377,13 @@
 **TR-145** (asked: a pipe label whose usual spot lands across that outline; offered: treat it as taken when another spot is clear, no marker if none is (recommended); treat it exactly like text or a pipe). He picked neither and wrote: "IT MIGHT INTERSECT SO WE NEED TO MOVE IT SO IT DOESNT CLASH DOES THAT MAKE SENSE". Room's reading (mine): yes; the outline counts as in the way and the label is MOVED so it does not sit on the line (it tries its other spots in the ruled order, TR-013). What happens when every spot crosses the line was not said (the room's proposal: first spot, with the amber marker, as TR-016 rules for any text with no clear spot).
 
 **TR-146** (typed straight after): "50CONT LAYER 70 WIDTH". Room's reading (mine): the impervious outline is a polyline on layer 50CONT drawn with a width of 70 mm. So the tool can tell it from other 50CONT linework: a polyline on 50CONT, 70 wide. With TR-133: a label's spot is taken by other text, a pipe band, a pit, and a 70-wide 50CONT outline. Still open under U-132: building walls inside the architect's xref.
+
+## Batch 36, Fri 20 Nov 2026, 16:18 (clock read), through the question window, one line per question (the control room's label questions B1 to B3 from `interview/FROM_CONTROL_ROOM.md`, and the case left by TR-145)
+
+**TR-147** (the case left by TR-145: every spot for a pipe label crosses the thick 50CONT outline or other text). Offered: first spot with the amber marker (recommended); first spot, no marker; set it off on a pointer. He picked: "Set it off on a pointer". Not the recommended answer. When no spot along the pipe is clear, the label is set off to the side on a pointer, clear of the outline, as for a label too long for its pipe (TR-015). **Clash to flag:** TR-016 ("First spot, and flag it" when no spot is clear) was given for an invert level at a crowded pit; for a PIPE LABEL his newer answer is the pointer. Room's reading (mine): a pipe label with no clear spot goes off on a pointer; an invert level, pit number or cover level with no clear spot still goes in its first spot with the amber marker. To confirm with him.
+
+**TR-148** (unknown U-134, control room B2; what the 200 mm for an invert level is measured from). He picked: "From the pit's outer dashed line (Recommended)". The clear gap from the outside of the pit as drawn to the nearest end of the text; the same for every pit size. This corrects the room's reading under TR-010 ("from the pit wall").
+
+**TR-149** (unknown U-135, control room B3; how far an invert level may slide). Offered: no further than a quarter of the pipe (recommended); as far as it needs up to half way; a set distance of 1,000 mm, a setting. He picked: "A set distance: 1,000 mm, a setting". Not the recommended answer. It may slide up to 1,000 mm from its usual place, whatever the pipe's length; beyond that it goes in its first spot with the amber marker (TR-016).
+
+**TR-150** (unknown U-133, control room B1; which side is "above" on a pipe drawn up the sheet or from right to left). He picked: "The side the text's top faces, however it was drawn (Recommended)". The label is first turned to read from the bottom or right of the sheet; above is the side its top faces: the left of an upright pipe, the top of a pipe across the sheet whichever way it was drawn. The direction the pipe was drawn never changes the side.
