@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-134.
+**Next number:** TR-135.
 
 ---
 
@@ -343,3 +343,7 @@
 **TR-132** (unknown U-079; the mask behind text). Offered: masked from day one (recommended); no mask in Stage 1. He wrote: "mask is on from day one but option to not have it as well would be great". Every label, invert level and cover level is masked from day one; AND there is a way to have no mask. Not said: whether that is one office setting, per drawing, or a tick on each piece of text (to ask).
 
 **TR-133** (N-065; what counts as in the way when the tool looks for a clear spot). Offered: only text, pipes and pits (recommended); any line; text, pipes, pits and walls of the building. He picked: "Text, pipes, pits, and walls of the building". Not the recommended answer. A spot is taken by other text, a pipe band, a pit, or a building wall; ordinary linework and hatching do not count. **To flag:** how the tool tells a building wall from other linework in the architect's background (by layer, by an outline he picks once, or not from an xref at all) is not ruled and may not be possible inside an xref (the tool never changes or scans inside xrefs, DRAWING_AND_SHEETS open 7); a proposal is owed.
+
+## Fri 20 Nov 2026, about 3:15 pm (PC clock), typed in the chat straight after batch 32
+
+**TR-134** His words: "building is in xref and the green line with the hatch is the impervious area, so no clash with green line is ideal, check old jobs". Room's reading (mine): (1) a fact: on his jobs the building is inside the architect's xref; (2) the green line with the hatch on his plans is the impervious area, drawn by the office; (3) a label should ideally not sit on that green line, so it counts as "in the way" (adds to TR-133); (4) an instruction to the room: check old jobs for how this is drawn. Checked so far: the drafting study of three issued jobs (`evidence/STUDY_A_CIVIL_DRAFTING_ANATOMY.md`) does NOT record an impervious-area layer or its green line. A research helper is now looking at the office's issued sheets and legend. Added as U-132.
