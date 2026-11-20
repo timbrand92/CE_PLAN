@@ -16,7 +16,6 @@
 1. **team/acad-windows at 53442d4** (Stage 1 items A1 to A3: approved-style Pit and Pipe windows in AutoCAD, sized to content, the true preview). Handed over 11:19 am as a re-check after the build room's own HOLD (`C:\CE_WORK\scratch	eam\check_aw_REPORT_last.md`). 5 commits behind main, so the suite is also run merged. Fix rounds used: 1 of 2.
    - **Honest check:** Team helper (opus), `C:\CE_WORK\checkcad-windows_honest`, started 11:21 am.
    - **Adversarial pass:** Codex gpt-6.2-astra (xhigh), `C:\CE_WORK\checkcad-windows_adv`, started 11:21 am.
-2. **team/pipe-default at 741f0f2** (Stage 1 item A5). Honest check finished 11:20 am: HOLD, one blocker (early word sent to the build room 11:22 am). Adversarial pass (Codex astra, started 11:10 am) still running; the written verdict follows it. Fix rounds used: 1 of 2.
 
 ## 2. Waiting
 
@@ -45,6 +44,8 @@ Still with the build room, mid-fix:
 1. **The night scripts on main (22993fa): HOLD, 11:24 am; both halves done by 11:30 am.** Seven blockers: nothing reads the clock, the stop flag or Tim's switch file; the launcher adopts an AutoCAD by start time and title; a damaged record passes "is it ours"; the unsaved close knows the test drawing by short name only; quit and force take every drawing open. `VERDICTS
 ight-scripts-on-main.md`; 19 follow-ups in `FOLLOW_UP
 ight-scripts.md`. Ruled by the control room as D-364 items 1 to 10: the fix (team/night-launch) is checked against items 1 to 9 line by line, and there is NO AutoCAD run tonight (item 10).
+
+2. **team/pipe-default at 741f0f2 (A5): HOLD, 11:32 am.** Three blockers: the Pipe tool's own window never sees the pipes arriving at the start pit (opens and draws at 100 under a 225); editing an older pipe can shrink it to 100 and its cover can read "Suits" when short; the last size typed carries into the next unrelated pipe (D-263 the opposite way). One fix round left. `VERDICTS	eam-pipe-default.md`; follow-ups in `FOLLOW_UP\part2-pit-and-pipe.md`.
 
 ## 5. Look log (the check room's own look at the branches, every 20 minutes)
 
