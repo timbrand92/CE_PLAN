@@ -37,3 +37,5 @@ The builder's own Part B report (`C:\CE_WORK\scratch\codex_logs\ROUNDING_ROUTINE
 1. **Leftover scratch folder:** the adversarial half could not delete one scratch folder of its own; the automatic approval check blocked the deletion.
 
 **Next:** the builder brings each of the six cases over as a failing test first, then fixes them, in round 1 of 2.
+
+**Ruled since (control room, about 7:10 am):** a pit size's maximum depth is an office THRESHOLD, compared exact (D-441 draft). **Blocker 6 is WITHDRAWN.** Five blockers stand.
