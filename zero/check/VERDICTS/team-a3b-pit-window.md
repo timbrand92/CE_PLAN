@@ -82,3 +82,7 @@ An outlet above an inlet on a mixed branch shows only amber, not red; a pit over
 ## 10. For the control room
 
 1. **How many pipes is ordinary for the Pit window at laptop size?** Recommended: the window must stay whole at 1000 by 620 for any number of pipes (step 2 lists the first few and says "and N more", or the cards share the space), since a pit with eight pipes is rare but real.
+
+## 11. Ruled since (control room, about 12:33 am, DRAFT, for Tim to confirm with a picture)
+
+The Pit window stays whole at 1000 by 620 and at 1240 by 780 for ANY number of pipes; it never grows and nothing is cut off (D-386). Step 2 lists the first few pipes, the LOWEST outlet always among them (it sets the depth), then "and N more", which opens the full list in its own panel where a long list may scroll. Round two goes with the pit levels build, after the rounding fix (D-432, D-436).
