@@ -37,3 +37,13 @@ Keep the adversarial wrong-build cases (`reader_adv_proofs\`) for the build chec
 ## 5. Binding probes for the reader BUILD (D-431)
 
 Every reopened pipe keeps its own width; no neighbour on the same layer changes in TRIM, EXTEND, BREAK or a twin edit (a Stage 1 case, not only the WAITING detention one); a typed grade such as 200.0049996 is printed as typed (D-154, D-413 item 3; D-432 item 1 could be read the other way: a question for Tim, not for the build to settle by guessing).
+
+---
+
+# Read-back of the bounded edit: codex/tests-reader at 536cb01
+
+**Answer: ACCEPT THE LIST.** Written Sat 21 Nov 2026, about 2:25 am, by the check room alone (the standing rule). The edit: one file (`SinglePipeReaderTests.cs`), 12 lines in, 13 out; nothing else changed.
+
+1. **Read:** the garden picker demanded of the Pipe window is gone; "what is over it" is written into the pipe's own record as a drawing read-off (source "measured", D-409 item 1), the window shows it with its source and needs 300 mm, and the bent pipe's cover is checked at both ends.
+2. **One run by the check room** (own worktree, whole solution built, 0 errors, the plug-in included): 16 cases: the control passes, 12 targets fail on what the product does, 3 skipped with their reasons (detention, Stage 2).
+3. **What this means:** the list may go to the main line as one squashed commit. The reader BUILD owes section 5's binding probes (each reopened pipe keeps its own width; no neighbour changes in a Stage 1 edit; a typed grade printed as typed, a question for Tim). Nothing about the product is accepted.
