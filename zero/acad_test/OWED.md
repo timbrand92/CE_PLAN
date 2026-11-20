@@ -3,7 +3,7 @@
 **Kept by:** the AutoCAD test room ("CE_ACAD / acad test / 01"). **Started:** Fri 20 Nov 2026, 11:30 am.
 **Rule (D-346, added 20 Nov):** a fix may merge on its bench tests and one honest check; it is "proven" only when its owed list here has passed in AutoCAD, in pictures.
 **States:** OWED (not yet run) · PASS (date, picture) · FAIL (date, picture, what was seen) · SEEN (no ruling yet, put to Tim) · WAITS (its work is not on the main line) · PARKED (off the release).
-**Count on 20 Nov, 1:45 pm:** PASS 0 / FAIL 0 / OWED 14 / WAITS 89 / PARKED 1 (of 104; one item struck). Eleven check-room verdicts received, all HOLD or held. **First in line when testing is allowed: shaped grips (section FIRST).** Three check-room verdicts received, all HOLD: the night scripts on the main line (section F), the pipe's opening size (section G) and the windows (section H).
+**Count on 20 Nov, 1:45 pm:** PASS 0 / FAIL 0 / OWED 14 / WAITS 103 / PARKED 1 (of 118; one item struck). Thirteen check-room verdicts received, all HOLD or held. **First in line when testing is allowed: shaped grips (section FIRST).** Three check-room verdicts received, all HOLD: the night scripts on the main line (section F), the pipe's opening size (section G) and the windows (section H).
 
 ## FIRST. Shaped grips (D-407, Tim, TR-166: "No: I want shaped grips before I draft"): the first thing proven on the first night testing is allowed
 
@@ -189,5 +189,29 @@ The pretend drawing on the bench cannot show what is inside a block, so these ar
 103. **O-6 A plotted bend with its mask.** Only by a typed plot to a PDF file in the test folder with no saved plot setting changed (as L-3); otherwise Tim's hands. WAITS.
 104. **O-7 Cancel, and one Undo, after a block was brought in:** what is left in the drawing is written down plainly. WAITS.
 105. **O-8 The three older pit blocks (Stormwater Pit, PIT BLOCK, PIT BLOCK 2) opened and read.** WAITS.
+
+## P. From the check room's verdict on the pit window (team/a3b-pit-window: HOLD; `check\VERDICTS\team-a3b-pit-window.md` section 6)
+
+**Bounds:** a pit is named by typed point or its handle, never clicked (D-408). The pit layer is locked by a typed layer line on the test copy only. The runner never moves or sizes the AutoCAD window (`WHAT_AUTOCAD_WRITES.md`: the window's place is one of Tim's saved settings), so P-3 and P-7 are judged from recorded figures or are Tim's hands. The xref for P-5 is made from test copies, never a real job.
+
+106. **P-1 PT, Renumber, the lowest pit of one of two runs, OK:** only the joined pits change number; the other run is untouched; one U puts every number and the new pit back. WAITS.
+107. **P-2 The same with the pit layer locked:** refused in words; nothing changed and nothing drawn. WAITS.
+108. **P-3 A pit joined to two drawn pipes, AutoCAD window 1280 by 720:** the whole of step 3 of the window shows. WAITS (window size: Tim's hands unless a test AutoCAD happens to open at that size).
+109. **P-4 Match a pit:** the window takes the matched pit's figures. WAITS.
+110. **P-5 The plan panel over a real-looking drawing** with an xref and circle tags: the panel shows them truly. WAITS.
+111. **P-6 Inspect, then Escape, then Cancel:** each leaves the drawing unchanged and AutoCAD idle. WAITS.
+112. **P-7 The window's place remembered after a real close.** WAITS (a real close by hand is Tim's; the night can only read the recorded figures on the next open).
+113. **P-8 Cover 5.755 typed:** read the text on the plan. WAITS.
+114. **P-9 A pit with three pipes out:** the depth shown. WAITS.
+
+## Q. From the check room's third verdict on the launcher (team/night-launch: HOLD, 7 blockers, D-420; `check\VERDICTS\team-night-launch.md` section 11)
+
+**All wait on the launcher's MERGE. Nothing here is run before it.** The check room's question on what AutoCAD writes to Tim's profile and registry is answered, as far as reading can, in `WHAT_AUTOCAD_WRITES.md`; its before-and-after look belongs to the first night with these.
+
+115. **Q-1 How long one launch tick takes** in a real test AutoCAD. WAITS.
+116. **Q-2 Whether a loaded plug-in shows in the process's module list.** WAITS.
+117. **Q-3 The real title and owner of a "Fatal Error" box.** WAITS (never caused on purpose; recorded only if one appears, and it halts the night for Tim).
+118. **Q-4 Whether a jammed AutoCAD times out or fails at once.** WAITS (never jammed on purpose; recorded only if it happens).
+119. **Q-5 The real answer files' format.** WAITS.
 
 **Also noted, not counted as owed proofs (they are faults in the checks, asked of the build room):** CEPIT3, CEPIPE3 and CELEV2 still expect an inch drawing to be refused; CELEV1's third check expects "Chosen" where "TypedOver" is right; CETEST lists its run twice, so its lines count twice; the code-route EXPLODE check has failed in every pass since pass 1.
