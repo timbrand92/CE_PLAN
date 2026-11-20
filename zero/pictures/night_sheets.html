@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Five more questions for you</title>
+<style>
+  :root{--page:#2B2D30;--card:#383B40;--cad:#16181B;--text:#ECEDEF;--grey:#C8CBD0;--line:#4A4D53;--rose:#FF70B3}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--page);color:var(--text);font-family:"Segoe UI",Arial,sans-serif;font-size:14px;line-height:1.45}
+  main{max-width:980px;margin:0 auto;padding:24px}
+  section.q{background:var(--card);border-radius:8px;padding:24px;margin:0 0 24px}
+  h2{font-size:24px;font-weight:600;margin:0 0 8px}
+  .ctx{color:var(--grey);margin:0 0 16px}
+  h3{font-size:14px;font-weight:600;margin:0 0 8px}
+  .rec{display:inline-block;background:var(--rose);color:#10131A;border-radius:8px;padding:0 8px;margin-left:8px;font-weight:600;font-size:12px}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .opt{margin:0 0 24px}.opt:last-child,.two .opt{margin-bottom:0}
+  svg{display:block;width:100%;height:auto;background:var(--cad);border:1px solid var(--line);border-radius:8px}
+  svg text{font-family:Arial,"Segoe UI",sans-serif}
+  .note{font-size:12px;color:var(--grey);margin:8px 0 0}
+  .made{font-size:12px;color:var(--grey);margin:0}
+</style>
+</head>
+<body>
+<main>
+<div id="host"></div>
+<p class="made">The levels and pit numbers are made up for the picture.</p>
+</main>
+<script>
+var NS="http://www.w3.org/2000/svg",BLUE="#3F7BE0",RED="#FF5A5A",CAD="#16181B",AMBER="#FFB020",K=0.064;
+function el(n,a,t){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);if(t!==undefined)e.textContent=t;return e}
+function svg(w,h){return el("svg",{viewBox:"0 0 "+w+" "+h,role:"img"})}
+function mm(v){return v*K}
+function tw(str,h){return str.length*mm(h)*1.38*0.56}
+function fsz(h){return mm(h)*1.38}
+function txt(s,x,y,str,h,o){o=o||{};var fs=fsz(h),w=tw(str,h);
+  var g=el("g",o.rot?{transform:"rotate("+o.rot+" "+x+" "+y+")"}:{});
+  g.appendChild(el("rect",{x:x-w/2-2,y:y-fs*0.55,width:w+4,height:fs*1.1,fill:CAD}));
+  g.appendChild(el("text",{x:x,y:y+fs*0.35,"font-size":fs,"text-anchor":"middle",style:"fill:"+(o.fill||"#fff")},str));
+  s.appendChild(g)}
+function badge(s,x,y,n){s.appendChild(el("circle",{cx:x,cy:y,r:9,fill:"#ECEDEF"}));
+  s.appendChild(el("text",{x:x,y:y+4,"font-size":13,"font-weight":700,"text-anchor":"middle",style:"fill:#10131A"},n))}
+function pit(s,x,y){var r=mm(225);s.appendChild(el("rect",{x:x-r-4,y:y-r-4,width:2*r+8,height:2*r+8,fill:"none",stroke:"#C8CBD0","stroke-width":1,"stroke-dasharray":"4 3"}));
+  s.appendChild(el("rect",{x:x-r,y:y-r,width:2*r,height:2*r,fill:CAD,stroke:"#fff","stroke-width":1.5}));
+  s.appendChild(el("line",{x1:x-r,y1:y-r,x2:x+r,y2:y+r,stroke:"#8A8E96","stroke-width":1}));
+  s.appendChild(el("line",{x1:x-r,y1:y+r,x2:x+r,y2:y-r,stroke:"#8A8E96","stroke-width":1}))}
+function pipe(s,x1,x2,y){var w=mm(100);
+  s.appendChild(el("line",{x1:x1,y1:y,x2:x2,y2:y,stroke:BLUE,"stroke-width":w,"stroke-dasharray":"32 16"}));
+  s.appendChild(el("line",{x1:x1,y1:y-w/2,x2:x2,y2:y-w/2,stroke:"#C8CBD0","stroke-width":0.8}));
+  s.appendChild(el("line",{x1:x1,y1:y+w/2,x2:x2,y2:y+w/2,stroke:"#C8CBD0","stroke-width":0.8}))}
+function tag(s,x,y,n){s.appendChild(el("circle",{cx:x,cy:y,r:mm(330),fill:CAD,stroke:"#fff","stroke-width":1.5}));
+  s.appendChild(el("text",{x:x,y:y+mm(350)*0.5,"font-size":mm(350)*1.3,"text-anchor":"middle",style:"fill:#fff"},n))}
+function say(s,x,y,str,a){s.appendChild(el("text",{x:x,y:y,"font-size":12,"text-anchor":a||"start",style:"fill:#C8CBD0"},str))}
+function brk(s,x,y){s.appendChild(el("rect",{x:x-5,y:y-8,width:12,height:16,fill:CAD}));s.appendChild(el("line",{x1:x-6,y1:y+9,x2:x-1,y2:y-9,stroke:"#C8CBD0","stroke-width":1}));s.appendChild(el("line",{x1:x-1,y1:y+9,x2:x+4,y2:y-9,stroke:"#C8CBD0","stroke-width":1}))}
+var LBL="100 DIA. UPVC PIPE AT 1 IN 100 MIN.";
+var offL=mm(50)+mm(75)+fsz(250)*0.55, offI=mm(50)+mm(50)+fsz(180)*0.55, offA=mm(50)+mm(200);
+var EDGE=mm(225)+4;   // pit centre to its outer dashed line
+// invert levels start 200 mm from the OUTER DASHED LINE of the pit
+function ilL(s,X,y,str){txt(s,X+EDGE+mm(200)+tw(str,180)/2,y+offI,str,180,{fill:RED})}
+function ilR(s,X,y,str){txt(s,X-EDGE-mm(200)-tw(str,180)/2,y+offI,str,180,{fill:RED})}
+// flow arrow: L long overall, head H long, parallel to pipe. dir -1 = points left
+function arrow(s,x,y,dir,L,H,open){var x1=x-dir*L/2,x2=x+dir*L/2,hw=H*0.21;
+  s.appendChild(el("line",{x1:x1,y1:y,x2:open?x2:x2-dir*H,y2:y,stroke:"#fff","stroke-width":1.2}));
+  if(open){s.appendChild(el("line",{x1:x2,y1:y,x2:x2-dir*H,y2:y-hw,stroke:"#fff","stroke-width":1.2}));
+    s.appendChild(el("line",{x1:x2,y1:y,x2:x2-dir*H,y2:y+hw,stroke:"#fff","stroke-width":1.2}))}
+  else s.appendChild(el("polygon",{points:x2+","+y+" "+(x2-dir*H)+","+(y-hw)+" "+(x2-dir*H)+","+(y+hw),fill:"#fff",stroke:"#fff","stroke-width":1}))}
+// amber triangle marker, h tall
+function mark(s,cx,cy,h){s.appendChild(el("polygon",{points:cx+","+(cy-h*0.55)+" "+(cx-h*0.62)+","+(cy+h*0.45)+" "+(cx+h*0.62)+","+(cy+h*0.45),fill:AMBER,stroke:"#10131A","stroke-width":0.8}))}
+
+/* ---------- SECTION 1 ---------- */
+function coverPanel(mode){var s=svg(428,295),x=214,y=128;pit(s,x,y);pipe(s,x+mm(225),400,y);brk(s,400,y);
+  var CL="CL 12.95",w=tw(CL,200),d0=EDGE*1.4142,start=d0+mm(400),cen=start+w/2,q=cen*0.7071,e=(start+w+16)*0.7071;
+  var cs=[[1,-1,"1"],[1,1,"2"],[-1,1,"3"],[-1,-1,"4"]];
+  cs.forEach(function(c){
+    s.appendChild(el("line",{x1:x+c[0]*EDGE,y1:y+c[1]*EDGE,x2:x+c[0]*(start+w+4)*0.7071,y2:y+c[1]*(start+w+4)*0.7071,stroke:"#5F646C","stroke-width":1,"stroke-dasharray":"3 3"}));
+    var ang=Math.atan2(c[1],c[0])*180/Math.PI,rot=ang;
+    if(mode==="A"){if(ang>90)rot=ang-180;else if(ang<-90)rot=ang+180}
+    txt(s,x+c[0]*q,y+c[1]*q,CL,200,{rot:rot});
+    badge(s,x+c[0]*e,y+c[1]*e,c[2])});
+  say(s,214,284,"400 mm off the corner of the pit's outer dashed line","middle");return s}
+
+/* ---------- SECTION 2 ---------- */
+function flowPanel(L,H,open,cap,closeScale){var s=svg(882,190),y=100,X2=110,X3=686,c=(X2+X3)/2;
+  pit(s,X2,y);pit(s,X3,y);pipe(s,X2+mm(225),X3-mm(225),y);tag(s,X2,y-mm(900),"P2");tag(s,X3,y-mm(900),"P3");
+  txt(s,c,y-offL,LBL,250);ilL(s,X2,y,"IL 12.31");ilR(s,X3,y,"IL 12.40");
+  arrow(s,c,y+offA,-1,mm(L),mm(H),open);
+  say(s,c,y+offA+46,cap,"middle");
+  s.appendChild(el("rect",{x:735,y:108,width:140,height:64,fill:"none",stroke:"#4A4D53","stroke-width":1}));
+  say(s,805,102,"close-up","middle");
+  var g=el("g",{transform:"translate(805 140) scale("+closeScale+")"});arrow(g,0,0,-1,mm(L),mm(H),open);s.appendChild(g);return s}
+
+/* ---------- SECTION 3 ---------- */
+function copiedPanel(approx){var s=svg(882,250),y=190,X6=130,X7=706,c=(X6+X7)/2,P=approx?"APPROX. ":"";
+  pit(s,X6,y);pit(s,X7,y);pipe(s,X6+mm(225),X7-mm(225),y);tag(s,X6,y-mm(900),"P6");tag(s,X7,y-mm(900),"P7");
+  txt(s,c,y-offL,LBL,250);ilL(s,X6,y,P+"IL 12.31");ilR(s,X7,y,P+"IL 12.40");
+  arrow(s,c,y+offA,-1,mm(750),mm(300),false);
+  [X6,X7].forEach(function(X){var CL=P+"CL 12.95",w=tw(CL,200),r=EDGE*1.4142+mm(400)+w/2,q=r*0.7071;txt(s,X+q,y-q,CL,200,{rot:-45})});
+  if(approx){say(s,c,240,"every figure carries APPROX. until it is confirmed; no amber markers","middle")}
+  else{
+    // one triangle beside each assumed figure: as tall as that text, one text height clear of it
+    var ih=fsz(180),ch=fsz(200),iw=tw("IL 12.31",180),aw=iw*0.8,
+        ex=X6+EDGE+mm(200)+aw;                       // right end of the left invert level
+    mark(s,ex+ih+ih*0.62,y+offI,ih);                 // beside IL (left pit): to the right of it
+    mark(s,X7-EDGE-mm(200)-aw-ih-ih*0.62,y+offI,ih); // beside IL (right pit): to the left of it
+    [X6,X7].forEach(function(X){var w=tw("CL 12.95",200),r=EDGE*1.4142+mm(400)+w/2,d=r+w*0.4+ch+ch*0.62,q=d*0.7071;mark(s,X+q,y-q,ch)});
+    say(s,c,240,"amber marker: assumed, not confirmed (never printed)","middle")}
+  return s}
+
+/* ---------- SECTION 4 ---------- */
+function screen4(withPit){var s=svg(428,300),W="#3A3E45";
+  s.appendChild(el("rect",{x:14,y:14,width:146,height:86,fill:"none",stroke:W,"stroke-width":1.5}));
+  s.appendChild(el("rect",{x:20,y:20,width:134,height:74,fill:"none",stroke:W,"stroke-width":1.5}));
+  [0,10].forEach(function(o){s.appendChild(el("line",{x1:0,y1:288+o,x2:210,y2:238+o,stroke:W,"stroke-width":1.5,"stroke-dasharray":"10 6"}))});
+  var cx=95,cy=190;
+  if(withPit){pit(s,cx,cy);tag(s,cx,cy-mm(900),"P7");
+    var CL="CL 12.95",w=tw(CL,200),r=EDGE*1.4142+mm(400)+w/2,q=r*0.7071;txt(s,cx+q,cy-q,CL,200,{rot:-45});
+    say(s,205,228,"the pit is also here","end")}
+  else{s.appendChild(el("line",{x1:cx-9,y1:cy,x2:cx+9,y2:cy,stroke:"#fff","stroke-width":1.5}));
+    s.appendChild(el("line",{x1:cx,y1:cy-9,x2:cx,y2:cy+9,stroke:"#fff","stroke-width":1.5}));
+    say(s,205,228,"you clicked here","end")}
+  // the window
+  s.appendChild(el("rect",{x:214,y:28,width:210,height:252,rx:6,fill:"#000",opacity:0.35}));
+  s.appendChild(el("rect",{x:210,y:24,width:210,height:252,rx:6,fill:"#2B2D30",stroke:"#4A4D53","stroke-width":1}));
+  s.appendChild(el("rect",{x:210,y:24,width:210,height:26,rx:6,fill:"#383B40"}));
+  s.appendChild(el("rect",{x:211,y:40,width:208,height:10,fill:"#383B40"}));
+  s.appendChild(el("text",{x:222,y:42,"font-size":14,"font-weight":700,style:"fill:#ECEDEF"},"Pit · P7"));
+  s.appendChild(el("rect",{x:222,y:60,width:186,height:86,fill:CAD,stroke:"#4A4D53","stroke-width":1}));
+  pit(s,262,108);pipe(s,262+mm(225),396,108);
+  s.appendChild(el("circle",{cx:262,cy:77,r:11,fill:CAD,stroke:"#fff","stroke-width":1.2}));
+  s.appendChild(el("text",{x:262,y:81.5,"font-size":12,"text-anchor":"middle",style:"fill:#fff"},"P7"));
+  [162,186,210].forEach(function(ry,i){
+    s.appendChild(el("rect",{x:222,y:ry+3,width:[56,46,64][i],height:10,rx:3,fill:"#4A4D53"}));
+    s.appendChild(el("rect",{x:292,y:ry,width:116,height:16,rx:3,fill:"#1F2124",stroke:"#4A4D53","stroke-width":1}))});
+  s.appendChild(el("rect",{x:270,y:242,width:62,height:26,rx:4,fill:"none",stroke:"#6B7078","stroke-width":1}));
+  s.appendChild(el("text",{x:301,y:260,"font-size":14,"text-anchor":"middle",style:"fill:#ECEDEF"},"Cancel"));
+  s.appendChild(el("rect",{x:342,y:242,width:66,height:26,rx:4,fill:"#FF70B3"}));
+  s.appendChild(el("text",{x:375,y:260,"font-size":14,"font-weight":700,"text-anchor":"middle",style:"fill:#10131A"},"OK"));
+  return s}
+
+/* ---------- SECTION 5 ---------- */
+function cursor(s,x,y){s.appendChild(el("polygon",{points:[[0,0],[0,17],[4,13],[7.5,20.5],[10.5,19],[7,12],[12.5,12]].map(function(p){return (x+p[0])+","+(y+p[1])}).join(" "),fill:"#fff",stroke:"#10131A","stroke-width":1}))}
+function tip(s,x,y,l1,l2,w){s.appendChild(el("rect",{x:x,y:y,width:w,height:46,rx:4,fill:"#1C1E21",stroke:"#6B7078","stroke-width":1}));
+  s.appendChild(el("text",{x:x+10,y:y+19,"font-size":14,"font-weight":600,style:"fill:#ECEDEF"},l1));
+  s.appendChild(el("text",{x:x+10,y:y+37,"font-size":12,style:"fill:#C8CBD0"},l2))}
+// one pipe as on the other pictures: P2 left (CL 13.02, IL 12.34), P3 right (CL 13.10, IL 12.40), flow to P2. Not to scale.
+function hoverPanel(which){var s=svg(882,250),y=120,X2=170,X3=690,c=(X2+X3)/2,r=mm(225);
+  if(which==="pipe"){
+    s.appendChild(el("line",{x1:X2+r,y1:y,x2:X3-r,y2:y,stroke:"rgba(156,196,255,0.40)","stroke-width":14,"stroke-linecap":"round"}));
+    pipe(s,X2+r,X3-r,y);
+    s.appendChild(el("line",{x1:X2+r,y1:y,x2:X3-r,y2:y,stroke:"#9CC4FF","stroke-width":mm(100),"stroke-dasharray":"32 16"}))}
+  else{
+    pipe(s,X2+r,X3-r,y);
+    s.appendChild(el("rect",{x:X3-r-9,y:y-r-9,width:2*r+18,height:2*r+18,rx:3,fill:"rgba(255,255,255,0.14)",stroke:"rgba(255,255,255,0.45)","stroke-width":2}))}
+  pit(s,X2,y);pit(s,X3,y);
+  if(which==="pit")s.appendChild(el("rect",{x:X3-r,y:y-r,width:2*r,height:2*r,fill:"rgba(255,255,255,0.22)",stroke:"#fff","stroke-width":3}));
+  tag(s,X2,y-mm(900),"P2");tag(s,X3,y-mm(900),"P3");
+  txt(s,c,y-offL,LBL,250);ilL(s,X2,y,"IL 12.34");ilR(s,X3,y,"IL 12.40");
+  arrow(s,c,y+offA,-1,mm(750),mm(300),false);
+  [[X2,"CL 13.02"],[X3,"CL 13.10"]].forEach(function(p){var w=tw(p[1],200),rr=EDGE*1.4142+mm(400)+w/2,q=rr*0.7071;txt(s,p[0]+q,y-q,p[1],200,{rot:-45})});
+  if(which==="pit"){cursor(s,X3+3,y+3);tip(s,X3+30-340,y+52,"P3 · 450 x 450 mm junction pit · CL 13.10","Double-click to change it",340)}
+  else{cursor(s,X2+150,y+1);tip(s,X2+170,y+52,"Pipe 7 · P3 to P2 · 100 mm dia. UPVC · 1 in 100 · 6.20 m","Double-click to change it",450)}
+  return s}
+
+var Q=[
+{h:"The cover level, lined up from the pit outwards",
+ ctx:"You said: “the cover level text always needs to be aligned from pit outwards”. Each picture shows one pit with the cover level at all four corners at once, only so you can compare. Badge 1 is top right, then clockwise. It is always at 45 degrees to the sheet.",
+ body:function(sec){var two=document.createElement("div");two.className="two";
+  add(two,"A. Always reads the right way up",coverPanel("A"),"On the right-hand corners the words start at the pit; on the left-hand corners they end at the pit. None is ever upside down.",1);
+  add(two,"B. Always begins at the pit",coverPanel("B"),"The words always run away from the pit; on the left-hand corners they read upside down.");
+  sec.appendChild(two)}},
+{h:"The flow arrow: what it looks like",
+ ctx:"The same pipe each time: 9000 mm long from P3 down to P2, label above, invert levels below, the arrow below the pipe in the middle. Only the arrow changes. The close-up is the same arrow, enlarged.",
+ body:function(sec){
+  add(sec,"A. As on your issued sheets",flowPanel(750,300,false,"750 mm long, solid head 300 mm long",2.7),"The arrow you draw today: 750 mm long, solid head. Not to scale.",1);
+  add(sec,"B. Shorter",flowPanel(500,200,false,"500 mm long, solid head 200 mm long",2.7),"Takes less room between the two levels on a short pipe. Not to scale.");
+  add(sec,"C. Open head",flowPanel(750,300,true,"750 mm long, open head 300 mm long, not filled",2.7),"Lighter on a busy plan; not how your sheets look now. Not to scale.")}},
+{h:"Levels copied to the next unit: how ‘assumed’ shows",
+ ctx:"You ruled that when a system is copied to the mirror unit the levels copy across but are marked assumed until confirmed, and an assumed figure prints “APPROX.” in front. Here is one copied pipe, P7 down to P6, 9000 mm long.",
+ body:function(sec){
+  add(sec,"A. APPROX. on the plan, until you confirm",copiedPanel(true),"The sheet itself says the levels are not confirmed. Confirm a level in its window and APPROX. goes.",1);
+  add(sec,"B. Plain levels with the amber marker",copiedPanel(false),"The plan looks finished; only the marker on screen tells you. Nothing on the printed sheet warns anyone.")}},
+{h:"While the Pit window is open: is the new pit also on the drawing behind?",
+ ctx:"You have clicked a spot for a new pit and its window is open. Both pictures are the same moment on the AutoCAD screen: a faint house wall and path, the Pit window floating over part of it. The window here is only a stand-in.",
+ body:function(sec){var two=document.createElement("div");two.className="two";
+  add(two,"A. Only in the window until you press OK",screen4(false),"One place to look. The pit lands on the drawing when you press OK; Cancel leaves nothing behind.",1);
+  add(two,"B. In the window and on the drawing behind",screen4(true),"Drag the window aside and the pit is already there. Cancel removes it.");
+  sec.appendChild(two)}},
+{h:"Hovering over a pit or a pipe",
+ ctx:"A proposal for you to correct. Rest the cursor on a part, without clicking, and it lights up and a small tip says what it is. The two pictures are two different moments, one after the other: you have one cursor.",
+ body:function(sec){
+  add(sec,"Over a pit",hoverPanel("pit"),"The pit lights and says what it is. A single click selects it, as in plain AutoCAD. Not to scale.");
+  add(sec,"Over a pipe",hoverPanel("pipe"),"The pipe lights and says what it is. Double-click opens its window. Not to scale.")}}
+];
+function add(parent,h,s,n,rec){var d=document.createElement("div");d.className="opt";var hh=document.createElement("h3");hh.textContent=h;
+  if(rec){var r=document.createElement("span");r.className="rec";r.textContent="Recommended";hh.appendChild(r)}
+  d.appendChild(hh);d.appendChild(s);var p=document.createElement("p");p.className="note";p.textContent=n;d.appendChild(p);parent.appendChild(d)}
+var only=(location.search.match(/q=(\d)/)||[])[1],host=document.getElementById("host");
+Q.forEach(function(q,i){if(only&&only!=i+1)return;var sec=document.createElement("section");sec.className="q";
+  sec.innerHTML="<h2></h2><p class='ctx'></p>";sec.querySelector("h2").textContent=q.h;sec.querySelector(".ctx").textContent=q.ctx;q.body(sec);host.appendChild(sec)});
+</script>
+</body>
+</html>
