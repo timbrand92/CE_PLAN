@@ -13,10 +13,7 @@
 
 ## 1. Being checked now
 
-Two test lists, handed over at 2:27 pm; four helpers.
-
-1. **codex/c11-tests at ad01f9d** (the C11 list after its hold). Honest half landed 2:41 pm: ACCEPT THE LIST for Stage 1 (all eight held items in; 67 Stage 1 targets, 33 waiting, 25 controls, 1,850 older all passing; the old cheat fails all 42 new or strengthened cases). Adversarial re-pass (Codex astra) still running. No answer until both are in.
-2. **codex/tests-a7b at 893e54c** (the label test list, A7). Both halves still running.
+1. **codex/tests-flag at 3189f66** (the test list for the amber no-plot marker). Honest half landed about 3:03 pm: HOLD THE LIST. Adversarial pass (Codex astra) still running.
 
 ## 2. Waiting
 
@@ -65,6 +62,9 @@ ight-scripts.md`. Ruled by the control room as D-364 items 1 to 10: the fix (tea
 14. **team/held-depth at cea5567: HOLD, 2:45 pm.** Four blockers, one cause: a worked-out cover is now drawn on the plan (it goes stale when the pipe under it is regraded, moved or erased; Pit OK overwrites or redraws the drafter's own cover text; a rounding step writes CL 10.51 for 10.500; a depth typed on a lone pit wipes its typed cover). Suite 1,906 passed, 0 failed. Three questions with the control room. One fix round left. `VERDICTS\team-held-depth.md`.
 15. **team/a6-draw-first at 73be1d0: HOLD, 2:45 pm.** Four blockers: one Undo takes back every pit of a PT (D-377 item 7); parts on locked, off or frozen layers are changed; a picked polyline is erased while the pipes take a different path; a run onto a pipe (D-374) joins nothing. Suite 1,917 passed, 0 failed. First verdict. `VERDICTS\team-a6-draw-first.md`.
 
+16. **codex/c11-tests at ad01f9d: HOLD THE LIST (second answer), about 3:10 pm.** Four reasons; one fix round left. Second answer at the foot of its page.
+17. **The A7 test list, codex/tests-a7b 893e54c (fix on codex/tests-a7-clean bafd6fb): HOLD THE LIST, about 3:10 pm.** Nine reasons. Its own page.
+
 ## 5. Look log (the check room's own look at the branches, every 20 minutes)
 
 1. **11:05 am:** first look. Six candidates listed; one merge to main found (night-safety2).
@@ -96,3 +96,4 @@ ight-scripts.md`. Ruled by the control room as D-364 items 1 to 10: the fix (tea
 27. **14:48:** both HOLD verdicts written, pushed (48a00d9c) and sent: build room (both), control room (one line and three questions), AutoCAD test room (the two owed lists). Four worktrees removed. Main: one new commit a2aa306 at 14:36, the build room's `RESTART_NOTE.md` only, not a merge. The honest half on codex/c11-tests landed: ACCEPT for Stage 1; waiting for its adversarial half.
 28. **14:56:** D-392 recorded on the held-depth verdict (no held or typed depth in Stage 1; the plan shows only the typed cover or "TBC"). The A7 list has a clean branch, codex/tests-a7-clean at bafd6fb (same test files, no result folders in its history: checked by reading); its answer will name that tip. New hand-over: **codex/tests-flag at 3189f66** (the test list for the amber no-plot marker; 11 targets, 1 control; one commit on main a2aa306): both halves started (Team opus honest check; Codex astra adversarial pass). Six helpers running: the adversarial halves on the C11 and A7 lists, and both halves here.
 29. **14:58:** look. Main is a05472a: one more commit by the build room at 14:54, `.gitignore` only (seven lines: run results never committed, after the A7 list's first hold reason); no code, not a merge of a branch. Moving, not handed over: codex/tests-a6b 81f6c18, team/a6-draw-first 8984f8e (its fix round), codex/tests-units fea2222, team/a3b-pit-window 07ee5cd. No report landed; six helpers running.
+30. **15:05:** two answers written. **codex/c11-tests at ad01f9d: HOLD THE LIST, narrowly** (four reasons: four cases refuse "MIN." with both ends measured; the shortfall sentence always says "needs 300 mm"; a hidden caption passes for the visible cover check; a Stage 1 cover verdict tested only in the waiting group; one fix round left; the old cheat now turns 25 of 67 green, a new one all 67). **The A7 list (893e54c, now codex/tests-a7-clean bafd6fb): HOLD THE LIST** (nine reasons; the result files are closed on the clean branch). Pages: `VERDICTS\codex-c11-tests.md` (second answer), `VERDICTS\codex-tests-a7b.md`. Honest half on codex/tests-flag 3189f66 landed: HOLD THE LIST; its adversarial half still running.

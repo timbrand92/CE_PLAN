@@ -55,3 +55,47 @@ Kept in `FOLLOW_UP\part3-cover-and-grade.md`: the source-text checks can be sati
 ## 7. What held up
 
 The cover limits at 0, 5 and 10 mm tolerance behave at the limit and 0.1 mm either side; the six-storm Boyd's control fails when the inflow stops rounding; the 69 and 70 mm held-orifice controls catch a doubled flow; all 25 controls have a change that makes them fail; every expected figure the honest check worked by hand matched the rulings, apart from item 1 of section 3.
+
+
+---
+
+# Second answer: codex/c11-tests at ad01f9d (after its first fix round)
+
+**Answer: HOLD THE LIST, narrowly. Four reasons; one fix round left (D-346).** Written Fri 20 Nov 2026, about 3:10 pm. Checked on the bench only. The list is much harder to cheat than at 11c6041: the old cheat that turned 70 of 70 targets green now turns 25 of 67.
+
+**Who checked.** Honest check: Team helper, Claude Opus 5.5: `C:\CE_WORK\check\reports\c11b_honest_REPORT.md` (ACCEPT for Stage 1: all eight held items are in and every expected figure, worked by hand, is right). Adversarial pass: Codex gpt-6.2-astra: `C:\CE_WORK\check\reports\c11b_adv_REPORT.md`, proofs in `c11b_adv_proofs\` (a new cheat turned all 67 Stage 1 targets green with all 25 controls, on a product that still labelled a too-flat pipe 1 in 200). Graded here.
+
+## A. Counts seen (both helpers agree; the writer's counts are true)
+
+1,975 ran: 67 Stage 1 targets fail, 33 waiting (Stage 2) targets fail, 25 controls pass, 1,850 older tests pass, 0 skipped. Only tests and the design page changed.
+
+## B. Reasons to hold
+
+1. **Four cases refuse the ruled wording.** `Design_Drawn_grade_and_placed_label_agree_after_the_tenth_mm_step` (`tests/CeCivil.Hands.Tests/AcceptanceC11DrawingTests.cs:332, 362-363, 383`) gives both inverts as MEASURED and reads everything after "1 IN" as a number. D-383 item 9 puts "MIN." on the label unless he TYPED both ends, so a correct build fails these four. Set the source of each end separately; assert the whole label with both measured, one typed and both typed.
+2. **The whole shortfall sentence always says "needs 300 mm".** With 450 mm needed the cheating product printed "Short by 5.1 mm at P4 ...: cover 444.9 mm, needs 300 mm." and the list stayed green (`tests/CeCivil.Brain.Tests/AcceptanceC11ChecksTests.cs:182`). A wrong figure in words he reads. Use at least two different covers needed.
+3. **A hidden caption passes for the visible cover check.** The D-383 test accepts any text control starting "Cannot check yet", without checking that it shows; a collapsed control passed, and with a real 5.1 mm shortfall no "Wrong" was on show (`bench/CeCivil.Bench.Tests/AcceptanceC11PrintedWorkingTests.cs:123`). Read the cover result shown at each end, before and after a surface is picked: the word, the colour, and that it and its parents are visible (D-140, D-219, D-383 item 7).
+4. **A Stage 1 cover verdict is tested only in the waiting group.** Paving of 100.5 mm leaving 294.5 mm must read Wrong; a one-line change made the Pipe check say Suits and all 67 Stage 1 targets stayed green (`P3_35`, `P7_16`: `bench/CeCivil.Bench.Tests/AcceptanceC11WindowTests.cs:112`). Give the slab straight to the Pipe check in a Stage 1 target; leave the Job window's part waiting.
+
+## C. To add in the same round (each is one more row; none holds the list alone)
+
+1. **The fresh-run grade either side of a two-place limit:** 25.0007 m falling 125 mm is 1 in 200.01 (Needs a look); 25.0006 m is 200.00 (Suits); compare the first verdict, the placed label and the reopened verdict.
+2. **The worked-invert cover at other levels:** RL 12.430, 8.3 m at 1 in 100, ground 12.794 (297 mm, Suits at 5 mm); and one below zero and one over 1,000.
+3. **A pit level EDITED across 1,000 m:** from 1267.25 type 1358.375, OK, reopen: the figure, the hold and "Chosen" all survive.
+4. **A drawn length a hair under the half-way point** from ends not at zero (1004.94999999999996 mm shows 1.00).
+5. **The Pit depth sum at a second level, both ways** (6.755 less 6.18; 6.18 plus 0.575), and the exact 0.575 behind the 0.58.
+6. **The label reads:** the 5.125 test finds "5.13" in ANY text and the missing cover finds "TBC" anywhere; read the named label and its end (shared with the A7 list).
+
+## D. For the build of C11, to write on the list
+
+1. **The Stage 1 gate is run with the filter** `C11=target&Stage!=2` (67) and `C11=control` (25); the 33 waiting targets run and fail, and are counted separately.
+2. **Twenty-nine older tests fail on a right product** (they still expect the withdrawn printed-invert rule, metre drawings, or no text for a cover not known): named in `c11b_adv_proofs\wider-failures.md`. The list should name them so the builder corrects them to the ruling and nobody fixes the product back.
+
+## E. For the control room to rule
+
+1. **Two Stage 1 targets lean on later work:** `P3_40` (a job tolerance and a job slab figure: Job-window settings) and the detention row of `P3_25` (D-377 item 1: ordinary pipe only). Mark them waiting, or keep them?
+2. **The shortfall sentence** "Short by 3 mm at P3, pipe from P4 to P3: cover 297 mm, needs 300 mm." is the product's own word order (D-280 rules only how short and where; D-350 quotes "3 mm short"). Confirm it once. D-397 also touches it: it names the pipe by its two pits.
+3. **"MIN." with both ends MEASURED** (read from the drawing, not typed): read here as "MIN." stays, under D-383 item 9. Say if not.
+
+## F. Follow-ups
+
+`FOLLOW_UP\part3-cover-and-grade.md`: the two weak controls (council arrival; the rounding-source control) and the three source-text guards still pass with their faults in; the tolerance entry (2.5 refused, 99,999 accepted by the Job window: Stage 2, a draft).
