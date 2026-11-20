@@ -73,3 +73,23 @@ The cover-label case and the saved cover mask belong to the labels list (A7): mo
 ## 11. The privacy HIT (for the control room and Tim; no found word written anywhere)
 
 The permanent scan run on the 18 local copies fails all 18, for four kinds of finding: (a) Tim's login name in "last saved by" in 8 drawings (known, D-427, D-433); (b) a named block not on the shipped list in 7 drawings; (c) "undocumented drafting text" in 8 drawings; (d) **one multiline text in `ON SITE DETENTION CRITERIA.dwg` holds a four-digit number of the shape the job-number pattern flags.** Both helpers saw only its shape and printed nothing. A four-digit figure on a detention criteria sheet may well be an engineering figure, but under D-417 item 3 a hit stops the job and goes to Tim for a human read; the drawing is not edited and the drawings branch stays local. The word and block lists are to be loosened only by count, never by printing text.
+
+
+---
+
+# Third answer: codex/tests-a4c at 2af3464 (its last round)
+
+**Answer: ACCEPT THE LIST. Both halves accept. The 18 block drawings themselves stay held for Tim (the privacy hit, D-417 item 3; team/a4c-blockfiles stays local).** Written Sat 21 Nov 2026, about 12:56 am. Checked on the bench only.
+
+**Who checked.** Honest: one Claude helper on Sonnet: `C:\CE_WORK\check\reports\a4c3_honest_REPORT.md`. Adversarial: Codex gpt-6.2-astra: `C:\CE_WORK\check\reports\a4c3_adv_REPORT.md`. Both reasons of the second answer CLOSED: a correct one-attribute PIT LABEL 2 passes the shared tag check (the two-attribute case only in the hand-changed fixture); with `A4C_RELEASE=1` the drawing tests, the bend fixture and the privacy scan FAIL when their inputs are absent, while a workshop run skips them. Every same-round item CLOSED (cover cases moved to the labels list; one arrow per pipe in a run of three; the Undo proved past the tag; failure output counts only). No drawing text was printed by either half; neither opened the flagged drawing.
+
+## 12. Binding probes for the office blocks BUILD (D-431)
+
+1. **The labels build owns the two moved cover-level cases:** "CL 5.75" and its background mask proven in a saved drawing.
+2. **`AcadDrawing.EnsureBlock` (line 625) still draws a stand-in square** when a block is missing: prove it is never reached on a bare drawing (D-396, D-417).
+3. **Scale, layer and ByLayer of each of the four placed blocks** in a real drawing, and the pit's outer dashed line 100 mm clear at every size.
+4. **One arrow per pipe in a run:** the product drew no office arrows in a run of three today.
+
+## 13. What this means
+
+The list may go to the main line as one squashed commit (expect a hand merge of `.gitignore`). The permanent privacy scan on the 18 copies still flags drawings, the four-digit hit among them: that goes to Tim for a human read, and the drawings are not released or pushed until he answers and the control room says so in writing.
