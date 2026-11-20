@@ -13,8 +13,7 @@
 
 ## 1. Being checked now
 
-2. **codex/tests-five at b23d46f** (tests only: the five smaller Stage 1 Pit and Pipe pieces the doorway does not close). Both halves started 1:44 pm.
-3. **team/held-depth at 6c9bc07:** checked on the OLD tip only (honest half: no blocker; adversarial half still running). No verdict until the new tip is handed over.
+Nothing at 2:10 pm. Every hand-over so far has its answer; no helper is running.
 
 ## 2. Waiting
 
@@ -60,6 +59,8 @@ ight-scripts.md`. Ruled by the control room as D-364 items 1 to 10: the fix (tea
 
 12. **team/acad-pictures2 at b876264 (the picture route): HOLD, about 1:58 pm.** By reading only, both halves. Sound inside the plug-in; the runner would drive the test AutoCAD in Tim's day, reads the stop flag once and never his switch, can delete the flag through a stray path, has a sender that runs on its own, can save a picture of another program, and its tests reach the real desktop. `VERDICTS\team-acad-pictures2.md`.
 
+13. **codex/tests-five at b23d46f (tests only): HOLD THE LIST, about 2:10 pm.** The six drawing targets fail for the right reasons, but the new window test class breaks older window tests in a full run; all 17 can be turned green while a hand-edited label is still overwritten and a pipe still misses the wall; a branch test writes its own join; the wall tests use exact equality against D-341. `VERDICTS\codex-tests-five.md`.
+
 ## 5. Look log (the check room's own look at the branches, every 20 minutes)
 
 1. **11:05 am:** first look. Six candidates listed; one merge to main found (night-safety2).
@@ -81,3 +82,4 @@ ight-scripts.md`. Ruled by the control room as D-364 items 1 to 10: the fix (tea
 17. **1:40 pm:** the Pipe mock-up after its fix 5: FAIL again (the three earlier reasons are fixed; four rulings are shown the wrong way: amber for a missing ground level where D-219 says grey; no "MIN." on the label; the label not centred; "Job window" as a source in Stage 1). Added to `VERDICTS\mockup-pipe-top-preview.md`. team/acad-windows held page written at about 1:39 pm.
 18. **1:42 pm:** the one more read of `design\PIPE_SIZE.md` at 95f65aa: FIX THE PAGE FIRST, four short wording fixes only (the reach of the flag; the words for an unreadable pipe against its label; the levels window still reads the size from the note; a marker set by an OK that changes nothing). 33 of 41 items closed; all eight of the held page answered. Added to `VERDICTS\design-pipe-size.md`. The next read checks those four only.
 19. **1:44 pm:** the two waiting checks started (the picture route by reading only; codex/tests-five). Thirteen answers given today, none MERGE.
+20. **2:10 pm:** main still 22993fa. Fifteen answers given today, none MERGE. Moved, not handed over: team/held-depth cea5567 (new tip), team/a3b-pit-window 68b02ac (the Pit window to D-386), design/pipe-size d94a9e3 (its four fixes), team/a6-draw-first 73be1d0, codex/c11-tests ad01f9d, codex/tests-a7b 893e54c.
