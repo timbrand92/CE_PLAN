@@ -92,3 +92,10 @@ The page's own note gives the drawing's height wrongly ("200 of 620 and 256 of 7
 1. **"Over the pipe" as a choice in step 1:** D-383 item 7 says it is not asked pipe by pipe but he may set it; a quiet choice that opens "Not known" fits that. Confirm.
 2. **The grey band is not on the approved style page yet** (D-389 item 3 rules it exists; Tim is to be shown it on this mock-up).
 3. **The Pit window Tim approved (D-386) has Inspect at bottom left; this window has none.** The rest of the report's section 7.
+
+## Ruled by the control room at 2:25 pm (the next round is checked against these)
+
+1. **"Over the pipe" as a quiet choice in step 1 that opens "Not known":** yes, that placing stands (D-383 item 7).
+2. **This mock-up is also where Tim approves the grey band:** the page says so in one plain line, so Tim's room asks him.
+3. **Inspect at bottom left,** as on the approved Pit window (D-065, D-386).
+4. **When it passes the check room,** the page and both pictures go straight to Tim's room to show him, with one line to the control room: the Pipe window build waits on his approval.
