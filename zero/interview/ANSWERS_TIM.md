@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-187.
+**Next number:** TR-191.
 
 ---
 
@@ -477,3 +477,13 @@
 **TR-185** (N-069; what the label prints when the grade is not known, or fails a check). Offered: "AT TBC" when not known and the typed grade when wrong (recommended); leave the grade off when not known. He picked: "Leave the grade off when not known". Not the recommended answer. With no grade yet the label reads "100 DIA. UPVC PIPE" with nothing after it. **This OVERTURNS the planning chat's call D-271 DQ-050** ("while a pipe's grade is not known the label prints TBC in its place") and goes back to what the build first did. A grade he typed that fails a check was in both options as printed as typed; read as standing (the amber marker and the window show it fails).
 
 **TR-186** (N-077; a flow direction he reversed by hand, when the tool's own working later disagrees). He picked: "Yours stays; the tool only offers 'Turn round' (Recommended)". A direction set by hand is held like a typed figure; the tool never turns it back; it shows the amber marker with a one-click "Turn round" offer, and red "Wrong: runs uphill" if typed levels prove it (TR-153). Confirms the room's reading under TR-020.
+
+## Batch 46, Fri 20 Nov 2026, 16:53 (clock read), through the question window, one line per question. Sources: `stage6/SPEC_PIT.md` section 10 item 53; `stage6/SPEC_PIPE.md` section 12 items 65, 79, 86.
+
+**TR-187** (N-064, N-071; text heights and layers, put to him as measured on three issued jobs, `evidence/STUDY_A_CIVIL_DRAFTING_ANATOMY.md` section 3). He picked: "Yes, those heights and layers (Recommended)": pipe label 250 high on layer 25TEXT; invert level 180 high on layer 20TEXT; cover level 200 high on 25TEXT; pit number 350 high on 35TEXT inside the office circle tag; all for a 1:100 plan; each a setting in the office list. Not asked: the text STYLE (font) by name; the room takes it as the office template's own style for those layers, to be read from the template.
+
+**TR-188** (N-078; reversing a whole run). He picked: "Every pipe in the run, in one go (Recommended)". All pipes in the run turn together (arrows, which end is upstream, the order levels are worked in), one click, one Undo; to turn one pipe he clicks that length in the plan strip first (TR-114).
+
+**TR-189** (N-078; reversing a pipe that has one level typed). He picked: "The typed level stays where it is; the other is re-worked (Recommended)". A typed level stays at the end where he typed it; worked-out levels are worked again in the new direction; the label keeps MIN.
+
+**TR-190** (N-079; an invert level retyped on the plan). He picked: "A number sets the level; extra words are kept and flagged (Recommended)". As for a cover level (TR-136): a retyped number sets that end's invert as typed by him and the grade or the other level follows; text the tool cannot read as a level is kept as typed with the amber marker. This differs from D-185's "levels are never changed by editing their text", as TR-136 does.
