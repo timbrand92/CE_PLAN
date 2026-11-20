@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-211.
+**Next number:** TR-212.
 
 ---
 
@@ -537,3 +537,7 @@
 **TR-209** (unknowns U-132, U-152; building walls inside the architect's xref). Offered: Stage 1 does not look inside the xref, walls come later (recommended); he picks the building outline once per job; it must avoid xref walls before he drafts. He picked: "Stage 1 does not look inside the xref; walls come later (Recommended)". In Stage 1 a label avoids other text, pipes, pits and the 70-wide 50CONT outline, all in his own drawing; a label across an xref wall is left for him to move; looking inside the xref is tried in a test AutoCAD afterwards and brought back to him. Confirms the control room's draft D-400 item 8 for walls.
 
 **TR-210** (unknown U-095; the click budgets, rule R-39). He picked: "Yes: those are the budgets (Recommended)". One pit with a cover level: type PT, 1 click, type the level, Enter. One run of n pipes at the defaults: type CD, n+1 clicks, Enter, then Enter (OK), with no typing. The tool is tested against these counts; anything over is a fault.
+
+## Fri 20 Nov 2026, 17:08 (clock read), typed in the chat
+
+**TR-211** After choosing "Yes, tonight" (the owed pictures drawn and checked tonight, ready for him tomorrow), he wrote: "IM GOING HOME CAN YOU KEEP THINGS MOVING". Room's reading (mine): the interviews stop for the day; this room keeps working on what it owes him without him: the pictures (the single-pipe window, the CE Settings window, the cover level from the pit outwards, the flow arrow's look, how assumed shows, the part behind the window, hover), each drawn by a Team helper and checked by a separate one; the three research pages; the nine clashes sorted. No question window opens until he speaks again. This room starts no AutoCAD in any case; his words are passed to the control room for the other rooms.
