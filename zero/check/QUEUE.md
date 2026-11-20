@@ -13,8 +13,7 @@
 
 ## 1. Being checked now
 
-1. **team/acad-windows at b645b43** (A1 to A3, last fix round). Honest half landed 1:27 pm: HOLD (the window now opens; one picture still draws pipe stubs on a pit with none; the four-fifths cap cuts off the foot of the Pipe window at 1920 by 1080). Adversarial half (Codex astra) still running; the written verdict follows it.
-2. **team/held-depth at 6c9bc07.** Honest half landed 1:29 pm: MERGE, no blocker, six follow-ups. Adversarial half (Codex astra) still running.
+1. **team/held-depth at 6c9bc07:** checked on the OLD tip only (honest half: no blocker; adversarial half still running). The build room is adding two more fixes to the branch (the stale cover level on the plan; the metre refusal), so no verdict is written until the new tip is handed over and checked, both halves.
 3. **design\PIPE_SIZE.md, corrected, design/pipe-size at 95f65aa:** the one more read, Team opus, started 1:35 pm.
 4. **Pipe mock-up after its fix 5:** new pictures taken by the check room at 1:34 pm (`C:\CE_WORK\check\reports\pipe-mockup_pics\fix5`); Team opus re-check started 1:35 pm.
 
@@ -56,6 +55,8 @@ ight-scripts.md`. Ruled by the control room as D-364 items 1 to 10: the fix (tea
 9. **team/office-blocks (A4), on main at 22993fa, the adversarial half: WOULD HAVE BEEN HOLD, about 1:30 pm.** The office tag is never used; a blocks file holding definitions only cannot supply the first pit on a blank drawing; the file is not in the build. Faults on main exposed: the plan can keep an old cover level (6.50 in the window, CL 5.75 on the drawing); a metre drawing is not refused. Not a reason to pull it off main. `VERDICTS\team-office-blocks_on-main.md`.
 
 10. **team/night-launch at a092bf7 (the night-script safety fix): HOLD, about 1:35 pm.** By reading (adversarial half; the honest half was stopped on the control room's safety order). The wrapper deletes the stop flag; a test can start a real AutoCAD; a force goes ahead when the open-drawing count cannot be read; nothing owns the 8:00 am deadline; failed checks finish green. Closed: the launcher now creates the process itself; the weekday clock is right. `VERDICTS\team-night-launch.md`.
+
+11. **team/acad-windows at b645b43 (A1 to A3), last fix round: HOLD, and HELD, about 1:45 pm.** Closed: the windows open; most pictures show only what is drawn; Inspect is back. Open: one Pit picture still draws pipe stubs on a pit with none, and the Pipe answer names pits that do not exist; the four-fifths cap cuts off the foot of the Pipe window at 1920 by 1080; and D-386 has replaced the size rule the branch was built to. `VERDICTS\team-acad-windows_HELD.md`.
 
 ## 5. Look log (the check room's own look at the branches, every 20 minutes)
 
