@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-151.
+**Next number:** TR-155.
 
 ---
 
@@ -387,3 +387,13 @@
 **TR-149** (unknown U-135, control room B3; how far an invert level may slide). Offered: no further than a quarter of the pipe (recommended); as far as it needs up to half way; a set distance of 1,000 mm, a setting. He picked: "A set distance: 1,000 mm, a setting". Not the recommended answer. It may slide up to 1,000 mm from its usual place, whatever the pipe's length; beyond that it goes in its first spot with the amber marker (TR-016).
 
 **TR-150** (unknown U-133, control room B1; which side is "above" on a pipe drawn up the sheet or from right to left). He picked: "The side the text's top faces, however it was drawn (Recommended)". The label is first turned to read from the bottom or right of the sheet; above is the side its top faces: the left of an upright pipe, the top of a pipe across the sheet whichever way it was drawn. The direction the pipe was drawn never changes the side.
+
+## Batch 37, Fri 20 Nov 2026, 16:22 (clock read), through the question window, one line per question (the control room's label questions B4 to B7 from `interview/FROM_CONTROL_ROOM.md`)
+
+**TR-151** (unknown U-136, B4; the label of an older pipe whose size cannot be read). He picked: "Leave the label as drawn, with the amber marker (Recommended)". The existing words are left exactly as they are; the amber marker says the size could not be read; nothing printed changes until he gives the size.
+
+**TR-152** (unknown U-137, B5; how a worked-out grade prints on the label; example, IL 12.40 and IL 12.31 over 8.55 m works out to 1 in 95.0). He picked: "To the whole number: '1 IN 95' (Recommended)". The window still shows the exact figure and checks are made on the exact one (D-350). A typed grade still prints as typed (D-154).
+
+**TR-153** (unknown U-138, B6; Reverse flow when he typed both end levels, so the pipe plainly falls one way). He picked: "The arrow turns; red 'Wrong: runs uphill' (Recommended)". His levels are never changed; the flow and arrow turn as asked; the pipe shows red "Wrong: flow runs uphill" with the two levels until he changes a level or reverses it back.
+
+**TR-154** (unknown U-139, B7; a new pipe drawn through an existing label). He picked: "It moves to its next clear spot (Recommended)". The earlier pipe's label re-finds a clear spot by the same rules, in the same Undo as drawing the new pipe; a label he had moved by hand is NOT moved: it stays and gets the amber marker (D-014).
