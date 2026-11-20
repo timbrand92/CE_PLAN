@@ -3,7 +3,21 @@
 **Kept by:** the AutoCAD test room ("CE_ACAD / acad test / 01"). **Started:** Fri 20 Nov 2026, 11:30 am.
 **Rule (D-346, added 20 Nov):** a fix may merge on its bench tests and one honest check; it is "proven" only when its owed list here has passed in AutoCAD, in pictures.
 **States:** OWED (not yet run) · PASS (date, picture) · FAIL (date, picture, what was seen) · SEEN (no ruling yet, put to Tim) · WAITS (its work is not on the main line) · PARKED (off the release).
-**Count on 20 Nov, 1:45 pm:** PASS 0 / FAIL 0 / OWED 14 / WAITS 67 / PARKED 1 (of 82; one item struck). Nine check-room verdicts received, all HOLD or held. Three check-room verdicts received, all HOLD: the night scripts on the main line (section F), the pipe's opening size (section G) and the windows (section H).
+**Count on 20 Nov, 1:45 pm:** PASS 0 / FAIL 0 / OWED 14 / WAITS 73 / PARKED 1 (of 88; one item struck). Nine check-room verdicts received, all HOLD or held. **First in line when testing is allowed: shaped grips (section FIRST).** Three check-room verdicts received, all HOLD: the night scripts on the main line (section F), the pipe's opening size (section G) and the windows (section H).
+
+## FIRST. Shaped grips (D-407, Tim, TR-166: "No: I want shaped grips before I draft"): the first thing proven on the first night testing is allowed
+
+Shaped grips are now part of Stage 1. A trial custom grip crashed AutoCAD before (R-006, R-011), so this is proven before anything is built on it. The exact steps are written from the build room's one-page grip design when it lands; until then these five stand as placeholders. All WAIT (nothing built, design page not landed, night runner on HOLD).
+
+84. **N-1 A shaped grip shows on a pit** in AutoCAD 2027, on a test copy, with a picture of each grip. WAITS.
+85. **N-2 A shaped grip shows on a pipe,** with a picture of each grip. WAITS.
+86. **N-3 A grip can be clicked safely:** AutoCAD does not crash or jam. WAITS.
+87. **N-4 A grip can be dragged safely,** and the part changes as the design says. WAITS.
+88. **N-5 One Undo puts it back whole,** and Redo repeats it. WAITS.
+
+**Said plainly, two limits of a robot here:**
+1. **A click and a drag on a grip need a real mouse.** The accepted picture route uses no mouse and no keys, and a grip cannot be typed. So N-3 and N-4 can be shown at night only if (a) the grip design gives a typed or in-plug-in way to work a grip that runs the same code a drag runs, said as such, or (b) the control room rules a bounded mouse route for the test AutoCAD only. Otherwise N-3 and N-4 are Tim's hands. Whether AutoCAD's own view picture shows grips at all (they show only on a selected part) is not known until tried.
+2. **If the test AutoCAD crashes:** a "Fatal Error" box is a window the safety file does not know, so the night halts, nothing is closed or forced, and a note is written for Tim. Only a test AutoCAD this room started that night, jammed or crashed with no such box showing, may be closed under the D-160 exception. Rule 1.9 in full: "Hands off AutoCAD's profile and licence. No chat, helper or robot may, without Tim's yes in words in that conversation: make, copy, rename, delete or switch an AutoCAD profile; start AutoCAD under another profile; force-close AutoCAD or its headless engine (if it is stuck, leave it, stop, tell Tim); touch Autodesk licensing or sign-in in any way; or change a saved AutoCAD setting or the registry. If a licence or sign-in window appears: do nothing to it, stop, tell Tim. Every brief handed to a helper that may start AutoCAD must repeat this rule in full."
 
 ## A. From `stage6\STAGE1_TIMS_EYES.md` (the everyday run proves these; steps in `EVERYDAY_RUN.md`)
 
@@ -136,6 +150,7 @@ Nothing is shown until it merges. All six WAIT.
 74. **L-4 Save and reopen** (a saved COPY in the test folder, never the night's test copy itself): the marker is still there and still right. WAITS.
 75. **L-5 Copy, move, mirror** a flagged pipe: the marker goes with its pipe and a copy has its own. WAITS.
 76. **L-6 Cancel, one Undo and Redo.** The danger to look for: Undo takes the marker and leaves the undersized pipe. WAITS.
+89. **L-7 The marker's layer is "CE NO PLOT"** (TR-163). If that layer is found set to plot, the tool sets its own layer back to no-plot and says so once. Shown by setting the layer to plot in the test copy, running the tool, and reading the layer and the command line. WAITS.
 
 ## M. From the check room's verdict on the units doorway (its test list is held; `check\VERDICTS\codex-tests-units.md` section 5)
 
