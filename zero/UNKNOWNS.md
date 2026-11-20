@@ -3,7 +3,7 @@
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), set up by D-353 and `ROOMS.md`. No other chat edits this file.
 **First written:** Fri 20 Nov 2026, 10:45 am (clock read).
 
-**STAGE 1 COUNT: 0 of 96 closed.** Blocks Stage 1: 66. Can wait: 30.
+**STAGE 1 COUNT: 7 of 98 closed.** Blocks Stage 1: 68 (7 closed, 61 open). Can wait: 30. Updated Fri 20 Nov 2026, 11:00 am: closed U-008, U-009, U-010, U-026, U-029, U-093, U-097; added U-097 and U-098 from his words.
 **STAGE 2 COUNT (waiting): 0 of 20 closed.**
 
 **What counts as an unknown.** A question about how the tool must behave that (a) no ruling answers, or (b) is answered only by a planning chat's call or a DRAFT, or (c) the 25 root causes or Tim's check of 20 Nov (D-351) exposed, or (d) only a test in AutoCAD can answer. Each line says who it waits on: **Tim**, **a picture then Tim** (a mock-up is owed first), or **a test** (nobody should ask Tim; AutoCAD must show it).
@@ -28,9 +28,9 @@
 
 ## B. Placing a pit
 
-8. **U-008** How placing pits should feel from the first click: window first every time, or straight to clicking with the choices on the command line. Touches D-234, D-186. Waits on: Tim. **Blocks Stage 1.**
-9. **U-009** Where the cover level is given when placing several pits in a row: later by opening each pit, at the command line after each click, or in the window each time. Touches D-178, D-186. Waits on: Tim. **Blocks Stage 1.**
-10. **U-010** Where the window goes while he is clicking: closed, stepped aside, or left open at the side to change a size mid-run. Touches D-234. Waits on: Tim. **Blocks Stage 1.**
+8. **CLOSED by TR-006 (20 Nov): "Yes, click then window, each pit".** **U-008** How placing pits should feel from the first click: window first every time, or straight to clicking with the choices on the command line. Touches D-234, D-186. Waits on: Tim. **Blocks Stage 1.** ASKED 20 Nov: TR-001 ("Window first, then click") and TR-003 ("you draw, then the window opens ... the same for pit as well") do not agree; being asked again.
+9. **CLOSED by TR-002 (20 Nov): "Type it in the window each pit".** **U-009** Where the cover level is given when placing several pits in a row: later by opening each pit, at the command line after each click, or in the window each time. Touches D-178, D-186. Waits on: Tim. **Blocks Stage 1.**
+10. **CLOSED by TR-005 and TR-006 (20 Nov): no longer arises; the window opens after the click or the run.** **U-010** Where the window goes while he is clicking: closed, stepped aside, or left open at the side to change a size mid-run. Touches D-234. Waits on: Tim. **Blocks Stage 1.**
 11. **U-011** The window size: fitted to its content, about 1100 by 700 at most, a resize remembered. Draft call in `STAGE1_TIMS_EYES.md` line 2 and D-352. Waits on: a picture then Tim. **Blocks Stage 1.**
 12. **U-012** The Pit window line by line: which choices, in what order, in what words. Never gone through (D-070, PIT open 16). Waits on: a picture then Tim. **Blocks Stage 1.**
 13. **U-013** The small picture beside the Pit inputs: its size and what it shows. Touches D-297, D-313. Waits on: a picture then Tim. **Blocks Stage 1.**
@@ -49,10 +49,10 @@
 
 ## C. Joining pipes
 
-26. **U-026** How drawing a pipe should feel from the first click: window first every time, or straight to clicking like PLINE. Touches D-234, D-237, D-263. Waits on: Tim. **Blocks Stage 1.**
+26. **CLOSED by TR-005 (20 Nov): draw the run from anywhere to anywhere, or pick a polyline, THEN the window, then OK puts it in.** **U-026** How drawing a pipe should feel from the first click: window first every time, or straight to clicking like PLINE. Touches D-234, D-237, D-263. Waits on: Tim. **Blocks Stage 1.** ASKED 20 Nov: TR-003, his own order is draw (or pick a polyline) first, then the window, then it goes in; the room's reading is being confirmed.
 27. **U-027** The office default pipe: 100 dia. UPVC at 1 in 100, held as a setting. Draft call in `STAGE1_TIMS_EYES.md` line 5 and D-352. Waits on: Tim. **Blocks Stage 1.**
 28. **U-028** "Follows what it joins, never smaller downstream" (D-263): which size wins when the pit already has several pipes, and when the direction is not yet settled. Waits on: Tim. **Blocks Stage 1.**
-29. **U-029** If the pipe tool is missing something it needs, how it asks before the first click (window, or command line). `STAGE1_TIMS_EYES.md` line 6. Waits on: Tim. **Blocks Stage 1.**
+29. **CLOSED by TR-005 (20 Nov): no longer arises; nothing is needed before the first click because the window comes after the run.** **U-029** If the pipe tool is missing something it needs, how it asks before the first click (window, or command line). `STAGE1_TIMS_EYES.md` line 6. Waits on: Tim. **Blocks Stage 1.**
 30. **U-030** A click inside the pit or on its centre, not on the wall: where the pipe end goes. Touches D-034, PIT open 15. Waits on: Tim. **Blocks Stage 1.**
 31. **U-031** The pipe stops at the inner wall (D-102), but PIT BLOCK 3's inner wall is the edge of its wipeout (D-224): how far inside the outer line that is for each size. Waits on: a test (measure the block), then Tim's look. **Blocks Stage 1.**
 32. **U-032** Which way he draws: upstream to downstream, either way, and "as drawn, not settled" until the run reaches an outlet. Draft call D-271 DQ-028. Waits on: Tim. **Blocks Stage 1.**
@@ -140,10 +140,12 @@
 
 ## K. What he sees in the window and on screen
 
-93. **U-093** Beyond the seven lines of `STAGE1_TIMS_EYES.md`: what else the old plug-in did well that the new one must match before he would draft with it (D-351, "massive regression"). Waits on: Tim. **Blocks Stage 1.**
+93. **CLOSED by TR-004 (20 Nov): labels land in the right spot, grips to stretch and adjust, levels work along the run; not "speed with nothing in the way".** **U-093** Beyond the seven lines of `STAGE1_TIMS_EYES.md`: what else the old plug-in did well that the new one must match before he would draft with it (D-351, "massive regression"). Waits on: Tim. **Blocks Stage 1.**
 94. **U-094** Where a window opens on screen and whether it remembers (second monitor, over the drawing). Waits on: Tim. **Blocks Stage 1.**
 95. **U-095** The click budget for placing a pit and for drawing a pipe (rule R-39; the budgets tick sheet was never answered, P-09 item 6). Waits on: Tim. **Blocks Stage 1.**
 96. **U-096** The office's screen sizes and Windows scaling, and the model background colour. WINDOWS open 6 and 8. Waits on: Tim. Can wait.
+97. **CLOSED by TR-008 (20 Nov): "Replaced by pipes, bends kept".** **U-097** (added 20 Nov from TR-003) Picking an existing polyline as the run, which the pipe tool replaces with pipes: what it does at each vertex, at a pit it passes, with arcs, and what happens to the old polyline. No ruling. Waits on: Tim. **Blocks Stage 1.**
+98. **U-098** (added 20 Nov from TR-005) "however many bends are required within the standards": what the plumbing standard and the councils allow for bends in a buried stormwater pipe (angles, how many before an inspection opening), so the tool can guide. Joins U-035 and U-041. Waits on: research first, then Tim. **Blocks Stage 1.**
 
 ---
 
