@@ -45,3 +45,19 @@
 4. **Office changes:** add a case where a drawing with no saved value follows an office change.
 
 **Next:** the page's writer makes the four edits. The check room reads them back alone, because the page's own open list is short.
+
+---
+
+# Second answer: the page at 0ce96da (the four edits read back)
+
+**Answer: BUILD FROM IT.** Written Sat 21 Nov 2026, about 4:47 am. The check room read it back alone, by reading only. The change from f0bf88e is one file, 34 lines in and 10 out, with a "Changed since f0bf88e" list at the top.
+
+1. **The window figure:** the checker takes no tolerance argument. It reads the tolerance of the drawing that owns the part, and every result, "Cannot check yet" included, carries the figure and source it used. Pipe and Levels print only that. The editor's preview shows only the typed entry. Planted case 7, the unsaved 11 mm fed to the grey line, must fail.
+2. **The allow-list:** nine permitted origins are written out, each with its use and reason. Any read that does not match on origin, owning drawing, setting, kind, unit, operation and destination fails. Planted cases 8 (the wrong drawing, 10 mm short, staying Wrong at 5 mm) and 9 (the invert gap fed to label placement, 83 mm restored) are added.
+3. **Missing figures:** on the sheet, an unknown grade is omitted, an unset surface cover is omitted, and an unknown pit cover prints "CL TBC".
+4. **The distance limit:** it applies to every distance setting in its declared unit. The pit drop allows 10 m and refuses 10.001 m. Zero stays allowed for the tolerance. A saved override that fails falls back to the office value with a warning.
+5. **DRAFT marks for Tim:** whole millimetres only, the 10,000 mm cap, and "Back to office values" keeping unrecognised settings.
+
+**One follow-up (it does not hold the page):** line 37 also says "other missing figures that the sheet calls for read 'TBC'". The rounding page (5a77b22, edit 6) says "TBC" appears only as "CL TBC". The build must follow ROUNDING, and the store's test list should name any other sheet figure that could be missing.
+
+**What this means:** the settings store may be rebuilt from this page. team/settings-store-main's code is not carried as it stands.
