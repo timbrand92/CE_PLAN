@@ -22,7 +22,7 @@ Current rulings as of 20 Nov 2026 (Melbourne), from decisions D-001 to D-383 (D-
 11. **When working a design question through with Tim, give the context and a real-world example each time** (D-171).
 12. **Mock-ups are full size and show the true content of the window** (D-065).
 13. **Drawing terms, answer first, a real drawing example, clickable choices with one recommended, own mistakes plainly, never guess** (R-03 to R-10; `UI_UX_RULES.md` "How to work with me").
-14. **No tables; numbered lists with bold labels** (RULES.md Rulings item 2, treated as settled by Tim's 16 Nov prompt).
+14. **Numbered lists with bold labels; tables allowed, 4 columns at most, questions and decisions stay lists** (`C:\TimOS\RULES.md` 2.2, rev 2; Tim, 20 Nov 2026: "Rest agreed" on `areas\rules.md`). *Superseded 20 Nov 2026: "No tables; numbered lists with bold labels" (RULES.md Rulings item 2, treated as settled by Tim's 16 Nov prompt).*
 
 ### Questions
 
@@ -61,6 +61,7 @@ Current rulings as of 20 Nov 2026 (Melbourne), from decisions D-001 to D-383 (D-
 2. **Small sketches as mock-ups were replaced by full-size mock-ups with true content (D-065, 16 Nov).**
 3. **The daily batch of up to 12 questions (LOOPS loop 4) was changed by Tim's room (D-353, 20 Nov):** interviews down a list of unknowns, filed by the control room.
 4. **The removal of his q alias under D-250 was undone by D-306 (19 Nov).**
+5. **"No tables" was replaced by the rulebook's "tables allowed, 4 columns at most" (20 Nov, Tim: "Rest agreed" on `areas\rules.md`).**
 
 ## Still open on this subject
 
