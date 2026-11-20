@@ -143,3 +143,8 @@ This list has now been held three times, each time on a new way past the same do
 ## 19. Owed in AutoCAD
 
 The real drawing's changed flag and Undo list after a refusal; the colour of the grey line; model or paper ownership through a viewport; the saved drawing's own fingerprint after reopen.
+
+## 20. Ruled since (control room, 8:25 pm, D-431)
+
+1. **For every list:** once a round closes the reasons named in the list's last answer, any further "a faulty build could pass" finding becomes a BINDING PROBE for the BUILD's check (unseen figures and cases; no merge without them), not another hold of the list. For this list that applies after the round that closes the six gaps of section 16.
+2. **Added for the units BUILD, because a metre drawing is a hard limit:** ONE general test that, for EVERY registered command in EVERY refused kind of drawing (each refused unit, a layout sheet, a read-only drawing, and their combinations with a viewport), the WHOLE drawing is identical before and after: every object, erased ones and the next object number included, every layer, block, style and record, and the Undo marks. The build room writes it with the units build; the check room will not merge that build without it.
