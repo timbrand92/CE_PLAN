@@ -85,3 +85,26 @@ Blockers 1 to 3 (the fail-open sandbox; a log written over any file; PASSED on f
 2. **The picture runner closes its own test AutoCAD** after a run or a stop, through the launcher's ONE safe-close owner, by 8:00 am; a late stop flag must not leave it running.
 3. **The two AutoCAD-only questions** go on the AutoCAD test room's list for after the gate.
 4. **Fixed by building and reading only;** run by no one on this PC (D-420).
+
+
+---
+
+# Third verdict: team/acad-pictures2 at 6ee2897 (the picture route, round 3), by reading only
+
+**Verdict: HOLD, thirteen open blockers by reading.** Written Fri 20 Nov 2026, about 9:25 pm. Read by the Codex adversarial reader (gpt-6.2-astra) from a plain-text copy, nothing run: `C:\CE_WORK\check\reports\pic3_adv_REPORT.md`. The honest half (now one Sonnet helper, D-434) is queued; it is added at the foot when it lands and can only add to this same round. Under D-420 no reading opens the gate. Every one of the nine blockers of the second verdict is now PARTLY closed (none fully); section C is still open; D-423 items 1 and 2 are answered as rulings but only partly built. Line numbers are in the `.txt` copies.
+
+## G. Open blockers (one line each; detail in the report's section 4)
+
+1. **Where the night's drawing came from is not proven.** The "blank" receipt does not name the drawing's bytes, the process that made it or the night; nested block content, edited attributes, fields and backgrounds escape the counts; the shipped blocks are not checked against their fingerprints (D-423 item 1, D-417). `ce_safety.ps1:1124-1141`, `NightRoute.cs:57-76, 247-266`, `DrawingScan.cs:49-59, 71-125`.
+2. **A privacy refusal does not end the run where it happens:** the switch stays armed, a picture request can go before the refusal is read, a failed send skips the read, a missing refusal log means "no refusal". `WindowDriver.cs:235-245`, `NightRoute.cs:44-52, 272-285`, `ce_pics_run.ps1:159-165, 190-207`.
+3. **A warning can write a document name into a file:** full window titles of other programs' windows reach the note and the run log unfiltered. `ce_safety.ps1:287-309, 538-558, 583-589`.
+4. **A handmade marker passes:** the writer field is a public constant; nothing ties the marker to the window that wrote it; a stale foreign marker can block the real one while the driver still fills. `WindowMarker.cs:15-33, 41-52`.
+5. **A link or a changed folder can still redirect a write or a delete:** a failed hard-link query counts as one, a failed lookup as absent, the name is opened again after the check, a fixed temporary name can overwrite a real file. `PathLinks.cs:17-40, 54-62`, `WindowMarker.cs:41-66`, `Pictures.cs:22-45`.
+6. **A stop can land between permission and action:** a group of lines is sent without rereading the desk, the window, the stop or the deadline; a picture started before 8:00 am can be written after. `ce_pics_run.ps1:115-143`, `ce_safety.ps1:603-629, 804-812`.
+7. **The morning result can read DONE with the test AutoCAD still open:** the close is not awaited, its outcome (normal or forced) is not carried into the verdict, no cleanup for an unexpected error (D-364 items 3-4, D-423 item 2).
+8. **Helper clean-up can end a process that is not the run's:** processes are found by number on the real machine and killed later, with no held handle or start-time match (rule 1.9). `ce_pics_run.ps1:88-106, 123-150`.
+9. **Two runs can claim one AutoCAD:** no exclusive owner; a runner that refuses before starting still calls the closer; an old driver can take the next step of the same run. `NightRoute.cs:89-122, 159-189`.
+10. **Who may send is still incomplete:** the runner's script is found anywhere in the raw command line; a failed quiet-desk query is not tested; the first modal show may ask for the front before no-focus is set. `ce_pics_common.ps1:110-126`.
+11. **Tests leave their boundary:** the stand-in sender test launches a program from TEMP; the C# wrapper's child build has no private output root; fixtures delete sibling temporary folders; an ancestor junction is unchecked (D-388, D-420 items 4-5). `test_pics.ps1:21, 55-57, 568-574`.
+12. **The guard-removal driver can give false credit:** a picture check already failing before removal counts as proven. `test_guard_mutations.ps1:69-88, 95-123`.
+13. **A licence or Fatal Error halt is not held:** if the licence box has gone by the second look, the common close path may close; the halt must stay latched and the session be left for Tim (rule 1.9). `ce_pics_run.ps1:46-56, 74-80`, `ce_safety.ps1:538-577, 1007-1019`.
