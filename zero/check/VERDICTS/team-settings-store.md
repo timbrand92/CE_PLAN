@@ -52,3 +52,17 @@ Save, close, reopen; two drawings; Save As; a file copy; WBLOCK of part and of t
 3. **A whole-drawing WBLOCK carries the settings;** a part copy leaves the other drawing's alone.
 4. **His saved HDPE stays when he picks 150:** his setting wins; the size rule applies only while the material is the office's.
 5. **The store is not "built" until Pit and Pipe read every setting on D-419 item 7's list.** (So section 3 and section 4 item 1 are part of this job, not follow-ups.)
+
+## 9. The honest half (landed about 8:05 pm): the halves split, the HOLD stands
+
+Honest check: Team helper, Claude Opus 5.5: `C:\CE_WORK\check\reports\set2_honest_REPORT.md`. Its answer was MERGE, with this reasoning: it found the same faults (its follow-ups 1 to 6 are this page's blockers 1 to 4, at `CeSettingsStore.cs:59`, the adapter's write and remove, `OfficeSettings.cs:150`), but nothing in the released tools calls save or reset yet, so it judged them harmless today and said any branch that adds a caller must be held.
+
+**Why the check room still holds:**
+
+1. **Blocker 4 needs no save at all.** With the office row or the whole office list missing, the Pit tool draws the number at a built-in 900 with no words; an office row of 0.9 with the unit m draws 0.9 mm. That is on the read side, which the Pit tool calls today. (The honest check confirms the code: its follow-up 5.)
+2. **A blocker is a fault that COULD lose drawing content** (D-346), and the store's save and reset are the thing being merged. Putting a save that wipes a record it cannot read onto the main line, on the promise that the next branch will be held, moves the fault, it does not close it.
+3. **D-425 item 5:** the store is not "built" until Pit and Pipe read every setting; the honest check found the same eight missing and that only the number spacing is read by a tool.
+
+**What the honest half adds for this same round (no extra strike):** its seven take-outs show the 14 tests are honest for what they cover (isolation, office fall-back, the source word, damage words each caught), but "Back to office values" taken out fails only one test; a newer version's record layout is read as damaged and then replaced WHOLE on the next save (part of blocker 1); two rows carry the wrong status (the 150 mm and 1,000 mm are Tim's rulings D-406 item 5 and D-405 item 5, not "the brief's figure"; the sump is D-406 item 8); the 75 mm label gap is still read straight from the tool list by the Pipe tool, outside the store; a damaged record prints its warning once for EVERY pit placed (say it once per command); the writer's report file should not be in the product tree.
+
+**Two more questions for the control room:** (e) should each changed row have its own small reset as well as the one "Back to office values" button (D-414 names only the one)? (f) a drawing that already holds an entry of the same name that is not ours: refuse to save settings in it and say so (recommended; never overwrite)?
