@@ -99,3 +99,22 @@ Eight of the sixteen settings have no reader in Pit or Pipe (the invert gap 200,
 
 1. **The store may MERGE once its own blockers close** (both halves), and is marked "built" only when the labels, marker and grips builds read the other eight settings; each of those builds owes "reads its settings from the store" as a MERGE condition.
 2. **ONE source for the tolerance: the store.** Nothing else may hold a tolerance (the older Job record included); blocker 1 of section 12 is fixed that way.
+
+
+---
+
+# Final verdict: team/settings-store-main at 83d1559 (its LAST fix round)
+
+**Verdict: HOLD, with the one-page open list below. The last round (D-346): the control room decides.** Written Sat 21 Nov 2026, about 2:24 am. Checked on the bench only.
+
+**Who checked, and how they split.** Honest: one Claude helper on Sonnet: `C:\CE_WORK\check\reports\set4_honest_REPORT.md`: MERGE (a legacy 17 mm Job record against a saved 12 gave 12 in both the window and the check; the numeric material and the over-limit distance refused; every earlier case replays clean; it listed every place in `src` and `bench` that holds or reads a tolerance). Adversarial: Codex gpt-6.2-astra: `C:\CE_WORK\check\reports\set4_adv_REPORT.md`, proofs in `set4_adv_proofs\`: HOLD; all 65 earlier cases run; two new routes still give a false pass. **Closed:** the older Job record no longer overrides the tolerance; "6,5" is refused with the office material used; the over-limit saved distance no longer draws at 10,000 mm.
+
+## 16. The open list (the one-source ruling of section 15, not yet whole)
+
+1. **Levels takes a second tolerance from an older pipe note, in the shipped set-up:** on a 150 mm pipe with 290 mm of cover against 300 mm, the drawing set to 5 mm and an older pipe note holding 17 mm, the Levels window uses 17 and passes it. One source: the store; an older note's tolerance is ignored (and said, once) (section 15 item 2).
+2. **A mislabelled office row can make Pipe announce 5 mm and judge at 17:** the office-link check counts the link but accepts it on the wrong row (`Standards.cs:423`, `OfficeSettings.cs:107`, `CeSettingsStore.cs:66-78`). D-425 item 1: a missing or mislabelled office row STOPS the tool, naming the row.
+3. **The Job window can save an over-limit entry as 10,000 mm:** "10000.0000…01" typed in the Job preview reopens at 10,000 (an ordinary 10,001 is refused). Check the typed text against the limit before rounding, on every input path, not only the saved record.
+
+## 17. For the control room
+
+1. **What next for the store?** Recommended: one bounded edit of exactly these three (they are narrow and all on the one-source rule), read back by the check room with one run; the alternative is the adversarial half's recommendation, a one-page design review of "one tolerance source" under D-346. The store is still not "built" (8 of 16 settings read), as section 15 already says.
