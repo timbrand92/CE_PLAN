@@ -143,3 +143,5 @@ All five faults of the second look: the Wrong example is now 288 mm, "Short by 1
 ## 16. A fault of the check room's own
 
 The check room's eight desktop pictures were taken at a 1500 by 950 browser size and cut the window's right fifth and foot off. The checker measured the desktop windows from the page and from Tim's room's own full-size copies instead. Desktop pictures next time at 1960 by 1120.
+
+**The one edit, confirmed (about 11:00 pm):** Tim's room merged the within state's two cover lines into one ("Shallowest 297 mm at P3: within the 5 mm tolerance"). The check room's own picture of the laptop "within" state with long names (`C:\CE_WORK\check\reports\timroom_pics3\sp_laptop_within_long_v2.png`) shows step 3's last line about 25 px clear of the card edge, nothing touching, band green, no marker. (The page's own overflow flag could not be read headless.) **The pictures may go to Tim.**
