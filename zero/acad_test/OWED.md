@@ -3,7 +3,7 @@
 **Kept by:** the AutoCAD test room ("CE_ACAD / acad test / 01"). **Started:** Fri 20 Nov 2026, 11:30 am.
 **Rule (D-346, added 20 Nov):** a fix may merge on its bench tests and one honest check; it is "proven" only when its owed list here has passed in AutoCAD, in pictures.
 **States:** OWED (not yet run) · PASS (date, picture) · FAIL (date, picture, what was seen) · SEEN (no ruling yet, put to Tim) · WAITS (its work is not on the main line) · PARKED (off the release).
-**Count on 20 Nov, 1:45 pm:** PASS 0 / FAIL 0 / OWED 14 / WAITS 60 / PARKED 1 (of 75; one item struck). Eight check-room verdicts received, all HOLD or held. Three check-room verdicts received, all HOLD: the night scripts on the main line (section F), the pipe's opening size (section G) and the windows (section H).
+**Count on 20 Nov, 1:45 pm:** PASS 0 / FAIL 0 / OWED 14 / WAITS 67 / PARKED 1 (of 82; one item struck). Nine check-room verdicts received, all HOLD or held. Three check-room verdicts received, all HOLD: the night scripts on the main line (section F), the pipe's opening size (section G) and the windows (section H).
 
 ## A. From `stage6\STAGE1_TIMS_EYES.md` (the everyday run proves these; steps in `EVERYDAY_RUN.md`)
 
@@ -136,5 +136,17 @@ Nothing is shown until it merges. All six WAIT.
 74. **L-4 Save and reopen** (a saved COPY in the test folder, never the night's test copy itself): the marker is still there and still right. WAITS.
 75. **L-5 Copy, move, mirror** a flagged pipe: the marker goes with its pipe and a copy has its own. WAITS.
 76. **L-6 Cancel, one Undo and Redo.** The danger to look for: Undo takes the marker and leaves the undersized pipe. WAITS.
+
+## M. From the check room's verdict on the units doorway (its test list is held; `check\VERDICTS\codex-tests-units.md` section 5)
+
+Nothing on the bench reads AutoCAD's own units setting, so only AutoCAD can show these. Nothing is shown until it merges. All seven WAIT. Each uses its own test copy, made from the office master with that one drawing setting changed in the copy; no setting of Tim's AutoCAD is touched. This room types PT and PIPE; the typed names PP and CD are Tim's hands. (K-3 is the metre case of this list.)
+
+77. **M-1 A drawing set to metres:** refused, nothing brought in, the drawing not marked as changed, nothing to Undo. WAITS.
+78. **M-2 A drawing set to inches:** the same. WAITS.
+79. **M-3 A drawing set to feet:** the same. WAITS.
+80. **M-4 A drawing with no units set:** drawn at true size, with the grey line saying so. WAITS.
+81. **M-5 The display format changed, insertion units left at millimetres:** drawn as normal. WAITS.
+82. **M-6 On a layout sheet.** What is right is as the verdict page says; recorded as seen if it does not say. WAITS.
+83. **M-7 In a read-only drawing.** As M-6. WAITS.
 
 **Also noted, not counted as owed proofs (they are faults in the checks, asked of the build room):** CEPIT3, CEPIPE3 and CELEV2 still expect an inch drawing to be refused; CELEV1's third check expects "Chosen" where "TypedOver" is right; CETEST lists its run twice, so its lines count twice; the code-route EXPLODE check has failed in every pass since pass 1.
