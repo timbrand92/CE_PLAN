@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-155.
+**Next number:** TR-159.
 
 ---
 
@@ -397,3 +397,13 @@
 **TR-153** (unknown U-138, B6; Reverse flow when he typed both end levels, so the pipe plainly falls one way). He picked: "The arrow turns; red 'Wrong: runs uphill' (Recommended)". His levels are never changed; the flow and arrow turn as asked; the pipe shows red "Wrong: flow runs uphill" with the two levels until he changes a level or reverses it back.
 
 **TR-154** (unknown U-139, B7; a new pipe drawn through an existing label). He picked: "It moves to its next clear spot (Recommended)". The earlier pipe's label re-finds a clear spot by the same rules, in the same Undo as drawing the new pipe; a label he had moved by hand is NOT moved: it stays and gets the amber marker (D-014).
+
+## Batch 38, Fri 20 Nov 2026, 16:26 (clock read), through the question window, one line per question (the control room's B8, B9, C1, C2 from `interview/FROM_CONTROL_ROOM.md`)
+
+**TR-155** (unknown U-140, B8; the number circle on a big pit, where 900 mm to the circle's centre would put it on the pit). He picked: "Keep at least 150 mm clear of the pit's edge, a setting (Recommended)". 900 mm to the centre is used unless that leaves less than 150 mm between the pit's outer dashed line and the circle; then the circle moves out until the gap is 150 mm.
+
+**TR-156** (unknown U-141, B9; where the mask's off switch is). Offered: one setting for the drawing (recommended); a tick on each piece of text; one office setting for all jobs (the control room's draft). He picked: "A tick on each piece of text". Not the recommended answer and it OVERTURNS the control room's draft. Each label, invert level, cover level and number has its own Mask tick, on by default (TR-132).
+
+**TR-157** (unknown U-142, C1, the draft D-392: in Stage 1 a pit's depth is never typed or held; cover is typed, the invert comes from the pipes, depth is worked out). He did not pick an option and wrote: "FOR SILT PITS THE DEPTH IS DEEPERE THAN THE LOWEST OUTLET". NOT a yes to the draft. Room's reading (mine): he is giving the case the draft breaks on: a silt pit has a sump, so its depth is deeper than its lowest outlet and cannot be worked out as cover level minus outlet invert. Silt pits are a later kind (D-104) and are not in the Stage 1 list (TR-052), so for junction, grated and plastic pits the draft may still hold; but depth must not be built as something that can ONLY be cover minus outlet invert, or silt pits will not fit later. U-142 stays open; to put back to him as: for the three Stage 1 kinds depth is worked out; a sump depth below the outlet is a typed figure that comes with the silt pit.
+
+**TR-158** (unknown U-143, C2, the draft D-399: the words when cover is short). He picked: "Yes, that wording (Recommended)": "Short by 3 mm at P3, Pipe 7 (P4 to P3): cover 297 mm, needs 300 mm." The same sentence in the window, on the amber marker's hover and in any list.
