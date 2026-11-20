@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-086.
+**Next number:** TR-087.
 
 ---
 
@@ -219,3 +219,7 @@
 **TR-084** (unknown U-123; a pipe whose drawn width is not an office size; example, 137 wide). He picked: "Show 137, amber 'not an office size' (Recommended)". The window shows what is drawn, amber "Needs a look", and offers the nearest size in one click; the label is left until he chooses; nothing is changed for him. Closes U-123.
 
 **TR-085** (unknown U-124; an old joined pipe with no flow direction on record). He picked: "No arrow until it is known (Recommended)". No arrow, "flow direction not known" in grey, until levels, a joined outlet or his own Reverse click settle it. Closes U-124.
+
+## Fri 20 Nov 2026, 13:31 (clock read), through the question window: four "confirm these ten" questions (40 plain lines about the Pit tool from `stage6/SPEC_PIT.md` section 10, batched as the control room asked)
+
+**TR-086** To each of the four he picked: "Go through them one by one". NONE of the 40 lines is ruled. Room's reading (mine): he does not want plain lines batched into one yes; every specific is put to him singly, with its own example and recommended answer (it fits his words of the same morning to the control room, "i need every specific down to a tee"). From now on: one question per line, four to a window. The control room's request to batch plain confirmations is not followed, on his word.
