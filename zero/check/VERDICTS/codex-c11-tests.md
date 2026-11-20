@@ -106,3 +106,41 @@ The cover limits at 0, 5 and 10 mm tolerance behave at the limit and 0.1 mm eith
 2. **The shortfall sentence, a DRAFT:** "Short by 3 mm at P3, Pipe 7 (P4 to P3): cover 297 mm, needs 300 mm." Tim ruled that every pipe has its own running number, never printed, shown as "Pipe 7 (P1 to P2)". The test holds the figures, the place and the pipe; the word order is a draft.
 3. **"MIN." stays** with both ends measured.
 4. **D-405 and D-406 (about 4:32 pm): the shortfall sentence is confirmed by Tim.** It is no longer a draft.
+
+
+---
+
+# Third answer: codex/c11-tests at 335ce64 (its last fix round): HELD, with a one-page open list
+
+**Answer: HOLD THE LIST. It is held now (D-346: two rounds done). The open list is five small, exact items; two of them come from a ruling Tim made AFTER this round was written (D-406), not from a fault of the writer.** Written Fri 20 Nov 2026, about 4:45 pm. Checked on the bench only.
+
+**Who checked.** Honest check: Team helper, Claude Opus 5.5: `C:\CE_WORK\check\reports\c11c_honest_REPORT.md` (ACCEPT for Stage 1 with three small items open; it ran the full suite, which the builder had not). Adversarial pass: Codex gpt-6.2-astra: `C:\CE_WORK\check\reports\c11c_adv_REPORT.md`, proofs in `c11c_adv_proofs\` (HOLD; a third cheat, written against this tip, turned all 73 targets green). Graded here.
+
+## H. Counts seen (the builder had only compiled; these are the check's own runs, and the two helpers agree)
+
+1,985 tests: 73 Stage 1 targets (72 fail, 1 passes: see item 5), 25 controls pass, 33 waiting targets run and fail, 4 waiting tests skipped with their reasons, 1,850 older pass. Only test files changed. Every failing target fails on a wrong figure, word or missing label.
+
+## I. What the round closed
+
+All four reasons of the second answer and all six added rows are in (the reverse Pit sum is rightly waiting under D-392; the label read is by name for the cover and by text and end for the inverts). `P3_40` and the detention row of `P3_25` are waiting. The shortfall sentence holds the three figures, the end and the pipe. The two saved cheats, which turned all 67 targets green last round, now leave 13 of 73 red, every one a row from this round.
+
+## J. THE OPEN LIST (one page; nothing else holds the list)
+
+1. **Four expected labels are now wrong against Tim's ruling.** D-406 item 2 (filed 4:32 pm): a WORKED-OUT grade prints to the whole number ("1 IN 95"). The fresh-run and drawn-grade targets expect "… AT 1 IN 200.04" and the like (`tests/CeCivil.Hands.Tests/AcceptanceC11DrawingTests.cs:275-326, 364-375, 427-443`). Restate: the exact grade and the two-place verdict in the window; the whole-number worked grade on the named label; a TYPED grade exactly as typed (D-154). The empty waiting test at `:430` gets its body. Subject to question 1 below.
+2. **A 225 pipe's label is expected to read "UPVC SN8" with no material typed,** and the office list has a default for 100 and 150 only (`src/CeCivil.Brain/data/material_by_size.csv`; an older test requires that 225 has none). Type the material in the fixture, or use a 150.
+3. **The gate is not written on the list:** Stage 1 is `C11=target&Stage!=2`; controls `C11=control`; the 33 `Stage=2` targets and the 4 skipped are counted apart.
+4. **The older tests the build must change are not named.** Twenty-nine older tests failed on the cheating product, but the two helpers agree that does NOT show 29 out-of-date tests: about 17 trace to a ruling that replaces them (D-350, the metre refusal, "MIN.", "CL TBC", D-341, the numbered pipe); the rest are guards that caught the cheat. The adversarial helper has sorted all 29 by name: `c11c_adv_proofs\older-rulings.md`. Put the out-of-date ones on the list with their rulings; the product is never changed back to suit one.
+5. **`P3_35_Pipe_cover_of_294_5_mm_is_wrong_with_100_5_mm_of_paving` is marked a target but passes today** (`bench/CeCivil.Bench.Tests/AcceptanceC11WindowTests.cs:130`): relabel it a control (72 targets, 26 controls). In the same edit give the 450 mm requirement to Pipe 7 as well as Pipe 12 (`tests/CeCivil.Brain.Tests/AcceptanceC11ChecksTests.cs:166-210`), and supply what is over the pipe through the step 2 read-off (D-409 item 1), not a step 1 choice.
+
+## K. Not held for, and why (the adversarial helper's other reasons)
+
+A cheat written against this exact tip still turned all 73 green by keying on the listed lengths, levels and pipe numbers (a 26.0007 m pipe said Suits; a level of 1333.375 was lost; cover at RL 17.794 was worked from the rounded invert; the cover rows sat 5,001 pixels outside the window). After two rounds, more rows of the same kind only move the keys. That fault is caught at the BUILD's check, not by a longer list: **when the C11 build is handed over, its honest check runs the adversarial helper's independent probes** (`c11c_adv_proofs\`: 75 cases today, 23 failing on the cheating product) **against the product, and looks for values keyed to the tests.** This is written here so it is not lost.
+
+## L. For the control room
+
+1. **A too-flat pipe would be labelled as if it were at the limit.** 20.004 m falling 100 mm is 1 in 200.04: the check (two places, D-380) says Needs a look, flatter than 1 in 200; under D-406 item 2 the label prints "1 IN 200". Is that what Tim wants, or does a worked grade never print steeper than it is (1 in 200.04 prints "1 IN 201")? One row waits on the answer.
+2. **How the list goes forward.** It is held under D-346. Recommended: not a design page: one short, bounded edit of exactly items 1 to 5 (two of them exist only because D-406 came after the round), read back by the check room by reading alone, with no new adversarial pass. Say if you want it otherwise.
+
+## M. Follow-ups
+
+`FOLLOW_UP\part3-cover-and-grade.md` stands: the two weak controls; the three source-text guards; the Pipe working rows against D-393's three decimals when the window is built; the pipe's running number is echoed from the fixture (the numbering job tests it); a detention row among the Stage 1 controls (`AcceptanceC11ChecksTests.cs:346`); the design page's report section still says 1,975 tests and 67 targets.
