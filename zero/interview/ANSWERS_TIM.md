@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-058.
+**Next number:** TR-062.
 
 ---
 
@@ -149,3 +149,13 @@
 **TR-056** (unknown U-056; MIRROR for the second unit of a dual occupancy: what happens to the text). He picked: "Text stays readable, re-placed by the rules (Recommended)". Nothing reads backwards or upside down; each mirrored label, invert level, arrow, number and cover level is put where the placing rules (TR-009 to TR-021) put it on its new part; arrows still point with the flow; a label moved by hand on unit 1 is mirrored to the matching spot. D-179 (next free numbers, levels marked assumed) stands. Closes U-056.
 
 **TR-057** (unknown U-062; a pipe copied on its own). He picked: "A new loose pipe, same figures (Recommended)". The copy is its own pipe: same size, material, grade and label words, joined to nothing, "not joined yet"; its levels come across marked assumed; the original is untouched. Closes U-062.
+
+## Batch 15, Fri 20 Nov 2026, 12:50 (clock read), through the question window. Before it he chose "More questions first" (plain questions before the owed pictures).
+
+**TR-058** (unknown U-020; which point of the pit is on the cursor when placing). Offered: the centre (recommended); centre, with a key to cycle corners. He picked: "Centre, with a key to cycle corners". Not the recommended answer. The pit starts on the cursor by its centre; a key (Tab was the example in the question, not ruled) steps the cursor point round the four corners and four wall midpoints while placing; ordinary object snaps work. Closes U-020.
+
+**TR-059** (unknown U-030; a click inside the pit, not on its wall, when drawing a pipe). He picked: "On the wall facing where you go next (Recommended)". A click anywhere inside the pit counts as that pit; the pipe leaves through the middle of the wall facing the next click, square to it, and stops at the inner wall. A click ON the wall still starts exactly there (D-034). Closes U-030.
+
+**TR-060** (unknown U-104; how close a click must be to count as on the pit; example, a miss of 80 mm outside the outer line). He picked: "Only on or inside the pit joins; show the catch (Recommended)". D-270 stands with no catch distance; while he draws, a pit lights up the moment the cursor is on it. Closes U-104 for the ruling; the feel is still for his own hands.
+
+**TR-061** (unknown U-035; how a bend is drawn). He picked: "A sharp corner, as you draw now (Recommended)". The band turns the corner as a polyline does; no fitting symbol; any angle is drawn. Which angles the standards allow, and any flag, stay open under U-098 (research owed). Closes U-035.
