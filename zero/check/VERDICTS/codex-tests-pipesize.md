@@ -76,3 +76,26 @@ The rows that rest on these are marked DRAFT D-430; they came after the round an
 ## 9. What closed
 
 The whole label compared; the 230 mm band keeps 230 with its marker; saved and hand-edited words kept through OK, Levels and Undo; silence about cover where nothing is over it; the loose-end extension (WAITING); clear, reopen and cancel; the wrong pipe of two; the impossible counts out; and the D-430 rows (source words, the older pipe's number, unknown flow, the accepted office size, the unanswered bump).
+
+
+---
+
+# Third answer: codex/tests-pipesize-main at 09ec59a (its last round)
+
+**Answer: ACCEPT THE LIST. Both halves accept.** Written Sat 21 Nov 2026, about 12:48 am. Checked on the bench only.
+
+**Who checked.** Honest: one Claude helper on Sonnet: `C:\CE_WORK\check\reports\ps3_honest_REPORT.md`. Adversarial: Codex gpt-6.2-astra: `C:\CE_WORK\check\reports\ps3_adv_REPORT.md`, proofs in `ps3_adv_proofs\` (a disposable reference build passed all seven checks of the edit route, so a right build can pass them; the earlier shortcut patch still fails all 71 targets). The one reason of the second answer is CLOSED: the existing pipe is picked through the ruled prompt (the Polyline keyword and an object pick) and by preselection, with "Select" refused as a control. Every same-round item CLOSED (the marker colour row WAITING with its AutoCAD case; the taper owed by name; rows waiting on other branches excluded by trait; A432 DRAFT D-426; one test host, byte-identical to A6's). The whole solution builds; the 673 older pretend-drawing tests pass; only tests changed.
+
+## 10. Binding probes for the pipe-size BUILD (D-431; no merge without them)
+
+1. **Two pipes between the same two pits** are both allowed, each with its own number (D-398 item 2); A6's tip refuses the second as "already drawn", so B254 and B276 cannot pass until it does.
+2. **The start prompt offers exactly "Polyline"** and refuses any other keyword with the drawing unchanged; the shared host no longer filters keywords, so the product must.
+3. **The marker's own colour 40 over the grey CE NO PLOT layer,** proven in AutoCAD.
+4. **A real 225-to-375 taper and a later wider piece,** in AutoCAD.
+5. **Cancel leaves no Undo step,** in AutoCAD (the host records a snapshot even for a cancelled command).
+6. **The three Levels targets against the real Levels command** (A6's host does not link Levels).
+7. **"Reads its settings from the store"** (the default pipe and the tolerance; the control room's settings ruling).
+
+## 11. What this means
+
+The list may go to the main line as one squashed commit (five commits above its base, and an earlier report in its history). Nothing about the product is accepted.
