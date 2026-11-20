@@ -184,7 +184,7 @@ ONE bounded edit is allowed to the refusal-word check: a correct metre refusal p
 
 # Read-back of the bounded edit: codex/tests-units at 9a0ace1
 
-**Answer: ACCEPT THE LIST.** Written Fri 20 Nov 2026, about 11:45 pm, by the check room alone (section 24). The edit: one file (`DrawingUnitsDoorwayTests.cs`), 49 lines in, 12 out, all in the refusal-word check and its controls; nothing else changed.
+**Answer: ACCEPT THE LIST.** Written Fri 20 Nov 2026, about 11:35 pm, by the check room alone (section 24). The edit: one file (`DrawingUnitsDoorwayTests.cs`), 49 lines in, 12 out, all in the refusal-word check and its controls; nothing else changed.
 
 1. **Read:** the check now needs a clause naming the unit found, a clause saying nothing was drawn, and a clause saying it is refused, not supported, or that only millimetre drawings are supported; and it rejects any clause that says the opposite ("fine to use", "continue", "can still draw"). The control rows now include "This drawing is in metres. Only drawings in millimetres are supported. Nothing was drawn." (must pass) and "Code 98 is fine to use. The plot style is unsupported. Nothing was drawn." (must fail). A refusal that does not say nothing was drawn now fails, as the open list asked.
 2. **One run by the check room** (its own worktree, whole solution built, 0 errors, the plug-in included): the units list 1,823 cases: 64 pass (the 51 controls, the 2 new controls, 11 targets the product already meets), 1,758 fail (the 1,750 targets and 8 witnesses, each on what the product does), 1 skipped (the legal point). No control fails.
