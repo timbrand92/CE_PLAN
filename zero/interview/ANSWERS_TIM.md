@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-038.
+**Next number:** TR-042.
 
 ---
 
@@ -99,3 +99,13 @@
 **TR-036** (unknown U-053; a pit moved with pipes on it, so a pipe's length changes; example, 10.0 m at 1 in 100 with both levels typed, then the pit moved 2 m further away). Offered: typed levels stay and the grade changes (recommended); the grade always stays; nothing changes, flag it. He picked none and wrote: "window opens to select one or the other and how it will transpire down the system if it exists". Room's reading (mine): when a move changes a pipe's length, a small window opens and he chooses which gives, the levels or the grade; the window shows what each choice does to the rest of the system downstream, where there is one. Not said: whether this window also opens after AutoCAD's own MOVE (which runs with no window of ours), what it opens with, and what happens if he cancels it. A picture is owed: added as U-113. U-053 stays open until that picture is answered. **Possible clash to flag:** R-41 ("No 'Are you sure?'") and the edit doorway D-348 (an AutoCAD MOVE is finished in one go); a window in the middle of a MOVE must be shown to work as one Undo.
 
 **TR-037** (unknown U-054; a pipe moved on its own, away from its pits). He picked: "It comes off, 'not joined yet' (Recommended)". The pipe moves where he puts it, lets go of both pits, reads "not joined yet", and its label and levels go with it; dragging an end back onto a pit joins it again; one Undo puts it back. Closes U-054.
+
+## Batch 10, Fri 20 Nov 2026, 12:24 (clock read), through the question window
+
+**TR-038** (unknown U-067; erasing a pipe; example, the pipe P3 to P2 selected and deleted). He picked: "Its label, levels and arrow go; pits stay (Recommended)". The band, edge lines, label, both invert levels and the arrow go together; the pits and their numbers are untouched; one Undo brings the pipe and all its text back. A hand-moved or typed-over label goes too (the other option was not taken). Closes U-067.
+
+**TR-039** (unknown U-068, and the rest of U-106; one piece of text erased by hand; example, "IL 12.31" deleted because it is in the way of a dimension). He picked: "It stays gone: that turns it off (Recommended)". Deleting a label, invert level, arrow, pit number or cover level by hand is the same as unticking it on the part; it stays off when the part changes; the tick in the window turns it back on; the figure itself is still known and still checked. Room's reading (mine): this also confirms that each piece of text has its own tick on the part (label, invert levels, arrow; number and cover level on a pit, as the Pit window picture already shows "Tag" and "Cover level text"). Closes U-068 and U-106.
+
+**TR-040** (unknown U-021; Undo after placing pits one after another; example, P4, P5, P6 placed, Enter, then Ctrl+Z once). He picked: "Just P6: one pit per Undo (Recommended)". Each pit, with its own window and OK, is its own Undo step. Closes U-021. (Pipes stay as D-324: the last pipe during the command, the whole run after Enter.)
+
+**TR-041** (unknown U-017; a pit dropped on the middle of a pipe that has both levels typed; example, IL 12.40 and IL 12.30, 10 m at 1 in 100, new pit P7 half way). He picked: "Worked out, with the 0.02 drop (Recommended)". The typed upstream level stays with the upper half and the typed downstream level with the lower half; the two levels at the new pit are worked out along the old grade with the office 0.02 drop across the pit (D-141), shown as worked out and his to type over; both halves keep the size and material. Room's note (mine): with both outer levels held and a 0.02 drop put in, the two halves can no longer both be exactly 1 in 100; which half's grade gives was not asked (the example figures in the question, "about 12.36 in and 12.34 out", split it evenly). Closes U-017.
