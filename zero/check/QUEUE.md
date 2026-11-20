@@ -18,6 +18,8 @@
    - **Adversarial pass:** Codex gpt-6.2-astra (xhigh), `C:\CE_WORK\checkcad-windows_adv`, started 11:21 am, still running; the written verdict follows it.
 2. **codex/c11-tests pinned at 11c6041** (tests only for cause C11). Both helpers started 11:33 am: Team opus honest check (`C:\CE_WORK\check\c11-tests_honest`) and Codex astra adversarial pass (`C:\CE_WORK\check\c11-tests_adv`). The question: is the list honest against `design\SUMS_PIPE_AND_PRINT.md` with D-349, D-350 and the D-341 examples.
 
+3. **team\pipe-default at 393b649 (A5), RE-CHECK after its last fix round.** Handed back 11:41 am; main 22993fa is merged into it. Both helpers started 11:44 am: Team opus honest re-check (`C:\CE_WORK\check\pipe-default2_honest`) and Codex astra adversarial re-pass (`C:\CE_WORK\check\pipe-default2_adv`). Checked against the three blockers of `VERDICTS\team-pipe-default.md` and the control room's relayed ruling (an existing pipe shows its drawn width; never 100; if it cannot be read, say so and OK leaves the size alone). Fix rounds used: 2 of 2.
+
 ## 2. Waiting
 
 Handed over, not yet started (in the control room's order):
@@ -54,3 +56,4 @@ ight-scripts.md`. Ruled by the control room as D-364 items 1 to 10: the fix (tea
 3. **11:15 am:** main unchanged at 22993fa. team/acad-pictures moved to fe116c9; codex/tests-c9 moved to 73134fd; new branches with no work on them yet: team/night-launch (the launcher fix), team/acad-pictures2, codex/tests-a6b. No new hand-over.
 4. **11:24 am:** three hand-overs taken (acad-windows, c11-tests, the Pipe mock-up); first verdict given (night scripts, HOLD).
 5. **11:35 am:** main unchanged at 22993fa. Moved, none handed over yet: team/pipe-default to ad1ac51 (its second fix round), team/night-launch to c984973 (the launcher fix, in work), codex/doorway to 87c6440, team/acad-pictures to 4384464, codex/tests-a6b to 9446c2b.
+6. **11:44 am:** team/pipe-default handed back at 393b649; re-check started.
