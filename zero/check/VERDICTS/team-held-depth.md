@@ -47,3 +47,7 @@ The nine steps of the honest report's section on the first tip stand, with: regr
 ## 8. Ruled since (control room, 20 Nov, D-392)
 
 The three questions of section 5 are ruled as D-392: in Stage 1 a pit depth is never held and never typed (the approved window has no depth box); the cover is what he types, the invert comes from the pipes, the depth is always worked out; a new invert moves the depth, never the cover; an older held depth is let go at the first edit with the words of D-387; the cover on the plan is only the typed cover or "TBC", never a worked-out one. The next tip is checked against D-392.
+
+## 9. Ruled since (D-402, Tim, about 3:36 pm)
+
+Retyping a cover level text on the plan SETS the pit's level (cover only). Blocker 2 is to be read with this: a hand-edited "CL 7.77" is no longer just kept, it becomes the pit's typed cover; Pit OK must never put the old figure back over it. Text erased by hand still stays gone (D-377 item 6).
