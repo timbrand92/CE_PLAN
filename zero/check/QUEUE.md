@@ -15,8 +15,8 @@
 
 Four hand-overs came from the build room at 1:05 pm; each is ahead of main 22993fa and 0 behind.
 
-1. **team/night-launch at a092bf7** (the night-script safety fix: D-364 items 1 to 9 and the seven blockers). Both halves started 1:12 pm: Team opus honest check (`C:\CE_WORK\check\night-launch_honest`; may run only pretend-process tests, after proving they write nowhere real) and Codex astra adversarial pass by reading (`...\night-launch_adv`). No AutoCAD run until MERGE on both halves and the AutoCAD test room says go (D-364 item 10).
-2. **team/acad-windows at b645b43** (A1 to A3, last fix round). Both halves started 1:14 pm: Team opus honest re-check with its own pictures (`...\acad-windows2_honest`) and Codex astra adversarial re-pass (`...\acad-windows2_adv`). Against `VERDICTS\team-acad-windows.md`.
+1. **team/night-launch at a092bf7** (the night-script safety fix: D-364 items 1 to 9 and the seven blockers). Both halves started 1:07 pm: Team opus honest check (`C:\CE_WORK\check\night-launch_honest`; may run only pretend-process tests, after proving they write nowhere real) and Codex astra adversarial pass by reading (`...\night-launch_adv`). No AutoCAD run until MERGE on both halves and the AutoCAD test room says go (D-364 item 10).
+2. **team/acad-windows at b645b43** (A1 to A3, last fix round). Both halves started 1:08 pm: Team opus honest re-check with its own pictures (`...\acad-windows2_honest`) and Codex astra adversarial re-pass (`...\acad-windows2_adv`). Against `VERDICTS\team-acad-windows.md`.
 3. **team/office-blocks (A4), on main at 22993fa: adversarial pass only.** Codex astra, started 1:05 pm.
 
 ## 2. Waiting
@@ -67,4 +67,5 @@ ight-scripts.md`. Ruled by the control room as D-364 items 1 to 10: the fix (tea
 9. **12:08 pm:** three verdicts written (C11 list, pipe-default held page, Pipe mock-up). Six verdicts given today, none MERGE.
 10. **12:15 to 1:02 pm:** no turns taken, by the control room's order (the Claude weekly allowance was at 97 per cent until its reset at 1:00 pm). Looks at 12:15, 12:35 and 12:55 pm skipped.
 11. **1:05 pm:** back from the pause. Main unchanged at 22993fa. The answer on the design page given (fix the page first). The adversarial pass on team/office-blocks (A4, on main) started: Codex gpt-6.2-astra, worktree `C:\CE_WORK\check\office-blocks_adv`. Moved while paused, none handed over yet: team/night-launch a092bf7 (the launcher fix), team/acad-windows b645b43, team/held-depth 6c9bc07, team/a6-draw-first 5ebb23b, codex/c11-tests 75e8645 (the build carries on; the list check stays pinned at 11c6041), codex/tests-a6b d706c0c, codex/tests-a7b ed09bcb, codex/tests-five b23d46f, team/acad-pictures2 b876264.
-12. **1:14 pm:** four hand-overs taken; night-launch and acad-windows started (four helpers), office-blocks running (one). held-depth and acad-pictures2 wait for a free helper.
+12. **1:08 pm:** four hand-overs taken; night-launch and acad-windows started (four helpers), office-blocks running (one). held-depth and acad-pictures2 wait for a free helper.
+13. **1:12 pm:** one more hand-over, waiting for a free helper: **codex/tests-five at b23d46f** (tests only: failing targets for the five smaller Stage 1 Pit and Pipe cases; 6 fake-drawing targets fail and 8 controls pass, 2 window targets fail and 1 control passes; report `C:\CE_WORK\cw_tests-five\TESTS_REPORT.md`; one case has no ruling: a second "P1 to P2" join). Order of the waiting checks: team/held-depth, team/acad-pictures2, codex/tests-five, then the corrected design page and the Pipe mock-up after its fix 5.
