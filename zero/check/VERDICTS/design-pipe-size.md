@@ -65,3 +65,24 @@ The designer corrects the page; the check room reads the corrected page once mor
 2. **The pipe-size build carries the FLAG only** for pipes downstream of a resized pipe; the one offer to change several pipes (D-373) waits for the doorway.
 3. **Until Tim rules where a flag shows in Stage 1:** "Needs a look" shows in the window's band for that part and once on the command line.
 4. **The page is corrected against D-373 to D-383 and read once more by the check room before any build.** The questions in section 6 have gone to Tim's room.
+
+---
+
+# The one more read: the corrected page at 95f65aa (Fri 20 Nov 2026, about 1:42 pm)
+
+**Answer: FIX THE PAGE FIRST, but only four short wording fixes; no redesign.** 33 of the 41 items checked are closed in the page's own words, and all eight items of the held page are answered: the note now keeps only a typed size and a pipe's size is read from the pipe as drawn every time, which is the right answer to the root fault. Read by a Team helper (Claude Opus 5.5), by reading only: `C:\CE_WORK\check\reports\design-pipe-size2_REPORT.md`. The next read checks these four only.
+
+## The four places a builder would have to guess, or would put a wrong size on the plan
+
+1. **How far the flag reaches** (page sections 1.6, 5.5 and its test 19, against D-387 item 2). The page puts the amber marker only on the pipes OK wrote and the pipes directly below them; its own test 19 then expects the third of three 100s to be flagged after 150 is typed on the first. D-387: the reach is "down to the first pipe already big enough, naming the pipes", and the same when a NEW bigger pipe joins a pit with a smaller outlet (not on the page at all). The page must say: the flag goes on exactly the pipes the offer would name, in both cases; each flagged pipe's hover and window say which pipe caused it; a held pipe is flagged and named as his, never touched.
+2. **The words for an unreadable pipe contradict what OK does to its label** (sections 3.3, 4.2, 5.1). The message ends "Its width and label are left as drawn", while OK rewrites the tool's own label size to "TBC". A builder who follows the message leaves "300 DIA." on the sheet. The page must say: "Its width is left as drawn; its label will read TBC for the size on OK"; a tool label whose words the drafter has since edited counts as hand-written and is left alone and flagged; and what the label's material words do with no size.
+3. **One reader of a pipe's size is still not named** (section 3.4). The levels-along-a-run window rewrites pipe labels from the size in the pipe's note (`src/CeCivil.Hands/Run/RunTool.cs:344, 459-462`; `bench/CeCivil.Bench.Core/RunToolWindow.cs:166`). A pipe drawn 375 whose note says 300: change a grade there, OK, and the label reads "300 DIA.". And now that only a typed size is kept, an untyped pipe's label is skipped there altogether. Name it and send it through the reader, with a test.
+4. **A marker set by an OK that changes nothing** (sections 1.6 and 5.1 against 5.4 and test 22). The page says an OK with nothing changed writes nothing (bar the unreadable label), yet its test puts a marker on after such an OK. A marker is a drawing object. The page must say every OK sets or clears the opened pipe's own marker and those its flags name, inside the one Undo, and list it as the second exception; opening, REGEN and Cancel still write nothing.
+
+## Not holding the build (for the designer, eleven items in the report's section 7)
+
+Cite D-386 and D-387 and close the two questions they answer (a typed size is held on a copy; size never carries, everything else as last used); a bad TYPED size reads "Wrong" and OK refuses in words; name the waiting test for a run that starts on a pipe, and add one for a run that ends on a pipe (D-374); with a typed 300 on a pipe drawn 375, an untouched OK leaves the tool's own "300 DIA." label on it with only the marker to warn (worth one line of ruling); the amber compares what arrives with the DRAWN size, not the typed one; an older joined pipe with no flow recorded is used without a DRAFT mark; the questions for Tim need a drawing example and a recommendation each.
+
+## For the control room
+
+"The flag marker is built as its own job before pipe size" is what the page relies on (it waits if that job is not merged, and never falls back to the command line), but it is not written in `DECISIONS.md`: D-385 says where a flag shows, not when the marker is built, and D-384's order of work does not list it. No branch for the marker exists yet.
