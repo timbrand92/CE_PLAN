@@ -39,3 +39,43 @@ The builder's own Part B report (`C:\CE_WORK\scratch\codex_logs\ROUNDING_ROUTINE
 **Next:** the builder brings each of the six cases over as a failing test first, then fixes them, in round 1 of 2.
 
 **Ruled since (control room, about 7:10 am):** a pit size's maximum depth is an office THRESHOLD, compared exact (D-441 draft). **Blocker 6 is WITHDRAWN.** Five blockers stand.
+
+---
+
+# Second verdict: d0d35bc (fix round 1 of 2)
+
+**Verdict: HOLD. Both halves hold it. The next round is the last.** Written Sat 21 Nov 2026, about 9:12 am. Both halves ran on Codex under D-441, with the four outside-reading test classes excluded from every run:
+- **Honest half:** gpt-6.2-sol. Report: `C:\CE_WORK\check\reports\rr2_honest_REPORT.md`.
+- **Adversarial half:** gpt-6.2-astra. Report: `rr2_adv_REPORT.md`, with proofs in `rr2_adv_proofs\`.
+
+The first launch of both halves (and of the settings store checks) died at about 8:07 to 8:24 am: Codex's command runner refused to start processes. Both were relaunched and ran clean.
+
+**The main-line control is clean:**
+- **No regressions:** of 4,338 matched tests, no test that passes on main fails here, and all 118 runnable accepted controls pass.
+- **The build:** the honest half built the whole solution, CeCivil.Acad included; the adversarial half's build stopped at a missing AutoCAD package, though the other ten projects compiled.
+
+**Closed:**
+- the millimetre grade boundary (564.9499999999999 mm gives 1 IN 56; 564.95 mm gives 1 IN 57);
+- the typed schedule depth (it can no longer be typed over or locked, and it follows the cover);
+- a padlock surviving reopening (eight cases);
+- a padlock keeping APPROX.;
+- the direct source dodges named in the first verdict (51 of 63 planted changes were caught);
+- every earlier replay (the grades at 200.004 and 200.04, the 5.033 mm clash, the 299.53 mm cover).
+
+## Blockers
+
+1. **The same pipe prints two grades in a metres drawing** (adversarial half).
+   - **The case:** 0.56495 m in a metres drawing prints 1 in 56, against 1 in 57 for 564.95 mm. And 0.15494999999999998 m prints 1 in 16, where it should be 1 in 15.
+   - **The cause:** the picked coordinate is multiplied by 1,000 as a double before the routine sees it, at `src/CeCivil.Hands/Units/DrawingUnits.cs:62`, called from `PipeTool.cs:335`. Rulings: D-217, D-341, D-380.
+2. **The pit-size maximum now uses the job tolerance** (both halves). It was ruled the opposite way.
+   - **The case:** a 450 by 450 mm pit has a 600 mm maximum. At 5 mm tolerance it now passes at 600.4 mm and at 605.0 mm, where main warns at both.
+   - **The cause:** `checks.csv:56`. The test at `RoundingDrawingTests.cs:101` demands the wrong answer.
+   - **The ruling:** office thresholds are compared exact, as the control room ruled at 7:10 am and D-441 has it in draft. Both tolerances must warn above 600; equality passes.
+3. **The source test still lets a wrong sheet level through** (both halves).
+   - **The honest case:** a helper that changes the level through a `ref` argument, with a compound remainder assignment, just before `PitTool.cs:354`, makes 5.755 and 5.7554 both print CL 5.75.
+   - **The adversarial case:** keeping the level and its remainder in a tuple and subtracting makes 5.75496 print 5.75. All 400 focused tests passed on that wrong build.
+   - **Other escapes:** in all, 12 of 63 planted changes passed, among them a whole data template. Changing an exception's destination or reason to unrelated text still passes too.
+
+   The test at `RoundingSourceTests.cs:166-191` loses the quantity at ref arguments and tuple fields. Rulings: D-439 item 7, ROUNDING cases 6 and 7.
+
+**Next:** the LAST round fixes these three, each with its failing test first. After that comes the D-346 hold. Proofs for the 12 escapes: `rr2_adv_proofs\audit-results.jsonl` and `supplement-audit.jsonl`.
