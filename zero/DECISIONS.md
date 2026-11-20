@@ -772,6 +772,16 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-372** (Fri 20 Nov 2026, first given to the build room late in the morning and written here at 11:50 am by the clock; the control room's call, Tim's to overturn; the size a pipe opens with and holds) (1) A NEW pipe opens with the size of what arrives at its upstream end (the largest arriving), never smaller than what feeds it; joining nothing, the office default 100 dia., a setting (D-263, D-359). On a run of several pipes each pipe hands its size to the next. The last size typed never carries into an unrelated pipe. (2) An EXISTING pipe's size is read from the pipe as drawn (D-349) and shown as worked out from the drawing (the quiet dashed field), never as typed or chosen; if the drawn size cannot be read, the window says so in words, OK leaves the size alone, and 100 is never offered for an existing pipe. (3) A size the drafter types is a hold, shown solid, kept with the pipe. (4) Because the size fault survived two fix rounds (the check room, 20 Nov), no third patch: one short design page on what size a pipe holds and where it is kept, joined to the one-reader design of D-349, then one build.
 
+**D-373** (Fri 20 Nov 2026, 11:55 am and 12:07 pm; filed from Tim's room TR-022 to TR-029, where his words are kept in full) PIPE SIZE: (1) a new pipe leaving a pit opens at the BIGGEST pipe arriving (TR-022; confirms D-372 item 1). (2) A size typed smaller than a pipe arriving: "Draw it, amber 'Needs a look'"; never blocked (TR-023). (3) A pipe resized bigger: "Offer once, then flag": one offer to change the pipes downstream in the same Undo, otherwise each is flagged (TR-024). (4) A pipe started from a downpipe, tank or legal point opens at "Office default 100, unless it joins a pipe" (TR-025; confirms the 100 dia. default as his word).
+
+**D-374** (same sitting, TR-027) A RUN STARTING OR ENDING ON A PIPE: "Join them, old pipe stays one" (not the recommended answer). The old pipe is not split; the branch joins it part way along; the level there is worked out. A PIT dropped on a pipe still splits it (D-077).
+
+**D-375** (same sitting, TR-028) A POLYLINE PICKED AS THE RUN that has an arc, is closed, or is on a locked layer or in an xref is REFUSED, with the reason said. Completes D-356.
+
+**D-376** (same sitting, TR-029) A TYPED EXPLODE OF A PIPE: "Plain AutoCAD pieces, looks the same". The tool stops looking after it and says so once; one Undo makes it a pipe again. What EXPLODE really leaves in AutoCAD is still to be shown; a pit was not asked.
+
+**NOT DECIDED:** which pipe kinds Stage 1 draws (TR-026: he asked for a recommendation: "keep it simple but record everything so ... everything is scalable and can be built upon"; Tim's room recommends ordinary and charged in Stage 1, the others with Stage 2, every kind a data row from the start; to be put back to him). A pipe sleeved inside a larger pipe under a garage (his words: "under a garage we normally sleeve a 100dia. in a 150 upvc how do we handle this"; research `reference\research\R-016_SLEEVED_PIPE.md` recommends a tick on one pipe, size checks reading the inner pipe; not yet put to him).
+
 ## Not decided (asked or raised, no decision yet)
 
 1. Whether Stage 1's civil explanation is approved (Tim moved on to the design without saying "approve"). **Settled by D-117.**
