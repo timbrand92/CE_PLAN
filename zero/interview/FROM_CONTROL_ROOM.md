@@ -91,3 +91,6 @@ The Team account hit its usage limit on Friday 20 Nov at 8:47 pm and gives no ac
 
 ## S. Added 8:53 pm (D-435): one more for Tim on Monday, with section Q
 The flow arrow's block drawing (TIM_CVL_ARROW) carries a page set-up that names an office printer model and a local network address (6 places, that drawing only). Ship as is, or clear the page set-up in the copy? The count is in: all 301 web addresses in the block drawings are the CAD software maker's own; none is anyone else's.
+
+## T. Added 20 Nov, about 10:00 pm: FOR TIM ON MONDAY, a human read is needed (D-417 item 3)
+The permanent privacy scan of the 18 block drawings flags ONE piece of multiline text in the block drawing ON SITE DETENTION CRITERIA as a four-digit number of the shape of a job number. No one has printed or read it; it may be an engineering figure. He is asked to open that block drawing himself and say whether the text holds a job number. Until then the drawings stay on his PC only. (Detention is Stage 2, so this drawing is not needed for Stage 1.)
