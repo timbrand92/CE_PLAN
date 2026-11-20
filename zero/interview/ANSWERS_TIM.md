@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-167.
+**Next number:** TR-171.
 
 ---
 
@@ -427,3 +427,13 @@
 **TR-165** (unknown U-148, the draft D-401: an erased marker returns at the tool's next check of the part, never on opening). He picked: "Yes: back at the next check of that part (Recommended)". Confirms the draft.
 
 **TR-166** (unknown U-151, the draft D-402a: Stage 1 grips are AutoCAD's ordinary squares with hover words; shaped grips are tried later and shown to him). Offered: yes, plain squares now, shapes after (recommended); no, shaped grips before he drafts. He picked: "No: I want shaped grips before I draft". Not the recommended answer; it OVERTURNS the draft. Grips whose shape shows what they do (TR-139) are part of Stage 1, before he drafts with it. He was told in the question that an earlier trial of a custom grip crashed AutoCAD, so this now needs the grip proof in a test AutoCAD early (EDITING_AND_GRIPS open 2 and 9; R-006, R-011).
+
+## Batch 41, Fri 20 Nov 2026, 16:39 (clock read), through the question window, one line per question. Sources: `stage6/SPEC_PIPE.md` section 12 items 11, 17, 18, 21. Before it he asked how many areas were left (answered: eight, about 70 questions) and wrote "GO".
+
+**TR-167** (N-032; telling "use this polyline as my run" from "start a pipe here"). He picked: "A click always starts a pipe; type P to pick a polyline (Recommended)". The prompt reads "Click the start, or [Polyline]"; a plain click is always a start point, even on a line; P (or clicking the word) then picks the polyline (TR-008).
+
+**TR-168** (N-034; a run drawn straight through a pit, off its centre). He picked: "Where the drawn line crosses each wall (Recommended)". The arriving pipe stops and the leaving pipe starts where his line crosses each wall; the plan shows exactly the line he drew.
+
+**TR-169** (N-035; a run ended with a click inside a pit). He picked: "On the wall facing where the run came from (Recommended)". The mirror of TR-059: the middle of the wall facing the last point before the pit, square to it, at the inner wall.
+
+**TR-170** (N-036; Escape, and one click then Enter, while clicking a run). He picked: "Nothing is drawn, with a line saying why (Recommended)". Escape ends with nothing drawn and no window; one click then Enter draws nothing and says a pipe needs two points; no Close option (a run back onto its own start is refused, TR-028).
