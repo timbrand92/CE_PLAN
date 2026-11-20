@@ -36,3 +36,11 @@
 ## Owed in AutoCAD, when a build of these windows is merged
 
 The 10 steps of the first verdict, section 7, with these changes: sizes are checked against D-386; add Inspect (type a figure, press Inspect, pan and zoom the drawing, Back: the figure is still there; then Cancel draws nothing); add a pit with no pipes (no stubs in any picture) and a pipe with "Below the pipe" (the label shows in the strip); the light theme, the second monitor and the rose against a real drawing remain things only AutoCAD can show.
+
+## Ruled by the control room, about 1:50 pm by its clock (the next build is checked against these)
+
+1. **Nothing of this branch merges alone.** ONE build of the Pit window to the picture Tim approved in D-386, branched from this branch's tip so what closed carries over, with the open list above as its tests. The Pipe window is built only after its mock-up passes the check room and Tim approves it.
+2. **A typed mistake stays Wrong until he fixes or clears it:** the old figure does not come back by itself, the flag does not clear by itself, and OK refuses in words naming the box; nothing is drawn from a figure he did not see accepted. A fault for the D-386 build, not a blocker on its own.
+3. **One wording: "not joined yet" everywhere** (window, command line, lists); "free end" and "from an open end" go. The strip and the small picture in one window show the SAME label text, the label as it will be drawn, so "TBC" only where the sheet would say TBC.
+4. **Blocker 2 stays a blocker for the next build,** in all four places listed above.
+5. **D-389 item (d):** D-386's two set sizes (1000 by 620 and 1240 by 780) bind every Stage 1 window, the Pipe window included; its top preview is about a third of the height at each size.

@@ -55,3 +55,11 @@ The click budget, undo and motion; draw first, window second, a picked polyline 
 ## To fix when built, not to copy
 
 Unchanged from the first check: "Work uphill" swaps nothing; step 2 has no picture; inverts drawn about 100 mm from the pit, not 200; pit numbers outgrow their circle; the 225 and 300 circles touch; P3's "(suits)" is fixed text.
+
+## Ruled by the control room as D-389, about 2:00 pm by its clock (the next version of the mock-up is checked against these)
+
+1. **A grey band exists** for "Cannot check yet" and "Not known": the well colour with secondary text, never amber. Tim is shown it on this mock-up.
+2. **D-386's two set sizes bind the Pipe window:** 1000 by 620 and 1240 by 780; the top preview is about a third of the height at each size, not a fixed 240.
+3. **"Cover needed" comes from what is over the pipe,** which opens "Not known": grey "Cannot check yet" until he sets it.
+4. **A new pipe's opening size sits in the dashed field as worked out,** solid once typed.
+5. **One wording, "not joined yet";** the strip and any small picture show the same label text, the label as it will be drawn.

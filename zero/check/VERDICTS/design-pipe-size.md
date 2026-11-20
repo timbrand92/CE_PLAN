@@ -86,3 +86,10 @@ Cite D-386 and D-387 and close the two questions they answer (a typed size is he
 ## For the control room
 
 "The flag marker is built as its own job before pipe size" is what the page relies on (it waits if that job is not merged, and never falls back to the command line), but it is not written in `DECISIONS.md`: D-385 says where a flag shows, not when the marker is built, and D-384's order of work does not list it. No branch for the marker exists yet.
+
+## Ruled by the control room as D-389, about 2:00 pm by its clock
+
+1. **The amber marker is its own job,** after the command order and BEFORE pipe size.
+2. **Typed 300, drawn 375, OK without touching the size:** the tool's own label is rewritten to the size as drawn, and the marker stays until he puts his typed size back or accepts the drawn one; the plan never carries a label that disagrees with the pipe. (This settles the improvement noted above; the page must say so.)
+3. **A new pipe's opening size** sits in the dashed field as worked out, solid once typed.
+4. **Once the four wording fixes are in and the check room says BUILD FROM IT,** the build room may build it in its place in the order.
