@@ -72,3 +72,25 @@ Honest check: Team helper, Claude Opus 5.5: `C:\CE_WORK\check\reports\set2_hones
 1. **The HOLD stands,** for the three reasons of section 9: "no caller yet" does not turn blockers 1 to 3 into follow-ups.
 2. **DRAFT:** a small reset on each changed row, as well as the one "Back to office values" button.
 3. **Not a draft:** a same-name entry in the drawing that is not ours is NEVER written to; saving is refused with words.
+
+
+---
+
+# Second verdict: team/settings-store-main at b495f5e (fix round one)
+
+**Verdict: HOLD, on two blockers; and under D-425 item 5 the store is still not "built". Fix round two (the last) follows.** Written Fri 20 Nov 2026, about 11:56 pm. Checked on the bench only.
+
+**Who checked, and how they split.** Honest: one Claude helper on Sonnet (D-434): `C:\CE_WORK\check\reports\set3_honest_REPORT.md`: MERGE (all four blockers closed; 8 of 16 settings read). Adversarial: Codex gpt-6.2-astra: `C:\CE_WORK\check\reports\set3_adv_REPORT.md`, proofs in `set3_adv_proofs\`: HOLD; all 47 earlier cases replayed. **Closed on the bench:** a save losing another setting or wiping a record not ours (blocker 1); writes into a refused-unit drawing (2); a missing or mislabelled office row (4); the saved default pipe and the saved cover gap now reach the drawing. Blocker 3 PARTLY.
+
+## 12. Blockers
+
+1. **A wrong cover verdict can reach the drafter.** With a valid older Job record holding a 17 mm tolerance and an unusable tolerance in the settings record, the Pipe window SAYS the office 5 mm applies, but its check uses 17 mm and calls 290 mm of cover against 300 mm "Suits". One tolerance, from one place, and the window says the one it uses (D-381, D-425 item 1).
+2. **A numeric-looking material prints on the pipe:** "6,5" saved as the default material is taken as a material with no warning and the label reads "100 DIA. 6,5 PIPE AT 1 IN 100". A material must be one the office list knows, or refused in words with the office default used (D-425 item 1; the "617" case is fixed, this path is not).
+
+## 13. D-425 item 5 (for the control room, not a blocker by D-346's words)
+
+Eight of the sixteen settings have no reader in Pit or Pipe (the invert gap 200, the slide 1,000, the circle clearance 150, the marker's size and gap, the 50CONT layer and its 70 mm width, the CE NO PLOT layer name): saving or removing each changes nothing drawn. Both halves agree. Under D-425 item 5 the store is not "built" until Pit and Pipe read every one; most of the eight belong to the labels, marker and grips builds, which are not merged. The control room's call: merge the store when its own blockers close and mark it "built" only when those builds read the rest, or hold it until then.
+
+## 14. To fix in the same round
+
+`10000.0000000000001` saved for a distance is accepted and drawn at 10,000 mm (the number is rounded before the limit is checked): check the typed text against the limit; a part WBLOCK may carry the drawing's settings (the hook fires for every WBLOCK, D-425 item 3): owed in AutoCAD, first on that list.
