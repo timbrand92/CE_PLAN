@@ -13,9 +13,6 @@
 
 ## 1. Being checked now
 
-1. **team/acad-windows at 53442d4** (Stage 1 items A1 to A3: approved-style Pit and Pipe windows in AutoCAD, sized to content, the true preview). Handed over 11:19 am as a re-check after the build room's own HOLD (`C:\CE_WORK\scratch	eam\check_aw_REPORT_last.md`). 5 commits behind main, so the suite is also run merged. Fix rounds used: 1 of 2.
-   - **Honest check:** Team helper (opus), finished 11:33 am: HOLD, one new blocker (the window-placing code fails every time, `src/CeCivil.Window/WindowHost.cs:101`, so no Pit or Pipe window would open in AutoCAD). Early word sent to the build room 11:35 am.
-   - **Adversarial pass:** Codex gpt-6.2-astra (xhigh), `C:\CE_WORK\checkcad-windows_adv`, started 11:21 am, still running; the written verdict follows it.
 2. **codex/c11-tests pinned at 11c6041** (tests only for cause C11). Both helpers started 11:33 am: Team opus honest check (`C:\CE_WORK\check\c11-tests_honest`) and Codex astra adversarial pass (`C:\CE_WORK\check\c11-tests_adv`). The question: is the list honest against `design\SUMS_PIPE_AND_PRINT.md` with D-349, D-350 and the D-341 examples.
 
 3. **team\pipe-default at 393b649 (A5), RE-CHECK after its last fix round.** Handed back 11:41 am; main 22993fa is merged into it. Both helpers started 11:44 am: Team opus honest re-check (`C:\CE_WORK\check\pipe-default2_honest`) and Codex astra adversarial re-pass (`C:\CE_WORK\check\pipe-default2_adv`). Checked against the three blockers of `VERDICTS\team-pipe-default.md` and the control room's relayed ruling (an existing pipe shows its drawn width; never 100; if it cannot be read, say so and OK leaves the size alone). Fix rounds used: 2 of 2.
@@ -48,6 +45,8 @@ ight-scripts-on-main.md`; 19 follow-ups in `FOLLOW_UP
 ight-scripts.md`. Ruled by the control room as D-364 items 1 to 10: the fix (team/night-launch) is checked against items 1 to 9 line by line, and there is NO AutoCAD run tonight (item 10).
 
 2. **team/pipe-default at 741f0f2 (A5): HOLD, 11:32 am.** Three blockers: the Pipe tool's own window never sees the pipes arriving at the start pit (opens and draws at 100 under a 225); editing an older pipe can shrink it to 100 and its cover can read "Suits" when short; the last size typed carries into the next unrelated pipe (D-263 the opposite way). One fix round left. `VERDICTS	eam-pipe-default.md`; follow-ups in `FOLLOW_UP\part2-pit-and-pipe.md`.
+
+3. **team/acad-windows at 53442d4 (A1 to A3): HOLD, 11:50 am.** Two blockers: neither window can open in AutoCAD (`src/CeCivil.Window/WindowHost.cs:101`); the pictures still draw pits, pipes and a pit name that are not on the drawing. To fix in the same round by the control room's ruling: nothing cut off at 1920 by 1080 and above. Last fix round. `VERDICTS\team-acad-windows.md`; follow-ups 16 to 33 in `FOLLOW_UP\part2-pit-and-pipe.md`.
 
 ## 5. Look log (the check room's own look at the branches, every 20 minutes)
 
