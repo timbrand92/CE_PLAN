@@ -1,0 +1,42 @@
+# Answer: the flag marker test list (the amber no-plot marker), codex/tests-flag at 3189f66
+
+**Answer: HOLD THE LIST. Eight reasons.** Written Fri 20 Nov 2026, about 3:40 pm, by the check room. Checked on the bench only. First answer on this list.
+
+**Who checked.** Honest check: Team helper, Claude Opus 5.5: `C:\CE_WORK\check\reports\flag_honest_REPORT.md`. Adversarial pass: Codex gpt-6.2-astra: `C:\CE_WORK\check\reports\flag_adv_REPORT.md`, proofs in `flag_adv_proofs\` (its first run was cut off by a restart of the check room's chat and run again from its kept proofs). A product cheat turned all 685 tests green with a triangle on a plotting layer and no warning beside an ordinary undersized pipe. They agree; graded here.
+
+## 1. Counts seen (the writer's counts are true)
+
+Pretend drawing 685 ran: 11 targets fail, the 1 control passes, 673 older pass; brain 750, bench 438 pass; the saved-drawing reader 19 pass, 2 skipped (main's own). Only test files changed. Every target fails because the product does the wrong thing. The file is `tests/CeCivil.Hands.Tests/Stage1FlagMarkerTests.cs`.
+
+## 2. Reasons to hold
+
+1. **Amber is never checked, and the easy path gives grey** (lines 55-67, 198-214). The office marker layer is made in colour 8, grey (`src/CeCivil.Brain/data/tools.csv:296`); a marker drawn by its layer is grey, which already means "Cannot check yet" (D-219), and every target goes green. D-385: "a small amber marker". Read the marker's colour as it shows.
+2. **The marker can print** (helper `Flags()` at 248-250 finds markers by layer NAME; only lines 64-66 look at the plot setting). A second triangle on the plotting pipe layer passed; a marker layer that already exists and is set to plot took a marker. Every target must check that the marker's layer does not plot, look at everything the edit added on every layer, and one case must cover a drawing whose marker layer already plots (its expected result waits on question 2).
+3. **The marker can be anywhere, and need not be a triangle** (60-64, 203-207). Three points in a straight line, a kilometre off the run, passed; in the smaller-pipe cases a marker beside the 300 instead of the 150 passes. D-385: "beside the label or part". Check a real triangle, small, nearer its own label or part than any other.
+4. **Two pits can still show the same number** (198-245, 342-356). The typed-duplicate target accepts a line holding "P1" and "number" (the amber warning the window already shows) and never presses OK; at another spot the cheat let P5 become the occupied P4, both tags reading P4. The other target writes a hidden name while the tag still reads P2; three real duplicates got 0 markers. D-390 item 3, D-185. Drive it through OK, read the visible tags, and count markers for three, two, then none.
+5. **Opening and cancelling can lose his own wording** (105-134). The hand-typed label is checked before the window opens; the cheat rewrote it on opening and Cancel lost it; "150 DIA. (formerly 225 DIA.)" passes the after-click check. D-182, D-103. Check open, Cancel, OK without the remedy, the remedy then OK, and the whole printed label each time.
+6. **The clear and erase targets expect the whole marker layer empty** (166-192). That rewards erasing other parts' markers and anything else on that layer: the cheat erased an unrelated circle, one in an xref and one outside the reference-edit set. Expect this part's marker gone and its neighbours untouched (D-348, D-381).
+7. **The opposite words pass** (27-49, 72-109): "No overlap" and "No smaller 300" satisfy the contains checks, and a sound pipe can show the notice. Nothing checks that the marker carries its reason or that the window says the same (D-385). Read the reason on the marker's own record and the window's band for that part, and one clean part with neither.
+8. **The tests open the bench's window, not the command's** (264-265, 359-360). With the warnings made only in the bench opener the command's own window lost them, and the real end-of-command handler returns early on an empty plan (`src/CeCivil.Acad/Commands.cs:230`), leaving duplicate pits unmarked. Use the command-facing window and the same guard.
+
+## 3. To fix in the same round
+
+1. **Scope, and it matters:** eight of the 11 targets cannot go green without other jobs' work (the smaller-pipe check is pipe size's; "no clear spot" and the hand-typed label are the labels job's), yet D-389 puts the marker BEFORE them. Trigger the marker's own tests (shape, colour, layer, place, clear, erase) on the failed grade check, which the product already has; move the reopened smaller-pipe target to the pipe-size list; tag the overlap and hand-typed targets to the labels job.
+2. **The first-spot target refuses 0.04 mm** (line 48): within a tenth of a millimetre is the same point (D-341, D-380).
+3. **The two-fault target assumes one marker** (140-160), which is not ruled: test that each live reason is told and that the last warning goes; leave the count until question 3 is ruled.
+4. **Take `TESTS_FLAG_RUN.log` out of the commit** (1,215 lines of run output with local paths; no user or machine name found) and leave `TESTS_REPORT.md` off the main line.
+5. **Add:** the marker moved, copied and mirrored with its part; the marker layer locked, off or frozen (nothing unlocked: D-348; say why in words); erasing one of two duplicate pits; a pit as well as a pipe; D-400 (ByLayer, Z 0, scale 1).
+
+## 4. For the control room (no ruling found)
+
+1. **Amber against ByLayer.** D-400 says ByLayer for everything; the office marker layer is colour 8, grey. Is the LAYER made amber (which colour number), or does the marker carry its own colour?
+2. **The marker layer already exists and is set to plot** (never changed: D-381). Draw no marker and say so in words; or stop the edit; or draw it?
+3. **Two reasons on one part:** one marker listing both, or one each?
+4. **Does the command line still say it once,** now that the marker exists (the stop-gap of D-384 item 3)?
+5. **A marker erased by hand while the fault remains:** when does it come back? And an older drawing that opens with two pits of one number: marked when?
+6. **"p4" or " P4 " typed when P4 exists:** the same number?
+7. **How small is "small",** and how far off the label?
+
+## 5. Owed in AutoCAD (when a marker build is merged)
+
+The marker on the plan at 1:100 and one other scale; hover words against the window's; a plot of the sheet with an ordinary line as witness (the marker absent); save and reopen; copy, move, mirror; Cancel, one Undo and Redo (the danger: Undo takes the marker and leaves the undersized pipe).

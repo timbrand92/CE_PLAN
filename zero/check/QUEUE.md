@@ -13,7 +13,7 @@
 
 ## 1. Being checked now
 
-1. **codex/tests-flag at 3189f66** (the test list for the amber no-plot marker). Honest half landed about 3:03 pm: HOLD THE LIST. Adversarial pass (Codex astra) still running.
+1. **codex/tests-units at fea2222** (the units doorway test list). Honest half landed about 3:27 pm: HOLD THE LIST on two small points (no feet case; no case for changing an existing part in a metre or inch drawing). Adversarial pass (Codex astra) still running.
 
 ## 2. Waiting
 
@@ -65,6 +65,8 @@ ight-scripts.md`. Ruled by the control room as D-364 items 1 to 10: the fix (tea
 16. **codex/c11-tests at ad01f9d: HOLD THE LIST (second answer), about 3:10 pm.** Four reasons; one fix round left. Second answer at the foot of its page.
 17. **The A7 test list, codex/tests-a7b 893e54c (fix on codex/tests-a7-clean bafd6fb): HOLD THE LIST, about 3:10 pm.** Nine reasons. Its own page.
 
+18. **codex/tests-flag at 3189f66 (the flag marker test list): HOLD THE LIST, about 3:40 pm.** Eight reasons (amber never checked and the office layer is grey; the marker can print; it can be anywhere; two pits can still show one number; his own wording lost on open and Cancel; the clear targets expect the whole marker layer empty; the opposite words pass; the bench's window, not the command's). Its own page.
+
 ## 5. Look log (the check room's own look at the branches, every 20 minutes)
 
 1. **11:05 am:** first look. Six candidates listed; one merge to main found (night-safety2).
@@ -99,3 +101,4 @@ ight-scripts.md`. Ruled by the control room as D-364 items 1 to 10: the fix (tea
 30. **15:05:** two answers written. **codex/c11-tests at ad01f9d: HOLD THE LIST, narrowly** (four reasons: four cases refuse "MIN." with both ends measured; the shortfall sentence always says "needs 300 mm"; a hidden caption passes for the visible cover check; a Stage 1 cover verdict tested only in the waiting group; one fix round left; the old cheat now turns 25 of 67 green, a new one all 67). **The A7 list (893e54c, now codex/tests-a7-clean bafd6fb): HOLD THE LIST** (nine reasons; the result files are closed on the clean branch). Pages: `VERDICTS\codex-c11-tests.md` (second answer), `VERDICTS\codex-tests-a7b.md`. Honest half on codex/tests-flag 3189f66 landed: HOLD THE LIST; its adversarial half still running.
 31. **15:20:** D-398 to D-400 recorded (the list questions ruled or marked waiting; D-400: number beside the pit tries right first; 900 mm is pit centre to circle centre; ByLayer for everything; a pipe with bends has one label above its longest straight; mask on from day one; walls in an xref and the green impervious line: tests waiting). The chat restarted at about 3:20 pm and the adversarial helper on codex/tests-flag was cut off at about 3:11 pm before its report (worktree clean, proofs kept): started again, told to use the kept proofs. The 15-minute timer survived.
 32. **15:21:** two test lists handed over. **codex/tests-units at fea2222** (the units doorway; 16 targets, 1 control): both halves started (worktrees `units_honest`, `units_adv`; briefs `units_*.md`). **codex/tests-a4c at ef07769** (office blocks; 8 targets): NOT started; written before D-396 and D-398, and the list of the current plug-in's blocks (`zero\reference\CURRENT_PLUGIN_BLOCKS.md`) does not exist yet; the build room is told to hand it over again when restated. codex/tests-a6b 81f6c18 feeds the A6 fix round and is not a separate hand-over. Running: both halves on the units list; the adversarial half on the flag list (restarted).
+33. **15:32:** the flag marker list answered: HOLD THE LIST (`VERDICTS\codex-tests-flag.md`); seven questions to the control room. Waiting: the adversarial half on the units list; codex/tests-a4c (not started: waits for the blocks list and a restated list).
