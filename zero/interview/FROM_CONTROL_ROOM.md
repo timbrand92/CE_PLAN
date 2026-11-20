@@ -1,0 +1,30 @@
+# From the control room to Tim's room: questions owed to Tim (ask ONE BY ONE, D-390)
+
+Written Fri 20 Nov 2026, about 3:38 pm. Each needs its context and a real example in the question itself; a picture first where a place on the plan is involved. Strike an item through when it has a TR number.
+
+## A. Filed so far
+TR-108 to TR-111 = D-393. TR-114, TR-115 = D-395. TR-117 = D-396. TR-116 = D-397. TR-118 to TR-125 = D-398. TR-126 to TR-134 = D-400. TR-135 to TR-142 = D-402.
+
+## B. Labels (from the check room's hold on the label test list; D-399)
+1. Which side is "above" on a pipe drawn right to left, and on an upright pipe.
+2. What the 200 mm invert offset is measured to: the pit's wall, its outer dashed line, or its centre.
+3. Where a slid invert level ends up (how far it may slide; what if no clear spot).
+4. An old label whose size cannot be read: "TBC DIA." or left as drawn with the amber marker.
+5. A worked-out grade's decimal places on the label.
+6. Reverse flow when both end levels were typed by him.
+7. A later pipe drawn through an existing label: the first label moves, or stays with the marker.
+8. The clear gap kept between the number's circle and the edge of a big pit (TR-129 note).
+9. The mask's off switch: one office setting (the control room's draft), per drawing, or a tick per text (TR-132).
+
+## C. The control room's draft calls for him to confirm, each on its own
+1. D-392: in Stage 1 a pit's depth is never typed or held; cover is typed, invert comes from the pipes, depth is worked out; the plan shows the typed cover or "CL TBC".
+2. D-399: the shortfall sentence "Short by 3 mm at P3, Pipe 7 (P4 to P3): cover 297 mm, needs 300 mm."
+3. D-401, the amber marker, seven calls: own amber no-plot layer (and its name); no marker when that layer is set to plot; one marker per part listing every reason; the command line still says it once; an erased marker returns at the tool's next check of the part, never on opening; "p4" and " P4 " are P4; the triangle as tall as the label text, one text height clear.
+4. D-402 (a): Stage 1 grips are AutoCAD's ordinary squares with hover words; shaped grips tried in AutoCAD later and shown to him.
+5. D-400 item 8: until walls and the green line are ruled, only text, pipes and pits count as in the way.
+
+## D. Owed by Tim's room
+1. The single-pipe window picture (U-129).
+2. How a building wall inside the architect's xref, and the green impervious-area line, can count as in the way (U-132).
+3. A picture of the cover level text "lined up from the pit outwards" on the two left corners (TR-140).
+4. Where template and master hold the same block and differ: put each difference to him once the build room's list `reference\CURRENT_PLUGIN_BLOCKS.md` exists.
