@@ -104,3 +104,38 @@ Section 5 stands, with: the circle tag's real attribute; ByLayer colour, linetyp
 2. **Spot:** one text height clear of the label's end; if taken, the label's other end, then above the end, then below. No label: beside the middle of a pipe, or off the top left corner of a pit. None clear: the first spot anyway. A marker never counts as "in the way" for other text.
 3. **The layer off or frozen:** not changed; the marker is still drawn on it; the command line says the fault and that markers are hidden.
 4. **Which parts:** every amber "Needs a look" and red "Wrong" on a drawn part gets the marker; grey "Cannot check yet" gets none. The triangle is as wide as it is tall (the label's text height).
+
+
+---
+
+# Third answer: codex/tests-flag at bb35cc4
+
+**Answer: HOLD THE LIST. Seven reasons, all the list's own (none comes from a ruling filed after the D-416 baseline). This is round one of two from that baseline.** Written Fri 20 Nov 2026, about 6:55 pm. Checked on the bench only.
+
+**Who checked.** Honest check: Team helper, Claude Opus 5.5: `C:\CE_WORK\check\reports\flagc_honest_REPORT.md`. Adversarial pass: Codex gpt-6.2-astra: `C:\CE_WORK\check\reports\flagc_adv_REPORT.md`, proofs in `flagc_adv_proofs\` (both saved cheats now fail every target; a new cheat passed all 21 targets, all 17 DRAFT rows and the control while failing nine checks of the reviewer's own).
+
+## 14. Counts seen (the writer's counts are true)
+
+The whole solution builds, the AutoCAD plug-in project included. Pretend drawing 716: 21 targets fail, 17 DRAFT rows (D-412) fail and are tagged and run apart, 1 control passes, 4 skipped with reasons (2 moved to the duplicate-number list, 1 waiting on labels, 1 on pipe size), 673 older pass. Only tests changed. Four older brain timing tests and one bench style check failed under a heavily loaded PC; this branch changes none of that code (not proven on main).
+
+## 15. What the round closed
+
+The marker on the one layer "CE NO PLOT"; that layer found plotting is put back, said once, markers keep working; a separate plotting layer and its witness line stay as they are; every target takes stock of everything ADDED on every layer; a pit marker held to one text height past its tag; clearing leaves his own triangle, an xref triangle and a reference-edit circle alone; two reasons from two ordinary Stage 1 checks on one marker; one command line carrying each reason once; the stale root report gone.
+
+## 16. Reasons to hold
+
+1. **A marker sitting ON the label's words passes every placement target.** The targets first make the label RIGHT-aligned and then measure one text height past its insertion point (`Stage1FlagMarkerTests.cs:143, 366, 1017-1024, 1212-1217`). The product never draws right-aligned text (`src/CeCivil.Hands/Adapter/Primitives.cs:63`): on every label it really draws, that point is the START of the words. Measure the label as the product draws it; the triangle lies wholly outside the text's box, one text height past its end; add a sloping pipe.
+2. **Existing drawing content can be changed and the list stays green.** The stock-take looks only at NEW objects (`:934-950, 1007-1015`): the new cheat changed an existing plain note on a plotting layer from "REFERENCE" to a triangle and passed. Compare every object that was already there, its words and its plot properties, before and after (D-348, D-381).
+3. **A faulty pipe can go unmarked, and a marker can name pits that are not there.** Both pipe spans are level (`:352-380`): a sloping 14 m pipe got no marker. The expected reason is taken from the product's own check sentence (`:1039-1040`): for a loose pipe it starts "P4 to P3", and repeating it passed (`:335-347, 553-561`). Read the real part and its ends; read the shown reason on the marker, the window and the command line separately.
+4. **A duplicate number on the sheet can escape.** A product that ignores a bare "4" beside P4 passes every duplicate row; the fixture writes plain text and the pit's note together (`:1225-1226`) where a real tag edit changes the PIT_LABEL attribute alone. Drive the changed tag's own attribute, put "4" beside P4 (D-414), both pits marked, then renumber or erase and check the survivors. (The typed refusal is the duplicate-number list's.)
+5. **Two colour tests that a right build cannot both pass.** The new test needs a colour member named Aci, ColorIndex or ColourIndex (`:101-105`); the older ByLayer test forbids all three names (`tests/CeCivil.Hands.Tests/GapSixTests.cs:128`). A fixed 40 for everything on CE NO PLOT also passes. Check the marker's own colour and an ordinary witness's separately, and reconcile the older guard with D-412's one exception.
+6. **Two targets cannot go green inside the marker job, and draft answers are counted as targets.** The crowded pipe label on a pointer was moved from WAITING to TARGET (`:806-849`): it is the labels job's (and its pointer may end anywhere: only its height is checked at `:845`). The reason target expects "Pipe 7 (P4 to P3) ..." (`:499-536`): running numbers have no job yet. A marker DRAWN on an off or frozen layer is required by two TARGET rows (`:458-497`) though it is D-412's draft; the "locked" row rests on no ruling. Back to WAITING, DRAFT or out of the count, so that Tim overturning a draft changes only DRAFT rows.
+7. **A result report is still in the tree:** `tests/CeCivil.Hands.Tests/reports/FLAG_TESTS_REPORT.md`. Off the branch; merge as one squashed commit (the first commit's run log is still in its history).
+
+## 17. To fix in the same round
+
+One warning on the command line is checked on a rebuilt output, not the channel the Pipe command really writes to (`src/CeCivil.Acad/PipeCommand.cs:115`), and "Previous warning cleared" followed by the whole fault passes (`:1058-1067, 1161`); a NEW pit and "p3a" in the duplicate rows; a waiting row for the typed-length marker (D-413 item 4); the layer's name read from the setting with a second value tried; the crowded pit number, cover and invert cases (first spot, mask, marker) on the labels list.
+
+## 18. For the control room
+
+1. **The marker layer "CE NO PLOT" itself LOCKED:** no marker and words naming the layer (as the list has it), or the marker still drawn as on an off or frozen layer (D-412 item 3 covers only off and frozen)?
