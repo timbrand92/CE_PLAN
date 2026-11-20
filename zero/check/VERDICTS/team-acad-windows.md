@@ -36,6 +36,12 @@
 2. **The size rule until Tim rules:** sized to content; never larger than four fifths of the work area of the monitor it opens on; a resize remembered per window. "About 1100 by 700" is withdrawn. The exact size is not a blocker. Measured today: Pit 1517 by 792 and Pipe 1536 by 894 at 1920 by 1080; Pit 1100 by 988 on a 5120 by 1440 screen.
 3. **To Tim through Tim's room (not for this round):** the 1366 laptop, where step 3 is cut off with no scroll; whether the left preview panel is still wanted now the part shows live on the drawing (D-357). The adversarial pass also found content lost at 2560 by 1440 with text at 200 per cent: the control room to say whether that falls inside "1920 by 1080 and above".
 
+**Added from the control room, about 12:30 pm by its clock:**
+4. **Blocker 2 stands** and is fixed everywhere in this round, not in one place.
+5. **The Inspect button (D-065) stands until Tim says otherwise:** its absence from the footer is a fault to fix in this round, not a blocker.
+6. **"1920 by 1080 and above" means usable space after Windows scaling.** 2560 by 1440 with text at 200 per cent (about 1280 by 720 usable) is the same case as the small laptop and goes to Tim with it.
+7. **The three faults on main are placed:** the label wording by pipe kind and "TBC" for an unknown cover go with the label and invert job (A7); the typed, held depth lost on OK and reopen is its own job straight after A5 merges.
+
 ## 4. A1, A2, A3 on the bench
 
 1. **A1: met on the bench as built data; cannot open until blocker 1 is fixed.** All five Pit and Pipe tool names give three numbered steps and a rose OK; the old layout cannot be reached from them (by file name, not by a switch: `bench/CeCivil.Bench.Core/WindowSpec.cs:156-162`); no "Bench preview" words in either tool window.
