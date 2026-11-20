@@ -13,7 +13,12 @@
 
 ## 1. Being checked now
 
-Nothing. Not started: codex/tests-a4c at ef07769 (office blocks test list): it waits for the list of the current plug-in's blocks and a list restated to D-398; the build room hands it over again.
+Two hand-overs from the build room at about 4:05 pm; three helpers.
+
+1. **team/a6-draw-first at 75290d9** (A6 fix round 1: eight commits since the HOLD at 73be1d0). Both halves: Team opus honest check, Codex astra adversarial pass (worktrees `a6r_honest`, `a6r_adv`; briefs `a6r_*.md`).
+2. **The Pipe mock-up after fix 7** (saved 4:01 pm): the check room took ten pictures at 4:10 pm (`C:\CE_WORK\checkeports\pipe-mockup_picsix7`); Team opus re-check, also against D-393 and D-395 (what Tim has since picked for the Pipe window). The check room's own look: the three faults of the last round look fixed, Inspect is at bottom left.
+
+Not started: codex/tests-a4c at ef07769 (waits for the blocks list and a restated list).
 
 ## 2. Waiting
 
@@ -106,3 +111,4 @@ ight-scripts.md`. Ruled by the control room as D-364 items 1 to 10: the fix (tea
 33. **15:32:** the flag marker list answered: HOLD THE LIST (`VERDICTS\codex-tests-flag.md`); seven questions to the control room. Waiting: the adversarial half on the units list; codex/tests-a4c (not started: waits for the blocks list and a restated list).
 34. **15:42:** look. Main a05472a, not moved. The units list answered: HOLD THE LIST (`VERDICTS\codex-tests-units.md`); five questions to the control room. No helper running. D-401 and D-402 recorded on the pages they touch. Moving, not handed over: team/a6-draw-first 9b3eb92 (fix round).
 35. **15:56:** look. Main is fac02fe: one more commit by the build room at 15:53, its restart note only (launch long jobs detached); no code, not a merge. Moving, not handed over: team/a6-draw-first 9418a6c, codex/tests-a7-clean 46322df, codex/tests-units a945300 (fix rounds). No helper running; no report waiting. D-403 recorded on the units answer.
+36. **16:13:** two hand-overs started: team/a6-draw-first 75290d9 (fix round 1; both halves) and the Pipe mock-up after fix 7 (own pictures; one helper). Headless Edge saved only the first picture of a batch until each call was given its own profile folder.
