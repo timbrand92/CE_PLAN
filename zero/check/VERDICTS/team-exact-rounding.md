@@ -44,3 +44,10 @@ The real cover text, grade and invert texts on a test copy against the window an
 ## 7. A note on the two branches waiting for this one
 
 A6 and the Pit window are to merge this branch and route through it. Until blockers 1, 2 and 4 are closed they would inherit them; the Pit window's own blocker "5.755 less 5.18 printed 0.58" is this page's blocker 6 from the other side.
+
+## 8. Ruled since (control room, 8:40 pm, D-432)
+
+1. **A typed "12.6" stays "12.6" in the window's box and prints "12.60" on every sheet figure.**
+2. **The long section is not Stage 1:** the small-break wording is noted, not built now.
+3. **DRAFT:** a worked grade steeper than 1 in 1 prints "1 IN 0.4", with one decimal, as the one exception; never "Not known".
+4. **Order:** neither A6 nor the Pit window takes the rounding routine in until it has the check room's MERGE; they wait on it for their own rounding blockers.
