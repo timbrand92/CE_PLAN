@@ -66,3 +66,9 @@ Honest check: Team helper, Claude Opus 5.5: `C:\CE_WORK\check\reports\set2_hones
 **What the honest half adds for this same round (no extra strike):** its seven take-outs show the 14 tests are honest for what they cover (isolation, office fall-back, the source word, damage words each caught), but "Back to office values" taken out fails only one test; a newer version's record layout is read as damaged and then replaced WHOLE on the next save (part of blocker 1); two rows carry the wrong status (the 150 mm and 1,000 mm are Tim's rulings D-406 item 5 and D-405 item 5, not "the brief's figure"; the sump is D-406 item 8); the 75 mm label gap is still read straight from the tool list by the Pipe tool, outside the store; a damaged record prints its warning once for EVERY pit placed (say it once per command); the writer's report file should not be in the product tree.
 
 **Two more questions for the control room:** (e) should each changed row have its own small reset as well as the one "Back to office values" button (D-414 names only the one)? (f) a drawing that already holds an entry of the same name that is not ours: refuse to save settings in it and say so (recommended; never overwrite)?
+
+## 10. Ruled since (control room, 8:15 pm, D-429)
+
+1. **The HOLD stands,** for the three reasons of section 9: "no caller yet" does not turn blockers 1 to 3 into follow-ups.
+2. **DRAFT:** a small reset on each changed row, as well as the one "Back to office values" button.
+3. **Not a draft:** a same-name entry in the drawing that is not ours is NEVER written to; saving is refused with words.
