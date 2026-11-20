@@ -108,3 +108,7 @@ Blockers 1 to 3 (the fail-open sandbox; a log written over any file; PASSED on f
 11. **Tests leave their boundary:** the stand-in sender test launches a program from TEMP; the C# wrapper's child build has no private output root; fixtures delete sibling temporary folders; an ancestor junction is unchecked (D-388, D-420 items 4-5). `test_pics.ps1:21, 55-57, 568-574`.
 12. **The guard-removal driver can give false credit:** a picture check already failing before removal counts as proven. `test_guard_mutations.ps1:69-88, 95-123`.
 13. **A licence or Fatal Error halt is not held:** if the licence box has gone by the second look, the common close path may close; the halt must stay latched and the session be left for Tim (rule 1.9). `ce_pics_run.ps1:46-56, 74-80`, `ce_safety.ps1:538-577, 1007-1019`.
+
+## H. Ruled since (control room, 9:19 pm, D-437)
+
+NO MORE PATCH ROUNDS on this branch or team/night-launch. One design page `design\NIGHT_ROUTE.md` (Codex, reading only) covers the whole night route; the check room checks it when it lands; nothing is built until Tim chooses on Monday where the guard-removal proof may run. The honest half of this third verdict is cancelled (no Claude helper on the night branches); section G stands as the list the page must answer.

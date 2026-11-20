@@ -95,3 +95,14 @@ How long one launch tick takes on Tim's PC; whether a loaded plug-in shows in th
 5. **Every file the scripts write refuses a link; every script refuses to run from the temporary folder.**
 6. **The close asks AutoCAD nothing after 8:00 am; no manual close runs between 8:30 and 9:00 am on a weekday.**
 7. **What AutoCAD itself writes to Tim's profile and the registry on start and quit** is answered by the AutoCAD test room, by reading and research only, before any first night; it is part of the gate.
+
+
+---
+
+# Fourth verdict: team/night-launch at 7afeaf1, by reading only (the last)
+
+**Verdict: HOLD by reading.** Written Fri 20 Nov 2026, about 9:30 pm. Codex adversarial reader (gpt-6.2-astra), plain-text copy, nothing run: `C:\CE_WORK\check\reports\nl3_adv_REPORT.md`. Of the third verdict's seven blockers, one is CLOSED (a missing sandbox no longer selects real mode), five PARTLY, one STILL OPEN (no guard-removal proof for this revision: 111 guard labels, 52 with no matching test); of section 9, two STILL OPEN (a grandchild process can still send or close after its parent's timeout; the wrapper can still say "everything is proven"). Worst by reading: **the closer can still force AutoCAD after its drawing count becomes unreadable, and a helper can act after the deadline.** No honest half (D-437).
+
+## 13. Ruled since (control room, 9:19 pm, D-437)
+
+NO MORE PATCH ROUNDS on team/night-launch or team/acad-pictures2 (three holds each). One design page `design\NIGHT_ROUTE.md` (Codex astra, reading only) covers the launcher, the safe close, the picture route, the sandbox, the write places, the 8:00 am close and the guard-removal proof as one thing; the check room checks the page when it lands; it is not built until Tim chooses on Monday where the proof may run. Both readings are kept as the list of what the page must answer.
