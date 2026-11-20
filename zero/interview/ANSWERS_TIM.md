@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-114.
+**Next number:** TR-118.
 
 ---
 
@@ -293,3 +293,13 @@
 **TR-112** His words: "what about for a single pipe". A QUESTION, not a ruling. The pictures showed the window for a run of five pipes; he asks what the window is for one pipe. Room's answer to him (a proposal, the room's): the same window with the same three steps; the plan strip zoomed to that one pipe; a level box at each end and the grade, any two given and the third worked out (D-086, D-236); one row of working. Added as U-129; a picture is owed.
 
 **TR-113** (typed in the chat a minute later) His words: "in the multiple pipe window are you able to click on one length and change its characterisitics?". A QUESTION, not a ruling. As the mock-up is drawn: no; one window sets one size and grade for the whole run, and a single pipe is changed afterwards by opening that pipe (CDEDIT or double-click, TR-066) or by selecting several (TR-054). In TR-044 he said a size change part way along a run was "not in stage 1". His question suggests he may want it in the run window after all. Added as U-130, to be put to him as a choice.
+
+## Batch 28, Fri 20 Nov 2026, 14:58 (clock read), through the question window (he had written "Yes, carry on")
+
+**TR-114** (unknown U-130; one length in a run of several pipes; example, five 100 pipes and only P4 to P3 to be 150). Offered: click a length in the run window (recommended, changed from the room's earlier advice because he asked for it); leave it out of Stage 1; a list of the pipes with a box each. He picked: "Click a length in the run window (Recommended, changed)". In the plan strip he clicks a length; it lights up and step 1 shows and changes that length only (the title says so); clicking a blank part of the strip goes back to the whole run; all before OK. **This OVERTURNS TR-044 and the D-372 draft ("not in stage 1: two runs, or edit after").** With TR-045 (a size typed for a run is held on every pipe) a size set on one length is held on that length.
+
+**TR-115** (unknown U-129; the window for a single pipe; his question TR-112). He picked: "Yes: same window, a level box at each end (Recommended)". The same window and three steps; the plan strip zooms to that pipe; step 1 has a level box at each end plus the grade; any two given, the third worked out and shown as worked out; one level and the grade, or no level, also works (D-086, D-236); one row of working. A picture is still owed.
+
+**TR-116** (unknown U-128; two pipes between the same two pits). Offered: keep both, the second called "P1 to P2 (2)" with the amber marker (recommended); refuse the join; join, both the same name. He picked none and wrote: "we need to find a better naming system or identifier". NOT a ruling on the case. Room's reading (mine): naming a pipe by its two pits is not good enough for him; he wants pipes to have a better name or identifier of their own. No ruling says what. Added as U-131 (a proposal is owed, with what the office's sheets call a pipe today). U-128 stays open until U-131 is settled. **To flag:** D-261 DQ-024 (pipes named by their two pits, "free end") is not accepted by him as it stands.
+
+**TR-117** (unknown U-126; where the circled pit number tag comes from: it is in the office template drawing, not in the office master). Offered: from the office template (recommended); add it to the office master first; that is not the right tag. He wrote: "all blocks must come with the plugin nothing new is drawn, blocks must come from template". Room's reading (mine): a general rule, wider than the question: (1) every block the tool uses travels with the plug-in (D-352); (2) the tool never draws a new symbol of its own where an office block exists; (3) the blocks are taken from the office TEMPLATE. **Clash to flag:** D-352 says the tool's copy is "copied from the office master when a version is released"; his words say the template. Which file is the source when the two differ (the check room found the circle tag only in the template) needs one line from him or the control room.
