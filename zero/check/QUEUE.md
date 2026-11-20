@@ -76,7 +76,7 @@ ight-scripts.md`. Ruled by the control room as D-364 items 1 to 10: the fix (tea
 19. **codex/tests-units at fea2222 (the units doorway test list): HOLD THE LIST, about 3:45 pm.** Five reasons (no feet case; no case for changing an existing part in a refused drawing; a refused command can still change the drawing unseen; rows keyed to one pretend drawing and the refusal comes late; the "said once" targets may require the wrong thing). Its own page.
 
 20. **team/a6-draw-first at 75290d9 (fix round 1): HOLD, second verdict, about 4:35 pm.** Five blockers: the AutoCAD plug-in does not compile (new); a junction level worked from rounded figures; a cover-only pit edit moves a pipe on a locked layer; a guide redrawn off its line beside a main; the Pipe command's Undo on open ground. One round left.
-21. **The Pipe mock-up after fix 7: FAIL, about 4:40 pm,** on one point (pit numbers drawn on the pits, not 900 mm above), and overtaken by what Tim picked since (D-393, D-395, D-398): not sent to Tim; put to the control room to be redrawn as the owed single-pipe picture.
+21. **The Pipe mock-up after fix 7: FAIL, about 4:35 pm,** on one point (pit numbers drawn on the pits, not 900 mm above), and overtaken by what Tim picked since (D-393, D-395, D-398): not sent to Tim; put to the control room to be redrawn as the owed single-pipe picture.
 
 ## 5. Look log (the check room's own look at the branches, every 20 minutes)
 

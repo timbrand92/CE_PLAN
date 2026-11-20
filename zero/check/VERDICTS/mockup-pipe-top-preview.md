@@ -104,7 +104,7 @@ The page's own note gives the drawing's height wrongly ("200 of 620 and 256 of 7
 
 # Part five: after fix 7 (saved 4:01 pm): FAIL, and overtaken by what Tim has picked since
 
-**Answer: FAIL on one point; and it should NOT go to Tim as it stands.** Written Fri 20 Nov 2026, about 4:40 pm. From ten pictures the check room took at 4:10 pm (`C:\CE_WORK\check\reports\pipe-mockup_pics\fix7`) and a Team helper's check (Claude Opus 5.5): `C:\CE_WORK\check\reports\pipe-mockup4_REPORT.md`.
+**Answer: FAIL on one point; and it should NOT go to Tim as it stands.** Written Fri 20 Nov 2026, about 4:35 pm. From ten pictures the check room took at 4:10 pm (`C:\CE_WORK\check\reports\pipe-mockup_pics\fix7`) and a Team helper's check (Claude Opus 5.5): `C:\CE_WORK\check\reports\pipe-mockup4_REPORT.md`.
 
 ## What fix 7 cured (all of the last round)
 
