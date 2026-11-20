@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pit window with live plan</title>
+<style>
+  :root{--win:#2B2D30;--card:#383B40;--well:#232528;--inp:#4A4D55;--bd:#4A4D53;--ibd:#8A8E96;--cad:#16181B;
+        --text:#ECEDEF;--body:#D2D5DA;--grey:#A9AEB6;--unit:#C8CBD0;--amber:#F5C04A;--rose:#FF70B3;--dark:#10131A}
+  *{box-sizing:border-box}
+  html,body{margin:0;background:#1E1F22;font-family:"Segoe UI",Arial,sans-serif;font-size:14px;color:var(--body);overflow:hidden}
+  body{padding:20px;font-variant-numeric:tabular-nums}
+  body.laptop{--frw:1280px;--frh:720px;--ww:1000px;--wh:620px;--lw:400px;--pad:12px;--gap:8px;--cp:8px 12px;--row:25px;--hg:6px}
+  body.laptop .sizes .grey{display:block}
+  body.laptop .plain{grid-template-columns:auto auto auto;column-gap:12px}
+  body.desktop{--frw:1920px;--frh:1040px;--ww:1240px;--wh:780px;--lw:496px;--pad:16px;--gap:16px;--cp:16px;--row:32px;--hg:16px}
+
+  .frame{position:relative;width:var(--frw);height:var(--frh);background:#0F1113;border:0;overflow:hidden;box-shadow:0 0 0 2px #3A3D42}
+  .strip{position:absolute;left:0;top:0;right:0;height:24px;background:#26282B;color:var(--grey);font-size:12px;line-height:24px;padding:0 12px;border-bottom:1px solid #34373C}
+  .bg{position:absolute;left:0;top:24px}
+  .o80{position:absolute;left:192px;top:104px;width:1536px;height:832px;border:1px dashed var(--unit);display:none}
+  .desktop .o80{display:block}
+  .o80 span{position:absolute;left:8px;top:5px;font-size:12px;color:var(--unit)}
+
+  .win{position:absolute;left:50%;top:50%;width:var(--ww);height:var(--wh);transform:translate(-50%,-50%);
+       background:var(--win);border:1px solid var(--bd);border-radius:8px;box-shadow:0 12px 40px rgba(0,0,0,.6);
+       display:flex;flex-direction:column;overflow:hidden}
+  .tb{height:32px;flex:none;display:flex;align-items:center;justify-content:space-between;padding:0 12px 0 16px;color:var(--text);border-bottom:1px solid #202225}
+  .tb svg{display:block}
+  .wb{flex:1;min-height:0;display:flex;gap:16px;padding:var(--pad)}
+  .left{width:var(--lw);flex:none;display:flex;flex-direction:column}
+  .panel{flex:1;min-height:0;position:relative;background:var(--cad);border:1px solid var(--bd);border-radius:8px;overflow:hidden}
+  .panel h2{position:absolute;left:12px;top:8px;margin:0;font-size:14px;font-weight:400;color:var(--text);z-index:2}
+  .panel svg{position:absolute;left:0;top:0;display:block}
+  .live{flex:none;font-size:12px;color:var(--grey);margin-top:8px;line-height:16px}
+  .right{flex:1;min-width:0;display:flex;flex-direction:column;gap:var(--gap)}
+
+  .band{flex:none;background:var(--amber);color:var(--dark);border-radius:8px;display:flex;align-items:center;gap:12px;padding:8px 12px}
+  .desktop .band{padding:12px 16px;gap:16px}
+  .pill{border:1px solid var(--dark);border-radius:8px;padding:2px 8px;font-size:12px;white-space:nowrap}
+  .ans{font-size:24px;font-weight:700;line-height:1.2;white-space:nowrap}
+  .bn{flex:1;font-size:12px;line-height:1.3}
+  .desktop .bn{font-size:14px}
+
+  .card{flex:none;background:var(--card);border-radius:8px;padding:var(--cp);border:1px solid #2F3236}
+  .ch{display:flex;align-items:center;gap:8px;color:var(--text);min-height:22px}
+  .num{width:22px;height:22px;border:1px solid var(--ibd);border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--text)}
+  .ch .sp{flex:1}
+  .why{font-size:12px;color:var(--grey);margin:2px 0 var(--hg);line-height:16px}
+  .tag{border-radius:8px;padding:1px 8px;font-size:12px;line-height:18px;white-space:nowrap}
+  .tag.amb{background:var(--amber);color:var(--dark)}
+  .tag.out{border:1px solid var(--ibd);color:var(--unit);background:transparent}
+
+  .rows{display:flex;flex-direction:column;gap:var(--hg)}
+  .r{display:flex;gap:8px;align-items:flex-end}
+  .desktop .r{gap:16px}
+  .f{display:flex;flex-direction:column;gap:2px}
+  .l{font-size:12px;color:var(--grey);line-height:16px}
+  .box{height:30px;background:var(--inp);border:1px solid var(--ibd);border-radius:8px;display:flex;align-items:center;padding:0 10px;color:var(--text);gap:6px;white-space:nowrap}
+  .box .u{margin-left:auto;color:var(--unit)}
+  .box.need{border:2px solid var(--amber);padding:0 9px}
+  .grp{display:flex;align-items:center;gap:8px}
+  .ticks{display:flex;flex-direction:column;gap:4px;color:var(--body)}
+  .tk{display:flex;align-items:center;gap:8px;line-height:20px}
+  .tb16{width:16px;height:16px;border-radius:4px;background:var(--inp);border:1px solid var(--ibd);display:flex;align-items:center;justify-content:center}
+  .btn{height:30px;border:1px solid var(--ibd);border-radius:8px;background:transparent;color:var(--text);padding:0 16px;display:flex;align-items:center;font-size:14px;font-family:inherit}
+  .grey{font-size:12px;color:var(--grey);line-height:16px}
+
+  .plain{display:grid;grid-template-columns:1fr 1fr;row-gap:2px;column-gap:16px;line-height:20px;color:var(--body)}
+  .desktop .plain{row-gap:8px}
+
+  .s3{display:flex;gap:24px;align-items:flex-start}
+  .desktop .s3{gap:48px}
+  table.sum{border-collapse:collapse}
+  .sum td{height:var(--row);padding:0;vertical-align:middle;color:var(--text)}
+  .sum .sg{width:24px;text-align:center;color:var(--unit)}
+  .sum .lb{width:130px}
+  .desktop .sum .lb{width:170px}
+  .sum .fg{text-align:right;padding-left:16px;min-width:96px}
+  .sum tr.res .fg{border-top:1px solid var(--grey)}
+  .sum tr.res .fg b{font-weight:700;display:inline-block;border-bottom:3px double var(--grey);padding-bottom:1px}
+  .sizes{display:flex;flex-direction:column;gap:4px}
+  .sz{display:flex;align-items:flex-end;gap:8px}
+  .sz .c{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:2px;font-size:12px;color:var(--unit);line-height:14px}
+  .sz .q{border:1px solid var(--ibd);border-radius:2px;background:transparent}
+  .sz .c.on .q{background:#ECEDEF;border-color:#ECEDEF}
+  .sz .c.on{color:var(--text)}
+
+  .bar{height:56px;flex:none;border-top:1px solid #202225;display:flex;align-items:center;padding:0 16px;gap:8px}
+  .bar .sp{flex:1}
+  .bar .btn{height:32px}
+  .bar .ok{background:var(--rose);color:var(--dark);border-color:var(--rose);min-width:72px;justify-content:center}
+  .bar .cn{min-width:72px;justify-content:center}
+  .bar .note{margin-left:8px}
+
+  .cap{margin:10px 0 0;font-size:14px;color:var(--text);line-height:20px}
+</style>
+</head>
+<body class="laptop">
+<div class="frame" id="frame">
+  <div class="strip">AutoCAD window (made-up)</div>
+  <svg class="bg" id="bg"></svg>
+  <div class="o80"><span>80% of the AutoCAD window (1536 x 832)</span></div>
+
+  <div class="win">
+    <div class="tb"><span>Pit &middot; P7</span>
+      <svg width="12" height="12" viewBox="0 0 12 12"><path d="M1 1l10 10M11 1L1 11" stroke="#C8CBD0" stroke-width="1.3" fill="none"/></svg></div>
+
+    <div class="wb">
+      <div class="left">
+        <div class="panel" id="panel"><h2>The plan</h2></div>
+        <div class="live">Live: changes as you type. Made-up plan for this picture.</div>
+      </div>
+
+      <div class="right">
+        <div class="band"><span class="pill">Needs a look</span><span class="ans" id="ans"></span><span class="bn" id="bn"></span></div>
+
+        <div class="card">
+          <div class="ch"><span class="num">1</span><span>What you type</span><span class="sp"></span><span class="tag" id="s1tag"></span></div>
+          <div class="why">The few figures only you can give. Everything else is worked out.</div>
+          <div class="rows">
+            <div class="r">
+              <div class="f"><span class="l">Size</span><div class="box" style="width:120px">450 x 450<span class="u chev"></span></div></div>
+              <div class="f"><span class="l">Kind</span><div class="box" style="width:150px">Junction pit<span class="u chev"></span></div></div>
+              <div class="f"><span class="l">Lid</span><div class="box" style="width:100px">Solid<span class="u chev"></span></div></div>
+              <div class="f"><span class="l">Number</span><div class="box" style="width:80px">P7</div></div>
+            </div>
+            <div class="r">
+              <div class="f"><span class="l">Cover level</span>
+                <div class="grp"><div class="box" id="cvbox" style="width:110px"><span id="cv"></span><span class="u">m</span></div><span class="tag amb" id="cvtag">Needs you</span></div></div>
+              <div class="ticks" style="margin-left:8px">
+                <div class="tk"><span class="tb16"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#ECEDEF" stroke-width="1.6" fill="none"/></svg></span>Number on plan</div>
+                <div class="tk"><span class="tb16"><svg width="10" height="8" viewBox="0 0 10 8"><path d="M1 4l3 3 5-6" stroke="#ECEDEF" stroke-width="1.6" fill="none"/></svg></span>Cover level on plan</div>
+              </div>
+              <div style="flex:1"></div>
+              <div class="btn">Turn</div>
+            </div>
+            <div class="grey">Office defaults: no job set yet</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="ch"><span class="num">2</span><span>What the drawing gives</span></div>
+          <div class="why">Read off what you drew. Change the drawing, not this window.</div>
+          <div class="plain"><span>Pipes in: not joined yet</span><span>Pipes out: not joined yet</span><span>Outlet invert: Not known</span></div>
+        </div>
+
+        <div class="card">
+          <div class="ch"><span class="num">3</span><span>The answers</span></div>
+          <div class="why">Is the pit deep enough and does its size suit that depth?</div>
+          <div class="s3">
+            <table class="sum">
+              <tr><td class="sg"></td><td class="lb">Cover level</td><td class="fg" id="sumcv"></td></tr>
+              <tr><td class="sg">&minus;</td><td class="lb">Outlet invert</td><td class="fg">Not known</td></tr>
+              <tr class="res"><td class="sg">=</td><td class="lb">Depth</td><td class="fg"><b>Not known</b></td></tr>
+            </table>
+            <div class="sizes"><div class="sz" id="sz"></div><div class="grey">Pit sizes (mm), same scale</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bar">
+      <div class="btn">Inspect</div><span class="grey note">Steps this window aside so you can look at the drawing. Keeps what you typed.</span>
+      <span class="sp"></span>
+      <div class="btn cn">Cancel</div><div class="btn ok">OK</div>
+    </div>
+  </div>
+</div>
+<p class="cap" id="cap"></p>
+
+<script>
+var NS="http://www.w3.org/2000/svg",CAD="#16181B",BLUE="#3F7BE0",RED="#FF5A5A";
+function el(n,a,t){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);if(t!==undefined)e.textContent=t;return e}
+var q=(location.search.match(/v=(\w+)/)||[])[1]==="desktop"?"desktop":"laptop";
+document.body.className=q;
+var V={laptop:{cl:"CL TBC",cover:"",fs:12,tfs:14,sq:0.04,ans:"Cover level: Not known",bn:"Type the cover level.",
+        s1:"1 figure needs you",sumcv:"Not known",cap:"Laptop size: 1000 x 620 in a 1280 x 720 AutoCAD window"},
+       desktop:{cl:"CL 12.82",cover:"12.82",fs:12,tfs:14,sq:0.05,ans:"Depth: Not known",bn:"Join a pipe to work out the depth.",
+        s1:"Nothing needs you",sumcv:"12.82",cap:"Desktop size: 1240 x 780 in a 1920 x 1040 AutoCAD window"}}[q];
+
+// text and chevrons
+document.getElementById("ans").textContent=V.ans;
+document.getElementById("bn").textContent=V.bn;
+var t1=document.getElementById("s1tag");t1.textContent=V.s1;t1.className="tag "+(q==="laptop"?"amb":"out");
+document.getElementById("cv").textContent=V.cover;
+if(q==="laptop"){document.getElementById("cvbox").classList.add("need")}else{document.getElementById("cvtag").style.display="none"}
+document.getElementById("sumcv").textContent=V.sumcv;
+document.getElementById("cap").textContent=V.cap;
+Array.prototype.forEach.call(document.querySelectorAll(".chev"),function(e){e.innerHTML='<svg width="10" height="6" viewBox="0 0 10 6" style="display:block"><path d="M1 1l4 4 4-4" fill="none" stroke="#C8CBD0" stroke-width="1.5"/></svg>'});
+// five sizes to one scale
+var sz=document.getElementById("sz");
+[350,450,600,900,1200].forEach(function(s){var c=document.createElement("div");c.className="c"+(s===450?" on":"");
+  var b=document.createElement("div");b.className="q";b.style.width=b.style.height=(s*V.sq)+"px";var t=document.createElement("span");t.textContent=s;
+  c.style.minWidth="28px";c.appendChild(b);c.appendChild(t);sz.appendChild(c)});
+
+// faint AutoCAD behind
+(function(){var f=document.getElementById("frame"),W=f.clientWidth,H=f.clientHeight-24,s=document.getElementById("bg");
+  s.setAttribute("width",W);s.setAttribute("height",H);s.setAttribute("viewBox","0 0 "+W+" "+H);
+  var seed=7;function r(){seed=(seed*16807)%2147483647;return seed/2147483647}
+  for(var i=0;i<46;i++){var x=r()*W,y=r()*H,w=60+r()*260,h=30+r()*160;
+    s.appendChild(el("rect",{x:x,y:y,width:w,height:h,fill:"none",stroke:"#2A2E34","stroke-width":1}));
+    s.appendChild(el("line",{x1:x,y1:y,x2:x+w+r()*200,y2:y+(r()-.5)*260,stroke:"#252930","stroke-width":1}))}
+  for(var j=0;j<14;j++){var yy=r()*H;s.appendChild(el("line",{x1:0,y1:yy,x2:W,y2:yy+(r()-.5)*120,stroke:"#202328","stroke-width":1}))}})();
+
+// the plan, drawn at 1:100 with world units in mm
+(function(){var host=document.getElementById("panel"),W=host.clientWidth,H=host.clientHeight,K=W/8600,fs=V.fs;
+  var s=el("svg",{width:W,height:H,viewBox:"0 0 "+W+" "+H});host.appendChild(s);
+  function X(m){return m*K}
+  function line(x1,y1,x2,y2,c,w,d){var a={x1:x1,y1:y1,x2:x2,y2:y2,stroke:c,"stroke-width":w};if(d)a["stroke-dasharray"]=d;s.appendChild(el("line",a))}
+  function txt(x,y,str,size,fill,anchor,rot){var a={x:0,y:0,"font-size":size,"text-anchor":anchor||"middle",style:"fill:"+(fill||"#fff")+";font-family:Arial,'Segoe UI',sans-serif",dy:"0.35em"};
+    a.transform="translate("+x+" "+y+")"+(rot?" rotate("+rot+")":"");s.appendChild(el("text",a,str))}
+  var d=el("defs",{});
+  var p=el("pattern",{id:"hatch",width:6,height:6,patternUnits:"userSpaceOnUse",patternTransform:"rotate(45)"});p.appendChild(el("line",{x1:0,y1:0,x2:0,y2:6,stroke:"#9AA0A8","stroke-width":1}));d.appendChild(p);
+  var p2=el("pattern",{id:"dots",width:9,height:9,patternUnits:"userSpaceOnUse"});p2.appendChild(el("circle",{cx:2,cy:2,r:0.8,fill:"#555A61"}));p2.appendChild(el("circle",{cx:6.5,cy:6.5,r:0.8,fill:"#555A61"}));d.appendChild(p2);
+  s.appendChild(d);
+
+  // path (paving) between two edges
+  var py1=X(8700),py2=X(9700);
+  s.appendChild(el("rect",{x:0,y:py1,width:W,height:py2-py1,fill:"url(#dots)"}));
+  line(0,py1,W,py1,"#C8CBD0",1.2);line(0,py2,W,py2,"#C8CBD0",1.2);
+  txt(12,(py1+py2)/2,"PATH",fs,"#C8CBD0","start");
+
+  // house wall, hatched, with a door opening and landing
+  var wy=X(1500),wt=X(230),g1=X(5600),g2=X(6500);
+  s.appendChild(el("rect",{x:0,y:wy,width:W,height:wt,fill:"url(#hatch)"}));
+  s.appendChild(el("rect",{x:g1,y:wy-1,width:g2-g1,height:wt+2,fill:CAD}));
+  line(0,wy,g1,wy,"#E0E2E5",1.2);line(g2,wy,W,wy,"#E0E2E5",1.2);
+  line(0,wy+wt,g1,wy+wt,"#E0E2E5",1.2);line(g2,wy+wt,W,wy+wt,"#E0E2E5",1.2);
+  line(g1,wy,g1,wy+wt,"#E0E2E5",1.2);line(g2,wy,g2,wy+wt,"#E0E2E5",1.2);
+  s.appendChild(el("rect",{x:X(5400),y:wy+wt,width:X(1300),height:X(700),fill:"none",stroke:"#C8CBD0","stroke-width":1}));
+  txt(12,X(1050),"HOUSE",fs,"#C8CBD0","start");
+
+  // spot levels
+  function spot(x,y,str){line(x-3,y,x+3,y,"#C8CBD0",1);line(x,y-3,x,y+3,"#C8CBD0",1);txt(x+7,y,str,fs,"#C8CBD0","start")}
+  spot(X(1500),X(6700),"12.85");spot(X(7200),X(7600),"12.80");spot(X(6600),X(2900),"13.02");
+
+  // pits
+  function pit(cx,cy,hi){var r=X(225);
+    if(hi)s.appendChild(el("rect",{x:cx-r-5,y:cy-r-5,width:2*r+10,height:2*r+10,fill:"none",stroke:"#fff","stroke-opacity":.3,"stroke-width":3,rx:2}));
+    s.appendChild(el("rect",{x:cx-r,y:cy-r,width:2*r,height:2*r,fill:CAD,stroke:hi?"#fff":"#B8BCC4","stroke-width":hi?2.5:1.2}));
+    line(cx-r,cy-r,cx+r,cy+r,hi?"#fff":"#8A8E96",1);line(cx-r,cy+r,cx+r,cy-r,hi?"#fff":"#8A8E96",1)}
+  function tag(cx,cy,str,hi){s.appendChild(el("circle",{cx:cx,cy:cy,r:X(330),fill:CAD,stroke:hi?"#fff":"#C8CBD0","stroke-width":hi?1.8:1.2}));
+    txt(cx,cy,str,V.tfs,hi?"#fff":"#E0E2E5")}
+
+  // existing pipe P5 - P6
+  var p5x=X(1100),p6x=X(7100),py=X(4400),pw=X(100);
+  line(p5x+X(225),py,p6x-X(225),py,BLUE,Math.max(pw,4),"13 6");
+  line(p5x+X(225),py-pw/2,p6x-X(225),py-pw/2,"#C8CBD0",.8);line(p5x+X(225),py+pw/2,p6x-X(225),py+pw/2,"#C8CBD0",.8);
+  pit(p5x,py,false);pit(p6x,py,false);
+  tag(p5x,py-X(900),"P5",false);tag(p6x,py-X(900),"P6",false);
+  var cx=(p5x+p6x)/2;
+  txt(cx,py-X(125)-fs*0.6,"100 DIA. UPVC PIPE AT 1 IN 100",fs,"#fff");
+  var iy=py+X(100)+fs*0.6;
+  txt(p5x+X(225)+X(200),iy,"IL 12.31",fs,RED,"start");
+  txt(p6x-X(225)-X(200),iy,"IL 12.37",fs,RED,"end");
+
+  // the new pit P7, white
+  var nx=X(4300),ny=X(7300);
+  pit(nx,ny,true);
+  tag(nx,ny-X(900),"P7",true);
+  var cr=X(225),sx=nx+cr+X(550)*0.7071,sy=ny-cr-X(550)*0.7071;
+  txt(sx,sy,V.cl,fs,"#fff","start",-45);
+
+  txt(W-12,H-14,"1:100",fs,"#C8CBD0","end");
+})();
+</script>
+</body>
+</html>
