@@ -3,7 +3,7 @@
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), set up by D-353 and `ROOMS.md`. No other chat edits this file.
 **First written:** Fri 20 Nov 2026, 10:45 am (clock read).
 
-**STAGE 1 COUNT: 7 of 100 closed.** Blocks Stage 1: 70 (7 closed, 63 open). Can wait: 30. Updated Fri 20 Nov 2026, 11:20 am: U-099 and U-100 added at the control room's request. Filed so far by the control room: TR-001 to TR-008 as D-354 to D-359. **This list is the gate for Stage 1 (D-359; Tim, 20 Nov about 11:00 am, to the control room: "i need every specific down to a tee before we complete this first stage").**
+**STAGE 1 COUNT: 11 of 102 closed.** Blocks Stage 1: 72 (11 closed, 61 open). Can wait: 30. Updated Fri 20 Nov 2026, 11:15: closed U-072, U-073, U-075, U-076 (TR-009 to TR-012); U-015 narrowed; U-101 and U-102 added from his words. Filed so far by the control room: TR-001 to TR-008 as D-354 to D-359. **This list is the gate for Stage 1 (D-359; Tim, 20 Nov about 11:00 am, to the control room: "i need every specific down to a tee before we complete this first stage").**
 **STAGE 2 COUNT (waiting): 0 of 20 closed.**
 
 **What counts as an unknown.** A question about how the tool must behave that (a) no ruling answers, or (b) is answered only by a planning chat's call or a DRAFT, or (c) the 25 root causes or Tim's check of 20 Nov (D-351) exposed, or (d) only a test in AutoCAD can answer. Each line says who it waits on: **Tim**, **a picture then Tim** (a mock-up is owed first), or **a test** (nobody should ask Tim; AutoCAD must show it).
@@ -35,7 +35,7 @@
 12. **U-012** The Pit window line by line: which choices, in what order, in what words. Never gone through (D-070, PIT open 16). Waits on: a picture then Tim. **Blocks Stage 1.**
 13. **U-013** The small picture beside the Pit inputs: its size and what it shows. Touches D-297, D-313. Waits on: a picture then Tim. **Blocks Stage 1.**
 14. **U-014** "Next free number": the lowest unused (P2 if P2 was erased) or the highest plus one. Touches D-075, PIT open 3. Waits on: Tim. **Blocks Stage 1.**
-15. **U-015** Where the pit number and cover level text start: 900 above and 700 below the pit centre. Draft call D-260 DQ-009. Waits on: Tim. **Blocks Stage 1.**
+15. **U-015** NARROWED by TR-012 (20 Nov): the places are ruled (number above, below or beside; cover level at 45 degrees off a corner). Still open: which place is tried first, and the distances from the pit. Was: 900 above and 700 below the pit centre, draft call D-260 DQ-009. Waits on: Tim. **Blocks Stage 1.**
 16. **U-016** Which pit kinds show in the Stage 1 window. Orifice and pump pits were to be a "stand-in outline" (D-260 DQ-006) but a stand-in is never drawn now (D-352): leave them out until their real looks exist? Waits on: Tim. **Blocks Stage 1.**
 17. **U-017** A pit placed on a drawn pipe splits it (D-077): which half keeps which typed invert. PIT open 9. Waits on: Tim. **Blocks Stage 1.**
 18. **U-018** A pit dropped on a loose pipe end joins it: yes or no. PIT open 10, D-176. Waits on: Tim. **Blocks Stage 1.**
@@ -110,11 +110,11 @@
 
 ## H. Labels and inverts
 
-72. **U-072** Where a pipe label lands: which side, how far along, how far clear, upright at every angle. Only a test figure exists (D-261 DQ-022). Waits on: a picture then Tim. **Blocks Stage 1.**
-73. **U-073** Where the invert text lands at each pipe end and how it reads (prefix, decimals). D-041, D-265. Waits on: a picture then Tim. **Blocks Stage 1.**
+72. **CLOSED by TR-009 (20 Nov): above, on the open side if blocked, and it slides along the pipe to clear a clash in the middle.** **U-072** Where a pipe label lands: which side, how far along, how far clear, upright at every angle. Only a test figure exists (D-261 DQ-022). Waits on: a picture then Tim. **Blocks Stage 1.**
+73. **CLOSED by TR-010 (20 Nov): opposite side to the label, 200 from the pit as a setting; the two inverts may sit on opposite sides to each other when clashing.** **U-073** Where the invert text lands at each pipe end and how it reads (prefix, decimals). D-041, D-265. Waits on: a picture then Tim. **Blocks Stage 1.**
 74. **U-074** Which inverts are written on the plan: a tick per end, starting ticked whenever the level is known? D-265, D-322. Waits on: Tim. **Blocks Stage 1.**
-75. **U-075** When a label would land on a pit, a pipe or another label: slide to clear (D-041), or always the same spot and he moves it (D-312). LABELS open 7. Waits on: Tim. **Blocks Stage 1.**
-76. **U-076** How the cover level reads on the plan and whether the pit number is the office's circled tag from day one. D-260, D-178. Waits on: a picture then Tim. **Blocks Stage 1.**
+75. **CLOSED by TR-009 and TR-010 (20 Nov): the tool moves text to clear a clash: flip side, slide along.** **U-075** When a label would land on a pit, a pipe or another label: slide to clear (D-041), or always the same spot and he moves it (D-312). LABELS open 7. Waits on: Tim. **Blocks Stage 1.**
+76. **CLOSED by TR-012 (20 Nov): number flat, straight above, below or beside the pit; cover level always at 45 degrees off any corner.** **U-076** How the cover level reads on the plan and whether the pit number is the office's circled tag from day one. D-260, D-178. Waits on: a picture then Tim. **Blocks Stage 1.**
 77. **U-077** Rounding: lengths and levels to a tenth of a millimetre first, then half up; two points within a tenth of a millimetre are one point. Draft call D-341. Waits on: Tim. **Blocks Stage 1.**
 78. **U-078** A flow arrow on pipes: is there one, which side, when written. WINDOWS open 4, root cause C16. Waits on: Tim. **Blocks Stage 1.**
 79. **U-079** The masked text behind labels and levels: on from day one, with what margin. D-290, D-260. Waits on: a picture then Tim. Can wait.
@@ -148,6 +148,8 @@
 98. **U-098** (added 20 Nov from TR-005) "however many bends are required within the standards": what the plumbing standard and the councils allow for bends in a buried stormwater pipe (angles, how many before an inspection opening), so the tool can guide. Joins U-035 and U-041. Waits on: research first, then Tim. **Blocks Stage 1.**
 99. **U-099** (added 20 Nov, D-356) A picked polyline with arcs in it, a closed polyline, and a polyline on a locked layer or inside an xref: what the pipe tool does with each. Waits on: Tim. **Blocks Stage 1.**
 100. **U-100** (added 20 Nov, D-357) How "live on the drawing" looks while he types: the finished look or a ghosted one, what Cancel leaves, whether he can zoom and pan with the window open. Waits on: a picture then Tim. **Blocks Stage 1.**
+101. **U-101** (added 20 Nov from TR-011) A label longer than its pipe: he likes both the callout on a pointer and staying centred but stacked on several lines. Which one the tool does by itself, and when it switches to the other. Waits on: Tim. **Blocks Stage 1.**
+102. **U-102** (added 20 Nov from TR-010, his question "what if that clashes with something else") What the tool does when every allowed spot for a label or an invert level is taken: the order it tries the spots, and what it does when none is clear. Waits on: a proposal then Tim. **Blocks Stage 1.**
 
 ---
 
