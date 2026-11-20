@@ -17,7 +17,7 @@ Tim has gone home (5:08 pm): no cap on helpers; AutoCAD stays stopped.
 
 1. **team/a3b-pit-window at 3ae3e9f** (the Pit window to D-386 with D-390's additions; first check). Compile gate passed. Both halves running since about 5:34 pm. The check room's own picture shows step 3 cut off at 1000 by 620 with the pit joined.
 2. **The pictures from Tim's room** (the single-pipe window at both sizes, the CE Settings window, five option sheets): own pictures taken 5:44 to 5:54 pm; one Team helper running. Faults go straight to Tim's room; nothing goes to Tim.
-3. **team/night-launch at 957383a** (the round after the HOLD and D-388): both halves BY READING ONLY, from a plain-text copy (every file renamed with .txt added). Started about 6:05 pm.
+3. **team/night-launch at 957383a** (the round after the HOLD and D-388): both halves BY READING ONLY, from a plain-text copy (every file renamed with .txt added). Started about 6:00 pm.
 
 Not started: codex/tests-units at 65d95d1 (built before the second answer on df9d533 landed; sent back to fold in the remaining reasons first).
 
