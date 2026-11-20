@@ -37,3 +37,12 @@ The cause of the old crash is named and closed; the SHAPE is one small piece tha
 ## 5. Owed in AutoCAD
 
 The whole proof of D-408: the night steps as corrected above, and Tim's hands with the steps sheet. Nothing may run until the night runner and the picture route have passed the check room and the test room has said go.
+
+## 6. Ruled since (control room, about 5:58 pm, D-418)
+
+1. **The arrow HAS a flip grip** (Tim's ruling, TR-139; "slide only" is not taken). DRAFT: the flip puts the arrow on the other side of the pipe; reversing the flow is the Reverse flow action, never a grip. So reason 5 is closed the other way: the page adds the arrow's flip grip, with that meaning.
+2. **DRAFT: Stage 1 uses PIT BLOCK 3's OWN two size grips and adds none;** the difference from his "four at the wall midpoints" is put to him with a picture. The page says so plainly (reason 1).
+3. **The "Plain squares" switch:** only on Tim's word; an office setting; not in the Settings window.
+4. **A hand drag past the rules:** allowed, with the marker.
+5. **Ctrl during a grip drag:** nothing in Stage 1.
+6. **Plain squares for pipe ends, bends and the pit centre:** asked of Tim, not built on; the build starts with the TEXT grips.

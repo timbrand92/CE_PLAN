@@ -90,3 +90,10 @@ Feet; the edit of an existing pit and pipe by Select and select-first, in a refu
 ## 12. Owed in AutoCAD
 
 Section 5 of the first answer stands: with the real units reader made to answer millimetres for every drawing the list stays as it was, and on the bench a 150 pipe measured 150,000 mm in a metre drawing: only AutoCAD can show the real setting being read. Add: a model viewport on a layout sheet; the grey colour of the line; the drawing not marked as changed and nothing to Undo after a refusal.
+
+## 13. Ruled since (control room, about 5:58 pm, D-418)
+
+1. **A units code with no name:** refused, the code shown, the drawing left alone.
+2. **DRAFT: a layout sheet with a viewport open into the model works as normal.**
+3. **"Treated as millimetres":** in the window only when there is a window; on the command line, once per command, only when there is none.
+4. **DRAFT: the units change between millimetres and "not set" with a window open: OK goes ahead and draws** (the two rows that close the window on that change are restated).
