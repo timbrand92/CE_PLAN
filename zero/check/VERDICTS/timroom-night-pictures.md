@@ -45,3 +45,16 @@ It is what D-414 asks: a small plain list, each figure with its office value, a 
 7. **A changed setting and text already drawn:** only new and re-placed text moves?
 8. **Sheet 1's question itself** (after its fix): his TR-135 pick ("to the start of the text") and the record in D-402 ("the nearest end") disagree.
 9. **Which two "Cannot check yet" causes** the single-pipe picture must show, now that an unset "what is over it" shows nothing (D-413): likely no level typed, and a ground or cover level not known.
+
+## 6. Ruled since (control room, about 6:09 pm, D-419; all DRAFT: the pictures put them to Tim)
+
+1. **Size shows by its source:** solid when he typed it; with the grey source word when not; a drawn pipe shows what it holds.
+2. **Step 3 for one pipe: ONE table row.**
+3. **A Mask tick beside each text's own show tick.**
+4. **Yes: a quiet "Settings" button on the Pit and Pipe windows.**
+5. **The Settings window stays small as drawn, fitted to its list.**
+6. **It lists every Stage 1 setting:** the marker's size and gap; the 50CONT layer and width; the no-plot layer's name; the 0.02 drop; the four text distances; the 1,000 mm slide; the 150 mm circle gap; the default pipe; AND the 5 mm tolerance (it stands in for the Job window in Stage 1). So the Settings picture passed above now needs the missing rows added before Tim sees it.
+7. **A changed setting moves nothing by itself:** new text, and text re-placed at its part's next edit, only; hand-moved text never.
+8. **Sheet 1 keeps its own question.**
+9. **The two "Cannot check yet" causes:** no level known at either end; a surface set but no surface level at an end.
+Sheets 2 and 3 are not shown: agreed.
