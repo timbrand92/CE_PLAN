@@ -74,3 +74,11 @@ ight_check.md`. When they finish: read the check, send the failed ones back for 
 2. **Research pages filed:** R-017 (material by size), R-018 (outside size), R-019 (bends and inspection openings). Each says at its top what the room checked itself and what only the helper read. To put to him: the six-row material list and a 90 dia. question (N-054); the outside-size list (U-086); the inspection-opening prompts and whether 30 m applies to single dwellings (U-098).
 3. **Morning order, one by one, four to a window, picture first:** the single-pipe window; the CE Settings window and its typed name (U-158); cover level outwards; arrow look; assumed; behind the window; hover; then the control room's H1 and I1 to I4 (U-153 to U-157); then the research confirmations; then readings to confirm (TR-030 ordinary pipe only; text style by name).
 4. **Not started:** a picture for dragging and resizing the window (U-105); sorting the nine clashes at the foot of `rulings/INDEX.md` (U-127).
+
+## 10. Update, Fri 20 Nov 2026, about 9 pm: STOPPED until Tim speaks (control room, D-434)
+
+1. **Usage order:** the Team account is spent until 1 December: send it NOTHING. This room now runs on Opus 5.5. No further helpers and no periodic looks until Tim speaks. Codex only, if anything.
+2. **Single-pipe window and Settings window:** four fix passes done (two from the check room's looks, D-419, D-426); saved (commit a2d397ff); sent to the check room for its third look, answer not yet received. If the check room still fails something, ONE fix by Codex or one Sonnet helper at most, then stop.
+3. **Research pages R-017 to R-019 are DONE** (filed before this order). The nine clashes (U-127) wait for Monday.
+4. **New for Tim on Monday:** U-159 (his login name in the block drawings), U-160 (web addresses in their class records), plus everything in section 9 point 3 and U-153 to U-158.
+5. **Count:** 195 of 279 closed.
