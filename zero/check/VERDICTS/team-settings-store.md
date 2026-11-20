@@ -118,3 +118,7 @@ Eight of the sixteen settings have no reader in Pit or Pipe (the invert gap 200,
 ## 17. For the control room
 
 1. **What next for the store?** Recommended: one bounded edit of exactly these three (they are narrow and all on the one-source rule), read back by the check room with one run; the alternative is the adversarial half's recommendation, a one-page design review of "one tolerance source" under D-346. The store is still not "built" (8 of 16 settings read), as section 15 already says.
+
+## 18. Ruled since (control room, about 2:26 am)
+
+ONE bounded edit of exactly the three items of section 16, with one addition: the edit ends with a source test that NO code outside the store reads, holds or defaults a tolerance, listing every caller. Read back with one run by the check room ("both of you": the check room reads it, and the Codex half re-runs its two routes). DRAFT: a tolerance found in an older pipe's note is NOT used; the drawing's setting governs and the window says so once. An over-limit typed entry is refused with words, never saved as 10,000 (D-425 item 1). If the read-back fails, a one-page design follows, no further edit.
