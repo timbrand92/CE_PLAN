@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-191.
+**Next number:** TR-195.
 
 ---
 
@@ -487,3 +487,13 @@
 **TR-189** (N-078; reversing a pipe that has one level typed). He picked: "The typed level stays where it is; the other is re-worked (Recommended)". A typed level stays at the end where he typed it; worked-out levels are worked again in the new direction; the label keeps MIN.
 
 **TR-190** (N-079; an invert level retyped on the plan). He picked: "A number sets the level; extra words are kept and flagged (Recommended)". As for a cover level (TR-136): a retyped number sets that end's invert as typed by him and the grade or the other level follows; text the tool cannot read as a level is kept as typed with the amber marker. This differs from D-185's "levels are never changed by editing their text", as TR-136 does.
+
+## Batch 47, Fri 20 Nov 2026, 16:56 (clock read), through the question window, one line per question. Sources: `stage6/SPEC_PIPE.md` section 12 items 83, 84, 89, 22. Closed without asking, as already answered: N-086 (a held figure is let go only with words, TR-074), N-096 (where a flag shows in Stage 1, TR-072), N-114 and N-117 (the layers of the pit number, cover level and invert level, TR-187). N-092 and N-115 were closed earlier (TR-138, TR-126).
+
+**TR-191** (N-087; double-clicking one pipe of a run that was drawn in one go). He picked: "That one pipe (Recommended)". After drawing, each pipe is its own pipe; double-clicking one opens the single-pipe window (TR-115); several selected and opened with CDEDIT open in one window (TR-054, TR-066).
+
+**TR-192** (N-088; changing a level at the top of a run). He picked: "Worked-out levels below follow; typed ones never move (Recommended)". The window lists what else changed before OK; a typed level that now makes a pipe too flat or uphill shows the marker.
+
+**TR-193** (N-090; a pipe's label after a move turns or lengthens the pipe). He picked: "Placed again by the rules (Recommended)". A label he never moved is placed again by the placing rules; a label he moved by hand keeps its offset, turned with the pipe (D-014, D-181).
+
+**TR-194** (N-093; U while clicking a run). He picked: "It steps back one click, as PLINE does (Recommended)". Nothing is drawn yet, so nothing is undone on the plan. (After OK, one Undo takes back the whole run, D-324.)
