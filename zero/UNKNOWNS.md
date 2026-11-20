@@ -3,7 +3,7 @@
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), set up by D-353 and `ROOMS.md`. No other chat edits this file.
 **First written:** Fri 20 Nov 2026, 10:45 am (clock read).
 
-**STAGE 1 COUNT: 53 of 118 closed.** Blocks Stage 1: 89 (53 closed, 36 open). Can wait: 29. Updated Fri 20 Nov 2026, 12:50: closed U-020, U-030, U-035, U-104 (TR-058 to TR-061). Filed by the control room so far: TR-001 to TR-021 as D-354 to D-371. Nine lines are marked "Tim's hands" (things the AutoCAD test room cannot show in pictures). Filed so far by the control room: TR-001 to TR-008 as D-354 to D-359. **This list is the gate for Stage 1 (D-359; Tim, 20 Nov about 11:00 am, to the control room: "i need every specific down to a tee before we complete this first stage").**
+**STAGE 1 COUNT: 57 of 118 closed.** Blocks Stage 1: 89 (57 closed, 32 open). Can wait: 29. Updated Fri 20 Nov 2026, 12:57: closed U-074, U-083, U-084, U-087 (TR-062 to TR-065). Filed by the control room so far: TR-001 to TR-021 as D-354 to D-371. Nine lines are marked "Tim's hands" (things the AutoCAD test room cannot show in pictures). Filed so far by the control room: TR-001 to TR-008 as D-354 to D-359. **This list is the gate for Stage 1 (D-359; Tim, 20 Nov about 11:00 am, to the control room: "i need every specific down to a tee before we complete this first stage").**
 **STAGE 2 COUNT (waiting): 0 of 23 closed.**
 
 **What counts as an unknown.** A question about how the tool must behave that (a) no ruling answers, or (b) is answered only by a planning chat's call or a DRAFT, or (c) the 25 root causes or Tim's check of 20 Nov (D-351) exposed, or (d) only a test in AutoCAD can answer. Each line says who it waits on: **Tim**, **a picture then Tim** (a mock-up is owed first), or **a test** (nobody should ask Tim; AutoCAD must show it).
@@ -112,7 +112,7 @@
 
 72. **CLOSED by TR-009 (20 Nov): above, on the open side if blocked, and it slides along the pipe to clear a clash in the middle.** **U-072** Where a pipe label lands: which side, how far along, how far clear, upright at every angle. Only a test figure exists (D-261 DQ-022). Waits on: a picture then Tim. **Blocks Stage 1.**
 73. **CLOSED by TR-010 (20 Nov): opposite side to the label, 200 from the pit as a setting; the two inverts may sit on opposite sides to each other when clashing.** **U-073** Where the invert text lands at each pipe end and how it reads (prefix, decimals). D-041, D-265. Waits on: a picture then Tim. **Blocks Stage 1.**
-74. **U-074** Which inverts are written on the plan: a tick per end, starting ticked whenever the level is known? D-265, D-322. Waits on: Tim. **Blocks Stage 1.**
+74. **CLOSED by TR-065 (20 Nov): "Every known level, both ends".** **U-074** Which inverts are written on the plan: a tick per end, starting ticked whenever the level is known? D-265, D-322. Waits on: Tim. **Blocks Stage 1.**
 75. **CLOSED by TR-009 and TR-010 (20 Nov): the tool moves text to clear a clash: flip side, slide along.** **U-075** When a label would land on a pit, a pipe or another label: slide to clear (D-041), or always the same spot and he moves it (D-312). LABELS open 7. Waits on: Tim. **Blocks Stage 1.**
 76. **CLOSED by TR-012 (20 Nov): number flat, straight above, below or beside the pit; cover level always at 45 degrees off any corner.** **U-076** How the cover level reads on the plan and whether the pit number is the office's circled tag from day one. D-260, D-178. Waits on: a picture then Tim. **Blocks Stage 1.**
 77. **CLOSED by TR-049 (20 Nov): "Yes, half up". Confirms the draft call D-341.** **U-077** Rounding: lengths and levels to a tenth of a millimetre first, then half up; two points within a tenth of a millimetre are one point. Draft call D-341. Waits on: Tim. **Blocks Stage 1.**
@@ -124,11 +124,11 @@
 ## I. Cover and grade checks
 
 82. **U-082** Where he sees a check result in Stage 1, with no Unfinished list: in the Pipe window only, on the drawing, on the command line. Touches D-140, D-311. Waits on: a picture then Tim. **Blocks Stage 1.** **FRONT OF THE LIST** (control room, 20 Nov): includes where the "text overlaps" flag of D-368 shows in Stage 1.
-83. **U-083** The ground level a cover check uses: the two pit cover levels only, or levels he gives along the pipe (root cause C9: 240 mm at a bend with 300 at both pits). Waits on: Tim. **Blocks Stage 1.**
-84. **U-084** "What is over it" when one pipe runs under garden and then a driveway: one choice per pipe, or more. D-287, D-330. Waits on: Tim. **Blocks Stage 1.**
+83. **CLOSED by TR-062 (20 Nov): pit levels, plus points he adds; later the survey read as a guide.** **U-083** The ground level a cover check uses: the two pit cover levels only, or levels he gives along the pipe (root cause C9: 240 mm at a bend with 300 at both pits). Waits on: Tim. **Blocks Stage 1.**
+84. **CLOSED by TR-063 (20 Nov): not asked for every pipe; worked out from the plans where it can be, else "Not known"; "a minor feature ... simply a check".** **U-084** "What is over it" when one pipe runs under garden and then a driveway: one choice per pipe, or more. D-287, D-330. Waits on: Tim. **Blocks Stage 1.**
 85. **CLOSED by TR-050 (20 Nov): "Pass: compare at two decimals". Confirms the draft call in D-321.** **U-085** A grade passes when it meets the figure at two decimal places. Draft call D-321. Waits on: Tim. **Blocks Stage 1.**
 86. **U-086** Cover to the top of the pipe needs the pipe's outside size: from which list, per material. Root cause C9; LEVELS open 2. Waits on: Tim (research first). **Blocks Stage 1.**
-87. **U-087** Working levels along a run ("work uphill", the 0.02 drop across a pit, D-141): is it in Stage 1 without the long section, and where does he start it. Waits on: Tim. **Blocks Stage 1.**
+87. **CLOSED by TR-064 (20 Nov): "Type one level, the rest are worked out".** **U-087** Working levels along a run ("work uphill", the 0.02 drop across a pit, D-141): is it in Stage 1 without the long section, and where does he start it. Waits on: Tim. **Blocks Stage 1.**
 88. **U-088** Pit depth checks (step irons deeper than 1.0 m, the size by depth guide): in Stage 1 or later. D-136, D-135. Waits on: Tim. Can wait.
 89. **U-089** A steepest grade or a speed limit, as well as the flattest. No ruling. Waits on: Tim (research first). Can wait.
 90. **U-090** How pipe capacity is checked. PIPE open 10. Waits on: Tim. Can wait.

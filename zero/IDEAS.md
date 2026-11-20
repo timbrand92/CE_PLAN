@@ -36,4 +36,7 @@ esearch\R-016_SLEEVED_PIPE.md`; unknown U-111. **Status:** proposed by Tim's roo
 
 21. **ID-021 The tool sizes the pipes down a run by itself.** Tim, 20 Nov 2026 (TR-044): "it would be cool in later stages to get it to design automatically". **Source:** `interview/ANSWERS_TIM.md` TR-044. **Status:** later; not Stage 1.
 
-**Next number:** ID-022.
+22. **ID-022 The survey read as a guide to the ground level along a pipe,** for the cover check. Tim, 20 Nov 2026 (TR-062): "in future the survey can be read as a guide and provide reference for this". **Status:** later.
+23. **ID-023 What is over a pipe worked out from the plans** (driveway, garden, slab outlines), so it is never set pipe by pipe. Tim, 20 Nov 2026 (TR-063): "it should be done automatically off plans or unkown if not known". **Status:** later; in Stage 1 it reads "Not known" unless he sets it.
+
+**Next number:** ID-024.

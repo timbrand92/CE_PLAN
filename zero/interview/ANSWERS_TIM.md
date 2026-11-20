@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-062.
+**Next number:** TR-066.
 
 ---
 
@@ -159,3 +159,13 @@
 **TR-060** (unknown U-104; how close a click must be to count as on the pit; example, a miss of 80 mm outside the outer line). He picked: "Only on or inside the pit joins; show the catch (Recommended)". D-270 stands with no catch distance; while he draws, a pit lights up the moment the cursor is on it. Closes U-104 for the ruling; the feel is still for his own hands.
 
 **TR-061** (unknown U-035; how a bend is drawn). He picked: "A sharp corner, as you draw now (Recommended)". The band turns the corner as a polyline does; no fitting symbol; any angle is drawn. Which angles the standards allow, and any flag, stay open under U-098 (research owed). Closes U-035.
+
+## Batch 16, Fri 20 Nov 2026, 12:57 (clock read), through the question window
+
+**TR-062** (unknown U-083; which ground level a cover check uses; example, a driveway dished 150 mm between two pits). Offered: pit levels plus points he adds (recommended); pit levels only; read the surface levels on the drawing. He wrote: "pit levels, plus points i add and in future the survey can be read as a guide and provide reference for this". The ground is a straight line between the two pit cover levels; he can click a point on the pipe and type the surface level there; the check reports the tightest spot; with no point added the window says it was checked at the pits only. For later: the survey read as a guide (idea ID-022). Closes U-083.
+
+**TR-063** (unknown U-084; "what is over it" when one pipe runs under garden then a driveway). Offered: one choice per pipe, the worst (recommended); mark the lengths along the pipe. He picked neither and wrote: "we dont have to do this for every pipe it should be done automatically off plans or unkown if not known, its a minor feature or function that is simply a check". Room's reading (mine): (1) he does NOT want to set "what is over it" pipe by pipe; (2) the tool should work it out from the plans where it can; (3) where it cannot, it reads "Not known" and that is acceptable: no "Needs you", no nagging; (4) the cover check is a small helper, not a centre-piece. So in Stage 1 "what is over it" opens "Not known" on every pipe unless he chooses to set it, and a cover check without it says so quietly; reading it off the plans is for later (idea ID-023). **Clash to flag:** D-133 and D-287 (a "what is over it" choice on each pipe, ten presets) stand as presets he MAY use, but must not be something each pipe asks for; and what a cover check does when "what is over it" is not known needs one line from the control room (room's proposal: it checks nothing and reads "Cannot check yet: what is over it is not known", grey, never amber). Closes U-084.
+
+**TR-064** (unknown U-087; levels along a run; example, a run P6 to P1 with only the outlet invert known). He picked: "Type one level, the rest are worked out (Recommended)". In the run window he types one level anywhere in the run; every other invert is worked out pipe by pipe at the grade shown with the 0.02 drop across each pit (D-141), shown as worked out; typing over any of them holds it and the run re-works around it; cover is checked as it goes. This IS in Stage 1 (TR-004). Closes U-087.
+
+**TR-065** (unknown U-074; which invert levels are written on the plan by default). He picked: "Every known level, both ends (Recommended)". Any invert with a value is written, typed or worked out; an estimate carries APPROX. (D-177); he unticks or deletes what he does not want (TR-039). Room's note (mine): D-238 ("MIN." whenever both inverts are NOT given) was about levels he GIVES; with worked-out levels now written at both ends, whether the label still ends "MIN." when only one level was typed is not said: to ask.
