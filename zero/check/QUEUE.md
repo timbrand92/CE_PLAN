@@ -13,7 +13,7 @@
 
 ## 1. Being checked now
 
-Nothing at 1:05 pm. Next to start: the adversarial pass on team/office-blocks (section 2 item 4).
+1. **team/office-blocks (A4), on main at 22993fa: adversarial pass only.** Codex gpt-6.2-astra, started 1:05 pm. The five cases the control room named, and D-381 item 1 (nothing existing is changed).
 
 ## 2. Waiting
 
@@ -61,3 +61,4 @@ ight-scripts.md`. Ruled by the control room as D-364 items 1 to 10: the fix (tea
 8. **12:04 pm:** two more jobs started. (a) DESIGN PAGE check asked by the build room at 12:01 pm: `design\PIPE_SIZE.md` on branch design/pipe-size at 7c8d90c, read against D-372, D-263 and D-349 before any build: Team opus honest read and Codex astra adversarial read. (b) The Pipe mock-up: the check room took its own pictures of the three states at 11:57 am (`C:\CE_WORK\check\reports\pipe-mockup_pics`) and a Team opus helper is checking it rule by rule. Still running: adversarial passes on the C11 test list and on team/pipe-default at 393b649. Coming next from the build room: team/held-depth and the last team/acad-windows round.
 9. **12:08 pm:** three verdicts written (C11 list, pipe-default held page, Pipe mock-up). Six verdicts given today, none MERGE.
 10. **12:15 to 1:02 pm:** no turns taken, by the control room's order (the Claude weekly allowance was at 97 per cent until its reset at 1:00 pm). Looks at 12:15, 12:35 and 12:55 pm skipped.
+11. **1:05 pm:** back from the pause. Main unchanged at 22993fa. The answer on the design page given (fix the page first). The adversarial pass on team/office-blocks (A4, on main) started: Codex gpt-6.2-astra, worktree `C:\CE_WORK\check\office-blocks_adv`. Moved while paused, none handed over yet: team/night-launch a092bf7 (the launcher fix), team/acad-windows b645b43, team/held-depth 6c9bc07, team/a6-draw-first 5ebb23b, codex/c11-tests 75e8645 (the build carries on; the list check stays pinned at 11c6041), codex/tests-a6b d706c0c, codex/tests-a7b ed09bcb, codex/tests-five b23d46f, team/acad-pictures2 b876264.
