@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-050.
+**Next number:** TR-054.
 
 ---
 
@@ -129,3 +129,13 @@
 **TR-048** (unknown U-002; a drawing without the office set-up; example, an architect's bare drawing with no office layers, text styles or DASHED linetype). He picked: "Bring them in too, say so once (Recommended)". Missing layers, text styles and linetypes are brought in from the tool's own copy of the office set-up, as the blocks are (D-352), with one line on the command line listing what was added; anything already in the drawing is never changed (D-260 DQ-005). Closes U-002.
 
 **TR-049** (unknown U-077; rounding; the draft call D-341 put to him with examples: 10.0049 m shows 10.00, 10.0050 m shows 10.01, a level of 12.345 shows 12.35; two points within a tenth of a millimetre are one point). He picked: "Yes, half up (Recommended)". CONFIRMS D-341. Closes U-077.
+
+## Batch 13, Fri 20 Nov 2026, 12:39 (clock read), through the question window
+
+**TR-050** (unknown U-085; the grade check; the draft call in D-321 put to him; example, minimum 1 in 200, a pipe at 1 in 200.08). He picked: "Pass: compare at two decimals (Recommended)". CONFIRMS the draft call. Closes U-085.
+
+**TR-051** (unknowns U-004, U-005; where Stage 1 gets the job figures with no Job window yet). He picked: "Office defaults, shown in the window (Recommended)". Stage 1 uses the office defaults: 5 mm tolerance, the ten "what is over it" presets, no council picked, text sized for 1:100; each window says so in one grey line ("Office defaults: no job set yet"); the same drawing picks up the job's own figures when the Job window arrives. Closes U-004 and U-005.
+
+**TR-052** (unknown U-016; which pit kinds the Stage 1 Pit window lists). He picked: "Junction, grated and plastic only (Recommended)". Orifice pit, pump pit and bought-in units are left out of the list until their real looks exist. Closes U-016. (Narrows D-104 and D-260 DQ-006 for Stage 1 only.)
+
+**TR-053** (unknown U-019; when the angle is asked while placing a pit). He picked: "Never asked; Turn button in the window (Recommended)". One click places the pit square to the sheet and the window opens; Turn in the window steps the window aside, he swings the pit live on the drawing, clicks, and the window returns (D-266). The optional second click of D-266 is not used. Closes U-019.
