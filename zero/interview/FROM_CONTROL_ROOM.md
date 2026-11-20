@@ -61,3 +61,10 @@ The old Pipe mock-up page is retired. The single-pipe picture you owe (U-129) is
 2. Do pits downstream of the clicked pit count as joined for Renumber? (draft: yes, the whole joined system)
 3. The typed command name for Renumber. (draft: none in Stage 1; the button in the Pit window only)
 4. Is a 900 x 600 pit good to 1.20 m deep, like 600 x 900? (draft: yes, the same pit turned)
+
+## L. Added 5:58 pm (D-417, D-418): to ask Tim on his return, one by one, pictures first where a place is involved
+1. What the flow arrow's flip grip does (draft: other side of the pipe; reversing flow stays the Reverse flow action).
+2. Pit size grips: he ruled four at the wall midpoints; PIT BLOCK 3 has two of its own at opposite corners (draft: the block's own two in Stage 1). Picture of both.
+3. Plain squares for pipe ends, bends and the pit centre, shaped grips for text only? (not built on until he answers)
+4. A layout sheet with a viewport open into the model: PT and CD work as normal (draft: yes).
+5. Circle tag block cannot be found with "Number on plan" ticked: pit refused, nothing drawn (draft). Inspection opening block missing at a bend: pipe refused (draft).
