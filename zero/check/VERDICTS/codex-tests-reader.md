@@ -20,3 +20,20 @@ The cover targets (`:109-212`) take the top of pipe as the nominal size alone: m
 ## 3. Binding probes for the build (D-431)
 
 Keep the adversarial wrong-build cases (`reader_adv_proofs\`) for the build check: every reopened pipe keeps its own width; no neighbour on the same layer changes in any edit.
+
+
+---
+
+# Second answer: codex/tests-reader at 675b81e (its last round)
+
+**Answer: HOLD THE LIST, with a one-page open list of ONE item; under the standing rule (STATE item 49) one bounded edit, read back by the check room alone, then ACCEPT THE LIST.** Written Sat 21 Nov 2026, about 1:54 am. Checked on the bench only.
+
+**Who checked, and how they split.** Honest: one Claude helper on Sonnet: `C:\CE_WORK\check\reports\reader2_honest_REPORT.md`: ACCEPT, with three binding probes. Adversarial: Codex gpt-6.2-astra: `C:\CE_WORK\check\reports\reader2_adv_REPORT.md`, proofs in `reader2_adv_proofs\`: HOLD on one. Five of the six reasons CLOSED (each pipe keeps its own width, read whole after reopen; neighbours protected, in the WAITING detention list; no "MIN." with both inverts typed; detention WAITING; the one-reader test through two routes); the sixth PARTLY; the D-426 cover rows marked DRAFT. Both earlier wrong builds now fail.
+
+## 4. The open list (the bounded edit: this item only)
+
+1. **The bent-pipe cover test demands an input the window does not have:** `SinglePipeReaderTests.cs:308-315` requires a visible, enabled garden picker in the Pipe window before it checks either end; D-409 item 1 made "what is over it" a read-off in step 2, taken from the drawing. A correctly read garden surface was rejected. Supply the surface as a drawing read-off, reopen the bent pipe, and check both ends (proof: `reader2_adv_proofs\read-off-comparison.txt`).
+
+## 5. Binding probes for the reader BUILD (D-431)
+
+Every reopened pipe keeps its own width; no neighbour on the same layer changes in TRIM, EXTEND, BREAK or a twin edit (a Stage 1 case, not only the WAITING detention one); a typed grade such as 200.0049996 is printed as typed (D-154, D-413 item 3; D-432 item 1 could be read the other way: a question for Tim, not for the build to settle by guessing).
