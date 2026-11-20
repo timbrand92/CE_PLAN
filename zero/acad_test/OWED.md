@@ -3,7 +3,7 @@
 **Kept by:** the AutoCAD test room ("CE_ACAD / acad test / 01"). **Started:** Fri 20 Nov 2026, 11:30 am.
 **Rule (D-346, added 20 Nov):** a fix may merge on its bench tests and one honest check; it is "proven" only when its owed list here has passed in AutoCAD, in pictures.
 **States:** OWED (not yet run) · PASS (date, picture) · FAIL (date, picture, what was seen) · SEEN (no ruling yet, put to Tim) · WAITS (its work is not on the main line) · PARKED (off the release).
-**Count on 20 Nov, 1:20 pm:** PASS 0 / FAIL 0 / OWED 14 / WAITS 34 / PARKED 1 (of 49). Three check-room verdicts received, all HOLD: the night scripts on the main line (section F), the pipe's opening size (section G) and the windows (section H).
+**Count on 20 Nov, 1:45 pm:** PASS 0 / FAIL 0 / OWED 14 / WAITS 43 / PARKED 1 (of 58). Three check-room verdicts received, all HOLD: the night scripts on the main line (section F), the pipe's opening size (section G) and the windows (section H).
 
 ## A. From `stage6\STAGE1_TIMS_EYES.md` (the everyday run proves these; steps in `EVERYDAY_RUN.md`)
 
@@ -87,5 +87,21 @@ Nothing of this is shown until the fix merges. All ten WAIT. They expand items A
 46. **H-10 A picture over a real test drawing, to judge the rose against the drawing's colours** (screen rule 16). In the theme Tim's AutoCAD is set to only: the colour theme is a saved AutoCAD setting and is never changed by a robot (rule 1.9). The other theme stays for Tim's hands unless he says yes in words. WAITS.
 
 **Only AutoCAD can show these, and how far a night picture goes:** screen rule 16 (H-10, one theme); rule 18, clicks and one undo (the typed U after each command is shown; a real click is Tim's); rule 28, motion (a still picture cannot show motion: Tim's hands); AutoCAD's light theme (as H-10).
+
+## I. From the check room's verdict on the picture route (team/acad-pictures2: HOLD; `check\VERDICTS\team-acad-pictures2.md` section 4)
+
+**Standing word:** this room does not use the route and does not run its tests (they show a real window that can ask for Tim's keyboard focus). No AutoCAD run and no picture run until the launcher AND this route each have the check room's MERGE on both halves and this room says go (D-364 item 10, D-388). Night one is one PT in Cancel mode only. All nine WAIT.
+
+50. **I-1 The window's own timer and frame callbacks run while AutoCAD shows the window.** WAITS.
+51. **I-2 The window picture shows the preview drawn.** WAITS.
+52. **I-3 What AutoCAD's own view picture gives while the window is open.** WAITS.
+53. **I-4 The copy of our window by its handle shows the drawing area.** WAITS.
+54. **I-5 A typed point with the "no snap" word is taken at PT's prompt.** WAITS.
+55. **I-6 The Size list's words can be reached, and its pop-up does not trip the 2-second window rule.** WAITS.
+56. **I-7 The window's marker lands inside the 2 seconds.** WAITS.
+57. **I-8 The switch turns itself off on a swapped drawing.** WAITS.
+58. **I-9 "TEST SWITCH ON" shows on the command line.** WAITS.
+
+**Picture rule from this verdict:** a copy of AutoCAD's own window shows the file tabs and command-line history of Tim's profile. This room looks at every picture before it leaves the PC; pictures never go into a repository.
 
 **Also noted, not counted as owed proofs (they are faults in the checks, asked of the build room):** CEPIT3, CEPIPE3 and CELEV2 still expect an inch drawing to be refused; CELEV1's third check expects "Chosen" where "TypedOver" is right; CETEST lists its run twice, so its lines count twice; the code-route EXPLODE check has failed in every pass since pass 1.
