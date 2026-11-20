@@ -3,7 +3,7 @@
 **Kept by:** the AutoCAD test room ("CE_ACAD / acad test / 01"). **Started:** Fri 20 Nov 2026, 11:30 am.
 **Rule (D-346, added 20 Nov):** a fix may merge on its bench tests and one honest check; it is "proven" only when its owed list here has passed in AutoCAD, in pictures.
 **States:** OWED (not yet run) · PASS (date, picture) · FAIL (date, picture, what was seen) · SEEN (no ruling yet, put to Tim) · WAITS (its work is not on the main line) · PARKED (off the release).
-**Count on 20 Nov, 11:30 am:** PASS 0 / FAIL 0 / OWED 12 / WAITS 12 / PARKED 1 (of 25). No check-room verdict has reached this room yet.
+**Count on 20 Nov, 12:30 pm:** PASS 0 / FAIL 0 / OWED 14 / WAITS 14 / PARKED 1 (of 29). One check-room verdict received: the night scripts on the main line are HOLD (section F).
 
 ## A. From `stage6\STAGE1_TIMS_EYES.md` (the everyday run proves these; steps in `EVERYDAY_RUN.md`)
 
