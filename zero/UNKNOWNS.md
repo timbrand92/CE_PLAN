@@ -3,8 +3,8 @@
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), set up by D-353 and `ROOMS.md`. No other chat edits this file.
 **First written:** Fri 20 Nov 2026, 10:45 am (clock read).
 
-**STAGE 1 COUNT: 16 of 107 closed.** Blocks Stage 1: 77 (16 closed, 61 open). Can wait: 30. Updated Fri 20 Nov 2026, 11:46: closed U-032 and U-078 (TR-018 to TR-021); U-106 narrowed; U-107 added from his words. Nine lines are marked "Tim's hands" (things the AutoCAD test room cannot show in pictures). Filed so far by the control room: TR-001 to TR-008 as D-354 to D-359. **This list is the gate for Stage 1 (D-359; Tim, 20 Nov about 11:00 am, to the control room: "i need every specific down to a tee before we complete this first stage").**
-**STAGE 2 COUNT (waiting): 0 of 20 closed.**
+**STAGE 1 COUNT: 16 of 109 closed.** Blocks Stage 1: 79 (16 closed, 63 open). Can wait: 30. Updated Fri 20 Nov 2026, 11:47: U-108 and U-109 added and four lines moved to the front at the control room's request. Filed by the control room so far: TR-001 to TR-016 as D-354 to D-368. Nine lines are marked "Tim's hands" (things the AutoCAD test room cannot show in pictures). Filed so far by the control room: TR-001 to TR-008 as D-354 to D-359. **This list is the gate for Stage 1 (D-359; Tim, 20 Nov about 11:00 am, to the control room: "i need every specific down to a tee before we complete this first stage").**
+**STAGE 2 COUNT (waiting): 0 of 21 closed.**
 
 **What counts as an unknown.** A question about how the tool must behave that (a) no ruling answers, or (b) is answered only by a planning chat's call or a DRAFT, or (c) the 25 root causes or Tim's check of 20 Nov (D-351) exposed, or (d) only a test in AutoCAD can answer. Each line says who it waits on: **Tim**, **a picture then Tim** (a mock-up is owed first), or **a test** (nobody should ask Tim; AutoCAD must show it).
 
@@ -31,7 +31,7 @@
 8. **CLOSED by TR-006 (20 Nov): "Yes, click then window, each pit".** **U-008** How placing pits should feel from the first click: window first every time, or straight to clicking with the choices on the command line. Touches D-234, D-186. Waits on: Tim. **Blocks Stage 1.** ASKED 20 Nov: TR-001 ("Window first, then click") and TR-003 ("you draw, then the window opens ... the same for pit as well") do not agree; being asked again.
 9. **CLOSED by TR-002 (20 Nov): "Type it in the window each pit".** **U-009** Where the cover level is given when placing several pits in a row: later by opening each pit, at the command line after each click, or in the window each time. Touches D-178, D-186. Waits on: Tim. **Blocks Stage 1.**
 10. **CLOSED by TR-005 and TR-006 (20 Nov): no longer arises; the window opens after the click or the run.** **U-010** Where the window goes while he is clicking: closed, stepped aside, or left open at the side to change a size mid-run. Touches D-234. Waits on: Tim. **Blocks Stage 1.**
-11. **U-011** The window size: fitted to its content, about 1100 by 700 at most, a resize remembered. Draft call in `STAGE1_TIMS_EYES.md` line 2 and D-352. Waits on: a picture then Tim. **Blocks Stage 1.** **Tim's hands** (cannot be shown by the test room's pictures; control room, 20 Nov).
+11. **U-011** The window size: fitted to its content, about 1100 by 700 at most, a resize remembered. Draft call in `STAGE1_TIMS_EYES.md` line 2 and D-352. Waits on: a picture then Tim. **Blocks Stage 1.** **Tim's hands** (cannot be shown by the test room's pictures; control room, 20 Nov). The control room's draft call ("about 1100 by 700") is WITHDRAWN (20 Nov, 12:05 pm). To show him: `pictures\pit_window_as_built_20nov.png` (the Pit window as the AutoCAD tool will show it, 1100 by 988; not yet opening in AutoCAD; the row of pit sizes is cut off at the right, being fixed). Ask: is the size right on his screen and what screens the office uses; with the pit shown live on the drawing (D-357), does he still want the tall preview panel at the left or a narrower window; anything to go or move.
 12. **U-012** The Pit window line by line: which choices, in what order, in what words. Never gone through (D-070, PIT open 16). Waits on: a picture then Tim. **Blocks Stage 1.**
 13. **U-013** The small picture beside the Pit inputs: its size and what it shows. Touches D-297, D-313. Waits on: a picture then Tim. **Blocks Stage 1.**
 14. **U-014** "Next free number": the lowest unused (P2 if P2 was erased) or the highest plus one. Touches D-075, PIT open 3. Waits on: Tim. **Blocks Stage 1.**
@@ -51,13 +51,13 @@
 
 26. **CLOSED by TR-005 (20 Nov): draw the run from anywhere to anywhere, or pick a polyline, THEN the window, then OK puts it in.** **U-026** How drawing a pipe should feel from the first click: window first every time, or straight to clicking like PLINE. Touches D-234, D-237, D-263. Waits on: Tim. **Blocks Stage 1.** ASKED 20 Nov: TR-003, his own order is draw (or pick a polyline) first, then the window, then it goes in; the room's reading is being confirmed.
 27. **U-027** The office default pipe: 100 dia. UPVC at 1 in 100, held as a setting. Draft call in `STAGE1_TIMS_EYES.md` line 5 and D-352. Waits on: Tim. **Blocks Stage 1.**
-28. **U-028** "Follows what it joins, never smaller downstream" (D-263): which size wins when the pit already has several pipes, and when the direction is not yet settled. Waits on: Tim. **Blocks Stage 1.**
+28. **U-028** "Follows what it joins, never smaller downstream" (D-263): which size wins when the pit already has several pipes, and when the direction is not yet settled. Waits on: Tim. **Blocks Stage 1.** **FRONT OF THE LIST** (asked for by the control room, 20 Nov, from the check room's check of the pipe's opening size). Case to ask: a new pipe leaves a pit where one arriving pipe's size is known and another's is not.
 29. **CLOSED by TR-005 (20 Nov): no longer arises; nothing is needed before the first click because the window comes after the run.** **U-029** If the pipe tool is missing something it needs, how it asks before the first click (window, or command line). `STAGE1_TIMS_EYES.md` line 6. Waits on: Tim. **Blocks Stage 1.**
 30. **U-030** A click inside the pit or on its centre, not on the wall: where the pipe end goes. Touches D-034, PIT open 15. Waits on: Tim. **Blocks Stage 1.**
 31. **U-031** The pipe stops at the inner wall (D-102), but PIT BLOCK 3's inner wall is the edge of its wipeout (D-224): how far inside the outer line that is for each size. Waits on: a test (measure the block), then Tim's look. **Blocks Stage 1.**
 32. **CLOSED by TR-020 (20 Nov): flow is the way he drew it; a reverse in the edit window; the tool may work it out where it can, never certain because a pipe is not always joined to the system.** **U-032** Which way he draws: upstream to downstream, either way, and "as drawn, not settled" until the run reaches an outlet. Draft call D-271 DQ-028. Waits on: Tim. **Blocks Stage 1.**
-33. **U-033** A branch joining a pipe with no pit (allowed, D-081): how it is drawn at the join and what the two pipes become. PIPE open 12. Waits on: Tim. **Blocks Stage 1.**
-34. **U-034** A pipe that ends at a downpipe, a tank or a charged line before inlets exist (Stage 2): does it read "not joined yet" in Stage 1. PIPE open 15. Waits on: Tim. **Blocks Stage 1.**
+33. **U-033** A branch joining a pipe with no pit (allowed, D-081): how it is drawn at the join and what the two pipes become. PIPE open 12. Waits on: Tim. **Blocks Stage 1.** See also U-109 (a run that STARTS on an existing pipe).
+34. **U-034** A pipe that ends at a downpipe, a tank or a charged line before inlets exist (Stage 2): does it read "not joined yet" in Stage 1. PIPE open 15. Waits on: Tim. **Blocks Stage 1.** **FRONT OF THE LIST** (asked for by the control room, 20 Nov, from the check room's check of the pipe's opening size). Case to ask: the opening size of a pipe drawn off an inlet, a tank or the legal point.
 35. **U-035** A bend made by a click between ends (D-237, D-189): drawn as a sharp corner or a fitted bend; any angles preferred or refused. Waits on: Tim. **Blocks Stage 1.**
 36. **U-036** Which pipe kinds are in Stage 1: ordinary only, or charged, suspended, detention and twin as well. Touches PIPE item 2, D-347. Waits on: Tim. **Blocks Stage 1.**
 37. **U-037** The Pipe window line by line. Never gone through (D-070, PIPE open 17). Waits on: a picture then Tim. **Blocks Stage 1.**
@@ -74,7 +74,7 @@
 
 46. **U-046** How he opens a drawn pit or pipe to change it: double-click, typed name then pick, Properties. Routes not proven; double-click also ran AutoCAD's own PEDIT (D-061, EDITING open 3 and 8). Waits on: Tim, then a test. **Blocks Stage 1.** **Tim's hands** (cannot be shown by the test room's pictures; control room, 20 Nov).
 47. **U-047** Several pipes or pits selected at once: change them all in one go (five pipes to 150), with "Varies" where they differ. EDITING open 7. Waits on: Tim. **Blocks Stage 1.**
-48. **U-048** A pipe made bigger or smaller after it is drawn: what follows (material D-239, label, cover check) and whether a pipe now smaller than the one upstream is flagged. Waits on: Tim. **Blocks Stage 1.**
+48. **U-048** A pipe made bigger or smaller after it is drawn: what follows (material D-239, label, cover check) and whether a pipe now smaller than the one upstream is flagged. Waits on: Tim. **Blocks Stage 1.** **FRONT OF THE LIST** (asked for by the control room, 20 Nov, from the check room's check of the pipe's opening size). Case to ask: a pipe is resized and the pipes already drawn downstream are now smaller than what feeds them.
 49. **U-049** A pipe label typed over by hand, then the pit is resized or the pipe changed: keep his words, and where is it flagged with no Unfinished list yet. D-182, D-348 note. Waits on: Tim. **Blocks Stage 1.**
 50. **U-050** A resized pit's pipe ends keep their angle from the pit centre; an end placed by hand is left alone and said. Draft call D-260 DQ-010. Waits on: Tim. Can wait.
 51. **U-051** Escape cancels the whole window; whether a half-filled window is offered back. Draft call D-288 DQ-097. Waits on: Tim. Can wait.
@@ -123,7 +123,7 @@
 
 ## I. Cover and grade checks
 
-82. **U-082** Where he sees a check result in Stage 1, with no Unfinished list: in the Pipe window only, on the drawing, on the command line. Touches D-140, D-311. Waits on: a picture then Tim. **Blocks Stage 1.**
+82. **U-082** Where he sees a check result in Stage 1, with no Unfinished list: in the Pipe window only, on the drawing, on the command line. Touches D-140, D-311. Waits on: a picture then Tim. **Blocks Stage 1.** **FRONT OF THE LIST** (control room, 20 Nov): includes where the "text overlaps" flag of D-368 shows in Stage 1.
 83. **U-083** The ground level a cover check uses: the two pit cover levels only, or levels he gives along the pipe (root cause C9: 240 mm at a bend with 300 at both pits). Waits on: Tim. **Blocks Stage 1.**
 84. **U-084** "What is over it" when one pipe runs under garden and then a driveway: one choice per pipe, or more. D-287, D-330. Waits on: Tim. **Blocks Stage 1.**
 85. **U-085** A grade passes when it meets the figure at two decimal places. Draft call D-321. Waits on: Tim. **Blocks Stage 1.**
@@ -155,6 +155,8 @@
 105. **U-105** (added 20 Nov, control room) Dragging and resizing the window: what moves, what stays readable at its smallest, whether it can sit on the second screen. With U-011 and U-094. Waits on: a picture then Tim. **Blocks Stage 1. Tim's hands.**
 106. **U-106** NARROWED by TR-019 and TR-021 (20 Nov): with the label off the arrow takes the label's spots; still open only: that the label and the invert levels are each switched off by a tick on the pipe (the room's proposal, not yet his words). (added 20 Nov from TR-017) A pipe drawn with no text label, and a pipe with one invert level or none: where the remaining text and the arrow go, and how he turns the label off (a tick on the pipe, a setting for the run). Touches D-236, D-312. Waits on: Tim. **Blocks Stage 1.**
 107. **U-107** (added 20 Nov from TR-019: "consider with all of this how pipe label and invert texts and arrow work with pipes that have one or multiple bends") On a pipe with one or more bends: which straight length the label sits on, whether text may cross a bend, where the invert levels and the arrow go. Waits on: a picture then Tim. **Blocks Stage 1.**
+108. **U-108** (added 20 Nov, control room, from the check room) He types a pipe size SMALLER than a pipe that arrives at the same pit (a 100 leaving a pit a 150 runs into): what the tool says or does. Touches D-263. Waits on: Tim. **Blocks Stage 1. FRONT OF THE LIST.**
+109. **U-109** (added 20 Nov, control room) A run that STARTS on an existing pipe, not on a pit (D-355 says a run starts anywhere): where the new pipe meets the old one, is a junction pit offered, a plain connection made, or the start refused. With U-033. Waits on: Tim. **Blocks Stage 1.**
 
 ---
 
@@ -180,3 +182,4 @@
 18. **U-218** The five missing commands: what each is typed as and how it starts. Root causes C17 to C21.
 19. **U-219** The gate for merging work (D-346) and the staging method: Tim's to overturn, never put to him as a question.
 20. **U-220** A new job that inherits the last job's confirmations. Root cause C25.
+21. **U-221** (added 20 Nov, control room) A pit schedule depth prints 0.27 beside printed levels 5.62 and 5.36, where a reader subtracting gets 0.26; D-289 (a printed working adds as printed) suggests 0.26. To ask when the schedule returns.
