@@ -42,3 +42,12 @@ Line numbers: A is `tests/CeCivil.Hands.Tests/PipeSizePartATests.cs`, B is `Pipe
 ## 5. Owed in AutoCAD
 
 The real band's width on every length of a pipe and after a move; one Undo for each joint edit; the picked polyline really turned into the pipe and put back on Cancel; the marker on the real layer; the label's real words on the sheet.
+
+## 6. Ruled since (control room, 8:19 pm, D-430, DRAFT)
+
+1. **The grey word:** "follows Pipe 9 (P4 to P1)"; "measured" for a pipe already drawn whose size was read off the drawing.
+2. **An older pipe gets the next free number at the first edit that writes it** (on OK), inside that edit's one unit; never on opening.
+3. **No flow direction recorded:** from the higher to the lower end level where both are known; otherwise it does not count as arriving and the window says grey "flow direction not known"; nothing is guessed.
+4. **Accepting the offered office size makes it his,** held as typed.
+5. **OK without answering the bump offer is No:** the lengths stay, with the marker.
+The rows that rest on these are marked DRAFT D-430; they came after the round and add no strike.
