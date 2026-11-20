@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-126.
+**Next number:** TR-130.
 
 ---
 
@@ -323,3 +323,13 @@
 **TR-124** (N-063; a plastic pit's text). He picked: "Both lines together at 45 degrees (Recommended)". "PP" over "CL 5.65" stay together as one two-line text turned 45 degrees off the corner.
 
 **TR-125** (N-025; the clash of D-267 with TR-012: a cover level on a turned pit; example, a pit turned 30 degrees to an angled fence). He picked: "45 degrees to the SHEET, off the nearest corner (Recommended)". The cover level keeps its 45 degrees measured against the sheet and starts from whichever corner of the turned pit is nearest top right. D-267 stands for the pit number (reads flat, upright); for the cover level it is replaced by this.
+
+## Batch 31, Fri 20 Nov 2026, 15:07 (clock read), through the question window, one line per question. Sources: `stage6/SPEC_PIT.md` section 10 items 44, 45, 47, 48.
+
+**TR-126** (N-115; colour and lineweight of what the tool draws). He picked: "ByLayer for everything (Recommended)". Nothing the tool draws carries its own colour, linetype or lineweight; all follows its layer; the parts inside the office blocks stay as the block has them. (Fits D-265, invert text colour ByLayer.)
+
+**TR-127** (N-011; height and scale). He picked: "Always Z 0, scale 1, never changed by an edit (Recommended)". Every pit, pipe and piece of CE text is placed flat at height 0 and true size whatever was snapped to; moving or editing never changes either.
+
+**TR-128** (N-059; which side the number goes when above and below are both taken). He picked: "Right first, then left (Recommended)".
+
+**TR-129** (N-060; what the 900 mm is measured to). He picked: "To the centre of the circle (Recommended)". Pit centre to circle centre, 900 mm, a setting (TR-014). Room's note (mine, from the option text): on a big pit (1200) the circle would overlap the pit at 900, so the tool keeps at least a set clear gap from the pit's edge; the size of that gap was not asked.
