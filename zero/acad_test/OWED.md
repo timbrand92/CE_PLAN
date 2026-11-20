@@ -3,7 +3,7 @@
 **Kept by:** the AutoCAD test room ("CE_ACAD / acad test / 01"). **Started:** Fri 20 Nov 2026, 11:30 am.
 **Rule (D-346, added 20 Nov):** a fix may merge on its bench tests and one honest check; it is "proven" only when its owed list here has passed in AutoCAD, in pictures.
 **States:** OWED (not yet run) · PASS (date, picture) · FAIL (date, picture, what was seen) · SEEN (no ruling yet, put to Tim) · WAITS (its work is not on the main line) · PARKED (off the release).
-**Count on 20 Nov, 12:30 pm:** PASS 0 / FAIL 0 / OWED 14 / WAITS 14 / PARKED 1 (of 29). One check-room verdict received: the night scripts on the main line are HOLD (section F).
+**Count on 20 Nov, 1:00 pm:** PASS 0 / FAIL 0 / OWED 14 / WAITS 21 / PARKED 1 (of 36). Two check-room verdicts received, both HOLD: the night scripts on the main line (section F) and the pipe's opening size (section G).
 
 ## A. From `stage6\STAGE1_TIMS_EYES.md` (the everyday run proves these; steps in `EVERYDAY_RUN.md`)
 
@@ -54,6 +54,18 @@
 28. **F-3 The launcher counts an AutoCAD as its own only if it created it** (D-364): first live launch shows the recorded process is the one created. WAITS on team/night-launch.
 29. **F-4 The Pit and Pipe windows are expected by identity under the test switch** (`PICTURE_ROUTE.md` conditions 4 and 5): first live PT in Cancel mode. WAITS on team/acad-pictures.
 
-**Coming from the check room once written:** owed lists for A5 (pipe opening size, currently HOLD) and A1 to A3 (the windows, being checked).
+## G. From the check room's verdict on the pipe's opening size (team/pipe-default, A5: HOLD, three blockers; `check\VERDICTS\team-pipe-default.md` section 6)
+
+Nothing of this is shown until the fix merges. All seven WAIT. They expand item A-5.
+
+30. **G-1 From nothing, a pipe opens at 100.** WAITS.
+31. **G-2 One 225 pipe arriving: the next opens at 225.** WAITS.
+32. **G-3 150, 225 and 375 arriving: opens at 375.** WAITS.
+33. **G-4 A typed size stands.** WAITS.
+34. **G-5 After a typed size, a fresh pipe is back at 100.** WAITS.
+35. **G-6 An older 375 pipe keeps its width and label when only the label side is changed.** Also record whether opening the drawing, or REGEN alone, changes any width or label (not proven either way on the bench). WAITS.
+36. **G-7 An upstream resize:** record every pipe below, before and after. No ruling yet (U-048): marked SEEN and put to Tim, not PASS or FAIL. WAITS.
+
+**Coming from the check room once written:** the owed list for A1 to A3 (the windows, being checked).
 
 **Also noted, not counted as owed proofs (they are faults in the checks, asked of the build room):** CEPIT3, CEPIPE3 and CELEV2 still expect an inch drawing to be refused; CELEV1's third check expects "Chosen" where "TypedOver" is right; CETEST lists its run twice, so its lines count twice; the code-route EXPLODE check has failed in every pass since pass 1.
