@@ -2,7 +2,7 @@
 
 **Kept by:** Tim's room ("CE_ACAD / Tim / interview and ideas"), D-353. His words in quotes, unchanged. Each entry: the date and time read from the clock, the question as he saw it, his words, the unknown it closes in `UNKNOWNS.md`, and the room's reading where his words need one (marked as the room's). The control room files these as decisions; nothing here is a decision until it does. Numbers are never reused.
 
-**Next number:** TR-203.
+**Next number:** TR-207.
 
 ---
 
@@ -517,3 +517,13 @@
 **TR-201** (N-116; which layers a pipe lands on, as measured on issued sheets). He picked: "Yes: band on STORMWATER PIPE, edge lines on DRAINAGE (Recommended)". Both ByLayer (TR-126); label on 25TEXT, invert levels on 20TEXT (TR-187); the flow arrow on 25DIMS was in the option's words as measured on his sheets and is read as confirmed with it.
 
 **TR-202** (N-118, N-119; where a setting is changed in Stage 1, with no Job window; the two specification pages disagreed). He picked: "A small CE Settings window, saved with the drawing (Recommended)". A plain list of the settings with their office values, opened by a typed name or a button in the Pit and Pipe windows; a change applies to that drawing only and is saved in it; "Back to office values" undoes it; these move into the Job window when it arrives. The Pipe page's recommendation (office values only) is NOT taken. A picture of that window is owed, and its typed name is not said.
+
+## Batch 50, Fri 20 Nov 2026, 17:03 (clock read), through the question window, one line per question. Sources: `stage6/SPEC_PIT.md` section 10 items 10, 39; unknowns U-027, U-149. Closed without asking: N-013 (which half's grade gives when a pit splits a pipe: the levels-or-grade window, TR-101 and TR-141).
+
+**TR-203** (N-010; the key that steps the pit's cursor point round its corners and wall midpoints). Offered: Tab (recommended); the Ctrl key, as dynamic blocks do; a typed option at the prompt. He picked: "The Ctrl key, as dynamic blocks do". Not the recommended answer. Ctrl cycles the insertion point while placing, the key AutoCAD itself uses to cycle a dynamic block's base points on insert. (Whether the tool can use that key the same way while its own command runs is the build's to prove.)
+
+**TR-204** (N-017; what a junction pit and a grated pit look like). He picked: "Yes: cross for junction, grate for grated (Recommended)". Each kind uses the look the office block already has for it. Confirms the build call D-260 DQ-002.
+
+**TR-205** (unknown U-027; the office default pipe). He picked: "Yes: 100 dia. UPVC at 1 in 100 (Recommended)". Each a setting (CE Settings window, TR-202). CONFIRMS the draft call in `stage6/STAGE1_TIMS_EYES.md` line 5 and D-352.
+
+**TR-206** (unknown U-149, the draft D-401: how a pit number may be typed). He picked: "All three are P4 (Recommended)". Capital or small letter, spaces before or after, with or without the P, all mean P4 and it is written "P4"; a letter after the number is kept ("p3a" becomes P3A).
