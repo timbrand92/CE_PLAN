@@ -3,7 +3,7 @@
 **Kept by:** the AutoCAD test room ("CE_ACAD / acad test / 01"). **Started:** Fri 20 Nov 2026, 11:30 am.
 **Rule (D-346, added 20 Nov):** a fix may merge on its bench tests and one honest check; it is "proven" only when its owed list here has passed in AutoCAD, in pictures.
 **States:** OWED (not yet run) · PASS (date, picture) · FAIL (date, picture, what was seen) · SEEN (no ruling yet, put to Tim) · WAITS (its work is not on the main line) · PARKED (off the release).
-**Count on 20 Nov, 1:45 pm:** PASS 0 / FAIL 0 / OWED 14 / WAITS 81 / PARKED 1 (of 96; one item struck). Nine check-room verdicts received, all HOLD or held. **First in line when testing is allowed: shaped grips (section FIRST).** Three check-room verdicts received, all HOLD: the night scripts on the main line (section F), the pipe's opening size (section G) and the windows (section H).
+**Count on 20 Nov, 1:45 pm:** PASS 0 / FAIL 0 / OWED 14 / WAITS 89 / PARKED 1 (of 104; one item struck). Eleven check-room verdicts received, all HOLD or held. **First in line when testing is allowed: shaped grips (section FIRST).** Three check-room verdicts received, all HOLD: the night scripts on the main line (section F), the pipe's opening size (section G) and the windows (section H).
 
 ## FIRST. Shaped grips (D-407, Tim, TR-166: "No: I want shaped grips before I draft"): the first thing proven on the first night testing is allowed
 
@@ -176,5 +176,18 @@ Nothing on the bench reads AutoCAD's own units setting, so only AutoCAD can show
 81. **M-5 The display format changed, insertion units left at millimetres:** drawn as normal. WAITS.
 82. **M-6 On a layout sheet.** What is right is as the verdict page says; recorded as seen if it does not say. WAITS.
 83. **M-7 In a read-only drawing.** As M-6. WAITS.
+
+## O. From the check room's verdict on the office blocks (its test list is held; `check\VERDICTS\codex-tests-a4c.md` section 6)
+
+The pretend drawing on the bench cannot show what is inside a block, so these are AutoCAD's alone. Nothing is shown until it merges. All eight WAIT. They expand item A-4.
+
+98. **O-1 PIT BLOCK 3 placed on a bare plan and read back:** name, state, layer, scale 1, Z 0, ByLayer. WAITS.
+99. **O-2 PIT LABEL 2 placed and read back,** with the tag's attribute. WAITS.
+100. **O-3 TIM_CVL_ARROW placed and read back.** WAITS.
+101. **O-4 INSPECTION OPENING DYNAMIC WITH MASK placed and read back,** with its mask. WAITS.
+102. **O-5 A plan that already holds his own changed block of each name:** his block is unchanged after a placement. WAITS.
+103. **O-6 A plotted bend with its mask.** Only by a typed plot to a PDF file in the test folder with no saved plot setting changed (as L-3); otherwise Tim's hands. WAITS.
+104. **O-7 Cancel, and one Undo, after a block was brought in:** what is left in the drawing is written down plainly. WAITS.
+105. **O-8 The three older pit blocks (Stormwater Pit, PIT BLOCK, PIT BLOCK 2) opened and read.** WAITS.
 
 **Also noted, not counted as owed proofs (they are faults in the checks, asked of the build room):** CEPIT3, CEPIPE3 and CELEV2 still expect an inch drawing to be refused; CELEV1's third check expects "Chosen" where "TypedOver" is right; CETEST lists its run twice, so its lines count twice; the code-route EXPLODE check has failed in every pass since pass 1.
