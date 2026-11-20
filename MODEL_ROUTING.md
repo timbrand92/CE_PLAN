@@ -24,5 +24,8 @@ Code with logic in AutoCAD/.NET (transactions, undo/redo, ObjectIds, database wr
 3. If a Haiku job gets a fact wrong twice, move that task class up to Sonnet and note it here.
 4. Record each Haiku trial result below (task, did it get it right, cost note).
 
+## 5b. Codex models (added 20 Nov 2026, Tim: "Rest agreed" on `areas\rules.md`)
+For Codex CLI jobs use the newest Codex models Tim named: "if you use codex cli make sure you use astra and sol 6.2 recently added" (Tim, 18 Nov 2026, zero plan D-303). Every Codex job names its model and effort, like every Claude job (RULES 15.12).
+
 ## 6. Trial log
 - 21 Oct 2026: JOBFILE_CHECK (job-file damage scan) on Haiku, 74 files: it found the 2 files with real 0x07 control characters (fix_1478_1479, train_c48_finalizer: both old and already used) and 0 version mismatches (correct). It also reported 18 "damaged paths" that are mostly false positives of a too-loose pattern (e.g. "(C: Civil ..."). Verdict: GOOD for mechanical scans, tighten patterns; its output is read by the desk.

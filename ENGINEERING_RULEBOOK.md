@@ -500,6 +500,10 @@ service extension — has THREE deliverables:
 
 If you skip 2 or 3, the change is not done — even if the code compiles and runs.
 
+> **Note, 20 Nov 2026 (Tim: "Rest agreed" on `areas\rules.md`):** since `C:\TimOS\RULES.md` 4.5 (rev 2) the AI does the
+> testing. The "manual checklist" below is written for the robot and the Codex look in real AutoCAD, and for Tim only
+> where engineering judgement is needed. The rule itself is unchanged.
+
 ## Documentation update — what to write
 
 ### REGRESSION_LOG.md (project root or `<project>/REGRESSION_LOG.md`)
