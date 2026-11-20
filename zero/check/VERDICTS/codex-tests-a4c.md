@@ -47,3 +47,29 @@ Each of the four blocks placed on a bare plan and read back (name, state, layer,
 
 **(A) A HARD LIMIT, not a draft.** The privacy scan of shipped drawings goes BACK and is never removed. The branch team/a4c-blockfiles records each original's name and fingerprint and scans every copy for job names, addresses and numbers BEFORE any commit; that branch is NOT pushed to GitHub, and nothing of it merges, until the scan is clean, the check room has confirmed it on both halves, and the control room has said so in writing. A hit stops the job and goes to the control room for Tim; the file is not edited to hide it. A blank or stand-in drawing under a block's name must FAIL the package check.
 **(B) DRAFT.** (1) The circle tag not found with "Number on plan" ticked: refuse the pit, draw nothing, name the block. (2) A bend with no inspection opening block: refuse the pipe the same way. (3) Layers, the text style and linetypes on a bare drawing: from the 18 where one holds them; the rest listed for Tim, and meanwhile from one small set-up drawing of definitions only, made from the office template. (4) One block in two of the 18 with different contents: the copy in the drawing NAMED for that block; a nested copy is never used; the differences are listed for Tim.
+
+
+---
+
+# Second answer: codex/tests-a4c at 6ce1c19
+
+**Answer: HOLD THE LIST, on two reasons of its own; round one of two from the D-416 baseline. And a privacy HIT for Tim (D-417 item 3): the permanent scan, run on the 18 local copies, flags one drawing.** Written Fri 20 Nov 2026, about 10:10 pm. Checked on the bench only.
+
+**Who checked.** Honest check: one Claude helper on Sonnet (D-434): `C:\CE_WORK\check\reports\a4c2_honest_REPORT.md`: ACCEPT, with binding probes. Adversarial pass: Codex gpt-6.2-astra: `C:\CE_WORK\check\reports\a4c2_adv_REPORT.md`, proofs in `a4c2_adv_proofs\`: HOLD. The earlier faulty build now turns NONE of the 22 targets green. The eight reasons of the last answer: five CLOSED, three PARTLY. The hold rests on two points, both the list's own:
+
+## 8. Reasons to hold
+
+1. **A correct office tag fails.** The shared tag check (`OfficeBlocksA4cTests.cs:214-222`) also looks up a made-up second attribute; a correctly filled PIT LABEL 2 with its one real attribute throws KeyNotFoundException. The real block has one editable attribute (D-398, D-404). Keep the extra-attribute case only in the hand-changed fixture (`:197`); the ordinary check reads the real number and that there is no second number.
+2. **A release run can pass with the 18 drawings never checked.** The drawing tests SKIP as WAITING when the local folder (or the private terms file) is absent, so a green run on a machine without them proves nothing. Say it plainly: skipped where the folder is absent on a workshop machine; FAIL, not skip, on the release run (both halves name it).
+
+## 9. To fix in the same round
+
+The cover-label case and the saved cover mask belong to the labels list (A7): move or tag them; one arrow per pipe in a run of three has no row; one Undo for pit plus imported blocks fails at the tag before its Undo lines are proved; the tag and state-list checks print the whole collection read from a drawing on failure: make them counts (privacy); `.gitignore` clashes with the units branch.
+
+## 10. Binding probes for the build (from the honest half)
+
+`AcadDrawing.EnsureBlock` (line 625) still draws a stand-in square when a block is missing: prove it is never reached on a bare drawing (D-396, D-417 items 5-6); scale, layer and ByLayer of each of the four placed blocks in a real drawing; the pit's outer dashed line 100 mm clear at every size (proven from the block file tonight; no test reads it).
+
+## 11. The privacy HIT (for the control room and Tim; no found word written anywhere)
+
+The permanent scan run on the 18 local copies fails all 18, for four kinds of finding: (a) Tim's login name in "last saved by" in 8 drawings (known, D-427, D-433); (b) a named block not on the shipped list in 7 drawings; (c) "undocumented drafting text" in 8 drawings; (d) **one multiline text in `ON SITE DETENTION CRITERIA.dwg` holds a four-digit number of the shape the job-number pattern flags.** Both helpers saw only its shape and printed nothing. A four-digit figure on a detention criteria sheet may well be an engineering figure, but under D-417 item 3 a hit stops the job and goes to Tim for a human read; the drawing is not edited and the drawings branch stays local. The word and block lists are to be loosened only by count, never by printing text.
