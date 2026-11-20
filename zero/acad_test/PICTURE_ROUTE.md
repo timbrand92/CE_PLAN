@@ -29,7 +29,7 @@ flowchart TD
 
 1. **A switch that presses OK by itself is dangerous if it can ever be on in Tim's AutoCAD.** It would draw without him. See conditions 1 to 3 below.
 2. **Teaching the safety file to "expect a CE window" by its title alone is unsafe.** A box that merely carries a similar title would be let through, and the close ladder could then force an AutoCAD that is showing something else. See conditions 4 and 5.
-3. **A picture of the whole AutoCAD window by copying the screen is unsafe as a default.** It needs AutoCAD in front and can catch whatever else is on screen (another program, the TimOS bar). See condition 8.
+3. **A picture of the whole AutoCAD window by copying the screen is unsafe.** It needs AutoCAD in front and can catch whatever else is on screen (another program, the TimOS bar). Ruled out altogether on 20 Nov: see condition 8.
 
 ## 3. The eight conditions (what makes it safe)
 
@@ -40,7 +40,8 @@ flowchart TD
 5. **Expected only while its step runs.** A CE window still open when its step ends, or open with no step in hand, is an unknown window: the night halts, nothing is closed, a note is written. (The branch already says this.)
 6. **The window always lets go.** Under the switch the window cancels itself after a short limit (about 20 seconds) if its recipe has not finished, so a fault cannot leave AutoCAD jammed behind an open window.
 7. **OK is pressed through the button, not behind it.** The recipe types into the window's own boxes and presses the window's own OK button from inside the plug-in (the button's own "invoke", by its name), not by setting the answer in code. This proves the box takes the figure and the button is there, shown and enabled. It still needs no mouse and no keyboard.
-8. **Pictures in a safe order of preference.** First the plug-in's own picture of its window and AutoCAD's own picture of the view. Second, a copy of our own AutoCAD window asked for by its handle, which needs nothing in front. Screen copying is last, only of our window's own rectangle, only while it is already the window in front, never bringing anything forward. All pictures stay in `C:\CE_WORK\civil_tests\pictures\` on this PC and never go into a repository.
+8. **Pictures come from two places only (CHANGED 20 Nov, about 2:15 pm, control room's ruling, D-388):** the plug-in's own picture of its window, and AutoCAD's own picture of the view. **The screen copy is DROPPED, and so is the copy of the AutoCAD window by its handle.** A picture that cannot be made by those two is simply NOT RUN. No test of the route may show a real window or take focus. All pictures stay in `C:\CE_WORK\civil_tests\pictures\` on this PC and never go into a repository. *(Superseded wording, kept for the record: a handle copy second and a screen copy of our own rectangle last.)*
+   - **What this costs, said plainly:** no night picture shows the whole AutoCAD window. Where a tool window sits on AutoCAD, and which monitor it lands on, is recorded as figures by the plug-in (its left, top, width and height beside AutoCAD's own) and judged from the figures; the look of it on the screen is for Tim's hands.
 
 ## 4. What the check room must verify (before any of it runs)
 
@@ -62,13 +63,13 @@ flowchart TD
 5. **Picking and double-clicking** an existing pit or pipe to change it, and right-click menus.
 6. **Dragging and resizing the window,** and whether the size is remembered next time.
 7. **His AutoCAD as he runs it:** the old plug-in loaded beside the new one and the names PIT, PP and CD (never typed by a robot), and how fast it feels.
-8. **Anything in the window not drawn by the plug-in itself.** If a preview were ever AutoCAD's own drawing set inside the window, the plug-in's picture would show it blank; only the picture of the whole AutoCAD window would show it.
+8. **Anything in the window not drawn by the plug-in itself.** If a preview were ever AutoCAD's own drawing set inside the window, the plug-in's picture would show it blank, and with the screen copy dropped no night picture would show it: the step is NOT RUN and goes to Tim's hands.
 
 ## 6. Not known until tried in AutoCAD (proved first, smallest first)
 
 1. **Night one of the route:** one PT in Cancel mode only. Does the window picture arrive and show the whole window with its preview drawn; does the window let go; does AutoCAD go idle.
 2. **AutoCAD's own picture of the view:** what it gives, whether it shows the new pit, and whether it can be taken while the window is still open. If not, the fall-back is AutoCAD's own typed picture-export command, and whether that asks for a file box when typed this way is itself not known.
-3. **A copy of our AutoCAD window by its handle:** whether the drawing area comes out or is blank.
+3. **(Struck 20 Nov: the handle copy is dropped with the screen copy, condition 8.)**
 4. **PIPE finding a pit at a typed point,** and a polyline or a part named by its handle being taken by PIPE, MOVE, COPY, ERASE and EXPLODE.
 5. **Whether a running object snap pulls a typed point** when the "no snap" word is used.
 

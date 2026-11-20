@@ -3,7 +3,7 @@
 **Kept by:** the AutoCAD test room ("CE_ACAD / acad test / 01"). **Started:** Fri 20 Nov 2026, 11:30 am.
 **Rule (D-346, added 20 Nov):** a fix may merge on its bench tests and one honest check; it is "proven" only when its owed list here has passed in AutoCAD, in pictures.
 **States:** OWED (not yet run) · PASS (date, picture) · FAIL (date, picture, what was seen) · SEEN (no ruling yet, put to Tim) · WAITS (its work is not on the main line) · PARKED (off the release).
-**Count on 20 Nov, 1:45 pm:** PASS 0 / FAIL 0 / OWED 14 / WAITS 43 / PARKED 1 (of 58). Three check-room verdicts received, all HOLD: the night scripts on the main line (section F), the pipe's opening size (section G) and the windows (section H).
+**Count on 20 Nov, 1:45 pm:** PASS 0 / FAIL 0 / OWED 14 / WAITS 42 / PARKED 1 (of 57; one item struck). Three check-room verdicts received, all HOLD: the night scripts on the main line (section F), the pipe's opening size (section G) and the windows (section H).
 
 ## A. From `stage6\STAGE1_TIMS_EYES.md` (the everyday run proves these; steps in `EVERYDAY_RUN.md`)
 
@@ -77,7 +77,7 @@ Nothing of this is shown until the fix merges. All ten WAIT. They expand items A
 
 37. **H-1 The window opens at all and is the approved style.** WAITS.
 38. **H-2 Its size, with nothing cut off.** The night records the width and height in figures beside the picture. WAITS.
-39. **H-3 Centred on AutoCAD, and which monitor it lands on.** Needs the whole-AutoCAD-window picture (`PICTURE_ROUTE.md` condition 8); the plug-in's own picture cannot show it. WAITS.
+39. **H-3 Centred on AutoCAD, and which monitor it lands on.** No night picture shows the whole AutoCAD window (screen copy dropped, D-388): judged from the figures the plug-in records (the window's left, top, width and height beside AutoCAD's own); the look of it is for Tim's hands. WAITS.
 40. **H-4 A resize is remembered.** Only with a test settings file in the test folder, never Tim's. Before it runs, the build room must say where the size is kept; if it is anywhere in Tim's own settings, this step is NOT RUN and goes to Tim's hands. WAITS.
 41. **H-5 A damaged size file:** the window still opens at its usual size and says nothing alarming. Test file only, as H-4. WAITS.
 42. **H-6 A pipe with one end not joined shows no second pit in ANY picture** (window preview and drawing). WAITS.
@@ -95,7 +95,7 @@ Nothing of this is shown until the fix merges. All ten WAIT. They expand items A
 50. **I-1 The window's own timer and frame callbacks run while AutoCAD shows the window.** WAITS.
 51. **I-2 The window picture shows the preview drawn.** WAITS.
 52. **I-3 What AutoCAD's own view picture gives while the window is open.** WAITS.
-53. **I-4 The copy of our window by its handle shows the drawing area.** WAITS.
+53. **I-4 The copy of our window by its handle shows the drawing area.** STRUCK 20 Nov: the handle copy and the screen copy are dropped (D-388); not counted.
 54. **I-5 A typed point with the "no snap" word is taken at PT's prompt.** WAITS.
 55. **I-6 The Size list's words can be reached, and its pop-up does not trip the 2-second window rule.** WAITS.
 56. **I-7 The window's marker lands inside the 2 seconds.** WAITS.
