@@ -3,7 +3,7 @@
 **Kept by:** the AutoCAD test room ("CE_ACAD / acad test / 01"). **Started:** Fri 20 Nov 2026, 11:30 am.
 **Rule (D-346, added 20 Nov):** a fix may merge on its bench tests and one honest check; it is "proven" only when its owed list here has passed in AutoCAD, in pictures.
 **States:** OWED (not yet run) · PASS (date, picture) · FAIL (date, picture, what was seen) · SEEN (no ruling yet, put to Tim) · WAITS (its work is not on the main line) · PARKED (off the release).
-**Count on 20 Nov, 1:10 pm:** PASS 0 / FAIL 0 / OWED 14 / WAITS 31 / PARKED 1 (of 46). Three check-room verdicts received, all HOLD: the night scripts on the main line (section F), the pipe's opening size (section G) and the windows (section H).
+**Count on 20 Nov, 1:20 pm:** PASS 0 / FAIL 0 / OWED 14 / WAITS 34 / PARKED 1 (of 49). Three check-room verdicts received, all HOLD: the night scripts on the main line (section F), the pipe's opening size (section G) and the windows (section H).
 
 ## A. From `stage6\STAGE1_TIMS_EYES.md` (the everyday run proves these; steps in `EVERYDAY_RUN.md`)
 
@@ -15,9 +15,9 @@
 6. **A-6 What is clicked is drawn** (line 6; step 8). OWED.
 7. **A-7 Invert levels on the plan, label never "unknown DIA"** (line 7; step 8). OWED.
 8. **A-8 Draw first, window second; run through pits splits; picked polyline replaced** (7a, D-354 to D-356; steps 3, 7, 9). WAITS: not built.
-9. **A-9 Live on the drawing while the window is open; Cancel removes it** (7b, D-357; steps 3, 6). WAITS: not built; how it is done without saving until OK is for the build to prove.
+9. **A-9 Live in the window's own preview panel: the real plan around the part, changing as he types; nothing on the drawing until OK** (7b; D-382 corrects D-357; steps 3, 6, 7). WAITS: not built. Whether the part should also show on the drawing behind is not yet asked of Tim.
 10. **A-10 Labels land in the right spot; grips stretch and adjust; levels work along the run** (7c, D-359). WAITS: not built; the run steps for grips are not written until Tim's room has his words on what each grip does.
-11. **A-11 The typed EXPLODE of a pipe** (line 12; step 19). OWED: no pipe could be drawn on 20 Nov, so it has never been tried; the result goes to Tim as SEEN.
+11. **A-11 The typed EXPLODE of a pipe** (line 12; step 21; ruled by D-376: plain AutoCAD pieces that look the same, said once, one Undo makes it a pipe again). OWED: no pipe could be drawn on 20 Nov, so it has never been tried; what EXPLODE really leaves is written down for Tim.
 
 ## B. From the copy rule (D-340; `C:\CE_CIVIL` branch design/copy-identity, section 5, tests 1 to 13)
 
@@ -56,15 +56,20 @@
 
 ## G. From the check room's verdict on the pipe's opening size (team/pipe-default, A5: HOLD, three blockers; `check\VERDICTS\team-pipe-default.md` section 6)
 
-Nothing of this is shown until the fix merges. All seven WAIT. They expand item A-5.
+**REPLACED 20 Nov, about 12:10 pm:** the fix was held after its last round and goes to a design page then one build (D-372). The first list of 7 steps (G-1 to G-7) is superseded by the 10 below, from the last section of `check\VERDICTS\team-pipe-default_HELD.md`. Nothing is shown until that build merges. All ten WAIT. They expand item A-5.
 
-30. **G-1 From nothing, a pipe opens at 100.** WAITS.
-31. **G-2 One 225 pipe arriving: the next opens at 225.** WAITS.
-32. **G-3 150, 225 and 375 arriving: opens at 375.** WAITS.
-33. **G-4 A typed size stands.** WAITS.
-34. **G-5 After a typed size, a fresh pipe is back at 100.** WAITS.
-35. **G-6 An older 375 pipe keeps its width and label when only the label side is changed.** Also record whether opening the drawing, or REGEN alone, changes any width or label (not proven either way on the bench). WAITS.
-36. **G-7 An upstream resize:** record every pipe below, before and after. No ruling yet (U-048): marked SEEN and put to Tim, not PASS or FAIL. WAITS.
+30. **G-8 A run:** five pits 10 m apart, a 375 arriving at the first; PIPE through all five, OK without typing. All four pipes 375, labelled "375 DIA.". With the arrival at the second pit instead: 100, 375, 375, 375. WAITS.
+31. **G-9 Junctions:** two equal sizes arriving; then 150, 225 and 375 arriving. The largest. WAITS.
+32. **G-10 From nothing:** 100, labelled "100 DIA. ... AT 1 IN 100 MIN.". WAITS.
+33. **G-11 A typed size stands;** after it a fresh pipe is back at 100, and a pipe off a 225 is 225. WAITS.
+34. **G-12 An older pipe arriving:** a pipe drawn 375 with nothing typed comes into a pit; PIPE from that pit opens at 375. WAITS.
+35. **G-13 A disagreeing pipe:** draw a 300, change its width to 375 in Properties; ground 10.00, invert 9.38, cover needed 300. Its window shows the drawn 375 with the typed 300 beside it, cover 55 mm short. Then on fresh copies: OK untouched; label side only; grade only: width and label unchanged each time. WAITS. (Changing a width in Properties by a robot needs a typed route; if there is none, this step is Tim's hands.)
+36. **G-14 A width that cannot be read** (set to 0): the window says so in words; OK leaves width and label as they were. WAITS.
+37. **G-15 Read off, not typed:** an existing pipe's size shows as worked out from the drawing; after OK its note does not say it was typed. WAITS.
+38. **G-16 Different widths along one pipe; a real twin-barrel pair (D-349); a saved copy after open and REGEN alone:** every width and label recorded before and after. WAITS.
+39. **G-17 One Undo** after each OK puts back widths, labels and notes together. WAITS.
+
+(The window items in section H below keep their labels H-1 to H-10; their list numbers run on from here.)
 
 ## H. From the check room's verdict on the windows (team/acad-windows, A1 to A3: HOLD, two blockers; `check\VERDICTS\team-acad-windows.md` section 7)
 

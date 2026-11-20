@@ -72,4 +72,6 @@ flowchart TD
 4. **PIPE finding a pit at a typed point,** and a polyline or a part named by its handle being taken by PIPE, MOVE, COPY, ERASE and EXPLODE.
 5. **Whether a running object snap pulls a typed point** when the "no snap" word is used.
 
-Until item 1 has passed in pictures this room has looked at, every step of `EVERYDAY_RUN.md` from 3 to 19 is NOT RUN.
+Until item 1 has passed in pictures this room has looked at, every step of `EVERYDAY_RUN.md` that opens a window or needs a picture (3 to 21) is NOT RUN.
+
+**Changed 20 Nov, 1:15 pm (D-382):** "live" means the preview panel inside the window shows the real plan around the part. So the picture that proves it is the window picture itself; the drawing picture taken while the window is open now only has to show that nothing is on the drawing until OK.

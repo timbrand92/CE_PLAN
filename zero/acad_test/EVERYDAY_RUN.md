@@ -1,7 +1,7 @@
 # The everyday run (what every night must do and photograph in a test AutoCAD)
 
-**Kept by:** the AutoCAD test room ("CE_ACAD / acad test / 01"). **Written:** Fri 20 Nov 2026, 11:30 am.
-**Measure:** `stage6\STAGE1_TIMS_EYES.md`, line by line, and rulings D-340, D-348, D-352, D-354 to D-359.
+**Kept by:** the AutoCAD test room ("CE_ACAD / acad test / 01"). **Written:** Fri 20 Nov 2026, 11:30 am. **Changed 1:15 pm** for Tim's rulings D-361 to D-383: now 23 steps (was 21).
+**Measure:** `stage6\STAGE1_TIMS_EYES.md`, line by line, and rulings D-340, D-348, D-352, D-354 to D-359, D-361 to D-383.
 **Why:** thousands of bench tests passed while real AutoCAD showed plain squares, no pipe and the wrong windows (D-351). A step counts only when a picture taken inside the test AutoCAD shows it.
 
 ## 0. Rules of the run (never bent)
@@ -35,13 +35,14 @@ Pictures go to `C:\CE_WORK\civil_tests\pictures\<date>\` under the names given. 
 
 3. **PT, first pit: click, then the window** (D-354, lines 1, 2, 3, 7a, 7b).
    - **Do:** type PT, click an empty spot.
-   - **Must be seen:** the Pit window opens AFTER the click, for that pit. Approved style: rose OK, three numbered steps, not the old four cards, not a blue OK. Size fitted to its content, about 1100 by 700 at most, not four fifths of the screen. The preview shows the real pit with its tag and cover text, never "Bench preview". The real pit shows on the drawing where clicked while the window is open.
-   - **Pictures:** `03_pit1_window.png`, `03b_pit1_live_on_drawing.png`.
+   - **Must be seen:** the Pit window opens AFTER the click, for that pit. Approved style: rose OK, three numbered steps, not the old four cards, not a blue OK. The preview panel INSIDE the window shows the real plan around the pit, with the pit as it will be drawn, its number and cover text, changing as figures are typed; never "Bench preview" (D-382, which corrects D-357). Nothing is expected on the drawing behind the window until OK. The window lists junction, grated and plastic pits only, and one grey line says office defaults are in use (D-381). The angle is not asked; Turn is a button in the window.
+   - **Window size:** not ruled yet (D-378: 80 per cent of the AutoCAD window, or two set sizes). The width and height are recorded in figures and marked SEEN, not PASS or FAIL, until Tim rules.
+   - **Pictures:** `03_pit1_window.png`, `03b_drawing_behind_window.png`.
    - **PASS:** all of the above. **FAIL:** names which point is missing (for example "blue OK, four groups, empty preview").
 
 4. **OK: the first pit goes in** (line 4, D-352).
    - **Do:** type a cover level in the window (D-358), OK.
-   - **Must be seen:** the OFFICE pit block, never a plain square; its tag reading P1; its cover text with the level typed; right layers. The number sits flat, straight above, below or beside the pit; the cover level sits at 45 degrees off a corner of the pit (D-363). PT then asks for the next click.
+   - **Must be seen:** the OFFICE pit block, never a plain square; its tag reading P1; its cover text with the level typed; right layers. The number sits flat, 900 mm above the pit centre (else below, else beside); the cover level sits at 45 degrees, 400 mm off the top right corner (else round the pit) (D-363, D-366). PT then asks for the next click.
    - **Picture:** `04_pit1_drawn.png`.
    - **PASS:** office block, tag and cover text. **FAIL:** a square outline, a missing tag or text, or "level not known" after a level was typed.
 
@@ -53,19 +54,19 @@ Pictures go to `C:\CE_WORK\civil_tests\pictures\<date>\` under the names given. 
 
 6. **Third pit, Cancel first** (D-357).
    - **Do:** click a third spot, press Cancel in the window; then click again and OK.
-   - **Must be seen:** after Cancel the live pit is gone and nothing is left on the drawing; after OK the pit goes in as P3.
+   - **Must be seen:** after Cancel nothing at all is on the drawing; after OK the pit goes in as P3.
    - **Pictures:** `07_pit3_cancelled.png`, `08_pit3_drawn.png`.
    - **PASS:** Cancel leaves nothing; three pits P1, P2, P3. **FAIL:** anything left behind after Cancel, or a skipped number.
 
 7. **PIPE from anywhere to anywhere, through the pits** (D-355, lines 5, 6, 7, 7a).
    - **Do:** type PIPE; click from open ground short of P1, through P1, P2 and P3, with one bend between two pits; finish the run.
-   - **Must be seen:** the Pipe window opens AFTER the run, knowing the run. It opens with a size (what it joins, else 100 dia.), never "Not known". The preview runs across the top and shows the pipe between its pits with its label. The pipes show live on the drawing.
+   - **Must be seen:** the Pipe window opens AFTER the run, knowing the run. It opens with a size (the biggest pipe arriving, else 100 dia.; D-373), never "Not known". The preview runs across the top and shows the real plan with the pipe between its pits and its label, changing as figures are typed (D-382). The first click is the upstream end (D-370).
    - **Pictures:** `09_pipe_run_clicked.png`, `10_pipe_window.png`.
    - **PASS:** all of the above. **FAIL:** "Not known" size, "unknown DIA" in the label, an empty preview, or the window before the clicks.
 
 8. **OK: the pipes go in.**
    - **Do:** set a grade and a level, OK.
-   - **Must be seen:** what was clicked is drawn. One pipe per pit-to-pit length; the bend kept inside its pipe. Each pipe has its label as ruled; invert levels are written at each pipe end where known; labels land clear of the pipe and the pits. The pipe label sits above the pipe, centred, 75 mm clear, and slides along the pipe if something is in the way (D-361). The invert levels sit on the other side of the pipe from the label, 200 mm from the pit (D-362).
+   - **Must be seen:** what was clicked is drawn. One pipe per pit-to-pit length; the bend kept inside its pipe. Each pipe has its label as ruled; invert levels are written at each pipe end where known; labels land clear of the pipe and the pits. The pipe label sits above the pipe, centred, 75 mm clear; if that is taken, below, then slid along (D-361, D-365). The invert levels sit on the other side of the pipe from the label, 200 mm from the pit (D-362). Every pipe has a flow arrow, centred on the other side from the label, pointing downstream (D-369).
    - **Picture:** `11_pipes_drawn.png`.
    - **PASS:** every length drawn and labelled with inverts. **FAIL:** nothing drawn, one long pipe through the pits, missing inverts, or a label on top of a pit.
 
@@ -95,7 +96,7 @@ Pictures go to `C:\CE_WORK\civil_tests\pictures\<date>\` under the names given. 
 
 13. **Move a pit** (D-348, line 8).
     - **Do:** AutoCAD's own MOVE on P2: 1,200 across, 500 up.
-    - **Must be seen:** the tag and cover text go with the pit; both pipe ends follow to the pit wall; pipe labels re-seat; lengths and grades in the labels are the new ones.
+    - **Must be seen:** the tag and cover text go with the pit; both pipe ends follow to the pit wall; pipe labels re-seat. Not ruled yet (D-378): whether a small window asks which gives, levels or grade, when a pipe's length changes. Whatever happens there is recorded as SEEN.
     - **Picture:** `19_pit_moved.png`.
     - **PASS:** everything followed. **FAIL:** a tag, text or pipe end left behind.
 
@@ -113,13 +114,13 @@ Pictures go to `C:\CE_WORK\civil_tests\pictures\<date>\` under the names given. 
 
 16. **Undo the copy.**
     - **Do:** type U for each command back to before the copy.
-    - **Must be seen:** the copy gone, P2 where it was.
+    - **Must be seen:** the copy gone, P2 where it was. One pit per Undo (D-377).
     - **Picture:** `22_pit_copy_undone.png`.
     - **PASS / FAIL:** one U per command, nothing left behind.
 
 17. **Erase a pipe.**
     - **Do:** AutoCAD's own ERASE on the pipe P2 to P3.
-    - **Must be seen:** the pipe, its label and its invert texts are gone; both pits, their tags and the other pipe stay.
+    - **Must be seen:** the pipe, its label, its invert levels and its flow arrow are gone (D-377); both pits, their tags and the other pipe stay.
     - **Picture:** `23_pipe_erased.png`.
     - **PASS:** only that pipe's parts went. **FAIL:** an orphan label or invert text, or a pit changed.
 
@@ -129,29 +130,41 @@ Pictures go to `C:\CE_WORK\civil_tests\pictures\<date>\` under the names given. 
     - **Pictures:** `24_pipe_erase_undone.png`, `24b_still_joined.png`.
     - **PASS / FAIL:** as step 10, and still joined.
 
-19. **The typed EXPLODE of a pipe** (line 12; no ruling yet).
-    - **Do:** type EXPLODE, pick one pipe.
-    - **Must be seen:** whatever happens, recorded plainly: what the pipe became, what happened to its label and inverts, what the command line said. Then U once and a picture.
-    - **Pictures:** `25_explode_before.png`, `26_explode_after.png`, `27_explode_undone.png`.
-    - **Marked:** SEEN (with what was seen, for Tim's ruling) or NOT RUN. Only step 27 is PASS or FAIL: one U puts the pipe back whole.
+19. **A pipe moved on its own** (D-377).
+    - **Do:** AutoCAD's own MOVE on one pipe alone, 1,000 up. Then U once.
+    - **Must be seen:** the pipe comes off its pits and reads "not joined yet"; the pits do not move. One U puts it back, joined.
+    - **Pictures:** `28_pipe_moved_alone.png`, `28b_pipe_move_undone.png`.
+    - **PASS:** off its pits, then back and joined in one U. **FAIL:** a pit dragged with it, or still shown as joined.
 
-20. **Owed in AutoCAD, from merged work.**
+20. **The whole plan moved** (D-381).
+    - **Do:** AutoCAD's own MOVE on everything in the drawing, 20 m across and 10 m up.
+    - **Must be seen:** nothing changes but the place: every join, level, label position, held figure and number is as before, and no window opens. The before and after pictures match, part for part.
+    - **Pictures:** `29_whole_plan_before.png`, `29b_whole_plan_moved.png`.
+    - **PASS:** identical apart from position. **FAIL:** any label re-seated, number changed, level changed, join lost, or a window opening.
+
+21. **The typed EXPLODE of a pipe** (line 12; ruled by D-376).
+    - **Do:** type EXPLODE, pick one pipe. Then U once.
+    - **Must be seen:** plain AutoCAD pieces that look the same as the pipe did; the command line says once that the tool no longer looks after it. One U makes it a pipe again, whole and joined. What the pieces really are is written down plainly for Tim.
+    - **Pictures:** `25_explode_before.png`, `26_explode_after.png`, `27_explode_undone.png`.
+    - **PASS:** looks the same, said once, one U restores it. **FAIL:** the look changes, nothing is said, or U does not bring the pipe back whole.
+
+22. **Owed in AutoCAD, from merged work.**
     - **Do:** each item in `OWED.md` whose work is on the main line that day, in its listed order.
     - **Pictures:** `30_<plain name>.png` onward, one before and one after each.
     - **PASS / FAIL:** against the words in `OWED.md`.
 
-21. **Close.**
+23. **Close.**
     - **Do:** the runner closes its own test AutoCAD without saving.
     - **Must be seen:** in the runner's log: closed normally, no force; no AutoCAD left running; the test copy on disk unchanged.
     - **Picture:** none. Recorded from the log and a process count, said as such.
 
 ## 2. What the night page reports
 
-`NIGHT_<date>.md` lists steps 1 to 21, each with its picture name, what the picture shows against the measure, and PASS, FAIL, SEEN or NOT RUN, then "PASS n / FAIL n / NOT RUN n", the build run (commit), the start and end times by the clock, and what was not tested.
+`NIGHT_<date>.md` lists steps 1 to 23, each with its picture name, what the picture shows against the measure, and PASS, FAIL, SEEN or NOT RUN, then "PASS n / FAIL n / NOT RUN n", the build run (commit), the start and end times by the clock, and what was not tested.
 
 ## 3. Honest state on 20 Nov 2026, 11:30 am (read from the night scripts, nothing run)
 
-1. **The runner can only type command lines.** It sends text to AutoCAD and waits for it to go idle. It has no way yet to click a point, press OK or Cancel in a window, or take a picture. Steps 3 to 19 need all three.
+1. **The runner can only type command lines.** It sends text to AutoCAD and waits for it to go idle. It has no way yet to click a point, press OK or Cancel in a window, or take a picture. Steps 3 to 21 need all three.
 2. **A CE window would stop the pass.** The safety file treats any window of our AutoCAD it does not know as a stop for Tim. The Pit and Pipe windows are not on its known list, so step 3 would halt and write a note for Tim.
 3. **The test copy is not from the office master.** `open_me.dwg` is a 31 KB bare drawing; the last wrapper copied a trial seed over it. The office master copy is 1.85 MB.
 4. **The wrappers are outside the safe set.** `C:\CE_WORK\civil_tests\night_1119*.ps1` were not in the safety review; one reaches for "the active AutoCAD" directly and opens a drawing in it.
