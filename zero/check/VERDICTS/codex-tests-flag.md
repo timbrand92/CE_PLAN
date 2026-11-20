@@ -163,3 +163,7 @@ One warning on the command line is checked on a rebuilt output, not the channel 
 ## 21. To fix in the same edit
 
 The command line is reconstructed in the test, not read from the channel the Pipe command writes to (`src/CeCivil.Acad/PipeCommand.cs:111-116`), and the one-fault check matches a substring ("Previous warning cleared" plus the whole fault passes); the marker layer's name is a literal: try a second configured name (D-401, D-407); the locked-layer row (`:494`) stays skipped: under D-422 it counts, which adds no strike here (a later ruling) but the BUILD must un-skip and pass it (binding probe).
+
+## 22. Ruled since (control room, about 11:30 pm)
+
+One bounded edit allowed, covering all four items of section 20 (the plotted note changed on a move included) and section 21; read back by the check room alone; then ACCEPT THE LIST, with any further cheat findings as binding probes (D-431).

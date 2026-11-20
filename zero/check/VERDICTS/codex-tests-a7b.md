@@ -205,3 +205,7 @@ Positions compared to five decimal places (`Stage1A7PlacementOrderTests.cs:76-77
 ## 27. Binding probe for the build (D-431)
 
 The kind picker: whichever kinds the window offers, every non-ordinary kind is refused in words with nothing drawn.
+
+## 28. Ruled since (control room, about 11:30 pm)
+
+One bounded edit allowed, covering all three items of section 25 and section 26; read back by the check room alone; then ACCEPT THE LIST, with any further cheat findings as binding probes (D-431).
