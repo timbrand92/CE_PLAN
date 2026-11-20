@@ -6,9 +6,18 @@
 
 **Opened:** Fri 20 Nov 2026, 11:06 am. Main line of `C:\CE_CIVIL` at 11:10 am: 22993fa.
 
+## 0. Order of work (control room, 11:25 am)
+
+1. The night scripts on main, then the launcher fix the build room is making. Tonight's AutoCAD run does not start without the check room's MERGE on that fix.
+2. A1 to A3 (team/acad-windows), then A5 (team/pipe-default), then the doorway's test list, then the Pipe mock-up.
+
 ## 1. Being checked now
 
-1. **team/pipe-default at 741f0f2** (Stage 1 item A5: a pipe opens at the size of what it joins, else 100 dia.; never "Not known"; D-263). Handed over by the build room at 11:07 am as a re-check after its own HOLD (`C:\CE_WORK\scratch\team\check_a5_REPORT_1.md`, one blocker) and fix round 1. The branch is 5 commits behind main, so the suite is also run on the merged result.
+1. **FIRST: everything in `acad\night_scripts` on main at 22993fa**, against rule 1.9 in full and the D-160 exception. Asked by the control room at 11:25 am after the AutoCAD test room found gaps. A blocker is any route by which a script could act on an AutoCAD it did not start, start one in Tim's hours or beside his, or close or force anything with a licence or sign-in window showing. Both helpers work by reading; neither runs a script that touches AutoCAD.
+   - **Honest check:** Team helper (opus), worktree `C:\CE_WORK\check\night-main_honest`, started 11:16 am.
+   - **Adversarial pass:** Codex gpt-6.2-astra (xhigh), worktree `C:\CE_WORK\check\night-main_adv`, started 11:16 am.
+   - **Then:** the launcher fix, when the build room hands it over.
+2. **team/pipe-default at 741f0f2** (Stage 1 item A5: a pipe opens at the size of what it joins, else 100 dia.; never "Not known"; D-263). Handed over by the build room at 11:07 am as a re-check after its own HOLD (`C:\CE_WORK\scratch\team\check_a5_REPORT_1.md`, one blocker) and fix round 1. The branch is 5 commits behind main, so the suite is also run on the merged result.
    - **Honest check:** Team helper (opus), worktree `C:\CE_WORK\check\pipe-default_honest`, started 11:10 am.
    - **Adversarial pass:** Codex gpt-6.2-astra (xhigh), worktree `C:\CE_WORK\check\pipe-default_adv`, started 11:10 am.
    - **Fix rounds used:** 1 of 2.
