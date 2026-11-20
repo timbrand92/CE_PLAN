@@ -209,3 +209,14 @@ The kind picker: whichever kinds the window offers, every non-ordinary kind is r
 ## 28. Ruled since (control room, about 11:30 pm)
 
 One bounded edit allowed, covering all three items of section 25 and section 26; read back by the check room alone; then ACCEPT THE LIST, with any further cheat findings as binding probes (D-431).
+
+
+---
+
+# Read-back of the bounded edit: codex/tests-a7-clean at 7dfc9fb
+
+**Answer: ACCEPT THE LIST.** Written Sat 21 Nov 2026, about 12:28 am, by the check room alone (section 28). The edit: four test files, 120 lines in, 74 out; nothing else changed.
+
+1. **Read:** each Mask tick is now found by its stable link to its text (the identifier carries the text's role even when the caption is just "Mask"); the two pipes between the same pits are picked through the same selected-object reader the command uses (`tool.ClassifyClick`, then `tool.Read`), not by window title; the kind picker: the shipped window may offer the ordinary pipe only, while a populated test picker must refuse each later identity, and the refusal reader accepts "unavailable", "not available in Stage 1" and the like; positions are compared by distance within D-341's 0.1 mm.
+2. **One run by the check room** (own worktree, whole solution built, 0 errors, the plug-in included): the labels list 202 cases: 24 pass (every control among them), 167 targets fail on what the product does, 11 skipped with their reasons (waiting on Tim's picture, owed in AutoCAD, out of Stage 1).
+3. **What this means:** the list may go to the main line as one squashed commit. The labels BUILD owes the binding probe of section 27 and "reads its settings from the store" (the control room's settings ruling). Nothing about the product is accepted.

@@ -167,3 +167,14 @@ The command line is reconstructed in the test, not read from the channel the Pip
 ## 22. Ruled since (control room, about 11:30 pm)
 
 One bounded edit allowed, covering all four items of section 20 (the plotted note changed on a move included) and section 21; read back by the check room alone; then ACCEPT THE LIST, with any further cheat findings as binding probes (D-431).
+
+
+---
+
+# Read-back of the bounded edit: codex/tests-flag at 26d595e
+
+**Answer: ACCEPT THE LIST.** Written Sat 21 Nov 2026, about 12:28 am, by the check room alone (section 22). The edit: two files (the test file and the pretend drawing), 248 lines in, 79 out; nothing else changed.
+
+1. **Read:** the stock-take of what was already there now runs around the MOVE as well as the save, so a plotted note changed on a move fails; the marker's colour is read from the entity itself, with a new control showing that a private record saying 40 on a grey triangle no longer passes; the duplicate fixture uses the office PIT LABEL 2; a loose pipe's reason is checked on the marker, the window and the command line after the move too; a second configured marker-layer name is tried.
+2. **One run by the check room** (own worktree, whole solution built, 0 errors, the plug-in included): the marker list 50 cases: the 4 controls pass, 40 targets fail on what the product does, 6 skipped with their reasons.
+3. **What this means:** the list may go to the main line as one squashed commit. The marker BUILD owes, as binding probes: un-skip and pass the locked CE NO PLOT row (D-422); try a pipe length and a pit name the list has not used; read the command line from the channel the Pipe command really writes to; and "reads its settings from the store". Nothing about the product is accepted.
