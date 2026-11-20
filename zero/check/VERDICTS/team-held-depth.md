@@ -88,3 +88,7 @@ Depth is never typed in Stage 1 (the paths are gone, not patched); a lone pit ke
 ## 13. For the control room
 
 The branch is held. Items 1 to 7 are its own; 4 to 6 overlap the Pit window branch (part B), which also changes depth to the lowest outlet plus a sump. Recommended: fold items 4 to 6 into ONE depth sum owned by one branch (one code path, design rule 1), and let this branch close only 1, 2, 3 and 7.
+
+## 14. Ruled since (control room, 9:04 pm, D-436)
+
+Held-depth's CODE stops: its tests come over, its code does not. A design page `design\PIT_LEVELS.md` comes first (one sum for a pit's levels, one owner); the Pit window branch builds it, and no other branch works a pit's depth out. The check room checks the page when it lands, before any build.
