@@ -127,3 +127,8 @@ The page's own note gives the drawing's height wrongly ("200 of 620 and 256 of 7
 1. **"Over the pipe":** the control room ruled it stays as a quiet choice in step 1 (2:25 pm); Tim then picked step 1 "right as drawn" from a picture that has no such choice (it shows "What is over it: Not known" as a read-off in step 2). Which stands?
 2. **What this page is for now.** In substance it is the SINGLE-PIPE window of D-395 item 2 (a level box at each end, the third worked out and dashed), for which a picture is still owed to Tim. Recommended: redraw it as that owed picture, in line with what he picked (the list in the helper's report, section 5), keeping what the picked pictures do not show: the cover check with its bar and sum, a Wrong state with the marker, both "Cannot check yet" causes.
 3. **Nothing goes to Tim's room from the check room until then.**
+
+## Ruled since (control room, about 4:45 pm, D-409)
+
+1. **"Over the pipe":** Tim's pick stands: a read-off in step 2, no choice in step 1. The control room's 2:25 pm call is withdrawn.
+2. **This mock-up page is RETIRED: no more fix rounds.** The owed single-pipe picture is drawn by Tim's room in the style of the pictures he picked from, with the check room's list (the circle tag 900 mm above the pit, the cover check with its bar, a Wrong state with the marker, both "Cannot check yet" causes). The check room checks it before Tim sees it.
