@@ -6,7 +6,7 @@
 <title>Pipe window for one pipe</title>
 <style>
   :root{--win:#2B2D30;--card:#383B40;--well:#232528;--inp:#4A4D55;--bd:#4A4D53;--ibd:#8A8E96;--cad:#16181B;
-        --text:#ECEDEF;--body:#D2D5DA;--grey:#A9AEB6;--unit:#C8CBD0;--amber:#F5C04A;--green:#5ED08F;--red:#F25555;--redtx:#FF8A8A;--rose:#FF70B3;--dark:#10131A}
+        --text:#ECEDEF;--body:#D2D5DA;--grey:#A9AEB6;--unit:#C8CBD0;--amber:#F5C04A;--green:#5ED08F;--red:#FF6B4A;--redtx:#ECEDEF;--rose:#FF70B3;--dark:#10131A}
   *{box-sizing:border-box}
   html,body{margin:0;background:#1E1F22;font-family:"Segoe UI",Arial,sans-serif;font-size:14px;color:var(--body);overflow:hidden}
   body{padding:20px;font-variant-numeric:tabular-nums}
@@ -140,7 +140,7 @@
   <svg class="bg" id="bg"></svg>
 
   <div class="win">
-    <div class="tb"><span>Pipe 7 (P3 to P2) &middot; 6.20 m</span>
+    <div class="tb"><span id="ttl">Pipe 7 (P3 to P2) &middot; 6.20 m</span>
       <svg width="12" height="12" viewBox="0 0 12 12"><path d="M1 1l10 10M11 1L1 11" stroke="#C8CBD0" stroke-width="1.3" fill="none"/></svg></div>
 
     <div class="wb">
@@ -155,8 +155,8 @@
           <div class="ch"><span class="num">1</span><span>What you type</span><span class="sp"></span><span class="tag out" id="s1tag">Nothing needs you</span></div>
           <div class="why">The few figures only you can give. Everything else is worked out.</div>
           <div class="rows">
-            <div class="r">
-              <div class="f"><span class="l">Size<span class="src">office default</span></span><div class="box" style="width:100px">100<span class="u">mm dia.</span></div></div>
+            <div class="r" id="row1">
+              <div class="f"><span class="l">Size<span class="src">office default</span></span><div class="box" id="sizebox" style="width:100px">100<span class="u">mm dia.</span></div></div>
               <div class="f"><span class="l">Material<span class="src">office default</span></span><div class="box" style="width:72px">UPVC<span class="u chev"></span></div></div>
               <div class="f"><span class="l">Grade<span class="src">office default</span></span><div class="box" style="width:84px">1 in 100<span class="u chev"></span></div></div>
             </div>
@@ -209,7 +209,7 @@
     </div>
 
     <div class="bar">
-      <div class="btn">Inspect</div><div class="btn quiet">Settings</div><span class="grey note">Steps this window aside so you can look at the drawing. Keeps what you typed.</span>
+      <div class="btn">Inspect</div><span class="grey note">Steps this window aside so you can look at the drawing. Keeps what you typed.</span><div class="btn quiet" style="margin-left:16px">Settings</div>
       <span class="sp"></span>
       <div class="btn cn">Cancel</div><div class="btn ok">OK</div>
     </div>
@@ -222,39 +222,43 @@ var NS="http://www.w3.org/2000/svg",CAD="#16181B",BLUE="#3F7BE0",RED="#FF5A5A",A
 function el(n,a,t){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);if(t!==undefined)e.textContent=t;return e}
 var q=(location.search.match(/v=(\w+)/)||[])[1]==="desktop"?"desktop":"laptop";
 var S=(location.search.match(/s=(\w+)/)||[])[1]||"noover";     // noover (default) | cover | wrong | nolevel | nosurface
-if(["noover","cover","wrong","nolevel","nosurface"].indexOf(S)<0)S="noover";
+if(["noover","cover","within","wrong","nolevel","nosurface","existing"].indexOf(S)<0)S="noover";
 var LONG=/n=long/.test(location.search);                         // fit test only: four-character pit names
-var NA=LONG?"P12A":"P2",NB=LONG?"P11B":"P3";
+var NA=LONG?"P12A":"P2",NB=LONG?"P13B":"P3";
 document.body.className=q;
-var SN={noover:"what is over it not set (the default view)",cover:"what is over it set, cover suits",wrong:"cover short by 3 mm at "+NB,nolevel:"no level typed",nosurface:"what is over it set, levels known, no cover level at "+NB};
+document.getElementById("ttl").textContent="Pipe 7 ("+NB+" to "+NA+") · 6.20 m";
+var SN={noover:"what is over it not set (the default view)",cover:"what is over it set, cover suits",within:"what is over it set, cover 297 mm, within the 5 mm tolerance",wrong:"cover short by 12 mm at "+NB,nolevel:"no level typed",nosurface:"what is over it set, levels known, no cover level at "+NB,existing:"a pipe already drawn, opened again (as by a double-click)"};
 document.getElementById("cap").textContent=(q==="laptop"?"Laptop size: 1000 x 620 in a 1280 x 720 AutoCAD window":"Desktop size: 1240 x 780 in a 1920 x 1040 AutoCAD window")+" · State: "+SN[S];
 Array.prototype.forEach.call(document.querySelectorAll(".chev"),function(e){e.innerHTML='<svg width="10" height="6" viewBox="0 0 10 6" style="display:block"><path d="M1 1l4 4 4-4" fill="none" stroke="#C8CBD0" stroke-width="1.5"/></svg>'});
 
 /* ---- the figures, exact in whole millimetres; only what is printed is rounded ---- */
-var OVER=(S==="cover"||S==="wrong"), NOLEV=(S==="nolevel"), WRONG=(S==="wrong"), NOSURF=(S==="nosurface");
+var EXIST=(S==="existing"), OVER=(S==="cover"||S==="within"||S==="wrong"), WITHIN=(S==="within"), NOLEV=(S==="nolevel"), WRONG=(S==="wrong"), NOSURF=(S==="nosurface");
 var LENMM=6200;                      // pipe 7, P3 to P2, pit wall to pit wall
 var UP=12400;                        // level at P3, typed (mm)
 var FALL=LENMM/100;                  // 1 in 100 exactly: 6200 / 100 = 62 mm
 var DOWN=UP-FALL;                    // level at P2, worked out = 12338 mm
-var OUTSZ=110, NEED=300;             // the pipe's outside size, cover needed (mm)
-var CL2=13020, CL3=WRONG?12807:13100;// cover levels at P2 and P3 (mm)
-var TOP3=UP+OUTSZ, TOP2=DOWN+OUTSZ;  // tops of pipe at each end
+var INS=100, WALL=5, TOPADD=INS+WALL, NEED=300, TOL=5;  // 100 UPVC: inside 0.100 + one wall 0.005 (outside 110, so (110-100)/2) = 0.105 above the invert; cover needed; tolerance (mm)
+var CL2=13020, CL3=WRONG?12793:(WITHIN?12802:13100);// cover levels at P2 and P3 (mm)
+var TOP3=UP+TOPADD, TOP2=DOWN+TOPADD;  // tops of pipe at each end
 var COV3=CL3-TOP3, COV2=CL2-TOP2;    // cover at each end
 var SHALLOW=Math.min(COV3,COV2), SHAL_AT=COV3<=COV2?NB:NA, SHORT=NEED-SHALLOW;
 function f3(mm){return (mm/1000).toFixed(3)}
 function f2r(mm){return (Math.floor((mm+5)/10)/100).toFixed(2)}   // round half up to 2 decimals, only for printing
 function lenTxt(){return (LENMM/1000).toFixed(2)+" m"}
-if(FALL!==62||DOWN!==12338||f2r(DOWN)!=="12.34"||f2r(UP)!=="12.40"||TOP3!==12510||TOP2!==12448)throw new Error("sum");
-if(!WRONG&&(COV3!==590||COV2!==572))throw new Error("cover sum");
-if(WRONG&&(COV3!==297||SHORT!==3))throw new Error("cover sum wrong");
+if(FALL!==62||DOWN!==12338||f2r(DOWN)!=="12.34"||f2r(UP)!=="12.40"||TOP3!==12505||TOP2!==12443)throw new Error("sum");
+if(OVER&&COV2!==577)throw new Error("cover sum P2");
+if(S==="cover"&&COV3!==595)throw new Error("cover sum");
+if(WITHIN&&(COV3!==297||SHORT!==3||SHORT>TOL))throw new Error("cover sum within");
+if(WRONG&&(COV3!==288||SHORT!==12||SHORT<=TOL))throw new Error("cover sum wrong");
 var NK="Not known";
 
 /* the band */
 (function(){var b=document.getElementById("band"),h;
   if(NOLEV){b.className="band gry";h='<span class="pill">Cannot check yet</span><span class="ans">Levels: Not known</span><span class="bn">Type one level to work out the rest</span>'}
-  else if(NOSURF){b.className="band gry";h='<span class="pill">Cannot check yet</span><span class="ans">Cover: Not known</span><span class="bn">No cover level at '+NB+'</span>'}
+  else if(NOSURF){b.className="band gry";h='<span class="pill">Cannot check yet</span><span class="ans">Cover: Not known</span><span class="bn">'+NB+' needs a cover level</span>'}
   else if(WRONG){b.className="band red";h='<span class="pill">Wrong</span><span class="ans">Short by '+SHORT+' mm at '+SHAL_AT+'</span><span class="bn">Short by '+SHORT+' mm at '+SHAL_AT+', Pipe 7 ('+NB+' to '+NA+'): cover '+SHALLOW+' mm, needs '+NEED+' mm.</span>'}
-  else if(OVER){h='<span class="pill">Suits</span><span class="ans">Fall 1 in 100</span><span class="bn">Cover '+(SHALLOW/1000).toFixed(2)+' m, needs '+(NEED/1000).toFixed(2)+' m</span>'}
+  else if(WITHIN){h='<span class="pill">Suits</span><span class="ans">Fall 1 in 100</span><span class="bn">Cover '+SHALLOW+' mm: within the '+TOL+' mm tolerance</span>'}
+  else if(OVER){h='<span class="pill">Suits</span><span class="ans">Fall 1 in 100</span><span class="bn">Cover '+SHALLOW+' mm, needs '+NEED+' mm</span>'}
   else{h='<span class="pill">Suits</span><span class="ans">Fall 1 in 100</span>'}
   b.innerHTML=h})();
 
@@ -267,45 +271,49 @@ document.getElementById("p3l").textContent="Level at "+NB;document.getElementByI
   if(NOLEV){a.innerHTML='<span class="nk">'+NK+'</span>';b.innerHTML='<span class="nk">'+NK+'</span>';w.textContent="";
     document.getElementById("s1tag").textContent="Needs one level"}
   else{a.innerHTML='<span>'+f2r(UP)+'</span><span class="u">m</span>';b.innerHTML='<span>'+f2r(DOWN)+'</span><span class="u">m</span>'}})();
+if(EXIST){var ss=document.querySelectorAll("#row1 .l .src");ss[0].textContent="measured";ss[1].textContent="read off the pipe";ss[2].textContent="read off the pipe";document.getElementById("sizebox").className="box dash"}
 if(OVER||NOSURF)document.getElementById("s2over").style.display="";
 if(WRONG)document.getElementById("s1tag").textContent="Cover is short";
-if(NOSURF)document.getElementById("s1tag").textContent="Needs a cover level";
+if(NOSURF)document.getElementById("s1tag").textContent=NB+" needs a cover level";
 
 /* step 3: the fall sum */
 /* ONE table row, the run window's columns: Pit, Below, Fall, Pit drop, Level worked out, On the plan.
-   Below is the level at the pit the figure is worked from (P3, typed); the fall is taken off it going down to P2. */
+   Above is the level at the higher pit (P3, typed); the fall and the pit drop are taken off it going down to P2. */
 (function(){var t=document.getElementById("t3"),nt=document.getElementById("t3n");
-  var w=NOLEV?(q==="laptop"?[22,46,12,40,12,30,12,52,44]:[24,62,14,46,14,40,14,66,62]):(q==="laptop"?[20,50,12,40,12,30,12,66,40]:[28,60,16,50,16,44,16,70,52]);
+  var w=NOLEV?(q==="laptop"?[34,46,12,34,12,28,12,56,44]:[38,62,14,44,14,38,14,66,62]):(q==="laptop"?[34,46,12,36,12,28,12,66,36]:[38,58,16,48,16,42,16,68,50]);
   var h='<colgroup>'+w.map(function(x){return '<col style="width:'+x+'px">'}).join('')+'</colgroup>';
-  h+='<tr><th style="text-align:left">Pit</th><th>Below</th><th></th><th>Fall</th><th></th><th>Pit<br>drop</th><th></th><th>Level,<br>worked out</th><th>On the<br>plan</th></tr>';
+  h+='<tr><th style="text-align:left">Pit</th><th>Level<br>above</th><th></th><th>Fall</th><th></th><th>Pit<br>drop</th><th></th><th>Level,<br>worked out</th><th>On the<br>plan</th></tr>';
   var NKT=q==="laptop"?'Not<br>known':NK;          /* two short lines at laptop width so three of them fit in one row */
   var NKS='<span class="nk">'+NKT+'</span>';
-  h+='<tr><td class="pn">'+NA+'</td><td>'+(NOLEV?NKS:f3(UP))+'</td><td class="sg">&minus;</td><td>'+f3(FALL)+'</td><td class="sg">+</td><td class="none">none</td><td class="sg">=</td>'
+  h+='<tr><td class="pn">'+NA+'</td><td>'+(NOLEV?NKS:f3(UP))+'</td><td class="sg">&minus;</td><td>'+f3(FALL)+'</td><td class="sg">&minus;</td><td class="none">none</td><td class="sg">=</td>'
     +'<td class="fin">'+(NOLEV?'<b class="nk">'+NKT+'</b>':'<b>'+f3(DOWN)+'</b>')+'</td><td>'+(NOLEV?NKS:f2r(DOWN))+'</td></tr>';
   t.innerHTML=h;
-  nt.textContent=NOLEV?'Below is the level at '+NB+': '+NK+'. Fall is '+lenTxt()+' at 1 in 100.':'Below is the level at '+NB+', typed. Fall is '+lenTxt()+' at 1 in 100.';
-  if(NOSURF)nt.innerHTML=nt.textContent+'<br>Cover at '+NA+' is '+f3(COV2)+' m. Cover at '+NB+': '+NK+', no cover level there.'})();
+  nt.textContent=NOLEV?'Above is the level at '+NB+': '+NK+'. Fall is '+lenTxt()+' at 1 in 100.':'Above is the level at '+NB+', typed. Fall is '+lenTxt()+' at 1 in 100.';
+  if(NOSURF)nt.innerHTML=nt.textContent+'<br>Cover at '+NA+' is '+COV2+' mm. Cover at '+NB+': '+NK+', no cover level there.'})();
 
 /* step 3: the cover check, at the two ends only, with its bar */
 if(OVER){(function(){var blk=document.getElementById("cvblock");blk.style.display="";
-  var lap=q==="laptop",w=lap?[24,58,14,58,14,58]:[30,70,18,70,18,70];
-  function row(nm,cl,top,cov,bad){return '<tr><td class="lb">'+nm+'</td><td class="fg">'+f3(cl)+'</td><td class="sg">&minus;</td><td class="fg">'+f3(top)+'</td><td class="sg">=</td><td class="fg'+(bad?' bad':'')+'"><b>'+f3(cov)+'</b></td></tr>'}
-  var h='<div class="grey cvh">Cover at the two ends: level &minus; top of pipe</div>';
+  var lap=q==="laptop",w=lap?[34,52,14,52,14,60]:[38,66,18,66,18,76];
+  function row(nm,cl,top,cov,bad){return '<tr><td class="lb">'+nm+'</td><td class="fg">'+f3(cl)+'</td><td class="sg">&minus;</td><td class="fg">'+f3(top)+'</td><td class="sg">=</td><td class="fg'+(bad?' bad':'')+'"><b>'+cov+' mm</b></td></tr>'}
+  var h='<div class="grey cvh">Cover at the two ends: cover level &minus; top of pipe</div>';
   h+='<table class="sum cvt"><colgroup>'+w.map(function(x){return '<col style="width:'+x+'px">'}).join('')+'</colgroup>'
     +row(NB,CL3,TOP3,COV3,WRONG)+row(NA,CL2,TOP2,COV2,false)+'</table>';
-  h+='<div class="cvline">Shallowest '+f3(SHALLOW)+' m at '+SHAL_AT+(WRONG?', <span class="bad">short by '+SHORT+' mm</span>':' against '+f3(NEED)+' m needed')+'</div>';
+  h+='<div class="cvline">Shallowest '+SHALLOW+' mm at '+SHAL_AT+(WRONG?', short by '+SHORT+' mm':' against '+NEED+' mm needed')+'</div>';
+  if(WITHIN)h+='<div class="cvline">Cover at '+NB+' '+SHALLOW+' mm: within the '+TOL+' mm tolerance</div>';
   h+='<svg id="cvbar"></svg>';
   blk.innerHTML=h;
   var W=blk.clientWidth,H=30,s=document.getElementById("cvbar");s.setAttribute("width",W);s.setAttribute("height",H);s.setAttribute("viewBox","0 0 "+W+" "+H);
-  var maxv=700,x0=0,x1=W-34,sc=(x1-x0)/maxv, ok=!WRONG, col=ok?"#5ED08F":"#F25555";
+  var maxv=700,x0=0,x1=W-34,sc=(x1-x0)/maxv, ok=!WRONG, col=ok?"#5ED08F":"#FF6B4A";
   s.appendChild(el("rect",{x:x0,y:8,width:x1-x0,height:10,rx:3,fill:"#232528",stroke:"#5A5D63","stroke-width":1}));
   s.appendChild(el("rect",{x:x0,y:8,width:Math.max(2,SHALLOW*sc),height:10,rx:3,fill:col}));
   s.appendChild(el("line",{x1:NEED*sc,y1:3,x2:NEED*sc,y2:23,stroke:"#ECEDEF","stroke-width":2}));
-  s.appendChild(el("text",{x:NEED*sc+5,y:H-1,"font-size":12,style:"fill:#C8CBD0;font-family:'Segoe UI',Arial,sans-serif"},"needs 0.300"));
+  s.appendChild(el("text",{x:NEED*sc+5,y:H-1,"font-size":12,style:"fill:#C8CBD0;font-family:'Segoe UI',Arial,sans-serif"},"needs 300 mm"));
   s.appendChild(el("text",{x:x1+4,y:17,"font-size":12,style:"fill:#C8CBD0;font-family:'Segoe UI',Arial,sans-serif"},ok?"Suits":"Short"));
   if(lap){document.getElementById("why3").style.display="none";document.querySelector(".s3b").style.marginTop="4px"}else document.getElementById("why3").textContent="Does it fall enough, and is there enough cover?";
   document.getElementById("side").style.display="none";
-  document.getElementById("n3").textContent="Top of pipe = invert + "+f3(OUTSZ)+" (outside size). Worked from exact figures; the plan shows two decimals."})()}
+  if(lap)document.getElementById("t3n").style.display="none";   /* laptop: the "Above is..." note goes so the cover check and its sums fit */
+  var n3=document.getElementById("n3");n3.style.whiteSpace="normal";
+  n3.innerHTML="Top of pipe = invert + "+f3(INS)+" inside + "+f3(WALL)+" wall = invert + "+f3(TOPADD)+"<br>Pipe sizes are from the makers' figures and wait on your word."})()}
 
 /* side view: the one pipe, sloping down to P2 on the left (slope drawn bigger than real) */
 (function(){var s=document.getElementById("side");if(s.style.display==="none")return;var W=s.parentNode.clientWidth,H=q==="laptop"?40:56;
@@ -366,7 +374,7 @@ if(OVER){(function(){var blk=document.getElementById("cvblock");blk.style.displa
   var mx=(xa+xb)/2;
   // (a) label centred above the pipe
   var lab=txt(mx,py-OFF,"100 DIA. UPVC PIPE AT 1 IN 100 MIN.","#fff","middle");
-  if(WRONG){var lw=lab.getBBox().width,mh=12,mcx=mx-lw/2-mh-mh/2,mcy=py-OFF;   // amber marker: as wide as tall, as tall as the label text, one text height clear
+  if(WRONG){var lw=lab.getBBox().width,mh=12,mcx=mx+lw/2+mh+mh/2,mcy=py-OFF;   // amber marker: as wide as tall, as tall as the label text, one text height clear
     s.appendChild(el("polygon",{points:mcx+","+(mcy-mh/2)+" "+(mcx-mh/2)+","+(mcy+mh/2)+" "+(mcx+mh/2)+","+(mcy+mh/2),fill:AMB,stroke:"#10131A","stroke-width":0.8,id:"amber"}))}
   // (b) red invert levels below the pipe, 200 mm from the OUTER DASHED LINE of each pit (not shown when no level is typed)
   var e=200*K;
