@@ -65,3 +65,16 @@ The pit uses PIT BLOCK 3's own two size grips, marked DRAFT and put to Tim with 
 ## 9. Not holding the build (improve when the page is next open)
 
 The night gate should name D-420 items 1, 3 and 7; say the test file loads with no AutoCAD setting touched and that the unsigned-file box stops the night; expected night results written by hand, and "not a real drag" in the night log and morning report; whether a Flip or a Next spot click counts as moved by hand; the 150 mm circle gap on Next spot; 45 degrees to the sheet on a turned pit; the arrow's flip needs its own numbered question for Tim; the text grips also wait on the label placing build and the amber marker; the one allowed write must be written on the doorway's own page too. **A correction:** the first answer said the page cited a "D-364 item 6" that does not exist. It does exist (in the additions to D-364: the test drawing is known by its FULL path). The check room was wrong on that point.
+
+
+---
+
+# Third answer: the page at 04b4034 (the two edits read back)
+
+**Answer: BUILD FROM IT.** Written Fri 20 Nov 2026, about 7:25 pm. By reading only, by the check room itself (the change between db13df1 and 04b4034: one file, 20 lines added, 6 removed), as the second answer said.
+
+1. **The label slide now says one thing.** Tim's steps sheet item 4: a hand drag past the bend is allowed (D-418 item 4), the label lands on the next straight, lined up with it, with the amber marker; U once puts it back with no marker. The bench item says which straight (the one nearest the drop point: the designer's call, said as such) and that it is recorded as moved by hand.
+2. **"Hidden the same way as the pit's" is gone.** TIM_CVL_ARROW is read on the bench BEFORE the arrow grips are built; if it carries its own flip the arrow grips STOP and it goes to the control room; the other text grips do not wait. Question 9 for Tim is on the page.
+3. **Also taken up:** D-420 items 1, 3 and 7 at the night gate; the test file loads with no AutoCAD setting touched and the unsigned-file box stops the night; the D-364 item 6 citation kept.
+
+**What this pass means:** the page may be built from, text grips first, inside its own waits (the edit doorway; the label placing build; the amber marker). It is a design page checked by reading: every grip is still owed on the bench and then in AutoCAD, and nothing of it runs on Tim's PC under D-420. Still open from section 9, for when the page is next open: whether a Flip or a Next spot click counts as moved by hand; the 150 mm circle gap on Next spot; 45 degrees to the sheet on a turned pit.

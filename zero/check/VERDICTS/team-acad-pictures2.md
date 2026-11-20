@@ -78,3 +78,10 @@ Blockers 1 to 3 (the fail-open sandbox; a log written over any file; PASSED on f
 1. **A made-up test drawing for pictures.** The route photographs whatever the test copy shows, and the test copy today is a copy of the office master. Should the picture route be allowed to run ONLY on a drawing made by the tool itself for the night (pits and pipes drawn by the tests, no references), never on a copy of an office drawing?
 2. **Who closes the test AutoCAD after a picture run or a stop:** the picture runner itself, through the one safe-close owner, inside the run?
 3. **What AutoCAD's own view picture shows when a window sits over the drawing,** and whether the plug-in's window timers run while its window is open: both NOT PROVEN BY READING; for the AutoCAD test room's first night, after the gate.
+
+## F. Ruled since (control room, 7:15 pm, D-423)
+
+1. **Tim's security rule, not a draft:** pictures ONLY of a drawing the tool itself made for that night (blank start, pits and pipes drawn by the tests, office set-up from the plug-in's own scanned shipped copies). Never a copy of an office drawing, master or template. Before EVERY picture the route proves no xref, no attached image or PDF, no pasted object and no layout viewport of anything else; otherwise no picture, the run stops and says why. The next round is held to this.
+2. **The picture runner closes its own test AutoCAD** after a run or a stop, through the launcher's ONE safe-close owner, by 8:00 am; a late stop flag must not leave it running.
+3. **The two AutoCAD-only questions** go on the AutoCAD test room's list for after the gate.
+4. **Fixed by building and reading only;** run by no one on this PC (D-420).
