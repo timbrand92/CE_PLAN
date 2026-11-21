@@ -100,3 +100,20 @@
 2. **Item 4** (the release check covers the drafter's configured drawing, and its hashes come from an independent record, D-433) must close before the block drawings branch or any release merges.
 
 **The filter:** the filter on ShippedBlocksFileTests (and the other three outside-reading classes) comes off only after the check room has confirmed on main that nothing names the terms file.
+
+---
+
+# Main confirmed: the filter may come off (main 1e1534a)
+
+Written Sat 21 Nov 2026, about 4:46 pm. Checked by the check room by reading only; nothing was run.
+
+1. **The merge is on main:** origin main is 1e1534a1, and it contains 68eff92.
+2. **The tree is clean:** a search of main's whole tree (every folder, not only src, bench and tests) for the terms file's name, the private folder's name and the retired variable finds only the three guard files.
+   - **`PrivatePathSourceTests.cs:9`** builds the folder name in memory to match against it.
+   - **`SemanticPrivatePathSourceTests.cs:91`** builds an escaped name as a planted case.
+   - **`TestInputPath.cs:13`** holds the refusal pattern.
+
+   None of the three opens, reads or points at the file.
+3. **ShippedBlocksFileTests on main** reads only its embedded made-up terms (`SyntheticPrivacyTerms.txt`) and has no supplied-folder default.
+
+**So:** the D-441 filter on ShippedBlocksFileTests, SavedDwgTests, SeedBlockTests and TankBlockTests may come off on main and on any branch cut from 1e1534a or later. A branch cut BEFORE 1e1534a still carries the old file and keeps the filter until it is rebased or merged up. The follow-up branch codex/privacy-path2 is queued (q0105).
