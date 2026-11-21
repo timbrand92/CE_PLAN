@@ -83,3 +83,18 @@ The original 138 rows and 16 copies are intact; 20 entries are new.
 7. **The bench app's XAML and manifest:** both are registered through the WPF and SDK outputs to the built entry point and the embedded manifest. A linked input is refused before WPF or the SDK reads it, on clean and up-to-date builds.
 
 **What this means:** one build is made from this page (D-444). Until it merges, no night-route or bench-runner work merges, and the block drawings and any release wait.
+
+---
+
+# The rule 32 amendment (D-450): the page at 52555c1
+
+**Answer: PASS. The paragraph may stand, and the one fix may be built.** Written Sun 22 Nov 2026, about 12:56 am. Read by the check room alone, as the control room ruled. The change from 0ff1d53 is one paragraph after line 266, and nothing else (+2 lines).
+
+1. **The paragraph says what D-450 asks:**
+   - **Every member, every role:** each member is checked for every role, before every probe, read or write.
+   - **What is refused:** any member in the live-run folder holding the staged drawing and DLL, or in any other folder rule 32 reserves.
+   - **No bind-time shortcut:** a check made only when the directory is bound is named as not enough.
+   - **The test:** a failing-first test per role tries `open_me.dwg` and `CeCivil.Acad.dll` separately, as declared members under an allowed parent, for each operation the role offers, and requires refusal before either file is touched. One table-driven test may cover all roles.
+2. **Binding notes for the fix (they do not hold the page):**
+   - **Every reserved folder:** the table-driven test should cover every folder rule 32 reserves, not only the live-run folder.
+   - **Physical identity:** members are matched by physical identity after each component is resolved (rules 4 to 6 and 36), so no spelling, case or `..` form can slip past.
