@@ -117,3 +117,40 @@ Written Sat 21 Nov 2026, about 4:46 pm. Checked by the check room by reading onl
 3. **ShippedBlocksFileTests on main** reads only its embedded made-up terms (`SyntheticPrivacyTerms.txt`) and has no supplied-folder default.
 
 **So:** the D-441 filter on ShippedBlocksFileTests, SavedDwgTests, SeedBlockTests and TankBlockTests may come off on main and on any branch cut from 1e1534a or later. A branch cut BEFORE 1e1534a still carries the old file and keeps the filter until it is rebased or merged up. The follow-up branch codex/privacy-path2 is queued (q0105).
+
+
+---
+
+# The follow-up branch: codex/privacy-path2 at f5f41b0 (round 1 of 2)
+
+**Verdict: HOLD. Both halves hold it.** Written Sat 21 Nov 2026, about 6:02 pm. The branch is cut from main 1e1534a; outside-input variables were kept unset.
+- **Honest half:** gpt-6.2-sol. Report: `C:\CE_WORK\check\reports\pq_honest_REPORT.md`.
+- **Adversarial half:** gpt-6.2-astra. Report: `pq_adv_REPORT.md`, with proofs in `pq_adv_proofs\`. It built the whole solution, CeCivil.Acad included, with 0 errors, and all 19 new cases pass.
+
+**The incident stays closed.** The fixture terms are read from the embedded resource.
+
+**Item 4 (the release condition) is met in the code.**
+- **The configured drawing:** `ShippedBlocksFileTests.cs:263` checks the configured `office_blocks_file`.
+- **The independent record:** the 18 drawings are checked against `Fixtures/SuppliedBlockFingerprints.txt`, which holds file names, sizes and hashes only (D-433).
+- **Not yet proven:** a release run with the real drawings, which only the release itself will show.
+
+**Also closed:**
+- **The click runner:** it checks its executable, scenario and screenshot paths before use.
+- **The bench app:** it checks its shoot and report destinations.
+- **The test drawing commands:** both use the checkout.
+- **The two source loops:** they use the checked enumerator.
+
+## Open (items 1 to 3: needed before any night-route or bench-runner merge)
+
+1. **Other reads still follow links or take unchecked paths** (both halves).
+   - **Hands tests:** `ListsAtStartTests.cs:14, 55, 84`; `ScalabilityTests.cs:45-52, 72-76` (CopyDir); `PitBlock3Tests.cs:388` and `ShouldFixTests.cs:250` (AllDirectories).
+   - **Other source readers:** the recursive readers in `RoundingSourceTests.cs:78, 489, 522, 548` and `StyleKitTests.cs:173`.
+   - **The three bench test launchers:** `FifthPassLayoutTests.cs:20-36`, `ListControlsTests.cs:17-33` and `StyleKitTests.cs:212-227` start an executable whose path they only check exists.
+   - **Plug-in helpers:** `AcadHost.cs:73-76` reads a saved DWG through the legacy `TestFolder.Saved` (prefix only, links unchecked); `CeTestRunner.cs:40`; the csproj's overridable `RunToolsCsv` (`CeCivil.Acad.csproj:52-57`).
+2. **The shared file check accepts hard links** (honest half). `HasSafeAttributes` (`TestInputPath.cs:86-140`) refuses folder links but accepts a hard link, which can give an outside file a name inside the checkout. The click runner and the test drawing commands rely on it.
+3. **The guard misses four forms** (both halves): .resx resource files; WSL absolute paths; an MSBuild property taken from the environment; and a direct C# environment value (`SemanticPrivatePathSourceTests.cs:14-22, 313-320, 392-396, 447-459, 532-537`).
+
+## Follow-ups
+1. **An unreviewed format:** the rounding source test flags the screenshot step's numeric format at `Program.cs:482` as unreviewed. Add the review entry. That test also fails on main for night-script findings outside this diff.
+
+**Next:** round 2 of 2, the last.

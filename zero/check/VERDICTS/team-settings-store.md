@@ -213,3 +213,47 @@ The first launches died on the Codex runner fault (8:07 to 8:17 am) and were rel
    - **Ruling:** D-413 item 14 (the source shown must say where a figure came from).
 
 **Next:** the LAST round fixes these three on top of f4a58e3. Each comes as a failing test first, then the whole suite on the real tip.
+
+
+---
+
+# Final verdict: team/settings-store2 at db5a109 (the LAST round)
+
+**Verdict: HOLD, final. Both halves hold it. Under D-346 it goes to the control room with this open list.** Written Sat 21 Nov 2026, about 6:02 pm. Both halves ran on Codex with the D-441 filter, because this branch does not yet hold 1e1534a in its history:
+- **Honest half:** gpt-6.2-sol. Report: `C:\CE_WORK\check\reports\ss4_honest_REPORT.md`, evidence in `ss4_honest_evidence_db5a109\`.
+- **Adversarial half:** gpt-6.2-astra. Report: `ss4_adv_REPORT.md`, with proofs in `ss4_adv_proofs\`.
+
+**The hand sync is sound.**
+- **Nothing lost:** no main path is missing, and every one of main 1e1534a's 2,300 passes is accounted for.
+- **Main's work intact:** the rounding owner and its baseline tests carry main's blobs, and 30 of 32 privacy paths match main byte for byte; the other two keep main's changes.
+- **The patch:** db5a109's tree is exactly 1a8c265 plus the named patch, with only its line endings normalised.
+- **The build:** the adversarial half compiled CeCivil.Acad with 0 errors. The honest half's restore failed for lack of the package, so that point is closed.
+
+**The six restatements:** both halves find each named ruling makes the OLD expectation wrong:
+- T7 (D-425 item 2: the writable Job cell is retired);
+- T12 (D-425 item 1: a damaged value warns and the office value is used);
+- T13 (D-440 item 2, D-439 item 4);
+- T14 (D-425 item 1, D-439 item 4);
+- "CL TBC" (D-398 item 6);
+- the tolerance saving only on OK (the page).
+
+D-429's individual reset is a draft and is not leaned on.
+
+**Closed:** the swapped-caption 150 mm route is refused on save; the three source routes of the second verdict are caught; two-pipe Levels at an ordinary pit shows no council connection and no "given"; all 167 store test executions pass.
+
+## Open list (one page)
+
+1. **A mislabelled office row still gives a verdict before it refuses** (adversarial half).
+   - **The case:** swap the keys of the pipe label distance and invert gap rows. Pipe opens and shows "Wrong, short by 10 mm", and only refuses at OK.
+   - **The ruling:** the page's refusal table says "No verdict, placement or write" (D-425 item 1). Files: `PipeCommand.cs:90`, `PipeToolWindow.cs:24`, `PipeTool.cs:551`.
+   - **The fix:** check the rows a tool needs before it opens.
+2. **The source test still misses an allowance changed at its last step** (both halves).
+   - **A capped setter (adversarial):** a setter on the returned tolerance (`Checks.cs:72`) caps the shown figure at 17 mm. Pipe then says Suits beside 17 mm, against an 18 mm shortfall, while the real 20 mm decides the check.
+   - **A capped comparison (honest):** a 17 mm cap at the final comparison (`Evaluator.cs:179`) shows "Wrong, short by 18 mm" beside 20 mm.
+
+   Both report zero violations. The test does not follow the value through property accessors to the control shown, or to the final operand (`SettingsSourceAudit.cs:269`, `SettingsSourceSinks.cs:15`). Rulings: D-419 item 7, D-439 item 4, D-440 item 2.
+3. **Levels is cut off at the approved 1000 by 620 size** (honest half). For one and two pipes, the long section is missing and the working rows are cut; the one-pipe result heading ends "Arrives 5.21 at", without its destination. At 1240 by 780 everything shows. Rulings: D-346, D-386, D-389 item 4. Pictures: `ss4_honest_evidence_db5a109\levels\`.
+
+**Recommended for the control room:**
+1. **Items 1 and 3:** one bounded edit; a verdict on a broken row, and a cut-off at an approved size, are both drafter-facing.
+2. **Item 2:** the same edit, or a binding probe in the spirit of D-431 and of the rounding ruling. Each round has closed every named route, and reaching it needs someone to write new dodging code.
