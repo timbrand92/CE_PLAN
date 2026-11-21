@@ -100,6 +100,6 @@ A test that reached the build's main line read the leak-scan terms file (the lis
 
 ## V. Added Sat 21 Nov, 9:12 pm (D-444, D-445): TELL TIM ON MONDAY, a new folder and a draft call
 
-1. A new folder, C:\CE_WORK\trusted\, is being made by the check room. It holds one small record of file fingerprints for the safety checker that every other tool must pass through before it reads or writes a file. Undo: delete the folder. Nothing in Windows, AutoCAD or the registry is changed.
-2. It is marked read-only in the plain way only, so it shows tampering rather than prevents it; a copy of the fingerprints is pushed with the check room's verdict.
-3. Draft calls to confirm or overturn: D-443 (settings store fix), D-444 (privacy follow-up merged; one checked reader and writer by design; night route, bench runner, block drawings and any release wait on it), D-445 (who holds the record).
+1. (CORRECTED 9:15 pm by D-446: NO new folder is made on the PC.) The safety checker that every other tool must pass through before it reads or writes a file has its file fingerprints recorded by the check room in its own pushed page, C:\CE_PLAN\zero\check\PINS\checked-reader.md. Nothing in Windows, AutoCAD or the registry is changed.
+2. The pushed history on GitHub is what shows any tampering; the build's gate reads that one page and refuses if it is missing or does not match.
+3. Draft calls to confirm or overturn: D-443 (settings store fix), D-444 (privacy follow-up merged; one checked reader and writer by design; night route, bench runner, block drawings and any release wait on it), D-445 as amended by D-446 (the check room holds the record).
