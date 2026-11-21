@@ -257,3 +257,26 @@ D-429's individual reset is a draft and is not leaned on.
 **Recommended for the control room:**
 1. **Items 1 and 3:** one bounded edit; a verdict on a broken row, and a cut-off at an approved size, are both drafter-facing.
 2. **Item 2:** the same edit, or a binding probe in the spirit of D-431 and of the rounding ruling. Each round has closed every named route, and reaching it needs someone to write new dodging code.
+
+
+---
+
+# Read-back of the ONE bounded edit (D-443): team/settings-store2 at 82f82d9
+
+**Answer: READ-BACK PASSES, so MERGE.** Written Sat 21 Nov 2026, about 6:54 pm. Read back by the check room alone, as D-443 allows. It is one commit on db5a109: 15 files, 324 lines in and 22 out. The build room compiled it with 0 errors; the builder's filtered run shows every db5a109 pass passing again, with no restatements.
+
+1. **A mislabelled office row gives no verdict at all.**
+   - **In AutoCAD:** `PipeCommand.cs` calls `PipeTool.RequireOfficeSettings` before the selection and before the window opens, and only says the refusal. A source test checks that order.
+   - **On the bench and in the plan:** the bench window validates the label and invert rows before it calculates, and `Plan` refuses with nothing else said, no apply and no record written.
+   - **The tests:** with the label and invert keys swapped, at 5 mm and at 11 mm, opening Pipe throws the office refusal. The message names "pipe label" and "mislabelled" and holds no "Wrong", "short by" or "Suits".
+2. **Levels at 1000 by 620** for one and two pipes. The window-part changes all switch on only for the Levels (run) preview at a height of 620 or less: compact padding, wrapped headings, a shorter preview caption, the height scale, narrower sum columns and card weights. Nothing changes at 1240 by 780, or in any other window.
+   - **The check room's own look:** at 1000 by 620 both pictures show the long section, the plan, every card and the full headings "Arrives 5.21 at P2" and "Arrives 5.09 at P3". The figures check by hand: 5.31 − 0.100 = 5.21; 5.31 − (0.100 + 0.020 + 0.100) = 5.09; cover 5.75 − 5.31 − 0.15 = 0.29 against 0.300, short by 10 mm at the 5 mm office tolerance.
+   - **The new bench check:** `Check.cs` fails a missing section, a cut-off heading, or a height scale that overlaps a label.
+3. **The allowance-cap BINDING PROBE:** two planted caps must fail the source test, a setter on `Tolerance` capping at 17 and `Math.Min(nums[1], 17m)` at `Evaluator.cs`. The sink audit now follows the property accessor and the final operand. The product code had no cap.
+4. **Scope:** every changed line belongs to one of the three items. The widest, the window parts, is gated to Levels at the smaller size.
+
+**Follow-ups (none holds the merge):**
+1. **Wording:** the "What is fixed" card reads "1 pits".
+2. **The filter:** this branch's history does not include 1e1534a, so the D-441 filter stays on its runs until it merges.
+
+**What follows:** the build room merges team/settings-store2.
