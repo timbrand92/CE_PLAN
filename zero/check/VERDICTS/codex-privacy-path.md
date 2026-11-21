@@ -191,3 +191,20 @@ Neither half could restore packages for a full build this time. The builder and 
 1. **MERGE this tip:** it is strictly safer than main. Nothing regresses, it closes most of the routes, and it settles the release condition in code.
 2. **Keep the open items:** items 1 to 3 stand as the merge conditions for night-route and bench-runner work, as D-443 already says, in a short design page for "every read and write goes through one checked reader and writer". Each round so far has found new raw calls one at a time.
 3. **The alternative:** hold, and go straight to that design page.
+
+
+---
+
+# MERGE: codex/privacy-path2 at 77e4fdd (control room ruling D-444)
+
+**Verdict: MERGE.** Written Sat 21 Nov 2026, about 7:13 pm. The control room took the check room's recommendation: merge the tip now.
+
+**Items 1 to 3 get no third patch.** A short design page comes first: `design\CHECKED_READ_WRITE.md`. It must set out:
+- one checked reader and writer for every read and write;
+- hard links counted;
+- the three guard forms that were missed;
+- a source test that fails on any raw read or write outside the checked reader and writer.
+
+The check room passes the page, and one build is made from it.
+
+**Until that build merges:** no night-route or bench-runner work merges, and the block drawings and any release also wait.
