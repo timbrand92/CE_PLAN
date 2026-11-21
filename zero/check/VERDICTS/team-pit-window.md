@@ -116,3 +116,25 @@ The first launch of both halves died at about 9:30 pm, when the Codex shell retu
 **Recommended for the control room:**
 1. **Item 1:** one bounded edit; it is a drafter-facing cut-off at both approved sizes.
 2. **Item 2:** a BINDING PROBE on every later build that writes a pit number, as for the rounding and settings probes. Each round has closed every named parser, and reaching this one needs someone to write new code.
+
+
+---
+
+# Read-back of the ONE bounded edit (D-447): team/pit-window at 8c4dc62
+
+**Answer: THE TWO ITEMS PASS, but a cut-off OUTSIDE them remains at both approved sizes. Under D-447 that goes to the control room, so this is NOT a merge yet.** Written Sat 21 Nov 2026, about 11:32 pm. Read back by the check room alone; I looked at both pictures. The edit is one commit on 4b42c43, 7 files, 397 lines in and 14 out, all within the two items. The build room compiled it with 0 errors, CeCivil.Acad included; the builder reports 101 new tests passing, every one of 3,472 baseline passes kept, and nothing restated.
+
+1. **Item 1 passes.** In both pictures, `Pipe-1000x620.png` and `Pipe-1240x780.png`:
+   - **The cover warnings:** "Cannot check yet: Example pipe upstream cover is not known" and its downstream twin sit whole in the gap under the top plan strip.
+   - **The discrepancy:** "Wrong: Out by 70 mm between P1 and P2" sits whole under the answer band, at the approved note size.
+   - **Room made honestly:** no text is shrunk, no approved line is hidden, and the preview stays.
+   - **OK:** it is unavailable while either message is clipped, and is checked again on press (`StdButton.cs`, `StdChrome.cs`). 96 layout cases plus a resize case failed first on 4b42c43 (`PipeWarningLayoutTests.cs`).
+   - **"48":** the builder took D-447's "48 unit cases" as 4 diameters × 4 grades × 3 lengths. The 48 in the check room's verdict was the warning's HEIGHT (0 of its 48 display units visible), not a count of cases. What D-447 requires, the whole warning rectangle in view, is what the tests check and what the pictures show, so the builder's reading does no harm.
+2. **Item 2 passes** (the BINDING PROBE). `PitNumberSourceTests.cs` now pins the exact bodies of the small number writers (`WriteNumberTag`, `SetBlockAttribute`) and lists every other regular-expression or template input by exact path and call. Four duplicate-P1 probes failed first, among them a regular-expression capture then parse, and plain text.
+
+**Outside the two items: the lower working rows are still cut off at BOTH approved sizes** (the builder said so itself; the pictures confirm it):
+- **At 1000 by 620:** card 2, "What the drawing gives", shows only its heading. Card 3, "The answers", shows only its first row ("Upstream invert 10.40"); the sum, the fall, the grade and the section are below the edge.
+- **At 1240 by 780:** card 3 shows down to "Fall by the levels −0.200", and the row's working, the second section and its labels are cut by the window edge.
+- **OK stays available:** as D-447 asks, it is blocked only for the warning and the discrepancy, so it does not cover these rows.
+
+This is a cut-off at an approved size (D-346, D-386, D-398 item 3), outside D-447's two items, so it goes to the control room.
