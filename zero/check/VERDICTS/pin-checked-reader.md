@@ -33,3 +33,5 @@ The two halves stop the pin for different reasons. Neither report contains a log
 1. **The pin image:** pin the image built FROM THE EXACT COMMIT, with its git metadata. It is reproducible per revision, and the host verifies that same image. Or rule that pins are built with source-control details switched off. Either is honest; the builder and the rebuild must use the same one.
 2. **The PowerShell reference:** designate a permitted, locked source, for example the matching NuGet package restored through the lock file, in place of a copy from an installed PowerShell.
 3. **Then:** the builder closes the four holes, and the check room rebuilds and reviews again before any pin is written.
+
+**Ruled since (D-448, 22:57):** git metadata OFF in the project; the PowerShell reference from Microsoft's NuGet package under a locked restore (or dropped); the four holes fixed with failing-first tests; then a new rebuild and review.
