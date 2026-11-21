@@ -88,3 +88,15 @@
 - **Why:** main STILL holds the default path to the real terms file. Holding this branch keeps that danger on main and the filter on every run.
 - **The incident is closed:** the reader is gone and the guard is in. What is open is hardening against routes that need someone to supply an outside path on purpose, and the release check's link to the configured drawing.
 - **The alternative:** one bounded round, with main kept filtered meanwhile.
+
+---
+
+# MERGE: codex/privacy-path at 68eff92 (control room ruling)
+
+**Verdict: MERGE.** Written Sat 21 Nov 2026, about 4:50 pm. The control room took the check room's recommendation: merge now. This removes the default path to the real terms file from main and closes the incident's routes.
+
+**The four open items become ONE follow-up branch, queued now, and each is a merge condition for later work:**
+1. **Items 1 to 3** (unchecked bench and plug-in routes; links and the too-broad drawing exception; the guard's decoded and expanded forms) must close before any night-route or bench-runner work merges.
+2. **Item 4** (the release check covers the drafter's configured drawing, and its hashes come from an independent record, D-433) must close before the block drawings branch or any release merges.
+
+**The filter:** the filter on ShippedBlocksFileTests (and the other three outside-reading classes) comes off only after the check room has confirmed on main that nothing names the terms file.
