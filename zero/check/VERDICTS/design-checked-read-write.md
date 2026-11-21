@@ -110,3 +110,16 @@ The original 138 rows and 16 copies are intact; 20 entries are new.
    - **What is refused:** every other declaration, with no wildcard, pattern, version range, package-fetched SDK, custom resolver or import by path.
    - **Adding a name:** it is a pin change needing a D-number.
 2. **Note for the pin job (not a hold on the line):** `global.json` pins SDK 10.0.303 with `rollForward: latestFeature`, so a machine with a later 10.0 feature band would build with that one instead. The pin records 10.0.303. The rebuild must record the SDK actually selected, and the host should refuse a different SDK, or roll-forward should be disabled for the pinned projects. The build room reports that today the only SDK string is `Microsoft.NET.Sdk`, in 14 projects.
+
+---
+
+# The rule 33 inert-data line (D-454): the page at 4b0e9df
+
+**Answer: PASS, with one binding note.** Written Sun 22 Nov 2026, about 3:13 am. Read by the check room alone. The change from 5375fdb is one line in rule 33, after the closed-SDK line, and nothing else (+2 lines).
+
+1. **The line says:** only the exact kinds in the pinned policy count as inert data, judged by whole name and cheap content checks. They are read as text or bytes, checked against the role table, carried only as data, and refused wherever anything is compiled, imported or run. `.gitattributes` has its own check, allowing line-ending and text/binary attributes only. Every other kind is refused. Adding a kind needs a D-number.
+2. **Binding note:** the line is shorter than D-454 in two places, and the pin job and its tests must meet D-454 in full.
+   - **Inert files as build inputs:** they are refused as Compile items, Imports, task inputs, target inputs and script arguments, each tested.
+   - **Judging the kind:** double endings, and content that does not match its name, are refused, each tested.
+
+   The check room reviews against D-454's wording, not the shorter line.
