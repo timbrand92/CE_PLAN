@@ -106,3 +106,23 @@ The two halves stop the pin for different reasons. Neither report contains a log
 1. **One test-only addition** (a `.git` member case on the compiler-metadata entry point). It lives in `tests/CeCivil.SourceGate.Tests`, outside the pinned images, so the five pinned hashes should not change. The rebuild confirms they don't.
 2. **A clean formal re-review** with the rules reads and git diagnostics captured, and no account names echoed.
 3. **Then the pin page,** with the five values above and revision 29d15b7.
+
+---
+
+# PINNED: edb95c1 (D-451)
+
+**Answer: PIN WRITTEN.** Written Sun 22 Nov 2026, 2:27 am. The pin is at `zero\check\PINS\checked-reader.md`, committed by name and pushed.
+
+1. **The rebuild (gpt-6.2-astra, `pin6_rebuild_REPORT.md`):** 25 of 25 values MATCH across five builds (twice in the worktree, two fresh clones with autocrlf true and false, and a plain copy). All 38 output files are identical; the sorted manifest is A14959A5...D39B. None of the five values moved from 29d15b7. The three locked package content hashes match. There is no PowerShell reference.
+2. **The clean formal review (gpt-6.2-sol, `pin6_review_REPORT.md`):** APPROVE FOR PINNING.
+   - **The tests:** the five D-451 tests reach the compiler-metadata reader's second entry point, one for each reserved member.
+   - **Rules 18 and 32:** they hold unchanged, since no pinned input changed.
+   - **Clean:** no account names in the report.
+3. **The five pinned values** (copied here so a changed pin shows against this pushed page):
+   - CeCivil.IO.dll BCD221B1EA3D90227F2996856ABF4A72D9C31E522DA0B0B86060BCA911850AF6
+   - CeCivil.SourceGate.dll 4774B82C33C96FF3070381A26D67EE0DB3820930EC8DF33811ADDD0CE86CAA04
+   - checked-io-roles.json A91A5D8593AEBB88321D8C28D091ADC4B92265D19885783B7AEF46593BD828C7
+   - Microsoft.CodeAnalysis.CSharp.dll 2A3B34CE70DB9896A3E34B8A5620C3C437B2B246E90645DED5CA09F4FB597D60
+   - Microsoft.CodeAnalysis.dll 57994F7FA7ABCC571A31C4E98B02C3EB573DAE8F581F0C264CDEC97F38CF1560
+
+**What follows (D-445 step c):** the build continues. At each later verdict on that branch, the check room confirms the host reads this pushed pin, and nothing else.
