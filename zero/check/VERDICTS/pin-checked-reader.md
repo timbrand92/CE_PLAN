@@ -35,3 +35,24 @@ The two halves stop the pin for different reasons. Neither report contains a log
 3. **Then:** the builder closes the four holes, and the check room rebuilds and reviews again before any pin is written.
 
 **Ruled since (D-448, 22:57):** git metadata OFF in the project; the PowerShell reference from Microsoft's NuGet package under a locked restore (or dropped); the four holes fixed with failing-first tests; then a new rebuild and review.
+
+
+---
+
+# Second attempt: c27f6ef (after D-448)
+
+**Answer: NO PIN. The pin file is still NOT written.** Written Sat 21 Nov 2026, about 11:44 pm.
+- **Source review:** gpt-6.2-sol. Report: `C:\CE_WORK\check\reports\pin2_review_REPORT.md`. It says DO NOT PIN, on three blockers.
+- **Rebuild:** gpt-6.2-astra. Its first run stopped itself before building, because a tool echoed an account name while it read the general rules files (it judged that run invalid). It was relaunched with those reads skipped, then stopped by the check room once the review had said DO NOT PIN, so as not to spend a rebuild on a revision that cannot be pinned.
+- **The reviewer's own run:** it also displayed login identifiers in its tool output while reading the rules and router. It counts as diagnostic, not formal, evidence. Neither report contains a login name (checked by count).
+- **Next time:** every pin brief skips the general rules and router reads.
+
+**Diagnostic, not formal:** the reviewer reproduced all five of the builder's hashes from the detached worktree AND from a plain copy, offline: CeCivil.IO.dll 4C0FE267...50C9, CeCivil.SourceGate.dll 9B41A667...6E67, checked-io-roles.json F8F03F0A...D85D, and the two Roslyn 4.8.0 libraries. So D-448(a) works, and the git metadata is out. The PowerShell reference is gone (D-448(b)). The embedded record is the existing 18-drawing fingerprint list, byte for byte. It holds no gate pin and gives no fallback for D-446.
+
+## Blockers (rule 32)
+1. **The night-source role can still read the live drawing and DLL.** `checked-io-roles.json:11` accepts declared members without any script-only or reserved-folder limit, and `CheckedReader.cs:93-115, 144-147, 247-278, 377-389` checks reserved folders only for roles that list exclusions. Rule 32 holds both live hand-offs and limits night-source to script text. No test covers night-source (`tests/CeCivil.SourceGate.Tests/Program.cs:17-43`).
+2. **The supplied-set check is optional on a direct read.** Each read checks the member's name, size and hash, but the full set of 18 is compared only in `List` (`CheckedReader.cs:329-368`). A direct read can return a genuine original while others are missing or extra drawings are present (rules 8 and 32).
+3. **The compiler metadata has a root outside the policy.** `checked-io-roles.json:17-19`, `CheckedReader.cs:155-164` and `CSharpScan.cs:28-30` read the running .NET core library, chosen by the running assembly. Rule 32 (design line 249) puts compiler metadata under the host's package-staging record in the checkout.
+
+## Follow-up (not a blocker)
+1. **The shipped office drawing:** it still needs the product host binding of rule 32 (design line 254). Today the caller-root offers refuse, which is a closed starting state.
