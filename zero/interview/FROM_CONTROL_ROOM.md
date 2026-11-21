@@ -103,3 +103,9 @@ A test that reached the build's main line read the leak-scan terms file (the lis
 1. (CORRECTED 9:15 pm by D-446: NO new folder is made on the PC.) The safety checker that every other tool must pass through before it reads or writes a file has its file fingerprints recorded by the check room in its own pushed page, C:\CE_PLAN\zero\check\PINS\checked-reader.md. Nothing in Windows, AutoCAD or the registry is changed.
 2. The pushed history on GitHub is what shows any tampering; the build's gate reads that one page and refuses if it is missing or does not match.
 3. Draft calls to confirm or overturn: D-443 (settings store fix), D-444 (privacy follow-up merged; one checked reader and writer by design; night route, bench runner, block drawings and any release wait on it), D-445 as amended by D-446 (the check room holds the record).
+
+## W. Added Sat 21 Nov, 11:33 pm (D-447, D-448, D-449): TELL TIM ON MONDAY
+
+1. A slip under his security rule, small: one discarded test run wrote copies of the project's own test CSV files into the Windows temp folder, outside the allowed work folders. The terms file was not touched. Fix: every brief now keeps temp inside C:\CE_WORK. The build room owes confirmation that the copies are gone and held no office job content.
+2. The Pipe window's lower working rows do not fit at either approved size (1000 by 620, 1240 by 780). A design page is being written. If it cannot be solved inside the pictures he passed, he will be shown up to three mock-ups and asked to pick one.
+3. Draft calls to confirm or overturn: D-447 (Pit window: warnings always in view, OK withheld while clipped), D-448 (how the safety checker is built and approved), D-449 (the layout goes to design).
