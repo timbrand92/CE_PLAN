@@ -31,3 +31,11 @@ The honest half's whole build stopped at package restore offline. The build room
 2. **The Pipe window cut-off:** at both sizes it is the D-449 design question (on Tim's Monday list). It is not counted here.
 
 **Next:** round 1 of 2. Each blocker comes over as a failing test first.
+
+**Ruled since (D-453, control room, 2:56 am):**
+1. **Both ends held:** reversing a run with both ends held follows D-406 item 3 (Tim's TR-153). The arrow turns, a red "Wrong: runs uphill" shows, and the levels never change. The refusal is a fault to fix (blocker 6 stands).
+2. **A held (typed) length on a split (DRAFT, on Tim's Monday list):**
+   - **The split goes ahead:** not refused, and the length is NOT apportioned.
+   - **Each piece:** it takes its drawn length as its length used, carries the amber marker, and shows that the typed length was for the whole (for example "Typed 6.50 m was for the whole pipe; this piece is 3.10 m as drawn").
+   - **Before OK:** this is said in the window, in the same Undo; levels and grades follow the pieces' lengths used, shown and never silent.
+   - **One reader:** it still gives the one length used (D-410).
