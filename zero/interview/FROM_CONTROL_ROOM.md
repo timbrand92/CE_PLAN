@@ -97,3 +97,9 @@ The permanent privacy scan of the 18 block drawings flags ONE piece of multiline
 
 ## U. Added Sat 21 Nov, 7:03 am (D-441): TELL TIM ON HIS RETURN, an incident under his security rule
 A test that reached the build's main line read the leak-scan terms file (the list of client names) from disk whenever the full test suite ran. No sign that any of it left the PC: no Codex job read, printed or searched the file; the push scan of the branch is clean; a count over the job's logs was still running at the time of writing. Cause: briefs that told builders to scan with the real list. Now: no builder or test may open that file; tests use a made-up list; a small fix removes the path. Also to ask him, one by one: the step-iron threshold compared exact with no tolerance (1.003 m needs them); and the draft calls on the PIT_WINDOW, SETTINGS_STORE and PIT_LEVELS pages.
+
+## V. Added Sat 21 Nov, 9:12 pm (D-444, D-445): TELL TIM ON MONDAY, a new folder and a draft call
+
+1. A new folder, C:\CE_WORK\trusted\, is being made by the check room. It holds one small record of file fingerprints for the safety checker that every other tool must pass through before it reads or writes a file. Undo: delete the folder. Nothing in Windows, AutoCAD or the registry is changed.
+2. It is marked read-only in the plain way only, so it shows tampering rather than prevents it; a copy of the fingerprints is pushed with the check room's verdict.
+3. Draft calls to confirm or overturn: D-443 (settings store fix), D-444 (privacy follow-up merged; one checked reader and writer by design; night route, bench runner, block drawings and any release wait on it), D-445 (who holds the record).
