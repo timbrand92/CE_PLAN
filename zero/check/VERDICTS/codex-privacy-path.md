@@ -208,3 +208,24 @@ Neither half could restore packages for a full build this time. The builder and 
 The check room passes the page, and one build is made from it.
 
 **Until that build merges:** no night-route or bench-runner work merges, and the block drawings and any release also wait.
+
+
+---
+
+# The parked merge read back: merge/privacy2-main at 03119b1 (privacy-path2 77e4fdd merged into main 711042e)
+
+**Answer: READ-BACK PASSES. The build room may put it on main.** Written Sat 21 Nov 2026, about 7:50 pm. The check room read it by itself, reading only.
+
+1. **The merge resolution:** git's own automatic merge of 711042e and 77e4fdd differs from the hand merge 3eea702 in three conflicted files only.
+   - **BUILD_LOG:** both sides kept.
+   - **`RoundingSourceExceptions.txt` and its pin in `RoundingSourceTests.cs`:** the union of both sides less five stale entries, re-pinned. The build room reports 64 of 64 rounding source tests passing.
+
+   Every other file is git's own merge of both sides.
+2. **The settings audit fix:** `SettingsSourceAudit.cs` gets ONE exact exception, matching the path `src/CeCivil.Acad/NUnitHosting.cs` together with the exact tokens `TestInputPath.ReadText(stagedXml)`. Nothing broader. The builder reports all 29 planted probes still failing on their plants.
+3. **The Roslyn reference fix:** `CeCivil.Hands.Tests.csproj` drops the four HintPaths through `$(MSBuildSDKsPath)` and `$(RoslynTargetsPath)`, which pointed outside the repository, in favour of `PackageReference Microsoft.CodeAnalysis.CSharp 4.8.0`. The privacy guard is unchanged.
+4. **Results (the build room's and the builder's):**
+   - **The build:** 0 errors.
+   - **The three affected classes:** 230 pass; the 2 that fail fail the same way on main.
+   - **The full runs:** Hands 1,133 passed, Brain 904 passed, and nothing that passes on either parent fails.
+
+**Follow-up:** after it lands, the check room runs one main-line control.
