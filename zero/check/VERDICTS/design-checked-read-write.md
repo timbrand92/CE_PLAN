@@ -123,3 +123,21 @@ The original 138 rows and 16 copies are intact; 20 entries are new.
    - **Judging the kind:** double endings, and content that does not match its name, are refused, each tested.
 
    The check room reviews against D-454's wording, not the shorter line.
+
+---
+
+# The rule 33 registered-checks line (D-455): the page at 0d1f38f
+
+**Answer: PASS, with the same binding note as before.** Written Sun 22 Nov 2026, about 3:32 am. Read by the check room alone. The change from 4b0e9df is one line in rule 33, and nothing else (+2 lines).
+
+1. **The line says:**
+   - **The files:** the four XAML files, the bench `App.xaml.cs` (only beside a passing same-named `.xaml`), the two bench `app.manifest` files, `global.json` and the two `packages.lock.json` files.
+   - **Their checks:** each has a closed allow-list check named by exact path in the pinned policy, and whatever a check does not name is refused.
+   - **What stands:** rule 34's registrations stand.
+   - **New files:** a new file of these kinds is a pin change needing a D-number.
+2. **Binding note:** the pin job meets D-455's allow-lists in full, and the check room reviews against D-455's wording:
+   - **XAML:** resources, styles, templates and the application element only; inline code, run-time object makers, outside namespace mappings, and outside Source, web, file or network addresses refused.
+   - **Manifests:** DPI awareness, supported OS, common controls, and asInvoker with uiAccess false; everything else refused.
+   - **`global.json`:** SDK version and roll-forward only.
+   - **The lock files:** well-formed, with a content hash on every package and no path outside the repository.
+   - **Tests:** each failing-first, with one refused case per allow-list.
