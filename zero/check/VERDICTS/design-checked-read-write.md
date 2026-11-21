@@ -98,3 +98,15 @@ The original 138 rows and 16 copies are intact; 20 entries are new.
 2. **Binding notes for the fix (they do not hold the page):**
    - **Every reserved folder:** the table-driven test should cover every folder rule 32 reserves, not only the live-run folder.
    - **Physical identity:** members are matched by physical identity after each component is resolved (rules 4 to 6 and 36), so no spelling, case or `..` form can slip past.
+
+---
+
+# The rule 33 line (D-452): the page at 5375fdb
+
+**Answer: PASS.** Written Sun 22 Nov 2026, about 2:38 am. Read by the check room alone, as D-452 rules. The change from 52555c1 is one line in rule 33, and nothing else (+2 lines).
+
+1. **The line says what D-452 asks:**
+   - **What is accepted:** only the exact SDK declaration names in the pinned policy, each one of Microsoft's own SDKs shipped with the installed .NET SDK.
+   - **What is refused:** every other declaration, with no wildcard, pattern, version range, package-fetched SDK, custom resolver or import by path.
+   - **Adding a name:** it is a pin change needing a D-number.
+2. **Note for the pin job (not a hold on the line):** `global.json` pins SDK 10.0.303 with `rollForward: latestFeature`, so a machine with a later 10.0 feature band would build with that one instead. The pin records 10.0.303. The rebuild must record the SDK actually selected, and the host should refuse a different SDK, or roll-forward should be disabled for the pinned projects. The build room reports that today the only SDK string is `Microsoft.NET.Sdk`, in 14 projects.
