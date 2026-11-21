@@ -66,3 +66,20 @@ The original 138 rows and 16 copies are intact; 20 entries are new.
 7. **The bench app's XAML and manifest** (honest reader; rule 34). Register them from the checkout through the WPF and SDK build outputs, with a linked-input first failure.
 
 **Next:** the page's writer makes these seven in the LAST round, and both readers read it back.
+
+
+---
+
+# Third answer: the page at 0ff1d53 (the LAST round)
+
+**Answer: BUILD FROM IT.** Written Sat 21 Nov 2026, about 8:44 pm. Read back by the check room alone, by reading only. The change from e41a172 is one file, 31 lines in and 5 out; the register, the copy mappings and rules 35 to 38 are unchanged.
+
+1. **Night scripts from temporary storage:** rule 33 compares the checkout and every script's physical ancestry with the host's temporary roots, and refuses the root, every descendant and any unproven ancestry, even for a whole valid checkout copied there. The failing-first fixture tries four cases (a temporary entry, an import, a child script, and a whole copied checkout) and requires zero dispatches, zero imports evaluated and zero child starts. Its outside twin passes.
+2. **Theme files:** the register row runs through both loaders (`Pal.cs:22`, `Tok.cs:22`) and `XamlReader.Load` to the in-memory dictionary. The theme test validates the embedded bytes before construction, admits only reviewed in-memory types, and refuses a planted secondary file URI and a pack URI with zero fetches and no partial dictionary.
+3. **Build-task assemblies:** both `UsingTask.AssemblyFile` declarations are registered (`CheckedBuildRead.targets:2`, `CommandHostCompatibility.targets:5`). The toolset comes only from the host's read-only toolchain record, with the SHA-256 and factory bound. An outside DLL, or a same-name substitute, is refused before any probe or load, one declaration at a time.
+4. **The gate's own reader:** a reviewer reproduces the exact rule 18 reader and matches its bytes. The host records the revision and the SHA-256 of the reader, its dependencies and the policy outside the candidate, and verifies them before the first read. A same-named substitute reader, or a modified policy, is refused even when the candidate offers a matching checksum.
+5. **The live drawing and DLL hand-offs:** these stay REFUSED until the separately authorised night route, with no root for either (`ce_launch.ps1:6-13`, `ce_netload.ps1:33-37`). An ordinary fixture and a same-name replacement are both refused, with zero probes, opens, loads or commands.
+6. **One bench launch:** all four callers, the click runner included, give one checked launch the executable, dependencies, working directory, arguments and output together. `--exe`, `--script` and `--shots` can only narrow the roles. The screenshot PNGs are written only into this click run.
+7. **The bench app's XAML and manifest:** both are registered through the WPF and SDK outputs to the built entry point and the embedded manifest. A linked input is refused before WPF or the SDK reads it, on clean and up-to-date builds.
+
+**What this means:** one build is made from this page (D-444). Until it merges, no night-route or bench-runner work merges, and the block drawings and any release wait.
