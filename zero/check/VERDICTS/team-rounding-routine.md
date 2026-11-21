@@ -112,3 +112,25 @@ The first launch of both halves (and of the settings store checks) died at about
 **Recommended for the control room:**
 1. **Item 1:** one bounded edit; it is a real sheet figure.
 2. **Item 2:** either the same bounded edit, or a BINDING PROBE for every later build in the spirit of D-431. Each round has closed every named route, and the existing drawing test catches the plain 5.755 case.
+
+---
+
+# MERGE: team/rounding-routine at 4ec1952 (after the control room's ruling)
+
+**Verdict: MERGE.** Written Sat 21 Nov 2026, about 11:20 am. The control room (about 11:15 am) reclassified both open items. Nothing else is open.
+
+1. **Item 1 (the metres and cm grade on reopen) is not a Stage 1 blocker.** Stage 1 refuses metres and centimetres drawings before the first click (D-344, D-403), and that work is parked (P-09 item 14).
+   - **Recorded:** as the FIRST item the metres design must close (the writer stores a coordinate after dividing it back, `DrawingUnits.cs:112-116`).
+   - **Binding probe for the units BUILD:** prove that no command can write a pipe in a metres or centimetres drawing.
+   - **Not reachable in a millimetre drawing:** in a millimetre drawing (and an unset one, treated as millimetres) the factor is 1, so there is no division. The adversarial half's matching 324.95 mm drawing keeps 1 in 33 after reopening. The check room could not reach the change in millimetres.
+2. **Item 2 (the source test dodged one level deeper) is not a blocker on this branch.** No product path does it today, and reaching it means writing new dodging code. It becomes:
+   - **(a)** a BINDING PROBE on every later build that prints a figure (D-431);
+   - **(b)** a queued follow-up: text writers take only a "printed figure" made by the routine, never a bare number, so the compiler forbids it.
+3. **The hand-applied patch matches the builder's build exactly.** The check room applied `C:\CE_WORK\scratch\rr2_rounding_final\ROUNDING_FIX2.patch` to d0d35bc in a scratch index. The resulting tree, 7fedbdeb, is identical to 4ec1952's tree.
+4. **Gate:** the acceptance list and the whole suite are green against main.
+   - **Matched tests:** of 4,338 matched tests, no functional pass on main fails here.
+   - **Controls:** all 118 runnable controls pass.
+   - **The build:** CeCivil.Acad builds with 0 errors.
+   - **The two-half requirement:** both halves checked honestly and adversarially. After the ruling, no BLOCKER stands.
+
+**What follows (D-432):** the Pit window with pit levels starts on this merge, then the pipe run.
