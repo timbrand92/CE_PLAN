@@ -36,3 +36,46 @@
 2. **The Pipe-start control:** it stays skipped under D-410, waiting on A6.
 
 **Next:** round 1 of 2. Each blocker comes over as a failing test first. The 70 restatements are read one by one, with a full build and comparison on the real tip.
+
+
+---
+
+# Second verdict: team/pit-window at 0f156b4 (fix round 1 of 2)
+
+**Verdict: HOLD. Both halves hold it. The next round is the last.** Written Sat 21 Nov 2026, about 8:30 pm. Both halves ran on Codex with every outside-input variable unset:
+- **Honest half:** gpt-6.2-sol. Report: `C:\CE_WORK\check\reports\pwb2_honest_REPORT.md`.
+- **Adversarial half:** gpt-6.2-astra. Report: `pwb2_adv_REPORT.md`, with proofs in `pwb2_adv_proofs\`.
+
+**The main-line control is clean.**
+- **The counts:** main 711042e has 2,511 passes. On the tip, 2,410 pass under the same name, 9 use the same method with the checkout path in their data, and 92 pass under a changed name. No main pass fails or is skipped.
+- **The controls:** 96 named controls pass, against main's 95; the one failure and the one skip are the same on both.
+- **Not repeated:** neither half could compile the whole solution this time, for lack of the package.
+
+**Closed:**
+- **Units:** level retypes in metres and cm drawings write nothing (6.50 to 7.77 and 5.12 to 5.25 replayed), while the mm controls still write.
+- **Worked covers:** the schedule follows a measured 10.025, and Run refuses a worked 9.875.
+- **The units notice:** it is whole in all six layouts.
+- **Printed figures:** the change list and Step 3 use the shared printer (CL 5.75, IL 5.25, depth 0.51; CL 1000.13, depth 0.63).
+- **Renumber:** it counts after adding the separate edit, and compares numbers, geometry, tags and protection.
+- **Source probes:** the original two parser plants and all four rounding binding probes fail as they must.
+- **The scalability refusal:** it is restored.
+
+## Blockers
+
+1. **The Pipe window loses its top preview** (both halves). The change carried over from 9dbf9d6.
+   - **What changed:** on main, the Pipe drawing preview spans the top strip (1,486 units). On the tip it is a blank left panel with placeholder text.
+   - **The cause:** `WindowSpec.cs:171-177` puts `pipe.csv` on the steps layout, but `pipe.csv` still says `wide`. The steps gate at `StdSteps.cs:51` then drops the strip.
+   - **Ruling:** D-313 and the approved Pipe layout.
+2. **"Number on plan" is cut off at both approved sizes** (adversarial half). The caption needs 101.33 units and gets 96 at 1000 by 620, and 97 at 1240 by 780. The fixed checkbox column is at `StdSteps.cs:251`. The layout check (`AcadWindowHostTests.cs:188`) tests shortened text with trimming, so it misses this. Rulings: D-346, D-386, PIT_WINDOW section 1.5.
+3. **The number gate still misses a second reader** (both halves).
+   - **A short.TryParse:** one added at `PitTool.cs:254` compiled. The second pit's record kept P7007, but its visible tag read P1 beside the first P1, and all three number-source tests passed. The checker knows a fixed list of type spellings (`PitNumberSourceTests.cs:63`).
+   - **A long.TryParse:** one added inside the shared `DrawingNumber` helper (`PitTool.cs:149-159, 223-225, 245`) also passes. The guard reads the bodies of five named methods only (lines 27-41, 63-66).
+   - **Ruling:** PIT_WINDOW section 3.4 (follow the routes through helpers).
+4. **Three restatements still drop coverage** (D-443 rule).
+   - **Case 21 (honest half):** it drops the exact check protecting the surviving "What else changes" rows (`StepsWindowTests.cs:234-247`).
+   - **Case 87 (honest half):** it swaps metre Long-section coverage for an unset drawing (`Entry47Tests.cs:359`). D-403 justifies refusing Pit writes there, not losing the Long-section control. A different setup is needed.
+   - **The Hands scalability exemption (adversarial half):** `ScalabilityTests.cs:43` exempts the exact refusal sentence in `PitNumber.cs:22`. That sentence can come from the wording data instead, and no ruling authorises the exemption.
+
+**Also needed before the merge:** this tip is based on main 711042e. Main is now 03119b1 (with privacy-path2), so the next round must bring main in again.
+
+**Next:** the LAST round, with each blocker as a failing test first, then the full build and comparison against main 03119b1.
