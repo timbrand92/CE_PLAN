@@ -180,3 +180,36 @@ The first launches died on the Codex runner fault (8:07 to 8:17 am) and were rel
 6. **A test that passes on main fails here** (both halves). `StyleKitTests.Every_part_and_the_sample_window_keep_their_layout_facts_from_the_tokens` still expects the old "0.12" wording, where the window now correctly shows 120 mm. Restate it to the ruling (D-440), or fix it.
 
 **Next:** each item comes over as a failing test first, in round 1 of 2.
+
+---
+
+# Second verdict: team/settings-store2 at db2fea0, with f4a58e3 on top (fix round 1 of 2)
+
+**Verdict: HOLD. Both halves hold it. The next round is the last.** Written Sat 21 Nov 2026, about 11:33 am. Both halves ran on Codex under D-441, with the four outside-reading classes filtered from every run:
+- **Honest half:** gpt-6.2-sol. Report: `C:\CE_WORK\check\reports\ss3_honest_REPORT.md`.
+- **Adversarial half:** gpt-6.2-astra. Report: `ss3_adv_REPORT.md`, with proofs in `ss3_adv_proofs\`.
+
+**A note on the commits:** the build room's hand-applied office-row patch was NOT in db2fea0. `OfficeSettings.cs` was identical to 1cf1b53, and both halves found its three tests failing. The build room then committed it as **f4a58e3**. The check room confirmed that f4a58e3's tree is exactly db2fea0 plus `OFFICE_ROW_VALIDATION_PENDING.patch` (tree aabae9c7). Neither half has run it yet.
+
+**Closed:**
+- "Out by 4 mm" at 0 mm, never 0.00.
+- The cover verdict in Pipe and Levels: Wrong and short by 10 mm at 5 mm, Suits at 11 mm, "Cannot check yet" with no cover.
+- One-pipe Levels: P2 is an ordinary pit, the 5.21 is worked, and nothing is written to the record after OK and reopen.
+- The StyleKit test now expects 120 mm (D-440).
+- Five of the earlier source plants are now rejected.
+
+## Open
+
+1. **A mislabelled office row stops the tool:** the fix is in f4a58e3 but unproven. With the captions swapped, typing 150 beside "tolerance" made 150 mm pipes and labels on db2fea0. The next round must show the three refusal tests passing on the real tip, and the 150 mm route refused.
+2. **The source test misses three swapped-allowance routes:**
+   - **A capped input (adversarial):** capping the checker's constructor parameter at 17 mm before it is stored. For 282 against 300 at a saved 20 mm, Pipe then shows "Wrong, short by 18 mm" beside 20 mm, with zero violations reported. The test checks what is assigned to the field, not the input before it (`SettingsSourceSinks.cs:77`).
+   - **An earlier return (honest):** an earlier return with the same comparison name in `Checks.cs:521` supplies 17 mm while the window still shows 5 mm. 290 against 300 then passes 10 mm short.
+   - **A second write (honest):** a WPF `SetCurrentValue` write at `StdChrome.cs:56` escapes the assignment count at `SettingsSourceSinks.cs:129` and can turn the grey line into 17 mm.
+
+   Rulings: D-419 item 7, D-439 item 4, D-440 item 2.
+3. **Levels at an ordinary pit with TWO pipes still shows a council connection and calls a worked figure "given"** (adversarial half).
+   - **The case:** two pipes end at an ordinary third pit. The preview shows a council connection, with the worked 5.09 m invert called "given". The saved record stays clean.
+   - **The cause:** the ordinary-pit treatment applies to one pipe only (`RunToolWindow.cs:125`, `RunPreview.cs:295`). It is also on main.
+   - **Ruling:** D-413 item 14 (the source shown must say where a figure came from).
+
+**Next:** the LAST round fixes these three on top of f4a58e3. Each comes as a failing test first, then the whole suite on the real tip.
