@@ -154,3 +154,40 @@ Written Sat 21 Nov 2026, about 4:46 pm. Checked by the check room by reading onl
 1. **An unreviewed format:** the rounding source test flags the screenshot step's numeric format at `Program.cs:482` as unreviewed. Add the review entry. That test also fails on main for night-script findings outside this diff.
 
 **Next:** round 2 of 2, the last.
+
+
+---
+
+# Final verdict: codex/privacy-path2 at 77e4fdd (the LAST round)
+
+**Verdict: HOLD, final. Both halves hold it. Under D-346 it goes to the control room with this open list.** Written Sat 21 Nov 2026, about 7:12 pm. Both halves ran on Codex; the branch is cut from 1e1534a.
+- **Honest half:** gpt-6.2-sol. Report: `C:\CE_WORK\check\reports\pq2_honest_REPORT.md`.
+- **Adversarial half:** gpt-6.2-astra. Report: `pq2_adv_REPORT.md`, with proofs in `pq2_adv_proofs\`, including the 138-entry review of every raw read and write.
+
+Neither half could restore packages for a full build this time. The builder and the build room report 0 errors, and every main result matching.
+
+**Closed this round:**
+- **The named readers:** every reader named in round 1 now uses the checked reader or enumerator.
+- **Hard links:** the shared C# checker refuses them (the fixture was replayed).
+- **The guard:** the four named forms are caught (.resx, WSL, MSBuild environment property, C# environment value), and 52 to 54 guard cases replayed clean.
+- **The review entry:** `Program.cs:482` has its review entry.
+- **The incident:** the original real-list reader stays removed.
+- **Item 4:** still met in the code (the packaged setting, plus a separate record of the 18 fingerprints). Proof with the real drawings is still owed at release.
+
+## Open list (one page; items 1 to 3 are merge conditions for night-route and bench-runner work, D-443)
+
+1. **Reads and writes still choose their own place** (both halves).
+   - **Tests:** ordinary C11 tests read source and CSV files without checking links. The older privacy readers open files unchecked.
+   - **Bench and Brain:** they accept folders the caller chooses, the system temporary folder included.
+   - **Plug-in helpers:** the native test report writer checks only its path's spelling, and the command generator takes an output file name from the caller.
+   - **Where:** the call sites are in `pq2_adv_proofs\raw-io-review.md`.
+2. **The hard-link rule is not applied to the night helper or the older privacy readers** (both halves). `acad/night_scripts/ce_safety.ps1:50-55` checks only the reparse attribute; lines 65 and 146 read JSON and lines 66 and 133 write it, without counting links. Found by reading only (D-388).
+3. **The guard misses three forms:**
+   - an MSBuild property function that reads an environment value (honest half);
+   - a plain absolute Linux path (honest half);
+   - an ordinary launch-settings JSON under src, which skips the general absolute-path check (adversarial half; `SemanticPrivatePathSourceTests.cs:359, 391-399`). No such file is tracked today.
+
+**Recommended for the control room:**
+1. **MERGE this tip:** it is strictly safer than main. Nothing regresses, it closes most of the routes, and it settles the release condition in code.
+2. **Keep the open items:** items 1 to 3 stand as the merge conditions for night-route and bench-runner work, as D-443 already says, in a short design page for "every read and write goes through one checked reader and writer". Each round so far has found new raw calls one at a time.
+3. **The alternative:** hold, and go straight to that design page.
