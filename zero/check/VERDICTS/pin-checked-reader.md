@@ -77,3 +77,32 @@ The two halves stop the pin for different reasons. Neither report contains a log
 ## Blocker (rule 32)
 1. **The seed and tank fixture role can reach the live hand-off files.** The policy's reserved-folder list applies to the selected directory at bind time, but not to the role's MEMBER rules. With an allowed directory above the live-run area, a declared member inside the reserved area passes, and a direct probe or read reaches the staged live drawing and DLL through an ordinary fixture reader. Rule 32 refuses probing the live hand-offs (design lines 246, 260-265, 308-309). Files: `checked-io-roles.json:14, 32-41, 48, 71`; `CheckedReader.cs:95-107, 121-127, 148-153, 288-328, 458-470`. The same gap existed at c27f6ef; the second review did not name it.
    - **The fix:** apply the reserved-folder exclusions to the members of EVERY role, not only night-source, with a failing-first test per role. A table-driven check over all roles would stop a fourth such gap.
+
+
+---
+
+# Fourth attempt: 29d15b7 (the one fix under the amended rule 32)
+
+**Answer: NO PIN YET. The bytes MATCH, but the review holds on one TEST gap, which goes to the control room under D-450. The pin file is still not written.** Written Sun 22 Nov 2026, about 1:46 am.
+
+**The rebuild (gpt-6.2-astra) matches.** Report: `C:\CE_WORK\check\reports\pin4_rebuild_REPORT.md`, with proofs in `pin4_rebuild_proofs\`.
+- **The builds:** five clean builds: twice in the worktree, two fresh clones (one per line-ending setting), and a plain copy.
+- **The pins:** 25 of 25 pin comparisons MATCH:
+  - CeCivil.IO.dll BCD221B1EA3D90227F2996856ABF4A72D9C31E522DA0B0B86060BCA911850AF6;
+  - CeCivil.SourceGate.dll 4774B82C33C96FF3070381A26D67EE0DB3820930EC8DF33811ADDD0CE86CAA04;
+  - checked-io-roles.json A91A5D8593AEBB88321D8C28D091ADC4B92265D19885783B7AEF46593BD828C7;
+  - Microsoft.CodeAnalysis.CSharp.dll 2A3B34CE70DB9896A3E34B8A5620C3C437B2B246E90645DED5CA09F4FB597D60;
+  - Microsoft.CodeAnalysis.dll 57994F7FA7ABCC571A31C4E98B02C3EB573DAE8F581F0C264CDEC97F38CF1560.
+- **The manifest:** all 38 output files are identical byte for byte across the five builds.
+- **The toolchain:** SDK 10.0.303. Source-control queries and revision stamping are off.
+
+**The source review (gpt-6.2-sol) says DO NOT PIN.** Report: `pin4_review_REPORT.md`.
+- **The earlier gap is closed:** every role now checks reserved components on each declared member, by physical identity on the held NTFS handle.
+- **The reader itself:** unchanged and sound.
+- **The test gap:** the compiler-metadata reader has a second working entry point, and its only reserved-member test covers an asset under `obj`, not `.git`. A later change that dropped the `.git` member refusal on that entry point alone would pass every test (`ReservedMemberTests.cs:41-56`, `Program.cs:104-112`, `CheckedReader.cs:167-218`). The amended rule 32 requires a test for every reserved folder. The CODE is right today.
+- **The run itself:** a git ownership message printed account names in its local tool output, so by the standing brief this run is diagnostic, not formal, evidence. Its report holds no login name (checked by count).
+
+**For the control room (D-450: a further rule 32 blocker comes to you before any work). Recommended:**
+1. **One test-only addition** (a `.git` member case on the compiler-metadata entry point). It lives in `tests/CeCivil.SourceGate.Tests`, outside the pinned images, so the five pinned hashes should not change. The rebuild confirms they don't.
+2. **A clean formal re-review** with the rules reads and git diagnostics captured, and no account names echoed.
+3. **Then the pin page,** with the five values above and revision 29d15b7.
