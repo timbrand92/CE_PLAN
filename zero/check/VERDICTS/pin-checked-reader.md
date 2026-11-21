@@ -56,3 +56,24 @@ The two halves stop the pin for different reasons. Neither report contains a log
 
 ## Follow-up (not a blocker)
 1. **The shipped office drawing:** it still needs the product host binding of rule 32 (design line 254). Today the caller-root offers refuse, which is a closed starting state.
+
+
+---
+
+# Third attempt: bbf16bd, and 88f5f04 for the line endings
+
+**Answer: NO PIN. The pin file is still NOT written.** Written Sun 22 Nov 2026, about 12:49 am.
+- **Source review:** gpt-6.2-sol. Report: `C:\CE_WORK\check\reports\pin3_review_REPORT.md`. It says DO NOT PIN, on one blocker. It ran with the general rules files skipped, and has no login name (checked by count).
+- **Rebuild:** gpt-6.2-astra, on 88f5f04. It was stopped once the review said DO NOT PIN, because the fix will change the reader's bytes.
+
+**Closed:**
+- **The night-source role:** it reads named `.ps1` files only, and refuses the live drawing and DLL and reserved folders. It is tested.
+- **The set of 18:** it is required on a direct read.
+- **Compiler references:** they come only from the locked checkout stage.
+- **The rule 32 table:** it matches the passed page in all 651 cells, compared independently.
+- **The reader itself:** its writes, links, handles and NTFS checks are unchanged and sound.
+- **Line endings:** fixed by `.gitattributes` (eol=lf for src/CeCivil.IO/**, tools/CeCivil.SourceGate/** and the 18-drawing fingerprint file). The build room's two fresh clones, with autocrlf true and false, gave identical bytes. Not yet independently confirmed.
+
+## Blocker (rule 32)
+1. **The seed and tank fixture role can reach the live hand-off files.** The policy's reserved-folder list applies to the selected directory at bind time, but not to the role's MEMBER rules. With an allowed directory above the live-run area, a declared member inside the reserved area passes, and a direct probe or read reaches the staged live drawing and DLL through an ordinary fixture reader. Rule 32 refuses probing the live hand-offs (design lines 246, 260-265, 308-309). Files: `checked-io-roles.json:14, 32-41, 48, 71`; `CheckedReader.cs:95-107, 121-127, 148-153, 288-328, 458-470`. The same gap existed at c27f6ef; the second review did not name it.
+   - **The fix:** apply the reserved-folder exclusions to the members of EVERY role, not only night-source, with a failing-first test per role. A table-driven check over all roles would stop a fourth such gap.
