@@ -79,3 +79,36 @@ The first launch of both halves (and of the settings store checks) died at about
    The test at `RoundingSourceTests.cs:166-191` loses the quantity at ref arguments and tuple fields. Rulings: D-439 item 7, ROUNDING cases 6 and 7.
 
 **Next:** the LAST round fixes these three, each with its failing test first. After that comes the D-346 hold. Proofs for the 12 escapes: `rr2_adv_proofs\audit-results.jsonl` and `supplement-audit.jsonl`.
+
+---
+
+# Final verdict: 4ec1952 (the LAST round)
+
+**Verdict: HOLD, final. Both halves hold it, on the same two items. Under D-346 it goes to the control room with this open list.** Written Sat 21 Nov 2026, about 11:01 am. Both halves ran on Codex under D-441:
+- **Honest half:** gpt-6.2-sol. Report: `C:\CE_WORK\check\reports\rr3_honest_REPORT.md`. Its build could not restore packages this time.
+- **Adversarial half:** gpt-6.2-astra. Report: `rr3_adv_REPORT.md`, with proofs in `rr3_adv_proofs\`. It built the whole solution, CeCivil.Acad included, with 0 errors.
+
+**The main-line control is clean:**
+- **No regressions:** of 4,338 matched tests, no functional pass on main fails here. The 200-pit timing test failed once under load, then passed 3 of 3 alone on both.
+- **Controls:** all 118 runnable controls pass.
+
+**Closed:**
+- **The metres grade at placement:** 0.56495 m gives 1 in 57.
+- **The pit-size maximum:** compared exact, so 600.4 and 605.0 mm warn.
+- **The direct ref and tuple dodges:** both are now caught.
+- **Everything closed earlier:** it stays closed.
+
+## Open list (one page)
+
+1. **A pipe in a metres or centimetres drawing changes grade when the drawing is reopened** (both halves; a wrong figure on the sheet).
+   - **The case:** 0.32495 m between held levels 10.000 and 9.990 measures 0.3250 m at placement and prints 1 in 33. The drawing stores 0.32494999999999996. Reopened, with the grade worked again, it measures 0.3249 m and prints **1 in 32**.
+   - **More cases:** 0.60495 m goes from 61 to 60; 0.21494999999999997 m from 21 to 22; 56.495 cm from 57 to 56; 0.85495 m from 86 to 85.
+   - **The cause:** placement measures the original pick (`PipeTool.cs:350`), but the writer stores the coordinate after it is divided back (`DrawingUnits.cs:112-116`), and reopening measures that stored point (`PipeTool.cs:252`). Rulings: D-217, D-341, D-380.
+   - **The fix:** write and read back the original native points, and keep both sides of the boundary in cm and m as permanent cases.
+2. **The source test can still be dodged one level deeper** (both halves).
+   - **The cases:** a ref write forwarded through a second helper, or a captured decimal, struct field or indexed element changed just before `PitTool.cs:354`. 5.755, 5.7554 and 5.75496 then print CL 5.75 (and −5.76 prints −5.75). All 414 focused tests, the 64 rounding source tests among them, passed on that wrong build.
+   - **The cause:** the walk at `RoundingSourceTests.cs:242-261` skips nested writes, struct fields and indexed elements. Rulings: D-439 item 7, ROUNDING cases 6 and 7.
+
+**Recommended for the control room:**
+1. **Item 1:** one bounded edit; it is a real sheet figure.
+2. **Item 2:** either the same bounded edit, or a BINDING PROBE for every later build in the spirit of D-431. Each round has closed every named route, and the existing drawing test catches the plain 5.755 case.
