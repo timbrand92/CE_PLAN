@@ -116,3 +116,8 @@ A test that reached the build's main line read the leak-scan terms file (the lis
 2. Section W item 1, completed: the stray copies were the project's own data tables, no office job content. Whether they are gone is not confirmed: they went to the temp folder of the separate Windows account Codex runs under, which the rooms may not list, so nothing was removed. The check room's own two evening test runs on 21 Nov probably did the same.
 3. 17 similar folders sit in his own Windows temp folder, all made at 3:25 am on Sat 21 Nov. Nobody touched them. Which run made them is not known. His to delete or keep.
 4. Draft call to confirm or overturn: D-450 (the safety checker's permissions in one table; no patch on a new blocker before the design is amended).
+
+## Y. Added Sun 22 Nov, 2:56 am (D-451, D-452, D-453): FOR TIM ON MONDAY
+
+1. A QUESTION, never asked before: he typed a length on a pipe (say 6.50 m where the plan measures 6.20 m), then splits that pipe in two. What should happen to the typed length? The control room's draft, built for now: the split goes ahead, each piece shows its drawn length with the amber marker and a note "Typed 6.50 m was for the whole pipe", and he may type a length on either piece. The other choices: share the typed length between the pieces in proportion, or refuse the split until the typed length is cleared.
+2. Draft calls to confirm or overturn: D-451 and D-452 (how the safety checker is approved and changed), D-453 (the above).
