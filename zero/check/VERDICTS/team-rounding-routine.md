@@ -117,7 +117,7 @@ The first launch of both halves (and of the settings store checks) died at about
 
 # MERGE: team/rounding-routine at 4ec1952 (after the control room's ruling)
 
-**Verdict: MERGE.** Written Sat 21 Nov 2026, about 11:20 am. The control room (about 11:15 am) reclassified both open items. Nothing else is open.
+**Verdict: MERGE.** Written Sat 21 Nov 2026, about 11:02 am. The control room (just after 11 am) reclassified both open items. Nothing else is open.
 
 1. **Item 1 (the metres and cm grade on reopen) is not a Stage 1 blocker.** Stage 1 refuses metres and centimetres drawings before the first click (D-344, D-403), and that work is parked (P-09 item 14).
    - **Recorded:** as the FIRST item the metres design must close (the writer stores a coordinate after dividing it back, `DrawingUnits.cs:112-116`).
