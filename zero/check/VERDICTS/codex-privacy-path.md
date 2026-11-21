@@ -17,3 +17,39 @@
 4. **An empty supplied folder fails instead of WAITING.** The six ordinary supplied checks (`ShippedBlocksFileTests.cs:63-74`, `88-92`, `123-128`, `208-224`, `351-355`) would report a missing manifest. As ruled, an unset variable must show WAITING, and the release gate must FAIL on an unset variable or an empty folder.
 
 **Next:** the build room hands over the new tip. Both halves check it with the corrected brief.
+
+---
+
+# Second verdict: b97fcba (round 1 of 2)
+
+**Verdict: HOLD. Both halves hold it.** Written Sat 21 Nov 2026, about 11:32 am. Both halves ran on Codex, with every outside-input variable unset and no variable pointed at a real folder:
+- **Honest half:** gpt-6.2-sol. Report: `C:\CE_WORK\check\reports\pp2_honest_REPORT.md`.
+- **Adversarial half:** gpt-6.2-astra. Report: `pp2_adv_REPORT.md`.
+
+**Closed:**
+- The real terms reader is gone, with no reference to the file or its old variable in src, bench, tests or acad.
+- The four drawing defaults are gone; each class now has its own variable.
+- The eight supplied-drawing checks show WAITING in an ordinary run and FAIL in a release run with the variable unset or the folder empty, as the control room ruled.
+- The whole solution and the whole branch suite ran.
+
+## Blockers (D-441: no test or helper opens a folder outside the build's own folders)
+
+1. **A configured root is never required to be inside the build** (both halves). `tests/TestInputPath.cs:20-35` accepts any normal absolute path as the root. It checks that a child sits inside the root, but never that the root belongs to the build; a made-up sibling path was returned unchanged. A path that starts with one backslash and one forward slash normalises to a network share after the share check, and `HasSafeAttributes` (lines 70-80) can then reach the share. **The fix:** the root must be inside the checkout or a named build folder, with no network paths at all.
+2. **Helpers still read files named by a variable** (both halves).
+   - `acad/night_scripts/ce_safety.ps1:29` reads the file named by `CE_FAKE_WORLD`.
+   - Lines 32 and 107 read `CE_RUNNER_RECORD`, which defaults at line 14 to a path outside the checkout. Both reads happen before any JSON check.
+   - `bench/CeCivil.Bench.Clicks/Program.cs:58-66` reads a scenario path unchecked.
+
+   All were read only, never run (D-388).
+3. **The source guard misses configuration and indirect names** (both halves). Each of these went unreported:
+   - an outside path in a test `.config` file (the file-type list at `SemanticPrivatePathSourceTests.cs:108` omits it);
+   - a JSON-escaped private name, because JSON is scanned as raw text (lines 119-137);
+   - the retired variable `A4C_LEAK_TERMS_FILE` named in a JSON setting (the name matcher at `TestInputPath.cs:9` does not know it);
+   - a name built from a constant in another file, because each file is compiled alone (lines 164-175);
+   - a literal absolute path in an ordinary helper under acad (lines 112-117).
+4. **The configured-source release check can never pass** (honest half). `ShippedBlocksFileTests.cs:61-64, 263-279` keeps only those copies under `blocks/supplied` that sit inside the configured path. But `tools.csv:55` makes that path the single file `office_blocks.dwg`, so no copy can match. In a correct release run the check would fail.
+
+## Follow-ups
+1. **Missing grip inputs:** the grip tests (76 in `TextGripAcceptanceTests`, 2 in `TextGripCommandVisibilityTests`, 1 at `Stage1PipeRunEntryTests.cs:392`) report FAILED, not WAITING, when their two variables are unset. They were already targets before this branch; make them WAITING with the rest.
+
+**Next:** the builder closes these four in round 2 of 2, the last. Each comes over as a failing test first.
