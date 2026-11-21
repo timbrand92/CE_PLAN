@@ -79,3 +79,40 @@
 **Also needed before the merge:** this tip is based on main 711042e. Main is now 03119b1 (with privacy-path2), so the next round must bring main in again.
 
 **Next:** the LAST round, with each blocker as a failing test first, then the full build and comparison against main 03119b1.
+
+
+---
+
+# Final verdict: team/pit-window at 4b42c43 (the LAST round)
+
+**Verdict: HOLD, final. Both halves hold it. Under D-346 it goes to the control room with this open list.** Written Sat 21 Nov 2026, about 10:34 pm. Both halves ran on Codex with every outside-input variable unset:
+- **Honest half:** gpt-6.2-sol. Report: `C:\CE_WORK\check\reports\pwb3_honest_REPORT.md`, evidence in `pwb3_honest_evidence\`.
+- **Adversarial half:** gpt-6.2-astra. Report: `pwb3_adv_REPORT.md`, with proofs in `pwb3_adv_proofs\`.
+
+The first launch of both halves died at about 9:30 pm, when the Codex shell returned nothing. Both were relaunched and ran clean.
+
+**The main-line control is clean.**
+- **Every main pass accounted for:** all 2,541 of main 03119b1's passes pass on the tip: 2,443 by the same identity, 82 renamed with matching data, 7 by equal inputs, and 9 checkout-path fixture groups.
+- **Load failures:** three that failed under load passed alone; the timing test fails under load on both revisions.
+- **Controls:** 94 of 96 named controls pass on both. C4_control fails on both, and the pipe-start control is skipped on both (D-410).
+- **The merge of main is sound:** of the 58 paths main changed, 46 match byte for byte. The other 12 are the log and overlapping tests, with main's checked reads kept. The checked read-and-write support, the privacy guard, the night scripts and the click runner all match main. All 52 privacy guard cases and the 4 release-input cases pass.
+
+**Closed:**
+- **The Pipe top preview strip:** it is restored (D-313).
+- **"Number on plan":** it fits at both sizes, and the layout check now catches it.
+- **The number guard:** it follows helpers and catches the short and long parsers.
+- **The restatements:** cases 21 and 87 and the scalability exemption are back to their old expectations.
+- **Everything closed earlier:** it stays closed (units refusal, worked covers, units notice, printed figures, Renumber count, rounding probes).
+
+## Open list (one page)
+
+1. **The filled Pipe window hides a warning the drafter needs, at both approved sizes** (both halves).
+   - **The case:** a 225 mm pipe at 1 in 75 with an upstream invert of 10.40. The lower cover warning, the grey reason the upstream cover check could not run, shows 0 of its 48 units at both 1000 by 620 and 1240 by 780, with nothing to scroll. The drafter can still press OK.
+   - **Also cut off:** at 1240 by 780, only 15 of 24 units of the worked downstream-invert row show. A two-ended pipe with conflicting held levels also hides a separate 70 mm discrepancy at both sizes.
+   - **Where:** `StdSteps.cs:1099, 1113-1115`.
+   - **Rulings:** D-346, D-393 item 4, D-398 item 3. The builder had flagged this case itself.
+2. **The number guard still passes one parser form** (adversarial half). One added line in the tag writer read the digits through a regular-expression capture, parsed them and cast the result. The record stayed P7007, the tag read P1 beside another P1, and all five number-source tests passed. The product code today has no such line (PIT_WINDOW section 3.4).
+
+**Recommended for the control room:**
+1. **Item 1:** one bounded edit; it is a drafter-facing cut-off at both approved sizes.
+2. **Item 2:** a BINDING PROBE on every later build that writes a pit number, as for the rounding and settings probes. Each round has closed every named parser, and reaching this one needs someone to write new code.
