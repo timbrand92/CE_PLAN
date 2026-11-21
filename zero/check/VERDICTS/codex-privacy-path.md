@@ -53,3 +53,38 @@
 1. **Missing grip inputs:** the grip tests (76 in `TextGripAcceptanceTests`, 2 in `TextGripCommandVisibilityTests`, 1 at `Stage1PipeRunEntryTests.cs:392`) report FAILED, not WAITING, when their two variables are unset. They were already targets before this branch; make them WAITING with the rest.
 
 **Next:** the builder closes these four in round 2 of 2, the last. Each comes over as a failing test first.
+
+---
+
+# Final verdict: 68eff92 (the LAST round)
+
+**Verdict: HOLD, final. Both halves hold it. Under D-346 it goes to the control room with this open list.** Written Sat 21 Nov 2026, about 4:42 pm. Both halves ran on Codex:
+- **Honest half:** gpt-6.2-sol. Report: `C:\CE_WORK\check\reports\pp3_honest_REPORT.md`.
+- **Adversarial half:** gpt-6.2-astra. Report: `pp3_adv_REPORT.md`.
+
+**Closed:**
+- **The defaults:** the saved, seed, tank and supplied tests have lost their outside defaults; the one outside drawing input is chosen by a single variable.
+- **The checked paths:** the package folder, the grip DLL and the grip release are checked against the checkout.
+- **The safety helper:** `ce_safety.ps1` checks and confines its variable-named reads, and has no outside default (read only, never run).
+- **The guard:** it now covers .config and .xml files, JSON-escaped names, the retired variable name and cross-file constants within one area.
+- **The release check:** the impossible comparison is gone.
+- **The grip tests:** the 79 grip cases show WAITING.
+
+## Open list (one page)
+
+1. **Bench and plug-in routes still unchecked** (both halves).
+   - **The click runner:** `bench/CeCivil.Bench.Clicks/Program.cs:60-89, 229, 465, 486` takes `--exe` (it checks the file exists, then starts it), `--shots` (it creates the folder) and the screenshot file names, all unchecked.
+   - **The bench app:** `bench/CeCivil.Bench/App.xaml.cs:22-62` takes report destinations unchecked.
+   - **The test-only plug-in commands:** they still open drawings through the old outside `TestFolder.Root`, which checks the prefix's spelling but not where links lead (`src/CeCivil.Acad/TestFolder.cs:9-23`, `PitSeedCommand.cs:30-39`, `OfficeBlocksCommand.cs:31-42`).
+2. **Older tests follow directory links, and the drawing-folder exception is too broad.**
+   - **Links (adversarial):** `ListsAtStartTests.cs:55,60` and `ScalabilityTests.cs:28,31` enumerate recursively, without the checked reader, so they follow a junction.
+   - **The exception (honest):** any fixed-disk folder that holds a `SOURCE_FINGERPRINTS.md` counts as the drawings folder (`TestInputPath.cs:165-182`). It is checked against itself, not against one named place.
+3. **The guard still misses decoded and expanded forms** (both halves): XML character references in .config and .xml files; home-directory and environment-variable paths expanded by the code that reads them; and names built from constants in different areas (each area is compiled separately). Files: `SemanticPrivatePathSourceTests.cs:155-206, 237-240, 292-303, 379-390`.
+4. **The release check no longer checks the drafter's configured drawing** (both halves).
+   - **What it does:** it checks the 18 packaged fingerprints and opens the four Stage 1 copies.
+   - **What it misses:** it never reads `office_blocks_file` (`tools.csv:55`), and the expected hashes come from the same configurable folder, not from an independent record of the originals (D-404, D-427, D-433).
+
+**Recommended for the control room:** MERGE this tip now, with the four items above as a separate follow-up branch.
+- **Why:** main STILL holds the default path to the real terms file. Holding this branch keeps that danger on main and the filter on every run.
+- **The incident is closed:** the reader is gone and the guard is in. What is open is hardening against routes that need someone to supply an outside path on purpose, and the release check's link to the configured drawing.
+- **The alternative:** one bounded round, with main kept filtered meanwhile.
