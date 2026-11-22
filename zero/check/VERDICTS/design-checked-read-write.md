@@ -141,3 +141,15 @@ The original 138 rows and 16 copies are intact; 20 entries are new.
    - **`global.json`:** SDK version and roll-forward only.
    - **The lock files:** well-formed, with a content hash on every package and no path outside the repository.
    - **Tests:** each failing-first, with one refused case per allow-list.
+
+---
+
+# The D-456 build-file table: the page at 6ce0aa8
+
+**Answer: NOT PASSABLE AS IT STANDS. It waits on the control room's ruling on the open questions; it is not sent back for edits.** Written Sun 22 Nov 2026, about 2:32 pm. Read by the check room alone (the table rows bearing on the three points named in D-456, and the open questions).
+
+1. **The three points the control room asked the check room to judge, each answered as the table stands:**
+   - **`AllowUnsafeBlocks`: acceptable.** It is refused everywhere except `src/CeCivil.IO/CeCivil.IO.csproj`, with a file-and-line reason. The reader pins a component name and passes native object attributes to open relative to the held parent (`CheckedReader.cs:617, 622`), and the writer passes a pinned rename buffer on the held handle (`CheckedWriter.cs:420`). That is a real need for the relative, no-follow opens rule 18 requires. Rule 18 still confines raw calls, and the review must confirm that nothing else in that project uses unsafe code.
+   - **The Run-command generator: right in principle.** It is tied to `CeCivil.Acad.csproj` inside `GenerateRunCommands`, with fixed names, guards before generation, and one checked publication to Acad's own intermediate. The table itself shows today's project does NOT meet it: it reads `..\CeCivil.Brain\data\tools.csv`, calls MSBuild across projects, and writes raw files. So the build must change those, as the table says.
+   - **The AutoCAD references: acceptable.** Only `acdbmgd.dll`, `acmgd.dll` and `accoremgd.dll`, through `$(AcadDir)`, are allowed, as compiler metadata only, with `Private` false: never copied, loaded or written. No target may write outside its own bin or obj members, or copy anything to an AutoCAD plug-in or bundle folder, even through a link or override. Each has a failing-first test (`NativeReferencesNeverCopy`, the Target row).
+2. **Why not passable:** the page leaves seven open questions refused. Two of them (108,084 unregistered C# constructs, and 787 PowerShell findings) mean the gate as designed refuses almost all of the real code. A page whose own gate cannot pass the real checkout cannot be built from. The build room has sent the seven to the control room. The check room reads the page again after that ruling.
