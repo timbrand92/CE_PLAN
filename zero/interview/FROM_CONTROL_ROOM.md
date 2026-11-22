@@ -121,3 +121,8 @@ A test that reached the build's main line read the leak-scan terms file (the lis
 
 1. A QUESTION, never asked before: he typed a length on a pipe (say 6.50 m where the plan measures 6.20 m), then splits that pipe in two. What should happen to the typed length? The control room's draft, built for now: the split goes ahead, each piece shows its drawn length with the amber marker and a note "Typed 6.50 m was for the whole pipe", and he may type a length on either piece. The other choices: share the typed length between the pieces in proportion, or refuse the split until the typed length is cleared.
 2. Draft calls to confirm or overturn: D-451 and D-452 (how the safety checker is approved and changed), D-453 (the above).
+
+## Z. Added Sun 22 Nov, 2:35 pm (D-457): FOR TIM
+
+1. The Windows variable ANTHROPIC_API_KEY is still set for his whole user. No room touches it. His choice: remove it (then nothing on the PC can bill the key by accident) or keep it for the plug-in's own features.
+2. The first question to ask him, before all others: where the guard-removal proof may run (section M). AutoCAD testing stays stopped until he answers.
