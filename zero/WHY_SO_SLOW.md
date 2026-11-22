@@ -47,6 +47,31 @@ Marks: MEASURED (counted today from the files), REPORTED (said by others), MY JU
    - **Needs:** the control room's call.
 5. **Headless AutoCAD checks on every build.** Done today: your yes, recorded as D-461.
 
+## Tim's answer, and the way to proceed autonomously (added about 3:20 pm)
+
+**His words:** "the thing is i have done this but its so time consuming from my point of view that i simply cannot do it without dedicating my entire job to it, there has to be some way to do this whole thing autonomously ... is it an issue to have a final plan and work towards it ... you tell me how we can proceed, because i think i have simplified it enough so that ive given you everyuthign that is needed to build it, all it takes is testing and building properly."
+
+**So the daily-try idea above is dropped:** Tim's time is the scarcest thing. MY JUDGEMENT, the way to proceed:
+
+1. **Keep the final plan.** A fixed destination is not the problem. The problem is that every small step is gated by people reading pages. The plan stays as the target list; the build order is a sequence of working pieces, each one finished and proven before the next.
+2. **Turn Tim's answers into tests, not pages.** Each answer he has given becomes an automatic check: "pit lid level 0.3 below finished surface", "label reads like this", "inches refused". Then the judge is the test run, not a checker reading 600 KB of verdicts. New decisions are written only when Tim says something; the rooms' own micro-rulings stop.
+3. **Machines accept, as Tim already ruled.** D-089: "Me, or a robot pass if I am busy". A piece is done when:
+   1. its tests pass;
+   2. the headless AutoCAD run passes (D-461);
+   3. the nightly full-AutoCAD robot run on test copies passes, with pictures.
+   No review rounds. A checker samples finished pieces afterwards, looking only for Tim's four kinds (D-460).
+4. **One autonomous loop, running day and night inside the limits.** It takes the next item on the target list, writes its tests from Tim's answers, builds, runs everything, fixes until green, merges, and takes the next. It runs inside the usage and AutoCAD-hours limits. One control room watches it and reports.
+5. **Tim's part: about 15 minutes a week.**
+   1. A one-page Friday report with pictures of what the robot drew.
+   2. A short list of questions only he can answer, asked one at a time.
+   3. Optionally, loading the week's build on a test copy when he feels like it.
+6. **First, two weeks of set-up work, which is what makes autonomy possible:**
+   1. the headless run;
+   2. the safe nightly run (a virtual machine or after-hours on his PC);
+   3. Tim's answers converted into tests;
+   4. the paperwork machinery paused (the file safety checker, rule-making, the five-room relay).
+7. **Honest limits.** The loop is capped by the weekly usage of Claude and Codex, and by AutoCAD running one copy at a time on one licence. Anything that needs engineering judgement still waits for Tim. No date can be promised. MY JUDGEMENT: the Civil drainage set is weeks to a few months of autonomous building once the loop works, not years.
+
 ## What could go wrong
 
 1. **A rough tool in your hands could annoy you.** It is on a test copy, never a job, so it cannot hurt a drawing.
