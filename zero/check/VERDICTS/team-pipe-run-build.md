@@ -39,3 +39,14 @@ The honest half's whole build stopped at package restore offline. The build room
    - **Each piece:** it takes its drawn length as its length used, carries the amber marker, and shows that the typed length was for the whole (for example "Typed 6.50 m was for the whole pipe; this piece is 3.10 m as drawn").
    - **Before OK:** this is said in the window, in the same Undo; levels and grades follow the pieces' lengths used, shown and never silent.
    - **One reader:** it still gives the one length used (D-410).
+
+---
+
+# Fix round 1, 927f126: findings sent forward as tests (D-462)
+
+Sun 22 Nov 2026, about 3:21 pm. Both halves ran on Codex (prb2_honest, prb2_adv); neither report contains a login name. The base control is clean: every pass of 8c4dc62 and 6ae5d08 passes, and the whole solution builds. All seven first-round findings are closed.
+1. **A, reversal (both halves):** the branch meeting is kept from the old start, so it prints IL 9.92 where 9.98 is required. Sent as a test.
+2. **D, against D-422 (with D-453 item 2):** a locked CE NO PLOT refuses a typed-length split. Sent as a test.
+3. **A, split (adversarial half):** the branch's own far-end join stays on the near half. Sent as a test.
+4. **A, BREAK (adversarial half):** the typed length is copied into both pieces (13.00 m used in total), and the cut-end invert is 9.935 where 9.980 is required. Sent as a test.
+5. **E:** the unreachable Refuse and Apportion split code goes onto FOLLOWUPS.md.
