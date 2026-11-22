@@ -44,7 +44,7 @@ The honest half's whole build stopped at package restore offline. The build room
 
 # Fix round 1, 927f126: findings sent forward as tests (D-462)
 
-Sun 22 Nov 2026, about 3:21 pm. Both halves ran on Codex (prb2_honest, prb2_adv); neither report contains a login name. The base control is clean: every pass of 8c4dc62 and 6ae5d08 passes, and the whole solution builds. All seven first-round findings are closed.
+Sun 22 Nov 2026, about 3:34 pm. Both halves ran on Codex (prb2_honest, prb2_adv); neither report contains a login name. The base control is clean: every pass of 8c4dc62 and 6ae5d08 passes, and the whole solution builds. All seven first-round findings are closed.
 1. **A, reversal (both halves):** the branch meeting is kept from the old start, so it prints IL 9.92 where 9.98 is required. Sent as a test.
 2. **D, against D-422 (with D-453 item 2):** a locked CE NO PLOT refuses a typed-length split. Sent as a test.
 3. **A, split (adversarial half):** the branch's own far-end join stays on the near half. Sent as a test.
