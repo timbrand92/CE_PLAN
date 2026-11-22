@@ -153,3 +153,28 @@ The original 138 rows and 16 copies are intact; 20 entries are new.
    - **The Run-command generator: right in principle.** It is tied to `CeCivil.Acad.csproj` inside `GenerateRunCommands`, with fixed names, guards before generation, and one checked publication to Acad's own intermediate. The table itself shows today's project does NOT meet it: it reads `..\CeCivil.Brain\data\tools.csv`, calls MSBuild across projects, and writes raw files. So the build must change those, as the table says.
    - **The AutoCAD references: acceptable.** Only `acdbmgd.dll`, `acmgd.dll` and `accoremgd.dll`, through `$(AcadDir)`, are allowed, as compiler metadata only, with `Private` false: never copied, loaded or written. No target may write outside its own bin or obj members, or copy anything to an AutoCAD plug-in or bundle folder, even through a link or override. Each has a failing-first test (`NativeReferencesNeverCopy`, the Target row).
 2. **Why not passable:** the page leaves seven open questions refused. Two of them (108,084 unregistered C# constructs, and 787 PowerShell findings) mean the gate as designed refuses almost all of the real code. A page whose own gate cannot pass the real checkout cannot be built from. The build room has sent the seven to the control room. The check room reads the page again after that ruling.
+
+---
+
+# The D-458 amendment: the page at 206ff3f
+
+**Answer: FIX THE PAGE FIRST, on two kind-C edits. Under D-458 ("if yes, it comes back to me") this goes to the control room.** Written Sun 22 Nov 2026, about 3:16 pm. Both readers ran on Codex, by reading only, each in its own folder:
+- **Honest reader:** gpt-6.2-sol. Report: `C:\CE_WORK\check\reports\crw458_honest_REPORT.md`.
+- **Adversarial reader:** gpt-6.2-astra. Report: `crw458_adv_REPORT.md`.
+
+Neither report contains a login name.
+
+**What holds:** only rule 33's open-questions section changed. The seven deny-list families match D-458, each found by symbol (and by bounded text for the 16 sites without symbols), with the scan's limits written down. Build-time code (generators, analyzers, tasks, `Directory.Build.props` and `.targets`, inline tasks) stays FULLY gated. The honest reader accepts the exceptions and the five smaller allowances, one line each.
+
+## The kind-C edits (D-441, D-457, D-458)
+
+1. **Code can run during test discovery** (adversarial reader; the answer to D-458's question is YES). A test assembly can pass the ordinary C# scan and still hold a member the test host calls automatically at start-up or discovery: a module initialiser (`[ModuleInitializer]`), a type initialiser, or a framework callback. Nothing makes proof of that implicit call a condition for loading the assembly.
+   - **The edit, after line 385:** "Before the host loads a test assembly or its project-supplied dependencies, identify and fully gate every module initialiser, type initialiser and framework callback that can run during host startup or discovery. Refuse the load if the member, its trigger or its reachable effects cannot be proved."
+2. **The bench click exception has no desktop boundary** (honest reader). The `CeCivil.Bench.Clicks/Program.cs` exception covers `SendInput` and screen capture (`GetDC`, `BitBlt`). Their effects reach the live desktop: Tim's keyboard, mouse and screen. Binding the executable and the PNG destination does not confine them.
+   - **The edit:** permit those calls only on a host-bound, isolated fixture desktop and refuse them otherwise, with a failing-first check showing zero input or capture on refusal. This also matches D-460 B (no window that takes Tim's keyboard or mouse).
+
+## Kind E (to fix in the same edit; they do not hold)
+1. **The script pins depend on line endings:** the eight script hashes match the CRLF checkout form, not the stored LF form. Pin them on a fixed form (normalised LF, or the git blob), like the reader under D-448.
+2. **What a script pin means:** it covers unchanged TEXT only, and gives no permission to run. The scripts themselves start AutoCAD through Explorer, load a DLL into AutoCAD, and `acad_close.ps1` can force-stop a recorded AutoCAD. The night route stays paused (D-388, D-420), and Tim's rule 1.9 (never force-close AutoCAD) stands for any later night design.
+3. **Unnamed files:** three census sites sit in files the page never names (for example `tests/CeCivil.SourceGate.Tests/D454Tests.cs`). Name them.
+4. **Still outstanding:** the independent compiler-metadata record for b1b6c1d, a build-time item.
