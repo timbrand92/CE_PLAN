@@ -24,3 +24,23 @@ The hand-over names MIRROR, whole-plan move, JOIN, FILLET, OFFSET, U while drawi
 ## 4. Ruled since (control room, about 1:11 am, DRAFT, listed for Tim)
 
 A pipe's number is never reused within a drawing, even when the highest-numbered pipe is erased (it is an identity, never printed); an Undo of the erase brings the same pipe back with its same number. Pits stay as Tim ruled (highest plus one). Reason 3 of section 1 is restated to this and marked DRAFT; it adds no strike.
+
+---
+
+# Final answer: codex/doorway at d538987 (last round)
+
+**Answer: ACCEPT THE LIST, with one binding probe.** Written Sun 22 Nov 2026, about 3:12 pm.
+
+**Who checked:**
+- **Honest half:** Claude Sonnet, on Sat 21 Nov. It said ACCEPT, with five binding probes.
+- **Adversarial half:** Codex gpt-6.2-astra, Sun 22 Nov, at the third launch. The first launch died without a report; the second stopped itself after a skill lookup showed a profile path; the third ran clean with lookups banned. Report: `C:\CE_WORK\check\reports\doorway2_adv_REPORT.md`, with no login name.
+
+1. **All six earlier holds are closed:**
+   - the edited label position, against an independently worked anchor (the earlier four-line wrong build now fails at (50,000, 50,000));
+   - EXPLODE, by segment endpoints, marks, ownership and links;
+   - number retirement and Undo, both DRAFT;
+   - neighbouring text surviving an erase;
+   - protected neighbours, in five states across TRIM, with a refusal reason;
+   - the observer control (removing the command-ended subscription fails the MOVE control).
+2. **Binding probe for the build (kind A, D-431):** a private wrong build kept the label at its expected anchors but printed the diameter as 999 instead of 150, and STRETCH, TRIM and EXTEND all stayed green. The build gate for those routes must also read back the printed TEXT of the edited label, diameter included.
+3. **What follows:** the list may merge, and the edit routes' build carries the probe.
