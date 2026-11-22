@@ -1,65 +1,69 @@
 {
-  "builtAt": "2026-11-20T14:19:00+11:00",
-  "waitingOnTim": {
-    "count": 1,
-    "oldestAt": "2026-11-20T11:19:00+11:00"
+ "builtAt": "2026-11-22T18:33:00+11:00",
+ "waitingOnTim": {
+  "count": 3,
+  "oldestAt": "2026-11-22T16:20:00+11:00"
+ },
+ "built": {
+  "done": 2,
+  "of": 9
+ },
+ "next": "Labels to merge, then shaped grips; the EXPLODE fixes; the edit-route build; every Stage 1 scenario the engine can prove as an engine check",
+ "headline": "One-job release, STAGE 1. The Pit window and the pipe run are on the main line and run in AutoCAD's engine: PASS 93 / FAIL 1 / NOT TESTED 7 in about 12 seconds. Built 2 of 9; checked 0; installed 0; accepted 0. One build loop since 22 Nov: build, tests, engine run, merge when green; the check room looks after each merge for Tim's four blocking kinds.",
+ "plan": [
+  {
+   "name": "1 Drawing safety (copy, move, erase, undo)",
+   "state": "now"
   },
-  "built": {
+  {
+   "name": "2 Pit and Pipe through the gate",
+   "state": "now",
+   "built": {
     "done": 2,
-    "of": 9
+    "of": 4
+   }
   },
-  "next": "Check room verdicts on the held-depth fix and the draw-first command order; build the Pit window to the approved picture",
-  "headline": "One-job release, STAGE 1: Pit and Pipe to draft with in real AutoCAD. Built 2 of 9 on the bench only; checked 0; installed 0; accepted 0. Seen in AutoCAD: 0 of 7 basics (the office blocks work on main fell short on its second check). Pit window approved by Tim from a picture (D-386); pipe size design passed to build.",
-  "plan": [
-    {
-      "name": "1 Drawing safety (copy, move, erase, undo)",
-      "state": "now"
-    },
-    {
-      "name": "2 Pit and Pipe through the gate",
-      "state": "todo"
-    },
-    {
-      "name": "3 Cover and grade checks, 5 mm tolerance",
-      "state": "todo",
-      "built": {
-        "done": 1,
-        "of": 2
-      }
-    },
-    {
-      "name": "4 Inlets for the first job (Stage 2, waits)",
-      "state": "todo"
-    },
-    {
-      "name": "5 Legal point and the two end symbols (Stage 2, waits)",
-      "state": "todo"
-    },
-    {
-      "name": "6 Pit schedule (Stage 2, waits)",
-      "state": "todo"
-    },
-    {
-      "name": "7 Job window and Unfinished list (Stage 2, waits)",
-      "state": "todo",
-      "built": {
-        "done": 1,
-        "of": 2
-      }
-    },
-    {
-      "name": "8 Detention (Stage 2, waits)",
-      "state": "todo"
-    },
-    {
-      "name": "9 Two clean AutoCAD nights, then Tim's real job (Stage 2, waits)",
-      "state": "todo"
-    }
-  ],
-  "closeToTest": "Six windows can be clicked outside AutoCAD. Nothing can be drafted with in AutoCAD yet.",
-  "problems": [
-    "No AutoCAD proof yet: the night runner and the picture route are both held on safety and being rebuilt",
-    "Check room: sixteen answers on 20 Nov, one pass (a design page); nothing merged since the morning",
-    "Open questions for Tim across the Pit and Pipe pages are being folded into the unknowns list"
-  ]
+  {
+   "name": "3 Cover and grade checks, 5 mm tolerance",
+   "state": "todo",
+   "built": {
+    "done": 1,
+    "of": 2
+   }
+  },
+  {
+   "name": "4 Inlets for the first job (Stage 2, waits)",
+   "state": "todo"
+  },
+  {
+   "name": "5 Legal point and the two end symbols (Stage 2, waits)",
+   "state": "todo"
+  },
+  {
+   "name": "6 Pit schedule (Stage 2, waits)",
+   "state": "todo"
+  },
+  {
+   "name": "7 Job window and Unfinished list (Stage 2, waits)",
+   "state": "todo",
+   "built": {
+    "done": 1,
+    "of": 2
+   }
+  },
+  {
+   "name": "8 Detention (Stage 2, waits)",
+   "state": "todo"
+  },
+  {
+   "name": "9 Two clean AutoCAD nights, then Tim's real job (Stage 2, waits)",
+   "state": "todo"
+  }
+ ],
+ "closeToTest": "Pit and Pipe run in AutoCAD's engine on test drawings (what lands in the drawing is proven). Windows, grips and mouse picks are not proven in AutoCAD yet; nothing is installed in Tim's AutoCAD.",
+ "problems": [
+  "Windows, grips and mouse picks cannot be proven by the engine; a sealed test computer for full AutoCAD waits on Tim",
+  "Labels and shaped grips are not merged yet; EXPLODE of a pipe or pit leaves a broken record until the fix lands",
+  "Claude usage is over the weekly line; all builds and checks run on Codex"
+ ]
 }
