@@ -138,3 +138,17 @@ The first launch of both halves died at about 9:30 pm, when the Codex shell retu
 - **OK stays available:** as D-447 asks, it is blocked only for the warning and the discrepancy, so it does not cover these rows.
 
 This is a cut-off at an approved size (D-346, D-386, D-398 item 3), outside D-447's two items, so it goes to the control room.
+
+---
+
+# MERGE WITH FOLLOW-UPS: team/pit-window at 8c4dc62 (D-460, Tim: "yes, four kinds only")
+
+**Verdict: MERGE WITH FOLLOW-UPS.** Written Sun 22 Nov 2026, about 2:47 pm. No A to D item is open on 8c4dc62.
+- **What earlier rounds closed (A and B):** level retypes in metres and cm drawings; a worked cover being held; printed figures; the Renumber count; the second number reader; the parser guard.
+- **What the bounded edit closed:** the cover warnings and the 70 mm discrepancy are whole at both sizes, with OK gated.
+
+**Follow-ups (kind E), for the build room's list:**
+1. **E: the lower working rows of the filled Pipe window are cut off at both approved sizes.** It is the D-449 design question, waiting on Tim's pick between the two layouts in `design\PIPE_WINDOW_LAYOUT.md` (1a2925f). It cannot be named against one of Tim's own answers in a way that makes it D: Tim is choosing the layout himself.
+2. **E: the number guard follow-ups noted earlier** (diagnostics that do not name the product file and line).
+
+**Before the merge:** the branch holds main 03119b1 by a real merge. The build room confirms that main has not moved since, or brings it in again before merging. The check room runs the main-line control afterwards.
