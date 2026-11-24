@@ -974,6 +974,8 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-472** (Tue 24 Nov 2026, 5:11 pm by the clock; TIM, in the control room, his words: "Same as the pipe"), answering the question open since Sun 22 Nov: if a drafter uses EXPLODE on a pit, what should happen. A pit that is exploded is treated as the pipe is under D-376: it becomes plain pieces, the tool says so once, and one Undo brings the pit back whole with its record and its joins. No dangling join is left behind: the pipes that met the pit are handled as the pipe pattern handles its own joins, and nothing is silently treated as an erase. This confirms the control room's draft of 22 Nov; the draft switch for it, if one was built, is no longer a draft call.
 
+**D-473** (Wed 25 Nov 2026, 8:51 am by the clock; TIM, in the control room, his words: "Hold until I say"), answering: may the engine runs resume after the build room very likely ended a stuck engine by mistake at 5:19 pm Tue 24 Nov (a breach of rule 1.9). No run of AutoCAD's engine (accoreconsole) by any room, helper, builder or script until Tim says so in his own words. Full AutoCAD stays stopped as before. Building and tests that need no engine continue; nothing that needs an engine run to prove it merges to the main line meanwhile. This replaces, for now, the engine part of D-461 and D-463; it is lifted only by Tim.
+
 ## Not decided (asked or raised, no decision yet)
 
 1. Whether Stage 1's civil explanation is approved (Tim moved on to the design without saying "approve"). **Settled by D-117.**
