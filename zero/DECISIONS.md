@@ -978,6 +978,8 @@ Tim's decisions for this plan, in his words, dated. Numbers are never reused. A 
 
 **D-473** (Wed 25 Nov 2026, 8:51 am by the clock; TIM, in the control room, his words: "Hold until I say"), answering: may the engine runs resume after the build room very likely ended a stuck engine by mistake at 5:19 pm Tue 24 Nov (a breach of rule 1.9). No run of AutoCAD's engine (accoreconsole) by any room, helper, builder or script until Tim says so in his own words. Full AutoCAD stays stopped as before. Building and tests that need no engine continue; nothing that needs an engine run to prove it merges to the main line meanwhile. This replaces, for now, the engine part of D-461 and D-463; it is lifted only by Tim.
 
+**D-474** (Wed 25 Nov 2026, filed 12:40 pm by the clock; TIM, in the build room at 12:36 pm, his words as the build room reported them to the control room, not read by the control room from that room's record: "it should all be paused"). EVERYTHING IS PAUSED. The build room stood down: no timers, jobs, watchers or helper scripts running; its 1 pm batch not sent; the last round's files (drawing-damage fixes, round 30) finished but left uncommitted for Tim. The control room stood down the same hour: its timed looks are cancelled, it sends no notes to any room, and it answers only Tim. Nothing restarts, in any room, until Tim says so in his own words. The engine hold (D-473) and the stop on full AutoCAD stand as before.
+
 ## Not decided (asked or raised, no decision yet)
 
 1. Whether Stage 1's civil explanation is approved (Tim moved on to the design without saying "approve"). **Settled by D-117.**
