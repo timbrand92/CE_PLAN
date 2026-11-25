@@ -79,7 +79,10 @@
     1. **Serious:** risk of lost work. **Found by:** a person (git status read). **Obstacle course line:** none. **Status:** open (the build chat's job).
 28. **NB-028 (was N-028): the agricultural drain card of the concept pages prints an invert text and feeds the schedule, against D-040.**
     1. **Serious:** low (the concept pages are working references only). **Found by:** a person (CONCEPT_GAP_CHECK gap 4). **Obstacle course line:** none. **Status:** open.
+29. **NB-029: mock-up: four incoming levels on the plan have no matching column in step 3.**
+    1. **Done:** not recorded in the archived chat. **Seen:** four incoming levels shown on the plan of the mock-up have no matching column in step 3. **Expected:** not recorded.
+    1. **Serious:** not recorded. **Found by:** a person (from archived chat "CE_ACAD / Tim / interview and ideas", as it stood Fri 20 Nov 2026; filed 25 Nov 2026 by the TimOS control room on Tim's instruction). **Obstacle course line:** none. **Status:** open (a mock-up fault, not code).
 
 ---
 
-**Next number:** NB-029. Faults found by the night run or by Tim go here the same day, with the check that now catches each (R-70).
+**Next number:** NB-030. Faults found by the night run or by Tim go here the same day, with the check that now catches each (R-70).

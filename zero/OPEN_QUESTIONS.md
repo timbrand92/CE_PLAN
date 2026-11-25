@@ -21,6 +21,8 @@ What is still not known. Each says who or what can answer it. Numbers are never 
 **Q-015** Which everyday helpers do Tim and the drafters really use (the CE tools set)? Usage records may answer part. Status: open; needed for Release 1. **ANSWERED 18 Nov 2026 by D-201 and D-209** (the shared tools ST-01 to ST-18 are in the first release).
 **Q-016** Is Stage 1's civil explanation approved? Tim moved on without saying "approve". Status: open. **ANSWERED 16 Nov 2026 by D-117:** "Approved as good enough to build on".
 **Q-017** The live drawing that shows nothing without the plugin (P-04): does Tim want it looked at now, and may it be used as a research case? Status: open. **ANSWERED 16 Nov 2026 (evening): ruled "Keep it as a test case" (PARKING_LOT P-04); the file location is still wanted (board W-037).**
+**Q-018** Sleeve class wording: SEWER CLASS or SN8? (Source: archived chat "CE_ACAD / Tim / interview and ideas", as it stood Fri 20 Nov 2026; filed 25 Nov 2026 by the TimOS control room on Tim's instruction.) Status: open; asked when its tool graduates.
+**Q-019** Can a pipe number be reused after erasing? (Source: same archived chat; filed 25 Nov 2026.) Status: open; asked when its tool graduates.
 
 ## For files not yet read (a study can answer)
 

@@ -42,5 +42,8 @@ esearch\R-016_SLEEVED_PIPE.md`; unknown U-111. **Status:** proposed by Tim's roo
 24. **ID-024 The material follows the size from a six-row office list** (100 UPVC; 150 UPVC SN8; 225, 300, 375 Stormpro; "sewer class" offered for a 100 to the legal point or across a driveway; concrete a manual pick). **Source:** research page R-017; unknown N-054. **Status:** proposed by Tim's room; waits on Tim.
 25. **ID-025 An outside-diameter list by size and material** so cover is measured to the top of the pipe (UPVC 110, 160, 250, 315, 400; Stormpro 169, 259, 343, 428). **Source:** research page R-018; unknown U-086. **Status:** proposed; waits on Tim.
 26. **ID-026 Prompts for an inspection opening** at a change of direction over 45 degrees and on a bend in a charged line, with a warning on a 90 degree bend. **Source:** research page R-019; unknowns U-098, U-041. **Status:** proposed; waits on Tim; inlets and openings are Stage 2.
+27. **ID-027 Many systems that work together as one seamless way of working.** Tim: "its liek gta 6 we need a lot of systems that work together to create a great seemless way of working". **Source:** from archived chat "CE_ACAD / Tim / interview and ideas" (as it stood Fri 20 Nov 2026), filed 25 Nov 2026 by the TimOS control room on Tim's instruction; his words are also in `interview\ANSWERS_TIM.md`. **Status:** later.
+28. **ID-028 Record everything so it can be built on.** Tim: "record everything so we can easily incorporate into future systems so everything is scalable and can be built upon". **Source:** same archived chat, filed 25 Nov 2026; his words are also in `interview\ANSWERS_TIM.md`. **Status:** later.
+29. **ID-029 Flow direction understood by the tool.** Tim: "it could also be smart and understand which way the water is flowing". **Source:** same archived chat, filed 25 Nov 2026; his words are also in `interview\ANSWERS_TIM.md`. **Status:** later.
 
-**Next number:** ID-027.
+**Next number:** ID-030.
