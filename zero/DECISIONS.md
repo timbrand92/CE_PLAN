@@ -1,5 +1,7 @@
 # Decisions (zero plan)
 
+> **SUSPENDED, 25 Nov 2026 — everything is paused.** Tim: "it should all be paused"; he chose "Pause them" for the release chat charter and the 30 Oct install-when-away permission. Nothing installs on Tim's PC without his "AutoCAD is closed, deploy". Only Tim switches it back on. Record: `decisions\2026-11-25_TIM_PAUSE_CHARTER_AND_INSTALL_WHEN_AWAY.md` (no D-number given yet). (Notice added by the TimOS control room on Tim's word, 25 Nov.)
+
 Tim's decisions for this plan, in his words, dated. Numbers are never reused. A later answer that replaces an earlier one is added as a new D-number and the old one is marked superseded. Clicked choices are shown as the option he chose; typed answers are in quotes. Full context for each is in `evidence\STAGE1_INTERVIEW.md` (item numbers in brackets).
 
 ## Direction
